@@ -3,7 +3,9 @@
   publisher <
     name = Botanical Society of America ;
     info[contract] = 2013 ; 
-    info[tester] = 7
+    info[tester] = 7 ;
+    comment[platform] = Atypon
+    
   >
   
   
@@ -20,33 +22,43 @@
     param[base_url] = http://www.amjbot.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < exists ; exists ; 1997 ; American Journal of Botany Volume 84 ; 84 >
-    au < exists ; exists ; 1998 ; American Journal of Botany Volume 85 ; 85 >
-    au < exists ; exists ; 1999 ; American Journal of Botany Volume 86 ; 86 >
-    au < exists ; exists ; 2000 ; American Journal of Botany Volume 87 ; 87 >
-    au < exists ; exists ; 2001 ; American Journal of Botany Volume 88 ; 88 >
-    au < exists ; exists ; 2002 ; American Journal of Botany Volume 89 ; 89 >
-    au < exists ; exists ; 2003 ; American Journal of Botany Volume 90 ; 90 >
-    au < exists ; exists ; 2004 ; American Journal of Botany Volume 91 ; 91 >
-    au < exists ; exists ; 2005 ; American Journal of Botany Volume 92 ; 92 >
-    au < exists ; exists ; 2006 ; American Journal of Botany Volume 93 ; 93 >
-    au < exists ; exists ; 2007 ; American Journal of Botany Volume 94 ; 94 >
-    au < exists ; exists ; 2008 ; American Journal of Botany Volume 95 ; 95 >
-    au < exists ; exists ; 2009 ; American Journal of Botany Volume 96 ; 96 >
-    au < exists ; exists ; 2010 ; American Journal of Botany Volume 97 ; 97 >
-    au < exists ; exists ; 2011 ; American Journal of Botany Volume 98 ; 98 >
-    au < exists ; exists ; 2012 ; American Journal of Botany Volume 99 ; 99 >
-    au < expected ; exists ; 2013 ; American Journal of Botany Volume 100 ; 100 >
+    au < manifest ; exists ; 1997 ; American Journal of Botany Volume 84 ; 84 >
+    au < manifest ; exists ; 1998 ; American Journal of Botany Volume 85 ; 85 >
+    au < manifest ; exists ; 1999 ; American Journal of Botany Volume 86 ; 86 >
+    au < manifest ; exists ; 2000 ; American Journal of Botany Volume 87 ; 87 >
+    au < manifest ; exists ; 2001 ; American Journal of Botany Volume 88 ; 88 >
+    au < manifest ; exists ; 2002 ; American Journal of Botany Volume 89 ; 89 >
+    au < manifest ; exists ; 2003 ; American Journal of Botany Volume 90 ; 90 >
+    au < manifest ; exists ; 2004 ; American Journal of Botany Volume 91 ; 91 >
+    au < manifest ; exists ; 2005 ; American Journal of Botany Volume 92 ; 92 >
+    au < manifest ; exists ; 2006 ; American Journal of Botany Volume 93 ; 93 >
+    au < manifest ; exists ; 2007 ; American Journal of Botany Volume 94 ; 94 >
+    au < manifest ; exists ; 2008 ; American Journal of Botany Volume 95 ; 95 >
+    au < manifest ; exists ; 2009 ; American Journal of Botany Volume 96 ; 96 >
+    au < manifest ; exists ; 2010 ; American Journal of Botany Volume 97 ; 97 >
+    au < manifest ; exists ; 2011 ; American Journal of Botany Volume 98 ; 98 >
+    au < manifest ; exists ; 2012 ; American Journal of Botany Volume 99 ; 99 >
+    au < crawling ; exists ; 2013 ; American Journal of Botany Volume 100 ; 100 >
 
   }
 
   {
-  
+
     title <
       name = Applications in Plant Sciences (APPS) ;
       eissn = 2168-0450
     >
- 
+
+    {
+    
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = apps
+      implicit < status1 ; status ; year ; name ; param[volume_name] >
+
+      au < crawling ; exists ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
+
     }
+  }
 
 }

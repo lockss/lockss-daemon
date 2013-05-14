@@ -3,11 +3,10 @@
   publisher <
     name = Mineralogical Society of America ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7
   >
     
-    plugin = needs.plugin
-    param[base_url] = http://rmg.geoscienceworld.org
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     implicit < status1 ; status ; year ; name ; param[volume_name] >
         
   {
@@ -18,7 +17,54 @@
       eissn = 1945-3027
     >
 
-	au < exists ; exists ; 2013 ; American Mineralogist Volume 96 ; 96 >
+    param[base_url] = http://ammin.geoscienceworld.org/
+
+    {
+
+      attr[au_coverage_depth] = abstracts
+
+      au < manifest ; exists ; 1976 ; American Mineralogist Volume 61 [abstracts only] ; 61 >
+      au < manifest ; exists ; 1977 ; American Mineralogist Volume 62 [abstracts only] ; 62 >
+      au < manifest ; exists ; 1978 ; American Mineralogist Volume 63 [abstracts only] ; 63 >
+      au < manifest ; exists ; 1979 ; American Mineralogist Volume 64 [abstracts only] ; 64 >
+      au < manifest ; exists ; 1980 ; American Mineralogist Volume 65 [abstracts only] ; 65 >
+      au < manifest ; exists ; 1981 ; American Mineralogist Volume 66 [abstracts only] ; 66 >
+      au < manifest ; exists ; 1982 ; American Mineralogist Volume 67 [abstracts only] ; 67 >
+      au < manifest ; exists ; 1983 ; American Mineralogist Volume 68 [abstracts only] ; 68 >
+      au < manifest ; exists ; 1984 ; American Mineralogist Volume 69 [abstracts only] ; 69 >
+      au < manifest ; exists ; 1985 ; American Mineralogist Volume 70 [abstracts only] ; 70 >
+      au < manifest ; exists ; 1986 ; American Mineralogist Volume 71 [abstracts only] ; 71 >
+      au < manifest ; exists ; 1987 ; American Mineralogist Volume 72 [abstracts only] ; 72 >
+      au < manifest ; exists ; 1988 ; American Mineralogist Volume 73 [abstracts only] ; 73 >
+      au < manifest ; exists ; 1989 ; American Mineralogist Volume 74 [abstracts only] ; 74 >
+      au < manifest ; exists ; 1990 ; American Mineralogist Volume 75 [abstracts only] ; 75 >
+      au < manifest ; exists ; 1991 ; American Mineralogist Volume 76 [abstracts only] ; 76 >
+      au < manifest ; exists ; 1992 ; American Mineralogist Volume 77 [abstracts only] ; 77 >
+      au < manifest ; exists ; 1993 ; American Mineralogist Volume 78 [abstracts only] ; 78 >
+      au < manifest ; exists ; 1994 ; American Mineralogist Volume 79 [abstracts only] ; 79 >
+      au < manifest ; exists ; 1995 ; American Mineralogist Volume 80 [abstracts only] ; 80 >
+      au < manifest ; exists ; 1996 ; American Mineralogist Volume 81 [abstracts only] ; 81 >
+      au < manifest ; exists ; 1997 ; American Mineralogist Volume 82 [abstracts only] ; 82 >
+    }
+    {
+      au < manifest ; exists ; 1998 ; American Mineralogist Volume 83 ; 83 >
+      au < manifest ; exists ; 1999 ; American Mineralogist Volume 84 ; 84 >
+      au < manifest ; exists ; 2000 ; American Mineralogist Volume 85 ; 85 >
+      au < manifest ; exists ; 2001 ; American Mineralogist Volume 86 ; 86 >
+      au < manifest ; exists ; 2002 ; American Mineralogist Volume 87 ; 87 >
+      au < manifest ; exists ; 2003 ; American Mineralogist Volume 88 ; 88 >
+      au < manifest ; exists ; 2004 ; American Mineralogist Volume 89 ; 89 >
+      au < manifest ; exists ; 2005 ; American Mineralogist Volume 90 ; 90 >
+      au < manifest ; exists ; 2006 ; American Mineralogist Volume 91 ; 91 >
+      au < manifest ; exists ; 2007 ; American Mineralogist Volume 92 ; 92 >
+      au < manifest ; exists ; 2008 ; American Mineralogist Volume 93 ; 93 >
+      au < manifest ; exists ; 2009 ; American Mineralogist Volume 94 ; 94 >
+      au < manifest ; exists ; 2010 ; American Mineralogist Volume 95 ; 95 >
+      au < manifest ; exists ; 2011 ; American Mineralogist Volume 96 ; 96 >
+      au < manifest ; exists ; 2012 ; American Mineralogist Volume 97 ; 97 >
+      au < crawling ; exists ; 2013 ; American Mineralogist Volume 98 ; 98 >
+
+    }
 
   }
   
@@ -26,11 +72,22 @@
     
     title < 
       name = Elements ;
-      issn = 1811-5209
+      issn = 1811-5209 ;
+      eissn = 1811-5217
       
     >
+
+    param[base_url] = http://elements.geoscienceworld.org/
       
-    au < expected ; exists ; 2013 ; Elements Volume 9 ; 9 >
+    au < manifest ; exists ; 2005 ; Elements Volume 1 ; 1 >
+    au < manifest ; exists ; 2006 ; Elements Volume 2 ; 2 >
+    au < manifest ; exists ; 2007 ; Elements Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; Elements Volume 4 ; 4 >
+    au < manifest ; exists ; 2009 ; Elements Volume 5 ; 5 >
+    au < manifest ; exists ; 2010 ; Elements Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; Elements Volume 7 ; 7 >
+    au < manifest ; exists ; 2012 ; Elements Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Elements Volume 9 ; 9 >
       
   }
   
@@ -41,9 +98,47 @@
       issn = 0275-0279
       
     >
+
+    param[base_url] = http://rimg.geoscienceworld.org/ 
    	comment[continued_by] = [1529-6466]
-      
-    au < exists ; exists ; 2012 ; Reviews in Mineralogy Volume 1 ; 1 >
+
+    attr[au_coverage_depth] = abstracts
+
+    au < manifest ; exists ; 1980 ; Reviews in Mineralogy Volume 5 [abstracts only] ; 5 >
+    au < doesNotExist ; doesNotExist ; 0 ; Reviews in Mineralogy Volume 6 [abstracts only] ; 6 >
+    au < manifest ; exists ; 1980 ; Reviews in Mineralogy Volume 7 [abstracts only] ; 7 >
+    au < manifest ; exists ; 1981 ; Reviews in Mineralogy Volume 8 [abstracts only] ; 8 >
+    au < manifest ; exists ; 1981 ; Reviews in Mineralogy Volume 9A [abstracts only] ; 9A >
+    au < manifest ; exists ; 1982 ; Reviews in Mineralogy Volume 9B [abstracts only] ; 9B >
+    au < manifest ; exists ; 1982 ; Reviews in Mineralogy Volume 10 [abstracts only] ; 10 >
+    au < manifest ; exists ; 1983 ; Reviews in Mineralogy Volume 11 [abstracts only] ; 11 >
+    au < doesNotExist ; doesNotExist ; 0 ; Reviews in Mineralogy Volume 12 [abstracts only] ; 12 >
+    au < manifest ; exists ; 1984 ; Reviews in Mineralogy Volume 13 [abstracts only] ; 13 >
+    au < manifest ; exists ; 1985 ; Reviews in Mineralogy Volume 14 [abstracts only] ; 14 >
+    au < doesNotExist ; doesNotExist ; 0 ; Reviews in Mineralogy Volume 15 [abstracts only] ; 15 >
+    au < manifest ; exists ; 1986 ; Reviews in Mineralogy Volume 16 [abstracts only] ; 16 >
+    au < manifest ; exists ; 1987 ; Reviews in Mineralogy Volume 17 [abstracts only] ; 17 >
+    au < manifest ; exists ; 1988 ; Reviews in Mineralogy Volume 18 [abstracts only] ; 18 >
+    au < manifest ; exists ; 1988 ; Reviews in Mineralogy Volume 19 [abstracts only] ; 19 >
+    au < manifest ; exists ; 1989 ; Reviews in Mineralogy Volume 20 [abstracts only] ; 20 >
+    au < manifest ; exists ; 1989 ; Reviews in Mineralogy Volume 21 [abstracts only] ; 21 >
+    au < doesNotExist ; doesNotExist ; 0 ; Reviews in Mineralogy Volume 22 [abstracts only] ; 22 >
+    au < manifest ; exists ; 1990 ; Reviews in Mineralogy Volume 23 [abstracts only] ; 23 >
+    au < manifest ; exists ; 1990 ; Reviews in Mineralogy Volume 24 [abstracts only] ; 24 >
+    au < manifest ; exists ; 1991 ; Reviews in Mineralogy Volume 25 [abstracts only] ; 25 >
+    au < manifest ; exists ; 1991 ; Reviews in Mineralogy Volume 26 [abstracts only] ; 26 >
+    au < manifest ; exists ; 1992 ; Reviews in Mineralogy Volume 27 [abstracts only] ; 27 >
+    au < manifest ; exists ; 1993 ; Reviews in Mineralogy Volume 28 [abstracts only] ; 28 >
+    au < manifest ; exists ; 1994 ; Reviews in Mineralogy Volume 29 [abstracts only] ; 29 >
+    au < manifest ; exists ; 1994 ; Reviews in Mineralogy Volume 30 [abstracts only] ; 30 >
+    au < manifest ; exists ; 1995 ; Reviews in Mineralogy Volume 31 [abstracts only] ; 31 >
+    au < manifest ; exists ; 1995 ; Reviews in Mineralogy Volume 32 [abstracts only] ; 32 >
+    au < manifest ; exists ; 1996 ; Reviews in Mineralogy Volume 33 [abstracts only] ; 33 >
+    au < manifest ; exists ; 1996 ; Reviews in Mineralogy Volume 34 [abstracts only] ; 34 >
+    au < manifest ; exists ; 1997 ; Reviews in Mineralogy Volume 35 [abstracts only] ; 35 >
+    au < manifest ; exists ; 1998 ; Reviews in Mineralogy Volume 36 [abstracts only] ; 36 >
+    au < manifest ; exists ; 1998 ; Reviews in Mineralogy Volume 37 [abstracts only] ; 37 >
+    au < manifest ; exists ; 1999 ; Reviews in Mineralogy Volume 38 [abstracts only] ; 38 >
 
   }
          
@@ -54,11 +149,47 @@
       issn = 1529-6466
       
     >
-    comment[continued_from] = [0275-0279]
       
-    param[base_url] =  	http://claymin.geoscienceworld.org/ 
+    param[base_url] = http://rimg.geoscienceworld.org/
+    comment[continued_from] = [0275-0279]
 
-    au < exists ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 75 ; 75 >
+    au < manifest ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 39 ; 39 >
+    au < manifest ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 40 ; 40 >
+    au < manifest ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 41 ; 41 >
+    au < manifest ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 42 ; 42 >
+    au < manifest ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 43 ; 43 >
+    au < manifest ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 44 ; 44 >
+    au < manifest ; exists ; 2001 ; Reviews in Mineralogy and Geochemistry Volume 45 ; 45 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 46 ; 46 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 47 ; 47 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 48 ; 48 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 49 ; 49 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 50 ; 50 >
+    au < manifest ; exists ; 2002 ; Reviews in Mineralogy and Geochemistry Volume 51 ; 51 >
+    au < manifest ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 52 ; 52 >
+    au < manifest ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 53 ; 53 >
+    au < manifest ; exists ; 2003 ; Reviews in Mineralogy and Geochemistry Volume 54 ; 54 >
+    au < manifest ; exists ; 2004 ; Reviews in Mineralogy and Geochemistry Volume 55 ; 55 >
+    au < manifest ; exists ; 2004 ; Reviews in Mineralogy and Geochemistry Volume 56 ; 56 >
+    au < manifest ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 57 ; 57 >
+    au < manifest ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 58 ; 58 >
+    au < manifest ; exists ; 2005 ; Reviews in Mineralogy and Geochemistry Volume 59 ; 59 >
+    au < manifest ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 60 ; 60 >
+    au < manifest ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 61 ; 61 >
+    au < manifest ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 62 ; 62 >
+    au < manifest ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 63 ; 63 >
+    au < manifest ; exists ; 2006 ; Reviews in Mineralogy and Geochemistry Volume 64 ; 64 >
+    au < manifest ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 65 ; 65 >
+    au < manifest ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 66 ; 66 >
+    au < manifest ; exists ; 2007 ; Reviews in Mineralogy and Geochemistry Volume 67 ; 67 >
+    au < manifest ; exists ; 2008 ; Reviews in Mineralogy and Geochemistry Volume 68 ; 68 >
+    au < manifest ; exists ; 2008 ; Reviews in Mineralogy and Geochemistry Volume 69 ; 69 >
+    au < manifest ; exists ; 2009 ; Reviews in Mineralogy and Geochemistry Volume 70 ; 70 >
+    au < manifest ; exists ; 2010 ; Reviews in Mineralogy and Geochemistry Volume 71 ; 71 >
+    au < manifest ; exists ; 2010 ; Reviews in Mineralogy and Geochemistry Volume 72 ; 72 >
+    au < manifest ; exists ; 2011 ; Reviews in Mineralogy and Geochemistry Volume 73 ; 73 >
+    au < manifest ; exists ; 2012 ; Reviews in Mineralogy and Geochemistry Volume 74 ; 74 >
+    au < crawling ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 75 ; 75 >
       
   }
   

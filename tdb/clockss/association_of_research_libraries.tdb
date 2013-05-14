@@ -7,32 +7,8 @@
   >
 
   plugin = needs.plugin
-  implicit < status1 ; status ; year ; name ; param[volume] >
-  param[base_url] = 
-
-  {
-  
-    title < 
-      name = ARL Academic Law Library Statistics ;
-      issn = 1538-8999 ;
-      issnl = 1538-8999
-    >
-
-    
-
-  }
-
-  {
-  
-    title < 
-      name = ARL Academic Health Sciences Library Statistics ;
-      issn = 1538-9006 ;
-      issnl = 1538-9006
-    >
-
-    
-
-  }
+  implicit < status1 ; status ; year ; name ; volume ; param[year] >
+  param[base_url] = http://www.arl.org/
 
   {
   
@@ -42,7 +18,7 @@
       issnl = 0361-5669
     >
 
-    
+    param[journal_id] = salary-survey
 
   }
 
@@ -54,7 +30,7 @@
       issnl = 0147-2135
     >
 
-    
+    param[journal_id] = statistics
 
   }
 
@@ -66,7 +42,7 @@
       issnl = 1947-4911
     >
 
-    
+    param[journal_id] = issues
 
   }
 
@@ -78,7 +54,7 @@
       issnl = 0160-3582
     >
 
-    
+    param[journal_id] = spec-kit
 
   }
 

@@ -20,7 +20,7 @@
     param[base_url] = http://bio.biologists.org/
 
     au < released ; crawling ; 2012 ; Biology Open Volume 1 ; 1 >
-    au < expected ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Biology Open Volume 2 ; 2 >
     
   }
 
@@ -35,31 +35,129 @@
 
     param[base_url] = http://dev.biologists.org/
 
-    au < manifest ; exists  ; 1987 ; Development Volume 99 ; 99 >
-    au < manifest ; exists  ; 1987 ; Development Volume 100 ; 100 >
-    au < manifest ; exists  ; 1987 ; Development Volume 101 ; 101 >
-    au < manifest ; exists  ; 1988 ; Development Volume 102 ; 102 >
-    au < manifest ; exists  ; 1988 ; Development Volume 103 ; 103 >
-    au < manifest ; exists  ; 1988 ; Development Volume 104 ; 104 >
-    au < manifest ; exists  ; 1989 ; Development Volume 105 ; 105 >
-    au < manifest ; exists  ; 1989 ; Development Volume 106 ; 106 >
-    au < manifest ; exists  ; 1989 ; Development Volume 107 ; 107 >
-    au < manifest ; exists  ; 1990 ; Development Volume 108 ; 108 >
-    au < manifest ; exists  ; 1990 ; Development Volume 109 ; 109 >
-    au < manifest ; exists  ; 1990 ; Development Volume 110 ; 110 >
-    au < manifest ; exists  ; 1991 ; Development Volume 111 ; 111 >
-    au < manifest ; exists  ; 1991 ; Development Volume 112 ; 112 >
-    au < manifest ; exists  ; 1991 ; Development Volume 113 ; 113 >
-    au < manifest ; exists  ; 1992 ; Development Volume 114 ; 114 >
-    au < manifest ; exists  ; 1992 ; Development Volume 115 ; 115 >
-    au < manifest ; exists  ; 1992 ; Development Volume 116 ; 116 >
-    au < manifest ; exists  ; 1993 ; Development Volume 117 ; 117 >
-    au < manifest ; exists  ; 1993 ; Development Volume 118 ; 118 >
-    au < manifest ; exists  ; 1993 ; Development Volume 119 ; 119 >
-    au < manifest ; exists  ; 1994 ; Development Volume 120 ; 120 >
-    au < manifest ; exists  ; 1995 ; Development Volume 121 ; 121 >
-    au < manifest ; exists  ; 1996 ; Development Volume 122 ; 122 >
-    au < manifest ; exists  ; 1996 ; Development Volume 123 ; 123 >
+    au < manifest ; exists ; 1953 ; Development Volume 1 ; 1 >
+    au < manifest ; exists ; 1954 ; Development Volume 2 ; 2 >
+    au < manifest ; exists ; 1955 ; Development Volume 3 ; 3 >
+    au < manifest ; exists ; 1956 ; Development Volume 4 ; 4 >
+    au < manifest ; exists ; 1957 ; Development Volume 5 ; 5 >
+    au < manifest ; exists ; 1958 ; Development Volume 6 ; 6 >
+    au < manifest ; exists ; 1959 ; Development Volume 7 ; 7 >
+    au < manifest ; exists ; 1960 ; Development Volume 8 ; 8 >
+    au < manifest ; exists ; 1961 ; Development Volume 9 ; 9 >
+    au < manifest ; exists ; 1962 ; Development Volume 10 ; 10 >
+    au < manifest ; exists ; 1963 ; Development Volume 11 ; 11 >
+    au < manifest ; exists ; 1964 ; Development Volume 12 ; 12 >
+    au < manifest ; exists ; 1965 ; Development Volume 13 ; 13 >
+    au < manifest ; exists ; 1965 ; Development Volume 14 ; 14 >
+    au < manifest ; exists ; 1966 ; Development Volume 15 ; 15 >
+    au < manifest ; exists ; 1966 ; Development Volume 16 ; 16 >
+    au < manifest ; exists ; 1967 ; Development Volume 17 ; 17 >
+    au < manifest ; exists ; 1967 ; Development Volume 18 ; 18 >
+    au < manifest ; exists ; 1968 ; Development Volume 19 ; 19 >
+    au < manifest ; exists ; 1968 ; Development Volume 20 ; 20 >
+    au < manifest ; exists ; 1969 ; Development Volume 21 ; 21 >
+    au < manifest ; exists ; 1969 ; Development Volume 22 ; 22 >
+    au < manifest ; exists ; 1970 ; Development Volume 23 ; 23 >
+    au < manifest ; exists ; 1970 ; Development Volume 24 ; 24 >
+    au < manifest ; exists ; 1971 ; Development Volume 25 ; 25 >
+    au < manifest ; exists ; 1971 ; Development Volume 26 ; 26 >
+    au < manifest ; exists ; 1972 ; Development Volume 27 ; 27 >
+    au < manifest ; exists ; 1972 ; Development Volume 28 ; 28 >
+    au < manifest ; exists ; 1973 ; Development Volume 29 ; 29 >
+    au < manifest ; exists ; 1973 ; Development Volume 30 ; 30 >
+    au < manifest ; exists ; 1974 ; Development Volume 31 ; 31 >
+    au < manifest ; exists ; 1974 ; Development Volume 32 ; 32 >
+    au < manifest ; exists ; 1975 ; Development Volume 33 ; 33 >
+    au < manifest ; exists ; 1975 ; Development Volume 34 ; 34 >
+    au < manifest ; exists ; 1976 ; Development Volume 35 ; 35 >
+    au < manifest ; exists ; 1976 ; Development Volume 36 ; 36 >
+    au < manifest ; exists ; 1977 ; Development Volume 37 ; 37 >
+    au < manifest ; exists ; 1977 ; Development Volume 38 ; 38 >
+    au < manifest ; exists ; 1977 ; Development Volume 39 ; 39 >
+    au < manifest ; exists ; 1977 ; Development Volume 40 ; 40 >
+    au < manifest ; exists ; 1977 ; Development Volume 41 ; 41 >
+    au < manifest ; exists ; 1977 ; Development Volume 42 ; 42 >
+    au < manifest ; exists ; 1978 ; Development Volume 43 ; 43 >
+    au < manifest ; exists ; 1978 ; Development Volume 44 ; 44 >
+    au < manifest ; exists ; 1978 ; Development Volume 45 ; 45 >
+    au < manifest ; exists ; 1978 ; Development Volume 46 ; 46 >
+    au < manifest ; exists ; 1978 ; Development Volume 47 ; 47 >
+    au < manifest ; exists ; 1978 ; Development Volume 48 ; 48 >
+    au < manifest ; exists ; 1979 ; Development Volume 49 ; 49 >
+    au < manifest ; exists ; 1979 ; Development Volume 50 ; 50 >
+    au < manifest ; exists ; 1979 ; Development Volume 51 ; 51 >
+    au < manifest ; exists ; 1979 ; Development Volume 52 ; 52 >
+    au < manifest ; exists ; 1979 ; Development Volume 53 ; 53 >
+    au < manifest ; exists ; 1979 ; Development Volume 54 ; 54 >
+    au < manifest ; exists ; 1980 ; Development Volume 55 ; 55 >
+    au < manifest ; exists ; 1980 ; Development Volume 56 ; 56 >
+    au < manifest ; exists ; 1980 ; Development Volume 57 ; 57 >
+    au < manifest ; exists ; 1980 ; Development Volume 58 ; 58 >
+    au < manifest ; exists ; 1980 ; Development Volume 59 ; 59 >
+    au < manifest ; exists ; 1980 ; Development Volume 60 ; 60 >
+    au < manifest ; exists ; 1981 ; Development Volume 61 ; 61 >
+    au < manifest ; exists ; 1981 ; Development Volume 62 ; 62 >
+    au < manifest ; exists ; 1981 ; Development Volume 63 ; 63 >
+    au < manifest ; exists ; 1981 ; Development Volume 64 ; 64 >
+    au < manifest ; exists ; 1981 ; Development Volume 65 ; 65 >
+    au < manifest ; exists ; 1981 ; Development Volume 66 ; 66 >
+    au < manifest ; exists ; 1982 ; Development Volume 67 ; 67 >
+    au < manifest ; exists ; 1982 ; Development Volume 68 ; 68 >
+    au < manifest ; exists ; 1982 ; Development Volume 69 ; 69 >
+    au < manifest ; exists ; 1982 ; Development Volume 70 ; 70 >
+    au < manifest ; exists ; 1982 ; Development Volume 71 ; 71 >
+    au < manifest ; exists ; 1982 ; Development Volume 72 ; 72 >
+    au < manifest ; exists ; 1983 ; Development Volume 73 ; 73 >
+    au < manifest ; exists ; 1983 ; Development Volume 74 ; 74 >
+    au < manifest ; exists ; 1983 ; Development Volume 75 ; 75 >
+    au < manifest ; exists ; 1983 ; Development Volume 76 ; 76 >
+    au < manifest ; exists ; 1983 ; Development Volume 77 ; 77 >
+    au < manifest ; exists ; 1983 ; Development Volume 78 ; 78 >
+    au < manifest ; exists ; 1984 ; Development Volume 79 ; 79 >
+    au < manifest ; exists ; 1984 ; Development Volume 80 ; 80 >
+    au < manifest ; exists ; 1984 ; Development Volume 81 ; 81 >
+    au < manifest ; exists ; 1984 ; Development Volume 82 ; 82 >
+    au < manifest ; exists ; 1984 ; Development Volume 83 ; 83 >
+    au < manifest ; exists ; 1984 ; Development Volume 84 ; 84 >
+    au < manifest ; exists ; 1985 ; Development Volume 85 ; 85 >
+    au < manifest ; exists ; 1985 ; Development Volume 86 ; 86 >
+    au < manifest ; exists ; 1985 ; Development Volume 87 ; 87 >
+    au < manifest ; exists ; 1985 ; Development Volume 88 ; 88 >
+    au < manifest ; exists ; 1985 ; Development Volume 89 ; 89 >
+    au < manifest ; exists ; 1985 ; Development Volume 90 ; 90 >
+    au < manifest ; exists ; 1986 ; Development Volume 91 ; 91 >
+    au < manifest ; exists ; 1986 ; Development Volume 92 ; 92 >
+    au < manifest ; exists ; 1986 ; Development Volume 93 ; 93 >
+    au < manifest ; exists ; 1986 ; Development Volume 94 ; 94 >
+    au < manifest ; exists ; 1986 ; Development Volume 95 ; 95 >
+    au < manifest ; exists ; 1986 ; Development Volume 96 ; 96 >
+    au < manifest ; exists ; 1986 ; Development Volume 97 ; 97 >
+    au < manifest ; exists ; 1986 ; Development Volume 98 ; 98 >
+    au < manifest ; exists ; 1987 ; Development Volume 99 ; 99 >
+    au < manifest ; exists ; 1987 ; Development Volume 100 ; 100 >
+    au < manifest ; exists ; 1987 ; Development Volume 101 ; 101 >
+    au < manifest ; exists ; 1988 ; Development Volume 102 ; 102 >
+    au < manifest ; exists ; 1988 ; Development Volume 103 ; 103 >
+    au < manifest ; exists ; 1988 ; Development Volume 104 ; 104 >
+    au < manifest ; exists ; 1989 ; Development Volume 105 ; 105 >
+    au < manifest ; exists ; 1989 ; Development Volume 106 ; 106 >
+    au < manifest ; exists ; 1989 ; Development Volume 107 ; 107 >
+    au < manifest ; exists ; 1990 ; Development Volume 108 ; 108 >
+    au < manifest ; exists ; 1990 ; Development Volume 109 ; 109 >
+    au < manifest ; exists ; 1990 ; Development Volume 110 ; 110 >
+    au < manifest ; exists ; 1991 ; Development Volume 111 ; 111 >
+    au < manifest ; exists ; 1991 ; Development Volume 112 ; 112 >
+    au < manifest ; exists ; 1991 ; Development Volume 113 ; 113 >
+    au < manifest ; exists ; 1992 ; Development Volume 114 ; 114 >
+    au < manifest ; exists ; 1992 ; Development Volume 115 ; 115 >
+    au < manifest ; exists ; 1992 ; Development Volume 116 ; 116 >
+    au < manifest ; exists ; 1993 ; Development Volume 117 ; 117 >
+    au < manifest ; exists ; 1993 ; Development Volume 118 ; 118 >
+    au < manifest ; exists ; 1993 ; Development Volume 119 ; 119 >
+    au < manifest ; exists ; 1994 ; Development Volume 120 ; 120 >
+    au < manifest ; exists ; 1995 ; Development Volume 121 ; 121 >
+    au < manifest ; exists ; 1996 ; Development Volume 122 ; 122 >
+    au < manifest ; exists ; 1996 ; Development Volume 123 ; 123 >
     au < manifest ; exists ; 1997 ; Development Volume 124 ; 124 >
     au < manifest ; exists ; 1998 ; Development Volume 125 ; 125 >
     au < manifest ; exists ; 1999 ; Development Volume 126 ; 126 >
@@ -76,7 +174,7 @@
     au < manifest ; exists  ; 2010 ; Development Volume 137 ; 137 >
     au < released ; crawling ; 2011 ; Development Volume 138 ; 138 >
     au < released ; crawling ; 2012 ; Development Volume 139 ; 139 >
-    au < manifest ; exists ; 2013 ; Development Volume 140 ; 140 >
+    au < crawling ; exists ; 2013 ; Development Volume 140 ; 140 >
 
   }
 
@@ -96,7 +194,7 @@
     au < manifest ; exists ; 2010 ; Disease Models & Mechanisms Volume 3 ; 3 >
     au < released ; crawling ; 2011 ; Disease Models & Mechanisms Volume 4 ; 4 >
     au < released ; crawling ; 2012 ; Disease Models & Mechanisms Volume 5 ; 5 >
-    au < manifest ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
+    au < crawling ; exists ; 2013 ; Disease Models & Mechanisms Volume 6 ; 6 >
 
   }
 
@@ -238,7 +336,7 @@
     au < manifest ; exists ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < released ; crawling ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < released ; crawling ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
-    au < expected ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
+    au < crawling ; exists ; 2013 ; Journal of Cell Science Volume 126 ; 126 >
 
   }
 
@@ -468,7 +566,7 @@
     au < manifest ; exists ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
     au < released ; crawling ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
     au < released ; crawling ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
-    au < manifest ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
+    au < crawling ; exists ; 2013 ; Journal of Experimental Biology Volume 216 ; 216 >
 
   }
 

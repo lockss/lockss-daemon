@@ -102,8 +102,6 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
-      comment[ijs61] = no permission from publisher
-      comment[notReady] = Can't fetch permission page, RU4464
 
       au < manifest ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 >
       au < manifest ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 >
@@ -117,7 +115,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Systematic and Evolutionary Microbiology Volume 59 ; 59 >
       au < manifest ; exists ; 2010 ; International Journal of Systematic and Evolutionary Microbiology Volume 60 ; 60 >
       au < manifest ; exists ; 2011 ; International Journal of Systematic and Evolutionary Microbiology Volume 61 ; 61 >
-      au < testing ; exists ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
+      au < released ; crawling ; 2012 ; International Journal of Systematic and Evolutionary Microbiology Volume 62 ; 62 >
       au < expected ; exists ; 2013 ; International Journal of Systematic and Evolutionary Microbiology Volume 63 ; 63 >
 
   }
@@ -393,7 +391,6 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://jmm.sgmjournals.org/
-      comment[notReady] = No permission from publisher, RU4464
 
       au < manifest ; exists ; 1968 ; Journal of Medical Microbiology Volume 1 ; 1 >
       au < manifest ; exists ; 1969 ; Journal of Medical Microbiology Volume 2 ; 2 >
@@ -455,7 +452,7 @@
       au < manifest ; exists ; 2009 ; Journal of Medical Microbiology Volume 58 ; 58 >
       au < manifest ; exists ; 2010 ; Journal of Medical Microbiology Volume 59 ; 59 >
       au < manifest ; exists ; 2011 ; Journal of Medical Microbiology Volume 60 ; 60 >
-      au < testing ; exists ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
+      au < released ; crawling ; 2012 ; Journal of Medical Microbiology Volume 61 ; 61 >
       au < expected ; exists ; 2013 ; Journal of Medical Microbiology Volume 62 ; 62 >
 
   }

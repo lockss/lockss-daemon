@@ -3,7 +3,8 @@
   publisher <
     name = American Mathematical Society ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 0 ;
+    comment[0] = on hold pending platform change
   >
   
   plugin = needs.plugin
@@ -16,31 +17,30 @@
       name = Bulletin of the American Mathematical Society ;
       issn = 0273-0979 ;
       eissn = 1088-9485
-  
-      >
-      param[base_url] = http://www.ams.org/journals/bull/
+    >
+    param[base_url] = http://www.ams.org/journals/bull/
       
 
-      au < exists ; exists ; 1891 ; Bulletin of the American Mathematical Society Volume 1 ; 1 ; >
-      au < exists ; exists ; 1892 ; Bulletin of the American Mathematical Society Volume 2 ; 2 ; >
-      au < exists ; exists ; 1893 ; Bulletin of the American Mathematical Society Volume 3 ; 3 ; >
-      au < exists ; exists ; 1894 ; Bulletin of the American Mathematical Society Volume 4 ; 4 ; >
-      au < exists ; exists ; 1895 ; Bulletin of the American Mathematical Society Volume 5 ; 5 ; >
-      au < exists ; exists ; 1896 ; Bulletin of the American Mathematical Society Volume 6 ; 6 ; >
-      au < exists ; exists ; 1897 ; Bulletin of the American Mathematical Society Volume 7 ; 7 ; >
-      au < exists ; exists ; 1898 ; Bulletin of the American Mathematical Society Volume 8 ; 8 ; >
-      au < exists ; exists ; 1899 ; Bulletin of the American Mathematical Society Volume 9 ; 9 ; >
-      au < exists ; exists ; 1900 ; Bulletin of the American Mathematical Society Volume 10 ; 10 ; >
-      au < exists ; exists ; 1901 ; Bulletin of the American Mathematical Society Volume 11 ; 11 ; >
-      au < exists ; exists ; 1902 ; Bulletin of the American Mathematical Society Volume 12 ; 12 ; >
-      au < exists ; exists ; 1903 ; Bulletin of the American Mathematical Society Volume 13 ; 13 ; >
-      au < exists ; exists ; 1904 ; Bulletin of the American Mathematical Society Volume 14 ; 14 ; >
-      au < exists ; exists ; 1905 ; Bulletin of the American Mathematical Society Volume 15 ; 15 ; >
-      au < exists ; exists ; 1906 ; Bulletin of the American Mathematical Society Volume 16 ; 16 ; >
-      au < exists ; exists ; 1907 ; Bulletin of the American Mathematical Society Volume 17 ; 17 ; >
-      au < exists ; exists ; 1908 ; Bulletin of the American Mathematical Society Volume 18 ; 18 ; >
-      au < exists ; exists ; 1909 ; Bulletin of the American Mathematical Society Volume 19 ; 19 ; >
-      au < exists ; exists ; 1910 ; Bulletin of the American Mathematical Society Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1891 ; Bulletin of the American Mathematical Society Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1892 ; Bulletin of the American Mathematical Society Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1893 ; Bulletin of the American Mathematical Society Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1894 ; Bulletin of the American Mathematical Society Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1895 ; Bulletin of the American Mathematical Society Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1896 ; Bulletin of the American Mathematical Society Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1897 ; Bulletin of the American Mathematical Society Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1898 ; Bulletin of the American Mathematical Society Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1899 ; Bulletin of the American Mathematical Society Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1900 ; Bulletin of the American Mathematical Society Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1901 ; Bulletin of the American Mathematical Society Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1902 ; Bulletin of the American Mathematical Society Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1903 ; Bulletin of the American Mathematical Society Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1904 ; Bulletin of the American Mathematical Society Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1905 ; Bulletin of the American Mathematical Society Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1906 ; Bulletin of the American Mathematical Society Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1907 ; Bulletin of the American Mathematical Society Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1908 ; Bulletin of the American Mathematical Society Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1909 ; Bulletin of the American Mathematical Society Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1910 ; Bulletin of the American Mathematical Society Volume 20 ; 20 ; >
      
     }    
     
@@ -49,17 +49,17 @@
     title < 
       name = Conformal Geometry Dynamics and An Electronic Journal of the AMS ; 
       issn = 1088-4173 
-  
-      >
-      param[base_url] = http://www.ams.org/journals/ecgd/
-     
-      au < exists ; exists ; 2007 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 11 ; 11 ; >
-      au < exists ; exists ; 2008 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 12 ; 12 ; >
-      au < exists ; exists ; 2009 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 13 ; 13 ; >
-      au < exists ; exists ; 2010 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 14 ; 14 ; >
-      au < exists ; exists ; 2011 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 15 ; 15 ; >
-      au < exists ; exists ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 16 ; >
-
+    >
+    
+    param[base_url] = http://www.ams.org/journals/ecgd/
+    
+    au < doNotProcess ; doNotProcess ; 2007 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Conformal Geometry Dynamics and An Electronic Journal of the AMS Volume 17 ; 17 ; >
 
     }    
     
@@ -69,35 +69,36 @@
       name = Journal of the American Mathematical Society ;
       issn = 0894-0347 ;
       eissn = 1088-6834
-  
-      >
-      param[base_url] = http://www.ams.org/journals/jams/
-      
-      au < exists ; exists ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1 ; >
-      au < exists ; exists ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 2 ; >
-      au < exists ; exists ; 1990 ; Journal of the American Mathematical Society Volume 3 ; 3 ; >
-      au < exists ; exists ; 1991 ; Journal of the American Mathematical Society Volume 4 ; 4 ; >
-      au < exists ; exists ; 1992 ; Journal of the American Mathematical Society Volume 5 ; 5 ; >
-      au < exists ; exists ; 1993 ; Journal of the American Mathematical Society Volume 6 ; 6 ; >
-      au < exists ; exists ; 1994 ; Journal of the American Mathematical Society Volume 7 ; 7 ; >
-      au < exists ; exists ; 1995 ; Journal of the American Mathematical Society Volume 8 ; 8 ; >
-      au < exists ; exists ; 1996 ; Journal of the American Mathematical Society Volume 9 ; 9 ; >
-      au < exists ; exists ; 1997 ; Journal of the American Mathematical Society Volume 10 ; 10 ; >
-      au < exists ; exists ; 1998 ; Journal of the American Mathematical Society Volume 11 ; 11 ; >
-      au < exists ; exists ; 1999 ; Journal of the American Mathematical Society Volume 12 ; 12 ; >
-      au < exists ; exists ; 2000 ; Journal of the American Mathematical Society Volume 13 ; 13 ; >
-      au < exists ; exists ; 2001 ; Journal of the American Mathematical Society Volume 14 ; 14 ; >
-      au < exists ; exists ; 2002 ; Journal of the American Mathematical Society Volume 15 ; 15 ; >
-      au < exists ; exists ; 2003 ; Journal of the American Mathematical Society Volume 16 ; 16 ; >
-      au < exists ; exists ; 2004 ; Journal of the American Mathematical Society Volume 17 ; 17 ; >
-      au < exists ; exists ; 2005 ; Journal of the American Mathematical Society Volume 18 ; 18 ; >
-      au < exists ; exists ; 2006 ; Journal of the American Mathematical Society Volume 19 ; 19 ; >
-      au < exists ; exists ; 2007 ; Journal of the American Mathematical Society Volume 20 ; 20 ; >
-      au < exists ; exists ; 2008 ; Journal of the American Mathematical Society Volume 21 ; 21 ; >
-      au < exists ; exists ; 2009 ; Journal of the American Mathematical Society Volume 22 ; 22 ; >
-      au < exists ; exists ; 2010 ; Journal of the American Mathematical Society Volume 23 ; 23 ; >
-      au < exists ; exists ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 24 ; >
-      au < exists ; exists ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 25 ; >
+    >
+    
+    param[base_url] = http://www.ams.org/journals/jams/
+    
+    au < doNotProcess ; doNotProcess ; 1988 ; Journal of the American Mathematical Society Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Journal of the American Mathematical Society Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Journal of the American Mathematical Society Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Journal of the American Mathematical Society Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Journal of the American Mathematical Society Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Journal of the American Mathematical Society Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Journal of the American Mathematical Society Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Journal of the American Mathematical Society Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Journal of the American Mathematical Society Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Journal of the American Mathematical Society Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Journal of the American Mathematical Society Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Journal of the American Mathematical Society Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Journal of the American Mathematical Society Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Journal of the American Mathematical Society Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Journal of the American Mathematical Society Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Journal of the American Mathematical Society Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Journal of the American Mathematical Society Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Journal of the American Mathematical Society Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Journal of the American Mathematical Society Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Journal of the American Mathematical Society Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of the American Mathematical Society Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Mathematical Society Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of the American Mathematical Society Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Journal of the American Mathematical Society Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of the American Mathematical Society Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of the American Mathematical Society Volume 26 ; 26 ; >
       
    }
     
@@ -107,77 +108,76 @@
       name = Mathematics of Computation ;
       issn = 0025-5718 ;
       eissn = 1088-6842
-  
-      >
-      param[base_url] = http://www.ams.org/journals/mcom/
-      
-      au < exists ; exists ; 1943-1945 ; Mathematics of Computation Volume 1 ; 1 ; >
-      au < exists ; exists ; 1946-1947 ; Mathematics of Computation Volume 2 ; 2 ; >
-      au < exists ; exists ; 1948-1949 ; Mathematics of Computation Volume 3 ; 3 ; >
-      au < exists ; exists ; 1950 ; Mathematics of Computation Volume 4 ; 4 ; >
-      au < exists ; exists ; 1951 ; Mathematics of Computation Volume 5 ; 5 ; >
-      au < exists ; exists ; 1952 ; Mathematics of Computation Volume 6 ; 6 ; >
-      au < exists ; exists ; 1953 ; Mathematics of Computation Volume 7 ; 7 ; >
-      au < exists ; exists ; 1954 ; Mathematics of Computation Volume 8 ; 8 ; >
-      au < exists ; exists ; 1955 ; Mathematics of Computation Volume 9 ; 9 ; >
-      au < exists ; exists ; 1956 ; Mathematics of Computation Volume 10 ; 10 ; >
-      au < exists ; exists ; 1957 ; Mathematics of Computation Volume 11 ; 11 ; >
-      au < exists ; exists ; 1958 ; Mathematics of Computation Volume 12 ; 12 ; >
-      au < exists ; exists ; 1959 ; Mathematics of Computation Volume 13 ; 13 ; >
-      au < exists ; exists ; 1960 ; Mathematics of Computation Volume 14 ; 14 ; >
-      au < exists ; exists ; 1961 ; Mathematics of Computation Volume 15 ; 15 ; >
-      au < exists ; exists ; 1962 ; Mathematics of Computation Volume 16 ; 16 ; >
-      au < exists ; exists ; 1963 ; Mathematics of Computation Volume 17 ; 17 ; >
-      au < exists ; exists ; 1964 ; Mathematics of Computation Volume 18 ; 18 ; >
-      au < exists ; exists ; 1965 ; Mathematics of Computation Volume 19 ; 19 ; >
-      au < exists ; exists ; 1966 ; Mathematics of Computation Volume 20 ; 20 ; >
-      au < exists ; exists ; 1967 ; Mathematics of Computation Volume 21 ; 21 ; >
-      au < exists ; exists ; 1968 ; Mathematics of Computation Volume 22 ; 22 ; >
-      au < exists ; exists ; 1969 ; Mathematics of Computation Volume 23 ; 23 ; >
-      au < exists ; exists ; 1970 ; Mathematics of Computation Volume 24 ; 24 ; >
-      au < exists ; exists ; 1971 ; Mathematics of Computation Volume 25 ; 25 ; >
-      au < exists ; exists ; 1972 ; Mathematics of Computation Volume 26 ; 26 ; >    
-      au < exists ; exists ; 1973 ; Mathematics of Computation Volume 27 ; 27 ; >
-      au < exists ; exists ; 1974 ; Mathematics of Computation Volume 28 ; 28 ; >
-      au < exists ; exists ; 1975 ; Mathematics of Computation Volume 29 ; 29 ; >
-      au < exists ; exists ; 1976 ; Mathematics of Computation Volume 30 ; 30 ; >
-      au < exists ; exists ; 1977 ; Mathematics of Computation Volume 31 ; 31 ; >
-      au < exists ; exists ; 1978 ; Mathematics of Computation Volume 32 ; 32 ; >
-      au < exists ; exists ; 1979 ; Mathematics of Computation Volume 33 ; 33 ; >
-      au < exists ; exists ; 1980 ; Mathematics of Computation Volume 34-35 ; 34-35 ; >
-      au < exists ; exists ; 1981 ; Mathematics of Computation Volume 36-37 ; 36-37 ; >
-      au < exists ; exists ; 1982 ; Mathematics of Computation Volume 38-39 ; 38-39 ; >
-      au < exists ; exists ; 1983 ; Mathematics of Computation Volume 40-41 ; 40-41 ; >
-      au < exists ; exists ; 1984 ; Mathematics of Computation Volume 42-43 ; 42-43 ; >
-      au < exists ; exists ; 1985 ; Mathematics of Computation Volume 44-45 ; 44-45 ; >
-      au < exists ; exists ; 1986 ; Mathematics of Computation Volume 46-47 ; 46-47 ; >
-      au < exists ; exists ; 1987 ; Mathematics of Computation Volume 48-49 ; 48-49 ; >
-      au < exists ; exists ; 1988 ; Mathematics of Computation Volume 50-51 ; 50-51 ; >
-      au < exists ; exists ; 1989 ; Mathematics of Computation Volume 52-53 ; 52-53 ; >
-      au < exists ; exists ; 1990 ; Mathematics of Computation Volume 54-55 ; 54-55 ; >
-      au < exists ; exists ; 1991 ; Mathematics of Computation Volume 56-57 ; 56-57 ; >
-      au < exists ; exists ; 1992 ; Mathematics of Computation Volume 58-59 ; 58-59 ; >
-      au < exists ; exists ; 1993 ; Mathematics of Computation Volume 60-61 ; 60-61 ; >
-      au < exists ; exists ; 1994 ; Mathematics of Computation Volume 62-63 ; 62-63 ; >
-      au < exists ; exists ; 1995 ; Mathematics of Computation Volume 64 ; 64 ; >
-      au < exists ; exists ; 1996 ; Mathematics of Computation Volume 65 ; 65 ; >
-      au < exists ; exists ; 1997 ; Mathematics of Computation Volume 66 ; 66 ; >
-      au < exists ; exists ; 1998 ; Mathematics of Computation Volume 67 ; 67 ; >
-      au < exists ; exists ; 1999 ; Mathematics of Computation Volume 68 ; 68 ; >
-      au < exists ; exists ; 2000 ; Mathematics of Computation Volume 69 ; 69 ; >
-      au < exists ; exists ; 2001 ; Mathematics of Computation Volume 70 ; 70 ; >
-      au < exists ; exists ; 2002 ; Mathematics of Computation Volume 71 ; 71 ; >
-      au < exists ; exists ; 2003 ; Mathematics of Computation Volume 72 ; 72 ; >
-      au < exists ; exists ; 2004 ; Mathematics of Computation Volume 73 ; 73 ; >
-      au < exists ; exists ; 2005 ; Mathematics of Computation Volume 74 ; 74 ; >
-      au < exists ; exists ; 2006 ; Mathematics of Computation Volume 75 ; 75 ; >
-      au < exists ; exists ; 2007 ; Mathematics of Computation Volume 76 ; 76 ; >
-      au < exists ; exists ; 2008 ; Mathematics of Computation Volume 77 ; 77 ; >
-      au < exists ; exists ; 2009 ; Mathematics of Computation Volume 78 ; 78 ; >
-      au < exists ; exists ; 2010 ; Mathematics of Computation Volume 79 ; 79 ; >
-      au < exists ; exists ; 2011 ; Mathematics of Computation Volume 80 ; 80 ; >
-      au < exists ; exists ; 2012 ; Mathematics of Computation Volume 81 ; 81 ; >
-
+    >
+    param[base_url] = http://www.ams.org/journals/mcom/
+    
+    au < doNotProcess ; doNotProcess ; 1943-1945 ; Mathematics of Computation Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1946-1947 ; Mathematics of Computation Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1948-1949 ; Mathematics of Computation Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; Mathematics of Computation Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; Mathematics of Computation Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; Mathematics of Computation Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; Mathematics of Computation Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; Mathematics of Computation Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; Mathematics of Computation Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; Mathematics of Computation Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; Mathematics of Computation Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1958 ; Mathematics of Computation Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1959 ; Mathematics of Computation Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; Mathematics of Computation Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; Mathematics of Computation Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; Mathematics of Computation Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; Mathematics of Computation Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; Mathematics of Computation Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; Mathematics of Computation Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; Mathematics of Computation Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; Mathematics of Computation Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; Mathematics of Computation Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; Mathematics of Computation Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; Mathematics of Computation Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; Mathematics of Computation Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; Mathematics of Computation Volume 26 ; 26 ; >    
+    au < doNotProcess ; doNotProcess ; 1973 ; Mathematics of Computation Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; Mathematics of Computation Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; Mathematics of Computation Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; Mathematics of Computation Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; Mathematics of Computation Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; Mathematics of Computation Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; Mathematics of Computation Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; Mathematics of Computation Volume 34-35 ; 34-35 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; Mathematics of Computation Volume 36-37 ; 36-37 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; Mathematics of Computation Volume 38-39 ; 38-39 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; Mathematics of Computation Volume 40-41 ; 40-41 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; Mathematics of Computation Volume 42-43 ; 42-43 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; Mathematics of Computation Volume 44-45 ; 44-45 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; Mathematics of Computation Volume 46-47 ; 46-47 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; Mathematics of Computation Volume 48-49 ; 48-49 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; Mathematics of Computation Volume 50-51 ; 50-51 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; Mathematics of Computation Volume 52-53 ; 52-53 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; Mathematics of Computation Volume 54-55 ; 54-55 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; Mathematics of Computation Volume 56-57 ; 56-57 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; Mathematics of Computation Volume 58-59 ; 58-59 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; Mathematics of Computation Volume 60-61 ; 60-61 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; Mathematics of Computation Volume 62-63 ; 62-63 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; Mathematics of Computation Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Mathematics of Computation Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Mathematics of Computation Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Mathematics of Computation Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Mathematics of Computation Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Mathematics of Computation Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Mathematics of Computation Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Mathematics of Computation Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Mathematics of Computation Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Mathematics of Computation Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Mathematics of Computation Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Mathematics of Computation Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Mathematics of Computation Volume 76 ; 76 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Mathematics of Computation Volume 77 ; 77 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Mathematics of Computation Volume 78 ; 78 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Mathematics of Computation Volume 79 ; 79 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Mathematics of Computation Volume 80 ; 80 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Mathematics of Computation Volume 81 ; 81 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Mathematics of Computation Volume 82 ; 82 ; >
 
     }
     
@@ -188,14 +188,14 @@
       name = Memoirs of the American Mathematical Society ;
       issn = 0065-9266 ;
       eissn = 1947-6221
-  
-      >
-      param[base_url] = http://www.ams.org/jourcgi/jrnl_toolbar_nav/memo_all
+    >
+    param[base_url] = http://www.ams.org/jourcgi/jrnl_toolbar_nav/memo_all
 
-      au < exists ; exists ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 216 ; >
-      au < exists ; exists ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 217 ; >
-      au < exists ; exists ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 218 ; >
-      au < exists ; exists ; 2012 ; Memoirs of the American Mathematical Society Volume 219 ; 219 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Memoirs of the American Mathematical Society Volume 216 ; 216 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Memoirs of the American Mathematical Society Volume 217 ; 217 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Memoirs of the American Mathematical Society Volume 218 ; 218 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Memoirs of the American Mathematical Society Volume 219 ; 219 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Memoirs of the American Mathematical Society Volume 220 ; 220 ; >
 
     }
 
@@ -205,29 +205,29 @@
       name = Notices of the American Mathematical Society ;
       issn = 0002-9920 ;
       eissn = 1088-9477
-  
-      >
-      param[base_url] = http://www.ams.org/notices/
-
-
-      au < exists ; exists ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 42 ; >
-      au < exists ; exists ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 43 ; >
-      au < exists ; exists ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 44 ; >
-      au < exists ; exists ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 45 ; >
-      au < exists ; exists ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 46 ; >
-      au < exists ; exists ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 47 ; >
-      au < exists ; exists ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 48 ; >
-      au < exists ; exists ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 49 ; >
-      au < exists ; exists ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 50 ; >
-      au < exists ; exists ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 51 ; >
-      au < exists ; exists ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 52 ; >
-      au < exists ; exists ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 53 ; >
-      au < exists ; exists ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 54 ; >
-      au < exists ; exists ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 55 ; >
-      au < exists ; exists ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 56 ; >
-      au < exists ; exists ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 57 ; >
-      au < exists ; exists ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 58 ; >
-      au < exists ; exists ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 59 ; >
+    >
+    
+    param[base_url] = http://www.ams.org/notices/
+    
+    au < doNotProcess ; doNotProcess ; 1995 ; Notices of the American Mathematical Society Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; Notices of the American Mathematical Society Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; Notices of the American Mathematical Society Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Notices of the American Mathematical Society Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Notices of the American Mathematical Society Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Notices of the American Mathematical Society Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Notices of the American Mathematical Society Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Notices of the American Mathematical Society Volume 49 ; 49 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Notices of the American Mathematical Society Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Notices of the American Mathematical Society Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Notices of the American Mathematical Society Volume 52 ; 52 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Notices of the American Mathematical Society Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Notices of the American Mathematical Society Volume 54 ; 54 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Notices of the American Mathematical Society Volume 55 ; 55 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Notices of the American Mathematical Society Volume 56 ; 56 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Notices of the American Mathematical Society Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Notices of the American Mathematical Society Volume 58 ; 58 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Notices of the American Mathematical Society Volume 59 ; 59 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Notices of the American Mathematical Society Volume 60 ; 60 ; >
 
 
     }
@@ -238,17 +238,18 @@
       name = Proceedings of the American Mathematical Society ;
       issn = 0002-9939 ;
       eissn = 1088-6826
-  
-      >
-      param[base_url] = http://www.ams.org/journals/proc/
+    >
+      
+    param[base_url] = http://www.ams.org/journals/proc/
       
 
-      au < exists ; exists ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 135 ; >
-      au < exists ; exists ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 136 ; >
-      au < exists ; exists ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 137 ; >
-      au < exists ; exists ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 138 ; >
-      au < exists ; exists ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 139 ; >
-      au < exists ; exists ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 140 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Proceedings of the American Mathematical Society Volume 135 ; 135 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Proceedings of the American Mathematical Society Volume 136 ; 136 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Proceedings of the American Mathematical Society Volume 137 ; 137 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Proceedings of the American Mathematical Society Volume 138 ; 138 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Proceedings of the American Mathematical Society Volume 139 ; 139 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Proceedings of the American Mathematical Society Volume 140 ; 140 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Proceedings of the American Mathematical Society Volume 141 ; 141 ; >
 
     }
     
@@ -258,26 +259,27 @@
       name = Representation Theory - An electronic journal of the AMS ;
       issn = 1088-4165 
       
-      >
-      param[base_url] = http://www.ams.org/journals/ert/
+    >
+    param[base_url] = http://www.ams.org/journals/ert/
 
-      au < exists ; exists ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1 ; >
-      au < exists ; exists ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 2 ; >
-      au < exists ; exists ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 3 ; >
-      au < exists ; exists ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 4 ; >
-      au < exists ; exists ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 5 ; >
-      au < exists ; exists ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 6 ; >
-      au < exists ; exists ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 7 ; >
-      au < exists ; exists ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 8 ; >
-      au < exists ; exists ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 9 ; >
-      au < exists ; exists ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 10; >
-      au < exists ; exists ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 11; >
-      au < exists ; exists ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 12; >
-      au < exists ; exists ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 13; >
-      au < exists ; exists ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 14; >
-      au < exists ; exists ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 15; >
-      au < exists ; exists ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 16; >
-                                    
+    au < doNotProcess ; doNotProcess ; 1997 ; Representation Theory - An electronic journal of the AMS Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; Representation Theory - An electronic journal of the AMS Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; Representation Theory - An electronic journal of the AMS Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; Representation Theory - An electronic journal of the AMS Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; Representation Theory - An electronic journal of the AMS Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; Representation Theory - An electronic journal of the AMS Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; Representation Theory - An electronic journal of the AMS Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Representation Theory - An electronic journal of the AMS Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Representation Theory - An electronic journal of the AMS Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Representation Theory - An electronic journal of the AMS Volume 10 ; 10; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Representation Theory - An electronic journal of the AMS Volume 11 ; 11; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Representation Theory - An electronic journal of the AMS Volume 12 ; 12; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Representation Theory - An electronic journal of the AMS Volume 13 ; 13; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Representation Theory - An electronic journal of the AMS Volume 14 ; 14; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Representation Theory - An electronic journal of the AMS Volume 15 ; 15; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Representation Theory - An electronic journal of the AMS Volume 16 ; 16; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Representation Theory - An electronic journal of the AMS Volume 17 ; 17; >
+
     }
     
     {
@@ -286,19 +288,20 @@
       name = St. Petersburg Mathematical Journal ;
       issn = 1061-0022 ;
       eissn = 1547-7371
-  
-      >
-      param[base_url] = http://www.ams.org/journals/spmj/
+    >
+      
+    param[base_url] = http://www.ams.org/journals/spmj/
 
-      au < exists ; exists ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 15 ; >
-      au < exists ; exists ; 2005 ; St. Petersburg Mathematical Journal Volume 16 ; 16 ; >
-      au < exists ; exists ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 17 ; >
-      au < exists ; exists ; 2007 ; St. Petersburg Mathematical Journal Volume 18 ; 18 ; >
-      au < exists ; exists ; 2008 ; St. Petersburg Mathematical Journal Volume 19 ; 19 ; >
-      au < exists ; exists ; 2009 ; St. Petersburg Mathematical Journal Volume 20 ; 20 ; >
-      au < exists ; exists ; 2010 ; St. Petersburg Mathematical Journal Volume 21 ; 21 ; >
-      au < exists ; exists ; 2011 ; St. Petersburg Mathematical Journal Volume 22 ; 22 ; >
-      au < exists ; exists ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; St. Petersburg Mathematical Journal Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; St. Petersburg Mathematical Journal Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; St. Petersburg Mathematical Journal Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; St. Petersburg Mathematical Journal Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; St. Petersburg Mathematical Journal Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; St. Petersburg Mathematical Journal Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; St. Petersburg Mathematical Journal Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; St. Petersburg Mathematical Journal Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; St. Petersburg Mathematical Journal Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; St. Petersburg Mathematical Journal Volume 24 ; 24 ; >
 
     }
     
@@ -308,19 +311,20 @@
       name = Theory of Probability and Mathematical Statistics ;
       issn = 0094-9000 ;
       eissn = 1547-7363
-  
-      >
-      param[base_url] = http://www.ams.org/journals/tpms/
-      
-      au < exists ; exists ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 68-69 ; >
-      au < exists ; exists ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 70-71 ; >
-      au < exists ; exists ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 72-73 ; >
-      au < exists ; exists ; 2007 ; Theory of Probability and Mathematical Statistics Volume 74-75 ; 74-75 ; >
-      au < exists ; exists ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 76-77 ; >
-      au < exists ; exists ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 78-79 ; >
-      au < exists ; exists ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 80-81 ; >
-      au < exists ; exists ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 82-83 ; >
-      au < exists ; exists ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 84 ; >
+    >
+    
+    param[base_url] = http://www.ams.org/journals/tpms/
+    
+    au < doNotProcess ; doNotProcess ; 2004 ; Theory of Probability and Mathematical Statistics Volume 68-69 ; 68-69 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Theory of Probability and Mathematical Statistics Volume 70-71 ; 70-71 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Theory of Probability and Mathematical Statistics Volume 72-73 ; 72-73 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Theory of Probability and Mathematical Statistics Volume 74-75 ; 74-75 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Theory of Probability and Mathematical Statistics Volume 76-77 ; 76-77 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Theory of Probability and Mathematical Statistics Volume 78-79 ; 78-79 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Theory of Probability and Mathematical Statistics Volume 80-81 ; 80-81 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Theory of Probability and Mathematical Statistics Volume 82-83 ; 82-83 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Theory of Probability and Mathematical Statistics Volume 84 ; 84 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Theory of Probability and Mathematical Statistics Volume 85 ; 85 ; >
       
     }   
 
@@ -330,16 +334,17 @@
       name = Transactions of the American Mathematical Society ;
       issn =  0002-9947 ;
       eissn = 1088-6850
-  
-      >
-      param[base_url] = http://www.ams.org/journals/tran/
+    >
+    
+    param[base_url] = http://www.ams.org/journals/tran/
 
-      au < exists ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 359 ; >
-      au < exists ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 360 ; >
-      au < exists ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 361 ; >
-      au < exists ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 362 ; >
-      au < exists ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 363 ; >
-      au < exists ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 364 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Transactions of the American Mathematical Society Volume 359 ; 359 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the American Mathematical Society Volume 360 ; 360 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the American Mathematical Society Volume 361 ; 361 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Transactions of the American Mathematical Society Volume 362 ; 362 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Transactions of the American Mathematical Society Volume 363 ; 363 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Transactions of the American Mathematical Society Volume 364 ; 364 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the American Mathematical Society Volume 365 ; 365 ; >
 
     }
    
@@ -349,22 +354,20 @@
       name = Transactions of the American Mathematical Society ;
       issn = 0077-1554 ;
       eissn = 1547-738X
-  
-      >
-      param[base_url] = http://www.ams.org/journals/mosc/
-      
-      au < exists ; exists ; 2004 ; Transactions of the American Mathematical Society Volume 65 ; 65 ; >
-      au < exists ; exists ; 2005 ; Transactions of the American Mathematical Society Volume 66 ; 66 ; >
-      au < exists ; exists ; 2006 ; Transactions of the American Mathematical Society Volume 67 ; 67 ; >
-      au < exists ; exists ; 2007 ; Transactions of the American Mathematical Society Volume 68 ; 68 ; >
-      au < exists ; exists ; 2008 ; Transactions of the American Mathematical Society Volume 69 ; 697 ; >
-      au < exists ; exists ; 2009 ; Transactions of the American Mathematical Society Volume 70 ; 70 ; >
-      au < exists ; exists ; 2010 ; Transactions of the American Mathematical Society Volume 71 ; 71 ; >
-      au < exists ; exists ; 2011 ; Transactions of the American Mathematical Society Volume 72 ; 72 ; >
-      au < expected ; exists ; 2012 ; Transactions of the American Mathematical Society Volume 84 ; 84 ; >
-      
-      
+    >
+    
+    param[base_url] = http://www.ams.org/journals/mosc/
+    
+    au < doNotProcess ; doNotProcess ; 2004 ; Transactions of the American Mathematical Society Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Transactions of the American Mathematical Society Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Transactions of the American Mathematical Society Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Transactions of the American Mathematical Society Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the American Mathematical Society Volume 69 ; 697 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the American Mathematical Society Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Transactions of the American Mathematical Society Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; Transactions of the American Mathematical Society Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Transactions of the American Mathematical Society Volume 84 ; 84 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Transactions of the American Mathematical Society Volume 85 ; 85 ; >
 
     }
-
 }

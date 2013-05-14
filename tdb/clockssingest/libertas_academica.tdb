@@ -95,7 +95,7 @@
     au < manifest ; exists ; 2009 ; Biochemistry Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Biochemistry Insights Volume 3 ; 2010 >
     au < released ; crawling ; 2011 ; Biochemistry Insights Volume 4 ; 2011 >
-    au < released ; manifest ; 2012 ; Biochemistry Insights Volume 5 ; 2012 >    
+    au < released ; crawling ; 2012 ; Biochemistry Insights Volume 5 ; 2012 >    
     au < expected ; exists ; 2013 ; Biochemistry Insights Volume 6 ; 2013 >
   }
   
@@ -168,7 +168,7 @@
     au < manifest ; exists ; 2009 ; Biomedical Engineering and Computational Biology Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Biomedical Engineering and Computational Biology Volume 2 ; 2010 >
     au < released ; crawling ; 2011 ; Biomedical Engineering and Computational Biology Volume 3 ; 2011 >
-    au < released ; manifest ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 2012 >
+    au < released ; crawling ; 2012 ; Biomedical Engineering and Computational Biology Volume 4 ; 2012 >
     au < manifest ; exists ; 2013 ; Biomedical Engineering and Computational Biology Volume 5 ; 2013 >
 
   }

@@ -17,7 +17,6 @@
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = clcweb
     implicit < status1 ; status ; year ; name ; param[volume] >
-    comment[notReady] = Can't fetch permission page
 
     au < manifest ; exists ; 1999 ; Comparative Literature and Culture Volume 1 ; 1 >
     au < manifest ; exists ; 2000 ; Comparative Literature and Culture Volume 2 ; 2 >
@@ -32,9 +31,29 @@
     au < manifest ; exists ; 2009 ; Comparative Literature and Culture Volume 11 ; 11 >
     au < manifest ; exists ; 2010 ; Comparative Literature and Culture Volume 12 ; 12 >
     au < manifest ; exists ; 2011 ; Comparative Literature and Culture Volume 13 ; 13 >
-    au < crawling ; exists ; 2012 ; Comparative Literature and Culture Volume 14 ; 14 >
+    au < released ; crawling ; 2012 ; Comparative Literature and Culture Volume 14 ; 14 >
     au < expected ; exists ; 2013 ; Comparative Literature and Culture Volume 15 ; 15 >
  
+  }
+  
+    {
+
+    title <
+      name = Data Curation Profile ;
+      issn = 2326-6651 
+    >
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = dcp
+    implicit < status1 ; status ; year ; name ; param[volume] >
+
+    au < manifest ; exists ; 2009 ; Data Curation Profile Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; Data Curation Profile Volume 2 ; 2 >
+    au < manifest ; exists ; 2011 ; Data Curation Profile Volume 3 ; 3 >
+    au < released ; crawling ; 2012 ; Data Curation Profile Volume 4 ; 4 >
+    au < crawling ; exists ; 2013 ; Data Curation Profile Volume 5 ; 5 >
+
   }
   
   {
@@ -55,7 +74,7 @@
     au < manifest ; exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 >
     au < released ; crawling ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 >
-    au < expected ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 >
 
   }
   
@@ -70,10 +89,9 @@
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = jate
     implicit < status1 ; status ; year ; name ; param[volume] >
-    comment[notReady] = Can't fetch permission page
     
     au < manifest ; exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 >
+    au < released ; crawling ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 >
     au < expected ; exists ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 >
 
   }
@@ -89,14 +107,13 @@
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = jhpee
     implicit < status1 ; status ; year ; name ; param[volume] >
-    comment[notReady] = Can't fetch permission page
     
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 >
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 >
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 >
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 >
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 >
-    au < crawling ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 >
+    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 >
     au < expected ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 >
     au < expected ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 >
 
@@ -115,8 +132,8 @@
     implicit < status1 ; status ; year ; name ; param[volume] >
 
     au < manifest ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 >
-    au < crawling ; exists ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 >
-    au < expected ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 >
+    au < released ; crawling ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 >
+    au < crawling ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 >
     
   }
 
@@ -135,10 +152,34 @@
     au < manifest ; exists ; 2006-2007 ; Journal of Problem Solving Volume 1 ; 1 >
     au < manifest ; exists ; 2008-2009 ; Journal of Problem Solving Volume 2 ; 2 >
     au < manifest ; exists ; 2010-2011 ; Journal of Problem Solving Volume 3 ; 3 >
-    au < crawling ; exists ; 2012 ; Journal of Problem Solving Research Volume 4 ; 4 >
-    au < crawling ; exists ; 2012 ; Journal of Problem Solving Research Volume 5 ; 5 >
+    au < released ; crawling ; 2012 ; Journal of Problem Solving Research Volume 4 ; 4 >
+    au < released ; crawling ; 2012 ; Journal of Problem Solving Research Volume 5 ; 5 >
     au < expected ; exists ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 >
 
   }
   
+  {
+  
+    title < 
+      name = JTRP Technical Reports ;
+      issn = 2326-6325 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://docs.lib.purdue.edu/
+    param[journal_abbr] = jtrp
+    implicit < status1 ; status ; year ; name ; param[volume] >
+    comment[doNotProcess] = publisher to fix manifest pages RT4593
+    comment[1] = Abbreviation stands for Joint Transportation Research Program
+
+    au < doNotProcess ; exists ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
+    au < doNotProcess ; exists ; 2008 ; JTRP Other Publications and Reports Volume 2008 ; 2008 >
+    au < doNotProcess ; exists ; 2009 ; JTRP Other Publications and Reports Volume 2009 ; 2009 >
+    au < doNotProcess ; exists ; 2011 ; JTRP Other Publications and Reports Volume 2011 ; 2011 >
+    au < doNotProcess ; exists ; 2012 ; JTRP Other Publications and Reports Volume 2012 ; 2012 >
+   
+
+  }
+
 }
+

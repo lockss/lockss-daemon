@@ -8,7 +8,7 @@
 
   comment[platform] = Atypon
   
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressPlugin
   param[base_url] = http://www.nrcresearchpress.com/
   implicit < status1 ; status ; year ; name ; param[volume_name] >
   
@@ -29,7 +29,8 @@
     au < exists ; exists ; 2009 ; Applied Physiology, Nutrition, and Metabolism Volume 34 ; 34 >
     au < exists ; exists ; 2010 ; Applied Physiology, Nutrition, and Metabolism Volume 35 ; 35 >
     au < exists ; exists ; 2011 ; Applied Physiology, Nutrition, and Metabolism Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
+    au < testing ; exists ; 2012 ; Applied Physiology, Nutrition, and Metabolism Volume 37 ; 37 >
+    au < exists ; exists ; 2013 ; Applied Physiology, Nutrition, and Metabolism Volume 38 ; 38 >
     
   }  
   
@@ -96,6 +97,7 @@
     au < exists ; exists ; 2010 ; Biochemistry and Cell Biology Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Biochemistry and Cell Biology Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Biochemistry and Cell Biology Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Biochemistry and Cell Biology Volume 91 ; 91 >
 
   }
   
@@ -173,6 +175,7 @@
     au < exists ; exists ; 2010 ; Botany Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Botany Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Botany Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Botany Volume 91 ; 91 >
 
   }
   
@@ -196,6 +199,7 @@
     au < exists ; exists ; 2010 ; Canadian Aeronautics and Space Journal Volume 56 ; 56 >
     au < exists ; exists ; 2011 ; Canadian Aeronautics and Space Journal Volume 58 ; 58 >
     au < exists ; exists ; 2012 ; Canadian Aeronautics and Space Journal Volume 59 ; 59 >
+    au < exists ; exists ; 2013 ; Canadian Aeronautics and Space Journal Volume 60 ; 60 >
     
   }
      
@@ -258,6 +262,7 @@
     au < exists ; exists ; 2010 ; Canadian Geotechnical Journal Volume 47 ; 47 >
     au < exists ; exists ; 2011 ; Canadian Geotechnical Journal Volume 48 ; 48 >
     au < exists ; exists ; 2012 ; Canadian Geotechnical Journal Volume 49 ; 49 >
+    au < exists ; exists ; 2013 ; Canadian Geotechnical Journal Volume 50 ; 50 >
 
   }
 
@@ -327,6 +332,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Animal Science Volume 90 ; 90 >
     au < exists ; exists ; 2011 ; Canadian Journal of Animal Science Volume 91 ; 91 >
     au < exists ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 >
 
     }
     
@@ -429,6 +435,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Chemistry Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Canadian Journal of Chemistry Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Canadian Journal of Chemistry Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Chemistry Volume 91 ; 91 >
     
     }
     
@@ -481,9 +488,21 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Civil Engineering Volume 37 ; 37 >
     au < exists ; exists ; 2011 ; Canadian Journal of Civil Engineering Volume 38 ; 38 >
     au < exists ; exists ; 2012 ; Canadian Journal of Civil Engineering Volume 39 ; 39 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Civil Engineering Volume 40 ; 40 >
     
     }
-    
+
+    {
+
+    title < 
+      name = Canadian Journal of Community Mental Health ;
+      eissn = 1929-7084 
+    >
+
+    au < exists ; exists ; 2013 ; Canadian Journal of Community Mental Health Volume 32 ; 32 >
+
+    }
+
     {
   
     title < 
@@ -543,6 +562,8 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Earth Sciences Volume 47 ; 47 >
     au < exists ; exists ; 2011 ; Canadian Journal of Earth Sciences Volume 48 ; 48 >
     au < exists ; exists ; 2012 ; Canadian Journal of Earth Sciences Volume 49 ; 49 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Earth Sciences Volume 50 ; 50 >
+
     }
     
         {
@@ -680,6 +701,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 67 ; 67 >
     au < exists ; exists ; 2011 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 68 ; 68 >
     au < exists ; exists ; 2012 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 69 ; 69 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 70 ; 70 >
     
     }
 
@@ -737,6 +759,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Forest Research Volume 40 ; 40 >
     au < exists ; exists ; 2011 ; Canadian Journal of Forest Research Volume 41 ; 41 >
     au < exists ; exists ; 2012 ; Canadian Journal of Forest Research Volume 42 ; 42 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Forest Research Volume 43 ; 43 >
 
     }
 
@@ -808,9 +831,10 @@
     au < exists ; exists ; 2000 ; Canadian Journal of Microbiology Volume 56 ; 56 >
     au < exists ; exists ; 2011 ; Canadian Journal of Microbiology Volume 57 ; 57 >
     au < exists ; exists ; 2012 ; Canadian Journal of Microbiology Volume 58 ; 58 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Microbiology Volume 59 ; 59 >
 
     }
-    
+
     {
   
     title < 
@@ -883,6 +907,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Physics Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Canadian Journal of Physics Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Canadian Journal of Physics Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Physics Volume 91 ; 91 >
 
     }
     
@@ -947,6 +972,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Physiology and Pharmacology Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Canadian Journal of Physiology and Pharmacology Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Canadian Journal of Physiology and Pharmacology Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Physiology and Pharmacology Volume 91 ; 91 >
 
     }
     
@@ -958,7 +984,7 @@
       eissn = 1918-1833
       >
      
-    param[journal_id] = 
+    param[journal_id] = cjps
 
     au < exists ; exists ; 1957 ; Canadian Journal of Plant Science Volume 37 ; 37 >
     au < exists ; exists ; 1958 ; Canadian Journal of Plant Science Volume 38 ; 38 >
@@ -1016,6 +1042,7 @@
     au < exists ; exists ; 2000 ; Canadian Journal of Plant Science Volume 90 ; 90 >
     au < exists ; exists ; 2011 ; Canadian Journal of Plant Science Volume 91 ; 91 >
     au < exists ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 >
 
     }
     
@@ -1025,7 +1052,8 @@
       name = Canadian Journal of Remote Sensing ;
       eissn = 1712-7971
       >
-     
+
+    param[base_url] = http://pubs.casi.ca/
     param[journal_id] = cjrs
 
     au < exists ; exists ; 2002 ; Canadian Journal of Remote Sensing Volume 28 ; 28 >
@@ -1039,6 +1067,7 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Remote Sensing Volume 36 ; 36 >
     au < exists ; exists ; 2011 ; Canadian Journal of Remote Sensing Volume 37 ; 37 >
     au < exists ; exists ; 2012 ; Canadian Journal of Remote Sensing Volume 38 ; 38 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Remote Sensing Volume 39 ; 39 >
 
     }
     
@@ -1049,7 +1078,7 @@
       issn = 1923-4287 
       >
      
-    param[journal_id] = 
+    param[journal_id] = cjr
 
     au < exists ; exists ; 1929 ; Canadian Journal of Research Volume 1 ; 1 >
     au < exists ; exists ; 1930 ; Canadian Journal of Research Volume 2-3 ; 2-3 >
@@ -1083,7 +1112,8 @@
       issn = 0008-4271 ;
       eissn = 1918-1841
       >
-     
+
+    param[base_url] = http://pubs.aic.ca/
     param[journal_id] = cjss
 
     au < exists ; exists ; 1957 ; Canadian Journal of Soil Science Volume 37 ; 37 >
@@ -1142,6 +1172,7 @@
     au < exists ; exists ; 2000 ; Canadian Journal of Soil Science Volume 90 ; 90 >
     au < exists ; exists ; 2011 ; Canadian Journal of Soil Science Volume 91 ; 91 >
     au < exists ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 >
     
     }
     
@@ -1217,23 +1248,10 @@
     au < exists ; exists ; 2010 ; Canadian Journal of Zoology Volume 88 ; 88 >
     au < exists ; exists ; 2011 ; Canadian Journal of Zoology Volume 89 ; 89 >
     au < exists ; exists ; 2012 ; Canadian Journal of Zoology Volume 90 ; 90 >
+    au < exists ; exists ; 2013 ; Canadian Journal of Zoology Volume 91 ; 91 >
     
     }
-    
-    {
-  
-    title < 
-      name = Canadian Medicinal Crops ;
-      issn = 978-0-660-17534-8 ;
-      eissn = 978-0-660-18296-4
-      >
-     
-     comment[0] = book
-     
-    param[journal_id] = 
 
-    }
-        
     {
   
     title < 
@@ -1241,6 +1259,7 @@
       issn = 0701-1784 
       >
 
+    param[base_url] = http://pubs.cwra.org/
     param[journal_id] = cwrj
     
     au < exists ; exists ; 1976 ; Canadian Water Resources Journal Volume 1 ; 1 >
@@ -1280,6 +1299,7 @@
     au < exists ; exists ; 2010 ; Canadian Water Resources Journal Volume 35 ; 35 >
     au < exists ; exists ; 2011 ; Canadian Water Resources Journal Volume 36 ; 36 >
     au < exists ; exists ; 2012 ; Canadian Water Resources Journal Volume 37 ; 37 >
+    au < exists ; exists ; 2013 ; Canadian Water Resources Journal Volume 38 ; 38 >
     
     }
 
@@ -1291,10 +1311,12 @@
       >
      
      comment[0] = closed access journal
-     
+
+    param[base_url] = http://pubs.ciphi.ca/
     param[journal_id] = ehr
 
     au < exists ; exists ; 2012 ; Canadian Water Resources Journal Volume 55 ; 55 >
+    au < exists ; exists ; 2013 ; Canadian Water Resources Journal Volume 56 ; 56 >
 
     }
     
@@ -1328,9 +1350,113 @@
     au < exists ; exists ; 2010 ; Environmental Reviews Volume 18 ; 18 >
     au < exists ; exists ; 2011 ; Environmental Reviews Volume 19 ; 19 >
     au < exists ; exists ; 2012 ; Environmental Reviews Volume 20 ; 20 >
+    au < exists ; exists ; 2013 ; Environmental Reviews Volume 21 ; 21 >
 
     }
-    
+
+    {
+
+    title < 
+      name = The Forestry Chronicle ;
+      issn = 0015-7546 ;
+      eissn = 1499-9315 
+    >
+
+    param[base_url] = http://pubs.cif-ifc.org/
+    param[journal_id] = tfc
+
+    au < exists ; exists ; 1925 ; The Forestry Chronicle Volume 1 ; 1 >
+    au < exists ; exists ; 1926 ; The Forestry Chronicle Volume 2 ; 2 >
+    au < exists ; exists ; 1927 ; The Forestry Chronicle Volume 3 ; 3 >
+    au < exists ; exists ; 1928 ; The Forestry Chronicle Volume 4 ; 4 >
+    au < exists ; exists ; 1929 ; The Forestry Chronicle Volume 5 ; 5 >
+    au < exists ; exists ; 1930 ; The Forestry Chronicle Volume 6 ; 6 >
+    au < exists ; exists ; 1931 ; The Forestry Chronicle Volume 7 ; 7 >
+    au < exists ; exists ; 1932 ; The Forestry Chronicle Volume 8 ; 8 >
+    au < exists ; exists ; 1933 ; The Forestry Chronicle Volume 9 ; 9 >
+    au < exists ; exists ; 1934 ; The Forestry Chronicle Volume 10 ; 10 >
+    au < exists ; exists ; 1935 ; The Forestry Chronicle Volume 11 ; 11 >
+    au < exists ; exists ; 1936 ; The Forestry Chronicle Volume 12 ; 12 >
+    au < exists ; exists ; 1937 ; The Forestry Chronicle Volume 13 ; 13 >
+    au < exists ; exists ; 1938 ; The Forestry Chronicle Volume 14 ; 14 >
+    au < exists ; exists ; 1939 ; The Forestry Chronicle Volume 15 ; 15 >
+    au < exists ; exists ; 1940 ; The Forestry Chronicle Volume 16 ; 16 >
+    au < exists ; exists ; 1941 ; The Forestry Chronicle Volume 17 ; 17 >
+    au < exists ; exists ; 1942 ; The Forestry Chronicle Volume 18 ; 18 >
+    au < exists ; exists ; 1943 ; The Forestry Chronicle Volume 19 ; 19 >
+    au < exists ; exists ; 1944 ; The Forestry Chronicle Volume 20 ; 20 >
+    au < exists ; exists ; 1945 ; The Forestry Chronicle Volume 21 ; 21 >
+    au < exists ; exists ; 1946 ; The Forestry Chronicle Volume 22 ; 22 >
+    au < exists ; exists ; 1947 ; The Forestry Chronicle Volume 23 ; 23 >
+    au < exists ; exists ; 1948 ; The Forestry Chronicle Volume 24 ; 24 >
+    au < exists ; exists ; 1949 ; The Forestry Chronicle Volume 25 ; 25 >
+    au < exists ; exists ; 1950 ; The Forestry Chronicle Volume 26 ; 26 >
+    au < exists ; exists ; 1951 ; The Forestry Chronicle Volume 27 ; 27 >
+    au < exists ; exists ; 1952 ; The Forestry Chronicle Volume 28 ; 28 >
+    au < exists ; exists ; 1953 ; The Forestry Chronicle Volume 29 ; 29 >
+    au < exists ; exists ; 1954 ; The Forestry Chronicle Volume 30 ; 30 >
+    au < exists ; exists ; 1955 ; The Forestry Chronicle Volume 31 ; 31 >
+    au < exists ; exists ; 1956 ; The Forestry Chronicle Volume 32 ; 32 >
+    au < exists ; exists ; 1957 ; The Forestry Chronicle Volume 33 ; 33 >
+    au < exists ; exists ; 1958 ; The Forestry Chronicle Volume 34 ; 34 >
+    au < exists ; exists ; 1959 ; The Forestry Chronicle Volume 35 ; 35 >
+    au < exists ; exists ; 1960 ; The Forestry Chronicle Volume 36 ; 36 >
+    au < exists ; exists ; 1961 ; The Forestry Chronicle Volume 37 ; 37 >
+    au < exists ; exists ; 1962 ; The Forestry Chronicle Volume 38 ; 38 >
+    au < exists ; exists ; 1963 ; The Forestry Chronicle Volume 39 ; 39 >
+    au < exists ; exists ; 1964 ; The Forestry Chronicle Volume 40 ; 40 >
+    au < exists ; exists ; 1965 ; The Forestry Chronicle Volume 41 ; 41 >
+    au < exists ; exists ; 1966 ; The Forestry Chronicle Volume 42 ; 42 >
+    au < exists ; exists ; 1967 ; The Forestry Chronicle Volume 43 ; 43 >
+    au < exists ; exists ; 1968 ; The Forestry Chronicle Volume 44 ; 44 >
+    au < exists ; exists ; 1969 ; The Forestry Chronicle Volume 45 ; 45 >
+    au < exists ; exists ; 1970 ; The Forestry Chronicle Volume 46 ; 46 >
+    au < exists ; exists ; 1971 ; The Forestry Chronicle Volume 47 ; 47 >
+    au < exists ; exists ; 1972 ; The Forestry Chronicle Volume 48 ; 48 >
+    au < exists ; exists ; 1973 ; The Forestry Chronicle Volume 49 ; 49 >
+    au < exists ; exists ; 1974 ; The Forestry Chronicle Volume 50 ; 50 >
+    au < exists ; exists ; 1975 ; The Forestry Chronicle Volume 51 ; 51 >
+    au < exists ; exists ; 1976 ; The Forestry Chronicle Volume 52 ; 52 >
+    au < exists ; exists ; 1977 ; The Forestry Chronicle Volume 53 ; 53 >
+    au < exists ; exists ; 1978 ; The Forestry Chronicle Volume 54 ; 54 >
+    au < exists ; exists ; 1979 ; The Forestry Chronicle Volume 55 ; 55 >
+    au < exists ; exists ; 1980 ; The Forestry Chronicle Volume 56 ; 56 >
+    au < exists ; exists ; 1981 ; The Forestry Chronicle Volume 57 ; 57 >
+    au < exists ; exists ; 1982 ; The Forestry Chronicle Volume 58 ; 58 >
+    au < exists ; exists ; 1983 ; The Forestry Chronicle Volume 59 ; 59 >
+    au < exists ; exists ; 1984 ; The Forestry Chronicle Volume 60 ; 60 >
+    au < exists ; exists ; 1985 ; The Forestry Chronicle Volume 61 ; 61 >
+    au < exists ; exists ; 1986 ; The Forestry Chronicle Volume 62 ; 62 >
+    au < exists ; exists ; 1987 ; The Forestry Chronicle Volume 63 ; 63 >
+    au < exists ; exists ; 1988 ; The Forestry Chronicle Volume 64 ; 64 >
+    au < exists ; exists ; 1989 ; The Forestry Chronicle Volume 65 ; 65 >
+    au < exists ; exists ; 1990 ; The Forestry Chronicle Volume 66 ; 66 >
+    au < exists ; exists ; 1991 ; The Forestry Chronicle Volume 67 ; 67 >
+    au < exists ; exists ; 1992 ; The Forestry Chronicle Volume 68 ; 68 >
+    au < exists ; exists ; 1993 ; The Forestry Chronicle Volume 69 ; 69 >
+    au < exists ; exists ; 1994 ; The Forestry Chronicle Volume 70 ; 70 >
+    au < exists ; exists ; 1995 ; The Forestry Chronicle Volume 71 ; 71 >
+    au < exists ; exists ; 1996 ; The Forestry Chronicle Volume 72 ; 72 >
+    au < exists ; exists ; 1997 ; The Forestry Chronicle Volume 73 ; 73 >
+    au < exists ; exists ; 1998 ; The Forestry Chronicle Volume 74 ; 74 >
+    au < exists ; exists ; 1999 ; The Forestry Chronicle Volume 75 ; 75 >
+    au < exists ; exists ; 2000 ; The Forestry Chronicle Volume 76 ; 76 >
+    au < exists ; exists ; 2001 ; The Forestry Chronicle Volume 77 ; 77 >
+    au < exists ; exists ; 2002 ; The Forestry Chronicle Volume 78 ; 78 >
+    au < exists ; exists ; 2003 ; The Forestry Chronicle Volume 79 ; 79 >
+    au < exists ; exists ; 2004 ; The Forestry Chronicle Volume 80 ; 80 >
+    au < exists ; exists ; 2005 ; The Forestry Chronicle Volume 81 ; 81 >
+    au < exists ; exists ; 2006 ; The Forestry Chronicle Volume 82 ; 82 >
+    au < exists ; exists ; 2007 ; The Forestry Chronicle Volume 83 ; 83 >
+    au < exists ; exists ; 2008 ; The Forestry Chronicle Volume 84 ; 84 >
+    au < exists ; exists ; 2009 ; The Forestry Chronicle Volume 85 ; 85 >
+    au < exists ; exists ; 2010 ; The Forestry Chronicle Volume 86 ; 86 >
+    au < exists ; exists ; 2011 ; The Forestry Chronicle Volume 87 ; 87 >
+    au < exists ; exists ; 2012 ; The Forestry Chronicle Volume 88 ; 88 >
+    au < exists ; exists ; 2013 ; The Forestry Chronicle Volume 89 ; 89 >
+
+    }
+
     {
   
     title < 
@@ -1338,12 +1464,14 @@
       issn = 1195-1036 ;
       eissn = 1925-4296
       >
-     
+
+    param[base_url] = http://pubs.cig-acsg.ca/
     param[journal_id] = cig
 
     au < exists ; exists ; 2010 ; GEOMATICA Volume 64 ; 64 >
     au < exists ; exists ; 2011 ; GEOMATICA Volume 65 ; 65 >
     au < exists ; exists ; 2012 ; GEOMATICA Volume 66 ; 66 >
+    au < exists ; exists ; 2013 ; GEOMATICA Volume 67 ; 67 >
 
     }
     
@@ -1445,7 +1573,8 @@
       name = Journal of the Canadian Health Libraries Association ;
       eissn = 1708-6892
       >
-     
+
+    param[base_url] = http://pubs.chla-absc.ca/
     param[journal_id] = jchla
 
     au < exists ; exists ; 2004 ; Journal of the Canadian Health Libraries Association Volume 25 ; 25 >
@@ -1461,19 +1590,19 @@
 
     }
     
-    
     {
-  
+    
     title < 
-      name = Memoirs of the Entomological Society of Canada ;
-      issn = 1920-3047 
+      name = Journal of Unmanned Vehicle Systems ;
+      issn = 2291-3467
       >
      
-     comment[0] = not found 11/27/2012
-     
-    param[journal_id] = 
     
-    
+    comment[0] = quarterly journal expected to launch April 1 2013
+
+    au < expected ; exists ; 2013 ; Journal of Unmanned Vehicle Systems Volume 1 ; 1 >
+
     }
+    
     
 }

@@ -3,7 +3,7 @@
   publisher <
     name = Co-Action Publishing ;
     info[contract] = 2010 ;
-    info[tester] = 3
+    info[tester] = 7
   >
 
   comment[notReady] = RU 4449
@@ -196,7 +196,7 @@
     param[base_url] = http://www.infectionecologyandepidemiology.net/
     param[journal_id] = iee
 
-    au < crawling ; exists ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
+    au < released ; crawling ; 2011 ; Infection Ecology & Epidemiology [including Supplements] Volume 1 ; 1 ; 2011 >
     au < released ; crawling ; 2012 ; Infection Ecology & Epidemiology [including Supplements] Volume 2 ; 2 ; 2012 >
     au < expected ; exists ; 2013 ; Infection Ecology & Epidemiology [including Supplements] Volume 3 ; 3 ; 2013 >
   }

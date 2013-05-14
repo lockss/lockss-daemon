@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Liverpool University Press ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+  
+    plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+    param[base_url] = http://liverpool.metapress.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = Translated Texts for Historians ;
+      type = bookSeries
+    >
+
+    comment[platform1] = On Metapress, but may have a different format than for journals.
+    comment[platform2] = params for journal are journal_issn and volume_name
+    
+    plugin = needs.plugin
+    param[base_url] = http://liverpool.metapress.com/
+    implicit < status1 ; status ; year ; isbn ; name >
+
+    au < exists ; exists ; 2004 ; 9780853230397 ; The Acts of the Council of Chalcedon >
+    
+  }
+
+}

@@ -3,21 +3,21 @@
   publisher <
     name = The Global Summitry Project ;
     info[contract] = 2012 ;
-    info[tester] = 5
+    info[tester] = 7
   >
   
   {
   
     title < 
-      name = Global Summitry Series 
+      name = Global Summitry Journal 
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-    param[base_url] = http://globalsummitryproject.net/
-    param[journal_abbr] = global-summitry-series
+    param[base_url] = http://globalsummitry.org/
+    param[journal_id] = gsj
     implicit < status1 ; status ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2011-2012 ; Global Summitry Series Volume 1 ; 1 >
+    au < manifest ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 >
     
   }
 

@@ -28,7 +28,7 @@
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
     au < released ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
-    au < released ; manifest ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
+    au < released ; crawling ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
     au < manifest ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
 
   }
@@ -56,11 +56,11 @@
     au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
     au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
-    au < released ; manifest ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
-    au < released ; manifest ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < released ; manifest ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < released ; crawling ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
+    au < released ; crawling ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
+    au < released ; crawling ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
-    au < released ; manifest ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
+    au < released ; crawling ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
     au < manifest ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
 
   }
@@ -129,7 +129,7 @@
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < released ; manifest ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < released ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
     au < manifest ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
 
 
@@ -144,8 +144,8 @@
 
       param[journal_id] = bcj
 
-    au < released ; manifest ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
-    au < released ; manifest ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
+    au < released ; crawling ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
+    au < released ; crawling ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
 
   }
@@ -315,8 +315,8 @@
     au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
     au < exists ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
     au < exists ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
-    au < released ; manifest ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
-    au < released ; manifest ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
+    au < released ; crawling ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
+    au < released ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
     au < manifest ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
 
   }
@@ -436,8 +436,8 @@
     au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
     au < released ; crawling ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
     au < released ; crawling ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
-    au < released ; manifest ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 >
-    au < released ; manifest ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 >
+    au < released ; crawling ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 >
+    au < released ; crawling ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 >
     au < manifest ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 >
     au < exists ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
 
@@ -467,7 +467,7 @@
     au < zapped ; down ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
-    au < released ; manifest ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
+    au < released ; crawling ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
 	au < manifest ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
 
   }
@@ -514,7 +514,7 @@
 
     au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
-    au < released ; manifest ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
+    au < released ; crawling ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
 
     }
@@ -543,7 +543,7 @@
     au < zapped ; down ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
-    au < released ; manifest ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
+    au < released ; crawling ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
     au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
 
   }
@@ -563,7 +563,7 @@
     au < crawling ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
     au < crawling ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
     au < crawling ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
-    au < released ; manifest ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
+    au < released ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
 
   }
@@ -581,7 +581,7 @@
 
     au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
     au < testing ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
-    au < released ; manifest ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
+    au < released ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
 
   }
@@ -748,7 +748,7 @@
     au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
-    au < released ; manifest ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
+    au < released ; crawling ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < zapped ; down ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
@@ -796,7 +796,7 @@
     au < zapped ; down ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
     au < released ; crawling ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
     au < released ; crawling ; 2011 ; European Journal of Clinical Nutrition Volume 65 ; 2011 ; 65 >
-    au < released ; manifest ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
+    au < released ; crawling ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
     au < manifest ; exists ; 2013 ; European Journal of Clinical Nutrition Volume 67 ; 2013 ; 67 >
 
   }
@@ -827,7 +827,7 @@
     au < released ; crawling ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
-    au < released ; manifest ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
+    au < released ; crawling ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
     au < manifest ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 >
   }
 
@@ -853,11 +853,11 @@
     au < exists ; exists ; 2005 ; Evidence-Based Dentistry Volume 6 ; 2005 ; 6 >
     au < exists ; exists ; 2006 ; Evidence-Based Dentistry Volume 7 ; 2006 ; 7 >
     au < exists ; exists ; 2007 ; Evidence-Based Dentistry Volume 8 ; 2007 ; 8 >
-    au < released ; manifest ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
-    au < released ; manifest ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
-    au < released ; manifest ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
+    au < released ; crawling ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
+    au < released ; crawling ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
+    au < released ; crawling ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
-    au < released ; manifest ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
+    au < released ; crawling ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
     au < manifest ; exists ; 2013 ; Evidence-Based Dentistry Volume 14 ; 2013 ; 14 >
 
   }
@@ -1140,7 +1140,7 @@
     au < released ; crawling ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
     au < released ; crawling ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
     au < released ; crawling ; 2012 ; Heredity Volume 108 ; 2012 ; 108 >
-    au < released ; manifest ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
+    au < released ; crawling ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
     au < manifest ; exists ; 2013 ; Heredity Volume 110 ; 2013 ; 110 >
 
 
@@ -1165,7 +1165,7 @@
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
     au < released ; crawling ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
-    au < released ; manifest ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+    au < released ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
     au < manifest ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
   }
 
@@ -1325,7 +1325,7 @@
     au < zapped ; down ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
     au < released ; crawling ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
     au < released ; crawling ; 2011 ; International Journal of Impotence Research Volume 23 ; 2011 ; 23 >
-    au < released ; manifest ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
+    au < released ; crawling ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
     au < manifest ; exists ; 2013 ; International Journal of Impotence Research Volume 25 ; 2013 ; 25 >
   }
 
@@ -1355,7 +1355,7 @@
     au < released ; crawling ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
     au < released ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
     au < released ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
-    au < released ; manifest ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
+    au < released ; crawling ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
     au < manifest ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
 
   }
@@ -1409,11 +1409,11 @@
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
-    au < released ; manifest ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
-    au < released ; manifest ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
-    au < released ; manifest ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
+    au < released ; crawling ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < released ; crawling ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < released ; crawling ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < zapped ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
-    au < released ; manifest ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
+    au < released ; crawling ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
     au < manifest ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
 
   }
@@ -1442,7 +1442,7 @@
     au < exists ; exists ; 2005 ; JID Symposium Proceedings Volume 10 ; 2005 ; 10 >
     au < exists ; exists ; 2006 ; JID Symposium Proceedings Volume 11 ; 2006 ; 11 >
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
-    au < released ; manifest ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
+    au < released ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < testing ; exists ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
 
@@ -1466,7 +1466,7 @@
     au < zapped ; down ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < released ; crawling ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
     au < released ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
-    au < released ; manifest ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
+    au < released ; crawling ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
     au < manifest ; exists ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
 
   }
@@ -1546,7 +1546,7 @@
     au < zapped ; down ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
-    au < released ; manifest ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
+    au < released ; crawling ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
     au < manifest ; exists ; 2013 ; Journal of Exposure Science and Environmental Epidemiology Volume 23 ; 2013 ; 23 >
 
   }
@@ -1597,7 +1597,7 @@
     au < zapped ; down ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
     au < released ; crawling ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
     au < released ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
-    au < released ; manifest ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
+    au < released ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
     au < manifest ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
 
   }
@@ -1775,7 +1775,7 @@
     au < zapped ; down ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
     au < released ; crawling ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
     au < released ; crawling ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
-    au < released ; manifest ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
+    au < released ; crawling ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
     au < manifest ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 >
 
   }
@@ -1804,7 +1804,7 @@
     au < zapped ; down ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
     au < released ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
-    au < released ; manifest ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
+    au < released ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
     au < manifest ; exists ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 >
   }
 
@@ -1898,7 +1898,7 @@
     au < exists ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
     au < exists ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
     au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
-    au < released ; manifest ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
+    au < released ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < testing ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < expected ; exists ; 2013 ; Kidney International Volume 82 ; 2013 ; 82 >
@@ -2036,7 +2036,7 @@
     au < zapped ; down ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
     au < released ; crawling ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 >
-    au < released ; manifest ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 >
+    au < released ; crawling ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 >
     au < manifest ; exists ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 >
 
   }
@@ -2107,7 +2107,7 @@
 
     param[journal_id] = mtna
 
-    au < released ; manifest ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 (2000) ; 2012 ; 1 >
+    au < released ; crawling ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 (2000) ; 2012 ; 1 >
     au < exists ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 (2000) ; 2013 ; 2 >
 
   }
@@ -2124,11 +2124,11 @@
     comment[0] = need to confirm if this is under contract
     param[journal_id] = mi
 
-    au < released ; manifest ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
-    au < released ; manifest ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < released ; crawling ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < released ; crawling ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
     au < released ; crawling ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
-    au < released ; manifest ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
+    au < released ; crawling ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
     au < manifest ; exists ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 >
 
   }
@@ -3870,7 +3870,7 @@
     au < released ; crawling ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     au < released ; crawling ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
-    au < released ; manifest ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
+    au < released ; crawling ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
 	au < manifest ; exists ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 >
 
   }
@@ -3920,7 +3920,7 @@
     au < zapped ; down ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
     au < released ; crawling ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
-    au < released ; manifest ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
+    au < released ; crawling ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
     au < manifest ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 >
 
   }

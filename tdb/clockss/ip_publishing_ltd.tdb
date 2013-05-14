@@ -4,7 +4,7 @@
     name = IP Publishing Ltd. ;
     info[back] = 2011 ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -20,7 +20,7 @@
     title <
       name = Industry and Higher Education ;
       issn = 0950-4222 ;
-      eissn = 0950-4222 ;
+      eissn = 2043-6858 ;
       issnl = 0950-4222
     >
 
@@ -50,7 +50,7 @@
     title <
       name = International Journal of Entrepreneurship and Innovation ;
       issn = 1465-7503 ;
-      eissn = 1465-7503 ;
+      eissn = 2043-6882 ;
       issnl = 1465-7503
     >
 
@@ -78,9 +78,8 @@
 
     title <
       name = Outlook on Agriculture ;
-      issn = 030-7270 ;
-      eissn = 030-7270 ;
-      issnl = 030-7270
+      issn = 0030-7270 ;
+      issnl = 0030-7270
     >
 
     param[journal_id] = ooa
@@ -109,7 +108,7 @@
     title <
       name = South East Asia Research ;
       issn = 0967-828X ;
-      eissn = 0967-828X ;
+      eissn = 2043-6874 ;
       issnl = 0967-828X
     >
 
@@ -138,27 +137,27 @@
     title <
       name = Tourism Economics ;
       issn = 1354-8166 ;
-      eissn = 1354-8166 ;
+      eissn = 2044-0375 ;
       issnl = 1354-8166
     >
 
     param[journal_id] = tec
     param[journal_issn] = 1354-8166
 
-    au < exists ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 >
-    au < exists ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 >
-    au < exists ; exists ; 2002 ; Tourism Economics Volume 8 ; 8 >
-    au < exists ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 >
-    au < exists ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 >
-    au < exists ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 >
-    au < exists ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 >
-    au < exists ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 >
-    au < exists ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 >
-    au < exists ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 >
-    au < exists ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 >
-    au < exists ; exists ; 2011 ; Tourism Economics Volume 17 ; 17 >
-    au < exists ; exists ; 2012 ; Tourism Economics Volume 18 ; 18 >
-    au < expected ; exists ; 2013 ; Tourism Economics Volume 19 ; 19 >
+    au < manifest ; exists ; 2000 ; Tourism Economics Volume 6 ; 6 >
+    au < manifest ; exists ; 2001 ; Tourism Economics Volume 7 ; 7 >
+    au < manifest ; exists ; 2002 ; Tourism Economics Volume 8 ; 8 >
+    au < manifest ; exists ; 2003 ; Tourism Economics Volume 9 ; 9 >
+    au < manifest ; exists ; 2004 ; Tourism Economics Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; Tourism Economics Volume 11 ; 11 >
+    au < manifest ; exists ; 2006 ; Tourism Economics Volume 12 ; 12 >
+    au < manifest ; exists ; 2007 ; Tourism Economics Volume 13 ; 13 >
+    au < manifest ; exists ; 2008 ; Tourism Economics Volume 14 ; 14 >
+    au < manifest ; exists ; 2009 ; Tourism Economics Volume 15 ; 15 >
+    au < manifest ; exists ; 2010 ; Tourism Economics Volume 16 ; 16 >
+    au < released ; crawling ; 2011 ; Tourism Economics Volume 17 ; 17 >
+    au < released ; crawling ; 2012 ; Tourism Economics Volume 18 ; 18 >
+    au < crawling ; exists ; 2013 ; Tourism Economics Volume 19 ; 19 >
 
   }
 }

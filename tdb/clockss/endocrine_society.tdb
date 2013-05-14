@@ -3,11 +3,10 @@
   publisher <
     name = Endocrine Society ;
     info[contract] = 2012 ;
-    info[tester] = 3
+    info[tester] = 7
   >
 
   implicit < status1 ; status ; year ; name ; param[volume_name] >
-  comment[0] = Permissions not ready. AUs notReady. See RT 4487.
 
   {
 
@@ -19,7 +18,7 @@
     >
     
     {
-
+     
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://edrv.endojournals.org/
 
@@ -55,8 +54,8 @@
       au < manifest ; exists ; 2009 ; Endocrine Reviews Volume 30 ; 30 >
       au < manifest ; exists ; 2010 ; Endocrine Reviews Volume 31 ; 31 >
       au < manifest ; exists ; 2011 ; Endocrine Reviews Volume 32 ; 32 >
-      au < notReady ; exists ; 2012 ; Endocrine Reviews Volume 33 ; 33 >
-      au < expected ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 >
+      au < released ; crawling ; 2012 ; Endocrine Reviews Volume 33 ; 33 >
+      au < crawling ; exists ; 2013 ; Endocrine Reviews Volume 34 ; 34 >
 
     }
 
@@ -229,7 +228,7 @@
       au < manifest ; exists ; 2010 ; Endocrinology Volume 151 ; 151 >
       au < manifest ; exists ; 2011 ; Endocrinology Volume 152 ; 152 >
       au < released ; crawling ; 2012 ; Endocrinology Volume 153 ; 153 >
-      au < manifest ; exists ; 2013 ; Endocrinology Volume 154 ; 154 >
+      au < crawling ; exists ; 2013 ; Endocrinology Volume 154 ; 154 >
 
     }
 
@@ -345,8 +344,8 @@
       au < manifest ; exists ; 2009 ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
       au < manifest ; exists ; 2010 ; Journal of Clinical Endocrinology & Metabolism Volume 95 ; 95 >
       au < manifest ; exists ; 2011 ; Journal of Clinical Endocrinology & Metabolism Volume 96 ; 96 >
-      au < notReady ; exists ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
-      au < manifest ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
+      au < testing ; exists ; 2012 ; Journal of Clinical Endocrinology & Metabolism Volume 97 ; 97 >
+      au < crawling ; exists ; 2013 ; Journal of Clinical Endocrinology & Metabolism Volume 98 ; 98 >
 
     }
 
@@ -392,7 +391,7 @@
       au < manifest ; exists ; 2010 ; Molecular Endocrinology Volume 24 ; 24 >
       au < manifest ; exists ; 2011 ; Molecular Endocrinology Volume 25 ; 25 >
       au < released ; crawling ; 2012 ; Molecular Endocrinology Volume 26 ; 26 >
-      au < manifest ; exists ; 2013 ; Molecular Endocrinology Volume 27 ; 27 >
+      au < crawling ; exists ; 2013 ; Molecular Endocrinology Volume 27 ; 27 >
 
     }
 
@@ -417,7 +416,6 @@
       au < exists ; exists ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
       au < exists ; exists ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
       au < exists ; exists ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
-      au < expected ; exists ; 2005 ; Recent Progress in Hormone Research Volume 60 ; 60 >
 
     }
 

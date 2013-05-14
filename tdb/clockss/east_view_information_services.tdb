@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = East View Information Services
+    name = East View Information Services ;
+    info[contract] = 2011 ;
+    info[tester] = 0
   >
 
   {

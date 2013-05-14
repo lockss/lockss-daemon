@@ -5,7 +5,8 @@
     info[contract] = 2012 ;
     info[tester] = 0
   >
-
+	comment[platform] = Silverchair
+	
     plugin = needs.plugin
     param[base_url] = http://spiedigitallibrary.org/journals/
     implicit < status1 ; status ; year ; name ; param[volume_name] >

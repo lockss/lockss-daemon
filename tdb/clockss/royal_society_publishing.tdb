@@ -3,7 +3,7 @@
   publisher <
     name = Royal Society Publishing ;
     info[contract] = 2009 ;
-    info[tester] = 3
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
@@ -104,7 +104,7 @@
     au < zapped ; down ; 2010 ; Biology Letters Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Biology Letters Volume 7 ; 7 >
     au < released ; crawling ; 2012 ; Biology Letters Volume 8 ; 8 >
-    au < manifest ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Biology Letters Volume 9 ; 9 >
 
   }
 
@@ -125,7 +125,7 @@
 
     au < released ; crawling ; 2011 ; Interface Focus Volume 1 ; 1 >
     au < released ; crawling ; 2012 ; Interface Focus Volume 2 ; 2 >
-    au < manifest ; exists ; 2013; Interface Focus Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Interface Focus Volume 3 ; 3 >
    
   }
   
@@ -232,7 +232,7 @@
     au < released ; crawling ; 2010 ; Notes and Records of the Royal Society Volume 64 ; 64 >
     au < released ; crawling ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
     au < released ; crawling ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
-    au < expected ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
+    au < crawling ; exists ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
 
   }
 
@@ -251,7 +251,7 @@
     
     au < released ; crawling ; 2011 ; Open Biology Volume 1 ; 1 >
     au < released ; crawling ; 2012 ; Open Biology Volume 2 ; 2 >
-    au < expected ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Open Biology Volume 3 ; 3 >
     
 
   }

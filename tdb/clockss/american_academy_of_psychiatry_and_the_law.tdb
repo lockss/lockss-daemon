@@ -3,7 +3,7 @@
   publisher <
     name = American Academy of Psychiatry and the Law ;
     info[contract] = 2011 ;
-    info[tester] = 3
+    info[tester] = 7
   >
   {
 
@@ -17,6 +17,20 @@
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
     param[base_url] = http://www.jaapl.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
+
+    {
+
+      attr[au_coverage_deapth] = abstracts
+
+      au < released ; crawling ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
+      au < released ; crawling ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
+      au < released ; crawling ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
+      au < released ; crawling ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
+      au < released ; crawling ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
+
+    }
+
+    {
 
     comment[1975] = as of 2011-11-29 this is not a typo, the site show nothing in 1975 and two overlapping volumes in 1976
 
@@ -44,11 +58,7 @@
     au < released ; crawling ; 1994 ; Journal of the American Academy of Psychiatry and the Law Online Volume 22 ; 22 >
     au < released ; crawling ; 1995 ; Journal of the American Academy of Psychiatry and the Law Online Volume 23 ; 23 >
     au < released ; crawling ; 1996 ; Journal of the American Academy of Psychiatry and the Law Online Volume 24 ; 24 >
-    au < released ; crawling ; 1997 ; Journal of the American Academy of Psychiatry and the Law Online Volume 25 [abstracts only] ; 25 >
-    au < released ; crawling ; 1998 ; Journal of the American Academy of Psychiatry and the Law Online Volume 26 [abstracts only] ; 26 >
-    au < released ; crawling ; 1999 ; Journal of the American Academy of Psychiatry and the Law Online Volume 27 [abstracts only] ; 27 >
-    au < released ; crawling ; 2000 ; Journal of the American Academy of Psychiatry and the Law Online Volume 28 [abstracts only] ; 28 >
-    au < released ; crawling ; 2001 ; Journal of the American Academy of Psychiatry and the Law Online Volume 29 [abstracts only] ; 29 >
+
     au < released ; crawling ; 2002 ; Journal of the American Academy of Psychiatry and the Law Online Volume 30 ; 30 >
     au < zapped ; down ; 2003 ; Journal of the American Academy of Psychiatry and the Law Online Volume 31 ; 31 >
     au < zapped ; down ; 2004 ; Journal of the American Academy of Psychiatry and the Law Online Volume 32 ; 32 >
@@ -60,7 +70,10 @@
     au < released ; crawling ; 2010 ; Journal of the American Academy of Psychiatry and the Law Online Volume 38 ; 38 >
     au < released ; crawling ; 2011 ; Journal of the American Academy of Psychiatry and the Law Online Volume 39 ; 39 >
     au < zapped ; down ; 2012 ; Journal of the American Academy of Psychiatry and the Law Online Volume 40 ; 40 >
-    au < expected ; exists ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 >
+    au < crawling ; exists ; 2013 ; Journal of the American Academy of Psychiatry and the Law Online Volume 41 ; 41 >
+
+    }
+
   }
 
 }

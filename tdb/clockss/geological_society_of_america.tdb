@@ -19,158 +19,113 @@
     param[base_url] = http://gsabulletin.gsapubs.org/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
-    au < manifest ; exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
-    au < manifest ; exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
-    au < manifest ; exists ; 1920 ; Geological Society of America Bulletin Volume 31 [abstracts only] ; 31 >
-    au < manifest ; exists ; 1921 ; Geological Society of America Bulletin Volume 32 [abstracts only] ; 32 >
-    au < manifest ; exists ; 1922 ; Geological Society of America Bulletin Volume 33 [abstracts only] ; 33 >
-    au < manifest ; exists ; 1923 ; Geological Society of America Bulletin Volume 34 [abstracts only] ; 34 >
-    au < manifest ; exists ; 1924 ; Geological Society of America Bulletin Volume 35 [abstracts only] ; 35 >
-    au < manifest ; exists ; 1925 ; Geological Society of America Bulletin Volume 36 [abstracts only] ; 36 >
-    au < manifest ; exists ; 1926 ; Geological Society of America Bulletin Volume 37 [abstracts only] ; 37 >
-    au < manifest ; exists ; 1927 ; Geological Society of America Bulletin Volume 38 [abstracts only] ; 38 >
-    au < manifest ; exists ; 1928 ; Geological Society of America Bulletin Volume 39 [abstracts only] ; 39 >
-    au < manifest ; exists ; 1929 ; Geological Society of America Bulletin Volume 40 [abstracts only] ; 40 >
-    au < manifest ; exists ; 1930 ; Geological Society of America Bulletin Volume 41 [abstracts only] ; 41 >
-    au < manifest ; exists ; 1931 ; Geological Society of America Bulletin Volume 42 [abstracts only] ; 42 >
-    au < manifest ; exists ; 1932 ; Geological Society of America Bulletin Volume 43 [abstracts only] ; 43 >
-    au < manifest ; exists ; 1933 ; Geological Society of America Bulletin Volume 44 [abstracts only] ; 44 >
-    au < manifest ; exists ; 1934 ; Geological Society of America Bulletin Volume 45 [abstracts only] ; 45 >
-    au < manifest ; exists ; 1935 ; Geological Society of America Bulletin Volume 46 [abstracts only] ; 46 >
-    au < manifest ; exists ; 1936 ; Geological Society of America Bulletin Volume 47 [abstracts only] ; 47 >
-    au < manifest ; exists ; 1937 ; Geological Society of America Bulletin Volume 48 [abstracts only] ; 48 >
-    au < manifest ; exists ; 1938 ; Geological Society of America Bulletin Volume 49 [abstracts only] ; 49 >
-    au < manifest ; exists ; 1939 ; Geological Society of America Bulletin Volume 50 [abstracts only] ; 50 >
-    au < manifest ; exists ; 1940 ; Geological Society of America Bulletin Volume 51 [abstracts only] ; 51 >
-    au < manifest ; exists ; 1941 ; Geological Society of America Bulletin Volume 52 [abstracts only] ; 52 >
-    au < manifest ; exists ; 1942 ; Geological Society of America Bulletin Volume 53 [abstracts only] ; 53 >
-    au < manifest ; exists ; 1943 ; Geological Society of America Bulletin Volume 54 [abstracts only] ; 54 >
-    au < manifest ; exists ; 1944 ; Geological Society of America Bulletin Volume 55 [abstracts only] ; 55 >
-    au < manifest ; exists ; 1945 ; Geological Society of America Bulletin Volume 56 ; 56 >
-    au < manifest ; exists ; 1946 ; Geological Society of America Bulletin Volume 57 ; 57 >
-    au < manifest ; exists ; 1947 ; Geological Society of America Bulletin Volume 58 ; 58 >
-    au < manifest ; exists ; 1948 ; Geological Society of America Bulletin Volume 59 ; 59 >
-    au < manifest ; exists ; 1949 ; Geological Society of America Bulletin Volume 60 ; 60 >
-    au < manifest ; exists ; 1950 ; Geological Society of America Bulletin Volume 61 ; 61 >
-    au < manifest ; exists ; 1951 ; Geological Society of America Bulletin Volume 62 ; 62 >
-    au < manifest ; exists ; 1952 ; Geological Society of America Bulletin Volume 63 ; 63 >
-    au < manifest ; exists ; 1953 ; Geological Society of America Bulletin Volume 64 ; 64 >
-    au < manifest ; exists ; 1954 ; Geological Society of America Bulletin Volume 65 ; 65 >
-    au < manifest ; exists ; 1955 ; Geological Society of America Bulletin Volume 66 ; 66 >
-    au < manifest ; exists ; 1956 ; Geological Society of America Bulletin Volume 67 ; 67 >
-    au < manifest ; exists ; 1957 ; Geological Society of America Bulletin Volume 68 ; 68 >
-    au < manifest ; exists ; 1958 ; Geological Society of America Bulletin Volume 69 ; 69 >
-    au < manifest ; exists ; 1959 ; Geological Society of America Bulletin Volume 70 ; 70 >
-    au < manifest ; exists ; 1960 ; Geological Society of America Bulletin Volume 71 ; 71 >
-    au < manifest ; exists ; 1961 ; Geological Society of America Bulletin Volume 72 ; 72 >
-    au < manifest ; exists ; 1962 ; Geological Society of America Bulletin Volume 73 ; 73 >
-    au < manifest ; exists ; 1963 ; Geological Society of America Bulletin Volume 74 ; 74 >
-    au < manifest ; exists ; 1964 ; Geological Society of America Bulletin Volume 75 ; 75 >
-    au < manifest ; exists ; 1965 ; Geological Society of America Bulletin Volume 76 ; 76 >
-    au < manifest ; exists ; 1966 ; Geological Society of America Bulletin Volume 77 ; 77 >
-    au < manifest ; exists ; 1967 ; Geological Society of America Bulletin Volume 78 ; 78 >
-    au < manifest ; exists ; 1968 ; Geological Society of America Bulletin Volume 79 ; 79 >
-    au < manifest ; exists ; 1969 ; Geological Society of America Bulletin Volume 80 ; 80 >
-    au < manifest ; exists ; 1970 ; Geological Society of America Bulletin Volume 81 ; 81 >
-    au < manifest ; exists ; 1971 ; Geological Society of America Bulletin Volume 82 ; 82 >
-    au < manifest ; exists ; 1972 ; Geological Society of America Bulletin Volume 83 ; 83 >
-    au < manifest ; exists ; 1973 ; Geological Society of America Bulletin Volume 84 ; 84 >
-    au < manifest ; exists ; 1974 ; Geological Society of America Bulletin Volume 85 ; 85 >
-    au < manifest ; exists ; 1975 ; Geological Society of America Bulletin Volume 86 ; 86 >
-    au < manifest ; exists ; 1976 ; Geological Society of America Bulletin Volume 87 ; 87 >
-    au < manifest ; exists ; 1977 ; Geological Society of America Bulletin Volume 88 ; 88 >
-    au < manifest ; exists ; 1978 ; Geological Society of America Bulletin Volume 89 ; 89 >
-    au < manifest ; exists ; 1979 ; Geological Society of America Bulletin Volume 90 ; 90 >
-    au < manifest ; exists ; 1980 ; Geological Society of America Bulletin Volume 91 ; 91 >
-    au < manifest ; exists ; 1981 ; Geological Society of America Bulletin Volume 92 ; 92 >
-    au < manifest ; exists ; 1982 ; Geological Society of America Bulletin Volume 93 ; 93 >
-    au < manifest ; exists ; 1983 ; Geological Society of America Bulletin Volume 94 ; 94 >
-    au < manifest ; exists ; 1984 ; Geological Society of America Bulletin Volume 95 ; 95 >
-    au < manifest ; exists ; 1985 ; Geological Society of America Bulletin Volume 96 ; 96 >
-    au < manifest ; exists ; 1986 ; Geological Society of America Bulletin Volume 97 ; 97 >
-    au < manifest ; exists ; 1987 ; Geological Society of America Bulletin Volume 98 ; 98 >
-    au < manifest ; exists ; 1987 ; Geological Society of America Bulletin Volume 99 ; 99 >
-    au < manifest ; exists ; 1988 ; Geological Society of America Bulletin Volume 100 ; 100 >
-    au < manifest ; exists ; 1989 ; Geological Society of America Bulletin Volume 101 ; 101 >
-    au < manifest ; exists ; 1990 ; Geological Society of America Bulletin Volume 102 ; 102 >
-    au < manifest ; exists ; 1991 ; Geological Society of America Bulletin Volume 103 ; 103 >
-    au < manifest ; exists ; 1992 ; Geological Society of America Bulletin Volume 104 ; 104 >
-    au < manifest ; exists ; 1993 ; Geological Society of America Bulletin Volume 105 ; 105 >
-    au < manifest ; exists ; 1994 ; Geological Society of America Bulletin Volume 106 ; 106 >
-    au < manifest ; exists ; 1995 ; Geological Society of America Bulletin Volume 107 ; 107 >
-    au < manifest ; exists ; 1996 ; Geological Society of America Bulletin Volume 108 ; 108 >
-    au < manifest ; exists ; 1997 ; Geological Society of America Bulletin Volume 109 ; 109 >
-    au < manifest ; exists ; 1998 ; Geological Society of America Bulletin Volume 110 ; 110 >
-    au < manifest ; exists ; 1999 ; Geological Society of America Bulletin Volume 111 ; 111 >
-    au < manifest ; exists ; 2000 ; Geological Society of America Bulletin Volume 112 ; 112 >
-    au < manifest ; exists ; 2001 ; Geological Society of America Bulletin Volume 113 ; 113 >
-    au < manifest ; exists ; 2002 ; Geological Society of America Bulletin Volume 114 ; 114 >
-    au < manifest ; exists ; 2003 ; Geological Society of America Bulletin Volume 115 ; 115 >
-    au < manifest ; exists ; 2004 ; Geological Society of America Bulletin Volume 116 ; 116 >
-    au < manifest ; exists ; 2005 ; Geological Society of America Bulletin Volume 117 ; 117 >
-    au < manifest ; exists ; 2006 ; Geological Society of America Bulletin Volume 118 ; 118 >
-    au < manifest ; exists ; 2007 ; Geological Society of America Bulletin Volume 119 ; 119 >
-    au < manifest ; exists ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
-    au < manifest ; exists ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
-    au < manifest ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
-    au < released ; crawling ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
-    au < released ; crawling ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
-    au < manifest ; exists ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 >
-
-  }
-
-  {
-    title <
-      name = Geological Society of America Memoirs ;
-      type = bookSeries ;
-      issn = 0072-1069
-    >
-  
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    param[base_url] = http://memoirs.gsapubs.org/
-
     {
-      implicit < status1 ; status ; year ; isbn ; name ; param[volume_name] >
-    
-      au < exists ; exists ; 1995 ; 978-0-8137-1186-7 ; Geological Society of America Memoirs Volume 186 ; 186 >
-      au < exists ; exists ; 1995 ; 978-0-8137-1187-4 ; Geological Society of America Memoirs Volume 187 ; 187 >
-      au < manifest ; exists ; 1996 ; 978-0-8137-1188-1 ; Geological Society of America Memoirs Volume 188 ; 188 >
-      au < manifest ; exists ; 1996 ; 978-0-8137-1189-8 ; Geological Society of America Memoirs Volume 189 ; 189 >
-      au < manifest ; exists ; 1997 ; 978-0-8137-1190-4 ; Geological Society of America Memoirs Volume 190 ; 190 >
-      au < manifest ; exists ; 1997 ; 978-0-8137-1191-1 ; Geological Society of America Memoirs Volume 191 ; 191 >
-      au < manifest ; exists ; 1999 ; 978-0-8137-1192-8 ; Geological Society of America Memoirs Volume 192 ; 192 >
-      au < manifest ; exists ; 2001 ; 978-0-8137-1193-5 ; Geological Society of America Memoirs Volume 193 ; 193 >
-      au < manifest ; exists ; 2001 ; 978-0-8137-1194-2 ; Geological Society of America Memoirs Volume 194 ; 194 >
-      au < manifest ; exists ; 2002 ; 978-0-8137-1195-9 ; Geological Society of America Memoirs Volume 195 ; 195 >
-      au < manifest ; exists ; 2003 ; 978-0-8137-1196-6 ; Geological Society of America Memoirs Volume 196 ; 196 >
-      au < manifest ; exists ; 2004 ; 978-0-8137-1197-3 ; Geological Society of America Memoirs Volume 197 ; 197 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-1198-0 ; Geological Society of America Memoirs Volume 198 ; 198 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-1199-7 ; Geological Society of America Memoirs Volume 199 ; 199 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-1200-0 ; Geological Society of America Memoirs Volume 200 ; 200 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-1201-7 ; Geological Society of America Memoirs Volume 201 ; 201 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-1202-4 ; Geological Society of America Memoirs Volume 202 ; 202 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-1203-1 ; Geological Society of America Memoirs Volume 203 ; 203 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-1204-8 ; Geological Society of America Memoirs Volume 204 ; 204 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-1205-5 ; Geological Society of America Memoirs Volume 205 ; 205 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-1206-2 ; Geological Society of America Memoirs Volume 206 ; 206 >
-      au < released ; crawling ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
-      au < released ; crawling ; 2012 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-1209-3 ; Geological Society of America Memoirs Volume 209 ; 209 >
-      au < expected ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 210 ; 210 >
-      au < expected ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 211 ; 211 >
-      
-      
+
+      attr[au_coverage_depth] = abstracts
+
+      au < manifest ; exists ; 1918 ; Geological Society of America Bulletin Volume 29 [abstracts only] ; 29 >
+      au < manifest ; exists ; 1919 ; Geological Society of America Bulletin Volume 30 [abstracts only] ; 30 >
+      au < manifest ; exists ; 1920 ; Geological Society of America Bulletin Volume 31 [abstracts only] ; 31 >
+      au < manifest ; exists ; 1921 ; Geological Society of America Bulletin Volume 32 [abstracts only] ; 32 >
+      au < manifest ; exists ; 1922 ; Geological Society of America Bulletin Volume 33 [abstracts only] ; 33 >
+      au < manifest ; exists ; 1923 ; Geological Society of America Bulletin Volume 34 [abstracts only] ; 34 >
+      au < manifest ; exists ; 1924 ; Geological Society of America Bulletin Volume 35 [abstracts only] ; 35 >
+      au < manifest ; exists ; 1925 ; Geological Society of America Bulletin Volume 36 [abstracts only] ; 36 >
+      au < manifest ; exists ; 1926 ; Geological Society of America Bulletin Volume 37 [abstracts only] ; 37 >
+      au < manifest ; exists ; 1927 ; Geological Society of America Bulletin Volume 38 [abstracts only] ; 38 >
+      au < manifest ; exists ; 1928 ; Geological Society of America Bulletin Volume 39 [abstracts only] ; 39 >
+      au < manifest ; exists ; 1929 ; Geological Society of America Bulletin Volume 40 [abstracts only] ; 40 >
+      au < manifest ; exists ; 1930 ; Geological Society of America Bulletin Volume 41 [abstracts only] ; 41 >
+      au < manifest ; exists ; 1931 ; Geological Society of America Bulletin Volume 42 [abstracts only] ; 42 >
+      au < manifest ; exists ; 1932 ; Geological Society of America Bulletin Volume 43 [abstracts only] ; 43 >
+      au < manifest ; exists ; 1933 ; Geological Society of America Bulletin Volume 44 [abstracts only] ; 44 >
+      au < manifest ; exists ; 1934 ; Geological Society of America Bulletin Volume 45 [abstracts only] ; 45 >
+      au < manifest ; exists ; 1935 ; Geological Society of America Bulletin Volume 46 [abstracts only] ; 46 >
+      au < manifest ; exists ; 1936 ; Geological Society of America Bulletin Volume 47 [abstracts only] ; 47 >
+      au < manifest ; exists ; 1937 ; Geological Society of America Bulletin Volume 48 [abstracts only] ; 48 >
+      au < manifest ; exists ; 1938 ; Geological Society of America Bulletin Volume 49 [abstracts only] ; 49 >
+      au < manifest ; exists ; 1939 ; Geological Society of America Bulletin Volume 50 [abstracts only] ; 50 >
+      au < manifest ; exists ; 1940 ; Geological Society of America Bulletin Volume 51 [abstracts only] ; 51 >
+      au < manifest ; exists ; 1941 ; Geological Society of America Bulletin Volume 52 [abstracts only] ; 52 >
+      au < manifest ; exists ; 1942 ; Geological Society of America Bulletin Volume 53 [abstracts only] ; 53 >
+      au < manifest ; exists ; 1943 ; Geological Society of America Bulletin Volume 54 [abstracts only] ; 54 >
+      au < manifest ; exists ; 1944 ; Geological Society of America Bulletin Volume 55 [abstracts only] ; 55 >
     }
+    {
+      au < manifest ; exists ; 1945 ; Geological Society of America Bulletin Volume 56 ; 56 >
+      au < manifest ; exists ; 1946 ; Geological Society of America Bulletin Volume 57 ; 57 >
+      au < manifest ; exists ; 1947 ; Geological Society of America Bulletin Volume 58 ; 58 >
+      au < manifest ; exists ; 1948 ; Geological Society of America Bulletin Volume 59 ; 59 >
+      au < manifest ; exists ; 1949 ; Geological Society of America Bulletin Volume 60 ; 60 >
+      au < manifest ; exists ; 1950 ; Geological Society of America Bulletin Volume 61 ; 61 >
+      au < manifest ; exists ; 1951 ; Geological Society of America Bulletin Volume 62 ; 62 >
+      au < manifest ; exists ; 1952 ; Geological Society of America Bulletin Volume 63 ; 63 >
+      au < manifest ; exists ; 1953 ; Geological Society of America Bulletin Volume 64 ; 64 >
+      au < manifest ; exists ; 1954 ; Geological Society of America Bulletin Volume 65 ; 65 >
+      au < manifest ; exists ; 1955 ; Geological Society of America Bulletin Volume 66 ; 66 >
+      au < manifest ; exists ; 1956 ; Geological Society of America Bulletin Volume 67 ; 67 >
+      au < manifest ; exists ; 1957 ; Geological Society of America Bulletin Volume 68 ; 68 >
+      au < manifest ; exists ; 1958 ; Geological Society of America Bulletin Volume 69 ; 69 >
+      au < manifest ; exists ; 1959 ; Geological Society of America Bulletin Volume 70 ; 70 >
+      au < manifest ; exists ; 1960 ; Geological Society of America Bulletin Volume 71 ; 71 >
+      au < manifest ; exists ; 1961 ; Geological Society of America Bulletin Volume 72 ; 72 >
+      au < manifest ; exists ; 1962 ; Geological Society of America Bulletin Volume 73 ; 73 >
+      au < manifest ; exists ; 1963 ; Geological Society of America Bulletin Volume 74 ; 74 >
+      au < manifest ; exists ; 1964 ; Geological Society of America Bulletin Volume 75 ; 75 >
+      au < manifest ; exists ; 1965 ; Geological Society of America Bulletin Volume 76 ; 76 >
+      au < manifest ; exists ; 1966 ; Geological Society of America Bulletin Volume 77 ; 77 >
+      au < manifest ; exists ; 1967 ; Geological Society of America Bulletin Volume 78 ; 78 >
+      au < manifest ; exists ; 1968 ; Geological Society of America Bulletin Volume 79 ; 79 >
+      au < manifest ; exists ; 1969 ; Geological Society of America Bulletin Volume 80 ; 80 >
+      au < manifest ; exists ; 1970 ; Geological Society of America Bulletin Volume 81 ; 81 >
+      au < manifest ; exists ; 1971 ; Geological Society of America Bulletin Volume 82 ; 82 >
+      au < manifest ; exists ; 1972 ; Geological Society of America Bulletin Volume 83 ; 83 >
+      au < manifest ; exists ; 1973 ; Geological Society of America Bulletin Volume 84 ; 84 >
+      au < manifest ; exists ; 1974 ; Geological Society of America Bulletin Volume 85 ; 85 >
+      au < manifest ; exists ; 1975 ; Geological Society of America Bulletin Volume 86 ; 86 >
+      au < manifest ; exists ; 1976 ; Geological Society of America Bulletin Volume 87 ; 87 >
+      au < manifest ; exists ; 1977 ; Geological Society of America Bulletin Volume 88 ; 88 >
+      au < manifest ; exists ; 1978 ; Geological Society of America Bulletin Volume 89 ; 89 >
+      au < manifest ; exists ; 1979 ; Geological Society of America Bulletin Volume 90 ; 90 >
+      au < manifest ; exists ; 1980 ; Geological Society of America Bulletin Volume 91 ; 91 >
+      au < manifest ; exists ; 1981 ; Geological Society of America Bulletin Volume 92 ; 92 >
+      au < manifest ; exists ; 1982 ; Geological Society of America Bulletin Volume 93 ; 93 >
+      au < manifest ; exists ; 1983 ; Geological Society of America Bulletin Volume 94 ; 94 >
+      au < manifest ; exists ; 1984 ; Geological Society of America Bulletin Volume 95 ; 95 >
+      au < manifest ; exists ; 1985 ; Geological Society of America Bulletin Volume 96 ; 96 >
+      au < manifest ; exists ; 1986 ; Geological Society of America Bulletin Volume 97 ; 97 >
+      au < manifest ; exists ; 1987 ; Geological Society of America Bulletin Volume 98 ; 98 >
+      au < manifest ; exists ; 1987 ; Geological Society of America Bulletin Volume 99 ; 99 >
+      au < manifest ; exists ; 1988 ; Geological Society of America Bulletin Volume 100 ; 100 >
+      au < manifest ; exists ; 1989 ; Geological Society of America Bulletin Volume 101 ; 101 >
+      au < manifest ; exists ; 1990 ; Geological Society of America Bulletin Volume 102 ; 102 >
+      au < manifest ; exists ; 1991 ; Geological Society of America Bulletin Volume 103 ; 103 >
+      au < manifest ; exists ; 1992 ; Geological Society of America Bulletin Volume 104 ; 104 >
+      au < manifest ; exists ; 1993 ; Geological Society of America Bulletin Volume 105 ; 105 >
+      au < manifest ; exists ; 1994 ; Geological Society of America Bulletin Volume 106 ; 106 >
+      au < manifest ; exists ; 1995 ; Geological Society of America Bulletin Volume 107 ; 107 >
+      au < manifest ; exists ; 1996 ; Geological Society of America Bulletin Volume 108 ; 108 >
+      au < manifest ; exists ; 1997 ; Geological Society of America Bulletin Volume 109 ; 109 >
+      au < manifest ; exists ; 1998 ; Geological Society of America Bulletin Volume 110 ; 110 >
+      au < manifest ; exists ; 1999 ; Geological Society of America Bulletin Volume 111 ; 111 >
+      au < manifest ; exists ; 2000 ; Geological Society of America Bulletin Volume 112 ; 112 >
+      au < manifest ; exists ; 2001 ; Geological Society of America Bulletin Volume 113 ; 113 >
+      au < manifest ; exists ; 2002 ; Geological Society of America Bulletin Volume 114 ; 114 >
+      au < manifest ; exists ; 2003 ; Geological Society of America Bulletin Volume 115 ; 115 >
+      au < manifest ; exists ; 2004 ; Geological Society of America Bulletin Volume 116 ; 116 >
+      au < manifest ; exists ; 2005 ; Geological Society of America Bulletin Volume 117 ; 117 >
+      au < manifest ; exists ; 2006 ; Geological Society of America Bulletin Volume 118 ; 118 >
+      au < manifest ; exists ; 2007 ; Geological Society of America Bulletin Volume 119 ; 119 >
+      au < manifest ; exists ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
+      au < manifest ; exists ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
+      au < manifest ; exists ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
+      au < released ; crawling ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
+      au < released ; crawling ; 2012 ; Geological Society of America Bulletin Volume 124 ; 124 >
+      au < crawling ; exists ; 2013 ; Geological Society of America Bulletin Volume 125 ; 125 >
+    } 
 
   }
 
-  {
-  
-    comment[1] = Geological Society of America Special Papers
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://specialpapers.gsapubs.org/
-  
-  }
 
   {
 
@@ -225,7 +180,7 @@
     au < manifest ; exists ; 2010 ; Geology Volume 38 ; 38 >
     au < released ; crawling ; 2011 ; Geology Volume 39 ; 39 >
     au < released ; crawling ; 2012 ; Geology Volume 40 ; 40 >
-    au < manifest ; exists ; 2013 ; Geology Volume 41 ; 41 >
+    au < crawling ; exists ; 2013 ; Geology Volume 41 ; 41 >
 
   }
 
@@ -248,57 +203,8 @@
     au < manifest ; exists ; 2010 ; Geosphere Volume 6 ; 6 >
     au < released ; crawling ; 2011 ; Geosphere Volume 7 ; 7 >
     au < testing ; exists ; 2012 ; Geosphere Volume 8 ; 8 >
-    au < manifest ; exists ; 2013 ; Geosphere Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Geosphere Volume 9 ; 9 >
 
-  }
-
-  {
-  
-    title <
-      name = GSA Field Guides ;
-      type = bookSeries
-    >
-    
-    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    param[base_url] = http://fieldguides.gsapubs.org/
-
-    {
-    
-      implicit < status1 ; status ; year ; isbn ; name ; param[volume_name] >
-    
-      au < manifest ; exists ; 1999 ; 978-0-8137-0001-4 ; GSA Field Guides Volume 1 ; 1 >
-      au < manifest ; exists ; 2000 ; 978-0-8137-0002-1 ; GSA Field Guides Volume 2 ; 2 >
-      au < manifest ; exists ; 2002 ; 978-0-8137-0003-5 ; GSA Field Guides Volume 3 ; 3 >
-      au < manifest ; exists ; 2003 ; 978-0-8137-0004-5 ; GSA Field Guides Volume 4 ; 4 >
-      au < manifest ; exists ; 2004 ; 978-0-8137-0005-2 ; GSA Field Guides Volume 5 ; 5 >
-      au < manifest ; exists ; 2005 ; 978-0-8137-0006-9 ; GSA Field Guides Volume 6 ; 6 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-0007-6 ; GSA Field Guides Volume 7 ; 7 >
-      au < manifest ; exists ; 2006 ; 978-0-8137-0008-3 ; GSA Field Guides Volume 8 ; 8 >
-      au < manifest ; exists ; 2007 ; 978-0-8137-0009-0 ; GSA Field Guides Volume 9 ; 9 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0010-6 ; GSA Field Guides Volume 10 ; 10 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0011-3 ; GSA Field Guides Volume 11 ; 11 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0012-0 ; GSA Field Guides Volume 12 ; 12 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0013-7 ; GSA Field Guides Volume 13 ; 13 >
-      au < manifest ; exists ; 2008 ; 978-0-8137-0014-4 ; GSA Field Guides Volume 14 ; 14 >
-      au < manifest ; exists ; 2009 ; 978-0-8137-0015-1 ; GSA Field Guides Volume 15 ; 15 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0016-8 ; GSA Field Guides Volume 16 ; 16 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0017-5 ; GSA Field Guides Volume 17 ; 17 >
-      au < manifest ; exists ; 2010 ; 978-0-8137-0018-2 ; GSA Field Guides Volume 18 ; 18 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0019-9 ; GSA Field Guides Volume 19 ; 19 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0020-5 ; GSA Field Guides Volume 20 ; 20 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0021-2 ; GSA Field Guides Volume 21 ; 21 >
-      au < released ; crawling ; 2011 ; 978-0-8137-0022-9 ; GSA Field Guides Volume 22 ; 22 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0023-6 ; GSA Field Guides Volume 23 ; 23 >
-      au < zapped ; down ; 2011 ; 978-0-8137-0024-3 ; GSA Field Guides Volume 24 ; 24 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0025-0 ; GSA Field Guides Volume 25 ; 25 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0026-7 ; GSA Field Guides Volume 26 ; 26 >
-      au < released ; crawling ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0028-1 ; GSA Field Guides Volume 28 ; 28 >
-      au < crawling ; exists ; 2012 ; 978-0-8137-0029-8 ; GSA Field Guides Volume 29 ; 29 >
-      au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 30 ; 30 >
-      au < expected ; exists ; 2012 ; XXXX ; GSA Field Guides Volume 31 ; 31 >
-    }
-  
   }
 
   {
@@ -318,16 +224,8 @@
     au < manifest ; exists ; 2010 ; Lithosphere Volume 2 ; 2 >
     au < released ; crawling ; 2011 ; Lithosphere Volume 3 ; 3 >
     au < testing ; exists ; 2012 ; Lithosphere Volume 4 ; 4 >
-    au < expected ; exists ; 2013 ; Lithosphere Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Lithosphere Volume 5 ; 5 >
 
-  }
-
-  {
-  
-    comment[1] = Reviews in Engineering Geology
-    comment[2] = not in usual HighWire shape
-    comment[3] = http://reg.gsapubs.org/
-  
   }
 
 }

@@ -3,7 +3,7 @@
   publisher <
     name = Rockefeller University Press ;
     info[contract] = 2009 ;
-    info[tester] = 3
+    info[tester] = 8
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
@@ -218,8 +218,8 @@
     au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 197 ; 197 >
     au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 198 ; 198 >
     au < released ; crawling ; 2012 ; The Journal of Cell Biology Volume 199 ; 199 >
-    au < expected ; exists ; 2013 ; The Journal of Cell Biology Volume 200 ; 200 >
-    au < expected ; exists ; 2013 ; The Journal of Cell Biology Volume 201 ; 201 >
+    au < crawling ; exists ; 2013 ; The Journal of Cell Biology Volume 200 ; 200 >
+    au < crawling ; exists ; 2013 ; The Journal of Cell Biology Volume 201 ; 201 >
     au < expected ; exists ; 2013 ; The Journal of Cell Biology Volume 202 ; 202 >
     au < expected ; exists ; 2013 ; The Journal of Cell Biology Volume 203 ; 203 >
 
@@ -445,7 +445,7 @@
     au < released ; crawling ; 2010 ; The Journal of Experimental Medicine Volume 207 ; 207 >
     au < released ; crawling ; 2011 ; The Journal of Experimental Medicine Volume 208 ; 208 >
     au < released ; crawling ; 2012 ; The Journal of Experimental Medicine Volume 209 ; 209 >
-    au < expected ; exists ; 2013 ; The Journal of Experimental Medicine Volume 210 ; 210 >
+    au < crawling ; exists ; 2013 ; The Journal of Experimental Medicine Volume 210 ; 210 >
 
   }
 
@@ -599,7 +599,7 @@
     au < released ; crawling ; 2011 ; The Journal of General Physiology Volume 138 ; 138 >
     au < released ; crawling ; 2012 ; The Journal of General Physiology Volume 139 ; 139 >
     au < released ; crawling ; 2012 ; The Journal of General Physiology Volume 140 ; 140 >
-    au < manifest ; exists ; 2013 ; The Journal of General Physiology Volume 141 ; 141 >
+    au < crawling ; exists ; 2013 ; The Journal of General Physiology Volume 141 ; 141 >
     au < expected ; exists ; 2013 ; The Journal of General Physiology Volume 142 ; 142 >
 
   }

@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = Japan Society of Mammalian Ova Research ;
+    info[contract] = 2013 ;
+    comment[host_name] = UniBio
+  >
+
+  {
+    title <
+      name = Journal of Mammalian Ova Research ;
+      issn = 1341-7738 ;
+      eissn = 1347-5878 ;
+      issnl = 1341-7738
+    >
+
+    {
+      implicit < status1 ; status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.ClockssBioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = jmor
+  
+      au < exists ; exists ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+      au < exists ; exists ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+      au < exists ; exists ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+      au < exists ; exists ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
+      au < exists ; exists ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
+      au < exists ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
+      au < exists ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
+      au < exists ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
+      au < expected ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
+    }
+
+  }
+
+}
+

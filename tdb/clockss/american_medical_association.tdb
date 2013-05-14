@@ -3,11 +3,12 @@
   publisher <
     name = American Medical Association ;
     info[contract] = 2008 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    comment[platform] = Silverchair
   >
-
+	
   {
-
+	
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
     comment[0] = AMA Virtual Mentor has moved to Silver Chair.

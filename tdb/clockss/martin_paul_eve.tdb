@@ -6,6 +6,7 @@
     info[tester] = 7
   >
 
+    comment[publisherName] = The publisher requested we list the following publications under the new publisher name Martin Paul Eve.
 
   {
     
@@ -19,6 +20,7 @@
      implicit < status1 ; status ; year ; param[year] ; name ; volume >
 
      au < exists ; exists ; 2012 ; 2012 ; Alluvium Volume 1 ; 1 >  
+     au < exists ; exists ; 2013 ; 2013 ; Alluvium Volume 2 ; 2 > 
    
   }
     
@@ -34,7 +36,7 @@
      param[journal_id] = owap
      implicit < status1 ; status ; year ; param[year] ; name ; volume >
 
-     au < testing ; exists ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
+     au < released ; crawling ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
      au < expected ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >
      
   }

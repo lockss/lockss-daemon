@@ -20,7 +20,6 @@
     >
 
     param[journal_id] = aps
-    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
     au < manifest ; exists ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
@@ -29,7 +28,8 @@
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
     au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
     au < released ; crawling ; 2011 ; Acta Pharmacologica Sinica Volume 32 ; 2011 ; 32 >
-    au < notReady ; exists ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
+    au < released ; crawling ; 2012 ; Acta Pharmacologica Sinica Volume 33 ; 2012 ; 33 >
+    au < manifest ; exists ; 2013 ; Acta Pharmacologica Sinica Volume 34 ; 2013 ; 34 >
 
   }
 
@@ -41,7 +41,8 @@
       eissn = 1572-0241 ;
       issnl = 0002-9270
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = ajg
     comment[notReady] = fetch error on ingest 3 RT 4106
 
@@ -55,12 +56,26 @@
     au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
     au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
     au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
-    au < notReady ; exists ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
-    au < notReady ; exists ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
-    au < notReady ; exists ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
+    au < released ; crawling ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
+    au < released ; crawling ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
+    au < released ; crawling ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
     au < released ; crawling ; 2011 ; American Journal of Gastroenterology Volume 106 ; 2011 ; 106 >
-    au < notReady ; exists ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
+    au < released ; crawling ; 2012 ; American Journal of Gastroenterology Volume 107 ; 2012 ; 107 >
+    au < manifest ; exists ; 2013 ; American Journal of Gastroenterology Volume 108 ; 2013 ; 108 >
 
+  }
+
+{
+
+    title <
+      name = American Journal of Gastroenterology Supplements ;
+      issn = 1948-9498 ;
+      eissn = 1948-9501
+    >
+
+    param[journal_id] = ajgsup
+
+    au < exists ; exists ; 2013 ; American Journal of Gastroenterology Supplements Volume 1 ; 2013 ; 1 >
   }
 
   {
@@ -73,22 +88,23 @@
     >
 
     param[journal_id] = ajh
+    comment[doesNotExist] = this title is now published by Oxford University Press, effective 1/2013
 
-    au < exists ; exists ; 1995 ; American Journal of Hypertension Volume 8 ; 1995 ; 8 >
-    au < exists ; exists ; 1996 ; American Journal of Hypertension Volume 9 ; 1996 ; 9 >
-    au < exists ; exists ; 1997 ; American Journal of Hypertension Volume 10 ; 1997 ; 10 >
-    au < exists ; exists ; 1998 ; American Journal of Hypertension Volume 11 ; 1998 ; 11 >
-    au < exists ; exists ; 1999 ; American Journal of Hypertension Volume 12 ; 1999 ; 12 >
-    au < exists ; exists ; 2000 ; American Journal of Hypertension Volume 13 ; 2000 ; 13 >
-    au < exists ; exists ; 2001 ; American Journal of Hypertension Volume 14 ; 2001 ; 14 >
-    au < exists ; exists ; 2002 ; American Journal of Hypertension Volume 15 ; 2002 ; 15 >
-    au < manifest ; exists ; 2003 ; American Journal of Hypertension Volume 16 ; 2003 ; 16 >
-    au < exists ; exists ; 2004 ; American Journal of Hypertension Volume 17 ; 2004 ; 17 >
-    au < exists ; exists ; 2005 ; American Journal of Hypertension Volume 18 ; 2005 ; 18 >
-    au < exists ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 2006 ; 19 >
-    au < exists ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 2007 ; 20 >
-    au < testing ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 2008 ; 21 >
-    au < testing ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 2009 ; 22 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 8 ; 0 ; 8 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 9 ; 0 ; 9 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 10 ; 0 ; 10 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 11 ; 0 ; 11 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 12 ; 0 ; 12 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 13 ; 0 ; 13 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 14 ; 0 ; 14 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 15 ; 0 ; 15 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 16 ; 0 ; 16 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 17 ; 0 ; 17 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 18 ; 0 ; 18 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 19 ; 0 ; 19 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 20 ; 0 ; 20 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 21 ; 0 ; 21 >
+    au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 22 ; 0 ; 22 >
     au < released ; crawling ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
     au < released ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
     au < released ; crawling ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
@@ -113,7 +129,24 @@
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
-    au < testing ; exists ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < released ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
+    au < manifest ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
+
+
+  }
+
+  {
+
+      title <
+        name = Blood Cancer Journal ;
+        eissn = 2044-5385
+      >
+
+      param[journal_id] = bcj
+
+    au < released ; crawling ; 2011 ; Blood Cancer Journal Volume 1 ; 2011 ; 1 >
+    au < released ; crawling ; 2012 ; Blood Cancer Journal Volume 2 ; 2012 ; 2 >
+    au < exists ; exists ; 2013 ; Blood Cancer Journal Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -158,9 +191,135 @@
     au < zapped ; down ; 2010 ; Bone Marrow Transplantation Volume 46 [superseded] ; 2010 ; 46 >
     au < released ; crawling ; 2011 ; Bone Marrow Transplantation Volume 46 ; 2011 ; 46 >
     au < released ; crawling ; 2012 ; Bone Marrow Transplantation Volume 47 ; 2012 ; 47 >
+    au < manifest ; exists ; 2013 ; Bone Marrow Transplantation Volume 48 ; 2013 ; 48 >
+
 
   }
 
+  {
+
+    title <
+      name = BoneKEy Reports ;
+      eissn = 2047-6396
+
+    >
+
+    param[journal_id] = bonekeyreports
+    comment[notReady] = no substance
+
+    au < notReady ; exists ; 2004 ; BoneKEy Reports Volume 1 ; 2004 ; 1 >
+    au < notReady ; exists ; 2005 ; BoneKEy Reports Volume 2 ; 2005 ; 2 >
+    au < notReady ; exists ; 2006 ; BoneKEy Reports Volume 3 ; 2006 ; 3 >
+    au < notReady ; exists ; 2007 ; BoneKEy Reports Volume 4 ; 2007 ; 4 >
+    au < notReady ; exists ; 2008 ; BoneKEy Reports Volume 5 ; 2008 ; 5 >
+    au < notReady ; exists ; 2009 ; BoneKEy Reports Volume 6 ; 2009 ; 6 >
+    au < notReady ; exists ; 2010 ; BoneKEy Reports Volume 7 ; 2010 ; 7 >
+    au < notReady ; exists ; 2011 ; BoneKEy Reports Volume 8 ; 2011 ; 8 >
+    au < notReady ; exists ; 2012 ; BoneKEy Reports Volume 9 ; 2012 ; 9 >
+    au < notReady ; exists ; 2013 ; BoneKEy Reports Volume 10 ; 2013 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = British Dental Journal ;
+      issn = 0007-0610 ;
+      eissn = 1476-5373
+
+    >
+    comment[0] = need to confirm if this is under contract
+    param[journal_id] = bdj
+
+    au < exists ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
+    au < exists ; exists ; 1970 ; British Dental Journal Volume 129 ; 1970 ; 129 >
+    au < exists ; exists ; 1971 ; British Dental Journal Volume 130 ; 1971 ; 130 >
+    au < exists ; exists ; 1971 ; British Dental Journal Volume 131 ; 1971 ; 131 >
+    au < exists ; exists ; 1972 ; British Dental Journal Volume 132 ; 1972 ; 132 >
+    au < exists ; exists ; 1972 ; British Dental Journal Volume 133 ; 1972 ; 133 >
+    au < exists ; exists ; 1973 ; British Dental Journal Volume 134 ; 1973 ; 134 >
+    au < exists ; exists ; 1973 ; British Dental Journal Volume 135 ; 1973 ; 135 >
+    au < exists ; exists ; 1974 ; British Dental Journal Volume 136 ; 1974 ; 136 >
+    au < exists ; exists ; 1974 ; British Dental Journal Volume 137 ; 1974 ; 137 >
+    au < exists ; exists ; 1975 ; British Dental Journal Volume 138 ; 1975 ; 138 >
+    au < exists ; exists ; 1975 ; British Dental Journal Volume 139 ; 1975 ; 139 >
+    au < exists ; exists ; 1976 ; British Dental Journal Volume 140 ; 1976 ; 140 >
+    au < exists ; exists ; 1976 ; British Dental Journal Volume 141 ; 1976 ; 141 >
+    au < exists ; exists ; 1977 ; British Dental Journal Volume 142 ; 1977 ; 142 >
+    au < exists ; exists ; 1977 ; British Dental Journal Volume 143 ; 1977 ; 143 >
+    au < exists ; exists ; 1978 ; British Dental Journal Volume 144 ; 1978 ; 144 >
+    au < exists ; exists ; 1978 ; British Dental Journal Volume 145 ; 1978 ; 145 >
+    au < exists ; exists ; 1979 ; British Dental Journal Volume 146 ; 1979 ; 146 >
+    au < exists ; exists ; 1979 ; British Dental Journal Volume 147 ; 1979 ; 147 >
+    au < exists ; exists ; 1980 ; British Dental Journal Volume 148 ; 1980 ; 148 >
+    au < exists ; exists ; 1980 ; British Dental Journal Volume 149 ; 1980 ; 149 >
+    au < exists ; exists ; 1981 ; British Dental Journal Volume 150 ; 1981 ; 150 >
+    au < exists ; exists ; 1981 ; British Dental Journal Volume 151 ; 1981 ; 151 >
+    au < exists ; exists ; 1982 ; British Dental Journal Volume 152 ; 1982 ; 152 >
+    au < exists ; exists ; 1982 ; British Dental Journal Volume 153 ; 1982 ; 153 >
+    au < exists ; exists ; 1983 ; British Dental Journal Volume 154 ; 1983 ; 154 >
+    au < exists ; exists ; 1983 ; British Dental Journal Volume 155 ; 1983 ; 155 >
+    au < exists ; exists ; 1984 ; British Dental Journal Volume 156 ; 1984 ; 156 >
+    au < exists ; exists ; 1984 ; British Dental Journal Volume 157 ; 1984 ; 157 >
+    au < exists ; exists ; 1985 ; British Dental Journal Volume 158 ; 1985 ; 158 >
+    au < exists ; exists ; 1985 ; British Dental Journal Volume 159 ; 1985 ; 159 >
+    au < exists ; exists ; 1986 ; British Dental Journal Volume 160 ; 1986 ; 160 >
+    au < exists ; exists ; 1986 ; British Dental Journal Volume 161 ; 1986 ; 161 >
+    au < exists ; exists ; 1987 ; British Dental Journal Volume 162 ; 1987 ; 162 >
+    au < exists ; exists ; 1987 ; British Dental Journal Volume 163 ; 1987 ; 163 >
+    au < exists ; exists ; 1988 ; British Dental Journal Volume 164 ; 1988 ; 164 >
+    au < exists ; exists ; 1988 ; British Dental Journal Volume 165 ; 1988 ; 165 >
+    au < exists ; exists ; 1989 ; British Dental Journal Volume 166 ; 1989 ; 166 >
+    au < exists ; exists ; 1989 ; British Dental Journal Volume 167 ; 1989 ; 167 >
+    au < exists ; exists ; 1990 ; British Dental Journal Volume 168 ; 1990 ; 168 >
+    au < exists ; exists ; 1990 ; British Dental Journal Volume 169 ; 1990 ; 169 >
+    au < exists ; exists ; 1991 ; British Dental Journal Volume 170 ; 1991 ; 170 >
+    au < exists ; exists ; 1991 ; British Dental Journal Volume 171 ; 1991 ; 171 >
+    au < exists ; exists ; 1992 ; British Dental Journal Volume 172 ; 1992 ; 172 >
+    au < exists ; exists ; 1992 ; British Dental Journal Volume 173 ; 1992 ; 173 >
+    au < exists ; exists ; 1993 ; British Dental Journal Volume 174 ; 1993 ; 174 >
+    au < exists ; exists ; 1993 ; British Dental Journal Volume 175 ; 1993 ; 175 >
+    au < exists ; exists ; 1994 ; British Dental Journal Volume 176 ; 1994 ; 176 >
+    au < exists ; exists ; 1994 ; British Dental Journal Volume 177 ; 1994 ; 177 >
+    au < exists ; exists ; 1995 ; British Dental Journal Volume 178 ; 1995 ; 178 >
+    au < exists ; exists ; 1995 ; British Dental Journal Volume 179 ; 1995 ; 179 >
+    au < exists ; exists ; 1996 ; British Dental Journal Volume 180 ; 1996 ; 180 >
+    au < exists ; exists ; 1996 ; British Dental Journal Volume 181 ; 1996 ; 181 >
+    au < exists ; exists ; 1997 ; British Dental Journal Volume 182 ; 1997 ; 182 >
+    au < exists ; exists ; 1997 ; British Dental Journal Volume 183 ; 1997 ; 183 >
+    au < exists ; exists ; 1998 ; British Dental Journal Volume 184 ; 1998 ; 184 >
+    au < exists ; exists ; 1998 ; British Dental Journal Volume 185 ; 1998 ; 185 >
+    au < exists ; exists ; 1999 ; British Dental Journal Volume 186 ; 1999 ; 186 >
+    au < exists ; exists ; 1999 ; British Dental Journal Volume 187 ; 1999 ; 187 >
+    au < exists ; exists ; 2000 ; British Dental Journal Volume 188 ; 2000 ; 188 >
+    au < exists ; exists ; 2000 ; British Dental Journal Volume 189 ; 2000 ; 189 >
+    au < exists ; exists ; 2001 ; British Dental Journal Volume 190 ; 2001 ; 190 >
+    au < exists ; exists ; 2001 ; British Dental Journal Volume 191 ; 2001 ; 191 >
+    au < exists ; exists ; 2002 ; British Dental Journal Volume 192 ; 2002 ; 192 >
+    au < exists ; exists ; 2002 ; British Dental Journal Volume 193 ; 2002 ; 193 >
+    au < exists ; exists ; 2003 ; British Dental Journal Volume 194 ; 2003 ; 194 >
+    au < exists ; exists ; 2003 ; British Dental Journal Volume 195 ; 2003 ; 195 >
+    au < exists ; exists ; 2004 ; British Dental Journal Volume 196 ; 2004 ; 196 >
+    au < exists ; exists ; 2004 ; British Dental Journal Volume 197 ; 2004 ; 197 >
+    au < exists ; exists ; 2005 ; British Dental Journal Volume 198 ; 2005 ; 198 >
+    au < exists ; exists ; 2005 ; British Dental Journal Volume 199 ; 2005 ; 199 >
+    au < exists ; exists ; 2006 ; British Dental Journal Volume 200 ; 2006 ; 200 >
+    au < exists ; exists ; 2006 ; British Dental Journal Volume 201 ; 2006 ; 201 >
+    au < exists ; exists ; 2007 ; British Dental Journal Volume 202 ; 2007 ; 202 >
+    au < exists ; exists ; 2007 ; British Dental Journal Volume 203 ; 2007 ; 203 >
+    au < exists ; exists ; 2008 ; British Dental Journal Volume 204 ; 2008 ; 204 >
+    au < exists ; exists ; 2008 ; British Dental Journal Volume 205 ; 2008 ; 205 >
+    au < exists ; exists ; 2009 ; British Dental Journal Volume 206 ; 2009 ; 206 >
+    au < exists ; exists ; 2009 ; British Dental Journal Volume 207 ; 2009 ; 207 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 208 ; 2010 ; 208 >
+    au < exists ; exists ; 2010 ; British Dental Journal Volume 209 ; 2010 ; 209 >
+    au < exists ; exists ; 2011 ; British Dental Journal Volume 210 ; 2011 ; 210 >
+    au < exists ; exists ; 2011 ; British Dental Journal Volume 211 ; 2011 ; 211 >
+    au < released ; crawling ; 2012 ; British Dental Journal Volume 212 ; 2012 ; 212 >
+    au < released ; crawling ; 2012 ; British Dental Journal Volume 213 ; 2012 ; 213 >
+    au < manifest ; exists ; 2013 ; British Dental Journal Volume 214 ; 2013 ; 214 >
+
+  }
   {
 
     title <
@@ -171,9 +330,6 @@
     >
 
     param[journal_id] = bjc
-
-    comment[clockss] = True
-    comment[verify] = different website design?
 
     au < manifest ; exists ; 1947 ; British Journal of Cancer Volume 1 ; 1947 ; 1 >
     au < manifest ; exists ; 1948 ; British Journal of Cancer Volume 2 ; 1948 ; 2 >
@@ -281,6 +437,9 @@
     au < released ; crawling ; 2011 ; British Journal of Cancer Volume 104 ; 2011 ; 104 >
     au < released ; crawling ; 2011 ; British Journal of Cancer Volume 105 ; 2011 ; 105 >
     au < released ; crawling ; 2012 ; British Journal of Cancer Volume 106 ; 2012 ; 106 >
+    au < released ; crawling ; 2012 ; British Journal of Cancer Volume 107 ; 2012 ; 107 >
+    au < manifest ; exists ; 2013 ; British Journal of Cancer Volume 108 ; 2013 ; 108 >
+    au < exists ; exists ; 2013 ; British Journal of Cancer Volume 109 ; 2013 ; 109 >
 
   }
 
@@ -294,7 +453,6 @@
     >
 
     param[journal_id] = cgt
-    comment[notReady] = fetch error on ingest1 (401 unauthorized)
 
     au < manifest ; exists ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
     au < manifest ; exists ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
@@ -309,7 +467,8 @@
     au < zapped ; down ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Cancer Gene Therapy Volume 18 ; 2011 ; 18 >
-    au < notReady ; exists ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
+    au < released ; crawling ; 2012 ; Cancer Gene Therapy Volume 19 ; 2012 ; 19 >
+	au < manifest ; exists ; 2013 ; Cancer Gene Therapy Volume 20 ; 2013 ; 20 >
 
   }
 
@@ -340,8 +499,25 @@
     au < released ; crawling ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Cell Death and Differentiation Volume 18 ; 2011 ; 18 >
     au < released ; crawling ; 2012 ; Cell Death and Differentiation Volume 19 ; 2012 ; 19 >
+    au < manifest ; exists ; 2013 ; Cell Death and Differentiation Volume 20 ; 2013 ; 20 >
 
   }
+
+  {
+
+    title <
+      name = Cell Death & Disease ;
+      eissn = 2041-4889
+    >
+
+    param[journal_id] = cddis
+
+    au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
+    au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
+    au < released ; crawling ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
+
+    }
 
   {
 
@@ -353,7 +529,6 @@
     >
 
     param[journal_id] = cr
-    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1999 ; Cell Research Volume 9 ; 1999 ; 9 >
     au < manifest ; exists ; 2000 ; Cell Research Volume 10 ; 2000 ; 10 >
@@ -368,7 +543,46 @@
     au < zapped ; down ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Cell Research Volume 21 ; 2011 ; 21 >
-    au < notReady ; exists ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
+    au < released ; crawling ; 2012 ; Cell Research Volume 22 ; 2012 ; 22 >
+    au < crawling ; exists ; 2013 ; Cell Research Volume 23 ; 2013 ; 23 >
+
+  }
+
+{
+
+    title <
+      name = Cellular & Molecular Immunology ;
+      issn = 1672-7681;
+      eissn = 2042-0226
+
+    >
+
+    param[journal_id] = cmi
+
+    au < crawling ; exists ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
+    au < crawling ; exists ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
+    au < crawling ; exists ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
+    au < crawling ; exists ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
+    au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical and Translational Gastroenterology ;
+      eissn = 2155-384X
+
+    >
+
+    param[journal_id] = ctg
+    comment[notReady] = no substance
+
+    au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
+    au < testing ; exists ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
+    au < released ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
+    au < exists ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
 
   }
 
@@ -380,7 +594,9 @@
       eissn = 1532-6535 ;
       issnl = 0009-9236
     >
-
+    
+    comment[0] = need to confirm if this is under contract
+    comment[notReady] = fetch error on ingest 4
     param[journal_id] = clpt
 
     au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
@@ -448,6 +664,36 @@
     au < zapped ; down ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
     au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
     au < released ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
+	au < testing ; exists ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 >
+	au < manifest ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 >
+	au < manifest ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 >
+
+  }
+
+  {
+
+    title <
+      name = CPT: Pharmacometrics & Systems Pharmacology ;
+      eissn = 2163-8306
+    >
+
+    param[journal_id] = psp
+    
+	au < exists ; exists ; 2012 ; CPT: Pharmacometrics & Systems Pharmacology Volume 1 ; 2012 ; 1 >
+	au < exists ; exists ; 2013 ; CPT: Pharmacometrics & Systems Pharmacology Volume 2 ; 2013 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical & Translational Immunology ;
+      eissn = 2050-0068
+    >
+
+    param[journal_id] = cti
+
+    au < exists ; exists ; 2013 ; Clinical & Translational Immunology Volume 1 ; 2013 ; 1 >
 
   }
 
@@ -478,6 +724,8 @@
     au < released ; crawling ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
     au < released ; crawling ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
     au < released ; crawling ; 2012 ; The EMBO Journal Volume 31 ; 2012 ; 31 >
+    au < manifest ; exists ; 2013 ; The EMBO Journal Volume 32 ; 2013 ; 32 >
+
 
   }
 
@@ -489,7 +737,7 @@
       eissn = 1469-3178 ;
       issnl = 1469-221X
     >
-
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = embor
 
     au < manifest ; exists ; 2000 ; EMBO Reports Volume 1 ; 2000 ; 1 >
@@ -500,11 +748,25 @@
     au < manifest ; exists ; 2005 ; EMBO Reports Volume 6 ; 2005 ; 6 >
     au < manifest ; exists ; 2006 ; EMBO Reports Volume 7 ; 2006 ; 7 >
     au < manifest ; exists ; 2007 ; EMBO Reports Volume 8 ; 2007 ; 8 >
-    au < testing ; exists ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
+    au < released ; crawling ; 2008 ; EMBO Reports Volume 9 ; 2008 ; 9 >
     au < zapped ; down ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; EMBO Reports Volume 12 ; 2011 ; 12 >
     au < released ; crawling ; 2012 ; EMBO Reports Volume 13 ; 2012 ; 13 >
+    au < crawling ; exists ; 2013 ; EMBO Reports Volume 14 ; 2013 ; 14 >
+
+  }
+
+  {
+    title <
+      name = Emerging Microbes & Infections ;
+      eissn = 2222-1751
+    >
+
+    param[journal_id] = emi
+
+    au < exists ; exists ; 2012 ; Emerging Microbes & Infections Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2013 ; Emerging Microbes & Infections Volume 2 ; 2013 ; 2 >
 
   }
 
@@ -518,7 +780,6 @@
     >
 
     param[journal_id] = ejcn
-    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 1997 ; European Journal of Clinical Nutrition Volume 51 ; 1997 ; 51 >
     au < manifest ; exists ; 1998 ; European Journal of Clinical Nutrition Volume 52 ; 1998 ; 52 >
@@ -535,7 +796,8 @@
     au < zapped ; down ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
     au < released ; crawling ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
     au < released ; crawling ; 2011 ; European Journal of Clinical Nutrition Volume 65 ; 2011 ; 65 >
-    au < notReady ; exists ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
+    au < released ; crawling ; 2012 ; European Journal of Clinical Nutrition Volume 66 ; 2012 ; 66 >
+    au < manifest ; exists ; 2013 ; European Journal of Clinical Nutrition Volume 67 ; 2013 ; 67 >
 
   }
 
@@ -547,7 +809,8 @@
       eissn = 1476-5438 ;
       issnl = 1018-4813
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = ejhg
 
     au < manifest ; exists ; 1998 ; European Journal of Human Genetics Volume 6 ; 1998 ; 6 >
@@ -564,8 +827,8 @@
     au < released ; crawling ; 2009 ; European Journal of Human Genetics Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; European Journal of Human Genetics Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; European Journal of Human Genetics Volume 19 ; 2011 ; 19 >
-    au < testing ; exists ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
-
+    au < released ; crawling ; 2012 ; European Journal of Human Genetics Volume 20 ; 2012 ; 20 >
+    au < manifest ; exists ; 2013 ; European Journal of Human Genetics Volume 21 ; 2013 ; 21 >
   }
 
   {
@@ -576,7 +839,8 @@
       eissn = 1476-5446 ;
       issnl = 1462-0049
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = ebd
     comment[notReady] = fetch error RT 4106
 
@@ -589,11 +853,43 @@
     au < exists ; exists ; 2005 ; Evidence-Based Dentistry Volume 6 ; 2005 ; 6 >
     au < exists ; exists ; 2006 ; Evidence-Based Dentistry Volume 7 ; 2006 ; 7 >
     au < exists ; exists ; 2007 ; Evidence-Based Dentistry Volume 8 ; 2007 ; 8 >
-    au < notReady ; exists ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
-    au < notReady ; exists ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
-    au < notReady ; exists ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
+    au < released ; crawling ; 2008 ; Evidence-Based Dentistry Volume 9 ; 2008 ; 9 >
+    au < released ; crawling ; 2009 ; Evidence-Based Dentistry Volume 10 ; 2009 ; 10 >
+    au < released ; crawling ; 2010 ; Evidence-Based Dentistry Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Evidence-Based Dentistry Volume 12 ; 2011 ; 12 >
-    au < notReady ; exists ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
+    au < released ; crawling ; 2012 ; Evidence-Based Dentistry Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Evidence-Based Dentistry Volume 14 ; 2013 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Experimental & Molecular Medicine ;
+      eissn = 2092-6413
+    >
+
+    param[journal_id] = emm
+
+    au < exists ; exists ; 1996 ; Experimental & Molecular Medicine Volume 28 ; 1996 ; 28 >
+    au < exists ; exists ; 1997 ; Experimental & Molecular Medicine Volume 29 ; 1997 ; 29 >
+    au < exists ; exists ; 1998 ; Experimental & Molecular Medicine Volume 30 ; 1998 ; 30 >
+    au < exists ; exists ; 1999 ; Experimental & Molecular Medicine Volume 31 ; 1999 ; 31 >
+    au < exists ; exists ; 2000 ; Experimental & Molecular Medicine Volume 32 ; 2000 ; 32 >
+    au < exists ; exists ; 2001 ; Experimental & Molecular Medicine Volume 33 ; 2001 ; 33 >
+    au < exists ; exists ; 2002 ; Experimental & Molecular Medicine Volume 34 ; 2002 ; 34 >
+    au < exists ; exists ; 2003 ; Experimental & Molecular Medicine Volume 35 ; 2003 ; 35 >
+    au < exists ; exists ; 2004 ; Experimental & Molecular Medicine Volume 36 ; 2004 ; 36 >
+    au < exists ; exists ; 2005 ; Experimental & Molecular Medicine Volume 37 ; 2005 ; 37 >
+    au < exists ; exists ; 2006 ; Experimental & Molecular Medicine Volume 38 ; 2006 ; 38 >
+    au < exists ; exists ; 2007 ; Experimental & Molecular Medicine Volume 39 ; 2007 ; 39 >
+    au < exists ; exists ; 2008 ; Experimental & Molecular Medicine Volume 40 ; 2008 ; 40 >
+    au < exists ; exists ; 2009 ; Experimental & Molecular Medicine Volume 41 ; 2009 ; 41 >
+    au < exists ; exists ; 2010 ; Experimental & Molecular Medicine Volume 42 ; 2010 ; 42 >
+    au < exists ; exists ; 2011 ; Experimental & Molecular Medicine Volume 43 ; 2011 ; 43 >
+    au < exists ; exists ; 2012 ; Experimental & Molecular Medicine Volume 44 ; 2012 ; 44 >
+    au < exists ; exists ; 2013 ; Experimental & Molecular Medicine Volume 45 ; 2013 ; 45 >
+
 
   }
 
@@ -634,6 +930,8 @@
     au < released ; crawling ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Eye Volume 25 ; 2011 ; 25 >
     au < released ; crawling ; 2012 ; Eye Volume 26 ; 2012 ; 26 >
+	au < manifest ; exists ; 2013 ; Eye Volume 27 ; 2013 ; 27 >
+
 
   }
 
@@ -664,7 +962,7 @@
     au < released ; crawling ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
     au < released ; crawling ; 2011 ; Gene Therapy Volume 18 ; 2011 ; 18 >
     au < released ; crawling ; 2012 ; Gene Therapy Volume 19 ; 2012 ; 19 >
-
+	au < manifest ; exists ; 2013 ; Gene Therapy Volume 20 ; 2013 ; 20 >
   }
 
   {
@@ -691,7 +989,36 @@
     au < released ; crawling ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Genes and Immunity Volume 12 ; 2011 ; 12 >
     au < released ; crawling ; 2012 ; Genes and Immunity Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Genes and Immunity Volume 14 ; 2013 ; 14 >
+  }
 
+  {
+
+    title <
+      name = Genetics in Medicine ;
+      issn = 1098-3600 ;
+      eissn = 1530-0366
+    >
+
+    param[journal_id] = gim
+    comment[notReady] = no links on 2011 manifest page
+
+    au < exists ; exists ; 1998 ; Genetics in Medicine Volume 1 (1998) ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Genetics in Medicine Volume 1 (1999) ; 1999 ; 1 >
+    au < exists ; exists ; 2000 ; Genetics in Medicine Volume 2 ; 2000 ; 2 >
+    au < exists ; exists ; 2001 ; Genetics in Medicine Volume 3 ; 2001 ; 3 >
+    au < exists ; exists ; 2002 ; Genetics in Medicine Volume 4 ; 2002 ; 4 >
+    au < exists ; exists ; 2003 ; Genetics in Medicine Volume 5 ; 2003 ; 5 >
+    au < exists ; exists ; 2004 ; Genetics in Medicine Volume 6 ; 2004 ; 6 >
+    au < exists ; exists ; 2005 ; Genetics in Medicine Volume 7 ; 2005 ; 7 >
+    au < exists ; exists ; 2006 ; Genetics in Medicine Volume 8 ; 2006 ; 8 >
+    au < exists ; exists ; 2007 ; Genetics in Medicine Volume 9 ; 2007 ; 9 >
+    au < exists ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
+    au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
+    au < testing ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
+    au < testing ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
+    au < testing ; exists ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
+    au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
   }
 
   {
@@ -813,6 +1140,10 @@
     au < released ; crawling ; 2011 ; Heredity Volume 106 ; 2011 ; 106 >
     au < released ; crawling ; 2011 ; Heredity Volume 107 ; 2011 ; 107 >
     au < released ; crawling ; 2012 ; Heredity Volume 108 ; 2012 ; 108 >
+    au < released ; crawling ; 2012 ; Heredity Volume 109 ; 2012 ; 109 >
+    au < manifest ; exists ; 2013 ; Heredity Volume 110 ; 2013 ; 110 >
+
+
 
   }
 
@@ -826,7 +1157,6 @@
     >
 
     param[journal_id] = hr
-    comment[notReady] = fetch error RT 4106
 
     au < manifest ; exists ; 2005 ; Hypertension Research Volume 28 ; 2005 ; 28 >
     au < manifest ; exists ; 2006 ; Hypertension Research Volume 29 ; 2006 ; 29 >
@@ -835,7 +1165,33 @@
     au < released ; crawling ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
     au < released ; crawling ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
     au < released ; crawling ; 2011 ; Hypertension Research Volume 34 ; 2011 ; 34 >
-    au < notReady ; exists ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+    au < released ; crawling ; 2012 ; Hypertension Research Volume 35 ; 2012 ; 35 >
+    au < manifest ; exists ; 2013 ; Hypertension Research Volume 36 ; 2013 ; 36 >
+  }
+
+  {
+
+    title <
+      name = IBMS BoneKEy ;
+      eissn = 1940-8692
+    >
+
+    param[journal_id] = bonekey
+    comment[notReady] = no substance
+
+    au < notReady ; exists ; 2001 ; IBMS BoneKEy 3 ; 2001 ; 3 >
+    au < notReady ; exists ; 2002 ; IBMS BoneKEy 4 ; 2002 ; 4 >
+    au < notReady ; exists ; 2003 ; IBMS BoneKEy 5 ; 2003 ; 5 >
+    au < notReady ; exists ; 2004 ; IBMS BoneKEy 6 ; 2004 ; 6 >
+    au < notReady ; exists ; 2005 ; IBMS BoneKEy 7 ; 2005 ; 7 >
+    au < notReady ; exists ; 2006 ; IBMS BoneKEy 8 ; 2006 ; 8 >
+    au < notReady ; exists ; 2007 ; IBMS BoneKEy 9 ; 2007 ; 9 >
+    au < notReady ; exists ; 2008 ; IBMS BoneKEy 10 ; 2008 ; 10 >
+    au < notReady ; exists ; 2009 ; IBMS BoneKEy 11 ; 2009 ; 11 >
+    au < notReady ; exists ; 2010 ; IBMS BoneKEy Volume 12 ; 2010 ; 12 >
+    au < notReady ; exists ; 2011 ; IBMS BoneKEy Volume 13 ; 2011 ; 13 >
+    au < notReady ; exists ; 2012 ; IBMS BoneKEy Volume 14 ; 2012 ; 14 >
+    au < notReady ; exists ; 2013 ; IBMS BoneKEy Volume 15 ; 2013 ; 15 >
 
   }
 
@@ -940,7 +1296,7 @@
     au < released ; crawling ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
     au < released ; crawling ; 2011 ; Immunology & Cell Biology Volume 89 ; 2011 ; 89 >
     au < released ; crawling ; 2012 ; Immunology & Cell Biology Volume 90 ; 2012 ; 90 >
-
+    au < manifest ; exists ; 2013 ; Immunology & Cell Biology Volume 91 ; 2013 ; 91 >
   }
 
   {
@@ -969,8 +1325,8 @@
     au < zapped ; down ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
     au < released ; crawling ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
     au < released ; crawling ; 2011 ; International Journal of Impotence Research Volume 23 ; 2011 ; 23 >
-    au < testing ; exists ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
-
+    au < released ; crawling ; 2012 ; International Journal of Impotence Research Volume 24 ; 2012 ; 24 >
+    au < manifest ; exists ; 2013 ; International Journal of Impotence Research Volume 25 ; 2013 ; 25 >
   }
 
   {
@@ -999,7 +1355,44 @@
     au < released ; crawling ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
     au < released ; crawling ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
     au < released ; crawling ; 2011 ; International Journal of Obesity Volume 35 ; 2011 ; 35 >
-    au < testing ; exists ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
+    au < released ; crawling ; 2012 ; International Journal of Obesity Volume 36 ; 2012 ; 36 >
+    au < manifest ; exists ; 2013 ; International Journal of Obesity Volume 37 ; 2013 ; 37 >
+
+  }
+
+{
+
+    title <
+      name = International Journal of Obesity Supplements ;
+      issn = 2046-2174 ;
+      eissn = 2046-2166
+    >
+
+    param[journal_id] = ijosup
+    comment[notReady] = no substance
+
+    au < testing ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
+    au < testing ; exists ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
+    au < expected ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
+
+  }
+
+{
+
+    title <
+      name = International Journal of Oral Science ;
+      issn = 1674-2818 ;
+      eissn = 2049-3169
+    >
+
+    param[journal_id] = ijos
+    comment[notReady] = 2012 links on 2013 page, missing Vol. 4, Iss 4 on 2012 page
+
+    au < crawling ; exists ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 >
+    au < crawling ; exists ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
+    au < testing ; exists ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
+    au < manifest ; exists ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -1012,14 +1405,16 @@
       issnl = 1751-7362
     >
 
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
-    au < testing ; exists ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
-    au < testing ; exists ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
-    au < testing ; exists ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
+    au < released ; crawling ; 2008 ; The ISME Journal Volume 2 ; 2008 ; 2 >
+    au < released ; crawling ; 2009 ; The ISME Journal Volume 3 ; 2009 ; 3 >
+    au < released ; crawling ; 2010 ; The ISME Journal Volume 4 ; 2010 ; 4 >
     au < zapped ; down ; 2011 ; The ISME Journal Volume 5 ; 2011 ; 5 >
-    au < testing ; exists ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
+    au < released ; crawling ; 2012 ; The ISME Journal Volume 6 ; 2012 ; 6 >
+    au < manifest ; exists ; 2013 ; The ISME Journal Volume 7 ; 2013 ; 7 >
 
   }
 
@@ -1032,6 +1427,8 @@
       issnl = 1087-0024
     >
 
+    comment[0] = need to confirm if this is under contract
+    comment[1] = There is no volume published in 2010, 2011 is the last issue as of 1/18/13
     param[journal_id] = jidsp
 
     au < exists ; exists ; 1997 ; JID Symposium Proceedings Volume 2 ; 1997 ; 2 >
@@ -1045,10 +1442,10 @@
     au < exists ; exists ; 2005 ; JID Symposium Proceedings Volume 10 ; 2005 ; 10 >
     au < exists ; exists ; 2006 ; JID Symposium Proceedings Volume 11 ; 2006 ; 11 >
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
-    au < testing ; exists ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
+    au < released ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
     au < testing ; exists ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
-    au < released ; crawling ; 2010 ; JID Symposium Proceedings Volume 15 ; 2010 ; 15 >
-	
+    au < released ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
+
   }
 
   {
@@ -1061,7 +1458,7 @@
     >
 
     param[journal_id] = ja
- 	
+
     au < manifest ; exists ; 2005 ; The Journal of Antibiotics Volume 58 ; 2005 ; 58 >
     au < manifest ; exists ; 2006 ; The Journal of Antibiotics Volume 59 ; 2006 ; 59 >
     au < manifest ; exists ; 2007 ; The Journal of Antibiotics Volume 60 ; 2007 ; 60 >
@@ -1069,7 +1466,8 @@
     au < zapped ; down ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < released ; crawling ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
     au < released ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
-    au < testing ; exists ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
+    au < released ; crawling ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
+    au < manifest ; exists ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
 
   }
 
@@ -1082,8 +1480,8 @@
       issnl = 0271-678X
     >
 
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = jcbfm
-    
     comment[notReady] = ingest3 Rice does not have access to http://www.nature.com/jcbfm/journal/v31/n12/full/jcbfm2011137a.html
 
     au < exists ; exists ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 >
@@ -1113,11 +1511,14 @@
     au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 >
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
-    au < notReady ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
+    au < manifest ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
-    au < notReady ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
-    au < notReady ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
+    au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < testing ; exists ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
+    au < manifest ; exists ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 >
+
+
 
   }
 
@@ -1132,8 +1533,6 @@
 
     param[journal_id] = jes
 
-    comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
-
     au < exists ; exists ; 1999 ; Journal of Exposure Science and Environmental Epidemiology Volume 9 ; 1999 ; 9 >
     au < exists ; exists ; 2000 ; Journal of Exposure Science and Environmental Epidemiology Volume 10 ; 2000 ; 10 >
     au < exists ; exists ; 2001 ; Journal of Exposure Science and Environmental Epidemiology Volume 11 ; 2001 ; 11 >
@@ -1147,7 +1546,8 @@
     au < zapped ; down ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
     au < released ; crawling ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
     au < released ; crawling ; 2011 ; Journal of Exposure Science and Environmental Epidemiology Volume 21 ; 2011 ; 21 >
-    au < testing ; exists ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
+    au < released ; crawling ; 2012 ; Journal of Exposure Science and Environmental Epidemiology Volume 22 ; 2012 ; 22 >
+    au < manifest ; exists ; 2013 ; Journal of Exposure Science and Environmental Epidemiology Volume 23 ; 2013 ; 23 >
 
   }
 
@@ -1197,7 +1597,8 @@
     au < zapped ; down ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
     au < released ; crawling ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
     au < released ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
-    au < testing ; exists ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
+    au < released ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
+    au < manifest ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
 
   }
 
@@ -1211,8 +1612,7 @@
     >
 
     param[journal_id] = jhh
-    comment[notReady] = fetch error RT 4106
-    
+
     au < manifest ; exists ; 1997 ; Journal of Human Hypertension Volume 11 ; 1997 ; 11 >
     au < manifest ; exists ; 1998 ; Journal of Human Hypertension Volume 12 ; 1998 ; 12 >
     au < manifest ; exists ; 1999 ; Journal of Human Hypertension Volume 13 ; 1999 ; 13 >
@@ -1228,7 +1628,8 @@
     au < zapped ; down ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
-    au < notReady ; exists ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
+    au < testing ; exists ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
+    au < manifest ; exists ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 >
 
   }
 
@@ -1374,7 +1775,8 @@
     au < zapped ; down ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
     au < released ; crawling ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
     au < released ; crawling ; 2011 ; The Journal of Investigative Dermatology Volume 131 ; 2011 ; 131 >
-    au < testing ; exists ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
+    au < released ; crawling ; 2012 ; The Journal of Investigative Dermatology Volume 132 ; 2012 ; 132 >
+    au < manifest ; exists ; 2013 ; The Journal of Investigative Dermatology Volume 133 ; 2013 ; 133 >
 
   }
 
@@ -1402,8 +1804,8 @@
     au < zapped ; down ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
     au < released ; crawling ; 2011 ; Journal of Perinatology Volume 31 ; 2011 ; 31 >
-    au < testing ; exists ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
-
+    au < released ; crawling ; 2012 ; Journal of Perinatology Volume 32 ; 2012 ; 32 >
+    au < manifest ; exists ; 2013 ; Journal of Perinatology Volume 33 ; 2013 ; 33 >
   }
 
   {
@@ -1415,8 +1817,9 @@
       issnl = 0085-2538
     >
 
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = ki
-    
+
     au < exists ; exists ; 1972 ; Kidney International Volume 1 (1972) ; 1972 ; 1 >
     au < exists ; exists ; 1972 ; Kidney International Volume 2 (1972) ; 1972 ; 2 >
     au < exists ; exists ; 1973 ; Kidney International Volume 3 (1973) ; 1973 ; 3 >
@@ -1495,9 +1898,25 @@
     au < exists ; exists ; 2009 ; Kidney International Volume 76 (2009) ; 2009 ; 76 >
     au < exists ; exists ; 2010 ; Kidney International Volume 77 (2010) ; 2010 ; 77 >
     au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
-    au < testing ; exists ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
+    au < released ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
     au < testing ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
+    au < expected ; exists ; 2013 ; Kidney International Volume 82 ; 2013 ; 82 >
+  }
+
+ {
+
+    title <
+      name = Kidney International Supplements ;
+      issn = 2157-1724 ;
+      eissn = 2157-1716
+    >
+
+    param[journal_id] = kisup
+
+    au < crawling ; exists ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
+    au < exists ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -1509,7 +1928,8 @@
       eissn = 1530-0307 ;
       issnl = 0023-6837
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = labinvest
 
     au < exists ; exists ; 2000 ; Laboratory Investigation Volume 80 ; 2000 ; 80 >
@@ -1520,11 +1940,12 @@
     au < exists ; exists ; 2005 ; Laboratory Investigation Volume 85 ; 2005 ; 85 >
     au < exists ; exists ; 2006 ; Laboratory Investigation Volume 86 ; 2006 ; 86 >
     au < exists ; exists ; 2007 ; Laboratory Investigation Volume 87 ; 2007 ; 87 >
-    au < testing ; exists ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
+    au < manifest ; exists ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
     au < testing ; exists ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
     au < testing ; exists ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
     au < released ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
     au < testing ; exists ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
+    au < manifest ; exists ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 >
 
   }
 
@@ -1555,7 +1976,7 @@
     au < released ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
     au < testing ; exists ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
-
+    au < manifest ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 >
   }
 
   {
@@ -1566,7 +1987,8 @@
       eissn = 1530-0285 ;
       issnl = 0893-3952
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = modpathol
     comment[notReady] = fetch error on ingest3 RT 4106
 
@@ -1582,8 +2004,9 @@
     au < released ; crawling ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
     au < released ; crawling ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < notReady ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
-    au < notReady ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
+    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < testing ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
+    au < manifest ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 >
 
   }
 
@@ -1613,7 +2036,8 @@
     au < zapped ; down ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
     au < released ; crawling ; 2011 ; Molecular Psychiatry Volume 16 ; 2011 ; 16 >
-    au < crawling ; exists ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 >
+    au < released ; crawling ; 2012 ; Molecular Psychiatry Volume 17 ; 2012 ; 17 >
+    au < manifest ; exists ; 2013 ; Molecular Psychiatry Volume 18 ; 2013 ; 18 >
 
   }
 
@@ -1623,9 +2047,9 @@
       name = Molecular Systems Biology ;
       eissn = 1744-4292
     >
-
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = msb
-	
+
     au < exists ; exists ; 2005 ; Molecular Systems Biology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Molecular Systems Biology Volume 2 ; 2006 ; 2 >
     au < exists ; exists ; 2007 ; Molecular Systems Biology Volume 3 ; 2007 ; 3 >
@@ -1634,6 +2058,7 @@
     au < exists ; exists ; 2010 ; Molecular Systems Biology Volume 6 ; 2010 ; 6 >
     au < exists ; exists ; 2011 ; Molecular Systems Biology Volume 7 ; 2011 ; 7 >
     au < exists ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
+    au < exists ; exists ; 2013 ; Molecular Systems Biology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -1645,7 +2070,8 @@
       eissn = 1525-0024 ;
       issnl = 1525-0016
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = mt
 
     au < exists ; exists ; 2000 ; Molecular Therapy Volume 1 (2000) ; 2000 ; 1 >
@@ -1667,7 +2093,22 @@
     au < released ; crawling ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
-    au < crawling ; exists ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
+    au < testing ; exists ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
+    au < manifest ; exists ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
+
+  }
+
+ {
+
+    title <
+      name = Molecular Therapy - Nucleic Acids ;
+      eissn = 2162-2531
+    >
+
+    param[journal_id] = mtna
+
+    au < released ; crawling ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 (2000) ; 2012 ; 1 >
+    au < exists ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 (2000) ; 2013 ; 2 >
 
   }
 
@@ -1680,13 +2121,15 @@
       issnl = 1933-0219
     >
 
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = mi
 
-    au < testing ; exists ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
-    au < released ; manifest ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
+    au < released ; crawling ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
+    au < released ; crawling ; 2009 ; Mucosal Immunology Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Mucosal Immunology Volume 3 ; 2010 ; 3 >
     au < released ; crawling ; 2011 ; Mucosal Immunology Volume 4 ; 2011 ; 4 >
-    au < testing ; exists ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
+    au < released ; crawling ; 2012 ; Mucosal Immunology Volume 5 ; 2012 ; 5 >
+    au < manifest ; exists ; 2013 ; Mucosal Immunology Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -2096,6 +2539,7 @@
     au < exists ; exists ; 1988 ; Nature Volume 334 ; 1988 ; 334 >
     au < exists ; exists ; 1988 ; Nature Volume 335 ; 1988 ; 335 >
     au < exists ; exists ; 1988 ; Nature Volume 336 ; 1988 ; 336 >
+    au < exists ; exists ; 1988 ; Nature Volume 395 (1988) ; 1988 ; 395 >
     au < exists ; exists ; 1989 ; Nature Volume 337 ; 1989 ; 337 >
     au < exists ; exists ; 1989 ; Nature Volume 338 ; 1989 ; 338 >
     au < exists ; exists ; 1989 ; Nature Volume 339 ; 1989 ; 339 >
@@ -2154,7 +2598,7 @@
     au < exists ; exists ; 1998 ; Nature Volume 392 ; 1998 ; 392 >
     au < exists ; exists ; 1998 ; Nature Volume 393 ; 1998 ; 393 >
     au < exists ; exists ; 1998 ; Nature Volume 394 ; 1998 ; 394 >
-    au < exists ; exists ; 1998 ; Nature Volume 395 ; 1998 ; 395 >
+    au < exists ; exists ; 1998 ; Nature Volume 395 (1998) ; 1998 ; 395 >
     au < exists ; exists ; 1998 ; Nature Volume 396 ; 1998 ; 396 >
     au < exists ; exists ; 1999 ; Nature Volume 397 ; 1999 ; 397 >
     au < exists ; exists ; 1999 ; Nature Volume 398 ; 1999 ; 398 >
@@ -2168,6 +2612,7 @@
     au < exists ; exists ; 2000 ; Nature Volume 406 ; 2000 ; 406 >
     au < exists ; exists ; 2000 ; Nature Volume 407 ; 2000 ; 407 >
     au < exists ; exists ; 2000 ; Nature Volume 408 ; 2000 ; 408 >
+    au < exists ; exists ; 2000 ; Nature Volume 424 (2000) ; 2000 ; 424 >
     au < exists ; exists ; 2001 ; Nature Volume 409 ; 2001 ; 409 >
     au < exists ; exists ; 2001 ; Nature Volume 410 ; 2001 ; 410 >
     au < exists ; exists ; 2001 ; Nature Volume 411 ; 2001 ; 411 >
@@ -2180,24 +2625,26 @@
     au < exists ; exists ; 2002 ; Nature Volume 418 ; 2002 ; 418 >
     au < exists ; exists ; 2002 ; Nature Volume 419 ; 2002 ; 419 >
     au < exists ; exists ; 2002 ; Nature Volume 420 ; 2002 ; 420 >
+    au < exists ; exists ; 2002 ; Nature Volume 430 (2002) ; 2002 ; 430 >
     au < exists ; exists ; 2003 ; Nature Volume 421 ; 2003 ; 421 >
     au < exists ; exists ; 2003 ; Nature Volume 422 ; 2003 ; 422 >
     au < exists ; exists ; 2003 ; Nature Volume 423 ; 2003 ; 423 >
-    au < exists ; exists ; 2003 ; Nature Volume 424 ; 2003 ; 424 >
+    au < exists ; exists ; 2003 ; Nature Volume 424 (2003) ; 2003 ; 424 >
     au < exists ; exists ; 2003 ; Nature Volume 425 ; 2003 ; 425 >
     au < exists ; exists ; 2003 ; Nature Volume 426 ; 2003 ; 426 >
     au < exists ; exists ; 2004 ; Nature Volume 427 ; 2004 ; 427 >
     au < exists ; exists ; 2004 ; Nature Volume 428 ; 2004 ; 428 >
     au < exists ; exists ; 2004 ; Nature Volume 429 ; 2004 ; 429 >
-    au < exists ; exists ; 2004 ; Nature Volume 430 ; 2004 ; 430 >
+    au < exists ; exists ; 2004 ; Nature Volume 430 (2004) ; 2004 ; 430 >
     au < exists ; exists ; 2004 ; Nature Volume 431 ; 2004 ; 431 >
     au < exists ; exists ; 2004 ; Nature Volume 432 ; 2004 ; 432 >
+    au < exists ; exists ; 2004 ; Nature Volume 438 (2004) ; 2004 ; 438 >
     au < exists ; exists ; 2005 ; Nature Volume 433 ; 2005 ; 433 >
     au < exists ; exists ; 2005 ; Nature Volume 434 ; 2005 ; 434 >
     au < exists ; exists ; 2005 ; Nature Volume 435 ; 2005 ; 435 >
     au < exists ; exists ; 2005 ; Nature Volume 436 ; 2005 ; 436 >
     au < exists ; exists ; 2005 ; Nature Volume 437 ; 2005 ; 437 >
-    au < exists ; exists ; 2005 ; Nature Volume 438 ; 2005 ; 438 >
+    au < exists ; exists ; 2005 ; Nature Volume 438 (2005) ; 2005 ; 438 >
     au < exists ; exists ; 2006 ; Nature Volume 439 ; 2006 ; 439 >
     au < exists ; exists ; 2006 ; Nature Volume 440 ; 2006 ; 440 >
     au < exists ; exists ; 2006 ; Nature Volume 441 ; 2006 ; 441 >
@@ -2240,26 +2687,26 @@
     au < testing ; exists ; 2011 ; Nature Volume 478 ; 2011 ; 478 >
     au < testing ; exists ; 2011 ; Nature Volume 479 ; 2011 ; 479 >
     au < released ; crawling ; 2011 ; Nature Volume 480 ; 2011 ; 480 >
-    au < crawling ; exists ; 2012 ; Nature Volume 481 ; 2012 ; 481 >
-    au < crawling ; exists ; 2012 ; Nature Volume 482 ; 2012 ; 482 >
-    au < crawling ; exists ; 2012 ; Nature Volume 483 ; 2012 ; 483 >
-    au < crawling ; exists ; 2012 ; Nature Volume 484 ; 2012 ; 484 >
-    au < crawling ; exists ; 2012 ; Nature Volume 485 ; 2012 ; 485 >
-    au < crawling ; exists ; 2012 ; Nature Volume 486 ; 2012 ; 486 >
-    au < crawling ; exists ; 2012 ; Nature Volume 487 ; 2012 ; 487 >
-    au < crawling ; exists ; 2012 ; Nature Volume 488 ; 2012 ; 488 >
-    au < crawling ; exists ; 2012 ; Nature Volume 489 ; 2012 ; 489 >
-    au < crawling ; exists ; 2012 ; Nature Volume 490 ; 2012 ; 490 >
-    au < crawling ; exists ; 2012 ; Nature Volume 491 ; 2012 ; 491 >
-    au < manifest ; exists ; 2012 ; Nature Volume 492 ; 2012 ; 492 >
+    au < testing ; exists ; 2012 ; Nature Volume 481 ; 2012 ; 481 >
+    au < testing ; exists ; 2012 ; Nature Volume 482 ; 2012 ; 482 >
+    au < testing ; exists ; 2012 ; Nature Volume 483 ; 2012 ; 483 >
+    au < testing ; exists ; 2012 ; Nature Volume 484 ; 2012 ; 484 >
+    au < testing ; exists ; 2012 ; Nature Volume 485 ; 2012 ; 485 >
+    au < testing ; exists ; 2012 ; Nature Volume 486 ; 2012 ; 486 >
+    au < testing ; exists ; 2012 ; Nature Volume 487 ; 2012 ; 487 >
+    au < testing ; exists ; 2012 ; Nature Volume 488 ; 2012 ; 488 >
+    au < testing ; exists ; 2012 ; Nature Volume 489 ; 2012 ; 489 >
+    au < testing ; exists ; 2012 ; Nature Volume 490 ; 2012 ; 490 >
+    au < testing ; exists ; 2012 ; Nature Volume 491 ; 2012 ; 491 >
+    au < testing ; exists ; 2012 ; Nature Volume 492 ; 2012 ; 492 >
     au < manifest ; exists ; 2013 ; Nature Volume 493 ; 2013 ; 493 >
     au < manifest ; exists ; 2013 ; Nature Volume 494 ; 2013 ; 494 >
     au < manifest ; exists ; 2013 ; Nature Volume 495 ; 2013 ; 495 >
     au < manifest ; exists ; 2013 ; Nature Volume 496 ; 2013 ; 496 >
     au < manifest ; exists ; 2013 ; Nature Volume 497 ; 2013 ; 497 >
-    au < manifest ; exists ; 2013 ; Nature Volume 498 ; 2013 ; 498 >
-    au < manifest ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
-    au < manifest ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
+    au < expected ; exists ; 2013 ; Nature Volume 498 ; 2013 ; 498 >
+    au < expected ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
+    au < expected ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
     au < expected ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 >
 
   }
@@ -2304,7 +2751,8 @@
     au < zapped ; down ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
     au < released ; crawling ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
     au < released ; crawling ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
-    au < crawling ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 >
+    au < testing ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 >
+    au < manifest ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 >
 
   }
 
@@ -2332,7 +2780,8 @@
     au < zapped ; down ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
-    au < crawling ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
+    au < testing ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
+    au < manifest ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
 
   }
 
@@ -2354,7 +2803,8 @@
     au < zapped ; down ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
     au < testing ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
+    au < testing ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2372,10 +2822,59 @@
     au < released ; crawling ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
     au < testing ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
-    au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
+    au < testing ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
+    au < manifest ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
 
   }
 
+  {
+    title <
+      name = Nature Reports Climate Change ;
+      eissn = 1753-9315
+    >
+    
+    comment[0] = need to confirm if this is under contract
+    param[journal_id] = climate
+    comment[1] = online-only publication 2007-2010
+
+    au < exists ; exists ; 2007 ; Nature Reports Climate Change Volume 1 ; 2007 ; 1 >
+    au < exists ; exists ; 2008 ; Nature Reports Climate Change Volume 2 ; 2008 ; 2 >
+    au < exists ; exists ; 2009 ; Nature Reports Climate Change Volume 3 ; 2009 ; 3 >
+    au < exists ; exists ; 2010 ; Nature Reports Climate Change Volume 4 ; 2010 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Nature Climate Change ;
+      issn = 1758-678X ;
+      eissn = 1758-6798
+
+    >
+
+     param[journal_id] = nclimate
+
+    au < crawling ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
+    au < testing ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
+    au < manifest ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
+
+  }
+
+{
+    title <
+      name = Nature Communications ;
+      eissn = 2041-1723
+
+    >
+
+     param[journal_id] = ncomms
+
+    au < exists ; exists ; 2010 ; Nature Communications Volume 1 ; 2010 ; 1 >
+    au < testing ; exists ; 2011 ; Nature Communications Volume 2 ; 2011 ; 2 >
+    au < testing ; exists ; 2012 ; Nature Communications Volume 3 ; 2012 ; 3 >
+    au < crawling ; exists ; 2013 ; Nature Communications Volume 4 ; 2013 ; 4 >
+  
+  }
   {
 
     title <
@@ -2393,7 +2892,8 @@
     au < zapped ; down ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
     au < zapped ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2407,43 +2907,42 @@
     >
 
     param[journal_id] = ng
-    comment[TODO] = remove unnecessary parenthesized years 
 
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 1 (1992) ; 1992 ; 1 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 2 (1992) ; 1992 ; 2 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 3 (1993) ; 1993 ; 3 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 4 (1993) ; 1993 ; 4 >
-    au < exists ; exists ; 1993 ; Nature Genetics Volume 5 (1993) ; 1993 ; 5 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 6 (1994) ; 1994 ; 6 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 7 (1994) ; 1994 ; 7 >
-    au < exists ; exists ; 1994 ; Nature Genetics Volume 8 (1994) ; 1994 ; 8 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 9 (1995) ; 1995 ; 9 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 10 (1995) ; 1995 ; 10 >
-    au < exists ; exists ; 1995 ; Nature Genetics Volume 11 (1995) ; 1995 ; 11 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 12 (1996) ; 1996 ; 12 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 13 (1996) ; 1996 ; 13 >
-    au < exists ; exists ; 1996 ; Nature Genetics Volume 14 (1996) ; 1996 ; 14 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 15 (1997) ; 1997 ; 15 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 16 (1997) ; 1997 ; 16 >
-    au < exists ; exists ; 1997 ; Nature Genetics Volume 17 (1997) ; 1997 ; 17 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 18 (1998) ; 1998 ; 18 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 19 (1998) ; 1998 ; 19 >
-    au < exists ; exists ; 1998 ; Nature Genetics Volume 20 (1998) ; 1998 ; 20 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 21 (1999) ; 1999 ; 21 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 22 (1999) ; 1999 ; 22 >
-    au < exists ; exists ; 1999 ; Nature Genetics Volume 23 (1999) ; 1999 ; 23 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 24 (2000) ; 2000 ; 24 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 25 (2000) ; 2000 ; 25 >
-    au < exists ; exists ; 2000 ; Nature Genetics Volume 26 (2000) ; 2000 ; 26 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 27 (2001) ; 2001 ; 27 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 28 (2001) ; 2001 ; 28 >
-    au < exists ; exists ; 2001 ; Nature Genetics Volume 29 (2001) ; 2001 ; 29 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 30 (2002) ; 2002 ; 30 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 31 (2002) ; 2002 ; 31 >
-    au < exists ; exists ; 2002 ; Nature Genetics Volume 32 (2002) ; 2002 ; 32 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 33 (2003) ; 2003 ; 33 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 34 (2003) ; 2003 ; 34 >
-    au < exists ; exists ; 2003 ; Nature Genetics Volume 35 (2003) ; 2003 ; 35 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 1 ; 1992 ; 1 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 2 ; 1992 ; 2 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 3 ; 1993 ; 3 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 4 ; 1993 ; 4 >
+    au < exists ; exists ; 1993 ; Nature Genetics Volume 5 ; 1993 ; 5 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 6 ; 1994 ; 6 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 7 ; 1994 ; 7 >
+    au < exists ; exists ; 1994 ; Nature Genetics Volume 8 ; 1994 ; 8 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 9 ; 1995 ; 9 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 10 ; 1995 ; 10 >
+    au < exists ; exists ; 1995 ; Nature Genetics Volume 11 ; 1995 ; 11 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 12 ; 1996 ; 12 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 13 ; 1996 ; 13 >
+    au < exists ; exists ; 1996 ; Nature Genetics Volume 14 ; 1996 ; 14 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 15 ; 1997 ; 15 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 16 ; 1997 ; 16 >
+    au < exists ; exists ; 1997 ; Nature Genetics Volume 17 ; 1997 ; 17 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 18 ; 1998 ; 18 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 19 ; 1998 ; 19 >
+    au < exists ; exists ; 1998 ; Nature Genetics Volume 20 ; 1998 ; 20 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 21 ; 1999 ; 21 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 22 ; 1999 ; 22 >
+    au < exists ; exists ; 1999 ; Nature Genetics Volume 23 ; 1999 ; 23 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 24 ; 2000 ; 24 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 25 ; 2000 ; 25 >
+    au < exists ; exists ; 2000 ; Nature Genetics Volume 26 ; 2000 ; 26 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 27 ; 2001 ; 27 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 28 ; 2001 ; 28 >
+    au < exists ; exists ; 2001 ; Nature Genetics Volume 29 ; 2001 ; 29 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 30 ; 2002 ; 30 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 31 ; 2002 ; 31 >
+    au < exists ; exists ; 2002 ; Nature Genetics Volume 32 ; 2002 ; 32 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 33 ; 2003 ; 33 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 34 ; 2003 ; 34 >
+    au < exists ; exists ; 2003 ; Nature Genetics Volume 35 ; 2003 ; 35 >
     au < exists ; exists ; 2004 ; Nature Genetics Volume 36 ; 2004 ; 36 >
     au < exists ; exists ; 2005 ; Nature Genetics Volume 37 ; 2005 ; 37 >
     au < exists ; exists ; 2006 ; Nature Genetics Volume 38 ; 2006 ; 38 >
@@ -2452,7 +2951,8 @@
     au < zapped ; down ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
     au < released ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
     au < released ; crawling ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
-    au < crawling ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 >
+    au < testing ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 >
+    au < manifest ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 >
 
   }
 
@@ -2471,7 +2971,8 @@
     au < zapped ; down ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
     au < released ; crawling ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
     au < released ; crawling ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 >
-    au < crawling ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 >
+    au < testing ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 >
+    au < manifest ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -2498,7 +2999,8 @@
     au < released ; crawling ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
     au < testing ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
-    au < crawling ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 >
+    au < testing ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -2523,7 +3025,8 @@
     au < zapped ; down ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
     au < released ; crawling ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
-    au < crawling ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
+    au < testing ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
+    au < manifest ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 >
 
   }
 
@@ -2555,7 +3058,8 @@
     au < zapped ; down ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
     au < released ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
     au < testing ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
-    au < crawling ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 >
+    au < testing ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 >
+    au < manifest ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 >
 
   }
 
@@ -2578,7 +3082,8 @@
     au < released ; crawling ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2599,7 +3104,8 @@
     au < zapped ; down ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
     au < released ; crawling ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
-    au < crawling ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
+    au < testing ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
+    au < manifest ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 >
 
   }
 
@@ -2628,7 +3134,8 @@
     au < zapped ; down ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
     au < testing ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
-    au < crawling ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
+    au < testing ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
+    au < manifest ; exists ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 >
 
   }
 
@@ -2649,7 +3156,8 @@
     au < zapped ; down ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
     au < released ; crawling ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
     au < released ; crawling ; 2011 ; Nature Photonics Volume 5 ; 2011 ; 5 >
-    au < crawling ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 >
+    au < testing ; exists ; 2012 ; Nature Photonics Volume 6 ; 2012 ; 6 >
+    au < manifest ; exists ; 2013 ; Nature Photonics Volume 7 ; 2013 ; 7 >
 
   }
 
@@ -2671,7 +3179,8 @@
     au < zapped ; down ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
     au < released ; crawling ; 2011 ; Nature Physics Volume 7 ; 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
+    au < testing ; exists ; 2012 ; Nature Physics Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2013 ; Nature Physics Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2693,7 +3202,7 @@
     au < released ; crawling ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
     au < released ; crawling ; 2011 ; Nature Protocols Volume 6 ; 2011 ; 6 >
     au < testing ; exists ; 2012 ; Nature Protocols Volume 7 ; 2012 ; 7 >
-
+    au < manifest ; exists ; 2013 ; Nature Protocols Volume 8 ; 2013 ; 8 >
   }
 
   {
@@ -2718,7 +3227,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < zapped ; down ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
     au < released ; crawling ; 2011 ; Nature Reviews Cancer Volume 11 ; 2011 ; 11 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
+    au < testing ; exists ; 2012 ; Nature Reviews Cancer Volume 12 ; 2012 ; 12 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Cancer Volume 13 ; 2013 ; 13 >
 
   }
 
@@ -2741,7 +3251,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2764,7 +3275,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Clinical Oncology Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Nature Reviews Clinical Oncology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Clinical Oncology Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2789,7 +3301,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
     au < released ; crawling ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
+    au < testing ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 >
 
   }
 
@@ -2811,8 +3324,8 @@
     au < zapped ; down ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < zapped ; down ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
-    au < notReady ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
+    au < testing ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
+    au < testing ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
     au < manifest ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 >
 
   }
@@ -2836,7 +3349,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2863,7 +3377,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Nature Reviews Genetics Volume 12 ; 2011 ; 12 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 >
+    au < testing ; exists ; 2012 ; Nature Reviews Genetics Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Genetics Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -2889,7 +3404,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
     au < released ; crawling ; 2011 ; Nature Reviews Immunology Volume 11 ; 2011 ; 11 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
+    au < testing ; exists ; 2012 ; Nature Reviews Immunology Volume 12 ; 2012 ; 12 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Immunology Volume 13 ; 2013 ; 13 >
 
   }
 
@@ -2913,8 +3429,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
     au < released ; crawling ; 2011 ; Nature Reviews Microbiology Volume 9 ; 2011 ; 9 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
-
+    au < testing ; exists ; 2012 ; Nature Reviews Microbiology Volume 10 ; 2012 ; 10 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Microbiology Volume 11 ; 2013 ; 11 >
   }
 
   {
@@ -2940,7 +3456,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Nature Reviews Molecular Cell Biology Volume 12 ; 2011 ; 12 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
+    au < testing ; exists ; 2012 ; Nature Reviews Molecular Cell Biology Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Molecular Cell Biology Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -2962,7 +3479,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
     au < released ; crawling ; 2011 ; Nature Reviews Nephrology Volume 7 ; 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
+    au < testing ; exists ; 2012 ; Nature Reviews Nephrology Volume 8 ; 2012 ; 8 >
+    au < crawling ; exists ; 2013 ; Nature Reviews Nephrology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2984,8 +3502,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
     au < released ; crawling ; 2011 ; Nature Reviews Neurology Volume 7 ; 2011 ; 7 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
-
+    au < testing ; exists ; 2012 ; Nature Reviews Neurology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Neurology Volume 9 ; 2013 ; 9 >
   }
 
   {
@@ -3011,7 +3529,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < released ; crawling ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
     au < released ; crawling ; 2011 ; Nature Reviews Neuroscience Volume 12 ; 2011 ; 12 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 >
+    au < testing ; exists ; 2012 ; Nature Reviews Neuroscience Volume 13 ; 2012 ; 13 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Neuroscience Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -3025,7 +3544,6 @@
     >
 
     param[journal_id] = nrrheum
-    notReady[comment] = fetch error on ingest3 (401 unauthorized) 
 
     au < exists ; exists ; 2005 ; Nature Reviews Rheumatology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Nature Reviews Rheumatology Volume 2 ; 2006 ; 2 >
@@ -3034,7 +3552,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
     au < released ; crawling ; 2011 ; Nature Reviews Rheumatology Volume 7 ; 2011 ; 7 >
-    au < notReady ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 >
+    au < testing ; exists ; 2012 ; Nature Reviews Rheumatology Volume 8 ; 2012 ; 8 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Rheumatology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -3057,8 +3576,8 @@
     au < zapped ; down ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Urology Volume 8 ; 2011 ; 8 >
-    au < crawling ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 >
-
+    au < testing ; exists ; 2012 ; Nature Reviews Urology Volume 9 ; 2012 ; 9 >
+    au < manifest ; exists ; 2013 ; Nature Reviews Urology Volume 10 ; 2013 ; 10 >
   }
 
   {
@@ -3090,7 +3609,8 @@
     au < released ; crawling ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
     au < released ; crawling ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
     au < testing ; exists ; 2011 ; Nature Structural and Molecular Biology Volume 18 ; 2011 ; 18 >
-    au < crawling ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
+    au < testing ; exists ; 2012 ; Nature Structural and Molecular Biology Volume 19 ; 2012 ; 19 >
+    au < manifest ; exists ; 2013 ; Nature Structural and Molecular Biology Volume 20 ; 2013 ; 20 >
 
   }
 
@@ -3102,7 +3622,8 @@
       eissn = 1740-634X ;
       issnl = 0893-133X
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = npp
 
     au < manifest ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
@@ -3132,9 +3653,40 @@
     au < released ; crawling ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
     au < testing ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < testing ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
+    au < manifest ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 >
 
   }
+  
+  {
 
+    title <
+      name = NPG Asia Materials ;
+      eissn = 1884-4057 
+    >
+
+    param[journal_id] = am
+    
+    au < crawling ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
+    au < crawling ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
+    au < crawling ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
+    au < testing ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
+    au < manifest ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
+  }
+
+  {
+
+    title <
+      name = Nutrition & Diabetes ;
+      eissn = 2044-4052 
+    >
+
+    param[journal_id] = nutd
+    
+    au < crawling ; exists ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
+    au < testing ; exists ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
+  
+  }
+    
   {
 
     title <
@@ -3143,24 +3695,23 @@
       eissn = 1930-739X ;
       issnl = 1930-7381
     >
-
+    
     param[journal_id] = oby
-    comment[notReady] = fetch errors 502 and 500 see RT 4106
-    comment[2] = Starting January 2013 Nature will no longer be publishing this title.
+    comment[doesNotExist] = Wiley-Blackwell now publishes this title, effective 1/2013
 
-    au < exists ; exists ; 2000 ; Obesity Volume 8 ; 2000 ; 8 >
-    au < exists ; exists ; 2001 ; Obesity Volume 9 ; 2001 ; 9 >
-    au < exists ; exists ; 2002 ; Obesity Volume 10 ; 2002 ; 10 >
-    au < exists ; exists ; 2003 ; Obesity Volume 11 ; 2003 ; 11 >
-    au < exists ; exists ; 2004 ; Obesity Volume 12 ; 2004 ; 12 >
-    au < exists ; exists ; 2005 ; Obesity Volume 13 ; 2005 ; 13 >
-    au < exists ; exists ; 2006 ; Obesity Volume 14 ; 2006 ; 14 >
-    au < exists ; exists ; 2007 ; Obesity Volume 15 ; 2007 ; 15 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 8 ; 0 ; 8 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 9 ; 0 ; 9 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 10 ; 0 ; 10 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 11 ; 0 ; 11 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 12 ; 0 ; 12 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 13 ; 0 ; 13 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 14 ; 0 ; 14 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 15 ; 0 ; 15 >
     au < released ; crawling ; 2008 ; Obesity Volume 16 ; 2008 ; 16 >
-    au < notReady ; exists ; 2009 ; Obesity Volume 17 ; 2009 ; 17 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 17 ; 0 ; 17 >
     au < released ; crawling ; 2010 ; Obesity Volume 18 ; 2010 ; 18 >
-    au < notReady ; exists ; 2011 ; Obesity Volume 19 ; 2011 ; 19 >
-    au < crawling ; exists ; 2012 ; Obesity Volume 20 ; 2012 ; 20 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 19 ; 0 ; 19 >
+    au < doesNotExist ; doesNotExist ; 0 ; Obesity Volume 20 ; 0 ; 20 >
 
   }
 
@@ -3173,6 +3724,7 @@
       issnl = 0950-9232
     >
 
+    comment[notReady] = low agreement
     param[journal_id] = onc
 
     au < manifest ; exists ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
@@ -3193,13 +3745,113 @@
     au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < released ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
     au < testing ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
+    au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
+
+  }
+
+ {
+
+    title <
+      name = Oncogenesis ;
+      issn = 2157-9024
+    >
+    param[journal_id] = onc
+    
+    au < testing ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < manifest ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
 
   }
 
   {
- 
+
     title <
-      name = Pharmacogenomics Journal ;
+      name = Pediatric Research ;
+      issn = 0031-3998 ;
+      eissn = 1530-0447
+    >
+
+    param[journal_id] = pr
+    
+    au < manifest ; exists ; 1967 ; Pediatric Research Volume 1 ; 1967; 1 >
+    au < manifest ; exists ; 1968 ; Pediatric Research Volume 2 ; 1968; 2 >
+    au < manifest ; exists ; 1969 ; Pediatric Research Volume 3 ; 1969; 3 >
+    au < manifest ; exists ; 1970 ; Pediatric Research Volume 4 ; 1970; 4 >
+    au < manifest ; exists ; 1971 ; Pediatric Research Volume 5 ; 1971; 5 >
+    au < manifest ; exists ; 1972 ; Pediatric Research Volume 6 ; 1972; 6 >
+    au < manifest ; exists ; 1973 ; Pediatric Research Volume 7 ; 1973; 7 >
+    au < manifest ; exists ; 1974 ; Pediatric Research Volume 8 ; 1974; 8 >
+    au < manifest ; exists ; 1975 ; Pediatric Research Volume 9 ; 1975; 9 >
+    au < manifest ; exists ; 1976 ; Pediatric Research Volume 10 ; 1976 ; 10 >
+    au < manifest ; exists ; 1977 ; Pediatric Research Volume 11 ; 1977 ; 11 >
+    au < manifest ; exists ; 1978 ; Pediatric Research Volume 12 ; 1978 ; 12 >
+    au < manifest ; exists ; 1979 ; Pediatric Research Volume 13 ; 1979 ; 13 >
+    au < manifest ; exists ; 1980 ; Pediatric Research Volume 14 ; 1980 ; 14 >
+    au < manifest ; exists ; 1981 ; Pediatric Research Volume 15 ; 1981 ; 15 >
+    au < manifest ; exists ; 1982 ; Pediatric Research Volume 16 ; 1982 ; 16 >
+    au < manifest ; exists ; 1983 ; Pediatric Research Volume 17 ; 1983 ; 17 >
+    au < manifest ; exists ; 1984 ; Pediatric Research Volume 18 ; 1984 ; 18 >
+    au < manifest ; exists ; 1985 ; Pediatric Research Volume 19 ; 1985 ; 19 >
+    au < manifest ; exists ; 1986 ; Pediatric Research Volume 20 ; 1986 ; 20 >
+    au < manifest ; exists ; 1987 ; Pediatric Research Volume 21 ; 1987 ; 21 >
+    au < manifest ; exists ; 1987 ; Pediatric Research Volume 22 ; 1987 ; 22 >
+    au < manifest ; exists ; 1988 ; Pediatric Research Volume 23 ; 1988 ; 23 >
+    au < manifest ; exists ; 1988 ; Pediatric Research Volume 24 ; 1988 ; 24 >
+    au < manifest ; exists ; 1989 ; Pediatric Research Volume 25 ; 1989 ; 25 >
+    au < manifest ; exists ; 1989 ; Pediatric Research Volume 26 ; 1989 ; 26 >
+    au < manifest ; exists ; 1990 ; Pediatric Research Volume 27 ; 1990 ; 27 >
+    au < manifest ; exists ; 1990 ; Pediatric Research Volume 28 ; 1990 ; 28 >
+    au < manifest ; exists ; 1991 ; Pediatric Research Volume 29 ; 1991 ; 29 >
+    au < manifest ; exists ; 1991 ; Pediatric Research Volume 30 ; 1991 ; 30 >
+    au < manifest ; exists ; 1992 ; Pediatric Research Volume 31 ; 1992 ; 31 >
+    au < manifest ; exists ; 1992 ; Pediatric Research Volume 32 ; 1992 ; 32 >
+    au < manifest ; exists ; 1993 ; Pediatric Research Volume 33 ; 1993 ; 33 >
+    au < manifest ; exists ; 1993 ; Pediatric Research Volume 34 ; 1993 ; 34 >
+    au < manifest ; exists ; 1994 ; Pediatric Research Volume 35 ; 1994 ; 35 >
+    au < manifest ; exists ; 1994 ; Pediatric Research Volume 36 ; 1994 ; 36 >
+    au < manifest ; exists ; 1995 ; Pediatric Research Volume 37 ; 1995 ; 37 >
+    au < manifest ; exists ; 1995 ; Pediatric Research Volume 38 ; 1995 ; 38 >
+    au < manifest ; exists ; 1996 ; Pediatric Research Volume 39 ; 1996 ; 39 >
+    au < manifest ; exists ; 1996 ; Pediatric Research Volume 40 ; 1996 ; 40 >
+    au < manifest ; exists ; 1997 ; Pediatric Research Volume 41 ; 1997 ; 41 >
+    au < manifest ; exists ; 1997 ; Pediatric Research Volume 42 ; 1997 ; 42 >
+    au < manifest ; exists ; 1998 ; Pediatric Research Volume 43 ; 1998 ; 43 >
+    au < manifest ; exists ; 1998 ; Pediatric Research Volume 44 ; 1998 ; 44 >
+    au < manifest ; exists ; 1999 ; Pediatric Research Volume 45 ; 1999 ; 45 >
+    au < manifest ; exists ; 1999 ; Pediatric Research Volume 46 ; 1999 ; 46 >
+    au < manifest ; exists ; 2000 ; Pediatric Research Volume 47 ; 2000 ; 47 >
+    au < manifest ; exists ; 2000 ; Pediatric Research Volume 48 ; 2000 ; 48 >
+    au < manifest ; exists ; 2001 ; Pediatric Research Volume 49 ; 2001 ; 49 >
+    au < manifest ; exists ; 2001 ; Pediatric Research Volume 50 ; 2001 ; 50 >
+    au < manifest ; exists ; 2002 ; Pediatric Research Volume 51 ; 2002 ; 51 >
+    au < manifest ; exists ; 2002 ; Pediatric Research Volume 52 ; 2002 ; 52 >
+    au < manifest ; exists ; 2003 ; Pediatric Research Volume 53 ; 2003 ; 53 >
+    au < manifest ; exists ; 2003 ; Pediatric Research Volume 54 ; 2003 ; 54 >
+    au < manifest ; exists ; 2004 ; Pediatric Research Volume 55 ; 2004 ; 55 >
+    au < manifest ; exists ; 2004 ; Pediatric Research Volume 56 ; 2004 ; 56 >
+    au < manifest ; exists ; 2005 ; Pediatric Research Volume 57 ; 2005 ; 57 >
+    au < manifest ; exists ; 2005 ; Pediatric Research Volume 58 ; 2005 ; 58 >
+    au < manifest ; exists ; 2006 ; Pediatric Research Volume 59 ; 2006 ; 59 >
+    au < manifest ; exists ; 2006 ; Pediatric Research Volume 60 ; 2006 ; 60 >
+    au < manifest ; exists ; 2007 ; Pediatric Research Volume 61 ; 2007 ; 61 >
+    au < manifest ; exists ; 2007 ; Pediatric Research Volume 62 ; 2007 ; 62 >
+    au < crawling ; exists ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
+    au < crawling ; exists ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
+    au < crawling ; exists ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 >
+    au < crawling ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
+    au < crawling ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
+    au < crawling ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
+    au < crawling ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
+    au < crawling ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
+    au < testing ; exists ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
+    au < testing ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
+    au < manifest ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
+    au < expected ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 >
+  }
+
+  {
+
+    title <
+      name = The Pharmacogenomics Journal ;
       issn = 1470-269X ;
       eissn = 1473-1150 ;
       issnl = 1470-269X
@@ -3218,10 +3870,30 @@
     au < released ; crawling ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
     au < released ; crawling ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     au < released ; crawling ; 2011 ; The Pharmacogenomics Journal Volume 11 ; 2011 ; 11 >
-    au < testing ; exists ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
+    au < released ; crawling ; 2012 ; The Pharmacogenomics Journal Volume 12 ; 2012 ; 12 >
+	au < manifest ; exists ; 2013 ; The Pharmacogenomics Journal Volume 13 ; 2013 ; 13 >
 
   }
 
+{
+
+    title <
+      name = Polymer Journal ;
+      issn = 0032-3896 ;
+      eissn = 1349-0540
+    >
+
+    param[journal_id] = pj
+
+	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 >
+    au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 >
+    au < crawling ; exists ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
+    au < crawling ; exists ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
+    au < crawling ; exists ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
+    au < crawling ; exists ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
+    au < testing ; exists ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
+    au < manifest ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
+  }
   {
 
     title <
@@ -3248,7 +3920,8 @@
     au < zapped ; down ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < released ; crawling ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
     au < released ; crawling ; 2011 ; Prostate Cancer and Prostatic Diseases Volume 14 ; 2011 ; 14 >
-    au < testing ; exists ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
+    au < released ; crawling ; 2012 ; Prostate Cancer and Prostatic Diseases Volume 15 ; 2012 ; 15 >
+    au < manifest ; exists ; 2013 ; Prostate Cancer and Prostatic Diseases Volume 16 ; 2013 ; 16 >
 
   }
 
@@ -3259,19 +3932,60 @@
       eissn = 1945-3477
     >
 
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = scibx
-	comment[scibx] = Missing Manifest Pages
 
     au < exists ; exists ; 2008 ; SciBX: Science-Business eXchange Volume 1 ; 2008 ; 1 >
     au < exists ; exists ; 2009 ; SciBX: Science-Business eXchange Volume 2 ; 2009 ; 2 >
     au < exists ; exists ; 2010 ; SciBX: Science-Business eXchange Volume 3 ; 2010 ; 3 >
     au < exists ; exists ; 2011 ; SciBX: Science-Business eXchange Volume 4 ; 2011 ; 4 >
     au < exists ; exists ; 2012 ; SciBX: Science-Business eXchange Volume 5 ; 2012 ; 5 >
+    au < exists ; exists ; 2013 ; SciBX: Science-Business eXchange Volume 6 ; 2013 ; 6 >
 
   }
 
   {
+    title <
+      name = Scientific American ; 
+      issn = 0036-8733
+    >
+    
+    param[journal_id] = scientificamerican
+    
+    au < exists ; exists ; 2006 ; Scientific American Volume 294 ; 2006 ; 294 >
+    au < exists ; exists ; 2006 ; Scientific American Volume 295 ; 2006 ; 295 >
+    au < exists ; exists ; 2007 ; Scientific American Volume 296 ; 2007 ; 296 >
+    au < exists ; exists ; 2007 ; Scientific American Volume 297 ; 2007 ; 297 >
+    au < exists ; exists ; 2008 ; Scientific American Volume 298 ; 2008 ; 298 >
+    au < exists ; exists ; 2008 ; Scientific American Volume 299 ; 2008 ; 299 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 300 ; 2009 ; 300 >
+    au < exists ; exists ; 2009 ; Scientific American Volume 301 ; 2009 ; 301 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 302 ; 2010 ; 302 >
+    au < exists ; exists ; 2010 ; Scientific American Volume 303 ; 2010 ; 303 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 304 ; 2011 ; 304 >
+    au < exists ; exists ; 2011 ; Scientific American Volume 305 ; 2011 ; 305 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 306 ; 2012 ; 306 >
+    au < exists ; exists ; 2012 ; Scientific American Volume 307 ; 2012 ; 307 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 308 ; 2013 ; 308 >
+    au < exists ; exists ; 2013 ; Scientific American Volume 309 ; 2013 ; 309 >
+    
+  }
 
+  {
+    title <
+      name = Scitable Genetics ;
+      eissn = 2045-2322
+    >
+
+    param[journal_id] = scitable
+    
+    au < exists ; exists ; 2011 ; Scientific Reports 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Scientific Reports 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Scientific Reports 2013 ; 2013 ; 2013 >
+  }
+
+    
+  {
     title <
       name = Spinal Cord ;
       issn = 1362-4393 ;
@@ -3347,6 +4061,7 @@
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     au < released ; crawling ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
     au < testing ; exists ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
+    au < manifest ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 >
 
   }
 
@@ -3358,7 +4073,8 @@
       eissn = 1741-7511 ;
       issnl = 1741-7503
     >
-
+    
+    comment[0] = need to confirm if this is under contract
     param[journal_id] = vital
 
     au < exists ; exists ; 2003 ; Vital Volume 1 (2003) ; 2003 ; 1 >
@@ -3373,7 +4089,10 @@
     au < zapped ; down ; 2009 ; Vital Volume 7 (2009) ; 2009 ; 7 >
     au < released ; crawling ; 2010 ; Vital Volume 7 (2010) ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
-    au < released ; crawling ; 2012 ; Vital Volume 9 ; 2012 ; 9 >
+    au < released ; crawling ; 2011 ; Vital Volume 9 (2011) ; 2011 ; 9 >
+    au < released ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
+    au < testing ; exists ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
+    au < manifest ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
 
   }
 

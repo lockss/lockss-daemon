@@ -50,8 +50,8 @@
       au < manifest ; exists ; 2010 ; 2010 ; Advances in Geosciences Volume 28 ; 28 >
       au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 29 ; 29 >
       au < manifest ; exists ; 2011 ; 2011 ; Advances in Geosciences Volume 30 ; 30 >
-      au < released ; manifest ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 >
-      au < released ; manifest ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 >
+      au < released ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 31 ; 31 >
+      au < released ; crawling ; 2012 ; 2012 ; Advances in Geosciences Volume 32 ; 32 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 33 ; 33 >
       au < manifest ; exists ; 2013 ; 2013 ; Advances in Geosciences Volume 34 ; 34 >
     
@@ -76,7 +76,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Advances in Radio Science 2008 Volume 7 ; 7 >
       au < manifest ; exists ; 2010 ; 2010 ; Advances in Radio Science 2009 Volume 8 ; 8 >
       au < manifest ; exists ; 2011 ; 2011 ; Advances in Radio Science 2010 Volume 9 ; 9 >
-      au < released ; manifest ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 >
+      au < released ; crawling ; 2012 ; 2012 ; Advances in Radio Science 2011 Volume 10 ; 10 >
       au < expected ; exists ; 2013 ; 2013 ; Advances in Radio Science 2012 Volume 11 ; 11 >
     
    }
@@ -99,7 +99,7 @@
       au < manifest ; exists ; 2010 ; 2010 ; Advances in Science and Research 2010 Volume 5 ; 5 >
       au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research 2010 Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; 2011 ; Advances in Science and Research 2011 Volume 7 ; 7 >
-      au < released ; manifest ; 2012 ; 2012 ; Advances in Science and Research 2011 Volume 8 ; 8 >
+      au < released ; crawling ; 2012 ; 2012 ; Advances in Science and Research 2011 Volume 8 ; 8 >
       au < notReady ; exists ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 10 ; 10 >
       au < expected ; exists ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 11 ; 11 >
@@ -138,7 +138,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Annales Geophysicae Volume 27 ; 27 >
       au < manifest ; exists ; 2010 ; 2010 ; Annales Geophysicae Volume 28 ; 28 >
       au < manifest ; exists ; 2011 ; 2011 ; Annales Geophysicae Volume 29 ; 29 >
-      au < released ; manifest ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
+      au < released ; crawling ; 2012 ; 2012 ; Annales Geophysicae Volume 30 ; 30 >
       au < crawling ; exists ; 2013 ; 2013 ; Annales Geophysicae Volume 31 ; 31 >
     
    }
@@ -160,7 +160,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Astrophysics and Space Sciences Transactions Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; 2010 ; Astrophysics and Space Sciences Transactions Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; 2011 ; Astrophysics and Space Sciences Transactions Volume 7 ; 7 >
-      au < released ; manifest ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions Volume 8 ; 8 >
+      au < released ; crawling ; 2012 ; 2012 ; Astrophysics and Space Sciences Transactions Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; 2013 ; Astrophysics and Space Sciences Transactions Volume 9 ; 9 >
     
    }
@@ -186,7 +186,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Chemistry and Physics Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Chemistry and Physics Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Chemistry and Physics Volume 11 ; 11 >
-      au < released ; manifest ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
+      au < released ; crawling ; 2012 ; 2012 ; Atmospheric Chemistry and Physics Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Chemistry and Physics Volume 13 ; 13 >
     
    }
@@ -205,7 +205,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Atmospheric Measurement Techniques Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; 2010 ; Atmospheric Measurement Techniques Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; 2011 ; Atmospheric Measurement Techniques Volume 4 ; 4 >
-      au < released ; manifest ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
+      au < released ; crawling ; 2012 ; 2012 ; Atmospheric Measurement Techniques Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Atmospheric Measurement Techniques Volume 6 ; 6 >
     
    }
@@ -228,7 +228,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Biogeosciences Volume 6 ; 6 >
       au < manifest ; exists ; 2010 ; 2010 ; Biogeosciences Volume 7 ; 7 >
       au < manifest ; exists ; 2011 ; 2011 ; Biogeosciences Volume 8 ; 8 >
-      au < released ; manifest ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
+      au < released ; crawling ; 2012 ; 2012 ; Biogeosciences Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; 2013 ; Biogeosciences Volume 10 ; 10 >
     
    }
@@ -250,7 +250,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Climate of the Past Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; 2010 ; Climate of the Past Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; 2011 ; Climate of the Past Volume 7 ; 7 >
-      au < released ; manifest ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
+      au < released ; crawling ; 2012 ; 2012 ; Climate of the Past Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Climate of the Past Volume 9 ; 9 >
     
    }
@@ -269,7 +269,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Drinking Water Engineering and Science Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; 2010 ; Drinking Water Engineering and Science Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; 2011 ; Drinking Water Engineering and Science Volume 4 ; 4 >
-      au < released ; manifest ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
+      au < released ; crawling ; 2012 ; 2012 ; Drinking Water Engineering and Science Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Drinking Water Engineering and Science Volume 6 ; 6 >
     
    }
@@ -286,7 +286,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; Earth System Dynamics Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Dynamics Volume 2 ; 2 >
-      au < released ; manifest ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
+      au < released ; crawling ; 2012 ; 2012 ; Earth System Dynamics Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Dynamics Volume 4 ; 4 >
     
    }
@@ -304,7 +304,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Earth System Science Data Volume 1 ; 1 >
       au < manifest ; exists ; 2010 ; 2010 ; Earth System Science Data Volume 2 ; 2 >
       au < manifest ; exists ; 2011 ; 2011 ; Earth System Science Data Volume 3 ; 3 >
-      au < released ; manifest ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
+      au < released ; crawling ; 2012 ; 2012 ; Earth System Science Data Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; 2013 ; Earth System Science Data Volume 5 ; 5 >
     
    }
@@ -378,7 +378,7 @@
       param[base_url] = http://www.geosci-instrum-method-data-syst.net/
       param[home_url] = http://www.geoscientific-instrumentation-methods-and-data-systems.net/
 
-      au < released ; manifest ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
+      au < released ; crawling ; 2012 ; 2012 ; Geoscientific Instrumentation, Methods and Data Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Instrumentation, Methods and Data Systems Volume 2 ; 2 >
     
    }
@@ -397,7 +397,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Geoscientific Model Development Volume 2 ; 2 >
       au < manifest ; exists ; 2010 ; 2010 ; Geoscientific Model Development Volume 3 ; 3 >
       au < manifest ; exists ; 2011 ; 2011 ; Geoscientific Model Development Volume 4 ; 4 >
-      au < released ; manifest ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
+      au < released ; crawling ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
     
    }
@@ -414,7 +414,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; History of Geo- and Space Sciences Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; 2011 ; History of Geo- and Space Sciences Volume 2 ; 2 >
-      au < released ; manifest ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
+      au < released ; crawling ; 2012 ; 2012 ; History of Geo- and Space Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; History of Geo- and Space Sciences Volume 4 ; 4 >
     
    }
@@ -444,7 +444,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Hydrology and Earth System Sciences Volume 13 ; 13 >
       au < manifest ; exists ; 2010 ; 2010 ; Hydrology and Earth System Sciences Volume 14 ; 14 >
       au < manifest ; exists ; 2011 ; 2011 ; Hydrology and Earth System Sciences Volume 15 ; 15 >
-      au < released ; manifest ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
+      au < released ; crawling ; 2012 ; 2012 ; Hydrology and Earth System Sciences Volume 16 ; 16 >
       au < crawling ; exists ; 2013 ; 2013 ; Hydrology and Earth System Sciences Volume 17 ; 17 >
     
    }
@@ -459,7 +459,7 @@
       param[base_url] = http://www.j-sens-sens-syst.net/
       param[home_url] = http://www.journal-of-sensors-and-sensor-systems.net/
 
-      au < released ; manifest ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
+      au < released ; crawling ; 2012 ; 2012 ; Journal of Sensors and Sensor Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; 2013 ; Journal of Sensors and Sensor Systems Volume 2 ; 2 >
     
    }
@@ -476,7 +476,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; Mechanical Sciences Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; 2011 ; Mechanical Sciences Volume 2 ; 2 >
-      au < released ; manifest ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
+      au < released ; crawling ; 2012 ; 2012 ; Mechanical Sciences Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Mechanical Sciences Volume 4 ; 4 >
     
    }
@@ -502,7 +502,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Natural Hazards and Earth System Sciences Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; 2010 ; Natural Hazards and Earth System Sciences Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; 2011 ; Natural Hazards and Earth System Sciences Volume 11 ; 11 >
-      au < released ; manifest ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
+      au < released ; crawling ; 2012 ; 2012 ; Natural Hazards and Earth System Sciences Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Volume 13 ; 13 >
     
    }
@@ -535,7 +535,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Nonlinear Processes in Geophysics Volume 16 ; 16 >
       au < manifest ; exists ; 2010 ; 2010 ; Nonlinear Processes in Geophysics Volume 17 ; 17 >
       au < manifest ; exists ; 2011 ; 2011 ; Nonlinear Processes in Geophysics Volume 18 ; 18 >
-      au < released ; manifest ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 >
+      au < released ; crawling ; 2012 ; 2012 ; Nonlinear Processes in Geophysics Volume 19 ; 19 >
       au < crawling ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
     
    }
@@ -557,7 +557,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Ocean Science Volume 5 ; 5 >
       au < manifest ; exists ; 2010 ; 2010 ; Ocean Science Volume 6 ; 6 >
       au < manifest ; exists ; 2011 ; 2011 ; Ocean Science Volume 7 ; 7 >
-      au < released ; manifest ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
+      au < released ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
     
    }
@@ -578,7 +578,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Social Geography Volume 4 ; 4 >
       au < manifest ; exists ; 2010 ; 2010 ; Social Geography Volume 5 ; 5 >
       au < manifest ; exists ; 2011 ; 2011 ; Social Geography Volume 6 ; 6 >
-      au < released ; manifest ; 2012 ; 2012 ; Social Geography Volume 7 ; 7 >
+      au < released ; crawling ; 2012 ; 2012 ; Social Geography Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; 2013 ; Social Geography Volume 8 ; 8 >
     
    }
@@ -595,7 +595,7 @@
 
       au < manifest ; exists ; 2010 ; 2010 ; Solid Earth Volume 1 ; 1 >
       au < manifest ; exists ; 2011 ; 2011 ; Solid Earth Volume 2 ; 2 >
-      au < released ; manifest ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 >
+      au < released ; crawling ; 2012 ; 2012 ; Solid Earth Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; 2013 ; Solid Earth Volume 4 ; 4 >
     
    }
@@ -645,7 +645,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; The Cryosphere Volume 3 ; 3 >
       au < manifest ; exists ; 2010 ; 2010 ; The Cryosphere Volume 4 ; 4 >
       au < manifest ; exists ; 2011 ; 2011 ; The Cryosphere Volume 5 ; 5 >
-      au < released ; manifest ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
+      au < released ; crawling ; 2012 ; 2012 ; The Cryosphere Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; 2013 ; The Cryosphere Volume 7 ; 7 >
     
    }
@@ -671,7 +671,7 @@
       au < manifest ; exists ; 2009 ; 2009 ; Web Ecology Volume 9 ; 9 >
       au < manifest ; exists ; 2010 ; 2010 ; Web Ecology Volume 10 ; 10 >
       au < manifest ; exists ; 2011 ; 2011 ; Web Ecology Volume 11 ; 11 >
-      au < released ; manifest ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 >
+      au < released ; crawling ; 2012 ; 2012 ; Web Ecology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; 2013 ; Web Ecology Volume 13 ; 13 >
     
    }

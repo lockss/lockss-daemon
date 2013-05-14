@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Chattagram Maa-O-Shishu Hospital Medical College ;
+    info[contract] = 2013 ;
+    info[tester] = 7 ;
+    comment[platform] = Metapress
+
+  >
+  
+  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+  param[base_url] = http://essential.metapress.com/
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
+  
+  {
+
+    title < 
+      name = Chattagram Maa-O-Shishu Hospital Medical College Journal ;
+      issn = 2305-7890 ;
+      eissn = 2306-4919
+      
+    >
+    param[journal_issn] = 2305-7890
+
+    au < crawling ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
+   
+  }
+  
+  {
+  
+    title < 
+      name = Bangladesh Journal of Endosurgery ;
+      issn = 2306-4560 ;
+      eissn = 2306-4390
+
+    >
+    comment[0] = Publisher's official name is "Pediatric Endosurgery Group, Bangladesh", located at Chattagram Maa-O-Shishu Hospital Medical College
+    param[journal_issn] = 2306-4560
+    
+    au < crawling ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 >
+   
+  }
+
+}

@@ -4,7 +4,9 @@
     name = United Kingdom Serials Group ;
     info[back] = 2010 ;
     info[contract] = 2011 ;
-    info[tester] = 4
+    info[tester] = 4 ;
+    
+    comment[platform] = Metapress
   >
 
   plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
@@ -15,7 +17,7 @@
     title <
       name = The E-Resources Management Handbook ;
       type = book ;
-      isbn = 0-9552448-0-3 
+      eisbn = 0-9552448-0-3 
     >
 
   }
@@ -26,13 +28,13 @@
       name = Insights: the UKSG journal ;
       eissn = 2048-7754
     >
-    
-    comment[from] = issn: 0953-0460
+    comment[continued_from] = 0953-0460
     param[journal_issn] = 2048-7754
     implicit < status1 ; status ; year ; name ; param[volume_name]>
     
-    au < crawling ; exists ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
-    au < manifest ; exists ; 2012 ; Insights: the UKSG journal Volume 26 ; 26 >
+    au < released ; crawling ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
+    au < manifest ; exists ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
+    
   }
 
   {
@@ -43,7 +45,8 @@
       eissn = 1475-3308 ;
       issnl = 0953-0460
     >
-    comment[continued_by] = issn: 2048-7754
+
+    comment[continued_by] = 2048-7754
     param[journal_issn] = 0953-0460
     implicit < status1 ; status ; year ; name ; param[volume_name] >
 
@@ -69,9 +72,8 @@
     au < released ; crawling ; 2007 ; Serials: The Journal for the Serials Community Volume 20 ; 20 >
     au < manifest ; exists ; 2008 ; Serials: The Journal for the Serials Community Volume 21 ; 21 >
     au < manifest ; exists ; 2009 ; Serials: The Journal for the Serials Community Volume 22 ; 22 >
-    au < manifest ; exists ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
+    au < crawling ; exists ; 2010 ; Serials: The Journal for the Serials Community Volume 23 ; 23 >
     au < released ; crawling ; 2011 ; Serials: The Journal for the Serials Community Volume 24 ; 24 >
-
   }
 
 }

@@ -60,7 +60,7 @@
     au < zapped ; down ; 2010 ; Drug Metabolism and Disposition Volume 38 ; 38 >
     au < released ; crawling ; 2011 ; Drug Metabolism and Disposition Volume 39 ; 39 >
     au < released ; crawling ; 2012 ; Drug Metabolism and Disposition Volume 40 ; 40 >
-    au < manifest ; exists ; 2013 ; Drug Metabolism and Disposition Volume 41 ; 41 >
+    au < crawling ; exists ; 2013 ; Drug Metabolism and Disposition Volume 41 ; 41 >
     
   }
 
@@ -418,7 +418,10 @@
     au < released ; crawling ; 2012 ; Journal of Pharmacology and Experimental Therapeutics Volume 341 ; 341 >
     au < released ; crawling ; 2012 ; Journal of Pharmacology and Experimental Therapeutics Volume 342 ; 342 >
     au < released ; crawling ; 2012 ; Journal of Pharmacology and Experimental Therapeutics Volume 343 ; 343 >
-    au < manifest ; exists ; 2013 ; Journal of Pharmacology and Experimental Therapeutics Volume 344 ; 344 >
+    au < crawling ; exists ; 2013 ; Journal of Pharmacology and Experimental Therapeutics Volume 344 ; 344 >
+    au < crawling ; exists ; 2013 ; Journal of Pharmacology and Experimental Therapeutics Volume 345 ; 345 >
+    au < expected ; exists ; 2013 ; Journal of Pharmacology and Experimental Therapeutics Volume 346 ; 346 >
+    au < expected ; exists ; 2013 ; Journal of Pharmacology and Experimental Therapeutics Volume 347 ; 347 >
 
   }
 
@@ -540,7 +543,7 @@
     au < released ; crawling ; 2011 ; Molecular Pharmacology Volume 80 ; 80 >
     au < released ; crawling ; 2012 ; Molecular Pharmacology Volume 81 ; 81 >
     au < released ; crawling ; 2012 ; Molecular Pharmacology Volume 82 ; 82 >
-    au < manifest ; exists ; 2013 ; Molecular Pharmacology Volume 83 ; 83 >
+    au < crawling ; exists ; 2013 ; Molecular Pharmacology Volume 83 ; 83 >
     
   }
 
@@ -619,7 +622,7 @@
     au < manifest ; exists ; 2010 ; Pharmacological Reviews Volume 62 ; 62 >
     au < released ; crawling ; 2011 ; Pharmacological Reviews Volume 63 ; 63 >
     au < released ; crawling ; 2012 ; Pharmacological Reviews Volume 64 ; 64 >
-    au < expected ; exists ; 2013 ; Pharmacological Reviews Volume 65 ; 65 >
+    au < crawling ; exists ; 2013 ; Pharmacological Reviews Volume 65 ; 65 >
     
   }
 

@@ -3,7 +3,8 @@
   publisher <
     name = International Union Against Tuberculosis and Lung Disease ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7 ;
+    comment[platform] = Ingenta
   >
 
   plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
@@ -41,7 +42,7 @@
     au < manifest ; exists ; 2010 ; International Journal of Tuberculosis and Lung Disease Volume 14 ; 14 >
     au < manifest ; exists ; 2011 ; International Journal of Tuberculosis and Lung Disease Volume 15 ; 15 >
     au < manifest ; exists ; 2012 ; International Journal of Tuberculosis and Lung Disease Volume 16 ; 16 >
-    au < manifest ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
+    au < crawling ; exists ; 2013 ; International Journal of Tuberculosis and Lung Disease Volume 17 ; 17 >
 
   }
 
@@ -57,6 +58,7 @@
 
     au < manifest ; exists ; 2011 ; Public Health Action Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Public Health Action Volume 2 ; 2 >
+    au < manifest ; exists ; 2013 ; Public Health Action Volume 3 ; 3 >
 
   }
 
