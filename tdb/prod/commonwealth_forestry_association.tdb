@@ -17,16 +17,20 @@
     >
     
     param[journal_id] = ifre
+    
+    comment[notReady1] = V6 Error 405 Forbidden http://www.bioone.org/doi/full/10.1505/ifor.6.1.64.32062 
+    comment[notReady2] = V10 Error 405 Forbidden http://www.bioone.org/doi/full/10.1505/ifor.10.3.550 
+    comment[notReady3] = V13 Error GC overhead limit exceeded
 
-    au < testing ; 2004 ; International Forestry Review Volume 6 ; 6 >
-    au < testing ; 2005 ; International Forestry Review Volume 7  ; 7 >
-    au < testing ; 2006 ; International Forestry Review Volume 8  ; 8 >
-    au < testing ; 2007 ; International Forestry Review Volume 9  ; 9 >
-    au < testing ; 2008 ; International Forestry Review Volume 10 ; 10 >
-    au < testing ; 2009 ; International Forestry Review Volume 11 ; 11 >
-    au < testing ; 2010 ; International Forestry Review Volume 12 ; 12 >
-    au < testing ; 2011 ; International Forestry Review Volume 13 ; 13 >
-    au < testing ; 2012 ; International Forestry Review Volume 14 ; 14 >
+    au < notReady ; 2004 ; International Forestry Review Volume 6 ; 6 >
+    au < ready ; 2005 ; International Forestry Review Volume 7  ; 7 >
+    au < ready ; 2006 ; International Forestry Review Volume 8  ; 8 >
+    au < ready ; 2007 ; International Forestry Review Volume 9  ; 9 >
+    au < notReady ; 2008 ; International Forestry Review Volume 10 ; 10 >
+    au < ready ; 2009 ; International Forestry Review Volume 11 ; 11 >
+    au < ready ; 2010 ; International Forestry Review Volume 12 ; 12 >
+    au < notReady ; 2011 ; International Forestry Review Volume 13 ; 13 >
+    au < ready ; 2012 ; International Forestry Review Volume 14 ; 14 >
     au < manifest ; 2013 ; International Forestry Review Volume 15 ; 15 >
 
   }
