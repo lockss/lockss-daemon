@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.19 2012-09-27 18:33:07 pgust Exp $
+# $Id: tdbq.py,v 1.20 2013-05-15 23:34:36 thib_gc Exp $
 
 __copyright__ = '''\
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.1'''
+__version__ = '''0.4.2'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -535,8 +535,8 @@ class TdbqParser(object):
         elif self.__accept(TdbqToken.STRING):
             for op, fn in [(TdbqToken.EQUAL, lambda val: val == value.value()),
                            (TdbqToken.NOT_EQUAL, lambda val: val != value.value()),
-                           (TdbqToken.MATCHES, lambda val: re.search(re.compile(value.value()), val)),
-                           (TdbqToken.DOES_NOT_MATCH, lambda val: re.search(re.compile(value.value()), val) is None)]:
+                           (TdbqToken.MATCHES, lambda val: re.search(re.compile(value.value()), val or '')),
+                           (TdbqToken.DOES_NOT_MATCH, lambda val: re.search(re.compile(value.value()), val or '') is None)]:
                 if op == opertyp:
                     func_value = fn
                     break
