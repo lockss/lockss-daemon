@@ -779,7 +779,44 @@
     }
     
   }
+  {
 
+    title <
+      name = Scottish Economic and Social History ;
+      issn = 0269-5030
+     >
+    
+    {
+    
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = sesh
+      implicit < status ; year ; name ; param[volume_name] >
+      comment[continued_by] = 1748-538X
+
+      au < manifest ; 1981 ; Scottish Economic and Social History Volume 1 ; 1 >
+      au < manifest ; 1982 ; Scottish Economic and Social History Volume 2 ; 2 >
+      au < manifest ; 1983 ; Scottish Economic and Social History Volume 3 ; 3 >
+      au < manifest ; 1984 ; Scottish Economic and Social History Volume 4 ; 4 >
+      au < manifest ; 1985 ; Scottish Economic and Social History Volume 5 ; 5 >
+      au < manifest ; 1986 ; Scottish Economic and Social History Volume 6 ; 6 >
+      au < manifest ; 1987 ; Scottish Economic and Social History Volume 7 ; 7 >
+      au < manifest ; 1988 ; Scottish Economic and Social History Volume 8 ; 8 >
+      au < manifest ; 1989 ; Scottish Economic and Social History Volume 9 ; 9 >
+      au < manifest ; 1990 ; Scottish Economic and Social History Volume 10 ; 10 >
+      au < manifest ; 1991 ; Scottish Economic and Social History Volume 11 ; 11 >
+      au < manifest ; 1992 ; Scottish Economic and Social History Volume 12 ; 12 >
+      au < manifest ; 1993 ; Scottish Economic and Social History Volume 13 ; 13 >
+      au < manifest ; 1994 ; Scottish Economic and Social History Volume 14 ; 14 >
+      au < manifest ; 1995 ; Scottish Economic and Social History Volume 15 ; 15 >
+      au < manifest ; 1996 ; Scottish Economic and Social History Volume 16 ; 16 >
+      au < manifest ; 1997 ; Scottish Economic and Social History Volume 17 ; 17 >
+      au < manifest ; 1998 ; Scottish Economic and Social History Volume 18 ; 18 >
+      au < manifest ; 1999 ; Scottish Economic and Social History Volume 19 ; 19 >
+      au < manifest ; 2000 ; Scottish Economic and Social History Volume 20 ; 20 >
+    
+    }
+  }
   {
 
     title <
@@ -795,7 +832,8 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = jshs
       implicit < status ; year ; name ; param[volume_name] >
-
+      comment[continued_from] = 0269-5030
+      
       au < released ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
       au < released ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
       au < released ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
