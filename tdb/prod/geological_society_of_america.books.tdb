@@ -6,7 +6,6 @@
   >
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    type = bookSeries
     
   {
     title <
@@ -51,7 +50,8 @@
 
     title <
       name = Geological Society of America Special Papers ;
-      issn = 0072-1077
+      issn = 0072-1077 ;
+      type = bookSeries
     >
     
     comment[0] = not in usual HighWire shape
@@ -558,7 +558,9 @@
   {
   
     title <
-      name = GSA Field Guides
+      name = GSA Field Guides ;
+      type = bookSeries
+      
 
     >
     param[base_url] = http://fieldguides.gsapubs.org/
@@ -603,7 +605,8 @@
 
       title <
         name = Reviews in Engineering Geology ;
-        issn = 0080-2018
+        issn = 0080-2018 ;
+        type = bookSeries
     >
 
     {
