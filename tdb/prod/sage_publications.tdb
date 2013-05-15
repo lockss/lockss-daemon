@@ -42003,7 +42003,7 @@ comment[mpj] = now published by Brill
         au < released ; 1960 ; Experimental Biology and Medicine Volume 105 ; 105 >
         au < released ; 1961 ; Experimental Biology and Medicine Volume 106 ; 106 >
         au < released ; 1961 ; Experimental Biology and Medicine Volume 107 ; 107 >
-        au < wanted ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 >
+        au < manifest ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 >
         au < released ; 1962 ; Experimental Biology and Medicine Volume 109 ; 109 >
         au < released ; 1962 ; Experimental Biology and Medicine Volume 110 ; 110 >
         au < released ; 1962 ; Experimental Biology and Medicine Volume 111 ; 111 >
@@ -42035,21 +42035,21 @@ comment[mpj] = now published by Brill
         au < released ; 1971 ; Experimental Biology and Medicine Volume 137 ; 137 >
         au < released ; 1971 ; Experimental Biology and Medicine Volume 138 ; 138 >
         au < released ; 1972 ; Experimental Biology and Medicine Volume 139 ; 139 >
-        au < wanted ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 >
-        au < ready ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 >
-        au < ready ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 >
-        au < ready ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 >
-        au < wanted ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 >
-        au < ready ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 >
-        au < ready ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 >
-        au < wanted ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 >
-        au < ready ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 >
-        au < ready ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 >
-        au < ready ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 >
-        au < ready ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 >
-        au < ready ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 >
-        au < ready ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 >
-        au < wanted ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 >
+        au < manifest ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 >
+        au < manifest ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 >
+        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 >
+        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 >
+        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 >
+        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 >
+        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 >
+        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 >
+        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 >
+        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 >
+        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 >
+        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 >
+        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 >
+        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 >
+        au < manifest ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 >
         au < released ; 1977 ; Experimental Biology and Medicine Volume 155 ; 155 >
         au < released ; 1977 ; Experimental Biology and Medicine Volume 156 ; 156 >
         au < released ; 1978 ; Experimental Biology and Medicine Volume 157 ; 157 >
@@ -43127,8 +43127,6 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Tropical Doctor Volume 39 [superseded] ; 39 >
         au < HighWirePressPlugin ; down ; 2010 ; Tropical Doctor Volume 40 [superseded] ; 40 >
         au < HighWirePressPlugin ; down ; 2011 ; Tropical Doctor Volume 41 [superseded] ; 41 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Tropical Doctor Volume 42 ; 42 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Tropical Doctor Volume 43 ; 43 >
   
       }
   
