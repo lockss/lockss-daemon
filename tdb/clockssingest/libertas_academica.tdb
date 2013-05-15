@@ -287,7 +287,7 @@
     au < manifest ; exists ; 2008 ; Cell & Tissue Transplantation & Therapy Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Cell & Tissue Transplantation & Therapy Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Cell & Tissue Transplantation & Therapy Volume 3 ; 2010 >
-    au < testing ; exists ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 2012 >
+    au < released ; manifest ; 2012 ; Cell & Tissue Transplantation & Therapy Volume 4 ; 2012 >
     au < manifest ; exists ; 2013 ; Cell & Tissue Transplantation & Therapy Volume 5 ; 2013 >
 
   }
@@ -320,7 +320,7 @@
     au < manifest ; exists ; 2008 ; Cell Communication Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
-    au < testing ; exists ; 2012 ; Cell Communication Insights Volume 4 ; 2012 >
+    au < released ; manifest ; 2012 ; Cell Communication Insights Volume 4 ; 2012 >
 
   }
   
@@ -587,7 +587,7 @@
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
-    au < testing ; exists ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2012 >
+    au < released ; manifest ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2012 >
 
   }
   
@@ -1447,7 +1447,7 @@
     au < manifest ; exists ; 2009 ; Primary Prevention Insights Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Primary Prevention Insights Volume 2 ; 2010 >
     au < exists ; exists ; 2011 ; Primary Prevention Insights Volume 3 ; 2011 >
-    au < testing ; exists ; 2012 ; Primary Prevention Insights Volume 4 ; 2012 >
+    au < released ; manifest ; 2012 ; Primary Prevention Insights Volume 4 ; 2012 >
     au < expected ; exists ; 2013 ; Primary Prevention Insights Volume 5 ; 2013 >
     
   }
@@ -1518,7 +1518,7 @@
 
     au < manifest ; exists ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
-    au < testing ; exists ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 2012 >
+    au < released ; manifest ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 2012 >
     
   }
   
