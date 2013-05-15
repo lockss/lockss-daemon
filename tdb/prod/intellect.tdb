@@ -35,7 +35,7 @@
       param[journal_id] = atr
       param[journal_issn] = 2049-3010
       
-      au < manifest ; 2012 ; Applied Theatre Research Volume 1 ; 1 >
+      au < testing ; 2012 ; Applied Theatre Research Volume 1 ; 1 >
       au < expected ; 2013 ; Applied Theatre Research Volume 2 ; 2 >
 
     }
@@ -74,8 +74,8 @@
       au < released ; 2008-2009 ; Art, Design & Communication in Higher Education Volume 7 ; 7 >
       au < released ; 2009 ; Art, Design & Communication in Higher Education Volume 8 ; 8 >
       au < released ; 2010 ; Art, Design & Communication in Higher Education Volume 9 ; 9 >
-      au < manifest ; 2012 ; Art, Design & Communication in Higher Education Volume 10 ; 10 >
-      au < manifest ; 2012 ; Art, Design & Communication in Higher Education Volume 11 ; 11 >
+      au < testing ; 2012 ; Art, Design & Communication in Higher Education Volume 10 ; 10 >
+      au < testing ; 2012 ; Art, Design & Communication in Higher Education Volume 11 ; 11 >
       au < expected ; 2013 ; Art, Design & Communication in Higher Education Volume 12 ; 12 >
 
     }
@@ -101,14 +101,14 @@
       au < manifest ; 2002 ; Asian Cinema Volume 13 ; 13 >
       au < manifest ; 2003 ; Asian Cinema Volume 14 ; 14 >
       au < manifest ; 2004 ; Asian Cinema Volume 15 ; 15 >
-      au < manifest ; 2005 ; Asian Cinema Volume 16 ; 16 >
-      au < manifest ; 2006 ; Asian Cinema Volume 17 ; 17 >
-      au < manifest ; 2007 ; Asian Cinema Volume 18 ; 18 >
-      au < manifest ; 2008 ; Asian Cinema Volume 19 ; 19 >
-      au < manifest ; 2009 ; Asian Cinema Volume 20 ; 20 >
-      au < manifest ; 2010 ; Asian Cinema Volume 21 ; 21 >
-      au < manifest ; 2012 ; Asian Cinema Volume 22 ; 22 >
-      au < manifest ; 2012 ; Asian Cinema Volume 23 ; 23 >
+      au < testing ; 2005 ; Asian Cinema Volume 16 ; 16 >
+      au < testing ; 2006 ; Asian Cinema Volume 17 ; 17 >
+      au < testing ; 2007 ; Asian Cinema Volume 18 ; 18 >
+      au < testing ; 2008 ; Asian Cinema Volume 19 ; 19 >
+      au < testing ; 2009 ; Asian Cinema Volume 20 ; 20 >
+      au < testing ; 2010 ; Asian Cinema Volume 21 ; 21 >
+      au < testing ; 2012 ; Asian Cinema Volume 22 ; 22 >
+      au < testing ; 2012 ; Asian Cinema Volume 23 ; 23 >
       au < expected ; 2013 ; Asian Cinema Volume 24 ; 24 >
 
     }
@@ -142,7 +142,7 @@
       au < released ; 2007 ; Baha'i Studies Review Volume 14 ; 14 >
       au < released ; 2009 ; Baha'i Studies Review Volume 15 ; 15 >
       au < released ; 2010 ; Baha'i Studies Review Volume 16 ; 16 >
-      au < manifest ; 2011 ; Baha'i Studies Review Volume 17 ; 17 >
+      au < testing ; 2011 ; Baha'i Studies Review Volume 17 ; 17 >
       au < expected ; 2013 ; Baha'i Studies Review Volume 18 ; 18 >
 
     }
@@ -175,7 +175,7 @@
       au < released ; 2009 ; Catalan Journal of Communication & Cultural Studies Volume 1 ; 1 >
       au < released ; 2010 ; Catalan Journal of Communication & Cultural Studies Volume 2 ; 2 >
       au < released ; 2011 ; Catalan Journal of Communication & Cultural Studies Volume 3 ; 3 >
-      au < manifest ; 2012 ; Catalan Journal of Communication & Cultural Studies Volume 4 ; 4 >
+      au < testing ; 2012 ; Catalan Journal of Communication & Cultural Studies Volume 4 ; 4 >
       au < expected ; 2013 ; Catalan Journal of Communication & Cultural Studies Volume 5 ; 5 >
 
     }
@@ -191,8 +191,8 @@
       param[journal_issn] = 2040-5669
 
       au < released ; 2011 ; Choreographic Practices Volume 1 ; 1 >
-      au < manifest ; 2012 ; Choreographic Practices Volume 2 ; 2 >
-      au < manifest ; 2012 ; Choreographic Practices Volume 3 ; 3 >
+      au < testing ; 2012 ; Choreographic Practices Volume 2 ; 2 >
+      au < testing ; 2012 ; Choreographic Practices Volume 3 ; 3 >
       au < expected ; 2013 ; Choreographic Practices Volume 4 ; 4 >
 
     }
@@ -209,7 +209,7 @@
       
       au < released ; 2010-2011 ; Citizenship Teaching and Learning Volume 6 ; 6 >
       au < released ; 2011-2012 ; Citizenship Teaching and Learning Volume 7 ; 7 >
-      au < manifest ; 2012 ; Citizenship Teaching and Learning Volume 8 ; 8 >
+      au < testing ; 2012 ; Citizenship Teaching and Learning Volume 8 ; 8 >
       au < expected ; 2013 ; Citizenship Teaching and Learning Volume 9 ; 9 >
 
     }
@@ -226,7 +226,7 @@
       
       au < released ; 2010 ; Comedy Studies Volume 1 ; 1 >
       au < released ; 2011 ; Comedy Studies Volume 2 ; 2 >
-      au < manifest ; 2012 ; Comedy Studies Volume 3 ; 3 >
+      au < testing ; 2012 ; Comedy Studies Volume 3 ; 3 >
       au < manifest ; 2013 ; Comedy Studies Volume 4 ; 4 >
 
     }
@@ -243,7 +243,7 @@
       
       au < released ; 2010 ; Craft Research Volume 1 ; 1 >
       au < released ; 2011 ; Craft Research Volume 2 ; 2 >
-      au < manifest ; 2012 ; Craft Research Volume 3 ; 3 >
+      au < testing ; 2012 ; Craft Research Volume 3 ; 3 >
       au < manifest ; 2013 ; Craft Research Volume 4 ; 4 >
 
     }
@@ -277,8 +277,8 @@
       param[journal_issn] = 2040-4417
       
       au < released ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
-      au < manifest ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
-      au < manifest ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
+      au < testing ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
+      au < testing ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
       au < expected ; 2013 ; Critical Studies in Fashion & Beauty Volume 4 ; 4 >
 
     }
@@ -295,7 +295,7 @@
       
       au < released ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
       au < released ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
-      au < manifest ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
+      au < testing ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
       au < manifest ; 2013 ; Crossings: Journal of Migration & Culture Volume 4 ; 4 >
 
     }
