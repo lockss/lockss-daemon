@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.143 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: V3Poller.java,v 1.144 2013-05-15 16:25:51 barry409 Exp $
  */
 
 /*
@@ -531,7 +531,7 @@ public class V3Poller extends BasePoll {
 				      duration, pollEnd,
                                       outerCircleTarget,
                                       quorum, voteMargin,
-				      hashAlg);
+				      hashAlg, maxRepairs);
 
     long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
 
@@ -1680,8 +1680,8 @@ public class V3Poller extends BasePoll {
      final String url,
      final Collection<ParticipantUserData> repairVoters) {
 
-    if (!repairVoters.isEmpty() && okToQueueRepair()) {
-      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    if (!repairVoters.isEmpty() && repairQueue.okToQueueRepair()) {
       // todo(bhayes): Having found a list of peers with versions
       // would reduce entropy, should that information be discarded
       // and the publisher's current version be fetched? Why give up
@@ -1703,25 +1703,11 @@ public class V3Poller extends BasePoll {
   }
 
   private void requestRepairFromPublisher(final String url) {
-    if (okToQueueRepair()) {
-      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    if (repairQueue.okToQueueRepair()) {
       log.debug2("Requesting repair from publisher: " + url);
       repairQueue.repairFromPublisher(url);
     }
-  }
-
-  // todo(bhayes): simply cutting off repairs after maxRepairs biases
-  // repairs to URL listed early. URLs which are down the list may
-  // never be repaired.
-
-  // Return true iff we haven't queued more than the max allowed number of
-  // repairs
-  boolean okToQueueRepair() {
-    if (maxRepairs < 0) {
-      return true;
-    }
-    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
-    return repairQueue.size() < maxRepairs;
   }
 
   /* Select a peer to attempt repair from. */
@@ -1788,31 +1774,28 @@ public class V3Poller extends BasePoll {
     }
     PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
 
-    List pendingPeerRepairs = queue.getPendingPeerRepairs();
-    List pendingPublisherRepairs = queue.getPendingPublisherRepairUrls();
+    List<PollerStateBean.Repair> pendingPeerRepairs =
+      queue.getPendingPeerRepairs();
+    List<String> pendingPublisherRepairs =
+      queue.getPendingPublisherRepairUrls();
     
-    boolean needPublisherRepairs = pendingPublisherRepairs.size() > 0;
-    boolean needPeerRepairs = pendingPeerRepairs.size() > 0;
-    boolean haveActiveRepairs = queue.getActiveRepairs().size() > 0;
-    
-    if (needPublisherRepairs || needPeerRepairs) {
-      setStatus(V3Poller.POLLER_STATUS_WAITING_REPAIRS);
-      if (log.isDebug()) {
-        log.debug("Pending Peer Repairs: " + pendingPeerRepairs.size());
-        log.debug("Pending Publisher Repairs: " + pendingPublisherRepairs.size());
-        log.debug("Active Repairs: " + queue.getActiveRepairs().size());
-      }
-    } else {
+    if (pendingPeerRepairs.isEmpty() && pendingPublisherRepairs.isEmpty()) {
       // It's OK to shortcut and end the poll here, there's nothing left to do!
-
       voteComplete();
       return;
+    }
+
+    setStatus(V3Poller.POLLER_STATUS_WAITING_REPAIRS);
+    if (log.isDebug()) {
+      log.debug("Pending Peer Repairs: " + pendingPeerRepairs.size());
+      log.debug("Pending Publisher Repairs: " + pendingPublisherRepairs.size());
+      log.debug("Active Repairs: " + queue.getActiveRepairs().size());
     }
 
     // If we have decided to repair any URLs from the publisher, pass the
     // set of URLs we want to repair to the RepairCrawler.  A callback
     // handles checking each successfully fetched repair.
-    if (needPublisherRepairs) {
+    if (! pendingPublisherRepairs.isEmpty()) {
       log.debug("Starting publisher repair crawl for " + 
                 pendingPublisherRepairs.size() + " urls.");
       CrawlManager cm = theDaemon.getCrawlManager();
@@ -1828,9 +1811,10 @@ public class V3Poller extends BasePoll {
             // URLs as a single set, but we don't have a notion of
             // a disjoint CachedUrlSetSpec that represents a collection of
             // unrelated nodes.
-            Collection urlsFetched = status.getUrlsFetched();
-            for (Iterator iter = urlsFetched.iterator(); iter.hasNext(); ) {
-              receivedRepair((String)iter.next());
+            Collection<String> urlsFetched = 
+	      (Collection<String>)status.getUrlsFetched();
+            for (String url: urlsFetched) {
+              receivedRepair(url);
             }
           }
         }
@@ -1838,21 +1822,19 @@ public class V3Poller extends BasePoll {
 
       queue.markActive(pendingPublisherRepairs);
       cm.startRepair(getAu(), pendingPublisherRepairs,
-                     cb, null, null);
+                     cb, null /*cookie*/, null /*lock*/);
     }
     
     // If we have decided to repair from any caches, iterate over the list
     // of PollerStateBean.Repair objects and request each one.
-    if (needPeerRepairs) {
+    if (! pendingPeerRepairs.isEmpty()) {
       log.debug("Requesting repairs from peers for " +
                 pendingPeerRepairs.size() + " urls.");
 
-      for (Iterator iter = pendingPeerRepairs.iterator(); iter.hasNext(); ) {
-        PollerStateBean.Repair r = (PollerStateBean.Repair)iter.next();
+      for (PollerStateBean.Repair r: pendingPeerRepairs) {
         requestRepairFromPeer(r.getUrl(), r.getRepairFrom());
         queue.markActive(r.getUrl());
       }
-
     }
   }
 
@@ -1908,17 +1890,12 @@ public class V3Poller extends BasePoll {
 				    Object cookie,
 				    CachedUrlSetHasher hasher,
 				    Exception e) {
-              // If there are no more repairs outstanding, go ahead and
+	  // If there are no more repairs outstanding, go ahead and
           // stop the poll at this point.
-          PollerStateBean.RepairQueue queue = pollerState.getRepairQueue();
-          // CR: push size() methods lower
-          int pending = queue.getPendingRepairs().size();
-          int active = queue.getActiveRepairs().size();
-          log.debug2("Repair hash on one block done.  Pending repairs="
-                     + pending + "; Active repairs=" + active);
-          if (pending == 0 && active == 0) {
+          if (! pollerState.expectingRepairs()) {
             voteComplete();
           }
+	  // todo(bhayes): else debug2 pending and active remaining?
         }
     };
 
@@ -3063,16 +3040,12 @@ public class V3Poller extends BasePoll {
     return pollerState.getPollDeadline() + extraPollTime;
   }
 
-  public List getActiveRepairs() {
+  public List<PollerStateBean.Repair> getActiveRepairs() {
     return pollerState.getRepairQueue().getActiveRepairs();
   }
 
-  public List getCompletedRepairs() {
+  public List<PollerStateBean.Repair> getCompletedRepairs() {
     return pollerState.getRepairQueue().getCompletedRepairs();
-  }
-
-  public PollerStateBean.RepairQueue getRepairQueue() {
-    return pollerState.getRepairQueue();
   }
 
   public List getTalliedUrls() {

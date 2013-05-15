@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.46 2013-03-18 19:19:33 dshr Exp $
+* $Id: V3PollStatus.java,v 1.47 2013-05-15 16:25:51 barry409 Exp $
  */
 
 /*
@@ -871,8 +871,7 @@ public class V3PollStatus {
     }
     private List getRows(V3Poller poller) {
       List rows = new ArrayList();
-      for (Iterator it = poller.getActiveRepairs().iterator(); it.hasNext(); ) {
-        PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
+      for (PollerStateBean.Repair rp: poller.getActiveRepairs()) {
         Map row = new HashMap();
         row.put("url", rp.getUrl());
         if (rp.isPublisherRepair()) {
@@ -924,8 +923,7 @@ public class V3PollStatus {
     }
     private List getRows(V3Poller poller) {
       List rows = new ArrayList();
-      for (Iterator it = poller.getCompletedRepairs().iterator(); it.hasNext(); ) {
-        PollerStateBean.Repair rp = (PollerStateBean.Repair)it.next();
+      for (PollerStateBean.Repair rp: poller.getCompletedRepairs()) {
         Map row = new HashMap();
         row.put("url", rp.getUrl());
         if (rp.isPublisherRepair()) {
