@@ -47,15 +47,17 @@ AU  - Byun, Dae-Ho
 AU  - Finnie, Gavin
  */
 public class MetaPressRisMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("MetaPressRisMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(MetaPressRisMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                  String contentType)
       throws PluginException {
   
+    log.debug3("In createFileMetadataExtractor");
+    
     RisMetadataExtractor ris = new RisMetadataExtractor();
     ris.addRisTag("PY", MetadataField.FIELD_DATE);
-  
-     return ris;
-    }
+    
+    return ris;
+  }
 }
