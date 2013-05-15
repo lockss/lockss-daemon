@@ -9,7 +9,7 @@
   param[base_url] = http://www.igi-global.com/
 
   {
-	implicit < status ; eisbn ; param[book_isbn] ; doi ; year ; param[volume] ; name ; author >
+    implicit < status ; eisbn ; param[book_isbn] ; doi ; year ; param[volume] ; name ; author >
   
     {
         title <
