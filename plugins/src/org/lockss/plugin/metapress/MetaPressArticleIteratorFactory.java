@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.2 2012-03-26 19:41:19 akanshab01 Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.3 2013-05-15 16:08:01 ldoan Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
 
@@ -46,7 +45,7 @@ public class MetaPressArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("MetaPressArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(MetaPressArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%scontent\", base_url";
   
@@ -102,6 +101,7 @@ public class MetaPressArticleIteratorFactory
         guessReferences(af, pdfMat);
         guessCitations(af,pdfMat);
        }
+      log.debug3("af: " + af);
       return af;
     }
           
@@ -116,12 +116,9 @@ public class MetaPressArticleIteratorFactory
     
     
     protected void guessCitations(ArticleFiles af, Matcher mat) {
-      String uppercaseStr = mat.replaceFirst("/export.mpx?code=$1&mode=ris").toUpperCase();
-      String endStrUrl = uppercaseStr.substring(uppercaseStr.length()-9,uppercaseStr.length()).toLowerCase();
-      String startStrUrl = uppercaseStr.substring(0, 50).toLowerCase();
-      String midStrUrl = uppercaseStr.substring(50,uppercaseStr.length()-9);
-      String wantedUrl = startStrUrl+midStrUrl+endStrUrl;
-      CachedUrl citCu = au.makeCachedUrl(wantedUrl);
+      String citStr = mat.replaceFirst("/export.mpx?code=$1&mode=ris");
+      log.debug3("citStr: " + citStr);
+      CachedUrl citCu = au.makeCachedUrl(citStr);
       if (citCu != null && citCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION, citCu);
         log.debug3("citcu :" + citCu);
