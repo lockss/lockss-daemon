@@ -1234,34 +1234,64 @@
       issnl = 1471-5767 
      >
 
-    {
-
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
-      param[journal_id] = saj
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
-      au < released ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
-      au < released ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
-      au < released ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
-      au < released ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
-      au < released ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
-      au < released ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
-      au < released ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
-      au < released ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
-      au < released ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
-      au < released ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
-      au < released ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
-      au < released ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
-      au < released ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
-      au < released ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
-      au < released ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
-      au < released ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
-      au < released ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
-      au < released ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
-      au < released ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
-      au < released ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    {
+      param[journal_id] = gas
+      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+      
+      au < manifest ; 1969 ; Glasgow Archaeological Journal Volume 1 ; 1 >
+      au < manifest ; 1971 ; Glasgow Archaeological Journal Volume 2 ; 2 >
+      au < manifest ; 1974 ; Glasgow Archaeological Journal Volume 3 ; 3 >
+      au < manifest ; 1976 ; Glasgow Archaeological Journal Volume 4 ; 4 >
+      au < manifest ; 1978 ; Glasgow Archaeological Journal Volume 5 ; 5 >
+      au < manifest ; 1979 ; Glasgow Archaeological Journal Volume 6 ; 6 >
+      au < manifest ; 1980 ; Glasgow Archaeological Journal Volume 7 ; 7 >
+      au < manifest ; 1981 ; Glasgow Archaeological Journal Volume 8 ; 8 >
+      au < manifest ; 1982 ; Glasgow Archaeological Journal Volume 9 ; 9 >
+      au < manifest ; 1983 ; Glasgow Archaeological Journal Volume 10 ; 10 >
+      au < manifest ; 1984 ; Glasgow Archaeological Journal Volume 11 ; 11 >
+      au < manifest ; 1985 ; Glasgow Archaeological Journal Volume 12 ; 12 >
+      au < manifest ; 1986 ; Glasgow Archaeological Journal Volume 13 ; 13 >
+      au < manifest ; 1987 ; Glasgow Archaeological Journal Volume 14 ; 14 >
+      au < manifest ; 1988 ; Glasgow Archaeological Journal Volume 15 ; 15 >
+      au < manifest ; 1989 ; Glasgow Archaeological Journal Volume 16 ; 16 >
+      au < manifest ; 1991 ; Glasgow Archaeological Journal Volume 17 ; 17 >
+      au < manifest ; 1993 ; Glasgow Archaeological Journal Volume 18 ; 18 >
+      au < manifest ; 1994 ; Glasgow Archaeological Journal Volume 19 ; 19 >
+      au < manifest ; 1996 ; Glasgow Archaeological Journal Volume 20 ; 20 >
+      au < manifest ; 1998 ; Glasgow Archaeological Journal Volume 21 ; 21 >
+    
+    }
+    
+    {
+
+      param[journal_id] = saj
+      comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+
+      au < superseded ; 1969 ; Scottish Archaeological Journal Volume 1 [superseded] ; 1 >
+      au < superseded ; 1971 ; Scottish Archaeological Journal Volume 2 [superseded] ; 2 >
+      au < superseded ; 1974 ; Scottish Archaeological Journal Volume 3 [superseded] ; 3 >
+      au < superseded ; 1976 ; Scottish Archaeological Journal Volume 4 [superseded] ; 4 >
+      au < superseded ; 1978 ; Scottish Archaeological Journal Volume 5 [superseded] ; 5 >
+      au < superseded ; 1979 ; Scottish Archaeological Journal Volume 6 [superseded] ; 6 >
+      au < superseded ; 1980 ; Scottish Archaeological Journal Volume 7 [superseded] ; 7 >
+      au < superseded ; 1981 ; Scottish Archaeological Journal Volume 8 [superseded] ; 8 >
+      au < superseded ; 1982 ; Scottish Archaeological Journal Volume 9 [superseded] ; 9 >
+      au < superseded ; 1983 ; Scottish Archaeological Journal Volume 10 [superseded] ; 10 >
+      au < superseded ; 1984 ; Scottish Archaeological Journal Volume 11 [superseded] ; 11 >
+      au < superseded ; 1985 ; Scottish Archaeological Journal Volume 12 [superseded] ; 12 >
+      au < superseded ; 1986 ; Scottish Archaeological Journal Volume 13 [superseded] ; 13 >
+      au < superseded ; 1987 ; Scottish Archaeological Journal Volume 14 [superseded] ; 14 >
+      au < superseded ; 1988 ; Scottish Archaeological Journal Volume 15 [superseded] ; 15 >
+      au < superseded ; 1989 ; Scottish Archaeological Journal Volume 16 [superseded] ; 16 >
+      au < superseded ; 1991 ; Scottish Archaeological Journal Volume 17 [superseded] ; 17 >
+      au < superseded ; 1993 ; Scottish Archaeological Journal Volume 18 [superseded] ; 18 >
+      au < superseded ; 1994 ; Scottish Archaeological Journal Volume 19 [superseded] ; 19 >
+      au < superseded ; 1996 ; Scottish Archaeological Journal Volume 20 [superseded] ; 20 >
+      au < superseded ; 1998 ; Scottish Archaeological Journal Volume 21 [superseded] ; 21 >
       au < released ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
       au < released ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
       au < released ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
