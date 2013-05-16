@@ -107,6 +107,14 @@ import org.w3c.dom.NodeList;
       }
     };
     
+    // hard code overwriting publisher name (temp solution for board report)
+    static private final XPathValue PUBLISHER_VALUE = new TextValue() {
+      @Override
+      public String getValue(String s) {
+        return "John Wiley & Sons, Inc.";
+      }
+    };
+    
     /** Map of raw xpath key to node value function */
     
     static private final Map<String,XPathValue> nodeMap = 
@@ -124,7 +132,9 @@ import org.w3c.dom.NodeList;
       nodeMap.put("/component/header/publicationMeta[@level='unit']/numberingGroup/numbering[@type='pageLast']", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='unit']/doi", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/contentMeta/keywordGroup/keyword", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/component/header/publicationMeta[@level='product']/publisherInfo/publisherName", XmlDomMetadataExtractor.TEXT_VALUE);
+      //nodeMap.put("/component/header/publicationMeta[@level='product']/publisherInfo/publisherName", XmlDomMetadataExtractor.TEXT_VALUE);
+      // hard code overwriting publisher name (temp solution for board report)
+      nodeMap.put("/component/header/publicationMeta[@level='product']/publisherInfo/publisherName", PUBLISHER_VALUE);
       nodeMap.put("/component/header/contentMeta/creators/creator[@creatorRole='author']/personName", AUTHOR_VALUE);
     }
 
@@ -170,7 +180,7 @@ import org.w3c.dom.NodeList;
           AuUtil.safeRelease(xmlCu);
         }
         am.cook(xpathMap);
-        emitter.emitMetadata(cu,  am);
+        emitter.emitMetadata(cu, am);
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
         ex2.initCause(ex);
