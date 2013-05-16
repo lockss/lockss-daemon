@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressSectionArticleIteratorFactor.java,v 1.1 2011-12-09 10:52:40 thib_gc Exp $
+ * $Id: TestBePressSectionArticleIteratorFactor.java,v 1.2 2013-05-16 22:06:40 alexandraohlson Exp $
  */
 
 /*
@@ -144,6 +144,8 @@ public class TestBePressSectionArticleIteratorFactor extends ArticleIteratorTest
     CachedUrl cu = au.makeCachedUrl(url);
     SubTreeArticleIterator artIter = createSubTreeIter();
     ArticleFiles af = createArticleFiles(artIter, cu);
+    // even without content this will be considered an article
+    // because it isn't an ambiguous, possibly TOC, url
     assertEquals(cu, af.getFullTextCu());
     assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_ABSTRACT));
   }                                                 
