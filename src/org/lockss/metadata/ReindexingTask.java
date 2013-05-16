@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.7 2013-03-19 20:14:25 pgust Exp $
+ * $Id: ReindexingTask.java,v 1.7.2.2 2013-04-04 05:30:28 pgust Exp $
  */
 
 /*
@@ -494,12 +494,7 @@ public class ReindexingTask extends StepTask {
 	tdbauIsbn = tdbau.getIsbn();
 	tdbauIssn = tdbau.getPrintIssn();
 	tdbauEissn = tdbau.getEissn();
-	if (TdbUtil.isBook(tdbau)) {
-	  // the journal title is the TdbAu name for a book
-	  tdbauJournalTitle = tdbau.getName();
-	} else {
-	  tdbauJournalTitle = tdbau.getJournalTitle();
-	}
+	tdbauJournalTitle = tdbau.getJournalTitle();
       }
 
       if (tdbau != null) {
@@ -835,6 +830,12 @@ public class ReindexingTask extends StepTask {
 		- removedArticleCount);
 
 	    break;
+	  } catch (MetadataException me) {
+	    e = me;
+	    log.warning("Error updating metadata at FINISH for " + status
+		+ " -- NOT rescheduling", e);
+	    log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
+	    status = ReindexingStatus.Failed;
 	  } catch (SQLNonTransientException sqlnte) {
 	    e = sqlnte;
 	    log.warning("Error updating metadata at FINISH for " + status

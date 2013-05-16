@@ -1,8 +1,8 @@
-/**
- * $Id: SitemapParser.java,v 1.1 2013-03-19 18:42:23 ldoan Exp $
+/*
+ * $Id: SitemapParser.java,v 1.1.2.1 2013-03-28 18:09:31 ldoan Exp $
  */
 
-/**
+/*
 
 Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -30,6 +30,27 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+/*
+ * Some portion of this code is Copyright.
+ * 
+ * SitemapUrl.java - Represents a URL found in a Sitemap 
+ *  
+ * Copyright 2009 Frank McCown
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
 package org.lockss.extractor;
 
 import java.io.IOException;
@@ -39,15 +60,16 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.lockss.extractor.Sitemap.SitemapType;
 import org.lockss.util.Logger;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-
 /**
- * SitemapParser.java - Parses a Sitemap (http://www.sitemaps.org/)
- * This class is modified from SourceForge open-source by Frank McCown.
+ * Parses a Sitemap created according to the sitemap protocol 
+ * http://www.sitemaps.org. Modified from SourceForge open-source 
+ * by Frank McCown.
  */
 public class SitemapParser {
   
@@ -56,223 +78,184 @@ public class SitemapParser {
 
   /** According to the specs, 50K URLs per Sitemap is the max */
   private int MAX_URLS_ALLOWED = 50000;
-  
   /** Sitemap docs must be limited to 10MB (10,485,760 bytes) */
   public static int MAX_BYTES_ALLOWED = 10485760;
   
-  
   /**
-   * Parse the given XML Sitemap content.
-   * @throws SitemapException 
-   * @throws IOException 
-   * @throws SAXException 
+   * Parses the given XML Sitemap content.
+   * 
+   * @param inStream the input XML file
+   * @param encoding the encoding value passed in
+   * @return Sitemap the Sitemap object
+   * @throws SitemapException ParserConfigurationException or SAXException
+   * @throws IOException if error in processing inStream
    */
   public Sitemap processXmlSitemap(InputStream inStream, String encoding) 
-      throws SitemapException, SAXException, IOException {
-		
+      throws SitemapException, IOException {
     Document doc = null;
-		
     try {
       DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();			
-      //doc = dbf.newDocumentBuilder().parse(inStream);
       InputSource is = new InputSource(inStream);
       is.setEncoding(encoding);
       doc = dbf.newDocumentBuilder().parse(is);
-          
     }
     catch (ParserConfigurationException pce) {
-      log.error("Error setting up DocumentBuilder", pce);
       throw new SitemapException(pce);
+    } catch (SAXException saxe) {
+      throw new SitemapException(saxe);
     }	
-    catch (IOException e) {
-      log.error("IO error", e);
-    }
     
-    /** If this document contains <sitemapindex> */
-    NodeList nodeList = doc.getElementsByTagName("sitemapindex");
-    if (nodeList.getLength() > 0) {			
-      nodeList = doc.getElementsByTagName("sitemap");
-      return (parseXMLSitemapIndex(nodeList));
-    }
-    
-    /** If this document contains <urlset> */
-    nodeList = doc.getElementsByTagName("urlset");
-    if (nodeList.getLength() > 0) {
-      nodeList = doc.getElementsByTagName("url");
-      return (parseXmlSitemapUrlSet(nodeList));
-    }
-    //else if (doc.getElementsByTagName("link").getLength() > 0) {
-      // Could be RSS or Atom
-      //parseSyndicationFormat(sitemapUrl, doc);
-    //}
+    // If this document contains <sitemapindex>
+    // doc has only one node sitemapindex
+    Element rootElem = doc.getDocumentElement();
+    String rootName = rootElem.getNodeName(); 
+    NodeList nodeList = rootElem.getChildNodes(); // list or sitemap nodes
+    if (rootName.equals("sitemapindex")) {
+      if (nodeList.getLength() > 0) { // nodeList of <sitemap> nodes
+        return (parseXMLSitemapIndex(nodeList));
+      }
+      log.siteError("Sitemapindex has no <sitemap> nodes");
+      return (null);
+    } else if (rootName.equals("urlset")) {
+      if (nodeList.getLength() > 0) { // nodeList of <url> nodes
+        return (parseXmlSitemapUrlSet(nodeList));
+      }
+      log.siteError("Sitemap urlset has no <url> nodes");
+      return (null);
+    }    
+    // Can handle RSS or Atom
     else {
       throw new SitemapException("Unknown Sitemap format");
     }	
-
-  } /** end processXmlSitemap */
+  }
 	
-   
   /**
-   * Parse XML Sitemap, using <sitemapindex>.
+   * Parses XML Sitemap, using &lt;sitemapindex&gt;.
+   * 
    * @param nodeList
-   * @return Sitemap object
-   * @throws SitemapException 
+   * @return
+   * @throws SitemapException
    */
-  private Sitemap parseXMLSitemapIndex(NodeList nodeList) throws SitemapException {
-  			
+  private Sitemap parseXMLSitemapIndex(NodeList nodeList)
+      throws SitemapException {
     Sitemap sitemap = new Sitemap(SitemapType.INDEX);
-        		
-    /** Loop through the <sitemap>s */
+
+    // Loop through the <sitemap> nodes
     for (int i = 0; i < nodeList.getLength(); i++) {
-      
       if (i >= MAX_URLS_ALLOWED) {
         log.siteWarning("Exceeds max urls allowed 50K" + i);
         break;
       }
-      
       Node node = nodeList.item(i);
-
-      SitemapUrl sitemapUrl = processSitemapNode(node);
-      sitemap.addSitemapUrl(sitemapUrl);
-      log.debug("  " + (i+1) + ". " + sitemapUrl);
-        
-    } // for
-    
+      if (node.getNodeType() == Node.ELEMENT_NODE) {
+        SitemapUrl sitemapUrl = processSitemapIndexNode(node);
+        try {
+          sitemap.addSitemapUrl(sitemapUrl);
+        } catch (NullPointerException npe) {
+          log.siteWarning("sitemapUrl is null", npe);
+        }
+      }
+    }
     return (sitemap);
-
-  } /** end parseXMLSitemapIndex */
+  }
 
   /**
-   * Get sitemap node element values for <loc> and <lastmod>.
-   * @param node
-   * @return
+   * Gets sitemap node element values for &lt;loc&gt; and &lt;lastmod&gt;.
+   * 
+   * @param node the node element containing &lt;sitemap&gt;
+   * @return a SitemapUrl or null
    */
-  private SitemapUrl processSitemapNode(Node node) {
-    
+  private SitemapUrl processSitemapIndexNode(Node node) {
     String url = null;
     String lastmod = null;
-        
-    /** node name is <sitemap> */
-    NodeList cNodes = node.getChildNodes();
-    
-    /** nodename is <loc> or <lastmod>*/
-    for (int i = 0; i < cNodes.getLength(); i++) {
+    NodeList cNodes = node.getChildNodes(); // node name is <sitemap>
+    for (int i = 0; i < cNodes.getLength(); i++) { // nodename is <loc> or <lastmod>
       Node cNode = cNodes.item(i);
-
-      if (cNode.getNodeName() == "loc") {
-        url = getNodeValueByName(cNode, "loc");
-        continue;
+      if (node.getNodeType() == Node.ELEMENT_NODE) {
+        if (cNode.getNodeName() == "loc") {
+          url = cNode.getTextContent();
+          continue;
+        }
+        if (cNode.getNodeName() == "lastmod") {
+          lastmod = cNode.getTextContent();
+          continue;
+        }
       }
-      
-      if (cNode.getNodeName() == "lastmod") {
-        lastmod = getNodeValueByName(cNode, "lastmod");
-        continue;
-      }
-      
     }
-    
-    return (new SitemapUrl(url, lastmod));
-    
-  } /** end processSitemapNode */
-  
-  private String getNodeValueByName(Node node, String name) {
-    
-    if (node.getNodeName() == name) {
-      return (node.getTextContent());
+    if (url != null) {
+      return (new SitemapUrl(url, lastmod));
     }
-    
     return (null);
   }
   
   /**
-   * Parse XML containing Sitemap, using <urlset>.
+   * Parses XML containing Sitemap, using &lt;urlset&gt;.
    * 
-   * Example of a Sitemap:
-   * <?xml version="1.0" encoding="UTF-8"?>
-        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	  <url>
- 	    <loc>http://www.example.com/</loc>
- 	    <lastmod>2005-01-01</lastmod>
- 	    <changefreq>monthly</changefreq>
- 	    <priority>0.8</priority>
-	  </url>
-	  <url>
- 	    <loc>http://www.example.com/catalog?item=12&amp;desc=vacation_hawaii</loc>
- 	    <changefreq>weekly</changefreq>
-	  </url>
-       </urlset>
-   *
-   * @param doc
-   * @throws SitemapException 
+   * @param nodeList contains &lt;url&gt; nodes
+   * @return a Sitemap
+   * @throws SitemapException
    */
-  private Sitemap parseXmlSitemapUrlSet(NodeList nodeList) throws SitemapException {
-    
+  private Sitemap parseXmlSitemapUrlSet(NodeList nodeList)
+      throws SitemapException {
     Sitemap sitemap = new Sitemap(SitemapType.XML);
-    
-    /**Loop through the <url> nodes */
+    // Loop through the <url> nodes
     for (int i = 0; i < nodeList.getLength(); i++) {
-      
       if (i >= MAX_URLS_ALLOWED) {
         log.siteWarning("Exceeds max urls allowed 50K" + i);
         break;
       }
-          
       Node node = nodeList.item(i);
-      SitemapUrl sitemapUrl = processSitemapUrlSetNode(node);
-      sitemap.addSitemapUrl(sitemapUrl);
-      log.debug("  " + (i+1) + ". " + sitemapUrl);
-             
-    }	
-    
+      if (node.getNodeType() == Node.ELEMENT_NODE) {
+        SitemapUrl sitemapUrl = processSitemapUrlSetNode(node);
+        try {
+          sitemap.addSitemapUrl(sitemapUrl);
+        } catch (NullPointerException npe) {
+          log.siteWarning("sitemapUrl is null", npe);
+        }
+      }
+    }
     return (sitemap);
-  
-  } /** end parseXmlSitemapUrlSet */
+  }
   
   /**
-   * Get UrlSet node element values for
-   * <loc>, <lastmod>, <changefreq> and <priority>.
-   * @param node
-   * @return
+   * Gets UrlSet node element values for
+   * &lt;loc&gt;, &lt;lastmod&gt;, &lt;changefreq&gt; and &lt;priority&gt;.
+
+   * @param node the &lt;url&gt; node element
+   * @return a SitemapUrl or null
    */
   private SitemapUrl processSitemapUrlSetNode(Node node) {
-    
     String url = null;
     String lastmod = null;
-    String changeFreq = null;
+    String changeFreqStr = null;
     String priority = null;
-        
-    /** node name is <sitemap> */
-    NodeList cNodes = node.getChildNodes();
-    
-    /** node name is <loc>, <lastmod>, <changefred> or <priority> */
+    NodeList cNodes = node.getChildNodes(); // node name is <sitemap>
+    // node name is <loc>, <lastmod>, <changefred> or <priority>
     for (int i = 0; i < cNodes.getLength(); i++) {
       Node cNode = cNodes.item(i);
-      
-      if (cNode.getNodeName() == "loc") {
-        url = getNodeValueByName(cNode, "loc");
-        continue;
-      }
-      
-      if (cNode.getNodeName() == "lastmod") {
-        lastmod = getNodeValueByName(cNode, "lastmod");
-        continue;
-      }
-      
-      if (cNode.getNodeName() == "changefreq") {
-        changeFreq = getNodeValueByName(cNode, "changefreq");
-        continue;
-      }
-
-      if (cNode.getNodeName() == "priority") {
-        priority = getNodeValueByName(cNode, "priority");
+      if (cNode.getNodeType() == Node.ELEMENT_NODE) {
+        if (cNode.getNodeName() == "loc") {
+          url = cNode.getTextContent();
           continue;
+        }
+        if (cNode.getNodeName() == "lastmod") {
+          lastmod = cNode.getTextContent();
+          continue;
+        }
+        if (cNode.getNodeName() == "changefreq") {
+          changeFreqStr = cNode.getTextContent();
+          continue;
+        }
+        if (cNode.getNodeName() == "priority") {
+          priority = cNode.getTextContent();
+            continue;
+        }
       }
-    
     }
-    
-    return (new SitemapUrl(url, lastmod, changeFreq, priority));
-    
-  } /** end processSitemapUrlSetNode */
+    if (url != null) {
+      return (new SitemapUrl(url, lastmod, changeFreqStr, priority));
+    }
+    return (null);
+  }
   
-} /** end class SitemapParser */
-
+}

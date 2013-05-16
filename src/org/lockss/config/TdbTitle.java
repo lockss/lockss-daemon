@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.14 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: TdbTitle.java,v 1.14.2.1 2013-04-04 05:30:27 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.14 2013-03-06 08:06:22 tlipkis Exp $
+ * @version $Id: TdbTitle.java,v 1.14.2.1 2013-04-04 05:30:27 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -220,7 +220,57 @@ public class TdbTitle {
     return value;
   }
 
-  
+  /**
+   * Return best coverage depth of the content in this title. Values include 
+   * "fulltext" for full-text coverage, and "abstracts" for primarily or only 
+   * "abstracts" coverage.
+   * 
+   * @return best coverage depth this title
+   */
+  public String getCoverageDepth() {
+    // count coverage depths
+    Map<String,Integer> coverageMap = new HashMap<String,Integer>();
+    for (TdbAu tdbau : tdbAus.values()) {
+      String value = tdbau.getCoverageDepth();
+      Integer count = coverageMap.get(value);
+      coverageMap.put(value, (count == null) ? 1 : count+1);
+    }
+    
+    // find the best coverage depth -- one with the highest count
+    // (is this the best algorithm if 40% are abstracts and 60% are fulltext?)
+    int bestValue = 0;
+    String bestCoverage = "fulltext"; 
+    for (Map.Entry<String,Integer> entry : coverageMap.entrySet()) {
+      if (bestValue < entry.getValue()) {
+        bestValue= entry.getValue();
+        bestCoverage = entry.getKey();
+      }
+    }
+    return bestCoverage;
+  }
+
+  /**
+   * Return publication type this title. Values include "journal" for a journal,
+   * "book" if each AU is an individual book that is not part of a series, and
+   * "bookSeries" if each AU is an individual book that is part of a series.
+   * For a "bookSeries" the journalTitle() is returns the name of the series.
+   * For a "book" the journalTitle() is simply descriptive of the collection
+   * of books (e.g. "Springer Books") and can be ignored for bibliographic
+   * purposes.
+   * 
+   * @return publication type this title or "journal" if not specified
+   */
+  public String getPublicationType() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getPublicationType();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+
   /**
    * Return print ISSN for this title.
    * 

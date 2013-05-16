@@ -1,0 +1,156 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down - abstract parent only</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Base Atypon Plugin</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.60.0</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+   <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Base Atypon Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+<!-- the TOC for a specific year (volume) is on a lockss page.The final number is any issue # from that volume, so go with 1 -->
+    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sloi/%s", base_url, journal_id</string>
+      </entry>
+      <!--  we don't need au_volume as it will default to au_start_url -->
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!--  CRAWL COMMENT BLOCK
+    - include all image/css files that live under base_url
+    - specifically include images/figures/tables that live under
+         <base>/na101/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
+         in case it has a suffix not covered by the first rule
+    - do not need to explicitly include the start_url
+    - include the TOC using the journal__id and volume_name to keep from leaking in to other volumes
+    - exclude the usual traps
+    - include the article in all possible formats - which live under non-deterministic DOI path; do not terminate, could go deeper
+    - use basic DOI pattern, to whit: PREFIX = one or more digits and dots [0-9.]+; SUFFIX = not a slash
+    - The following may not be needed by all Atypon publishers, but won't hurt:
+    - some publishers show in-line images in larger format using URL with show*Image and variations for other formats
+    - there can be additional arguments ([^=]+=[^&]*&)* between the showBlah? and the doi= at the end
+    massmedical and t&f have a number of additions 
+     -->
+    <list>
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
+      <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
+      <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>2,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[-.9]+$", base_url</string>
+      <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[^/]+", base_url</string>
+      <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup|downloadCitation)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      	<string>"^%sdoi/(pdf|pdfplus|full)/[.0-9]+/[^/]+$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>"Atypon Systems hosts this archival unit (AU) and require that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs.", base_url</string>
+  </entry>
+<!--  no base plugin HTML hash filter because each child will need their own -->
+<!--  no base plugin HTML crawl filter because each child will need their own if they need one -->
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponArticleIteratorFactory</string>
+  </entry>
+   <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>

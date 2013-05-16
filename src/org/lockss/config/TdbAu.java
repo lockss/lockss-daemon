@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.20 2013-03-18 23:21:36 pgust Exp $
+ * $Id: TdbAu.java,v 1.20.2.1 2013-04-04 05:30:27 pgust Exp $
  */
 
 /*
@@ -524,11 +524,17 @@ public class TdbAu implements BibliographicItem {
   }
 
   /**
-   * Convenience method returns the AU's TdbTitle's name.
+   * Returns the publication title. For books and book series, the
+   * publication title is the TdbAu name, otherwise, it is the TdbTitle name.
    *
-   * @return the name of this AU's TdbTitle, or <tt>null</tt>
+   * @return the name of this publication, or <tt>null</tt>
    */
   public String getJournalTitle() {
+    String pubType = getPublicationType();
+    if (   pubType.equalsIgnoreCase("book") 
+        || pubType.equalsIgnoreCase("bookSeries")) {
+      return name;
+    }
     return (title != null) ? title.getName() : null;
   }
 
@@ -601,6 +607,58 @@ public class TdbAu implements BibliographicItem {
     return issue;
   }
 
+  
+  /**
+   * Return publication type this AU. Values include "journal" for a journal,
+   * "book" if each AU is an individual book that is not part of a series, and
+   * "bookSeries" if each AU is an individual book that is part of a series.
+   * For a "bookSeries" the journalTitle() is returns the name of the series.
+   * For a "book" the journalTitle() is simply descriptive of the collection
+   * of books (e.g. "Springer Books") and can be ignored for bibliographic
+   * purposes.
+   * <p>
+   * Note: the value is computed from the issn and isbn values if not given.
+   * If both are given, returns "bookSeries." If isbn only is given, returns
+   * "books." If only issn is given or neither are given, returns "journal."  
+   * 
+   * @return publication type this title or "journal" if not specified
+   */
+  @Override
+  public String getPublicationType() {
+    String pubType = "journal";
+    if (props != null) {
+      pubType = props.get("type");
+      if (pubType == null) {
+        String isbn = getIsbn();
+        String issn = getIssn();
+        if (isbn != null) {
+          pubType = (issn != null) ? "bookSeries" : "book";
+        } else {
+          pubType = "journal";
+        }
+      }
+    }
+    return pubType;
+  }
+  
+  /**
+   * Return coverage depth of the content in this AU. Values include "fulltext"
+   * for full-text coverage, and "abstracts" for primarily or only "abstracts"
+   * coverage.
+   * 
+   * @return coverage depth this AU or "fulltext" if not specified
+   */
+  @Override
+  public String getCoverageDepth() {
+    String depth = "fulltext";
+    if (attrs != null) {
+      depth = attrs.get("au_coverage_depth");
+      if (depth == null) {
+        depth = "fullText";
+      }
+    }
+    return depth;
+  }
   
   /**
    * Return print ISSN for this AU.

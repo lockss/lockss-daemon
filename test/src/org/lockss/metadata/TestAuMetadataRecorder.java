@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.1 2013-03-12 19:33:56 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.1.2.1 2013-03-26 22:16:35 fergaloy-sf Exp $
  */
 
 /*
@@ -714,7 +714,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 	  .recordMetadata(conn, metadata.iterator());
 
       fail("Should be illegal to record a journal with no title or ISS");
-    } catch (RuntimeException re) {
+    } catch (MetadataException me) {
       // Expected.
     } finally {
       DbManager.safeRollbackAndClose(conn);

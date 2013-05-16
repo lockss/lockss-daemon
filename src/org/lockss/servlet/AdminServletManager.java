@@ -1,10 +1,10 @@
 /*
- * $Id: AdminServletManager.java,v 1.34 2013-03-11 05:43:11 clairegriffin Exp $
+ * $Id: AdminServletManager.java,v 1.34.2.1 2013-03-31 23:21:07 pgust Exp $
  */
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -255,13 +255,13 @@ public class AdminServletManager extends BaseServletManager {
           | ServletDescr.NEED_ROLE_AU_ADMIN),
           "Add or remove titles from this LOCKSS box");
   // XXXUI Development version
-  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
-          new ServletDescr("BatchAuConfigNew",
-          BatchAuConfigNew.class,
-          "Journal Configuration (New UI)",
-          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
-          | ServletDescr.NEED_ROLE_AU_ADMIN),
-          "Add or remove titles from this LOCKSS box");
+//  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG_NEW =
+//          new ServletDescr("BatchAuConfigNew",
+//          BatchAuConfigNew.class,
+//          "Journal Configuration (New UI)",
+//          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
+//          | ServletDescr.NEED_ROLE_AU_ADMIN),
+//          "Add or remove titles from this LOCKSS box");
   protected static final ServletDescr SERVLET_AU_CONFIG =
           new ServletDescr("AuConfig",
           AuConfig.class,
@@ -326,12 +326,12 @@ public class AdminServletManager extends BaseServletManager {
           ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
           "Status of LOCKSS box contents and operation");
   // XXXUI Development version
-  protected static final ServletDescr SERVLET_DAEMON_STATUS_NEW =
-          new ServletDescr("DaemonStatusNew",
-          DaemonStatusNew.class,
-          "Daemon Status (New UI)",
-          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
-          "Status of LOCKSS box contents and operation");
+//  protected static final ServletDescr SERVLET_DAEMON_STATUS_NEW =
+//          new ServletDescr("DaemonStatusNew",
+//          DaemonStatusNew.class,
+//          "Daemon Status (New UI)",
+//          ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
+//          "Status of LOCKSS box contents and operation");
   protected static final ServletDescr SERVLET_DISPLAY_CONTENT_STATUS =
           new ServletDescr("DisplayContentStatus",
           DisplayContentStatus.class,
@@ -545,14 +545,14 @@ public class AdminServletManager extends BaseServletManager {
   // XXXUI List of servlets to show in new UI: parallel main list but with new versions
   static final ServletDescr servletDescrsNew[] = {
     SERVLET_HOME,
-    SERVLET_BATCH_AU_CONFIG_NEW,
+//    SERVLET_BATCH_AU_CONFIG_NEW,
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_ADMIN_ACCESS_CONTROL,
     SERVLET_PROXY_ACCESS_CONTROL,
     SERVLET_PROXY_AND_CONTENT,
     SERVLET_PROXY_INFO,
-    SERVLET_DAEMON_STATUS_NEW,
+//    SERVLET_DAEMON_STATUS_NEW,
     SERVLET_DISPLAY_CONTENT_STATUS,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
@@ -584,7 +584,7 @@ public class AdminServletManager extends BaseServletManager {
   static final ServletDescr servletDescrsTransitional[] = {
     SERVLET_HOME,
     SERVLET_BATCH_AU_CONFIG,
-    SERVLET_BATCH_AU_CONFIG_NEW,
+//    SERVLET_BATCH_AU_CONFIG_NEW,
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
     SERVLET_ADMIN_ACCESS_CONTROL,
@@ -592,7 +592,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_PROXY_AND_CONTENT,
     SERVLET_PROXY_INFO,
     SERVLET_DAEMON_STATUS,
-    SERVLET_DAEMON_STATUS_NEW,
+//    SERVLET_DAEMON_STATUS_NEW,
     SERVLET_DISPLAY_CONTENT_STATUS,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,

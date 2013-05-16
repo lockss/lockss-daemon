@@ -1,0 +1,85 @@
+{
+
+  publisher <
+    name = Universidade Estadual de Campinas
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  param[base_url] = http://www.fae.unicamp.br/revista/
+  implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+  
+    title <
+      name = ETD - Educação Temática Digital ;
+      issn = 1676-2592
+    >
+
+    param[journal_id] = etd
+
+    au < released ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 >
+    au < released ; 2000 ; 1-2 ; ETD - Educação Temática Digital Volume 1-2 (2000) ; 2000 >
+    au < released ; 2001 ; 2-3 ; ETD - Educação Temática Digital Volume 2-3 (2001) ; 2001 >
+    au < released ; 2002 ; 3-4 ; ETD - Educação Temática Digital Volume 3-4 (2002) ; 2002 >
+    au < released ; 2003 ; 4-5 ; ETD - Educação Temática Digital Volume 4-5 (2003) ; 2003 >
+    au < released ; 2004 ; 5-6 ; ETD - Educação Temática Digital Volume 5-6 (2004) ; 2004 >
+    au < released ; 2005 ; 6-7 ; ETD - Educação Temática Digital Volume 6-7 (2005) ; 2005 >
+    au < released ; 2006 ; 7-8 ; ETD - Educação Temática Digital Volume 7-8 (2006) ; 2006 >
+    au < released ; 2007 ; 8-9 ; ETD - Educação Temática Digital Volume 8-9 (2007) ; 2007 >
+    au < released ; 2008 ; 9-10 ; ETD - Educação Temática Digital Volume 9-10 (2008) ; 2008 >
+    au < released ; 2009 ; 10-11 ; ETD - Educação Temática Digital Volume 10-11 (2009) ; 2009 >
+    au < released ; 2010 ; 11-12 ; ETD - Educação Temática Digital Volume 11-12 (2010) ; 2010 >
+    au < released ; 2011 ; 12-13 ; ETD - Educação Temática Digital Volume 12-13 (2011) ; 2011 >
+    au < released ; 2012 ; 14 ; ETD - Educação Temática Digital Volume 14 ; 2012 >
+
+  }
+
+  {
+  
+    title <
+      name = Revista HISTEDBR On-Line ;
+      issn = 1676-2584
+    >
+
+    param[journal_id] = histedbr
+
+    au < released ; 2009 ; 9 ; Revista HISTEDBR On-Line Volume 9 ; 2009 >
+    au < released ; 2010 ; 10 ; Revista HISTEDBR On-Line Volume 10 ; 2010 >
+    au < released ; 2011 ; 11 ; Revista HISTEDBR On-Line Volume 11 ; 2011 >
+    au < released ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 ; 2012 >
+
+  }
+
+  {
+  
+    title <
+      name = Zetetiké ;
+      eissn = 2176-1744
+    >
+
+    param[journal_id] = zetetike
+
+    au < released ; 1993 ; 1 ; Zetetiké Volume 1 ; 1993 >
+    au < released ; 1994 ; 2 ; Zetetiké Volume 2 ; 1994 >
+    au < released ; 1995 ; 3 ; Zetetiké Volume 3 ; 1995 >
+    au < released ; 1996 ; 4 ; Zetetiké Volume 4 ; 1996 >
+    au < released ; 1997 ; 5 ; Zetetiké Volume 5 ; 1997 >
+    au < released ; 1998 ; 6 ; Zetetiké Volume 6 ; 1998 >
+    au < released ; 1999 ; 7 ; Zetetiké Volume 7 ; 1999 >
+    au < released ; 2000 ; 8 ; Zetetiké Volume 8 ; 2000 >
+    au < released ; 2001 ; 9 ; Zetetiké Volume 9 ; 2001 >
+    au < released ; 2002 ; 10 ; Zetetiké Volume 10 ; 2002 >
+    au < released ; 2003 ; 11 ; Zetetiké Volume 11 ; 2003 >
+    au < released ; 2004 ; 12 ; Zetetiké Volume 12 ; 2004 >
+    au < released ; 2005 ; 13 ; Zetetiké Volume 13 ; 2005 >
+    au < released ; 2006 ; 14 ; Zetetiké Volume 14 ; 2006 >
+    au < released ; 2007 ; 15 ; Zetetiké Volume 15 ; 2007 >
+    au < released ; 2008 ; 16 ; Zetetiké Volume 16 ; 2008 >
+    au < released ; 2009 ; 17 ; Zetetiké Volume 17 ; 2009 >
+    au < released ; 2010 ; 18 ; Zetetiké Volume 18 ; 2010 >
+    au < released ; 2011 ; 19 ; Zetetiké Volume 19 ; 2011 >
+    au < released ; 2012 ; 20 ; Zetetiké Volume 20 ; 2012 >
+
+  }
+
+}

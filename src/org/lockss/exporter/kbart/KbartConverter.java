@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.40 2013-01-16 21:34:24 pgust Exp $
+ * $Id: KbartConverter.java,v 1.40.4.3 2013-04-04 05:30:27 pgust Exp $
  */
 
 /*
@@ -785,11 +785,13 @@ public class KbartConverter {
 
     // Now add information that can be retrieved from the AUs.
     // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
-    String printId = MetadataUtil.validateIsbn(au.getPrintIsbn());
-    String onlineId = MetadataUtil.validateIsbn(au.getEisbn());
-    if ((printId == null) && (onlineId == null)) {
-      printId = MetadataUtil.validateIssn(au.getPrintIssn());
-      onlineId = MetadataUtil.validateIssn(au.getEissn());
+    String printId = MetadataUtil.normaliseIsbn(au.getPrintIsbn());
+    String onlineId = MetadataUtil.normaliseIsbn(au.getEisbn());
+    // Only set ISSNs if the ISBNs are null and the AU is not a book series
+    if (   (printId == null) && (onlineId == null) 
+        && !au.getPublicationType().equalsIgnoreCase("bookSeries")) {
+      printId = MetadataUtil.normaliseIssn(au.getPrintIssn());
+      onlineId = MetadataUtil.normaliseIssn(au.getEissn());
     }
     baseKbt.setField(PRINT_IDENTIFIER, printId);
     baseKbt.setField(ONLINE_IDENTIFIER, onlineId);
@@ -890,17 +892,19 @@ public class KbartConverter {
     if (issnCheck!=null && !issnCheck.equals(kbt.getField(PRINT_IDENTIFIER))) {
       log.info(String.format("ISSN change within title %s => %s", 
           kbt.getField(PRINT_IDENTIFIER), issnCheck));
-      kbt.setField(PRINT_IDENTIFIER, MetadataUtil.validateIssn(issnCheck));
+      kbt.setField(PRINT_IDENTIFIER, MetadataUtil.normaliseIssn(issnCheck));
     }
     if (eissnCheck!=null && !eissnCheck.equals(kbt.getField(ONLINE_IDENTIFIER))) {
       log.info(String.format("EISSN change within title %s => %s", 
           kbt.getField(ONLINE_IDENTIFIER), eissnCheck));
-      kbt.setField(ONLINE_IDENTIFIER, MetadataUtil.validateIssn(eissnCheck));
+      kbt.setField(ONLINE_IDENTIFIER, MetadataUtil.normaliseIssn(eissnCheck));
     }
     if (titleIdCheck!=null && !titleIdCheck.equals(kbt.getField(TITLE_ID))) {
-      log.info(String.format("TITLE_ID (ISSN/ISBN) change within title %s => %s",
+      log.info(String.format("TITLE_ID change within title %s => %s",
           kbt.getField(TITLE_ID), titleIdCheck));
-      kbt.setField(TITLE_ID, MetadataUtil.validateIssn(titleIdCheck));
+      //kbt.setField(TITLE_ID, MetadataUtil.normaliseIssn(titleIdCheck));
+      // We make no assumptions about the type of data in the title_id
+      kbt.setField(TITLE_ID, titleIdCheck);
     }
   }
   

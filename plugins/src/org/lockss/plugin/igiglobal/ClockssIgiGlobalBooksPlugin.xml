@@ -1,0 +1,32 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - new plugin for book layout and params</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>IGI Global Books Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.igiglobal.IgiGlobalBooksPlugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+  <!--  The volume is really the publisher's unique book identifier number -->
+    <string>au_name</string>
+    <string>"IGI Global Books Plugin (CLOCKSS), Base URL %s, Book ISBN %s, Volume %s", base_url, book_isbn, volume</string>
+  </entry>
+</map>
+  

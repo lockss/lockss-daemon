@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.1 2012-12-07 07:16:06 fergaloy-sf Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.1.10.1 2013-03-26 22:14:30 fergaloy-sf Exp $
  */
 
 /*
@@ -276,6 +276,37 @@ class ArticleMetadataBuffer {
         pubDate = new PublicationDate(dateStr, locale);
       }
       return pubDate;
+    }
+
+    /**
+     * Provides a printable version of this object.
+     * 
+     * @return a String with the printable version of the object.
+     */
+    @Override
+    public String toString() {
+      return "ArticleMetadataInfo [publisher=" + publisher
+	  + ", journalTitle=" + journalTitle
+	  + ", isbn=" + isbn
+	  + ", eisbn=" + eisbn
+	  + ", issn=" + issn
+	  + ", eissn=" + eissn
+	  + ", volume=" + volume
+	  + ", issue=" + issue
+	  + ", startPage=" + startPage
+	  + ", pubDate=" + pubDate
+	  + ", pubYear=" + pubYear
+	  + ", articleTitle=" + articleTitle
+	  + ", authors=" + authors
+	  + ", authorSet=" + authorSet
+	  + ", doi="+ doi
+	  + ", accessUrl=" + accessUrl
+	  + ", featuredUrlMap=" + featuredUrlMap
+	  + ", keywordSet=" + keywordSet
+	  + ", endPage=" + endPage
+	  + ", coverage=" + coverage
+	  + ", itemNumber=" + itemNumber
+	  + ", proprietaryIdentifier=" + proprietaryIdentifier + "]";
     }
   }
 

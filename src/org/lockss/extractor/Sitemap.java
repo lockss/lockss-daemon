@@ -1,10 +1,10 @@
-/**
- * $Id: Sitemap.java,v 1.1 2013-03-19 18:42:23 ldoan Exp $
+/*
+ * $Id: Sitemap.java,v 1.1.2.1 2013-03-28 18:09:31 ldoan Exp $
  */
 
-/**
+/*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,91 +30,99 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.extractor;
+/*
+ * Some portion of this code is Copyright.
+ * 
+ * SitemapUrl.java - Represents a URL found in a Sitemap 
+ *  
+ * Copyright 2009 Frank McCown
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+package org.lockss.extractor;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.lockss.util.Logger;
 
 /**
- * The Sitemap class represents a Sitemap from the Sitemap Protocol
- * (http://www.sitemaps.org/). This class is modified from 
+ * Represents a Sitemap from the Sitemap Protocol
+ * in http://www.sitemaps.org/protocol. Modified from 
  * SourceForge open-source by Frank McCown.
  */
 public class Sitemap {
   
-  protected static Logger log = Logger.getLogger(Sitemap.class);
+  private static Logger log = Logger.getLogger(Sitemap.class);
 
-  /** Sitemap types supported*/
+  /** Sitemap types supported */
   public enum SitemapType {INDEX, XML, ATOM, RSS, TEXT};
   
+  /** Type of this Sitemap */
   private final SitemapType type;
-
   /** URLs found in this Sitemap */	
   private Map<String, SitemapUrl> urlMap;
 	
   /**
-   * Constructors
+   * Constructs a Sitemap with a type.
+   * 
+   * @param type an enum value of SitemapType
    */
-    
-  public Sitemap(SitemapType type) {
-    log.debug("in Sitemap constructor");
+  Sitemap(SitemapType type) {
     this.type = type;
     this.urlMap = new HashMap<String, SitemapUrl>();
   }
 	
   /**
-   * Setters
+   * Creates a hashmap with url as key and SitemapUrl as value.
+   * 
+   * @param sUrlToAdd
    */
-  
-  void addSitemapUrl(SitemapUrl sitemapUrl) {
-   
-    SitemapUrl sUrl = urlMap.get(sitemapUrl.getUrl());
-    
-    if (sUrl == null) { // not yet in hashmap
-      urlMap.put(sitemapUrl.getUrl(), sitemapUrl);
-    } else {
-      /** already in hashmap, compare lastmodified time
-        if the latest, then add to hashmap */
-      try {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date oldDate = sdf.parse(sUrl.getLastModified());
-        Date newDate = sdf.parse(sitemapUrl.getLastModified());
-
-        if (newDate.after(oldDate)) {
-          urlMap.put(sitemapUrl.getUrl(), sitemapUrl);
-        }
-        
-      }
-      catch (ParseException e) {
-        log.error("Date parsing error", e);
-      }
+  void addSitemapUrl(SitemapUrl sUrlToAdd) {
+    if (sUrlToAdd == null) {
+      throw
+	  new IllegalArgumentException("SitemapUrl can not be null.");
     }
-  
-  } /** end addSitemapUrl */
-    
-  
+    SitemapUrl sUrl = urlMap.get(sUrlToAdd.getUrl());
+    // if not yet in hashmap or if latest, then add
+    if ((sUrl == null)
+        || (sUrlToAdd.getLastModified() > sUrl.getLastModified())) {
+      urlMap.put(sUrlToAdd.getUrl(), sUrlToAdd);
+    }
+  }
+   
   /**
-   * Getters
+   * Returns the type of the sitemap.
+   * 
+   * @return type the type of the sitemap
    */
   public SitemapType getType() {
     return type;
   }
   
-  public Collection<SitemapUrl>getUrlMap() {
+  /**
+   * Returns the collection of SitemapUrl.
+   * 
+   * @return the collection of SitemapUrl
+   */
+  public Collection<SitemapUrl> getUrls() {
     return urlMap.values();		
   }
 
-  /**
-   * Display data
-   */
   public String toString() {
-    return ("[Sitemap type=\"" + type + ", urlMapSize=" + urlMap.size()) + "]";
+    return ("[Sitemap: type=" + type + ", urlMapSize=" + urlMap.size()) + "]";
   }
   
-} /** end class Sitemap */
+}

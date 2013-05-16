@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<proceeding ver="5.0" ts="12/22/2008">
+<conference_rec>
+	<conference_date>
+		<start_date>01/17/2010</start_date>
+		<end_date>01/23/2010</end_date>
+	</conference_date>
+	<conference_loc>
+		<city><![CDATA[Madrid]]></city>
+		<state></state>
+		<country>Spain</country>
+	</conference_loc>
+	<conference_url></conference_url>
+</conference_rec>
+<series_rec>
+	<series>
+		<series_id>SERIES317</series_id>
+		<series_title><![CDATA[Annual Symposium on Principles of Stuff]]></series_title>
+		<series_vol></series_vol>
+	</series>
+</series_rec>
+<proceeding_rec>
+	<proc_id>1706299</proc_id>
+	<acronym>POXX '10</acronym>
+	<proc_desc>Proceedings of the 37th annual Stuff symposium</proc_desc>
+	<conference_number>37</conference_number>
+	<proc_class>conference</proc_class>
+	<proc_title>Principles of Stuff</proc_title>
+	<proc_subtitle></proc_subtitle>
+	<proc_volume_no></proc_volume_no>
+	<isbn>978-1-60558-479-9</isbn>
+	<issn></issn>
+	<copyright_year>2010</copyright_year>
+	<publication_date>01/17/2010</publication_date>
+	<pages>508</pages>
+	<plus_pages>12</plus_pages>
+	<order_no>549101</order_no>
+	<price><![CDATA[]]></price>
+	<other_source></other_source>
+	<abstract>
+		<par><![CDATA[<p>Welcome to the Thirty-Seventh Symposium on Stuff.</p>]]></par>
+	</abstract>
+	<publisher>
+		<publisher_id>PUB01</publisher_id>
+		<publisher_code>XXXXX</publisher_code>
+		<publisher_name>XXX</publisher_name>
+		<publisher_address>2 XXX Plaza, Suite 000</publisher_address>
+		<publisher_city>New York</publisher_city>
+		<publisher_state>NY</publisher_state>
+		<publisher_country>USA</publisher_country>
+		<publisher_zip_code>10121-0701</publisher_zip_code>
+		<publisher_contact>John Publisher</publisher_contact>
+		<publisher_phone>212 857-6309</publisher_phone>
+		<publisher_isbn_prefix></publisher_isbn_prefix>
+		<publisher_url>www.xxx.org/publications</publisher_url>
+	</publisher>
+	<sponsor_rec>
+		<sponsor>
+			<sponsor_id>SP000</sponsor_id>
+			<sponsor_name>First Sponsor</sponsor_name>
+			<sponsor_abbr>FSPONS</sponsor_abbr>
+		</sponsor>
+		<sponsor>
+			<sponsor_id>SP001</sponsor_id>
+			<sponsor_name>Second Sponsor</sponsor_name>
+			<sponsor_abbr>SECSPON</sponsor_abbr>
+		</sponsor>
+	</sponsor_rec>
+	<categories>
+		<primary_category>
+			<cat_node/>
+			<descriptor/>
+			<type/>
+		</primary_category>
+	</categories>
+	<chair_editor>
+		<ch_ed>
+			<person_id>P1911155</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Manuel]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Chair]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[Chair of Madrid, Spain]]></affiliation>
+			<role><![CDATA[General Chair]]></role>
+		</ch_ed>
+		<ch_ed>
+			<person_id>P1911156</person_id>
+			<seq_no>2</seq_no>
+			<first_name><![CDATA[Jens]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[ChairTwo]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[University of California]]></affiliation>
+			<role><![CDATA[Program Chair]]></role>
+		</ch_ed>
+	</chair_editor>
+	<front_matter>
+		<fm_file>frontmatter.pdf</fm_file>
+		<fm_text>(title page, copyright, welcome, contents, organization)</fm_text>
+	</front_matter>
+	<back_matter>
+		<bm_file>backmatter.pdf</bm_file>
+		<bm_text>(author index)</bm_text>
+	</back_matter>
+</proceeding_rec>
+<section>
+	<section_id>1706300</section_id>
+	<sort_key>10</sort_key>
+	<section_seq_no>1</section_seq_no>
+	<section_type>SESSION</section_type>
+	<section_title><![CDATA[Invited talk]]></section_title>
+	<section_page_from>10</section_page_from>
+	<chair_editor>
+		<ch_ed>
+			<person_id>P1911157</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Jens]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[ChairTwo]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[University of California]]></affiliation>
+			<role><![CDATA[Session Chair]]></role>
+		</ch_ed>
+	</chair_editor>
+	<article_rec>
+		<article_id>1706301</article_id>
+		<sort_key>20</sort_key>
+		<display_label>p</display_label>
+		<display_no></display_no>
+		<article_publication_date>01-17-2010</article_publication_date>
+		<seq_no>1</seq_no>
+		<title><![CDATA[Article Title]]></title>
+		<subtitle><![CDATA[(RALA)]]></subtitle>
+		<page_from>1</page_from>
+		<page_to>6</page_to>
+		<doi_number>10.1145/1706299.XXXXXX</doi_number>
+		<url></url>
+		<foreign_title></foreign_title>
+		<foreign_subtitle></foreign_subtitle>
+		<language></language>
+		<abstract>
+			<par><![CDATA[<p>Computer Stuff</p>]]></par>
+		</abstract>
+		<keywords>
+			<kw><![CDATA[asynchronous]]></kw>
+			<kw><![CDATA[automata]]></kw>
+			<kw><![CDATA[logic]]></kw>
+			<kw><![CDATA[reconfigurable]]></kw>
+		</keywords>
+		<categories>
+			<primary_category>
+				<cat_node>C.1.3</cat_node>
+				<descriptor>Adaptable architectures</descriptor>
+				<type>S</type>
+			</primary_category>
+		</categories>
+		<general_terms>
+			<gt>Design</gt>
+			<gt>Languages</gt>
+			<gt>Performance</gt>
+			<gt>Theory</gt>
+		</general_terms>
+		<authors>
+			<au>
+				<person_id>P1911158</person_id>
+				<seq_no>1</seq_no>
+				<first_name><![CDATA[Neil]]></first_name>
+				<middle_name><![CDATA[]]></middle_name>
+				<last_name><![CDATA[Author]]></last_name>
+				<suffix><![CDATA[]]></suffix>
+				<affiliation><![CDATA[MIT]]></affiliation>
+				<role><![CDATA[Author]]></role>
+			</au>
+		</authors>
+		<fulltext>
+			<file>
+				<seq_no>1</seq_no>
+				<fname>p1-article1.pdf</fname>
+			</file>
+		</fulltext>
+			<ccc>
+			  <copyright_holder>
+			      <copyright_holder_name>Copyright held by author(s).</copyright_holder_name>
+			      <copyright_holder_year>2009</copyright_holder_year>
+			  </copyright_holder>
+			</ccc>
+	</article_rec>
+</section>
+<section>
+	<section_id>1706302</section_id>
+	<sort_key>30</sort_key>
+	<section_seq_no>2</section_seq_no>
+	<section_type>SESSION</section_type>
+	<section_title><![CDATA[Concurrency]]></section_title>
+	<section_page_from>30</section_page_from>
+	<chair_editor>
+		<ch_ed>
+			<person_id>P1911166</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[John]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[Author]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[A Place]]></affiliation>
+			<role><![CDATA[Session Chair]]></role>
+		</ch_ed>
+	</chair_editor>
+	<article_rec>
+		<article_id>1706303</article_id>
+		<sort_key>40</sort_key>
+		<display_label>p</display_label>
+		<display_no></display_no>
+		<article_publication_date>01-17-2010</article_publication_date>
+		<seq_no>1</seq_no>
+		<title><![CDATA[On Stuff]]></title>
+		<subtitle></subtitle>
+		<page_from>7</page_from>
+		<page_to>18</page_to>
+		<doi_number>10.1145/1706299.Xxxxxx</doi_number>
+		<url></url>
+		<foreign_title></foreign_title>
+		<foreign_subtitle></foreign_subtitle>
+		<language></language>
+		<abstract>
+			<par><![CDATA[<p>We address stuff.</p>]]></par>
+		</abstract>
+		<keywords>
+			<kw><![CDATA[infinite state systems]]></kw>
+			<kw><![CDATA[lossy channel systems]]></kw>
+			<kw><![CDATA[program verification]]></kw>
+			<kw><![CDATA[relaxed memory models]]></kw>
+		</keywords>
+		<categories>
+			<primary_category>
+				<cat_node>D.2.4</cat_node>
+				<descriptor/>
+				<type/>
+			</primary_category>
+		</categories>
+		<general_terms>
+			<gt>Reliability</gt>
+			<gt>Theory</gt>
+			<gt>Verification</gt>
+		</general_terms>
+		<authors>
+			<au>
+				<person_id>P1911024</person_id>
+				<seq_no>1</seq_no>
+				<first_name><![CDATA[Sam]]></first_name>
+				<middle_name><![CDATA[]]></middle_name>
+				<last_name><![CDATA[Blah]]></last_name>
+				<suffix><![CDATA[]]></suffix>
+				<affiliation><![CDATA[University of Place]]></affiliation>
+				<role><![CDATA[Author]]></role>
+			</au>
+			<au>
+				<person_id>P1911025</person_id>
+				<seq_no>2</seq_no>
+				<first_name><![CDATA[Another]]></first_name>
+				<middle_name><![CDATA[]]></middle_name>
+				<last_name><![CDATA[Author]]></last_name>
+				<suffix><![CDATA[]]></suffix>
+				<affiliation><![CDATA[Another Place]]></affiliation>
+				<role><![CDATA[Author]]></role>
+			</au>
+		</authors>
+		<references>
+			<ref>
+				<ref_obj_id></ref_obj_id>
+				<ref_seq_no>1</ref_seq_no>
+				<ref_text><![CDATA[A Reference, 1993.]]></ref_text>
+				<ref_id></ref_id>
+			</ref>
+			<ref>
+				<ref_obj_id>685202</ref_obj_id>
+				<ref_seq_no>2</ref_seq_no>
+				<ref_text><![CDATA[A Second Reference, 1994.]]></ref_text>
+				<ref_id></ref_id>
+			</ref>
+		</references>
+		<fulltext>
+			<file>
+				<seq_no>1</seq_no>
+				<fname>p7-art.pdf</fname>
+			</file>
+		</fulltext>
+			<ccc>
+			  <copyright_holder>
+			      <copyright_holder_name>ACM</copyright_holder_name>
+			      <copyright_holder_year>2010</copyright_holder_year>
+			  </copyright_holder>
+			</ccc>
+	</article_rec>
+</section>
+</proceeding>

@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Accreditation Council for Graduate Medical Education ;
+    comment[platform] = Atypon ;
+    info[tester] = 0
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://www.jgme.org/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Journal of Graduate Medical Education ;
+      issn = 1949-8349 ;
+      eissn = 1949-8357 
+    >
+    
+    param[journal_id] = jgme
+    
+    au < exists ; 2009 ; Journal of Graduate Medical Education Volume 1 ; 1 >
+    au < exists ; 2010 ; Journal of Graduate Medical Education Volume 2 ; 2 >
+    au < exists ; 2011 ; Journal of Graduate Medical Education Volume 3 ; 3 >
+    au < exists ; 2012 ; Journal of Graduate Medical Education Volume 4 ; 4 >
+    au < expected ; 2013 ; Journal of Graduate Medical Education Volume 5 ; 5 >
+    
+  }
+  
+}

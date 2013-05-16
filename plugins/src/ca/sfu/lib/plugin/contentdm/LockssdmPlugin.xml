@@ -1,0 +1,76 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>ca.sfu.lib.plugin.contentdm.LockssdmPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Simon Fraser University LOCKSSdm Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection ID</displayName>
+        <description>The identifier of this collection, e.g. vpl for http://content.lib.sfu.ca/cdm/lockss/manifest/vpl/2</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>chunk_number</key>
+        <displayName>Chunk Number</displayName>
+        <description>The number of this chunk of the collection, e.g. 2 for http://content.lib.sfu.ca/cdm/lockss/manifest/vpl/2</description>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Simon Fraser University LOCKSSdm Plugin, Base URL %s, Collection ID %s, Chunk %d", base_url, collection_id, chunk_number</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%scdm/lockss/manifest/%s/%d", base_url, collection_id, chunk_number</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%scdm/lockss/display/%s/", base_url, collection_id</string>
+      <string>1,"^%sutils/(getfile|getthumbnail)/collection/%s/", base_url, collection_id</string>
+      <string>1,"^%sutils/ajaxhelper/\?CISOROOT=/%s&amp;", base_url, collection_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+</map>

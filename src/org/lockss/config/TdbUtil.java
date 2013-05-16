@@ -1,5 +1,5 @@
 /*
- * $Id: TdbUtil.java,v 1.18 2013-01-10 18:27:30 easyonthemayo Exp $
+ * $Id: TdbUtil.java,v 1.18.8.3 2013-04-04 17:29:06 pgust Exp $
  */
 
 /*
@@ -595,15 +595,6 @@ public class TdbUtil {
   }
 
   /**
-   * Test whether an AU appears to be a book, that is it has some sort of ISBN.
-   * @param au
-   * @return
-   */
-  public static boolean isBook(TdbAu au) {
-    return !StringUtil.isNullString(au.getIsbn());
-  }
-
-  /**
    * An enum representing the various scopes which can be requested and 
    * returned for the contents of a LOCKSS box. ContentScope is only really
    * relevant to TDB-based reports in a running daemon, not external data.
@@ -698,16 +689,25 @@ public class TdbUtil {
   public static enum ContentType {
     JOURNALS ("Journals") {
       @Override
-      /** An AU is considered a journal if it has no ISBN. */
+      /** An AU is considered a journal if it is of type journal and has no
+       * ISBN. This will omit bookSeries. */
       public boolean isOfType(BibliographicItem au) {
-        return StringUtil.isNullString(au.getIsbn());
+        //return StringUtil.isNullString(au.getIsbn());
+        return "journal".equals(au.getPublicationType()) /*&&
+            StringUtil.isNullString(au.getIsbn())*/
+            ;
       }
     },
     BOOKS ("Books") {
       @Override
       /** An AU is considered a book if it has an ISBN. */
       public boolean isOfType(BibliographicItem au) {
-        return !StringUtil.isNullString(au.getIsbn());
+        //return !StringUtil.isNullString(au.getIsbn());
+        return "book".equals(au.getPublicationType()) ||
+            "bookSeries".equals(au.getPublicationType()) /*||
+            // book series collected under journal
+            "journal".equals(au.getPublicationType()) && !StringUtil.isNullString(au.getIsbn())*/
+            ;
       }
     },
     ALL ("All types") {

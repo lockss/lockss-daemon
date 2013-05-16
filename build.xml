@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.334 2013-03-19 21:10:42 thib_gc Exp $
+ $Id: build.xml,v 1.338 2013-05-08 09:08:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -358,6 +358,26 @@ Args:
   <!-- Database schema documentation. -->
   <property name="schema.doc.dir" value="${javadoc}/schemadoc"/>
 
+  <!-- Needed by web services -->
+  <property name="aopalliance.jar" value="${lib}/aopalliance-1.0.jar" />
+  <property name="asm.jar" value="${lib}/asm-3.3.1.jar" />
+  <property name="cxf.jar" value="${lib}/cxf-2.6.2.jar" />
+  <property name="FastInfoset.jar" value="${lib}/FastInfoset-1.2.9.jar" />
+  <property name="jaxb-impl.jar" value="${lib}/jaxb-impl-2.2.5.jar" />
+  <property name="jaxb-xjc.jar" value="${lib}/jaxb-xjc-2.2.5.jar" />
+  <property name="mimepull.jar" value="${lib}/mimepull-1.7.jar" />
+  <property name="neethi.jar" value="${lib}/neethi-3.0.2.jar" />
+  <property name="spring-aop.jar" value="${lib}/spring-aop-3.0.7.RELEASE.jar" />
+  <property name="spring-asm.jar" value="${lib}/spring-asm-3.0.7.RELEASE.jar" />
+  <property name="spring-beans.jar" value="${lib}/spring-beans-3.0.7.RELEASE.jar" />
+  <property name="spring-context.jar" value="${lib}/spring-context-3.0.7.RELEASE.jar" />
+  <property name="spring-core.jar" value="${lib}/spring-core-3.0.7.RELEASE.jar" />
+  <property name="spring-expression.jar" value="${lib}/spring-expression-3.0.7.RELEASE.jar" />
+  <property name="spring-web.jar" value="${lib}/spring-web-3.0.7.RELEASE.jar" />
+  <property name="velocity.jar" value="${lib}/velocity-1.7.jar" />
+  <property name="wsdl4j.jar" value="${lib}/wsdl4j-1.6.2.jar" />
+  <property name="xmlschema-core.jar" value="${lib}/xmlschema-core-2.0.3.jar" />
+
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
@@ -428,6 +448,25 @@ Args:
     <pathelement path="${commons.beanutils.jar}" />
     <!-- Jars for I18N -->
     <pathelement path="${gettext.commons.jar}" />
+	<!-- Needed by web services -->
+	<pathelement path="${aopalliance.jar}" />
+	<pathelement path="${asm.jar}" />
+	<pathelement path="${cxf.jar}" />
+	<pathelement path="${FastInfoset.jar}" />
+	<pathelement path="${jaxb-impl.jar}" />
+	<pathelement path="${jaxb-xjc.jar}" />
+	<pathelement path="${mimepull.jar}" />
+	<pathelement path="${neethi.jar}" />
+	<pathelement path="${spring-aop.jar}" />
+	<pathelement path="${spring-asm.jar}" />
+	<pathelement path="${spring-beans.jar}" />
+	<pathelement path="${spring-context.jar}" />
+	<pathelement path="${spring-core.jar}" />
+	<pathelement path="${spring-expression.jar}" />
+	<pathelement path="${spring-web.jar}" />
+	<pathelement path="${velocity.jar}" />
+	<pathelement path="${wsdl4j.jar}" />
+	<pathelement path="${xmlschema-core.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -2755,6 +2794,18 @@ Test results in ${test.results}
     </findbugs>
   </target>
 
+  <target name="findbugs-plugins" depends="jar-plugins, -load.findbugs"
+   description="Run FindBugs on the plugins source tree." >
+    <findbugs home="${findbugs.home}"
+              output="emacs"
+              jvmargs="-Xmx512m"
+              excludeFilter="test/scripts/findbugsexclude.xml" >
+      <auxClasspath refid="plugins.test.run.classpath" />
+      <sourcePath path="${plugins.src}" />
+      <class location="${lockss.plugins.jar}" />
+    </findbugs>
+  </target>
+
 
 <!--
   <target name="check.ant-contrib.jar" unless="ant-contrib.available" >
@@ -2847,11 +2898,6 @@ optionally -Dtests= for tests to be run.
 
   <target name="javadoc-apiviz" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs"
           description="Make the javadocs along with apiviz UML graphs.">
-    <!-- Write the text param doc into the doc tree -->
-    <java classname="ParamDoc" fork="true">
-       <classpath refid="test.run.classpath" />
-       <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
-    </java>
     <javadoc
         doclet="org.jboss.apiviz.APIviz"
         docletpath="${apiviz.jar}"

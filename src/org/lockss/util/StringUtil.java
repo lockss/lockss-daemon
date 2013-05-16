@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.110 2012-08-16 22:17:35 fergaloy-sf Exp $
+ * $Id: StringUtil.java,v 1.110.16.1 2013-03-31 07:16:57 tlipkis Exp $
  */
 
 /*
@@ -491,6 +491,18 @@ public class StringUtil {
    */
   public static Vector<String> breakAt(String s, String sep, int maxItems) {
     return breakAt(s, sep, maxItems, false);
+  }
+
+  /** Break a string at a separator String, returning a vector of  strings.  
+   * @param s string containing zero or more occurrences of separator
+   * @param sep the separator String
+   * @param trimAndDiscardEmpty if true, each string is trim()ed, and empty
+   * strings (caused by delimiters at the start or end of the string, or
+   * adjacent delimiters) will not be included in the result.
+   */
+  public static Vector<String> breakAt(String s, String sep,
+				       boolean trimAndDiscardEmpty) {
+    return breakAt(s, sep, 0, true, true);
   }
 
   /**
@@ -1674,7 +1686,7 @@ public class StringUtil {
   public static boolean containsString(Reader reader, String str,
 				       boolean ignoreCase)
       throws IOException {
-    return containsString(reader, str, ignoreCase, 256);
+    return containsString(reader, str, ignoreCase, 4096);
   }
 
   /**
@@ -1685,6 +1697,44 @@ public class StringUtil {
    * reached without finding the string
    */
   public static boolean containsString(Reader reader, String str,
+				       boolean ignoreCase, int buffSize)
+      throws IOException {
+    if (reader == null) {
+      throw new NullPointerException("Called with a null reader");
+    } else if (str == null) {
+      throw new NullPointerException("Called with a null string");
+    } else if (str.length() == 0) {
+      throw new IllegalArgumentException("Called with a blank String");
+    } else if (buffSize <= 0) {
+      throw new IllegalArgumentException("Called with a buffSize < 0");
+    }
+
+    int strlen = str.length();
+    buffSize = Math.max(buffSize, strlen * 2);
+
+    String regex = java.util.regex.Pattern.quote(str);
+    int flags = ignoreCase ? java.util.regex.Pattern.CASE_INSENSITIVE : 0;
+    java.util.regex.Pattern pat = java.util.regex.Pattern.compile(regex, flags);
+    StringBuilder sb = new StringBuilder();
+    while (StringUtil.fillFromReader(reader, sb, buffSize - sb.length())) {
+      java.util.regex.Matcher m1 = pat.matcher(sb);
+      if (m1.find()) {
+	return true;
+      }
+      int sblen = sb.length();
+      if (sblen < buffSize) {
+	return false;
+      }
+      int shift = strlen - 1;
+      StringUtil.copyChars(sb, sblen - shift, 0, shift);
+      sb.setLength(shift);
+    }
+    return false;
+  }
+
+  // BoyerMoore.java throws on some inputs with ignoreCase = true.
+  // This implementation retired pending a fix.
+  /*public*/ static boolean containsString_bug(Reader reader, String str,
 				       boolean ignoreCase, int buffSize)
       throws IOException {
     if (reader == null) {

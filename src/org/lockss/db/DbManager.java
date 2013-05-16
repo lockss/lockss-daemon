@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.15 2013-03-10 23:44:59 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.15.2.1 2013-03-26 22:09:32 fergaloy-sf Exp $
  */
 
 /*
@@ -1629,6 +1629,66 @@ public class DbManager extends BaseLockssDaemonManager
     + " on " + AU_PROBLEM_TABLE
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
   };
+  
+  // SQL statement that obtains all the rows from the ISBN table.
+  private static final String FIND_ISBNS = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + ISBN_COLUMN
+      + "," + ISBN_TYPE_COLUMN
+      + " from " + ISBN_TABLE
+      + " order by "+ MD_ITEM_SEQ_COLUMN
+      + "," + ISBN_COLUMN
+      + "," + ISBN_TYPE_COLUMN;
+
+  // SQL statement that removes all the rows for a given publication ISBN of a
+  // given type.
+  private static final String REMOVE_ISBN = "delete from " + ISBN_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISBN_COLUMN + " = ?"
+      + " and " + ISBN_TYPE_COLUMN + " = ?";
+
+  // SQL statement that adds a row for a given publication ISBN of a given type.
+  private static final String ADD_ISBN = "insert into " + ISBN_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + ISBN_COLUMN
+      + "," + ISBN_TYPE_COLUMN
+      + ") values (?, ?, ?)";
+  
+  // SQL statement that obtains all the rows from the ISSN table.
+  private static final String FIND_ISSNS = "select "
+      + MD_ITEM_SEQ_COLUMN
+      + "," + ISSN_COLUMN
+      + "," + ISSN_TYPE_COLUMN
+      + " from " + ISSN_TABLE
+      + " order by "+ MD_ITEM_SEQ_COLUMN
+      + "," + ISSN_COLUMN
+      + "," + ISSN_TYPE_COLUMN;
+
+  // SQL statement that removes all the rows for a given publication ISSN of a
+  // given type.
+  private static final String REMOVE_ISSN = "delete from " + ISSN_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + ISSN_COLUMN + " = ?"
+      + " and " + ISSN_TYPE_COLUMN + " = ?";
+
+  // SQL statement that adds a row for a given publication ISSN of a given type.
+  private static final String ADD_ISSN = "insert into " + ISSN_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + ISSN_COLUMN
+      + "," + ISSN_TYPE_COLUMN
+      + ") values (?, ?, ?)";
+
+  // SQL statements that create the necessary version 6 indices.
+  private static final String[] VERSION_6_INDEX_CREATE_QUERIES = new String[] {
+    "create unique index idx2_" + ISBN_TABLE
+    + " on " + ISBN_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + "," + ISBN_COLUMN + "," + ISBN_TYPE_COLUMN
+    + ")",
+    "create unique index idx2_" + ISSN_TABLE
+    + " on " + ISSN_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + "," + ISSN_COLUMN + "," + ISSN_TYPE_COLUMN
+    + ")"
+  };
 
   // Database metadata keys.
   private static final String COLUMN_NAME = "COLUMN_NAME";
@@ -1686,7 +1746,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 5;
+  private int targetDatabaseVersion = 6;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2037,6 +2097,8 @@ public class DbManager extends BaseLockssDaemonManager
 	updateDatabaseFrom3To4(conn);
       } else if (from == 4) {
 	updateDatabaseFrom4To5(conn);
+      } else if (from == 5) {
+	updateDatabaseFrom5To6(conn);
       } else {
 	log.error("Non-existent method to update the database from version "
 	    + from + ".");
@@ -3774,7 +3836,7 @@ public class DbManager extends BaseLockssDaemonManager
    *           if any problem occurred accessing the database.
    */
   private void createVersion4Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion3Indices(): ";
+    final String DEBUG_HEADER = "createVersion4Indices(): ";
 
     // Loop through all the indices.
     for (String query : VERSION_4_INDEX_CREATE_QUERIES) {
@@ -4073,7 +4135,7 @@ public class DbManager extends BaseLockssDaemonManager
    *           if any problem occurred accessing the database.
    */
   private void createVersion5Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion3Indices(): ";
+    final String DEBUG_HEADER = "createVersion5Indices(): ";
 
     // Loop through all the indices.
     for (String query : VERSION_5_INDEX_CREATE_QUERIES) {
@@ -4088,6 +4150,308 @@ public class DbManager extends BaseLockssDaemonManager
         throw sqle;
       } finally {
         DbManager.safeCloseStatement(statement);
+      }
+    }
+  }
+
+  /**
+   * Updates the database from version 5 to version 6.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom5To6(Connection conn)
+      throws BatchUpdateException, SQLException {
+    // Remove duplicated rows in the ISBN table.
+    removeDuplicateIsbns(conn);
+
+    // Remove duplicated rows in the ISSN table.
+    removeDuplicateIssns(conn);
+
+    // Create the necessary indices.
+    createVersion6Indices(conn);
+  }
+
+  /**
+   * Removes duplicated rows in the ISBN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+  *           if any problem occurred accessing the database.
+   */
+  private void removeDuplicateIsbns(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "removeDuplicateIsbns(): ";
+    PreparedStatement findStatement = null;
+    PreparedStatement deleteStatement = null;
+    PreparedStatement insertStatement = null;
+    Long previousMdItemSeq = null;
+    String previousIsbn = null;
+    String previousIsbnType = null;
+    Long mdItemSeq = null;
+    String isbn = null;
+    String isbnType = null;
+    ResultSet resultSet = null;
+    int count;
+    boolean done = false;
+    boolean foundDuplicate = false;
+
+    // Repeat until there are no duplicated ISBNs.
+    while (!done) {
+      try {
+	// Get all the ISBN rows.
+	findStatement = prepareStatementBeforeReady(conn, FIND_ISBNS);
+	resultSet = executeQueryBeforeReady(findStatement);
+
+	// Loop through all the ISBN rows.
+	while (resultSet.next()) {
+	  // Get the data of the row.
+	  mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  isbn = resultSet.getString(ISBN_COLUMN);
+	  isbnType = resultSet.getString(ISBN_TYPE_COLUMN);
+
+	  // Check whether this row is a duplicate of the previous one.
+	  if (mdItemSeq.equals(previousMdItemSeq)
+	      && isbn.equals(previousIsbn)
+	      && isbnType.equals(previousIsbnType)) {
+	    // Yes: Handle it.
+	    if (log.isDebug3()) {
+	      log.debug3(DEBUG_HEADER + "Duplicated mdItemSeq = " + mdItemSeq);
+	      log.debug3(DEBUG_HEADER + "Duplicated isbn = " + isbn);
+	      log.debug3(DEBUG_HEADER + "Duplicated isbnType = " + isbnType);
+	    }
+
+	    foundDuplicate = true;
+	    break;
+	  } else {
+	    // No: Rememeber it.
+	    previousMdItemSeq = mdItemSeq;
+	    previousIsbn = isbn;
+	    previousIsbnType = isbnType;
+	  }
+	}
+      } catch (SQLException sqle) {
+	log.error("Cannot find ISBNs", sqle);
+	log.error("SQL = '" + FIND_ISBNS + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseResultSet(resultSet);
+	DbManager.safeCloseStatement(findStatement);
+      }
+
+      // Check whether no duplicate ISBNs were found.
+      if (!foundDuplicate) {
+	// Yes: Done.
+	done = true;
+	continue;
+      }
+
+      // No: Delete all the duplicate rows found.
+      try {
+	deleteStatement = prepareStatementBeforeReady(conn, REMOVE_ISBN);
+
+	deleteStatement.setLong(1, mdItemSeq);
+	deleteStatement.setString(2, isbn);
+	deleteStatement.setString(3, isbnType);
+
+	count = executeUpdateBeforeReady(deleteStatement);
+	log.debug3(DEBUG_HEADER + "count = " + count);
+      } catch (SQLException sqle) {
+	log.error("Cannot delete ISBN", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("isbn = " + isbn);
+	log.error("isbnType = " + isbnType);
+	log.error("SQL = '" + REMOVE_ISBN + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(deleteStatement);
+      }
+
+      // Insert back one instance of the deleted rows.
+      try {
+	insertStatement = prepareStatementBeforeReady(conn, ADD_ISBN);
+
+	insertStatement.setLong(1, mdItemSeq);
+	insertStatement.setString(2, isbn);
+	insertStatement.setString(3, isbnType);
+
+	count = executeUpdateBeforeReady(insertStatement);
+	log.debug3(DEBUG_HEADER + "count = " + count);
+
+	conn.commit();
+      } catch (SQLException sqle) {
+	log.error("Cannot add ISBN", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("isbn = " + isbn);
+	log.error("isbnType = " + isbnType);
+	log.error("SQL = '" + ADD_ISBN + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(insertStatement);
+      }
+
+      // Prepare to repeat the process.
+      previousMdItemSeq = null;
+      previousIsbn = null;
+      previousIsbnType = null;
+      foundDuplicate = false;
+    }
+  }
+
+  /**
+   * Removes duplicated rows in the ISSN table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void removeDuplicateIssns(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "removeDuplicateIssns(): ";
+    PreparedStatement findStatement = null;
+    PreparedStatement deleteStatement = null;
+    PreparedStatement insertStatement = null;
+    Long previousMdItemSeq = null;
+    String previousIssn = null;
+    String previousIssnType = null;
+    Long mdItemSeq = null;
+    String issn = null;
+    String issnType = null;
+    ResultSet resultSet = null;
+    int count;
+    boolean done = false;
+    boolean foundDuplicate = false;
+
+    // Repeat until there are no duplicated ISSNs.
+    while (!done) {
+      try {
+	// Get all the ISSN rows.
+	findStatement = prepareStatementBeforeReady(conn, FIND_ISSNS);
+	resultSet = executeQueryBeforeReady(findStatement);
+
+	// Loop through all the ISSN rows.
+	while (resultSet.next()) {
+	  // Get the data of the row.
+	  mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  issn = resultSet.getString(ISSN_COLUMN);
+	  issnType = resultSet.getString(ISSN_TYPE_COLUMN);
+
+	  // Check whether this row is a duplicate of the previous one.
+	  if (mdItemSeq.equals(previousMdItemSeq)
+	      && issn.equals(previousIssn)
+	      && issnType.equals(previousIssnType)) {
+	    // Yes: Handle it.
+	    if (log.isDebug3()) {
+	      log.debug3(DEBUG_HEADER + "Duplicated mdItemSeq = " + mdItemSeq);
+	      log.debug3(DEBUG_HEADER + "Duplicated issn = " + issn);
+	      log.debug3(DEBUG_HEADER + "Duplicated issnType = " + issnType);
+	    }
+
+	    foundDuplicate = true;
+	    break;
+	  } else {
+	    // No: Rememeber it.
+	    previousMdItemSeq = mdItemSeq;
+	    previousIssn = issn;
+	    previousIssnType = issnType;
+	  }
+	}
+      } catch (SQLException sqle) {
+	log.error("Cannot find ISSNs", sqle);
+	log.error("SQL = '" + FIND_ISSNS + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseResultSet(resultSet);
+	DbManager.safeCloseStatement(findStatement);
+      }
+
+      // Check whether no duplicate ISSNs were found.
+      if (!foundDuplicate) {
+	// Yes: Done.
+	done = true;
+	continue;
+      }
+
+      // No: Delete all the duplicate rows found.
+      try {
+	deleteStatement = prepareStatementBeforeReady(conn, REMOVE_ISSN);
+
+	deleteStatement.setLong(1, mdItemSeq);
+	deleteStatement.setString(2, issn);
+	deleteStatement.setString(3, issnType);
+
+	count = executeUpdateBeforeReady(deleteStatement);
+	log.debug3(DEBUG_HEADER + "count = " + count);
+      } catch (SQLException sqle) {
+	log.error("Cannot delete ISSN", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("issn = " + issn);
+	log.error("issnType = " + issnType);
+	log.error("SQL = '" + REMOVE_ISSN + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(deleteStatement);
+      }
+
+      // Insert back one instance of the deleted rows.
+      try {
+	insertStatement = prepareStatementBeforeReady(conn, ADD_ISSN);
+
+	insertStatement.setLong(1, mdItemSeq);
+	insertStatement.setString(2, issn);
+	insertStatement.setString(3, issnType);
+
+	count = executeUpdateBeforeReady(insertStatement);
+	log.debug3(DEBUG_HEADER + "count = " + count);
+
+	conn.commit();
+      } catch (SQLException sqle) {
+	log.error("Cannot add ISSN", sqle);
+	log.error("mdItemSeq = " + mdItemSeq);
+	log.error("issn = " + issn);
+	log.error("issnType = " + issnType);
+	log.error("SQL = '" + ADD_ISSN + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(insertStatement);
+      }
+
+      // Prepare to repeat the process.
+      previousMdItemSeq = null;
+      previousIssn = null;
+      previousIssnType = null;
+      foundDuplicate = false;
+    }
+  }
+
+  /**
+   * Creates all the necessary version 6 database indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createVersion6Indices(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "createVersion6Indices(): ";
+
+    // Loop through all the indices.
+    for (String query : VERSION_6_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+	executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+	log.error("Cannot create index", sqle);
+	log.error("SQL = '" + query + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(statement);
       }
     }
   }

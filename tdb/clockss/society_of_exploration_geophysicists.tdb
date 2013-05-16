@@ -1,0 +1,70 @@
+{
+
+  publisher <
+    name = Society of Exploration Geophysicists ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  comment[platform] = Atypon
+ 
+  plugin = needs.plugin
+  param[base_url] = http://www.seg.org/
+  implicit < status1 ; status ; year ; name ; param[year] >
+
+  {
+  
+    title < 
+      name = Geophysics  ;
+      issn = 0016-8033  ;
+      eissn = 1942-2156
+    >
+    
+    param[journal_id] = gpysa
+
+
+    
+  }
+
+  {
+  
+    title < 
+      name = The Leading Edge  ;
+      issn = 1070-485X  ; 
+      eissn = 1938-3789
+    >
+    
+    param[journal_id] = leedff
+
+
+   
+  }
+
+  {
+  
+    title < 
+      name = Interpretation 
+    >
+    comment[0] = to publish Aug 2013
+    comment[1] = needs issn
+    
+    param[journal_id] = interpretation
+
+
+   
+  }
+  
+  {
+  
+    title < 
+      name = SEG Technical Program Expanded Abstracts  ;
+      issn = 1052-3812 ;
+      eissn = 1949-4654
+    >
+    
+    param[journal_id] = segeab
+
+  
+  }
+
+}

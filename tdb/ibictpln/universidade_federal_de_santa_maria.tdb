@@ -1,0 +1,74 @@
+{
+
+  publisher <
+    name = Universidade Federal de Santa Maria
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; volume ; name ; param[year] >
+
+    param[base_url] = http://cascavel.ufsm.br/revistas/ojs-2.2.2/
+
+  {
+
+    title <
+      name = Educação ;
+      issn = 0101-9031 ;
+      eissn = 1984-6444
+    >
+
+    param[journal_id] = reveducacao
+
+    au < testing ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
+    au < released ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
+    au < ready ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
+    au < released ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
+    au < ready ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
+    au < released ; 2005 ; 6 ; Educação Volume 6 ; 2005 >
+    au < testing ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
+    au < ready ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
+    au < ready ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
+    au < testing ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
+    au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
+    au < testing ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
+    au < testing ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
+    au < testing ; 2013 ; 14 ; Educação Volume 14 ; 2013 >
+  }
+
+  {
+
+    title <
+      name = Fragmentum ;
+      issn = 1519-9894 ;
+      eissn = 2179-2194
+    >
+
+    param[journal_id] = fragmentum
+
+    au < released ; 2001 ; 1 ; Fragmentum Volume 1 ; 2001 >
+    au < released ; 2002 ; 2 ; Fragmentum Volume 2 ; 2002 >
+    au < released ; 2003 ; 3 ; Fragmentum Volume 3 ; 2003 >
+    au < released ; 2004 ; 4 ; Fragmentum Volume 4 ; 2004 >
+    au < released ; 2005 ; 5 ; Fragmentum Volume 5 ; 2005 >
+    au < released ; 2006 ; 6 ; Fragmentum Volume 6 ; 2006 >
+    au < released ; 2007 ; 7 ; Fragmentum Volume 7 ; 2007 >
+    au < released ; 2008 ; 8 ; Fragmentum Volume 8 ; 2008 >
+    au < released ; 2009 ; 9 ; Fragmentum Volume 9 ; 2009 >
+    au < released ; 2010 ; 10 ; Fragmentum Volume 10 ; 2010 >
+    au < released ; 2011 ; 11 ; Fragmentum Volume 11 ; 2011 >
+    au < released ; 2012 ; 12 ; Fragmentum Volume 12 ; 2012 >
+  }
+  
+  {
+
+    title <
+      name = Revista de Enfermagem da UFSM ;
+      eissn = 2179-7692 
+    >
+
+    param[journal_id] = reufsm
+
+    au < testing ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
+  }
+}
