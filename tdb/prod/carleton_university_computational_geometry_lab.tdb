@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Carleton University Computational Geometry Lab
+  >
+
+  {
+    title <
+      name = Journal of Computational Geometry ;
+      issn = 1920-180X
+    >
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      param[base_url] = http://jocg.org/
+      param[journal_id] = jocg
+
+      au < exists ; 2010 ; The Electronic Journal of Combinatorics Volume 1 ; 1 ; 2010 >
+      au < exists ; 2011 ; The Electronic Journal of Combinatorics Volume 2 ; 2 ; 2011 >
+      au < exists ; 2012 ; The Electronic Journal of Combinatorics Volume 3 ; 3 ; 2012 >
+      au < exists ; 2013 ; The Electronic Journal of Combinatorics Volume 4 ; 4 ; 2013 >
+
+  }
+
+}
+
