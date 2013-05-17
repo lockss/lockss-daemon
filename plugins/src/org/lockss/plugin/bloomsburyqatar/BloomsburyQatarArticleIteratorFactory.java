@@ -44,9 +44,9 @@ public class BloomsburyQatarArticleIteratorFactory implements ArticleIteratorFac
 
   protected static Logger log = Logger.getLogger("BloomsburyQatarArticleIteratorFactory");
   
-  protected static final String ROOT_TEMPLATE = "\"%sdoi/full/10.5339\",base_url";
+  protected static final String ROOT_TEMPLATE = "\"%sdoi/pdf/10.5339\",base_url";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%sdoi/full/10\\.5339/%s[\\.\\d+\\.]?\\.\", base_url, journal_dir";
+  protected static final String PATTERN_TEMPLATE = "\"^%sdoi/pdf/10\\.5339/%s[\\.\\d+\\.]?\\.\", base_url, journal_dir";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -66,7 +66,7 @@ public class BloomsburyQatarArticleIteratorFactory implements ArticleIteratorFac
     protected BloomsburyQatarArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
-      pattern = Pattern.compile(String.format("(%sdoi/)full(/10.5339/%s)",
+      pattern = Pattern.compile(String.format("(%sdoi/)pdf(/10.5339/%s)",
       		au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()),
       		au.getConfiguration().get(ConfigParamDescr.JOURNAL_DIR.getKey())),
       		Pattern.CASE_INSENSITIVE);
@@ -102,8 +102,17 @@ public class BloomsburyQatarArticleIteratorFactory implements ArticleIteratorFac
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         af.setRoleCu(ArticleFiles.ROLE_REFERENCES, absCu);
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
       }
     }
+    
+    protected void guessFullTextHtml(ArticleFiles af, Matcher mat) {
+      CachedUrl htmlCu = au.makeCachedUrl(mat.replaceFirst("$1full$2"));
+      if (htmlCu != null && htmlCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+      }
+    }
+
     
     protected void guessPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("$1pdfplus$2"));
@@ -127,7 +136,7 @@ public class BloomsburyQatarArticleIteratorFactory implements ArticleIteratorFac
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
 	      throws PluginException {
-	    return new BaseArticleMetadataExtractor(null);
+	    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
 	  }
 
 }
