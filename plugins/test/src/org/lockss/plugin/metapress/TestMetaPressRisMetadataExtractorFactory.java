@@ -1,6 +1,10 @@
 /*
+ * $Id: TestMetaPressRisMetadataExtractorFactory.java,v 1.1 2013-05-17 23:43:49 thib_gc Exp $
+ */
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,9 +58,9 @@ AU  - Liebowitz, Jay
 N2  - Knowledge management is the process of creating value from an organisation&#39;s intangible assets. The ability to share and leverage knowledge internally and externally to create knowledge and innovation is a cornerstone of knowledge management. Industry has been involved in formal knowledge management practices over the years, even hiring Chief Knowledge Officers to spearhead their knowledge management initiatives. The government has lagged behind a bit but realises the importance of knowledge management to their organisations in times of shrinking budgets, ensuing retirements and the need to better share information and knowledge within and across government organisations. The key question is whether knowledge management can succeed in the government. This paper explores some issues to help shed light on this subject.
 ER  -
   */ 
-public class TestMetapressMetadataExtractor extends LockssTestCase {
+public class TestMetaPressRisMetadataExtractorFactory extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestMetapressMetadataExtractor");
+  static Logger log = Logger.getLogger(TestMetaPressRisMetadataExtractorFactory.class);
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
