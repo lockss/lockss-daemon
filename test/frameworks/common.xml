@@ -214,6 +214,7 @@
 		<value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
 		<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
 		<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
+    <value>org.lockss.plugin.atypon.americansocietyofcivilengineers.ClockssASCEPlugin</value>
 		<value>edu.auburn.adpn.directory.AuburnDirectoryPlugin</value>
 		<value>ca.sfu.lib.plugin.contentdm.ContentDmFrontEndPlugin</value>
 		<value>ca.sfu.lib.plugin.contentdm.LockssdmPlugin</value>
@@ -223,7 +224,6 @@
 	    <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
 		<value>org.lockss.plugin.elsevier.ElsevierFTPPlugin</value>
 		<value>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsFTPPlugin</value>
-		<value>org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin</value>
 		<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
 		<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
 		<value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
