@@ -88,7 +88,7 @@ public class TestBloomsburyQatarArticleIteratorFactory extends ArticleIteratorTe
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list("http://www.example.com/doi/full/10.5339"),
+    assertEquals(ListUtil.list("http://www.example.com/doi/pdf/10.5339"),
 		 getRootUrls(artIter));
   }
 
@@ -96,22 +96,22 @@ public class TestBloomsburyQatarArticleIteratorFactory extends ArticleIteratorTe
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
 
-    assertNotMatchesRE(pat, "http://www.wrong.com/doi/full/10.5339/bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/dooi/full/10.5339/bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com//full/10.5339/bq.123.1");
+    assertNotMatchesRE(pat, "http://www.wrong.com/doi/pdf/10.5339/bq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/dooi/pdf/10.5339/bq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com//pdf/10.5339/bq.123.1");
     assertNotMatchesRE(pat, "http://www.example.com/doi/fulll/10.5339/bq.123.1");
     assertNotMatchesRE(pat, "http://www.example.com/doi//10.5339/bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/11.5339/bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/10.5449/bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full//bq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/10.5339/beq.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bqe.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/10.5339/.123.1");
-    assertNotMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bqabc.1");
-    assertMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bq.123.");
-    assertMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bq.123.1");
-    assertMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bq.123.2");
-    assertMatchesRE(pat, "http://www.example.com/doi/full/10.5339/bq.123.2323");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/11.5339/bq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5449/bq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf//bq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/beq.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bqe.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/.123.1");
+    assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bqabc.1");
+    assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.");
+    assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.1");
+    assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.2");
+    assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.2323");
    }
 
   public void testCreateArticleFiles() throws Exception {
@@ -123,7 +123,7 @@ public class TestBloomsburyQatarArticleIteratorFactory extends ArticleIteratorTe
     String rep2 = "doi/pdf/10.5339/bq.123.1";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
   
-    String url = "http://www.example.com/doi/full/10.5339/bq.123.1";
+    String url = "http://www.example.com/doi/pdf/10.5339/bq.123.1";
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
     SubTreeArticleIterator artIter = createSubTreeIter();
