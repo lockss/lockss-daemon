@@ -38324,4 +38324,1131 @@
 
     }
 
+    {
+    
+      comment[publisher] = old publisher is Royal Society of Medicine Press  
+      comment[moved_publishers] = Royal Society of Medicine Press has been acquired by Sage.
+      comment[moving_urls] = urls for these publications will be changing in 2013.
+      
+    }
+    
+    {
+    
+      title <
+        name = Acta Radiologica ;
+        issn = 0284-1851 ;
+        eissn = 1600-0455 ;
+        issnl = 0284-1851
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://acr.sagepub.com/
+  
+        au < exists ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; >
+        au < exists ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; >
+        au < exists ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; >
+        au < exists ; exists ; 2000 ; Acta Radiologica Volume 41 ; 41 ; >
+        au < exists ; exists ; 2001 ; Acta Radiologica Volume 42 ; 42 ; >
+        au < exists ; exists ; 2002 ; Acta Radiologica Volume 43 ; 43 ; >
+        au < exists ; exists ; 2003 ; Acta Radiologica Volume 44 ; 44 ; >
+        au < exists ; exists ; 2004 ; Acta Radiologica Volume 45 ; 45 ; >
+        au < exists ; exists ; 2005 ; Acta Radiologica Volume 46 ; 46 ; >
+        au < exists ; exists ; 2006 ; Acta Radiologica Volume 47 ; 47 ; >
+        au < exists ; exists ; 2007 ; Acta Radiologica Volume 48 ; 48 ; >
+        au < exists ; exists ; 2008 ; Acta Radiologica Volume 49 ; 49 ; >
+        au < exists ; exists ; 2009 ; Acta Radiologica Volume 50 ; 50 ; >
+        au < exists ; exists ; 2010 ; Acta Radiologica Volume 51 ; 51 ; >
+        au < exists ; exists ; 2011 ; Acta Radiologica Volume 52 ; 52 ; >
+        au < exists ; exists ; 2012 ; Acta Radiologica Volume 53 ; 53 ; >
+        au < exists ; exists ; 2013 ; Acta Radiologica Volume 54 ; 54 ; >
+  
+    }    
+          
+    {
+  
+      title <
+        name = Annals of Clinical Biochemistry ;
+        issn = 0004-5632 ;
+        eissn = 1758-1001 ;
+        issnl = 0004-5632
+      >
+  
+        comment[notmoved] = not yet moved to Sage.
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+
+        au < doNotProcess ; exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
+        au < doNotProcess ; exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 ; >
+        au < doNotProcess ; exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 ; >
+        au < doNotProcess ; exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 ; >
+        au < doNotProcess ; exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 ; >
+        au < doNotProcess ; exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 ; >
+        au < doNotProcess ; exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 ; >
+        au < doNotProcess ; exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 ; >
+        au < doNotProcess ; exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
+        au < doNotProcess ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
+        au < doNotProcess ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Clinical Ethics ;
+        issn = 1477-7509 ;
+        eissn = 1758-101X ;
+        issnl = 1477-7509
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://cet.sagepub.com/
+
+        au < exists ; exists ; 2006 ; Clinical Ethics Volume 1 ; 1 ; >
+        au < exists ; exists ; 2007 ; Clinical Ethics Volume 2 ; 2 ; >
+        au < exists ; exists ; 2008 ; Clinical Ethics Volume 3 ; 3 ; >
+        au < exists ; exists ; 2009 ; Clinical Ethics Volume 4 ; 4 ; >
+        au < exists ; exists ; 2010 ; Clinical Ethics Volume 5 ; 5 ; >
+        au < exists ; exists ; 2011 ; Clinical Ethics Volume 6 ; 6 ; >
+        au < exists ; exists ; 2012 ; Clinical Ethics Volume 7 ; 7 ; >
+        au < exists ; exists ; 2013 ; Clinical Ethics Volume 8 ; 8 ; >
+
+    }
+  
+    {
+    
+      title <
+        name = Clinical Risk ;
+        issn = 1356-2622 ;
+        eissn = 1758-1028 ;
+        issnl = 1356-2622
+      >
+  
+        comment[notmoved] = not yet moved to Sage.
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2002 ; Clinical Risk Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2003 ; Clinical Risk Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2004 ; Clinical Risk Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2005 ; Clinical Risk Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2006 ; Clinical Risk Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2007 ; Clinical Risk Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2008 ; Clinical Risk Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2009 ; Clinical Risk Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2010 ; Clinical Risk Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2011 ; Clinical Risk Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 2012 ; Clinical Risk Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 2013 ; Clinical Risk Volume 19 ; 19 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Experimental Biology and Medicine ;
+        issn = 1535-3702 ;
+        eissn = 1535-3699
+      >
+  
+        comment[notmoved] = not yet moved to Sage.
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 1905 ; Experimental Biology and Medicine Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 1906 ; Experimental Biology and Medicine Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 1907-1908 ; Experimental Biology and Medicine Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 1908-1909 ; Experimental Biology and Medicine Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 1909-1910 ; Experimental Biology and Medicine Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 1910-1911 ; Experimental Biology and Medicine Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 1911-1912 ; Experimental Biology and Medicine Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 1912-1913 ; Experimental Biology and Medicine Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 1913-1914 ; Experimental Biology and Medicine Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 1914-1915 ; Experimental Biology and Medicine Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 1915-1916 ; Experimental Biology and Medicine Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 1916-1917 ; Experimental Biology and Medicine Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 1917-1918 ; Experimental Biology and Medicine Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 1918-1919 ; Experimental Biology and Medicine Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 1919-1920 ; Experimental Biology and Medicine Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 1920-1921 ; Experimental Biology and Medicine Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 1921-1922 ; Experimental Biology and Medicine Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 1922-1923 ; Experimental Biology and Medicine Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 1923-1924 ; Experimental Biology and Medicine Volume 21 ; 21 ; >
+        au < doNotProcess ; exists ; 1924-1925 ; Experimental Biology and Medicine Volume 22 ; 22 ; >
+        au < doNotProcess ; exists ; 1925-1926 ; Experimental Biology and Medicine Volume 23 ; 23 ; >
+        au < doNotProcess ; exists ; 1926-1927 ; Experimental Biology and Medicine Volume 24 ; 24 ; >
+        au < doNotProcess ; exists ; 1927-1928 ; Experimental Biology and Medicine Volume 25 ; 25 ; >
+        au < doNotProcess ; exists ; 1928-1929 ; Experimental Biology and Medicine Volume 26 ; 26 ; >
+        au < doNotProcess ; exists ; 1929-1930 ; Experimental Biology and Medicine Volume 27 ; 27 ; >
+        au < doNotProcess ; exists ; 1930-1931 ; Experimental Biology and Medicine Volume 28 ; 28 ; >
+        au < doNotProcess ; exists ; 1931-1932 ; Experimental Biology and Medicine Volume 29 ; 29 ; >
+        au < doNotProcess ; exists ; 1932-1933 ; Experimental Biology and Medicine Volume 30 ; 30 ; >
+        au < doNotProcess ; exists ; 1933-1934 ; Experimental Biology and Medicine Volume 31 ; 31 ; >
+        au < doNotProcess ; exists ; 1934-1935 ; Experimental Biology and Medicine Volume 32 ; 32 ; >
+        au < doNotProcess ; exists ; 1935-1936 ; Experimental Biology and Medicine Volume 33 ; 33 ; >
+        au < doNotProcess ; exists ; 1936 ; Experimental Biology and Medicine Volume 34 ; 34 ; >
+        au < doNotProcess ; exists ; 1936-1937 ; Experimental Biology and Medicine Volume 35 ; 35 ; >
+        au < doNotProcess ; exists ; 1937 ; Experimental Biology and Medicine Volume 36 ; 36 ; >
+        au < doNotProcess ; exists ; 1937-1938 ; Experimental Biology and Medicine Volume 37 ; 37 ; >
+        au < doNotProcess ; exists ; 1938 ; Experimental Biology and Medicine Volume 38 ; 38 ; >
+        au < doNotProcess ; exists ; 1938 ; Experimental Biology and Medicine Volume 39 ; 39 ; >
+        au < doNotProcess ; exists ; 1939 ; Experimental Biology and Medicine Volume 40 ; 40 ; >
+        au < doNotProcess ; exists ; 1939 ; Experimental Biology and Medicine Volume 41 ; 41 ; >
+        au < doNotProcess ; exists ; 1939 ; Experimental Biology and Medicine Volume 42 ; 42 ; >
+        au < doNotProcess ; exists ; 1940 ; Experimental Biology and Medicine Volume 43 ; 43 ; >
+        au < doNotProcess ; exists ; 1940 ; Experimental Biology and Medicine Volume 44 ; 44 ; >
+        au < doNotProcess ; exists ; 1940 ; Experimental Biology and Medicine Volume 45 ; 45 ; >
+        au < doNotProcess ; exists ; 1941 ; Experimental Biology and Medicine Volume 46 ; 46 ; >
+        au < doNotProcess ; exists ; 1941 ; Experimental Biology and Medicine Volume 47 ; 47 ; >
+        au < doNotProcess ; exists ; 1941 ; Experimental Biology and Medicine Volume 48 ; 48 ; >
+        au < doNotProcess ; exists ; 1942 ; Experimental Biology and Medicine Volume 49 ; 49 ; >
+        au < doNotProcess ; exists ; 1942 ; Experimental Biology and Medicine Volume 50 ; 50 ; >
+        au < doNotProcess ; exists ; 1942 ; Experimental Biology and Medicine Volume 51 ; 51 ; >
+        au < doNotProcess ; exists ; 1943 ; Experimental Biology and Medicine Volume 52 ; 52 ; >
+        au < doNotProcess ; exists ; 1943 ; Experimental Biology and Medicine Volume 53 ; 53 ; >
+        au < doNotProcess ; exists ; 1943 ; Experimental Biology and Medicine Volume 54 ; 54 ; >
+        au < doNotProcess ; exists ; 1944 ; Experimental Biology and Medicine Volume 55 ; 55 ; >
+        au < doNotProcess ; exists ; 1944 ; Experimental Biology and Medicine Volume 56 ; 56 ; >
+        au < doNotProcess ; exists ; 1944 ; Experimental Biology and Medicine Volume 57 ; 57 ; >
+        au < doNotProcess ; exists ; 1945 ; Experimental Biology and Medicine Volume 58 ; 58 ; >
+        au < doNotProcess ; exists ; 1945 ; Experimental Biology and Medicine Volume 59 ; 59 ; >
+        au < doNotProcess ; exists ; 1945 ; Experimental Biology and Medicine Volume 60 ; 60 ; >
+        au < doNotProcess ; exists ; 1946 ; Experimental Biology and Medicine Volume 61 ; 61 ; >
+        au < doNotProcess ; exists ; 1946 ; Experimental Biology and Medicine Volume 62 ; 62 ; >
+        au < doNotProcess ; exists ; 1946 ; Experimental Biology and Medicine Volume 63 ; 63 ; >
+        au < doNotProcess ; exists ; 1947 ; Experimental Biology and Medicine Volume 64 ; 64 ; >
+        au < doNotProcess ; exists ; 1947 ; Experimental Biology and Medicine Volume 65 ; 65 ; >
+        au < doNotProcess ; exists ; 1947 ; Experimental Biology and Medicine Volume 66 ; 66 ; >
+        au < doNotProcess ; exists ; 1948 ; Experimental Biology and Medicine Volume 67 ; 67 ; >
+        au < doNotProcess ; exists ; 1948 ; Experimental Biology and Medicine Volume 68 ; 68 ; >
+        au < doNotProcess ; exists ; 1948 ; Experimental Biology and Medicine Volume 69 ; 69 ; >
+        au < doNotProcess ; exists ; 1949 ; Experimental Biology and Medicine Volume 70 ; 70 ; >
+        au < doNotProcess ; exists ; 1949 ; Experimental Biology and Medicine Volume 71 ; 71 ; >
+        au < doNotProcess ; exists ; 1949 ; Experimental Biology and Medicine Volume 72 ; 72 ; >
+        au < doNotProcess ; exists ; 1950 ; Experimental Biology and Medicine Volume 73 ; 73 ; >
+        au < doNotProcess ; exists ; 1950 ; Experimental Biology and Medicine Volume 74 ; 74 ; >
+        au < doNotProcess ; exists ; 1950 ; Experimental Biology and Medicine Volume 75 ; 75 ; >
+        au < doNotProcess ; exists ; 1951 ; Experimental Biology and Medicine Volume 76 ; 76 ; >
+        au < doNotProcess ; exists ; 1951 ; Experimental Biology and Medicine Volume 77 ; 77 ; >
+        au < doNotProcess ; exists ; 1951 ; Experimental Biology and Medicine Volume 78 ; 78 ; >
+        au < doNotProcess ; exists ; 1952 ; Experimental Biology and Medicine Volume 79 ; 79 ; >
+        au < doNotProcess ; exists ; 1952 ; Experimental Biology and Medicine Volume 80 ; 80 ; >
+        au < doNotProcess ; exists ; 1952 ; Experimental Biology and Medicine Volume 81 ; 81 ; >
+        au < doNotProcess ; exists ; 1953 ; Experimental Biology and Medicine Volume 82 ; 82 ; >
+        au < doNotProcess ; exists ; 1953 ; Experimental Biology and Medicine Volume 83 ; 83 ; >
+        au < doNotProcess ; exists ; 1953 ; Experimental Biology and Medicine Volume 84 ; 84 ; >
+        au < doNotProcess ; exists ; 1954 ; Experimental Biology and Medicine Volume 85 ; 85 ; >
+        au < doNotProcess ; exists ; 1954 ; Experimental Biology and Medicine Volume 86 ; 86 ; >
+        au < doNotProcess ; exists ; 1954 ; Experimental Biology and Medicine Volume 87 ; 87 ; >
+        au < doNotProcess ; exists ; 1955 ; Experimental Biology and Medicine Volume 88 ; 88 ; >
+        au < doNotProcess ; exists ; 1955 ; Experimental Biology and Medicine Volume 89 ; 89 ; >
+        au < doNotProcess ; exists ; 1955 ; Experimental Biology and Medicine Volume 90 ; 90 ; >
+        au < doNotProcess ; exists ; 1956 ; Experimental Biology and Medicine Volume 91 ; 91 ; >
+        au < doNotProcess ; exists ; 1956 ; Experimental Biology and Medicine Volume 92 ; 92 ; >
+        au < doNotProcess ; exists ; 1956 ; Experimental Biology and Medicine Volume 93 ; 93 ; >
+        au < doNotProcess ; exists ; 1957 ; Experimental Biology and Medicine Volume 94 ; 94 ; >
+        au < doNotProcess ; exists ; 1957 ; Experimental Biology and Medicine Volume 95 ; 95 ; >
+        au < doNotProcess ; exists ; 1957 ; Experimental Biology and Medicine Volume 96 ; 96 ; >
+        au < doNotProcess ; exists ; 1958 ; Experimental Biology and Medicine Volume 97 ; 97 ; >
+        au < doNotProcess ; exists ; 1958 ; Experimental Biology and Medicine Volume 98 ; 98 ; >
+        au < doNotProcess ; exists ; 1958 ; Experimental Biology and Medicine Volume 99 ; 99 ; >
+        au < doNotProcess ; exists ; 1959 ; Experimental Biology and Medicine Volume 100 ; 100 ; >
+        au < doNotProcess ; exists ; 1959 ; Experimental Biology and Medicine Volume 101 ; 101 ; >
+        au < doNotProcess ; exists ; 1959 ; Experimental Biology and Medicine Volume 102 ; 102 ; >
+        au < doNotProcess ; exists ; 1960 ; Experimental Biology and Medicine Volume 103 ; 103 ; >
+        au < doNotProcess ; exists ; 1960 ; Experimental Biology and Medicine Volume 104 ; 104 ; >
+        au < doNotProcess ; exists ; 1960 ; Experimental Biology and Medicine Volume 105 ; 105 ; >
+        au < doNotProcess ; exists ; 1961 ; Experimental Biology and Medicine Volume 106 ; 106 ; >
+        au < doNotProcess ; exists ; 1961 ; Experimental Biology and Medicine Volume 107 ; 107 ; >
+        au < doNotProcess ; exists ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 ; >
+        au < doNotProcess ; exists ; 1962 ; Experimental Biology and Medicine Volume 109 ; 109 ; >
+        au < doNotProcess ; exists ; 1962 ; Experimental Biology and Medicine Volume 110 ; 110 ; >
+        au < doNotProcess ; exists ; 1962 ; Experimental Biology and Medicine Volume 111 ; 111 ; >
+        au < doNotProcess ; exists ; 1963 ; Experimental Biology and Medicine Volume 112 ; 112 ; >
+        au < doNotProcess ; exists ; 1963 ; Experimental Biology and Medicine Volume 113 ; 113 ; >
+        au < doNotProcess ; exists ; 1963 ; Experimental Biology and Medicine Volume 114 ; 114 ; >
+        au < doNotProcess ; exists ; 1964 ; Experimental Biology and Medicine Volume 115 ; 115 ; >
+        au < doNotProcess ; exists ; 1964 ; Experimental Biology and Medicine Volume 116 ; 116 ; >
+        au < doNotProcess ; exists ; 1964 ; Experimental Biology and Medicine Volume 117 ; 117 ; >
+        au < doNotProcess ; exists ; 1965 ; Experimental Biology and Medicine Volume 118 ; 118 ; >
+        au < doNotProcess ; exists ; 1965 ; Experimental Biology and Medicine Volume 119 ; 119 ; >
+        au < doNotProcess ; exists ; 1965 ; Experimental Biology and Medicine Volume 120 ; 120 ; >
+        au < doNotProcess ; exists ; 1966 ; Experimental Biology and Medicine Volume 121 ; 121 ; >
+        au < doNotProcess ; exists ; 1966 ; Experimental Biology and Medicine Volume 122 ; 122 ; >
+        au < doNotProcess ; exists ; 1966 ; Experimental Biology and Medicine Volume 123 ; 123 ; >
+        au < doNotProcess ; exists ; 1967 ; Experimental Biology and Medicine Volume 124 ; 124 ; >
+        au < doNotProcess ; exists ; 1967 ; Experimental Biology and Medicine Volume 125 ; 125 ; >
+        au < doNotProcess ; exists ; 1967 ; Experimental Biology and Medicine Volume 126 ; 126 ; >
+        au < doNotProcess ; exists ; 1968 ; Experimental Biology and Medicine Volume 127 ; 127 ; >
+        au < doNotProcess ; exists ; 1968 ; Experimental Biology and Medicine Volume 128 ; 128 ; >
+        au < doNotProcess ; exists ; 1968 ; Experimental Biology and Medicine Volume 129 ; 129 ; >
+        au < doNotProcess ; exists ; 1969 ; Experimental Biology and Medicine Volume 130 ; 130 ; >
+        au < doNotProcess ; exists ; 1969 ; Experimental Biology and Medicine Volume 131 ; 131 ; >
+        au < doNotProcess ; exists ; 1969 ; Experimental Biology and Medicine Volume 132 ; 132 ; >
+        au < doNotProcess ; exists ; 1970 ; Experimental Biology and Medicine Volume 133 ; 133 ; >
+        au < doNotProcess ; exists ; 1970 ; Experimental Biology and Medicine Volume 134 ; 134 ; >
+        au < doNotProcess ; exists ; 1970 ; Experimental Biology and Medicine Volume 135 ; 135 ; >
+        au < doNotProcess ; exists ; 1971 ; Experimental Biology and Medicine Volume 136 ; 136 ; >
+        au < doNotProcess ; exists ; 1971 ; Experimental Biology and Medicine Volume 137 ; 137 ; >
+        au < doNotProcess ; exists ; 1971 ; Experimental Biology and Medicine Volume 138 ; 138 ; >
+        au < doNotProcess ; exists ; 1972 ; Experimental Biology and Medicine Volume 139 ; 139 ; >
+        au < doNotProcess ; exists ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 ; >
+        au < doNotProcess ; exists ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 ; >
+        au < doNotProcess ; exists ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 ; >
+        au < doNotProcess ; exists ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 ; >
+        au < doNotProcess ; exists ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 ; >
+        au < doNotProcess ; exists ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 ; >
+        au < doNotProcess ; exists ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 ; >
+        au < doNotProcess ; exists ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 ; >
+        au < doNotProcess ; exists ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 ; >
+        au < doNotProcess ; exists ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 ; >
+        au < doNotProcess ; exists ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 ; >
+        au < doNotProcess ; exists ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 ; >
+        au < doNotProcess ; exists ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 ; >
+        au < doNotProcess ; exists ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 ; >
+        au < doNotProcess ; exists ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 ; >
+        au < doNotProcess ; exists ; 1977 ; Experimental Biology and Medicine Volume 155 ; 155 ; >
+        au < doNotProcess ; exists ; 1977 ; Experimental Biology and Medicine Volume 156 ; 156 ; >
+        au < doNotProcess ; exists ; 1978 ; Experimental Biology and Medicine Volume 157 ; 157 ; >
+        au < doNotProcess ; exists ; 1978 ; Experimental Biology and Medicine Volume 158 ; 158 ; >
+        au < doNotProcess ; exists ; 1978 ; Experimental Biology and Medicine Volume 159 ; 159 ; >
+        au < doNotProcess ; exists ; 1979 ; Experimental Biology and Medicine Volume 160 ; 160 ; >
+        au < doNotProcess ; exists ; 1979 ; Experimental Biology and Medicine Volume 161 ; 161 ; >
+        au < doNotProcess ; exists ; 1979 ; Experimental Biology and Medicine Volume 162 ; 162 ; >
+        au < doNotProcess ; exists ; 1980 ; Experimental Biology and Medicine Volume 163 ; 163 ; >
+        au < doNotProcess ; exists ; 1980 ; Experimental Biology and Medicine Volume 164 ; 164 ; >
+        au < doNotProcess ; exists ; 1980 ; Experimental Biology and Medicine Volume 165 ; 165 ; >
+        au < doNotProcess ; exists ; 1981 ; Experimental Biology and Medicine Volume 166 ; 166 ; >
+        au < doNotProcess ; exists ; 1981 ; Experimental Biology and Medicine Volume 167 ; 167 ; >
+        au < doNotProcess ; exists ; 1981 ; Experimental Biology and Medicine Volume 168 ; 168 ; >
+        au < doNotProcess ; exists ; 1982 ; Experimental Biology and Medicine Volume 169 ; 169 ; >
+        au < doNotProcess ; exists ; 1982 ; Experimental Biology and Medicine Volume 170 ; 170 ; >
+        au < doNotProcess ; exists ; 1982 ; Experimental Biology and Medicine Volume 171 ; 171 ; >
+        au < doNotProcess ; exists ; 1983 ; Experimental Biology and Medicine Volume 172 ; 172 ; >
+        au < doNotProcess ; exists ; 1983 ; Experimental Biology and Medicine Volume 173 ; 173 ; >
+        au < doNotProcess ; exists ; 1983 ; Experimental Biology and Medicine Volume 174 ; 174 ; >
+        au < doNotProcess ; exists ; 1984 ; Experimental Biology and Medicine Volume 175 ; 175 ; >
+        au < doNotProcess ; exists ; 1984 ; Experimental Biology and Medicine Volume 176 ; 176 ; >
+        au < doNotProcess ; exists ; 1984 ; Experimental Biology and Medicine Volume 177 ; 177 ; >
+        au < doNotProcess ; exists ; 1985 ; Experimental Biology and Medicine Volume 178 ; 178 ; >
+        au < doNotProcess ; exists ; 1985 ; Experimental Biology and Medicine Volume 179 ; 179 ; >
+        au < doNotProcess ; exists ; 1985 ; Experimental Biology and Medicine Volume 180 ; 180 ; >
+        au < doNotProcess ; exists ; 1986 ; Experimental Biology and Medicine Volume 181 ; 181 ; >
+        au < doNotProcess ; exists ; 1986 ; Experimental Biology and Medicine Volume 182 ; 182 ; >
+        au < doNotProcess ; exists ; 1986 ; Experimental Biology and Medicine Volume 183 ; 183 ; >
+        au < doNotProcess ; exists ; 1987 ; Experimental Biology and Medicine Volume 184 ; 184 ; >
+        au < doNotProcess ; exists ; 1987 ; Experimental Biology and Medicine Volume 185 ; 185 ; >
+        au < doNotProcess ; exists ; 1987 ; Experimental Biology and Medicine Volume 186 ; 186 ; >
+        au < doNotProcess ; exists ; 1988 ; Experimental Biology and Medicine Volume 187 ; 187 ; >
+        au < doNotProcess ; exists ; 1988 ; Experimental Biology and Medicine Volume 188 ; 188 ; >
+        au < doNotProcess ; exists ; 1988 ; Experimental Biology and Medicine Volume 189 ; 189 ; >
+        au < doNotProcess ; exists ; 1989 ; Experimental Biology and Medicine Volume 190 ; 190 ; >
+        au < doNotProcess ; exists ; 1989 ; Experimental Biology and Medicine Volume 191 ; 191 ; >
+        au < doNotProcess ; exists ; 1989 ; Experimental Biology and Medicine Volume 192 ; 192 ; >
+        au < doNotProcess ; exists ; 1990 ; Experimental Biology and Medicine Volume 193 ; 193 ; >
+        au < doNotProcess ; exists ; 1990 ; Experimental Biology and Medicine Volume 194 ; 194 ; >
+        au < doNotProcess ; exists ; 1990 ; Experimental Biology and Medicine Volume 195 ; 195 ; >
+        au < doNotProcess ; exists ; 1991 ; Experimental Biology and Medicine Volume 196 ; 196 ; >
+        au < doNotProcess ; exists ; 1991 ; Experimental Biology and Medicine Volume 197 ; 197 ; >
+        au < doNotProcess ; exists ; 1991 ; Experimental Biology and Medicine Volume 198 ; 198 ; >
+        au < doNotProcess ; exists ; 1992 ; Experimental Biology and Medicine Volume 199 ; 199 ; >
+        au < doNotProcess ; exists ; 1992 ; Experimental Biology and Medicine Volume 200 ; 200 ; >
+        au < doNotProcess ; exists ; 1992 ; Experimental Biology and Medicine Volume 201 ; 201 ; >
+        au < doNotProcess ; exists ; 1993 ; Experimental Biology and Medicine Volume 202 ; 202 ; >
+        au < doNotProcess ; exists ; 1993 ; Experimental Biology and Medicine Volume 203 ; 203 ; >
+        au < doNotProcess ; exists ; 1993 ; Experimental Biology and Medicine Volume 204 ; 204 ; >
+        au < doNotProcess ; exists ; 1994 ; Experimental Biology and Medicine Volume 205 ; 205 ; >
+        au < doNotProcess ; exists ; 1994 ; Experimental Biology and Medicine Volume 206 ; 206 ; >
+        au < doNotProcess ; exists ; 1994 ; Experimental Biology and Medicine Volume 207 ; 207 ; >
+        au < doNotProcess ; exists ; 1995 ; Experimental Biology and Medicine Volume 208 ; 208 ; >
+        au < doNotProcess ; exists ; 1995 ; Experimental Biology and Medicine Volume 209 ; 209 ; >
+        au < doNotProcess ; exists ; 1995 ; Experimental Biology and Medicine Volume 210 ; 210 ; >
+        au < doNotProcess ; exists ; 1996 ; Experimental Biology and Medicine Volume 211 ; 211 ; >
+        au < doNotProcess ; exists ; 1996 ; Experimental Biology and Medicine Volume 212 ; 212 ; >
+        au < doNotProcess ; exists ; 1996 ; Experimental Biology and Medicine Volume 213 ; 213 ; >
+        au < doNotProcess ; exists ; 1997 ; Experimental Biology and Medicine Volume 214 ; 214 ; >
+        au < doNotProcess ; exists ; 1997 ; Experimental Biology and Medicine Volume 215 ; 215 ; >
+        au < doNotProcess ; exists ; 1997 ; Experimental Biology and Medicine Volume 216 ; 216 ; >
+        au < doNotProcess ; exists ; 1998 ; Experimental Biology and Medicine Volume 217 ; 217 ; >
+        au < doNotProcess ; exists ; 1998 ; Experimental Biology and Medicine Volume 218 ; 218 ; >
+        au < doNotProcess ; exists ; 1998 ; Experimental Biology and Medicine Volume 219 ; 219 ; >
+        au < doNotProcess ; exists ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 ; >
+        au < doNotProcess ; exists ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 ; >
+        au < doNotProcess ; exists ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 ; >
+        au < doNotProcess ; exists ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 ; >
+        au < doNotProcess ; exists ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 ; >
+        au < doNotProcess ; exists ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 ; >
+        au < doNotProcess ; exists ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 ; >
+        au < doNotProcess ; exists ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 ; >
+        au < doNotProcess ; exists ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 ; >
+        au < doNotProcess ; exists ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 ; >
+        au < doNotProcess ; exists ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 ; >
+        au < doNotProcess ; exists ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 ; >
+        au < doNotProcess ; exists ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 ; >
+        au < doNotProcess ; exists ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 ; >
+        au < doNotProcess ; exists ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 ; >
+        au < doNotProcess ; exists ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 ; >
+        au < doNotProcess ; exists ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 ; >
+        au < doNotProcess ; exists ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 ; >
+        au < doNotProcess ; exists ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Hand Therapy ;
+        issn = 1758-9983 ;
+        eissn = 1758-9991 ;
+        issnl = 1758-9991
+      >
+  
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hth.sagepub.com/
+  
+        au < exists ; exists ; 2001 ; Hand Therapy Volume 6 ; 6 ; >
+        au < exists ; exists ; 2002 ; Hand Therapy Volume 7 ; 7 ; >
+        au < exists ; exists ; 2003 ; Hand Therapy Volume 8 ; 8 ; >
+        au < exists ; exists ; 2004 ; Hand Therapy Volume 9 ; 9 ; >
+        au < exists ; exists ; 2005 ; Hand Therapy Volume 10 ; 10 ; >
+        au < exists ; exists ; 2006 ; Hand Therapy Volume 11 ; 11 ; >
+        au < exists ; exists ; 2007 ; Hand Therapy Volume 12 ; 12 ; >
+        au < exists ; exists ; 2008 ; Hand Therapy Volume 13 ; 13 ; >
+        au < exists ; exists ; 2009 ; Hand Therapy Volume 14 ; 14 ; >
+        au < exists ; exists ; 2010 ; Hand Therapy Volume 15 ; 15 ; >
+        au < exists ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 ; >
+        au < exists ; exists ; 2012 ; Hand Therapy Volume 17 ; 17 ; >
+        au < exists ; exists ; 2013 ; Hand Therapy Volume 18 ; 18 ; >
+    }
+  
+    {
+    
+      title <
+        name = Handbook of Practice Management ;
+        type = book ;
+        isbn = 0-443-04576-3 ; 
+        eissn = 0962-144X
+      >
+      
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = xxx
+      
+      au < doNotProcess ; exists ; 2009 ; Handbook of Practice Management Volume 71 ; 71 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = He@lth Information on the Internet ;
+        issn = 1460-4140 ;
+        eissn = 1758-1036
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+      
+        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 ; >
+        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 ; >
+        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 ; >
+        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 ; >
+        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 ; >
+        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 ; >
+        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 ; >
+        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 ; >
+        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 ; >
+        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 ; >
+        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Health Services Management Research ;
+        issn = 0951-4848 ;
+        eissn = 1758-1044 ;
+        issnl = 0951-4848
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2001 ; Health Services Management Research Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2002 ; Health Services Management Research Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2003 ; Health Services Management Research Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2004 ; Health Services Management Research Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 2005 ; Health Services Management Research Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 2006 ; Health Services Management Research Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 2007 ; Health Services Management Research Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 2008 ; Health Services Management Research Volume 21 ; 21 ; >
+        au < doNotProcess ; exists ; 2009 ; Health Services Management Research Volume 22 ; 22 ; >
+        au < doNotProcess ; exists ; 2010 ; Health Services Management Research Volume 23 ; 23 ; >
+        au < doNotProcess ; exists ; 2011 ; Health Services Management Research Volume 24 ; 24 ; >
+        au < doNotProcess ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 ; >
+        au < doNotProcess ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = International Journal of Care Pathways ;
+        issn = 2040-4026 ;
+        eissn = 2040-4034 ;
+        issnl = 2040-4026
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = International Journal of STD & AIDS ;
+        issn = 0956-4624 ;
+        eissn = 1758-1052 ;
+        issnl = 0956-4624
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://std.sagepub.com/
+  
+        au < exists ; exists ; 1996 ; International Journal of STD & AIDS Volume 7 ; 7 ; >
+        au < exists ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 ; >
+        au < exists ; exists ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 ; >
+        au < exists ; exists ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 ; >
+        au < exists ; exists ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 ; >
+        au < exists ; exists ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 ; >
+        au < exists ; exists ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 ; >
+        au < exists ; exists ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 ; >
+        au < exists ; exists ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 ; >
+        au < exists ; exists ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 ; >
+        au < exists ; exists ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 ; >
+        au < exists ; exists ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 ; >
+        au < exists ; exists ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 ; >
+        au < exists ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 ; >
+        au < exists ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
+        au < exists ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; >
+        au < exists ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
+        au < exists ; exists ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; >
+
+    }
+  
+    {
+    
+      title <
+        name = Journal of Health Services Research & Policy ;
+        issn = 1355-8196 ;
+        eissn = 1758-1060 ;
+        issnl = 1355-8196
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://hsr.sagepub.com/
+  
+        au < exists ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
+        au < exists ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
+        au < exists ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
+        au < exists ; exists ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 ; >
+        au < exists ; exists ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 ; >
+        au < exists ; exists ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 ; >
+        au < exists ; exists ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 ; >
+        au < exists ; exists ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 ; >
+        au < exists ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 ; >
+        au < exists ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 ; >
+        au < exists ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 ; >
+        au < exists ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
+        au < exists ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Journal of Medical Biography ;
+        issn = 0967-7720 ;
+        eissn = 1758-1087 ;
+        issnl = 0967-7720
+      >
+  
+      {
+        comment[notmoved] = this journal has not moved to Sage yet.
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2008 ; Journal of Medical Biography Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Journal of Medical Screening ;
+        issn = 0969-1413 ;
+        eissn = 1475-5793 ;
+        issnl = 0969-1413
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://msc.sagepub.com/
+  
+        au < exists ; exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 ; >
+        au < exists ; exists ; 1999 ; Journal of Medical Screening Volume 6 ; 6 ; >
+        au < exists ; exists ; 2000 ; Journal of Medical Screening Volume 7 ; 7 ; >
+        au < exists ; exists ; 2001 ; Journal of Medical Screening Volume 8 ; 8 ; >
+        au < exists ; exists ; 2002 ; Journal of Medical Screening Volume 9 ; 9 ; >
+        au < exists ; exists ; 2003 ; Journal of Medical Screening Volume 10 ; 10 ; >
+        au < exists ; exists ; 2004 ; Journal of Medical Screening Volume 11 ; 11 ; >
+        au < exists ; exists ; 2005 ; Journal of Medical Screening Volume 12 ; 12 ; >
+        au < exists ; exists ; 2006 ; Journal of Medical Screening Volume 13 ; 13 ; >
+        au < exists ; exists ; 2007 ; Journal of Medical Screening Volume 14 ; 14 ; >
+        au < exists ; exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 ; >
+        au < exists ; exists ; 2009 ; Journal of Medical Screening Volume 16 ; 16 ; >
+        au < exists ; exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 ; >
+        au < exists ; exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 ; >
+        au < exists ; exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 ; >
+        au < expected ; exists ; 2013 ; Journal of Medical Screening Volume 20 ; 20 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Journal of Telemedicine and Telecare ;
+        issn = 1357-633X ;
+        eissn = 1758-1109 ;
+        issnl = 1357-633X
+      >
+  
+      {
+        comment[notmoved] = this journal has not moved to Sage yet.
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 ; >
+        au < doNotProcess ; exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 ; >
+        au < doNotProcess ; exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 ; >
+        au < doNotProcess ; exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 ; >
+        au < doNotProcess ; exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 ; >
+        au < doNotProcess ; exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Journal of the Royal Society of Medicine ;
+        issn = 0141-0768 ;
+        eissn = 1758-1095 ;
+        issnl = 0141-0768
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+      {
+  
+        param[base_url] = http://jrs.sagepub.com/
+  
+        au < exists ; exists ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 ; >
+        au < exists ; exists ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 ; >
+        au < exists ; exists ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 ; >
+        au < exists ; exists ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 ; >
+        au < exists ; exists ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 ; >
+        au < exists ; exists ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 ; >
+        au < exists ; exists ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 ; >
+        au < exists ; exists ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 ; >
+        au < exists ; exists ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 ; >
+        au < exists ; exists ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 ; >
+        au < exists ; exists ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 ; >
+        au < exists ; exists ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 ; >
+        au < exists ; exists ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 ; >
+        au < exists ; exists ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 ; >
+        au < exists ; exists ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 ; >
+        au < exists ; exists ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 ; >
+        au < exists ; exists ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 ; >
+        au < exists ; exists ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 ; >
+        au < exists ; exists ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 ; >
+        au < exists ; exists ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 ; >
+        au < exists ; exists ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 ; >
+        au < exists ; exists ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 ; >
+        au < exists ; exists ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 ; >
+        au < exists ; exists ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 ; >
+        au < exists ; exists ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 ; >
+        au < exists ; exists ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 ; >
+        au < exists ; exists ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 ; >
+        au < exists ; exists ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 ; >
+        au < exists ; exists ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 ; >
+        au < exists ; exists ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 ; >
+        au < exists ; exists ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 ; >
+        au < exists ; exists ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 ; >
+        au < exists ; exists ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 ; >
+        au < exists ; exists ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 ; >
+        au < exists ; exists ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 ; >
+        au < exists ; exists ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 ; >
+        au < exists ; exists ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 ; >
+        au < exists ; exists ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 ; >
+        au < exists ; exists ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 ; >
+        au < exists ; exists ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 ; >
+        au < exists ; exists ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 ; >
+        au < exists ; exists ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 ; >
+        au < exists ; exists ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 ; >
+        au < exists ; exists ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 ; >
+        au < exists ; exists ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 ; >
+        au < exists ; exists ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 ; >
+        au < exists ; exists ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 ; >
+        au < exists ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 ; >
+        au < exists ; exists ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = JRSM Cardiovascular Disease ;
+        eissn = 2048-0040
+      >
+  
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://cvd.sagepub.com/
+  
+      au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
+      au < expected ; exists ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = JRSM Short Reports ;
+        eissn = 2042-5333
+      >
+      
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://shr.sagepub.com/
+  
+        au < exists ; exists ; 2010 ; JRSM Short Reports Volume 1 ; 1 ; >
+        au < exists ; exists ; 2011 ; JRSM Short Reports Volume 2 ; 2 ; >
+        au < exists ; exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 ; >
+        au < exists ; exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Laboratory Animals ;
+        issn = 0023-6772 ;
+        eissn = 1758-1117 ;
+        issnl = 0023-6772
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+
+      {
+  
+        param[base_url] = http://lan.sagepub.com/
+  
+        au < exists ; exists ; 1967 ; Laboratory Animals Volume 1 ; 1 ; >
+        au < exists ; exists ; 1968 ; Laboratory Animals Volume 2 ; 2 ; >
+        au < exists ; exists ; 1969 ; Laboratory Animals Volume 3 ; 3 ; >
+        au < exists ; exists ; 1970 ; Laboratory Animals Volume 4 ; 4 ; >
+        au < exists ; exists ; 1971 ; Laboratory Animals Volume 5 ; 5 ; >
+        au < exists ; exists ; 1972 ; Laboratory Animals Volume 6 ; 6 ; >
+        au < exists ; exists ; 1973 ; Laboratory Animals Volume 7 ; 7 ; >
+        au < exists ; exists ; 1974 ; Laboratory Animals Volume 8 ; 8 ; >
+        au < exists ; exists ; 1975 ; Laboratory Animals Volume 9 ; 9 ; >
+        au < exists ; exists ; 1976 ; Laboratory Animals Volume 10 ; 10 ; >
+        au < exists ; exists ; 1977 ; Laboratory Animals Volume 11 ; 11 ; >
+        au < exists ; exists ; 1978 ; Laboratory Animals Volume 12 ; 12 ; >
+        au < exists ; exists ; 1979 ; Laboratory Animals Volume 13 ; 13 ; >
+        au < exists ; exists ; 1980 ; Laboratory Animals Volume 14 ; 14 ; >
+        au < exists ; exists ; 1981 ; Laboratory Animals Volume 15 ; 15 ; >
+        au < exists ; exists ; 1982 ; Laboratory Animals Volume 16 ; 16 ; >
+        au < exists ; exists ; 1983 ; Laboratory Animals Volume 17 ; 17 ; >
+        au < exists ; exists ; 1984 ; Laboratory Animals Volume 18 ; 18 ; >
+        au < exists ; exists ; 1985 ; Laboratory Animals Volume 19 ; 19 ; >
+        au < exists ; exists ; 1986 ; Laboratory Animals Volume 20 ; 20 ; >
+        au < exists ; exists ; 1987 ; Laboratory Animals Volume 21 ; 21 ; >
+        au < exists ; exists ; 1988 ; Laboratory Animals Volume 22 ; 22 ; >
+        au < exists ; exists ; 1989 ; Laboratory Animals Volume 23 ; 23 ; >
+        au < exists ; exists ; 1990 ; Laboratory Animals Volume 24 ; 24 ; >
+        au < exists ; exists ; 1991 ; Laboratory Animals Volume 25 ; 25 ; >
+        au < exists ; exists ; 1992 ; Laboratory Animals Volume 26 ; 26 ; >
+        au < exists ; exists ; 1993 ; Laboratory Animals Volume 27 ; 27 ; >
+        au < exists ; exists ; 1994 ; Laboratory Animals Volume 28 ; 28 ; >
+        au < exists ; exists ; 1995 ; Laboratory Animals Volume 29 ; 29 ; >
+        au < exists ; exists ; 1996 ; Laboratory Animals Volume 30 ; 30 ; >
+        au < exists ; exists ; 1997 ; Laboratory Animals Volume 31 ; 31 ; >
+        au < exists ; exists ; 1998 ; Laboratory Animals Volume 32 ; 32 ; >
+        au < exists ; exists ; 1999 ; Laboratory Animals Volume 33 ; 33 ; >
+        au < exists ; exists ; 2000 ; Laboratory Animals Volume 34 ; 34 ; >
+        au < exists ; exists ; 2001 ; Laboratory Animals Volume 35 ; 35 ; >
+        au < exists ; exists ; 2002 ; Laboratory Animals Volume 36 ; 36 ; >
+        au < exists ; exists ; 2003 ; Laboratory Animals Volume 37 ; 37 ; >
+        au < exists ; exists ; 2004 ; Laboratory Animals Volume 38 ; 38 ; >
+        au < exists ; exists ; 2005 ; Laboratory Animals Volume 39 ; 39 ; >
+        au < exists ; exists ; 2006 ; Laboratory Animals Volume 40 ; 40 ; >
+        au < exists ; exists ; 2007 ; Laboratory Animals Volume 41 ; 41 ; >
+        au < exists ; exists ; 2008 ; Laboratory Animals Volume 42 ; 42 ; >
+        au < exists ; exists ; 2009 ; Laboratory Animals Volume 43 ; 43 ; >
+        au < exists ; exists ; 2010 ; Laboratory Animals Volume 44 ; 44 ; >
+        au < exists ; exists ; 2011 ; Laboratory Animals Volume 45 ; 45 ; >
+        au < exists ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 ; >
+        au < exists ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Medicine, Science and the Law ;
+        issn = 0025-8024 ;
+        eissn = 2042-1818
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+  
+      {
+  
+        param[base_url] = http://msl.sagepub.com/
+  
+        au < exists ; exists ; 2003 ; Medicine, Science and the Law Volume 43 ; 43 ; >
+        au < exists ; exists ; 2004 ; Medicine, Science and the Law Volume 44 ; 44 ; >
+        au < exists ; exists ; 2005 ; Medicine, Science and the Law Volume 45 ; 45 ; >
+        au < exists ; exists ; 2006 ; Medicine, Science and the Law Volume 46 ; 46 ; >
+        au < exists ; exists ; 2007 ; Medicine, Science and the Law Volume 47 ; 47 ; >
+        au < exists ; exists ; 2008 ; Medicine, Science and the Law Volume 48 ; 48 ; >
+        au < exists ; exists ; 2009 ; Medicine, Science and the Law Volume 49 ; 49 ; >
+        au < exists ; exists ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 ; >
+        au < exists ; exists ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 ; >
+        au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 ; >
+        au < exists ; exists ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Medico-Legal Journal ;
+        issn = 0025-8172 ;
+        eissn = 2042-1834
+      >
+  
+      {
+      
+        comment[notmoved] = This journal has not yet moved to Sage.
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
+        au < doNotProcess ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
+        au < doNotProcess ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
+        au < doNotProcess ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
+        au < doNotProcess ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
+        au < doNotProcess ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
+        au < doNotProcess ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
+        au < doNotProcess ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
+        au < doNotProcess ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
+        au < doNotProcess ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
+        au < doNotProcess ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
+        au < doNotProcess ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
+        au < doNotProcess ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
+        au < doNotProcess ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
+        au < doNotProcess ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Menopause International ;
+        issn = 1754-0453 ;
+        eissn = 1754-0461 ;
+        issnl = 1754-0453
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+  
+      {
+  
+        param[base_url] = http://min.sagepub.com/
+  
+        au < exists ; exists ; 2000 ; Menopause International Volume 6 ; 6 ; >
+        au < exists ; exists ; 2001 ; Menopause International Volume 7 ; 7 ; >
+        au < exists ; exists ; 2002 ; Menopause International Volume 8 ; 8 ; >
+        au < exists ; exists ; 2003 ; Menopause International Volume 9 ; 9 ; >
+        au < exists ; exists ; 2004 ; Menopause International Volume 10 ; 10 ; >
+        au < exists ; exists ; 2005 ; Menopause International Volume 11 ; 11 ; >
+        au < exists ; exists ; 2006 ; Menopause International Volume 12 ; 12 ; >
+        au < exists ; exists ; 2007 ; Menopause International Volume 13 ; 13 ; >
+        au < exists ; exists ; 2008 ; Menopause International Volume 14 ; 14 ; >
+        au < exists ; exists ; 2009 ; Menopause International Volume 15 ; 15 ; >
+        au < exists ; exists ; 2010 ; Menopause International Volume 16 ; 16 ; >
+        au < exists ; exists ; 2011 ; Menopause International Volume 17 ; 17 ; >
+        au < exists ; exists ; 2012 ; Menopause International Volume 18 ; 18 ; >
+        au < exists ; exists ; 2013 ; Menopause International Volume 19 ; 19 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Obstetric Medicine ;
+        issn = 1753-495X ;
+        eissn = 1753-4968 ;
+        issnl = 1753-495X
+      >
+  
+      {
+        comment[notmoved] = this journal has not moved to Sage yet.
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
+        au < doNotProcess ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
+        au < doNotProcess ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
+        au < doNotProcess ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; >
+        au < doNotProcess ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
+        au < doNotProcess ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Phlebology ;
+        issn = 0268-3555 ;
+        eissn = 1758-1125 ;
+        issnl = 0268-3555
+      >
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+
+      {
+  
+        param[base_url] = http://phl.sagepub.com/
+  
+        au < exists ; exists ; 2003 ; Phlebology Volume 18 ; 18 ; >
+        au < exists ; exists ; 2004 ; Phlebology Volume 19 ; 19 ; >
+        au < exists ; exists ; 2005 ; Phlebology Volume 20 ; 20 ; >
+        au < exists ; exists ; 2006 ; Phlebology Volume 21 ; 21 ; >
+        au < exists ; exists ; 2007 ; Phlebology Volume 22 ; 22 ; >
+        au < exists ; exists ; 2008 ; Phlebology Volume 23 ; 23 ; >
+        au < exists ; exists ; 2009 ; Phlebology Volume 24 ; 24 ; >
+        au < exists ; exists ; 2010 ; Phlebology Volume 25 ; 25 ; >
+        au < exists ; exists ; 2011 ; Phlebology Volume 26 ; 26 ; >
+        au < exists ; exists ; 2012 ; Phlebology Volume 27 ; 27 ; >
+        au < exists ; exists ; 2013 ; Phlebology Volume 28 ; 28 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Scottish Medical Journal ;
+        issn = 0036-9330 ;
+        eissn = 2045-6441
+      >
+  
+      comment[notmoved] = this journal has not moved to Sage yet.
+      
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = xxx
+  
+      au < doNotProcess ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
+      au < doNotProcess ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
+      au < doNotProcess ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; >
+      au < doNotProcess ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; >
+      au < doNotProcess ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; >
+      au < doNotProcess ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; >
+      au < doNotProcess ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
+      au < doNotProcess ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
+  
+    }
+  
+    {
+    
+      title <
+        name = Tropical Doctor ;
+        issn = 0049-4755 ;
+        eissn = 1758-1133 ;
+        issnl = 0049-4755
+      >
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        
+      {
+
+        param[base_url] = http://tdo.sagepub.com 
+  
+        au < exists ; exists ; 2005 ; Tropical Doctor Volume 35 ; 35 ; >
+        au < exists ; exists ; 2006 ; Tropical Doctor Volume 36 ; 36 ; >
+        au < exists ; exists ; 2007 ; Tropical Doctor Volume 37 ; 37 ; >
+        au < exists ; exists ; 2008 ; Tropical Doctor Volume 38 ; 38 ; >
+        au < exists ; exists ; 2009 ; Tropical Doctor Volume 39 ; 39 ; >
+        au < exists ; exists ; 2010 ; Tropical Doctor Volume 40 ; 40 ; >
+        au < exists ; exists ; 2011 ; Tropical Doctor Volume 41 ; 41 ; >
+        au < exists ; exists ; 2012 ; Tropical Doctor Volume 42 ; 42 ; >
+        au < exists ; exists ; 2013 ; Tropical Doctor Volume 43 ; 43 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Ultrasound ;
+        issn = 1742-271X ;
+        eissn = 1743-1344
+      >
+  
+      {
+        comment[notmoved] = this journal has not moved to Sage yet.
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = xxx
+  
+        au < doNotProcess ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
+        au < doNotProcess ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
+        au < doNotProcess ; exists ; 2006 ; Ultrasound Volume 14 ; 14 ; >
+        au < doNotProcess ; exists ; 2007 ; Ultrasound Volume 15 ; 15 ; >
+        au < doNotProcess ; exists ; 2008 ; Ultrasound Volume 16 ; 16 ; >
+        au < doNotProcess ; exists ; 2009 ; Ultrasound Volume 17 ; 17 ; >
+        au < doNotProcess ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; >
+        au < doNotProcess ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; >
+        au < doNotProcess ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
+        au < doNotProcess ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = Vascular ;
+        issn = 1708-5381 ;
+        eissn = 1708-539X
+      >
+      
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+     {
+      param[base_url] = http://vas.sagepub.com/
+  
+      au < exists ; exists ; 2004 ; Vascular Volume 12 ; 12 ; >
+      au < exists ; exists ; 2005 ; Vascular Volume 13 ; 13 ; >
+      au < exists ; exists ; 2006 ; Vascular Volume 14 ; 14 ; >
+      au < exists ; exists ; 2007 ; Vascular Volume 15 ; 15 ; >
+      au < exists ; exists ; 2008 ; Vascular Volume 16 ; 16 ; >
+      au < exists ; exists ; 2009 ; Vascular Volume 17 ; 17 ; >
+      au < exists ; exists ; 2010 ; Vascular Volume 18 ; 18 ; >
+      au < exists ; exists ; 2011 ; Vascular Volume 19 ; 19 ; >
+      au < exists ; exists ; 2012 ; Vascular Volume 20 ; 20 ; >
+      au < exists ; exists ; 2013 ; Vascular Volume 21 ; 21 ; >
+     }
+     
+    }
+
+
 }
