@@ -1,5 +1,5 @@
 /*
- * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.3 2013-04-22 21:06:34 alexandraohlson Exp $
+ * $Id: TestNRCResearchPressHtmlCrawlFilterFactory.java,v 1.4 2013-05-17 22:17:01 alexandraohlson Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import junit.framework.Test;
 
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory;
+import org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory;
 import org.lockss.test.*;
 
 public class TestNRCResearchPressHtmlCrawlFilterFactory extends LockssTestCase {
