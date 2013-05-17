@@ -9,11 +9,20 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>2</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.53.10</string>
+    <string>1.59.0</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -32,13 +41,13 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Elsevier Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Elsevier Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.10 2013-01-06 14:39:58 pgust Exp $
+ * $Id: ElsevierTocMetadataExtractorFactory.java,v 1.11 2013-05-17 16:15:34 aishizaki Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Cardinality;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.plugin.*;
 
 /**
@@ -100,6 +102,28 @@ implements FileMetadataExtractorFactory {
 
     private String[] articleValues = new String[articleTags.size()];
 
+    // Overriding MetadataField.FIELD_AUTHOR and MetadataField.FIELD_KEYWORDS
+    // local version sets the "splitter", which is necessary to trigger
+    // ArticleMetadata.put() [really, putMulti()],  to separate the
+    // list using "splitCh" (DB expects fields to be < 128 chars)
+    private static  Validator authorvalid = new Validator(){
+      public String validate(ArticleMetadata am,MetadataField field,String val)
+          throws MetadataException.ValidationException {
+        // normalize author entries especially with no names .
+        // For example : <meta name="citation_authors" content=", "/>
+          if(!MetadataUtil.isAuthor(val)) {
+            throw new MetadataException.ValidationException("Illegal Author: " 
+          + val);
+          }
+          return val;
+          }
+     };
+    private final static String splitCh = "; ";
+    private static final MetadataField ELSEVIER_FIELD_AUTHOR = new MetadataField(
+        MetadataField.KEY_AUTHOR, Cardinality.Multi, authorvalid, MetadataField.splitAt(splitCh));
+    private static final MetadataField ELSEVIER_FIELD_KEYWORDS = new MetadataField(
+        MetadataField.KEY_KEYWORDS, Cardinality.Multi, MetadataField.splitAt(splitCh));      
+
     private MetadataField[] metadataFields = {
         MetadataField.FIELD_ISSN, 
         MetadataField.FIELD_VOLUME, 
@@ -111,16 +135,16 @@ implements FileMetadataExtractorFactory {
         MetadataField.FIELD_DOI, 
         MetadataField.DC_FIELD_LANGUAGE,
         MetadataField.FIELD_ARTICLE_TITLE, 
-        MetadataField.FIELD_AUTHOR, 
+        ELSEVIER_FIELD_AUTHOR, 
         MetadataField.DC_FIELD_DESCRIPTION,
-        MetadataField.FIELD_KEYWORDS, 
+        ELSEVIER_FIELD_KEYWORDS, 
         MetadataField.FIELD_START_PAGE,
         MetadataField.FIELD_END_PAGE,
     };
 
     private int lastTag = INVALID_TAG;
     private String base_url, year;
-
+    
     /**
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract extra tags by reading the file.
@@ -290,12 +314,14 @@ implements FileMetadataExtractorFactory {
           articleValues[lastTag] += " "+line;
         }
       } else {
+        // build up the single AUTHORS and KEYWORDS into a '; ' separated string
         if (tag == AUTHOR_INDEX || tag == KEYWORD_INDEX) {
           if (articleValues[tag] == null) {
             articleValues[tag] = getMetadataFrom(line);
           } else {
-            articleValues[tag] += "; "+getMetadataFrom(line);
+            articleValues[tag] +=  splitCh + getMetadataFrom(line);
           }
+    
         } else if (tag == DOI_INDEX) {
           articleValues[tag] = getDoiFrom(line);
         } else if (tag == ISSN_INDEX) {
@@ -328,15 +354,10 @@ implements FileMetadataExtractorFactory {
       
       for (int i = 0; i < articleTags.size(); ++i) {
         if (articleValues[i] != null) {
-          if ((i == AUTHOR_INDEX) || (i == KEYWORD_INDEX)) {
-            // store individual values of a multi-valued field
-            String[] values = articleValues[i].split(";");
-            for (String value : values) {
-              am.put(metadataFields[i], value.trim());
-            }
-          } else {
-            am.put(metadataFields[i],articleValues[i]);
-          }
+           // Both AUTHORs and KEYWORDs are ';' separated lists of values.
+           // the DB can only take entries of < 128 chars, but don't split
+           // the list here - that's done in ArticleMetadata.putMulti()
+          am.put(metadataFields[i],articleValues[i]);                    
           if (log.isDebug3()) {
             log.debug(metadataFields[i].getKey() + ": " +  articleValues[i]);
           }

@@ -88,7 +88,7 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
     conf.put("numFiles", "7");
     conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
 				SimulatedContentGenerator.FILE_TYPE_XML));
-//     conf.put("default_article_mime_type", "application/pdf");
+    conf.put("default_article_mime_type", "application/pdf");
     conf.put("binFileSize", "7");
     return conf;
   }
@@ -110,7 +110,10 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
 	String goodRights = "Rights";
 	String goodTitle = "This tests a title which spans two lines";
 	List<?> goodAuthors = 
-	    ListUtil.list("Author, A.","Author, B.", "Author, C.", "Author, D.", "Author, E.");
+	    ListUtil.list("AuthorLongName, A.", "AuthorLongerName, B.",
+	  "AuthorEvenLongerName, C.","AuthorWantsALongName, D.",
+	  "AuthorHasALongerName, E.", "AuthorHasAnotherLongerName, F.",
+	  "AuthorHasATerriblyLongerName, G.");
 	String goodSummary = "This summary also spans several lines";
 	List<?> goodKeywords = ListUtil.list("testing1", "testing2",  "testing3");
 	String goodStart = "10";
@@ -133,12 +136,14 @@ public class TestElsevierTocMetadataExtractorFactory extends LockssTestCase {
   "_la EN\n"+
   "_ti This tests a title which\n"+
   " spans two lines\n"+
-  "_au Author, A.\n"+
-  "_au Author, B.\n"+
-  "_au Author, C.\n"+
-  "_au Author, D.\n"+
-  "_au Author, E.\n"+
-  "_ca Author, A.\n"+
+  "_au AuthorLongName, A.\n"+
+  "_au AuthorLongerName, B.\n"+
+  "_au AuthorEvenLongerName, C.\n"+
+  "_au AuthorWantsALongName, D.\n"+
+  "_au AuthorHasALongerName, E.\n"+
+  "_au AuthorHasAnotherLongerName, F.\n"+
+  "_au AuthorHasATerriblyLongerName, G.\n"+
+  "_ca AuthorLongName, A.\n"+
   "_ab This summary\n"+
   "	also spans\n"+
   "	several lines\n"+ 

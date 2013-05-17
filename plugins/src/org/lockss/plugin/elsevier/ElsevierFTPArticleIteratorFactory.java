@@ -47,6 +47,11 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
   protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
 
   protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+  
+  // example file names:
+  //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/dataset.toc
+  //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/00029343.tar!/01250008/12000332/main.pdf
+  //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/00029343.tar!/01250008/12000332/main.xml
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -61,7 +66,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
   
   protected static class ElsevierFTPArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("([^/]+[\\d]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.)pdf$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("([^/]+[\\d]+)(/[\\d]+[^/]+/[\\d]+/[\\d]+/main.)pdf$", Pattern.CASE_INSENSITIVE);
     
     protected ElsevierFTPArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
@@ -70,7 +75,7 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
     }
     
     // Duplicate of definition in ArticleFiles for use here until 1.59 is ready (PJG).
-    private static final String ROLE_FULL_TEXT_XML = "FullTextXML";
+    // now using ArticleFiles.ROLE_FULL_TEXT_XML
 
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
@@ -98,12 +103,20 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
     }
     
     protected void guessXml(ArticleFiles af, Matcher mat) {
-        CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1xml"));
-        
+        CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$2xml"));
+       
         if (xmlCu != null && xmlCu.hasContent()) {
-          af.setRoleCu(ROLE_FULL_TEXT_XML, xmlCu);
+          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_XML, xmlCu);
         }
       } 
+    
+    // Now "guessing" the dataset.toc file to set the ROLE_ARTICLE_METADATA
+    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("$1/dataset.toc"));
+      if (absCu != null && absCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+      }
+    }
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
