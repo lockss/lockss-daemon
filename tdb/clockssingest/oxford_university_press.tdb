@@ -5663,7 +5663,7 @@
     au < released ; crawling ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
     au < released ; crawling ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >
     au < released ; crawling ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
 
     }
 
@@ -5697,7 +5697,7 @@
     au < released ; crawling ; 2010 ; European Review of Economic History Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; European Review of Economic History Volume 15 ; 15 ; >
     au < released ; crawling ; 2012 ; European Review of Economic History Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2013 ; European Review of Economic History Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2013 ; European Review of Economic History Volume 17 ; 17 ; >
 
   }
 
@@ -5753,7 +5753,7 @@
     au < released ; crawling ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; European Sociological Review Volume 27 ; 27 ; >
     au < released ; crawling ; 2012 ; European Sociological Review Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2013 ; European Sociological Review Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2013 ; European Sociological Review Volume 29 ; 29 ; >
 
     }
 
@@ -5835,7 +5835,7 @@
     au < released ; crawling ; 2010 ; Family Practice Volume 27 ; 27 ; >
     au < released ; crawling ; 2011 ; Family Practice Volume 28 ; 28 ; >
     au < released ; crawling ; 2012 ; Family Practice Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2013 ; Family Practice Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2013 ; Family Practice Volume 30 ; 30 ; >
 
     }
 
@@ -6003,7 +6003,7 @@
     au < released ; crawling ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
     au < released ; crawling ; 2011 ; Forestry: An International Journal of Forest Research Volume 84 ; 84 ; >
     au < released ; crawling ; 2012 ; Forestry: An International Journal of Forest Research Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
+    au < crawling ; exists ; 2013 ; Forestry: An International Journal of Forest Research Volume 86 ; 86 ; >
 
     }
 
@@ -6081,7 +6081,7 @@
     au < released ; crawling ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
     au < released ; crawling ; 2011 ; Forum for Modern Language Studies Volume 47 ; 47 ; >
     au < released ; crawling ; 2012 ; Forum for Modern Language Studies Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2013 ; Forum for Modern Language Studies Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2013 ; Forum for Modern Language Studies Volume 49 ; 49 ; >
 
     }
 
@@ -6137,7 +6137,7 @@
     au < released ; crawling ; 2010 ; French History Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; French History Volume 25 ; 25 ; >
     au < released ; crawling ; 2012 ; French History Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2013 ; French History Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2013 ; French History Volume 27 ; 27 ; >
 
     }
 
@@ -6233,7 +6233,7 @@
     au < released ; crawling ; 2010 ; French Studies: A Quarterly Review Volume 64 ; 64 ; >
     au < released ; crawling ; 2011 ; French Studies: A Quarterly Review Volume 65 ; 65 ; >
     au < released ; crawling ; 2012 ; French Studies: A Quarterly Review Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2013 ; French Studies: A Quarterly Review Volume 67 ; 67 ; >
 
     }
 
@@ -6285,7 +6285,7 @@
     au < released ; crawling ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
     au < released ; crawling ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     au < released ; crawling ; 2012 ; French Studies Bulletin Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
 
     }
 
@@ -6302,7 +6302,7 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
       
-    au < manifest ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
       
   }
       
