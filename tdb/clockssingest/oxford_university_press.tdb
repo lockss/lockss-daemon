@@ -1706,7 +1706,7 @@
     au < manifest ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
+    au < testing ; exists ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
     au < manifest ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
     au < testing ; exists ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
@@ -4341,7 +4341,7 @@
     au < manifest ; exists ; 2006 ; Diplomatic History Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Diplomatic History Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
+    au < testing ; exists ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
     au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < testing ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
@@ -8173,7 +8173,7 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < crawling ; exists ; 2009 ; International Health Volume 1 ; 1 ; >
+    au < testing ; exists ; 2009 ; International Health Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; International Health Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
     au < released ; manifest ; 2012 ; International Health Volume 4 ; 4 ; >
@@ -19083,7 +19083,7 @@
     au < manifest ; exists ; 2006 ; Yearbook of European Law Volume 25 ; 25 ; >
     au < manifest ; exists ; 2007 ; Yearbook of European Law Volume 26 ; 26 ; >
     au < manifest ; exists ; 2008 ; Yearbook of European Law Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
+    au < testing ; exists ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < released ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < released ; manifest ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
@@ -19621,9 +19621,9 @@
       au < manifest ; exists ; 2006 ; The Quarterly Journal of Economics Volume 121 ; 121 ; >
       au < manifest ; exists ; 2007 ; The Quarterly Journal of Economics Volume 122 ; 122 ; >
       au < manifest ; exists ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 ; >
-      au < crawling ; exists ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
-      au < crawling ; exists ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
-      au < crawling ; exists ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
+      au < testing ; exists ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
+      au < testing ; exists ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
+      au < testing ; exists ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
       au < testing ; exists ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < manifest ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
 
