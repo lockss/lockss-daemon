@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.47 2012-07-02 16:25:28 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.47.24.1 2013-05-18 22:17:40 dshr Exp $
  */
 
 /*
@@ -317,6 +317,52 @@ public class BaseCachedUrl implements CachedUrl {
 
   boolean isArchiveMember() {
     return false;
+  }
+
+  /**
+   * Store a checksum value for a CachedUrl.
+   * @param checksum the checksum for the content
+   * @param algorithm the algorithm used to compute the checksum
+   */
+  public void putChecksum(byte[] checksum, String algorithm) {
+    CIProperties props = getProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      String.format("%s:%s", algorithm,
+			    ByteArray.toHexString(checksum)));
+  }
+
+  /*
+   * XXX The following is a temporary implementation of what should
+   * eventually be functionally a map from CachedUrl versions to
+   * {checksum,algorithm} but not actually implemented as a map so
+   * that a box can export it to other boxes via the LOCKSS protocol.
+   *
+   * XXX This implementation matches the implementation of storing the
+   * checksum of newly stored content in org.lockss.plugin.base.BaseUrlCacher
+   *
+   * XXX They should both be moved to RepositoryNode
+   */
+
+  /**
+   * Get the stored checksum for a CachedUrl
+   * @return the byte array checksum, null if none available
+   */
+  public byte[] getChecksum() {
+    CIProperties props = getProperties();
+    String checkString = (String) props.get(CachedUrl.PROPERTY_CHECKSUM);
+    int colon = checkString.indexOf(':');
+    return ByteArray.fromHexString(checkString.substring(colon + 1));
+  }
+
+  /**
+   * Get the algorithm used for the CachedUrl's stored checksum
+   * @return the string name for the algorithm
+   */
+  public String getChecksumAlgorithm() {
+    CIProperties props = getProperties();
+    String checkString = (String) props.get(CachedUrl.PROPERTY_CHECKSUM);
+    int colon = checkString.indexOf(':');
+    return checkString.substring(0, colon);
   }
 
   /** A CachedUrl that's bound to a specific version. */

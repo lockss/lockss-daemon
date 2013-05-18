@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.19 2011-11-29 06:50:30 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.19.34.1 2013-05-18 22:17:40 dshr Exp $
  */
 
 /*
@@ -156,9 +156,94 @@ public class StreamUtil {
   public static long copy(InputStream is, OutputStream os, long len,
 			  LockssWatchdog wdog, boolean wrapExceptions, MessageDigest md)
       throws IOException {
+    MessageDigest mds[] = null;
+    if (md != null) {
+      mds = new MessageDigest[1];
+      mds[0] = md;
+    }
+    return copy(is, os, len, wdog, mds, wrapExceptions);
+  }
+
+  /**
+   * Copy up to len bytes from InputStream to Outputstream, occasionally
+   * poking a watchdog.  The OutputStream is flushed, neither stream is
+   * closed.
+   * @param is input stream
+   * @param os output stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @param mds an array of MessageDigest algorithms that, when not null,
+   * each of which receives all input
+   * @param wrapExceptions if true, exceptions that occur while reading
+   * from the input stream will be wrapped in a {@link
+   * StreamUtil#InputException} and exceptions that occur while writing to
+   * or closing the output stream will be wrapped in a {@link
+   * StreamUtil#OutputException}.
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os, long len,
+			  LockssWatchdog wdog,
+			  MessageDigest mds[],
+			  boolean wrapExceptions)
+      throws IOException {
     if (is == null || os == null || len == 0) {
       return 0;
     }
+    return process(is, os, len, wdog, wrapExceptions, mds);
+  }
+
+  /**
+   * Hash up to len bytes from InputStream, occasionally
+   * poking a watchdog.  The InputStream is not closed.
+   * @param is input stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @param wrapExceptions if true, exceptions that occur while reading
+   * from the input stream will be wrapped in a {@link
+   * StreamUtil#InputException}.
+   * @param md a MessageDigest algorithm that, when not null,
+   * receives all input
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long hash(InputStream is,long len, LockssWatchdog wdog,
+			  boolean wrapExceptions, MessageDigest md)
+      throws IOException {
+    MessageDigest mds[] = { md };
+    return hash(is, len, wdog, wrapExceptions, mds);
+  }
+
+  /**
+   * Hash up to len bytes from InputStream, occasionally
+   * poking a watchdog.  The InputStream is not closed.
+   * @param is input stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @param wrapExceptions if true, exceptions that occur while reading
+   * from the input stream will be wrapped in a {@link
+   * StreamUtil#InputException}.
+   * @param mds an array of MessageDigest algorithms that, when not null,
+   * each of which receives all input
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long hash(InputStream is,long len, LockssWatchdog wdog,
+			  boolean wrapExceptions, MessageDigest mds[])
+      throws IOException {
+    if (is == null || len == 0) {
+      return 0;
+    }
+    return process(is, null, len, wdog, wrapExceptions, mds);
+  }
+
+  private static long process(InputStream is, OutputStream os, long len,
+			      LockssWatchdog wdog, boolean wrapExceptions,
+			      MessageDigest mds[])
+    throws IOException {
     long wnext = 0, wcnt = 0, wint = 0;
     if (wdog != null) {
       wint = wdog.getWDogInterval() / 4;
@@ -181,16 +266,20 @@ public class StreamUtil {
       if (nread <= 0) {
 	break;
       }
-      if (md != null) {
-        md.update(buf, 0, nread);
+      if (mds != null) {
+	for (int i = 0; i < mds.length; i++) {
+	  mds[i].update(buf, 0, nread);
+	}
       }
-      try {
-	os.write(buf, 0, nread);
-      } catch (IOException e) {
-	if (wrapExceptions) {
-	  throw new OutputException(e);
-	} else {
-	  throw e;
+      if (os != null) {
+	try {
+	  os.write(buf, 0, nread);
+	} catch (IOException e) {
+	  if (wrapExceptions) {
+	    throw new OutputException(e);
+	  } else {
+	    throw e;
+	  }
 	}
       }
       ncopied += nread;
@@ -207,13 +296,15 @@ public class StreamUtil {
 	}
       }
     }
-    try {
-      os.flush();
-    } catch (IOException e) {
-      if (wrapExceptions) {
-	throw new OutputException(e);
-      } else {
-	throw e;
+    if (os != null) {
+      try {
+	os.flush();
+      } catch (IOException e) {
+	if (wrapExceptions) {
+	  throw new OutputException(e);
+	} else {
+	  throw e;
+	}
       }
     }
     return ncopied;

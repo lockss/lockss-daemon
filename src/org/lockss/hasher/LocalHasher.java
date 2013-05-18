@@ -1,5 +1,5 @@
 /*
- * $Id: LocalHasher.java,v 1.1.2.1 2013-05-17 03:35:36 dshr Exp $
+ * $Id: LocalHasher.java,v 1.1.2.2 2013-05-18 22:17:39 dshr Exp $
  */
 
 /*
@@ -55,12 +55,14 @@ public class LocalHasher {
   private int filesHashed = 0;
   private long startTime = 0;
   private long elapsedTime;
+  private Callback callback;
 
-  public LocalHasher() {
+  public LocalHasher(Callback cb) {
     checksumAlgorithm =
       CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
 			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
     startTime = System.currentTimeMillis();
+    callback = cb;
   }
 
   public long getBytesHashed() {
@@ -107,10 +109,13 @@ public class LocalHasher {
   }
 
   void doLocalEmptyNode(CachedUrl cu) {
-    CIProperties props = cu.getProperties();
-    if (props.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
-      String checksum = (String) props.get(CachedUrl.PROPERTY_CHECKSUM);
-      logger.error(cu.getUrl() + " no content but a checksum " + checksum);
+    byte[] checksum = cu.getChecksum();
+    if (checksum != null) {
+      logger.error(cu.getUrl() + " no content but a checksum " +
+		   ByteArray.toHexString(checksum));
+      if (callback != null) {
+	callback.hashButNoContent(cu);
+      }
     }
   }
 
@@ -138,76 +143,57 @@ public class LocalHasher {
 
   void doLocalHashVersionContent(CachedUrl cu, MessageDigest digest)
     throws IOException {
-    CIProperties props = cu.getProperties();
+    byte[] checksumStored = cu.getChecksum();
     // Hash the CachedUrl with the digest
-    String checksumComputed = localHashVersionContent(cu, digest);
-    // Check the checksum property
-    if (props.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
+    byte[] checksumComputed = localHashVersionContent(cu, digest);;
+    // Is there a stored checksum
+    if (checksumStored == null) {
+      callback.hashMissing(cu, checksumComputed, checksumAlgorithm);
+    } else {
       // Compare the hash we just did with the one in the props
-      String checksumProperty = (String) props.get(CachedUrl.PROPERTY_CHECKSUM);
-      if (checksumProperty.startsWith("FAIL:")) {
-	logger.error("Hash FAIL: " + cu.getUrl() + " v: " + cu.getVersion() +
-		  " " + checksumProperty + " != " + checksumComputed);
-      } else if (checksumProperty.startsWith(checksumAlgorithm)) {
-	// same algorithm
-	if (checksumProperty.endsWith(checksumComputed)) {
-	  // Content OK
-	  logger.debug2("Hash OK: " + cu.getUrl() + " v: " + cu.getVersion());
-	} else {
+      if (MessageDigest.isEqual(checksumStored, checksumComputed)) {
+	// Content OK
+	logger.debug2("Hash OK: " + cu.getUrl() + " v: " + cu.getVersion());
+      } else {
+	String oldAlgorithm = cu.getChecksumAlgorithm();
+	if (checksumAlgorithm.equalsIgnoreCase(oldAlgorithm)) {
 	  // Content not OK
 	  logger.error("Hash BAD: " + cu.getUrl() + " v: " + cu.getVersion() +
-		    " " + checksumProperty + " != " + checksumComputed);
-	  props.put(CachedUrl.PROPERTY_CHECKSUM,
-		    String.format("FAIL:%s:%s",
-				  checksumAlgorithm,checksumComputed));
-	}
-      } else {
-	int colon = checksumProperty.indexOf(':');
-	if (colon < 0) {
-	  throw new IllegalArgumentException("No colon in " +
-					     checksumProperty);
-	}
-	String oldAlgorithm = checksumProperty.substring(colon);
-	// Algorithm mis-match - re-compute with other algorithm
-	if ((digest = makeDigest(oldAlgorithm)) != null ) {
-	  String oldChecksum = localHashVersionContent(cu, digest);
-	  if (checksumProperty.endsWith(oldChecksum)) {
-	    // Content OK - update hash
-	    props.put(CachedUrl.PROPERTY_CHECKSUM,
-		      String.format("%s:%s",
-				    checksumAlgorithm,checksumComputed));
-	  } else {
-	    // Content not OK
-	    logger.error("Hash BAD: " + cu.getUrl() + " v: " + cu.getVersion() +
-		      " " + checksumProperty + " != " + oldChecksum);
-	    props.put(CachedUrl.PROPERTY_CHECKSUM,
-		      String.format("FAIL:%s:%s",
-				    checksumAlgorithm,checksumComputed));
+		    " " + checksumStored + " != " + checksumComputed);
+	  if (callback != null) {
+	    callback.hashMismatch(cu, checksumComputed, checksumAlgorithm);
 	  }
 	} else {
-	  logger.error("Old algorithm not supported: " + oldAlgorithm);
+	  // Algorithm change - recompute with old algorithm
+	  if ((digest = makeDigest(oldAlgorithm)) != null ) {
+	    byte[] oldHash = localHashVersionContent(cu, digest);
+	    if (MessageDigest.isEqual(checksumComputed, oldHash)) {
+	      // Content OK, hash obsolete
+	      logger.error("Hash obsolete but content OK: " +
+			   cu.getUrl() + " v: " + cu.getVersion());
+	      callback.hashObsolete(cu, checksumComputed, checksumAlgorithm);
+	    } else {
+	      // Content not OK, hash obsolete
+	      logger.error("Hash BAD: " + cu.getUrl() + " v: " +
+			   cu.getVersion());
+	      callback.hashMismatch(cu, checksumComputed, checksumAlgorithm);
+	    }
+	  } else {
+	    logger.error("Old algorithm not supported: " + oldAlgorithm);
+	    throw new UnsupportedOperationException(oldAlgorithm);
+	  }
 	}
       }
-    } else {
-      // No checksum in props - put it in
-      // XXX should only do this when winning PoR poll
-      props.put(CachedUrl.PROPERTY_CHECKSUM,
-		String.format("%s:%s", checksumAlgorithm,checksumComputed));
     }
   }
 
-  String localHashVersionContent(CachedUrl cu, MessageDigest digest)
+  byte[] localHashVersionContent(CachedUrl cu, MessageDigest digest)
     throws IOException {
     InputStream is = cu.getUnfilteredInputStream();
-    // XXX don't need to copy but no util to just hash a InputStream
-    File tempFile = FileUtil.createTempFile("LocalHash", ".tmp");
-    OutputStream os = new FileOutputStream(tempFile);
-    bytesHashed += StreamUtil.copy(is, os, -1, null, true, digest);
+    bytesHashed += StreamUtil.hash(is, -1, null, true, digest);
     filesHashed++;
     is.close();
-    os.close();
-    tempFile.delete();
-    return ByteArray.toHexString(digest.digest());
+    return digest.digest();
   }
 
   MessageDigest makeDigest(String checksumAlgorithm) {
@@ -223,5 +209,45 @@ public class LocalHasher {
       throw new IllegalArgumentException("Null checksum algorithm");
     }
     return checksumProducer;
+  }
+
+  /**
+   * The LocalHasher.Callback interface defines the methods that will be
+   * called when:
+   * - a CachedUrl fails to match its local hash,
+   * - a CachedUrl has no local hash available,
+   * - when a CachedUrl has a hash but no content,
+   * - when a CachedUrl has a hash using an obsolete algorithm
+   */
+  public interface Callback {
+    /*
+     * Called when a CachedUrl version is found that does not match
+     * its local hash.
+     * @param cu CachedUrl
+     * @param digest the computed hash of the CachedUrl version's content
+     * @param alg the algorithm used for the hash
+     */
+    void hashMismatch(CachedUrl cu, byte[] digest, String alg);
+    /*
+     * Called when a CachedUrl version is found that has no local hash
+     * @param cu CachedUrl
+     * @param digest the computed hash of the CachedUrl version's content
+     * @param alg the algorithm used for the hash
+     */
+    void hashMissing(CachedUrl cu, byte[] digest, String alg);
+    /*
+     * Called when a CachedUrl version is found that has a local hash
+     * but no content
+     * @param cu CachedUrl
+     */
+    void hashButNoContent(CachedUrl cu);
+    /*
+     * Called when a CachedUrl version is found with a matching local hash
+     * using an obsolete algorithm
+     * @param cu CachedUrl
+     * @param digest the computed hash of the CachedUrl version's content
+     * @param alg the algorithm used for the hash
+     */
+    void hashObsolete(CachedUrl cu, byte[] digest, String alg);
   }
 }

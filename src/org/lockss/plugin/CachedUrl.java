@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.29 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.29.30.1 2013-05-18 22:17:40 dshr Exp $
  */
 
 /*
@@ -209,5 +209,24 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @param ams describes the archive member.
    */
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams);
+
+  /**
+   * Store a checksum value for a CachedUrl.
+   * @param checksum the checksum for the content
+   * @param algorithm the algorithm used to compute the checksum
+   */
+  public void putChecksum(byte[] checksum, String algorithm);
+
+  /**
+   * Get the stored checksum for a CachedUrl
+   * @return the byte array checksum, null if none available
+   */
+  public byte[] getChecksum();
+
+  /**
+   * Get the algorithm used for the CachedUrl's stored checksum
+   * @return the string name for the algorithm
+   */
+  public String getChecksumAlgorithm();
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.94 2013-03-14 06:38:02 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.94.8.1 2013-05-18 22:17:40 dshr Exp $
  */
 
 /*
@@ -460,6 +460,9 @@ public class BaseUrlCacher implements UrlCacher {
 	os.close();
 	headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
 	if (checksumProducer != null) {
+	  // XXX This matches a temporary implementation in
+	  // XXX org.lockss.plugin.base.BaseCachedUrl
+	  // XXX They should both be moved to RepositoryNode
 	  byte bdigest[] = checksumProducer.digest();
 	  String sdigest = ByteArray.toHexString(bdigest);
 	  headers.setProperty(CachedUrl.PROPERTY_CHECKSUM,
