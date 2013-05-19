@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.32 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.32.30.1 2013-05-19 21:11:13 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.security.MessageDigest;
 import java.math.BigInteger;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.servlet.*;
@@ -151,6 +152,18 @@ public class PTestPlugin {
 
     public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       return null;
+    }
+
+    public void putChecksum(byte[] checksum, String algorithm) {
+    }
+
+    public byte[] getChecksum() {
+      return null;
+    }
+
+    public String getChecksumAlgorithm() {
+      return BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM;
+    
     }
   }
 

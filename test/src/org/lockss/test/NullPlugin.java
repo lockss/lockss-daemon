@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.118 2013-03-19 04:26:14 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.118.8.1 2013-05-19 21:11:13 dshr Exp $
  */
 
 /*
@@ -248,6 +248,17 @@ public class NullPlugin {
 
     public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       return null;
+    }
+
+    public void putChecksum(byte[] checksum, String algorithm) {
+    }
+
+    public byte[] getChecksum() {
+      return null;
+    }
+
+    public String getChecksumAlgorithm() {
+      return BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM;
     }
   }
 

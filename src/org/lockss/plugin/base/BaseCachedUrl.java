@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.47.24.1 2013-05-18 22:17:40 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.47.24.2 2013-05-19 21:11:12 dshr Exp $
  */
 
 /*
@@ -319,18 +319,6 @@ public class BaseCachedUrl implements CachedUrl {
     return false;
   }
 
-  /**
-   * Store a checksum value for a CachedUrl.
-   * @param checksum the checksum for the content
-   * @param algorithm the algorithm used to compute the checksum
-   */
-  public void putChecksum(byte[] checksum, String algorithm) {
-    CIProperties props = getProperties();
-    props.put(CachedUrl.PROPERTY_CHECKSUM,
-	      String.format("%s:%s", algorithm,
-			    ByteArray.toHexString(checksum)));
-  }
-
   /*
    * XXX The following is a temporary implementation of what should
    * eventually be functionally a map from CachedUrl versions to
@@ -342,6 +330,18 @@ public class BaseCachedUrl implements CachedUrl {
    *
    * XXX They should both be moved to RepositoryNode
    */
+
+  /**
+   * Store a checksum value for a CachedUrl.
+   * @param checksum the checksum for the content
+   * @param algorithm the algorithm used to compute the checksum
+   */
+  public void putChecksum(byte[] checksum, String algorithm) {
+    CIProperties props = getProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      String.format("%s:%s", algorithm,
+			    ByteArray.toHexString(checksum)));
+  }
 
   /**
    * Get the stored checksum for a CachedUrl

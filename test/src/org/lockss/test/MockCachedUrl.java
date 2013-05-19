@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.50 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.50.30.1 2013-05-19 21:11:13 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.math.*;
 import java.util.*;
 
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
@@ -68,6 +69,8 @@ public class MockCachedUrl implements CachedUrl {
   private int version = 0;
   private LinkRewriterFactory lrf = null;
   private FileMetadataExtractor metadataExtractor = null;
+  private byte[] hash = null;
+  private String alg = BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM;
 
   public MockCachedUrl(String url) {
     this.versions = new ArrayList();
@@ -319,6 +322,23 @@ public class MockCachedUrl implements CachedUrl {
 
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
     return null;
+  }
+
+  public void putChecksum(byte[] checksum, String algorithm) {
+    hash = checksum;
+    alg = algorithm;
+  }
+
+  public byte[] getChecksum() {
+    return hash;
+  }
+
+  public String getChecksumAlgorithm() {
+    return alg;
+  }
+
+  public void setChecksumAlgorithm(String algorithm) {
+    alg = algorithm;
   }
 
   public String toString() {

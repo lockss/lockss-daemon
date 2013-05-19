@@ -1,5 +1,5 @@
 /*
- * $Id: LocalHasher.java,v 1.1.2.2 2013-05-18 22:17:39 dshr Exp $
+ * $Id: LocalHasher.java,v 1.1.2.3 2013-05-19 21:11:12 dshr Exp $
  */
 
 /*
@@ -90,12 +90,7 @@ public class LocalHasher {
       CachedUrlSetNode node = (CachedUrlSetNode)iterCUS.next();
       switch (node.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL:
-	if (node.hasContent()) {
-	  CachedUrl cu = (CachedUrl) node;
-	  doLocalHashNode(cu);
-	} else {
-	  doLocalEmptyNode((CachedUrl) node);
-	}
+	doLocalHashCachedUrlNode(node);
 	elapsedTime = System.currentTimeMillis() - startTime;
 	break;
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
@@ -105,6 +100,18 @@ public class LocalHasher {
 	throw new IllegalArgumentException("Bad CachedUrlSetNode type: "
 					   + node.getType());
       }
+    }
+  }
+
+  public void doLocalHashCachedUrlNode(CachedUrlSetNode node)
+    throws IOException {
+    CachedUrl cu = (CachedUrl) node;
+    if (node.hasContent()) {
+      logger.debug3(cu.getUrl() + " has content");
+      doLocalHashNode(cu);
+    } else {
+      logger.debug3(cu.getUrl() + " has no content");
+      doLocalEmptyNode(cu);
     }
   }
 
@@ -120,10 +127,25 @@ public class LocalHasher {
   }
 
   void doLocalHashNode(CachedUrl cu) throws IOException {
+    byte[] hash0 = cu.getChecksum();
+    if (hash0 != null) {
+      logger.debug3("doLocalHashNode: " +
+		    ByteArray.toHexString(hash0) + " v " +
+		    cu.getVersion());
+    } else {
+      logger.debug3("doLocalHashNode: null v " + cu.getVersion());
+    }
     CachedUrl[] versions;
     try {
       versions = cu.getCuVersions();
       for (int i = 0; i < versions.length; i++) {
+	logger.debug3("Version: " + i + "  " + versions[i].getVersion());
+	byte[] hash = versions[i].getChecksum();
+	if (hash != null) {
+	  logger.debug3("Hash: " + ByteArray.toHexString(hash));
+	} else {
+	  logger.debug3("Hash: null");
+	}
 	doLocalHashVersion(versions[i]);
       }
     } catch (UnsupportedOperationException ex) {
@@ -132,6 +154,11 @@ public class LocalHasher {
   }
 
   void doLocalHashVersion(CachedUrl cu) throws IOException {
+    byte[] hash = cu.getChecksum();
+    if (hash != null) {
+      logger.debug3(cu.getUrl() + " stored hash is " +
+		    ByteArray.toHexString(hash));
+    }
     MessageDigest checksumProducer = makeDigest(checksumAlgorithm);
     if (checksumProducer != null) {
       // Hash the content of this version
@@ -143,23 +170,36 @@ public class LocalHasher {
 
   void doLocalHashVersionContent(CachedUrl cu, MessageDigest digest)
     throws IOException {
+    if (callback == null) {
+      logger.warning("null callback");
+    }
     byte[] checksumStored = cu.getChecksum();
     // Hash the CachedUrl with the digest
     byte[] checksumComputed = localHashVersionContent(cu, digest);;
     // Is there a stored checksum
     if (checksumStored == null) {
+      logger.debug3("No stored checksum for " + cu.getUrl());
       callback.hashMissing(cu, checksumComputed, checksumAlgorithm);
     } else {
+      if (logger.isDebug3()) {
+	logger.debug3(cu.getUrl() + " stored hash " +
+		      ByteArray.toHexString(checksumStored) + " vs " +
+		      ByteArray.toHexString(checksumComputed));
+      }
       // Compare the hash we just did with the one in the props
       if (MessageDigest.isEqual(checksumStored, checksumComputed)) {
 	// Content OK
 	logger.debug2("Hash OK: " + cu.getUrl() + " v: " + cu.getVersion());
       } else {
+	logger.debug3("hashes don't match for " + cu.getUrl());
 	String oldAlgorithm = cu.getChecksumAlgorithm();
+	logger.debug3("Algorithms: " + checksumAlgorithm + " vs. " +
+		      oldAlgorithm);
 	if (checksumAlgorithm.equalsIgnoreCase(oldAlgorithm)) {
 	  // Content not OK
 	  logger.error("Hash BAD: " + cu.getUrl() + " v: " + cu.getVersion() +
-		    " " + checksumStored + " != " + checksumComputed);
+		       " " + ByteArray.toHexString(checksumStored) +
+		       " != " + ByteArray.toHexString(checksumComputed));
 	  if (callback != null) {
 	    callback.hashMismatch(cu, checksumComputed, checksumAlgorithm);
 	  }
@@ -167,7 +207,8 @@ public class LocalHasher {
 	  // Algorithm change - recompute with old algorithm
 	  if ((digest = makeDigest(oldAlgorithm)) != null ) {
 	    byte[] oldHash = localHashVersionContent(cu, digest);
-	    if (MessageDigest.isEqual(checksumComputed, oldHash)) {
+	    logger.debug3("oldHash: " + ByteArray.toHexString(oldHash));
+	    if (MessageDigest.isEqual(checksumStored, oldHash)) {
 	      // Content OK, hash obsolete
 	      logger.error("Hash obsolete but content OK: " +
 			   cu.getUrl() + " v: " + cu.getVersion());
@@ -192,6 +233,8 @@ public class LocalHasher {
     InputStream is = cu.getUnfilteredInputStream();
     bytesHashed += StreamUtil.hash(is, -1, null, true, digest);
     filesHashed++;
+    logger.debug3("Files " + filesHashed + " bytes " + bytesHashed + " alg " +
+		  digest.getAlgorithm());
     is.close();
     return digest.digest();
   }
