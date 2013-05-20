@@ -13858,25 +13858,6 @@
   {
 
     title <
-      name = Mechanisms, Policy and Practice ;
-      eissn = 2051-1434
-    >
-
-    {
-
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://conphys.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
-
-    au < expected ; 2013 ; Mechanisms, Policy and Practice Volume 1 ; 1 >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Medical Law Review ;
       issn = 0967-0742 ;
       eissn = 1464-3790 ;
