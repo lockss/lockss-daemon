@@ -6301,8 +6301,10 @@
     rights=openaccess
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[notReady] = This AU does not yet have a manifest. 05/2013
       
-    au < expected ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
       
   }
       
@@ -6321,7 +6323,7 @@
     au < released ; crawling ; 2010 ; Genome Biology and Evolution Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Genome Biology and Evolution Volume 3 ; 3 ; >
     au < released ; crawling ; 2012 ; Genome Biology and Evolution Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2013 ; Genome Biology and Evolution Volume 5 ; 5 ; >
 
   }
 
@@ -6527,8 +6529,8 @@
     au < exists ; exists ; 2012 ; Geophysical Journal International Volume 189 ; 189 ; >
     au < exists ; exists ; 2012 ; Geophysical Journal International Volume 190 ; 190 ; >
     au < exists ; exists ; 2012 ; Geophysical Journal International Volume 191 ; 191 ; >
-    au < manifest ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
-    au < manifest ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
+    au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
+    au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
     au < expected ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
     au < expected ; exists ; 2013 ; Geophysical Journal International Volume 195 ; 195 ; >
 
@@ -6588,7 +6590,7 @@
     au < released ; crawling ; 2010 ; German History Volume 28 ; 28 ; >
     au < released ; crawling ; 2011 ; German History Volume 29 ; 29 ; >
     au < released ; crawling ; 2012 ; German History Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2013 ; German History Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2013 ; German History Volume 31 ; 31 ; >
 
     }
 
@@ -6669,7 +6671,7 @@
     au < released ; crawling ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
     au < released ; crawling ; 2011 ; The Gerontologist Volume 51 ; 51 ; >
     au < released ; crawling ; 2012 ; The Gerontologist Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2013 ; The Gerontologist Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2013 ; The Gerontologist Volume 53 ; 53 ; >
 
     }
 
@@ -6776,7 +6778,7 @@
     au < zapped ; down ; 2010 ; Health & Social Work Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Health & Social Work Volume 36 ; 36 ; >
     au < released ; crawling ; 2012 ; Health & Social Work Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2013 ; Health & Social Work Volume 38 ; 38 ; >
 
   }
 
@@ -6831,7 +6833,7 @@
     au < released ; crawling ; 2010 ; Health Education Research Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Education Research Volume 26 ; 26 ; >
     au < released ; crawling ; 2012 ; Health Education Research Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; Health Education Research Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2013 ; Health Education Research Volume 28 ; 28 ; >
 
     }
 
@@ -6888,7 +6890,7 @@
     au < released ; crawling ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
     au < released ; crawling ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
 
     }
 
@@ -6945,7 +6947,7 @@
     au < released ; crawling ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Health Promotion International Volume 26 ; 26 ; >
     au < released ; crawling ; 2012 ; Health Promotion International Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2013 ; Health Promotion International Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2013 ; Health Promotion International Volume 28 ; 28 ; >
 
     }
 
@@ -7045,7 +7047,7 @@
     au < released ; crawling ; 2011 ; History Workshop Journal Volume 72 ; 72 ; >
     au < released ; crawling ; 2012 ; History Workshop Journal Volume 73 ; 73 ; >
     au < released ; crawling ; 2012 ; History Workshop Journal Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2013 ; History Workshop Journal Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2013 ; History Workshop Journal Volume 75 ; 75 ; >
 
     }
 
@@ -7101,7 +7103,7 @@
     au < released ; crawling ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 ; >
     au < released ; crawling ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 ; >
 
     }
 
