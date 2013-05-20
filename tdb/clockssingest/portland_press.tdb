@@ -489,8 +489,8 @@
     au < crawling ; exists ; 2012 ; Biochemical Journal Volume 448 ; 448 >
     au < manifest ; exists ; 2013 ; Biochemical Journal Volume 449 ; 449 >
     au < manifest ; exists ; 2013 ; Biochemical Journal Volume 450 ; 450 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 >
+    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 >
+    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 >
@@ -822,7 +822,7 @@
     au < crawling ; exists ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < crawling ; exists ; 2012 ; Clinical Science Volume 123 ; 123 >
     au < manifest ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
-    au < exists ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < manifest ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
         
   }
   
@@ -859,7 +859,7 @@
     au < manifest ; exists ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
-    au < expected ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
+    au < manifest ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
     au < expected ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
 
   }
