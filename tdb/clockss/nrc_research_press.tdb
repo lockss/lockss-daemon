@@ -8,7 +8,7 @@
 
   comment[platform] = Atypon
   
-  plugin = org.lockss.plugin.nrcresearchpress.ClockssNRCResearchPressPlugin
+  plugin = org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin
   param[base_url] = http://www.nrcresearchpress.com/
   implicit < status1 ; status ; year ; name ; param[volume_name] >
   
