@@ -36,7 +36,7 @@
     param[journal_abbr] = adan
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 2013 ; African Diaspora Archaeology Newsletter Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; African Diaspora Archaeology Newsletter Volume 1 ; 1 >
 
   }
   
@@ -51,7 +51,7 @@
     param[journal_abbr] = cpo
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 2013 ; communication +1 Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; communication +1 Volume 1 ; 1 >
 
   }
   
