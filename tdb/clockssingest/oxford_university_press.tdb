@@ -6302,7 +6302,7 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
       
-    au < crawling ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+    au < expected ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
       
   }
       
