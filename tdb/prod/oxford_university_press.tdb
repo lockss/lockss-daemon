@@ -10180,6 +10180,27 @@
   {
 
     title <
+      name = Journal of Complex Networks ;
+      issn = 2051-1310 ;
+      eissn = 2051-1329 ;
+      issnl = 2051-1310
+    >
+
+    {
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://comnet.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Journal of Competition Law & Economics ;
       issn = 1744-6414 ;
       eissn = 1744-6422 ;
@@ -13829,6 +13850,25 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Mechanisms, Policy and Practice ;
+      eissn = 2051-1434
+    >
+
+    {
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://conphys.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume] >
+
+    au < expected ; 2013 ; Mechanisms, Policy and Practice Volume 1 ; 1 >
 
     }
 
