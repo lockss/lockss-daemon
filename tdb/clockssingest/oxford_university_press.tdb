@@ -19344,26 +19344,6 @@
   {
 
     title <
-      name = Journal of Complex Networks ;
-      issn = 2051-1310 ;
-      eissn = 2051-1329
-    >
-
-    param[base_url] = http://comnet.oxfordjournals.org
-
-    {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
-
-      au < exists ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = Journal of Gerontology ;
       issn = 0022-1422
     >
