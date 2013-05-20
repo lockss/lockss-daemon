@@ -1,5 +1,5 @@
 /*
- * $Id: TestLocalHasher.java,v 1.1.2.2 2013-05-20 03:25:09 dshr Exp $
+ * $Id: TestLocalHasher.java,v 1.1.2.3 2013-05-20 03:51:12 dshr Exp $
  */
 
 /*
@@ -322,6 +322,44 @@ public class TestLocalHasher extends LockssTestCase {
     }
     assertEquals(1, lh.getFilesHashed());
     assertEquals(12, lh.getBytesHashed());
+    assertEquals(0, callbackCount);
+  }
+
+  private static String[] TEST_URLS = {
+    TEST_URL + "1",
+    TEST_URL + "2",
+    TEST_URL + "3",
+    TEST_URL + "4",
+    TEST_URL + "5"
+  };
+
+  public void testAuFiveUrlGoodChecksum() throws IOException {
+    mcus = new MockCachedUrlSet();
+    mcus.setArchivalUnit(mau);
+    mau.setAuCachedUrlSet(mcus);
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+    String alg =
+      CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
+    Collection col = new ArrayList(1);
+    for (int i = 0; i < TEST_URLS.length; i++) {
+      MockCachedUrl cu = mau.addUrl(TEST_URLS[i], TEST_CONTENT);
+      cu.setChecksumAlgorithm(alg);
+      cu.putChecksum(TEST_CONTENT_GOOD_HASH_ARRAY, cu.getChecksumAlgorithm());
+      col.add(cu);
+    }
+    mcus.setHashIterator(col.iterator());
+    
+    LocalHasher lh = new LocalHasher(new MismatchShouldBeCalledBack());
+    callbackCount = 0;
+    try {
+      lh.doLocalHash(mau);
+    } catch (IOException ex) {
+      fail("threw " + ex);
+    }
+    assertEquals(5, lh.getFilesHashed());
+    assertEquals(60, lh.getBytesHashed());
     assertEquals(0, callbackCount);
   }
 
