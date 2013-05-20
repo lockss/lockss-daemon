@@ -20,7 +20,7 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     m_mau = new org.lockss.test.MockArchivalUnit();
-    m_extractor = new JsoupHtmlLinkExtractor(false, true);
+    m_extractor = new JsoupHtmlLinkExtractor(false, true, null, null);
     m_callback = new MyLinkExtractorCallback();
   }
 

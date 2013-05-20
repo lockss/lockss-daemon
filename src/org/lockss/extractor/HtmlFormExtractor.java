@@ -168,7 +168,9 @@ public class HtmlFormExtractor {
    */
   public HtmlFormExtractor(final ArchivalUnit au,
                            final LinkExtractor.Callback cb,
-                           final String encoding) {
+                           final String encoding,
+                           Map<String, FormFieldRestrictions>  restrictions,
+                           Map<String, FieldIterator> generators) {
     m_au = au;
     m_cb = cb;
     m_encoding = encoding;
@@ -177,8 +179,18 @@ public class HtmlFormExtractor {
                                               DEFAULT_MAX_FORM_URLS);
     m_numFormUrls = 0;
     m_openForm = null;
-    m_fieldRestrictions = new HashMap<String, FormFieldRestrictions>();
-    m_fieldGenerator = new HashMap<String, FieldIterator>();
+    if(restrictions != null) {
+      m_fieldRestrictions = restrictions;
+    }
+    else {
+      m_fieldRestrictions = new HashMap<String, FormFieldRestrictions>();
+    }
+    if(generators != null) {
+      m_fieldGenerator = generators;
+    }
+    else {
+      m_fieldGenerator = new HashMap<String, FieldIterator>();
+    }
   }
 
   public void initProcessor(JsoupHtmlLinkExtractor docExtractor,
@@ -196,7 +208,6 @@ public class HtmlFormExtractor {
       }
     }
   }
-
   /**
    * Add a form field restriction to the field restrictions table
    *
@@ -387,11 +398,11 @@ public class HtmlFormExtractor {
       // --- required attributes ---
       String action = el.attr("action");
       //where to send form
-      if(StringUtil.isNullString(action)) {
-        // if a form has no action
-        theLogger.siteWarning("form can not be processed: no action");
-        return;
-      }
+      //if(StringUtil.isNullString(action)) {
+      // if a form has no action
+      //   theLogger.siteWarning("form can not be processed: no action");
+      //  return;
+      //}
       open_ct++;
       if(m_openForm != null) {
         // if we have an open form - we can't open a new one.
@@ -659,6 +670,9 @@ public class HtmlFormExtractor {
         multiple.equalsIgnoreCase("multiple");
       FormControlElement fc =
         new FormControlElement("select", name, allow_multi, false);
+      if(m_fieldRestrictions != null)  {
+        fc.setRestrictions(m_fieldRestrictions.get(name));
+      }
       m_controls.put(name, fc);
 
       for(Element sel : selections) {
@@ -710,7 +724,9 @@ public class HtmlFormExtractor {
       FormControlElement fc = m_controls.get(name);
       if(fc == null) {
         fc = new FormControlElement(type, name, multi, req);
-        fc.setRestrictions(m_fieldRestrictions.get(name));
+        if(m_fieldRestrictions != null) {
+          fc.setRestrictions(m_fieldRestrictions.get(name));
+        }
         m_controls.put(name, fc);
       }
       fc.addControlElement(value);
@@ -728,6 +744,12 @@ public class HtmlFormExtractor {
     void addSubmit(Element el, String name, String value) {
       boolean duplicate = false;
       String action = el.attr("formaction");
+      // make sure we have an action that can be used to process this form
+      if(StringUtil.isNullString(action) && StringUtil.isNullString(m_action))
+      {
+        //we skip this because we can't act on it.
+        return;
+      }
       // check for a duplicate and skip it if we don't have different name:
       // value pair or action
       for(Element sub_el : m_submits) {
@@ -1005,24 +1027,24 @@ public class HtmlFormExtractor {
     private int m_pos;
     private String m_last;
     private String m_name;
-    FixedListFieldGenerator m_generator;
+    Iterator<String> m_iterator;
     private List<String> m_values;
 
     SingleSelectFieldIterator(String name, List<String> values) {
       m_name = name;
       m_values = values;
-      m_generator = new FixedListFieldGenerator(values);
+      m_iterator = m_values.iterator();
     }
 
     @Override
     public void reset() {
-      m_generator.reset();
+      m_iterator = m_values.iterator();
     }
 
 
     @Override
     public boolean hasNext() {
-      return m_generator.hasNext();
+      return m_iterator.hasNext();
     }
 
     @Override
@@ -1030,7 +1052,8 @@ public class HtmlFormExtractor {
       if(!hasNext()) {
         return null;
       }
-      String val = m_generator.next();
+
+      String val = m_iterator.next();
       if(StringUtil.isNullString(val)) {
         m_last = "";
       }
@@ -1048,7 +1071,7 @@ public class HtmlFormExtractor {
 
     @Override
     public void remove() {
-      m_generator.remove();
+      m_iterator.remove();
     }
   }
   /**
@@ -1164,11 +1187,13 @@ public class HtmlFormExtractor {
   public static class FixedListFieldGenerator implements FieldIterator {
     List<String> m_list;
     Iterator<String> m_iterator;
+    String m_name;
     String m_last;
 
-    public FixedListFieldGenerator(List<String> elements) {
+    public FixedListFieldGenerator(String name, List<String> elements) {
       m_list = elements;
       m_iterator = elements.iterator();
+      m_name = name;
     }
 
     public boolean hasNext() {
@@ -1176,7 +1201,14 @@ public class HtmlFormExtractor {
     }
 
     public String next() {
-      m_last = m_iterator.next();
+      String val = m_iterator.next();
+
+      if(val == null || val.isEmpty()) {
+        m_last = "";
+      }
+      else {
+        m_last = HtmlFormExtractor.makeEncodedString(m_name, val);
+      }
       return m_last;
     }
 
@@ -1198,18 +1230,20 @@ public class HtmlFormExtractor {
    * Field Iterator used to step through a list of integer numbers between
    * min an max a increment at a time.
    */
-  public class IntegerFieldIterator implements FieldIterator {
+  public static class IntegerFieldIterator implements FieldIterator {
     private Integer  nextValue;
     private Integer minValue;
     private Integer maxValue;
     private Integer incrValue;
     private Integer lastValue;
+    private String m_name;
 
-    IntegerFieldIterator(Integer min, Integer max, Integer incr) {
+    IntegerFieldIterator(String name, Integer min, Integer max, Integer incr) {
       minValue = min;
       maxValue = max;
       nextValue = min;
       incrValue = incr;
+      m_name = name;
     }
 
     public boolean hasNext() {
@@ -1219,7 +1253,7 @@ public class HtmlFormExtractor {
     public String next() {
       lastValue = nextValue;
       nextValue = lastValue + incrValue;
-      return lastValue.toString();
+      return HtmlFormExtractor.makeEncodedString(m_name, lastValue.toString());
     }
 
     public void reset() {
@@ -1228,7 +1262,7 @@ public class HtmlFormExtractor {
 
     @Override
     public String last() {
-      return lastValue.toString();
+      return HtmlFormExtractor.makeEncodedString(m_name, lastValue.toString());
     }
 
     public void remove() {
@@ -1240,18 +1274,20 @@ public class HtmlFormExtractor {
    * Field Iterator used to step through a list of floating pt numbers between
    * min an max a increment at a time.
    */
-  public class FloatFieldIterator implements FieldIterator {
+  public static class FloatFieldIterator implements FieldIterator {
     private Float  nextValue;
     private Float minValue;
     private Float maxValue;
     private Float incrValue;
     private Float lastValue;
+    private String m_name;
 
-    FloatFieldIterator(Float min, Float max, Float incr) {
+    FloatFieldIterator(String name, Float min, Float max, Float incr) {
       minValue = min;
       maxValue = max;
       nextValue = min;
       incrValue = incr;
+      m_name = name;
     }
 
     public boolean hasNext() {
@@ -1261,7 +1297,7 @@ public class HtmlFormExtractor {
     public String next() {
       lastValue = nextValue;
       nextValue = lastValue + incrValue;
-      return lastValue.toString();
+      return HtmlFormExtractor.makeEncodedString(m_name, lastValue.toString());
     }
 
     public void reset() {
@@ -1270,7 +1306,7 @@ public class HtmlFormExtractor {
 
     @Override
     public String last() {
-      return lastValue.toString();
+      return HtmlFormExtractor.makeEncodedString(m_name, lastValue.toString());
     }
 
     public void remove() {
@@ -1288,52 +1324,54 @@ public class HtmlFormExtractor {
     Calendar startDate;
     Calendar endDate;
     Calendar nextDate;
+    String m_name;
     String lastValue;
-
     int incrField;
     int incrValue;
     SimpleDateFormat formatter;
 
 
-    public CalendarFieldGenerator(Calendar start, Calendar end, int field,
+    public CalendarFieldGenerator(String name, Calendar start, Calendar end,
+                                  int field,
                                   int incr, String format) {
+      m_name = name;
       startDate = start;
       endDate = end;
       nextDate = start;
       incrField = field;
       incrValue = incr;
       formatter = new SimpleDateFormat(format);
+      System.out.println("start:"+formatter.format(start.getTime())+
+                         "end:"+formatter.format(end.getTime()));
+
+      System.out.println("nextDate:" + formatter.format(nextDate.getTime()));
     }
 
-    public CalendarFieldGenerator(Calendar start, Calendar end, int field,
-                                  String format) {
-      this(start, end, field, 1, format);
-    }
-
-    public CalendarFieldGenerator(Date start, Date end, int field, int incr,
-                                  String format) {
+    public CalendarFieldGenerator(String name, Date start, Date end,
+                                  int field, int incr,String format) {
+      m_name = name;
       startDate = Calendar.getInstance();
       startDate.setTime(start);
       endDate = Calendar.getInstance();
       endDate.setTime(end);
-      nextDate = startDate;
       incrField = field;
       incrValue = incr;
       formatter = new SimpleDateFormat(format);
     }
 
-    public CalendarFieldGenerator(Date start, Date end, int field,
-                                  String format) {
-      this(start, end, field, 1, format);
-    }
-
     public boolean hasNext() {
-      return nextDate.compareTo(endDate) <= 0;
+      return !nextDate.after(endDate);
+      //return nextDate.compareTo(endDate) <= 0;
     }
 
     public String next() {
-      lastValue = formatter.format(nextDate.getTime());
+      System.out.println("next() in: " +
+                         formatter.format(nextDate.getTime()));
+      lastValue = HtmlFormExtractor.makeEncodedString(m_name,
+          formatter.format(nextDate.getTime()));
       nextDate.add(incrField, incrValue);
+      System.out.println("next() out: " +
+                         formatter.format(nextDate.getTime()));
       return lastValue;
     }
 

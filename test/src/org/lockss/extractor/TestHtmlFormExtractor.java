@@ -8,12 +8,12 @@ import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.Constants;
+import org.lockss.util.ListUtil;
 import org.lockss.util.SetUtil;
 
-import java.util.HashMap;
-import java.util.Iterator;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA. User: claire Date: 2013-01-02 Time: 10:58 AM To
@@ -26,18 +26,23 @@ public class TestHtmlFormExtractor extends LockssTestCase {
   private MyLinkExtractorCallback m_callback;
   static String ENC = Constants.DEFAULT_ENCODING;
   private MockArchivalUnit m_mau;
-
+  private Map<String, HtmlFormExtractor.FieldIterator> generators;
+  private Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictions;
   public void setUp() throws Exception {
     super.setUp();
-    m_mau = new org.lockss.test.MockArchivalUnit();
-    m_extractor = new JsoupHtmlLinkExtractor(false, true);
+    m_mau = new MockArchivalUnit();
     m_callback = new MyLinkExtractorCallback();
+    generators = new HashMap<String, HtmlFormExtractor.FieldIterator>();
+    restrictions =
+        new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
+    m_extractor =
+        new JsoupHtmlLinkExtractor(false, true,restrictions,generators);
   }
 
   public void testInitProcessor() throws Exception {
 
     HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
-                                                            ENC);
+                                                            ENC, null, null);
     formExtractor.initProcessor(m_extractor, null);
 
     // check that the extractor for form tag extractor
@@ -83,7 +88,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     Elements forms = doc.select("form[id]");
     assertEquals(1, forms.size());
     HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
-                                                            ENC);
+                                                            ENC, null, null);
     formExtractor.initProcessor(m_extractor, forms);
     assertNotNull(formExtractor.getForm("form1"));
     assertNull(formExtractor.getForm("form2"));
@@ -121,7 +126,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     Elements forms = doc.select("form");
 
     HtmlFormExtractor formExtractor = new HtmlFormExtractor(m_mau,m_callback,
-                                                            ENC);
+                                                            ENC, null, null);
     formExtractor.addForm(forms.first());
     assertNotNull(formExtractor.getForm("form1"));
     try {
@@ -174,12 +179,12 @@ public class TestHtmlFormExtractor extends LockssTestCase {
 
   public void testElementInFormWithDiffId() throws Exception
   {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/form1?vehicle=Bike");
-    expectedResults.add("http://www.example.com/form1?vehicle=Car");
-    expectedResults.add("http://www.example.com/form1?vehicle=Train");
-    expectedResults.add("http://www.example.com/form2?vehicle=Motorcycle");
-    expectedResults.add("http://www.example.com/form2?vehicle=Bus");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/form1?vehicle=Bike");
+    expected.add("http://www.example.com/form1?vehicle=Car");
+    expected.add("http://www.example.com/form1?vehicle=Train");
+    expected.add("http://www.example.com/form2?vehicle=Motorcycle");
+    expected.add("http://www.example.com/form2?vehicle=Bus");
 
     String source = "<html><head><title>Test</title></head><body>"
       +"<form id=\"form1\" name=\"input\" "
@@ -196,16 +201,16 @@ public class TestHtmlFormExtractor extends LockssTestCase {
       +"<input type=\"submit\" value=\"Submit2\">"
       +"</form>";
 
-    assertIsomorphic(expectedResults, parseSingleSource(source));
-
+    assertIsomorphic(expected, parseSingleSource(source));
   }
+
  public void testNestedForms() throws Exception
  {
-   Set<String> expectedResults = new java.util.HashSet<String>();
-   expectedResults.add("http://www.example.com/form1?vehicle=Bike");
-   expectedResults.add("http://www.example.com/form1?vehicle=Car");
-   expectedResults.add("http://www.example.com/form1?vehicle=Train");
-   expectedResults.add("http://www.example.com/form1?vehicle=Bus");
+   Set<String> expected = new java.util.HashSet<String>();
+   expected.add("http://www.example.com/form1?vehicle=Bike");
+   expected.add("http://www.example.com/form1?vehicle=Car");
+   expected.add("http://www.example.com/form1?vehicle=Train");
+   expected.add("http://www.example.com/form1?vehicle=Bus");
 
    String source = "<html><head><title>Test</title></head><body>"
      +"<form id=\"form1\" name=\"input\" "
@@ -222,7 +227,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
      +"</form>"
      +"</form>";
 
-   assertIsomorphic(expectedResults, parseSingleSource(source));
+   assertIsomorphic(expected, parseSingleSource(source));
 
  }
   // based upon highwire test case
@@ -377,61 +382,61 @@ public class TestHtmlFormExtractor extends LockssTestCase {
   }
 
   public void testEmptySelect() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/?odd=world");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<select name=\"hello_name\"></select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testSelectWithoutName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<select><option value=\"hello_val\" />hello</option></select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testSelectWithBlankName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<select name=\"\"><option value=\"hello_val\" />hello</option></select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneOption() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<select name=\"hello_name\"><option value=\"hello_val\" />hello</option></select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testTwoOptions() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -440,19 +445,19 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<option value=\"world_val\" />world</option>" + "</select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testThreeOptions() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world");
-    expectedResults
+    expected
         .add(
                 "http://www.example.com/bioone/cgi/?hello_name=goodbye_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -463,28 +468,28 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "</select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testTwoSelect() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&numbers_name=one_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&numbers_name=two_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=world_val&numbers_name=one_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=world_val&numbers_name=two_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?numbers_name=one_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?numbers_name=two_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -496,16 +501,16 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<option value=\"two_val\" />two</option>" + "</select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testTwoSelectWithOneSelectUnnamed() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -516,17 +521,17 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<option value=\"two_val\" />two</option>" + "</select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testTwoSelectWithOneSelectUnnamedReversedOrder()
       throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world");
-    expectedResults
+    expected
       .add("http://www.example.com/bioone/cgi/?odd=world");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -537,60 +542,60 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<option value=\"world_val\" />world</option>" + "</select>"
                         + "<input type=\"hidden\" name=\"odd\" value=\"world\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneRadioOneValue() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/?arg=val");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"radio\" name=\"arg\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneRadioOneValueWithoutName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"radio\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneRadioOneValueWithBlankName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"radio\" name=\"\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneRadioMultipleValues() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val1");
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val2");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/?arg=val1");
+    expected.add("http://www.example.com/bioone/cgi/?arg=val2");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"radio\" name=\"arg\" value=\"val1\" />"
                         + "<input type=\"radio\" name=\"arg\" value=\"val2\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testTwoRadioMultipleValues() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?arg1=val11&arg2=val21");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?arg1=val11&arg2=val22");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?arg1=val12&arg2=val21");
-    expectedResults
+    expected
         .add("http://www.example.com/bioone/cgi/?arg1=val12&arg2=val22");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
@@ -599,7 +604,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<input type=\"radio\" name=\"arg2\" value=\"val21\" />"
                         + "<input type=\"radio\" name=\"arg2\" value=\"val22\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testRadioWithoutName() throws Exception {
@@ -612,81 +617,81 @@ public class TestHtmlFormExtractor extends LockssTestCase {
   }
 
   public void testOneCheckboxOneValue() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val");
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/?arg=val");
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"checkbox\" name=\"arg\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneCheckboxOneValueWithoutName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"checkbox\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneCheckboxOneValueWithBlankName() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"checkbox\" name=\"\" value=\"val\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testOneCheckboxMultipleValues() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?arg=val1&arg=val2");
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val2");
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg=val1");
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    expected.add("http://www.example.com/bioone/cgi/?arg=val2");
+    expected.add("http://www.example.com/bioone/cgi/?arg=val1");
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<input type=\"checkbox\" name=\"arg\" value=\"val1\" />"
                         + "<input type=\"checkbox\" name=\"arg\" value=\"val2\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testMultipleCheckboxesWithDefaultValues() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults
+    Set<String> expected = new java.util.HashSet<String>();
+    expected
         .add("http://www.example.com/bioone/cgi/?arg1=on&arg2=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg2=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?arg1=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/");
+    expected.add("http://www.example.com/bioone/cgi/?arg2=on");
+    expected.add("http://www.example.com/bioone/cgi/?arg1=on");
+    expected.add("http://www.example.com/bioone/cgi/");
     String source = "<html><head><title>Test</title></head><body>"
       + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
       + "<input type=\"checkbox\" name=\"arg1\"/>"
       + "<input type=\"checkbox\" name=\"arg2\"/>"
       + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   // Add any new input types supported to this test case as well.
   public void testAllFormInputs() throws Exception {
-    Set<String> expectedResults = new java.util.HashSet<String>();
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval1");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval1&checkbox=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval2");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval2&checkbox=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval1");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval1&checkbox=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval2");
-    expectedResults.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval2&checkbox=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval1");
-    expectedResults.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval1&checkbox=on");
-    expectedResults.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval2");
-    expectedResults.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval2&checkbox=on");
+    Set<String> expected = new java.util.HashSet<String>();
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval1");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval1&checkbox=on");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval2");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=hello_val&odd=world&radio=rval2&checkbox=on");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval1");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval1&checkbox=on");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval2");
+    expected.add("http://www.example.com/bioone/cgi/?hello_name=world_val&odd=world&radio=rval2&checkbox=on");
+    expected.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval1");
+    expected.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval1&checkbox=on");
+    expected.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval2");
+    expected.add("http://www.example.com/bioone/cgi/?odd=world&radio=rval2&checkbox=on");
     String source = "<html><head><title>Test</title></head><body>"
                         + "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
                         + "<select name=\"hello_name\">"
@@ -697,7 +702,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                         + "<input type=\"radio\" name=\"radio\" value=\"rval2\" />"
                         + "<input type=\"checkbox\" name=\"checkbox\" />"
                         + "<input type=\"submit\"/>" + "</form></html>";
-    assertIsomorphic(expectedResults, parseSingleSource(source));
+    assertIsomorphic(expected, parseSingleSource(source));
   }
 
   public void testFormInsideForm() throws Exception {
@@ -778,12 +783,177 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                     SetUtil.set("http://www.example.com/bioone/cgi/?arg1=value1&arg2=value2"),
                     parseSingleSource(source));
   }
+  public void testFailingForm() throws Exception {
+    String source =  "<html><head><title>Test</title></head><body>"+
+                     "<base href=http://www.example.com> " +
+        "<form action=\"action/doSearch\" method=\"get\"><input " +
+        "type=\"text\" name=\"searchText\" value=\"\" size=\"17\"" +
+        " />\n" +
+        "                <input type=\"hidden\" name=\"issue\" " +
+        "value=\"1\" />\n" +
+        "                <input type=\"hidden\" " +
+        "name=\"journalCode\" value=\"jaeied\" />\n" +
+        "                <input type=\"hidden\" name=\"volume\" " +
+        "value=\"18\" />\n" +
+        "                <input type=\"hidden\" name=\"filter\" value=\"issue\" />\n" +
+        "                <input type=\"submit\" value=\"Search " +
+        "Issue\" /></form>";
+   parseSingleSource(source);
+  }
+
+  public void testFormRestrictions() throws Exception {
+    Set<String> incl = new HashSet<String>();
+    Set<String> excl = new HashSet<String>();
+    HtmlFormExtractor.FormFieldRestrictions restricted;
+    String base = "http://www.example.com/bioone/cgi/?";
+    Set<String> expected = new java.util.HashSet<String>();
+    // test simple select element
+    List<String> elements = ListUtil.fromCSV("one,two,three,four");
+    String form = formWithSelect("restrict", elements);
+    for(String val : elements) {
+      expected.add(base+ "restrict="+val);
+    }
+    expected.add("http://www.example.com/bioone/cgi/");
+    // both null - no change.
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(null,null);
+    restrictions.put("restrict", restricted);
+    for(String val : elements) {
+      expected.add(base+ "restrict="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+    // includes only
+    incl = SetUtil.fromCSV("one,two,three");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(incl,null);
+    restrictions.put("restrict", restricted);
+    expected.clear();
+    expected.add("http://www.example.com/bioone/cgi/");
+    for(String val : incl) {
+      expected.add(base+ "restrict="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+
+    excl = SetUtil.fromCSV("one,two,three");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(null,excl);
+    restrictions.put("restrict", restricted);
+    expected.clear();
+    expected.add("http://www.example.com/bioone/cgi/");
+    for(String val : elements) {
+      if(!incl.contains(val))
+        expected.add(base+ "restrict="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+
+    // one of each - no overlap
+    incl = SetUtil.fromCSV("one,two");
+    excl = SetUtil.fromCSV("three");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(incl,excl);
+    restrictions.put("restrict", restricted);
+    expected.clear();
+    expected.add("http://www.example.com/bioone/cgi/");
+    for(String val : elements) {
+      if(!excl.contains(val)  && incl.contains(val))
+        expected.add(base+ "restrict="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+    // one of each - with overlap so exclude take precedence
+    incl = SetUtil.fromCSV("one,two,three");
+    excl = SetUtil.fromCSV("three");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(incl,excl);
+    restrictions.put("restrict", restricted);
+    expected.clear();
+    expected.add("http://www.example.com/bioone/cgi/");
+    for(String val : elements) {
+      if(!excl.contains(val)  && incl.contains(val))
+        expected.add(base+ "restrict="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+  }
+
+  public void testFixedListGenerator() throws Exception {
+    HtmlFormExtractor.FieldIterator iter;
+    String base = "http://www.example.com/bioone/cgi/?";
+    // test fixed list generator
+    List<String> elements = ListUtil.fromCSV("one,two,three,four");
+    iter = new HtmlFormExtractor.FixedListFieldGenerator("genfixed", elements);
+    String form = formWithInput("text", "genfixed", null);
+    generators.put("genfixed", iter);
+    Set<String> expected = new java.util.HashSet<String>();
+    for(String val : elements) {
+      expected.add(base+ "genfixed="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+  }
+
+  public void testIntegerGenerator() throws Exception {
+    HtmlFormExtractor.FieldIterator iter;
+    String base = "http://www.example.com/bioone/cgi/?";
+
+    iter = new HtmlFormExtractor.IntegerFieldIterator("genints",1,5,1);
+    String form = formWithInput("text", "genints", null);
+    generators.put("genints", iter);
+    Set<String> expected = new java.util.HashSet<String>();
+    for(int val=1; val<=5; val++) {
+      expected.add(base+ "genints="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+    // make sure negative ints work
+    iter = new HtmlFormExtractor.IntegerFieldIterator("genints",-1, 5, 2);
+    generators.put("genints", iter);
+    expected.clear();
+    for(int val=-1; val<=5; val+=2) {
+      expected.add(base+ "genints="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+  }
+  public void testFloatGenerator() throws Exception {
+    HtmlFormExtractor.FieldIterator iter;
+    String base = "http://www.example.com/bioone/cgi/?";
+
+    iter = new HtmlFormExtractor.FloatFieldIterator("genfloats", 0.0f,1.0f,0.2f);
+    String form = formWithInput("text", "genfloats", null);
+    generators.put("genfloats", iter);
+    Set<String> expected = new java.util.HashSet<String>();
+    for(float val=0.0f; val<=1.0f; val+=0.2f) {
+      expected.add(base+ "genfloats="+val);
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+  }
+
+  public void testCalendarGenerator() throws Exception {
+    HtmlFormExtractor.FieldIterator iter;
+    String base = "http://www.example.com/bioone/cgi/?";
+    // test calendar generator
+    Calendar start = new GregorianCalendar(2012,Calendar.JANUARY,1);
+    Calendar end = new GregorianCalendar(2012, Calendar.JUNE, 30);
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    System.out.println("start:"+sdf.format(start.getTime())+
+                       " end:"+sdf.format(end.getTime()));
+    iter = new HtmlFormExtractor.CalendarFieldGenerator("gencal", start, end,
+        Calendar.MONTH,1, "yyyy-MM-dd");
+    String form = formWithInput("text", "gencal", null);
+    generators.put("gencal", iter);
+    Set<String> expected = new java.util.HashSet<String>();
+    for(int val=1; val<=6; val++) {
+      expected.add(base+ "gencal=2012-0"+val+"-01");
+    }
+    assertIsomorphic(expected, parseSingleSource(form));
+  }
+
+  public void testFormRestrictionsAndGenerators() throws Exception {
+    Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictions
+        = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
+    Map<String, HtmlFormExtractor.FieldIterator> generators
+        = new HashMap<String, HtmlFormExtractor.FieldIterator>();
+
+  }
+
 
   private StringBuilder openDoc() {
     StringBuilder sb = new StringBuilder();
     sb.append("<html><head><title>Test</title></head><body>");
     return sb;
   }
+
   private String closeDoc(StringBuilder sb)  {
     sb.append("</body></html>");
     return sb.toString();
@@ -849,6 +1019,37 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                             new org.lockss.test.StringInputStream(source), ENC,
                             "http://www.example.com", m_callback);
     return m_callback.getFoundUrls();
+  }
+
+  private String formWithSelect(String selName, List<String> options)
+  {
+    StringBuilder sb = new StringBuilder();
+    sb.append("<html><head><title>Test Title</title></head><body>");
+    sb.append("<form action=\"http://www.example.com/bioone/cgi/\"");
+    sb.append(" method=\"get\">\n");
+    sb.append("<select name=\"").append(selName).append("\">\n");
+    for(String value : options){
+      sb.append("<option value=\"").append(value).append("\"/>").append
+          (value).append("</option>\n");
+    }
+    sb.append("</select>\n");
+    sb.append("\n<input type=\"submit\"/>").append("</form></html>");
+    return sb.toString();
+  }
+
+  private String formWithInput(String inType, String inName, String inValue)
+  {
+
+    StringBuilder sb = new StringBuilder();
+    String val = inValue == null ? "" : inValue;
+    sb.append("<html><head><title>Test Title</title></head><body>");
+    sb.append("<form action=\"http://www.example.com/bioone/cgi/\"");
+    sb.append(" method=\"get\">\n");
+    sb.append("<input type=\"").append(inType).append("\"");
+    sb.append(" name=\"").append(inName).append("\"");
+    sb.append(" value=\"").append(val).append("\"/>");
+    sb.append("\n<input type=\"submit\"/>").append("</form></html>");
+   return sb.toString();
   }
 
   private static class MyLinkExtractorCallback implements

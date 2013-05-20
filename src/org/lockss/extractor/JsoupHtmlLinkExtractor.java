@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.1 2013-02-08 23:27:37 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.2 2013-05-20 22:52:38 clairegriffin Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class JsoupHtmlLinkExtractor implements LinkExtractor {
   public static final String PREFIX =
@@ -63,7 +65,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
   public static final boolean DEFAULT_ENABLE_STATS = false;
   public static final String PARAM_PROCESS_FORMS =
     PREFIX + "process_forms";
-  public static final boolean DEFAULT_PROCESS_FORMS = false;
+  public static final boolean DEFAULT_PROCESS_FORMS = true;
   /**
    * the theLog for this class
    */
@@ -142,6 +144,22 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     new HashMap<String, LinkExtractor>();
 
   /**
+   * The table of FormFieldRestrictions by field name
+   * key = field name,
+   * value = restrictions
+   */
+  private Map<String,
+              HtmlFormExtractor.FormFieldRestrictions> m_formRestrictors;
+
+
+  /**
+   * The table of FormFieldGenerators key = field name, value generator
+   */
+
+  private Map<String,
+              HtmlFormExtractor.FieldIterator> m_formGenerators;
+
+  /**
    * constructor used for the jsoup link extractor.
    */
   public JsoupHtmlLinkExtractor() {
@@ -164,9 +182,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
    *
    * @param enableStats true to turn on statistics logging
    */
-  protected JsoupHtmlLinkExtractor(boolean enableStats, boolean processForms) {
+  protected JsoupHtmlLinkExtractor(boolean enableStats, boolean processForms,
+      Map<String,HtmlFormExtractor.FormFieldRestrictions> restrictors,
+      Map<String,HtmlFormExtractor.FieldIterator> generators) {
     m_enableStats = enableStats;
     m_processForms = processForms;
+    m_formRestrictors = restrictors;
+    m_formGenerators = generators;
     m_tagTable.putAll(theTagTable);
   }
 
@@ -210,7 +232,8 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     HtmlFormExtractor formExtractor = null;
     if(m_processForms) {
       // create a form processor
-      formExtractor = new HtmlFormExtractor(au, cb, encoding);
+      formExtractor = new HtmlFormExtractor(au, cb, encoding,
+          m_formRestrictors, m_formGenerators);
       // To allow for HTML 5 forms which allow free form getFieldIterator we grab all
       // forms with ids. When we encounter an input elements with the 'form'
       // attribute we'll add it to the correct form.
