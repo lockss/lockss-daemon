@@ -64,11 +64,9 @@
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://scholarworks.umass.edu/
-    param[journal_abbr] = adan
+    param[journal_abbr] = cibs
     implicit < status ; status2 ; year ; name ; param[volume] >
     
-    comment[0] = There is no volume 10 or volume 14 missing years are intentional
-
     au < manifest ; exists ; 1977 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 1 >
     au < manifest ; exists ; 1978 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 2 >
     au < manifest ; exists ; 1979 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 3 >
@@ -78,10 +76,12 @@
     au < manifest ; exists ; 1985 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 7 >
     au < manifest ; exists ; 1986 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 8 >
     au < manifest ; exists ; 1992 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 9 >
+    au < doesNotExist ; doesNotExist ; 0 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 10 >
     au < manifest ; exists ; 1993 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 11 >
     au < manifest ; exists ; 1994 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 12 >
     au < manifest ; exists ; 1995 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 13 >
-    au < manifest ; exists ; 1997 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 15 >    
+    au < doesNotExist ; doesNotExist ; 0 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 14 >
+    au < manifest ; exists ; 1997 ; Contributions in Black Studies: A Journal of African and Afro-American Studies (CIBS) ; 15 >
 
   }
   
