@@ -1,5 +1,5 @@
 /*
- * $Id: LocalHasher.java,v 1.1.2.3 2013-05-19 21:11:12 dshr Exp $
+ * $Id: LocalHasher.java,v 1.1.2.4 2013-05-20 03:25:09 dshr Exp $
  */
 
 /*
@@ -221,7 +221,7 @@ public class LocalHasher {
 	    }
 	  } else {
 	    logger.error("Old algorithm not supported: " + oldAlgorithm);
-	    throw new UnsupportedOperationException(oldAlgorithm);
+	    throw new IOException(oldAlgorithm + " not supported");
 	  }
 	}
       }

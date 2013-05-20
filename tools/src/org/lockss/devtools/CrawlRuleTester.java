@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.33 2012-03-04 09:04:16 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.33.30.1 2013-05-20 03:25:09 dshr Exp $
  */
 
 /*
@@ -320,7 +320,6 @@ public class CrawlRuleTester extends Thread {
 		      URL_SUMMARY_MESSAGE);
 	InputStream istr = conn.getResponseInputStream();
 	InputStreamReader reader = new InputStreamReader(istr);
-	//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
 	GoslingHtmlLinkExtractor extractor = new GoslingHtmlLinkExtractor();
 	extractor.extractUrls(null, istr, null, srcUrl.toString(),
 			      new MyLinkExtractorCallback());
@@ -477,118 +476,4 @@ public class CrawlRuleTester extends Thread {
     }
   }
 
-  class MyMockCachedUrl implements CachedUrl {
-    private String url;
-    private boolean doesExist = false;
-    private Reader reader = null;
-
-    public MyMockCachedUrl(String url, Reader reader) {
-      this.url = url;
-  
-    this.reader = reader;
-    }
-
-    public ArchivalUnit getArchivalUnit() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public String getUrl() {
-      return url;
-    }
-
-    public CachedUrl getCuVersion(int version) {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public CachedUrl[] getCuVersions() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public CachedUrl[] getCuVersions(int maxVersions) {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public int getVersion() {
-      return 1;
-    }
-
-    public Reader openForReading() {
-      return reader;
-    }
-
-    public LinkRewriterFactory getLinkRewriterFactory() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public String getEncoding(){
-      return Constants.DEFAULT_ENCODING;
-    }
-
-    /**
-     * getUnfilteredInputStream
-     *
-     * @return InputStream
-     */
-    public InputStream getUnfilteredInputStream() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    /**
-     * openForHashing
-     *
-     * @return InputStream
-     */
-    public InputStream openForHashing() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    /**
-     * getContentSize
-     *
-     * @return long
-     */
-    public long getContentSize() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public String getContentType() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public boolean hasContent() {
-      return doesExist;
-    }
-
-    public boolean isLeaf() {
-      return true;
-    }
-
-    public int getType() {
-      return CachedUrlSetNode.TYPE_CACHED_URL;
-    }
-
-    public CIProperties getProperties() {
-      return null;
-    }
-
-    public void release() {
-    }
-
-    public String toString() {
-      StringBuffer sb = new StringBuffer(url.length() + 17);
-      sb.append("[MyMockCachedUrl: ");
-      sb.append(url);
-      sb.append("]");
-      return sb.toString();
-    }
-    @Override
-    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
-      return null;
-    }
-
-    public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-  }
 }

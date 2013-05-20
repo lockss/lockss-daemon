@@ -1,5 +1,5 @@
 /*
- * $Id: TestLocalHasher.java,v 1.1.2.1 2013-05-19 21:11:12 dshr Exp $
+ * $Id: TestLocalHasher.java,v 1.1.2.2 2013-05-20 03:25:09 dshr Exp $
  */
 
 /*
@@ -119,10 +119,6 @@ public class TestLocalHasher extends LockssTestCase {
 
     theDaemon.setNodeManager(nodeMgr, mau);
 
-    mcus = new MockCachedUrlSet(TEST_URL);
-    mcus.setArchivalUnit(mau);
-    mau.setAuCachedUrlSet(mcus);
-    cacher = new MyMockBaseUrlCacher(mau, TEST_URL);
     saveDefaultSuppressStackTrace =
       CacheException.setDefaultSuppressStackTrace(false);
     getMockLockssDaemon().getAlertManager();
@@ -132,35 +128,6 @@ public class TestLocalHasher extends LockssTestCase {
     TimeBase.setReal();
     CacheException.setDefaultSuppressStackTrace(saveDefaultSuppressStackTrace);
     super.tearDown();
-  }
-
-  public void testUrlGoodChecksum1() throws IOException {
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "SHA-1");
-    cacher._input = new StringInputStream("test content");
-    CIProperties props = new CIProperties();
-    props.setProperty("test1", "value1");
-    cacher._headers = props;
-    cacher.cache();
-
-    CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
-    InputStream is = url.getUnfilteredInputStream();
-    assertReaderMatchesString(TEST_CONTENT, new InputStreamReader(is));
-
-    props = url.getProperties();
-    assertEquals("value1", props.getProperty("test1"));
-    assertEquals(TEST_CONTENT_GOOD_HASH,
-		 props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
-    LocalHasher lh = new LocalHasher(new ShouldNotBeCalledBack());
-    callbackCount = 0;
-    try {
-      lh.doLocalHashNode(url);
-    } catch (IOException ex) {
-      fail("threw " + ex);
-    }
-    assertEquals(1, lh.getFilesHashed());
-    assertEquals(12, lh.getBytesHashed());
-    assertEquals(0, callbackCount);
   }
 
   public void testUrlGoodChecksum() throws IOException {
@@ -248,6 +215,7 @@ public class TestLocalHasher extends LockssTestCase {
     } catch (IOException ex) {
       fail("threw " + ex);
     }
+    // Nothing is hashed because there is no content
     assertEquals(0, lh.getFilesHashed());
     assertEquals(0, lh.getBytesHashed());
     assertEquals(1, callbackCount);
@@ -270,12 +238,93 @@ public class TestLocalHasher extends LockssTestCase {
     } catch (IOException ex) {
       fail("threw " + ex);
     }
+    // The URL gets hashed with both old and new algorithms.
     assertEquals(2, lh.getFilesHashed());
     assertEquals(24, lh.getBytesHashed());
     assertEquals(1, callbackCount);
   }
 
-  // Test bad algorithms throw
+  public void testUrlChecksumAlgorithmNotSupported() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "FOO");
+    String alg =
+      CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
+    MockCachedUrl cu = new MockCachedUrl(TEST_URL);
+    cu.addVersion(TEST_CONTENT);
+    cu.putChecksum(TEST_CONTENT_GOOD_MD5_ARRAY, "MD5");
+    
+    LocalHasher lh = new LocalHasher(new ShouldNotBeCalledBack());
+    callbackCount = 0;
+    try {
+      lh.doLocalHashNode(cu);
+    } catch (IOException ex) {
+      fail("threw " + ex);
+    }
+    // Nothing is hashed because there is no content
+    assertEquals(0, lh.getFilesHashed());
+    assertEquals(0, lh.getBytesHashed());
+    assertEquals(0, callbackCount);
+  }
+
+  public void testUrlChecksumOldAlgorithmObsolete() throws IOException {
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+    String alg =
+      CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
+    MockCachedUrl cu = new MockCachedUrl(TEST_URL);
+    cu.addVersion(TEST_CONTENT);
+    cu.putChecksum(TEST_CONTENT_GOOD_MD5_ARRAY, "FOO");
+    
+    LocalHasher lh = new LocalHasher(new ShouldNotBeCalledBack());
+    callbackCount = 0;
+    try {
+      lh.doLocalHashNode(cu);
+    } catch (IOException ex) {
+      logger.debug3("Threw " + ex);
+      return;
+    }
+    fail("Should have thrown");
+  }
+
+  public void testAuOneUrlGoodChecksum() throws IOException {
+    mcus = new MockCachedUrlSet(TEST_URL);
+    mcus.setArchivalUnit(mau);
+    mau.setAuCachedUrlSet(mcus);
+    cacher = new MyMockBaseUrlCacher(mau, TEST_URL);
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+    cacher._input = new StringInputStream("test content");
+    CIProperties props = new CIProperties();
+    props.setProperty("test1", "value1");
+    cacher._headers = props;
+    cacher.cache();
+
+    CachedUrl url = new BaseCachedUrl(mau, TEST_URL);
+    InputStream is = url.getUnfilteredInputStream();
+    assertReaderMatchesString(TEST_CONTENT, new InputStreamReader(is));
+
+    Collection col = new ArrayList(1);
+    col.add(url);
+    mcus.setHashIterator(col.iterator());
+
+    props = url.getProperties();
+    assertEquals("value1", props.getProperty("test1"));
+    assertEquals(TEST_CONTENT_GOOD_HASH,
+		 props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+    LocalHasher lh = new LocalHasher(new ShouldNotBeCalledBack());
+    callbackCount = 0;
+    try {
+      lh.doLocalHash(mau);
+    } catch (IOException ex) {
+      fail("threw " + ex);
+    }
+    assertEquals(1, lh.getFilesHashed());
+    assertEquals(12, lh.getBytesHashed());
+    assertEquals(0, callbackCount);
+  }
+
   // Test with CachedUrlSet, AU
 
   // Mock BaseUrlCacher that fakes the content and headers
