@@ -9839,6 +9839,26 @@
   {
 
     title <
+      name = Journal of Complex Networks ;
+      issn = 2051-1310 ;
+      eissn = 2051-1329 ;
+      issnl = 2051-1310
+    >
+
+    {
+
+    param[base_url] = http://comnet.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Journal of Competition Law & Economics ;
       issn = 1744-6414 ;
       eissn = 1744-6422 ;
@@ -13459,6 +13479,24 @@
 
   }
   
+  {
+
+    title <
+      name = Mechanisms, Policy and Practice ;
+      eissn = 2051-1434
+    >
+
+    {
+
+    param[base_url] = http://conphys.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2013 ; Mechanisms, Policy and Practice Volume 1 ; 1 ; >
+
+    }
+
+  }
+
   {
 
     title <
