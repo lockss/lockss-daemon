@@ -15376,7 +15376,7 @@
         au < released ; 2010 ; International Journal of Comparative Sociology Volume 51 ; 51 >
         au < released ; 2011 ; International Journal of Comparative Sociology Volume 52 ; 52 >
         au < released ; 2012 ; International Journal of Comparative Sociology Volume 53 ; 53 >
-        au < expected ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 >
+        au < manifest ; 2013 ; International Journal of Comparative Sociology Volume 54 ; 54 >
 
       }
 
@@ -29782,7 +29782,7 @@ comment[mpj] = now published by Brill
         au < exists ; 2010 ; New Labor Forum Volume 19 ; 19 >
         au < exists ; 2011 ; New Labor Forum Volume 20 ; 20 >
         au < exists ; 2012 ; New Labor Forum Volume 21 ; 21 >
-        au < exists ; 2013 ; New Labor Forum Volume 22 ; 22 >
+        au < manifest ; 2013 ; New Labor Forum Volume 22 ; 22 >
 
     }
 
@@ -35958,7 +35958,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; South Asia Economic Journal Volume 11 ; 11 >
         au < released ; 2011 ; South Asia Economic Journal Volume 12 ; 12 >
         au < released ; 2012 ; South Asia Economic Journal Volume 13 ; 13 >
-        au < expected ; 2013 ; South Asia Economic Journal Volume 14 ; 14 >
+        au < manifest ; 2013 ; South Asia Economic Journal Volume 14 ; 14 >
 
       }
 
@@ -41758,7 +41758,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2010 ; Acta Radiologica Volume 51 ; 51 >
         au < doNotProcess ; 2011 ; Acta Radiologica Volume 52 ; 52 >
         au < doNotProcess ; 2012 ; Acta Radiologica Volume 53 ; 53 >
-        au < exists ; 2013 ; Acta Radiologica Volume 54 ; 54 >
+        au < manifest ; 2013 ; Acta Radiologica Volume 54 ; 54 >
         
       }
   
@@ -42530,7 +42530,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
   
       }
@@ -42712,7 +42712,7 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
   
       au < exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 >
-      au < expected ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 >
+      au < manifest ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 >
   
     }
   
@@ -43074,7 +43074,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Phlebology Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Phlebology Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Phlebology Volume 27 ; 27 >
-        au < HighWirePressH20Plugin ; exists ; 2013 ; Phlebology Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Phlebology Volume 28 ; 28 >
   
       }
   
@@ -43214,7 +43214,7 @@ comment[mpj] = now published by Brill
       au < exists ; 2010 ; Vascular Volume 18 ; 18 >
       au < doNotProcess ; 2011 ; Vascular Volume 19 ; 19 >
       au < exists ; 2012 ; Vascular Volume 20 ; 20 >
-      au < expected ; 2013 ; Vascular Volume 21 ; 21 >
+      au < manifest ; 2013 ; Vascular Volume 21 ; 21 >
      }
      
     }
