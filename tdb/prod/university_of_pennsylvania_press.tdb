@@ -142,9 +142,8 @@
 
     param[journal_dir] = the_journal_of_nineteenth_century_americanists
     attr[journal_id] = jnc
-    comment[notReady] = website is not up yet on 4/11/2013
 
-    au < notReady ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+    au < manifest ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
 
   }
 
