@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.11 2013-05-08 21:46:46 alexandraohlson Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.12 2013-05-21 20:46:09 aishizaki Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.w3c.dom.NodeList;
 import java.util.*;
 import org.apache.commons.collections.map.*;
 import javax.xml.xpath.XPathExpressionException;
+import org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryCachedUrl;
 
 /**
  * Files used to write this class constructed from ACM FTP archive:
@@ -86,10 +87,29 @@ implements FileMetadataExtractorFactory {
     // This improvement should get added in the daemon when possible
     private static final MetadataField ACM_FIELD_JOURNAL_TITLE = new MetadataField(
         MetadataField.KEY_JOURNAL_TITLE, Cardinality.Single, titlevalid);
-    
+
     // We're going to add a field for Proceeding Description
     private static final MetadataField ACM_FIELD_PROC_DESC = new MetadataField(
         "proceeding.description", Cardinality.Single);
+    // also adding a local FIELD_AUTHOR
+    //replacing use of  Metadatafield.FIELD_AUTHOR with locally defined
+    //ACM_FIELD_AUTHOR, which is the same as Metadatafield.FIELD_AUTHOR, but has
+    //a splitter ("; ") defined.  The addition of the splitter causes
+    //ArticleMetadata.putMulti() to be called
+    private static  Validator authorvalid = new Validator(){
+      public String validate(ArticleMetadata am,MetadataField field,String val)
+          throws MetadataException.ValidationException {
+        // normalize author entries especially with no names .
+        // For example : <meta name="citation_authors" content=", "/>
+          if(!MetadataUtil.isAuthor(val)) {
+            throw new MetadataException.ValidationException("Illegal Author: " 
+          + val);
+          }
+          return val;
+          }
+     };
+    private static final MetadataField ACM_FIELD_AUTHOR = new MetadataField(
+        MetadataField.KEY_AUTHOR, Cardinality.Multi, authorvalid, MetadataField.splitAt("; "));
 
     private static final int FILE_NAME_INDEX = 7;
     private static final int AUTHOR_INDEX = 6;
@@ -112,7 +132,7 @@ implements FileMetadataExtractorFactory {
       MetadataField.FIELD_END_PAGE,
       MetadataField.FIELD_DOI,
       MetadataField.FIELD_LANGUAGE,
-      MetadataField.FIELD_AUTHOR,
+      ACM_FIELD_AUTHOR,
       MetadataField.DC_FIELD_IDENTIFIER,
     };
 
@@ -166,7 +186,7 @@ implements FileMetadataExtractorFactory {
                         if (StringUtil.isNullString(xpathValArr[i]))
                           xpathValArr[i] = "";
                         else
-                          xpathValArr[i] += "; ";
+                          xpathValArr[i] += "; ";       // the split char used between authors
                         xpathValArr[i] += last_name + ", " + first_name + " " + (middle_name != null ? middle_name : "");
                       }
                     }
@@ -305,11 +325,16 @@ implements FileMetadataExtractorFactory {
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException, PluginException {
       log.debug3("Attempting to extract metadata from cu: "+cu);
-      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(cu.getArchivalUnit(),getMetadataFile(cu));
+      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(cu.getArchivalUnit(), getMetadataFile(cu));
 
-      if (metadataCu.getUrl().contains("TEST00")) //TODO: make this check better
+     // will come back and fix this soon.  I promise.
+      if (metadataCu.getUrl().contains("TEST00")) { //TODO: make this check better
+        //log.debug3("  Au: "+cu.getArchivalUnit());
+        //log.debug3("  metadatafile: "+getMetadataFile(cu));
+        //log.debug3("  metadataCU: "+metadataCu);
         metadataCu = cu;
-
+      }
+      
       if (metadataCu == null || !metadataCu.hasContent())
       {
         log.debug3("The metadata file does not exist in the au: "+metadataCu.getUrl());
