@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.27 2013-03-18 19:19:33 dshr Exp $
+ * $Id: VoterUserData.java,v 1.28 2013-05-21 22:15:11 barry409 Exp $
  */
 
 /*
@@ -373,7 +373,17 @@ public class VoterUserData
   }
 
   public void setVoterNonce2(byte[] voterNonce2) {
+    if (voterNonce2 == null) {
+      throw new IllegalArgumentException("Null symmetric nonce not allowed.");
+    } 
+    if (voterNonce2.length == 0) {
+      throw new IllegalArgumentException("Zero-length symmetric nonce not allowed.");
+    }
     this.voterNonce2 = voterNonce2;
+  }
+
+  public boolean isSymmetricPoll() {
+    return voterNonce2 != null;
   }
 
   public synchronized void hashingDone(boolean hashingDone) {

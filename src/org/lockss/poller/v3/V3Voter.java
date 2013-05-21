@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.81 2013-04-14 05:25:39 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.82 2013-05-21 22:15:11 barry409 Exp $
  */
 
 /*
@@ -845,20 +845,19 @@ public class V3Voter extends BasePoll {
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
-    byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 == null || nonce2.length == 0) {
-      return new byte[][] {
-        {}, // Plain Hash
-        ByteArray.concat(voterUserData.getPollerNonce(),
-                         voterUserData.getVoterNonce()) // Challenge Hash
-      };
-    } else {
+    if (voterUserData.isSymmetricPoll()) {
       return new byte[][] {
         {}, // Plain Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
                          voterUserData.getVoterNonce()), // Challenge Hash
         ByteArray.concat(voterUserData.getPollerNonce(),
-                         nonce2) // Symmetric Poll Hash
+                         voterUserData.getVoterNonce2()) // Symmetric Poll Hash
+      };
+    } else {
+      return new byte[][] {
+        {}, // Plain Hash
+        ByteArray.concat(voterUserData.getPollerNonce(),
+                         voterUserData.getVoterNonce()) // Challenge Hash
       };
     }
   }
@@ -871,10 +870,8 @@ public class V3Voter extends BasePoll {
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
-    byte[] nonce2 = voterUserData.getVoterNonce2();
-    boolean symPoll = nonce2 != null && nonce2.length > 0;
-    return PollUtil.createMessageDigestArray(symPoll ? 3 : 2,
-					     getHashAlgorithm());
+    return PollUtil.createMessageDigestArray(
+      voterUserData.isSymmetricPoll() ? 3 : 2, getHashAlgorithm());
   }
 
   private String getHashAlgorithm() {
@@ -955,8 +952,7 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
-    byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2.length > 0) {
+    if (voterUserData.isSymmetricPoll()) {
       log.debug2("Poll " + voterUserData.getPollKey() + " is symmetric");
     }
   }
@@ -972,8 +968,7 @@ public class V3Voter extends BasePoll {
     // Add each hash block version to this vote block.
     VoteBlock vb = new VoteBlock(block.getUrl());
     VoteBlock svb = null;
-    byte[] nonce2 = voterUserData.getVoterNonce2();
-    if (nonce2 != null && nonce2.length > 0) {
+    if (voterUserData.isSymmetricPoll()) {
       svb = new VoteBlock(block.getUrl());
     }
     Iterator hashVersionIter = block.versionIterator();
