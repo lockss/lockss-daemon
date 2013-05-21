@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.38 2013-05-14 01:39:51 thib_gc Exp $
+<!--  $Id: BMCPlugin.xml,v 1.39 2013-05-21 22:56:15 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -26,7 +26,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -74,17 +74,25 @@
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
-      <!-- http://oas.biomedcentral.com/RealMedia/ -->      
-      <string>2,"^%s.*/(email|postcomment)$", base_url</string>
-      <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 -->
+      <string>2,"^%s.*/(about|email|citation|comments|postcomment)$", base_url</string>
+      <string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>
+      <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
+        only rule that uses the attr[journal_id] rather than the journal_issn
+      -->   
       <string>1, "^%s[^/]+/content/%s", base_url, volume_name</string> 
       <string>1, "^%s%s/%s", base_url, journal_issn, volume_name</string> 
       <string>1,"^%slockss/", base_url</string>
-      <!-- ex: http://www.biomedcentral.com/content/download/supplementary/1471-2253-2-5-s1.doc -->      
       <string>1,"^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/" ,base_url</string>
-      <!-- ex: http://www.biomedcentral.com/content/pdf/1471-2253-2-7.pdf|xml -->
+      <!-- ex: http://www.biomedcentral.com/content/download/supplementary/1471-2253-2-5-s1.doc -->      
+      <!-- ex: http://www.biomedcentral.com/content/pdf/1471-2253-2-7.pdf|xml 
+      http://www.biomedcentral.com/bmcclinpathol/content/11/January/2011
+      http://www.biomedcentral.com/1472-6890/11/9/abstract
+      http://www.biomedcentral.com/1472-6890/11/9       (fulltext)
+      http://www.biomedcentral.com/content/pdf/1472-6890-11-9.pdf
+      -->
       <string>1, "^%s/content/pdf/%s-%s[\d-]*", base_url, journal_issn, volume_name</string>      
-      
+      <string>1, "^%s/%s/%s/[\d]+", base_url, journal_issn, volume_name</string>      
+      <string>1, "^%s/%s/%s/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
     </list>
   </entry>
   <entry>

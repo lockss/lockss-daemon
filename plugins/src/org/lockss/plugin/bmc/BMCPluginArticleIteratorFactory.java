@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginArticleIteratorFactory.java,v 1.2 2013-01-15 23:15:01 aishizaki Exp $
+ * $Id: BMCPluginArticleIteratorFactory.java,v 1.3 2013-05-21 22:56:15 aishizaki Exp $
  */ 
 
 /*
@@ -54,8 +54,7 @@ public class BMCPluginArticleIteratorFactory
   //protected static final String PATTERN_TEMPLATE = "\"%s/%s/[^/]+/[^/]+/abstract$\", journal_issn,volume_name,";
   // pdf works: protected static final String PATTERN_TEMPLATE = "\"content/pdf/%s-%s-[^/]+.pdf\", journal_issn,volume_name,";
   protected static final String PATTERN_TEMPLATE = "\"%s/%s/[\\d]+$\", journal_issn,volume_name,";
-  // http://www.biomedcentral.com/bmcanesthesiol/content/10/April/2010
-  protected static final String ID_TEMPLATE = "\"[^/]+/content/[^/]+/[^/]/[^/]\"";
+  protected static final String PDF_PATTERN_TEMPLATE = "\"%s-%s-[\\d]+.pdf$\", journal_issn,volume_name,";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -64,13 +63,13 @@ public class BMCPluginArticleIteratorFactory
     return new BMCPluginArticleIterator(au, new SubTreeArticleIterator.Spec()
                                               .setTarget(target)
                                               //.setRootTemplates(ListUtil.list(HTML_ROOT_TEMPLATE,PDF_ROOT_TEMPLATE))
-                                              .setRootTemplate(ROOT_TEMPLATE)
-                                              .setPatternTemplate(PATTERN_TEMPLATE,Pattern.CASE_INSENSITIVE));
+                                              .setRootTemplate(PDF_ROOT_TEMPLATE)
+                                              .setPatternTemplate(PDF_PATTERN_TEMPLATE,Pattern.CASE_INSENSITIVE));
   }
   
     protected static class BMCPluginArticleIterator extends SubTreeArticleIterator {
     //http://www.biomedcentral.com/content/pdf/1472-6831-12-60.pdf
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([^/]+).pdf$", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\d]+)-([\\d]+)-([\\d]+).pdf$", Pattern.CASE_INSENSITIVE);
     // http://www.biomedcentral.com/1472-6831/12/60  (full html)
     protected static final Pattern HTML_PATTERN = Pattern.compile("/([^/]+)/([^/]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
     // http://www.biomedcentral.com/1472-6831/12/60/abstract
@@ -87,8 +86,9 @@ public class BMCPluginArticleIteratorFactory
       log.debug3("Entry point: " + url);
       
       // Caution: the PDF pattern is different from the HTML pattern
-    
+
       Matcher mat = PDF_PATTERN.matcher(url);
+
       if (mat.find()) {
         log.debug3("found a full text pdf: ");
         return processFullTextPdf(cu, mat);
@@ -99,7 +99,7 @@ public class BMCPluginArticleIteratorFactory
         log.debug3("found a full text html: ");
         return processFullTextHtml(cu, mat);
       }    
-      
+   
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
     }
@@ -130,6 +130,7 @@ public class BMCPluginArticleIteratorFactory
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF,pdfCu);
       if (spec.getTarget() != MetadataTarget.Article) {
         guessAbstract(af, pdfMat);
+        guessHtml(af, pdfMat);
        }
       return af;
     }
@@ -137,7 +138,9 @@ public class BMCPluginArticleIteratorFactory
     // 
     protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/content/pdf/$1-$2-$3.pdf"));
+      log.debug3("guessing full text pdf: "+pdfCu);
       if (pdfCu != null && pdfCu.hasContent()) {
+      
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
         AuUtil.safeRelease(pdfCu);
       }
@@ -146,6 +149,7 @@ public class BMCPluginArticleIteratorFactory
     // abstract: 
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/abstract"));
+      log.debug3("guessing abstract: "+absCu);
       if (absCu != null && absCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
@@ -153,12 +157,21 @@ public class BMCPluginArticleIteratorFactory
       }
     }
     
+    // html: 
+    protected void guessHtml(ArticleFiles af, Matcher mat) {
+      CachedUrl htmlCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3"));
+      log.debug3("guessing html: "+htmlCu);
+      if (htmlCu != null && htmlCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+        AuUtil.safeRelease(htmlCu);
+      }
+    }  
   }
 
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
   
 }
