@@ -492,7 +492,7 @@ comment[bj1] = no permission from publisher
     au < manifest ; 2013 ; Biochemical Journal Volume 449 ; 449 >
     au < manifest ; 2013 ; Biochemical Journal Volume 450 ; 450 >
     au < manifest ; 2013 ; Biochemical Journal Volume 451 ; 451 >
-    au < expected ; 2013 ; Biochemical Journal Volume 452 ; 452 >
+    au < manifest ; 2013 ; Biochemical Journal Volume 452 ; 452 >
     au < expected ; 2013 ; Biochemical Journal Volume 453 ; 453 >
     au < expected ; 2013 ; Biochemical Journal Volume 454 ; 454 >
     au < expected ; 2013 ; Biochemical Journal Volume 455 ; 455 >
@@ -570,7 +570,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Biology of the Cell Volume 100 ; 100 >
     au < notReady ; 2009 ; Biology of the Cell Volume 101 ; 101 >
     au < released ; 2010 ; Biology of the Cell Volume 102 ; 102 >
-    au < exists ; 2011 ; Biology of the Cell Volume 103 ; 103 >
+    au < manifest ; 2011 ; Biology of the Cell Volume 103 ; 103 >
     
   } 
   
@@ -687,7 +687,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2010 ; Bioscience Reports Volume 30 ; 030 >
     au < released ; 2011 ; Bioscience Reports Volume 31 ; 031 >
     au < manifest ; 2012 ; Bioscience Reports Volume 32 ; 032 >
-    au < expected ; 2013 ; Bioscience Reports Volume 33 ; 033 >
+    au < manifest ; 2013 ; Bioscience Reports Volume 33 ; 033 >
 
   }
 
@@ -837,8 +837,8 @@ comment[bj1] = no permission from publisher
     au < released ; 2011 ; Clinical Science Volume 121 ; 121 >
     au < manifest ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < manifest ; 2012 ; Clinical Science Volume 123 ; 123 >
-    au < expected ; 2013 ; Clinical Science Volume 124 ; 124 >
-    au < expected ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < manifest ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < manifest ; 2013 ; Clinical Science Volume 125 ; 125 >
         
   }
   
@@ -873,9 +873,9 @@ comment[bj1] = no permission from publisher
     au < released ; 2011 ; Essays in Biochemistry Volume 49 ; 049 >
     au < manifest ; 2011 ; Essays in Biochemistry Volume 50 ; 050 >
     au < manifest ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
-    au < expected ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
-    au < expected ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
-    au < expected ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
+    au < manifest ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
+    au < manifest ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
+    au < manifest ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
     au < expected ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
 
   }
