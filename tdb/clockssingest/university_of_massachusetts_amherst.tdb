@@ -97,8 +97,8 @@
     param[journal_abbr] = edge
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies ; 1 >
-    au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies ; 2 >
+    au < manifest ; exists ; 2009 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; EDGE - A Graduate Journal for German and Scandinavian Studies Volume 2 ; 2 >
 
   }
   
