@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.144 2013-05-15 16:25:51 barry409 Exp $
+ * $Id: V3Poller.java,v 1.145 2013-05-21 16:02:49 dshr Exp $
  */
 
 /*
@@ -2669,22 +2669,29 @@ public class V3Poller extends BasePoll {
         log.warning("Fewer participant votes (" + getPollSize() +
 		    ") than quorum (" + getQuorum() + ") in poll " + getKey());
 	// continue with tally even if no quorum so that we may become a
-	// willing repaier for any peers that voted and agree with ut.
+	// willing repairer for any peers that voted and agree with us.
 
-	// Remove any voting participants for which we are already a
-	// willing repairer
-	synchronized(theParticipants) {
-	  List<PeerIdentity> toRemove = new ArrayList();
-          for (PeerIdentity id : theParticipants.keySet()) {
-	    if (isWillingRepairer(id)) {
-	      toRemove.add(id);
-	    }
-	  }
-	  log.debug2("Removing existing repairers " + toRemove);
-          for (PeerIdentity id : toRemove) {
-	    removeParticipant(id, PEER_STATUS_COMPLETE);
-	  }
-	}
+	// The following code implemented an optimization but has been
+	// removed for two reasons:
+	// 1) If the poll is symmetric, tallying the vote for a peer that
+	//    the poller is a willing repairer for may enable the voter to
+	//    become a willing repairer for the poller.
+	// 2) Soliciting votes then discarding them is a DoS tactic, so
+	//    tallying the vote in order to supply a receipt is a defense.
+//	  // Remove any voting participants for which we are already a
+//	  // willing repairer
+//	  synchronized(theParticipants) {
+//	    List<PeerIdentity> toRemove = new ArrayList();
+//	    for (PeerIdentity id : theParticipants.keySet()) {
+//	      if (isWillingRepairer(id)) {
+//		toRemove.add(id);
+//	      }
+//	    }
+//	    log.debug2("Removing existing repairers " + toRemove);
+//	    for (PeerIdentity id : toRemove) {
+//	      removeParticipant(id, PEER_STATUS_COMPLETE);
+//	    }
+//	  }
 	int nleft = getPollSize();
 	if (nleft == 0) {
 	  // nobody left, stop poll and don't tally

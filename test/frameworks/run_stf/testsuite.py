@@ -592,7 +592,7 @@ class VotersDontParticipateV3TestCase( OfflinePeersV3Tests ):
 
 
 class NoQuorumV3TestCase( OfflinePeersV3Tests ):
-    """Be sure a V3 poll with too few participants ends in No Quorum"""
+    """Be sure an Asymmetric V3 poll with too few participants ends in No Quorum"""
 
     def __init__( self, methodName = 'runTest' ):
         OfflinePeersV3Tests.__init__( self, methodName )
@@ -907,6 +907,30 @@ class SimpleV3SymmetricTestCase( V3TestCases ):
     def _damage_AU( self ):
         return [ ]
 
+class NoQuorumSymmetricV3TestCase( SimpleV3SymmetricTestCase ):
+    """Be sure a Symmetric V3 poll with too few participants ends in No Quorum"""
+
+    def __init__( self, methodName = 'runTest' ):
+        SimpleV3SymmetricTestCase.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.v3.quorum' ] = 30
+        self.expected_agreement = '100.00'
+
+    def _await_repair( self, nodes ):
+        log.info( 'Waiting for V3 poll to report no quorum...' )
+        self.assert_( self.victim.waitForV3NoQuorum( self.AU ), 'Timed out while waiting for no quorum' )
+        log.info( 'AU successfully reported No Quorum' )
+
+    def _verify_repair( self, nodes ):
+        peer_agreements = self.victim.getAuRepairerInfo( self.AU, 'HighestPercentAgreement' )
+        log.debug2( 'Peer agreements: ' + str( peer_agreements ) )
+        for client in self.clients:
+            if client != self.victim:
+                self.assert_( peer_agreements[ client.getV3Identity() ] > 60, 'No agreement recorded for %s' % client )
+
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'No Quorum', u'Waiting for Poll') )
+        
 
 class SimpleV3PoPTestCase( V3TestCases ):
     """Test a V3 proof of possession poll with no disagreement"""
@@ -951,6 +975,7 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
                                       RepairFromPeerWithDeactivateV3TestCase() ) )
 
 symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
+                                         NoQuorumSymmetricV3TestCase(),
                                       TotalLossRecoverySymmetricV3TestCase() ) )
 
 popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
