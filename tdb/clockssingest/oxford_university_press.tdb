@@ -6339,6 +6339,7 @@
     param[base_url] = http://gji.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
+    au < manifest ; exists ; 1958 ; Geophysical Journal International Volume 1 ; 1 ; >
     au < exists ; exists ; 1959 ; Geophysical Journal International Volume 2 ; 2 ; >
     au < exists ; exists ; 1960 ; Geophysical Journal International Volume 3 ; 3 ; >
     au < exists ; exists ; 1961 ; Geophysical Journal International Volume 4 ; 4 ; >
