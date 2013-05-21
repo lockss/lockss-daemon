@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.4 2013-05-21 17:21:29 ldoan Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.5 2013-05-21 19:05:26 thib_gc Exp $
  */
 
 /*
@@ -125,23 +125,16 @@ public class MetaPressArticleIteratorFactory
 
     protected void guessCitations(ArticleFiles af, Matcher mat) {
       String citStr = mat.replaceFirst("/export.mpx?code=$1&mode=ris");
-      log.debug3("citStr: " + citStr);
+      log.debug3("citStr (1): " + citStr);
       CachedUrl citCu = au.makeCachedUrl(citStr);
-      // handle both upper and lower case code string
-      // http://uksg.metapress.com/export.mpx?code=02u8u8x7hrujdpwv&mode=ris
-      if (citCu == null) {
-        // extract code string and make upper case
-        String[] citStrSplitEqual = citStr.split("=", 3);
-        String[] citStrSplitAmpersand = citStrSplitEqual[1].split("&", 2);
-        String codeStrUpper = citStrSplitAmpersand[0].toUpperCase();
-        String citStrCodeUpper = citStrSplitEqual[0] + "=" + codeStrUpper + "&"
-            + citStrSplitAmpersand[1] + "=" + citStrSplitEqual[2];
-        log.debug3("citStrCodeUpper: " + citStrCodeUpper);
-        citCu = au.makeCachedUrl(citStrCodeUpper);
+      if (citCu == null || !citCu.hasContent()) {
+        citStr = mat.replaceFirst(String.format("/export.mpx?code=%s&mode=ris", mat.group(1).toUpperCase()));
+        log.debug3("citStr (2): " + citStr);
+        citCu = au.makeCachedUrl(citStr);
       }
       if (citCu != null && citCu.hasContent()) {
         af.setRoleCu(ArticleFiles.ROLE_CITATION_RIS, citCu);
-        log.debug3("citcu :" + citCu);
+        log.debug3("citCu :" + citCu);
       }
      }
         
