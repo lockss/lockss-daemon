@@ -10190,7 +10190,7 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://comnet.oxfordjournals.org/
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
 
