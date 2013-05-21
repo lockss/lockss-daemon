@@ -127,7 +127,7 @@
   
     title < 
       name = Heritage & Society ;
-      issn = 1940-073X
+      issn = 2159-0338
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
@@ -142,8 +142,7 @@
   {
   
     title < 
-      name = HOSTEUR ;
-      issn = 1940-073X
+      name = HOSTEUR 
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
@@ -158,8 +157,7 @@
   {
   
     title < 
-      name = ICHRIE Johnson & Wales Case Study Competition ;
-      issn = 1940-073X
+      name = ICHRIE Johnson & Wales Case Study Competition
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
@@ -195,7 +193,6 @@
   
     title < 
       name = Journal of Hospitality Financial Management ;
-      issn = 1940-073X ;
       eissn = 2152-2790
     >
     
