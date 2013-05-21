@@ -128,15 +128,11 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
     String pdfUrl = "http://uksg.metapress.com/content/823xp7lgublqah49/fulltext.pdf";
     Matcher mat = PATTERN.matcher(pdfUrl);
     assertTrue(mat.find());
+    // convert 'code' tp upper case.
     // citation ris: http://uksg.metapress.com/export.mpx?code=823XP7LGUBLQAH49&mode=ris";
-    String citStr = mat.replaceFirst("/export.mpx?code=$1&mode=ris");
-    String[] citStrSplitEqual = citStr.split("=", 3);
-    String[] citStrSplitAmpersand = citStrSplitEqual[1].split("&", 2);
-    String codeStrUpper = citStrSplitAmpersand[0].toUpperCase();
-    String citStrCodeUpper = citStrSplitEqual[0] + "=" + codeStrUpper + "&"
-        + citStrSplitAmpersand[1] + "=" + citStrSplitEqual[2];
-    log.info("citStrCodeUpper: " + citStrCodeUpper);
-    assertEquals(EXPECTED_CITATION_RIS_URL, citStrCodeUpper);
+    String citStr = mat.replaceFirst(String.format("/export.mpx?code=%s&mode=ris", mat.group(1).toUpperCase()));
+    log.info("citStr: " + citStr);
+    assertEquals(EXPECTED_CITATION_RIS_URL, citStr);
    }
   
   public void testCreateArticleFiles() throws Exception {
@@ -183,7 +179,7 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
       }
     }
  
-   // get article iterator, get article files and the appropriate urls according
+    // get article iterator, get article files and the appropriate urls according
     // to their roles.
     String [] expectedUrls = { EXPECTED_PDF_URL,
                                EXPECTED_FULL_TEXT_URL,
@@ -201,7 +197,6 @@ public class TestMetaPressArticleIteratorFactory extends ArticleIteratorTestCase
         assertEquals(expectedUrls[i], actualUrls[i]);
       }   
     }
-
   }    
   
 }
