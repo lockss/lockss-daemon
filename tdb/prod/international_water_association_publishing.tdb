@@ -21,51 +21,50 @@
     param[journal_id] = nh
     comment[001to038] = formerly Nordic Hydrology
 
-    au < exists ; 1970 ; Nordic Hydrology Volume 1 ; 001 >
-    au < exists ; 1971 ; Nordic Hydrology Volume 2 ; 002 >
-    au < exists ; 1972 ; Nordic Hydrology Volume 3 ; 003 >
-    au < exists ; 1973 ; Nordic Hydrology Volume 4 ; 004 >
-    au < exists ; 1974 ; Nordic Hydrology Volume 5 ; 005 >
-    au < exists ; 1975 ; Nordic Hydrology Volume 6 ; 006 >
-    au < exists ; 1976 ; Nordic Hydrology Volume 7 ; 007 >
-    au < exists ; 1977 ; Nordic Hydrology Volume 8 ; 008 >
-    au < exists ; 1978 ; Nordic Hydrology Volume 9 ; 009 >
-    au < exists ; 1979 ; Nordic Hydrology Volume 10 ; 010 >
-    au < exists ; 1980 ; Nordic Hydrology Volume 11 ; 011 >
-    au < exists ; 1981 ; Nordic Hydrology Volume 12 ; 012 >
-    au < exists ; 1982 ; Nordic Hydrology Volume 13 ; 013 >
-    au < exists ; 1983 ; Nordic Hydrology Volume 14 ; 014 >
-    au < exists ; 1984 ; Nordic Hydrology Volume 15 ; 015 >
-    au < exists ; 1985 ; Nordic Hydrology Volume 16 ; 016 >
-    au < exists ; 1986 ; Nordic Hydrology Volume 17 ; 017 >
-    au < exists ; 1987 ; Nordic Hydrology Volume 18 ; 018 >
-    au < exists ; 1988 ; Nordic Hydrology Volume 19 ; 019 >
-    au < exists ; 1989 ; Nordic Hydrology Volume 20 ; 020 >
-    au < exists ; 1990 ; Nordic Hydrology Volume 21 ; 021 >
-    au < exists ; 1991 ; Nordic Hydrology Volume 22 ; 022 >
-    au < exists ; 1992 ; Nordic Hydrology Volume 23 ; 023 >
-    au < exists ; 1993 ; Nordic Hydrology Volume 24 ; 024 >
-    au < exists ; 1994 ; Nordic Hydrology Volume 25 ; 025 >
-    au < exists ; 1995 ; Nordic Hydrology Volume 26 ; 026 >
-    au < exists ; 1996 ; Nordic Hydrology Volume 27 ; 027 >
-    au < exists ; 1997 ; Nordic Hydrology Volume 28 ; 028 >
-    au < exists ; 1998 ; Nordic Hydrology Volume 29 ; 029 >
-    au < exists ; 1999 ; Nordic Hydrology Volume 30 ; 030 >
-    au < exists ; 2000 ; Nordic Hydrology Volume 31 ; 031 >
-    au < exists ; 2001 ; Nordic Hydrology Volume 32 ; 032 >
-    au < exists ; 2002 ; Nordic Hydrology Volume 33 ; 033 >
-    au < exists ; 2003 ; Nordic Hydrology Volume 34 ; 034 >
-    au < exists ; 2004 ; Nordic Hydrology Volume 35 ; 035 >
-    au < exists ; 2005 ; Nordic Hydrology Volume 36 ; 036 >
-    au < exists ; 2006 ; Nordic Hydrology Volume 37 ; 037 >
-    au < exists ; 2007 ; Nordic Hydrology Volume 38 ; 038 >
-    
-    au < exists ; 2008 ; Hydrology Research Volume 39 ; 039 >
-    au < exists ; 2009 ; Hydrology Research Volume 40 ; 040 >
-    au < exists ; 2010 ; Hydrology Research Volume 41 ; 041 >
-    au < exists ; 2011 ; Hydrology Research Volume 42 ; 042 >
-    au < exists ; 2012 ; Hydrology Research Volume 43 ; 043 >
-    au < exists ; 2013 ; Hydrology Research Volume 44 ; 044 >
+    au < manifest ; 1970 ; Nordic Hydrology Volume 1 ; 001 >
+    au < manifest ; 1971 ; Nordic Hydrology Volume 2 ; 002 >
+    au < manifest ; 1972 ; Nordic Hydrology Volume 3 ; 003 >
+    au < manifest ; 1973 ; Nordic Hydrology Volume 4 ; 004 >
+    au < manifest ; 1974 ; Nordic Hydrology Volume 5 ; 005 >
+    au < manifest ; 1975 ; Nordic Hydrology Volume 6 ; 006 >
+    au < manifest ; 1976 ; Nordic Hydrology Volume 7 ; 007 >
+    au < manifest ; 1977 ; Nordic Hydrology Volume 8 ; 008 >
+    au < manifest ; 1978 ; Nordic Hydrology Volume 9 ; 009 >
+    au < manifest ; 1979 ; Nordic Hydrology Volume 10 ; 010 >
+    au < manifest ; 1980 ; Nordic Hydrology Volume 11 ; 011 >
+    au < manifest ; 1981 ; Nordic Hydrology Volume 12 ; 012 >
+    au < manifest ; 1982 ; Nordic Hydrology Volume 13 ; 013 >
+    au < manifest ; 1983 ; Nordic Hydrology Volume 14 ; 014 >
+    au < manifest ; 1984 ; Nordic Hydrology Volume 15 ; 015 >
+    au < manifest ; 1985 ; Nordic Hydrology Volume 16 ; 016 >
+    au < manifest ; 1986 ; Nordic Hydrology Volume 17 ; 017 >
+    au < manifest ; 1987 ; Nordic Hydrology Volume 18 ; 018 >
+    au < manifest ; 1988 ; Nordic Hydrology Volume 19 ; 019 >
+    au < manifest ; 1989 ; Nordic Hydrology Volume 20 ; 020 >
+    au < manifest ; 1990 ; Nordic Hydrology Volume 21 ; 021 >
+    au < manifest ; 1991 ; Nordic Hydrology Volume 22 ; 022 >
+    au < manifest ; 1992 ; Nordic Hydrology Volume 23 ; 023 >
+    au < manifest ; 1993 ; Nordic Hydrology Volume 24 ; 024 >
+    au < manifest ; 1994 ; Nordic Hydrology Volume 25 ; 025 >
+    au < manifest ; 1995 ; Nordic Hydrology Volume 26 ; 026 >
+    au < manifest ; 1996 ; Nordic Hydrology Volume 27 ; 027 >
+    au < manifest ; 1997 ; Nordic Hydrology Volume 28 ; 028 >
+    au < manifest ; 1998 ; Nordic Hydrology Volume 29 ; 029 >
+    au < manifest ; 1999 ; Nordic Hydrology Volume 30 ; 030 >
+    au < manifest ; 2000 ; Nordic Hydrology Volume 31 ; 031 >
+    au < manifest ; 2001 ; Nordic Hydrology Volume 32 ; 032 >
+    au < manifest ; 2002 ; Nordic Hydrology Volume 33 ; 033 >
+    au < manifest ; 2003 ; Nordic Hydrology Volume 34 ; 034 >
+    au < manifest ; 2004 ; Nordic Hydrology Volume 35 ; 035 >
+    au < manifest ; 2005 ; Nordic Hydrology Volume 36 ; 036 >
+    au < manifest ; 2006 ; Nordic Hydrology Volume 37 ; 037 >
+    au < manifest ; 2007 ; Nordic Hydrology Volume 38 ; 038 >
+    au < manifest ; 2008 ; Hydrology Research Volume 39 ; 039 >
+    au < manifest ; 2009 ; Hydrology Research Volume 40 ; 040 >
+    au < manifest ; 2010 ; Hydrology Research Volume 41 ; 041 >
+    au < manifest ; 2011 ; Hydrology Research Volume 42 ; 042 >
+    au < manifest ; 2012 ; Hydrology Research Volume 43 ; 043 >
+    au < manifest ; 2013 ; Hydrology Research Volume 44 ; 044 >
 
   }
 
@@ -79,10 +78,10 @@
 
     param[journal_id] = jwc
 
-    au < exists ; 2010 ; Journal of Water and Climate Change Volume 1 ; 001 >
-    au < exists ; 2011 ; Journal of Water and Climate Change Volume 2 ; 002 >
-    au < exists ; 2012 ; Journal of Water and Climate Change Volume 3 ; 003 >
-    au < expected ; 2013 ; Journal of Water and Climate Change Volume 4 ; 004 >
+    au < manifest ; 2010 ; Journal of Water and Climate Change Volume 1 ; 001 >
+    au < manifest ; 2011 ; Journal of Water and Climate Change Volume 2 ; 002 >
+    au < manifest ; 2012 ; Journal of Water and Climate Change Volume 3 ; 003 >
+    au < manifest ; 2013 ; Journal of Water and Climate Change Volume 4 ; 004 >
 
   }
 
@@ -96,17 +95,17 @@
 
     param[journal_id] = jwh
 
-    au < exists ; 2003 ; Journal of Water and Health Volume 1 ; 001 >
-    au < exists ; 2004 ; Journal of Water and Health Volume 2 ; 002 >
-    au < exists ; 2005 ; Journal of Water and Health Volume 3 ; 003 >
-    au < exists ; 2006 ; Journal of Water and Health Volume 4 ; 004 >
-    au < exists ; 2007 ; Journal of Water and Health Volume 5 ; 005 >
-    au < exists ; 2008 ; Journal of Water and Health Volume 6 ; 006 >
-    au < exists ; 2009 ; Journal of Water and Health Volume 7 ; 007 >
-    au < exists ; 2010 ; Journal of Water and Health Volume 8 ; 008 >
-    au < exists ; 2011 ; Journal of Water and Health Volume 9 ; 009 >
-    au < exists ; 2012 ; Journal of Water and Health Volume 10 ; 010 >
-    au < exists ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
+    au < manifest ; 2003 ; Journal of Water and Health Volume 1 ; 001 >
+    au < manifest ; 2004 ; Journal of Water and Health Volume 2 ; 002 >
+    au < manifest ; 2005 ; Journal of Water and Health Volume 3 ; 003 >
+    au < manifest ; 2006 ; Journal of Water and Health Volume 4 ; 004 >
+    au < manifest ; 2007 ; Journal of Water and Health Volume 5 ; 005 >
+    au < manifest ; 2008 ; Journal of Water and Health Volume 6 ; 006 >
+    au < manifest ; 2009 ; Journal of Water and Health Volume 7 ; 007 >
+    au < manifest ; 2010 ; Journal of Water and Health Volume 8 ; 008 >
+    au < manifest ; 2011 ; Journal of Water and Health Volume 9 ; 009 >
+    au < manifest ; 2012 ; Journal of Water and Health Volume 10 ; 010 >
+    au < manifest ; 2013 ; Journal of Water and Health Volume 11 ; 011 >
 
   }
 
@@ -120,9 +119,9 @@
 
     param[journal_id] = jwrd
 
-    au < exists ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 001 >
-    au < exists ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 002 >
-    au < exists ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 003 >
+    au < manifest ; 2011 ; Journal of Water Reuse and Desalination Volume 1 ; 001 >
+    au < manifest ; 2012 ; Journal of Water Reuse and Desalination Volume 2 ; 002 >
+    au < manifest ; 2013 ; Journal of Water Reuse and Desalination Volume 3 ; 003 >
 
   }
 
@@ -136,9 +135,9 @@
 
     param[journal_id] = washdev
 
-    au < exists ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 001 >
-    au < exists ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 002 >
-    au < exists ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 003 >
+    au < manifest ; 2011 ; Journal of Water, Sanitation and Hygiene for Development Volume 1 ; 001 >
+    au < manifest ; 2012 ; Journal of Water, Sanitation and Hygiene for Development Volume 2 ; 002 >
+    au < manifest ; 2013 ; Journal of Water, Sanitation and Hygiene for Development Volume 3 ; 003 >
 
   }
 
@@ -152,22 +151,22 @@
 
     param[journal_id] = jws
 
-    au < exists ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 047 >
-    au < exists ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 048 >
-    au < exists ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 049 >
-    au < exists ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 050 >
-    au < exists ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 051 >
-    au < exists ; 2003 ; Journal of Water Supply: Research and Technology - Aqua Volume 52 ; 052 >
-    au < exists ; 2004 ; Journal of Water Supply: Research and Technology - Aqua Volume 53 ; 053 >
-    au < exists ; 2005 ; Journal of Water Supply: Research and Technology - Aqua Volume 54 ; 054 >
-    au < exists ; 2006 ; Journal of Water Supply: Research and Technology - Aqua Volume 55 ; 055 >
-    au < exists ; 2007 ; Journal of Water Supply: Research and Technology - Aqua Volume 56 ; 056 >
-    au < exists ; 2008 ; Journal of Water Supply: Research and Technology - Aqua Volume 57 ; 057 >
-    au < exists ; 2009 ; Journal of Water Supply: Research and Technology - Aqua Volume 58 ; 058 >
-    au < exists ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 059 >
-    au < exists ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 060 >
-    au < exists ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 061 >
-    au < exists ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 062 >
+    au < manifest ; 1998 ; Journal of Water Supply: Research and Technology - Aqua Volume 47 ; 047 >
+    au < manifest ; 1999 ; Journal of Water Supply: Research and Technology - Aqua Volume 48 ; 048 >
+    au < manifest ; 2000 ; Journal of Water Supply: Research and Technology - Aqua Volume 49 ; 049 >
+    au < manifest ; 2001 ; Journal of Water Supply: Research and Technology - Aqua Volume 50 ; 050 >
+    au < manifest ; 2002 ; Journal of Water Supply: Research and Technology - Aqua Volume 51 ; 051 >
+    au < manifest ; 2003 ; Journal of Water Supply: Research and Technology - Aqua Volume 52 ; 052 >
+    au < manifest ; 2004 ; Journal of Water Supply: Research and Technology - Aqua Volume 53 ; 053 >
+    au < manifest ; 2005 ; Journal of Water Supply: Research and Technology - Aqua Volume 54 ; 054 >
+    au < manifest ; 2006 ; Journal of Water Supply: Research and Technology - Aqua Volume 55 ; 055 >
+    au < manifest ; 2007 ; Journal of Water Supply: Research and Technology - Aqua Volume 56 ; 056 >
+    au < manifest ; 2008 ; Journal of Water Supply: Research and Technology - Aqua Volume 57 ; 057 >
+    au < manifest ; 2009 ; Journal of Water Supply: Research and Technology - Aqua Volume 58 ; 058 >
+    au < manifest ; 2010 ; Journal of Water Supply: Research and Technology - Aqua Volume 59 ; 059 >
+    au < manifest ; 2011 ; Journal of Water Supply: Research and Technology - Aqua Volume 60 ; 060 >
+    au < manifest ; 2012 ; Journal of Water Supply: Research and Technology - Aqua Volume 61 ; 061 >
+    au < manifest ; 2013 ; Journal of Water Supply: Research and Technology - Aqua Volume 62 ; 062 >
 
   }
   
@@ -181,21 +180,21 @@
 
     param[journal_id] = jh
 
-    au < exists ; 1999 ; Journal of Hydroinformatics Volume 1 ; 001 >
-    au < exists ; 2000 ; Journal of Hydroinformatics Volume 2 ; 002 >
-    au < exists ; 2001 ; Journal of Hydroinformatics Volume 3 ; 003 >
-    au < exists ; 2002 ; Journal of Hydroinformatics Volume 4 ; 004 >
-    au < exists ; 2003 ; Journal of Hydroinformatics Volume 5 ; 005 >
-    au < exists ; 2004 ; Journal of Hydroinformatics Volume 6 ; 006 >
-    au < exists ; 2005 ; Journal of Hydroinformatics Volume 7 ; 007 >
-    au < exists ; 2006 ; Journal of Hydroinformatics Volume 8 ; 008 >
-    au < exists ; 2007 ; Journal of Hydroinformatics Volume 9 ; 009 >
-    au < exists ; 2008 ; Journal of Hydroinformatics Volume 10 ; 010 >
-    au < exists ; 2009 ; Journal of Hydroinformatics Volume 11 ; 011 >
-    au < exists ; 2010 ; Journal of Hydroinformatics Volume 12 ; 012 >
-    au < exists ; 2011 ; Journal of Hydroinformatics Volume 13 ; 013 >
-    au < exists ; 2012 ; Journal of Hydroinformatics Volume 14 ; 014 >
-    au < exists ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
+    au < manifest ; 1999 ; Journal of Hydroinformatics Volume 1 ; 001 >
+    au < manifest ; 2000 ; Journal of Hydroinformatics Volume 2 ; 002 >
+    au < manifest ; 2001 ; Journal of Hydroinformatics Volume 3 ; 003 >
+    au < manifest ; 2002 ; Journal of Hydroinformatics Volume 4 ; 004 >
+    au < manifest ; 2003 ; Journal of Hydroinformatics Volume 5 ; 005 >
+    au < manifest ; 2004 ; Journal of Hydroinformatics Volume 6 ; 006 >
+    au < manifest ; 2005 ; Journal of Hydroinformatics Volume 7 ; 007 >
+    au < manifest ; 2006 ; Journal of Hydroinformatics Volume 8 ; 008 >
+    au < manifest ; 2007 ; Journal of Hydroinformatics Volume 9 ; 009 >
+    au < manifest ; 2008 ; Journal of Hydroinformatics Volume 10 ; 010 >
+    au < manifest ; 2009 ; Journal of Hydroinformatics Volume 11 ; 011 >
+    au < manifest ; 2010 ; Journal of Hydroinformatics Volume 12 ; 012 >
+    au < manifest ; 2011 ; Journal of Hydroinformatics Volume 13 ; 013 >
+    au < manifest ; 2012 ; Journal of Hydroinformatics Volume 14 ; 014 >
+    au < manifest ; 2013 ; Journal of Hydroinformatics Volume 15 ; 015 >
 
   }
   
@@ -209,13 +208,13 @@
 
     param[journal_id] = wpt
 
-    au < exists ; 2006 ; Water Practice and Technology Volume 1 ; 001 >
-    au < exists ; 2007 ; Water Practice and Technology Volume 2 ; 002 >
-    au < exists ; 2008 ; Water Practice and Technology Volume 3 ; 003 >
-    au < exists ; 2009 ; Water Practice and Technology Volume 4 ; 004 >
-    au < exists ; 2010 ; Water Practice and Technology Volume 5 ; 005 >
-    au < exists ; 2011 ; Water Practice and Technology Volume 6 ; 006 >
-    au < exists ; 2012 ; Water Practice and Technology Volume 7 ; 007 >
+    au < manifest ; 2006 ; Water Practice and Technology Volume 1 ; 001 >
+    au < manifest ; 2007 ; Water Practice and Technology Volume 2 ; 002 >
+    au < manifest ; 2008 ; Water Practice and Technology Volume 3 ; 003 >
+    au < manifest ; 2009 ; Water Practice and Technology Volume 4 ; 004 >
+    au < manifest ; 2010 ; Water Practice and Technology Volume 5 ; 005 >
+    au < manifest ; 2011 ; Water Practice and Technology Volume 6 ; 006 >
+    au < manifest ; 2012 ; Water Practice and Technology Volume 7 ; 007 >
     au < expected ; 2013 ; Water Practice and Technology Volume 8 ; 008 >
 
   }
@@ -254,9 +253,9 @@
 
     param[journal_id] = wqrjc
 
-    au < exists ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 046 >
-    au < exists ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 047 >
-    au < exists ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 048 >
+    au < manifest ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 046 >
+    au < manifest ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 047 >
+    au < manifest ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 048 >
 
   }
   
