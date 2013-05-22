@@ -80,5 +80,26 @@
     au < released ; 2011 ; 4-5 ; Inclusão Social Volume 4-5 (2011) ; 2011 >
 
   }
-  
+
+  {
+
+      title <
+        name = Liinc em Revista ;
+        eissn = 1808-3536
+      >
+
+      param[base_url] = http://revista.ibict.br/liinc/
+      param[journal_id] = liinc
+
+      au < exists ; 2005 ; 1 ; Liinc em Revista Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Liinc em Revista Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Liinc em Revista Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Liinc em Revista Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Liinc em Revista Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Liinc em Revista Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Liinc em Revista Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Liinc em Revista Volume 8 ; 2012 >
+
+  }
+
 }
