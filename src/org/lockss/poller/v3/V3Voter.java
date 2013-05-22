@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.85 2013-05-22 17:13:17 barry409 Exp $
+ * $Id: V3Voter.java,v 1.86 2013-05-22 20:40:11 barry409 Exp $
  */
 
 /*
@@ -296,11 +296,7 @@ public class V3Voter extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
 
-    // Should this be a symmetric poll?
-    double minWeight =
-      CurrentConfig.getDoubleParam(PARAM_MIN_WEIGHT_SYMMETRIC_POLL,
-				   DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL);
-    if (weightSymmetricPoll(msg.getOriginatorId()) >= minWeight) {
+    if (shouldSymmetricPoll(msg.getOriginatorId())) {
       // Create a second nonce to request a symmetric poll
       byte[] nonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
       try {
@@ -1220,6 +1216,13 @@ public class V3Voter extends BasePoll {
   
   IdentityManager getIdentityManager() {
     return this.idManager;
+  }
+
+  boolean shouldSymmetricPoll(PeerIdentity pid) {
+    double minWeight =
+      CurrentConfig.getDoubleParam(PARAM_MIN_WEIGHT_SYMMETRIC_POLL,
+				   DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL);
+    return weightSymmetricPoll(pid) >= minWeight;
   }
 
   double weightSymmetricPoll(PeerIdentity pid) {
