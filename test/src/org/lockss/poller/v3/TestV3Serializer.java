@@ -165,10 +165,10 @@ public class TestV3Serializer extends LockssTestCase {
     for (Iterator iter = uds1.iterator(); iter.hasNext(); ) {
       pollerSerializer.savePollerUserData((ParticipantUserData)iter.next());
     }
-    Collection uds2 = pollerSerializer.loadVoterStates();
+    Collection<ParticipantUserData> uds2 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds2);
     pollerSerializer = new V3PollerSerializer(theDaemon, pollDir);
-    Collection uds3 = pollerSerializer.loadVoterStates();
+    Collection<ParticipantUserData> uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }
 
@@ -248,30 +248,30 @@ public class TestV3Serializer extends LockssTestCase {
     return ud;
   }
 
-  private class PollerUserDataComparator implements Comparator {
+  private class PollerUserDataComparator
+    implements Comparator<ParticipantUserData> {
     // Simply sort by voterID
-    public int compare(Object a, Object b) {
-      String pidA = ((ParticipantUserData)a).getVoterId().getIdString();
-      String pidB = ((ParticipantUserData)b).getVoterId().getIdString();
+    public int compare(ParticipantUserData a, ParticipantUserData b) {
+      String pidA = a.getVoterId().getIdString();
+      String pidB = b.getVoterId().getIdString();
       return pidA.compareToIgnoreCase(pidB);
     }
   }
 
-  private void assertEqualInnerCircles(Collection a, Collection b) {
-    if (a == null) {
-      assertTrue(b == null);
+  private void assertEqualInnerCircles(Collection<ParticipantUserData> a,
+				       Collection<ParticipantUserData> b) {
+    if (a == null || b == null) {
+      assertTrue(a == b);
       return;
     }
-    Comparator c = new PollerUserDataComparator();
-    ArrayList la = new ArrayList(a);
-    ArrayList lb = new ArrayList(b);
+    Comparator<ParticipantUserData> c = new PollerUserDataComparator();
+    ArrayList<ParticipantUserData> la = new ArrayList(a);
+    ArrayList<ParticipantUserData> lb = new ArrayList(b);
     Collections.sort(la, c);
     Collections.sort(lb, c);
     assertTrue(a.size() == b.size());
     for(int i = 0 ; i < a.size(); i++) {
-      ParticipantUserData ud1 = (ParticipantUserData)la.get(i);
-      ParticipantUserData ud2 = (ParticipantUserData)lb.get(i);
-      V3PollTestUtil.assertEqualParticipantUserData(ud1, ud2);
+      V3PollTestUtil.assertEqualParticipantUserData(la.get(i), lb.get(i));
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.145 2013-05-21 16:02:49 dshr Exp $
+ * $Id: V3Poller.java,v 1.146 2013-05-22 16:43:33 barry409 Exp $
  */
 
 /*
@@ -712,10 +712,8 @@ public class V3Poller extends BasePoll {
   protected void restoreParticipants()
       throws V3Serializer.PollSerializerException {
     synchronized (theParticipants) {
-      Collection peers = serializer.loadVoterStates();
-      for (Iterator iter = peers.iterator(); iter.hasNext();) {
-	final ParticipantUserData voterState =
-	  (ParticipantUserData)iter.next();
+      Collection<ParticipantUserData> peers = serializer.loadVoterStates();
+      for (final ParticipantUserData voterState: peers) {
 	PeerIdentity id = voterState.getVoterId();
 	PsmInterpStateBean pisb = voterState.getPsmInterpState();
 	PsmMachine machine = makeMachine();

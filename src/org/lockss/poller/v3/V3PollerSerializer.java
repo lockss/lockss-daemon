@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.13 2008-03-15 04:55:06 tlipkis Exp $
+ * $Id: V3PollerSerializer.java,v 1.14 2013-05-22 16:43:33 barry409 Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class V3PollerSerializer extends V3Serializer {
   private File pollerStateBeanFile;
 
   /** Mapping of peer identity to state file. */
-  private HashMap peerMapping;
+  private HashMap<PeerIdentity, File> peerMapping;
 
   public V3PollerSerializer(LockssDaemon daemon) throws PollSerializerException {
     super(daemon);
@@ -141,7 +141,7 @@ public class V3PollerSerializer extends V3Serializer {
   public ParticipantUserData loadPollerUserData(PeerIdentity peerId)
       throws PollSerializerException {
     try {
-      File in = (File)peerMapping.get(peerId);
+      File in = peerMapping.get(peerId);
       if (in == null) {
         throw new PollSerializerException("No serialized state for voter " +
                                           peerId);
@@ -160,7 +160,7 @@ public class V3PollerSerializer extends V3Serializer {
    */
   public void removePollerUserData(PeerIdentity id)
       throws IOException, SerializationException {
-    File f = (File)peerMapping.get(id);
+    File f = peerMapping.get(id);
     if (f == null) {
       log.warning("Poller user data file does not exist, can't remove " + f);
     }
@@ -177,7 +177,7 @@ public class V3PollerSerializer extends V3Serializer {
    */
   private synchronized File getPollerUserDataFile(PeerIdentity id)
       throws IOException, SerializationException {
-    File f = (File)peerMapping.get(id);
+    File f = peerMapping.get(id);
     if (f == null) {
       f = FileUtil.createTempFile(POLLER_USER_DATA_PREFIX,
                                   POLLER_USER_DATA_SUFFIX, pollDir);
@@ -195,9 +195,11 @@ public class V3PollerSerializer extends V3Serializer {
    *
    * @throws PollSerializerException
    */
-  public Collection loadVoterStates() throws PollSerializerException {
+  public Collection<ParticipantUserData> loadVoterStates()
+      throws PollSerializerException {
     File[] files = pollDir.listFiles(voterFilter);
-    List innerCircleStates = new ArrayList(files.length);
+    Collection<ParticipantUserData> innerCircleStates =
+      new ArrayList(files.length);
     ObjectSerializer ser = getSerializer();
     try {
       for (int i = 0; i < files.length; i++) {
