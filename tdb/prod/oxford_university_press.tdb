@@ -6532,6 +6532,7 @@
     param[base_url] = http://gji.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
+    au < exists ; 1958 ; Geophysical Journal International Volume 1 ; 1 >
     au < manifest ; 1959 ; Geophysical Journal International Volume 2 ; 2 >
     au < manifest ; 1960 ; Geophysical Journal International Volume 3 ; 3 >
     au < manifest ; 1961 ; Geophysical Journal International Volume 4 ; 4 >
