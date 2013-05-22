@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.19 2013-04-24 03:29:55 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.20 2013-05-22 23:16:19 fergaloy-sf Exp $
  */
 
 /*
@@ -63,6 +63,45 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Prefix for the database manager configuration entries.
   private static final String PREFIX = Configuration.PREFIX + "dbManager.";
+  
+  // Prefix for the Derby configuration entries.
+  private static final String DERBY_ROOT = PREFIX + "derby";
+
+  /**
+   * Derby log append option. Changes require daemon restart.
+   */
+  public static final String PARAM_DERBY_INFOLOG_APPEND = DERBY_ROOT
+      + ".infologAppend";
+  public static final String DEFAULT_DERBY_INFOLOG_APPEND = "false";
+
+  /**
+   * Derby log query plan option. Changes require daemon restart.
+   */
+  public static final String PARAM_DERBY_LANGUAGE_LOGQUERYPLAN = DERBY_ROOT
+      + ".languageLogqueryplan";
+  public static final String DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN = "false";
+
+  /**
+   * Derby log statement text option. Changes require daemon restart.
+   */
+  public static final String PARAM_DERBY_LANGUAGE_LOGSTATEMENTTEXT = DERBY_ROOT
+      + ".languageLogstatementtext";
+  public static final String DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT = "false";
+
+  /**
+   * Name of the Derby log file path. Changes require daemon restart.
+   */
+  public static final String PARAM_DERBY_STREAM_ERROR_FILE = DERBY_ROOT
+      + ".streamErrorFile";
+  public static final String DEFAULT_DERBY_STREAM_ERROR_FILE = "derby.log";
+
+  /**
+   * Name of the Derby log severity level. Changes require daemon restart.
+   */
+  public static final String PARAM_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL =
+      DERBY_ROOT + ".streamErrorLogseveritylevel";
+  public static final String DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL =
+      "4000";
 
   // Prefix for the datasource configuration entries.
   private static final String DATASOURCE_ROOT = PREFIX + "datasource";
@@ -1826,8 +1865,12 @@ public class DbManager extends BaseLockssDaemonManager
 	existingDatabaseVersion = 1;
       }
 
-      log.debug2("existingDatabaseVersion = " + existingDatabaseVersion);
-      log.debug2("targetDatabaseVersion = " + targetDatabaseVersion);
+      if (log.isDebug2()) {
+	log.debug2(DEBUG_HEADER + "existingDatabaseVersion = "
+	    + existingDatabaseVersion);
+	log.debug2(DEBUG_HEADER + "targetDatabaseVersion = "
+	    + targetDatabaseVersion);
+      }
 
       // Check whether the database needs to be updated.
       if (targetDatabaseVersion > existingDatabaseVersion) {
@@ -1902,6 +1945,9 @@ public class DbManager extends BaseLockssDaemonManager
   private boolean setUpInfrastructure() {
     final String DEBUG_HEADER = "setUpInfrastructure(): ";
     boolean setUp = false;
+
+    // Set up the Derby properties.
+    setDatabaseConfiguration();
 
     // Get the datasource configuration.
     dataSourceConfig = getDataSourceConfig();
@@ -2990,12 +3036,62 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
+   * Sets the database properties.
+   */
+  private void setDatabaseConfiguration() {
+    final String DEBUG_HEADER = "setDatabaseConfiguration(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Get the current configuration.
+    Configuration currentConfig = ConfigManager.getCurrentConfig();
+
+    // Save the default Derby log append option, if not configured.
+    System.setProperty("derby.infolog.append", currentConfig.get(
+	PARAM_DERBY_INFOLOG_APPEND, DEFAULT_DERBY_INFOLOG_APPEND));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "derby.infolog.append = "
+	+ System.getProperty("derby.infolog.append"));
+
+    // Save the default Derby log query plan option, if not configured.
+    System.setProperty("derby.language.logQueryPlan",
+	currentConfig.get(PARAM_DERBY_LANGUAGE_LOGQUERYPLAN,
+	    DEFAULT_DERBY_LANGUAGE_LOGQUERYPLAN));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "derby.language.logQueryPlan = "
+	+ System.getProperty("derby.language.logQueryPlan"));
+
+    // Save the default Derby log statement text option, if not configured.
+    System.setProperty("derby.language.logStatementText",
+	currentConfig.get(PARAM_DERBY_LANGUAGE_LOGSTATEMENTTEXT,
+	    DEFAULT_DERBY_LANGUAGE_LOGSTATEMENTTEXT));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "derby.language.logStatementText = "
+	+ System.getProperty("derby.language.logStatementText"));
+
+    // Save the default Derby log file path, if not configured.
+    System.setProperty("derby.stream.error.file", currentConfig.get(
+	PARAM_DERBY_STREAM_ERROR_FILE, DEFAULT_DERBY_STREAM_ERROR_FILE));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "derby.stream.error.file = "
+	+ System.getProperty("derby.stream.error.file"));
+
+    // Save the default Derby log severity level, if not configured.
+    System.setProperty("derby.stream.error.logSeverityLevel",
+	currentConfig.get(PARAM_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL,
+	    DEFAULT_DERBY_STREAM_ERROR_LOGSEVERITYLEVEL));
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	+ "derby.stream.error.logSeverityLevel = "
+	+ System.getProperty("derby.stream.error.logSeverityLevel"));
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
    * Provides the datasource configuration.
    * 
    * @return a Configuration with the datasource configuration parameters.
    */
   private Configuration getDataSourceConfig() {
     final String DEBUG_HEADER = "getDataSourceConfig(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Get the current configuration.
     Configuration currentConfig = ConfigManager.getCurrentConfig();
@@ -3058,6 +3154,7 @@ public class DbManager extends BaseLockssDaemonManager
       dsConfig.put("password", dataSourcePassword);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return dsConfig;
   }
 
