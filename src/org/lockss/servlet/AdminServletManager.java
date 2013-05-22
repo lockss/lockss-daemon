@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.36 2013-03-27 14:31:26 rwincewicz Exp $
+ * $Id: AdminServletManager.java,v 1.37 2013-05-22 23:53:51 fergaloy-sf Exp $
  */
 
 /*
@@ -501,6 +501,13 @@ public class AdminServletManager extends BaseServletManager {
 		       0,
 	               "JAX-WS CXF Web Services");
 
+  protected static final ServletDescr SERVLET_SUB_MANAGEMENT =
+      new ServletDescr("SubscriptionManagement",
+		       SubscriptionManagement.class,
+		       "Title Subscription Management",
+		       (ServletDescr.NEED_ROLE_AU_ADMIN),
+		       "Subscribe or unsubscribe to individual titles");
+
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
   }
@@ -545,6 +552,7 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
@@ -585,6 +593,7 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
@@ -613,6 +622,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DEBUG_PANEL,
     SERVLET_EXPERT_CONFIG,
     SERVLET_LIST_HOLDINGS,
+    SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
     LINK_LOGS,
     LINK_ISOS,
@@ -623,6 +633,7 @@ public class AdminServletManager extends BaseServletManager {
     LINK_CONTACT,
     SERVLET_EDIT_ACCOUNT,
     SERVLET_EDIT_ACCOUNTS,
+    SERVLET_SUB_MANAGEMENT,
     LINK_HELP,
     LINK_LOGOUT,
     LOGIN_FORM,
