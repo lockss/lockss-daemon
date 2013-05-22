@@ -124,7 +124,7 @@
       param[journal_issn] = 2045-5852
       
       au < released ; 2011 ; The Australasian Journal of Popular Culture Volume 1 ; 1 >
-      au < manifest ; 2012-2013 ; The Australasian Journal of Popular Culture Volume 2 ; 2 >
+      au < testing ; 2012-2013 ; The Australasian Journal of Popular Culture Volume 2 ; 2 >
       au < expected ; 2013 ; The Australasian Journal of Popular Culture Volume 3 ; 3 >
 
     }
@@ -767,7 +767,7 @@
       au < released ; 2009 ; Journal of Arab & Muslim Media Research Volume 2 ; 2 >
       au < released ; 2010 ; Journal of Arab & Muslim Media Research Volume 3 ; 3 >
       au < released ; 2011-2012 ; Journal of Arab & Muslim Media Research Volume 4 ; 4 >
-      au < manifest ; 2012 ; Journal of Arab & Muslim Media Research Volume 5 ; 5 >
+      au < testing ; 2012 ; Journal of Arab & Muslim Media Research Volume 5 ; 5 >
       au < expected ; 2013 ; Journal of Arab & Muslim Media Research Volume 6 ; 6 >
 
     }
@@ -783,7 +783,7 @@
 
       au < released ; 2009-2011 ; Journal of Arts & Communities Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Arts & Communities Volume 2 ; 2 >
-      au < manifest ; 2012 ; Journal of Arts & Communities Volume 3 ; 3 >
+      au < testing ; 2012 ; Journal of Arts & Communities Volume 3 ; 3 >
       au < expected ; 2013 ; Journal of Arts & Communities Volume 4 ; 4 >
 
     }
@@ -802,7 +802,7 @@
       au < released ; 2009 ; Journal of Chinese Cinemas Volume 3 ; 3 >
       au < released ; 2010 ; Journal of Chinese Cinemas Volume 4 ; 4 >
       au < released ; 2011 ; Journal of Chinese Cinemas Volume 5 ; 5 >
-      au < manifest ; 2012 ; Journal of Chinese Cinemas Volume 6 ; 6 >
+      au < testing ; 2012 ; Journal of Chinese Cinemas Volume 6 ; 6 >
       au < manifest ; 2013 ; Journal of Chinese Cinemas Volume 7 ; 7 >
 
     }
@@ -832,8 +832,8 @@
 
       au < released ; 2009 ; Journal of Dance & Somatic Practices Volume 1 ; 1 >
       au < released ; 2010 ; Journal of Dance & Somatic Practices Volume 2 ; 2 >
-      au < manifest ; 2011 ; Journal of Dance & Somatic Practices Volume 3 ; 3 >
-      au < manifest ; 2012 ; Journal of Dance & Somatic Practices Volume 4 ; 4 >
+      au < testing ; 2011 ; Journal of Dance & Somatic Practices Volume 3 ; 3 >
+      au < testing ; 2012 ; Journal of Dance & Somatic Practices Volume 4 ; 4 >
       au < expected ; 2013 ; Journal of Dance & Somatic Practices Volume 5 ; 5 >
 
     }
@@ -849,8 +849,8 @@
       param[journal_issn] = 2040-6134
 
       au < released ; 2010 ; Journal of European Popular Culture Volume 1 ; 1 >
-      au < manifest ; 2011 ; Journal of European Popular Culture Volume 2 ; 2 >
-      au < manifest ; 2012 ; Journal of European Popular Culture Volume 3 ; 3 >
+      au < testing ; 2011 ; Journal of European Popular Culture Volume 2 ; 2 >
+      au < testing ; 2012 ; Journal of European Popular Culture Volume 3 ; 3 >
       au < manifest ; 2013 ; Journal of European Popular Culture Volume 4 ; 4 >
 
     }
@@ -865,7 +865,8 @@
       param[journal_id] = jfs
       param[journal_issn] = 2046-6692
 
-      au < manifest ; 2012 ; Journal of Fandom Studies Volume 1 ; 1 >
+      au < testing ; 2012 ; Journal of Fandom Studies Volume 1 ; 1 >
+      au < expected ; 2013 ; Journal of Fandom Studies Volume 2 ; 2 >
 
     }
 
@@ -882,7 +883,7 @@
       au < released ; 2009 ; Journal of Gaming & Virtual Worlds Volume 1 ; 1 >
       au < released ; 2010 ; Journal of Gaming & Virtual Worlds Volume 2 ; 2 >
       au < released ; 2011 ; Journal of Gaming & Virtual Worlds Volume 3 ; 3 >
-      au < manifest ; 2012 ; Journal of Gaming & Virtual Worlds Volume 4 ; 4 >
+      au < testing ; 2012 ; Journal of Gaming & Virtual Worlds Volume 4 ; 4 >
       au < expected ; 2013 ; Journal of Gaming & Virtual Worlds Volume 5 ; 5 >
 
     }
@@ -897,7 +898,7 @@
       param[journal_id] = jicms
       param[journal_issn] = 2047-7368
 
-      au < manifest ; 2012-2013 ; Journal of Italian Cinema and Media Studies Volume 1 ; 1 >
+      au < testing ; 2012-2013 ; Journal of Italian Cinema and Media Studies Volume 1 ; 1 >
       au < expected ; 2013 ; Journal of Italian Cinema and Media Studies Volume 2 ; 2 >
 
     }
@@ -914,8 +915,8 @@
 
       au < released ; 2009 ; Journal of Japanese & Korean Cinema Volume 1 ; 1 >
       au < released ; 2010-2011 ; Journal of Japanese & Korean Cinema Volume 2 ; 2 >
-      au < manifest ; 2012 ; Journal of Japanese & Korean Cinema Volume 3 ; 3 >
-      au < manifest ; 2012 ; Journal of Japanese & Korean Cinema Volume 4 ; 4 >
+      au < testing ; 2012 ; Journal of Japanese & Korean Cinema Volume 3 ; 3 >
+      au < testing ; 2012 ; Journal of Japanese & Korean Cinema Volume 4 ; 4 >
       au < expected ; 2013 ; Journal of Japanese & Korean Cinema Volume 5 ; 5 >
 
     }
@@ -941,7 +942,7 @@
       au < released ; 2009 ; Journal of Media Practice Volume 10 ; 10 >
       au < released ; 2010 ; Journal of Media Practice Volume 11 ; 11 >
       au < released ; 2011 ; Journal of Media Practice Volume 12 ; 12 >
-      au < manifest ; 2012 ; Journal of Media Practice Volume 13 ; 13 >
+      au < testing ; 2012 ; Journal of Media Practice Volume 13 ; 13 >
       au < manifest ; 2013 ; Journal of Media Practice Volume 14 ; 14 >
 
     }
@@ -960,7 +961,7 @@
       au < released ; 2009 ; Journal of Music, Technology & Education Volume 2 ; 2 >
       au < released ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
       au < released ; 2011-2012 ; Journal of Music, Technology & Education Volume 4 ; 4 >
-      au < manifest ; 2012-2013 ; Journal of Music, Technology & Education Volume 5 ; 5 >
+      au < testing ; 2012-2013 ; Journal of Music, Technology & Education Volume 5 ; 5 >
       au < manifest ; 2013 ; Journal of Music, Technology & Education Volume 6 ; 6 >
 
     }
@@ -1022,7 +1023,7 @@
       param[journal_issn] = 2042-7891
 
       au < released ; 2010-11 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
-      au < manifest ; 2012 ; Journal of Scandinavian Cinema Volume 2 ; 2 >
+      au < testing ; 2012 ; Journal of Scandinavian Cinema Volume 2 ; 2 >
       au < manifest ; 2013 ; Journal of Scandinavian Cinema Volume 3 ; 3 >
 
     }
@@ -1039,7 +1040,7 @@
       au < released ; 2010 ; Journal of Screenwriting Volume 1 ; 1 >
       au < released ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
       au < released ; 2011-2012 ; Journal of Screenwriting Volume 3 ; 3 >
-      au < manifest ; 2012-2013 ; Journal of Screenwriting Volume 4 ; 4 >
+      au < testing ; 2012-2013 ; Journal of Screenwriting Volume 4 ; 4 >
       au < expected ; 2013 ; Journal of Screenwriting Volume 5 ; 5 >
 
     }
@@ -1063,7 +1064,7 @@
       au < released ; 2009 ; Journal of Visual Art Practice Volume 8 ; 8 >
       au < released ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
       au < released ; 2011-2012 ; Journal of Visual Art Practice Volume 10 ; 10 >
-      au < manifest ; 2012 ; Journal of Visual Art Practice Volume 11 ; 11 >
+      au < testing ; 2012 ; Journal of Visual Art Practice Volume 11 ; 11 >
       au < manifest ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
 
     }
@@ -1100,7 +1101,7 @@
       au < released ; 2009 ; Journal of Writing in Creative Practice Volume 2 ; 2 >
       au < released ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
       au < released ; 2011-2012 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
-      au < manifest ; 2012 ; Journal of Writing in Creative Practice Volume 5 ; 5 >
+      au < testing ; 2012 ; Journal of Writing in Creative Practice Volume 5 ; 5 >
       au < expected ; 2013 ; Journal of Writing in Creative Practice Volume 6 ; 6 >
 
     }
@@ -1122,7 +1123,7 @@
       param[journal_issn] = 2040-3550
 
       au < released ; 2010-2011 ; Metaverse Creativity Volume 1 ; 1 >
-      au < manifest ; 2012 ; Metaverse Creativity Volume 2 ; 2 >
+      au < testing ; 2012 ; Metaverse Creativity Volume 2 ; 2 >
       au < expected ; 2013 ; Metaverse Creativity Volume 3 ; 3 >
 
     }
@@ -1179,7 +1180,7 @@
       au < released ; 2009 ; Northern Lights: Film and Media Studies Yearbook Volume 7 ; 7 >
       au < released ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
       au < released ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
-      au < manifest ; 2012 ; Northern Lights: Film and Media Studies Yearbook Volume 10 ; 10 >
+      au < testing ; 2012 ; Northern Lights: Film and Media Studies Yearbook Volume 10 ; 10 >
       au < expected ; 2013 ; Northern Lights: Film and Media Studies Yearbook Volume 11 ; 11 >
 
     }
@@ -1195,7 +1196,7 @@
       param[journal_issn] = 1757-1979
     
       au < released ; 2010-2011 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 1 ; 1 >
-      au < manifest ; 2012 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 2 ; 2 >
+      au < testing ; 2012 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 2 ; 2 >
       au < expected ; 2013 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 3 ; 3 >
     }
 
@@ -1208,7 +1209,7 @@
       param[journal_id] = pi
       param[journal_issn] = 2043-1015
     
-      au < manifest ; 2012-2013 ; Performing Islam Volume 1 ; 1 >
+      au < testing ; 2012-2013 ; Performing Islam Volume 1 ; 1 >
       au < expected ; 2013 ; Performing Islam Volume 2 ; 2 >
 
     }
@@ -1225,7 +1226,7 @@
     
       au < released ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
       au < released ; 2011-2012 ; Philosophy of Photography Volume 2 ; 2 >
-      au < manifest ; 2012 ; Philosophy of Photography Volume 3 ; 3 >
+      au < testing ; 2012 ; Philosophy of Photography Volume 3 ; 3 >
       au < expected ; 2013 ; Philosophy of Photography Volume 4 ; 4 >
 
     }
@@ -1265,7 +1266,7 @@
       param[journal_issn] = 2040-3704
     
       au < released ; 2010-2011 ; The Poster Volume 1 ; 1 >
-      au < manifest ; 2012 ; The Poster Volume 2 ; 2 >
+      au < testing ; 2012 ; The Poster Volume 2 ; 2 >
       au < expected ; 2013 ; The Poster Volume 3 ; 3 >
       
     }
@@ -1280,7 +1281,7 @@
       param[journal_id] = public
       param[journal_issn] = 0845-4450
 
-      au < manifest ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
+      au < testing ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
       au < expected ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
       
     }
@@ -1294,7 +1295,7 @@
       param[journal_id] = punk
       param[journal_issn] = 2044-1983
     
-      au < manifest ; 2011-2012 ; Punk & Post Punk Volume 1 ; 1 >
+      au < testing ; 2011-2012 ; Punk & Post Punk Volume 1 ; 1 >
       au < manifest ; 2013 ; Punk & Post Punk Volume 2 ; 2 >
 
     }
@@ -1318,7 +1319,7 @@
       au < released ; 2009 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 7 ; 7 >
       au < released ; 2010-2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 8 ; 8 >
       au < released ; 2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 9 ; 9 >
-      au < manifest ; 2012 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 10 ; 10 >
+      au < testing ; 2012 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 10 ; 10 >
       au < expected ; 2013 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 11 ; 11 >
 
     }
@@ -1331,7 +1332,7 @@
       param[journal_id] = scene
       param[journal_issn] = 2044-3714
     
-      au < manifest ; 2012 ; Scene Volume 1 ; 1 >
+      au < testing ; 2012 ; Scene Volume 1 ; 1 >
       au < expected ; 2013 ; Scene Volume 2 ; 2 >
 
     }
@@ -1362,7 +1363,7 @@
     
       au < released ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
       au < released ; 2012 ; Short Film Studies Volume 2 ; 2 >
-      au < manifest ; 2012-2013 ; Short Film Studies Volume 3 ; 3 >
+      au < testing ; 2012-2013 ; Short Film Studies Volume 3 ; 3 >
       au < expected ; 2013 ; Short Film Studies Volume 4 ; 4 >
 
     }
@@ -1399,7 +1400,7 @@
       au < released ; 2009 ; Studies in Australasian Cinema Volume 3 ; 3 >
       au < released ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
       au < released ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
-      au < manifest ; 2012 ; Studies in Australasian Cinema Volume 6 ; 6 >
+      au < testing ; 2012 ; Studies in Australasian Cinema Volume 6 ; 6 >
       au < expected ; 2013 ; Studies in Australasian Cinema Volume 7 ; 7 >
 
     }
@@ -1415,7 +1416,7 @@
     
       au < released ; 2010 ; Studies in Comics Volume 1 ; 1 >
       au < released ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
-      au < manifest ; 2012 ; Studies in Comics Volume 3 ; 3 >
+      au < testing ; 2012 ; Studies in Comics Volume 3 ; 3 >
       au < expected ; 2013 ; Studies in Comics Volume 4 ; 4 >
 
     }
@@ -1445,7 +1446,7 @@
       au < released ; 2009 ; Studies in Documentary Film Volume 3 ; 3 >
       au < released ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
       au < released ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
-      au < manifest ; 2012 ; Studies in Documentary Film Volume 6 ; 6 >
+      au < testing ; 2012 ; Studies in Documentary Film Volume 6 ; 6 >
       au < expected ; 2013 ; Studies in Documentary Film Volume 7 ; 7 >
 
     }
@@ -1462,7 +1463,7 @@
     
       au < released ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
       au < released ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
-      au < manifest ; 2012 ; Studies in Eastern European Cinema Volume 3 ; 3 >
+      au < testing ; 2012 ; Studies in Eastern European Cinema Volume 3 ; 3 >
       au < manifest ; 2013 ; Studies in Eastern European Cinema Volume 4 ; 4 >
 
     }
@@ -1485,7 +1486,7 @@
       au < released ; 2009 ; Studies in European Cinema Volume 6 ; 6 >
       au < released ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
       au < released ; 2011-2012 ; Studies in European Cinema Volume 8 ; 8 >
-      au < manifest ; 2012 ; Studies in European Cinema Volume 9 ; 9 >
+      au < testing ; 2012 ; Studies in European Cinema Volume 9 ; 9 >
       au < expected ; 2013 ; Studies in European Cinema Volume 10 ; 10 >
 
     }
@@ -1511,7 +1512,7 @@
       au < released ; 2009 ; Studies in French Cinema Volume 9 ; 9 >
       au < released ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
       au < released ; 2011 ; Studies in French Cinema Volume 11 ; 11 >
-      au < manifest ; 2012 ; Studies in French Cinema Volume 12 ; 12 >
+      au < testing ; 2012 ; Studies in French Cinema Volume 12 ; 12 >
       au < manifest ; 2013 ; Studies in French Cinema Volume 13 ; 13 >
 
     }
@@ -1533,8 +1534,8 @@
       au < released ; 2009 ; Studies in Hispanic Cinemas Volume 5 ; 5 >
       au < released ; 2009 ; Studies in Hispanic Cinemas Volume 6 ; 6 >
       au < released ; 2010-2011 ; Studies in Hispanic Cinemas Volume 7 ; 7 >
-      au < manifest ; 2012 ; Studies in Hispanic Cinemas Volume 8 ; 8 >
-      au < manifest ; 2012 ; Studies in Hispanic Cinemas Volume 9 ; 9 >
+      au < testing ; 2012 ; Studies in Hispanic Cinemas Volume 8 ; 8 >
+      au < testing ; 2012 ; Studies in Hispanic Cinemas Volume 9 ; 9 >
       au < expected ; 2013 ; Studies in Hispanic Cinemas Volume 10 ; 10 >
 
     }
@@ -1554,7 +1555,7 @@
       au < released ; 2009 ; Studies in Musical Theatre Volume 3 ; 3 >
       au < released ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
       au < released ; 2011-2012 ; Studies in Musical Theatre Volume 5 ; 5 >
-      au < manifest ; 2012 ; Studies in Musical Theatre Volume 6 ; 6 >
+      au < testing ; 2012 ; Studies in Musical Theatre Volume 6 ; 6 >
       au < expected ; 2013 ; Studies in Musical Theatre Volume 7 ; 7 >
 
     }
@@ -1574,7 +1575,7 @@
       au < released ; 2009 ; Studies in Russian & Soviet Cinema Volume 3 ; 3 >
       au < released ; 2010 ; Studies in Russian & Soviet Cinema Volume 4 ; 4 >
       au < released ; 2011-2012 ; Studies in Russian & Soviet Cinema Volume 5 ; 5 >
-      au < manifest ; 2012 ; Studies in Russian & Soviet Cinema Volume 6 ; 6 >
+      au < testing ; 2012 ; Studies in Russian & Soviet Cinema Volume 6 ; 6 >
       au < manifest ; 2013 ; Studies in Russian & Soviet Cinema Volume 7 ; 7 >
 
     }
@@ -1590,8 +1591,8 @@
     
       au < released ; 2009 ; Studies in South Asian Film & Media Volume 1 ; 1 >
       au < released ; 2010-2011 ; Studies in South Asian Film & Media Volume 2 ; 2 >
-      au < manifest ; 2012 ; Studies in South Asian Film & Media Volume 3 ; 3 >
-      au < manifest ; 2012 ; Studies in South Asian Film & Media Volume 4 ; 4 >
+      au < testing ; 2012 ; Studies in South Asian Film & Media Volume 3 ; 3 >
+      au < testing ; 2012 ; Studies in South Asian Film & Media Volume 4 ; 4 >
       au < expected ; 2013 ; Studies in South Asian Film & Media Volume 5 ; 5 >
     
     }
@@ -1638,7 +1639,7 @@
       au < released ; 2009 ; Technoetic Arts Volume 7 ; 7 >
       au < released ; 2010-2011 ; Technoetic Arts Volume 8 ; 8 >
       au < released ; 2011-2012 ; Technoetic Arts Volume 9 ; 9 >
-      au < manifest ; 2012 ; Technoetic Arts Volume 10 ; 10 >
+      au < testing ; 2012 ; Technoetic Arts Volume 10 ; 10 >
       au < expected ; 2013 ; Technoetic Arts Volume 11 ; 11 >
 
     }
@@ -1655,7 +1656,7 @@
       
       au < released ; 2010 ; Transnational Cinemas Volume 1 ; 1 >
       au < released ; 2011-2012 ; Transnational Cinemas Volume 2 ; 2 >
-      au < manifest ; 2012 ; Transnational Cinemas Volume 3 ; 3 >
+      au < testing ; 2012 ; Transnational Cinemas Volume 3 ; 3 >
       au < expected ; 2013 ; Transnational Cinemas Volume 4 ; 4 >
 
     }
@@ -1670,7 +1671,7 @@
       param[journal_id] = ubiq
       param[journal_issn] = 2045-6271
       
-      au < manifest ; 2012 ; Ubiquity: The Journal of Pervasive Media Volume 1 ; 1 >
+      au < testing ; 2012 ; Ubiquity: The Journal of Pervasive Media Volume 1 ; 1 >
       au < expected ; 2013 ; Ubiquity: The Journal of Pervasive Media Volume 2 ; 2 >
 
     }
