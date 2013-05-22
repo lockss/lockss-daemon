@@ -20,15 +20,16 @@
     
     param[journal_id] = jcc
     param[journal_issn] = 1470-5001
+    comment[notReady] = low agreement, different pdf version #
 
-    au < testing ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
-    au < testing ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
+    au < notReady ; 2005 ; Journal of Corporate Citizenship Volume 2005 ; 2005 >
+    au < ready ; 2006 ; Journal of Corporate Citizenship Volume 2006 ; 2006 >
     au < testing ; 2007 ; Journal of Corporate Citizenship Volume 2007 ; 2007 >
-    au < testing ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
-    au < testing ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
-    au < testing ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
-    au < testing ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
-    au < testing ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
+    au < ready ; 2008 ; Journal of Corporate Citizenship Volume 2008 ; 2008 >
+    au < ready ; 2009 ; Journal of Corporate Citizenship Volume 2009 ; 2009 >
+    au < ready ; 2010 ; Journal of Corporate Citizenship Volume 2010 ; 2010 >
+    au < ready ; 2011 ; Journal of Corporate Citizenship Volume 2011 ; 2011 >
+    au < ready ; 2012 ; Journal of Corporate Citizenship Volume 2012 ; 2012 >
     au < expected ; 2013 ; Journal of Corporate Citizenship Volume 2013 ; 2013 >
 
   }
@@ -49,10 +50,11 @@
 
     param[journal_id] = gmi
     param[journal_issn] = 0966-9671
+    comment[notReady] = low agreement, different pdf version #
 
-    au < testing ; 2005 ; Greener Management International Volume 2005 ; 2005 >
+    au < notReady ; 2005 ; Greener Management International Volume 2005 ; 2005 >
     au < testing ; 2006 ; Greener Management International Volume 2006 ; 2006 >
-    au < testing ; 2007 ; Greener Management International Volume 2007 ; 2007 >
+    au < ready ; 2007 ; Greener Management International Volume 2007 ; 2007 >
 
   }
 
