@@ -380,7 +380,6 @@
     >
 
     param[journal_issn] = 1947-3575
-    comment[notReady] = manifest page does not have link of journal
 
     au < released ; 2011 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Biomaterials Research and Engineering (IJBRE) Volume 2 ; 2 >
@@ -1819,7 +1818,6 @@
       issnl = 1947-928X
     >
     param[journal_issn] = 1947-928X
-    comment[notReady_2011] = manifest page with no links
     comment[notReady_2012] = blank manifest page
 
     au < manifest ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 >
