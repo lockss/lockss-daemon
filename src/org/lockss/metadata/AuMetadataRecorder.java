@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.9 2013-05-03 01:59:17 tlipkis Exp $
+ * $Id: AuMetadataRecorder.java,v 1.10 2013-05-22 23:26:59 fergaloy-sf Exp $
  */
 
 /*
@@ -274,7 +274,6 @@ public class AuMetadataRecorder {
    * @return an ArticleMetadataInfo with the normalized properties.
    */
   private ArticleMetadataInfo normalizeMetadata(ArticleMetadataInfo mdinfo) {
-    final String DEBUG_HEADER = "normalizeMetadata(): ";
     if (mdinfo.accessUrl != null) {
       if (mdinfo.accessUrl.length() > MAX_URL_COLUMN) {
 	log.warning("accessUrl too long '" + mdinfo.accessUrl
@@ -285,57 +284,17 @@ public class AuMetadataRecorder {
       }
     }
 
-    if (mdinfo.isbn != null) {
-      String isbn = mdinfo.isbn.replaceAll("-", "");
-      log.debug3(DEBUG_HEADER + "isbn = '" + isbn + "'.");
+    mdinfo.isbn = mdManager.normalizeIsbnOrIssn(mdinfo.isbn, MAX_ISBN_COLUMN,
+	"ISBN", mdinfo.journalTitle, mdinfo.publisher);
 
-      if (isbn.length() > MAX_ISBN_COLUMN) {
-	log.warning("isbn too long '" + mdinfo.isbn + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.isbn = DbManager.truncateVarchar(isbn, MAX_ISBN_COLUMN);
-      } else {
-	mdinfo.isbn = isbn;
-      }
-    }
+    mdinfo.eisbn = mdManager.normalizeIsbnOrIssn(mdinfo.eisbn, MAX_ISBN_COLUMN,
+	"ISBN", mdinfo.journalTitle, mdinfo.publisher);
 
-    if (mdinfo.eisbn != null) {
-      String isbn = mdinfo.eisbn.replaceAll("-", "");
-      log.debug3(DEBUG_HEADER + "isbn = '" + isbn + "'.");
+    mdinfo.issn = mdManager.normalizeIsbnOrIssn(mdinfo.issn, MAX_ISSN_COLUMN,
+	"ISSN", mdinfo.journalTitle, mdinfo.publisher);
 
-      if (isbn.length() > MAX_ISBN_COLUMN) {
-	log.warning("eisbn too long '" + mdinfo.eisbn + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.eisbn = DbManager.truncateVarchar(isbn, MAX_ISBN_COLUMN);
-      } else {
-	mdinfo.eisbn = isbn;
-      }
-    }
-
-    if (mdinfo.issn != null) {
-      String issn = mdinfo.issn.replaceAll("-", "");
-      log.debug3(DEBUG_HEADER + "issn = '" + issn + "'.");
-
-      if (issn.length() > MAX_ISSN_COLUMN) {
-	log.warning("issn too long '" + mdinfo.issn + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.issn = DbManager.truncateVarchar(issn, MAX_ISSN_COLUMN);
-      } else {
-	mdinfo.issn = issn;
-      }
-    }
-
-    if (mdinfo.eissn != null) {
-      String issn = mdinfo.eissn.replaceAll("-", "");
-      log.debug3(DEBUG_HEADER + "issn = '" + issn + "'.");
-
-      if (issn.length() > MAX_ISSN_COLUMN) {
-	log.warning("issn too long '" + mdinfo.eissn + "' for title: '"
-	    + mdinfo.journalTitle + "' publisher: " + mdinfo.publisher + "'");
-	mdinfo.eissn = DbManager.truncateVarchar(issn, MAX_ISSN_COLUMN);
-      } else {
-	mdinfo.eissn = issn;
-      }
-    }
+    mdinfo.eissn = mdManager.normalizeIsbnOrIssn(mdinfo.eissn, MAX_ISSN_COLUMN,
+	"ISSN", mdinfo.journalTitle, mdinfo.publisher);
 
     if (mdinfo.doi != null) {
       String doi = mdinfo.doi;
