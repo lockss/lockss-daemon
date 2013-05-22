@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollTestUtil.java,v 1.1 2012-07-02 16:27:28 tlipkis Exp $
+ * $Id: V3PollTestUtil.java,v 1.2 2013-05-22 15:31:41 barry409 Exp $
  */
 
 /*
@@ -30,9 +30,10 @@
 
 package org.lockss.test;
 
+import java.io.IOException;
+
 import org.lockss.poller.v3.*;
-import org.lockss.app.*;
-//import org.lockss.protocol.*;
+import org.lockss.protocol.*;
 import static org.lockss.test.LockssTestCase.*; // assert*() methods
 
 public class V3PollTestUtil {
@@ -117,15 +118,42 @@ public class V3PollTestUtil {
     assertEquals(d1.getRepairEffortProof(), d2.getRepairEffortProof());
     assertEquals(d1.getRepairTarget(), d2.getRepairTarget());
     assertEquals(d1.getVoterNonce(), d2.getVoterNonce());
+    assertEquals(d1.getVoterNonce2(), d2.getVoterNonce2());
     assertEquals(d1.getDeadline(), d2.getDeadline());
     assertEquals(d1.getNominees(), d2.getNominees());
     assertEquals(d1.getPollerId().getIdString(),
                  d2.getPollerId().getIdString());
     assertEquals(d1.getPollVersion(), d2.getPollVersion());
-    assertEquals(d1.getVoteBlocks().size(), d2.getVoteBlocks().size());
+    assertEqualVoteBlocks(d1.getVoteBlocks(), d2.getVoteBlocks());
+    assertEqualVoteBlocks(d1.getSymmetricVoteBlocks(),
+			  d2.getSymmetricVoteBlocks());
     assertEquals(d1.getAgreementHint(), d2.getAgreementHint());
   }
+
+
+  /**
+   * Assert that two VoteBlocks objects are the same.
+   *
+   * @param vbs1
+   * @param vbs2
+   */
+  public static void assertEqualVoteBlocks(VoteBlocks vbs1, VoteBlocks vbs2) {
+    if (vbs1 == null || vbs2 == null) {
+      // If either is null, assert that they both are.
+      assertEquals(vbs1, vbs2);
+    } else {
+      assertEquals(vbs1.size(), vbs2.size());
+      try {
+	VoteBlocksIterator i1 = vbs1.iterator();
+	VoteBlocksIterator i2 = vbs2.iterator();
+	while (i1.hasNext()) {
+	  VoteBlock vb1 = i1.next();
+	  VoteBlock vb2 = i2.next();
+	  assertEquals(vb1, vb2);
+	}
+      } catch (IOException ex) {
+	fail("Comparing VoteBlocks: "+ex);
+      }
+    }
+  }
 }
-
-
-
