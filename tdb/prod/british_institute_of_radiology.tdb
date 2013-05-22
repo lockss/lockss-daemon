@@ -18,6 +18,7 @@
     >
 
     param[base_url] = http://bjr.birjournals.org/
+    comment[notReady] = missing images, retest later
     
     au < released ; 1928 ; British Journal of Radiology Volume 1 ; 1 >
     au < released ; 1929 ; British Journal of Radiology Volume 2 ; 2 >
@@ -94,7 +95,7 @@
     au < released ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
     au < released ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
     au < released ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
-    au < testing ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
+    au < notReady ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
     au < released ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
     au < released ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
     au < released ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
@@ -118,6 +119,7 @@
     >
 
     param[base_url] = http://dmfr.birjournals.org/
+    comment[notReady] = missing images, retest later
     
     {
     
@@ -141,7 +143,7 @@
     au < released ; 2003 ; Dentomaxillofacial Radiology Volume 32 ; 32 >
     au < released ; 2004 ; Dentomaxillofacial Radiology Volume 33 ; 33 >
     au < released ; 2005 ; Dentomaxillofacial Radiology Volume 34 ; 34 >
-    au < testing ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+    au < notReady ; 2006 ; Dentomaxillofacial Radiology Volume 35 ; 35 >
     au < released ; 2007 ; Dentomaxillofacial Radiology Volume 36 ; 36 >
     au < released ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 >
     au < released ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 >
