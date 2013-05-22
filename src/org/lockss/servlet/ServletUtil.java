@@ -1,10 +1,10 @@
 /*
- * $Id: ServletUtil.java,v 1.81 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.82 2013-05-22 23:30:06 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -921,10 +921,10 @@ public class ServletUtil {
   }
 
   public static void layoutMenu(Page page,
-                                Iterator linkIterator) {
+                                Iterator<LinkWithExplanation> linkIterator) {
     Table table = new Table(MENU_TABLE_BORDER, MENU_ATTRIBUTES);
     while (linkIterator.hasNext()) {
-      LinkWithExplanation link = (LinkWithExplanation)linkIterator.next();
+      LinkWithExplanation link = linkIterator.next();
       table.newRow(MENU_ROW_ATTRIBUTES);
       table.newCell();
       table.add(MENU_ITEM_BEFORE);
@@ -1991,5 +1991,248 @@ public class ServletUtil {
   /** Interface to link rewriting */
   public interface LinkTransform {
     public String rewrite(String url);
+  }
+
+  /**
+   * Creates the table-containing tabs used to divide the display of content.
+   * 
+   * @param alphabetLetterCount
+   *          An int with the count of the letters of the alphabet to be used.
+   * @param lettersPerTabCount
+   *          An int with the count of the letters per tab to be used.
+   * @param columnHeaderNames
+   *          A List<String> with the names of the column headers.
+   * @param tabsDiv
+   *          A Block with the tabs container.
+   * @return a Map<String, Table> with the tabs tables mapped by the initial
+   *         letters they cover.
+   */
+  public static Map<String, Table> createTabsWithTable(int alphabetLetterCount,
+      int lettersPerTabCount, List<String> columnHeaderNames, Block tabsDiv) {
+    final String DEBUG_HEADER = "createTabs(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Get the map of tab letters.
+    Map<Character, Character> tabLetters =
+	createTabLettersMap(alphabetLetterCount, lettersPerTabCount);
+
+    // Create the spans required by jQuery to build the desired tabs.
+    org.mortbay.html.List tabList = createTabList(tabLetters);
+
+    // Add them to the tabs container.
+    tabsDiv.add(tabList);
+
+    // The start and end letters of a tab letter group.
+    Map.Entry<Character, Character> letterPair;
+    Character startLetter;
+    Table divTable = null;
+    Block tabDiv;
+    Map<String, Table> divTableMap = new HashMap<String, Table>();
+    Character tabLetter;
+
+    Iterator<Map.Entry<Character, Character>> iterator =
+	tabLetters.entrySet().iterator();
+
+    // Loop through all the tabs letter groups.
+    while (iterator.hasNext()) {
+      // Get the first letter in the tab letter group.
+      letterPair = iterator.next();
+      startLetter = letterPair.getKey();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "startLetter = " + startLetter);
+
+      // Create the table for the tab.
+      divTable = createTabTable(startLetter.toString(), columnHeaderNames);
+
+      // Create the tab for this letter group.
+      tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
+
+      // Add the table to the tab.
+      tabDiv.add(divTable);
+
+      // Add the tab to the tabs container.
+      tabsDiv.add(tabDiv);
+
+      // Map the tab table by the first letter.
+      divTableMap.put(startLetter.toString(), divTable);
+
+      // Loop through all the other letters in the tab.
+      for (int j = 1; j < lettersPerTabCount; j++) {
+        tabLetter = (char) (startLetter + j);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "j = " + j + ", tabLetter = " + tabLetter);
+
+        // Map the tab table by this letter.
+        divTableMap.put(tabLetter.toString(), divTable);
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return divTableMap;
+  }
+
+  /**
+   * Provides a map with a set of tabs start and end letters.
+   * 
+   * @param alphabetLetterCount
+   *          An int with the count of the letters of the alphabet to be used.
+   * @param lettersPerTabCount
+   *          An int with the count of the letters per tab to be used.
+   * @return a Map<Character, Character> with the tabs start and end letters.
+   */
+  private static Map<Character, Character> createTabLettersMap(
+      int alphabetLetterCount, int lettersPerTabCount) {
+    final String DEBUG_HEADER = "createTabLettersMap(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Initialize the resulting map, sorted by its natural order.
+    Map<Character, Character> tabLetters = new TreeMap<Character, Character>();
+
+    // The character position of the first letter ('A').
+    int firstLetterCharacterPosition = 65;
+
+    // The character position of the last letter.
+    int lastLetterCharacterPosition = firstLetterCharacterPosition
+	+ alphabetLetterCount - 1;
+
+    // Determine how many tabs there are.
+    int numberOfTabs = alphabetLetterCount / lettersPerTabCount;
+
+    if (alphabetLetterCount % lettersPerTabCount != 0) {
+      numberOfTabs++;
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "numberOfTabs = " + numberOfTabs);
+
+    // Loop through all the tabs.
+    for (int i = 0; i < numberOfTabs; i++) {
+      // The first letter of the tab.
+      Character startLetter =
+	  (char) (firstLetterCharacterPosition + i * lettersPerTabCount);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "startLetter = " + startLetter);
+
+      // The last letter of the tab.
+      Character endLetter =
+	  (char) (Math.min(startLetter + lettersPerTabCount - 1,
+	      		   lastLetterCharacterPosition));
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endLetter = " + endLetter);
+
+      // Add the pair of letters in the tab to the map.
+      tabLetters.put(startLetter, endLetter);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return tabLetters;
+  }
+
+  /**
+   * Creates the spans required by jQuery to build the desired tabs.
+   * 
+   * @param tabLetters
+   *          A Map<Character, Character> with the tabs start and end letters.
+   * @return an org.mortbay.html.List with the spans required by jQuery to build
+   *         the desired tabs.
+   */
+  private static org.mortbay.html.List createTabList(
+      Map<Character, Character> tabLetters) {
+    final String DEBUG_HEADER = "createTabList(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    org.mortbay.html.List tabList =
+	new org.mortbay.html.List(org.mortbay.html.List.Unordered);
+
+    // The start and end letters of a tab letter group.
+    Map.Entry<Character, Character> letterPair;
+    Character startLetter;
+    Character endLetter;
+    Block tabSpan;
+    Link tabLink;
+    Composite tabListItem;
+
+    Iterator<Map.Entry<Character, Character>> iterator =
+	tabLetters.entrySet().iterator();
+
+    // Loop through all the tab letter groups.
+    while (iterator.hasNext()) {
+      // Get the start and end letters of the tab letter group.
+      letterPair = iterator.next();
+      startLetter = (Character) letterPair.getKey();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "startLetter = " + startLetter);
+
+      endLetter = (Character) letterPair.getValue();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endLetter = " + endLetter);
+
+      // Initialize the tab.
+      tabSpan = new Block(Block.Span);
+
+      // Add the label.
+      if (!startLetter.equals(endLetter)) {
+        tabSpan.add(startLetter + " - " + endLetter);
+      } else {
+        tabSpan.add(startLetter);
+      }
+
+      // Set up the tab link.
+      tabLink = new Link("#" + startLetter);
+      tabLink.add(tabSpan);
+
+      // Add the tab to the list.
+      tabListItem = tabList.newItem();
+      tabListItem.add(tabLink);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return tabList;
+  }
+
+  /**
+   * Creates the table for a tab.
+   * 
+   * @param letter
+   *          A String with the start letter of the tab group.
+   * @param columnHeaderNames
+   *          A List<String> with the names of the column headers.
+   * @return a Table to be added to the page.
+   */
+  private static Table createTabTable(String letter,
+      List<String> columnHeaderNames) {
+    final String DEBUG_HEADER = "createTabTable(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "letter = " + letter);
+
+    Table divTable = new Table(0, "class=\"status-table\"");
+    divTable.newRow();
+    divTable.addCell("");
+
+    Block columnHeader;
+    Iterator<String> columnIterator = columnHeaderNames.listIterator();
+
+    // Loop through all the columns in the table.
+    while (columnIterator.hasNext()) {
+      // Create the column header.
+      columnHeader = new Block(Block.Bold);
+      columnHeader.add(columnIterator.next());
+
+      // Add it to the table.
+      divTable.addCell(columnHeader, "class=\"column-header\"");
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return divTable;
+  }
+
+  /**
+   * Provides a CSS class based on the row number and the size of a row block.
+   * 
+   * @param rowIndex
+   *          An int with the row number.
+   * @param blockSize
+   *          An int with the size of a row block.
+   * @return a String with the CSS class for the row.
+   */
+  public static String rowCss(int rowIndex, int blockSize) {
+    return (rowIndex % (2 * blockSize) < blockSize) ? "even-row" : "odd-row";
   }
 }
