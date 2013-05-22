@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; param[year] ; name ; volume >
+  implicit < status ; year ; volume ; name ; param[year] >
 
     param[base_url] = http://www.revistas.usp.br/
 
@@ -18,8 +18,8 @@
 
     param[journal_id] = criacaoecritica
 
-    au < testing ; 2011 ; 2011 ; Revista Criação & Crítica Volume 1 ; 1 >
-    au < testing ; 2012 ; 2012 ; Revista Criação & Crítica Volume 2 ; 2 >
+    au < testing ; 2011 ; 1 ; Revista Criação & Crítica Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista Criação & Crítica Volume 2 ; 2012 >
   
   }
 
@@ -33,8 +33,8 @@
 
     param[journal_id] = revhistoria
 
-    au < testing ; 2011 ; 2011 ; Revista de História Volume 1 ; 1 >
-    au < testing ; 2012 ; 2012 ; Revista de História Volume 2 ; 2 >
+    au < testing ; 2011 ; 1 ; Revista de História Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista de História Volume 2 ; 2012 >
 
   }
 
@@ -48,8 +48,8 @@
 
     param[journal_id] = estic
 
-    au < testing ; 2011 ; 2011 ; Estílos da Clínica Volume 1 ; 1 >
-    au < testing ; 2012 ; 2012 ; Estílos da Clínica Volume 2 ; 2 >
+    au < testing ; 2011 ; 1 ; Estílos da Clínica Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Estílos da Clínica Volume 2 ; 2012 >
 
   }
 
@@ -63,8 +63,8 @@
 
     param[journal_id ] = linhadagua
 
-    au < testing ; 2011 ; 2011 ; Linha D'Água Volume 1 ; 1 >
-    au < testing ; 2012 ; 2012 ; Linha D'Água Volume 2 ; 2 >
+    au < testing ; 2011 ; 1 ; Linha D'Água Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Linha D'Água Volume 2 ; 2012 >
 
   }
 
