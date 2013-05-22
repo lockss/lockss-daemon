@@ -1,10 +1,10 @@
 /*
- * $Id: LockssDaemon.java,v 1.119 2013-03-27 22:00:50 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.120 2013-05-22 23:59:24 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,6 +49,7 @@ import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.*;
@@ -145,6 +146,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String TRUEZIP_MANAGER = "TrueZipManager";
   public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
+  public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -222,6 +224,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       public boolean shouldStart() {
         return isClockss();
       }},
+    // Start the subscription manager.
+    new ManagerDesc(SUBSCRIPTION_MANAGER,
+	"org.lockss.subscription.SubscriptionManager"),
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
   };
@@ -564,6 +569,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public CounterReportsManager getCounterReportsManager() {
     return (CounterReportsManager) getManager(COUNTER_REPORTS_MANAGER);
+  }
+
+  /**
+   * Provides the subscription manager.
+   * 
+   * @return a SubscriptionManager with the subscription manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public SubscriptionManager getSubscriptionManager() {
+    return (SubscriptionManager) getManager(SUBSCRIPTION_MANAGER);
   }
 
   /**

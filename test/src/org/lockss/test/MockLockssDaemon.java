@@ -1,10 +1,10 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.74 2013-03-27 22:00:50 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.75 2013-05-22 23:59:24 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,6 +60,7 @@ import org.lockss.repository.*;
 import org.lockss.scheduler.SchedService;
 import org.lockss.servlet.*;
 import org.lockss.state.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.clockss.*;
 
@@ -97,6 +98,7 @@ public class MockLockssDaemon extends LockssDaemon {
   ClockssParams clockssParams = null;
   DbManager dbManager = null;
   CounterReportsManager counterReportsManager = null;
+  SubscriptionManager subscriptionManager = null;
   Cron cron = null;
 
   /** Unit tests that need a MockLockssDaemon should use {@link
@@ -149,6 +151,7 @@ public class MockLockssDaemon extends LockssDaemon {
     icpManager = null;
     dbManager = null;
     counterReportsManager = null;
+    subscriptionManager = null;
     cron = null;
 
     //super.stopDaemon();
@@ -533,6 +536,18 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the subscription manager instance
+   * @return the SusbcriptionManager
+   */
+  public SubscriptionManager getSusbcriptionManager() {
+    if (subscriptionManager == null) {
+      subscriptionManager = (SubscriptionManager)newManager(LockssDaemon.SUBSCRIPTION_MANAGER);
+      managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
+    }
+    return subscriptionManager;
+  }
+
+  /**
    * return the cron instance
    * @return the Cron
    */
@@ -801,6 +816,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCounterReportsManager(CounterReportsManager counterReportsMan) {
     counterReportsManager = counterReportsMan;
     managerMap.put(LockssDaemon.COUNTER_REPORTS_MANAGER, counterReportsManager);
+  }
+
+  /**
+   * Set the SubscriptionManager
+   * @param subscriptionMan the new manager
+   */
+  public void setSubscriptionManager(SubscriptionManager subscriptionMan) {
+    subscriptionManager = subscriptionMan;
+    managerMap.put(LockssDaemon.SUBSCRIPTION_MANAGER, subscriptionManager);
   }
 
   /**

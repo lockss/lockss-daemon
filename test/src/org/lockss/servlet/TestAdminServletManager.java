@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.11 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: TestAdminServletManager.java,v 1.12 2013-05-22 23:59:24 fergaloy-sf Exp $
  */
 
 /*
@@ -78,7 +78,8 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_BATCH_AU_CONFIG,
     SERVLET_AU_CONFIG,
     SERVLET_PLUGIN_CONFIG,
-    SERVLET_DEBUG_PANEL
+    SERVLET_DEBUG_PANEL,
+    SERVLET_SUB_MANAGEMENT
 };
 
   ServletDescr contentAdminDescrs[] = {
