@@ -43,7 +43,7 @@
     au < released ; crawling ; 2011 ; 978-0-8137-1207-9 ; Geological Society of America Memoirs Volume 207 ; 207 >
     au < released ; crawling ; 2012 ; 978-0-8137-1208-6 ; Geological Society of America Memoirs Volume 208 ; 208 >
     au < crawling ; exists ; 2012 ; 978-0-8137-1209-3 ; Geological Society of America Memoirs Volume 209 ; 209 >
-    au < manifest ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 210 ; 210 >
+    au < crawling ; exists ; 2013 ; 978-0-8137-1210-9 ; Geological Society of America Memoirs Volume 210 ; 210 >
     au < expected ; exists ; 2013 ; comment[isbn] ; Geological Society of America Memoirs Volume 211 ; 211 >
       
   }
@@ -548,11 +548,11 @@
     au < manifest ; exists ; 2012 ; 10.1130/9780813724881 ; 978-0-8137-2488-1 ; Geological Society of America Special Papers Volume 488 ; 488 >
     au < manifest ; exists ; 2012 ; 10.1130/9780813724898 ; 978-0-8137-2489-8 ; Geological Society of America Special Papers Volume 489 ; 489 >
     au < manifest ; exists ; 2012 ; 10.1130/9780813724904 ; 978-0-8137-2490-4 ; Geological Society of America Special Papers Volume 490 ; 490 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813724911 ; 978-0-8137-2491-1 ; Geological Society of America Special Papers Volume 491 ; 491 >
+    au < crawling ; exists ; 2013 ; 10.1130/9780813724911 ; 978-0-8137-2491-1 ; Geological Society of America Special Papers Volume 491 ; 491 >
     au < manifest ; exists ; 2012 ; 10.1130/9780813724928 ; 978-0-8137-2492-8 ; Geological Society of America Special Papers Volume 492 ; 492 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813724935 ; 978-0-8137-2493-5 ; Geological Society of America Special Papers Volume 493 ; 493 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813724942 ; 978-0-8137-2494-2 ; Geological Society of America Special Papers Volume 494 ; 494 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813724959 ; 978-0-8137-2495-9 ; Geological Society of America Special Papers Volume 495 ; 495 >
+    au < crawling ; exists ; 2013 ; 10.1130/9780813724935 ; 978-0-8137-2493-5 ; Geological Society of America Special Papers Volume 493 ; 493 >
+    au < crawling ; exists ; 2013 ; 10.1130/9780813724942 ; 978-0-8137-2494-2 ; Geological Society of America Special Papers Volume 494 ; 494 >
+    au < crawling ; exists ; 2013 ; 10.1130/9780813724959 ; 978-0-8137-2495-9 ; Geological Society of America Special Papers Volume 495 ; 495 >
     
   }   
   
@@ -594,8 +594,8 @@
     au < released ; crawling ; 2012 ; 978-0-8137-0027-4 ; GSA Field Guides Volume 27 ; 27 >
     au < crawling ; exists ; 2012 ; 978-0-8137-0028-1 ; GSA Field Guides Volume 28 ; 28 >
     au < crawling ; exists ; 2012 ; 978-0-8137-0029-8 ; GSA Field Guides Volume 29 ; 29 >
-    au < manifest ; exists ; 2013 ; 978-0-8137-0030-4 ; GSA Field Guides Volume 30 ; 30 >
-    au < manifest ; exists ; 2013 ; 978-0-8137-0031-1 ; GSA Field Guides Volume 31 ; 31 >
+    au < crawling ; exists ; 2013 ; 978-0-8137-0030-4 ; GSA Field Guides Volume 30 ; 30 >
+    au < crawling ; exists ; 2013 ; 978-0-8137-0031-1 ; GSA Field Guides Volume 31 ; 31 >
     au < expected ; exists ; 2013 ; XXXX ; GSA Field Guides Volume 32 ; 32 >
 
   }
@@ -630,7 +630,7 @@
     au < manifest ; exists ; 2007 ;  ; 978-0-8137-4118-5 ; Reviews in Engineering Geology Volume 18 ; 18 >
     au < manifest ; exists ; 2008 ;  ; 978-0-8137-4117-8 ; Reviews in Engineering Geology Volume 19 ; 19 >
     au < manifest ; exists ; 2008 ;  ; 978-0-8137-4116-1 ; Reviews in Engineering Geology Volume 20 ; 20 >
-    au < manifest ; exists ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 >
+    au < crawling ; exists ; 2013 ; 10.1130/9780813741215 ; 978-0-8137-4121-5 ; Reviews in Engineering Geology Volume 21 ; 21 >
 
   }
 }
