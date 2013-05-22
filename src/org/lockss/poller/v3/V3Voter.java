@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.84 2013-05-22 16:18:16 barry409 Exp $
+ * $Id: V3Voter.java,v 1.85 2013-05-22 17:13:17 barry409 Exp $
  */
 
 /*
@@ -218,6 +218,11 @@ public class V3Voter extends BasePoll {
   public static final String PARAM_MIN_WEIGHT_SYMMETRIC_POLL =
     PREFIX + "minWeightSymmetricPoll";
   public static final double DEFAULT_MIN_WEIGHT_SYMMETRIC_POLL = 0.5f; 
+
+  /* The internal use of the arrays used by the hasher. */
+  private static final int PLAIN_HASH = 0;
+  private static final int CHALLENGE_HASH = 1;
+  private static final int SYMMETRIC_HASH = 2;
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
@@ -836,7 +841,6 @@ public class V3Voter extends BasePoll {
     return nominationWeightCurve.getY(noVoteFor);
   }
 
-
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
    * this voter.  The result will be an array of 2 or 3 byte arrays:  The first
@@ -970,59 +974,45 @@ public class V3Voter extends BasePoll {
    */
   public void blockHashComplete(HashBlock block) {
     // Add each hash block version to this vote block.
-    VoteBlock vb = new VoteBlock(block.getUrl());
-    VoteBlock svb = null;
-    if (voterUserData.isSymmetricPoll()) {
-      svb = new VoteBlock(block.getUrl());
-    }
-    Iterator hashVersionIter = block.versionIterator();
-    while(hashVersionIter.hasNext()) {
-      HashBlock.Version ver = (HashBlock.Version)hashVersionIter.next();
-      byte[] plainDigest = ver.getHashes()[0];
-      byte[] challengeDigest = ver.getHashes()[1];
-      vb.addVersion(ver.getFilteredOffset(),
-                    ver.getFilteredLength(),
-                    ver.getUnfilteredOffset(),
-                    ver.getUnfilteredLength(),
-                    plainDigest,
-                    challengeDigest,
-                    ver.getHashError() != null);
-      if (svb != null) {
-	if (ver.getHashes().length > 2) {
-	  byte[] symmetricDigest = ver.getHashes()[2];
-	  log.debug3("Poll " + voterUserData.getPollKey() + " is symmetric:" +
-		     block.getUrl());
-	  // Add a VoteBlock for the symmetric poll hashes
-	  svb.addVersion(ver.getFilteredOffset(),
-			 ver.getFilteredLength(),
-			 ver.getUnfilteredOffset(),
-			 ver.getUnfilteredLength(),
-			 plainDigest,
-			 symmetricDigest,
-			 ver.getHashError() != null);
-	} else {
-	  log.error("Symmetric poll but no symmetric hashes.");
-	}
-      }
-    }
-    
-    // Add this vote block to our hash block containers.
-    VoteBlocks blocks = voterUserData.getVoteBlocks();
-    VoteBlocks symmetricBlocks = voterUserData.getSymmetricVoteBlocks();
     try {
-      blocks.addVoteBlock(vb);
-      if (symmetricBlocks != null && svb != null) {
-	symmetricBlocks.addVoteBlock(svb);
+      voterUserData.getVoteBlocks().
+	addVoteBlock(makeVoteBlock(block, CHALLENGE_HASH));
+      if (voterUserData.isSymmetricPoll()) {
+	voterUserData.getSymmetricVoteBlocks().
+	  addVoteBlock(makeVoteBlock(block, SYMMETRIC_HASH));
       }
     } catch (IOException ex) {
       log.error("Unexpected IO Exception trying to add vote block " +
-                vb.getUrl() + " in poll " + getKey(), ex);
+                block.getUrl() + " in poll " + getKey(), ex);
       if (++blockErrorCount > maxBlockErrorCount) {
         log.critical("Too many errors while trying to create my vote blocks, " +
                      "aborting participation in poll " + getKey());
         abortPollWithError();
       }
     }
+  }
+
+  /**
+   * Make a VoteBlock with one version per version in the HashBlock.
+   * Use the hash with the voter nonce or the symmetric nonce, as
+   * requested.
+   */
+  private VoteBlock makeVoteBlock(HashBlock block, int hashIndex) {
+    VoteBlock vb = new VoteBlock(block.getUrl());
+    Iterator<HashBlock.Version> hashVersionIter = block.versionIterator();
+    while (hashVersionIter.hasNext()) {
+      HashBlock.Version ver = hashVersionIter.next();
+      byte[] plainHash = ver.getHashes()[PLAIN_HASH];
+      byte[] otherHash = ver.getHashes()[hashIndex];
+      vb.addVersion(ver.getFilteredOffset(),
+                    ver.getFilteredLength(),
+                    ver.getUnfilteredOffset(),
+                    ver.getUnfilteredLength(),
+                    plainHash,
+                    otherHash,
+                    ver.getHashError() != null);
+    }
+    return vb;
   }
 
   public void setMessage(LcapMessage msg) {
