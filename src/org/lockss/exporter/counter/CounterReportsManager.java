@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.12 2013-05-07 14:14:06 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.13 2013-05-22 23:19:56 fergaloy-sf Exp $
  */
 
 /*
@@ -1548,6 +1548,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     final String DEBUG_HEADER = "deleteBookTypeAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
+    // Do nothing more if the service is not ready to be used.
+    if (!ready) {
+      return;
+    }
+
     PreparedStatement deleteAggregate = null;
     String sql = SQL_QUERY_BOOK_TYPE_AGGREGATES_DELETE;
     log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
@@ -1706,6 +1711,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     final String DEBUG_HEADER = "deleteJournalTypeAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
+    // Do nothing more if the service is not ready to be used.
+    if (!ready) {
+      return;
+    }
+
     PreparedStatement deleteAggregate = null;
     String sql = SQL_QUERY_JOURNAL_TYPE_AGGREGATES_DELETE;
     log.debug2(DEBUG_HEADER + "SQL = '" + sql + "'.");
@@ -1840,6 +1850,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       Long publicationSeq) throws SQLException {
     final String DEBUG_HEADER = "deleteJournalPubYearAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+
+    // Do nothing more if the service is not ready to be used.
+    if (!ready) {
+      return;
+    }
 
     PreparedStatement deleteAggregate = null;
     String sql = SQL_QUERY_JOURNAL_PUBYEAR_AGGREGATES_DELETE;
