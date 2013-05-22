@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.28 2013-05-21 22:15:11 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.29 2013-05-22 16:18:16 barry409 Exp $
  */
 
 /*
@@ -60,12 +60,12 @@ public class VoterUserData
   private long voteDeadline;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
-  private VoteBlocks symmetricVoteBlocks;
+  private VoteBlocks symmetricVoteBlocks = null;
   private String url;
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
-  private byte[] voterNonce2;
+  private byte[] voterNonce2 = null;
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
@@ -104,7 +104,7 @@ public class VoterUserData
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
                        int modulus,
-                       byte[] pollerNonce, byte[] voterNonce, byte[] voterNonce2,
+                       byte[] pollerNonce, byte[] voterNonce,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
     this.spec = spec;
@@ -124,13 +124,11 @@ public class VoterUserData
       log.info("Vote in sampled poll, modulus: " + modulus);
     }
     this.voterNonce = voterNonce;
-    this.voterNonce2 = voterNonce2;
     this.pollerNonce = pollerNonce;
     this.introEffortProof = introEffortProof;
     this.createTime = TimeBase.nowMs();
     this.messageDir = messageDir;
     this.voteBlocks = new DiskVoteBlocks(voter.getStateDir());
-    initSymmetricVoteBlocks();
   }
 
   public void setPollMessage(LcapMessage msg) {
@@ -325,21 +323,6 @@ public class VoterUserData
     return symmetricVoteBlocks;
   }
 
-  public void setSymmetricVoteBlocks(VoteBlocks voteBlocks) {
-    this.symmetricVoteBlocks = voteBlocks;
-  }
-
-  public void initSymmetricVoteBlocks() {
-    if (voterNonce2 != null && voterNonce2.length > 0) {
-      try {
-	this.symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
-      } catch (IOException ex) {
-	log.error("Setting nonce2 throws " + ex);
-	this.voterNonce2 = ByteArray.EMPTY_BYTE_ARRAY;
-      }
-    }
-  }
-
   public V3Voter getVoter() {
     return voter;
   }
@@ -372,14 +355,38 @@ public class VoterUserData
     return voterNonce2;
   }
 
-  public void setVoterNonce2(byte[] voterNonce2) {
+  /**
+   * @param symmetricNonce The voter's chal;lenge to the poller. Thius
+   * must be non-null and not zero-length.
+   * @throws IOException if a DiskVoteBlocks could not be created.
+   */
+  public void enableSymmetricPoll(byte[] symmetricNonce) throws IOException {
+    byte[] voterNonce2 = symmetricNonce;
+    VoteBlocks symmetricVoteBlocks = new DiskVoteBlocks(voter.getStateDir());
+    setVoterNonce2AndBlocks(voterNonce2, symmetricVoteBlocks);
+  }
+
+  // Also used by testing.
+  void setVoterNonce2AndBlocks(byte[] voterNonce2,
+			       VoteBlocks symmetricVoteBlocks) {
     if (voterNonce2 == null) {
       throw new IllegalArgumentException("Null symmetric nonce not allowed.");
     } 
     if (voterNonce2.length == 0) {
-      throw new IllegalArgumentException("Zero-length symmetric nonce not allowed.");
+      throw new IllegalArgumentException(
+        "Zero-length symmetric nonce not allowed.");
     }
+    if (symmetricVoteBlocks == null) {
+      throw new IllegalArgumentException(
+	"Null symmetricVoteBlocks not allowed.");
+    }
+    if (this.voterNonce2 != null) {
+      throw new IllegalStateException(
+	"Trying to set symmetric nonce when symmetric nonce is already set.");
+    }
+    
     this.voterNonce2 = voterNonce2;
+    this.symmetricVoteBlocks = symmetricVoteBlocks;
   }
 
   public boolean isSymmetricPoll() {

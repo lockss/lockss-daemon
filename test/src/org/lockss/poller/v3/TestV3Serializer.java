@@ -193,6 +193,15 @@ public class TestV3Serializer extends LockssTestCase {
     return makePollerUserData("TCP:[127.0.0.1]:8080", serializer);
   }
 
+  private VoteBlocks makeVoteBlocks(int n) throws IOException {
+    VoteBlocks blocks = new DiskVoteBlocks(tempDir);
+    for (int i = 0; i < n; i++) {
+      String url = "http://www.example.com/file"+i+".html";
+      blocks.addVoteBlock(V3TestUtils.makeVoteBlock(url));
+    }
+    return blocks;
+  }
+
   private ParticipantUserData makePollerUserData(String voterId,
                                                  V3PollerSerializer serializer)
                                                  throws IOException {
@@ -207,10 +216,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setReceiptEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRemainingEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
-    VoteBlocks blocks = new DiskVoteBlocks(tempDir);
-    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
-    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
-    ud.setVoteBlocks(blocks);
+    ud.setVoteBlocks(makeVoteBlocks(2));
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
     ud.setVoterNonce2(ByteArray.makeRandomBytes(20));
     return ud;
@@ -235,12 +241,10 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setRepairEffortProof(ByteArray.makeRandomBytes(20));
     ud.setRepairTarget("http://www.example.com/file1.html");
     ud.setAgreementHint((double) 0.63);
-    VoteBlocks blocks = new DiskVoteBlocks(tempDir);
-    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file1.html"));
-    blocks.addVoteBlock(V3TestUtils.makeVoteBlock("http://www.example.com/file2.html"));
-    ud.setVoteBlocks(blocks);
+    ud.setVoteBlocks(makeVoteBlocks(3));
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
-    ud.setVoterNonce2(ByteArray.makeRandomBytes(20));
+    ud.setVoterNonce2AndBlocks(ByteArray.makeRandomBytes(20),
+			       makeVoteBlocks(4));
     return ud;
   }
 

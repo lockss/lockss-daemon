@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.83 2013-05-21 22:53:01 barry409 Exp $
+ * $Id: V3Voter.java,v 1.84 2013-05-22 16:18:16 barry409 Exp $
  */
 
 /*
@@ -275,7 +275,6 @@ public class V3Voter extends BasePoll {
 					     msg.getModulus(),
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
-					     null, // Symmetric nonce
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);
@@ -299,9 +298,14 @@ public class V3Voter extends BasePoll {
     if (weightSymmetricPoll(msg.getOriginatorId()) >= minWeight) {
       // Create a second nonce to request a symmetric poll
       byte[] nonce2 = PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH);
-      voterUserData.setVoterNonce2(nonce2);
-      voterUserData.initSymmetricVoteBlocks();
-      log.debug3("voterNonce2 set to: " + nonce2);
+      try {
+	voterUserData.enableSymmetricPoll(nonce2);
+      } catch (IOException ex) {
+	log.warning("symmetric poll not possible: ", ex);
+      }
+      log.debug2("voterNonce2 set to: " + nonce2);
+    } else {
+      log.debug2("poll is not symmetric");
     }
     int min = CurrentConfig.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
