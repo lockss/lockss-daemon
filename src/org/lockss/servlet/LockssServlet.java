@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.132 2013-03-14 06:39:59 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.133 2013-05-22 23:28:46 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1254,6 +1254,44 @@ public abstract class LockssServlet extends HttpServlet
     public FormDataTooLongException(String message) {
       super(message);
     }
+  }
+
+  /**
+   * Adds the required CSS file locations to the page header.
+   * 
+   * @param page
+   *          A Page representing the HTML page.
+   */
+  protected void addCssLocations(Page page) {
+    page.add(new StyleLink("/css/lockss.css"));
+    page.add(new StyleLink("/css/jquery-ui-1.8.css"));
+  }
+
+  /**
+   * Adds the required jQuery JavaScript file locations to the page header.
+   * 
+   * @param page
+   *          A Page representing the HTML page.
+   */
+  protected void addJQueryLocations(Page page) {
+    addJavaScriptLocation(page, "js/jquery.min-1.5.js");
+    addJavaScriptLocation(page, "js/jquery-ui.min-1.8.js");
+    addJavaScriptLocation(page, "js/auDetails.js");
+  }
+
+  /**
+   * Adds a JavaScript file location to the page header.
+   * 
+   * @param page
+   *          A Page representing the HTML page.
+   * @param jsLocation
+   *          A String with the location of the JavaScript file.
+   */
+  protected void addJavaScriptLocation(Page page, String jsLocation) {
+    Script ajaxScript = new Script("");
+    ajaxScript.attribute("src", jsLocation);
+    ajaxScript.attribute("type", "text/javascript");
+    page.add(ajaxScript);
   }
 
 }
