@@ -1,5 +1,5 @@
 /*
- * $Id: RecordingMessageDigest.java,v 1.2 2006-11-27 06:33:35 tlipkis Exp $
+ * $Id: RecordingMessageDigest.java,v 1.3 2013-05-23 09:45:22 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class RecordingMessageDigest
   public RecordingMessageDigest(MessageDigest wrapped, OutputStream out,
 				long maxLen)
       throws FileNotFoundException {
-    super("Recording digest");
+    super(wrapped.getAlgorithm());
     dig = wrapped;
     this.out = out;
     this.maxLen = maxLen;
