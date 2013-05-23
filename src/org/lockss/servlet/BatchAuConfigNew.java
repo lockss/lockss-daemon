@@ -1,10 +1,10 @@
 /*
- * $Id $
+ * $Id: BatchAuConfigNew.java,v 1.3 2013-05-23 20:29:59 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.*;
+import java.sql.SQLException;
 import java.util.*;
 import java.util.List;
 
@@ -47,11 +48,13 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.servlet.ServletUtil.LinkWithExplanation;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
 /** Create and update AU configuration.
  */
+@SuppressWarnings("serial")
 public class BatchAuConfigNew extends LockssServlet {
 
   private static final int LONG_TABLE_AT_LEAST = 10;
@@ -59,7 +62,7 @@ public class BatchAuConfigNew extends LockssServlet {
   /** Controls the appearance (in select lists) of TitleSets that contain
    * no actionable AUs.  If included, they are greyed. <ul><li><b>All</b>
    * &mdash; they are always included,<li><b>Add</b> &mdash; they are
-   * included only in the Add Titles selection, omitted in
+   * included only in the Add AUs selection, omitted in
    * others,<li><b>None</b> &mdash; they are not included.</ul> */
   static final String PARAM_GREY_TITLESET_ACTION =
     Configuration.PREFIX + "batchAuconfig.greyNonActionableTitleSets";
@@ -89,14 +92,14 @@ public class BatchAuConfigNew extends LockssServlet {
 			       VERB_DEACT, VERB_REACT,
 			       VERB_RESTORE};
 
-  static final String ACTION_SELECT_SETS_TO_ADD = "AddTitles";
-  static final String ACTION_SELECT_SETS_TO_DEL = "RemoveTitles";
-  static final String ACTION_SELECT_SETS_TO_DEACT = "DeactivateTitles";
-  static final String ACTION_SELECT_SETS_TO_REACT = "ReactivateTitles";
+  static final String ACTION_SELECT_SETS_TO_ADD = "AddAus";
+  static final String ACTION_SELECT_SETS_TO_DEL = "RemoveAus";
+  static final String ACTION_SELECT_SETS_TO_DEACT = "DeactivateAus";
+  static final String ACTION_SELECT_SETS_TO_REACT = "ReactivateAus";
   static final String ACTION_BACKUP = "Backup";
   static final String ACTION_RESTORE = "Restore";
   static final String ACTION_SELECT_RESTORE_TITLES = "SelectRestoreTitles";
-  static final String ACTION_SELECT_AUS = "SelectSetTitles";
+  static final String ACTION_SELECT_AUS = "SelectSetAus";
   static final String ACTION_ADD_AUS = "DoAddAus";
   static final String ACTION_REMOVE_AUS = "DoRemoveAus";
   static final String ACTION_DEACT_AUS = "DoDeactivateAus";
@@ -115,8 +118,8 @@ public class BatchAuConfigNew extends LockssServlet {
   static final String SESSION_KEY_BACKUP_INFO = "BackupInfo";
 
   private PluginManager pluginMgr;
-  private ConfigManager configMgr;
   private RemoteApi remoteApi;
+  private SubscriptionManager subManager;
 
   String action;			// action request by form
   Verb verb;
@@ -130,8 +133,8 @@ public class BatchAuConfigNew extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
-    configMgr = getLockssDaemon().getConfigManager();
     remoteApi = getLockssDaemon().getRemoteApi();
+    subManager = getLockssDaemon().getSubscriptionManager();
   }
 
   protected void lockssHandleRequest() throws IOException {
@@ -186,41 +189,43 @@ public class BatchAuConfigNew extends LockssServlet {
     else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
     else {
       errMsg = "Unknown action: " + action;
+      log.warning(errMsg);
       displayMenu();
     }
   }
 
-  private Iterator getMenuDescriptors() {
+  private Iterator<LinkWithExplanation> getMenuDescriptors() {
     String ACTION = ACTION_TAG + "=";
     int numActive = remoteApi.getAllAus().size();
     int numInactive = remoteApi.getInactiveAus().size();
     ServletDescr myDescr = myServletDescr();
-    ArrayList list = new ArrayList(7); // at most 7 entries
+    ArrayList<LinkWithExplanation> list =
+	new ArrayList<LinkWithExplanation>(10); // at most 10 entries
 
     // Add and remove
     list.add(getMenuDescriptor(myDescr,
-                               "Add Titles",
+                               "Add AUs",
                                ACTION + ACTION_SELECT_SETS_TO_ADD,
-                               "Add one or more groups of titles"));
+                               "Add one or more groups of archival units"));
     if (numActive > 0 || isDebugUser() ) {
       list.add(getMenuDescriptor(myDescr,
-                                 "Remove Titles",
+                                 "Remove AUs",
                                  ACTION + ACTION_SELECT_SETS_TO_DEL,
-                                 "Remove selected titles",
+                                 "Remove selected archival units",
                                  numActive > 0));
     }
 
     if (isDebugUser() ) {
       // Deactivate and reactivate
       list.add(getMenuDescriptor(myDescr,
-                                 "Deactivate Titles",
+                                 "Deactivate AUs",
                                  ACTION + ACTION_SELECT_SETS_TO_DEACT,
-                                 "Deactivate selected titles",
+                                 "Deactivate selected archival units",
                                  numActive > 0));
       list.add(getMenuDescriptor(myDescr,
-                                 "Reactivate Titles",
+                                 "Reactivate AUs",
                                  ACTION + ACTION_SELECT_SETS_TO_REACT,
-                                 "Reactivate selected titles",
+                                 "Reactivate selected archival units",
                                  numInactive > 0));
     }
 
@@ -240,6 +245,34 @@ public class BatchAuConfigNew extends LockssServlet {
                                "Manual Add/Edit",
                                null,
                                "Add, Edit or Delete an individual AU"));
+
+    // Add titles to subscription management.
+    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+                               "Add Titles To Subscription Management",
+                               ACTION
+                               + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
+                               "Manually add title subscription options"));
+
+    // Only show the update link if there are subscriptions already.
+    try {
+      if (subManager.countSubscribedPublications() > 0) {
+	// Add titles to subscription management.
+	list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	    			   "Update Existing Subscription Options",
+	    			   ACTION + SubscriptionManagement
+	    			   .SHOW_UPDATE_PAGE_ACTION,
+	    			   "Change existing title subscription options"));
+      }
+    } catch (SQLException sqle) {
+      log.error("Error counting subscribedPublications", sqle);
+    }
+
+    // Add titles to subscription management.
+    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+                               "Synchronize Subscriptions",
+                               ACTION + SubscriptionManagement
+                               .AUTO_ADD_SUBSCRIPTIONS_ACTION,
+                               "Subscribe to all titles with currently configured archival units"));
 
     return list.iterator();
   }
