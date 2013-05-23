@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.338 2013-05-08 09:08:27 tlipkis Exp $
+ $Id: build.xml,v 1.339 2013-05-23 09:49:48 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -287,7 +287,7 @@ Args:
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
   <property name="nekohtml.jar"  value="${test.lib}/nekohtml.jar"/>
   <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
-  <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
+  <property name="cobertura.jar"  value="${test.lib}/cobertura.jar"/>
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/gnu-getopt-1.0.13.jar"/>
@@ -348,7 +348,7 @@ Args:
                      value="${classes}/org/lockss/htdocs/build.properties"/>
   <property name="build.filerev.file"
                      value="${classes}/revision-info"/>
-  <property name="jcoverage.ser" value="jcoverage.ser" />
+  <property name="cobertura.ser" value="cobertura.ser" />
 
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
@@ -361,6 +361,7 @@ Args:
   <!-- Needed by web services -->
   <property name="aopalliance.jar" value="${lib}/aopalliance-1.0.jar" />
   <property name="asm.jar" value="${lib}/asm-3.3.1.jar" />
+  <property name="asm-tree.jar" value="${lib}/asm-tree-3.0.jar" />
   <property name="cxf.jar" value="${lib}/cxf-2.6.2.jar" />
   <property name="FastInfoset.jar" value="${lib}/FastInfoset-1.2.9.jar" />
   <property name="jaxb-impl.jar" value="${lib}/jaxb-impl-2.2.5.jar" />
@@ -382,6 +383,15 @@ Args:
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
   <property name="javac.deprecation"       value="false" />
+
+  <!--  Cobertura classpath -->
+  <path id="cobertura.classpath">
+    <pathelement path="${cobertura.jar}" />
+    <pathelement path="${asm.jar}" />
+    <pathelement path="${asm-tree.jar}" />
+    <pathelement path="${oro.jar}" />
+    <pathelement path="${log4j.jar}" />
+  </path>
 
   <!--  Classpaths -->
   <path id="compile.classpath">
@@ -548,7 +558,7 @@ Args:
     <pathelement path="${lockss.tools.test.jar}" />
   </path>
 
-  <path id="one.test.run.classpath" >
+  <path id="all.test.run.classpath" >
     <path refid="tools.test.run.classpath" />
     <pathelement path="${lockss.plugins.jar}"/>
     <pathelement path="${lockss.plugins.test.jar}"/>
@@ -559,11 +569,9 @@ Args:
     <pathelement location="${ant-contrib.jar}"/>
   </path>
 
-  <path id="jcover.run.classpath">
+  <path id="cobertura.run.classpath">
     <path refid="test.run.classpath" />
-    <pathelement path="${jcoverage.jar}" />
-    <pathelement path="${bcel.jar}" />
-    <pathelement path="${getopt.jar}" />
+    <pathelement path="${cobertura.jar}" />
   </path>
 
   <!--  Need ant jar to compile ant extensions, so include ant's classpath -->
@@ -791,7 +799,7 @@ The target you have selected requires compiling under JDK 1.7.
     <delete dir="${tools.classes}" quiet="true"/>
     <delete dir="${tools.test.classes}" quiet="true"/>
     <delete dir="${instrumented}" quiet="true"/>
-    <delete file="${jcoverage.ser}" quiet="true"/>
+    <delete file="${cobertura.ser}" quiet="true"/>
     <delete file="${lockss.tools.jar}" quiet="true"/>
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
     <delete file="plugintool.zip" quiet="true"/>
@@ -1785,6 +1793,7 @@ published on the Web. http://www.lockss.org
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
+             stylesheetfile="/home/tal/download/foo.css"
              bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
 <!-- disabled until javadoc back online -->
@@ -1947,26 +1956,26 @@ published on the Web. http://www.lockss.org
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jcftp" depends="jcover,jcftp1"
-   description="Run JCoverage and invoke script to copy results somewhere.">
-  </target>
+<!--   <target name="jcftp" depends="jcover,jcftp1" -->
+<!--    description="Run JCoverage and invoke script to copy results somewhere."> -->
+<!--   </target> -->
 
-  <target name="jcftp1" >
+<!--   <target name="jcftp1" > -->
 
-    <property name="doctar" value="/tmp/lockss-jcoverage.tgz" />
-    <property name="script" value="lockss-jdftp" />
+<!--     <property name="doctar" value="/tmp/lockss-jcoverage.tgz" /> -->
+<!--     <property name="script" value="lockss-jdftp" /> -->
 
-    <tar destfile="${doctar}" compression="gzip" longfile="gnu">
-      <tarfileset dir="${test.results}" prefix="jcoverage" excludes="TEST-*" />
-    </tar>
+<!--     <tar destfile="${doctar}" compression="gzip" longfile="gnu"> -->
+<!--       <tarfileset dir="${test.results}" prefix="jcoverage" excludes="TEST-*" /> -->
+<!--     </tar> -->
 
-    <echo message="Invoking '${script} ${doctar}'"/>
-    <exec executable="${script}" dir="${basedir}"
-          failonerror="true" >
-      <arg line="${doctar}"/>
-    </exec>
-    <delete file="${doctar}" quiet="true"/>
-  </target>
+<!--     <echo message="Invoking '${script} ${doctar}'"/> -->
+<!--     <exec executable="${script}" dir="${basedir}" -->
+<!--           failonerror="true" > -->
+<!--       <arg line="${doctar}"/> -->
+<!--     </exec> -->
+<!--     <delete file="${doctar}" quiet="true"/> -->
+<!--   </target> -->
 
   <!-- ==================================================================== -->
   <target name="index" depends="jar-lockss,jar-tests,jar-tools"
@@ -2209,7 +2218,7 @@ Test results in ${test.results}
     <if>
       <contains string="${class}" substring="." />
      <then>
-      <dojunit cpid="one.test.run.classpath" usefile="false">
+      <dojunit cpid="all.test.run.classpath" usefile="false">
        <junitelem>
         <test fork="${fork}" name="${class}" />
        </junitelem>
@@ -2237,10 +2246,9 @@ Test results in ${test.results}
 	<fail message="Pattern '${class}' does not match any classes" />
        </then>
       </if>
-      <dojunit cpid="one.test.run.classpath" usefile="false">
+      <dojunit cpid="all.test.run.classpath" usefile="false">
        <junitelem>
        <batchtest fork="${fork}">
-	 <fileset refid="test.one.filesetid"/>
 	 <fileset refid="test.one.plugin.filesetid"/>
        </batchtest>
        </junitelem>
@@ -2359,7 +2367,7 @@ Test results in ${test.results}
 	      filtertrace="${filtertrace}" showoutput="${showoutput}">
         <test fork="${fork}" name="org.lockss.test.PluginWellformednessTests" />
 		    <jvmarg value="-server"/>
-	<formatter type="plain" usefile="@{usefile}" />
+	<formatter type="plain" usefile="false" />
 	<classpath refid="test.run.classpath" />
 	<jvmarg line="${junit.default.args}"/>
 	<jvmarg line="${jvmargs}"/>
@@ -2818,59 +2826,151 @@ Test results in ${test.results}
 -->
 
   <!-- ==================================================================== -->
-  <target name="jcover"
-   depends="prepare.run.test,jar-tests"
-   description="Run a set of test classes through jcoverage, named by the 'include' property." >
-    <fail unless="include">
-Use -Dinclude= to specify classes to be instrumented,
-optionally -Dtests= for tests to be run.
-    </fail>
-
-    <property name="tests" value="${include}/Test*" />
-    <fileset id="coverage.tests.filesetid" dir="${test.src}">
-      <include name="${tests}"/>
-      <exclude name="${exclude}"/>
-    </fileset>
-    <!-- test whether fileset is empty by converting it to a string -->
-    <pathconvert refid="coverage.tests.filesetid"
-      property="coverage.tests.files"
-      targetos="${detected.os}" />
-    <if>
-     <equals arg1="${coverage.tests.files}" arg2="" />
-     <then>
-      <fail message="Pattern '${tests}' does not match any test classes" />
-     </then>
-    </if>
-
-    <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
-    <delete file="${jcoverage.ser}" quiet="true" />
-    <delete dir="${instrumented}" quiet="true" />
-    <echo message="Instrumenting classes: ${include}"/>
-    <instrument todir="${instrumented}">
-      <classpath refid="jcover.run.classpath" />
-      <fileset id="coverage.instrument.filesetid" dir="${classes}">
-        <include name="${include}"/>
-        <exclude name="${exclude}"/>
-      </fileset>
-    </instrument>
-    <path id="jcover.classpath">
+  <target name="prepare.cobertura"
+	  depends="prepare.run.test,jar-tests">
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties"/>
+    <path id="instrumented.classpath">
      <path location="${instrumented}"/>
-     <path refid="jcover.run.classpath" />
+     <path refid="cobertura.classpath" />
+     <path refid="all.test.run.classpath" />
     </path>
-    <echo message="Running tests: ${tests}"/>
-    <dojunit cpid="jcover.classpath">
-     <junitelem>
-      <batchtest fork="${fork}" todir="${test.results}">
-       <fileset  refid="coverage.tests.filesetid"/>
-      </batchtest>
-     </junitelem>
-    </dojunit>
+  </target>
 
-    <report format="html" destdir="${test.results}" srcdir="${src}">
-       <classpath refid="jcover.run.classpath" />
-       <instrumentation file="${jcoverage.ser}"/>
-    </report>
-<!--     <delete file="${jcoverage.ser}" quiet="true" /> -->
+  <property name="instrincl" value="**" />
+  <property name="instrexcl" value="" />
+
+  <macrodef name="do-cob-instr">
+    <attribute name="base"/>
+    <attribute name="incl"/>
+    <attribute name="excl"/>
+    <sequential>
+      <echo message="Instrumenting classes: @{base}/@{incl}"/>
+      <cobertura-instrument todir="${instrumented}">
+	<classpath refid="cobertura.classpath" />
+	<fileset dir="@{base}">
+          <include name="@{incl}"/>
+          <exclude name="@{excl}"/>
+	</fileset>
+      </cobertura-instrument>
+    </sequential>
+  </macrodef>
+
+  <target name="cobertura-instrument-src"
+	  depends="prepare.cobertura">
+    <do-cob-instr base="${classes}" incl="${instrincl}" excl="${instrexcl}"/>
+  </target>
+
+  <target name="cobertura-instrument-plugins"
+	  depends="prepare.cobertura">
+    <do-cob-instr base="${plugins.classes}" incl="${instrincl}" excl="${instrexcl}"/>
+  </target>
+
+  <target name="cobertura-instrument-tools"
+	  depends="prepare.cobertura,jar-tools-tests">
+    <do-cob-instr base="${tools.classes}" incl="${instrincl}" excl="${instrexcl}"/>
+  </target>
+
+  <target name="cobertura-instrument-all"
+	  depends="cobertura-instrument-src,cobertura-instrument-plugins,cobertura-instrument-tools">
+  </target>
+
+  <macrodef name="do-cob-test">
+    <attribute name="base"/>
+    <attribute name="incl" default="**/Test*"/>
+    <attribute name="excl"/>
+    <attribute name="pref"/>
+    <sequential>
+      <fileset id="@{pref}.coverage.tests.filesetid" dir="@{base}">
+	<include name="@{incl}"/>
+	<exclude name="@{excl}"/>
+      </fileset>
+      <!-- test whether fileset is empty by converting it to a string -->
+      <pathconvert refid="@{pref}.coverage.tests.filesetid"
+		   property="@{pref}.coverage.tests.files"
+		   targetos="${detected.os}" />
+      <echo message="files: ${@{pref}.coverage.tests.files}" />
+      <if>
+	<equals arg1="@{pref}.${coverage.tests.files}" arg2="" />
+	<then>
+	  <fail message="Pattern '@{incl}' does not match any test classes" />
+	</then>
+      </if>
+      <echo message="Running tests: @{incl}"/>
+      <dojunit cpid="instrumented.classpath">
+	<junitelem>
+	  <batchtest fork="${fork}" todir="${test.results}">
+	    <fileset refid="@{pref}.coverage.tests.filesetid"/>
+	  </batchtest>
+	</junitelem>
+      </dojunit>
+    </sequential>
+  </macrodef>
+
+
+  <target name="cobertura-test-unit"
+   depends="prepare.run.test,jar-tests,prepare.cobertura"
+   description="Run a set of test against cobertura instrumented classes.  Specify test with include and exclude properties." >
+    <condition property="unit.include" value="${include}" else="**/Test*.java">
+      <isset property="include" />
+    </condition>
+    <do-cob-test base="${test.src}" pref="unit" incl="${unit.include}" excl="${exclude}"/>
+  </target>
+
+  <target name="cobertura-test-func"
+   depends="prepare.run.test,jar-tests,prepare.cobertura"
+   description="Run a set of test against cobertura instrumented classes.  Specify test with include and exclude condition." >
+    <condition property="func.include" value="${include}" else="**/Func*.java">
+      <isset property="include" />
+    </condition>
+    <do-cob-test base="${test.src}" pref="func" incl="${func.include}" excl="${exclude}"/>
+  </target>
+
+  <target name="cobertura-test-tools"
+   depends="prepare.run.test,jar-tools-tests,prepare.cobertura"
+   description="Run a set of test against cobertura instrumented classes.  Specify test with include and exclude properties." >
+    <condition property="tools.include" value="${include}" else="**/Test*.java">
+      <isset property="include" />
+    </condition>
+    <do-cob-test base="${tools.test.src}" pref="tools" incl="${tools.include}" excl="${exclude}"/>
+  </target>
+
+  <target name="cobertura-test-plugins"
+   depends="prepare.run.test,jar-plugins-tests,prepare.cobertura"
+   description="Run a set of test against cobertura instrumented classes.  Specify test with include and exclude properties." >
+    <condition property="plug.include" value="${include}" else="**/Test*.java">
+      <isset property="include" />
+    </condition>
+    <do-cob-test base="${plugins.test.src}" pref="plugins" incl="${plug.include}" excl="${exclude}"/>
+  </target>
+
+  <target name="cobertura-test-all"
+	  depends="cobertura-test-unit,cobertura-test-func,cobertura-test-tools,cobertura-test-plugins">
+  </target>
+
+  <target name="cobertura-report"
+   depends="prepare.run.test,jar-tests,prepare.cobertura"
+   description="Generate a coverage report from the data collected by cobertura-test." > 
+   <cobertura-report
+       format="html"
+       datafile="${cobertura.ser}"
+       destdir="${test.results}/coverage">
+      <classpath refid="cobertura.run.classpath" />
+      <fileset dir="${src}" />
+      <fileset dir="${plugins.src}" />
+<!--       <fileset dir="${tools.src}" /> -->
+    </cobertura-report>
+    <echo message="Coverage report written to: ${test.results}/coverage"/>
+  </target>
+
+  <target name="cobertura-reset"
+	  description="Delete the accumulated cobertura data." >
+    <delete file="${cobertura.ser}" quiet="true"/>
+    <delete dir="${instrumented}" quiet="true"/>
+  </target>
+
+  <target name="cobertura-all"
+   depends="cobertura-reset,cobertura-instrument-all,cobertura-test-all,cobertura-report"
+   description="Instrument all the classes, run all tests and generate a cobertura report." >
   </target>
 
   <!-- Additional targets for search -->
