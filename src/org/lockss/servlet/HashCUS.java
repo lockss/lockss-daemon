@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.49 2013-05-23 09:44:03 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.50 2013-05-23 20:43:18 tlipkis Exp $
  */
 
 /*
@@ -719,8 +719,12 @@ public class HashCUS extends LockssServlet {
 
     addInputRow(tbl2, "Req Id" + addFootnote(FOOT_REQ_ID),
 		KEY_REQ_ID, 20, ddd.reqId);
-
     centeredBlock.add(tbl2);
+
+    if (!StringUtil.isNullString(ddd.reqId)) {
+      centeredBlock.add(resultDiv("RequestId", ddd.reqId.toString()));
+    }
+
     Input submitC = new Input(Input.Submit, KEY_ACTION, ACTION_CHECK);
     setTabOrder(submitC);
     Input submitL = new Input(Input.Submit, KEY_ACTION, ACTION_LIST);
