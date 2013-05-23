@@ -1,5 +1,5 @@
 /*
- * $Id: FuncFilesystem.java,v 1.4 2005-10-19 20:21:58 smorabito Exp $
+ * $Id: FuncFilesystem.java,v 1.5 2013-05-23 09:53:34 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,11 @@ public class FuncFilesystem extends LockssTestCase {
     for (int ix = 0; ix < nfiles; ix++) {
       files[ix] = FileTestUtil.writeTempFile("test", "foobar");
     }
+    InputStream oneStream = new FileInputStream(files[0]);
+    // Ensure IOUtil class is loaded as there may be no file descriptors
+    // available when it's called below.  Happens when running from
+    // unjarred .class files, e.g., during coverage tests.
+    IOUtil.safeClose(oneStream);
     List lst = new LinkedList();
     int c;
     for (int ix = 0; ix < nfiles; ix++) {
