@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.93 2012-10-29 23:42:00 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.94 2013-05-23 09:50:37 tlipkis Exp $
  */
 
 /*
@@ -453,7 +453,7 @@ public class ConfigManager implements LockssManager {
 
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
-  private Configuration currentConfig = EMPTY_CONFIGURATION;
+  private volatile Configuration currentConfig = EMPTY_CONFIGURATION;
 
   private OneShotSemaphore haveConfig = new OneShotSemaphore();
 
@@ -1349,11 +1349,6 @@ public class ConfigManager implements LockssManager {
     }
     if ("compat".equalsIgnoreCase(acctPolicy)) {
       setParamsFromPairs(config, AccountManager.POLICY_COMPAT);
-    }
-  }
-
-  public static class ConfigMacro{
-    public ConfigMacro(String name, String[] pairs) {
     }
   }
 
