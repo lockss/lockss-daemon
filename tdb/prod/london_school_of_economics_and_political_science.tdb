@@ -22,7 +22,7 @@
     param[journal_issn] = 0022-5258
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.LondonSchoolOfEconomicsPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = low agreement, various basefont used for pdf file
+    comment[notReady] = RU4744, various basefont used for pdf file
   
     au < notReady ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
     au < notReady ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 >
