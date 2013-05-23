@@ -1,5 +1,5 @@
 /*
- * $Id: RandomManager.java,v 1.2 2010-03-14 08:08:31 tlipkis Exp $
+ * $Id: RandomManager.java,v 1.3 2013-05-23 09:52:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -50,14 +50,14 @@ public class RandomManager extends BaseLockssManager
   public static final String PREFIX = Configuration.PREFIX + "random.";
 
   /** SecureRandom algorithm */
-  public static String PARAM_SECURE_RANDOM_ALGORITHM =
+  public static final String PARAM_SECURE_RANDOM_ALGORITHM =
     PREFIX + "secureAlgorithm";
-  public static String DEFAULT_SECURE_RANDOM_ALGORITHM = "SHA1PRNG";
+  public static final String DEFAULT_SECURE_RANDOM_ALGORITHM = "SHA1PRNG";
 
   /** SecureRandom provider */
-  public static String PARAM_SECURE_RANDOM_PROVIDER =
+  public static final String PARAM_SECURE_RANDOM_PROVIDER =
     PREFIX + "secureProvider";
-  public static String DEFAULT_SECURE_RANDOM_PROVIDER = "SUN";
+  public static final String DEFAULT_SECURE_RANDOM_PROVIDER = "SUN";
 
   String alg = DEFAULT_SECURE_RANDOM_ALGORITHM;
   String prov = DEFAULT_SECURE_RANDOM_PROVIDER;
