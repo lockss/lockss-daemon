@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.133 2013-05-22 23:28:46 fergaloy-sf Exp $
+ * $Id: LockssServlet.java,v 1.134 2013-05-23 09:44:48 tlipkis Exp $
  */
 
 /*
@@ -346,8 +346,8 @@ public abstract class LockssServlet extends HttpServlet
     return (String)getSessionIdObject(id);
   }
 
-  /** Get the ID with which the object is associated with the session, if
-   * any */
+  /** Get the ID with which the object is associated in the session,
+   * creating a new ID if the object doesn't already have one.  */
   protected String getSessionObjectId(Object obj) {
     HttpSession session = getSession();
     BidiMap map;
