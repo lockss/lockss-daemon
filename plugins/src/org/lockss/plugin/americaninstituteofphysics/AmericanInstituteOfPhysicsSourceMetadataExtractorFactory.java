@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.3 2013-05-14 21:38:25 pgust Exp $
+ * $Id: AmericanInstituteOfPhysicsSourceMetadataExtractorFactory.java,v 1.4 2013-05-23 21:54:21 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,8 @@
 package org.lockss.plugin.americaninstituteofphysics;
 
 import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -43,6 +45,9 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.collections.map.*;
 import javax.xml.xpath.XPathExpressionException;
 
@@ -57,6 +62,7 @@ import javax.xml.xpath.XPathExpressionException;
 public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("AIPMetadataExtractorFactory");
+  
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -120,7 +126,8 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	      // normal journal article schema
 	      xpathMap.put("/article/front/titlegrp/title", MetadataField.FIELD_ARTICLE_TITLE);
 		  xpathMap.put("/article/front/authgrp/author", MetadataField.FIELD_AUTHOR);
-		  xpathMap.put("/article/front/pubfront/journal", MetadataField.FIELD_JOURNAL_TITLE);
+// Hard code the journal title from a table of options and the file name
+		  //xpathMap.put("/article/front/pubfront/journal", MetadataField.FIELD_JOURNAL_TITLE);
 		  xpathMap.put("/article/front/pubfront/journal/@issn", MetadataField.FIELD_ISSN);
 		  xpathMap.put("/article/front/pubfront/volume", MetadataField.FIELD_VOLUME);
 		  xpathMap.put("/article/front/pubfront/history/published/@date", MetadataField.FIELD_DATE);
@@ -134,6 +141,29 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 		  xpathMap.put("/article/front/pubfront/fpage", MetadataField.FIELD_START_PAGE);
 		  xpathMap.put("/article/front/pubfront/lpage", MetadataField.FIELD_END_PAGE);
 	    }
+	    
+	    // Not making this static so that it could be expanded at runtime in the event that this
+	    // becomes necessary with the addition of other journals
+	    private  Map<String, String> codeMap = new HashMap<String, String>();
+	     {
+	       codeMap.put("APPLAB", "Applied Physics Letters");
+	       codeMap.put("BIOMGB", "Biomicrofluidics");
+	       codeMap.put("CHAOEH", "Chaos: An Interdisciplinary Journal of Nonlinear Science");
+	       codeMap.put("JAPIAU", "Journal of Applied Physics");
+	       codeMap.put("JCPSA6", "Journal of Chemical Physics");
+	       codeMap.put("JMAPAQ", "Journal of Mathematical Physics");
+	       codeMap.put("JPCRBU", "Journal of Physical and Chemical Reference Data");
+	       codeMap.put("JRSEBH", "Journal of Renewable and Sustainable Energy");
+	       codeMap.put("PHFLE6", "Physics of Fluids");
+	       codeMap.put("PHPAEN", "Physics of Plasmas");
+	       codeMap.put("RSINAK", "Review of Scientific Instruments");
+	       codeMap.put("AAIDBI", "AIP Advances");
+	       codeMap.put("CJCPA6", "Chinese Journal of Chemical Physics");
+	       codeMap.put("JLAPEN", "Journal of Laser Applications");
+	       codeMap.put("LTPHEG", "Low Temperature Physics");
+	       codeMap.put("TAMPLBX", "Theoretical and Applied Mechanics Letters");
+	    }
+
 
 	    /**
 	     * Use XmlMetadataExtractor to extract raw metadata, map
@@ -165,6 +195,32 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	          ArticleMetadata am = 
 	            new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
 	          am.cook(xpathMap);
+	          
+	          /* Now pick up the journal title from the code in the URL
+	          * * The URL will be of the form:
+	            * http://clockss-ingest.lockss.org/sourcefiles/aip-released/2010/AIP_xml_1.tar.gz!/APPLAB/vol_96/iss_1/010401_1.xml
+	            * where the APPLAB portion will vary and is the short form of the journal code.
+	            * Translate this code in to the Journal Title and if it's not in the map, at least put in the short form of the code.
+	            */
+	          /* This is the same pattern (different groups) that the article iterator used */
+	          Pattern PATTERN = Pattern.compile("/AIP_xml_\\d+\\.tar\\.gz!/([^/]+)/vol_\\d+/iss_\\d+/[^/]+_1.xml$", Pattern.CASE_INSENSITIVE);
+	          String jtitle = null;
+	          String jcode = null;
+	          Matcher mat = PATTERN.matcher(cu.getUrl());
+	          if (mat.find()) {
+	            jcode = (mat.group(1)).toUpperCase(); //force upper case for matching in map
+	            jtitle = codeMap.get(jcode);
+	            if (!(jtitle == null)) {
+	              /* we translated the code to a title, use that */
+                      am.put(MetadataField.FIELD_JOURNAL_TITLE, jtitle );           
+	            } else if (!(jcode == null)) { 
+	              /* we didn't recognize this title, just put in the code */
+	              am.put(MetadataField.FIELD_JOURNAL_TITLE, jcode );	              
+	            } 
+	            // It isn't possible to have NOTHING in as a directory name in the pattern or the 
+	            // article iterator wouldn't have matched it
+	          }	               
+	          	          
 	          if (!am.hasValidValue(MetadataField.FIELD_PUBLISHER)) {
 	            am.put(MetadataField.FIELD_PUBLISHER, "American Institute of Physics");
 	          }
@@ -176,4 +232,5 @@ public class AmericanInstituteOfPhysicsSourceMetadataExtractorFactory
 	        }
 	      }
 	  }
+
 }

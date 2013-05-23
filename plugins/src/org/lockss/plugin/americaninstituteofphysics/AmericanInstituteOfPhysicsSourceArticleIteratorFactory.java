@@ -45,9 +45,9 @@ public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements A
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/AIP_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/AIP_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[^/]+_1.xml$\",base_url,year";
   
-  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/AIP_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[\\d]+_1.xml$\",base_url,year";
+  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/AIP_xml_[\\d]+\\.tar\\.gz!/[^/]+/vol_[\\d]+/iss_[\\d]+/[^/]+_1.xml$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -62,7 +62,7 @@ public class AmericanInstituteOfPhysicsSourceArticleIteratorFactory implements A
   
   protected static class AIPArticleIterator extends SubTreeArticleIterator {
 	 
-    protected static Pattern PATTERN = Pattern.compile("(/AIP_)(xml)(_\\d+\\.tar\\.gz!/[^/]+/vol_\\d+/iss_\\d+/)(\\d+)(_1.xml)$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern PATTERN = Pattern.compile("(/AIP_)(xml)(_\\d+\\.tar\\.gz!/[^/]+/vol_\\d+/iss_\\d+/)([^/]+)(_1.xml)$", Pattern.CASE_INSENSITIVE);
     
     protected AIPArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {

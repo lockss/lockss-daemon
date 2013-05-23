@@ -108,8 +108,8 @@ public class TestAmericanInstituteOfPhysicsSourceArticleIteratorFactory extends 
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!//vol_3/iss_2/10322_1.xml");
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/wrong_3/iss_2/10322_1.xml");
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/wrong_2/10322_1.xml");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/a10322_1.xml");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/103a22_1.xml");
+    assertMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/a10322_1.xml"); //some do have letters in last part
+    assertMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/103a22_1.xml"); //some do have letters in last part
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/10322_2.xml");
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/10322_.xml");
     assertNotMatchesRE(pat, "http://www.example.com/2012/AIP_xml_0.tar.gz!/FAKE/vol_3/iss_2/10322_.pdf");

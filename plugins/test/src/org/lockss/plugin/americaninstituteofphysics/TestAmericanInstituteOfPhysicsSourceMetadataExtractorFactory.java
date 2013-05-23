@@ -46,7 +46,7 @@ import org.lockss.plugin.simulated.*;
 public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestAmericanInstituteOfPhysicsMetadataExtractorFactory");
 
-  private ArchivalUnit hau;		//BloomsburyQatar AU
+  private ArchivalUnit hau;		
   private MockLockssDaemon theDaemon;
 
   private static String PLUGIN_NAME =
@@ -80,6 +80,15 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     return conf;
   }
   
+  /* The journal title is pulled from the journal code in the URL */
+  String realUrlBase = "http://clockss-ingest.lockss.org/sourcefiles/aip-released/2010/AIP_xml_9.tar.gz!/";
+  String realUrlA = "JAPIAU/vol_108/iss_9/093108_1.xml"; //Journal of Applied Physics
+  String journalA = "Journal of Applied Physics";
+  String realUrlB = "JCPSA6/vol_133/iss_17/174314_1.xml"; // Journal of Chemical Physics
+  String journalB = "Journal of Chemical Physics";
+  String realUrlC = "RSINAK/vol_81/iss_10/10E301_1.xml";// Review of Scientific Instruments  
+  String journalC = "Review of Scientific Instruments";
+  
   String goodTitle = "Title";
   ArrayList<String> goodAuthors = new ArrayList<String>();
   String goodIssn = "5555-5555";
@@ -91,7 +100,6 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
   ArrayList<String> goodKeywords = new ArrayList<String>();
   String goodDescription = "Summary";
   String goodRights = "Rights";
-  String goodJournal = "Fake Journal";
   
   String goodContent =
 	  "<article xmlns:m=\"http://www.w3.org/1998/Math/MathML\">"+
@@ -148,7 +156,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
 	  goodKeywords.add("Keyword2");
 	  goodKeywords.add("Keyword3");
 	  
-    String url = "http://www.example.com/vol1/issue2/art3/";
+    String url = realUrlBase + realUrlA;
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
@@ -175,7 +183,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(journalA, md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
   
   String badContent =
@@ -186,7 +194,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     goodDescription + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
+    String url = realUrlBase + realUrlB;
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
@@ -207,7 +215,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(journalB, md.get(MetadataField.FIELD_JOURNAL_TITLE));// journal title comes from URL, so always set
     assertNull(md.get(MetadataField.FIELD_DATE));
   }
   
@@ -228,7 +236,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
   
   public void testExtractJournalContent() throws Exception {
 
-    String url = "http://www.example.com/vol1/issue2/art3/";
+    String url = realUrlBase + realUrlC;
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(missingJournalContent);
     cu.setContentSize(missingJournalContent.length());
@@ -246,7 +254,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
 
     assertEquals(null, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(journalC, md.get(MetadataField.FIELD_JOURNAL_TITLE)); // set from the URL, not the content
     
     cu.setContent(emptyJournalContent);
     cu.setContentSize(emptyJournalContent.length());
@@ -258,7 +266,7 @@ public class TestAmericanInstituteOfPhysicsSourceMetadataExtractorFactory extend
     
     assertEquals(goodIssn, md2.get(MetadataField.FIELD_ISSN));
     assertEquals(goodVolume, md2.get(MetadataField.FIELD_VOLUME));
-    assertEquals(null, md2.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(journalC, md2.get(MetadataField.FIELD_JOURNAL_TITLE)); // set from the URL, not the content
   }
 
 }
