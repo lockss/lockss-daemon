@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.50 2013-05-22 23:59:24 fergaloy-sf Exp $
+ * $Id: BatchAuConfig.java,v 1.51 2013-05-23 19:39:27 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class BatchAuConfig extends LockssServlet {
   static final String ACTION_SELECT_SETS_TO_REACT = "ReactivateAus";
   static final String ACTION_BACKUP = "Backup";
   static final String ACTION_RESTORE = "Restore";
-  static final String ACTION_SELECT_RESTORE_TITLES = "SelectRestoreAus";
+  static final String ACTION_SELECT_RESTORE_TITLES = "SelectRestoreTitles";
   static final String ACTION_SELECT_AUS = "SelectSetAus";
   static final String ACTION_ADD_AUS = "DoAddAus";
   static final String ACTION_REMOVE_AUS = "DoRemoveAus";
@@ -189,6 +189,7 @@ public class BatchAuConfig extends LockssServlet {
     else if (action.equals(ACTION_DEACT_AUS)) doRemoveAus(true);
     else {
       errMsg = "Unknown action: " + action;
+      log.warning(errMsg);
       displayMenu();
     }
   }
