@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1.java,v 1.6 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1.java,v 1.7 2013-05-23 20:04:20 fergaloy-sf Exp $
  */
 
 /*
@@ -266,6 +266,15 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
 						  "9876543210123", publisherSeq,
 						  "The Full Book", null, null);
 
+      // Add an alternative name for the publication.
+      Long publicationSeq2 =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+	      					  "9876543210987",
+	      					  "9876543210123", publisherSeq,
+						  "Full Book Alt", null, null);
+
+      assertEquals(publicationSeq, publicationSeq2);
+
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn,
 	  "fullPlatform");
@@ -330,6 +339,16 @@ public class TestCounterReportsBookReport1 extends LockssTestCase {
 						  "9876543210345", publisherSeq,
 						  "The Book In Sections", null,
 						  null);
+
+      // Add an alternative name for the publication.
+      Long publicationSeq2 =
+	  metadataManager.findOrCreatePublication(conn, null, null,
+	      					  "9876543210234",
+	      					  "9876543210345", publisherSeq,
+						  "Book In Sections Alt", null,
+						  null);
+
+      assertEquals(publicationSeq, publicationSeq2);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn,

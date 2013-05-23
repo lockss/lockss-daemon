@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1L.java,v 1.6 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1L.java,v 1.7 2013-05-23 20:04:20 fergaloy-sf Exp $
  */
 
 /*
@@ -267,6 +267,14 @@ public class TestCounterReportsJournalReport1L extends LockssTestCase {
 	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
 						  null, null, publisherSeq,
 						  "JOURNAL", null, null);
+
+      // Add an alternative name for the publication.
+      Long publicationSeq2 =
+	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
+						  null, null, publisherSeq,
+						  "JOURNAL_ALT", null, null);
+
+      assertEquals(publicationSeq, publicationSeq2);
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");

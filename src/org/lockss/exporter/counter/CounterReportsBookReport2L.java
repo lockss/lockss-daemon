@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsBookReport2L.java,v 1.4 2013-03-04 19:26:08 fergaloy-sf Exp $
+ * $Id: CounterReportsBookReport2L.java,v 1.5 2013-05-23 20:04:21 fergaloy-sf Exp $
  */
 
 /*
@@ -74,8 +74,8 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " where "
-      + "a." + SECTION_REQUESTS_COLUMN + " > 0"
+      + " where"
+      + " a." + SECTION_REQUESTS_COLUMN + " > 0"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
       + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
@@ -87,6 +87,7 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
+      + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
       + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
       + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
@@ -111,8 +112,8 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + "," + MD_ITEM_TABLE + " m1"
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " where "
-      + "a." + SECTION_REQUESTS_COLUMN + " > 0"
+      + " where"
+      + " a." + SECTION_REQUESTS_COLUMN + " > 0"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
       + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
@@ -124,6 +125,7 @@ public class CounterReportsBookReport2L extends CounterReportsBookReport2 {
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_COLUMN + " != '" + ALL_BOOKS_NAME + "'"
+      + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
       + " group by n." + NAME_COLUMN
       + ", a." + PUBLICATION_SEQ_COLUMN
       + ", a." + REQUEST_YEAR_COLUMN

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1.java,v 1.6 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1.java,v 1.7 2013-05-23 20:04:20 fergaloy-sf Exp $
  */
 
 /*
@@ -270,6 +270,14 @@ public class TestCounterReportsJournalReport1 extends LockssTestCase {
 
       // Add the publishing platform.
       Long platformSeq = metadataManager.findOrCreatePlatform(conn, "platform");
+
+      // Add an alternative name for the publication.
+      Long publicationSeq2 =
+	  metadataManager.findOrCreatePublication(conn, "12345678", "98765432",
+						  null, null, publisherSeq,
+						  "JOURNAL_ALT", null, null);
+
+      assertEquals(publicationSeq, publicationSeq2);
 
       // Add the plugin.
       Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "pluginId",

@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5.java,v 1.6 2013-03-04 19:26:07 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5.java,v 1.7 2013-05-23 20:04:21 fergaloy-sf Exp $
  */
 
 /*
@@ -86,8 +86,8 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " where "
-      + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
+      + " where"
+      + " a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
       + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
@@ -99,6 +99,7 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
       + " and m1." + MD_ITEM_SEQ_COLUMN + " = m2." + PARENT_SEQ_COLUMN
       + " and m2." + AU_MD_SEQ_COLUMN + " = am." + AU_MD_SEQ_COLUMN
       + " and am." + AU_SEQ_COLUMN + " = au." + AU_SEQ_COLUMN
@@ -118,8 +119,8 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       + "," + MD_ITEM_TABLE + " m1"
       + " left outer join " + MD_ITEM_NAME_TABLE + " n"
       + " on m1." + MD_ITEM_SEQ_COLUMN + " = n." + MD_ITEM_SEQ_COLUMN
-      + " where "
-      + "a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
+      + " where"
+      + " a." + IS_PUBLISHER_INVOLVED_COLUMN + " = false"
       + " and ((a." + REQUEST_MONTH_COLUMN + " >= ?"
       + " and a." + REQUEST_YEAR_COLUMN + " = ?)"
       + " or a." + REQUEST_YEAR_COLUMN + " > ?)"
@@ -131,6 +132,7 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       + " and pu." + PUBLISHER_NAME_COLUMN + " != '" + ALL_PUBLISHERS_NAME + "'"
       + " and p." + MD_ITEM_SEQ_COLUMN + " = m1." + MD_ITEM_SEQ_COLUMN
       + " and n." + NAME_COLUMN + " != '" + ALL_JOURNALS_NAME + "'"
+      + " and n." + NAME_TYPE_COLUMN + " = 'primary'"
       + " group by n." + NAME_COLUMN
       + ", a." + PUBLICATION_SEQ_COLUMN
       + ", a." + PUBLICATION_YEAR_COLUMN
