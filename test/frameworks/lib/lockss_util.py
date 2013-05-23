@@ -158,6 +158,7 @@ def HTTP_request( opener, url, data = None, files = None ):
     finally:
         session_lock.release()
     if resource.info().getheader( 'X-Lockss-Result' ) == 'Fail':
+        log.debug3( "HTML UI transaction failure: %s" % ( resource.read() ) )
         raise LockssError( 'HTML UI transaction failure' )
     return resource
 
