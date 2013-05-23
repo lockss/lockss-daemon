@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataIndexingErrorInfoAccessor.java,v 1.2 2013-05-08 04:00:10 pgust Exp $
+ * $Id: MetadataIndexingErrorInfoAccessor.java,v 1.3 2013-05-23 12:46:16 pgust Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.status.StatusAccessor;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
 import org.lockss.daemon.status.StatusService.NoSuchTableException;
+import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
@@ -168,6 +169,17 @@ public class MetadataIndexingErrorInfoAccessor implements StatusAccessor {
         "Exception",
         ColumnDescriptor.TYPE_STRING,
         sw.toString()));
+    // show metadata info for a MedataException
+    if (taskException instanceof MetadataException) {
+      ArticleMetadataInfo info = 
+          ((MetadataException)taskException).getArticleMetadataInfo();
+      if (info != null) {
+        res.add(new StatusTable.SummaryInfo(
+            "MetadataInfo",
+            ColumnDescriptor.TYPE_STRING,
+            info.toString()));
+      }
+    }
 
     table.setSummaryInfo(res);
   }
