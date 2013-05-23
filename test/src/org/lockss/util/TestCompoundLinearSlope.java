@@ -1,5 +1,5 @@
 /*
- * $Id: TestCompoundLinearSlope.java,v 1.6 2009-01-07 22:59:52 tlipkis Exp $
+ * $Id: TestCompoundLinearSlope.java,v 1.7 2013-05-23 09:46:01 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,13 @@ public class TestCompoundLinearSlope extends LockssTestCase {
     assertEquals(-50.0, c.getY(12), .001);
     assertEquals(-50.0, c.getY(20), .001);
     assertEquals(10.0, c.getY(21), .001);
+  }
+
+  public void testSingle() {
+    CompoundLinearSlope c = new CompoundLinearSlope("[0,100]");
+    assertEquals(100.0, c.getY(0));
+    assertEquals(100.0, c.getY(10));
+    assertEquals(100.0, c.getY(-Integer.MAX_VALUE));
   }
 
 }
