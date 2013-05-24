@@ -228,18 +228,18 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < superseded ; crawling ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [superseded] ; 1 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [superseded] ; 2 ; reingest1.clockss.org:8082 >
-        au < superseded ; crawling ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [superseded] ; 3 ; reingest2.clockss.org:8085 >
-        au < superseded ; crawling ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [superseded] ; 4 ; reingest3.clockss.org:8083 >
-        au < superseded ; crawling ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [superseded] ; 5 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [superseded] ; 6 ; reingest1.clockss.org:8082 >
-        au < superseded ; crawling ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [superseded] ; 7 ; reingest2.clockss.org:8085 >
-        au < superseded ; crawling ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
-        au < superseded ; crawling ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [superseded] ; 9 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [superseded] ; 10 ; >
-        au < superseded ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [superseded] ; 11 ; >
-        au < superseded ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [superseded] ; 12 ; >
+        au < zapped ; crawling ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [to delete] ; 1 ; reingest4.clockss.org:8082 >
+        au < zapped ; crawling ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [to delete] ; 2 ; reingest1.clockss.org:8082 >
+        au < superseded ; crawling ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [to delete] ; 3 ; reingest2.clockss.org:8085 >
+        au < zapped ; crawling ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [to delete] ; 4 ; reingest3.clockss.org:8083 >
+        au < zapped ; crawling ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [to delete] ; 5 ; reingest4.clockss.org:8082 >
+        au < zapped ; crawling ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [to delete] ; 6 ; reingest1.clockss.org:8082 >
+        au < superseded ; crawling ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [to delete] ; 7 ; reingest2.clockss.org:8085 >
+        au < zapped ; crawling ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [to delete] ; 8 ; reingest3.clockss.org:8083 >
+        au < zapped ; crawling ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [to delete] ; 9 ; reingest4.clockss.org:8082 >
+        au < zapped ; crawling ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [to delete] ; 10 ; >
+        au < zapped ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [to delete] ; 11 ; >
+        au < zapped ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [to delete] ; 12 ; >
 
       }
       
@@ -258,9 +258,9 @@
         au < zapped ; down ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
         au < zapped ; down ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
         au < down ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
-        au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >      
-        au < down ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
-        au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >      
+        au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >
+        au < down ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
+        au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >
 
       }
     
