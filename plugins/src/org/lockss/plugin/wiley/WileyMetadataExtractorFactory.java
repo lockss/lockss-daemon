@@ -35,6 +35,7 @@ package org.lockss.plugin.wiley;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.xml.xpath.XPathExpressionException;
@@ -72,6 +73,12 @@ import org.w3c.dom.NodeList;
  */
   public static class WileyMetadataExtractor 
     implements FileMetadataExtractor {
+    
+    private Map<String, String> journalTitleMap;
+        
+    public WileyMetadataExtractor() {
+      journalTitleMap = new HashMap<String, String>();
+    }
 	    
     /** NodeValue for creating value of subfields from author tag */
     static private final XPathValue AUTHOR_VALUE = new NodeValue() {
@@ -125,6 +132,7 @@ import org.w3c.dom.NodeList;
       nodeMap.put("/component/header/publicationMeta[@level='product']/titleGroup/title", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='product']/issn[@type='print']", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='product']/issn[@type='electronic']", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/component/header/publicationMeta[@level='product']/idGroup/id[@type='product']/@value", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalVolume']", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalIssue']", ISSUE_VALUE);
       nodeMap.put("/component/header/publicationMeta[@level='part']/coverDate/@startDate", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -147,6 +155,7 @@ import org.w3c.dom.NodeList;
       xpathMap.put("/component/header/publicationMeta[@level='product']/titleGroup/title", MetadataField.FIELD_JOURNAL_TITLE);
       xpathMap.put("/component/header/publicationMeta[@level='product']/issn[@type='print']", MetadataField.FIELD_ISSN);
       xpathMap.put("/component/header/publicationMeta[@level='product']/issn[@type='electronic']", MetadataField.FIELD_EISSN);
+      xpathMap.put("/component/header/publicationMeta[@level='product']/idGroup/id[@type='product']/@value", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalVolume']", MetadataField.FIELD_VOLUME);
       xpathMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalIssue']", MetadataField.FIELD_ISSUE);
       xpathMap.put("/component/header/publicationMeta[@level='part']/coverDate/@startDate", MetadataField.FIELD_DATE);
@@ -157,7 +166,57 @@ import org.w3c.dom.NodeList;
       xpathMap.put("/component/header/publicationMeta[@level='product']/publisherInfo/publisherName", MetadataField.FIELD_PUBLISHER);
       xpathMap.put("/component/header/contentMeta/creators/creator[@creatorRole='author']/personName", MetadataField.FIELD_AUTHOR);
     }
-
+    
+    private String getJournalIdFromUrl(String url) {
+      // http://localhost/~lydoan/wiley-released/2012/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.pdf
+      Pattern PATTERN = Pattern.compile("/wiley-released/[0-9]{4}/[A-Z]/([A-Z]+)[0-9]+.+");
+      Matcher mat;
+      mat = PATTERN.matcher(url);
+      String journalId = null;
+      if (mat.find()) {
+        journalId = mat.group(1);
+      }
+      log.debug3("getJournalIdFromUrl() journalId: " + journalId);
+      return (journalId);
+    }
+    
+    private String getJournalId(String url, ArticleMetadata am) {
+      String journalId = am.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+       // if not found in metadata database, then get it from url
+      if (journalId == null) {
+        journalId = getJournalIdFromUrl(url);
+      }
+      log.debug3("getJournalId() journalId: " + journalId);
+      return (journalId);
+    }
+    
+    private void addJournalTitleMap(String journalTitle,
+                                    String url, ArticleMetadata am) {
+      String journalId = null;
+      // if found journal title, enter it to hash map.
+      if (journalTitle != null && journalTitle.length() > 0) {
+        journalId = getJournalId(url, am);
+        if (journalId != null) {
+          journalTitleMap.put(journalId, journalTitle);
+        }
+      }
+    }
+    
+    private String resolveJournalTitle(String journalTitle,
+                                       String url, ArticleMetadata am) { 
+      String journalId = getJournalId(url, am);
+      if (journalId != null) {
+        // look up in hash map
+        journalTitle = journalTitleMap.get(journalId);
+        // use journal id for journal title (better than null)
+        if (journalTitle == null || journalTitle.length() <= 0) {
+          journalTitle = journalId;
+        }
+      }
+      log.debug3("resolveJournalTitle() journalTitle: " + journalTitle);
+      return (journalTitle);
+    }
+      
     /**
      * Use XmlMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract extra tags by reading the file.
@@ -180,7 +239,26 @@ import org.w3c.dom.NodeList;
           AuUtil.safeRelease(xmlCu);
         }
         am.cook(xpathMap);
-        emitter.emitMetadata(cu, am);
+        
+        // handle missing journal.title
+        // if journal title not found, then get journal id from metadata database,
+        // or extract from cached url. Look up in journal it/title table built when
+        // a journal title and journal id found.
+        // if not found, then use journal id for journal title.
+        String journalTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
+        String url = cu.getUrl();
+        // build journal id/title hash map.
+        addJournalTitleMap(journalTitle, url, am);
+        // if no journal title
+        if (journalTitle == null || journalTitle.length() <= 0) {
+          journalTitle = resolveJournalTitle(journalTitle, url, am);
+        }
+        log.debug3("extract() journalTitle: " + journalTitle);
+        // if still no journal title, do not emit
+        if (journalTitle != null && journalTitle.length() > 0) { 
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+          emitter.emitMetadata(cu, am);
+        }
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
         ex2.initCause(ex);
