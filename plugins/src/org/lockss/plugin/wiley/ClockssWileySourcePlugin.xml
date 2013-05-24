@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -36,13 +36,28 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%s%d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/wiley-released/2012/A/AAB102.1.zip -->
+      <string>"^%s%d/.+\.zip$", base_url, year</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_archive_file_types</string>
