@@ -1,4 +1,4 @@
-<!--  $Id: ClockssBMCPlugin.xml,v 1.22 2013-05-21 22:56:15 aishizaki Exp $ -->
+<!--  $Id: ClockssBMCPlugin.xml,v 1.23 2013-05-24 18:56:49 aishizaki Exp $ -->
 <map>
   <!-- ClockssBMCPlugin.xml inherits from BMCPlugin.xml. --> 
   <entry>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>au_name</string>

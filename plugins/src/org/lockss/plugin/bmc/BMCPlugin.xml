@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.39 2013-05-21 22:56:15 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.40 2013-05-24 18:56:49 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,7 +75,7 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%s.*/(about|email|citation|comments|postcomment)$", base_url</string>
-      <string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>
+      <!--<string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>-->
       <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
         only rule that uses the attr[journal_id] rather than the journal_issn
       -->   
@@ -101,7 +101,16 @@
       <string>"^%scontent/pdf/%s-%s-[-\d]{1,7}.pdf$", base_url, journal_issn, volume_name </string>
     </list>
   </entry>    
-
+  <entry>
+    <!-- this is to catch the 500 errors produced when trying to crawl their unresolved
+         "prepub" links - these really should produce a 404 error, which does not cause
+         a fetch error.  Some prepub links are fine, many are not.
+     -->
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.bmc.BMCPluginHttpResponseHandler</string>
+    </list>
+  </entry>
   <entry>
     <string>plugin_config_props</string>
     <list>
