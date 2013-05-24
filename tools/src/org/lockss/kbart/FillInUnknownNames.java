@@ -31,119 +31,147 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.kbart;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.ArrayList;
+import java.nio.charset.Charset;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+import com.csvreader.CsvReader;
+import com.csvreader.CsvWriter;
+
 /**
- * This class replaces unknown publisher names in a tab-separated input
- * file with actual publisher names in a tab-separated mod file, using
+ * This class replaces unknown publisher names in a comma-separated input
+ * file with actual publisher names in a comma-separated mod file, using
  * issn/eissn as a matching key.
+ * It uses the CsvReader and CsvWriter to handle the csv parsing and output
  * 
  * @author Philip Gust
  *
  */
 public class FillInUnknownNames {
-  static List<String[]> inList = new ArrayList<String[]>();
-  static List<String[]> modList = new ArrayList<String[]>();
-  static int modPissn = 0;              // mod file column for print issn
-  static int modEissn=1;                // mod file column for eissn
-  static int modPublisher = 2;          // mod file column for publisher
-
-  static int inPissn = 1;               // input column for print issn
-  static int inEissn = 2;               // input column for eissn
-  static int inPublisher = 4;           // input column for publisher
+  private final static String PUB_TITLE = "publisher_name";
+  private final static String PISSN_TITLE = "print_identifier";
+  private final static String EISSN_TITLE = "online_identifier";
+  private final static String UNKNOWN_PUB = "UNKNOWN_PUBLISHER";
   
-  /**
-   * Read a tab-separated rows of input into a list string arrays.
-   * @param fname the file name
-   * @param list the list to fill
-   * @throws IOException if an error occurred reading the file
-   */
-  static void readList(String fname, List<String[]> list)
-    throws IOException {
-    BufferedReader rdr  = new java.io.BufferedReader(new FileReader(fname));
-    String line;
-    while ((line = rdr.readLine()) != null) {
-      String[] fields = line.split("\t");
-      list.add(fields);
-    }
-  }
   
-  /**
-   * Write a list of string arrays to a stdout as tab-separated lines.
-   * @param list the list to write
+  /*
+   * Read in a csv file that has at values for publisher, print issn and eissn
+   * Create a map between the issns and the publisher
    */
-  static void writeList(List<String[]> list) {
-    PrintStream ps = System.out;
-    for (String[] fields : list) {
-      for (int i = 0; i < fields.length; i++) {
-        if (i > 0) {
-          ps.print("\t");
-        }
-        ps.print(fields[i]);
+  static void createModMap(String fname, Map<String,String> mMap) {
+    try {
+      CsvReader modifications = new CsvReader(fname);
+      String pub;
+      String pISSN;
+      String eISSN;
+      
+      modifications.readHeaders();
+      while (modifications.readRecord())
+      {
+              pub = modifications.get(PUB_TITLE);
+              pISSN = modifications.get(PISSN_TITLE);
+              eISSN = modifications.get(EISSN_TITLE);
+              mMap.put(pISSN, pub);
+              mMap.put(eISSN, pub);
+              
       }
-      ps.println();
+      modifications.close();
+    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
     }
+          
+  }
+
+  
+  /* gets a return from the map on the key but ensures the return is never an empty string */
+  static String getFromModMap(Map<String,String> mMap, String key) {
+    String retVal = mMap.get(key);
+    if ( !(retVal == null) && !(retVal.isEmpty()) ) return retVal;
+    else return null;
   }
   
   /**
    * This method reads two files specified by command line arguments.
-   * The first file contains tab-separated lines of fields including
-   * issn, eissn, and publisher. The second file contans tab-separated
+   * The first file contains comma-separated lines of fields including 
+   * but not limited to
+   * issn, eissn, and publisher. The second file contains comma-separated
    * lines of fields containing pissn, eissn, and corresponding correct
-   * publisher names. The output is a version of the input file with
+   * publisher names. The output file, which is the third command line
+   * argument, is a copy of the input file with
    * gensym publisher names replaced by correct publisher names, using
    * the issn and eissn as keys.
+   * The output file is overwritten if it already exists
    * 
-   * @param args the names of the input and modification files
+   * @param args the names of the input and modification files and the output file
    * @throws IOException if an IO error occurs.
    */
-  // PJG: TODO: Should accept input as comma-separated lists with
-  // quotes around fields that contain embedded commas. KBART files
-  // are comma-separated rather than tab-separated.
+
   static public void main(String[] args) throws IOException {
-    if (args.length < 2) {
-      System.err.println("Need two file names");
+    if (args.length < 3) {
+      System.err.println("Need three file names - <origKbart>.csv <modPubs>.csv <newKbart>.csv [note output file will be overwritten]");
       System.exit(1);
     }
     
-    // read input and mod lists
-    readList(args[0], inList);
-    readList(args[1], modList);
-    
+    /* If output file already exists, get rid of it */
+    File f = new File(args[2]);
+    if (f.exists() ) {
+      f.delete();    
+    }
+
     // build a map if issn/eissn  to publisher title
     Map<String,String> modMap = new HashMap<String,String>();
-    for (String[] modFields : modList) {
-      if (modFields[modPissn].length() > 0) {
-        modMap.put(modFields[modPissn], modFields[modPublisher]);
-      }
-      if (modFields[modEissn].length() > 0) {
-        modMap.put(modFields[modEissn], modFields[modPublisher]);
-      }
-    }
+    createModMap(args[1], modMap);
+
+    String origPub;
+    String origPISSN;
+    String origEISSN;
+    String modPub;
+    String newPub;
+    String values[];
     
-    for (String[] inFields : inList) {
-      // validate row
-      if (inFields.length <= inPublisher) {
-        continue;
+    try {
+      CsvReader origKbart = new CsvReader(args[0], ',', Charset.forName("utf-8"));
+      CsvWriter newKbart = new CsvWriter(new FileWriter(args[2],true), ',');
+      origKbart.readHeaders();
+      int origPubIndex = origKbart.getIndex(PUB_TITLE); 
+
+      /* write the headers in to the new output kbart file */
+      newKbart.writeRecord(origKbart.getHeaders());
+      while (origKbart.readRecord()) 
+      {
+        values = origKbart.getValues();
+        origPub = origKbart.get(PUB_TITLE);
+        newPub = origPub;
+        if ( !(origPub == null) && (origPub.contains(UNKNOWN_PUB)) ) {
+          /* see if you can substitute something from the modMap */
+          origPISSN = origKbart.get(PISSN_TITLE);
+          origEISSN = origKbart.get(EISSN_TITLE);
+          /* if the original kbart record has a print issn, see if there is a match */
+          modPub = null;
+          if ( !(origPISSN.isEmpty()) ) modPub = getFromModMap(modMap, origPISSN);
+          if (modPub == null) {
+            /* no pissn match, so if the original kbart record has an eissn, try for that match */
+            if ( !(origEISSN.isEmpty()) ) modPub = getFromModMap(modMap, origEISSN);
+          }
+          if (modPub != null) {
+            newPub = modPub;
+          } 
+          if ( !(newPub.equals(origPub)) ) {
+            /*modify this one item in the values array*/
+            values[origPubIndex] = newPub;
+          }
+        }
+        newKbart.writeRecord(values);
       }
-      // get publisher name from the mod map based on print issn
-      String modPub = modMap.get(inFields[inPissn]);
-      if (modPub == null) {
-        // get publisher name from the mod map based on eissn 
-        modPub = modMap.get(inFields[inEissn]);
-      }
-      if (modPub != null) {
-        // replace the publisher name in the input map
-        inFields[inPublisher] = modPub;
-      }
+      /* done with all origKbart records, so finish, write output and close readers */
+      origKbart.close();
+      newKbart.close();
+    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
     }
-    writeList(inList);
   }
 }
