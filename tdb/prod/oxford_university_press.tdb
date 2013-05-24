@@ -7329,7 +7329,7 @@
     au < released ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 >
     au < released ; 2011 ; Holocaust and Genocide Studies Volume 25 ; 25 >
     au < released ; 2012 ; Holocaust and Genocide Studies Volume 26 ; 26 >
-    au < expected ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
+    au < manifest ; 2013 ; Holocaust and Genocide Studies Volume 27 ; 27 >
 
     }
 
@@ -10193,7 +10193,7 @@
     param[base_url] = http://comnet.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
+    au < manifest ; 2013 ; Journal of Complex Networks Volume 1 ; 1 >
 
     }
 
