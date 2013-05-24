@@ -15,9 +15,9 @@
       issn = 1046-3348 
     >
 
-    comment[0] = coming in 2013
+    comment[0] = coming in 2013, manifest page exists, but content page is not up yet
     param[journal_dir] = colorado_review
-    attr[journal_id] = 
+    attr[journal_id] = col
 
     au < expected ; 2013 ; Colorado Review Volume 40 ; 40 >
 
