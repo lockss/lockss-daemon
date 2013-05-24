@@ -13,13 +13,19 @@
   {
   
     title < 
-      name = Ancient Asia;
+      name = Ancient Asia ;
       eissn = 2042-5937 
     >
     
     param[base_url] = http://www.ancient-asia-journal.com/
     param[journal_id] = aa
 
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < superseded ; down ; 2008 ; Ancient Asia Volume 1 [to delete] ; 1 ; 2006 >
+       au < superseded ; down ; 2009-2011 ; Ancient Asia Volume 2 [to delete] ; 2 ; 2010 >
+    }
     au < manifest ; exists ; 2006 ; Ancient Asia Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2010 ; Ancient Asia Volume 2 ; 2 ; 2010 >
     
@@ -28,7 +34,7 @@
   {
   
     title < 
-      name = Archaeology International;
+      name = Archaeology International ;
       eissn = 2048-4194 
     >
     
@@ -37,7 +43,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < zapped ; down ; 2009-2011 ; Archaeology International Volume 13/14 [to delete] ; 13/14 ; 2009 >
+       au < superseded ; down ; 2008 ; Archaeology International Volume 12 [to delete] ; 12 ; 2008 >
+       au < superseded ; down ; 2009-2011 ; Archaeology International Volume 13/14 [to delete] ; 13/14 ; 2009 >
     }
     au < manifest ; exists ; 2006-2007 ; Archaeology International Volume 10 ; 10 ; 2006 >
     au < manifest ; exists ; 2007-2008 ; Archaeology International Volume 11 ; 11 ; 2007 >
@@ -51,7 +58,7 @@
   {
   
     title < 
-      name = Architectural Histories;
+      name = Architectural Histories ;
       eissn = 2050-5833 
     >
     
@@ -65,14 +72,22 @@
   {
   
     title < 
-      name = The Bulletin of the History of Archaeology;
+      name = The Bulletin of the History of Archaeology ;
       issn = 1062-4740 ;
       eissn = 2047-6930 
     >
     
     param[base_url] = http://www.archaeologybulletin.org/
     param[journal_id] = bha
+
     comment[permission] = no permission from publisher (at least on ingest2)
+
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < superseded ; down ; 2010 ; The Bulletin of the History of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
+       au < superseded ; down ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+    }
 
     au < manifest ; exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
     au < manifest ; exists ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
@@ -103,13 +118,19 @@
   {
   
     title < 
-      name = The Journal of Conservation and Museum Studies;
+      name = The Journal of Conservation and Museum Studies ;
       eissn = 1364-0429 
     >
     
     param[base_url] = http://www.jcms-journal.com/
     param[journal_id] = jcms
-
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < superseded ; down ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 [to delete] ; 9 ; 2011 >
+       au < superseded ; down ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 [to delete] ; 10 ; 2012 >
+    }
+    
     au < manifest ; exists ; 1996 ; The Journal of Conservation and Museum Studies Volume 1 ; 1 ; 1996 >
     au < manifest ; exists ; 1997 ; The Journal of Conservation and Museum Studies Volume 2-3 ; 2-3 ; 1997 >
     au < manifest ; exists ; 1998 ; The Journal of Conservation and Museum Studies Volume 4-5 ; 4-5 ; 1998 >
@@ -125,7 +146,7 @@
   {
   
     title < 
-      name = The Journal of Open Archaeology Data;
+      name = The Journal of Open Archaeology Data ;
       eissn = 2049-1565 
     >
     
@@ -143,7 +164,7 @@
   {
   
     title < 
-      name = The Journal of Open Research Software;
+      name = The Journal of Open Research Software ;
       eissn = 2049-9647 
     >
     
@@ -158,13 +179,20 @@
   {
   
     title < 
-      name = Opticon1826;
+      name = Opticon1826 ;
       eissn = 2049-8128 
     >
     
     param[base_url] = http://www.opticon1826.com/
     param[journal_id] = opt
-
+    {
+       plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
+       comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
+       au < superseded ; down ; 2010 ; Opticon1826 Volume 9 [to delete] ; 8-9 ; 2010 >
+       au < superseded ; down ; 2011 ; Opticon1826 Volume 10 [to delete] ; 10-11 ; 2011 >
+       au < superseded ; down ; 2012 ; Opticon1826 Volume 10 [to delete] ; 12 ; 2012 >
+    }
+    
     au < manifest ; exists ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
     au < manifest ; exists ; 2007 ; Opticon1826 Volume 2-3 ; 2-3 ; 2007 >
     au < manifest ; exists ; 2008 ; Opticon1826 Volume 4-5 ; 4-5 ; 2008 >
@@ -179,7 +207,7 @@
   {
   
     title < 
-      name = Papers from the Institute of Archaeology;
+      name = Papers from the Institute of Archaeology ;
       eissn = 2041-9015 
     >
     
@@ -189,7 +217,9 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < zapped ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+        au < superseded ; down ; 2009 ; Papers from the Institute of Archaeology Volume 19 [to delete] ; 19 ; 2009 >
+        au < superseded ; down ; 2010 ; Papers from the Institute of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
+        au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
     }
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
@@ -220,7 +250,7 @@
   {
   
     title < 
-      name = Present Pasts;
+      name = Present Pasts ;
       eissn = 1759-2941
     >
     
@@ -230,7 +260,8 @@
     {
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-       au < zapped ; down ; 2011 ; Present Pasts Volume 3 [to delete] ; 3 ; 2011 >
+       au < superseded ; down ; 2010 ; Present Pasts Volume 2 [to delete] ; 2 ; 2010 >
+       au < superseded ; down ; 2011 ; Present Pasts Volume 3 [to delete] ; 3 ; 2011 >
     }
     
     au < manifest ; exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
