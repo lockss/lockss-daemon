@@ -75,7 +75,10 @@ import org.w3c.dom.NodeList;
     implements FileMetadataExtractor {
     
     private Map<String, String> journalTitleMap;
-        
+    
+    // http://clockss-ingest.lockss.org/sourcefiles/wiley-released/2012/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.pdf
+    private Pattern JOURNAL_ID_PATTERN = Pattern.compile("/wiley-released/[0-9]{4}/[A-Z]/([A-Z]+)[0-9]+.+");
+            
     public WileyMetadataExtractor() {
       journalTitleMap = new HashMap<String, String>();
     }
@@ -167,36 +170,55 @@ import org.w3c.dom.NodeList;
       xpathMap.put("/component/header/contentMeta/creators/creator[@creatorRole='author']/personName", MetadataField.FIELD_AUTHOR);
     }
     
-    private String getJournalIdFromUrl(String url) {
+    // extract journal id from cached url.
+    // if not found (url is opaque), then assign a default value.
+    private String getJournalIdFromUrl(String url, ArticleMetadata am) {
       // http://localhost/~lydoan/wiley-released/2012/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.pdf
-      Pattern PATTERN = Pattern.compile("/wiley-released/[0-9]{4}/[A-Z]/([A-Z]+)[0-9]+.+");
+      // Pattern PATTERN = Pattern.compile("/wiley-released/[0-9]{4}/[A-Z]/([A-Z]+)[0-9]+.+");
       Matcher mat;
-      mat = PATTERN.matcher(url);
+      mat = JOURNAL_ID_PATTERN.matcher(url);
       String journalId = null;
       if (mat.find()) {
         journalId = mat.group(1);
+      } else { // journal id (idGroup) not provided by publisher, use default
+        journalId = "Wiley";
+        String issn = am.get(MetadataField.FIELD_ISSN);
+        if (StringUtil.isNullString(issn)) {
+          String eissn = am.get(MetadataField.FIELD_EISSN);
+          if (!StringUtil.isNullString(eissn)) {
+            journalId = journalId + "/ EISSN = " + eissn;
+          } 
+        } else {
+          journalId = journalId + "/ ISSN = " + issn;
+        }
       }
       log.debug3("getJournalIdFromUrl() journalId: " + journalId);
       return (journalId);
     }
     
+    // get journal id from article metadata,
+    // if not found, get it from cached url.
     private String getJournalId(String url, ArticleMetadata am) {
       String journalId = am.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
        // if not found in metadata database, then get it from url
-      if (journalId == null) {
-        journalId = getJournalIdFromUrl(url);
+      if (StringUtil.isNullString(journalId)) {
+        journalId = getJournalIdFromUrl(url, am);
       }
       log.debug3("getJournalId() journalId: " + journalId);
       return (journalId);
     }
     
+    // build journal id/title hash map for use when journal title
+    // not provided by the publisher.
+    // key: journal id (from article metadata or file path name (cached url)
+    // value: journal title
     private void addJournalTitleMap(String journalTitle,
                                     String url, ArticleMetadata am) {
       String journalId = null;
       // if found journal title, enter it to hash map.
-      if (journalTitle != null && journalTitle.length() > 0) {
+      if (!StringUtil.isNullString(journalTitle)) {
         journalId = getJournalId(url, am);
-        if (journalId != null) {
+        if (!StringUtil.isNullString(journalId)) {
           journalTitleMap.put(journalId, journalTitle);
         }
       }
@@ -205,11 +227,11 @@ import org.w3c.dom.NodeList;
     private String resolveJournalTitle(String journalTitle,
                                        String url, ArticleMetadata am) { 
       String journalId = getJournalId(url, am);
-      if (journalId != null) {
+      if (!StringUtil.isNullString(journalId)) {
         // look up in hash map
         journalTitle = journalTitleMap.get(journalId);
         // use journal id for journal title (better than null)
-        if (journalTitle == null || journalTitle.length() <= 0) {
+        if (StringUtil.isNullString(journalTitle)) {
           journalTitle = journalId;
         }
       }
@@ -250,12 +272,12 @@ import org.w3c.dom.NodeList;
         // build journal id/title hash map.
         addJournalTitleMap(journalTitle, url, am);
         // if no journal title
-        if (journalTitle == null || journalTitle.length() <= 0) {
+        if (StringUtil.isNullString(journalTitle)) {
           journalTitle = resolveJournalTitle(journalTitle, url, am);
         }
         log.debug3("extract() journalTitle: " + journalTitle);
         // if still no journal title, do not emit
-        if (journalTitle != null && journalTitle.length() > 0) { 
+        if (!StringUtil.isNullString(journalTitle)) {
           am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
           emitter.emitMetadata(cu, am);
         }
