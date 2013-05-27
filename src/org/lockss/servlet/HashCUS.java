@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.50 2013-05-23 20:43:18 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.50.2.1 2013-05-27 05:38:11 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.*;
 import java.text.*;
 import java.security.*;
 import javax.servlet.http.HttpSession;
@@ -54,18 +55,39 @@ import org.lockss.protocol.*;
 /** Hash a CUS on demand, display the results and filtered input stream
  */
 public class HashCUS extends LockssServlet {
+
+  public static final String PREFIX = Configuration.PREFIX + "hashcus.";
+
   /** If set to a positive number, the record of each filtered stream is
    * truncated to that many bytes.  -1 means no limit */
   static final String PARAM_TRUNCATE_FILETERD_STREAM = 
-    Configuration.PREFIX + "hashcus.truncateFilteredStream";
+    PREFIX + "truncateFilteredStream";
   static final long DEFAULT_TRUNCATE_FILETERD_STREAM = 100 * 1024;
 
-  /** If true, asynchronous hash requests are global - there's a single
+  /** If true, background hash requests are global - there's a single
    * namespace of request IDs.  If false each session has its own namespace
    * and hashes are private to the session */
-  static final String PARAM_GLOBAL_ASYNCH_REQUESTS = 
-    Configuration.PREFIX + "hashcus.globalAsynchRequests";
-  static final boolean DEFAULT_GLOBAL_ASYNCH_REQUESTS = true;
+  static final String PARAM_GLOBAL_BACKGROUND_REQUESTS = 
+    PREFIX + "globalBackgroundRequests";
+  static final boolean DEFAULT_GLOBAL_BACKGROUND_REQUESTS = true;
+
+  private static final String THREADPOOL_PREFIX = PREFIX + "threadPool.";
+
+  /** Max number of background threads running UI-initiated hashes */
+  static final String PARAM_THREADPOOL_SIZE =
+    THREADPOOL_PREFIX + "size";
+  static final int DEFAULT_THREADPOOL_SIZE = 1;
+
+  /** Priority at which background hash threads should run.  Changing this
+   * does not alter the priority of already running hashes. */
+  static final String PARAM_THREADPOOL_PRIORITY =
+    THREADPOOL_PREFIX + "priority";
+  static final int DEFAULT_THREADPOOL_PRIORITY = 5;
+
+  /** Duration after which idle threads will be terminated..  -1 = never */
+  public static final String PARAM_THREADPOOL_KEEPALIVE =
+    THREADPOOL_PREFIX + "keepAlive";
+  static final long DEFAULT_THREADPOOL_KEEPALIVE = 5 * Constants.MINUTE;
 
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
@@ -75,7 +97,7 @@ public class HashCUS extends LockssServlet {
   static final String KEY_VERIFIER = "verifier";
   static final String KEY_HASH_TYPE = "hashtype";
   static final String KEY_RECORD = "record";
-  static final String KEY_ASYNCH = "asynch";
+  static final String KEY_BACKGROUND = "background";
   static final String KEY_ACTION = "action";
   static final String KEY_MIME = "mime";
   static final String KEY_FILE_ID = "file";
@@ -117,6 +139,8 @@ public class HashCUS extends LockssServlet {
   static final String ACTION_HASH = "Hash";
   static final String ACTION_CHECK = "Check Status";
   static final String ACTION_LIST = "List Requests";
+  static final String ACTION_CANCEL = "Cancel";
+  static final String ACTION_DELETE = "Delete";
   static final String ACTION_STREAM = "Stream";
 
   static final String COL2 = "colspan=2";
@@ -130,14 +154,21 @@ public class HashCUS extends LockssServlet {
   static final String FOOT_URL =
     "To specify a whole AU, leave blank or enter <code>LOCKSSAU:</code>.";
   static final String FOOT_BIN =
-    "May cause browser to try to render binary data";
-  static final String FOOT_REQ_ID =
-    "Req Id from previous asynch request in this session";
+    "May cause browser to try to render binary data.";
+  static final String FOOT_REQ_ID_GLOBAL =
+    "Req Id from previous background request.";
+  static final String FOOT_REQ_ID_SESSION =
+    "Req Id from previous background request in this session.";
 
   static Logger log = Logger.getLogger("HashCUS");
 
+  private static boolean isGlobalBackgroundRequests =
+    DEFAULT_GLOBAL_BACKGROUND_REQUESTS;
+  private static ThreadPoolExecutor EXECUTOR;
+  private static int BACK_PRIO = DEFAULT_THREADPOOL_PRIORITY;
+
   private static final Map<String,Data> GLOBAL_REQUESTS =
-    new HashMap<String,Data>();
+    new LinkedHashMap<String,Data>();
 
   private LockssDaemon daemon;
   private PluginManager pluginMgr;
@@ -161,7 +192,7 @@ public class HashCUS extends LockssServlet {
     byte[] challenge;
     byte[] verifier;
     boolean isRecord;
-    boolean isAsynch = false;
+    boolean isBackground = false;
     String alg;
     HashType hType = DEFAULT_HASH_TYPE;
     ResultEncoding resEncoding = DEFAULT_RESULT_ENCODING;
@@ -173,6 +204,7 @@ public class HashCUS extends LockssServlet {
 
     MessageDigest digest;
 
+    Future future;
     String runnerError;
     RunnerStatus runnerStat;
 
@@ -210,6 +242,12 @@ public class HashCUS extends LockssServlet {
     resetVars();
     ddd = new Data(getMachineName());
     String action = getParameter(KEY_ACTION);
+    if (StringUtil.isNullString(action)) {
+      String lAction = getParameter(ACTION_TAG);
+      if (!StringUtil.isNullString(lAction)) {
+	action = lAction;
+      }
+    }
 
     if (ACTION_STREAM.equals(action)) {
       if (sendStream()) {
@@ -222,12 +260,20 @@ public class HashCUS extends LockssServlet {
     } else if (ACTION_LIST.equals(action)) {
       listRequests();
       return;
+    } else if (ACTION_CANCEL.equals(action)) {
+      cancelRequest();
+      listRequests();
+      return;
+    } else if (ACTION_DELETE.equals(action)) {
+      cancelRequest();
+      listRequests();
+      return;
     } else if (ACTION_HASH.equals(action)) {
 
       ddd = checkParams();
       if (ddd.ok) {
 	doit();
-	if (!ddd.isAsynch &&
+	if (!ddd.isBackground &&
 	    errMsg == null &&
 	    ddd.resType == ResultType.Inline &&
 	    isV3(ddd.hType)) {
@@ -255,37 +301,119 @@ public class HashCUS extends LockssServlet {
 
   void listRequests() throws IOException {
     Map<String,Data> map = getRequestMap();
-    if (map.isEmpty()) {
-      errMsg = "No asynchronous requests";
-      displayPage();
+    synchronized (map) {
+      if (map.isEmpty()) {
+	errMsg = "No background requests";
+	displayPage();
+	return;
+      }
+
+      String reqIdName = "req_id";
+      Form frm = new Form(srvURL(myServletDescr()));
+      frm.method("POST");
+      frm.add(new Input(Input.Hidden, ACTION_TAG, ""));
+      frm.add(new Input(Input.Hidden, KEY_REQ_ID, ""));
+
+      Table tbl = new Table(0, "align=center");
+      tbl.newRow();
+      tbl.addHeading("");
+      tbl.addHeading("Req Id");
+      tbl.addHeading("Status");
+      tbl.addHeading("AU");
+      for (Map.Entry<String,Data> ent : map.entrySet()) {
+	tbl.newRow();
+	Data d = ent.getValue();
+
+	tbl.newCell();
+	switch (d.runnerStat) {
+	case Init:
+	case Starting:
+	case Running: 
+	  tbl.add(submitButton("Cancel", ACTION_CANCEL,
+			       KEY_REQ_ID, ent.getKey()));
+	  break;
+	case Done:
+	case Error:
+	  tbl.add(submitButton("Delete", ACTION_DELETE,
+			       KEY_REQ_ID, ent.getKey()));
+	  break;
+	default:
+	  tbl.add("");
+	  break;
+	}
+
+	tbl.newCell();
+	Properties p = new Properties();
+	p.setProperty(KEY_ACTION, ACTION_CHECK);
+	p.setProperty(KEY_REQ_ID, ent.getKey());
+	tbl.add(srvLink(myServletDescr(),
+			div("RequestId", ent.getKey()),
+			p));
+
+	tbl.newCell();
+	String statStr = div("RequestStatus", d.runnerStat.toString());
+	if (d.runnerStat == RunnerStatus.Done) {
+	  statStr = fileLink(statStr, d.blockFile, "HashFile", false);
+	}
+	tbl.add(statStr);
+
+	tbl.newCell();
+	tbl.add(d.au.getName());
+      }
+      Page page = newPage();
+      layoutErrorBlock(page);
+      ServletUtil.layoutExplanationBlock(page, "Background HashCUS requests");
+      addJavaScript(page);
+
+      Block centeredBlock = new Block(Block.Center);
+      centeredBlock.add("<font size=-1>");
+      centeredBlock.add(srvLink(myServletDescr(), "Refresh",
+				PropUtil.fromArgs(KEY_ACTION, ACTION_LIST)));
+      centeredBlock.add("&nbsp;&nbsp;");
+      centeredBlock.add(srvLink(myServletDescr(), "Back to HashCUS"));
+
+      centeredBlock.add("</font>");
+      page.add(centeredBlock);
+
+      frm.add(tbl);
+      page.add(frm);
+      endPage(page);
+    }
+  }
+
+  // Cancel or Delete
+  void cancelRequest() {
+    String req_id = getParameter(KEY_REQ_ID);
+    if (StringUtil.isNullString(req_id)) {
+      errMsg = "Must supply req_id";
+      return;
+    }      
+    Data backgroundData = getData(req_id);
+    if (backgroundData == null) {
+      errMsg = "No such background hash: " + req_id;
       return;
     }
-    Table tbl = new Table(0, "align=center");
-    tbl.newRow();
-    tbl.addHeading("Req Id");
-    tbl.addHeading("Status");
-    tbl.addHeading("AU");
-    for (Map.Entry<String,Data> ent : map.entrySet()) {
-      tbl.newRow();
-      Data d = ent.getValue();
-      tbl.newCell();
-      Properties p = new Properties();
-      p.setProperty(KEY_ACTION, ACTION_CHECK);
-      p.setProperty(KEY_REQ_ID, ent.getKey());
-      tbl.add(srvLink(myServletDescr(), ent.getKey(), concatParams(p)));
-      tbl.newCell();
-      String statStr = d.runnerStat.toString();
-      if (d.runnerStat == RunnerStatus.Done) {
-	statStr = fileLink(statStr, d.blockFile, false);
+    switch (backgroundData.runnerStat) {
+    case Init:
+    case Starting:
+    case Running: 
+      Future fut = backgroundData.future;
+      if (fut != null) {
+	fut.cancel(true);
       }
-      tbl.add(statStr);
-      tbl.newCell();
-      tbl.add(d.au.getName());
     }
-    Page page = newPage();
-    layoutErrorBlock(page);
-    page.add(tbl);
-    endPage(page);
+    delFile(backgroundData.blockFile);
+    delFile(backgroundData.recordFile);
+
+    delRequest(backgroundData);
+    statusMsg = "Background hash " + backgroundData.reqId + " deleted";
+
+  }
+
+  private void delFile(File f) {
+    if (f != null) {
+      f.delete();
+    }
   }
 
   void checkStatus() {
@@ -295,13 +423,13 @@ public class HashCUS extends LockssServlet {
       errMsg = "Must supply req_id";
       return;
     }      
-    Data asynchData = getData(req_id);
-    if (asynchData == null) {
+    Data backgroundData = getData(req_id);
+    if (backgroundData == null) {
       ddd.runnerStat = RunnerStatus.RequestError;
       errMsg = "No such background hash: " + req_id;
       return;
     }
-    ddd = asynchData;
+    ddd = backgroundData;
     RunnerStatus stat = ddd.runnerStat;
     switch (stat) {
     case Done:
@@ -358,7 +486,7 @@ public class HashCUS extends LockssServlet {
     if (StringUtil.isNullString(params.alg)) {
       params.alg = LcapMessage.getDefaultHashAlgorithm();
     }
-    params.isAsynch = (getParameter(KEY_ASYNCH) != null);
+    params.isBackground = (getParameter(KEY_BACKGROUND) != null);
     String hTypeStr = getParameter(KEY_HASH_TYPE);
     if (StringUtil.isNullString(hTypeStr)) {
       params.hType = DEFAULT_HASH_TYPE;
@@ -467,8 +595,8 @@ public class HashCUS extends LockssServlet {
       return params;
     }
 
-    if (params.isAsynch && params.resType == ResultType.Inline) {
-      errMsg = "Cannot select both Asynch and Inline result";
+    if (params.isBackground && params.resType == ResultType.Inline) {
+      errMsg = "Cannot select both Background and Inline result";
       return params;
     }
 
@@ -513,13 +641,9 @@ public class HashCUS extends LockssServlet {
   private Element makeQueryResult() {
     Composite comp = new Composite();
     if (ddd.runnerStat != null) {
-      comp.add(resultDiv("RequestStatus", ddd.runnerStat.toString()));
+      comp.add(div("RequestStatus", ddd.runnerStat.toString(), false));
     }
     return comp;
-  }
-
-  private String resultDiv(String id, String value) {
-    return "<div style=\"display:none\" id=\"" + id + "\">" + value + "</div>";
   }
 
   private void returnDirectResponse() throws IOException {
@@ -566,17 +690,35 @@ public class HashCUS extends LockssServlet {
     }
   }
 
+  private String div(String id, String value) {
+    return div(id, value, true);
+  }
+
+  private String div(String id, String value, boolean visible) {
+    if (visible) {
+      return "<div id=\""
+	+ id + "\">" + value + "</div>";
+    } else {
+      return "<div style=\"display:none\" id=\""
+	+ id + "\">" + value + "</div>";
+    }
+  }
+
   private String fileLink(String text, File file, boolean isBinary) {
+    return fileLink(text, file, null, isBinary);
+  }
+
+  private String fileLink(String text, File file, String id, boolean isBinary) {
     String fileId = getSessionObjectId(file.toString());
     Properties p = new Properties();
     p.setProperty(KEY_ACTION, ACTION_STREAM);
     p.setProperty(KEY_FILE_ID, fileId);
     if (isBinary) {
       p.setProperty(KEY_MIME, "application/octet-stream");
-      return srvLink(myServletDescr(), text, concatParams(p));
+      return srvLinkWithId(myServletDescr(), text, id, p);
     } else {
       p.setProperty(KEY_MIME, "text/plain");
-      return srvLink(myServletDescr(), text, concatParams(p));
+      return srvLinkWithId(myServletDescr(), text, id, p);
     }
   }
 
@@ -700,10 +842,16 @@ public class HashCUS extends LockssServlet {
 			ddd.hType == HashType.V3File));
 
     tbl.newRow();
-    tbl.newCell(COL2CENTER);
+    tbl.newCell();
+    tbl.newCell();
+    tbl.add("&nbsp;&nbsp;");
     tbl.add(checkBox("Record filtered stream", "true", KEY_RECORD,
 		     ddd.isRecord));
-    tbl.add(checkBox("Asynchronous", "false", KEY_ASYNCH, ddd.isAsynch));
+    tbl.newRow();
+    tbl.newCell();
+    tbl.newCell();
+    tbl.add("&nbsp;&nbsp;");
+    tbl.add(checkBox("Background", "false", KEY_BACKGROUND, ddd.isBackground));
 
     centeredBlock.add(tbl);
     centeredBlock.add("<br>");
@@ -717,12 +865,14 @@ public class HashCUS extends LockssServlet {
     tbl2.newCell();
     tbl2.add("&nbsp;");
 
-    addInputRow(tbl2, "Req Id" + addFootnote(FOOT_REQ_ID),
+    addInputRow(tbl2, "Req Id" + addFootnote(isGlobalBackgroundRequests
+					     ? FOOT_REQ_ID_GLOBAL
+					     : FOOT_REQ_ID_SESSION),
 		KEY_REQ_ID, 20, ddd.reqId);
     centeredBlock.add(tbl2);
 
     if (!StringUtil.isNullString(ddd.reqId)) {
-      centeredBlock.add(resultDiv("RequestId", ddd.reqId.toString()));
+      centeredBlock.add(div("RequestId", ddd.reqId.toString(), false));
     }
 
     Input submitC = new Input(Input.Submit, KEY_ACTION, ACTION_CHECK);
@@ -751,7 +901,7 @@ public class HashCUS extends LockssServlet {
 
   private void doit() {
     HashRunner runner = new HashRunner(ddd);
-    if (ddd.isAsynch) {
+    if (ddd.isBackground) {
       forkDoit(runner);
     } else {
       doit(runner);
@@ -775,10 +925,49 @@ public class HashCUS extends LockssServlet {
     }
   }
 
+  private static synchronized ThreadPoolExecutor getExecutor() {
+    if (EXECUTOR == null) {
+      Configuration config = ConfigManager.getCurrentConfig();
+      int poolsize = config.getInt(PARAM_THREADPOOL_SIZE,
+				   DEFAULT_THREADPOOL_SIZE);
+      long keepalive = config.getTimeInterval(PARAM_THREADPOOL_KEEPALIVE,
+					      DEFAULT_THREADPOOL_KEEPALIVE);
+      EXECUTOR = new ThreadPoolExecutor(poolsize, poolsize,
+					keepalive, TimeUnit.MILLISECONDS,
+					new LinkedBlockingQueue<Runnable>());
+      EXECUTOR.allowCoreThreadTimeOut(true);
+    }
+    return EXECUTOR;
+  }
+
+  private static synchronized void setExecutorParams(Configuration config) {
+    if (EXECUTOR != null) {
+      int poolsize = config.getInt(PARAM_THREADPOOL_SIZE,
+				   DEFAULT_THREADPOOL_SIZE);
+      long keepalive = config.getTimeInterval(PARAM_THREADPOOL_KEEPALIVE,
+					      DEFAULT_THREADPOOL_KEEPALIVE);
+      EXECUTOR.setMaximumPoolSize(poolsize);
+      EXECUTOR.setCorePoolSize(poolsize);
+      EXECUTOR.setKeepAliveTime(keepalive, TimeUnit.MILLISECONDS);
+    }
+    BACK_PRIO = config.getInt(PARAM_THREADPOOL_PRIORITY,
+			      DEFAULT_THREADPOOL_PRIORITY);
+  }
+
+  /** Called by ServletUtil.setConfig() */
+  static void setConfig(Configuration config,
+                        Configuration oldConfig,
+                        Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      setExecutorParams(config);
+    }
+    isGlobalBackgroundRequests =
+      config.getBoolean(PARAM_GLOBAL_BACKGROUND_REQUESTS,
+			DEFAULT_GLOBAL_BACKGROUND_REQUESTS);
+  }
+
   private Map<String,Data> getRequestMap() {
-    if (CurrentConfig.getBooleanParam(PARAM_GLOBAL_ASYNCH_REQUESTS,
-				      DEFAULT_GLOBAL_ASYNCH_REQUESTS)) {
-      log.critical("returning global map: " + GLOBAL_REQUESTS);
+    if (isGlobalBackgroundRequests) {
       return GLOBAL_REQUESTS;
     } else {
       HttpSession session = getSession();
@@ -814,7 +1003,17 @@ public class HashCUS extends LockssServlet {
   }
 
   private Data getData(String reqId) {
-    return getRequestMap().get(reqId);
+    Map<String,Data> map = getRequestMap();
+    synchronized (map) {
+      return map.get(reqId);
+    }
+  }
+
+  private void delRequest(Data d) {
+    Map<String,Data> map = getRequestMap();
+    synchronized (map) {
+      map.remove(d.reqId);
+    }
   }
 
   private void forkDoit(final HashRunner runner) {
@@ -823,11 +1022,12 @@ public class HashCUS extends LockssServlet {
       LockssRunnable runnable =
 	new LockssRunnable(AuUtil.getThreadNameFor("HashCUS", ddd.au)) {
 	  public void lockssRun() {
+	    setPriority(BACK_PRIO);
 	    runner.doit();
+	    setThreadName("HashCUS: idle");
 	  }};
-      Thread th = new Thread(runnable);
-      th.start();
-      statusMsg = "Started background hash, Req Id: " + ddd.reqId;
+      ddd.future = getExecutor().submit(runnable);
+      statusMsg = "Queued background hash, Req Id: " + ddd.reqId;
     } catch (RuntimeException e) {
       log.warning("forkDoit()", e);
       errMsg = "Error starting background hash thread: " + e.toString();
@@ -870,7 +1070,7 @@ public class HashCUS extends LockssServlet {
     tbl.newRow();
     tbl.addHeading("Hash Result", COL2);
 
-    if (ddd.isAsynch) {
+    if (ddd.isBackground) {
       RunnerStatus stat = ddd.runnerStat;
       addResultRow(tbl, "Status", stat.toString());
     }
@@ -886,7 +1086,7 @@ public class HashCUS extends LockssServlet {
       tbl.newCell();
       String link = fileLink("HashFile", ddd.blockFile, false);
       tbl.add(link);
-      tbl.add(resultDiv("HashFile", link));
+      tbl.add(div("HashFile", link, false));
     }
     addRecordFile(tbl);
     return tbl;
@@ -914,7 +1114,6 @@ public class HashCUS extends LockssServlet {
 
     HashRunner setStatus(RunnerStatus stat) {
       ddd.runnerStat = stat;
-      log.critical("setStatus: " + stat);
       return this;
     }
 
