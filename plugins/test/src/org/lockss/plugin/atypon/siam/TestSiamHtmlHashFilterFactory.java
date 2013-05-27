@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.2 2013-05-27 18:23:52 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:10:07 alexandraohlson Exp $
  */
 /*
 
@@ -245,7 +245,32 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
   private static final String issueNavFiltered =
       "     <div id=\"issueNav\"> " +
           " <div id=\"coverDate\">";     
-
+  
+  private static final String changeableCommentsHtml =
+      "<label for=\"markall\">Select All</label>" +
+          "<hr/>" +
+          "<!--totalCount14--><!--modified:1368461028000--><div>" +
+          "<div><div id=\"art120871894\" class=\"notSelectedRow\">";
+  private static final String changeableCommentsFiltered=
+      "<label for=\"markall\">Select All</label>" +
+          "<hr/>" +
+          "<div>" +
+          "<div><div id=\"art120871894\" class=\"notSelectedRow\">";
+  
+  private static final String adChunkHtml=
+      "</div>" +
+          "<div class=\"mainAd\">" +
+          "<div><!-- placeholder id=null, description=Site Ad 1 --></div>" +
+          "<div><!-- placeholder id=null, description=Site Ad 2 --></div>" +
+          "<div><!-- placeholder id=null, description=Site Ad 3 --></div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "<div id=\"footer\"></div>";
+  private static final String adChunkFiltered=
+      "</div>" +
+          "</div>" +
+          "</div>";
 
   public void testCitations() throws Exception {
     InputStream inA;
@@ -293,6 +318,24 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(issueNavHtml),
         ENC);
     assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));
+
+  }
+  
+  public void testComments() throws Exception {
+    InputStream inA;
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(changeableCommentsHtml),
+        ENC);
+    assertEquals(changeableCommentsFiltered,StringUtil.fromInputStream(inA));
+
+  }
+  
+  public void testAds() throws Exception {
+    InputStream inA;
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(adChunkHtml),
+        ENC);
+    assertEquals(adChunkFiltered,StringUtil.fromInputStream(inA));
 
   }
 

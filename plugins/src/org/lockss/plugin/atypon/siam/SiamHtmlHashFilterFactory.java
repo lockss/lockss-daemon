@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.2 2013-05-27 18:23:52 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:10:07 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.siam;
 
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -42,11 +43,16 @@ import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
 import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.ListUtil;
+import org.lockss.util.ReaderInputStream;
 
 public class SiamHtmlHashFilterFactory implements FilterFactory {
 
@@ -71,7 +77,9 @@ public class SiamHtmlHashFilterFactory implements FilterFactory {
         // Contains copyright year
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains argument in rss href that is time dependent, but none of this is needed for hash
-        HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),        
+        HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+        // proactive removal of possible ad location although it's currently empty
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),     
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             // on a TOC, side panel items are not obviously marked as such
@@ -91,9 +99,19 @@ public class SiamHtmlHashFilterFactory implements FilterFactory {
           }
         }
     };
-    return new HtmlFilterInputStream(in,
+    InputStream filtered = new HtmlFilterInputStream(in,
         encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    /* comments contain dates specific stuff, like
+     * <!--totalCount14--><!--modified:1368461028000-->
+     * we aren't currently using comments for any other search/replace, so just remove them all
+     */
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(
+        new TagPair("<!--","-->")
+        ));
+    return new ReaderInputStream(tagFilter);
 
   }
 }
