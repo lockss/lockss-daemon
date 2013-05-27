@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.2 2013-05-02 20:33:08 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:11:43 alexandraohlson Exp $
  */
 
 /*
@@ -44,9 +44,12 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
 import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -101,8 +104,28 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
             new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
         
         Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-        return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+        /* comments contain dates specific stuff, like
+         * <!--totalCount14--><!--modified:1368461028000-->
+         * we aren't currently using comments for any other search/replace, so just remove them all
+         */
+        Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+            ListUtil.list(
+            new TagPair("<!--","-->")
+            ));
+        return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
 
   }
 
 }
+
+/*
+ *     InputStream filtered = new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    Reader filteredReader = FilterUtil.getReader(filtered,encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(   
+            new TagPair("<!--", "-->")
+            ));   
+    return new ReaderInputStream(tagFilter);
+ * */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.2 2013-05-02 20:33:08 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:11:43 alexandraohlson Exp $
  */
 /*
 
@@ -65,7 +65,7 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
           "</div>";
   
 private static final String citedByFiltered = 
-"<!-- /fulltext content --></div>";
+"</div>";
   
   /* copyright in the footer of pages */
 private static final String copyrightHtml = 
@@ -106,10 +106,10 @@ private static final String copyrightHtml =
           "Institutional Administrator" +
           "</a>|<a href=\"/page/about/mobile\">Mobile</a>  |Help</a> " +
           " </span>" +
-          "</div><!--nothing left-->";
+          "</div>Nothing Left";
 
   private static final String identityBarFiltered =
-      "<!--nothing left-->";
+      "Nothing Left";
 
   /* script call that generates institution specific thingie */
   private static final String scriptHtml = 
@@ -210,9 +210,34 @@ private static final String copyrightHtml =
           "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
           "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
           "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
+      
+      private static final String changeableCommentsHtml =
+          "<div id=\"tocContent\"><!--totalCount11--><!--modified:1368793519000--><h2 class=\"tocHeading\">" +
+          "<span class=\"subj-group\">ARTICLES </span></h2><table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1501</td>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\" class=\"tocCheck\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.1175/XXX1234\"/>" +
+          "<img src=\"/templates/jsp/_style2/_AP/images/access_free.gif\" alt=\"open access\" title=\"open access\" class=\"accessIcon\" /></td>" +
+          "<td valign=\"top\" width=\"85%\"><div class=\"art_title\">A Big Long Title Here" +
+          "</div>" +
+          "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
+          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/XXX1234\">Abstract</a>" +
+          "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/XXX1234\">Full Text</a>";
+      private static final String changeableCommentsFiltered =
+          "<div id=\"tocContent\"><h2 class=\"tocHeading\">" +
+          "<span class=\"subj-group\">ARTICLES </span></h2><table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1501</td>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\" class=\"tocCheck\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.1175/XXX1234\"/>" +
+          "<img src=\"/templates/jsp/_style2/_AP/images/access_free.gif\" alt=\"open access\" title=\"open access\" class=\"accessIcon\" /></td>" +
+          "<td valign=\"top\" width=\"85%\"><div class=\"art_title\">A Big Long Title Here" +
+          "</div>" +
+          "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
+          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/XXX1234\">Abstract</a>" +
+          "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/XXX1234\">Full Text</a>";
 
-          
-          /* subscription pricing in left panel which is generic, so hash out individual products */
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -248,5 +273,9 @@ private static final String copyrightHtml =
     inB = fact.createFilteredInputStream(mau, new StringInputStream(scanTableHtml2),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(changeableCommentsHtml),
+        ENC);
+    assertEquals(changeableCommentsFiltered,StringUtil.fromInputStream(inA));
   }
 }
