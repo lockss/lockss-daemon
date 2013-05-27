@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRunnable.java,v 1.8 2008-02-15 09:08:52 tlipkis Exp $
+ * $Id: TestLockssRunnable.java,v 1.8.90.1 2013-05-27 05:37:12 tlipkis Exp $
  */
 
 /*
@@ -150,6 +150,26 @@ public class TestLockssRunnable extends LockssTestCase {
     assertEquals("Test", thr.getName());
     runabl.setThreadName("newname");
     assertEquals("newname", thr.getName());
+    runSem.give();
+  }
+
+  public void testSetPriority() throws Exception {
+    TimeBase.setReal();
+    TestRunnable runabl = new TestRunnable("Test");
+    try {
+      runabl.setPriority(4);
+      fail("setPriority of unstarted LockssRunnable should throw");
+    } catch (IllegalStateException e) {
+    }
+    assertFalse(runabl.waitExited(Deadline.EXPIRED));
+    runSem = new SimpleBinarySemaphore();
+    Thread thr = start(runabl);
+    assertTrue(runabl.waitRunning(Deadline.in(TIMEOUT_SHOULDNT)));
+    assertTrue(thr.isAlive());
+    runabl.setPriority(4);
+    assertEquals(4, thr.getPriority());
+    runabl.setPriority(3);
+    assertEquals(3, thr.getPriority());
     runSem.give();
   }
 
