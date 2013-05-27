@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.22 2008-02-15 09:08:52 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.23 2013-05-27 05:38:40 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     return waitExited(Deadline.MAX);
   }
 
-  /** Set the priority of the thread from a parameter value
+  /** Set the priority of the thread from a parameter value.  Must not be
+   * called before the run() method is called.
    * @param name Used to derive a configuration parameter name
    * (org.lockss.thread.<i>name</i>.priority) whose value is the priority
    * @param defaultPriority the default priority if the config param has no
@@ -194,7 +195,19 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
       return;
     }
     log.debug2("Setting priority of " + getName() + " thread to " + prio);
+    setPriority(prio);
+  }
+
+  /** Set the priority of the thread to a value.  Must not be
+   * called before the run() method is called.
+   * @param prio the priority
+   */
+  public void setPriority(int prio) throws IllegalStateException {
+    if (thread == null) {
+      throw new IllegalStateException("Must be called only while running");
+    }
     thread.setPriority(prio);
+    log.critical("Set thread prio to " + prio + ", " + thread.getName());
   }
 
   /** Start a watchdog timer that will expire if not poked for interval
