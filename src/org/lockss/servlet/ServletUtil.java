@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.82 2013-05-22 23:30:06 fergaloy-sf Exp $
+ * $Id: ServletUtil.java,v 1.83 2013-05-27 05:38:57 tlipkis Exp $
  */
 
 /*
@@ -369,6 +369,9 @@ public class ServletUtil {
 			       Configuration.Differences diffs) {
     if (diffs.contains(ServeContent.PREFIX)) {
       ServeContent.setConfig(config, oldConfig, diffs);
+    }
+    if (diffs.contains(HashCUS.PREFIX)) {
+      HashCUS.setConfig(config, oldConfig, diffs);
     }
     if (diffs.contains(PREFIX)) {
       thirdPartyLogo = config.get(PARAM_THIRD_PARTY_LOGO_IMAGE);
