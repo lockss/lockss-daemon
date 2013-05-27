@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:43 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.2 2013-05-27 18:23:52 alexandraohlson Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class SiamHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
         // Contains copyright year
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Contains argument in rss href that is time dependent, but none of this is needed for hash
+        HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),        
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             // on a TOC, side panel items are not obviously marked as such

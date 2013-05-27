@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:43 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.2 2013-05-27 18:23:52 alexandraohlson Exp $
  */
 /*
 
@@ -222,6 +222,29 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "</div>" +
           "</div>";
+  
+  private static final String issueNavHtml =
+      "     <div id=\"issueNav\">" +
+          " <div id=\"prevNextNav\">" +
+          "     <div id=\"issueSearch\">" +
+          "         <form action=\"/action/doSearch\" method=\"get\"><input type=\"text\" name=\"searchText\" value=\"\" size=\"17\" />" +
+          "             <input type=\"hidden\" name=\"issue\" value=\"4\" />" +
+          "             <input type=\"hidden\" name=\"journalCode\" value=\"mmsubt\" />" +
+          "             <input type=\"hidden\" name=\"volume\" value=\"10\" />" +
+          "             <input type=\"hidden\" name=\"filter\" value=\"issue\" />" +
+          "             <input type=\"submit\" value=\"Search Issue\" /></form>" +
+          "     </div>" +
+          "     <a href=\"javascript:toggleSlide('issueSearch')\">Search Issue</a> |" +      
+          "        <img src=\"/templates/jsp/_style2/_pagebuilder/_c3/images/rss_32.png\" />" +
+          "<a href=\"http://epubs.siam.org/action/showFeed?ui=0&mi=3d6gcp&ai=s9&jc=mmsubt&type=etoc&feed=rss\">RSS</a>" +     
+          "    <br/>" +      
+          "        <a href=\"/toc/mmsubt/10/3\">Previous Issue</a>" +           
+          "        <a href=\"/toc/mmsubt/11/1\"> Next Issue</a>" +      
+          " </div>" +
+          " <div id=\"coverDate\">";
+  private static final String issueNavFiltered =
+      "     <div id=\"issueNav\"> " +
+          " <div id=\"coverDate\">";     
 
 
   public void testCitations() throws Exception {
@@ -262,6 +285,15 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(browseVolumes),
         ENC);
     assertEquals(browseVolumesFiltered,StringUtil.fromInputStream(inA));
+  }
+  
+  public void testNavSearch() throws Exception {
+    InputStream inA;
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(issueNavHtml),
+        ENC);
+    assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));
+
   }
 
 }
