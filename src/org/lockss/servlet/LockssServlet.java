@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.134 2013-05-23 09:44:48 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.135 2013-05-27 05:39:06 tlipkis Exp $
  */
 
 /*
@@ -670,6 +670,16 @@ public abstract class LockssServlet extends HttpServlet
   String srvLink(ServletDescr d, String text, Properties params) {
     return new Link(srvURL(d, params),
 		    text).toString();
+  }
+
+  /** Return a link to a servlet with params */
+  String srvLinkWithId(ServletDescr d, String text,
+		       String id, Properties params) {
+    Link link = new Link(srvURL(d, params), text);
+    if (!StringUtil.isNullString(id)) {
+      link.attribute("id", id);
+    }
+    return link.toString();
   }
 
   /** Return an absolute link to a servlet with params */
