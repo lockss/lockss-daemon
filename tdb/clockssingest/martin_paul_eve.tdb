@@ -35,6 +35,8 @@
      param[base_url] = https://www.pynchon.net/
      param[journal_id] = owap
      implicit < status ; status2 ; year ; param[year] ; name ; volume >
+     
+     comment[error] = because of the url with https, production machines are not able to crawl till Tom fixes.
 
      au < released ; crawling ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >
      au < expected ; exists ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >

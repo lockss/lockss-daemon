@@ -6,6 +6,8 @@
     info[tester] = 0
   >
 
+  comment[error] = because of the url with https, production machines are not able to crawl till daemon fix.
+
   param[base_url] = https://www.thieme-connect.de/
   plugin = needs.plugin
   implicit < status ; status2 ; name ; year ; param[year] >
