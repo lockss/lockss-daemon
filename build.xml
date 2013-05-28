@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.339 2013-05-23 09:49:48 tlipkis Exp $
+ $Id: build.xml,v 1.339.2.1 2013-05-28 18:41:40 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2249,6 +2249,7 @@ Test results in ${test.results}
       <dojunit cpid="all.test.run.classpath" usefile="false">
        <junitelem>
        <batchtest fork="${fork}">
+	 <fileset refid="test.one.filesetid"/>
 	 <fileset refid="test.one.plugin.filesetid"/>
        </batchtest>
        </junitelem>
