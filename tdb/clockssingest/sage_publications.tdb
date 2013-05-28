@@ -38428,7 +38428,7 @@
   
         comment[notmoved] = not yet moved to Sage.
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://cri.sagepub.com/
   
         au < doNotProcess ; exists ; 2001 ; Clinical Risk Volume 7 ; 7 ; >
         au < doNotProcess ; exists ; 2002 ; Clinical Risk Volume 8 ; 8 ; >
