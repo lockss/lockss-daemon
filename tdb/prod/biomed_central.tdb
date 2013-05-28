@@ -4791,6 +4791,19 @@
 
     {
       title <
+        name = Journal of Pharmaceutical Policy and Practice ;
+        eissn = 2052-3211
+      >
+
+      param[base_url] = http://www.joppp.org
+      param[journal_issn] = 2052-3211
+
+      au < expected ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = Journal of Physiological Anthropology ;
         issn = 1880-6805 ;
         issnl = 1880-6805
