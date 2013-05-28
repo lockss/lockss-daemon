@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionOperationStatus.java,v 1.1 2013-05-22 23:40:20 fergaloy-sf Exp $
+ * $Id: SubscriptionOperationStatus.java,v 1.1.2.1 2013-05-28 17:45:53 fergaloy-sf Exp $
  */
 
 /*
@@ -31,6 +31,9 @@
  */
 package org.lockss.subscription;
 
+import java.util.ArrayList;
+import java.util.List;
+import org.lockss.remote.RemoteApi.BatchAuStatus;
 
 /**
  * Status representation of a subscription operation.
@@ -38,80 +41,192 @@ package org.lockss.subscription;
  * @author Fernando Garcia-Loygorri
  */
 public class SubscriptionOperationStatus {
-  private int failureAuAddCount = 0;
-  private int failureSubscriptionAddCount = 0;
-  private int failureSubscriptionUpdateCount = 0;
-  private int successAuAddCount = 0;
-  private int successSubscriptionAddCount = 0;
-  private int successSubscriptionUpdateCount = 0;
+  /*
+   * The list of status entries resulting from the operation.
+   */
+  private List<StatusEntry> statusEntries = new ArrayList<StatusEntry>();
 
-  public int getFailureAuAddCount() {
-    return failureAuAddCount;
+  /**
+   * Provides the list of status entries resulting from the operation.
+   * 
+   * @return a List<StatusEntry> with the status entries.
+   */
+  public List<StatusEntry> getStatusEntries() {
+    return statusEntries;
   }
-  public void addFailureAuAdd(int count) {
-    setFailureAuAddCount(getFailureAuAddCount() + count);
+
+  /**
+   * Adds a new empty status entry.
+   * 
+   * @return a StatusEntry with the status entry just created.
+   */
+  public StatusEntry addStatusEntry() {
+    StatusEntry entry = new StatusEntry();
+    statusEntries.add(entry);
+
+    return entry;
   }
-  private void setFailureAuAddCount(int failureAuAddCount) {
-    this.failureAuAddCount = failureAuAddCount;
+
+  /**
+   * Adds a new successful status entry.
+   * 
+   * @param publicationName
+   *          A String with the name of the publication involved in the
+   *          subscription.
+   * @param auStatus
+   *          A BatchAuStatus with the status resulting from configuring
+   *          archival units.
+   * @return a StatusEntry with the status entry just created.
+   */
+  public StatusEntry addStatusEntry(String publicationName,
+      BatchAuStatus auStatus) {
+    StatusEntry entry = new StatusEntry(publicationName, auStatus);
+    statusEntries.add(entry);
+
+    return entry;
   }
-  public int getFailureSubscriptionAddCount() {
-    return failureSubscriptionAddCount;
-  }
-  public void addFailureSubscriptionAdd(int count) {
-    setFailureSubscriptionAddCount(getFailureSubscriptionAddCount() + count);
-  }
-  private void setFailureSubscriptionAddCount(int failureSubscriptionAddCount) {
-    this.failureSubscriptionAddCount = failureSubscriptionAddCount;
-  }
-  public int getFailureSubscriptionUpdateCount() {
-    return failureSubscriptionUpdateCount;
-  }
-  public void addFailureSubscriptionUpdate(int count) {
-    setFailureSubscriptionUpdateCount(getFailureSubscriptionUpdateCount()
-	+ count);
-  }
-  private void setFailureSubscriptionUpdateCount(int
-      failureSubscriptionUpdateCount) {
-    this.failureSubscriptionUpdateCount = failureSubscriptionUpdateCount;
-  }
-  public int getSuccessAuAddCount() {
-    return successAuAddCount;
-  }
-  public void addSuccessAuAdd(int count) {
-    setSuccessAuAddCount(getSuccessAuAddCount() + count);
-  }
-  private void setSuccessAuAddCount(int successAuAddCount) {
-    this.successAuAddCount = successAuAddCount;
-  }
-  public int getSuccessSubscriptionAddCount() {
-    return successSubscriptionAddCount;
-  }
-  public void addSuccessSubscriptionAdd(int count) {
-    setSuccessSubscriptionAddCount(getSuccessSubscriptionAddCount() + count);
-  }
-  private void setSuccessSubscriptionAddCount(int successSubscriptionAddCount) {
-    this.successSubscriptionAddCount = successSubscriptionAddCount;
-  }
-  public int getSuccessSubscriptionUpdateCount() {
-    return successSubscriptionUpdateCount;
-  }
-  public void addSuccessSubscriptionUpdate(int count) {
-    setSuccessSubscriptionUpdateCount(getSuccessSubscriptionUpdateCount()
-	+ count);
-  }
-  private void setSuccessSubscriptionUpdateCount(int
-      successSubscriptionUpdateCount) {
-    this.successSubscriptionUpdateCount = successSubscriptionUpdateCount;
+
+  /**
+   * Adds a new fully-populated status entry.
+   * 
+   * @param publicationName
+   *          A String with the name of the publication involved in the
+   *          subscription.
+   * @param susbcriptionSuccess
+   *          A boolean with the indication of whether the processing of the
+   *          subscription succeeded.
+   * @param subscriptionErrorMessage
+   *          A String with an error message if the processing of the
+   *          subscription failed.
+   * @param auStatus
+   *          A BatchAuStatus with the status resulting from configuring
+   *          archival units.
+   * @return a StatusEntry with the status entry just created.
+   */
+  public StatusEntry addStatusEntry(String publicationName,
+      boolean susbcriptionSuccess, String subscriptionErrorMessage,
+      BatchAuStatus auStatus) {
+    StatusEntry entry = new StatusEntry(publicationName, susbcriptionSuccess,
+	subscriptionErrorMessage, auStatus);
+    statusEntries.add(entry);
+
+    return entry;
   }
 
   @Override
   public String toString() {
-    return "SubscriptionOperationStatus [failureAuAddCount=" + failureAuAddCount
-	+ ", failureSubscriptionAddCount=" + failureSubscriptionAddCount
-	+ ", failureSubscriptionUpdateCount=" + failureSubscriptionUpdateCount
-	+ ", successAuAddCount=" + successAuAddCount
-	+ ", successSubscriptionAddCount=" + successSubscriptionAddCount
-	+ ", successSubscriptionUpdateCount=" + successSubscriptionUpdateCount
-	+ "]";
+    return "SubscriptionOperationStatus [statusEntries=" + statusEntries + "]";
+  }
+
+  /**
+   * Status representation of the operation on one subscription.
+   * 
+   * @author Fernando Garcia-Loygorri
+   */
+  public static class StatusEntry {
+    /*
+     * The name of the publication involved in the subscription.
+     */
+    private String publicationName;
+
+    /*
+     * The indication of whether the processing of the subscription succeeded.
+     */
+    private boolean susbcriptionSuccess = true;
+
+    /*
+     * The error message if the processing of the subscription failed.
+     */
+    private String subscriptionErrorMessage = null;
+
+    /*
+     * The status resulting from configuring archival units.
+     */
+    private BatchAuStatus auStatus;
+
+    /**
+     * Default constructor.
+     */
+    StatusEntry() {
+    }
+
+    /**
+     * Constructor of a new successful status entry.
+     * 
+     * @param publicationName
+     *          A String with the name of the publication involved in the
+     *          subscription.
+     * @param auStatus
+     *          A BatchAuStatus with the status resulting from configuring
+     *          archival units.
+     */
+    StatusEntry(String publicationName, BatchAuStatus auStatus) {
+      this.publicationName = publicationName;
+      this.auStatus = auStatus;
+    }
+
+    /**
+     * Constructor of a new fully-populated status entry.
+     * 
+     * @param publicationName
+     *          A String with the name of the publication involved in the
+     *          subscription.
+     * @param susbcriptionSuccess
+     *          A boolean with the indication of whether the processing of the
+     *          subscription succeeded.
+     * @param subscriptionErrorMessage
+     *          A String with an error message if the processing of the
+     *          subscription failed.
+     * @param auStatus
+     *          A BatchAuStatus with the status resulting from configuring
+     *          archival units.
+     */
+    StatusEntry(String publicationName, boolean susbcriptionSuccess,
+	String subscriptionErrorMessage, BatchAuStatus auStatus) {
+      this.publicationName = publicationName;
+      this.susbcriptionSuccess = susbcriptionSuccess;
+      this.subscriptionErrorMessage = subscriptionErrorMessage;
+      this.auStatus = auStatus;
+    }
+
+    public boolean isSusbcriptionSuccess() {
+      return susbcriptionSuccess;
+    }
+
+    public void setSusbcriptionSuccess(boolean susbcriptionSuccess) {
+      this.susbcriptionSuccess = susbcriptionSuccess;
+    }
+
+    public String getSubscriptionErrorMessage() {
+      return subscriptionErrorMessage;
+    }
+
+    public void setSubscriptionErrorMessage(String subscriptionErrorMessage) {
+      this.subscriptionErrorMessage = subscriptionErrorMessage;
+    }
+
+    public String getPublicationName() {
+      return publicationName;
+    }
+
+    public void setPublicationName(String publicationName) {
+      this.publicationName = publicationName;
+    }
+
+    public BatchAuStatus getAuStatus() {
+      return auStatus;
+    }
+
+    public void setAuStatus(BatchAuStatus auStatus) {
+      this.auStatus = auStatus;
+    }
+
+    @Override
+    public String toString() {
+      return "StatusEntry [publicationName=" + publicationName
+	  + ", susbcriptionSuccess=" + susbcriptionSuccess
+	  + ", subscriptionFailureMessage=" + subscriptionErrorMessage
+	  + ", auStatus=" + auStatus + "]";
+    }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.1 2013-05-22 23:52:05 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.1.2.1 2013-05-28 17:45:53 fergaloy-sf Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ import org.lockss.plugin.simulated.SimulatedContentGenerator;
 import org.lockss.plugin.simulated.SimulatedPlugin;
 import org.lockss.protocol.MockIdentityManager;
 import org.lockss.remote.RemoteApi;
+import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
@@ -367,24 +368,20 @@ public class TestSubscriptionManager extends LockssTestCase {
     subscription.setSubscribedRanges(Collections
 	.singleton(new BibliographicPeriod("1900-1999")));
 
-    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
     Connection conn = dbManager.getConnection();
 
     // The AU is not added because it is already configured.
-    subManager.configureAus(conn, subscription, defaultRepo, status);
-    assertEquals(0, status.getFailureAuAddCount());
-    assertEquals(0, status.getSuccessAuAddCount());
+    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
 
     // Delete the AU so that it can be added.
     pluginManager
     .deleteAu(pluginManager.getAuFromId(tdbAu.getAuId(pluginManager)));
 
-    status = new SubscriptionOperationStatus();
-
     // The AU is added.
-    subManager.configureAus(conn, subscription, defaultRepo, status);
-    assertEquals(0, status.getFailureAuAddCount());
-    assertEquals(1, status.getSuccessAuAddCount());
+    BatchAuStatus status =
+	subManager.configureAus(conn, subscription, defaultRepo);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
 
     // Delete the AU so that it can be added again.
     pluginManager
@@ -394,12 +391,8 @@ public class TestSubscriptionManager extends LockssTestCase {
     subscription.setSubscribedRanges(Collections
 	.singleton(new BibliographicPeriod("1988-1999")));
 
-    status = new SubscriptionOperationStatus();
-
     // The AU is not added because it is not inside the subscribed range.
-    subManager.configureAus(conn, subscription, defaultRepo, status);
-    assertEquals(0, status.getFailureAuAddCount());
-    assertEquals(0, status.getSuccessAuAddCount());
+    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
 
     // Place the AU inside the subscribed range and the unsubscribed range.
     subscription.setSubscribedRanges(Collections
@@ -407,11 +400,7 @@ public class TestSubscriptionManager extends LockssTestCase {
     subscription.setUnsubscribedRanges(Collections
 	.singleton(new BibliographicPeriod("1950-1960")));
 
-    status = new SubscriptionOperationStatus();
-
     // The AU is not added because it is inside the unsubscribed range.
-    subManager.configureAus(conn, subscription, defaultRepo, status);
-    assertEquals(0, status.getFailureAuAddCount());
-    assertEquals(0, status.getSuccessAuAddCount());
+    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
   }
 }
