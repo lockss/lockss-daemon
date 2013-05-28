@@ -16,9 +16,8 @@
     >
     
     param[journal_id] = naar
-    comment[notReady] = mismatch placeholder Quick Search
   
-    au < notReady ; 2006 ; Natural Areas Journal Volume 26 ; 26 >
+    au < ready ; 2006 ; Natural Areas Journal Volume 26 ; 26 >
     au < released ; 2007 ; Natural Areas Journal Volume 27 ; 27 >
     au < released ; 2008 ; Natural Areas Journal Volume 28 ; 28 >
     au < released ; 2009 ; Natural Areas Journal Volume 29 ; 29 >
