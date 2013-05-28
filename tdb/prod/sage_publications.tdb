@@ -41855,11 +41855,11 @@ comment[mpj] = now published by Brill
         issnl = 1356-2622
       >
   
-      {
-        comment[notmoved] = not yet moved to Sage.
-  
         pluginPrefix = org.lockss.plugin.highwire.
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+      {
+  
         param[base_url] = http://cr.rsmjournals.com/
   
         au < HighWirePressPlugin ; down ; 2001 ; Clinical Risk Volume 7 [superseded] ; 7 >
@@ -41873,7 +41873,26 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Clinical Risk Volume 15 [superseded] ; 15 >
         au < HighWirePressPlugin ; down ; 2010 ; Clinical Risk Volume 16 [superseded] ; 16 >
         au < HighWirePressPlugin ; down ; 2011 ; Clinical Risk Volume 17 [superseded] ; 17 >
-        au < HighWirePressH20Plugin ; released ; 2012 ; Clinical Risk Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Risk Volume 18 [superseded] ; 18 >
+  
+      }
+  
+      {
+  
+        param[base_url] = http://cri.sagepub.com/
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Clinical Risk Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Clinical Risk Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Clinical Risk Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Clinical Risk Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Clinical Risk Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Clinical Risk Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Clinical Risk Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Clinical Risk Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Clinical Risk Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Clinical Risk Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Clinical Risk Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Clinical Risk Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Risk Volume 19 ; 19 >
   
       }
