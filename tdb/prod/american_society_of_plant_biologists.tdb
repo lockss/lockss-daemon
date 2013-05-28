@@ -249,7 +249,7 @@
 
     {
       implicit < status ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1543-8120
 
