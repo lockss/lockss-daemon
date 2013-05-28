@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.51 2013-05-23 19:39:27 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.51.2.1 2013-05-28 17:46:15 fergaloy-sf Exp $
  */
 
 /*
@@ -248,20 +248,22 @@ public class BatchAuConfig extends LockssServlet {
 
     // Add titles to subscription management.
     list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-                               "Add Titles To Subscription Management",
+			       SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
                                ACTION
                                + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
-                               "Manually add title subscription options"));
+                               SubscriptionManagement.SHOW_ADD_PAGE_HELP_TEXT));
 
     // Only show the update link if there are subscriptions already.
     try {
       if (subManager.countSubscribedPublications() > 0) {
 	// Add titles to subscription management.
 	list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	    			   "Update Existing Subscription Options",
+	    			   SubscriptionManagement
+	    			   .SHOW_UPDATE_PAGE_LINK_TEXT,
 	    			   ACTION + SubscriptionManagement
 	    			   .SHOW_UPDATE_PAGE_ACTION,
-	    			   "Change existing title subscription options"));
+	    			   SubscriptionManagement
+	    			   .SHOW_UPDATE_PAGE_HELP_TEXT));
       }
     } catch (SQLException sqle) {
       log.error("Error counting subscribedPublications", sqle);
@@ -269,10 +271,12 @@ public class BatchAuConfig extends LockssServlet {
 
     // Add titles to subscription management.
     list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-                               "Synchronize Subscriptions",
+			       SubscriptionManagement
+			       .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
                                ACTION + SubscriptionManagement
                                .AUTO_ADD_SUBSCRIPTIONS_ACTION,
-                               "Subscribe to all titles with currently configured archival units"));
+                               SubscriptionManagement
+                               .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
 
     return list.iterator();
   }
