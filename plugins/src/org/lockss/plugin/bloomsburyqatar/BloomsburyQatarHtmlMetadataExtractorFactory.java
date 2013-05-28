@@ -1,5 +1,5 @@
 /*
- * $Id: BloomsburyQatarHtmlMetadataExtractorFactory.java,v 1.1 2012-03-14 00:51:35 dylanrhodes Exp $
+ * $Id: BloomsburyQatarHtmlMetadataExtractorFactory.java,v 1.2 2013-05-28 22:52:15 alexandraohlson Exp $
  */
 
 /*
@@ -99,14 +99,27 @@ public class BloomsburyQatarHtmlMetadataExtractorFactory
     
     private void getAdditionalMetadata(CachedUrl cu, ArticleMetadata am) 
     {
-    	//Extracts doi from url (doi is included in file, but not formatted well)
-    	String doi = cu.getUrl().substring(cu.getUrl().indexOf("full/")+5);
-    	am.put(MetadataField.FIELD_DOI,doi);
-        
-    	//Extracts the volume and issue number from the end of the doi
-    	String suffix = doi.substring(doi.indexOf("/"));
-    	am.put(MetadataField.FIELD_ISSUE, suffix.substring(suffix.lastIndexOf(".")+1));
-    	am.put(MetadataField.FIELD_VOLUME, suffix.substring(suffix.lastIndexOf(".", suffix.lastIndexOf(".")-1)+1, suffix.lastIndexOf(".")));
+      //Extracts doi from url (doi is included in file, but not formatted well)
+      //metadata could come from either full text html or abstract - figure out which
+      String doi;  
+      if ( (cu.getUrl()).contains("abs/")) {
+        doi = cu.getUrl().substring(cu.getUrl().indexOf("abs/")+4);
+      } else 
+        doi = cu.getUrl().substring(cu.getUrl().indexOf("full/")+5);
+      if ( !(doi == null) && !(doi.isEmpty())) {
+        am.put(MetadataField.FIELD_DOI,doi);
+      }
+
+      //Extracts the volume and issue number from the end of the doi
+      String suffix = doi.substring(doi.indexOf("/"));
+      am.put(MetadataField.FIELD_ISSUE, suffix.substring(suffix.lastIndexOf(".")+1));
+      am.put(MetadataField.FIELD_VOLUME, suffix.substring(suffix.lastIndexOf(".", suffix.lastIndexOf(".")-1)+1, suffix.lastIndexOf(".")));
+
+      // lastly, hardwire the publisher if it hasn't been set
+      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
+        am.put(MetadataField.FIELD_PUBLISHER, "Bloomsbury Qatar Foundation Journals");
+      }
+      
     }
   }
 }

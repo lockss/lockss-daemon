@@ -88,7 +88,7 @@ public class TestBloomsburyQatarArticleIteratorFactory extends ArticleIteratorTe
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list("http://www.example.com/doi/pdf/10.5339"),
+    assertEquals(ListUtil.list("http://www.example.com/doi"),
 		 getRootUrls(artIter));
   }
 
@@ -110,6 +110,7 @@ public class TestBloomsburyQatarArticleIteratorFactory extends ArticleIteratorTe
     assertNotMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bqabc.1");
     assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.");
     assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.1");
+    assertMatchesRE(pat, "http://www.example.com/doi/pdfplus/10.5339/bq.123.1");
     assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.2");
     assertMatchesRE(pat, "http://www.example.com/doi/pdf/10.5339/bq.123.2323");
    }
