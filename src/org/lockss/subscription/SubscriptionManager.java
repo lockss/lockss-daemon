@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.1 2013-05-22 23:40:20 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.2 2013-05-28 16:31:07 fergaloy-sf Exp $
  */
 
 /*
@@ -314,13 +314,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // On daemon startup, perform the handling of configuration changes in its
     // own thread.
-    if (!isReady()) {
+    /*if (!isReady()) {
       SubscriptionStarter starter =
 	  new SubscriptionStarter(this, newConfig, prevConfig, changedKeys);
       new Thread(starter).start();
     } else {
       handleConfigurationChange(newConfig, prevConfig, changedKeys);
-    }
+    }*/
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -411,20 +411,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       DbManager.safeRollbackAndClose(conn);
     }
 
+    // Configure the archival units.
     try {
-      SubscriptionOperationStatus status = new SubscriptionOperationStatus();
-
-      // Configure the archival units that have been marked for configuration.
-      configureAuBatch(config, status);
-
-      // Report any errors.
-      if (status.getFailureAuAddCount() > 0) {
-	log.error("Error configuring " + status.getFailureAuAddCount()
-	    + " archival units.");
-	}
+      configureAuBatch(config);
     } catch (IOException ioe) {
-      log.error("Error configuring a batch of archival units - config = "
-	  + config, ioe);
+      log.error("Exception caught configuring a batch of archival units. "
+	  + "Config = " + config, ioe);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -758,45 +750,40 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param config
    *          A Configuration with the configuration of the archival units to be
    *          configured into the system.
-   * @param status
-   *          A SubscriptionOperationStatus through which to provide a summary
-   *          of the status of the operation.
+   * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the batch of archival units.
    */
-  private void configureAuBatch(Configuration config,
-      SubscriptionOperationStatus status) throws IOException {
+  private BatchAuStatus configureAuBatch(Configuration config)
+      throws IOException {
     final String DEBUG_HEADER = "configureAuBatch(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "config = " + config);
+    BatchAuStatus status = null;
 
-    // Perform the actual configuration of the archival unit.
-    BatchAuStatus bas =
-	remoteApi.batchAddAus(RemoteApi.BATCH_ADD_ADD, config, null);
+    // Check whether there are archival units to configure.
+    if (!config.isEmpty()) {
+      // Yes: Perform the actual configuration into the system of the archival
+      // units in the configuration.
+      status = remoteApi.batchAddAus(RemoteApi.BATCH_ADD_ADD, config, null);
+      log.info("Successful configuration of " + status.getOkCnt() + " AUs.");
 
-    if (log.isDebug3()) {
-      for (BatchAuStatus.Entry entry : bas.getStatusList()) {
-	log.debug3(DEBUG_HEADER + "entry = " + entry
-	    + ", entry.getExplanation() = " + entry.getExplanation());
+      // Check whether there are any errors.
+      if (status.hasNotOk()) {
+	// Yes: Report them.
+	for (BatchAuStatus.Entry stat : status.getStatusList()) {
+	  if (!stat.isOk()) {
+	    log.error("Error configuring AU '" + stat.getName() + "': "
+		+ stat.getExplanation());
+	  }
+	}
       }
+    } else {
+      // No.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "No AUs to configure.");
     }
 
-    // Get the success count.
-    int okCnt = bas.getOkCnt();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "okCnt = " + okCnt);
-
-    if (okCnt > 0) {
-      status.addSuccessAuAdd(okCnt);
-    }
-
-    // Get the failure count.
-    int errorCnt = bas.getStatusList().size() - okCnt;
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "errorCnt = " + errorCnt);
-
-    if (errorCnt > 0) {
-      status.addFailureAuAdd(errorCnt);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
   }
 
   /**
@@ -1206,12 +1193,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       conn.commit();
 
       // Report the success back to the caller.
-      status.addSuccessSubscriptionAdd(1);
+      status.addStatusEntry(name, null);
     } catch (SQLException sqle) {
       // Report the failure back to the caller.
       log.error("Cannot add/update subscription to title with Id = "
 	  + title.getId(), sqle);
-      status.addFailureSubscriptionAdd(1);
+      status.addStatusEntry(name, false, sqle.getMessage(), null);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -2342,10 +2329,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       conn = dbManager.getConnection();
     } catch (SQLException sqle) {
       log.error("Cannot connect to database", sqle);
-      status.addFailureSubscriptionAdd(subscriptions.size());
+
+      for (Subscription subscription : subscriptions) {
+	status.addStatusEntry(subscription.getPublication()
+	    .getPublicationName(), false, sqle.getMessage(), null);
+      }
+
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
       return;
     }
+
+    BatchAuStatus bas;
 
     try {
       // Loop through all the subscriptions.
@@ -2370,27 +2364,34 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	          || !subscribedRanges.iterator().next().isEmpty())) {
 	    // Yes: Configure the archival units that correspond to this
 	    // subscription.
-	    configureAus(conn, subscription, defaultRepo, status);
+	    bas = configureAus(conn, subscription, defaultRepo);
+	  } else {
+	    bas = null;
 	  }
 
 	  conn.commit();
-	  status.addSuccessSubscriptionAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), bas);
 	} catch (IllegalStateException ise) {
 	  conn.rollback();
 	  log.error("Cannot add subscription " + subscription, ise);
-	  status.addFailureAuAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, ise.getMessage(), null);
 	} catch (IOException ioe) {
 	  conn.rollback();
 	  log.error("Cannot add subscription " + subscription, ioe);
-	  status.addFailureAuAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, ioe.getMessage(), null);
 	} catch (SQLException sqle) {
 	  conn.rollback();
 	  log.error("Cannot add subscription " + subscription, sqle);
-	  status.addFailureSubscriptionAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, sqle.getMessage(), null);
 	} catch (SubscriptionException se) {
 	  conn.rollback();
 	  log.error("Cannot add subscription " + subscription, se);
-	  status.addFailureSubscriptionAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, se.getMessage(), null);
 	}
       }
     } catch (SQLException sqle) {
@@ -2490,9 +2491,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Subscription with the subscription involved.
    * @param defaultRepo
    *          A String with the default repository to be used.
-   * @param status
-   *          A SubscriptionOperationStatus through which to provide a summary
-   *          of the status of the operation.
+   * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
    * @throws SQLException
@@ -2500,9 +2499,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws SubscriptionException
    *           if there are problems with the subscription publication.
    */
-  void configureAus(Connection conn, Subscription subscription,
-      String defaultRepo, SubscriptionOperationStatus status)
-      throws IOException, SQLException, SubscriptionException {
+  BatchAuStatus configureAus(Connection conn, Subscription subscription,
+      String defaultRepo) throws IOException, SQLException,
+      SubscriptionException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
@@ -2517,7 +2516,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Do nothing more if there are no subscribed ranges.
     if (subscribedRanges == null || subscribedRanges.size() < 1) {
-      return;
+      return null;
     }
 
     // Get the susbscription publication.
@@ -2550,10 +2549,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     // Configure the archival units.
-    configureAus(conn, publication, subscribedRanges,
-	subscription.getUnsubscribedRanges(), defaultRepo, status);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return configureAus(conn, publication, subscribedRanges,
+	subscription.getUnsubscribedRanges(), defaultRepo);
   }
 
   /**
@@ -2626,18 +2623,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          the publication.
    * @param defaultRepo
    *          A String with the default repository to be used.
-   * @param status
-   *          A SubscriptionOperationStatus through which to provide a summary
-   *          of the status of the operation.
+   * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private void configureAus(Connection conn, SerialPublication publication,
+  private BatchAuStatus configureAus(Connection conn,
+      SerialPublication publication,
       Collection<BibliographicPeriod> subscribedRanges,
-      Collection<BibliographicPeriod> unsubscribedRanges, String defaultRepo,
-      SubscriptionOperationStatus status) throws IOException, SQLException {
+      Collection<BibliographicPeriod> unsubscribedRanges, String defaultRepo)
+      throws IOException, SQLException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publication = " + publication);
@@ -2651,7 +2647,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Do nothing more if the publication has no archival units.
     if (tdbAus == null || tdbAus.size() < 1) {
-      return;
+      return null;
     }
 
     if (log.isDebug3())
@@ -2702,9 +2698,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Configure the archival units that are covered by the subscribed ranges
     // and not covered by the unsubscribed ranges.
-    configureAuBatch(config, status);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    return configureAuBatch(config);
   }
 
   /**
@@ -2741,10 +2735,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       conn = dbManager.getConnection();
     } catch (SQLException sqle) {
       log.error("Cannot connect to database", sqle);
-      status.addFailureSubscriptionUpdate(subscriptions.size());
+
+      for (Subscription subscription : subscriptions) {
+	status.addStatusEntry(subscription.getPublication()
+	    .getPublicationName(), false, sqle.getMessage(), null);
+      }
+
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
       return;
     }
+
+    BatchAuStatus bas;
 
     try {
       // Loop through all the subscriptions.
@@ -2769,27 +2770,34 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	          || !subscribedRanges.iterator().next().isEmpty())) {
 	    // Yes: Configure the archival units that correspond to this
 	    // subscription.
-	    configureAus(conn, subscription, defaultRepo, status);
+	    bas = configureAus(conn, subscription, defaultRepo);
+	  } else {
+	    bas = null;
 	  }
 
 	  conn.commit();
-	  status.addSuccessSubscriptionUpdate(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), bas);
 	} catch (IllegalStateException ise) {
 	  conn.rollback();
 	  log.error("Cannot update subscription " + subscription, ise);
-	  status.addFailureAuAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, ise.getMessage(), null);
 	} catch (IOException ioe) {
 	  conn.rollback();
 	  log.error("Cannot update subscription " + subscription, ioe);
-	  status.addFailureAuAdd(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, ioe.getMessage(), null);
 	} catch (SQLException sqle) {
 	  conn.rollback();
 	  log.error("Cannot update subscription " + subscription, sqle);
-	  status.addFailureSubscriptionUpdate(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, sqle.getMessage(), null);
 	} catch (SubscriptionException se) {
 	  conn.rollback();
 	  log.error("Cannot update subscription " + subscription, se);
-	  status.addFailureSubscriptionUpdate(1);
+	  status.addStatusEntry(subscription.getPublication()
+	      .getPublicationName(), false, se.getMessage(), null);
 	}
       }
     } catch (SQLException sqle) {

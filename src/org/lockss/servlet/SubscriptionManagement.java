@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.1 2013-05-22 23:57:08 fergaloy-sf Exp $
+ * $Id: SubscriptionManagement.java,v 1.2 2013-05-28 16:31:07 fergaloy-sf Exp $
  */
 
 /*
@@ -49,15 +49,18 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.PluginManager;
+import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.subscription.BibliographicPeriod;
 import org.lockss.subscription.SerialPublication;
 import org.lockss.subscription.Subscription;
 import org.lockss.subscription.SubscriptionManager;
 import org.lockss.subscription.SubscriptionOperationStatus;
+import org.lockss.subscription.SubscriptionOperationStatus.StatusEntry;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Block;
+import org.mortbay.html.Composite;
 import org.mortbay.html.Form;
 import org.mortbay.html.Image;
 import org.mortbay.html.Input;
@@ -85,10 +88,21 @@ public class SubscriptionManagement extends LockssServlet {
       + "maxSingleTabCount";
   public static final int DEFAULT_MAX_SINGLE_TAB_COUNT = 20;
 
+  public static final String AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT =
+      "Synchronize Subscriptions";
   public static final String AUTO_ADD_SUBSCRIPTIONS_ACTION = "autoAdd";
+  public static final String AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT =
+      "Subscribe to all titles with currently configured archival units";
+  public static final String SHOW_ADD_PAGE_LINK_TEXT =
+      "Add Titles To Subscription Management";
   public static final String SHOW_ADD_PAGE_ACTION = "showAdd";
+  public static final String SHOW_ADD_PAGE_HELP_TEXT =
+      "Manually add title subscription options";
+  public static final String SHOW_UPDATE_PAGE_LINK_TEXT =
+      "Update Existing Subscription Options";
   public static final String SHOW_UPDATE_PAGE_ACTION = "showUpdate";
-
+  public static final String SHOW_UPDATE_PAGE_HELP_TEXT =
+      "Change existing title subscription options";
   private static final String ADD_SUBSCRIPTIONS_ACTION = "Add";
   private static final String UPDATE_SUBSCRIPTIONS_ACTION = "Update";
 
@@ -101,6 +115,13 @@ public class SubscriptionManagement extends LockssServlet {
   private static final String SUBSCRIPTIONS_SESSION_KEY = "subscriptions";
   private static final String UNDECIDED_TITLES_SESSION_KEY = "undecidedTitles";
   private static final String BACK_LINK_TEXT_PREFIX = "Back to ";
+
+  private static final String MISSING_COOKIES_MSG = "Please enable cookies";
+  private static final String SESSION_EXPIRED_MSG = "Session expired";
+  private static final String BAD_SUBSCRIBED_RANGES_MSG =
+      "Invalid subscribed ranges";
+  private static final String BAD_UNSUBSCRIBED_RANGES_MSG =
+      "Invalid unsubscribed ranges";
 
   private static final int LETTERS_IN_ALPHABET = 26;
   private static final int DEFAULT_LETTERS_PER_TAB = 3;
@@ -121,12 +142,8 @@ public class SubscriptionManagement extends LockssServlet {
 	  + "<br>()(5)-"
 	  + "<br>-2000(10)";
 
-  // The column headers of the tab content.
-  private List<String> tabColumnHeaderNames = (List<String>)ListUtil
-      .list("Subscribe All",
-	    "Subscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
-	    "Unsubscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
-	    "Unsubscribe All");
+  // The column headers of the tabbed content.
+  private List<String> tabColumnHeaderNames = null;
 
   private PluginManager pluginManager;
   private SubscriptionManager subManager;
@@ -177,6 +194,8 @@ public class SubscriptionManagement extends LockssServlet {
       return;
     }
 
+    SubscriptionOperationStatus status;
+
     // The operation to be performed.
     String action = req.getParameter(ACTION_TAG);
 
@@ -186,14 +205,15 @@ public class SubscriptionManagement extends LockssServlet {
       } else if (SHOW_UPDATE_PAGE_ACTION.equals(action)) {
 	displayUpdatePage();
       } else if (ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
-	errMsg = addSubscriptions();
-	displayResults();
+	status = addSubscriptions();
+	displayResults(status, SHOW_ADD_PAGE_LINK_TEXT, SHOW_ADD_PAGE_ACTION);
       } else if (UPDATE_SUBSCRIPTIONS_ACTION.equals(action)) {
-	errMsg = updateSubscriptions();
-	displayResults();
+	status = updateSubscriptions();
+	displayResults(status, SHOW_UPDATE_PAGE_LINK_TEXT,
+	    	       SHOW_UPDATE_PAGE_ACTION);
       } else if (AUTO_ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
-	errMsg = subscribePublicationsWithConfiguredAus();
-	displayResults();
+	status = subscribePublicationsWithConfiguredAus();
+	displayResults(status, AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT, null);
       } else {
 	displayAddPage();
       }
@@ -258,7 +278,7 @@ public class SubscriptionManagement extends LockssServlet {
     // map of the tab tables keyed by the letters they cover.
     Map<String, Table> divTableMap =
 	ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	    tabColumnHeaderNames, tabsDiv);
+	    getTabColumnHeaderNames(), tabsDiv);
 
     // Populate the tabs content with the publications for which no subscription
     // decision has been made.
@@ -286,6 +306,24 @@ public class SubscriptionManagement extends LockssServlet {
     endPage(page);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the column headers of the tabbed content.
+   * 
+   * @return a List<String> with the column headers of the tabbed content.
+   */
+  private List<String> getTabColumnHeaderNames() {
+    // Lazy loading.
+    if (tabColumnHeaderNames == null) {
+      tabColumnHeaderNames = (List<String>)ListUtil
+      .list("Subscribe All",
+	    "Subscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
+	    "Unsubscribed Ranges&nbsp;" + addFootnote(rangesFootnote),
+	    "Unsubscribe All");
+    }
+
+    return tabColumnHeaderNames;
   }
 
   /**
@@ -372,7 +410,6 @@ public class SubscriptionManagement extends LockssServlet {
     SerialPublication publication;
     String publisherName;
     String publicationName;
-    String uniqueName = null;
 
     // Initialize the resulting map.
     MultiValueMap publicationMap = MultiValueMap
@@ -407,6 +444,9 @@ public class SubscriptionManagement extends LockssServlet {
       if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
+      // Initialize the unique name of the publication for display purposes.
+      String uniqueName = publicationName;
+
       // Check whether the publication name displayed must be qualified with the
       // platform name to make it unique.
       if ((i > 0
@@ -420,13 +460,9 @@ public class SubscriptionManagement extends LockssServlet {
 	// Yes: Create the unique name.
 	if (!StringUtil.isNullString(publication.getPlatformName())) {
 	  uniqueName += " [" + publication.getPlatformName() + "]";
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
 	}
-
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
-      } else {
-	// No: Just use the publication name as the unique name.
-	uniqueName = publicationName;
       }
 
       // Remember the publication unique name.
@@ -628,14 +664,19 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * Creates any subscriptions specified by the user in the form.
    * 
-   * @return a String with a message with the result of the operation.
+   * @return a SubscriptionOperationStatus with a summary of the status of the
+   *         operation.
    */
-  private String addSubscriptions() {
+  private SubscriptionOperationStatus addSubscriptions() {
     final String DEBUG_HEADER = "addSubscriptions(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
+
     if (!hasSession()) {
-      return "Please enable cookies";
+      status.addStatusEntry(null, false, MISSING_COOKIES_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
     } else {
       session = getSession();
     }
@@ -643,22 +684,21 @@ public class SubscriptionManagement extends LockssServlet {
     // Get the undecided publications presented in the form just submitted.
     List<SerialPublication> publications = (List<SerialPublication>) session
 	.getAttribute(UNDECIDED_TITLES_SESSION_KEY);
-    if (log.isDebug3()) {
-      if (publications != null) {
-	log.debug3(DEBUG_HEADER + "publications.size() = "
-	    + publications.size());
-      } else {
-	log.debug3(DEBUG_HEADER + "publications is null");
-      }
+
+    if (publications == null || publications.size() == 0) {
+      status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
     }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publications.size() = "
+	+ publications.size());
 
     // Get the map of parameters received from the submitted form.
     Map<String,String> parameterMap = getParamsAsMap();
 
-    String message = null;
     Subscription subscription;
     Collection<Subscription> subscriptions = new ArrayList<Subscription>();
-    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
 
     // Loop through all the publications presented in the form.
     for (SerialPublication publication : publications) {
@@ -679,15 +719,8 @@ public class SubscriptionManagement extends LockssServlet {
 
     session.removeAttribute(UNDECIDED_TITLES_SESSION_KEY);
 
-    message = "Success: Subscriptions = "
-	+ status.getSuccessSubscriptionAddCount()
-	+ ", AUs = " + status.getSuccessAuAddCount()
-	+ "<br />Failure: Subscriptions = "
-	+ status.getFailureSubscriptionAddCount()
-	+ ", AUs = " + status.getFailureAuAddCount();
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "message = " + message);
-    return message;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
   }
 
   /**
@@ -712,7 +745,8 @@ public class SubscriptionManagement extends LockssServlet {
 
     String subscribedRangesText = "";
     String unsubscribedRangesText = "";
-
+    Collection<BibliographicPeriod> subscribedRanges;
+    Collection<BibliographicPeriod> unsubscribedRanges;
     Subscription subscription = null;
 
     Integer publicationNumber = publication.getPublicationNumber();
@@ -742,13 +776,22 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesText = " + unsubscribedRangesText);
 
 	if (!StringUtil.isNullString(unsubscribedRangesText)) {
-	  Collection<BibliographicPeriod> unsubscribedRanges =
-	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	  try {
+	    unsubscribedRanges =
+		BibliographicPeriod.createCollection(unsubscribedRangesText);
+	  } catch (IllegalArgumentException iae) {
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	    if (log.isDebug2())
+	      log.debug2(DEBUG_HEADER + "subscription = null");
+	    return null;
+	  }
 
 	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -776,15 +819,24 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesText = " + unsubscribedRangesText);
 
 	if (!StringUtil.isNullString(unsubscribedRangesText)) {
-	  Collection<BibliographicPeriod> unsubscribedRanges =
-	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	  try {
+	    unsubscribedRanges =
+		BibliographicPeriod.createCollection(unsubscribedRangesText);
+	  } catch (IllegalArgumentException iae) {
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	    if (log.isDebug2())
+	      log.debug2(DEBUG_HEADER + "subscription = null");
+	    return null;
+	  }
 
 	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
 	    subscription = new Subscription();
 	    subscription.setPublication(publication);
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -803,8 +855,16 @@ public class SubscriptionManagement extends LockssServlet {
 	    + subscribedRangesText);
 
 	if (!StringUtil.isNullString(subscribedRangesText)) {
-	  Collection<BibliographicPeriod> subscribedRanges =
-	      BibliographicPeriod.createCollection(subscribedRangesText);
+	  try {
+	    subscribedRanges =
+		BibliographicPeriod.createCollection(subscribedRangesText);
+	  } catch (IllegalArgumentException iae) {
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_SUBSCRIBED_RANGES_MSG, null);
+	    if (log.isDebug2())
+	      log.debug2(DEBUG_HEADER + "subscription = null");
+	    return null;
+	  }
 
 	  if (subManager.areAllRangesValid(subscribedRanges)) {
 	    if (subscription == null) {
@@ -814,7 +874,8 @@ public class SubscriptionManagement extends LockssServlet {
 
 	    subscription.setSubscribedRanges(subscribedRanges);
 	  } else {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(publication.getPublicationName(), false,
+		BAD_SUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -834,9 +895,15 @@ public class SubscriptionManagement extends LockssServlet {
    * @throws IOException
    *           , SQLException
    */
-  private void displayResults() throws IOException, SQLException {
-    final String DEBUG_HEADER = "displayMenu(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+  private void displayResults(SubscriptionOperationStatus status,
+      String backLinkDisplayText, String backLinkAction) throws IOException,
+      SQLException {
+    final String DEBUG_HEADER = "displayResults(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "status = " + status);
+      log.debug2(DEBUG_HEADER + "backLinkDisplayText = " + backLinkDisplayText);
+      log.debug2(DEBUG_HEADER + "backLinkAction = " + backLinkAction);
+    }
 
     // Start the page.
     Page page = newPage();
@@ -849,14 +916,93 @@ public class SubscriptionManagement extends LockssServlet {
     }
 
     ServletUtil.layoutExplanationBlock(page,
-	"Results");
-    layoutErrorBlock(page);
+				       backLinkDisplayText + " Results");
 
-    /*// The link to go back to the previous page.
-    ServletUtil.layoutBackLink(page,
-	srvLink(AdminServletManager.SERVLET_BATCH_AU_CONFIG,
-	    	BACK_LINK_TEXT_PREFIX
-	    	+ getHeading(AdminServletManager.SERVLET_BATCH_AU_CONFIG)));*/
+    List<StatusEntry> statusEntries = status.getStatusEntries();
+    page.add("<br>");
+
+    if (statusEntries.size() == 0) {
+      errMsg = "No operation was specified";
+      layoutErrorBlock(page);
+    } else if (statusEntries.size() == 1
+	&& StringUtil.isNullString(statusEntries.get(0).getPublicationName())
+	&& !statusEntries.get(0).isSusbcriptionSuccess()) {
+      errMsg = statusEntries.get(0).getSubscriptionErrorMessage();
+      layoutErrorBlock(page);
+    } else {
+      layoutErrorBlock(page);
+
+      int border = 1;
+      String attributes =
+	  "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
+
+      Table results = new Table(border, attributes);
+      results.addHeading("Title");
+      results.addHeading("Subscription Status");
+
+      if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
+	results.addHeading("AU Configuration");
+      }
+
+      for (StatusEntry entry : statusEntries) {
+	results.newRow();
+	results.newCell();
+	results.add(encodeText(entry.getPublicationName()));
+	results.newCell();
+
+	if (entry.isSusbcriptionSuccess()) {
+	  if (SHOW_UPDATE_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
+	    results.add("Updated");
+	  } else if (SHOW_ADD_PAGE_LINK_TEXT.equals(backLinkDisplayText)) {
+	    results.add("Added");
+	  } else {
+	    results.add("Added/Updated");
+	  }
+	} else {
+	  results.add(entry.getSubscriptionErrorMessage());
+	}
+
+	if (!AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT.equals(backLinkDisplayText)) {
+	  results.newCell();
+
+	  if (entry.getAuStatus() != null
+	      && entry.getAuStatus().getStatusList() != null
+	      && entry.getAuStatus().getStatusList().size() > 0) {
+	    Table auResults = new Table(border, attributes);
+	    auResults.addHeading("AU");
+	    auResults.addHeading("Status");
+
+	    for (Entry auEntry : entry.getAuStatus().getStatusList()) {
+	      auResults.newRow();
+	      auResults.newCell();
+	      auResults.add(encodeText(auEntry.getName()));
+	      auResults.newCell();
+	      if (StringUtil.isNullString(auEntry.getExplanation())) {
+		auResults.add(auEntry.getStatus());
+	      } else {
+		auResults.add(auEntry.getExplanation());
+	      }
+	    }
+
+	    results.add(auResults);
+	  }
+	}
+      }
+
+      Composite comp = new Block(Block.Center);
+      comp.add(results);
+      comp.add("<br>");
+
+      page.add(comp);
+    }
+
+    if (!StringUtil.isNullString(backLinkAction)) {
+      // The link to go back to the previous page.
+      ServletUtil.layoutBackLink(page,
+	  srvLink(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	          BACK_LINK_TEXT_PREFIX + backLinkDisplayText,
+	          "lockssAction=" + backLinkAction));
+    }
 
     // The link to go back to the journal configuration page.
     ServletUtil.layoutBackLink(page,
@@ -922,7 +1068,7 @@ public class SubscriptionManagement extends LockssServlet {
       // a map of the tab tables keyed by the letters they cover.
       Map<String, Table> divTableMap =
 	  ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	      tabColumnHeaderNames, tabsDiv);
+	      getTabColumnHeaderNames(), tabsDiv);
 
       // Populate the tabs content with the publications for which subscription
       // decisions have already been made.
@@ -1042,7 +1188,6 @@ public class SubscriptionManagement extends LockssServlet {
     SerialPublication publication;
     String publisherName;
     String publicationName;
-    String uniqueName = null;
 
     // Initialize the resulting map.
     MultiValueMap subscriptionMap = MultiValueMap
@@ -1081,6 +1226,9 @@ public class SubscriptionManagement extends LockssServlet {
       if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
 
+      // Initialize the unique name of the publication for display purposes.
+      String uniqueName = publicationName;
+
       // Check whether the publication name displayed must be qualified with the
       // platform name to make it unique.
       if ((i > 0
@@ -1097,13 +1245,9 @@ public class SubscriptionManagement extends LockssServlet {
 	// Yes: Create the unique name.
 	if (!StringUtil.isNullString(publication.getPlatformName())) {
 	  uniqueName += " [" + publication.getPlatformName() + "]";
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
 	}
-
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "uniqueName = " + uniqueName);
-      } else {
-	// No: Just use the publication name as the unique name.
-	uniqueName = publicationName;
       }
 
       // Remember the publication unique name.
@@ -1330,14 +1474,19 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * Updates any subscriptions specified by the user in the form.
    * 
-   * @return a String with a message with the result of the operation.
+   * @return a SubscriptionOperationStatus with a summary of the status of the
+   *         operation.
    */
-  private String updateSubscriptions() {
+  private SubscriptionOperationStatus updateSubscriptions() {
     final String DEBUG_HEADER = "updateSubscriptions(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
+
     if (!hasSession()) {
-      return "Please enable cookies";
+      status.addStatusEntry(null, false, MISSING_COOKIES_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
     } else {
       session = getSession();
     }
@@ -1347,7 +1496,9 @@ public class SubscriptionManagement extends LockssServlet {
 	(List<Subscription>) session.getAttribute(SUBSCRIPTIONS_SESSION_KEY);
 
     if (subscriptions == null || subscriptions.size() == 0) {
-      return "Session expired";
+      status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+      return status;
     }
 
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
@@ -1356,11 +1507,9 @@ public class SubscriptionManagement extends LockssServlet {
     // Get the map of parameters received from the submitted form.
     Map<String,String> parameterMap = getParamsAsMap();
 
-    String message = null;
     boolean subChanged = false;
     Collection<Subscription> updateSubscriptions =
 	new ArrayList<Subscription>();
-    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
 
     // Loop through all the subscriptions presented in the form.
     for (Subscription subscription : subscriptions) {
@@ -1387,15 +1536,8 @@ public class SubscriptionManagement extends LockssServlet {
 
     session.removeAttribute(SUBSCRIPTIONS_SESSION_KEY);
 
-    message = "Success: Subscriptions = "
-	+ status.getSuccessSubscriptionUpdateCount()
-	+ ", AUs = " + status.getSuccessAuAddCount()
-	+ "<br />Failure: Subscriptions = "
-	+ status.getFailureSubscriptionUpdateCount()
-	+ ", AUs = " + status.getFailureAuAddCount();
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "message = " + message);
-    return message;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
   }
 
   /**
@@ -1475,12 +1617,22 @@ public class SubscriptionManagement extends LockssServlet {
 	log.debug3(DEBUG_HEADER + "unsubsChanged = " + unsubsChanged);
 
       if (unsubsChanged) {
-	unsubscribedRanges =
-	    BibliographicPeriod.createCollection(unsubscribedRangesText);
+	try {
+	  unsubscribedRanges =
+	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	} catch (IllegalArgumentException iae) {
+	  status.addStatusEntry(
+	      subscription.getPublication().getPublicationName(), false,
+	      BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+	  return false;
+	}
 
 	if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
 	  if (!subManager.areAllRangesValid(unsubscribedRanges)) {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(
+		subscription.getPublication().getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }
@@ -1540,12 +1692,22 @@ public class SubscriptionManagement extends LockssServlet {
 	log.debug3(DEBUG_HEADER + "unsubsChanged = " + unsubsChanged);
 
       if (unsubsChanged) {
-	unsubscribedRanges =
-	    BibliographicPeriod.createCollection(unsubscribedRangesText);
+	try {
+	  unsubscribedRanges =
+	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	} catch (IllegalArgumentException iae) {
+	  status.addStatusEntry(
+	      subscription.getPublication().getPublicationName(), false,
+	      BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+	  return false;
+	}
 
 	if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
 	  if (!subManager.areAllRangesValid(unsubscribedRanges)) {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(
+		subscription.getPublication().getPublicationName(), false,
+		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }
@@ -1582,12 +1744,22 @@ public class SubscriptionManagement extends LockssServlet {
 	log.debug3(DEBUG_HEADER + "subsChanged = " + subsChanged);
 
       if (subsChanged) {
-	subscribedRanges =
-	    BibliographicPeriod.createCollection(subscribedRangesText);
+	try {
+	  subscribedRanges =
+	      BibliographicPeriod.createCollection(subscribedRangesText);
+	} catch (IllegalArgumentException iae) {
+	  status.addStatusEntry(
+	      subscription.getPublication().getPublicationName(), false,
+	      BAD_SUBSCRIBED_RANGES_MSG, null);
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+	  return false;
+	}
 
 	if (subscribedRanges != null && subscribedRanges.size() > 0) {
 	  if (!subManager.areAllRangesValid(subscribedRanges)) {
-	    status.addFailureSubscriptionAdd(1);
+	    status.addStatusEntry(
+		subscription.getPublication().getPublicationName(), false,
+		BAD_SUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }
@@ -1606,9 +1778,10 @@ public class SubscriptionManagement extends LockssServlet {
    * Creates subscriptions to publications matching the currently configured
    * Archival Units, if necessary.
    * 
-   * @return a String with a status message.
+   * @return a SubscriptionOperationStatus with a summary of the status of the
+   *         operation.
    */
-  private String subscribePublicationsWithConfiguredAus() {
+  private SubscriptionOperationStatus subscribePublicationsWithConfiguredAus() {
     final String DEBUG_HEADER = "subscribePublicationsWithConfiguredAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1617,11 +1790,7 @@ public class SubscriptionManagement extends LockssServlet {
     SubscriptionOperationStatus status = new SubscriptionOperationStatus();
     subManager.subscribeAllConfiguredAus(status);
 
-    // Create the status message.
-    String message = "Success: " + status.getSuccessSubscriptionAddCount()
-	+ " Subscriptions<br />Failure: "
-	+ status.getFailureSubscriptionAddCount() + " Subscriptions";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "message = " + message);
-    return message;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
   }
 }
