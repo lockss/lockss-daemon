@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.20 2013-05-22 23:16:19 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.21 2013-05-28 19:01:39 fergaloy-sf Exp $
  */
 
 /*
@@ -1743,6 +1743,16 @@ public class DbManager extends BaseLockssDaemonManager
     + ")"
   };
 
+  // SQL statements that create the necessary version 7 indices.
+  private static final String[] VERSION_7_INDEX_CREATE_QUERIES = new String[] {
+    "create index idx2_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + PARENT_SEQ_COLUMN + ")",
+    "create index idx3_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + AU_MD_SEQ_COLUMN + ")",
+    "create index idx1_" + PUBLICATION_TABLE + " on " + PUBLICATION_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")"
+  };
+
   // Database metadata keys.
   private static final String COLUMN_NAME = "COLUMN_NAME";
   private static final String COLUMN_SIZE = "COLUMN_SIZE";
@@ -2218,6 +2228,8 @@ public class DbManager extends BaseLockssDaemonManager
 	updateDatabaseFrom4To5(conn);
       } else if (from == 5) {
 	updateDatabaseFrom5To6(conn);
+      } else if (from == 6) {
+	updateDatabaseFrom6To7(conn);
       } else {
 	log.error("Non-existent method to update the database from version "
 	    + from + ".");
@@ -5065,6 +5077,53 @@ public class DbManager extends BaseLockssDaemonManager
 
     // Loop through all the indices.
     for (String query : VERSION_6_INDEX_CREATE_QUERIES) {
+      log.debug2(DEBUG_HEADER + "Query = " + query);
+      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
+
+      try {
+	executeUpdateBeforeReady(statement);
+      } catch (SQLException sqle) {
+	log.error("Cannot create index", sqle);
+	log.error("SQL = '" + query + "'.");
+	throw sqle;
+      } finally {
+	DbManager.safeCloseStatement(statement);
+      }
+    }
+  }
+
+  /**
+   * Updates the database from version 6 to version 7.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws BatchUpdateException
+   *           if a batch update exception occurred.
+   * @throws SQLException
+   *           if any other problem occurred accessing the database.
+   */
+  private void updateDatabaseFrom6To7(Connection conn)
+      throws BatchUpdateException, SQLException {
+    // Create the necessary indices.
+    createIndices(conn, VERSION_7_INDEX_CREATE_QUERIES);
+  }
+
+  /**
+   * Creates database table indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param queries
+   *          A String[] with the database queries needed to create the indices.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  private void createIndices(Connection conn, String[] queries)
+      throws SQLException {
+    final String DEBUG_HEADER = "createIndices(): ";
+
+    // Loop through all the indices.
+    for (String query : queries) {
       log.debug2(DEBUG_HEADER + "Query = " + query);
       PreparedStatement statement = prepareStatementBeforeReady(conn, query);
 
