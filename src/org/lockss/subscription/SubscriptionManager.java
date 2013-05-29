@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.2 2013-05-28 16:31:07 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.3 2013-05-29 16:07:11 fergaloy-sf Exp $
  */
 
 /*
@@ -314,13 +314,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // On daemon startup, perform the handling of configuration changes in its
     // own thread.
-    /*if (!isReady()) {
+    if (!isReady()) {
       SubscriptionStarter starter =
 	  new SubscriptionStarter(this, newConfig, prevConfig, changedKeys);
       new Thread(starter).start();
     } else {
       handleConfigurationChange(newConfig, prevConfig, changedKeys);
-    }*/
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -1071,13 +1071,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   /**
    * Creates subscriptions for all the archival units configured in the system.
    * 
-   * @param status
-   *          A SubscriptionOperationStatus through which to provide a summary
-   *          of the status of the operation.
+   * @return a SubscriptionOperationStatus with a summary of the status of the
+   *         operation.
    */
-  public void subscribeAllConfiguredAus(SubscriptionOperationStatus status) {
+  public SubscriptionOperationStatus subscribeAllConfiguredAus() {
     final String DEBUG_HEADER = "subscribeAllConfiguredAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
 
     // Get a connection to the database.
     Connection conn = null;
@@ -1086,18 +1086,19 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       conn = dbManager.getConnection();
     } catch (SQLException sqle) {
       log.error("Cannot obtain a database connection", sqle);
-      return;
+      status.addStatusEntry(null, false, sqle.getMessage(), null);
+      return status;
     }
 
     // Get the configured Archival Units.
     List<TdbAu> configuredAus = TdbUtil.getConfiguredTdbAus();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configuredAus.size() = "
-	+ configuredAus.size());
+	  + configuredAus.size());
 
     // Get the titles with configured Archival Units.
     Collection<TdbTitle> configuredTitles = TdbUtil.getConfiguredTdbTitles();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "configuredTitles.size() = "
-	    + configuredTitles.size());
+	  + configuredTitles.size());
 
     try {
       // Loop through all the titles with configured archival units.
@@ -1110,7 +1111,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       DbManager.safeRollbackAndClose(conn);
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
+    return status;
   }
 
   /**
@@ -1303,6 +1305,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          units.
    * @param conn
    *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private void subscribePublicationPlatformConfiguredAus(Long publicationSeq,
       String platform, Collection<BibliographicPeriod> periods, Connection conn)
@@ -2141,8 +2145,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   /**
    * Normalizes publication data.
    * 
-   * @param publication A SerialPublication with the publication data.
-   *          the ArticleMetadataInfo
+   * @param publication
+   *          A SerialPublication with the publication data.
    * @return a SerialPublication with the normalized publication data.
    */
   private SerialPublication normalizePublication(
@@ -2263,7 +2267,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * Provides an indication of whether the passed subscription range is valid.
    * 
    * @param range
-   *          A String with the subscription range to be validated.
+   *          A BibliographicPeriod with the subscription range to be validated.
    * @return a boolean with <code>true</code> if the passed subscription range
    *         is valid, <code>false</code> otherwise.
    */
