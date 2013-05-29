@@ -3726,6 +3726,7 @@
     >
 
     param[journal_id] = onc
+    comment[notReady] = low agreement see RU 4761
 
     au < manifest ; exists ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
     au < manifest ; exists ; 1997 ; Oncogene Volume 15 ; 1997 ; 15 >
@@ -3742,9 +3743,9 @@
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < testing ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < notReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < released ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
-    au < testing ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
+    au < notReady ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
     au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
 
   }
