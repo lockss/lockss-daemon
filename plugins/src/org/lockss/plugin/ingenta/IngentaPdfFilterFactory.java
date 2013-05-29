@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.10 2013-04-29 20:19:46 thib_gc Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.11 2013-05-29 19:15:47 alexandraohlson Exp $
  */ 
 
 /*
@@ -403,10 +403,10 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       }
     }
     switch (publisherId) {
-      case ARN:
+      case ARN: case LSE:
 	return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
 	
-      case BERGHAHN: case LSE: case MANUP: case WAB: case UNKNOWN:
+      case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
 	return normFiltFact.createFilteredInputStream(au, in, encoding);
 	
       case MANEY:
