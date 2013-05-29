@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.34 2013-04-14 05:25:17 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.35 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -129,15 +129,15 @@ public class PollerActions {
       return V3Events.evtDeclinePoll;
     } else {
       ud.setVoterNonce(voterNonce);
-      byte[] voterNonce2 = msg.getVoterNonce2();
       ud.setStatus(V3Poller.PEER_STATUS_ACCEPTED_POLL);
       log.info("Peer " + ud.getVoterId() + " accepted invitation for poll " + 
                ud.getKey() + " and sent voter nonce " +
                ByteArray.toBase64(voterNonce));
+      byte[] voterNonce2 = msg.getVoterNonce2();
       if (voterNonce2 != null && voterNonce2.length > 0) {
 	log.info("Peer " + ud.getVoterId() + " also sent voter nonce 2 " +
                ByteArray.toBase64(voterNonce2));
-	ud.setVoterNonce2(voterNonce2);
+	ud.enableSymmetricPoll(voterNonce2);
       }
       // Update the peer status.
       PeerIdentityStatus status = ud.getPoller().getIdentityManager().
@@ -329,9 +329,9 @@ public class PollerActions {
     msg.setAgreementHint(ud.getPercentAgreement());
     msg.setExpiration(ud.getPoller().getPollExpiration());
     msg.setRetryMax(1);
-    byte[] nonce2 = ud.getVoterNonce2();
-    VoteBlocks symmetricVoteBlocks = ud.getSymmetricVoteBlocks();
-    if (nonce2 != null && nonce2.length > 0 && symmetricVoteBlocks != null) {
+    if (ud.isSymmetricPoll())  {
+      byte[] nonce2 = ud.getVoterNonce2();
+      VoteBlocks symmetricVoteBlocks = ud.getSymmetricVoteBlocks();
       msg.setVoterNonce2(nonce2);
       msg.setVoteBlocks(symmetricVoteBlocks);
     }

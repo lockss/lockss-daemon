@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlockComparerImpl.java,v 1.3 2013-05-10 18:26:57 barry409 Exp $
+ * $Id: HashBlockComparerImpl.java,v 1.4 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -74,6 +74,13 @@ class HashBlockComparerImpl implements VoteBlockTallier.HashBlockComparer {
 			V3Poller.HashIndexer hashIndexer) {
     this(makePlainMap(hashBlock, hashIndexer), hashIndexer);
   }
+
+  // todo(bhayes): Can HashBlock and VoteBlock share an interface?
+  // VoteBlocksTallier#makePlainMap is somewhat like
+  // HashBlockCompareImpl#makePlainMap, but works with a VoteBlock
+  // rather than a HashBlock, and so ends up annoyingly
+  // different. Likewise voteBlocksAgree is very similar to
+  // HashBlockCompareImpl#compare.
 
   // If the HashBlock does not have a hashing error but does not have
   // valid bytes, this class may raise IllegalByteArray. That should

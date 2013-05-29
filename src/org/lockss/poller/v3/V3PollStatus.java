@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.47 2013-05-15 16:25:51 barry409 Exp $
+* $Id: V3PollStatus.java,v 1.48 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -1272,9 +1272,9 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Voter Nonce",
                                   ColumnDescriptor.TYPE_STRING,
                                   ByteArray.toBase64(voter.getVoterNonce())));
-      byte[] nonce2 = userData.getVoterNonce2();
-      if (nonce2 != null && nonce2.length > 0) {
+      if (userData.isSymmetricPoll()) {
 	// Its a symmetric poll
+	byte[] nonce2 = userData.getVoterNonce2();
 	summary.add(new SummaryInfo("Voter Nonce2",
 				    ColumnDescriptor.TYPE_STRING,
 				    ByteArray.toBase64(nonce2)));

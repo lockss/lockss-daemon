@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.87 2013-05-29 15:02:25 dshr Exp $
+ * $Id: V3Voter.java,v 1.88 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -863,21 +863,18 @@ public class V3Voter extends BasePoll {
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
+    byte[][] hasherByteArrays = new byte[hasherSize()][];
+    hasherByteArrays[PLAIN_HASH] = ByteArray.EMPTY_BYTE_ARRAY;
+    hasherByteArrays[CHALLENGE_HASH] =
+      ByteArray.concat(voterUserData.getPollerNonce(),
+		       voterUserData.getVoterNonce());
+    
     if (voterUserData.isSymmetricPoll()) {
-      return new byte[][] {
-        {}, // Plain Hash
+      hasherByteArrays[SYMMETRIC_HASH] =
         ByteArray.concat(voterUserData.getPollerNonce(),
-                         voterUserData.getVoterNonce()), // Challenge Hash
-        ByteArray.concat(voterUserData.getPollerNonce(),
-                         voterUserData.getVoterNonce2()) // Symmetric Poll Hash
-      };
-    } else {
-      return new byte[][] {
-        {}, // Plain Hash
-        ByteArray.concat(voterUserData.getPollerNonce(),
-                         voterUserData.getVoterNonce()) // Challenge Hash
-      };
+                         voterUserData.getVoterNonce2());
     }
+    return hasherByteArrays;
   }
 
   /**
@@ -888,8 +885,11 @@ public class V3Voter extends BasePoll {
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
-    return PollUtil.createMessageDigestArray(
-      voterUserData.isSymmetricPoll() ? 3 : 2, getHashAlgorithm());
+    return PollUtil.createMessageDigestArray(hasherSize(), getHashAlgorithm());
+  }
+
+  private int hasherSize() {
+    return voterUserData.isSymmetricPoll() ? 3 : 2;
   }
 
   private String getHashAlgorithm() {
@@ -970,9 +970,6 @@ public class V3Voter extends BasePoll {
     String errmsg = "State machine error";
     stateMachine.enqueueEvent(V3Events.evtHashingDone,
 			      ehAbortPoll(errmsg));
-    if (voterUserData.isSymmetricPoll()) {
-      log.debug2("Poll " + voterUserData.getPollKey() + " is symmetric");
-    }
   }
 
   /*

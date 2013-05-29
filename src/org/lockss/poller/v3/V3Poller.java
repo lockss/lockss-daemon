@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.147 2013-05-29 15:02:25 dshr Exp $
+ * $Id: V3Poller.java,v 1.148 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -1200,7 +1200,6 @@ public class V3Poller extends BasePoll {
 	  // Find this voter's hash block container
 	  ParticipantUserData ud = symmetricParticipants.get(i);
 	  VoteBlocks blocks = ud.getSymmetricVoteBlocks();
-	  // Add this vote block to the hash block container.
 	  try {
 	    blocks.addVoteBlock(vb);
 	  } catch (IOException ex) {
@@ -2542,6 +2541,22 @@ public class V3Poller extends BasePoll {
   void lockParticipants() {
     // todo(bhayes): Nobody enforces, nobody checks.
     urlTallier = makeUrlTallier();
+    populateSymmetricParticipants();
+  }
+
+  UrlTallier makeUrlTallier() {
+    synchronized(theParticipants) {
+      return new UrlTallier(new ArrayList(theParticipants.values()),
+			    this.getHashIndexer(),
+			    getQuorum(), getVoteMargin());
+    }
+  }
+
+  /**
+   * Add each participant which has requested a symmetric poll to
+   * symmetricParticipants.
+   */
+  private void populateSymmetricParticipants() {
     synchronized(theParticipants) {
       for (ParticipantUserData ud : theParticipants.values()) {
 	if (ud.getVoterNonce2() != null) {
@@ -2559,14 +2574,6 @@ public class V3Poller extends BasePoll {
 	  symmetricParticipants.add(ud);
 	}
       }
-    }
-  }
-
-  UrlTallier makeUrlTallier() {
-    synchronized(theParticipants) {
-      return new UrlTallier(new ArrayList(theParticipants.values()),
-			    this.getHashIndexer(),
-			    getQuorum(), getVoteMargin());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.33 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: ParticipantUserData.java,v 1.34 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -291,9 +291,30 @@ public class ParticipantUserData implements LockssSerializable {
   }
 
   public void setVoterNonce2(byte[] voterNonce2) {
-    if (voterNonce2 != null && voterNonce2.length > 0) {
-      this.voterNonce2 = voterNonce2;
+    if (voterNonce2 == null) {
+      throw new IllegalArgumentException("Null symmetric nonce not allowed.");
+    } 
+    if (voterNonce2.length == 0) {
+      throw new IllegalArgumentException(
+        "Zero-length symmetric nonce not allowed.");
     }
+    if (this.voterNonce2 != null) {
+      throw new IllegalStateException(
+	"Trying to set symmetric nonce when symmetric nonce is already set.");
+    }
+    this.voterNonce2 = voterNonce2;
+  }
+
+  /**
+   * @param symmetricNonce The voter's challenge to the poller. 
+   * @throws IllegalArgumentException if symmetricNonce is null or zero-length.
+   */
+  public void enableSymmetricPoll(byte[] symmetricNonce) {
+    setVoterNonce2(symmetricNonce);
+  }
+
+  public boolean isSymmetricPoll() {
+    return voterNonce2 != null;
   }
 
   public void setIntroEffortProof(byte[] b) {
@@ -543,6 +564,7 @@ public class ParticipantUserData implements LockssSerializable {
     messageDir = null;
     nominees = null;
     voteBlocks = null;
+    symmetricVoteBlocks = null;
 
     psmInterp = null;
     psmState = null;

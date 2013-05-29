@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.29 2013-05-22 16:18:16 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.30 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -356,8 +356,8 @@ public class VoterUserData
   }
 
   /**
-   * @param symmetricNonce The voter's chal;lenge to the poller. Thius
-   * must be non-null and not zero-length.
+   * @param symmetricNonce The voter's challenge to the poller. 
+   * @throws IllegalArgumentException if symmetricNonce is null or zero-length.
    * @throws IOException if a DiskVoteBlocks could not be created.
    */
   public void enableSymmetricPoll(byte[] symmetricNonce) throws IOException {
@@ -376,13 +376,13 @@ public class VoterUserData
       throw new IllegalArgumentException(
         "Zero-length symmetric nonce not allowed.");
     }
-    if (symmetricVoteBlocks == null) {
-      throw new IllegalArgumentException(
-	"Null symmetricVoteBlocks not allowed.");
-    }
     if (this.voterNonce2 != null) {
       throw new IllegalStateException(
 	"Trying to set symmetric nonce when symmetric nonce is already set.");
+    }
+    if (symmetricVoteBlocks == null) {
+      throw new IllegalArgumentException(
+	"Null symmetricVoteBlocks not allowed.");
     }
     
     this.voterNonce2 = voterNonce2;

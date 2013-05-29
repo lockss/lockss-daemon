@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.30 2013-03-18 19:19:33 dshr Exp $
+ * $Id: VoterActions.java,v 1.31 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
@@ -95,7 +95,9 @@ public class VoterActions {
     // Accept the poll and set status
     ud.setStatus(V3Voter.STATUS_ACCEPTED_POLL);
     msg.setVoterNonce(ud.getVoterNonce());
-    msg.setVoterNonce2(ud.getVoterNonce2());
+    if (ud.isSymmetricPoll()) {
+      msg.setVoterNonce2(ud.getVoterNonce2());
+    }
     msg.setExpiration(ud.getVoter().getHashStartTime());
     msg.setRetryMax(1);
 
@@ -297,10 +299,16 @@ public class VoterActions {
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
     ArchivalUnit au = ud.getVoter().getAu();
     idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
-    byte[] nonce2 = msg.getVoterNonce2();
-    if (nonce2 != null && nonce2.length > 0) {
-      // Is it the same as the one we sent?
-      if (ByteArray.lexicographicalCompare(nonce2, ud.getVoterNonce2()) == 0) {
+    if (! ud.isSymmetricPoll()) {
+      if (msg.getVoterNonce2() != null) {
+	log.error("Poller sent nonce2 outside of symmetric poll");
+      }
+    } else {
+      // We requested a symmetric poll
+      byte[] nonce2 = msg.getVoterNonce2();
+      if (! Arrays.equals(nonce2, ud.getVoterNonce2())) {
+	log.error("Nonce2 from poller did not match our nonce2");
+      } else {
 	VoteBlocksTallier vbt = new VoteBlocksTallier();
 	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
 			    msg.getVoteBlocks());
@@ -317,14 +325,7 @@ public class VoterActions {
 		  " disagree: " + nDisagree +
 		  " Voter only: " + nVoterOnly +
 		  " Poller only: " + nPollerOnly);
-	int total = nAgree + nDisagree + nVoterOnly + nPollerOnly;
-	float agree = 0.0f;
-	if (total > 0) {
-	  agree = ((float) nAgree) / ((float) total);
-	} 
-	idmgr.signalPartialAgreement(poller, au, agree);
-      } else {
-	log.error("Nonce2 mismatch");
+	idmgr.signalPartialAgreement(poller, au, vbt.percentAgreement());
       }
     }
     return V3Events.evtReceiptOk;

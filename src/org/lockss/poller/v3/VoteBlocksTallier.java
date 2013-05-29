@@ -1,10 +1,10 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.3 2013-03-01 04:12:25 dshr Exp $
+ * $Id: VoteBlocksTallier.java,v 1.4 2013-05-29 17:18:12 barry409 Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,18 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import java.util.*;
 import java.io.*;
 import java.nio.*;
+import java.util.*;
 
+import org.lockss.config.Configuration;
+import org.lockss.config.CurrentConfig;
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.HashBlock;
+import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.protocol.VoteBlocks;
 import org.lockss.protocol.VoteBlocksIterator;
-import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
 import org.lockss.util.*;
-
 
 /**
  * Representation of the tally of two votes in a symmetric poll,
@@ -98,7 +99,7 @@ public class VoteBlocksTallier {
    * @param pollerBlocks The VoteBlocks the poller sent in the receipt.
    */
   public void tallyVoteBlocks(VoteBlocks voterBlocks,
-				    VoteBlocks pollerBlocks) {
+			      VoteBlocks pollerBlocks) {
     // VoteBlocks.iterator() delivers VoteBlock instances in URL order.
     if (voterBlocks == null) {
       throw new IllegalArgumentException("voterBlocks null");
@@ -120,8 +121,8 @@ public class VoteBlocksTallier {
 	}
 	if (vBlock != null && oldVoterBlock != null) {
 	  if (vBlock.compareTo(oldVoterBlock) < 0) {
-	    log.error("Voter VoteBlocks out of order");
-	    break;
+	    throw 
+	      new ShouldNotHappenException("VoteBlocks should be in order.");
 	  }
 	  oldVoterBlock = vBlock;
 	}
@@ -130,7 +131,19 @@ public class VoteBlocksTallier {
 	}
 	if (pBlock != null && oldPollerBlock != null) {
 	  if (pBlock.compareTo(oldPollerBlock) < 0) {
-	    log.error("Poller VoteBlocks out of order");
+	    // The poller has sent blocks out of order.  Poison the
+	    // agreeCount so that we don't become a willing repairer.
+
+	    // NOTE: In the poller code, an out of order vote is
+	    // treated as the end of any VoteBlock for that voter. But
+	    // in the poller there is reason to continue tallying when
+	    // one voter is out of order. The parallel here would be
+	    // to not ask for any more blocks from the poller but
+	    // continue to count the voter-only blocks. Instead, just
+	    // make sure that the agreement is low for a poller with
+	    // out of order blocks.
+	    log.warning("Poller VoteBlocks out of order");
+	    this.agreeCount = 0;
 	    break;
 	  }
 	  oldPollerBlock = pBlock;
@@ -201,6 +214,42 @@ public class VoteBlocksTallier {
     }
   }
 
+  // todo(bhayes): Can HashBlock and VoteBlock share an interface?
+  // VoteBlocksTallier#makePlainMap is somewhat like
+  // HashBlockCompareImpl#makePlainMap, but works with a VoteBlock
+  // rather than a HashBlock, and so ends up annoyingly
+  // different. Likewise voteBlocksAgree is very similar to
+  // HashBlockCompareImpl#compare.
+
+  // Make a Map from the plain hash of each version to that version.
+  // Note: Called with our own VoteBlocks, so throwing on unexpected
+  // errors -- like illegal hash values -- rather than recovering.
+  private Map<HashResult, VoteBlock.Version>
+    makePlainMap(VoteBlock voteBlock) {
+    Map<HashResult, VoteBlock.Version> plainMap =
+      new <HashResult, VoteBlock.Version>HashMap();
+    VoteBlock.Version[] vbVersions = voteBlock.getVersions();
+    for (int versionIndex = 0; versionIndex < vbVersions.length;
+	 versionIndex++) {
+      VoteBlock.Version vbVersion = vbVersions[versionIndex];
+      if (vbVersion.getHashError()) {
+	// Only log the hash error in the VoteBlock at
+	// initialize. There's probably a more detailed error in the
+	// log.
+	log.warning("VoteBlock version "+versionIndex+" had hashing error.");
+      } else {
+	HashResult plainHash = HashResult.make(vbVersion.getPlainHash());
+	
+	// We could check for a plainHash already in the map, and
+	// check that all the nonced hashes match. If they do not,
+	// something odd is happening in the hasher. But it's not
+	// worth it.
+	plainMap.put(plainHash, vbVersion);
+      }
+    }
+    return plainMap;
+  }
+
   /**
    * Compare two VoteBlock instances, one from voter and one from poller.
    * @param vBlock VoteBlock from voter
@@ -208,32 +257,57 @@ public class VoteBlocksTallier {
    * @return true if at least one voter version agrees with a poller version
    */
   protected boolean voteBlockAgree(VoteBlock vBlock, VoteBlock pBlock) {
-    // Build a HashSet of the poller's hashes. Works if elements are String
-    // not if elements byte[]
-    // XXX DSHR should be the same code as in the poller
-    HashSet<String> pHashes = new HashSet<String>();
-    for (java.util.Iterator it = pBlock.versionIterator(); it.hasNext(); ) {
-      VoteBlock.Version ver = (VoteBlock.Version)it.next();
-      String pHash = ByteArray.toHexString(ver.getHash());
-      log.debug3("Poller hash " + pHash);
-      pHashes.add(pHash);
-    }
-    // Look up each of the voter's hashes in the HashSet
-    for (java.util.Iterator it = vBlock.versionIterator(); it.hasNext(); ) {
-      VoteBlock.Version ver = (VoteBlock.Version)it.next();
-      String vHash = ByteArray.toHexString(ver.getHash());
-      log.debug3("Voter hash " + vHash);
-      if (pHashes.contains(vHash)) {
-	// At least one voter version agrees with a poller version
-	log.debug3("Agree");
-	return true;
+    // Build the map from our versions.
+    Map<HashResult, VoteBlock.Version> plainMap = makePlainMap(vBlock);
+
+    // Check each of the poller's versions
+    VoteBlock.Version[] vbVersions = pBlock.getVersions();
+    for (int versionIndex = 0; versionIndex < vbVersions.length;
+	 versionIndex++) {
+      VoteBlock.Version vbVersion = vbVersions[versionIndex];
+      if (vbVersion.getHashError()) {
+	log.warning("Poller version "+versionIndex+" had a hashing error.");
       } else {
-	log.debug3("No match with " + vHash);
+	HashResult pollerPlainHash;
+	try {
+	  pollerPlainHash = HashResult.make(vbVersion.getPlainHash());
+	} catch (HashResult.IllegalByteArray e) {
+	  log.warning("Poller version "+versionIndex+
+		      " had an IllegalByteArray plain hash.");
+	  continue;
+	}
+	VoteBlock.Version voterVersion = plainMap.get(pollerPlainHash);
+	if (voterVersion != null) {
+	  HashResult voterNoncedHash = HashResult.make(voterVersion.getHash());
+	  try {
+	    if (voterNoncedHash.equalsBytes(vbVersion.getHash())) {
+	      return true;
+	    }
+	  } catch (HashResult.IllegalByteArray e) {
+	    log.warning("Poller version "+versionIndex+
+			" had an IllegalByteArray nonced hash.");
+	    continue;
+	  }
+	  // The voter and poller match plain hash, but not nonced
+	  // hash.
+	  log.warning("Voter and poller matched plain but not nonced hash.");
+	} 
       }
     }
     // No agreement on any version
     log.debug3("Disagree");
     return false;
+  }
+
+  /**
+   * @return the percent for which the poller agrees with the us, the
+   * voter.
+   */
+  public float percentAgreement() {
+    // NOTE: Ignore the URLs the poller had but we didn't. The
+    // agreement is based only on the subset we have.
+    int total = countAgreeUrl() + countDisagreeUrl() + countVoterOnlyUrl();
+    return total == 0 ? 0.0f : ((float)countAgreeUrl())/total;
   }
 
   /**
