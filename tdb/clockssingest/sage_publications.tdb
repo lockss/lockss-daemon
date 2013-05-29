@@ -32695,7 +32695,7 @@
         issn = 0081-2463
       >
 
-      pluginSuffix = HighWirePressH20Plugin
+      pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://sap.sagepub.com
 
       au < exists ; exists ; 1979 ; South African Journal of Psychology Volume 9 ; 9 ; >
@@ -38756,7 +38756,7 @@
         issnl = 1758-9991
       >
   
-        pluginSuffix = HighWirePressH20Plugin
+        pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hth.sagepub.com/
   
         au < exists ; exists ; 2001 ; Hand Therapy Volume 6 ; 6 ; >
