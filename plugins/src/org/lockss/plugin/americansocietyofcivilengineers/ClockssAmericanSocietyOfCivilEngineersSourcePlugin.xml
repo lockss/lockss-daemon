@@ -41,6 +41,14 @@
     <string>&quot;American Society of Civil Engineers Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/asce-released/2012/ASCE_xml_220.tar.gz -->
+      <string>"^%s%d/.+\.tar.gz$", base_url, year</string>
+    </list>
+  </entry>
+
+  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>

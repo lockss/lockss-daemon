@@ -41,6 +41,13 @@
     <string>&quot;Casa Editrice Clueb Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/clueb-released/2010/CLUEB_chapters.zip -->
+      <string>"^%s%d/.+\.zip$", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>

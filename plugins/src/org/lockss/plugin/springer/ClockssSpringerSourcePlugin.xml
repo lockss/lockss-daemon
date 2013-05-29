@@ -41,6 +41,13 @@
     <string>&quot;Springer Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/springer-released/2012/ftp_PUB_11-11-17_06-38-38.zip -->
+      <string>"^%s%d/.+\.zip$", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>

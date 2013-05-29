@@ -46,6 +46,13 @@
     </map>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXC03740/00928674.tar -->
+      <string>"^%s%d/.+\.tar$", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Elsevier Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>

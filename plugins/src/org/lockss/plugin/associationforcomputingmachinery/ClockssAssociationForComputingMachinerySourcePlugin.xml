@@ -37,6 +37,13 @@
     <string>"Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- http://clockss-ingest.lockss.org/sourcefiles/acm-released/2012/7nov2012/NEW-JOUR-JDIQ-V4I1-2378016/NEW-JOUR-JDIQ-V4I1-2378016.xml -->
+      <string>"^%s%d/.+\.xml$", base_url, year</string>
+    </list>
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>Association for Computing Machinery Source Plugin (CLOCKSS)</string>
   </entry>
