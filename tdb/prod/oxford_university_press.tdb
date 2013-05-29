@@ -15977,6 +15977,8 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://past.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[volumes] = Suppl 1 for 2006, is designated as being Volume 1 and would be collected with Volume 1 (1952) rather than with one of the 2006 volumes.
 
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Past & Present Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; manifest ; 1952 ; Past & Present Volume 2 ; 2 >
