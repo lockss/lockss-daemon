@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.1.2.1 2013-05-28 17:45:53 fergaloy-sf Exp $
+ * $Id: SubscriptionManagement.java,v 1.1.2.2 2013-05-29 17:53:45 fergaloy-sf Exp $
  */
 
 /*
@@ -183,6 +183,7 @@ public class SubscriptionManagement extends LockssServlet {
    * Processes the user request.
    * 
    * @throws IOException
+   *           if any problem occurred writing the page.
    */
   public void lockssHandleRequest() throws IOException {
     final String DEBUG_HEADER = "lockssHandleRequest(): ";
@@ -212,7 +213,9 @@ public class SubscriptionManagement extends LockssServlet {
 	displayResults(status, SHOW_UPDATE_PAGE_LINK_TEXT,
 	    	       SHOW_UPDATE_PAGE_ACTION);
       } else if (AUTO_ADD_SUBSCRIPTIONS_ACTION.equals(action)) {
-	status = subscribePublicationsWithConfiguredAus();
+	// Add the necessary subscription options so that all the configured AUs
+	// fall in subscribed ranges and do not fall in any unsubscribed range.
+	status = subManager.subscribeAllConfiguredAus();
 	displayResults(status, AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT, null);
       } else {
 	displayAddPage();
@@ -228,7 +231,9 @@ public class SubscriptionManagement extends LockssServlet {
    * Displays the page used to add new subscription decisions.
    * 
    * @throws IOException
-   *           , SQLException
+   *           if any problem occurred writing the page.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private void displayAddPage() throws IOException, SQLException {
     final String DEBUG_HEADER = "displayAddPage(): ";
@@ -685,6 +690,7 @@ public class SubscriptionManagement extends LockssServlet {
     List<SerialPublication> publications = (List<SerialPublication>) session
 	.getAttribute(UNDECIDED_TITLES_SESSION_KEY);
 
+    // Handle session expiration.
     if (publications == null || publications.size() == 0) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
@@ -702,6 +708,7 @@ public class SubscriptionManagement extends LockssServlet {
 
     // Loop through all the publications presented in the form.
     for (SerialPublication publication : publications) {
+      // Add it to the list of subscriptions added, if necessary.
       subscription = buildPublicationSubscriptionIfNeeded(publication,
 	  parameterMap, status);
 
@@ -713,6 +720,7 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "subscriptions.size() = "
 	+ subscriptions.size());
 
+    // Add any added subscriptions to the system.
     if (subscriptions.size() > 0) {
       subManager.addSubscriptions(subscriptions, status);
     }
@@ -754,8 +762,9 @@ public class SubscriptionManagement extends LockssServlet {
     String unsubscribeAllParamName =
 	UNSUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
 
+    // Check whether the "Subscribe All" box has been checked.
     if (parameterMap.containsKey(subscribeAllParamName)) {
-      // Handle a full subscription request.
+      // Yes: Handle a full subscription request.
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + subscribeAllParamName
 	  + " => " + parameterMap.get(subscribeAllParamName));
 
@@ -767,8 +776,9 @@ public class SubscriptionManagement extends LockssServlet {
       String unsubscribedRangesParamName =
 	  UNSUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
 
+      // Check whether there are exceptions to the full subscription request.
       if (parameterMap.containsKey(unsubscribedRangesParamName)) {
-	// Handle exceptions to a full subscription request.
+	// Yes: Handle exceptions to a full subscription request.
 	unsubscribedRangesText = StringUtil
 	    .replaceString(parameterMap.get(unsubscribedRangesParamName), " ",
 		"");
@@ -776,6 +786,7 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesText = " + unsubscribedRangesText);
 
 	if (!StringUtil.isNullString(unsubscribedRangesText)) {
+	  // Get the unsubscribed ranges as a collection.
 	  try {
 	    unsubscribedRanges =
 		BibliographicPeriod.createCollection(unsubscribedRangesText);
@@ -787,9 +798,12 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Check whether the unsubscribed ranges are valid.
 	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
+	    // Yes: Remember them.
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
+	    // No: Report the problem.
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
@@ -798,8 +812,10 @@ public class SubscriptionManagement extends LockssServlet {
 	  }
 	}
       }
+
+      // No: Check whether the "Unsubscribe All" box has been checked.
     } else if (parameterMap.containsKey(unsubscribeAllParamName)) {
-      // Handle a full unsubscription request.
+      // Yes: Handle a full unsubscription request.
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + unsubscribeAllParamName
 	  + " = " + parameterMap.get(unsubscribeAllParamName));
       subscription = new Subscription();
@@ -807,11 +823,13 @@ public class SubscriptionManagement extends LockssServlet {
       subscription.setUnsubscribedRanges(Collections
 	  .singletonList(BibliographicPeriod.ALL_TIME_PERIOD));
     } else {
-      // Handle a partial subscription request.
+      // No: Handle a partial subscription request.
       String unsubscribedRangesParamName =
 	  UNSUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
 
+      // Check whether there are unsubscribed ranges specified in the form.
       if (parameterMap.containsKey(unsubscribedRangesParamName)) {
+	// Yes: Get them.
 	unsubscribedRangesText = StringUtil
 	    .replaceString(parameterMap.get(unsubscribedRangesParamName), " ",
 		"");
@@ -819,6 +837,7 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesText = " + unsubscribedRangesText);
 
 	if (!StringUtil.isNullString(unsubscribedRangesText)) {
+	  // Get the unsubscribed ranges as a collection.
 	  try {
 	    unsubscribedRanges =
 		BibliographicPeriod.createCollection(unsubscribedRangesText);
@@ -830,11 +849,14 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Check whether the unsubscribed ranges are valid.
 	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
+	    // Yes: Remember them.
 	    subscription = new Subscription();
 	    subscription.setPublication(publication);
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
+	    // No: Report the problem.
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_UNSUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
@@ -847,7 +869,9 @@ public class SubscriptionManagement extends LockssServlet {
       String subscribedRangesParamName =
 	  SUBSCRIBED_RANGES_PARAM_NAME + publicationNumber;
 
+      // Check whether there are subscribed ranges specified in the form.
       if (parameterMap.containsKey(subscribedRangesParamName)) {
+	// Yes: Get them.
 	subscribedRangesText = StringUtil
 	    .replaceString(parameterMap.get(subscribedRangesParamName), " ",
 		"");
@@ -856,6 +880,7 @@ public class SubscriptionManagement extends LockssServlet {
 
 	if (!StringUtil.isNullString(subscribedRangesText)) {
 	  try {
+	    // Get the subscribed ranges as a collection.
 	    subscribedRanges =
 		BibliographicPeriod.createCollection(subscribedRangesText);
 	  } catch (IllegalArgumentException iae) {
@@ -866,7 +891,9 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Check whether the subscribed ranges are valid.
 	  if (subManager.areAllRangesValid(subscribedRanges)) {
+	    // Yes: Remember them.
 	    if (subscription == null) {
 	      subscription = new Subscription();
 	      subscription.setPublication(publication);
@@ -874,6 +901,7 @@ public class SubscriptionManagement extends LockssServlet {
 
 	    subscription.setSubscribedRanges(subscribedRanges);
 	  } else {
+	    // No: Report the problem.
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_SUBSCRIBED_RANGES_MSG, null);
 	    if (log.isDebug2())
@@ -892,8 +920,18 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * Displays a page with the results of the previous operation.
    * 
+   * @param status
+   *          A SubscriptionOperationStatus with the results of the previous
+   *          operation.
+   * @param backLinkDisplayText
+   *          A String with the text of the link used to go back to the previous
+   *          page.
+   * @param backLinkAction
+   *          A String with the action needed to go back to the previous page.
    * @throws IOException
-   *           , SQLException
+   *           if any problem occurred writing the page.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private void displayResults(SubscriptionOperationStatus status,
       String backLinkDisplayText, String backLinkAction) throws IOException,
@@ -922,20 +960,24 @@ public class SubscriptionManagement extends LockssServlet {
     page.add("<br>");
 
     if (statusEntries.size() == 0) {
+      // Handle a no-op.
       errMsg = "No operation was specified";
       layoutErrorBlock(page);
     } else if (statusEntries.size() == 1
 	&& StringUtil.isNullString(statusEntries.get(0).getPublicationName())
 	&& !statusEntries.get(0).isSusbcriptionSuccess()) {
+      // Handle an overall error.
       errMsg = statusEntries.get(0).getSubscriptionErrorMessage();
       layoutErrorBlock(page);
     } else {
+      // Handle itemized subscription results.
       layoutErrorBlock(page);
 
       int border = 1;
       String attributes =
 	  "align=\"center\" cellspacing=\"4\" cellpadding=\"5\"";
 
+      // Create the results table.
       Table results = new Table(border, attributes);
       results.addHeading("Title");
       results.addHeading("Subscription Status");
@@ -944,7 +986,9 @@ public class SubscriptionManagement extends LockssServlet {
 	results.addHeading("AU Configuration");
       }
 
+      // Loop through all the itemized subscription results.
       for (StatusEntry entry : statusEntries) {
+	// Display a row per itemized subscription result.
 	results.newRow();
 	results.newCell();
 	results.add(encodeText(entry.getPublicationName()));
@@ -996,8 +1040,8 @@ public class SubscriptionManagement extends LockssServlet {
       page.add(comp);
     }
 
+    // The link to go back to the previous page.
     if (!StringUtil.isNullString(backLinkAction)) {
-      // The link to go back to the previous page.
       ServletUtil.layoutBackLink(page,
 	  srvLink(AdminServletManager.SERVLET_SUB_MANAGEMENT,
 	          BACK_LINK_TEXT_PREFIX + backLinkDisplayText,
@@ -1020,7 +1064,9 @@ public class SubscriptionManagement extends LockssServlet {
    * Displays the page that allows the user to change subscription decisions.
    * 
    * @throws IOException
-   *           , SQLException
+   *           if any problem occurred writing the page.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
    */
   private void displayUpdatePage() throws IOException, SQLException {
     final String DEBUG_HEADER = "displayUpdatePage(): ";
@@ -1195,7 +1241,6 @@ public class SubscriptionManagement extends LockssServlet {
 	    FactoryUtils.prototypeFactory(new TreeSet<Subscription>(
 		subManager.getSubscriptionByPublicationComparator())));
 
-    //TreeSet<Subscription> subSet;
     int subscriptionCount = 0;
 
     if (subscriptions != null) {
@@ -1495,6 +1540,7 @@ public class SubscriptionManagement extends LockssServlet {
     List<Subscription> subscriptions =
 	(List<Subscription>) session.getAttribute(SUBSCRIPTIONS_SESSION_KEY);
 
+    // Handle session expiration.
     if (subscriptions == null || subscriptions.size() == 0) {
       status.addStatusEntry(null, false, SESSION_EXPIRED_MSG, null);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
@@ -1530,6 +1576,7 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3()) log.debug3(DEBUG_HEADER
 	+ "updateSubscriptions.size() = " + updateSubscriptions.size());
 
+    // Record any updated subscriptions in the system.
     if (updateSubscriptions.size() > 0) {
       subManager.updateSubscriptions(updateSubscriptions, status);
     }
@@ -1578,11 +1625,13 @@ public class SubscriptionManagement extends LockssServlet {
     String unsubscribeAllParamName =
 	UNSUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;
 
+    // Check whether the "Subscribe All" box has been checked.
     if (parameterMap.containsKey(subscribeAllParamName)) {
-      // Handle a full subscription request.
+      // Yes: Handle a full subscription request.
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + subscribeAllParamName
 	  + " = " + parameterMap.get(subscribeAllParamName));
 
+      // Determine whether the subscribed ranges have changed.
       subsChanged = subscribedRanges == null || subscribedRanges.size() != 1
 		|| !subscribedRanges.iterator().next().isAllTime();
 
@@ -1592,7 +1641,9 @@ public class SubscriptionManagement extends LockssServlet {
       String unsubscribedRangesParamName =
 	  UNSUBSCRIBED_RANGES_PARAM_NAME + subscriptionSeq;
 
+      // Check whether there are exceptions to the full subscription request.
       if (parameterMap.containsKey(unsubscribedRangesParamName)) {
+	// Yes: Get them.
 	unsubscribedRangesText = StringUtil
 	    .replaceString(parameterMap.get(unsubscribedRangesParamName), " ",
 		"");
@@ -1600,6 +1651,7 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesText = " + unsubscribedRangesText);
       }
 
+      // Get any unsubscribed ranges in the original subscription.
       unsubscribedRangesAsString =
 	  BibliographicPeriod.rangesAsString(unsubscribedRanges);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER
@@ -1611,12 +1663,14 @@ public class SubscriptionManagement extends LockssServlet {
 	    + "unsubscribedRangesAsString = " + unsubscribedRangesAsString);
       }
 
+      // Determine whether the unsubscribed ranges have changed.
       unsubsChanged =
 	  !unsubscribedRangesText.equals(unsubscribedRangesAsString);
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "unsubsChanged = " + unsubsChanged);
 
       if (unsubsChanged) {
+	// Handle modified unsubscribed ranges.
 	try {
 	  unsubscribedRanges =
 	      BibliographicPeriod.createCollection(unsubscribedRangesText);
@@ -1640,15 +1694,19 @@ public class SubscriptionManagement extends LockssServlet {
 
 	subscription.setUnsubscribedRanges(unsubscribedRanges);
       }
+
+      // No: Check whether the "Unsubscribe All" box has been checked.
     } else if (parameterMap.containsKey(unsubscribeAllParamName)) {
-      // Handle a full unsubscription request.
+      // Yes: Handle a full unsubscription request.
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + unsubscribeAllParamName
 	  + " = " + parameterMap.get(unsubscribeAllParamName));
       
+      // Determine whether the subscribed ranges have changed.
       subsChanged = subscribedRanges != null && subscribedRanges.size() > 0;
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "subsChanged = " + subsChanged);
 
+      // Determine whether the unsubscribed ranges have changed.
       unsubsChanged = unsubscribedRanges == null
 	  || unsubscribedRanges.size() != 1
 	  || !unsubscribedRanges.iterator().next().isAllTime();
@@ -1656,13 +1714,14 @@ public class SubscriptionManagement extends LockssServlet {
 	log.debug3(DEBUG_HEADER + "unsubsChanged = " + unsubsChanged);
 
       if (subsChanged || unsubsChanged) {
+	// Handle modified subscription ranges.
 	subscription.setSubscribedRanges(Collections
 	    .singletonList(new BibliographicPeriod("")));
 	subscription.setUnsubscribedRanges(Collections
 	    .singletonList(BibliographicPeriod.ALL_TIME_PERIOD));
       }
     } else {
-      // Handle a partial subscription request.
+      // No: Handle a partial subscription request.
       String unsubscribedRangesParamName =
 	  UNSUBSCRIBED_RANGES_PARAM_NAME + subscriptionSeq;
 
@@ -1772,25 +1831,5 @@ public class SubscriptionManagement extends LockssServlet {
     boolean result = subsChanged || unsubsChanged;
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
     return result;
-  }
-
-  /**
-   * Creates subscriptions to publications matching the currently configured
-   * Archival Units, if necessary.
-   * 
-   * @return a SubscriptionOperationStatus with a summary of the status of the
-   *         operation.
-   */
-  private SubscriptionOperationStatus subscribePublicationsWithConfiguredAus() {
-    final String DEBUG_HEADER = "subscribePublicationsWithConfiguredAus(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    // Add the necessary subscription options so that all the configured AUs
-    // fall in subscribed ranges and do not fall in any unsubscribed range.
-    SubscriptionOperationStatus status = new SubscriptionOperationStatus();
-    subManager.subscribeAllConfiguredAus(status);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "status = " + status);
-    return status;
   }
 }
