@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.4 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.5 2013-05-29 21:02:56 barry409 Exp $
  */
 
 /*
@@ -227,7 +227,7 @@ public class VoteBlocksTallier {
   private Map<HashResult, VoteBlock.Version>
     makePlainMap(VoteBlock voteBlock) {
     Map<HashResult, VoteBlock.Version> plainMap =
-      new <HashResult, VoteBlock.Version>HashMap();
+      new HashMap<HashResult, VoteBlock.Version>();
     VoteBlock.Version[] vbVersions = voteBlock.getVersions();
     for (int versionIndex = 0; versionIndex < vbVersions.length;
 	 versionIndex++) {
