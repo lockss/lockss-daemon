@@ -12469,7 +12469,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ksm.sagepub.com/
 
-      au < manifest ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
       au < expected ; exists ; 2013 ; IIM Kozhikode Society & Management Review Volume 2 ; 2 ; >
 
     }
@@ -33322,7 +33322,7 @@
       au < zapped ; down ; 2009 ; Studies in History Volume 25 ; 25 ; >
       au < zapped ; down ; 2010 ; Studies in History Volume 26 ; 26 ; >
       au < released ; crawling ; 2011 ; Studies in History Volume 27 ; 27 ; >
-      au < manifest ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
+      au < crawling ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
       au < expected ; exists ; 2013 ; Studies in History Volume 29 ; 29 ; >
       
     }
