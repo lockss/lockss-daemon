@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.8 2013-05-29 06:36:30 tlipkis Exp $
+ * $Id: TestCron.java,v 1.9 2013-05-29 07:28:10 tlipkis Exp $
  */
 
 /*
@@ -122,9 +122,6 @@ public class TestCron extends LockssTestCase {
       fail("Task didn't finish");
     }
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
-//     try {
-//       TimerUtil.sleep(1000);
-//     } catch (InterruptedException e) {}
     assertEquals(1010, cron.getState().getLastTime("TestTask"));
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
