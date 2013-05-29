@@ -729,7 +729,22 @@
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Virology Volume 87 ; 87 >
   
     }
+
+    {
+      title <
+        name = mBio ;
+        eissn = 2150-7511 ;
+        issnl = 2150-7511
+      >
+      param[base_url] = http://mbio.asm.org/
+
+      au < HighWirePressH20Plugin ; exists ; 2010 ; mBio Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; 2011 ; mBio Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; 2012 ; mBio Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; 2013 ; mBio Volume 4 ; 4 >
   
+    }
+
     {
       title <
         name = Microbiology and Molecular Biology Reviews ;
