@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.17 2013-05-29 15:02:25 dshr Exp $
+ * $Id: UrlTallier.java,v 1.18 2013-05-29 19:45:05 dshr Exp $
  */
 
 /*
@@ -366,7 +366,8 @@ final class UrlTallier {
     return tally;
   }
 
-  void voteAllParticipants(String url, VoteBlockTallier voteBlockTallier) {
+  private void voteAllParticipants(String url,
+				   VoteBlockTallier voteBlockTallier) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
@@ -389,7 +390,7 @@ final class UrlTallier {
    * on which a voter has voted which are not in the sample.
    * @param url the URL in question
    */
-  void voteNoParticipants(String url) {
+  protected void voteNoParticipants(String url) {
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
