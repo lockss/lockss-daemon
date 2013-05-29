@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.10 2009-06-09 06:12:16 tlipkis Exp $
+ * $Id: Cron.java,v 1.10.66.1 2013-05-29 06:36:03 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -42,8 +43,8 @@ import org.lockss.remote.*;
 import org.lockss.account.*;
 
 /** A rudimentary cron facility.  Tasks are added programmatically, checked
- * at discreet interval (default one hour) to see if time to run.  Last run
- * times are stored persistently.
+ * at discreet interval (default one hour) and run in a thread pool.  Last
+ * run times are stored persistently.
  */
 public class Cron
   extends BaseLockssDaemonManager implements ConfigurableManager  {
@@ -63,12 +64,33 @@ public class Cron
   static final String PARAM_SLEEP = PREFIX + "sleep";
   static final long DEFAULT_SLEEP = Constants.HOUR;
 
+  private static final String THREADPOOL_PREFIX = PREFIX + "threadPool.";
+
+  /** Max number of threads running Cron tasks */
+  static final String PARAM_THREADPOOL_SIZE =
+    THREADPOOL_PREFIX + "size";
+  static final int DEFAULT_THREADPOOL_SIZE = 2;
+
+  /** Priority at which Cron tasks should run.  Changing this does not
+   * alter the priority of already running tasks. */
+  static final String PARAM_THREADPOOL_PRIORITY =
+    THREADPOOL_PREFIX + "priority";
+  static final int DEFAULT_THREADPOOL_PRIORITY = 5;
+
+  /** Duration after which idle threads will be terminated..  -1 = never */
+  public static final String PARAM_THREADPOOL_KEEPALIVE =
+    THREADPOOL_PREFIX + "keepAlive";
+  static final long DEFAULT_THREADPOOL_KEEPALIVE = 1 * Constants.MINUTE;
+
   private File cronStateFile = null;
   private Cron.State state;
-  private Collection tasks = new ArrayList();
+  private Collection<Task> tasks = new ArrayList();
   private boolean enabled = false;
   private long interval = DEFAULT_SLEEP;
   private TimerQueue.Request req;
+  private ThreadPoolExecutor executor;
+  private int taskPrio = DEFAULT_THREADPOOL_PRIORITY;
+
 
   public void startService() {
     super.startService();
@@ -80,31 +102,64 @@ public class Cron
     resetConfig();
   }
 
-  public synchronized void stopService() {
+  public void stopService() {
     disable();
     super.stopService();
   }
 
-  public synchronized void setConfig(Configuration config,
-				     Configuration prevConfig,
-				     Configuration.Differences changedKeys) {
+  public void setConfig(Configuration config,
+			Configuration prevConfig,
+			Configuration.Differences changedKeys) {
 
     if (!getDaemon().isDaemonInited()) {
       return;
     }
 
-    boolean doEnable = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
     if (changedKeys.contains(PREFIX)) {
+      boolean doEnable = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
       interval = config.getTimeInterval(PARAM_SLEEP, DEFAULT_SLEEP);
-    }
-    if (doEnable != enabled) {
-      if (doEnable) {
-	enable();
-      } else {
-	disable();
+
+      setExecutorParams(config);
+
+      if (doEnable != enabled) {
+	if (doEnable) {
+	  enable();
+	} else {
+	  disable();
+	}
+	enabled = doEnable;
       }
-      enabled = doEnable;
     }
+
+  }
+
+  private synchronized ThreadPoolExecutor getExecutor() {
+    if (executor == null) {
+      Configuration config = ConfigManager.getCurrentConfig();
+      int poolsize = config.getInt(PARAM_THREADPOOL_SIZE,
+				   DEFAULT_THREADPOOL_SIZE);
+      long keepalive = config.getTimeInterval(PARAM_THREADPOOL_KEEPALIVE,
+					      DEFAULT_THREADPOOL_KEEPALIVE);
+      executor = new ThreadPoolExecutor(poolsize, poolsize,
+					keepalive, TimeUnit.MILLISECONDS,
+					new LinkedBlockingQueue<Runnable>());
+      executor.allowCoreThreadTimeOut(true);
+    }
+    return executor;
+  }
+
+  private synchronized void setExecutorParams(Configuration config) {
+    if (executor != null) {
+      int poolsize = config.getInt(PARAM_THREADPOOL_SIZE,
+				   DEFAULT_THREADPOOL_SIZE);
+      long keepalive = config.getTimeInterval(PARAM_THREADPOOL_KEEPALIVE,
+					      DEFAULT_THREADPOOL_KEEPALIVE);
+      executor.setMaximumPoolSize(poolsize);
+      executor.setCorePoolSize(poolsize);
+      executor.setKeepAliveTime(keepalive, TimeUnit.MILLISECONDS);
+    }
+    taskPrio = config.getInt(PARAM_THREADPOOL_PRIORITY,
+			     DEFAULT_THREADPOOL_PRIORITY);
   }
 
   /** Install standard tasks */
@@ -115,7 +170,9 @@ public class Cron
 
   /** Add a task */
   public void addTask(Cron.Task task) {
-    tasks.add(task);
+    synchronized (tasks) {
+      tasks.add(task);
+    }
   }
 
   /** Return state object containing last-run times; mostly for testing */
@@ -138,17 +195,16 @@ public class Cron
   }
 
   void storeState(File file) {
-    try {
-      if (log.isDebug2()) log.debug2("Storing in " + file + ": " + state);
-      makeObjectSerializer().serialize(file, state);
-    } catch (Exception e) {
-      log.error("Couldn't store cron state, disabling cron: ", e);
-      disable();
-      // XXX alert
-    }
+      try {
+	state.store(file);
+      } catch (Exception e) {
+	log.error("Couldn't store cron state, disabling cron: ", e);
+	disable();
+	// XXX alert
+      }
   }
 
-  private ObjectSerializer makeObjectSerializer() {
+  private static ObjectSerializer makeObjectSerializer() {
     return new XStreamSerializer();
   }
 
@@ -191,23 +247,17 @@ public class Cron
 
   /** Run any tasks that need to be run.  Probably should eventually run
    * them in another thread */
-  private synchronized void checkTasks() {
+  private void checkTasks() {
     log.debug3("check");
     req = null;
-    if (tasks != null && !tasks.isEmpty()) {
-      long now = TimeBase.nowMs();
-      boolean needStore = false;
-      for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
-	Cron.Task task = (Cron.Task)iter.next();
-	if (task.nextTime(state.getLastTime(task.getId())) <= now) {
-	  if (executeTask(task)) {
-	    state.setLastTime(task.getId(), now);
-	    needStore = true;
+    synchronized (tasks) {
+      if (tasks != null && !tasks.isEmpty()) {
+	long now = TimeBase.nowMs();
+	for (Cron.Task task : tasks) {
+	  if (task.nextTime(state.getLastTime(task.getId())) <= now) {
+	    fork(task);
 	  }
 	}
-      }
-      if (needStore) {
-	storeState(cronStateFile);
       }
     }
     if (enabled) {
@@ -215,6 +265,34 @@ public class Cron
     }
   }
 
+  private void fork(final Task task) {
+    try {
+      LockssRunnable runnable =
+	new LockssRunnable("Cron Task") {
+	  public void lockssRun() {
+	    setPriority(taskPrio);
+	    executeAndRescheduleTask(task);
+	    setThreadName("Cron Task: idle");
+	  }};
+      getExecutor().submit(runnable);
+    } catch (RuntimeException e) {
+      log.warning("fork()", e);
+    }
+  }
+
+  // For testing, called after all state is updated following task
+  // execution
+  protected void endExecuteHook(Task task) {
+  }
+
+  private void executeAndRescheduleTask(Task task) {
+    if (executeTask(task)) {
+      state.setLastTime(task.getId(), TimeBase.nowMs());
+      storeState(cronStateFile);
+    }
+    endExecuteHook(task);
+  }
+	
   private boolean executeTask(Task task) {
     try {
       return task.execute();
@@ -294,7 +372,7 @@ public class Cron
     int version = 1;
     Map times = new HashMap();
 
-    long getLastTime(String id) {
+    synchronized long getLastTime(String id) {
       Long l = (Long)times.get(id);
       if (l == null) {
 	return 0;
@@ -302,14 +380,20 @@ public class Cron
       return l.longValue();
     }
 
-    void setLastTime(String id, long time) {
+    synchronized void setLastTime(String id, long time) {
       times.put(id, new Long(time));
+    }
+
+    synchronized void store(File file)
+	throws SerializationException, InterruptedIOException {
+      if (log.isDebug2()) log.debug2("Storing in " + file + ": " + this);
+      makeObjectSerializer().serialize(file, this);
     }
   }
 
   /** Task base */
   abstract static class BaseTask implements Cron.Task {
-    protected LockssDaemon daemon;
+    protected final LockssDaemon daemon;
 
     BaseTask(LockssDaemon daemon) {
       this.daemon = daemon;

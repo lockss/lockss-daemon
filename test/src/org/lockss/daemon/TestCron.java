@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.7 2009-06-09 06:12:16 tlipkis Exp $
+ * $Id: TestCron.java,v 1.7.66.1 2013-05-29 06:36:03 tlipkis Exp $
  */
 
 /*
@@ -114,9 +114,17 @@ public class TestCron extends LockssTestCase {
     TestTask task = new TestTask(daemon);
     initCron(task);
     
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    cron.setExecSem(sem);
     cron.startService();
     TimeBase.step(10);
+    if (!sem.take(TIMEOUT_SHOULDNT)) {
+      fail("Task didn't finish");
+    }
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+//     try {
+//       TimerUtil.sleep(1000);
+//     } catch (InterruptedException e) {}
     assertEquals(1010, cron.getState().getLastTime("TestTask"));
     TimeBase.step(10);
     assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
@@ -127,12 +135,18 @@ public class TestCron extends LockssTestCase {
     task.setRet(false);
     TimeBase.step(20);
     // task should have run again, but not updated next run time
+    if (!sem.take(TIMEOUT_SHOULDNT)) {
+      fail("Task didn't finish");
+    }
     assertEquals(ListUtil.list(new Long(1010), new Long(1120)),
 		 task.getTrace());
     assertEquals(1010, cron.getState().getLastTime("TestTask"));
     task.setRet(true);
     TimeBase.step(10);
     // now it should have run again and updated next run time
+    if (!sem.take(TIMEOUT_SHOULDNT)) {
+      fail("Task didn't finish");
+    }
     assertEquals(1130, cron.getState().getLastTime("TestTask"));
     assertEquals(ListUtil.list(new Long(1010), new Long(1120), new Long(1130)),
 		 task.getTrace());
@@ -232,6 +246,8 @@ public class TestCron extends LockssTestCase {
 
   static class MyCron extends Cron {
     Cron.Task task = null;
+    SimpleBinarySemaphore execSem;
+
     MyCron() {
       super();
     }
@@ -246,7 +262,20 @@ public class TestCron extends LockssTestCase {
 	addTask(task);
       }
     }
+
+    @Override
+    protected void endExecuteHook(Task task) {
+      super.endExecuteHook(task);
+      if (execSem != null) {
+	execSem.give();
+      }
+    }
+
+    void setExecSem(SimpleBinarySemaphore sem) {
+      execSem = sem;
+    }
   }
+
 
   static class TestTask implements Cron.Task {
     List trace = new ArrayList();
