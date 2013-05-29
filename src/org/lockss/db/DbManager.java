@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.20.2.1 2013-05-28 19:46:06 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.20.2.2 2013-05-29 17:52:59 fergaloy-sf Exp $
  */
 
 /*
@@ -2264,7 +2264,7 @@ public class DbManager extends BaseLockssDaemonManager
     removeVersion1ObsoleteTablesIfPresent(conn);
 
     // Create the necessary tables if they do not exist.
-    createVersion2TablesIfMissing(conn);
+    createTablesIfMissing(conn, VERSION_2_TABLE_CREATE_QUERIES);
 	
     // Initialize necessary data in new tables.
     addMetadataItemType(conn, MD_ITEM_TYPE_BOOK_SERIES);
@@ -2305,27 +2305,28 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Creates all the necessary version 2 database tables if they do not exist.
+   * Creates the necessary database tables if they do not exist.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
+   * @param tableMap
+   *          A Map<String, String> with the creation queries indexed by table
+   *          name.
    * @throws BatchUpdateException
    *           if a batch update exception occurred.
    * @throws SQLException
    *           if any other problem occurred accessing the database.
    */
-  private void createVersion2TablesIfMissing(Connection conn)
-      throws BatchUpdateException, SQLException {
-    final String DEBUG_HEADER = "createVersion2TablesIfMissing(): ";
+  private void createTablesIfMissing(Connection conn,
+      Map<String, String> tableMap) throws BatchUpdateException, SQLException {
+    final String DEBUG_HEADER = "createTablesIfMissing(): ";
 
     // Loop through all the table names.
-    for (String tableName : VERSION_2_TABLE_CREATE_QUERIES.keySet()) {
+    for (String tableName : tableMap.keySet()) {
       log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
 
       // Create the table if it does not exist.
-      createTableIfMissingBeforeReady(conn, tableName,
-                                      VERSION_2_TABLE_CREATE_QUERIES
-                                      	.get(tableName));
+      createTableIfMissingBeforeReady(conn, tableName, tableMap.get(tableName));
     }
   }
 
@@ -3792,37 +3793,12 @@ public class DbManager extends BaseLockssDaemonManager
   private boolean setUpDatabaseVersion1(Connection conn)
       throws BatchUpdateException, SQLException {
     // Create the necessary tables if they do not exist.
-    createVersion1TablesIfMissing(conn);
+    createTablesIfMissing(conn, VERSION_1_TABLE_CREATE_QUERIES);
 
     // Create new functions.
     createVersion1FunctionsIfMissing(conn);
     
     return true;
-  }
-
-  /**
-   * Creates all the necessary version 1 database tables if they do not exist.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws BatchUpdateException
-   *           if a batch update exception occurred.
-   * @throws SQLException
-   *           if any other problem occurred accessing the database.
-   */
-  private void createVersion1TablesIfMissing(Connection conn)
-      throws BatchUpdateException, SQLException {
-    final String DEBUG_HEADER = "createVersion1TablesIfMissing(): ";
-
-    // Loop through all the table names.
-    for (String tableName : VERSION_1_TABLE_CREATE_QUERIES.keySet()) {
-      log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
-
-      // Create the table if it does not exist.
-      createTableIfMissingBeforeReady(conn, tableName,
-                                      VERSION_1_TABLE_CREATE_QUERIES
-                                      	.get(tableName));
-    }
   }
 
   /**
@@ -4379,35 +4355,7 @@ public class DbManager extends BaseLockssDaemonManager
   private void updateDatabaseFrom2To3(Connection conn)
       throws BatchUpdateException, SQLException {
     //Create the necessary indices.
-    createVersion3Indices(conn);
-  }
-
-  /**
-   * Creates all the necessary version 3 database indices.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private void createVersion3Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion3Indices(): ";
-
-    // Loop through all the indices.
-    for (String query : VERSION_3_INDEX_CREATE_QUERIES) {
-      log.debug2(DEBUG_HEADER + "Query = " + query);
-      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
-
-      try {
-        executeUpdateBeforeReady(statement);
-      } catch (SQLException sqle) {
-        log.error("Cannot create index", sqle);
-        log.error("SQL = '" + query + "'.");
-        throw sqle;
-      } finally {
-        DbManager.safeCloseStatement(statement);
-      }
-    }
+    createIndices(conn, VERSION_3_INDEX_CREATE_QUERIES);
   }
 
   /**
@@ -4423,10 +4371,10 @@ public class DbManager extends BaseLockssDaemonManager
   private void updateDatabaseFrom3To4(Connection conn)
       throws BatchUpdateException, SQLException {
     // Create the necessary tables if they do not exist.
-    createVersion4TablesIfMissing(conn);
+    createTablesIfMissing(conn, VERSION_4_TABLE_CREATE_QUERIES);
 
     //Create the necessary indices.
-    createVersion4Indices(conn);
+    createIndices(conn, VERSION_4_INDEX_CREATE_QUERIES);
 
     // Migrate the version 3 platforms.
     addPluginTablePlatformReferenceColumn(conn);
@@ -4435,59 +4383,6 @@ public class DbManager extends BaseLockssDaemonManager
 
     // Fix publication dates.
     setPublicationDatesToNull(conn);
-  }
-
-  /**
-   * Creates all the necessary version 4 database tables if they do not exist.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws BatchUpdateException
-   *           if a batch update exception occurred.
-   * @throws SQLException
-   *           if any other problem occurred accessing the database.
-   */
-  private void createVersion4TablesIfMissing(Connection conn)
-      throws BatchUpdateException, SQLException {
-    final String DEBUG_HEADER = "createVersion4TablesIfMissing(): ";
-
-    // Loop through all the table names.
-    for (String tableName : VERSION_4_TABLE_CREATE_QUERIES.keySet()) {
-      log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
-
-      // Create the table if it does not exist.
-      createTableIfMissingBeforeReady(conn, tableName,
-                                      VERSION_4_TABLE_CREATE_QUERIES
-                                      	.get(tableName));
-    }
-  }
-
-  /**
-   * Creates all the necessary version 4 database indices.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private void createVersion4Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion4Indices(): ";
-
-    // Loop through all the indices.
-    for (String query : VERSION_4_INDEX_CREATE_QUERIES) {
-      log.debug2(DEBUG_HEADER + "Query = " + query);
-      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
-
-      try {
-        executeUpdateBeforeReady(statement);
-      } catch (SQLException sqle) {
-        log.error("Cannot create index", sqle);
-        log.error("SQL = '" + query + "'.");
-        throw sqle;
-      } finally {
-        DbManager.safeCloseStatement(statement);
-      }
-    }
   }
 
   /**
@@ -4731,63 +4626,10 @@ public class DbManager extends BaseLockssDaemonManager
   private void updateDatabaseFrom4To5(Connection conn)
       throws BatchUpdateException, SQLException {
     // Create the necessary tables if they do not exist.
-    createVersion5TablesIfMissing(conn);
+    createTablesIfMissing(conn, VERSION_5_TABLE_CREATE_QUERIES);
 
     //Create the necessary indices.
-    createVersion5Indices(conn);
-  }
-
-  /**
-   * Creates all the necessary version 5 database tables if they do not exist.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws BatchUpdateException
-   *           if a batch update exception occurred.
-   * @throws SQLException
-   *           if any other problem occurred accessing the database.
-   */
-  private void createVersion5TablesIfMissing(Connection conn)
-      throws BatchUpdateException, SQLException {
-    final String DEBUG_HEADER = "createVersion5TablesIfMissing(): ";
-
-    // Loop through all the table names.
-    for (String tableName : VERSION_5_TABLE_CREATE_QUERIES.keySet()) {
-      log.debug2(DEBUG_HEADER + "Checking table = " + tableName);
-
-      // Create the table if it does not exist.
-      createTableIfMissingBeforeReady(conn, tableName,
-                                      VERSION_5_TABLE_CREATE_QUERIES
-                                      	.get(tableName));
-    }
-  }
-
-  /**
-   * Creates all the necessary version 5 database indices.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private void createVersion5Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion5Indices(): ";
-
-    // Loop through all the indices.
-    for (String query : VERSION_5_INDEX_CREATE_QUERIES) {
-      log.debug2(DEBUG_HEADER + "Query = " + query);
-      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
-
-      try {
-        executeUpdateBeforeReady(statement);
-      } catch (SQLException sqle) {
-        log.error("Cannot create index", sqle);
-        log.error("SQL = '" + query + "'.");
-        throw sqle;
-      } finally {
-        DbManager.safeCloseStatement(statement);
-      }
-    }
+    createIndices(conn, VERSION_5_INDEX_CREATE_QUERIES);
   }
 
   /**
@@ -4809,7 +4651,7 @@ public class DbManager extends BaseLockssDaemonManager
     removeDuplicateIssns(conn);
 
     // Create the necessary indices.
-    createVersion6Indices(conn);
+    createIndices(conn, VERSION_6_INDEX_CREATE_QUERIES);
   }
 
   /**
@@ -5061,34 +4903,6 @@ public class DbManager extends BaseLockssDaemonManager
       previousIssn = null;
       previousIssnType = null;
       foundDuplicate = false;
-    }
-  }
-
-  /**
-   * Creates all the necessary version 6 database indices.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws SQLException
-   *           if any problem occurred accessing the database.
-   */
-  private void createVersion6Indices(Connection conn) throws SQLException {
-    final String DEBUG_HEADER = "createVersion6Indices(): ";
-
-    // Loop through all the indices.
-    for (String query : VERSION_6_INDEX_CREATE_QUERIES) {
-      log.debug2(DEBUG_HEADER + "Query = " + query);
-      PreparedStatement statement = prepareStatementBeforeReady(conn, query);
-
-      try {
-	executeUpdateBeforeReady(statement);
-      } catch (SQLException sqle) {
-	log.error("Cannot create index", sqle);
-	log.error("SQL = '" + query + "'.");
-	throw sqle;
-      } finally {
-	DbManager.safeCloseStatement(statement);
-      }
     }
   }
 
