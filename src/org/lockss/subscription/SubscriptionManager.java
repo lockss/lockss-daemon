@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.1.2.2 2013-05-29 17:53:45 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.1.2.3 2013-05-29 22:47:02 fergaloy-sf Exp $
  */
 
 /*
@@ -495,8 +495,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       auId = tdbAu.getAuId(pluginManager);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
     } catch (IllegalStateException ise) {
-      log.warning("Problem getting identifier of archival unit " + tdbAu
-	  + " - Ignored", ise);
+      log.warning("Ignored " + tdbAu
+	  + " because of problems getting its identifier: " + ise.getMessage());
+      return;
+    } catch (RuntimeException re) {
+      log.error("Ignored " + tdbAu
+	  + " because of problems getting its identifier: " + re.getMessage());
       return;
     }
 
