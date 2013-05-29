@@ -30,15 +30,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = bios
       
-      au < ready ; 2004 ; BIOS Volume 75 ; 75 >
+      au < releasing ; 2004 ; BIOS Volume 75 ; 75 >
       au < doNotProcess ; 2005 ; BIOS Volume 76 ; 76 >
       au < doNotProcess ; 2006 ; BIOS Volume 77 ; 77 >
       au < doNotProcess ; 2007 ; BIOS Volume 78 ; 78 >
-      au < ready ; 2008 ; BIOS Volume 79 ; 79 >
-      au < ready ; 2009 ; BIOS Volume 80 ; 80 >
-      au < ready ; 2010 ; BIOS Volume 81 ; 81 >
-      au < ready ; 2011 ; BIOS Volume 82 ; 82 >
-      au < ready ; 2012 ; BIOS Volume 83 ; 83 >
+      au < releasing ; 2008 ; BIOS Volume 79 ; 79 >
+      au < releasing ; 2009 ; BIOS Volume 80 ; 80 >
+      au < releasing ; 2010 ; BIOS Volume 81 ; 81 >
+      au < releasing ; 2011 ; BIOS Volume 82 ; 82 >
+      au < releasing ; 2012 ; BIOS Volume 83 ; 83 >
       au < manifest ; 2013 ; BIOS Volume 84 ; 84 >
       
 
