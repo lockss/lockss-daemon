@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.146 2013-05-22 16:43:33 barry409 Exp $
+ * $Id: V3Poller.java,v 1.147 2013-05-29 15:02:25 dshr Exp $
  */
 
 /*
@@ -444,6 +444,7 @@ public class V3Poller extends BasePoll {
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
   private int sampleModulus = 0;
   private byte[] sampleNonce = null;
+  private MessageDigest sampleHasher = null;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DURATION_PADDING;
   private long hashBytesBeforeCheckpoint =
@@ -645,6 +646,15 @@ public class V3Poller extends BasePoll {
     sampleModulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
     if (sampleModulus != 0) {
       sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+      String alg =
+	CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
+			       LcapMessage.DEFAULT_HASH_ALGORITHM);
+      try {
+	sampleHasher = MessageDigest.getInstance(alg);
+      } catch (NoSuchAlgorithmException ex) {
+	log.error("No such hash algorithm: " + alg);
+	throw new IllegalArgumentException("No such hash algorithm: " + alg);
+      }
     }
   }
 
@@ -1276,10 +1286,28 @@ public class V3Poller extends BasePoll {
    * @param voterUrl The URL being tallied.
    */
   private void tallyVoterUrl(String voterUrl) {
-    log.debug3("tallyVoterUrl: "+voterUrl);
-    BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
-    updateTallyStatus(tally, voterUrl);
-    repairIfNeeded(tally, voterUrl);
+    boolean inc = true; // Is this URL included in the poll
+    if (sampleModulus != 0 && sampleHasher != null) {
+      // This is a sampled poll. The reason that the URL does not
+      // appear in the poller's VoteBlock may be that it was excluded
+      // from the sample, while the reason it does appear in the
+      // voter's VoteBlock may be that the voter doesn't support
+      // sampled polls.
+      inc = SampledBlockHasher.urlIsIncluded(sampleNonce, voterUrl,
+					     sampleModulus, sampleHasher);
+      log.debug("tallyVoterUrl: " + voterUrl + (inc ? " is" : " isn't") +
+		" in sample");
+    } else {
+      log.debug3("tallyVoterUrl: "+voterUrl);
+    }
+    if (inc) {
+      BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
+      // This URL is included - record its tally and repair if needed
+      updateTallyStatus(tally, voterUrl);
+      repairIfNeeded(tally, voterUrl);
+    } else {
+      urlTallier.voteNoParticipants(voterUrl);
+    }
   }
 
   /**

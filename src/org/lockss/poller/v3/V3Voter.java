@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.86 2013-05-22 20:40:11 barry409 Exp $
+ * $Id: V3Voter.java,v 1.87 2013-05-29 15:02:25 dshr Exp $
  */
 
 /*
@@ -209,6 +209,11 @@ public class V3Voter extends BasePoll {
     PREFIX + "allSymmetricPolls";
   public static final boolean DEFAULT_ALL_SYMMETRIC_POLLS = false;
 
+  /** If true, can vote in a Proof of Possession poll - for testing */
+  public static final String PARAM_ENABLE_POP_VOTING =
+    PREFIX + "enablePoPVoting";
+  public static final boolean DEFAULT_ENABLE_POP_VOTING = true;
+
   /** If true, can request a symmetric poll */
   public static final String PARAM_ENABLE_SYMMETRIC_POLLS =
     PREFIX + "enableSymmetricPolls";
@@ -271,21 +276,30 @@ public class V3Voter extends BasePoll {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
+    int modulus = 0;
+    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_POP_VOTING,
+				      DEFAULT_ENABLE_POP_VOTING)) {
+	  modulus = msg.getModulus();
+	  log.debug("Using modulus " + modulus + " for sampled poll");
+    } else {
+      log.debug("Ignoring modulus " + msg.getModulus());
+    }
+
     try {
       this.voterUserData = new VoterUserData(new PollSpec(msg), this,
                                              msg.getOriginatorId(), 
                                              msg.getKey(),
                                              duration,
                                              msg.getHashAlgorithm(),
-					     msg.getModulus(),
+					     modulus,
                                              msg.getPollerNonce(),
                                              PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
                                              msg.getEffortProof(),
                                              stateDir);
       voterUserData.setPollMessage(msg);
       voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
-      if (msg.getModulus() != 0) {
-        voterUserData.setSampleNonce(msg.getSampleNonce());
+      if (modulus != 0) {
+	voterUserData.setSampleNonce(msg.getSampleNonce());
       }
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);

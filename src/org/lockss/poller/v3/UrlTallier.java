@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.16 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.17 2013-05-29 15:02:25 dshr Exp $
  */
 
 /*
@@ -380,6 +380,22 @@ final class UrlTallier {
 	} else {
 	  voteBlockTallier.voteMissing(e.userData);
 	}
+      }
+    }
+  }
+
+  /**
+   * voteNoParticipants is used in sampled polls to skip over URLs
+   * on which a voter has voted which are not in the sample.
+   * @param url the URL in question
+   */
+  void voteNoParticipants(String url) {
+    for (int participantIndex = 0; participantIndex < participantsList.size();
+	 participantIndex++) {
+      Entry e = participantsList.get(participantIndex);
+      if (url.equals(e.getUrl())) {
+	VoteBlock voteBlock = e.voteBlock;
+	nextVoteBlock(e);
       }
     }
   }

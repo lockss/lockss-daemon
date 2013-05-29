@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.2 2013-03-01 04:12:24 dshr Exp $
+ * $Id: SampledBlockHasher.java,v 1.3 2013-05-29 15:02:25 dshr Exp $
  */
 
 /*
@@ -114,15 +114,24 @@ public class SampledBlockHasher extends BlockHasher {
       String urlName = node.getUrl();
       log.debug3("url: " + urlName + " mod: " + modulus + " alg: " + alg);
       if (modulus != 0) {
-	// First hash the nonce and the current URL's name
-	sampleHasher.update(sampleNonce);
-	sampleHasher.update(urlName.getBytes());
-	byte[] hash = sampleHasher.digest();
-	// Compare high byte with mod (simplifies test)
-	res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
-	log.debug(urlName + " byte: " + hash[hash.length-1] + " " +
-		   (res ? "is" : "isn't") + " in sample");
+	res = urlIsIncluded(sampleNonce, urlName, modulus, sampleHasher);
       }
+    }
+    return res;
+  }
+
+  public static boolean urlIsIncluded(byte[] sampleNonce, String urlName,
+				      int modulus, MessageDigest sampleHasher) {
+    boolean res = true;
+    if (modulus != 0) {
+      // First hash the nonce and the current URL's name
+      sampleHasher.update(sampleNonce);
+      sampleHasher.update(urlName.getBytes());
+      byte[] hash = sampleHasher.digest();
+      // Compare high byte with mod (simplifies test)
+      res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
+      log.debug(urlName + " byte: " + hash[hash.length-1] + " " +
+		(res ? "is" : "isn't") + " in sample");
     }
     return res;
   }

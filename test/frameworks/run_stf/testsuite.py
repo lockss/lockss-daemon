@@ -743,7 +743,8 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
     def __init__( self, methodName = 'runTest' ):
         TotalLossRecoveryV3Tests.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True,
-                                     'org.lockss.poll.v3.modulus': 2 }
+                                     'org.lockss.poll.v3.modulus': 2,
+                                     'org.lockss.poll.v3.enablePoPVoting': True}
 
     def _verify_repair( self, nodes ):
         # XXX need to identify files not count them
@@ -931,19 +932,36 @@ class NoQuorumSymmetricV3TestCase( SimpleV3SymmetricTestCase ):
         self.assertEqual( self.victim.getPollResults( self.AU ),
                           (u'No Quorum', u'Waiting for Poll') )
         
-
 class SimpleV3PoPTestCase( V3TestCases ):
     """Test a V3 proof of possession poll with no disagreement"""
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
-        self.local_configuration = { "org.lockss.poll.v3.modulus": 2 }
+        self.local_configuration = { "org.lockss.poll.v3.modulus": 2,
+                                     'org.lockss.poll.v3.enablePoPVoting': True}
         self.simulated_AU_parameters = { 'numFiles': 30 }
         # XXX need to confirm poll on ~15 files
         # XXX need to confirm willing repairer status
         
     def _damage_AU( self ):
         return [ ]
+
+class SimpleV3PoPCompatibilityTestCase( V3TestCases ):
+    """Test compatibility between PoP poller and non-PoP voters"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = { "org.lockss.poll.v3.modulus": 2,
+                                     'org.lockss.poll.v3.enablePoPVoting': False}
+        self.simulated_AU_parameters = { 'numFiles': 30 }
+        # XXX need to confirm poll on ~15 files
+        # XXX need to confirm willing repairer status
+
+    def _damage_AU( self ):
+        return [ ]
+
+# XXX need a test that triggers the hang mentioned in
+# RepairFromPublisherV3TestCase
 
 # Load configuration (*before* creating test instances)
 lockss_util.config.load( 'testsuite.props' )
@@ -979,6 +997,7 @@ symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
                                       TotalLossRecoverySymmetricV3TestCase() ) )
 
 popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
+                                   SimpleV3PoPCompatibilityTestCase(),
                                    TotalLossRecoveryPoPV3TestCase() ) )
 
 randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
