@@ -35928,7 +35928,7 @@ comment[mpj] = now published by Brill
         issn = 0081-2463
       >
 
-      pluginSuffix = HighWirePressH20Plug
+      pluginSuffix = HighWirePressH20Plugin
       param[base_url] = http://sap.sagepub.com
       implicit < status ; year ; name ; param[volume_name] >
 
