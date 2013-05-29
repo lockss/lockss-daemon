@@ -1369,11 +1369,11 @@
     >
 
     param[journal_id] = ijosup
-    comment[notReady] = no substance
+    comment[notReady] = no substance (404 error)
 
-    au < testing ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
-    au < testing ; exists ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
-    au < crawling ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
+    au < notReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
+    au < ready ; exists ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
+    au < notReady ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
 
   }
 
