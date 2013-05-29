@@ -39,7 +39,7 @@
       param[base_url2] = http://cdn.nejm.org/
       param[journal_id] = nejm
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = mismatch on span class "title" id, retest later
+      comment[notReady] = RU4756, mismatch on span class "title" id, retest later
 
       au < ready ; 2008 ; New England Journal of Medicine Volume 358 ; 358 > 
       au < notReady ; 2008 ; New England Journal of Medicine Volume 359 ; 359 > 
