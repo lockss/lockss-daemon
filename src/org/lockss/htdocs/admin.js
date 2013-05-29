@@ -1,10 +1,10 @@
 /*
- * $Id: admin.js,v 1.12 2012-10-03 19:29:23 fergaloy-sf Exp $
+ * $Id: admin.js,v 1.13 2013-05-29 18:36:17 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -240,4 +240,32 @@ function toggleElements(id1, id2) {
 	el1.style.display = "none";
     el2.style.display = "block";
   }
+}
+
+// Toggles the ability of a slave element through the selection of a master
+// check box element, so that the slave element is disabled when the master
+// check box is enabled and vice versa.
+function selectDisable1(master, slaveId) {
+	var masterChecked = master.checked;
+	var slave = document.getElementById(slaveId);
+
+	if (slave !== undefined) {
+		slave.disabled = masterChecked;
+	}
+}
+
+// Toggles the ability of two slave elements through the selection of a master
+// check box element, so that the slave elements are disabled when the master
+// check box is enabled and vice versa.
+function selectDisable2(master, slaveId1, slaveId2) {
+	selectDisable1(master, slaveId1);
+	selectDisable1(master, slaveId2);
+}
+
+// Toggles the ability of three slave elements through the selection of a master
+// check box element, so that the slave elements are disabled when the master
+// check box is enabled and vice versa.
+function selectDisable3(master, slaveId1, slaveId2, slaveId3) {
+	selectDisable2(master, slaveId1, slaveId2);
+	selectDisable1(master, slaveId3);
 }
