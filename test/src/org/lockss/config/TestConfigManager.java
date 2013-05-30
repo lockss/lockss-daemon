@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.44 2012-08-08 07:11:11 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.45 2013-05-30 14:00:18 tlipkis Exp $
  */
 
 /*
@@ -875,7 +875,7 @@ public class TestConfigManager extends LockssTestCase {
     String k1 = "org.lockss.foo";
     String k2 = "org.lockss.user.1.password";
     String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
-    String k4 = "org.lockss.platform.foo";
+    String k4 = "org.lockss.platform.bar";
 
     Properties eprops = new Properties();
     eprops.put(k1, "12345");
@@ -894,6 +894,7 @@ public class TestConfigManager extends LockssTestCase {
     assertNull(config2.get(k1));
     assertEquals("v2", config2.get(k2));
     assertNull(config2.get(k3));
+    assertNull(config2.get(k4));
   }
 
   public void testExpertConfigFileAllow() throws Exception {
@@ -932,6 +933,49 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("12345", config2.get(k1));
     assertNull(config2.get(k2));
     assertEquals("v3", config2.get(k3));
+  }
+
+  public void testExpertConfigFileBoth() throws Exception {
+    String tmpdir = getTempDir().toString();
+    File pfile = new File(tmpdir, "props.txt");
+    Properties pprops = new Properties();
+    pprops.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    pprops.put(ConfigManager.PARAM_EXPERT_DENY,
+	       "foo;bar;^org\\.lockss\\.platform\\.");
+    pprops.put(ConfigManager.PARAM_EXPERT_ALLOW, "foo");
+    PropUtil.toFile(pfile, pprops);
+
+    String relConfigPath =
+      CurrentConfig.getParam(ConfigManager.PARAM_CONFIG_PATH,
+                             ConfigManager.DEFAULT_CONFIG_PATH);
+    File cdir = new File(tmpdir, relConfigPath);
+    cdir.mkdirs();
+    File efile = new File(cdir, ConfigManager.CONFIG_FILE_EXPERT);
+
+    assertTrue(cdir.exists());
+    String k1 = "org.lockss.foo";
+    String k2 = "org.lockss.user.1.password";
+    String k3 = "org.lockss.keyMgr.keystore.foo.keyPassword";
+    String k4 = "org.lockss.platform.bar";
+
+    Properties eprops = new Properties();
+    eprops.put(k1, "12345");
+    eprops.put(k2, "v2");
+    eprops.put(k3, "v3");
+    eprops.put(k4, "v4");
+    PropUtil.toFile(efile, eprops);
+
+    Configuration config = ConfigManager.getCurrentConfig();
+    assertNull(config.get(k1));
+    assertNull(config.get(k2));
+    assertNull(config.get(k3));
+    assertNull(config.get(k4));
+    assertTrue(mgr.updateConfig(ListUtil.list(pfile)));
+    Configuration config2 = ConfigManager.getCurrentConfig();
+    assertEquals("12345", config2.get(k1));
+    assertEquals("v2", config2.get(k2));
+    assertEquals("v3", config2.get(k3));
+    assertNull(config2.get(k4));
   }
 
   public void testExpertConfigDefaultDeny() throws Exception {

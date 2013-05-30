@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.94 2013-05-23 09:50:37 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.95 2013-05-30 14:00:18 tlipkis Exp $
  */
 
 /*
@@ -219,12 +219,12 @@ public class ConfigManager implements LockssManager {
   public static final String CONFIG_FILE_AUDIT_PROXY =
     "audit_proxy_config.txt";
 
-  /** If set to a list of regexps, only parameter names that match one of
-   * them will be allowed to be set in expert config.  */
+  /** If set to a list of regexps, matching parameter names will be allowed
+   * to be set in expert config.  */
   public static final String PARAM_EXPERT_ALLOW = MYPREFIX + "expert.allow";
   public static final List DEFAULT_EXPERT_ALLOW = null;
-  /** If set to a list of regexps, only parameter names that do not match
-   * any of them will be allowed to be set in expert config.  */
+  /** If set to a list of regexps, matching parameter names will not be
+   * allowed to be set in expert config.  */
   public static final String PARAM_EXPERT_DENY = MYPREFIX + "expert.deny";
   static String ODLD = "^org\\.lockss\\.";
   public static final List DEFAULT_EXPERT_DENY =
@@ -366,27 +366,30 @@ public class ConfigManager implements LockssManager {
     return enableExpertConfig;
   }
 
-  /** If org.lockss.config.expert.allow is set to a list, only keys
-   * matching a pattern in the list are allowed.  Otherwise, if
-   * org.lockss.config.expert.deny is set to a list, only keys not matching
-   * a pattern in the list are allowed.  Otherwise, all keys are allowed */
+  /** A config param is:<ul><li>allowed if it matches a pattern in
+   * <code>org.lockss.config.expert.allow</code> (if set), else</li>
+   * <li>disallowed if it matches a pattern in
+   * <code>org.lockss.config.expert.deny</code> (if set), else</li>
+   * <li>Allowed.</li></ul>. */
   public boolean isLegalExpertConfigKey(String key) {
-    if (expertConfigAllowPats != null) {
+    if (!expertConfigAllowPats.isEmpty()) {
       for (Pattern pat : expertConfigAllowPats) {
 	if (RegexpUtil.getMatcher().contains(key, pat)) {
 	  return true;
 	}
       }
-      return false;
     }
-    if (expertConfigDenyPats != null) {
+    if (expertConfigDenyPats.isEmpty()) {
+      // If no deny pats, return true iff there are also no allow pats
+      return expertConfigAllowPats == null;
+    } else {
       for (Pattern pat : expertConfigDenyPats) {
 	if (RegexpUtil.getMatcher().contains(key, pat)) {
 	  return false;
 	}
       }
-      return true;
     }
+    // Didn't match either, and there are deny pats.
     return true;
   }
 
@@ -1596,7 +1599,7 @@ public class ConfigManager implements LockssManager {
   List<Pattern> compilePatternList(List<String> patterns)
       throws MalformedPatternException {
     if (patterns == null) {
-      return null;
+      return Collections.EMPTY_LIST;
     }
     int flags = Perl5Compiler.READ_ONLY_MASK;
     List<Pattern> res = new ArrayList<Pattern>(patterns.size());
