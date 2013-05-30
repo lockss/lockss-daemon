@@ -42367,7 +42367,27 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Health Services Management Research Volume 22 [superseded] ; 22 >
         au < HighWirePressPlugin ; down ; 2010 ; Health Services Management Research Volume 23 [superseded] ; 23 >
         au < HighWirePressPlugin ; down ; 2011 ; Health Services Management Research Volume 24 [superseded] ; 24 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Health Services Management Research Volume 25 ; 25 >
+  
+      }
+  
+      {
+  
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://hsm.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Health Services Management Research Volume 14 [superseded] ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Health Services Management Research Volume 15 [superseded] ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Health Services Management Research Volume 16 [superseded] ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Health Services Management Research Volume 17 [superseded] ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Health Services Management Research Volume 18 [superseded] ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Health Services Management Research Volume 19 [superseded] ; 19 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Health Services Management Research Volume 20 [superseded] ; 20 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Health Services Management Research Volume 21 [superseded] ; 21 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Health Services Management Research Volume 22 [superseded] ; 22 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Health Services Management Research Volume 23 [superseded] ; 23 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Health Services Management Research Volume 24 [superseded] ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; Health Services Management Research Volume 26 ; 26 >
   
       }
@@ -42527,8 +42547,6 @@ comment[mpj] = now published by Brill
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jmb.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -42540,8 +42558,23 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Biography Volume 17 [superseded] ; 17 >
         au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Biography Volume 18 [superseded] ; 18 >
         au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Biography Volume 19 [superseded] ; 19 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
+  
+      }
+  
+      {
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://jmb.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
   
       }
   
@@ -43127,8 +43160,7 @@ comment[mpj] = now published by Brill
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
+
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://obmed.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -43137,8 +43169,21 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Obstetric Medicine Volume 2 [superseded] ; 2 >
         au < HighWirePressPlugin ; down ; 2010 ; Obstetric Medicine Volume 3 [superseded] ; 3 >
         au < HighWirePressPlugin ; down ; 2011 ; Obstetric Medicine Volume 4 [superseded] ; 4 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Obstetric Medicine Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
+  
+      }
+  
+      {
+
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://obm.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Obstetric Medicine Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Obstetric Medicine Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
   
       }
   
@@ -43200,20 +43245,37 @@ comment[mpj] = now published by Brill
         eissn = 2045-6441
       >
   
-      comment[notmoved] = this journal has not moved to Sage yet.
+      {
       
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://smj.rsmjournals.com/
-      implicit < status ; year ; name ; param[volume_name] >
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        param[base_url] = http://smj.rsmjournals.com/
+        implicit < status ; year ; name ; param[volume_name] >
   
-      au < released ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
-      au < released ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
-      au < released ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
-      au < released ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
-      au < released ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
-      au < released ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
-      au < expected ; 2012 ; Scottish Medical Journal Volume 57 ; 57 >
-      au < expected ; 2013 ; Scottish Medical Journal Volume 58 ; 58 >
+        au < down ; 2006 ; Scottish Medical Journal Volume 51 [superseded] ; 51 >
+        au < down ; 2007 ; Scottish Medical Journal Volume 52 [superseded] ; 52 >
+        au < down ; 2008 ; Scottish Medical Journal Volume 53 [superseded] ; 53 >
+        au < down ; 2009 ; Scottish Medical Journal Volume 54 [superseded] ; 54 >
+        au < down ; 2010 ; Scottish Medical Journal Volume 55 [superseded] ; 55 >
+        au < down ; 2011 ; Scottish Medical Journal Volume 56 [superseded] ; 56 >
+      
+      }
+  
+      {
+      
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        param[base_url] = http://scm.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < doNotProcess ; 2006 ; Scottish Medical Journal Volume 51 ; 51 >
+        au < doNotProcess ; 2007 ; Scottish Medical Journal Volume 52 ; 52 >
+        au < doNotProcess ; 2008 ; Scottish Medical Journal Volume 53 ; 53 >
+        au < doNotProcess ; 2009 ; Scottish Medical Journal Volume 54 ; 54 >
+        au < doNotProcess ; 2010 ; Scottish Medical Journal Volume 55 ; 55 >
+        au < doNotProcess ; 2011 ; Scottish Medical Journal Volume 56 ; 56 >
+        au < expected ; 2012 ; Scottish Medical Journal Volume 57 ; 57 >
+        au < expected ; 2013 ; Scottish Medical Journal Volume 58 ; 58 >
+      
+      }
   
     }
   
