@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.7.66.3 2013-05-30 06:50:19 tlipkis Exp $
+ * $Id: TestCron.java,v 1.7.66.4 2013-05-30 13:53:56 tlipkis Exp $
  */
 
 /*
@@ -341,8 +341,8 @@ public class TestCron extends LockssTestCase {
     }
 
     public boolean execute() {
-      startTimes.put(TimeBase.nowMs());
       trace.add(new Long(TimeBase.nowMs()));
+      startTimes.put(TimeBase.nowMs());
       if (endSem != null) {
 	endSem.take();
       }
