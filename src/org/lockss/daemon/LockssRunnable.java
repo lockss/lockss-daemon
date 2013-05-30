@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.23 2013-05-27 05:38:40 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.24 2013-05-30 14:01:04 tlipkis Exp $
  */
 
 /*
@@ -194,7 +194,6 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 		 " thread at " + thread.getPriority());
       return;
     }
-    log.debug2("Setting priority of " + getName() + " thread to " + prio);
     setPriority(prio);
   }
 
@@ -206,8 +205,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     if (thread == null) {
       throw new IllegalStateException("Must be called only while running");
     }
+    log.debug2("Setting priority of " + getName() + " thread to " + prio);
     thread.setPriority(prio);
-    log.critical("Set thread prio to " + prio + ", " + thread.getName());
   }
 
   /** Start a watchdog timer that will expire if not poked for interval
