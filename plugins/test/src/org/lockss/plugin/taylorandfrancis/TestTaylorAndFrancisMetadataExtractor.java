@@ -345,6 +345,35 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals(null, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
   }
+  
+  String noVolumeContent =
+      "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"739174\"></meta>" +
+          "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/09500782.2012.739174\"></meta>" +
+          "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Language and Education, preprint, 2012, pp. 1Ð24\"></meta>";
+
+  // Since we never get a Vol, we don't every pick up a title.  This is probably best. Let the correct title come from the TDB
+  public void testNoVolumeContent() throws Exception {
+
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, tafau);
+    cu.setContent(noVolumeContent);
+    cu.setContentSize(noVolumeContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals("10.1080/09500782.2012.739174", md.get(MetadataField.FIELD_DOI));
+    // it's the best we can do 
+    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(null, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(null, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals("24", md.get(MetadataField.FIELD_END_PAGE));
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+  }
   /**
    * Inner class that where a number of Archival Units can be created
    *

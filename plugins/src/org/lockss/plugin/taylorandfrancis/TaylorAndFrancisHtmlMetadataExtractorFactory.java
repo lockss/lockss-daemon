@@ -87,8 +87,6 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
       ArticleMetadata am =
-   // turn on parser version when it's checked in
-   //     new ParserHtmlMetaTagMetadataExtractor().extract(target, cu);
           new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 
@@ -129,6 +127,8 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
         //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Title Name Vol. 31, No. 2, June 2012, pp. 175Ð190\"></meta>
         // no title at all and alternately formatted info
         //<meta name="dc.Identifier" scheme="coden" content="Volume 17, Comment 1 Ð January 2011"></meta>
+        // no Vol., because it was preprint
+        //<meta name="dc.Identifier" scheme="coden" content="Language and Education, preprint, 2012, pp. 1Ð24"></meta>
         if (cookedIdentifierList.get(j).contains(",")) {
     		  String content = cookedIdentifierList.get(j);
     		  String[] biblioInfo = content.split(",");

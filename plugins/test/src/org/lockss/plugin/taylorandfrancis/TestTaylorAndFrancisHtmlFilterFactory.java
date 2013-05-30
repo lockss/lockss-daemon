@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.8 2012-11-29 01:19:33 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.9 2013-05-30 22:56:04 alexandraohlson Exp $
  */
 
 /*
@@ -70,14 +70,77 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
   private static final String moduleHtmlFiltered =
   "";
 
+  private static final String referencesHtml =
+      "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
+          "    </div>" +
+          "    <div class=\"tabsPanel \" id=\"referencesPanel\">" +
+          "        <div class=\"gutter\"><div class=\"summationSection\"><ul class=\"references\">" +
+          "<li id=\"CIT0001\"><strong>1." +
+          "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
+          "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159Ð175.   " +
+          "<a href=\"/servlet/linkout?suffix=CIT0001&amp;dbid=20&amp;doi=10.1080%2FXXXX&amp;key=10.1080%2FXXXX\" target=\"_blank\">[Taylor &amp;Francis Online]</a>, " +
+          "</li><li id=\"CIT0002\"><strong>2." +
+          "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
+          "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81Ð109.   " +
+          "<a href=\"/servlet/linkout?suffix=CIT0002&amp;dbid=16&amp;doi=10.1080%2FJJJJ&amp;key=10.1017%2FJJJJ\" target=\"_blank\">[CrossRef]</a>" +
+          "</li>" +
+          "</ul></div></div> </div>" +
+          "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
+          "" +
+          "</div>DONE";
+
+  private static final String referencesFiltered =
+      "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
+          "    </div>" +
+          "    " +
+          "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
+          "" +
+          "</div>DONE";
   /**
    * Variant to test with Crawl Filter
    */
   public static class TestCrawl extends TestTaylorAndFrancisHtmlFilterFactory {
+    
+    // This is crawled out but not hashed out - list of references for an article could lead to other T&F content outside this AU
+    private static final String referencesHtml =
+        "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
+            "    </div>" +
+            "    <div class=\"tabsPanel \" id=\"referencesPanel\">" +
+            "        <div class=\"gutter\"><div class=\"summationSection\"><ul class=\"references\">" +
+            "<li id=\"CIT0001\"><strong>1." +
+            "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
+            "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159Ð175.   " +
+            "<a href=\"/servlet/linkout?suffix=CIT0001&amp;dbid=20&amp;doi=10.1080%2FXXXX&amp;key=10.1080%2FXXXX\" target=\"_blank\">[Taylor &amp;Francis Online]</a>, " +
+            "</li><li id=\"CIT0002\"><strong>2." +
+            "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
+            "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81Ð109.   " +
+            "<a href=\"/servlet/linkout?suffix=CIT0002&amp;dbid=16&amp;doi=10.1080%2FJJJJ&amp;key=10.1017%2FJJJJ\" target=\"_blank\">[CrossRef]</a>" +
+            "</li>" +
+            "</ul></div></div> </div>" +
+            "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
+            "" +
+            "</div>DONE";
+
+    private static final String referencesFiltered =
+        "<div class=\"tabsPanel hide\" id=\"fulltextPanel\">" +
+            "    </div>" +
+            "    " +
+            "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
+            "" +
+            "</div>DONE";
 
     public void setUp() throws Exception {
       super.setUp();
       fact = new TaylorAndFrancisHtmlCrawlFilterFactory();
+    }
+    
+    public void testReferencesFiltering() throws Exception {
+      InputStream actIn =
+        fact.createFilteredInputStream(mau,
+                                       new StringInputStream(referencesHtml),
+                                       Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(actIn),
+                   referencesFiltered);
     }
     
   }
