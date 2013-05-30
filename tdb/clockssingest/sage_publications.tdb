@@ -29720,7 +29720,7 @@
     >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://ppm.sagepub.com
+      param[base_url] = http://ppm.sagepub.com/
 
       au < exists ; exists ; 2002 ; Public Personnel Management Volume 31 ; 31 ; >
       au < exists ; exists ; 2003 ; Public Personnel Management Volume 32 ; 32 ; >
@@ -32696,7 +32696,7 @@
       >
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = http://sap.sagepub.com
+      param[base_url] = http://sap.sagepub.com/
 
       au < exists ; exists ; 1979 ; South African Journal of Psychology Volume 9 ; 9 ; >
       au < exists ; exists ; 1980 ; South African Journal of Psychology Volume 10 ; 10 ; >
@@ -38421,24 +38421,23 @@
         issnl = 0004-5632
       >
   
-        comment[notmoved] = not yet moved to Sage.
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://jtt.sagepub.com/
 
-        au < doNotProcess ; exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
-        au < doNotProcess ; exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 ; >
-        au < doNotProcess ; exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 ; >
-        au < doNotProcess ; exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 ; >
-        au < doNotProcess ; exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 ; >
-        au < doNotProcess ; exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 ; >
-        au < doNotProcess ; exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 ; >
-        au < doNotProcess ; exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 ; >
-        au < doNotProcess ; exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 ; >
-        au < doNotProcess ; exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 ; >
-        au < doNotProcess ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
-        au < doNotProcess ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
-        au < doNotProcess ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
-        au < doNotProcess ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
+        au < exists ; exists ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 ; >
+        au < exists ; exists ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 ; >
+        au < exists ; exists ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 ; >
+        au < exists ; exists ; 2003 ; Annals of Clinical Biochemistry Volume 40 ; 40 ; >
+        au < exists ; exists ; 2004 ; Annals of Clinical Biochemistry Volume 41 ; 41 ; >
+        au < exists ; exists ; 2005 ; Annals of Clinical Biochemistry Volume 42 ; 42 ; >
+        au < exists ; exists ; 2006 ; Annals of Clinical Biochemistry Volume 43 ; 43 ; >
+        au < exists ; exists ; 2007 ; Annals of Clinical Biochemistry Volume 44 ; 44 ; >
+        au < exists ; exists ; 2008 ; Annals of Clinical Biochemistry Volume 45 ; 45 ; >
+        au < exists ; exists ; 2009 ; Annals of Clinical Biochemistry Volume 46 ; 46 ; >
+        au < exists ; exists ; 2010 ; Annals of Clinical Biochemistry Volume 47 ; 47 ; >
+        au < exists ; exists ; 2011 ; Annals of Clinical Biochemistry Volume 48 ; 48 ; >
+        au < exists ; exists ; 2012 ; Annals of Clinical Biochemistry Volume 49 ; 49 ; >
+        au < exists ; exists ; 2013 ; Annals of Clinical Biochemistry Volume 50 ; 50 ; >
   
     }
   
@@ -38894,17 +38893,17 @@
       {
   
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://icp.sagepub.com/
   
-        au < doNotProcess ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
-        au < doNotProcess ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
-        au < doNotProcess ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
-        au < doNotProcess ; exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; >
-        au < doNotProcess ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; >
-        au < doNotProcess ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; >
-        au < doNotProcess ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; >
-        au < doNotProcess ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
-        au < doNotProcess ; exists ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 ; >
+        au < exists ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 ; >
+        au < exists ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 ; >
+        au < exists ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 ; >
+        au < exists ; exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 ; >
+        au < exists ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; >
+        au < exists ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; >
+        au < exists ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; >
+        au < exists ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
+        au < exists ; exists ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 ; >
   
       }
   
@@ -39274,26 +39273,24 @@
   
       {
       
-        comment[notmoved] = This journal has not yet moved to Sage.
-  
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://mlj.sagepub.com/
   
-        au < doNotProcess ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
-        au < doNotProcess ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
-        au < doNotProcess ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
-        au < doNotProcess ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
-        au < doNotProcess ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
-        au < doNotProcess ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
-        au < doNotProcess ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
-        au < doNotProcess ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
-        au < doNotProcess ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
-        au < doNotProcess ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
-        au < doNotProcess ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
-        au < doNotProcess ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
-        au < doNotProcess ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
-        au < doNotProcess ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
-        au < doNotProcess ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
+        au < exists ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
+        au < exists ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
+        au < exists ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
+        au < exists ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
+        au < exists ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
+        au < exists ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
+        au < exists ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
+        au < exists ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
+        au < exists ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
+        au < exists ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
+        au < exists ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
+        au < exists ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
+        au < exists ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
+        au < exists ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
+        au < exists ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
   
       }
   
@@ -39426,7 +39423,7 @@
         
       {
 
-        param[base_url] = http://tdo.sagepub.com 
+        param[base_url] = http://tdo.sagepub.com/
   
         au < exists ; exists ; 2005 ; Tropical Doctor Volume 35 ; 35 ; >
         au < exists ; exists ; 2006 ; Tropical Doctor Volume 36 ; 36 ; >

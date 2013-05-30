@@ -21918,7 +21918,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
      >
      
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ijcp.sagepub.com/
+       param[base_url] = http://icp.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2005 ; International Journal of Care Pathways 9 ; 9 >
@@ -32858,7 +32858,7 @@ comment[mpj] = now published by Brill
     >
 
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://ppm.sagepub.com
+      param[base_url] = http://ppm.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 2002 ; Public Personnel Management Volume 31 ; 31 >
@@ -35929,7 +35929,7 @@ comment[mpj] = now published by Brill
       >
 
       pluginSuffix = HighWirePressH20Plugin
-      param[base_url] = http://sap.sagepub.com
+      param[base_url] = http://sap.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1979 ; South African Journal of Psychology Volume 9 ; 9 >
@@ -42615,7 +42615,6 @@ comment[mpj] = now published by Brill
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://jtt.rsmjournals.com/
@@ -42637,8 +42636,33 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Telemedicine and Telecare Volume 15 [superseded] ; 15 >
         au < HighWirePressPlugin ; down ; 2010 ; Journal of Telemedicine and Telecare Volume 16 [superseded] ; 16 >
         au < HighWirePressPlugin ; down ; 2011 ; Journal of Telemedicine and Telecare Volume 17 [superseded] ; 17 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
+  
+      }
+  
+      {
+  
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://jtt.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
   
       }
   
@@ -42993,8 +43017,6 @@ comment[mpj] = now published by Brill
   
       {
       
-        comment[notmoved] = This journal has not yet moved to Sage.
-  
         pluginPrefix = org.lockss.plugin.highwire.
         param[base_url] = http://mlj.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
@@ -43011,9 +43033,31 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 [superseded] ; 76 >
         au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 [superseded] ; 77 >
         au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 [superseded] ; 78 >
-        au < HighWirePressH20Plugin ; released ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+  
+      }
+  
+      {
+  
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://mlj.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
   
       }
   
@@ -43200,7 +43244,7 @@ comment[mpj] = now published by Brill
   
       {
 
-        param[base_url] = http://tdo.sagepub.com 
+        param[base_url] = http://tdo.sagepub.com/
   
         au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tropical Doctor Volume 35 ; 35 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Tropical Doctor Volume 36 ; 36 >
