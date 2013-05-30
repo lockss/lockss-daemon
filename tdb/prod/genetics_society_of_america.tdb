@@ -14,7 +14,7 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.g3journal.org/
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = mismatch on table
+    comment[notReady] = mismatch on GENOMIC SELECTION
 
     au < released ; 2011 ; G3: Genes, Genomes, Genetics Volume 1 ; 1 >
     au < notReady ; 2012 ; G3: Genes, Genomes, Genetics Volume 2 ; 2 >
