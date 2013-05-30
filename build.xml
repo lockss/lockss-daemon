@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.340 2013-05-28 18:41:15 tlipkis Exp $
+ $Id: build.xml,v 1.341 2013-05-30 19:16:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1793,7 +1793,6 @@ published on the Web. http://www.lockss.org
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             stylesheetfile="/home/tal/download/foo.css"
              bottom="Copyright &amp;copy; 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
 <!-- disabled until javadoc back online -->
