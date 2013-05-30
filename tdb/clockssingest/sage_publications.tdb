@@ -38861,21 +38861,21 @@
       {
   
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://hsm.sagepub.com/
   
-        au < doNotProcess ; exists ; 2001 ; Health Services Management Research Volume 14 ; 14 ; >
-        au < doNotProcess ; exists ; 2002 ; Health Services Management Research Volume 15 ; 15 ; >
-        au < doNotProcess ; exists ; 2003 ; Health Services Management Research Volume 16 ; 16 ; >
-        au < doNotProcess ; exists ; 2004 ; Health Services Management Research Volume 17 ; 17 ; >
-        au < doNotProcess ; exists ; 2005 ; Health Services Management Research Volume 18 ; 18 ; >
-        au < doNotProcess ; exists ; 2006 ; Health Services Management Research Volume 19 ; 19 ; >
-        au < doNotProcess ; exists ; 2007 ; Health Services Management Research Volume 20 ; 20 ; >
-        au < doNotProcess ; exists ; 2008 ; Health Services Management Research Volume 21 ; 21 ; >
-        au < doNotProcess ; exists ; 2009 ; Health Services Management Research Volume 22 ; 22 ; >
-        au < doNotProcess ; exists ; 2010 ; Health Services Management Research Volume 23 ; 23 ; >
-        au < doNotProcess ; exists ; 2011 ; Health Services Management Research Volume 24 ; 24 ; >
-        au < doNotProcess ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 ; >
-        au < doNotProcess ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
+        au < exists ; exists ; 2001 ; Health Services Management Research Volume 14 ; 14 ; >
+        au < exists ; exists ; 2002 ; Health Services Management Research Volume 15 ; 15 ; >
+        au < exists ; exists ; 2003 ; Health Services Management Research Volume 16 ; 16 ; >
+        au < exists ; exists ; 2004 ; Health Services Management Research Volume 17 ; 17 ; >
+        au < exists ; exists ; 2005 ; Health Services Management Research Volume 18 ; 18 ; >
+        au < exists ; exists ; 2006 ; Health Services Management Research Volume 19 ; 19 ; >
+        au < exists ; exists ; 2007 ; Health Services Management Research Volume 20 ; 20 ; >
+        au < exists ; exists ; 2008 ; Health Services Management Research Volume 21 ; 21 ; >
+        au < exists ; exists ; 2009 ; Health Services Management Research Volume 22 ; 22 ; >
+        au < exists ; exists ; 2010 ; Health Services Management Research Volume 23 ; 23 ; >
+        au < exists ; exists ; 2011 ; Health Services Management Research Volume 24 ; 24 ; >
+        au < exists ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 ; >
+        au < exists ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
   
       }
   
@@ -38980,9 +38980,8 @@
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://jmb.sagepub.com/
   
         au < doNotProcess ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
         au < doNotProcess ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
@@ -39039,28 +39038,27 @@
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://jtt.sagepub.com/
   
-        au < doNotProcess ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; >
-        au < doNotProcess ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 ; >
-        au < doNotProcess ; exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 ; >
-        au < doNotProcess ; exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 ; >
-        au < doNotProcess ; exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 ; >
-        au < doNotProcess ; exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 ; >
-        au < doNotProcess ; exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 ; >
-        au < doNotProcess ; exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 ; >
-        au < doNotProcess ; exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 ; >
-        au < doNotProcess ; exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 ; >
-        au < doNotProcess ; exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 ; >
-        au < doNotProcess ; exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 ; >
-        au < doNotProcess ; exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; >
-        au < doNotProcess ; exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; >
-        au < doNotProcess ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; >
-        au < doNotProcess ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; >
-        au < doNotProcess ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
-        au < doNotProcess ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
+        au < exists ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 ; >
+        au < exists ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 ; >
+        au < exists ; exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 ; >
+        au < exists ; exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 ; >
+        au < exists ; exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 ; >
+        au < exists ; exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 ; >
+        au < exists ; exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 ; >
+        au < exists ; exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 ; >
+        au < exists ; exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 ; >
+        au < exists ; exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 ; >
+        au < exists ; exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 ; >
+        au < exists ; exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 ; >
+        au < exists ; exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 ; >
+        au < exists ; exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 ; >
+        au < exists ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; >
+        au < exists ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; >
+        au < exists ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
+        au < exists ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
   
       }
   
@@ -39340,17 +39338,16 @@
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
+
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://obm.sagepub.com/
   
-        au < doNotProcess ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
-        au < doNotProcess ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
-        au < doNotProcess ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
-        au < doNotProcess ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; >
-        au < doNotProcess ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
-        au < doNotProcess ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
+        au < exists ; exists ; 2008 ; Obstetric Medicine Volume 1 ; 1 ; >
+        au < exists ; exists ; 2009 ; Obstetric Medicine Volume 2 ; 2 ; >
+        au < exists ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
+        au < exists ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; >
+        au < exists ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
+        au < exists ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
   
       }
   
@@ -39395,19 +39392,17 @@
         eissn = 2045-6441
       >
   
-      comment[notmoved] = this journal has not moved to Sage yet.
-      
       pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = xxx
+      param[base_url] = http://scm.sagepub.com/
   
-      au < doNotProcess ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
-      au < doNotProcess ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
-      au < doNotProcess ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; >
-      au < doNotProcess ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; >
-      au < doNotProcess ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; >
-      au < doNotProcess ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; >
-      au < doNotProcess ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
-      au < doNotProcess ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
+      au < exists ; exists ; 2006 ; Scottish Medical Journal Volume 51 ; 51 ; >
+      au < exists ; exists ; 2007 ; Scottish Medical Journal Volume 52 ; 52 ; >
+      au < exists ; exists ; 2008 ; Scottish Medical Journal Volume 53 ; 53 ; >
+      au < exists ; exists ; 2009 ; Scottish Medical Journal Volume 54 ; 54 ; >
+      au < exists ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; >
+      au < exists ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; >
+      au < exists ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
+      au < exists ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
   
     }
   
@@ -39448,21 +39443,20 @@
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
   
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+        param[base_url] = http://intl-ult.sagepub.com/
   
-        au < doNotProcess ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
-        au < doNotProcess ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
-        au < doNotProcess ; exists ; 2006 ; Ultrasound Volume 14 ; 14 ; >
-        au < doNotProcess ; exists ; 2007 ; Ultrasound Volume 15 ; 15 ; >
-        au < doNotProcess ; exists ; 2008 ; Ultrasound Volume 16 ; 16 ; >
-        au < doNotProcess ; exists ; 2009 ; Ultrasound Volume 17 ; 17 ; >
-        au < doNotProcess ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; >
-        au < doNotProcess ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; >
-        au < doNotProcess ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
-        au < doNotProcess ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
+        au < exists ; exists ; 2004 ; Ultrasound Volume 12 ; 12 ; >
+        au < exists ; exists ; 2005 ; Ultrasound Volume 13 ; 13 ; >
+        au < exists ; exists ; 2006 ; Ultrasound Volume 14 ; 14 ; >
+        au < exists ; exists ; 2007 ; Ultrasound Volume 15 ; 15 ; >
+        au < exists ; exists ; 2008 ; Ultrasound Volume 16 ; 16 ; >
+        au < exists ; exists ; 2009 ; Ultrasound Volume 17 ; 17 ; >
+        au < exists ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; >
+        au < exists ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; >
+        au < exists ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
+        au < exists ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
   
       }
   
