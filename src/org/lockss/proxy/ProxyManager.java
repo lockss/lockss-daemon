@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.53 2013-03-14 06:39:16 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.53.10.1 2013-05-30 06:50:53 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,12 @@ public class ProxyManager extends BaseProxyManager {
   /** Log the start of proxy requests if true. */
   static final String PARAM_LOG_REQUEST_START = PREFIX + "logRequestStart";
   static final boolean DEFAULT_LOG_REQUEST_START = false;
+
+  /** If true, exclude requests with the LOCKSS user agent from COUNTER
+   * statistics. */
+  static final String PARAM_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER =
+    PREFIX + "excludeLockssUserAgentFromCounter";
+  static final boolean DEFAULT_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER = true;
 
   /** If true, all incoming URLs will be minimally encoded */
   static final String PARAM_MINIMALLY_ENCODE_URLS =
@@ -216,6 +222,8 @@ public class ProxyManager extends BaseProxyManager {
   private int paramAccessLogLevel = -1;
   private boolean paramMinimallyEncodeUrls = DEFAULT_MINIMALLY_ENCODE_URLS;
   private boolean paramLogReqStart = DEFAULT_LOG_REQUEST_START;
+  private boolean paramExcludeLockssUserAgentFromCounter =
+    DEFAULT_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -233,6 +241,10 @@ public class ProxyManager extends BaseProxyManager {
       }	  
       paramLogReqStart = config.getBoolean(PARAM_LOG_REQUEST_START,
 					   DEFAULT_LOG_REQUEST_START);
+
+      paramExcludeLockssUserAgentFromCounter =
+	config.getBoolean(PARAM_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER,
+			  DEFAULT_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER);
 
       port = config.getInt(PARAM_PORT, DEFAULT_PORT);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
@@ -516,6 +528,14 @@ public class ProxyManager extends BaseProxyManager {
     } else {
       return false;
     }
+  }
+
+  /**
+   * @return true iff this request should be counted in COUNTER statistics
+   */
+  public boolean isCounterCountable(String userAgent) {
+    return !(paramExcludeLockssUserAgentFromCounter &&
+	     StringUtil.equalStrings(LockssDaemon.getUserAgent(), userAgent));
   }
 
   public boolean isIpAuthorized(String ip) {
