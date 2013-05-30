@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.78 2013-03-14 06:39:16 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.79 2013-05-30 14:01:35 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.78 2013-03-14 06:39:16 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.79 2013-05-30 14:01:35 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -619,6 +619,20 @@ public class ProxyHandler extends AbstractHttpHandler {
     proxyMgr.logAccess(request.getURI().toString(), msg, reqElapsedTime);
   }
 
+  /**
+   * Record the request in COUNTER if appropriate
+   */
+  void recordRequest(HttpRequest request,
+		     String url,
+		     CounterReportsRequestRecorder.PublisherContacted contacted,
+		     int publisherCode) {
+    if (proxyMgr.isCounterCountable(request.getField(HttpFields.__UserAgent))) {
+      CounterReportsRequestRecorder.getInstance().recordRequest(url,
+								contacted,
+								publisherCode);
+    }
+  }
+
   /** Proxy a connection using LockssUrlConnection */
   void doLockss(String pathInContext,
 		String pathParams,
@@ -656,11 +670,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request, response, cu);
 	logAccess(request, "200 from cache", TimeBase.msSince(reqStartTime));
 	// Record the necessary information required for COUNTER reports.
-	CounterReportsRequestRecorder
-	    .getInstance()
-	    .recordRequest(urlString,
-			   CounterReportsRequestRecorder.PublisherContacted.FALSE,
-			   200);
+	recordRequest(request,
+		      urlString,
+		      CounterReportsRequestRecorder.PublisherContacted.FALSE,
+		      200);
 	return;
       }
       if (isPubNever(cu)) {
@@ -806,11 +819,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 	if (isInCache) {
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	  // Record the necessary information required for COUNTER reports.
-	  CounterReportsRequestRecorder
-	      .getInstance()
-	      .recordRequest(urlString,
-			     CounterReportsRequestRecorder.PublisherContacted.TRUE,
-			     conn.getResponseCode());
+	  recordRequest(request,
+			urlString,
+			CounterReportsRequestRecorder.PublisherContacted.TRUE,
+			conn.getResponseCode());
 	} else {
 	  // else generate an error page
 	  sendProxyErrorPage(e, request, response,
@@ -837,11 +849,10 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	// Record the necessary information required for COUNTER reports.
-	CounterReportsRequestRecorder
-	    .getInstance()
-	    .recordRequest(urlString,
-			   CounterReportsRequestRecorder.PublisherContacted.TRUE,
-			   conn.getResponseCode());
+	recordRequest(request,
+		      urlString,
+		      CounterReportsRequestRecorder.PublisherContacted.TRUE,
+		      conn.getResponseCode());
 	return;
       }
 

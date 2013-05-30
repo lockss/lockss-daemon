@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.6 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestProxyManager.java,v 1.7 2013-05-30 14:01:35 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.proxy;
 import java.io.*;
 import java.util.*;
 import org.mortbay.http.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -116,6 +117,16 @@ public class TestProxyManager extends LockssTestCase {
     assertTrue(mgr.isRecentlyAccessedUrl(url1));
     TimeBase.step(600);
     assertFalse(mgr.isRecentlyAccessedUrl(url1));
+  }
+
+  public void testIsCounterCountable() throws Exception {
+    assertTrue(mgr.isCounterCountable("foo"));
+    assertFalse(mgr.isCounterCountable(LockssDaemon.getUserAgent()));
+
+    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_EXCLUDE_LOCKSS_USER_AGENT_FROM_COUNTER,
+				  "false");
+    assertTrue(mgr.isCounterCountable("foo"));
+    assertTrue(mgr.isCounterCountable(LockssDaemon.getUserAgent()));
   }
 
   void setNoIndexMode(String val) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.77 2013-04-14 14:05:53 pgust Exp $
+ * $Id: ServeContent.java,v 1.78 2013-05-30 14:01:35 tlipkis Exp $
  */
 
 /*
@@ -755,8 +755,9 @@ public class ServeContent extends LockssServlet {
         serveFromCache();
         logAccess("200 from cache");
         // Record the necessary information required for COUNTER reports.
-        CounterReportsRequestRecorder.getInstance().recordRequest(url,
-            CounterReportsRequestRecorder.PublisherContacted.FALSE, 200);
+	recordRequest(url,
+		      CounterReportsRequestRecorder.PublisherContacted.FALSE,
+		      200);
       } else {
 	/*
 	 * We don't want to redirect to the publisher, so pass KnownDown below
@@ -831,10 +832,9 @@ public class ServeContent extends LockssServlet {
             serveFromPublisher(conn);
             logAccess(present(isInCache, "200 from publisher"));
             // Record the necessary information required for COUNTER reports.
-            CounterReportsRequestRecorder.getInstance()
-                                         .recordRequest(url,
-                                             CounterReportsRequestRecorder.PublisherContacted.TRUE,
-                                             response);
+	    recordRequest(url,
+			  CounterReportsRequestRecorder.PublisherContacted.TRUE,
+			  response);
             return;
           } catch (CacheException.PermissionException ex) {
             logAccess("login exception: " + ex.getMessage());
@@ -854,8 +854,9 @@ public class ServeContent extends LockssServlet {
       serveFromCache();
       logAccess("present, 200 from cache");
       // Record the necessary information required for COUNTER reports.
-      CounterReportsRequestRecorder.getInstance().recordRequest(url,
-          CounterReportsRequestRecorder.PublisherContacted.TRUE, response);
+      recordRequest(url,
+		    CounterReportsRequestRecorder.PublisherContacted.TRUE,
+		    response);
     } else {
       log.debug2("No content for: " + url);
       // return 404 with index
@@ -868,6 +869,19 @@ public class ServeContent extends LockssServlet {
    */
   private boolean isMementoRequest() {
     return !StringUtil.isNullString(versionStr);
+  }
+
+  /**
+   * Record the request in COUNTER if appropriate
+   */
+  void recordRequest(String url,
+		     CounterReportsRequestRecorder.PublisherContacted contacted,
+		     int publisherCode) {
+    if (proxyMgr.isCounterCountable(req.getHeader(HttpFields.__UserAgent))) {
+      CounterReportsRequestRecorder.getInstance().recordRequest(url,
+								contacted,
+								publisherCode);
+    }
   }
 
   /**
