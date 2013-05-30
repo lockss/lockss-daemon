@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.7.66.2 2013-05-29 07:28:43 tlipkis Exp $
+ * $Id: TestCron.java,v 1.7.66.3 2013-05-30 06:50:19 tlipkis Exp $
  */
 
 /*
@@ -104,12 +104,9 @@ public class TestCron extends LockssTestCase {
   }
 
   public void testCron() throws IOException {
-    File dir = getTempDir();
-    Properties p = new Properties();
-    p.put(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, dir.toString());
-    p.put(Cron.PARAM_SLEEP, "10");
-    p.put(Cron.PARAM_ENABLED, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    setUpDiskSpace();
+    ConfigurationUtil.addFromArgs(Cron.PARAM_SLEEP, "10",
+				  Cron.PARAM_ENABLED, "true");
     TimeBase.setSimulated(1000);
     TestTask task = new TestTask(daemon);
     initCron(task);
@@ -146,6 +143,58 @@ public class TestCron extends LockssTestCase {
     }
     assertEquals(1130, cron.getState().getLastTime("TestTask"));
     assertEquals(ListUtil.list(new Long(1010), new Long(1120), new Long(1130)),
+		 task.getTrace());
+  }
+
+  // Ensure a no multiple instances of tasks running
+  public void testLongRunning() throws IOException {
+    setUpDiskSpace();
+    ConfigurationUtil.addFromArgs(Cron.PARAM_SLEEP, "10",
+				  Cron.PARAM_ENABLED, "true");
+    TimeBase.setSimulated(1000);
+    TestTask task = new TestTask(daemon);
+    task.setWait(true);
+    initCron(task);
+    
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    cron.setExecSem(sem);
+    cron.startService();
+    TimeBase.step(10);
+    Long start1 = task.waitStart(TIMEOUT_SHOULDNT);
+    assertNotNull("Task didn't start", start1);
+    assertEquals(Long.valueOf(1010), start1);
+
+    assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+    // Task is waiting, shouldn't have updated its last run time
+    assertEquals(0, cron.getState().getLastTime("TestTask"));
+    TimeBase.step(10);
+    assertEquals("Task should have run exactly once",
+		 1, task.getTrace().size());
+    assertEquals("Task should have run exactly once",
+		 ListUtil.list(new Long(1010)), task.getTrace());
+    TimeBase.step(10);
+    assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+    TimeBase.step(70);
+    assertEquals(ListUtil.list(new Long(1010)), task.getTrace());
+    TimeBase.step(20);
+    // task should not run again while still running
+    Long start2 = task.waitStart(TIMEOUT_SHOULD);
+    assertNull("Task started at " + start2 + ", shouldn't have", start2);
+    // and Cron.executeAndRescheduleTask() should not have run
+    assertFalse("Cron.exec ran prematurely", sem.take(TIMEOUT_SHOULD));
+
+    task.endWait();
+    assertTrue("First task didn't finish", sem.take(TIMEOUT_SHOULDNT));
+    assertEquals(1120, cron.getState().getLastTime("TestTask"));
+    assertEquals(ListUtil.list(1010L), task.getTrace());
+    TimeBase.step(100);
+    // now it should have run again and updated next run time
+    start2 = task.waitStart(TIMEOUT_SHOULDNT);
+    assertNotNull("Task didn't start 2nd time", start2);
+    task.endWait();
+    assertTrue("Second task didn't finish", sem.take(TIMEOUT_SHOULDNT));
+    assertEquals(1220, cron.getState().getLastTime("TestTask"));
+    assertEquals(ListUtil.list(new Long(1010), new Long(1220)),
 		 task.getTrace());
   }
 
@@ -277,6 +326,8 @@ public class TestCron extends LockssTestCase {
   static class TestTask implements Cron.Task {
     List trace = new ArrayList();
     boolean ret = true;
+    SimpleBinarySemaphore endSem;
+    SimpleQueue startTimes = new SimpleQueue.Fifo();
 
     TestTask(LockssDaemon daemon) {
     }
@@ -290,8 +341,28 @@ public class TestCron extends LockssTestCase {
     }
 
     public boolean execute() {
+      startTimes.put(TimeBase.nowMs());
       trace.add(new Long(TimeBase.nowMs()));
+      if (endSem != null) {
+	endSem.take();
+      }
       return ret;
+    }
+
+    void setWait(boolean val) {
+      if (val) {
+	endSem = new SimpleBinarySemaphore();
+      } else {
+	endSem = null;
+      }
+    }
+
+    void endWait() {
+      endSem.give();
+    }
+
+    Long waitStart(long timeout) {
+      return (Long)startTimes.get(timeout);
     }
 
     List getTrace() {

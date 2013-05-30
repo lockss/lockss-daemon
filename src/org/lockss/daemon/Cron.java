@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.10.66.1 2013-05-29 06:36:03 tlipkis Exp $
+ * $Id: Cron.java,v 1.10.66.2 2013-05-30 06:50:19 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,9 @@ public class Cron
   private File cronStateFile = null;
   private Cron.State state;
   private Collection<Task> tasks = new ArrayList();
+  private Set<String> runningIds =
+    Collections.synchronizedSet(new HashSet<String>());
+
   private boolean enabled = false;
   private long interval = DEFAULT_SLEEP;
   private TimerQueue.Request req;
@@ -248,16 +251,17 @@ public class Cron
   /** Run any tasks that need to be run.  Probably should eventually run
    * them in another thread */
   private void checkTasks() {
-    log.debug3("check");
     req = null;
     synchronized (tasks) {
-      if (tasks != null && !tasks.isEmpty()) {
-	long now = TimeBase.nowMs();
-	for (Cron.Task task : tasks) {
-	  if (task.nextTime(state.getLastTime(task.getId())) <= now) {
-	    fork(task);
-	  }
+      long now = TimeBase.nowMs();
+      for (Cron.Task task : tasks) {
+	if (!(task.nextTime(state.getLastTime(task.getId())) <= now)) {
+	  continue;
 	}
+	if (runningIds.contains(task.getId())) {
+	  continue;
+	}
+	fork(task);
       }
     }
     if (enabled) {
@@ -274,6 +278,9 @@ public class Cron
 	    executeAndRescheduleTask(task);
 	    setThreadName("Cron Task: idle");
 	  }};
+      runningIds.add(task.getId());
+      // submit() must be last, as thread may run to completion before it
+      // returns
       getExecutor().submit(runnable);
     } catch (RuntimeException e) {
       log.warning("fork()", e);
@@ -290,11 +297,13 @@ public class Cron
       state.setLastTime(task.getId(), TimeBase.nowMs());
       storeState(cronStateFile);
     }
+    runningIds.remove(task.getId());
     endExecuteHook(task);
   }
 	
   private boolean executeTask(Task task) {
     try {
+      log.debug2("Exec " + task);
       return task.execute();
     } catch (Exception e) {
       try {
