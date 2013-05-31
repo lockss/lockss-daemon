@@ -3158,13 +3158,13 @@
         param[base_url] = http://tbt.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-        au < exists ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 >
-        au < exists ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 >
-        au < exists ; exists ; 2008 ; The Bible Translator Volume 59 ; 59 >
-        au < exists ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 >
-        au < exists ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 >
-        au < exists ; exists ; 2011 ; The Bible Translator Volume 62 ; 62 >
-        au < exists ; exists ; 2012 ; The Bible Translator Volume 63 ; 63 >
+        au < manifest ; exists ; 2006 ; The Bible Translator Volume 57 ; 57 >
+        au < manifest ; exists ; 2007 ; The Bible Translator Volume 58 ; 58 >
+        au < manifest ; exists ; 2008 ; The Bible Translator Volume 59 ; 59 >
+        au < manifest ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 >
+        au < manifest ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 >
+        au < manifest ; exists ; 2011 ; The Bible Translator Volume 62 ; 62 >
+        au < manifest ; exists ; 2012 ; The Bible Translator Volume 63 ; 63 >
         au < crawling ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
 
       }
@@ -12159,7 +12159,7 @@
 
         au < zapped ; down ; 2009 ; Human Genomics and Proteomics Volume 1 ; 1 ; >
         au < zapped ; down ; 2010 ; Human Genomics and Proteomics Volume 2 ; 2 ; >
-        au < expected ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
+        au < manifest ; exists ; 2011 ; Human Genomics and Proteomics Volume 3 ; 3 ; >
         au < expected ; exists ; 2012 ; Human Genomics and Proteomics Volume 4 ; 4 ; >
         au < expected ; exists ; 2013 ; Human Genomics and Proteomics Volume 5 ; 5 ; >
 
@@ -26439,9 +26439,9 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://nlf.sagepub.com/
 
-        au < exists ; exists ; 2010 ; New Labor Forum Volume 19 ; 19 ; >
-        au < exists ; exists ; 2011 ; New Labor Forum Volume 20 ; 20 ; >
-        au < exists ; exists ; 2012 ; New Labor Forum Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2010 ; New Labor Forum Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2011 ; New Labor Forum Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2012 ; New Labor Forum Volume 21 ; 21 ; >
         au < crawling ; exists ; 2013 ; New Labor Forum Volume 22 ; 22 ; >
 
     }
@@ -30207,11 +30207,11 @@
         param[base_url] = http://rme.sagepub.com/
         implicit < status ; status2 ; year ; name ; param[volume_name] >
 
-        au < exists ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 >
-        au < exists ; exists ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 >
-        au < exists ; exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 >
-        au < exists ; exists ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
-        au < exists ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
+        au < manifest ; exists ; 2007 ; Recherche et Applications en Marketing (English Edition) Volume 22 ; 22 >
+        au < manifest ; exists ; 2008 ; Recherche et Applications en Marketing (English Edition) Volume 23 ; 23 >
+        au < manifest ; exists ; 2009 ; Recherche et Applications en Marketing (English Edition) Volume 24 ; 24 >
+        au < manifest ; exists ; 2010 ; Recherche et Applications en Marketing (English Edition) Volume 25 ; 25 >
+        au < manifest ; exists ; 2011 ; Recherche et Applications en Marketing (English Edition) Volume 26 ; 26 >
         au < expected ; exists ; 2012 ; Recherche et Applications en Marketing (English Edition) Volume 27 ; 27 >
         au < manifest ; exists ; 2013 ; Recherche et Applications en Marketing (English Edition) Volume 28 ; 28 >
 
@@ -31671,18 +31671,18 @@
       comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
       comment[sexualities] = manifest pages reference sex base_url after V12.
 
-      au < exists ; exists ; 1998 ; Sexualities Volume 1 ; 1 ; >
-      au < exists ; exists ; 1999 ; Sexualities Volume 2 ; 2 ; >
-      au < exists ; exists ; 2000 ; Sexualities Volume 3 ; 3 ; >
-      au < exists ; exists ; 2001 ; Sexualities Volume 4 ; 4 ; >
-      au < exists ; exists ; 2002 ; Sexualities Volume 5 ; 5 ; >
-      au < exists ; exists ; 2003 ; Sexualities Volume 6 ; 6 ; >
-      au < exists ; exists ; 2004 ; Sexualities Volume 7 ; 7 ; >
-      au < exists ; exists ; 2005 ; Sexualities Volume 8 ; 8 ; >
-      au < exists ; exists ; 2006 ; Sexualities Volume 9 ; 9 ; >
-      au < exists ; exists ; 2007 ; Sexualities Volume 10 ; 10 ; >
-      au < exists ; exists ; 2008 ; Sexualities Volume 11 ; 11 ; >
-      au < exists ; exists ; 2009 ; Sexualities Volume 12 ; 12 ; >
+      au < manifest ; exists ; 1998 ; Sexualities Volume 1 ; 1 ; >
+      au < manifest ; exists ; 1999 ; Sexualities Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2000 ; Sexualities Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2001 ; Sexualities Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2002 ; Sexualities Volume 5 ; 5 ; >
+      au < manifest ; exists ; 2003 ; Sexualities Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2004 ; Sexualities Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2005 ; Sexualities Volume 8 ; 8 ; >
+      au < manifest ; exists ; 2006 ; Sexualities Volume 9 ; 9 ; >
+      au < manifest ; exists ; 2007 ; Sexualities Volume 10 ; 10 ; >
+      au < manifest ; exists ; 2008 ; Sexualities Volume 11 ; 11 ; >
+      au < manifest ; exists ; 2009 ; Sexualities Volume 12 ; 12 ; >
       au < released ; crawling ; 2010 ; Sexualities Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; Sexualities Volume 14 ; 14 ; >
       au < released ; crawling ; 2012 ; Sexualities Volume 15 ; 15 ; >
@@ -36677,16 +36677,16 @@
       au < exists ; exists ; 1997 ; Gifted Child Today Volume 20 ; 20 ; >
       au < exists ; exists ; 1998 ; Gifted Child Today Volume 21 ; 21 ; >
       au < exists ; exists ; 1999 ; Gifted Child Today Volume 22 ; 22 ; >
-      au < exists ; exists ; 2000 ; Gifted Child Today Volume 23 ; 23 ; >
-      au < exists ; exists ; 2001 ; Gifted Child Today Volume 24 ; 24 ; >
-      au < exists ; exists ; 2002 ; Gifted Child Today Volume 25 ; 25 ; >
-      au < exists ; exists ; 2003 ; Gifted Child Today Volume 26 ; 26 ; >
-      au < exists ; exists ; 2004 ; Gifted Child Today Volume 27 ; 27 ; >
-      au < exists ; exists ; 2005 ; Gifted Child Today Volume 28 ; 28 ; >
-      au < exists ; exists ; 2006 ; Gifted Child Today Volume 29 ; 29 ; >
-      au < exists ; exists ; 2007 ; Gifted Child Today Volume 30 ; 30 ; >
-      au < exists ; exists ; 2008 ; Gifted Child Today Volume 31 ; 31 ; >
-      au < exists ; exists ; 2009 ; Gifted Child Today Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2000 ; Gifted Child Today Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2001 ; Gifted Child Today Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2002 ; Gifted Child Today Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2003 ; Gifted Child Today Volume 26 ; 26 ; >
+      au < manifest ; exists ; 2004 ; Gifted Child Today Volume 27 ; 27 ; >
+      au < manifest ; exists ; 2005 ; Gifted Child Today Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2006 ; Gifted Child Today Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2007 ; Gifted Child Today Volume 30 ; 30 ; >
+      au < manifest ; exists ; 2008 ; Gifted Child Today Volume 31 ; 31 ; >
+      au < manifest ; exists ; 2009 ; Gifted Child Today Volume 32 ; 32 ; >
       au < exists ; exists ; 2010 ; Gifted Child Today Volume 33 ; 33 ; >
       au < exists ; exists ; 2011 ; Gifted Child Today Volume 34 ; 34 ; >
       au < released ; crawling ; 2012 ; Gifted Child Today Volume 35 ; 35 ; >
@@ -38826,19 +38826,19 @@
         au < exists ; exists ; 1997 ; International Journal of STD & AIDS Volume 8 ; 8 ; >
         au < exists ; exists ; 1998 ; International Journal of STD & AIDS Volume 9 ; 9 ; >
         au < exists ; exists ; 1999 ; International Journal of STD & AIDS Volume 10 ; 10 ; >
-        au < exists ; exists ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 ; >
-        au < exists ; exists ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 ; >
-        au < exists ; exists ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 ; >
-        au < exists ; exists ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 ; >
-        au < exists ; exists ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 ; >
-        au < exists ; exists ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 ; >
-        au < exists ; exists ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 ; >
-        au < exists ; exists ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 ; >
-        au < exists ; exists ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 ; >
-        au < exists ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 ; >
-        au < exists ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
-        au < exists ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; >
-        au < exists ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
+        au < manifest ; exists ; 2000 ; International Journal of STD & AIDS Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2001 ; International Journal of STD & AIDS Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2002 ; International Journal of STD & AIDS Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2003 ; International Journal of STD & AIDS Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2004 ; International Journal of STD & AIDS Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2005 ; International Journal of STD & AIDS Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2006 ; International Journal of STD & AIDS Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2007 ; International Journal of STD & AIDS Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2008 ; International Journal of STD & AIDS Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 ; >
+        au < manifest ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; >
+        au < manifest ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
         au < manifest ; exists ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; >
 
     }
@@ -38855,18 +38855,18 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hsr.sagepub.com/
   
-        au < exists ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
-        au < exists ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
-        au < exists ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
-        au < exists ; exists ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 ; >
-        au < exists ; exists ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 ; >
-        au < exists ; exists ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 ; >
-        au < exists ; exists ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 ; >
-        au < exists ; exists ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 ; >
-        au < exists ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 ; >
-        au < exists ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 ; >
-        au < exists ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 ; >
-        au < exists ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 ; >
+        au < manifest ; exists ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
         au < exists ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
   
     }
@@ -38884,15 +38884,15 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://jmb.sagepub.com/
   
-        au < doNotProcess ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
-        au < doNotProcess ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
-        au < doNotProcess ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 ; >
-        au < doNotProcess ; exists ; 2008 ; Journal of Medical Biography Volume 16 ; 16 ; >
-        au < doNotProcess ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 ; >
-        au < doNotProcess ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 ; >
-        au < doNotProcess ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
-        au < doNotProcess ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
-        au < doNotProcess ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
+        au < manifest ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 ; >
+        au < manifest ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 ; >
+        au < manifest ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 ; >
+        au < manifest ; exists ; 2008 ; Journal of Medical Biography Volume 16 ; 16 ; >
+        au < manifest ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 ; >
+        au < manifest ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 ; >
+        au < manifest ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
+        au < exists ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
   
       }
   
