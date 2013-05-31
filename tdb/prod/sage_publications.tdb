@@ -42175,56 +42175,115 @@ comment[mpj] = now published by Brill
   
       {
   
-        pluginPrefix = org.lockss.plugin.highwire.
+        plugin = org.lockss.plugin.highwire.HighWirePressPlugin
         param[base_url] = http://hii.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[platform] = HighWire H10
       
-        au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 21 [superseded] ; 21 >
-        au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 22 [superseded] ; 22 >
-        au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 23 [superseded] ; 23 >
-        au < HighWirePressPlugin ; down ; 2001 ; He@lth Information on the Internet Volume 24 [superseded] ; 24 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 25 [superseded] ; 25 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 26 [superseded] ; 26 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 27 [superseded] ; 27 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 28 [superseded] ; 28 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 29 [superseded] ; 29 >
-        au < HighWirePressPlugin ; down ; 2002 ; He@lth Information on the Internet Volume 30 [superseded] ; 30 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 31 [superseded] ; 31 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 32 [superseded] ; 32 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 33 [superseded] ; 33 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 34 [superseded] ; 34 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 35 [superseded] ; 35 >
-        au < HighWirePressPlugin ; down ; 2003 ; He@lth Information on the Internet Volume 36 [superseded] ; 36 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 37 [superseded] ; 37 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 38 [superseded] ; 38 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 39 [superseded] ; 39 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 40 [superseded] ; 40 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 41 [superseded] ; 41 >
-        au < HighWirePressPlugin ; down ; 2004 ; He@lth Information on the Internet Volume 42 [superseded] ; 42 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 43 [superseded] ; 43 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 44 [superseded] ; 44 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 45 [superseded] ; 45 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 46 [superseded] ; 46 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 47 [superseded] ; 47 >
-        au < HighWirePressPlugin ; down ; 2005 ; He@lth Information on the Internet Volume 48 [superseded] ; 48 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 49 [superseded] ; 49 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 50 [superseded] ; 50 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 51 [superseded] ; 51 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 52 [superseded] ; 52 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 53 [superseded] ; 53 >
-        au < HighWirePressPlugin ; down ; 2006 ; He@lth Information on the Internet Volume 54 [superseded] ; 54 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 55 [superseded] ; 55 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 56 [superseded] ; 56 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 57 [superseded] ; 57 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 58 [superseded] ; 58 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 59 [superseded] ; 59 >
-        au < HighWirePressPlugin ; down ; 2007 ; He@lth Information on the Internet Volume 60 [superseded] ; 60 >
-        au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 61 [superseded] ; 61 >
-        au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 62 [superseded] ; 62 >
-        au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 63 [superseded] ; 63 >
-        au < HighWirePressH20Plugin ; released ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
-        au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 65 [superseded] ; 65 >
-        au < HighWirePressPlugin ; down ; 2008 ; He@lth Information on the Internet Volume 66 [superseded] ; 66 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 21 [superseded] ; 21 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 22 [superseded] ; 22 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 23 [superseded] ; 23 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 24 [superseded] ; 24 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 25 [superseded] ; 25 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 26 [superseded] ; 26 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 27 [superseded] ; 27 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 28 [superseded] ; 28 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 29 [superseded] ; 29 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 30 [superseded] ; 30 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 31 [superseded] ; 31 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 32 [superseded] ; 32 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 33 [superseded] ; 33 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 34 [superseded] ; 34 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 35 [superseded] ; 35 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 36 [superseded] ; 36 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 37 [superseded] ; 37 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 38 [superseded] ; 38 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 39 [superseded] ; 39 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 40 [superseded] ; 40 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 41 [superseded] ; 41 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 42 [superseded] ; 42 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 43 [superseded] ; 43 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 44 [superseded] ; 44 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 45 [superseded] ; 45 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 46 [superseded] ; 46 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 47 [superseded] ; 47 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 48 [superseded] ; 48 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 49 [superseded] ; 49 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 50 [superseded] ; 50 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 51 [superseded] ; 51 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 52 [superseded] ; 52 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 53 [superseded] ; 53 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 54 [superseded] ; 54 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 55 [superseded] ; 55 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 56 [superseded] ; 56 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 57 [superseded] ; 57 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 58 [superseded] ; 58 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 59 [superseded] ; 59 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 60 [superseded] ; 60 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 61 [superseded] ; 61 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 62 [superseded] ; 62 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 63 [superseded] ; 63 >
+        au < doNotProcess ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 65 [superseded] ; 65 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 66 [superseded] ; 66 >
+  
+      }
+  
+      {
+  
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        param[base_url] = http://hii.rsmjournals.com/
+        implicit < status ; year ; name ; param[volume_name] >
+        
+        comment[platform] = HighWire H20
+      
+        au < exists ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
+        au < exists ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
+        au < exists ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
+        au < exists ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
+        au < exists ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+        au < exists ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+        au < exists ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
+        au < exists ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
+        au < exists ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+        au < exists ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+        au < exists ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+        au < exists ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+        au < exists ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
+        au < released ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+        au < exists ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+        au < exists ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
   
       }
   
@@ -42305,7 +42364,23 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2009 ; International Journal of Care Pathways Volume 13 [superseded] ; 13 >
         au < HighWirePressPlugin ; down ; 2010 ; International Journal of Care Pathways Volume 14 [superseded] ; 14 >
         au < HighWirePressPlugin ; down ; 2011 ; International Journal of Care Pathways Volume 15 [superseded] ; 15 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
+  
+      }
+  
+      {
+  
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://icp.sagepub.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 >
   
       }
@@ -43220,22 +43295,38 @@ comment[mpj] = now published by Brill
       >
   
       {
-        comment[notmoved] = this journal has not moved to Sage yet.
-  
+      
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         param[base_url] = http://ult.rsmjournals.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < released ; 2004 ; Ultrasound Volume 12 ; 12 >
-        au < released ; 2005 ; Ultrasound Volume 13 ; 13 >
-        au < released ; 2006 ; Ultrasound Volume 14 ; 14 >
-        au < released ; 2007 ; Ultrasound Volume 15 ; 15 >
-        au < released ; 2008 ; Ultrasound Volume 16 ; 16 >
-        au < released ; 2009 ; Ultrasound Volume 17 ; 17 >
-        au < released ; 2010 ; Ultrasound Volume 18 ; 18 >
-        au < released ; 2011 ; Ultrasound Volume 19 ; 19 >
-        au < doNotProcess ; 2012 ; Ultrasound Volume 20 ; 20 >
-        au < manifest ; 2013 ; Ultrasound Volume 21 ; 21 >
+        au < down ; 2004 ; Ultrasound Volume 12 [superseded] ; 12 >
+        au < down ; 2005 ; Ultrasound Volume 13 [superseded] ; 13 >
+        au < down ; 2006 ; Ultrasound Volume 14 [superseded] ; 14 >
+        au < down ; 2007 ; Ultrasound Volume 15 [superseded] ; 15 >
+        au < down ; 2008 ; Ultrasound Volume 16 [superseded] ; 16 >
+        au < down ; 2009 ; Ultrasound Volume 17 [superseded] ; 17 >
+        au < down ; 2010 ; Ultrasound Volume 18 [superseded] ; 18 >
+        au < down ; 2011 ; Ultrasound Volume 19 [superseded] ; 19 >
+  
+      }
+  
+      {
+      
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        param[base_url] = http://intl-ult.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 >
+        au < doNotProcess ; 2005 ; Ultrasound Volume 13 ; 13 >
+        au < doNotProcess ; 2006 ; Ultrasound Volume 14 ; 14 >
+        au < doNotProcess ; 2007 ; Ultrasound Volume 15 ; 15 >
+        au < doNotProcess ; 2008 ; Ultrasound Volume 16 ; 16 >
+        au < doNotProcess ; 2009 ; Ultrasound Volume 17 ; 17 >
+        au < doNotProcess ; 2010 ; Ultrasound Volume 18 ; 18 >
+        au < doNotProcess ; 2011 ; Ultrasound Volume 19 ; 19 >
+        au < exists ; 2012 ; Ultrasound Volume 20 ; 20 >
+        au < exists ; 2013 ; Ultrasound Volume 21 ; 21 >
   
       }
   
