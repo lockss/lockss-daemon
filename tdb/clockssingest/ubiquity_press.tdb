@@ -190,7 +190,7 @@
        comment[zapped] = Released under plugin that is obsolete: replaced by ClockssOJS2Plugin
        au < superseded ; down ; 2010 ; Opticon1826 Volume 9 [to delete] ; 8-9 ; 2010 >
        au < superseded ; down ; 2011 ; Opticon1826 Volume 10 [to delete] ; 10-11 ; 2011 >
-       au < superseded ; down ; 2012 ; Opticon1826 Volume 10 [to delete] ; 12 ; 2012 >
+       au < superseded ; down ; 2012 ; Opticon1826 Volume 12 [to delete] ; 12 ; 2012 >
     }
     
     au < manifest ; exists ; 2006 ; Opticon1826 Volume 1 ; 1 ; 2006 >
@@ -218,7 +218,7 @@
        param[base_url] = http://www.pia-journal.co.uk/
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+        au < superseded ; down ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
     }
     {
        param[base_url] = http://pia-journal.co.uk/
