@@ -21009,29 +21009,6 @@
 
   }
 
- {
-    
-     title <
-       name = Journal of Medical Biography ;
-       issn =  0967-7720 ;
-       eissn =  1758-1087
-     >
-      
-       param[base_url] = http://jmb.sagepub.com/
-       pluginSuffix = ClockssHighWirePressH20Plugin
-       
-      au < exists ; exists ; 2005 ; Journal of Medical Biography 13 ; 13 ; >
-      au < exists ; exists ; 2006 ; Journal of Medical Biography 14 ; 14 ; >
-      au < exists ; exists ; 2007 ; Journal of Medical Biography 15 ; 15 ; >
-      au < exists ; exists ; 2008 ; Journal of Medical Biography 16 ; 16 ; >
-      au < exists ; exists ; 2009 ; Journal of Medical Biography 17 ; 17 ; >
-      au < exists ; exists ; 2010 ; Journal of Medical Biography 18 ; 18 ; >
-      au < exists ; exists ; 2011 ; Journal of Medical Biography 19 ; 19 ; >
-      au < exists ; exists ; 2012 ; Journal of Medical Biography 20 ; 20 ; >
-      au < expected ; exists ; 2013 ; Journal of Medical Biography 21 ; 21 ; >
-    
-    }
-    
   {
 
     title <
