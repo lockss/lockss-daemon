@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.266 2013-03-20 03:24:05 tlipkis Exp $
+ * $Id: PollManager.java,v 1.266.8.1 2013-05-31 19:45:49 dshr Exp $
  */
 
 /*
@@ -937,6 +937,7 @@ public class PollManager
     new V1PollFactory(),
     null, // new V2PollFactory(),
     new V3PollFactory(this),
+    null, // new LocalPollFactory(),
   };
 
   public PollManager() {
@@ -1169,6 +1170,19 @@ public class PollManager
     }
     theLog.debug("Poll not started: " + errMsg + ", au: " + pollspec.getAuId());
     return null;
+  }
+
+  /**
+   * Call a local poll.  Used by PollStarter.
+   * @param pollspec the <code>PollSpec</code> that defines the subject of
+   *                 the <code>Poll</code>.
+   * @param au
+   * @return the poll, if it was successfuly called, else null.
+   */
+  public Poll callLocalPoll(ArchivalUnit au, PollSpec pollspec) {
+    AuState auState = AuUtil.getAuState(au);
+    auState.pollAttempted();
+    return callPoll0(pollspec);
   }
 
   /**
@@ -2860,16 +2874,29 @@ public class PollManager
       return false;
     }
 
-    // todo(bhayes): Should this be using the spec from the request?
-    PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
-    theLog.debug("Calling a V3 poll on AU " + au);
-
-    if (callPoll(au, spec) == null) {
-      theLog.debug("pollManager.callPoll returned null. Failed to call "
-		   + "a V3 poll on " + au);
+    PollSpec spec = req.spec;
+    switch (spec.getPollType()) {
+    case Poll.V3_POLL:
+      theLog.debug("Calling a V3 poll on AU " + au);
+      if (callPoll(au, spec) == null) {
+	theLog.debug("pollManager.callPoll returned null. Failed to call "
+		     + "a V3 poll on " + au);
+	return false;
+      }
+      break;
+    case Poll.LOCAL_POLL:
+      theLog.debug("Calling a local poll on AU " + au);
+      if (callLocalPoll(au, spec) == null) {
+	theLog.debug("pollManager.callPoll returned null. Failed to call "
+		     + "a local poll on " + au);
+	return false;
+      }
+      break;
+    default:
+      theLog.error("Bad poll type: " + spec.getPollType());
       return false;
     }
-        
+            
     // Add a delay to throttle poll starting.  The delay is the sum of 
     // the scomm timeout and an additional number of milliseconds.
     if (enablePollStarterThrottle) {

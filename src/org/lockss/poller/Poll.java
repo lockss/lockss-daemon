@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.93 2009-12-22 02:19:43 tlipkis Exp $
+* $Id: Poll.java,v 1.93.58.1 2013-05-31 19:45:49 dshr Exp $
  */
 
 /*
@@ -54,14 +54,16 @@ public interface Poll {
   public static final int V3_POLL = 3;
 //  public static final int V3_POLLER = 3;
 //  public static final int V3_VOTER = 4;
+  public static final int LOCAL_POLL = 5;
 
   // Protocol version enum
   public static final int UNDEFINED_PROTOCOL = 0;
   public static final int V1_PROTOCOL = 1;
   public static final int V2_PROTOCOL = 2;
   public static final int V3_PROTOCOL = 3;
+  public static final int LOCAL_PROTOCOL = 4;
 
-  public static final int MAX_PROTOCOL = 3;
+  public static final int MAX_PROTOCOL = 4;
 
 //  // Protocol version param
 //  public static final String PARAM_USE_PROTOCOL_VERSION =

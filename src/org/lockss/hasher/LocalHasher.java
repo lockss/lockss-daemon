@@ -1,5 +1,5 @@
 /*
- * $Id: LocalHasher.java,v 1.1.2.4 2013-05-20 03:25:09 dshr Exp $
+ * $Id: LocalHasher.java,v 1.1.2.5 2013-05-31 19:45:49 dshr Exp $
  */
 
 /*
@@ -54,14 +54,13 @@ public class LocalHasher {
   private long bytesHashed = 0;
   private int filesHashed = 0;
   private long startTime = 0;
-  private long elapsedTime;
+  private long elapsedTime = 0;
   private Callback callback;
 
   public LocalHasher(Callback cb) {
     checksumAlgorithm =
       CurrentConfig.getParam(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
 			     BaseUrlCacher.DEFAULT_CHECKSUM_ALGORITHM);
-    startTime = System.currentTimeMillis();
     callback = cb;
   }
 
@@ -74,6 +73,10 @@ public class LocalHasher {
   }
 
   public long getElapsedTime() {
+    if (elapsedTime == 0) {
+      // Still under way
+      return System.currentTimeMillis() - startTime;
+    }
     return elapsedTime;
   }
 
@@ -85,6 +88,7 @@ public class LocalHasher {
 
   /** Do a local hash of the CUS, creating or checking local hashes */
   public void doLocalHash(CachedUrlSet cus) throws IOException {
+    startTime = System.currentTimeMillis();
     Iterator iterCUS = cus.contentHashIterator();
     while (iterCUS.hasNext()) {
       CachedUrlSetNode node = (CachedUrlSetNode)iterCUS.next();
@@ -101,6 +105,7 @@ public class LocalHasher {
 					   + node.getType());
       }
     }
+    elapsedTime = System.currentTimeMillis() - startTime;
   }
 
   public void doLocalHashCachedUrlNode(CachedUrlSetNode node)

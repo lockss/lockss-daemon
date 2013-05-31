@@ -1,8 +1,8 @@
 /*
- * $Id: V3Poller.java,v 1.132 2013-03-01 04:12:24 dshr Exp $
+ * $Id: V3Poller.java,v 1.132.8.1 2013-05-31 19:45:49 dshr Exp $
  */
 
-/*
+/* 
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -557,7 +557,7 @@ public class V3Poller extends BasePoll {
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 
-  void setConfig() {
+  private void setConfig() {
     Configuration c = ConfigManager.getCurrentConfig();
     outerCircleTarget = c.getInt(PARAM_TARGET_OUTER_CIRCLE_SIZE,
                                  DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
@@ -611,7 +611,7 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
+  private PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
     PsmManager mgr = theDaemon.getPsmManager();
     PsmInterp interp = mgr.newPsmInterp(stateMachine, userData);
     interp.setName(PollUtil.makeShortPollKey(getKey()));
@@ -625,7 +625,7 @@ public class V3Poller extends BasePoll {
    * @param maxParticipants  The maximum number of participants that will
    *        participate in this poll (invitees and outer circle)
    */
-  boolean reserveScheduleTime(int maxParticipants) {
+  private boolean reserveScheduleTime(int maxParticipants) {
     CachedUrlSet cus = this.getCachedUrlSet();
     long hashEst = cus.estimatedHashDuration();
     long receiptBuffer = calculateReceiptBuffer();
@@ -704,7 +704,7 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  PsmInterp.ErrorHandler ehAbortPoll(final String msg) {
+  private PsmInterp.ErrorHandler ehAbortPoll(final String msg) {
     return new PsmInterp.ErrorHandler() {
 	public void handleError(PsmException e) {
 	  log.warning(msg, e);
@@ -713,7 +713,7 @@ public class V3Poller extends BasePoll {
       };
   }
 	  
-  PsmInterp.ErrorHandler ehRemoveParticipant(final PeerIdentity id,
+  private PsmInterp.ErrorHandler ehRemoveParticipant(final PeerIdentity id,
 						       final String msg) {
     return new PsmInterp.ErrorHandler() {
 	public void handleError(PsmException e) {
@@ -723,7 +723,7 @@ public class V3Poller extends BasePoll {
       };
   }
 
-  PsmInterp.ErrorHandler ehIgnore(final String msg) {
+  private PsmInterp.ErrorHandler ehIgnore(final String msg) {
     return new PsmInterp.ErrorHandler() {
 	public void handleError(PsmException e) {
 	  log.warning(msg, e);
@@ -829,7 +829,7 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  void startParticipant(ParticipantUserData ud, boolean resume) {
+  private void startParticipant(ParticipantUserData ud, boolean resume) {
     PeerIdentity id = ud.getVoterId();
     PsmInterp interp = ud.getPsmInterp();
     try {
@@ -1008,7 +1008,8 @@ public class V3Poller extends BasePoll {
    * @param id
    * @return PsmInterp
    */
-  ParticipantUserData addInnerCircleVoter(PeerIdentity id) {
+  /* protected for TestV3Poller */
+  protected ParticipantUserData addInnerCircleVoter(PeerIdentity id) {
     ParticipantUserData participant = makeParticipant(id);
     synchronized(theParticipants) {
       theParticipants.put(id, participant);
@@ -1051,7 +1052,7 @@ public class V3Poller extends BasePoll {
    * @param nominatedPeers A list of string representations of PeerIdendities
    *          the peer is nominating.
    */
-  void nominatePeers(PeerIdentity id, List nominatedPeers) {
+  public void nominatePeers(PeerIdentity id, List nominatedPeers) {
     // Only honor nominations if this is an inner circle peer.
     ParticipantUserData peer = getParticipant(id);
     if (peer.isOuterCircle()) {
@@ -1086,7 +1087,7 @@ public class V3Poller extends BasePoll {
   /**
    * Compare the plain hash of two versions.
    */
-  static final Comparator<HashBlock.Version> plainHashComparator =
+  private static final Comparator<HashBlock.Version> plainHashComparator =
     new Comparator<HashBlock.Version>() {
       public int compare(HashBlock.Version o1, HashBlock.Version o2) {
 	byte[] lastHash1 = getPlainHash(o1.getHashes());
@@ -1104,7 +1105,8 @@ public class V3Poller extends BasePoll {
    * results have been acted upon, and the tally is returned for
    * testing purposes.
    */
-  BlockTally tallyBlock(HashBlock hashBlock) {
+  /* protected for TestV3Poller */
+  protected BlockTally tallyBlock(HashBlock hashBlock) {
     setStatus(V3Poller.POLLER_STATUS_TALLYING);
 
     final String pollerUrl = hashBlock.getUrl();
@@ -1392,7 +1394,7 @@ public class V3Poller extends BasePoll {
    * <p>Callback method called by each PollerStateMachine when entering the
    * TallyVoter state.</p>
    */
-  boolean tallyVoter(PeerIdentity id) {
+  public boolean tallyVoter(PeerIdentity id) {
     pollerState.addVotedPeer(id);
     checkpointPoll();
     
@@ -1461,7 +1463,7 @@ public class V3Poller extends BasePoll {
   /**
    * @return the plain hash.
    */
-  static byte[] getPlainHash(byte[][] hasherByteArrays) {
+  private static byte[] getPlainHash(byte[][] hasherByteArrays) {
     return hasherByteArrays[hasherByteArrays.length - 1];
   }
 
@@ -1578,7 +1580,7 @@ public class V3Poller extends BasePoll {
 
   // Return true iff we haven't queued more than the max allowed number of
   // repairs
-  boolean okToQueueRepair() {
+  private boolean okToQueueRepair() {
     if (maxRepairs < 0) {
       return true;
     }
@@ -1587,7 +1589,7 @@ public class V3Poller extends BasePoll {
   }
 
   /* Select a peer to attempt repair from. */
-  PeerIdentity
+  private PeerIdentity
       findPeerForRepair(Collection<ParticipantUserData> disagreeingVoters) {
     ParticipantUserData voter =
       (ParticipantUserData)CollectionUtil.randomSelection(disagreeingVoters);
@@ -1835,7 +1837,8 @@ public class V3Poller extends BasePoll {
   }
 
   // Inform AuEvent listeners of change in AU content
-  void signalAuEvent() {
+  /* protected for TestV3Poller */
+  protected void signalAuEvent() {
     List<PollerStateBean.Repair> repairs = getCompletedRepairs();
     int nrepairs = repairs.size();
     if (nrepairs > 0) {
@@ -1918,7 +1921,7 @@ public class V3Poller extends BasePoll {
    * @param id
    * @param errorMsg
    */
-  void handleError(PeerIdentity id, String errorMsg) {
+  private void handleError(PeerIdentity id, String errorMsg) {
     log.error("Peer " + id + " experienced an error. Error =" +
               (errorMsg == null ? "Unknown error" : errorMsg));
 
@@ -1932,19 +1935,19 @@ public class V3Poller extends BasePoll {
    * @param id
    */
 
-  void removeParticipant(PeerIdentity id) {
+  public void removeParticipant(PeerIdentity id) {
     removeParticipant(id, -1);
   }
 
-  void removeParticipant(PeerIdentity id, PollNak nak) {
+  public void removeParticipant(PeerIdentity id, PollNak nak) {
     removeParticipant(id, -1, nak);
   }
 
-  void removeParticipant(PeerIdentity id, int peerStatus) {
+  private void removeParticipant(PeerIdentity id, int peerStatus) {
     removeParticipant(id, peerStatus, null);
   }
 
-  void removeParticipant(PeerIdentity id, int peerStatus, PollNak nak) {
+  private void removeParticipant(PeerIdentity id, int peerStatus, PollNak nak) {
     log.debug2("Removing voter " + id + " from poll " +
 	       pollerState.getPollKey());
     try {
@@ -2015,13 +2018,13 @@ public class V3Poller extends BasePoll {
 
   /**
    * Used by the participant state machines to send messages to the appropriate
-   * voter.
+   * voter. Used in ParticipantUserData.
    *
    * @param msg
    * @param to
    * @throws IOException
    */
-  void sendMessageTo(V3LcapMessage msg, PeerIdentity to)
+  public void sendMessageTo(V3LcapMessage msg, PeerIdentity to)
       throws IOException {
     if (log.isDebug2()) {
       log.debug2("sendTo(" + msg + ", " + to + ")");
@@ -2058,11 +2061,11 @@ public class V3Poller extends BasePoll {
     return pollerState;
   }
 
-  int getTargetSize() {
+  private int getTargetSize() {
     return (int)Math.ceil(quorum * targetSizeQuorumMultiplier);
   }
 
-  int getInvitationSize(int targetSize) {
+  private int getInvitationSize(int targetSize) {
     return (int)Math.ceil(targetSize * invitationSizeTargetMultiplier);
   }
 
@@ -2081,7 +2084,8 @@ public class V3Poller extends BasePoll {
     addPeersToInnerCircle(innerCircleVoters, false, false);
   }
   
-  Collection<PeerIdentity> findNPeersToInvite(int additional) {
+  /* protected for TestV3Poller */
+  protected Collection<PeerIdentity> findNPeersToInvite(int additional) {
     log.debug3("findNPeers: " + additional);
     int invitationTarget = getInvitationSize(additional);
     Map availMap = getAvailablePeers();
@@ -2095,7 +2099,8 @@ public class V3Poller extends BasePoll {
 
 
   // Count the peers who have agreed to participate.
-  int countParticipatingPeers() {
+  /* protected for TestV3Poller */
+  protected int countParticipatingPeers() {
     int res = 0;
     for (ParticipantUserData peer : theParticipants.values()) {
       if (peer.isParticipating()) {
@@ -2110,7 +2115,8 @@ public class V3Poller extends BasePoll {
   /** Build availablePeers map, or trim it if it already exists.  Map will
    * contain all peers that are (still) eligible to be invited into this
    * poll.  */
-  synchronized Map getAvailablePeers() {
+  /* protected for TestV3Poller */
+  protected synchronized Map getAvailablePeers() {
     if (availablePeers == null) {
       Collection<PeerIdentity> allPeers;
       // load list of peers who have recently said they don't have the AU
@@ -2190,16 +2196,19 @@ public class V3Poller extends BasePoll {
 	return false;
       }};
 
-  private boolean isPeerEligible(String pidKey)
+  /* protected for TestV3Poller */
+  protected boolean isPeerEligible(String pidKey)
       throws IdentityManager.MalformedIdentityKeyException {
     return isPeerEligible(idManager.findPeerIdentity(pidKey));
   }
   
-  boolean isPeerEligible(PeerIdentity pid) {
+  /* protected for TestV3Poller */
+  protected boolean isPeerEligible(PeerIdentity pid) {
     return isPeerEligible(pid, null);
   }
 
-  boolean isPeerEligible(PeerIdentity pid, DatedPeerIdSet noAuSet) {
+  /* protected for TestV3Poller */
+  protected boolean isPeerEligible(PeerIdentity pid, DatedPeerIdSet noAuSet) {
     // never include a local id.
     if (pid.isLocalIdentity()) {
       return false;
@@ -2245,7 +2254,7 @@ public class V3Poller extends BasePoll {
     return true;
   }
 
-  boolean isGroupMatch(PeerIdentityStatus status) {
+  private boolean isGroupMatch(PeerIdentityStatus status) {
     List groups = status.getGroups();
     // if we haven't recorded a group, allow it
     if (groups == null || groups.isEmpty()) {
@@ -2272,17 +2281,19 @@ public class V3Poller extends BasePoll {
    * @return A double between 0.0 and 1.0 representing the weight
    *      that we want to try to invite this peer into a poll.
    */
-  double invitationWeight(PeerIdentity pid) {
+  private double invitationWeight(PeerIdentity pid) {
     return invitationWeight(idManager.getPeerIdentityStatus(pid));
   }
 
-  double invitationWeight(PeerIdentityStatus status) {
+  /* protected for TestV3Poller */
+  protected double invitationWeight(PeerIdentityStatus status) {
     return weightResponsiveness(status)
       * weightAtRisk(status)
       * weightPotentialGain(status);
   }
 
-  double weightResponsiveness(PeerIdentityStatus status) {
+  /* protected for TestV3Poller */
+  protected double weightResponsiveness(PeerIdentityStatus status) {
     CompoundLinearSlope invitationWeightCurve =
       pollManager.getInvitationWeightAgeCurve();
     if (invitationWeightCurve  == null) {
@@ -2294,7 +2305,7 @@ public class V3Poller extends BasePoll {
     return invitationWeightCurve.getY(noResponseFor);
   }
 
-  double weightAtRisk(PeerIdentityStatus status) {
+  private double weightAtRisk(PeerIdentityStatus status) {
     Set<PeerIdentity> peers = pollManager.getPeersWithAuAtRisk(getAu());
     if (peers == null || !peers.contains(status.getPeerIdentity())) {
       return 1.0;
@@ -2306,7 +2317,7 @@ public class V3Poller extends BasePoll {
     return pollManager.getInvitationWeightAtRisk();
   }
 
-  boolean isWillingRepairer(PeerIdentity id) {
+  private boolean isWillingRepairer(PeerIdentity id) {
     double highest = idManager.getHighestPercentAgreement(id, getAu());
     return highest >= pollManager.getMinPercentForRepair();
   }
@@ -2318,7 +2329,7 @@ public class V3Poller extends BasePoll {
     return 1.0;
   }
 
-  void addPeersToInnerCircle(Collection<PeerIdentity> peers,
+  private void addPeersToInnerCircle(Collection<PeerIdentity> peers,
 			     boolean start, boolean resuming) {
     for (PeerIdentity id : peers) {
       ParticipantUserData ud = addInnerCircleVoter(id);
@@ -2328,7 +2339,7 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  boolean enlargeInnerCircle() {
+  private boolean enlargeInnerCircle() {
     synchronized (theParticipants) {
       int excess = countParticipatingPeers() - getTargetSize();
       if (excess >= 0) {
@@ -2336,7 +2347,7 @@ public class V3Poller extends BasePoll {
 		  getQuorum() + "+" + excess + ")");
 	return false;
       }
-      
+
       Collection<PeerIdentity> newPeers = findNPeersToInvite(-excess);
       if (newPeers.isEmpty()) {
 	log.debug("[InvitationCallback] No more peers to invite");
@@ -2351,7 +2362,8 @@ public class V3Poller extends BasePoll {
   }
 
   // The participants should not change after this call.
-  void lockParticipants() {
+  /* protected for TestV3Poller */
+  protected void lockParticipants() {
     // todo(bhayes): Nobody enforces, nobody checks.
     urlTallier = makeUrlTallier();
     synchronized(theParticipants) {
@@ -2372,13 +2384,13 @@ public class V3Poller extends BasePoll {
     }
   }
 
-  UrlTallier makeUrlTallier() {
+  private UrlTallier makeUrlTallier() {
     synchronized(theParticipants) {
       return new UrlTallier(new ArrayList(theParticipants.values()));
     }
   }
 
-  Class getPollerActionsClass() {
+  private Class getPollerActionsClass() {
     return PollerActions.class;
   }
   
