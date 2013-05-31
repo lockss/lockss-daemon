@@ -41438,7 +41438,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://mmc.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Mobile Media & Communication Volume 1 ; 1 >
+    au < manifest ; 2013 ; Mobile Media & Communication Volume 1 ; 1 >
 
     }
 
