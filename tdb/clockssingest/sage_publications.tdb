@@ -38692,55 +38692,61 @@
         eissn = 1758-1036
       >
   
-        pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = xxx
+      {
+  
+        plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+        param[base_url] = http://hii.rsmjournals.com/
+        
+        comment[platform] = HighWire H20
       
-        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 ; >
-        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 ; >
-        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 ; >
-        au <  doNotProcess ; exists ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 ; >
-        au <  doNotProcess ; exists ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 ; >
-        au <  doNotProcess ; exists ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 ; >
-        au <  doNotProcess ; exists ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 ; >
-        au <  doNotProcess ; exists ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 ; >
-        au <  doNotProcess ; exists ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 ; >
-        au <  doNotProcess ; exists ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 ; >
-        au <  doNotProcess ; exists ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 ; >
+        au < exists ; exists ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 ; >
+        au < exists ; exists ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 ; >
+        au < exists ; exists ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 ; >
+        au < exists ; exists ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 ; >
+        au < exists ; exists ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 ; >
+        au < exists ; exists ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 ; >
+        au < exists ; exists ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 ; >
+        au < exists ; exists ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 ; >
+        au < exists ; exists ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 ; >
+        au < exists ; exists ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 ; >
+        au < exists ; exists ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 ; >
+  
+      }
   
     }
   
