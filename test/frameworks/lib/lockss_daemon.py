@@ -1,6 +1,6 @@
 """LOCKSS daemon interface library."""
 
-# $Id: lockss_daemon.py,v 1.38 2013-03-18 19:19:33 dshr Exp $
+# $Id: lockss_daemon.py,v 1.38.8.1 2013-05-31 22:07:46 dshr Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -1127,6 +1127,25 @@ class Local_Client( Client ):
                 return Node( url, path )
             else:
                 raise LockssError( 'Node does not exist: ' + url )
+
+    def isAuNode( self, au, url, check_for_content = False ):
+        """Construct a node from a url on an AU."""
+        root = self.getAuRoot( au )
+        # Kludge for getting "lockssau" node.
+        if url == 'lockssau':
+            path = root
+        else:
+            path = os.path.join( root, url[ ( len( au.baseUrl ) + 1 ) : ] )
+        if check_for_content:
+            if os.path.isfile( os.path.join( path, '#content', 'current' ) ):
+                return True
+            else:
+                return False
+        else:
+            if os.path.isdir( path ) or os.path.isfile( path ):
+                return True
+            else:
+                return False
 
     def getAuNodesWithContent( self, au ):
         """Return a list of all nodes that have content."""
