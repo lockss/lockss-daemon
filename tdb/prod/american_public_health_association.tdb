@@ -13,9 +13,9 @@
       issnl = 0090-0036
     >
 
-    plugin = org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin
+  {
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
     param[base_url] = http://ajph.aphapublications.org/
-    param[journal_id] =ajph
     implicit < status ; year ; volume ; name ; param[volume_name] >
 
     au < down ; 1911 ; 1 ; American Journal of Public Health Volume 1 ; 1 >
@@ -121,5 +121,18 @@
     au < down ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
 
   }
+  
+  {
+  
+    plugin = org.lockss.plugin.atypon.apha.AmPublicHealthAssocPlugin
+    param[base_url] = http://ajph.aphapublications.org/
+    param[journal_id] = ajph
+    implicit < status ; year ; volume ; name ; param[volume_name] >
 
+    au < manifest ; 2011 ; 101 ; American Journal of Public Health Volume 101 ; 101 >
+    
+   }
+   
+ }
+   
 }
