@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.1.2.3 2013-05-29 22:47:02 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.1.2.4 2013-06-01 01:09:28 fergaloy-sf Exp $
  */
 
 /*
@@ -401,12 +401,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
 	  // Process the archival unit.
 	  processNewTdbAu(tdbAu, conn, defaultRepo, isFirstRun, config);
+	  conn.commit();
 	} catch (SQLException sqle) {
 	  log.error("Error handling archival unit " + tdbAu, sqle);
+	  conn.rollback();
 	} catch (RuntimeException re) {
 	  log.error("Error handling archival unit " + tdbAu, re);
+	  conn.rollback();
 	}
       }
+    } catch (SQLException sqle) {
+      log.error("Cannot rollback the connection", sqle);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -516,7 +521,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (isFirstRun) {
       // Yes: Add the archival unit to the table of unconfigured archival units.
       persistUnconfiguredAu(conn, auId);
-      conn.commit();
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
       return;
     }
@@ -565,7 +569,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     } else {
       // No: Add it to the table of unconfigured archival units.
       persistUnconfiguredAu(conn, auId);
-      conn.commit();
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
