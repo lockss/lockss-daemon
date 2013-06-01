@@ -45,8 +45,7 @@ import org.lockss.util.Logger;
 
 public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataExtractor{
 
-  private SpringerEmitter emit = null;
-  private static Logger log = Logger.getLogger("SpringerSourceArticleMetadataExtractor");
+  private static Logger log = Logger.getLogger(SpringerSourceArticleMetadataExtractor.class);
 
   public SpringerSourceArticleMetadataExtractor() 
   {
@@ -68,10 +67,11 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
   @Override
   public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
       throws IOException, PluginException {
-    if(emit == null)
-      emit = new SpringerEmitter(af,emitter);
+
+    SpringerEmitter emit = new SpringerEmitter(af,emitter);
 
     CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+            
     FileMetadataExtractor me = null;
 
     if(cu != null)
@@ -83,12 +83,13 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
           me.extract(target, cu, emit);
         } else {
           ArticleMetadata am = new ArticleMetadata();
+          //emit.emitMetadata(cu, am);
           emit.emitMetadata(cu, am);
         }
 
       } catch (RuntimeException e) {
-        log.debug("for af (" + af + ")", e);
-
+        log.debug3("for af (" + af + ")", e);
+        
         if (me != null)
           try{
             ArticleMetadata am = new ArticleMetadata();
@@ -113,7 +114,7 @@ public class SpringerSourceArticleMetadataExtractor implements ArticleMetadataEx
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      addTdbDefaults(af, cu, am);
+    addTdbDefaults(af, cu, am);
       parent.emitMetadata(af, am);
     }
 
