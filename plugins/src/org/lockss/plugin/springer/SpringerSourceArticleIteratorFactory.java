@@ -40,7 +40,7 @@ import org.lockss.util.Logger;
 
 public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("SpringerSourceArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(SpringerSourceArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
@@ -93,23 +93,17 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     
     protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {
       CachedUrl metadataCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml.Meta"));
+      log.debug3("guessAdditionalFiles metadataCu: " + metadataCu);
       CachedUrl xmlCu = au.makeCachedUrl(mat.replaceFirst("$1$3.xml"));
 
-      if (metadataCu != null && metadataCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
-    	  log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
-      } else if (metadataCu != null) {
-        log.debug3("not setting ROLE_ARTICLE_METADATA -- no content: " + metadataCu.getUrl());
-      } else {
-        log.debug3("not setting ROLE_ARTICLE_METADATA -- no matching Cu");
+      if ((metadataCu != null) && (metadataCu.hasContent())) {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, metadataCu);
+        log.debug3("setting ROLE_ARTICLE_METADATA: " + metadataCu.getUrl());
       }
-      if (xmlCu != null && xmlCu.hasContent()) {
-    	  af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
-          log.debug3("setting ROLE_FULL_TEXT_HTML: " + metadataCu.getUrl());
-      } else if (metadataCu != null) {
-        log.debug3("not setting ROLE_FULL_TEXT_HTML -- no content: " + xmlCu.getUrl());
-      } else {
-        log.debug3("not setting ROLE_FULL_TEXT_HTML -- no matching Cu");
+      
+      if ((xmlCu != null) && (xmlCu.hasContent())) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, xmlCu);
+        log.debug3("setting ROLE_FULL_TEXT_HTML: " + xmlCu.getUrl());
       }
     }
   }
