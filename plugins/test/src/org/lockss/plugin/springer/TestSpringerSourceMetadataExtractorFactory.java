@@ -46,29 +46,34 @@ import org.lockss.plugin.simulated.*;
 public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestSpringerMetadataExtractorFactory");
 
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-  private ArchivalUnit hau;		//BloomsburyQatar AU
   private MockLockssDaemon theDaemon;
+  private SimulatedArchivalUnit sau; // simulated au to generate content
+  private ArchivalUnit ssau; // springer source au
 
   private static String PLUGIN_NAME =
     "org.lockss.plugin.springer.ClockssSpringerSourcePlugin";
 
-  private static String BASE_URL = "http://www.example.com";
-  private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
+  private static String BASE_URL = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/";
+  private final String YEAR = "2012";
+
+  // Simulated journal ID: "Spring source Journal"
+  private static String SIM_ROOT = BASE_URL + "ssjn/";
 
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
+    
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
+    
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-					     simAuConfig(tempDirPath));
-    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, aipAuConfig());
+                                             simAuConfig(tempDirPath));
+    ssau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerSourceAuConfig());
+
   }
 
   public void tearDown() throws Exception {
@@ -76,28 +81,29 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     theDaemon.stopDaemon();
     super.tearDown();
   }
-
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", SIM_ROOT);
-    conf.put("year", "2012");
     conf.put("depth", "2");
     conf.put("branch", "3");
     conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_HTML));
-    conf.put("binFileSize", "7");
+    conf.put("fileTypes","" + (SimulatedContentGenerator.FILE_TYPE_PDF 
+                               + SimulatedContentGenerator.FILE_TYPE_XML));
+    //conf.put("default_article_mime_type", "application/html");
     return conf;
   }
 
-  Configuration aipAuConfig() {
+  // Configuration method. 
+  Configuration springerSourceAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("year", "2012");
+    conf.put("year", YEAR);
     return conf;
   }
-  
+
+  // the metadata that should be extracted
   String goodTitle = "Title";
   ArrayList<String> goodAuthors = new ArrayList<String>();
   String goodIssn = "5555-5555";
@@ -112,10 +118,11 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   
   String goodPublisher = "Publisher";
   String goodEissn = "6666-6666";
-  String goodJournal = "Journal";
+  String goodJournalTitle = "Journal";
   String goodLanguage = "Language";
   String goodStart = "Start";
   String goodEnd = "End";
+  String hardwiredPublisher = "Springer-Verlag";
   
   String goodContent = 
 		  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
@@ -265,27 +272,27 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
      "</Journal>"+
   "</Publisher>";
 
-
   public void testExtractFromGoodContent() throws Exception {
-	  goodAuthors.add("Author, A.");
-	  goodAuthors.add("Author, B.");
-	  goodAuthors.add("Author, C.");
-	  goodKeywords.add("Keyword1");
-	  goodKeywords.add("Keyword2");
-	  goodKeywords.add("Keyword3");
+    goodAuthors.add("Author, A.");
+    goodAuthors.add("Author, B.");
+    goodAuthors.add("Author, C.");
+    goodKeywords.add("Keyword1");
+    goodKeywords.add("Keyword2");
+    goodKeywords.add("Keyword3");
 	  
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
+    MockCachedUrl cu = new MockCachedUrl(url, ssau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    
     FileMetadataExtractor me =
       new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -301,54 +308,22 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
     
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    //assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // publisher is hard-coded for handle multiples imprints (not yet
+    // implemented by metadata database
+    assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodLanguage, md.get(MetadataField.DC_FIELD_LANGUAGE));
     assertEquals(goodStart, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodEnd, md.get(MetadataField.FIELD_END_PAGE));
   }
   
-  String badContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
-    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
-    "  <div id=\"issn\">" +
-    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
-    goodDescription + " </div>\n";
-
-  public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(badContent);
-    cu.setContentSize(badContent.length());
-    FileMetadataExtractor me =
-      new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertNull(md.get(MetadataField.FIELD_DOI));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
-    assertNull(md.get(MetadataField.FIELD_START_PAGE));
-    assertNull(md.get(MetadataField.FIELD_ISSN));
-    assertNull(md.get(MetadataField.FIELD_AUTHOR));
-    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertNull(md.get(MetadataField.FIELD_DATE));
-  }
-  
-  /**
-   * Inner class that where a number of Archival Units can be created
-   *
-   */
+  // Inner class that where a number of Archival Units can be created
+  // for simulated content.
   public static class MySimulatedPlugin extends SimulatedPlugin {
     public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
+        throws ArchivalUnit.ConfigurationException {
       ArchivalUnit au = new SimulatedArchivalUnit(this);
       au.setConfiguration(auConfig);
       return au;
@@ -358,29 +333,27 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
       return new MySimulatedContentGenerator(fileRoot);
     }
   }
-  
-  /**
-   * Inner class to create a html source code simulated content
-   */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
+
+  // Inner class to create HTML source code simulated content.
+  public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
     protected MySimulatedContentGenerator(String fileRoot) {
       super(fileRoot);
     }
 
-    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
-			
-      String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-			
+    public String getHtmlFileContent(String filename, int fileNum, 
+                                     int depth, int branchNum, 
+                                     boolean isAbnormal) {
+      String file_content = "<html><head><title>" + filename + "</title></head><body>\n";
       file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
       file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
       file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
-
       file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
-      file_content += "\n</BODY></HTML>";
+      file_content += "\n</body></html>";
       logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
 		    + file_content);
-
       return file_content;
     }
   }
+
+  
 }
