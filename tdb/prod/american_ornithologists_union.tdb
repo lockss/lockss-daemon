@@ -33,21 +33,22 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = aoum  
+      comment[exists] = waiting for Atypon book support 5321
       
       au < doNotProcess ; 2006 ; Ornithological Monographs Volume 60 ; 60 >
       au < doNotProcess ; 2006 ; Ornithological Monographs Volume 61 ; 61 >
       au < doNotProcess ; 2007 ; Ornithological Monographs Volume 62 ; 62 >
       au < doNotProcess ; 2007 ; Ornithological Monographs Volume 63 ; 63 >
-      au < manifest ; 2007 ; Ornithological Monographs Volume 64 ; 64 >
-      au < manifest ; 2008 ; Ornithological Monographs Volume 65 ; 65 >
-      au < manifest ; 2009 ; Ornithological Monographs Volume 66 ; 66 >
-      au < testing ; 2010 ; Ornithological Monographs Volume 67 ; 67 >
-      au < testing ; 2010 ; Ornithological Monographs Volume 68 ; 68 >
-      au < testing ; 2010 ; Ornithological Monographs Volume 69 ; 69 >
-      au < testing ; 2011 ; Ornithological Monographs Volume 70 ; 70 >
-      au < testing ; 2011 ; Ornithological Monographs Volume 71 ; 71 >
-      au < testing ; 2011 ; Ornithological Monographs Volume 72 ; 72 >
-      au < testing ; 2012 ; Ornithological Monographs Volume 73 ; 73 >
+      au < exists ; 2007 ; Ornithological Monographs Volume 64 ; 64 >
+      au < exists ; 2008 ; Ornithological Monographs Volume 65 ; 65 >
+      au < exists ; 2009 ; Ornithological Monographs Volume 66 ; 66 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 67 ; 67 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 68 ; 68 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 69 ; 69 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 70 ; 70 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 71 ; 71 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 72 ; 72 >
+      au < exists ; 2012 ; Ornithological Monographs Volume 73 ; 73 >
       au < expected ; 2013 ; Ornithological Monographs Volume 74 ; 74 >
  
      }
