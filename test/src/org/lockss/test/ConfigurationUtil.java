@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.21 2012-05-30 08:30:39 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.22 2013-06-03 07:20:03 tlipkis Exp $
  */
 
 /*
@@ -230,6 +230,13 @@ public class ConfigurationUtil {
     return installConfig(merge(CurrentConfig.getCurrentConfig(),
                                fromArgs(prop1, val1, prop2, val2,
                                         prop3, val3, prop4, val4)));
+  }
+
+  /** Add the contents of the file to the current config
+   */
+  public static boolean addFromFile(String f) throws IOException {
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
+                               fromFile(f)));
   }
 
   /** Install the supplied Configuration as the current configuration.

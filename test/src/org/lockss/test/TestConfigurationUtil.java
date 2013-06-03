@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.3 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: TestConfigurationUtil.java,v 1.4 2013-06-03 07:20:02 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,36 @@ public class TestConfigurationUtil extends LockssTestCase {
       throws IOException, Configuration.InvalidParam {
     ConfigurationUtil.setFromArgs("prop1", "12",
 				  "prop2", "true");
+    check();
+  }
+
+  public void testAddFromArgs()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "12");
+    ConfigurationUtil.addFromArgs("prop2", "true");
+    check();
+  }
+
+  public void testAddFromFile()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "xxx");
+    File file = FileTestUtil.writeTempFile("config", "prop1=12\nprop2=true\n");
+    ConfigurationUtil.addFromFile(file.toString());
+    check();
+  }
+
+  private String xmlSample =
+    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+    "<lockss-config>\n" +
+    "<property name=\"prop1\" value=\"12\" />\n" +
+    "<property name=\"prop2\" value=\"true\" />\n" +
+    "</lockss-config>\n";
+
+  public void testAddFromXmlFile()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "xxx");
+    File file = FileTestUtil.writeTempFile("config", ".xml", xmlSample);
+    ConfigurationUtil.addFromFile(file.toString());
     check();
   }
 
