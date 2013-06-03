@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.13 2013-05-03 20:21:31 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.14 2013-06-03 18:52:54 barry409 Exp $
  */
 
 /*
@@ -58,10 +58,6 @@ public class VoteBlockTallier {
     public void voteSpoiled(ParticipantUserData id);
   }
 
-  interface HashBlockComparer {
-    public boolean compare(VoteBlock voteBlock, int participantIndex);
-  }
-
   /** A callback for when VoteBlockTallier.vote() is called. */
   public interface VoteCallback {
     /**
@@ -72,7 +68,7 @@ public class VoteBlockTallier {
   }
 
   // Null if the poller does not have this URL.
-  private final HashBlockComparer comparer;
+  private final HashBlockVoteBlockComparerFactory comparerFactory;
 
   private final Collection<VoteBlockTally> tallies =
     new ArrayList<VoteBlockTally>();
@@ -80,8 +76,16 @@ public class VoteBlockTallier {
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
 
-  private VoteBlockTallier(HashBlockComparer comparer) {
-    this.comparer = comparer;
+  private VoteBlockTallier(HashBlockVoteBlockComparerFactory comparerFactory) {
+    this.comparerFactory = comparerFactory;
+  }
+
+  // local short-cut to make for shorter lines
+  private static HashBlockVoteBlockComparerFactory
+    makeComparerFactory(HashBlock hashBlock,
+			V3Poller.HashIndexer hashIndexer) {
+    return HashBlockVoteBlockComparerFactory.
+      makeFactory(hashBlock, hashIndexer);
   }
 
   /**
@@ -91,7 +95,7 @@ public class VoteBlockTallier {
    * called.
    */
   public static VoteBlockTallier make(VoteCallback... voteCallbacks) {
-    return make((HashBlockComparer)null, voteCallbacks);
+    return make((HashBlockVoteBlockComparerFactory)null, voteCallbacks);
   }
 
   /**
@@ -103,7 +107,7 @@ public class VoteBlockTallier {
   public static VoteBlockTallier make(HashBlock hashBlock,
 				      V3Poller.HashIndexer hashIndexer,
 				      VoteCallback... voteCallbacks) {
-    return make(new HashBlockComparerImpl(hashBlock, hashIndexer),
+    return make(makeComparerFactory(hashBlock, hashIndexer),
 		voteCallbacks);
   }
 
@@ -112,21 +116,23 @@ public class VoteBlockTallier {
    */
   public static VoteBlockTallier makeForRepair(HashBlock hashBlock,
 					       V3Poller.HashIndexer hashIndexer) {
-    return makeForRepair(new HashBlockComparerImpl(hashBlock, hashIndexer));
+    return makeForRepair(makeComparerFactory(hashBlock, hashIndexer));
   }
 
   // package level for testing, rather than private
-  static VoteBlockTallier makeForRepair(HashBlockComparer comparer) {
-    return new VoteBlockTallier(comparer);
+  static VoteBlockTallier 
+    makeForRepair(HashBlockVoteBlockComparerFactory comparerFactory) {
+    return new VoteBlockTallier(comparerFactory);
   }
 
   // package level for testing, rather than private
-  static VoteBlockTallier make(HashBlockComparer comparer,
-			       final VoteCallback... voteCallbacks) {
+  static VoteBlockTallier
+    make(HashBlockVoteBlockComparerFactory comparerFactory,
+	 final VoteCallback... voteCallbacks) {
     if (voteCallbacks.length == 0) {
-      return new VoteBlockTallier(comparer);
+      return new VoteBlockTallier(comparerFactory);
     }
-    return new VoteBlockTallier(comparer) {
+    return new VoteBlockTallier(comparerFactory) {
       // In addition to tallying, inform the ParticipantUserData block
       // about each vote.
       @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
@@ -151,7 +157,7 @@ public class VoteBlockTallier {
 
   // This could be done by using dispatch and a subclass.
   private boolean pollerHas() {
-    return comparer != null;
+    return comparerFactory != null;
   }
 
   /**
@@ -161,7 +167,8 @@ public class VoteBlockTallier {
 		   int participantIndex) {
     votingStarted = true;
     if (pollerHas()) {
-      if (comparer.compare(voteBlock, participantIndex)) {
+      VoteBlockComparer comparer = comparerFactory.forIndex(participantIndex);
+      if (comparer.sharesVersion(voteBlock)) {
 	voteAgreed(id);
       } else {
 	voteDisagreed(id);

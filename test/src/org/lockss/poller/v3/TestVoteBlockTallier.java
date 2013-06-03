@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.11 2013-05-03 17:30:44 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.12 2013-06-03 18:52:54 barry409 Exp $
  */
 
 /*
@@ -34,12 +34,14 @@ package org.lockss.poller.v3;
 
 import java.io.*;
 import java.util.*;
+import java.security.MessageDigest;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 
 import org.lockss.config.*;
 import org.lockss.hasher.HashBlock;
+import org.lockss.hasher.HashResult;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 
@@ -50,7 +52,13 @@ public class TestVoteBlockTallier extends LockssTestCase {
   private ParticipantUserData[] testPeers;
   private File tempDir;
   String tempDirPath;
-  private byte[] testBytes = ByteArray.makeRandomBytes(20);
+  private byte[][] nonces = new byte[10][];
+
+  private void setupNonces() throws Exception {
+    for (int ix = 0; ix < nonces.length; ix++) {
+      nonces[ix] = ByteArray.makeRandomBytes(20);
+    }
+  }
 
   public void setUp() throws Exception {
     super.setUp();
@@ -64,11 +72,12 @@ public class TestVoteBlockTallier extends LockssTestCase {
     IdentityManager idMgr = new V3TestUtils.NoStoreIdentityManager();
     daemon.setIdentityManager(idMgr);
     idMgr.initService(daemon);
+    setupNonces();
     setupPeers();
   }
   
   private void setupPeers() throws Exception {
-    testPeers = new ParticipantUserData[10];
+    testPeers = new ParticipantUserData[nonces.length];
     V3Poller poller = makeV3Poller("pollkey");
     for (int ix = 1; ix <= testPeers.length; ix++) {
       String id = String.format("TCP:[127.0.0.%d]:9729", ix);
@@ -86,10 +95,113 @@ public class TestVoteBlockTallier extends LockssTestCase {
     return new V3Poller(ps, daemon, null, key, 20000, "SHA-1");
   }
 
-  VoteBlock makeVoteBlock() {
+  VoteBlock makeVoteBlock(byte[] nonce, String... contentVersions)
+      throws Exception {
     VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
-    vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
+    for (String content: contentVersions) {
+      MessageDigest digest = MessageDigest.getInstance("SHA1");
+      digest.update(content.getBytes());
+      byte[] plainHash = digest.digest();
+      digest = MessageDigest.getInstance("SHA1");
+      digest.update(nonce);
+      digest.update(content.getBytes());
+      byte[] noncedHash = digest.digest();
+      vb.addVersion(0, 123, 0, 155, plainHash, noncedHash, false);
+    }
     return vb;
+  }
+
+  VoteBlock makeVoteBlock() throws Exception {
+    return makeVoteBlock(nonces[0], "aaa", "bbb", "ccc");
+  }
+  
+  private HashBlock makeHashBlock(String url) {
+    MockCachedUrl cu = new MockCachedUrl(url);
+    return new HashBlock(cu);
+  }
+  
+  private HashBlock makeHashBlock(String url, String... contentVersions)
+      throws Exception {
+    HashBlock hb = makeHashBlock(url);
+    for (String contentVersion : contentVersions) {
+      addVersion(hb, contentVersion);
+    }
+    return hb;
+  }
+
+  private void addVersion(HashBlock block, String content) 
+      throws Exception {
+    addVersion(block, content, null);
+  }
+
+  private void addVersion(HashBlock block, String content, Throwable hashError) 
+      throws Exception {
+    MessageDigest[] digests = new MessageDigest[nonces.length + 1];
+    for (int i = 0; i < nonces.length; i++) {
+      digests[i] = MessageDigest.getInstance("SHA1");
+      digests[i].update(nonces[i]);
+      digests[i].update(content.getBytes());
+    }
+    digests[nonces.length] = MessageDigest.getInstance("SHA1");
+    digests[nonces.length].update(content.getBytes());
+    
+    int hbVersionNum = block.getVersions().length;
+    block.addVersion(0, content.length(), 
+                     0, content.length(),
+		     digests.length * content.length(), // total bytes hashed
+                     digests, hbVersionNum, hashError);
+  }
+
+  private HashBlock makeHashBlock() throws Exception {
+    return makeHashBlock("foo", "aaa", "bbb", "ccc");
+  }
+
+  class MyHashIndexer implements V3Poller.HashIndexer {
+    final HashBlock hashBlock;
+    
+    MyHashIndexer(HashBlock hashBlock) {
+      this.hashBlock = hashBlock;
+    }
+
+    @Override public HashResult getParticipantHash(HashBlock.Version version,
+						   int participantIndex) {
+      byte[][] hashes = version.getHashes();
+      return HashResult.make(hashes[participantIndex]);
+    }
+    @Override public HashResult getSymmetricHash(HashBlock.Version version,
+					     int symmetricParticipantIndex) {
+      // Symmetric hash values are not used.
+      fail();
+      return null;
+    }
+    @Override public HashResult getPlainHash(HashBlock.Version version) {
+      byte[][] hashes = version.getHashes();
+      return HashResult.make(hashes[hashes.length-1]);
+    }
+
+    // Helpers for tests that want to smash hashes in HashBlock.Version.
+    public void setChallengeHash(HashBlock.Version version,
+				 int participantIndex,
+				 byte[] bytes) {
+      byte[][] hashes = version.getHashes();
+      hashes[participantIndex] = bytes;
+    }
+
+    public void setPlainHash(HashBlock.Version version, byte[] bytes) {
+      byte[][] hashes = version.getHashes();
+      hashes[hashes.length-1] = bytes;
+    }
+  }
+
+  MyHashIndexer makeHashIndexer(HashBlock hashBlock) {
+    return new MyHashIndexer(hashBlock);
+  }
+
+  public HashBlockVoteBlockComparerFactory
+      makeComparerFactory() throws Exception {
+    HashBlock hashBlock = makeHashBlock();
+    return HashBlockVoteBlockComparerFactory.
+      makeFactory(hashBlock, makeHashIndexer(hashBlock));
   }
 
   public void testConstructPollTally() {
@@ -100,26 +212,20 @@ public class TestVoteBlockTallier extends LockssTestCase {
   public void testVoteWithBlockTallyPollerHas() throws Exception {
     VoteBlockTallier voteBlockTallier;
     BlockTally tally;
-    VoteBlockTallier.HashBlockComparer comparer =
-      new VoteBlockTallier.HashBlockComparer() {
-	public boolean compare(VoteBlock voteBlock, int participantIndex) {
-	  return participantIndex == 0;
-	}
-      };
 
-    voteBlockTallier = VoteBlockTallier.make(comparer);
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteSpoiled(testPeers[0]);
     assertEquals("0/0/0/0", tally.votes());
 
-    voteBlockTallier = VoteBlockTallier.make(comparer);
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
     assertEquals("0/1/1/0", tally.votes());
 
-    voteBlockTallier = VoteBlockTallier.make(comparer);
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
@@ -181,16 +287,11 @@ public class TestVoteBlockTallier extends LockssTestCase {
     VoteBlockTallier voteBlockTallier;
     OnceVoteCallback onceVoteCallback;
     VoteBlockTallier.VoteBlockTally tally;
-    VoteBlockTallier.HashBlockComparer comparer =
-      new VoteBlockTallier.HashBlockComparer() {
-	public boolean compare(VoteBlock voteBlock, int participantIndex) {
-	  return participantIndex == 0;
-	}
-      };
 
     voter = new ParticipantUserData();
     onceVoteCallback = new OnceVoteCallback(voteBlock, voter);
-    voteBlockTallier = VoteBlockTallier.make(comparer, onceVoteCallback);
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
+					     onceVoteCallback);
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), voter, 0);
@@ -199,7 +300,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
     voter = new ParticipantUserData();
     onceVoteCallback = new OnceVoteCallback(voteBlock, voter);
-    voteBlockTallier = VoteBlockTallier.make(comparer, onceVoteCallback);
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
+					     onceVoteCallback);
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), voter, 1);
@@ -207,7 +309,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     assertTrue(onceVoteCallback.called);
 
     voter = new ParticipantUserData();
-    voteBlockTallier = VoteBlockTallier.make(comparer,
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
 					     new FailVoteCallback());
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
@@ -223,7 +325,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
     assertEquals("0/0/0/1/0/0", voter.getVoteCounts().votes());
     assertTrue(onceVoteCallback.called);
 
-    voteBlockTallier = VoteBlockTallier.make(comparer, new FailVoteCallback());
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory(),
+					     new FailVoteCallback());
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);

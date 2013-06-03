@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.5 2013-05-29 21:02:56 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.6 2013-06-03 18:52:54 barry409 Exp $
  */
 
 /*
@@ -174,7 +174,8 @@ public class VoteBlocksTallier {
 	  if (comparison == 0) {
 	    log.debug3("Both have " + vUrl);
 	    // Voter and Poller both have this URL
-	    if (voteBlockAgree(vBlock, pBlock)) {
+	    if (VoteBlockVoteBlockComparerFactory.make(vBlock).
+		sharesVersion(pBlock)) {
 	      if (keepUrlLists) {
 		agreeUrl.add(vUrl);
 	      }
@@ -212,91 +213,6 @@ public class VoteBlocksTallier {
       log.error("IOException while tallying symmetric poll", ex);
       return;
     }
-  }
-
-  // todo(bhayes): Can HashBlock and VoteBlock share an interface?
-  // VoteBlocksTallier#makePlainMap is somewhat like
-  // HashBlockCompareImpl#makePlainMap, but works with a VoteBlock
-  // rather than a HashBlock, and so ends up annoyingly
-  // different. Likewise voteBlocksAgree is very similar to
-  // HashBlockCompareImpl#compare.
-
-  // Make a Map from the plain hash of each version to that version.
-  // Note: Called with our own VoteBlocks, so throwing on unexpected
-  // errors -- like illegal hash values -- rather than recovering.
-  private Map<HashResult, VoteBlock.Version>
-    makePlainMap(VoteBlock voteBlock) {
-    Map<HashResult, VoteBlock.Version> plainMap =
-      new HashMap<HashResult, VoteBlock.Version>();
-    VoteBlock.Version[] vbVersions = voteBlock.getVersions();
-    for (int versionIndex = 0; versionIndex < vbVersions.length;
-	 versionIndex++) {
-      VoteBlock.Version vbVersion = vbVersions[versionIndex];
-      if (vbVersion.getHashError()) {
-	// Only log the hash error in the VoteBlock at
-	// initialize. There's probably a more detailed error in the
-	// log.
-	log.warning("VoteBlock version "+versionIndex+" had hashing error.");
-      } else {
-	HashResult plainHash = HashResult.make(vbVersion.getPlainHash());
-	
-	// We could check for a plainHash already in the map, and
-	// check that all the nonced hashes match. If they do not,
-	// something odd is happening in the hasher. But it's not
-	// worth it.
-	plainMap.put(plainHash, vbVersion);
-      }
-    }
-    return plainMap;
-  }
-
-  /**
-   * Compare two VoteBlock instances, one from voter and one from poller.
-   * @param vBlock VoteBlock from voter
-   * @param pBlock VoteBlock from poller
-   * @return true if at least one voter version agrees with a poller version
-   */
-  protected boolean voteBlockAgree(VoteBlock vBlock, VoteBlock pBlock) {
-    // Build the map from our versions.
-    Map<HashResult, VoteBlock.Version> plainMap = makePlainMap(vBlock);
-
-    // Check each of the poller's versions
-    VoteBlock.Version[] vbVersions = pBlock.getVersions();
-    for (int versionIndex = 0; versionIndex < vbVersions.length;
-	 versionIndex++) {
-      VoteBlock.Version vbVersion = vbVersions[versionIndex];
-      if (vbVersion.getHashError()) {
-	log.warning("Poller version "+versionIndex+" had a hashing error.");
-      } else {
-	HashResult pollerPlainHash;
-	try {
-	  pollerPlainHash = HashResult.make(vbVersion.getPlainHash());
-	} catch (HashResult.IllegalByteArray e) {
-	  log.warning("Poller version "+versionIndex+
-		      " had an IllegalByteArray plain hash.");
-	  continue;
-	}
-	VoteBlock.Version voterVersion = plainMap.get(pollerPlainHash);
-	if (voterVersion != null) {
-	  HashResult voterNoncedHash = HashResult.make(voterVersion.getHash());
-	  try {
-	    if (voterNoncedHash.equalsBytes(vbVersion.getHash())) {
-	      return true;
-	    }
-	  } catch (HashResult.IllegalByteArray e) {
-	    log.warning("Poller version "+versionIndex+
-			" had an IllegalByteArray nonced hash.");
-	    continue;
-	  }
-	  // The voter and poller match plain hash, but not nonced
-	  // hash.
-	  log.warning("Voter and poller matched plain but not nonced hash.");
-	} 
-      }
-    }
-    // No agreement on any version
-    log.debug3("Disagree");
-    return false;
   }
 
   /**
