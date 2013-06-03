@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockVoteBlockComparerFactory.java,v 1.2 2013-06-03 20:46:53 barry409 Exp $
+ * $Id: VoteBlockVoteBlockComparerFactory.java,v 1.3 2013-06-03 21:51:37 barry409 Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public final class VoteBlockVoteBlockComparerFactory {
     makePlainMap(VoteBlock voteBlock) {
 
     Map<HashResult, VoteBlock.Version> plainMap =
-      new <HashResult, VoteBlock.Version>HashMap();
+      new HashMap<HashResult, VoteBlock.Version>();
     VoteBlock.Version[] vbVersions = voteBlock.getVersions();
     for (int versionIndex = 0; versionIndex < vbVersions.length;
 	 versionIndex++) {
