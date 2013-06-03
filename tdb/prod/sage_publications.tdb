@@ -43051,7 +43051,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 [superseded] ; 76 >
         au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 [superseded] ; 77 >
         au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 [superseded] ; 78 >
-        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
   
       }
   
@@ -43073,7 +43073,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
         au < HighWirePressH20Plugin ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
   
