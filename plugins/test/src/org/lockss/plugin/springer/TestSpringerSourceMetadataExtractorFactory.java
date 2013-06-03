@@ -28,20 +28,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
-import java.io.*;
 import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
 /**
  * One of the articles used to get the xml source for this plugin is:
- * ~/2010/ftp_PUB_10-05-17_06-11-02.zip/JOU=11864/VOL=2008.9/ISU=2-3/ART=2008_64/11864_2008_Article.xml.Meta 
+ * <base url>/2010/ftp_PUB_10-05-17_06-11-02.zip/JOU=11864/VOL=2008.9/ISU=2-3/ART=2008_64/11864_2008_Article.xml.Meta 
  */
 public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestSpringerMetadataExtractorFactory");
@@ -62,18 +59,16 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
-    
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-    
+
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
                                              simAuConfig(tempDirPath));
     ssau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerSourceAuConfig());
-
   }
 
   public void tearDown() throws Exception {
@@ -91,7 +86,6 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     conf.put("numFiles", "7");
     conf.put("fileTypes","" + (SimulatedContentGenerator.FILE_TYPE_PDF 
                                + SimulatedContentGenerator.FILE_TYPE_XML));
-    //conf.put("default_article_mime_type", "application/html");
     return conf;
   }
 
@@ -115,7 +109,6 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   ArrayList<String> goodKeywords = new ArrayList<String>();
   String goodDescription = "Summary";
   String goodRights = "Rights";
-  
   String goodPublisher = "Publisher";
   String goodEissn = "6666-6666";
   String goodJournalTitle = "Journal";
@@ -123,7 +116,8 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
   String goodStart = "Start";
   String goodEnd = "End";
   String hardwiredPublisher = "Springer-Verlag";
-  
+  String genJournalTitle = "UNKNOWN_TITLE/journalId=00238";
+    
   String goodContent = 
 		  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
   "<!DOCTYPE Publisher PUBLIC \"-//Springer-Verlag//DTD A++ V2.4//EN\" \"http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd\">"+
@@ -271,20 +265,221 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
         "</Volume>"+
      "</Journal>"+
   "</Publisher>";
+  
+  String noTittleIssnEissnJournalIdContent = 
+		  "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"+
+  "<!DOCTYPE Publisher PUBLIC \"-//Springer-Verlag//DTD A++ V2.4//EN\" \"http://devel.springer.de/A++/V2.4/DTD/A++V2.4.dtd\">"+
+  "<Publisher>"+
+     "<PublisherInfo>"+
+        "<PublisherName>Publisher</PublisherName>"+
+        "<PublisherLocation>PublisherLocation</PublisherLocation>"+
+     "</PublisherInfo>"+
+     "<Journal OutputMedium=\"All\">"+
+        "<JournalInfo JournalProductType=\"ArchiveJournal\" NumberingStyle=\"Unnumbered\">"+
+           "<JournalAbbreviatedTitle>Jour</JournalAbbreviatedTitle>"+
+           "<JournalSubjectGroup>"+
+              "<JournalSubject Type=\"Primary\">Subject1</JournalSubject>"+
+              "<JournalSubject Type=\"Secondary\">Subject2</JournalSubject>"+
+              "<JournalSubject Type=\"Secondary\">Subject3</JournalSubject>"+
+              "<JournalSubject Type=\"Secondary\">Subject4</JournalSubject>"+
+           "</JournalSubjectGroup>"+
+        "</JournalInfo>"+
+        "<Volume OutputMedium=\"All\">"+
+           "<VolumeInfo TocLevels=\"0\" VolumeType=\"Regular\">"+
+              "<VolumeIDStart>Volume</VolumeIDStart>"+
+              "<VolumeIDEnd>Volume</VolumeIDEnd>"+
+              "<VolumeIssueCount>Issues</VolumeIssueCount>"+
+           "</VolumeInfo>"+
+           "<Issue IssueType=\"Regular\" OutputMedium=\"All\">"+
+              "<IssueInfo IssueType=\"Regular\" TocLevels=\"0\">"+
+                 "<IssueIDStart>Issue</IssueIDStart>"+
+                 "<IssueIDEnd>Issue</IssueIDEnd>"+
+                 "<IssueArticleCount>Articles</IssueArticleCount>"+
+                 "<IssueHistory>"+
+                    "<OnlineDate>"+
+                       "<Year>2008</Year>"+
+                       "<Month>11</Month>"+
+                       "<Day>8</Day>"+
+                    "</OnlineDate>"+
+                    "<PrintDate>"+
+                       "<Year>2008</Year>"+
+                       "<Month>11</Month>"+
+                       "<Day>7</Day>"+
+                    "</PrintDate>"+
+                    "<CoverDate>"+
+                       "<Year>2008</Year>"+
+                       "<Month>12</Month>"+
+                    "</CoverDate>"+
+                    "<PricelistYear>2008</PricelistYear>"+
+                 "</IssueHistory>"+
+                 "<IssueCopyright>"+
+                    "<CopyrightHolderName>Copyright</CopyrightHolderName>"+
+                    "<CopyrightYear>Rights</CopyrightYear>"+
+                 "</IssueCopyright>"+
+              "</IssueInfo>"+
+              "<Article ID=\"s12080-008-0021-5\" OutputMedium=\"All\">"+
+                 "<ArticleInfo ArticleType=\"OriginalPaper\" ContainsESM=\"No\" Language=\"Language\" NumberingStyle=\"Unnumbered\" TocLevels=\"0\">"+
+                          "<ArticleID>ID</ArticleID>"+
+                          "<ArticleDOI>10.1066/DOI</ArticleDOI>"+
+                          "<ArticleSequenceNumber>3</ArticleSequenceNumber>"+
+                          "<ArticleTitle Language=\"Language\">Title</ArticleTitle>"+
+                          "<ArticleCategory>Original paper</ArticleCategory>"+
+                          "<ArticleFirstPage>Start</ArticleFirstPage>"+
+                          "<ArticleLastPage>End</ArticleLastPage>"+
+                          "<ArticleHistory>"+
+                       "<RegistrationDate>"+
+                          "<Year>2008</Year>"+
+                          "<Month>7</Month>"+
+                          "<Day>10</Day>"+
+                       "</RegistrationDate>"+
+                       "<Received>"+
+                          "<Year>2008</Year>"+
+                          "<Month>4</Month>"+
+                          "<Day>3</Day>"+
+                       "</Received>"+
+                       "<Accepted>"+
+                          "<Year>2008</Year>"+
+                          "<Month>7</Month>"+
+                          "<Day>3</Day>"+
+                       "</Accepted>"+
+                       "<OnlineDate>"+
+                          "<Year>2008</Year>"+
+                          "<Month>7</Month>"+
+                          "<Day>30</Day>"+
+                       "</OnlineDate>"+
+                    "</ArticleHistory>"+
+                          "<ArticleCopyright>"+
+                       "<CopyrightHolderName>Copyright</CopyrightHolderName>"+
+                       "<CopyrightYear>Rights</CopyrightYear>"+
+                    "</ArticleCopyright>"+
+                          "<ArticleGrants Type=\"Regular\">"+
+                              "<MetadataGrant Grant=\"OpenAccess\"/>"+
+                              "<AbstractGrant Grant=\"OpenAccess\"/>"+
+                              "<BodyPDFGrant Grant=\"Restricted\"/>"+
+                              "<BodyHTMLGrant Grant=\"Restricted\"/>"+
+                              "<BibliographyGrant Grant=\"Restricted\"/>"+
+                              "<ESMGrant Grant=\"Restricted\"/>"+
+                          "</ArticleGrants>"+
+                      "</ArticleInfo>"+
+                 "<ArticleHeader>"+
+                    "<AuthorGroup>"+
+                       "<Author AffiliationIDS=\"Aff1 Aff2\" CorrespondingAffiliationID=\"Aff1\">"+
+                          "<AuthorName DisplayOrder=\"Western\">"+
+                             "<GivenName>A.</GivenName>"+
+                             "<FamilyName>Author</FamilyName>"+
+                          "</AuthorName>"+
+                       "</Author>"+
+                       "<Author AffiliationIDS=\"Aff1\">"+
+                          "<AuthorName DisplayOrder=\"Western\">"+
+                             "<GivenName>B.</GivenName>"+
+                             "<FamilyName>Author</FamilyName>"+
+                          "</AuthorName>"+
+                       "</Author>"+
+                       "<Author AffiliationIDS=\"Aff2\">"+
+                          "<AuthorName DisplayOrder=\"Western\">"+
+                             "<GivenName>C.</GivenName>"+
+                             "<FamilyName>Author</FamilyName>"+
+                          "</AuthorName>"+
+                       "</Author>"+
+                       "<Affiliation ID=\"Aff1\">"+
+                          "<OrgDivision>Fake Division</OrgDivision>"+
+                          "<OrgName>Fake Organization</OrgName>"+
+                          "<OrgAddress>"+
+                             "<City>FreeTown</City>"+
+                             "<State>IA</State>"+
+                             "<Postcode>00000</Postcode>"+
+                             "<Country>USA</Country>"+
+                          "</OrgAddress>"+
+                       "</Affiliation>"+
+                    "</AuthorGroup>"+
+                    "<Abstract ID=\"Abs1\" Language=\"Language\">"+
+                       "<Heading>Abstract</Heading>"+
+                       "<Para>Summary</Para>"+
+                    "</Abstract>"+
+                    "<KeywordGroup Language=\"Language\">"+
+                       "<Heading>Keywords</Heading>"+
+                       "<Keyword>Keyword1</Keyword>"+
+                       "<Keyword>Keyword2</Keyword>"+
+                       "<Keyword>Keyword3</Keyword>"+
+                    "</KeywordGroup>"+
+                 "</ArticleHeader>"+
+                 "<NoBody/>"+
+              "</Article>"+
+           "</Issue>"+
+        "</Volume>"+
+     "</Journal>"+
+  "</Publisher>";
+    
+  // empty content
+  String emptyContent =
+      "<component>" +
+      "</component>";
+  
+  // bad content -- not XML
+  String badContent =
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+    "  <div id=\"issn\">" +
+    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
+    goodDescription + " </div>\n";
 
-  public void testExtractFromGoodContent() throws Exception {
-    goodAuthors.add("Author, A.");
-    goodAuthors.add("Author, B.");
-    goodAuthors.add("Author, C.");
-    goodKeywords.add("Keyword1");
-    goodKeywords.add("Keyword2");
-    goodKeywords.add("Keyword3");
-	  
+
+  public void testExtractFromEmptyContent() throws Exception {
+      
     String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
     MockCachedUrl cu = new MockCachedUrl(url, ssau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    cu.setContent(emptyContent);
+    cu.setContentSize(emptyContent.length());
+    
+    FileMetadataExtractor me =
+      new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+   
+    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertNull(md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_DATE));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    assertNull(md.get(MetadataField.FIELD_DOI));
+  }
+  
+  public void testExtractFromBadContent() throws Exception {
+      
+    String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
+    MockCachedUrl cu = new MockCachedUrl(url, ssau);
+    cu.setContent(badContent);
+    cu.setContentSize(badContent.length());
+    
+    FileMetadataExtractor me =
+      new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+   
+    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertNull(md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_DATE));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    assertNull(md.get(MetadataField.FIELD_DOI));
+  }
+
+  public void testExtractFromNoTittleIssnEissnJournalIdContent() throws Exception {
+    
+    String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
+    MockCachedUrl cu = new MockCachedUrl(url, ssau);
+    cu.setContent(noTittleIssnEissnJournalIdContent);
+    cu.setContentSize(noTittleIssnEissnJournalIdContent.length());
     
     FileMetadataExtractor me =
       new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
@@ -298,6 +493,35 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     assertNotNull(md);
    
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(genJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodEnd, md.get(MetadataField.FIELD_END_PAGE));
+  }
+  
+  public void testExtractFromGoodContent() throws Exception {
+    goodAuthors.add("Author, A.");
+    goodAuthors.add("Author, B.");
+    goodAuthors.add("Author, C.");
+    goodKeywords.add("Keyword1");
+    goodKeywords.add("Keyword2");
+    goodKeywords.add("Keyword3");
+	  
+    String url = "http://clockss-ingest.lockss.org/sourcefiles/springer-dev/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf";
+    MockCachedUrl cu = new MockCachedUrl(url, ssau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    
+    FileMetadataExtractor me =
+      new SpringerSourceMetadataExtractorFactory.SpringerSourceMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodIssn, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
@@ -307,10 +531,6 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodRights, md.get(MetadataField.DC_FIELD_RIGHTS));
-    
-    //assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    // publisher is hard-coded for handle multiples imprints (not yet
-    // implemented by metadata database
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
@@ -328,18 +548,18 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
       au.setConfiguration(auConfig);
       return au;
     }
-
-    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
+    public SimulatedContentGenerator getContentGenerator(Configuration cf,
+        String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
   }
 
   // Inner class to create HTML source code simulated content.
-  public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
+  public static class MySimulatedContentGenerator
+    extends SimulatedContentGenerator {
     protected MySimulatedContentGenerator(String fileRoot) {
       super(fileRoot);
     }
-
     public String getHtmlFileContent(String filename, int fileNum, 
                                      int depth, int branchNum, 
                                      boolean isAbnormal) {
@@ -354,6 +574,5 @@ public class TestSpringerSourceMetadataExtractorFactory extends LockssTestCase {
       return file_content;
     }
   }
-
   
 }
