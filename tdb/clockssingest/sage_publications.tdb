@@ -25409,7 +25409,7 @@
       au < released ; crawling ; 2010 ; The Medieval History Journal Volume 13 ; 13 ; >
       au < released ; crawling ; 2011 ; The Medieval History Journal Volume 14 ; 14 ; >
       au < released ; crawling ; 2012 ; The Medieval History Journal Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2013 ; The Medieval History Journal Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2013 ; The Medieval History Journal Volume 16 ; 16 ; >
 
     }
 
@@ -32627,7 +32627,7 @@
       au < exists ; exists ; 2010 ; South African Journal of Psychology Volume 40 ; 40 ; >
       au < exists ; exists ; 2011 ; South African Journal of Psychology Volume 41 ; 41 ; >
       au < exists ; exists ; 2012 ; South African Journal of Psychology Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2013 ; South African Journal of Psychology Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2013 ; South African Journal of Psychology Volume 43 ; 43 ; >
 
   }
 
@@ -37000,7 +37000,7 @@
       au < released ; crawling ; 2010 ; Political Science Volume 62 ; 62 ; >
       au < released ; crawling ; 2011 ; Political Science Volume 63 ; 63 ; >
       au < released ; crawling ; 2012 ; Political Science Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
+      au < crawling ; exists ; 2013 ; Political Science Volume 65 ; 65 ; >
 
     }
 
@@ -37626,7 +37626,7 @@
       au < manifest ; exists ; 2010 ; Australian Journal of Education Volume 54 ; 54 ; >
       au < manifest ; exists ; 2011 ; Australian Journal of Education Volume 55 ; 55 ; >
       au < manifest ; exists ; 2012 ; Australian Journal of Education Volume 56 ; 56 ; >
-      au < manifest ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
+      au < crawling ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
 
     }
 
@@ -37694,7 +37694,7 @@
     au < manifest ; exists ; 2010 ; Adoption & Fostering Volume 34 ; 34 ; >
     au < manifest ; exists ; 2011 ; Adoption & Fostering Volume 35 ; 35 ; >
     au < released ; crawling ; 2012 ; Adoption & Fostering Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2013 ; Adoption & Fostering Volume 37 ; 37 ; >
 
     }
 
@@ -37757,7 +37757,7 @@
     au < manifest ; exists ; 2010 ; Australian Journal of Career Development Volume 19 ; 19 ; >
     au < manifest ; exists ; 2011 ; Australian Journal of Career Development Volume 20 ; 20 ; >
     au < manifest ; exists ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
 
     }
 
@@ -37773,7 +37773,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://aip.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; AADE in Practice Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; AADE in Practice Volume 1 ; 1 ; >
 
     }
 
@@ -37822,7 +37822,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://brj.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Jindal Journal of Business Research Volume 1 ; 1 ; >
 
     }
 
@@ -37873,7 +37873,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://com.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Communication and Sport Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Communication and Sport Volume 1 ; 1 ; >
 
     }
 
@@ -37920,7 +37920,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://eax.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Emerging Adulthood Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Emerging Adulthood Volume 1 ; 1 ; >
 
     }
 
@@ -37937,7 +37937,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://fai.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2013 ; Foot & Ankle International Volume 34 ; 34 ; >
 
     }
 
@@ -37953,7 +37953,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://foi.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2013 ; Forum Italicum: A Journal of Italian Studies Volume 47 ; 47 ; >
 
     }
 
@@ -37967,7 +37967,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ftr.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2013 ; Foreign Trade Review Volume 48 ; 48 ; >
 
     }
 
@@ -37983,7 +37983,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://hic.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Journal of Investigative Medicine High Impact Case Reports Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Journal of Investigative Medicine High Impact Case Reports Volume 1 ; 1 ; >
 
     }
 
@@ -38024,7 +38024,7 @@
         au < doNotProcess ; doNotProcess ; 2010 ; InnovAiT: The RCGP Journal for Associates in Training Volume 3 ; 3 ; >
         au < doNotProcess ; doNotProcess ; 2011 ; InnovAiT: The RCGP Journal for Associates in Training Volume 4 ; 4 ; >
         au < doNotProcess ; doNotProcess ; 2012 ; InnovAiT: The RCGP Journal for Associates in Training Volume 5 ; 5 ; >
-        au < manifest ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 ; >
+        au < crawling ; exists ; 2013 ; InnovAiT: The RCGP Journal for Associates in Training Volume 6 ; 6 ; >
         
       }
       
@@ -38066,7 +38066,7 @@
     param[base_url] = http://mis.sagepub.com/
 
     au < exists ; exists ; 2012 ; Missiology: An International Review Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2013 ; Missiology: An International Review Volume 41 ; 41 ; >
 
     }
 
@@ -38083,7 +38083,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://mmc.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Mobile Media & Communication Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Mobile Media & Communication Volume 1 ; 1 ; >
 
     }
 
@@ -38100,7 +38100,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://paa.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2013 ; Pacifica: Australasian Theological Studies Volume 26 ; 26 ; >
 
     }
 
@@ -38174,7 +38174,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://tai.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Therapeutic Advances in Infectious Disease Volume 1 ; 1 ; >
 
     }
 
@@ -38191,7 +38191,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ueg.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; United European Gastroenterology Journal Volume 1 ; 1 ; >
 
     }
 
@@ -38213,7 +38213,7 @@
       au < manifest ; exists ; 2010 ; British Journal of Medical and Surgical Urology Volume 3 ; 3 ; >
       au < manifest ; exists ; 2011 ; British Journal of Medical and Surgical Urology Volume 4 ; 4 ; >
       au < exists ; exists ; 2012 ; British Journal of Medical and Surgical Urology Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2013 ; Journal of Clinical Urology Volume 6 ; 6 ; >
 
     }
 
@@ -38229,7 +38229,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://wfr.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2013 ; World Future Review Volume 5 ; 5 ; >
 
     }
 
@@ -38244,7 +38244,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://ojs.sagepub.com/
 
-    au < manifest ; exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2013 ; Orthopaedic Journal of Sports Medicine Volume 1 ; 1 ; >
 
     }
 
@@ -38303,7 +38303,7 @@
         au < exists ; exists ; 2010 ; Acta Radiologica Volume 51 ; 51 ; >
         au < exists ; exists ; 2011 ; Acta Radiologica Volume 52 ; 52 ; >
         au < exists ; exists ; 2012 ; Acta Radiologica Volume 53 ; 53 ; >
-        au < manifest ; exists ; 2013 ; Acta Radiologica Volume 54 ; 54 ; >
+        au < crawling ; exists ; 2013 ; Acta Radiologica Volume 54 ; 54 ; >
   
     }    
           
@@ -38664,7 +38664,7 @@
         au < exists ; exists ; 2010 ; Hand Therapy Volume 15 ; 15 ; >
         au < exists ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 ; >
         au < exists ; exists ; 2012 ; Hand Therapy Volume 17 ; 17 ; >
-        au < manifest ; exists ; 2013 ; Hand Therapy Volume 18 ; 18 ; >
+        au < crawling ; exists ; 2013 ; Hand Therapy Volume 18 ; 18 ; >
     }
   
     {
@@ -38838,7 +38838,7 @@
         au < manifest ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
         au < manifest ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; >
         au < crawling ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
-        au < manifest ; exists ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; >
+        au < crawling ; exists ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; >
 
     }
   
@@ -39026,7 +39026,7 @@
         au < exists ; exists ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 ; >
         au < exists ; exists ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 ; >
         au < exists ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 ; >
-        au < manifest ; exists ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 ; >
+        au < crawling ; exists ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 ; >
   
       }
   
@@ -39043,7 +39043,7 @@
       param[base_url] = http://cvd.sagepub.com/
   
       au < exists ; exists ; 2012 ; JRSM Cardiovascular Disease Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2013 ; JRSM Cardiovascular Disease Volume 2 ; 2 ; >
   
     }
   
@@ -39155,7 +39155,7 @@
         au < exists ; exists ; 2010 ; Medicine, Science and the Law Volume 50 ; 50 ; >
         au < exists ; exists ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 ; >
         au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 ; >
-        au < manifest ; exists ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 ; >
+        au < crawling ; exists ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 ; >
   
       }
   
@@ -39222,7 +39222,7 @@
         au < exists ; exists ; 2010 ; Menopause International Volume 16 ; 16 ; >
         au < exists ; exists ; 2011 ; Menopause International Volume 17 ; 17 ; >
         au < exists ; exists ; 2012 ; Menopause International Volume 18 ; 18 ; >
-        au < manifest ; exists ; 2013 ; Menopause International Volume 19 ; 19 ; >
+        au < crawling ; exists ; 2013 ; Menopause International Volume 19 ; 19 ; >
   
       }
   
@@ -39278,7 +39278,7 @@
         au < exists ; exists ; 2010 ; Phlebology Volume 25 ; 25 ; >
         au < exists ; exists ; 2011 ; Phlebology Volume 26 ; 26 ; >
         au < exists ; exists ; 2012 ; Phlebology Volume 27 ; 27 ; >
-        au < manifest ; exists ; 2013 ; Phlebology Volume 28 ; 28 ; >
+        au < crawling ; exists ; 2013 ; Phlebology Volume 28 ; 28 ; >
   
       }
   
@@ -39302,7 +39302,7 @@
       au < exists ; exists ; 2010 ; Scottish Medical Journal Volume 55 ; 55 ; >
       au < exists ; exists ; 2011 ; Scottish Medical Journal Volume 56 ; 56 ; >
       au < exists ; exists ; 2012 ; Scottish Medical Journal Volume 57 ; 57 ; >
-      au < manifest ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
+      au < crawling ; exists ; 2013 ; Scottish Medical Journal Volume 58 ; 58 ; >
   
     }
   
@@ -39384,7 +39384,7 @@
       au < exists ; exists ; 2010 ; Vascular Volume 18 ; 18 ; >
       au < exists ; exists ; 2011 ; Vascular Volume 19 ; 19 ; >
       au < exists ; exists ; 2012 ; Vascular Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2013 ; Vascular Volume 21 ; 21 ; >
+      au < crawling ; exists ; 2013 ; Vascular Volume 21 ; 21 ; >
      }
      
     }
