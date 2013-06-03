@@ -2698,11 +2698,11 @@
     au < crawling ; exists ; 2012 ; Nature Volume 490 ; 2012 ; 490 >
     au < crawling ; exists ; 2012 ; Nature Volume 491 ; 2012 ; 491 >
     au < crawling ; exists ; 2012 ; Nature Volume 492 ; 2012 ; 492 >
-    au < manifest ; exists ; 2013 ; Nature Volume 493 ; 2013 ; 493 >
-    au < manifest ; exists ; 2013 ; Nature Volume 494 ; 2013 ; 494 >
-    au < manifest ; exists ; 2013 ; Nature Volume 495 ; 2013 ; 495 >
-    au < manifest ; exists ; 2013 ; Nature Volume 496 ; 2013 ; 496 >
-    au < manifest ; exists ; 2013 ; Nature Volume 497 ; 2013 ; 497 >
+    au < crawling ; exists ; 2013 ; Nature Volume 493 ; 2013 ; 493 >
+    au < crawling ; exists ; 2013 ; Nature Volume 494 ; 2013 ; 494 >
+    au < crawling ; exists ; 2013 ; Nature Volume 495 ; 2013 ; 495 >
+    au < crawling ; exists ; 2013 ; Nature Volume 496 ; 2013 ; 496 >
+    au < crawling ; exists ; 2013 ; Nature Volume 497 ; 2013 ; 497 >
     au < expected ; exists ; 2013 ; Nature Volume 498 ; 2013 ; 498 >
     au < expected ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
     au < expected ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
@@ -2751,7 +2751,7 @@
     au < released ; crawling ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
     au < released ; crawling ; 2011 ; Nature Biotechnology Volume 29 ; 2011 ; 29 >
     au < crawling ; exists ; 2012 ; Nature Biotechnology Volume 30 ; 2012 ; 30 >
-    au < manifest ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 >
+    au < crawling ; exists ; 2013 ; Nature Biotechnology Volume 31 ; 2013 ; 31 >
 
   }
 
@@ -2781,7 +2781,7 @@
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
     au < notReady ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
-    au < manifest ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
+    au < crawling ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
 
   }
 
@@ -2804,7 +2804,7 @@
     au < released ; crawling ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
     au < crawling ; exists ; 2011 ; Nature Chemical Biology Volume 7 ; 2011 ; 7 >
     au < crawling ; exists ; 2012 ; Nature Chemical Biology Volume 8 ; 2012 ; 8 >
-    au < manifest ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 >
+    au < crawling ; exists ; 2013 ; Nature Chemical Biology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2823,7 +2823,7 @@
     au < released ; crawling ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
     au < crawling ; exists ; 2011 ; Nature Chemistry Volume 3 ; 2011 ; 3 >
     au < crawling ; exists ; 2012 ; Nature Chemistry Volume 4 ; 2012 ; 4 >
-    au < manifest ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
+    au < crawling ; exists ; 2013 ; Nature Chemistry Volume 5 ; 2013 ; 5 >
 
   }
 
@@ -2856,7 +2856,7 @@
 
     au < crawling ; exists ; 2011 ; Nature Climate Change Volume 1 ; 2011 ; 1 >
     au < crawling ; exists ; 2012 ; Nature Climate Change Volume 2 ; 2012 ; 2 >
-    au < manifest ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
+    au < crawling ; exists ; 2013 ; Nature Climate Change Volume 3 ; 2013 ; 3 >
 
   }
 
@@ -2893,7 +2893,7 @@
     au < released ; crawling ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
     au < zapped ; down ; 2011 ; Nature Digest Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Digest Volume 9 ; 2012 ; 9 >
-    au < manifest ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
+    au < crawling ; exists ; 2013 ; Nature Digest Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -2952,7 +2952,7 @@
     au < released ; crawling ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
     au < released ; crawling ; 2011 ; Nature Genetics Volume 43 ; 2011 ; 43 >
     au < crawling ; exists ; 2012 ; Nature Genetics Volume 44 ; 2012 ; 44 >
-    au < manifest ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 >
+    au < crawling ; exists ; 2013 ; Nature Genetics Volume 45 ; 2013 ; 45 >
 
   }
 
@@ -2972,7 +2972,7 @@
     au < released ; crawling ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
     au < released ; crawling ; 2011 ; Nature Geoscience Volume 4 ; 2011 ; 4 >
     au < crawling ; exists ; 2012 ; Nature Geoscience Volume 5 ; 2012 ; 5 >
-    au < manifest ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 >
+    au < crawling ; exists ; 2013 ; Nature Geoscience Volume 6 ; 2013 ; 6 >
 
   }
 
@@ -3000,7 +3000,7 @@
     au < released ; crawling ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
     au < crawling ; exists ; 2011 ; Nature Immunology Volume 12 ; 2011 ; 12 >
     au < crawling ; exists ; 2012 ; Nature Immunology Volume 13 ; 2012 ; 13 >
-    au < manifest ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 >
+    au < crawling ; exists ; 2013 ; Nature Immunology Volume 14 ; 2013 ; 14 >
 
   }
 
@@ -3026,7 +3026,7 @@
     au < released ; crawling ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
     au < released ; crawling ; 2011 ; Nature Materials Volume 10 ; 2011 ; 10 >
     au < crawling ; exists ; 2012 ; Nature Materials Volume 11 ; 2012 ; 11 >
-    au < manifest ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 >
+    au < crawling ; exists ; 2013 ; Nature Materials Volume 12 ; 2013 ; 12 >
 
   }
 
@@ -3059,7 +3059,7 @@
     au < released ; crawling ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
     au < crawling ; exists ; 2011 ; Nature Medicine Volume 17 ; 2011 ; 17 >
     au < crawling ; exists ; 2012 ; Nature Medicine Volume 18 ; 2012 ; 18 >
-    au < manifest ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 >
+    au < crawling ; exists ; 2013 ; Nature Medicine Volume 19 ; 2013 ; 19 >
 
   }
 
@@ -3083,7 +3083,7 @@
     au < released ; crawling ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
     au < crawling ; exists ; 2012 ; Nature Methods Volume 9 ; 2012 ; 9 >
-    au < manifest ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 >
+    au < crawling ; exists ; 2013 ; Nature Methods Volume 10 ; 2013 ; 10 >
 
   }
 
@@ -3105,7 +3105,7 @@
     au < released ; crawling ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
     au < released ; crawling ; 2011 ; Nature Nanotechnology Volume 6 ; 2011 ; 6 >
     au < crawling ; exists ; 2012 ; Nature Nanotechnology Volume 7 ; 2012 ; 7 >
-    au < manifest ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 >
+    au < crawling ; exists ; 2013 ; Nature Nanotechnology Volume 8 ; 2013 ; 8 >
 
   }
 
@@ -3135,7 +3135,7 @@
     au < released ; crawling ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
     au < crawling ; exists ; 2011 ; Nature Neuroscience Volume 14 ; 2011 ; 14 >
     au < crawling ; exists ; 2012 ; Nature Neuroscience Volume 15 ; 2012 ; 15 >
-    au < manifest ; exists ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 >
+    au < crawling ; exists ; 2013 ; Nature Neuroscience Volume 16 ; 2013 ; 16 >
 
   }
 
