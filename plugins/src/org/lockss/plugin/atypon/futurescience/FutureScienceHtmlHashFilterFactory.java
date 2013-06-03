@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.2 2013-04-30 23:18:02 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.3 2013-06-03 22:32:21 alexandraohlson Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
                   String remarkText = childNode.getText();
                   if ( (remarkText != null) && remarkText.contains("placeholder id=null") ) return true;
                 }
-                childNode = node.getNextSibling();
+                childNode = childNode.getNextSibling();
               }
               return false;
           }
