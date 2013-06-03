@@ -226,7 +226,7 @@
     au < ready ; 1941-1942 ; American Journal of Physiology Volume 135 ; 135 >
     au < released ; 1942 ; American Journal of Physiology Volume 136 ; 136 >
     au < released ; 1942 ; American Journal of Physiology Volume 137 ; 137 >
-    au < notReady ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 >
+    au < ready ; 1942-1943 ; American Journal of Physiology Volume 138 ; 138 >
     au < released ; 1943 ; American Journal of Physiology Volume 139 ; 139 >
     au < released ; 1943-1944 ; American Journal of Physiology Volume 140 ; 140 >
     au < released ; 1944 ; American Journal of Physiology Volume 141 ; 141 >
@@ -1553,7 +1553,7 @@
     {
 
       pluginSuffix = HighWirePressH20Plugin
-      comment[notReady] = no permission page from content3b, page not fully collected, will re-tests
+      comment[notReady] = no permission page from content3b & 4b, page not fully collected, will re-tests
 
       au < manifest ; 1986 ; Physiology Volume 1 ; 1 >
       au < manifest ; 1987 ; Physiology Volume 2 ; 2 >
