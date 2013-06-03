@@ -41867,251 +41867,495 @@ comment[mpj] = now published by Brill
       >
   
       {
-      
-        comment[notmoved] = not yet moved to Sage.
   
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
         param[base_url] = http://ebm.rsmjournals.com/
   
-        au < released ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 >
-        au < released ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 >
-        au < released ; 1905 ; Experimental Biology and Medicine Volume 3 ; 3 >
-        au < released ; 1906 ; Experimental Biology and Medicine Volume 4 ; 4 >
-        au < released ; 1907-1908 ; Experimental Biology and Medicine Volume 5 ; 5 >
-        au < released ; 1908-1909 ; Experimental Biology and Medicine Volume 6 ; 6 >
-        au < released ; 1909-1910 ; Experimental Biology and Medicine Volume 7 ; 7 >
-        au < released ; 1910-1911 ; Experimental Biology and Medicine Volume 8 ; 8 >
-        au < released ; 1911-1912 ; Experimental Biology and Medicine Volume 9 ; 9 >
-        au < released ; 1912-1913 ; Experimental Biology and Medicine Volume 10 ; 10 >
-        au < released ; 1913-1914 ; Experimental Biology and Medicine Volume 11 ; 11 >
-        au < released ; 1914-1915 ; Experimental Biology and Medicine Volume 12 ; 12 >
-        au < released ; 1915-1916 ; Experimental Biology and Medicine Volume 13 ; 13 >
-        au < released ; 1916-1917 ; Experimental Biology and Medicine Volume 14 ; 14 >
-        au < released ; 1917-1918 ; Experimental Biology and Medicine Volume 15 ; 15 >
-        au < released ; 1918-1919 ; Experimental Biology and Medicine Volume 16 ; 16 >
-        au < released ; 1919-1920 ; Experimental Biology and Medicine Volume 17 ; 17 >
-        au < released ; 1920-1921 ; Experimental Biology and Medicine Volume 18 ; 18 >
-        au < released ; 1921-1922 ; Experimental Biology and Medicine Volume 19 ; 19 >
-        au < released ; 1922-1923 ; Experimental Biology and Medicine Volume 20 ; 20 >
-        au < released ; 1923-1924 ; Experimental Biology and Medicine Volume 21 ; 21 >
-        au < released ; 1924-1925 ; Experimental Biology and Medicine Volume 22 ; 22 >
-        au < released ; 1925-1926 ; Experimental Biology and Medicine Volume 23 ; 23 >
-        au < released ; 1926-1927 ; Experimental Biology and Medicine Volume 24 ; 24 >
-        au < released ; 1927-1928 ; Experimental Biology and Medicine Volume 25 ; 25 >
-        au < released ; 1928-1929 ; Experimental Biology and Medicine Volume 26 ; 26 >
-        au < released ; 1929-1930 ; Experimental Biology and Medicine Volume 27 ; 27 >
-        au < released ; 1930-1931 ; Experimental Biology and Medicine Volume 28 ; 28 >
-        au < released ; 1931-1932 ; Experimental Biology and Medicine Volume 29 ; 29 >
-        au < released ; 1932-1933 ; Experimental Biology and Medicine Volume 30 ; 30 >
-        au < released ; 1933-1934 ; Experimental Biology and Medicine Volume 31 ; 31 >
-        au < released ; 1934-1935 ; Experimental Biology and Medicine Volume 32 ; 32 >
-        au < released ; 1935-1936 ; Experimental Biology and Medicine Volume 33 ; 33 >
-        au < released ; 1936 ; Experimental Biology and Medicine Volume 34 ; 34 >
-        au < released ; 1936-1937 ; Experimental Biology and Medicine Volume 35 ; 35 >
-        au < released ; 1937 ; Experimental Biology and Medicine Volume 36 ; 36 >
-        au < released ; 1937-1938 ; Experimental Biology and Medicine Volume 37 ; 37 >
-        au < released ; 1938 ; Experimental Biology and Medicine Volume 38 ; 38 >
-        au < released ; 1938 ; Experimental Biology and Medicine Volume 39 ; 39 >
-        au < released ; 1939 ; Experimental Biology and Medicine Volume 40 ; 40 >
-        au < released ; 1939 ; Experimental Biology and Medicine Volume 41 ; 41 >
-        au < released ; 1939 ; Experimental Biology and Medicine Volume 42 ; 42 >
-        au < released ; 1940 ; Experimental Biology and Medicine Volume 43 ; 43 >
-        au < released ; 1940 ; Experimental Biology and Medicine Volume 44 ; 44 >
-        au < released ; 1940 ; Experimental Biology and Medicine Volume 45 ; 45 >
-        au < released ; 1941 ; Experimental Biology and Medicine Volume 46 ; 46 >
-        au < released ; 1941 ; Experimental Biology and Medicine Volume 47 ; 47 >
-        au < released ; 1941 ; Experimental Biology and Medicine Volume 48 ; 48 >
-        au < released ; 1942 ; Experimental Biology and Medicine Volume 49 ; 49 >
-        au < released ; 1942 ; Experimental Biology and Medicine Volume 50 ; 50 >
-        au < released ; 1942 ; Experimental Biology and Medicine Volume 51 ; 51 >
-        au < released ; 1943 ; Experimental Biology and Medicine Volume 52 ; 52 >
-        au < released ; 1943 ; Experimental Biology and Medicine Volume 53 ; 53 >
-        au < released ; 1943 ; Experimental Biology and Medicine Volume 54 ; 54 >
-        au < released ; 1944 ; Experimental Biology and Medicine Volume 55 ; 55 >
-        au < released ; 1944 ; Experimental Biology and Medicine Volume 56 ; 56 >
-        au < released ; 1944 ; Experimental Biology and Medicine Volume 57 ; 57 >
-        au < released ; 1945 ; Experimental Biology and Medicine Volume 58 ; 58 >
-        au < released ; 1945 ; Experimental Biology and Medicine Volume 59 ; 59 >
-        au < released ; 1945 ; Experimental Biology and Medicine Volume 60 ; 60 >
-        au < released ; 1946 ; Experimental Biology and Medicine Volume 61 ; 61 >
-        au < released ; 1946 ; Experimental Biology and Medicine Volume 62 ; 62 >
-        au < released ; 1946 ; Experimental Biology and Medicine Volume 63 ; 63 >
-        au < released ; 1947 ; Experimental Biology and Medicine Volume 64 ; 64 >
-        au < released ; 1947 ; Experimental Biology and Medicine Volume 65 ; 65 >
-        au < released ; 1947 ; Experimental Biology and Medicine Volume 66 ; 66 >
-        au < released ; 1948 ; Experimental Biology and Medicine Volume 67 ; 67 >
-        au < released ; 1948 ; Experimental Biology and Medicine Volume 68 ; 68 >
-        au < released ; 1948 ; Experimental Biology and Medicine Volume 69 ; 69 >
-        au < released ; 1949 ; Experimental Biology and Medicine Volume 70 ; 70 >
-        au < released ; 1949 ; Experimental Biology and Medicine Volume 71 ; 71 >
-        au < released ; 1949 ; Experimental Biology and Medicine Volume 72 ; 72 >
-        au < released ; 1950 ; Experimental Biology and Medicine Volume 73 ; 73 >
-        au < released ; 1950 ; Experimental Biology and Medicine Volume 74 ; 74 >
-        au < released ; 1950 ; Experimental Biology and Medicine Volume 75 ; 75 >
-        au < released ; 1951 ; Experimental Biology and Medicine Volume 76 ; 76 >
-        au < released ; 1951 ; Experimental Biology and Medicine Volume 77 ; 77 >
-        au < released ; 1951 ; Experimental Biology and Medicine Volume 78 ; 78 >
-        au < released ; 1952 ; Experimental Biology and Medicine Volume 79 ; 79 >
-        au < released ; 1952 ; Experimental Biology and Medicine Volume 80 ; 80 >
-        au < released ; 1952 ; Experimental Biology and Medicine Volume 81 ; 81 >
-        au < released ; 1953 ; Experimental Biology and Medicine Volume 82 ; 82 >
-        au < released ; 1953 ; Experimental Biology and Medicine Volume 83 ; 83 >
-        au < released ; 1953 ; Experimental Biology and Medicine Volume 84 ; 84 >
-        au < released ; 1954 ; Experimental Biology and Medicine Volume 85 ; 85 >
-        au < released ; 1954 ; Experimental Biology and Medicine Volume 86 ; 86 >
-        au < released ; 1954 ; Experimental Biology and Medicine Volume 87 ; 87 >
-        au < released ; 1955 ; Experimental Biology and Medicine Volume 88 ; 88 >
-        au < released ; 1955 ; Experimental Biology and Medicine Volume 89 ; 89 >
-        au < released ; 1955 ; Experimental Biology and Medicine Volume 90 ; 90 >
-        au < released ; 1956 ; Experimental Biology and Medicine Volume 91 ; 91 >
-        au < released ; 1956 ; Experimental Biology and Medicine Volume 92 ; 92 >
-        au < released ; 1956 ; Experimental Biology and Medicine Volume 93 ; 93 >
-        au < released ; 1957 ; Experimental Biology and Medicine Volume 94 ; 94 >
-        au < released ; 1957 ; Experimental Biology and Medicine Volume 95 ; 95 >
-        au < released ; 1957 ; Experimental Biology and Medicine Volume 96 ; 96 >
-        au < released ; 1958 ; Experimental Biology and Medicine Volume 97 ; 97 >
-        au < released ; 1958 ; Experimental Biology and Medicine Volume 98 ; 98 >
-        au < released ; 1958 ; Experimental Biology and Medicine Volume 99 ; 99 >
-        au < released ; 1959 ; Experimental Biology and Medicine Volume 100 ; 100 >
-        au < released ; 1959 ; Experimental Biology and Medicine Volume 101 ; 101 >
-        au < released ; 1959 ; Experimental Biology and Medicine Volume 102 ; 102 >
-        au < released ; 1960 ; Experimental Biology and Medicine Volume 103 ; 103 >
-        au < released ; 1960 ; Experimental Biology and Medicine Volume 104 ; 104 >
-        au < released ; 1960 ; Experimental Biology and Medicine Volume 105 ; 105 >
-        au < released ; 1961 ; Experimental Biology and Medicine Volume 106 ; 106 >
-        au < released ; 1961 ; Experimental Biology and Medicine Volume 107 ; 107 >
-        au < manifest ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 >
-        au < released ; 1962 ; Experimental Biology and Medicine Volume 109 ; 109 >
-        au < released ; 1962 ; Experimental Biology and Medicine Volume 110 ; 110 >
-        au < released ; 1962 ; Experimental Biology and Medicine Volume 111 ; 111 >
-        au < released ; 1963 ; Experimental Biology and Medicine Volume 112 ; 112 >
-        au < released ; 1963 ; Experimental Biology and Medicine Volume 113 ; 113 >
-        au < released ; 1963 ; Experimental Biology and Medicine Volume 114 ; 114 >
-        au < released ; 1964 ; Experimental Biology and Medicine Volume 115 ; 115 >
-        au < released ; 1964 ; Experimental Biology and Medicine Volume 116 ; 116 >
-        au < released ; 1964 ; Experimental Biology and Medicine Volume 117 ; 117 >
-        au < released ; 1965 ; Experimental Biology and Medicine Volume 118 ; 118 >
-        au < released ; 1965 ; Experimental Biology and Medicine Volume 119 ; 119 >
-        au < released ; 1965 ; Experimental Biology and Medicine Volume 120 ; 120 >
-        au < released ; 1966 ; Experimental Biology and Medicine Volume 121 ; 121 >
-        au < released ; 1966 ; Experimental Biology and Medicine Volume 122 ; 122 >
-        au < released ; 1966 ; Experimental Biology and Medicine Volume 123 ; 123 >
-        au < released ; 1967 ; Experimental Biology and Medicine Volume 124 ; 124 >
-        au < released ; 1967 ; Experimental Biology and Medicine Volume 125 ; 125 >
-        au < released ; 1967 ; Experimental Biology and Medicine Volume 126 ; 126 >
-        au < released ; 1968 ; Experimental Biology and Medicine Volume 127 ; 127 >
-        au < released ; 1968 ; Experimental Biology and Medicine Volume 128 ; 128 >
-        au < released ; 1968 ; Experimental Biology and Medicine Volume 129 ; 129 >
-        au < released ; 1969 ; Experimental Biology and Medicine Volume 130 ; 130 >
-        au < released ; 1969 ; Experimental Biology and Medicine Volume 131 ; 131 >
-        au < released ; 1969 ; Experimental Biology and Medicine Volume 132 ; 132 >
-        au < released ; 1970 ; Experimental Biology and Medicine Volume 133 ; 133 >
-        au < released ; 1970 ; Experimental Biology and Medicine Volume 134 ; 134 >
-        au < released ; 1970 ; Experimental Biology and Medicine Volume 135 ; 135 >
-        au < released ; 1971 ; Experimental Biology and Medicine Volume 136 ; 136 >
-        au < released ; 1971 ; Experimental Biology and Medicine Volume 137 ; 137 >
-        au < released ; 1971 ; Experimental Biology and Medicine Volume 138 ; 138 >
-        au < released ; 1972 ; Experimental Biology and Medicine Volume 139 ; 139 >
-        au < manifest ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 >
-        au < manifest ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 >
-        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 >
-        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 >
-        au < manifest ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 >
-        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 >
-        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 >
-        au < manifest ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 >
-        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 >
-        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 >
-        au < manifest ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 >
-        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 >
-        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 >
-        au < manifest ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 >
-        au < manifest ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 >
-        au < released ; 1977 ; Experimental Biology and Medicine Volume 155 ; 155 >
-        au < released ; 1977 ; Experimental Biology and Medicine Volume 156 ; 156 >
-        au < released ; 1978 ; Experimental Biology and Medicine Volume 157 ; 157 >
-        au < released ; 1978 ; Experimental Biology and Medicine Volume 158 ; 158 >
-        au < released ; 1978 ; Experimental Biology and Medicine Volume 159 ; 159 >
-        au < released ; 1979 ; Experimental Biology and Medicine Volume 160 ; 160 >
-        au < released ; 1979 ; Experimental Biology and Medicine Volume 161 ; 161 >
-        au < released ; 1979 ; Experimental Biology and Medicine Volume 162 ; 162 >
-        au < released ; 1980 ; Experimental Biology and Medicine Volume 163 ; 163 >
-        au < released ; 1980 ; Experimental Biology and Medicine Volume 164 ; 164 >
-        au < released ; 1980 ; Experimental Biology and Medicine Volume 165 ; 165 >
-        au < released ; 1981 ; Experimental Biology and Medicine Volume 166 ; 166 >
-        au < released ; 1981 ; Experimental Biology and Medicine Volume 167 ; 167 >
-        au < released ; 1981 ; Experimental Biology and Medicine Volume 168 ; 168 >
-        au < released ; 1982 ; Experimental Biology and Medicine Volume 169 ; 169 >
-        au < released ; 1982 ; Experimental Biology and Medicine Volume 170 ; 170 >
-        au < manifest ; 1982 ; Experimental Biology and Medicine Volume 171 ; 171 >
-        au < manifest ; 1983 ; Experimental Biology and Medicine Volume 172 ; 172 >
-        au < manifest ; 1983 ; Experimental Biology and Medicine Volume 173 ; 173 >
-        au < manifest ; 1983 ; Experimental Biology and Medicine Volume 174 ; 174 >
-        au < manifest ; 1984 ; Experimental Biology and Medicine Volume 175 ; 175 >
-        au < manifest ; 1984 ; Experimental Biology and Medicine Volume 176 ; 176 >
-        au < manifest ; 1984 ; Experimental Biology and Medicine Volume 177 ; 177 >
-        au < manifest ; 1985 ; Experimental Biology and Medicine Volume 178 ; 178 >
-        au < manifest ; 1985 ; Experimental Biology and Medicine Volume 179 ; 179 >
-        au < manifest ; 1985 ; Experimental Biology and Medicine Volume 180 ; 180 >
-        au < manifest ; 1986 ; Experimental Biology and Medicine Volume 181 ; 181 >
-        au < manifest ; 1986 ; Experimental Biology and Medicine Volume 182 ; 182 >
-        au < manifest ; 1986 ; Experimental Biology and Medicine Volume 183 ; 183 >
-        au < manifest ; 1987 ; Experimental Biology and Medicine Volume 184 ; 184 >
-        au < manifest ; 1987 ; Experimental Biology and Medicine Volume 185 ; 185 >
-        au < manifest ; 1987 ; Experimental Biology and Medicine Volume 186 ; 186 >
-        au < manifest ; 1988 ; Experimental Biology and Medicine Volume 187 ; 187 >
-        au < manifest ; 1988 ; Experimental Biology and Medicine Volume 188 ; 188 >
-        au < manifest ; 1988 ; Experimental Biology and Medicine Volume 189 ; 189 >
-        au < manifest ; 1989 ; Experimental Biology and Medicine Volume 190 ; 190 >
-        au < manifest ; 1989 ; Experimental Biology and Medicine Volume 191 ; 191 >
-        au < manifest ; 1989 ; Experimental Biology and Medicine Volume 192 ; 192 >
-        au < manifest ; 1990 ; Experimental Biology and Medicine Volume 193 ; 193 >
-        au < manifest ; 1990 ; Experimental Biology and Medicine Volume 194 ; 194 >
-        au < manifest ; 1990 ; Experimental Biology and Medicine Volume 195 ; 195 >
-        au < manifest ; 1991 ; Experimental Biology and Medicine Volume 196 ; 196 >
-        au < manifest ; 1991 ; Experimental Biology and Medicine Volume 197 ; 197 >
-        au < manifest ; 1991 ; Experimental Biology and Medicine Volume 198 ; 198 >
-        au < manifest ; 1992 ; Experimental Biology and Medicine Volume 199 ; 199 >
-        au < manifest ; 1992 ; Experimental Biology and Medicine Volume 200 ; 200 >
-        au < manifest ; 1992 ; Experimental Biology and Medicine Volume 201 ; 201 >
-        au < manifest ; 1993 ; Experimental Biology and Medicine Volume 202 ; 202 >
-        au < manifest ; 1993 ; Experimental Biology and Medicine Volume 203 ; 203 >
-        au < manifest ; 1993 ; Experimental Biology and Medicine Volume 204 ; 204 >
-        au < manifest ; 1994 ; Experimental Biology and Medicine Volume 205 ; 205 >
-        au < manifest ; 1994 ; Experimental Biology and Medicine Volume 206 ; 206 >
-        au < manifest ; 1994 ; Experimental Biology and Medicine Volume 207 ; 207 >
-        au < manifest ; 1995 ; Experimental Biology and Medicine Volume 208 ; 208 >
-        au < manifest ; 1995 ; Experimental Biology and Medicine Volume 209 ; 209 >
-        au < manifest ; 1995 ; Experimental Biology and Medicine Volume 210 ; 210 >
-        au < manifest ; 1996 ; Experimental Biology and Medicine Volume 211 ; 211 >
-        au < manifest ; 1996 ; Experimental Biology and Medicine Volume 212 ; 212 >
-        au < manifest ; 1996 ; Experimental Biology and Medicine Volume 213 ; 213 >
-        au < manifest ; 1997 ; Experimental Biology and Medicine Volume 214 ; 214 >
-        au < manifest ; 1997 ; Experimental Biology and Medicine Volume 215 ; 215 >
-        au < manifest ; 1997 ; Experimental Biology and Medicine Volume 216 ; 216 >
-        au < manifest ; 1998 ; Experimental Biology and Medicine Volume 217 ; 217 >
-        au < manifest ; 1998 ; Experimental Biology and Medicine Volume 218 ; 218 >
-        au < manifest ; 1998 ; Experimental Biology and Medicine Volume 219 ; 219 >
-        au < released ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
-        au < released ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
-        au < released ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
-        au < released ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
-        au < released ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
-        au < released ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
-        au < released ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
-        au < released ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
-        au < released ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
-        au < released ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
-        au < released ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
-        au < released ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
-        au < released ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
-        au < released ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
-        au < released ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
-        au < released ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
-        au < released ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
-        au < released ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 >
-        au < manifest ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 >
+        au < down ; 1903 ; Experimental Biology and Medicine Volume 1 [superseded] ; 1 >
+        au < down ; 1904 ; Experimental Biology and Medicine Volume 2 [superseded] ; 2 >
+        au < down ; 1905 ; Experimental Biology and Medicine Volume 3 [superseded] ; 3 >
+        au < down ; 1906 ; Experimental Biology and Medicine Volume 4 [superseded] ; 4 >
+        au < down ; 1907-1908 ; Experimental Biology and Medicine Volume 5 [superseded] ; 5 >
+        au < down ; 1908-1909 ; Experimental Biology and Medicine Volume 6 [superseded] ; 6 >
+        au < down ; 1909-1910 ; Experimental Biology and Medicine Volume 7 [superseded] ; 7 >
+        au < down ; 1910-1911 ; Experimental Biology and Medicine Volume 8 [superseded] ; 8 >
+        au < down ; 1911-1912 ; Experimental Biology and Medicine Volume 9 [superseded] ; 9 >
+        au < down ; 1912-1913 ; Experimental Biology and Medicine Volume 10 [superseded] ; 10 >
+        au < down ; 1913-1914 ; Experimental Biology and Medicine Volume 11 [superseded] ; 11 >
+        au < down ; 1914-1915 ; Experimental Biology and Medicine Volume 12 [superseded] ; 12 >
+        au < down ; 1915-1916 ; Experimental Biology and Medicine Volume 13 [superseded] ; 13 >
+        au < down ; 1916-1917 ; Experimental Biology and Medicine Volume 14 [superseded] ; 14 >
+        au < down ; 1917-1918 ; Experimental Biology and Medicine Volume 15 [superseded] ; 15 >
+        au < down ; 1918-1919 ; Experimental Biology and Medicine Volume 16 [superseded] ; 16 >
+        au < down ; 1919-1920 ; Experimental Biology and Medicine Volume 17 [superseded] ; 17 >
+        au < down ; 1920-1921 ; Experimental Biology and Medicine Volume 18 [superseded] ; 18 >
+        au < down ; 1921-1922 ; Experimental Biology and Medicine Volume 19 [superseded] ; 19 >
+        au < down ; 1922-1923 ; Experimental Biology and Medicine Volume 20 [superseded] ; 20 >
+        au < down ; 1923-1924 ; Experimental Biology and Medicine Volume 21 [superseded] ; 21 >
+        au < down ; 1924-1925 ; Experimental Biology and Medicine Volume 22 [superseded] ; 22 >
+        au < down ; 1925-1926 ; Experimental Biology and Medicine Volume 23 [superseded] ; 23 >
+        au < down ; 1926-1927 ; Experimental Biology and Medicine Volume 24 [superseded] ; 24 >
+        au < down ; 1927-1928 ; Experimental Biology and Medicine Volume 25 [superseded] ; 25 >
+        au < down ; 1928-1929 ; Experimental Biology and Medicine Volume 26 [superseded] ; 26 >
+        au < down ; 1929-1930 ; Experimental Biology and Medicine Volume 27 [superseded] ; 27 >
+        au < down ; 1930-1931 ; Experimental Biology and Medicine Volume 28 [superseded] ; 28 >
+        au < down ; 1931-1932 ; Experimental Biology and Medicine Volume 29 [superseded] ; 29 >
+        au < down ; 1932-1933 ; Experimental Biology and Medicine Volume 30 [superseded] ; 30 >
+        au < down ; 1933-1934 ; Experimental Biology and Medicine Volume 31 [superseded] ; 31 >
+        au < down ; 1934-1935 ; Experimental Biology and Medicine Volume 32 [superseded] ; 32 >
+        au < down ; 1935-1936 ; Experimental Biology and Medicine Volume 33 [superseded] ; 33 >
+        au < down ; 1936 ; Experimental Biology and Medicine Volume 34 [superseded] ; 34 >
+        au < down ; 1936-1937 ; Experimental Biology and Medicine Volume 35 [superseded] ; 35 >
+        au < down ; 1937 ; Experimental Biology and Medicine Volume 36 [superseded] ; 36 >
+        au < down ; 1937-1938 ; Experimental Biology and Medicine Volume 37 [superseded] ; 37 >
+        au < down ; 1938 ; Experimental Biology and Medicine Volume 38 [superseded] ; 38 >
+        au < down ; 1938 ; Experimental Biology and Medicine Volume 39 [superseded] ; 39 >
+        au < down ; 1939 ; Experimental Biology and Medicine Volume 40 [superseded] ; 40 >
+        au < down ; 1939 ; Experimental Biology and Medicine Volume 41 [superseded] ; 41 >
+        au < down ; 1939 ; Experimental Biology and Medicine Volume 42 [superseded] ; 42 >
+        au < down ; 1940 ; Experimental Biology and Medicine Volume 43 [superseded] ; 43 >
+        au < down ; 1940 ; Experimental Biology and Medicine Volume 44 [superseded] ; 44 >
+        au < down ; 1940 ; Experimental Biology and Medicine Volume 45 [superseded] ; 45 >
+        au < down ; 1941 ; Experimental Biology and Medicine Volume 46 [superseded] ; 46 >
+        au < down ; 1941 ; Experimental Biology and Medicine Volume 47 [superseded] ; 47 >
+        au < down ; 1941 ; Experimental Biology and Medicine Volume 48 [superseded] ; 48 >
+        au < down ; 1942 ; Experimental Biology and Medicine Volume 49 [superseded] ; 49 >
+        au < down ; 1942 ; Experimental Biology and Medicine Volume 50 [superseded] ; 50 >
+        au < down ; 1942 ; Experimental Biology and Medicine Volume 51 [superseded] ; 51 >
+        au < down ; 1943 ; Experimental Biology and Medicine Volume 52 [superseded] ; 52 >
+        au < down ; 1943 ; Experimental Biology and Medicine Volume 53 [superseded] ; 53 >
+        au < down ; 1943 ; Experimental Biology and Medicine Volume 54 [superseded] ; 54 >
+        au < down ; 1944 ; Experimental Biology and Medicine Volume 55 [superseded] ; 55 >
+        au < down ; 1944 ; Experimental Biology and Medicine Volume 56 [superseded] ; 56 >
+        au < down ; 1944 ; Experimental Biology and Medicine Volume 57 [superseded] ; 57 >
+        au < down ; 1945 ; Experimental Biology and Medicine Volume 58 [superseded] ; 58 >
+        au < down ; 1945 ; Experimental Biology and Medicine Volume 59 [superseded] ; 59 >
+        au < down ; 1945 ; Experimental Biology and Medicine Volume 60 [superseded] ; 60 >
+        au < down ; 1946 ; Experimental Biology and Medicine Volume 61 [superseded] ; 61 >
+        au < down ; 1946 ; Experimental Biology and Medicine Volume 62 [superseded] ; 62 >
+        au < down ; 1946 ; Experimental Biology and Medicine Volume 63 [superseded] ; 63 >
+        au < down ; 1947 ; Experimental Biology and Medicine Volume 64 [superseded] ; 64 >
+        au < down ; 1947 ; Experimental Biology and Medicine Volume 65 [superseded] ; 65 >
+        au < down ; 1947 ; Experimental Biology and Medicine Volume 66 [superseded] ; 66 >
+        au < down ; 1948 ; Experimental Biology and Medicine Volume 67 [superseded] ; 67 >
+        au < down ; 1948 ; Experimental Biology and Medicine Volume 68 [superseded] ; 68 >
+        au < down ; 1948 ; Experimental Biology and Medicine Volume 69 [superseded] ; 69 >
+        au < down ; 1949 ; Experimental Biology and Medicine Volume 70 [superseded] ; 70 >
+        au < down ; 1949 ; Experimental Biology and Medicine Volume 71 [superseded] ; 71 >
+        au < down ; 1949 ; Experimental Biology and Medicine Volume 72 [superseded] ; 72 >
+        au < down ; 1950 ; Experimental Biology and Medicine Volume 73 [superseded] ; 73 >
+        au < down ; 1950 ; Experimental Biology and Medicine Volume 74 [superseded] ; 74 >
+        au < down ; 1950 ; Experimental Biology and Medicine Volume 75 [superseded] ; 75 >
+        au < down ; 1951 ; Experimental Biology and Medicine Volume 76 [superseded] ; 76 >
+        au < down ; 1951 ; Experimental Biology and Medicine Volume 77 [superseded] ; 77 >
+        au < down ; 1951 ; Experimental Biology and Medicine Volume 78 [superseded] ; 78 >
+        au < down ; 1952 ; Experimental Biology and Medicine Volume 79 [superseded] ; 79 >
+        au < down ; 1952 ; Experimental Biology and Medicine Volume 80 [superseded] ; 80 >
+        au < down ; 1952 ; Experimental Biology and Medicine Volume 81 [superseded] ; 81 >
+        au < down ; 1953 ; Experimental Biology and Medicine Volume 82 [superseded] ; 82 >
+        au < down ; 1953 ; Experimental Biology and Medicine Volume 83 [superseded] ; 83 >
+        au < down ; 1953 ; Experimental Biology and Medicine Volume 84 [superseded] ; 84 >
+        au < down ; 1954 ; Experimental Biology and Medicine Volume 85 [superseded] ; 85 >
+        au < down ; 1954 ; Experimental Biology and Medicine Volume 86 [superseded] ; 86 >
+        au < down ; 1954 ; Experimental Biology and Medicine Volume 87 [superseded] ; 87 >
+        au < down ; 1955 ; Experimental Biology and Medicine Volume 88 [superseded] ; 88 >
+        au < down ; 1955 ; Experimental Biology and Medicine Volume 89 [superseded] ; 89 >
+        au < down ; 1955 ; Experimental Biology and Medicine Volume 90 [superseded] ; 90 >
+        au < down ; 1956 ; Experimental Biology and Medicine Volume 91 [superseded] ; 91 >
+        au < down ; 1956 ; Experimental Biology and Medicine Volume 92 [superseded] ; 92 >
+        au < down ; 1956 ; Experimental Biology and Medicine Volume 93 [superseded] ; 93 >
+        au < down ; 1957 ; Experimental Biology and Medicine Volume 94 [superseded] ; 94 >
+        au < down ; 1957 ; Experimental Biology and Medicine Volume 95 [superseded] ; 95 >
+        au < down ; 1957 ; Experimental Biology and Medicine Volume 96 [superseded] ; 96 >
+        au < down ; 1958 ; Experimental Biology and Medicine Volume 97 [superseded] ; 97 >
+        au < down ; 1958 ; Experimental Biology and Medicine Volume 98 [superseded] ; 98 >
+        au < down ; 1958 ; Experimental Biology and Medicine Volume 99 [superseded] ; 99 >
+        au < down ; 1959 ; Experimental Biology and Medicine Volume 100 [superseded] ; 100 >
+        au < down ; 1959 ; Experimental Biology and Medicine Volume 101 [superseded] ; 101 >
+        au < down ; 1959 ; Experimental Biology and Medicine Volume 102 [superseded] ; 102 >
+        au < down ; 1960 ; Experimental Biology and Medicine Volume 103 [superseded] ; 103 >
+        au < down ; 1960 ; Experimental Biology and Medicine Volume 104 [superseded] ; 104 >
+        au < down ; 1960 ; Experimental Biology and Medicine Volume 105 [superseded] ; 105 >
+        au < down ; 1961 ; Experimental Biology and Medicine Volume 106 [superseded] ; 106 >
+        au < down ; 1961 ; Experimental Biology and Medicine Volume 107 [superseded] ; 107 >
+        au < doesNotExist ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 >
+        au < down ; 1962 ; Experimental Biology and Medicine Volume 109 [superseded] ; 109 >
+        au < down ; 1962 ; Experimental Biology and Medicine Volume 110 [superseded] ; 110 >
+        au < down ; 1962 ; Experimental Biology and Medicine Volume 111 [superseded] ; 111 >
+        au < down ; 1963 ; Experimental Biology and Medicine Volume 112 [superseded] ; 112 >
+        au < down ; 1963 ; Experimental Biology and Medicine Volume 113 [superseded] ; 113 >
+        au < down ; 1963 ; Experimental Biology and Medicine Volume 114 [superseded] ; 114 >
+        au < down ; 1964 ; Experimental Biology and Medicine Volume 115 [superseded] ; 115 >
+        au < down ; 1964 ; Experimental Biology and Medicine Volume 116 [superseded] ; 116 >
+        au < down ; 1964 ; Experimental Biology and Medicine Volume 117 [superseded] ; 117 >
+        au < down ; 1965 ; Experimental Biology and Medicine Volume 118 [superseded] ; 118 >
+        au < down ; 1965 ; Experimental Biology and Medicine Volume 119 [superseded] ; 119 >
+        au < down ; 1965 ; Experimental Biology and Medicine Volume 120 [superseded] ; 120 >
+        au < down ; 1966 ; Experimental Biology and Medicine Volume 121 [superseded] ; 121 >
+        au < down ; 1966 ; Experimental Biology and Medicine Volume 122 [superseded] ; 122 >
+        au < down ; 1966 ; Experimental Biology and Medicine Volume 123 [superseded] ; 123 >
+        au < down ; 1967 ; Experimental Biology and Medicine Volume 124 [superseded] ; 124 >
+        au < down ; 1967 ; Experimental Biology and Medicine Volume 125 [superseded] ; 125 >
+        au < down ; 1967 ; Experimental Biology and Medicine Volume 126 [superseded] ; 126 >
+        au < down ; 1968 ; Experimental Biology and Medicine Volume 127 [superseded] ; 127 >
+        au < down ; 1968 ; Experimental Biology and Medicine Volume 128 [superseded] ; 128 >
+        au < down ; 1968 ; Experimental Biology and Medicine Volume 129 [superseded] ; 129 >
+        au < down ; 1969 ; Experimental Biology and Medicine Volume 130 [superseded] ; 130 >
+        au < down ; 1969 ; Experimental Biology and Medicine Volume 131 [superseded] ; 131 >
+        au < down ; 1969 ; Experimental Biology and Medicine Volume 132 [superseded] ; 132 >
+        au < down ; 1970 ; Experimental Biology and Medicine Volume 133 [superseded] ; 133 >
+        au < down ; 1970 ; Experimental Biology and Medicine Volume 134 [superseded] ; 134 >
+        au < down ; 1970 ; Experimental Biology and Medicine Volume 135 [superseded] ; 135 >
+        au < down ; 1971 ; Experimental Biology and Medicine Volume 136 [superseded] ; 136 >
+        au < down ; 1971 ; Experimental Biology and Medicine Volume 137 [superseded] ; 137 >
+        au < down ; 1971 ; Experimental Biology and Medicine Volume 138 [superseded] ; 138 >
+        au < down ; 1972 ; Experimental Biology and Medicine Volume 139 [superseded] ; 139 >
+        au < doesNotExist ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 >
+        au < doesNotExist ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 >
+        au < doesNotExist ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 >
+        au < doesNotExist ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 >
+        au < doesNotExist ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 >
+        au < doesNotExist ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 >
+        au < doesNotExist ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 >
+        au < doesNotExist ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 >
+        au < doesNotExist ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 >
+        au < doesNotExist ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 >
+        au < doesNotExist ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 >
+        au < doesNotExist ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 >
+        au < doesNotExist ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 >
+        au < doesNotExist ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 >
+        au < doesNotExist ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 >
+        au < down ; 1977 ; Experimental Biology and Medicine Volume 155 [superseded] ; 155 >
+        au < down ; 1977 ; Experimental Biology and Medicine Volume 156 [superseded] ; 156 >
+        au < down ; 1978 ; Experimental Biology and Medicine Volume 157 [superseded] ; 157 >
+        au < down ; 1978 ; Experimental Biology and Medicine Volume 158 [superseded] ; 158 >
+        au < down ; 1978 ; Experimental Biology and Medicine Volume 159 [superseded] ; 159 >
+        au < down ; 1979 ; Experimental Biology and Medicine Volume 160 [superseded] ; 160 >
+        au < down ; 1979 ; Experimental Biology and Medicine Volume 161 [superseded] ; 161 >
+        au < down ; 1979 ; Experimental Biology and Medicine Volume 162 [superseded] ; 162 >
+        au < down ; 1980 ; Experimental Biology and Medicine Volume 163 [superseded] ; 163 >
+        au < down ; 1980 ; Experimental Biology and Medicine Volume 164 [superseded] ; 164 >
+        au < down ; 1980 ; Experimental Biology and Medicine Volume 165 [superseded] ; 165 >
+        au < down ; 1981 ; Experimental Biology and Medicine Volume 166 [superseded] ; 166 >
+        au < down ; 1981 ; Experimental Biology and Medicine Volume 167 [superseded] ; 167 >
+        au < down ; 1981 ; Experimental Biology and Medicine Volume 168 [superseded] ; 168 >
+        au < down ; 1982 ; Experimental Biology and Medicine Volume 169 [superseded] ; 169 >
+        au < down ; 1982 ; Experimental Biology and Medicine Volume 170 [superseded] ; 170 >
+        au < doesNotExist ; 1982 ; Experimental Biology and Medicine Volume 171 ; 171 >
+        au < doesNotExist ; 1983 ; Experimental Biology and Medicine Volume 172 ; 172 >
+        au < doesNotExist ; 1983 ; Experimental Biology and Medicine Volume 173 ; 173 >
+        au < doesNotExist ; 1983 ; Experimental Biology and Medicine Volume 174 ; 174 >
+        au < doesNotExist ; 1984 ; Experimental Biology and Medicine Volume 175 ; 175 >
+        au < doesNotExist ; 1984 ; Experimental Biology and Medicine Volume 176 ; 176 >
+        au < doesNotExist ; 1984 ; Experimental Biology and Medicine Volume 177 ; 177 >
+        au < doesNotExist ; 1985 ; Experimental Biology and Medicine Volume 178 ; 178 >
+        au < doesNotExist ; 1985 ; Experimental Biology and Medicine Volume 179 ; 179 >
+        au < doesNotExist ; 1985 ; Experimental Biology and Medicine Volume 180 ; 180 >
+        au < doesNotExist ; 1986 ; Experimental Biology and Medicine Volume 181 ; 181 >
+        au < doesNotExist ; 1986 ; Experimental Biology and Medicine Volume 182 ; 182 >
+        au < doesNotExist ; 1986 ; Experimental Biology and Medicine Volume 183 ; 183 >
+        au < doesNotExist ; 1987 ; Experimental Biology and Medicine Volume 184 ; 184 >
+        au < doesNotExist ; 1987 ; Experimental Biology and Medicine Volume 185 ; 185 >
+        au < doesNotExist ; 1987 ; Experimental Biology and Medicine Volume 186 ; 186 >
+        au < doesNotExist ; 1988 ; Experimental Biology and Medicine Volume 187 ; 187 >
+        au < doesNotExist ; 1988 ; Experimental Biology and Medicine Volume 188 ; 188 >
+        au < doesNotExist ; 1988 ; Experimental Biology and Medicine Volume 189 ; 189 >
+        au < doesNotExist ; 1989 ; Experimental Biology and Medicine Volume 190 ; 190 >
+        au < doesNotExist ; 1989 ; Experimental Biology and Medicine Volume 191 ; 191 >
+        au < doesNotExist ; 1989 ; Experimental Biology and Medicine Volume 192 ; 192 >
+        au < doesNotExist ; 1990 ; Experimental Biology and Medicine Volume 193 ; 193 >
+        au < doesNotExist ; 1990 ; Experimental Biology and Medicine Volume 194 ; 194 >
+        au < doesNotExist ; 1990 ; Experimental Biology and Medicine Volume 195 ; 195 >
+        au < doesNotExist ; 1991 ; Experimental Biology and Medicine Volume 196 ; 196 >
+        au < doesNotExist ; 1991 ; Experimental Biology and Medicine Volume 197 ; 197 >
+        au < doesNotExist ; 1991 ; Experimental Biology and Medicine Volume 198 ; 198 >
+        au < doesNotExist ; 1992 ; Experimental Biology and Medicine Volume 199 ; 199 >
+        au < doesNotExist ; 1992 ; Experimental Biology and Medicine Volume 200 ; 200 >
+        au < doesNotExist ; 1992 ; Experimental Biology and Medicine Volume 201 ; 201 >
+        au < doesNotExist ; 1993 ; Experimental Biology and Medicine Volume 202 ; 202 >
+        au < doesNotExist ; 1993 ; Experimental Biology and Medicine Volume 203 ; 203 >
+        au < doesNotExist ; 1993 ; Experimental Biology and Medicine Volume 204 ; 204 >
+        au < doesNotExist ; 1994 ; Experimental Biology and Medicine Volume 205 ; 205 >
+        au < doesNotExist ; 1994 ; Experimental Biology and Medicine Volume 206 ; 206 >
+        au < doesNotExist ; 1994 ; Experimental Biology and Medicine Volume 207 ; 207 >
+        au < doesNotExist ; 1995 ; Experimental Biology and Medicine Volume 208 ; 208 >
+        au < doesNotExist ; 1995 ; Experimental Biology and Medicine Volume 209 ; 209 >
+        au < doesNotExist ; 1995 ; Experimental Biology and Medicine Volume 210 ; 210 >
+        au < doesNotExist ; 1996 ; Experimental Biology and Medicine Volume 211 ; 211 >
+        au < doesNotExist ; 1996 ; Experimental Biology and Medicine Volume 212 ; 212 >
+        au < doesNotExist ; 1996 ; Experimental Biology and Medicine Volume 213 ; 213 >
+        au < doesNotExist ; 1997 ; Experimental Biology and Medicine Volume 214 ; 214 >
+        au < doesNotExist ; 1997 ; Experimental Biology and Medicine Volume 215 ; 215 >
+        au < doesNotExist ; 1997 ; Experimental Biology and Medicine Volume 216 ; 216 >
+        au < doesNotExist ; 1998 ; Experimental Biology and Medicine Volume 217 ; 217 >
+        au < doesNotExist ; 1998 ; Experimental Biology and Medicine Volume 218 ; 218 >
+        au < doesNotExist ; 1998 ; Experimental Biology and Medicine Volume 219 ; 219 >
+        au < down ; 1999 ; Experimental Biology and Medicine Volume 220 [superseded] ; 220 >
+        au < down ; 1999 ; Experimental Biology and Medicine Volume 221 [superseded] ; 221 >
+        au < down ; 1999 ; Experimental Biology and Medicine Volume 222 [superseded] ; 222 >
+        au < down ; 2000 ; Experimental Biology and Medicine Volume 223 [superseded] ; 223 >
+        au < down ; 2000 ; Experimental Biology and Medicine Volume 224 [superseded] ; 224 >
+        au < down ; 2000 ; Experimental Biology and Medicine Volume 225 [superseded] ; 225 >
+        au < down ; 2001 ; Experimental Biology and Medicine Volume 226 [superseded] ; 226 >
+        au < down ; 2002 ; Experimental Biology and Medicine Volume 227 [superseded] ; 227 >
+        au < down ; 2003 ; Experimental Biology and Medicine Volume 228 [superseded] ; 228 >
+        au < down ; 2004 ; Experimental Biology and Medicine Volume 229 [superseded] ; 229 >
+        au < down ; 2005 ; Experimental Biology and Medicine Volume 230 [superseded] ; 230 >
+        au < down ; 2006 ; Experimental Biology and Medicine Volume 231 [superseded] ; 231 >
+        au < down ; 2007 ; Experimental Biology and Medicine Volume 232 [superseded] ; 232 >
+        au < down ; 2008 ; Experimental Biology and Medicine Volume 233 [superseded] ; 233 >
+        au < down ; 2009 ; Experimental Biology and Medicine Volume 234 [superseded] ; 234 >
+        au < down ; 2010 ; Experimental Biology and Medicine Volume 235 [superseded] ; 235 >
+        au < down ; 2011 ; Experimental Biology and Medicine Volume 236 [superseded] ; 236 >
+        au < down ; 2012 ; Experimental Biology and Medicine Volume 237 [superseded] ; 237 >
+  
+      }
+  
+      {
+  
+        plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+        implicit < status ; year ; name ; param[volume_name] >
+        param[base_url] = http://ebm.sagepub.com/
+  
+        au < doNotProcess ; 1903 ; Experimental Biology and Medicine Volume 1 ; 1 >
+        au < doNotProcess ; 1904 ; Experimental Biology and Medicine Volume 2 ; 2 >
+        au < doNotProcess ; 1905 ; Experimental Biology and Medicine Volume 3 ; 3 >
+        au < doNotProcess ; 1906 ; Experimental Biology and Medicine Volume 4 ; 4 >
+        au < doNotProcess ; 1907-1908 ; Experimental Biology and Medicine Volume 5 ; 5 >
+        au < doNotProcess ; 1908-1909 ; Experimental Biology and Medicine Volume 6 ; 6 >
+        au < doNotProcess ; 1909-1910 ; Experimental Biology and Medicine Volume 7 ; 7 >
+        au < doNotProcess ; 1910-1911 ; Experimental Biology and Medicine Volume 8 ; 8 >
+        au < doNotProcess ; 1911-1912 ; Experimental Biology and Medicine Volume 9 ; 9 >
+        au < doNotProcess ; 1912-1913 ; Experimental Biology and Medicine Volume 10 ; 10 >
+        au < doNotProcess ; 1913-1914 ; Experimental Biology and Medicine Volume 11 ; 11 >
+        au < doNotProcess ; 1914-1915 ; Experimental Biology and Medicine Volume 12 ; 12 >
+        au < doNotProcess ; 1915-1916 ; Experimental Biology and Medicine Volume 13 ; 13 >
+        au < doNotProcess ; 1916-1917 ; Experimental Biology and Medicine Volume 14 ; 14 >
+        au < doNotProcess ; 1917-1918 ; Experimental Biology and Medicine Volume 15 ; 15 >
+        au < doNotProcess ; 1918-1919 ; Experimental Biology and Medicine Volume 16 ; 16 >
+        au < doNotProcess ; 1919-1920 ; Experimental Biology and Medicine Volume 17 ; 17 >
+        au < doNotProcess ; 1920-1921 ; Experimental Biology and Medicine Volume 18 ; 18 >
+        au < doNotProcess ; 1921-1922 ; Experimental Biology and Medicine Volume 19 ; 19 >
+        au < doNotProcess ; 1922-1923 ; Experimental Biology and Medicine Volume 20 ; 20 >
+        au < doNotProcess ; 1923-1924 ; Experimental Biology and Medicine Volume 21 ; 21 >
+        au < doNotProcess ; 1924-1925 ; Experimental Biology and Medicine Volume 22 ; 22 >
+        au < doNotProcess ; 1925-1926 ; Experimental Biology and Medicine Volume 23 ; 23 >
+        au < doNotProcess ; 1926-1927 ; Experimental Biology and Medicine Volume 24 ; 24 >
+        au < doNotProcess ; 1927-1928 ; Experimental Biology and Medicine Volume 25 ; 25 >
+        au < doNotProcess ; 1928-1929 ; Experimental Biology and Medicine Volume 26 ; 26 >
+        au < doNotProcess ; 1929-1930 ; Experimental Biology and Medicine Volume 27 ; 27 >
+        au < doNotProcess ; 1930-1931 ; Experimental Biology and Medicine Volume 28 ; 28 >
+        au < doNotProcess ; 1931-1932 ; Experimental Biology and Medicine Volume 29 ; 29 >
+        au < doNotProcess ; 1932-1933 ; Experimental Biology and Medicine Volume 30 ; 30 >
+        au < doNotProcess ; 1933-1934 ; Experimental Biology and Medicine Volume 31 ; 31 >
+        au < doNotProcess ; 1934-1935 ; Experimental Biology and Medicine Volume 32 ; 32 >
+        au < doNotProcess ; 1935-1936 ; Experimental Biology and Medicine Volume 33 ; 33 >
+        au < doNotProcess ; 1936 ; Experimental Biology and Medicine Volume 34 ; 34 >
+        au < doNotProcess ; 1936-1937 ; Experimental Biology and Medicine Volume 35 ; 35 >
+        au < doNotProcess ; 1937 ; Experimental Biology and Medicine Volume 36 ; 36 >
+        au < doNotProcess ; 1937-1938 ; Experimental Biology and Medicine Volume 37 ; 37 >
+        au < doNotProcess ; 1938 ; Experimental Biology and Medicine Volume 38 ; 38 >
+        au < doNotProcess ; 1938 ; Experimental Biology and Medicine Volume 39 ; 39 >
+        au < doNotProcess ; 1939 ; Experimental Biology and Medicine Volume 40 ; 40 >
+        au < doNotProcess ; 1939 ; Experimental Biology and Medicine Volume 41 ; 41 >
+        au < doNotProcess ; 1939 ; Experimental Biology and Medicine Volume 42 ; 42 >
+        au < doNotProcess ; 1940 ; Experimental Biology and Medicine Volume 43 ; 43 >
+        au < doNotProcess ; 1940 ; Experimental Biology and Medicine Volume 44 ; 44 >
+        au < doNotProcess ; 1940 ; Experimental Biology and Medicine Volume 45 ; 45 >
+        au < doNotProcess ; 1941 ; Experimental Biology and Medicine Volume 46 ; 46 >
+        au < doNotProcess ; 1941 ; Experimental Biology and Medicine Volume 47 ; 47 >
+        au < doNotProcess ; 1941 ; Experimental Biology and Medicine Volume 48 ; 48 >
+        au < doNotProcess ; 1942 ; Experimental Biology and Medicine Volume 49 ; 49 >
+        au < doNotProcess ; 1942 ; Experimental Biology and Medicine Volume 50 ; 50 >
+        au < doNotProcess ; 1942 ; Experimental Biology and Medicine Volume 51 ; 51 >
+        au < doNotProcess ; 1943 ; Experimental Biology and Medicine Volume 52 ; 52 >
+        au < doNotProcess ; 1943 ; Experimental Biology and Medicine Volume 53 ; 53 >
+        au < doNotProcess ; 1943 ; Experimental Biology and Medicine Volume 54 ; 54 >
+        au < doNotProcess ; 1944 ; Experimental Biology and Medicine Volume 55 ; 55 >
+        au < doNotProcess ; 1944 ; Experimental Biology and Medicine Volume 56 ; 56 >
+        au < doNotProcess ; 1944 ; Experimental Biology and Medicine Volume 57 ; 57 >
+        au < doNotProcess ; 1945 ; Experimental Biology and Medicine Volume 58 ; 58 >
+        au < doNotProcess ; 1945 ; Experimental Biology and Medicine Volume 59 ; 59 >
+        au < doNotProcess ; 1945 ; Experimental Biology and Medicine Volume 60 ; 60 >
+        au < doNotProcess ; 1946 ; Experimental Biology and Medicine Volume 61 ; 61 >
+        au < doNotProcess ; 1946 ; Experimental Biology and Medicine Volume 62 ; 62 >
+        au < doNotProcess ; 1946 ; Experimental Biology and Medicine Volume 63 ; 63 >
+        au < doNotProcess ; 1947 ; Experimental Biology and Medicine Volume 64 ; 64 >
+        au < doNotProcess ; 1947 ; Experimental Biology and Medicine Volume 65 ; 65 >
+        au < doNotProcess ; 1947 ; Experimental Biology and Medicine Volume 66 ; 66 >
+        au < doNotProcess ; 1948 ; Experimental Biology and Medicine Volume 67 ; 67 >
+        au < doNotProcess ; 1948 ; Experimental Biology and Medicine Volume 68 ; 68 >
+        au < doNotProcess ; 1948 ; Experimental Biology and Medicine Volume 69 ; 69 >
+        au < doNotProcess ; 1949 ; Experimental Biology and Medicine Volume 70 ; 70 >
+        au < doNotProcess ; 1949 ; Experimental Biology and Medicine Volume 71 ; 71 >
+        au < doNotProcess ; 1949 ; Experimental Biology and Medicine Volume 72 ; 72 >
+        au < doNotProcess ; 1950 ; Experimental Biology and Medicine Volume 73 ; 73 >
+        au < doNotProcess ; 1950 ; Experimental Biology and Medicine Volume 74 ; 74 >
+        au < doNotProcess ; 1950 ; Experimental Biology and Medicine Volume 75 ; 75 >
+        au < doNotProcess ; 1951 ; Experimental Biology and Medicine Volume 76 ; 76 >
+        au < doNotProcess ; 1951 ; Experimental Biology and Medicine Volume 77 ; 77 >
+        au < doNotProcess ; 1951 ; Experimental Biology and Medicine Volume 78 ; 78 >
+        au < doNotProcess ; 1952 ; Experimental Biology and Medicine Volume 79 ; 79 >
+        au < doNotProcess ; 1952 ; Experimental Biology and Medicine Volume 80 ; 80 >
+        au < doNotProcess ; 1952 ; Experimental Biology and Medicine Volume 81 ; 81 >
+        au < doNotProcess ; 1953 ; Experimental Biology and Medicine Volume 82 ; 82 >
+        au < doNotProcess ; 1953 ; Experimental Biology and Medicine Volume 83 ; 83 >
+        au < doNotProcess ; 1953 ; Experimental Biology and Medicine Volume 84 ; 84 >
+        au < doNotProcess ; 1954 ; Experimental Biology and Medicine Volume 85 ; 85 >
+        au < doNotProcess ; 1954 ; Experimental Biology and Medicine Volume 86 ; 86 >
+        au < doNotProcess ; 1954 ; Experimental Biology and Medicine Volume 87 ; 87 >
+        au < doNotProcess ; 1955 ; Experimental Biology and Medicine Volume 88 ; 88 >
+        au < doNotProcess ; 1955 ; Experimental Biology and Medicine Volume 89 ; 89 >
+        au < doNotProcess ; 1955 ; Experimental Biology and Medicine Volume 90 ; 90 >
+        au < doNotProcess ; 1956 ; Experimental Biology and Medicine Volume 91 ; 91 >
+        au < doNotProcess ; 1956 ; Experimental Biology and Medicine Volume 92 ; 92 >
+        au < doNotProcess ; 1956 ; Experimental Biology and Medicine Volume 93 ; 93 >
+        au < doNotProcess ; 1957 ; Experimental Biology and Medicine Volume 94 ; 94 >
+        au < doNotProcess ; 1957 ; Experimental Biology and Medicine Volume 95 ; 95 >
+        au < doNotProcess ; 1957 ; Experimental Biology and Medicine Volume 96 ; 96 >
+        au < doNotProcess ; 1958 ; Experimental Biology and Medicine Volume 97 ; 97 >
+        au < doNotProcess ; 1958 ; Experimental Biology and Medicine Volume 98 ; 98 >
+        au < doNotProcess ; 1958 ; Experimental Biology and Medicine Volume 99 ; 99 >
+        au < doNotProcess ; 1959 ; Experimental Biology and Medicine Volume 100 ; 100 >
+        au < doNotProcess ; 1959 ; Experimental Biology and Medicine Volume 101 ; 101 >
+        au < doNotProcess ; 1959 ; Experimental Biology and Medicine Volume 102 ; 102 >
+        au < doNotProcess ; 1960 ; Experimental Biology and Medicine Volume 103 ; 103 >
+        au < doNotProcess ; 1960 ; Experimental Biology and Medicine Volume 104 ; 104 >
+        au < doNotProcess ; 1960 ; Experimental Biology and Medicine Volume 105 ; 105 >
+        au < doNotProcess ; 1961 ; Experimental Biology and Medicine Volume 106 ; 106 >
+        au < doNotProcess ; 1961 ; Experimental Biology and Medicine Volume 107 ; 107 >
+        au < exists ; 1961 ; Experimental Biology and Medicine Volume 108 ; 108 >
+        au < doNotProcess ; 1962 ; Experimental Biology and Medicine Volume 109 ; 109 >
+        au < doNotProcess ; 1962 ; Experimental Biology and Medicine Volume 110 ; 110 >
+        au < doNotProcess ; 1962 ; Experimental Biology and Medicine Volume 111 ; 111 >
+        au < doNotProcess ; 1963 ; Experimental Biology and Medicine Volume 112 ; 112 >
+        au < doNotProcess ; 1963 ; Experimental Biology and Medicine Volume 113 ; 113 >
+        au < doNotProcess ; 1963 ; Experimental Biology and Medicine Volume 114 ; 114 >
+        au < doNotProcess ; 1964 ; Experimental Biology and Medicine Volume 115 ; 115 >
+        au < doNotProcess ; 1964 ; Experimental Biology and Medicine Volume 116 ; 116 >
+        au < doNotProcess ; 1964 ; Experimental Biology and Medicine Volume 117 ; 117 >
+        au < doNotProcess ; 1965 ; Experimental Biology and Medicine Volume 118 ; 118 >
+        au < doNotProcess ; 1965 ; Experimental Biology and Medicine Volume 119 ; 119 >
+        au < doNotProcess ; 1965 ; Experimental Biology and Medicine Volume 120 ; 120 >
+        au < doNotProcess ; 1966 ; Experimental Biology and Medicine Volume 121 ; 121 >
+        au < doNotProcess ; 1966 ; Experimental Biology and Medicine Volume 122 ; 122 >
+        au < doNotProcess ; 1966 ; Experimental Biology and Medicine Volume 123 ; 123 >
+        au < doNotProcess ; 1967 ; Experimental Biology and Medicine Volume 124 ; 124 >
+        au < doNotProcess ; 1967 ; Experimental Biology and Medicine Volume 125 ; 125 >
+        au < doNotProcess ; 1967 ; Experimental Biology and Medicine Volume 126 ; 126 >
+        au < doNotProcess ; 1968 ; Experimental Biology and Medicine Volume 127 ; 127 >
+        au < doNotProcess ; 1968 ; Experimental Biology and Medicine Volume 128 ; 128 >
+        au < doNotProcess ; 1968 ; Experimental Biology and Medicine Volume 129 ; 129 >
+        au < doNotProcess ; 1969 ; Experimental Biology and Medicine Volume 130 ; 130 >
+        au < doNotProcess ; 1969 ; Experimental Biology and Medicine Volume 131 ; 131 >
+        au < doNotProcess ; 1969 ; Experimental Biology and Medicine Volume 132 ; 132 >
+        au < doNotProcess ; 1970 ; Experimental Biology and Medicine Volume 133 ; 133 >
+        au < doNotProcess ; 1970 ; Experimental Biology and Medicine Volume 134 ; 134 >
+        au < doNotProcess ; 1970 ; Experimental Biology and Medicine Volume 135 ; 135 >
+        au < doNotProcess ; 1971 ; Experimental Biology and Medicine Volume 136 ; 136 >
+        au < doNotProcess ; 1971 ; Experimental Biology and Medicine Volume 137 ; 137 >
+        au < doNotProcess ; 1971 ; Experimental Biology and Medicine Volume 138 ; 138 >
+        au < doNotProcess ; 1972 ; Experimental Biology and Medicine Volume 139 ; 139 >
+        au < exists ; 1972 ; Experimental Biology and Medicine Volume 140 ; 140 >
+        au < exists ; 1972 ; Experimental Biology and Medicine Volume 141 ; 141 >
+        au < exists ; 1973 ; Experimental Biology and Medicine Volume 142 ; 142 >
+        au < exists ; 1973 ; Experimental Biology and Medicine Volume 143 ; 143 >
+        au < exists ; 1973 ; Experimental Biology and Medicine Volume 144 ; 144 >
+        au < exists ; 1974 ; Experimental Biology and Medicine Volume 145 ; 145 >
+        au < exists ; 1974 ; Experimental Biology and Medicine Volume 146 ; 146 >
+        au < exists ; 1974 ; Experimental Biology and Medicine Volume 147 ; 147 >
+        au < exists ; 1975 ; Experimental Biology and Medicine Volume 148 ; 148 >
+        au < exists ; 1975 ; Experimental Biology and Medicine Volume 149 ; 149 >
+        au < exists ; 1975 ; Experimental Biology and Medicine Volume 150 ; 150 >
+        au < exists ; 1976 ; Experimental Biology and Medicine Volume 151 ; 151 >
+        au < exists ; 1976 ; Experimental Biology and Medicine Volume 152 ; 152 >
+        au < exists ; 1976 ; Experimental Biology and Medicine Volume 153 ; 153 >
+        au < exists ; 1977 ; Experimental Biology and Medicine Volume 154 ; 154 >
+        au < doNotProcess ; 1977 ; Experimental Biology and Medicine Volume 155 ; 155 >
+        au < doNotProcess ; 1977 ; Experimental Biology and Medicine Volume 156 ; 156 >
+        au < doNotProcess ; 1978 ; Experimental Biology and Medicine Volume 157 ; 157 >
+        au < doNotProcess ; 1978 ; Experimental Biology and Medicine Volume 158 ; 158 >
+        au < doNotProcess ; 1978 ; Experimental Biology and Medicine Volume 159 ; 159 >
+        au < doNotProcess ; 1979 ; Experimental Biology and Medicine Volume 160 ; 160 >
+        au < doNotProcess ; 1979 ; Experimental Biology and Medicine Volume 161 ; 161 >
+        au < doNotProcess ; 1979 ; Experimental Biology and Medicine Volume 162 ; 162 >
+        au < doNotProcess ; 1980 ; Experimental Biology and Medicine Volume 163 ; 163 >
+        au < doNotProcess ; 1980 ; Experimental Biology and Medicine Volume 164 ; 164 >
+        au < doNotProcess ; 1980 ; Experimental Biology and Medicine Volume 165 ; 165 >
+        au < doNotProcess ; 1981 ; Experimental Biology and Medicine Volume 166 ; 166 >
+        au < doNotProcess ; 1981 ; Experimental Biology and Medicine Volume 167 ; 167 >
+        au < doNotProcess ; 1981 ; Experimental Biology and Medicine Volume 168 ; 168 >
+        au < doNotProcess ; 1982 ; Experimental Biology and Medicine Volume 169 ; 169 >
+        au < doNotProcess ; 1982 ; Experimental Biology and Medicine Volume 170 ; 170 >
+        au < exists ; 1982 ; Experimental Biology and Medicine Volume 171 ; 171 >
+        au < exists ; 1983 ; Experimental Biology and Medicine Volume 172 ; 172 >
+        au < exists ; 1983 ; Experimental Biology and Medicine Volume 173 ; 173 >
+        au < exists ; 1983 ; Experimental Biology and Medicine Volume 174 ; 174 >
+        au < exists ; 1984 ; Experimental Biology and Medicine Volume 175 ; 175 >
+        au < exists ; 1984 ; Experimental Biology and Medicine Volume 176 ; 176 >
+        au < exists ; 1984 ; Experimental Biology and Medicine Volume 177 ; 177 >
+        au < exists ; 1985 ; Experimental Biology and Medicine Volume 178 ; 178 >
+        au < exists ; 1985 ; Experimental Biology and Medicine Volume 179 ; 179 >
+        au < exists ; 1985 ; Experimental Biology and Medicine Volume 180 ; 180 >
+        au < exists ; 1986 ; Experimental Biology and Medicine Volume 181 ; 181 >
+        au < exists ; 1986 ; Experimental Biology and Medicine Volume 182 ; 182 >
+        au < exists ; 1986 ; Experimental Biology and Medicine Volume 183 ; 183 >
+        au < exists ; 1987 ; Experimental Biology and Medicine Volume 184 ; 184 >
+        au < exists ; 1987 ; Experimental Biology and Medicine Volume 185 ; 185 >
+        au < exists ; 1987 ; Experimental Biology and Medicine Volume 186 ; 186 >
+        au < exists ; 1988 ; Experimental Biology and Medicine Volume 187 ; 187 >
+        au < exists ; 1988 ; Experimental Biology and Medicine Volume 188 ; 188 >
+        au < exists ; 1988 ; Experimental Biology and Medicine Volume 189 ; 189 >
+        au < exists ; 1989 ; Experimental Biology and Medicine Volume 190 ; 190 >
+        au < exists ; 1989 ; Experimental Biology and Medicine Volume 191 ; 191 >
+        au < exists ; 1989 ; Experimental Biology and Medicine Volume 192 ; 192 >
+        au < exists ; 1990 ; Experimental Biology and Medicine Volume 193 ; 193 >
+        au < exists ; 1990 ; Experimental Biology and Medicine Volume 194 ; 194 >
+        au < exists ; 1990 ; Experimental Biology and Medicine Volume 195 ; 195 >
+        au < exists ; 1991 ; Experimental Biology and Medicine Volume 196 ; 196 >
+        au < exists ; 1991 ; Experimental Biology and Medicine Volume 197 ; 197 >
+        au < exists ; 1991 ; Experimental Biology and Medicine Volume 198 ; 198 >
+        au < exists ; 1992 ; Experimental Biology and Medicine Volume 199 ; 199 >
+        au < exists ; 1992 ; Experimental Biology and Medicine Volume 200 ; 200 >
+        au < exists ; 1992 ; Experimental Biology and Medicine Volume 201 ; 201 >
+        au < exists ; 1993 ; Experimental Biology and Medicine Volume 202 ; 202 >
+        au < exists ; 1993 ; Experimental Biology and Medicine Volume 203 ; 203 >
+        au < exists ; 1993 ; Experimental Biology and Medicine Volume 204 ; 204 >
+        au < exists ; 1994 ; Experimental Biology and Medicine Volume 205 ; 205 >
+        au < exists ; 1994 ; Experimental Biology and Medicine Volume 206 ; 206 >
+        au < exists ; 1994 ; Experimental Biology and Medicine Volume 207 ; 207 >
+        au < exists ; 1995 ; Experimental Biology and Medicine Volume 208 ; 208 >
+        au < exists ; 1995 ; Experimental Biology and Medicine Volume 209 ; 209 >
+        au < exists ; 1995 ; Experimental Biology and Medicine Volume 210 ; 210 >
+        au < exists ; 1996 ; Experimental Biology and Medicine Volume 211 ; 211 >
+        au < exists ; 1996 ; Experimental Biology and Medicine Volume 212 ; 212 >
+        au < exists ; 1996 ; Experimental Biology and Medicine Volume 213 ; 213 >
+        au < exists ; 1997 ; Experimental Biology and Medicine Volume 214 ; 214 >
+        au < exists ; 1997 ; Experimental Biology and Medicine Volume 215 ; 215 >
+        au < exists ; 1997 ; Experimental Biology and Medicine Volume 216 ; 216 >
+        au < exists ; 1998 ; Experimental Biology and Medicine Volume 217 ; 217 >
+        au < exists ; 1998 ; Experimental Biology and Medicine Volume 218 ; 218 >
+        au < exists ; 1998 ; Experimental Biology and Medicine Volume 219 ; 219 >
+        au < doNotProcess ; 1999 ; Experimental Biology and Medicine Volume 220 ; 220 >
+        au < doNotProcess ; 1999 ; Experimental Biology and Medicine Volume 221 ; 221 >
+        au < doNotProcess ; 1999 ; Experimental Biology and Medicine Volume 222 ; 222 >
+        au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 223 ; 223 >
+        au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 224 ; 224 >
+        au < doNotProcess ; 2000 ; Experimental Biology and Medicine Volume 225 ; 225 >
+        au < doNotProcess ; 2001 ; Experimental Biology and Medicine Volume 226 ; 226 >
+        au < doNotProcess ; 2002 ; Experimental Biology and Medicine Volume 227 ; 227 >
+        au < doNotProcess ; 2003 ; Experimental Biology and Medicine Volume 228 ; 228 >
+        au < doNotProcess ; 2004 ; Experimental Biology and Medicine Volume 229 ; 229 >
+        au < doNotProcess ; 2005 ; Experimental Biology and Medicine Volume 230 ; 230 >
+        au < doNotProcess ; 2006 ; Experimental Biology and Medicine Volume 231 ; 231 >
+        au < doNotProcess ; 2007 ; Experimental Biology and Medicine Volume 232 ; 232 >
+        au < doNotProcess ; 2008 ; Experimental Biology and Medicine Volume 233 ; 233 >
+        au < doNotProcess ; 2009 ; Experimental Biology and Medicine Volume 234 ; 234 >
+        au < doNotProcess ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
+        au < doNotProcess ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
+        au < doNotProcess ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 >
+        au < exists ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 >
   
       }
   
