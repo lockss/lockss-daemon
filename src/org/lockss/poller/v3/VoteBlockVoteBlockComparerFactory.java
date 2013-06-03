@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockVoteBlockComparerFactory.java,v 1.1 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: VoteBlockVoteBlockComparerFactory.java,v 1.2 2013-06-03 20:46:53 barry409 Exp $
  */
 
 /*
@@ -127,7 +127,9 @@ public final class VoteBlockVoteBlockComparerFactory {
   }
 
   /**
-   * Create a VoteBlockComparer from this instance.
+   * Create a VoteBlockComparer.
+   * @return A {@link VoteBlockComparer} instance to compare the
+   * {@link VoteBlock} provided at construction.
    */
   public VoteBlockComparer make() {
     NoncedForPlainImpl noncedForPlain = new NoncedForPlainImpl(plainMap);
