@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.6 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.7 2013-06-03 20:24:53 barry409 Exp $
  */
 
 /*
@@ -81,13 +81,8 @@ public class VoteBlocksTallier {
     DEFAULT_KEEP_URL_LISTS = false;
 
   public VoteBlocksTallier() {
-  }
-
-  public VoteBlocksTallier(VoteBlocks voterBlocks, VoteBlocks pollerBlocks) {
     keepUrlLists = CurrentConfig.getBooleanParam(PARAM_KEEP_URL_LISTS,
 						 DEFAULT_KEEP_URL_LISTS);
-
-    tallyVoteBlocks(voterBlocks, pollerBlocks);
   }
 
   /**

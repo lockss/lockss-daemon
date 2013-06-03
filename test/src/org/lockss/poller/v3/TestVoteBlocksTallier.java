@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.2 2013-02-24 05:12:41 dshr Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.3 2013-06-03 20:24:53 barry409 Exp $
  */
 
 /*
@@ -96,7 +96,8 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
     assertNotNull(pBlocks);
     assert(pBlocks.size() >= 0);
-    VoteBlocksTallier vbt = new VoteBlocksTallier(vBlocks, pBlocks);
+    VoteBlocksTallier vbt = new VoteBlocksTallier();
+    vbt.tallyVoteBlocks(vBlocks, pBlocks);
     int numAgree = vbt.countAgreeUrl();
     int shouldAgree = 0;
     if (min(v1,v2) >= 0 && min(p1,p2) >= 0) {
