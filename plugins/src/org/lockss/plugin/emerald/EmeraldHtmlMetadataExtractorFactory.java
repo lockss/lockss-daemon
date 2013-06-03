@@ -1,5 +1,5 @@
 /*
- * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.7 2012-05-25 20:08:05 dylanrhodes Exp $
+ * $Id: EmeraldHtmlMetadataExtractorFactory.java,v 1.8 2013-06-03 21:17:53 aishizaki Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.emerald;
 
@@ -46,13 +46,13 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
   static Logger log = Logger.getLogger("EmeraldHtmlMetadataExtractorFactory");
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							   String contentType)
-      throws PluginException {
+      String contentType)
+  throws PluginException {
     return new EmeraldHtmlMetadataExtractor();
   }
 
   public static class EmeraldHtmlMetadataExtractor 
-    implements FileMetadataExtractor {
+  implements FileMetadataExtractor {
 
     // Map Emerald's Google Scholar HTML meta tag names for journals to cooked metadata fields
     private static MultiMap journalTagMap = new MultiValueMap();
@@ -65,13 +65,13 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       journalTagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       journalTagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       journalTagMap.put("citation_authors",
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(";")));
+          new MetadataField(MetadataField.FIELD_AUTHOR,
+              MetadataField.splitAt(";")));
       journalTagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       journalTagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       journalTagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
-    
+
     // Map Emerald's Google Scholar HTML meta tag names for books to cooked metadata fields
     private static MultiMap bookTagMap = new MultiValueMap();
     static {
@@ -82,31 +82,39 @@ public class EmeraldHtmlMetadataExtractorFactory implements FileMetadataExtracto
       bookTagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
       bookTagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       bookTagMap.put("citation_authors",
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(";")));
+          new MetadataField(MetadataField.FIELD_AUTHOR,
+              MetadataField.splitAt(";")));
       bookTagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       bookTagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
 
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-        throws IOException {
+    throws IOException {
       ArticleMetadata am = 
         new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      
+      MultiMap tm = journalTagMap; 
       ArchivalUnit au = cu.getArchivalUnit();
-      
-      if(au.getTitleConfig() == null)
-    	  am.cook(journalTagMap);
-      else {
-      	  String type = cu.getArchivalUnit().getTitleConfig().getProperties().get("type");
-      	  
-	  	  if(type != null)
-	    	  am.cook(bookTagMap);
-	      else
-	    	  am.cook(journalTagMap);
+
+      if((au == null) || (au.getTitleConfig() == null))
+        am.cook(tm); //am.cook(journalTagMap);
+      else {       
+        try {
+          String type = cu.getArchivalUnit().getTitleConfig().getProperties().get("type");
+          if (type == null) type = "journal";
+          if((type.compareToIgnoreCase("book") == 0) || (type.compareToIgnoreCase("bookSeries") == 0))
+            tm = bookTagMap; //am.cook(bookTagMap);
+          else
+            tm = journalTagMap; //am.cook(journalTagMap);
+        } catch (Exception e) {
+          log.warning("tdb Type not set for AU");
+          // use the default(journal) tagmap
+        } finally {
+          log.debug3("extract: type=["+log+"]");
+          am.cook(tm);
+        }
       }
-      
+
       emitter.emitMetadata(cu, am);
     }
   }

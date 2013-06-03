@@ -51,8 +51,10 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
   static Logger log = Logger.getLogger("TestEmeraldMetadataExtractor");
 
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-  private ArchivalUnit hau;		// Highwire AU
+  //private ArchivalUnit hau;		// Highwire AU
+  private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
+  private TitleConfig tc;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
 
@@ -87,6 +89,35 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
     tagMap.put("dc.Identifier", "10.1152/ajprenal.%1%2%3.2004");
     tagMap.put("dc.Date", "%1/%2/%3");
   };
+  String goodDOI = "10.1108/09685220710759522";
+  static String goodVolume = "15";
+  String goodIssue = "3";
+  String goodStartPage = "168";
+  static String goodISSN = "0968-5227";
+  String goodDate = "12/06/2007";
+  String goodAuthor = "Mohamad Noorman Masrek; Nor Shahriza Abdul Karim; Ramlah Hussein";
+  String[] goodAuthors = new String[] {
+      "Mohamad Noorman Masrek", "Nor Shahriza Abdul Karim", "Ramlah Hussein" };
+  String goodArticleTitle = "Investigating corporate intranet effectiveness: a conceptual framework";
+ static String goodJournalTitle = "Information Management & Computer Security";
+  String goodAbsUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921";
+  String goodHtmUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921&show=html";
+  String goodPdfUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921&show=pdf";
+
+  private static final Map<String, String> jProps = new HashMap<String, String>();
+  static {
+    jProps.put("type", "JOurnal");      // testing ignoreCase
+    jProps.put("issn", goodISSN);
+    jProps.put("journalTitle", goodJournalTitle);
+    jProps.put("volume", goodVolume);
+  }
+  private static final Map<String, String> bProps = new HashMap<String, String>();
+  static {
+    bProps.put("issn", goodISSN);
+    bProps.put("type", "BOok");         // testing ignoreCase
+    bProps.put("journalTitle", goodJournalTitle);
+    bProps.put("volume", goodVolume);
+  }
 
   public void setUp() throws Exception {
     super.setUp();
@@ -97,57 +128,29 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
-    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-					     simAuConfig(tempDirPath));
-    hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, emeraldAuConfig());
+    mau = new MockArchivalUnit();
+    mau.setConfiguration(emeraldAuConfig());
+   
   }
 
   public void tearDown() throws Exception {
-    sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("base_url", SIM_ROOT);
-    conf.put("depth", "2");
-    conf.put("branch", "2");
-    conf.put("numFiles", "4");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_HTML));
-//     conf.put("default_article_mime_type", "application/pdf");
-    conf.put("binFileSize", "7");
-    return conf;
-  }
 
   Configuration emeraldAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("volume_name", "15");
-    conf.put("journal_issn", "1234-1234");
+    conf.put("volume_name", goodVolume);
+    conf.put("journal_issn", goodISSN);
+    tc = new TitleConfig("EmeraldTest" ,PLUGIN_NAME);
+    tc.setJournalTitle(goodJournalTitle);
     return conf;
   }
 
-  String goodDOI = "10.1108/09685220710759522";
-  String goodVolume = "15";
-  String goodIssue = "3";
-  String goodStartPage = "168";
-  String goodISSN = "0968-5227";
-  String goodDate = "12/06/2007";
-  String goodAuthor = "Mohamad Noorman Masrek; Nor Shahriza Abdul Karim; Ramlah Hussein";
-  String[] goodAuthors = new String[] {
-      "Mohamad Noorman Masrek", "Nor Shahriza Abdul Karim", "Ramlah Hussein" };
-  String goodArticleTitle = "Investigating corporate intranet effectiveness: a conceptual framework";
-  String goodJournalTitle = "Information Management & Computer Security";
-  String goodAbsUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921";
-  String goodHtmUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921&show=html";
-  String goodPdfUrl = "http://www.emeraldinsight.com/journals.htm?issn=0968-5227&volume=15&issue=3&articleid=1610921&show=pdf";
 
   String goodContent =
-
 		"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" +
 		"<html>\n" +
 		"<head>\n" +
@@ -170,10 +173,83 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
 		"<meta name=\"citation_fulltext_html_url\" content=\"" + goodHtmUrl + "\">\n" +
     "<meta name=\"citation_pdf_url\"" +
       " content=\"" + goodPdfUrl + "\">\n";
+  
+  public void testExtractBookContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    tc.setProperties(bProps);   // set up TitleConfig as a book
+    mau.setTitleConfig(tc);     // set titleconfig on au
+    MockCachedUrl cu = new MockCachedUrl(url, mau);
+    
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me =
+      new EmeraldHtmlMetadataExtractorFactory.EmeraldHtmlMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    // for a book, the journal_title is the volume and the volume is the issue
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
+  
+  }
+  String badContent =
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+    "  <div id=\"issn\">" +
+    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
+    "<meta name=\"citation_journal_title\"" + " content=\""+goodJournalTitle+"\">\n" +      
+    "<meta name=\"citation_issn\" content=\"" + goodISSN + "\">\n" +
+    "<meta name=\"citation_volume\"" + " content=\"" + goodVolume + "\">\n" +
+    goodISSN + " </div>\n";
 
+  public void testExtractFromBadContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    tc.setProperties(bProps);   
+    //using the book properties as it will befuddle the journal_title and volume
+    mau.setTitleConfig(tc);
+    MockCachedUrl cu = new MockCachedUrl(url, mau);
+    cu.setContent(badContent);
+    cu.setContentSize(badContent.length());
+    FileMetadataExtractor me =
+      new EmeraldHtmlMetadataExtractorFactory.EmeraldHtmlMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    assertNotNull(mle);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertNull(md.get(MetadataField.FIELD_DOI));
+    assertNotEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    assertNull(md.get(MetadataField.FIELD_START_PAGE));
+     //assertNull(md.get(MetadataField.FIELD_ISSN));
+    assertNull(md.get(MetadataField.FIELD_AUTHOR));
+    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertNotEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertNull(md.get(MetadataField.FIELD_DATE));
+    //assertEquals(1, md.rawSize());
+    assertEquals("bar", md.getRaw("foo"));
+  }
   public void testExtractFromGoodContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    tc.setProperties(jProps);   // set up TitleConfig as a journal
+    mau.setTitleConfig(tc);     // set titleconfig on au
+    MockCachedUrl cu = new MockCachedUrl(url, mau);
+    
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
@@ -197,159 +273,7 @@ public class TestEmeraldMetadataExtractor extends LockssTestCase {
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-  }
   
-  String badContent =
-    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
-    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
-    "  <div id=\"issn\">" +
-    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
-    goodISSN + " </div>\n";
-
-  public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, hau);
-    cu.setContent(badContent);
-    cu.setContentSize(badContent.length());
-    FileMetadataExtractor me =
-      new EmeraldHtmlMetadataExtractorFactory.EmeraldHtmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    assertNotNull(mle);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertNull(md.get(MetadataField.FIELD_DOI));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
-    assertNull(md.get(MetadataField.FIELD_START_PAGE));
-    assertNull(md.get(MetadataField.FIELD_ISSN));
-    assertNull(md.get(MetadataField.FIELD_AUTHOR));
-    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertNull(md.get(MetadataField.FIELD_DATE));
-    assertEquals(1, md.rawSize());
-    assertEquals("bar", md.getRaw("foo"));
   }
 
-  private static String getFieldContent(String content, int fileNum, int depth,
-				 int branchNum) {
-    content = StringUtil.replaceString(content, "%1", ""+fileNum);
-    content = StringUtil.replaceString(content, "%2", ""+depth);
-    content = StringUtil.replaceString(content, "%3", ""+branchNum);
-    return content;
-  }
-
-  public void checkMetadata(ArticleMetadata md) {
-    String temp = null;
-    temp = (String) md.getRaw("lockss.filenum");
-    int fileNum = -1;
-    try {
-      fileNum = Integer.parseInt(temp);
-    } catch (NumberFormatException ex) {
-      fail(temp + " caused " + ex);
-    }
-    temp = (String) md.getRaw("lockss.depth");
-    int depth = -1;
-    try {
-      depth = Integer.parseInt(temp);
-    } catch (NumberFormatException ex) {
-      log.error(temp + " caused " + ex);
-      fail();
-    }
-    temp = (String) md.getRaw("lockss.branchnum");
-    int branchNum = -1;
-    try {
-      branchNum = Integer.parseInt(temp);
-    } catch (NumberFormatException ex) {
-      log.error(temp + " caused " + ex);
-      fail();
-    }
-    // Does md have all the fields in the meta tags with the right content?
-    for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
-      String expected_name = (String)it.next();
-      if (expected_name.startsWith("lockss")) {
-	continue;
-      }
-      String expected_content = getFieldContent(tagMap.get(expected_name),
-						fileNum, depth, branchNum);
-      assertNotNull(expected_content);
-      log.debug("key: " + expected_name + " value: " + expected_content);
-      String actual_content = (String)md.getRaw(expected_name.toLowerCase());
-      assertNotNull(actual_content);
-      log.debug("expected: " + expected_content + " actual: " + actual_content);
-      assertEquals(expected_content, actual_content);
-    }
-    // Do the accessors return the expected values?
-    assertEquals(getFieldContent(tagMap.get("citation_doi"), fileNum,
-			 depth, branchNum),
-		 md.get(MetadataField.FIELD_DOI));
-    assertEquals(getFieldContent(tagMap.get("citation_issn"), fileNum,
-				 depth, branchNum),
-		 md.get(MetadataField.FIELD_ISSN));
-    assertEquals(getFieldContent(tagMap.get("citation_volume"), fileNum,
-				 depth, branchNum),
-		 md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(getFieldContent(tagMap.get("citation_issue"), fileNum,
-				 depth, branchNum),
-		 md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(getFieldContent(tagMap.get("citation_firstpage"), fileNum,
-				 depth, branchNum),
-		 md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(getFieldContent(tagMap.get("citation_authors"), fileNum,
-			 depth, branchNum),
-		 md.get(MetadataField.FIELD_AUTHOR));
-    assertEquals(getFieldContent(tagMap.get("citation_title"), fileNum,
-			 depth, branchNum),
-		 md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(getFieldContent(tagMap.get("citation_journal_title"), fileNum,
-			 depth, branchNum),
-		 md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(getFieldContent(tagMap.get("citation_date"), fileNum,
-			 depth, branchNum),
-		 md.get(MetadataField.FIELD_DATE));
-  }
-  
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-
-    public SimulatedContentGenerator getContentGenerator(Configuration cf,
-							 String fileRoot) {
-      return new MySimulatedContentGenerator(fileRoot);
-    }
-  }
-
-  public static class MySimulatedContentGenerator
-    extends SimulatedContentGenerator {
-
-    protected MySimulatedContentGenerator(String fileRoot) {
-      super(fileRoot);
-    }
-
-    public String getHtmlFileContent(String filename, int fileNum,
-				     int depth, int branchNum,
-				     boolean isAbnormal) {
-      String file_content =
-	"<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
-      for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
-	String name = (String)it.next();
-	String content = tagMap.get(name);
-	file_content += "  <meta name=\"" + name + "\" content=\"" +
-	  getFieldContent(content, fileNum, depth, branchNum) + "\">\n";
-      }
-      file_content += "  <meta name=\"lockss.filenum\" content=\"" + fileNum +
-	"\">\n";
-      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth +
-	"\">\n";
-      file_content += "  <meta name=\"lockss.branchnum\" content=\"" +
-	branchNum + "\">\n";
-      file_content += getHtmlContent(fileNum, depth, branchNum, isAbnormal);
-      file_content += "\n</BODY></HTML>";
-      logger.debug("MySimulatedContentGenerator.getHtmlFileContent: " +
-		   file_content);
-      return file_content;
-    }
-  }
 }
