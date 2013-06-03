@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.6 2013-06-01 01:29:52 ldoan Exp $
+ * $Id: SpringerSourceMetadataExtractorFactory.java,v 1.7 2013-06-03 23:28:50 ldoan Exp $
  */
 
 /*
@@ -43,11 +43,14 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.collections.map.*;
 import javax.xml.xpath.XPathExpressionException;
 
 /**
- * This implements a FileMetadataExtractor for Springer Source Content
+ * Implements a FileMetadataExtractor for Springer Source Content
  * 
  * Files used to write this class include:
  * ~/2010/ftp_PUB_10-05-17_06-11-02.zip/JOU=11864/VOL=2008.9/ISU=2-3/ART=2008_64/11864_2008_Article.xml.Meta
@@ -65,6 +68,16 @@ public class SpringerSourceMetadataExtractorFactory
   
   public static class SpringerSourceMetadataExtractor
     implements FileMetadataExtractor {
+    
+    private Map<String, String> journalTitleMap;
+    
+    // http://clockss-ingest.lockss.org/sourcefiles/springer-released/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf
+    private Pattern JOURNAL_ID_PATTERN = Pattern.compile("/springer-[^/]+/[0-9]{4}/[^/]+/JOU=([0-9]+)/.+");
+
+    public SpringerSourceMetadataExtractor() {
+      journalTitleMap = new HashMap<String, String>();
+    }
+
 	  
     /** NodeValue for creating value of subfields from AuthorName tag */
     static private final NodeValue AUTHOR_VALUE = new NodeValue() {
@@ -119,6 +132,7 @@ public class SpringerSourceMetadataExtractorFactory
     static {
       // normal journal article schema
       //nodeMap.put("/Publisher/PublisherInfo/PublisherName", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/Publisher/Journal/JournalInfo/JournalID", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/Publisher/Journal/JournalInfo/JournalTitle", XmlDomMetadataExtractor.TEXT_VALUE);
@@ -141,6 +155,7 @@ public class SpringerSourceMetadataExtractorFactory
     static {
       // normal journal article schema
       //xpathMap.put("/Publisher/PublisherInfo/PublisherName", MetadataField.FIELD_PUBLISHER);
+      xpathMap.put("/Publisher/Journal/JournalInfo/JournalID", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
       xpathMap.put("/Publisher/Journal/JournalInfo/JournalPrintISSN", MetadataField.FIELD_ISSN);
       xpathMap.put("/Publisher/Journal/JournalInfo/JournalElectronicISSN", MetadataField.FIELD_EISSN);
       xpathMap.put("/Publisher/Journal/JournalInfo/JournalTitle", MetadataField.FIELD_JOURNAL_TITLE);
@@ -157,6 +172,118 @@ public class SpringerSourceMetadataExtractorFactory
       xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/Abstract/Para", MetadataField.DC_FIELD_DESCRIPTION);
       xpathMap.put("/Publisher/Journal/Volume/Issue/Article/ArticleHeader/KeywordGroup/Keyword", MetadataField.FIELD_KEYWORDS);
     }
+    
+    /**
+     * Get the journal ID from from the article metadata. If not set, gets
+     * journal id from the URL and adds it to the article metadata.
+     *  
+     * @param url the URL of the article
+     * @param am the article metadata of the article
+     * @return the journalID or null if not available
+     */
+    // extract journal id from cached url.
+    // if not found (url is opaque), then assign a default value.
+    private String getJournalId(String url, ArticleMetadata am) {
+      String journalId = am.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+      log.debug3("getJournalId() propid journalId: " + journalId);
+      if (StringUtil.isNullString(journalId)) {
+        // http://clockss-ingest.lockss.org/sourcefiles/springer-released/2012/ftp_PUB_11-11-17_06-38-38.zip!/JOU=00238/VOL=2011.34/ISU=6/ART=476/BodyRef/PDF/238_2010_Article_476.pdf
+        // Pattern.compile("/springer-[^/]+/[0-9]{4}/[^/]+/JOU=([0-9]+)/.+");
+        Matcher mat = JOURNAL_ID_PATTERN.matcher(url);
+        if (mat.find()) {
+          journalId = mat.group(1);
+          log.debug3("journalId: " + journalId);
+          am.put(MetadataField.FIELD_PROPRIETARY_IDENTIFIER, journalId);
+        }
+      }
+      log.debug3("getJournalIdl() journalId: " + journalId);
+      return (journalId);
+    }
+    
+    /**
+     * Get the journal title for the specified ArticleMetadata. If not set,
+     * looks up cached value using issn, eissn, or journalID. If not cached,
+     * creates one from the issn, eissn or journalID.  Adds journalID to
+     * the article metadata if not present. 
+     * 
+     * @param url the URL of the article
+     * @param am the article metadata of the article
+     * @return the journal title or null if not available
+     */
+    private String getJournalTitle(String url, ArticleMetadata am) {
+      String journalTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
+      String journalId = getJournalId(url, am);
+      String issn = am.get(MetadataField.FIELD_ISSN);
+      String eissn = am.get(MetadataField.FIELD_EISSN);
+
+      // journal has title -- cache using issn, eissn, and journalID
+      // in case journal title is missing from later records
+      if (!StringUtil.isNullString(journalTitle)) {
+        if (!StringUtil.isNullString(issn)) {
+          journalTitleMap.put(issn, journalTitle);
+        }
+        if (!StringUtil.isNullString(eissn)) {
+          journalTitleMap.put(eissn, journalTitle);
+        }
+        if (!StringUtil.isNullString(journalId)) {
+          journalTitleMap.put(journalId, journalTitle);
+        }
+        return journalTitle;
+      }
+      // journal has no title -- find it using issn, eissn, and jouranalID,
+      // or generate a title using one of these properties otherwise
+      String genTitle = null;  // generated title fron issn, eissn or journalID
+      try {
+        // try ISSN as key
+        if (!StringUtil.isNullString(issn)) {
+          // use cached journal title for journalId
+          journalTitle = journalTitleMap.get(issn);
+          if (!StringUtil.isNullString(journalTitle)) {
+            return journalTitle;
+          }
+          if (genTitle == null) {
+            // generate title with issn for preference
+            genTitle = "UNKNOWN_TITLE/issn=" + issn;
+          }
+        }
+        
+        // try eissn as key
+        if (!StringUtil.isNullString(eissn)) {
+          // use cached journal title for journalId
+          journalTitle = journalTitleMap.get(eissn);
+          if (!StringUtil.isNullString(journalTitle)) {
+            return journalTitle;
+          }
+          if (genTitle == null) {
+            // generate title with eissn if issn not available
+          genTitle = "UNKNOWN_TITLE/eissn=" + eissn;
+          }
+        }
+        
+        // try journalId as key
+        if (!StringUtil.isNullString(journalId)) {
+          // use cached journal title for journalId
+          journalTitle = journalTitleMap.get(journalId);
+          if (!StringUtil.isNullString(journalTitle)) {
+            return journalTitle;
+          }
+          if (genTitle == null) {
+            // generate title with journalID if issn and eissn not available
+            genTitle = "UNKNOWN_TITLE/journalId=" + journalId;
+          }
+        }
+        
+      } finally {
+        if (StringUtil.isNullString(journalTitle)) {
+          journalTitle = genTitle;
+        }
+        if (!StringUtil.isNullString(journalTitle)) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
+        }
+        log.debug3("getJournalTitle() journalTitle: " + journalTitle);
+      }
+      return journalTitle;
+    }
 
     /**
      * Use XmlMetadataExtractor to extract raw metadata, map
@@ -172,9 +299,11 @@ public class SpringerSourceMetadataExtractorFactory
       log.debug3("The MetadataExtractor attempted to extract metadata from cu: "+cu);
       ArticleMetadata am = do_extract(target, cu, emitter);
       
-      // safety check for journal title to avoid exception error
-      // from metadataindexing
-      String journalTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
+      // hardwire publisher for board report (look at imprints later)
+      am.put(MetadataField.FIELD_PUBLISHER, "Springer-Verlag");
+      
+      // emit only if journal title exists, otherwise report site error
+      String journalTitle = getJournalTitle(cu.getUrl(), am);
       if (!StringUtil.isNullString(journalTitle)) {
         emitter.emitMetadata(cu, am);
       } else {
@@ -200,8 +329,6 @@ public class SpringerSourceMetadataExtractorFactory
           AuUtil.safeRelease(cu);
         }
         am.cook(xpathMap);
-        // hardwire publisher for board report (look at imprints later)
-        am.put(MetadataField.FIELD_PUBLISHER, "Springer-Verlag");
         return am;
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
