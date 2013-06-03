@@ -20,7 +20,7 @@
 
     au < released ; 1972 ; 1 ; Ciência da Informação Volume 1 ; 1972 >
     au < released ; 1973 ; 2 ; Ciência da Informação Volume 2 ; 1973 >
-    au < testing ; 1974 ; 3 ; Ciência da Informação Volume 3 ; 1974 >
+    au < ready ; 1974 ; 3 ; Ciência da Informação Volume 3 ; 1974 >
     au < released ; 1975 ; 4 ; Ciência da Informação Volume 4 ; 1975 >
     au < released ; 1976 ; 5 ; Ciência da Informação Volume 5 ; 1976 >
     au < released ; 1977 ; 6 ; Ciência da Informação Volume 6 ; 1977 >
@@ -39,12 +39,12 @@
     au < released ; 1990 ; 19 ; Ciência da Informação Volume 19 ; 1990 >
     au < released ; 1991 ; 20 ; Ciência da Informação Volume 20 ; 1991 >
     au < released ; 1992 ; 21 ; Ciência da Informação Volume 21 ; 1992 >
-    au < testing ; 1993 ; 22 ; Ciência da Informação Volume 22 ; 1993 >
+    au < ready ; 1993 ; 22 ; Ciência da Informação Volume 22 ; 1993 >
     au < testing ; 1994 ; 23 ; Ciência da Informação Volume 23 ; 1994 >
     au < released ; 1995 ; 24 ; Ciência da Informação Volume 24 ; 1995 >
     au < released ; 1996 ; 25 ; Ciência da Informação Volume 25 ; 1996 >
     au < released ; 1997 ; 26 ; Ciência da Informação Volume 26 ; 1997 >
-    au < testing ; 1998 ; 27 ; Ciência da Informação Volume 27 ; 1998 >
+    au < ready ; 1998 ; 27 ; Ciência da Informação Volume 27 ; 1998 >
     au < released ; 1999 ; 28 ; Ciência da Informação Volume 28 ; 1999 >
     au < released ; 2000 ; 29 ; Ciência da Informação Volume 29 ; 2000 >
     au < released ; 2001 ; 30 ; Ciência da Informação Volume 30 ; 2001 >
@@ -52,7 +52,7 @@
     au < released ; 2003 ; 32 ; Ciência da Informação Volume 32 ; 2003 >
     au < released ; 2004 ; 33 ; Ciência da Informação Volume 33 ; 2004 >
     au < released ; 2005 ; 34 ; Ciência da Informação Volume 34 ; 2005 >
-    au < testing ; 2006 ; 35 ; Ciência da Informação Volume 35 ; 2006 >
+    au < ready ; 2006 ; 35 ; Ciência da Informação Volume 35 ; 2006 >
     au < released ; 2007 ; 36 ; Ciência da Informação Volume 36 ; 2007 >
     au < released ; 2008 ; 37 ; Ciência da Informação Volume 37 ; 2008 >
     au < released ; 2009 ; 38 ; Ciência da Informação Volume 38 ; 2009 >
@@ -91,14 +91,14 @@
       param[base_url] = http://revista.ibict.br/liinc/
       param[journal_id] = liinc
 
-      au < testing ; 2005 ; 1 ; Liinc em Revista Volume 1 ; 2005 >
-      au < testing ; 2006 ; 2 ; Liinc em Revista Volume 2 ; 2006 >
-      au < testing ; 2007 ; 3 ; Liinc em Revista Volume 3 ; 2007 >
-      au < testing ; 2008 ; 4 ; Liinc em Revista Volume 4 ; 2008 >
-      au < testing ; 2009 ; 5 ; Liinc em Revista Volume 5 ; 2009 >
-      au < testing ; 2010 ; 6 ; Liinc em Revista Volume 6 ; 2010 >
-      au < testing ; 2011 ; 7 ; Liinc em Revista Volume 7 ; 2011 >
-      au < testing ; 2012 ; 8 ; Liinc em Revista Volume 8 ; 2012 >
+      au < ready ; 2005 ; 1 ; Liinc em Revista Volume 1 ; 2005 >
+      au < ready ; 2006 ; 2 ; Liinc em Revista Volume 2 ; 2006 >
+      au < ready ; 2007 ; 3 ; Liinc em Revista Volume 3 ; 2007 >
+      au < ready ; 2008 ; 4 ; Liinc em Revista Volume 4 ; 2008 >
+      au < ready ; 2009 ; 5 ; Liinc em Revista Volume 5 ; 2009 >
+      au < ready ; 2010 ; 6 ; Liinc em Revista Volume 6 ; 2010 >
+      au < ready ; 2011 ; 7 ; Liinc em Revista Volume 7 ; 2011 >
+      au < ready ; 2012 ; 8 ; Liinc em Revista Volume 8 ; 2012 >
 
   }
 
