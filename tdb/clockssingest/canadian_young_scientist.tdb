@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Canadian Young Scientist ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+
+  {
+    
+     title <
+       name = Canadian Young Scientist Journal ;
+       issn = 1913-1925
+     >
+
+     plugin = needs.plugin
+     param[base_url] = http://http://www.cysjournal.ca/
+
+  }
+   
+
+}
