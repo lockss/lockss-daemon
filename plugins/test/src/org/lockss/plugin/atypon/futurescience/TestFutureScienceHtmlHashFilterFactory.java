@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.2 2013-04-30 23:18:02 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.3 2013-06-04 17:17:39 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -194,6 +194,17 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</tr>" +
           "</table>";
   
+  private static final String adPlaceholderLimitTest =
+      "<table><tr><td><h1>YES</h1><h1>YES</h1><h1>YES</h1></td>" +
+          "<td><h1>NO</h1><h1>NO</h1><!-- placeholder id=null, description=test --><a href=\"foo\"></a></td>" +
+          "<td>YES<table><tr><td>YES</td><td><h1>NO</h1><span>blah</span><!-- placeholder id=null, description=test -->    " +
+          "<a href=\"foo\"></a></td><td><h3>YES</h3></td></tr></table></td>" +
+          "</tr></table>";
+  private static final String adPlaceholderLimitFiltered =
+      "<table><tr><td><h1>YES</h1><h1>YES</h1><h1>YES</h1></td>" +
+          "<td>YES<table><tr><td>YES</td><td><h3>YES</h3></td></tr></table></td>" +
+          "</tr></table>";
+  
   private static final String adSimple =
       "<html><body<table><tr><td><!-- placeholder id=null --></td></tr></table></body></html>";
   private static final String adSimpleFiltered =
@@ -250,6 +261,14 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         Constants.DEFAULT_ENCODING);
 
     assertEquals(adSimpleFiltered, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void test_adPlaceholderAgain() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(adPlaceholderLimitTest),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(adPlaceholderLimitFiltered, StringUtil.fromInputStream(actIn));
+    
   }
  
 }
