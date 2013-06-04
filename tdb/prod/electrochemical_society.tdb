@@ -17,7 +17,7 @@
 
     param[base_url] = http://jes.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[notReady] = login needed, RU4488
+    comment[notReady] = missing gif
 
     au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Electrochemical Society Volume 158 ; 158 >
     au < HighWirePressH20Plugin ; notReady ; 2012 ; Journal of the Electrochemical Society Volume 159 ; 159 >
