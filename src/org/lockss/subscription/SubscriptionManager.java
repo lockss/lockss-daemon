@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.1.2.5 2013-06-04 17:01:45 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.1.2.6 2013-06-04 21:42:22 fergaloy-sf Exp $
  */
 
 /*
@@ -81,7 +81,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     ConfigurableManager {
 
   private static final Logger log = Logger.getLogger(SubscriptionManager.class);
-  
+
+  // Prefix for the subscription manager configuration entries.
+  private static final String PREFIX =
+      Configuration.PREFIX + "subscriptionManager.";
+
+  /**
+   * Maximum number of retries for transient SQL exceptions.
+   */
+  public static final String PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD =
+      PREFIX + "repositoryAvailSpaceThreshold";
+  public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
+
   // Query to count recorded unconfigured archival units.
   private static final String UNCONFIGURED_AU_COUNT_QUERY = "select "
       + "count(*)"
@@ -2985,7 +2996,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   List<String> populateRepositories(Map<String, PlatformUtil.DF> repositoryMap)
   {
     final String DEBUG_HEADER = "populateRepositories(): ";
-    long totalAvailableSpace = 0;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repositoryMap.size() = "
+	+ repositoryMap.size());
+
+    // Initialize the list of available repositories.
+    List<String> repos = new ArrayList<String>();
+
+    // Handle an empty repository map.
+    if (repositoryMap.size() < 1) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+      return repos;
+    }
 
     // Get the available repositories sorted by their available space.
     TreeSet<Entry<String, PlatformUtil.DF>> sortedRepos =
@@ -2994,43 +3015,145 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "sortedRepos.size() = " + sortedRepos.size());
 
-    // Compute the total amount of space available.
-    for (Entry<String, PlatformUtil.DF> df : sortedRepos) {
-      totalAvailableSpace += df.getValue().getAvail();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "totalAvailableSpace = "
-	  + totalAvailableSpace);
+    // Handle the case of a single repository.
+    if (sortedRepos.size() == 1) {
+      repos.add(sortedRepos.first().getKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added " + sortedRepos.first().getKey());
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+      return repos;
     }
+
+    // Get the repository available space threshold from the configuration.
+    int repoThreshold =	ConfigManager.getCurrentConfig()
+	.getInt(PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD,
+	        DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "repoThreshold = " + repoThreshold);
 
     // Get the available space of the repository with the least amount of
     // available space.
     long minAvail = sortedRepos.first().getValue().getAvail();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "minAvail = " + minAvail);
 
-    // Compute the number of times that the repository with the most available
-    // space will appear in the list of available repositories.
-    long maxInstances = Math.round(sortedRepos.last().getValue().getAvail() /
-	(double)minAvail);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "maxInstances = "
-	  + maxInstances);
+    // Remove repositories that don't have a minimum of space, except the last
+    // one.
+    while (minAvail < repoThreshold) {
+      sortedRepos.remove(sortedRepos.first());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "sortedRepos.size() = " + sortedRepos.size());
 
-    // Initialize the list of available repositories.
-    List<String> repos = new ArrayList<String>();
-
-    // Loop through all the different number of instances that repositories may
-    // appear.
-    for (long i = maxInstances - 1; i >= 0; i--) {
-      // Loop through each available repository.
-      for (Entry<String, PlatformUtil.DF> df : sortedRepos) {
-	// Determine the available space of this repository.
-	long entryAvail = df.getValue().getAvail();
+      // If there is only one repository left, use it.
+      if (sortedRepos.size() == 1) {
+        repos.add(sortedRepos.first().getKey());
         if (log.isDebug3())
-          log.debug3(DEBUG_HEADER + "entryAvail = " + entryAvail);
+  	log.debug3(DEBUG_HEADER + "Added " + sortedRepos.first().getKey());
 
-        // Check whether this repository should be added to the list.
-        if (Math.round(entryAvail / (double)minAvail) > i) {
-          repos.add(df.getKey());
-          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Added " + df.getKey());
-        }
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+        return repos;
+      }
+
+      // Get the available space of the repository with the least amount of
+      // available space.
+      minAvail = sortedRepos.first().getValue().getAvail();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "minAvail = " + minAvail);
+    }
+
+    // Count the remaining repositories.
+    int repoCount = sortedRepos.size();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "repoCount = " + repoCount);
+
+    // Initialize the array of repositories and the total available space.
+    long totalAvailable = 0l;
+    int i = 0;
+    Entry<String, PlatformUtil.DF>[] repoArray = new Entry[repoCount];
+
+    for (Entry<String, PlatformUtil.DF> df : sortedRepos) {
+      totalAvailable += df.getValue().getAvail();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "totalAvailable = " + totalAvailable);
+
+      repoArray[i++] = df;
+    }
+
+    // For each repository, compute the target fraction and initialize the count
+    // of appearances in the final list.
+    i = 0;
+    double[] repoTargetFraction = new double[repoCount];
+    int[] repoAppearances = new int[repoCount];
+
+    for (Entry<String, PlatformUtil.DF> df : repoArray) {
+      repoTargetFraction[i] =
+	  df.getValue().getAvail() / (double)totalAvailable;
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "i = " + i
+	  + ", repoTargetFraction[i] = " + repoTargetFraction[i]);
+
+      repoAppearances[i++] = 0;
+    }
+
+    // The first repository in the list is the one with the largest amount of
+    // available space.
+    repos.add(repoArray[repoCount - 1].getKey());
+    repoAppearances[repoCount - 1]++;
+
+    // An indication of whether the created list matches the target fractions of
+    // all the repositories.
+    boolean done = false;
+    
+    while (!done) {
+      // If no differences between the target fractions and the fractions of
+      // appearances are found in the process below, the list is complete.
+      done = true;
+
+      double difference = 0;
+      double maxDifference = 0;
+      int nextRepo = -1;
+
+      // Loop through all the repositories.
+      for (int j = 0; j < repoCount; j++) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "j = " + j
+	    + ", repoAppearances[j]/(double)repos.size() = "
+	    + repoAppearances[j]/(double)repos.size()
+	    + ", repoTargetFraction[j] = " + repoTargetFraction[j]);
+
+	// Find the difference between the target fraction and the fraction of
+	// appearances.
+	difference =
+	    repoTargetFraction[j] - repoAppearances[j]/(double)repos.size();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "difference = " + difference);
+
+	// Update the largest difference, if necessary.
+	if (maxDifference < difference) {
+	  maxDifference = difference;
+	  nextRepo = j;
+	}
+      }
+
+      // Check whether a repository with the largest difference was found.
+      if (nextRepo != -1) {
+	// Yes: Add it to the list.
+	repos.add(repoArray[nextRepo].getKey());
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Added " + repoArray[nextRepo].getKey());
+
+	// Increment its appearance count.
+	repoAppearances[nextRepo]++;
+
+	// Check whether not all the target fractions have been achieved.
+	for (int k = 0; k < repoCount; k++) {
+	  difference =
+	      repoAppearances[k]/(double)repos.size() - repoTargetFraction[k];
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "k = " + k
+	      + ", difference = " + difference);
+
+	  // Within one per cent is a match.
+	  if (Math.abs(difference) > 0.01) {
+	    done = false;
+	    break;
+	  }
+	}
       }
     }
 

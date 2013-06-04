@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.1.2.2 2013-06-04 17:01:45 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.1.2.3 2013-06-04 21:42:21 fergaloy-sf Exp $
  */
 
 /*
@@ -343,9 +343,49 @@ public class TestSubscriptionManager extends LockssTestCase {
     Map<String, PlatformUtil.DF> repositoryMap =
 	new HashMap<String, PlatformUtil.DF>();
 
+    List<String> repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(0, repos.size());
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("dfn", PlatformUtil.DF.makeThreshold(-1L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(1, repos.size());
+    assertEquals("dfn", repos.get(0));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df0", PlatformUtil.DF.makeThreshold(0L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(1, repos.size());
+    assertEquals("df0", repos.get(0));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
     repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
 
-    List<String> repos = subManager.populateRepositories(repositoryMap);
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(1, repos.size());
+    assertEquals("df1", repos.get(0));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("dfn", PlatformUtil.DF.makeThreshold(-1L, 0.5));
+    repositoryMap.put("df0", PlatformUtil.DF.makeThreshold(0L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(1, repos.size());
+    assertEquals("df0", repos.get(0));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("dfn", PlatformUtil.DF.makeThreshold(-1L, 0.5));
+    repositoryMap.put("df0", PlatformUtil.DF.makeThreshold(0L, 0.5));
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
     assertEquals(1, repos.size());
     assertEquals("df1", repos.get(0));
 
@@ -368,10 +408,10 @@ public class TestSubscriptionManager extends LockssTestCase {
     repos = subManager.populateRepositories(repositoryMap);
     assertEquals(6, repos.size());
     assertEquals("df5", repos.get(0));
-    assertEquals("df5", repos.get(1));
+    assertEquals("df1", repos.get(1));
     assertEquals("df5", repos.get(2));
     assertEquals("df5", repos.get(3));
-    assertEquals("df1", repos.get(4));
+    assertEquals("df5", repos.get(4));
     assertEquals("df5", repos.get(5));
 
     repositoryMap = new HashMap<String, PlatformUtil.DF>();
@@ -380,10 +420,23 @@ public class TestSubscriptionManager extends LockssTestCase {
     repositoryMap.put("df3", PlatformUtil.DF.makeThreshold(3L, 0.5));
 
     repos = subManager.populateRepositories(repositoryMap);
-    assertEquals(3, repos.size());
+    assertEquals(5, repos.size());
     assertEquals("df3", repos.get(0));
     assertEquals("df2", repos.get(1));
     assertEquals("df3", repos.get(2));
+    assertEquals("df2", repos.get(3));
+    assertEquals("df3", repos.get(4));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+    repositoryMap.put("df50", PlatformUtil.DF.makeThreshold(50L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(34, repos.size());
+    assertEquals("df50", repos.get(0));
+    assertEquals("df1", repos.get(1));
+    assertEquals("df50", repos.get(33));
 
     repositoryMap = new HashMap<String, PlatformUtil.DF>();
 
@@ -394,10 +447,10 @@ public class TestSubscriptionManager extends LockssTestCase {
     repos = subManager.populateRepositories(repositoryMap);
     assertEquals(7, repos.size());
     assertEquals("df4", repos.get(0));
-    assertEquals("df4", repos.get(1));
-    assertEquals("df2", repos.get(2));
+    assertEquals("df2", repos.get(1));
+    assertEquals("df1", repos.get(2));
     assertEquals("df4", repos.get(3));
-    assertEquals("df1", repos.get(4));
+    assertEquals("df4", repos.get(4));
     assertEquals("df2", repos.get(5));
     assertEquals("df4", repos.get(6));
 
@@ -408,12 +461,21 @@ public class TestSubscriptionManager extends LockssTestCase {
     repositoryMap.put("df3", PlatformUtil.DF.makeThreshold(3L, 0.5));
 
     repos = subManager.populateRepositories(repositoryMap);
-    assertEquals(5, repos.size());
-    assertEquals("df5", repos.get(0));
-    assertEquals("df6", repos.get(1));
+    assertEquals(14, repos.size());
+    assertEquals("df6", repos.get(0));
+    assertEquals("df5", repos.get(1));
     assertEquals("df3", repos.get(2));
-    assertEquals("df5", repos.get(3));
-    assertEquals("df6", repos.get(4));
+    assertEquals("df6", repos.get(3));
+    assertEquals("df5", repos.get(4));
+    assertEquals("df6", repos.get(5));
+    assertEquals("df3", repos.get(6));
+    assertEquals("df5", repos.get(7));
+    assertEquals("df6", repos.get(8));
+    assertEquals("df5", repos.get(9));
+    assertEquals("df6", repos.get(10));
+    assertEquals("df3", repos.get(11));
+    assertEquals("df5", repos.get(12));
+    assertEquals("df6", repos.get(13));
 
     repositoryMap = new HashMap<String, PlatformUtil.DF>();
 
@@ -426,11 +488,11 @@ public class TestSubscriptionManager extends LockssTestCase {
     assertEquals(10, repos.size());
     assertEquals("df4", repos.get(0));
     assertEquals("df3", repos.get(1));
-    assertEquals("df4", repos.get(2));
-    assertEquals("df2", repos.get(3));
-    assertEquals("df3", repos.get(4));
-    assertEquals("df4", repos.get(5));
-    assertEquals("df1", repos.get(6));
+    assertEquals("df2", repos.get(2));
+    assertEquals("df1", repos.get(3));
+    assertEquals("df4", repos.get(4));
+    assertEquals("df3", repos.get(5));
+    assertEquals("df4", repos.get(6));
     assertEquals("df2", repos.get(7));
     assertEquals("df3", repos.get(8));
     assertEquals("df4", repos.get(9));
