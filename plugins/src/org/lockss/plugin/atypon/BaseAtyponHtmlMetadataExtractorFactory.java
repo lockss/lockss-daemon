@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.2 2013-06-04 17:47:12 alexandraohlson Exp $
  */
 
 /*
@@ -123,8 +123,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
         
         // We can try to get the publishger from the tdb file.  This would be the most accurate
-        TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-        TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+        TdbAu tdbau = cu.getArchivalUnit().getTdbAu(); // returns null if titleConfig is null 
         String publisher = (tdbau == null) ? null : tdbau.getPublisherName();
         
         if (publisher == null) { 
