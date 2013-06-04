@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.5 2013-06-01 02:42:22 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.6 2013-06-04 23:21:30 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,6 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.DbManager.*;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,8 +47,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
+import java.util.TreeSet;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
@@ -68,6 +69,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
+import org.lockss.util.PlatformUtil;
 import org.lockss.util.StringUtil;
 
 /**
@@ -79,7 +81,18 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     ConfigurableManager {
 
   private static final Logger log = Logger.getLogger(SubscriptionManager.class);
-  
+
+  // Prefix for the subscription manager configuration entries.
+  private static final String PREFIX =
+      Configuration.PREFIX + "subscriptionManager.";
+
+  /**
+   * Maximum number of retries for transient SQL exceptions.
+   */
+  public static final String PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD =
+      PREFIX + "repositoryAvailSpaceThreshold";
+  public static final int DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD = 0;
+
   // Query to count recorded unconfigured archival units.
   private static final String UNCONFIGURED_AU_COUNT_QUERY = "select "
       + "count(*)"
@@ -237,6 +250,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   // The current set of unsubscribed ranges when processing multiple TdbAus.
   private Collection<BibliographicPeriod> currentUnsubscribedRanges;
 
+  // The list of repositories to use when configuring AUs.
+  private List<String> repositories = null;
+
+  // The index of the next repository to  be used when configuring AUs.
+  private int repositoryIndex = 0;
+
   // Sorter of publications.
   private static Comparator<SerialPublication> PUBLICATION_COMPARATOR =
       new Comparator<SerialPublication>() {
@@ -312,6 +331,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "setConfig(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    // Force a re-calculation of the relative weights of the repositories.
+    repositories = null;
+
     // On daemon startup, perform the handling of configuration changes in its
     // own thread.
     if (!isReady()) {
@@ -350,13 +372,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       Configuration prevConfig, Configuration.Differences changedKeys) {
     final String DEBUG_HEADER = "handleConfigurationChange(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    // TODO: Revisit the default repository strategy.
-    // Get the default repository.
-    String defaultRepo =
-	  remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
-    if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
 
     Connection conn = null;
     boolean isFirstRun = false;
@@ -400,7 +415,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
 
 	  // Process the archival unit.
-	  processNewTdbAu(tdbAu, conn, defaultRepo, isFirstRun, config);
+	  processNewTdbAu(tdbAu, conn, isFirstRun, config);
 	  conn.commit();
 	} catch (SQLException sqle) {
 	  log.error("Error handling archival unit " + tdbAu, sqle);
@@ -472,9 +487,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A TdbAu for the archival unit to be processed.
    * @param conn
    *          A Connection with the database connection to be used.
-   * @param defaultRepo
-   *          A String with the default repository to be used when configuring
-   *          an archival unit.
    * @param isFirstRun
    *          A boolean with <code>true</code> if this is the first run of the
    *          subscription manager, <code>false</code> otherwise.
@@ -483,12 +495,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  private void processNewTdbAu(TdbAu tdbAu, Connection conn, String defaultRepo,
-      boolean isFirstRun, Configuration config) throws SQLException {
+  private void processNewTdbAu(TdbAu tdbAu, Connection conn, boolean isFirstRun,
+      Configuration config) throws SQLException {
     final String DEBUG_HEADER = "processNewTdbAu(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "tdbAu = " + tdbAu);
-      log.debug2(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
       log.debug2(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
       log.debug2(DEBUG_HEADER + "config = " + config);
     }
@@ -562,7 +573,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (period.intersects(currentSubscribedRanges)
 	&& !period.intersects(currentUnsubscribedRanges)) {
       // Yes: Add the archival unit configuration to those to be configured.
-      config = addAuConfiguration(tdbAu, auId, defaultRepo, config);
+      config = addAuConfiguration(tdbAu, auId, config);
 
       // Delete the AU from the unconfigured AU table, if it is there.
       removeFromUnconfiguredAus(conn, auId);
@@ -801,20 +812,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A TdbAu with the archival unit.
    * @param auId
    *          A String with the archival unit identifier.
-   * @param defaultRepo
-   *          A String with the default repository.
    * @param config
    *          A Configuration to which to add the archival unit configuration.
    * @return a Configuration with the archival unit configuration added to the
    *         passed configuration.
    */
   private Configuration addAuConfiguration(TdbAu tdbAu, String auId,
-      String defaultRepo, Configuration config) {
+      Configuration config) {
     final String DEBUG_HEADER = "addAuConfiguration(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "tdbAu = " + tdbAu);
       log.debug2(DEBUG_HEADER + "auId = " + auId);
-      log.debug2(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
       log.debug2(DEBUG_HEADER + "config = " + config);
     }
 
@@ -826,8 +834,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     Properties props = PluginManager.defPropsFromProps(plugin, params);
     Configuration auConfig = ConfigManager.fromPropertiesUnsealed(props);
 
-    // Specify the default repository.
-    auConfig.put(PluginManager.AU_PARAM_REPOSITORY, defaultRepo);
+    // Specify the repository.
+    auConfig.put(PluginManager.AU_PARAM_REPOSITORY, getRepository());
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auConfig = " + auConfig);
 
     // Get the sub-tree prefix.
@@ -2327,11 +2335,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       }
     }
 
-    // Get the default repository.
-    String defaultRepo =
-	remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
+    // Force a re-calculation of the relative weights of the repositories.
+    repositories = null;
 
     Connection conn = null;
 
@@ -2375,7 +2380,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	          || !subscribedRanges.iterator().next().isEmpty())) {
 	    // Yes: Configure the archival units that correspond to this
 	    // subscription.
-	    bas = configureAus(conn, subscription, defaultRepo);
+	    bas = configureAus(conn, subscription);
 	  } else {
 	    bas = null;
 	  }
@@ -2500,8 +2505,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param subscription
    *          A Subscription with the subscription involved.
-   * @param defaultRepo
-   *          A String with the default repository to be used.
    * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
@@ -2510,14 +2513,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @throws SubscriptionException
    *           if there are problems with the subscription publication.
    */
-  BatchAuStatus configureAus(Connection conn, Subscription subscription,
-      String defaultRepo) throws IOException, SQLException,
-      SubscriptionException {
+  BatchAuStatus configureAus(Connection conn, Subscription subscription)
+      throws IOException, SQLException, SubscriptionException {
     final String DEBUG_HEADER = "configureAus(): ";
-    if (log.isDebug2()) {
+    if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
-      log.debug2(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
-    }
 
     // Get the subscribed ranges.
     Collection<BibliographicPeriod> subscribedRanges =
@@ -2561,7 +2561,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Configure the archival units.
     return configureAus(conn, publication, subscribedRanges,
-	subscription.getUnsubscribedRanges(), defaultRepo);
+	subscription.getUnsubscribedRanges());
   }
 
   /**
@@ -2632,8 +2632,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param unsubscribedRanges
    *          A Collection<BibliographicPeriod> with the unsubscribed ranges of
    *          the publication.
-   * @param defaultRepo
-   *          A String with the default repository to be used.
    * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
@@ -2643,14 +2641,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   private BatchAuStatus configureAus(Connection conn,
       SerialPublication publication,
       Collection<BibliographicPeriod> subscribedRanges,
-      Collection<BibliographicPeriod> unsubscribedRanges, String defaultRepo)
+      Collection<BibliographicPeriod> unsubscribedRanges)
       throws IOException, SQLException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publication = " + publication);
       log.debug2(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
       log.debug2(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
-      log.debug2(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
     }
 
     // Get the publication archival units.
@@ -2695,10 +2692,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	// not intersect any of the unsubscribed ranges.
 	if (period.intersects(subscribedRanges)
 	    && !period.intersects(unsubscribedRanges)) {
-
 	  // Yes: Add the the archival unit to the configuration of those to be
 	  // configured.
-	  config = addAuConfiguration(tdbAu, auId, defaultRepo, config);
+	  config = addAuConfiguration(tdbAu, auId, config);
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
 
 	  // Delete the AU from the unconfigured AU table, if it is there.
@@ -2733,11 +2729,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       }
     }
 
-    // Get the default repository.
-    String defaultRepo =
-	remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "defaultRepo = " + defaultRepo);
+    // Force a re-calculation of the relative weights of the repositories.
+    repositories = null;
 
     Connection conn = null;
 
@@ -2781,7 +2774,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	          || !subscribedRanges.iterator().next().isEmpty())) {
 	    // Yes: Configure the archival units that correspond to this
 	    // subscription.
-	    bas = configureAus(conn, subscription, defaultRepo);
+	    bas = configureAus(conn, subscription);
 	  } else {
 	    bas = null;
 	  }
@@ -2960,4 +2953,222 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   public Comparator<Subscription> getSubscriptionByPublicationComparator() {
     return SUBSCRIPTION_BY_PUBLICATION_COMPARATOR;
   }
+
+  /**
+   * Provides the repository to be used when configuring an AU.
+   * 
+   * @return a String identifying the repository to be used.
+   */
+  synchronized String getRepository() {
+    final String DEBUG_HEADER = "getRepository(): ";
+
+    // Check whether there is no list of weighted repositories.
+    if (repositories == null) {
+      // Yes: Populate the list of weighted repositories.
+      repositories = populateRepositories(remoteApi.getRepositoryMap());
+
+      // Use the first repository in the new list.
+      repositoryIndex = 0;
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "repositoryIndex = " + repositoryIndex);
+
+    // Get the repository to be used.
+    String repository = repositories.get(repositoryIndex);
+
+    // Point to the next repository.
+    repositoryIndex = ++repositoryIndex % repositories.size();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repository = " + repository);
+    return repository;
+  }
+
+  /**
+   * Populates the list of weighted repositories, to be used in a round-robin
+   * fashion for the subsequent AU configurations.
+   * 
+   * @param repositoryMap
+   *          A Map<String, PlatformUtil.DF> with the map of all distinct
+   *          repositories available.
+   * @return a List<String> with the list of weighted repositories.
+   */
+  List<String> populateRepositories(Map<String, PlatformUtil.DF> repositoryMap)
+  {
+    final String DEBUG_HEADER = "populateRepositories(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repositoryMap.size() = "
+	+ repositoryMap.size());
+
+    // Initialize the list of available repositories.
+    List<String> repos = new ArrayList<String>();
+
+    // Handle an empty repository map.
+    if (repositoryMap.size() < 1) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+      return repos;
+    }
+
+    // Get the available repositories sorted by their available space.
+    TreeSet<Entry<String, PlatformUtil.DF>> sortedRepos =
+	new TreeSet<Entry<String, PlatformUtil.DF>>(DF_BY_AVAIL_COMPARATOR);
+    sortedRepos.addAll(repositoryMap.entrySet());
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "sortedRepos.size() = " + sortedRepos.size());
+
+    // Handle the case of a single repository.
+    if (sortedRepos.size() == 1) {
+      repos.add(sortedRepos.first().getKey());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added " + sortedRepos.first().getKey());
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+      return repos;
+    }
+
+    // Get the repository available space threshold from the configuration.
+    int repoThreshold =	ConfigManager.getCurrentConfig()
+	.getInt(PARAM_REPOSITORY_AVAIL_SPACE_THRESHOLD,
+	        DEFAULT_REPOSITORY_AVAIL_SPACE_THRESHOLD);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "repoThreshold = " + repoThreshold);
+
+    // Get the available space of the repository with the least amount of
+    // available space.
+    long minAvail = sortedRepos.first().getValue().getAvail();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "minAvail = " + minAvail);
+
+    // Remove repositories that don't have a minimum of space, except the last
+    // one.
+    while (minAvail < repoThreshold) {
+      sortedRepos.remove(sortedRepos.first());
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "sortedRepos.size() = " + sortedRepos.size());
+
+      // If there is only one repository left, use it.
+      if (sortedRepos.size() == 1) {
+        repos.add(sortedRepos.first().getKey());
+        if (log.isDebug3())
+  	log.debug3(DEBUG_HEADER + "Added " + sortedRepos.first().getKey());
+
+        if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+        return repos;
+      }
+
+      // Get the available space of the repository with the least amount of
+      // available space.
+      minAvail = sortedRepos.first().getValue().getAvail();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "minAvail = " + minAvail);
+    }
+
+    // Count the remaining repositories.
+    int repoCount = sortedRepos.size();
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "repoCount = " + repoCount);
+
+    // Initialize the array of repositories and the total available space.
+    long totalAvailable = 0l;
+    int i = 0;
+    Entry<String, PlatformUtil.DF>[] repoArray = new Entry[repoCount];
+
+    for (Entry<String, PlatformUtil.DF> df : sortedRepos) {
+      totalAvailable += df.getValue().getAvail();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "totalAvailable = " + totalAvailable);
+
+      repoArray[i++] = df;
+    }
+
+    // For each repository, compute the target fraction and initialize the count
+    // of appearances in the final list.
+    i = 0;
+    double[] repoTargetFraction = new double[repoCount];
+    int[] repoAppearances = new int[repoCount];
+
+    for (Entry<String, PlatformUtil.DF> df : repoArray) {
+      repoTargetFraction[i] =
+	  df.getValue().getAvail() / (double)totalAvailable;
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "i = " + i
+	  + ", repoTargetFraction[i] = " + repoTargetFraction[i]);
+
+      repoAppearances[i++] = 0;
+    }
+
+    // The first repository in the list is the one with the largest amount of
+    // available space.
+    repos.add(repoArray[repoCount - 1].getKey());
+    repoAppearances[repoCount - 1]++;
+
+    // An indication of whether the created list matches the target fractions of
+    // all the repositories.
+    boolean done = false;
+    
+    while (!done) {
+      // If no differences between the target fractions and the fractions of
+      // appearances are found in the process below, the list is complete.
+      done = true;
+
+      double difference = 0;
+      double maxDifference = 0;
+      int nextRepo = -1;
+
+      // Loop through all the repositories.
+      for (int j = 0; j < repoCount; j++) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "j = " + j
+	    + ", repoAppearances[j]/(double)repos.size() = "
+	    + repoAppearances[j]/(double)repos.size()
+	    + ", repoTargetFraction[j] = " + repoTargetFraction[j]);
+
+	// Find the difference between the target fraction and the fraction of
+	// appearances.
+	difference =
+	    repoTargetFraction[j] - repoAppearances[j]/(double)repos.size();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "difference = " + difference);
+
+	// Update the largest difference, if necessary.
+	if (maxDifference < difference) {
+	  maxDifference = difference;
+	  nextRepo = j;
+	}
+      }
+
+      // Check whether a repository with the largest difference was found.
+      if (nextRepo != -1) {
+	// Yes: Add it to the list.
+	repos.add(repoArray[nextRepo].getKey());
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Added " + repoArray[nextRepo].getKey());
+
+	// Increment its appearance count.
+	repoAppearances[nextRepo]++;
+
+	// Check whether not all the target fractions have been achieved.
+	for (int k = 0; k < repoCount; k++) {
+	  difference =
+	      repoAppearances[k]/(double)repos.size() - repoTargetFraction[k];
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "k = " + k
+	      + ", difference = " + difference);
+
+	  // Within one per cent is a match.
+	  if (Math.abs(difference) > 0.01) {
+	    done = false;
+	    break;
+	  }
+	}
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "repos = " + repos);
+    return repos;
+  }
+
+  // Sorter of repository disk information by available space.
+  private static Comparator<Entry<String, PlatformUtil.DF>>
+  DF_BY_AVAIL_COMPARATOR = new Comparator<Entry<String, PlatformUtil.DF>>() {
+    public int compare(Entry<String, PlatformUtil.DF> o1,
+	Entry<String, PlatformUtil.DF> o2) {
+      // Sort by available space.
+      return ((new Long(o1.getValue().getAvail()))
+	  .compareTo(new Long(o2.getValue().getAvail())));
+    }
+  };
 }
