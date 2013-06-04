@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.1.2.1 2013-05-28 17:45:53 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.1.2.2 2013-06-04 17:01:45 fergaloy-sf Exp $
  */
 
 /*
@@ -43,6 +43,9 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -61,6 +64,7 @@ import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
+import org.lockss.util.PlatformUtil;
 import org.lockss.util.StringUtil;
 
 public class TestSubscriptionManager extends LockssTestCase {
@@ -333,14 +337,110 @@ public class TestSubscriptionManager extends LockssTestCase {
   }
 
   /**
+   * Check the behavior of populateRepositories().
+   */
+  public final void testPopulateRepositories() {
+    Map<String, PlatformUtil.DF> repositoryMap =
+	new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+
+    List<String> repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(1, repos.size());
+    assertEquals("df1", repos.get(0));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+    repositoryMap.put("df2", PlatformUtil.DF.makeThreshold(2L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(3, repos.size());
+    assertEquals("df2", repos.get(0));
+    assertEquals("df1", repos.get(1));
+    assertEquals("df2", repos.get(2));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df5", PlatformUtil.DF.makeThreshold(5L, 0.5));
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(6, repos.size());
+    assertEquals("df5", repos.get(0));
+    assertEquals("df5", repos.get(1));
+    assertEquals("df5", repos.get(2));
+    assertEquals("df5", repos.get(3));
+    assertEquals("df1", repos.get(4));
+    assertEquals("df5", repos.get(5));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df2", PlatformUtil.DF.makeThreshold(2L, 0.5));
+    repositoryMap.put("df3", PlatformUtil.DF.makeThreshold(3L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(3, repos.size());
+    assertEquals("df3", repos.get(0));
+    assertEquals("df2", repos.get(1));
+    assertEquals("df3", repos.get(2));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df4", PlatformUtil.DF.makeThreshold(4L, 0.5));
+    repositoryMap.put("df2", PlatformUtil.DF.makeThreshold(2L, 0.5));
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(7, repos.size());
+    assertEquals("df4", repos.get(0));
+    assertEquals("df4", repos.get(1));
+    assertEquals("df2", repos.get(2));
+    assertEquals("df4", repos.get(3));
+    assertEquals("df1", repos.get(4));
+    assertEquals("df2", repos.get(5));
+    assertEquals("df4", repos.get(6));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df5", PlatformUtil.DF.makeThreshold(5L, 0.5));
+    repositoryMap.put("df6", PlatformUtil.DF.makeThreshold(6L, 0.5));
+    repositoryMap.put("df3", PlatformUtil.DF.makeThreshold(3L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(5, repos.size());
+    assertEquals("df5", repos.get(0));
+    assertEquals("df6", repos.get(1));
+    assertEquals("df3", repos.get(2));
+    assertEquals("df5", repos.get(3));
+    assertEquals("df6", repos.get(4));
+
+    repositoryMap = new HashMap<String, PlatformUtil.DF>();
+
+    repositoryMap.put("df1", PlatformUtil.DF.makeThreshold(1L, 0.5));
+    repositoryMap.put("df3", PlatformUtil.DF.makeThreshold(3L, 0.5));
+    repositoryMap.put("df2", PlatformUtil.DF.makeThreshold(2L, 0.5));
+    repositoryMap.put("df4", PlatformUtil.DF.makeThreshold(4L, 0.5));
+
+    repos = subManager.populateRepositories(repositoryMap);
+    assertEquals(10, repos.size());
+    assertEquals("df4", repos.get(0));
+    assertEquals("df3", repos.get(1));
+    assertEquals("df4", repos.get(2));
+    assertEquals("df2", repos.get(3));
+    assertEquals("df3", repos.get(4));
+    assertEquals("df4", repos.get(5));
+    assertEquals("df1", repos.get(6));
+    assertEquals("df2", repos.get(7));
+    assertEquals("df3", repos.get(8));
+    assertEquals("df4", repos.get(9));
+  }
+
+  /**
    * Check the behavior of configureAus().
    */
   public final void testConfigureAus()
       throws TdbException, IOException, SQLException, SubscriptionException {
-    // Get the default repository.
-    String defaultRepo =
-	remoteApi.findLeastFullRepository(remoteApi.getRepositoryMap());
-
     // Specify the relevant properties of the archival unit.
     Properties properties = new Properties();
     properties.setProperty("title", "MyTitle");
@@ -371,15 +471,14 @@ public class TestSubscriptionManager extends LockssTestCase {
     Connection conn = dbManager.getConnection();
 
     // The AU is not added because it is already configured.
-    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
+    assertNull(subManager.configureAus(conn, subscription));
 
     // Delete the AU so that it can be added.
     pluginManager
     .deleteAu(pluginManager.getAuFromId(tdbAu.getAuId(pluginManager)));
 
     // The AU is added.
-    BatchAuStatus status =
-	subManager.configureAus(conn, subscription, defaultRepo);
+    BatchAuStatus status = subManager.configureAus(conn, subscription);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
@@ -392,7 +491,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 	.singleton(new BibliographicPeriod("1988-1999")));
 
     // The AU is not added because it is not inside the subscribed range.
-    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
+    assertNull(subManager.configureAus(conn, subscription));
 
     // Place the AU inside the subscribed range and the unsubscribed range.
     subscription.setSubscribedRanges(Collections
@@ -401,6 +500,6 @@ public class TestSubscriptionManager extends LockssTestCase {
 	.singleton(new BibliographicPeriod("1950-1960")));
 
     // The AU is not added because it is inside the unsubscribed range.
-    assertNull(subManager.configureAus(conn, subscription, defaultRepo));
+    assertNull(subManager.configureAus(conn, subscription));
   }
 }
