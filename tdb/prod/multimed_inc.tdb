@@ -67,8 +67,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.pdiconnect.com/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = last 12 months not available (login page for content). 3/27/12 sc. Test later.
-      comment[notReady31] = extra content-block, retest later
+      comment[notReady] = extra content-block, retest later
 
       au < released ; 1980-1981 ; Peritoneal Dialysis International Volume 1 ; 1 >
       au < released ; 1982 ; Peritoneal Dialysis International Volume 2 ; 2 >
@@ -100,8 +99,8 @@
       au < released ; 2008 ; Peritoneal Dialysis International Volume 28 ; 28 >
       au < released ; 2009 ; Peritoneal Dialysis International Volume 29 ; 29 >
       au < released ; 2010 ; Peritoneal Dialysis International Volume 30 ; 30 >
-      au < testing ; 2011 ; Peritoneal Dialysis International Volume 31 ; 31 >
-      au < testing ; 2012 ; Peritoneal Dialysis International Volume 32 ; 32 >
+      au < notReady ; 2011 ; Peritoneal Dialysis International Volume 31 ; 31 >
+      au < notReady ; 2012 ; Peritoneal Dialysis International Volume 32 ; 32 >
       au < manifest ; 2013 ; Peritoneal Dialysis International Volume 33 ; 33 >
 
     }
