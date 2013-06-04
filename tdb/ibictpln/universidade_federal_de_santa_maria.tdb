@@ -19,7 +19,7 @@
 
     param[journal_id] = reveducacao
 
-    au < testing ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
+    au < notReady ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
     au < released ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
     au < ready ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
     au < released ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
@@ -28,10 +28,10 @@
     au < ready ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
     au < ready ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
     au < ready ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
-    au < testing ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
+    au < notReady ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
     au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
-    au < testing ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
-    au < testing ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
+    au < notReady ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
+    au < notReady ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
     au < manifest ; 2013 ; 14 ; Educação Volume 14 ; 2013 >
   }
 
@@ -68,7 +68,7 @@
 
     param[journal_id] = reufsm
 
-    au < testing ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
-    au < testing ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
+    au < notReady ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
+    au < notReady ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
   }
 }
