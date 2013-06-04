@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.3 2013-06-03 20:24:53 barry409 Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.4 2013-06-04 22:45:10 barry409 Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
    * and they disagree about URL: content[d]
    */
   private void doTest(int v1, int v2, int v3, int v4,
-		      int p1, int p2, int p3, int p4, int d) {
+		      int p1, int p2, int p3, int p4, int d) throws Exception {
     doTest(v1, v2, v3, v4, p1, p2, p3, p4, d, 1, 1);
   }
 
@@ -89,16 +89,16 @@ public class TestVoteBlocksTallier extends LockssTestCase {
    */
   private void doTest(int v1, int v2, int v3, int v4,
 		      int p1, int p2, int p3, int p4,
-		      int d, int vVer, int pVer) {
+		      int d, int vVer, int pVer) throws Exception {
     VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d, vVer);
     assertNotNull(vBlocks);
     assert(vBlocks.size() >= 0);
     VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
     assertNotNull(pBlocks);
     assert(pBlocks.size() >= 0);
-    VoteBlocksTallier vbt = new VoteBlocksTallier();
+    VoteBlocksTallier vbt = VoteBlocksTallier.make();
     vbt.tallyVoteBlocks(vBlocks, pBlocks);
-    int numAgree = vbt.countAgreeUrl();
+    int numAgree = vbt.getCount(VoteBlocksTallier.Category.AGREE);
     int shouldAgree = 0;
     if (min(v1,v2) >= 0 && min(p1,p2) >= 0) {
       shouldAgree += atLeastZero(min(v2,p2) - max(v1,p1));
@@ -106,7 +106,7 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     if (min(v3,v4) >= 0 && min(p3,p4) >= 0) {
       shouldAgree += atLeastZero(min(v4,p4) - max(v3,p3));
     }
-    int numDisagree = vbt.countDisagreeUrl();
+    int numDisagree = vbt.getCount(VoteBlocksTallier.Category.DISAGREE);
     int shouldDisagree = 0;
     if (max(v1,p1) <= d && d <= min(v2,p2)) {
       // The URL they disagree on is in the first range they both have.
@@ -117,10 +117,10 @@ public class TestVoteBlocksTallier extends LockssTestCase {
       shouldAgree--;
       shouldDisagree++;
     }
-    int numVoterOnly = vbt.countVoterOnlyUrl();
+    int numVoterOnly = vbt.getCount(VoteBlocksTallier.Category.VOTER_ONLY);
     int shouldVoterOnly = atLeastZero(p1 - v1) + atLeastZero(v2 - p2) +
       atLeastZero(p3 - v3) + atLeastZero(v4 - p4);
-    int numPollerOnly = vbt.countPollerOnlyUrl();
+    int numPollerOnly = vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY);
     int shouldPollerOnly = atLeastZero(v1 - p1) + atLeastZero(p2 - v2) +
       atLeastZero(v3 - p3) + atLeastZero(p4 - v4);
     assertEquals(shouldAgree, numAgree);

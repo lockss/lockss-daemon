@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.31 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: VoterActions.java,v 1.32 2013-06-04 22:45:10 barry409 Exp $
  */
 
 /*
@@ -309,16 +309,22 @@ public class VoterActions {
       if (! Arrays.equals(nonce2, ud.getVoterNonce2())) {
 	log.error("Nonce2 from poller did not match our nonce2");
       } else {
-	VoteBlocksTallier vbt = new VoteBlocksTallier();
-	vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
-			    msg.getVoteBlocks());
-	int nAgree = vbt.countAgreeUrl();
+	VoteBlocksTallier vbt = VoteBlocksTallier.make();
+	try {
+	  vbt.tallyVoteBlocks(ud.getSymmetricVoteBlocks(),
+			      msg.getVoteBlocks());
+	} catch (IOException e) {
+	  // No agreement if we fail to process ALL of our Blocks.
+	  log.error("Unable to process our DiskVoteBlocks.");
+	  return V3Events.evtReceiptOk;
+	}
+	int nAgree = vbt.getCount(VoteBlocksTallier.Category.AGREE);
 	ud.setNumAgreeUrl(nAgree);
-	int nDisagree = vbt.countDisagreeUrl();
+	int nDisagree = vbt.getCount(VoteBlocksTallier.Category.DISAGREE);
 	ud.setNumDisagreeUrl(nDisagree);
-	int nVoterOnly = vbt.countVoterOnlyUrl();
+	int nVoterOnly = vbt.getCount(VoteBlocksTallier.Category.VOTER_ONLY);
 	ud.setNumVoterOnlyUrl(nVoterOnly);
-	int nPollerOnly = vbt.countPollerOnlyUrl();
+	int nPollerOnly = vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY);
 	ud.setNumPollerOnlyUrl(nPollerOnly);
 	log.debug("Symmetric poll result:" +
 		  " agree: " + nAgree +

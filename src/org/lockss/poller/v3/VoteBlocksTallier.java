@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.7 2013-06-03 20:24:53 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.8 2013-06-04 22:45:10 barry409 Exp $
  */
 
 /*
@@ -32,18 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import java.io.*;
-import java.nio.*;
+import java.io.IOException;
 import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.ShouldNotHappenException;
-import org.lockss.hasher.HashBlock;
-import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.protocol.VoteBlocks;
 import org.lockss.protocol.VoteBlocksIterator;
+import org.lockss.protocol.OrderedVoteBlocksIterator;
 import org.lockss.util.*;
 
 /**
@@ -54,159 +52,203 @@ import org.lockss.util.*;
  * two VoteBlocks instances by comparing their lists of VoteBlock
  * instances and the hashes of the versions they contain.
  */
-public class VoteBlocksTallier {
-  private static final Logger log = Logger.getLogger("VoteBlocksTallier");
-  // XXX DSHR cannot keep these lists of URLs in memory - need to put them
-  // XXX DSHR on disk, and make collecting them optional since we actually
-  // XXX DSHR only need the counts
-  private boolean keepUrlLists = false;
-  private ArrayList<String> agreeUrl = new ArrayList<String>();
-  private int agreeCount = 0;
-  private ArrayList<String> disagreeUrl = new ArrayList<String>();
-  private int disagreeCount = 0;
-  private ArrayList<String> voterOnlyUrl = new ArrayList<String>();
-  private int voterOnlyCount = 0;
-  private ArrayList<String> pollerOnlyUrl = new ArrayList<String>();
-  private int pollerOnlyCount = 0;
+class VoteBlocksTallier {
+  private static final Logger log = Logger.getLogger(V3Voter.class);
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
+  // Should not be true in production. See comment at WithLists.
   /**
-   * If true, lists of agree/disagree/voterOnly/pollerOnly URLs will
-   * be kept. XXX see comment above
+   * If true, lists of AGREE/DISAGREE/VOTER_ONLY/POLLER_ONLY URLs will
+   * be kept.
    */
   public static final String PARAM_KEEP_URL_LISTS =
-    PREFIX + "keepurlLists";
+    PREFIX + "keepUrlLists";
   public static final boolean
     DEFAULT_KEEP_URL_LISTS = false;
 
-  public VoteBlocksTallier() {
-    keepUrlLists = CurrentConfig.getBooleanParam(PARAM_KEEP_URL_LISTS,
-						 DEFAULT_KEEP_URL_LISTS);
+  /**
+   * Categories of the URLs.
+   */
+  enum Category {
+    /** The poller and voter share at least one version of the content. */
+    AGREE,
+    /** The poller and voter both have content, but share no versions. */
+    DISAGREE,
+    /** The voter has the URL, but the poller does not. */
+    VOTER_ONLY,
+    /** The poller has the URL, but the voter does not. */
+    POLLER_ONLY};
+
+  /**
+   * Create a VoteBlocksTallier. Use the current configuration to
+   * decide if Lists of URLs should be kept.
+   */
+  public static VoteBlocksTallier make() {
+    boolean keepUrlLists =
+      CurrentConfig.getBooleanParam(PARAM_KEEP_URL_LISTS,
+				    DEFAULT_KEEP_URL_LISTS);
+    return make(keepUrlLists);
+  }
+
+  // package, for testing.
+  static VoteBlocksTallier make(boolean keepUrlLists) {
+    if (keepUrlLists) {
+      return new WithLists();
+    } else {
+      return new VoteBlocksTallier();
+    }
+  }
+
+  // XXX DSHR cannot keep these lists of URLs in memory - need to put them
+  // XXX DSHR on disk, and make collecting them optional since we actually
+  // XXX DSHR only need the counts
+  /**
+   * A subclass for use when the actual Lists of URLs should be made
+   * available.
+   */
+  private static class WithLists extends VoteBlocksTallier {
+    private final Map<Category, List<String>> categoryMap =
+      new EnumMap<Category, List<String>>(Category.class);
+
+    WithLists() {
+      for (Category category: Category.values()) {
+	categoryMap.put(category, new ArrayList<String>());
+      }
+      // For production, don't allow the lists to be kept.
+      throw new ShouldNotHappenException("WithLists should not be enabled.");
+    }
+
+    @Override protected void addUrl(Category category, String url) {
+      super.addUrl(category, url);
+      getList(category).add(url);
+    }
+
+    @Override public List<String> getList(Category category) {
+      return categoryMap.get(category);
+    }
   }
 
   /**
-   * Used by the voter in a symmetric poll to tally the VoteBlocks
-   * in the receipt message aginst the VoteBlocks object, which
-   * was created during voter generation.
-   * @param poller A ParticipantUserData instance to represent the poller
-   * @param voterBlocks The VoteBlocks the voter generated
-   * @param pollerBlocks The VoteBlocks the poller sent in the receipt.
+   * Map from the Category to the number of blocks in that Category.
    */
-  public void tallyVoteBlocks(VoteBlocks voterBlocks,
-			      VoteBlocks pollerBlocks) {
-    // VoteBlocks.iterator() delivers VoteBlock instances in URL order.
+  private final AbstractMap<Category, Integer> categoryMap =
+    new EnumMap<Category, Integer>(Category.class);
+
+  private VoteBlocksTallier() {
+    for (Category category: Category.values()) {
+      categoryMap.put(category, 0);
+    }
+  }
+
+  /**
+   * Update internal structures -- lists or counts -- for this newly-
+   * categorized URL.
+   * @param category The Category for this URL.
+   * @param url A URL which has been categorized.
+   */
+  protected void addUrl(Category category, String url) {
+    log.debug3(url+" is: "+category);
+    categoryMap.put(category, getCount(category)+1);
+  }
+
+  /**
+   * @param category The category of vote in question.
+   * @return The number of URLs added which were classified into the category.
+   */
+  public int getCount(Category category) {
+      return categoryMap.get(category);
+  }
+
+  /**
+   * @param category The category of vote in question.
+   * @return The List of URLs added which were classified into the category.
+   * @throws ShouldNotHappenException If Lists are not being kept.
+   */
+  public List<String> getList(Category category) {
+      throw new ShouldNotHappenException("VoteBlockTallier didn't keep lists");
+  }
+
+  /**
+   * Used by the voter in a symmetric poll to tally the VoteBlocks in
+   * the receipt message from the poller against the VoteBlocks object
+   * which was created during our vote generation.
+   * @param poller A ParticipantUserData instance to represent the poller
+   * @param voterBlocks The {@link VoteBlocks} the voter generated
+   * @param pollerBlocks The {@link VoteBlocks} the poller sent in the
+   * receipt.
+   * @throws IOException if voter's {@link VoteBlocksIterator}
+   * VoteBlocks throws it.
+   */
+  public final void
+    tallyVoteBlocks(VoteBlocks voterBlocks, VoteBlocks pollerBlocks)
+      throws IOException {
     if (voterBlocks == null) {
       throw new IllegalArgumentException("voterBlocks null");
     }
     if (pollerBlocks == null) {
       throw new IllegalArgumentException("pollerBlocks null");
     }
-    try {
-      VoteBlocksIterator vIterator = voterBlocks.iterator();
-      VoteBlocksIterator pIterator = pollerBlocks.iterator();
-      VoteBlock vBlock = null;
-      VoteBlock oldVoterBlock = null;
-      VoteBlock pBlock = null;
-      VoteBlock oldPollerBlock = null;
-    
-      while (true) {
-	if (vBlock == null && vIterator.hasNext()) {
-	  vBlock = vIterator.next();
-	}
-	if (vBlock != null && oldVoterBlock != null) {
-	  if (vBlock.compareTo(oldVoterBlock) < 0) {
-	    throw 
-	      new ShouldNotHappenException("VoteBlocks should be in order.");
-	  }
-	  oldVoterBlock = vBlock;
-	}
-	if (pBlock == null && pIterator.hasNext()) {
-	  pBlock = pIterator.next();
-	}
-	if (pBlock != null && oldPollerBlock != null) {
-	  if (pBlock.compareTo(oldPollerBlock) < 0) {
-	    // The poller has sent blocks out of order.  Poison the
-	    // agreeCount so that we don't become a willing repairer.
+    // Our own hasher made the vote blocks. If they are out of order,
+    // allow OrderedVoteBlocksIterator.OrderException to throw and
+    // abort the poll.
+    VoteBlocksIterator vIterator =
+      new OrderedVoteBlocksIterator(voterBlocks.iterator());
+    VoteBlocksIterator pIterator =
+      new OrderedVoteBlocksIterator(pollerBlocks.iterator());
 
-	    // NOTE: In the poller code, an out of order vote is
-	    // treated as the end of any VoteBlock for that voter. But
-	    // in the poller there is reason to continue tallying when
-	    // one voter is out of order. The parallel here would be
-	    // to not ask for any more blocks from the poller but
-	    // continue to count the voter-only blocks. Instead, just
-	    // make sure that the agreement is low for a poller with
-	    // out of order blocks.
-	    log.warning("Poller VoteBlocks out of order");
-	    this.agreeCount = 0;
-	    break;
-	  }
-	  oldPollerBlock = pBlock;
-	}
-	if (vBlock == null && pBlock == null) {
-	  // Run out of blocks in both iterators
-	  break;
-	} else if (vBlock == null) {
-	  // Poller has blocks after Voter
-	  if (keepUrlLists) {
-	    pollerOnlyUrl.add(pBlock.getUrl());
-	  }
-	  pollerOnlyCount++;
-	  // Consume the Poller's VoteBlock
-	  pBlock = null;
-	} else if (pBlock == null) {
-	  // Voter has blocks after Poller
-	  if (keepUrlLists) {
-	    voterOnlyUrl.add(vBlock.getUrl());
-	  }
-	  voterOnlyCount++;
-	  // Consume the Voter's VoteBlock
-	  vBlock = null;
-	} else {
-	  String vUrl = vBlock.getUrl();
+    // todo(bhayes): This mirrors the use of UrlTallier in the
+    // poller. Can they be unified?
+    while (vIterator.hasNext()) {
+      // Consume exactly one vBlock each time around the loop.
+      VoteBlock vBlock = vIterator.next();
+      String vUrl = vBlock.getUrl();
+      try {
+	while (pIterator.hasNext() &&
+	       vBlock.compareTo(pIterator.peek()) > 0) {
+	  // Consume pBlocks until empty or at or beyond beyond the
+	  // vBlock
+	  VoteBlock pBlock = pIterator.next();
 	  String pUrl = pBlock.getUrl();
-	  int comparison = vBlock.compareTo(pBlock);
-	  if (comparison == 0) {
-	    log.debug3("Both have " + vUrl);
-	    // Voter and Poller both have this URL
-	    if (VoteBlockVoteBlockComparerFactory.make(vBlock).
-		sharesVersion(pBlock)) {
-	      if (keepUrlLists) {
-		agreeUrl.add(vUrl);
-	      }
-	      agreeCount++;
-	    } else {
-	      if (keepUrlLists) {
-		disagreeUrl.add(vUrl);
-	      }
-	      disagreeCount++;
-	    }
-	    // Consume both VoteBlocks
-	    vBlock = pBlock = null;
-	  } else if (comparison < 0) {
-	    log.debug3("Voter has " + vUrl);
-	    // Voter has this URL, Poller doesn't
-	    if (keepUrlLists) {
-	      voterOnlyUrl.add(vUrl);
-	    }
-	    voterOnlyCount++;
-	    // Consume the Voter's VoteBlock
-	    vBlock = null;
-	  } else {
-	    log.debug3("Poller has " + vUrl);
-	    // Poller has this URL, Voter doesn't
-	    if (keepUrlLists) {
-	      pollerOnlyUrl.add(pUrl);
-	    }
-	    pollerOnlyCount++;
-	    // Consume the Poller's VoteBlock
-	    pBlock = null;
-	  }
+	  addUrl(Category.POLLER_ONLY, pUrl);
 	}
+      } catch (OrderedVoteBlocksIterator.OrderException ex) {
+	// If pIterator is either out of order or has an IOException,
+	// treat it as if it just became empty, and count the rest of
+	// the vIterator's VoteBlock instances as VOTER_ONLY. That way
+	// if the IOException happened near the end there may still be
+	// high agreement.
+	log.warning("Poller had VoteBlocks out of order.");
+	pIterator = VoteBlocksIterator.EMPTY_ITERATOR;
+      } catch (IOException ex) {
+	log.warning("Poller IOException while tallying symmetric poll", ex);
+	pIterator = VoteBlocksIterator.EMPTY_ITERATOR;
       }
+      // pIterator.hasNext() would have already thrown OrderException
+      // if blocks are out of order.
+      if (pIterator.hasNext() && vBlock.compareTo(pIterator.peek()) == 0) {
+	// Consume a pBlock if and only if it matches the vBlock.
+	VoteBlock pBlock = pIterator.next();
+	if (VoteBlockVoteBlockComparerFactory.make(vBlock).
+	    sharesVersion(pBlock)) {
+	  addUrl(Category.AGREE, vUrl);
+	} else {
+	  addUrl(Category.DISAGREE, vUrl);
+	}
+      } else {
+	addUrl(Category.VOTER_ONLY, vUrl);
+      }
+    }
+    // vIterator is empty; consume the rest of the pBlocks
+    try {
+      while (pIterator.hasNext()) {
+	String pUrl = pIterator.next().getUrl();
+	addUrl(Category.POLLER_ONLY, pUrl);
+      }
+    } catch (OrderedVoteBlocksIterator.OrderException ex) {
+      log.warning("Poller had VoteBlocks out of order.");
     } catch (IOException ex) {
-      log.error("IOException while tallying symmetric poll", ex);
-      return;
+      log.warning("Poller IOException while tallying symmetric poll", ex);
     }
   }
 
@@ -214,67 +256,12 @@ public class VoteBlocksTallier {
    * @return the percent for which the poller agrees with the us, the
    * voter.
    */
-  public float percentAgreement() {
+  public final float percentAgreement() {
     // NOTE: Ignore the URLs the poller had but we didn't. The
     // agreement is based only on the subset we have.
-    int total = countAgreeUrl() + countDisagreeUrl() + countVoterOnlyUrl();
-    return total == 0 ? 0.0f : ((float)countAgreeUrl())/total;
+    int total = getCount(Category.AGREE) +
+      getCount(Category.DISAGREE) +
+      getCount(Category.VOTER_ONLY);
+    return total == 0 ? 0.0f : ((float)getCount(Category.AGREE))/total;
   }
-
-  /**
-   * @return count of URLs that agree
-   */
-  protected int countAgreeUrl() {
-    return agreeCount;
-  }
-
-  /**
-   * @return List of URLs that agree
-   */
-  protected List<String> getAgreeUrls() {
-    return agreeUrl;
-  }
-
-  /**
-   * @return count of URLs that disagree
-   */
-  protected int countDisagreeUrl() {
-    return disagreeCount;
-  }
-
-  /**
-   * @return List of URLs that disagree
-   */
-  protected List<String> getDisagreeUrls() {
-    return disagreeUrl;
-  }
-
-  /**
-   * @return count of URLs that exist only at voter
-   */
-  protected int countVoterOnlyUrl() {
-    return voterOnlyCount;
-  }
-
-  /**
-   * @return List of URLs that exist only at voter
-   */
-  protected List<String> getVoterOnlyUrls() {
-    return voterOnlyUrl;
-  }
-
-  /**
-   * @return count of URLs that exist only at poller
-   */
-  protected int countPollerOnlyUrl() {
-    return pollerOnlyCount;
-  }
-
-  /**
-   * @return List of URLs that exist only at poller
-   */
-  protected List<String> getPollerOnlyUrls() {
-    return pollerOnlyUrl;
-  }
-
 }
