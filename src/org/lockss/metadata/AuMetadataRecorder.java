@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.10 2013-05-22 23:26:59 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.11 2013-06-04 23:51:15 fergaloy-sf Exp $
  */
 
 /*
@@ -510,9 +510,21 @@ public class AuMetadataRecorder {
 	  publisherSeq = mdManager.findAuPublisher(conn, auSeq);
 	  log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
-	  // Get its name.
-	  publisherName = mdManager.getPublisherName(conn, publisherSeq);
-	  log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+	  // Check whether the AU publisher was found.
+	  if (publisherSeq != null) {
+	    // Yes: Get its name.
+	    publisherName = mdManager.getPublisherName(conn, publisherSeq);
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+	  } else {
+	    // No: Report the problem.
+	    log.error("Null publisherSeq for auSeq = " + auSeq);
+	    log.error("auId = " + auId);
+	    log.error("auKey = " + auKey);
+	    log.error("auMdSeq = " + auMdSeq);
+	    log.error("auSeq = " + auSeq);
+	    throw new MetadataException("Null publisherSeq for auSeq = "
+		+ auSeq, mdinfo);
+	  }
 	} else {
 	  // No: Loop through all outstanding previous problems for this AU.
 	  for (String problem : mdManager.findAuProblems(conn, auId)) {
