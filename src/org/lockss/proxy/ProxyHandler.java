@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.78.10.1 2013-05-30 06:50:53 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.78.10.2 2013-06-04 17:53:17 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.78.10.1 2013-05-30 06:50:53 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.78.10.2 2013-06-04 17:53:17 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -85,6 +85,13 @@ public class ProxyHandler extends AbstractHttpHandler {
   static final String PARAM_NEVER_PROXY =
     Configuration.PREFIX + "proxy.neverProxy";
   static final boolean DEFAULT_NEVER_PROXY = false;
+
+  /** If true the audit proxy refrains from returning 404 until all AUs are
+   * started - 503 is returned instead. */
+  static final String PARAM_AUDIT_503_UNTIL_AUS_STARTED =
+    Configuration.PREFIX + "proxy.audit503UntilAusStarted";
+  static final boolean DEFAULT_AUDIT_503_UNTIL_AUS_STARTED = true;
+
   static final String PARAM_PROCESS_FORMS =
       Configuration.PREFIX + "proxy.handleFormPost";
   static final boolean DEFAULT_PROCESS_FORMS = false;
@@ -98,6 +105,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
   private boolean auditProxy = false;
   private boolean auditIndex = false;
+  private boolean audit503UntilAusStarted = DEFAULT_AUDIT_503_UNTIL_AUS_STARTED;
   private boolean handleFormPost = DEFAULT_PROCESS_FORMS;
 
   private boolean isFailOver = false;
@@ -111,10 +119,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     // handler it creates.  But is mostly only used by normal proxy, and
     // would require casting.
     proxyMgr = theDaemon.getProxyManager();
-    neverProxy = CurrentConfig.getBooleanParam(PARAM_NEVER_PROXY,
-					       DEFAULT_NEVER_PROXY);
-    handleFormPost = CurrentConfig.getBooleanParam(PARAM_PROCESS_FORMS,
-        DEFAULT_PROCESS_FORMS);
+    Configuration config = ConfigManager.getCurrentConfig();
+    neverProxy = config.getBoolean(PARAM_NEVER_PROXY, DEFAULT_NEVER_PROXY);
+    audit503UntilAusStarted =
+      config.getBoolean(PARAM_AUDIT_503_UNTIL_AUS_STARTED,
+			DEFAULT_AUDIT_503_UNTIL_AUS_STARTED);
+
+    handleFormPost = config.getBoolean(PARAM_PROCESS_FORMS,
+				       DEFAULT_PROCESS_FORMS);
     hostname = PlatformUtil.getLocalHostname();
   }
 
@@ -421,7 +433,15 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  String errmsg = auditProxy
 	    ? "Not found in LOCKSS box " + PlatformUtil.getLocalHostname()
 	    : "Not found";
-	  if (auditIndex) {
+	  if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
+	    // TODO - Guesstimate remaining time and add Retry-After header
+	    errmsg =
+	      "This LOCKSS box is starting.  Please try again in a moment.";
+	    response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
+	    request.setHandled(true);
+	    logAccess(request, "not present, no forward, 503",
+		      TimeBase.msSince(reqStartTime));
+	  } else if (auditIndex) {
 	    sendErrorPage(request,
 			  response,
 			  404, errmsg,
