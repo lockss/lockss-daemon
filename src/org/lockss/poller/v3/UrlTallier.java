@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.18 2013-05-29 19:45:05 dshr Exp $
+ * $Id: UrlTallier.java,v 1.19 2013-06-04 20:57:43 barry409 Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.HashBlock;
+import org.lockss.protocol.OrderedVoteBlocksIterator;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.protocol.VoteBlocks;
@@ -87,7 +88,10 @@ final class UrlTallier {
 	if (voteBlocks == null) {
 	  log.warning("Voter " + userData + " has no voteBlocks.");
 	} else {
-	  this.iter = voteBlocks.iterator();
+	  VoteBlocksIterator iter = voteBlocks.iterator();
+	  if (iter != null) {
+	    this.iter = new OrderedVoteBlocksIterator(iter);
+	  }
 	}
       } catch (FileNotFoundException e) {
 	installErrorIterator(e);
@@ -122,18 +126,12 @@ final class UrlTallier {
     void nextVoteBlock() {
       try {
 	if (iter.hasNext()) {
-	  String prevUrl = getUrl();
 	  voteBlock = iter.next();
-	  String url = getUrl();
-	  // Check that the iterator is returning URLs in the
-	  // canonical order.
-	  if (prevUrl != null &&
-	      VoteBlock.compareUrls(prevUrl, url) >= 0) {
-	    installErrorIterator(new Exception("VoteBlocks not in order."));
-	  }
 	} else {
 	  voteBlock = null;
 	}
+      } catch (OrderedVoteBlocksIterator.OrderException e) {
+	installErrorIterator(e);
       } catch (IOException e) {
 	// Even if the error is transient, we are trying to keep in
 	// synch. If we later tried to catch up, we could have a
