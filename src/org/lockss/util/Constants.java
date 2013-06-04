@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.28 2013-02-08 23:23:57 clairegriffin Exp $
+ * $Id: Constants.java,v 1.29 2013-06-04 22:42:44 ldoan Exp $
  */
 
 /*
@@ -184,6 +184,9 @@ public interface Constants {
 
   /** The MIME type string for PDF ({@value}). */
   public static final String MIME_TYPE_PDF = "application/pdf";
+  
+  /** The MIME type string for XML ({@value}). */
+   public static final String MIME_TYPE_XML = "text/xml";
 
   /** The MIME type string for browser PAC files ({@value}). */
   public static final String MIME_TYPE_PAC = "application/x-ns-proxy-autoconfig";
