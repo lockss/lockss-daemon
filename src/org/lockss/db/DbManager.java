@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.22 2013-05-29 16:05:55 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.23 2013-06-05 21:51:06 tlipkis Exp $
  */
 
 /*
@@ -154,6 +154,7 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static final String PARAM_DATASOURCE_PASSWORD = DATASOURCE_ROOT
       + ".password";
+  public static final String DEFAULT_DATASOURCE_PASSWORD = "insecure";
 
   /**
    * Set to false to prevent DbManager from running
@@ -3159,7 +3160,8 @@ public class DbManager extends BaseLockssDaemonManager
       log.debug3(DEBUG_HEADER + "dataSourceUser = " + dataSourceUser);
 
     // Save the configured password.
-    dataSourcePassword = currentConfig.get(PARAM_DATASOURCE_PASSWORD);
+    dataSourcePassword = currentConfig.get(PARAM_DATASOURCE_PASSWORD,
+					   DEFAULT_DATASOURCE_PASSWORD);
     //if (log.isDebug3())
       //log.debug3(DEBUG_HEADER + "dataSourcePassword = " + dataSourcePassword);
 
