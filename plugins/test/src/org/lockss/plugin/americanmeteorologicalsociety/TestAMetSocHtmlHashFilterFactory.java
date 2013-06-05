@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:11:43 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.4 2013-06-05 23:55:14 alexandraohlson Exp $
  */
 /*
 
@@ -237,7 +237,43 @@ private static final String copyrightHtml =
           "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
           "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/XXX1234\">Abstract</a>" +
           "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/XXX1234\">Full Text</a>";
-
+      
+      private static final String emptyHTagOne =
+          "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
+              "    <div class=\"panelTopLeft\"></div>" +
+              "    <div class=\"panelTopMiddle panel_228_width\">" +
+              "    <h3></h3>" +
+              "    </div>" +
+              "    <div class=\"panelTopRight\"></div>" +
+              "    <div class=\"panelBody panel_228_pad\">" +
+              "" +
+              "&nbsp;" +
+              "" +
+              "" +
+              "    </div>" +
+              "    <div class=\"panelBottomLeft\"></div>" +
+              "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+              "    <div class=\"panelBottomRight\"></div>" +
+              "</div>";
+      
+      private static final String emptyHTagTwo =
+          "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
+              "    <div class=\"panelTopLeft\"></div>" +
+              "    <div class=\"panelTopMiddle panel_228_width\">" +
+              "       <h3>&nbsp;</h3>" +
+              "    </div>" +
+              "    <div class=\"panelTopRight\"></div>" +
+              "    <div class=\"panelBody panel_228_pad\">" +
+              "        " +
+              "<h2 style=\"text-align: center;\"> </h2>" +
+              "" +
+              "        " +
+              "    </div>" +
+              "    <div class=\"panelBottomLeft\"></div>" +
+              "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+              "    <div class=\"panelBottomRight\"></div>" +
+              "</div>";
+      
 
   public void testFiltering() throws Exception {
     InputStream inA;
@@ -277,5 +313,12 @@ private static final String copyrightHtml =
     inA = fact.createFilteredInputStream(mau, new StringInputStream(changeableCommentsHtml),
         ENC);
     assertEquals(changeableCommentsFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(emptyHTagOne),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(emptyHTagTwo),
+        ENC);
+    assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
+
   }
 }
