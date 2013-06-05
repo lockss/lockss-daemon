@@ -275,6 +275,20 @@
   {
 
       title <
+        name = Biomedicines ;
+        eissn = 2227-9059
+      >
+
+      param[journal_id] = biomedicines
+      param[journal_issn] = 2227-9059
+
+      au < exists ; 2013 ; Biomedicines Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
         name = Biomolecules ;
         eissn = 2218-273X
       >
@@ -486,6 +500,20 @@
 
       au < exists ; 2012 ; Computers Volume 1 ; 1 >
       au < exists ; 2013 ; Computers Volume 2 ; 2 >
+
+  }
+
+  {
+
+      title <
+        name = Cosmetics ;
+        eissn = 2079-9284
+      >
+
+      param[journal_id] = cosmetics
+      param[journal_issn] = 2079-9284
+
+      au < exists ; 2013 ; Cosmetics Volume 1 ; 1 >
 
   }
 
@@ -864,6 +892,20 @@
   {
 
       title <
+        name = Inorganics ;
+        eissn = 2304-6740
+      >
+
+      param[journal_id] = inorganics
+      param[journal_issn] = 2304-6740
+
+      au < exists ; 2013 ; Inorganics Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
         name = Insects ;
         eissn = 2075-4450
       >
@@ -1206,6 +1248,20 @@
       param[journal_issn] = 2227-7390
 
       au < exists ; 2013 ; Mathematics Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Medical Sciences ;
+        eissn = 2076-3271
+      >
+
+      param[journal_id] = medsci
+      param[journal_id] = 2076-3271
+
+      au < exists ; 2013 ; Medical Sciences Volume 1 ; 1 >
 
   }
 
@@ -1780,6 +1836,20 @@
       param[journal_issn] = 2227-7080
 
       au < exists ; 2013 ; Technologies Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
+        name = Toxics ;
+        eissn = 2305-6304
+      >
+
+      param[journal_id] = toxics
+      param[journal_issn] = 2305-6304
+
+      au < exists ; 2013 ; Toxics Volume 1 ; 1 >
 
   }
 
