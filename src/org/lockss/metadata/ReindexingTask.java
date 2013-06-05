@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.10 2013-05-03 01:59:17 tlipkis Exp $
+ * $Id: ReindexingTask.java,v 1.11 2013-06-05 23:21:45 thib_gc Exp $
  */
 
 /*
@@ -31,44 +31,25 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.metadata.MetadataManager.*;
+import static org.lockss.metadata.MetadataManager.NEVER_EXTRACTED_EXTRACTION_TIME;
+
 import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadMXBean;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLNonTransientException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
+import java.lang.management.*;
+import java.sql.*;
+import java.util.*;
+
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
-import org.lockss.config.TdbUtil;
-import org.lockss.daemon.LockssWatchdog;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.extractor.MetadataException.ValidationException;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.PluginManager;
-import org.lockss.scheduler.SchedulableTask;
-import org.lockss.scheduler.Schedule;
-import org.lockss.scheduler.StepTask;
-import org.lockss.scheduler.TaskCallback;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
-import org.lockss.util.TimeBase;
-import org.lockss.util.TimeInterval;
+import org.lockss.plugin.*;
+import org.lockss.scheduler.*;
+import org.lockss.util.*;
 
 /**
  * Implements a reindexing task that extracts metadata from all the articles in
@@ -138,7 +119,7 @@ public class ReindexingTask extends StepTask {
 
   static {
     log.debug3("current thread CPU time supported? "
-	+ tmxb.isCurrentThreadCpuTimeSupported());
+        + tmxb.isCurrentThreadCpuTimeSupported());
 
     if (tmxb.isCurrentThreadCpuTimeSupported()) {
       tmxb.setThreadCpuTimeEnabled(true);
@@ -157,10 +138,10 @@ public class ReindexingTask extends StepTask {
   public ReindexingTask(ArchivalUnit theAu, ArticleMetadataExtractor theAe) {
     // NOTE: estimated window time interval duration not currently used.
     super(
-	  new TimeInterval(TimeBase.nowMs(), TimeBase.nowMs() + Constants.HOUR),
-	  0, // estimatedDuration.
-	  null, // TaskCallback.
-	  null); // Object cookie.
+          new TimeInterval(TimeBase.nowMs(), TimeBase.nowMs() + Constants.HOUR),
+          0, // estimatedDuration.
+          null, // TaskCallback.
+          null); // Object cookie.
 
     this.au = theAu;
     this.ae = theAe;
@@ -210,38 +191,38 @@ public class ReindexingTask extends StepTask {
     final String DEBUG_HEADER = "step(): ";
     int steps = (n <= 0) ? default_steps : n;
     log.debug3(DEBUG_HEADER + "step: " + steps + ", has articles: "
-	+ articleIterator.hasNext());
+        + articleIterator.hasNext());
 
     while (!isFinished() && (extractedCount <= steps)
-	&& articleIterator.hasNext()) {
+        && articleIterator.hasNext()) {
       log.debug3(DEBUG_HEADER + "Getting the next ArticleFiles...");
       ArticleFiles af = articleIterator.next();
       try {
-	ae.extract(MetadataTarget.OpenURL(), af, emitter);
+        ae.extract(MetadataTarget.OpenURL(), af, emitter);
       } catch (IOException ex) {
-	log.error("Failed to index metadata for full text URL: "
-		      + af.getFullTextUrl(), ex);
-	setFinished();
-	if (status == ReindexingStatus.Running) {
-	  status = ReindexingStatus.Rescheduled;
-	  indexedArticleCount = 0;
-	}
+        log.error("Failed to index metadata for full text URL: "
+                      + af.getFullTextUrl(), ex);
+        setFinished();
+        if (status == ReindexingStatus.Running) {
+          status = ReindexingStatus.Rescheduled;
+          indexedArticleCount = 0;
+        }
       } catch (PluginException ex) {
-	log.error("Failed to index metadata for full text URL: "
-		      + af.getFullTextUrl(), ex);
-	setFinished();
-	if (status == ReindexingStatus.Running) {
-	  status = ReindexingStatus.Failed;
-	  indexedArticleCount = 0;
-	}
+        log.error("Failed to index metadata for full text URL: "
+                      + af.getFullTextUrl(), ex);
+        setFinished();
+        if (status == ReindexingStatus.Running) {
+          status = ReindexingStatus.Failed;
+          indexedArticleCount = 0;
+        }
       } catch (RuntimeException ex) {
-	log.error(" Caught unexpected Throwable for full text URL: "
-		      + af.getFullTextUrl(), ex);
-	setFinished();
-	if (status == ReindexingStatus.Running) {
-	  status = ReindexingStatus.Failed;
-	  indexedArticleCount = 0;
-	}
+        log.error(" Caught unexpected Throwable for full text URL: "
+                      + af.getFullTextUrl(), ex);
+        setFinished();
+        if (status == ReindexingStatus.Running) {
+          status = ReindexingStatus.Failed;
+          indexedArticleCount = 0;
+        }
       }
       
       pokeWDog();
@@ -251,8 +232,8 @@ public class ReindexingTask extends StepTask {
     if (!isFinished()) {
       // finished if all articles handled
       if (!articleIterator.hasNext()) {
-	setFinished();
-	log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
+        setFinished();
+        log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
       }
     }
 
@@ -400,7 +381,7 @@ public class ReindexingTask extends StepTask {
   void taskWarning(String s) {
     int hashcode = s.hashCode();
     if (auLogTable.add(hashcode)) {
-	log.warning(s);
+        log.warning(s);
     }
   }
 
@@ -421,28 +402,30 @@ public class ReindexingTask extends StepTask {
       Map<String, String> roles = new HashMap<String, String>();
 
       for (String key : af.getRoleMap().keySet()) {
-	String value = af.getRoleUrl(key);
-	log.debug3(DEBUG_HEADER + "af.getRoleMap().key = " + key
-	    + ", af.getRoleUrl(key) = " + value);
-	roles.put(key, value);
+        String value = af.getRoleAsString(key);
+        if (log.isDebug3()) {
+          log.debug3(DEBUG_HEADER + "af.getRoleMap().key = " + key
+              + ", af.getRoleUrl(key) = " + value);
+        }
+        roles.put(key, value);
       }
 
       if (log.isDebug3()) {
-	log.debug3(DEBUG_HEADER + "field access url: "
-	    + md.get(MetadataField.FIELD_ACCESS_URL));
+        log.debug3(DEBUG_HEADER + "field access url: "
+            + md.get(MetadataField.FIELD_ACCESS_URL));
       }
 
       if (md.get(MetadataField.FIELD_ACCESS_URL) == null) {
-	// temporary -- use full text url if not set
-	// (should be set by metadata extractor)
-	md.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+        // temporary -- use full text url if not set
+        // (should be set by metadata extractor)
+        md.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
       }
 
       md.putRaw(MetadataField.FIELD_FEATURED_URL_MAP.getKey(), roles);
 
       try {
-	validateDataAgainstTdb(new ArticleMetadataInfo(md), au);
-	articleMetadataInfoBuffer.add(md);
+        validateDataAgainstTdb(new ArticleMetadataInfo(md), au);
+        articleMetadataInfoBuffer.add(md);
       } catch (IOException ex) {
         throw new RuntimeException(ex);
       }
@@ -462,30 +445,30 @@ public class ReindexingTask extends StepTask {
      *           if field is invalid
      */
     private void validateDataAgainstTdb(ArticleMetadataInfo mdinfo,
-	ArchivalUnit au) {
+        ArchivalUnit au) {
       HashSet<String> isbns = new HashSet<String>();
       if (mdinfo.isbn != null) {
-	isbns.add(mdinfo.isbn);
+        isbns.add(mdinfo.isbn);
       }
 
       if (mdinfo.eisbn != null) {
-	isbns.add(mdinfo.eisbn);
+        isbns.add(mdinfo.eisbn);
       }
 
       HashSet<String> issns = new HashSet<String>();
       if (mdinfo.issn != null) {
-	issns.add(mdinfo.issn);
+        issns.add(mdinfo.issn);
       }
 
       if (mdinfo.eissn != null) {
-	issns.add(mdinfo.eissn);
+        issns.add(mdinfo.eissn);
       }
 
       TdbAu tdbau = au.getTdbAu();
       boolean isTitleInTdb = !au.isBulkContent();
       String tdbauName = (tdbau == null) ? null : tdbau.getName();
       String tdbauStartYear =
-	  (tdbau == null) ? au.getName() : tdbau.getStartYear();
+          (tdbau == null) ? au.getName() : tdbau.getStartYear();
       String tdbauYear = (tdbau == null) ? null : tdbau.getYear();
       String tdbauIsbn = null;
       String tdbauIssn = null;
@@ -494,124 +477,124 @@ public class ReindexingTask extends StepTask {
 
       // Check whether the TDB has title information.
       if (isTitleInTdb && (tdbau != null)) {
-	// Yes: Get the title information from the TDB.
-	tdbauIsbn = tdbau.getIsbn();
-	tdbauIssn = tdbau.getPrintIssn();
-	tdbauEissn = tdbau.getEissn();
-	tdbauJournalTitle = tdbau.getJournalTitle();
+        // Yes: Get the title information from the TDB.
+        tdbauIsbn = tdbau.getIsbn();
+        tdbauIssn = tdbau.getPrintIssn();
+        tdbauEissn = tdbau.getEissn();
+        tdbauJournalTitle = tdbau.getJournalTitle();
       }
 
       if (tdbau != null) {
-	// Validate journal title against the TDB journal title.
-	if (tdbauJournalTitle != null) {
-	  if (!tdbauJournalTitle.equals(mdinfo.journalTitle)) {
-	    if (mdinfo.journalTitle == null) {
-	      taskWarning("tdb title  is " + tdbauJournalTitle + " for "
-		  + tdbauName + " -- metadata title is missing");
-	    } else {
-	      taskWarning("tdb title " + tdbauJournalTitle + " for "
-		  + tdbauName + " -- does not match metadata journal title "
-		  + mdinfo.journalTitle);
-	    }
-	  }
-	}
+        // Validate journal title against the TDB journal title.
+        if (tdbauJournalTitle != null) {
+          if (!tdbauJournalTitle.equals(mdinfo.journalTitle)) {
+            if (mdinfo.journalTitle == null) {
+              taskWarning("tdb title  is " + tdbauJournalTitle + " for "
+                  + tdbauName + " -- metadata title is missing");
+            } else {
+              taskWarning("tdb title " + tdbauJournalTitle + " for "
+                  + tdbauName + " -- does not match metadata journal title "
+                  + mdinfo.journalTitle);
+            }
+          }
+        }
 
-	// Validate ISBN against the TDB ISBN.
-	if (tdbauIsbn != null) {
-	  if (!tdbauIsbn.equals(mdinfo.isbn)) {
-	    isbns.add(tdbauIsbn);
-	    if (mdinfo.isbn == null) {
-	      taskWarning("using tdb isbn " + tdbauIsbn + " for " + tdbauName
-		  + " -- metadata isbn missing");
-	    } else {
-	      taskWarning("also using tdb isbn " + tdbauIsbn + " for "
-		  + tdbauName + " -- different than metadata isbn: "
-		  + mdinfo.isbn);
-	    }
-	  } else if (mdinfo.isbn != null) {
-	    taskWarning("tdb isbn missing for " + tdbauName + " -- should be: "
-		+ mdinfo.isbn);
-	  }
-	} else if (mdinfo.isbn != null) {
-	  if (isTitleInTdb) {
-	    taskWarning("tdb isbn missing for " + tdbauName + " -- should be: "
-		+ mdinfo.isbn);
-	  }
-	}
+        // Validate ISBN against the TDB ISBN.
+        if (tdbauIsbn != null) {
+          if (!tdbauIsbn.equals(mdinfo.isbn)) {
+            isbns.add(tdbauIsbn);
+            if (mdinfo.isbn == null) {
+              taskWarning("using tdb isbn " + tdbauIsbn + " for " + tdbauName
+                  + " -- metadata isbn missing");
+            } else {
+              taskWarning("also using tdb isbn " + tdbauIsbn + " for "
+                  + tdbauName + " -- different than metadata isbn: "
+                  + mdinfo.isbn);
+            }
+          } else if (mdinfo.isbn != null) {
+            taskWarning("tdb isbn missing for " + tdbauName + " -- should be: "
+                + mdinfo.isbn);
+          }
+        } else if (mdinfo.isbn != null) {
+          if (isTitleInTdb) {
+            taskWarning("tdb isbn missing for " + tdbauName + " -- should be: "
+                + mdinfo.isbn);
+          }
+        }
 
-	// validate ISSN against the TDB ISSN.
-	if (tdbauIssn != null) {
-	  if (tdbauIssn.equals(mdinfo.eissn) && (mdinfo.issn == null)) {
-	    taskWarning("tdb print issn " + tdbauIssn + " for " + tdbauName
-		+ " -- reported by metadata as eissn");
-	  } else if (!tdbauIssn.equals(mdinfo.issn)) {
-	    // add both ISSNs so it can be found either way
-	    issns.add(tdbauIssn);
-	    if (mdinfo.issn == null) {
-	      taskWarning("using tdb print issn " + tdbauIssn + " for "
-		  + tdbauName + " -- metadata print issn is missing");
-	    } else {
-	      taskWarning("also using tdb print issn " + tdbauIssn + " for "
-		  + tdbauName + " -- different than metadata print issn: "
-		  + mdinfo.issn);
-	    }
-	  }
-	} else if (mdinfo.issn != null) {
-	  if (mdinfo.issn.equals(tdbauEissn)) {
-	    taskWarning("tdb eissn " + tdbauEissn + " for " + tdbauName
-		+ " -- reported by metadata as print issn");
-	  } else if (isTitleInTdb) {
-	    taskWarning("tdb issn missing for " + tdbauName + " -- should be: "
-		+ mdinfo.issn);
-	  }
-	}
+        // validate ISSN against the TDB ISSN.
+        if (tdbauIssn != null) {
+          if (tdbauIssn.equals(mdinfo.eissn) && (mdinfo.issn == null)) {
+            taskWarning("tdb print issn " + tdbauIssn + " for " + tdbauName
+                + " -- reported by metadata as eissn");
+          } else if (!tdbauIssn.equals(mdinfo.issn)) {
+            // add both ISSNs so it can be found either way
+            issns.add(tdbauIssn);
+            if (mdinfo.issn == null) {
+              taskWarning("using tdb print issn " + tdbauIssn + " for "
+                  + tdbauName + " -- metadata print issn is missing");
+            } else {
+              taskWarning("also using tdb print issn " + tdbauIssn + " for "
+                  + tdbauName + " -- different than metadata print issn: "
+                  + mdinfo.issn);
+            }
+          }
+        } else if (mdinfo.issn != null) {
+          if (mdinfo.issn.equals(tdbauEissn)) {
+            taskWarning("tdb eissn " + tdbauEissn + " for " + tdbauName
+                + " -- reported by metadata as print issn");
+          } else if (isTitleInTdb) {
+            taskWarning("tdb issn missing for " + tdbauName + " -- should be: "
+                + mdinfo.issn);
+          }
+        }
 
-	// Validate EISSN against the TDB EISSN.
-	if (tdbauEissn != null) {
-	  if (tdbauEissn.equals(mdinfo.issn) && (mdinfo.eissn == null)) {
-	    taskWarning("tdb eissn " + tdbauEissn + " for " + tdbauName
-		+ " -- reported by metadata as print issn");
-	  } else if (!tdbauEissn.equals(mdinfo.eissn)) {
-	    // Add both ISSNs so that they can be found either way.
-	    issns.add(tdbauEissn);
-	    if (mdinfo.eissn == null) {
-	      taskWarning("using tdb eissn " + tdbauEissn + " for " + tdbauName
-		  + " -- metadata eissn is missing");
-	    } else {
-	      taskWarning("also using tdb eissn " + tdbauEissn + " for "
-		  + tdbauName + " -- different than metadata eissn: "
-		  + mdinfo.eissn);
-	    }
-	  }
-	} else if (mdinfo.eissn != null) {
-	  if (mdinfo.eissn.equals(tdbauIssn)) {
-	    taskWarning("tdb print issn " + tdbauIssn + " for " + tdbauName
-		+ " -- reported by metadata as print eissn");
-	  } else if (isTitleInTdb) {
-	    taskWarning("tdb eissn missing for " + tdbauName
-		+ " -- should be: " + mdinfo.eissn);
-	  }
-	}
+        // Validate EISSN against the TDB EISSN.
+        if (tdbauEissn != null) {
+          if (tdbauEissn.equals(mdinfo.issn) && (mdinfo.eissn == null)) {
+            taskWarning("tdb eissn " + tdbauEissn + " for " + tdbauName
+                + " -- reported by metadata as print issn");
+          } else if (!tdbauEissn.equals(mdinfo.eissn)) {
+            // Add both ISSNs so that they can be found either way.
+            issns.add(tdbauEissn);
+            if (mdinfo.eissn == null) {
+              taskWarning("using tdb eissn " + tdbauEissn + " for " + tdbauName
+                  + " -- metadata eissn is missing");
+            } else {
+              taskWarning("also using tdb eissn " + tdbauEissn + " for "
+                  + tdbauName + " -- different than metadata eissn: "
+                  + mdinfo.eissn);
+            }
+          }
+        } else if (mdinfo.eissn != null) {
+          if (mdinfo.eissn.equals(tdbauIssn)) {
+            taskWarning("tdb print issn " + tdbauIssn + " for " + tdbauName
+                + " -- reported by metadata as print eissn");
+          } else if (isTitleInTdb) {
+            taskWarning("tdb eissn missing for " + tdbauName
+                + " -- should be: " + mdinfo.eissn);
+          }
+        }
 
-	// Validate publication date against the TDB year.
-	String pubYear = mdinfo.pubYear;
-	if (pubYear != null) {
-	  if (!tdbau.includesYear(mdinfo.pubYear)) {
-	    if (tdbauYear != null) {
-	      taskWarning("tdb year " + tdbauYear + " for " + tdbauName
-		  + " -- does not match metadata year " + pubYear);
-	    } else {
-	      taskWarning("tdb year missing for " + tdbauName
-		  + " -- should include year " + pubYear);
-	    }
-	  }
-	} else {
-	  pubYear = tdbauStartYear;
-	  if (mdinfo.pubYear != null) {
-	    taskWarning("using tdb start year " + mdinfo.pubYear + " for "
-		+ tdbauName + " -- metadata year is missing");
-	  }
-	}
+        // Validate publication date against the TDB year.
+        String pubYear = mdinfo.pubYear;
+        if (pubYear != null) {
+          if (!tdbau.includesYear(mdinfo.pubYear)) {
+            if (tdbauYear != null) {
+              taskWarning("tdb year " + tdbauYear + " for " + tdbauName
+                  + " -- does not match metadata year " + pubYear);
+            } else {
+              taskWarning("tdb year missing for " + tdbauName
+                  + " -- should include year " + pubYear);
+            }
+          }
+        } else {
+          pubYear = tdbauStartYear;
+          if (mdinfo.pubYear != null) {
+            taskWarning("using tdb start year " + mdinfo.pubYear + " for "
+                + tdbauName + " -- metadata year is missing");
+          }
+        }
       }
     }
   }
@@ -637,21 +620,21 @@ public class ReindexingTask extends StepTask {
       long currentClockTime = TimeBase.nowMs();
 
       if (tmxb.isCurrentThreadCpuTimeSupported()) {
-	threadCpuTime = tmxb.getCurrentThreadCpuTime();
-	threadUserTime = tmxb.getCurrentThreadUserTime();
+        threadCpuTime = tmxb.getCurrentThreadCpuTime();
+        threadUserTime = tmxb.getCurrentThreadUserTime();
       }
 
       // TODO: handle task Success vs. failure?
       if (type == Schedule.EventType.START) {
-	// Handle the start event.
-	handleStartEvent(threadCpuTime, threadUserTime, currentClockTime);
+        // Handle the start event.
+        handleStartEvent(threadCpuTime, threadUserTime, currentClockTime);
       } else if (type == Schedule.EventType.FINISH) {
-	// Handle the finish event.
-	handleFinishEvent(task, threadCpuTime, threadUserTime,
-	                  currentClockTime);
+        // Handle the finish event.
+        handleFinishEvent(task, threadCpuTime, threadUserTime,
+                          currentClockTime);
       } else {
-	log.error("Received unknown reindexing lifecycle event type '" + type
-	    + "' for AU '" + auName + "' - Ignored.");
+        log.error("Received unknown reindexing lifecycle event type '" + type
+            + "' for AU '" + auName + "' - Ignored.");
       }
     }
 
@@ -666,7 +649,7 @@ public class ReindexingTask extends StepTask {
      *          A long with the current clock time.
      */
     private void handleStartEvent(long threadCpuTime, long threadUserTime,
-	long currentClockTime) {
+        long currentClockTime) {
       final String DEBUG_HEADER = "handleStartEvent(): ";
       log.debug3(DEBUG_HEADER + "Starting to reindex AU: " + auName);
 
@@ -676,10 +659,10 @@ public class ReindexingTask extends StepTask {
       startClockTime = currentClockTime;
 
       if (log.isDebug2()) {
-	log.debug2(DEBUG_HEADER + "Reindexing task start for AU: "
-	    + au.getName() + " startCpuTime: " + startCpuTime / 1.0e9
-	    + ", startUserTime: " + startUserTime / 1.0e9
-	    + ", startClockTime: " + startClockTime / 1.0e3);
+        log.debug2(DEBUG_HEADER + "Reindexing task start for AU: "
+            + au.getName() + " startCpuTime: " + startCpuTime / 1.0e9
+            + ", startUserTime: " + startUserTime / 1.0e9
+            + ", startClockTime: " + startClockTime / 1.0e3);
       }
 
       long lastExtractionTime = NEVER_EXTRACTED_EXTRACTION_TIME;
@@ -688,47 +671,47 @@ public class ReindexingTask extends StepTask {
       boolean needsIncrementalExtraction = false;
 
       try {
-	// Get a connection to the database.
-	message = "Cannot obtain a database connection";
-	conn = dbManager.getConnection();
+        // Get a connection to the database.
+        message = "Cannot obtain a database connection";
+        conn = dbManager.getConnection();
 
-	// Get the AU database identifier, if any.
-	message = "Cannot find the AU identifier for AU = " + auId
-		  + " in the database";
-	Long auSeq = findAuSeq(conn);
-	log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+        // Get the AU database identifier, if any.
+        message = "Cannot find the AU identifier for AU = " + auId
+                  + " in the database";
+        Long auSeq = findAuSeq(conn);
+        log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
 
-	// Determine whether this is a new, never indexed, AU;
-	isNewAu = auSeq == null;
-	log.debug2(DEBUG_HEADER + "isNewAu = " + isNewAu);
+        // Determine whether this is a new, never indexed, AU;
+        isNewAu = auSeq == null;
+        log.debug2(DEBUG_HEADER + "isNewAu = " + isNewAu);
 
-	// Check whether this same AU has been indexed before.
-	if (!isNewAu) {
-	  // Yes: Determine whether an incremental extraction is needed.
-	  message = "Cannot determine whther the metadata for AU = " + auSeq
-	      + " was extracted with an obsolete plugin";
+        // Check whether this same AU has been indexed before.
+        if (!isNewAu) {
+          // Yes: Determine whether an incremental extraction is needed.
+          message = "Cannot determine whther the metadata for AU = " + auSeq
+              + " was extracted with an obsolete plugin";
 
-	  needsIncrementalExtraction =
-	      !mdManager.isAuMetadataForObsoletePlugin(conn, au);
-	  log.debug2(DEBUG_HEADER + "needsIncrementalExtraction = "
-	      + needsIncrementalExtraction);
+          needsIncrementalExtraction =
+              !mdManager.isAuMetadataForObsoletePlugin(conn, au);
+          log.debug2(DEBUG_HEADER + "needsIncrementalExtraction = "
+              + needsIncrementalExtraction);
 
-	  // Check whether an incremental extraction is needed.
-	  if (needsIncrementalExtraction) {
-	    // Yes: Get the last extraction time for the AU.
-	    message =
-		"Cannot find the last extraction time for AU = " + auSeq
-		    + " in the database";
+          // Check whether an incremental extraction is needed.
+          if (needsIncrementalExtraction) {
+            // Yes: Get the last extraction time for the AU.
+            message =
+                "Cannot find the last extraction time for AU = " + auSeq
+                    + " in the database";
 
-	    lastExtractionTime = mdManager.getAuExtractionTime(conn, auSeq);
-	    log.debug2(DEBUG_HEADER + "lastExtractionTime = "
-		+ lastExtractionTime);
-	  }
-	}
+            lastExtractionTime = mdManager.getAuExtractionTime(conn, auSeq);
+            log.debug2(DEBUG_HEADER + "lastExtractionTime = "
+                + lastExtractionTime);
+          }
+        }
       } catch (SQLException sqle) {
-	log.error(message + ": " + sqle);
+        log.error(message + ": " + sqle);
       } finally {
-	DbManager.safeRollbackAndClose(conn);
+        DbManager.safeRollbackAndClose(conn);
       }
       // Indicate that only new metadata after the last extraction is to be
       // included.
@@ -736,7 +719,7 @@ public class ReindexingTask extends StepTask {
 
       // Check whether an incremental extraction is needed.
       if (needsIncrementalExtraction) {
-	target.setIncludeFilesChangedAfter(lastExtractionTime);
+        target.setIncludeFilesChangedAfter(lastExtractionTime);
       }
 
       // The article iterator won't be null because only AUs with article
@@ -744,22 +727,22 @@ public class ReindexingTask extends StepTask {
       articleIterator = au.getArticleIterator(target);
 
       if (log.isDebug2()) {
-	long articleIteratorInitTime = TimeBase.nowMs() - startClockTime;
-	log.debug2(DEBUG_HEADER + "Starting reindexing task for au: "
-	    + au.getName() + " has articles? " + articleIterator.hasNext()
-	    + " initializing iterator took " + articleIteratorInitTime + "ms");
+        long articleIteratorInitTime = TimeBase.nowMs() - startClockTime;
+        log.debug2(DEBUG_HEADER + "Starting reindexing task for au: "
+            + au.getName() + " has articles? " + articleIterator.hasNext()
+            + " initializing iterator took " + articleIteratorInitTime + "ms");
       }
 
       try {
-	articleMetadataInfoBuffer = new ArticleMetadataBuffer();
-	mdManager.notifyStartReindexingAu(au);
+        articleMetadataInfoBuffer = new ArticleMetadataBuffer();
+        mdManager.notifyStartReindexingAu(au);
       } catch (IOException ioe) {
-	log.error("Failed to set up pending AU '" + au.getName()
-	          + "' for re-indexing", ioe);
-	setFinished();
-	if (status == ReindexingStatus.Running) {
-	  status = ReindexingStatus.Rescheduled;
-	}
+        log.error("Failed to set up pending AU '" + au.getName()
+                  + "' for re-indexing", ioe);
+        setFinished();
+        if (status == ReindexingStatus.Running) {
+          status = ReindexingStatus.Rescheduled;
+        }
       }
     }
 
@@ -776,150 +759,150 @@ public class ReindexingTask extends StepTask {
      *          A long with the current clock time.
      */
     private void handleFinishEvent(SchedulableTask task, long threadCpuTime,
-	long threadUserTime, long currentClockTime) {
+        long threadUserTime, long currentClockTime) {
       final String DEBUG_HEADER = "handleFinishEvent(): ";
       log.debug3(DEBUG_HEADER + "Finishing reindexing (" + status + ") for AU: "
-	  + auName);
+          + auName);
 
       if (status == ReindexingStatus.Running) {
-	status = ReindexingStatus.Success;
+        status = ReindexingStatus.Success;
       }
 
       Connection conn = null;
       startUpdateClockTime = currentClockTime;
 
       switch (status) {
-	case Success:
+        case Success:
 
-	  try {
-	    long removedArticleCount = 0L;
+          try {
+            long removedArticleCount = 0L;
 
-	    // Get a connection to the database.
-	    conn = dbManager.getConnection();
+            // Get a connection to the database.
+            conn = dbManager.getConnection();
 
-	    // Check whether the plugin version used to obtain the metadata
-	    // stored in the database is older than the current plugin version.
-	    if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
-	      // Yes: Remove old AU metadata before adding new.
-	      removedArticleCount = mdManager.removeAuMetadataItems(conn, auId);
-	      log.debug3(DEBUG_HEADER + "removedArticleCount = "
-		  + removedArticleCount);
-	    }
+            // Check whether the plugin version used to obtain the metadata
+            // stored in the database is older than the current plugin version.
+            if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
+              // Yes: Remove old AU metadata before adding new.
+              removedArticleCount = mdManager.removeAuMetadataItems(conn, auId);
+              log.debug3(DEBUG_HEADER + "removedArticleCount = "
+                  + removedArticleCount);
+            }
 
-	    Iterator<ArticleMetadataInfo> mditr =
-		articleMetadataInfoBuffer.iterator();
+            Iterator<ArticleMetadataInfo> mditr =
+                articleMetadataInfoBuffer.iterator();
 
-	    // Check whether there is any metadata to record.
-	    if (mditr.hasNext()) {
+            // Check whether there is any metadata to record.
+            if (mditr.hasNext()) {
 
-	      // Yes: Write the AU metadata to the database.
-	      new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
-		  .recordMetadata(conn, mditr);
-	      
-	      pokeWDog();
-	    }
+              // Yes: Write the AU metadata to the database.
+              new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
+                  .recordMetadata(conn, mditr);
+              
+              pokeWDog();
+            }
 
-	    // Remove the AU just re-indexed from the list of AUs pending to be
-	    // re-indexed.
-	    mdManager.removeFromPendingAus(conn, auId);
+            // Remove the AU just re-indexed from the list of AUs pending to be
+            // re-indexed.
+            mdManager.removeFromPendingAus(conn, auId);
 
-	    // Complete the database transaction.
-	    conn.commit();
+            // Complete the database transaction.
+            conn.commit();
 
-	    // Update the successful re-indexing count.
-	    mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
+            // Update the successful re-indexing count.
+            mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
 
-	    // Update the total article count.
-	    mdManager.addToMetadataArticleCount(updatedArticleCount
-		- removedArticleCount);
+            // Update the total article count.
+            mdManager.addToMetadataArticleCount(updatedArticleCount
+                - removedArticleCount);
 
-	    break;
-	  } catch (MetadataException me) {
-	    e = me;
-	    log.warning("Error updating metadata at FINISH for " + status
-		+ " -- NOT rescheduling", e);
-	    log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
-	    status = ReindexingStatus.Failed;
-	  } catch (SQLNonTransientException sqlnte) {
-	    e = sqlnte;
-	    log.warning("Error updating metadata at FINISH for " + status
-		+ " -- NOT rescheduling", e);
-	    status = ReindexingStatus.Failed;
-	  } catch (SQLException sqle) {
-	    e = sqle;
-	    log.warning("Error updating metadata at FINISH for " + status
-		+ " -- rescheduling", e);
-	    status = ReindexingStatus.Rescheduled;
-	  } catch (RuntimeException re) {
-	    e = re;
-	    log.warning("Error updating metadata at FINISH for " + status
-		+ " -- NOT rescheduling", e);
-	    status = ReindexingStatus.Failed;
-	  } finally {
-	    DbManager.safeRollbackAndClose(conn);
-	  }
+            break;
+          } catch (MetadataException me) {
+            e = me;
+            log.warning("Error updating metadata at FINISH for " + status
+                + " -- NOT rescheduling", e);
+            log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
+            status = ReindexingStatus.Failed;
+          } catch (SQLNonTransientException sqlnte) {
+            e = sqlnte;
+            log.warning("Error updating metadata at FINISH for " + status
+                + " -- NOT rescheduling", e);
+            status = ReindexingStatus.Failed;
+          } catch (SQLException sqle) {
+            e = sqle;
+            log.warning("Error updating metadata at FINISH for " + status
+                + " -- rescheduling", e);
+            status = ReindexingStatus.Rescheduled;
+          } catch (RuntimeException re) {
+            e = re;
+            log.warning("Error updating metadata at FINISH for " + status
+                + " -- NOT rescheduling", e);
+            status = ReindexingStatus.Failed;
+          } finally {
+            DbManager.safeRollbackAndClose(conn);
+          }
 
-	  // Fall through if SQL exception occurred during update.
-	case Failed:
-	case Rescheduled:
-	  // Reindexing not successful, so try again later if status indicates
-	  // the operation should be rescheduled.
-	  log.debug2(DEBUG_HEADER + "Reindexing task (" + status
-	      + ") did not finish for au " + au.getName());
+          // Fall through if SQL exception occurred during update.
+        case Failed:
+        case Rescheduled:
+          // Reindexing not successful, so try again later if status indicates
+          // the operation should be rescheduled.
+          log.debug2(DEBUG_HEADER + "Reindexing task (" + status
+              + ") did not finish for au " + au.getName());
 
-	  mdManager.addToFailedReindexingTasks(ReindexingTask.this);
+          mdManager.addToFailedReindexingTasks(ReindexingTask.this);
 
-	  try {
-	    // Get a connection to the database.
-	    conn = dbManager.getConnection();
+          try {
+            // Get a connection to the database.
+            conn = dbManager.getConnection();
 
-	    mdManager.removeFromPendingAus(conn, au.getAuId());
+            mdManager.removeFromPendingAus(conn, au.getAuId());
 
-	    if (status == ReindexingStatus.Failed) {
-	      log.debug2(DEBUG_HEADER + "Marking as broken reindexing task au "
-		  + au.getName());
+            if (status == ReindexingStatus.Failed) {
+              log.debug2(DEBUG_HEADER + "Marking as broken reindexing task au "
+                  + au.getName());
 
-	    // Add the failed AU to the pending list with the right priority to
-	    // avoid processing it again before the underlying problem is fixed.
-	      mdManager.addFailedIndexingAuToPendingAus(conn, au.getAuId());
-	    } else if (status == ReindexingStatus.Rescheduled) {
-	      log.debug2(DEBUG_HEADER + "Rescheduling reindexing task au "
-		  + au.getName());
+            // Add the failed AU to the pending list with the right priority to
+            // avoid processing it again before the underlying problem is fixed.
+              mdManager.addFailedIndexingAuToPendingAus(conn, au.getAuId());
+            } else if (status == ReindexingStatus.Rescheduled) {
+              log.debug2(DEBUG_HEADER + "Rescheduling reindexing task au "
+                  + au.getName());
 
-	      // Add the re-schedulable AU to the end of the pending list.
-	      mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
-	    }
+              // Add the re-schedulable AU to the end of the pending list.
+              mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
+            }
 
-	    // Complete the database transaction.
-	    conn.commit();
-	  } catch (SQLException sqle) {
-	    log.warning("Error updating pending queue at FINISH" + " for "
-		+ status, sqle);
-	  } finally {
-	    DbManager.safeRollbackAndClose(conn);
-	  }
+            // Complete the database transaction.
+            conn.commit();
+          } catch (SQLException sqle) {
+            log.warning("Error updating pending queue at FINISH" + " for "
+                + status, sqle);
+          } finally {
+            DbManager.safeRollbackAndClose(conn);
+          }
       }
 
       articleIterator = null;
       endClockTime = TimeBase.nowMs();
 
       if (tmxb.isCurrentThreadCpuTimeSupported()) {
-	endCpuTime = tmxb.getCurrentThreadCpuTime();
-	endUserTime = tmxb.getCurrentThreadUserTime();
+        endCpuTime = tmxb.getCurrentThreadCpuTime();
+        endUserTime = tmxb.getCurrentThreadUserTime();
       }
 
       // Display timings.
       if (log.isDebug2()) {
-	long elapsedCpuTime = threadCpuTime - startCpuTime;
-	long elapsedUserTime = threadUserTime - startUserTime;
-	long elapsedClockTime = currentClockTime - startClockTime;
+        long elapsedCpuTime = threadCpuTime - startCpuTime;
+        long elapsedUserTime = threadUserTime - startUserTime;
+        long elapsedClockTime = currentClockTime - startClockTime;
 
-	log.debug2(DEBUG_HEADER + "Reindexing task finished (" + status
-	    + ") for au: " + au.getName() + " CPU time: "
-	    + elapsedCpuTime / 1.0e9 + " (" + endCpuTime / 1.0e9
-	    + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
-	    + endUserTime / 1.0e9 + ") Clock time: " + elapsedClockTime / 1.0e3
-	    + " (" + endClockTime / 1.0e3 + ")");
+        log.debug2(DEBUG_HEADER + "Reindexing task finished (" + status
+            + ") for au: " + au.getName() + " CPU time: "
+            + elapsedCpuTime / 1.0e9 + " (" + endCpuTime / 1.0e9
+            + "), UserTime: " + elapsedUserTime / 1.0e9 + " ("
+            + endUserTime / 1.0e9 + ") Clock time: " + elapsedClockTime / 1.0e3
+            + " (" + endClockTime / 1.0e3 + ")");
       }
 
       // Release collected metadata info once finished.
@@ -927,23 +910,23 @@ public class ReindexingTask extends StepTask {
       articleMetadataInfoBuffer = null;
 
       synchronized (mdManager.activeReindexingTasks) {
-	mdManager.activeReindexingTasks.remove(au.getAuId());
-	mdManager.notifyFinishReindexingAu(au, status);
+        mdManager.activeReindexingTasks.remove(au.getAuId());
+        mdManager.notifyFinishReindexingAu(au, status);
 
-	try {
-	  // Get a connection to the database.
-	  conn = dbManager.getConnection();
+        try {
+          // Get a connection to the database.
+          conn = dbManager.getConnection();
 
-	  // Schedule another task if available.
-	  mdManager.startReindexing(conn);
+          // Schedule another task if available.
+          mdManager.startReindexing(conn);
 
-	  // Complete the database transaction.
-	  conn.commit();
-	} catch (SQLException sqle) {
-	  log.error("Cannot restart indexing", sqle);
-	} finally {
-	  DbManager.safeRollbackAndClose(conn);
-	}
+          // Complete the database transaction.
+          conn.commit();
+        } catch (SQLException sqle) {
+          log.error("Cannot restart indexing", sqle);
+        } finally {
+          DbManager.safeRollbackAndClose(conn);
+        }
       }
     }
 
@@ -963,15 +946,15 @@ public class ReindexingTask extends StepTask {
 
       // Find the plugin.
       Long pluginSeq =
-	  mdManager.findPlugin(conn, PluginManager.pluginIdFromAuId(auId));
+          mdManager.findPlugin(conn, PluginManager.pluginIdFromAuId(auId));
 
       // Check whether the plugin exists.
       if (pluginSeq != null) {
-	// Yes: Get the database identifier of the AU.
-	String auKey = PluginManager.auKeyFromAuId(auId);
+        // Yes: Get the database identifier of the AU.
+        String auKey = PluginManager.auKeyFromAuId(auId);
 
-	auSeq = mdManager.findAu(conn, pluginSeq, auKey);
-	log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+        auSeq = mdManager.findAu(conn, pluginSeq, auKey);
+        log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
       }
 
       return auSeq;
