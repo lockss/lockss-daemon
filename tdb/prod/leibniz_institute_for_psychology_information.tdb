@@ -1,11 +1,11 @@
 {
 
   publisher <
-    name = Leibniz Institute for Psychology Information ;
-    comment[platform] = PsychOpen
+    name = Leibniz Institute for Psychology Information 
   >
 
       implicit < status ; year ; name ; param[year] >
+      param[base_url] = http://www.psychopen.eu
       plugin = needs.plgin
 
   {
@@ -14,8 +14,27 @@
       issn = 1841-0413
     >
 
-      param[base_url] = http://www.psychopen.eu
       param[journal_id] = ejop
+  
+  }
+
+  {
+    title <
+      name = The European Journal of Counselling Psychology ;
+      issn = 2195-7614
+    >
+
+      param[journal_id] = ejcop
+  
+  }
+
+  {
+    title <
+      name = Interpersona: An International Journal on Personal Relationships ;
+      issn = 1981-6472
+    >
+
+      param[journal_id] = interpersona
   
   }
 
@@ -25,21 +44,9 @@
       issn = 2195-3325
     >
 
-      param[base_url] = http://www.psychopen.eu
       param[journal_id] = jspp
   
 
-  }
-
-  {
-    title <
-      name = Interpersona: An International Journal on Personal Relationships ;
-      issn = 1981-6472
-    >
-
-      param[base_url] = http://www.psychopen.eu
-      param[journal_id] = interpersona
-  
   }
 
   {
@@ -48,7 +55,6 @@
       issn = 2193-7281
     >
 
-      param[base_url] = http://www.psychopen.eu
       param[journal_id] = psyct
   
   }
@@ -59,19 +65,7 @@
       issn = 2182-438X
     >
 
-      param[base_url] = http://www.psychopen.eu
       param[journal_id] = pch
-  
-  }
-
-  {
-    title <
-      name = International Journal of Internet Science ;
-      issn = 1662-5544
-    >
-
-      param[base_url] = http://www.ijis.net/
-      param[journal_id] = ijis
   
   }
 
