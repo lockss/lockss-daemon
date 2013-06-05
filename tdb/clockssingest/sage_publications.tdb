@@ -38677,9 +38677,9 @@
       >
       
       pluginSuffix = ClockssHighWirePressH20Plugin
-      param[base_url] = xxx
+      param[base_url] = http://hpm.sagepub.com/
       
-      au < doNotProcess ; exists ; 2009 ; Handbook of Practice Management Volume 71 ; 71 ; >
+      au < exists ; exists ; 2009 ; Handbook of Practice Management Volume 71 ; 71 ; >
   
     }
   
