@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleFiles.java,v 1.12 2013-05-23 09:52:37 tlipkis Exp $
+ * $Id: ArticleFiles.java,v 1.12.2.1 2013-06-05 23:17:29 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,8 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+
 import org.apache.commons.collections.map.UnmodifiableMap;
-import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 
 
 /**
@@ -158,7 +159,7 @@ public class ArticleFiles {
    * @param key the name of the role
    */
   public CachedUrl getRoleCu(String key) {
-    return (CachedUrl)roles.get(key);
+    return (CachedUrl)getRole(key);
   }
 
   /** Set the String associated with an article role
@@ -173,7 +174,7 @@ public class ArticleFiles {
    * @param key the name of the role
    */
   public String getRoleString(String key) {
-    return (String)roles.get(key);
+    return (String)getRole(key);
   }
 
   /** Set the Object associated with an article role
@@ -204,10 +205,28 @@ public class ArticleFiles {
   }
 
   /** Return an unmodifiable view of the role map */
-  public Map<String,String> getRoleMap() {
-    return (Map<String,String>)UnmodifiableMap.decorate(roles);
+  public Map<String,Object> getRoleMap() {
+    return (Map<String,Object>)UnmodifiableMap.decorate(roles);
   }
 
+  /**
+   * Returns a string version of the value of the given key. If null, returns
+   * null; if a CachedUrl, returns the URL string it represents; otherwise
+   * calls {@link Object#toString()}.
+   * @param key A role key.
+   * @return A string (or null).
+   */
+  public String getRoleAsString(String key) {
+    Object obj = getRole(key);
+    if (obj == null) {
+      return null;
+    }
+    if (obj instanceof CachedUrl) {
+      return ((CachedUrl)obj).getUrl();
+    }
+    return obj.toString();
+  }
+  
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[af: ft=");
@@ -224,11 +243,15 @@ public class ArticleFiles {
     sb.append(StringUtil.tab(indent));
     sb.append("ArticleFiles\n");
     String tab = StringUtil.tab(indent + 2);
+    sb.append(tab);
+    sb.append("Full text CU:  ");
+    sb.append(getFullTextUrl());
+    sb.append("\n");
     for (String role : StringUtil.caseIndependentSortedSet(roles.keySet())) {
       sb.append(tab);
       sb.append(role);
       sb.append(":  ");
-      sb.append(getRoleUrl(role));
+      sb.append(getRoleAsString(role));
       sb.append("\n");
     }
     return sb.toString();

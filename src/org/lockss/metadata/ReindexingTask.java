@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.10 2013-05-03 01:59:17 tlipkis Exp $
+ * $Id: ReindexingTask.java,v 1.10.2.1 2013-06-05 23:17:29 thib_gc Exp $
  */
 
 /*
@@ -31,44 +31,25 @@
  */
 package org.lockss.metadata;
 
-import static org.lockss.metadata.MetadataManager.*;
+import static org.lockss.metadata.MetadataManager.NEVER_EXTRACTED_EXTRACTION_TIME;
+
 import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadMXBean;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLNonTransientException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
+import java.lang.management.*;
+import java.sql.*;
+import java.util.*;
+
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
-import org.lockss.config.TdbUtil;
-import org.lockss.daemon.LockssWatchdog;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
-import org.lockss.extractor.ArticleMetadata;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.MetadataField;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.extractor.MetadataException.ValidationException;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.PluginManager;
-import org.lockss.scheduler.SchedulableTask;
-import org.lockss.scheduler.Schedule;
-import org.lockss.scheduler.StepTask;
-import org.lockss.scheduler.TaskCallback;
-import org.lockss.util.Constants;
-import org.lockss.util.Logger;
-import org.lockss.util.TimeBase;
-import org.lockss.util.TimeInterval;
+import org.lockss.plugin.*;
+import org.lockss.scheduler.*;
+import org.lockss.util.*;
 
 /**
  * Implements a reindexing task that extracts metadata from all the articles in
@@ -421,10 +402,12 @@ public class ReindexingTask extends StepTask {
       Map<String, String> roles = new HashMap<String, String>();
 
       for (String key : af.getRoleMap().keySet()) {
-	String value = af.getRoleUrl(key);
-	log.debug3(DEBUG_HEADER + "af.getRoleMap().key = " + key
-	    + ", af.getRoleUrl(key) = " + value);
-	roles.put(key, value);
+	String value = af.getRoleAsString(key);
+	if (log.isDebug3()) {
+          log.debug3(DEBUG_HEADER + "af.getRoleMap().key = " + key
+              + ", af.getRoleUrl(key) = " + value);
+        }
+        roles.put(key, value);
       }
 
       if (log.isDebug3()) {
