@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.4 2013-04-18 19:49:11 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.4.2.1 2013-06-05 21:50:44 tlipkis Exp $
  */
 
 /*
@@ -613,7 +613,7 @@ public class TestDbManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     startService();
-    assertFalse(dbManager.isReady());
+    assertTrue(dbManager.isReady());
   }
 
   /**
