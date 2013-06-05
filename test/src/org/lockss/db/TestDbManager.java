@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.5 2013-06-05 21:51:06 tlipkis Exp $
+ * $Id: TestDbManager.java,v 1.6 2013-06-05 21:56:18 tlipkis Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestDbManager extends LockssTestCase {
    * 
    * @throws Exception
    */
-  public void xtestDisabled() throws Exception {
+  public void testDisabled() throws Exception {
     ConfigurationUtil.addFromArgs(DbManager.PARAM_DBMANAGER_ENABLED, "false");
 
     startService();
