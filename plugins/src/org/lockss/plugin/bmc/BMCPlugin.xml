@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.40 2013-05-24 18:56:49 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.41 2013-06-05 14:09:35 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -79,8 +79,10 @@
       <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
         only rule that uses the attr[journal_id] rather than the journal_issn
       -->   
-      <string>1, "^%s[^/]+/content/%s", base_url, volume_name</string> 
-      <string>1, "^%s%s/%s", base_url, journal_issn, volume_name</string> 
+      <string>1, "^%s[^/]+/content/%s$", base_url, volume_name</string> 
+      <string>1, "^%s[^/]+/content/%s/", base_url, volume_name</string> 
+      <string>1, "^%s%s/%s$", base_url, journal_issn, volume_name</string> 
+      <string>1, "^%s%s/%s/", base_url, journal_issn, volume_name</string> 
       <string>1,"^%slockss/", base_url</string>
       <string>1,"^%scontent/(download/figures/?|download/xml|files/pdf|pdf|xml|supplementary)/" ,base_url</string>
       <!-- ex: http://www.biomedcentral.com/content/download/supplementary/1471-2253-2-5-s1.doc -->      
