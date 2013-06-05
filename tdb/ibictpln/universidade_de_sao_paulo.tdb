@@ -18,8 +18,8 @@
 
     param[journal_id] = criacaoecritica
 
-    au < exists ; 2011 ; 1 ; Revista Criação & Crítica Volume 1 ; 2011 >
-    au < exists ; 2012 ; 2 ; Revista Criação & Crítica Volume 2 ; 2012 >
+    au < testing ; 2011 ; 1 ; Revista Criação & Crítica Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista Criação & Crítica Volume 2 ; 2012 >
   
   }
 
@@ -33,8 +33,8 @@
 
     param[journal_id] = revhistoria
 
-    au < exists ; 2011 ; 1 ; Revista de História Volume 1 ; 2011 >
-    au < exists ; 2012 ; 2 ; Revista de História Volume 2 ; 2012 >
+    au < testing ; 2011 ; 1 ; Revista de História Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Revista de História Volume 2 ; 2012 >
 
   }
 
@@ -48,8 +48,8 @@
 
     param[journal_id] = estic
 
-    au < exists ; 2011 ; 1 ; Estílos da Clínica Volume 1 ; 2011 >
-    au < exists ; 2012 ; 2 ; Estílos da Clínica Volume 2 ; 2012 >
+    au < testing ; 2011 ; 1 ; Estílos da Clínica Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Estílos da Clínica Volume 2 ; 2012 >
 
   }
 
@@ -63,8 +63,8 @@
 
     param[journal_id ] = linhadagua
 
-    au < exists ; 2011 ; 1 ; Linha D'Água Volume 1 ; 2011 >
-    au < exists ; 2012 ; 2 ; Linha D'Água Volume 2 ; 2012 >
+    au < testing ; 2011 ; 1 ; Linha D'Água Volume 1 ; 2011 >
+    au < testing ; 2012 ; 2 ; Linha D'Água Volume 2 ; 2012 >
 
   }
 
