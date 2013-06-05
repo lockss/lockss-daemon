@@ -1124,22 +1124,21 @@
     param[journal_dir] = leviathan
     attr[journal_id] = lvn
     
-    comment[0] = do not test till home page is online http://muse.jhu.edu/journals/leviathan/
-
-    au < notReady ; 1999 ; Leviathan Volume 1 ; 1 >
-    au < notReady ; 2000 ; Leviathan Volume 2 ; 2 >
-    au < notReady ; 2001 ; Leviathan Volume 3 ; 3 >
-    au < notReady ; 2002 ; Leviathan Volume 4 ; 4 >
-    au < notReady ; 2003 ; Leviathan Volume 5 ; 5 >
-    au < notReady ; 2004 ; Leviathan Volume 6 ; 6 >
-    au < notReady ; 2005 ; Leviathan Volume 7 ; 7 >
-    au < notReady ; 2006 ; Leviathan Volume 8 ; 8 >
-    au < notReady ; 2007 ; Leviathan Volume 9 ; 9 >
-    au < notReady ; 2008 ; Leviathan Volume 10 ; 10 >
-    au < notReady ; 2009 ; Leviathan Volume 11 ; 11 >
-    au < notReady ; 2010 ; Leviathan Volume 12 ; 12 >
-    au < notReady ; 2011 ; Leviathan Volume 13 ; 13 >
-    au < notReady ; 2012 ; Leviathan Volume 14 ; 14 >
+    au < ready ; 1999 ; Leviathan Volume 1 ; 1 >
+    au < ready ; 2000 ; Leviathan Volume 2 ; 2 >
+    au < ready ; 2001 ; Leviathan Volume 3 ; 3 >
+    au < ready ; 2002 ; Leviathan Volume 4 ; 4 >
+    au < ready ; 2003 ; Leviathan Volume 5 ; 5 >
+    au < ready ; 2004 ; Leviathan Volume 6 ; 6 >
+    au < ready ; 2005 ; Leviathan Volume 7 ; 7 >
+    au < ready ; 2006 ; Leviathan Volume 8 ; 8 >
+    au < ready ; 2007 ; Leviathan Volume 9 ; 9 >
+    au < ready ; 2008 ; Leviathan Volume 10 ; 10 >
+    au < ready ; 2009 ; Leviathan Volume 11 ; 11 >
+    au < ready ; 2010 ; Leviathan Volume 12 ; 12 >
+    au < ready ; 2011 ; Leviathan Volume 13 ; 13 >
+    au < ready ; 2012 ; Leviathan Volume 14 ; 14 >
+    au < expected ; 2013 ; Leviathan Volume 15 ; 15 >
 
   }
 
