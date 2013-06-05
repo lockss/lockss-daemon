@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.12 2013-01-25 00:16:45 alexandraohlson Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.13 2013-06-05 21:47:43 alexandraohlson Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -76,6 +77,8 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
             HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
             // not sure if this will work because the <svg> goop is embedded between the <span></span>
             HtmlNodeFilters.tagWithAttributeRegex("span", "style", "^width"),
+            // right hand actions column may or may not have "citations to this article" which changes over time
+            HtmlNodeFilters.tagWithAttribute("div", "class", "right_column_actions"),
     };
         HtmlTransform xform = new HtmlTransform() {
           @Override
@@ -106,10 +109,13 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
                                                            xform));
 
     Reader reader = FilterUtil.getReader(htmlFilter, encoding);
-    Reader filtReader = makeFilteredReader(reader);
+    // consolidate white space before doing tagfilter stuff     
+    Reader WSReader = new WhiteSpaceFilter(reader);
+    Reader filtReader = makeFilteredReader(WSReader);
     return new ReaderInputStream(filtReader);
   }
-
+  
+  // Noisy whitespace has already been removed
   static Reader makeFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
         // Remove DOCTYPE declaration which seems to vary but is not a node in the DOM
@@ -117,8 +123,30 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
         new TagPair("<svg", "/svg>", true, false)
     );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(tagFilter);
-  }
+    String[][] findAndReplace = new String[][] { 
+        // out of sync - some versions have extraneous single spaces, so remove between tags
+        {"> <", "><"},
+        // remove leading space after tags (extra spaces will already have been consolidated down to one 
+        {"> ", ">"},
+    };
+    Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
+        findAndReplace, false);
+    return stringFilter;
+   }
 
 }
 
+/*
+    // so some replace on strings
+    String[][] findAndReplace = new String[][] {
+        // use of &nbsp; or " " inconsistent over time
+        {"&nbsp;", " "}, 
+        // out of sync - some versions have extraneous single spaces, so remove between tags
+        {"> <", "><"},
+    };
+    Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
+                                                          findAndReplace,
+                                                          false);
+
+    return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));   
+*/

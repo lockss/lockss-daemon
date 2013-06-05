@@ -88,7 +88,7 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
           "<script type=\"text/javascript\"></script>" +
           "<div id=\"footer\"></div>";	  
   private static final String stuffScriptStuffHtmlFiltered =
-		  "<header> \"Stuff\" </header>" +
+		  "<header>\"Stuff\" </header>" +
 		  "<img scr= \"http://images.jpg\"/>" +
 		  "<div class=\"logo\"></div>" +
           "<a href=\"/\" id=\"ctl00_logourl\"></a>" +	  
@@ -159,6 +159,61 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   private static final String styleWidthFiltered=
       "<td align=\"center\" colspan=\"2\"></td>" +
           "<td align=\"center\" colspan=\"2\">Bias</td>";
+  
+  private static final String whiteSpaceAndCitationsHtmlOne=
+      "<p>Received 26 July 2011; Revised 14 October 2011; Accepted 4 November 2011</p>                " +
+          "<p>Academic Editor: Lebron Cooper</p>     <div class=\"xml-content\"><p>Copyright &#xa9; 2012 Blah." +
+          " This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">" +
+          "  Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium," +
+          " provided the original work is properly cited. " +
+          "          </p></div>" +
+          "<div id=\"divXMLContent\" class=\"xml-content\">" +
+          "        <h4>" +                                                                                                                                                
+          "            Linked References</h4>" +
+          ""+
+          "    <ol>" +
+          "" +
+          "<div class=\"right_column_actions\">" +
+          "<div id=\"article_list\">" +
+          "    <ul>" +
+          "            <li>" +
+          "                        <div class=\"icon_holder\">" +
+          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon1.svg\" type=\"image/svg+xml\">" +
+          "                            </object>" +
+          "                        </div>" +
+          "                        <a href=\"/journals/arp/2012/309219/citations/\" class=\"linked_ref\">" +
+          "                            Citations to this Article</a></li>" +
+          "                        <li>" +
+          "                        <div class=\"icon_holder\">" +
+          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon5.svg\" type=\"image/svg+xml\">" +
+          "                            </object>" +
+          "                        </div>" +
+          "                        <a href=\"/journals/arp/2012/309219/cta/\" class=\"how_to_cite\">" +
+          "                            How to Cite this Article</a></li>" +
+          "               " +
+          "                    <li>" +
+          "                        <div class=\"icon_holder\">" +
+          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon10.svg\" type=\"image/svg+xml\">" +
+          "                            </object>" +
+          "                        </div>" +
+          "                        <a href=\"/journals/arp/si/426135/\" class=\"complete_s_i\">Complete Special Issue</a>" +
+          "                    </li>" +
+          "</ul></div></div>END";
+
+  
+  private static final String whiteSpaceAndCitationsHtmlTwo=
+      "<p>Received 26 July 2011; Revised 14 October 2011; Accepted 4 November 2011</p>                " +
+          "<p>Academic Editor: Lebron Cooper</p>     <div class=\"xml-content\"><p>Copyright &#xa9; 2012 Blah." +
+          " This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">" +
+          "  Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium," +
+          " provided the original work is properly cited. " +
+          "          </p></div>" +
+          "<div id=\"divXMLContent\" class=\"xml-content\">" +
+          "            <h4>Linked References</h4>" +
+          "" +
+          "    <ol>" +
+          "END";
+
   
   public void testScriptFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
@@ -251,6 +306,17 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
 
     assertEquals(styleWidthFiltered, StringUtil.fromInputStream(actIn));
   } 
+  
+  public void testWhiteSpaceIssues() throws Exception {
+    InputStream actInOne = fact.createFilteredInputStream(mau,
+        new StringInputStream(whiteSpaceAndCitationsHtmlOne),
+        Constants.DEFAULT_ENCODING);
+    InputStream actInTwo = fact.createFilteredInputStream(mau,
+        new StringInputStream(whiteSpaceAndCitationsHtmlTwo),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(StringUtil.fromInputStream(actInOne), StringUtil.fromInputStream(actInTwo));
+  }
 
 }
 
