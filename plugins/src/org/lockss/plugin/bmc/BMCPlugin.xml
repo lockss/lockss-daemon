@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.41 2013-06-05 14:09:35 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.42 2013-06-05 14:26:35 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
