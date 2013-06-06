@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.22 2013-06-03 07:20:03 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.23 2013-06-06 06:34:26 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.IOException;
 import java.util.*;
+import java.net.*;
 
 import org.lockss.config.*;
 import org.lockss.util.*;
@@ -237,6 +238,23 @@ public class ConfigurationUtil {
   public static boolean addFromFile(String f) throws IOException {
     return installConfig(merge(CurrentConfig.getCurrentConfig(),
                                fromFile(f)));
+  }
+
+  /** Add the contents of the URL to the current config.  To load from a
+   * file in the test dir do, <i>eg</i>:
+   * <code>ConfigurationUtil.addFromUrl(getResource("sample.xml"));</code>
+   * @param url URL of a config file.
+   */
+  public static boolean addFromUrl(URL url) throws IOException {
+    return addFromUrl(url.toString());
+  }
+
+  /** Add the contents of the URL to the current config.
+   * @param url URL of a config file.
+   */
+  public static boolean addFromUrl(String url) throws IOException {
+    return installConfig(merge(CurrentConfig.getCurrentConfig(),
+                               fromUrlList(ListUtil.list(url))));
   }
 
   /** Install the supplied Configuration as the current configuration.

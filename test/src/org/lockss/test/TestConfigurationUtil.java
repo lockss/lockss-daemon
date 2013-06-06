@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurationUtil.java,v 1.4 2013-06-03 07:20:02 tlipkis Exp $
+ * $Id: TestConfigurationUtil.java,v 1.5 2013-06-06 06:34:26 tlipkis Exp $
  */
 
 /*
@@ -131,6 +131,14 @@ public class TestConfigurationUtil extends LockssTestCase {
     ConfigurationUtil.setFromArgs("prop1", "xxx");
     File file = FileTestUtil.writeTempFile("config", ".xml", xmlSample);
     ConfigurationUtil.addFromFile(file.toString());
+    check();
+  }
+
+  public void testAddFromXmlUrl()
+      throws IOException, Configuration.InvalidParam {
+    ConfigurationUtil.setFromArgs("prop1", "yyy");
+    File file = FileTestUtil.writeTempFile("config", ".xml", xmlSample);
+    ConfigurationUtil.addFromUrl(FileTestUtil.urlOfFile(file.toString()));
     check();
   }
 

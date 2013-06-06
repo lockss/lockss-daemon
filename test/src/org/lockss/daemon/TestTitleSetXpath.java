@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.7 2013-03-16 22:03:17 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.8 2013-06-06 06:34:26 tlipkis Exp $
  */
 
 /*
@@ -247,13 +247,6 @@ public class TestTitleSetXpath extends LockssTestCase {
     TdbTestUtil.makeTestTdb().prettyPrint(System.out);
   }
 
-  void installConfigFromResource(String name) throws IOException {
-    URL url = getClass().getResource(name);
-    ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(url));
-    // There's no addFromUrlList(), must re-set disk param
-    setUpDiskSpace();
-  }
-
   String pname = "org.lockss.daemon.TitlesetTestPlugin";
 
   public void testSample() throws Exception {
@@ -261,7 +254,7 @@ public class TestTitleSetXpath extends LockssTestCase {
     pluginMgr.ensurePluginLoaded(pluginMgr.pluginKeyFromName(pname));
     final Plugin plug = pluginMgr.getPluginFromId(pname);
 
-    installConfigFromResource("sample1.xml");
+    ConfigurationUtil.addFromUrl(getResource("sample1.xml"));
     ConfigManager.getCurrentConfig().getTdb().prettyPrint(System.out);
 
     TitleSetXpath tsa1 =
