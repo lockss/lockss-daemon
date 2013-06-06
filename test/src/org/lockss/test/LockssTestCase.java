@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.108 2012-08-08 07:13:04 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.109 2013-06-06 06:34:37 tlipkis Exp $
  */
 
 /*
@@ -258,6 +258,16 @@ public class LockssTestCase extends TestCase {
 
   protected void enableThreadWatchdog() {
     System.setProperty(LockssRunnable.PARAM_THREAD_WDOG_EXIT_IMM, "true");
+  }
+
+  /** Convenience method for test classes */
+  protected URL getResource(String name) {
+    return getClass().getResource(name);
+  }
+
+  /** Convenience method for test classes */
+  protected InputStream getResourceAsStream(String name) {
+    return getClass().getResourceAsStream(name);
   }
 
   /** Overridden so we can can get ahold of the result object, in order to
