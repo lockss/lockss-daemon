@@ -71,12 +71,18 @@ public class MassachusettsMedicalSocietyHtmlHashFilterFactory implements FilterF
         HtmlNodeFilters.tagWithAttribute("div", "id", "trendsBox"),
         // Contains ads
         HtmlNodeFilters.tagWithAttribute("div", "id", "topAdBar"),
+        //Remove Advertisement from Topbanner
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Topbanner CM8"),
+        //Remove this week audio summary
+        HtmlNodeFilters.tagWithAttribute("div", "class", "audioTitle"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "topLeftAniv"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "ad"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightRailAd"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "rightAd"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightAd"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "toolsAd"),
+        //Remove Advertisement on bottomAdBar
+        HtmlNodeFilters.tagWithAttribute("div", "id", "bottomAdBar"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "bottomAd"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "bannerAdTower"),
         //Certain ads do not have a specified div and must be removed based on regex
