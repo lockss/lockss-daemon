@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
+ * $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.22 2013-05-08 09:09:00 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -1114,12 +1114,12 @@ public class Tdb {
   }
   
   /**
-   * Return the TdbAus like the specified TdbAu volume.
+   * Return the TdbAus with the specified TdbAu name (ignoring case).
    * 
    * @param tdbAuName the name of the AU to select
-   * @return the TdbAu like the specified name
+   * @return all TdbAus with the specified name
    */
-  public Collection<TdbAu> getTdbAusByName(String tdbAuName) {
+  public List<TdbAu> getTdbAusByName(String tdbAuName) {
     ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
     getTdbAusByName(tdbAuName, aus);
     return aus;
@@ -1141,12 +1141,13 @@ public class Tdb {
   }
   
   /**
-   * Return the TdbAus like (starts with) the specified TdbAu volume.
+   * Return the TdbAus like (starts with, ignoring case) the specified
+   * TdbAu name.
    * 
-   * @param tdbAuName the name of the AU to select
-   * @return the TdbAu like the specified name
+   * @param tdbAuName initial substring of the name of AUs to return
+   * @return all TdbAus like the specified name
    */
-  public Collection<TdbAu> getTdbAusLikeName(String tdbAuName) {
+  public List<TdbAu> getTdbAusLikeName(String tdbAuName) {
     ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
     getTdbAusLikeName(tdbAuName, aus);
     return aus;
