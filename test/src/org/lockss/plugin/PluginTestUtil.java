@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.5 2012-12-20 18:38:48 fergaloy-sf Exp $
+ * $Id: PluginTestUtil.java,v 1.6 2013-06-06 06:33:52 tlipkis Exp $
  *
 
 Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
@@ -166,10 +166,11 @@ public class PluginTestUtil {
   public static ArchivalUnit createAndStartAu(Plugin plugin,
 					      Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au =
-	getPluginManager().createAu(plugin, auConfig,
-	                            new AuEvent(AuEvent.Type.Create, false));
-    LockssDaemon daemon = plugin.getDaemon();
+    return startAu(createAu(plugin, auConfig));
+  }
+
+  static ArchivalUnit startAu(ArchivalUnit au) {
+    LockssDaemon daemon = au.getPlugin().getDaemon();
     daemon.getHistoryRepository(au).startService();
     daemon.getLockssRepository(au).startService();
     daemon.getNodeManager(au).startService();
@@ -204,6 +205,35 @@ public class PluginTestUtil {
       throws ArchivalUnit.ConfigurationException {
     return (SimulatedArchivalUnit)createAu(findPlugin(SimulatedPlugin.class),
 					   auConfig);
+  }
+
+  static Configuration getAuConfig(TdbAu tau) {
+    PluginManager mgr = getPluginManager();
+    Plugin plugin = tau.getPlugin(mgr);
+    TitleConfig tc = new TitleConfig(tau, plugin);
+    return tc.getConfig();
+  }
+
+  public static ArchivalUnit createAu(TdbAu tau)
+      throws ArchivalUnit.ConfigurationException {
+    PluginManager mgr = getPluginManager();
+    Plugin plugin = findPlugin(tau.getPluginId());
+    return createAu(plugin, getAuConfig(tau));
+  }
+
+  public static ArchivalUnit createAu(Plugin plugin, TdbAu tau)
+      throws ArchivalUnit.ConfigurationException {
+    return createAu(plugin, getAuConfig(tau));
+  }
+
+  public static ArchivalUnit createAndStartAu(TdbAu tau)
+      throws ArchivalUnit.ConfigurationException {
+    return startAu(createAu(tau));
+  }
+
+  public static ArchivalUnit createAndStartAu(Plugin plugin, TdbAu tau)
+      throws ArchivalUnit.ConfigurationException {
+    return startAu(createAu(plugin, tau));
   }
 
   public static SimulatedArchivalUnit

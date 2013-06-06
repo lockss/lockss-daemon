@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lockss-config>
+ <property name="org.lockss.title">
+  <property name="froble_1">
+   <property name="attributes.publisher" value="A. Publican" />
+   <property name="journalTitle" value="A journal" />
+   <property name="title" value="A journal V1" />
+   <property name="plugin" value="org.lockss.plugin.definable.GoodPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://example.com/pubs/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="3-7" />
+   </property>
+  </property>
+
+  <property name="froble_2">
+   <property name="attributes.publisher" value="A. Publican" />
+   <property name="journalTitle" value="A journal" />
+   <property name="title" value="A journal V2" />
+   <property name="plugin" value="org.lockss.plugin.definable.GoodPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://example.com/pubs/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="8-22" />
+   </property>
+  </property>
+
+<!--   <property name="froble_2"> -->
+<!--    <property name="attributes.publisher" value="Ab Imperio" /> -->
+<!--    <property name="journalTitle" value="Ab Imperio" /> -->
+<!--    <property name="issn" value="2166-4072" /> -->
+<!--    <property name="eissn" value="2164-9731" /> -->
+<!--    <property name="type" value="journal" /> -->
+<!--    <property name="title" value="Ab Imperio Volume 2012" /> -->
+<!--    <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" /> -->
+<!--    <property name="param.1"> -->
+<!--     <property name="key" value="base_url" /> -->
+<!--     <property name="value" value="http://muse.jhu.edu/" /> -->
+<!--    </property> -->
+<!--    <property name="param.2"> -->
+<!--     <property name="key" value="journal_dir" /> -->
+<!--     <property name="value" value="ab_imperio" /> -->
+<!--    </property> -->
+<!--    <property name="param.3"> -->
+<!--     <property name="key" value="volume" /> -->
+<!--     <property name="value" value="2012" /> -->
+<!--    </property> -->
+<!--    <property name="attributes.journal_id" value="imp" /> -->
+<!--    <property name="attributes.year" value="2012" /> -->
+<!--   </property> -->
+
+ </property>
+
+</lockss-config>
