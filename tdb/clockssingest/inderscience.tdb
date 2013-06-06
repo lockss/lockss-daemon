@@ -107,7 +107,7 @@
 
       param[journal_issn] = 1754-7326
 
-      au < crawling ; exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < testing ; exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; The Botulinum Journal Volume 3 ; 3 >
 
@@ -148,7 +148,7 @@
 
       param[journal_issn] = 1758-1516
       
-      au < crawling ; exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
 
@@ -260,7 +260,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
       au < released ; manifest ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Accounting and Finance Volume 3 ; 3 >
-      au < crawling ; exists ; 2012 ; International Journal of Accounting and Finance Volume 4 ; 4 >
+      au < testing ; exists ; 2012 ; International Journal of Accounting and Finance Volume 4 ; 4 >
 
     }
 
@@ -322,7 +322,7 @@
 
       param[journal_issn] = 1740-2115
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
 
     }
 
@@ -379,7 +379,7 @@
       au < manifest ; exists ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < released ; manifest ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < crawling ; exists ; 2011 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
+      au < testing ; exists ; 2011 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
 
     }
 
@@ -596,7 +596,7 @@
 
       param[journal_issn] = 2049-8888
       
-      au < crawling ; exists ; 2012 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
 
     }
 
@@ -630,7 +630,7 @@
 
       param[journal_issn] = 1753-9420
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 >
+      au < testing ; exists ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 >  
       au < expected ; exists ; 2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 >
       
@@ -685,7 +685,7 @@
 
       param[journal_issn] = 1757-8760
       
-      au < crawling ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
 
     }
 
@@ -763,7 +763,7 @@
 
       param[journal_issn] = 1741-8577
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
 
     }
 
@@ -849,7 +849,7 @@
 
       param[journal_issn] = 1753-1977
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
+      au < testing ; exists ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
@@ -965,7 +965,7 @@
 
       param[journal_issn] = 1756-0802
       
-      au < crawling ; exists ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
+      au < testing ; exists ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 >
 
@@ -983,7 +983,7 @@
       param[journal_issn] = 1755-831X
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Biometrics Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Biometrics Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Biometrics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Biometrics Volume 5 ; 5 >
