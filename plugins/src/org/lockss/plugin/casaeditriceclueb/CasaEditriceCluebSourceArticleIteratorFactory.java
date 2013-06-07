@@ -39,6 +39,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
@@ -89,7 +90,9 @@ public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIte
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
       
       if(cu.hasContent()) {
-	      String pdfSequence = getPdfSequenceFrom(new BufferedReader(cu.openForReading()));
+              BufferedReader bReader = new BufferedReader(cu.openForReading());
+	      String pdfSequence = getPdfSequenceFrom(bReader);
+	      IOUtil.safeClose(bReader);
 	      
 	      CachedUrl fullTextCu = au.makeCachedUrl(mat.replaceFirst("$1$3"+pdfSequence+".pdf"));
 	      if(fullTextCu != null && fullTextCu.hasContent()) {
