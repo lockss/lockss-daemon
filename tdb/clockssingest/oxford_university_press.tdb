@@ -7154,7 +7154,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
-    au < testing ; exists ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
+    au < released ; manifest ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
 
     }
@@ -8176,7 +8176,7 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2009 ; International Health Volume 1 ; 1 ; >
+    au < released ; manifest ; 2009 ; International Health Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; International Health Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
     au < released ; manifest ; 2012 ; International Health Volume 4 ; 4 ; >
@@ -8361,7 +8361,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; International Journal of Epidemiology Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; International Journal of Epidemiology Volume 40 ; 40 ; >
-    au < testing ; exists ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
+    au < released ; manifest ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ; >
 
     }
@@ -9066,7 +9066,7 @@
     au < doesNotExist ; doesNotExist ; 2009 ; JNCI Monographs Volume 2009 ; 2009 ; >
     au < released ; crawling ; 2010 ; JNCI Monographs Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; JNCI Monographs Volume 2011 ; 2011 ; >
-    au < testing ; exists ; 2012 ; JNCI Monographs Volume 2012 ; 2012 ; >
+    au < released ; manifest ; 2012 ; JNCI Monographs Volume 2012 ; 2012 ; >
     au < expected ; exists ; 2013 ; JNCI Monographs Volume 2013 ; 2013 ; >
 
   }
@@ -9115,7 +9115,7 @@
     au < released ; crawling ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Journal of African Economies Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Journal of African Economies Volume 20 ; 20 ; >
-    au < testing ; exists ; 2012 ; Journal of African Economies Volume 21 ; 21 ; >
+    au < released ; manifest ; 2012 ; Journal of African Economies Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Journal of African Economies Volume 22 ; 22 ; >
 
     }
@@ -9227,7 +9227,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
     au < released ; crawling ; 2010 ; Journal of the American Academy of Religion Volume 78 ; 78 ; >
     au < released ; crawling ; 2011 ; Journal of the American Academy of Religion Volume 79 ; 79 ; >
-    au < testing ; exists ; 2012 ; Journal of the American Academy of Religion Volume 80 ; 80 ; >
+    au < released ; manifest ; 2012 ; Journal of the American Academy of Religion Volume 80 ; 80 ; >
     au < crawling ; exists ; 2013 ; Journal of the American Academy of Religion Volume 81 ; 81 ; >
 
     }
@@ -9346,7 +9346,7 @@
     au < released ; crawling ; 2009 ; Journal of American History Volume 96 ; 96 ; >
     au < released ; crawling ; 2010 ; Journal of American History Volume 97 ; 97 ; >
     au < released ; crawling ; 2011 ; Journal of American History Volume 98 ; 98 ; >
-    au < testing ; exists ; 2012 ; Journal of American History Volume 99 ; 99 ; >
+    au < released ; manifest ; 2012 ; Journal of American History Volume 99 ; 99 ; >
     au < manifest ; exists ; 2013 ; Journal of American History Volume 100 ; 100 ; >
 
     }
@@ -10615,7 +10615,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
     au < zapped ; down ; 2010 ; Journal of Heredity Volume 101 ; 101 ; >
     au < zapped ; down ; 2011 ; Journal of Heredity Volume 102 ; 102 ; >
-    au < testing ; exists ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
+    au < released ; manifest ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
     au < manifest ; exists ; 2013 ; Journal of Heredity Volume 104 ; 104 ; >
 
     }
@@ -10649,7 +10649,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; The Journal of Hindu Studies Volume 4 ; 4 ; >
-    au < testing ; exists ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
+    au < released ; manifest ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
     au < manifest ; exists ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 ; >
 
     }
@@ -18360,7 +18360,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < released ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < released ; crawling ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
-    au < testing ; exists ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
+    au < released ; manifest ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
     au < manifest ; exists ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
 
     }
@@ -18514,7 +18514,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
     au < released ; crawling ; 2010 ; Systematic Biology Volume 59 ; 59 ; >
     au < released ; crawling ; 2011 ; Systematic Biology Volume 60 ; 60 ; >
-    au < testing ; exists ; 2012 ; Systematic Biology Volume 61 ; 61 ; >
+    au < released ; manifest ; 2012 ; Systematic Biology Volume 61 ; 61 ; >
     au < manifest ; exists ; 2013 ; Systematic Biology Volume 62 ; 62 ; >
 
     }
@@ -19107,7 +19107,7 @@
     au < manifest ; exists ; 2006 ; Yearbook of European Law Volume 25 ; 25 ; >
     au < manifest ; exists ; 2007 ; Yearbook of European Law Volume 26 ; 26 ; >
     au < manifest ; exists ; 2008 ; Yearbook of European Law Volume 27 ; 27 ; >
-    au < testing ; exists ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
+    au < released ; manifest ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < released ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < released ; manifest ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
@@ -19626,9 +19626,9 @@
       au < manifest ; exists ; 2007 ; The Quarterly Journal of Economics Volume 122 ; 122 ; >
       au < manifest ; exists ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 ; >
       au < testing ; exists ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
-      au < testing ; exists ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
-      au < testing ; exists ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
-      au < testing ; exists ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
+      au < released ; manifest ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
+      au < released ; manifest ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
+      au < released ; manifest ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < manifest ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
 
     }
