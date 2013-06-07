@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Project MUSE
+  >
+
+  implicit < status ; year ; name ; isbn13 ; eisbn13 >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuseBookPlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Classics Archival Foundation Collection
+    >
+
+    au < exists ; 2011 ; Placeholder ; 0000000000000 ; 0000000000000 >
+    
+  }
+  
+  {
+    title <
+      name = History Archival Foundation Collection 
+    >
+
+    au < exists ; 2011 ; Placeholder ; 0000000000000 ; 0000000000000 >
+
+  }
+  
+}
