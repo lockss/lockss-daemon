@@ -1,0 +1,18 @@
+{
+
+  publisher <
+    name = American College of Gastroenterology
+  >
+
+  {
+    title <
+      name = ACG Case Reports Journal
+    >
+    
+    plugin = needs.plugin
+    comment[platform] = wordpress
+    comment[content] = update when there is 2 years of content ~ June 2015. See RT 5556
+
+  }
+
+}
