@@ -7,7 +7,6 @@
   >
 
   plugin = needs.plugin  
-  implicit < status ; status2 ; year ; book_isbn ; param[book_isbn] ; name >
   param[base_url] = http://www.degruyter.com/db/
   
   {
@@ -19,45 +18,6 @@
 
     {
 
-    au < exists ; exists ; 2009 ; 9783598441707 ; 9783598441707 ; Guide to Microforms in Print >
-    au < exists ; exists ; 2010 ; 9783110230628 ; 9783110230628 ; Guide to Microforms in Print >
-    au < exists ; exists ; 2011 ; 9783110235364 ; 9783110235364 ; Guide to Microforms and Digital Resources >
-    au < exists ; exists ; 2012 ; 9783110278101 ; 9783110278101 ; Guide to Microforms and Digital Resources >
-    au < exists ; exists ; 2013 ; 9783110304954 ; 9783110304954 ; Guide to Microforms and Digital Resources >
-    au < exists ; exists ; 2010 ; 9783598441714 ; 9783598441714 ; Guide to Reprints >
-    au < exists ; exists ; 2011 ; 9783110230666 ; 9783110230666 ; Guide to Reprints >
-    au < exists ; exists ; 2012 ; 9783110235401 ; 9783110235401 ; Guide to Reprints >
-    au < exists ; exists ; 2013 ; 9783110278088 ; 9783110278088 ; Guide to Reprints >
-    au < exists ; exists ; 2014 ; 9783110304930 ; 9783110304930 ; Guide to Reprints >
-    au < exists ; exists ; 2013 ; 9783110230048 ; 9783110230048 ; Index Philosophicus >
-    au < exists ; exists ; 2013 ; 9783110215595 ; 9783110215595 ; International Bibliography of Paremiology and Phraseology >
-    au < exists ; exists ; 2009 ; 9783598440434 ; 9783598440434 ; Handbuch der Bibliotheken Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2010 ; 9783110230543 ; 9783110230543 ; Handbuch der Bibliotheken Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2011 ; 9783110235272 ; 9783110235272 ; Handbuch der Bibliotheken Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2012 ; 9783110277982 ; 9783110277982 ; Handbuch der Bibliotheken Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2013 ; 9783110304855 ; 9783110304855 ; Handbuch der Bibliotheken Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2009 ; 9783598440816 ; 9783598440816 ; Hochschullehrer‐Verzeichnis: Fachhochschulen Deutschland >
-    au < exists ; exists ; 2011 ; 9783110235463 ; 9783110235463 ; Hochschullehrer‐Verzeichnis: Fachhochschulen Deutschland >
-    au < exists ; exists ; 2013 ; 9783110304916 ; 9783110304916 ; Hochschullehrer‐Verzeichnis: Fachhochschulen Deutschland >
-    au < exists ; exists ; 2009 ; 9783598440809 ; 9783598440809 ; Hochschullehrer‐Verzeichnis: Universitäten Deutschland >
-    au < exists ; exists ; 2010 ; 9783110230697 ; 9783110230697 ; Hochschullehrer‐Verzeichnis: Universitäten Deutschland >
-    au < exists ; exists ; 2011 ; 9783110235432 ; 9783110235432 ; Hochschullehrer‐Verzeichnis: Universitäten Deutschland >
-    au < exists ; exists ; 2012 ; 9783110278040 ; 9783110278040 ; Hochschullehrer‐Verzeichnis: Universitäten Deutschland >
-    au < exists ; exists ; 2013 ; 9783110304893 ; 9783110304893 ; Hochschullehrer‐Verzeichnis: Universitäten Deutschland >
-    au < exists ; exists ; 2010 ; 9783598440984 ; 9783598440984 ; International Directory of Arts >
-    au < exists ; exists ; 2011 ; 9783110230390 ; 9783110230390 ; International Directory of Arts >
-    au < exists ; exists ; 2012 ; 9783110234893 ; 9783110234893 ; International Directory of Arts >
-    au < exists ; exists ; 2013 ; 9783110274110 ; 9783110274110 ; International Directory of Arts >
-    au < exists ; exists ; 2014 ; 9783110302370 ; 9783110302370 ; International Directory of Arts >
-    au < exists ; exists ; 2013 ; 9783598441622 ; 9783598441622 ; International Encyclopedia of Pseudonyms >
-    au < exists ; exists ; 2010 ; 9783598440991 ; 9783598440991 ; Kunstadressbuch Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2011 ; 9783110230420 ; 9783110230420 ; Kunstadressbuch Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2012 ; 9783110234923 ; 9783110234923 ; Kunstadressbuch Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2013 ; 9783110274134 ; 9783110274134 ; Kunstadressbuch Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2014 ; 9783110302394 ; 9783110302394 ; Kunstadressbuch Deutschland, Österreich, Schweiz >
-    au < exists ; exists ; 2009 ; 9783598441004 ; 9783598441004 ; Museums of the World >
-    au < exists ; exists ; 2010 ; 9783110230451 ; 9783110230451 ; Museums of the World >
-    au < exists ; exists ; 2011 ; 9783110234862 ; 9783110234862 ; Museums of the World >
     }
   }
 }
