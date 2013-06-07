@@ -90,9 +90,7 @@ public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIte
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
       
       if(cu.hasContent()) {
-              BufferedReader bReader = new BufferedReader(cu.openForReading());
-	      String pdfSequence = getPdfSequenceFrom(bReader);
-	      IOUtil.safeClose(bReader);
+	      String pdfSequence = getPdfSequenceFrom(new BufferedReader(cu.openForReading()));
 	      
 	      CachedUrl fullTextCu = au.makeCachedUrl(mat.replaceFirst("$1$3"+pdfSequence+".pdf"));
 	      if(fullTextCu != null && fullTextCu.hasContent()) {
@@ -111,19 +109,21 @@ public class CasaEditriceCluebSourceArticleIteratorFactory implements ArticleIte
     }
     
     private String getPdfSequenceFrom(BufferedReader r) {
-    	String line;
-    	
-    	try {
-			for(line = r.readLine(); line != null; line = r.readLine()) {
-				if(line.contains("<SequenceNumber>")) {
-					return String.format("_%04d", Integer.parseInt(line.replaceAll("\\<[^>]*>","")));
-				}
-			}
-		} catch (IOException e) {
-			log.error("Metadata file could not be read: ",e);
-		}
-    	
-    	return null;
+      String line;
+
+      try {
+        for(line = r.readLine(); line != null; line = r.readLine()) {
+          if(line.contains("<SequenceNumber>")) {
+            return String.format("_%04d", Integer.parseInt(line.replaceAll("\\<[^>]*>","")));
+          }
+        }
+      } catch (IOException e) {
+        log.error("Metadata file could not be read: ",e);
+      } finally {
+        IOUtil.safeClose(r);
+      }
+
+      return null;
     }
   }
   
