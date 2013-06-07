@@ -2624,7 +2624,7 @@
         au < released ; 2010 ; Anthropological Theory Volume 10 ; 10 >
         au < released ; 2011 ; Anthropological Theory Volume 11 ; 11 >
         au < released ; 2012 ; Anthropological Theory Volume 12 ; 12 >
-        au < expected ; 2013 ; Anthropological Theory Volume 13 ; 13 >
+        au < manifest ; 2013 ; Anthropological Theory Volume 13 ; 13 >
 
       }
 
@@ -35915,7 +35915,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2012 ; South Asian Journal of Business and Management Cases Volume 1 ; 1 >
-        au < expected ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 >
+        au < manifest ; 2013 ; South Asian Journal of Business and Management Cases Volume 2 ; 2 >
 
       }
 
@@ -42355,7 +42355,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2010 ; Experimental Biology and Medicine Volume 235 ; 235 >
         au < doNotProcess ; 2011 ; Experimental Biology and Medicine Volume 236 ; 236 >
         au < doNotProcess ; 2012 ; Experimental Biology and Medicine Volume 237 ; 237 >
-        au < exists ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 >
+        au < manifest ; 2013 ; Experimental Biology and Medicine Volume 238 ; 238 >
   
       }
   
@@ -42761,7 +42761,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
   
       }
   
@@ -43217,7 +43217,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Laboratory Animals Volume 44 ; 44 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Laboratory Animals Volume 45 ; 45 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Laboratory Animals Volume 46 ; 46 >
-        au < HighWirePressH20Plugin ; exists ; 2013 ; Laboratory Animals Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Laboratory Animals Volume 47 ; 47 >
   
       }
   
