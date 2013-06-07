@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
+ * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.3 2013-06-07 21:20:36 aishizaki Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.test.*;
 
 public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
   static String ENC = Constants.DEFAULT_ENCODING;
+  private static Logger log = Logger.getLogger(TestBMCPluginHtmlFilterFactory.class);
 
   private BMCPluginHtmlFilterFactory fact;
   private MockArchivalUnit mau;
@@ -49,37 +50,55 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
     fact = new BMCPluginHtmlFilterFactory();
     mau = new MockArchivalUnit();
   }
-
-  private static final String inst3 = "<dl class=google-ad wide</dl>"
-      + "<ul>Fill in SOMETHING SOMETHING</ul>";
-
-  private static final String inst4 = "<ul>Fill in SOMETHING SOMETHING</ul>";
-
   private static final String inst1 = "<dl class=google-ad </dl>"
+    + "<ul>Fill in SOMETHING SOMETHING</ul>";
+  private static final String inst2 = "<dl class=google-ad wide</dl>"
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
-
-  private static final String inst2 = "<ul>Fill in SOMETHING SOMETHING</ul>";
   
+  private static final String inst1result = "<ul>Fill in SOMETHING SOMETHING</ul>";
  
+  private static final String inst3 = "<ul id=\"social-networking-links\"> LALALA </ul>Hello World";
+  private static final String inst4 = "<div id=\"impact-factor\" class=\"official\"></div>Hello World";
+  private static final String inst5 = "<a href=\"/sfx_links?ui=1471-2105-13-230&amp;bibl=B1\" onclick=\"popup('/sfx_links?ui=1471-2105-13-230&amp;bibl=B1','SFXMenu','460','420'); return false;\"><img src=\"/sfx_links?getImage\" alt=\"OpenURL\" align=\"absmiddle\"></a>Hello World";
+  private static final String inst6 = "<a href=\"http://www.helloworld.com/about/mostviewed/\"><img alt=\"Highly Accessed\" src=\"/images/articles/highlyaccessed-large.png\" class=\"access mr15\"/></a>Hello World";
+  private static final String commonResult = "Hello World";
+
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
     InputStream inC;
     InputStream inD;
 
-      inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
-          ENC);
-      inB = fact.createFilteredInputStream(mau, new StringInputStream(inst2),
-          ENC);
-      
-      inC = fact.createFilteredInputStream(mau, new StringInputStream(inst3),
-          ENC);
-      inD = fact.createFilteredInputStream(mau, new StringInputStream(inst4),
-          ENC);  
-    assertEquals(StringUtil.fromInputStream(inA),
-          StringUtil.fromInputStream(inB));
-    assertEquals(StringUtil.fromInputStream(inC),
-          StringUtil.fromInputStream(inD));
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
+        ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1result),
+        ENC);
+
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.reset();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst2), ENC);
+  
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst3), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.reset();    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst4), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.reset();    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst5), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.reset();    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst6), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
   }
 
 }

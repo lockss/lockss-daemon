@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.1 2012-05-04 20:28:08 akanshab01 Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.2 2013-06-07 21:20:36 aishizaki Exp $
  */
 
 /*
@@ -67,12 +67,30 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul", "class", "primary-nav"),
        // Contains advertising
        HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad"),
-        // Contains advertising<dl class=\"google-ad wide\"", "</dl>"
-        HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad wide"),
+        // Contains advertising  <dl class="google-ad wide ">
+        HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad wide "),
         //Contains the terms and conditions,copyright year & links to springer
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        // Institution-dependent link resolvers
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"), };
+        // Contains university name: <ul id="login"
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "login"),        
+        // Contains university name
+        HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
+        // Social networking links (have counters)
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
+        // A usage counter/glif that gets updated over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "impact-factor"),
+        // Contains adverstising <a class="banner-ad"
+        HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
+        // Contains adverstising <a class="skyscraper-ad" 
+        HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
+        // An open access link/glyph that may get added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
+        // A highly accessed link/glyph that may get added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
+        // Institution-dependent link resolvers  v2 - added
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
+        // Institution-dependent link resolvers   v1
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp.*"), };
     return new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
