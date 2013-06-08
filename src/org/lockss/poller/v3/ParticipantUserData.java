@@ -1,5 +1,5 @@
 /*
- * $Id: ParticipantUserData.java,v 1.32 2013-03-18 19:19:33 dshr Exp $
+ * $Id: ParticipantUserData.java,v 1.32.8.1 2013-06-08 22:25:01 dshr Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public class ParticipantUserData implements LockssSerializable {
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
   private VoteBlocks symmetricVoteBlocks;
+  private VoteBlocks localVoteBlocks;
   private List nominees;
   private byte[] pollerNonce;
   private byte[] voterNonce;
@@ -347,6 +348,14 @@ public class ParticipantUserData implements LockssSerializable {
     return symmetricVoteBlocks;
   }
 
+  public void setLocalVoteBlocks(VoteBlocks blocks) {
+    localVoteBlocks = blocks;
+  }
+
+  public VoteBlocks getLocalVoteBlocks() {
+    return localVoteBlocks;
+  }
+
   public void addHashStats(VoteBlock vb) {
     for (VoteBlock.Version ver : vb.getVersions()) {
       // Voter hashed the filtered content twice (plain & nonced), plus the
@@ -462,6 +471,10 @@ public class ParticipantUserData implements LockssSerializable {
 
   public void setPollState(PollerStateBean state) {
     this.pollState = state;
+  }
+
+  public boolean isLocalPoll() {
+    return (localVoteBlocks != null);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.7 2012-07-03 08:13:10 tlipkis Exp $
+ * $Id: VoteBlockTallier.java,v 1.7.24.1 2013-06-08 22:25:01 dshr Exp $
  */
 
 /*
@@ -33,10 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller.v3;
 
 import java.util.*;
+import java.io.IOException;
 
 import org.lockss.hasher.HashBlock;
 import org.lockss.protocol.VoteBlock;
+import org.lockss.protocol.VoteBlocks;
 import org.lockss.util.Logger;
+import org.lockss.daemon.ShouldNotHappenException;
 
 
 /**
@@ -63,6 +66,7 @@ public class VoteBlockTallier {
 
   // Null if the poller does not have this URL.
   private final HashBlockComparer comparer;
+  private final HashBlock hashBlock;
   private final Collection<VoteBlockTally> tallies;
   private boolean votingStarted = false;
 
@@ -72,14 +76,8 @@ public class VoteBlockTallier {
    * Make a tallier for a URL the poller does not have.
    */
   public VoteBlockTallier() {
-    this((HashBlockComparer)null);
-  }
-
-  /**
-   * Make a tallier for a URL the poller has.
-   */
-  public VoteBlockTallier(HashBlockComparer comparer) {
-    this.comparer = comparer;
+    this.hashBlock = null;
+    this.comparer = null;
     tallies = new ArrayList<VoteBlockTally>();
   }
 
@@ -87,7 +85,18 @@ public class VoteBlockTallier {
    * Make a tallier for a URL the poller has.
    */
   public VoteBlockTallier(HashBlock hashBlock) {
-    this(new HashBlockComparerImpl(hashBlock));
+    this.hashBlock = hashBlock;
+    this.comparer = new HashBlockComparerImpl(hashBlock);
+    tallies = new ArrayList<VoteBlockTally>();
+  }
+
+  /**
+   * Make a tallier for testing
+   */
+  public VoteBlockTallier(HashBlockComparer comparer) {
+    this.hashBlock = null;
+    this.comparer = comparer;
+    tallies = new ArrayList<VoteBlockTally>();
   }
 
   /**
@@ -115,28 +124,63 @@ public class VoteBlockTallier {
     if (pollerHas()) {
       if (comparer.compare(voteBlock, participantIndex)) {
 	voteAgreed(id);
+	if (id.isLocalPoll()) {
+	  if (participantIndex != 0) {
+	    throw new ShouldNotHappenException("Local index not 0");
+	  }
+	  // The content agrees with the stored hash
+	  localAgreed(id, voteBlock);
+	}
       } else {
 	voteDisagreed(id);
+	if (id.isLocalPoll()) {
+	  if (participantIndex != 0) {
+	    throw new ShouldNotHappenException("Local index not 0");
+	  }
+	  // The content disagrees with the stored hash
+	  localDisagreed(id, voteBlock);
+	}
       }
     } else {
       voteVoterOnly(id);
+      if (id.isLocalPoll()) {
+	if (participantIndex != 0) {
+	  throw new ShouldNotHappenException("Local index not 0");
+	}
+	// There is a stored hash but no content
+	localMissing(id, voteBlock);
+      }
     }
   }
 
   /**
    * Vote that the URL is missing.
    */
-  public void voteMissing(ParticipantUserData id) {
+  public void voteMissing(String url, ParticipantUserData id,
+		   int participantIndex) {
     votingStarted = true;
     if (pollerHas()) {
       votePollerOnly(id);
+      if (id.isLocalPoll()) {
+	if (participantIndex != 0) {
+	  throw new ShouldNotHappenException("Local index not 0: " + url);
+	}
+	// There is content but no stored hash
+	localNoHash(id, url);
+      }
     } else {
       voteNeither(id);
+      if (id.isLocalPoll()) {
+	// There is neither content nor a stored hash - how did we get here?
+	throw new ShouldNotHappenException("Neither content nor stored hash: " +
+					   url);
+      }
     }
   }
 
   /**
    * The voter is unable to cast a meaningful vote.
+   * @param id the Voter's user data
    */
   public void voteSpoiled(ParticipantUserData id) {
     votingStarted = true;
@@ -146,6 +190,10 @@ public class VoteBlockTallier {
     }
   }
 
+  /**
+   * The voter and the poller agreed.
+   * @param id the Voter's user data
+   */
   void voteAgreed(ParticipantUserData id) {
     log.debug3(id+"  agreed");
     for (VoteBlockTally tally: tallies) {
@@ -153,6 +201,10 @@ public class VoteBlockTallier {
     }
   }
 
+  /**
+   * The voter and the poller disagreed.
+   * @param id the Voter's user data
+   */
   void voteDisagreed(ParticipantUserData id) {
     log.debug3(id+"  disagreed");
     for (VoteBlockTally tally: tallies) {
@@ -160,6 +212,10 @@ public class VoteBlockTallier {
     }
   }
 
+  /**
+   * Only the poller had this URL
+   * @param id the Voter's user data
+   */
   void votePollerOnly(ParticipantUserData id) {
     log.debug3(id+"  didn't have");
     for (VoteBlockTally tally: tallies) {
@@ -167,6 +223,10 @@ public class VoteBlockTallier {
     }
   }
 
+  /**
+   * Only the voter had this URL
+   * @param id the Voter's user data
+   */
   void voteVoterOnly(ParticipantUserData id) {
     log.debug3(id+"  voterOnly");
     for (VoteBlockTally tally: tallies) {
@@ -174,11 +234,92 @@ public class VoteBlockTallier {
     }
   }
 
+  /**
+   * Neither the voter nor the poller had this URL,
+   * but some other voter did.
+   * @param id the Voter's user data
+   */
   void voteNeither(ParticipantUserData id) {
     log.debug3(id+"  neither have");
     for (VoteBlockTally tally: tallies) {
       tally.voteNeither(id);
     }
+  }
+
+  /**
+   * In a local poll, the content and the stored hash agreed
+   * @param id the Voter's user data
+   * @param voteBlock the vote block with this URL's stored hash
+   */
+  void localAgreed(ParticipantUserData id, VoteBlock voteBlock) {
+    // XXX
+    // Copy the voteBlock to the new VoteBlocks
+    VoteBlocks vbs = id.getLocalVoteBlocks();
+    try {
+      vbs.addVoteBlock(voteBlock);
+    } catch (IOException ex) {
+      // XXX what to do?
+    }
+  }
+
+  /**
+   * In a local poll, the content and the stored hash disagreed
+   * @param id the Voter's user data
+   * @param voteBlock the vote block with this URL's stored hash
+   */
+  void localDisagreed(ParticipantUserData id, VoteBlock voteBlock) {
+    // XXX
+    // Copy the voteBlock to the new VoteBlocks
+    VoteBlocks vbs = id.getLocalVoteBlocks();
+    try {
+      vbs.addVoteBlock(voteBlock);
+    } catch (IOException ex) {
+      // XXX what to do?
+    }
+  }
+
+  /**
+   * In a local poll, there was a stored hash but no content
+   * @param id the Voter's user data
+   * @param voteBlock the vote block with this URL's stored hash
+   */
+  void localMissing(ParticipantUserData id, VoteBlock voteBlock) {
+    // XXX
+    // Copy the voteBlock to the new VoteBlocks
+    VoteBlocks vbs = id.getLocalVoteBlocks();
+    try {
+      vbs.addVoteBlock(voteBlock);
+    } catch (IOException ex) {
+      // XXX what to do?
+    }
+  }
+
+  /**
+   * In a local poll, there was content but no stored hash
+   * @param id the Voter's user data
+   * @param url the URL of the content without a stored hash
+   */
+  void localNoHash(ParticipantUserData id, String url) {
+    // XXX
+    // Create a new VoteBlock and add it to the VoteBlocks
+    VoteBlocks vbs = id.getLocalVoteBlocks();
+    try {
+      vbs.addVoteBlock(makeVoteBlock(id, url));
+    } catch (IOException ex) {
+      // XXX what to do?
+    }
+  }
+
+  /**
+   * In a local poll there was content but no stored hash. Create
+   * and fill out a VoteBlock for all versions of this URL.
+   * @param id the Voter's user data
+   * @param url the URL of the content without a stored hash
+   */
+  VoteBlock makeVoteBlock(ParticipantUserData id, String url) {
+    VoteBlock ret = new VoteBlock(url);
+    // XXX actually should have a VoteBlock constructor that takes a HashBlock
+    return ret;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.9 2013-02-24 04:54:19 dshr Exp $
+ * $Id: UrlTallier.java,v 1.9.8.1 2013-06-08 22:25:01 dshr Exp $
  */
 
 /*
@@ -340,12 +340,12 @@ final class UrlTallier {
       if (e.voteSpoiled()) {
 	voteBlockTallier.voteSpoiled(e.userData);
       } else {
+	VoteBlock voteBlock = e.voteBlock;
 	if (url.equals(e.getUrl())) {
-	  VoteBlock voteBlock = e.voteBlock;
 	  nextVoteBlock(e);
 	  voteBlockTallier.vote(voteBlock, e.userData, participantIndex);
 	} else {
-	  voteBlockTallier.voteMissing(e.userData);
+	  voteBlockTallier.voteMissing(url, e.userData, participantIndex);
 	}
       }
     }

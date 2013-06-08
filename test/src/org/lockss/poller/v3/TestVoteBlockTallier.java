@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.5 2012-07-02 16:21:00 tlipkis Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.5.24.1 2013-06-08 22:25:01 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
   private File tempDir;
   String tempDirPath;
   private byte[] testBytes = ByteArray.makeRandomBytes(20);
+  private static final String url = "http://www.example.com";
 
   public void setUp() throws Exception {
     super.setUp();
@@ -114,7 +115,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = new VoteBlockTallier(comparer);
     tally = new BlockTally();
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(testPeers[0]);
+    voteBlockTallier.voteMissing(url, testPeers[0], 0);
     assertEquals("0/1/1/0", tally.votes());
 
     voteBlockTallier = new VoteBlockTallier(comparer);
@@ -145,7 +146,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier = new VoteBlockTallier();
     tally = new BlockTally();
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(testPeers[0]);
+    voteBlockTallier.voteMissing(url, testPeers[0], 0);
     assertEquals("1/0/0/0", tally.votes());
 
     voteBlockTallier = new VoteBlockTallier();
@@ -188,7 +189,7 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voter = new ParticipantUserData();
     tally = ParticipantUserData.voteTally;
     voteBlockTallier.addTally(tally);
-    voteBlockTallier.voteMissing(voter);
+    voteBlockTallier.voteMissing(url, voter, 0);
     assertEquals("0/0/1/0/0/0", voter.getVoteCounts().votes());
     assertEquals(0, voter.getBytesHashed());
     assertEquals(0, voter.getBytesRead());
