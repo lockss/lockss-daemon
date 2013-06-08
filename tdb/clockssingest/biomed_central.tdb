@@ -1775,7 +1775,7 @@
       param[base_url] = http://www.actaneurocomms.org/
       param[journal_issn] = 2051-5960
 
-      au < manifest ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; Acta Neuropathologica Communications Volume 1 ; 1 >
 
     }
 
@@ -1802,7 +1802,7 @@
       au < released ; crawling ; 2010 ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
       au < released ; crawling ; 2011 ; Acta Veterinaria Scandinavica Volume 53 ; 53 >
       au < testing ; exists ; 2012 ; Acta Veterinaria Scandinavica Volume 54 ; 54 >
-      au < manifest ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
+      au < crawling ; exists ; 2013 ; Acta Veterinaria Scandinavica Volume 55 ; 55 >
       
     }
 
@@ -1818,7 +1818,7 @@
       param[journal_issn] = 1940-0640
 
       au < testing ; exists ; 2012 ; Addiction Science & Clinical Practice Volume 7 ; 7 >
-      au < manifest ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
+      au < crawling ; exists ; 2013 ; Addiction Science & Clinical Practice Volume 8 ; 8 >
 
     }
 
@@ -1834,7 +1834,7 @@
       param[journal_issn] = 2048-7010
 
       au < testing ; exists ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
+      au < crawling ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
 
     }
 
@@ -1859,7 +1859,7 @@
       au < released ; crawling ; 2010 ; AIDS Research and Therapy Volume 7 ; 7 >
       au < released ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < testing ; exists ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
-      au < manifest ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
+      au < crawling ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
 
     }
 
@@ -1882,7 +1882,7 @@
       au < released ; crawling ; 2010 ; Algorithms for Molecular Biology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Algorithms for Molecular Biology Volume 6 ; 6 >
       au < testing ; exists ; 2012 ; Algorithms for Molecular Biology Volume 7 ; 7 >
-      au < manifest ; exists ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
+      au < crawling ; exists ; 2013 ; Algorithms for Molecular Biology Volume 8 ; 8 >
 
     }
 
@@ -1904,7 +1904,7 @@
       au < crawling ; exists ; 2010 ; Allergy, Asthma & Clinical Immunology Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < testing ; exists ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
-      au < manifest ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
 
     }
 
@@ -1936,7 +1936,7 @@
       param[base_url] = http://www.animalbiotelemetry.com/
       param[journal_issn] = 2050-3385
 
-      au < manifest ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; Animal Biotelemetry Volume 1 ; 1 >
 
     }
 
@@ -1963,7 +1963,7 @@
       au < released ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
       au < testing ; exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
-      au < manifest ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
+      au < crawling ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
 
     }
 
@@ -1988,7 +1988,7 @@
       au < released ; crawling ; 2010 ; Annals of General Psychiatry Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Annals of General Psychiatry Volume 10 ; 10 >
       au < testing ; exists ; 2012 ; Annals of General Psychiatry Volume 11 ; 11 >
-      au < manifest ; exists ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
+      au < crawling ; exists ; 2013 ; Annals of General Psychiatry Volume 12 ; 12 >
 
     }
 
@@ -2008,7 +2008,7 @@
       au < released ; crawling ; 2010 ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
       au < released ; crawling ; 2011 ; Annals of Surgical Innovation and Research Volume 5 ; 5 >
       au < testing ; exists ; 2012 ; Annals of Surgical Innovation and Research Volume 6 ; 6 >
-      au < manifest ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
+      au < crawling ; exists ; 2013 ; Annals of Surgical Innovation and Research Volume 7 ; 7 >
 
     }
 
@@ -2024,7 +2024,7 @@
       param[journal_issn] = 2047-2994
 
       au < crawling ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
+      au < crawling ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
 
     }
 
@@ -2046,7 +2046,7 @@
       au < superseded ; exists ; 2010 ; Aquatic Biosystems Volume 6 [superseded] ; 6 >
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 >
       au < crawling ; exists ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
-      au < manifest ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
 
     }
 
@@ -2065,7 +2065,7 @@
       au < crawling ; exists ; 2010-2011 ; Archives of Public Health Volume 68 ; 68 >
       au < released ; crawling ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < crawling ; exists ; 2012 ; Archives of Public Health Volume 70 ; 70 >
-      au < manifest ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
+      au < crawling ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
 
     }
 
@@ -2115,7 +2115,7 @@
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
       au < crawling ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
-      au < manifest ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
+      au < crawling ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
 
@@ -2174,7 +2174,7 @@
       au < released ; crawling ; 2010 ; Behavioral and Brain Functions Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; Behavioral and Brain Functions Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Behavioral and Brain Functions Volume 8 ; 8 >
-      au < manifest ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; Behavioral and Brain Functions Volume 9 ; 9 >
 
     }
 
@@ -2193,7 +2193,7 @@
       au < crawling ; exists ; 2010 ; BioData Mining Volume 3 ; 3 >
       au < released ; crawling ; 2011 ; BioData Mining Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BioData Mining Volume 5 ; 5 >
-      au < manifest ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
+      au < crawling ; exists ; 2013 ; BioData Mining Volume 6 ; 6 >
 
     }
 
@@ -2211,7 +2211,7 @@
       au < crawling ; exists ; 2009-2010 ; Biological Procedures Online Volume 12 ; 12 >
       au < crawling ; exists ; 2010-2011 ; Biological Procedures Online Volume 13 ; 13 >
       au < crawling ; exists ; 2012 ; Biological Procedures Online Volume 14 ; 14 >
-      au < manifest ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
+      au < crawling ; exists ; 2013 ; Biological Procedures Online Volume 15 ; 15 >
 
 
     }
@@ -2235,7 +2235,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2010 ; Biology Direct Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; Biology Direct Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; Biology Direct Volume 7 ; 7 >
-      au < manifest ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
+      au < crawling ; exists ; 2013 ; Biology Direct Volume 8 ; 8 >
 
     }
 
@@ -2252,7 +2252,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
 
       au < crawling ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
-      au < manifest ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
 
     }
 
