@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.16 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.16.2.1 2013-06-10 07:17:50 tlipkis Exp $
  */
 
 /*
@@ -128,8 +128,8 @@ final class UrlTallier {
 	  // Check that the iterator is returning URLs in the
 	  // canonical order.
 	  if (prevUrl != null &&
-	      VoteBlock.compareUrls(prevUrl, url) >= 0) {
-	    installErrorIterator(new Exception("VoteBlocks not in order."));
+	      StringUtil.preOrderCompareToNullHigh(prevUrl, url) >= 0) {
+	    log.warning("VoteBlocks not in order: " + prevUrl + ", " + url);
 	  }
 	} else {
 	  voteBlock = null;

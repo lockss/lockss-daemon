@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.16 2013-05-13 21:00:14 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.16.2.1 2013-06-10 07:17:50 tlipkis Exp $
  */
 
 /*
@@ -244,7 +244,8 @@ public class TestUrlTallier extends LockssTestCase {
     assertEquals(null, urlTallier.peekUrl());
   }
 
-  public void testOutOfOrderUrl() throws Exception {
+  // XXX Disabled until order check re-enabled in UrlTallier
+  public void disabled_testOutOfOrderUrl() throws Exception {
 
     V3Poller v3Poller = makeV3Poller("testing poll key", 3);
     
