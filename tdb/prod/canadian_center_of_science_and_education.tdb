@@ -306,6 +306,20 @@
   {
   
     title <
+      name = International Journal of Statistics and Probability ;
+      issn = 1927-7032 ;
+      eissn = 1927-7040
+    >
+    
+    param[journal_id] = ijsp
+
+    au < doNotProcess ; 2012 ; International Journal of Statistics and Probability Volume 1 ; 1 ; 2012 >
+    au < doNotProcess ; 2013 ; International Journal of Statistics and Probability Volume 2 ; 2 ; 2013 >
+  }
+  
+  {
+  
+    title <
       name = Journal of Agricultural Science ;
       issn = 1916-9752 ;
       eissn = 1916-9760
