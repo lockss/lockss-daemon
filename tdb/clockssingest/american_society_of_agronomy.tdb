@@ -1,0 +1,131 @@
+{
+
+  publisher <
+    name = American Society of Agronomy ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://www.agronomy.org/
+
+  {
+    title <
+      name = Agronomy Journal ;
+      eissn = 1435-0645
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Crop Science ;
+      eissn = 1435-0653
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Crops & Soils ;
+      eissn = 0162-5098
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = CSA News ;
+      eissn = 1529-9163
+    >
+
+
+
+  {
+
+  }
+    title <
+      name = Journal of Environmental Quality ;
+      eissn = 1537-2537
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Journal of Plant Registrations ;
+      eissn = 1940-3496
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Journal of Production Agriculture ;
+      eissn = 0890-8524
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Natural Sciences Education ;
+      eissn = 2186-8281
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = The Plant Genome ;
+      eissn = 1940-3372
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Soil Horizons ;
+      eissn = 1940-3372
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Soil Science Society of America ;
+      eissn = 1435-0661
+    >
+
+
+
+  }
+
+  {
+    title <
+      name = Vadose Zone Journal
+      eissn = 1539-1663
+    >
+
+
+
+  }
+}
