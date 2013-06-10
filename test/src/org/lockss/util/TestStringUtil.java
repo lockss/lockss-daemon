@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.94 2013-04-14 05:27:41 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.94.2.1 2013-06-10 07:17:36 tlipkis Exp $
  */
 
 /*
@@ -536,6 +536,47 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(1, StringUtil.compareToNullHigh("b", "a"));
     assertEquals(-1, StringUtil.compareToNullHigh("a", "b"));
     assertEquals(0, StringUtil.compareToNullHigh("a", "a"));
+  }
+
+  static public void assertPreOrder(String s1, String s2) {
+    assertTrue(StringUtil.preOrderCompareTo(s1, s2) < 0);
+    assertTrue(StringUtil.preOrderCompareTo(s2, s1) > 0);
+  }
+
+  static public void assertPreOrderNullHigh(String s1, String s2) {
+    assertTrue(StringUtil.preOrderCompareToNullHigh(s1, s2) < 0);
+    assertTrue(StringUtil.preOrderCompareToNullHigh(s2, s1) > 0);
+  }
+
+  public void testPreOrderCompareTo() {
+    assertEquals(0, StringUtil.preOrderCompareTo("", ""));
+    assertEquals(0, StringUtil.preOrderCompareTo("a", "a"));
+    assertEquals(0, StringUtil.preOrderCompareTo("uni-\u00eb-code",
+						 "uni-\u00eb-code"));
+    assertEquals(0, StringUtil.preOrderCompareTo("1/", "1/"));
+    assertEquals(0, StringUtil.preOrderCompareTo("1/2.3", "1/2.3"));
+    assertPreOrder("a", "b");
+    assertPreOrder("", "1");
+    assertPreOrder("abc", "abc/");
+    assertPreOrder("abc", "abc.");
+    assertTrue("a/".compareTo("a.") > 0);
+    assertPreOrder("a/", "a.");
+    assertTrue("a/b".compareTo("a.b") > 0);
+    assertPreOrder("a/b", "a.b");
+  }
+
+  public void testPreOrderCompareToNullHigh() {
+    assertEquals(0, StringUtil.preOrderCompareToNullHigh("", ""));
+    assertEquals(0, StringUtil.preOrderCompareToNullHigh("a", "a"));
+    assertEquals(0, StringUtil.preOrderCompareToNullHigh(null, null));
+    assertEquals(0, StringUtil.preOrderCompareToNullHigh("1/2.3", "1/2.3"));
+    assertPreOrderNullHigh("a/b", null);
+    assertPreOrderNullHigh("a.b", null);
+
+    assertTrue(StringUtil.compareToNullHigh("a/", "a.") > 0);
+    assertPreOrderNullHigh("a/", "a.");
+    assertTrue(StringUtil.compareToNullHigh("a/b", "a.b") > 0);
+    assertPreOrderNullHigh("a/b", "a.b");
   }
 
   public void testEqualStrings() {
