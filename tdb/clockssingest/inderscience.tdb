@@ -983,7 +983,7 @@
       param[journal_issn] = 1755-831X
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Biometrics Volume 1 ; 1 >
-      au < testing ; exists ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Biometrics Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Biometrics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Biometrics Volume 5 ; 5 >
@@ -1011,7 +1011,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Biotechnology Volume 8 ; 8 >
       au < manifest ; exists ; 2007 ; International Journal of Biotechnology Volume 9 ; 9 >
       au < manifest ; exists ; 2008 ; International Journal of Biotechnology Volume 10 ; 10 >
-      au < testing ; exists ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
       au < zapped ; down ; 2011 ; International Journal of Biotechnology Volume 12 ; 12 >
       au < expected ; exists ; 2012 ; International Journal of Biotechnology Volume 13 ; 13 >
 
@@ -1044,7 +1044,7 @@
       param[journal_issn] = 1753-6227
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Business and Emerging Markets Volume 1 ; 1 >
-      au < testing ; exists ; 2010 ; International Journal of Business and Emerging Markets Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Emerging Markets Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Business and Emerging Markets Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Business and Emerging Markets Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Business and Emerging Markets Volume 5 ; 5 >
@@ -1065,8 +1065,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Business and Globalisation Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business and Globalisation Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business and Globalisation Volume 3 ; 3 >
-      au < testing ; exists ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 >
-      au < testing ; exists ; 2010 ; International Journal of Business and Globalisation Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Globalisation Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business and Globalisation Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Business and Globalisation Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Business and Globalisation Volume 8 ; 8 > 
@@ -1088,7 +1088,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Business and Systems Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business and Systems Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business and Systems Research Volume 3 ; 3 >
-      au < testing ; exists ; 2010 ; International Journal of Business and Systems Research Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Systems Research Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Business and Systems Research Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Business and Systems Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Business and Systems Research Volume 7 ; 7 >
@@ -1123,7 +1123,7 @@
 
       param[journal_issn] = 1758-2172
       
-      au < testing ; exists ; 2009-2010 ; International Journal of Business Continuity and Risk Management Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Business Continuity and Risk Management Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Business Continuity and Risk Management Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Business Continuity and Risk Management Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 >
@@ -1143,7 +1143,7 @@
       
       au < manifest ; exists ; 2006-2007 ; International Journal of Business Environment Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Business Environment Volume 2 ; 2 >
-      au < testing ; exists ; 2010 ; International Journal of Business Environment Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Business Environment Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Business Environment Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Business Environment Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Business Environment Volume 6 ; 6 >
@@ -1163,7 +1163,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Business Excellence Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Business Excellence Volume 2 ; 2 >
-      au < testing ; exists ; 2010 ; International Journal of Business Excellence Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Business Excellence Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Business Excellence Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Business Excellence Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Business Excellence Volume 6 ; 6 >
@@ -1181,7 +1181,7 @@
 
       param[journal_issn] = 1744-6643
       
-      au < testing ; exists ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
 
     }
 
@@ -1200,7 +1200,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Business Governance and Ethics Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; International Journal of Business Governance and Ethics Volume 3 ; 3 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Business Governance and Ethics Volume 4 ; 4 >
-      au < testing ; exists ; 2010 ; International Journal of Business Governance and Ethics Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Governance and Ethics Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business Governance and Ethics Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Business Governance and Ethics Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Business Governance and Ethics Volume 8 ; 8 >
@@ -1222,8 +1222,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Business Information Systems Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Business Information Systems Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Business Information Systems Volume 4 ; 4 >
-      au < testing ; exists ; 2010 ; International Journal of Business Information Systems Volume 5 ; 5 >
-      au < testing ; exists ; 2010 ; International Journal of Business Information Systems Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Business Information Systems Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Information Systems Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Business Information Systems Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; International Journal of Business Information Systems Volume 8 ; 8 >
       au < zapped ; down ; 2012 ; International Journal of Business Information Systems Volume 9 ; 9 >
@@ -1245,7 +1245,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Business Innovation and Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business Innovation and Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business Innovation and Research Volume 3 ; 3 >
-      au < testing ; exists ; 2010 ; International Journal of Business Innovation and Research Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business Innovation and Research Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Business Innovation and Research Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Business Innovation and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Business Innovation and Research Volume 7 ; 7 >
@@ -1267,7 +1267,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 >
-      au < testing ; exists ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Business Intelligence and Data Mining Volume 7 ; 7 >
 
@@ -1285,7 +1285,7 @@
       param[journal_issn] = 1758-941X
       
       au < manifest ; exists ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
-      au < testing ; exists ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Business Performance and Supply Chain Modelling Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Business Performance and Supply Chain Modelling Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Business Performance and Supply Chain Modelling Volume 5 ; 5 >
