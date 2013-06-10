@@ -1402,7 +1402,7 @@
 
       param[journal_issn] = 1742-7215
 
-      au < crawling ; exists ; 2012 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
       
     }
 
@@ -1432,7 +1432,7 @@
 
       param[journal_issn] = 1740-2093
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Collaborative Enterprise Volume 3 ; 3 >
 
@@ -1452,8 +1452,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Communication Networks and Distributed Systems Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
+      au < testing ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
+      au < testing ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 >
@@ -1473,7 +1473,7 @@
       param[journal_issn] = 1740-0554
       comment[0] = title is not yet published on 4/11/2013
       
-      au < crawling ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < testing ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -1507,7 +1507,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Computational Biology and Drug Design Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Computational Biology and Drug Design Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
+      au < testing ; exists ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Computational Biology and Drug Design Volume 6 ; 6 >
@@ -1540,7 +1540,7 @@
 
       param[journal_issn] = 1757-1189
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
 
@@ -1557,7 +1557,7 @@
 
       param[journal_issn] = 1755-8042
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
 
     }
 
@@ -1572,7 +1572,7 @@
 
       param[journal_issn] = 1755-4985
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
 
     }
 
@@ -1589,7 +1589,7 @@
       
       au < manifest ; exists ; 2007 ; International Journal of Computational Materials Science and Surface Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Computational Materials Science and Surface Engineering Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
+      au < testing ; exists ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 >
@@ -1641,7 +1641,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Computational Science and Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; International Journal of Computational Science and Engineering Volume 3 ; 3 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Computational Science and Engineering Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Science and Engineering Volume 5 ; 5 >
+      au < testing ; exists ; 2010 ; International Journal of Computational Science and Engineering Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Computational Science and Engineering Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Computational Science and Engineering Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Computational Science and Engineering Volume 8 ; 8 >
@@ -1674,7 +1674,7 @@
 
       param[journal_issn] = 1752-914X
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Vision and Robotics Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Computational Vision and Robotics Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Computational Vision and Robotics Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Computational Vision and Robotics Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Computational Vision and Robotics Volume 4 ; 4 >
@@ -1693,7 +1693,7 @@
       param[journal_issn] = 1757-2665
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Computer Aided Engineering and Technology Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Aided Engineering and Technology Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Computer Aided Engineering and Technology Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Computer Aided Engineering and Technology Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Computer Aided Engineering and Technology Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Computer Aided Engineering and Technology Volume 5 ; 5 >
@@ -1736,9 +1736,9 @@
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 34 ; 34 >
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 35 ; 35 >
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 36 ; 36 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 37 ; 37 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 38 ; 38 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 39 ; 39 >
+      au < testing ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 37 ; 37 >
+      au < testing ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 38 ; 38 >
+      au < testing ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 39 ; 39 >
       au < zapped ; down ; 2011 ; International Journal of Computer Applications in Technology Volume 40 ; 40 >
       au < zapped ; down ; 2011 ; International Journal of Computer Applications in Technology Volume 41 ; 41 >
       au < released ; crawling ; 2011 ; International Journal of Computer Applications in Technology Volume 42 ; 42 >
