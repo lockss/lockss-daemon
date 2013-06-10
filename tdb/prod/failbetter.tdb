@@ -14,17 +14,80 @@
     rights = openaccess
 
 comment[fb1] = the website changed, manifest pages have moved.  See RT4886
-comment[fb2] = needs either new manifest pages or a statement on the "archive" page + new plugin with AUs grouped by issue
-
-    plugin = org.nypl.plugin.failbetter.FailbetterPlugin
-    implicit < status ; name ; param[year] >
-    param[base_url] = http://www.failbetter.com/
+comment[fb2] = has permission statement on the home page. Needs new plugin with AUs grouped by issue
+comment[fb3] = plugins should be simple so that publisher doesn't have to make any ongoing changes.
+    
+    {
+    
+      plugin = org.nypl.plugin.failbetter.FailbetterPlugin
+      implicit < status ; name ; year ; param[year] >
+      param[base_url] = http://www.failbetter.com/
   
-    au < down ; Failbetter 2000 ; 2000 >
-    au < down ; Failbetter 2001 ; 2001 >
-    au < down ; Failbetter 2002 ; 2002 >
-    au < down ; Failbetter 2003 ; 2003 >
-    au < down ; Failbetter 2004 ; 2004 >
+      au < down ; Failbetter 2000 ; 2000 ; 2000 >
+      au < down ; Failbetter 2001 ; 2001 ; 2001 >
+      au < down ; Failbetter 2002 ; 2002 ; 2002 >
+      au < down ; Failbetter 2003 ; 2003 ; 2003 >
+      au < down ; Failbetter 2004 ; 2004 ; 2004 >
+    
+    }
+  
+    {
+    
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[issue_name] >
+      param[base_url] = http://www.failbetter.com/
+  
+      au < doNotProcess ; 2000 ; Failbetter Issue 1 ; 1 >
+      au < doNotProcess ; 2001 ; Failbetter Issue 2 ; 2 >
+      au < doNotProcess ; 2001 ; Failbetter Issue 3 ; 3 >
+      au < doNotProcess ; 2001 ; Failbetter Issue 4 ; 4 >
+      au < doNotProcess ; 2002 ; Failbetter Issue 5 ; 5 >
+      au < doNotProcess ; 2002 ; Failbetter Issue 6 ; 6 >
+      au < doNotProcess ; 2002 ; Failbetter Issue 7 ; 7 >
+      au < doNotProcess ; 2002 ; Failbetter Issue 8 ; 8 >
+      au < doNotProcess ; 2003 ; Failbetter Issue 9 ; 9 >
+      au < doNotProcess ; 2003 ; Failbetter Issue 10 ; 10 >
+      au < doNotProcess ; 2003 ; Failbetter Issue 11 ; 11 >
+      au < doNotProcess ; 2003 ; Failbetter Issue 12 ; 12 >
+      au < doNotProcess ; 2004 ; Failbetter Issue 13 ; 13 >
+      au < doNotProcess ; 2004 ; Failbetter Issue 14 ; 14 >
+      au < doNotProcess ; 2004 ; Failbetter Issue 15 ; 15 >
+      au < exists ; 2005 ; Failbetter Issue 16 ; 16 >
+      au < exists ; 2005 ; Failbetter Issue 17 ; 17 >
+      au < exists ; 2005 ; Failbetter Issue 18 ; 18 >
+      au < exists ; 2006 ; Failbetter Issue 19 ; 19 >
+      au < exists ; 2006 ; Failbetter Issue 20 ; 20 >
+      au < exists ; 2006 ; Failbetter Issue 21 ; 21 >
+      au < exists ; 2006-2007 ; Failbetter Issue 22 ; 22 >
+      au < exists ; 2007 ; Failbetter Issue 23 ; 23 >
+      au < exists ; 2007 ; Failbetter Issue 24 ; 24 >
+      au < exists ; 2007 ; Failbetter Issue 25 ; 25 >
+      au < exists ; 2008 ; Failbetter Issue 26 ; 26 >
+      au < exists ; 2008 ; Failbetter Issue 27 ; 27 >
+      au < exists ; 2008 ; Failbetter Issue 28 ; 28 >
+      au < exists ; 2008 ; Failbetter Issue 29 ; 29 >
+      au < exists ; 2009 ; Failbetter Issue 30 ; 30 >
+      au < exists ; 2009 ; Failbetter Issue 31 ; 31 >
+      au < exists ; 2009 ; Failbetter Issue 32 ; 32 >
+      au < exists ; 2009 ; Failbetter Issue 33 ; 33 >
+      au < exists ; 2010 ; Failbetter Issue 34 ; 34 >
+      au < exists ; 2010 ; Failbetter Issue 35 ; 35 >
+      au < exists ; 2010 ; Failbetter Issue 36 ; 36 >
+      au < exists ; 2010 ; Failbetter Issue 37 ; 37 >
+      au < exists ; 2011 ; Failbetter Issue 38 ; 38 >
+      au < exists ; 2011 ; Failbetter Issue 39 ; 39 >
+      au < exists ; 2011 ; Failbetter Issue 40 ; 40 >
+      au < exists ; 2011 ; Failbetter Issue 41 ; 41 >
+      au < exists ; 2012 ; Failbetter Issue 42 ; 42 >
+      au < exists ; 2012 ; Failbetter Issue 43 ; 43 >
+      au < exists ; 2012 ; Failbetter Issue 44 ; 44 >
+      au < exists ; 2012 ; Failbetter Issue 45 ; 45 >
+      au < exists ; 2013 ; Failbetter Issue 46 ; 46 >
+      au < exists ; 2013 ; Failbetter Issue 47 ; 47 >
+      au < expected ; 2013 ; Failbetter Issue 48 ; 48 >
+      au < expected ; 2013 ; Failbetter Issue 49 ; 49 >
+    
+    }
   
   }
   
