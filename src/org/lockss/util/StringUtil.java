@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.112 2013-04-01 00:45:36 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.113 2013-06-10 08:04:15 tlipkis Exp $
  */
 
 /*
@@ -1207,6 +1207,48 @@ public class StringUtil {
       return -1;
     }
     return str1.compareTo(str2);
+  }
+
+  /** 
+   * Comparison that matches the traversal order of CachedUrlSet iterators.
+   * Differs from natural sort order in that '/' sorts before any other
+   * char, because the tree traversal is pre-order.
+   */
+  public static int preOrderCompareTo(String str1, String str2) {
+    int len1 = str1.length();
+    int len2 = str2.length();
+    int n = Math.min(len1, len2);
+
+    for (int ix = 0; ix < n; ix++) {
+      char c1 = str1.charAt(ix);
+      char c2 = str2.charAt(ix);
+      if (c1 != c2) {
+	if (c1 == '/') {
+	  return -1;
+	}
+	if (c2 == '/') {
+	  return 1;
+	}
+	return c1 - c2;
+      }
+    }
+    return len1 - len2;
+  }
+
+  /** 
+   * Comparison that matches the traversal order of CachedUrlSet iterators.
+   * Differs from natural sort order in that '/' sorts before any other
+   * char, because the tree traversal is pre-order.  Null sorts after all
+   * nun-null strings.
+   */
+  public static int preOrderCompareToNullHigh(String str1, String str2) {
+    if (str1 == null) {
+      return (str2 == null) ? 0 : 1;
+    }
+    if (str2 == null) {
+      return -1;
+    }
+    return StringUtil.preOrderCompareTo(str1, str2);
   }
 
   /**
