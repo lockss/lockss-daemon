@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.14 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.15 2013-06-10 20:32:49 barry409 Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class VoteBlockTallier {
 
   private final Collection<VoteBlockTally> tallies =
     new ArrayList<VoteBlockTally>();
+  private BlockTally blockTally;
   private boolean votingStarted = false;
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");
@@ -153,6 +154,15 @@ public class VoteBlockTallier {
       throw new IllegalStateException("tally added after voting started.");
     }
     tallies.add(tally);
+  }
+
+  public void addBlockTally(BlockTally blockTally) {
+    addTally(blockTally);
+    this.blockTally = blockTally;
+  }
+
+  public BlockTally getBlockTally() {
+    return this.blockTally;
   }
 
   // This could be done by using dispatch and a subclass.

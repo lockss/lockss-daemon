@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.148 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: V3Poller.java,v 1.149 2013-06-10 20:32:49 barry409 Exp $
  */
 
 /*
@@ -1229,6 +1229,86 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  // package-level for testing.
+  // This causes the bytesHashed/bytesRead counters to be bumped.
+  static VoteBlockTallier.VoteCallback makeHashStatsTallier() {
+    return new VoteBlockTallier.VoteCallback() {
+      @Override public void vote(VoteBlock voteBlock, ParticipantUserData id) {
+	id.addHashStats(voteBlock);
+      }
+    };
+  }
+
+  // package-level for testing.
+ /**
+   * <p>Create a {@link VoteBlockTallier} to call the appropriate
+   * voting routine on the tally for each participant. The poller does
+   * not have the given URL, but some voter does.  Ready to be used by
+   * {@link UrlTallier#voteAllParticipants}.</p>
+   *
+   * @return A {@link VoteBlockTallier} which has had no votes.
+   */
+  VoteBlockTallier getVoterUrlTally() {
+    // Will finish with the WON/LOST/&c of the vote for this url
+    BlockTally tally = new BlockTally(getQuorum(), getVoteMargin());
+    // For the bytesHashed/bytesRead and the version counts
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.make(makeHashStatsTallier(), tally.getVoteCallback());
+    // For the WON/LOST
+    voteBlockTallier.addBlockTally(tally);
+    // For the agree/disagree/&c for each participant
+    voteBlockTallier.addTally(ParticipantUserData.voteTally);
+    return voteBlockTallier;
+  }
+
+  // package-level for testing.
+  /**
+   * <p>Create a {@link VoteBlockTallier} to call the appropriate
+   * voting routine on the tally for each participant.  The poller has
+   * the given URL.  Ready to be used by {@link
+   * UrlTallier#voteAllParticipants}.</p>
+   *
+   * @param hashBlock The poller's {@link HashBlock}.
+   * @return A {@link VoteBlockTallier} which has had no votes.
+   */
+  VoteBlockTallier getPollerUrlTally(HashBlock hashBlock) {
+    // Will finish with the WON/LOST/&c of the vote for this url
+    BlockTally tally = new BlockTally(getQuorum(), getVoteMargin(),
+				      hashBlock, getHashIndexer());
+    // For the bytesHashed/bytesRead and the version counts
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.make(hashBlock, getHashIndexer(), makeHashStatsTallier(),
+			    tally.getVoteCallback());
+    // For the WON/LOST
+    voteBlockTallier.addBlockTally(tally);
+    // For the agree/disagree/&c for each participant
+    voteBlockTallier.addTally(ParticipantUserData.voteTally);
+    return voteBlockTallier;
+  }
+
+  // package-level for testing.
+  /**
+   * <p>Create a {@link VoteBlockTallier} to call the appropriate
+   * voting routine on the tally for each participant.  The poller has
+   * the given URL.  Ready to be used by {@link
+   * UrlTallier#voteAllParticipants}.</p>
+   *
+   * @param hashBlock The poller's {@link HashBlock}.
+   * @return A {@link VoteBlockTallier} which has had no votes.
+   */
+  VoteBlockTallier getRepairUrlTally(HashBlock hashBlock) {
+    // Will finish with the WON/LOST/&c of the vote for this url
+    BlockTally tally = new BlockTally(getQuorum(), getVoteMargin(),
+				      hashBlock, getHashIndexer());
+    // Do NOT re-count bytesHashed/bytesRead or version counts
+    VoteBlockTallier voteBlockTallier =
+      VoteBlockTallier.makeForRepair(hashBlock, getHashIndexer());
+    // For the WON/LOST
+    voteBlockTallier.addBlockTally(tally);
+    // Do NOT re-count the agree/disagree/&c for each participant
+    return voteBlockTallier;
+  }
+
   /**
    * After the poller has no more blocks, process all the blocks any
    * voter has.
@@ -1257,8 +1337,8 @@ public class V3Poller extends BasePoll {
       String voterUrl = urlTallier.peekUrl();
       log.debug3("voters have: "+voterUrl);
       if (voterUrl == null || voterUrl.compareTo(pollerUrl) >= 0) {
-	// Leave the while loop, since the voter was greater than the
-	// pollerUrl.
+	// Leave the while loop, since the voter was greater than or
+	// equal to the pollerUrl.
 	break;
       }
       tallyVoterUrl(voterUrl);
@@ -1285,6 +1365,8 @@ public class V3Poller extends BasePoll {
    * @param voterUrl The URL being tallied.
    */
   private void tallyVoterUrl(String voterUrl) {
+    log.debug3("tallyVoterUrl: "+voterUrl);
+
     boolean inc = true; // Is this URL included in the poll
     if (sampleModulus != 0 && sampleHasher != null) {
       // This is a sampled poll. The reason that the URL does not
@@ -1296,11 +1378,11 @@ public class V3Poller extends BasePoll {
 					     sampleModulus, sampleHasher);
       log.debug("tallyVoterUrl: " + voterUrl + (inc ? " is" : " isn't") +
 		" in sample");
-    } else {
-      log.debug3("tallyVoterUrl: "+voterUrl);
     }
     if (inc) {
-      BlockTally tally = urlTallier.tallyVoterUrl(voterUrl);
+      VoteBlockTallier voteBlockTallier = getVoterUrlTally();
+      urlTallier.voteAllParticipants(voterUrl, voteBlockTallier);
+      BlockTally tally = voteBlockTallier.getBlockTally();
       // This URL is included - record its tally and repair if needed
       updateTallyStatus(tally, voterUrl);
       repairIfNeeded(tally, voterUrl);
@@ -1320,7 +1402,10 @@ public class V3Poller extends BasePoll {
    */
   private BlockTally tallyPollerUrl(String pollerUrl, HashBlock hashBlock) {
     log.debug3("tallyPollerUrl: "+pollerUrl);
-    BlockTally tally = urlTallier.tallyPollerUrl(pollerUrl, hashBlock);
+    
+    VoteBlockTallier voteBlockTallier = getPollerUrlTally(hashBlock);
+    urlTallier.voteAllParticipants(pollerUrl, voteBlockTallier);
+    BlockTally tally = voteBlockTallier.getBlockTally();
     signalNodeAgreement(tally, pollerUrl);
     updateTallyStatus(tally, pollerUrl);
     repairIfNeeded(tally, pollerUrl);
@@ -1892,7 +1977,9 @@ public class V3Poller extends BasePoll {
 	UrlTallier urlTallier = makeUrlTallier();
 	try {
 	  urlTallier.seek(url);
-	  BlockTally tally = urlTallier.tallyRepairUrl(url, hashBlock);
+	  VoteBlockTallier voteBlockTallier = getRepairUrlTally(hashBlock);
+	  urlTallier.voteAllParticipants(url, voteBlockTallier);
+	  BlockTally tally = voteBlockTallier.getBlockTally();
 	  // NOTE: ParticipantUserData was updated from the initial
 	  // pre-repair tally. Results of a repair do not change the
 	  // ParticipantUserData.
@@ -2546,9 +2633,7 @@ public class V3Poller extends BasePoll {
 
   UrlTallier makeUrlTallier() {
     synchronized(theParticipants) {
-      return new UrlTallier(new ArrayList(theParticipants.values()),
-			    this.getHashIndexer(),
-			    getQuorum(), getVoteMargin());
+      return new UrlTallier(new ArrayList(theParticipants.values()));
     }
   }
 

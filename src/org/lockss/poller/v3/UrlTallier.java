@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.19 2013-06-04 20:57:43 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.20 2013-06-10 20:32:49 barry409 Exp $
  */
 
 /*
@@ -170,16 +170,10 @@ final class UrlTallier {
   // Ordered in the same order as the participants.
   private final List<Entry> participantsList;
 
-  private final V3Poller.HashIndexer hashIndexer;
-  private final int quorum;
-  private final int voteMargin;
-
   /**
    * @param participants An ordered List of participants.
    */
-  UrlTallier(List<ParticipantUserData> participants,
-	     V3Poller.HashIndexer hashIndexer,
-	     int quorum, int voteMargin) {
+  UrlTallier(List<ParticipantUserData> participants) {
     Comparator<Entry> comparator = new Comparator<Entry>() {
       public int compare(Entry o1, Entry o2) {
 	// null sorts after everything else.
@@ -197,9 +191,6 @@ final class UrlTallier {
       participantsList.add(entry);
       participantsQueue.add(entry);
     }
-    this.hashIndexer = hashIndexer;
-    this.quorum = quorum;
-    this.voteMargin = voteMargin;
   }
 
   /**
@@ -268,104 +259,31 @@ final class UrlTallier {
     }
   }
 
-  // package-level for testing.
-  static VoteBlockTallier.VoteCallback makeHashStatsTallier() {
-    return new VoteBlockTallier.VoteCallback() {
-      @Override public void vote(VoteBlock voteBlock, ParticipantUserData id) {
-	id.addHashStats(voteBlock);
-      }
-    };
-  }
-
- /**
-   * <p>Call the appropriate voting routine on the tally for each
-   * participant. The poller does not have the given URL, but some
-   * voter does.</p>
-   *
-   * @param url Must be non-null and equal to {@link peekUrl}, the
-   * current URL known to any participant.
-   * @return tally Collects the votes.
-   */
-  BlockTally tallyVoterUrl(String url) {
+  private void checkUrl(String url) {
     if (url == null) {
-      throw new ShouldNotHappenException("url is null.");
+      throw new IllegalArgumentException("null URL not allowed.");
     }
-    if (! url.equals(peekUrl())) {
-      throw new ShouldNotHappenException("Current URL is "+
-					 peekUrl()+" not "+url);
+    
+    // Perfectly ok for peekUrl to be null.  The peekUrl needs to have
+    // been consumed before a higher URL is allowed.
+    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
+      throw new IllegalArgumentException("Caller expected "+url+" "+
+					 " but we had "+peekUrl());
     }
-
-    BlockTally tally = new BlockTally(quorum, voteMargin);
-    VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(makeHashStatsTallier(), tally.getVoteCallback());
-    log.debug3("tallyVoterUrl: "+url);
-    voteBlockTallier.addTally(tally);
-    voteBlockTallier.addTally(ParticipantUserData.voteTally);
-    voteAllParticipants(url, voteBlockTallier);
-    return tally;
   }
 
   /**
-   * <p>Call the appropriate voting routine on the tally for each
-   * participant.  The poller has the given URL.</p>
+   * For each participant, call exactly one of {@link
+   * VoteBlockTallier#voteSpoiled}, {@link
+   * VoteBlockTallier#voteMissing}, or {@link VoteBlockTallier#vote}
+   * on the supplied {@link VoteBlockTallier}.
    *
-   * @param url Must be non-null and equal to {@link peekUrl}, the
-   * minimum URL known to any participant.
-   * @param hashBlock The poller's {@link HashBlock}.
-   * @return tally Collects the votes.
+   * @param url The URL in question.
+   * @param voteBlockTallier The {@link VoteBlockTallier} to call.
    */
-  BlockTally tallyPollerUrl(String url, HashBlock hashBlock) {
-    if (url == null) {
-      throw new ShouldNotHappenException("url is null.");
-    }
-    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
-      throw new ShouldNotHappenException("Current URL "+peekUrl()+
-					 " comes before "+url);
-    }
-
-    BlockTally tally = new BlockTally(quorum, voteMargin,
-				      hashBlock, hashIndexer);
-    VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.make(hashBlock, hashIndexer, makeHashStatsTallier(),
-			    tally.getVoteCallback());
-    log.debug3("tallyPollerUrl: "+url);
-    voteBlockTallier.addTally(tally);
-    voteBlockTallier.addTally(ParticipantUserData.voteTally);
-    voteAllParticipants(url, voteBlockTallier);
-    return tally;
-  }
-
-  /**
-   * <p>Call the appropriate voting routine on the tally for each
-   * participant.  The poller has the given URL.</p>
-   *
-   * @param url Must be non-null and equal to {@link peekUrl}, the
-   * minimum URL known to any participant.
-   * @param hashBlock The poller's {@link HashBlock}.
-   * @return tally Collects the votes.
-   */
-  BlockTally tallyRepairUrl(String url, HashBlock hashBlock) {
-    if (url == null) {
-      throw new ShouldNotHappenException("url is null.");
-    }
-    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
-      throw new ShouldNotHappenException("Current URL "+peekUrl()+
-					 " comes before "+url);
-    }
-
-    log.debug3("tallyRepairUrl: "+url);
-    // todo(bhayes): Can use a BlockTally that will reject getRepairVoters.
-    BlockTally tally = new BlockTally(quorum, voteMargin,
-				      hashBlock, hashIndexer);
-    VoteBlockTallier voteBlockTallier =
-      VoteBlockTallier.makeForRepair(hashBlock, hashIndexer);
-    voteBlockTallier.addTally(tally);
-    voteAllParticipants(url, voteBlockTallier);
-    return tally;
-  }
-
-  private void voteAllParticipants(String url,
-				   VoteBlockTallier voteBlockTallier) {
+  public void voteAllParticipants(String url,
+				  VoteBlockTallier voteBlockTallier) {
+    checkUrl(url);
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
@@ -388,7 +306,8 @@ final class UrlTallier {
    * on which a voter has voted which are not in the sample.
    * @param url the URL in question
    */
-  protected void voteNoParticipants(String url) {
+  public void voteNoParticipants(String url) {
+    checkUrl(url);
     for (int participantIndex = 0; participantIndex < participantsList.size();
 	 participantIndex++) {
       Entry e = participantsList.get(participantIndex);
