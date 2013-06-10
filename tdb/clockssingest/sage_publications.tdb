@@ -38785,6 +38785,29 @@
     {
     
       title <
+        name = International Journal: Canada's Journal of Global Policy Analysis ;
+        issn = 2040-4026 ;
+        eissn = 2040-4034 ;
+        issnl = 2040-4026
+      >
+  
+      {
+  
+        plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+        param[base_url] = http://ijx.sagepub.com/
+  
+        au < exists ; exists ; 2010 ; International Journal: Canada's Journal of Global Policy Analysis Volume 65 ; 65 ; >
+        au < exists ; exists ; 2011 ; International Journal: Canada's Journal of Global Policy Analysis Volume 66 ; 66 ; >
+        au < exists ; exists ; 2012 ; International Journal: Canada's Journal of Global Policy Analysis Volume 67 ; 67 ; >
+        au < expected ; exists ; 2013 ; International Journal: Canada's Journal of Global Policy Analysis Volume 68 ; 68 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
         name = International Journal of Care Pathways ;
         issn = 2040-4026 ;
         eissn = 2040-4034 ;
