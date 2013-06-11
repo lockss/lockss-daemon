@@ -14,9 +14,9 @@
       param[base_url] = http://jocg.org/
       param[journal_id] = jocg
 
-      au < ready ; 2010 ; Journal of Computational Geometry Volume 1 ; 1 ; 2010 >
-      au < ready ; 2011 ; Journal of Computational Geometry Volume 2 ; 2 ; 2011 >
-      au < ready ; 2012 ; Journal of Computational Geometry Volume 3 ; 3 ; 2012 >
+      au < releasing ; 2010 ; Journal of Computational Geometry Volume 1 ; 1 ; 2010 >
+      au < releasing ; 2011 ; Journal of Computational Geometry Volume 2 ; 2 ; 2011 >
+      au < releasing ; 2012 ; Journal of Computational Geometry Volume 3 ; 3 ; 2012 >
       au < manifest ; 2013 ; Journal of Computational Geometry Volume 4 ; 4 ; 2013 >
 
   }

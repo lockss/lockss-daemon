@@ -33,7 +33,7 @@
     param[journal_issn] = 2048-7754
     implicit < status ; year ; name ; param[volume_name]>
     
-    au < ready ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
+    au < releasing ; 2012 ; Insights: the UKSG journal Volume 25 ; 25 >
     au < manifest ; 2013 ; Insights: the UKSG journal Volume 26 ; 26 >
     
   }
