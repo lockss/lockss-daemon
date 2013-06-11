@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRuleWrapper.java,v 1.4 2013-06-11 19:31:58 thib_gc Exp $
+ * $Id: TestFilterRuleWrapper.java,v 1.5 2013-06-11 20:15:06 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestFilterRuleWrapper extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockFilterRule);
 
     Reader in = new StringReader("foo");
-    assertEquals(in, wrapper.createFilteredReader(in));
+    assertSame(in, wrapper.createFilteredReader(in));
     MockFilterRule mn = (MockFilterRule)obj;
     assertEquals(ListUtil.list(in), mn.args);
   }
