@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.2 2013-03-01 04:12:25 dshr Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.3 2013-06-11 17:00:54 barry409 Exp $
  */
 
 /*
@@ -49,50 +49,39 @@ public class TestSampledBlockHasher extends LockssTestCase {
   private static final String TEST_URL = TEST_URL_BASE+"blah.html";
   private static final String TEST_FILE_CONTENT = "This is a test file ";
   private static final String TEST_NONCE = "Test nonce";
-  private static final byte[] testNonce = TEST_NONCE.getBytes();
+  private static final byte[] sampleNonce = TEST_NONCE.getBytes();
   private static final byte[] testContent = TEST_FILE_CONTENT.getBytes();
 
-  private File tmpDir = null;
   MockMessageDigest dig = null;
+  MessageDigest[] digests = null;
+  byte[][] initByteArrays = null;
   MockArchivalUnit mau = null;
-  private int numFilesInSample = 0;
+  MockCachedUrlSet cus = null;
 
-  public TestSampledBlockHasher(String msg) {
-    super(msg);
-  }
+  private int numFilesInSample = 0;
 
   public void setUp() throws Exception {
     super.setUp();
-    tmpDir = getTempDir();
     dig = new MockMessageDigest();
+    digests = new MessageDigest[]{ dig };
+    initByteArrays = new byte[][]{ testContent };
     mau = new MockArchivalUnit(new MockPlugin(), TEST_URL_BASE);
+    cus = makeFakeCachedUrlSet(1);
+
     ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
                                   LcapMessage.DEFAULT_HASH_ALGORITHM);
   }
 
   public void testConstructors() {
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
-    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
-    cus.setFlatIterator(null);
-    cus.setEstimatedHashDuration(54321);
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { testContent };
-    RecordingEventHandler handRec = new RecordingEventHandler();
-    MySampledBlockHasher hasher =
-      new MySampledBlockHasher(cus, 1, 1, testNonce, digs, inits, handRec);
-    assertEquals(cus, hasher.getCUS());
-    assertEquals(dig, hasher.getInitialMessageDigest(0));
-    assertEquals(testNonce, hasher.getPollerNonce());
-    assertEquals(1, hasher.getMod());
+    RecordingEventHandler cb = new RecordingEventHandler();
+    SampledBlockHasher hasher =
+      new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       1, sampleNonce);
     assertEquals("SHA-1", hasher.getAlgorithm());
-    MessageDigest dig2 = new MockMessageDigest();
+    MessageDigest sampleHasher = new MockMessageDigest();
     hasher =
-      new MySampledBlockHasher(cus, 1, 1, testNonce, digs, inits, handRec, dig2);
-    assertEquals(cus, hasher.getCUS());
-    assertEquals(dig, hasher.getInitialMessageDigest(0));
-    assertEquals(testNonce, hasher.getPollerNonce());
-    assertEquals(1, hasher.getMod());
-    assertEquals(dig2, hasher.getSampleHasher());
+      new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       1, sampleNonce, sampleHasher);
     assertEquals("Mock hash algorithm", hasher.getAlgorithm());
   }
 
@@ -103,12 +92,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
     cus.setEstimatedHashDuration(54321);
     ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
                                   "BOGUS_HASH");
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { testContent };
-    RecordingEventHandler handRec = new RecordingEventHandler();
+    RecordingEventHandler cb = new RecordingEventHandler();
     try {
       CachedUrlSetHasher hasher =
-	new SampledBlockHasher(cus, 1, 1, testNonce, digs, inits, handRec);
+	new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       1, sampleNonce);
       fail("Creating a SampledBlockHasher with a bad hash algorithm "+
 	   "should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -116,17 +104,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
   }
 
   public void testNullSampleHasher() {
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
-    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
-    cus.setFlatIterator(null);
-    cus.setEstimatedHashDuration(54321);
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { testContent };
-    RecordingEventHandler handRec = new RecordingEventHandler();
+    RecordingEventHandler cb = new RecordingEventHandler();
     try {
       CachedUrlSetHasher hasher =
-	new SampledBlockHasher(cus, 1, 1, testNonce, digs, inits, handRec,
-			       null);
+	new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       1, sampleNonce, null);
       fail("Creating a SampledBlockHasher with a null sample hasher "+
 	   "should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -134,16 +116,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
   }
 
   public void testNullPollerNonce() {
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
-    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
-    cus.setFlatIterator(null);
-    cus.setEstimatedHashDuration(54321);
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { testContent };
-    RecordingEventHandler handRec = new RecordingEventHandler();
+    RecordingEventHandler cb = new RecordingEventHandler();
     try {
       CachedUrlSetHasher hasher =
-	new SampledBlockHasher(cus, 1, 1, null, digs, inits, handRec, dig);
+	new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       1, null);
       fail("Creating a SampledBlockHasher with a null poller nonce "+
 	   "should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -151,16 +128,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
   }
 
   public void testZeroMod() {
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
-    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
-    cus.setFlatIterator(null);
-    cus.setEstimatedHashDuration(54321);
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { testContent };
-    RecordingEventHandler handRec = new RecordingEventHandler();
+    RecordingEventHandler cb = new RecordingEventHandler();
     try {
       CachedUrlSetHasher hasher =
-	new SampledBlockHasher(cus, 1, 0, testNonce, digs, inits, handRec, dig);
+	new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
+			       0, sampleNonce);
       fail("Creating a SampledBlockHasher with a zero mod "+
 	   "should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -169,25 +141,24 @@ public class TestSampledBlockHasher extends LockssTestCase {
 
   private void doTestMultipleFilesWithMod(int numFiles, int mod)
    throws IOException, FileNotFoundException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(numFiles);
+    cus = makeFakeCachedUrlSet(numFiles);
     numFilesInSample = 0;
     byte[] expectedBytes = getExpectedCusBytes(cus, mod);
     log.debug3("Expect " + expectedBytes.length + " bytes from " +
 	       numFiles + " files mod " + mod);
-    MockMessageDigest dig2 = new MockMessageDigest();
-    MessageDigest[] digs = { dig };
-    byte[][] inits = { { } };
+    MockMessageDigest sampleHasher = new MockMessageDigest();
+    byte[][] initByteArrays = { { } };
     if (log.isDebug3()) {
       for (int i = 0; i < testContent.length; i++) {
 	log.debug3("doTest: " + i + " : " + testContent[i]);
       }
     }
-    RecordingEventHandler handRec = new RecordingEventHandler();
-    MySampledBlockHasher hasher =
-      new MySampledBlockHasher(cus, 1, mod, testNonce, digs, inits, handRec,
-			     dig2);
+    RecordingEventHandler cb = new RecordingEventHandler();
+    SampledBlockHasher hasher =
+      new SampledBlockHasher(cus, 1, digests, initByteArrays, cb,
+			       mod, sampleNonce, sampleHasher);
     hashToLength(hasher, expectedBytes.length, expectedBytes.length);
-    List<Event> events = handRec.getEvents();
+    List<Event> events = cb.getEvents();
     assertEquals(numFilesInSample, events.size());
     int ex = 0;
     int eventCount = 0;
@@ -270,7 +241,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
     while (it.hasNext()) {
       CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
       String urlName = cu.getUrl();
-      byte[] hash = (testNonce + urlName).getBytes();
+      byte[] hash = (sampleNonce + urlName).getBytes();
       if (mod > 0 && cu.hasContent() &&
 	  ((((int)hash[hash.length-1] + 128) % mod) == 0)) {
 	log.debug3(urlName + " is in sample");
@@ -336,18 +307,12 @@ public class TestSampledBlockHasher extends LockssTestCase {
     return returnArr;
   }
 
-  private void hashToLength(MySampledBlockHasher hasher,
+  private void hashToLength(SampledBlockHasher hasher,
 			    int length, int stepSize) throws IOException {
     int numBytesHashed = 0;
-    MockMessageDigest mockDig = (MockMessageDigest)hasher.getInitialMessageDigest(0);
-    log.debug3(mockDig.toString() + " left " + mockDig.getNumRemainingBytes());
-    log.debug3("length: " + length + " step: " + stepSize);
     while (numBytesHashed < length) {
       assertFalse(hasher.finished());
       numBytesHashed += hasher.hashStep(stepSize);
-      log.debug3(numBytesHashed + " bytes hashed so far out of " + length);
-      mockDig = (MockMessageDigest)hasher.getPeerMessageDigest(0);
-      log.debug3(mockDig.toString() + " left " + mockDig.getNumRemainingBytes());
     }
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
@@ -357,53 +322,6 @@ public class TestSampledBlockHasher extends LockssTestCase {
     throws IOException {
     while (!hasher.finished()) {
       hasher.hashStep(stepSize);
-    }
-  }
-
-  public class MySampledBlockHasher extends SampledBlockHasher {
-    public MySampledBlockHasher(CachedUrlSet cus,
-				int maxVersions,
-				int modulus,
-				byte[] sampleNonce,
-				MessageDigest[] digests,
-				byte[][] initByteArrays,
-				EventHandler cb) {
-      super(cus, maxVersions, modulus, sampleNonce, digests, initByteArrays,
-	    cb);
-    }
-
-    public MySampledBlockHasher(CachedUrlSet cus,
-				int maxVersions,
-				int modulus,
-				byte[] sampleNonce,
-				MessageDigest[] digests,
-				byte[][] initByteArrays,
-				EventHandler cb,
-				MessageDigest sampleHasher) {
-      super(cus, maxVersions, modulus, sampleNonce, digests, initByteArrays,
-	    cb, sampleHasher);
-    }
-
-    public CachedUrlSet getCUS() {
-      return cus;
-    }
-    public MessageDigest getInitialMessageDigest(int ix) {
-      return initialDigests[ix];
-    }
-    public MessageDigest getPeerMessageDigest(int ix) {
-      return peerDigests[ix];
-    }
-    public byte[] getPollerNonce() {
-      return sampleNonce;
-    }
-    public int getMod() {
-      return modulus;
-    }
-    public MessageDigest getSampleHasher() {
-      return sampleHasher;
-    }
-    public String getAlgorithm() {
-      return alg;
     }
   }
 

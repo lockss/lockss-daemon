@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.149 2013-06-10 20:32:49 barry409 Exp $
+ * $Id: V3Poller.java,v 1.150 2013-06-11 17:00:54 barry409 Exp $
  */
 
 /*
@@ -1605,11 +1605,11 @@ public class V3Poller extends BasePoll {
 					  eh) :
 			  new SampledBlockHasher(cu,
 						 maxVersions,
-						 sampleModulus,
-						 sampleNonce,
 						 initHasherDigests(),
 						 initHasherByteArrays(),
-						 eh));
+						 eh,
+						 sampleModulus,
+						 sampleNonce));
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     

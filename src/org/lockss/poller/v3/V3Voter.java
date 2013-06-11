@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.88 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: V3Voter.java,v 1.89 2013-06-11 17:00:54 barry409 Exp $
  */
 
 /*
@@ -918,11 +918,11 @@ public class V3Voter extends BasePoll {
 					  new BlockEventHandler()) :
 			  new SampledBlockHasher(cus,
 						 -1, // XXX maxversions?
-						 mod,
-						 sampleNonce,
 						 initHasherDigests(),
 						 initHasherByteArrays(),
-						 new BlockEventHandler()));
+						 new BlockEventHandler(),
+						 mod,
+						 sampleNonce));
     if (subChecker != null) {
       hasher.setSubstanceChecker(subChecker);
     }

@@ -1,10 +1,10 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.3 2013-05-29 15:02:25 dshr Exp $
+ * $Id: SampledBlockHasher.java,v 1.4 2013-06-11 17:00:54 barry409 Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,58 +46,55 @@ import org.lockss.util.*;
  * General class to handle content hashing
  */
 public class SampledBlockHasher extends BlockHasher {
-  protected static Logger log = Logger.getLogger("SampledBlockHasher");
-  protected int modulus = 0;
-  /* Because we want all participants in the poll to construct
-   * the same sample of URLs we can't reuse the poller or voter
-   * nonces because they are different for each participant.
-   */
-  protected byte[] sampleNonce;
-  protected MessageDigest sampleHasher = null;
-  protected String alg = null;
+  protected static Logger log = Logger.getLogger(SampledBlockHasher.class);
 
-  public SampledBlockHasher(CachedUrlSet cus,
-			    int maxVersions,
-			    int modulus,
-			    byte[] sampleNonce,
-			    MessageDigest[] digests,
-			    byte[][]initByteArrays,
-			    EventHandler cb) {
+  final protected int modulus;
+  final protected byte[] sampleNonce;
+  final protected MessageDigest sampleHasher;
+
+  SampledBlockHasher(CachedUrlSet cus,
+		     int maxVersions,
+		     MessageDigest[] digests,
+		     byte[][]initByteArrays,
+		     EventHandler cb,
+		     int modulus,
+		     byte[] sampleNonce,
+		     MessageDigest sampleHasher) {
     super(cus, maxVersions, digests, initByteArrays, cb);
+    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
+      throw new IllegalArgumentException("new SampledBlockHasher()");
+    }
     this.modulus = modulus;
     this.sampleNonce = sampleNonce;
-    alg =
-      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
-			     LcapMessage.DEFAULT_HASH_ALGORITHM);
-    try {
-      sampleHasher = MessageDigest.getInstance(alg);
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("No such hash algorithm: " + alg);
-      throw new IllegalArgumentException("No such hash algorithm: " + alg);
-    }
-    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
-      throw new IllegalArgumentException("new SampledBlockHashher()");
-    }
-    log.debug("new SampledBlockHasher: " + modulus + " " + alg);
+    this.sampleHasher = sampleHasher;
+    log.debug("new SampledBlockHasher: " + modulus + " " + getAlgorithm());
   }
 
   public SampledBlockHasher(CachedUrlSet cus,
 			    int maxVersions,
-			    int modulus,
-			    byte[] sampleNonce,
 			    MessageDigest[] digests,
 			    byte[][]initByteArrays,
 			    EventHandler cb,
-			    MessageDigest sampleHasher) {
-    super(cus, maxVersions, digests, initByteArrays, cb);
-    this.modulus = modulus;
-    this.sampleNonce = sampleNonce;
-    this.sampleHasher = sampleHasher;
-    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
-      throw new IllegalArgumentException("new SampledBlockHasher()");
+			    int modulus,
+			    byte[] sampleNonce) {
+    this(cus, maxVersions, digests, initByteArrays, cb,
+	 modulus, sampleNonce, defaultSampleHasher());
+  }
+
+  private static MessageDigest defaultSampleHasher() {
+    String alg =
+      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
+			     LcapMessage.DEFAULT_HASH_ALGORITHM);
+    try {
+      return MessageDigest.getInstance(alg);
+    } catch (NoSuchAlgorithmException ex) {
+      log.error("No such hash algorithm: " + alg);
+      throw new IllegalArgumentException("No such hash algorithm: " + alg);
     }
-    alg = sampleHasher.getAlgorithm();
-    log.debug("new SampledBlockHasher: " + modulus + " " + alg);
+  }
+
+  public String getAlgorithm() {
+    return this.sampleHasher.getAlgorithm();
   }
 
   private String ts = null;
@@ -109,30 +106,21 @@ public class SampledBlockHasher extends BlockHasher {
   }
 
   protected boolean isIncluded(CachedUrlSetNode node) {
-    boolean res = super.isIncluded(node);
-    if (res) {
-      String urlName = node.getUrl();
-      log.debug3("url: " + urlName + " mod: " + modulus + " alg: " + alg);
-      if (modulus != 0) {
-	res = urlIsIncluded(sampleNonce, urlName, modulus, sampleHasher);
-      }
-    }
-    return res;
+    return super.isIncluded(node) && 
+      urlIsIncluded(sampleNonce, node.getUrl(), modulus, sampleHasher);
   }
 
-  public static boolean urlIsIncluded(byte[] sampleNonce, String urlName,
+  public static boolean urlIsIncluded(byte[] sampleNonce, String url,
 				      int modulus, MessageDigest sampleHasher) {
-    boolean res = true;
-    if (modulus != 0) {
-      // First hash the nonce and the current URL's name
-      sampleHasher.update(sampleNonce);
-      sampleHasher.update(urlName.getBytes());
-      byte[] hash = sampleHasher.digest();
-      // Compare high byte with mod (simplifies test)
-      res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
-      log.debug(urlName + " byte: " + hash[hash.length-1] + " " +
-		(res ? "is" : "isn't") + " in sample");
-    }
+    // First hash the nonce and the current URL's name
+    sampleHasher.update(sampleNonce);
+    sampleHasher.update(url.getBytes());
+    byte[] hash = sampleHasher.digest();
+
+    // Compare high byte with mod (simplifies test)
+    boolean res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
+    if (log.isDebug3()) log.debug3(url + " byte: " + hash[hash.length-1] + " " +
+				   (res ? "is" : "isn't") + " in sample");
     return res;
   }
 }
