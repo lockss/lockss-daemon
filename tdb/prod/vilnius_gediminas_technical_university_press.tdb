@@ -28,7 +28,7 @@
     >
     comment[0] = This journal is not open access
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.btp.vgtu.lt/
     param[journal_id] = btp
     implicit < status ; year ; param[year] ; name ; volume >
@@ -50,7 +50,7 @@
       eissn = 2029-6339
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.cpc.vgtu.lt/
     param[journal_id] = cpc
     implicit < status ; year ; param[year] ; name ; volume >
@@ -73,7 +73,7 @@
       eissn = 1822-4318
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.cpe.vgtu.lt/
     param[journal_id] = cpe
     implicit < status ; year ; param[year] ; name ; volume >
@@ -96,7 +96,7 @@
       eissn = 2029-2252
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.mla.vgtu.lt/
     param[journal_id] = mla
     implicit < status ; year ; param[year] ; name ; volume >
@@ -116,7 +116,7 @@
       eissn = 2029-2449
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.est.vgtu.lt/
     param[journal_id] = est
     implicit < status ; year ; param[year] ; name ; volume >
@@ -136,7 +136,7 @@
       eissn = 2029-6169
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.bme.vgtu.lt/
     param[journal_id] = bme
     implicit < status ; year ; param[year] ; name ; volume >
@@ -154,7 +154,7 @@
       eissn = 2029-9974
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://www.at.vgtu.lt/
     param[journal_id] = at
     implicit < status ; year ; param[year] ; name ; volume >
