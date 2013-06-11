@@ -7,13 +7,16 @@
   >
 
   plugin = needs.plugin
-  param[base_url] = http://www.agronomy.org/
 
   {
     title <
       name = Agronomy Journal ;
+      issn = 0002-1962 ;
       eissn = 1435-0645
     >
+    
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = aj
 
 
 
@@ -22,9 +25,12 @@
   {
     title <
       name = Crop Science ;
+      issn = 0011-183X ;
       eissn = 1435-0653
     >
 
+    param[base_url] = www.crops.org/
+    para[journal_id] = cs
 
 
   }
@@ -32,9 +38,12 @@
   {
     title <
       name = Crops & Soils ;
-      eissn = 0162-5098
+      issn = 0162-5098 ;
+      eissn = 2325-3606
     >
 
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = crops-and-soils
 
 
   }
@@ -42,9 +51,12 @@
   {
     title <
       name = CSA News ;
-      eissn = 1529-9163
+      issn = 1529-9163 ;
+      eissn = 2325-3584
     >
 
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = csa-news
 
 
   }
@@ -52,9 +64,12 @@
   {
     title <
       name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
       eissn = 1537-2537
     >
 
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = jeq
 
 
   }
@@ -65,6 +80,8 @@
       eissn = 1940-3496
     >
 
+    param[base_url] = www.crops.org/
+    para[journal_id] = jpr
 
 
   }
@@ -85,6 +102,8 @@
       eissn = 2186-8281
     >
 
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = nse
 
 
   }
@@ -95,6 +114,8 @@
       eissn = 1940-3372
     >
 
+    param[base_url] = www.crops.org/
+    para[journal_id] = tpg
 
 
   }
@@ -102,9 +123,11 @@
   {
     title <
       name = Soil Horizons ;
-      eissn = 1940-3372
+      eissn = 2163-2812
     >
 
+    param[base_url] = www.soils.org/
+    para[journal_id] = sh
 
 
   }
@@ -112,9 +135,12 @@
   {
     title <
       name = Soil Science Society of America ;
+      issn = 0361-5995 ;
       eissn = 1435-0661
     >
 
+    param[base_url] = www.soils.org/
+    para[journal_id] = sssaj
 
 
   }
@@ -125,6 +151,8 @@
       eissn = 1539-1663
     >
 
+    param[base_url] = www.soils.org/
+    para[journal_id] = vzj
 
 
   }
