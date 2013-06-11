@@ -18,9 +18,7 @@ Installed Packages:
 
 - Ant 1.7.1 or greater.  (http://ant.apache.org/)
 
-- Python 2.5 or greater (but not 3.x) is required in order to build and run
-  unit tests, to run the testing frameworks, and to generate plugin jars
-  and plugin signing keys.
+- Python 2.5 or greater (but not 3.x).
 
 (On Debian or Ubuntu,
   apt-get install python sun-java6-jdk ant ant-optional
