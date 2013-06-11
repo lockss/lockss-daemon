@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.341 2013-05-30 19:16:27 tlipkis Exp $
+ $Id: build.xml,v 1.342 2013-06-11 01:57:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -609,6 +609,32 @@ Args:
    </sequential>
   </macrodef>
 
+  <!--  dotdbxml runs tdbxml on all the .tdb files in a tree -->
+  <macrodef name="dotdbxml">
+   <attribute name="destdir" />
+   <attribute name="srcdir" />
+   <sequential>
+    <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
+           addsourcefile="true"
+           dest="@{destdir}"
+	   verbose="true"
+           failonerror="true"
+           failifexecutionfails="true"
+           relative="false"
+           parallel="false">
+      <fileset dir="@{srcdir}" >
+        <include name="**/*.tdb"/>
+      </fileset>
+      <mapper type="glob" from="*.tdb" to="*.xml"/>
+      <arg value="-A"/>
+      <arg value="-i"/>
+      <srcfile/>
+      <arg value="-o"/>
+      <targetfile/>
+    </apply>
+   </sequential>
+  </macrodef>
+
   <!--  dojunit runs junit with standard params -->
   <macrodef name="dojunit">
    <attribute name="cpid" />
@@ -904,14 +930,10 @@ The target you have selected requires compiling under JDK 1.7.
      </javacelem>
     </dojavac>
 
-    <!-- Compile the test .tdb file(s) in test/src/org/lockss/daemon.
-	 XXX Should invoke tdbxml script directly (perhaps via macro), not
-	 via antcall, so can apply to whole tree fileset -->
-<!-- Disabled until all build machines have a recent-enough python -->
-<!--     <antcall target="tdb-xml-dir"> -->
-<!--       <param name="indir" value="${test.src}/org/lockss/daemon"/> -->
-<!--       <param name="outdir" value="${test.classes}/org/lockss/daemon"/> -->
-<!--     </antcall> -->
+    <!-- Compile the test .tdb file(s) in the test tree.  Do this before
+	 the copy below: in case foo.tdb and foo.xml are both checked in,
+	 the one in the source tree will be used. -->
+    <dotdbxml srcdir="${test.src}" destdir="${test.classes}" />
 
     <copy todir="${test.classes}" >
        <fileset dir="${test.src}" >
@@ -954,6 +976,12 @@ The target you have selected requires compiling under JDK 1.7.
        <include name="**/*.java"/>
      </javacelem>
     </dojavac>
+
+    <!-- Compile the test .tdb file(s) in the plugins/test tree.  Do this
+	 before the copy below: in case foo.tdb and foo.xml are both
+	 checked in, the one in the source tree will be used. -->
+    <dotdbxml srcdir="${plugins.test.src}" destdir="${plugins.test.classes}" />
+
     <copy todir="${plugins.test.classes}" >
        <fileset dir="${plugins.test.src}" >
           <include name="**/*.xml"/>	<!-- test files -->
@@ -1187,21 +1215,7 @@ Must specify output dir with -Doutdir=dir
     </fail>
 
     <mkdir dir="${outdir}" />
-    <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
-           addsourcefile="true"
-           dest="${outdir}"
-           failonerror="true"
-           failifexecutionfails="true"
-           relative="false"
-           parallel="false">
-      <fileset dir="${indir}" includes="**/*.tdb"/>
-      <mapper type="glob" from="*.tdb" to="*.xml"/>
-      <arg value="-A"/>
-      <arg value="-i"/>
-      <srcfile/>
-      <arg value="-o"/>
-      <targetfile/>
-    </apply>
+    <dotdbxml srcdir="${indir}" destdir="${outdir}" />
 
     <!-- Copy any .xml files (e.g., titleset definitions) -->
     <copy todir="${outdir}" >
