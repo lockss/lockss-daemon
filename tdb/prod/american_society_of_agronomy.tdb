@@ -28,35 +28,45 @@
     au < down ; 2006 ; Agronomy Journal Volume 98 ; 98 >
     au < down ; 2007 ; Agronomy Journal Volume 99 ; 99 >
 
+    {
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = aj
+    }
   }
 
   {
     title <
       name = Crop Science ;
+      issn = 0011-183X ;
       eissn = 1435-0653
     >
 
-
+    param[base_url] = www.crops.org/
+    para[journal_id] = cs
 
   }
 
   {
     title <
       name = Crops & Soils ;
-      eissn = 0162-5098
+      issn = 0162-5098 ;
+      eissn = 2325-3606
     >
 
-
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = crops-and-soils
 
   }
 
   {
     title <
       name = CSA News ;
-      eissn = 1529-9163
+      issn = 1529-9163 ;
+      eissn = 2325-3584
     >
 
-
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = csa-news
 
   }
 
@@ -81,6 +91,11 @@
     au < down ; 2006 ; Journal of Environmental Quality Volume 35 ; 35 >
     au < down ; 2007 ; Journal of Environmental Quality Volume 36 ; 36 >
 
+    {
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = jeq
+    }
+    
   }
 
   {
@@ -89,6 +104,8 @@
       eissn = 1940-3496
     >
 
+    param[base_url] = www.crops.org/
+    para[journal_id] = jpr
 
 
   }
@@ -99,7 +116,7 @@
       eissn = 0890-8524
     >
 
-
+    comment[0] = website is not up yet
 
   }
 
@@ -109,6 +126,8 @@
       eissn = 2186-8281
     >
 
+    param[base_url] = http://www.agronomy.org/
+    para[journal_id] = nse
 
 
   }
@@ -119,6 +138,8 @@
       eissn = 1940-3372
     >
 
+    param[base_url] = www.crops.org/
+    para[journal_id] = tpg
 
 
   }
@@ -126,20 +147,23 @@
   {
     title <
       name = Soil Horizons ;
-      eissn = 1940-3372
+      eissn = 2163-2812
     >
 
-
+    param[base_url] = www.soils.org/
+    para[journal_id] = sh
 
   }
 
   {
     title <
       name = Soil Science Society of America ;
+      issn = 0361-5995 ;
       eissn = 1435-0661
     >
 
-
+    param[base_url] = www.soils.org/
+    para[journal_id] = sssaj
 
   }
 
@@ -149,6 +173,8 @@
       eissn = 1539-1663
     >
 
+    param[base_url] = www.soils.org/
+    para[journal_id] = vzj
 
 
   }
