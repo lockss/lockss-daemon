@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:10:07 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.4 2013-06-11 21:06:28 alexandraohlson Exp $
  */
 /*
 
@@ -97,6 +97,26 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\">PDF (1862 KB)</a>" +
           "  </td>" +
           " </tr>";
+  
+  private static final String citedAnchorHtml =
+      "<ul class=\"linkList blockLinks separators centered\" id=\"articleToolList\">" +
+          "<li class=\"articleToolLi showAbstract current\">" +
+          "    <a href=\"/doi/abs/10.1137/110840546\">Abstract</a>" +
+          "</li>" +
+          "<li class=\"articleToolLi showEnhancedAbstract\">" +
+          "    <a href=\"/doi/ref/10.1137/110840546\">References</a>" +
+          "</li>" +
+          "<li class=\"articleToolLi showPDF\">" +
+          "    <a href=\"/doi/pdf/10.1137/110840546\" target=\"\">" +
+          "        PDF" +
+          "    </a>" +
+          "</li>" +
+          " <li>" +
+          "   <a href=\"#citedBySection\">Cited By</a>" +
+          "</li>" +
+          "</ul>DONE";
+  private static final String citedAnchorHtmlFiltered =
+      "DONE";
 
   private static final String institutionBanner =
       "<div class=\"view-inner\">" +
@@ -281,6 +301,10 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citationEntry),
         ENC);
     assertEquals(citationEntryFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(citedAnchorHtml),
+        ENC);
+    assertEquals(citedAnchorHtmlFiltered, StringUtil.fromInputStream(inA));
   }
 
   public void testInstitution() throws Exception {

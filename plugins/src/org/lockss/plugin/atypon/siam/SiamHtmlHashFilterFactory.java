@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.3 2013-05-27 19:10:07 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.4 2013-06-11 21:06:29 alexandraohlson Exp $
  */
 
 /*
@@ -80,6 +80,9 @@ public class SiamHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
         // proactive removal of possible ad location although it's currently empty
         HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),     
+        // at top of article, list of types of format of the article will also have "Cited by" ancho if the article has been cited
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "articleToolList"),
+        
         new NodeFilter() {
           @Override public boolean accept(Node node) {
             // on a TOC, side panel items are not obviously marked as such

@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -31,8 +31,28 @@
     <string>au_name</string>
     <string>"SIAM Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
+<entry>
+<string>org.lockss.extractor.jsoup.process_forms</string>
+<string>true</string>
+</entry>
+<entry>
+<string>org.lockss.serveContent.handleFormPost</string>
+<string>true</string>
+</entry>
+<entry>
+<string>org.lockss.proxy.jsoup.handleFormPost</string>
+<string>true</string>
+</entry>
+<entry>
+<string>text/html_link_extractor_factory</string>
+<string>org.lockss.extractor.JsoupHtmlLinkExtractor$Factory</string>
+</entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.atypon.siam.SiamHtmlHashFilterFactory</string>
   </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.siam.SiamHtmlCrawlFilterFactory</string>
+  </entry>  
 </map>
