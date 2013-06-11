@@ -1,0 +1,20 @@
+{
+  publisher <
+    name = Publish Publisher Publishest
+  >
+
+  implicit < status ; year; name ; param[num_issue_range] >
+
+  plugin = org.lockss.plugin.definable.GoodPlugin
+  param[base_url] = http://example.com/pubs/
+
+  {
+    title <
+      name = A Journal
+    >
+
+    au < released ; 2011 ; A journal V1 ; 3-7 >
+    au < released ; 2012 ; A journal V2 ; 8-22 >
+  }
+
+}
