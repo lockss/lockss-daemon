@@ -9,15 +9,20 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
+  </entry>
+  <!-- The site supports If-Modified-Since -->
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Annual of Urdu Studies Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
+    <string>"Annual of Urdu Studies Plugin, Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -30,18 +35,17 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sIssue%.02d/index.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%sIssue%.02d/.*\.html$&quot;, base_url, volume</string>
-      <string>1,&quot;^%spdf/.*\.pdf$&quot;, base_url</string>
-      <string>1,&quot;^%sauinfo/.*\.html$&quot;, base_url</string>
-      <string>1,&quot;^%sbanner\.html&quot;, base_url</string>
+      <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sIssue%02d/", base_url, volume</string>
+      <string>1,"^%spdf/%02d/", base_url, volume</string>
+      <string>1,"^%sauinfo/", base_url</string>
+      <string>1,"^%sbanner\.html$", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sIssue%.02d/index.html&quot;, base_url, volume</string>
+    <string>"%sIssue%02d/index.html", base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
