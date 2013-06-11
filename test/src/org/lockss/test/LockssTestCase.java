@@ -1,10 +1,10 @@
 /*
- * $Id: LockssTestCase.java,v 1.110 2013-06-11 01:19:25 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.111 2013-06-11 19:31:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,20 +34,17 @@ package org.lockss.test;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
 import java.security.SecureRandom;
+import java.util.*;
 
 import junit.framework.*;
 
-import org.apache.commons.collections.Predicate;
-import org.apache.commons.collections.iterators.*;
+import org.apache.commons.collections.iterators.ObjectArrayIterator;
 import org.apache.commons.io.IOUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.config.*;
-import org.lockss.daemon.LockssRunnable;
+import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.util.ArrayIterator;
-import org.lockss.daemon.RandomManager;
 
 
 public class LockssTestCase extends TestCase {
@@ -1475,9 +1472,9 @@ public class LockssTestCase extends TestCase {
     return pat.matcher(s).find();
   }
 
-  public static void assertEquals(String message,
-                                  InputStream expected,
-                                  InputStream actual)
+  public static void assertSameBytes(String message,
+                                     InputStream expected,
+                                     InputStream actual)
       throws IOException {
     if (!IOUtils.contentEquals(expected, actual)) {
       if (message == null) {
@@ -1489,15 +1486,15 @@ public class LockssTestCase extends TestCase {
     }
   }
   
-  public static void assertEquals(InputStream expected,
-                                  InputStream actual)
+  public static void assertSameBytes(InputStream expected,
+                                     InputStream actual)
       throws IOException {
-    assertEquals(null, expected, actual);
+    assertSameBytes(null, expected, actual);
   }
   
-  public static void assertEquals(String message,
-                                  Reader expected,
-                                  Reader actual)
+  public static void assertSameCharacters(String message,
+                                          Reader expected,
+                                          Reader actual)
       throws IOException {
     if (!IOUtils.contentEquals(expected, actual)) {
       if (message == null) {
@@ -1509,10 +1506,10 @@ public class LockssTestCase extends TestCase {
     }
   }
   
-  public static void assertEquals(Reader expected,
-                                  Reader actual)
+  public static void assertSameCharacters(Reader expected,
+                                          Reader actual)
       throws IOException {
-    assertEquals(null, expected, actual);
+    assertSameCharacters(null, expected, actual);
   }
   
   static String reFailMsg(String msg, java.util.regex.Pattern pattern,
