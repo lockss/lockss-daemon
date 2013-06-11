@@ -50,10 +50,10 @@
       eissn = 2050-5833 
     >
     
-    param[base_url] = http://www.journal.eahn.org/
+    param[base_url] = http://journal.eahn.org/
     param[journal_id] = ah
 
-    au < manifest ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
+    au < exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
     
   }
   
@@ -65,32 +65,66 @@
       eissn = 2047-6930 
     >
     
-    param[base_url] = http://www.archaeologybulletin.org/
-    param[journal_id] = bha
+    {
+    
+      param[base_url] = http://www.archaeologybulletin.org/
+      param[journal_id] = bha
 
-    au < released ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
-    au < released ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
-    au < released ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 >
-    au < released ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 >
-    au < released ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 >
-    au < released ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
-    au < released ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
-    au < released ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
-    au < released ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
-    au < released ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
-    au < released ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
-    au < released ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
-    au < released ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
-    au < released ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
-    au < released ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
-    au < released ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
-    au < released ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
-    au < released ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
-    au < released ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
-    au < released ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
-    au < released ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
-    au < released ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
-    au < manifest ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
+      au < superseded ; 1991 ; The Bulletin of the History of Archaeology Volume 1 [superseded] ; 1 ; 1991 >
+      au < superseded ; 1992 ; The Bulletin of the History of Archaeology Volume 2 [superseded] ; 2 ; 1992 >
+      au < superseded ; 1993 ; The Bulletin of the History of Archaeology Volume 3 [superseded] ; 3 ; 1993 >
+      au < superseded ; 1994 ; The Bulletin of the History of Archaeology Volume 4 [superseded] ; 4 ; 1994 >
+      au < superseded ; 1995 ; The Bulletin of the History of Archaeology Volume 5 [superseded] ; 5 ; 1995 >
+      au < superseded ; 1996 ; The Bulletin of the History of Archaeology Volume 6 [superseded] ; 6 ; 1996 >
+      au < superseded ; 1997 ; The Bulletin of the History of Archaeology Volume 7 [superseded] ; 7 ; 1997 >
+      au < superseded ; 1998 ; The Bulletin of the History of Archaeology Volume 8 [superseded] ; 8 ; 1998 >
+      au < superseded ; 1999 ; The Bulletin of the History of Archaeology Volume 9 [superseded] ; 9 ; 1999 >
+      au < superseded ; 2000 ; The Bulletin of the History of Archaeology Volume 10 [superseded] ; 10 ; 2000 >
+      au < superseded ; 2001 ; The Bulletin of the History of Archaeology Volume 11 [superseded] ; 11 ; 2001 >
+      au < superseded ; 2002 ; The Bulletin of the History of Archaeology Volume 12 [superseded] ; 12 ; 2002 >
+      au < superseded ; 2003 ; The Bulletin of the History of Archaeology Volume 13 [superseded] ; 13 ; 2003 >
+      au < superseded ; 2004 ; The Bulletin of the History of Archaeology Volume 14 [superseded] ; 14 ; 2004 >
+      au < superseded ; 2005 ; The Bulletin of the History of Archaeology Volume 15 [superseded] ; 15 ; 2005 >
+      au < superseded ; 2006 ; The Bulletin of the History of Archaeology Volume 16 [superseded] ; 16 ; 2006 >
+      au < superseded ; 2007 ; The Bulletin of the History of Archaeology Volume 17 [superseded] ; 17 ; 2007 >
+      au < superseded ; 2008 ; The Bulletin of the History of Archaeology Volume 18 [superseded] ; 18 ; 2008 >
+      au < superseded ; 2009 ; The Bulletin of the History of Archaeology Volume 19 [superseded] ; 19 ; 2009 >
+      au < superseded ; 2010 ; The Bulletin of the History of Archaeology Volume 20 [superseded] ; 20 ; 2010 >
+      au < superseded ; 2011 ; The Bulletin of the History of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
+      au < superseded ; 2012 ; The Bulletin of the History of Archaeology Volume 22 [superseded] ; 22 ; 2012 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://archaeologybulletin.org/
+      param[journal_id] = bha
+
+      au < exists ; 1991 ; The Bulletin of the History of Archaeology Volume 1 ; 1 ; 1991 >
+      au < exists ; 1992 ; The Bulletin of the History of Archaeology Volume 2 ; 2 ; 1992 >
+      au < exists ; 1993 ; The Bulletin of the History of Archaeology Volume 3 ; 3 ; 1993 >
+      au < exists ; 1994 ; The Bulletin of the History of Archaeology Volume 4 ; 4 ; 1994 >
+      au < exists ; 1995 ; The Bulletin of the History of Archaeology Volume 5 ; 5 ; 1995 >
+      au < exists ; 1996 ; The Bulletin of the History of Archaeology Volume 6 ; 6 ; 1996 >
+      au < exists ; 1997 ; The Bulletin of the History of Archaeology Volume 7 ; 7 ; 1997 >
+      au < exists ; 1998 ; The Bulletin of the History of Archaeology Volume 8 ; 8 ; 1998 >
+      au < exists ; 1999 ; The Bulletin of the History of Archaeology Volume 9 ; 9 ; 1999 >
+      au < exists ; 2000 ; The Bulletin of the History of Archaeology Volume 10 ; 10 ; 2000 >
+      au < exists ; 2001 ; The Bulletin of the History of Archaeology Volume 11 ; 11 ; 2001 >
+      au < exists ; 2002 ; The Bulletin of the History of Archaeology Volume 12 ; 12 ; 2002 >
+      au < exists ; 2003 ; The Bulletin of the History of Archaeology Volume 13 ; 13 ; 2003 >
+      au < exists ; 2004 ; The Bulletin of the History of Archaeology Volume 14 ; 14 ; 2004 >
+      au < exists ; 2005 ; The Bulletin of the History of Archaeology Volume 15 ; 15 ; 2005 >
+      au < exists ; 2006 ; The Bulletin of the History of Archaeology Volume 16 ; 16 ; 2006 >
+      au < exists ; 2007 ; The Bulletin of the History of Archaeology Volume 17 ; 17 ; 2007 >
+      au < exists ; 2008 ; The Bulletin of the History of Archaeology Volume 18 ; 18 ; 2008 >
+      au < exists ; 2009 ; The Bulletin of the History of Archaeology Volume 19 ; 19 ; 2009 >
+      au < exists ; 2010 ; The Bulletin of the History of Archaeology Volume 20 ; 20 ; 2010 >
+      au < exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
+      au < exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
+      au < exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
+    
+    }
     
   }
   
@@ -176,32 +210,65 @@
       eissn = 2041-9015 
     >
     
-    param[base_url] = http://www.pia-journal.co.uk/
-    param[journal_id] = pia
+    {
+    
+      param[base_url] = http://www.pia-journal.co.uk/
+      param[journal_id] = pia
 
-    au < released ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
-    au < released ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
-    au < released ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
-    au < released ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
-    au < released ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
-    au < released ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
-    au < released ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
-    au < released ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
-    au < released ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
-    au < released ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
-    au < released ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
-    au < released ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
-    au < released ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
-    au < released ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
-    au < released ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
-    au < released ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
-    au < testing ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
-    au < testing ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
-    au < released ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
-    au < released ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
-    au < released ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
-    au < manifest ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
-    au < expected ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
+      au < superseded ; 1990 ; Papers from the Institute of Archaeology Volume 1 [superseded] ; 1 ; 1990 >
+      au < superseded ; 1991 ; Papers from the Institute of Archaeology Volume 2 [superseded] ; 2 ; 1991 >
+      au < superseded ; 1992 ; Papers from the Institute of Archaeology Volume 3 [superseded] ; 3 ; 1992 >
+      au < superseded ; 1993 ; Papers from the Institute of Archaeology Volume 4 [superseded] ; 4 ; 1993 >
+      au < superseded ; 1994 ; Papers from the Institute of Archaeology Volume 5 [superseded] ; 5 ; 1994 >
+      au < superseded ; 1995 ; Papers from the Institute of Archaeology Volume 6 [superseded] ; 6 ; 1995 >
+      au < superseded ; 1996 ; Papers from the Institute of Archaeology Volume 7 [superseded] ; 7 ; 1996 >
+      au < superseded ; 1997 ; Papers from the Institute of Archaeology Volume 8 [superseded] ; 8 ; 1997 >
+      au < superseded ; 1998 ; Papers from the Institute of Archaeology Volume 9 [superseded] ; 9 ; 1998 >
+      au < superseded ; 1999 ; Papers from the Institute of Archaeology Volume 10 [superseded] ; 10 ; 1999 >
+      au < superseded ; 2000 ; Papers from the Institute of Archaeology Volume 11 [superseded] ; 11 ; 2000 >
+      au < superseded ; 2001 ; Papers from the Institute of Archaeology Volume 12 [superseded] ; 12 ; 2001 >
+      au < superseded ; 2002 ; Papers from the Institute of Archaeology Volume 13 [superseded] ; 13 ; 2002 >
+      au < superseded ; 2003 ; Papers from the Institute of Archaeology Volume 14 [superseded] ; 14 ; 2003 >
+      au < superseded ; 2004 ; Papers from the Institute of Archaeology Volume 15 [superseded] ; 15 ; 2004 >
+      au < superseded ; 2005 ; Papers from the Institute of Archaeology Volume 16 [superseded] ; 16 ; 2005 >
+      au < doNotProcess ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
+      au < doNotProcess ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
+      au < superseded ; 2009 ; Papers from the Institute of Archaeology Volume 19 [superseded] ; 19 ; 2009 >
+      au < superseded ; 2010 ; Papers from the Institute of Archaeology Volume 20 [superseded] ; 20 ; 2010 >
+      au < superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://pia-journal.co.uk/
+      param[journal_id] = pia
+
+      au < exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
+      au < exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
+      au < exists ; 1992 ; Papers from the Institute of Archaeology Volume 3 ; 3 ; 1992 >
+      au < exists ; 1993 ; Papers from the Institute of Archaeology Volume 4 ; 4 ; 1993 >
+      au < exists ; 1994 ; Papers from the Institute of Archaeology Volume 5 ; 5 ; 1994 >
+      au < exists ; 1995 ; Papers from the Institute of Archaeology Volume 6 ; 6 ; 1995 >
+      au < exists ; 1996 ; Papers from the Institute of Archaeology Volume 7 ; 7 ; 1996 >
+      au < exists ; 1997 ; Papers from the Institute of Archaeology Volume 8 ; 8 ; 1997 >
+      au < exists ; 1998 ; Papers from the Institute of Archaeology Volume 9 ; 9 ; 1998 >
+      au < exists ; 1999 ; Papers from the Institute of Archaeology Volume 10 ; 10 ; 1999 >
+      au < exists ; 2000 ; Papers from the Institute of Archaeology Volume 11 ; 11 ; 2000 >
+      au < exists ; 2001 ; Papers from the Institute of Archaeology Volume 12 ; 12 ; 2001 >
+      au < exists ; 2002 ; Papers from the Institute of Archaeology Volume 13 ; 13 ; 2002 >
+      au < exists ; 2003 ; Papers from the Institute of Archaeology Volume 14 ; 14 ; 2003 >
+      au < exists ; 2004 ; Papers from the Institute of Archaeology Volume 15 ; 15 ; 2004 >
+      au < exists ; 2005 ; Papers from the Institute of Archaeology Volume 16 ; 16 ; 2005 >
+      au < exists ; 2006 ; Papers from the Institute of Archaeology Volume 17 ; 17 ; 2006 >
+      au < exists ; 2007 ; Papers from the Institute of Archaeology Volume 18 ; 18 ; 2007 >
+      au < exists ; 2009 ; Papers from the Institute of Archaeology Volume 19 ; 19 ; 2009 >
+      au < exists ; 2010 ; Papers from the Institute of Archaeology Volume 20 ; 20 ; 2010 >
+      au < exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
+      au < exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
+      au < exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
+    
+    }
     
   }
   
@@ -211,15 +278,28 @@
       name = Present Pasts;
       eissn = 1759-2941
     >
+    {
     
-    param[base_url] = http://www.presentpasts.info/
-    param[journal_id] = pp
+      param[base_url] = http://www.presentpasts.info/
+      param[journal_id] = pp
 
-    au < testing ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
-    au < testing ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
-    au < released ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
-    au < released ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
-    au < expected ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
+      au < superseded ; 2011 ; Present Pasts Volume 3 [superseded] ; 3 ; 2011 >
+      au < superseded ; 2012 ; Present Pasts Volume 4 [superseded] ; 4 ; 2012 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://presentpasts.info/
+      param[journal_id] = pp
+
+      au < exists ; 2009 ; Present Pasts Volume 1 ; 1 ; 2009 >
+      au < exists ; 2010 ; Present Pasts Volume 2 ; 2 ; 2010 >
+      au < exists ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
+      au < exists ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
+      au < expected ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
+    
+    }
     
   }
 
@@ -230,11 +310,11 @@
       eissn = 2165-2627
     >
     
-    param[base_url] = http://www.stabilityjournal.org/
+    param[base_url] = http://stabilityjournal.org/
     param[journal_id] = sta
 
-    au < testing ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
-    au < manifest ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
+    au < exists ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
+    au < exists ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
     
   }
 
