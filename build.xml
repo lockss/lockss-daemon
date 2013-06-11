@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.342 2013-06-11 01:57:47 tlipkis Exp $
+ $Id: build.xml,v 1.343 2013-06-11 23:50:18 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -234,9 +234,9 @@ Args:
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.2.1.jar"/>
   <property name="commons.logging.jar"
-  				  value="${lib}/commons-logging-1.1.1.jar"/>
+  				  value="${lib}/commons-logging-1.1.3.jar"/>
   <property name="commons.codec.jar"
-  				  value="${lib}/commons-codec-1.7.jar"/>
+  				  value="${lib}/commons-codec-1.8.jar"/>
   <property name="commons.compress.jar"
   				  value="${lib}/commons-compress-1.4.1p1.jar"/>
   <property name="commons.httpclient.jar"
@@ -295,15 +295,16 @@ Args:
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!-- PDFBox -->
-  <property name="pdfbox.version" value="1.7.1" />
+  <property name="pdfbox.version" value="1.8.2" />
   <property name="pdfbox.jar" value="${lib}/pdfbox-${pdfbox.version}.jar" />
-  <!-- Next 7 JARs needed by PDFBox: -->
+  <!-- Next 9 JARs needed by PDFBox: -->
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
-  <property name="bouncycastle.version" value="jdk15on-147" />
+  <property name="xmpbox.jar" value="${lib}/xmpbox-${pdfbox.version}.jar" />
+  <property name="bouncycastle.version" value="jdk15on-149" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.version}.jar" />
-  <property name="icu4j.version" value="50_1" />
+  <property name="icu4j.version" value="51_2" />
   <property name="icu4j.jar" value="${lib}/icu4j-${icu4j.version}.jar" />
   <property name="icu4j-charset.jar" value="${lib}/icu4j-charset-${icu4j.version}.jar" />
   <property name="icu4j-localespi.jar" value="${lib}/icu4j-localespi-${icu4j.version}.jar" />
