@@ -5,7 +5,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMuseBookPlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; year ; isbn13 ; eisbn13 ; name ; param[eisbn13] >
+  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn13] >
 
   {
 
