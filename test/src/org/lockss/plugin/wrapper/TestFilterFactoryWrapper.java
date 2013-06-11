@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterFactoryWrapper.java,v 1.2 2011-08-09 04:17:30 tlipkis Exp $
+ * $Id: TestFilterFactoryWrapper.java,v 1.3 2013-06-11 01:19:25 thib_gc Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestFilterFactoryWrapper extends LockssTestCase {
 
     MockArchivalUnit mau = new MockArchivalUnit();
     InputStream in = new StringInputStream("foo");
-    assertEquals(in, wrapper.createFilteredInputStream(mau, in, "enc"));
+    assertSame(in, wrapper.createFilteredInputStream(mau, in, "enc"));
     MockFilterFactory mn = (MockFilterFactory)obj;
     assertEquals(ListUtil.list(mau, in, "enc"), mn.args);
   }

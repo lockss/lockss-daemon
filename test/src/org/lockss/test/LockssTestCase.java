@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.109 2013-06-06 06:34:37 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.110 2013-06-11 01:19:25 thib_gc Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import junit.framework.*;
 
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.collections.iterators.*;
+import org.apache.commons.io.IOUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.lockss.config.*;
 import org.lockss.daemon.LockssRunnable;
@@ -1474,6 +1475,46 @@ public class LockssTestCase extends TestCase {
     return pat.matcher(s).find();
   }
 
+  public static void assertEquals(String message,
+                                  InputStream expected,
+                                  InputStream actual)
+      throws IOException {
+    if (!IOUtils.contentEquals(expected, actual)) {
+      if (message == null) {
+        fail();
+      }
+      else {
+        fail(message);
+      }
+    }
+  }
+  
+  public static void assertEquals(InputStream expected,
+                                  InputStream actual)
+      throws IOException {
+    assertEquals(null, expected, actual);
+  }
+  
+  public static void assertEquals(String message,
+                                  Reader expected,
+                                  Reader actual)
+      throws IOException {
+    if (!IOUtils.contentEquals(expected, actual)) {
+      if (message == null) {
+        fail();
+      }
+      else {
+        fail(message);
+      }
+    }
+  }
+  
+  public static void assertEquals(Reader expected,
+                                  Reader actual)
+      throws IOException {
+    assertEquals(null, expected, actual);
+  }
+  
   static String reFailMsg(String msg, java.util.regex.Pattern pattern,
 			  String string) {
     return reFailMsg(msg, pattern.pattern(), string);
