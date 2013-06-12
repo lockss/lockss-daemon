@@ -71,4 +71,144 @@
     au < notReady ; 2011 ; 1 ; Revista de Enfermagem da UFSM Volume 1 ; 2011 >
     au < notReady ; 2012 ; 2 ; Revista de Enfermagem da UFSM Volume 2 ; 2012 >
   }
+
+  {
+
+    title <
+      name = Revista Monografias Ambientais ;
+      eissn = 2236-1308 
+    >
+
+    param[journal_id] = remoa
+
+    au < exists ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 >
+    au < exists ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 >
+    au < exists ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 >
+    au < exists ; 2013 ; 11 ; Revista Monografias Ambientais Volume 11 ; 2013 >
+  }
+  
+  {
+
+    title <
+      name = Revista Direitos Emergentes na Sociedade Global ;
+      eissn = 2316-3054 
+    >
+
+    param[journal_id] = REDESG
+
+    au < exists ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 >
+  }
+  
+  {
+
+    title <
+      name = Ciência Florestal ;
+      issn = 0103-9954 ;
+      eissn = 1980-5098 
+    >
+
+    param[journal_id] = cienciaflorestal
+
+    au < exists ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 >
+    au < exists ; 1992 ; 2 ; Ciência Florestal Volume 2 ; 1992 >
+    au < exists ; 1993 ; 3 ; Ciência Florestal Volume 3 ; 1993 >
+    au < exists ; 1994 ; 4 ; Ciência Florestal Volume 4 ; 1994 >
+    au < exists ; 1995 ; 5 ; Ciência Florestal Volume 5 ; 1995 >
+    au < exists ; 1996 ; 6 ; Ciência Florestal Volume 6 ; 1996 >
+    au < exists ; 1997 ; 7 ; Ciência Florestal Volume 7 ; 1997 >
+    au < exists ; 1998 ; 8 ; Ciência Florestal Volume 8 ; 1998 >
+    au < exists ; 1999 ; 9 ; Ciência Florestal Volume 9 ; 1999 >
+    au < exists ; 2000 ; 10 ; Ciência Florestal Volume 10 ; 2000 >
+    au < exists ; 2001 ; 11 ; Ciência Florestal Volume 11 ; 2001 >
+    au < exists ; 2002 ; 12 ; Ciência Florestal Volume 12 ; 2002 >
+    au < exists ; 2003 ; 13 ; Ciência Florestal Volume 13 ; 2003 >
+    au < exists ; 2004 ; 14 ; Ciência Florestal Volume 14 ; 2004 >
+    au < exists ; 2005 ; 15 ; Ciência Florestal Volume 15 ; 2005 >
+    au < exists ; 2006 ; 16 ; Ciência Florestal Volume 16 ; 2006 >
+    au < exists ; 2007 ; 17 ; Ciência Florestal Volume 17 ; 2007 >
+    au < exists ; 2008 ; 18 ; Ciência Florestal Volume 18 ; 2008 >
+    au < exists ; 2009 ; 19 ; Ciência Florestal Volume 19 ; 2009 >
+    au < exists ; 2010 ; 20 ; Ciência Florestal Volume 20 ; 2010 >
+    au < exists ; 2011 ; 21 ; Ciência Florestal Volume 21 ; 2011 >
+    au < exists ; 2012 ; 22 ; Ciência Florestal Volume 22 ; 2012 >
+    au < exists ; 2013 ; 23 ; Ciência Florestal Volume 23 ; 2013 >
+    
+  }
+  
+  {
+
+    title <
+      name = Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental ;
+      eissn = 2236-1170 
+    >
+
+    param[journal_id] = reget
+
+    au < exists ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 >
+    au < exists ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 >
+    au < exists ; 2013 ; 9-11 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-11 ; 2013 >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Educação Especial ;
+      issn = 1984-686X 
+    >
+
+    param[journal_id] = educacaoespecial
+
+    au < exists ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 >
+    au < exists ; 2001 ; 14 ; Revista Educação Especial Volume 14 ; 2001 >
+    au < exists ; 2002 ; 15 ; Revista Educação Especial Volume 15 ; 2002 >
+    au < exists ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 >
+    au < exists ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 >
+    au < exists ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 >
+    au < exists ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 >
+    au < exists ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 >
+    au < exists ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 >
+    au < exists ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 >
+    au < exists ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 >
+    au < exists ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 >
+    au < exists ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 >
+    au < exists ; 2013 ; 26 ; Revista Educação Especial Volume 26 ; 2013 >
+
+  }
+  
+  {
+
+    title <
+      name = Revista Digital do LAV ;
+      eissn = 1983-7348 
+    >
+
+    param[journal_id] = revislav
+
+    au < exists ; 2008 ; 1 ; Revista Digital do LAV Volume 1 ; 2008 >
+    au < exists ; 2009 ; 2 ; Revista Digital do LAV Volume 2 ; 2009 >
+    au < exists ; 2010 ; 3 ; Revista Digital do LAV Volume 3 ; 2010 >
+    au < exists ; 2011 ; 4 ; Revista Digital do LAV Volume 4 ; 2011 >
+    au < exists ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
+    au < exists ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 >
+
+  }
+  
+  {
+
+    title <
+      name = Geografia Ensino & Pesquisa ;
+      issn = 0103-1538 ;
+      eissn = 2236-4994 
+    >
+
+    param[journal_id] = geografia
+
+    au < exists ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
+    au < exists ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 >
+    au < expected ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 ; 2013 >
+
+  }
+  
+
 }
