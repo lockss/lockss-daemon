@@ -1,6 +1,10 @@
 /*
+ * $Id: MassachusettsMedicalSocietyPdfFilterFactory.java,v 1.4 2013-06-12 23:54:24 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,40 +32,26 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
-import java.io.*;
-
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.pdf.*;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
 
 /**
  * <p>
- * To be replaced by {@link MassachesettsMedicalSocietyNewPdfFilterFactory}
- * which still needs to implement a way to remove the per-page watermarking (see
- * {@link NormalizeXObjects}).
+ * This class replaces equivalent functionality in a class formerly known as
+ * MassachusettsMedicalSocietyPdfTransform.
  * </p>
- * 
- * @deprecated Work on {@link MassachesettsMedicalSocietyNewPdfFilterFactory}
- *             instead.
  */
-@Deprecated
-public class MassachusettsMedicalSocietyPdfFilterFactory implements FilterFactory {
-	private static Logger log = Logger.getLogger("MassachusettsMedicalSocietyPdfFilterFactory");
-	
-	public InputStream createFilteredInputStream(ArchivalUnit au,
-									             InputStream in,
-									             String encoding)
-									            		 throws PluginException {
-	    try {
-	      log.debug2("PDF filter factory for: " + au.getName());
-	      OutputDocumentTransform documentTransform = new MassachusettsMedicalSocietyPdfTransform(au);
-	      return PdfUtil.applyFromInputStream(documentTransform, in);
-	    }
-	    catch (Exception exc) {
-	      log.error("Exception in PDF transform; unfiltered", exc);
-	      return in;
-	    }
-	}
+public class MassachusettsMedicalSocietyPdfFilterFactory extends SimplePdfFilterFactory {
+
+  @Override
+  public void transform(ArchivalUnit au,
+                        PdfDocument pdfDocument)
+      throws PdfException {
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetModificationDate();
+    PdfUtil.normalizeTrailerId(pdfDocument);
+    PdfUtil.normalizeAllTokenStreams(pdfDocument);
+  }
   
 }
