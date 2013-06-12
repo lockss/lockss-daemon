@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.1.2.6 2013-06-04 21:42:22 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.1.2.7 2013-06-12 21:10:05 fergaloy-sf Exp $
  */
 
 /*
@@ -83,8 +83,21 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   private static final Logger log = Logger.getLogger(SubscriptionManager.class);
 
   // Prefix for the subscription manager configuration entries.
-  private static final String PREFIX =
-      Configuration.PREFIX + "subscriptionManager.";
+  private static final String PREFIX = Configuration.PREFIX + "subscription.";
+
+  /**
+   * Indication of whether the subscription subsystem should be enabled.
+   * <p />
+   * Defaults to false. Changes require daemon restart.
+   */
+  public static final String PARAM_SUBSCRIPTION_ENABLED = PREFIX + "enabled";
+
+  /**
+   * Default value of subscription subsystem operation configuration parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_SUBSCRIPTION_ENABLED = false;
 
   /**
    * Maximum number of retries for transient SQL exceptions.
@@ -300,6 +313,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "startService(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    // Do nothing more if subscriptions are disabled.
+    if (!ConfigManager.getCurrentConfig()
+	.getBoolean(PARAM_SUBSCRIPTION_ENABLED, DEFAULT_SUBSCRIPTION_ENABLED)) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Subscriptions are disabled.");
+      return;
+    }
+
     // Do nothing more if it is already initialized.
     if (ready) {
       return;
@@ -330,6 +351,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       Configuration.Differences changedKeys) {
     final String DEBUG_HEADER = "setConfig(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Do nothing more if subscriptions are disabled.
+    if (!newConfig.getBoolean(PARAM_SUBSCRIPTION_ENABLED,
+			      DEFAULT_SUBSCRIPTION_ENABLED)) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Subscriptions are disabled.");
+      return;
+    }
 
     // Force a re-calculation of the relative weights of the repositories.
     repositories = null;
@@ -372,6 +401,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       Configuration prevConfig, Configuration.Differences changedKeys) {
     final String DEBUG_HEADER = "handleConfigurationChange(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Sanity check.
+    if (dbManager == null || !dbManager.isReady()) {
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "dbManager is not ready.");
+      return;
+    }
 
     Connection conn = null;
     boolean isFirstRun = false;

@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.37 2013-05-22 23:53:51 fergaloy-sf Exp $
+ * $Id: AdminServletManager.java,v 1.37.2.1 2013-06-12 21:10:05 fergaloy-sf Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.apache.cxf.transport.servlet.CXFServlet;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.account.*;
+import org.lockss.subscription.SubscriptionManager;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.lockss.exporter.counter.CounterReportsManager;
@@ -506,7 +507,15 @@ public class AdminServletManager extends BaseServletManager {
 		       SubscriptionManagement.class,
 		       "Title Subscription Management",
 		       (ServletDescr.NEED_ROLE_AU_ADMIN),
-		       "Subscribe or unsubscribe to individual titles");
+		       "Subscribe or unsubscribe to individual titles") {
+	public boolean isEnabled(LockssDaemon daemon) {
+	  try {
+	    SubscriptionManager mgr = daemon.getSubscriptionManager();
+	    return mgr != null && mgr.isReady();
+	  } catch (Exception e) {
+	    return false;
+	  }
+	}};
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;

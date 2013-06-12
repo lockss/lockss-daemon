@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.1.2.3 2013-06-04 21:42:21 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.1.2.4 2013-06-12 21:10:05 fergaloy-sf Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class TestSubscriptionManager extends LockssTestCase {
     props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
+    props.setProperty(SubscriptionManager.PARAM_SUBSCRIPTION_ENABLED, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();

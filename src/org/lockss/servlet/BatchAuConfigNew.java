@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfigNew.java,v 1.3.2.1 2013-05-29 17:53:17 fergaloy-sf Exp $
+ * $Id: BatchAuConfigNew.java,v 1.3.2.2 2013-06-12 21:10:05 fergaloy-sf Exp $
  */
 
 /*
@@ -246,37 +246,41 @@ public class BatchAuConfigNew extends LockssServlet {
                                null,
                                "Add, Edit or Delete an individual AU"));
 
-    // Add titles to subscription management.
-    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-			       SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
-			       ACTION
-			       + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
-			       SubscriptionManagement.SHOW_ADD_PAGE_HELP_TEXT));
+    // Check whether to show the subscriptions links.
+    if (subManager.isReady()) {
+      // Yes: Add titles to subscription management.
+      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	  			 SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
+	  			 ACTION
+	  			 + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
+	  			 SubscriptionManagement
+	  			 .SHOW_ADD_PAGE_HELP_TEXT));
 
-    // Only show the update link if there are subscriptions already.
-    try {
-      if (subManager.countSubscribedPublications() > 0) {
-	// Add titles to subscription management.
-	list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	    			   SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_LINK_TEXT,
-	    			   ACTION + SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_ACTION,
-	    			   SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_HELP_TEXT));
+      // Only show the update link if there are subscriptions already.
+      try {
+	if (subManager.countSubscribedPublications() > 0) {
+	  // Add titles to subscription management.
+	  list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	      			     SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_LINK_TEXT,
+	      			     ACTION + SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_ACTION,
+	      			     SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_HELP_TEXT));
+	}
+      } catch (SQLException sqle) {
+	log.error("Error counting subscribedPublications", sqle);
       }
-    } catch (SQLException sqle) {
-      log.error("Error counting subscribedPublications", sqle);
-    }
 
-    // Add titles to subscription management.
-    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-			       SubscriptionManagement
-			       .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
-			       ACTION + SubscriptionManagement
-			       .AUTO_ADD_SUBSCRIPTIONS_ACTION,
-			       SubscriptionManagement
-			       .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
+      // Add titles to subscription management.
+      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	  			 SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
+	  			 ACTION + SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_ACTION,
+	  			 SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
+    }
 
     return list.iterator();
   }
