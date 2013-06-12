@@ -1,10 +1,10 @@
 /*
- * $Id: AnnualReviewsPdfFilterFactory.java,v 1.3 2007-11-21 02:04:18 thib_gc Exp $
+ * $Id: AnnualReviewsPdfFilterFactory.java,v 1.4 2013-06-12 02:34:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,33 +32,231 @@ in this Software without prior written authorization from Stanford University.
 
 package uk.org.lockss.plugin.annualreviews;
 
-import java.io.*;
+import java.util.List;
+import java.util.regex.Pattern;
 
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.pdf.*;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
+import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.pdf.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 
-public class AnnualReviewsPdfFilterFactory implements FilterFactory {
-
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    try {
-      logger.debug2("PDF filter factory for: " + au.getName());
-      OutputDocumentTransform documentTransform = new AnnualReviewsPdfTransform(au);
-      return PdfUtil.applyFromInputStream(documentTransform, in);
-    }
-    catch (Exception exc) {
-      logger.error("Exception in PDF transform; unfiltered", exc);
-      return in;
-    }
-  }
+public class AnnualReviewsPdfFilterFactory extends SimplePdfFilterFactory {
 
   /**
    * <p>A logger for use by this class.</p>
    */
-  static Logger logger = Logger.getLogger("AnnualReviewsPdfFilterFactory");
+  private static final Logger logger = Logger.getLogger(AnnualReviewsPdfFilterFactory.class);
 
+  protected static class DownloadedFromWorker extends PdfTokenStreamWorker {
+
+    public DownloadedFromWorker() {
+      super(Direction.BACKWARD);
+    }
+    
+    // FIXME 1.62
+    protected static final Pattern DOWNLOADED_FROM_PATTERN =
+        Pattern.compile(".*Downloaded from (?:http://)?[-0-9A-Za-z]+(?:\\.[-0-9A-Za-z]+)+");
+    
+    private int state;
+    
+    private int beginIndex;
+    
+    private int endIndex;
+    
+    private boolean result;
+    
+    @Override
+    public void setUp() throws PdfException {
+      super.setUp();
+      this.result = false;
+      this.state = 0;
+      this.beginIndex = -1;
+      this.endIndex = -1;
+    }
+    
+    @Override
+    public void operatorCallback() throws PdfException {
+      if (logger.isDebug3()) {
+        logger.debug3("DownloadedFromWorker: initial: " + state);
+        logger.debug3("DownloadedFromWorker: index: " + getIndex());
+        logger.debug3("DownloadedFromWorker: operator: " + getOpcode());
+      }
+      
+      switch (state) {
+        
+        case 0: {
+          if (getIndex() == getTokens().size() - 1 && isEndTextObject()) {
+            endIndex = getIndex();
+            ++state;
+          }
+          else {
+            stop();
+          }
+        } break;
+        
+        case 1: {
+          // FIXME 1.62
+          if (isShowTextMatches(DOWNLOADED_FROM_PATTERN)) {
+            ++state;
+          }
+          else if (isBeginTextObject()) {
+            stop();
+          }
+        } break;
+        
+        case 2: {
+          // FIXME 1.62
+          if ("Tm".equals(getOpcode())) {
+            ++state;
+          }
+          else if (isBeginTextObject()) {
+            stop();
+          }
+        } break;
+        
+        case 3: {
+          if (getIndex() == 0 && isBeginTextObject()) {
+            beginIndex = getIndex();
+            result = true;
+            stop();
+          }
+        } break;
+
+        default: {
+          throw new PdfException("Invalid state in DownloadedFromWorker: " + state);
+        }
+    
+      }
+      
+      if (logger.isDebug3()) {
+        logger.debug3("DownloadedFromWorker: final: " + state);
+        logger.debug3("DownloadedFromWorker: result: " + result);
+      }
+      
+    }
+    
+  }
+  
+  protected static class ForPersonalUseWorker extends PdfTokenStreamWorker {
+
+    public ForPersonalUseWorker() {
+      super(Direction.BACKWARD);
+    }
+    
+    // FIXME 1.62
+    protected static final Pattern FOR_PERSONAL_USE_PATTERN =
+        Pattern.compile("by .* on [0-9]{2}/[0-9]{2}/[0-9]{2}. For personal use only.");
+    
+    private int state;
+    
+    private int beginIndex;
+    
+    private int endIndex;
+    
+    private boolean result;
+    
+    @Override
+    public void setUp() throws PdfException {
+      super.setUp();
+      this.result = false;
+      this.state = 0;
+      this.beginIndex = -1;
+      this.endIndex = -1;
+    }
+    
+    @Override
+    public void operatorCallback() throws PdfException {
+      if (logger.isDebug3()) {
+        logger.debug3("ForPersonalUseWorker: initial: " + state);
+        logger.debug3("ForPersonalUseWorker: index: " + getIndex());
+        logger.debug3("ForPersonalUseWorker: operator: " + getOpcode());
+      }
+      
+      switch (state) {
+        
+        case 0: {
+          if (getIndex() == getTokens().size() - 1 && isEndTextObject()) {
+            endIndex = getIndex();
+            ++state;
+          }
+        } break;
+        
+        case 1: {
+          // FIXME 1.62
+          if (isShowTextMatches(FOR_PERSONAL_USE_PATTERN)) {
+            ++state;
+          }
+          else if (isBeginTextObject()) {
+            stop();
+          }
+        } break;
+        
+        case 2: {
+          // FIXME 1.62
+          if ("Tm".equals(getOpcode())) {
+            ++state;
+          }
+          else if (isBeginTextObject()) {
+            stop();
+          }
+        } break;
+        
+        case 3: {
+          if (getIndex() == 0 && isBeginTextObject()) {
+            beginIndex = getIndex();
+            result = true;
+            stop();
+          }
+        } break;
+
+        default: {
+          throw new PdfException("Invalid state in ForPersonalUseWorker: " + state);
+        }
+    
+      }
+      
+      if (logger.isDebug3()) {
+        logger.debug3("ForPersonalUseWorker: final: " + state);
+        logger.debug3("ForPersonalUseWorker: result: " + result);
+      }
+      
+    }
+    
+  }
+  
+  @Override
+  public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
+    pdfDocument.unsetCreationDate();
+    pdfDocument.unsetModificationDate();
+    PdfUtil.normalizeTrailerId(pdfDocument);
+    DownloadedFromWorker downloadedFromWorker = new DownloadedFromWorker();
+    ForPersonalUseWorker forPersonalUseWorker = new ForPersonalUseWorker();
+    boolean firstPage = true;
+    for (PdfPage pdfPage : pdfDocument.getPages()) {
+      boolean hasDoneSomething = false;
+      for (PdfTokenStream pdfTokenStream : pdfPage.getAllTokenStreams()) {
+        downloadedFromWorker.process(pdfTokenStream);
+        if (downloadedFromWorker.result) {
+          hasDoneSomething = true;
+          List<PdfToken> tokens = pdfTokenStream.getTokens();
+          tokens.subList(downloadedFromWorker.beginIndex, downloadedFromWorker.endIndex).clear();
+          pdfTokenStream.setTokens(tokens);
+        }
+        forPersonalUseWorker.process(pdfTokenStream);
+        if (forPersonalUseWorker.result) {
+          hasDoneSomething = true;
+          List<PdfToken> tokens = pdfTokenStream.getTokens();
+          tokens.subList(forPersonalUseWorker.beginIndex, forPersonalUseWorker.endIndex).clear();
+          pdfTokenStream.setTokens(tokens);
+        }
+      }
+      if (firstPage && !hasDoneSomething) {
+        return; // no need to try the other pages
+      }
+      else {
+        firstPage = false;
+      }
+    }
+  }
+  
 }
