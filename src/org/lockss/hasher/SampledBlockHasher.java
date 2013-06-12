@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.4 2013-06-11 17:00:54 barry409 Exp $
+ * $Id: SampledBlockHasher.java,v 1.5 2013-06-12 21:43:50 barry409 Exp $
  */
 
 /*
@@ -43,37 +43,56 @@ import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 
 /**
- * General class to handle content hashing
+ * Class to sample a fraction of the content in an AU for
+ * proof-of-possession polls.
  */
 public class SampledBlockHasher extends BlockHasher {
-  protected static Logger log = Logger.getLogger(SampledBlockHasher.class);
+  protected static final Logger log =
+    Logger.getLogger(SampledBlockHasher.class);
 
-  final protected int modulus;
-  final protected byte[] sampleNonce;
-  final protected MessageDigest sampleHasher;
+  private final FractionalInclusionPolicy inclusionPolicy;
 
-  SampledBlockHasher(CachedUrlSet cus,
-		     int maxVersions,
-		     MessageDigest[] digests,
-		     byte[][]initByteArrays,
-		     EventHandler cb,
-		     int modulus,
-		     byte[] sampleNonce,
-		     MessageDigest sampleHasher) {
-    super(cus, maxVersions, digests, initByteArrays, cb);
-    if (sampleNonce == null || sampleHasher == null || modulus <= 0) {
-      throw new IllegalArgumentException("new SampledBlockHasher()");
-    }
-    this.modulus = modulus;
-    this.sampleNonce = sampleNonce;
-    this.sampleHasher = sampleHasher;
-    log.debug("new SampledBlockHasher: " + modulus + " " + getAlgorithm());
-  }
-
+  /**
+   * Make a {@link SampledBlockHasher}.
+   * @param cus The {@link CachedUrlSet} containing the URLs to be hashed.
+   * @param maxVersions The maximum number of versions, if
+   * positive. Otherwise, the number of versions to hash will default
+   * to a system-selected value.
+   * @param digests Content will be hashed using these {@link MessageDigest}s.
+   * @param initByteArrays Contains one {@code byte[]} nonce for each digest.
+   * @param cb Called back for each block hashed.
+   * @param inclusionPolicy The policy for including and excluding URLs
+   * from the sample.
+   */
   public SampledBlockHasher(CachedUrlSet cus,
 			    int maxVersions,
 			    MessageDigest[] digests,
-			    byte[][]initByteArrays,
+			    byte[][] initByteArrays,
+			    EventHandler cb,
+			    FractionalInclusionPolicy inclusionPolicy) {
+    super(cus, maxVersions, digests, initByteArrays, cb);
+    this.inclusionPolicy = inclusionPolicy;
+    log.debug("new SampledBlockHasher: " + inclusionPolicy.typeString());
+  }
+
+  /**
+   * Make a {@link SampledBlockHasher}.
+   * @param cus The {@link CachedUrlSet} containing the URLs to be hashed.
+   * @param maxVersions The maximum number of versions, if
+   * positive. Otherwise, the number of versions to hash will default
+   * to a system-selected value.
+   * @param digests Content will be hashed using these {@link MessageDigest}s.
+   * @param initByteArrays Contains one {@code byte[]} nonce for each digest.
+   * @param cb Called back for each block hashed.
+   * @param modulus {@code 1/modulus} of the URLs will be included.
+   * @param sampleNonce Random bytes to salt the hash. Two instances
+   * sharing the same nonce and using the same hshing algorithm will
+   * end up with the same result.
+   */
+  public SampledBlockHasher(CachedUrlSet cus,
+			    int maxVersions,
+			    MessageDigest[] digests,
+			    byte[][] initByteArrays,
 			    EventHandler cb,
 			    int modulus,
 			    byte[] sampleNonce) {
@@ -81,7 +100,132 @@ public class SampledBlockHasher extends BlockHasher {
 	 modulus, sampleNonce, defaultSampleHasher());
   }
 
+  /**
+   * Make a {@link SampledBlockHasher}.
+   * @param cus The {@link CachedUrlSet} containing the URLs to be hashed.
+   * @param maxVersions The maximum number of versions, if
+   * positive. Otherwise, the number of versions to hash will default
+   * to a system-selected value.
+   * @param digests Content will be hashed using these {@link MessageDigest}s.
+   * @param initByteArrays Contains one {@code byte[]} nonce for each digest.
+   * @param cb Called back for each block hashed.
+   * @param modulus {@code 1/modulus} of the URLs will be included.
+   * @param sampleNonce Random bytes to salt the hash. Two instances
+   * sharing the same nonce and using the same hshing algorithm will
+   * end up with the same result.
+   * @param sampleHasher A {@link MessageDigest} to be used for
+   * hashing the URLs.
+   */
+  public SampledBlockHasher(CachedUrlSet cus,
+			    int maxVersions,
+			    MessageDigest[] digests,
+			    byte[][] initByteArrays,
+			    EventHandler cb,
+			    int modulus,
+			    byte[] sampleNonce,
+			    MessageDigest sampleHasher) {
+    this(cus, maxVersions, digests, initByteArrays, cb,
+	 new FractionalInclusionPolicy(modulus, sampleNonce, sampleHasher));
+  }
+
+  /**
+   * A policy class to implement {@link #isIncluded} for use in {@link
+   * SampledBlockHasher}.
+   *
+   * The URL is hashed along with a nonce, and by examining some of
+   * the bytes in the hash, roughly {@code 1/modulus} of those URLs
+   * are included.
+   */
+  public final static class FractionalInclusionPolicy {
+    private static final Logger log =
+      Logger.getLogger(SampledBlockHasher.class);
+
+    private final int modulus;
+    private final byte[] sampleNonce;
+    private final MessageDigest sampleHasher;
+    
+    /**
+     * @param modulus {@code 1/modulus} of the URLs will be included.
+     * @param sampleNonce Random bytes to salt the hash. Two instances
+     * sharing the same nonce and using the same hshing algorithm will
+     * end up with the same result.
+     * @param sampleHasher A {@link MessageDigest} to be used for
+     * hashing the URLs.
+     */
+    public FractionalInclusionPolicy(int modulus, byte[] sampleNonce,
+				     MessageDigest sampleHasher) {
+      if (sampleNonce == null) {
+	throw new IllegalArgumentException("null sampleNonce not allowed.");	
+      }
+      if (sampleHasher == null) {
+	throw new IllegalArgumentException("null sampleHasher not allowed.");
+      }
+      if (modulus <= 0) {
+	throw new IllegalArgumentException("modulus must be positive; was: "+
+					   modulus);
+      }
+      this.modulus = modulus;
+      this.sampleNonce = sampleNonce;
+      this.sampleHasher = sampleHasher;
+    }
+
+    /**
+     * @param url A URL.
+     * @return {@code true} for roughly {@code 1/modulus} of the URLs.
+     */
+    public boolean isIncluded(String url) {
+      // First hash the nonce and the current URL's name
+      sampleHasher.update(sampleNonce);
+      sampleHasher.update(url.getBytes());
+      byte[] hash = sampleHasher.digest();
+      
+      // Compare high byte with mod (simplifies testing code)
+      // todo: By 1.62. Use more bits. Remove decision based on test.
+      boolean res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
+      if (log.isDebug3()) {
+	log.debug3(url + " byte: " + hash[hash.length-1] + " " +
+		   (res ? "is" : "isn't") + " in sample");
+      }
+      return res;
+    }
+    
+    /**
+     * @return The modulus passed at creation of this instance.
+     */
+    public int getSampleModulus() {
+      return modulus;
+    }
+
+    /**
+     * @return The sampleNonce passed at creation of this instance.
+     * NOTE: Changing the bytes in the returned array will change the
+     * behavior of the instance. Clients should not do that.
+     */
+    public byte[] getSampleNonce() {
+      return sampleNonce;
+    }
+
+    /**
+     * @return The hashing algorithim of the digest passed at creation
+     * of this instance.
+     */
+    public String getAlgorithm() {
+      return sampleHasher.getAlgorithm();
+    }
+
+    /**
+     * @return A {@link String} useful for display.
+     */
+    public String typeString() {
+      return "Fract: 1/"+modulus;
+    }
+  }
+
+  /**
+   * @return A {@link MessageDigest} to use when none is supplied.
+   */
   private static MessageDigest defaultSampleHasher() {
+    // todo: By 1.62, 
     String alg =
       CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
 			     LcapMessage.DEFAULT_HASH_ALGORITHM);
@@ -93,34 +237,31 @@ public class SampledBlockHasher extends BlockHasher {
     }
   }
 
-  public String getAlgorithm() {
-    return this.sampleHasher.getAlgorithm();
-  }
 
-  private String ts = null;
+  /** 
+   * @return A short string describing the type of hash, to be used
+   * in a status table.
+   */
   public String typeString() {
-    if (ts == null) {
-      ts = "S(" + initialDigests.length + ":" + modulus + ")";
-    }
-    return ts;
+    return "S(" + initialDigests.length + ":" + 
+      inclusionPolicy.typeString() + ")";
   }
 
+  /**
+   * @return The {@link FractionalInclusionPolicy} supplied or created
+   * at creation time.
+   */
+  public FractionalInclusionPolicy getInclusionPolicy() {
+    return inclusionPolicy;
+  }
+
+  /**
+   * @return {@code true} iff {@code node} should be hashed.
+   */
   protected boolean isIncluded(CachedUrlSetNode node) {
+    // NOTE: subclass contract requires that super.isIncluded be
+    // called in all cases.
     return super.isIncluded(node) && 
-      urlIsIncluded(sampleNonce, node.getUrl(), modulus, sampleHasher);
-  }
-
-  public static boolean urlIsIncluded(byte[] sampleNonce, String url,
-				      int modulus, MessageDigest sampleHasher) {
-    // First hash the nonce and the current URL's name
-    sampleHasher.update(sampleNonce);
-    sampleHasher.update(url.getBytes());
-    byte[] hash = sampleHasher.digest();
-
-    // Compare high byte with mod (simplifies test)
-    boolean res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
-    if (log.isDebug3()) log.debug3(url + " byte: " + hash[hash.length-1] + " " +
-				   (res ? "is" : "isn't") + " in sample");
-    return res;
+      inclusionPolicy.isIncluded(node.getUrl());
   }
 }

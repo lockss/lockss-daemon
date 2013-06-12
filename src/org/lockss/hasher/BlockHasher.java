@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.21 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.22 2013-06-12 21:43:50 barry409 Exp $
  */
 
 /*
@@ -178,7 +178,10 @@ public class BlockHasher extends GenericHasher {
     return cus.contentHashIterator();
   }
 
-  /** V3 hashes only content nodes */
+  /** V3 hashes only content nodes.  NOTE: This routine also
+   * implements substance checking. Subclasses overriding this method
+   * must call {@code super.isIncluded()}.
+   */
   protected boolean isIncluded(CachedUrlSetNode node) {
     String url = node.getUrl();
     if (crawlMgr != null && crawlMgr.isGloballyExcludedUrl(au, url)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.3 2013-06-11 17:00:54 barry409 Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.4 2013-06-12 21:43:51 barry409 Exp $
  */
 
 /*
@@ -77,12 +77,12 @@ public class TestSampledBlockHasher extends LockssTestCase {
     SampledBlockHasher hasher =
       new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
 			       1, sampleNonce);
-    assertEquals("SHA-1", hasher.getAlgorithm());
+    assertEquals("SHA-1", hasher.getInclusionPolicy().getAlgorithm());
     MessageDigest sampleHasher = new MockMessageDigest();
     hasher =
       new SampledBlockHasher(cus, 1, digests, initByteArrays, cb, 
 			       1, sampleNonce, sampleHasher);
-    assertEquals("Mock hash algorithm", hasher.getAlgorithm());
+    assertEquals("Mock hash algorithm", hasher.getInclusionPolicy().getAlgorithm());
   }
 
   public void testBadSampleHasherAlgorithm() {

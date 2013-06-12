@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.150 2013-06-11 17:00:54 barry409 Exp $
+ * $Id: V3Poller.java,v 1.151 2013-06-12 21:43:51 barry409 Exp $
  */
 
 /*
@@ -442,9 +442,7 @@ public class V3Poller extends BasePoll {
   // The length, in ms., to hold the poll open past normal closing if
   // a little extra poll time is required to wait for pending repairs. 
   private long extraPollTime = DEFAULT_V3_EXTRA_POLL_TIME;
-  private int sampleModulus = 0;
-  private byte[] sampleNonce = null;
-  private MessageDigest sampleHasher = null;
+  private SampledBlockHasher.FractionalInclusionPolicy inclusionPolicy = null;
   private int maxRepairs = DEFAULT_MAX_REPAIRS;
   private long voteDeadlinePadding = DEFAULT_VOTE_DURATION_PADDING;
   private long hashBytesBeforeCheckpoint =
@@ -643,18 +641,21 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
 				   DEFAULT_V3_ENABLE_HASH_STATS);
-    sampleModulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
-    if (sampleModulus != 0) {
-      sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+    int sampleModulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
+    if (sampleModulus > 0) {
       String alg =
 	CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
 			       LcapMessage.DEFAULT_HASH_ALGORITHM);
+      MessageDigest sampleHasher = null;
       try {
 	sampleHasher = MessageDigest.getInstance(alg);
       } catch (NoSuchAlgorithmException ex) {
 	log.error("No such hash algorithm: " + alg);
 	throw new IllegalArgumentException("No such hash algorithm: " + alg);
       }
+      byte[] sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+      this.inclusionPolicy = new SampledBlockHasher.FractionalInclusionPolicy(
+	sampleModulus, sampleNonce, sampleHasher);
     }
   }
 
@@ -1360,6 +1361,20 @@ public class V3Poller extends BasePoll {
   }
 
   /**
+   * @return {@code true} if and only if the given voter-only URL --
+   * which is not present on the poller -- should be tallied.
+   */
+  private boolean shouldTallyVoterUrl(String url) {
+    // The worry is that one or more voters didn't know about proof of
+    // possession polls, and voted the whole AU, but we didn't bother
+    // hashing most of the AU. There would be a lot of voter-only
+    // results, and we could end up trying to repair a URL that we
+    // actually would have matched content on.
+    return !isSampledPoll() || 
+      inclusionPolicy.isIncluded(url);
+  }
+
+  /**
    * Tally all the voters who have this block which the poller does
    * not, consuming the block in the voters.
    * @param voterUrl The URL being tallied.
@@ -1367,26 +1382,17 @@ public class V3Poller extends BasePoll {
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
 
-    boolean inc = true; // Is this URL included in the poll
-    if (sampleModulus != 0 && sampleHasher != null) {
-      // This is a sampled poll. The reason that the URL does not
-      // appear in the poller's VoteBlock may be that it was excluded
-      // from the sample, while the reason it does appear in the
-      // voter's VoteBlock may be that the voter doesn't support
-      // sampled polls.
-      inc = SampledBlockHasher.urlIsIncluded(sampleNonce, voterUrl,
-					     sampleModulus, sampleHasher);
-      log.debug("tallyVoterUrl: " + voterUrl + (inc ? " is" : " isn't") +
-		" in sample");
-    }
-    if (inc) {
+    if (shouldTallyVoterUrl(voterUrl)) {
       VoteBlockTallier voteBlockTallier = getVoterUrlTally();
       urlTallier.voteAllParticipants(voterUrl, voteBlockTallier);
       BlockTally tally = voteBlockTallier.getBlockTally();
-      // This URL is included - record its tally and repair if needed
+
       updateTallyStatus(tally, voterUrl);
       repairIfNeeded(tally, voterUrl);
     } else {
+      // Might be a voter who doesn't know about sampled polling and
+      // has hashed the entire AU.
+      log.debug("tallyVoterUrl: " + voterUrl + " isn't expected by poller");
       urlTallier.voteNoParticipants(voterUrl);
     }
   }
@@ -1594,22 +1600,21 @@ public class V3Poller extends BasePoll {
                                  BlockHasher.EventHandler eh) {
     log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
-    if (sampleModulus != 0) {
-      log.info("Sampled poll: " + sampleModulus);
+    if (isSampledPoll()) {
+      log.info("Sampled poll: " + inclusionPolicy.typeString());
     }
-    BlockHasher hasher = (sampleModulus == 0 || sampleNonce == null ?
-			  new BlockHasher(cu,
-					  maxVersions,
-					  initHasherDigests(),
-					  initHasherByteArrays(),
-					  eh) :
-			  new SampledBlockHasher(cu,
-						 maxVersions,
-						 initHasherDigests(),
-						 initHasherByteArrays(),
-						 eh,
-						 sampleModulus,
-						 sampleNonce));
+    BlockHasher hasher = isSampledPoll() ?
+      new SampledBlockHasher(cu,
+			     maxVersions,
+			     initHasherDigests(),
+			     initHasherByteArrays(),
+			     eh,
+			     inclusionPolicy) :
+      new BlockHasher(cu,
+		      maxVersions,
+		      initHasherDigests(),
+		      initHasherByteArrays(),
+		      eh);
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     
@@ -3118,12 +3123,37 @@ public class V3Poller extends BasePoll {
     return pollerState.getCachedUrlSet().getArchivalUnit();
   }
 
-  public int getSampleModulus() {
-    return sampleModulus;
+  /**
+   * @return {@code true} if and only if this is a proof of possession poll.
+   */
+  public boolean isSampledPoll() {
+    return inclusionPolicy != null;
   }
 
+  /**
+   * @return The modulus used for hashing URLs for proof of possession
+   * polls. Return {@code 0} is this is not a proof of possession
+   * poll.
+   */
+  public int getSampleModulus() {
+    if (isSampledPoll()) {
+      return inclusionPolicy.getSampleModulus();
+    } else {
+      return 0;
+    }
+  }
+
+  /**
+   * @return The {@code byte[]} nonce used for hashing URLs for proof
+   * of possession polls. Return {@code null} is this is not a proof
+   * of possession poll.
+   */
   public byte[] getSampleNonce() {
-    return sampleNonce;
+    if (isSampledPoll()) {
+      return inclusionPolicy.getSampleNonce();
+    } else {
+      return null;
+    }
   }
 
   public String getStatusString() {
