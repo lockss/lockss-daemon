@@ -39,7 +39,6 @@
       eissn = 1943-5622
     >
 
-    param[journal_issn] = 1943-5622
     param[journal_id] = ijgnai
 
     {
@@ -57,10 +56,14 @@
     au < exists ; exists ; 2009 ; International Journal of Geomechanics Volume 9 ; 9 ; 2009 >
     au < exists ; exists ; 2010 ; International Journal of Geomechanics Volume 10 ; 10 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1943-5622
+    
     au < exists ; exists ; 2011 ; International Journal of Geomechanics Volume 11 ; 11 ; 2011 >
-    au < exists ; exists ; 2012 ; International Journal of Geomechanics Volume 12 ; 12 ; 2012 >
+    au < testing ; exists ; 2012 ; International Journal of Geomechanics Volume 12 ; 12 ; 2012 >
     au < exists ; exists ; 2013 ; International Journal of Geomechanics Volume 13 ; 13 ; 2013 >
-
+    }
   }
 
   {
@@ -1235,7 +1238,6 @@
       eissn = 1943-5452
     >
 
-    param[journal_issn] = 1943-5452
     param[journal_id] = jwrmd5
 
     {
@@ -1271,10 +1273,14 @@
     au < exists ; exists ; 2009 ; Journal of Water Resources Planning and Management Volume 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Water Resources Planning and Management Volume 136 ; 136 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1943-5452
+    
     au < exists ; exists ; 2011 ; Journal of Water Resources Planning and Management Volume 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Water Resources Planning and Management Volume 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Water Resources Planning and Management Volume 139 ; 139 ; 2013 >
-
+    }
   }
 
   {
@@ -1285,7 +1291,6 @@
       eissn = 1943-5460
     >
 
-    param[journal_issn] = 1943-5460
     param[journal_id] = jwped5
 
     {
@@ -1321,10 +1326,15 @@
     au < exists ; exists ; 2009 ; Journal of Waterway Port Coastal and Ocean Engineering 135 ; 135 ; 2009 >
     au < exists ; exists ; 2010 ; Journal of Waterway Port Coastal and Ocean Engineering 136 ; 136 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1943-5460
+    
     au < exists ; exists ; 2011 ; Journal of Waterway Port Coastal and Ocean Engineering 137 ; 137 ; 2011 >
     au < exists ; exists ; 2012 ; Journal of Waterway Port Coastal and Ocean Engineering 138 ; 138 ; 2012 >
     au < exists ; exists ; 2013 ; Journal of Waterway Port Coastal and Ocean Engineering 139 ; 139 ; 2013 >
-
+    
+    }
   }
 
   {
@@ -1335,7 +1345,6 @@
       eissn = 1943-5630
     >
 
-    param[journal_issn] = 1943-5630
     param[journal_id] = lmeeaz
 
     {
@@ -1353,9 +1362,15 @@
     au < exists ; exists ; 2009 ; Leadership & Management in Engineering Volume 9 ; 9 ; 2009 >
     au < exists ; exists ; 2010 ; Leadership & Management in Engineering Volume 10 ;10 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1943-5630
+    
     au < exists ; exists ; 2011 ; Leadership & Management in Engineering Volume 11 ;11 ; 2011 >
     au < exists ; exists ; 2012 ; Leadership & Management in Engineering Volume 12 ;12 ; 2012 >
     au < exists ; exists ; 2013 ; Leadership & Management in Engineering Volume 13 ;13 ; 2013 >
+    
+    }
 
   }
 
@@ -1367,7 +1382,6 @@
       eissn = 1527-6996
     >
 
-    param[journal_issn] = 1527-6996
     param[journal_id] = nhrefo
 
     {
@@ -1386,10 +1400,14 @@
     au < exists ; exists ; 2009 ; Natural Hazards Review Volume 10 ; 10 ; 2009 >
     au < exists ; exists ; 2010 ; Natural Hazards Review Volume 11 ; 11 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1527-6996
+    
     au < exists ; exists ; 2011 ; Natural Hazards Review Volume 12 ; 12 ; 2011 >
     au < exists ; exists ; 2012 ; Natural Hazards Review Volume 13 ; 13 ; 2012 >
     au < exists ; exists ; 2013 ; Natural Hazards Review Volume 14 ; 14 ; 2013 >
-
+    }
   }
 
   {
@@ -1400,7 +1418,6 @@
       eissn = 1943-5576
     >
 
-    param[journal_issn] = 1943-5576
     param[journal_id] = ppscfx
 
     {
@@ -1423,10 +1440,14 @@
     au < exists ; exists ; 2009 ; Practice Periodical on Structural Design & Construction Volume 14 ; 14 ; 2009 >
     au < exists ; exists ; 2010 ; Practice Periodical on Structural Design & Construction Volume 15 ; 15 ; 2010 >
     }
+    
+    {
+    param[journal_issn] = 1943-5576
+    
     au < exists ; exists ; 2011 ; Practice Periodical on Structural Design & Construction Volume 16 ; 16 ; 2011 >
     au < exists ; exists ; 2012 ; Practice Periodical on Structural Design & Construction Volume 17 ; 17 ; 2012 >
     au < exists ; exists ; 2013 ; Practice Periodical on Structural Design & Construction Volume 18 ; 18 ; 2013 >
-
+    }
   }
 
 }
