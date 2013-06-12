@@ -1,5 +1,5 @@
 /*
- * $Id: PdfOpcodes.java,v 1.2 2012-07-17 23:53:44 thib_gc Exp $
+ * $Id: PdfOpcodes.java,v 1.3 2013-06-12 02:41:36 thib_gc Exp $
  */
 
 /*
@@ -94,6 +94,12 @@ public class PdfOpcodes {
    * @since 1.56
    */
   public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
+
+  /**
+   * <p>The {@value} opcode.</p>
+   * @since 1.62
+   */
+  public static final String SET_TEXT_MATRIX = "Tm";
 
   /**
    * <p>The {@value} opcode.</p>

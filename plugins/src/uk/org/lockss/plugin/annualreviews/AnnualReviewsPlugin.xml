@@ -29,7 +29,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>";Annual Reviews Plugin (retired platform), Base URL %s, Journal ID %s, Short Journal ID %s, Volume %d";, base_url, journal_id, short_journal_id, volume</string>
+    <string>"Annual Reviews Plugin (retired platform), Base URL %s, Journal ID %s, Short Journal ID %s, Volume %d", base_url, journal_id, short_journal_id, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -38,18 +38,18 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,";^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$";, base_url_host</string>
-      <string>4,";^%s";, base_url</string>
-      <string>1,";^%slockss/%s/%d/index.html";, base_url, journal_id, volume</string>
-      <string>2,";^%s(action|loi|search|feedback|edcom)";, base_url</string>
-      <string>1,";^%stoc/%s/%d/";, base_url, journal_id, volume</string>
-      <string>2,";^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-].*\?prevSearch=\${resultBean\.text}";, base_url, journal_id, short_journal_id, volume</string>
-      <string>1,";^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-]";, base_url, journal_id, short_journal_id, volume</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss/%s/%d/index.html", base_url, journal_id, volume</string>
+      <string>2,"^%s(action|loi|search|feedback|edcom)", base_url</string>
+      <string>1,"^%stoc/%s/%d/", base_url, journal_id, volume</string>
+      <string>2,"^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-].*\?prevSearch=\${resultBean\.text}", base_url, journal_id, short_journal_id, volume</string>
+      <string>1,"^%sdoi/(pdf|abs|full|suppl)/[.0-9]+/annurev[.-](%s|%s)[.-]", base_url, journal_id, short_journal_id, volume</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>";%slockss/%s/%d/index.html";, base_url, journal_id, volume</string>
+    <string>"%slockss/%s/%d/index.html", base_url, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>

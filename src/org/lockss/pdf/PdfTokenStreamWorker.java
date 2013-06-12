@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.6 2013-02-28 01:55:28 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.7 2013-06-12 02:41:36 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.pdf;
 
 import java.util.*;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 /**
  * <p>
@@ -602,6 +602,20 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
+   * Determines if the current opcode is
+   * {@link PdfOpcodes#SET_TEXT_MATRIX}.
+   * </p>
+   * 
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SET_TEXT_MATRIX}.
+   * @since 1.62
+   */
+  protected boolean isSetTextMatrix() {
+    return PdfOpcodes.SET_TEXT_MATRIX.equals(getOpcode());
+  }
+  
+  /**
+   * <p>
    * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT}.
    * </p>
    * 
@@ -665,6 +679,29 @@ public abstract class PdfTokenStreamWorker {
    */
   protected boolean isShowTextEqualsIgnoreCase(String str) {
     return isShowText() && getTokens().get(getIndex() - 1).getString().equalsIgnoreCase(str);
+  }
+  
+  /**
+   * <p>
+   * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
+   * string operand matches the given pattern according to
+   * {@link Matcher#find()}.
+   * </p>
+   * <p>
+   * This method uses {@link Matcher#matches()}, which implicitly anchors at
+   * the beginning of the input string.
+   * </p>
+   * 
+   * @param pattern
+   *          A regular expression expressed as a {@link Pattern}.
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SHOW_TEXT} and its string operand matches
+   *         <code>pattern</code>.
+   * @since 1.62
+   * @see String#matches(String)
+   */
+  protected boolean isShowTextFind(Pattern pattern) {
+    return isShowText() && pattern.matcher(getTokens().get(getIndex() - 1).getString()).find();
   }
   
   /**
@@ -762,7 +799,43 @@ public abstract class PdfTokenStreamWorker {
    * <p>
    * Determines if the current opcode is
    * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
-   * matches the given pattern.
+   * matches the given pattern according to {@link Matcher#find()}.
+   * </p>
+   * <p>
+   * This method uses {@link Matcher#find()}, which does not implicitly anchor
+   * at the beginning of the input string.
+   * </p>
+   * 
+   * @param pattern
+   *          A regular expression expressed as a {@link Pattern}.
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string
+   *         operand matches <code>regex</code>.
+   * @since 1.62
+   * @see String#matches(String)
+   */
+  protected boolean isShowTextGlyphPositioningFind(Pattern pattern) {
+    if (!isShowTextGlyphPositioning()) {
+      return false;
+    }
+    StringBuilder sb = new StringBuilder();
+    for (PdfToken tok : getTokens().get(getIndex() - 1).getArray()) {
+      if (tok.isString()) {
+        sb.append(tok.getString());
+      }
+    }
+    return pattern.matcher(sb.toString()).find();
+  }
+  
+  /**
+   * <p>
+   * Determines if the current opcode is
+   * {@link PdfOpcodes#SHOW_TEXT_GLYPH_POSITIONING} and its string operand
+   * matches the given pattern according to {@link Matcher#matches()}.
+   * </p>
+   * <p>
+   * This method uses {@link Matcher#matches()}, which implicitly anchors at
+   * the beginning of the input string.
    * </p>
    * 
    * @param pattern
@@ -796,6 +869,10 @@ public abstract class PdfTokenStreamWorker {
    * This method uses {@link String#matches(String)} which compiles the regular
    * expression each time, so it may be inefficient compared to
    * {@link #isShowTextGlyphPositioningMatches(Pattern)}.
+   * </p>
+   * <p>
+   * {@link String#matches(String)} delegates to {@link Matcher#matches()},
+   * which implicitly anchors at the beginning of the input string.
    * </p>
    * 
    * @param regex
@@ -855,7 +932,12 @@ public abstract class PdfTokenStreamWorker {
   /**
    * <p>
    * Determines if the current opcode is {@link PdfOpcodes#SHOW_TEXT} and its
-   * string operand matches the given pattern.
+   * string operand matches the given pattern according to
+   * {@link Matcher#matches()}.
+   * </p>
+   * <p>
+   * This method uses {@link Matcher#matches()}, which implicitly anchors at
+   * the beginning of the input string.
    * </p>
    * 
    * @param pattern
@@ -879,6 +961,10 @@ public abstract class PdfTokenStreamWorker {
    * This method uses {@link String#matches(String)} which compiles the regular
    * expression each time, so it may be inefficient compared to
    * {@link #isShowTextMatches(Pattern)}.
+   * </p>
+   * <p>
+   * {@link String#matches(String)} delegates to {@link Matcher#matches()},
+   * which implicitly anchors at the beginning of the input string.
    * </p>
    * 
    * @param regex
