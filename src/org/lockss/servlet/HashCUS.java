@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.51 2013-05-27 05:39:19 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.52 2013-06-12 04:21:47 tlipkis Exp $
  */
 
 /*
@@ -211,6 +211,9 @@ public class HashCUS extends LockssServlet {
     byte[] hashResult;
     long bytesHashed;
     int filesHashed;
+
+    long reqTime;
+    long startTime;
     long elapsedTime;
 
     Data(String machineName) {
@@ -319,6 +322,8 @@ public class HashCUS extends LockssServlet {
       tbl.addHeading("");
       tbl.addHeading("Req Id");
       tbl.addHeading("Status");
+      tbl.addHeading("Req Time");
+      tbl.addHeading("Start Time");
       tbl.addHeading("AU");
       for (Map.Entry<String,Data> ent : map.entrySet()) {
 	tbl.newRow();
@@ -356,6 +361,13 @@ public class HashCUS extends LockssServlet {
 	  statStr = fileLink(statStr, d.blockFile, "HashFile", false);
 	}
 	tbl.add(statStr);
+
+	tbl.newCell();
+	tbl.add(div("RequestTime", formatDateTime(d.reqTime)));
+	tbl.newCell();
+	if (d.startTime > 0) {
+	  tbl.add(div("StartTime", formatDateTime(d.startTime)));
+	}
 
 	tbl.newCell();
 	tbl.add(d.au.getName());
@@ -744,6 +756,10 @@ public class HashCUS extends LockssServlet {
 
   }
 
+  static String formatDateTime(long time) {
+    return ServletUtil.headerDf.format(new Date(time));
+  }
+
   String getElapsedString() {
     String s = StringUtil.protectedDivide(ddd.bytesHashed,
 					  ddd.elapsedTime, "inf");
@@ -1026,6 +1042,7 @@ public class HashCUS extends LockssServlet {
 	    runner.doit();
 	    setThreadName("HashCUS: idle");
 	  }};
+      ddd.reqTime = TimeBase.nowMs();
       ddd.future = getExecutor().submit(runnable);
       statusMsg = "Queued background hash, Req Id: " + ddd.reqId;
     } catch (RuntimeException e) {
@@ -1132,6 +1149,7 @@ public class HashCUS extends LockssServlet {
 
     private void doit() {
       try {
+	ddd.startTime = TimeBase.nowMs();
 	setStatus(RunnerStatus.Running);
 	doit0();
       } catch (Exception e) {
@@ -1203,7 +1221,7 @@ public class HashCUS extends LockssServlet {
       StringBuilder sb = new StringBuilder();
       // Pylorus' hash() depends upon the first 20 characters of this string
       sb.append("# Block hashes from " + getMachineName() + ", " +
-		ServletUtil.headerDf.format(new Date()) + "\n");
+		formatDateTime(TimeBase.nowMs()) + "\n");
       sb.append("# AU: " + ddd.au.getName() + "\n");
       sb.append("# Hash algorithm: " + ddd.digest.getAlgorithm() + "\n");
       sb.append("# Encoding: " + ddd.resEncoding.toString() + "\n");
