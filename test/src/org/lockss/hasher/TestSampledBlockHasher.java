@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.5 2013-06-13 15:43:39 barry409 Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.6 2013-06-13 16:22:34 barry409 Exp $
  */
 
 /*
@@ -201,6 +201,27 @@ public class TestSampledBlockHasher extends LockssTestCase {
   public void testHashSixtyFilesMod5()
       throws IOException, FileNotFoundException {
     doTestMultipleFilesWithMod(60, 5);
+  }
+
+  // Make sure that inclusion/exclusion hasn't changed.
+  public void testInclusionUnchanged() {
+    // 30 urls, mod 2 means any change has a 1/2^30 chance to be not seen.
+    // no need to check other mods, unless SHA-1 is broken.
+    int modulus = 2;
+    Integer[] includedMod2 =
+      {0, 1, 4, 5, 9, 12, 13, 17, 19, 22, 23, 24, 25, 27, 28};
+    Collection<Integer> included = 
+      new HashSet<Integer>(Arrays.asList(includedMod2));
+    SampledBlockHasher.FractionalInclusionPolicy inclusionPolicy =
+      new SampledBlockHasher.FractionalInclusionPolicy(
+	modulus, sampleNonce, urlHasher);
+
+    for (int i = 0; i < 30; i++) {
+      String url = TEST_URL_BASE + TEST_URL + i;
+      assertEquals("url: "+url,
+		   included.contains(i), inclusionPolicy.isIncluded(url));
+    }
+    
   }
 
   // XXX DSHR - need tests with substance checking enabled
