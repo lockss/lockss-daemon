@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.3 2013-06-03 22:32:21 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.4 2013-06-13 21:45:46 alexandraohlson Exp $
  */
 
 /*
@@ -70,10 +70,13 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("td", "class", "quickLinks_content"),
         // Left side columns has list of Journals (might change over time) and current year's catalog
         //<table class="sideMenu mceItemTable" cellpadding="2" width="165">
-        HtmlNodeFilters.tagWithAttribute("table", "class", "sideMenu mceItemTable"),       
+        HtmlNodeFilters.tagWithAttribute("table", "class", "sideMenu mceItemTable"),
         
-        // TOC has section "Users who read this also read..." which is tricky to isolate
-        // It's a little scary, but <div class="full_text"> seems only to be used for this section
+        // article pages (abstract, reference, full) have a "cited by" section which will change over time
+        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+        
+        // articles have a section "Users who read this also read..." which is tricky to isolate
+        // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
         // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
         HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
 

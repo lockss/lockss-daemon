@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.3 2013-06-04 17:17:39 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.4 2013-06-13 21:45:46 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -209,6 +209,28 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
       "<html><body<table><tr><td><!-- placeholder id=null --></td></tr></table></body></html>";
   private static final String adSimpleFiltered =
       "<html><body><table><tr></tr></table></body></html>";
+  
+  private static final String citedBySection =
+      "</div><!-- /abstract content --><!-- fulltext content -->" +
+          "<div class=\"citedBySection\"><a name=\"citedBySection\"></a><h2>Cited by</h2>" +
+          "<div class=\"citedByEntry\">" +
+          "<a href=\"/action/foo\">Author</a>.  (2012) Recent Title. <i><span class=\"NLM_source\">Bioanalysis</span></i> <b>4</b>:9, 1123-1140<br />" +
+          "Online publication date: 1-May-2012.<br /><span class=\"CbLinks\"><a class=\"ref nowrap\" href=\"/doi/abs/10.4155/bio.xx.73\">Summary</a>" +
+          " | <a class=\"ref nowrap\" href=\"/doi/full/10.4155/bio.xx.73\">Full Text</a>" +
+          " | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.4155/bio.xx.73\">PDF (1157 KB)</a>" +
+          " | <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdfplus/10.4155/bio.xx.73\">PDF Plus (1157 KB)</a>" +
+          "&nbsp;<!-- ${cadmus-articleworks: 10.4155%2Fbio.12.73 class='ref' } --><!-- ${xml_link: 10.4155%2Fbio.12.73} -->" +
+          " | <a class=\"ref nowrap\" href=\"javascript:void(0)\" title=\"Opens new window\" onclick=\"window.open('/action/showReprints', '_blank', 'width=950,height=800')\">" +
+          " Reprints &amp; Permissions" +
+          "</a></span></div>" +
+          "</div><!-- /fulltext content -->" +
+          "<div class=\"article_link\">"; 
+  private static final String citedBySectionFiltered =
+      "</div><!-- /abstract content --><!-- fulltext content -->" +
+          "<!-- /fulltext content -->" +
+          "<div class=\"article_link\">"; 
+
+
 
   
   public void test_topBannerHtml() throws Exception {
@@ -268,6 +290,14 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         new StringInputStream(adPlaceholderLimitTest),
         Constants.DEFAULT_ENCODING);
     assertEquals(adPlaceholderLimitFiltered, StringUtil.fromInputStream(actIn));
+    
+  }
+  
+  public void test_citedBySection() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(citedBySection),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(citedBySectionFiltered, StringUtil.fromInputStream(actIn));
     
   }
  
