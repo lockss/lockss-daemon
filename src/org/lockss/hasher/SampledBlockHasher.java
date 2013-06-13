@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.5 2013-06-12 21:43:50 barry409 Exp $
+ * $Id: SampledBlockHasher.java,v 1.6 2013-06-13 15:43:39 barry409 Exp $
  */
 
 /*
@@ -174,17 +174,17 @@ public class SampledBlockHasher extends BlockHasher {
      * @return {@code true} for roughly {@code 1/modulus} of the URLs.
      */
     public boolean isIncluded(String url) {
-      // First hash the nonce and the current URL's name
-      sampleHasher.update(sampleNonce);
+      // hash the nonce and the current URL
+      sampleHasher.reset();
+      sampleHasher.update(getSampleNonce());
       sampleHasher.update(url.getBytes());
       byte[] hash = sampleHasher.digest();
       
-      // Compare high byte with mod (simplifies testing code)
-      // todo: By 1.62. Use more bits. Remove decision based on test.
-      boolean res = ((((int)hash[hash.length-1] + 128) % modulus) == 0);
+      int value = ((hash[0] & 0xFF) << 24) | ((hash[1] & 0xFF) << 16) |
+	((hash[2] & 0xFF) << 8) | (hash[3] & 0xFF);
+      boolean res = ((value % modulus) == 0);
       if (log.isDebug3()) {
-	log.debug3(url + " byte: " + hash[hash.length-1] + " " +
-		   (res ? "is" : "isn't") + " in sample");
+	log.debug3(url + (res ? "is" : "isn't") + " in sample");
       }
       return res;
     }
@@ -217,7 +217,9 @@ public class SampledBlockHasher extends BlockHasher {
      * @return A {@link String} useful for display.
      */
     public String typeString() {
-      return "Fract: 1/"+modulus;
+      return "Fract: 1/"+getSampleModulus()+
+	" Alg: "+getAlgorithm()+
+	" Nonce: "+ByteArray.toBase64(getSampleNonce());
     }
   }
 

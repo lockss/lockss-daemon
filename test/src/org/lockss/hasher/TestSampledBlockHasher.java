@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.4 2013-06-12 21:43:51 barry409 Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.5 2013-06-13 15:43:39 barry409 Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
   private static final byte[] sampleNonce = TEST_NONCE.getBytes();
   private static final byte[] testContent = TEST_FILE_CONTENT.getBytes();
 
+  MessageDigest urlHasher = null;
   MockMessageDigest dig = null;
   MessageDigest[] digests = null;
   byte[][] initByteArrays = null;
@@ -62,6 +63,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    String alg =
+      CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
+			     LcapMessage.DEFAULT_HASH_ALGORITHM);
+    assertEquals("SHA-1", alg);
+    urlHasher = MessageDigest.getInstance(alg);
     dig = new MockMessageDigest();
     digests = new MessageDigest[]{ dig };
     initByteArrays = new byte[][]{ testContent };
@@ -146,7 +152,8 @@ public class TestSampledBlockHasher extends LockssTestCase {
     byte[] expectedBytes = getExpectedCusBytes(cus, mod);
     log.debug3("Expect " + expectedBytes.length + " bytes from " +
 	       numFiles + " files mod " + mod);
-    MockMessageDigest sampleHasher = new MockMessageDigest();
+    assertNotEquals("Zero bytes in sample. Test needs to be fixed.",
+		    0, expectedBytes.length);
     byte[][] initByteArrays = { { } };
     if (log.isDebug3()) {
       for (int i = 0; i < testContent.length; i++) {
@@ -156,7 +163,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
     RecordingEventHandler cb = new RecordingEventHandler();
     SampledBlockHasher hasher =
       new SampledBlockHasher(cus, 1, digests, initByteArrays, cb,
-			       mod, sampleNonce, sampleHasher);
+			       mod, sampleNonce, urlHasher);
     hashToLength(hasher, expectedBytes.length, expectedBytes.length);
     List<Event> events = cb.getEvents();
     assertEquals(numFilesInSample, events.size());
@@ -165,10 +172,11 @@ public class TestSampledBlockHasher extends LockssTestCase {
     for (Event ev : events) {
       for (int i = 0; i < ev.byteArrays.length; i++) {
 	for (int j = 0; j < ev.byteArrays[i].length; j++) {
-	  if (ev.byteArrays[i][j] != expectedBytes[ex++]) {
+	  if (ev.byteArrays[i][j] != expectedBytes[ex]) {
 	    fail("ev[" + eventCount + "].byteArrays[" + i + "][" + j +
-		 "} mismatch expectedBytes[" + ex + "]");
+		 "] mismatch expectedBytes[" + ex + "]");
 	  }
+	  ex++;
 	}
       }
       eventCount++;
@@ -232,6 +240,17 @@ public class TestSampledBlockHasher extends LockssTestCase {
     return cus;
   }
 
+  private boolean isIncluded(String url, int mod) {
+    urlHasher.reset();
+    urlHasher.update(sampleNonce);
+    urlHasher.update(url.getBytes());
+    byte[] hash = urlHasher.digest();
+    int value = ((hash[0] & 0xFF) << 24) | ((hash[1] & 0xFF) << 16) |
+      ((hash[2] & 0xFF) << 8) | (hash[3] & 0xFF);
+    boolean res = ((value % mod) == 0);
+    return res;
+  }
+
   private byte[] getExpectedCusBytes(CachedUrlSet cus, int mod)
     throws IOException {
     Iterator it = cus.contentHashIterator();
@@ -242,8 +261,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
       CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
       String urlName = cu.getUrl();
       byte[] hash = (sampleNonce + urlName).getBytes();
-      if (mod > 0 && cu.hasContent() &&
-	  ((((int)hash[hash.length-1] + 128) % mod) == 0)) {
+      if (mod > 0 && cu.hasContent() && isIncluded(urlName, mod)) {
 	log.debug3(urlName + " is in sample");
 	numFilesInSample++;
 	byte[] arr = getExpectedCuBytes(cu);
