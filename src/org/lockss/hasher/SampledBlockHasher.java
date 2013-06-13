@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.6 2013-06-13 15:43:39 barry409 Exp $
+ * $Id: SampledBlockHasher.java,v 1.7 2013-06-13 16:22:56 barry409 Exp $
  */
 
 /*
@@ -184,7 +184,7 @@ public class SampledBlockHasher extends BlockHasher {
 	((hash[2] & 0xFF) << 8) | (hash[3] & 0xFF);
       boolean res = ((value % modulus) == 0);
       if (log.isDebug3()) {
-	log.debug3(url + (res ? "is" : "isn't") + " in sample");
+	log.debug3(url + " " + (res ? "is" : "isn't") + " in sample");
       }
       return res;
     }
