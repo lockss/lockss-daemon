@@ -188,18 +188,7 @@
       
     param[journal_id] = casj
     
-    au < exists ; exists ; 2002 ; Canadian Aeronautics and Space Journal Volume 48 ; 48 >
-    au < exists ; exists ; 2003 ; Canadian Aeronautics and Space Journal Volume 49 ; 49 >
-    au < exists ; exists ; 2004 ; Canadian Aeronautics and Space Journal Volume 50 ; 50 >
-    au < exists ; exists ; 2005 ; Canadian Aeronautics and Space Journal Volume 51 ; 51 >
-    au < exists ; exists ; 2006 ; Canadian Aeronautics and Space Journal Volume 52 ; 52 >
-    au < exists ; exists ; 2007 ; Canadian Aeronautics and Space Journal Volume 53 ; 53 >
-    au < exists ; exists ; 2008 ; Canadian Aeronautics and Space Journal Volume 54 ; 54 >
-    au < exists ; exists ; 2009 ; Canadian Aeronautics and Space Journal Volume 55 ; 55 >
-    au < exists ; exists ; 2010 ; Canadian Aeronautics and Space Journal Volume 56 ; 56 >
-    au < exists ; exists ; 2011 ; Canadian Aeronautics and Space Journal Volume 58 ; 58 >
-    au < testing ; exists ; 2012 ; Canadian Aeronautics and Space Journal Volume 59 ; 59 >
-    au < exists ; exists ; 2013 ; Canadian Aeronautics and Space Journal Volume 60 ; 60 >
+    au < notReady ; exists ; 2012 ; Canadian Aeronautics and Space Journal Volume 59 ; 59 >
     
   }
      
@@ -276,63 +265,7 @@
      
     param[journal_id] = cjas
     
-    au < exists ; exists ; 1957 ; Canadian Journal of Animal Science Volume 37 ; 37 >
-    au < exists ; exists ; 1958 ; Canadian Journal of Animal Science Volume 38 ; 38 >
-    au < exists ; exists ; 1959 ; Canadian Journal of Animal Science Volume 39 ; 39 >
-    au < exists ; exists ; 1960 ; Canadian Journal of Animal Science Volume 40 ; 40 >
-    au < exists ; exists ; 1961 ; Canadian Journal of Animal Science Volume 41 ; 41 >
-    au < exists ; exists ; 1962 ; Canadian Journal of Animal Science Volume 42 ; 42 >
-    au < exists ; exists ; 1963 ; Canadian Journal of Animal Science Volume 43 ; 43 >
-    au < exists ; exists ; 1964 ; Canadian Journal of Animal Science Volume 44 ; 44 >
-    au < exists ; exists ; 1965 ; Canadian Journal of Animal Science Volume 45 ; 45 >
-    au < exists ; exists ; 1966 ; Canadian Journal of Animal Science Volume 46 ; 46 >
-    au < exists ; exists ; 1967 ; Canadian Journal of Animal Science Volume 47 ; 47 >
-    au < exists ; exists ; 1968 ; Canadian Journal of Animal Science Volume 48 ; 48 >
-    au < exists ; exists ; 1969 ; Canadian Journal of Animal Science Volume 49 ; 49 >
-    au < exists ; exists ; 1970 ; Canadian Journal of Animal Science Volume 50 ; 50 >
-    au < exists ; exists ; 1971 ; Canadian Journal of Animal Science Volume 51 ; 51 >
-    au < exists ; exists ; 1972 ; Canadian Journal of Animal Science Volume 52 ; 52 >
-    au < exists ; exists ; 1973 ; Canadian Journal of Animal Science Volume 53 ; 53 >
-    au < exists ; exists ; 1974 ; Canadian Journal of Animal Science Volume 54 ; 54 >
-    au < exists ; exists ; 1975 ; Canadian Journal of Animal Science Volume 55 ; 55 >
-    au < exists ; exists ; 1976 ; Canadian Journal of Animal Science Volume 56 ; 56 >
-    au < exists ; exists ; 1977 ; Canadian Journal of Animal Science Volume 57 ; 57 >
-    au < exists ; exists ; 1978 ; Canadian Journal of Animal Science Volume 58 ; 58 >
-    au < exists ; exists ; 1979 ; Canadian Journal of Animal Science Volume 59 ; 59 >
-    au < exists ; exists ; 1980 ; Canadian Journal of Animal Science Volume 60 ; 60 >
-    au < exists ; exists ; 1981 ; Canadian Journal of Animal Science Volume 61 ; 61 >
-    au < exists ; exists ; 1982 ; Canadian Journal of Animal Science Volume 62 ; 62 >
-    au < exists ; exists ; 1983 ; Canadian Journal of Animal Science Volume 63 ; 63 >
-    au < exists ; exists ; 1984 ; Canadian Journal of Animal Science Volume 64 ; 64 >
-    au < exists ; exists ; 1985 ; Canadian Journal of Animal Science Volume 65 ; 65 >
-    au < exists ; exists ; 1986 ; Canadian Journal of Animal Science Volume 66 ; 66 >
-    au < exists ; exists ; 1987 ; Canadian Journal of Animal Science Volume 67 ; 67 >
-    au < exists ; exists ; 1988 ; Canadian Journal of Animal Science Volume 68 ; 68 >
-    au < exists ; exists ; 1989 ; Canadian Journal of Animal Science Volume 69 ; 69 >
-    au < exists ; exists ; 1990 ; Canadian Journal of Animal Science Volume 70 ; 70 >
-    au < exists ; exists ; 1991 ; Canadian Journal of Animal Science Volume 71 ; 71 >
-    au < exists ; exists ; 1992 ; Canadian Journal of Animal Science Volume 72 ; 72 >
-    au < exists ; exists ; 1993 ; Canadian Journal of Animal Science Volume 73 ; 73 >
-    au < exists ; exists ; 1994 ; Canadian Journal of Animal Science Volume 74 ; 74 >
-    au < exists ; exists ; 1995 ; Canadian Journal of Animal Science Volume 75 ; 75 >
-    au < exists ; exists ; 1996 ; Canadian Journal of Animal Science Volume 76 ; 76 >
-    au < exists ; exists ; 1997 ; Canadian Journal of Animal Science Volume 77 ; 77 >
-    au < exists ; exists ; 1998 ; Canadian Journal of Animal Science Volume 78 ; 78 >
-    au < exists ; exists ; 1999 ; Canadian Journal of Animal Science Volume 79 ; 79 >
-    au < exists ; exists ; 2000 ; Canadian Journal of Animal Science Volume 80 ; 80 >
-    au < exists ; exists ; 2001 ; Canadian Journal of Animal Science Volume 81 ; 81 >
-    au < exists ; exists ; 2002 ; Canadian Journal of Animal Science Volume 82 ; 82 >
-    au < exists ; exists ; 2003 ; Canadian Journal of Animal Science Volume 83 ; 83 >
-    au < exists ; exists ; 2004 ; Canadian Journal of Animal Science Volume 84 ; 84 >
-    au < exists ; exists ; 2005 ; Canadian Journal of Animal Science Volume 85 ; 85 >
-    au < exists ; exists ; 2006 ; Canadian Journal of Animal Science Volume 86 ; 86 >
-    au < exists ; exists ; 2007 ; Canadian Journal of Animal Science Volume 87 ; 87 >
-    au < exists ; exists ; 2008 ; Canadian Journal of Animal Science Volume 88 ; 88 >
-    au < exists ; exists ; 2009 ; Canadian Journal of Animal Science Volume 89 ; 89 >
-    au < exists ; exists ; 2010 ; Canadian Journal of Animal Science Volume 90 ; 90 >
-    au < exists ; exists ; 2011 ; Canadian Journal of Animal Science Volume 91 ; 91 >
-    au < testing ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 >
-    au < exists ; exists ; 2013 ; Canadian Journal of Animal Science Volume 93 ; 93 >
+    au < notReady ; exists ; 2012 ; Canadian Journal of Animal Science Volume 92 ; 92 >
 
     }
     
@@ -490,17 +423,6 @@
     au < testing ; exists ; 2012 ; Canadian Journal of Civil Engineering Volume 39 ; 39 >
     au < exists ; exists ; 2013 ; Canadian Journal of Civil Engineering Volume 40 ; 40 >
     
-    }
-
-    {
-
-    title < 
-      name = Canadian Journal of Community Mental Health ;
-      eissn = 1929-7084 
-    >
-
-    au < exists ; exists ; 2013 ; Canadian Journal of Community Mental Health Volume 32 ; 32 >
-
     }
 
     {
@@ -979,101 +901,6 @@
     {
   
     title < 
-      name = Canadian Journal of Plant Science ;
-      issn = 0008-4220 ;
-      eissn = 1918-1833
-      >
-     
-    param[journal_id] = cjps
-
-    au < exists ; exists ; 1957 ; Canadian Journal of Plant Science Volume 37 ; 37 >
-    au < exists ; exists ; 1958 ; Canadian Journal of Plant Science Volume 38 ; 38 >
-    au < exists ; exists ; 1959 ; Canadian Journal of Plant Science Volume 39 ; 39 >
-    au < exists ; exists ; 1960 ; Canadian Journal of Plant Science Volume 40 ; 40 >
-    au < exists ; exists ; 1961 ; Canadian Journal of Plant Science Volume 41 ; 41 >
-    au < exists ; exists ; 1962 ; Canadian Journal of Plant Science Volume 42 ; 42 >
-    au < exists ; exists ; 1963 ; Canadian Journal of Plant Science Volume 43 ; 43 >
-    au < exists ; exists ; 1964 ; Canadian Journal of Plant Science Volume 44 ; 44 >
-    au < exists ; exists ; 1965 ; Canadian Journal of Plant Science Volume 45 ; 45 >
-    au < exists ; exists ; 1966 ; Canadian Journal of Plant Science Volume 46 ; 46 >
-    au < exists ; exists ; 1967 ; Canadian Journal of Plant Science Volume 47 ; 47 >
-    au < exists ; exists ; 1968 ; Canadian Journal of Plant Science Volume 48 ; 48 >
-    au < exists ; exists ; 1969 ; Canadian Journal of Plant Science Volume 49 ; 49 >
-    au < exists ; exists ; 1970 ; Canadian Journal of Plant Science Volume 50 ; 50 >
-    au < exists ; exists ; 1971 ; Canadian Journal of Plant Science Volume 51 ; 51 >
-    au < exists ; exists ; 1972 ; Canadian Journal of Plant Science Volume 52 ; 52 >
-    au < exists ; exists ; 1973 ; Canadian Journal of Plant Science Volume 53 ; 53 >
-    au < exists ; exists ; 1974 ; Canadian Journal of Plant Science Volume 54 ; 54 >
-    au < exists ; exists ; 1975 ; Canadian Journal of Plant Science Volume 55 ; 55 >
-    au < exists ; exists ; 1976 ; Canadian Journal of Plant Science Volume 56 ; 56 >
-    au < exists ; exists ; 1977 ; Canadian Journal of Plant Science Volume 57 ; 57 >
-    au < exists ; exists ; 1978 ; Canadian Journal of Plant Science Volume 58 ; 58 >
-    au < exists ; exists ; 1979 ; Canadian Journal of Plant Science Volume 59 ; 59 >
-    au < exists ; exists ; 1980 ; Canadian Journal of Plant Science Volume 60 ; 60 >
-    au < exists ; exists ; 1981 ; Canadian Journal of Plant Science Volume 61 ; 61 >
-    au < exists ; exists ; 1982 ; Canadian Journal of Plant Science Volume 62 ; 62 >
-    au < exists ; exists ; 1983 ; Canadian Journal of Plant Science Volume 63 ; 63 >
-    au < exists ; exists ; 1984 ; Canadian Journal of Plant Science Volume 64 ; 64 >
-    au < exists ; exists ; 1985 ; Canadian Journal of Plant Science Volume 65 ; 65 >
-    au < exists ; exists ; 1986 ; Canadian Journal of Plant Science Volume 66 ; 66 >
-    au < exists ; exists ; 1987 ; Canadian Journal of Plant Science Volume 67 ; 67 >
-    au < exists ; exists ; 1988 ; Canadian Journal of Plant Science Volume 68 ; 68 >
-    au < exists ; exists ; 1989 ; Canadian Journal of Plant Science Volume 69 ; 69 >
-    au < exists ; exists ; 1990 ; Canadian Journal of Plant Science Volume 70 ; 70 >
-    au < exists ; exists ; 1991 ; Canadian Journal of Plant Science Volume 71 ; 71 >
-    au < exists ; exists ; 1992 ; Canadian Journal of Plant Science Volume 72 ; 72 >
-    au < exists ; exists ; 1993 ; Canadian Journal of Plant Science Volume 73 ; 73 >
-    au < exists ; exists ; 1994 ; Canadian Journal of Plant Science Volume 74 ; 74 >
-    au < exists ; exists ; 1995 ; Canadian Journal of Plant Science Volume 75 ; 75 >
-    au < exists ; exists ; 1996 ; Canadian Journal of Plant Science Volume 76 ; 76 >
-    au < exists ; exists ; 1997 ; Canadian Journal of Plant Science Volume 77 ; 77 >
-    au < exists ; exists ; 1998 ; Canadian Journal of Plant Science Volume 78 ; 78 >
-    au < exists ; exists ; 1999 ; Canadian Journal of Plant Science Volume 79 ; 79 >
-    au < exists ; exists ; 2000 ; Canadian Journal of Plant Science Volume 80 ; 80 >
-    au < exists ; exists ; 2001 ; Canadian Journal of Plant Science Volume 81 ; 81 >
-    au < exists ; exists ; 2002 ; Canadian Journal of Plant Science Volume 82 ; 82 >
-    au < exists ; exists ; 2003 ; Canadian Journal of Plant Science Volume 83 ; 83 >
-    au < exists ; exists ; 2004 ; Canadian Journal of Plant Science Volume 84 ; 84 >
-    au < exists ; exists ; 2005 ; Canadian Journal of Plant Science Volume 85 ; 85 >
-    au < exists ; exists ; 2006 ; Canadian Journal of Plant Science Volume 86 ; 86 >
-    au < exists ; exists ; 2007 ; Canadian Journal of Plant Science Volume 87 ; 87 >
-    au < exists ; exists ; 2008 ; Canadian Journal of Plant Science Volume 88 ; 88 >
-    au < exists ; exists ; 2009 ; Canadian Journal of Plant Science Volume 89 ; 89 >
-    au < exists ; exists ; 2000 ; Canadian Journal of Plant Science Volume 90 ; 90 >
-    au < exists ; exists ; 2011 ; Canadian Journal of Plant Science Volume 91 ; 91 >
-    au < exists ; exists ; 2012 ; Canadian Journal of Plant Science Volume 92 ; 92 >
-    au < exists ; exists ; 2013 ; Canadian Journal of Plant Science Volume 93 ; 93 >
-
-    }
-    
-    {
-  
-    title < 
-      name = Canadian Journal of Remote Sensing ;
-      eissn = 1712-7971
-      >
-
-    param[base_url] = http://pubs.casi.ca/
-    param[journal_id] = cjrs
-
-    au < exists ; exists ; 2002 ; Canadian Journal of Remote Sensing Volume 28 ; 28 >
-    au < exists ; exists ; 2003 ; Canadian Journal of Remote Sensing Volume 29 ; 29 >
-    au < exists ; exists ; 2004 ; Canadian Journal of Remote Sensing Volume 30 ; 30 >
-    au < exists ; exists ; 2005 ; Canadian Journal of Remote Sensing Volume 31 ; 31 >
-    au < exists ; exists ; 2006 ; Canadian Journal of Remote Sensing Volume 32 ; 32 >
-    au < exists ; exists ; 2007 ; Canadian Journal of Remote Sensing Volume 33 ; 33 >
-    au < exists ; exists ; 2008 ; Canadian Journal of Remote Sensing Volume 34 ; 34 >
-    au < exists ; exists ; 2009 ; Canadian Journal of Remote Sensing Volume 35 ; 35 >
-    au < exists ; exists ; 2010 ; Canadian Journal of Remote Sensing Volume 36 ; 36 >
-    au < exists ; exists ; 2011 ; Canadian Journal of Remote Sensing Volume 37 ; 37 >
-    au < exists ; exists ; 2012 ; Canadian Journal of Remote Sensing Volume 38 ; 38 >
-    au < exists ; exists ; 2013 ; Canadian Journal of Remote Sensing Volume 39 ; 39 >
-
-    }
-    
-    {
-  
-    title < 
       name = Canadian Journal of Research ;
       issn = 1923-4287 
       >
@@ -1102,77 +929,6 @@
     au < exists ; exists ; 1948 ; Canadian Journal of Research Volume 26 ; 26 >
     au < exists ; exists ; 1949 ; Canadian Journal of Research Volume 27 ; 27 >
     au < exists ; exists ; 1950 ; Canadian Journal of Research Volume 28 ; 28 >
-    
-    }
-    
-    {
-  
-    title < 
-      name = Canadian Journal of Soil Science ;
-      issn = 0008-4271 ;
-      eissn = 1918-1841
-      >
-
-    param[base_url] = http://pubs.aic.ca/
-    param[journal_id] = cjss
-
-    au < exists ; exists ; 1957 ; Canadian Journal of Soil Science Volume 37 ; 37 >
-    au < exists ; exists ; 1958 ; Canadian Journal of Soil Science Volume 38 ; 38 >
-    au < exists ; exists ; 1959 ; Canadian Journal of Soil Science Volume 39 ; 39 >
-    au < exists ; exists ; 1960 ; Canadian Journal of Soil Science Volume 40 ; 40 >
-    au < exists ; exists ; 1961 ; Canadian Journal of Soil Science Volume 41 ; 41 >
-    au < exists ; exists ; 1962 ; Canadian Journal of Soil Science Volume 42 ; 42 >
-    au < exists ; exists ; 1963 ; Canadian Journal of Soil Science Volume 43 ; 43 >
-    au < exists ; exists ; 1964 ; Canadian Journal of Soil Science Volume 44 ; 44 >
-    au < exists ; exists ; 1965 ; Canadian Journal of Soil Science Volume 45 ; 45 >
-    au < exists ; exists ; 1966 ; Canadian Journal of Soil Science Volume 46 ; 46 >
-    au < exists ; exists ; 1967 ; Canadian Journal of Soil Science Volume 47 ; 47 >
-    au < exists ; exists ; 1968 ; Canadian Journal of Soil Science Volume 48 ; 48 >
-    au < exists ; exists ; 1969 ; Canadian Journal of Soil Science Volume 49 ; 49 >
-    au < exists ; exists ; 1970 ; Canadian Journal of Soil Science Volume 50 ; 50 >
-    au < exists ; exists ; 1971 ; Canadian Journal of Soil Science Volume 51 ; 51 >
-    au < exists ; exists ; 1972 ; Canadian Journal of Soil Science Volume 52 ; 52 >
-    au < exists ; exists ; 1973 ; Canadian Journal of Soil Science Volume 53 ; 53 >
-    au < exists ; exists ; 1974 ; Canadian Journal of Soil Science Volume 54 ; 54 >
-    au < exists ; exists ; 1975 ; Canadian Journal of Soil Science Volume 55 ; 55 >
-    au < exists ; exists ; 1976 ; Canadian Journal of Soil Science Volume 56 ; 56 >
-    au < exists ; exists ; 1977 ; Canadian Journal of Soil Science Volume 57 ; 57 >
-    au < exists ; exists ; 1978 ; Canadian Journal of Soil Science Volume 58 ; 58 >
-    au < exists ; exists ; 1979 ; Canadian Journal of Soil Science Volume 59 ; 59 >
-    au < exists ; exists ; 1980 ; Canadian Journal of Soil Science Volume 60 ; 60 >
-    au < exists ; exists ; 1981 ; Canadian Journal of Soil Science Volume 61 ; 61 >
-    au < exists ; exists ; 1982 ; Canadian Journal of Soil Science Volume 62 ; 62 >
-    au < exists ; exists ; 1983 ; Canadian Journal of Soil Science Volume 63 ; 63 >
-    au < exists ; exists ; 1984 ; Canadian Journal of Soil Science Volume 64 ; 64 >
-    au < exists ; exists ; 1985 ; Canadian Journal of Soil Science Volume 65 ; 65 >
-    au < exists ; exists ; 1986 ; Canadian Journal of Soil Science Volume 66 ; 66 >
-    au < exists ; exists ; 1987 ; Canadian Journal of Soil Science Volume 67 ; 67 >
-    au < exists ; exists ; 1988 ; Canadian Journal of Soil Science Volume 68 ; 68 >
-    au < exists ; exists ; 1989 ; Canadian Journal of Soil Science Volume 69 ; 69 >
-    au < exists ; exists ; 1990 ; Canadian Journal of Soil Science Volume 70 ; 70 >
-    au < exists ; exists ; 1991 ; Canadian Journal of Soil Science Volume 71 ; 71 >
-    au < exists ; exists ; 1992 ; Canadian Journal of Soil Science Volume 72 ; 72 >
-    au < exists ; exists ; 1993 ; Canadian Journal of Soil Science Volume 73 ; 73 >
-    au < exists ; exists ; 1994 ; Canadian Journal of Soil Science Volume 74 ; 74 >
-    au < exists ; exists ; 1995 ; Canadian Journal of Soil Science Volume 75 ; 75 >
-    au < exists ; exists ; 1996 ; Canadian Journal of Soil Science Volume 76 ; 76 >
-    au < exists ; exists ; 1997 ; Canadian Journal of Soil Science Volume 77 ; 77 >
-    au < exists ; exists ; 1998 ; Canadian Journal of Soil Science Volume 78 ; 78 >
-    au < exists ; exists ; 1999 ; Canadian Journal of Soil Science Volume 79 ; 79 >
-    au < exists ; exists ; 2000 ; Canadian Journal of Soil Science Volume 80 ; 80 >
-    au < exists ; exists ; 2001 ; Canadian Journal of Soil Science Volume 81 ; 81 >
-    au < exists ; exists ; 2002 ; Canadian Journal of Soil Science Volume 82 ; 82 >
-    au < exists ; exists ; 2003 ; Canadian Journal of Soil Science Volume 83 ; 83 >
-    au < exists ; exists ; 2004 ; Canadian Journal of Soil Science Volume 84 ; 84 >
-    au < exists ; exists ; 2005 ; Canadian Journal of Soil Science Volume 85 ; 85 >
-    au < exists ; exists ; 2006 ; Canadian Journal of Soil Science Volume 86 ; 86 >
-    au < exists ; exists ; 2007 ; Canadian Journal of Soil Science Volume 87 ; 87 >
-    au < exists ; exists ; 2008 ; Canadian Journal of Soil Science Volume 88 ; 88 >
-    au < exists ; exists ; 2009 ; Canadian Journal of Soil Science Volume 89 ; 89 >
-    au < exists ; exists ; 2000 ; Canadian Journal of Soil Science Volume 90 ; 90 >
-    au < exists ; exists ; 2011 ; Canadian Journal of Soil Science Volume 91 ; 91 >
-    au < exists ; exists ; 2012 ; Canadian Journal of Soil Science Volume 92 ; 92 >
-    au < exists ; exists ; 2013 ; Canadian Journal of Soil Science Volume 93 ; 93 >
     
     }
     
@@ -1255,74 +1011,6 @@
     {
   
     title < 
-      name = Canadian Water Resources Journal ;
-      issn = 0701-1784 
-      >
-
-    param[base_url] = http://pubs.cwra.org/
-    param[journal_id] = cwrj
-    
-    au < exists ; exists ; 1976 ; Canadian Water Resources Journal Volume 1 ; 1 >
-    au < exists ; exists ; 1977 ; Canadian Water Resources Journal Volume 2 ; 2 >
-    au < exists ; exists ; 1978 ; Canadian Water Resources Journal Volume 3 ; 3 >
-    au < exists ; exists ; 1979 ; Canadian Water Resources Journal Volume 4 ; 4 >
-    au < exists ; exists ; 1980 ; Canadian Water Resources Journal Volume 5 ; 5 >
-    au < exists ; exists ; 1981 ; Canadian Water Resources Journal Volume 6 ; 6 >
-    au < exists ; exists ; 1982 ; Canadian Water Resources Journal Volume 7 ; 7 >
-    au < exists ; exists ; 1983 ; Canadian Water Resources Journal Volume 8 ; 8 >
-    au < exists ; exists ; 1984 ; Canadian Water Resources Journal Volume 9 ; 9 >
-    au < exists ; exists ; 1985 ; Canadian Water Resources Journal Volume 10 ; 10 >
-    au < exists ; exists ; 1986 ; Canadian Water Resources Journal Volume 11 ; 11 >
-    au < exists ; exists ; 1987 ; Canadian Water Resources Journal Volume 12 ; 12 >
-    au < exists ; exists ; 1988 ; Canadian Water Resources Journal Volume 13 ; 13 >
-    au < exists ; exists ; 1989 ; Canadian Water Resources Journal Volume 14 ; 14 >
-    au < exists ; exists ; 1990 ; Canadian Water Resources Journal Volume 15 ; 15 >
-    au < exists ; exists ; 1991 ; Canadian Water Resources Journal Volume 16 ; 16 >
-    au < exists ; exists ; 1992 ; Canadian Water Resources Journal Volume 17 ; 17 >
-    au < exists ; exists ; 1993 ; Canadian Water Resources Journal Volume 18 ; 18 >
-    au < exists ; exists ; 1994 ; Canadian Water Resources Journal Volume 19 ; 19>
-    au < exists ; exists ; 1995 ; Canadian Water Resources Journal Volume 20 ; 20 >
-    au < exists ; exists ; 1996 ; Canadian Water Resources Journal Volume 21 ; 21 >
-    au < exists ; exists ; 1997 ; Canadian Water Resources Journal Volume 22 ; 22 >
-    au < exists ; exists ; 1998 ; Canadian Water Resources Journal Volume 23 ; 23 >
-    au < exists ; exists ; 1999 ; Canadian Water Resources Journal Volume 24 ; 24 >
-    au < exists ; exists ; 2000 ; Canadian Water Resources Journal Volume 25 ; 25 >
-    au < exists ; exists ; 2001 ; Canadian Water Resources Journal Volume 26 ; 26 >
-    au < exists ; exists ; 2002 ; Canadian Water Resources Journal Volume 27 ; 27 >
-    au < exists ; exists ; 2003 ; Canadian Water Resources Journal Volume 28 ; 28 >
-    au < exists ; exists ; 2004 ; Canadian Water Resources Journal Volume 29 ; 29 >
-    au < exists ; exists ; 2005 ; Canadian Water Resources Journal Volume 30 ; 30 >
-    au < exists ; exists ; 2006 ; Canadian Water Resources Journal Volume 31 ; 31 >
-    au < exists ; exists ; 2007 ; Canadian Water Resources Journal Volume 32 ; 32 >
-    au < exists ; exists ; 2008 ; Canadian Water Resources Journal Volume 33 ; 33 >
-    au < exists ; exists ; 2009 ; Canadian Water Resources Journal Volume 34 ; 34 >
-    au < exists ; exists ; 2010 ; Canadian Water Resources Journal Volume 35 ; 35 >
-    au < exists ; exists ; 2011 ; Canadian Water Resources Journal Volume 36 ; 36 >
-    au < exists ; exists ; 2012 ; Canadian Water Resources Journal Volume 37 ; 37 >
-    au < exists ; exists ; 2013 ; Canadian Water Resources Journal Volume 38 ; 38 >
-    
-    }
-
-    {
-  
-    title < 
-      name = Environmental Health Review ;
-      issn = 0319-6771
-      >
-     
-     comment[0] = closed access journal
-
-    param[base_url] = http://pubs.ciphi.ca/
-    param[journal_id] = ehr
-
-    au < exists ; exists ; 2012 ; Canadian Water Resources Journal Volume 55 ; 55 >
-    au < exists ; exists ; 2013 ; Canadian Water Resources Journal Volume 56 ; 56 >
-
-    }
-    
-    {
-  
-    title < 
       name = Environmental Reviews ;
       issn = 1181-8700 ;
       eissn = 1208-6053
@@ -1354,127 +1042,6 @@
 
     }
 
-    {
-
-    title < 
-      name = The Forestry Chronicle ;
-      issn = 0015-7546 ;
-      eissn = 1499-9315 
-    >
-
-    param[base_url] = http://pubs.cif-ifc.org/
-    param[journal_id] = tfc
-
-    au < exists ; exists ; 1925 ; The Forestry Chronicle Volume 1 ; 1 >
-    au < exists ; exists ; 1926 ; The Forestry Chronicle Volume 2 ; 2 >
-    au < exists ; exists ; 1927 ; The Forestry Chronicle Volume 3 ; 3 >
-    au < exists ; exists ; 1928 ; The Forestry Chronicle Volume 4 ; 4 >
-    au < exists ; exists ; 1929 ; The Forestry Chronicle Volume 5 ; 5 >
-    au < exists ; exists ; 1930 ; The Forestry Chronicle Volume 6 ; 6 >
-    au < exists ; exists ; 1931 ; The Forestry Chronicle Volume 7 ; 7 >
-    au < exists ; exists ; 1932 ; The Forestry Chronicle Volume 8 ; 8 >
-    au < exists ; exists ; 1933 ; The Forestry Chronicle Volume 9 ; 9 >
-    au < exists ; exists ; 1934 ; The Forestry Chronicle Volume 10 ; 10 >
-    au < exists ; exists ; 1935 ; The Forestry Chronicle Volume 11 ; 11 >
-    au < exists ; exists ; 1936 ; The Forestry Chronicle Volume 12 ; 12 >
-    au < exists ; exists ; 1937 ; The Forestry Chronicle Volume 13 ; 13 >
-    au < exists ; exists ; 1938 ; The Forestry Chronicle Volume 14 ; 14 >
-    au < exists ; exists ; 1939 ; The Forestry Chronicle Volume 15 ; 15 >
-    au < exists ; exists ; 1940 ; The Forestry Chronicle Volume 16 ; 16 >
-    au < exists ; exists ; 1941 ; The Forestry Chronicle Volume 17 ; 17 >
-    au < exists ; exists ; 1942 ; The Forestry Chronicle Volume 18 ; 18 >
-    au < exists ; exists ; 1943 ; The Forestry Chronicle Volume 19 ; 19 >
-    au < exists ; exists ; 1944 ; The Forestry Chronicle Volume 20 ; 20 >
-    au < exists ; exists ; 1945 ; The Forestry Chronicle Volume 21 ; 21 >
-    au < exists ; exists ; 1946 ; The Forestry Chronicle Volume 22 ; 22 >
-    au < exists ; exists ; 1947 ; The Forestry Chronicle Volume 23 ; 23 >
-    au < exists ; exists ; 1948 ; The Forestry Chronicle Volume 24 ; 24 >
-    au < exists ; exists ; 1949 ; The Forestry Chronicle Volume 25 ; 25 >
-    au < exists ; exists ; 1950 ; The Forestry Chronicle Volume 26 ; 26 >
-    au < exists ; exists ; 1951 ; The Forestry Chronicle Volume 27 ; 27 >
-    au < exists ; exists ; 1952 ; The Forestry Chronicle Volume 28 ; 28 >
-    au < exists ; exists ; 1953 ; The Forestry Chronicle Volume 29 ; 29 >
-    au < exists ; exists ; 1954 ; The Forestry Chronicle Volume 30 ; 30 >
-    au < exists ; exists ; 1955 ; The Forestry Chronicle Volume 31 ; 31 >
-    au < exists ; exists ; 1956 ; The Forestry Chronicle Volume 32 ; 32 >
-    au < exists ; exists ; 1957 ; The Forestry Chronicle Volume 33 ; 33 >
-    au < exists ; exists ; 1958 ; The Forestry Chronicle Volume 34 ; 34 >
-    au < exists ; exists ; 1959 ; The Forestry Chronicle Volume 35 ; 35 >
-    au < exists ; exists ; 1960 ; The Forestry Chronicle Volume 36 ; 36 >
-    au < exists ; exists ; 1961 ; The Forestry Chronicle Volume 37 ; 37 >
-    au < exists ; exists ; 1962 ; The Forestry Chronicle Volume 38 ; 38 >
-    au < exists ; exists ; 1963 ; The Forestry Chronicle Volume 39 ; 39 >
-    au < exists ; exists ; 1964 ; The Forestry Chronicle Volume 40 ; 40 >
-    au < exists ; exists ; 1965 ; The Forestry Chronicle Volume 41 ; 41 >
-    au < exists ; exists ; 1966 ; The Forestry Chronicle Volume 42 ; 42 >
-    au < exists ; exists ; 1967 ; The Forestry Chronicle Volume 43 ; 43 >
-    au < exists ; exists ; 1968 ; The Forestry Chronicle Volume 44 ; 44 >
-    au < exists ; exists ; 1969 ; The Forestry Chronicle Volume 45 ; 45 >
-    au < exists ; exists ; 1970 ; The Forestry Chronicle Volume 46 ; 46 >
-    au < exists ; exists ; 1971 ; The Forestry Chronicle Volume 47 ; 47 >
-    au < exists ; exists ; 1972 ; The Forestry Chronicle Volume 48 ; 48 >
-    au < exists ; exists ; 1973 ; The Forestry Chronicle Volume 49 ; 49 >
-    au < exists ; exists ; 1974 ; The Forestry Chronicle Volume 50 ; 50 >
-    au < exists ; exists ; 1975 ; The Forestry Chronicle Volume 51 ; 51 >
-    au < exists ; exists ; 1976 ; The Forestry Chronicle Volume 52 ; 52 >
-    au < exists ; exists ; 1977 ; The Forestry Chronicle Volume 53 ; 53 >
-    au < exists ; exists ; 1978 ; The Forestry Chronicle Volume 54 ; 54 >
-    au < exists ; exists ; 1979 ; The Forestry Chronicle Volume 55 ; 55 >
-    au < exists ; exists ; 1980 ; The Forestry Chronicle Volume 56 ; 56 >
-    au < exists ; exists ; 1981 ; The Forestry Chronicle Volume 57 ; 57 >
-    au < exists ; exists ; 1982 ; The Forestry Chronicle Volume 58 ; 58 >
-    au < exists ; exists ; 1983 ; The Forestry Chronicle Volume 59 ; 59 >
-    au < exists ; exists ; 1984 ; The Forestry Chronicle Volume 60 ; 60 >
-    au < exists ; exists ; 1985 ; The Forestry Chronicle Volume 61 ; 61 >
-    au < exists ; exists ; 1986 ; The Forestry Chronicle Volume 62 ; 62 >
-    au < exists ; exists ; 1987 ; The Forestry Chronicle Volume 63 ; 63 >
-    au < exists ; exists ; 1988 ; The Forestry Chronicle Volume 64 ; 64 >
-    au < exists ; exists ; 1989 ; The Forestry Chronicle Volume 65 ; 65 >
-    au < exists ; exists ; 1990 ; The Forestry Chronicle Volume 66 ; 66 >
-    au < exists ; exists ; 1991 ; The Forestry Chronicle Volume 67 ; 67 >
-    au < exists ; exists ; 1992 ; The Forestry Chronicle Volume 68 ; 68 >
-    au < exists ; exists ; 1993 ; The Forestry Chronicle Volume 69 ; 69 >
-    au < exists ; exists ; 1994 ; The Forestry Chronicle Volume 70 ; 70 >
-    au < exists ; exists ; 1995 ; The Forestry Chronicle Volume 71 ; 71 >
-    au < exists ; exists ; 1996 ; The Forestry Chronicle Volume 72 ; 72 >
-    au < exists ; exists ; 1997 ; The Forestry Chronicle Volume 73 ; 73 >
-    au < exists ; exists ; 1998 ; The Forestry Chronicle Volume 74 ; 74 >
-    au < exists ; exists ; 1999 ; The Forestry Chronicle Volume 75 ; 75 >
-    au < exists ; exists ; 2000 ; The Forestry Chronicle Volume 76 ; 76 >
-    au < exists ; exists ; 2001 ; The Forestry Chronicle Volume 77 ; 77 >
-    au < exists ; exists ; 2002 ; The Forestry Chronicle Volume 78 ; 78 >
-    au < exists ; exists ; 2003 ; The Forestry Chronicle Volume 79 ; 79 >
-    au < exists ; exists ; 2004 ; The Forestry Chronicle Volume 80 ; 80 >
-    au < exists ; exists ; 2005 ; The Forestry Chronicle Volume 81 ; 81 >
-    au < exists ; exists ; 2006 ; The Forestry Chronicle Volume 82 ; 82 >
-    au < exists ; exists ; 2007 ; The Forestry Chronicle Volume 83 ; 83 >
-    au < exists ; exists ; 2008 ; The Forestry Chronicle Volume 84 ; 84 >
-    au < exists ; exists ; 2009 ; The Forestry Chronicle Volume 85 ; 85 >
-    au < exists ; exists ; 2010 ; The Forestry Chronicle Volume 86 ; 86 >
-    au < exists ; exists ; 2011 ; The Forestry Chronicle Volume 87 ; 87 >
-    au < exists ; exists ; 2012 ; The Forestry Chronicle Volume 88 ; 88 >
-    au < exists ; exists ; 2013 ; The Forestry Chronicle Volume 89 ; 89 >
-
-    }
-
-    {
-  
-    title < 
-      name = GEOMATICA ;
-      issn = 1195-1036 ;
-      eissn = 1925-4296
-      >
-
-    param[base_url] = http://pubs.cig-acsg.ca/
-    param[journal_id] = cig
-
-    au < exists ; exists ; 2010 ; GEOMATICA Volume 64 ; 64 >
-    au < exists ; exists ; 2011 ; GEOMATICA Volume 65 ; 65 >
-    au < exists ; exists ; 2012 ; GEOMATICA Volume 66 ; 66 >
-    au < exists ; exists ; 2013 ; GEOMATICA Volume 67 ; 67 >
-
-    }
-    
     {
   
     title < 
@@ -1564,29 +1131,6 @@
     au < exists ; exists ; 2000 ; Journal of Environmental Engineering and Science Volume 9 ; 9 >
     au < exists ; exists ; 2001 ; Journal of Environmental Engineering and Science Volume 10 ; 10 >
     au < exists ; exists ; 2002 ; Journal of Environmental Engineering and Science Volume 11 ; 11 >
-
-    }
-    
-    {
-  
-    title < 
-      name = Journal of the Canadian Health Libraries Association ;
-      eissn = 1708-6892
-      >
-
-    param[base_url] = http://pubs.chla-absc.ca/
-    param[journal_id] = jchla
-
-    au < exists ; exists ; 2004 ; Journal of the Canadian Health Libraries Association Volume 25 ; 25 >
-    au < exists ; exists ; 2005 ; Journal of the Canadian Health Libraries Association Volume 26 ; 26 >
-    au < exists ; exists ; 2006 ; Journal of the Canadian Health Libraries Association Volume 27 ; 27 >
-    au < exists ; exists ; 2007 ; Journal of the Canadian Health Libraries Association Volume 28 ; 28 >
-    au < exists ; exists ; 2008 ; Journal of the Canadian Health Libraries Association Volume 29 ; 29 >
-    au < exists ; exists ; 2009 ; Journal of the Canadian Health Libraries Association Volume 30 ; 30 >
-    au < exists ; exists ; 2000 ; Journal of the Canadian Health Libraries Association Volume 31 ; 31 >
-    au < exists ; exists ; 2001 ; Journal of the Canadian Health Libraries Association Volume 32 ; 32 >
-    au < exists ; exists ; 2002 ; Journal of the Canadian Health Libraries Association Volume 33 ; 33 >
-
 
     }
     
