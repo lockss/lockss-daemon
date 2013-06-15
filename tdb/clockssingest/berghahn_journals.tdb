@@ -666,7 +666,7 @@
   {
   
     title <
-      name = Social Analsysis ;
+      name = Social Analysis ;
       issn = 0155-977X ;
       eissn = 1558-5727 ;
       issnl = 0155-977X
@@ -674,18 +674,18 @@
     param[journal_id] = socan
     param[journal_issn] = 0155-977X
         
-    au < manifest ; exists ; 2002 ; Social Analsysis Volume 46 ; 46 >
-    au < manifest ; exists ; 2003 ; Social Analsysis Volume 47 ; 47 >
-    au < manifest ; exists ; 2004 ; Social Analsysis Volume 48 ; 48 >
-    au < manifest ; exists ; 2005 ; Social Analsysis Volume 49 ; 49 >
-    au < manifest ; exists ; 2006 ; Social Analsysis Volume 50 ; 50 >
-    au < manifest ; exists ; 2007 ; Social Analsysis Volume 51 ; 51 >
-    au < manifest ; exists ; 2008 ; Social Analsysis Volume 52 ; 52 >
-    au < manifest ; exists ; 2009 ; Social Analsysis Volume 53 ; 53 >
-    au < manifest ; exists ; 2010 ; Social Analsysis Volume 54 ; 54 >
-    au < crawling ; exists ; 2011 ; Social Analsysis Volume 55 ; 55 >
-    au < crawling ; exists ; 2012 ; Social Analsysis Volume 56 ; 56 >
-    au < expected ; exists ; 2013 ; Social Analsysis Volume 57 ; 57 >
+    au < manifest ; exists ; 2002 ; Social Analysis Volume 46 ; 46 >
+    au < manifest ; exists ; 2003 ; Social Analysis Volume 47 ; 47 >
+    au < manifest ; exists ; 2004 ; Social Analysis Volume 48 ; 48 >
+    au < manifest ; exists ; 2005 ; Social Analysis Volume 49 ; 49 >
+    au < manifest ; exists ; 2006 ; Social Analysis Volume 50 ; 50 >
+    au < manifest ; exists ; 2007 ; Social Analysis Volume 51 ; 51 >
+    au < manifest ; exists ; 2008 ; Social Analysis Volume 52 ; 52 >
+    au < manifest ; exists ; 2009 ; Social Analysis Volume 53 ; 53 >
+    au < manifest ; exists ; 2010 ; Social Analysis Volume 54 ; 54 >
+    au < crawling ; exists ; 2011 ; Social Analysis Volume 55 ; 55 >
+    au < crawling ; exists ; 2012 ; Social Analysis Volume 56 ; 56 >
+    au < expected ; exists ; 2013 ; Social Analysis Volume 57 ; 57 >
     
   }
 
