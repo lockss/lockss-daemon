@@ -25,21 +25,21 @@
     param[journal_id] = ihe
     param[journal_issn] = 0950-4222
 
-    au < exists ; 1999 ; Industry and Higher Education Volume 13 ; 13 >
-    au < exists ; 2000 ; Industry and Higher Education Volume 14 ; 14 >
-    au < exists ; 2001 ; Industry and Higher Education Volume 15 ; 15 >
-    au < exists ; 2002 ; Industry and Higher Education Volume 16 ; 16 >
-    au < exists ; 2003 ; Industry and Higher Education Volume 17 ; 17 >
-    au < exists ; 2004 ; Industry and Higher Education Volume 18 ; 18 >
-    au < exists ; 2005 ; Industry and Higher Education Volume 19 ; 19 >
-    au < exists ; 2006 ; Industry and Higher Education Volume 20 ; 20 >
-    au < exists ; 2007 ; Industry and Higher Education Volume 21 ; 21 >
-    au < exists ; 2008 ; Industry and Higher Education Volume 22 ; 22 >
-    au < exists ; 2009 ; Industry and Higher Education Volume 23 ; 23 >
-    au < exists ; 2010 ; Industry and Higher Education Volume 24 ; 24 >
-    au < exists ; 2011 ; Industry and Higher Education Volume 25 ; 25 >
-    au < exists ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
-    au < expected ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
+    au < manifest ; 1999 ; Industry and Higher Education Volume 13 ; 13 >
+    au < manifest ; 2000 ; Industry and Higher Education Volume 14 ; 14 >
+    au < manifest ; 2001 ; Industry and Higher Education Volume 15 ; 15 >
+    au < manifest ; 2002 ; Industry and Higher Education Volume 16 ; 16 >
+    au < manifest ; 2003 ; Industry and Higher Education Volume 17 ; 17 >
+    au < manifest ; 2004 ; Industry and Higher Education Volume 18 ; 18 >
+    au < manifest ; 2005 ; Industry and Higher Education Volume 19 ; 19 >
+    au < manifest ; 2006 ; Industry and Higher Education Volume 20 ; 20 >
+    au < manifest ; 2007 ; Industry and Higher Education Volume 21 ; 21 >
+    au < manifest ; 2008 ; Industry and Higher Education Volume 22 ; 22 >
+    au < manifest ; 2009 ; Industry and Higher Education Volume 23 ; 23 >
+    au < manifest ; 2010 ; Industry and Higher Education Volume 24 ; 24 >
+    au < manifest ; 2011 ; Industry and Higher Education Volume 25 ; 25 >
+    au < manifest ; 2012 ; Industry and Higher Education Volume 26 ; 26 >
+    au < manifest ; 2013 ; Industry and Higher Education Volume 27 ; 27 >
 
   }
 
@@ -55,20 +55,20 @@
     param[journal_id] = ije
     param[journal_issn] = 1465-7503
 
-    au < exists ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
-    au < exists ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
-    au < exists ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
-    au < exists ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
-    au < exists ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
-    au < exists ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
-    au < exists ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
-    au < exists ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
-    au < exists ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
-    au < exists ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
-    au < exists ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
-    au < exists ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
-    au < exists ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
-    au < expected ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
+    au < manifest ; 2000 ; International Journal of Entrepreneurship and Innovation Volume 1 ; 1 >
+    au < manifest ; 2001 ; International Journal of Entrepreneurship and Innovation Volume 2 ; 2 >
+    au < manifest ; 2002 ; International Journal of Entrepreneurship and Innovation Volume 3 ; 3 >
+    au < manifest ; 2003 ; International Journal of Entrepreneurship and Innovation Volume 4 ; 4 >
+    au < manifest ; 2004 ; International Journal of Entrepreneurship and Innovation Volume 5 ; 5 >
+    au < manifest ; 2005 ; International Journal of Entrepreneurship and Innovation Volume 6 ; 6 >
+    au < manifest ; 2006 ; International Journal of Entrepreneurship and Innovation Volume 7 ; 7 >
+    au < manifest ; 2007 ; International Journal of Entrepreneurship and Innovation Volume 8 ; 8 >
+    au < manifest ; 2008 ; International Journal of Entrepreneurship and Innovation Volume 9 ; 9 >
+    au < manifest ; 2009 ; International Journal of Entrepreneurship and Innovation Volume 10 ; 10 >
+    au < manifest ; 2010 ; International Journal of Entrepreneurship and Innovation Volume 11 ; 11 >
+    au < manifest ; 2011 ; International Journal of Entrepreneurship and Innovation Volume 12 ; 12 >
+    au < manifest ; 2012 ; International Journal of Entrepreneurship and Innovation Volume 13 ; 13 >
+    au < manifest ; 2013 ; International Journal of Entrepreneurship and Innovation Volume 14 ; 14 >
 
   }
 
@@ -113,20 +113,20 @@
     param[journal_id] = sear
     param[journal_issn] = 0967-828X
 
-    au < exists ; 2000 ; South East Asia Research Volume 8 ; 8 >
-    au < exists ; 2001 ; South East Asia Research Volume 9 ; 9 >
-    au < exists ; 2002 ; South East Asia Research Volume 10 ; 10 >
-    au < exists ; 2003 ; South East Asia Research Volume 11 ; 11 >
-    au < exists ; 2004 ; South East Asia Research Volume 12 ; 12 >
-    au < exists ; 2005 ; South East Asia Research Volume 13 ; 13 >
-    au < exists ; 2006 ; South East Asia Research Volume 14 ; 14 >
-    au < exists ; 2007 ; South East Asia Research Volume 15 ; 15 >
-    au < exists ; 2008 ; South East Asia Research Volume 16 ; 16 >
-    au < exists ; 2009 ; South East Asia Research Volume 17 ; 17 >
-    au < exists ; 2010 ; South East Asia Research Volume 18 ; 18 >
-    au < exists ; 2011 ; South East Asia Research Volume 19 ; 19 >
-    au < exists ; 2012 ; South East Asia Research Volume 20 ; 20 >
-    au < expected ; 2013 ; South East Asia Research Volume 21 ; 21 >
+    au < manifest ; 2000 ; South East Asia Research Volume 8 ; 8 >
+    au < manifest ; 2001 ; South East Asia Research Volume 9 ; 9 >
+    au < manifest ; 2002 ; South East Asia Research Volume 10 ; 10 >
+    au < manifest ; 2003 ; South East Asia Research Volume 11 ; 11 >
+    au < manifest ; 2004 ; South East Asia Research Volume 12 ; 12 >
+    au < manifest ; 2005 ; South East Asia Research Volume 13 ; 13 >
+    au < manifest ; 2006 ; South East Asia Research Volume 14 ; 14 >
+    au < manifest ; 2007 ; South East Asia Research Volume 15 ; 15 >
+    au < manifest ; 2008 ; South East Asia Research Volume 16 ; 16 >
+    au < manifest ; 2009 ; South East Asia Research Volume 17 ; 17 >
+    au < manifest ; 2010 ; South East Asia Research Volume 18 ; 18 >
+    au < manifest ; 2011 ; South East Asia Research Volume 19 ; 19 >
+    au < manifest ; 2012 ; South East Asia Research Volume 20 ; 20 >
+    au < manifest ; 2013 ; South East Asia Research Volume 21 ; 21 >
 
   }
 
