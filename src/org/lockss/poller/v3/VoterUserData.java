@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.30 2013-05-29 17:18:12 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.31 2013-06-17 18:18:52 barry409 Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class VoterUserData
 
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
-                       int modulus,
+		       int modulus, byte[] sampleNonce,
                        byte[] pollerNonce, byte[] voterNonce,
                        byte[] introEffortProof, File messageDir) throws IOException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
@@ -195,6 +195,10 @@ public class VoterUserData
     return hashAlgorithm;
   }
 
+  // NOTE: This is purely for the use of unit tests. In production,
+  // the hash algorithm should be available at V3Voter creation time,
+  // and changing it from what the poller expects is unlikely to be a
+  // good idea.
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
   }
@@ -203,16 +207,12 @@ public class VoterUserData
     return modulus;
   }
 
-  public void setModulus(int mod) {
-    modulus = mod;
+  public void setModulus(int modulus) {
+    this.modulus = modulus;
   }
 
   public byte[] getSampleNonce() {
     return sampleNonce;
-  }
-
-  public void setSampleNonce(byte[] sampleNonce) {
-    this.sampleNonce = sampleNonce;
   }
 
   public byte[] getIntroEffortProof() {

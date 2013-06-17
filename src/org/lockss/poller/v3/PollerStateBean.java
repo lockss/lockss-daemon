@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.36 2013-05-15 16:25:51 barry409 Exp $
+ * $Id: PollerStateBean.java,v 1.37 2013-06-17 18:18:52 barry409 Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class PollerStateBean implements LockssSerializable {
   private String url;
   private PeerIdentity pollerId;
   private String hashAlgorithm;
+  private int modulus;
   private long createTime;
   private int quorum;
   private int voteMargin;
@@ -116,7 +117,8 @@ public class PollerStateBean implements LockssSerializable {
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
                          long duration, long pollDeadline,
 			 int outerCircleTarget, int quorum, int voteMargin,
-			 String hashAlg, int maxRepairs) {
+			 String hashAlg, int modulus,
+			 int maxRepairs) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.duration = duration;
@@ -129,6 +131,7 @@ public class PollerStateBean implements LockssSerializable {
     this.cus = spec.getCachedUrlSet();
     this.spec = spec;
     this.hashAlgorithm = hashAlg;
+    this.modulus = modulus;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
     this.voteMargin = voteMargin;
@@ -214,12 +217,24 @@ public class PollerStateBean implements LockssSerializable {
     return spec;
   }
 
+  // NOTE: This is purely for the use of unit tests. In production,
+  // the hash algorithm should be available at V3Voter creation time,
+  // and changing it from what the poller expects is unlikely to be a
+  // good idea.
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
   }
 
   public String getHashAlgorithm() {
     return hashAlgorithm;
+  }
+
+  public int getModulus() {
+    return modulus;
+  }
+
+  public void setModulus(int modulus) {
+    this.modulus = modulus;
   }
 
   public void setPollDeadline(long l) {

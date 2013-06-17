@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.41 2012-08-28 21:14:20 barry409 Exp $
+ * $Id: V3PollFactory.java,v 1.42 2013-06-17 18:18:52 barry409 Exp $
  */
 
 /*
@@ -163,6 +163,7 @@ public class V3PollFactory extends BasePollFactory {
     // poll request means make a voter.
     if (msg.getOpcode() == V3LcapMessage.MSG_POLL) {
       try {
+	// Ignore the hashAlg parameter; use what's in the message.
 	return makeV3Voter(daemon, msg, pollspec, orig, duration);
       } catch (V3Serializer.PollSerializerException ex) {
 	log.error("Serialization exception creating new V3Voter: ", ex);

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.151 2013-06-12 21:43:51 barry409 Exp $
+ * $Id: V3Poller.java,v 1.152 2013-06-17 18:18:52 barry409 Exp $
  */
 
 /*
@@ -503,13 +503,6 @@ public class V3Poller extends BasePoll {
   public V3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
                   String key, long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
-    this.theDaemon = daemon;
-    this.pollManager = daemon.getPollManager();
-    this.idManager = daemon.getIdentityManager();
-
-    setConfig();
-
-    if (hashAlg == null) hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
     // If the hash algorithm is not available, fail the poll immediately.
     try {
       MessageDigest.getInstance(hashAlg);
@@ -517,6 +510,13 @@ public class V3Poller extends BasePoll {
       throw new IllegalArgumentException("Algorithm " + hashAlg +
                                          " is not supported");
     }
+
+    this.theDaemon = daemon;
+    this.pollManager = daemon.getPollManager();
+    this.idManager = daemon.getIdentityManager();
+
+    setConfig();
+
     this.serializer = new V3PollerSerializer(theDaemon);
     long pollEnd = TimeBase.nowMs() + duration;
 
@@ -526,11 +526,18 @@ public class V3Poller extends BasePoll {
     int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     int voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
 
+    // todo(bhayes): The PoP signal can not come from the
+    // configuration. It probably comes from the PollSpec.
+    int modulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
+
     pollerState = new PollerStateBean(spec, orig, key,
 				      duration, pollEnd,
                                       outerCircleTarget,
                                       quorum, voteMargin,
-				      hashAlg, maxRepairs);
+				      hashAlg, modulus, 
+				      maxRepairs);
+    
+    this.inclusionPolicy = createInclusionPolicy();
 
     long estimatedHashTime = getCachedUrlSet().estimatedHashDuration();
 
@@ -581,6 +588,7 @@ public class V3Poller extends BasePoll {
     }
     pollerState.setCachedUrlSet(cus);
     pollerState.setPollSpec(new PollSpec(cus, Poll.V3_POLL));
+    this.inclusionPolicy = createInclusionPolicy();
 
     // Restore the peers for this poll.
     try {
@@ -612,10 +620,10 @@ public class V3Poller extends BasePoll {
                         DEFAULT_TIME_BETWEEN_INVITATIONS);
     targetSizeQuorumMultiplier =
       c.getDouble(PARAM_TARGET_SIZE_QUORUM_MULTIPLIER,
-		 DEFAULT_TARGET_SIZE_QUORUM_MULTIPLIER);
+		  DEFAULT_TARGET_SIZE_QUORUM_MULTIPLIER);
     invitationSizeTargetMultiplier =
       c.getDouble(PARAM_INVITATION_SIZE_TARGET_MULTIPLIER,
-		 DEFAULT_INVITATION_SIZE_TARGET_MULTIPLIER);
+		  DEFAULT_INVITATION_SIZE_TARGET_MULTIPLIER);
     extraPollTime = c.getTimeInterval(PARAM_V3_EXTRA_POLL_TIME,
 				      DEFAULT_V3_EXTRA_POLL_TIME);
     enableDiscovery = c.getBoolean(PARAM_ENABLE_DISCOVERY,
@@ -641,22 +649,31 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
 				   DEFAULT_V3_ENABLE_HASH_STATS);
-    int sampleModulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
-    if (sampleModulus > 0) {
-      String alg =
-	CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
-			       LcapMessage.DEFAULT_HASH_ALGORITHM);
-      MessageDigest sampleHasher = null;
-      try {
-	sampleHasher = MessageDigest.getInstance(alg);
-      } catch (NoSuchAlgorithmException ex) {
-	log.error("No such hash algorithm: " + alg);
-	throw new IllegalArgumentException("No such hash algorithm: " + alg);
-      }
-      byte[] sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
-      this.inclusionPolicy = new SampledBlockHasher.FractionalInclusionPolicy(
-	sampleModulus, sampleNonce, sampleHasher);
+  }
+
+  /**
+   * Use the pollerState to create an inclusion policy for proof of
+   * possession polls. return null if this is not a proof of
+   * possession poll.
+   */
+  private SampledBlockHasher.FractionalInclusionPolicy createInclusionPolicy() {
+    if (pollerState.getModulus() <= 0) {
+      return null;
     }
+    // Use the algorithm the rest of the poll is using. It's already
+    // been tested to see if the algorithm exists.
+    int sampleModulus = pollerState.getModulus();
+    String hashAlgorithm = pollerState.getHashAlgorithm();
+    MessageDigest sampleHasher = null;
+    try {
+      sampleHasher = MessageDigest.getInstance(hashAlgorithm);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new ShouldNotHappenException(
+	"Hash algorithm "+hashAlgorithm+" failed.");
+    }
+    byte[] sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
+    return new SampledBlockHasher.FractionalInclusionPolicy(
+      sampleModulus, sampleNonce, sampleHasher);
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {

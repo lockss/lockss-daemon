@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.89 2013-06-11 17:00:54 barry409 Exp $
+ * $Id: V3Voter.java,v 1.90 2013-06-17 18:18:52 barry409 Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.app.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetHasher;
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
@@ -231,6 +232,8 @@ public class V3Voter extends BasePoll {
 
   private PsmInterp stateMachine;
   private VoterUserData voterUserData;
+  private SampledBlockHasher.FractionalInclusionPolicy inclusionPolicy = null;
+
   // CR: use global random
   private LockssRandom theRandom = new LockssRandom();
   private LockssDaemon theDaemon;
@@ -268,6 +271,19 @@ public class V3Voter extends BasePoll {
     log.debug3("Creating V3 Voter for poll: " + msg.getKey() +
                "; duration=" + StringUtil.timeIntervalToString(duration));
 
+    String hashAlgorithm = msg.getHashAlgorithm();
+    if (hashAlgorithm == null) {
+      throw new IllegalArgumentException("hash algorithm in message was null.");
+    }
+
+    // If the hash algorithm is not available, fail the vote immediately.
+    try {
+      MessageDigest.getInstance(hashAlgorithm);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new IllegalArgumentException("Algorithm " + hashAlgorithm +
+                                         " is not supported");
+    }
+
     pollSerializer = new V3VoterSerializer(theDaemon);
     
     stateDir = PollUtil.ensurePollStateRoot();
@@ -276,31 +292,42 @@ public class V3Voter extends BasePoll {
       CurrentConfig.getIntParam(V3Poller.PARAM_MAX_BLOCK_ERROR_COUNT,
                                 V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT);
 
-    int modulus = 0;
-    if (CurrentConfig.getBooleanParam(PARAM_ENABLE_POP_VOTING,
-				      DEFAULT_ENABLE_POP_VOTING)) {
-	  modulus = msg.getModulus();
-	  log.debug("Using modulus " + modulus + " for sampled poll");
-    } else {
-      log.debug("Ignoring modulus " + msg.getModulus());
+    if (msg.getModulus() != 0) {
+      if (CurrentConfig.getBooleanParam(PARAM_ENABLE_POP_VOTING,
+					DEFAULT_ENABLE_POP_VOTING)) {
+	MessageDigest sampleHasher = null;
+	try {
+	  sampleHasher = MessageDigest.getInstance(hashAlgorithm);
+	} catch (NoSuchAlgorithmException ex) {
+	  throw new ShouldNotHappenException(
+	    "Hash algorithm "+hashAlgorithm+" failed.");
+	}
+	int sampleModulus = msg.getModulus();
+	byte[] sampleNonce = msg.getSampleNonce();
+	this.inclusionPolicy = 
+	  new SampledBlockHasher.FractionalInclusionPolicy(
+            sampleModulus, sampleNonce, sampleHasher);
+	log.debug("Sampled voter: "+this.inclusionPolicy.typeString());
+      } else {
+	log.debug("Ignoring sampled vote request: " + msg.getModulus());
+      }
     }
 
     try {
-      this.voterUserData = new VoterUserData(new PollSpec(msg), this,
-                                             msg.getOriginatorId(), 
-                                             msg.getKey(),
-                                             duration,
-                                             msg.getHashAlgorithm(),
-					     modulus,
-                                             msg.getPollerNonce(),
-                                             PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
-                                             msg.getEffortProof(),
-                                             stateDir);
+      this.voterUserData = 
+	new VoterUserData(new PollSpec(msg), this,
+			  msg.getOriginatorId(), 
+			  msg.getKey(),
+			  duration,
+			  hashAlgorithm,
+			  msg.getModulus(),
+			  msg.getSampleNonce(),
+			  msg.getPollerNonce(),
+			  PollUtil.makeHashNonce(V3Poller.HASH_NONCE_LENGTH),
+			  msg.getEffortProof(),
+			  stateDir);
       voterUserData.setPollMessage(msg);
       voterUserData.setVoteDeadline(TimeBase.nowMs() + msg.getVoteDuration());
-      if (modulus != 0) {
-	voterUserData.setSampleNonce(msg.getSampleNonce());
-      }
     } catch (IOException ex) {
       log.critical("IOException while trying to create VoterUserData: ", ex);
       stopPoll();
@@ -363,6 +390,16 @@ public class V3Voter extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.scomm = daemon.getStreamCommManager();
     this.continuedPoll = true;
+
+    String hashAlgorithm = voterUserData.getHashAlgorithm();
+    // If the hash algorithm is not available, fail the vote immediately.
+    try {
+      MessageDigest.getInstance(hashAlgorithm);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new IllegalArgumentException("Algorithm " + hashAlgorithm +
+                                         " is not supported");
+    }
+
     // Restore transient state.
     PluginManager plugMgr = theDaemon.getPluginManager();
     CachedUrlSet cus = plugMgr.findCachedUrlSet(voterUserData.getAuId());
@@ -893,11 +930,7 @@ public class V3Voter extends BasePoll {
   }
 
   private String getHashAlgorithm() {
-    String hashAlg = voterUserData.getHashAlgorithm();
-    if (hashAlg == null) {
-      hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
-    }
-    return hashAlg;
+    return voterUserData.getHashAlgorithm();
   }
 
   /**
@@ -905,24 +938,21 @@ public class V3Voter extends BasePoll {
    */
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
-    int mod = voterUserData.getModulus();
-    byte[] sampleNonce = voterUserData.getSampleNonce();
-    if (mod != 0) {
-      log.info("Vote in sampled poll. modulus: " + mod + " nonce: " + sampleNonce);
+    if (isSampledPoll()) {
+      log.debug("Vote in sampled poll: "+inclusionPolicy.typeString());
     }
     CachedUrlSet cus = voterUserData.getCachedUrlSet();
-    BlockHasher hasher = (mod == 0 ?
-			  new BlockHasher(cus,
-					  initHasherDigests(),
-					  initHasherByteArrays(),
-					  new BlockEventHandler()) :
-			  new SampledBlockHasher(cus,
-						 -1, // XXX maxversions?
-						 initHasherDigests(),
-						 initHasherByteArrays(),
-						 new BlockEventHandler(),
-						 mod,
-						 sampleNonce));
+    BlockHasher hasher = isSampledPoll() ?
+      new SampledBlockHasher(cus,
+			     -1, // XXX maxversions?
+			     initHasherDigests(),
+			     initHasherByteArrays(),
+			     new BlockEventHandler(),
+			     inclusionPolicy) :
+      new BlockHasher(cus,
+		      initHasherDigests(),
+		      initHasherByteArrays(),
+		      new BlockEventHandler());
     if (subChecker != null) {
       hasher.setSubstanceChecker(subChecker);
     }
@@ -1207,6 +1237,10 @@ public class V3Voter extends BasePoll {
 
   public boolean isPollCompleted() {
     return voterUserData.isPollCompleted();
+  }
+
+  public boolean isSampledPoll() {
+    return inclusionPolicy != null;
   }
 
   public VoterUserData getVoterUserData() {

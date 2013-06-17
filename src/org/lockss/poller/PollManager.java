@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.266 2013-03-20 03:24:05 tlipkis Exp $
+ * $Id: PollManager.java,v 1.267 2013-06-17 18:18:51 barry409 Exp $
  */
 
 /*
@@ -1449,6 +1449,9 @@ public class PollManager
     // create a V3Poller
     PollFactory pollFact = getPollFactory(spec);
     String hashAlg = LcapMessage.getDefaultHashAlgorithm();
+    if (hashAlg == null) {
+      throw new ShouldNotHappenException("The default hash algorithm is null.");
+    }
     BasePoll poll = pollFact.createPoll(spec, getDaemon(),
 					orig, duration, hashAlg, null);
     processNewPoll(poll, null);
