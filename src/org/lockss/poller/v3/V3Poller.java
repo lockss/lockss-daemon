@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.152 2013-06-17 18:18:52 barry409 Exp $
+ * $Id: V3Poller.java,v 1.153 2013-06-17 22:36:45 barry409 Exp $
  */
 
 /*
@@ -2152,7 +2152,7 @@ public class V3Poller extends BasePoll {
     float agreeingUrls = (float)getAgreedUrls().size();
     float talliedUrls = (float)getTalliedUrls().size();
     float agreement;
-    if (agreeingUrls > 0)
+    if (talliedUrls > 0)
       agreement = agreeingUrls / talliedUrls;
     else
       agreement = 0.0f;
