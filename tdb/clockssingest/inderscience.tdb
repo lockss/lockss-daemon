@@ -6641,8 +6641,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 7 ; 7 >
-      au < crawling ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 8 ; 8 >
+      au < testing ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 7 ; 7 >
+      au < testing ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sport Management and Marketing Volume 11 ; 11 >
@@ -6663,7 +6663,7 @@
 
       param[journal_issn] = 1756-6452
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Strategic Business Alliances Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Strategic Business Alliances Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Business Alliances Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Strategic Business Alliances Volume 3 ; 3 >
 
@@ -6681,7 +6681,7 @@
       param[journal_issn] = 1740-2867
       
       au < manifest ; exists ; 2006-2009 ; International Journal of Strategic Change Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Strategic Change Management Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Strategic Change Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Change Management Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Change Management Volume 4 ; 4 >
       au < expected ; exists ; 2012 ; International Journal of Strategic Change Management Volume 5 ; 5 >
@@ -6716,7 +6716,7 @@
 
       param[journal_issn] = 1758-7336
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Structural Engineering Volume 1 ; 1 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Structural Engineering Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Structural Engineering Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Structural Engineering Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Structural Engineering Volume 4 ; 4 >
@@ -6752,7 +6752,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Surface Science and Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Surface Science and Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Surface Science and Engineering Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Surface Science and Engineering Volume 4 ; 4 >
+      au < testing ; exists ; 2010 ; International Journal of Surface Science and Engineering Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Surface Science and Engineering Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Surface Science and Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Surface Science and Engineering Volume 7 ; 7 >
@@ -6771,7 +6771,7 @@
       param[journal_issn] = 1743-8292
       
       au < released ; crawling ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
-      au < crawling ; exists ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < testing ; exists ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; International Journal of Sustainable Design Volume 3 ; 3 >
 
     }
@@ -6799,7 +6799,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Sustainable Development Volume 10 ; 10 >
       au < manifest ; exists ; 2008 ; International Journal of Sustainable Development Volume 11 ; 11 >
       au < manifest ; exists ; 2009 ; International Journal of Sustainable Development Volume 12 ; 12 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Development Volume 13 ; 13 >
+      au < testing ; exists ; 2010 ; International Journal of Sustainable Development Volume 13 ; 13 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Development Volume 14 ; 14 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Development Volume 15 ; 15 >
       au < crawling ; exists ; 2013 ; International Journal of Sustainable Development Volume 16 ; 16 >
@@ -6818,7 +6818,7 @@
       param[journal_issn] = 1756-5812
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Economy Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Economy Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Economy Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Sustainable Economy Volume 5 ; 5 >
@@ -6870,7 +6870,7 @@
       param[journal_issn] = 1756-2546
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Society Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Society Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Society Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Sustainable Society Volume 5 ; 5 >
@@ -6889,7 +6889,7 @@
       param[journal_issn] = 1753-3619
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Strategic Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Strategic Management Volume 3 ; 3 >
       au < expected ; exists ; 2012 ; International Journal of Sustainable Strategic Management Volume 4 ; 4 >
 
@@ -6956,7 +6956,7 @@
       param[journal_issn] = 1755-9359
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Systems, Control and Communications Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
+      au < testing ; exists ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 >
       au < manifest ; exists ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
@@ -6975,7 +6975,7 @@
       param[journal_issn] = 1749-916X
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Teaching and Case Studies Volume 1 ; 1 >
-      au < crawling ; exists ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
+      au < testing ; exists ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 >
 
