@@ -17,14 +17,14 @@
 
     param[journal_id] = biblio
 
-    au < ready ; 2005 ; 1 ; Biblionline Volume 1 ; 2005 >
-    au < ready ; 2006 ; 2 ; Biblionline Volume 2 ; 2006 >
-    au < ready ; 2007 ; 3 ; Biblionline Volume 3 ; 2007 >
-    au < ready ; 2008 ; 4 ; Biblionline Volume 4 ; 2008 >
-    au < ready ; 2009 ; 5 ; Biblionline Volume 5 ; 2009 >
-    au < ready ; 2010 ; 6 ; Biblionline Volume 6 ; 2010 >
-    au < ready ; 2011 ; 7 ; Biblionline Volume 7 ; 2011 >
-    au < ready ; 2012 ; 8 ; Biblionline Volume 8 ; 2012 >
+    au < released ; 2005 ; 1 ; Biblionline Volume 1 ; 2005 >
+    au < released ; 2006 ; 2 ; Biblionline Volume 2 ; 2006 >
+    au < released ; 2007 ; 3 ; Biblionline Volume 3 ; 2007 >
+    au < released ; 2008 ; 4 ; Biblionline Volume 4 ; 2008 >
+    au < released ; 2009 ; 5 ; Biblionline Volume 5 ; 2009 >
+    au < released ; 2010 ; 6 ; Biblionline Volume 6 ; 2010 >
+    au < released ; 2011 ; 7 ; Biblionline Volume 7 ; 2011 >
+    au < released ; 2012 ; 8 ; Biblionline Volume 8 ; 2012 >
 
   }
 
@@ -38,28 +38,28 @@
 
     param[journal_id] = ies
 
-    au < ready ; 1991 ; 1 ; Informação & Sociedade: Estudos Volume 1 ; 1991 >
-    au < ready ; 1992 ; 2 ; Informação & Sociedade: Estudos Volume 2 ; 1992 >
-    au < ready ; 1993 ; 3 ; Informação & Sociedade: Estudos Volume 3 ; 1993 >
-    au < ready ; 1994 ; 4 ; Informação & Sociedade: Estudos Volume 4 ; 1994 >
-    au < ready ; 1995 ; 5 ; Informação & Sociedade: Estudos Volume 5 ; 1995 >
-    au < ready ; 1996 ; 6 ; Informação & Sociedade: Estudos Volume 6 ; 1996 >
-    au < ready ; 1997 ; 7 ; Informação & Sociedade: Estudos Volume 7 ; 1997 >
-    au < ready ; 1998 ; 8 ; Informação & Sociedade: Estudos Volume 8 ; 1998 >
-    au < ready ; 1999 ; 9 ; Informação & Sociedade: Estudos Volume 9 ; 1999 >
-    au < ready ; 2000 ; 10 ; Informação & Sociedade: Estudos Volume 10 ; 2000 >
-    au < ready ; 2001 ; 11 ; Informação & Sociedade: Estudos Volume 11 ; 2001 >
-    au < ready ; 2002 ; 12 ; Informação & Sociedade: Estudos Volume 12 ; 2002 >
-    au < ready ; 2003 ; 13 ; Informação & Sociedade: Estudos Volume 13 ; 2003 >
-    au < ready ; 2004 ; 14 ; Informação & Sociedade: Estudos Volume 14 ; 2004 >
-    au < ready ; 2005 ; 15 ; Informação & Sociedade: Estudos Volume 15 ; 2005 >
-    au < ready ; 2006 ; 16 ; Informação & Sociedade: Estudos Volume 16 ; 2006 >
-    au < ready ; 2007 ; 17 ; Informação & Sociedade: Estudos Volume 17 ; 2007 >
-    au < ready ; 2008 ; 18 ; Informação & Sociedade: Estudos Volume 18 ; 2008 >
-    au < ready ; 2009 ; 19 ; Informação & Sociedade: Estudos Volume 19 ; 2009 >
-    au < ready ; 2010 ; 20 ; Informação & Sociedade: Estudos Volume 20 ; 2010 >
-    au < ready ; 2011 ; 21 ; Informação & Sociedade: Estudos Volume 21 ; 2011 >
-    au < ready ; 2012 ; 22 ; Informação & Sociedade: Estudos Volume 22 ; 2012 >
+    au < released ; 1991 ; 1 ; Informação & Sociedade: Estudos Volume 1 ; 1991 >
+    au < released ; 1992 ; 2 ; Informação & Sociedade: Estudos Volume 2 ; 1992 >
+    au < released ; 1993 ; 3 ; Informação & Sociedade: Estudos Volume 3 ; 1993 >
+    au < released ; 1994 ; 4 ; Informação & Sociedade: Estudos Volume 4 ; 1994 >
+    au < released ; 1995 ; 5 ; Informação & Sociedade: Estudos Volume 5 ; 1995 >
+    au < released ; 1996 ; 6 ; Informação & Sociedade: Estudos Volume 6 ; 1996 >
+    au < released ; 1997 ; 7 ; Informação & Sociedade: Estudos Volume 7 ; 1997 >
+    au < released ; 1998 ; 8 ; Informação & Sociedade: Estudos Volume 8 ; 1998 >
+    au < released ; 1999 ; 9 ; Informação & Sociedade: Estudos Volume 9 ; 1999 >
+    au < released ; 2000 ; 10 ; Informação & Sociedade: Estudos Volume 10 ; 2000 >
+    au < released ; 2001 ; 11 ; Informação & Sociedade: Estudos Volume 11 ; 2001 >
+    au < released ; 2002 ; 12 ; Informação & Sociedade: Estudos Volume 12 ; 2002 >
+    au < released ; 2003 ; 13 ; Informação & Sociedade: Estudos Volume 13 ; 2003 >
+    au < released ; 2004 ; 14 ; Informação & Sociedade: Estudos Volume 14 ; 2004 >
+    au < released ; 2005 ; 15 ; Informação & Sociedade: Estudos Volume 15 ; 2005 >
+    au < released ; 2006 ; 16 ; Informação & Sociedade: Estudos Volume 16 ; 2006 >
+    au < released ; 2007 ; 17 ; Informação & Sociedade: Estudos Volume 17 ; 2007 >
+    au < released ; 2008 ; 18 ; Informação & Sociedade: Estudos Volume 18 ; 2008 >
+    au < released ; 2009 ; 19 ; Informação & Sociedade: Estudos Volume 19 ; 2009 >
+    au < released ; 2010 ; 20 ; Informação & Sociedade: Estudos Volume 20 ; 2010 >
+    au < released ; 2011 ; 21 ; Informação & Sociedade: Estudos Volume 21 ; 2011 >
+    au < released ; 2012 ; 22 ; Informação & Sociedade: Estudos Volume 22 ; 2012 >
 
   }
 
@@ -86,8 +86,8 @@
 
     param[journal_id] = tpa
 
-    au < ready ; 2011 ; 1 ; Teoria e Prática em Administração Volume 1 ; 2011 >
-    au < ready ; 2012 ; 2 ; Teoria e Prática em Administração Volume 2 ; 2012 >
+    au < released ; 2011 ; 1 ; Teoria e Prática em Administração Volume 1 ; 2011 >
+    au < released ; 2012 ; 2 ; Teoria e Prática em Administração Volume 2 ; 2012 >
 
   }
 
