@@ -852,7 +852,6 @@
 
     param[base_url] = http://ajj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[notReady] = manifest page redirects to itself, RU4490
     
     au < manifest ; exists ; 1956 ; The American Journal of Jurisprudence Volume 1 ; 1 ; >
     au < manifest ; exists ; 1957 ; The American Journal of Jurisprudence Volume 2 ; 2 ; >
@@ -911,7 +910,7 @@
     au < crawling ; exists ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; >
     au < released ; manifest ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
     au < doesNotExist ; doesNotExist ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
-    au < exists ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     
   }
 
@@ -6535,7 +6534,7 @@
     au < testing ; exists ; 2012 ; Geophysical Journal International Volume 191 ; 191 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
-    au < expected ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
+    au < manifest ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
     au < expected ; exists ; 2013 ; Geophysical Journal International Volume 195 ; 195 ; >
 
   }
