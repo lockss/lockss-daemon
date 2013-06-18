@@ -20175,24 +20175,6 @@
   {
 
     title <
-      name = Geophysical Supplements to Monthly Notices of Royal Astronomical Society 
-    >
-
-    param[base_url] = http://gjairc.oxfordjournals.org/
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    implicit < status ; year ; name ; param[volume_name] >
-
-    {
-
-      au < expected ; 2013 ; Geophysical Supplements to Monthly Notices of Royal Astronomical Society Volume 1 ; 1 >
-
-    }
-
-  }
-
-  {
-
-    title <
       name = International Immunology Meeting Abstracts 
     >
 
