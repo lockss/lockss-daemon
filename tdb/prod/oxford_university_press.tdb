@@ -6736,6 +6736,32 @@
   {
 
     title <
+      name = Geophysical Supplements to MNRAS ;
+      issn = 2051-1965 ;
+      eissn = 2051-1973
+    >
+
+    {
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://gsmnras.oxfordjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < manifest ; 1922-1928 ; Geophysical Supplements to MNRAS Volume 1 ; 1 >
+    au < manifest ; 1928-1931 ; Geophysical Supplements to MNRAS Volume 2 ; 2 >
+    au < manifest ; 1932-1936 ; Geophysical Supplements to MNRAS Volume 3 ; 3 >
+    au < manifest ; 1937-1940 ; Geophysical Supplements to MNRAS Volume 4 ; 4 >
+    au < manifest ; 1941-1949 ; Geophysical Supplements to MNRAS Volume 5 ; 5 >
+    au < manifest ; 1950-1954 ; Geophysical Supplements to MNRAS Volume 6 ; 6 >
+    au < manifest ; 1955-1957 ; Geophysical Supplements to MNRAS Volume 7 ; 7 >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = German History ;
       issn = 0266-3554 ;
       eissn = 1477-089X ;
