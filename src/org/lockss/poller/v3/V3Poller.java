@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.146 2013-05-22 16:43:33 barry409 Exp $
+ * $Id: V3Poller.java,v 1.146.2.1 2013-06-18 09:28:56 tlipkis Exp $
  */
 
 /*
@@ -342,6 +342,11 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableRepairFromCache";
   public static final boolean DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE = true;
   
+  /** If true, ignore hints & optimizations involving plain hashes */
+  public static final String PARAM_IGNORE_PLAIN_HASH =
+    PREFIX + "ignorePlainHash";
+  public static final boolean DEFAULT_IGNORE_PLAIN_HASH = false;
+  
   public static final String PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     PREFIX + "repairFromPublisherWhenTooClose";
   public static final boolean DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
@@ -487,6 +492,8 @@ public class V3Poller extends BasePoll {
   private boolean enableRepairFromCache =
     V3Poller.DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE;
 
+  private boolean ignorePlainHash = DEFAULT_IGNORE_PLAIN_HASH;
+
   private boolean repairFromPublisherWhenTooClose =
     V3Poller.DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE;
 
@@ -629,6 +636,8 @@ public class V3Poller extends BasePoll {
                       DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
     maxRepairs = c.getInt(PARAM_MAX_REPAIRS, DEFAULT_MAX_REPAIRS);
 
+    ignorePlainHash = c.getBoolean(PARAM_IGNORE_PLAIN_HASH,
+				   DEFAULT_IGNORE_PLAIN_HASH);
     stateDir = PollUtil.ensurePollStateRoot();
 
     repairHashAllVersions = c.getBoolean(PARAM_REPAIR_HASH_ALL_VERSIONS,
@@ -1679,17 +1688,21 @@ public class V3Poller extends BasePoll {
      final Collection<ParticipantUserData> repairVoters) {
 
     PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
-    if (!repairVoters.isEmpty() && repairQueue.okToQueueRepair()) {
+    if (repairQueue.okToQueueRepair()) {
+      // Choose where to request the repair.
+      if (log.isDebug2()) {
+	  log.debug2("Peer/pub choice: peer prob: " + repairFromCache +
+		     (AuUtil.isPubDown(getAu()) ? ", AU down" : ", ") +
+		     "repairVoters: " + repairVoters);
+      }
+
       // todo(bhayes): Having found a list of peers with versions
       // would reduce entropy, should that information be discarded
       // and the publisher's current version be fetched? Why give up
       // the chance to reduce the entropy?
-
-      // Choose where to request the repair.
-      log.debug2("Deciding whether to repair from cache or publisher.  Repair "
-		 + "from cache probability=" + repairFromCache);
-      if (ProbabilisticChoice.choose(repairFromCache) ||
-	  (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
+      if (((ignorePlainHash || !repairVoters.isEmpty())
+	   && ProbabilisticChoice.choose(repairFromCache))
+	  || (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
 	PeerIdentity peer = findPeerForRepair(repairVoters);
 	log.debug2("Requesting repair from " + peer + ": " + url);
 	repairQueue.repairFromPeer(url, peer);
