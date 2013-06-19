@@ -17,8 +17,9 @@
     param[base_url] = http://www.cardiometry.net/index.php/
     param[journal_id] = cardiometry
     implicit < status ; status2 ; year ; param[year] ; name ; volume >
+    comment[nR] = publisher needs to put manifests back up RT 5271
     
-    au < manifest ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 >
+    au < notReady ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; Cardiometry Volume 2 ; 2 >
     
   }
