@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.15 2013-05-13 22:21:32 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.16 2013-06-19 22:56:49 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.util.Logger;
@@ -298,25 +299,25 @@ where
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      NAME_TYPE_COLUMN
       +      " = '" + PRIMARY_NAME_TYPE + "') publication_name, "
-      +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
+      +   "(select " + ISSN_COLUMN + " from " + ISSN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
       +      " = 'p_issn' fetch first 1 rows only) p_issn, "
-      +   "(select formatissn(" + ISSN_COLUMN + ") from " + ISSN_TABLE
+      +   "(select " + ISSN_COLUMN + " from " + ISSN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISSN_TABLE + "." + ISSN_TYPE_COLUMN
       +      " = 'e_issn' fetch first 1 rows only) e_issn, "
-      +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
+      +   "(select " + ISBN_COLUMN + " from " + ISBN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
       +      ISBN_TABLE + "." + ISBN_TYPE_COLUMN
       +      " = 'p_isbn' fetch first 1 rows only) p_isbn, "
-      +   "(select formatisbn(" + ISBN_COLUMN + ") from " + ISBN_TABLE
+      +   "(select " + ISBN_COLUMN + " from " + ISBN_TABLE
       +   " where " 
       +      MD_ITEM_SEQ_COLUMN 
       +      " = " + PUBLICATION_TABLE + "." + MD_ITEM_SEQ_COLUMN + " and "
@@ -410,6 +411,7 @@ where
    * @return a list of BibliobraphicItems from the metadata database.
    */
   static public List<BibliographicItem> getBibliographicItems() {
+    final String DEBUG_HEADER = "getBibliographicItems(): ";
     List<BibliographicItem> items = new ArrayList<BibliographicItem>();
     Connection conn = null;
     DbManager dbManager = null;
@@ -419,6 +421,8 @@ where
     try {
       dbManager = getDaemon().getDbManager();
       conn = dbManager.getConnection();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "bibliographicItemsQuery = "
+	  + bibliographicItemsQuery);
       statement = dbManager.prepareStatement(conn, bibliographicItemsQuery);
       resultSet = dbManager.executeQuery(statement);
 
@@ -428,8 +432,13 @@ where
       }
     } catch (IllegalArgumentException ex) {
       log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
     } catch (SQLException ex) {
       log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
+    } catch (DbException ex) {
+      log.warning(ex.getMessage());
+      log.warning("bibliographicItemsQuery = " + bibliographicItemsQuery);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);

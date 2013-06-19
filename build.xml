@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.343 2013-06-11 23:50:18 thib_gc Exp $
+ $Id: build.xml,v 1.344 2013-06-19 22:56:49 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -214,6 +214,8 @@ Args:
   <property name="derby.jar"      value="${lib}/derby.jar"/>
   <property name="derbyclient.jar" value="${lib}/derbyclient.jar"/>
   <property name="derbynet.jar"   value="${lib}/derbynet.jar"/>
+  <property name="postgresql-jdbc.jar"
+                                  value="${lib}/postgresql-jdbc4-9.1.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -424,6 +426,7 @@ Args:
     <pathelement path="${derby.jar}" />
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
+	<pathelement path="${postgresql-jdbc.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
     <pathelement path="${castor.jar}" />

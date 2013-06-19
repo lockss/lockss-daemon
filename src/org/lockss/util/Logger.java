@@ -1,10 +1,10 @@
 /*
- * $Id: Logger.java,v 1.58 2012-07-10 23:46:00 thib_gc Exp $
+ * $Id: Logger.java,v 1.59 2013-06-19 22:56:48 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.sql.SQLException;
 import java.text.Format;
 
 import org.apache.commons.collections.map.ReferenceMap;
@@ -645,6 +646,16 @@ public class Logger {
 	  sb.append("\n    ");
 	  sb.append(StringUtil.trimStackTrace(emsg,
 					      StringUtil.stackTraceString(e)));
+	}
+
+	if (e instanceof SQLException) {
+	  SQLException sqle = ((SQLException)e).getNextException();
+
+	  while (sqle != null) {
+	    sb.append("\n    ");
+	    sb.append("Next SQLException: " + sqle.toString());
+	    sqle = sqle.getNextException();
+	  }
 	}
       }
       writeMsg(level, sb.toString());
