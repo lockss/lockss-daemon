@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5L.java,v 1.5 2013-05-23 20:04:20 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5L.java,v 1.6 2013-06-19 17:39:52 fergaloy-sf Exp $
  */
 
 /*
@@ -198,8 +198,6 @@ public class CounterReportsJournalReport5L
 
   /**
    * Provides the header items in the report.
-   * 
-   * @return a String[] with the report header items.
    */
   @Override
   protected void populateReportHeaderEntries() {
