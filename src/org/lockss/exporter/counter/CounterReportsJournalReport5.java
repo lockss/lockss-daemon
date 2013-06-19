@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsJournalReport5.java,v 1.7 2013-05-23 20:04:21 fergaloy-sf Exp $
+ * $Id: CounterReportsJournalReport5.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import java.util.Iterator;
 import java.util.List;
 import org.apache.commons.lang.ArrayUtils;
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
@@ -275,10 +276,9 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
    * 
    * @param conn
    *          A Connection with a connection to the database.
-   * @return a List<Row> with the initialized rows to be included in the report.
-   * @throws SQLException
+   * @throws DbException
    */
-  protected void initializeReportRows(Connection conn) throws SQLException {
+  protected void initializeReportRows(Connection conn) throws DbException {
     final String DEBUG_HEADER = "initializeReportRows(): ";
     log.debug2(DEBUG_HEADER + "Starting...");
     Long titleId = 0L;
@@ -349,7 +349,8 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       log.error("StartMonth = " + startMonth + ", StartYear = " + startYear
 	  + ", EndMonth = " + endMonth + ", EndYear = " + endYear);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException(
+	  "Cannot retrieve the journals to be included in a report", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -377,10 +378,10 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
    * 
    * @param conn
    *          A Connection with a connection to the database.
-   * @throws SQLException
+   * @throws DbException
    * @throws CounterReportsException
    */
-  protected void addReportRequestCounts(Connection conn) throws SQLException,
+  protected void addReportRequestCounts(Connection conn) throws DbException,
       CounterReportsException {
     final String DEBUG_HEADER = "addReportRequestCounts(): ";
     log.debug2(DEBUG_HEADER + "Starting...");
@@ -512,7 +513,9 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
       log.error("StartMonth = " + startMonth + ", StartYear = " + startYear
 	  + ", EndMonth = " + endMonth + ", EndYear = " + endYear);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException(
+	  "Cannot retrieve the journal requests to be included in a report",
+	  sqle);
     } catch (CounterReportsException cre) {
       log.error("Error processing journal requests", cre);
       log.error("StartMonth = " + startMonth + ", StartYear = " + startYear
@@ -640,8 +643,6 @@ public class CounterReportsJournalReport5 extends CounterReportsJournalReport {
 
   /**
    * Provides the header items in the report.
-   * 
-   * @return a String[] with the report header items.
    */
   @Override
   protected void populateReportHeaderEntries() {

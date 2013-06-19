@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.11 2013-06-05 23:21:45 thib_gc Exp $
+ * $Id: ReindexingTask.java,v 1.12 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.util.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.*;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
@@ -184,7 +185,7 @@ public class ReindexingTask extends StepTask {
    * 
    * @param n
    *          An int with the amount of work to do.
-   * @todo: figure out what the amount of work means
+   * TODO: figure out what the amount of work means
    */
   @Override
   public int step(int n) {
@@ -708,8 +709,8 @@ public class ReindexingTask extends StepTask {
                 + lastExtractionTime);
           }
         }
-      } catch (SQLException sqle) {
-        log.error(message + ": " + sqle);
+      } catch (DbException dbe) {
+        log.error(message + ": " + dbe);
       } finally {
         DbManager.safeRollbackAndClose(conn);
       }
@@ -807,7 +808,7 @@ public class ReindexingTask extends StepTask {
             mdManager.removeFromPendingAus(conn, auId);
 
             // Complete the database transaction.
-            conn.commit();
+            DbManager.commitOrRollback(conn, log);
 
             // Update the successful re-indexing count.
             mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
@@ -823,13 +824,8 @@ public class ReindexingTask extends StepTask {
                 + " -- NOT rescheduling", e);
             log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
             status = ReindexingStatus.Failed;
-          } catch (SQLNonTransientException sqlnte) {
-            e = sqlnte;
-            log.warning("Error updating metadata at FINISH for " + status
-                + " -- NOT rescheduling", e);
-            status = ReindexingStatus.Failed;
-          } catch (SQLException sqle) {
-            e = sqle;
+          } catch (DbException dbe) {
+            e = dbe;
             log.warning("Error updating metadata at FINISH for " + status
                 + " -- rescheduling", e);
             status = ReindexingStatus.Rescheduled;
@@ -874,10 +870,10 @@ public class ReindexingTask extends StepTask {
             }
 
             // Complete the database transaction.
-            conn.commit();
-          } catch (SQLException sqle) {
+            DbManager.commitOrRollback(conn, log);
+          } catch (DbException dbe) {
             log.warning("Error updating pending queue at FINISH" + " for "
-                + status, sqle);
+                + status, dbe);
           } finally {
             DbManager.safeRollbackAndClose(conn);
           }
@@ -921,9 +917,9 @@ public class ReindexingTask extends StepTask {
           mdManager.startReindexing(conn);
 
           // Complete the database transaction.
-          conn.commit();
-        } catch (SQLException sqle) {
-          log.error("Cannot restart indexing", sqle);
+          DbManager.commitOrRollback(conn, log);
+        } catch (DbException dbe) {
+          log.error("Cannot restart indexing", dbe);
         } finally {
           DbManager.safeRollbackAndClose(conn);
         }
@@ -936,10 +932,10 @@ public class ReindexingTask extends StepTask {
      * @param conn
      *          A Connection with the database connection to be used.
      * @return a Long with the identifier of the AU for this task, if any.
-     * @throws SQLException
+     * @throws DbException
      *           if any problem occurred accessing the database.
      */
-    private Long findAuSeq(Connection conn) throws SQLException {
+    private Long findAuSeq(Connection conn) throws DbException {
       final String DEBUG_HEADER = "findAuSeq(): ";
 
       Long auSeq = null;

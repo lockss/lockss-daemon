@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.3 2013-05-03 02:09:57 tlipkis Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.4 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.daemon.PluginException;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.exporter.counter.CounterReportsRequestAggregator;
@@ -726,7 +727,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     }
   }
 
-  private int countPublishers(Connection conn) throws SQLException {
+  private int countPublishers(Connection conn)
+      throws SQLException, DbException {
     int count = -1;
     PreparedStatement stmt = null;
 
@@ -745,7 +747,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     return count;
   }
 
-  private int countPublications(Connection conn) throws SQLException {
+  private int countPublications(Connection conn)
+      throws SQLException, DbException {
     int count = -1;
     PreparedStatement stmt = null;
 
@@ -764,7 +767,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     return count;
   }
 
-  private int countArchivalUnits(Connection conn) throws SQLException {
+  private int countArchivalUnits(Connection conn)
+      throws SQLException, DbException {
     int count = -1;
     PreparedStatement stmt = null;
 
@@ -783,7 +787,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     return count;
   }
 
-  private int countAuMetadataItems(Connection conn) throws SQLException {
+  private int countAuMetadataItems(Connection conn)
+      throws SQLException, DbException {
     int count = -1;
     PreparedStatement stmt = null;
 
@@ -803,7 +808,8 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     return count;
   }
 
-  private int countAuProblems(Connection conn) throws SQLException {
+  private int countAuProblems(Connection conn)
+      throws SQLException, DbException {
     int count = -1;
     PreparedStatement stmt = null;
 
@@ -824,7 +830,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
   private void addJournalTypeAggregates(Connection conn, Long publicationSeq,
       boolean isPublisherInvolved, int year, int month, int totalRequests,
-      int htmlRequests, int pdfRequests) throws SQLException {
+      int htmlRequests, int pdfRequests) throws SQLException, DbException {
     PreparedStatement stmt = null;
 
     try {
@@ -852,7 +858,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
   }
 
   private Long getPublicationSeq(Connection conn, String publisherName)
-      throws SQLException {
+      throws SQLException, DbException {
     Long publicationSeq = null;
     PreparedStatement stmt = null;
 
@@ -879,7 +885,7 @@ public class TestAuMetadataRecorder extends LockssTestCase {
 
   private void checkJournalTypeAggregates(Connection conn, String publisherName,
       boolean isPublisherInvolved, int year, int month, int totalRequests,
-      int htmlRequests, int pdfRequests) throws SQLException {
+      int htmlRequests, int pdfRequests) throws SQLException, DbException {
     PreparedStatement stmt = null;
 
     try {

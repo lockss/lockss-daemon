@@ -1,10 +1,10 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.26 2013-01-14 21:58:19 fergaloy-sf Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.27 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,10 +37,10 @@ import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.OpenUrlResolver.OpenUrlInfo;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
@@ -178,7 +178,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     ausReindexed.clear();
 
     dbManager = new DbManager() {
-      public Connection getConnection() throws SQLException {
+      public Connection getConnection() throws DbException {
 	return super.getConnection();
       }
     };

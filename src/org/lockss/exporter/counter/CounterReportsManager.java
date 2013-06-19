@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.13 2013-05-22 23:19:56 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.14 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.util.FileUtil;
@@ -315,9 +316,10 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     dbManager = getDaemon().getDbManager();
     Connection conn;
 
+    // Get a connection to the database.
     try {
       conn = dbManager.getConnection();
-    } catch (SQLException ex) {
+    } catch (DbException ex) {
       log.error("Cannot connect to database", ex);
       return;
     }
@@ -327,9 +329,6 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     boolean success = false;
 
     try {
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-
       errorMessage = "Cannot get the identifier of the publisher used for the "
 	  + "aggregation of all title requests";
 
@@ -375,7 +374,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       }
 
       success = true;
-    } catch (SQLException sqle) {
+    } catch (DbException sqle) {
       log.error(errorMessage, sqle);
     } finally {
       if (success) {
@@ -580,11 +579,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A String with the requested URL.
    * @param isPublisherInvolved
    *          A boolean indicating the involvement of the publisher.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void persistRequest(String url, boolean isPublisherInvolved)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "persistRequest(): ";
 
     // Do nothing more if the service is not ready to be used.
@@ -643,7 +642,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
         log.error("Cannot persist URL request", sqle);
         log.error("URL = '" + url + "'.");
         log.error("SQL = '" + sql + "'.");
-        throw sqle;
+        throw new DbException("Cannot persist URL request", sqle);
       } finally {
         DbManager.safeCloseStatement(insertRequest);
       }
@@ -651,7 +650,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       success = true;
     } finally {
       if (success) {
-	conn.commit();
+	DbManager.commitOrRollback(conn, log);
 	log.debug2(DEBUG_HEADER + "Successful commit.");
 	DbManager.safeCloseConnection(conn);
       } else {
@@ -678,12 +677,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @return a Map<String, Integer> with the existing aggregated request counts
    *         or <code>null</code> if there are none.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   Map<String, Integer> getExistingAggregateMonthBookTypes(int year,
       int month, Long publicationSeq, boolean publisherInvolved,
-      Connection conn) throws SQLException {
+      Connection conn) throws DbException {
     final String DEBUG_HEADER = "getExistingAggregateMonthBookTypes(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -736,7 +735,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("publicationSeq = " + publicationSeq);
       log.error("publisherInvolved = " + publisherInvolved);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException(
+	  "Cannot get the existing month book request aggregates", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -767,12 +767,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void updateBookTypeAggregate(int year, int month, Long publicationSeq,
       boolean publisherInvolved, int fullCount, int sectionCount,
-      Connection conn) throws SQLException {
+      Connection conn) throws DbException {
     final String DEBUG_HEADER = "updateBookTypeAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -820,7 +820,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("fullCount = " + fullCount);
       log.error("sectionCount = " + sectionCount);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot update the month book request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(updateAggregate);
     }
@@ -849,12 +850,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void insertBookTypeAggregate(int year, int month, Long publicationSeq,
       boolean publisherInvolved, int fullCount, int sectionCount,
-      Connection conn) throws SQLException {
+      Connection conn) throws DbException {
     final String DEBUG_HEADER = "insertBookTypeAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -902,7 +903,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("fullCount = " + fullCount);
       log.error("sectionCount = " + sectionCount);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot insert the month book request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(insertAggregate);
     }
@@ -928,12 +930,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @return a Map<String, Integer> with the existing aggregated request counts
    *         or <code>null</code> if there are none.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   Map<String, Integer> getExistingAggregateMonthJournalTypes(int year,
       int month, Long publicationSeq, boolean publisherInvolved,
-      Connection conn) throws SQLException {
+      Connection conn) throws DbException {
     final String DEBUG_HEADER = "getExistingAggregateMonthJournalTypes(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -992,7 +994,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("publicationSeq = " + publicationSeq);
       log.error("publisherInvolved = " + publisherInvolved);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException(
+	  "Cannot get the existing month journal request aggregates", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -1026,12 +1029,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void updateJournalTypeAggregate(int year, int month,
       Long publicationSeq, boolean publisherInvolved, int totalCount,
-      int htmlCount, int pdfCount, Connection conn) throws SQLException {
+      int htmlCount, int pdfCount, Connection conn) throws DbException {
     final String DEBUG_HEADER = "updateJournalTypeAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -1084,7 +1087,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("htmlCount = " + htmlCount);
       log.error("pdfCount = " + pdfCount);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot update the month journal request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(updateAggregate);
     }
@@ -1116,12 +1120,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void insertJournalTypeAggregate(int year, int month,
       Long publicationSeq, boolean publisherInvolved, int totalCount,
-      int htmlCount, int pdfCount, Connection conn) throws SQLException {
+      int htmlCount, int pdfCount, Connection conn) throws DbException {
     final String DEBUG_HEADER = "insertJournalTypeAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -1174,7 +1178,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("htmlCount = " + htmlCount);
       log.error("pdfCount = " + pdfCount);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot insert the month journal request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(insertAggregate);
     }
@@ -1202,12 +1207,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @return an Integer with the existing aggregated request count or
    *         <code>null</code> if there is none.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   Integer getExistingAggregateMonthJournalPubYear(int year, int month,
       Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      Connection conn) throws SQLException {
+      Connection conn) throws DbException {
     final String DEBUG_HEADER = "getExistingAggregateMonthJournalPubYear(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -1259,7 +1264,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("publisherInvolved = " + publisherInvolved);
       log.error("publicationYear = " + publicationYear);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot get the existing month journal publication "
+	  + "year request aggregate", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -1289,12 +1295,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          journal during the month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void updateTitlePubYearAggregate(int year, int month,
       Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      int requestCount, Connection conn) throws SQLException {
+      int requestCount, Connection conn) throws DbException {
     final String DEBUG_HEADER = "updateTitlePubYearAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -1341,7 +1347,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("publisherInvolved = " + publisherInvolved);
       log.error("publicationYear = " + publicationYear);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot update the month journal request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(updateAggregate);
     }
@@ -1369,12 +1376,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          journal during the month.
    * @param conn
    *          A Connection representing the database connection.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   void insertTitlePubYearAggregate(int year, int month,
       Long publicationSeq, boolean publisherInvolved, int publicationYear,
-      int requestCount, Connection conn) throws SQLException {
+      int requestCount, Connection conn) throws DbException {
     final String DEBUG_HEADER = "insertTitlePubYearAggregate(): ";
     log.debug2(DEBUG_HEADER + "year = " + year);
     log.debug2(DEBUG_HEADER + "month = " + month);
@@ -1421,7 +1428,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("publisherInvolved = " + publisherInvolved);
       log.error("publicationYear = " + publicationYear);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot insert the month journal request counts",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(insertAggregate);
     }
@@ -1438,12 +1446,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Long with the identifier of the source book involved.
    * @param targetPublicationSeq
    *          A Long with the identifier of the target book involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void mergeBookTypeAggregates(Connection conn,
       Long sourcePublicationSeq, Long targetPublicationSeq)
-	  throws SQLException {
+	  throws DbException {
     final String DEBUG_HEADER = "mergeBookTypeAggregates(): ";
 
     // Do nothing more if the service is not ready to be used.
@@ -1524,7 +1532,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("sourcePublicationSeq = " + sourcePublicationSeq);
       log.error("targetPublicationSeq = " + targetPublicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot merge book type aggregates", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -1540,11 +1548,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @param publicationSeq
    *          A Long with the identifier of the book involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void deleteBookTypeAggregates(Connection conn, Long publicationSeq)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "deleteBookTypeAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
@@ -1573,7 +1581,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("Cannot delete the book type aggregates", sqle);
       log.error("publicationSeq = " + publicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot delete the book type aggregates", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteAggregate);
     }
@@ -1589,12 +1597,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Long with the identifier of the source journal involved.
    * @param targetPublicationSeq
    *          A Long with the identifier of the target journal involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void mergeJournalTypeAggregates(Connection conn,
       Long sourcePublicationSeq, Long targetPublicationSeq)
-	  throws SQLException {
+	  throws DbException {
     final String DEBUG_HEADER = "mergeJournalTypeAggregates(): ";
 
     // Do nothing more if the service is not ready to be used.
@@ -1687,7 +1695,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("sourcePublicationSeq = " + sourcePublicationSeq);
       log.error("targetPublicationSeq = " + targetPublicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot merge journal type aggregates", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -1703,11 +1711,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @param publicationSeq
    *          A Long with the identifier of the journal involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void deleteJournalTypeAggregates(Connection conn, Long publicationSeq)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "deleteJournalTypeAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
@@ -1736,7 +1744,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("Cannot delete the journal type aggregates", sqle);
       log.error("publicationSeq = " + publicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot delete the journal type aggregates", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteAggregate);
     }
@@ -1752,12 +1760,12 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Long with the identifier of the source journal involved.
    * @param targetPublicationSeq
    *          A Long with the identifier of the target journal involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void mergeJournalPubYearAggregates(Connection conn,
       Long sourcePublicationSeq, Long targetPublicationSeq)
-	  throws SQLException {
+	  throws DbException {
     final String DEBUG_HEADER = "mergeJournalPubYearAggregates(): ";
 
     // Do nothing more if the service is not ready to be used.
@@ -1827,7 +1835,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("sourcePublicationSeq = " + sourcePublicationSeq);
       log.error("targetPublicationSeq = " + targetPublicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException("Cannot merge journal publication year aggregates",
+	  sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(statement);
@@ -1843,11 +1852,11 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
    *          A Connection representing the database connection.
    * @param publicationSeq
    *          A Long with the identifier of the journal involved.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
   public void deleteJournalPubYearAggregates(Connection conn,
-      Long publicationSeq) throws SQLException {
+      Long publicationSeq) throws DbException {
     final String DEBUG_HEADER = "deleteJournalPubYearAggregates(): ";
     log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
 
@@ -1876,7 +1885,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
       log.error("Cannot delete the journal publication year aggregates", sqle);
       log.error("publicationSeq = " + publicationSeq);
       log.error("SQL = '" + sql + "'.");
-      throw sqle;
+      throw new DbException(
+	  "Cannot delete the journal publication year aggregates", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteAggregate);
     }

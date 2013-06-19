@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport1.java,v 1.7 2013-05-23 20:04:20 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport1.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -44,11 +44,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsJournalReport1;
 import org.lockss.exporter.counter.CounterReportsManager;
@@ -249,9 +249,9 @@ public class TestCounterReportsJournalReport1 extends LockssTestCase {
    * Creates a journal for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created journal.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeJournalMetadata() throws SQLException {
+  private Long initializeJournalMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -317,7 +317,7 @@ public class TestCounterReportsJournalReport1 extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     

@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.46 2013-05-08 15:20:41 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.47 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.plugin.ArchivalUnit;
@@ -1081,7 +1082,8 @@ public class OpenUrlResolver {
       }
     } catch (SQLException ex) {
       log.error("Getting DOI:" + doi, ex);
-      
+    } catch (DbException dbe) {
+      log.error("Getting DOI:" + doi, dbe);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -1285,10 +1287,8 @@ public class OpenUrlResolver {
 	  resolveFromQuery(conn, query.toString() + " from " + from.toString()
 	      + " where " + where.toString(), args);
       return OpenUrlInfo.newInstance(url, null, OpenUrlInfo.ResolvedTo.ARTICLE);
-
-    } catch (SQLException ex) {
-      log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
-        
+    } catch (DbException dbe) {
+      log.error("Getting ISSNs:" + Arrays.toString(issns), dbe);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -1302,29 +1302,36 @@ public class OpenUrlResolver {
    * @param query the query
    * @param args the args
    * @return a single URL
-   * @throws SQLException
+   * @throws DbException
    */
   private String resolveFromQuery(Connection conn, String query,
-      List<String> args) throws SQLException {
+      List<String> args) throws DbException {
     final String DEBUG_HEADER = "resolveFromQuery(): ";
     log.debug3(DEBUG_HEADER + "query: " + query);
+    String url = null;
+
     PreparedStatement stmt =
 	daemon.getDbManager().prepareStatement(conn, query.toString());
-    for (int i = 0; i < args.size(); i++) {
-      log.debug3(DEBUG_HEADER + "  query arg:  " + args.get(i));      
-      stmt.setString(i+1, args.get(i));
-    }
-    stmt.setMaxRows(2);  // only need 2 to to determine if unique
-    ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
-    String url = null;
-    if (resultSet.next()) {
-      url = resultSet.getString(1);
-      if (resultSet.next()) {
-        log.debug3(DEBUG_HEADER + "entry not unique: " + url + " "
-            + resultSet.getString(1));
-        url = null;
+
+    try {
+      for (int i = 0; i < args.size(); i++) {
+	log.debug3(DEBUG_HEADER + "  query arg:  " + args.get(i));
+	stmt.setString(i + 1, args.get(i));
       }
+      stmt.setMaxRows(2); // only need 2 to to determine if unique
+      ResultSet resultSet = daemon.getDbManager().executeQuery(stmt);
+      if (resultSet.next()) {
+	url = resultSet.getString(1);
+	if (resultSet.next()) {
+	  log.debug3(DEBUG_HEADER + "entry not unique: " + url + " "
+	      + resultSet.getString(1));
+	  url = null;
+	}
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot resolve from query", sqle);
     }
+
     return url;
   }
 
@@ -2125,9 +2132,8 @@ public class OpenUrlResolver {
       log.debug3(DEBUG_HEADER + "url = " + url);
       resolved = OpenUrlInfo.newInstance(url, null, 
                                          OpenUrlInfo.ResolvedTo.CHAPTER);
-      
-    } catch (SQLException ex) {
-      log.error("Getting ISBN:" + isbn, ex);
+    } catch (DbException dbe) {
+      log.error("Getting ISBN:" + isbn, dbe);
         
     } finally {
       DbManager.safeRollbackAndClose(conn);

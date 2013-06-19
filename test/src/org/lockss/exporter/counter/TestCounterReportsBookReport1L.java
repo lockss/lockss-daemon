@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsBookReport1L.java,v 1.7 2013-05-23 20:04:20 fergaloy-sf Exp $
+ * $Id: TestCounterReportsBookReport1L.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -44,11 +44,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsBookReport1L;
 import org.lockss.exporter.counter.CounterReportsManager;
@@ -247,9 +247,9 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
    * Creates a full book for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created book.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeFullBookMetadata() throws SQLException {
+  private Long initializeFullBookMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -309,7 +309,7 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    FULL_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     
@@ -320,9 +320,9 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
    * Creates a book section for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created book.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeSectionBookMetadata() throws SQLException {
+  private Long initializeSectionBookMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -382,7 +382,7 @@ public class TestCounterReportsBookReport1L extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    SECTION_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     

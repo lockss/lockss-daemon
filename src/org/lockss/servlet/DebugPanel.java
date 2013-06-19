@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.36 2013-03-04 19:35:50 fergaloy-sf Exp $
+ * $Id: DebugPanel.java,v 1.37 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import javax.servlet.*;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -45,6 +44,7 @@ import org.lockss.poller.*;
 import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.config.*;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.remote.*;
 import org.lockss.plugin.*;
@@ -379,8 +379,8 @@ public class DebugPanel extends LockssServlet {
 	statusMsg = "Reindexing metadata for " + au.getName();
 	return true;
       }
-    } catch (SQLException sqle) {
-      log.error("Cannot reindex metadata for " + au.getName(), sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot reindex metadata for " + au.getName(), dbe);
     } finally {
       DbManager.safeCloseStatement(insertPendingAuBatchStatement);
       DbManager.safeRollbackAndClose(conn);

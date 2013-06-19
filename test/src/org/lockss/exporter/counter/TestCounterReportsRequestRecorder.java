@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.8 2013-04-18 19:49:11 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.9 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -128,7 +129,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
     initializeMetadata();
   }
 
-  private void initializeMetadata() throws SQLException {
+  private void initializeMetadata() throws DbException {
     Connection conn = null;
 
     try {
@@ -183,7 +184,7 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    RECORDABLE_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
   }
@@ -286,9 +287,10 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
-  private void checkRequestRowCount(int expected) throws SQLException {
+  private void checkRequestRowCount(int expected)
+      throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -322,10 +324,11 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
    *          involved.
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkRequestByPublisherInvolvementRowCount(
-      boolean isPublisherInvolved, int expected) throws SQLException {
+      boolean isPublisherInvolved, int expected)
+	  throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;

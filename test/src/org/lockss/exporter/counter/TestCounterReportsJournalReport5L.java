@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.9 2013-05-23 20:04:20 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.10 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -46,12 +46,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsJournalReport5L;
 import org.lockss.exporter.counter.CounterReportsManager;
@@ -307,9 +307,9 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
    * @param year
    *          An int with the year when the test is run.
    * @return a Long with the identifier of the created journal.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeJournalMetadata(int year) throws SQLException {
+  private Long initializeJournalMetadata(int year) throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -378,7 +378,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     
@@ -570,9 +570,9 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
   /**
    * Deletes the existing journals.
    * 
-   * @throws SQLException
+   * @throws DbException
    */
-  private void cleanUpAggregatesAndJournals() throws SQLException {
+  private void cleanUpAggregatesAndJournals() throws DbException {
     Connection conn = null;
     PreparedStatement statement = null;
 
@@ -592,7 +592,7 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       statement = dbManager.prepareStatement(conn, SQL_QUERY_JOURNAL_DELETE);
       dbManager.executeUpdate(statement);
 
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
     } finally {
       DbManager.safeCloseStatement(statement);
       DbManager.safeRollbackAndClose(conn);

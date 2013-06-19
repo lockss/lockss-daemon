@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.6 2013-06-05 21:56:18 tlipkis Exp $
+ * $Id: TestDbManager.java,v 1.7 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ package org.lockss.db;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -138,7 +137,7 @@ public class TestDbManager extends LockssTestCase {
     try {
       dbManager.getConnection();
       fail("getConnection() should throw");
-    } catch (SQLException sqle) {
+    } catch (DbException sqle) {
     }
   }
 
@@ -161,7 +160,7 @@ public class TestDbManager extends LockssTestCase {
     try {
       dbManager.getConnection();
       fail("getConnection() should throw");
-    } catch (SQLException sqle) {
+    } catch (DbException sqle) {
     }
   }
 

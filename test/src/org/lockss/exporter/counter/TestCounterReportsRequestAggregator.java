@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestAggregator.java,v 1.7 2013-03-04 19:26:59 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestAggregator.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import java.util.Calendar;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.Cron;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.exporter.counter.CounterReportsRequestAggregator;
@@ -218,10 +219,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkBookTypeAggregatedRowCount(int expected)
-      throws SQLException {
+      throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -250,10 +251,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkJournalTypeAggregatedRowCount(int expected)
-      throws SQLException {
+      throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -283,10 +284,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkJournalPublicationYearAggregatedRowCount(int expected)
-      throws SQLException {
+      throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -357,9 +358,9 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * Creates a full book for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created book.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeFullBookMetadata() throws SQLException {
+  private Long initializeFullBookMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -407,7 +408,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    FULL_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     
@@ -418,9 +419,9 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * Creates a book section for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created book.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeSectionBookMetadata() throws SQLException {
+  private Long initializeSectionBookMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -463,13 +464,13 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
 	  metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
 	                            "2010-01-01", null);
 
-	  metadataManager.addMdItemName(conn, mdItemSeq, "Chapter Name",
-					PRIMARY_NAME_TYPE);
+      metadataManager.addMdItemName(conn, mdItemSeq, "Chapter Name",
+	  			    PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    SECTION_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     
@@ -481,9 +482,10 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * 
    * @param expected
    *          An int with the expected number of rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
-  private void checkRequestRowCount(int expected) throws SQLException {
+  private void checkRequestRowCount(int expected)
+      throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -520,11 +522,11 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          in the requests to check.
    * @param expected
    *          An int with the expected number of monthly rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkBookTypeAggregatedRowCount(int requestYear,
       int requestMonth, Boolean isPublisherInvolved, int expected)
-	  throws SQLException {
+	  throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -567,11 +569,11 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of full requests.
    * @param expectedSection
    *          An int with the expected number of section requests.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkBookMonthlyTypeRequests(Long publicationSeq,
       int requestYear, int requestMonth, Boolean isPublisherInvolved,
-      int expectedFull, int expectedSection) throws SQLException {
+      int expectedFull, int expectedSection) throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -651,9 +653,9 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    * Creates a journal for which to aggregate requests.
    * 
    * @return a Long with the identifier of the created journal.
-   * @throws SQLException
+   * @throws DbException
    */
-  private Long initializeJournalMetadata() throws SQLException {
+  private Long initializeJournalMetadata() throws DbException {
     Long publicationSeq = null;
     Connection conn = null;
 
@@ -705,7 +707,7 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_PDF,
                                    PDF_URL);
     } finally {
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       DbManager.safeCloseConnection(conn);
     }
     
@@ -725,11 +727,11 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          in the requests to check.
    * @param expected
    *          An int with the expected number of monthly rows in the table.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkJournalTypeAggregatedRowCount(int requestYear,
       int requestMonth, Boolean isPublisherInvolved, int expected)
-	  throws SQLException {
+	  throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -774,12 +776,12 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          An int with the expected number of PDF requests.
    * @param expectedTotal
    *          An int with the expected number of total requests.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkJournalMonthlyTypeRequests(Long publicationSeq,
       int requestYear, int requestMonth, Boolean isPublisherInvolved,
       int expectedHtml, int expectedPdf, int expectedTotal)
-	  throws SQLException {
+	  throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;
@@ -830,11 +832,12 @@ public class TestCounterReportsRequestAggregator extends LockssTestCase {
    *          A String with the expected publication year.
    * @param expectedCount
    *          An int with the expected count of requests.
-   * @throws SQLException
+   * @throws SQLException, DbException
    */
   private void checkJournalMonthlyPublicationYearRequests(Long publicationSeq,
       int requestYear, int requestMonth, Boolean isPublisherInvolved,
-      String expectedPublicationYear, int expectedCount) throws SQLException {
+      String expectedPublicationYear, int expectedCount)
+	  throws SQLException, DbException {
     Connection conn = null;
     PreparedStatement statement = null;
     ResultSet resultSet = null;

@@ -1,10 +1,10 @@
 /*
- * $Id: CounterReportsRequestRecorder.java,v 1.7 2013-01-14 21:58:18 fergaloy-sf Exp $
+ * $Id: CounterReportsRequestRecorder.java,v 1.8 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.util.Logger;
 import org.mortbay.http.HttpResponse;
@@ -133,7 +134,7 @@ public class CounterReportsRequestRecorder {
       // Persist the request data.
       counterReportsManager.persistRequest(url, isPublisherInvolved);
       log.debug2(DEBUG_HEADER + "Done.");
-    } catch (SQLException sqle) {
+    } catch (DbException sqle) {
       log.error("Cannot persist request - Statistics not collected", sqle);
     }
   }
@@ -144,10 +145,10 @@ public class CounterReportsRequestRecorder {
    * @param url
    *          A String with the URL.
    * @return a Long with the metadata item identifier, if any.
-   * @throws SQLException
+   * @throws DbException
    *           if there are problems accessing the database.
    */
-  private Long findMatchingFullTextMdItemId(String url) throws SQLException {
+  private Long findMatchingFullTextMdItemId(String url) throws DbException {
     final String DEBUG_HEADER = "findMatchingFullTextMdItemId(): ";
 
     Connection conn = null;
@@ -172,6 +173,9 @@ public class CounterReportsRequestRecorder {
       if (results.next()) {
 	mdItemId = results.getLong(MD_ITEM_SEQ_COLUMN);
       }
+    } catch (SQLException sqle) {
+      throw new DbException(
+	  "Cannot find full-text URL metadata item identifier", sqle);
     } finally {
       DbManager.safeCloseResultSet(results);
       DbManager.safeCloseStatement(getUrlMdItemId);

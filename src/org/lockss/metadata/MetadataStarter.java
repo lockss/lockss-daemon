@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.5 2013-03-04 19:26:08 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.6 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.List;
 import java.util.ArrayList;
 import org.lockss.app.LockssDaemon;
 import org.lockss.daemon.LockssRunnable;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuEvent;
@@ -103,8 +104,8 @@ public class MetadataStarter extends LockssRunnable {
 
     try {
       conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database -- extraction not started", sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot connect to database -- extraction not started", dbe);
       return;
     }
 
@@ -136,8 +137,8 @@ public class MetadataStarter extends LockssRunnable {
 	    // Yes: index it.
 	    toBeIndexed.add(au);
 	  }
-	} catch (SQLException sqle) {
-	  log.error("Cannot get AU metadata version: " + sqle);
+	} catch (DbException dbe) {
+	  log.error("Cannot get AU metadata version: " + dbe);
 	}
       }
     }
@@ -149,11 +150,11 @@ public class MetadataStarter extends LockssRunnable {
       mdManager.addToPendingAusIfNotThere(conn,
 	  (Collection<ArchivalUnit>) CollectionUtil
 	      .randomPermutation(toBeIndexed));
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
       log.debug2(DEBUG_HEADER + "Queue updated");
-    } catch (SQLException sqle) {
+    } catch (DbException dbe) {
       log.error("Cannot add to pending AUs table \"" + PENDING_AU_TABLE + "\"",
-		sqle);
+		dbe);
       DbManager.safeRollbackAndClose(conn);
       return;
     }
@@ -198,8 +199,8 @@ public class MetadataStarter extends LockssRunnable {
   	    // metadata database now. Otherwise it will be added through
   	    // auContentChanged() once the crawl has been completed.
   	    if (AuUtil.hasCrawled(au)) {
-  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
-  		  event.isInBatch());
+  	      mdManager.enableAndAddAuToReindex(au, conn,
+  		  insertPendingAuBatchStatement, event.isInBatch());
   	    }
 
   	    break;
@@ -212,8 +213,8 @@ public class MetadataStarter extends LockssRunnable {
   	    // it will be added through auContentChanged() once the crawl has
   	    // been completed.
   	    if (AuUtil.hasCrawled(au)) {
-  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
-  		  event.isInBatch());
+  	      mdManager.enableAndAddAuToReindex(au, conn,
+  		  insertPendingAuBatchStatement, event.isInBatch());
   	    }
 
   	    break;
@@ -223,14 +224,14 @@ public class MetadataStarter extends LockssRunnable {
   	    // A new version of the plugin has been loaded. Refresh the metadata
   	    // only if the feature version of the metadata extractor increased.
   	    if (mdManager.isAuMetadataForObsoletePlugin(au)) {
-  	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
-  		  event.isInBatch());
+  	      mdManager.enableAndAddAuToReindex(au, conn,
+  		  insertPendingAuBatchStatement, event.isInBatch());
   	    }
 
   	    break;
         }
-      } catch (SQLException sqle) {
-        log.error("Cannot reindex metadata for " + au.getName(), sqle);
+      } catch (DbException dbe) {
+        log.error("Cannot reindex metadata for " + au.getName(), dbe);
       } finally {
         DbManager.safeCloseStatement(insertPendingAuBatchStatement);
         DbManager.safeRollbackAndClose(conn);
@@ -278,10 +279,10 @@ public class MetadataStarter extends LockssRunnable {
 	      conn = dbManager.getConnection();
 	      insertPendingAuBatchStatement =
 		  mdManager.getInsertPendingAuBatchStatement(conn);
-	      mdManager.enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
-		  event.isInBatch());
-	    } catch (SQLException sqle) {
-	      log.error("Cannot reindex metadata for " + au.getName(), sqle);
+	      mdManager.enableAndAddAuToReindex(au, conn,
+		  insertPendingAuBatchStatement, event.isInBatch());
+	    } catch (DbException dbe) {
+	      log.error("Cannot reindex metadata for " + au.getName(), dbe);
 	    } finally {
 	      DbManager.safeCloseStatement(insertPendingAuBatchStatement);
 	      DbManager.safeRollbackAndClose(conn);

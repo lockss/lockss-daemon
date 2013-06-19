@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCounterReport.java,v 1.3 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: BaseCounterReport.java,v 1.4 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,6 +50,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
@@ -214,12 +215,12 @@ public abstract class BaseCounterReport implements CounterReport {
    * @param extension
    *          A String with the file extension to be used.
    * @return a File with the report output file.
-   * @throws SQLException
+   * @throws DbException
    * @throws IOException
    * @throws CounterReportsException
    */
   private File saveReport(String separator, String extension)
-      throws SQLException, IOException, CounterReportsException {
+      throws DbException, IOException, CounterReportsException {
     // Determine the report file name.
     CounterReportsManager reportManager = daemon.getCounterReportsManager();
     String fileName = getReportFileName(extension);
@@ -234,7 +235,7 @@ public abstract class BaseCounterReport implements CounterReport {
       if (!ready) {
 	try {
 	  compileReportData();
-	} catch (SQLException sqle) {
+	} catch (DbException dbe) {
 	  writer.close();
 
 	  // Delete the partially-written file.
@@ -244,7 +245,7 @@ public abstract class BaseCounterReport implements CounterReport {
 	  }
 
 	  // Notify the caller.
-	  throw sqle;
+	  throw dbe;
 	} catch (CounterReportsException cre) {
 	  writer.close();
 
@@ -304,10 +305,10 @@ public abstract class BaseCounterReport implements CounterReport {
   /**
    * Compiles the data needed by the report.
    * 
-   * @throws SQLException
+   * @throws DBException
    * @throws CounterReportsException
    */
-  private void compileReportData() throws SQLException, CounterReportsException {
+  private void compileReportData() throws DbException, CounterReportsException {
     final String DEBUG_HEADER = "compileReportData(): ";
 
     DbManager dbManager = daemon.getDbManager();
@@ -371,11 +372,10 @@ public abstract class BaseCounterReport implements CounterReport {
    * 
    * @param conn
    *          A Connection with a connection to the database.
-   * @return a List<Row> with the initialized rows to be included in the report.
    * @throws SQLException
    */
   protected abstract void initializeReportRows(Connection conn)
-      throws SQLException;
+      throws DbException;
 
   /**
    * Adds the request counts to the rows to be included in the report.
@@ -386,7 +386,7 @@ public abstract class BaseCounterReport implements CounterReport {
    * @throws CounterReportsException
    */
   protected abstract void addReportRequestCounts(Connection conn)
-      throws SQLException, CounterReportsException;
+      throws DbException, CounterReportsException;
 
   /**
    * Provides the name of the report to be used in the report file name.

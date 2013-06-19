@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.11 2013-06-04 23:51:15 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.12 2013-06-19 23:02:27 fergaloy-sf Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import org.lockss.app.LockssDaemon;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
@@ -214,12 +215,12 @@ public class AuMetadataRecorder {
    *          An Iterator<ArticleMetadataInfo> with the metadata.
    * @throws MetadataException
    *           if any problem is detected with the passed metadata.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public void recordMetadata(Connection conn,
       Iterator<ArticleMetadataInfo> mditr) throws MetadataException,
-      SQLException {
+      DbException {
     final String DEBUG_HEADER = "recordMetadata(): ";
 
     // Loop through the metadata for each article.
@@ -475,11 +476,11 @@ public class AuMetadataRecorder {
    *          An ArticleMetadataInfo providing the metadata.
    * @throws MetadataException
    *           if any problem is detected with the passed metadata.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void storeMetadata(Connection conn, ArticleMetadataInfo mdinfo)
-      throws MetadataException, SQLException {
+      throws MetadataException, DbException {
     final String DEBUG_HEADER = "storeMetadata(): ";
     if (log.isDebug3()) {
       log.debug3(DEBUG_HEADER + "Starting: auId = " + auId);
@@ -692,26 +693,30 @@ public class AuMetadataRecorder {
    *          A Long with the identifier of the archival unit metadata.
    * @param version
    *          A String with the archival unit metadata version.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void updateAuMd(Connection conn, Long auMdSeq, int version)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "updateAuMd(): ";
-    PreparedStatement updateAu =
-	dbManager.prepareStatement(conn, UPDATE_AU_MD_QUERY);
-
     try {
-      updateAu.setShort(1, (short) version);
-      updateAu.setLong(2, auMdSeq);
-      int count = dbManager.executeUpdate(updateAu);
+      PreparedStatement updateAu = dbManager.prepareStatement(conn,
+	  UPDATE_AU_MD_QUERY);
 
-      if (log.isDebug3()) {
-	log.debug3(DEBUG_HEADER + "count = " + count);
-	log.debug3(DEBUG_HEADER + "Updated auMdSeq = " + auMdSeq);
+      try {
+	updateAu.setShort(1, (short) version);
+	updateAu.setLong(2, auMdSeq);
+	int count = dbManager.executeUpdate(updateAu);
+
+	if (log.isDebug3()) {
+	  log.debug3(DEBUG_HEADER + "count = " + count);
+	  log.debug3(DEBUG_HEADER + "Updated auMdSeq = " + auMdSeq);
+	}
+      } finally {
+	updateAu.close();
       }
-    } finally {
-      updateAu.close();
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot update AU metadata version", sqle);
     }
   }
 
@@ -723,11 +728,11 @@ public class AuMetadataRecorder {
    *          A Connection with the connection to the database
    * @param mdinfo
    *          An ArticleMetadataInfo providing the metadata.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void updateOrCreateMdItem(Connection conn, ArticleMetadataInfo mdinfo)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "updateOrCreateMdItem(): ";
 
     // Get the publication date received in the metadata.
@@ -907,28 +912,33 @@ public class AuMetadataRecorder {
    * @param mdItemSeq
    *          A Long with the identifier of the metadata item.
    * @return a String with the name of the type of the metadata item.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private String getMdItemTypeName(Connection conn, Long mdItemSeq)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "getMdItemTypeName(): ";
     String typeName = null;
-    PreparedStatement getMdItemTypeName =
-	dbManager.prepareStatement(conn, GET_MD_ITEM_TYPE_NAME_QUERY);
-    ResultSet resultSet = null;
 
     try {
-      getMdItemTypeName.setLong(1, mdItemSeq);
-      resultSet = dbManager.executeQuery(getMdItemTypeName);
+      PreparedStatement getMdItemTypeName = dbManager.prepareStatement(conn,
+	  GET_MD_ITEM_TYPE_NAME_QUERY);
+      ResultSet resultSet = null;
 
-      if (resultSet.next()) {
-	typeName = resultSet.getString(TYPE_NAME_COLUMN);
-	log.debug3(DEBUG_HEADER + "typeName = " + typeName);
+      try {
+	getMdItemTypeName.setLong(1, mdItemSeq);
+	resultSet = dbManager.executeQuery(getMdItemTypeName);
+
+	if (resultSet.next()) {
+	  typeName = resultSet.getString(TYPE_NAME_COLUMN);
+	  log.debug3(DEBUG_HEADER + "typeName = " + typeName);
+	}
+      } finally {
+	DbManager.safeCloseResultSet(resultSet);
+	getMdItemTypeName.close();
       }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      getMdItemTypeName.close();
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot get a metadata item type name", sqle);
     }
 
     return typeName;
@@ -943,30 +953,34 @@ public class AuMetadataRecorder {
    *          A Long with the metadata item identifier.
    * @param doi
    *          A String with the metadata item DOI.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void updateMdItemDoi(Connection conn, Long mdItemSeq, String doi)
-      throws SQLException {
+      throws DbException {
     if (StringUtil.isNullString(doi)) {
       return;
     }
 
-    PreparedStatement findMdItemDoi =
-	dbManager.prepareStatement(conn, FIND_MD_ITEM_DOI_QUERY);
-
-    ResultSet resultSet = null;
-
     try {
-      findMdItemDoi.setLong(1, mdItemSeq);
-      resultSet = dbManager.executeQuery(findMdItemDoi);
+      PreparedStatement findMdItemDoi = dbManager.prepareStatement(conn,
+	  FIND_MD_ITEM_DOI_QUERY);
 
-      if (!resultSet.next()) {
-	mdManager.addMdItemDoi(conn, mdItemSeq, doi);
+      ResultSet resultSet = null;
+
+      try {
+	findMdItemDoi.setLong(1, mdItemSeq);
+	resultSet = dbManager.executeQuery(findMdItemDoi);
+
+	if (!resultSet.next()) {
+	  mdManager.addMdItemDoi(conn, mdItemSeq, doi);
+	}
+      } finally {
+	DbManager.safeCloseResultSet(resultSet);
+	findMdItemDoi.close();
       }
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      findMdItemDoi.close();
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot update AU metadata version", sqle);
     }
   }
 
@@ -988,27 +1002,32 @@ public class AuMetadataRecorder {
    * @param itemNo
    *          A String with the bibliographic item number.
    * @return an int with the number of database rows updated.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int updateBibItem(Connection conn, Long mdItemSeq, String volume,
       String issue, String startPage, String endPage, String itemNo)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "updateBibItem(): ";
     int updatedCount = 0;
-    PreparedStatement updateBibItem =
-	dbManager.prepareStatement(conn, UPDATE_BIB_ITEM_QUERY);
 
     try {
-      updateBibItem.setString(1, volume);
-      updateBibItem.setString(2, issue);
-      updateBibItem.setString(3, startPage);
-      updateBibItem.setString(4, endPage);
-      updateBibItem.setString(5, itemNo);
-      updateBibItem.setLong(6, mdItemSeq);
-      updatedCount = dbManager.executeUpdate(updateBibItem);
-    } finally {
-      DbManager.safeCloseStatement(updateBibItem);
+      PreparedStatement updateBibItem = dbManager.prepareStatement(conn,
+	  UPDATE_BIB_ITEM_QUERY);
+
+      try {
+	updateBibItem.setString(1, volume);
+	updateBibItem.setString(2, issue);
+	updateBibItem.setString(3, startPage);
+	updateBibItem.setString(4, endPage);
+	updateBibItem.setString(5, itemNo);
+	updateBibItem.setLong(6, mdItemSeq);
+	updatedCount = dbManager.executeUpdate(updateBibItem);
+      } finally {
+	DbManager.safeCloseStatement(updateBibItem);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot update bibliographic item", sqle);
     }
 
     log.debug3(DEBUG_HEADER + "updatedCount = " + updatedCount);
@@ -1033,27 +1052,32 @@ public class AuMetadataRecorder {
    * @param itemNo
    *          A String with the bibliographic item number.
    * @return an int with the number of database rows inserted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int addBibItem(Connection conn, Long mdItemSeq, String volume,
       String issue, String startPage, String endPage, String itemNo)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "addBibItem(): ";
     int addedCount = 0;
-    PreparedStatement insertBibItem =
-	dbManager.prepareStatement(conn, INSERT_BIB_ITEM_QUERY);
 
     try {
-      insertBibItem.setLong(1, mdItemSeq);
-      insertBibItem.setString(2, volume);
-      insertBibItem.setString(3, issue);
-      insertBibItem.setString(4, startPage);
-      insertBibItem.setString(5, endPage);
-      insertBibItem.setString(6, itemNo);
-      addedCount = dbManager.executeUpdate(insertBibItem);
-    } finally {
-      DbManager.safeCloseStatement(insertBibItem);
+      PreparedStatement insertBibItem = dbManager.prepareStatement(conn,
+	  INSERT_BIB_ITEM_QUERY);
+
+      try {
+	insertBibItem.setLong(1, mdItemSeq);
+	insertBibItem.setString(2, volume);
+	insertBibItem.setString(3, issue);
+	insertBibItem.setString(4, startPage);
+	insertBibItem.setString(5, endPage);
+	insertBibItem.setString(6, itemNo);
+	addedCount = dbManager.executeUpdate(insertBibItem);
+      } finally {
+	DbManager.safeCloseStatement(insertBibItem);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot add bibliographic item", sqle);
     }
 
     log.debug3(DEBUG_HEADER + "addedCount = " + addedCount);
@@ -1106,11 +1130,11 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param problems
    *          A List<String> with the recorded problems for the Archival Unit.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublishersAuData(Connection conn,
-      List<String> problems) throws SQLException {
+      List<String> problems) throws DbException {
     final String DEBUG_HEADER = "fixUnknownPublishersAuData(): ";
     log.debug3(DEBUG_HEADER + "Starting...");
 
@@ -1134,11 +1158,11 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param unknownPublisherName
    *          A String with the name of the unknown publisher.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublisherAuData(Connection conn,
-      String unknownPublisherName) throws SQLException {
+      String unknownPublisherName) throws DbException {
     final String DEBUG_HEADER = "fixUnknownPublisherAuData(): ";
     log.debug3(DEBUG_HEADER + "unknownPublisherName = " + unknownPublisherName);
 
@@ -1217,12 +1241,12 @@ public class AuMetadataRecorder {
    * @param mdItemMapByName
    *          A Map<String, Long> with a map of the current publication metadata
    *          items by their names.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublisherPublicationMetadata(Connection conn,
       Long unknownPublicationSeq, Map<String, Long> mdItemMapByName)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "fixUnknownPublisherPublicationMetadata(): ";
     log.debug3(DEBUG_HEADER + "unknownPublicationSeq = "
 	+ unknownPublicationSeq);
@@ -1284,11 +1308,11 @@ public class AuMetadataRecorder {
    *          A Connection with the database connection to be used.
    * @param unknownPublicationSeq
    *          A Long with the identifier of the publication.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void fixUnknownPublisherPublicationCounterReportsData(Connection conn,
-      Long unknownPublicationSeq)throws SQLException {
+      Long unknownPublicationSeq)throws DbException {
     final String DEBUG_HEADER =
 	"fixUnknownPublisherPublicationCounterReportsData(): ";
     log.debug3(DEBUG_HEADER + "unknownPublicationSeq = "
@@ -1334,11 +1358,11 @@ public class AuMetadataRecorder {
    * @param publicationSeq
    *          A Long with the publication identifier.
    * @return an int with the number of rows deleted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int removeUnknownPublisherPublicationMdItem(Connection conn,
-      Long publicationSeq) throws SQLException {
+      Long publicationSeq) throws DbException {
     final String DEBUG_HEADER = "removeUnknownPublisherPublicationMdItem(): ";
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     int count = 0;
@@ -1346,19 +1370,21 @@ public class AuMetadataRecorder {
     if (publicationSeq != null) {
       log.debug3(DEBUG_HEADER + "SQL = '"
 	  + DELETE_UNKNOWN_PUBLISHER_PUBLICATION_MD_ITEM_QUERY + "'.");
-      PreparedStatement deleteMdItem = dbManager.prepareStatement(conn,
-	  DELETE_UNKNOWN_PUBLISHER_PUBLICATION_MD_ITEM_QUERY);
+      PreparedStatement deleteMdItem = null;
 
       try {
+	deleteMdItem = dbManager.prepareStatement(conn,
+	    DELETE_UNKNOWN_PUBLISHER_PUBLICATION_MD_ITEM_QUERY);
 	deleteMdItem.setLong(1, publicationSeq);
 	deleteMdItem.setLong(2, publicationSeq);
 	count = dbManager.executeUpdate(deleteMdItem);
       } catch (SQLException sqle) {
 	log.error("Cannot delete an unknown publisher publication", sqle);
 	log.error("publicationSeq = " + publicationSeq);
-	log.error("SQL = '" + DELETE_UNKNOWN_PUBLISHER_PUBLICATION_MD_ITEM_QUERY
-	    + "'.");
-	throw sqle;
+	log.error("SQL = '"
+	    + DELETE_UNKNOWN_PUBLISHER_PUBLICATION_MD_ITEM_QUERY + "'.");
+	throw new DbException("Cannot delete an unknown publisher publication",
+	    sqle);
       } finally {
 	DbManager.safeCloseStatement(deleteMdItem);
       }
@@ -1376,11 +1402,11 @@ public class AuMetadataRecorder {
    * @param publicationSeq
    *          A Long with the publication identifier.
    * @return an int with the number of rows deleted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int removeUnknownPublisherPublication(Connection conn,
-      Long publicationSeq) throws SQLException {
+      Long publicationSeq) throws DbException {
     final String DEBUG_HEADER = "removeUnknownPublisherPublication(): ";
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     int count = 0;
@@ -1388,10 +1414,11 @@ public class AuMetadataRecorder {
     if (publicationSeq != null) {
       log.debug3(DEBUG_HEADER + "SQL = '"
 	  + DELETE_UNKNOWN_PUBLISHER_PUBLICATION_QUERY + "'.");
-      PreparedStatement deletePublication = dbManager.prepareStatement(conn,
-	  DELETE_UNKNOWN_PUBLISHER_PUBLICATION_QUERY);
+      PreparedStatement deletePublication = null;
 
       try {
+	deletePublication = dbManager.prepareStatement(conn,
+	    DELETE_UNKNOWN_PUBLISHER_PUBLICATION_QUERY);
 	deletePublication.setLong(1, publicationSeq);
 	deletePublication.setLong(2, publicationSeq);
 	count = dbManager.executeUpdate(deletePublication);
@@ -1400,7 +1427,8 @@ public class AuMetadataRecorder {
 	log.error("publicationSeq = " + publicationSeq);
 	log.error("SQL = '" + DELETE_UNKNOWN_PUBLISHER_PUBLICATION_QUERY
 	    + "'.");
-	throw sqle;
+	throw new DbException("Cannot delete an unknown publisher publication",
+	    sqle);
       } finally {
 	DbManager.safeCloseStatement(deletePublication);
       }
@@ -1418,11 +1446,11 @@ public class AuMetadataRecorder {
    * @param publisherName
    *          A String with the publisher name.
    * @return an int with the number of rows deleted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int removeUnknownPublisher(Connection conn,
-      String publisherName) throws SQLException {
+      String publisherName) throws DbException {
     final String DEBUG_HEADER = "removeUnknownPublisherPublication(): ";
     log.debug3(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
     int count = 0;
@@ -1431,10 +1459,11 @@ public class AuMetadataRecorder {
 	&& publisherName.startsWith(UNKNOWN_PUBLISHER_AU_PROBLEM)) {
       log.debug3(DEBUG_HEADER + "SQL = '"
 	  + DELETE_UNKNOWN_PUBLISHER_QUERY + "'.");
-      PreparedStatement deletePublisher = dbManager.prepareStatement(conn,
-	  DELETE_UNKNOWN_PUBLISHER_QUERY);
+      PreparedStatement deletePublisher = null;
 
       try {
+	deletePublisher =
+	    dbManager.prepareStatement(conn, DELETE_UNKNOWN_PUBLISHER_QUERY);
 	deletePublisher.setString(1, publisherName);
 	count = dbManager.executeUpdate(deletePublisher);
       } catch (SQLException sqle) {
@@ -1442,7 +1471,7 @@ public class AuMetadataRecorder {
 	log.error("publisherName = " + publisherName);
 	log.error("SQL = '" + DELETE_UNKNOWN_PUBLISHER_QUERY
 	    + "'.");
-	throw sqle;
+	throw new DbException("Cannot delete an unknown publisher", sqle);
       } finally {
 	DbManager.safeCloseStatement(deletePublisher);
       }
