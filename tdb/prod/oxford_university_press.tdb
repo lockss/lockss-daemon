@@ -19673,6 +19673,34 @@
     au < exists ; 1983 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 77 ; 77 >
     au < exists ; 1984 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 78 ; 78 >
     au < exists ; 1985 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 79 ; 79 >
+    au < exists ; 1986 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 80 ; 80 >
+    au < exists ; 1988 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 81 ; 81 >
+    au < exists ; 1989 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 82 ; 82 >
+    au < exists ; 1989 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 83 ; 83 >
+    au < exists ; 1990 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 84 ; 84 >
+    au < exists ; 1991 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 85 ; 85 >
+    au < exists ; 1992 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 86 ; 86 >
+    au < exists ; 1993 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 87 ; 87 >
+    au < exists ; 1994 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 88 ; 88 >
+    au < exists ; 1995 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 89 ; 89 >
+    au < exists ; 1996 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 90 ; 90 >
+    au < exists ; 1998 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 91 ; 91 >
+    au < exists ; 1999 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 92 ; 92 >
+    au < exists ; 1999 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 93 ; 93 >
+    au < exists ; 2000 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 94 ; 94 >
+    au < exists ; 2001 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 95 ; 95 >
+    au < exists ; 2002 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 96 ; 96 >
+    au < exists ; 2003 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 97 ; 97 >
+    au < exists ; 2004 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 98 ; 98 >
+    au < exists ; 2005 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 99 ; 99 >
+    au < exists ; 2006 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 100 ; 100 >
+    au < exists ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 >
+    au < exists ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 >
+    au < exists ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 >
+    au < exists ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 >
+    au < exists ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 >
+    au < exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 >
+    au < exists ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 >
 
   }
 
@@ -19841,7 +19869,24 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2013 ; Uniform Law Review Volume 1 ; 1 >
+    au < exists ; 1996 ; Uniform Law Review Volume 1 ; 1 >
+    au < exists ; 1997 ; Uniform Law Review Volume 2 ; 2 >
+    au < exists ; 1998 ; Uniform Law Review Volume 3 ; 3 >
+    au < exists ; 1999 ; Uniform Law Review Volume 4 ; 4 >
+    au < exists ; 2000 ; Uniform Law Review Volume 5 ; 5 >
+    au < exists ; 2001 ; Uniform Law Review Volume 6 ; 6 >
+    au < exists ; 2002 ; Uniform Law Review Volume 7 ; 7 >
+    au < exists ; 2003 ; Uniform Law Review Volume 8 ; 8 >
+    au < exists ; 2004 ; Uniform Law Review Volume 9 ; 9 >
+    au < exists ; 2005 ; Uniform Law Review Volume 10 ; 10 >
+    au < exists ; 2006 ; Uniform Law Review Volume 11 ; 11 >
+    au < exists ; 2007 ; Uniform Law Review Volume 12 ; 12 >
+    au < exists ; 2008 ; Uniform Law Review Volume 13 ; 13 >
+    au < exists ; 2009 ; Uniform Law Review Volume 14 ; 14 >
+    au < exists ; 2010 ; Uniform Law Review Volume 15 ; 15 >
+    au < exists ; 2011 ; Uniform Law Review Volume 16 ; 16 >
+    au < exists ; 2012 ; Uniform Law Review Volume 17 ; 17 >
+    au < exists ; 2013 ; Uniform Law Review Volume 18 ; 18 >
 
     }
 
@@ -20348,8 +20393,7 @@
 
     {
 
-      au < expected ; 2012 ; London Review of International Law Volume 1 ; 1 >
-      au < expected ; 2013 ; London Review of International Law Volume 2 ; 2 >
+      au < expected ; 2013 ; London Review of International Law Volume 1 ; 1 >
 
     }
 
@@ -20369,7 +20413,7 @@
 
     {
 
-      au < expected ; 2013 ; Migration Studies Volume 1 ; 1 >
+      au < exists ; 2013 ; Migration Studies Volume 1 ; 1 >
 
     }
 
@@ -20553,7 +20597,7 @@
 
     {
 
-      au < expected ; 2013 ; Conservation Physiology Volume 1 ; 1 >
+      au < exists ; 2013 ; Conservation Physiology Volume 1 ; 1 >
 
     }
 
