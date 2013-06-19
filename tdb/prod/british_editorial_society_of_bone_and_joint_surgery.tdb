@@ -46,11 +46,13 @@
       issnl = 0021-9355
     >
     
+    comment[continued_by] = The Bone & Joint Journal, ISSN: 2049-4394, eISSN: 2049-4408 as of Jan 1 2013
+    
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[manifests] = all links go to base_url http://web.jbjs.org.uk/. journal home page is at http://www.jbjs.boneandjoint.org.uk 
+    comment[manifests] = all links go to base_url http://www.bjj.boneandjoint.org.uk/. journal homepage is at http://www.jbjs.boneandjoint.org.uk 
 
     au < manifest ; 1948 ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30-B >
     au < manifest ; 1949 ; Journal of Bone & Joint Surgery, British Volume Volume 31 ; 31-B >
@@ -116,6 +118,25 @@
     au < testing ; 2009 ; Journal of Bone & Joint Surgery, British Volume Volume 91 ; 91-B >
     au < testing ; 2010 ; Journal of Bone & Joint Surgery, British Volume Volume 92 ; 92-B >
     au < testing ; 2011 ; Journal of Bone & Joint Surgery, British Volume Volume 93 ; 93-B >
+    au < exists ; 2012 ; Journal of Bone & Joint Surgery, British Volume Volume 94 ; 94-B >
+
+  }
+
+  {
+  
+    title <
+      name = The Bone & Joint Journal ;
+      issn = 2049-4394 ;
+      eissn = 2049-4408
+    >
+    
+    comment[continued_from] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.bjj.boneandjoint.org.uk/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
 
   }
 
