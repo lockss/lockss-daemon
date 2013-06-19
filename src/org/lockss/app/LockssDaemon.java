@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.120 2013-05-22 23:59:24 fergaloy-sf Exp $
+ * $Id: LockssDaemon.java,v 1.121 2013-06-19 23:08:26 fergaloy-sf Exp $
  */
 
 /*
@@ -185,6 +185,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // Start the COUNTER reports manager.
     new ManagerDesc(COUNTER_REPORTS_MANAGER,
 	"org.lockss.exporter.counter.CounterReportsManager"),
+    // Start the subscription manager.
+    new ManagerDesc(SUBSCRIPTION_MANAGER,
+	"org.lockss.subscription.SubscriptionManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
     // enabled or not (through ServletDescr.isEnabled()) need to appear before
     // the AdminServletManager on the next line.
@@ -224,9 +227,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       public boolean shouldStart() {
         return isClockss();
       }},
-    // Start the subscription manager.
-    new ManagerDesc(SUBSCRIPTION_MANAGER,
-	"org.lockss.subscription.SubscriptionManager"),
     // watchdog last
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE)
   };

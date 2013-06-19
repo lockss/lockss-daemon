@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.52 2013-05-28 16:32:07 fergaloy-sf Exp $
+ * $Id: BatchAuConfig.java,v 1.53 2013-06-19 23:08:26 fergaloy-sf Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.*;
-import java.sql.SQLException;
 import java.util.*;
 import java.util.List;
 
@@ -44,6 +43,7 @@ import org.apache.commons.collections.map.LinkedMap;
 import org.apache.commons.lang.mutable.*;
 import org.lockss.config.*;
 import org.lockss.daemon.TitleSet;
+import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
@@ -246,37 +246,41 @@ public class BatchAuConfig extends LockssServlet {
                                null,
                                "Add, Edit or Delete an individual AU"));
 
-    // Add titles to subscription management.
-    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-			       SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
-                               ACTION
-                               + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
-                               SubscriptionManagement.SHOW_ADD_PAGE_HELP_TEXT));
+    // Check whether to show the subscriptions links.
+    if (subManager.isReady()) {
+      // Yes: Add titles to subscription management.
+      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	  			 SubscriptionManagement.SHOW_ADD_PAGE_LINK_TEXT,
+	  			 ACTION
+	  			 + SubscriptionManagement.SHOW_ADD_PAGE_ACTION,
+	  			 SubscriptionManagement
+	  			 .SHOW_ADD_PAGE_HELP_TEXT));
 
-    // Only show the update link if there are subscriptions already.
-    try {
-      if (subManager.countSubscribedPublications() > 0) {
-	// Add titles to subscription management.
-	list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-	    			   SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_LINK_TEXT,
-	    			   ACTION + SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_ACTION,
-	    			   SubscriptionManagement
-	    			   .SHOW_UPDATE_PAGE_HELP_TEXT));
+      // Only show the update link if there are subscriptions already.
+      try {
+	if (subManager.countSubscribedPublications() > 0) {
+	  // Add titles to subscription management.
+	  list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	      			     SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_LINK_TEXT,
+	      			     ACTION + SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_ACTION,
+	      			     SubscriptionManagement
+	      			     .SHOW_UPDATE_PAGE_HELP_TEXT));
+	}
+      } catch (DbException dbe) {
+	log.error("Error counting subscribedPublications", dbe);
       }
-    } catch (SQLException sqle) {
-      log.error("Error counting subscribedPublications", sqle);
-    }
 
-    // Add titles to subscription management.
-    list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
-			       SubscriptionManagement
-			       .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
-                               ACTION + SubscriptionManagement
-                               .AUTO_ADD_SUBSCRIPTIONS_ACTION,
-                               SubscriptionManagement
-                               .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
+      // Add titles to subscription management.
+      list.add(getMenuDescriptor(AdminServletManager.SERVLET_SUB_MANAGEMENT,
+	  			 SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_LINK_TEXT,
+	  			 ACTION + SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_ACTION,
+	  			 SubscriptionManagement
+	  			 .AUTO_ADD_SUBSCRIPTIONS_HELP_TEXT));
+    }
 
     return list.iterator();
   }

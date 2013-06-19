@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.3 2013-06-04 23:21:30 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.4 2013-06-19 23:08:26 fergaloy-sf Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ package org.lockss.subscription;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -52,6 +51,7 @@ import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.Tdb.TdbException;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.PluginManager;
@@ -89,6 +89,7 @@ public class TestSubscriptionManager extends LockssTestCase {
     props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
 		      tempDirPath);
+    props.setProperty(SubscriptionManager.PARAM_SUBSCRIPTION_ENABLED, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = getMockLockssDaemon();
@@ -502,7 +503,7 @@ public class TestSubscriptionManager extends LockssTestCase {
    * Check the behavior of configureAus().
    */
   public final void testConfigureAus()
-      throws TdbException, IOException, SQLException, SubscriptionException {
+      throws TdbException, IOException, DbException, SubscriptionException {
     // Specify the relevant properties of the archival unit.
     Properties properties = new Properties();
     properties.setProperty("title", "MyTitle");

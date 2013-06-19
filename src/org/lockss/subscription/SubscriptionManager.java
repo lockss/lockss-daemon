@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.6 2013-06-04 23:21:30 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.7 2013-06-19 23:08:26 fergaloy-sf Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
+import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.metadata.MetadataManager;
@@ -83,8 +84,21 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   private static final Logger log = Logger.getLogger(SubscriptionManager.class);
 
   // Prefix for the subscription manager configuration entries.
-  private static final String PREFIX =
-      Configuration.PREFIX + "subscriptionManager.";
+  private static final String PREFIX = Configuration.PREFIX + "subscription.";
+
+  /**
+   * Indication of whether the subscription subsystem should be enabled.
+   * <p />
+   * Defaults to false. Changes require daemon restart.
+   */
+  public static final String PARAM_SUBSCRIPTION_ENABLED = PREFIX + "enabled";
+
+  /**
+   * Default value of subscription subsystem operation configuration parameter.
+   * <p />
+   * <code>false</code> to disable, <code>true</code> to enable.
+   */
+  public static final boolean DEFAULT_SUBSCRIPTION_ENABLED = false;
 
   /**
    * Maximum number of retries for transient SQL exceptions.
@@ -300,6 +314,15 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "startService(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    // Do nothing more if subscriptions are disabled.
+    if (!ConfigManager.getCurrentConfig()
+	.getBoolean(PARAM_SUBSCRIPTION_ENABLED, DEFAULT_SUBSCRIPTION_ENABLED)) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Subscriptions are disabled.");
+      ready = false;
+      return;
+    }
+
     // Do nothing more if it is already initialized.
     if (ready) {
       return;
@@ -330,6 +353,15 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       Configuration.Differences changedKeys) {
     final String DEBUG_HEADER = "setConfig(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Do nothing more if subscriptions are disabled.
+    if (!newConfig.getBoolean(PARAM_SUBSCRIPTION_ENABLED,
+			      DEFAULT_SUBSCRIPTION_ENABLED)) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Subscriptions are disabled.");
+      ready = false;
+      return;
+    }
 
     // Force a re-calculation of the relative weights of the repositories.
     repositories = null;
@@ -373,6 +405,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "handleConfigurationChange(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
+    // Sanity check.
+    if (dbManager == null || !dbManager.isReady()) {
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "DbManager is not ready.");
+      return;
+    }
+
     Connection conn = null;
     boolean isFirstRun = false;
     String message = "Cannot connect to database";
@@ -388,8 +426,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       isFirstRun = countUnconfiguredAus(conn) == 0;
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "isFirstRun = " + isFirstRun);
-    } catch (SQLException sqle) {
-      log.error(message, sqle);
+    } catch (DbException dbe) {
+      log.error(message, dbe);
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
       return;
     }
@@ -416,9 +454,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
 	  // Process the archival unit.
 	  processNewTdbAu(tdbAu, conn, isFirstRun, config);
-	  conn.commit();
-	} catch (SQLException sqle) {
-	  log.error("Error handling archival unit " + tdbAu, sqle);
+	  DbManager.commitOrRollback(conn, log);
+	} catch (DbException dbe) {
+	  log.error("Error handling archival unit " + tdbAu, dbe);
 	  conn.rollback();
 	} catch (RuntimeException re) {
 	  log.error("Error handling archival unit " + tdbAu, re);
@@ -448,10 +486,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param conn
    *          A Connection with the database connection to be used.
    * @return a long with the count of recorded unconfigured archival units.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private long countUnconfiguredAus(Connection conn) throws SQLException {
+  private long countUnconfiguredAus(Connection conn) throws DbException {
     final String DEBUG_HEADER = "countUnconfiguredAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -469,7 +507,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot count unconfigured archival units", sqle);
       log.error("SQL = '" + UNCONFIGURED_AU_COUNT_QUERY + "'.");
-      throw sqle;
+      throw new DbException("Cannot count unconfigured archival units", sqle);
     } finally {
       DbManager.safeCloseResultSet(results);
       DbManager.safeCloseStatement(unconfiguredAu);
@@ -492,11 +530,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          subscription manager, <code>false</code> otherwise.
    * @param config
    *          A Configuration to which to add the archival unit configuration.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void processNewTdbAu(TdbAu tdbAu, Connection conn, boolean isFirstRun,
-      Configuration config) throws SQLException {
+      Configuration config) throws DbException {
     final String DEBUG_HEADER = "processNewTdbAu(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "tdbAu = " + tdbAu);
@@ -596,11 +634,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A String with the Archival Unit identifier.
    * @return a boolean with <code>true</code> if the Archival Unit is in the
    *         UNCONFIGURED_AU table, <code>false</code> otherwise.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private boolean isAuInUnconfiguredAuTable(Connection conn, String auId)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "isAuInUnconfiguredAuTable(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
 
@@ -627,7 +665,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot find archival unit in unconfigured table", sqle);
       log.error("SQL = '" + FIND_UNCONFIGURED_AU_COUNT_QUERY + "'.");
       log.error("auId = " + auId);
-      throw sqle;
+      throw new DbException("Cannot find archival unit in unconfigured table",
+	  sqle);
     } finally {
       DbManager.safeCloseResultSet(results);
       DbManager.safeCloseStatement(unconfiguredAu);
@@ -670,12 +709,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param unsubscribedRanges
    *          A Collection<BibliographicPeriod> to be populated with the title
    *          unsubscribed ranges, if any.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void populateTitleSubscriptionRanges(Connection conn, TdbTitle title,
       Collection<BibliographicPeriod> subscribedRanges,
-      Collection<BibliographicPeriod> unsubscribedRanges) throws SQLException {
+      Collection<BibliographicPeriod> unsubscribedRanges) throws DbException {
     final String DEBUG_HEADER = "populateTitleSubscriptionRanges(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "title = " + title);
 
@@ -856,11 +895,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param auId
    *          A String with the AU identifier.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void removeFromUnconfiguredAus(Connection conn, String auId)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "removeFromUnconfiguredAus(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
     PreparedStatement deleteUnconfiguredAu =
@@ -880,7 +919,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot remove AU from unconfigured table", sqle);
       log.error("SQL = '" + DELETE_UNCONFIGURED_AU_QUERY + "'.");
       log.error("auId = '" + auId + "'.");
-      throw sqle;
+      throw new DbException("Cannot remove AU from unconfigured table", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteUnconfiguredAu);
     }
@@ -895,11 +934,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param auId
    *          A String with the Archival Unit identifier.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public void persistUnconfiguredAu(Connection conn, String auId)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
     PreparedStatement insertUnconfiguredAu = null;
@@ -921,7 +960,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot insert archival unit in unconfigured table", sqle);
       log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
       log.error("auId = " + auId);
-      throw sqle;
+      throw new DbException("Cannot insert archival unit in unconfigured table",
+	  sqle);
     } finally {
       DbManager.safeCloseStatement(insertUnconfiguredAu);
     }
@@ -983,11 +1023,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param platformSeq
    *          A Long with the identifier of the platform.
    * @return a Long with the identifier of the subscription.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long findSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws SQLException {
+      Long platformSeq) throws DbException {
     final String DEBUG_HEADER = "findSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
@@ -1013,7 +1053,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("SQL = '" + FIND_SUBSCRIPTION_QUERY + "'.");
       log.error("publicationSeq = " + publicationSeq);
       log.error("platformSeq = " + platformSeq);
-      throw sqle;
+      throw new DbException("Cannot find subscription", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(findSubscription);
@@ -1036,12 +1076,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          provided.
    * @return a Collection<BibliographicPeriod> with the ranges for the
    *         subscription.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Collection<BibliographicPeriod> findSubscriptionRanges(
       Connection conn, Long subscriptionSeq, boolean subscribed)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "findSubscriptionsRanges(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1073,7 +1113,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("SQL = '" + query + "'.");
       log.error("subscriptionSeq = " + subscriptionSeq);
       log.error("subscribed = " + subscribed);
-      throw sqle;
+      throw new DbException("Cannot get ranges", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getSubscriptionRanges);
@@ -1099,9 +1139,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     try {
       conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot obtain a database connection", sqle);
-      status.addStatusEntry(null, false, sqle.getMessage(), null);
+    } catch (DbException dbe) {
+      log.error("Cannot obtain a database connection", dbe);
+      status.addStatusEntry(null, false, dbe.getMessage(), null);
       return status;
     }
 
@@ -1207,15 +1247,15 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       }
 
       // Finalize all the subscription changes for this title.
-      conn.commit();
+      DbManager.commitOrRollback(conn, log);
 
       // Report the success back to the caller.
       status.addStatusEntry(name, null);
-    } catch (SQLException sqle) {
+    } catch (DbException dbe) {
       // Report the failure back to the caller.
       log.error("Cannot add/update subscription to title with Id = "
-	  + title.getId(), sqle);
-      status.addStatusEntry(name, false, sqle.getMessage(), null);
+	  + title.getId(), dbe);
+      status.addStatusEntry(name, false, dbe.getMessage(), null);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1320,12 +1360,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          units.
    * @param conn
    *          A Connection with the database connection to be used.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void subscribePublicationPlatformConfiguredAus(Long publicationSeq,
       String platform, Collection<BibliographicPeriod> periods, Connection conn)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "subscribePublicationPlatformConfiguredAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
@@ -1426,11 +1466,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param platformSeq
    *          A Long with the identifier of the platform.
    * @return a Long with the identifier of the subscription.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long findOrCreateSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws SQLException {
+      Long platformSeq) throws DbException {
     final String DEBUG_HEADER = "findOrCreateSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
@@ -1467,11 +1507,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscribed
    *          A boolean with the indication of whether the LOCKSS installation
    *          is subscribed to the publication range or not.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int persistSubscriptionRange(Connection conn, Long subscriptionSeq,
-      BibliographicPeriod range, boolean subscribed) throws SQLException {
+      BibliographicPeriod range, boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "persistSubscriptionRange(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1503,7 +1543,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("subscriptionSeq = " + subscriptionSeq);
       log.error("range = " + range);
       log.error("subscribed = " + subscribed);
-      throw sqle;
+      throw new DbException("Cannot insert subscription range", sqle);
     } finally {
       DbManager.safeCloseStatement(insertSubscriptionRange);
     }
@@ -1524,11 +1564,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscribed
    *          A boolean with the indication of whether the LOCKSS installation
    *          is subscribed to the publication range or not.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void deleteSubscriptionRange(Connection conn, Long subscriptionSeq,
-      BibliographicPeriod range, boolean subscribed) throws SQLException {
+      BibliographicPeriod range, boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "deleteSubscriptionRange(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1553,7 +1593,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("subscriptionSeq = " + subscriptionSeq);
       log.error("range = " + range);
       log.error("subscribed = " + subscribed);
-      throw sqle;
+      throw new DbException("Cannot delete subscription range", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteSubscriptionRange);
     }
@@ -1572,11 +1612,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A boolean with the indication of whether the LOCKSS installation
    *          is subscribed to the publication range or not.
    * @return an int with the number of deleted rows.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int deleteSubscriptionTypeRanges(Connection conn,
-      Long subscriptionSeq, boolean subscribed) throws SQLException {
+      Long subscriptionSeq, boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "deleteSubscriptionTypeRanges(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1598,7 +1638,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("SQL = '" + DELETE_ALL_SUBSCRIPTION_RANGES_TYPE_QUERY + "'.");
       log.error("subscriptionSeq = " + subscriptionSeq);
       log.error("subscribed = " + subscribed);
-      throw sqle;
+      throw new DbException("Cannot delete subscription range", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteSubscriptionRange);
     }
@@ -1617,11 +1657,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param platformSeq
    *          A Long with the identifier of the platform.
    * @return a Long with the identifier of the subscription just added.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private Long persistSubscription(Connection conn, Long publicationSeq,
-      Long platformSeq) throws SQLException {
+      Long platformSeq) throws DbException {
     final String DEBUG_HEADER = "persistSubscription(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
@@ -1657,7 +1697,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("SQL = '" + INSERT_SUBSCRIPTION_QUERY + "'.");
       log.error("publicationSeq = " + publicationSeq);
       log.error("platformSeq = " + platformSeq);
-      throw sqle;
+      throw new DbException("Cannot insert subscription", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(insertSubscription);
@@ -1673,11 +1713,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * 
    * @return a List<Subscription> with all the subscriptions and their ranges in
    *         the system.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public List<Subscription> findAllSubscriptionsAndRanges()
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "findAllSubscriptionsAndRanges(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1691,15 +1731,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     Subscription subscription = new Subscription();
     List<Subscription> subscriptions = new ArrayList<Subscription>();
 
-    Connection conn = null;
-
-    try {
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database", sqle);
-      throw sqle;
-    }
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
 
     String query = FIND_ALL_SUBSCRIPTIONS_AND_RANGES_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
@@ -1787,7 +1820,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot get existing subscriptions", sqle);
       log.error("SQL = '" + query + "'.");
-      throw sqle;
+      throw new DbException("Cannot get existing subscriptions", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getAllSubscriptionRanges);
@@ -1802,24 +1835,17 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * Provides a count of the publications with subscriptions.
    *
    * @return a long with the count of the publications with subscriptions.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public long countSubscribedPublications() throws SQLException {
+  public long countSubscribedPublications() throws DbException {
     final String DEBUG_HEADER = "countSubscribedPublications(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     long result = 0;
 
-    Connection conn = null;
-
-    try {
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database", sqle);
-      throw sqle;
-    }
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
 
     String query = COUNT_SUBSCRIBED_PUBLICATIONS_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
@@ -1835,7 +1861,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot count subscribed publications", sqle);
       log.error("SQL = '" + query + "'.");
-      throw sqle;
+      throw new DbException("Cannot count subscribed publications", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(countSubscriptions);
@@ -1851,11 +1877,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * 
    * @return A List<SerialPublication> with the publications for which
    *         subscription decisions have not been made yet.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public List<SerialPublication> getUndecidedPublications()
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "getUndecidedPublications(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1982,11 +2008,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * Provides all the subscriptions and their publishers.
    * 
    * @return a List<Subscription> with the subscriptions and their publishers.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private List<Subscription> findAllSubscriptionsAndPublishers()
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "findAllSubscriptionsAndPublishers(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1997,15 +2023,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     Subscription subscription;
     List<Subscription> subscriptions = new ArrayList<Subscription>();
 
-    Connection conn = null;
-
-    try {
-      // Get a connection to the database.
-      conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database", sqle);
-      throw sqle;
-    }
+    // Get a connection to the database.
+    Connection conn = dbManager.getConnection();
 
     String query = FIND_ALL_SUBSCRIPTIONS_AND_PUBLISHERS_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
@@ -2043,7 +2062,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     } catch (SQLException sqle) {
       log.error("Cannot get subscriptions and publishers", sqle);
       log.error("SQL = '" + query + "'.");
-      throw sqle;
+      throw new DbException("Cannot get subscriptions and publishers", sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(getAllSubscriptionsAndPublishers);
@@ -2343,12 +2362,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       // Get a connection to the database.
       conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database", sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot connect to database", dbe);
 
       for (Subscription subscription : subscriptions) {
 	status.addStatusEntry(subscription.getPublication()
-	    .getPublicationName(), false, sqle.getMessage(), null);
+	    .getPublicationName(), false, dbe.getMessage(), null);
       }
 
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
@@ -2385,33 +2404,55 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    bas = null;
 	  }
 
-	  conn.commit();
+	  DbManager.commitOrRollback(conn, log);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), bas);
 	} catch (IllegalStateException ise) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot add subscription " + subscription, ise);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, ise.getMessage(), null);
 	} catch (IOException ioe) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot add subscription " + subscription, ioe);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, ioe.getMessage(), null);
-	} catch (SQLException sqle) {
-	  conn.rollback();
-	  log.error("Cannot add subscription " + subscription, sqle);
+	} catch (DbException dbe) {
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
+	  log.error("Cannot add subscription " + subscription, dbe);
 	  status.addStatusEntry(subscription.getPublication()
-	      .getPublicationName(), false, sqle.getMessage(), null);
+	      .getPublicationName(), false, dbe.getMessage(), null);
 	} catch (SubscriptionException se) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot add subscription " + subscription, se);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, se.getMessage(), null);
 	}
       }
-    } catch (SQLException sqle) {
-      log.error("Cannot rollback the connection", sqle);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -2426,11 +2467,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param subscription
    *          A Subscription with the subscription to be persisted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void persistSubscription(Connection conn, Subscription subscription)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "persistSubscription(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
@@ -2508,13 +2549,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    * @throws SubscriptionException
    *           if there are problems with the subscription publication.
    */
   BatchAuStatus configureAus(Connection conn, Subscription subscription)
-      throws IOException, SQLException, SubscriptionException {
+      throws IOException, DbException, SubscriptionException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
@@ -2574,11 +2615,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscribedRanges
    *          A Collection<BibliographicPeriod> with the subscription subscribed
    *          ranges to be persisted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int persistSubscribedRanges(Connection conn, Long subscriptionSeq,
-      Collection<BibliographicPeriod> subscribedRanges) throws SQLException {
+      Collection<BibliographicPeriod> subscribedRanges) throws DbException {
     int count = 0;
 
     if (subscribedRanges != null) {
@@ -2601,11 +2642,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param unsubscribedRanges
    *          A Collection<BibliographicPeriod> with the subscription
    *          unsubscribed ranges to be persisted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int persistUnsubscribedRanges(Connection conn, Long subscriptionSeq,
-      Collection<BibliographicPeriod> unsubscribedRanges) throws SQLException {
+      Collection<BibliographicPeriod> unsubscribedRanges) throws DbException {
     int count = 0;
 
     if (unsubscribedRanges != null) {
@@ -2635,14 +2676,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private BatchAuStatus configureAus(Connection conn,
       SerialPublication publication,
       Collection<BibliographicPeriod> subscribedRanges,
       Collection<BibliographicPeriod> unsubscribedRanges)
-      throws IOException, SQLException {
+      throws IOException, DbException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publication = " + publication);
@@ -2737,12 +2778,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       // Get a connection to the database.
       conn = dbManager.getConnection();
-    } catch (SQLException sqle) {
-      log.error("Cannot connect to database", sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot connect to database", dbe);
 
       for (Subscription subscription : subscriptions) {
 	status.addStatusEntry(subscription.getPublication()
-	    .getPublicationName(), false, sqle.getMessage(), null);
+	    .getPublicationName(), false, dbe.getMessage(), null);
       }
 
       if (log.isDebug2()) log.debug(DEBUG_HEADER + "Done.");
@@ -2779,33 +2820,55 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	    bas = null;
 	  }
 
-	  conn.commit();
+	  DbManager.commitOrRollback(conn, log);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), bas);
 	} catch (IllegalStateException ise) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot update subscription " + subscription, ise);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, ise.getMessage(), null);
 	} catch (IOException ioe) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot update subscription " + subscription, ioe);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, ioe.getMessage(), null);
-	} catch (SQLException sqle) {
-	  conn.rollback();
-	  log.error("Cannot update subscription " + subscription, sqle);
+	} catch (DbException dbe) {
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
+	  log.error("Cannot update subscription " + subscription, dbe);
 	  status.addStatusEntry(subscription.getPublication()
-	      .getPublicationName(), false, sqle.getMessage(), null);
+	      .getPublicationName(), false, dbe.getMessage(), null);
 	} catch (SubscriptionException se) {
-	  conn.rollback();
+	  try {
+	    if ((conn != null) && !conn.isClosed()) {
+	      conn.rollback();
+	    }
+	  } catch (SQLException sqle) {
+	    log.error("Cannot roll back the connection", sqle);
+	  }
 	  log.error("Cannot update subscription " + subscription, se);
 	  status.addStatusEntry(subscription.getPublication()
 	      .getPublicationName(), false, se.getMessage(), null);
 	}
       }
-    } catch (SQLException sqle) {
-      log.error("Cannot rollback the connection", sqle);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -2820,11 +2883,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *          A Connection with the database connection to be used.
    * @param subscription
    *          A Subscription with the subscription to be persisted.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void updateSubscription(Connection conn, Subscription subscription)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "updateSubscription(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
@@ -2866,11 +2929,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscriptionSeq
    *          A Long with the identifier of the subscription.
    * @return an int with the number of deleted rows.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int deleteAllSubscriptionRanges(Connection conn, Long subscriptionSeq)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "deleteAllSubscriptionRanges(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -2889,7 +2952,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("Cannot delete subscription ranges", sqle);
       log.error("SQL = '" + DELETE_ALL_SUBSCRIPTION_RANGES_QUERY + "'.");
       log.error("subscriptionSeq = " + subscriptionSeq);
-      throw sqle;
+      throw new DbException("Cannot delete subscription ranges", sqle);
     } finally {
       DbManager.safeCloseStatement(deleteAllSubscriptionRanges);
     }
@@ -2910,12 +2973,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscribed
    *          A boolean with the indication of whether the LOCKSS installation
    *          is subscribed to the publication range or not.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void persistSubscriptionRanges(Connection conn, Long subscriptionSeq,
       Collection<BibliographicPeriod> ranges, boolean subscribed)
-      throws SQLException {
+      throws DbException {
     final String DEBUG_HEADER = "persistSubscriptionRanges(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
