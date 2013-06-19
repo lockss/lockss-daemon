@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsServiceBaseClient.java,v 1.1 2013-03-22 04:47:30 fergaloy-sf Exp $
+ * $Id: CounterReportsServiceBaseClient.java,v 1.2 2013-06-19 18:23:45 fergaloy-sf Exp $
  */
 
 /*
@@ -52,8 +52,6 @@ public abstract class CounterReportsServiceBaseClient extends
   /**
    * Executes the client code common to all the operations.
    * 
-   * @param args
-   *          A String[] with the command line arguments.
    * @throws Exception
    */
   protected CounterReportsService getProxy() throws Exception {
