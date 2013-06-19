@@ -17046,6 +17046,31 @@
 
     {
 
+    param[base_url] = http://ptp.oxfordjournals.org/
+    pluginPrefix = org.lockss.plugin.highwire.
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 1946 ; Progress of Theoretical Physics (PTP) Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1947 ; Progress of Theoretical Physics (PTP) Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1948 ; Progress of Theoretical Physics (PTP) Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1949 ; Progress of Theoretical Physics (PTP) Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1950 ; Progress of Theoretical Physics (PTP) Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1951 ; Progress of Theoretical Physics (PTP) Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1952 ; Progress of Theoretical Physics (PTP) Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1952 ; Progress of Theoretical Physics (PTP) Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1953 ; Progress of Theoretical Physics (PTP) Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1953 ; Progress of Theoretical Physics (PTP) Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1954 ; Progress of Theoretical Physics (PTP) Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1954 ; Progress of Theoretical Physics (PTP) Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1955 ; Progress of Theoretical Physics (PTP) Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1955 ; Progress of Theoretical Physics (PTP) Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1956 ; Progress of Theoretical Physics (PTP) Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1956 ; Progress of Theoretical Physics (PTP) Volume 16 ; 16 >
+
+    }
+
+    {
+
     param[base_url] = http://ptep.oxfordjournals.org/
     pluginPrefix = org.lockss.plugin.highwire.
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
