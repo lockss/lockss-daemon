@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.83 2013-05-27 05:38:57 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.84 2013-06-19 23:06:57 fergaloy-sf Exp $
  */
 
 /*
@@ -2005,13 +2005,19 @@ public class ServletUtil {
    *          An int with the count of the letters per tab to be used.
    * @param columnHeaderNames
    *          A List<String> with the names of the column headers.
+   * @param rowTitleCssClass
+   *          A String with the CSS class to use for the row title.
+   * @param columnHeaderCssClasses
+   *          A List<String> with the CSS classes to use for the column headers.
    * @param tabsDiv
    *          A Block with the tabs container.
    * @return a Map<String, Table> with the tabs tables mapped by the initial
    *         letters they cover.
    */
   public static Map<String, Table> createTabsWithTable(int alphabetLetterCount,
-      int lettersPerTabCount, List<String> columnHeaderNames, Block tabsDiv) {
+      int lettersPerTabCount, List<String> columnHeaderNames,
+      String rowTitleCssClass, List<String> columnHeaderCssClasses,
+      Block tabsDiv) {
     final String DEBUG_HEADER = "createTabs(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -2045,7 +2051,8 @@ public class ServletUtil {
 	log.debug3(DEBUG_HEADER + "startLetter = " + startLetter);
 
       // Create the table for the tab.
-      divTable = createTabTable(startLetter.toString(), columnHeaderNames);
+      divTable = createTabTable(startLetter.toString(), columnHeaderNames,
+	  rowTitleCssClass, columnHeaderCssClasses);
 
       // Create the tab for this letter group.
       tabDiv = new Block("div", "id=\"" + startLetter.toString() + "\"");
@@ -2198,19 +2205,37 @@ public class ServletUtil {
    *          A String with the start letter of the tab group.
    * @param columnHeaderNames
    *          A List<String> with the names of the column headers.
+   * @param rowTitleCssClass
+   *          A String with the CSS class to use for the row title.
+   * @param columnHeaderCssClasses
+   *          A List<String> with the CSS classes to use for the column headers.
    * @return a Table to be added to the page.
    */
   private static Table createTabTable(String letter,
-      List<String> columnHeaderNames) {
+      List<String> columnHeaderNames, String rowTitleCssClass,
+      List<String> columnHeaderCssClasses) {
     final String DEBUG_HEADER = "createTabTable(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "letter = " + letter);
 
     Table divTable = new Table(0, "class=\"status-table\"");
     divTable.newRow();
-    divTable.addCell("");
+
+    if (StringUtil.isNullString(rowTitleCssClass)) {
+      divTable.addCell("");
+    } else {
+      divTable.addCell("", "class=\"" + rowTitleCssClass + "\"");
+    }
 
     Block columnHeader;
     Iterator<String> columnIterator = columnHeaderNames.listIterator();
+
+    Iterator<String> columnCssIterator = null;
+
+    if (columnHeaderCssClasses != null && columnHeaderCssClasses.size() > 0) {
+      columnCssIterator = columnHeaderCssClasses.listIterator();
+    }
+
+    String cssClass = null;
 
     // Loop through all the columns in the table.
     while (columnIterator.hasNext()) {
@@ -2218,8 +2243,17 @@ public class ServletUtil {
       columnHeader = new Block(Block.Bold);
       columnHeader.add(columnIterator.next());
 
-      // Add it to the table.
-      divTable.addCell(columnHeader, "class=\"column-header\"");
+      // Get the column CSS class, if any.
+      if (columnCssIterator != null && columnCssIterator.hasNext()) {
+	cssClass = columnCssIterator.next();
+      }
+
+      // Add the column header to the table.
+      if (StringUtil.isNullString(cssClass)) {
+	divTable.addCell(columnHeader);
+      } else {
+	divTable.addCell(columnHeader, "class=\"" + cssClass + "\"");
+      }
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

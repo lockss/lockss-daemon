@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.3 2013-05-29 16:07:11 fergaloy-sf Exp $
+ * $Id: SubscriptionManagement.java,v 1.4 2013-06-19 23:06:57 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,6 @@
 package org.lockss.servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -48,6 +47,7 @@ import org.apache.commons.collections.FactoryUtils;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.db.DbException;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi.BatchAuStatus.Entry;
 import org.lockss.subscription.BibliographicPeriod;
@@ -145,6 +145,9 @@ public class SubscriptionManagement extends LockssServlet {
   // The column headers of the tabbed content.
   private List<String> tabColumnHeaderNames = null;
 
+  // The CSS classes for the column headers of the tabbed content.
+  private List<String> tabColumnHeaderCssClasses = null;
+
   private PluginManager pluginManager;
   private SubscriptionManager subManager;
   private int maxSingleTabCount;
@@ -220,8 +223,8 @@ public class SubscriptionManagement extends LockssServlet {
       } else {
 	displayAddPage();
       }
-    } catch (SQLException sqle) {
-      throw new RuntimeException(sqle);
+    } catch (DbException dbe) {
+      throw new RuntimeException(dbe);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -232,10 +235,10 @@ public class SubscriptionManagement extends LockssServlet {
    * 
    * @throws IOException
    *           if any problem occurred writing the page.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void displayAddPage() throws IOException, SQLException {
+  private void displayAddPage() throws IOException, DbException {
     final String DEBUG_HEADER = "displayAddPage(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -283,7 +286,8 @@ public class SubscriptionManagement extends LockssServlet {
     // map of the tab tables keyed by the letters they cover.
     Map<String, Table> divTableMap =
 	ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	    getTabColumnHeaderNames(), tabsDiv);
+	    getTabColumnHeaderNames(), "sub-row-title",
+	    getColumnHeaderCssClasses(), tabsDiv);
 
     // Populate the tabs content with the publications for which no subscription
     // decision has been made.
@@ -329,6 +333,24 @@ public class SubscriptionManagement extends LockssServlet {
     }
 
     return tabColumnHeaderNames;
+  }
+
+  /**
+   * Provides the CSS classes for the column headers of the tabbed content.
+   * 
+   * @return a List<String> with the CSS classes for the column headers of the tabbed content.
+   */
+  private List<String> getColumnHeaderCssClasses() {
+    // Lazy loading.
+    if (tabColumnHeaderCssClasses == null) {
+      tabColumnHeaderCssClasses = (List<String>)ListUtil
+      .list("sub-column-header-subscribe-all",
+	    "sub-column-header-subscribed-ranges",
+	    "sub-column-header-unsubscribed-ranges",
+	    "sub-column-header-unsubscribe-all");
+    }
+
+    return tabColumnHeaderCssClasses;
   }
 
   /**
@@ -527,8 +549,19 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "cleanNameString = " + cleanNameString);
 
+    String publisherRowTitle = publisherName;
+
+    // Check whether there are any publications to show.
+    if (pubSet != null && pubSet.size() > 0) {
+      // Yes: Get the publisher row title.
+      publisherRowTitle += " (" + pubSet.size() + ")";
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherRowTitle = " + publisherRowTitle);
+
     // Create in the table the title row for the publisher.
-    createPublisherRow(publisherName, cleanNameString, divTable);
+    createPublisherRow(publisherRowTitle, cleanNameString, divTable);
 
     // Check whether there are any publications to show.
     if (pubSet != null) {
@@ -582,7 +615,8 @@ public class SubscriptionManagement extends LockssServlet {
 
     Block boldHeadingLink = new Block(Block.Bold);
     boldHeadingLink.add(headingLink);
-    divTable.addHeading(boldHeadingLink, "class=\"pub-title\"");
+    divTable.addHeading(boldHeadingLink,
+	"class=\"pub-title\" colspan=\"5\" width=\"100%\"");
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -614,7 +648,8 @@ public class SubscriptionManagement extends LockssServlet {
     newRow.attribute("class", publisherId + "_class hide-row "
 	+ ServletUtil.rowCss(rowIndex, 3));
 
-    divTable.addCell(publication.getUniqueName());
+    divTable.addCell(publication.getUniqueName(),
+	"class=\"sub-publication-name\"");
 
     Integer publicationNumber = publication.getPublicationNumber();
     String subscribeAllId = SUBSCRIBE_ALL_PARAM_NAME + publicationNumber;
@@ -930,12 +965,12 @@ public class SubscriptionManagement extends LockssServlet {
    *          A String with the action needed to go back to the previous page.
    * @throws IOException
    *           if any problem occurred writing the page.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void displayResults(SubscriptionOperationStatus status,
       String backLinkDisplayText, String backLinkAction) throws IOException,
-      SQLException {
+      DbException {
     final String DEBUG_HEADER = "displayResults(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "status = " + status);
@@ -1065,10 +1100,10 @@ public class SubscriptionManagement extends LockssServlet {
    * 
    * @throws IOException
    *           if any problem occurred writing the page.
-   * @throws SQLException
+   * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void displayUpdatePage() throws IOException, SQLException {
+  private void displayUpdatePage() throws IOException, DbException {
     final String DEBUG_HEADER = "displayUpdatePage(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
@@ -1114,7 +1149,8 @@ public class SubscriptionManagement extends LockssServlet {
       // a map of the tab tables keyed by the letters they cover.
       Map<String, Table> divTableMap =
 	  ServletUtil.createTabsWithTable(LETTERS_IN_ALPHABET, lettersPerTab,
-	      getTabColumnHeaderNames(), tabsDiv);
+	      getTabColumnHeaderNames(), "sub-row-title",
+	      getColumnHeaderCssClasses(), tabsDiv);
 
       // Populate the tabs content with the publications for which subscription
       // decisions have already been made.
@@ -1352,8 +1388,19 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "cleanNameString = " + cleanNameString);
 
+    String publisherRowTitle = publisherName;
+
+    // Check whether there are any publications to show.
+    if (subSet != null && subSet.size() > 0) {
+      // Yes: Get the publisher row title.
+      publisherRowTitle += " (" + subSet.size() + ")";
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "publisherRowTitle = " + publisherRowTitle);
+
     // Create in the table the title row for the publisher.
-    createPublisherRow(publisherName, cleanNameString, divTable);
+    createPublisherRow(publisherRowTitle, cleanNameString, divTable);
 
     // Check whether there are any subscriptions to show.
     if (subSet != null) {
@@ -1402,7 +1449,8 @@ public class SubscriptionManagement extends LockssServlet {
     // The subscription publication.
     SerialPublication publication = subscription.getPublication();
 
-    divTable.addCell(publication.getUniqueName());
+    divTable.addCell(publication.getUniqueName(),
+	"class=\"sub-publication-name\"");
 
     Long subscriptionSeq = subscription.getSubscriptionSeq();
     String subscribeAllId = SUBSCRIBE_ALL_PARAM_NAME + subscriptionSeq;

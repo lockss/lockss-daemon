@@ -101,3 +101,44 @@
         float: left;
         padding: 0px 0px 0px 30px;
 }
+
+.sub-row-title {
+	width: 30%;
+}
+
+.sub-column-header-subscribe-all {
+	padding:1em 1.4em;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	width: 11%;
+}
+
+.sub-column-header-subscribed-ranges {
+	padding:1em 1.4em;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	width: 24%;
+}
+
+.sub-column-header-unsubscribed-ranges {
+	padding:1em 1.4em;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	width: 24%;
+}
+
+.sub-column-header-unsubscribe-all {
+	padding:1em 1.4em;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	width: 11%;
+}
+
+.sub-publication-name {
+	text-align: left;
+	padding:0em 0em 0em 1.4em;
+}
