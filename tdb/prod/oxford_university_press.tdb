@@ -817,7 +817,32 @@
     param[base_url] = http://ajh.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2013 ; American Journal of Hypertension Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; American Journal of Hypertension Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1989 ; American Journal of Hypertension Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; American Journal of Hypertension Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1991 ; American Journal of Hypertension Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; American Journal of Hypertension Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; American Journal of Hypertension Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; American Journal of Hypertension Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; American Journal of Hypertension Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; American Journal of Hypertension Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; American Journal of Hypertension Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; American Journal of Hypertension Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; American Journal of Hypertension Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; American Journal of Hypertension Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; American Journal of Hypertension Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; American Journal of Hypertension Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; American Journal of Hypertension Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; American Journal of Hypertension Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; American Journal of Hypertension Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; American Journal of Hypertension Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 >
 
   }
 
@@ -7851,7 +7876,30 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < expected ; 2013 ; ILAR Journal Volume 1 ; 1 >
+    au < exists ; 1989 ; ILAR Journal Volume 31 ; 31 >
+    au < exists ; 1990 ; ILAR Journal Volume 32 ; 32 >
+    au < exists ; 1991 ; ILAR Journal Volume 33 ; 33 >
+    au < exists ; 1992 ; ILAR Journal Volume 34 ; 34 >
+    au < exists ; 1993 ; ILAR Journal Volume 35 ; 35 >
+    au < exists ; 1994 ; ILAR Journal Volume 36 ; 36 >
+    au < exists ; 1995 ; ILAR Journal Volume 37 ; 37 >
+    au < exists ; 1997 ; ILAR Journal Volume 38 ; 38 >
+    au < exists ; 1998 ; ILAR Journal Volume 39 ; 39 >
+    au < exists ; 1999 ; ILAR Journal Volume 40 ; 40 >
+    au < exists ; 2000 ; ILAR Journal Volume 41 ; 41 >
+    au < exists ; 2001 ; ILAR Journal Volume 42 ; 42 >
+    au < exists ; 2002 ; ILAR Journal Volume 43 ; 43 >
+    au < exists ; 2003 ; ILAR Journal Volume 44 ; 44 >
+    au < exists ; 2004 ; ILAR Journal Volume 36 ; 36 >
+    au < exists ; 2005 ; ILAR Journal Volume 37 ; 37 >
+    au < exists ; 2006 ; ILAR Journal Volume 38 ; 38 >
+    au < exists ; 2007 ; ILAR Journal Volume 39 ; 39 >
+    au < exists ; 2008 ; ILAR Journal Volume 40 ; 40 >
+    au < exists ; 2009 ; ILAR Journal Volume 41 ; 41 >
+    au < exists ; 2010 ; ILAR Journal Volume 42 ; 42 >
+    au < exists ; 2011 ; ILAR Journal Volume 43 ; 43 >
+    au < exists ; 2012 ; ILAR Journal Volume 44 ; 44 >
+    au < expected ; 2013 ; ILAR Journal Volume 45 ; 45 >
 
    }
 
@@ -13023,7 +13071,10 @@
     param[base_url] = http://jscr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Surgical Case Reports Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 >
 
   }
 
@@ -13953,7 +14004,44 @@
     param[base_url] = http://melus.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; expected ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1974 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1975 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1976 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1977 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1978 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1979 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 1980 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 1981 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1982 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1983 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 1984 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 1985 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 1986 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 1987 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 1988 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 1990 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 1992 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 1993 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 1994 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 21 ; 21 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 23 ; 23 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 25 ; 25 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 27 ; 27 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 28 ; 28 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 30 ; 30 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 31 ; 31 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 >
 
   }
 
@@ -20203,7 +20291,31 @@
 
     {
 
-      au < expected ; 2013 ; Interacting with Computers Volume 1 ; 1 >
+      au < exists ; 1989 ; Interacting with Computers Volume 1 ; 1 >
+      au < exists ; 1990 ; Interacting with Computers Volume 2 ; 2 >
+      au < exists ; 1991 ; Interacting with Computers Volume 3 ; 3 >
+      au < exists ; 1992 ; Interacting with Computers Volume 4 ; 4 >
+      au < exists ; 1993 ; Interacting with Computers Volume 5 ; 5 >
+      au < exists ; 1994 ; Interacting with Computers Volume 6 ; 6 >
+      au < exists ; 1995 ; Interacting with Computers Volume 7 ; 7 >
+      au < exists ; 1996 ; Interacting with Computers Volume 8 ; 8 >
+      au < exists ; 1997 ; Interacting with Computers Volume 9 ; 9 >
+      au < exists ; 1998 ; Interacting with Computers Volume 10 ; 10 >
+      au < exists ; 1999 ; Interacting with Computers Volume 11 ; 11 >
+      au < exists ; 2000 ; Interacting with Computers Volume 12 ; 12 >
+      au < exists ; 2001 ; Interacting with Computers Volume 13 ; 13 >
+      au < exists ; 2002 ; Interacting with Computers Volume 14 ; 14 >
+      au < exists ; 2003 ; Interacting with Computers Volume 15 ; 15 >
+      au < exists ; 2004 ; Interacting with Computers Volume 16 ; 16 >
+      au < exists ; 2005 ; Interacting with Computers Volume 17 ; 17 >
+      au < exists ; 2006 ; Interacting with Computers Volume 18 ; 18 >
+      au < exists ; 2007 ; Interacting with Computers Volume 19 ; 19 >
+      au < exists ; 2008 ; Interacting with Computers Volume 20 ; 20 >
+      au < exists ; 2009 ; Interacting with Computers Volume 21 ; 21 >
+      au < exists ; 2010 ; Interacting with Computers Volume 22 ; 22 >
+      au < exists ; 2011 ; Interacting with Computers Volume 23 ; 23 >
+      au < exists ; 2012 ; Interacting with Computers Volume 24 ; 24 >
+      au < exists ; 2013 ; Interacting with Computers Volume 25 ; 25 >
 
     }
 
