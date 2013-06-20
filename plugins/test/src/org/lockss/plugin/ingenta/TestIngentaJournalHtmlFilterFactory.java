@@ -198,6 +198,8 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
             "<div class=\"caption\">" +
             "<span class=\"captionLabel\"><span class=\"label\">The Chickens.</span></span>" +
             "</div>";
+    
+    
     public void testFiltering() throws Exception {
         InputStream inA;  
        
@@ -207,4 +209,33 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
         assertEquals(expireChecksumFiltered,StringUtil.fromInputStream(inA));
       
     }
+    
+    private static final String onClickExitTargetID =
+        "<div class=\"left-col-download\">View now:</div>" +
+            "<div class=\"right-col-download contain\">" +
+            "<span class=\"orangebutton\">" +
+            "<span class=\"orangeleftside icbutton\">" +
+            "<a onclick=\"javascript:popup('/search/download?pub=infobike%3a%2f%2flse%2fjtep%2f2001%2f00000035%2f00000001%2fart00001&mimetype=" +
+            "application%2fpdf&exitTargetId=1371686277240','dowloadWindow','900','800')\" title=\"PDF download of Editorial\" class=\"no-underl" +
+            "ine contain\" >PDF" +
+            "</a></span></span>" +
+            "</div>";
+    private static final String onClickExitTargetIDFiltered =
+        "<div class=\"left-col-download\">View now:</div>" +
+            "<div class=\"right-col-download contain\">" +
+            "<span class=\"orangebutton\">" +
+            "<span class=\"orangeleftside icbutton\">" +
+            "</span></span>" +
+            "</div>";
+    
+    public void testonClickFiltering() throws Exception {
+      InputStream inA;  
+     
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(onClickExitTargetID),
+          Constants.DEFAULT_ENCODING);
+
+      assertEquals(onClickExitTargetIDFiltered,StringUtil.fromInputStream(inA));
+    
+  }
+
 }

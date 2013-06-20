@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.19 2013-01-04 19:05:11 alexandraohlson Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.20 2013-06-20 00:31:57 alexandraohlson Exp $
  */ 
 
 /*
@@ -99,6 +99,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "llb"),   
         // Filter out <a href="...">...</a> where the href value includes "exitTargetId" as a parameter
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[\\?&]exitTargetId="),
+        // Filter out <a onclick="...">...</a> where the onclick javascript argument includes "exitTargetId" as a parameter
+        HtmlNodeFilters.tagWithAttributeRegex("a", "onclick", "[\\?&]exitTargetId="),
         // Filter out <input name="exitTargetId">
         HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId"),
         // Icon on article reference page
