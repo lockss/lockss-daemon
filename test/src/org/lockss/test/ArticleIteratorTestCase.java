@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleIteratorTestCase.java,v 1.2 2012-08-08 07:15:45 tlipkis Exp $
+ * $Id: ArticleIteratorTestCase.java,v 1.3 2013-06-20 00:03:35 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,23 +37,19 @@ import java.util.*;
 import java.net.*;
 import java.util.regex.*;
 
-import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 
 /** Framework for ArticleIterator tests. */
 public abstract class ArticleIteratorTestCase extends LockssTestCase {
+
   protected ArchivalUnit au;
   protected String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
-				  tempDirPath);
+    tempDirPath = setUpDiskSpace();
     MockLockssDaemon daemon = getMockLockssDaemon();
     PluginManager pluginMgr = daemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);
@@ -69,7 +65,7 @@ public abstract class ArticleIteratorTestCase extends LockssTestCase {
   }
 
   protected SubTreeArticleIterator createSubTreeIter() {
-    Iterator iter =  au.getArticleIterator(MetadataTarget.Any);
+    Iterator<ArticleFiles> iter =  au.getArticleIterator(MetadataTarget.Any());
     assertNotNull("ArticleIterator is null", iter);
     if (iter instanceof SubTreeArticleIterator) {
       return (SubTreeArticleIterator)iter;
