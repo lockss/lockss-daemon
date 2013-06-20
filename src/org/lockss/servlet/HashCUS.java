@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.52 2013-06-12 04:21:47 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.53 2013-06-20 05:07:48 tlipkis Exp $
  */
 
 /*
@@ -306,7 +306,7 @@ public class HashCUS extends LockssServlet {
     Map<String,Data> map = getRequestMap();
     synchronized (map) {
       if (map.isEmpty()) {
-	errMsg = "No background requests";
+	statusMsg = "No background requests";
 	displayPage();
 	return;
       }
