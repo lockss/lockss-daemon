@@ -146,7 +146,7 @@
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = jtrp
     implicit < status ; year ; name ; param[volume] >
-    comment[doNotProcess] = publisher to fix manifest pages RT4593
+    comment[doNotProcess] = publisher to update contract with Randy see RT 5351
     comment[1] = Abbreviation stands for Joint Transportation Research Program
 
     au < doNotProcess ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
