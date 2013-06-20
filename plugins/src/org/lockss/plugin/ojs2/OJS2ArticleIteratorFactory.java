@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.5 2013-04-01 00:42:54 tlipkis Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.6 2013-06-20 01:10:24 ldoan Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ojs2.OJS2ArticleIteratorFactory.OJS2ArticleIterator.LoggerAdapter;
 import org.lockss.util.*;
 
 
@@ -60,13 +59,11 @@ import org.lockss.util.*;
  * 
  * Issues page or TOC URL:
  * <base_url/>index.php/<journal_id>/issue/view/<[^/]+>
- * Example: http://www.ojs2articleiteratortest.com/index.php/lq/issue/view/478
+ * http://www.ojs2articleiteratortest.com/index.php/lq/issue/view/478
  * 
  * Articles URL:
  * <base_url>/index.php/<journal_id>/article/view/<[^/]+>/<[^/]+>
- * Example: http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110/8514
- * 
- * Index.php and journal_id are optional.
+ * http://www.ojs2articleiteratortest.com/index.php/lq/article/view/8110/8514
  */
 
 public class OJS2ArticleIteratorFactory
@@ -225,8 +222,8 @@ public class OJS2ArticleIteratorFactory
           else {
             AuUtil.safeRelease(linkCu);
           }
-        } // if
-      } // while
+        }
+      }
       
       ArticleFiles af = new ArticleFiles();
       guessAbstract(af, map);
@@ -265,8 +262,20 @@ public class OJS2ArticleIteratorFactory
      if (cu != null) {
        log.debug2("Abstract url: " + cu.getUrl());
        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+       // Set role_article_metadata. Check if frame src url exists
+       String url = cu.getUrl();
+       String frameSrcUrl = url.replaceFirst("/view/", "/viewArticle/");
+       log.debug3("guessAbstract() : url: " + url);
+       log.debug3("guessAbstract() frameSrcUrl: " + frameSrcUrl);
+       CachedUrl frameSrcCu = au.makeCachedUrl(frameSrcUrl);
+       if ((frameSrcCu != null) && frameSrcCu.hasContent()) {
+         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, frameSrcCu);
+         frameSrcCu.release();
+       } else {
+         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
+       }
        return;
-     } // if
+     }
       
      // Find a single undecorated link
      cu = doGuessSingleUrl(map, "/article/view/[^/]+$");
@@ -274,34 +283,8 @@ public class OJS2ArticleIteratorFactory
        // Alternatively, try a single full link
        cu = doGuessSingleUrl(map, "/article/view/[^/]+/[^/]+$");
      }         
-      
-     if (cu != null) {
-       log.debug2("Abstract candidate: " + cu.getUrl());
-       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-       
-       // handles html with framset
-       // e.g., http://bio-complexity.org/ojs/index.php/main/article/view/BIO-C.2011.3
-       // does not contain metadata, but its frame src does
-       // http://bio-complexity.org/ojs/index.php/main/article/viewArticle/BIO-C.2011.3
-       String url = cu.getUrl();
-       String modifiedUrl = url.replaceFirst("/view/", "/viewArticle/");
-       log.debug3("guessAbstract() : url: " + url);
-       log.debug3("guessAbstract() modifiedUrl: " + modifiedUrl);
-       
-       // if modified url (one with viewArticle has content
-       // then use it for metadata
-       CachedUrl modifiedCu = au.makeCachedUrl(modifiedUrl);
-       if ((modifiedCu != null) && modifiedCu.hasContent()) {
-         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, modifiedCu);
-         modifiedCu.release();      
-       } else {
-         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-       }
-        
-       return;
-      } // if
-     
-    } // guessAbstract
+         
+    }
 
     // This method handles full text urls with both labels 'HTML' or 'Full Text'
     protected void guessFullTextHtml(ArticleFiles af, Map<String, CachedUrl> map) {
