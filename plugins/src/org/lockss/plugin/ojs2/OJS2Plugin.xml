@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>28</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -40,7 +40,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Substance</string>
