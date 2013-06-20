@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.6 2013-06-20 01:10:24 ldoan Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.7 2013-06-20 20:31:30 ldoan Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class OJS2ArticleIteratorFactory
       log.warning("Mismatch between article iterator factory and article iterator: " + url);
       return null;
       
-    } // createArticleFiles
+    }
     
     protected void processShowToc(CachedUrl tocCu, Matcher tocMat) {
       processToc(tocCu.getUnfilteredInputStream(), tocCu.getEncoding(), tocCu.getUrl());
@@ -179,7 +179,7 @@ public class OJS2ArticleIteratorFactory
         e.printStackTrace();
       }
       
-    } // processToc
+    }
 
     protected void processArticle(Node node) {
       Map<String, CachedUrl> map = new HashMap<String, CachedUrl>();
@@ -231,6 +231,7 @@ public class OJS2ArticleIteratorFactory
       guessFullTextPdf(af, map);
       doGuess(af, map, "epub", Role.FULL_TEXT_EPUB, "Full-text EPUB");
       doGuess(af, map, "xml", Role.SOURCE_XML, "Source XML");
+      setRoleArticleMetadata(af);
       chooseFullTextCu(af);
 
       // Emit
@@ -249,7 +250,30 @@ public class OJS2ArticleIteratorFactory
         AuUtil.safeRelease(releaseCu);
       }
       
-    } // processArticle
+    }
+    
+    // Set role_article_metadata. Check if frame src url exists
+    private void setRoleArticleMetadata(ArticleFiles af) {
+      CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ABSTRACT);
+      if ((cu == null) || !(cu.hasContent())) {
+        cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML);
+      }
+      if (cu != null && cu.hasContent()) {
+        String url = cu.getUrl();
+        String frameSrcUrl = url.replaceFirst("/view/", "/viewArticle/");
+        log.debug3("setRoleArticleMetadata() : url: " + url);
+        log.debug3("setRoleArticleMetadata() frameSrcUrl: " + frameSrcUrl);
+        CachedUrl frameSrcCu = au.makeCachedUrl(frameSrcUrl);
+        if ((frameSrcCu != null) && frameSrcCu.hasContent()) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, frameSrcCu);
+          frameSrcCu.release();
+        } else {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
+        }
+      } else {
+        log.warning("setRoleArticleMetadata() cu is null");
+      }
+    }
 
     protected void guessAbstract(ArticleFiles af, Map<String, CachedUrl> map) {
       // Try labels
@@ -262,18 +286,6 @@ public class OJS2ArticleIteratorFactory
      if (cu != null) {
        log.debug2("Abstract url: " + cu.getUrl());
        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-       // Set role_article_metadata. Check if frame src url exists
-       String url = cu.getUrl();
-       String frameSrcUrl = url.replaceFirst("/view/", "/viewArticle/");
-       log.debug3("guessAbstract() : url: " + url);
-       log.debug3("guessAbstract() frameSrcUrl: " + frameSrcUrl);
-       CachedUrl frameSrcCu = au.makeCachedUrl(frameSrcUrl);
-       if ((frameSrcCu != null) && frameSrcCu.hasContent()) {
-         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, frameSrcCu);
-         frameSrcCu.release();
-       } else {
-         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-       }
        return;
      }
       
