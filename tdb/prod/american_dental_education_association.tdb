@@ -16,6 +16,8 @@
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.jdentaled.org/
     implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[nR] = fetch error 404 needs permission
 
     au < released ; 1965 ; Journal of Dental Education Volume 29 [tables of contents only] ; 29 >
     au < released ; 1966 ; Journal of Dental Education Volume 30 [tables of contents only] ; 30 >
@@ -69,7 +71,7 @@
     au < released ; 2009 ; Journal of Dental Education Volume 73 ; 73 >
     au < released ; 2010 ; Journal of Dental Education Volume 74 ; 74 >
     au < released ; 2011 ; Journal of Dental Education Volume 75 ; 75 >
-    au < testing ; 2012 ; Journal of Dental Education Volume 76 ; 76 >
+    au < notReady ; 2012 ; Journal of Dental Education Volume 76 ; 76 >
     au < manifest ; 2013 ; Journal of Dental Education Volume 77 ; 77 >
 
   }
