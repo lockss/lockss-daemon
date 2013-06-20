@@ -1833,7 +1833,7 @@
       param[base_url] = http://www.agricultureandfoodsecurity.com/
       param[journal_issn] = 2048-7010
 
-      au < testing ; exists ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
 
     }
@@ -1962,7 +1962,7 @@
       au < crawling ; exists ; 2009 ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Annals of Clinical Microbiology and Antimicrobials Volume 10 ; 10 >
-      au < testing ; exists ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
+      au < released ; manifest ; 2012 ; Annals of Clinical Microbiology and Antimicrobials Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Annals of Clinical Microbiology and Antimicrobials Volume 12 ; 12 >
 
     }
