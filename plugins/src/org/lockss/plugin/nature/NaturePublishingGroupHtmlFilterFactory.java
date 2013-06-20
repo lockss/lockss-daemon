@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.15 2013-01-25 20:26:06 alexandraohlson Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.16 2013-06-20 16:19:11 alexandraohlson Exp $
  */
 
 /*
@@ -108,6 +108,10 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         // adding words to footer boilerplate and we don't need it
         HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
+        // global message shows up on pages - in this case it was a request to fill out a survey
+        //<div class=\"global-message minimised d20110601global no-image\">
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^global-message"),
+        
         
     };
     InputStream filtered =  new HtmlFilterInputStream(in, 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureHtmlFilterFactory.java,v 1.2 2013-01-25 20:26:06 alexandraohlson Exp $
+ * $Id: TestNatureHtmlFilterFactory.java,v 1.3 2013-06-20 16:19:11 alexandraohlson Exp $
  */
 
 package org.lockss.plugin.nature;
@@ -93,6 +93,38 @@ public class TestNatureHtmlFilterFactory extends LockssTestCase {
           " </body>" +
           " </html>";
   
+  private static final String globalMessageHtml =
+      "</div>" +
+          "<div class=\"global-message minimised d20110601global no-image\">" +
+          "<div class=\"wrapper\">" +
+          "<div class=\"content\">" +
+          "<h1>" +
+          "<a href='http://survey.nature.com/blah'>Take the survey</a>" +
+          "</h1>" +
+          "<p>We'd like to invite you to take part in our annual reader survey.</p>" +
+          "<p>As a thank you...</p>" +
+          "<p class='action'>" +
+          "<a href='http://survey.nature.com/blah'>Take survey</a>" +
+          "</p>" +
+          "</div>" +
+          "<div class=\"nojava\">" +
+          "<h1>" +
+          "<a href='http://survey.nature.com/blah'>Take the survey</a>" +
+          "</h1>" +
+          "</div>" +
+          "<p class=\"message-control\">" +
+          "<a href=\"?message=remove\" class=\"persistent\">Remove message</a>" +
+          "<a href=\"?message=remove\" class=\"remove\">" +
+          "<img src=\"/common/images/icons/message_close.gif\" alt=\"Remove this message\" />" +
+          "</a> </p> <span class=\"cleardiv\">" +
+          "<!-- -->" +
+          "</span> </div> </div> <div style=\"display:none;\"> <!-- end global links -->" +
+          "</div>";
+  private static final String globalMessageHtmlFiltered =
+      "</div>" +
+          " <div style=\"display:none;\"> " +
+          "</div>";
+  
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -138,6 +170,12 @@ public class TestNatureHtmlFilterFactory extends LockssTestCase {
         ENC);
 
     assertEquals(footerHtmlFiltered,StringUtil.fromInputStream(inA));
+    
+    // test global message removal
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(globalMessageHtml),
+        ENC);
+
+    assertEquals(globalMessageHtmlFiltered,StringUtil.fromInputStream(inA));
     
 
   }
