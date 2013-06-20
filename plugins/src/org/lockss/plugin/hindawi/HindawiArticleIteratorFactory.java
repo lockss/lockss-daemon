@@ -1,7 +1,10 @@
 /*
- * $Id: HindawiArticleIteratorFactory.java,v 1.1 2013-03-12 22:32:20 aishizaki Exp $
+ * $Id: HindawiArticleIteratorFactory.java,v 1.2 2013-06-20 00:05:48 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,116 +32,71 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.hindawi;
 
-import java.util.Iterator;
-import java.util.regex.*;
+import java.util.*;
+import java.util.regex.Pattern;
 
-import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
-import org.lockss.util.Logger;
 
 public class HindawiArticleIteratorFactory
-    implements ArticleIteratorFactory,
-               ArticleMetadataExtractorFactory {
+    implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log =
-    Logger.getLogger("HindawiArticleIteratorFactory");
+  protected static final String ROOT_TEMPLATE_HTML = "\"%sjournals/%s/%s/\", base_url, journal_id, volume_name";
+  protected static final String ROOT_TEMPLATE_PDF = "\"%sjournals/%s/%s/\", download_url, journal_id, volume_name";
+  protected static final String PATTERN_TEMPLATE = "\"^(%sjournals/%s/%s/\\d+|%sjournals/%s/%s/\\d+\\.pdf)$\", base_url, journal_id, volume_name, download_url, journal_id, volume_name";
 
-  protected static final String ROOT_TEMPLATE =
-    "\"%s\", base_url";
-  protected static final String DOWNLOAD_ROOT_TEMPLATE =
-    "\"%s\", download_url";
-  // the pattern of typical url to send to the article iterator
-  //http://downloads.hindawi.com/journals/ahci/2008/145363.pdf
-  protected static final String PPATTERN_TEMPLATE =
-    "\"%sjournals/%s/%s/[\\d]+\\.pdf\", download_url, journal_id, volume_name";
+  @Override
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    String download_url = au.getConfiguration().get("download_url");
+    
+    final Pattern HTML_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)$", base_url), Pattern.CASE_INSENSITIVE);
+    final String HTML_REPLACEMENT = String.format("%sjournals/$1/$2/$3", base_url);
 
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    return new
-      HindawiArticleIterator(au,
-              new SubTreeArticleIterator.Spec()
-              .setTarget(target)
-              .setRootTemplates(ListUtil.list(DOWNLOAD_ROOT_TEMPLATE, ROOT_TEMPLATE))
-              .setPatternTemplate(PPATTERN_TEMPLATE));
+    final Pattern PDF_PATTERN = Pattern.compile(String.format("^%sjournals/([^/]+)/([^/]+)/(\\d+)\\.pdf$", download_url), Pattern.CASE_INSENSITIVE);
+    final String PDF_REPLACEMENT = String.format("%sjournals/$1/$2/$3.pdf", download_url);
+
+    final String ABSTRACT_REPLACEMENT = String.format("%sjournals/$1/$2/$3/abs", base_url);
+    final String CITATION_REPLACEMENT = String.format("%sjournals/$1/$2/$3/cta", base_url);
+    final String REFERENCES_REPLACEMENT = String.format("%sjournals/$1/$2/$3/ref", base_url);
+    final String EPUB_REPLACEMENT = String.format("%sjournals/$1/$2/$3.epub", download_url);
+    
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    builder.setSpec(target,
+                    Arrays.asList(ROOT_TEMPLATE_HTML, ROOT_TEMPLATE_PDF),
+                    PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+    builder.addAspect(HTML_PATTERN,
+                      HTML_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_HTML,
+                      ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(PDF_PATTERN,
+                      PDF_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    builder.addAspect(ABSTRACT_REPLACEMENT,
+                      ArticleFiles.ROLE_ABSTRACT,
+                      ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    builder.addAspect(EPUB_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_EPUB);
+
+    builder.addAspect(CITATION_REPLACEMENT,
+                      ArticleFiles.ROLE_CITATION);
+
+    builder.addAspect(REFERENCES_REPLACEMENT,
+                      ArticleFiles.ROLE_REFERENCES);
+    
+    return builder.getSubTreeArticleIterator();
   }
 
-  protected static class HindawiArticleIterator
-    extends SubTreeArticleIterator {
-    
-    protected String BASE_ROOT = String.format("%s", 
-                au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey()));
-    protected static Pattern PDF_PATTERN =
-      Pattern.compile("(http://downloads.hindawi.com/)(journals/[\\w]+/[\\d]{4}/[\\d]+).pdf", Pattern.CASE_INSENSITIVE);
-    protected static Pattern HTML_PATTERN =
-      Pattern.compile("(http://www.hindawi.com/)(journals/[\\w]+/[\\d]{4}/[\\d]+)$", Pattern.CASE_INSENSITIVE);
-    protected static Pattern ABSTRACT_PATTERN =
-      Pattern.compile("(http://www.hindawi.com/)(journals/)([\\w]+/[\\d]{4}/[\\d]+)/abs$", Pattern.CASE_INSENSITIVE);
-    
-    public HindawiArticleIterator(ArchivalUnit au,
-                                  SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    /*
-     * (non-Javadoc)
-     * @see org.lockss.plugin.SubTreeArticleIterator#createArticleFiles(org.lockss.plugin.CachedUrl)
-     *   set the pattern to find article PDF files, then surmise the HTML and Abstracts
-     *   files and set the appropriate Roles
-     */
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
-      }
-
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
-    
-    protected ArticleFiles guessHtml(ArticleFiles af, Matcher mat) {
-      String init = mat.replaceFirst(String.format("%s$2", BASE_ROOT));
-      CachedUrl htmlCu = au.makeCachedUrl(init);
-      log.debug3("guessHtml("+htmlCu+")");
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      AuUtil.safeRelease(htmlCu);
-
-      return af;
-    }
-    protected ArticleFiles guessAbs(ArticleFiles af, Matcher mat) {
-      String init = mat.replaceFirst(String.format("%s$2/abs", BASE_ROOT));
-      CachedUrl cu = au.makeCachedUrl(init);
-      
-      log.debug3("guessAbs("+cu+")");
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-      AuUtil.safeRelease(cu);
-
-      return af;
-    }
-    protected ArticleFiles processFullTextPdf(CachedUrl cu, Matcher mat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-      af.setFullTextCu(cu);
-      // only set roles when getting metadata, not creating article list
-      if(spec.getTarget() != null && !(spec.getTarget().isArticle())){
-        guessAbs(af, mat);
-        guessHtml(af, mat);
-        af.setFullTextCu(cu);
-      }
-      return af;   
-    }
-  }
-  
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
+  
 }
