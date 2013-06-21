@@ -136,7 +136,7 @@
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < manifest ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
 
   }
 

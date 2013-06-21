@@ -83,21 +83,21 @@
     param[journal_id] = ooa
     param[journal_issn] = 0030-7270
 
-    au < exists ; 1999 ; Outlook on Agriculture Volume 28 ; 28 >
-    au < exists ; 2000 ; Outlook on Agriculture Volume 29 ; 29 >
-    au < exists ; 2001 ; Outlook on Agriculture Volume 30 ; 30 >
-    au < exists ; 2002 ; Outlook on Agriculture Volume 31 ; 31 >
-    au < exists ; 2003 ; Outlook on Agriculture Volume 32 ; 32 >
-    au < exists ; 2004 ; Outlook on Agriculture Volume 33 ; 33 >
-    au < exists ; 2005 ; Outlook on Agriculture Volume 34 ; 34 >
-    au < exists ; 2006 ; Outlook on Agriculture Volume 35 ; 35 >
-    au < exists ; 2007 ; Outlook on Agriculture Volume 36 ; 36 >
-    au < exists ; 2008 ; Outlook on Agriculture Volume 37 ; 37 >
-    au < exists ; 2009 ; Outlook on Agriculture Volume 38 ; 38 >
-    au < exists ; 2010 ; Outlook on Agriculture Volume 39 ; 39 >
-    au < exists ; 2011 ; Outlook on Agriculture Volume 40 ; 40 >
-    au < exists ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
-    au < expected ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
+    au < manifest ; 1999 ; Outlook on Agriculture Volume 28 ; 28 >
+    au < manifest ; 2000 ; Outlook on Agriculture Volume 29 ; 29 >
+    au < manifest ; 2001 ; Outlook on Agriculture Volume 30 ; 30 >
+    au < manifest ; 2002 ; Outlook on Agriculture Volume 31 ; 31 >
+    au < manifest ; 2003 ; Outlook on Agriculture Volume 32 ; 32 >
+    au < manifest ; 2004 ; Outlook on Agriculture Volume 33 ; 33 >
+    au < manifest ; 2005 ; Outlook on Agriculture Volume 34 ; 34 >
+    au < manifest ; 2006 ; Outlook on Agriculture Volume 35 ; 35 >
+    au < manifest ; 2007 ; Outlook on Agriculture Volume 36 ; 36 >
+    au < manifest ; 2008 ; Outlook on Agriculture Volume 37 ; 37 >
+    au < manifest ; 2009 ; Outlook on Agriculture Volume 38 ; 38 >
+    au < manifest ; 2010 ; Outlook on Agriculture Volume 39 ; 39 >
+    au < manifest ; 2011 ; Outlook on Agriculture Volume 40 ; 40 >
+    au < manifest ; 2012 ; Outlook on Agriculture Volume 41 ; 41 >
+    au < manifest ; 2013 ; Outlook on Agriculture Volume 42 ; 42 >
 
   }
 
