@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.3 2012-12-12 23:15:56 alexandraohlson Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.4 2013-06-21 22:02:17 alexandraohlson Exp $
  */
 
 /*
@@ -146,4 +146,116 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
     
     
   }
+
+  // This string doesn't meet the criteria
+  static final String testAcceptHtml =
+      "</h2><table cellpadding=\"0\" cellspacing=\"0\">" +
+          "<tr>" +
+          "<td class=\"labelName\">Journal</td><td class=\"labelValue\"><a href=\"/content/122707/?pi=0\">Journal Studies</a></td>" +
+          "</tr><tr>" +
+          "<td class=\"labelName\">Publisher</td><td class=\"labelValue\">Manchester University Press</td>" +
+          "</tr><tr>" +
+          "<td class=\"labelName\">ISSN</td><td class=\"labelValue\">1362-xxxx (Print)<br/>2050-xxxx (Online)</td>" +
+          "</tr>" +
+          "</table></td><td valign=\"top\" class=\"MPReader_Content_PrimitiveHeadingControlSecondaryLinks\"><div>" +
+          "<a href=\"/personalization/save-item.mpx?code=Q433X32487\">Add to saved items</a>" +
+          "</div><div>" +
+          "<a href=\"/personalization/email-item.mpx?code=Q433X32487&amp;p=16c51d2495494dc68c5e7c07d1bd3296&amp;pi=0\">Recommend this volume</a>" +
+          "</div></td>" +
+          "</tr><tr>" +
+          "<td></td>" +
+          "</tr>" +
+          "</table>" +
+          "</div><br /><br />  "; 
+  
+  static final String testAcceptFiltered =
+      "</h2><table cellpadding=\"0\" cellspacing=\"0\">" +
+          "<tr>" +
+          "<td class=\"labelName\">Journal</td><td class=\"labelValue\"><a href=\"/content/122707/?pi=0\">Journal Studies</a></td>" +
+          "</tr><tr>" +
+          "<td class=\"labelName\">Publisher</td><td class=\"labelValue\">Manchester University Press</td>" +
+          "</tr><tr>" +
+          "<td class=\"labelName\">ISSN</td><td class=\"labelValue\">1362-xxxx (Print)<br/>2050-xxxx (Online)</td>" +
+          "</tr>" +
+          "</table></td><td valign=\"top\" class=\"MPReader_Content_PrimitiveHeadingControlSecondaryLinks\"><div>" +
+          "<a href=\"/personalization/save-item.mpx?code=Q433X32487\">Add to saved items</a>" +
+          "</div><div>" +
+          "</div></td>" +
+          "</tr><tr>" +
+          "<td></td>" +
+          "</tr>" +
+          "</table>" +
+          "</div><br /><br />  "; 
+  
+  // This string caused a nullpointerexception because it *almost* met the criteria
+  static final String testAccept2 =
+      "<div class=\"primitiveControl\">" +
+          "<div class=\"listItemName\">" +
+          "<a href=\"/content/n44k27l62k66/?p=277e24c14a064b77b8268ad0b80ebfc3&amp;pi=0\">Number 1 / May 2012</a>" +
+          "</div><table cellpadding=\"0\" cellspacing=\"0\">" +
+          "<div class=\"labelValue\">" +
+          "Journal Materials of the Century" +
+          "</div><tr>" +
+          "<th scope=\"row\" class=\"labelName\">Editor</th><td class=\"labelValue\"> Angela Editor</td>" +
+          "</tr>" +
+          "</table>" +
+          "</div>";
+
+    static final String testAccept2Filtered =
+        "<div class=\"primitiveControl\">" +
+            "<div class=\"listItemName\">" +
+            "</div><table cellpadding=\"0\" cellspacing=\"0\">" +
+            "<div class=\"labelValue\">" +
+            "Journal Materials of the Century" +
+            "</div><tr>" +
+            "<th scope=\"row\" class=\"labelName\">Editor</th><td class=\"labelValue\"> Angela Editor</td>" +
+            "</tr>" +
+            "</table>" +
+            "</div>";
+    
+    // and this string meets the criteria and will get filteredn
+    static final String testAccept3 =
+        "<div class=\"primitiveControl\">" +
+            "<div class=\"listItemName\">" +
+            "</div><table cellpadding=\"0\" cellspacing=\"0\">" +
+            "<div class=\"labelValue\">" +
+            "Journal Materials of the Century" +
+            "</div><tr>" +
+            "<th scope=\"row\" class=\"labelName\">Editor</th><td class=\"labelValue\">" +
+            "<div><a href=\"/home/linkout.mpx?action\">REMOVE ME</a></div></td>" +
+            "</tr>" +
+            "</table>" +
+            "</div>";
+    static final String testAccept3Filtered =
+        "<div class=\"primitiveControl\">" +
+            "<div class=\"listItemName\">" +
+            "</div><table cellpadding=\"0\" cellspacing=\"0\">" +
+            "<div class=\"labelValue\">" +
+            "Journal Materials of the Century" +
+            "</div>" +
+            "</table>" +
+            "</div>";
+
+  
+     public void testAcceptNode() throws Exception 
+       {
+       InputStream inA;
+       
+       inA = fact.createFilteredInputStream(mau,
+           new StringInputStream(testAcceptHtml), ENC);
+
+       assertEquals(testAcceptFiltered,StringUtil.fromInputStream(inA));
+     
+       inA = fact.createFilteredInputStream(mau,
+           new StringInputStream(testAccept2), ENC);
+
+       assertEquals(testAccept2Filtered,StringUtil.fromInputStream(inA));
+       
+       inA = fact.createFilteredInputStream(mau,
+           new StringInputStream(testAccept3), ENC);
+
+       assertEquals(testAccept3Filtered,StringUtil.fromInputStream(inA));
+            
+       }
+
 }

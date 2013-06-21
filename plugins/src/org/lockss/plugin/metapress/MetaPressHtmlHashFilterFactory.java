@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.5 2012-12-12 23:15:55 alexandraohlson Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.6 2013-06-21 22:02:17 alexandraohlson Exp $
  */
 
 /*
@@ -91,6 +91,7 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
               }
               return false;
             }
+            if (div == null) { return false; } //the td didn't have a div...
             for (SimpleNodeIterator iter = div.elements() ; iter.hasMoreNodes() ; ) {
               Node n = iter.nextNode();
               if (n instanceof TextNode) { continue; }
