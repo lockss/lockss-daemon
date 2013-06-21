@@ -17040,15 +17040,17 @@
   {
 
     title <
-      name = Progress of Theoretical and Experimental Physics (PTEP) ;
-      eissn = 2050-3911 ;
-      issnl = 2050-3911
+      name = Progress of Theoretical Physics (PTP) ;
+      issn = 0033-068X ;
+      eissn = 1347-4081 ;
+      issnl = 0033-068X
     >
 
     {
 
     param[base_url] = http://ptp.oxfordjournals.org/
     pluginPrefix = org.lockss.plugin.highwire.
+    comment[continued_by] = 2050-3911
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 1946 ; Progress of Theoretical Physics (PTP) Volume 1 ; 1 >
@@ -17182,13 +17184,24 @@
 
     }
 
-    {
+  }
+  
+  {
+
+    title <
+      name = Progress of Theoretical and Experimental Physics (PTEP) ;
+      eissn = 2050-3911 ;
+      issnl = 2050-3911
+    >
+
+     {
 
     param[base_url] = http://ptep.oxfordjournals.org/
     pluginPrefix = org.lockss.plugin.highwire.
+    comment[continues] = 0033-068X
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 >
 
     }
 
