@@ -8087,6 +8087,7 @@
     au < released ; crawling ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 14 ; 14 ; >
     au < released ; crawling ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16 ; 16 ; >
+    au < exists ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 ; >
    
   }
 
@@ -16533,6 +16534,154 @@
   {
 
     title <
+      name = Progress of Theoretical Physics (PTP) ;
+      issn = 0033-068X ;
+      eissn = 1347-4081 ;
+      issnl = 0033-068X
+    >
+
+    {
+
+    param[base_url] = http://ptp.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[continued_by] = 2050-3911
+
+    au < exists ; exists ; 1946 ; Progress of Theoretical Physics (PTP) Volume 1 ; 1 ; >
+    au < exists ; exists ; 1947 ; Progress of Theoretical Physics (PTP) Volume 2 ; 2 ; >
+    au < exists ; exists ; 1948 ; Progress of Theoretical Physics (PTP) Volume 3 ; 3 ; >
+    au < exists ; exists ; 1949 ; Progress of Theoretical Physics (PTP) Volume 4 ; 4 ; >
+    au < exists ; exists ; 1950 ; Progress of Theoretical Physics (PTP) Volume 5 ; 5 ; >
+    au < exists ; exists ; 1951 ; Progress of Theoretical Physics (PTP) Volume 6 ; 6 ; >
+    au < exists ; exists ; 1952 ; Progress of Theoretical Physics (PTP) Volume 7 ; 7 ; >
+    au < exists ; exists ; 1952 ; Progress of Theoretical Physics (PTP) Volume 8 ; 8 ; >
+    au < exists ; exists ; 1953 ; Progress of Theoretical Physics (PTP) Volume 9 ; 9 ; >
+    au < exists ; exists ; 1953 ; Progress of Theoretical Physics (PTP) Volume 10 ; 10 ; >
+    au < exists ; exists ; 1954 ; Progress of Theoretical Physics (PTP) Volume 11 ; 11 ; >
+    au < exists ; exists ; 1954 ; Progress of Theoretical Physics (PTP) Volume 12 ; 12 ; >
+    au < exists ; exists ; 1955 ; Progress of Theoretical Physics (PTP) Volume 13 ; 13 ; >
+    au < exists ; exists ; 1955 ; Progress of Theoretical Physics (PTP) Volume 14 ; 14 ; >
+    au < exists ; exists ; 1956 ; Progress of Theoretical Physics (PTP) Volume 15 ; 15 ; >
+    au < exists ; exists ; 1956 ; Progress of Theoretical Physics (PTP) Volume 16 ; 16 ; >
+    au < exists ; exists ; 1957 ; Progress of Theoretical Physics (PTP) Volume 17 ; 17 ; >
+    au < exists ; exists ; 1957 ; Progress of Theoretical Physics (PTP) Volume 18 ; 18 ; >
+    au < exists ; exists ; 1958 ; Progress of Theoretical Physics (PTP) Volume 19 ; 19 ; >
+    au < exists ; exists ; 1958 ; Progress of Theoretical Physics (PTP) Volume 20 ; 20 ; >
+    au < exists ; exists ; 1959 ; Progress of Theoretical Physics (PTP) Volume 21 ; 21 ; >
+    au < exists ; exists ; 1959 ; Progress of Theoretical Physics (PTP) Volume 22 ; 22 ; >
+    au < exists ; exists ; 1960 ; Progress of Theoretical Physics (PTP) Volume 23 ; 23 ; >
+    au < exists ; exists ; 1960 ; Progress of Theoretical Physics (PTP) Volume 24 ; 24 ; >
+    au < exists ; exists ; 1961 ; Progress of Theoretical Physics (PTP) Volume 25 ; 25 ; >
+    au < exists ; exists ; 1961 ; Progress of Theoretical Physics (PTP) Volume 26 ; 26 ; >
+    au < exists ; exists ; 1962 ; Progress of Theoretical Physics (PTP) Volume 27 ; 27 ; >
+    au < exists ; exists ; 1962 ; Progress of Theoretical Physics (PTP) Volume 28 ; 28 ; >
+    au < exists ; exists ; 1963 ; Progress of Theoretical Physics (PTP) Volume 29 ; 29 ; >
+    au < exists ; exists ; 1963 ; Progress of Theoretical Physics (PTP) Volume 30 ; 30 ; >
+    au < exists ; exists ; 1964 ; Progress of Theoretical Physics (PTP) Volume 31 ; 31 ; >
+    au < exists ; exists ; 1964 ; Progress of Theoretical Physics (PTP) Volume 32 ; 32 ; >
+    au < exists ; exists ; 1965 ; Progress of Theoretical Physics (PTP) Volume 33 ; 33 ; >
+    au < exists ; exists ; 1965 ; Progress of Theoretical Physics (PTP) Volume 34 ; 34 ; >
+    au < exists ; exists ; 1966 ; Progress of Theoretical Physics (PTP) Volume 35 ; 35 ; >
+    au < exists ; exists ; 1966 ; Progress of Theoretical Physics (PTP) Volume 36 ; 36 ; >
+    au < exists ; exists ; 1967 ; Progress of Theoretical Physics (PTP) Volume 37 ; 37 ; >
+    au < exists ; exists ; 1967 ; Progress of Theoretical Physics (PTP) Volume 38 ; 38 ; >
+    au < exists ; exists ; 1968 ; Progress of Theoretical Physics (PTP) Volume 39 ; 39 ; >
+    au < exists ; exists ; 1968 ; Progress of Theoretical Physics (PTP) Volume 40 ; 40 ; >
+    au < exists ; exists ; 1969 ; Progress of Theoretical Physics (PTP) Volume 41 ; 41 ; >
+    au < exists ; exists ; 1969 ; Progress of Theoretical Physics (PTP) Volume 42 ; 42 ; >
+    au < exists ; exists ; 1970 ; Progress of Theoretical Physics (PTP) Volume 43 ; 43 ; >
+    au < exists ; exists ; 1970 ; Progress of Theoretical Physics (PTP) Volume 44 ; 44 ; >
+    au < exists ; exists ; 1971 ; Progress of Theoretical Physics (PTP) Volume 45 ; 45 ; >
+    au < exists ; exists ; 1971 ; Progress of Theoretical Physics (PTP) Volume 46 ; 46 ; >
+    au < exists ; exists ; 1972 ; Progress of Theoretical Physics (PTP) Volume 47 ; 47 ; >
+    au < exists ; exists ; 1972 ; Progress of Theoretical Physics (PTP) Volume 48 ; 48 ; >
+    au < exists ; exists ; 1973 ; Progress of Theoretical Physics (PTP) Volume 49 ; 49 ; >
+    au < exists ; exists ; 1973 ; Progress of Theoretical Physics (PTP) Volume 50 ; 50 ; >
+    au < exists ; exists ; 1974 ; Progress of Theoretical Physics (PTP) Volume 51 ; 51 ; >
+    au < exists ; exists ; 1974 ; Progress of Theoretical Physics (PTP) Volume 52 ; 52 ; >
+    au < exists ; exists ; 1975 ; Progress of Theoretical Physics (PTP) Volume 53 ; 53 ; >
+    au < exists ; exists ; 1975 ; Progress of Theoretical Physics (PTP) Volume 54 ; 54 ; >
+    au < exists ; exists ; 1976 ; Progress of Theoretical Physics (PTP) Volume 55 ; 55 ; >
+    au < exists ; exists ; 1976 ; Progress of Theoretical Physics (PTP) Volume 56 ; 56 ; >
+    au < exists ; exists ; 1977 ; Progress of Theoretical Physics (PTP) Volume 57 ; 57 ; >
+    au < exists ; exists ; 1977 ; Progress of Theoretical Physics (PTP) Volume 58 ; 58 ; >
+    au < exists ; exists ; 1978 ; Progress of Theoretical Physics (PTP) Volume 59 ; 59 ; >
+    au < exists ; exists ; 1978 ; Progress of Theoretical Physics (PTP) Volume 60 ; 60 ; >
+    au < exists ; exists ; 1979 ; Progress of Theoretical Physics (PTP) Volume 61 ; 61 ; >
+    au < exists ; exists ; 1979 ; Progress of Theoretical Physics (PTP) Volume 62 ; 62 ; >
+    au < exists ; exists ; 1980 ; Progress of Theoretical Physics (PTP) Volume 63 ; 63 ; >
+    au < exists ; exists ; 1980 ; Progress of Theoretical Physics (PTP) Volume 64 ; 64 ; >
+    au < exists ; exists ; 1981 ; Progress of Theoretical Physics (PTP) Volume 65 ; 65 ; >
+    au < exists ; exists ; 1981 ; Progress of Theoretical Physics (PTP) Volume 66 ; 66 ; >
+    au < exists ; exists ; 1982 ; Progress of Theoretical Physics (PTP) Volume 67 ; 67 ; >
+    au < exists ; exists ; 1982 ; Progress of Theoretical Physics (PTP) Volume 68 ; 68 ; >
+    au < exists ; exists ; 1983 ; Progress of Theoretical Physics (PTP) Volume 69 ; 69 ; >
+    au < exists ; exists ; 1983 ; Progress of Theoretical Physics (PTP) Volume 70 ; 70 ; >
+    au < exists ; exists ; 1984 ; Progress of Theoretical Physics (PTP) Volume 71 ; 71 ; >
+    au < exists ; exists ; 1984 ; Progress of Theoretical Physics (PTP) Volume 72 ; 72 ; >
+    au < exists ; exists ; 1985 ; Progress of Theoretical Physics (PTP) Volume 73 ; 73 ; >
+    au < exists ; exists ; 1985 ; Progress of Theoretical Physics (PTP) Volume 74 ; 74 ; >
+    au < exists ; exists ; 1986 ; Progress of Theoretical Physics (PTP) Volume 75 ; 75 ; >
+    au < exists ; exists ; 1986 ; Progress of Theoretical Physics (PTP) Volume 76 ; 76 ; >
+    au < exists ; exists ; 1987 ; Progress of Theoretical Physics (PTP) Volume 77 ; 77 ; >
+    au < exists ; exists ; 1987 ; Progress of Theoretical Physics (PTP) Volume 78 ; 78 ; >
+    au < exists ; exists ; 1988 ; Progress of Theoretical Physics (PTP) Volume 79 ; 79 ; >
+    au < exists ; exists ; 1988 ; Progress of Theoretical Physics (PTP) Volume 80 ; 80 ; >
+    au < exists ; exists ; 1989 ; Progress of Theoretical Physics (PTP) Volume 81 ; 81 ; >
+    au < exists ; exists ; 1989 ; Progress of Theoretical Physics (PTP) Volume 82 ; 82 ; >
+    au < exists ; exists ; 1990 ; Progress of Theoretical Physics (PTP) Volume 83 ; 83 ; >
+    au < exists ; exists ; 1990 ; Progress of Theoretical Physics (PTP) Volume 84 ; 84 ; >
+    au < exists ; exists ; 1991 ; Progress of Theoretical Physics (PTP) Volume 85 ; 85 ; >
+    au < exists ; exists ; 1991 ; Progress of Theoretical Physics (PTP) Volume 86 ; 86 ; >
+    au < exists ; exists ; 1992 ; Progress of Theoretical Physics (PTP) Volume 87 ; 87 ; >
+    au < exists ; exists ; 1992 ; Progress of Theoretical Physics (PTP) Volume 88 ; 88 ; >
+    au < exists ; exists ; 1993 ; Progress of Theoretical Physics (PTP) Volume 89 ; 89 ; >
+    au < exists ; exists ; 1993 ; Progress of Theoretical Physics (PTP) Volume 90 ; 90 ; >
+    au < exists ; exists ; 1994 ; Progress of Theoretical Physics (PTP) Volume 91 ; 91 ; >
+    au < exists ; exists ; 1994 ; Progress of Theoretical Physics (PTP) Volume 92 ; 92 ; >
+    au < exists ; exists ; 1995 ; Progress of Theoretical Physics (PTP) Volume 93 ; 93 ; >
+    au < exists ; exists ; 1995 ; Progress of Theoretical Physics (PTP) Volume 94 ; 94 ; >
+    au < exists ; exists ; 1996 ; Progress of Theoretical Physics (PTP) Volume 95 ; 95 ; >
+    au < exists ; exists ; 1996 ; Progress of Theoretical Physics (PTP) Volume 96 ; 96 ; >
+    au < exists ; exists ; 1997 ; Progress of Theoretical Physics (PTP) Volume 97 ; 97 ; >
+    au < exists ; exists ; 1997 ; Progress of Theoretical Physics (PTP) Volume 98 ; 98 ; >
+    au < exists ; exists ; 1998 ; Progress of Theoretical Physics (PTP) Volume 99 ; 99 ; >
+    au < exists ; exists ; 1998 ; Progress of Theoretical Physics (PTP) Volume 100 ; 100 ; >
+    au < exists ; exists ; 1999 ; Progress of Theoretical Physics (PTP) Volume 101 ; 101 ; >
+    au < exists ; exists ; 1999 ; Progress of Theoretical Physics (PTP) Volume 102 ; 102 ; >
+    au < exists ; exists ; 2000 ; Progress of Theoretical Physics (PTP) Volume 103 ; 103 ; >
+    au < exists ; exists ; 2000 ; Progress of Theoretical Physics (PTP) Volume 104 ; 104 ; >
+    au < exists ; exists ; 2001 ; Progress of Theoretical Physics (PTP) Volume 105 ; 105 ; >
+    au < exists ; exists ; 2001 ; Progress of Theoretical Physics (PTP) Volume 106 ; 106 ; >
+    au < exists ; exists ; 2002 ; Progress of Theoretical Physics (PTP) Volume 107 ; 107 ; >
+    au < exists ; exists ; 2002 ; Progress of Theoretical Physics (PTP) Volume 108 ; 108 ; >
+    au < exists ; exists ; 2003 ; Progress of Theoretical Physics (PTP) Volume 109 ; 109 ; >
+    au < exists ; exists ; 2003 ; Progress of Theoretical Physics (PTP) Volume 110 ; 110 ; >
+    au < exists ; exists ; 2004 ; Progress of Theoretical Physics (PTP) Volume 111 ; 111 ; >
+    au < exists ; exists ; 2004 ; Progress of Theoretical Physics (PTP) Volume 112 ; 112 ; >
+    au < exists ; exists ; 2005 ; Progress of Theoretical Physics (PTP) Volume 113 ; 113 ; >
+    au < exists ; exists ; 2005 ; Progress of Theoretical Physics (PTP) Volume 114 ; 114 ; >
+    au < exists ; exists ; 2006 ; Progress of Theoretical Physics (PTP) Volume 115 ; 115 ; >
+    au < exists ; exists ; 2006 ; Progress of Theoretical Physics (PTP) Volume 116 ; 116 ; >
+    au < exists ; exists ; 2007 ; Progress of Theoretical Physics (PTP) Volume 117 ; 117 ; >
+    au < exists ; exists ; 2007 ; Progress of Theoretical Physics (PTP) Volume 118 ; 118 ; >
+    au < exists ; exists ; 2008 ; Progress of Theoretical Physics (PTP) Volume 119 ; 119 ; >
+    au < exists ; exists ; 2008 ; Progress of Theoretical Physics (PTP) Volume 120 ; 120 ; >
+    au < exists ; exists ; 2009 ; Progress of Theoretical Physics (PTP) Volume 121 ; 121 ; >
+    au < exists ; exists ; 2009 ; Progress of Theoretical Physics (PTP) Volume 122 ; 122 ; >
+    au < exists ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 123 ; 123 ; >
+    au < exists ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 124 ; 124 ; >
+    au < exists ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 125 ; 125 ; >
+    au < exists ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
+    au < exists ; exists ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
+    au < exists ; exists ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Progress of Theoretical and Experimental Physics (PTEP) ;
       eissn = 2050-3911 ;
       issnl = 2050-3911
@@ -16541,9 +16690,10 @@
     {
 
     param[base_url] = http://ptep.oxfordjournals.org/
+    comment[continues] = 0033-068X
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 1 ; 1 ; >
+    au < exists ; exists ; 2013 ; Progress of Theoretical and Experimental Physics (PTEP) Volume 2013 ; 2013 ; >
 
     }
 
