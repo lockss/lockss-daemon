@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -46,11 +46,17 @@
   </entry>
   <entry>
     <string>au_crawlrules</string>
+    <!--  CRAWL COMMENT BLOCK
+      - The "url_ver=" rule exists because in Nature Reviews Molecular Cell Biology,
+            there were dozens of extremely long URLs that all started with url_ver=Z39.88-2004 (note from 2009, moved in to comment block)
+      - The ?message=remove rule exists because of global messages across all pages (eg for survey) cause each page twice
+     -->
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%s%s/clockss/%s_clockss_%d.html$&quot;, base_url, journal_id, journal_id, year</string>
       <string>2,&quot;^%s%s/journal/v%s/.*\?lang=[a-z]{2}$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%s%s/journal/v%s/.*\?message=remove$&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s%s/journal/v%s/[^/]+/[^/]+/[^/]+_ja\.html$&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s%s/journal/v%s/[^/]+/(products|pubmed)/&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s.*url_ver=&quot;,base_url</string>
@@ -59,11 +65,6 @@
       <!-- for ncomms -->
       <string>1,&quot;^%s%s/archive/date/%d/&quot;, base_url, journal_id, year</string>
     </list>
-  </entry>
-  <entry>
-    <string>au_crawlrules_notes</string>
-    <string>The "url_ver=" rule exists because in Nature Reviews Molecular Cell Biology,
-            there were dozens of extremely long URLs that all started with url_ver=Z39.88-2004.</string>
   </entry>
   <entry>
     <string>au_start_url</string>
