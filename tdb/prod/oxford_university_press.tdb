@@ -810,7 +810,8 @@
       name = American Journal of Hypertension ;
       issn = 0895-7061 ;
       eissn = 1941-7225 ;
-      issnl = 0895-7061
+      issnl = 0895-7061;
+      info[hw_jcode] = ajh
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -7867,7 +7868,8 @@
       name = ILAR Journal ;
       issn = 1084-2020 ;
       eissn = 1930-6180 ;
-      issnl = 1084-2020
+      issnl = 1084-2020 ;
+      info[hw_jcode] = ilarjournal
     >
 
     {
@@ -13066,7 +13068,8 @@
     title <
       name = Journal of Surgical Case Reports ;
       eissn = 2042-8812 ;
-      issnl = 2042-8812 
+      issnl = 2042-8812 ;
+      info[hw_jcode] = jscr
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -13999,7 +14002,8 @@
       name = MELUS: Multi-Ethnic Literature of the U.S. ;
       issn = 0163-755X ;
       eissn = 1946-3170 ;
-      issnl = 0163-755X
+      issnl = 0163-755X ;
+      info[hw_jcode] = melus
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
@@ -14445,7 +14449,8 @@
       name = Monthly Notices of the Royal Astronomical Society ;
       issn = 0035-8711 ;
       eissn = 1365-2966 ;
-      issnl = 0035-8711
+      issnl = 0035-8711 ;
+      info[hw_jcode] = mnras
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -14618,7 +14623,8 @@
 
     title <
       name = Monthly Notices of the Royal Astronomical Society: Letters ;
-      eissn = 1745-3933 
+      eissn = 1745-3933 ;
+      info[hw_jcode] = mnrasl
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -17043,7 +17049,8 @@
       name = Progress of Theoretical Physics (PTP) ;
       issn = 0033-068X ;
       eissn = 1347-4081 ;
-      issnl = 0033-068X
+      issnl = 0033-068X ;
+      info[hw_jcode] = ptp
     >
 
     {
@@ -17191,7 +17198,8 @@
     title <
       name = Progress of Theoretical and Experimental Physics (PTEP) ;
       eissn = 2050-3911 ;
-      issnl = 2050-3911
+      issnl = 2050-3911 ;
+      info[hw_jcode] = ptep
     >
 
      {
@@ -19739,7 +19747,8 @@
       name = Transactions of The Royal Society of Tropical Medicine and Hygiene ;
       issn = 0035-9203 ;
       eissn = 1878-3503 ;
-      issnl = 0035-9203
+      issnl = 0035-9203 ;
+      info[hw_jcode] = trstmh
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -20012,7 +20021,8 @@
       name = Uniform Law Review ;
       issn = 1124-3694 ;
       eissn = 2050-9065 ;
-      issnl = 1124-3694
+      issnl = 1124-3694 ;
+      info[hw_jcode] = ulr
     >
 
     {
@@ -20795,7 +20805,10 @@
   {
 
     title <
-      name = Interacting with Computers 
+      name = Interacting with Computers ;
+      issn = 0953-5438 ;
+      eissn = 1873-7951 ;
+      info[hw_jcode] = iwc
     >
 
     param[base_url] = http://iwc.oxfordjournals.org/
