@@ -3302,7 +3302,7 @@
       au < zapped ; down ; 2010 ; BioScope: South Asian Screen Studies Volume 1 ; 1 ; >
       au < zapped ; down ; 2011 ; BioScope: South Asian Screen Studies Volume 2 ; 2 ; >
       au < released ; crawling ; 2012 ; BioScope: South Asian Screen Studies Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2013 ; BioScope: South Asian Screen Studies Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2013 ; BioScope: South Asian Screen Studies Volume 4 ; 4 ; >
 
     }
 
@@ -9740,7 +9740,7 @@
       au < released ; crawling ; 2010 ; Evaluation Review Volume 34 ; 34 ; >
       au < released ; crawling ; 2011 ; Evaluation Review Volume 35 ; 35 ; >
       au < released ; crawling ; 2012 ; Evaluation Review Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2013 ; Evaluation Review Volume 37 ; 37 ; >
 
     }
 
@@ -13581,7 +13581,7 @@
         au < zapped ; down ; 2009 ; International Journal of Discrimination and the Law Volume 10 ; 10 ; >
         au < released ; crawling ; 2011 ; International Journal of Discrimination and the Law Volume 11 ; 11 ; >
         au < released ; crawling ; 2012 ; International Journal of Discrimination and the Law Volume 12 ; 12 ; >
-        au < manifest ; exists ; 2013 ; International Journal of Discrimination and the Law Volume 13 ; 13 ; >
+        au < crawling ; exists ; 2013 ; International Journal of Discrimination and the Law Volume 13 ; 13 ; >
 
       }
       
@@ -18694,7 +18694,7 @@
       au < exists ; exists ; 2004 ; Journal of Experiential Education Volume 27 ; 27 ; >
       au < exists ; exists ; 2005-2006 ; Journal of Experiential Education Volume 28 ; 28 ; >
       au < exists ; exists ; 2006-2007 ; Journal of Experiential Education Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2013 ; Journal of Experiential Education Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2013 ; Journal of Experiential Education Volume 36 ; 36 ; >
       
     }
 
@@ -23447,7 +23447,7 @@
       au < zapped ; down ; 2010 ; Journal of Transformative Education Volume 8 ; 8 ; >
       au < released ; crawling ; 2011 ; Journal of Transformative Education Volume 9 ; 9 ; >
       au < released ; crawling ; 2012 ; Journal of Transformative Education Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2013 ; Journal of Transformative Education Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2013 ; Journal of Transformative Education Volume 11 ; 11 ; >
 
     }
 
@@ -29409,7 +29409,7 @@
       au < released ; crawling ; 2010 ; Psychology & Developing Societies Volume 22 ; 22 ; >
       au < zapped ; down ; 2011 ; Psychology & Developing Societies Volume 23 ; 23 ; >
       au < released ; crawling ; 2012 ; Psychology & Developing Societies Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2013 ; Psychology & Developing Societies Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2013 ; Psychology & Developing Societies Volume 25 ; 25 ; >
 
     }
 
@@ -30672,7 +30672,7 @@
       au < released ; crawling ; 2010 ; Research Studies in Music Education Volume 32 ; 32 ; >
       au < released ; crawling ; 2011 ; Research Studies in Music Education Volume 33 ; 33 ; >
       au < released ; crawling ; 2012 ; Research Studies in Music Education Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2013 ; Research Studies in Music Education Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2013 ; Research Studies in Music Education Volume 35 ; 35 ; >
 
     }
 
@@ -34610,7 +34610,7 @@
       au < released ; crawling ; 2012 ; Thesis Eleven Volume 113 ; 113 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 114 ; 114 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 115 ; 115 ; >
-      au < manifest ; exists ; 2013 ; Thesis Eleven Volume 116 ; 116 ; >
+      au < crawling ; exists ; 2013 ; Thesis Eleven Volume 116 ; 116 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 117 ; 117 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 118 ; 118 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 119 ; 119 ; >
@@ -38162,7 +38162,7 @@
     param[base_url] = http://smp.sagepub.com/
 
     au < released ; crawling ; 2012 ; South Asian Journal of Macroeconomics and Public Finance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2013 ; South Asian Journal of Macroeconomics and Public Finance Volume 2 ; 2 ; >
 
     }
 
