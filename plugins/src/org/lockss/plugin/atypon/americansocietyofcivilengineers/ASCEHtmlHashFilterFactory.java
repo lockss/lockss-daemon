@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.1 2013-05-13 21:10:25 ldoan Exp $
+ * $Id: ASCEHtmlHashFilterFactory.java,v 1.2 2013-06-24 22:50:23 ldoan Exp $
  */
 
 /*
@@ -43,23 +43,25 @@ public class ASCEHtmlHashFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
+    
     NodeFilter[] filters = new NodeFilter[] {
-        // <div class="institutionBanner">Access provided by STANFORD UNIV </div>
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "institutionBanner"),
-        // infrastructure assessment ad
-        // http://ascelibrary.org/doi/abs/10.1061/%28ASCE%291076-0431%282010%2916%3A1%2837%29
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "widget type-ad-placeholder ui-helper-clearfix"),
-        // left column section history
-        // <div class="sessionViewed">
-	// http://ascelibrary.org/toc/jaeied/18/4
-        // necessary since some urls are opaque (not including year and/or volume)
-        // so can't differentiate urls from different AUs.
-        // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
-	HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
-         // footer copyright @ 1996-2013
-        // <div id="copyright">
-        // http://ascelibrary.org/toc/jaeied/18/4
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer_message"),
+        // <div class="welcome stackContents"> - institutionBanner,
+        // loginIdentity, and linkList topLinks menu
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
+                                              "welcome stackContents"),
+        // <div id="prevNextNav"> - rss
+	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+        // <div id="tocTools"> - view Cart line
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tocTools"),
+        // <td class="toggle"> - '+' sign next Show Abstract
+        HtmlNodeFilters.tagWithAttributeRegex("td", "class", "toggle"),
+	// <div class="dropzone ui-corner-all " 
+	// id="dropzone-Left-Sidebar"> - tornados ad, session history.
+	HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),	
+	// <div class="citedBySection">
+	HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+	// footer and footer_message
+	HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         new TagNameFilter("script"),
     };
     return new HtmlFilterInputStream(in, encoding,
