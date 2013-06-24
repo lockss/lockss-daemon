@@ -1,0 +1,110 @@
+{
+  publisher <
+    name = Association for the Sciences of Limnology and Oceanography
+  >
+
+comment[aslo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+comment[fe] = H20, "Limnology and Oceanography: Fluids and Environments" published by Duke University Press
+
+  param[base_url] = http://www.aslo.org/
+
+  {
+    title <
+      name = Limnology and Oceanography ;
+      issn = 0024-3590
+    >
+    
+    plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
+    param[journal_id] = lo
+    implicit < status ; year ; name ; param[volume_name] >
+
+comment[lo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+
+    au < released ; 1956 ; Limnology and Oceanography Volume 1 ; 1 >
+    au < released ; 1957 ; Limnology and Oceanography Volume 2 ; 2 >
+    au < released ; 1958 ; Limnology and Oceanography Volume 3 ; 3 >
+    au < released ; 1959 ; Limnology and Oceanography Volume 4 ; 4 >
+    au < released ; 1960 ; Limnology and Oceanography Volume 5 ; 5 >
+    au < released ; 1961 ; Limnology and Oceanography Volume 6 ; 6 >
+    au < released ; 1962 ; Limnology and Oceanography Volume 7 ; 7 >
+    au < released ; 1963 ; Limnology and Oceanography Volume 8 ; 8 >
+    au < released ; 1964 ; Limnology and Oceanography Volume 9 ; 9 >
+    au < released ; 1965 ; Limnology and Oceanography Volume 10 ; 10 >
+    au < released ; 1966 ; Limnology and Oceanography Volume 11 ; 11 >
+    au < released ; 1967 ; Limnology and Oceanography Volume 12 ; 12 >
+    au < released ; 1968 ; Limnology and Oceanography Volume 13 ; 13 >
+    au < released ; 1969 ; Limnology and Oceanography Volume 14 ; 14 >
+    au < released ; 1970 ; Limnology and Oceanography Volume 15 ; 15 >
+    au < released ; 1971 ; Limnology and Oceanography Volume 16 ; 16 >
+    au < released ; 1972 ; Limnology and Oceanography Volume 17 ; 17 >
+    au < released ; 1973 ; Limnology and Oceanography Volume 18 ; 18 >
+    au < released ; 1974 ; Limnology and Oceanography Volume 19 ; 19 >
+    au < released ; 1975 ; Limnology and Oceanography Volume 20 ; 20 >
+    au < released ; 1976 ; Limnology and Oceanography Volume 21 ; 21 >
+    au < released ; 1977 ; Limnology and Oceanography Volume 22 ; 22 >
+    au < released ; 1978 ; Limnology and Oceanography Volume 23 ; 23 >
+    au < released ; 1979 ; Limnology and Oceanography Volume 24 ; 24 >
+    au < released ; 1980 ; Limnology and Oceanography Volume 25 ; 25 >
+    au < released ; 1981 ; Limnology and Oceanography Volume 26 ; 26 >
+    au < released ; 1982 ; Limnology and Oceanography Volume 27 ; 27 >
+    au < released ; 1983 ; Limnology and Oceanography Volume 28 ; 28 >
+    au < released ; 1984 ; Limnology and Oceanography Volume 29 ; 29 >
+    au < released ; 1985 ; Limnology and Oceanography Volume 30 ; 30 >
+    au < released ; 1986 ; Limnology and Oceanography Volume 31 ; 31 >
+    au < released ; 1987 ; Limnology and Oceanography Volume 32 ; 32 >
+    au < released ; 1988 ; Limnology and Oceanography Volume 33 ; 33 >
+    au < released ; 1989 ; Limnology and Oceanography Volume 34 ; 34 >
+    au < released ; 1990 ; Limnology and Oceanography Volume 35 ; 35 >
+    au < released ; 1991 ; Limnology and Oceanography Volume 36 ; 36 >
+    au < released ; 1992 ; Limnology and Oceanography Volume 37 ; 37 >
+    au < released ; 1993 ; Limnology and Oceanography Volume 38 ; 38 >
+    au < released ; 1994 ; Limnology and Oceanography Volume 39 ; 39 >
+    au < released ; 1995 ; Limnology and Oceanography Volume 40 ; 40 >
+    au < released ; 1996 ; Limnology and Oceanography Volume 41 ; 41 >
+    au < released ; 1997 ; Limnology and Oceanography Volume 42 ; 42 >
+    au < released ; 1998 ; Limnology and Oceanography Volume 43 ; 43 >
+    au < released ; 1999 ; Limnology and Oceanography Volume 44 ; 44 >
+    au < released ; 2000 ; Limnology and Oceanography Volume 45 ; 45 >
+    au < released ; 2001 ; Limnology and Oceanography Volume 46 ; 46 >
+    au < released ; 2002 ; Limnology and Oceanography Volume 47 ; 47 >
+    au < released ; 2003 ; Limnology and Oceanography Volume 48 ; 48 >
+    au < released ; 2004 ; Limnology and Oceanography Volume 49 ; 49 >
+    au < released ; 2005 ; Limnology and Oceanography Volume 50 ; 50 >
+    au < released ; 2006 ; Limnology and Oceanography Volume 51 ; 51 >
+    au < released ; 2007 ; Limnology and Oceanography Volume 52 ; 52 >
+    au < exists ; 2008 ; Limnology and Oceanography Volume 53 ; 53 >
+    au < exists ; 2009 ; Limnology and Oceanography Volume 54 ; 54 >
+    au < exists ; 2010 ; Limnology and Oceanography Volume 55 ; 55 >
+    au < exists ; 2011 ; Limnology and Oceanography Volume 56 ; 56 >
+    au < exists ; 2012 ; Limnology and Oceanography Volume 57 ; 57 >
+    au < expected ; 2013 ; Limnology and Oceanography Volume 58 ; 58 >
+
+  }
+  
+  {
+    title <
+      name = Limnology and Oceanography: Methods ;
+      issn = 1541-5856
+    >
+    
+    plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyMethodsPlugin
+    param[journal_id] = lomethods
+    implicit < status ; name ; attr[volume] ; param[year] >
+    
+comment[methods] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+    
+    au < released ; Limnology and Oceanography: Methods Volume 1 ; 1 ; 2003 >
+    au < released ; Limnology and Oceanography: Methods Volume 2 ; 2 ; 2004 >
+    au < released ; Limnology and Oceanography: Methods Volume 3 ; 3 ; 2005 >
+    au < released ; Limnology and Oceanography: Methods Volume 4 ; 4 ; 2006 >
+    au < released ; Limnology and Oceanography: Methods Volume 5 ; 5 ; 2007 >
+    au < released ; Limnology and Oceanography: Methods Volume 6 ; 6 ; 2008 >
+    au < exists ; Limnology and Oceanography: Methods Volume 7 ; 7 ; 2009 >
+    au < exists ; Limnology and Oceanography: Methods Volume 8 ; 8 ; 2010 >
+    au < exists ; Limnology and Oceanography: Methods Volume 9 ; 9 ; 2011 >
+    au < exists ; Limnology and Oceanography: Methods Volume 10 ; 10 ; 2012 >
+    au < expected ; Limnology and Oceanography: Methods Volume 11 ; 11 ; 2013 >
+       
+  }
+  
+}
