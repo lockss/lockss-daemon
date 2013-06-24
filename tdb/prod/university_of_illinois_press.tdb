@@ -4,8 +4,6 @@
     name = University of Illinois Press
   >
 
-  {
-
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
@@ -294,7 +292,20 @@
       au < expected ; 2013 ; Visual Arts Research Volume 39 ; 39 >
 
     }
+  
+    {
+      title <
+        name = Women, Gender, and Families of Color ;
+        issn = 2326-0939 ;
+        eissn = 2326-0947 ;
+        issnl = 2326-0939 
+      >
 
-  }
+      param[journal_dir] = women_gender_and_families_of_color
+      attr[journal_id] = wgf
+
+      au < exists ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
+
+    }
   
 }
