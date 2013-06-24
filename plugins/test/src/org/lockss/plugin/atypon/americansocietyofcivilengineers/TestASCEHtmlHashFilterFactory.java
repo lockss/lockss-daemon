@@ -1,4 +1,4 @@
-/*  $Id: TestASCEHtmlHashFilterFactory.java,v 1.1 2013-05-13 21:16:06 ldoan Exp $
+/*  $Id: TestASCEHtmlHashFilterFactory.java,v 1.2 2013-06-24 22:54:10 ldoan Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -46,98 +46,275 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     fact = new ASCEHtmlHashFilterFactory();
   }
   
-  private static final String withInstitutionBanner =
+  private static final String withStackContents =
       "<div class=\"block\">"
-        + "<div class=\"institutionBanner\">Access provided by STANFORD UNIV </div>"
-        + "</div>";
+          + "<div class=\"welcome stackContents\">"
+          + "<div class=\"stackedReverse\">"
+          + "<div class=\"loginIdentity\">"
+          + "Welcome"
+          + "<a href=\"https://boguspublisherlibrary.org/action/showLogin?"
+          + "uri=%2Ftoc%2Fijgnai%2F12%2F1\">"
+          + "     Log in"
+          + "</a>"
+          + "<a href=\"https://boguspublisherlibrary.org/action/registration\">"
+          + "    Register"
+          + "</a>"
+          + "<a href=\"https://secure.boguspublisher.org/BOGUSPUBLISHERWebSite/Secure/"
+          + "CheckOut/AddToCart.aspx\">View Cart</a>"
+          + "</div>"
+          + "<ul class=\"linkList topLinks menu\">"
+          + ""
+          + "<li class=\"\">"
+          + "         <a href=\"http://www.boguspublisher.org\" target=\"new\">BOGUSPUBLISHER</a>"
+          + "     </li>"
+          + "<li class=\"\">"
+          + "         <a href=\"http://www.boguspublisher.org/About-Civil-Engineering/\""
+          + " target=\"new\">About Civil Engineering</a>"
+          + "     </li>"
+          + "     <li class=\"\">"
+          + "         <a href=\"/page/contactus\">Contact Us</a>"
+          + "     </li>"
+          + "     <li class=\"\">"
+          + "         <a href=\"https://go.boguspublisher.org/forms/foundation/"
+          + "boguspublisher-foundation\" target=\"new\">Donate Now</a>"
+          + "     </li>"
+          + "     <li class=\"\">"
+          + "        <a href=\"/page/about/mobile\">Mobile</a>"
+          + "     </li>"
+          + "     <li class=\"\">"
+          + "        <a href=\"http://www.boguspublisher.org/members/\""
+          + " target=\"new\">MyBOGUSPUBLISHER</a>"
+          + "     </li>"
+          + "     <li class=\"\">"
+          + "        <a href=\"http://www.boguspublisher.org/Content.aspx?id=2147487201\""
+          + " target=\"new\">Shop BOGUSPUBLISHER</a>"
+          + "     </li>"
+          + "</ul>"
+          + "</div>"
+          + "</div>"
+          + "</div>";
   
-  private static final String withoutInstitutionBanner =
+  private static final String withoutStackContents =
+      "<div class=\"block\"></div>";
+      
+  private static final String withPrevNextNav =
+      "<div class=\"block\">"
+          + "<div id=\"prevNextNav\">"
+          + "<div id=\"issueSearch\">"
+          + "<form action=\"/action/doSearch\" method=\"get\">"
+          + "<input type=\"text\" name=\"searchText\" value=\"\" size=\"17\">"
+          + "<input type=\"hidden\" name=\"issue\" value=\"1\">"
+          + "<input type=\"hidden\" name=\"journalCode\" value=\"ijgnai\">"
+          + "<input type=\"hidden\" name=\"volume\" value=\"12\">"
+          + "<input type=\"hidden\" name=\"filter\" value=\"issue\">"
+          + "<input type=\"submit\" value=\"Search Issue\"></form>"
+          + "</div>"
+          + "<a href=\"javascript:toggleSlide('issueSearch')\">"
+          + "Search Issue</a> |"
+          + "<img src=\"/templates/jsp/_style2/_pagebuilder/_c3/"
+          + "images/rss_32.png\">"
+          + "<a href=\"http://boguspublisherlibrary.org/action/showFeed?"
+          + "ui=0&amp;mi=3f0cur&amp;ai=s4&amp;jc=ijgnai&amp;type=etoc&amp;"
+          + "feed=rss\">RSS</a>"
+          + "<br>"
+          + "<a href=\"/toc/ijgnai/11/6\">Previous Issue</a>"
+          + "<a href=\"/toc/ijgnai/12/2\"> Next Issue</a>"
+          + "</div>"
+          + "</div>";
+
+  private static final String withoutPrevNextNav =
+      "<div class=\"block\"></div>";
+  
+  private static final String withTocTools =
+      "<div class=\"block\">"
+          + "<div id=\"tocTools\">"
+          + "<div class=\"body\">"
+          + "<span id=\"selected\">"
+          + "<div id=\"selectedCount\">0</div>"
+          + "<img src=\"/templates/jsp/_style2/_pagebuilder/_c3/"
+          + "images/actionsarrow.png\">"
+          + "</span>"
+          + "<span>"
+          + "<ul class=\"linkList blockLinks separators toclinks\">"
+          + "<li class=\"noBorder label\">SELECTED:</li>"
+          + "<li class=\"noBorder\">"
+          + "<a href=\"javascript:submitArticles(document.frmAbs, "
+          + "'/action/showCitFormats');\">Export Citations</a></li>"
+          + "<li><a href=\"javascript:expandAbstracts();\">"
+          + "Show/Hide Abstracts</a></li>"
+          + "<li><a href=\"javascript:submitArticles(document.frmAbs, "
+          + "'/personalize/addFavoriteArticle');\">Add to MyArticles</a></li>"
+          + "<li><a href=\"javascript:submitArticles(document.frmAbs, "
+          + "'/action/showMailPage');\">Email</a></li>"
+          + "<li class=\"noBorder cart\">"
+          + "<a href=\"https://secure.boguspublisher.org/BOGUSPUBLISHERWebSite/Secure/"
+          + "CheckOut/AddToCart.aspx\">View</a>"
+          + "<img class=\"cart-image\" src=\"/templates/jsp/_style2/"
+          + "_pagebuilder/_c3/images/cartview.gif\">"
+          + "</li>"
+          + "</ul>"
+          + "</span>"
+          + "</div>"
+          + "</div>"
+          + "</div>";
+  
+  private static final String withoutTocTools =
       "<div class=\"block\"></div>";
 
-      
-  private static final String withInfrastructureAssessmentAd =
+  
+  private static final String withToggle =
       "<div class=\"block\">"
-          + "<div id=\"widget-10646\""
-          + " class=\"widget type-ad-placeholder ui-helper-clearfix\">"
+          + "<td class=\"toggle\"><p>"
+          + "<a href=\"javascript:showHideAbs"
+          + "('10.1061/(BOGUSPUBLISHER)GM.1943-5622.0000074', "
+          + "'AbsBOGUSPUBLISHERGM194356220000074', "
+          + "'showAbsBOGUSPUBLISHERGM194356220000074');\">+</a></p></td>"
+          + "</div>";
+  
+  private static final String withoutToggle =
+      "<div class=\"block\"></div>";
+
+  private static final String withDropzoneLeftSidebar =
+      "<div class=\"block\">"
+          + "<div class=\"dropzone ui-corner-all \" id=\"dropzone-Left-Sidebar\">"
+          + "<div id=\"widget-11339\" class=\"widget type-ad-placeholder ui-helper-clearfix\">"
           + "<div class=\"view\">"
           + "<div class=\"view-inner\">"
-          + "<!-- placeholder id=null, description=Books Left 1 -->"
-          + "<a href=\"/action/clickThrough?id=1238&amp;url=%2Fpage%2Fjitse4"
-          + "%2Finfrastructureassessmentandpublicpolicy&amp;loc=%2Fdoi%2Fabs"
-          + "%2F10.1061%2F%2528ASCE%25291076-0431%25282007%252913%253A2"
-          + "%252872%2529&amp;pubId=40084448\"><center>"
-          + "<img src=\"/sda/1238/infrastructure2.jpg\"></center></a><br>"
+          + "<a title=\"Rebuilding After a Tornado\" "
+          + "href=\"/action/clickThrough?id=1245&amp;url=%2Fpage%2Fnhrefo%2F"
+          + "rebuildingafteratornado&amp;loc=%2Fdoi%2Fabs%2F10.1061%2F%2528"
+          + "BOGUSPUBLISHER%2529GM.1943-5622.0000040&amp;pubId=40224104\">"
+          + "<center><img src=\"/sda/1245/Tornados.jpg\" "
+          + "alt=\"Rebuilding After a Tornado\"></center></a><br>"
+          + "</div>"
           + "</div>"
           + "</div>"
           + "</div>"
           + "</div>";
 
-  private static final String withoutInfrastructureAssessmentAd =
+  private static final String withoutDropzoneLeftSidebar =
       "<div class=\"block\"></div>";
   
-  private static final String withSessionViewed =
+  private static final String withCitedBySection =
       "<div class=\"block\">"
-        + "<div class=\"sessionViewed\">"
-        + "<div class=\"label\">Recently Viewed</div>"
-        + "<ul class=\"sessionHistory\">"
-        + "<li><a href=\"/doi/abs/10.1061/%28ASCE%290887-3801%282009%2923%3A1"
-        + "%283%29\">Methodology for Automating the Identification and "
-        + "Localization of Construction Components on Industrial Projects</a></li>"
-        + "<li><a href=\"/doi/abs/10.1061/%28ASCE%290887-3801%282009%2923%3A1"
-        + "%2814%29\">Methodology to Assess Building Designs for Protection "
-        + "against Internal Chemical and Biological Threats</a></li>"
-        + "<li><a href=\"/doi/abs/10.1061/%28ASCE%291076-0431%282007%2913%3A2"
-        + "%2884%29\">Effects of HVAC System and Building Characteristics on "
-        + "Exposure of Occupants to Short-Duration Point Source Aerosol "
-        + "Releases</a></li>"
-        + "</ul>"
-        + "</div>"
-        + "</div>";
-
-  private static final String withoutSessionViewed =
-      "<div class=\"block\"></div>";
+          + "<div class=\"citedBySection\"><a name=\"citedBySection\"></a>"
+          + "<br><br><h2>Cited by</h2>"
+          + "<div class=\"citedByEntry\">"
+          + "<a class=\"entryAuthor\" href=\"blahblah\"></a>"
+          + "</div>"
+          + "<div class=\"citedByEntry\">"
+          + "<a class=\"entryAuthor\" href=\"blahAuthor\">"
+          + "</div>"
+          + "</div>"
+          + "</div>";
   
-  private static final String withCopyright =
-      "<div class=\"block\">"
-      + "<div id=\"footer_message\"><span style=\"color: rgb(0, 0, 0);\">"
-      + "<span class=\"fontSize2\"><span style=\"color: rgb(0, 0, 0);\">"
-      + "Copyright © 1996-2013, American So</span>ciety of Civil Engineers</span>"
-      + "<br>"
-      + "</span></div>"
-      + "</div>";
+  private static final String withoutCitedBySection =
+      "<div class=\"block\"></div>";
 
-  private static final String withoutCopyright =
+  private static final String withFooter =
+      "<div class=\"block\">"
+          + "<div id=\"footer\">"
+          + "<div class=\"footer\">"
+          + "<img src=\"pubpartners1.jpg\" alt=\"pubpartner1\" "
+          + "usemap=\"#pubpartner1.jpg\">"
+          + "<map name=\"pubpartners1.jpg\">"
+          + "<area shape=\"rect\" coords=\"184,50,277,92\" "
+          + "href=\"http://www.blah.org/\" title=\"blah.org\" "
+          + "alt=\"blah.org\">"
+          + "</map>"
+          + "<div id=\"copyright\">"
+          + "<div id=\"footer_links_grey\"><span class=\"fontSize2\">"
+          + "<span style=\"font-family: arial,helvetica,sans-serif;\">"
+          + "<span style=\"color: rgb(0, 0, 0);\">"
+          + "<a href=\"http://www.blahboguspublisher.org/\" target=\"_blank\">"
+          + "Blahboguspublisher Home</a>&nbsp;&nbsp; | &nbsp; "
+          + "<a href=\"http://blah.blah.org/\" target=\"_blank\">"
+          + "Civil Engineering Database</a>&nbsp;&nbsp; |&nbsp;&nbsp; "
+          + "<a href=\"http://www.boguspublisher.org/PPLContent.aspx?id=2147486529\" "
+          + "target=\"_blank\">Bookstore</a>&nbsp;&nbsp; | &nbsp; "
+          + "<a href=\"/page/journalsubscriptioninformation\" "
+          + "target=\"_blank\">Subscribe</a> &nbsp; |&nbsp;&nbsp; "
+          + "<a href=\"/page/termsofuse\" target=\"_blank\">"
+          + "BOGUSPUBLISHER Library Terms of Use</a>&nbsp;&nbsp; | &nbsp; "
+          + "<a href=\"/page/contactus\" target=\"_blank\">Contact Us</a>"
+          + "<br>"
+          + "</span></span></span></div>"
+          + "</div>"
+          + "<div id=\"footer_message\"><span style=\"color: rgb(0, 0, 0);\">"
+          + "<span class=\"fontSize2\"><span style=\"color: rgb(0, 0, 0);\">"
+          + "Copyright © 1996-2013, American So</span>"
+          + "ciety of Civil Engineers</span>"
+          + "<br>"
+          + "</span></div>"
+          + "<span style=\"color: rgb(0, 0, 0);\">"
+          + "<span style=\"font-family: arial,helvetica,sans-serif;\">"
+          + "<span class=\"fontSize2\"><a title=\"Copyright\" "
+          + "href=\"http://www.boguspublisher.org/copyright\" target=\"_blank\">"
+          + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+          + "BOGUSPUBLISHER Copyright</a> &nbsp; <a title=\"FAQs\" "
+          + "href=\"http://www.boguspublisher.org/faqs\" target=\"_blank\">"
+          + "BOGUSPUBLISHER FAQs</a>&nbsp;&nbsp; <a title=\"Privacy\" "
+          + "href=\"http://www.boguspublisher.org/privacy\" target=\"_blank\">"
+          + "BOGUSPUBLISHER Privacy</a>&nbsp;&nbsp; <a title=\"Questions\" "
+          + "href=\"http://www.boguspublisher.org/questions\" target=\"_blank\">"
+          + "BOGUSPUBLISHER Questions</a>&nbsp;&nbsp; "
+          + "<a title=\"Terms &amp; Conditions\""
+          + "href=\"http://www.boguspublisher.org/terms-conditions\""
+          + "target=\"_blank\">BOGUSPUBLISHER Terms &amp; Conditions</a></span></span>"
+          + "<br>"
+          + "</span>"
+          + "</div>"        
+          + "</div>"
+          + "</div>";
+
+  private static final String withoutFooter =
       "<div class=\"block\"></div>";
 
   /*
    *  Compare Html and HtmlHashFiltered
    */
   
-  public void testwithInstitutionBannerHtmlFiltering() throws Exception {
+  public void testStackContentsHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withInstitutionBanner), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutInstitutionBanner,
-        StringUtil.fromInputStream(actIn));
+        new StringInputStream(withStackContents), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutStackContents, StringUtil.fromInputStream(actIn));
   }
 
-  public void testInfrastructureAssessmentAdHtmlFiltering() throws Exception {
+  public void testPrevNextNavHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withInfrastructureAssessmentAd), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutInfrastructureAssessmentAd,
-        StringUtil.fromInputStream(actIn));
+        new StringInputStream(withPrevNextNav), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutPrevNextNav, StringUtil.fromInputStream(actIn));
   }
   
-  public void testSessionViewedHtmlFiltering() throws Exception {
+  public void testTocToolsHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withSessionViewed), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutSessionViewed,
-        StringUtil.fromInputStream(actIn));
+        new StringInputStream(withTocTools), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutTocTools, StringUtil.fromInputStream(actIn));
   }
 
-  public void testCopyrightHtmlFiltering() throws Exception {
+  public void testToggleHtmlFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCopyright), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutCopyright, StringUtil.fromInputStream(actIn));
+        new StringInputStream(withToggle), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutToggle, StringUtil.fromInputStream(actIn));
   }
 
+  public void testDropzoneLeftSidebarHtmlFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withDropzoneLeftSidebar),
+                              Constants.DEFAULT_ENCODING);
+    assertEquals(withoutDropzoneLeftSidebar,
+                 StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testCitedBySectionHtmlFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withCitedBySection), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutCitedBySection, StringUtil.fromInputStream(actIn));
+  }
+        
+  public void testFooterHtmlFiltering() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withFooter), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutFooter, StringUtil.fromInputStream(actIn));
+  }
 }
