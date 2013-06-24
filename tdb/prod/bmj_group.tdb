@@ -445,6 +445,17 @@
   
   {
     title <
+      name = BMJ Open Diabetes Research & Care
+    >
+
+    param[base_url] = http://drc.bmj.com/
+
+    au < HighWirePressH20Plugin ; expected ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+
+  }
+  
+  {
+    title <
       name = BMJ Quality Improvement Reports ;
       eissn = 2050-1315
    >
