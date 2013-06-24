@@ -72,12 +72,12 @@
       au < manifest ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 11 >
       au < manifest ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 12 >
       au < manifest ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 13 >
-      au < manifest ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 14 >
-      au < manifest ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 15 >
-      au < manifest ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 >
-      au < manifest ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 >
-      au < manifest ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 >
-      au < manifest ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 >
+      au < testing ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 14 >
+      au < testing ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 15 >
+      au < testing ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 >
+      au < testing ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 >
+      au < testing ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 >
+      au < testing ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 >
       au < ready ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 >
       au < ready ; 2012 ; American Journal of Speech-Language Pathology Volume 21 ; 21 >
       au < expected ; 2013 ; American Journal of Speech-Language Pathology Volume 22 ; 22 >
@@ -362,12 +362,12 @@
       au < manifest ; 2002 ; Perspectives on Administration and Supervision Volume 12 ; 12 >
       au < manifest ; 2003 ; Perspectives on Administration and Supervision Volume 13 ; 13 >
       au < manifest ; 2004 ; Perspectives on Administration and Supervision Volume 14 ; 14 >
-      au < manifest ; 2005 ; Perspectives on Administration and Supervision Volume 15 ; 15 >
-      au < manifest ; 2006 ; Perspectives on Administration and Supervision Volume 16 ; 16 >
-      au < manifest ; 2007 ; Perspectives on Administration and Supervision Volume 17 ; 17 >
-      au < manifest ; 2008 ; Perspectives on Administration and Supervision Volume 18 ; 18 >
-      au < manifest ; 2009 ; Perspectives on Administration and Supervision Volume 19 ; 19 >
-      au < manifest ; 2010 ; Perspectives on Administration and Supervision Volume 20 ; 20 >
+      au < testing ; 2005 ; Perspectives on Administration and Supervision Volume 15 ; 15 >
+      au < testing ; 2006 ; Perspectives on Administration and Supervision Volume 16 ; 16 >
+      au < testing ; 2007 ; Perspectives on Administration and Supervision Volume 17 ; 17 >
+      au < testing ; 2008 ; Perspectives on Administration and Supervision Volume 18 ; 18 >
+      au < testing ; 2009 ; Perspectives on Administration and Supervision Volume 19 ; 19 >
+      au < testing ; 2010 ; Perspectives on Administration and Supervision Volume 20 ; 20 >
       au < released ; 2011 ; Perspectives on Administration and Supervision Volume 21 ; 21 >
       au < released ; 2012 ; Perspectives on Administration and Supervision Volume 22 ; 22 >
       au < expected ; 2013 ; Perspectives on Administration and Supervision Volume 23 ; 23 >
@@ -389,12 +389,12 @@
       param[base_url] = http://accperspectives.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2005 ; Perspectives on Audiology Volume 1 ; 1 >
-      au < manifest ; 2006 ; Perspectives on Audiology Volume 2 ; 2 >
-      au < manifest ; 2007 ; Perspectives on Audiology Volume 3 ; 3 >
-      au < manifest ; 2008 ; Perspectives on Audiology Volume 4 ; 4 >
-      au < manifest ; 2009 ; Perspectives on Audiology Volume 5 ; 5 >
-      au < manifest ; 2010 ; Perspectives on Audiology Volume 6 ; 6 >
+      au < testing ; 2005 ; Perspectives on Audiology Volume 1 ; 1 >
+      au < testing ; 2006 ; Perspectives on Audiology Volume 2 ; 2 >
+      au < testing ; 2007 ; Perspectives on Audiology Volume 3 ; 3 >
+      au < testing ; 2008 ; Perspectives on Audiology Volume 4 ; 4 >
+      au < testing ; 2009 ; Perspectives on Audiology Volume 5 ; 5 >
+      au < testing ; 2010 ; Perspectives on Audiology Volume 6 ; 6 >
       au < released ; 2011 ; Perspectives on Audiology Volume 7 ; 7 >
       au < expected ; 2012 ; Perspectives on Audiology Volume 8 ; 8 >
       au < expected ; 2013 ; Perspectives on Audiology Volume 9 ; 9 >
