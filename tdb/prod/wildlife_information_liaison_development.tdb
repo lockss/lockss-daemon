@@ -7,6 +7,7 @@
   plugin = needs.plugin
   param[base_url] = http://www.threatenedtaxa.org/
   implicit < status ; year ; name ; param[volume_name] >
+  comment[platform] = moving to OJS2
   
   {
   
