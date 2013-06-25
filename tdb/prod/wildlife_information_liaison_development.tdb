@@ -4,6 +4,10 @@
     name = Wildlife Information Liaison Development 
   >
 
+  plugin = needs.plugin
+  param[base_url] = http://www.threatenedtaxa.org/
+  implicit < status ; year ; name ; param[volume_name] >
+  
   {
   
     title <
@@ -12,10 +16,7 @@
       issnl = 0974-7907
     >
 
-    {
-
-
-    }
+    au < doNotProcess ; 2013 ; Journal of Threatened Taxa Volume 1 ; 1 >
 
   }
 
