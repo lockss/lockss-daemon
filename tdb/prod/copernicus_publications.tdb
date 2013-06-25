@@ -90,19 +90,18 @@
       attr[journal_id] = ASR
       param[base_url] = http://www.adv-sci-res.net/
       param[home_url] = http://www.advances-in-science-and-research.net/
-      comment[notReady] = not online yet
 
       au < released ; 2007 ; 2007 ; Advances in Science and Research 2006 Volume 1 ; 1 >
       au < released ; 2008 ; 2008 ; Advances in Science and Research 2007 Volume 2 ; 2 >
       au < released ; 2009 ; 2009 ; Advances in Science and Research 2008 Volume 3 ; 3 >
       au < released ; 2010 ; 2010 ; Advances in Science and Research 2009 Volume 4 ; 4 >
-      au < released ; 2010 ; 2010 ; Advances in Science and Research 2010 Volume 5 ; 5 >
+      au < released ; 2010 ; 2010 ; Advances in Science and Research 2009 Volume 5 ; 5 >
       au < released ; 2011 ; 2011 ; Advances in Science and Research 2010 Volume 6 ; 6 >
-      au < released ; 2011 ; 2011 ; Advances in Science and Research 2011 Volume 7 ; 7 >
+      au < released ; 2011 ; 2011 ; Advances in Science and Research 2010 Volume 7 ; 7 >
       au < released ; 2012 ; 2012 ; Advances in Science and Research 2011 Volume 8 ; 8 >
-      au < notReady ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 9 ; 9 >
-      au < manifest ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 10 ; 10 >
-      au < expected ; 2013 ; 2013 ; Advances in Science and Research 2011 Volume 11 ; 11 >
+      au < doesNotExist ; 2012 ; 0 ; Advances in Science and Research 2011 Volume 9 ; 0 >
+      au < manifest ; 2013 ; 2013 ; Advances in Science and Research 2012 Volume 10 ; 10 >
+      au < expected ; 2013 ; 2013 ; Advances in Science and Research 2012 Volume 11 ; 11 >
     
    }
     
