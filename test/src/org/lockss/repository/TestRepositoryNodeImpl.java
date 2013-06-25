@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.62 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.62.40.1 2013-06-25 18:58:42 tlipkis Exp $
  */
 
 /*
@@ -638,6 +638,50 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     assertIsomorphic(expectedA,
 		     getChildNames(("http://www.example.com/testDir/branch%3c1")));
+  }
+
+  public void testUnnormalizedIterate() throws Exception {
+    if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+      log.debug("Skipping testUnnormalizedIterate: file system is not case sensitive.");
+      return;
+    }
+    repo.setDontNormalize(true);
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "No");
+    createLeaf("http://www.example.com/testDir/leaf1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf%2c1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf3",
+               "test stream", null);
+    repo.setDontNormalize(false);
+
+    // Unnormalized name in result of listChildren not included in result
+    // because name gets normalized when node created, thus not found
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/leaf1",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertSameElements(expectedA,
+		       getChildNames(("http://www.example.com/testDir")));
+
+    // Same with checkUnnormalized = Log
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Log");
+    assertSameElements(expectedA,
+		       getChildNames(("http://www.example.com/testDir")));
+
+    // If checkUnnormalized = Fix, unnnormalized file in repo will be fixed
+    // and inluded in result
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_CHECK_UNNORMALIZED,
+				  "Fix");
+    String[] expectedB = new String[] {
+      "http://www.example.com/testDir/leaf1",
+      "http://www.example.com/testDir/leaf%2C1",
+      "http://www.example.com/testDir/leaf3",
+      };
+    assertSameElements(expectedB,
+		       getChildNames(("http://www.example.com/testDir")));
   }
 
   public void testEntrySort() throws Exception {
@@ -1897,6 +1941,33 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 		 RepositoryNodeImpl.encodeUrl("www.example.com"));
     assertEquals("www.example.com/val",
 		 RepositoryNodeImpl.encodeUrl("www.example.com/val"));
+    assertEquals("www.example.com%5Cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com\\val"));
+    assertEquals("www.example.com/val%5Cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val\\val"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val%5C%5Cval",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val\\\\val"));
+    assertEquals("www.example.com/val/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val"));
+    assertEquals("www.example.com/val/val/",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val/"));
+    assertEquals("www.example.com/val/val%5C",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/val\\"));
+    assertEquals("www.example.com%5Cval%5Cval%5C",
+		 RepositoryNodeImpl.encodeUrl("www.example.com\\val\\val\\"));
+  }
+
+  public void testEncodeUrlCompatibility() {
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_ENABLE_LONG_COMPONENTS_COMPATIBILITY,
+				  "true");
+    assertEquals(null, RepositoryNodeImpl.encodeUrl(null));
+    assertEquals("", RepositoryNodeImpl.encodeUrl(""));
+    assertEquals("www.example.com",
+		 RepositoryNodeImpl.encodeUrl("www.example.com"));
+    assertEquals("www.example.com/val",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val"));
     assertEquals("www.example.com%5cval",
 		 RepositoryNodeImpl.encodeUrl("www.example.com\\val"));
     assertEquals("www.example.com/val%5cval",
@@ -1922,22 +1993,22 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 		 RepositoryNodeImpl.decodeUrl("www.example.com"));
     assertEquals("www.example.com/val",
 		 RepositoryNodeImpl.decodeUrl("www.example.com/val"));
-    assertEquals("www.example.com%5cval",
-		 RepositoryNodeImpl.decodeUrl("www.example.com%5cval"));
-    assertEquals("www.example.com/val%5cval",
-		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5cval"));
+    assertEquals("www.example.com%5Cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com%5Cval"));
+    assertEquals("www.example.com/val%5Cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5Cval"));
     assertEquals("www.example.com/val/val",
 		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val"));
-    assertEquals("www.example.com/val%5c%5cval",
-		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5c%5cval"));
+    assertEquals("www.example.com/val%5C%5Cval",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val%5C%5Cval"));
     assertEquals("www.example.com/val/val",
 		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val"));
     assertEquals("www.example.com/val/val/",
 		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val/"));
-    assertEquals("www.example.com/val/val%5c",
-		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val%5c"));
-    assertEquals("www.example.com%5cval%5cval%5c",
-		 RepositoryNodeImpl.decodeUrl("www.example.com%5cval%5cval%5c"));
+    assertEquals("www.example.com/val/val%5C",
+		 RepositoryNodeImpl.decodeUrl("www.example.com/val/val%5C"));
+    assertEquals("www.example.com%5cval%5Cval%5c",
+		 RepositoryNodeImpl.decodeUrl("www.example.com%5cval%5Cval%5c"));
   }
   
   public void testLongDecodeUrl() {

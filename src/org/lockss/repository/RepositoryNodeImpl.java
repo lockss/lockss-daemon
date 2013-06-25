@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.87 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.87.40.1 2013-06-25 18:58:42 tlipkis Exp $
  */
 
 /*
@@ -352,16 +352,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
           RepositoryNode node = repository.getNode(childUrl);
-          // add all nodes which are internal or active leaves
-          // deleted nodes never included
+	  if (node != null) {
+	    
+	    // add all nodes which are internal or active leaves
+	    // deleted nodes never included
 //           boolean activeInternal = !node.isLeaf() && !node.isDeleted();
 //           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
 //               (!node.isContentInactive() || includeInactive);
 //           if (activeInternal || activeLeaf) {
-	  if (!node.isDeleted() && (!node.isContentInactive() ||
-				    (includeInactive || !node.isLeaf()))) {
-            childL.add(repository.getNode(childUrl));
-          }
+	    if (!node.isDeleted() && (!node.isContentInactive() ||
+				      (includeInactive || !node.isLeaf()))) {
+	      childL.add(repository.getNode(childUrl));
+	    }
+	  } else {
+	    logger.warning("Child node not found; disappeared or is unnormalized: " + childUrl);
+	  }
         } catch (MalformedURLException ignore) {
           // this can safely skip bad files because they will
           // eventually be trimmed by the repository integrity checker
@@ -435,8 +440,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
           // Normalization done here against the url string, instead of
           // against the file in the repository. This alleviates us from
           // dealing with edge conditions where the file split occurs
-          // around an encoding. e.g. %/5c is special in file, but decoded
-          // URL string is %5c and we handle it correctly.
+          // around an encoding. e.g. %/5C is special in file, but decoded
+          // URL string is %5C and we handle it correctly.
           location = normalizeTrailingQuestion(location);
           location = normalizeUrlEncodingCase(location);
           if(!oldLocation.equals(location)) {
@@ -1957,7 +1962,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Encodes URL
    * Encodes the URL for storage in the file system.
    *
-   * 1. Convert all backslashes to %5c
+   * 1. Convert all backslashes to %5C
    * 2. Tokenize string by '/'
    * 3. All strings longer than 254 characters are separated by a / at each 254'th character
    */
@@ -1967,8 +1972,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if(url.charAt(0) == '/' && url.length() > 1) {
       url = url.substring(1);
     }
-    // 1. convert all backslashes to %5c
-    url = url.replaceAll("\\\\", "%5c");
+    // 1. convert all backslashes to %5C
+    String backNorm =
+      RepositoryManager.isEnableLongComponentsCompatibility() ? "%5c" : "%5C";
+    url = url.replaceAll("\\\\", backNorm);
     // 2. tokenize string by '/'
     StringBuffer result = new StringBuffer();
     StringTokenizer strtok = new StringTokenizer(url, "/", true);
@@ -2015,7 +2022,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if(path == null || path.isEmpty())
       return path;
     path = path.replaceAll("\\\\/", "");
-    path = path.replaceAll("\\\\", "");
+    // No backslashes should be left except in files created before long
+    // componenets enabled - leave them alone.
+//     path = path.replaceAll("\\\\", "");
     return path;
   }
 }
