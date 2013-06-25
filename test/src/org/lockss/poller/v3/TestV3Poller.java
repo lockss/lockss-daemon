@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.55 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.55.2.1 2013-06-25 18:57:55 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.security.*;
 import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -524,10 +525,12 @@ public class TestV3Poller extends LockssTestCase {
     return vb;
   }
   
-  private VoteBlock makeVoteBlock(String url, String content)
+  private VoteBlock makeVoteBlock(String url, String... contents)
       throws Exception {
     VoteBlock vb = new VoteBlock(url);
-    addVersion(vb, content);
+    for (String content: contents) {
+      addVersion(vb, content);
+    }
     return vb;
   }
   
@@ -823,6 +826,333 @@ public class TestV3Poller extends LockssTestCase {
 		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
   }
   
+  private Collection<String> publisherRepairUrls(V3Poller v3Poller) {
+    PollerStateBean.RepairQueue repairQueue =
+      v3Poller.getPollerStateBean().getRepairQueue();
+    return repairQueue.getPendingPublisherRepairUrls();
+  }
+  
+  private Collection<String> peerRepairUrls(V3Poller v3Poller) {
+    PollerStateBean.RepairQueue repairQueue =
+      v3Poller.getPollerStateBean().getRepairQueue();
+    List<PollerStateBean.Repair> peerRepairs =
+      repairQueue.getPendingPeerRepairs();
+    Collection<String> peerRepairUrls = new ArrayList<String>();
+    for (PollerStateBean.Repair repair: peerRepairs) {
+      peerRepairUrls.add(repair.getUrl());
+    }
+    return peerRepairUrls;
+  }
+
+  public void testRequestRepair() throws Exception {
+    MyV3Poller v3Poller;
+
+    // 0% repair from cache: the repair goes to the publisher
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "0");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   theParticipants(v3Poller).values());
+
+    assertSameElements(Arrays.asList("http://example.com"),
+		       publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+    // 100% repair from cache: the repair goes to a peer
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   theParticipants(v3Poller).values());
+
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com"),
+		peerRepairUrls(v3Poller));
+
+    // 0% repair from cache, and no repairers: the repair goes to the
+    // publisher
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "0");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com", Collections.EMPTY_LIST);    
+    
+    assertSameElements(Arrays.asList("http://example.com"),
+		       publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+    // 100% repair from cache, BUT no repairers: the repair goes to
+    // the publisher ANYWAY
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   Collections.EMPTY_LIST);
+    
+    assertSameElements(Arrays.asList("http://example.com"),
+		       publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+  }
+
+  public void testRequestRepairPubDown() throws Exception {
+    MyV3Poller v3Poller;
+
+    // Mark AU down.
+    testau.setConfiguration(
+      ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_DOWN.getKey(), "true"));
+
+    // 100% repair from cache
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   theParticipants(v3Poller).values());
+
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com"),
+		peerRepairUrls(v3Poller));
+
+    // 100% repair from cache, BUT no repairers.
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   Collections.EMPTY_LIST);
+    
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+    // 0% repair from cache; repair from cache anyway since pub down.
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "0");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   theParticipants(v3Poller).values());
+
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://example.com"),
+		peerRepairUrls(v3Poller));
+
+    // 0% repair from cache, BUT no repairers.
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "0");
+    v3Poller = makeInittedV3Poller("foo");
+    v3Poller.requestRepair("http://example.com",
+			   Collections.EMPTY_LIST);
+    
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+  }
+
+  public void testRequestRepairUseVersionCounts() throws Exception {
+    MyV3Poller v3Poller;
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
+        
+    String [] urls_poller =
+    { 
+     "http://test.com/foo1"
+    };
+    
+    HashBlock [] hashblocks =
+    {
+     makeHashBlock("http://test.com/foo1", "content for foo1HHH")
+    };
+    
+    VoteBlock [] voter1_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1zzz",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter2_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1yyy",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter3_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1xxx",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter4_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1www",
+		   "content for foo1")
+    };
+    
+    BlockTally tally;
+    v3Poller = makeV3Poller("testing poll key");
+
+    // The results expected are based on a quorum of 3.
+    assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
+
+    // Prefer the cache in all cases
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_USE_VERSION_COUNTS, "true");
+
+    v3Poller = makeV3Poller("testing poll key");
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
+    assertEmpty(tally.getRepairVoters());
+    assertSameElements(theParticipants(v3Poller).values(),
+		       tally.getDisagreeVoters());
+    
+    assertSameElements(Arrays.asList("http://test.com/foo1"),
+		       publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_USE_VERSION_COUNTS, "false");
+
+    v3Poller = makeV3Poller("testing poll key");
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
+    assertEmpty(tally.getRepairVoters());
+    assertSameElements(theParticipants(v3Poller).values(),
+		       tally.getDisagreeVoters());
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://test.com/foo1"),
+		       peerRepairUrls(v3Poller));
+  }
+
+  public void testHeadVersionRepair() throws Exception {
+    MyV3Poller v3Poller;
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
+        
+    String [] urls_poller =
+    { 
+     "http://test.com/foo1"
+    };
+    
+    HashBlock [] hashblocks =
+    {
+     makeHashBlock("http://test.com/foo1", "content for foo1HHH")
+    };
+    
+    VoteBlock [] voter1_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1zzz",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter2_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1yyy",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter3_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1xxx",
+		   "content for foo1")
+    };
+    
+    VoteBlock [] voter4_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1www",
+		   "content for foo1")
+    };
+    
+    BlockTally tally;
+    v3Poller = makeV3Poller("testing poll key");
+
+    // The results expected are based on a quorum of 3.
+    assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
+
+    // Prefer the cache in all cases
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_REPAIR_FROM_CACHE_PERCENT,
+				  "100");
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_USE_VERSION_COUNTS, "true");
+
+    v3Poller = makeV3Poller("testing poll key");
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
+    assertEmpty(tally.getRepairVoters());
+    assertSameElements(theParticipants(v3Poller).values(),
+		       tally.getDisagreeVoters());
+    
+    // Repair from cache not possible; nobody has that head version.
+    assertSameElements(Arrays.asList("http://test.com/foo1"),
+		       publisherRepairUrls(v3Poller));
+    assertEmpty(peerRepairUrls(v3Poller));
+
+    // Change voter2 to have the head version be the popular version.
+    VoteBlock[] exposed_content_voter2_voteblocks = {
+      makeVoteBlock("http://test.com/foo1", "content for foo1",
+		    "content for foo1yyy")
+    };
+
+    v3Poller = makeV3Poller("testing poll key");
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      exposed_content_voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+    
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.LOST, tally.getTallyResult());
+    assertSameElements(Arrays.asList(theParticipants(v3Poller).get(id2)), 
+		       tally.getRepairVoters());
+    assertSameElements(theParticipants(v3Poller).values(),
+		       tally.getDisagreeVoters());
+    
+    // Repair from cache
+    assertEmpty(publisherRepairUrls(v3Poller));
+    assertSameElements(Arrays.asList("http://test.com/foo1"),
+		       peerRepairUrls(v3Poller));
+  }
+
   public void testBlockCompare() throws Exception {
 //
 //    V3Poller v3Poller = makeV3Poller("testing poll key");
