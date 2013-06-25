@@ -126,10 +126,10 @@
     param[journal_abbr] = dcp
     implicit < status ; year ; name ; param[volume] >
 
-    au < releasing ; 2009 ; Data Curation Profile Volume 1 ; 1 >
-    au < releasing ; 2010 ; Data Curation Profile Volume 2 ; 2 >
-    au < releasing ; 2011 ; Data Curation Profile Volume 3 ; 3 >
-    au < releasing ; 2012 ; Data Curation Profile Volume 4 ; 4 >
+    au < released ; 2009 ; Data Curation Profile Volume 1 ; 1 >
+    au < released ; 2010 ; Data Curation Profile Volume 2 ; 2 >
+    au < released ; 2011 ; Data Curation Profile Volume 3 ; 3 >
+    au < released ; 2012 ; Data Curation Profile Volume 4 ; 4 >
     au < manifest ; 2013 ; Data Curation Profile Volume 5 ; 5 >
 
   }

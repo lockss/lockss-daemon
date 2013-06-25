@@ -32,7 +32,7 @@
     param[journal_id] = btp
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2007 ; 2007 ; Business: Theory and Practice Volume 8 ; 8 >
+    au < released ; 2007 ; 2007 ; Business: Theory and Practice Volume 8 ; 8 >
     au < testing ; 2008 ; 2008 ; Business: Theory and Practice Volume 9 ; 9 >
     au < testing ; 2009 ; 2009 ; Business: Theory and Practice Volume 10 ; 10 >
     au < testing ; 2010 ; 2010 ; Business: Theory and Practice Volume 11 ; 11 >
@@ -54,13 +54,13 @@
     param[journal_id] = cpc
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2006 ; 2006 ; Coactivity: Philosophy, Communication Volume 14 ; 14 >
-    au < releasing ; 2007 ; 2007 ; Coactivity: Philosophy, Communication Volume 15 ; 15 >
-    au < releasing ; 2008 ; 2008 ; Coactivity: Philosophy, Communication Volume 16 ; 16 >
-    au < releasing ; 2009 ; 2009 ; Coactivity: Philosophy, Communication Volume 17 ; 17 >
-    au < releasing ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 >
-    au < releasing ; 2011 ; 2011 ; Coactivity: Philosophy, Communication Volume 19 ; 19 >
-    au < releasing ; 2012 ; 2012 ; Coactivity: Philosophy, Communication Volume 20 ; 20 >
+    au < released ; 2006 ; 2006 ; Coactivity: Philosophy, Communication Volume 14 ; 14 >
+    au < released ; 2007 ; 2007 ; Coactivity: Philosophy, Communication Volume 15 ; 15 >
+    au < released ; 2008 ; 2008 ; Coactivity: Philosophy, Communication Volume 16 ; 16 >
+    au < released ; 2009 ; 2009 ; Coactivity: Philosophy, Communication Volume 17 ; 17 >
+    au < released ; 2010 ; 2010 ; Coactivity: Philosophy, Communication Volume 18 ; 18 >
+    au < released ; 2011 ; 2011 ; Coactivity: Philosophy, Communication Volume 19 ; 19 >
+    au < released ; 2012 ; 2012 ; Coactivity: Philosophy, Communication Volume 20 ; 20 >
     au < manifest ; 2013 ; 2013 ; Coactivity: Philosophy, Communication Volume 21 ; 21 >
 
   }
@@ -77,13 +77,13 @@
     param[journal_id] = cpe
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 >
-    au < releasing ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 >
-    au < releasing ; 2008 ; 2008 ; Coactivity: Philology, Educology Volume 16 ; 16 >
-    au < releasing ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 >
-    au < releasing ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 >
-    au < releasing ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 >
-    au < releasing ; 2012 ; 2012 ; Coactivity: Philology, Educology Volume 20 ; 20 >
+    au < released ; 2006 ; 2006 ; Coactivity: Philology, Educology Volume 14 ; 14 >
+    au < released ; 2007 ; 2007 ; Coactivity: Philology, Educology Volume 15 ; 15 >
+    au < released ; 2008 ; 2008 ; Coactivity: Philology, Educology Volume 16 ; 16 >
+    au < released ; 2009 ; 2009 ; Coactivity: Philology, Educology Volume 17 ; 17 >
+    au < released ; 2010 ; 2010 ; Coactivity: Philology, Educology Volume 18 ; 18 >
+    au < released ; 2011 ; 2011 ; Coactivity: Philology, Educology Volume 19 ; 19 >
+    au < released ; 2012 ; 2012 ; Coactivity: Philology, Educology Volume 20 ; 20 >
     au < manifest ; 2013 ; 2013 ; Coactivity: Philology, Educology Volume 21 ; 21 >
 
   }
@@ -100,10 +100,10 @@
     param[journal_id] = mla
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2009 ; 2009 ; Science – Future of Lithuania Volume 1 ; 1 >
-    au < releasing ; 2010 ; 2010 ; Science – Future of Lithuania Volume 2 ; 2 >
-    au < releasing ; 2011 ; 2011 ; Science – Future of Lithuania Volume 3 ; 3 >
-    au < releasing ; 2012 ; 2012 ; Science – Future of Lithuania Volume 4 ; 4 >
+    au < released ; 2009 ; 2009 ; Science – Future of Lithuania Volume 1 ; 1 >
+    au < released ; 2010 ; 2010 ; Science – Future of Lithuania Volume 2 ; 2 >
+    au < released ; 2011 ; 2011 ; Science – Future of Lithuania Volume 3 ; 3 >
+    au < released ; 2012 ; 2012 ; Science – Future of Lithuania Volume 4 ; 4 >
     au < manifest ; 2013 ; 2013 ; Science – Future of Lithuania Volume 5 ; 5 >
 
   }
@@ -120,10 +120,10 @@
     param[journal_id] = est
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 >
-    au < releasing ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 >
-    au < releasing ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 >
-    au < releasing ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 >
+    au < released ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 >
+    au < released ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 >
+    au < released ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 >
+    au < released ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 >
     au < manifest ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 >
 
   }
@@ -140,9 +140,9 @@
     param[journal_id] = bme
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < releasing ; 2010 ; 2010 ; Business, Management and Education Volume 8 ; 8 >
-    au < releasing ; 2011 ; 2011 ; Business, Management and Education Volume 9 ; 9 >
-    au < releasing ; 2012 ; 2012 ; Business, Management and Education Volume 10 ; 10 >
+    au < released ; 2010 ; 2010 ; Business, Management and Education Volume 8 ; 8 >
+    au < released ; 2011 ; 2011 ; Business, Management and Education Volume 9 ; 9 >
+    au < released ; 2012 ; 2012 ; Business, Management and Education Volume 10 ; 10 >
     au < expected ; 2013 ; 2013 ; Business, Management and Education Volume 11 ; 11 >
 
   }
