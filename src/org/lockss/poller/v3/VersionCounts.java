@@ -1,5 +1,5 @@
 /*
- * $Id: VersionCounts.java,v 1.1 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: VersionCounts.java,v 1.1.6.1 2013-06-25 18:58:14 tlipkis Exp $
  */
 
 /*
@@ -68,15 +68,6 @@ final class VersionCounts implements VoteBlockTallier.VoteCallback {
 	put(plainHash, id);
       }
     }
-
-    // A convenience method to do the case, until out apache library
-    // has generics.
-    Set<Map.Entry<HashResult, Collection<ParticipantUserData>>>
-      entrySetCast() {
-      // Cast the result.
-      return (Set<Map.Entry<HashResult, Collection<ParticipantUserData>>>)
-	super.entrySet();
-    }
   }
 
   // A map from the plain hash to the voters who have that as their
@@ -123,6 +114,12 @@ final class VersionCounts implements VoteBlockTallier.VoteCallback {
  
   private void addVotedVersions(VoteBlock.Version[] vbVersions,
 				ParticipantUserData id) {
+    // The participant can have multiple VoteBlock.Version instances
+    // with the same plain hash. But the participant still only gets
+    // to enter itself in the votedVersionMap once.
+    // CR: Should this enforce the "one-entry-per-voter" by using a
+    // Set in the collectionFactory of VersionMap?
+    VersionMap localVersionMap = new VersionMap();
     for (int versionIndex = 0; versionIndex < vbVersions.length;
 	 versionIndex++) {
       if (versionIndex > 20) {
@@ -131,7 +128,13 @@ final class VersionCounts implements VoteBlockTallier.VoteCallback {
 	break;
       }
       VoteBlock.Version vbVersion = vbVersions[versionIndex];
-      votedVersionMap.addVersion(vbVersion, id);
+      localVersionMap.addVersion(vbVersion, id);
+    }
+    for (HashResult votedVersion: 
+	   (Collection<HashResult>)localVersionMap.keySet()) {
+      // todo: Nicer place for logUniqueVersions. Assuming the
+      // collectionFactory isn't a Set.
+      votedVersionMap.put(votedVersion, id);
     }
   }
 
@@ -161,15 +164,18 @@ final class VersionCounts implements VoteBlockTallier.VoteCallback {
 		     Collection<HashResult> excludedHashes) {
     Map<ParticipantUserData, HashResult> repairCandidates =
       new HashMap<ParticipantUserData, HashResult>();
-    for (Map.Entry<HashResult, Collection<ParticipantUserData>> entry:
-	   headVersionMap.entrySetCast()) {
-      if (! excludedHashes.contains(entry.getKey())) {
-	Collection<ParticipantUserData> voters = entry.getValue();
+    for (HashResult headVersion: 
+	   (Collection<HashResult>)headVersionMap.keySet()) {
+      if (! excludedHashes.contains(headVersion)) {
+	Collection<ParticipantUserData> voters =
+	  votedVersionMap.getCollection(headVersion);
 	// voters can't be null, since the plainHash is the head
 	// version for some voters.
 	if (voters.size() >= landslideMinimum) {
-	  for (ParticipantUserData voter: voters) {
-	    repairCandidates.put(voter, entry.getKey());
+	  Collection<ParticipantUserData> headVoters = 
+	    headVersionMap.getCollection(headVersion);
+	  for (ParticipantUserData voter: headVoters) {
+	    repairCandidates.put(voter, headVersion);
 	  }
 	}
       }
