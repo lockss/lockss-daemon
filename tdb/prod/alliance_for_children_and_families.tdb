@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = Alliance for Children and Families
+    
+  >
+  
+  plugin = org.lockss.plugin.metapress.MetaPressPlugin
+  param[base_url] = http://essential.metapress.com/
+  implicit < status ; year ; name ; param[volume_name] >  
+  
+  {
+
+    title < 
+      name = Families in Society: The Journal of Contemporary Social Services ;
+      issn = 1044-3894 ;
+      eissn = 1945-1350
+      
+    >
+
+    param[journal_issn] = 1044-3894
+    
+    comment[volumes] = more volumes back to Volume 77
+
+    au < exists ; 2000 ; Families in Society: The Journal of Contemporary Social Services Volume 81 ; 81 >
+    au < exists ; 2001 ; Families in Society: The Journal of Contemporary Social Services Volume 82 ; 82 >
+    au < exists ; 2002 ; Families in Society: The Journal of Contemporary Social Services Volume 83 ; 83 >
+    au < exists ; 2003 ; Families in Society: The Journal of Contemporary Social Services Volume 84 ; 84 >
+    au < exists ; 2004 ; Families in Society: The Journal of Contemporary Social Services Volume 85 ; 85 >
+    au < exists ; 2005 ; Families in Society: The Journal of Contemporary Social Services Volume 86 ; 86 >
+    au < exists ; 2006 ; Families in Society: The Journal of Contemporary Social Services Volume 87 ; 87 >
+    au < exists ; 2007 ; Families in Society: The Journal of Contemporary Social Services Volume 88 ; 88 >
+    au < exists ; 2008 ; Families in Society: The Journal of Contemporary Social Services Volume 89 ; 89 >
+    au < exists ; 2009 ; Families in Society: The Journal of Contemporary Social Services Volume 90 ; 90 >
+    au < exists ; 2010 ; Families in Society: The Journal of Contemporary Social Services Volume 91 ; 91 >
+    au < exists ; 2011 ; Families in Society: The Journal of Contemporary Social Services Volume 92 ; 92 >
+    au < exists ; 2012 ; Families in Society: The Journal of Contemporary Social Services Volume 93 ; 93 >
+    au < exists ; 2013 ; Families in Society: The Journal of Contemporary Social Services Volume 94 ; 94 >
+   
+  }
+  
+}
+
