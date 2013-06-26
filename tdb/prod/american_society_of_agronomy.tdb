@@ -30,7 +30,7 @@
 
     {
     param[base_url] = http://www.agronomy.org/
-    para[journal_id] = aj
+    param[journal_id] = aj
     }
   }
 
@@ -42,7 +42,7 @@
     >
 
     param[base_url] = www.crops.org/
-    para[journal_id] = cs
+    param[journal_id] = cs
 
   }
 
@@ -54,7 +54,7 @@
     >
 
     param[base_url] = http://www.agronomy.org/
-    para[journal_id] = crops-and-soils
+    param[journal_id] = crops-and-soils
 
   }
 
@@ -66,7 +66,7 @@
     >
 
     param[base_url] = http://www.agronomy.org/
-    para[journal_id] = csa-news
+    param[journal_id] = csa-news
 
   }
 
@@ -93,7 +93,7 @@
 
     {
     param[base_url] = http://www.agronomy.org/
-    para[journal_id] = jeq
+    param[journal_id] = jeq
     }
     
   }
@@ -105,7 +105,7 @@
     >
 
     param[base_url] = www.crops.org/
-    para[journal_id] = jpr
+    param[journal_id] = jpr
 
 
   }
@@ -127,7 +127,7 @@
     >
 
     param[base_url] = http://www.agronomy.org/
-    para[journal_id] = nse
+    param[journal_id] = nse
 
 
   }
@@ -139,7 +139,7 @@
     >
 
     param[base_url] = www.crops.org/
-    para[journal_id] = tpg
+    param[journal_id] = tpg
 
 
   }
@@ -151,7 +151,7 @@
     >
 
     param[base_url] = www.soils.org/
-    para[journal_id] = sh
+    param[journal_id] = sh
 
   }
 
@@ -163,7 +163,7 @@
     >
 
     param[base_url] = www.soils.org/
-    para[journal_id] = sssaj
+    param[journal_id] = sssaj
 
   }
 
@@ -174,7 +174,7 @@
     >
 
     param[base_url] = www.soils.org/
-    para[journal_id] = vzj
+    param[journal_id] = vzj
 
 
   }
