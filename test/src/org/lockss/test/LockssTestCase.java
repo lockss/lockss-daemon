@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.111 2013-06-11 19:31:58 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.112 2013-06-26 04:47:59 tlipkis Exp $
  */
 
 /*
@@ -1316,9 +1316,26 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertSameElements(Collection expected,
 					Collection actual) {
-    assertTrue("Expected "+expected+" but was "+actual,
-	       org.apache.commons.collections.
-	       CollectionUtils.isEqualCollection(expected, actual));
+    assertSameElements(null, expected, actual);
+  }
+
+  /**
+   * Asserts that two collections have all the same elements of the same
+   * cardinality; tries to give useful output if it fails
+   */
+  public static void assertSameElements(String message,
+					Collection expected,
+					Collection actual) {
+    if (org.apache.commons.collections.
+	CollectionUtils.isEqualCollection(expected, actual)) {
+      return;
+    }
+    String formatted= "";
+    if (message != null) {
+      formatted= message+" ";
+    }
+    fail(formatted+"expected same elements:<"+expected+"> " +
+	 "but was:<"+actual+">");
   }
 
   /**
@@ -1327,10 +1344,28 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertSameElements(Object[] expected,
 					Collection actual) {
-    assertTrue("Expected "+arrayString(expected)+" but was "+actual,
-	       org.apache.commons.collections.
-	       CollectionUtils.isEqualCollection(ListUtil.fromArray(expected),
-						 actual));
+    assertSameElements(null, expected, actual);
+  }
+
+  /**
+   * Asserts that two collections have all the same elements of the same
+   * cardinality; tries to give useful output if it fails
+   */
+  public static void assertSameElements(String message,
+					Object[] expected,
+					Collection actual) {
+
+    if (org.apache.commons.collections.
+	CollectionUtils.isEqualCollection(ListUtil.fromArray(expected),
+					  actual)) {
+      return;
+    }
+    String formatted= "";
+    if (message != null) {
+      formatted= message+" ";
+    }
+    fail(formatted+"expected same elements:<"+arrayString(expected)+"> " +
+	 "but was:<"+actual+">");
   }
 
   /**
