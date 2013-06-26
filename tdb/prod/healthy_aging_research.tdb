@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Healthy Aging Research ;
+    info[contract] = 2013 ;
+    comment[platform] = custom
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://www.har-journal.com/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Healthy Aging Research ;
+      issn = 2261-7434 
+    >
+    
+  }
+  
+}
