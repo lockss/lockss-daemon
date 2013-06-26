@@ -31525,6 +31525,25 @@ comment[mpj] = now published by Brill
       }
 
     }
+    
+    {
+
+    title <
+          name = Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare ;
+          issn = 1071-1813
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hcs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < expected ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 >
+
+      }
+
+    }
 
     {
 

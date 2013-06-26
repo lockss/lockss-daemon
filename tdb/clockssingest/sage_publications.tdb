@@ -28419,6 +28419,20 @@
 
     }
 
+    {
+
+    title <
+          name = Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare ;
+          issn = 1071-1813
+      >
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://hcs.sagepub.com/
+
+        au < expected ; exists ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; >
+
+    }
+
   {
 
     title <
