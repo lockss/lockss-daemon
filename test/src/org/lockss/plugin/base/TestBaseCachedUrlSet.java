@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.17 2012-08-21 08:35:56 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.18 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -292,6 +292,70 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir",
     };
     assertIsomorphic(expectedA, childL);
+  }
+
+  String expMultSchemeHostPort[] = {
+    "lockssau:",
+    "http://aa",
+    "http://aa/leaf",
+    "http://aa.com",
+    "http://aa.com/leaf",
+    "http://aa.com:7000",
+    "http://aa.com:7000/leaf",
+    "http://aa.com:8000",
+    "http://aa.com:8000/leaf",
+    "http://aa.comx",
+    "http://aa.comx/leaf",
+    "http://aa:7000",
+    "http://aa:7000/leaf",
+    "http://aa:8000",
+    "http://aa:8000/leaf",
+    "http://bb",
+    "http://bb/leaf",
+    "http://bb:7000",
+    "http://bb:7000/leaf",
+    "http://bb:8000",
+    "http://bb:8000/leaf",
+    "https://aa",
+    "https://aa/leaf",
+    "https://aa:7000",
+    "https://aa:7000/leaf",
+    "https://aa:8000",
+    "https://aa:8000/leaf",
+    "https://bb",
+    "https://bb/leaf",
+    "https://bb:7000",
+    "https://bb:7000/leaf",
+    "https://bb:8000",
+    "https://bb:8000/leaf",
+  };
+
+  public void testHashIteratorMultipleSchemeHostPort() throws Exception {
+    Set preOrderHasContent = new TreeSet(StringUtil.PRE_ORDER_COMPARATOR);
+    for (String s : expMultSchemeHostPort) {
+      if (s.endsWith("leaf")) {
+	createLeaf(s, "test stream", null);
+	preOrderHasContent.add(s);
+      }
+    }
+
+    CachedUrlSet fileSet = mau.getAuCachedUrlSet();
+    Iterator setIt = fileSet.contentHashIterator();
+    ArrayList nodes = new ArrayList();
+    ArrayList contentNodes = new ArrayList();
+
+    while (setIt.hasNext()) {
+      CachedUrlSetNode node = ((CachedUrlSetNode)setIt.next());
+      String url = node.getUrl();
+      nodes.add(url);
+      if (node.hasContent()) {
+	contentNodes.add(url);
+      }
+    }
+    // should be sorted
+    assertIsomorphic(expMultSchemeHostPort, nodes);
+    assertIsomorphic(preOrderHasContent, contentNodes);
+
   }
 
   public void testHashIteratorThrowsOnBogusUrl() throws Exception {

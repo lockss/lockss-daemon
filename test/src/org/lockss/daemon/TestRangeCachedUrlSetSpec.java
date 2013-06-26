@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.16 2012-03-15 08:52:03 tlipkis Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.17 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -159,6 +159,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
       new RangeCachedUrlSetSpec("foo", "/123", null);
     assertTrue(cuss2.matches("foo/123"));
     assertTrue(cuss2.matches("foo/123/x"));
+    assertTrue(cuss2.matches("foo/123.x"));
     assertFalse(cuss2.matches("foo"));
     assertFalse(cuss2.matches("foo/12"));
     assertFalse(cuss2.matches("foo/122"));
@@ -171,6 +172,8 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
       new RangeCachedUrlSetSpec("bar/", null, "123");
     assertTrue(cuss3.matches("bar/0"));
     assertTrue(cuss3.matches("bar/123"));
+    assertFalse(cuss3.matches("foo/123."));
+    assertFalse(cuss3.matches("foo/123/"));
     assertFalse(cuss3.matches("bar/"));  // ranged, shouldn't match prefix
     assertFalse(cuss3.matches("bar/123/4"));
     assertFalse(cuss3.matches("bar/124"));

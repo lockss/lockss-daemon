@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.23 2012-09-06 04:02:32 tlipkis Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.24 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 
 /**
  * A CachedUrlSetSpec that specifies all or part of a subtree, rooted at
@@ -67,7 +68,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
       throw new NullPointerException("RangeCachedUrlSetSpec with null URL");
     }
     if (lowerBound != null && upperBound != null &&
-	lowerBound.compareTo(upperBound) > 0) {
+	VoteBlock.compareUrls(lowerBound, upperBound) > 0) {
       throw new IllegalArgumentException("RangeCachedUrlSetSpec with lower bound > upper bound (l: " + lowerBound + ", u: " + upperBound + ")");
     }
     this.prefix = urlPrefix;
@@ -167,8 +168,8 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
 	String u1 = upperBound;
 	String l2 = rspec.getLowerBound();
 	String u2 = rspec.getUpperBound();
-	return (l1 != null && u2 != null && l1.compareTo(u2) > 0) ||
-	  (l2 != null && u1 != null && l2.compareTo(u1) > 0);
+	return (l1 != null && u2 != null && VoteBlock.compareUrls(l1, u2) > 0) ||
+	  (l2 != null && u1 != null && VoteBlock.compareUrls(l2, u1) > 0);
       } else {
 	// different node, disjoint if neither root is included in other's set
 	return !(matches(rspec.getUrl()) || rspec.matches(prefix));
@@ -200,9 +201,9 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
 	String low2 = rspec.getLowerBound();
 	String up2 = rspec.getUpperBound();
 	return ((low1 == null ||
-		 (low2 != null && low1.compareTo(low2) <= 0)) &&
+		 (low2 != null && VoteBlock.compareUrls(low1, low2) <= 0)) &&
 		(up1 == null ||
-		 (up2 != null && up1.compareTo(up2) >= 0)));
+		 (up2 != null && VoteBlock.compareUrls(up1, up2) >= 0)));
       } else {
 	// different node, subsumed if its root is in our set
 	return matches(rspec.getUrl());
@@ -313,12 +314,12 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
    */
   boolean inRange(String url) {
     if (upperBound != null) {
-      if (getUpperString().compareTo(url) < 0) {
+      if (VoteBlock.compareUrls(getUpperString(), url) < 0) {
 	return false;
       }
     }
     if (lowerBound != null) {
-      if (getLowerString().compareTo(url) > 0)  {
+      if (VoteBlock.compareUrls(getLowerString(), url) > 0)  {
 	return false;
       }
     }

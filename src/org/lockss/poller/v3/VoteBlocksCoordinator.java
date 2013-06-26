@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksCoordinator.java,v 1.1 2013-06-17 18:58:09 barry409 Exp $
+ * $Id: VoteBlocksCoordinator.java,v 1.2 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -213,7 +213,7 @@ final class VoteBlocksCoordinator {
     if (url == null) {
       throw new IllegalArgumentException("url is null.");
     }
-    if (StringUtil.compareToNullHigh(peekUrl(), url) > 0) {
+    if (VoteBlock.compareUrls(peekUrl(), url) > 0) {
       throw new IllegalArgumentException("Current URL is "+
 					 peekUrl()+", past "+url);
     }
@@ -234,7 +234,7 @@ final class VoteBlocksCoordinator {
       // the right place. But we don't want to just get the VoteBlock,
       // we want to advance the iterator.
       // 
-      while (StringUtil.compareToNullHigh(entry.getUrl(), url) < 0) {
+      while (VoteBlock.compareUrls(entry.getUrl(), url) < 0) {
 	entry.nextVoteBlock();
       }
       iteratorQueue.add(entry);
@@ -250,7 +250,7 @@ final class VoteBlocksCoordinator {
     if (url == null) {
       throw new IllegalArgumentException("null URL not allowed.");
     }
-    if (StringUtil.compareToNullHigh(url, prevUrl) < 0) {
+    if (VoteBlock.compareUrls(url, prevUrl) < 0) {
       throw new IllegalArgumentException(
         "Supplied URL "+url+" should not be before "+prevUrl+".");
     }
@@ -258,7 +258,7 @@ final class VoteBlocksCoordinator {
     
     // The peekUrl needs to have been consumed before a higher URL is
     // allowed. The peekUrl may be null.
-    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
+    if (VoteBlock.compareUrls(peekUrl(), url) < 0) {
       throw new IllegalArgumentException("Caller expected "+url+" "+
 					 " but we had "+peekUrl());
     }

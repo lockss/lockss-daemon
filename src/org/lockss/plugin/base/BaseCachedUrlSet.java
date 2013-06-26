@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.32 2012-09-18 19:08:36 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.33 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -463,7 +463,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       if (prefix.equals(prefix2)) {
         throw new UnsupportedOperationException("Comparing equal prefixes: "+prefix);
       }
-      return prefix.compareTo(prefix2);
+      return StringUtil.preOrderCompareTo(prefix, prefix2);
     }
   }
 

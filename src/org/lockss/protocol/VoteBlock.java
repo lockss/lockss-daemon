@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.13 2013-02-24 04:54:20 dshr Exp $
+ * $Id: VoteBlock.java,v 1.14 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -239,6 +239,8 @@ public class VoteBlock implements LockssSerializable {
     return StringUtil.compareToNullHigh(url1, url2);
   }
     
+  public static Comparator URL_COMPARATOR = StringUtil.PRE_ORDER_COMPARATOR;
+
   public int size() {
     return versions.size();
   }

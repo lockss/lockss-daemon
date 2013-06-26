@@ -1,5 +1,5 @@
 /*
- * $Id: UrlTallier.java,v 1.20 2013-06-10 20:32:49 barry409 Exp $
+ * $Id: UrlTallier.java,v 1.21 2013-06-26 04:46:21 tlipkis Exp $
  */
 
 /*
@@ -226,7 +226,7 @@ final class UrlTallier {
     if (url == null) {
       throw new ShouldNotHappenException("url is null.");
     }
-    if (StringUtil.compareToNullHigh(peekUrl(), url) > 0) {
+    if (VoteBlock.compareUrls(peekUrl(), url) > 0) {
       throw new ShouldNotHappenException("Current URL is "+
 					 peekUrl()+", past "+url);
     }
@@ -244,7 +244,7 @@ final class UrlTallier {
       // the right place. But we don't want to just get the VoteBlock,
       // we want to advance the iterator.
       // 
-      while (StringUtil.compareToNullHigh(e.getUrl(), url) < 0) {
+      while (VoteBlock.compareUrls(e.getUrl(), url) < 0) {
 	e.nextVoteBlock();
       }
       participantsQueue.add(e);
@@ -253,7 +253,7 @@ final class UrlTallier {
     // same as in the initial poll, some or all of the voters which
     // had the URL in the initial poll may deny having it now.
     // peekUrl() may not equal url.
-    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
+    if (VoteBlock.compareUrls(peekUrl(), url) < 0) {
       throw new ShouldNotHappenException("Current URL is "+
 					 peekUrl()+", before "+url);
     }
@@ -266,7 +266,7 @@ final class UrlTallier {
     
     // Perfectly ok for peekUrl to be null.  The peekUrl needs to have
     // been consumed before a higher URL is allowed.
-    if (StringUtil.compareToNullHigh(peekUrl(), url) < 0) {
+    if (VoteBlock.compareUrls(peekUrl(), url) < 0) {
       throw new IllegalArgumentException("Caller expected "+url+" "+
 					 " but we had "+peekUrl());
     }
