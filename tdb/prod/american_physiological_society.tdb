@@ -87,7 +87,6 @@
 
     param[base_url] = http://ajplegacy.physiology.org/
     pluginSuffix = HighWirePressH20Plugin
-    comment[notReady] = mismatch pdf page
 
     au < released ; 1898 ; American Journal of Physiology Volume 1 ; 1 >
     au < released ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 >
