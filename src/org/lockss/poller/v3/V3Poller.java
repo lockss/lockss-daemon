@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.155 2013-06-26 04:44:16 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.156 2013-06-26 05:46:01 tlipkis Exp $
  */
 
 /*
@@ -1408,10 +1408,12 @@ public class V3Poller extends BasePoll {
    */
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
+
     if (shouldTallyVoterUrl(voterUrl)) {
       VoteBlockTallier voteBlockTallier = getVoterUrlTally();
-      BlockTally tally = voteBlockTallier.getBlockTally();
       urlTallier.voteAllParticipants(voterUrl, voteBlockTallier);
+      BlockTally tally = voteBlockTallier.getBlockTally();
+
       updateTallyStatus(tally, voterUrl);
       repairIfNeeded(tally, voterUrl);
     } else {
