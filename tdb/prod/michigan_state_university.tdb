@@ -14,11 +14,12 @@
      param[base_url] = http://standardsingenomics.org/
      param[journal_id] = sigen
      implicit < status ; year ; param[year] ; name ; volume >
+     comment[notReady] = content3b does not get images
      
-      au < testing ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >  
-      au < testing ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >  
+      au < ready ; 2009 ; 2009 ; Standards in Genomic Sciences Volume 1 ; 1 >  
+      au < notReady ; 2010 ; 2010 ; Standards in Genomic Sciences Volume 2-3 ; 2-3 >  
       au < testing ; 2011 ; 2011 ; Standards in Genomic Sciences Volume 4-5 ; 4-5 >  
-      au < testing ; 2012 ; 2012 ; Standards in Genomic Sciences Volume 6-7 ; 6-7 >  
+      au < ready ; 2012 ; 2012 ; Standards in Genomic Sciences Volume 6-7 ; 6-7 >  
       au < manifest ; 2013 ; 2013 ; Standards in Genomic Sciences Volume 7-? ; 7-? >  
      
   }
