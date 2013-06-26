@@ -263,21 +263,20 @@
       >
       
      param[journal_issn] = 2050-4594
-     comment[notReady] = low agreement, bad webpage structure, hash compare X X, re-test later
      
      au < released ; 1999 ; Literature & History Volume 8 ; 8 >
      au < released ; 2000 ; Literature & History Volume 9 ; 9 >
-     au < notReady ; 2001 ; Literature & History Volume 10 ; 10 >
-     au < notReady ; 2002 ; Literature & History Volume 11 ; 11 >
-     au < notReady ; 2003 ; Literature & History Volume 12 ; 12 >
+     au < ready ; 2001 ; Literature & History Volume 10 ; 10 >
+     au < ready ; 2002 ; Literature & History Volume 11 ; 11 >
+     au < ready ; 2003 ; Literature & History Volume 12 ; 12 >
      au < released ; 2004 ; Literature & History Volume 13 ; 13 >
      au < released ; 2005 ; Literature & History Volume 14 ; 14 >
      au < released ; 2006 ; Literature & History Volume 15 ; 15 >
      au < released ; 2007 ; Literature & History Volume 16 ; 16 >
-     au < notReady ; 2008 ; Literature & History Volume 17 ; 17 >
+     au < ready ; 2008 ; Literature & History Volume 17 ; 17 >
      au < released ; 2009 ; Literature & History Volume 18 ; 18 >
-     au < notReady ; 2010 ; Literature & History Volume 19 ; 19 >
-     au < notReady ; 2011 ; Literature & History Volume 20 ; 20 >
+     au < ready ; 2010 ; Literature & History Volume 19 ; 19 >
+     au < ready ; 2011 ; Literature & History Volume 20 ; 20 >
      au < released ; 2012 ; Literature & History Volume 21 ; 21 >
      au < manifest ; 2013 ; Literature & History Volume 22 ; 22 >
     
@@ -296,7 +295,7 @@
      param[journal_issn] = 2048-2906
      comment[notReady] = low agreement, content machines do not preserved few urls
      
-     au < notReady ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
+     au < ready ; 2002 ; Nineteenth Century Theatre and Film Volume 29 ; 29 >
      au < released ; 2003 ; Nineteenth Century Theatre and Film Volume 30 ; 30 >
      au < released ; 2004 ; Nineteenth Century Theatre and Film Volume 31 ; 31 >
      au < released ; 2005 ; Nineteenth Century Theatre and Film Volume 32 ; 32 >
@@ -305,7 +304,7 @@
      au < released ; 2008 ; Nineteenth Century Theatre and Film Volume 35 ; 35 >
      au < released ; 2009 ; Nineteenth Century Theatre and Film Volume 36 ; 36 >
      au < notReady ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
-     au < notReady ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
+     au < ready ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
      au < manifest ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
      au < expected ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
     
