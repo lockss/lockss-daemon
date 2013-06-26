@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.1 2013-03-20 22:03:27 aishizaki Exp $
+ * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.2 2013-06-26 16:35:52 aishizaki Exp $
  */
 
 /*
@@ -50,50 +50,63 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     fact = new PensoftHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
- 
-  private static final String viewCounterHtmlHashA =
+  // this example is from an abstract
+  private static final String HtmlHashA =
     "<tr>"+
-      "<td class=\"green2\" valign=\"top\">"+
-      "<b>doi: </b>"+
-      "10.3897/compcytogen.v3i1.2"+
-      "<br><b>Published:</b> 06.08.2009<br /><br /><b>Viewed by: </b>1106"+
-      "<td class=\"more3\"><font class=\"newsdata\">Abstract</font><br><br>"+
-      "Hello World"+
-      "<p align=\"right\">Full text:"+
-      "<a class=\"more3\" href='inc/journals/download.php?fileId=1794&fileTable=J_GALLEYS'>PDF</a> </p>"+
-      "</td></tr>";
+    "<td class=\"green2\" valign=\"top\">"+ // will be filtered
+    "<b>doi: </b>"+   // will be filtered
+    "10.3897/compcytogen.v3i1.2"+     // will be filtered
+    "<br><b>Published:</b> 06.08.2009<br /><br /><b>Viewed by: </b>1106"+     // will be filtered
+    "<td class=\"more3\"><font class=\"newsdata\">Abstract</font><br><br>"+
+    "Hello World"+
+    "<p align=\"right\">Full text:"+
+    "<a class=\"more3\" href='inc/journals/download.php?fileId=1794&fileTable=J_GALLEYS'>PDF</a> </p>"+
+    "</td></tr>";
  
-  private static final String viewCounterHtmlHashAFiltered =
+  private static final String HtmlHashAFiltered =
     "<tr>"+
     "<td class=\"more3\"><font class=\"newsdata\">Abstract</font><br><br>"+
     "Hello World"+
     "<p align=\"right\">Full text:"+
     "<a class=\"more3\" href='inc/journals/download.php?fileId=1794&fileTable=J_GALLEYS'>PDF</a> </p>"+
-    "</td></tr>";  
-  private static final String viewCounterHtmlHashB =
-    "<tr>"+
-      "<td valign=\"top\" width=\"13\"><img src=\"img/kv.gif\" vspace=\"4\" width=\"5\" height=\"5\"></td>"+
-      "<td width=\"165\" class=\"green\">Viewed by : <span class=more3 >1106</span></td>"+
-    "</tr>";
-
-  private static final String viewCounterHtmlHashBFiltered = 
-    "<tr>"+
+    "</td></tr>"; 
+  
+  // this example is a little different; it's from an article
+  private static final String HtmlHashB =
+    "<table width=\"186\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+    "<tr> "+
+    "<td class=\"texttah11\" width=\"184\">"+
+    "<table class=\"texttah11\" width=\"177\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+    "<tbody>" + "<tr>"+
     "<td valign=\"top\" width=\"13\"><img src=\"img/kv.gif\" vspace=\"4\" width=\"5\" height=\"5\"></td>"+
-    "</tr>";
- 
-  public void testFiltering() throws Exception {
-    InputStream inA, inB, inC;
+    "<td width=\"165\" class=\"green\">Viewed by : <span class=more3 >1106</span></td>"+
+    "</tr>"+
+    "</tbody> </table> </td> </tr> </table>";
+  private static final String HtmlHashBFiltered =
+    "<table width=\"186\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
+    "<tr> "+
+    " </tr> </table>";
+
+
+  public void testFilterA() throws Exception {
+    InputStream inA;
 
     /* viewed-by test  */ 
     inA = fact.createFilteredInputStream(mau, 
-          new StringInputStream(viewCounterHtmlHashA), ENC);
+          new StringInputStream(HtmlHashA), ENC);
     String filtStrA = StringUtil.fromInputStream(inA);
-    assertEquals(viewCounterHtmlHashAFiltered, filtStrA);
-  
-    inB = fact.createFilteredInputStream(mau, 
-        new StringInputStream(viewCounterHtmlHashB), ENC);    
-    String filtStrB = StringUtil.fromInputStream(inB);
-    assertEquals(viewCounterHtmlHashBFiltered, filtStrB);
+
+    assertEquals(HtmlHashAFiltered, filtStrA);
    
   }
+  public void testFilterB() throws Exception {
+    InputStream inB;
+
+    inB = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashB), ENC);    
+    String filtStrB = StringUtil.fromInputStream(inB);
+    assertEquals(HtmlHashBFiltered, filtStrB);
+   
+  }
+
 }

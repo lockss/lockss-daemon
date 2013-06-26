@@ -53,10 +53,13 @@ public class PensoftArticleIteratorFactory
   //http://www.pensoft.net/
   protected static final String ROOT_TEMPLATE =
     "\"%s\", base_url";
-  //[http://www.pensoft.net/journals/jhr/]  article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
+  //[http://www.pensoft.net/journals/jhr/]article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
   protected static final String PATTERN_TEMPLATE =
     "\"journals/%s/article/[\\d]+/abstract(/[^/]*)?$\", journal_name";
-  
+  //http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2777
+  protected static final String PDF_TEMPLATE =
+    "(http://www.pensoft.net/inc/journals/download.php?)(fileTable=J_GALLEYS)(&)(fileId=[\\d]+)$";
+
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
                                                       throws PluginException {
@@ -75,13 +78,10 @@ public class PensoftArticleIteratorFactory
     //"http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf"
     //abstract: 
     //http://www.pensoft.net/journals/jhr/article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
-
-    protected static Pattern PDF_PATTERN =
-      Pattern.compile("J_FILES/[\\d]+/articles/[\\d]+/([^/]+)", Pattern.CASE_INSENSITIVE);
-    protected static Pattern HTML_PATTERN =
-      Pattern.compile("journals/[\\w]+/article/[\\d]+(/[^/]*)?$", Pattern.CASE_INSENSITIVE);
     protected static Pattern ABSTRACT_PATTERN =
       Pattern.compile("journals/[\\w]+/article/[\\d]+/abstract(/[^/]*)?$", Pattern.CASE_INSENSITIVE);
+    protected static Pattern pdfPattern = Pattern.compile(PDF_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
     private ArchivalUnit au;
     
     public PensoftArticleIterator(ArchivalUnit au,
@@ -103,7 +103,8 @@ public class PensoftArticleIteratorFactory
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       Matcher mat;
- 
+      log.debug3("createArticleFiles: " + url);
+
       mat = ABSTRACT_PATTERN.matcher(url);
       if (mat.find()) {     
         return processWithMetadata(cu,mat);
@@ -126,9 +127,11 @@ public class PensoftArticleIteratorFactory
       ArticleMetadata am;
       SimpleHtmlMetaTagMetadataExtractor ext = new SimpleHtmlMetaTagMetadataExtractor();
       CachedUrl htmlCu = null, pdfCu = null;
+      log.debug3("processWithMetadata: " + absCu);
 
       if (absCu !=null && absCu.hasContent()){
         // 
+        log.debug3("  setROLE_ART_METADATA: " + absCu);
         af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
         try {
           at.setFormat("text/html");
@@ -136,19 +139,51 @@ public class PensoftArticleIteratorFactory
           
           // get the pdf url as a list:string from the metadata
           // keep entries in their raw state
-
+          // the pdf entry from the metadata not quite the same as on the page
+          // will rearrange to match what we crawled...
+          // from the metadata: http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2758
+          // from the    crawl: http://www.pensoft.net/inc/journals/download.php?fileId=2758&fileTable=J_GALLEYS
+          // Accept either?
+          
           if (am.containsRawKey("citation_pdf_url")){
-            pdfCu = au.makeCachedUrl(am.getRaw("citation_pdf_url"));
-            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-            af.setFullTextCu(pdfCu);
+            //Pattern p = Pattern.compile("(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$", Pattern.CASE_INSENSITIVE);
+            String rawPdf = am.getRaw("citation_pdf_url");
+            log.debug3("   contains citation_pdf_url: "+rawPdf);
+            Matcher mat; // = pdfPattern.matcher(rawPdf);
+            String newPdf; // = mat.replaceFirst("$1$4$3$2");
+            CachedUrl rawCu = au.makeCachedUrl(rawPdf);
+            
+            if (rawCu != null && rawCu.hasContent()) {
+              pdfCu = rawCu;
+            } else {
+              mat = pdfPattern.matcher(rawPdf);
+              newPdf = mat.replaceFirst("$1$4$3$2");
+              pdfCu = au.makeCachedUrl(newPdf);
+              AuUtil.safeRelease(rawCu);
+            }
+     
+            if (pdfCu != null && pdfCu.hasContent()) {
+              log.debug3("  setROLE_PDF_URL: " + pdfCu);
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+              if((af.getFullTextCu()) == null) {
+                af.setFullTextCu(pdfCu);
+              }
+              AuUtil.safeRelease(pdfCu);
+            }
           }
           
           // get the fulltexthtml url as a list:string from the metadata
           if (am.containsRawKey("citation_fulltext_html_url")){
             htmlCu = au.makeCachedUrl(am.getRaw("citation_fulltext_html_url"));
-            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+            if (htmlCu != null && htmlCu.hasContent()) {
+              log.debug3("  setROLE_HTML_URL: " + htmlCu);
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
+              if((af.getFullTextCu()) == null) {
+                af.setFullTextCu(htmlCu);
+              }
+              AuUtil.safeRelease(htmlCu);
+            }
           } 
-                    
         } catch (IOException e) {
           // 
           e.printStackTrace();

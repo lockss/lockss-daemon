@@ -1,4 +1,4 @@
- <!--  $Id:     -->
+ <!--  $Id: PensoftPlugin.xml,v 1.7 2013-06-26 16:35:52 aishizaki Exp $-->
  <map>
   <entry>
     <string>plugin_status</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -25,11 +25,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -47,11 +47,12 @@
     <!--<string>"%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>-->
     <string>"%sjournals/%s/archive?year=%d", base_url, journal_name, year</string>
   </entry>
+  <!--
   <entry>
     <string>au_permission_url</string>
     <string> "%s", base_url</string>
   </entry>
-  
+  -->
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -144,14 +145,17 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pensoft.PensoftHtmlCrawlFilterFactory</string>
   </entry>
-
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
-  </entry>
+  </entry> 
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
+  </entry>  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>

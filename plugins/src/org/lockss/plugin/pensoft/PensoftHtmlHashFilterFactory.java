@@ -57,8 +57,8 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
           
     NodeFilter[] filters = new NodeFilter[] {
       // filters out the tag with a changing view counter   
+      HtmlNodeFilters.tagWithAttribute("td", "class", "texttah11"),
       HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true),
-
     };
     
     OrFilter oFilter = new OrFilter(filters);
