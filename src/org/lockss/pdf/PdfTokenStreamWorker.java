@@ -1,5 +1,5 @@
 /*
- * $Id: PdfTokenStreamWorker.java,v 1.7 2013-06-12 02:41:36 thib_gc Exp $
+ * $Id: PdfTokenStreamWorker.java,v 1.8 2013-06-26 22:33:08 thib_gc Exp $
  */
 
 /*
@@ -333,17 +333,39 @@ public abstract class PdfTokenStreamWorker {
   
   /**
    * <p>
-   * Processes the given PDF token stream after calling {@link #setUp()}.
+   * Processes the given PDF token stream's tokens with
+   * {@link #process(List, PdfTokenFactory)}.
    * </p>
    * 
    * @param pdfTokenStream
    *          A PDF token stream.
    * @throws PdfException
    *           If PDF processing fails.
+   * @see #process(List, PdfTokenFactory)
    */
   public void process(PdfTokenStream pdfTokenStream) throws PdfException {
-    factory = pdfTokenStream.getTokenFactory();
-    tokens = pdfTokenStream.getTokens();
+    process(pdfTokenStream.getTokens(), pdfTokenStream.getTokenFactory());
+  }
+  
+  /**
+   * <p>
+   * Processes the given list of PDF tokens after calling {@link #setUp()},
+   * using the given PDF token factory.
+   * </p>
+   * 
+   * @param tokens
+   *          A list of PDF tokens.
+   * @param factory
+   *          A PDF token factory.
+   * @throws PdfException
+   *           If PDF processing fails.
+   * @since 1.62
+   */
+  public void process(List<PdfToken> tokens,
+                      PdfTokenFactory factory)
+      throws PdfException {
+    this.tokens = tokens;
+    this.factory = factory;
     index = -1;
     operator = null;
     operands = new ArrayList<PdfToken>();
@@ -351,10 +373,10 @@ public abstract class PdfTokenStreamWorker {
     setUp();
     switch (getDirection()) {
       case FORWARD: {
-        processForward(pdfTokenStream);
+        processForward();
       } break;
       case BACKWARD: {
-        processBackward(pdfTokenStream);
+        processBackward();
       } break;
       default: {
         throw new IllegalStateException("Illegal direction: " + getDirection());
@@ -598,6 +620,20 @@ public abstract class PdfTokenStreamWorker {
    */
   protected boolean isSetSpacingNextLineShowText() {
     return PdfOpcodes.SET_SPACING_NEXT_LINE_SHOW_TEXT.equals(getOpcode());
+  }
+  
+  /**
+   * <p>
+   * Determines if the current opcode is
+   * {@link PdfOpcodes#SET_TEXT_FONT}.
+   * </p>
+   * 
+   * @return <code>true</code> if the current opcode is
+   *         {@link PdfOpcodes#SET_TEXT_FONT}.
+   * @since 1.62
+   */
+  protected boolean isSetTextFont() {
+    return PdfOpcodes.SET_TEXT_FONT.equals(getOpcode());
   }
   
   /**
@@ -1003,13 +1039,11 @@ public abstract class PdfTokenStreamWorker {
    * Processes a token stream backward.
    * </p>
    * 
-   * @param pdfTokenStream
-   *          The PDF token stream being processed.
    * @throws PdfException
    *           If PDF processing fails.
    * @since 1.56
    */
-  protected void processBackward(PdfTokenStream pdfTokenStream) throws PdfException {
+  protected void processBackward() throws PdfException {
     int end = tokens.size() - 1;
     while (end >= 0 && continueFlag) {
       operands.clear();
@@ -1031,13 +1065,11 @@ public abstract class PdfTokenStreamWorker {
    * Processes a token stream forward.
    * </p>
    * 
-   * @param pdfTokenStream
-   *          The PDF token stream being processed.
    * @throws PdfException
    *           If PDF processing fails.
    * @since 1.56
    */
-  protected void processForward(PdfTokenStream pdfTokenStream) throws PdfException {
+  protected void processForward() throws PdfException {
     int begin = 0;
     while (begin < tokens.size() && continueFlag) {
       operands.clear();

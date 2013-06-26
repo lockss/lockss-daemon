@@ -1,10 +1,10 @@
 /*
- * $Id: PdfOpcodes.java,v 1.3 2013-06-12 02:41:36 thib_gc Exp $
+ * $Id: PdfOpcodes.java,v 1.4 2013-06-26 22:33:08 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,6 +94,12 @@ public class PdfOpcodes {
    * @since 1.56
    */
   public static final String SET_SPACING_NEXT_LINE_SHOW_TEXT = "\"";
+
+  /**
+   * <p>The {@value} opcode.</p>
+   * @since 1.62
+   */
+  public static final String SET_TEXT_FONT = "Tf";
 
   /**
    * <p>The {@value} opcode.</p>
