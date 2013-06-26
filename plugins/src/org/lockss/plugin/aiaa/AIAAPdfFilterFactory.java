@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAPdfFilterFactory.java,v 1.2 2013-04-30 23:33:09 alexandraohlson Exp $
+ * $Id: AIAAPdfFilterFactory.java,v 1.3 2013-06-26 22:33:28 thib_gc Exp $
  */
 
 /*
@@ -33,10 +33,8 @@
 package org.lockss.plugin.aiaa;
 
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
-import org.lockss.pdf.PdfDocument;
-import org.lockss.pdf.PdfException;
-import org.lockss.pdf.PdfUtil;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.pdf.*;
+import org.lockss.plugin.*;
 
 /*
  * The AIAA pdf files have the CreationDate and ModDate and the two ID numbers in the trailer
@@ -45,10 +43,29 @@ import org.lockss.plugin.ArchivalUnit;
  */
 public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
 
-  public AIAAPdfFilterFactory() {
-    super();
+  protected static class CitedByWorker extends PdfTokenStreamWorker {
+    
+    protected boolean result;
+    
+    @Override
+    public void setUp() throws PdfException {
+      super.setUp();
+      this.result = false;
+    }
+    
+    @Override
+    public void operatorCallback() throws PdfException {
+      if (isShowTextGlyphPositioningEquals("This article has been cited by:")) {
+        this.result = true;
+        stop();
+      }
+      else if (isShowText() || isShowTextGlyphPositioning() || isNextLineShowText() || isSetSpacingNextLineShowText()) {
+        stop(); // No need to process other strings
+      }
+    }
+    
   }
-
+  
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
@@ -56,6 +73,17 @@ public class AIAAPdfFilterFactory extends ExtractingPdfFilterFactory {
     pdfDocument.unsetCreationDate();
     pdfDocument.unsetModificationDate();
     PdfUtil.normalizeTrailerId(pdfDocument);
-  }
 
+    CitedByWorker worker = new CitedByWorker();
+    for (int p = 0 ; p < pdfDocument.getNumberOfPages() ; ++p) {
+      worker.process(pdfDocument.getPage(p).getPageTokenStream());
+      if (worker.result) {
+        for (int r = pdfDocument.getNumberOfPages() - 1 ; r >= p ; --r) {
+          pdfDocument.removePage(r);
+        }
+        break;
+      }
+    }
+  }
+  
 }
