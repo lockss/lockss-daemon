@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.157 2013-06-26 17:37:51 barry409 Exp $
+ * $Id: V3Poller.java,v 1.158 2013-06-26 19:21:44 barry409 Exp $
  */
 
 /*
@@ -2043,7 +2043,7 @@ public class V3Poller extends BasePoll {
 	  // spoiled. If only some are spoiled, thay might have been
 	  // spoiled in the initial tally as well; we can't tell. But
 	  // if they are all spoiled somehow, bail from this repair.
-	  if (StringUtil.compareToNullHigh(urlTallier.peekUrl(), url) != 0) {
+	  if (VoteBlock.compareUrls(urlTallier.peekUrl(), url) != 0) {
 	    log.warning("receivedRepair called on "+url+
 			" but no voters have it.");
 	    return;

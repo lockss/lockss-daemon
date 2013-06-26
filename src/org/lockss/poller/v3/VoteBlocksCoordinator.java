@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksCoordinator.java,v 1.2 2013-06-26 04:46:21 tlipkis Exp $
+ * $Id: VoteBlocksCoordinator.java,v 1.3 2013-06-26 19:21:44 barry409 Exp $
  */
 
 /*
@@ -206,14 +206,14 @@ final class VoteBlocksCoordinator {
    * given URL.</p>
    *
    * @param url Must be non-null, and greater
-   * @throws IllegalArgumentException if url is {@code null} or not
-   * greater than or equal to the current value of {@link #peekUrl}.
+   * @throws IllegalArgumentException if url is {@code null} or before
+   * the current value of {@link #peekUrl}.
    */
   public void seek(String url) {
     if (url == null) {
       throw new IllegalArgumentException("url is null.");
     }
-    if (VoteBlock.compareUrls(peekUrl(), url) > 0) {
+    if (VoteBlock.compareUrls(url, peekUrl()) < 0) {
       throw new IllegalArgumentException("Current URL is "+
 					 peekUrl()+", past "+url);
     }
@@ -243,7 +243,7 @@ final class VoteBlocksCoordinator {
 
   /**
    * @throws IllegalArgumentException if the URL is {@code null}, or
-   * sorts before a previousls supplied URL, or greater than the
+   * sorts before a previously supplied URL, or is greater than the
    * current value of {@link #peekUrl}.
    */
   public void checkUrl(String url) {
@@ -257,7 +257,7 @@ final class VoteBlocksCoordinator {
     prevUrl = url;
     
     // The peekUrl needs to have been consumed before a higher URL is
-    // allowed. The peekUrl may be null.
+    // allowed. The peekUrl may be null, in which case this must fail.
     if (VoteBlock.compareUrls(peekUrl(), url) < 0) {
       throw new IllegalArgumentException("Caller expected "+url+" "+
 					 " but we had "+peekUrl());

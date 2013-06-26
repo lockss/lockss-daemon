@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.14 2013-06-26 04:46:21 tlipkis Exp $
+ * $Id: VoteBlock.java,v 1.15 2013-06-26 19:21:44 barry409 Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class VoteBlock implements LockssSerializable {
    * @return less than 0 if url1 sorts before url2, greater than 0 if after
    */
   public static int compareUrls(String url1, String url2) {
-    return StringUtil.compareToNullHigh(url1, url2);
+    return StringUtil.preOrderCompareToNullHigh(url1, url2);
   }
     
   public static Comparator URL_COMPARATOR = StringUtil.PRE_ORDER_COMPARATOR;
