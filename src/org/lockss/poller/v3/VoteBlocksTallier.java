@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.8 2013-06-04 22:45:10 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.9 2013-06-26 17:37:51 barry409 Exp $
  */
 
 /*
@@ -182,9 +182,9 @@ class VoteBlocksTallier {
    */
   public final void
     tallyVoteBlocks(VoteBlocks voterBlocks, VoteBlocks pollerBlocks)
-      throws IOException {
+      throws IOException, OrderedVoteBlocksIterator.OrderException {
     if (voterBlocks == null) {
-      throw new IllegalArgumentException("voterBlocks null");
+      throw new ShouldNotHappenException("voterBlocks null");
     }
     if (pollerBlocks == null) {
       throw new IllegalArgumentException("pollerBlocks null");
@@ -194,41 +194,26 @@ class VoteBlocksTallier {
     // abort the poll.
     VoteBlocksIterator vIterator =
       new OrderedVoteBlocksIterator(voterBlocks.iterator());
-    VoteBlocksIterator pIterator =
-      new OrderedVoteBlocksIterator(pollerBlocks.iterator());
+    // The coordinator will log and catch all ordering problems from
+    // the poller. If that happens near the end we might be close to
+    // creating a repairer if we finish, so don't abort.
+    VoteBlocksCoordinator coordinator =
+      new VoteBlocksCoordinator(Arrays.asList(pollerBlocks.iterator()));
 
-    // todo(bhayes): This mirrors the use of UrlTallier in the
-    // poller. Can they be unified?
     while (vIterator.hasNext()) {
       // Consume exactly one vBlock each time around the loop.
       VoteBlock vBlock = vIterator.next();
       String vUrl = vBlock.getUrl();
-      try {
-	while (pIterator.hasNext() &&
-	       vBlock.compareTo(pIterator.peek()) > 0) {
-	  // Consume pBlocks until empty or at or beyond beyond the
-	  // vBlock
-	  VoteBlock pBlock = pIterator.next();
-	  String pUrl = pBlock.getUrl();
-	  addUrl(Category.POLLER_ONLY, pUrl);
-	}
-      } catch (OrderedVoteBlocksIterator.OrderException ex) {
-	// If pIterator is either out of order or has an IOException,
-	// treat it as if it just became empty, and count the rest of
-	// the vIterator's VoteBlock instances as VOTER_ONLY. That way
-	// if the IOException happened near the end there may still be
-	// high agreement.
-	log.warning("Poller had VoteBlocks out of order.");
-	pIterator = VoteBlocksIterator.EMPTY_ITERATOR;
-      } catch (IOException ex) {
-	log.warning("Poller IOException while tallying symmetric poll", ex);
-	pIterator = VoteBlocksIterator.EMPTY_ITERATOR;
+      // Consume from the poller until it catches up or passes the voter.
+      String pUrl = coordinator.peekUrl();
+      while (VoteBlock.compareUrls(pUrl, vUrl) < 0) {
+	VoteBlock pBlock = coordinator.getVoteBlock(pUrl, 0);
+	addUrl(Category.POLLER_ONLY, pUrl);
+	pUrl = coordinator.peekUrl();
       }
-      // pIterator.hasNext() would have already thrown OrderException
-      // if blocks are out of order.
-      if (pIterator.hasNext() && vBlock.compareTo(pIterator.peek()) == 0) {
-	// Consume a pBlock if and only if it matches the vBlock.
-	VoteBlock pBlock = pIterator.next();
+      // Consume from the poller iff we have the url
+      if (VoteBlock.compareUrls(pUrl, vUrl) == 0) {
+	VoteBlock pBlock = coordinator.getVoteBlock(pUrl, 0);
 	if (VoteBlockVoteBlockComparerFactory.make(vBlock).
 	    sharesVersion(pBlock)) {
 	  addUrl(Category.AGREE, vUrl);
@@ -240,15 +225,11 @@ class VoteBlocksTallier {
       }
     }
     // vIterator is empty; consume the rest of the pBlocks
-    try {
-      while (pIterator.hasNext()) {
-	String pUrl = pIterator.next().getUrl();
-	addUrl(Category.POLLER_ONLY, pUrl);
-      }
-    } catch (OrderedVoteBlocksIterator.OrderException ex) {
-      log.warning("Poller had VoteBlocks out of order.");
-    } catch (IOException ex) {
-      log.warning("Poller IOException while tallying symmetric poll", ex);
+    String pUrl = coordinator.peekUrl();
+    while (VoteBlock.compareUrls(coordinator.peekUrl(), null) < 0) {
+      VoteBlock pBlock = coordinator.getVoteBlock(pUrl, 0);
+      addUrl(Category.POLLER_ONLY, pUrl);
+      pUrl = coordinator.peekUrl();
     }
   }
 

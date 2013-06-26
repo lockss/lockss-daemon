@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlockTallier.java,v 1.15 2013-06-10 20:32:49 barry409 Exp $
+ * $Id: VoteBlockTallier.java,v 1.16 2013-06-26 17:37:51 barry409 Exp $
  */
 
 /*
@@ -34,18 +34,18 @@ package org.lockss.poller.v3;
 
 import java.util.*;
 
+import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.HashBlock;
 import org.lockss.hasher.HashResult;
 import org.lockss.protocol.VoteBlock;
 import org.lockss.util.Logger;
-
 
 /**
  * Representation of the tally of many votes on an individual
  * URL. This class encapsulates what it means to compare a VoteBlock
  * to a HashBlock.
  */
-public class VoteBlockTallier {
+public class VoteBlockTallier implements UrlTallier.VoteCallback {
 
   // todo(bhayes): There should be an enum of these things. But that
   // leads to EnumMap<Vote, Long> with boxed longs.
@@ -73,6 +73,9 @@ public class VoteBlockTallier {
   private final Collection<VoteBlockTally> tallies =
     new ArrayList<VoteBlockTally>();
   private BlockTally blockTally;
+  // todo(bhayes): This points to a need for a Builder. This class is
+  // bi-modal, and a Builder/Tallier split would be an improvement for
+  // other reasons as well.
   private boolean votingStarted = false;
 
   private static final Logger log = Logger.getLogger("VoteBlockTallier");

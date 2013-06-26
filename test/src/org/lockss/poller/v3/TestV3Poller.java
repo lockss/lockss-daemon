@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.56 2013-06-26 04:44:15 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.57 2013-06-26 17:37:51 barry409 Exp $
  */
 
 /*
@@ -1231,6 +1231,284 @@ public class TestV3Poller extends LockssTestCase {
     }
   }
 
+  // Tests that rely on what V3Poller.getPollerUrlTally() and pals return.
+  private void tallyPollerUrl(V3Poller poller, UrlTallier urlTallier,
+			      String url, HashBlock hashBlock) {
+    VoteBlockTallier voteBlockTallier = poller.getPollerUrlTally(hashBlock);
+    urlTallier.voteAllParticipants(url, voteBlockTallier);
+  }
+
+  private BlockTally tallyVoterUrl(V3Poller poller, UrlTallier urlTallier,
+				   String url) {
+    VoteBlockTallier voteBlockTallier = poller.getVoterUrlTally();
+    urlTallier.voteAllParticipants(url, voteBlockTallier);
+    return voteBlockTallier.getBlockTally();
+  }
+
+  public void testTallyPollerUrl() throws Exception {
+
+    V3Poller v3Poller = makeSizedV3Poller("testing poll key", 3);
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8994");
+    
+    HashBlock [] hashblocks = {
+	makeHashBlock("http://test.com/foo1", "content for foo1"),
+	makeHashBlock("http://test.com/foo2", "content for foo2"),
+	makeHashBlock("http://test.com/foo3", "content for foo3"),
+	makeHashBlock("http://test.com/foo4", "content for foo4")
+      };
+
+    VoteBlock [] voter1_voteblocks = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      };
+    
+    VoteBlock [] voter2_voteblocks = {
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      };
+    
+    VoteBlock [] voter3_voteblocks = {
+	makeVoteBlock("http://test.com/foo3", "content for foo3"),
+	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      };
+
+    List<ParticipantUserData> theParticipants =
+      new ArrayList<ParticipantUserData>();
+
+    theParticipants.add(makeParticipant(id1, v3Poller,
+					voter1_voteblocks));
+    theParticipants.add(makeParticipant(id2, v3Poller,
+					voter2_voteblocks));
+    theParticipants.add(makeParticipant(id3, v3Poller,
+					voter3_voteblocks));
+    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo1", hashblocks[0]);
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo2", hashblocks[1]);
+    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
+    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo3", hashblocks[2]);
+    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
+    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo4", hashblocks[3]);
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testTallyVoterUrl() throws Exception {
+
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+
+    VoteBlock [] voter1_voteblocks = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      };
+    
+    VoteBlock [] voter2_voteblocks = {
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      };
+    
+    VoteBlock [] voter3_voteblocks = {
+	makeVoteBlock("http://test.com/foo3", "content for foo3"),
+	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      };
+
+    BlockTally tally;
+    
+    List<ParticipantUserData> theParticipants =
+      new ArrayList<ParticipantUserData>();
+
+    theParticipants.add(makeParticipant(id1, v3Poller,
+					voter1_voteblocks));
+    theParticipants.add(makeParticipant(id2, v3Poller,
+					voter2_voteblocks));
+    theParticipants.add(makeParticipant(id3, v3Poller,
+					voter3_voteblocks));
+
+    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo1");
+    // todo(bhayes): BlockTally needs to have a better interface, both
+    // for testing and for use.
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
+    // todo(bhayes): This seems incorrect; foo1 was only present at
+    // one voter, but incrementTalliedBlocks will be called for each
+    // voter.
+    // assertEquals(1, tally.getTalliedVoters().size());
+    assertEquals(1, tally.getVoterOnlyBlockVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+
+    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo2");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 2);
+    // assertEquals(2, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
+    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
+
+    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo3");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 3);
+    // assertEquals(3, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
+    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
+
+    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo4");
+    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
+    // assertEquals(1, tally.getTalliedVoters().size());
+    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testTallyVoterUrlNotPeek() throws Exception {
+
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+
+    VoteBlock [] voter1_voteblocks = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+      };
+
+    BlockTally tally;
+    
+    List<ParticipantUserData> theParticipants =
+      new ArrayList<ParticipantUserData>();
+
+    theParticipants.add(makeParticipant(id1, v3Poller,
+					voter1_voteblocks));
+
+    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo1");
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+    try {
+      // Call tallyVoterUrl with a url after the peekUrl
+      tallyVoterUrl(v3Poller, urlTallier, "http://test.com/goo");
+      fail("Expected IllegalArgumentException was not thrown.");
+    } catch (IllegalArgumentException e) {
+      // expected
+    }
+    try {
+      // Call tallyVoterUrl with a null url
+      tallyVoterUrl(v3Poller, urlTallier, null);
+      fail("Expected IllegalArgumentException was not thrown.");
+    } catch (IllegalArgumentException e) {
+      // expected
+    }
+  }
+
+  public void testIteratorFileNotFound() throws Exception {
+    // A VoteBlocks which supports nothing except iterator(), and that
+    // throws FileNotFound.
+    final class FileNotFoundVoteBlocks implements VoteBlocks {
+      boolean thrown = false;
+      public VoteBlocksIterator iterator() throws FileNotFoundException {
+	// The test only calls iterator() once.
+	assertFalse(thrown);
+	thrown = true;
+	throw new FileNotFoundException("Expected exception.");
+      }
+      public void addVoteBlock(VoteBlock b) throws IOException {
+	throw new UnsupportedOperationException();
+      }
+      public InputStream getInputStream() throws IOException {
+	throw new UnsupportedOperationException();
+      }
+      public VoteBlock getVoteBlock(String url) {
+	throw new UnsupportedOperationException();
+	}
+      public int size() {
+	throw new UnsupportedOperationException();
+      }
+      public long getEstimatedEncodedLength() {
+	throw new UnsupportedOperationException();
+      }
+      public void release() {
+	throw new UnsupportedOperationException();
+      }
+    };
+
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+
+    VoteBlock [] voter1_voteblocks = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+      };
+
+    VoteBlock [] voter2_voteblocks = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+      };
+    
+    List<ParticipantUserData> theParticipants =
+      new ArrayList<ParticipantUserData>();
+
+    ParticipantUserData participant1 =
+      new ParticipantUserData(id1, v3Poller, null);
+
+    FileNotFoundVoteBlocks vb = new FileNotFoundVoteBlocks();
+    participant1.setVoteBlocks(vb);
+    ParticipantUserData participant2 =
+      makeParticipant(id2, v3Poller, voter2_voteblocks);
+
+    theParticipants.add(participant1);
+    theParticipants.add(participant2);
+
+    assertFalse(vb.thrown);
+    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    // The file wasn't found; check to make sure the voter is spoiled.
+    assertTrue(vb.thrown);
+    for (int urlNum = 1; urlNum <=2; urlNum++) {
+      String url = "http://test.com/foo"+urlNum;
+      assertEquals(url, urlTallier.peekUrl());
+      BlockTally tally = tallyVoterUrl(v3Poller, urlTallier, url);
+      assertSameElements(Arrays.asList(participant2),
+			 tally.getVoterOnlyBlockVoters());
+    }
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testHashStatsTallier() throws Exception {
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    ParticipantUserData participant =
+      new ParticipantUserData(id1, v3Poller, null);
+
+    VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
+    byte[] testBytes = ByteArray.makeRandomBytes(20);
+    vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
+
+    VoteBlockTallier.VoteCallback callback = V3Poller.makeHashStatsTallier();
+    callback.vote(vb, participant);
+    assertEquals(286, participant.getBytesHashed());
+    assertEquals(155, participant.getBytesRead());
+  }
+
+  private MySizedV3Poller makeSizedV3Poller(String key, int pollSize)
+      throws Exception {
+    PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
+                                   Poll.V3_POLL);
+    return new MySizedV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1",
+			  pollSize);
+  }
+
   private MyV3Poller makeV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
@@ -1282,7 +1560,7 @@ public class TestV3Poller extends LockssTestCase {
     private List<PollerStateBean.Repair> repairs;
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-                   String pollkey, long duration, String hashAlg)
+	       String pollkey, long duration, String hashAlg)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
     }
@@ -1316,6 +1594,22 @@ public class TestV3Poller extends LockssTestCase {
 	return repairs;
       }
       return super.getCompletedRepairs();
+    }
+  }
+  
+  private class MySizedV3Poller extends V3Poller {
+    private final int pollSize;
+
+    MySizedV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
+	       String pollkey, long duration, String hashAlg, int pollSize)
+        throws PollSerializerException {
+      super(spec, daemon, id, pollkey, duration, hashAlg);
+      this.pollSize = pollSize;
+    }
+
+    @Override
+    public int getPollSize() {
+      return pollSize;
     }
   }
 

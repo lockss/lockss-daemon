@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.156 2013-06-26 05:46:01 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.157 2013-06-26 17:37:51 barry409 Exp $
  */
 
 /*
@@ -2036,6 +2036,18 @@ public class V3Poller extends BasePoll {
 	UrlTallier urlTallier = makeUrlTallier();
 	try {
 	  urlTallier.seek(url);
+
+	  // NOTE: The voters' iterators may not read from disk
+	  // the same as in the initial poll. Some or all of the
+	  // voters which had the URL in the initial poll may now be
+	  // spoiled. If only some are spoiled, thay might have been
+	  // spoiled in the initial tally as well; we can't tell. But
+	  // if they are all spoiled somehow, bail from this repair.
+	  if (StringUtil.compareToNullHigh(urlTallier.peekUrl(), url) != 0) {
+	    log.warning("receivedRepair called on "+url+
+			" but no voters have it.");
+	    return;
+	  }
 	  VoteBlockTallier voteBlockTallier = getRepairUrlTally(hashBlock);
 	  urlTallier.voteAllParticipants(url, voteBlockTallier);
 	  BlockTally tally = voteBlockTallier.getBlockTally();
@@ -2692,7 +2704,10 @@ public class V3Poller extends BasePoll {
 
   UrlTallier makeUrlTallier() {
     synchronized(theParticipants) {
-      return new UrlTallier(new ArrayList(theParticipants.values()));
+      // todo(bhayes): UrlTallier makes a defensive copy, but it would
+      // be nice to know that theParticipants doesn't change while
+      // we're polling.
+      return new UrlTallier(theParticipants.values());
     }
   }
 

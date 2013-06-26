@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.17 2013-06-10 20:32:49 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.18 2013-06-26 17:37:51 barry409 Exp $
  */
 
 /*
@@ -55,19 +55,14 @@ import static org.lockss.util.Constants.*;
 
 
 public class TestUrlTallier extends LockssTestCase {
-
-  private MyIdentityManager idMgr;
   private MockLockssDaemon theDaemon;
-
   private PeerIdentity pollerId;
 
   private String tempDirPath;
   private ArchivalUnit testau;
-  private PollManager pollmanager;
-  private HashService hashService;
-  private PluginManager pluginMgr;
 
   private PeerIdentity[] voters;
+  List<ParticipantUserData> participants;
   
   private String localPeerKey = "TCP:[127.0.0.1]:9729";
   
@@ -75,6 +70,7 @@ public class TestUrlTallier extends LockssTestCase {
 
   private static final String BASE_URL = "http://www.test.org/";
   
+
   // The number of random bytes in a pretend nonce
   private static final int NONCE_LENGTH = 20;
 
@@ -111,7 +107,6 @@ public class TestUrlTallier extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     theDaemon = getMockLockssDaemon();
-    TimeBase.setSimulated();
     this.tempDir = getTempDir();
     this.testau = setupAu();
     initRequiredServices();
@@ -155,7 +150,6 @@ public class TestUrlTallier extends LockssTestCase {
     int idIndex = 0;
     for (Iterator it = keys.iterator(); it.hasNext(); ) {
       PeerIdentity pid = findPeerIdentity((String)it.next());
-      PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
       ids[idIndex++] = pid;
     }
     return ids;
@@ -163,63 +157,213 @@ public class TestUrlTallier extends LockssTestCase {
 
   public void tearDown() throws Exception {
     theDaemon.getLockssRepository(testau).stopService();
-    theDaemon.getHashService().stopService();
-    theDaemon.getDatagramRouterManager().stopService();
-    theDaemon.getRouterManager().stopService();
-    theDaemon.getSystemMetrics().stopService();
-    theDaemon.getPollManager().stopService();
-    TimeBase.setReal();
     super.tearDown();
   }
 
-  private void tallyPollerUrl(V3Poller poller, UrlTallier urlTallier,
-			      String url, HashBlock hashBlock) {
-    VoteBlockTallier voteBlockTallier = poller.getPollerUrlTally(hashBlock);
-    urlTallier.voteAllParticipants(url, voteBlockTallier);
+  private void makeParticipants(VoteBlock[][] voteBlocks) throws Exception {
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+
+    participants =
+      new ArrayList<ParticipantUserData>();
+    for (int i = 0; i < voteBlocks.length; i++) {
+      VoteBlock[] voteBlockArray = voteBlocks[i];
+      PeerIdentity pid = findPeerIdentity("TCP:[127.0.0.1]:899"+i);
+      participants.add(makeParticipant(pid, v3Poller, voteBlockArray));
+    }
   }
 
-  private BlockTally tallyVoterUrl(V3Poller poller, UrlTallier urlTallier,
-				   String url) {
-    VoteBlockTallier voteBlockTallier = poller.getVoterUrlTally();
-    urlTallier.voteAllParticipants(url, voteBlockTallier);
-    return voteBlockTallier.getBlockTally();
+  private UrlTallier makeUrlTallier(VoteBlock[][] voteBlocks) throws Exception {
+    makeParticipants(voteBlocks);
+    return new UrlTallier(participants);
   }
 
-  public void testSeek() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-
-    VoteBlock [] voter1_voteblocks = {
+  public void testVoteAllParticipants() throws Exception {
+    VoteBlock[][] voteBlocks = {
+      {
 	makeVoteBlock("http://test.com/foo1", "content for foo1"),
 	makeVoteBlock("http://test.com/foo2", "content for foo2"),
 	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter2_voteblocks = {
+      },
+      {
 	makeVoteBlock("http://test.com/foo2", "content for foo2"),
 	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter3_voteblocks = {
+      },
+      {
 	makeVoteBlock("http://test.com/foo3", "content for foo3"),
 	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      }};
+    UrlTallier urlTallier = makeUrlTallier(voteBlocks);
+    CheckingCallback checkingCallback;
+
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{voteBlocks[0][0], 
+					   missingBlock,
+					   missingBlock});
+    urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+    checkingCallback.check();
+
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+    checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{voteBlocks[0][1], 
+					   voteBlocks[1][0],
+					   missingBlock});
+    urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+    checkingCallback.check();
+
+    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
+    checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{voteBlocks[0][2], 
+					   voteBlocks[1][1], 
+					   voteBlocks[2][0]});
+    urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+    checkingCallback.check();
+
+    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
+    checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{missingBlock,
+					   missingBlock,
+					   voteBlocks[2][1]});
+    urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+    checkingCallback.check();
+
+    assertEquals(null, urlTallier.peekUrl());
+    checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{});
+    try {
+      urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+      fail("Expected exception not thrown");
+    } catch (IllegalArgumentException e) {
+      // expected
+    }
+  }
+
+  public void testVoteNoParticipants() throws Exception {
+    VoteBlock[][] voteBlocks = {
+      {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      },
+      {
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      },
+      {
+	makeVoteBlock("http://test.com/foo3", "content for foo3"),
+	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      }};
+    UrlTallier urlTallier = makeUrlTallier(voteBlocks);
+
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    urlTallier.voteNoParticipants(urlTallier.peekUrl());
+    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
+    urlTallier.voteNoParticipants(urlTallier.peekUrl());
+    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
+    urlTallier.voteNoParticipants(urlTallier.peekUrl());
+    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
+    urlTallier.voteNoParticipants(urlTallier.peekUrl());
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testIOException() throws Exception {
+    VoteBlock[][] voteBlocks = {
+      {
+	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      }};
+    
+    makeParticipants(voteBlocks);
+
+    PeerIdentity pid =
+      findPeerIdentity("TCP:[127.0.0.1]:899"+voteBlocks.length);
+    V3Poller v3Poller = participants.get(0).getPoller();
+    VoteBlock[] voteBlockArray = {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    ParticipantUserData participant =
+      makeParticipant(pid, v3Poller, voteBlockArray);
+
+    final VoteBlocks vb = participant.getVoteBlocks();
+    VoteBlocks thrower = new VoteBlocks() {
+	public void addVoteBlock(VoteBlock b) throws IOException {
+	  vb.addVoteBlock(b);
+	}
+	public InputStream getInputStream() throws IOException {
+	  return vb.getInputStream();
+	}
+	public VoteBlock getVoteBlock(String url) {
+	  return vb.getVoteBlock(url);
+	}
+	public VoteBlocksIterator iterator() throws FileNotFoundException {
+	  return new VoteBlocksIterator() {
+	    final VoteBlocksIterator iterator = vb.iterator();
+	    boolean spoiled = false;
+	    void checkSpoiled() throws IOException {
+	      if ("http://test.com/foo2".equals(iterator.peek().getUrl())) {
+		spoiled = true;
+	      }
+	      if (spoiled) {
+		throw new IOException("Unit test says Spoiled!");
+	      }
+	    }
+	    public boolean hasNext() throws IOException { 
+	      checkSpoiled();
+	      return iterator.hasNext(); }
+	    public VoteBlock next() throws IOException {
+	      checkSpoiled();
+	      return iterator.next(); }
+	    public VoteBlock peek() throws IOException {
+	      checkSpoiled();
+	      return iterator.peek(); }
+	    public void release() { iterator.release(); }
+	  };
+	}
+	public int size() {
+	  return vb.size();
+	}
+	public long getEstimatedEncodedLength() {
+	  return vb.getEstimatedEncodedLength();
+	}
+	public void release() {
+	  vb.release();
+	}
       };
+    participant.setVoteBlocks(thrower);
+    participants.add(participant);
 
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
+    UrlTallier urlTallier = new UrlTallier(participants);
+    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
+    urlTallier.voteNoParticipants(urlTallier.peekUrl());
+    // foo2 fails, and the urlTallier jumps right to foo4
+    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
 
-    theParticipants.add(makeParticipant(id1, v3Poller,
-					voter1_voteblocks));
-    theParticipants.add(makeParticipant(id2, v3Poller,
-					voter2_voteblocks));
-    theParticipants.add(makeParticipant(id3, v3Poller,
-					voter3_voteblocks));
+    CheckingCallback checkingCallback = 
+      new CheckingCallback(new VoteBlock[]{voteBlocks[0][0], 
+					   spoiledBlock});
+    urlTallier.voteAllParticipants(urlTallier.peekUrl(), checkingCallback);
+    checkingCallback.check();
 
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
+    assertEquals(null, urlTallier.peekUrl());
+  }
+
+  public void testSeek() throws Exception {
+    VoteBlock[][] voteBlocks = {
+      {
+	makeVoteBlock("http://test.com/foo1", "content for foo1"),
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      },
+      {
+	makeVoteBlock("http://test.com/foo2", "content for foo2"),
+	makeVoteBlock("http://test.com/foo3", "content for foo3")
+      },
+      {
+	makeVoteBlock("http://test.com/foo3", "content for foo3"),
+	makeVoteBlock("http://test.com/foo4", "content for foo4")
+      }};
+    UrlTallier urlTallier = makeUrlTallier(voteBlocks);
 
     assertEquals("http://test.com/foo1", urlTallier.peekUrl());
     urlTallier.seek("http://test.com/foo1");
@@ -234,8 +378,8 @@ public class TestUrlTallier extends LockssTestCase {
 
     try {
       urlTallier.seek(null);
-      fail("Expected ShouldNotHappenException was not thrown.");
-    } catch (ShouldNotHappenException e) {
+      fail("Expected Exception was not thrown.");
+    } catch (IllegalArgumentException e) {
       assertEquals("url is null.", e.getMessage());
     }
 
@@ -246,7 +390,7 @@ public class TestUrlTallier extends LockssTestCase {
     try {
       urlTallier.seek("http://test.com/foo2");
       fail("Expected ShouldNotHappenException was not thrown.");
-    } catch (ShouldNotHappenException e) {
+    } catch (IllegalArgumentException e) {
       assertEquals("Current URL is http://test.com/foo4, "+
 		   "past http://test.com/foo2", e.getMessage());
     }
@@ -256,429 +400,6 @@ public class TestUrlTallier extends LockssTestCase {
     assertEquals(null, urlTallier.peekUrl());
   }
 
-  public void testOutOfOrderUrl() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-
-    VoteBlock [] voter1_voteblocks = {
-      // NOTE: these URLs are not in the canonical order.
-      makeVoteBlock("http://test.com/foo2", "content for foo2"),
-      makeVoteBlock("http://test.com/foo1", "content for foo1"),
-      makeVoteBlock("http://test.com/foo3", "content for foo3"),
-      makeVoteBlock("http://test.com/foo4", "content for foo4")
-    };
-
-    VoteBlock [] voter2_voteblocks = {
-      makeVoteBlock("http://test.com/foo1", "content for foo1"),
-      makeVoteBlock("http://test.com/foo2", "content for foo2"),
-      makeVoteBlock("http://test.com/foo3", "content for foo3"),
-      makeVoteBlock("http://test.com/foo4", "content for foo4")
-    };
-
-    BlockTally tally;
-
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    theParticipants.add(makeParticipant(id1, v3Poller,
-					voter1_voteblocks));
-    theParticipants.add(makeParticipant(id2, v3Poller,
-					voter2_voteblocks));
-
-    List voter2 = ListUtil.list(theParticipants.get(1));
-
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-
-    // The first URL is seen
-    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo1");
-    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
-    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo2");
-    // Both have foo2
-    assertSameElements(theParticipants, tally.getVoterOnlyBlockVoters());
-    // But at this point the out-of-order URL in voter1 has been seen,
-    // and voter1 doesn't show any more votes.
-    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo3");
-    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo4");
-    assertSameElements(voter2, tally.getVoterOnlyBlockVoters());
-
-    assertEquals(null, urlTallier.peekUrl());
-  }
-
-  public void testTallyPollerUrl() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 4);
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8994");
-    
-    HashBlock [] hashblocks = {
-	makeHashBlock("http://test.com/foo1", "content for foo1"),
-	makeHashBlock("http://test.com/foo2", "content for foo2"),
-	makeHashBlock("http://test.com/foo3", "content for foo3"),
-	makeHashBlock("http://test.com/foo4", "content for foo4")
-      };
-
-    VoteBlock [] voter1_voteblocks = {
-	makeVoteBlock("http://test.com/foo1", "content for foo1"),
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter2_voteblocks = {
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter3_voteblocks = {
-	makeVoteBlock("http://test.com/foo3", "content for foo3"),
-	makeVoteBlock("http://test.com/foo4", "content for foo4")
-      };
-
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    theParticipants.add(makeParticipant(id1, v3Poller,
-					voter1_voteblocks));
-    theParticipants.add(makeParticipant(id2, v3Poller,
-					voter2_voteblocks));
-    theParticipants.add(makeParticipant(id3, v3Poller,
-					voter3_voteblocks));
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo1", hashblocks[0]);
-    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo2", hashblocks[1]);
-    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
-    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo3", hashblocks[2]);
-    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
-    tallyPollerUrl(v3Poller, urlTallier, "http://test.com/foo4", hashblocks[3]);
-    assertEquals(null, urlTallier.peekUrl());
-  }
-
-  public void testTallyVoterUrl() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-
-    VoteBlock [] voter1_voteblocks = {
-	makeVoteBlock("http://test.com/foo1", "content for foo1"),
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter2_voteblocks = {
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    VoteBlock [] voter3_voteblocks = {
-	makeVoteBlock("http://test.com/foo3", "content for foo3"),
-	makeVoteBlock("http://test.com/foo4", "content for foo4")
-      };
-
-    BlockTally tally;
-    
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    theParticipants.add(makeParticipant(id1, v3Poller,
-					voter1_voteblocks));
-    theParticipants.add(makeParticipant(id2, v3Poller,
-					voter2_voteblocks));
-    theParticipants.add(makeParticipant(id3, v3Poller,
-					voter3_voteblocks));
-
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo1");
-    // todo(bhayes): BlockTally needs to have a better interface, both
-    // for testing and for use.
-    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
-    // todo(bhayes): This seems incorrect; foo1 was only present at
-    // one voter, but incrementTalliedBlocks will be called for each
-    // voter.
-    // assertEquals(1, tally.getTalliedVoters().size());
-    assertEquals(1, tally.getVoterOnlyBlockVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
-    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo2");
-    assertEquals(tally.getVoterOnlyBlockVoters().size(), 2);
-    // assertEquals(2, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
-    assertEquals("http://test.com/foo3", urlTallier.peekUrl());
-
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo3");
-    assertEquals(tally.getVoterOnlyBlockVoters().size(), 3);
-    // assertEquals(3, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(0));
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(1));
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
-    assertEquals("http://test.com/foo4", urlTallier.peekUrl());
-
-    tally = tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo4");
-    assertEquals(tally.getVoterOnlyBlockVoters().size(), 1);
-    // assertEquals(1, tally.getTalliedVoters().size());
-    assertContains(tally.getVoterOnlyBlockVoters(), theParticipants.get(2));
-    assertEquals(null, urlTallier.peekUrl());
-  }
-
-  public void testTallyVoterUrlNotPeek() throws Exception {
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 3);
-    
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
-    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
-
-    VoteBlock [] voter1_voteblocks = {
-	makeVoteBlock("http://test.com/foo1", "content for foo1"),
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-      };
-
-    BlockTally tally;
-    
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    theParticipants.add(makeParticipant(id1, v3Poller,
-					voter1_voteblocks));
-
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    tallyVoterUrl(v3Poller, urlTallier, "http://test.com/foo1");
-    assertEquals("http://test.com/foo2", urlTallier.peekUrl());
-    try {
-      // Call tallyVoterUrl with a url after the peekUrl
-      tallyVoterUrl(v3Poller, urlTallier, "http://test.com/goo");
-      fail("Expected IllegalArgumentException was not thrown.");
-    } catch (IllegalArgumentException e) {
-      // expected
-    }
-    try {
-      // Call tallyVoterUrl with a null url
-      tallyVoterUrl(v3Poller, urlTallier, null);
-      fail("Expected IllegalArgumentException was not thrown.");
-    } catch (IllegalArgumentException e) {
-      // expected
-    }
-  }
-
-  public void testIteratorFileNotFound() throws Exception {
-    // A VoteBlocks which supports nothing except iterator(), and that
-    // throws FileNotFound.
-    final class FileNotFoundVoteBlocks implements VoteBlocks {
-      boolean thrown = false;
-      public VoteBlocksIterator iterator() throws FileNotFoundException {
-	// The test only calls iterator() once.
-	assertFalse(thrown);
-	thrown = true;
-	throw new FileNotFoundException("Expected exception.");
-      }
-      public void addVoteBlock(VoteBlock b) throws IOException {
-	throw new UnsupportedOperationException();
-      }
-      public InputStream getInputStream() throws IOException {
-	throw new UnsupportedOperationException();
-      }
-      public VoteBlock getVoteBlock(String url) {
-	throw new UnsupportedOperationException();
-	}
-      public int size() {
-	throw new UnsupportedOperationException();
-      }
-      public long getEstimatedEncodedLength() {
-	throw new UnsupportedOperationException();
-      }
-      public void release() {
-	throw new UnsupportedOperationException();
-      }
-    };
-
-    V3Poller v3Poller = makeV3Poller("testing poll key", 1);
-
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    VoteBlock [] voter1_voteblocks = {};
-    
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    ParticipantUserData participant =
-      new ParticipantUserData(id1, v3Poller, null);
-
-    FileNotFoundVoteBlocks vb = new FileNotFoundVoteBlocks();
-    participant.setVoteBlocks(vb);
-
-    theParticipants.add(participant);
-    assertFalse(vb.thrown);
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-    assertTrue(vb.thrown);
-    assertTrue(urlTallier.voteSpoiled(participant));
-    // peekUrl() doesn't throw anything, but there's no URL since the
-    // iterator's file is not found.
-    assertEquals(null, urlTallier.peekUrl());
-  }
-
-  public void testIteratorIOException() throws Exception {
-
-    // A DiskVoteBlocks that has an iterator that throws IOException
-    // when it reaches the given URL.
-    final class IOExceptionDiskVoteBlocks extends DiskVoteBlocks {
-      final String failAt;
-      boolean threw;
-      boolean released;
-      IOExceptionDiskVoteBlocks(File toDir, String failAt) throws IOException {
-	super(toDir);
-	this.failAt = failAt;
-	threw = false;
-	released = false;
-      }
-      
-      public VoteBlocksIterator iterator() throws FileNotFoundException {
-	final VoteBlocksIterator iterator = super.iterator();
-
-	return new VoteBlocksIterator() {
-	  void checkFail() throws IOException {
-	    if (failAt.equals(iterator.peek().getUrl())) {
-	      // We only get here once.
-	      assertFalse(threw);
-	      threw = true;
-	      throw new IOException("Expected exception.");
-	    }
-	  }
-	    
-	  public boolean hasNext() throws IOException {
-	    checkFail();
-	    return iterator.hasNext();
-	  }
-	  public VoteBlock next() throws IOException {
-	    checkFail();
-	    return iterator.next();
-	  }
-	  public VoteBlock peek() throws IOException {
-	    checkFail();
-	    return iterator.peek();
-	  }
-	  public void release() {
-	    // We only get here once.
-	    assertFalse(released);
-	    released = true;
-	    iterator.release();
-	  }
-	};
-      }
-    };
-
-    final V3Poller v3Poller = makeV3Poller("testing poll key", 1);
-
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    VoteBlock [] voter1_voteblocks = {
-	makeVoteBlock("http://test.com/foo1", "content for foo1"),
-	makeVoteBlock("http://test.com/foo2", "content for foo2"),
-	makeVoteBlock("http://test.com/foo3", "content for foo3")
-      };
-    
-    List<ParticipantUserData> theParticipants =
-      new ArrayList<ParticipantUserData>();
-
-    // Pass in null messageDir; we won't be calling makeMessage.
-    ParticipantUserData participant =
-      new ParticipantUserData(id1, v3Poller, null);
-
-    IOExceptionDiskVoteBlocks vb = 
-      new IOExceptionDiskVoteBlocks(tempDir, "http://test.com/foo2");
-
-    for (int i = 0; i < voter1_voteblocks.length; i++) {
-      vb.addVoteBlock(voter1_voteblocks[i]);
-    }
-    participant.setVoteBlocks(vb);
-
-    theParticipants.add(participant);
-    UrlTallier urlTallier = new UrlTallier(theParticipants);
-
-    assertEquals("http://test.com/foo1", urlTallier.peekUrl());
-    assertFalse(urlTallier.voteSpoiled(participant));
-    assertFalse(vb.threw);
-    assertFalse(vb.released);
-    urlTallier.seek("http://test.com/foo2");
-    assertTrue(vb.threw);
-    assertTrue(vb.released);
-    assertTrue(urlTallier.voteSpoiled(participant));
-    // peekUrl() doesn't throw anything, but there's no URL since the
-    // iterator threw IOException.
-    assertEquals(null, urlTallier.peekUrl());
-  }
-
-  public void testHashStatsTallier() throws Exception {
-    V3Poller v3Poller = makeV3Poller("testing poll key", 1);
-    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
-    ParticipantUserData participant =
-      new ParticipantUserData(id1, v3Poller, null);
-
-    VoteBlock vb = new VoteBlock("foo", VoteBlock.CONTENT_VOTE);
-    byte[] testBytes = ByteArray.makeRandomBytes(20);
-    vb.addVersion(0, 123, 0, 155, testBytes, testBytes, false);
-
-    VoteBlockTallier.VoteCallback callback = V3Poller.makeHashStatsTallier();
-    callback.vote(vb, participant);
-    assertEquals(286, participant.getBytesHashed());
-    assertEquals(155, participant.getBytesRead());
-  }
-  
-  private HashBlock makeHashBlock(String url) {
-    MockCachedUrl cu = new MockCachedUrl(url);
-    return new HashBlock(cu);
-  }
-  
-  private HashBlock makeHashBlock(String url, String content)
-      throws Exception {
-    MockCachedUrl cu = new MockCachedUrl(url);
-    HashBlock hb = new HashBlock(cu);
-    addVersion(hb, content);
-    return hb;
-  }
-
-  private static int hbVersionNum = 1;
-
-  private void addVersion(HashBlock block, String content) throws Exception {
-    // 1 plain hash, plus 4 voters
-    MessageDigest[] digests = new MessageDigest[5];  
-    // fake "Plain Hash"
-    digests[0] = MessageDigest.getInstance("SHA1");
-    digests[0].update(content.getBytes());
-    // fake "Nonced Hash" for voter 1
-    digests[1] = MessageDigest.getInstance("SHA1");
-    digests[1].update(content.getBytes());
-    // fake "Nonced Hash" for voter 2
-    digests[2] = MessageDigest.getInstance("SHA1");
-    digests[2].update(content.getBytes());
-    // fake "Nonced Hash" for voter 3
-    digests[3] = MessageDigest.getInstance("SHA1");
-    digests[3].update(content.getBytes());
-    // fake "Nonced Hash" for voter 4
-    digests[4] = MessageDigest.getInstance("SHA1");
-    digests[4].update(content.getBytes());
-    
-    block.addVersion(0, content.length(), 
-                     0, content.length(),
-		     digests.length * content.length(), // total bytes hashed
-                     digests, hbVersionNum++, null);    
-  }
-  
   private VoteBlock makeVoteBlock(String url) {
     VoteBlock vb = new VoteBlock(url);
     return vb;
@@ -715,79 +436,78 @@ public class TestUrlTallier extends LockssTestCase {
     return ud;
   }
 
-  private MyV3Poller makeV3Poller(String key, int pollSize) throws Exception {
+  private MyV3Poller makeV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
     MyV3Poller poller = 
-      new MyV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1", pollSize);
+      new MyV3Poller(ps, theDaemon, pollerId, key, 20000, "SHA-1");
     return poller;
   }
   
   private class MyV3Poller extends V3Poller {
-    private final int pollSize;
-
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-	       String pollkey, long duration, String hashAlg, int pollSize)
+	       String pollkey, long duration, String hashAlg)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
-      this.pollSize = pollSize;
+    }
+  }
+  
+  final VoteBlock missingBlock = makeVoteBlock("***Missing");
+  final VoteBlock spoiledBlock = makeVoteBlock("***Spoiled");
+
+  class CheckingCallback implements UrlTallier.VoteCallback {
+    final Set<Integer> voted = new HashSet<Integer>();
+
+    final VoteBlock[] expected;
+    CheckingCallback(VoteBlock[] expected) {
+      this.expected = expected;
     }
 
-    @Override
-    public int getPollSize() {
-      return pollSize;
+    @Override public void vote(VoteBlock voteBlock, ParticipantUserData id,
+			       int participantIndex) {
+      assertIndex(id, participantIndex);
+      VoteBlock expected = findExpected(participantIndex);
+      assertEquals(expected, voteBlock);
+    }
+    @Override public void voteMissing(ParticipantUserData id) {
+      VoteBlock expected = findExpected(id);
+      assertEquals(expected, missingBlock);
+    }
+    @Override public void voteSpoiled(ParticipantUserData id) {
+      VoteBlock expected = findExpected(id);
+      assertEquals(expected, spoiledBlock);
+    }
+
+    VoteBlock findExpected(ParticipantUserData id) {
+      return findExpected(participants.indexOf(id));
+    }
+
+    VoteBlock findExpected(int participantIndex) {
+      assertFalse("participant "+participantIndex+" voted more than once.",
+		  voted.contains(participantIndex));
+      voted.add(participantIndex);
+      return expected[participantIndex];
+    }
+
+    public void assertIndex(ParticipantUserData id, int participantIndex) {
+      assertEquals(participants.get(participantIndex), id);
+    }
+
+    public void check() {
+      for (int i = 0; i < expected.length; i++) {
+	assertTrue(voted.contains(i));
+      }
     }
   }
 
   private void initRequiredServices() throws Exception {
-    pollmanager = theDaemon.getPollManager();
-    hashService = theDaemon.getHashService();
-
-    pluginMgr = theDaemon.getPluginManager();
-
     tempDir = getTempDir();
     tempDirPath = tempDir.getAbsolutePath();
     System.setProperty("java.io.tmpdir", tempDirPath);
 
     Properties p = new Properties();
-    p.setProperty(IdentityManagerImpl.PARAM_ENABLE_V1, "false");
-    p.setProperty(LcapDatagramComm.PARAM_ENABLED, "false");
-
-    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
-    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, localPeerKey);
-    p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
-    p.setProperty(IdentityManagerImpl.PARAM_INITIAL_PEERS,
-                  StringUtil.separatedString(initialPeers, ";"));
-    p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    idMgr = new MyIdentityManager();
-    theDaemon.setIdentityManager(idMgr);
-    idMgr.initService(theDaemon);
-    idMgr.startService();
-    theDaemon.getSchedService().startService();
-    hashService.startService();
-    theDaemon.getDatagramRouterManager().startService();
-    theDaemon.getRouterManager().startService();
-    theDaemon.getSystemMetrics().startService();
-    theDaemon.getActivityRegulator(testau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
-    pollmanager.startService();
   }
-
-  static class MyIdentityManager extends IdentityManagerImpl {
-    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
-						ArchivalUnit au) {
-      Map map = findAuAgreeMap(au);
-      synchronized (map) {
-	return findPeerIdentityAgreement(map, pid);
-      }
-    }
-
-    public void storeIdentities() throws ProtocolException {
-    }
-  }
-
 }
