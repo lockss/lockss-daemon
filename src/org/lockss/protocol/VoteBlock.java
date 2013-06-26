@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.15 2013-06-26 19:21:44 barry409 Exp $
+ * $Id: VoteBlock.java,v 1.16 2013-06-26 22:40:36 barry409 Exp $
  */
 
 /*
@@ -227,19 +227,31 @@ public class VoteBlock implements LockssSerializable {
   public static int compare(VoteBlock vb1, VoteBlock vb2) {
     return vb1.compareTo(vb2);
   }
+
+  /**
+   * A {@link Comparator} for the canonical ordering of URLs in {@link
+   * VoteBlocks}. {@code null} is acceptable, and sorts after every
+   * non-{@code null} URL.  non-{@code null} URL.
+   * @param url1 First URL
+   * @param url2 Second URL
+   * @return less than 0 if url1 sorts before url2, greater than 0 if after
+   */
+  public static Comparator<String> URL_COMPARATOR = new Comparator<String>() {
+    public int compare(String url1, String url2) {
+      return StringUtil.preOrderCompareToNullHigh(url1, url2);
+    }
+  };
   
   /**
-   * This defines the canonical ordering of VoteBlocks by comparing
-   * their URLs.
+   * The canonical ordering of URLs in {@link VoteBlocks}. {@code null}
+   * is acceptable, and sorts after every non-{@code null} URL.
    * @param url1 First URL
    * @param url2 Second URL
    * @return less than 0 if url1 sorts before url2, greater than 0 if after
    */
   public static int compareUrls(String url1, String url2) {
-    return StringUtil.preOrderCompareToNullHigh(url1, url2);
+    return URL_COMPARATOR.compare(url1, url2);
   }
-    
-  public static Comparator URL_COMPARATOR = StringUtil.PRE_ORDER_COMPARATOR;
 
   public int size() {
     return versions.size();
