@@ -1,5 +1,5 @@
 /*
- * $Id: TestVersionCounts.java,v 1.1 2013-05-06 20:36:06 barry409 Exp $
+ * $Id: TestVersionCounts.java,v 1.2 2013-06-26 04:44:34 tlipkis Exp $
  */
 
 /*
@@ -233,6 +233,11 @@ public class TestVersionCounts extends LockssTestCase {
     repairCandidates = versionCounts.getRepairCandidates(2);
     assertSameElements(SetUtil.set(participant1, participant2, participant3),
 		       repairCandidates.keySet());
+
+    // With only three candidates, no version should reach a threshold
+    // of 4, unless counting multiples is wrong.
+    repairCandidates = versionCounts.getRepairCandidates(4);
+    assertEmpty(repairCandidates.keySet());
   }
 
   public void testHeadNotPopular() throws Exception {
