@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.113 2013-06-10 08:04:15 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.114 2013-06-26 04:47:23 tlipkis Exp $
  */
 
 /*
@@ -1249,6 +1249,16 @@ public class StringUtil {
       return -1;
     }
     return StringUtil.preOrderCompareTo(str1, str2);
+  }
+
+  public static Comparator PRE_ORDER_COMPARATOR = new PreOrderComparator();
+
+  /** Comparator that aorts in pre-order traversal order.  null is not
+   * permitted. */
+  public static class PreOrderComparator implements Comparator<String> {
+    public int compare(String s1, String s2) {
+      return StringUtil.preOrderCompareTo(s1, s2);
+    }
   }
 
   /**

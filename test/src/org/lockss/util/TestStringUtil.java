@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.95 2013-06-10 08:04:15 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.96 2013-06-26 04:47:23 tlipkis Exp $
  */
 
 /*
@@ -559,9 +559,11 @@ public class TestStringUtil extends LockssTestCase {
     assertPreOrder("", "1");
     assertPreOrder("abc", "abc/");
     assertPreOrder("abc", "abc.");
-    assertTrue("a/".compareTo("a.") > 0);
+
+    // This is where preOrderCompareTo differs from natural String order
+    assertFalse("a/".compareTo("a.") < 0);
     assertPreOrder("a/", "a.");
-    assertTrue("a/b".compareTo("a.b") > 0);
+    assertFalse("a/b".compareTo("a.b") < 0);
     assertPreOrder("a/b", "a.b");
   }
 
@@ -577,6 +579,27 @@ public class TestStringUtil extends LockssTestCase {
     assertPreOrderNullHigh("a/", "a.");
     assertTrue(StringUtil.compareToNullHigh("a/b", "a.b") > 0);
     assertPreOrderNullHigh("a/b", "a.b");
+  }
+
+  public void testPreOrderComparator() {
+    Collection coll = new TreeSet(StringUtil.PRE_ORDER_COMPARATOR);
+    coll.addAll(ListUtil.list("http://foo:80/",
+			      "http://foo/a/b.c",
+			      "http://foo/a/b/c",
+			      "",
+			      "http://foo/a.b/c",
+			      "http://foo/a/b",
+			      "http://foo/a/",
+			      "http://foo/"));
+    assertIsomorphic(ListUtil.list("",
+				   "http://foo/",
+				   "http://foo/a/",
+				   "http://foo/a/b",
+				   "http://foo/a/b/c",
+				   "http://foo/a/b.c",
+				   "http://foo/a.b/c",
+				   "http://foo:80/"),
+		     coll);
   }
 
   public void testEqualStrings() {
