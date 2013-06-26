@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.344 2013-06-19 22:56:49 fergaloy-sf Exp $
+ $Id: build.xml,v 1.345 2013-06-26 04:42:25 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2090,7 +2090,7 @@ published on the Web. http://www.lockss.org
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
     <java classname="${class}" fork="true" failonerror="true">
-       <classpath refid="test.run.classpath" />
+       <classpath refid="plugins.test.run.classpath" />
        <arg line="${args}" />
        <jvmarg line="${jvmargs}"/>
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
