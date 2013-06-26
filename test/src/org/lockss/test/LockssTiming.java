@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.7 2010-03-14 08:09:57 tlipkis Exp $
+ * $Id: LockssTiming.java,v 1.8 2013-06-26 04:48:20 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class LockssTiming extends LockssTestCase {
 	sb.append(Long.toString(ms));
 	sb.append(" ms");
       } else {
-	sb.append(Long.toString(m_sumTime * 1000000 /m_count));
+	sb.append(Long.toString(m_sumTime * 1000 /m_count));
 	sb.append(" ns");
       }
       sb.append(" ( std. dev. ");
