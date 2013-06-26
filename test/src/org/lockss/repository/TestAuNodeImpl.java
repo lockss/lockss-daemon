@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.13 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestAuNodeImpl.java,v 1.14 2013-06-26 04:45:30 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestAuNodeImpl extends LockssTestCase {
       "http://image.example.com",
       "http://www.example.com",
       };
-    assertIsomorphic(expectedA, childL);
+    assertSameElements(expectedA, childL);
   }
 
   public void testIllegalOperations() throws Exception {

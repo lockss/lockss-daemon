@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.16 2012-11-14 23:03:21 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.17 2013-06-26 04:45:30 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,16 @@ public class RepositoryManager
     PREFIX + "enableLongComponents";
   public static final boolean DEFAULT_ENABLE_LONG_COMPONENTS = true;
 
+  /** Prior to 1.61.6, when long component support is enabled, backslahes
+   * were normalized to %5c instead of %5C.  This is harmless if
+   * checkUnnormalized is set to Fix, as they'll be normalized.  Otherwise,
+   * this can be set true for compatibility with old repositories.  Setting
+   * checkUnnormalized to Fix is preferred. */
+  public static final String PARAM_ENABLE_LONG_COMPONENTS_COMPATIBILITY =
+    PREFIX + "enableLongComponentsCompatibility";
+  public static final boolean DEFAULT_ENABLE_LONG_COMPONENTS_COMPATIBILITY =
+    false;
+
   /** Maximum length of a filesystem path component. */
   public static final String PARAM_MAX_COMPONENT_LENGTH =
     PREFIX + "maxComponentLength";
@@ -144,6 +154,8 @@ public class RepositoryManager
   private static boolean isStatefulUnusedDirSearch =
     DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH;
   private static boolean enableLongComponents = DEFAULT_ENABLE_LONG_COMPONENTS;
+  private static boolean enableLongComponentsCompatibility =
+    DEFAULT_ENABLE_LONG_COMPONENTS_COMPATIBILITY;
   private static int maxComponentLength = DEFAULT_MAX_COMPONENT_LENGTH;
   private static CheckUnnormalizedMode checkUnnormalized =
     DEFAULT_CHECK_UNNORMALIZED;
@@ -225,6 +237,9 @@ public class RepositoryManager
 			  DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH);
       enableLongComponents = config.getBoolean(PARAM_ENABLE_LONG_COMPONENTS,
 					       DEFAULT_ENABLE_LONG_COMPONENTS);
+      enableLongComponentsCompatibility =
+	config.getBoolean(PARAM_ENABLE_LONG_COMPONENTS_COMPATIBILITY,
+			  DEFAULT_ENABLE_LONG_COMPONENTS_COMPATIBILITY);
       maxComponentLength = config.getInt(PARAM_MAX_COMPONENT_LENGTH,
 					 DEFAULT_MAX_COMPONENT_LENGTH);
       checkUnnormalized =
@@ -236,6 +251,10 @@ public class RepositoryManager
 
   public static boolean isEnableLongComponents() {
     return enableLongComponents;
+  }
+
+  public static boolean isEnableLongComponentsCompatibility() {
+    return enableLongComponentsCompatibility;
   }
 
   public static int getMaxComponentLength() {
