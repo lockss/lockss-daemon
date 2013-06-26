@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.154 2013-06-18 10:01:46 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.155 2013-06-26 04:44:16 tlipkis Exp $
  */
 
 /*
@@ -342,10 +342,11 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableRepairFromCache";
   public static final boolean DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE = true;
   
-  /** If true, ignore hints & optimizations involving plain hashes */
-  public static final String PARAM_IGNORE_PLAIN_HASH =
-    PREFIX + "ignorePlainHash";
-  public static final boolean DEFAULT_IGNORE_PLAIN_HASH = false;
+  /** If true, use version counts derived from plain hashes for selecting
+   * repairing peers. */
+  public static final String PARAM_USE_VERSION_COUNTS =
+    PREFIX + "useVersionCounts";
+  public static final boolean DEFAULT_USE_VERSION_COUNTS = false;
   
   public static final String PARAM_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE =
     PREFIX + "repairFromPublisherWhenTooClose";
@@ -491,7 +492,7 @@ public class V3Poller extends BasePoll {
   private boolean enableRepairFromCache =
     V3Poller.DEFAULT_V3_ENABLE_REPAIR_FROM_CACHE;
 
-  private boolean ignorePlainHash = DEFAULT_IGNORE_PLAIN_HASH;
+  private boolean useVersionCounts = DEFAULT_USE_VERSION_COUNTS;
 
   private boolean repairFromPublisherWhenTooClose =
     V3Poller.DEFAULT_V3_REPAIR_FROM_PUBLISHER_WHEN_TOO_CLOSE;
@@ -643,8 +644,8 @@ public class V3Poller extends BasePoll {
                       DEFAULT_V3_REPAIR_FROM_CACHE_PERCENT);
     maxRepairs = c.getInt(PARAM_MAX_REPAIRS, DEFAULT_MAX_REPAIRS);
 
-    ignorePlainHash = c.getBoolean(PARAM_IGNORE_PLAIN_HASH,
-				   DEFAULT_IGNORE_PLAIN_HASH);
+    useVersionCounts = c.getBoolean(PARAM_USE_VERSION_COUNTS,
+				    DEFAULT_USE_VERSION_COUNTS);
     stateDir = PollUtil.ensurePollStateRoot();
 
     repairHashAllVersions = c.getBoolean(PARAM_REPAIR_HASH_ALL_VERSIONS,
@@ -1363,7 +1364,7 @@ public class V3Poller extends BasePoll {
     while (true) {
       String voterUrl = urlTallier.peekUrl();
       log.debug3("voters have: "+voterUrl);
-      if (voterUrl == null || voterUrl.compareTo(pollerUrl) >= 0) {
+      if (VoteBlock.compareUrls(voterUrl, pollerUrl) >= 0) {
 	// Leave the while loop, since the voter was greater than or
 	// equal to the pollerUrl.
 	break;
@@ -1407,12 +1408,10 @@ public class V3Poller extends BasePoll {
    */
   private void tallyVoterUrl(String voterUrl) {
     log.debug3("tallyVoterUrl: "+voterUrl);
-
     if (shouldTallyVoterUrl(voterUrl)) {
       VoteBlockTallier voteBlockTallier = getVoterUrlTally();
-      urlTallier.voteAllParticipants(voterUrl, voteBlockTallier);
       BlockTally tally = voteBlockTallier.getBlockTally();
-
+      urlTallier.voteAllParticipants(voterUrl, voteBlockTallier);
       updateTallyStatus(tally, voterUrl);
       repairIfNeeded(tally, voterUrl);
     } else {
@@ -1565,13 +1564,21 @@ public class V3Poller extends BasePoll {
 	// or the VersionCounts?
 	break;
       case LOST:
-	requestRepair(url, tally.getRepairVoters());
+	if (useVersionCounts) {
+	  requestRepair(url, tally.getRepairVoters());
+	} else {
+	  requestRepair(url, tally.getDisagreeVoters());
+	}
 	break;
       case LOST_POLLER_ONLY_BLOCK:
 	deleteBlock(url);
 	break;
       case LOST_VOTER_ONLY_BLOCK:
-	requestRepair(url, tally.getRepairVoters());
+	if (useVersionCounts) {
+	  requestRepair(url, tally.getRepairVoters());
+	} else {
+	  requestRepair(url, tally.getVoterOnlyBlockVoters());
+	}
 	break;
       case NOQUORUM:
 	break;
@@ -1809,6 +1816,17 @@ public class V3Poller extends BasePoll {
     }
   }
 
+  private boolean 
+    peerAvailableForRepair(Collection<ParticipantUserData> repairVoters) {
+    return enableRepairFromCache && !repairVoters.isEmpty();
+  }
+
+  private boolean
+    publisherAvailableForRepair() {
+    return !AuUtil.isPubDown(getAu());
+  }
+
+  // package-level for testing only
   /**
    * Request a repair for the specified URL.  This method appends the
    * URL and a selected voter to a queue, which is examined at the end
@@ -1817,7 +1835,7 @@ public class V3Poller extends BasePoll {
    * @param url
    * @param repairVoters Set of disagreeing voters.
    */
-  private void requestRepair(
+  void requestRepair(
      final String url,
      final Collection<ParticipantUserData> repairVoters) {
 
@@ -1830,13 +1848,17 @@ public class V3Poller extends BasePoll {
 		     "repairVoters: " + repairVoters);
       }
 
-      // todo(bhayes): Having found a list of peers with versions
+      // todo(bhayes): Having found a list of peers with versions which
       // would reduce entropy, should that information be discarded
       // and the publisher's current version be fetched? Why give up
       // the chance to reduce the entropy?
-      if (((ignorePlainHash || !repairVoters.isEmpty())
-	   && ProbabilisticChoice.choose(repairFromCache))
-	  || (enableRepairFromCache && AuUtil.isPubDown(getAu()))) {
+      boolean peerAvailableForRepair = peerAvailableForRepair(repairVoters);
+      boolean publisherAvailableForRepair = publisherAvailableForRepair();
+      if (!publisherAvailableForRepair && !peerAvailableForRepair) {
+	log.warning("Can't repair; pub down and no peers available: " + url);
+      } else if ((peerAvailableForRepair
+		  && ProbabilisticChoice.choose(repairFromCache))
+		 || !publisherAvailableForRepair) {
 	PeerIdentity peer = findPeerForRepair(repairVoters);
 	log.debug2("Requesting repair from " + peer + ": " + url);
 	repairQueue.repairFromPeer(url, peer);
