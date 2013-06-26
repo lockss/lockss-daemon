@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.23 2013-01-24 21:49:27 thib_gc Exp $
+ * $Id: ListObjects.java,v 1.24 2013-06-26 04:42:02 tlipkis Exp $
  */
 
 /*
@@ -169,6 +169,7 @@ public class ListObjects extends LockssServlet {
 
     void finish() {;
       wrtr.println(isError ? "# end (errors)" : "# end");
+      wrtr.flush();
     }
 
     final void execute() throws IOException {
