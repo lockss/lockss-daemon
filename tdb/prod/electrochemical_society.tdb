@@ -120,7 +120,7 @@
   
     param[base_url] = http://ma.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[notReady] = "article abstract-view"
+    comment[notReady] = RU4503, span class article-nav-sep
     comment[previous] = 2002 through 2006 are on a non-HighWire website at http://www.electrochem.org/dl/ma/
 
     au < HighWirePressH20Plugin ; released ; 2005 ; ECS Meeting Abstracts Volume MA2005-01 ; MA2005-01 >
