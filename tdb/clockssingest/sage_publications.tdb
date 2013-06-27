@@ -730,7 +730,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < released ; crawling ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 ; >
-      au < expected ; exists ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 ; >
 	
     }
 
@@ -4596,7 +4596,7 @@
       au < zapped ; down ; 2010 ; China Report Volume 46 ; 46 ; >
       au < released ; crawling ; 2011 ; China Report Volume 47 ; 47 ; >
       au < released ; crawling ; 2012 ; China Report Volume 48 ; 48 ; >
-      au < expected ; exists ; 2013 ; China Report Volume 49 ; 49 ; >
+      au < manifest ; exists ; 2013 ; China Report Volume 49 ; 49 ; >
 
 
     }
@@ -8701,7 +8701,7 @@
       au < zapped ; down ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 ; >
       au < released ; crawling ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 ; >
-      au < expected ; exists ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 ; >
 
     }
 
@@ -16637,7 +16637,7 @@
       au < zapped ; down ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
       au < released ; crawling ; 2011 ; Journal of Child Health Care Volume 15 ; 15 ; >
       au < released ; crawling ; 2012 ; Journal of Child Health Care Volume 16 ; 16 ; >
-      au < expected ; exists ; 2013 ; Journal of Child Health Care Volume 17 ; 17 ; >
+      au < manifest ; exists ; 2013 ; Journal of Child Health Care Volume 17 ; 17 ; >
 
     }
 
@@ -19240,7 +19240,7 @@
       au < released ; crawling ; 2010 ; Journal of Health Management Volume 12 ; 12 ; >
       au < released ; crawling ; 2011 ; Journal of Health Management Volume 13 ; 13 ; >
       au < released ; crawling ; 2012 ; Journal of Health Management Volume 14 ; 14 ; >
-      au < expected ; exists ; 2013 ; Journal of Health Management Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2013 ; Journal of Health Management Volume 15 ; 15 ; >
 
     }
 
@@ -39289,7 +39289,7 @@
         au < exists ; exists ; 2010 ; Obstetric Medicine Volume 3 ; 3 ; >
         au < exists ; exists ; 2011 ; Obstetric Medicine Volume 4 ; 4 ; >
         au < exists ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 ; >
-        au < exists ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 ; >
   
       }
   
@@ -39370,7 +39370,7 @@
         au < exists ; exists ; 2010 ; Tropical Doctor Volume 40 ; 40 ; >
         au < exists ; exists ; 2011 ; Tropical Doctor Volume 41 ; 41 ; >
         au < exists ; exists ; 2012 ; Tropical Doctor Volume 42 ; 42 ; >
-        au < exists ; exists ; 2013 ; Tropical Doctor Volume 43 ; 43 ; >
+        au < manifest ; exists ; 2013 ; Tropical Doctor Volume 43 ; 43 ; >
   
       }
   
