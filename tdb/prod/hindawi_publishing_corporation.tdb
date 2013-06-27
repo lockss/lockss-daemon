@@ -917,7 +917,7 @@
     au < released ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -932,7 +932,7 @@
     param[journal_id] = btri
 
     au < released ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -948,7 +948,7 @@
     param[journal_id] = bmr
 
     au < released ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -986,7 +986,7 @@
     au < released ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 ; 2013 >
         
   }
@@ -1004,7 +1004,7 @@
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -1232,7 +1232,7 @@
     au < released ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -1249,7 +1249,7 @@
     comments[2] = redirects to /crim subdir
 
     au < ready ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -1536,7 +1536,7 @@
 
     au < released ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -1728,7 +1728,7 @@
     au < released ; Current Gerontology and Geriatrics Research Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Current Gerontology and Geriatrics Research Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Current Gerontology and Geriatrics Research Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Current Gerontology and Geriatrics Research Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Current Gerontology and Geriatrics Research Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -1745,7 +1745,7 @@
 
     au < released ; Depression Research and Treatment Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Depression Research and Treatment Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Depression Research and Treatment Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Depression Research and Treatment Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -1763,7 +1763,7 @@
     au < released ; Dermatology Research and Practice Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Dermatology Research and Practice Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Dermatology Research and Practice Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Dermatology Research and Practice Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Dermatology Research and Practice Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -1789,7 +1789,7 @@
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Diagnostic and Therapeutic Endoscopy Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Diagnostic and Therapeutic Endoscopy Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Diagnostic and Therapeutic Endoscopy Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -1837,7 +1837,7 @@
     au < released ; Discrete Dynamics in Nature and Society Volume 2009 ; 2009 ; 2009 ; 2009 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Discrete Dynamics in Nature and Society Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Discrete Dynamics in Nature and Society Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
@@ -1854,7 +1854,7 @@
 
     au < released ; Economics Research International Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; Economics Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Economics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Economics Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Economics Research International Volume 2013 ; 2013 ; 2013 ; 2013 >
     
   }
@@ -1870,7 +1870,7 @@
     param[journal_id] = edu
 
     au < released ; Education Research International Volume 2011 ; 2011 ; 2011 ; 2011 >
-    au < manifest ; Education Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
+    au < testing ; Education Research International Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < expected ; Education Research International Volume 2013 ; 2013 ; 2013 ; 2013 >
 
   }
