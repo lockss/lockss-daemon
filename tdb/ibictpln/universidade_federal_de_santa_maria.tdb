@@ -82,8 +82,8 @@
     param[journal_id] = remoa
 
     au < ready ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 >
-    au < testing ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 >
-    au < testing ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 >
+    au < notReady ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 >
+    au < notReady ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 >
     au < manifest ; 2013 ; 11 ; Revista Monografias Ambientais Volume 11 ; 2013 >
   }
   
@@ -167,13 +167,13 @@
     au < ready ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 >
     au < ready ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 >
     au < ready ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 >
-    au < testing ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 >
+    au < notReady ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 >
     au < ready ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 >
     au < ready ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 >
     au < ready ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 >
-    au < testing ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 >
-    au < testing ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 >
-    au < testing ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 >
+    au < notReady ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 >
+    au < notReady ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 >
+    au < notReady ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 >
     au < manifest ; 2013 ; 26 ; Revista Educação Especial Volume 26 ; 2013 >
 
   }
@@ -206,7 +206,7 @@
 
     param[journal_id] = geografia
 
-    au < testing ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
+    au < ready ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
     au < ready ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 >
     au < expected ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 ; 2013 >
 
