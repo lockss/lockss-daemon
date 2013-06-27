@@ -242,7 +242,7 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 1980 ; Journal of Energy Volume 4 ; 4 >
     au < ready ; 1981 ; Journal of Energy Volume 5 ; 5 >
     au < ready ; 1982 ; Journal of Energy Volume 6 ; 6 >
-    au < testing ; 1983 ; Journal of Energy Volume 7 ; 7 >
+    au < ready ; 1983 ; Journal of Energy Volume 7 ; 7 >
 
   }
 
@@ -283,8 +283,8 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 >
     au < manifest ; 2003 ; Journal of Guidance, Control, and Dynamics Volume 26 ; 26 >
     au < manifest ; 2004 ; Journal of Guidance, Control, and Dynamics Volume 27 ; 27 >
-    au < testing ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
-    au < testing ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
+    au < ready ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
+    au < ready ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
     au < testing ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 >
     au < testing ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 >
     au < testing ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 >
@@ -371,14 +371,14 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 2002 ; Journal of Propulsion and Power Volume 18 ; 18 >
     au < manifest ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 >
     au < manifest ; 2004 ; Journal of Propulsion and Power Volume 20 ; 20 >
-    au < manifest ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
-    au < manifest ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
-    au < manifest ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
-    au < manifest ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
-    au < manifest ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
-    au < manifest ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
-    au < manifest ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
-    au < manifest ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
+    au < testing ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
+    au < testing ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
+    au < testing ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
+    au < testing ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
+    au < testing ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
+    au < testing ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
+    au < testing ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
+    au < testing ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
     au < expected ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 >
 
   }
