@@ -882,7 +882,7 @@
         implicit < status ; year ; name ; param[volume_name] >
 
         au < released ; 2012 ; Agrarian South: Journal of Political Economy Volume 1 ; 1 >
-        au < expected ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 >
+        au < manifest ; 2013 ; Agrarian South: Journal of Political Economy Volume 2 ; 2 >
 
       }
 
@@ -5190,7 +5190,7 @@
         au < released ; 2010 ; China Report Volume 46 ; 46 >
         au < released ; 2011 ; China Report Volume 47 ; 47 >
         au < released ; 2012 ; China Report Volume 48 ; 48 >
-        au < expected ; 2013 ; China Report Volume 49 ; 49 >
+        au < manifest ; 2013 ; China Report Volume 49 ; 49 >
 
       }
 
@@ -9788,7 +9788,7 @@
         au < released ; 2010 ; Environment and Urbanization Asia Volume 1 ; 1 >
         au < released ; 2011 ; Environment and Urbanization Asia Volume 2 ; 2 >
         au < released ; 2012 ; Environment and Urbanization Asia Volume 3 ; 3 >
-        au < expected ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 >
+        au < manifest ; 2013 ; Environment and Urbanization Asia Volume 4 ; 4 >
 
       }
 
@@ -19043,7 +19043,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Child Health Care Volume 14 ; 14 >
         au < released ; 2011 ; Journal of Child Health Care Volume 15 ; 15 >
         au < released ; 2012 ; Journal of Child Health Care Volume 16 ; 16 >
-        au < expected ; 2013 ; Journal of Child Health Care Volume 17 ; 17 >
+        au < manifest ; 2013 ; Journal of Child Health Care Volume 17 ; 17 >
 
       }
 
@@ -21845,7 +21845,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Health Management Volume 12 ; 12 >
         au < released ; 2011 ; Journal of Health Management Volume 13 ; 13 >
         au < released ; 2012 ; Journal of Health Management Volume 14 ; 14 >
-        au < expected ; 2013 ; Journal of Health Management Volume 15 ; 15 >
+        au < manifest ; 2013 ; Journal of Health Management Volume 15 ; 15 >
 
       }
 
@@ -22654,7 +22654,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 >
         au < released ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 >
         au < released ; 2012-2013 ; Journal of Industrial Textiles Volume 42 ; 42 >
-        au < expected ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 >
+        au < manifest ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 >
 
       }
 
@@ -31538,7 +31538,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://hcs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < expected ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 >
+        au < manifest ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 >
 
     }
 
@@ -43456,7 +43456,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Obstetric Medicine Volume 3 ; 3 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Obstetric Medicine Volume 4 ; 4 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Obstetric Medicine Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; exists ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Obstetric Medicine Volume 6 ; 6 >
   
       }
   
