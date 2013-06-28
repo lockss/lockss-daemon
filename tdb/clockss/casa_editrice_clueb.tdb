@@ -17,6 +17,8 @@
     proxy = DIRECT
     implicit < status ; year ; name ; param[year] >
 
+    au < released ; 2010 ; Casa Editrice Clueb Source Content 2010 ; 2010 >
+
   }
 
 }
