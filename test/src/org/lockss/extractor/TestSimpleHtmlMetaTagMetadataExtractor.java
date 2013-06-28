@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.9 2012-02-16 20:28:42 thib_gc Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.10 2013-06-28 18:50:53 pgust Exp $
  */
 
 /*
@@ -110,12 +110,16 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
 
   public void testHtmlDecoding() throws Exception {
     String text =
+      // line-feed character and multiple spaces
+      "<meta name=\"jtitle\" content=\"foo\n&#xA;  \t   bar\">\n" + 
       "<meta name=\"title\" content=\"&#34;Quoted&#34; Title\">\n" +
       "<meta name=\"hex\" content=\"foo&#x22;bar&#x22; \">\n" +
       "<meta name=\"conjunct\" content=\"one&amp;two\">\n" +
       "<meta name=\"others\" content=\"l&lt;g&gt;a&amp;z\">\n";
 
-    assertRawEquals(ListUtil.list("title", "\"Quoted\" Title",
+    assertRawEquals(ListUtil.list(
+                  "jtitle", "foo bar",
+                  "title", "\"Quoted\" Title",
                   "hex", "foo\"bar\" ",
                   "conjunct", "one&two",
                   "others", "l<g>a&z"),
