@@ -4,9 +4,8 @@
   >
 
   plugin = org.lockss.plugin.sage.SageTriggeredContentPlugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; param[year] >
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
   param[base_url] = http://autobiography.stanford.clockss.org/
-  param[base_url2] = http://clockss.org/clockss/Auto/Biography
 
   {
     title <
@@ -16,11 +15,11 @@
       issnl = 0967-5507
     >
 
-    param[journal_dir] = aub
+    param[journal_id] = aub
       
-    au < manifest ; exists ; 2004 ; Auto/Biography Volume 12 ; 12 ; 2004 >
-    au < manifest ; exists ; 2005 ; Auto/Biography Volume 13 ; 13 ; 2005 >
-    au < manifest ; exists ; 2006 ; Auto/Biography Volume 14 ; 14 ; 2006 >
+    au < manifest ; 2004 ; Auto/Biography Volume 12 ; 12 ; 2004 >
+    au < manifest ; 2005 ; Auto/Biography Volume 13 ; 13 ; 2005 >
+    au < manifest ; 2006 ; Auto/Biography Volume 14 ; 14 ; 2006-2007 >
   }
 
 }
