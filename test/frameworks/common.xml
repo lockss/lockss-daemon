@@ -54,6 +54,7 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+	<value>org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin</value>
         <value>org.lockss.plugin.medknow.MedknowPlugin</value>
         <value>org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin</value>
         <value>org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin</value>
