@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.12 2013-04-01 02:26:27 pgust Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.13 2013-06-30 18:40:17 pgust Exp $
  */
 
 /*
@@ -69,7 +69,9 @@ public class HighWirePressArticleIteratorFactory
                                                       MetadataTarget target)
       throws PluginException {
     List<String> rootTemplates = new ArrayList<String>(2);
-    if ("org.lockss.plugin.highwire.HighWirePlugin".equals(au.getPluginId())) {
+    String pluginId = au.getPluginId();
+    if ("org.lockss.plugin.highwire.HighWirePlugin".equals(pluginId)) {
+      // H10a plugin uses integer volume
       rootTemplates.add(OLD_ROOT_TEMPLATE_HTML);
       rootTemplates.add(OLD_ROOT_TEMPLATE_PDF);
       return
@@ -130,7 +132,7 @@ public class HighWirePressArticleIteratorFactory
         return processFullTextPdf(cu, mat);
       }
       
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
+      if (log.isDebug3()) log.debug3("Skipping: " + url);
       return null;
     }
 
@@ -171,11 +173,12 @@ public class HighWirePressArticleIteratorFactory
 
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      // must be first to get metadata from abstract if it exists
+      guessAbstract(af, pdfMat);
       guessPdfLandingPage(af, pdfMat);
       af.setFullTextCu(af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) != null
                        ? af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)
                        : pdfCu);
-      guessAbstract(af, pdfMat);
 //      guessOtherParts(af, pdfMat);
       return af;
     }
