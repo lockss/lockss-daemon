@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.2 2013-07-01 22:18:05 alexandraohlson Exp $
  */
 
 /*
@@ -66,26 +66,36 @@ implements ArticleIteratorFactory,
   //  <atyponbase>.org/doi/suppl/10.3366/drs.2011.0010 (page from which you can access supplementary info)
   //  <atyponbase>.org/doi/ref/10.3366/drs.2011.0010  (page with references on it)
   //
+  //  There is the possibility of downloaded citation information which will get normalized to look something like this:
+  //  <atyponbase>.org/action/downloadCitation?doi=<partone>%2F<parttwo>&format=ris&include=cit
+  //
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     // various aspects of an article
-    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
 
     // how to change from one form (aspect) of article to another
-    final String HTML_REPLACEMENT = "/doi/full/$1";
-    final String ABSTRACT_REPLACEMENT = "/doi/abs/$1";
-    final String PDF_REPLACEMENT = "/doi/pdf/$1";
-    final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1";
+    final String HTML_REPLACEMENT = "/doi/full/$1/$2";
+    final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2";
+    final String PDF_REPLACEMENT = "/doi/pdf/$1/$2";
+    final String PDFPLUS_REPLACEMENT = "/doi/pdfplus/$1/$2";
     
     // Things not an "article" but in support of an article
-    final String REFERENCES_REPLACEMENT = "/doi/ref/$1";
-    final String SUPPL_REPLACEMENT = "/doi/suppl/$1";
+    final String REFERENCES_REPLACEMENT = "/doi/ref/$1/$2";
+    final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
+    // link extractor used forms to pick up this URL
+    
+    //IN PROGRESS: In order to meet the needs of all Atypon children, the url normalizer
+    // needs to work in conjunction with the linkextractor to ensure that when available the downloaded RIS information
+    // lives at the following url
+    final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
+
     
     builder.setSpec(target,
         ROOT_TEMPLATE,
@@ -120,9 +130,13 @@ implements ArticleIteratorFactory,
     builder.addAspect(REFERENCES_REPLACEMENT,
         ArticleFiles.ROLE_REFERENCES);
 
-    // set a fole, but it isn't sufficient to trigger an ArticleFiles
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(SUPPL_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+    
+    // set a role, but it isn't sufficient to trigger an ArticleFiles
+    builder.addAspect(RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
 
     // The order in which we want to define full_text_cu.  
     // First one that exists will get the job
@@ -132,6 +146,7 @@ implements ArticleIteratorFactory,
 
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_CITATION_RIS,
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
 

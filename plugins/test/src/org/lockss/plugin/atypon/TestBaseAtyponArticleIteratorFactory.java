@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.2 2013-04-29 22:12:29 thib_gc Exp $
+ * $Id: TestBaseAtyponArticleIteratorFactory.java,v 1.3 2013-07-01 22:18:05 alexandraohlson Exp $
  */
 
 /*
@@ -97,7 +97,8 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     conf.put("numFiles", "4");
     conf.put("fileTypes",
         "" + (SimulatedContentGenerator.FILE_TYPE_HTML |
-            SimulatedContentGenerator.FILE_TYPE_PDF));
+            SimulatedContentGenerator.FILE_TYPE_PDF | 
+            SimulatedContentGenerator.FILE_TYPE_TXT));
     conf.put("binFileSize", ""+DEFAULT_FILESIZE);
     return conf;
   }
@@ -142,8 +143,8 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
 
   //
   // simAU was created with only one depth, but 5 branches
-  // 2 filetypes (html & pdf) and 4 files of each type
-  // So the total number of files of all types is 40 (5 * (4*2))
+  // 3 filetypes (html & pdf & txt) and 4 files of each type
+  // So the total number of files of all types is 40 (5 * (4*2)) + 4 RIS (handled independently)
   // simAU file structures looks like this branch01/01file.html or branch04/08file.pdf, etc
   //
   public void testCreateArticleFiles() throws Exception {
@@ -171,17 +172,25 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, reppdf);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, reppdfplus);
 
-    // At this point we have 32 sets of 4 types of articles
+    // "fix" the URL for *.txt files which represent the RIS download URL
+    String pat3 = "branch(\\d+)/(\\d+)file\\.txt";
+    String repris = "action/downloadCitation?doi=10.1137%2Fb$1.art$2&format=ris&include=cit";
+    
+    PluginTestUtil.copyAu(sau, au, ".*\\.txt$", pat3, repris);
+    
+    // At this point we have 32 sets of 4 types of articles + 1 ris data for each article
     // Remove some of the URLs just created to make test more robust
-    // create all the possible permutations 
+    // create all the possible permutations of article types
     // (there are 16 of them) all, none, 1, combos of 2, combos of 3
     //
     // branch1: remove all aspects for art1; leave all 4 aspects for art 2,3,4 
     // branch2: (singletons) - art1 (abs only); art2 (full only); art3 (pdf only); art4 (pdfplus only)
     // branch3: (trios) - art1 (!abs); art2 (!full); art3 (!pdf); art3 (!pdfplus)
     // branch4: (doubles) - art1 (abs+full); art2 (abs+pdf); art3 (abs+pdfplus); art4 (ALL)
-    // branch4: (doubles) - art1 (full+pdf); art2 (full+pdfplus); art3 (pdf+pdfplus); art4 (ALL)
+    //    IN THIS BRANCH also remove the RIS file so that we fall back to the abstract
+    // branch5: (doubles) - art1 (full+pdf); art2 (full+pdfplus); art3 (pdf+pdfplus); art4 (ALL)
     int deleted = 0;
+    int deletedRIS = 0;
     for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
       if (cusn instanceof CachedUrl) {
@@ -231,7 +240,7 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
             ++deleted;
           }   
         } else if (url.contains("b4.art00")) {
-          // branch 4 - doubles that have abs    
+          // branch 4 - doubles that have abs; remove the ris files    
           if (url.contains("doi/pdfplus/") &&  ( url.endsWith("art001") || url.endsWith("art002")) ) { 
             deleteBlock(cu);
             ++deleted;
@@ -243,6 +252,10 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
           if (url.contains("doi/pdf/") && ( url.endsWith("art001") || url.endsWith("art003")) ) {
             deleteBlock(cu);
             ++deleted;
+          }
+          if (url.contains("action/downloadCitation")) {
+            deleteBlock(cu); 
+            ++deletedRIS;
           }
         } else {    
           // branch 5 - doubles without abs
@@ -266,6 +279,7 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
       }
     }
     assertEquals(32, deleted); // trust me
+    assertEquals(4, deletedRIS);
 
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
@@ -274,21 +288,21 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       count ++;
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
         ++countFullText;
       }
       cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
       if (cu != null) {
-        ++countMetadata;
+        ++countMetadata; //could be ris file or abstract or full
       }
     }
-    // potential article count is 20 (5 branches * 4 files each branch) = 20
+    // potential article count is 20 (5 branches * 4 files each branch) = 20 (4 RIS files don't count as articles)
     // subtract the one where we removed everything
     int expCount = 19; 
 
-    log.debug("Article count is " + count);
+    log.debug3("Article count is " + count);
     assertEquals(expCount, count);
 
     // you will only get a full text for combos with pdf, pdfplus or full
@@ -297,11 +311,13 @@ public class TestBaseAtyponArticleIteratorFactory extends ArticleIteratorTestCas
     
     // you need to have either an abstract or a full text to have metadata 4 cases don't have either
     // we're only going to get the right information if the TARGET is not NULL and set to other than isArticle()
-    assertEquals(16, countMetadata);
+    //assertEquals(16, countMetadata);
+    //Now that we pick up downloaded RIS urls, we should always have this
+    assertEquals(19, countMetadata); //don't count the one where we removed everything
   }
 
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
     ArchivalUnit au = cu.getArchivalUnit();
     CachedUrlSet cus = au.makeCachedUrlSet(cuss);

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.2 2013-07-01 22:18:05 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -32,6 +32,20 @@ import org.lockss.plugin.*;
 public class BaseAtyponUrlNormalizer implements UrlNormalizer {
 
   protected static final String SUFFIX = "?cookieSet=1";
+  
+  // IN PROGRESS - In order to support the needs of all the Atypon children, this needs to change
+  // to an implementation with some abstract methods so that the child can set a list or set
+  // of parameters that need to be included or excluded for action/downloadCitation
+  // We want to end up with .../action/downloadCitation?doi=blah%2Fblah&format=ris&include=cit
+  // but different child plugins have variations on what their forms produce, such as:  
+
+  //downloaded Citations have extra things we want to get rid of
+  protected static final String CITATION_DOWNLOAD_URL = "action/downloadCitation"; 
+  protected static final String DOWNLOAD_NAME = "&downloadFileName=";
+  // take off even the include=cit because we may have to add &format=ris on first
+  protected static final String CIT_SIAM_SUFFIX = "&include=cit&submit=Download+publication+citation+data";
+  protected static final String CIT_FS_SUFFIX = "&include=cit&submit=Download+article+metadata";
+  
 
   /* 
    *  Several Atypon plugins do this
@@ -40,6 +54,23 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
    */
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
+    
+    // The following is only important f
+    if (url.contains(CITATION_DOWNLOAD_URL)) {
+      if (url.contains(DOWNLOAD_NAME)) {
+        url = url.replaceFirst("&downloadFileName=[^&]+", "");
+      }
+      url = StringUtils.chomp(url, CIT_SIAM_SUFFIX);
+      url = StringUtils.chomp(url,CIT_FS_SUFFIX);
+      // NOW, if we don't already have &format=, then add it on as a RIS
+      if (!(url.contains("&format="))) {
+        url= url + "&format=ris";       
+      }
+      if (!(url.contains("&include=cit"))) {
+        url = url + "&include=cit";
+      }
+      
+    }
     return StringUtils.chomp(url, SUFFIX);
   }
 

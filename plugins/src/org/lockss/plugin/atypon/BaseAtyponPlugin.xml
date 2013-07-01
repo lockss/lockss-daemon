@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -28,7 +28,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -152,5 +152,15 @@
         <string>org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+<!--  oddly, ris files are text/plain -->
+  <entry>
+  <string>text/plain_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
   </entry>
 </map>
