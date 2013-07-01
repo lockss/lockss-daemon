@@ -17,12 +17,11 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = shre
-      comment[notReady] = placeholder Quick Search
         
       au < released ; 2005 ; Journal of Shellfish Research Volume 24 ; 24 >
       au < released ; 2006 ; Journal of Shellfish Research Volume 25 ; 25 >
       au < released ; 2007 ; Journal of Shellfish Research Volume 26 ; 26 >
-      au < notReady ; 2008 ; Journal of Shellfish Research Volume 27 ; 27 >
+      au < ready ; 2008 ; Journal of Shellfish Research Volume 27 ; 27 >
       au < released ; 2009 ; Journal of Shellfish Research Volume 28 ; 28 >
       au < released ; 2010 ; Journal of Shellfish Research Volume 29 ; 29 >
       au < released ; 2011 ; Journal of Shellfish Research Volume 30 ; 30 >
