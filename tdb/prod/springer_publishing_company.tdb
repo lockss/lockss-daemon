@@ -3,11 +3,8 @@
     name = Springer Publishing Company
   >
 
-  {
-  
     comment[0] = RT#3548
- 
-  }
+    comment[doNotProcess] = See RT.
 
   {
 
@@ -27,36 +24,36 @@
     param[journal_issn] = 0198-8794
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1980 ; Annual Review of Gerontology and Geriatrics Volume 1 ; 1  > 
-    au < exists ; 1981 ; Annual Review of Gerontology and Geriatrics Volume 2 ; 2  > 
-    au < exists ; 1982 ; Annual Review of Gerontology and Geriatrics Volume 3 ; 3  > 
-    au < exists ; 1983 ; Annual Review of Gerontology and Geriatrics Volume 4 ; 4  > 
-    au < exists ; 1984 ; Annual Review of Gerontology and Geriatrics Volume 5 ; 5  > 
-    au < exists ; 1985 ; Annual Review of Gerontology and Geriatrics Volume 6 ; 6  > 
-    au < exists ; 1986 ; Annual Review of Gerontology and Geriatrics Volume 7 ; 7  > 
-    au < exists ; 1987 ; Annual Review of Gerontology and Geriatrics Volume 8 ; 8  > 
-    au < exists ; 1988 ; Annual Review of Gerontology and Geriatrics Volume 9 ; 9  > 
-    au < exists ; 1989 ; Annual Review of Gerontology and Geriatrics Volume 10 ; 10  > 
-    au < exists ; 1990 ; Annual Review of Gerontology and Geriatrics Volume 11 ; 11  > 
-    au < exists ; 1991 ; Annual Review of Gerontology and Geriatrics Volume 12 ; 12  > 
-    au < exists ; 1992 ; Annual Review of Gerontology and Geriatrics Volume 13 ; 13  > 
-    au < exists ; 1993 ; Annual Review of Gerontology and Geriatrics Volume 14 ; 14  > 
-    au < exists ; 1994 ; Annual Review of Gerontology and Geriatrics Volume 15 ; 15  > 
-    au < exists ; 1995 ; Annual Review of Gerontology and Geriatrics Volume 16 ; 16  > 
-    au < exists ; 1996 ; Annual Review of Gerontology and Geriatrics Volume 17 ; 17  > 
-    au < exists ; 1997 ; Annual Review of Gerontology and Geriatrics Volume 18 ; 18  > 
-    au < exists ; 1998 ; Annual Review of Gerontology and Geriatrics Volume 19 ; 19  > 
-    au < exists ; 1999 ; Annual Review of Gerontology and Geriatrics Volume 20 ; 20  > 
-    au < exists ; 2000 ; Annual Review of Gerontology and Geriatrics Volume 21 ; 21  > 
-    au < exists ; 2001 ; Annual Review of Gerontology and Geriatrics Volume 22 ; 22  > 
-    au < exists ; 2002 ; Annual Review of Gerontology and Geriatrics Volume 23 ; 23  > 
-    au < exists ; 2004 ; Annual Review of Gerontology and Geriatrics Volume 24 ; 24  > 
-    au < exists ; 2005 ; Annual Review of Gerontology and Geriatrics Volume 25 ; 25  > 
-    au < exists ; 2006 ; Annual Review of Gerontology and Geriatrics Volume 26 ; 26  > 
-    au < exists ; 2007 ; Annual Review of Gerontology and Geriatrics Volume 27 ; 27  > 
-    au < exists ; 2008 ; Annual Review of Gerontology and Geriatrics Volume 28 ; 28  > 
-    au < exists ; 2009 ; Annual Review of Gerontology and Geriatrics Volume 29 ; 29  > 
-    au < exists ; 2010 ; Annual Review of Gerontology and Geriatrics Volume 30 ; 30  > 
+    au < doNotProcess ; 1980 ; Annual Review of Gerontology and Geriatrics Volume 1 ; 1  > 
+    au < doNotProcess ; 1981 ; Annual Review of Gerontology and Geriatrics Volume 2 ; 2  > 
+    au < doNotProcess ; 1982 ; Annual Review of Gerontology and Geriatrics Volume 3 ; 3  > 
+    au < doNotProcess ; 1983 ; Annual Review of Gerontology and Geriatrics Volume 4 ; 4  > 
+    au < doNotProcess ; 1984 ; Annual Review of Gerontology and Geriatrics Volume 5 ; 5  > 
+    au < doNotProcess ; 1985 ; Annual Review of Gerontology and Geriatrics Volume 6 ; 6  > 
+    au < doNotProcess ; 1986 ; Annual Review of Gerontology and Geriatrics Volume 7 ; 7  > 
+    au < doNotProcess ; 1987 ; Annual Review of Gerontology and Geriatrics Volume 8 ; 8  > 
+    au < doNotProcess ; 1988 ; Annual Review of Gerontology and Geriatrics Volume 9 ; 9  > 
+    au < doNotProcess ; 1989 ; Annual Review of Gerontology and Geriatrics Volume 10 ; 10  > 
+    au < doNotProcess ; 1990 ; Annual Review of Gerontology and Geriatrics Volume 11 ; 11  > 
+    au < doNotProcess ; 1991 ; Annual Review of Gerontology and Geriatrics Volume 12 ; 12  > 
+    au < doNotProcess ; 1992 ; Annual Review of Gerontology and Geriatrics Volume 13 ; 13  > 
+    au < doNotProcess ; 1993 ; Annual Review of Gerontology and Geriatrics Volume 14 ; 14  > 
+    au < doNotProcess ; 1994 ; Annual Review of Gerontology and Geriatrics Volume 15 ; 15  > 
+    au < doNotProcess ; 1995 ; Annual Review of Gerontology and Geriatrics Volume 16 ; 16  > 
+    au < doNotProcess ; 1996 ; Annual Review of Gerontology and Geriatrics Volume 17 ; 17  > 
+    au < doNotProcess ; 1997 ; Annual Review of Gerontology and Geriatrics Volume 18 ; 18  > 
+    au < doNotProcess ; 1998 ; Annual Review of Gerontology and Geriatrics Volume 19 ; 19  > 
+    au < doNotProcess ; 1999 ; Annual Review of Gerontology and Geriatrics Volume 20 ; 20  > 
+    au < doNotProcess ; 2000 ; Annual Review of Gerontology and Geriatrics Volume 21 ; 21  > 
+    au < doNotProcess ; 2001 ; Annual Review of Gerontology and Geriatrics Volume 22 ; 22  > 
+    au < doNotProcess ; 2002 ; Annual Review of Gerontology and Geriatrics Volume 23 ; 23  > 
+    au < doNotProcess ; 2004 ; Annual Review of Gerontology and Geriatrics Volume 24 ; 24  > 
+    au < doNotProcess ; 2005 ; Annual Review of Gerontology and Geriatrics Volume 25 ; 25  > 
+    au < doNotProcess ; 2006 ; Annual Review of Gerontology and Geriatrics Volume 26 ; 26  > 
+    au < doNotProcess ; 2007 ; Annual Review of Gerontology and Geriatrics Volume 27 ; 27  > 
+    au < doNotProcess ; 2008 ; Annual Review of Gerontology and Geriatrics Volume 28 ; 28  > 
+    au < doNotProcess ; 2009 ; Annual Review of Gerontology and Geriatrics Volume 29 ; 29  > 
+    au < doNotProcess ; 2010 ; Annual Review of Gerontology and Geriatrics Volume 30 ; 30  > 
 
   }
 
@@ -78,34 +75,34 @@
     param[journal_issn] = 0739-6686
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1983 ; Annual Review of Nursing Research Volume 1 ; 1  > 
-    au < exists ; 1984 ; Annual Review of Nursing Research Volume 2 ; 2  > 
-    au < exists ; 1985 ; Annual Review of Nursing Research Volume 3 ; 3  > 
-    au < exists ; 1986 ; Annual Review of Nursing Research Volume 4 ; 4  > 
-    au < exists ; 1987 ; Annual Review of Nursing Research Volume 5 ; 5  > 
-    au < exists ; 1988 ; Annual Review of Nursing Research Volume 6 ; 6  > 
-    au < exists ; 1989 ; Annual Review of Nursing Research Volume 7 ; 7  > 
-    au < exists ; 1990 ; Annual Review of Nursing Research Volume 8 ; 8  > 
-    au < exists ; 1991 ; Annual Review of Nursing Research Volume 9 ; 9  > 
-    au < exists ; 1992 ; Annual Review of Nursing Research Volume 10 ; 10  > 
-    au < exists ; 1993 ; Annual Review of Nursing Research Volume 11 ; 11  > 
-    au < exists ; 1994 ; Annual Review of Nursing Research Volume 12 ; 12  > 
-    au < exists ; 1995 ; Annual Review of Nursing Research Volume 13 ; 13  > 
-    au < exists ; 1996 ; Annual Review of Nursing Research Volume 14 ; 14  > 
-    au < exists ; 1997 ; Annual Review of Nursing Research Volume 15 ; 15  > 
-    au < exists ; 1998 ; Annual Review of Nursing Research Volume 16 ; 16  > 
-    au < exists ; 1999 ; Annual Review of Nursing Research Volume 17 ; 17  > 
-    au < exists ; 2000 ; Annual Review of Nursing Research Volume 18 ; 18  > 
-    au < exists ; 2001 ; Annual Review of Nursing Research Volume 19 ; 19  > 
-    au < exists ; 2002 ; Annual Review of Nursing Research Volume 20 ; 20  > 
-    au < exists ; 2003 ; Annual Review of Nursing Research Volume 21 ; 21  > 
-    au < exists ; 2004 ; Annual Review of Nursing Research Volume 22 ; 22  > 
-    au < exists ; 2005 ; Annual Review of Nursing Research Volume 23 ; 23  > 
-    au < exists ; 2006 ; Annual Review of Nursing Research Volume 24 ; 24  > 
-    au < exists ; 2007 ; Annual Review of Nursing Research Volume 25 ; 25  > 
-    au < exists ; 2008 ; Annual Review of Nursing Research Volume 26 ; 26  > 
-    au < exists ; 2009 ; Annual Review of Nursing Research Volume 27 ; 27  > 
-    au < exists ; 2010 ; Annual Review of Nursing Research Volume 28 ; 28  > 
+    au < doNotProcess ; 1983 ; Annual Review of Nursing Research Volume 1 ; 1  > 
+    au < doNotProcess ; 1984 ; Annual Review of Nursing Research Volume 2 ; 2  > 
+    au < doNotProcess ; 1985 ; Annual Review of Nursing Research Volume 3 ; 3  > 
+    au < doNotProcess ; 1986 ; Annual Review of Nursing Research Volume 4 ; 4  > 
+    au < doNotProcess ; 1987 ; Annual Review of Nursing Research Volume 5 ; 5  > 
+    au < doNotProcess ; 1988 ; Annual Review of Nursing Research Volume 6 ; 6  > 
+    au < doNotProcess ; 1989 ; Annual Review of Nursing Research Volume 7 ; 7  > 
+    au < doNotProcess ; 1990 ; Annual Review of Nursing Research Volume 8 ; 8  > 
+    au < doNotProcess ; 1991 ; Annual Review of Nursing Research Volume 9 ; 9  > 
+    au < doNotProcess ; 1992 ; Annual Review of Nursing Research Volume 10 ; 10  > 
+    au < doNotProcess ; 1993 ; Annual Review of Nursing Research Volume 11 ; 11  > 
+    au < doNotProcess ; 1994 ; Annual Review of Nursing Research Volume 12 ; 12  > 
+    au < doNotProcess ; 1995 ; Annual Review of Nursing Research Volume 13 ; 13  > 
+    au < doNotProcess ; 1996 ; Annual Review of Nursing Research Volume 14 ; 14  > 
+    au < doNotProcess ; 1997 ; Annual Review of Nursing Research Volume 15 ; 15  > 
+    au < doNotProcess ; 1998 ; Annual Review of Nursing Research Volume 16 ; 16  > 
+    au < doNotProcess ; 1999 ; Annual Review of Nursing Research Volume 17 ; 17  > 
+    au < doNotProcess ; 2000 ; Annual Review of Nursing Research Volume 18 ; 18  > 
+    au < doNotProcess ; 2001 ; Annual Review of Nursing Research Volume 19 ; 19  > 
+    au < doNotProcess ; 2002 ; Annual Review of Nursing Research Volume 20 ; 20  > 
+    au < doNotProcess ; 2003 ; Annual Review of Nursing Research Volume 21 ; 21  > 
+    au < doNotProcess ; 2004 ; Annual Review of Nursing Research Volume 22 ; 22  > 
+    au < doNotProcess ; 2005 ; Annual Review of Nursing Research Volume 23 ; 23  > 
+    au < doNotProcess ; 2006 ; Annual Review of Nursing Research Volume 24 ; 24  > 
+    au < doNotProcess ; 2007 ; Annual Review of Nursing Research Volume 25 ; 25  > 
+    au < doNotProcess ; 2008 ; Annual Review of Nursing Research Volume 26 ; 26  > 
+    au < doNotProcess ; 2009 ; Annual Review of Nursing Research Volume 27 ; 27  > 
+    au < doNotProcess ; 2010 ; Annual Review of Nursing Research Volume 28 ; 28  > 
 
   }
 
@@ -127,8 +124,8 @@
     param[journal_issn] = 1942-0617
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2009 ; Beliefs and Values: Understanding the Global Implications of Human Nature Volume 1 ; 1  > 
-    au < exists ; 2010 ; Beliefs and Values: Understanding the Global Implications of Human Nature Volume 2 ; 2  > 
+    au < doNotProcess ; 2009 ; Beliefs and Values: Understanding the Global Implications of Human Nature Volume 1 ; 1  > 
+    au < doNotProcess ; 2010 ; Beliefs and Values: Understanding the Global Implications of Human Nature Volume 2 ; 2  > 
 
   }
 
@@ -151,18 +148,18 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[alt_title] = comprised of Journal of Case Management and The Journal of Long Term Home Health Care
 
-    au < exists ; 1999 ; Care Management Journals Volume 1 ; 1  > 
-    au < exists ; 2000 ; Care Management Journals Volume 2 ; 2  > 
-    au < exists ; 2001-2002 ; Care Management Journals Volume 3 ; 3  > 
-    au < exists ; 2003 ; Care Management Journals Volume 4 ; 4  > 
-    au < exists ; 2004 ; Care Management Journals Volume 5 ; 5  > 
-    au < exists ; 2005 ; Care Management Journals Volume 6 ; 6  > 
-    au < exists ; 2006 ; Care Management Journals Volume 7 ; 7  > 
-    au < exists ; 2007 ; Care Management Journals Volume 8 ; 8  > 
-    au < exists ; 2008 ; Care Management Journals Volume 9 ; 9  > 
-    au < exists ; 2009 ; Care Management Journals Volume 10 ; 10  > 
-    au < exists ; 2010 ; Care Management Journals Volume 11 ; 11  > 
-    au < exists ; 2011 ; Care Management Journals Volume 12 ; 12  > 
+    au < doNotProcess ; 1999 ; Care Management Journals Volume 1 ; 1  > 
+    au < doNotProcess ; 2000 ; Care Management Journals Volume 2 ; 2  > 
+    au < doNotProcess ; 2001-2002 ; Care Management Journals Volume 3 ; 3  > 
+    au < doNotProcess ; 2003 ; Care Management Journals Volume 4 ; 4  > 
+    au < doNotProcess ; 2004 ; Care Management Journals Volume 5 ; 5  > 
+    au < doNotProcess ; 2005 ; Care Management Journals Volume 6 ; 6  > 
+    au < doNotProcess ; 2006 ; Care Management Journals Volume 7 ; 7  > 
+    au < doNotProcess ; 2007 ; Care Management Journals Volume 8 ; 8  > 
+    au < doNotProcess ; 2008 ; Care Management Journals Volume 9 ; 9  > 
+    au < doNotProcess ; 2009 ; Care Management Journals Volume 10 ; 10  > 
+    au < doNotProcess ; 2010 ; Care Management Journals Volume 11 ; 11  > 
+    au < doNotProcess ; 2011 ; Care Management Journals Volume 12 ; 12  > 
 
   }
 
@@ -184,10 +181,10 @@
     param[journal_issn] = 1939-2095
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2008 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 1 ; 1  > 
-    au < exists ; 2009 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 2 ; 2  > 
-    au < exists ; 2010 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 3 ; 3  > 
-    au < exists ; 2011 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 4 ; 4  > 
+    au < doNotProcess ; 2008 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 1 ; 1  > 
+    au < doNotProcess ; 2009 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 2 ; 2  > 
+    au < doNotProcess ; 2010 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 3 ; 3  > 
+    au < doNotProcess ; 2011 ; Clinical Scholars Review: The Journal of Doctoral Nursing Practice Volume 4 ; 4  > 
 
   }
 
@@ -209,20 +206,20 @@
     param[journal_issn] = 1078-4535
     implicit < status ; year ; name ; param[volume_name] >
  
-    au < exists ; 1998 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 4 ; 4  > 
-    au < exists ; 1999 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 5 ; 5  > 
-    au < exists ; 2000 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 6 ; 6  > 
-    au < exists ; 2001 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 7 ; 7  > 
-    au < exists ; 2002 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 8 ; 8  > 
-    au < exists ; 2003-2004 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 9 ; 9  > 
-    au < exists ; 2004 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 10 ; 10  > 
-    au < exists ; 2005 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 11 ; 11  > 
-    au < exists ; 2006 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 12 ; 12  > 
-    au < exists ; 2007 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 13 ; 13  > 
-    au < exists ; 2008 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 14 ; 14  > 
-    au < exists ; 2009 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 15 ; 15  > 
-    au < exists ; 2010 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 16 ; 16  > 
-    au < exists ; 2011 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 17 ; 17  > 
+    au < doNotProcess ; 1998 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 4 ; 4  > 
+    au < doNotProcess ; 1999 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 5 ; 5  > 
+    au < doNotProcess ; 2000 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 6 ; 6  > 
+    au < doNotProcess ; 2001 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 7 ; 7  > 
+    au < doNotProcess ; 2002 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 8 ; 8  > 
+    au < doNotProcess ; 2003-2004 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 9 ; 9  > 
+    au < doNotProcess ; 2004 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 10 ; 10  > 
+    au < doNotProcess ; 2005 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 11 ; 11  > 
+    au < doNotProcess ; 2006 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 12 ; 12  > 
+    au < doNotProcess ; 2007 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 13 ; 13  > 
+    au < doNotProcess ; 2008 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 14 ; 14  > 
+    au < doNotProcess ; 2009 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 15 ; 15  > 
+    au < doNotProcess ; 2010 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 16 ; 16  > 
+    au < doNotProcess ; 2011 ; Creative Nursing: A Journal of Values, Issues, Experience, and Collaboration Volume 17 ; 17  > 
 
   }
 
@@ -244,13 +241,13 @@
     param[journal_issn] = 1559-4343
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2005 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 7 ; 7  > 
-    au < exists ; 2006 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 8 ; 8  > 
-    au < exists ; 2007 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 9 ; 9  > 
-    au < exists ; 2008 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 10 ; 10  > 
-    au < exists ; 2009 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 11 ; 11  > 
-    au < exists ; 2010 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 12 ; 12  > 
-    au < exists ; 2011 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 13 ; 13  > 
+    au < doNotProcess ; 2005 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 7 ; 7  > 
+    au < doNotProcess ; 2006 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 8 ; 8  > 
+    au < doNotProcess ; 2007 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 9 ; 9  > 
+    au < doNotProcess ; 2008 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 10 ; 10  > 
+    au < doNotProcess ; 2009 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 11 ; 11  > 
+    au < doNotProcess ; 2010 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 12 ; 12  > 
+    au < doNotProcess ; 2011 ; Ethical Human Psychology and Psychiatry: An International Journal of Critical Inquiry Volume 13 ; 13  > 
 
   }
 
@@ -272,13 +269,13 @@
     param[journal_issn] = 1523-150X
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1999 ; Ethical Human Sciences and Services Volume 1 ; 1  > 
-    au < exists ; 2000 ; Ethical Human Sciences and Services Volume 2 ; 2  > 
-    au < exists ; 2001 ; Ethical Human Sciences and Services Volume 3 ; 3  > 
-    au < exists ; 2002 ; Ethical Human Sciences and Services Volume 4 ; 4  > 
-    au < exists ; 2003 ; Ethical Human Sciences and Services Volume 5 ; 5  > 
-    au < exists ; 2004 ; Ethical Human Sciences and Services Volume 6 ; 6  > 
-    au < exists ; 2005 ; Ethical Human Sciences and Services Volume 7 ; 7  > 
+    au < doNotProcess ; 1999 ; Ethical Human Sciences and Services Volume 1 ; 1  > 
+    au < doNotProcess ; 2000 ; Ethical Human Sciences and Services Volume 2 ; 2  > 
+    au < doNotProcess ; 2001 ; Ethical Human Sciences and Services Volume 3 ; 3  > 
+    au < doNotProcess ; 2002 ; Ethical Human Sciences and Services Volume 4 ; 4  > 
+    au < doNotProcess ; 2003 ; Ethical Human Sciences and Services Volume 5 ; 5  > 
+    au < doNotProcess ; 2004 ; Ethical Human Sciences and Services Volume 6 ; 6  > 
+    au < doNotProcess ; 2005 ; Ethical Human Sciences and Services Volume 7 ; 7  > 
 
   }
 
@@ -300,15 +297,15 @@
     param[journal_issn] = 1540-4153
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2002 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 1 ; 1  > 
-    au < exists ; 2003 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 2 ; 2  > 
-    au < exists ; 2005 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 3 ; 3  > 
-    au < exists ; 2006 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 4 ; 4  > 
-    au < exists ; 2007 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 5 ; 5  > 
-    au < exists ; 2008 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 6 ; 6  > 
-    au < exists ; 2009 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 7 ; 7  > 
-    au < exists ; 2010 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 8 ; 8  > 
-    au < exists ; 2011 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 9 ; 9  > 
+    au < doNotProcess ; 2002 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 1 ; 1  > 
+    au < doNotProcess ; 2003 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 2 ; 2  > 
+    au < doNotProcess ; 2005 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 3 ; 3  > 
+    au < doNotProcess ; 2006 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 4 ; 4  > 
+    au < doNotProcess ; 2007 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 5 ; 5  > 
+    au < doNotProcess ; 2008 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 6 ; 6  > 
+    au < doNotProcess ; 2009 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 7 ; 7  > 
+    au < doNotProcess ; 2010 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 8 ; 8  > 
+    au < doNotProcess ; 2011 ; Hispanic Health Care International: The Official Journal of the National Association of Hispanic Nurses Volume 9 ; 9  > 
 
   }
 
@@ -330,7 +327,7 @@
     param[journal_issn] = 2156-5287
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2011 ; International Journal of Childbirth: The Official Publication of the International Confederation of Midwives Volume 1 ; 1  > 
+    au < doNotProcess ; 2011 ; International Journal of Childbirth: The Official Publication of the International Confederation of Midwives Volume 1 ; 1  > 
 
   }
 
@@ -352,16 +349,16 @@
     param[journal_issn] = 1945-8959
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2000-2001 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 1 ; 1  > 
-    au < exists ; 2001-2002 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 2 ; 2  > 
-    au < exists ; 2003-2004 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 3 ; 3  > 
-    au < exists ; 2004-2005 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 4 ; 4  > 
-    au < exists ; 2005-2006 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 5 ; 5  > 
-    au < exists ; 2006-2007 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 6 ; 6  > 
-    au < exists ; 2008 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 7 ; 7  > 
-    au < exists ; 2009 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 8 ; 8  > 
-    au < exists ; 2010 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 9 ; 9  > 
-    au < exists ; 2011 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 10 ; 10  > 
+    au < doNotProcess ; 2000-2001 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 1 ; 1  > 
+    au < doNotProcess ; 2001-2002 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 2 ; 2  > 
+    au < doNotProcess ; 2003-2004 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 3 ; 3  > 
+    au < doNotProcess ; 2004-2005 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 4 ; 4  > 
+    au < doNotProcess ; 2005-2006 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 5 ; 5  > 
+    au < doNotProcess ; 2006-2007 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 6 ; 6  > 
+    au < doNotProcess ; 2008 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 7 ; 7  > 
+    au < doNotProcess ; 2009 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 8 ; 8  > 
+    au < doNotProcess ; 2010 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 9 ; 9  > 
+    au < doNotProcess ; 2011 ; Journal of Cognitive Education and Psychology: Official Publication of the International Association for Cognitive Education and Psychology Volume 10 ; 10  > 
 
   }
 
@@ -383,31 +380,31 @@
     param[journal_issn] = 0889-8391
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1987 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 1 ; 1  > 
-    au < exists ; 1988 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 2 ; 2  > 
-    au < exists ; 1989 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 3 ; 3  > 
-    au < exists ; 1990 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 4 ; 4  > 
-    au < exists ; 1991 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 5 ; 5  > 
-    au < exists ; 1992 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 6 ; 6  > 
-    au < exists ; 1993 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 7 ; 7  > 
-    au < exists ; 1994 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 8 ; 8  > 
-    au < exists ; 1995 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 9 ; 9  > 
-    au < exists ; 1996 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 10 ; 10  > 
-    au < exists ; 1997 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 11 ; 11  > 
-    au < exists ; 1998 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 12 ; 12  > 
-    au < exists ; 1999 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 13 ; 13  > 
-    au < exists ; 2000 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 14 ; 14  > 
-    au < exists ; 2001 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 15 ; 15  > 
-    au < exists ; 2002 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 16 ; 16  > 
-    au < exists ; 2003 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 17 ; 17  > 
-    au < exists ; 2004 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 18 ; 18  > 
-    au < exists ; 2005 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 19 ; 19  > 
-    au < exists ; 2006 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 20 ; 20  > 
-    au < exists ; 2007 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 21 ; 21  > 
-    au < exists ; 2008 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 22 ; 22  > 
-    au < exists ; 2009 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 23 ; 23  > 
-    au < exists ; 2010 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 24 ; 24  > 
-    au < exists ; 2011 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 25 ; 25  > 
+    au < doNotProcess ; 1987 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 1 ; 1  > 
+    au < doNotProcess ; 1988 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 2 ; 2  > 
+    au < doNotProcess ; 1989 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 3 ; 3  > 
+    au < doNotProcess ; 1990 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 4 ; 4  > 
+    au < doNotProcess ; 1991 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 5 ; 5  > 
+    au < doNotProcess ; 1992 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 6 ; 6  > 
+    au < doNotProcess ; 1993 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 7 ; 7  > 
+    au < doNotProcess ; 1994 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 8 ; 8  > 
+    au < doNotProcess ; 1995 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 9 ; 9  > 
+    au < doNotProcess ; 1996 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 10 ; 10  > 
+    au < doNotProcess ; 1997 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 11 ; 11  > 
+    au < doNotProcess ; 1998 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 12 ; 12  > 
+    au < doNotProcess ; 1999 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 13 ; 13  > 
+    au < doNotProcess ; 2000 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 14 ; 14  > 
+    au < doNotProcess ; 2001 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 15 ; 15  > 
+    au < doNotProcess ; 2002 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 16 ; 16  > 
+    au < doNotProcess ; 2003 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 17 ; 17  > 
+    au < doNotProcess ; 2004 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 18 ; 18  > 
+    au < doNotProcess ; 2005 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 19 ; 19  > 
+    au < doNotProcess ; 2006 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 20 ; 20  > 
+    au < doNotProcess ; 2007 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 21 ; 21  > 
+    au < doNotProcess ; 2008 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 22 ; 22  > 
+    au < doNotProcess ; 2009 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 23 ; 23  > 
+    au < doNotProcess ; 2010 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 24 ; 24  > 
+    au < doNotProcess ; 2011 ; Journal of Cognitive Psychotherapy: An International Quarterly Volume 25 ; 25  > 
 
   }
 
@@ -429,11 +426,11 @@
     param[journal_issn] = 1933-3196
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2007 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 1 ; 1  > 
-    au < exists ; 2008 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 2 ; 2  > 
-    au < exists ; 2009 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 3 ; 3  > 
-    au < exists ; 2010 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 4 ; 4  > 
-    au < exists ; 2011 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 5 ; 5  > 
+    au < doNotProcess ; 2007 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 1 ; 1  > 
+    au < doNotProcess ; 2008 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 2 ; 2  > 
+    au < doNotProcess ; 2009 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 3 ; 3  > 
+    au < doNotProcess ; 2010 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 4 ; 4  > 
+    au < doNotProcess ; 2011 ; Journal of EMDR Practice and Research: The Official Publication of the EMDR International Association Volume 5 ; 5  > 
 
   }
 
@@ -455,20 +452,20 @@
     param[journal_issn] = 1073-7472
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1993 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 1 ; 1  > 
-    au < exists ; 1995 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 2 ; 2  > 
-    au < exists ; 1996 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 3 ; 3  > 
-    au < exists ; 1997 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 4 ; 4  > 
-    au < exists ; 1998 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 5 ; 5  > 
-    au < exists ; 1999-2000 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 6 ; 6  > 
-    au < exists ; 2000-2001 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 7 ; 7  > 
-    au < exists ; 2001-2002 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 8 ; 8  > 
-    au < exists ; 2003-2004 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 9 ; 9  > 
-    au < exists ; 2005 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 10 ; 10  > 
-    au < exists ; 2007 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 11 ; 11  > 
-    au < exists ; 2008 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 12 ; 12  > 
-    au < exists ; 2009 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 13 ; 13  > 
-    au < exists ; 2011 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 14 ; 14  > 
+    au < doNotProcess ; 1993 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 1 ; 1  > 
+    au < doNotProcess ; 1995 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 2 ; 2  > 
+    au < doNotProcess ; 1996 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 3 ; 3  > 
+    au < doNotProcess ; 1997 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 4 ; 4  > 
+    au < doNotProcess ; 1998 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 5 ; 5  > 
+    au < doNotProcess ; 1999-2000 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 6 ; 6  > 
+    au < doNotProcess ; 2000-2001 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 7 ; 7  > 
+    au < doNotProcess ; 2001-2002 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 8 ; 8  > 
+    au < doNotProcess ; 2003-2004 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 9 ; 9  > 
+    au < doNotProcess ; 2005 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 10 ; 10  > 
+    au < doNotProcess ; 2007 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 11 ; 11  > 
+    au < doNotProcess ; 2008 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 12 ; 12  > 
+    au < doNotProcess ; 2009 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 13 ; 13  > 
+    au < doNotProcess ; 2011 ; Journal of Nursing Law: The Official Journal of The American Association of Nurse Attorneys (TAANA) Volume 14 ; 14  > 
 
   }
 
@@ -490,25 +487,25 @@
     param[journal_issn] = 1061-3749
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1993 ; Journal of Nursing Measurement Volume 1 ; 1  > 
-    au < exists ; 1994 ; Journal of Nursing Measurement Volume 2 ; 2  > 
-    au < exists ; 1995 ; Journal of Nursing Measurement Volume 3 ; 3  > 
-    au < exists ; 1996 ; Journal of Nursing Measurement Volume 4 ; 4  > 
-    au < exists ; 1997 ; Journal of Nursing Measurement Volume 5 ; 5  > 
-    au < exists ; 1998 ; Journal of Nursing Measurement Volume 6 ; 6  > 
-    au < exists ; 1999 ; Journal of Nursing Measurement Volume 7 ; 7  > 
-    au < exists ; 2000 ; Journal of Nursing Measurement Volume 8 ; 8  > 
-    au < exists ; 2001 ; Journal of Nursing Measurement Volume 9 ; 9  > 
-    au < exists ; 2002 ; Journal of Nursing Measurement Volume 10 ; 10  > 
-    au < exists ; 2003 ; Journal of Nursing Measurement Volume 11 ; 11  > 
-    au < exists ; 2004 ; Journal of Nursing Measurement Volume 12 ; 12  > 
-    au < exists ; 2005 ; Journal of Nursing Measurement Volume 13 ; 13  > 
-    au < exists ; 2006 ; Journal of Nursing Measurement Volume 14 ; 14  > 
-    au < exists ; 2007 ; Journal of Nursing Measurement Volume 15 ; 15  > 
-    au < exists ; 2008 ; Journal of Nursing Measurement Volume 16 ; 16  > 
-    au < exists ; 2009 ; Journal of Nursing Measurement Volume 17 ; 17  > 
-    au < exists ; 2010 ; Journal of Nursing Measurement Volume 18 ; 18  > 
-    au < exists ; 2011 ; Journal of Nursing Measurement Volume 19 ; 19  > 
+    au < doNotProcess ; 1993 ; Journal of Nursing Measurement Volume 1 ; 1  > 
+    au < doNotProcess ; 1994 ; Journal of Nursing Measurement Volume 2 ; 2  > 
+    au < doNotProcess ; 1995 ; Journal of Nursing Measurement Volume 3 ; 3  > 
+    au < doNotProcess ; 1996 ; Journal of Nursing Measurement Volume 4 ; 4  > 
+    au < doNotProcess ; 1997 ; Journal of Nursing Measurement Volume 5 ; 5  > 
+    au < doNotProcess ; 1998 ; Journal of Nursing Measurement Volume 6 ; 6  > 
+    au < doNotProcess ; 1999 ; Journal of Nursing Measurement Volume 7 ; 7  > 
+    au < doNotProcess ; 2000 ; Journal of Nursing Measurement Volume 8 ; 8  > 
+    au < doNotProcess ; 2001 ; Journal of Nursing Measurement Volume 9 ; 9  > 
+    au < doNotProcess ; 2002 ; Journal of Nursing Measurement Volume 10 ; 10  > 
+    au < doNotProcess ; 2003 ; Journal of Nursing Measurement Volume 11 ; 11  > 
+    au < doNotProcess ; 2004 ; Journal of Nursing Measurement Volume 12 ; 12  > 
+    au < doNotProcess ; 2005 ; Journal of Nursing Measurement Volume 13 ; 13  > 
+    au < doNotProcess ; 2006 ; Journal of Nursing Measurement Volume 14 ; 14  > 
+    au < doNotProcess ; 2007 ; Journal of Nursing Measurement Volume 15 ; 15  > 
+    au < doNotProcess ; 2008 ; Journal of Nursing Measurement Volume 16 ; 16  > 
+    au < doNotProcess ; 2009 ; Journal of Nursing Measurement Volume 17 ; 17  > 
+    au < doNotProcess ; 2010 ; Journal of Nursing Measurement Volume 18 ; 18  > 
+    au < doNotProcess ; 2011 ; Journal of Nursing Measurement Volume 19 ; 19  > 
 
   }
 
@@ -530,20 +527,20 @@
     param[journal_issn] = 1058-1243
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1998 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 7 ; 7  > 
-    au < exists ; 1999 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 8 ; 8  > 
-    au < exists ; 2000 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 9 ; 9  > 
-    au < exists ; 2001 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 10 ; 10  > 
-    au < exists ; 2002 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 11 ; 11  > 
-    au < exists ; 2003 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 12 ; 12  > 
-    au < exists ; 2004 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 13 ; 13  > 
-    au < exists ; 2005 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 14 ; 14  > 
-    au < exists ; 2006 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 15 ; 15  > 
-    au < exists ; 2007 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 16 ; 16  > 
-    au < exists ; 2008 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 17 ; 17  > 
-    au < exists ; 2009 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 18 ; 18  > 
-    au < exists ; 2010 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 19 ; 19  > 
-    au < exists ; 2011 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 20 ; 20  > 
+    au < doNotProcess ; 1998 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 7 ; 7  > 
+    au < doNotProcess ; 1999 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 8 ; 8  > 
+    au < doNotProcess ; 2000 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 9 ; 9  > 
+    au < doNotProcess ; 2001 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 10 ; 10  > 
+    au < doNotProcess ; 2002 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 11 ; 11  > 
+    au < doNotProcess ; 2003 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 12 ; 12  > 
+    au < doNotProcess ; 2004 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 13 ; 13  > 
+    au < doNotProcess ; 2005 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 14 ; 14  > 
+    au < doNotProcess ; 2006 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 15 ; 15  > 
+    au < doNotProcess ; 2007 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 16 ; 16  > 
+    au < doNotProcess ; 2008 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 17 ; 17  > 
+    au < doNotProcess ; 2009 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 18 ; 18  > 
+    au < doNotProcess ; 2010 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 19 ; 19  > 
+    au < doNotProcess ; 2011 ; The Journal of Perinatal Education The Official Journal of Lamaze® International Volume 20 ; 20  > 
 
   }
 
@@ -560,14 +557,14 @@
     param[base_url] = http://neonatalnetwork.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2004 ; Neonatal Network: The Journal of Neonatal Nursing Volume 23 ; 23  > 
-    au < exists ; 2005 ; Neonatal Network: The Journal of Neonatal Nursing Volume 24 ; 24  > 
-    au < exists ; 2006 ; Neonatal Network: The Journal of Neonatal Nursing Volume 25 ; 25  > 
-    au < exists ; 2007 ; Neonatal Network: The Journal of Neonatal Nursing Volume 26 ; 26  > 
-    au < exists ; 2008 ; Neonatal Network: The Journal of Neonatal Nursing Volume 27 ; 27  > 
-    au < exists ; 2009 ; Neonatal Network: The Journal of Neonatal Nursing Volume 28 ; 28  > 
-    au < exists ; 2010 ; Neonatal Network: The Journal of Neonatal Nursing Volume 29 ; 29  > 
-    au < exists ; 2011 ; Neonatal Network: The Journal of Neonatal Nursing Volume 30 ; 30  > 
+    au < doNotProcess ; 2004 ; Neonatal Network: The Journal of Neonatal Nursing Volume 23 ; 23  > 
+    au < doNotProcess ; 2005 ; Neonatal Network: The Journal of Neonatal Nursing Volume 24 ; 24  > 
+    au < doNotProcess ; 2006 ; Neonatal Network: The Journal of Neonatal Nursing Volume 25 ; 25  > 
+    au < doNotProcess ; 2007 ; Neonatal Network: The Journal of Neonatal Nursing Volume 26 ; 26  > 
+    au < doNotProcess ; 2008 ; Neonatal Network: The Journal of Neonatal Nursing Volume 27 ; 27  > 
+    au < doNotProcess ; 2009 ; Neonatal Network: The Journal of Neonatal Nursing Volume 28 ; 28  > 
+    au < doNotProcess ; 2010 ; Neonatal Network: The Journal of Neonatal Nursing Volume 29 ; 29  > 
+    au < doNotProcess ; 2011 ; Neonatal Network: The Journal of Neonatal Nursing Volume 30 ; 30  > 
 
   }
 
@@ -589,25 +586,25 @@
     param[journal_issn] = 1062-8061
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1993 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 1 ; 1  > 
-    au < exists ; 1994 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 2 ; 2  > 
-    au < exists ; 1995 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 3 ; 3  > 
-    au < exists ; 1996 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 4 ; 4  > 
-    au < exists ; 1997 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 5 ; 5  > 
-    au < exists ; 1998 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 6 ; 6  > 
-    au < exists ; 1999 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 7 ; 7  > 
-    au < exists ; 2000 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 8 ; 8  > 
-    au < exists ; 2001 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 9 ; 9  > 
-    au < exists ; 2002 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 10 ; 10  > 
-    au < exists ; 2003 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 11 ; 11  > 
-    au < exists ; 2004 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 12 ; 12  > 
-    au < exists ; 2005 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 13 ; 13  > 
-    au < exists ; 2006 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 14 ; 14  > 
-    au < exists ; 2007 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 15 ; 15  > 
-    au < exists ; 2008 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 16 ; 16  > 
-    au < exists ; 2009 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 17 ; 17  > 
-    au < exists ; 2010 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 18 ; 18  > 
-    au < exists ; 2011 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 19 ; 19  > 
+    au < doNotProcess ; 1993 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 1 ; 1  > 
+    au < doNotProcess ; 1994 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 2 ; 2  > 
+    au < doNotProcess ; 1995 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 3 ; 3  > 
+    au < doNotProcess ; 1996 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 4 ; 4  > 
+    au < doNotProcess ; 1997 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 5 ; 5  > 
+    au < doNotProcess ; 1998 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 6 ; 6  > 
+    au < doNotProcess ; 1999 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 7 ; 7  > 
+    au < doNotProcess ; 2000 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 8 ; 8  > 
+    au < doNotProcess ; 2001 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 9 ; 9  > 
+    au < doNotProcess ; 2002 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 10 ; 10  > 
+    au < doNotProcess ; 2003 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 11 ; 11  > 
+    au < doNotProcess ; 2004 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 12 ; 12  > 
+    au < doNotProcess ; 2005 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 13 ; 13  > 
+    au < doNotProcess ; 2006 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 14 ; 14  > 
+    au < doNotProcess ; 2007 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 15 ; 15  > 
+    au < doNotProcess ; 2008 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 16 ; 16  > 
+    au < doNotProcess ; 2009 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 17 ; 17  > 
+    au < doNotProcess ; 2010 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 18 ; 18  > 
+    au < doNotProcess ; 2011 ; Nursing History Review: Official Publication of the American Association for the History of Nursing Volume 19 ; 19  > 
 
   }
 
@@ -629,8 +626,8 @@
     param[journal_issn] = 1946-6560
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2010 ; Partner Abuse: New Directions in Research, Intervention, and Policy Volume 1 ; 1  > 
-    au < exists ; 2011 ; Partner Abuse: New Directions in Research, Intervention, and Policy Volume 2 ; 2  > 
+    au < doNotProcess ; 2010 ; Partner Abuse: New Directions in Research, Intervention, and Policy Volume 1 ; 1  > 
+    au < doNotProcess ; 2011 ; Partner Abuse: New Directions in Research, Intervention, and Policy Volume 2 ; 2  > 
 
   }
 
@@ -652,31 +649,31 @@
     param[journal_issn] = 1541-6577
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1987 ; Research and Theory for Nursing Practice: An International Journal Volume 1 ; 1  > 
-    au < exists ; 1988 ; Research and Theory for Nursing Practice: An International Journal Volume 2 ; 2  > 
-    au < exists ; 1989 ; Research and Theory for Nursing Practice: An International Journal Volume 3 ; 3  > 
-    au < exists ; 1990 ; Research and Theory for Nursing Practice: An International Journal Volume 4 ; 4  > 
-    au < exists ; 1991 ; Research and Theory for Nursing Practice: An International Journal Volume 5 ; 5  > 
-    au < exists ; 1992 ; Research and Theory for Nursing Practice: An International Journal Volume 6 ; 6  > 
-    au < exists ; 1993 ; Research and Theory for Nursing Practice: An International Journal Volume 7 ; 7  > 
-    au < exists ; 1994 ; Research and Theory for Nursing Practice: An International Journal Volume 8 ; 8  > 
-    au < exists ; 1995 ; Research and Theory for Nursing Practice: An International Journal Volume 9 ; 9  > 
-    au < exists ; 1996 ; Research and Theory for Nursing Practice: An International Journal Volume 10 ; 10  > 
-    au < exists ; 1997 ; Research and Theory for Nursing Practice: An International Journal Volume 11 ; 11  > 
-    au < exists ; 1998 ; Research and Theory for Nursing Practice: An International Journal Volume 12 ; 12  > 
-    au < exists ; 1999 ; Research and Theory for Nursing Practice: An International Journal Volume 13 ; 13  > 
-    au < exists ; 2000 ; Research and Theory for Nursing Practice: An International Journal Volume 14 ; 14  > 
-    au < exists ; 2001 ; Research and Theory for Nursing Practice: An International Journal Volume 15 ; 15  > 
-    au < exists ; 2002 ; Research and Theory for Nursing Practice: An International Journal Volume 16 ; 16  > 
-    au < exists ; 2003 ; Research and Theory for Nursing Practice: An International Journal Volume 17 ; 17  > 
-    au < exists ; 2004 ; Research and Theory for Nursing Practice: An International Journal Volume 18 ; 18  > 
-    au < exists ; 2005 ; Research and Theory for Nursing Practice: An International Journal Volume 19 ; 19  > 
-    au < exists ; 2006 ; Research and Theory for Nursing Practice: An International Journal Volume 20 ; 20  > 
-    au < exists ; 2007 ; Research and Theory for Nursing Practice: An International Journal Volume 21 ; 21  > 
-    au < exists ; 2008 ; Research and Theory for Nursing Practice: An International Journal Volume 22 ; 22  > 
-    au < exists ; 2009 ; Research and Theory for Nursing Practice: An International Journal Volume 23 ; 23  > 
-    au < exists ; 2010 ; Research and Theory for Nursing Practice: An International Journal Volume 24 ; 24  > 
-    au < exists ; 2011 ; Research and Theory for Nursing Practice: An International Journal Volume 25 ; 25  > 
+    au < doNotProcess ; 1987 ; Research and Theory for Nursing Practice: An International Journal Volume 1 ; 1  > 
+    au < doNotProcess ; 1988 ; Research and Theory for Nursing Practice: An International Journal Volume 2 ; 2  > 
+    au < doNotProcess ; 1989 ; Research and Theory for Nursing Practice: An International Journal Volume 3 ; 3  > 
+    au < doNotProcess ; 1990 ; Research and Theory for Nursing Practice: An International Journal Volume 4 ; 4  > 
+    au < doNotProcess ; 1991 ; Research and Theory for Nursing Practice: An International Journal Volume 5 ; 5  > 
+    au < doNotProcess ; 1992 ; Research and Theory for Nursing Practice: An International Journal Volume 6 ; 6  > 
+    au < doNotProcess ; 1993 ; Research and Theory for Nursing Practice: An International Journal Volume 7 ; 7  > 
+    au < doNotProcess ; 1994 ; Research and Theory for Nursing Practice: An International Journal Volume 8 ; 8  > 
+    au < doNotProcess ; 1995 ; Research and Theory for Nursing Practice: An International Journal Volume 9 ; 9  > 
+    au < doNotProcess ; 1996 ; Research and Theory for Nursing Practice: An International Journal Volume 10 ; 10  > 
+    au < doNotProcess ; 1997 ; Research and Theory for Nursing Practice: An International Journal Volume 11 ; 11  > 
+    au < doNotProcess ; 1998 ; Research and Theory for Nursing Practice: An International Journal Volume 12 ; 12  > 
+    au < doNotProcess ; 1999 ; Research and Theory for Nursing Practice: An International Journal Volume 13 ; 13  > 
+    au < doNotProcess ; 2000 ; Research and Theory for Nursing Practice: An International Journal Volume 14 ; 14  > 
+    au < doNotProcess ; 2001 ; Research and Theory for Nursing Practice: An International Journal Volume 15 ; 15  > 
+    au < doNotProcess ; 2002 ; Research and Theory for Nursing Practice: An International Journal Volume 16 ; 16  > 
+    au < doNotProcess ; 2003 ; Research and Theory for Nursing Practice: An International Journal Volume 17 ; 17  > 
+    au < doNotProcess ; 2004 ; Research and Theory for Nursing Practice: An International Journal Volume 18 ; 18  > 
+    au < doNotProcess ; 2005 ; Research and Theory for Nursing Practice: An International Journal Volume 19 ; 19  > 
+    au < doNotProcess ; 2006 ; Research and Theory for Nursing Practice: An International Journal Volume 20 ; 20  > 
+    au < doNotProcess ; 2007 ; Research and Theory for Nursing Practice: An International Journal Volume 21 ; 21  > 
+    au < doNotProcess ; 2008 ; Research and Theory for Nursing Practice: An International Journal Volume 22 ; 22  > 
+    au < doNotProcess ; 2009 ; Research and Theory for Nursing Practice: An International Journal Volume 23 ; 23  > 
+    au < doNotProcess ; 2010 ; Research and Theory for Nursing Practice: An International Journal Volume 24 ; 24  > 
+    au < doNotProcess ; 2011 ; Research and Theory for Nursing Practice: An International Journal Volume 25 ; 25  > 
 
   }
 
@@ -698,32 +695,32 @@
     param[journal_issn] = 0886-6708
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 1986 ; Violence and Victims Volume 1 ; 1  > 
-    au < exists ; 1987 ; Violence and Victims Volume 2 ; 2  > 
-    au < exists ; 1988 ; Violence and Victims Volume 3 ; 3  > 
-    au < exists ; 1989 ; Violence and Victims Volume 4 ; 4  > 
-    au < exists ; 1990 ; Violence and Victims Volume 5 ; 5  > 
-    au < exists ; 1991 ; Violence and Victims Volume 6 ; 6  > 
-    au < exists ; 1992 ; Violence and Victims Volume 7 ; 7  > 
-    au < exists ; 1993 ; Violence and Victims Volume 8 ; 8  > 
-    au < exists ; 1994 ; Violence and Victims Volume 9 ; 9  > 
-    au < exists ; 1995 ; Violence and Victims Volume 10 ; 10  > 
-    au < exists ; 1996 ; Violence and Victims Volume 11 ; 11  > 
-    au < exists ; 1997 ; Violence and Victims Volume 12 ; 12  > 
-    au < exists ; 1998 ; Violence and Victims Volume 13 ; 13  > 
-    au < exists ; 1999 ; Violence and Victims Volume 14 ; 14  > 
-    au < exists ; 2000 ; Violence and Victims Volume 15 ; 15  > 
-    au < exists ; 2001 ; Violence and Victims Volume 16 ; 16  > 
-    au < exists ; 2002 ; Violence and Victims Volume 17 ; 17  > 
-    au < exists ; 2003 ; Violence and Victims Volume 18 ; 18  > 
-    au < exists ; 2004 ; Violence and Victims Volume 19 ; 19  > 
-    au < exists ; 2005 ; Violence and Victims Volume 20 ; 20  > 
-    au < exists ; 2006 ; Violence and Victims Volume 21 ; 21  > 
-    au < exists ; 2007 ; Violence and Victims Volume 22 ; 22  > 
-    au < exists ; 2008 ; Violence and Victims Volume 23 ; 23  > 
-    au < exists ; 2009 ; Violence and Victims Volume 24 ; 24  > 
-    au < exists ; 2010 ; Violence and Victims Volume 25 ; 25  > 
-    au < exists ; 2011 ; Violence and Victims Volume 26 ; 26  > 
+    au < doNotProcess ; 1986 ; Violence and Victims Volume 1 ; 1  > 
+    au < doNotProcess ; 1987 ; Violence and Victims Volume 2 ; 2  > 
+    au < doNotProcess ; 1988 ; Violence and Victims Volume 3 ; 3  > 
+    au < doNotProcess ; 1989 ; Violence and Victims Volume 4 ; 4  > 
+    au < doNotProcess ; 1990 ; Violence and Victims Volume 5 ; 5  > 
+    au < doNotProcess ; 1991 ; Violence and Victims Volume 6 ; 6  > 
+    au < doNotProcess ; 1992 ; Violence and Victims Volume 7 ; 7  > 
+    au < doNotProcess ; 1993 ; Violence and Victims Volume 8 ; 8  > 
+    au < doNotProcess ; 1994 ; Violence and Victims Volume 9 ; 9  > 
+    au < doNotProcess ; 1995 ; Violence and Victims Volume 10 ; 10  > 
+    au < doNotProcess ; 1996 ; Violence and Victims Volume 11 ; 11  > 
+    au < doNotProcess ; 1997 ; Violence and Victims Volume 12 ; 12  > 
+    au < doNotProcess ; 1998 ; Violence and Victims Volume 13 ; 13  > 
+    au < doNotProcess ; 1999 ; Violence and Victims Volume 14 ; 14  > 
+    au < doNotProcess ; 2000 ; Violence and Victims Volume 15 ; 15  > 
+    au < doNotProcess ; 2001 ; Violence and Victims Volume 16 ; 16  > 
+    au < doNotProcess ; 2002 ; Violence and Victims Volume 17 ; 17  > 
+    au < doNotProcess ; 2003 ; Violence and Victims Volume 18 ; 18  > 
+    au < doNotProcess ; 2004 ; Violence and Victims Volume 19 ; 19  > 
+    au < doNotProcess ; 2005 ; Violence and Victims Volume 20 ; 20  > 
+    au < doNotProcess ; 2006 ; Violence and Victims Volume 21 ; 21  > 
+    au < doNotProcess ; 2007 ; Violence and Victims Volume 22 ; 22  > 
+    au < doNotProcess ; 2008 ; Violence and Victims Volume 23 ; 23  > 
+    au < doNotProcess ; 2009 ; Violence and Victims Volume 24 ; 24  > 
+    au < doNotProcess ; 2010 ; Violence and Victims Volume 25 ; 25  > 
+    au < doNotProcess ; 2011 ; Violence and Victims Volume 26 ; 26  > 
 
   }
 
