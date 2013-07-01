@@ -14,7 +14,7 @@
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://www.ptjournal.org/
+    param[base_url] = http://www.ptjournal.apta.org/
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 1980 ; Physical Therapy Volume 60 ; 60 >
