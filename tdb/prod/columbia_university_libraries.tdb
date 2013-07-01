@@ -28,11 +28,13 @@
     {
     
       param[base_url] = http://cusj.columbia.edu/cusj/ 
+      
+      comment[doNotProcess] = PDFs have many errors. No response from publisher. Defer processing.
   
-      au < exists ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 1 ; 2006 >
-      au < exists ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2 ; 2007 >
-      au < exists ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 3 ; 2008 >
-      au < exists ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 4 ; 2009 >
+      au < doNotProcess ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 1 ; 2006 >
+      au < doNotProcess ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2 ; 2007 >
+      au < doNotProcess ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 3 ; 2008 >
+      au < doNotProcess ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 4 ; 2009 >
       
     }
   
