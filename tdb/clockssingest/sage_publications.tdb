@@ -15917,7 +15917,7 @@
       au < released ; crawling ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
       au < released ; crawling ; 2011-2012 ; Journal of Biomaterials Applications Volume 26 ; 26 ; >
       au < released ; crawling ; 2012-2013 ; Journal of Biomaterials Applications Volume 27 ; 27 ; >
-      au < expected ; exists ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 ; >
+      au < manifest ; exists ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 ; >
 
     }
 
@@ -19877,7 +19877,7 @@
       au < zapped ; down ; 2010-2011 ; Journal of Industrial Textiles Volume 40 ; 40 ; >
       au < released ; crawling ; 2011-2012 ; Journal of Industrial Textiles Volume 41 ; 41 ; >
       au < released ; crawling ; 2012-2013 ; Journal of Industrial Textiles Volume 42 ; 42 ; >
-      au < expected ; exists ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2013-2014 ; Journal of Industrial Textiles Volume 43 ; 43 ; >
 
     }
 
@@ -28430,7 +28430,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://hcs.sagepub.com/
 
-        au < expected ; exists ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 ; >
 
     }
 
