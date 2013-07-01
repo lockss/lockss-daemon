@@ -18,7 +18,6 @@
     >
 
     param[base_url] = http://dmd.aspetjournals.org/
-    comment[notReady] = low agreement 0%, re-test later
 
     au < HighWirePressH20Plugin ; released ; 1973 ; Drug Metabolism and Disposition Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1974 ; Drug Metabolism and Disposition Volume 2 ; 2 >
@@ -28,7 +27,7 @@
     au < HighWirePressH20Plugin ; released ; 1978 ; Drug Metabolism and Disposition Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 1979 ; Drug Metabolism and Disposition Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 1980 ; Drug Metabolism and Disposition Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; notReady ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; 1981 ; Drug Metabolism and Disposition Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; released ; 1982 ; Drug Metabolism and Disposition Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 1983 ; Drug Metabolism and Disposition Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; released ; 1984 ; Drug Metabolism and Disposition Volume 12 ; 12 >
@@ -74,7 +73,6 @@
     >
 
     param[base_url] = http://jpet.aspetjournals.org/
-    comment[notReady] = low agreement 0%, re-test later
 
     au < HighWirePressH20Plugin ; released ; 1909-1910 ; Journal of Pharmacology and Experimental Therapeutics Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1910-1911 ; Journal of Pharmacology and Experimental Therapeutics Volume 2 ; 2 >
@@ -581,7 +579,6 @@
     >
 
     param[base_url] = http://pharmrev.aspetjournals.org/
-    comment[notReady] = RU4536, filter for ad banner of mobile device
 
     au < HighWirePressH20Plugin ; released ; 1949 ; Pharmacological Reviews Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; released ; 1950 ; Pharmacological Reviews Volume 2 ; 2 >
