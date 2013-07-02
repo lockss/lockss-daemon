@@ -6,7 +6,7 @@
   >
   
   plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  param[base_url] = http://rmg.geoscienceworld.org
+  param[base_url] = http://rmg.geoscienceworld.org/
   implicit < status ; year ; name ; param[volume_name] >
   
 
