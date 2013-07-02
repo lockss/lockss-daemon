@@ -23054,6 +23054,25 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
     }
 
     {
+  
+        title <
+          name = Journal of Land and Rural Studies ;
+          issn = 2321-0249 
+      >
+  
+      {
+  
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://lrs.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+  
+        au < exists ; 2013 ; Journal of Laboratory Automation Volume 1 ; 1 >
+  
+      }
+  
+    }
+
+    {
 
       title <
         name = Journal of Language and Social Psychology ;
@@ -28724,6 +28743,26 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Men and Masculinities Volume 14 ; 14 >
         au < released ; 2012 ; Men and Masculinities Volume 15 ; 15 >
         au < manifest ; 2013 ; Men and Masculinities Volume 16 ; 16 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Millennial Asia ;
+        issn = 0305-8298 ;
+        eissn = 1477-9021 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mla.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2013 ; Millennium - Journal of International Studies Volume 4 ; 4 >
 
       }
 
@@ -36484,6 +36523,26 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Studies in History Volume 27 ; 27 >
         au < manifest ; 2012 ; Studies in History Volume 28 ; 28 >
         au < expected ; 2013 ; Studies in History Volume 29 ; 29 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Studies in Indian Politics ;
+        issn = 2321-0230 ;
+        issnl = 2321-0230
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://inp.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 >
 
       }
 
