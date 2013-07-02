@@ -21,13 +21,13 @@
 
     au < notReady ; 2000 ; 1 ; Educação Volume 1 ; 2000 >
     au < released ; 2001 ; 2 ; Educação Volume 2 ; 2001 >
-    au < releasing ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
+    au < released ; 2002 ; 3 ; Educação Volume 3 ; 2002 >
     au < released ; 2003 ; 4 ; Educação Volume 4 ; 2003 >
-    au < releasing ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
+    au < released ; 2004 ; 5 ; Educação Volume 5 ; 2004 >
     au < released ; 2005 ; 6 ; Educação Volume 6 ; 2005 >
-    au < releasing ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
-    au < releasing ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
-    au < releasing ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
+    au < released ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
+    au < released ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
+    au < released ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
     au < notReady ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
     au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
     au < notReady ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
@@ -81,7 +81,7 @@
 
     param[journal_id] = remoa
 
-    au < releasing ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 >
+    au < released ; 2010 ; 1 ; Revista Monografias Ambientais Volume 1 ; 2010 >
     au < notReady ; 2011 ; 2-4 ; Revista Monografias Ambientais Volume 2-4 ; 2011 >
     au < notReady ; 2012 ; 5-10 ; Revista Monografias Ambientais Volume 5-10 ; 2012 >
     au < manifest ; 2013 ; 11 ; Revista Monografias Ambientais Volume 11 ; 2013 >
@@ -96,7 +96,7 @@
 
     param[journal_id] = REDESG
 
-    au < releasing ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 >
+    au < released ; 2012 ; 1 ; Revista Direitos Emergentes na Sociedade Global Volume 1 ; 2012 >
     au < expected ; 2013 ; 2 ; Revista Direitos Emergentes na Sociedade Global Volume 2 ; 2013 >
 
   }
@@ -111,28 +111,28 @@
 
     param[journal_id] = cienciaflorestal
 
-    au < releasing ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 >
-    au < releasing ; 1992 ; 2 ; Ciência Florestal Volume 2 ; 1992 >
-    au < releasing ; 1993 ; 3 ; Ciência Florestal Volume 3 ; 1993 >
-    au < releasing ; 1994 ; 4 ; Ciência Florestal Volume 4 ; 1994 >
-    au < releasing ; 1995 ; 5 ; Ciência Florestal Volume 5 ; 1995 >
-    au < releasing ; 1996 ; 6 ; Ciência Florestal Volume 6 ; 1996 >
-    au < releasing ; 1997 ; 7 ; Ciência Florestal Volume 7 ; 1997 >
-    au < releasing ; 1998 ; 8 ; Ciência Florestal Volume 8 ; 1998 >
-    au < releasing ; 1999 ; 9 ; Ciência Florestal Volume 9 ; 1999 >
-    au < releasing ; 2000 ; 10 ; Ciência Florestal Volume 10 ; 2000 >
-    au < releasing ; 2001 ; 11 ; Ciência Florestal Volume 11 ; 2001 >
-    au < releasing ; 2002 ; 12 ; Ciência Florestal Volume 12 ; 2002 >
-    au < releasing ; 2003 ; 13 ; Ciência Florestal Volume 13 ; 2003 >
-    au < releasing ; 2004 ; 14 ; Ciência Florestal Volume 14 ; 2004 >
-    au < releasing ; 2005 ; 15 ; Ciência Florestal Volume 15 ; 2005 >
-    au < releasing ; 2006 ; 16 ; Ciência Florestal Volume 16 ; 2006 >
-    au < releasing ; 2007 ; 17 ; Ciência Florestal Volume 17 ; 2007 >
-    au < releasing ; 2008 ; 18 ; Ciência Florestal Volume 18 ; 2008 >
-    au < releasing ; 2009 ; 19 ; Ciência Florestal Volume 19 ; 2009 >
-    au < releasing ; 2010 ; 20 ; Ciência Florestal Volume 20 ; 2010 >
-    au < releasing ; 2011 ; 21 ; Ciência Florestal Volume 21 ; 2011 >
-    au < releasing ; 2012 ; 22 ; Ciência Florestal Volume 22 ; 2012 >
+    au < released ; 1991 ; 1 ; Ciência Florestal Volume 1 ; 1991 >
+    au < released ; 1992 ; 2 ; Ciência Florestal Volume 2 ; 1992 >
+    au < released ; 1993 ; 3 ; Ciência Florestal Volume 3 ; 1993 >
+    au < released ; 1994 ; 4 ; Ciência Florestal Volume 4 ; 1994 >
+    au < released ; 1995 ; 5 ; Ciência Florestal Volume 5 ; 1995 >
+    au < released ; 1996 ; 6 ; Ciência Florestal Volume 6 ; 1996 >
+    au < released ; 1997 ; 7 ; Ciência Florestal Volume 7 ; 1997 >
+    au < released ; 1998 ; 8 ; Ciência Florestal Volume 8 ; 1998 >
+    au < released ; 1999 ; 9 ; Ciência Florestal Volume 9 ; 1999 >
+    au < released ; 2000 ; 10 ; Ciência Florestal Volume 10 ; 2000 >
+    au < released ; 2001 ; 11 ; Ciência Florestal Volume 11 ; 2001 >
+    au < released ; 2002 ; 12 ; Ciência Florestal Volume 12 ; 2002 >
+    au < released ; 2003 ; 13 ; Ciência Florestal Volume 13 ; 2003 >
+    au < released ; 2004 ; 14 ; Ciência Florestal Volume 14 ; 2004 >
+    au < released ; 2005 ; 15 ; Ciência Florestal Volume 15 ; 2005 >
+    au < released ; 2006 ; 16 ; Ciência Florestal Volume 16 ; 2006 >
+    au < released ; 2007 ; 17 ; Ciência Florestal Volume 17 ; 2007 >
+    au < released ; 2008 ; 18 ; Ciência Florestal Volume 18 ; 2008 >
+    au < released ; 2009 ; 19 ; Ciência Florestal Volume 19 ; 2009 >
+    au < released ; 2010 ; 20 ; Ciência Florestal Volume 20 ; 2010 >
+    au < released ; 2011 ; 21 ; Ciência Florestal Volume 21 ; 2011 >
+    au < released ; 2012 ; 22 ; Ciência Florestal Volume 22 ; 2012 >
     au < manifest ; 2013 ; 23 ; Ciência Florestal Volume 23 ; 2013 >
     
   }
@@ -146,8 +146,8 @@
 
     param[journal_id] = reget
 
-    au < releasing ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 >
-    au < releasing ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 >
+    au < released ; 2011 ; 2-4 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 2-4 ; 2011 >
+    au < released ; 2012 ; 5-8 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 5-8 ; 2012 >
     au < manifest ; 2013 ; 9-11 ; Revista Eletrônica em Gestão, Educação e Tecnologia Ambiental Volume 9-11 ; 2013 >
 
   }
@@ -161,16 +161,16 @@
 
     param[journal_id] = educacaoespecial
 
-    au < releasing ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 >
-    au < releasing ; 2001 ; 14 ; Revista Educação Especial Volume 14 ; 2001 >
-    au < releasing ; 2002 ; 15 ; Revista Educação Especial Volume 15 ; 2002 >
-    au < releasing ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 >
-    au < releasing ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 >
-    au < releasing ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 >
+    au < released ; 2000 ; 13 ; Revista Educação Especial Volume 13 ; 2000 >
+    au < released ; 2001 ; 14 ; Revista Educação Especial Volume 14 ; 2001 >
+    au < released ; 2002 ; 15 ; Revista Educação Especial Volume 15 ; 2002 >
+    au < released ; 2003 ; 16 ; Revista Educação Especial Volume 16 ; 2003 >
+    au < released ; 2004 ; 17 ; Revista Educação Especial Volume 17 ; 2004 >
+    au < released ; 2005 ; 18 ; Revista Educação Especial Volume 18 ; 2005 >
     au < notReady ; 2006 ; 19 ; Revista Educação Especial Volume 19 ; 2006 >
-    au < releasing ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 >
-    au < releasing ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 >
-    au < releasing ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 >
+    au < released ; 2007 ; 20 ; Revista Educação Especial Volume 20 ; 2007 >
+    au < released ; 2008 ; 21 ; Revista Educação Especial Volume 21 ; 2008 >
+    au < released ; 2009 ; 22 ; Revista Educação Especial Volume 22 ; 2009 >
     au < notReady ; 2010 ; 23 ; Revista Educação Especial Volume 23 ; 2010 >
     au < notReady ; 2011 ; 24 ; Revista Educação Especial Volume 24 ; 2011 >
     au < notReady ; 2012 ; 25 ; Revista Educação Especial Volume 25 ; 2012 >
@@ -191,7 +191,7 @@
     au < testing ; 2009 ; 2 ; Revista Digital do LAV Volume 2 ; 2 >
     au < testing ; 2010 ; 3 ; Revista Digital do LAV Volume 3 ; 3 >
     au < testing ; 2011 ; 4 ; Revista Digital do LAV Volume 4 ; 4 >
-    au < releasing ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
+    au < released ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 >
 
   }
@@ -206,8 +206,8 @@
 
     param[journal_id] = geografia
 
-    au < releasing ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
-    au < releasing ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 >
+    au < released ; 2011 ; 15 ; Geografia Ensino & Pesquisa Volume 15 ; 2011 >
+    au < released ; 2012 ; 16 ; Geografia Ensino & Pesquisa Volume 16 ; 2012 >
     au < expected ; 2013 ; 17 ; Geografia Ensino & Pesquisa Volume 17 ; 2013 >
 
   }
