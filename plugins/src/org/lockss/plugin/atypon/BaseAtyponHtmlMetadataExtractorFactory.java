@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.2 2013-06-04 17:47:12 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.3 2013-07-02 17:16:47 aishizaki Exp $
  */
 
 /*
@@ -130,9 +130,18 @@ public class BaseAtyponHtmlMetadataExtractorFactory
           // Last chance, we can try to get the publishing platform off the plugin
           Plugin pg = cu.getArchivalUnit().getPlugin();
           publisher = (pg == null) ? null : pg.getPublishingPlatform();
-          }
+         }
         if (publisher != null) {
           am.put(MetadataField.FIELD_PUBLISHER, publisher);
+        }
+      }
+      // if the journal title does not appear in the meta tags, then can set if
+      // from the tdb - cannot set it from the plugin, so no last chance for the journal title
+      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null) {
+        TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+        String journal_title = (tdbau == null) ? null : tdbau.getJournalTitle();
+        if (journal_title != null) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, journal_title);
         }
       }
  
