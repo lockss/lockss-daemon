@@ -1,0 +1,586 @@
+{
+
+  publisher <
+    name = OMICS Group ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin
+
+  {
+    title <
+      name = Journal of AIDS & Clinical Research ;
+      issn = 2155-6113
+
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jarhome.php
+    param[journal_issn] = 2155-6113
+    param[journal_id] = jar
+
+
+
+  }
+
+  {
+    title <
+      name = Journal of Anesthesia & Clinical Research ;
+      issn = 2155-6148
+
+    >
+
+    param[base_url] = http://www.omicsonline.org/jacrhome.php
+    param[journal_issn] = 2155-6148
+    para[journal_id] = jacr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Cancer Science & Therapy ;
+      issn = 1948-5956
+
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcsthome.php
+    param[journal_issn] = 1948-5956
+    para[journal_id] = jcst
+
+
+  }
+
+  {
+    title <
+      name = Journal of Carcinogenesis & Mutagenesis ;
+      issn = 2157-2518
+
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcmhome.php
+    param[journal_issn] = 2157-2518
+    para[journal_id] = jcm
+
+
+  }
+
+  {
+    title <
+      name = Journal of Cell Science & Therapy ;
+      issn = 2157-7013
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcesthome.php
+    param[journal_issn] = 2157-7013
+    para[journal_id] = jcest
+
+
+  }
+
+  {
+    title <
+      name = Chemotherapy: Open Access ;
+      issn = 2167-7700
+    >
+
+    param[base_url] = http://www.omicsgroup.org/journals/cmthome.php
+    param[journal_issn] = 2167-7700
+    para[journal_id] = cmt
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical & Cellular Immunology ;
+      issn = 2155-9899
+    >
+
+    param[base_url] = http://www.omicsonline.org/jccihome.php
+    param[journal_issn] = 2155-9899
+    para[journal_id] = jcci
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical & Experimental Cardiology ;
+      issn = 2155-9880
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcechome.php
+    param[journal_issn] = 2155-9880
+    para[journal_id] = jcec
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical & Experimental Dermatology Research ;
+      issn = 2155-9554
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcedrhome.php
+    param[journal_issn] = 2155-9554
+    para[journal_id] = jcedr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical & Experimental Ophthalmology ;
+      issn = 2155-9570
+    >
+
+    param[base_url] = http://www.omicsonline.org/jceohome.php
+    param[journal_issn] = 2155-9570
+    para[journal_id] = jceo
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical & Experimental Pathology ;
+      issn = 2161-0681
+    >
+
+    param[base_url] = http://www.omicsonline.org/jcephome.php
+    param[journal_issn] = 2161-0681
+    para[journal_id] = jcep
+
+
+  }
+
+  {
+    title <
+      name = Clinical & Experimental Pharmacology ;
+      issn = 2161-1459
+    >
+    
+    param[base_url] = http://www.omicsonline.org/cpecrhome.php
+    param[journal_issn] = 2161-1459
+    para[journal_id] = cpecr
+
+
+  }
+
+  {
+    title <
+      name = Clinical Microbiology: Open Access ;
+      issn = 2327-5073
+    >
+    
+    param[base_url] = http://www.esciencecentral.org/journals/clinical-microbiology.php
+    param[journal_issn] = 2327-5073
+    para[journal_id] = clinical-microbiology
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Research & Bioethics ;
+      issn = 2155-9627
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jcrbhome.php
+    param[journal_issn] = 2155-9627
+    para[journal_id] = jcrb
+
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Toxicology ;
+      issn = 2161-0495
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jcthome.php
+    param[journal_issn] = 2161-0495
+    para[journal_id] = jct
+
+
+  }
+
+  {
+    title <
+      name = Journal of Cytology & Histology ;
+      issn = 2157-7099
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jchhome.php
+    param[journal_issn] = 2157-7099
+    para[journal_id] = jch
+
+
+  }
+
+  {
+    title <
+      name = Journal of Forensic Research ;
+      issn = 2157-7145
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jfrhome.php
+    param[journal_issn] = 2157-7145
+    para[journal_id] = jfr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Neurology & Neurophysiology ;
+      issn = 2155-9562
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jnnhome.php
+    param[journal_issn] = 2155-9562
+    para[journal_id] = jnn
+
+
+  }
+
+  {
+    title <
+      name = Journal of Neurology & Neurophysiology ;
+      issn = 2161-105X
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jprmhome.php
+    param[journal_issn] = 2161-105X
+    para[journal_id] = jprm
+
+
+  }
+
+  {
+    title <
+      name = Journal of Stem Cell Research & Therapy ;
+      issn = 2157-7633
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jscrthome.php
+    param[journal_issn] = 2157-7633
+    para[journal_id] = jscrt
+
+
+  }
+
+  {
+    title <
+      name = Journal of Transplantation Technologies & Research ;
+      issn = 2161-0991
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jttrhome.php
+    param[journal_issn] = 2161-0991
+    para[journal_id] = jttr
+
+
+  }
+
+  {
+    title <
+      name = Advances in Pharmacoepidemiology & Drug Safety ;
+      issn = 2167-1052
+    >
+    
+    param[base_url] = http://www.omicsgroup.org/journals/apdshome.php
+    param[journal_issn] = 2167-1052
+    para[journal_id] = apds
+
+
+  }
+
+  {
+    title <
+      name = Journal of Antivirals & Antiretrovirals ;
+      issn = 1948-5964
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jaahome.php
+    param[journal_issn] = 1948-5964
+    para[journal_id] = jaa
+
+
+  }
+
+  {
+    title <
+      name = Journal of Bioanalysis & Biomedicine ;
+      issn = 1948-593X
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jbabmhome.php
+    param[journal_issn] = 1948-593X
+    para[journal_id] = jbabm
+
+
+  }
+
+  {
+    title <
+      name = Journal of Bioequivalence & Bioavailability ;
+      issn = 0975-0851
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jbbhome.php
+    param[journal_issn] = 0975-0851
+    para[journal_id] = jbb
+
+
+  }
+
+  {
+    title <
+      name = Clinical Pharmacology & Biopharmaceutics ;
+      issn = 2167-065X
+    >
+    
+    param[base_url] = http://www.omicsgroup.org/journals/cpbhome.php
+    param[journal_issn] = 2167-065X
+    para[journal_id] = cpb
+
+
+  }
+
+  {
+    title <
+      name = Journal of Drug Metabolism & Toxicology ;
+      issn = 2157-7609
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jdmthome.php
+    param[journal_issn] = 2157-7609
+    para[journal_id] = jdmt
+
+
+  }
+
+  {
+    title <
+      name = Pharmaceutica Analytica Acta ;
+      issn = 2153-2435
+    >
+    
+    param[base_url] = http://www.omicsonline.org/paahome.php
+    param[journal_issn] = 2153-2435
+    para[journal_id] = paa
+
+
+  }
+
+  {
+    title <
+      name = Pharmaceutical Regulatory Affairs: Open Access ;
+      issn = 2167-7689
+    >
+    
+    param[base_url] = http://www.omicsgroup.org/journals/proahome.php
+    param[journal_issn] = 2167-7689
+    para[journal_id] = proa
+
+
+  }
+
+  {
+    title <
+      name = Journal of Vaccines & Vaccination ;
+      issn = 2157-7560
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jvvhome.php
+    param[journal_issn] = 2157-7560
+    para[journal_id] = jvv
+
+
+  }
+
+  {
+    title <
+      name = Journal of Analytical & Bioanalytical Techniques ;
+      issn = 2155-9872
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jabthome.php
+    param[journal_issn] = 2155-9872
+    para[journal_id] = jabt
+
+
+  }
+
+  {
+    title <
+      name = Journal of Chromatography & Separation Techniques ;
+      issn = 2155-7064
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jcgsthome.php
+    param[journal_issn] = 2155-7064
+    para[journal_id] = jcgst
+
+
+  }
+
+  {
+    title <
+      name = Medicinal Chemistry ;
+      issn = 2161-0444
+    >
+    
+    param[base_url] = http://www.omicsonline.org/medchemhome.php
+    param[journal_issn] = 2161-0444
+    para[journal_id] = medchem
+
+
+  }
+
+  {
+    title <
+      name = Organic Chemistry: Current Research ;
+      issn = 2161-0401
+    >
+    
+    param[base_url] = http://www.omicsonline.org/occrhome.php
+    param[journal_issn] = 2161-0401
+    para[journal_id] = occr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Physical Chemistry & Biophysics ;
+      issn = 2161-0398
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jpcbhome.php
+    param[journal_issn] = 2161-0398
+    para[journal_id] = jpcb
+
+
+  }
+
+  {
+    title <
+      name = Journal of Thermodynamics & Catalysis ;
+      issn = 2157-7544
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jtchome.php
+    param[journal_issn] = 2157-7544
+    para[journal_id] = jtc
+
+
+  }
+
+  {
+    title <
+      name = Journal of Aquaculture Research & Development ;
+      issn = 2155-9546
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jardhome.php
+    param[journal_issn] = 2155-9546
+    para[journal_id] = jard
+
+
+  }
+
+  {
+    title <
+      name = Journal of Earth Science & Climatic Change ;
+      issn = 2157-7617
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jescchome.php
+    param[journal_issn] = 2157-7617
+    para[journal_id] = jescc
+
+
+  }
+
+  {
+    title <
+      name = Journal of Ecosystem & Ecography ;
+      issn = 2157-7625
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jeehome.php
+    param[journal_issn] = 2157-7625
+    para[journal_id] = jee
+
+
+  }
+
+  {
+    title <
+      name = Journal of Environmental & Analytical Toxicology ;
+      issn = 2161-0525
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jeathome.php
+    param[journal_issn] = 2161-0525
+    para[journal_id] = jeat
+
+
+  }
+
+  {
+    title <
+      name = Journal of Geography & Natural Disasters ;
+      issn = 2167-0587
+    >
+    
+    param[base_url] = http://www.omicsgroup.org/journals/jgndhome.php
+    param[journal_issn] = 2167-0587
+    para[journal_id] = jgnd
+
+
+  }
+
+  {
+    title <
+      name = Hydrology: Current Research ;
+      issn = 2157-7587
+    >
+    
+    param[base_url] = http://www.omicsonline.org/hycrhome.php
+    param[journal_issn] = 2157-7587
+    para[journal_id] = hycr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Petroleum & Environmental Biotechnology ;
+      issn = 2157-7463
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jpebhome.php
+    param[journal_issn] = 2157-7463
+    para[journal_id] = jpeb
+
+
+  }
+
+  {
+    title <
+      name = Journal of Data Mining in Genomics & Proteomics ;
+      issn = 2153-0602
+    >
+    
+    param[base_url] = http://www.omicsonline.org/jdmgphome.php
+    param[journal_issn] = 2153-0602
+    para[journal_id] = jdmgp
+
+
+  }
+}
