@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>82</string>
+    <string>83</string>
   </entry>  
   <entry>
     <string>au_name</string>
@@ -37,7 +37,16 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>600</long>
+    <long>500</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/1000</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>clockss_override</string>

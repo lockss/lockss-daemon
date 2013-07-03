@@ -12,16 +12,16 @@
     <string>HighWire Press Plugin (H10c for CLOCKSS)</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>86</string>
+  </entry>
+  <entry>
     <string>plugin_parent</string>
     <string>org.lockss.plugin.highwire.HighWirePressPlugin</string>
   </entry>
-    <entry>
-    <string>plugin_version</string>
-    <string>85</string>
-  </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>85</string>
+    <string>86</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -30,6 +30,19 @@
   <entry>
     <string>au_start_url</string>
     <string>"%sclockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>500</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/1000</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>clockss_override</string>
