@@ -17,6 +17,9 @@
     param[base_url] = http://memoirs.gsapubs.org/
     implicit < status ; year ; isbn ; name ; param[volume_name] >
     
+    au < exists ; 1994 ; 0-8137-1183-5 ; Geological Society of America Memoirs Volume 183 ; 183 >
+    au < exists ; 1994 ; 0-8137-1184-3 ; Geological Society of America Memoirs Volume 184 ; 184 >
+    au < exists ; 1995 ; 0-8137-1185-1 ; Geological Society of America Memoirs Volume 185 ; 185 >
     au < exists ; 1995 ; 978-0-8137-1186-7 ; Geological Society of America Memoirs Volume 186 ; 186 >
     au < exists ; 1995 ; 978-0-8137-1187-4 ; Geological Society of America Memoirs Volume 187 ; 187 >
     au < exists ; 1996 ; 978-0-8137-1188-1 ; Geological Society of America Memoirs Volume 188 ; 188 >
