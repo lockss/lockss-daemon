@@ -190,7 +190,7 @@
        implicit < status ; year ; name ; param[volume_name] >
        
        au < exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 >
-       au < expected ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 >
+       au < manifest ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 >
        
     }
 
@@ -4307,7 +4307,7 @@
         au < released ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 >
         au < manifest ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 117 ; 117 >
         au < manifest ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 118 ; 118 >
-        au < expected ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 119 ; 119 >
+        au < manifest ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 119 ; 119 >
         au < expected ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 120 ; 120 >
 
       }
@@ -18042,7 +18042,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010-2011 ; Journal of Biomaterials Applications Volume 25 ; 25 >
         au < released ; 2011-2012 ; Journal of Biomaterials Applications Volume 26 ; 26 >
         au < released ; 2012-2013 ; Journal of Biomaterials Applications Volume 27 ; 27 >
-        au < expected ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 >
+        au < manifest ; 2013-2014 ; Journal of Biomaterials Applications Volume 28 ; 28 >
 
       }
       
@@ -23066,7 +23066,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://lrs.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 2013 ; Journal of Laboratory Automation Volume 1 ; 1 >
+        au < manifest ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 >
   
       }
   
@@ -33342,7 +33342,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Race & Class Volume 52 ; 52 >
         au < released ; 2011 ; Race & Class Volume 53 ; 53 >
         au < released ; 2012 ; Race & Class Volume 54 ; 54 >
-        au < expected ; 2013 ; Race & Class Volume 55 ; 55 >
+        au < manifest ; 2013 ; Race & Class Volume 55 ; 55 >
 
       }
 
@@ -36541,7 +36541,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://inp.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 >
+        au < manifest ; 2013 ; Studies in Indian Politics Volume 1 ; 1 >
 
       }
 
@@ -41707,7 +41707,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 >
     au < manifest ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 >
     au < manifest ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 >
-    au < expected ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 >
+    au < manifest ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 >
 
     }
     
@@ -42680,7 +42680,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Health Services Management Research Volume 23 [superseded] ; 23 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Health Services Management Research Volume 24 [superseded] ; 24 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 >
-        au < HighWirePressH20Plugin ; expected ; 2013 ; Health Services Management Research Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Health Services Management Research Volume 26 ; 26 >
   
       }
   
@@ -42963,7 +42963,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; expected ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
   
       }
   
@@ -43198,7 +43198,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2010 ; JRSM Short Reports Volume 1 ; 1 >
         au < doNotProcess ; 2011 ; JRSM Short Reports Volume 2 ; 2 >
         au < exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 >
-        au < exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
+        au < manifest ; 2013 ; JRSM Short Reports Volume 4 ; 4 >
       
       }
   
