@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.31 2013-06-17 18:18:52 barry409 Exp $
+ * $Id: VoterUserData.java,v 1.32 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -420,7 +420,7 @@ public class VoterUserData
     voter.nominatePeers();
   }
 
-  public boolean generateVote() throws NoSuchAlgorithmException {
+  public boolean generateVote() {
     return voter.generateVote();
   }
 

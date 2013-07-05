@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.158 2013-06-26 19:21:44 barry409 Exp $
+ * $Id: V3Poller.java,v 1.159 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -512,9 +512,7 @@ public class V3Poller extends BasePoll {
                   String key, long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
     // If the hash algorithm is not available, fail the poll immediately.
-    try {
-      MessageDigest.getInstance(hashAlg);
-    } catch (NoSuchAlgorithmException ex) {
+    if (! PollUtil.canUseHashAlgorithm(hashAlg)) {
       throw new IllegalArgumentException("Algorithm " + hashAlg +
                                          " is not supported");
     }
@@ -576,9 +574,8 @@ public class V3Poller extends BasePoll {
     setStatus(POLLER_STATUS_RESUMING);
     // If the hash algorithm used when the poll was first created is
     // no longer available, fail the poll immediately.
-    try {
-      MessageDigest.getInstance(pollerState.getHashAlgorithm());
-    } catch (NoSuchAlgorithmException ex) {
+    String hashAlgorithm = pollerState.getHashAlgorithm();
+    if (! PollUtil.canUseHashAlgorithm(hashAlgorithm)) {
       throw new IllegalArgumentException("Algorithm " +
                                          pollerState.getHashAlgorithm() +
                                          " is no longer supported");
@@ -674,13 +671,7 @@ public class V3Poller extends BasePoll {
     // been tested to see if the algorithm exists.
     int sampleModulus = pollerState.getModulus();
     String hashAlgorithm = pollerState.getHashAlgorithm();
-    MessageDigest sampleHasher = null;
-    try {
-      sampleHasher = MessageDigest.getInstance(hashAlgorithm);
-    } catch (NoSuchAlgorithmException ex) {
-      throw new ShouldNotHappenException(
-	"Hash algorithm "+hashAlgorithm+" failed.");
-    }
+    MessageDigest sampleHasher = PollUtil.createMessageDigest(hashAlgorithm);
     byte[] sampleNonce = PollUtil.makeHashNonce(HASH_NONCE_LENGTH);
     return new SampledBlockHasher.FractionalInclusionPolicy(
       sampleModulus, sampleNonce, sampleHasher);
@@ -1805,17 +1796,8 @@ public class V3Poller extends BasePoll {
    */
   private MessageDigest[] initHasherDigests() {
     int len = getPollSize() + symmetricPollSize() + 1; // One for plain hash.
-    try {
-      return PollUtil.createMessageDigestArray(len,
-					       pollerState.getHashAlgorithm());
-    } catch (NoSuchAlgorithmException ex) {
-      // This will have been caught at construction time, and so should
-      // never happen here.
-      log.critical("Unexpected NoSuchAlgorithmException in " +
-		   "initHasherDigests");
-      stopPoll(POLLER_STATUS_ERROR);
-      return new MessageDigest[0];
-    }
+    return PollUtil.createMessageDigestArray(len,
+					     pollerState.getHashAlgorithm());
   }
 
   private boolean 

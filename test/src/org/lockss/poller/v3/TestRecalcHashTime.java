@@ -1,5 +1,5 @@
 /*
- * $Id: TestRecalcHashTime.java,v 1.3 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: TestRecalcHashTime.java,v 1.4 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -156,8 +156,7 @@ public class TestRecalcHashTime extends LockssTestCase {
     }
 
     @Override
-    protected CachedUrlSetHasher makeHasher()
-	throws NoSuchAlgorithmException {
+    protected CachedUrlSetHasher makeHasher() {
       return
 	new MyRecalcHashTimeHasher(mcus,
 				   PollUtil.createMessageDigestArray(nHash,

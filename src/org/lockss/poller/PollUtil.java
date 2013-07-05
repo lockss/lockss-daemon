@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.12 2012-08-08 07:12:42 tlipkis Exp $
+ * $Id: PollUtil.java,v 1.13 2013-07-05 17:42:59 barry409 Exp $
  */
 
 /*
@@ -349,14 +349,37 @@ public class PollUtil {
     return pm.getHashService().canHashBeScheduledBefore(hashTime, when);
   }
 
-  public static MessageDigest[] createMessageDigestArray(int len,
-							 String hashAlg)
-      throws NoSuchAlgorithmException {
-    MessageDigest[] digests = new MessageDigest[len];
-    for (int ix = 0; ix < len; ix++) {
-      digests[ix] = MessageDigest.getInstance(hashAlg);
+  public static boolean canUseHashAlgorithm(String hashAlg) {
+    if (hashAlg == null) {
+      return false;
     }
-    return digests;
+    try {
+      MessageDigest.getInstance(hashAlg);
+      return true;
+    } catch (NoSuchAlgorithmException ex) {
+      return false;
+    }
+  }
+
+  public static MessageDigest createMessageDigest(String hashAlg) {
+    try {
+      return MessageDigest.getInstance(hashAlg);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new ShouldNotHappenException("Algorithm "+hashAlg+" not known.");
+    }
+  }
+
+  public static MessageDigest[] createMessageDigestArray(int len,
+							 String hashAlg) {
+    MessageDigest[] digests = new MessageDigest[len];
+    try {
+      for (int ix = 0; ix < len; ix++) {
+	digests[ix] = MessageDigest.getInstance(hashAlg);
+      }
+      return digests;
+    } catch (NoSuchAlgorithmException ex) {
+      throw new ShouldNotHappenException("Algorithm "+hashAlg+" not known.");
+    }
   }
 
   public static byte[] makeHashNonce(int len) {

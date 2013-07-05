@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.32 2013-06-04 22:45:10 barry409 Exp $
+ * $Id: VoterActions.java,v 1.33 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -157,15 +157,10 @@ public class VoterActions {
   public static PsmEvent handleGenerateVote(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
-    try {
-      if (ud.generateVote()) {
-        ud.setStatus(V3Voter.STATUS_HASHING);
-        return V3Events.evtOk;
-      } else {
-        return V3Events.evtError;
-      }
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("No such hashing algorithm: " + ex.getMessage());
+    if (ud.generateVote()) {
+      ud.setStatus(V3Voter.STATUS_HASHING);
+      return V3Events.evtOk;
+    } else {
       return V3Events.evtError;
     }
   }

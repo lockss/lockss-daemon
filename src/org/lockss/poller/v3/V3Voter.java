@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.90 2013-06-17 18:18:52 barry409 Exp $
+ * $Id: V3Voter.java,v 1.91 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -277,9 +277,7 @@ public class V3Voter extends BasePoll {
     }
 
     // If the hash algorithm is not available, fail the vote immediately.
-    try {
-      MessageDigest.getInstance(hashAlgorithm);
-    } catch (NoSuchAlgorithmException ex) {
+    if (! PollUtil.canUseHashAlgorithm(hashAlgorithm)) {
       throw new IllegalArgumentException("Algorithm " + hashAlgorithm +
                                          " is not supported");
     }
@@ -295,13 +293,8 @@ public class V3Voter extends BasePoll {
     if (msg.getModulus() != 0) {
       if (CurrentConfig.getBooleanParam(PARAM_ENABLE_POP_VOTING,
 					DEFAULT_ENABLE_POP_VOTING)) {
-	MessageDigest sampleHasher = null;
-	try {
-	  sampleHasher = MessageDigest.getInstance(hashAlgorithm);
-	} catch (NoSuchAlgorithmException ex) {
-	  throw new ShouldNotHappenException(
-	    "Hash algorithm "+hashAlgorithm+" failed.");
-	}
+	MessageDigest sampleHasher = 
+	  PollUtil.createMessageDigest(hashAlgorithm);
 	int sampleModulus = msg.getModulus();
 	byte[] sampleNonce = msg.getSampleNonce();
 	this.inclusionPolicy = 
@@ -393,9 +386,7 @@ public class V3Voter extends BasePoll {
 
     String hashAlgorithm = voterUserData.getHashAlgorithm();
     // If the hash algorithm is not available, fail the vote immediately.
-    try {
-      MessageDigest.getInstance(hashAlgorithm);
-    } catch (NoSuchAlgorithmException ex) {
+    if (! PollUtil.canUseHashAlgorithm(hashAlgorithm)) {
       throw new IllegalArgumentException("Algorithm " + hashAlgorithm +
                                          " is not supported");
     }
@@ -921,7 +912,7 @@ public class V3Voter extends BasePoll {
    *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
-  private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
+  private MessageDigest[] initHasherDigests() {
     return PollUtil.createMessageDigestArray(hasherSize(), getHashAlgorithm());
   }
 
@@ -936,7 +927,7 @@ public class V3Voter extends BasePoll {
   /**
    * Schedule a hash.
    */
-  boolean generateVote() throws NoSuchAlgorithmException {
+  boolean generateVote() {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
     if (isSampledPoll()) {
       log.debug("Vote in sampled poll: "+inclusionPolicy.typeString());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollUtil.java,v 1.4 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestPollUtil.java,v 1.5 2013-07-05 17:43:00 barry409 Exp $
  */
 
 /*
@@ -129,6 +129,41 @@ public class TestPollUtil extends LockssTestCase {
 				  tmpdir);
     assertEquals(new File(tmpdir, "path/2"),
 		 PollUtil.getPollStateRoot());
+  }
+
+  public void testCreateMessageDigest() throws Exception {
+    assertTrue(PollUtil.canUseHashAlgorithm("SHA-1"));
+    assertTrue(PollUtil.canUseHashAlgorithm("SHA1"));
+    assertFalse(PollUtil.canUseHashAlgorithm(null));
+    assertFalse(PollUtil.canUseHashAlgorithm("SHA-NA-NA"));
+    assertEquals("SHA-1", PollUtil.createMessageDigest("SHA-1").getAlgorithm());
+    assertEquals("SHA1", PollUtil.createMessageDigest("SHA1").getAlgorithm());
+
+    try {
+      PollUtil.createMessageDigest(null);
+      fail("null argument failed to throw");
+    } catch (NullPointerException e) {
+      // expected
+    }
+    try {
+      PollUtil.createMessageDigest("SHA-NA-NA");
+      fail("Unlikely hashAlgorithm argument failed to throw");
+    } catch (ShouldNotHappenException e) {
+      // expected
+    }
+
+    try {
+      PollUtil.createMessageDigestArray(5, null);
+      fail("null argument failed to throw");
+    } catch (NullPointerException e) {
+      // expected
+    }
+    try {
+      PollUtil.createMessageDigestArray(5, "SHA-NA-NA");
+      fail("Unlikely hashAlgorithm argument failed to throw");
+    } catch (ShouldNotHappenException e) {
+      // expected
+    }
   }
 
 

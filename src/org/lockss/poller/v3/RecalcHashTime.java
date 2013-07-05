@@ -1,5 +1,5 @@
 /*
- * $Id: RecalcHashTime.java,v 1.3 2012-07-02 16:21:01 tlipkis Exp $
+ * $Id: RecalcHashTime.java,v 1.4 2013-07-05 17:42:59 barry409 Exp $
  */
 
 /*
@@ -108,17 +108,11 @@ public class RecalcHashTime {
       log.debug2("Already have recalc scheduled for " + au);
       return;
     }
-    try {
-      hasher = makeHasher();
-    } catch (NoSuchAlgorithmException e) {
-      log.warning("Can't schedule hash duration recalc", e);
-      return;
-    }
+    hasher = makeHasher();
     schedRecalcHash();
   }
 
-  protected CachedUrlSetHasher makeHasher()
-      throws NoSuchAlgorithmException {
+  protected CachedUrlSetHasher makeHasher() {
     return new RecalcHashTimeHasher(au.getAuCachedUrlSet(),
 				    PollUtil.createMessageDigestArray(nHash,
 								      hashAlg),
