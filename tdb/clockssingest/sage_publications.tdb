@@ -20289,6 +20289,24 @@
 
   }
 
+    {
+  
+        title <
+          name = Journal of Land and Rural Studies ;
+          issn = 2321-0249 
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://lrs.sagepub.com/
+  
+        au < exists ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
+  
+      }
+  
+    }
+
   {
   
     title <
@@ -25493,6 +25511,24 @@
     }
 
   }
+
+    {
+
+      title <
+        name = Millennial Asia ;
+        issn = 0976-3996
+      >
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://mla.sagepub.com/
+
+        au < exists ; exists ; 2013 ; Millennial Asia Volume 4 ; 4 ; >
+
+      }
+
+    }
 
   {
   
@@ -33239,6 +33275,25 @@
     }
 
   }
+
+    {
+
+      title <
+        name = Studies in Indian Politics ;
+        issn = 2321-0230 ;
+        issnl = 2321-0230
+      >
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://inp.sagepub.com/
+
+        au < exists ; exists ; 2013 ; Studies in Indian Politics Volume 1 ; 1 ; >
+
+      }
+
+    }
 
   {
 
