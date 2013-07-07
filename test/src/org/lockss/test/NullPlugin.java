@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.118 2013-03-19 04:26:14 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.119 2013-07-07 04:05:44 dshr Exp $
  */
 
 /*
@@ -211,8 +211,16 @@ public class NullPlugin {
       return new StringInputStream("");
     }
 
+    public InputStream getUnfilteredInputStream(MessageDigest md) {
+      return new HashedInputStream(new StringInputStream(""), md);
+    }
+
     public InputStream openForHashing() {
       return getUnfilteredInputStream();
+    }
+
+    public InputStream openForHashing(MessageDigest md) {
+      return new HashedInputStream(getUnfilteredInputStream(), md);
     }
 
     public Reader openForReading() {
@@ -242,6 +250,10 @@ public class NullPlugin {
     public CIProperties getProperties() {
       return new CIProperties();
     }
+
+    public void addProperty(String key, String value) {
+    }
+
 
     public void release() {
     }

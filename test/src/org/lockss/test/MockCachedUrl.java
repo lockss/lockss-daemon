@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.50 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.51 2013-07-07 04:05:44 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.math.*;
 import java.util.*;
+import java.security.MessageDigest;
 
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
@@ -191,7 +192,17 @@ public class MockCachedUrl implements CachedUrl {
 
   // Read interface - used by the proxy.
 
+  public InputStream getUnfilteredInputStream(MessageDigest md) {
+    log.debug3("MockCachedUrl.getUnfilteredInputStream with " +
+	       (md == null ? "no " : "") + "MessageDigest");
+    if (md == null) {
+      return getUnfilteredInputStream();
+    }
+    return new HashedInputStream(getUnfilteredInputStream(), md);
+  }
+
   public InputStream getUnfilteredInputStream() {
+    log.debug3("MockCachedUrl.getUnfilteredInputStream");
     try {
       if (cachedFile != null) {
 	if (isResource) {
@@ -211,6 +222,10 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public InputStream openForHashing() {
+    return openForHashing(null);
+  }
+
+  public InputStream openForHashing(MessageDigest md) {
     String contentType = getContentType();
     InputStream is = null;
     // look for a FilterFactory
@@ -218,6 +233,9 @@ public class MockCachedUrl implements CachedUrl {
       FilterFactory fact = au.getHashFilterFactory(contentType);
       if (fact != null) {
 	InputStream unfis = getUnfilteredInputStream();
+	if (md != null) {
+	  unfis = new HashedInputStream(unfis, md);
+	}
 	if (log.isDebug3()) {
 	  log.debug3("Filtering " + contentType +
 		     " with " + fact.getClass().getName());
@@ -258,6 +276,10 @@ public class MockCachedUrl implements CachedUrl {
 
   public CIProperties getProperties(){
     return cachedProp;
+  }
+
+  public void addProperty(String key, String value) {
+    cachedProp.setProperty(key, value);
   }
 
   public String getContentType(){

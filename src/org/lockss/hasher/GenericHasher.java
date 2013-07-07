@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.24 2013-06-11 17:00:54 barry409 Exp $
+ * $Id: GenericHasher.java,v 1.25 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -111,6 +111,10 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
   protected InputStream getInputStream(CachedUrl cu) {
     return isFiltered ? cu.openForHashing() : cu.getUnfilteredInputStream();
+  }
+
+  protected InputStream getInputStream(CachedUrl cu, MessageDigest md) {
+    return isFiltered ? cu.openForHashing(md) : cu.getUnfilteredInputStream(md);
   }
 
   /** Subclass should override to return proper array of digest */

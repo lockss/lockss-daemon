@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.88 2013-06-26 04:45:30 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.89 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -180,6 +180,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected LockssRepositoryImpl repository;
   // preset so testIllegalOperations() doesn't null pointer
   private Deadline versionTimeout = Deadline.MAX;
+
+  /*
+   * Keys that may be added to a the properties of a sealed node.
+   */
+  private static final String[] allowedKeys = {
+    org.lockss.plugin.CachedUrl.PROPERTY_CHECKSUM,
+  };
 
   RepositoryNodeImpl(String url, String nodeLocation,
                      LockssRepositoryImpl repository) {
@@ -753,16 +760,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void sealNewVersion() {
-    boolean identicalVersion = false;
+    sealNewVersion(false);
+  }
+
+  public synchronized void sealNewVersion(boolean identicalVersion) {
     try {
-      if (curOutputStream==null) {
-         throw new UnsupportedOperationException("getNewOutputStream() not called.");
-      } else {
-        try {
-          // make sure outputstream was closed
-          curOutputStream.close();
-        } catch (IOException ignore) { }
-        curOutputStream = null;
+      if (!identicalVersion) {
+	if (curOutputStream==null) {
+	  throw new UnsupportedOperationException("getNewOutputStream() not called.");
+	} else {
+	  try {
+	    // make sure outputstream was closed
+	    curOutputStream.close();
+	  } catch (IOException ignore) { }
+	  curOutputStream = null;
+	}
       }
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
@@ -815,7 +827,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // check temp vs. last version, so as not to duplicate identical versions
-      if (currentCacheFile.exists()) {
+      if (!identicalVersion && currentCacheFile.exists()) {
         try {
           // if identical, don't rename
           if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
@@ -1887,6 +1899,29 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	ensureInputStream();
       }
       return props;
+    }
+
+    /**
+     * Add a new property - only to be used for a restricted set of properties
+     * @param key
+     * @param value
+     */
+    public synchronized void addProperty(String key, String value) {
+      for (int i = 0; i < allowedKeys.length; i++) {
+	if (allowedKeys[i].equalsIgnoreCase(key)) {
+	  // The key is OK
+	  if (curProps.containsKey(key)) {
+	    throw new UnsupportedOperationException("Props contain: " + key);
+	  }
+	  Properties myProps = (Properties)curProps.clone();
+	  myProps.setProperty(key, value);
+	  makeNewVersion();
+	  setNewProperties(myProps);
+	  sealNewVersion(true);
+	  return;
+	}
+      }
+      throw new UnsupportedOperationException("Not allowed: " + key);
     }
 
     public synchronized void release() {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: RepositoryNode.java,v 1.22 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -258,6 +258,13 @@ public interface RepositoryNode extends RepositoryNodeVersion {
 
     /** Return the properties */
     public Properties getProperties();
+
+    /**
+     * Add a new property - only to be used for a restricted set of properties
+     * @param key
+     * @param value
+     */
+    public void addProperty(String key, String value);
 
     /** Release resources, close any cached open stream. */
     public void release();

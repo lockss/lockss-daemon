@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.22 2012-07-02 16:26:24 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.23 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.util.*;
+import java.security.MessageDigest;
 import java.math.BigInteger;
 import junit.framework.*;
 import org.lockss.plugin.*;
@@ -48,6 +49,8 @@ import org.lockss.repository.*;
 public class TestBaseCachedUrl extends LockssTestCase {
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+"baseCachedUrl.filterHashStream";
+
+  protected static Logger logger = Logger.getLogger("TestBaseCachedUrl");
 
   protected LockssRepository repo;
   protected MockArchivalUnit mau;
@@ -134,6 +137,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
       return null;
     }
 
+    public InputStream getUnfilteredInputStream(MessageDigest md) {
+      gotUnfilteredStream = true;
+      return null;
+    }
+
     public boolean gotUnfilteredStream() {
       return gotUnfilteredStream;
     }
@@ -141,6 +149,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
     protected InputStream getFilteredStream() {
       gotFilteredStream = true;
       return super.getFilteredStream();
+    }
+
+    protected InputStream getFilteredStream(MessageDigest md) {
+      gotFilteredStream = true;
+      return super.getFilteredStream(md);
     }
 
     public boolean hasContent() {
@@ -273,6 +286,28 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CachedUrl cu = getTestCu(url1);
       InputStream urlIs = cu.openForHashing();
       assertEquals(str, StringUtil.fromInputStream(urlIs));
+    }
+
+    public void testOpenForHashingWithUnfilteredHash()
+	throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      String unfiltered = "This is the content before filtering";
+      createLeaf(url1, unfiltered, null);
+      String str = "This is a filtered stream";
+      mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
+      MockMessageDigest md = new MockMessageDigest();
+
+      CachedUrl cu = getTestCu(url1);
+      InputStream urlIs = cu.openForHashing(md);
+      String result = StringUtil.fromInputStream(urlIs);
+      logger.debug3("Want: " + str);
+      logger.debug3("Get: " + result);
+      assertEquals(str, result);
+      InputStream hashedStream = new ByteArrayInputStream(md.getUpdatedBytes());
+      String hashInput = StringUtil.fromInputStream(hashedStream);
+      logger.debug3("Hasher gets: " + hashInput);
+      assertEquals(unfiltered, hashInput);
     }
 
     public void testOpenForHashingUsesFilterFactoryBeforeRule()
@@ -420,6 +455,15 @@ public class TestBaseCachedUrl extends LockssTestCase {
 						 InputStream unfilteredIn,
 						 String encoding) {
       args.add(ListUtil.list(au, encoding));
+      try {
+	int len;
+	while ((len = unfilteredIn.available()) > 0) {
+	  byte[] buf = new byte[len];
+	  unfilteredIn.read(buf);
+	}
+      } catch (IOException e) {
+	fail("threw: " + e);
+      }
       return this.in;
     }
 

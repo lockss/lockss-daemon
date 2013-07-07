@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: MockRepositoryNode.java,v 1.16 2013-07-07 04:05:44 dshr Exp $
  */
 
 /*
@@ -218,6 +218,10 @@ public class MockRepositoryNode implements RepositoryNode {
 
     public Properties getProperties() {
       return props;
+    }
+
+    public void addProperty(String key, String value) {
+      props.setProperty(key, value);
     }
 
     public void release() {

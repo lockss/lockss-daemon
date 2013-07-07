@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.30 2013-04-01 00:43:27 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.31 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
+import java.security.MessageDigest;
 
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
@@ -139,11 +140,28 @@ public interface CachedUrl extends CachedUrlSetNode {
   public InputStream getUnfilteredInputStream();
 
   /**
+  * Get an object from which the content of the url can be read
+  * from the cache, together with a hash.
+  * @param md MessageDigest that will see the unfiltered content
+  * @return a {@link InputStream} object from which the
+  *         unfiltered content of the cached url can be read.
+  */
+  public InputStream getUnfilteredInputStream(MessageDigest md);
+
+  /**
    * Get an inputstream of the content suitable for hashing.
    * Probably filtered.
    * @return an {@link InputStream}
    */
   public InputStream openForHashing();
+
+  /**
+   * Get an inputstream of the content suitable for hashing,
+   * together with a hash of the unfiltered content.
+   * @param md MessageDigest to hash the unfiltered content
+   * @return an {@link InputStream}
+   */
+  public InputStream openForHashing(MessageDigest md);
 
   /**
    * Return a reader on this CachedUrl
@@ -165,6 +183,17 @@ public interface CachedUrl extends CachedUrlSetNode {
    *         empty {@link CIProperties} object is returned.
    */
   public CIProperties getProperties();
+
+  /**
+   * Add to the properties attached to the url in the cache, if any.
+   * Requires {@link #release()}
+   * @param key
+   * @param value
+   * Throws UnsupportedOperationException if either the key is not on
+   * the list of keys it is permitted to add, or if the properties
+   * already contains the key.
+   */
+  public void addProperty(String key, String value);
 
   /**
    * Return the unfiltered content size.

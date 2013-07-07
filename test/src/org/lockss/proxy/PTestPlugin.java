@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.32 2012-03-04 09:04:17 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.33 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -110,8 +110,16 @@ public class PTestPlugin {
       return new StringInputStream(contents);
     }
 
+    public InputStream getUnfilteredInputStream(MessageDigest md) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public InputStream openForHashing() {
       return getUnfilteredInputStream();
+    }
+
+    public InputStream openForHashing(MessageDigest md) {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public Reader openForReading() {
@@ -141,6 +149,11 @@ public class PTestPlugin {
     public CIProperties getProperties() {
       return props;
     }
+
+    public void addProperty(String key, String value) {
+      props.setProperty(key, value);
+    }
+
 
     public void release() {
     }

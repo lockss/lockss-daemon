@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.47 2012-07-02 16:25:28 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.48 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import java.net.*;
+import java.security.MessageDigest;
 import de.schlichtherle.truezip.file.*;
 import de.schlichtherle.truezip.fs.*;
 
@@ -136,13 +137,23 @@ public class BaseCachedUrl implements CachedUrl {
    * @return an InputStream
    */
   public InputStream openForHashing() {
+    return openForHashing(null);
+  }
+
+  /**
+   * Return a stream suitable for hashing with a hash of the unfiltered
+   * content.
+   * @param md MessageDigest for the unfiltered content.
+   * @return an InputStream
+   */
+  public InputStream openForHashing(MessageDigest md) {
     if (CurrentConfig.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
 				      DEFAULT_SHOULD_FILTER_HASH_STREAM)) {
       logger.debug3("Filtering on, returning filtered stream");
-      return getFilteredStream();
+      return getFilteredStream(md);
     } else {
       logger.debug3("Filtering off, returning unfiltered stream");
-      return getUnfilteredInputStream();
+      return getUnfilteredInputStream(md);
     }
   }
 
@@ -163,6 +174,15 @@ public class BaseCachedUrl implements CachedUrl {
   public InputStream getUnfilteredInputStream() {
     ensureRnc();
     return rnc.getInputStream();
+  }
+
+  public InputStream getUnfilteredInputStream(MessageDigest md) {
+    if (md == null) {
+      return getUnfilteredInputStream();
+    }
+    logger.debug3("md not null 3");
+    ensureRnc();
+    return new HashedInputStream(rnc.getInputStream(), md);
   }
 
   public String getContentType() {
@@ -211,6 +231,19 @@ public class BaseCachedUrl implements CachedUrl {
   public CIProperties getProperties() {
     ensureRnc();
     return CIProperties.fromProperties(rnc.getProperties());
+  }
+
+  /**
+   * Add to the properties attached to the url in the cache, if any.
+   * Requires {@link #release()}
+   * @param key
+   * @param value
+   * Throws IllegalOperationException if either the key is not on
+   * the list of keys it is permitted to add, or if the properties
+   * already contains the key.
+   */
+  public void addProperty(String key, String value) {
+    rnc.addProperty(key, value);
   }
 
   public long getContentSize() {
@@ -264,8 +297,11 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   protected InputStream getFilteredStream() {
+    return getFilteredStream(null);
+  }
+
+  protected InputStream getFilteredStream(MessageDigest md) {
     String contentType = getContentType();
-    InputStream is = null;
     // first look for a FilterFactory
     FilterFactory fact = au.getHashFilterFactory(contentType);
     if (fact != null) {
@@ -274,6 +310,10 @@ public class BaseCachedUrl implements CachedUrl {
 		      " with " + fact.getClass().getName());
       }
       InputStream unfis = getUnfilteredInputStream();
+      if (md != null) {
+	logger.debug3("md not null 1");
+	unfis = new HashedInputStream(unfis, md);
+      }
       try {
 	return fact.createFilteredInputStream(au, unfis, getEncoding());
       } catch (PluginException e) {
@@ -287,6 +327,9 @@ public class BaseCachedUrl implements CachedUrl {
     // then look for deprecated FilterRule
     FilterRule fr = au.getFilterRule(contentType);
     if (fr != null) {
+      if (md != null) {
+	throw new IllegalArgumentException("LocalHash incompatible with FilterRule");
+      }
       if (logger.isDebug3()) {
 	logger.debug3("Filtering " + contentType +
 		      " with " + fr.getClass().getName());
@@ -301,7 +344,12 @@ public class BaseCachedUrl implements CachedUrl {
       }
     }
     if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
-    return getUnfilteredInputStream();
+    InputStream ret = getUnfilteredInputStream();
+    if (md != null) {
+      logger.debug3("md not null 2");
+      ret = new HashedInputStream(ret, md);
+    }
+    return ret;
   }
 
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {

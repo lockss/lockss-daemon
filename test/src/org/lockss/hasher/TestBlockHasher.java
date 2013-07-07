@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.17 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.18 2013-07-07 04:05:43 dshr Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
 public class TestBlockHasher extends LockssTestCase {
   private static final String BASE_URL = "http://www.test.com/blah/";
@@ -94,9 +95,23 @@ public class TestBlockHasher extends LockssTestCase {
     cu.setContent(content);
   }
   
+  void addContent(MockArchivalUnit mau, String url, String content,
+		  CIProperties props) {
+    MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(url);
+    cu.setContent(content);
+    cu.setProperties(props);
+  }
+  
   CachedUrl addVersion(MockArchivalUnit mau, String url, String content) {
     MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(url);
     return cu.addVersion(content);
+  }
+
+  CachedUrl addVersionAndChecksum(MockArchivalUnit mau, String url,
+				  String content, String checksum) {
+    CachedUrl ret = addVersion(mau, url, content);
+    ret.addProperty(CachedUrl.PROPERTY_CHECKSUM, checksum);
+    return ret;
   }
 
   private long hashToEnd(CachedUrlSetHasher hasher, int stepSize)
@@ -401,6 +416,207 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContent(100, true);
   }
   
+  public void testOneContentLocalHashGood(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      "SHA-1:0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33");
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    assertEquals(1, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashObsolete(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "MD5");
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      "MD5:acbd18db4cc2f85cedef654fccc4a4d8");
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    assertEquals(1, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashBad(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "MD5");
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      "SHA-1:deadbeef");
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(1, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashMissing(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(1, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashMissing2(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+
+    // First pass creates the stored hash
+    CIProperties props = new CIProperties();
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    // Second pass validates it
+    RecordingEventHandler handRec2 = new RecordingEventHandler();
+    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, handRec2);
+    hasher2.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher2.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher2, stepSize));
+    assertTrue(hasher2.finished());
+    List<Event> events2 = handRec2.getEvents();
+    assertEquals(1, events2.size());
+    assertEvent(urls[4], 3, "foo", events2.get(0), false);
+    assertEquals(1, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+    // Third pass has corrupt content
+    RecordingEventHandler handRec3 = new RecordingEventHandler();
+    BlockHasher hasher3 = new BlockHasher(cus, digs, inits, handRec3);
+    hasher3.setFiltered(false);
+    localHashHandler = new MyLocalHashHandler();
+    hasher3.setLocalHashHandler(localHashHandler);
+    assertEquals(3, hashToEnd(hasher3, stepSize));
+    assertTrue(hasher3.finished());
+    List<Event> events3 = handRec3.getEvents();
+    assertEquals(1, events3.size());
+    assertEvent(urls[4], 3, "foo", events3.get(0), false);
+    assertEquals(1, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashGood() throws Exception {
+    testOneContentLocalHashGood(1);
+    testOneContentLocalHashGood(3);
+    testOneContentLocalHashGood(100);
+  }
+  
+  public void testOneContentLocalHashObsolete() throws Exception {
+    testOneContentLocalHashObsolete(1);
+    testOneContentLocalHashObsolete(3);
+    testOneContentLocalHashObsolete(100);
+  }
+  
+  public void testOneContentLocalHashBad() throws Exception {
+    testOneContentLocalHashBad(1);
+    testOneContentLocalHashBad(3);
+    testOneContentLocalHashBad(100);
+  }
+  
+  public void testOneContentLocalHashMissing() throws Exception {
+    testOneContentLocalHashMissing(1);
+    testOneContentLocalHashMissing(3);
+    testOneContentLocalHashMissing(100);
+  }
+  
+  public void testOneContentLocalHashMissing2() throws Exception {
+    testOneContentLocalHashMissing2(1);
+    testOneContentLocalHashMissing2(3);
+    testOneContentLocalHashMissing2(100);
+  }
+  
   public void testOneContentThreeVersions(int stepSize, boolean includeUrl)
       throws Exception {
     CaptureBlocksEventHandler blockHandler = 
@@ -454,6 +670,78 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentThreeVersions(100, true);
   }
 
+  public void testOneContentThreeVersionsLocalHashGood(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "SHA-1");
+
+    CaptureBlocksEventHandler blockHandler = 
+      new CaptureBlocksEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    
+    // Adding versions, from least recent to most recent.
+    addVersionAndChecksum(mau, urls[2], "aaaa",
+			  "SHA-1:70c881d4a26984ddce795f6f71817c9cf4480e79");
+    addVersionAndChecksum(mau, urls[2], "bb",
+			  "SHA-1:9a900f538965a426994e1e90600920aff0b4e8d2");
+    addVersionAndChecksum(mau, urls[2], "ccc",
+			  "SHA-1:f36b4825e5db2cf7dd2d2593b3f5c24c0311d8b2");
+
+    if (log.isDebug3()) {
+      for (Iterator it1 = cus.contentHashIterator(); it1.hasNext(); ) {
+	CachedUrlSetNode cusn = (CachedUrlSetNode)it1.next();
+	if (cusn instanceof CachedUrl) {
+	  CachedUrl[] vers = ((CachedUrl)cusn).getCuVersions();
+	  log.debug3(cusn.getUrl() + " has " + vers.length + " versions.");
+	  for (int i = 0; i < vers.length; i++) {
+	    Properties vProps = vers[i].getProperties();
+	    log.debug3("Version: " + i + " has " + vProps.size() +
+		       " entries");
+	    for (Iterator it2 = vProps.keySet().iterator(); it2.hasNext(); ) {
+	      String key = (String) it2.next();
+	      log.debug("Version: " + i + " key: " + key + " val: " +
+			vProps.get(key));
+	    }
+	  }
+	}
+      }
+    }
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    hasher.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    // 9 bytes total for all three versions.
+    assertEquals(9, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List blocks = blockHandler.getBlocks();
+    assertEquals(1, blocks.size());
+    HashBlock b = (HashBlock)blocks.get(0);
+    assertEquals(3, b.size());
+    
+    HashBlock.Version[] versions = b.getVersions();
+
+    assertEqualBytes(bytes("ccc"), versions[0].getHashes());
+    assertEqualBytes(bytes("bb"), versions[1].getHashes());
+    assertEqualBytes(bytes("aaaa"), versions[2].getHashes());
+    assertEquals(3, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+
+  public void testOneContentThreeVersionsLocalHashGood() throws Exception {
+    testOneContentThreeVersionsLocalHashGood(1);
+    testOneContentThreeVersionsLocalHashGood(3);
+    testOneContentThreeVersionsLocalHashGood(100);
+  }
+
+
+  
   public void testUnfiltered(String exp, boolean isFiltered)
       throws Exception {
     String str = "Wicked witch of the west";
@@ -1010,6 +1298,51 @@ public class TestBlockHasher extends LockssTestCase {
 				      (rver == -1 || rver == cu.getVersion()))
 				     ? new IOException("Reading from hash input stream") : null,
 				     null);
+    }
+  }
+
+  public class MyLocalHashHandler implements BlockHasher.LocalHashHandler {
+    int nMatch = 0;
+    int nMismatch = 0;
+    int nMissing = 0;
+
+    MyLocalHashHandler() {
+      log.debug3("New LOcalHashHandler");
+    }
+    /**
+     * Local hash match
+     * @param curVer CachedUrl of the version for which mismatch was detected
+     */
+    public void match(CachedUrl curVer) {
+      nMatch++;
+      log.debug3("Match #" + nMatch);
+    }
+    public int getMatch() {
+      return nMatch;
+    }
+    /**
+     * Local hash mismatch
+     * @param curVer CachedUrl of the version for which mismatch was detected
+     */
+    public void mismatch(CachedUrl curVer) {
+      nMismatch++;
+      log.debug3("Mismatch #" + nMismatch);
+    }
+    public int getMismatch() {
+      return nMismatch;
+    }
+    /**
+     * Local hash missing
+     * @param curVer CachedUrl of the version without hash
+     * @param alg String name of hash algorithm
+     * @param hash byte array of computed hash
+     */
+    public void missing(CachedUrl curVer, String alg, byte[] hash) {
+      nMissing++;
+      log.debug3("Missing #" + nMissing);
+    }
+    public int getMissing() {
+      return nMissing;
     }
   }
   

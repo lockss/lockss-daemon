@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.33 2012-03-04 09:04:16 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.34 2013-07-07 04:05:44 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.devtools;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.security.MessageDigest;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.lockss.crawler.*;
@@ -534,11 +535,29 @@ public class CrawlRuleTester extends Thread {
     }
 
     /**
+     * getUnfilteredInputStream
+     *
+     * @return InputStream
+     */
+    public InputStream getUnfilteredInputStream(MessageDigest md) {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    /**
      * openForHashing
      *
      * @return InputStream
      */
     public InputStream openForHashing() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    /**
+     * openForHashing
+     * @param md MessageDigest for unfiltered content
+     * @return InputStream
+     */
+    public InputStream openForHashing(MessageDigest md) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -569,6 +588,9 @@ public class CrawlRuleTester extends Thread {
 
     public CIProperties getProperties() {
       return null;
+    }
+
+    public void addProperty(String key, String value) {
     }
 
     public void release() {

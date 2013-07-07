@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.63 2013-06-26 04:45:30 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.64 2013-07-07 04:05:44 dshr Exp $
  */
 
 /*
@@ -1153,6 +1153,34 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
+  }
+
+  public void testAddProperty() throws Exception {
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 2");
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream", props);
+
+    RepositoryNode.RepositoryNodeContents contents = leaf.getNodeContents();
+    props = contents.getProperties();
+    // close stream to allow the file to be renamed later
+    // XXX 'getProperties()' creates an input stream, and 'release()' just
+    // sets it to null.  The rename still fails in Windows unless the stream
+    // is closed first.
+    contents.getInputStream().close();
+    contents.release();
+
+    assertEquals("value 2", props.getProperty("test 1"));
+
+    contents.addProperty(CachedUrl.PROPERTY_CHECKSUM, "checksum");
+    contents.getInputStream().close();
+    contents.release();
+    props = leaf.getNodeContents().getProperties();
+    assertNotNull(props);
+    assertTrue(props.containsKey(CachedUrl.PROPERTY_CHECKSUM));
+    assertEquals("checksum", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+    
   }
 
   RepositoryNode createNodeWithCorruptProps(String url) throws Exception {
