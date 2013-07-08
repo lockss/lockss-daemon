@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRandom.java,v 1.7 2013-07-08 18:26:17 barry409 Exp $
+ * $Id: LockssRandom.java,v 1.8 2013-07-08 22:16:11 barry409 Exp $
  */
 
 /*
@@ -34,9 +34,6 @@ package org.lockss.util;
 
 /** Extension of java.util.Random that adds some missing methods. */
 public class LockssRandom extends java.util.Random {
-
-  /** A {@code LockssRandom} for general use. */
-  public static final LockssRandom GLOBAL = new LockssRandom();
 
   public LockssRandom() {
     super();
