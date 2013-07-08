@@ -513,7 +513,7 @@
     param[journal_id] = cddis
 
     au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
-    au < crawling ; exists ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
+    au < released ; manifest ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
     au < released ; crawling ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
 
@@ -1511,7 +1511,7 @@
     au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 >
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
-    au < manifest ; exists ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
+    au < released ; manifest ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
     au < testing ; exists ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
@@ -1914,7 +1914,7 @@
 
     param[journal_id] = kisup
 
-    au < crawling ; exists ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
+    au < released ; manifest ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
 
@@ -1940,8 +1940,8 @@
     au < exists ; exists ; 2005 ; Laboratory Investigation Volume 85 ; 2005 ; 85 >
     au < exists ; exists ; 2006 ; Laboratory Investigation Volume 86 ; 2006 ; 86 >
     au < exists ; exists ; 2007 ; Laboratory Investigation Volume 87 ; 2007 ; 87 >
-    au < manifest ; exists ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
-    au < testing ; exists ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
+    au < released ; manifest ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
+    au < released ; manifest ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
     au < testing ; exists ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
     au < released ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
     au < testing ; exists ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
