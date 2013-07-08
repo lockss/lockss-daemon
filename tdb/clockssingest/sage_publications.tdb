@@ -153,7 +153,7 @@
        pluginSuffix = ClockssHighWirePressH20Plugin
        
        au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
-       au < manifest ; exists ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 ; >
+       au < crawling ; exists ; 2013 ; Acta Radiologica Short Reports Volume 2 ; 2 ; >
        
   }
     
@@ -3794,7 +3794,7 @@
       au < released ; crawling ; 2012 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 116 ; 116 ; >
       au < crawling ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 117 ; 117 ; >
       au < crawling ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 118 ; 118 ; >
-      au < manifest ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 119 ; 119 ; >
+      au < crawling ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 119 ; 119 ; >
       au < expected ; exists ; 2013 ; Bulletin of Sociological Methodology/Bulletin de Méthodologie Sociologique Volume 120 ; 120 ; >
 
     }
@@ -27084,7 +27084,7 @@
       au < released ; crawling ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 146 ; 146 ; >
       au < released ; crawling ; 2012 ; Otolaryngology -- Head and Neck Surgery Volume 147 ; 147 ; >
       au < crawling ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 148 ; 148 ; >
-      au < manifest ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; >
+      au < crawling ; exists ; 2013 ; Otolaryngology -- Head and Neck Surgery Volume 149 ; 149 ; >
 
     }
 
@@ -30165,7 +30165,7 @@
       au < released ; crawling ; 2010 ; Race & Class Volume 52 ; 52 ; >
       au < released ; crawling ; 2011 ; Race & Class Volume 53 ; 53 ; >
       au < released ; crawling ; 2012 ; Race & Class Volume 54 ; 54 ; >
-      au < manifest ; exists ; 2013 ; Race & Class Volume 55 ; 55 ; >
+      au < crawling ; exists ; 2013 ; Race & Class Volume 55 ; 55 ; >
 
     }
 
@@ -38338,7 +38338,7 @@
     au < crawling ; exists ; 2010 ; Transactional Analysis Journal Volume 40 ; 40 ; >
     au < crawling ; exists ; 2011 ; Transactional Analysis Journal Volume 41 ; 41 ; >
     au < exists ; exists ; 2012 ; Transactional Analysis Journal Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2013 ; Transactional Analysis Journal Volume 43 ; 43 ; >
 
     }
 
@@ -38851,7 +38851,7 @@
         au < exists ; exists ; 2010 ; Health Services Management Research Volume 23 ; 23 ; >
         au < exists ; exists ; 2011 ; Health Services Management Research Volume 24 ; 24 ; >
         au < exists ; exists ; 2012 ; Health Services Management Research Volume 25 ; 25 ; >
-        au < manifest ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
+        au < crawling ; exists ; 2013 ; Health Services Management Research Volume 26 ; 26 ; >
   
       }
   
@@ -39022,7 +39022,7 @@
         au < exists ; exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 ; >
         au < exists ; exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 ; >
         au < exists ; exists ; 2012 ; Journal of Medical Screening Volume 19 ; 19 ; >
-        au < manifest ; exists ; 2013 ; Journal of Medical Screening Volume 20 ; 20 ; >
+        au < crawling ; exists ; 2013 ; Journal of Medical Screening Volume 20 ; 20 ; >
   
     }
   
@@ -39158,7 +39158,7 @@
         au < exists ; exists ; 2010 ; JRSM Short Reports Volume 1 ; 1 ; >
         au < exists ; exists ; 2011 ; JRSM Short Reports Volume 2 ; 2 ; >
         au < exists ; exists ; 2012 ; JRSM Short Reports Volume 3 ; 3 ; >
-        au < manifest ; exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 ; >
+        au < crawling ; exists ; 2013 ; JRSM Short Reports Volume 4 ; 4 ; >
   
     }
   
