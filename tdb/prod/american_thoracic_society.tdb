@@ -4,9 +4,6 @@
     name = American Thoracic Society
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; year ; name ; param[volume_name] >
-
   {
 
     title <
@@ -15,61 +12,126 @@
       eissn = 1535-4970 ;
       issnl = 1073-449X
     >
+    
+    {
+      
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://ajrccm.atsjournals.org/
 
-    param[base_url] = http://ajrccm.atsjournals.org/
-
-    au < released ; 1987 ; American Journal of Respiratory and Critical Care Medicine Volume 136 ; 136 >
-    au < released ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 137 ; 137 >
-    au < released ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 138 ; 138 >
-    au < released ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 139 ; 139 >
-    au < released ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 140 ; 140 >
-    au < released ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 141 ; 141 >
-    au < released ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 142 ; 142 >
-    au < released ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 143 ; 143 >
-    au < released ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 144 ; 144 >
-    au < released ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 145 ; 145 >
-    au < released ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 146 ; 146 >
-    au < released ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 147 ; 147 >
-    au < released ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 148 ; 148 >
-    au < released ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 149 ; 149 >
-    au < released ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 150 ; 150 >
-    au < released ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 151 ; 151 >
-    au < released ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 152 ; 152 >
-    au < released ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 153 ; 153 >
-    au < released ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 154 ; 154 >
-    au < released ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 155 ; 155 >
-    au < released ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 156 ; 156 >
-    au < released ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 157 ; 157 >
-    au < released ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 158 ; 158 >
-    au < released ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 159 ; 159 >
-    au < released ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 160 ; 160 >
-    au < released ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 161 ; 161 >
-    au < released ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 162 ; 162 >
-    au < released ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 163 ; 163 >
-    au < released ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 164 ; 164 >
-    au < released ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 165 ; 165 >
-    au < released ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 166 ; 166 >
-    au < released ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 167 ; 167 >
-    au < released ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 168 ; 168 >
-    au < released ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 169 ; 169 >
-    au < released ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 170 ; 170 >
-    au < released ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 171 ; 171 >
-    au < released ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 172 ; 172 >
-    au < released ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 173 ; 173 >
-    au < released ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 174 ; 174 >
-    au < released ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 175 ; 175 >
-    au < released ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 176 ; 176 >
-    au < released ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 177 ; 177 >
-    au < released ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 178 ; 178 >
-    au < released ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 179 ; 179 >
-    au < released ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 180 ; 180 >
-    au < released ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
-    au < released ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
-    au < released ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
-    au < released ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
-    au < released ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
-    au < released ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
-    au < manifest ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
+      au < down ; 1987 ; American Journal of Respiratory and Critical Care Medicine Volume 136 ; 136 >
+      au < down ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 137 ; 137 >
+      au < down ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 138 ; 138 >
+      au < down ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 139 ; 139 >
+      au < down ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 140 ; 140 >
+      au < down ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 141 ; 141 >
+      au < down ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 142 ; 142 >
+      au < down ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 143 ; 143 >
+      au < down ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 144 ; 144 >
+      au < down ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 145 ; 145 >
+      au < down ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 146 ; 146 >
+      au < down ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 147 ; 147 >
+      au < down ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 148 ; 148 >
+      au < down ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 149 ; 149 >
+      au < down ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 150 ; 150 >
+      au < down ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 151 ; 151 >
+      au < down ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 152 ; 152 >
+      au < down ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 153 ; 153 >
+      au < down ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 154 ; 154 >
+      au < down ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 155 ; 155 >
+      au < down ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 156 ; 156 >
+      au < down ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 157 ; 157 >
+      au < down ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 158 ; 158 >
+      au < down ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 159 ; 159 >
+      au < down ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 160 ; 160 >
+      au < down ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 161 ; 161 >
+      au < down ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 162 ; 162 >
+      au < down ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 163 ; 163 >
+      au < down ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 164 ; 164 >
+      au < down ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 165 ; 165 >
+      au < down ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 166 ; 166 >
+      au < down ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 167 ; 167 >
+      au < down ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 168 ; 168 >
+      au < down ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 169 ; 169 >
+      au < down ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 170 ; 170 >
+      au < down ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 171 ; 171 >
+      au < down ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 172 ; 172 >
+      au < down ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 173 ; 173 >
+      au < down ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 174 ; 174 >
+      au < down ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 175 ; 175 >
+      au < down ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 176 ; 176 >
+      au < down ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 177 ; 177 >
+      au < down ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 178 ; 178 >
+      au < down ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 179 ; 179 >
+      au < down ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 180 ; 180 >
+      au < down ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
+      au < down ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
+      au < down ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
+      au < down ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
+      au < down ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
+      au < down ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
+    
+    }
+  
+    {
+    
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.atsjournals.org/journal/ajrccm
+      
+      au < exists ; 1987 ; American Journal of Respiratory and Critical Care Medicine Volume 136 ; 136 >
+      au < exists ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 137 ; 137 >
+      au < exists ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 138 ; 138 >
+      au < exists ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 139 ; 139 >
+      au < exists ; 1989 ; American Journal of Respiratory and Critical Care Medicine Volume 140 ; 140 >
+      au < exists ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 141 ; 141 >
+      au < exists ; 1990 ; American Journal of Respiratory and Critical Care Medicine Volume 142 ; 142 >
+      au < exists ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 143 ; 143 >
+      au < exists ; 1991 ; American Journal of Respiratory and Critical Care Medicine Volume 144 ; 144 >
+      au < exists ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 145 ; 145 >
+      au < exists ; 1992 ; American Journal of Respiratory and Critical Care Medicine Volume 146 ; 146 >
+      au < exists ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 147 ; 147 >
+      au < exists ; 1993 ; American Journal of Respiratory and Critical Care Medicine Volume 148 ; 148 >
+      au < exists ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 149 ; 149 >
+      au < exists ; 1994 ; American Journal of Respiratory and Critical Care Medicine Volume 150 ; 150 >
+      au < exists ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 151 ; 151 >
+      au < exists ; 1995 ; American Journal of Respiratory and Critical Care Medicine Volume 152 ; 152 >
+      au < exists ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 153 ; 153 >
+      au < exists ; 1996 ; American Journal of Respiratory and Critical Care Medicine Volume 154 ; 154 >
+      au < exists ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 155 ; 155 >
+      au < exists ; 1997 ; American Journal of Respiratory and Critical Care Medicine Volume 156 ; 156 >
+      au < exists ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 157 ; 157 >
+      au < exists ; 1998 ; American Journal of Respiratory and Critical Care Medicine Volume 158 ; 158 >
+      au < exists ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 159 ; 159 >
+      au < exists ; 1999 ; American Journal of Respiratory and Critical Care Medicine Volume 160 ; 160 >
+      au < exists ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 161 ; 161 >
+      au < exists ; 2000 ; American Journal of Respiratory and Critical Care Medicine Volume 162 ; 162 >
+      au < exists ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 163 ; 163 >
+      au < exists ; 2001 ; American Journal of Respiratory and Critical Care Medicine Volume 164 ; 164 >
+      au < exists ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 165 ; 165 >
+      au < exists ; 2002 ; American Journal of Respiratory and Critical Care Medicine Volume 166 ; 166 >
+      au < exists ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 167 ; 167 >
+      au < exists ; 2003 ; American Journal of Respiratory and Critical Care Medicine Volume 168 ; 168 >
+      au < exists ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 169 ; 169 >
+      au < exists ; 2004 ; American Journal of Respiratory and Critical Care Medicine Volume 170 ; 170 >
+      au < exists ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 171 ; 171 >
+      au < exists ; 2005 ; American Journal of Respiratory and Critical Care Medicine Volume 172 ; 172 >
+      au < exists ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 173 ; 173 >
+      au < exists ; 2006 ; American Journal of Respiratory and Critical Care Medicine Volume 174 ; 174 >
+      au < exists ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 175 ; 175 >
+      au < exists ; 2007 ; American Journal of Respiratory and Critical Care Medicine Volume 176 ; 176 >
+      au < exists ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 177 ; 177 >
+      au < exists ; 2008 ; American Journal of Respiratory and Critical Care Medicine Volume 178 ; 178 >
+      au < exists ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 179 ; 179 >
+      au < exists ; 2009 ; American Journal of Respiratory and Critical Care Medicine Volume 180 ; 180 >
+      au < exists ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 181 ; 181 >
+      au < exists ; 2010 ; American Journal of Respiratory and Critical Care Medicine Volume 182 ; 182 >
+      au < exists ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 183 ; 183 >
+      au < exists ; 2011 ; American Journal of Respiratory and Critical Care Medicine Volume 184 ; 184 >
+      au < exists ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 185 ; 185 >
+      au < exists ; 2012 ; American Journal of Respiratory and Critical Care Medicine Volume 186 ; 186 >
+      au < exists ; 2013 ; American Journal of Respiratory and Critical Care Medicine Volume 187 ; 187 >
+    }
     
   }
 
@@ -82,57 +144,119 @@
       issnl = 1044-1549
     >
 
-    param[base_url] = http://ajrcmb.atsjournals.org/
+    {
+      
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://ajrcmb.atsjournals.org/
 
-    au < released ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
-    au < released ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
-    au < released ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
-    au < released ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
-    au < released ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
-    au < released ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
-    au < released ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
-    au < released ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 8 ; 8 >
-    au < released ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 9 ; 9 >
-    au < released ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 10 ; 10 >
-    au < released ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 11 ; 11 >
-    au < released ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 12 ; 12 >
-    au < released ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 13 ; 13 >
-    au < released ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 14 ; 14 >
-    au < released ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 15 ; 15 >
-    au < released ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
-    au < released ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
-    au < released ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
-    au < released ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
-    au < released ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
-    au < released ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
-    au < released ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 22 ; 22 >
-    au < released ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 23 ; 23 >
-    au < released ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 24 ; 24 >
-    au < released ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 25 ; 25 >
-    au < released ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 26 ; 26 >
-    au < released ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 27 ; 27 >
-    au < released ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 28 ; 28 >
-    au < released ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 29 ; 29 >
-    au < released ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 30 ; 30 >
-    au < released ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 31 ; 31 >
-    au < released ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 32 ; 32 >
-    au < released ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 33 ; 33 >
-    au < released ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 34 ; 34 >
-    au < released ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 35 ; 35 >
-    au < released ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 36 ; 36 >
-    au < released ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 37 ; 37 >
-    au < released ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 38 ; 38 >
-    au < released ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 39 ; 39 >
-    au < released ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 40 ; 40 >
-    au < released ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 41 ; 41 >
-    au < released ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
-    au < released ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
-    au < released ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
-    au < released ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
-    au < released ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
-    au < released ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
-    au < manifest ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
+      au < down ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
+      au < down ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
+      au < down ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
+      au < down ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
+      au < down ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
+      au < down ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
+      au < down ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
+      au < down ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 8 ; 8 >
+      au < down ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 9 ; 9 >
+      au < down ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 10 ; 10 >
+      au < down ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 11 ; 11 >
+      au < down ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 12 ; 12 >
+      au < down ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 13 ; 13 >
+      au < down ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 14 ; 14 >
+      au < down ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 15 ; 15 >
+      au < down ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
+      au < down ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
+      au < down ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
+      au < down ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
+      au < down ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
+      au < down ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
+      au < down ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 22 ; 22 >
+      au < down ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 23 ; 23 >
+      au < down ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 24 ; 24 >
+      au < down ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 25 ; 25 >
+      au < down ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 26 ; 26 >
+      au < down ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 27 ; 27 >
+      au < down ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 28 ; 28 >
+      au < down ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 29 ; 29 >
+      au < down ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 30 ; 30 >
+      au < down ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 31 ; 31 >
+      au < down ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 32 ; 32 >
+      au < down ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 33 ; 33 >
+      au < down ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 34 ; 34 >
+      au < down ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 35 ; 35 >
+      au < down ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 36 ; 36 >
+      au < down ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 37 ; 37 >
+      au < down ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 38 ; 38 >
+      au < down ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 39 ; 39 >
+      au < down ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 40 ; 40 >
+      au < down ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 41 ; 41 >
+      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
+      au < down ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
+      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
+      au < down ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
+      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
+      au < down ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
 
+      
+    }
+    
+    {
+    
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.atsjournals.org/journal/ajrcmb/
+
+      au < exists ; 1989 ; American Journal of Respiratory Cell and Molecular Biology Volume 1 ; 1 >
+      au < exists ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 2 ; 2 >
+      au < exists ; 1990 ; American Journal of Respiratory Cell and Molecular Biology Volume 3 ; 3 >
+      au < exists ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 4 ; 4 >
+      au < exists ; 1991 ; American Journal of Respiratory Cell and Molecular Biology Volume 5 ; 5 >
+      au < exists ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 6 ; 6 >
+      au < exists ; 1992 ; American Journal of Respiratory Cell and Molecular Biology Volume 7 ; 7 >
+      au < exists ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 8 ; 8 >
+      au < exists ; 1993 ; American Journal of Respiratory Cell and Molecular Biology Volume 9 ; 9 >
+      au < exists ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 10 ; 10 >
+      au < exists ; 1994 ; American Journal of Respiratory Cell and Molecular Biology Volume 11 ; 11 >
+      au < exists ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 12 ; 12 >
+      au < exists ; 1995 ; American Journal of Respiratory Cell and Molecular Biology Volume 13 ; 13 >
+      au < exists ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 14 ; 14 >
+      au < exists ; 1996 ; American Journal of Respiratory Cell and Molecular Biology Volume 15 ; 15 >
+      au < exists ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 16 ; 16 >
+      au < exists ; 1997 ; American Journal of Respiratory Cell and Molecular Biology Volume 17 ; 17 >
+      au < exists ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 18 ; 18 >
+      au < exists ; 1998 ; American Journal of Respiratory Cell and Molecular Biology Volume 19 ; 19 >
+      au < exists ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 20 ; 20 >
+      au < exists ; 1999 ; American Journal of Respiratory Cell and Molecular Biology Volume 21 ; 21 >
+      au < exists ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 22 ; 22 >
+      au < exists ; 2000 ; American Journal of Respiratory Cell and Molecular Biology Volume 23 ; 23 >
+      au < exists ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 24 ; 24 >
+      au < exists ; 2001 ; American Journal of Respiratory Cell and Molecular Biology Volume 25 ; 25 >
+      au < exists ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 26 ; 26 >
+      au < exists ; 2002 ; American Journal of Respiratory Cell and Molecular Biology Volume 27 ; 27 >
+      au < exists ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 28 ; 28 >
+      au < exists ; 2003 ; American Journal of Respiratory Cell and Molecular Biology Volume 29 ; 29 >
+      au < exists ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 30 ; 30 >
+      au < exists ; 2004 ; American Journal of Respiratory Cell and Molecular Biology Volume 31 ; 31 >
+      au < exists ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 32 ; 32 >
+      au < exists ; 2005 ; American Journal of Respiratory Cell and Molecular Biology Volume 33 ; 33 >
+      au < exists ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 34 ; 34 >
+      au < exists ; 2006 ; American Journal of Respiratory Cell and Molecular Biology Volume 35 ; 35 >
+      au < exists ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 36 ; 36 >
+      au < exists ; 2007 ; American Journal of Respiratory Cell and Molecular Biology Volume 37 ; 37 >
+      au < exists ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 38 ; 38 >
+      au < exists ; 2008 ; American Journal of Respiratory Cell and Molecular Biology Volume 39 ; 39 >
+      au < exists ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 40 ; 40 >
+      au < exists ; 2009 ; American Journal of Respiratory Cell and Molecular Biology Volume 41 ; 41 >
+      au < exists ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 42 ; 42 >
+      au < exists ; 2010 ; American Journal of Respiratory Cell and Molecular Biology Volume 43 ; 43 >
+      au < exists ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 44 ; 44 >
+      au < exists ; 2011 ; American Journal of Respiratory Cell and Molecular Biology Volume 45 ; 45 >
+      au < exists ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 46 ; 46 >
+      au < exists ; 2012 ; American Journal of Respiratory Cell and Molecular Biology Volume 47 ; 47 >
+      au < exists ; 2013 ; American Journal of Respiratory Cell and Molecular Biology Volume 48 ; 48 >
+    }
+    
   }
 
   {
@@ -142,19 +266,58 @@
       issn = 1546-3222 ;
       eissn = 1943-5665
     >
+    
+    {
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://pats.atsjournals.org/
+      
+      comment[continued_by] = 1943-5665
 
-    param[base_url] = http://pats.atsjournals.org/
+      au < down ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
+      au < down ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
+      au < down ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
+      au < down ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
+      au < down ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
+      au < down ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
+      au < down ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
+    }
+    
+    {
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.atsjournals.org/toc/pats/
+      
+      comment[continued_by] = 1943-5665
 
-    au < released ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
-    au < released ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
-    au < released ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
-    au < released ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
-    au < released ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
-    au < released ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
-    au < released ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
-    au < testing ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
-    au < testing ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
-    au < manifest ; 2013 ; Proceedings of the American Thoracic Society Volume 10 ; 10 >
+      au < exists ; 2004 ; Proceedings of the American Thoracic Society Volume 1 ; 1 >
+      au < exists ; 2005 ; Proceedings of the American Thoracic Society Volume 2 ; 2 >
+      au < exists ; 2006 ; Proceedings of the American Thoracic Society Volume 3 ; 3 >
+      au < exists ; 2007 ; Proceedings of the American Thoracic Society Volume 4 ; 4 >
+      au < exists ; 2008 ; Proceedings of the American Thoracic Society Volume 5 ; 5 >
+      au < exists ; 2009 ; Proceedings of the American Thoracic Society Volume 6 ; 6 >
+      au < exists ; 2010 ; Proceedings of the American Thoracic Society Volume 7 ; 7 >
+      au < exists ; 2011 ; Proceedings of the American Thoracic Society Volume 8 ; 8 >
+      au < exists ; 2012 ; Proceedings of the American Thoracic Society Volume 9 ; 9 >
+    }
+      
+  }
+  
+  {
+      title <
+      name = Annals of the American Thoracic Society ;
+      issn = 1943-5665 ;
+      eissn = 2325-6621
+     >
+      
+      comment[continued_from] = 1546-3222
+      comment[0] = name changed from Proceedings of the American Thoracic Society to Annals of the American Thoracic Society in 2013
+
+      plugin = needs.plugin
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.atsjournals.org/loi/annalsats/
+
+      au < exists ; 2013 ; Annals of the American Thoracic Society Volume 10 ; 10 >
 
   }
 
