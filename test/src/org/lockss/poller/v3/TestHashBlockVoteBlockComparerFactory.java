@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashBlockVoteBlockComparerFactory.java,v 1.1 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: TestHashBlockVoteBlockComparerFactory.java,v 1.2 2013-07-09 16:45:03 barry409 Exp $
  */
 
 /*
@@ -196,6 +196,33 @@ public class TestHashBlockVoteBlockComparerFactory extends LockssTestCase {
 
       voteBlock = makeVoteBlock(nonces[i], "aaa", "aaa", "aaa");
       assertTrue(comparer.sharesVersion(voteBlock));
+
+      // No versions in the VoteBlock is no shared version
+      voteBlock = makeVoteBlock(nonces[i]);
+      assertFalse(comparer.sharesVersion(voteBlock));
+    }
+  }
+
+  public void testCompareNoPollerVersions() throws Exception {
+    HashBlock ourHashBlock = makeHashBlock("http://example.com/foo");
+    V3Poller.HashIndexer hashIndexer = makeHashIndexer(ourHashBlock);
+    HashBlockVoteBlockComparerFactory factory =
+      HashBlockVoteBlockComparerFactory.makeFactory(ourHashBlock, hashIndexer);
+    for (int i = 0; i < nonces.length; i++) {
+      VoteBlockComparer comparer = factory.forIndex(i);
+
+      VoteBlock voteBlock;
+      voteBlock = makeVoteBlock(nonces[i], "aaa", "bbb", "ccc");
+      assertFalse(comparer.sharesVersion(voteBlock));
+
+      voteBlock = makeVoteBlock(nonces[i], "aaa");
+      assertFalse(comparer.sharesVersion(voteBlock));
+
+      voteBlock = makeVoteBlock(nonces[i], "aaa", "aaa", "aaa");
+      assertFalse(comparer.sharesVersion(voteBlock));
+
+      voteBlock = makeVoteBlock(nonces[i]);
+      assertFalse(comparer.sharesVersion(voteBlock));
     }
   }
 

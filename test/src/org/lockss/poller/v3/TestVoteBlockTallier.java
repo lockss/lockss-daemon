@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.12 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.13 2013-07-09 16:45:04 barry409 Exp $
  */
 
 /*
@@ -114,6 +114,14 @@ public class TestVoteBlockTallier extends LockssTestCase {
   VoteBlock makeVoteBlock() throws Exception {
     return makeVoteBlock(nonces[0], "aaa", "bbb", "ccc");
   }
+
+  VoteBlock makeVoteBlockDisagree() throws Exception {
+    return makeVoteBlock(nonces[0], "xxx", "yyy", "zzz");
+  }
+
+  VoteBlock makeVoteBlockNoVersions() throws Exception {
+    return makeVoteBlock(nonces[0]);
+  }
   
   private HashBlock makeHashBlock(String url) {
     MockCachedUrl cu = new MockCachedUrl(url);
@@ -154,6 +162,10 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
   private HashBlock makeHashBlock() throws Exception {
     return makeHashBlock("foo", "aaa", "bbb", "ccc");
+  }
+
+  private HashBlock makeHashBlockNoVersions() throws Exception {
+    return makeHashBlock("foo");
   }
 
   class MyHashIndexer implements V3Poller.HashIndexer {
@@ -199,7 +211,16 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
   public HashBlockVoteBlockComparerFactory
       makeComparerFactory() throws Exception {
-    HashBlock hashBlock = makeHashBlock();
+    return makeComparerFactory(makeHashBlock());
+  }
+
+  public HashBlockVoteBlockComparerFactory
+      makeComparerFactoryNoVersions() throws Exception {
+    return makeComparerFactory(makeHashBlockNoVersions());
+  }
+
+  public HashBlockVoteBlockComparerFactory
+      makeComparerFactory(HashBlock hashBlock) throws Exception {
     return HashBlockVoteBlockComparerFactory.
       makeFactory(hashBlock, makeHashIndexer(hashBlock));
   }
@@ -212,6 +233,8 @@ public class TestVoteBlockTallier extends LockssTestCase {
   public void testVoteWithBlockTallyPollerHas() throws Exception {
     VoteBlockTallier voteBlockTallier;
     BlockTally tally;
+
+    // tally.votes is: agree/disagree/pollerOnly/VoterOnly
 
     voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
     tally = new BlockTally(5, 75);
@@ -230,11 +253,26 @@ public class TestVoteBlockTallier extends LockssTestCase {
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("1/0/0/0", tally.votes());
+
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.vote(makeVoteBlockDisagree(), testPeers[0], 0);
+    assertEquals("0/1/0/0", tally.votes());
+
+    // VoteBlock with no versions is disagree.
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactory());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.vote(makeVoteBlockNoVersions(), testPeers[0], 0);
+    assertEquals("0/1/0/0", tally.votes());
   }
 
   public void testVoteWithBlockTallyPollerDoesntHave() throws Exception {
     VoteBlockTallier voteBlockTallier;
     BlockTally tally;
+
+    // tally.votes is: agree/disagree/pollerOnly/VoterOnly
 
     voteBlockTallier = VoteBlockTallier.make();
     tally = new BlockTally(5, 75);
@@ -246,13 +284,56 @@ public class TestVoteBlockTallier extends LockssTestCase {
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.voteMissing(testPeers[0]);
+    // Both poller and voter missing is "agree"
     assertEquals("1/0/0/0", tally.votes());
 
+    // VoterBlock with versions is disagree and poller-only
     voteBlockTallier = VoteBlockTallier.make();
     tally = new BlockTally(5, 75);
     voteBlockTallier.addTally(tally);
     voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
     assertEquals("0/1/0/1", tally.votes());
+
+    // VoterBlock with no versions is still disagree and poller-only
+    voteBlockTallier = VoteBlockTallier.make();
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.vote(makeVoteBlockNoVersions(), testPeers[0], 0);
+    assertEquals("0/1/0/1", tally.votes());
+  }
+
+  // Tests for the Poller having a URL with no versions.
+  public void testVoteWithBlockTallyPollerNoVersions() throws Exception {
+    VoteBlockTallier voteBlockTallier;
+    BlockTally tally;
+
+    // tally.votes is: agree/disagree/pollerOnly/VoterOnly
+
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.voteSpoiled(testPeers[0]);
+    assertEquals("0/0/0/0", tally.votes());
+
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.voteMissing(testPeers[0]);
+    assertEquals("0/1/1/0", tally.votes());
+
+    // The VoteBlock is disagree, if VoteBlock has versions.
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.vote(makeVoteBlock(), testPeers[0], 0);
+    assertEquals("0/1/0/0", tally.votes());
+
+    // The VoteBlock is disagree, if VoteBlock has no versions.
+    voteBlockTallier = VoteBlockTallier.make(makeComparerFactoryNoVersions());
+    tally = new BlockTally(5, 75);
+    voteBlockTallier.addTally(tally);
+    voteBlockTallier.vote(makeVoteBlockNoVersions(), testPeers[0], 0);
+    assertEquals("0/1/0/0", tally.votes());
   }
 
   class FailVoteCallback implements VoteBlockTallier.VoteCallback {
