@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockVoteBlockComparerFactory.java,v 1.1 2013-06-03 18:52:54 barry409 Exp $
+ * $Id: TestVoteBlockVoteBlockComparerFactory.java,v 1.2 2013-07-09 16:59:23 barry409 Exp $
  */
 
 /*
@@ -101,6 +101,29 @@ public class TestVoteBlockVoteBlockComparerFactory extends LockssTestCase {
 
     voteBlock = makeVoteBlock(nonce, "aaa", "aaa", "aaa");
     assertTrue(comparer.sharesVersion(voteBlock));
+
+    voteBlock = makeVoteBlock(nonce);
+    assertFalse(comparer.sharesVersion(voteBlock));
+  }
+
+  public void testCompareNoVoterVersions() throws Exception {
+    VoteBlock ourVoteBlock = makeVoteBlock(nonce);
+    VoteBlockComparer comparer =
+      VoteBlockVoteBlockComparerFactory.make(ourVoteBlock);
+
+    VoteBlock voteBlock;
+
+    voteBlock = makeVoteBlock(nonce, "aaa", "bbb", "ccc");
+    assertFalse(comparer.sharesVersion(voteBlock));
+
+    voteBlock = makeVoteBlock(nonce, "aaa");
+    assertFalse(comparer.sharesVersion(voteBlock));
+
+    voteBlock = makeVoteBlock(nonce, "aaa", "aaa", "aaa");
+    assertFalse(comparer.sharesVersion(voteBlock));
+
+    voteBlock = makeVoteBlock(nonce);
+    assertFalse(comparer.sharesVersion(voteBlock));
   }
 
   public void testCompareLocalHashError() throws Exception {
