@@ -24,10 +24,10 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[notReady] = RU4744, empty pdf get
   
-    au < releasing ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
+    au < released ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
     au < notReady ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 >
-    au < releasing ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 >
-    au < releasing ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 >
+    au < released ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 >
+    au < released ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 >
     au < released ; 2005 ; Journal of Transport Economics and Policy Volume 39 ; 39 >
     au < released ; 2006 ; Journal of Transport Economics and Policy Volume 40 ; 40 >
     au < released ; 2007 ; Journal of Transport Economics and Policy Volume 41 ; 41 >
