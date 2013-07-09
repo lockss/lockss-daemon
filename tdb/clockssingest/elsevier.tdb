@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Elsevier ;
+    info[contract] = 2008
+  >
+  
+  {
+  
+    title <
+      name = Elsevier Source Content
+    >
+    
+    plugin = org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/
+    proxy = DIRECT
+    implicit < status ; year ; year2 ; name ; param[year] >
+    
+    au < manifest ; exists ; 2009 ; Elsevier Source Content 2009 ; 2009 >
+    au < manifest ; exists ; 2010 ; Elsevier Source Content 2010 ; 2010 >
+    au < manifest ; exists ; 2011 ; Elsevier Source Content 2011 ; 2011 >
+    au < manifest ; exists ; 2012 ; Elsevier Source Content 2012 ; 2012 >
+    
+  }
+
+}

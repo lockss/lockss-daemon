@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Laser Institute of America ;
+    info[contract] = 2011
+  >
+  
+  {
+  
+    title <
+      name = Journal of Laser Applications ;
+      issn = 1042-346X
+      
+    >
+    
+    plugin = org.lockss.plugin.laserinstituteofamerica.ClockssLaserInstituteOfAmericaSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lia-released/
+    proxy = DIRECT
+    comment[publishing_platform] = Another publisher on the AIP platform
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < manifest ; exists ; 2011 ; Journal of Laser Applications Volume 23 Issue 1-4 ; 2011 >
+    au < manifest ; exists ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2013 >
+    
+
+  }
+
+}
