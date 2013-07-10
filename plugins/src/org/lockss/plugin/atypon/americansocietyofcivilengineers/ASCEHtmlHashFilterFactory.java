@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.2 2013-06-24 22:50:23 ldoan Exp $
+ * $Id: ASCEHtmlHashFilterFactory.java,v 1.3 2013-07-10 16:54:54 aishizaki Exp $
  */
 
 /*
@@ -47,8 +47,11 @@ public class ASCEHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // <div class="welcome stackContents"> - institutionBanner,
         // loginIdentity, and linkList topLinks menu
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class",
-                                              "welcome stackContents"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "welcome stackContents"),
+        //
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+        //
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mainMenu"),
         // <div id="prevNextNav"> - rss
 	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
         // <div id="tocTools"> - view Cart line
@@ -62,7 +65,7 @@ public class ASCEHtmlHashFilterFactory implements FilterFactory {
 	HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
 	// footer and footer_message
 	HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        new TagNameFilter("script"),
+          new TagNameFilter("script"),
     };
     return new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));

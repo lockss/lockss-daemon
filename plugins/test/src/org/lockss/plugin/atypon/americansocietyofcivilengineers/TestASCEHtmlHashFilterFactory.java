@@ -1,4 +1,4 @@
-/*  $Id: TestASCEHtmlHashFilterFactory.java,v 1.2 2013-06-24 22:54:10 ldoan Exp $
+/*  $Id: TestASCEHtmlHashFilterFactory.java,v 1.3 2013-07-10 16:54:54 aishizaki Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -270,6 +270,20 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutFooter =
       "<div class=\"block\"></div>";
 
+  private static final String withMainMenu = 
+      "<div class=\"mainMenu\">  <ul class=\"nav menu\"             <li class=\"\">"+
+      "    <a href=\"/journals\">Journals</a>"+
+      "</li>" +       
+      "<li class=\"\">" +
+      "    <a href=\"/ebooks\">E-Books</a>" +
+      "</li>>"+
+      "</div>Hello World";
+  private static final String withoutMainMenu = "Hello World";
+  
+  private static final String withStylesheets = 
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/jsp/_style2/_pagebuilder/reset-fonts-grids.css\">Hello World";
+  private static final String withoutStylesheets ="Hello World";
+  
   /*
    *  Compare Html and HtmlHashFiltered
    */
@@ -316,5 +330,17 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withFooter), Constants.DEFAULT_ENCODING);
     assertEquals(withoutFooter, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testWithStyleSheets() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withStylesheets), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutStylesheets, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testWithMainMenu() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withMainMenu), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutMainMenu, StringUtil.fromInputStream(actIn));
   }
 }

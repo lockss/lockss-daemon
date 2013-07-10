@@ -23,6 +23,11 @@
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
   </entry>
+  <!-- adding a plugin_feature_version_map to child ASCE
+       to track Poll version changes (additions to hash filter)
+       MUST update that child's feature_version_map when updating
+       this one -- hope to fix this, because it's a hassle
+   -->
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
