@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.267 2013-06-17 18:18:51 barry409 Exp $
+ * $Id: PollManager.java,v 1.268 2013-07-10 18:49:09 tlipkis Exp $
  */
 
 /*
@@ -318,22 +318,18 @@ public class PollManager
      * @return true if we have a current, active V3Poller for au
      */
     boolean isPollRunning(ArchivalUnit au) {
-      if (au == null || au.getAuId() == null) {
-	throw new NullPointerException("Passed a null AU or AU with null ID " 
-				       + "to isPollRunning!");
+      if (au == null) {
+	throw new NullPointerException("isPollRunning: null AU");
       }
-      synchronized (pollMapLock) {
-	for (PollManagerEntry pme : thePolls.values()) {
-	  if (au.getAuId().equals(pme.getPollSpec().getAuId())) {
-	    if (pme.getPoll() instanceof V3Poller) {
-	      // todo(bhayes): is the isPollActive check required for
-	      // V3? Could this be replaced with forAu(au) and then a
-	      // loop over that Collection looking for V3Poller and
-	      // isPollActive?
-	      if (pme.isPollActive()) {
-		return true;
-	      }
-	    }
+      String auid = au.getAuId();
+      if (auid == null) {
+	throw new NullPointerException("isPollRunning: null auid");
+      }
+
+      for (PollManagerEntry pme : forAuId(auid)) {
+	if (pme.getPoll() instanceof V3Poller) {
+	  if (pme.isPollActive()) {
+	    return true;
 	  }
 	}
       }
@@ -344,12 +340,15 @@ public class PollManager
      * @return a Set of PollManagerEntries which are current, and are
      * concerned with this au.
      */
+    // Probably this can be replaced by (or call) forAuId.  Keeping them
+    // separate for now out of caution.  Are there any situations in which
+    // comparing the auid to the PollSpec's auid differs from comparing the
+    // au to the poll's au?  And there's probably no reason this needs to
+    // return a Set.
     Set<PollManagerEntry> forAu(ArchivalUnit au) {
       Set<PollManagerEntry> forAu = new HashSet<PollManagerEntry>();
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
-	  // todo(bhayes): why does isPollRunning use the AUID to
-	  // decide equality, and this code use the ArchivalUnit?
 	  ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
 	  if (pau == au) {
 	    forAu.add(pme);
@@ -359,6 +358,22 @@ public class PollManager
       return forAu;
     }
 
+    /**
+     * @return a Collection of current PollManagerEntries for the specified
+     * auid.
+     */
+    Collection<PollManagerEntry> forAuId(String auid) {
+      Collection<PollManagerEntry> res = new ArrayList<PollManagerEntry>();
+      synchronized (pollMapLock) {
+	for (PollManagerEntry pme : thePolls.values()) {
+	  if (auid.equals(pme.getPollSpec().getAuId())) {
+	    res.add(pme);
+	  }
+	}
+      }
+      return res;
+    }
+
     /** Allow the current poll to expire. It will no longer be
      * available from getCurrentPoll, but will be available in
      * the accessors for recent polls. 
@@ -366,16 +381,18 @@ public class PollManager
      * is not complete.
      */
     PollManagerEntry allowToExpire(String key) {
+      PollManagerEntry pme = getCurrentPoll(key);
+      if (!pme.isPollCompleted()) { 
+	throw new IllegalStateException("Poll "+key+
+					" should have been completed before" +
+					" it was expired.");
+      }
       synchronized (pollMapLock) {
-	PollManagerEntry pme = thePolls.remove(key);
-	if (pme != null && pme.poll != null) {
-	  if (!pme.isPollCompleted()) { 
-	    throw new IllegalStateException("Poll "+key+
-	      " should have been completed before it was expired.");
-	  }
-	  theRecentPolls.put(key, pme);
+	PollManagerEntry pme1 = thePolls.remove(key);
+	if (pme1 != null && pme1.poll != null) {
+	  theRecentPolls.put(key, pme1);
 	}
-	return pme;
+	return pme1;
       }
     }
  
@@ -500,14 +517,19 @@ public class PollManager
      * @deprecated  This method may be removed in a future release.
      */
     boolean isPollRunning(PollSpec spec) {
+      PollManagerEntry ent = forPollSpec(spec);
+      return ent != null && !ent.isPollCompleted();
+    }
+
+    PollManagerEntry forPollSpec(PollSpec spec) {
       synchronized (pollMapLock) {
 	for (PollManagerEntry pme : thePolls.values()) {
 	  if (pme.isSamePoll(spec)) {
-	    return !pme.isPollCompleted();
+	    return pme;
 	  }
 	}
+	return null;
       }
-      return false;
     }
 
     // Used only in V1PollFactory.
@@ -526,14 +548,10 @@ public class PollManager
     Iterator<PollSpec> getActivePollSpecIterator(ArchivalUnit au,
 						 BasePoll dontIncludePoll) {
       Set<PollSpec> pollspecs = new HashSet<PollSpec>();
-      synchronized (pollMapLock) {
-	for (PollManagerEntry pme : thePolls.values()) {
-	  ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
-	  if (pau == au &&
-	      pme.poll != dontIncludePoll &&
-	      !pme.isPollCompleted()) {
-	    pollspecs.add(pme.poll.getPollSpec());
-	  }
+      for (PollManagerEntry pme : forAu(au)) {
+	if (pme.poll != dontIncludePoll &&
+	    !pme.isPollCompleted()) {
+	  pollspecs.add(pme.poll.getPollSpec());
 	}
       }
       return (pollspecs.iterator());
