@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.24 2013-06-19 22:56:49 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.25 2013-07-10 21:59:20 fergaloy-sf Exp $
  */
 
 /*
@@ -637,12 +637,12 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Derby definition of a big integer primary key column with a value
   // automatically generated from a sequence.
-  private static final String BIGINT_SERIAL_PK_DERBY =
+  protected static final String BIGINT_SERIAL_PK_DERBY =
       "bigint primary key generated always as identity";
 
   // PostgreSQL definition of a big integer primary key column with a value
   // automatically generated from a sequence.
-  private static final String BIGINT_SERIAL_PK_PG = "bigserial primary key";
+  protected static final String BIGINT_SERIAL_PK_PG = "bigserial primary key";
 
   // Query to create the table for recording bibliobraphic metadata for an
   // article.
@@ -776,7 +776,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording archival units.
-  private static final String CREATE_AU_TABLE_QUERY = "create table "
+  protected static final String CREATE_AU_TABLE_QUERY = "create table "
       + AU_TABLE + " ("
       + AU_SEQ_COLUMN + " --BigintSerialPk--,"
       + PLUGIN_SEQ_COLUMN + " bigint not null references " + PLUGIN_TABLE
@@ -784,7 +784,7 @@ public class DbManager extends BaseLockssDaemonManager
       + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null)";
 
   // Query to create the table for recording archival units metadata.
-  private static final String CREATE_AU_MD_TABLE_QUERY = "create table "
+  protected static final String CREATE_AU_MD_TABLE_QUERY = "create table "
       + AU_MD_TABLE + " ("
       + AU_MD_SEQ_COLUMN + " --BigintSerialPk--,"
       + AU_SEQ_COLUMN + " bigint not null references " + AU_TABLE
@@ -794,14 +794,15 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata item types.
-  private static final String CREATE_MD_ITEM_TYPE_TABLE_QUERY = "create table "
+  protected static final String CREATE_MD_ITEM_TYPE_TABLE_QUERY = "create "
+      + "table "
       + MD_ITEM_TYPE_TABLE + " ("
       + MD_ITEM_TYPE_SEQ_COLUMN + " --BigintSerialPk--,"
       + TYPE_NAME_COLUMN + " varchar(" + MAX_TYPE_NAME_COLUMN + ") not null"
       + ")";
 
   // Query to create the table for recording metadata items.
-  private static final String CREATE_MD_ITEM_TABLE_QUERY = "create table "
+  protected static final String CREATE_MD_ITEM_TABLE_QUERY = "create table "
       + MD_ITEM_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " --BigintSerialPk--,"
       + PARENT_SEQ_COLUMN + " bigint references " + MD_ITEM_TABLE
@@ -816,8 +817,8 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items names.
-  private static final String CREATE_MD_ITEM_NAME_TABLE_QUERY = "create table "
-      + MD_ITEM_NAME_TABLE + " ("
+  protected static final String CREATE_MD_ITEM_NAME_TABLE_QUERY = "create "
+      + "table " + MD_ITEM_NAME_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
       + NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null,"
@@ -825,7 +826,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata keys.
-  private static final String CREATE_MD_KEY_TABLE_QUERY = "create table "
+  protected static final String CREATE_MD_KEY_TABLE_QUERY = "create table "
       + MD_KEY_TABLE + " ("
       + MD_KEY_SEQ_COLUMN + " --BigintSerialPk--,"
       + KEY_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null"
@@ -833,7 +834,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Query to create the table for recording metadata items generic key/value
   // pairs.
-  private static final String CREATE_MD_TABLE_QUERY = "create table "
+  protected static final String CREATE_MD_TABLE_QUERY = "create table "
       + MD_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -843,7 +844,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording bibliographic items.
-  private static final String CREATE_BIB_ITEM_TABLE_QUERY = "create table "
+  protected static final String CREATE_BIB_ITEM_TABLE_QUERY = "create table "
       + BIB_ITEM_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -855,7 +856,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items URLs.
-  private static final String CREATE_URL_TABLE_QUERY = "create table "
+  protected static final String CREATE_URL_TABLE_QUERY = "create table "
       + URL_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -864,7 +865,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items authors.
-  private static final String CREATE_AUTHOR_TABLE_QUERY = "create table "
+  protected static final String CREATE_AUTHOR_TABLE_QUERY = "create table "
       + AUTHOR_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -873,7 +874,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items keywords.
-  private static final String CREATE_KEYWORD_TABLE_QUERY = "create table "
+  protected static final String CREATE_KEYWORD_TABLE_QUERY = "create table "
       + KEYWORD_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -881,7 +882,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items DOIs.
-  private static final String CREATE_DOI_TABLE_QUERY = "create table "
+  protected static final String CREATE_DOI_TABLE_QUERY = "create table "
       + DOI_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -889,7 +890,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items ISSNs.
-  private static final String CREATE_ISSN_TABLE_QUERY = "create table "
+  protected static final String CREATE_ISSN_TABLE_QUERY = "create table "
       + ISSN_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -898,7 +899,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording metadata items ISBNs.
-  private static final String CREATE_ISBN_TABLE_QUERY = "create table "
+  protected static final String CREATE_ISBN_TABLE_QUERY = "create table "
       + ISBN_TABLE + " ("
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
       + " (" + MD_ITEM_SEQ_COLUMN + ") on delete cascade,"
@@ -907,14 +908,14 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording publishers.
-  private static final String CREATE_PUBLISHER_TABLE_QUERY = "create table "
+  protected static final String CREATE_PUBLISHER_TABLE_QUERY = "create table "
       + PUBLISHER_TABLE + " ("
       + PUBLISHER_SEQ_COLUMN + " --BigintSerialPk--,"
       + PUBLISHER_NAME_COLUMN + " varchar(" + MAX_NAME_COLUMN + ") not null"
       + ")";
 
   // Query to create the table for recording publications.
-  private static final String CREATE_PUBLICATION_TABLE_QUERY = "create table "
+  protected static final String CREATE_PUBLICATION_TABLE_QUERY = "create table "
       + PUBLICATION_TABLE + " ("
       + PUBLICATION_SEQ_COLUMN + " --BigintSerialPk--,"
       + MD_ITEM_SEQ_COLUMN + " bigint not null references " + MD_ITEM_TABLE
@@ -925,21 +926,21 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for recording pending AUs to index.
-  private static final String CREATE_PENDING_AU_TABLE_QUERY = "create table "
+  protected static final String CREATE_PENDING_AU_TABLE_QUERY = "create table "
       + PENDING_AU_TABLE + " ("
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
       + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null,"
       + PRIORITY_COLUMN + " bigint not null)";
 
   // Query to create the table for recording versions.
-  private static final String CREATE_VERSION_TABLE_QUERY = "create table "
+  protected static final String CREATE_VERSION_TABLE_QUERY = "create table "
       + VERSION_TABLE + " ("
       + SYSTEM_COLUMN + " varchar(" + MAX_SYSTEM_COLUMN + ") not null,"
       + VERSION_COLUMN + " smallint not null"
       + ")";
 
   // Query to create the table for recording requests used for COUNTER reports.
-  private static final String REQUEST_TABLE_CREATE_QUERY = "create table "
+  protected static final String REQUEST_TABLE_CREATE_QUERY = "create table "
       + COUNTER_REQUEST_TABLE + " ("
       + URL_COLUMN + " varchar(" + MAX_URL_COLUMN + ") NOT NULL, "
       + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
@@ -950,7 +951,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Query to create the table for recording book type aggregates (Full vs.
   // Section) used for COUNTER reports.
-  private static final String BOOK_TYPE_AGGREGATES_TABLE_CREATE_QUERY =
+  protected static final String BOOK_TYPE_AGGREGATES_TABLE_CREATE_QUERY =
       "create table " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE + " ("
       + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_PUBLICATION_SEQ_BOOK_TYPE_AGGREGATES"
@@ -963,7 +964,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Query to create the table for recording journal type aggregates (PDF vs.
   // HTML) used for COUNTER reports.
-  private static final String JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY =
+  protected static final String JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY =
       "create table " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " ("
       + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_PUBLICATION_SEQ_JOURNAL_TYPE_AGGREGATES"
@@ -977,7 +978,7 @@ public class DbManager extends BaseLockssDaemonManager
 
   // Query to create the table for recording journal publication year aggregates
   // used for COUNTER reports.
-  private static final String JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_QUERY =
+  protected static final String JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_QUERY =
       "create table " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " ("
       + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_PUBLICATION_SEQ_JOURNAL_PUBYEAR_AGGREGATE"
@@ -989,14 +990,15 @@ public class DbManager extends BaseLockssDaemonManager
       + REQUESTS_COLUMN + " integer NOT NULL)";
 
   // Query to create the table for platforms.
-  private static final String CREATE_PLATFORM_TABLE_QUERY = "create table "
+  protected static final String CREATE_PLATFORM_TABLE_QUERY = "create table "
       + PLATFORM_TABLE + " ("
       + PLATFORM_SEQ_COLUMN + " --BigintSerialPk--,"
       + PLATFORM_NAME_COLUMN + " varchar(" + MAX_PLATFORM_COLUMN + ") not null"
       + ")";
 
   // Query to create the table for subscriptions.
-  private static final String CREATE_SUBSCRIPTION_TABLE_QUERY = "create table "
+  protected static final String CREATE_SUBSCRIPTION_TABLE_QUERY =
+      "create table "
       + SUBSCRIPTION_TABLE + " ("
       + SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
       + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
@@ -1008,7 +1010,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for subscription ranges.
-  private static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY =
+  protected static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY =
       "create table "
       + SUBSCRIPTION_RANGE_TABLE + " ("
       + SUBSCRIPTION_SEQ_COLUMN + " bigint NOT NULL"
@@ -1019,7 +1021,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for unconfigured Archival Units.
-  private static final String CREATE_UNCONFIGURED_AU_TABLE_QUERY = "create "
+  protected static final String CREATE_UNCONFIGURED_AU_TABLE_QUERY = "create "
       + "table "
       + UNCONFIGURED_AU_TABLE + " ("
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
@@ -1027,7 +1029,7 @@ public class DbManager extends BaseLockssDaemonManager
       + ")";
 
   // Query to create the table for Archival Unit problems.
-  private static final String CREATE_AU_PROBLEM_TABLE_QUERY = "create table "
+  protected static final String CREATE_AU_PROBLEM_TABLE_QUERY = "create table "
       + AU_PROBLEM_TABLE + " ("
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
       + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null,"
@@ -1567,7 +1569,8 @@ public class DbManager extends BaseLockssDaemonManager
 	+ "parameter style java no sql", };
 
   // SQL statements that create the necessary version 3 indices.
-  private static final String[] VERSION_3_INDEX_CREATE_QUERIES = new String[] {
+  protected static final String[] VERSION_3_INDEX_CREATE_QUERIES =
+    new String[] {
     "create unique index idx1_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
     + "(" + PLUGIN_ID_COLUMN + ")",
 
@@ -1622,7 +1625,8 @@ public class DbManager extends BaseLockssDaemonManager
     }};
 
   // SQL statements that create the necessary version 4 indices.
-  private static final String[] VERSION_4_INDEX_CREATE_QUERIES = new String[] {
+  protected static final String[] VERSION_4_INDEX_CREATE_QUERIES =
+    new String[] {
     "create unique index idx1_" + UNCONFIGURED_AU_TABLE
     + " on " + UNCONFIGURED_AU_TABLE
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")",
@@ -1651,7 +1655,7 @@ public class DbManager extends BaseLockssDaemonManager
       + " from " + PLUGIN_TABLE;
 
   // Query to add a platform.
-  private static final String INSERT_PLATFORM_QUERY = "insert into "
+  protected static final String INSERT_PLATFORM_QUERY = "insert into "
       + PLATFORM_TABLE
       + "(" + PLATFORM_SEQ_COLUMN
       + "," + PLATFORM_NAME_COLUMN
@@ -1683,7 +1687,8 @@ public class DbManager extends BaseLockssDaemonManager
     }};
 
   // SQL statements that create the necessary version 5 indices.
-  private static final String[] VERSION_5_INDEX_CREATE_QUERIES = new String[] {
+  protected static final String[] VERSION_5_INDEX_CREATE_QUERIES =
+    new String[] {
     "create index idx1_" + AU_PROBLEM_TABLE
     + " on " + AU_PROBLEM_TABLE
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
@@ -1738,7 +1743,8 @@ public class DbManager extends BaseLockssDaemonManager
       + ") values (?, ?, ?)";
 
   // SQL statements that create the necessary version 6 indices.
-  private static final String[] VERSION_6_INDEX_CREATE_QUERIES = new String[] {
+  protected static final String[] VERSION_6_INDEX_CREATE_QUERIES =
+    new String[] {
     "create unique index idx2_" + ISBN_TABLE
     + " on " + ISBN_TABLE
     + "(" + MD_ITEM_SEQ_COLUMN + "," + ISBN_COLUMN + "," + ISBN_TYPE_COLUMN
@@ -1750,7 +1756,8 @@ public class DbManager extends BaseLockssDaemonManager
   };
 
   // SQL statements that create the necessary version 7 indices.
-  private static final String[] VERSION_7_INDEX_CREATE_QUERIES = new String[] {
+  protected static final String[] VERSION_7_INDEX_CREATE_QUERIES =
+    new String[] {
     "create index idx2_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
     + "(" + PARENT_SEQ_COLUMN + ")",
     "create index idx3_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
@@ -1780,7 +1787,7 @@ public class DbManager extends BaseLockssDaemonManager
   private static final String COLUMN_SIZE = "COLUMN_SIZE";
   private static final String FUNCTION_NAME = "FUNCTION_NAME";
   private static final String TYPE_NAME = "TYPE_NAME";
-  private static final String[] TABLE_TYPES = new String[] {"TABLE"};
+  protected static final String[] TABLE_TYPES = new String[] {"TABLE"};
 
   private static final String DATABASE_VERSION_TABLE_SYSTEM = "database";
 
@@ -1792,14 +1799,14 @@ public class DbManager extends BaseLockssDaemonManager
       + "'";
 
   // Query to insert a type of metadata item.
-  private static final String INSERT_MD_ITEM_TYPE_QUERY = "insert into "
+  protected static final String INSERT_MD_ITEM_TYPE_QUERY = "insert into "
       + MD_ITEM_TYPE_TABLE
       + "(" + MD_ITEM_TYPE_SEQ_COLUMN
       + "," + TYPE_NAME_COLUMN
       + ") values (default,?)";
 
   // Query to insert the database version.
-  private static final String INSERT_DB_VERSION_QUERY = "insert into "
+  protected static final String INSERT_VERSION_QUERY = "insert into "
       + VERSION_TABLE
       + "(" + SYSTEM_COLUMN
       + "," + VERSION_COLUMN
@@ -1962,7 +1969,7 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     // No: Create the datasource.
-    dataSource = createDataSource(dataSourceConfig);
+    dataSource = createDataSource(dataSourceConfig.get("className"));
 
     // Check whether the PostgreSQL database is being used.
     if (isTypePostgresql()) {
@@ -2000,7 +2007,7 @@ public class DbManager extends BaseLockssDaemonManager
 	log.debug3(DEBUG_HEADER + "databaseName = " + databaseName);
 
       // Create the schema if it does not exist.
-      createPostgresqlSchemaIfMissing(databaseName);
+      createPostgresqlSchemaIfMissing(databaseName, dataSource);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -2101,7 +2108,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred getting the connection.
    */
-  private Connection getConnectionBeforeReady(DataSource ds)
+  protected Connection getConnectionBeforeReady(DataSource ds)
       throws DbException {
     return getConnectionBeforeReady(ds, maxRetryCount, retryDelay);
   }
@@ -2242,7 +2249,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private int getDatabaseVersionBeforeReady(Connection conn)
+  protected int getDatabaseVersionBeforeReady(Connection conn)
       throws DbException {
     final String DEBUG_HEADER = "getDatabaseVersionBeforeReady(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
@@ -2595,10 +2602,7 @@ public class DbManager extends BaseLockssDaemonManager
     // Check whether the table needs to be created.
     if (!tableExistsBeforeReady(conn, tableName)) {
       // Yes: Create it.
-      executeBatchBeforeReady(conn, new String[] { tableCreateSql });
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "Table '" + tableName + "' created.");
-      logTableSchemaBeforeReady(conn, tableName);
+      createTableBeforeReady(conn, tableName, tableCreateSql);
       return true;
     } else {
       // No.
@@ -2606,6 +2610,50 @@ public class DbManager extends BaseLockssDaemonManager
 	  + "' exists - Not creating it.");
       return false;
     }
+  }
+
+  /**
+   * Creates a database table.
+   * 
+   * @param conn
+   *          A connection with the database connection to be used.
+   * @param tableName
+   *          A String with the name of the table to create, if missing.
+   * @param tableCreateSql
+   *          A String with the SQL code used to create the table, if missing.
+   * @return <code>true</code> if the table did not exist and it was created,
+   *         <code>false</code> otherwise.
+   * @throws DbMigratorException
+   *           if any problem occurred creating the table.
+   */
+  protected void createTableBeforeReady(Connection conn, String tableName,
+      String tableCreateSql) throws DbException {
+    final String DEBUG_HEADER = "createTable(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "tableName = '" + tableName + "'.");
+      log.debug2(DEBUG_HEADER + "tableCreateSql = '" + tableCreateSql + "'.");
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection.");
+    }
+
+    PreparedStatement statement = null;
+
+    // Create the table.
+    try {
+      statement = prepareStatementBeforeReady(conn,
+	  localizeCreateQuery(tableCreateSql));
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "Table '" + tableName + "' created.");
+
+    logTableSchemaBeforeReady(conn, tableName);
   }
 
   /**
@@ -2841,14 +2889,14 @@ public class DbManager extends BaseLockssDaemonManager
 
     try {
       insertVersion =
-	  prepareStatementBeforeReady(conn, INSERT_DB_VERSION_QUERY);
+	  prepareStatementBeforeReady(conn, INSERT_VERSION_QUERY);
       insertVersion.setString(1, DATABASE_VERSION_TABLE_SYSTEM);
       insertVersion.setShort(2, (short)version);
 
       addedCount = executeUpdateBeforeReady(insertVersion);
     } catch (SQLException sqle) {
       log.error("Cannot add the database version", sqle);
-      log.error("SQL = '" + INSERT_DB_VERSION_QUERY + "'.");
+      log.error("SQL = '" + INSERT_VERSION_QUERY + "'.");
       log.error("version = " + version + ".");
       log.error("DATABASE_VERSION_TABLE_SYSTEM = '"
 	  + DATABASE_VERSION_TABLE_SYSTEM + "'.");
@@ -2928,6 +2976,27 @@ public class DbManager extends BaseLockssDaemonManager
       logger.error("Exception caught committing the connection", sqle);
       DbManager.safeRollbackAndClose(conn);
       throw new DbException("Cannot commit the transaction", sqle);
+    }
+  }
+
+  /**
+   * Rolls back a transaction.
+   * 
+   * @param conn
+   *          A connection with the database connection to be rolled back.
+   * @param logger
+   *          A Logger used to report errors.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public static void rollback(Connection conn, Logger logger)
+      throws DbException {
+    try {
+      conn.rollback();
+    } catch (SQLException sqle) {
+      logger.error("Exception caught rolling back the connection", sqle);
+      DbManager.safeRollbackAndClose(conn);
+      throw new DbException("Cannot roll back the transaction", sqle);
     }
   }
 
@@ -3023,7 +3092,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void logTableSchemaBeforeReady(Connection conn, String tableName)
+  protected void logTableSchemaBeforeReady(Connection conn, String tableName)
       throws DbException {
     final String DEBUG_HEADER = "logTableSchemaBeforeReady(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "tableName = " + tableName);
@@ -3144,10 +3213,8 @@ public class DbManager extends BaseLockssDaemonManager
   public static void safeRollbackAndClose(Connection conn) {
     // Roll back the connection.
     try {
-      if ((conn != null) && !conn.isClosed()) {
-	conn.rollback();
-      }
-    } catch (SQLException sqle) {
+      DbManager.rollback(conn, log);
+    } catch (DbException sqle) {
       log.error("Cannot roll back the connection", sqle);
     }
     // Close it.
@@ -3216,7 +3283,7 @@ public class DbManager extends BaseLockssDaemonManager
     shutdownConfig.put("shutdownDatabase", "shutdown");
 
     // Create the shutdown datasource.
-    DataSource ds = createDataSource(shutdownConfig);
+    DataSource ds = createDataSource(shutdownConfig.get("className"));
 
     // Initialize the shutdown datasource properties.
     initializeDataSourceProperties(shutdownConfig, ds);
@@ -3419,23 +3486,18 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Creates a datasource using the specified configuration.
+   * Creates a datasource using the specified class name.
    * 
-   * @param dsConfig
-   *          A Configuration with the datasource configuration.
+   * @param dsClassName
+   *          A String with the datasource class name.
    * @return a DataSource with the created datasource.
    * @throws DbException
    *           if the datasource could not be created.
    */
-  private DataSource createDataSource(Configuration dsConfig)
-      throws DbException {
+  protected DataSource createDataSource(String dsClassName) throws DbException {
     final String DEBUG_HEADER = "createDataSource(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    // Get the datasource class name.
-    String dsClassName = dsConfig.get("className");
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "dsClassName = '" + dsClassName + "'.");
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "dsClassName = '" + dsClassName + "'.");
 
     // Locate the datasource class.
     Class<?> dataSourceClass;
@@ -3473,7 +3535,7 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Create a datasource.
-    DataSource ds = createDataSource(dsConfig);
+    DataSource ds = createDataSource(dsConfig.get("className"));
 
     // Initialize the datasource properties.
     initializeDataSourceProperties(dsConfig, ds);
@@ -4032,7 +4094,7 @@ public class DbManager extends BaseLockssDaemonManager
    *          A string with the name of the table to be dropped.
    * @return a String with the query used to drop the table.
    */
-  private static String dropTableQuery(String tableName) {
+  protected static String dropTableQuery(String tableName) {
     return "drop table " + tableName;
   }
 
@@ -4244,7 +4306,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred executing the query.
    */
-  private ResultSet executeQueryBeforeReady(PreparedStatement statement)
+  protected ResultSet executeQueryBeforeReady(PreparedStatement statement)
       throws DbException {
     return executeQueryBeforeReady(statement, maxRetryCount, retryDelay);
   }
@@ -4372,7 +4434,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred executing the query.
    */
-  private int executeUpdateBeforeReady(PreparedStatement statement)
+  protected int executeUpdateBeforeReady(PreparedStatement statement)
       throws DbException {
     return executeUpdateBeforeReady(statement, maxRetryCount, retryDelay);
   }
@@ -4504,7 +4566,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred preparing the statement.
    */
-  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+  protected PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql) throws DbException {
     return prepareStatementBeforeReady(conn, sql, maxRetryCount, retryDelay);
   }
@@ -4649,7 +4711,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred preparing the statement.
    */
-  private PreparedStatement prepareStatementBeforeReady(Connection conn,
+  protected PreparedStatement prepareStatementBeforeReady(Connection conn,
       String sql, int returnGeneratedKeys) throws DbException {
     return prepareStatementBeforeReady(conn, sql, returnGeneratedKeys,
 	maxRetryCount, retryDelay);
@@ -5367,7 +5429,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void createIndices(Connection conn, String[] queries)
+  protected void createIndices(Connection conn, String[] queries)
       throws DbException {
     final String DEBUG_HEADER = "createIndices(): ";
     if (log.isDebug2())
@@ -5468,7 +5530,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @throws DbException
    *           if the database creation process failed.
    */
-  private boolean createPostgreSqlDbIfMissing(Connection conn,
+  protected boolean createPostgreSqlDbIfMissing(Connection conn,
       String databaseName) throws DbException {
     final String DEBUG_HEADER = "createPostgreSqlDbIfMissing(): ";
     if (log.isDebug2())
@@ -5571,22 +5633,22 @@ public class DbManager extends BaseLockssDaemonManager
    * Creates a PostgreSQL database schema if it does not exist. To be used
    * during initialization.
    * 
-   * @param conn
-   *          A connection with the database connection to be used.
    * @param schemaName
    *          A String with the name of the schema to create, if missing.
+   * @param ds
+   *          A DataSource with the data source to be used to get a connection.
    * @return <code>true</code> if the schema did not exist and it was created,
    *         <code>false</code> otherwise.
    * @throws DbException
    *           if the schema creation process failed.
    */
-  private boolean createPostgresqlSchemaIfMissing(String schemaName)
-      throws DbException {
+  protected boolean createPostgresqlSchemaIfMissing(String schemaName,
+      DataSource ds) throws DbException {
     final String DEBUG_HEADER = "createPostgresqlSchemaIfMissing(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "schemaName = " + schemaName);
 
     // Get a database connection.
-    Connection conn = getConnectionBeforeReady();
+    Connection conn = getConnectionBeforeReady(ds);
 
     try {
       // Check whether the schema does not exist.
