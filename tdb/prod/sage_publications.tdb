@@ -42722,7 +42722,7 @@ comment[mpj] = now published by Brill
       {
   
         pluginPrefix = org.lockss.plugin.highwire.
-        param[base_url] = http://icp.rsmjournals.com/
+        param[base_url] = http://ijcp.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressPlugin ; down ; 2005 ; International Journal of Care Pathways Volume 9 [superseded] ; 9 >
