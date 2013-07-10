@@ -270,6 +270,7 @@
     >
 
     param[journal_id] = wst
+    comment[0] = RU4683, manifest page pattern
 
     au < manifest ; exists ; 1982 ; Water Science and Technology Volume 14 ; 01401 >
     au < manifest ; exists ; 1983 ; Water Science and Technology Volume 15 ; 01501 >
@@ -339,6 +340,7 @@
 
     param[journal_id] = ws
     comment[018] = Previously published Water Supply
+    comment[0] = RU4683, manifest page pattern
     
 
     au < manifest ; exists ; 2000 ; Water Supply Volume 18 ; 01801 >  
