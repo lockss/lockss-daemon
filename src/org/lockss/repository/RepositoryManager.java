@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.17 2013-06-26 04:45:30 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.18 2013-07-10 18:51:44 tlipkis Exp $
  */
 
 /*
@@ -113,13 +113,6 @@ public class RepositoryManager
     PREFIX + "checkUnnormalized";
   public static final CheckUnnormalizedMode DEFAULT_CHECK_UNNORMALIZED =
     CheckUnnormalizedMode.Log;
-
-
-  /** If true, repair nodes that have lowercase URL-encoding chars */
-  public static final String PARAM_FIX_UNNORMALIZED =
-    Configuration.PREFIX + "repository.fixUnnormalized";
-  public static final boolean DEFAULT_FIX_UNNORMALIZED = true;
-
 
 
   static final String WDOG_PARAM_SIZE_CALC = "SizeCalc";
