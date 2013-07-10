@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.2 2013-06-26 16:35:52 aishizaki Exp $
+ * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.3 2013-07-10 21:57:00 aishizaki Exp $
  */
 
 /*
@@ -81,13 +81,43 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     "<td valign=\"top\" width=\"13\"><img src=\"img/kv.gif\" vspace=\"4\" width=\"5\" height=\"5\"></td>"+
     "<td width=\"165\" class=\"green\">Viewed by : <span class=more3 >1106</span></td>"+
     "</tr>"+
-    "</tbody> </table> </td> </tr> </table>";
+    "</tbody> </table> </td> </tr> </table>Hello World";
   private static final String HtmlHashBFiltered =
-    "<table width=\"186\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">"+
-    "<tr> "+
-    " </tr> </table>";
-
-
+    "Hello World";
+  private static final String HtmlHashC =
+    "<p><!--Load time 0.240586 seconds.-->Hello World</p>"+
+    "<!--SESID=\"020254c9122ebd1bf1f37e24b639181d\"-->";
+  private static final String HtmlHashCFiltered =
+    "<p>Hello World</p>";
+  private static final String HtmlHashD =
+    "<a class=\"antetka\" href='journal_home_page.php?journal_id=1&page=taxon&SESID=020254c9122ebd1bf1f37e24b639181d'>Taxon</a>"+
+    "<a class=\"green\" href=\"journals/HelloWorld\">Hello World</a>";
+  private static final String HtmlHashDFiltered =
+    "<a class=\"green\" href=\"journals/HelloWorld\">Hello World</a>";
+  private static final String HtmlHashE =
+    "<input type=\"hidden\" name=\"SESID\" value=\"020254c9122ebd1bf1f37e24b639181d\">Hello World";
+  private static final String HtmlHashEFiltered = "Hello World";
+  private static final String HtmlHashF =
+    "<iframe target=basketadd src =\"/none.php?SESID=754755beffdf3915cf0ea0ff54719eeb\""+
+    "name=basketadd width=\"0\" scrolling=\"no\" frameborder=\"0\" height=\"0\">\""+
+    "</iframe>Hello World";
+  private static final String HtmlHashG = "<tr height=19 bgcolor=\"#f0f0E0\" onmouseover=\"this.style.backgroundColor='#fefef5';style.cursor='hand';\""+
+    "onclick=\"document.location.href='journal_home_page.php?journal_id=2&page=home&SESID=020254c9122ebd1bf1f37e24b639181d';\""+
+    "onmouseout=\"this.style.backgroundColor='#f0f0E0';\"></tr>Hello World";
+  private static final String HtmlHashH = "<a href=\"javascript:void(0);\" "+
+    "onclick=\"displayMessage2('login-form.php?SESID=020254c9122ebd1bf1f37e24b639181d',604,348);return false;\" class=\"menu\">Email/RSS Alerts</a>"+
+    "Hello World";
+  private static final String HtmlHashI = "<script type=\"text/javascript\">"+
+    "</script>Hello World";
+  private static final String HtmlHashJ = "<noscript>"+
+  "</noscript>Hello World"; 
+  private static final String HtmlHashK = "<td width=\"186\" valign=\"top\" class=textver10>"+
+  "</td>Hello World";
+  private static final String HtmlHashL = "<table width=\"186\">"+
+  "</table>Hello World";
+  private static final String HtmlHashM = "<div id=newscont>"+
+  "</div>Hello World";
+  
   public void testFilterA() throws Exception {
     InputStream inA;
 
@@ -107,6 +137,64 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     String filtStrB = StringUtil.fromInputStream(inB);
     assertEquals(HtmlHashBFiltered, filtStrB);
    
+  }
+  public void testFilterC() throws Exception {
+    InputStream in;
+
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashC), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashCFiltered, filtStr);
+   
+  }
+  public void testFilterD() throws Exception {
+    InputStream in;
+
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashD), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashDFiltered, filtStr);
+   
+  }
+  public void testFilterE() throws Exception {
+    InputStream in;
+    // all these should match, once filtered, the string HtmlHashEFiltered
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashE), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashF), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashG), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashH), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashI), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashJ), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashK), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashL), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashM), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
   }
 
 }
