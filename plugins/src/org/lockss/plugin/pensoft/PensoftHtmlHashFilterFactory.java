@@ -59,6 +59,23 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
       // filters out the tag with a changing view counter   
       HtmlNodeFilters.tagWithAttribute("td", "class", "texttah11"),
       HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true),
+      HtmlNodeFilters.commentWithString("Load time", true),
+      // filters out the left columns
+      HtmlNodeFilters.tagWithAttribute("td", "class", "textver10"),
+      HtmlNodeFilters.tagWithAttribute("div", "id", "newscont"),
+      // this should pick up all the right columns
+      HtmlNodeFilters.tagWithAttribute("table", "width", "186"),
+      // remove all script tags
+      HtmlNodeFilters.tag("script"), 
+      HtmlNodeFilters.tag("noscript"),      
+      // filters out tags with SESIDs which can change
+      HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=.*", true),
+      HtmlNodeFilters.tagWithAttributeRegex("a", "onClick", ".*SESID=.*", true),
+      HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID.*", true),
+      HtmlNodeFilters.tagWithAttributeRegex("iframe", "src", ".*SESID=.*", true),
+      HtmlNodeFilters.tagWithAttributeRegex("tr", "onClick", ".*SESID=.*", true),
+      HtmlNodeFilters.commentWithString("SESID", true),
+
     };
     
     OrFilter oFilter = new OrFilter(filters);

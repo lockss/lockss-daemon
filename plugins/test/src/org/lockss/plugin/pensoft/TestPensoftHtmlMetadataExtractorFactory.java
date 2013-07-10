@@ -39,6 +39,7 @@ import java.util.regex.Pattern;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.pensoft.PensoftHtmlMetadataExtractorFactory;
@@ -112,6 +113,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
+
   private static String PLUGIN_NAME = "org.lockss.plugin.pensoft.PensoftPlugin";
   private static String BASE_URL = "http://www.examplePress.com/";
   private static String SIM_ROOT = BASE_URL + "simroot/";
@@ -161,6 +163,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
   String goodXML = "http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=World";
   String goodHTML = "http://www.pensoft.net/journals/helloworld/article/2065/Hello-world-as-a-title";
   String goodABS = "http://www.pensoft.net/journals/helloworld/article/2065/abstract/Hello-world-as-a-title";
+  
 
   /*
  public void testRegExp() throws Exception {
