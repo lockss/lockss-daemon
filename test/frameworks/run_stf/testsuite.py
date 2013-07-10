@@ -212,6 +212,10 @@ class V3TestCases( LockssTestCases ):
         else:
             log.info( 'No nodes damaged on client %s' %  self.victim )
 
+    def _enableVictimPoller( self ):
+        self.framework.appendLocalConfig( { 'org.lockss.poll.v3.enableV3Poller': True }, self.victim )
+        self.victim.reloadConfiguration()
+
     def _await_repair( self, nodes ):
         # Just pause until we have better tests; assumes that repair poll has not yet been completed
         self.assert_( self.victim.waitForV3Repair( self.AU, nodes, self.timeout ), 'Timed out while waiting for V3 repair' )
@@ -263,7 +267,8 @@ class V3TestCases( LockssTestCases ):
             extraConf = { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
                           'org.lockss.id.initialV3PeerList': ';'.join( [ peer.getV3Identity() for peer in self.clients ] + self.offline_peers ),
                           'org.lockss.platform.v3.identity': client.getV3Identity(),
-                          'org.lockss.poll.v3.enableV3Poller': client is self.victim,
+                          'org.lockss.dbManager.enabled': False,
+                          'org.lockss.poll.v3.enableV3Poller': False,
                           'org.lockss.poll.v3.enableV3Voter': True,
                           'org.lockss.poll.pollStarterInitialDelay': '30s'}
             extraConf.update( self.local_configuration )
@@ -276,10 +281,10 @@ class V3TestCases( LockssTestCases ):
 
     def runTest( self ):
         self._setup_AU()
-        # disable polling?
         nodes = self._damage_AU()
         self._verify_damage( nodes )
-        # enable polling?
+        # enable polling
+        self._enableVictimPoller()
 
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
@@ -711,6 +716,7 @@ class TotalLossRecoverySymmetricV3TestCase( TotalLossRecoveryV3Tests ):
         self._setup_AU()
         self.expected_agreement = '100.00'
         self.expected_voter_agreement = '100.00'
+        self._enableVictimPoller()
         # Wait for the first poll to finish
         log.info( 'Waiting for a V3 poll to be called...' )
         self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for first V3 poll' )
