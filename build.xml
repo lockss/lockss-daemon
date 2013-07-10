@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.345 2013-06-26 04:42:25 tlipkis Exp $
+ $Id: build.xml,v 1.346 2013-07-10 21:57:28 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -481,6 +481,8 @@ Args:
 	<pathelement path="${velocity.jar}" />
 	<pathelement path="${wsdl4j.jar}" />
 	<pathelement path="${xmlschema-core.jar}" />
+	<!-- Needed for DB migration-->
+	<pathelement path="${getopt.jar}" />
   </path>
 
   <path id="run.classpath">
