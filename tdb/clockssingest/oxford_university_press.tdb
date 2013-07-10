@@ -859,7 +859,7 @@
     au < manifest ; exists ; 2007 ; American Journal of Hypertension Volume 20 ; 20 ; >
     au < manifest ; exists ; 2008 ; American Journal of Hypertension Volume 21 ; 21 ; >
     au < manifest ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
     au < testing ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
@@ -7630,7 +7630,7 @@
     au < manifest ; exists ; 2007 ; ILAR Journal Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; ILAR Journal Volume 49 ; 49 ; >
     au < manifest ; exists ; 2009 ; ILAR Journal Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2010 ; ILAR Journal Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2010 ; ILAR Journal Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; ILAR Journal Volume 52 ; 52 ; >
     au < testing ; exists ; 2012 ; ILAR Journal Volume 53 ; 53 ; >
     au < expected ; exists ; 2013 ; ILAR Journal Volume 54 ; 54 ; >
@@ -12690,7 +12690,7 @@
     param[base_url] = http://jscr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
+    au < crawling ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
     au < testing ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
@@ -13661,7 +13661,7 @@
     au < manifest ; exists ; 2007 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 32 ; 32 ; >
     au < manifest ; exists ; 2008 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 33 ; 33 ; >
     au < manifest ; exists ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
     au < testing ; exists ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
@@ -14156,15 +14156,15 @@
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 398 ; 398 ; >
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401 ; 401 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 404 ; 404 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 405 ; 405 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 409 ; 409 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401 ; 401 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 404 ; 404 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 405 ; 405 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 406 ; 406 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 407 ; 407 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 408 ; 408 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 409 ; 409 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 410 ; 410 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 411 ; 411 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 412 ; 412 ; >
@@ -14250,15 +14250,15 @@
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 398 ; 398 ; >
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 399 ; 399 ; >
     au < manifest ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 400 ; 400 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 405 ; 405 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 406 ; 406 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 407 ; 407 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 408 ; 408 ; >
-    au < manifest ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 409 ; 409 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 401 ; 401 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 402 ; 402 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 403 ; 403 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 404 ; 404 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 405 ; 405 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 406 ; 406 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 407 ; 407 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 408 ; 408 ; >
+    au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 409 ; 409 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 410 ; 410 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 411 ; 411 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 412 ; 412 ; >
@@ -16671,8 +16671,8 @@
     au < manifest ; exists ; 2008 ; Progress of Theoretical Physics (PTP) Volume 120 ; 120 ; >
     au < manifest ; exists ; 2009 ; Progress of Theoretical Physics (PTP) Volume 121 ; 121 ; >
     au < manifest ; exists ; 2009 ; Progress of Theoretical Physics (PTP) Volume 122 ; 122 ; >
-    au < manifest ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 124 ; 124 ; >
+    au < crawling ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 123 ; 123 ; >
+    au < crawling ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 124 ; 124 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 125 ; 125 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
     au < testing ; exists ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
@@ -19380,7 +19380,7 @@
     au < manifest ; exists ; 2008 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 101 ; 101 ; >
     au < manifest ; exists ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 102 ; 102 ; >
     au < manifest ; exists ; 2009 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 103 ; 103 ; >
-    au < manifest ; exists ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; >
+    au < crawling ; exists ; 2010 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 104 ; 104 ; >
     au < crawling ; exists ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; >
     au < testing ; exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; >
     au < crawling ; exists ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
@@ -19577,7 +19577,7 @@
     au < manifest ; exists ; 2007 ; Uniform Law Review Volume 12 ; 12 ; >
     au < manifest ; exists ; 2008 ; Uniform Law Review Volume 13 ; 13 ; >
     au < manifest ; exists ; 2009 ; Uniform Law Review Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2010 ; Uniform Law Review Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2010 ; Uniform Law Review Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Uniform Law Review Volume 16 ; 16 ; >
     au < testing ; exists ; 2012 ; Uniform Law Review Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review Volume 18 ; 18 ; >
@@ -20330,7 +20330,7 @@
     au < manifest ; exists ; 2007 ; Interacting with Computers Volume 19 ; 19 ; >
     au < manifest ; exists ; 2008 ; Interacting with Computers Volume 20 ; 20 ; >
     au < manifest ; exists ; 2009 ; Interacting with Computers Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2010 ; Interacting with Computers Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2010 ; Interacting with Computers Volume 22 ; 22 ; >
     au < crawling ; exists ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
     au < testing ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
