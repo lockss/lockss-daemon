@@ -1,0 +1,75 @@
+{
+
+  publisher <
+    name = Leibniz Institute for Psychology Information ;
+    info[contract] = 2013 ;
+    comment[platform] = PsychOpen
+  >
+
+      implicit < status1 ; status ; year ; name ; param[year] >
+      param[base_url] = http://www.psychopen.eu
+      plugin = needs.plgin
+
+  {
+    title <
+      name = Europe’s Journal of Psychology ;
+      issn = 1841-0413
+    >
+
+      param[journal_id] = ejop
+  
+  }
+
+  {
+    title <
+      name = The European Journal of Counselling Psychology ;
+      issn = 2195-7614
+    >
+
+      param[journal_id] = ejcop
+  
+  }
+
+  {
+    title <
+      name = Interpersona: An International Journal on Personal Relationships ;
+      issn = 1981-6472
+    >
+
+      param[journal_id] = interpersona
+  
+  }
+
+  {
+    title <
+      name = Journal of Social and Political Psychology ;
+      issn = 2195-3325
+    >
+
+      param[journal_id] = jspp
+  
+
+  }
+
+  {
+    title <
+      name = Psychological Thought ;
+      issn = 2193-7281 
+    >
+
+      param[journal_id] = psyct
+  
+  }
+
+  {
+    title <
+      name = Psychology, Community & Health ;
+      issn = 2182-438X
+    >
+
+      param[journal_id] = pch
+  
+  }
+
+}
+

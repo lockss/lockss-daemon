@@ -1,9 +1,9 @@
 {
 
   publisher <
-    name = New Russian University ;
+    name = Russian New University ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7
   >
   
   {
@@ -17,8 +17,10 @@
     param[base_url] = http://www.cardiometry.net/index.php/
     param[journal_id] = cardiometry
     implicit < status1 ; status ; year ; param[year] ; name ; volume >
+    comment[nR] = publisher needs to put manifests back up RT 5271
     
-    au < exists ; exists ; 2013 ; 2013 ; Cardiometry Volume 1 ; 1 >
+    au < notReady ; exists ; 2012 ; 2012 ; Cardiometry Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Cardiometry Volume 2 ; 2 >
     
   }
  

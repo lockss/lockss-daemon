@@ -487,11 +487,11 @@
     au < crawling ; exists ; 2012 ; Biochemical Journal Volume 446 ; 446 >
     au < crawling ; exists ; 2012 ; Biochemical Journal Volume 447 ; 447 >
     au < crawling ; exists ; 2012 ; Biochemical Journal Volume 448 ; 448 >
-    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 449 ; 449 >
-    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 450 ; 450 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 449 ; 449 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 450 ; 450 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 451 ; 451 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 >
     au < expected ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 >
@@ -550,7 +550,7 @@
     au < manifest ; exists ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
     au < manifest ; exists ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
     au < crawling ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
-    au < manifest ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
+    au < crawling ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
     
   }
   
@@ -639,39 +639,39 @@
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < exists ; exists ; 1981 ; Bioscience Reports Volume 1 ; 001 >
-    au < exists ; exists ; 1982 ; Bioscience Reports Volume 2 ; 002 >
-    au < exists ; exists ; 1983 ; Bioscience Reports Volume 3 ; 003 >
-    au < exists ; exists ; 1984 ; Bioscience Reports Volume 4 ; 004 >
-    au < exists ; exists ; 1985 ; Bioscience Reports Volume 5 ; 005 >
-    au < exists ; exists ; 1986 ; Bioscience Reports Volume 6 ; 006 >
-    au < exists ; exists ; 1987 ; Bioscience Reports Volume 7 ; 007 >
-    au < exists ; exists ; 1988 ; Bioscience Reports Volume 8 ; 008 >
-    au < exists ; exists ; 1989 ; Bioscience Reports Volume 9 ; 009 >
-    au < exists ; exists ; 1990 ; Bioscience Reports Volume 10 ; 010 >
-    au < exists ; exists ; 1991 ; Bioscience Reports Volume 11 ; 011 >
-    au < exists ; exists ; 1992 ; Bioscience Reports Volume 12 ; 012 >
-    au < exists ; exists ; 1993 ; Bioscience Reports Volume 13 ; 013 >
-    au < exists ; exists ; 1994 ; Bioscience Reports Volume 14 ; 014 >
-    au < exists ; exists ; 1995 ; Bioscience Reports Volume 15 ; 015 >
-    au < exists ; exists ; 1996 ; Bioscience Reports Volume 16 ; 016 >
-    au < exists ; exists ; 1997 ; Bioscience Reports Volume 17 ; 017 >
-    au < exists ; exists ; 1998 ; Bioscience Reports Volume 18 ; 018 >
-    au < exists ; exists ; 1999 ; Bioscience Reports Volume 19 ; 019 >
-    au < exists ; exists ; 2000 ; Bioscience Reports Volume 20 ; 020 >
-    au < exists ; exists ; 2001 ; Bioscience Reports Volume 21 ; 021 >
-    au < exists ; exists ; 2002 ; Bioscience Reports Volume 22 ; 022 >
-    au < exists ; exists ; 2003 ; Bioscience Reports Volume 23 ; 023 >
-    au < exists ; exists ; 2004 ; Bioscience Reports Volume 24 ; 024 >
-    au < exists ; exists ; 2005 ; Bioscience Reports Volume 25 ; 025 >
-    au < exists ; exists ; 2006 ; Bioscience Reports Volume 26 ; 026 >
-    au < exists ; exists ; 2007 ; Bioscience Reports Volume 27 ; 027 >
-    au < exists ; exists ; 2008 ; Bioscience Reports Volume 28 ; 028 >
-    au < exists ; exists ; 2009 ; Bioscience Reports Volume 29 ; 029 >
-    au < exists ; exists ; 2010 ; Bioscience Reports Volume 30 ; 030 >
-    au < exists ; exists ; 2011 ; Bioscience Reports Volume 31 ; 031 >
-    au < exists ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 >
-    au < exists ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 >
+    au < manifest ; exists ; 1981 ; Bioscience Reports Volume 1 ; 001 >
+    au < manifest ; exists ; 1982 ; Bioscience Reports Volume 2 ; 002 >
+    au < manifest ; exists ; 1983 ; Bioscience Reports Volume 3 ; 003 >
+    au < manifest ; exists ; 1984 ; Bioscience Reports Volume 4 ; 004 >
+    au < manifest ; exists ; 1985 ; Bioscience Reports Volume 5 ; 005 >
+    au < manifest ; exists ; 1986 ; Bioscience Reports Volume 6 ; 006 >
+    au < manifest ; exists ; 1987 ; Bioscience Reports Volume 7 ; 007 >
+    au < manifest ; exists ; 1988 ; Bioscience Reports Volume 8 ; 008 >
+    au < manifest ; exists ; 1989 ; Bioscience Reports Volume 9 ; 009 >
+    au < manifest ; exists ; 1990 ; Bioscience Reports Volume 10 ; 010 >
+    au < manifest ; exists ; 1991 ; Bioscience Reports Volume 11 ; 011 >
+    au < manifest ; exists ; 1992 ; Bioscience Reports Volume 12 ; 012 >
+    au < manifest ; exists ; 1993 ; Bioscience Reports Volume 13 ; 013 >
+    au < manifest ; exists ; 1994 ; Bioscience Reports Volume 14 ; 014 >
+    au < manifest ; exists ; 1995 ; Bioscience Reports Volume 15 ; 015 >
+    au < manifest ; exists ; 1996 ; Bioscience Reports Volume 16 ; 016 >
+    au < manifest ; exists ; 1997 ; Bioscience Reports Volume 17 ; 017 >
+    au < manifest ; exists ; 1998 ; Bioscience Reports Volume 18 ; 018 >
+    au < manifest ; exists ; 1999 ; Bioscience Reports Volume 19 ; 019 >
+    au < manifest ; exists ; 2000 ; Bioscience Reports Volume 20 ; 020 >
+    au < manifest ; exists ; 2001 ; Bioscience Reports Volume 21 ; 021 >
+    au < manifest ; exists ; 2002 ; Bioscience Reports Volume 22 ; 022 >
+    au < manifest ; exists ; 2003 ; Bioscience Reports Volume 23 ; 023 >
+    au < manifest ; exists ; 2004 ; Bioscience Reports Volume 24 ; 024 >
+    au < manifest ; exists ; 2005 ; Bioscience Reports Volume 25 ; 025 >
+    au < manifest ; exists ; 2006 ; Bioscience Reports Volume 26 ; 026 >
+    au < manifest ; exists ; 2007 ; Bioscience Reports Volume 27 ; 027 >
+    au < manifest ; exists ; 2008 ; Bioscience Reports Volume 28 ; 028 >
+    au < manifest ; exists ; 2009 ; Bioscience Reports Volume 29 ; 029 >
+    au < manifest ; exists ; 2010 ; Bioscience Reports Volume 30 ; 030 >
+    au < manifest ; exists ; 2011 ; Bioscience Reports Volume 31 ; 031 >
+    au < crawling ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 >
+    au < crawling ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 >
 
   }
 
@@ -821,8 +821,8 @@
     au < manifest ; exists ; 2011 ; Clinical Science Volume 121 ; 121 >
     au < crawling ; exists ; 2012 ; Clinical Science Volume 122 ; 122 >
     au < crawling ; exists ; 2012 ; Clinical Science Volume 123 ; 123 >
-    au < manifest ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
-    au < exists ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < crawling ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
+    au < crawling ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
         
   }
   
@@ -859,7 +859,7 @@
     au < manifest ; exists ; 2011 ; Essays in Biochemistry Volume 51 ; 051 >
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
-    au < expected ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
+    au < crawling ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
     au < expected ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
 
   }

@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Walter deGruyter ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin  
+  param[base_url] = http://www.degruyter.com/db/
+  
+  {
+
+    title <
+      name = De Gruyter eBooks Plus ;
+      type = books
+    >
+
+    {
+
+    }
+  }
+}

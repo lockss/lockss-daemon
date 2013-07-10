@@ -15,11 +15,11 @@
     plugin = org.lockss.plugin.wiley.ClockssWileySourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wiley-released/
     proxy = DIRECT
-    implicit < status ; year ; name ; param[year] >
+    implicit < status1 ; status ; year ; name ; param[year] >
     
-    au < released ; 2011 ; Wiley Source Content 2011 ; 2011 >
-    au < released ; 2012 ; Wiley Source Content 2012 ; 2012 >
-    au < released ; 2013 ; Wiley Source Content 2013 ; 2013 >
+    au < doNotProcess ; crawling ; 2011 ; Wiley Source Content 2011 ; 2011 >
+    au < doNotProcess ; crawling ; 2012 ; Wiley Source Content 2012 ; 2012 >
+    au < doNotProcess ; manifest ; 2013 ; Wiley Source Content 2013 ; 2013 >
     
   }
 

@@ -1,0 +1,160 @@
+{
+
+  publisher <
+    name = American Society of Agronomy ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin
+
+  {
+    title <
+      name = Agronomy Journal ;
+      issn = 0002-1962 ;
+      eissn = 1435-0645
+    >
+    
+    param[base_url] = http://www.agronomy.org/
+    param[journal_id] = aj
+
+
+
+  }
+
+  {
+    title <
+      name = Crop Science ;
+      issn = 0011-183X ;
+      eissn = 1435-0653
+    >
+
+    param[base_url] = www.crops.org/
+    param[journal_id] = cs
+
+
+  }
+
+  {
+    title <
+      name = Crops & Soils ;
+      issn = 0162-5098 ;
+      eissn = 2325-3606
+    >
+
+    param[base_url] = http://www.agronomy.org/
+    param[journal_id] = crops-and-soils
+
+
+  }
+
+  {
+    title <
+      name = CSA News ;
+      issn = 1529-9163 ;
+      eissn = 2325-3584
+    >
+
+    param[base_url] = http://www.agronomy.org/
+    param[journal_id] = csa-news
+
+
+  }
+
+  {
+    title <
+      name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
+      eissn = 1537-2537
+    >
+
+    param[base_url] = http://www.agronomy.org/
+    param[journal_id] = jeq
+
+
+  }
+
+  {
+    title <
+      name = Journal of Plant Registrations ;
+      eissn = 1940-3496
+    >
+
+    param[base_url] = www.crops.org/
+    param[journal_id] = jpr
+
+
+  }
+
+  {
+    title <
+      name = Journal of Production Agriculture ;
+      eissn = 0890-8524
+    >
+
+    comment[0] = website is not up yet
+
+
+  }
+
+  {
+    title <
+      name = Natural Sciences Education ;
+      eissn = 2186-8281
+    >
+
+    param[base_url] = http://www.agronomy.org/
+    param[journal_id] = nse
+
+
+  }
+
+  {
+    title <
+      name = The Plant Genome ;
+      eissn = 1940-3372
+    >
+
+    param[base_url] = www.crops.org/
+    param[journal_id] = tpg
+
+
+  }
+
+  {
+    title <
+      name = Soil Horizons ;
+      eissn = 2163-2812
+    >
+
+    param[base_url] = www.soils.org/
+    param[journal_id] = sh
+
+
+  }
+
+  {
+    title <
+      name = Soil Science Society of America ;
+      issn = 0361-5995 ;
+      eissn = 1435-0661
+    >
+
+    param[base_url] = www.soils.org/
+    param[journal_id] = sssaj
+
+
+  }
+
+  {
+    title <
+      name = Vadose Zone Journal ;
+      eissn = 1539-1663
+    >
+
+    param[base_url] = www.soils.org/
+    param[journal_id] = vzj
+
+
+  }
+}

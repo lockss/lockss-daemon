@@ -91,7 +91,7 @@
       
       au < manifest ; exists ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
       au < expected ; exists ; 2011 ; Atoms for Peace: an International Journal Volume 4 ; 4 >
 
     }
@@ -107,7 +107,7 @@
 
       param[journal_issn] = 1754-7326
 
-      au < crawling ; exists ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; The Botulinum Journal Volume 3 ; 3 >
 
@@ -130,7 +130,7 @@
       au < manifest ; exists ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < released ; crawling ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Electronic Government, an International Journal Volume 10 ; 10 >
@@ -148,7 +148,7 @@
 
       param[journal_issn] = 1758-1516
       
-      au < crawling ; exists ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
 
@@ -168,7 +168,7 @@
       au < manifest ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; European Journal of Industrial Engineering Volume 7 ; 7 >
@@ -189,7 +189,7 @@
       au < manifest ; exists ; 2007 ; European Journal of International Management Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; European Journal of International Management Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; European Journal of International Management Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; European Journal of International Management Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; European Journal of International Management Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; European Journal of International Management Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; European Journal of International Management Volume 7 ; 7 >
@@ -218,7 +218,7 @@
       au < manifest ; exists ; 2007 ; Global Business and Economics Review Volume 9 ; 9 >
       au < manifest ; exists ; 2008 ; Global Business and Economics Review Volume 10 ; 10 >
       au < manifest ; exists ; 2009 ; Global Business and Economics Review Volume 11 ; 11 >
-      au < crawling ; exists ; 2010 ; Global Business and Economics Review Volume 12 ; 12 >
+      au < released ; manifest ; 2010 ; Global Business and Economics Review Volume 12 ; 12 >
       au < released ; crawling ; 2011 ; Global Business and Economics Review Volume 13 ; 13 >
       au < zapped ; down ; 2012 ; Global Business and Economics Review Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Global Business and Economics Review Volume 15 ; 15 >
@@ -238,7 +238,7 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Abrasive Technology Volume 6 ; 6 >
@@ -258,9 +258,9 @@
       param[journal_issn] = 1752-8232
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
-      au < released ; crawling ; 2011 ; International Journal of Accounting and Finance Volume 3 ; 3 >
-      au < manifest ; exists ; 2012 ; International Journal of Accounting and Finance Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
+      au < released ; crawling ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 >
+      au < released ; manifest ; 2013 ; International Journal of Accounting and Finance Volume 4 ; 4 >
 
     }
 
@@ -280,7 +280,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 3 ; 3 >
       au < manifest ; exists ; 2007 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 4 ; 4 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 9 ; 9 >
@@ -302,8 +302,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 6 ; 6 >
       au < released ; crawling ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
       au < zapped ; down ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
@@ -322,7 +322,7 @@
 
       param[journal_issn] = 1740-2115
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 >
 
     }
 
@@ -338,10 +338,10 @@
       param[journal_issn] = 1755-0394
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Advanced Intelligence Paradigms Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Advanced Intelligence Paradigms Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Advanced Intelligence Paradigms Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Advanced Intelligence Paradigms Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Advanced Intelligence Paradigms Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Advanced Intelligence Paradigms Volume 5 ; 5 >
 
     }
 
@@ -357,7 +357,7 @@
       param[journal_issn] = 1756-8420
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Advanced Mechatronic Systems Volume 1 ; 1 > 
-      au < crawling ; exists ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
+      au < released ; manifest ; 2010 ; International Journal of Advanced Mechatronic Systems Volume 2 ; 2 > 
       au < zapped ; down ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
       au < zapped ; down ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
       au < expected ; exists ; 2013 ; International Journal of Advanced Mechatronic Systems Volume 5 ; 5 >
@@ -374,12 +374,13 @@
       >
 
       param[journal_issn] = 1741-8003
+      comment[0] = no issue in 2011 & 2012
       
       au < manifest ; exists ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
-      au < expected ; exists ; 2011 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
+      au < released ; manifest ; 2013 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
 
     }
 
@@ -395,7 +396,7 @@
       param[journal_issn] = 1758-9398
       
       au < manifest ; exists ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Advanced Operations Management Volume 5 ; 5 >
@@ -596,7 +597,7 @@
 
       param[journal_issn] = 2049-8888
       
-      au < crawling ; exists ; 2012 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; International Journal of Applied Pattern Recognition Volume 1 ; 1 >
 
     }
 
@@ -630,7 +631,7 @@
 
       param[journal_issn] = 1753-9420
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Arab Culture, Management and Sustainable Development Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Arab Culture, Management and Sustainable Development Volume 2 ; 2 >  
       au < expected ; exists ; 2012 ; International Journal of Arab Culture, Management and Sustainable Development Volume 3 ; 3 >
       
@@ -685,7 +686,7 @@
 
       param[journal_issn] = 1757-8760
       
-      au < crawling ; exists ; 2012 ; International Journal of Auditing Technology Volume 1 ; 1 >
+      au < released ; manifest ; 2013 ; International Journal of Auditing Technology Volume 1 ; 1 >
 
     }
 
@@ -763,7 +764,7 @@
 
       param[journal_issn] = 1741-8577
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Autonomic Computing Volume 1 ; 1 >
 
     }
 
@@ -849,7 +850,7 @@
 
       param[journal_issn] = 1753-1977
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
@@ -870,7 +871,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Behavioural and Healthcare Research Volume 1 ; 1 >
       au < zapped ; down ; 2010-2011 ; International Journal of Behavioural and Healthcare Research Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Behavioural and Healthcare Research Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Behavioural and Healthcare Research Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Behavioural and Healthcare Research Volume 4 ; 4 >
 
     }
 
@@ -944,8 +945,8 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Biomedical Engineering and Technology Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Biomedical Engineering and Technology Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 7 ; 7 >
@@ -965,9 +966,9 @@
 
       param[journal_issn] = 1756-0802
       
-      au < crawling ; exists ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
+      au < released ; manifest ; 2010 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 >
 
     }
 
@@ -983,7 +984,7 @@
       param[journal_issn] = 1755-831X
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Biometrics Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Biometrics Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Biometrics Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Biometrics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Biometrics Volume 5 ; 5 >
@@ -1011,7 +1012,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Biotechnology Volume 8 ; 8 >
       au < manifest ; exists ; 2007 ; International Journal of Biotechnology Volume 9 ; 9 >
       au < manifest ; exists ; 2008 ; International Journal of Biotechnology Volume 10 ; 10 >
-      au < crawling ; exists ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 >
       au < zapped ; down ; 2011 ; International Journal of Biotechnology Volume 12 ; 12 >
       au < expected ; exists ; 2012 ; International Journal of Biotechnology Volume 13 ; 13 >
 
@@ -1044,7 +1045,7 @@
       param[journal_issn] = 1753-6227
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Business and Emerging Markets Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Business and Emerging Markets Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Emerging Markets Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Business and Emerging Markets Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Business and Emerging Markets Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Business and Emerging Markets Volume 5 ; 5 >
@@ -1065,8 +1066,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Business and Globalisation Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business and Globalisation Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business and Globalisation Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Business and Globalisation Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Globalisation Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business and Globalisation Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Business and Globalisation Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Business and Globalisation Volume 8 ; 8 > 
@@ -1088,7 +1089,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Business and Systems Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business and Systems Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business and Systems Research Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Business and Systems Research Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business and Systems Research Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Business and Systems Research Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Business and Systems Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Business and Systems Research Volume 7 ; 7 >
@@ -1123,7 +1124,7 @@
 
       param[journal_issn] = 1758-2172
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Business Continuity and Risk Management Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Business Continuity and Risk Management Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Business Continuity and Risk Management Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Business Continuity and Risk Management Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Business Continuity and Risk Management Volume 4 ; 4 >
@@ -1143,7 +1144,7 @@
       
       au < manifest ; exists ; 2006-2007 ; International Journal of Business Environment Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Business Environment Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Environment Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Business Environment Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Business Environment Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Business Environment Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Business Environment Volume 6 ; 6 >
@@ -1163,7 +1164,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Business Excellence Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Business Excellence Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Excellence Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Business Excellence Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Business Excellence Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Business Excellence Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Business Excellence Volume 6 ; 6 >
@@ -1181,7 +1182,7 @@
 
       param[journal_issn] = 1744-6643
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Business Forecasting and Marketing Intelligence Volume 1 ; 1 >
 
     }
 
@@ -1200,7 +1201,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Business Governance and Ethics Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; International Journal of Business Governance and Ethics Volume 3 ; 3 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Business Governance and Ethics Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Governance and Ethics Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Governance and Ethics Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business Governance and Ethics Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Business Governance and Ethics Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Business Governance and Ethics Volume 8 ; 8 >
@@ -1222,8 +1223,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Business Information Systems Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Business Information Systems Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Business Information Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Information Systems Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Information Systems Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Business Information Systems Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Information Systems Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Business Information Systems Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; International Journal of Business Information Systems Volume 8 ; 8 >
       au < zapped ; down ; 2012 ; International Journal of Business Information Systems Volume 9 ; 9 >
@@ -1245,7 +1246,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Business Innovation and Research Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Business Innovation and Research Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Business Innovation and Research Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Innovation and Research Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Business Innovation and Research Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Business Innovation and Research Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Business Innovation and Research Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Business Innovation and Research Volume 7 ; 7 >
@@ -1267,7 +1268,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Business Intelligence and Data Mining Volume 7 ; 7 >
 
@@ -1285,7 +1286,7 @@
       param[journal_issn] = 1758-941X
       
       au < manifest ; exists ; 2009 ; International Journal of Business Performance and Supply Chain Modelling Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Business Performance and Supply Chain Modelling Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Business Performance and Supply Chain Modelling Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Business Performance and Supply Chain Modelling Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Business Performance and Supply Chain Modelling Volume 5 ; 5 >
@@ -1402,7 +1403,7 @@
 
       param[journal_issn] = 1742-7215
 
-      au < expected ; exists ; 2012 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; International Journal of Cognitive Performance Support Volume 1 ; 1 >
       
     }
 
@@ -1432,7 +1433,7 @@
 
       param[journal_issn] = 1740-2093
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Collaborative Enterprise Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Collaborative Enterprise Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; International Journal of Collaborative Enterprise Volume 3 ; 3 >
 
@@ -1452,8 +1453,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Communication Networks and Distributed Systems Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Communication Networks and Distributed Systems Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Communication Networks and Distributed Systems Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 >
@@ -1473,7 +1474,7 @@
       param[journal_issn] = 1740-0554
       comment[0] = title is not yet published on 4/11/2013
       
-      au < expected ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -1507,7 +1508,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Computational Biology and Drug Design Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Computational Biology and Drug Design Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Computational Biology and Drug Design Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Computational Biology and Drug Design Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Computational Biology and Drug Design Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Computational Biology and Drug Design Volume 6 ; 6 >
@@ -1540,7 +1541,7 @@
 
       param[journal_issn] = 1757-1189
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
 
@@ -1557,7 +1558,7 @@
 
       param[journal_issn] = 1755-8042
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Computational Intelligence in Bioinformatics and Systems Biology Volume 1 ; 1 >
 
     }
 
@@ -1572,7 +1573,7 @@
 
       param[journal_issn] = 1755-4985
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
 
     }
 
@@ -1589,7 +1590,7 @@
       
       au < manifest ; exists ; 2007 ; International Journal of Computational Materials Science and Surface Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Computational Materials Science and Surface Engineering Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Computational Materials Science and Surface Engineering Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Computational Materials Science and Surface Engineering Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Computational Materials Science and Surface Engineering Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Computational Materials Science and Surface Engineering Volume 6 ; 6 >
@@ -1641,7 +1642,7 @@
       au < manifest ; exists ; 2006 ; International Journal of Computational Science and Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2007 ; International Journal of Computational Science and Engineering Volume 3 ; 3 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Computational Science and Engineering Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Computational Science and Engineering Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Computational Science and Engineering Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Computational Science and Engineering Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Computational Science and Engineering Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Computational Science and Engineering Volume 8 ; 8 >
@@ -1674,7 +1675,7 @@
 
       param[journal_issn] = 1752-914X
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Computational Vision and Robotics Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Computational Vision and Robotics Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Computational Vision and Robotics Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Computational Vision and Robotics Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Computational Vision and Robotics Volume 4 ; 4 >
@@ -1693,7 +1694,7 @@
       param[journal_issn] = 1757-2665
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Computer Aided Engineering and Technology Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Aided Engineering and Technology Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Computer Aided Engineering and Technology Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Computer Aided Engineering and Technology Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Computer Aided Engineering and Technology Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Computer Aided Engineering and Technology Volume 5 ; 5 >
@@ -1736,9 +1737,9 @@
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 34 ; 34 >
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 35 ; 35 >
       au < manifest ; exists ; 2009 ; International Journal of Computer Applications in Technology Volume 36 ; 36 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 37 ; 37 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 38 ; 38 >
-      au < crawling ; exists ; 2010 ; International Journal of Computer Applications in Technology Volume 39 ; 39 >
+      au < released ; manifest ; 2010 ; International Journal of Computer Applications in Technology Volume 37 ; 37 >
+      au < released ; manifest ; 2010 ; International Journal of Computer Applications in Technology Volume 38 ; 38 >
+      au < released ; manifest ; 2010 ; International Journal of Computer Applications in Technology Volume 39 ; 39 >
       au < zapped ; down ; 2011 ; International Journal of Computer Applications in Technology Volume 40 ; 40 >
       au < zapped ; down ; 2011 ; International Journal of Computer Applications in Technology Volume 41 ; 41 >
       au < released ; crawling ; 2011 ; International Journal of Computer Applications in Technology Volume 42 ; 42 >
@@ -1746,7 +1747,7 @@
       au < released ; crawling ; 2012 ; International Journal of Computer Applications in Technology Volume 44 ; 44 >
       au < released ; crawling ; 2012 ; International Journal of Computer Applications in Technology Volume 45 ; 45 >
       au < crawling ; exists ; 2013 ; International Journal of Computer Applications in Technology Volume 46 ; 46 >
-      au < expected ; exists ; 2013 ; International Journal of Computer Applications in Technology Volume 47 ; 47 >
+      au < crawling ; exists ; 2013 ; International Journal of Computer Applications in Technology Volume 47 ; 47 >
       au < expected ; exists ; 2013 ; International Journal of Computer Applications in Technology Volume 48 ; 48 >
 
     }
@@ -1831,7 +1832,7 @@
 
       param[journal_issn] = 2048-9137
       
-      au < expected ; exists ; 2013 ; International Journal of Convergence Computing Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; International Journal of Convergence Computing Volume 1 ; 1 >
 
     }
 
@@ -1901,7 +1902,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Critical Computer-Based Systems Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Critical Computer-Based Systems Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Critical Computer-Based Systems Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Critical Computer-Based Systems Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Critical Computer-Based Systems Volume 4 ; 4 >
 
     }
 
@@ -2152,7 +2153,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Economic Policy in Emerging Economies Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Economic Policy in Emerging Economies Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Economic Policy in Emerging Economies Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Economic Policy in Emerging Economies Volume 6 ; 6 >
+      au < crawling ; exists ; 2013 ; International Journal of Economic Policy in Emerging Economies Volume 6 ; 6 >
 
     }
 
@@ -2207,7 +2208,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Education Economics and Development Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Education Economics and Development Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Education Economics and Development Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Education Economics and Development Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Education Economics and Development Volume 4 ; 4 >
 
     }
 
@@ -2226,7 +2227,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Electric and Hybrid Vehicles Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Electric and Hybrid Vehicles Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Electric and Hybrid Vehicles Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Electric and Hybrid Vehicles Volume 5 ; 5 >
 
     }
 
@@ -2287,7 +2288,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Electronic Customer Relationship Management Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Electronic Customer Relationship Management Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; International Journal of Electronic Customer Relationship Management Volume 6 ; 6 >
-      au < expected ; exists ; 2013 ; International Journal of Electronic Customer Relationship Management Volume 7 ; 7 >
+      au < crawling ; exists ; 2013 ; International Journal of Electronic Customer Relationship Management Volume 7 ; 7 >
       
     }
 
@@ -2404,7 +2405,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Electronic Security and Digital Forensics Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; International Journal of Electronic Security and Digital Forensics Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Electronic Security and Digital Forensics Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Electronic Security and Digital Forensics Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Electronic Security and Digital Forensics Volume 5 ; 5 >
 
     }
 
@@ -2475,8 +2476,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Emergency Management Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; International Journal of Emergency Management Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 >
-      au < zapped ; down ; 2011 ; International Journal of Emergency Management Volume 8 ; 8 >
-      au < expected ; exists ; 2012 ; International Journal of Emergency Management Volume 9 ; 9 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 >
+      au < crawling ; exists ; 2013 ; International Journal of Emergency Management Volume 9 ; 9 >
 
     }
 
@@ -2670,7 +2671,7 @@
       au < released ; crawling ; 2012 ; International Journal of Entrepreneurship and Small Business Volume 16 ; 16 >
       au < released ; crawling ; 2012 ; International Journal of Entrepreneurship and Small Business Volume 17 ; 17 >
       au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 18 ; 18 >
-      au < expected ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 19 ; 19 >
+      au < crawling ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; International Journal of Entrepreneurship and Small Business Volume 20 ; 20 >
 
     }
@@ -2983,7 +2984,7 @@
       
       au < crawling ; exists ; 2009-2010 ; International Journal of Financial Markets and Derivatives Volume 1 ; 1 >
       au < released ; crawling ; 2011 ; International Journal of Financial Markets and Derivatives Volume 2 ; 2 >
-      au < manifest ; exists ; 2012 ; International Journal of Financial Markets and Derivatives Volume 3 ; 3 >
+      au < crawling ; exists ; 2012 ; International Journal of Financial Markets and Derivatives Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; International Journal of Financial Markets and Derivatives Volume 4 ; 4 >
 
     }
@@ -3228,7 +3229,7 @@
       
       au < crawling ; exists ; 2009-2010 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 1 ; 1 >
       au < zapped ; down ; 2011-2012 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; International Journal of Granular Computing, Rough Sets and Intelligent Systems Volume 3 ; 3 >
 
     }
 
@@ -3267,7 +3268,7 @@
       au < manifest ; exists ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Grid and Utility Computing Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Grid and Utility Computing Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Grid and Utility Computing Volume 4 ; 4 >
 
     }
 
@@ -3767,7 +3768,7 @@
       au < zapped ; down ; 2012 ; International Journal of Innovation and Learning Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; International Journal of Innovation and Learning Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; International Journal of Innovation and Learning Volume 13 ; 13 >
-      au < expected ; exists ; 2013 ; International Journal of Innovation and Learning Volume 14 ; 14 >
+      au < crawling ; exists ; 2013 ; International Journal of Innovation and Learning Volume 14 ; 14 >
 
     }
 
@@ -3899,7 +3900,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Intellectual Property Management Volume 3 ; 3 >
       au < zapped ; down ; 2010-2011 ; International Journal of Intellectual Property Management Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Intellectual Property Management Volume 5 ; 5 >
-      au < manifest ; exists ; 2013 ; International Journal of Intellectual Property Management Volume 6 ; 6 >
+      au < crawling ; exists ; 2013 ; International Journal of Intellectual Property Management Volume 6 ; 6 >
 
     }
 
@@ -3918,7 +3919,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Intelligent Defence Support Systems Volume 2 ; 2 >
       au < crawling ; exists ; 2010 ; International Journal of Intelligent Defence Support Systems Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Intelligent Defence Support Systems Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
+      au < crawling ; exists ; 2012 ; International Journal of Intelligent Defence Support Systems Volume 5 ; 5 >
 
     }
 
@@ -4427,7 +4428,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Logistics Economics and Globalisation Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Logistics Economics and Globalisation Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Logistics Economics and Globalisation Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Logistics Economics and Globalisation Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Logistics Economics and Globalisation Volume 5 ; 5 >
 
     }
 
@@ -4471,6 +4472,7 @@
       >
 
       param[journal_issn] = 1741-9190
+      comment[2012] = no issue in 2012
       
       au < manifest ; exists ; 2003-2005 ; International Journal of Low Radiation Volume 1 ; 1 >
       au < manifest ; exists ; 2006 ; International Journal of Low Radiation Volume 2 ; 2 >
@@ -4480,7 +4482,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Low Radiation Volume 6 ; 6 >
       au < crawling ; exists ; 2010 ; International Journal of Low Radiation Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; International Journal of Low Radiation Volume 8 ; 8 >
-      au < expected ; exists ; 2012 ; International Journal of Low Radiation Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; International Journal of Low Radiation Volume 9 ; 9 >
 
     }
 
@@ -4593,8 +4595,8 @@
       param[journal_issn] = 1754-2324
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Management and Network Economics Volume 1 ; 1 >
-      au < zapped ; down ; 2011 ; International Journal of Management and Network Economics Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Management and Network Economics Volume 3 ; 3 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Management and Network Economics Volume 2 ; 2 >
+      au < crawling ; exists ; 2013 ; International Journal of Management and Network Economics Volume 3 ; 3 >
 
     }
 
@@ -5003,7 +5005,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Metadata, Semantics and Ontologies Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Metadata, Semantics and Ontologies Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Metadata, Semantics and Ontologies Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; International Journal of Metadata, Semantics and Ontologies Volume 8 ; 8 >
+      au < crawling ; exists ; 2013 ; International Journal of Metadata, Semantics and Ontologies Volume 8 ; 8 >
 
     }
 
@@ -5414,8 +5416,8 @@
       
       au < manifest ; exists ; 2006-2007 ; International Journal of Nuclear Governance, Economy and Ecology Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Nuclear Governance, Economy and Ecology Volume 2 ; 2 >
-      au < zapped ; down ; 2010-2011 ; International Journal of Nuclear Governance, Economy and Ecology Volume 3 ; 3 >
-      au < expected ; exists ; 2012 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 >
+      au < zapped ; down ; 2010-2012 ; International Journal of Nuclear Governance, Economy and Ecology Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 >
 
     }
 
@@ -5571,7 +5573,7 @@
       
       au < zapped ; down ; 2010-2011 ; International Journal of Organisational Design and Engineering Volume 1 ; 1 >
       au < zapped ; down ; 2012 ; International Journal of Organisational Design and Engineering Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; International Journal of Organisational Design and Engineering Volume 3 ; 3 >
 
     }
 
@@ -5586,7 +5588,7 @@
 
       param[journal_issn] = 1754-8896
       
-      au < expected ; exists ; 2012 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
 
     }
 
@@ -5601,7 +5603,7 @@
 
       param[journal_issn] = 2040-4557
       
-      au < expected ; exists ; 2012 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
+      au < crawling ; exists ; 2012 ; International Journal of Physiotherapy and Life Physics Volume 1 ; 1 >
 
     }
 
@@ -5635,7 +5637,7 @@
       au < crawling ; exists ; 2009-2010 ; International Journal of Pluralism and Economics Education Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Pluralism and Economics Education Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; International Journal of Pluralism and Economics Education Volume 3 ; 3 >
-      au < expected ; exists ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Pluralism and Economics Education Volume 4 ; 4 >
 
     }
 
@@ -5705,7 +5707,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Power Electronics Volume 2 ; 2 >
       au < released ; crawling ; 2011 ; International Journal of Power Electronics Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Power Electronics Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Power Electronics Volume 5 ; 5 >
 
     }
 
@@ -5910,7 +5912,7 @@
       au < zapped ; down ; 2012 ; International Journal of Productivity and Quality Management Volume 9 ; 9 >
       au < zapped ; down ; 2012 ; International Journal of Productivity and Quality Management Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; International Journal of Productivity and Quality Management Volume 11 ; 11 >
-      au < expected ; exists ; 2013 ; International Journal of Productivity and Quality Management Volume 12 ; 12 >
+      au < crawling ; exists ; 2013 ; International Journal of Productivity and Quality Management Volume 12 ; 12 >
 
     }
 
@@ -5969,7 +5971,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Public Policy Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Public Policy Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Public Policy Volume 8 ; 8 >
-      au < manifest ; exists ; 2013 ; International Journal of Public Policy Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; International Journal of Public Policy Volume 9 ; 9 >
 
     }
 
@@ -6195,7 +6197,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Risk Assessment and Management Volume 14 ; 14 >
       au < zapped ; down ; 2011 ; International Journal of Risk Assessment and Management Volume 15 ; 15 >
       au < released ; crawling ; 2012 ; International Journal of Risk Assessment and Management Volume 16 ; 16 >
-      au < expected ; exists ; 2013 ; International Journal of Risk Assessment and Management Volume 17 ; 17 >
+      au < crawling ; exists ; 2013 ; International Journal of Risk Assessment and Management Volume 17 ; 17 >
 
     }
 
@@ -6230,7 +6232,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Security and Networks Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Security and Networks Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Security and Networks Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Security and Networks Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Security and Networks Volume 8 ; 8 >
@@ -6254,8 +6256,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Sensor Networks Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Sensor Networks Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; International Journal of Sensor Networks Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; International Journal of Sensor Networks Volume 7 ; 7 >
-      au < crawling ; exists ; 2010 ; International Journal of Sensor Networks Volume 8 ; 8 >
+      au < released ; manifest ; 2010 ; International Journal of Sensor Networks Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; International Journal of Sensor Networks Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; International Journal of Sensor Networks Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Sensor Networks Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sensor Networks Volume 11 ; 11 >
@@ -6276,7 +6278,7 @@
 
       param[journal_issn] = 2045-1768
       
-      au < crawling ; exists ; 2012 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 >
 
     }
 
@@ -6296,8 +6298,8 @@
       au < manifest ; exists ; 2007 ; International Journal of Services and Operations Management Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Services and Operations Management Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Services and Operations Management Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Services and Operations Management Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; International Journal of Services and Operations Management Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; International Journal of Services and Operations Management Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Services and Operations Management Volume 7 ; 7 >
       au < zapped ; down ; 2011 ; International Journal of Services and Operations Management Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; International Journal of Services and Operations Management Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Services and Operations Management Volume 10 ; 10 >
@@ -6326,7 +6328,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Services and Standards Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Services and Standards Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Services and Standards Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Services and Standards Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Services and Standards Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Services and Standards Volume 8 ; 8 >
       au < expected ; exists ; 2013 ; International Journal of Services and Standards Volume 9 ; 9 >
@@ -6348,7 +6350,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Services Operations and Informatics Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Services Operations and Informatics Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Services Operations and Informatics Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Services Operations and Informatics Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Services Operations and Informatics Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Services Operations and Informatics Volume 8 ; 8 >
@@ -6368,7 +6370,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Services Sciences Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Services Sciences Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Services Sciences Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Services Sciences Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Services Sciences Volume 4 ; 4 >
       au < expected ; exists ; 2012 ; International Journal of Services Sciences Volume 5 ; 5 >
 
@@ -6397,13 +6399,13 @@
       au < manifest ; exists ; 2008 ; International Journal of Services Technology and Management Volume 10 ; 10 >
       au < manifest ; exists ; 2009 ; International Journal of Services Technology and Management Volume 11 ; 11 >
       au < manifest ; exists ; 2009 ; International Journal of Services Technology and Management Volume 12 ; 12 >
-      au < crawling ; exists ; 2010 ; International Journal of Services Technology and Management Volume 13 ; 13 >
-      au < crawling ; exists ; 2010 ; International Journal of Services Technology and Management Volume 14 ; 14 >
+      au < released ; manifest ; 2010 ; International Journal of Services Technology and Management Volume 13 ; 13 >
+      au < released ; manifest ; 2010 ; International Journal of Services Technology and Management Volume 14 ; 14 >
       au < zapped ; down ; 2011 ; International Journal of Services Technology and Management Volume 15 ; 15 >
       au < zapped ; down ; 2011 ; International Journal of Services Technology and Management Volume 16 ; 16 >
       au < released ; crawling ; 2012 ; International Journal of Services Technology and Management Volume 17 ; 17 >
       au < released ; crawling ; 2012 ; International Journal of Services Technology and Management Volume 18 ; 18 >
-      au < expected ; exists ; 2013 ; International Journal of Services Technology and Management Volume 19 ; 19 >
+      au < crawling ; exists ; 2013 ; International Journal of Services Technology and Management Volume 19 ; 19 >
       au < expected ; exists ; 2013 ; International Journal of Services Technology and Management Volume 20 ; 20 >
 
     }
@@ -6420,7 +6422,7 @@
       param[journal_issn] = 1753-0830
       
       au < manifest ; exists ; 2007-2009 ; International Journal of Services, Economics and Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Services, Economics and Management Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Services, Economics and Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Services, Economics and Management Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Services, Economics and Management Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Services, Economics and Management Volume 5 ; 5 >
@@ -6439,7 +6441,7 @@
       param[journal_issn] = 1756-6525
       
       au < manifest ; exists ; 2009 ; International Journal of Shipping and Transport Logistics Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Shipping and Transport Logistics Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Shipping and Transport Logistics Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Shipping and Transport Logistics Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Shipping and Transport Logistics Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Shipping and Transport Logistics Volume 5 ; 5 >
@@ -6459,7 +6461,7 @@
       
       au < manifest ; exists ; 2008 ; International Journal of Signal and Imaging Systems Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Signal and Imaging Systems Engineering Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Signal and Imaging Systems Engineering Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Signal and Imaging Systems Engineering Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Signal and Imaging Systems Engineering Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Signal and Imaging Systems Engineering Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Signal and Imaging Systems Engineering Volume 6 ; 6 >
@@ -6521,7 +6523,7 @@
 
       param[journal_issn] = 1752-6132
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 >
 
     }
 
@@ -6585,7 +6587,7 @@
       param[journal_issn] = 1756-252X
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Society Systems Science Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Society Systems Science Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Society Systems Science Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Society Systems Science Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Society Systems Science Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Society Systems Science Volume 5 ; 5 >
@@ -6620,7 +6622,7 @@
 
       param[journal_issn] = 2048-8467
       
-      au < crawling ; exists ; 2012 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; International Journal of Space Science and Engineering Volume 1 ; 1 >
 
     }
 
@@ -6641,8 +6643,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 7 ; 7 >
-      au < crawling ; exists ; 2010 ; International Journal of Sport Management and Marketing Volume 8 ; 8 >
+      au < released ; manifest ; 2010 ; International Journal of Sport Management and Marketing Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; International Journal of Sport Management and Marketing Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Sport Management and Marketing Volume 10 ; 10 >
       au < zapped ; down ; 2012 ; International Journal of Sport Management and Marketing Volume 11 ; 11 >
@@ -6663,7 +6665,7 @@
 
       param[journal_issn] = 1756-6452
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Strategic Business Alliances Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Strategic Business Alliances Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Business Alliances Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Strategic Business Alliances Volume 3 ; 3 >
 
@@ -6681,7 +6683,7 @@
       param[journal_issn] = 1740-2867
       
       au < manifest ; exists ; 2006-2009 ; International Journal of Strategic Change Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Strategic Change Management Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Strategic Change Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Change Management Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Strategic Change Management Volume 4 ; 4 >
       au < expected ; exists ; 2012 ; International Journal of Strategic Change Management Volume 5 ; 5 >
@@ -6716,7 +6718,7 @@
 
       param[journal_issn] = 1758-7336
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Structural Engineering Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Structural Engineering Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Structural Engineering Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of Structural Engineering Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Structural Engineering Volume 4 ; 4 >
@@ -6752,7 +6754,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Surface Science and Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Surface Science and Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Surface Science and Engineering Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Surface Science and Engineering Volume 4 ; 4 >
+      au < testing ; exists ; 2010 ; International Journal of Surface Science and Engineering Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Surface Science and Engineering Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Surface Science and Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Surface Science and Engineering Volume 7 ; 7 >
@@ -6771,7 +6773,7 @@
       param[journal_issn] = 1743-8292
       
       au < released ; crawling ; 2008-2011 ; International Journal of Sustainable Design Volume 1 ; 1 >
-      au < crawling ; exists ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
+      au < released ; manifest ; 2012 ; International Journal of Sustainable Design Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; International Journal of Sustainable Design Volume 3 ; 3 >
 
     }
@@ -6799,10 +6801,10 @@
       au < manifest ; exists ; 2007 ; International Journal of Sustainable Development Volume 10 ; 10 >
       au < manifest ; exists ; 2008 ; International Journal of Sustainable Development Volume 11 ; 11 >
       au < manifest ; exists ; 2009 ; International Journal of Sustainable Development Volume 12 ; 12 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Development Volume 13 ; 13 >
+      au < released ; manifest ; 2010 ; International Journal of Sustainable Development Volume 13 ; 13 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Development Volume 14 ; 14 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Development Volume 15 ; 15 >
-      au < expected ; exists ; 2013 ; International Journal of Sustainable Development Volume 16 ; 16 >
+      au < crawling ; exists ; 2013 ; International Journal of Sustainable Development Volume 16 ; 16 >
 
     }
 
@@ -6818,7 +6820,7 @@
       param[journal_issn] = 1756-5812
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Economy Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Sustainable Economy Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Economy Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Economy Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Sustainable Economy Volume 5 ; 5 >
@@ -6870,7 +6872,7 @@
       param[journal_issn] = 1756-2546
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Society Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Sustainable Society Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Society Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Sustainable Society Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Sustainable Society Volume 5 ; 5 >
@@ -6889,7 +6891,7 @@
       param[journal_issn] = 1753-3619
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Sustainable Strategic Management Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Sustainable Strategic Management Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Sustainable Strategic Management Volume 3 ; 3 >
       au < expected ; exists ; 2012 ; International Journal of Sustainable Strategic Management Volume 4 ; 4 >
 
@@ -6924,7 +6926,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of System of Systems Engineering Volume 1 ; 1 >
       au < zapped ; down ; 2010-2011 ; International Journal of System of Systems Engineering Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of System of Systems Engineering Volume 3 ; 3 >
-      au < manifest ; exists ; 2013 ; International Journal of System of Systems Engineering Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of System of Systems Engineering Volume 4 ; 4 >
 
     }
 
@@ -6956,10 +6958,10 @@
       param[journal_issn] = 1755-9359
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Systems, Control and Communications Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Systems, Control and Communications Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 >
-      au < expected ; exists ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
 
     }
 
@@ -6975,7 +6977,7 @@
       param[journal_issn] = 1749-916X
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Teaching and Case Studies Volume 1 ; 1 >
-      au < crawling ; exists ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 >
 
@@ -7011,7 +7013,7 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Technological Learning, Innovation and Development Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Technological Learning, Innovation and Development Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Technological Learning, Innovation and Development Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Technological Learning, Innovation and Development Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Technological Learning, Innovation and Development Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Technological Learning, Innovation and Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 >
@@ -7051,7 +7053,7 @@
       param[journal_issn] = 1753-5263
       
       au < manifest ; exists ; 2008-2009 ; International Journal of Technology Enhanced Learning Volume 1 ; 1 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Enhanced Learning Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Technology Enhanced Learning Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Technology Enhanced Learning Volume 4 ; 4 >
       au < expected ; exists ; 2013 ; International Journal of Technology Enhanced Learning Volume 5 ; 5 >
@@ -7074,7 +7076,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Technology Intelligence and Planning Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Technology Intelligence and Planning Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Intelligence and Planning Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Intelligence and Planning Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Intelligence and Planning Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Technology Intelligence and Planning Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 >
@@ -7140,10 +7142,10 @@
       au < manifest ; exists ; 2009 ; International Journal of Technology Management Volume 46 ; 46 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Management Volume 47 ; 47 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Management Volume 48 ; 48 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Management Volume 49 ; 49 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Management Volume 50 ; 50 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Management Volume 51 ; 51 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Management Volume 52 ; 52 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Management Volume 49 ; 49 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Management Volume 50 ; 50 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Management Volume 51 ; 51 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Management Volume 52 ; 52 >
       au < zapped ; down ; 2011 ; International Journal of Technology Management Volume 53 ; 53 >
       au < zapped ; down ; 2011 ; International Journal of Technology Management Volume 54 ; 54 >
       au < released ; crawling ; 2011 ; International Journal of Technology Management Volume 55 ; 55 >
@@ -7172,7 +7174,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Technology Marketing Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Technology Marketing Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Marketing Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Marketing Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Marketing Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Technology Marketing Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Technology Marketing Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Marketing Volume 8 ; 8 >
@@ -7214,7 +7216,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Technology Transfer and Commercialisation Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; International Journal of Technology Transfer and Commercialisation Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; International Journal of Technology Transfer and Commercialisation Volume 8 ; 8 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 >
+      au < released ; manifest ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 >
       au < zapped ; down ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < released ; crawling ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 >
@@ -7241,7 +7243,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Technology, Policy and Management Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; International Journal of Technology, Policy and Management Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; International Journal of Technology, Policy and Management Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; International Journal of Technology, Policy and Management Volume 10 ; 10 >
+      au < released ; manifest ; 2010 ; International Journal of Technology, Policy and Management Volume 10 ; 10 >
       au < zapped ; down ; 2011 ; International Journal of Technology, Policy and Management Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; International Journal of Technology, Policy and Management Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; International Journal of Technology, Policy and Management Volume 13 ; 13 >
@@ -7276,7 +7278,7 @@
 
       param[journal_issn] = 1756-0004
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
 
@@ -7295,7 +7297,7 @@
       
       au < zapped ; down ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
       au < released ; crawling ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
 
     }
 
@@ -7312,9 +7314,10 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; International Journal of Tourism Policy Volume 5 ; 5 >
+      au < released ; manifest ; 2012 ; International Journal of Tourism Policy Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Tourism Policy Volume 6 ; 6 >
 
     }
 
@@ -7331,7 +7334,7 @@
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Trade and Global Markets Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Trade and Global Markets Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; International Journal of Trade and Global Markets Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; International Journal of Trade and Global Markets Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Trade and Global Markets Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Trade and Global Markets Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Trade and Global Markets Volume 6 ; 6 >
@@ -7366,7 +7369,7 @@
 
       param[journal_issn] = 2048-8386
       
-      au < crawling ; exists ; 2012 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
+      au < released ; manifest ; 2012 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
 
     }
 
@@ -7381,7 +7384,7 @@
 
       param[journal_issn] = 1758-7298
       
-      au < crawling ; exists ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
       au < zapped ; down ; 2011 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
       au < expected ; exists ; 2012 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
 
@@ -7401,7 +7404,7 @@
       au < manifest ; exists ; 2006-2007 ; International Journal of Value Chain Management Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Value Chain Management Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Value Chain Management Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
       au < zapped ; down ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
@@ -7426,7 +7429,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Vehicle Autonomous Systems Volume 5 ; 5 >
       au < manifest ; exists ; 2008 ; International Journal of Vehicle Autonomous Systems Volume 6 ; 6 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Autonomous Systems Volume 7 ; 7 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Autonomous Systems Volume 8 ; 8 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Autonomous Systems Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Autonomous Systems Volume 9 ; 9 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Autonomous Systems Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Autonomous Systems Volume 11 ; 11 >
@@ -7476,9 +7479,9 @@
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Design Volume 49 ; 49 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Design Volume 50 ; 50 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Design Volume 51 ; 51 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Design Volume 52 ; 52 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Design Volume 53 ; 53 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Design Volume 54 ; 54 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Design Volume 52 ; 52 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Design Volume 53 ; 53 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Design Volume 54 ; 54 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Design Volume 55 ; 55 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Design Volume 56 ; 56 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Design Volume 57 ; 57 >
@@ -7524,10 +7527,10 @@
       au < manifest ; exists ; 2007 ; International Journal of Vehicle Noise and Vibration Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Vehicle Noise and Vibration Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Noise and Vibration Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Noise and Vibration Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Noise and Vibration Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Noise and Vibration Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 >
-      au < expected ; exists ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 >
+      au < crawling ; exists ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 >
 
     }
 
@@ -7582,7 +7585,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Vehicle Systems Modelling and Testing Volume 2 ; 2 >
       au < manifest ; exists ; 2008 ; International Journal of Vehicle Systems Modelling and Testing Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Systems Modelling and Testing Volume 4 ; 4 >
-      au < crawling ; exists ; 2010 ; International Journal of Vehicle Systems Modelling and Testing Volume 5 ; 5 >
+      au < released ; manifest ; 2010 ; International Journal of Vehicle Systems Modelling and Testing Volume 5 ; 5 >
       au < zapped ; down ; 2011 ; International Journal of Vehicle Systems Modelling and Testing Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Systems Modelling and Testing Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Systems Modelling and Testing Volume 8 ; 8 >
@@ -7600,7 +7603,7 @@
 
       param[journal_issn] = 1741-1882
       
-      au < crawling ; exists ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
+      au < released ; manifest ; 2008-2010 ; International Journal of Virtual Technology and Multimedia Volume 1 ; 1 >
 
     }
 
@@ -7619,9 +7622,9 @@
       au < manifest ; exists ; 2002-2004 ; International Journal of Water Volume 2 ; 2 >
       au < manifest ; exists ; 2005-2007 ; International Journal of Water Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Water Volume 4 ; 4 >
-      au < crawling ; exists ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
       au < released ; crawling ; 2011 ; International Journal of Water Volume 6 ; 6 >
-      au < crawling ; exists ; 2012 ; International Journal of Water Volume 7 ; 7 >
+      au < released ; manifest ; 2012 ; International Journal of Water Volume 7 ; 7 >
       au < expected ; exists ; 2013 ; International Journal of Water Volume 8 ; 8 >
 
     }
@@ -7642,7 +7645,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Web and Grid Services Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Web and Grid Services Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Web and Grid Services Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Web and Grid Services Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Web and Grid Services Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Web and Grid Services Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web and Grid Services Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Web and Grid Services Volume 9 ; 9 >
@@ -7665,7 +7668,7 @@
       au < manifest ; exists ; 2007 ; International Journal of Web Based Communities Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Web Based Communities Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; International Journal of Web Based Communities Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; International Journal of Web Based Communities Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; International Journal of Web Based Communities Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; International Journal of Web Based Communities Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 >
@@ -7724,7 +7727,7 @@
       au < manifest ; exists ; 2005-2006 ; International Journal of Wireless and Mobile Computing Volume 1 ; 1 >
       au < manifest ; exists ; 2007 ; International Journal of Wireless and Mobile Computing Volume 2 ; 2 >
       au < manifest ; exists ; 2008-2009 ; International Journal of Wireless and Mobile Computing Volume 3 ; 3 >
-      au < crawling ; exists ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
+      au < released ; manifest ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
       au < zapped ; down ; 2011-2012 ; International Journal of Wireless and Mobile Computing Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
 
@@ -7759,7 +7762,7 @@
       
       au < manifest ; exists ; 2005-2006 ; International Journal of Work Organisation and Emotion Volume 1 ; 1 >
       au < manifest ; exists ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
-      au < crawling ; exists ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
+      au < released ; manifest ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
       au < expected ; exists ; 2013 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
@@ -7777,10 +7780,10 @@
 
       param[journal_issn] = 2042-6992
       
-      au < crawling ; exists ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
+      au < released ; manifest ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
       au < zapped ; down ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 >
-      au < expected ; exists ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 >
+      au < crawling ; exists ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 >
 
     }
 
@@ -7797,10 +7800,10 @@
       
       au < manifest ; exists ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 >
-      au < crawling ; exists ; 2010 ; Journal for Global Business Advancement Volume 3 ; 3 >
+      au < released ; manifest ; 2010 ; Journal for Global Business Advancement Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; Journal for Global Business Advancement Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 >
-      au < manifest ; exists ; 2013 ; Journal for Global Business Advancement Volume 6 ; 6 >
+      au < crawling ; exists ; 2013 ; Journal for Global Business Advancement Volume 6 ; 6 >
 
     }
 
@@ -7843,10 +7846,10 @@
       au < manifest ; exists ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 >
       au < manifest ; exists ; 2007 ; Journal of Design Research Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; Journal of Design Research Volume 7 ; 7 >
-      au < crawling ; exists ; 2009-2010 ; Journal of Design Research Volume 8 ; 8 >
+      au < released ; manifest ; 2009-2010 ; Journal of Design Research Volume 8 ; 8 >
       au < zapped ; down ; 2011 ; Journal of Design Research Volume 9 ; 9 >
       au < zapped ; down ; 2012 ; Journal of Design Research Volume 10 ; 10 >
-      au < expected ; exists ; 2013 ; Journal of Design Research Volume 11 ; 11 >
+      au < crawling ; exists ; 2013 ; Journal of Design Research Volume 11 ; 11 >
 
     }
 
@@ -7885,7 +7888,7 @@
       au < manifest ; exists ; 2007 ; Progress in Computational Fluid Dynamics, An International Journal Volume 7 ; 7 >
       au < manifest ; exists ; 2008 ; Progress in Computational Fluid Dynamics, An International Journal Volume 8 ; 8 >
       au < manifest ; exists ; 2009 ; Progress in Computational Fluid Dynamics, An International Journal Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; Progress in Computational Fluid Dynamics, An International Journal Volume 10 ; 10 >
+      au < released ; manifest ; 2010 ; Progress in Computational Fluid Dynamics, An International Journal Volume 10 ; 10 >
       au < zapped ; down ; 2011 ; Progress in Computational Fluid Dynamics, An International Journal Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; Progress in Computational Fluid Dynamics, An International Journal Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Progress in Computational Fluid Dynamics, An International Journal Volume 13 ; 13 >
@@ -7909,7 +7912,7 @@
       au < manifest ; exists ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
 
     }
 
@@ -7929,7 +7932,7 @@
       au < manifest ; exists ; 2007 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 4 ; 4 >
       au < manifest ; exists ; 2009 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 5 ; 5 >
-      au < crawling ; exists ; 2010 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
+      au < released ; manifest ; 2010 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 6 ; 6 >
       au < zapped ; down ; 2011 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
@@ -7971,7 +7974,7 @@
       au < manifest ; exists ; 2007 ; World Review of Science, Technology and Sustainable Development Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; World Review of Science, Technology and Sustainable Development Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; World Review of Science, Technology and Sustainable Development Volume 6 ; 6 >
-      au < crawling ; exists ; 2010 ; World Review of Science, Technology and Sustainable Development Volume 7 ; 7 >
+      au < released ; manifest ; 2010 ; World Review of Science, Technology and Sustainable Development Volume 7 ; 7 >
       au < zapped ; down ; 2010-2011 ; World Review of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < released ; crawling ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 >

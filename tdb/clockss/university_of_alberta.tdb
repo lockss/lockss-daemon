@@ -22,15 +22,17 @@
       
         plugin = org.lockss.plugin.universityofalberta.ClockssUniversityOfAlbertaPlugin 
         param[journal_id] = eblip
+        
+        comment[plugin] = This plugin is defunct and should not be maintained. Moving to ClockssOJS2Plugin
 
-        au < down ; crawling ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
-        au < down ; crawling ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
-        au < down ; crawling ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
-        au < down ; crawling ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
-        au < down ; crawling ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
-        au < down ; crawling ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
-        au < down ; crawling ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
-        au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
+        au < superseded ; down ; 2006 ; Evidence Based Library and Information Practice Volume 1 [to delete] ; 2006 ; 1 >
+        au < superseded ; down ; 2007 ; Evidence Based Library and Information Practice Volume 2 [to delete] ; 2007 ; 2 >
+        au < superseded ; down ; 2008 ; Evidence Based Library and Information Practice Volume 3 [to delete] ; 2008 ; 3 >
+        au < superseded ; down ; 2009 ; Evidence Based Library and Information Practice Volume 4 [to delete] ; 2009 ; 4 >
+        au < superseded ; down ; 2010 ; Evidence Based Library and Information Practice Volume 5 [to delete] ; 2010 ; 5 >
+        au < superseded ; down ; 2011 ; Evidence Based Library and Information Practice Volume 6 [to delete] ; 2011 ; 6 >
+        au < superseded ; down ; 2012 ; Evidence Based Library and Information Practice Volume 7 [to delete] ; 2012 ; 7 >
+
       }
       
       {
@@ -38,13 +40,13 @@
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
         param[journal_id] = eblip
 
-        au < doNotProcess ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
-        au < doNotProcess ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
-        au < doNotProcess ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
-        au < doNotProcess ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
-        au < doNotProcess ; exists ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
-        au < doNotProcess ; exists ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
-        au < doNotProcess ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+        au < exists ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+        au < exists ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+        au < exists ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+        au < exists ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+        au < exists ; exists ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+        au < exists ; exists ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+        au < exists ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
         au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
       }
       

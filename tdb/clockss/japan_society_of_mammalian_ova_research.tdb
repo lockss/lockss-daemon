@@ -3,8 +3,10 @@
   publisher <
     name = Japan Society of Mammalian Ova Research ;
     info[contract] = 2013 ;
-    comment[host_name] = UniBio
+    info[tester] = 7
   >
+
+  comment[aggregator] = UniBio Press
 
   {
     title <
@@ -20,15 +22,15 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jmor
   
-      au < exists ; exists ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
-      au < exists ; exists ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
-      au < exists ; exists ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
-      au < exists ; exists ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
-      au < exists ; exists ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
-      au < exists ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
-      au < exists ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
-      au < exists ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
-      au < expected ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
+      au < manifest ; exists ; 2005 ; Journal of Mammalian Ova Research Volume 22 ; 22 >
+      au < manifest ; exists ; 2006 ; Journal of Mammalian Ova Research Volume 23 ; 23 >
+      au < manifest ; exists ; 2007 ; Journal of Mammalian Ova Research Volume 24 ; 24 >
+      au < manifest ; exists ; 2008 ; Journal of Mammalian Ova Research Volume 25 ; 25 >
+      au < manifest ; exists ; 2009 ; Journal of Mammalian Ova Research Volume 26 ; 26 >
+      au < manifest ; exists ; 2010 ; Journal of Mammalian Ova Research Volume 27 ; 27 >
+      au < manifest ; exists ; 2011 ; Journal of Mammalian Ova Research Volume 28 ; 28 >
+      au < manifest ; exists ; 2012 ; Journal of Mammalian Ova Research Volume 29 ; 29 >
+      au < crawling ; exists ; 2013 ; Journal of Mammalian Ova Research Volume 30 ; 30 >
     }
 
   }

@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = BraDypUS ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+    plugin = needs.plugin
+    param[base_url] = http://books.bradypus.net/
+    type = bookSeries
+
+  {
+    implicit < status1 ; status ; year ; isbn ; param[book_isbn] ; doi ; book_id ; name ; author >
+  
+    {
+        title <
+        name = Books
+        >
+    
+    au < exists ; exists ; 2007 ; 9788878490246 ; 9788878490246 ;  ; groma1 ; Groma 1 ; Enrico Giorgi, Erika Vecchietti, Julian Bogdani (eds.) > 
+    au < exists ; exists ; 2009 ; 9788890429408 ; 9788890429408 ;  ; groma2 ; Groma 2 ; Enrico Giorgi (ed.) > 
+    au < exists ; exists ; 2010 ; 9788890429415 ; 9788890429415 ;  ; territorio_grumentino ; Il territorio grumentino e la valle dell'Agri nell'antichità ; Francesco Tarlano (ed.) > 
+    au < exists ; exists ; 2011 ; 9788890429453 ; 9788890429453 ;  ; esglesies_rurals ; Esglésies rurals a Catalunya entre l’Antiguitat i l’Edat Mitjana (segles V-X). ; Oriol Achón, Paolo de Vingo, Toni Juárez, Júlia Miquel, Joan Pinar (eds.) > 
+    au < exists ; exists ; 2011 ; 9788890429422 ; 9788890429422 ; 10.978.88904294/22 ; emergenza_sostenibile ; Emergenza sostenibile. Metodi e strategie dell’archeologia urbana. ; Maria Teresa Guaitoli (ed.) > 
+    au < exists ; exists ; 2011 ; 9788890429439 ; 9788890429439 ;  ; fenici_in_algeria ; I Fenici in Algeria ; Lorenza-Ilia Manfredi, Amel Soltani > 
+    au < exists ; exists ; 2011 ; 9788890429446 ; 9788890429446 ;  ; laura_bassi ; Maestre (e maestri) d'Italia ; Various Authors > 
+    au < exists ; exists ; 2012 ; 9788890429460 ; 9788890429460 ; 10.978.88904294/60 ; kurdistan ; Preservation of Cultural Heritage of the Kurdish Region in Iraq ; Carlo G. Cereti, Roberta Giunta > 
+    au < exists ; exists ; 2013 ; 9788890429484 ; 9788890429484 ; 10.978.88904294/84 ; sgab1 ; SGAB 1 ; Various Authors > 
+
+      }
+   }
+}   
+  

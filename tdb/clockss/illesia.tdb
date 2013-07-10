@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Illesia ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+   plugin = needs.plugin
+   
+     {
+  
+    title < 
+      name = Illesia International Journal of Stonefly Research ;
+      issn = 1855-5810 ;
+      eissn = 1854-0392
+    >
+    
+    }
+    
+}

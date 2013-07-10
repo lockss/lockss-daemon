@@ -16,7 +16,7 @@
     {
   
       title <
-        name = Archives of Dermatology ;
+        name = JAMA Dermatology ;
         issn = 0003-987X;
         eissn = 0096-5359;
         issnl = 0003-987X
@@ -215,7 +215,7 @@
     {
     
       title <
-        name = Archives of Facial Plastic Surgery ;
+        name = JAMA Facial Plastic Surgery ;
         issn = 1521-2491;
         eissn = 1538-3660;
         issnl = 1521-2491
@@ -228,18 +228,18 @@
         pluginSuffix = ClockssHighWirePlugin
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
       
-        au < superseded ; crawling ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [superseded] ; 1 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [superseded] ; 2 ; reingest1.clockss.org:8082 >
-        au < superseded ; crawling ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [superseded] ; 3 ; reingest2.clockss.org:8085 >
-        au < superseded ; crawling ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [superseded] ; 4 ; reingest3.clockss.org:8083 >
-        au < superseded ; crawling ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [superseded] ; 5 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [superseded] ; 6 ; reingest1.clockss.org:8082 >
-        au < superseded ; crawling ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [superseded] ; 7 ; reingest2.clockss.org:8085 >
-        au < superseded ; crawling ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
-        au < superseded ; crawling ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [superseded] ; 9 ; reingest4.clockss.org:8082 >
-        au < superseded ; crawling ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [superseded] ; 10 ; >
-        au < superseded ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [superseded] ; 11 ; >
-        au < superseded ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [superseded] ; 12 ; >
+        au < zapped ; down ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [to delete] ; 1 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [to delete] ; 2 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [to delete] ; 3 ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [to delete] ; 4 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [to delete] ; 5 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [to delete] ; 6 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [to delete] ; 7 ; reingest2.clockss.org:8085 >
+        au < zapped ; down ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [to delete] ; 8 ; reingest3.clockss.org:8083 >
+        au < zapped ; down ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [to delete] ; 9 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [to delete] ; 10 ; >
+        au < zapped ; down ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [to delete] ; 11 ; >
+        au < zapped ; down ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [to delete] ; 12 ; >
 
       }
       
@@ -258,9 +258,9 @@
         au < zapped ; down ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
         au < zapped ; down ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
         au < down ; crawling ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
-        au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >      
-        au < down ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >      
-        au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >      
+        au < down ; crawling ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ; >
+        au < down ; crawling ; 2011 ; Archives of Facial Plastic Surgery Volume 13 ; 13 ; >
+        au < down ; exists ; 2012 ; Archives of Facial Plastic Surgery Volume 14 ; 14 ; >
 
       }
     
@@ -269,7 +269,7 @@
     {
     
       title <
-        name = Archives of General Psychiatry ;
+        name = JAMA Psychiatry ;
         issn = 0003-990X;
         eissn = 1538-3636;
         issnl = 0003-990X
@@ -359,7 +359,7 @@
     {
     
       title <
-        name = Archives of Internal Medicine ;
+        name = JAMA Internal Medicine ;
         issn = 0003-9926;
         eissn = 1538-3679;
         issnl = 0003-9926
@@ -552,7 +552,7 @@
     {
     
       title <
-        name = Archives of Neurology ;
+        name = JAMA Neurology ;
         issn = 0003-9942;
         eissn = 1538-3687;
         issnl = 0003-9942
@@ -741,7 +741,7 @@
     {
     
       title <
-        name = Archives of Ophthalmology ;
+        name = JAMA Ophthalmology ;
         issn = 0003-9950;
         eissn = 0096-6339;
         issnl = 0003-9950
@@ -892,7 +892,7 @@
     {
     
       title <
-        name = Archives of Otolaryngology - Head & Neck Surgery ;
+        name = JAMA Otolaryngology - Head & Neck Surgery ;
         issn = 0886-4470;
         eissn = 1538-361X;
         issnl = 0886-4470
@@ -1051,7 +1051,7 @@
     {
     
       title <
-        name = Archives of Pediatrics & Adolescent Medicine ;
+        name = JAMA Pediatrics ;
         issn = 1072-4710;
         eissn = 1538-3628;
         issnl = 1072-4710
@@ -1238,7 +1238,7 @@
     {
     
       title <
-        name = Archives of Surgery ;
+        name = JAMA Surgery ;
         issn = 0004-0010;
         eissn = 0096-6908;
         issnl = 0004-0010
@@ -1501,9 +1501,9 @@
         au < zapped ; down ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
         au < zapped ; down ; 1912 ; Journal of the American Medical Association Volume LVIII ; LVIII ; reingest1.clockss.org:8082 >
         au < zapped ; down ; 1912 ; Journal of the American Medical Association Volume LIX ; LIX ; reingest1.clockss.org:8082 >
-        au < down ; down ; 1913 ; Journal of the American Medical Association Volume LX [superseded] ; LX ; reingest2.clockss.org:8085 >
+        au < superseded ; down ; 1913 ; Journal of the American Medical Association Volume LX [superseded] ; LX ; reingest2.clockss.org:8085 >
         au < zapped ; down ; 1913 ; Journal of the American Medical Association Volume 60 ; 60 ; reingest2.clockss.org:8085 >
-        au < down ; down ; 1913 ; Journal of the American Medical Association Volume LXI [superseded] ; LXI ; reingest2.clockss.org:8085 >
+        au < superseded ; down ; 1913 ; Journal of the American Medical Association Volume LXI [superseded] ; LXI ; reingest2.clockss.org:8085 >
         au < zapped ; down ; 1913 ; Journal of the American Medical Association Volume 61 ; 61 ; reingest2.clockss.org:8085 >
         au < zapped ; down ; 1914 ; Journal of the American Medical Association Volume LXII ; LXII ; reingest3.clockss.org:8083 >
         au < zapped ; down ; 1914 ; Journal of the American Medical Association Volume LXIII ; LXIII ; reingest3.clockss.org:8083 >

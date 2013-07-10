@@ -17,10 +17,10 @@
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/lia-released/
     proxy = DIRECT
     comment[publishing_platform] = Another publisher on the AIP platform
-    implicit < status ; year ; name ; param[year] >
-    
-    au < expected ; 2011 ; Journal of Laser Applications Volume 23 Issue 1-4 ; 2011 >
-    au < expected ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
+    implicit < status1 ; status ; year ; name ; param[year] >    
+
+    au < doNotProcess ; manifest ; 2012 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2012 >
+    au < doNotProcess ; manifest ; 2013 ; Journal of Laser Applications Volume 24 Issue 1-5 ; 2013 >
     
 
   }

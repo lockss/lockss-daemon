@@ -3,9 +3,11 @@
   publisher <
     name = Palaeontological Society of Japan ;
     info[contract] = 2013 ;
-    comment[host_name] = UniBio
+    info[tester] = 7
     
   >
+
+  comment[aggregator] = UniBio Press
 
   {
     title <
@@ -21,17 +23,17 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = jpal
   
-      au < exists ; exists ; 2003 ; Paleontological Research Volume 7 ; 7 >
-      au < exists ; exists ; 2004 ; Paleontological Research Volume 8 ; 8 >
-      au < exists ; exists ; 2005 ; Paleontological Research Volume 9 ; 9 >
-      au < exists ; exists ; 2006 ; Paleontological Research Volume 10 ; 10 >
-      au < exists ; exists ; 2007 ; Paleontological Research Volume 11 ; 11 >
-      au < exists ; exists ; 2008 ; Paleontological Research Volume 12 ; 12 >
-      au < exists ; exists ; 2009 ; Paleontological Research Volume 13 ; 13 >
-      au < exists ; exists ; 2010 ; Paleontological Research Volume 14 ; 14 >
-      au < exists ; exists ; 2011 ; Paleontological Research Volume 15 ; 15 >
-      au < exists ; exists ; 2012 ; Paleontological Research Volume 16 ; 16 >
-      au < expected ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 >
+      au < manifest ; exists ; 2003 ; Paleontological Research Volume 7 ; 7 >
+      au < manifest ; exists ; 2004 ; Paleontological Research Volume 8 ; 8 >
+      au < manifest ; exists ; 2005 ; Paleontological Research Volume 9 ; 9 >
+      au < manifest ; exists ; 2006 ; Paleontological Research Volume 10 ; 10 >
+      au < manifest ; exists ; 2007 ; Paleontological Research Volume 11 ; 11 >
+      au < manifest ; exists ; 2008 ; Paleontological Research Volume 12 ; 12 >
+      au < manifest ; exists ; 2009 ; Paleontological Research Volume 13 ; 13 >
+      au < manifest ; exists ; 2010 ; Paleontological Research Volume 14 ; 14 >
+      au < manifest ; exists ; 2011 ; Paleontological Research Volume 15 ; 15 >
+      au < manifest ; exists ; 2012 ; Paleontological Research Volume 16 ; 16 >
+      au < crawling ; exists ; 2013 ; Paleontological Research Volume 17 ; 17 >
     }
 
   }

@@ -27,7 +27,7 @@
     au < manifest ; exists ; 2010 ; Enterprise Development & Microfinance Volume 21 ; 21 >
     au < manifest ; exists ; 2011 ; Enterprise Development & Microfinance Volume 22 ; 22 >
     au < manifest ; exists ; 2012 ; Enterprise Development & Microfinance Volume 23 ; 23 >
-    au < expected ; exists ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 >
+    au < crawling ; exists ; 2013 ; Enterprise Development & Microfinance Volume 24 ; 24 >
     
   }
   
@@ -42,7 +42,7 @@
     
     au < manifest ; exists ; 2011 ; Foodchain Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Foodchain Volume 2 ; 2 >
-    au < expected ; exists ; 2013 ; Foodchain Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Foodchain Volume 3 ; 3 >
   }
   
   {
@@ -114,7 +114,7 @@
     au < manifest ; exists ; 2010 ; Waterlines Volume 29 ; 29 >
     au < manifest ; exists ; 2011 ; Waterlines Volume 30 ; 30 >
     au < manifest ; exists ; 2012 ; Waterlines Volume 31 ; 31 >
-    au < manifest ; exists ; 2013 ; Waterlines Volume 32 ; 32 >
+    au < crawling ; exists ; 2013 ; Waterlines Volume 32 ; 32 >
   }
   
 }

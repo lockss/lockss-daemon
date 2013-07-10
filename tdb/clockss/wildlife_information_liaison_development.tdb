@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Wildlife Information Liaison Development ;
+    info[contract] = 2013 
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = http://www.threatenedtaxa.org/
+  implicit < status ;  status2 ; year ; name ; param[volume_name] >
+  comment[platform] = moving to OJS2
+  
+  {
+  
+    title <
+      name = Journal of Threatened Taxa ;
+      issn = 0974-7893 ;
+      issnl = 0974-7907
+    >
+
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Threatened Taxa Volume 1 ; 1 >
+
+
+  }
+
+}

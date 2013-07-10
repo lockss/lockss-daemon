@@ -15,12 +15,12 @@
     plugin = org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
     proxy = DIRECT
-    implicit < status ; year ; name ; param[year] >
+    implicit < status1 ; status ; year ; name ; param[year] >
     
-    au < released ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
-    au < released ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
-    au < released ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
-    au < released ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
+    au < doNotProcess ; crawling ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
+    au < doNotProcess ; crawling ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
+    au < doNotProcess ; crawling ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
+    au < doNotProcess ; manifest ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
 
   }
 

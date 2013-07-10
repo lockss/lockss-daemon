@@ -32,7 +32,7 @@
     au < manifest ; exists ; 2010 ; Comparative Literature and Culture Volume 12 ; 12 >
     au < manifest ; exists ; 2011 ; Comparative Literature and Culture Volume 13 ; 13 >
     au < released ; crawling ; 2012 ; Comparative Literature and Culture Volume 14 ; 14 >
-    au < expected ; exists ; 2013 ; Comparative Literature and Culture Volume 15 ; 15 >
+    au < crawling ; exists ; 2013 ; Comparative Literature and Culture Volume 15 ; 15 >
  
   }
   
@@ -169,14 +169,14 @@
     param[base_url] = http://docs.lib.purdue.edu/
     param[journal_abbr] = jtrp
     implicit < status1 ; status ; year ; name ; param[volume] >
-    comment[doNotProcess] = publisher to fix manifest pages RT4593
+    comment[doNotProcess] = publisher to update contract with Randy RT 5351
     comment[1] = Abbreviation stands for Joint Transportation Research Program
 
-    au < doNotProcess ; exists ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
-    au < doNotProcess ; exists ; 2008 ; JTRP Other Publications and Reports Volume 2008 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; JTRP Other Publications and Reports Volume 2009 ; 2009 >
-    au < doNotProcess ; exists ; 2011 ; JTRP Other Publications and Reports Volume 2011 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; JTRP Other Publications and Reports Volume 2012 ; 2012 >
+    au < doNotProcess ; doNotProcess ; 1987 ; JTRP Other Publications and Reports Volume 1987 ; 1987 >
+    au < doNotProcess ; doNotProcess ; 2008 ; JTRP Other Publications and Reports Volume 2008 ; 2008 >
+    au < doNotProcess ; doNotProcess ; 2009 ; JTRP Other Publications and Reports Volume 2009 ; 2009 >
+    au < doNotProcess ; doNotProcess ; 2011 ; JTRP Other Publications and Reports Volume 2011 ; 2011 >
+    au < doNotProcess ; doNotProcess ; 2012 ; JTRP Other Publications and Reports Volume 2012 ; 2012 >
    
 
   }
