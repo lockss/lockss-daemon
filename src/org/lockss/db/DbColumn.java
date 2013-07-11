@@ -1,5 +1,5 @@
 /*
- * $Id: DbColumn.java,v 1.1 2013-07-10 21:59:46 fergaloy-sf Exp $
+ * $Id: DbColumn.java,v 1.2 2013-07-11 00:48:06 fergaloy-sf Exp $
  */
 
 /*
@@ -156,23 +156,23 @@ public class DbColumn implements Comparable<DbColumn> {
   public Object getValue(ResultSet resultSet) throws SQLException {
     switch (type) {
     case BIGINT:
-      value = resultSet.getObject(name, Long.class);
+      value = resultSet.getLong(name);
       break;
 
     case BOOLEAN:
-      value = resultSet.getObject(name, Boolean.class);
+      value = resultSet.getBoolean(name);
       break;
 
     case INTEGER:
-      value = resultSet.getObject(name, Integer.class);
+      value = resultSet.getInt(name);
       break;
 
     case SMALLINT:
-      value = resultSet.getObject(name, Short.class);
+      value = resultSet.getShort(name);
       break;
 
     case VARCHAR:
-      value = resultSet.getObject(name, String.class);
+      value = resultSet.getString(name);
     }
 
     return value;
