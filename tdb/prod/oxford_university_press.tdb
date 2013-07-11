@@ -11215,7 +11215,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 >
 
     }
@@ -11603,7 +11603,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 >
 
     }
@@ -11867,7 +11867,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 >
 
     }
@@ -12018,7 +12018,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the London Mathematical Society Volume 87 ; 87 >
 
     }
@@ -12076,7 +12076,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 >
     au < HighWirePressH20Plugin ; released ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journal of Medicine and Philosophy Volume 38 ; 38 >
 
     }
@@ -12101,7 +12101,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Molecular Cell Biology Volume 5 ; 5 >
 
     }
@@ -12210,7 +12210,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 >
 
     }
@@ -12656,7 +12656,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 >
 
     }
@@ -12741,7 +12741,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Radiation Research Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Radiation Research Volume 54 ; 54 >
     
   }
@@ -13249,7 +13249,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Journal of Topology Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Topology Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Topology Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Topology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Journal of Topology Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Topology Volume 6 ; 6 >
 
     }
@@ -13827,7 +13827,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Literature and Theology Volume 23 ; 23 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Literature and Theology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Literature and Theology Volume 25 ; 25 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Literature and Theology Volume 26 ; 26 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Literature and Theology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Literature and Theology Volume 27 ; 27 >
 
     }
@@ -13878,7 +13878,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 >
 
     }
@@ -13938,7 +13938,7 @@
     au < HighWirePressPlugin ; down ; 2009 ; Mathematical Medicine and Biology Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; manifest ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 >
 
     }
