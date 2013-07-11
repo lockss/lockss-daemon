@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.88 2013-03-13 23:52:40 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.89 2013-07-11 20:25:19 dshr Exp $
  */
 
 /*
@@ -375,6 +375,26 @@ public class LockssRepositoryImpl
     return null;
   }
 
+  /**
+   * Return the AuSuspectUrlVersions object for the AU, that can
+   * be used to mark versions of urls within the AU as suspect,
+   * and to determine whether a version of a url within the AU has
+   * been so marked.
+   * @return AuSuspectUrlversions object for the AU
+   */
+  public static AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
+    RepositoryManager repoMgr =
+      LockssDaemon.getLockssDaemon().getRepositoryManager();
+    UniqueRefLruCache cache =
+      repoMgr.getSuspectVersionsCache();
+    AuSuspectUrlVersions asuv = (AuSuspectUrlVersions) cache.get(au);
+    if (asuv == null) {
+      /* XXX load ausv from underlying file XXX */
+      asuv = new AuSuspectUrlVersions();
+      cache.put(au, asuv);
+    }
+    return asuv;
+  }
 
   // The OpenBSD platform has renamed the first disk from /cache to
   // /cache.wd0, leaving behind a symbolic link in /cache .  This is

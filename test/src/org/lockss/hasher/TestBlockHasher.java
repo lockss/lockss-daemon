@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.18 2013-07-07 04:05:43 dshr Exp $
+ * $Id: TestBlockHasher.java,v 1.19 2013-07-11 20:25:20 dshr Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.filter.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.repository.*;
 
 public class TestBlockHasher extends LockssTestCase {
   private static final String BASE_URL = "http://www.test.com/blah/";
@@ -69,11 +70,25 @@ public class TestBlockHasher extends LockssTestCase {
 
   MockArchivalUnit mau = null;
   MockMessageDigest dig = null;
+  private MockLockssDaemon daemon;
+  private RepositoryManager repoMgr;
+  private LockssRepositoryImpl repo;
+  private String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
+    daemon = getMockLockssDaemon();
     dig = new MockMessageDigest(); 
     mau = new MockArchivalUnit(new MockPlugin());
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    repoMgr = daemon.getRepositoryManager();
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.addFromProps(props);
+    repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+    repo.initService(daemon);
+    repo.startService();
   }
 
   MockArchivalUnit setupContentTree() {
@@ -476,6 +491,9 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(1, localHashHandler.getMatch());
     assertEquals(0, localHashHandler.getMismatch());
     assertEquals(0, localHashHandler.getMissing());
+    AuSuspectUrlVersions asuv =
+      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    assertFalse(asuv.isSuspect(urls[4], 0));
   }
   
   public void testOneContentLocalHashBad(int stepSize)
@@ -506,6 +524,48 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(urls[4], 3, "foo", events.get(0), false);
     assertEquals(0, localHashHandler.getMatch());
     assertEquals(1, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  public void testOneContentLocalHashSuspect(int stepSize)
+      throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  "SHA-1");
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  "MD5");
+
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CHECKSUM,
+	      "SHA-1:deadbeef");
+    addContent(mau, urls[4], "foo", props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(false);
+    assertEquals(3, hashToEnd(hasher, stepSize));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    AuSuspectUrlVersions asuv =
+      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    assertTrue(asuv.isSuspect(urls[4], 0));
+    // Second pass should exclude the suspect URL
+    RecordingEventHandler handRec2 = new RecordingEventHandler();
+    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, handRec2);
+    hasher2.setFiltered(false);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher2.setLocalHashHandler(localHashHandler);
+    assertEquals(0, hashToEnd(hasher2, stepSize));
+    assertTrue(hasher2.finished());
+    List<Event> events2 = handRec2.getEvents();
+    assertEquals(0, events2.size());
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
     assertEquals(0, localHashHandler.getMissing());
   }
   
@@ -1323,8 +1383,12 @@ public class TestBlockHasher extends LockssTestCase {
     /**
      * Local hash mismatch
      * @param curVer CachedUrl of the version for which mismatch was detected
+     * @param alg message digest algorithm in use
+     * @param contentHash computed message digest of current content
+     * @param storedHash message digest in version properties
      */
-    public void mismatch(CachedUrl curVer) {
+    public void mismatch(CachedUrl curVer, String alg, byte[] contentHash,
+			 byte[] storedHash) {
       nMismatch++;
       log.debug3("Mismatch #" + nMismatch);
     }

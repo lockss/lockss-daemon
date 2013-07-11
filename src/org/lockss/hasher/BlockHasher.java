@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.23 2013-07-07 04:05:43 dshr Exp $
+ * $Id: BlockHasher.java,v 1.24 2013-07-11 20:25:19 dshr Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
  * General class to handle content hashing
@@ -94,7 +95,8 @@ public class BlockHasher extends GenericHasher {
   private String localHashAlgorithm = null;
   private byte[] currentVersionStoredHash = null;
   private LocalHashHandler localHashHandler = null;
-
+  private AuSuspectUrlVersions asuv = null;
+   
   protected SubstanceChecker subChecker = null;
 
   public BlockHasher(CachedUrlSet cus,
@@ -270,28 +272,29 @@ public class BlockHasher extends GenericHasher {
       currentVersionStoredHash = null;
       CIProperties verProps = curVer.getProperties();
       if (verProps.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
-	// Yes, does it have content?
+	// Parse the hash in the properties
+	String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
+	String algorithm = null;
+	byte[] hash = null;
+	int colon = cksumProp.indexOf(':');
+	if (colon > 0) {
+	  algorithm = cksumProp.substring(0,colon);
+	  hash = ByteArray.fromHexString(cksumProp.substring(colon+1));
+	} else {
+	    log.error(cksumProp + " badly formatted checksum");
+	}
+	// Does the current version have content?
 	if (curVer.hasContent()) {
 	  // Yes, we need to verify the checksum against the content
-	  String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
 	  if (log.isDebug3()) {
 	    log.debug3(curVer.getUrl() + ":" + curVer.getVersion() + " checksum " + cksumProp);
 	  }
-	  // Yes. What algorithm generated it?
-	  int colon = cksumProp.indexOf(':');
-	  if (colon > 0) {
-	    useHashAlgorithm = cksumProp.substring(0,colon);
-	    currentVersionStoredHash =
-	      ByteArray.fromHexString(cksumProp.substring(colon+1));
-	  } else {
-	    log.error(cksumProp + " badly formatted checksum");
-	    useHashAlgorithm = null;
-	    currentVersionStoredHash = null;
-	  }
+	  useHashAlgorithm = algorithm;
+	  currentVersionStoredHash =hash;
 	} else {
-	  // Checksum but no content - something bad happened
-	  // XXX what to do here?
+	  // Checksum but no content - record this version as troubled
 	  log.error(curVer.getUrl() + ":" + curVer.getVersion() + " checksum but no content");
+	  updateSuspectVersions(curVer, algorithm, null, hash);
 	  useHashAlgorithm = null;
 	  currentVersionStoredHash = null;
 	}
@@ -354,7 +357,29 @@ public class BlockHasher extends GenericHasher {
     if (isTrace) log.debug3("startNode(" + curCu + ")");
     hblock = new HashBlock(curCu);    
     vix = -1;
-    cuVersions = curCu.getCuVersions(getMaxVersions());
+    int ix = 0;
+    CachedUrl[] allVers = curCu.getCuVersions();
+    CachedUrl[] tempVers = new CachedUrl[allVers.length];
+    ensureAuSuspectUrlVersions();
+    for (int i = 0; i < allVers.length && ix < maxVersions; i++) {
+      if (!asuv.isSuspect(allVers[i].getUrl(), allVers[i].getVersion())) {
+        if (log.isDebug3()) {
+          log.debug3(allVers[i].getUrl() + " ver " + allVers[i].getVersion() + " not suspect");
+        }
+        tempVers[ix++] = allVers[i];
+      } else {
+        if (log.isDebug3()) {
+          log.debug3(allVers[i].getUrl() + " ver " + allVers[i].getVersion() + " suspect");
+        }
+      }
+    }
+    if (log.isDebug3()) {
+      log.debug3("# versions: " + ix);
+    }
+    cuVersions = new CachedUrl[ix];
+    for (int i = 0; i < ix; i++) {
+      cuVersions[i] = tempVers[i];
+    }
   }
   
   protected void endOfNode() {
@@ -501,7 +526,8 @@ public class BlockHasher extends GenericHasher {
 	  localHashHandler.match(curVer);
 	} else {
 	  // Something bad happened to either the content or the hash
-	  localHashHandler.mismatch(curVer);
+	  localHashHandler.mismatch(curVer, localHashAlgorithm,
+				    hashOfContent, currentVersionStoredHash);
 	}
       } else {
 	// No checksum property - create one
@@ -520,6 +546,19 @@ public class BlockHasher extends GenericHasher {
     return null;
   }
 
+  private void updateSuspectVersions(CachedUrl curVer, String alg,
+				      byte[] contentHash,
+				      byte[] storedHash) {
+    ensureAuSuspectUrlVersions();
+    asuv.markAsSuspect(curVer.getUrl(), curVer.getVersion());
+  }
+
+  private void ensureAuSuspectUrlVersions() {
+    if (asuv == null) {
+      asuv = LockssRepositoryImpl.getSuspectUrlVersions(cus.getArchivalUnit());
+    }
+  }
+
   public static interface LocalHashHandler {
     /**
      * Local hash match
@@ -529,8 +568,12 @@ public class BlockHasher extends GenericHasher {
     /**
      * Local hash mismatch
      * @param curVer CachedUrl of the version for which mismatch was detected
+     * @param alg message digest algorithm in use
+     * @param contentHash computed message digest of current content
+     * @param storedHash message digest in version properties
      */
-    public void mismatch(CachedUrl curVer);
+    public void mismatch(CachedUrl curVer, String alg, byte[] contentHash,
+			 byte[] storedHash);
     /**
      * Local hash missing
      * @param curVer CachedUrl of the version without hash
@@ -555,11 +598,15 @@ public class BlockHasher extends GenericHasher {
     /**
      * Local hash mismatch
      * @param curVer CachedUrl of the version for which mismatch was detected
+     * @param alg message digest algorithm in use
+     * @param contentHash computed message digest of current content
+     * @param storedHash message digest in version properties
      */
-    public void mismatch(CachedUrl curVer) {
+    public void mismatch(CachedUrl curVer, String alg, byte[] contentHash,
+			 byte[] storedHash) {
       log.error(curVer.getUrl() + ":" + curVer.getVersion() +
 		" hash mismatch");
-      // XXX what to do here?
+      updateSuspectVersions(curVer, alg, contentHash, storedHash);
     }
     /**
      * Local hash missing

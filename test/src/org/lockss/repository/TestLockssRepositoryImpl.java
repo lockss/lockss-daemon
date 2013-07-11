@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.65 2011-08-30 04:42:11 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.66 2013-07-11 20:25:20 dshr Exp $
  */
 
 /*
@@ -132,6 +132,46 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   String addSlash(String s) {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
+  }
+
+  public void testGetSuspectUrlVersions() throws Exception {
+    Properties newProps = new Properties();
+    mau.setAuId("barfoo");
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
+    String location = getCacheLocation() + "ab";
+    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+    String url1 = "http://www.example.com/testDir/branch1/leaf1";
+    createLeaf(url1, "test stream 1", null);
+    String url2 = "http://www.example.com/testDir/branch1/leaf2";
+    createLeaf(url2, "test stream 3", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream 5", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream 6", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream 2", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream 4", null);
+    repo.startService();
+
+    AuSuspectUrlVersions asuv =
+      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    assertNotNull(asuv);
+    // Might as well test the result here
+    assertFalse(asuv.isSuspect(url1, 0));
+    assertFalse(asuv.isSuspect(url1, 1));
+    assertFalse(asuv.isSuspect(url2, 0));
+    assertFalse(asuv.isSuspect(url2, 1));
+    asuv.markAsSuspect(url1, 1);
+    assertFalse(asuv.isSuspect(url1, 0));
+    assertTrue(asuv.isSuspect(url1, 1));
+    assertFalse(asuv.isSuspect(url2, 0));
+    assertFalse(asuv.isSuspect(url2, 1));
+    asuv.markAsSuspect(url2, 0);
+    assertFalse(asuv.isSuspect(url1, 0));
+    assertTrue(asuv.isSuspect(url1, 1));
+    assertTrue(asuv.isSuspect(url2, 0));
+    assertFalse(asuv.isSuspect(url2, 1));
+    repo.stopService();
   }
 
   public void testGetRepositoryRoot() throws Exception {

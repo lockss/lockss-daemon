@@ -1,5 +1,5 @@
 /*
- * $Id: HashedInputStream.java,v 1.1 2013-07-07 04:05:43 dshr Exp $
+ * $Id: HashedInputStream.java,v 1.2 2013-07-11 20:25:20 dshr Exp $
  */
 
 /*
@@ -52,8 +52,11 @@ public class HashedInputStream extends InputStream {
    * @param md the <code>MessageDigest</code>
    */
   public HashedInputStream(InputStream is, MessageDigest md) {
-    if (is == null || md == null) {
-      throw new IllegalArgumentException("null arguments invalid");
+    if (is == null) {
+      throw new IllegalArgumentException("null is invalid");
+    }
+    if (md == null) {
+      throw new IllegalArgumentException("null md invalid");
     }
     this.is = is;
     this.md = md;
@@ -79,14 +82,14 @@ public class HashedInputStream extends InputStream {
    * @param readlimit int limit on number of bytes read ahead of mark
    */
   public void mark(int readlimit) {
-    is.mark(readlimit);
+    throw new UnsupportedOperationException("mark not supported");
   }
 
   /**
    * From <code>InputStream</code>
    */
   public boolean markSupported() {
-    return is.markSupported();
+    return false;
   }
 
   /**
@@ -140,7 +143,7 @@ public class HashedInputStream extends InputStream {
    * From <code>InputStream</code>
    */
   public void reset() throws IOException {
-    is.reset();
+    throw new UnsupportedOperationException("reset not supported");
   }
 
   /**
