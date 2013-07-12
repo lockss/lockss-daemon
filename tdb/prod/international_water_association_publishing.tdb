@@ -229,12 +229,12 @@
 
     param[journal_id] = wp
 
-    au < exists ; 2003 ; Water Policy Volume 5 ; 00501 >
-    au < exists ; 2004 ; Water Policy Volume 6 ; 00601 >
-    au < exists ; 2005 ; Water Policy Volume 7 ; 00701 >
-    au < exists ; 2006 ; Water Policy Volume 8 ; 00801 >
-    au < exists ; 2007 ; Water Policy Volume 9 ; 00901 >
-    au < exists ; 2008 ; Water Policy Volume 10 ; 01001 >
+    au < manifest ; 2003 ; Water Policy Volume 5 ; 00501 >
+    au < manifest ; 2004 ; Water Policy Volume 6 ; 00601 >
+    au < manifest ; 2005 ; Water Policy Volume 7 ; 00701 >
+    au < manifest ; 2006 ; Water Policy Volume 8 ; 00801 >
+    au < manifest ; 2007 ; Water Policy Volume 9 ; 00901 >
+    au < manifest ; 2008 ; Water Policy Volume 10 ; 01001 >
     au < exists ; 2009 ; Water Policy Volume 11 ; 011001 >
     au < exists ; 2010 ; Water Policy Volume 12 ; 012001 >
     au < exists ; 2011 ; Water Policy Volume 13 ; 013001 >
