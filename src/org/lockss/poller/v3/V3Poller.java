@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.159 2013-07-05 17:43:00 barry409 Exp $
+ * $Id: V3Poller.java,v 1.160 2013-07-12 16:12:53 dshr Exp $
  */
 
 /*
@@ -139,6 +139,19 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_ENABLE_INVITATIONS =
     PREFIX + "enableFollowupInvitations";
   public static final boolean DEFAULT_ENABLE_INVITATIONS = true;
+  
+  /** If true, enable local polls (i.e. polls that do not invite any
+   * voters but depend on local hashes.
+   */
+  public static final String PARAM_V3_ENABLE_LOCAL_POLLS =
+    PREFIX + "enableLocalPolls";
+  public static final boolean DEFAULT_V3_ENABLE_LOCAL_POLLS = false;
+  
+  /** For testing, if true, all polls are local.
+   */
+  public static final String PARAM_V3_ALL_LOCAL_POLLS =
+    PREFIX + "enableLocalPolls";
+  public static final boolean DEFAULT_V3_ALL_LOCAL_POLLS = false;
   
   /** Curve expressing decreasing weight of inviting peer who has
    * been unresponsive for X time.
@@ -464,6 +477,8 @@ public class V3Poller extends BasePoll {
     DEFAULT_TARGET_SIZE_QUORUM_MULTIPLIER;
   private double invitationSizeTargetMultiplier =
     DEFAULT_INVITATION_SIZE_TARGET_MULTIPLIER;
+  private boolean enableLocalPolls = DEFAULT_V3_ENABLE_LOCAL_POLLS;
+  private boolean allLocalPolls = DEFAULT_V3_ALL_LOCAL_POLLS;
 
   private SchedulableTask task;
   private TimerQueue.Request invitationRequest;
@@ -531,6 +546,10 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
     int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     int voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
+
+    if (enableLocalPolls && candidateForLocalPoll()) {
+      quorum = 0;
+    }
 
     // todo(bhayes): The PoP signal can not come from the
     // configuration. It probably comes from the PollSpec.
@@ -656,6 +675,26 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_LOG_UNIQUE_VERSIONS);
     enableHashStats = c.getBoolean(PARAM_V3_ENABLE_HASH_STATS,
 				   DEFAULT_V3_ENABLE_HASH_STATS);
+    enableLocalPolls = c.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
+				    DEFAULT_V3_ENABLE_LOCAL_POLLS);
+  }
+
+  /**
+   * Decide whether this poll can be a local poll.
+   * @return true if this poll can be local
+   */
+  protected boolean candidateForLocalPoll() {
+    boolean ret = false;
+    if (enableLocalPolls) {
+      if (allLocalPolls) {
+	log.debug3("Local poll forced");
+	ret = true;
+      } else {
+	log.debug3("Local polls enabled");
+	/* XXX DSHR - do something here */
+      }
+    }
+    return ret;
   }
 
   /**
@@ -2402,6 +2441,10 @@ public class V3Poller extends BasePoll {
     Map availMap = getAvailablePeers();
     log.debug3("constructInnerCircle: quorum = " + quorum + ", " +
 	       availMap.size() + " available");
+    if (enableLocalPolls && quorum <= 0) {
+      log.debug2("Local poll, empty inner circle");
+      return;
+    }
     Collection innerCircleVoters = findNPeersToInvite(getTargetSize());
     log.debug2("Selected " + innerCircleVoters.size()
 	       + " participants for poll ID " + pollerState.getPollKey());

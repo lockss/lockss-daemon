@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.57 2013-06-26 17:37:51 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.58 2013-07-12 16:12:53 dshr Exp $
  */
 
 /*
@@ -379,24 +379,36 @@ public class TestV3Poller extends LockssTestCase {
   public void testParticipantSizesAll() throws Exception {
     // All symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo");
-    doTestParticipantSizes(v3Poller, initialPeers.size());
+    doTestParticipantSizes(v3Poller, initialPeers.size(), voters.length);
   }
   public void testParticipantSizesTwo() throws Exception {
     // 2 symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo", 2);
-    doTestParticipantSizes(v3Poller, 2);
+    doTestParticipantSizes(v3Poller, 2, voters.length);
   }
   public void testParticipantSizesNone() throws Exception {
     // No symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo", 0);
-    doTestParticipantSizes(v3Poller, 0);
+    doTestParticipantSizes(v3Poller, 0, voters.length);
+  }
+  public void testParticipantSizesNoVoters() throws Exception {
+    // No participants
+    Properties p = new Properties();
+    // Set PARAM_V3_ENABLE_LOCAL_POLLS true
+    p.setProperty(V3Poller.PARAM_V3_ENABLE_LOCAL_POLLS, "true");
+    // Set PARAM_V3_ALL_LOCAL_POLLS true
+    p.setProperty(V3Poller.PARAM_V3_ALL_LOCAL_POLLS, "true");
+    ConfigurationUtil.addFromProps(p);
+
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    doTestParticipantSizes(v3Poller, 0, 0);
   }
 
-  protected void doTestParticipantSizes(V3Poller v3Poller,
-					int numSym) throws Exception {
+  protected void doTestParticipantSizes(V3Poller v3Poller, int numSym,
+					int numVoters) throws Exception {
     Map<PeerIdentity,ParticipantUserData> innerCircle =
       theParticipants(v3Poller);
-    assertEquals(innerCircle.size(), voters.length);
+    assertEquals(numVoters, innerCircle.size());
     List<ParticipantUserData> symmetricParticipants =
       symmetricParticipants(v3Poller);
     assertTrue(symmetricParticipants.size() == numSym);
@@ -1516,16 +1528,20 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   private MyV3Poller makeInittedV3Poller(String key) throws Exception {
-    return makeInittedV3Poller(key, 6);
+    return makeInittedV3Poller(key, 6, voters.length);
   }
 
   private MyV3Poller makeInittedV3Poller(String key,
 					   int numSym) throws Exception {
+    return makeInittedV3Poller(key, numSym, voters.length);
+  }
+  private MyV3Poller makeInittedV3Poller(String key, int numSym,
+					 int numVoters) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
     MyV3Poller p = new MyV3Poller(ps, theDaemon, pollerId, key, 20000,
                                           "SHA-1");
-    p.constructInnerCircle(voters.length);
+    p.constructInnerCircle(numVoters);
     Map<PeerIdentity,ParticipantUserData> innerCircle = theParticipants(p);
     for (int ix = 0; ix < voters.length; ix++) {
       PeerIdentity pid = voters[ix];

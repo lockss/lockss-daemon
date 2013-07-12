@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksCoordinator.java,v 1.3 2013-06-26 19:21:44 barry409 Exp $
+ * $Id: VoteBlocksCoordinator.java,v 1.4 2013-07-12 16:12:53 dshr Exp $
  */
 
 /*
@@ -166,15 +166,21 @@ final class VoteBlocksCoordinator {
 	return VoteBlock.compareUrls(url1, url2);
       }
     };
-    // Throws IllegalArgumentException if iterators.size() is zero.
-    this.iteratorQueue =
-      new java.util.PriorityQueue<Entry>(iterators.size(), comparator);
+    if (iterators.size() > 0) {
+      // Throws IllegalArgumentException if iterators.size() is zero.
+      this.iteratorQueue =
+	new java.util.PriorityQueue<Entry>(iterators.size(), comparator);
+    } else {
+      this.iteratorQueue = null;
+    }
     this.entryList = new ArrayList<Entry>();
-      
-    for (VoteBlocksIterator iterator: iterators) {
-      Entry entry = new Entry(iterator);
-      entryList.add(entry);
-      iteratorQueue.add(entry);
+
+    if (iterators.size() > 0) {
+      for (VoteBlocksIterator iterator: iterators) {
+	Entry entry = new Entry(iterator);
+	entryList.add(entry);
+	iteratorQueue.add(entry);
+      }
     }
   }
 
@@ -193,7 +199,10 @@ final class VoteBlocksCoordinator {
    * there are no partcipants with URLs remaining.
    */
   public String peekUrl() {
-    Entry entry = iteratorQueue.peek();
+    Entry entry = null;
+    if (iteratorQueue != null) {
+      entry = iteratorQueue.peek();
+    }
     if (entry == null) {
       return null;
     }
@@ -221,6 +230,7 @@ final class VoteBlocksCoordinator {
     // priority queue. Not tested, but it's assumed to be more
     // efficient.
     for (Entry entry : entryList) {
+      // if iteratorQueue == null entryList is empty, so won't get here
       iteratorQueue.remove(entry);
       // todo(bhayes): Change VoteBlockIterator to support a "seek"
       // operation.
