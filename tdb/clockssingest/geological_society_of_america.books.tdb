@@ -19,190 +19,190 @@
     param[base_url] = http://memoirs.gsapubs.org/
     implicit < status ; status2 ; year ; doi ; isbn ; name ; param[volume_name] >
     
-    au < exists ; exists ; 1934 ; 10.1130/MEM1 ;  ; Geological Society of America Memoirs Volume 1 ; 1 >
-    au < exists ; exists ; 1934 ; 10.1130/MEM2 ;  ; Geological Society of America Memoirs Volume 2 ; 2 >
-    au < exists ; exists ; 1935 ; 10.1130/MEM3 ;  ; Geological Society of America Memoirs Volume 3 ; 3 >
-    au < exists ; exists ; 1936 ; 10.1130/MEM4 ;  ; Geological Society of America Memoirs Volume 4 ; 4 >
-    au < exists ; exists ; 1937 ; 10.1130/MEM5 ;  ; Geological Society of America Memoirs Volume 5 ; 5 >
-    au < exists ; exists ; 1938 ; 10.1130/MEM6 ;  ; Geological Society of America Memoirs Volume 6 ; 6 >
-    au < exists ; exists ; 1939 ; 10.1130/MEM7 ;  ; Geological Society of America Memoirs Volume 7 ; 7 >
-    au < exists ; exists ; 1943 ; 10.1130/MEM8 ;  ; Geological Society of America Memoirs Volume 8 ; 8 >
-    au < exists ; exists ; 1945 ; 10.1130/MEM9 ;  ; Geological Society of America Memoirs Volume 9 ; 9 >
-    au < exists ; exists ; 1945 ; 10.1130/MEM10 ;  ; Geological Society of America Memoirs Volume 10 ; 10 >
-    au < exists ; exists ; 1945 ; 10.1130/MEM11 ;  ; Geological Society of America Memoirs Volume 11 ; 11 >
-    au < exists ; exists ; 1945 ; 10.1130/MEM12 ;  ; Geological Society of America Memoirs Volume 12 ; 12 >
-    au < exists ; exists ; 1946 ; 10.1130/MEM13 ;  ; Geological Society of America Memoirs Volume 13 ; 13 >
-    au < exists ; exists ; 1945 ; 10.1130/MEM14 ;  ; Geological Society of America Memoirs Volume 14 ; 14 >
-    au < exists ; exists ; 1946 ; 10.1130/MEM15 ;  ; Geological Society of America Memoirs Volume 15 ; 15 >
-    au < exists ; exists ; 1946 ; 10.1130/MEM16 ;  ; Geological Society of America Memoirs Volume 16 ; 16 >
-    au < exists ; exists ; 1946 ; 10.1130/MEM17 ;  ; Geological Society of America Memoirs Volume 17 ; 17 >
-    au < exists ; exists ; 1946 ; 10.1130/MEM18 ;  ; Geological Society of America Memoirs Volume 18 ; 18 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM19 ;  ; Geological Society of America Memoirs Volume 19 ; 19 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM20 ;  ; Geological Society of America Memoirs Volume 20 ; 20 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM21 ;  ; Geological Society of America Memoirs Volume 21 ; 21 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM22 ;  ; Geological Society of America Memoirs Volume 22 ; 22 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM23 ;  ; Geological Society of America Memoirs Volume 23 ; 23 >
-    au < exists ; exists ; 1947 ; 10.1130/MEM24 ;  ; Geological Society of America Memoirs Volume 24 ; 24 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM25 ;  ; Geological Society of America Memoirs Volume 25 ; 25 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM26 ;  ; Geological Society of America Memoirs Volume 26 ; 26 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM27 ;  ; Geological Society of America Memoirs Volume 27 ; 27 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM28 ;  ; Geological Society of America Memoirs Volume 28 ; 28 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM29 ;  ; Geological Society of America Memoirs Volume 29 ; 29 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM30 ;  ; Geological Society of America Memoirs Volume 30 ; 30 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM31 ;  ; Geological Society of America Memoirs Volume 31 ; 31 >
-    au < exists ; exists ; 1948 ; 10.1130/MEM32 ;  ; Geological Society of America Memoirs Volume 32 ; 32 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM33 ;  ; Geological Society of America Memoirs Volume 33 ; 33 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM34 ;  ; Geological Society of America Memoirs Volume 34 ; 34 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM35 ;  ; Geological Society of America Memoirs Volume 35 ; 35 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM36 ;  ; Geological Society of America Memoirs Volume 36 ; 36 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM37 ;  ; Geological Society of America Memoirs Volume 37 ; 37 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM38 ;  ; Geological Society of America Memoirs Volume 38 ; 38 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM39 ;  ; Geological Society of America Memoirs Volume 39 ; 39 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM40 ;  ; Geological Society of America Memoirs Volume 40 ; 40 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM41 ;  ; Geological Society of America Memoirs Volume 41 ; 41 >
-    au < exists ; exists ; 1949 ; 10.1130/MEM42 ;  ; Geological Society of America Memoirs Volume 42 ; 42 >
-    au < exists ; exists ; 1950 ; 10.1130/MEM43 ;  ; Geological Society of America Memoirs Volume 43 ; 43 >
-    au < exists ; exists ; 1950 ; 10.1130/MEM44 ;  ; Geological Society of America Memoirs Volume 44 ; 44 >
-    au < exists ; exists ; 1950 ; 10.1130/MEM45 ;  ; Geological Society of America Memoirs Volume 45 ; 45 >
-    au < exists ; exists ; 1951 ; 10.1130/MEM46 ;  ; Geological Society of America Memoirs Volume 46 ; 46 >
-    au < exists ; exists ; 1951 ; 10.1130/MEM47 ;  ; Geological Society of America Memoirs Volume 47 ; 47 >
-    au < exists ; exists ; 1951 ; 10.1130/MEM48 ;  ; Geological Society of America Memoirs Volume 48 ; 48 >
-    au < exists ; exists ; 1952 ; 10.1130/MEM49 ;  ; Geological Society of America Memoirs Volume 49 ; 49 >
-    au < exists ; exists ; 1952 ; 10.1130/MEM50 ;  ; Geological Society of America Memoirs Volume 50 ; 50 >
-    au < exists ; exists ; 1952 ; 10.1130/MEM51 ;  ; Geological Society of America Memoirs Volume 51 ; 51 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM52 ;  ; Geological Society of America Memoirs Volume 52 ; 52 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM53 ;  ; Geological Society of America Memoirs Volume 53 ; 53 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM54 ;  ; Geological Society of America Memoirs Volume 54 ; 54 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM55 ;  ; Geological Society of America Memoirs Volume 55 ; 55 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM56 ;  ; Geological Society of America Memoirs Volume 56 ; 56 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM57 ;  ; Geological Society of America Memoirs Volume 57 ; 57 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM58 ;  ; Geological Society of America Memoirs Volume 58 ; 58 >
-    au < exists ; exists ; 1953 ; 10.1130/MEM59 ;  ; Geological Society of America Memoirs Volume 59 ; 59 >
-    au < exists ; exists ; 1954 ; 10.1130/MEM60 ;  ; Geological Society of America Memoirs Volume 60 ; 60 >
-    au < exists ; exists ; 1954 ; 10.1130/MEM61 ;  ; Geological Society of America Memoirs Volume 61 ; 61 >
-    au < exists ; exists ; 1954 ; 10.1130/MEM62 ;  ; Geological Society of America Memoirs Volume 62 ; 62 >
-    au < exists ; exists ; 1955 ; 10.1130/MEM63 ;  ; Geological Society of America Memoirs Volume 63 ; 63 >
-    au < exists ; exists ; 1956 ; 10.1130/MEM64 ;  ; Geological Society of America Memoirs Volume 64 ; 64 >
-    au < exists ; exists ; 1956 ; 10.1130/MEM65 ;  ; Geological Society of America Memoirs Volume 65 ; 65 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM66 ;  ; Geological Society of America Memoirs Volume 66 ; 66 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM67V1 ;  ; Geological Society of America Memoirs Volume 67V1 ; 67V1 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM67V2 ;  ; Geological Society of America Memoirs Volume 67V2 ; 67V2 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM68 ;  ; Geological Society of America Memoirs Volume 68 ; 68 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM69 ;  ; Geological Society of America Memoirs Volume 69 ; 69 >
-    au < exists ; exists ; 1957 ; 10.1130/MEM70 ;  ; Geological Society of America Memoirs Volume 70 ; 70 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM71 ;  ; Geological Society of America Memoirs Volume 71 ; 71 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM72 ;  ; Geological Society of America Memoirs Volume 72 ; 72 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM73 ;  ; Geological Society of America Memoirs Volume 73 ; 73 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM74 ;  ; Geological Society of America Memoirs Volume 74 ; 74 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM75 ;  ; Geological Society of America Memoirs Volume 75 ; 75 >
-    au < exists ; exists ; 1958 ; 10.1130/MEM76 ;  ; Geological Society of America Memoirs Volume 76 ; 76 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM77 ;  ; Geological Society of America Memoirs Volume 77 ; 77 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM78 ;  ; Geological Society of America Memoirs Volume 78 ; 78 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM79 ;  ; Geological Society of America Memoirs Volume 79 ; 79 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM80 ;  ; Geological Society of America Memoirs Volume 80 ; 80 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM81 ;  ; Geological Society of America Memoirs Volume 81 ; 81 >
-    au < exists ; exists ; 1961 ; 10.1130/MEM82 ;  ; Geological Society of America Memoirs Volume 82 ; 82 >
-    au < exists ; exists ; 1960 ; 10.1130/MEM83 ;  ; Geological Society of America Memoirs Volume 83 ; 83 >
-    au < exists ; exists ; 1961 ; 10.1130/MEM84 ;  ; Geological Society of America Memoirs Volume 84 ; 84 >
-    au < exists ; exists ; 1962 ; 10.1130/MEM85 ;  ; Geological Society of America Memoirs Volume 85 ; 85 >
-    au < exists ; exists ; 1962 ; 10.1130/MEM86 ;  ; Geological Society of America Memoirs Volume 86 ; 86 >
-    au < exists ; exists ; 1962 ; 10.1130/MEM87V1 ;  ; Geological Society of America Memoirs Volume 87V1 ; 87V1 >
-    au < exists ; exists ; 1962 ; 10.1130/MEM87V2 ;  ; Geological Society of America Memoirs Volume 87V2 ; 87V2 >
-    au < exists ; exists ; 1963 ; 10.1130/MEM88 ;  ; Geological Society of America Memoirs Volume 88 ; 88 >
-    au < exists ; exists ; 1963 ; 10.1130/MEM89 ;  ; Geological Society of America Memoirs Volume 89 ; 89 >
-    au < exists ; exists ; 1963 ; 10.1130/MEM90 ;  ; Geological Society of America Memoirs Volume 90 ; 90 >
-    au < exists ; exists ; 1963 ; 10.1130/MEM91 ;  ; Geological Society of America Memoirs Volume 91 ; 91 >
-    au < exists ; exists ; 1964 ; 10.1130/MEM92 ;  ; Geological Society of America Memoirs Volume 92 ; 92 >
-    au < exists ; exists ; 1964 ; 10.1130/MEM93 ;  ; Geological Society of America Memoirs Volume 93 ; 93 >
-    au < exists ; exists ; 1964 ; 10.1130/MEM94 ;  ; Geological Society of America Memoirs Volume 94 ; 94 >
-    au < exists ; exists ; 1965 ; 10.1130/MEM95 ;  ; Geological Society of America Memoirs Volume 95 ; 95 >
-    au < exists ; exists ; 1965 ; 10.1130/MEM96 ;  ; Geological Society of America Memoirs Volume 96 ; 96 >
-    au < exists ; exists ; 1966 ; 10.1130/MEM97 ;  ; Geological Society of America Memoirs Volume 97 ; 97 >
-    au < exists ; exists ; 1966 ; 10.1130/MEM98 ;  ; Geological Society of America Memoirs Volume 98 ; 98 >
-    au < exists ; exists ; 1965 ; 10.1130/MEM99 ;  ; Geological Society of America Memoirs Volume 99 ; 99 >
-    au < exists ; exists ; 1966 ; 10.1130/MEM100 ;  ; Geological Society of America Memoirs Volume 100 ; 100 >
-    au < exists ; exists ; 1967 ; 10.1130/MEM101 ;  ; Geological Society of America Memoirs Volume 101 ; 101 >
-    au < exists ; exists ; 1967 ; 10.1130/MEM102 ;  ; Geological Society of America Memoirs Volume 102 ; 102 >
-    au < exists ; exists ; 1967 ; 10.1130/MEM103 ;  ; Geological Society of America Memoirs Volume 103 ; 103 >
-    au < exists ; exists ; 1967 ; 10.1130/MEM104 ;  ; Geological Society of America Memoirs Volume 104 ; 104 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM105 ;  ; Geological Society of America Memoirs Volume 105 ; 105 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM106 ;  ; Geological Society of America Memoirs Volume 106 ; 106 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM107 ;  ; Geological Society of America Memoirs Volume 107 ; 107 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM108 ;  ; Geological Society of America Memoirs Volume 108 ; 108 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM109 ;  ; Geological Society of America Memoirs Volume 109 ; 109 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM110 ;  ; Geological Society of America Memoirs Volume 110 ; 110 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM111 ;  ; Geological Society of America Memoirs Volume 111 ; 111 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM112 ; 8137-1112-6 ; Geological Society of America Memoirs Volume 112 ; 112 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM113 ;  ; Geological Society of America Memoirs Volume 113 ; 113 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM114 ;  ; Geological Society of America Memoirs Volume 114 ; 114 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM115 ; 8137-1115-0 ; Geological Society of America Memoirs Volume 115 ; 115 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM116 ;  ; Geological Society of America Memoirs Volume 116 ; 116 >
-    au < exists ; exists ; 1968 ; 10.1130/MEM117 ;  ; Geological Society of America Memoirs Volume 117 ; 117 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM118 ; 8137-1118-5 ; Geological Society of America Memoirs Volume 118 ; 118 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM119 ; 8137-1119-3 ; Geological Society of America Memoirs Volume 119 ; 119 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM120 ; 8137-1120-7 ; Geological Society of America Memoirs Volume 120 ; 120 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM121 ;  ; Geological Society of America Memoirs Volume 121 ; 121 >
-    au < exists ; exists ; 1969 ; 10.1130/MEM122 ; 8137-1122-3 ; Geological Society of America Memoirs Volume 122 ; 122 >
-    au < exists ; exists ; 1971 ; 10.1130/MEM123 ; 0-8137-1123-1 ; Geological Society of America Memoirs Volume 123 ; 123 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM124 ; 8137-1124-X ; Geological Society of America Memoirs Volume 124 ; 124 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM125 ; 81S7-1125-8 ; Geological Society of America Memoirs Volume 125 ; 125 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM126 ; 8137-1126-6 ; Geological Society of America Memoirs Volume 126 ; 126 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM127 ; 0-8137-1127-4 ; Geological Society of America Memoirs Volume 127 ; 127 >
-    au < exists ; exists ; 1970 ; 10.1130/MEM128 ; 8137-1128-Z ; Geological Society of America Memoirs Volume 128 ; 128 >
-    au < exists ; exists ; 1971 ; 10.1130/MEM129 ; 0-8137-1129-0 ; Geological Society of America Memoirs Volume 129 ; 129 >
-    au < exists ; exists ; 1971 ; 10.1130/MEM130 ; 0-8137-1130-4 ; Geological Society of America Memoirs Volume 130 ; 130 >
-    au < exists ; exists ; 1972 ; 10.1130/MEM131 ; 8137-1131-2 ; Geological Society of America Memoirs Volume 131 ; 131 >
-    au < exists ; exists ; 1972 ; 10.1130/MEM132 ; 0-8137-1132-0 ; Geological Society of America Memoirs Volume 132 ; 132 >
-    au < exists ; exists ; 1972 ; 10.1130/MEM133 ; 0-8137-1133-9 ; Geological Society of America Memoirs Volume 133 ; 133 >
-    au < exists ; exists ; 1972 ; 10.1130/MEM134 ; 08137-1134-7 ; Geological Society of America Memoirs Volume 134 ; 134 >
-    au < exists ; exists ; 1972 ; 10.1130/MEM135 ; 0-8137-1135-5 ; Geological Society of America Memoirs Volume 135 ; 135 >
-    au < exists ; exists ; 1973 ; 10.1130/MEM136 ; 0-8137-1136-3 ; Geological Society of America Memoirs Volume 136 ; 136 >
-    au < exists ; exists ; 1973 ; 10.1130/MEM137 ; 0-8137-1137-1 ; Geological Society of America Memoirs Volume 137 ; 137 >
-    au < exists ; exists ; 1974 ; 10.1130/MEM138 ; 0-8137-1138-X ; Geological Society of America Memoirs Volume 138 ; 138 >
-    au < exists ; exists ; 1974 ; 10.1130/MEM139 ; 0-8137-1139-8 ; Geological Society of America Memoirs Volume 139 ; 139 >
-    au < exists ; exists ; 1975 ; 10.1130/MEM140 ; 0-8137-1140-1 ; Geological Society of America Memoirs Volume 140 ; 140 >
-    au < exists ; exists ; 1973 ; 10.1130/MEM141 ; 0-8137-1141-X ; Geological Society of America Memoirs Volume 141 ; 141 >
-    au < exists ; exists ; 1975 ; 10.1130/MEM142 ; 0-8137-1142-8 ; Geological Society of America Memoirs Volume 142 ; 142 >
-    au < exists ; exists ; 1975 ; 10.1130/MEM143 ; 0-8137-1143-6 ; Geological Society of America Memoirs Volume 143 ; 143 >
-    au < exists ; exists ; 1975 ; 10.1130/MEM144 ; 0-8137-1144-4 ; Geological Society of America Memoirs Volume 144 ; 144 >
-    au < exists ; exists ; 1976 ; 10.1130/MEM145 ; 0-8137-1145-2 ; Geological Society of America Memoirs Volume 145 ; 145 >
-    au < exists ; exists ; 1976 ; 10.1130/MEM146 ; 0-8137-1146-0 ; Geological Society of America Memoirs Volume 146 ; 146 >
-    au < exists ; exists ; 1977 ; 10.1130/MEM147 ; 0-8137-1147-9 ; Geological Society of America Memoirs Volume 147 ; 147 >
-    au < exists ; exists ; 1976 ; 10.1130/MEM148 ; 0-8137-1148-7 ; Geological Society of America Memoirs Volume 148 ; 148 >
-    au < exists ; exists ; 1977 ; 10.1130/MEM149 ; 0-8137-1149-5 ; Geological Society of America Memoirs Volume 149 ; 149 >
-    au < exists ; exists ; 1977 ; 10.1130/MEM150 ; 0-8137-1150-9 ; Geological Society of America Memoirs Volume 150 ; 150 >
-    au < exists ; exists ; 1978 ; 10.1130/MEM151 ; 0-8137-1151-7 ; Geological Society of America Memoirs Volume 151 ; 151 >
-    au < exists ; exists ; 1978 ; 10.1130/MEM152 ; 0-8137-1152-5 ; Geological Society of America Memoirs Volume 152 ; 152 >
-    au < exists ; exists ; 1980 ; 10.1130/MEM153 ; 0-8137-1153-3 ; Geological Society of America Memoirs Volume 153 ; 153 >
-    au < exists ; exists ; 1981 ; 10.1130/MEM154 ; 0-8137-1154-1 ; Geological Society of America Memoirs Volume 154 ; 154 >
-    au < exists ; exists ; 1982 ; 10.1130/MEM155 ;  ; Geological Society of America Memoirs Volume 155 ; 155 >
-    au < exists ; exists ; 1982 ; 10.1130/MEM156 ; 0-8137-1156-8 ; Geological Society of America Memoirs Volume 156 ; 156 >
-    au < exists ; exists ; 1983 ; 10.1130/MEM157 ; 0-8137-1157-6 ; Geological Society of America Memoirs Volume 157 ; 157 >
-    au < exists ; exists ; 1983 ; 10.1130/MEM158 ; 0-8137-1158-4 ; Geological Society of America Memoirs Volume 158 ; 158 >
-    au < exists ; exists ; 1983 ; 10.1130/MEM159 ; 0-8137-1159-2 ; Geological Society of America Memoirs Volume 159 ; 159 >
-    au < exists ; exists ; 1983 ; 10.1130/MEM160 ; 0-8137-1160-6 ; Geological Society of America Memoirs Volume 160 ; 160 >
-    au < exists ; exists ; 1983 ; 10.1130/MEM161 ;  ; Geological Society of America Memoirs Volume 161 ; 161 >
-    au < exists ; exists ; 1984 ; 10.1130/MEM162 ; 0-8137-1162-2 ; Geological Society of America Memoirs Volume 162 ; 162 >
-    au < exists ; exists ; 1985 ; 10.1130/MEM163 ;  ; Geological Society of America Memoirs Volume 163 ; 163 >
-    au < exists ; exists ; 1986 ; 10.1130/MEM164 ; 0-8137-1164-9 ; Geological Society of America Memoirs Volume 164 ; 164 >
-    au < exists ; exists ; 1987 ; 10.1130/MEM165 ; 0-8137-1165-7 ; Geological Society of America Memoirs Volume 165 ; 165 >
-    au < exists ; exists ; 1986 ; 10.1130/MEM166 ; 0-8137-1166-5 ; Geological Society of America Memoirs Volume 166 ; 166 >
-    au < exists ; exists ; 1988 ; 10.1130/MEM167 ; 0-8137-1167-3 ; Geological Society of America Memoirs Volume 167 ; 167 >
-    au < exists ; exists ; 1988 ; 10.1130/MEM168 ; 0-8137-1168-1 ; Geological Society of America Memoirs Volume 168 ; 168 >
-    au < exists ; exists ; 1988 ; 10.1130/MEM169 ; 0-8137-1169-X ; Geological Society of America Memoirs Volume 169 ; 169 >
-    au < exists ; exists ; 1992 ; 10.1130/MEM170 ; 0-8137-1170-3 ; Geological Society of America Memoirs Volume 170 ; 170 >
-    au < exists ; exists ; 1988 ; 10.1130/MEM171 ; 0-8137-1171-1 ; Geological Society of America Memoirs Volume 171 ; 171 >
-    au < exists ; exists ; 1989 ; 10.1130/MEM172 ; 0-8137-1172-X ; Geological Society of America Memoirs Volume 172 ; 172 >
-    au < exists ; exists ; 1989 ; 10.1130/MEM173 ; 0-8137-1173-8 ; Geological Society of America Memoirs Volume 173 ; 173 >
-    au < exists ; exists ; 1990 ; 10.1130/MEM174 ; 0-8137-1174-6 ; Geological Society of America Memoirs Volume 174 ; 174 >
-    au < exists ; exists ; 1990 ; 10.1130/MEM175 ; 0-8137-1175-4 ; Geological Society of America Memoirs Volume 175 ; 175 >
-    au < exists ; exists ; 1990 ; 10.1130/MEM176 ; 0-8137-1176-2 ; Geological Society of America Memoirs Volume 176 ; 176 >
-    au < exists ; exists ; 1990 ; 10.1130/MEM177 ; 0-8137-1177-0 ; Geological Society of America Memoirs Volume 177 ; 177 >
-    au < exists ; exists ; 1993 ; 10.1130/MEM178 ; 0-8137-1178-9 ; Geological Society of America Memoirs Volume 178 ; 178 >
-    au < exists ; exists ; 1992 ; 10.1130/MEM179 ; 0-8137-1179-7 ; Geological Society of America Memoirs Volume 179 ; 179 >
-    au < exists ; exists ; 1992 ; 10.1130/MEM180 ; 0-8137-1180-0 ; Geological Society of America Memoirs Volume 180 ; 180 >
-    au < exists ; exists ; 1993 ; 10.1130/MEM181 ; 0-8137-1181-9 ; Geological Society of America Memoirs Volume 181 ; 181 >
-    au < exists ; exists ; 1993 ; 10.1130/MEM182 ; 0-8137-1182-7 ; Geological Society of America Memoirs Volume 182 ; 182 >
+    au < manifest ; exists ; 1934 ; 10.1130/MEM1 ;  ; Geological Society of America Memoirs Volume 1 ; 1 >
+    au < manifest ; exists ; 1934 ; 10.1130/MEM2 ;  ; Geological Society of America Memoirs Volume 2 ; 2 >
+    au < manifest ; exists ; 1935 ; 10.1130/MEM3 ;  ; Geological Society of America Memoirs Volume 3 ; 3 >
+    au < manifest ; exists ; 1936 ; 10.1130/MEM4 ;  ; Geological Society of America Memoirs Volume 4 ; 4 >
+    au < manifest ; exists ; 1937 ; 10.1130/MEM5 ;  ; Geological Society of America Memoirs Volume 5 ; 5 >
+    au < manifest ; exists ; 1938 ; 10.1130/MEM6 ;  ; Geological Society of America Memoirs Volume 6 ; 6 >
+    au < manifest ; exists ; 1939 ; 10.1130/MEM7 ;  ; Geological Society of America Memoirs Volume 7 ; 7 >
+    au < manifest ; exists ; 1943 ; 10.1130/MEM8 ;  ; Geological Society of America Memoirs Volume 8 ; 8 >
+    au < manifest ; exists ; 1945 ; 10.1130/MEM9 ;  ; Geological Society of America Memoirs Volume 9 ; 9 >
+    au < manifest ; exists ; 1945 ; 10.1130/MEM10 ;  ; Geological Society of America Memoirs Volume 10 ; 10 >
+    au < manifest ; exists ; 1945 ; 10.1130/MEM11 ;  ; Geological Society of America Memoirs Volume 11 ; 11 >
+    au < manifest ; exists ; 1945 ; 10.1130/MEM12 ;  ; Geological Society of America Memoirs Volume 12 ; 12 >
+    au < manifest ; exists ; 1946 ; 10.1130/MEM13 ;  ; Geological Society of America Memoirs Volume 13 ; 13 >
+    au < manifest ; exists ; 1945 ; 10.1130/MEM14 ;  ; Geological Society of America Memoirs Volume 14 ; 14 >
+    au < manifest ; exists ; 1946 ; 10.1130/MEM15 ;  ; Geological Society of America Memoirs Volume 15 ; 15 >
+    au < manifest ; exists ; 1946 ; 10.1130/MEM16 ;  ; Geological Society of America Memoirs Volume 16 ; 16 >
+    au < manifest ; exists ; 1946 ; 10.1130/MEM17 ;  ; Geological Society of America Memoirs Volume 17 ; 17 >
+    au < manifest ; exists ; 1946 ; 10.1130/MEM18 ;  ; Geological Society of America Memoirs Volume 18 ; 18 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM19 ;  ; Geological Society of America Memoirs Volume 19 ; 19 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM20 ;  ; Geological Society of America Memoirs Volume 20 ; 20 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM21 ;  ; Geological Society of America Memoirs Volume 21 ; 21 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM22 ;  ; Geological Society of America Memoirs Volume 22 ; 22 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM23 ;  ; Geological Society of America Memoirs Volume 23 ; 23 >
+    au < manifest ; exists ; 1947 ; 10.1130/MEM24 ;  ; Geological Society of America Memoirs Volume 24 ; 24 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM25 ;  ; Geological Society of America Memoirs Volume 25 ; 25 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM26 ;  ; Geological Society of America Memoirs Volume 26 ; 26 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM27 ;  ; Geological Society of America Memoirs Volume 27 ; 27 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM28 ;  ; Geological Society of America Memoirs Volume 28 ; 28 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM29 ;  ; Geological Society of America Memoirs Volume 29 ; 29 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM30 ;  ; Geological Society of America Memoirs Volume 30 ; 30 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM31 ;  ; Geological Society of America Memoirs Volume 31 ; 31 >
+    au < manifest ; exists ; 1948 ; 10.1130/MEM32 ;  ; Geological Society of America Memoirs Volume 32 ; 32 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM33 ;  ; Geological Society of America Memoirs Volume 33 ; 33 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM34 ;  ; Geological Society of America Memoirs Volume 34 ; 34 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM35 ;  ; Geological Society of America Memoirs Volume 35 ; 35 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM36 ;  ; Geological Society of America Memoirs Volume 36 ; 36 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM37 ;  ; Geological Society of America Memoirs Volume 37 ; 37 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM38 ;  ; Geological Society of America Memoirs Volume 38 ; 38 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM39 ;  ; Geological Society of America Memoirs Volume 39 ; 39 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM40 ;  ; Geological Society of America Memoirs Volume 40 ; 40 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM41 ;  ; Geological Society of America Memoirs Volume 41 ; 41 >
+    au < manifest ; exists ; 1949 ; 10.1130/MEM42 ;  ; Geological Society of America Memoirs Volume 42 ; 42 >
+    au < manifest ; exists ; 1950 ; 10.1130/MEM43 ;  ; Geological Society of America Memoirs Volume 43 ; 43 >
+    au < manifest ; exists ; 1950 ; 10.1130/MEM44 ;  ; Geological Society of America Memoirs Volume 44 ; 44 >
+    au < manifest ; exists ; 1950 ; 10.1130/MEM45 ;  ; Geological Society of America Memoirs Volume 45 ; 45 >
+    au < manifest ; exists ; 1951 ; 10.1130/MEM46 ;  ; Geological Society of America Memoirs Volume 46 ; 46 >
+    au < manifest ; exists ; 1951 ; 10.1130/MEM47 ;  ; Geological Society of America Memoirs Volume 47 ; 47 >
+    au < manifest ; exists ; 1951 ; 10.1130/MEM48 ;  ; Geological Society of America Memoirs Volume 48 ; 48 >
+    au < manifest ; exists ; 1952 ; 10.1130/MEM49 ;  ; Geological Society of America Memoirs Volume 49 ; 49 >
+    au < manifest ; exists ; 1952 ; 10.1130/MEM50 ;  ; Geological Society of America Memoirs Volume 50 ; 50 >
+    au < manifest ; exists ; 1952 ; 10.1130/MEM51 ;  ; Geological Society of America Memoirs Volume 51 ; 51 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM52 ;  ; Geological Society of America Memoirs Volume 52 ; 52 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM53 ;  ; Geological Society of America Memoirs Volume 53 ; 53 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM54 ;  ; Geological Society of America Memoirs Volume 54 ; 54 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM55 ;  ; Geological Society of America Memoirs Volume 55 ; 55 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM56 ;  ; Geological Society of America Memoirs Volume 56 ; 56 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM57 ;  ; Geological Society of America Memoirs Volume 57 ; 57 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM58 ;  ; Geological Society of America Memoirs Volume 58 ; 58 >
+    au < manifest ; exists ; 1953 ; 10.1130/MEM59 ;  ; Geological Society of America Memoirs Volume 59 ; 59 >
+    au < manifest ; exists ; 1954 ; 10.1130/MEM60 ;  ; Geological Society of America Memoirs Volume 60 ; 60 >
+    au < manifest ; exists ; 1954 ; 10.1130/MEM61 ;  ; Geological Society of America Memoirs Volume 61 ; 61 >
+    au < manifest ; exists ; 1954 ; 10.1130/MEM62 ;  ; Geological Society of America Memoirs Volume 62 ; 62 >
+    au < manifest ; exists ; 1955 ; 10.1130/MEM63 ;  ; Geological Society of America Memoirs Volume 63 ; 63 >
+    au < manifest ; exists ; 1956 ; 10.1130/MEM64 ;  ; Geological Society of America Memoirs Volume 64 ; 64 >
+    au < manifest ; exists ; 1956 ; 10.1130/MEM65 ;  ; Geological Society of America Memoirs Volume 65 ; 65 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM66 ;  ; Geological Society of America Memoirs Volume 66 ; 66 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM67V1 ;  ; Geological Society of America Memoirs Volume 67V1 ; 67V1 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM67V2 ;  ; Geological Society of America Memoirs Volume 67V2 ; 67V2 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM68 ;  ; Geological Society of America Memoirs Volume 68 ; 68 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM69 ;  ; Geological Society of America Memoirs Volume 69 ; 69 >
+    au < manifest ; exists ; 1957 ; 10.1130/MEM70 ;  ; Geological Society of America Memoirs Volume 70 ; 70 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM71 ;  ; Geological Society of America Memoirs Volume 71 ; 71 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM72 ;  ; Geological Society of America Memoirs Volume 72 ; 72 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM73 ;  ; Geological Society of America Memoirs Volume 73 ; 73 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM74 ;  ; Geological Society of America Memoirs Volume 74 ; 74 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM75 ;  ; Geological Society of America Memoirs Volume 75 ; 75 >
+    au < manifest ; exists ; 1958 ; 10.1130/MEM76 ;  ; Geological Society of America Memoirs Volume 76 ; 76 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM77 ;  ; Geological Society of America Memoirs Volume 77 ; 77 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM78 ;  ; Geological Society of America Memoirs Volume 78 ; 78 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM79 ;  ; Geological Society of America Memoirs Volume 79 ; 79 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM80 ;  ; Geological Society of America Memoirs Volume 80 ; 80 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM81 ;  ; Geological Society of America Memoirs Volume 81 ; 81 >
+    au < manifest ; exists ; 1961 ; 10.1130/MEM82 ;  ; Geological Society of America Memoirs Volume 82 ; 82 >
+    au < manifest ; exists ; 1960 ; 10.1130/MEM83 ;  ; Geological Society of America Memoirs Volume 83 ; 83 >
+    au < manifest ; exists ; 1961 ; 10.1130/MEM84 ;  ; Geological Society of America Memoirs Volume 84 ; 84 >
+    au < manifest ; exists ; 1962 ; 10.1130/MEM85 ;  ; Geological Society of America Memoirs Volume 85 ; 85 >
+    au < manifest ; exists ; 1962 ; 10.1130/MEM86 ;  ; Geological Society of America Memoirs Volume 86 ; 86 >
+    au < manifest ; exists ; 1962 ; 10.1130/MEM87V1 ;  ; Geological Society of America Memoirs Volume 87V1 ; 87V1 >
+    au < manifest ; exists ; 1962 ; 10.1130/MEM87V2 ;  ; Geological Society of America Memoirs Volume 87V2 ; 87V2 >
+    au < manifest ; exists ; 1963 ; 10.1130/MEM88 ;  ; Geological Society of America Memoirs Volume 88 ; 88 >
+    au < manifest ; exists ; 1963 ; 10.1130/MEM89 ;  ; Geological Society of America Memoirs Volume 89 ; 89 >
+    au < manifest ; exists ; 1963 ; 10.1130/MEM90 ;  ; Geological Society of America Memoirs Volume 90 ; 90 >
+    au < manifest ; exists ; 1963 ; 10.1130/MEM91 ;  ; Geological Society of America Memoirs Volume 91 ; 91 >
+    au < manifest ; exists ; 1964 ; 10.1130/MEM92 ;  ; Geological Society of America Memoirs Volume 92 ; 92 >
+    au < manifest ; exists ; 1964 ; 10.1130/MEM93 ;  ; Geological Society of America Memoirs Volume 93 ; 93 >
+    au < manifest ; exists ; 1964 ; 10.1130/MEM94 ;  ; Geological Society of America Memoirs Volume 94 ; 94 >
+    au < manifest ; exists ; 1965 ; 10.1130/MEM95 ;  ; Geological Society of America Memoirs Volume 95 ; 95 >
+    au < manifest ; exists ; 1965 ; 10.1130/MEM96 ;  ; Geological Society of America Memoirs Volume 96 ; 96 >
+    au < manifest ; exists ; 1966 ; 10.1130/MEM97 ;  ; Geological Society of America Memoirs Volume 97 ; 97 >
+    au < manifest ; exists ; 1966 ; 10.1130/MEM98 ;  ; Geological Society of America Memoirs Volume 98 ; 98 >
+    au < manifest ; exists ; 1965 ; 10.1130/MEM99 ;  ; Geological Society of America Memoirs Volume 99 ; 99 >
+    au < manifest ; exists ; 1966 ; 10.1130/MEM100 ;  ; Geological Society of America Memoirs Volume 100 ; 100 >
+    au < manifest ; exists ; 1967 ; 10.1130/MEM101 ;  ; Geological Society of America Memoirs Volume 101 ; 101 >
+    au < manifest ; exists ; 1967 ; 10.1130/MEM102 ;  ; Geological Society of America Memoirs Volume 102 ; 102 >
+    au < manifest ; exists ; 1967 ; 10.1130/MEM103 ;  ; Geological Society of America Memoirs Volume 103 ; 103 >
+    au < manifest ; exists ; 1967 ; 10.1130/MEM104 ;  ; Geological Society of America Memoirs Volume 104 ; 104 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM105 ;  ; Geological Society of America Memoirs Volume 105 ; 105 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM106 ;  ; Geological Society of America Memoirs Volume 106 ; 106 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM107 ;  ; Geological Society of America Memoirs Volume 107 ; 107 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM108 ;  ; Geological Society of America Memoirs Volume 108 ; 108 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM109 ;  ; Geological Society of America Memoirs Volume 109 ; 109 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM110 ;  ; Geological Society of America Memoirs Volume 110 ; 110 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM111 ;  ; Geological Society of America Memoirs Volume 111 ; 111 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM112 ; 8137-1112-6 ; Geological Society of America Memoirs Volume 112 ; 112 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM113 ;  ; Geological Society of America Memoirs Volume 113 ; 113 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM114 ;  ; Geological Society of America Memoirs Volume 114 ; 114 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM115 ; 8137-1115-0 ; Geological Society of America Memoirs Volume 115 ; 115 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM116 ;  ; Geological Society of America Memoirs Volume 116 ; 116 >
+    au < manifest ; exists ; 1968 ; 10.1130/MEM117 ;  ; Geological Society of America Memoirs Volume 117 ; 117 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM118 ; 8137-1118-5 ; Geological Society of America Memoirs Volume 118 ; 118 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM119 ; 8137-1119-3 ; Geological Society of America Memoirs Volume 119 ; 119 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM120 ; 8137-1120-7 ; Geological Society of America Memoirs Volume 120 ; 120 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM121 ;  ; Geological Society of America Memoirs Volume 121 ; 121 >
+    au < manifest ; exists ; 1969 ; 10.1130/MEM122 ; 8137-1122-3 ; Geological Society of America Memoirs Volume 122 ; 122 >
+    au < manifest ; exists ; 1971 ; 10.1130/MEM123 ; 0-8137-1123-1 ; Geological Society of America Memoirs Volume 123 ; 123 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM124 ; 8137-1124-X ; Geological Society of America Memoirs Volume 124 ; 124 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM125 ; 81S7-1125-8 ; Geological Society of America Memoirs Volume 125 ; 125 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM126 ; 8137-1126-6 ; Geological Society of America Memoirs Volume 126 ; 126 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM127 ; 0-8137-1127-4 ; Geological Society of America Memoirs Volume 127 ; 127 >
+    au < manifest ; exists ; 1970 ; 10.1130/MEM128 ; 8137-1128-Z ; Geological Society of America Memoirs Volume 128 ; 128 >
+    au < manifest ; exists ; 1971 ; 10.1130/MEM129 ; 0-8137-1129-0 ; Geological Society of America Memoirs Volume 129 ; 129 >
+    au < manifest ; exists ; 1971 ; 10.1130/MEM130 ; 0-8137-1130-4 ; Geological Society of America Memoirs Volume 130 ; 130 >
+    au < manifest ; exists ; 1972 ; 10.1130/MEM131 ; 8137-1131-2 ; Geological Society of America Memoirs Volume 131 ; 131 >
+    au < manifest ; exists ; 1972 ; 10.1130/MEM132 ; 0-8137-1132-0 ; Geological Society of America Memoirs Volume 132 ; 132 >
+    au < manifest ; exists ; 1972 ; 10.1130/MEM133 ; 0-8137-1133-9 ; Geological Society of America Memoirs Volume 133 ; 133 >
+    au < manifest ; exists ; 1972 ; 10.1130/MEM134 ; 08137-1134-7 ; Geological Society of America Memoirs Volume 134 ; 134 >
+    au < manifest ; exists ; 1972 ; 10.1130/MEM135 ; 0-8137-1135-5 ; Geological Society of America Memoirs Volume 135 ; 135 >
+    au < manifest ; exists ; 1973 ; 10.1130/MEM136 ; 0-8137-1136-3 ; Geological Society of America Memoirs Volume 136 ; 136 >
+    au < manifest ; exists ; 1973 ; 10.1130/MEM137 ; 0-8137-1137-1 ; Geological Society of America Memoirs Volume 137 ; 137 >
+    au < manifest ; exists ; 1974 ; 10.1130/MEM138 ; 0-8137-1138-X ; Geological Society of America Memoirs Volume 138 ; 138 >
+    au < manifest ; exists ; 1974 ; 10.1130/MEM139 ; 0-8137-1139-8 ; Geological Society of America Memoirs Volume 139 ; 139 >
+    au < manifest ; exists ; 1975 ; 10.1130/MEM140 ; 0-8137-1140-1 ; Geological Society of America Memoirs Volume 140 ; 140 >
+    au < manifest ; exists ; 1973 ; 10.1130/MEM141 ; 0-8137-1141-X ; Geological Society of America Memoirs Volume 141 ; 141 >
+    au < manifest ; exists ; 1975 ; 10.1130/MEM142 ; 0-8137-1142-8 ; Geological Society of America Memoirs Volume 142 ; 142 >
+    au < manifest ; exists ; 1975 ; 10.1130/MEM143 ; 0-8137-1143-6 ; Geological Society of America Memoirs Volume 143 ; 143 >
+    au < manifest ; exists ; 1975 ; 10.1130/MEM144 ; 0-8137-1144-4 ; Geological Society of America Memoirs Volume 144 ; 144 >
+    au < manifest ; exists ; 1976 ; 10.1130/MEM145 ; 0-8137-1145-2 ; Geological Society of America Memoirs Volume 145 ; 145 >
+    au < manifest ; exists ; 1976 ; 10.1130/MEM146 ; 0-8137-1146-0 ; Geological Society of America Memoirs Volume 146 ; 146 >
+    au < manifest ; exists ; 1977 ; 10.1130/MEM147 ; 0-8137-1147-9 ; Geological Society of America Memoirs Volume 147 ; 147 >
+    au < manifest ; exists ; 1976 ; 10.1130/MEM148 ; 0-8137-1148-7 ; Geological Society of America Memoirs Volume 148 ; 148 >
+    au < manifest ; exists ; 1977 ; 10.1130/MEM149 ; 0-8137-1149-5 ; Geological Society of America Memoirs Volume 149 ; 149 >
+    au < manifest ; exists ; 1977 ; 10.1130/MEM150 ; 0-8137-1150-9 ; Geological Society of America Memoirs Volume 150 ; 150 >
+    au < manifest ; exists ; 1978 ; 10.1130/MEM151 ; 0-8137-1151-7 ; Geological Society of America Memoirs Volume 151 ; 151 >
+    au < manifest ; exists ; 1978 ; 10.1130/MEM152 ; 0-8137-1152-5 ; Geological Society of America Memoirs Volume 152 ; 152 >
+    au < manifest ; exists ; 1980 ; 10.1130/MEM153 ; 0-8137-1153-3 ; Geological Society of America Memoirs Volume 153 ; 153 >
+    au < manifest ; exists ; 1981 ; 10.1130/MEM154 ; 0-8137-1154-1 ; Geological Society of America Memoirs Volume 154 ; 154 >
+    au < manifest ; exists ; 1982 ; 10.1130/MEM155 ;  ; Geological Society of America Memoirs Volume 155 ; 155 >
+    au < manifest ; exists ; 1982 ; 10.1130/MEM156 ; 0-8137-1156-8 ; Geological Society of America Memoirs Volume 156 ; 156 >
+    au < manifest ; exists ; 1983 ; 10.1130/MEM157 ; 0-8137-1157-6 ; Geological Society of America Memoirs Volume 157 ; 157 >
+    au < manifest ; exists ; 1983 ; 10.1130/MEM158 ; 0-8137-1158-4 ; Geological Society of America Memoirs Volume 158 ; 158 >
+    au < manifest ; exists ; 1983 ; 10.1130/MEM159 ; 0-8137-1159-2 ; Geological Society of America Memoirs Volume 159 ; 159 >
+    au < manifest ; exists ; 1983 ; 10.1130/MEM160 ; 0-8137-1160-6 ; Geological Society of America Memoirs Volume 160 ; 160 >
+    au < manifest ; exists ; 1983 ; 10.1130/MEM161 ;  ; Geological Society of America Memoirs Volume 161 ; 161 >
+    au < manifest ; exists ; 1984 ; 10.1130/MEM162 ; 0-8137-1162-2 ; Geological Society of America Memoirs Volume 162 ; 162 >
+    au < manifest ; exists ; 1985 ; 10.1130/MEM163 ;  ; Geological Society of America Memoirs Volume 163 ; 163 >
+    au < manifest ; exists ; 1986 ; 10.1130/MEM164 ; 0-8137-1164-9 ; Geological Society of America Memoirs Volume 164 ; 164 >
+    au < manifest ; exists ; 1987 ; 10.1130/MEM165 ; 0-8137-1165-7 ; Geological Society of America Memoirs Volume 165 ; 165 >
+    au < manifest ; exists ; 1986 ; 10.1130/MEM166 ; 0-8137-1166-5 ; Geological Society of America Memoirs Volume 166 ; 166 >
+    au < manifest ; exists ; 1988 ; 10.1130/MEM167 ; 0-8137-1167-3 ; Geological Society of America Memoirs Volume 167 ; 167 >
+    au < manifest ; exists ; 1988 ; 10.1130/MEM168 ; 0-8137-1168-1 ; Geological Society of America Memoirs Volume 168 ; 168 >
+    au < manifest ; exists ; 1988 ; 10.1130/MEM169 ; 0-8137-1169-X ; Geological Society of America Memoirs Volume 169 ; 169 >
+    au < manifest ; exists ; 1992 ; 10.1130/MEM170 ; 0-8137-1170-3 ; Geological Society of America Memoirs Volume 170 ; 170 >
+    au < manifest ; exists ; 1988 ; 10.1130/MEM171 ; 0-8137-1171-1 ; Geological Society of America Memoirs Volume 171 ; 171 >
+    au < manifest ; exists ; 1989 ; 10.1130/MEM172 ; 0-8137-1172-X ; Geological Society of America Memoirs Volume 172 ; 172 >
+    au < manifest ; exists ; 1989 ; 10.1130/MEM173 ; 0-8137-1173-8 ; Geological Society of America Memoirs Volume 173 ; 173 >
+    au < manifest ; exists ; 1990 ; 10.1130/MEM174 ; 0-8137-1174-6 ; Geological Society of America Memoirs Volume 174 ; 174 >
+    au < manifest ; exists ; 1990 ; 10.1130/MEM175 ; 0-8137-1175-4 ; Geological Society of America Memoirs Volume 175 ; 175 >
+    au < manifest ; exists ; 1990 ; 10.1130/MEM176 ; 0-8137-1176-2 ; Geological Society of America Memoirs Volume 176 ; 176 >
+    au < manifest ; exists ; 1990 ; 10.1130/MEM177 ; 0-8137-1177-0 ; Geological Society of America Memoirs Volume 177 ; 177 >
+    au < manifest ; exists ; 1993 ; 10.1130/MEM178 ; 0-8137-1178-9 ; Geological Society of America Memoirs Volume 178 ; 178 >
+    au < manifest ; exists ; 1992 ; 10.1130/MEM179 ; 0-8137-1179-7 ; Geological Society of America Memoirs Volume 179 ; 179 >
+    au < manifest ; exists ; 1992 ; 10.1130/MEM180 ; 0-8137-1180-0 ; Geological Society of America Memoirs Volume 180 ; 180 >
+    au < manifest ; exists ; 1993 ; 10.1130/MEM181 ; 0-8137-1181-9 ; Geological Society of America Memoirs Volume 181 ; 181 >
+    au < manifest ; exists ; 1993 ; 10.1130/MEM182 ; 0-8137-1182-7 ; Geological Society of America Memoirs Volume 182 ; 182 >
     au < manifest ; exists ; 1994 ; 10.1130/MEM183 ; 0-8137-1183-5 ; Geological Society of America Memoirs Volume 183 ; 183 >
     au < manifest ; exists ; 1994 ; 10.1130/MEM184 ; 0-8137-1184-3 ; Geological Society of America Memoirs Volume 184 ; 184 >
     au < manifest ; exists ; 1995 ; 10.1130/MEM185 ; 0-8137-1185-1 ; Geological Society of America Memoirs Volume 185 ; 185 >
