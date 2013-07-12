@@ -82,7 +82,7 @@
       param[base_url] = http://cancerimmunolres.aacrjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-      au < HighWirePressH20Plugin ; expected ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; manifest ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
 
     }
 
