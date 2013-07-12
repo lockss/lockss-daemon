@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.43 2013-06-07 21:20:36 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.44 2013-07-12 19:29:04 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>31</string>
+    <string>32</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -75,7 +75,7 @@
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%s.*/(about|email|citation|comments|postcomment)$", base_url</string>
-      <!--<string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>-->
+      <string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>
       <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
         only rule that uses the attr[journal_id] rather than the journal_issn
       -->   
