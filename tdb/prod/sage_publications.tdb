@@ -186,7 +186,7 @@
      >
        
        pluginSuffix = HighWirePressH20Plugin
-       param[base_url] = http://ar-sr.sagepub.com/
+       param[base_url] = http://arr.sagepub.com/
        implicit < status ; year ; name ; param[volume_name] >
        
        au < exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 >
