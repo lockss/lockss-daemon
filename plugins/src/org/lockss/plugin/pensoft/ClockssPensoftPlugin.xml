@@ -1,4 +1,4 @@
-<!--  $Id: ClockssPensoftPlugin.xml,v 1.6 2013-05-01 23:01:49 mellen22 Exp $ -->
+<!--  $Id: ClockssPensoftPlugin.xml,v 1.7 2013-07-12 15:58:06 thib_gc Exp $ -->
 <map>
   <!-- ClockssPensoftPlugin.xml inherited from PensoftPlugin.xml.
        The main differences are names, version.
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>4</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>6</string>
   </entry>
  <!-- only add version numbers if CLOCKSS version adds different
       substance/metadata/poll rules  
