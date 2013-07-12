@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.160 2013-07-12 16:12:53 dshr Exp $
+ * $Id: V3Poller.java,v 1.161 2013-07-12 16:34:18 dshr Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class V3Poller extends BasePoll {
   /** For testing, if true, all polls are local.
    */
   public static final String PARAM_V3_ALL_LOCAL_POLLS =
-    PREFIX + "enableLocalPolls";
+    PREFIX + "allLocalPolls";
   public static final boolean DEFAULT_V3_ALL_LOCAL_POLLS = false;
   
   /** Curve expressing decreasing weight of inviting peer who has
@@ -677,7 +677,9 @@ public class V3Poller extends BasePoll {
 				   DEFAULT_V3_ENABLE_HASH_STATS);
     enableLocalPolls = c.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
 				    DEFAULT_V3_ENABLE_LOCAL_POLLS);
-  }
+    allLocalPolls = c.getBoolean(PARAM_V3_ALL_LOCAL_POLLS,
+				 DEFAULT_V3_ALL_LOCAL_POLLS);
+    }
 
   /**
    * Decide whether this poll can be a local poll.
