@@ -22,7 +22,7 @@
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       param[journal_id] = Al
  
-      au < manifest ; exists ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
+      au < crawling ; exists ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
 
     }
     
