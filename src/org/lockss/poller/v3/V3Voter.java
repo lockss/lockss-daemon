@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.91 2013-07-05 17:43:00 barry409 Exp $
+ * $Id: V3Voter.java,v 1.92 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -1167,6 +1167,9 @@ public class V3Voter extends BasePoll {
 	    stopPoll(STATUS_NO_SUBSTANCE);
 	    break;
 	  default:
+	    if (hasher instanceof BlockHasher) {
+	      ((BlockHasher)hasher).signalLocalHashResult(cus.getArchivalUnit());
+	    }
 	    hashComplete();
 	    break;
 	  }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.64 2013-07-07 04:05:44 dshr Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.65 2013-07-14 03:05:21 dshr Exp $
  */
 
 /*
@@ -1155,7 +1155,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
-  public void testAddProperty() throws Exception {
+  public void testAddProperty(boolean keepAllProps) throws Exception {
+    if (keepAllProps) {
+      Properties conf = new Properties();
+      conf.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE, "true");
+      ConfigurationUtil.setCurrentConfigFromProps(conf);
+    }
     Properties props = new Properties();
     props.setProperty("test 1", "value 2");
     RepositoryNode leaf =
@@ -1181,6 +1186,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(props.containsKey(CachedUrl.PROPERTY_CHECKSUM));
     assertEquals("checksum", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
     
+  }
+
+  public void testAddProperty() throws Exception {
+    testAddProperty(false);
+    testAddProperty(true);
   }
 
   RepositoryNode createNodeWithCorruptProps(String url) throws Exception {

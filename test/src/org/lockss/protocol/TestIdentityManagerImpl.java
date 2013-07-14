@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.24 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.25 2013-07-14 03:05:21 dshr Exp $
  */
 
 /*
@@ -464,6 +464,65 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       fail("Should have thrown on a null au");
     } catch (IllegalArgumentException e) {
     }
+  }
+
+  public void testSignalAgreedWithLocalIdentity() throws Exception {
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT);
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                                  LOCAL_V3_ID);
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
+    mgr.initService(theDaemon);
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
+    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
+    assertEmpty(mgr.getAgreed(mau));
+    mgr.signalAgreed(pid1,mau);
+    assertEquals(1, mgr.getAgreed(mau).size());
+    assertNotNull(mgr.getAgreed(mau).get(pid1));
+  }
+
+  public void testSignalDisagreedWithLocalIdentity() throws Exception {
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT);
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                                  LOCAL_V3_ID);
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
+    mgr.initService(theDaemon);
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
+    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
+    assertEmpty(mgr.getDisagreed(mau));
+    mgr.signalDisagreed(pid1,mau);
+    assertEquals(1, mgr.getDisagreed(mau).size());
+    assertNotNull(mgr.getDisagreed(mau).get(pid1));
+  }
+
+  public void testSignalWithLocalIdentityDoesntRemove() throws Exception {
+    TimeBase.setSimulated(10);
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT);
+    ConfigurationUtil.addFromArgs(IdentityManagerImpl.PARAM_INITIAL_PEERS,
+                                  LOCAL_V3_ID);
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
+    mgr.initService(theDaemon);
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_PROTOCOL];
+    assertTrue("Peer ID is not a local identity.", pid1.isLocalIdentity());
+    assertEmpty(mgr.getDisagreed(mau));
+    mgr.signalDisagreed(pid1,mau);
+    assertEquals(1, mgr.getDisagreed(mau).size());
+    assertNotNull(mgr.getDisagreed(mau).get(pid1));
+    assertEmpty(mgr.getAgreed(mau));
+    TimeBase.step();
+    mgr.signalAgreed(pid1,mau);
+    assertEquals(1, mgr.getAgreed(mau).size());
+    assertNotNull(mgr.getAgreed(mau).get(pid1));
+    assertEquals(1, mgr.getDisagreed(mau).size());
+    assertNotNull(mgr.getDisagreed(mau).get(pid1));
+    TimeBase.step();
+    mgr.signalDisagreed(pid1,mau);
+    assertEquals(1, mgr.getAgreed(mau).size());
+    assertNotNull(mgr.getAgreed(mau).get(pid1));
+    assertEquals(1, mgr.getDisagreed(mau).size());
+    assertNotNull(mgr.getDisagreed(mau).get(pid1));
   }
 
   public void testGetAgreeThrowsOnNullAu() throws Exception {

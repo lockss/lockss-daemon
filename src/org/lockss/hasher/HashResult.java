@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.5 2013-05-10 17:00:21 barry409 Exp $
+ * $Id: HashResult.java,v 1.6 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -34,8 +34,10 @@ package org.lockss.hasher;
 
 import java.security.MessageDigest;
 import java.util.Arrays;
+import java.util.Vector;
 
 import org.lockss.util.ByteArray;
+import org.lockss.util.StringUtil;
 
 /**
  * Wrap the byte array returned by {@link MessageDigest#digest}
@@ -44,9 +46,16 @@ import org.lockss.util.ByteArray;
 final public class HashResult {
   /** An internal byte array, never shared with clients. */
   private final byte[] bytes;
+  private final String algorithm;
 
   private HashResult(byte[] bytes) {
     this.bytes = bytes;
+    this.algorithm = null;
+  }
+
+  private HashResult(byte[] bytes, String algorithm) {
+    this.bytes = bytes;
+    this.algorithm = algorithm;
   }
 
   /**
@@ -73,6 +82,45 @@ final public class HashResult {
     return new HashResult(Arrays.copyOf(bytes, bytes.length));
   }
 
+ /**
+   * Wrap the given bytes.
+   * @param bytes The bytes to wrap; probably the output from
+   * MessageDigest.digest().
+   * @param algorithm STring naming hash algorithm
+   * @return A HashResult for these bytes.
+   * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
+   * zero-length.
+   */
+  public static HashResult make(byte[] bytes, String algorithm) {
+    checkBytes(bytes);
+    // Keep a safe copy, so someone mucking with the bytes won't break
+    // our hash.
+    return new HashResult(Arrays.copyOf(bytes, bytes.length),
+			  algorithm);
+  }
+
+  /**
+   * Wrap the given bytes.
+   * @param prop A String of the form alg:hex-bytes
+   * @return A HashResult for these bytes.
+   * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
+   * zero-length, or if the string doesn't parse.
+   */
+  public static HashResult make(String prop) {
+    Vector<String> parts = StringUtil.breakAt(prop, ':');
+    if (parts.size() != 2 ||
+	parts.elementAt(0).length() <= 0 ||
+	parts.elementAt(1).length() <= 0) {
+      throw new IllegalByteArray(prop + " bad format");
+    }
+    try {
+      byte[] bytes = ByteArray.fromHexString(parts.elementAt(1));
+      checkBytes(bytes);
+      return new HashResult(bytes, parts.elementAt(0));
+    } catch (NumberFormatException ex) {
+      throw new IllegalByteArray(parts.elementAt(1) + " not hex number");
+    }
+  }
   /**
    * @throws {@link IllegalByteArray} if <code>bytes</code> is null or
    * zero-length.
@@ -89,6 +137,13 @@ final public class HashResult {
    */
   public byte[] getBytes() {
     return Arrays.copyOf(bytes, bytes.length);
+  }
+
+  /**
+   * @return The algorithm, which may be null
+   */
+  public String getAlgorithm() {
+    return algorithm;
   }
 
   /** Compare the given bytes with ours.
@@ -110,11 +165,23 @@ final public class HashResult {
     if (!(other instanceof HashResult)) {
       return false;
     }
+    if (algorithm != null &&
+	!algorithm.equals(((HashResult)other).algorithm)) {
+      return false;
+    }
     return equalsBytes(((HashResult)other).bytes);
   }
 
   /** Returns a hash code value for the object, based on the content. */
   @Override public int hashCode() {
     return Arrays.hashCode(bytes);
+  }
+
+  public String toString() {
+    String ret = ByteArray.toHexString(bytes);
+    if (algorithm != null) {
+      ret = algorithm + ":" + ret;
+    }
+    return ret;
   }
 }

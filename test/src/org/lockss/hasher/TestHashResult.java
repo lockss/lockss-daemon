@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.5 2013-05-10 17:00:21 barry409 Exp $
+ * $Id: TestHashResult.java,v 1.6 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -44,13 +44,19 @@ public class TestHashResult extends LockssTestCase {
 
   public void testCreateNoBytes() {
     try {
-      HashResult.make(null);
+      HashResult.make((byte[])null);
       fail();
     } catch (HashResult.IllegalByteArray e) {
       // expected
     }
     try {
       HashResult.make(empty_bytes);
+      fail();
+    } catch (HashResult.IllegalByteArray e) {
+      // expected
+    }
+    try {
+      HashResult.make((String)null);
       fail();
     } catch (HashResult.IllegalByteArray e) {
       // expected
@@ -84,5 +90,25 @@ public class TestHashResult extends LockssTestCase {
     assertTrue(o2.equals(o1));
 
     assertEquals(o1.hashCode(), o2.hashCode());
+  }
+
+  private String[] bad = {
+    "deadbeef",
+    "foo:",
+    "foo:bar"
+  };
+
+  public void testMakeFromString() {
+    String good = "SHA-1:deadbeef";
+    HashResult hr = HashResult.make(good);
+    assertEquals(0, good.compareToIgnoreCase(hr.toString()));
+    for (int i = 0; i < bad.length; i++) {
+      try {
+	hr = HashResult.make(bad[i]);
+	fail();
+      } catch (HashResult.IllegalByteArray ex) {
+	// Expected
+      }
+    }
   }
 }

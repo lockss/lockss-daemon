@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.48 2013-07-07 04:05:43 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.49 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -180,7 +180,6 @@ public class BaseCachedUrl implements CachedUrl {
     if (md == null) {
       return getUnfilteredInputStream();
     }
-    logger.debug3("md not null 3");
     ensureRnc();
     return new HashedInputStream(rnc.getInputStream(), md);
   }
@@ -243,6 +242,7 @@ public class BaseCachedUrl implements CachedUrl {
    * already contains the key.
    */
   public void addProperty(String key, String value) {
+    ensureRnc();
     rnc.addProperty(key, value);
   }
 
@@ -311,7 +311,6 @@ public class BaseCachedUrl implements CachedUrl {
       }
       InputStream unfis = getUnfilteredInputStream();
       if (md != null) {
-	logger.debug3("md not null 1");
 	unfis = new HashedInputStream(unfis, md);
       }
       try {
@@ -346,7 +345,6 @@ public class BaseCachedUrl implements CachedUrl {
     if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
     InputStream ret = getUnfilteredInputStream();
     if (md != null) {
-      logger.debug3("md not null 2");
       ret = new HashedInputStream(ret, md);
     }
     return ret;

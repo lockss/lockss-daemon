@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.19 2013-07-11 20:25:19 dshr Exp $
+ * $Id: RepositoryManager.java,v 1.20 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class RepositoryManager
     PREFIX + "nodeCache.size";
   public static final int DEFAULT_MAX_PER_AU_CACHE_SIZE = 10;
 
+  /*
+   * This needs to be a small multiple of the number of simultaneous
+   * polls (poller and voter), as there is a cache entry per active AU.
+   * Each poll will have one active AU at a time.
+   */
   public static final String PARAM_MAX_SUSPECT_VERSIONS_CACHE_SIZE =
     PREFIX + "suspectVersionsCache.size";
   public static final int DEFAULT_MAX_SUSPECT_VERSIONS_CACHE_SIZE = 10;

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.161 2013-07-12 16:34:18 dshr Exp $
+ * $Id: V3Poller.java,v 1.162 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -2091,7 +2091,7 @@ public class V3Poller extends BasePoll {
 
     final HashService.Callback hashDone =
       new HashService.Callback() {
-        public void hashingFinished(CachedUrlSet urlset,
+        public void hashingFinished(CachedUrlSet cus,
 				    long timeUsed,
 				    Object cookie,
 				    CachedUrlSetHasher hasher,
@@ -2102,8 +2102,11 @@ public class V3Poller extends BasePoll {
             voteComplete();
           }
 	  // todo(bhayes): else debug2 pending and active remaining?
+	  if (hasher instanceof BlockHasher) {
+	      ((BlockHasher)hasher).signalLocalHashResult(cus.getArchivalUnit());
+	  }
         }
-    };
+      };
 
     
     CachedUrlSet blockCus =
@@ -2117,7 +2120,6 @@ public class V3Poller extends BasePoll {
       // CR: leave repair pending
       log.warning("Failed to schedule a repair check hash for block " + url);
     }
-    
   }
 
   // The vote is over.

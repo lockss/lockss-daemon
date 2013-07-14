@@ -1,5 +1,5 @@
 /*
- * $Id: AuSuspectUrlVersions.java,v 1.1 2013-07-11 20:38:39 dshr Exp $
+ * $Id: AuSuspectUrlVersions.java,v 1.2 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.util.*;
 import org.lockss.util.TimeBase;
+import org.lockss.hasher.HashResult;
 
 /**
  * Instances represent the set of versions of urls in an AU that
@@ -46,12 +47,36 @@ public class AuSuspectUrlVersions {
     private final String url;
     private final int version;
     private final long created;
+    private final HashResult computedHash;
+    private final HashResult storedHash;
 
     protected SuspectUrlVersion(String url, int version) {
       this.url = url;
       this.version = version;
       this.created = TimeBase.nowMs();
+      this.computedHash = null;
+      this.storedHash = null;
     }
+
+    protected SuspectUrlVersion(String url, int version, String algorithm,
+				byte[] computedHash, byte[] storedHash) {
+      this.url = url;
+      this.version = version;
+      this.created = TimeBase.nowMs();
+      this.computedHash = HashResult.make(computedHash, algorithm);
+      this.storedHash = HashResult.make(storedHash, algorithm);
+    }
+
+    protected SuspectUrlVersion(String url, int version,
+				HashResult computedHash,
+				HashResult storedHash) {
+      this.url = url;
+      this.version = version;
+      this.created = TimeBase.nowMs();
+      this.computedHash = computedHash;
+      this.storedHash = storedHash;
+    }
+
     protected String getUrl() {
       return url;
     }
@@ -63,6 +88,12 @@ public class AuSuspectUrlVersions {
     }
     public int hashCode() {
       return url.hashCode() + version;
+    }
+    public HashResult getComputedHash() {
+      return computedHash;
+    }
+    public HashResult getStoredHash() {
+      return storedHash;
     }
     public boolean equals(Object obj) {
       if (obj instanceof SuspectUrlVersion) {
@@ -76,7 +107,6 @@ public class AuSuspectUrlVersions {
     new HashSet<SuspectUrlVersion>();
 
   protected AuSuspectUrlVersions() {
-    /* XXX load suspectVersions from underlying file XXX */
   }
 
   /**
@@ -91,7 +121,21 @@ public class AuSuspectUrlVersions {
    * Mark the version of the url as suspect
    */
   public void markAsSuspect(String url, int version) {
+    if (isSuspect(url, version)) {
+      throw new UnsupportedOperationException("Re-marking as suspect");
+    }
     suspectVersions.add(new SuspectUrlVersion(url, version));
+  }
+  /**
+   * Mark the version of the url as suspect
+   */
+  public void markAsSuspect(String url, int version, String algorithm,
+			    byte[] computedHash, byte[] storedHash) {
+    if (isSuspect(url, version)) {
+      throw new UnsupportedOperationException("Re-marking as suspect");
+    }
+    suspectVersions.add(new SuspectUrlVersion(url, version, algorithm,
+					      computedHash, storedHash));
     /* XXX write through to underlying file XXX */
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HashedInputStream.java,v 1.2 2013-07-11 20:25:20 dshr Exp $
+ * $Id: HashedInputStream.java,v 1.3 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class HashedInputStream extends InputStream {
    * @return number of bytes skipped
    */
   public long skip(long n) throws IOException {
-    return is.skip(n);
+    throw new UnsupportedOperationException("skip not supported");
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.58 2013-07-12 16:12:53 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.59 2013-07-14 03:05:21 dshr Exp $
  */
 
 /*
@@ -836,6 +836,117 @@ public class TestV3Poller extends LockssTestCase {
     // poller has foo2a.
     assertEquals("2/0/1/0/1/0",
 		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
+  }
+  
+  public void testTallyBlocksSucceedsWithNoVersionVote() throws Exception {
+
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
+        
+    String [] urls_poller =
+    { 
+     "http://test.com/foo1",
+     "http://test.com/foo2",
+     "http://test.com/foo3"
+    };
+    
+    HashBlock [] hashblocks =
+    {
+     makeHashBlock("http://test.com/foo1", "content for foo1"),
+     makeHashBlock("http://test.com/foo2", "content for foo2"),
+     makeHashBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter1_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter2_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter3_voteblocks =
+    {
+      makeVoteBlock("http://test.com/foo1", "content for foo1"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter4_voteblocks =
+    {
+      makeVoteBlock("http://test.com/foo1"), // voter3 votes "present"
+      makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+    // Finally, let's test.
+    
+    BlockTally tally;
+    
+    // The results expected are based on a quorum of 3.
+    assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult());
+    // All but id4 should agree
+    assertEquals(3, tally.getAgreeVoters().size());
+    Collection<ParticipantUserData> disagree = tally.getDisagreeVoters();
+    assertEquals(1, disagree.size());
+    assertTrue(disagree.contains(v3Poller.theParticipants.get(id4)));
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+
+    tally = v3Poller.tallyBlock(hashblocks[1]);
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult());
+    assertSameElements(v3Poller.theParticipants.values(),
+		       tally.getPollerOnlyBlockVoters());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+    
+    tally = v3Poller.tallyBlock(hashblocks[2]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult());
+    assertSameElements(v3Poller.theParticipants.values(),
+		       tally.getAgreeVoters());
+
+    // String is agree/disagree/pollerOnly/voterOnly/neither/spoiled
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id1).getVoteCounts().votes());
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id2).getVoteCounts().votes());
+    // This voter sees a "neither" URL, since neither it nor the
+    // poller has foo2a.
+    assertEquals("2/0/1/0/1/0",
+		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
+    assertEquals("1/1/1/1/0/0",
+		 v3Poller.theParticipants.get(id4).getVoteCounts().votes());
   }
   
   private Collection<String> publisherRepairUrls(V3Poller v3Poller) {

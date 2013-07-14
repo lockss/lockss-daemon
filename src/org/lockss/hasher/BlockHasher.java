@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.24 2013-07-11 20:25:19 dshr Exp $
+ * $Id: BlockHasher.java,v 1.25 2013-07-14 03:05:20 dshr Exp $
  */
 
 /*
@@ -42,6 +42,10 @@ import org.lockss.plugin.*;
 import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 import org.lockss.repository.*;
+import org.lockss.app.LockssDaemon;
+import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.PeerIdentity;
+import org.lockss.poller.Poll;
 
 /**
  * General class to handle content hashing
@@ -96,6 +100,8 @@ public class BlockHasher extends GenericHasher {
   private byte[] currentVersionStoredHash = null;
   private LocalHashHandler localHashHandler = null;
   private AuSuspectUrlVersions asuv = null;
+  private int versionsMarkedSuspect = 0;
+  private int versionsNewlyHashed = 0;
    
   protected SubstanceChecker subChecker = null;
 
@@ -106,7 +112,7 @@ public class BlockHasher extends GenericHasher {
     this(cus, -1, digests, initByteArrays, cb);
   }
   
-  /** Constuctor that allows specifying number of CU versions to hash */
+  /** Constructor that allows specifying number of CU versions to hash */
   public BlockHasher(CachedUrlSet cus,
 		     int maxVersions,
 		     MessageDigest[] digests,
@@ -274,13 +280,14 @@ public class BlockHasher extends GenericHasher {
       if (verProps.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
 	// Parse the hash in the properties
 	String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
+	HashResult hr = null;
 	String algorithm = null;
 	byte[] hash = null;
-	int colon = cksumProp.indexOf(':');
-	if (colon > 0) {
-	  algorithm = cksumProp.substring(0,colon);
-	  hash = ByteArray.fromHexString(cksumProp.substring(colon+1));
-	} else {
+	try {
+	  hr = HashResult.make(cksumProp);
+	  algorithm = hr.getAlgorithm();
+	  hash = hr.getBytes();
+	} catch (HashResult.IllegalByteArray ex) {
 	    log.error(cksumProp + " badly formatted checksum");
 	}
 	// Does the current version have content?
@@ -290,9 +297,9 @@ public class BlockHasher extends GenericHasher {
 	    log.debug3(curVer.getUrl() + ":" + curVer.getVersion() + " checksum " + cksumProp);
 	  }
 	  useHashAlgorithm = algorithm;
-	  currentVersionStoredHash =hash;
+	  currentVersionStoredHash = hash;
 	} else {
-	  // Checksum but no content - record this version as troubled
+	  // Checksum but no content - record this version as suspect
 	  log.error(curVer.getUrl() + ":" + curVer.getVersion() + " checksum but no content");
 	  updateSuspectVersions(curVer, algorithm, null, hash);
 	  useHashAlgorithm = null;
@@ -533,7 +540,6 @@ public class BlockHasher extends GenericHasher {
 	// No checksum property - create one
 	localHashHandler.missing(curVer, localHashAlgorithm, hashOfContent);
       }
-      currentVersionLocalDigest.reset();
       currentVersionLocalDigest = null;
       currentVersionStoredHash = null;
     }
@@ -550,12 +556,31 @@ public class BlockHasher extends GenericHasher {
 				      byte[] contentHash,
 				      byte[] storedHash) {
     ensureAuSuspectUrlVersions();
-    asuv.markAsSuspect(curVer.getUrl(), curVer.getVersion());
+    versionsMarkedSuspect++;
+    asuv.markAsSuspect(curVer.getUrl(), curVer.getVersion(), alg,
+		       contentHash, storedHash);
   }
 
   private void ensureAuSuspectUrlVersions() {
     if (asuv == null) {
       asuv = LockssRepositoryImpl.getSuspectUrlVersions(cus.getArchivalUnit());
+    }
+  }
+
+  public void signalLocalHashResult(ArchivalUnit au) {
+    if (localHashDigestMap != null && versionsNewlyHashed == 0) {
+      /* every URL was verified against previous hash */
+      IdentityManager idmgr =
+	LockssDaemon.getLockssDaemon().getIdentityManager();
+      PeerIdentity pid =
+	idmgr.getLocalPeerIdentity(Poll.V3_PROTOCOL);
+      if (versionsMarkedSuspect > 0) {
+	/* Some versions had problems */
+	idmgr.signalDisagreed(pid, au);
+      } else {
+	/* All versions OK */
+	idmgr.signalAgreed(pid, au);
+      }
     }
   }
 
@@ -617,6 +642,7 @@ public class BlockHasher extends GenericHasher {
     public void missing(CachedUrl curVer, String alg, byte[] hash) {
       String hashStr = alg + ":" + ByteArray.toHexString(hash);
       log.debug3("Storing checksum: " + hashStr);
+      versionsNewlyHashed++;
       try {
 	curVer.addProperty(CachedUrl.PROPERTY_CHECKSUM, hashStr);
       } catch (UnsupportedOperationException ex) {
