@@ -512,7 +512,7 @@
 
     param[journal_id] = cddis
 
-    au < testing ; exists ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
+    au < released ; manifest ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
     au < released ; manifest ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
     au < released ; crawling ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
@@ -1987,7 +1987,6 @@
       issnl = 0893-3952
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = modpathol
 
     au < exists ; exists ; 2000 ; Modern Pathology Volume 13 ; 2000 ; 13 >
@@ -2002,7 +2001,7 @@
     au < released ; crawling ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
     au < released ; crawling ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < testing ; exists ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < released ; manifest ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
     au < testing ; exists ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
     au < crawling ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 >
 
