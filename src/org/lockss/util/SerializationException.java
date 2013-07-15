@@ -1,5 +1,5 @@
 /*
- * $Id: SerializationException.java,v 1.3 2006-09-28 05:12:00 thib_gc Exp $
+ * $Id: SerializationException.java,v 1.4 2013-07-15 07:31:42 tlipkis Exp $
  */
 
 /*
@@ -191,6 +191,30 @@ public class SerializationException extends Exception {
     }
 
     public RenameFailed(Throwable cause) {
+      super(cause);
+    }
+
+  }
+
+  /**
+   * <p>A {@link SerializationException} for the specific case when
+   * the I/O was interrupted
+   */
+  public static class InterruptedIOException extends SerializationException {
+
+    public InterruptedIOException() {
+      super();
+    }
+
+    public InterruptedIOException(String message) {
+      super(message);
+    }
+
+    public InterruptedIOException(String message, Throwable cause) {
+      super(message, cause);
+    }
+
+    public InterruptedIOException(Throwable cause) {
       super(cause);
     }
 
