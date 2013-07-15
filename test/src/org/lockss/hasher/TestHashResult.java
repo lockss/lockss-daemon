@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.6 2013-07-14 03:05:20 dshr Exp $
+ * $Id: TestHashResult.java,v 1.7 2013-07-15 18:46:10 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.test.*;
 
 public class TestHashResult extends LockssTestCase {
   public static byte[] bytes = {0, 1, 2};
+  public static byte[] bytes2 = {2, 1, 0};
   public static byte[] empty_bytes = {};
 
   public void testCreate() {
@@ -83,19 +84,32 @@ public class TestHashResult extends LockssTestCase {
   public void testEqualsAndHashCode() {
     HashResult o1 = HashResult.make(bytes);
     HashResult o2 = HashResult.make(bytes);
+    HashResult o3 = HashResult.make(bytes2);
+    HashResult o4 = HashResult.make(bytes, "fooalg");
+    HashResult o5 = HashResult.make(bytes, "baralg");
     
     // o1 and o2 are not == but are equals.
-    assertFalse(o1 == o2);
+    assertNotSame(o1, o2);
     assertTrue(o1.equals(o2));
     assertTrue(o2.equals(o1));
+
+    assertFalse(o1.equals(o3));
+    assertFalse(o3.equals(o1));
+
+    assertFalse(o4.equals(o1));
+    assertFalse(o1.equals(o4));
+
+    assertFalse(o4.equals(o5));
+    assertFalse(o5.equals(o4));
 
     assertEquals(o1.hashCode(), o2.hashCode());
   }
 
   private String[] bad = {
     "deadbeef",
-    "foo:",
-    "foo:bar"
+    "SHA-1:",
+    "SHA-1:bar",
+    ":deadbeef"
   };
 
   public void testMakeFromString() {
@@ -105,7 +119,7 @@ public class TestHashResult extends LockssTestCase {
     for (int i = 0; i < bad.length; i++) {
       try {
 	hr = HashResult.make(bad[i]);
-	fail();
+	fail("Should be illegal: " + bad[i]);
       } catch (HashResult.IllegalByteArray ex) {
 	// Expected
       }

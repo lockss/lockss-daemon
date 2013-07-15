@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.7 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: HashResult.java,v 1.8 2013-07-15 18:46:11 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.hasher;
 
 import java.security.MessageDigest;
-import java.util.Arrays;
-import java.util.Vector;
+import java.util.*;
 
 import org.lockss.util.*;
 
@@ -106,18 +105,21 @@ final public class HashResult implements LockssSerializable {
    * zero-length, or if the string doesn't parse.
    */
   public static HashResult make(String prop) {
-    Vector<String> parts = StringUtil.breakAt(prop, ':');
-    if (parts.size() != 2 ||
-	parts.elementAt(0).length() <= 0 ||
-	parts.elementAt(1).length() <= 0) {
+    List<String> parts = StringUtil.breakAt(prop, ':');
+    if (parts.size() != 2) {
+      throw new IllegalByteArray(prop + " bad format");
+    }
+    String alg = parts.get(0);
+    String hash = parts.get(1);
+    if (StringUtil.isNullString(alg) || StringUtil.isNullString(hash)) {
       throw new IllegalByteArray(prop + " bad format");
     }
     try {
-      byte[] bytes = ByteArray.fromHexString(parts.elementAt(1));
+      byte[] bytes = ByteArray.fromHexString(parts.get(1));
       checkBytes(bytes);
-      return new HashResult(bytes, parts.elementAt(0));
+      return new HashResult(bytes, alg);
     } catch (NumberFormatException ex) {
-      throw new IllegalByteArray(parts.elementAt(1) + " not hex number");
+      throw new IllegalByteArray(hash + " not hex number");
     }
   }
   /**
@@ -164,11 +166,8 @@ final public class HashResult implements LockssSerializable {
     if (!(other instanceof HashResult)) {
       return false;
     }
-    if (algorithm != null &&
-	!algorithm.equals(((HashResult)other).algorithm)) {
-      return false;
-    }
-    return equalsBytes(((HashResult)other).bytes);
+    return StringUtil.equalStrings(algorithm, ((HashResult)other).algorithm)
+      && equalsBytes(((HashResult)other).bytes);
   }
 
   /** Returns a hash code value for the object, based on the content. */
