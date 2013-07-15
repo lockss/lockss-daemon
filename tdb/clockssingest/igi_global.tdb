@@ -738,11 +738,10 @@
       issnl = 1947-9077
     >
     param[journal_issn] = 1947-9077
-    comment[0] = no links on manifest page
 
     au < manifest ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
-    au < notReady ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 > 
 
   }
@@ -1953,10 +1952,9 @@
       issnl = 2160-9837
     >
 
-    comment[notReady] = bad manifest page, no url
     param[journal_issn] = 2160-9837
 
-    au < notReady ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
     au < expected ; exists ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 > 
 
   }
