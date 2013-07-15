@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.2 2013-05-20 22:52:38 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.3 2013-07-15 19:38:22 clairegriffin Exp $
  */
 
 /*
@@ -54,7 +54,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class JsoupHtmlLinkExtractor implements LinkExtractor {
@@ -182,7 +181,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
    *
    * @param enableStats true to turn on statistics logging
    */
-  protected JsoupHtmlLinkExtractor(boolean enableStats, boolean processForms,
+  public JsoupHtmlLinkExtractor(boolean enableStats, boolean processForms,
       Map<String,HtmlFormExtractor.FormFieldRestrictions> restrictors,
       Map<String,HtmlFormExtractor.FieldIterator> generators) {
     m_enableStats = enableStats;
@@ -192,6 +191,15 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     m_tagTable.putAll(theTagTable);
   }
 
+  public void setFormRestrictors(final Map<String,
+      HtmlFormExtractor.FormFieldRestrictions> formRestrictors) {
+    m_formRestrictors = formRestrictors;
+  }
+
+  public void setFormGenerators(final Map<String,
+      HtmlFormExtractor.FieldIterator> formGenerators) {
+    m_formGenerators = formGenerators;
+  }
 
   /**
    * Parse content on InputStream,  call cb.foundUrl() for each URL found
@@ -583,7 +591,6 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
    * Link Extractor for the script tag
    */
   public static class ScriptTagLinkExtractor extends BaseLinkExtractor {
-    private boolean m_baseSet;
     private LinkExtractorNodeVisitor m_nodeVisitor;
 
     ScriptTagLinkExtractor(LinkExtractorNodeVisitor nodeVisitor)
