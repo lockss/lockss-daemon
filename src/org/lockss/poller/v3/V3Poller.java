@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.162 2013-07-14 03:05:20 dshr Exp $
+ * $Id: V3Poller.java,v 1.163 2013-07-15 18:25:25 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ import org.lockss.util.*;
  * on the result.</p>
  */
 public class V3Poller extends BasePoll {
+
+  private static Logger log = Logger.getLogger("V3Poller");
 
   // Status strings used by the peers.
   public static final int PEER_STATUS_INITIALIZED = 0;
@@ -454,7 +456,7 @@ public class V3Poller extends BasePoll {
   private IdentityManager idManager;
   private V3PollerSerializer serializer;
   private boolean resumedPoll;
-  private boolean activePoll = true;
+  private volatile boolean activePoll = true;
   private boolean dropEmptyNominators = DEFAULT_DROP_EMPTY_NOMINATIONS;
   private boolean deleteExtraFiles = DEFAULT_DELETE_EXTRA_FILES;
   private File stateDir;
@@ -467,8 +469,7 @@ public class V3Poller extends BasePoll {
   private long hashBytesBeforeCheckpoint =
     DEFAULT_V3_HASH_BYTES_BEFORE_CHECKPOINT;
 
-  private static Logger log = Logger.getLogger("V3Poller");
-  private static LockssRandom theRandom = new LockssRandom();
+
   private int blockErrorCount = 0;	// CR: s.b. in PollerStateBean
   private int maxBlockErrorCount = DEFAULT_MAX_BLOCK_ERROR_COUNT;
   private boolean enableInvitations = DEFAULT_ENABLE_INVITATIONS;
@@ -3091,11 +3092,11 @@ public class V3Poller extends BasePoll {
     return false;
   }
 
-  synchronized public boolean isPollActive() {
+  public boolean isPollActive() {
     return activePoll;
   }
 
-  synchronized public boolean isPollCompleted() {
+  public boolean isPollCompleted() {
     return !activePoll;
   }
 
