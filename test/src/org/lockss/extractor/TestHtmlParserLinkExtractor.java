@@ -11,7 +11,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 	public static final String startUrl = "http://www.example.com/index.html";
 	static String ENC = Constants.DEFAULT_ENCODING;
 
-	HtmlParserLinkExtractor extractor = null;
+	HtmlParserLinkExtractor m_extractor = null;
 	MyLinkExtractorCallback cb = null;
 
 	MockArchivalUnit mau;
@@ -19,14 +19,14 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 	public void setUp() throws Exception {
 		super.setUp();
 		mau = new MockArchivalUnit();
-		extractor = new HtmlParserLinkExtractor();
+		m_extractor = new HtmlParserLinkExtractor();
 		cb = new MyLinkExtractorCallback();
 	}
 
 	public void testThrowsOnNullInputStream() throws IOException {
 		try {
-			extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
-					new MyLinkExtractorCallback());
+			m_extractor.extractUrls(mau, null, ENC, "http://www.example.com/",
+          new MyLinkExtractorCallback());
 			fail("Calling extractUrls with a null InputStream should have thrown");
 		} catch (IllegalArgumentException iae) {
 		}
@@ -36,8 +36,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		StringInputStream sis = null;
 		try {
 			sis = new StringInputStream("Blah");
-			extractor.extractUrls(mau, sis, ENC, null,
-					new MyLinkExtractorCallback());
+			m_extractor.extractUrls(mau, sis, ENC, null,
+          new MyLinkExtractorCallback());
 			fail("Calling extractUrls with a null CachedUrl should have thrown");
 		} catch (IllegalArgumentException iae) {
 
@@ -51,8 +51,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		StringInputStream sis = null;
 		try {
 			sis = new StringInputStream("blah");
-			extractor.extractUrls(mau, sis, ENC, "http://www.example.com/",
-					null);
+			m_extractor.extractUrls(mau, sis, ENC, "http://www.example.com/",
+          null);
 			fail("Calling extractUrls with a null callback should have thrown");
 		} catch (IllegalArgumentException iae) {
 
@@ -146,8 +146,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		MockCachedUrl mcu = new MockCachedUrl(startUrl);
 		mcu.setContent(source);
 
-		extractor.extractUrls(mau, new StringInputStream(source), ENC,
-				startUrl, cb);
+		m_extractor.extractUrls(mau, new StringInputStream(source), ENC,
+        startUrl, cb);
 
 		Set<String> expected = new HashSet<String>();
 		expected.add(url);
@@ -351,8 +351,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		mcu.setContent(content);
 
 		MyLinkExtractorCallback cb = new MyLinkExtractorCallback();
-		extractor.extractUrls(mau, new StringInputStream(content), ENC,
-				"http://www.example.com", cb);
+		m_extractor.extractUrls(mau, new StringInputStream(content), ENC,
+        "http://www.example.com", cb);
 
 		if (shouldParse) {
 			Set<String> expected = new HashSet<String>();
@@ -531,7 +531,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 
 	public void testInterpretsBaseTag() throws IOException {
 		String url1 = "http://www.example.com/link1.html";
-		String url2 = "http://www.example2.com/link2.html";
+		String url2 = "http://www.example.com/link2.html";
 		String url3 = "http://www.example.com/link3.html";
 
 		String source = "<html><head><title>Test</title></head><body>"
@@ -542,7 +542,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 				+ "<a href=link2.html>link2</a>"
 				+ "<base href=http://www.example.com>"
 				+ "<a href=link3.html>link3</a>";
-		assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+		assertIsomorphic(SetUtil.set(url1, url2, url3), parseSingleSource(source));
 	}
 
 	// Relative URLs before a malforned base tag should be extracted, as well
@@ -551,10 +551,9 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 	// set
 	public void testInterpretsMalformedBaseTag() throws IOException {
 		String url1 = "http://www.example.com/link1.html";
-		@SuppressWarnings("unused")
-		String url2 = "http://www.example2.com/link2.html";
+		String url2 = "http://www.example.com/link2.html";
 		String url3 = "http://www.example2.com/link3.html";
-		String url4 = "http://www.example3.com/link3.html";
+		String url4 = "http://www.example.com/link3.html";
 
 		String source = "<html><head><title>Test</title></head><body>"
 				+ "<base href=http://www.example.com>"
@@ -566,7 +565,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 				+ "<a href=http://www.example2.com/link3.html>link3</a>"
 				+ "<base href=http://www.example3.com>"
 				+ "<a href=link3.html>link4</a>";
-		assertEquals(SetUtil.set(url1, url3, url4), parseSingleSource(source));
+    assertIsomorphic(SetUtil.set(url1, url2, url3, url4),
+        parseSingleSource(source));
 	}
 
 	public void testIgnoresNullHrefInBaseTag() throws IOException {
@@ -790,8 +790,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		mcu.setContent(source);
 
 		cb.reset();
-		extractor.extractUrls(mau, new StringInputStream(source), ENC,
-				"http://www.example.com", cb);
+		m_extractor.extractUrls(mau, new StringInputStream(source), ENC,
+        "http://www.example.com", cb);
 		return cb.getFoundUrls();
 	}
 
@@ -807,8 +807,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
 		mcu.setContent(source);
 
-		extractor.extractUrls(mau, new StringInputStream(source), ENC,
-				"http://www.example.com", cb);
+		m_extractor.extractUrls(mau, new StringInputStream(source), ENC,
+        "http://www.example.com", cb);
 
 		Set<String> expected = new HashSet<String>();
 		Collections.addAll(expected, url1, url2);
@@ -833,8 +833,8 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah/");
 		mcu.setContent(source);
 
-		extractor.extractUrls(mau, new StringInputStream(source), ENC,
-				"http://www.example.com/blah/", cb);
+		m_extractor.extractUrls(mau, new StringInputStream(source), ENC,
+        "http://www.example.com/blah/", cb);
 
 		Set<String> expected = new HashSet<String>();
 		Collections.addAll(expected, url1, url2, url3, url4, url5);
@@ -1345,7 +1345,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 //	}
 	
 	public void testTooManyCheckBoxesAreCapped() throws IOException {
-		extractor = new HtmlParserLinkExtractor(4000, false, false);
+		m_extractor = new HtmlParserLinkExtractor(4000, false, false);
 		String source = "<html><head><title>Test</title></head><body>"
 				+ "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
 				+ "<input type=\"checkbox\" name=\"cb1\" />"

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.10 2012-06-24 15:34:48 pgust Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.11 2013-07-15 19:41:02 clairegriffin Exp $
  */
 
 /*
@@ -123,11 +123,15 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   protected static final String VALUETAG = "value";
 
   protected static final String SCRIPTTAGEND = "/script>";
-
+  /*
+          Two Different charset specifications
+   4.01: <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      5: <meta charset="UTF-8">
+   */
+  protected static final String CHARSET = "charset";
   protected static final String REFRESH = "refresh";
   protected static final String HTTP_EQUIV = "http-equiv";
   protected static final String HTTP_EQUIV_CONTENT = "content";
-
   protected static final char NEWLINE_CHAR = '\n';
   protected static final char CARRIAGE_RETURN_CHAR = '\r';
 
@@ -156,6 +160,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   private boolean malformedBaseUrl = false;
 
   private boolean lastTagWasScript = false;
+  private boolean isBaseSet = false;
 
   public GoslingHtmlLinkExtractor() {
     ringCapacity = CurrentConfig.getIntParam(PARAM_BUFFER_CAPACITY,
@@ -167,6 +172,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
   private void init() {
     lastTagWasScript = false;
     malformedBaseUrl = false;
+    isBaseSet = false;
     baseUrl = null;
     readerEof = false;
     ring = new CharRing(ringCapacity);
@@ -459,22 +465,23 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
         if (beginsWithTag(link, BODYTAG)) {
           return (  getAttributeValue(BACKGROUNDSRC, link) );
         }
-        if (beginsWithTag(link, BASETAG)) {
-	  String newBase = getAttributeValue(HREF, link);
-	  if (newBase != null && !"".equals(newBase)) {
-	    if (UrlUtil.isMalformedUrl(newBase)) {
-	      logger.debug3("base tag found, but has malformed URL: "+newBase);
-	      malformedBaseUrl = true;
-	    }  else {
-	      malformedBaseUrl = false;
-	      if (UrlUtil.isAbsoluteUrl(newBase)) {
-		logger.debug3("base tag found, setting srcUrl to: " + newBase);
-		srcUrl = newBase;
-		baseUrl = null;
-	      }
-	    }
-	  }
-	}
+        if (beginsWithTag(link, BASETAG)  && !isBaseSet) {
+          String newBase = getAttributeValue(HREF, link);
+          if (newBase != null && !"".equals(newBase)) {
+            if (UrlUtil.isMalformedUrl(newBase)) {
+              logger.debug3("base tag found, but has malformed URL: "+newBase);
+              malformedBaseUrl = true;
+            }  else {
+              malformedBaseUrl = false;
+              if (UrlUtil.isAbsoluteUrl(newBase)) {
+                logger.debug3("base tag found, setting srcUrl to: " + newBase);
+                srcUrl = newBase;
+                baseUrl = null;
+                isBaseSet = true;
+              }
+            }
+          }
+        }
         break;
       case 's': //<script src=blah.js> or <style type="text/css">...CSS...</style>
       case 'S':

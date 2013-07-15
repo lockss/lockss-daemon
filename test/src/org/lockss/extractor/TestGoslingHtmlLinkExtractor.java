@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.8 2012-06-24 15:34:49 pgust Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.9 2013-07-15 19:41:02 clairegriffin Exp $
  */
 
 /*
@@ -673,7 +673,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
 
   public void testInterpretsBaseTag() throws IOException {
     String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example2.com/link2.html";
+    String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
     String source =
@@ -692,9 +692,9 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   //as any absolute URLs after the malformed base tag
   public void testInterpretsMalformedBaseTag() throws IOException {
     String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example2.com/link2.html";
+    String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example2.com/link3.html";
-    String url4= "http://www.example3.com/link3.html";
+    String url4= "http://www.example.com/link3.html";
 
     String source =
       "<html><head><title>Test</title></head><body>"+
@@ -707,7 +707,8 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
       "<a href=http://www.example2.com/link3.html>link3</a>"+
       "<base href=http://www.example3.com>"+
       "<a href=link3.html>link4</a>";
-    assertEquals(SetUtil.set(url1, url3, url4), parseSingleSource(source));
+    assertEquals(SetUtil.set(url1, url2, url3,url4),
+        parseSingleSource(source));
   }
 
   public void testIgnoresNullHrefInBaseTag() throws IOException {

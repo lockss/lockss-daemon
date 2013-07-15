@@ -93,6 +93,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
   private int m_maxFormUrls;
   private boolean m_statisticsEnabled;
   private boolean m_normalizeFormUrls;
+  private boolean isBaseSet = false;
   // the AU
 
   // For testing
@@ -144,6 +145,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
     else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
+    isBaseSet = false;
 
     Callback current_cb = cb;
     LinkExtractorStatisticsManager stats = new LinkExtractorStatisticsManager();
@@ -889,12 +891,13 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
 
       // Visited a base tag, update the page url. All the relative links that
       // follow base tag will need to be resolved to the new page url.
-      if ("base".equalsIgnoreCase(tag.getTagName())) {
+      if ("base".equalsIgnoreCase(tag.getTagName()) && !isBaseSet) {
         String newBase = tag.getAttribute("href");
         if (newBase != null && !newBase.isEmpty()) {
           m_isBaseUrlMalformed = UrlUtil.isMalformedUrl(newBase);
           if (!m_isBaseUrlMalformed && UrlUtil.isAbsoluteUrl(newBase)) {
             m_srcUrl = newBase;
+            isBaseSet = true;
           }
         }
         return;
