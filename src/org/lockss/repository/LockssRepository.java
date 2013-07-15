@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.18 2006-04-05 21:09:13 thib_gc Exp $
+ * $Id: LockssRepository.java,v 1.19 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.repository;
 
 import java.net.MalformedURLException;
 import org.lockss.app.*;
+import org.lockss.util.SerializationException;
+import org.lockss.plugin.ArchivalUnit;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -77,6 +79,18 @@ public interface LockssRepository extends LockssAuManager {
    * node.  Corrects and logs any correctable errors it encounters.
    */
   public void nodeConsistencyCheck();
+
+  /**
+   * Return the AuSuspectUrlVersions object for the AU
+   */
+  public AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au);
+
+  /**
+   * Store the AuSuspectUrlVersions object for the AU
+   */
+  public void storeSuspectUrlVersions(ArchivalUnit au,
+				      AuSuspectUrlVersions asuv)
+      throws SerializationException;
 
   /**
    * Thrown when an unexpected error is encountered while caching.

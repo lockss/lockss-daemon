@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.66 2013-07-11 20:25:20 dshr Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.67 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -36,11 +36,13 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import junit.framework.Test;
+import org.apache.commons.io.*;
 import org.lockss.test.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.hasher.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -67,17 +69,27 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.addFromProps(props);
 
-    mau = new MockArchivalUnit();
-    repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
-        mau);
-    // set small node cache; one test needs to fill it up
-    repo.setNodeCacheSize(17);
-    repo.initService(daemon);
+    mau = setUpMau(null);
+    repo = (LockssRepositoryImpl)daemon.getLockssRepository(mau);
   }
 
   public void tearDown() throws Exception {
     repo.stopService();
     super.tearDown();
+  }
+
+  MockArchivalUnit setUpMau(String id) {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    if (id != null) {
+      mau.setAuId(id);
+    }
+    LockssRepositoryImpl repo =
+      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(mau);
+    // set small node cache; one test needs to fill it up
+    repo.setNodeCacheSize(17);
+    repo.initService(daemon);
+    daemon.setLockssRepository(repo, mau);
+    return mau;
   }
 
   String getCacheLocation() {
@@ -134,12 +146,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
-  public void testGetSuspectUrlVersions() throws Exception {
-    Properties newProps = new Properties();
-    mau.setAuId("barfoo");
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
-    String location = getCacheLocation() + "ab";
-    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+  public void testSuspectUrlVersions() throws Exception {
+    String location =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+
     String url1 = "http://www.example.com/testDir/branch1/leaf1";
     createLeaf(url1, "test stream 1", null);
     String url2 = "http://www.example.com/testDir/branch1/leaf2";
@@ -153,15 +163,19 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
                "test stream 4", null);
     repo.startService();
 
-    AuSuspectUrlVersions asuv =
-      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    assertFalse(repo.hasSuspectUrlVersions(mau));
+
+    AuSuspectUrlVersions asuv = repo.getSuspectUrlVersions(mau);
+    assertTrue(repo.hasSuspectUrlVersions(mau));
     assertNotNull(asuv);
+    assertTrue(asuv.isEmpty());
     // Might as well test the result here
     assertFalse(asuv.isSuspect(url1, 0));
     assertFalse(asuv.isSuspect(url1, 1));
     assertFalse(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
     asuv.markAsSuspect(url1, 1);
+    assertFalse(asuv.isEmpty());
     assertFalse(asuv.isSuspect(url1, 0));
     assertTrue(asuv.isSuspect(url1, 1));
     assertFalse(asuv.isSuspect(url2, 0));
@@ -171,7 +185,44 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertTrue(asuv.isSuspect(url1, 1));
     assertTrue(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
-    repo.stopService();
+
+    HashResult res1 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
+    HashResult res2 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
+    asuv.markAsSuspect(url2, 2, res1, res2);
+    assertTrue(asuv.isSuspect(url2, 2));
+
+    File file = new File(location, LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
+    assertFalse("Suspect file shouldn't exist: " + file, file.exists());
+    repo.storeSuspectUrlVersions(mau, asuv);
+
+    assertTrue("Suspect file should exist: " + file, file.exists());
+
+    // Make a second AU and copy the serialized file, ensure it loads correctly
+
+    MockArchivalUnit mau2 = setUpMau("second");
+    LockssRepositoryImpl repo2 =
+      (LockssRepositoryImpl)daemon.getLockssRepository(mau2);
+    repo2.startService();
+    String location2 =
+      LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau2);
+
+    File file2 = new File(location2,
+			  LockssRepositoryImpl.SUSPECT_VERSIONS_FILE);
+    assertFalse("Suspect file2 shouldn't exist: " + file2, file2.exists());
+    assertFalse(repo2.hasSuspectUrlVersions(mau2));
+    FileUtils.copyFile(file, file2);
+    assertTrue("Suspect file should exist: " + file2, file2.exists());
+    assertTrue(repo2.hasSuspectUrlVersions(mau2));
+
+    AuSuspectUrlVersions asuv2 = repo2.getSuspectUrlVersions(mau);
+    assertFalse(asuv2.isEmpty());
+
+    assertFalse(asuv2.isSuspect(url1, 0));
+    assertTrue(asuv2.isSuspect(url1, 1));
+    assertTrue(asuv2.isSuspect(url2, 0));
+    assertFalse(asuv2.isSuspect(url2, 1));
+    assertTrue(asuv2.isSuspect(url2, 2));
+
   }
 
   public void testGetRepositoryRoot() throws Exception {

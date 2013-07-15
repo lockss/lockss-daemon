@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.25 2013-07-14 03:05:20 dshr Exp $
+ * $Id: BlockHasher.java,v 1.26 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -301,7 +301,7 @@ public class BlockHasher extends GenericHasher {
 	} else {
 	  // Checksum but no content - record this version as suspect
 	  log.error(curVer.getUrl() + ":" + curVer.getVersion() + " checksum but no content");
-	  updateSuspectVersions(curVer, algorithm, null, hash);
+	  markAsSuspect(curVer, algorithm, null, hash);
 	  useHashAlgorithm = null;
 	  currentVersionStoredHash = null;
 	}
@@ -552,18 +552,28 @@ public class BlockHasher extends GenericHasher {
     return null;
   }
 
-  private void updateSuspectVersions(CachedUrl curVer, String alg,
+  private void markAsSuspect(CachedUrl curVer, String alg,
 				      byte[] contentHash,
 				      byte[] storedHash) {
     ensureAuSuspectUrlVersions();
     versionsMarkedSuspect++;
     asuv.markAsSuspect(curVer.getUrl(), curVer.getVersion(), alg,
 		       contentHash, storedHash);
+    // save on each change.  Should have option to save only at end of hash?
+    saveAuSuspectUrlVersions();
   }
 
   private void ensureAuSuspectUrlVersions() {
     if (asuv == null) {
-      asuv = LockssRepositoryImpl.getSuspectUrlVersions(cus.getArchivalUnit());
+      asuv = AuUtil.getSuspectUrlVersions(cus.getArchivalUnit());
+    }
+  }
+
+  private void saveAuSuspectUrlVersions() {
+    try {
+      AuUtil.saveSuspectUrlVersions(cus.getArchivalUnit(), asuv);
+    } catch (SerializationException e) {
+      // XXX ???
     }
   }
 
@@ -631,7 +641,7 @@ public class BlockHasher extends GenericHasher {
 			 byte[] storedHash) {
       log.error(curVer.getUrl() + ":" + curVer.getVersion() +
 		" hash mismatch");
-      updateSuspectVersions(curVer, alg, contentHash, storedHash);
+      markAsSuspect(curVer, alg, contentHash, storedHash);
     }
     /**
      * Local hash missing

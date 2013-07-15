@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.89 2013-07-11 20:25:19 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.90 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class LockssRepositoryImpl
 
   // starts with a '#' so no possibility of clashing with a URL
   public static final String AU_ID_FILE = "#au_id_file";
+  public static final String SUSPECT_VERSIONS_FILE = "#suspect_versions";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
   static final char ESCAPE_CHAR = '#';
@@ -380,21 +381,78 @@ public class LockssRepositoryImpl
    * be used to mark versions of urls within the AU as suspect,
    * and to determine whether a version of a url within the AU has
    * been so marked.
+   * @param au the AU
    * @return AuSuspectUrlversions object for the AU
    */
-  public static AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
-    RepositoryManager repoMgr =
-      LockssDaemon.getLockssDaemon().getRepositoryManager();
-    UniqueRefLruCache cache =
-      repoMgr.getSuspectVersionsCache();
-    AuSuspectUrlVersions asuv = (AuSuspectUrlVersions) cache.get(au);
-    if (asuv == null) {
-      /* XXX load ausv from underlying file XXX */
-      asuv = new AuSuspectUrlVersions();
-      cache.put(au, asuv);
+  public AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
+    UniqueRefLruCache cache = repoMgr.getSuspectVersionsCache();
+    AuSuspectUrlVersions asuv = (AuSuspectUrlVersions)cache.get(au);
+    if (asuv != null) {
+      return asuv;
     }
-    return asuv;
+    // not in cache.  Load from file or create a new one and insert in cache.
+    synchronized (this) {
+      asuv = loadSuspectUrlVersions(au);
+      return (AuSuspectUrlVersions)cache.putIfNew(au, asuv);
+    }
   }
+
+  /**
+   * Return true if the AU has a record of suspect URL versions.  Does not
+   * put anything in the cache so can be used in iteration over AUs.
+   */
+  public boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    return repoMgr.getSuspectVersionsCache().get(au) != null
+      || getAsuvFile().exists();
+  }
+
+  private AuSuspectUrlVersions loadSuspectUrlVersions(ArchivalUnit au) {
+    ObjectSerializer deserializer = makeObjectSerializer();
+    try {
+      if (logger.isDebug3())
+	logger.debug3("Loading suspect versions for " + au);
+      File file = getAsuvFile();
+      AuSuspectUrlVersions asuv =
+	(AuSuspectUrlVersions)deserializer.deserialize(file);
+      return asuv;
+    } catch (SerializationException.FileNotFound fnf) {
+      if (logger.isDebug2())
+	logger.debug2("Creating new suspect versions for AU " + au);
+      // fall through to return new AuSuspectUrlVersions
+    } catch (SerializationException e) {
+      logger.error("Loading suspect versions for " + au, e);
+      // fall through to return new AuSuspectUrlVersions
+    } catch (InterruptedIOException e) {
+      logger.error("Loading suspect versions for " + au, e);
+      throw new RuntimeException("Could not load suspect versions", e);
+    }
+    // Return new object
+    return new AuSuspectUrlVersions();
+  }
+
+  private ObjectSerializer makeObjectSerializer() {
+    return new XStreamSerializer();
+  }
+
+  public void storeSuspectUrlVersions(ArchivalUnit au,
+				      AuSuspectUrlVersions asuv)
+      throws SerializationException {
+    try {
+      File file = getAsuvFile();
+      makeObjectSerializer().serialize(file, asuv);
+    } catch (SerializationException e) {
+      logger.error("Could not store suspect versions", e);
+      throw e;
+    } catch (InterruptedIOException e) {
+      logger.error("Could not store suspect versions", e);
+      throw new SerializationException(e);
+    }
+  }
+
+  File getAsuvFile() {
+    return new File(rootLocation, SUSPECT_VERSIONS_FILE);
+  }
+
 
   // The OpenBSD platform has renamed the first disk from /cache to
   // /cache.wd0, leaving behind a symbolic link in /cache .  This is

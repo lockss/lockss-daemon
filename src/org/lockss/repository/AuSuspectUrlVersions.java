@@ -1,5 +1,5 @@
 /*
- * $Id: AuSuspectUrlVersions.java,v 1.2 2013-07-14 03:05:20 dshr Exp $
+ * $Id: AuSuspectUrlVersions.java,v 1.3 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.util.*;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 import org.lockss.hasher.HashResult;
 
 /**
@@ -42,8 +42,8 @@ import org.lockss.hasher.HashResult;
  * verification, meaning that either the url's content or its
  * stored hash is corrupt.
  */
-public class AuSuspectUrlVersions {
-  public class SuspectUrlVersion {
+public class AuSuspectUrlVersions implements LockssSerializable {
+  public class SuspectUrlVersion implements LockssSerializable {
     private final String url;
     private final int version;
     private final long created;
@@ -103,6 +103,7 @@ public class AuSuspectUrlVersions {
       return false;
     }
   }
+
   private Set<SuspectUrlVersion> suspectVersions =
     new HashSet<SuspectUrlVersion>();
 
@@ -126,6 +127,7 @@ public class AuSuspectUrlVersions {
     }
     suspectVersions.add(new SuspectUrlVersion(url, version));
   }
+
   /**
    * Mark the version of the url as suspect
    */
@@ -136,6 +138,22 @@ public class AuSuspectUrlVersions {
     }
     suspectVersions.add(new SuspectUrlVersion(url, version, algorithm,
 					      computedHash, storedHash));
-    /* XXX write through to underlying file XXX */
+  }
+
+  /**
+   * Mark the version of the url as suspect
+   */
+  public void markAsSuspect(String url, int version,
+			    HashResult computedHash, HashResult storedHash) {
+    if (isSuspect(url, version)) {
+      throw new UnsupportedOperationException("Re-marking as suspect");
+    }
+    suspectVersions.add(new SuspectUrlVersion(url, version,
+					      computedHash, storedHash));
+  }
+
+  /** Return true if the set is empty */
+  public boolean isEmpty() {
+    return suspectVersions.isEmpty();
   }
 }

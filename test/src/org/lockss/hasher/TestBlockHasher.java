@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.20 2013-07-12 16:12:53 dshr Exp $
+ * $Id: TestBlockHasher.java,v 1.21 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -79,14 +79,13 @@ public class TestBlockHasher extends LockssTestCase {
     super.setUp();
     daemon = getMockLockssDaemon();
     dig = new MockMessageDigest(); 
-    mau = new MockArchivalUnit(new MockPlugin());
-    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    mau = new MockArchivalUnit(new MockPlugin(daemon));
+    tempDirPath = setUpDiskSpace();
     repoMgr = daemon.getRepositoryManager();
-    Properties props = new Properties();
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    ConfigurationUtil.addFromProps(props);
+    repoMgr.startService();
     repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
         mau);
+    daemon.setLockssRepository(repo, mau);
     repo.initService(daemon);
     repo.startService();
   }
@@ -491,8 +490,7 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(1, localHashHandler.getMatch());
     assertEquals(0, localHashHandler.getMismatch());
     assertEquals(0, localHashHandler.getMissing());
-    AuSuspectUrlVersions asuv =
-      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertFalse(asuv.isSuspect(urls[4], 0));
   }
   
@@ -551,8 +549,7 @@ public class TestBlockHasher extends LockssTestCase {
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    AuSuspectUrlVersions asuv =
-      LockssRepositoryImpl.getSuspectUrlVersions(mau);
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertTrue(asuv.isSuspect(urls[4], 0));
     // Second pass should exclude the suspect URL
     // NB - test confirms that BlocksHasher handles case of

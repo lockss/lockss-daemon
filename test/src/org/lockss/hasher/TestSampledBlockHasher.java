@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.6 2013-06-13 16:22:34 barry409 Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.7 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
+import org.lockss.repository.*;
 
 public class TestSampledBlockHasher extends LockssTestCase {
   private static final String TEST_URL_BASE = "http://www.test.com/blah/";
@@ -52,6 +53,7 @@ public class TestSampledBlockHasher extends LockssTestCase {
   private static final byte[] sampleNonce = TEST_NONCE.getBytes();
   private static final byte[] testContent = TEST_FILE_CONTENT.getBytes();
 
+  MockLockssDaemon daemon;
   MessageDigest urlHasher = null;
   MockMessageDigest dig = null;
   MessageDigest[] digests = null;
@@ -66,12 +68,17 @@ public class TestSampledBlockHasher extends LockssTestCase {
     String alg =
       CurrentConfig.getParam(LcapMessage.PARAM_HASH_ALGORITHM,
 			     LcapMessage.DEFAULT_HASH_ALGORITHM);
+    setUpDiskSpace();
+    daemon = getMockLockssDaemon();
+    RepositoryManager repoMgr = daemon.getRepositoryManager();
+    repoMgr.startService();
+
     assertEquals("SHA-1", alg);
     urlHasher = MessageDigest.getInstance(alg);
     dig = new MockMessageDigest();
     digests = new MessageDigest[]{ dig };
     initByteArrays = new byte[][]{ testContent };
-    mau = new MockArchivalUnit(new MockPlugin(), TEST_URL_BASE);
+    mau = new MockArchivalUnit(new MockPlugin(daemon), TEST_URL_BASE);
     cus = makeFakeCachedUrlSet(1);
 
     ConfigurationUtil.addFromArgs(LcapMessage.PARAM_HASH_ALGORITHM,
@@ -227,11 +234,18 @@ public class TestSampledBlockHasher extends LockssTestCase {
   // XXX DSHR - need tests with substance checking enabled
 
   private MockArchivalUnit newMockArchivalUnit(String url) {
-    MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(), url);
+    MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(daemon), url);
     MockCachedUrlSet cus = new MockCachedUrlSet(url);
     cus.setArchivalUnit(mau);
+    LockssRepositoryImpl repo =
+      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+    daemon.setLockssRepository(repo, mau);
+    repo.initService(daemon);
+    repo.startService();
     return mau;
   }
+
   private MockCachedUrlSet makeFakeCachedUrlSet(int numFiles)
       throws IOException, FileNotFoundException {
     Vector files = new Vector(numFiles+1);

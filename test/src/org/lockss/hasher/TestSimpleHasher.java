@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.7 2010-05-12 03:52:37 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.8 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.plugin.*;
+import org.lockss.repository.*;
 
 public class TestSimpleHasher extends LockssTestCase {
   static final String HASH_ALG = "SHA-1";
@@ -64,14 +65,24 @@ public class TestSimpleHasher extends LockssTestCase {
   byte[] challenge = null;
   byte[] verifier = null;
 
+  MockLockssDaemon daemon;
   MockArchivalUnit mau = null;
 
   public void setUp() throws Exception {
     super.setUp();
-    mau = new MockArchivalUnit(new MockPlugin());
+    daemon = getMockLockssDaemon();
+    setUpDiskSpace();
+    mau = new MockArchivalUnit(new MockPlugin(daemon));
   }
 
   MockArchivalUnit setupContentTree() {
+    LockssRepositoryImpl repo =
+      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+    daemon.setLockssRepository(repo, mau);
+    repo.initService(daemon);
+    repo.startService();
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     List files = new ArrayList();
     for (int ix = 0; ix < urls.length; ix++) {

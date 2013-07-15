@@ -1,5 +1,5 @@
 /*
- * $Id: HashResult.java,v 1.6 2013-07-14 03:05:20 dshr Exp $
+ * $Id: HashResult.java,v 1.7 2013-07-15 07:31:27 tlipkis Exp $
  */
 
 /*
@@ -36,14 +36,13 @@ import java.security.MessageDigest;
 import java.util.Arrays;
 import java.util.Vector;
 
-import org.lockss.util.ByteArray;
-import org.lockss.util.StringUtil;
+import org.lockss.util.*;
 
 /**
  * Wrap the byte array returned by {@link MessageDigest#digest}
  * to force equality and sorting by content of the byte array.
  */
-final public class HashResult {
+final public class HashResult implements LockssSerializable {
   /** An internal byte array, never shared with clients. */
   private final byte[] bytes;
   private final String algorithm;
