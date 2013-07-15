@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = University of Nevada, Las Vegas ;
+    info[tester] = 5
+  >
+  
+  {
+  
+    title < 
+      name = Journal of Praxis in Multicultural Education ;
+      issn = 1931-0242;
+      eissn = 2161-2978
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://digitalscholarship.unlv.edu/
+    param[journal_abbr] = jpme
+    implicit < status ; year ; name ; param[volume] >
+
+    au < exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 >
+    au < exists ; 2007 ; Journal of Praxis in Multicultural Education volume 2 ; 2 >
+    au < exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 >
+    au < exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 >
+    au < exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 >
+    au < exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 >
+    au < exists ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 >
+    au < expected ; 2013 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 >
+
+  }
+
+}
