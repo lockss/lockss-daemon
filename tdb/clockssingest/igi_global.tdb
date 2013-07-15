@@ -1434,7 +1434,7 @@
     >
     param[journal_issn] = 1938-0232
 
-    au < manifest ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Information Technology Project Management (IJITPM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Information Technology Project Management (IJITPM) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Information Technology Project Management (IJITPM) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Information Technology Project Management (IJITPM) Volume 4 ; 4 > 
@@ -1451,7 +1451,7 @@
     >
     param[journal_issn] = 1947-8305
 
-    au < manifest ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 4 ; 4 > 
@@ -1522,8 +1522,8 @@
     >
     param[journal_issn] = 1941-8663
 
-    au < manifest ; exists ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2009 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 4 ; 4 > 
     au < manifest ; exists ; 2013 ; International Journal of Interdisciplinary Telecommunications and Networking (IJITN) Volume 5 ; 5 > 
@@ -1564,7 +1564,7 @@
     >
     param[journal_issn] = 1947-9611
 
-    au < manifest ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of IT/Business Alignment and Governance (IJITBAG) Volume 4 ; 4 > 
@@ -1637,7 +1637,7 @@
     >
     param[journal_issn] = 1947-8429
 
-    au < manifest ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Knowledge Society Research (IJKSR) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Knowledge Society Research (IJKSR) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Knowledge Society Research (IJKSR) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Knowledge Society Research (IJKSR) Volume 4 ; 4 > 
@@ -1702,8 +1702,8 @@
     >
     param[journal_issn] = 1941-8647
 
-    au < manifest ; exists ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2009 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 4 ; 4 > 
     au < manifest ; exists ; 2013 ; International Journal of Mobile and Blended Learning (IJMBL) Volume 5 ; 5 > 
@@ -1771,7 +1771,7 @@
     >
     param[journal_issn] = 1947-8534
 
-    au < manifest ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 > 
     au < crawling ; exists ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 4 ; 4 > 
@@ -1787,12 +1787,11 @@
       issnl = 1941-6318
     >
     param[journal_issn] = 1941-6318
-    comment[notReady] = bad manifest page, no url
 
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
-    au < notReady ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
+    au < crawling ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
 
   }
@@ -1805,12 +1804,11 @@
       issnl = 1947-928X
     >
     param[journal_issn] = 1947-928X
-    comment[notReady] = bad manifest page, no url
 
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < notReady ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < crawling ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
 
   }
@@ -2116,7 +2114,7 @@
     >
     param[journal_issn] = 1947-8402
 
-    au < manifest ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Social Ecology and Sustainable Development (IJSESD) Volume 4 ; 4 > 
@@ -2185,7 +2183,7 @@
     >
     param[journal_issn] = 1947-8569
 
-    au < manifest ; exists ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 4 ; 4 > 
@@ -2202,7 +2200,7 @@
     >
     param[journal_issn] = 1947-3095
 
-    au < manifest ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Strategic Information Technology and Applications (IJSITA) Volume 4 ; 4 > 
@@ -2251,7 +2249,7 @@
     >
     param[journal_issn] = 1947-9263
 
-    au < manifest ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Swarm Intelligence Research (IJSIR) Volume 4 ; 4 > 
@@ -2268,7 +2266,7 @@
     >
     param[journal_issn] = 1947-9093
 
-    au < manifest ; exists ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Synthetic Emotions (IJSE) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Synthetic Emotions (IJSE) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Synthetic Emotions (IJSE) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Synthetic Emotions (IJSE) Volume 4 ; 4 > 
@@ -2300,7 +2298,7 @@
     >
     param[journal_issn] = 1947-3052
 
-    au < manifest ; exists ; 2010 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Systems and Service-Oriented Engineering (IJSSOE) Volume 4 ; 4 > 
@@ -2332,7 +2330,7 @@
     >
     param[journal_issn] = 1947-3451
 
-    au < manifest ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Technoethics (IJT) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Technoethics (IJT) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Technoethics (IJT) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Technoethics (IJT) Volume 4 ; 4 > 
@@ -2387,7 +2385,7 @@
     >
     param[journal_issn] = 1947-9301
 
-    au < manifest ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Technology Diffusion (IJTD) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Technology Diffusion (IJTD) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Technology Diffusion (IJTD) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Technology Diffusion (IJTD) Volume 4 ; 4 > 
@@ -2436,7 +2434,7 @@
     >
     param[journal_issn] = 1947-8518
 
-    au < manifest ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 2 ; 2 > 
     au < released ; crawling ; 2012 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 3 ; 3 > 
     au < manifest ; exists ; 2013 ; International Journal of Virtual and Personal Learning Environments (IJVPLE) Volume 4 ; 4 > 
@@ -2453,8 +2451,8 @@
     >
     param[journal_issn] = 1942-9010
 
-    au < manifest ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2009 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Virtual Communities and Social Networking (IJVCSN) Volume 5 ; 5 > 
@@ -2471,8 +2469,8 @@
     >
     param[journal_issn] = 1938-0194
 
-    au < manifest ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2009 ; International Journal of Web Portals (IJWP) Volume 1 ; 1 > 
+    au < crawling ; exists ; 2010 ; International Journal of Web Portals (IJWP) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Web Portals (IJWP) Volume 3 ; 3 > 
     au < released ; crawling ; 2012 ; International Journal of Web Portals (IJWP) Volume 4 ; 4 > 
     au < manifest ; exists ; 2013 ; International Journal of Web Portals (IJWP) Volume 5 ; 5 > 
@@ -2534,7 +2532,7 @@
     param[journal_issn] = 2155-6261
 
     au < released ; crawling ; 2011 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 1 ; 1 > 
-    au < testing ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
+    au < crawling ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
     au < expected ; exists ; 2013 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 3 ; 3 > 
 
   }
