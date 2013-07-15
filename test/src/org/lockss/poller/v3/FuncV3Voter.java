@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.29 2013-02-24 04:54:20 dshr Exp $
+ * $Id: FuncV3Voter.java,v 1.30 2013-07-15 07:38:20 tlipkis Exp $
  */
 
 /*
@@ -180,6 +180,13 @@ public class FuncV3Voter extends LockssTestCase {
     }
     cus.setHashItSource(files);
     cus.setFlatItSource(files);
+
+    LockssRepositoryImpl repo =
+      (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+    theDaemon.setLockssRepository(repo, mau);
+    repo.initService(theDaemon);
+    repo.startService();
   }
 
   public V3LcapMessage makePollMsg() {
