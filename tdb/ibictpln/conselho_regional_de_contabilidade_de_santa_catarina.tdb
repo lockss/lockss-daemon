@@ -1,0 +1,37 @@
+{
+  publisher <
+    name = IBICT
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Catarinense da Ciência Contábil ;
+        issn = 1808-3781 ;
+        eissn = 2237-7662
+      >
+
+      comment[publisher] = Conselho Regional de Contabilidade de Santa Catarina
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = CRCSC
+
+      au < exists ; 2001 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista Catarinense da Ciência Contábil Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista Catarinense da Ciência Contábil Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista Catarinense da Ciência Contábil Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista Catarinense da Ciência Contábil Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista Catarinense da Ciência Contábil Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista Catarinense da Ciência Contábil Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista Catarinense da Ciência Contábil Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista Catarinense da Ciência Contábil Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista Catarinense da Ciência Contábil Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista Catarinense da Ciência Contábil Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista Catarinense da Ciência Contábil Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; Revista Catarinense da Ciência Contábil Volume 13 ; 2013 >
+
+  }
+
+}
