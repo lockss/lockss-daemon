@@ -9,101 +9,6 @@
   {
 
       title <
-        name = Acta Brasileira do Movimento Humano ;
-        issn = 2238-2259
-      >
-
-      comment[publisher] = CentroParaná 
-      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
-      param[journal_id] = actabrasileira
-
-      au < exists ; 2010 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Acta Brasileira do Movimento Humano Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Acta Brasileira do Movimento Humano Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Acta Brasileira do Movimento Humano Volume 4 ; 2013 >
-
-  }
-
-  {
-
-      title <
-        name = Ciência & Consciência ;
-        issn = 1980-5152
-      >
-
-      comment[publisher] = CentroParaná 
-      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
-      param[journal_id] = ciencia
-
-      au < exists ; 2004 ; 1 ; Ciência & Consciência Volume 1 ; 2004 >
-      au < exists ; 2005 ; 2 ; Ciência & Consciência Volume 2 ; 2005 >
-      au < exists ; 2006 ; 3 ; Ciência & Consciência Volume 3 ; 2006 >
-      au < exists ; 2007 ; 4 ; Ciência & Consciência Volume 4 ; 2007 >
-      au < exists ; 2008 ; 5 ; Ciência & Consciência Volume 5 ; 2008 >
-      au < exists ; 2009 ; 6 ; Ciência & Consciência Volume 6 ; 2009 >
-      au < exists ; 2010 ; 7 ; Ciência & Consciência Volume 7 ; 2010 >
-      au < exists ; 2011 ; 8 ; Ciência & Consciência Volume 8 ; 2011 >
-      au < expected ; 2012 ; 9 ; Ciência & Consciência Volume 9 ; 2012 >
-      au < expected ; 2013 ; 10 ; Ciência & Consciência Volume 10 ; 2013 >
-
-  }
-
-  {
-
-      title <
-        name = Jus Societas ;
-        eissn =  1981-4550
-      >
-
-      comment[publisher] = CentroParaná 
-      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
-      param[journal_id] = jussocietas
-
-      au < exists ; 2007 ; 1 ; Jus Societas Volume 1 ; 2007 >
-      au < exists ; 2008 ; 2 ; Jus Societas Volume 2 ; 2008 >
-      au < exists ; 2009 ; 3 ; Jus Societas Volume 3 ; 2009 >
-      au < exists ; 2010 ; 4 ; Jus Societas Volume 4 ; 2010 >
-      au < exists ; 2011 ; 5 ; Jus Societas Volume 5 ; 2011 >
-      au < exists ; 2012 ; 6 ; Jus Societas Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Jus Societas Volume 7 ; 2013 >
-
-  }
-
-  {
-
-      title <
-        name = Revista Eletrônica Saber Contábil ;
-        eissn = 2238-1376
-      >
-
-      comment[publisher] = CentroParaná 
-      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
-      param[journal_id] = contabeis
-
-      au < exists ; 2011 ; 1 ; Revista Eletrônica Saber Contábil Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista Eletrônica Saber Contábil Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Eletrônica Saber Contábil Volume 3 ; 2013 >
-
-  }
-
-  {
-
-      title <
-        name = Salão de Iniciação Científica CEULJI/ULBRA ;
-        eissn = 1807-5770
-      >
-
-      comment[publisher] = CentroParaná 
-      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
-      param[journal_id] = salao
-
-      au < expected ; 2013 ; 1 ; Salão de Iniciação Científica CEULJI/ULBRA Volume 1 ; 2013 >
-
-  }
-
-  {
-
-      title <
         name = Revista Catarinense da Ciência Contábil ;
         issn = 1808-3781 ;
         eissn = 2237-7662
@@ -1342,21 +1247,6 @@
       au < exists ; 2011 ; 1 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 1 ; 2011 >
       au < exists ; 2012 ; 2 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 2 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 3 ; 2013 >
-
-  }
-
-  {
-
-      title <
-        name = Revista Contabilidade & Finanças ;
-        issn = 1808-057X
-      >
-
-      comment[publisher] = Universidade de São Paulo
-      param[base_url] = http://www.atena.org.br/
-      param[journal_id] = RCF-USP
-
-      au < expected ; 2013 ; 1 ; Revista Contabilidade & Finanças Volume 1 ; 2013 >
 
   }
 
