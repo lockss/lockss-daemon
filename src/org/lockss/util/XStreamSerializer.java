@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.28 2013-07-16 04:36:42 tlipkis Exp $
+ * $Id: XStreamSerializer.java,v 1.29 2013-07-16 04:59:47 tlipkis Exp $
  */
 
 /*
@@ -159,6 +159,11 @@ public class XStreamSerializer extends ObjectSerializer {
     public void marshal(Object obj,
                         HierarchicalStreamWriter writer,
                         MarshallingContext context) {
+      
+      org.lockss.hasher.HashResult hr = (org.lockss.hasher.HashResult)obj;
+      if (hr.getAlgorithm() == null) {
+	throw new ConversionException("Can't serialize HashResult with no algorithm");
+      }
       writer.setValue(((org.lockss.hasher.HashResult)obj).toString());
     }
 
