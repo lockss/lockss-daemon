@@ -7,8 +7,6 @@
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   implicit < status ; year ; volume ; name ; param[year] >
 
-    param[base_url] = http://www.revistas.usp.br/
-
   {
   
     title <
@@ -16,6 +14,7 @@
       eissn = 1984-1124
     >
 
+    param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = criacaoecritica
 
     au < released ; 2011 ; 1 ; Revista Criação & Crítica Volume 1 ; 2011 >
@@ -31,6 +30,7 @@
       eissn = 2316-9141
     >
 
+    param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = revhistoria
 
     au < notReady ; 2011 ; 1 ; Revista de História Volume 1 ; 2011 >
@@ -46,6 +46,7 @@
       eissn = 1981-1624
     >
 
+    param[base_url] = http://www.revistas.usp.br/
     param[journal_id] = estic
 
     au < released ; 2011 ; 1 ; Estílos da Clínica Volume 1 ; 2011 >
@@ -61,10 +62,26 @@
       eissn = 2236-4242
     >
 
+    param[base_url] = http://www.revistas.usp.br/
     param[journal_id ] = linhadagua
 
     au < released ; 2011 ; 1 ; Linha D'Água Volume 1 ; 2011 >
     au < released ; 2012 ; 2 ; Linha D'Água Volume 2 ; 2012 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Contabilidade & Finanças ;
+        issn = 1808-057X
+      >
+
+      comment[publisher] = Universidade de São Paulo
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = RCF-USP
+
+      au < expected ; 2013 ; 1 ; Revista Contabilidade & Finanças Volume 1 ; 2013 >
 
   }
 
