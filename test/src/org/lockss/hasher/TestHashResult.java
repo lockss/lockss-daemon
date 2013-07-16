@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.7 2013-07-15 18:46:10 tlipkis Exp $
+ * $Id: TestHashResult.java,v 1.8 2013-07-16 04:37:28 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.hasher;
 
+import java.io.*;
+import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestHashResult extends LockssTestCase {
   public static byte[] bytes = {0, 1, 2};
@@ -125,4 +128,94 @@ public class TestHashResult extends LockssTestCase {
       }
     }
   }
+
+  // Simple holder class to serialize/deserialize a HashResult field
+  static class Holder implements LockssSerializable {
+    HashResult hr;
+
+    Holder() {}
+    Holder(HashResult hr) {
+      this.hr = hr;
+    }
+  }
+
+  // Deserialize and return a Holder from the string
+  Holder deser(String s) throws Exception {
+    return (Holder)(new XStreamSerializer().deserialize(new StringReader(s)));
+  }
+
+  // Return the serialized representation of the object
+  String ser(LockssSerializable o) throws Exception {
+    File tf = File.createTempFile("ser", ".xml");
+    new XStreamSerializer().serialize(tf, o);
+    return StringUtil.fromFile(tf);
+  }
+
+  String xmlhr(String hr) {
+    return "<org.lockss.hasher.TestHashResult-Holder>" +
+      "<hr>" + hr + "</hr>" +
+      "</org.lockss.hasher.TestHashResult-Holder>";
+  }
+
+  public void testDeser() throws Exception {
+    String good[] = {
+      "SHA-1:deadbeef",
+      "foo:0123456789abcdef",
+    };
+    String bad[] = {
+      "SHA-1:deadfeet",	      // not hex
+      "foo:",		      // no hash value
+      "feed",		      // no algorithm - currently illegal
+    };
+
+    for (String s : good) {
+      assertEquals(HashResult.make(s), deser(xmlhr(s)).hr);
+    }
+
+    for (String s : bad) {
+      try {
+	deser(xmlhr(s));
+	fail("Should fail to deserialize: " + s);
+      } catch (SerializationException e) {
+      }
+    }
+  }
+
+  // Uppercase the hash part of the string to agree with HashResult.toString()
+  String canonHr(String s) {
+    List<String> l = StringUtil.breakAt(s, ":");
+    if (l.size() == 2) {
+      return l.get(0) + ":" + l.get(1).toUpperCase();
+    }
+    return s.toUpperCase();
+  }
+
+  public void testSer() throws Exception {
+    String good[] = {
+      "SHA-1:deadbeef",
+      "SHA-256:5454ABCD",
+      "foo:0123456789abcdef",
+    };
+    String bad[] = {
+      "SHA-1:deadfeet",
+    };
+
+    for (String s : good) {
+      String xml = ser(new Holder(HashResult.make(s)));
+      log.critical("hr: " + HashResult.make(s));
+      log.critical("xml: " + xml);
+      assertMatchesRE("<hr>" + canonHr(s) + "</hr>", xml);
+    }
+
+    // Currently illegal to serialize HashResult with no algorithm
+    HashResult hr1 = HashResult.make(ByteArray.fromHexString("feed1234"));
+    Holder hd1 = new Holder(hr1);
+    try {
+      ser(hd1);
+      fail("Should fail to serialize: " + hr1);
+    } catch (SerializationException e) {
+    }
+  }
+
+
 }
