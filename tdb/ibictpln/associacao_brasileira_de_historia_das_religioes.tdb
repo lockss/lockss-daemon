@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Associação Brasileira de História das Religiões
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Anais dos Simpósios da ABHR ;
+        eissn =  2237-4132
+      >
+
+      comment[publisher] = Associação Brasileira de História das Religiões
+      param[base_url] = http://www.abhr.org.br/
+      param[journal_id] = anais
+
+      au < exists ; 2011 ; 1 ; Anais dos Simpósios da ABHR Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Anais dos Simpósios da ABHR Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais dos Simpósios da ABHR Volume 3 ; 2013 >
+
+  }
+
+}
