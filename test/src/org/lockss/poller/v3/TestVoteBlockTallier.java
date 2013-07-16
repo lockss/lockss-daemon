@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlockTallier.java,v 1.13 2013-07-09 16:45:04 barry409 Exp $
+ * $Id: TestVoteBlockTallier.java,v 1.14 2013-07-16 04:00:17 dshr Exp $
  */
 
 /*
@@ -72,6 +72,13 @@ public class TestVoteBlockTallier extends LockssTestCase {
     IdentityManager idMgr = new V3TestUtils.NoStoreIdentityManager();
     daemon.setIdentityManager(idMgr);
     idMgr.initService(daemon);
+    MockPlugin mp = new MockPlugin(daemon);
+    mp.initPlugin(daemon);
+    MockArchivalUnit mau = new MockArchivalUnit(mp);
+    assertNotNull(mau.getPlugin());
+    assertNotNull(mau.getPlugin().getDaemon());
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
     setupNonces();
     setupPeers();
   }
@@ -89,9 +96,14 @@ public class TestVoteBlockTallier extends LockssTestCase {
 
   // Minimal poller to satisfy tests
   private V3Poller makeV3Poller(String key) throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId("mock");
+    mau.getPlugin().initPlugin(daemon);
     PollSpec ps =
-      new MockPollSpec(new MockCachedUrlSet(new MockCachedUrlSetSpec()),
+      new MockPollSpec(mau, "http://www.example.com/",
 		       null, null, Poll.V3_POLL);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
     return new V3Poller(ps, daemon, null, key, 20000, "SHA-1");
   }
 

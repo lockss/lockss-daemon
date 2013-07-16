@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlTallier.java,v 1.18 2013-06-26 17:37:51 barry409 Exp $
+ * $Id: TestUrlTallier.java,v 1.19 2013-07-16 04:00:17 dshr Exp $
  */
 
 /*
@@ -118,6 +118,8 @@ public class TestUrlTallier extends LockssTestCase {
   private MockArchivalUnit setupAu() {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId("mock");
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
     MockPlugin plug = new MockPlugin(theDaemon);
     mau.setPlugin(plug);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();

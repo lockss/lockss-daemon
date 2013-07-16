@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.163 2013-07-15 18:25:25 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.164 2013-07-16 04:00:17 dshr Exp $
  */
 
 /*
@@ -112,6 +112,16 @@ public class V3Poller extends BasePoll {
    "Waiting for Repairs", "Finishing", "Aborted",
   };
 
+  /* Poll variants */
+  public static final int POLL_VARIANT_POR = 0;
+  public static final int POLL_VARIANT_POP = 1;
+  public static final int POLL_VARIANT_LOCAL = 2;
+  public static final String[] pollVariantName = {
+    "Proof of Retrievability",
+    "Proof of Possession",
+    "Local",
+  };
+
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** Quorum for V3 polls. */
@@ -142,6 +152,18 @@ public class V3Poller extends BasePoll {
     PREFIX + "enableFollowupInvitations";
   public static final boolean DEFAULT_ENABLE_INVITATIONS = true;
   
+  /** If true, enable sampled (Proof of Possession) polls.
+   */
+  public static final String PARAM_V3_ENABLE_POP_POLLS =
+    PREFIX + "enablePoPPolls";
+  public static final boolean DEFAULT_V3_ENABLE_POP_POLLS = false;
+  
+  /** For testing, if true, all polls are sampled.
+   */
+  public static final String PARAM_V3_ALL_POP_POLLS =
+    PREFIX + "allPoPPolls";
+  public static final boolean DEFAULT_V3_ALL_POP_POLLS = false;
+
   /** If true, enable local polls (i.e. polls that do not invite any
    * voters but depend on local hashes.
    */
@@ -154,6 +176,19 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_ALL_LOCAL_POLLS =
     PREFIX + "allLocalPolls";
   public static final boolean DEFAULT_V3_ALL_LOCAL_POLLS = false;
+
+  /**
+   * Threshold agreement below which all polls must be PoR
+   */
+  public static final String PARAM_AGREEMENT_THRESHOLD_FOR_POP_POLLS =
+    PREFIX + "agreementThresholdForPoPPolls";
+  public static final double DEFAULT_AGREEMENT_THESHOLD_FOR_POR_POLLS = 100.0;
+  /**
+   * Threshold number of willing repairers above which polls can be local
+   */
+  public static final String PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS =
+    PREFIX + "thresholdRepairersLocalPolls";
+  public static final int DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS = 10000;
   
   /** Curve expressing decreasing weight of inviting peer who has
    * been unresponsive for X time.
@@ -480,6 +515,10 @@ public class V3Poller extends BasePoll {
     DEFAULT_INVITATION_SIZE_TARGET_MULTIPLIER;
   private boolean enableLocalPolls = DEFAULT_V3_ENABLE_LOCAL_POLLS;
   private boolean allLocalPolls = DEFAULT_V3_ALL_LOCAL_POLLS;
+  private boolean enablePoPPolls = DEFAULT_V3_ENABLE_POP_POLLS;
+  private boolean allPoPPolls = DEFAULT_V3_ALL_POP_POLLS;
+  private double agreementThreshold = DEFAULT_AGREEMENT_THESHOLD_FOR_POR_POLLS;
+  private int repairerThreshold = DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS;
 
   private SchedulableTask task;
   private TimerQueue.Request invitationRequest;
@@ -547,14 +586,25 @@ public class V3Poller extends BasePoll {
 				     DEFAULT_TARGET_OUTER_CIRCLE_SIZE);
     int quorum = c.getInt(PARAM_QUORUM, DEFAULT_QUORUM);
     int voteMargin = c.getInt(PARAM_V3_VOTE_MARGIN, DEFAULT_V3_VOTE_MARGIN);
-
-    if (enableLocalPolls && candidateForLocalPoll()) {
-      quorum = 0;
-    }
-
     // todo(bhayes): The PoP signal can not come from the
     // configuration. It probably comes from the PollSpec.
-    int modulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
+    int modulus = 0;
+
+    // Determine poll variant
+    switch (choosePollVariant(spec)) {
+    default:
+      log.error("Bad poll variant: ");
+      // Fall through
+    case POLL_VARIANT_POR:
+      break;
+    case POLL_VARIANT_POP:
+      modulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
+      break;
+    case POLL_VARIANT_LOCAL:
+      quorum = 0;
+      // XXX should set maxVersions too
+      break;
+    }
 
     pollerState = new PollerStateBean(spec, orig, key,
 				      duration, pollEnd,
@@ -678,25 +728,58 @@ public class V3Poller extends BasePoll {
 				   DEFAULT_V3_ENABLE_HASH_STATS);
     enableLocalPolls = c.getBoolean(PARAM_V3_ENABLE_LOCAL_POLLS,
 				    DEFAULT_V3_ENABLE_LOCAL_POLLS);
+    enablePoPPolls = c.getBoolean(PARAM_V3_ENABLE_POP_POLLS,
+				    DEFAULT_V3_ENABLE_POP_POLLS);
     allLocalPolls = c.getBoolean(PARAM_V3_ALL_LOCAL_POLLS,
 				 DEFAULT_V3_ALL_LOCAL_POLLS);
+    allPoPPolls = c.getBoolean(PARAM_V3_ALL_POP_POLLS,
+				 DEFAULT_V3_ALL_POP_POLLS);
     }
 
   /**
-   * Decide whether this poll can be a local poll.
-   * @return true if this poll can be local
+   * @return the code for the variant of the poll to call.
    */
-  protected boolean candidateForLocalPoll() {
-    boolean ret = false;
-    if (enableLocalPolls) {
-      if (allLocalPolls) {
-	log.debug3("Local poll forced");
-	ret = true;
+  protected int choosePollVariant(PollSpec spec) {
+    // Poll is PoR unless conditions fulfilled
+    int ret = POLL_VARIANT_POR;
+    ArchivalUnit au = spec.getCachedUrlSet().getArchivalUnit();
+    AuState aus = AuUtil.getAuState(au);
+    // XXX need time of last crawl that collected content
+    long lastCrawlTime = aus.getLastCrawlTime();
+    int lastCrawlResult = aus.getLastCrawlResult();
+    int lastCrawlUrls = aus.getCrawlUrls().size();
+    // XXX need time of last PoR time, not last poll
+    long lastPollTime = aus.getLastTopLevelPollTime();
+    // XXX need agreement from last PoR poll
+    // XXX or should use highest agreement?
+    double lastPollAgreement = aus.getV3Agreement();
+    if (allPoPPolls) {
+      // For testing
+      ret = POLL_VARIANT_POP;
+      log.debug3("PoP poll forced");
+    } else if (allLocalPolls) {
+      // For testing
+      ret = POLL_VARIANT_LOCAL;
+      log.debug3("Local poll forced");
+    } else if (lastPollTime > lastCrawlTime &&
+	       lastPollAgreement > agreementThreshold) {
+      // AU in good shape - does not need PoR poll
+      int willingRepairers = idManager.getCachesToRepairFrom(au).size();
+      log.debug3("Repairers " + willingRepairers + " vs " +
+		 repairerThreshold);
+      if (willingRepairers < repairerThreshold) {
+	// AU lacks willing repairers, call PoP poll
+	ret = POLL_VARIANT_POP;
       } else {
-	log.debug3("Local polls enabled");
-	/* XXX DSHR - do something here */
+	// AU in good shape with repairers, call local poll
+	ret = POLL_VARIANT_LOCAL;
       }
+    } else {
+      log.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
+		 lastCrawlTime + ") last agree" + lastPollAgreement +
+		 " threshold " + agreementThreshold);
     }
+    log.debug2("Poll variant: " + pollVariantName[ret]);
     return ret;
   }
 

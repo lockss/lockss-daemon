@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.45 2012-08-06 03:34:46 tlipkis Exp $
+ * $Id: AuState.java,v 1.46 2013-07-16 04:00:17 dshr Exp $
  */
 
 /*
@@ -442,6 +442,9 @@ public class AuState implements LockssSerializable {
     historyRepo.storeAuState(this);
   }
 
+  /**
+   * @return agreement in last V3 poll
+   */
   public double getV3Agreement() {
     return v3Agreement;
   }

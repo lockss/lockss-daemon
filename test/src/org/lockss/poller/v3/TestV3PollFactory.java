@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3PollFactory.java,v 1.12 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestV3PollFactory.java,v 1.13 2013-07-16 04:00:17 dshr Exp $
  */
 
 /*
@@ -141,6 +141,8 @@ public class TestV3PollFactory extends LockssTestCase {
   private MockArchivalUnit setupAu() {
     MockArchivalUnit mau = new MyMockArchivalUnit();
     mau.setAuId("mock");
+    MockNodeManager nodeMgr = new MockNodeManager();
+    theDaemon.setNodeManager(nodeMgr, mau);
     MockPlugin plug = new MockPlugin(theDaemon);
     mau.setPlugin(plug);
     PluginTestUtil.registerArchivalUnit(mau);

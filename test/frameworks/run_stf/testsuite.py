@@ -330,6 +330,24 @@ class SimpleV3TestCase( V3TestCases ):
         return [ ]
 
 
+class SimpleV3LocalTestCase( V3TestCases ):
+    """Test a V3 local poll with no disagreement"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = {
+            'org.lockss.poll.v3.enableLocalPolls': 'true',
+            'org.lockss.poll.v3.allLocalPolls': 'true',
+            'org.lockss.baseuc.checksumAlgorithm': 'SHA-1',
+            'org.lockss.blockHasher.enableLocalHash': 'true',
+            'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1'
+            }
+        self.simulated_AU_parameters = { 'numFiles': 3 }
+
+    def _damage_AU( self ):
+        return [ ]
+
+
 class SimpleDamageV3TestCase( V3TestCases ):
     """Test a basic V3 poll"""
 
@@ -750,7 +768,9 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
         TotalLossRecoveryV3Tests.__init__( self, methodName )
         self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True,
                                      'org.lockss.poll.v3.modulus': 2,
-                                     'org.lockss.poll.v3.enablePoPVoting': True}
+                                     'org.lockss.poll.v3.allPoPPolls': True,
+                                     'org.lockss.poll.v3.enablePoPVoting': True,
+                                     'org.lockss.poll.v3.enablePoPPolls': True}
 
     def _verify_repair( self, nodes ):
         # XXX need to identify files not count them
