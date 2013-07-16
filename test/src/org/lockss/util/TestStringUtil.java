@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.96 2013-06-26 04:47:23 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.97 2013-07-16 13:53:39 easyonthemayo Exp $
  */
 
 /*
@@ -32,11 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import junit.framework.TestCase;
 import java.io.*;
 import java.util.*;
 import java.lang.reflect.*;
-import org.lockss.util.*;
+
 import org.lockss.test.*;
 
 /**
@@ -171,6 +170,24 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("\"quote\"\"me\"\"\"", StringUtil.csvEncode("quote\"me\""));
     assertEquals("\"quote \"\"me\"\" now\"",
 		 StringUtil.csvEncode("quote \"me\" now"));
+  }
+
+  public void testCsvEncodeValues() {
+    //assertEquals("", StringUtil.csvEncodeValues(null));
+    assertEquals("", StringUtil.csvEncodeValues(Collections.<String>emptyList()));
+    assertEquals("", StringUtil.csvEncodeValues(new String[0]));
+    assertEquals("", StringUtil.csvEncodeValues(new String[]{""}));
+    assertEquals(",", StringUtil.csvEncodeValues(new String[]{"", ""}));
+    assertEquals(",,", StringUtil.csvEncodeValues(new String[]{"", "", ""}));
+    assertEquals("foo", StringUtil.csvEncodeValues(new String[]{"foo"}));
+    // Quotes are doubled, and the phrase is quoted
+    assertEquals("\"\"\"foo\"\"\"", StringUtil.csvEncodeValues(new String[]{"\"foo\""}));
+    assertEquals("\" \"\"foo\"\" \"", StringUtil.csvEncodeValues(new String[]{" \"foo\" "}));
+    assertEquals("foo,bar", StringUtil.csvEncodeValues(new String[]{"foo", "bar"}));
+    assertEquals("foo,\" bar \"", StringUtil.csvEncodeValues(new String[]{"foo", " bar "}));
+    assertEquals("\"foo,bar\",bar", StringUtil.csvEncodeValues(new String[]{"foo,bar", "bar"}));
+    assertEquals("\"foo,bar\",\" \"\"bar\"\" \"", StringUtil.csvEncodeValues(new String[]{"foo,bar", " \"bar\" "}));
+    assertEquals("\"foo,bar\",\"\"\"bar\"\"\"", StringUtil.csvEncodeValues(new String[]{"foo,bar", "\"bar\""}));
   }
 
   public void testCountOccurences() {

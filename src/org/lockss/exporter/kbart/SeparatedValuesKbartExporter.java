@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.10 2012-10-22 15:07:09 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.11 2013-07-16 13:53:39 easyonthemayo Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.OutputStream;
 import java.util.List;
 
 import org.lockss.util.Logger;
+import org.lockss.util.StreamUtil;
 import org.lockss.util.StringUtil;
 
 /**
@@ -83,7 +84,7 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
     // allow the default setup, but write a header line
     super.setup(os);
     // Write a byte-order mark (BOM) for excel 
-    writeBOM(os);
+    StreamUtil.writeUtf8ByteOrderMark(os);
     //printWriter.println( constructRecord(KbartTitle.Field.getLabels()) );
     //printWriter.println( constructRecord(filter.getVisibleFieldOrder()) );
   }
@@ -106,32 +107,20 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
   protected String constructRecord(List<String> values) {
     // If using a comma, encode as CSV with appropriate quoting and escaping
     if (SEPARATOR == SEPARATOR_COMMA) {
-      StringBuilder sb = new StringBuilder();
+      return StringUtil.csvEncodeValues(values);
+      /*StringBuilder sb = new StringBuilder();
       // Build the string for those values which need the separator appended
       for (int i=0; i<values.size()-1; i++) {
         sb.append(StringUtil.csvEncode(values.get(i).toString()) + SEPARATOR);
       }
       // Add the last item
       sb.append(StringUtil.csvEncode(values.get(values.size()-1).toString()));
-      return sb.toString();
+      return sb.toString();*/
     }
     
     // By default, just join the fields together
     return StringUtil.separatedString(values, SEPARATOR);
   }
-
-  /**
-   * Write a byte-order mark (BOM) for excel, helping it to recognise UTF-8.
-   * Works and is necessary for Excel in Windows, not recognised in Excel on Mac.
-   * @param os the output stream to write to
-   * @throws IOException
-   */
-  protected void writeBOM(OutputStream os) throws IOException {
-    os.write(0xEF);   // 1st byte of BOM
-    os.write(0xBB);
-    os.write(0xBF);   // last byte of BOM
-  }
-  
   
 }
 

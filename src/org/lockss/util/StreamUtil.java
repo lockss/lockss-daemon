@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.19 2011-11-29 06:50:30 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.20 2013-07-16 13:53:39 easyonthemayo Exp $
  */
 
 /*
@@ -389,4 +389,18 @@ public class StreamUtil {
       }
     }
   }
+
+  /**
+   * Write to stream a byte-order mark (BOM) for Excel, helping it to recognise UTF-8.
+   * Works and is necessary for Excel in Windows, not recognised in Excel on Mac.
+   * @param os the output stream to write to
+   * @throws IOException
+   */
+  public static void writeUtf8ByteOrderMark(OutputStream os) throws IOException {
+    os.write(0xEF);   // 1st byte of BOM
+    os.write(0xBB);
+    os.write(0xBF);   // last byte of BOM
+  }
+
+
 }

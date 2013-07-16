@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.114 2013-06-26 04:47:23 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.115 2013-07-16 13:53:39 easyonthemayo Exp $
  */
 
 /*
@@ -855,7 +855,31 @@ public class StringUtil {
     return s;
   }
 
-    
+  /** Encode an array of strings to form a row in a CSV. Values containing comma,
+   * space or quote are quoted, quotes are doubled. All encoded values are
+   * combined with comma separators. */
+  public static String csvEncodeValues(String[] values) {
+    if (values==null || values.length==0) return "";
+    //return csvEncodeValues(Arrays.asList(values));
+    StringBuilder sb = new StringBuilder();
+    // Build the string for those values which need the separator appended
+    for (int i=0; i<values.length-1; i++) {
+      sb.append(csvEncode(values[i]) + ",");
+    }
+    // Add the last item
+    sb.append(csvEncode(values[values.length-1]));
+    return sb.toString();
+  }
+
+  /** Encode a list of strings to form a row in a CSV. Values containing comma,
+   * space or quote are quoted, quotes are doubled. All encoded values are
+   * combined with comma separators. */
+  public static String csvEncodeValues(List<String> values) {
+    if (values==null || values.size()==0) return "";
+    return csvEncodeValues(values.toArray(new String[]{}));
+  }
+
+
   /**
    * Returns the number of instances of a particular substring in a string.
    * This ignores overlap, starting from the left, so 'xxxxxy' would have
