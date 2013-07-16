@@ -13312,6 +13312,7 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
+    comment[notReady] = needs hash filter RU 4875
 
     au < zapped ; down ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
     au < zapped ; down ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
@@ -13349,7 +13350,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Literary and Linguistic Computing Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Literary and Linguistic Computing Volume 26 ; 26 ; >
-    au < testing ; exists ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
+    au < notReady ; exists ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Literary and Linguistic Computing Volume 28 ; 28 ; >
 
     }
@@ -13608,7 +13609,7 @@
     au < released ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Medical Law Review Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; Medical Law Review Volume 19 ; 19 ; >
-    au < testing ; exists ; 2012 ; Medical Law Review Volume 20 ; 20 ; >
+    au < released ; manifest ; 2012 ; Medical Law Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Medical Law Review Volume 21 ; 21 ; >
 
     }
@@ -13663,7 +13664,7 @@
     au < crawling ; exists ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 ; >
     au < crawling ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
-    au < testing ; exists ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
+    au < released ; manifest ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
 
   }
@@ -13930,7 +13931,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Modern Judaism Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
-    au < testing ; exists ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
+    au < released ; manifest ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Modern Judaism Volume 33 ; 33 ; >
 
     }
