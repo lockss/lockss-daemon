@@ -290,13 +290,13 @@
     param[journal_issn] = 0967-9782
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_by] = 1743-6753
-    comment[notReady] = RU4507
+    comment[notReady] = RU4600
 
     au < doNotProcess ; 1999 ; British Ceramic Transactions Volume 98 ; 98 > 
     au < released ; 2000 ; British Ceramic Transactions Volume 99 ; 99 > 
     au < released ; 2001 ; British Ceramic Transactions Volume 100 ; 100 > 
     au < released ; 2002 ; British Ceramic Transactions Volume 101 ; 101 >
-    au < doNotProcess ; 2003 ; British Ceramic Transactions Volume 102 ; 102 >
+    au < notReady ; 2003 ; British Ceramic Transactions Volume 102 ; 102 >
     au < released ; 2004 ; British Ceramic Transactions Volume 103 ; 103 >
 
   }
@@ -399,7 +399,6 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 0309-7765
-    comment[notReady] = various pdf font used, will re-test later
 
     au < ready ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
@@ -408,7 +407,7 @@
     au < ready ; 2006 ; Bronte Studies Volume 31 ; 31 > 
     au < ready ; 2007 ; Bronte Studies Volume 32 ; 32 > 
     au < doNotProcess ; 2008 ; Bronte Studies Volume 33 ; 33 > 
-    au < notReady ; 2009 ; Bronte Studies Volume 34 ; 34 > 
+    au < ready ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < released ; 2010 ; Bronte Studies Volume 35 ; 35 > 
     au < released ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < released ; 2012 ; Bronte Studies Volume 37 ; 37 > 
@@ -433,7 +432,7 @@
     param[journal_id] = bub 
     param[journal_issn] = 1758-8960
     implicit < status ; year ; name ; param[volume_name] >
-    comment[notReady] = RU4507, different pdf fontname used
+    comment[notReady] = RU4600
 
     au < released ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < notReady ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
@@ -551,18 +550,18 @@
     comment[notReady] = RU4507, different pdf fontname used
 
     au < notReady ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
-    au < notReady ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
-    au < notReady ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
-    au < notReady ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
+    au < ready ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
+    au < ready ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
+    au < ready ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
     au < notReady ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
     au < notReady ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
-    au < notReady ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
+    au < ready ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
     au < notReady ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
-    au < notReady ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
+    au < ready ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
     au < notReady ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
-    au < notReady ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
+    au < ready ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
     au < notReady ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
-    au < notReady ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
+    au < ready ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
     au < notReady ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
     au < notReady ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
     au < doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
