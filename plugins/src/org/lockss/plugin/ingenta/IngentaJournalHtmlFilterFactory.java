@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.20 2013-06-20 00:31:57 alexandraohlson Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.21 2013-07-16 22:19:19 janicecheng Exp $
  */ 
 
 /*
@@ -64,6 +64,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // number of reference links won't be the same because not all 
         // the referenced articles are available at a given institution.
         HtmlNodeFilters.tagWithAttribute("div", "class", "heading"),
+        // filter out <div class="advertisingbanner"> that encloses 
+        // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
+        HtmlNodeFilters.tagWithAttribute("div", "class", "advertisingbanner"),
         // filter out <li class="data"> that encloses a reference for the
         // article: reference links won't be the same because not all 
         // the referenced articles are available at a given institution.
