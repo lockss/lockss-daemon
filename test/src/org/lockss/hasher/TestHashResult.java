@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.8 2013-07-16 04:37:28 tlipkis Exp $
+ * $Id: TestHashResult.java,v 1.9 2013-07-16 04:58:31 tlipkis Exp $
  */
 
 /*
@@ -202,8 +202,6 @@ public class TestHashResult extends LockssTestCase {
 
     for (String s : good) {
       String xml = ser(new Holder(HashResult.make(s)));
-      log.critical("hr: " + HashResult.make(s));
-      log.critical("xml: " + xml);
       assertMatchesRE("<hr>" + canonHr(s) + "</hr>", xml);
     }
 
