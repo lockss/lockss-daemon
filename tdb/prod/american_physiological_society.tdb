@@ -7,7 +7,7 @@
 
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; year ; name ; param[volume_name] >
-
+  comment[doNotProcess] = Moving to a new platform on July 17, 2013
   {
 
 

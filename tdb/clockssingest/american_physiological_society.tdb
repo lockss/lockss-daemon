@@ -8,6 +8,7 @@
 
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
+  comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
   {
 
@@ -1553,6 +1554,7 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 302 ; 302 ; >
       au < down ; crawling ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; >
 
     }
 
