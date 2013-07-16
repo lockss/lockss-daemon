@@ -55,6 +55,9 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     // number of reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
     {"div", "class", "heading"},
+    // filter out <div class="advertisingbanner"> that encloses 
+    // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
+    {"div", "class", "advertisingbanner"},
     // filter out <li class="data"> that encloses a reference for the
     // article: reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
@@ -75,22 +78,6 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     {"div", "id", "ad"},
     // Filter out <div id="vertical-ad">...</div>
     {"div", "id", "vertical-ad"},      
-    // institution-specific subscription link section
-    {"div", "id", "subscribe-links"},
-    // Filter out <div id="links">...</div>
-    {"div", "id", "links"},
-    // Filter out <div id="footer">...</div>
-    {"div", "id", "footer"},
-    // Filter out <div id="top-ad-alignment">...</div>
-    {"div", "id", "top-ad-alignment"},
-    // Filter out <div id="top-ad">...</div>
-    {"div", "id", "top-ad"},
-    // Filter out <div id="ident">...</div>
-    {"div", "id", "ident"},         
-    // Filter out <div id="ad">...</div>
-    {"div", "id", "ad"},
-    // Filter out <div id="vertical-ad">...</div>
-    {"div", "id", "vertical-ad"},
     // Filter out <div class="right-col-download">...</div>
     {"div", "class", "right-col-download"},                                                               
     // Filter out <div id="cart-navbar">...</div>
@@ -158,7 +145,29 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       assertEquals(filteredHtml, StringUtil.fromInputStream(htmlIn));
     }
   }
-  
+  //test some straight html strings with explicit tests
+  private static final String AdvertisingBannerHtml =
+	        "<p>The chickens were decidedly cold.</p>" +
+	          "<div class=\"advertisingbanner\"> " +
+	          "<script type='text/javascript'>" +
+	          "GA_googleFillSlot(\"TopLeaderboard\"); </script>" +
+	          "<script type='text/javascript'>" +
+	          "GA_googleFillSlot(\"Horizontal_banner\"); </script>" +
+	          "</div>";
+	        
+  private static final String AdvertisingBannerHtmlFiltered =
+	        "<p>The chickens were decidedly cold.</p>" ;
+
+  public void testFilterAdvertising() throws Exception {
+      InputStream inA;  
+     
+      inA = fact.createFilteredInputStream(mau, new StringInputStream(AdvertisingBannerHtml),
+          Constants.DEFAULT_ENCODING);
+
+      assertEquals(AdvertisingBannerHtmlFiltered,StringUtil.fromInputStream(inA));
+    
+  }
+
     //test some straight html strings with explicit tests
     private static final String expireChecksumHtml =
         "<p>The chickens were decidedly cold.</p>" +
