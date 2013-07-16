@@ -1,0 +1,4303 @@
+{
+  publisher <
+    name = IBICT
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Anais dos Simpósios da ABHR ;
+        eissn =  2237-4132
+      >
+
+      comment[publisher] = Associação Brasileira de História das Religiões
+      param[base_url] = http://www.abhr.org.br/
+      param[journal_id] = anais
+
+      au < exists ; 2011 ; 1 ; Anais dos Simpósios da ABHR Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Anais dos Simpósios da ABHR Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais dos Simpósios da ABHR Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA ;
+        eissn = 2238-9032
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = Cippus
+
+      au < exists ; 2012 ; 1 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Conhecimento & Diversidade ;
+        eissn = 2237-8049
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = conhecimento_diversidade
+
+      au < exists ; 2009 ; 1 ; Conhecimento & Diversidade Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Conhecimento & Diversidade Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Conhecimento & Diversidade Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Conhecimento & Diversidade Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Conhecimento & Diversidade Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE ;
+        eissn = 2316-5537
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = desenvolve
+
+      au < exists ; 2012 ; 1 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DIÁLOGO ;
+        eissn = 2238-9024
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = Dialogo
+
+      au < exists ; 2009 ; 1 ; DIÁLOGO Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; DIÁLOGO Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; DIÁLOGO Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; DIÁLOGO Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; DIÁLOGO Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação, Ciência e Cultura ;
+        eissn = 2236-6377
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = Educacao
+
+      au < exists ; 2007 ; 1 ; Educação, Ciência e Cultura Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Educação, Ciência e Cultura Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Educação, Ciência e Cultura Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Educação, Ciência e Cultura Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Educação, Ciência e Cultura Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Educação, Ciência e Cultura Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Educação, Ciência e Cultura Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Interfaces Brasil/Canadá ;
+        eissn = 1984-5677
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = interfaces
+
+      au < exists ; 2001 ; 1 ; Interfaces Brasil/Canadá Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; Interfaces Brasil/Canadá Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; Interfaces Brasil/Canadá Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; Interfaces Brasil/Canadá Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; Interfaces Brasil/Canadá Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; Interfaces Brasil/Canadá Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; Interfaces Brasil/Canadá Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; Interfaces Brasil/Canadá Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; Interfaces Brasil/Canadá Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; Interfaces Brasil/Canadá Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; Interfaces Brasil/Canadá Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mouseion ;
+        eissn = 1981-7207
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = Mouseion
+
+      au < exists ; 2007 ; 1 ; Mouseion Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Mouseion Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Mouseion Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Mouseion Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Mouseion Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Mouseion Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Mouseion Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Ciências Ambientais ;
+        eissn = 1981-8858
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = Rbca
+
+      au < exists ; 2007 ; 1 ; Revista de Ciências Ambientais Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista de Ciências Ambientais Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista de Ciências Ambientais Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista de Ciências Ambientais Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista de Ciências Ambientais Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista de Ciências Ambientais Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista de Ciências Ambientais Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Saúde e Desenvolvimento Humano ;
+        eissn = 2317-8582
+      >
+
+      comment[publisher] = Centro Universitário Lasalle Canoas-RS
+      param[base_url] = http://www.revistas.unilasalle.edu.br/
+      param[journal_id] = saude_desenvolvimento
+
+      au < expected ; 2013 ; 1 ; Saúde e Desenvolvimento Humano Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Acta Brasileira do Movimento Humano ;
+        issn = 2238-2259
+      >
+
+      comment[publisher] = CentroParaná 
+      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
+      param[journal_id] = actabrasileira
+
+      au < exists ; 2010 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Acta Brasileira do Movimento Humano Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Acta Brasileira do Movimento Humano Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Acta Brasileira do Movimento Humano Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ciência & Consciência ;
+        issn = 1980-5152
+      >
+
+      comment[publisher] = CentroParaná 
+      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
+      param[journal_id] = ciencia
+
+      au < exists ; 2004 ; 1 ; Ciência & Consciência Volume 1 ; 2004 >
+      au < exists ; 2005 ; 2 ; Ciência & Consciência Volume 2 ; 2005 >
+      au < exists ; 2006 ; 3 ; Ciência & Consciência Volume 3 ; 2006 >
+      au < exists ; 2007 ; 4 ; Ciência & Consciência Volume 4 ; 2007 >
+      au < exists ; 2008 ; 5 ; Ciência & Consciência Volume 5 ; 2008 >
+      au < exists ; 2009 ; 6 ; Ciência & Consciência Volume 6 ; 2009 >
+      au < exists ; 2010 ; 7 ; Ciência & Consciência Volume 7 ; 2010 >
+      au < exists ; 2011 ; 8 ; Ciência & Consciência Volume 8 ; 2011 >
+      au < expected ; 2012 ; 9 ; Ciência & Consciência Volume 9 ; 2012 >
+      au < expected ; 2013 ; 10 ; Ciência & Consciência Volume 10 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Jus Societas ;
+        eissn =  1981-4550
+      >
+
+      comment[publisher] = CentroParaná 
+      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
+      param[journal_id] = jussocietas
+
+      au < exists ; 2007 ; 1 ; Jus Societas Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Jus Societas Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Jus Societas Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Jus Societas Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Jus Societas Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Jus Societas Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Jus Societas Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Saber Contábil ;
+        eissn = 2238-1376
+      >
+
+      comment[publisher] = CentroParaná 
+      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
+      param[journal_id] = contabeis
+
+      au < exists ; 2011 ; 1 ; Revista Eletrônica Saber Contábil Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Eletrônica Saber Contábil Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Eletrônica Saber Contábil Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Salão de Iniciação Científica CEULJI/ULBRA ;
+        eissn = 1807-5770
+      >
+
+      comment[publisher] = CentroParaná 
+      param[base_url] = http://revista.ulbrajp.edu.br/ojs/
+      param[journal_id] = salao
+
+      au < expected ; 2013 ; 1 ; Salão de Iniciação Científica CEULJI/ULBRA Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Catarinense da Ciência Contábil ;
+        issn = 1808-3781 ;
+        eissn = 2237-7662
+      >
+
+      comment[publisher] = Conselho Regional de Contabilidade de Santa Catarina
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = CRCSC
+
+      au < exists ; 2001 ; 1 ; Revista Catarinense da Ciência Contábil Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista Catarinense da Ciência Contábil Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista Catarinense da Ciência Contábil Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista Catarinense da Ciência Contábil Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista Catarinense da Ciência Contábil Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista Catarinense da Ciência Contábil Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista Catarinense da Ciência Contábil Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista Catarinense da Ciência Contábil Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista Catarinense da Ciência Contábil Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista Catarinense da Ciência Contábil Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista Catarinense da Ciência Contábil Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista Catarinense da Ciência Contábil Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; Revista Catarinense da Ciência Contábil Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Natural Resources ;
+        issn = 2237-9290
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = naturalresources
+
+      au < exists ; 2011 ; 1 ; Natural Resources Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Natural Resources Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Natural Resources Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Nature and Conservation ;
+        issn = 1983-8344
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = nature
+
+      au < exists ; 2008 ; 1 ; Nature and Conservation Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Nature and Conservation Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Nature and Conservation Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Nature and Conservation Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Nature and Conservation Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Nature and Conservation Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Administração Científica ;
+        issn = 2179-684X
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = rbadm
+
+      au < exists ; 2010 ; 1 ; Revista Brasileira de Administração Científica Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Brasileira de Administração Científica Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Brasileira de Administração Científica Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Brasileira de Administração Científica Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ibero-Americana de Ciências Ambientais ;
+        issn = 2179-6858
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = rica
+
+      au < exists ; 2010 ; 1 ; Revista Ibero-Americana de Ciências Ambientais Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ibero-Americana de Ciências Ambientais Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ibero-Americana de Ciências Ambientais Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ibero-Americana de Ciências Ambientais Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Scire Salutis ;
+        issn = 2236-9600
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = sciresalutis
+
+      au < exists ; 2011 ; 1 ; Scire Salutis Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Scire Salutis Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Scire Salutis Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Ciência Administrativa ;
+        eissn = 1677-7387
+      >
+
+      comment[publisher] = Faculdade Cenecista de Campo Largo
+      param[base_url] = http://revistas.facecla.com.br/
+      param[journal_id] = recadm
+
+      au < exists ; 2002 ; 1 ; Revista Eletrônica de Ciência Administrativa Volume 1 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Eletrônica de Ciência Administrativa Volume 2 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Eletrônica de Ciência Administrativa Volume 3 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Eletrônica de Ciência Administrativa Volume 4 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Eletrônica de Ciência Administrativa Volume 5 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Eletrônica de Ciência Administrativa Volume 6 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Eletrônica de Ciência Administrativa Volume 7 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Eletrônica de Ciência Administrativa Volume 8 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Eletrônica de Ciência Administrativa Volume 9 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Eletrônica de Ciência Administrativa Volume 10 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Eletrônica de Ciência Administrativa Volume 11 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Eletrônica de Ciência Administrativa Volume 12 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Ciências da Educação ;
+        eissn = 1677-3071
+      >
+
+      comment[publisher] = Faculdade Cenecista de Campo Largo
+      param[base_url] = http://revistas.facecla.com.br/
+      param[journal_id] = reped
+
+      au < exists ; 2002 ; 1 ; Revista Eletrônica de Ciências da Educação Volume 1 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Eletrônica de Ciências da Educação Volume 2 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Eletrônica de Ciências da Educação Volume 3 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Eletrônica de Ciências da Educação Volume 4 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Eletrônica de Ciências da Educação Volume 5 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Eletrônica de Ciências da Educação Volume 6 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Eletrônica de Ciências da Educação Volume 7 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Eletrônica de Ciências da Educação Volume 8 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Eletrônica de Ciências da Educação Volume 9 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Eletrônica de Ciências da Educação Volume 10 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Eletrônica de Ciências da Educação Volume 11 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Eletrônica de Ciências da Educação Volume 12 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Sistemas de Informação ;
+        eissn = 1677-3071
+      >
+
+      comment[publisher] = Faculdade Cenecista de Campo Largo
+      param[base_url] = http://revistas.facecla.com.br/
+      param[journal_id] = reinfo
+
+      au < exists ; 2002 ; 1 ; Revista Eletrônica de Sistemas de Informação Volume 1 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Eletrônica de Sistemas de Informação Volume 2 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Eletrônica de Sistemas de Informação Volume 3 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Eletrônica de Sistemas de Informação Volume 4 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Eletrônica de Sistemas de Informação Volume 5 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Eletrônica de Sistemas de Informação Volume 6 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Eletrônica de Sistemas de Informação Volume 7 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Eletrônica de Sistemas de Informação Volume 8 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Eletrônica de Sistemas de Informação Volume 9 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Eletrônica de Sistemas de Informação Volume 10 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Eletrônica de Sistemas de Informação Volume 11 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Eletrônica de Sistemas de Informação Volume 12 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Jurídica ;
+        eissn = 2236-4269
+      >
+
+      comment[publisher] = Faculdade Cenecista de Campo Largo
+      param[base_url] = http://revistas.facecla.com.br/
+      param[journal_id] = redir
+
+      au < exists ; 2012 ; 1 ; Revista Eletrônica Jurídica Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Eletrônica Jurídica Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Administração ;
+        issn = 1984-5294
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina - FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaepesquisaemadministracao
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física ;
+        issn = 2175-8093
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina - FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaepesquisaeducacaofisica
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem ;
+        issn = 2175-5736
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina - FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = enfermagem
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Turismo ;
+        issn = 1984-5952 
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina - FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaensinoepesquisaemturismo
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Formação de Professores ;
+        issn = 1984-5332 
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina - FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = formacaodeprofessores
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Revista Brasileira de Formação de Professores Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Brasileira de Formação de Professores Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Brasileira de Formação de Professores Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Formação de Professores Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Jurídica da UNED ;
+        issn = 2179-765X
+      >
+
+      comment[publisher] = Faculdade de Ciências Sociais e Aplicadas de Diamantino - UNED
+      param[base_url] = http://www.portaldeperiodicos.uned.edu.br/
+      param[journal_id] = REJUNED
+
+      au < exists ; 2011 ; 1 ; Revista Jurídica da UNED Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Jurídica da UNED Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Jurídica da UNED Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Matogrossense de Enfermagem (REMENFE) ;
+        issn = 2178-7522
+      >
+
+      comment[publisher] = Faculdade de Ciências Sociais e Aplicadas de Diamantino - UNED
+      param[base_url] = http://www.portaldeperiodicos.uned.edu.br/
+      param[journal_id] = REMENFE
+
+      au < exists ; 2010 ; 1 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 1 ; 2010 >
+      au < expected ; 2011 ; 2 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 2 ; 2011 >
+      au < expected ; 2012 ; 3 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Matogrossense de Enfermagem (REMENFE) Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos Teológicos ;
+        issn = 0101-3130 ;
+        eissn = 2237-6461
+      >
+
+      comment[publisher] = Faculdades da Escola Superior de Teologia
+      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[journal_id] = estudos_teologicos
+
+      au < exists ; 2001 ; 1 ; Estudos Teológicos Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; Estudos Teológicos Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; Estudos Teológicos Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; Estudos Teológicos Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; Estudos Teológicos Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; Estudos Teológicos Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; Estudos Teológicos Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; Estudos Teológicos Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; Estudos Teológicos Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; Estudos Teológicos Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; Estudos Teológicos Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; Estudos Teológicos Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; Estudos Teológicos Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = identidade! ;
+        issn = 1676-9570 ;
+        eissn = 2178-0437X
+      >
+
+      comment[publisher] = Faculdades da Escola Superior de Teologia
+      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[journal_id] = identidade
+
+      au < exists ; 2010 ; 1 ; identidade! Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; identidade! Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; identidade! Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; identidade! Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Protestantismo em Revista ;
+        eissn = 1678-6408
+      >
+
+      comment[publisher] = Faculdades da Escola Superior de Teologia
+      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[journal_id] = npp
+
+      au < exists ; 2010 ; 1 ; Protestantismo em Revista Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Protestantismo em Revista Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Protestantismo em Revista Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Protestantismo em Revista Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = TEAR ONLINE ;
+        eissn = 2238-8516
+      >
+
+      comment[publisher] = Faculdades da Escola Superior de Teologia
+      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[journal_id] = tear
+
+      au < exists ; 2012 ; 1 ; TEAR ONLINE Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; TEAR ONLINE Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração e Desenvolvimento Sustentável ;
+        eissn = 2316-2651
+      >
+
+      comment[publisher] = Faculdades Metropolitanas Unidas
+      param[base_url] = http://www.revistaseletronicas.fmu.br/
+      param[journal_id] = remades
+
+      au < exists ; 2011 ; 1 ; Revista de Administração e Desenvolvimento Sustentável Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Administração e Desenvolvimento Sustentável Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Administração e Desenvolvimento Sustentável Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista FMU Direito ;
+        eissn = 2316-1515
+      >
+
+      comment[publisher] = Faculdades Metropolitanas Unidas
+      param[base_url] = http://www.revistaseletronicas.fmu.br/
+      param[journal_id] = RMDIR
+
+      au < exists ; 2009 ; 1 ; Revista FMU Direito Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista FMU Direito Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista FMU Direito Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista FMU Direito Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista FMU Direito Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Business Review ;
+        issn = 1807-734X
+      >
+
+      comment[publisher] = FUCAPE Business School
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = fucape
+
+      au < exists ; 2009 ; 1 ; Brazilian Business Review Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Brazilian Business Review Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Brazilian Business Review Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Brazilian Business Review Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Brazilian Business Review Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Boletim do Centro de Pesquisas Administrativas da EBAP ;
+        issn = 0101-1871
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = boletimebap
+
+      au < exists ; 1964 ; 1 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 1 ; 1964 >
+      au < exists ; 1965 ; 2 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 2 ; 1965 >
+      au < exists ; 1966 ; 3 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 3 ; 1966 >
+      au < exists ; 1967 ; 4 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 4 ; 1967 >
+      au < expected ; 1968 ; 5 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 5 ; 1968 >
+      au < expected ; 1969 ; 6 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 6 ; 1969 >
+      au < expected ; 1970 ; 7 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 7 ; 1970 >
+      au < expected ; 1971 ; 8 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 8 ; 1971 >
+      au < expected ; 1972 ; 9 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 9 ; 1972 >
+      au < expected ; 1973 ; 10 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 10 ; 1973 >
+      au < expected ; 1974 ; 11 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 11 ; 1974 >
+      au < expected ; 1975 ; 12 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 12 ; 1975 >
+      au < expected ; 1976 ; 13 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 13 ; 1976 >
+      au < expected ; 1977 ; 14 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 14 ; 1977 >
+      au < expected ; 1978 ; 15 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 15 ; 1978 >
+      au < expected ; 1979 ; 16 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 16 ; 1979 >
+      au < expected ; 1980 ; 17 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 17 ; 1980 >
+      au < expected ; 1981 ; 18 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 18 ; 1981 >
+      au < expected ; 1982 ; 19 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 19 ; 1982 >
+      au < expected ; 1983 ; 20 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 20 ; 1983 >
+      au < expected ; 1984 ; 21 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 21 ; 1984 >
+      au < expected ; 1985 ; 22 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 22 ; 1985 >
+      au < expected ; 1986 ; 23 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 23 ; 1986 >
+      au < expected ; 1987 ; 24 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 24 ; 1987 >
+      au < expected ; 1988 ; 25 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 25 ; 1988 >
+      au < expected ; 1989 ; 26 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 26 ; 1989 >
+      au < expected ; 1990 ; 27 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 27 ; 1990 >
+      au < expected ; 1991 ; 28 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 28 ; 1991 >
+      au < expected ; 1992 ; 29 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 29 ; 1992 >
+      au < expected ; 1993 ; 30 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 30 ; 1993 >
+      au < expected ; 1994 ; 31 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 31 ; 1994 >
+      au < expected ; 1995 ; 32 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 32 ; 1995 >
+      au < expected ; 1996 ; 33 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 33 ; 1996 >
+      au < expected ; 1997 ; 34 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 34 ; 1997 >
+      au < expected ; 1998 ; 35 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 35 ; 1998 >
+      au < expected ; 1999 ; 36 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 36 ; 1999 >
+      au < expected ; 2000 ; 37 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 37 ; 2000 >
+      au < expected ; 2001 ; 38 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 38 ; 2001 >
+      au < expected ; 2002 ; 39 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 39 ; 2002 >
+      au < expected ; 2003 ; 40 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 40 ; 2003 >
+      au < expected ; 2004 ; 41 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 41 ; 2004 >
+      au < expected ; 2005 ; 42 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 42 ; 2005 >
+      au < expected ; 2006 ; 43 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 43 ; 2006 >
+      au < expected ; 2007 ; 44 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 44 ; 2007 >
+      au < expected ; 2008 ; 45 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 45 ; 2008 >
+      au < expected ; 2009 ; 46 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 46 ; 2009 >
+      au < expected ; 2010 ; 47 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 47 ; 2010 >
+      au < expected ; 2011 ; 48 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 48 ; 2011 >
+      au < expected ; 2012 ; 49 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 49 ; 2012 >
+      au < expected ; 2013 ; 50 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 50 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Review of Finance  ;
+        issn = 1679-0731 ;
+        eissn = 1984-5146
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = rbfin
+
+      au < exists ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Brazilian Review of Finance  Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Brazilian Review of Finance  Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Brazilian Review of Finance  Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Brazilian Review of Finance  Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Brazilian Review of Finance  Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Brazilian Review of Finance  Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Brazilian Review of Finance  Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos Gestão Pública e Cidadania ;
+        issn = 2236-5710
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = cgpc
+
+      au < exists ; 2010 ; 1 ; Cadernos Gestão Pública e Cidadania Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Cadernos Gestão Pública e Cidadania Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Cadernos Gestão Pública e Cidadania Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Cadernos Gestão Pública e Cidadania Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GVcasos ;
+        eissn = 2179-135X
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = gvcasos
+
+      au < exists ; 2010 ; 1 ; GVcasos Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; GVcasos Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; GVcasos Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; GVcasos Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Acadêmica Observatório de Inovação do Turismo ;
+        issn = 1980-6965
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = oit
+
+      au < exists ; 2006 ; 1 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração Pública ;
+        issn = 0034-7612
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = rap
+
+      au < exists ; 1967 ; 1 ; Revista de Administração Pública Volume 1 ; 1967 >
+      au < exists ; 1968 ; 2 ; Revista de Administração Pública Volume 2 ; 1968 >
+      au < exists ; 1969 ; 3 ; Revista de Administração Pública Volume 3 ; 1969 >
+      au < exists ; 1970 ; 4 ; Revista de Administração Pública Volume 4 ; 1970 >
+      au < exists ; 1971 ; 5 ; Revista de Administração Pública Volume 5 ; 1971 >
+      au < exists ; 1972 ; 6 ; Revista de Administração Pública Volume 6 ; 1972 >
+      au < exists ; 1973 ; 7 ; Revista de Administração Pública Volume 7 ; 1973 >
+      au < exists ; 1974 ; 8 ; Revista de Administração Pública Volume 8 ; 1974 >
+      au < exists ; 1975 ; 9 ; Revista de Administração Pública Volume 9 ; 1975 >
+      au < exists ; 1976 ; 10 ; Revista de Administração Pública Volume 10 ; 1976 >
+      au < exists ; 1977 ; 11 ; Revista de Administração Pública Volume 11 ; 1977 >
+      au < exists ; 1978 ; 12 ; Revista de Administração Pública Volume 12 ; 1978 >
+      au < exists ; 1979 ; 13 ; Revista de Administração Pública Volume 13 ; 1979 >
+      au < exists ; 1980 ; 14 ; Revista de Administração Pública Volume 14 ; 1980 >
+      au < exists ; 1981 ; 15 ; Revista de Administração Pública Volume 15 ; 1981 >
+      au < exists ; 1982 ; 16 ; Revista de Administração Pública Volume 16 ; 1982 >
+      au < exists ; 1983 ; 17 ; Revista de Administração Pública Volume 17 ; 1983 >
+      au < exists ; 1984 ; 18 ; Revista de Administração Pública Volume 18 ; 1984 >
+      au < exists ; 1985 ; 19 ; Revista de Administração Pública Volume 19 ; 1985 >
+      au < exists ; 1986 ; 20 ; Revista de Administração Pública Volume 20 ; 1986 >
+      au < exists ; 1987 ; 21 ; Revista de Administração Pública Volume 21 ; 1987 >
+      au < exists ; 1988 ; 22 ; Revista de Administração Pública Volume 22 ; 1988 >
+      au < exists ; 1989 ; 23 ; Revista de Administração Pública Volume 23 ; 1989 >
+      au < exists ; 1990 ; 24 ; Revista de Administração Pública Volume 24 ; 1990 >
+      au < exists ; 1991 ; 25 ; Revista de Administração Pública Volume 25 ; 1991 >
+      au < exists ; 1992 ; 26 ; Revista de Administração Pública Volume 26 ; 1992 >
+      au < exists ; 1993 ; 27 ; Revista de Administração Pública Volume 27 ; 1993 >
+      au < exists ; 1994 ; 28 ; Revista de Administração Pública Volume 28 ; 1994 >
+      au < exists ; 1995 ; 29 ; Revista de Administração Pública Volume 29 ; 1995 >
+      au < exists ; 1996 ; 30 ; Revista de Administração Pública Volume 30 ; 1996 >
+      au < exists ; 1997 ; 31 ; Revista de Administração Pública Volume 31 ; 1997 >
+      au < exists ; 1998 ; 32 ; Revista de Administração Pública Volume 32 ; 1998 >
+      au < exists ; 1999 ; 33 ; Revista de Administração Pública Volume 33 ; 1999 >
+      au < exists ; 2000 ; 34 ; Revista de Administração Pública Volume 34 ; 2000 >
+      au < exists ; 2001 ; 35 ; Revista de Administração Pública Volume 35 ; 2001 >
+      au < exists ; 2002 ; 36 ; Revista de Administração Pública Volume 36 ; 2002 >
+      au < exists ; 2003 ; 37 ; Revista de Administração Pública Volume 37 ; 2003 >
+      au < exists ; 2004 ; 38 ; Revista de Administração Pública Volume 38 ; 2004 >
+      au < exists ; 2005 ; 39 ; Revista de Administração Pública Volume 39 ; 2005 >
+      au < exists ; 2006 ; 40 ; Revista de Administração Pública Volume 40 ; 2006 >
+      au < exists ; 2007 ; 41 ; Revista de Administração Pública Volume 41 ; 2007 >
+      au < exists ; 2008 ; 42 ; Revista de Administração Pública Volume 42 ; 2008 >
+      au < exists ; 2009 ; 43 ; Revista de Administração Pública Volume 43 ; 2009 >
+      au < exists ; 2010 ; 44 ; Revista de Administração Pública Volume 44 ; 2010 >
+      au < exists ; 2011 ; 45 ; Revista de Administração Pública Volume 45 ; 2011 >
+      au < exists ; 2012 ; 46 ; Revista de Administração Pública Volume 46 ; 2012 >
+      au < expected ; 2013 ; 47 ; Revista de Administração Pública Volume 47 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Estudos Históricos ;
+        issn = 0103-2186 
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = reh
+
+      au < exists ; 1988 ; 1 ; Revista Estudos Históricos Volume 1 ; 1988 >
+      au < exists ; 1989 ; 2 ; Revista Estudos Históricos Volume 2 ; 1989 >
+      au < exists ; 1990 ; 3 ; Revista Estudos Históricos Volume 3 ; 1990 >
+      au < exists ; 1991 ; 4 ; Revista Estudos Históricos Volume 4 ; 1991 >
+      au < exists ; 1992 ; 5 ; Revista Estudos Históricos Volume 5 ; 1992 >
+      au < exists ; 1993 ; 6 ; Revista Estudos Históricos Volume 6 ; 1993 >
+      au < exists ; 1994 ; 7 ; Revista Estudos Históricos Volume 7 ; 1994 >
+      au < exists ; 1995 ; 8 ; Revista Estudos Históricos Volume 8 ; 1995 >
+      au < exists ; 1996 ; 9 ; Revista Estudos Históricos Volume 9 ; 1996 >
+      au < exists ; 1997 ; 10 ; Revista Estudos Históricos Volume 10 ; 1997 >
+      au < exists ; 1998 ; 11 ; Revista Estudos Históricos Volume 11 ; 1998 >
+      au < exists ; 1999 ; 12 ; Revista Estudos Históricos Volume 12 ; 1999 >
+      au < exists ; 2000 ; 13 ; Revista Estudos Históricos Volume 13 ; 2000 >
+      au < exists ; 2001 ; 14 ; Revista Estudos Históricos Volume 14 ; 2001 >
+      au < exists ; 2002 ; 15 ; Revista Estudos Históricos Volume 15 ; 2002 >
+      au < exists ; 2003 ; 16 ; Revista Estudos Históricos Volume 16 ; 2003 >
+      au < exists ; 2004 ; 17 ; Revista Estudos Históricos Volume 17 ; 2004 >
+      au < exists ; 2005 ; 18 ; Revista Estudos Históricos Volume 18 ; 2005 >
+      au < exists ; 2006 ; 19 ; Revista Estudos Históricos Volume 19 ; 2006 >
+      au < exists ; 2007 ; 20 ; Revista Estudos Históricos Volume 20 ; 2007 >
+      au < exists ; 2008 ; 21 ; Revista Estudos Históricos Volume 21 ; 2008 >
+      au < exists ; 2009 ; 22 ; Revista Estudos Históricos Volume 22 ; 2009 >
+      au < exists ; 2010 ; 23 ; Revista Estudos Históricos Volume 23 ; 2010 >
+      au < exists ; 2011 ; 24 ; Revista Estudos Históricos Volume 24 ; 2011 >
+      au < exists ; 2012 ; 25 ; Revista Estudos Históricos Volume 25 ; 2012 >
+      au < expected ; 2013 ; 26 ; Revista Estudos Históricos Volume 26 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ibero-Americana de Estudos Legislativos ;
+        issn = 2179-8419
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = riel
+
+      au < exists ; 2010 ; 1 ; Revista Ibero-Americana de Estudos Legislativos Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ibero-Americana de Estudos Legislativos Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ibero-Americana de Estudos Legislativos Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ibero-Americana de Estudos Legislativos Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Technological Learning and Industrial Innovation Working Paper Series ;
+        issn = 2316-7726
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = tlii-wps
+
+      au < exists ; 2012 ; 1 ; Technological Learning and Industrial Innovation Working Paper Series Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científica – Direito ;
+        issn = 2316-381X
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = direito
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científica – Direito Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científica – Direito Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas – Educação ;
+        issn = 2316-3828
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = educacao
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Educação Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Educação Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas - Humanas e Sociais ;
+        issn = 2316-3801
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = humanas
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas - Humanas e Sociais Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas - Humanas e Sociais Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas – Saúde e Ambiente ;
+        issn = 2316-3798
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = saude
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Caderno Virtual ;
+        issn = 1981-3759
+      >
+
+      comment[publisher] = Instituto Brasiliense de Direito Público - IDP
+      param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
+      param[journal_id] = cadernovirtual
+
+      au < exists ; 2003 ; 1 ; Caderno Virtual Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Caderno Virtual Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Caderno Virtual Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Caderno Virtual Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Caderno Virtual Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Caderno Virtual Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Caderno Virtual Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Caderno Virtual Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Caderno Virtual Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Caderno Virtual Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Caderno Virtual Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Direito Público ;
+        issn = 2236-1766
+      >
+
+      comment[publisher] = Instituto Brasiliense de Direito Público - IDP
+      param[base_url] = http://www.direitopublico.idp.edu.br/
+      param[journal_id] = direitopublico
+
+      au < exists ; 2008 ; 1 ; Direito Público Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Direito Público Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Direito Público Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Direito Público Volume 4 ; 2011 >
+      au < expected ; 2012 ; 5 ; Direito Público Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Direito Público Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Observatório da Jurisdição Constitucional ;
+        issn = 1982-4564
+      >
+
+      comment[publisher] = Instituto Brasiliense de Direito Público - IDP
+      param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
+      param[journal_id] = observatorio
+
+      au < exists ; 2007 ; 1 ; Observatório da Jurisdição Constitucional Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Observatório da Jurisdição Constitucional Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Observatório da Jurisdição Constitucional Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Observatório da Jurisdição Constitucional Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Observatório da Jurisdição Constitucional Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Observatório da Jurisdição Constitucional Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Observatório da Jurisdição Constitucional Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Boletim do Observatório Ambiental Alberto Ribeiro Lamego ;
+        issn = 2177-4560
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = boletim
+
+      au < exists ; 2007 ; 1 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bolsista de Valor ;
+        issn = 2179-6971
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = BolsistaDeValor
+
+      au < exists ; 2010 ; 1 ; Bolsista de Valor Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Bolsista de Valor Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Bolsista de Valor Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Bolsista de Valor Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Vértices ;
+        issn = 1809-2667
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = vertices
+
+      au < exists ; 1997 ; 1 ; Vértices Volume 1 ; 1997 >
+      au < exists ; 1998 ; 2 ; Vértices Volume 2 ; 1998 >
+      au < exists ; 1999 ; 3 ; Vértices Volume 3 ; 1999 >
+      au < exists ; 2000 ; 4 ; Vértices Volume 4 ; 2000 >
+      au < exists ; 2001 ; 5 ; Vértices Volume 5 ; 2001 >
+      au < exists ; 2002 ; 6 ; Vértices Volume 6 ; 2002 >
+      au < exists ; 2003 ; 7 ; Vértices Volume 7 ; 2003 >
+      au < exists ; 2004 ; 8 ; Vértices Volume 8 ; 2004 >
+      au < exists ; 2005 ; 9 ; Vértices Volume 9 ; 2005 >
+      au < exists ; 2006 ; 10 ; Vértices Volume 10 ; 2006 >
+      au < exists ; 2007 ; 11 ; Vértices Volume 11 ; 2007 >
+      au < exists ; 2008 ; 12 ; Vértices Volume 12 ; 2008 >
+      au < exists ; 2009 ; 13 ; Vértices Volume 13 ; 2009 >
+      au < exists ; 2010 ; 14 ; Vértices Volume 14 ; 2010 >
+      au < exists ; 2011 ; 15 ; Vértices Volume 15 ; 2011 >
+      au < exists ; 2012 ; 16 ; Vértices Volume 16 ; 2012 >
+      au < expected ; 2013 ; 17 ; Vértices Volume 17 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Global Science and Technology ;
+        issn = 1984-3801
+      >
+
+      comment[publisher] = Instituto Federal Goiano - Campus Rio Verde
+      param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
+      param[journal_id] = gst
+
+      au < exists ; 2008 ; 1 ; Global Science and Technology Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Global Science and Technology Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Global Science and Technology Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Global Science and Technology Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Global Science and Technology Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Global Science and Technology Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Vida de Ensino ;
+        issn = 2175-6325
+      >
+
+      comment[publisher] = Instituto Federal Goiano - Campus Rio Verde
+      param[base_url] = http://rioverde.ifgoiano.edu.br/periodicos/
+      param[journal_id] = vidadeensino
+
+      au < exists ; 2009 ; 1 ; Revista Vida de Ensino Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Vida de Ensino Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista Vida de Ensino Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista Vida de Ensino Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Vida de Ensino Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Fragmentos de Cultura ;
+        issn = 1983-7828
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = fragmentos
+
+      au < exists ; 2006 ; 1 ; Fragmentos de Cultura Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Fragmentos de Cultura Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Fragmentos de Cultura Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Fragmentos de Cultura Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Fragmentos de Cultura Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Fragmentos de Cultura Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Fragmentos de Cultura Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Fragmentos de Cultura Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Habitus ;
+        issn = 1983-7798
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = habitus
+
+      au < exists ; 2005 ; 1 ; Habitus Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Habitus Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Habitus Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Habitus Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Habitus Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Habitus Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Habitus Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Habitus Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Habitus Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mosaico ;
+        issn = 1983-7801
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = mosaico
+
+      au < exists ; 2008 ; 1 ; Mosaico Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Mosaico Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Mosaico Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Mosaico Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Mosaico Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Mosaico Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Panorama ;
+        issn = 2237-1087
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = panorama
+
+      au < exists ; 2011 ; 1 ; Panorama Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Panorama Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Panorama Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Caminhos ;
+        issn = 1678-3034 ;
+        eissn = 1983-778X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = caminhos
+
+      au < exists ; 2005 ; 1 ; Revista Caminhos Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Caminhos Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Caminhos Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Caminhos Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Caminhos Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Caminhos Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Caminhos Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Caminhos Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Caminhos Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Educativa  ;
+        issn = 1983-7771
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = educativa
+
+      au < exists ; 2005 ; 1 ; Revista Educativa  Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Educativa  Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Educativa  Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Educativa  Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Educativa  Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Educativa  Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Educativa  Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Educativa  Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Educativa  Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Estudos ;
+        issn = 1983-781X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = estudos
+
+      au < exists ; 2006 ; 1 ; Revista Estudos Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Estudos Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Estudos Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Estudos Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Estudos Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Estudos Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Estudos Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Estudos Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Guará Linguagem e Literatura ;
+        issn = 2237-4957
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = guara
+
+      au < exists ; 2011 ; 1 ; Revista Guará Linguagem e Literatura Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Guará Linguagem e Literatura Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Guará Linguagem e Literatura Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ser ;
+        issn = 2177-3319
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás - PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = ser
+
+      au < exists ; 2009 ; 1 ; Ser Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Ser Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Ser Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Ser Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Ser Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ágora Filosófica ;
+        issn = 1982-999x
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco - UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = agora
+
+      au < exists ; 2007 ; 1 ; Ágora Filosófica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Ágora Filosófica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Ágora Filosófica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Ágora Filosófica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Ágora Filosófica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Ágora Filosófica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Ágora Filosófica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Paralellus ;
+        issn =  2178-8162
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco - UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = paralellus
+
+      au < exists ; 2010 ; 1 ; Paralellus Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Paralellus Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Paralellus Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Paralellus Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Teologia e Ciências da Religião da UNICAP ;
+        issn = 1679-5393 ;
+        eissn = 2237-907X
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco - UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = theo
+
+      au < exists ; 2011 ; 1 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Contabilidade & Finanças ;
+        issn = 1808-057X
+      >
+
+      comment[publisher] = Universidade de São Paulo
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = RCF-USP
+
+      au < expected ; 2013 ; 1 ; Revista Contabilidade & Finanças Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ágora: revista de divulgação científica ;
+        eissn = 2237-9010
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = agora
+
+      au < exists ; 2009 ; 1 ; Ágora: revista de divulgação científica Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Ágora: revista de divulgação científica Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Ágora: revista de divulgação científica Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Ágora: revista de divulgação científica Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Ágora: revista de divulgação científica Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DRd - Desenvolvimento Regional em debate ;
+        eissn = 2237-9029
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = drd
+
+      au < exists ; 2011 ; 1 ; DRd - Desenvolvimento Regional em debate Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; DRd - Desenvolvimento Regional em debate Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; DRd - Desenvolvimento Regional em debate Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Saúde e meio ambiente: revista interdisciplinar ;
+        eissn = 2316-347X
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = sma
+
+      au < exists ; 2012 ; 1 ; Saúde e meio ambiente: revista interdisciplinar Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Saúde e meio ambiente: revista interdisciplinar Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Childhood & Philosophy ;
+        issn = 1984-5987
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.periodicos.proped.pro.br/
+      param[journal_id] = childhood
+
+      au < exists ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Childhood & Philosophy Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Childhood & Philosophy Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  ;
+        eissn =  1984-3291
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = UERJ
+
+      au < exists ; 1996 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Teias ;
+        issn = 1518-5370 ;
+        eissn = 1518-5370
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.periodicos.proped.pro.br/
+      param[journal_id] = revistateias
+
+      au < exists ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista Teias Volume 14 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Congresso de História e Literatura: Tempo e Narrativa ;
+        issn = 2317-4641
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = anais_congresso
+
+      au < expected ; 2013 ; 1 ; Anais do Congresso de História e Literatura: Tempo e Narrativa Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Encontro de Acadêmicos de Pedagogia e Educadores ;
+        issn = 2317-1421
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = anais_itaberai
+
+      au < exists ; 2012 ; 1 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário de Educação, Linguagem e Tecnologias ;
+        issn = 2238-3735
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = selt
+
+      au < exists ; 2011 ; 1 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola ;
+        issn = 2317-4951
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = simposiocieaa
+
+      au < exists ; 2012 ; 1 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas ;
+        issn = 2238-1015
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = sineep
+
+      au < exists ; 2011 ; 1 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Regional de História (SRH) - UEG UnU Jussara ;
+        issn = 2316-8390
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = srhjussara
+
+      au < exists ; 2012 ; 1 ; Anais do Simpósio Regional de História (SRH) - UEG UnU Jussara Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Simpósio Regional de História (SRH) - UEG UnU Jussara Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás ;
+        issn = 2316-8307
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = ppub
+
+      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO ;
+        issn = 2316-6428
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = historiaporangatu
+
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu ;
+        issn = 2237-2571
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = congresso_acac
+
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Building the way - Revista do Curso de Letras da UEG/Itapuranga ;
+        issn = 2237-2075
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = buildingtheway
+
+      au < exists ; 2012 ; 1 ; Building the way - Revista do Curso de Letras da UEG/Itapuranga Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Building the way - Revista do Curso de Letras da UEG/Itapuranga Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Élisée - Revista de Geografia da UEG ;
+        issn = 2316-4360
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = elisee
+
+      au < exists ; 2012 ; 1 ; Élisée - Revista de Geografia da UEG Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Élisée - Revista de Geografia da UEG Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas ;
+        issn = 1984-6576
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revelli
+
+      au < expected ; 2013 ; 1 ; REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Agrotecnologia ;
+        issn = 2179-5959
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = agrotecnologia
+
+      au < exists ; 2010 ; 1 ; Revista Agrotecnologia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Agrotecnologia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Agrotecnologia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Agrotecnologia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração da UEG ;
+        issn = 2236-1197
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revista_administracao
+
+      au < exists ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Administração da UEG Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Biotecnologia & Ciência ;
+        issn = 2238-6629
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = biociencia
+
+      au < exists ; 2012 ; 1 ; Revista de Biotecnologia & Ciência Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de Biotecnologia & Ciência Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Economia da UEG ;
+        issn = 1809-970X
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = economia
+
+      au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Economia da UEG Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Economia da UEG Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Economia da UEG Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Economia da UEG Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista de Economia da UEG Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista de Economia da UEG Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Economia da UEG Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de História da UEG ;
+        issn = 2316-4379
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revistahistoria
+
+      au < exists ; 2012 ; 1 ; Revista de História da UEG Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de História da UEG Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica - Expedições: Teoria da História e Historiografia ;
+        issn = 2179-6386
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revista_geth
+
+      au < exists ; 2010 ; 1 ; Revista Eletrônica - Expedições: Teoria da História e Historiografia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica - Expedições: Teoria da História e Historiografia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica - Expedições: Teoria da História e Historiografia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica - Expedições: Teoria da História e Historiografia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Plurais - Virtual ;
+        issn = 2238-3751
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revistapluraisvirtual
+
+      au < exists ; 2011 ; 1 ; Revista Plurais - Virtual Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Plurais - Virtual Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Plurais - Virtual Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Territorial ;
+        issn = 2317-0360
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = territorial
+
+      au < exists ; 2012 ; 1 ; Revista Territorial Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Territorial Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Praxia ;
+        issn = 2317-7357
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = praxia
+
+      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH ;
+        issn = 2175-2606
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = spp_jic_unucseh
+
+      au < exists ; 2012 ; 1 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Temporis[ação] ;
+        issn = 2317-5516
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás - UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = temporisacao
+
+      au < exists ; 2010 ; 1 ; Temporis[ação] Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Temporis[ação] Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Temporis[ação] Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Temporis[ação] Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Antitéses ;
+        eissn = 1984-3356
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = antiteses
+
+      au < exists ; 2008 ; 1 ; Antitéses Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Antitéses Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Antitéses Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Antitéses Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Antitéses Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Antitéses Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ASSOBRAFIR Ciência ;
+        eissn = 2177-9333
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = rebrafis
+
+      au < exists ; 2009 ; 1 ; ASSOBRAFIR Ciência Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; ASSOBRAFIR Ciência Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; ASSOBRAFIR Ciência Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; ASSOBRAFIR Ciência Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; ASSOBRAFIR Ciência Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = BBR - Biochemistry and Biotechnology Reports ;
+        eissn = 2316-5200
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = bbr
+
+      au < exists ; 2012 ; 1 ; BBR - Biochemistry and Biotechnology Reports Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; BBR - Biochemistry and Biotechnology Reports Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Discursos Fotográficos ;
+        issn = 1808-5652 ;
+        eissn = 1984-7939
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = discursosfotograficos
+
+      au < exists ; 2005 ; 1 ; Discursos Fotográficos Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Discursos Fotográficos Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Discursos Fotográficos Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Discursos Fotográficos Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Discursos Fotográficos Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Discursos Fotográficos Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Discursos Fotográficos Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Discursos Fotográficos Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Discursos Fotográficos Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Economia e Região ;
+        eissn = 2317-627X
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = ecoreg
+
+      au < expected ; 2013 ; 1 ; Economia e Região Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Entretextos ;
+        eissn = 1519-5392
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = entretextos
+
+      au < exists ; 2006 ; 1 ; Entretextos Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Entretextos Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Entretextos Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Entretextos Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Entretextos Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Entretextos Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Entretextos Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Entretextos Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Espaço para a Saúde ;
+        eissn = 1517-7130
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = espacoparasaude
+
+      au < exists ; 2010 ; 1 ; Espaço para a Saúde Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Espaço para a Saúde Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Espaço para a Saúde Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Espaço para a Saúde Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos Interdisciplinares em Psicologia ;
+        eissn = 2236-6407
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = eip
+
+      au < exists ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GEOGRAFIA (Londrina) ;
+        eissn = 0102-3888
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = geografia
+
+      au < exists ; 2001 ; 1 ; GEOGRAFIA (Londrina) Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; GEOGRAFIA (Londrina) Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; GEOGRAFIA (Londrina) Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; GEOGRAFIA (Londrina) Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; GEOGRAFIA (Londrina) Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; GEOGRAFIA (Londrina) Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; GEOGRAFIA (Londrina) Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; GEOGRAFIA (Londrina) Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; GEOGRAFIA (Londrina) Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; GEOGRAFIA (Londrina) Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; GEOGRAFIA (Londrina) Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; GEOGRAFIA (Londrina) Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; GEOGRAFIA (Londrina) Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GERMINAL: Marxismo e Educação em Debate ;
+        eissn = 2175-5604
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = germinal
+
+      au < exists ; 2009 ; 1 ; GERMINAL: Marxismo e Educação em Debate Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; GERMINAL: Marxismo e Educação em Debate Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História & Ensino ;
+        eissn = 2238-3018
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = histensino
+
+      au < exists ; 1995 ; 1 ; História & Ensino Volume 1 ; 1995 >
+      au < exists ; 1996 ; 2 ; História & Ensino Volume 2 ; 1996 >
+      au < exists ; 1997 ; 3 ; História & Ensino Volume 3 ; 1997 >
+      au < exists ; 1998 ; 4 ; História & Ensino Volume 4 ; 1998 >
+      au < exists ; 1999 ; 5 ; História & Ensino Volume 5 ; 1999 >
+      au < exists ; 2000 ; 6 ; História & Ensino Volume 6 ; 2000 >
+      au < exists ; 2001 ; 7 ; História & Ensino Volume 7 ; 2001 >
+      au < exists ; 2002 ; 8 ; História & Ensino Volume 8 ; 2002 >
+      au < exists ; 2003 ; 9 ; História & Ensino Volume 9 ; 2003 >
+      au < exists ; 2004 ; 10 ; História & Ensino Volume 10 ; 2004 >
+      au < exists ; 2005 ; 11 ; História & Ensino Volume 11 ; 2005 >
+      au < exists ; 2006 ; 12 ; História & Ensino Volume 12 ; 2006 >
+      au < exists ; 2007 ; 13 ; História & Ensino Volume 13 ; 2007 >
+      au < exists ; 2008 ; 14 ; História & Ensino Volume 14 ; 2008 >
+      au < exists ; 2009 ; 15 ; História & Ensino Volume 15 ; 2009 >
+      au < exists ; 2010 ; 16 ; História & Ensino Volume 16 ; 2010 >
+      au < exists ; 2011 ; 17 ; História & Ensino Volume 17 ; 2011 >
+      au < exists ; 2012 ; 18 ; História & Ensino Volume 18 ; 2012 >
+      au < expected ; 2013 ; 19 ; História & Ensino Volume 19 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Informação & Informação ;
+        eissn = 1981-8920
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = informacao
+
+      au < exists ; 1996 ; 1 ; Informação & Informação Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Informação & Informação Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Informação & Informação Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Informação & Informação Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Informação & Informação Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Informação & Informação Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Informação & Informação Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Informação & Informação Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Informação & Informação Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Informação & Informação Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Informação & Informação Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Informação & Informação Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Informação & Informação Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Informação & Informação Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Informação & Informação Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Informação & Informação Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Informação & Informação Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Informação & Informação Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Informação@Profissões ;
+        eissn = 2317-4390
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = infoprof
+
+      au < exists ; 2012 ; 1 ; Informação@Profissões Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Informação@Profissões Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mediações ;
+        issn = 1414-0543 ;
+        eissn = 2176-6665
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = mediacoes
+
+      au < exists ; 1996 ; 1 ; Mediações Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Mediações Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Mediações Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Mediações Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Mediações Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Mediações Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Mediações Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Mediações Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Mediações Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Mediações Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Mediações Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Mediações Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Mediações Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Mediações Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Mediações Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Mediações Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Mediações Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Mediações Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Portal de Cartografia das Geociências ;
+        eissn = 1983-6546 
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = portalcartografia
+
+      au < exists ; 2008 ; 1 ; Portal de Cartografia das Geociências Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Portal de Cartografia das Geociências Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Portal de Cartografia das Geociências Volume 3 ; 2010 >
+      au < expected ; 2011 ; 4 ; Portal de Cartografia das Geociências Volume 4 ; 2011 >
+      au < expected ; 2012 ; 5 ; Portal de Cartografia das Geociências Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Portal de Cartografia das Geociências Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Projetica ;
+        eissn = 2236-2207
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = projetica
+
+      au < exists ; 2010 ; 1 ; Projetica Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Projetica Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Projetica Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Projetica Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos Contábeis ;
+        eissn = 2237-0099
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = rec
+
+      au < exists ; 2010 ; 1 ; Revista de Estudos Contábeis Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Estudos Contábeis Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Estudos Contábeis Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Estudos Contábeis Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista do Direito Público ;
+        eissn = 1980-511X
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = direitopub
+
+      au < exists ; 2006 ; 1 ; Revista do Direito Público Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista do Direito Público Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista do Direito Público Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista do Direito Público Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista do Direito Público Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista do Direito Público Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista do Direito Público Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista do Direito Público Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Scientia Iuris ;
+        issn = 1415-6490 ;
+        eissn = 2178-8189
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = iuris
+
+      au < exists ; 1997 ; 1 ; Scientia Iuris Volume 1 ; 1997 >
+      au < exists ; 1998 ; 2 ; Scientia Iuris Volume 2 ; 1998 >
+      au < exists ; 1999 ; 3 ; Scientia Iuris Volume 3 ; 1999 >
+      au < exists ; 2000 ; 4 ; Scientia Iuris Volume 4 ; 2000 >
+      au < exists ; 2001 ; 5 ; Scientia Iuris Volume 5 ; 2001 >
+      au < exists ; 2002 ; 6 ; Scientia Iuris Volume 6 ; 2002 >
+      au < exists ; 2003 ; 7 ; Scientia Iuris Volume 7 ; 2003 >
+      au < exists ; 2004 ; 8 ; Scientia Iuris Volume 8 ; 2004 >
+      au < exists ; 2005 ; 9 ; Scientia Iuris Volume 9 ; 2005 >
+      au < exists ; 2006 ; 10 ; Scientia Iuris Volume 10 ; 2006 >
+      au < exists ; 2007 ; 11 ; Scientia Iuris Volume 11 ; 2007 >
+      au < exists ; 2008 ; 12 ; Scientia Iuris Volume 12 ; 2008 >
+      au < exists ; 2009 ; 13 ; Scientia Iuris Volume 13 ; 2009 >
+      au < exists ; 2010 ; 14 ; Scientia Iuris Volume 14 ; 2010 >
+      au < exists ; 2011 ; 15 ; Scientia Iuris Volume 15 ; 2011 >
+      au < exists ; 2012 ; 16 ; Scientia Iuris Volume 16 ; 2012 >
+      au < expected ; 2013 ; 17 ; Scientia Iuris Volume 17 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Agrárias ;
+        issn = 1676-546X ;
+        eissn = 1679-0359
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = semaagraias
+
+      au < exists ; 1978 ; 1 ; Semina: Ciências Agrárias Volume 1 ; 1978 >
+      au < exists ; 1979 ; 2 ; Semina: Ciências Agrárias Volume 2 ; 1979 >
+      au < exists ; 1980 ; 3 ; Semina: Ciências Agrárias Volume 3 ; 1980 >
+      au < exists ; 1981 ; 4 ; Semina: Ciências Agrárias Volume 4 ; 1981 >
+      au < exists ; 1982 ; 5 ; Semina: Ciências Agrárias Volume 5 ; 1982 >
+      au < exists ; 1983 ; 6 ; Semina: Ciências Agrárias Volume 6 ; 1983 >
+      au < exists ; 1984 ; 7 ; Semina: Ciências Agrárias Volume 7 ; 1984 >
+      au < exists ; 1985 ; 8 ; Semina: Ciências Agrárias Volume 8 ; 1985 >
+      au < exists ; 1986 ; 9 ; Semina: Ciências Agrárias Volume 9 ; 1986 >
+      au < exists ; 1987 ; 10 ; Semina: Ciências Agrárias Volume 10 ; 1987 >
+      au < exists ; 1988 ; 11 ; Semina: Ciências Agrárias Volume 11 ; 1988 >
+      au < exists ; 1989 ; 12 ; Semina: Ciências Agrárias Volume 12 ; 1989 >
+      au < exists ; 1990 ; 13 ; Semina: Ciências Agrárias Volume 13 ; 1990 >
+      au < exists ; 1991 ; 14 ; Semina: Ciências Agrárias Volume 14 ; 1991 >
+      au < exists ; 1992 ; 15 ; Semina: Ciências Agrárias Volume 15 ; 1992 >
+      au < exists ; 1993 ; 16 ; Semina: Ciências Agrárias Volume 16 ; 1993 >
+      au < exists ; 1994 ; 17 ; Semina: Ciências Agrárias Volume 17 ; 1994 >
+      au < exists ; 1995 ; 18 ; Semina: Ciências Agrárias Volume 18 ; 1995 >
+      au < exists ; 1996 ; 19 ; Semina: Ciências Agrárias Volume 19 ; 1996 >
+      au < exists ; 1997 ; 20 ; Semina: Ciências Agrárias Volume 20 ; 1997 >
+      au < exists ; 1998 ; 21 ; Semina: Ciências Agrárias Volume 21 ; 1998 >
+      au < exists ; 1999 ; 22 ; Semina: Ciências Agrárias Volume 22 ; 1999 >
+      au < exists ; 2000 ; 23 ; Semina: Ciências Agrárias Volume 23 ; 2000 >
+      au < exists ; 2001 ; 24 ; Semina: Ciências Agrárias Volume 24 ; 2001 >
+      au < exists ; 2002 ; 25 ; Semina: Ciências Agrárias Volume 25 ; 2002 >
+      au < exists ; 2003 ; 26 ; Semina: Ciências Agrárias Volume 26 ; 2003 >
+      au < exists ; 2004 ; 27 ; Semina: Ciências Agrárias Volume 27 ; 2004 >
+      au < exists ; 2005 ; 28 ; Semina: Ciências Agrárias Volume 28 ; 2005 >
+      au < exists ; 2006 ; 29 ; Semina: Ciências Agrárias Volume 29 ; 2006 >
+      au < exists ; 2007 ; 30 ; Semina: Ciências Agrárias Volume 30 ; 2007 >
+      au < exists ; 2008 ; 31 ; Semina: Ciências Agrárias Volume 31 ; 2008 >
+      au < exists ; 2009 ; 32 ; Semina: Ciências Agrárias Volume 32 ; 2009 >
+      au < exists ; 2010 ; 33 ; Semina: Ciências Agrárias Volume 33 ; 2010 >
+      au < exists ; 2011 ; 34 ; Semina: Ciências Agrárias Volume 34 ; 2011 >
+      au < exists ; 2012 ; 35 ; Semina: Ciências Agrárias Volume 35 ; 2012 >
+      au < expected ; 2013 ; 36 ; Semina: Ciências Agrárias Volume 36 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Biológicas e da Saúde ;
+        issn = 1676-5435 ;
+        eissn = 1679-0367
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = seminabio
+
+      au < exists ; 1980 ; 1 ; Semina: Ciências Biológicas e da Saúde Volume 1 ; 1980 >
+      au < exists ; 1981 ; 2 ; Semina: Ciências Biológicas e da Saúde Volume 2 ; 1981 >
+      au < exists ; 1982 ; 3 ; Semina: Ciências Biológicas e da Saúde Volume 3 ; 1982 >
+      au < exists ; 1983 ; 4 ; Semina: Ciências Biológicas e da Saúde Volume 4 ; 1983 >
+      au < exists ; 1984 ; 5 ; Semina: Ciências Biológicas e da Saúde Volume 5 ; 1984 >
+      au < exists ; 1985 ; 6 ; Semina: Ciências Biológicas e da Saúde Volume 6 ; 1985 >
+      au < exists ; 1986 ; 7 ; Semina: Ciências Biológicas e da Saúde Volume 7 ; 1986 >
+      au < exists ; 1987 ; 8 ; Semina: Ciências Biológicas e da Saúde Volume 8 ; 1987 >
+      au < exists ; 1988 ; 9 ; Semina: Ciências Biológicas e da Saúde Volume 9 ; 1988 >
+      au < exists ; 1989 ; 10 ; Semina: Ciências Biológicas e da Saúde Volume 10 ; 1989 >
+      au < exists ; 1990 ; 11 ; Semina: Ciências Biológicas e da Saúde Volume 11 ; 1990 >
+      au < exists ; 1991 ; 12 ; Semina: Ciências Biológicas e da Saúde Volume 12 ; 1991 >
+      au < exists ; 1992 ; 13 ; Semina: Ciências Biológicas e da Saúde Volume 13 ; 1992 >
+      au < exists ; 1993 ; 14 ; Semina: Ciências Biológicas e da Saúde Volume 14 ; 1993 >
+      au < exists ; 1994 ; 15 ; Semina: Ciências Biológicas e da Saúde Volume 15 ; 1994 >
+      au < exists ; 1995 ; 16 ; Semina: Ciências Biológicas e da Saúde Volume 16 ; 1995 >
+      au < exists ; 1996 ; 17 ; Semina: Ciências Biológicas e da Saúde Volume 17 ; 1996 >
+      au < exists ; 1997 ; 18 ; Semina: Ciências Biológicas e da Saúde Volume 18 ; 1997 >
+      au < exists ; 1998 ; 19 ; Semina: Ciências Biológicas e da Saúde Volume 19 ; 1998 >
+      au < exists ; 1999 ; 20 ; Semina: Ciências Biológicas e da Saúde Volume 20 ; 1999 >
+      au < exists ; 2000 ; 21 ; Semina: Ciências Biológicas e da Saúde Volume 21 ; 2000 >
+      au < exists ; 2001 ; 22 ; Semina: Ciências Biológicas e da Saúde Volume 22 ; 2001 >
+      au < exists ; 2002 ; 23 ; Semina: Ciências Biológicas e da Saúde Volume 23 ; 2002 >
+      au < exists ; 2003 ; 24 ; Semina: Ciências Biológicas e da Saúde Volume 24 ; 2003 >
+      au < exists ; 2004 ; 25 ; Semina: Ciências Biológicas e da Saúde Volume 25 ; 2004 >
+      au < exists ; 2005 ; 26 ; Semina: Ciências Biológicas e da Saúde Volume 26 ; 2005 >
+      au < exists ; 2006 ; 27 ; Semina: Ciências Biológicas e da Saúde Volume 27 ; 2006 >
+      au < exists ; 2007 ; 28 ; Semina: Ciências Biológicas e da Saúde Volume 28 ; 2007 >
+      au < exists ; 2008 ; 29 ; Semina: Ciências Biológicas e da Saúde Volume 29 ; 2008 >
+      au < exists ; 2009 ; 30 ; Semina: Ciências Biológicas e da Saúde Volume 30 ; 2009 >
+      au < exists ; 2010 ; 31 ; Semina: Ciências Biológicas e da Saúde Volume 31 ; 2010 >
+      au < exists ; 2011 ; 32 ; Semina: Ciências Biológicas e da Saúde Volume 32 ; 2011 >
+      au < exists ; 2012 ; 33 ; Semina: Ciências Biológicas e da Saúde Volume 33 ; 2012 >
+      au < expected ; 2013 ; 34 ; Semina: Ciências Biológicas e da Saúde Volume 34 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Exatas e Tecnológicas ;
+        issn = 1676-5451 ;
+        eissn = 1679-0375
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = semexatas
+
+      au < exists ; 1979 ; 1 ; Semina: Ciências Exatas e Tecnológicas Volume 1 ; 1979 >
+      au < exists ; 1980 ; 2 ; Semina: Ciências Exatas e Tecnológicas Volume 2 ; 1980 >
+      au < exists ; 1981 ; 3 ; Semina: Ciências Exatas e Tecnológicas Volume 3 ; 1981 >
+      au < exists ; 1982 ; 4 ; Semina: Ciências Exatas e Tecnológicas Volume 4 ; 1982 >
+      au < exists ; 1983 ; 5 ; Semina: Ciências Exatas e Tecnológicas Volume 5 ; 1983 >
+      au < exists ; 1984 ; 6 ; Semina: Ciências Exatas e Tecnológicas Volume 6 ; 1984 >
+      au < exists ; 1985 ; 7 ; Semina: Ciências Exatas e Tecnológicas Volume 7 ; 1985 >
+      au < exists ; 1986 ; 8 ; Semina: Ciências Exatas e Tecnológicas Volume 8 ; 1986 >
+      au < exists ; 1987 ; 9 ; Semina: Ciências Exatas e Tecnológicas Volume 9 ; 1987 >
+      au < exists ; 1988 ; 10 ; Semina: Ciências Exatas e Tecnológicas Volume 10 ; 1988 >
+      au < exists ; 1989 ; 11 ; Semina: Ciências Exatas e Tecnológicas Volume 11 ; 1989 >
+      au < exists ; 1990 ; 12 ; Semina: Ciências Exatas e Tecnológicas Volume 12 ; 1990 >
+      au < exists ; 1991 ; 13 ; Semina: Ciências Exatas e Tecnológicas Volume 13 ; 1991 >
+      au < exists ; 1992 ; 14 ; Semina: Ciências Exatas e Tecnológicas Volume 14 ; 1992 >
+      au < exists ; 1993 ; 15 ; Semina: Ciências Exatas e Tecnológicas Volume 15 ; 1993 >
+      au < exists ; 1994 ; 16 ; Semina: Ciências Exatas e Tecnológicas Volume 16 ; 1994 >
+      au < exists ; 1995 ; 17 ; Semina: Ciências Exatas e Tecnológicas Volume 17 ; 1995 >
+      au < exists ; 1996 ; 18 ; Semina: Ciências Exatas e Tecnológicas Volume 18 ; 1996 >
+      au < exists ; 1997 ; 19 ; Semina: Ciências Exatas e Tecnológicas Volume 19 ; 1997 >
+      au < exists ; 1998 ; 20 ; Semina: Ciências Exatas e Tecnológicas Volume 20 ; 1998 >
+      au < exists ; 1999 ; 21 ; Semina: Ciências Exatas e Tecnológicas Volume 21 ; 1999 >
+      au < exists ; 2000 ; 22 ; Semina: Ciências Exatas e Tecnológicas Volume 22 ; 2000 >
+      au < exists ; 2001 ; 23 ; Semina: Ciências Exatas e Tecnológicas Volume 23 ; 2001 >
+      au < exists ; 2002 ; 24 ; Semina: Ciências Exatas e Tecnológicas Volume 24 ; 2002 >
+      au < exists ; 2003 ; 25 ; Semina: Ciências Exatas e Tecnológicas Volume 25 ; 2003 >
+      au < exists ; 2004 ; 26 ; Semina: Ciências Exatas e Tecnológicas Volume 26 ; 2004 >
+      au < exists ; 2005 ; 27 ; Semina: Ciências Exatas e Tecnológicas Volume 27 ; 2005 >
+      au < exists ; 2006 ; 28 ; Semina: Ciências Exatas e Tecnológicas Volume 28 ; 2006 >
+      au < exists ; 2007 ; 29 ; Semina: Ciências Exatas e Tecnológicas Volume 29 ; 2007 >
+      au < exists ; 2008 ; 30 ; Semina: Ciências Exatas e Tecnológicas Volume 30 ; 2008 >
+      au < exists ; 2009 ; 31 ; Semina: Ciências Exatas e Tecnológicas Volume 31 ; 2009 >
+      au < exists ; 2010 ; 32 ; Semina: Ciências Exatas e Tecnológicas Volume 32 ; 2010 >
+      au < exists ; 2011 ; 33 ; Semina: Ciências Exatas e Tecnológicas Volume 33 ; 2011 >
+      au < exists ; 2012 ; 34 ; Semina: Ciências Exatas e Tecnológicas Volume 34 ; 2012 >
+      au < expected ; 2013 ; 35 ; Semina: Ciências Exatas e Tecnológicas Volume 35 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Sociais e Humanas ;
+        issn = 1676-5443 ;
+        eissn = 679-0383
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = seminasoc
+
+      au < exists ; 1992 ; 1 ; Semina: Ciências Sociais e Humanas Volume 1 ; 1992 >
+      au < exists ; 1993 ; 2 ; Semina: Ciências Sociais e Humanas Volume 2 ; 1993 >
+      au < exists ; 1994 ; 3 ; Semina: Ciências Sociais e Humanas Volume 3 ; 1994 >
+      au < exists ; 1995 ; 4 ; Semina: Ciências Sociais e Humanas Volume 4 ; 1995 >
+      au < exists ; 1996 ; 5 ; Semina: Ciências Sociais e Humanas Volume 5 ; 1996 >
+      au < exists ; 1997 ; 6 ; Semina: Ciências Sociais e Humanas Volume 6 ; 1997 >
+      au < exists ; 1998 ; 7 ; Semina: Ciências Sociais e Humanas Volume 7 ; 1998 >
+      au < exists ; 1999 ; 8 ; Semina: Ciências Sociais e Humanas Volume 8 ; 1999 >
+      au < exists ; 2000 ; 9 ; Semina: Ciências Sociais e Humanas Volume 9 ; 2000 >
+      au < exists ; 2001 ; 10 ; Semina: Ciências Sociais e Humanas Volume 10 ; 2001 >
+      au < exists ; 2002 ; 11 ; Semina: Ciências Sociais e Humanas Volume 11 ; 2002 >
+      au < exists ; 2003 ; 12 ; Semina: Ciências Sociais e Humanas Volume 12 ; 2003 >
+      au < exists ; 2004 ; 13 ; Semina: Ciências Sociais e Humanas Volume 13 ; 2004 >
+      au < exists ; 2005 ; 14 ; Semina: Ciências Sociais e Humanas Volume 14 ; 2005 >
+      au < exists ; 2006 ; 15 ; Semina: Ciências Sociais e Humanas Volume 15 ; 2006 >
+      au < exists ; 2007 ; 16 ; Semina: Ciências Sociais e Humanas Volume 16 ; 2007 >
+      au < exists ; 2008 ; 17 ; Semina: Ciências Sociais e Humanas Volume 17 ; 2008 >
+      au < exists ; 2009 ; 18 ; Semina: Ciências Sociais e Humanas Volume 18 ; 2009 >
+      au < exists ; 2010 ; 19 ; Semina: Ciências Sociais e Humanas Volume 19 ; 2010 >
+      au < exists ; 2011 ; 20 ; Semina: Ciências Sociais e Humanas Volume 20 ; 2011 >
+      au < exists ; 2012 ; 21 ; Semina: Ciências Sociais e Humanas Volume 21 ; 2012 >
+      au < expected ; 2013 ; 22 ; Semina: Ciências Sociais e Humanas Volume 22 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Serviço Social em Revista ;
+        eissn = 1679-4842
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = ssrevista
+
+      au < exists ; 2009 ; 1 ; Serviço Social em Revista Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Serviço Social em Revista Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Serviço Social em Revista Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Serviço Social em Revista Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Serviço Social em Revista Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Signum: Estudos da Linguagem ;
+        issn = 1516-3083 ;
+        eissn = 2237-4876
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = signum
+
+      au < exists ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
+      au < exists ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
+      au < exists ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
+      au < exists ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
+      au < exists ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
+      au < exists ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
+      au < exists ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
+      au < exists ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
+      au < exists ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
+      au < exists ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
+      au < exists ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
+      au < exists ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
+      au < exists ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
+      au < exists ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
+      au < exists ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
+      au < expected ; 2013 ; 16 ; Signum: Estudos da Linguagem Volume 16 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Conhecer: Debate entre o Público e o Privado ;
+        issn = 2238-0426
+      >
+
+      comment[publisher] = Universidade Estadual do Ceará - UECE
+      param[base_url] = http://seer.uece.br/
+      param[journal_id] = ?journal=politicaspublicasemdebate
+
+      au < exists ; 2011 ; 1 ; Conhecer: Debate entre o Público e o Privado Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Conhecer: Debate entre o Público e o Privado Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Conhecer: Debate entre o Público e o Privado Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História e Culturas ;
+        issn = 0000-0000
+      >
+
+      comment[publisher] = Universidade Estadual do Ceará - UECE
+      param[base_url] = http://seer.uece.br/
+      param[journal_id] = ?journal=RHC
+
+      au < expected ; 2013 ; 1 ; História e Culturas Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = O público e o privado ;
+        issn = 1519-5481 ;
+        eissn = 2238-5169
+      >
+
+      comment[publisher] = Universidade Estadual do Ceará - UECE
+      param[base_url] = http://seer.uece.br/
+      param[journal_id] = ?journal=opublicoeoprivado
+
+      au < exists ; 2003 ; 1 ; O público e o privado Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; O público e o privado Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; O público e o privado Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; O público e o privado Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; O público e o privado Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; O público e o privado Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; O público e o privado Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; O público e o privado Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; O público e o privado Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; O público e o privado Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; O público e o privado Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Polymatheia - revista de filosofia ;
+        issn = 1984-9575
+      >
+
+      comment[publisher] = Universidade Estadual do Ceará - UECE
+      param[base_url] = http://seer.uece.br/
+      param[journal_id] = ?journal=PRF
+
+      au < exists ; 2007 ; 1 ; Polymatheia - revista de filosofia Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Polymatheia - revista de filosofia Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Polymatheia - revista de filosofia Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Polymatheia - revista de filosofia Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Polymatheia - revista de filosofia Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Polymatheia - revista de filosofia Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Polymatheia - revista de filosofia Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista GeoUECE ;
+        issn = 2315-028X
+      >
+
+      comment[publisher] = Universidade Estadual do Ceará - UECE
+      param[base_url] = http://seer.uece.br/
+      param[journal_id] = ?journal=geouece
+
+      au < exists ; 2012 ; 1 ; Revista GeoUECE Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista GeoUECE Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Ciências Sociais Aplicadas ;
+        issn = 1808-3102
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = cadernosdeciencias
+
+      au < exists ; 2005 ; 1 ; Cadernos de Ciências Sociais Aplicadas Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Cadernos de Ciências Sociais Aplicadas Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Cadernos de Ciências Sociais Aplicadas Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Cadernos de Ciências Sociais Aplicadas Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Cadernos de Ciências Sociais Aplicadas Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Cadernos de Ciências Sociais Aplicadas Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; Cadernos de Ciências Sociais Aplicadas Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Cadernos de Ciências Sociais Aplicadas Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos da Língua(gem) ;
+        issn = 1808-1355 ;
+        eissn = 1982-0534
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://www.estudosdalinguagem.org/seer/
+      param[journal_id] = estudosdalinguagem
+
+      au < exists ; 2005 ; 1 ; Estudos da Língua(gem) Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Estudos da Língua(gem) Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Estudos da Língua(gem) Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Estudos da Língua(gem) Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Filosofando: Revista de Filosofia da UESB ;
+        issn = 2317-3785
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = filosofando
+
+      au < exists ; 2012 ; 1 ; Filosofando: Revista de Filosofia da UESB Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Filosofando: Revista de Filosofia da UESB Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Floema. Caderno de Teoria e História Literária ;
+        issn = 1807-541X ;
+        eissn = 2177-3629
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = floema
+
+      au < exists ; 2005 ; 1 ; Floema. Caderno de Teoria e História Literária Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Floema. Caderno de Teoria e História Literária Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Floema. Caderno de Teoria e História Literária Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Floema. Caderno de Teoria e História Literária Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Floema. Caderno de Teoria e História Literária Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Floema. Caderno de Teoria e História Literária Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Floema. Caderno de Teoria e História Literária Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; Floema. Caderno de Teoria e História Literária Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Floema. Caderno de Teoria e História Literária Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Fólio - Revista de Letras ;
+        issn = 2176-4182 
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = folio
+
+      au < exists ; 2009 ; 1 ; Fólio - Revista de Letras Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Fólio - Revista de Letras Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Fólio - Revista de Letras Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Fólio - Revista de Letras Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Fólio - Revista de Letras Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Politeia: História e Sociedade ;
+        issn = 1519-9339 ;
+        eissn = 2236-8094
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = politeia
+
+      au < exists ; 2001 ; 1 ; Politeia: História e Sociedade Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; Politeia: História e Sociedade Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; Politeia: História e Sociedade Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; Politeia: História e Sociedade Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; Politeia: História e Sociedade Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; Politeia: História e Sociedade Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; Politeia: História e Sociedade Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; Politeia: História e Sociedade Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; Politeia: História e Sociedade Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; Politeia: História e Sociedade Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; Politeia: História e Sociedade Volume 11 ; 2011 >
+      au < expected ; 2012 ; 12 ; Politeia: História e Sociedade Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; Politeia: História e Sociedade Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Práxis Educacional ;
+        issn = 2178-2679
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = praxis
+
+      au < exists ; 2005 ; 1 ; Práxis Educacional Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Práxis Educacional Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Práxis Educacional Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Práxis Educacional Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Práxis Educacional Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Práxis Educacional Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Práxis Educacional Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Práxis Educacional Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Práxis Educacional Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Binacional Brasil - Argentina ;
+        issn = 2316-1205
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = rbba
+
+      au < exists ; 2012 ; 1 ; Revista Binacional Brasil - Argentina Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Binacional Brasil - Argentina Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Estudos do Discurso e do Corpo - REDISCO ;
+        issn = 2316-1213
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = redisco
+
+      au < exists ; 2012 ; 1 ; Revista Eletrônica de Estudos do Discurso e do Corpo - REDISCO Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Eletrônica de Estudos do Discurso e do Corpo - REDISCO Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Seminário de Pesquisa em Análise de Discurso ;
+        issn = 2317-0530
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = periodicosuesbbrspadis
+
+      au < exists ; 2005 ; 1 ; Seminário de Pesquisa em Análise de Discurso Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Seminário de Pesquisa em Análise de Discurso Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Seminário de Pesquisa em Análise de Discurso Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Seminário de Pesquisa em Análise de Discurso Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Seminário de Pesquisa em Análise de Discurso Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Seminário de Pesquisa em Análise de Discurso Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Seminário de Pesquisa em Análise de Discurso Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; Seminário de Pesquisa em Análise de Discurso Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Seminário de Pesquisa em Análise de Discurso Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Seminários de Pesquisa em Estudos Linguísticos ;
+        issn = 2317-0549
+      >
+
+      comment[publisher] = Universidade Estadual do Sudoeste da Bahia - UESB
+      param[base_url] = http://periodicos.uesb.br/
+      param[journal_id] = periodicos-uesb-br-spel
+
+      au < exists ; 2006 ; 1 ; Seminários de Pesquisa em Estudos Linguísticos Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Seminários de Pesquisa em Estudos Linguísticos Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Seminários de Pesquisa em Estudos Linguísticos Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Seminários de Pesquisa em Estudos Linguísticos Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Seminários de Pesquisa em Estudos Linguísticos Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Seminários de Pesquisa em Estudos Linguísticos Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Seminários de Pesquisa em Estudos Linguísticos Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Seminários de Pesquisa em Estudos Linguísticos Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Arte e Antropologia ;
+        issn = 2238-0361
+      >
+
+      comment[publisher] = Universidade Federal da Bahia - UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = cadernosaa
+
+      au < exists ; 2012 ; 1 ; Cadernos de Arte e Antropologia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Cadernos de Arte e Antropologia Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Dança: Revista do Programa de pós-graduação em Dança ;
+        issn = 2317-3777
+      >
+
+      comment[publisher] = Universidade Federal da Bahia - UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revistadanca
+
+      au < exists ; 2012 ; 1 ; Dança: Revista do Programa de pós-graduação em Dança Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Dança: Revista do Programa de pós-graduação em Dança Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Direito Animal ;
+        issn = 2317-4552
+      >
+
+      comment[publisher] = Universidade Federal da Bahia - UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = RBDA
+
+      au < expected ; 2013 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Gestão e Tecnologias Ambientais ;
+        issn = 2317-563X
+      >
+
+      comment[publisher] = Universidade Federal da Bahia - UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = gesta
+
+      au < expected ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais dos Congressos de Pedagogia ;
+        issn = 1982-0186
+      >
+
+      comment[publisher] = Universidade Federal de Goiás - Campus Jataí
+      param[base_url] = http://revistas.jatai.ufg.br/
+      param[journal_id] = acp
+
+      au < exists ; 2005 ; 1 ; Anais dos Congressos de Pedagogia Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Anais dos Congressos de Pedagogia Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Anais dos Congressos de Pedagogia Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Anais dos Congressos de Pedagogia Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Anais dos Congressos de Pedagogia Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Anais dos Congressos de Pedagogia Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Anais dos Congressos de Pedagogia Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; Anais dos Congressos de Pedagogia Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Anais dos Congressos de Pedagogia Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Geoambiente on-line ;
+        issn = 1679-9860
+      >
+
+      comment[publisher] = Universidade Federal de Goiás - Campus Jataí
+      param[base_url] = http://revistas.jatai.ufg.br/
+      param[journal_id] = geoambiente#.Udw71zucehI
+
+      au < exists ; 2003 ; 1 ; Geoambiente on-line Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Geoambiente on-line Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Geoambiente on-line Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Geoambiente on-line Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Geoambiente on-line Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Geoambiente on-line Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Geoambiente on-line Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Geoambiente on-line Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Geoambiente on-line Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Geoambiente on-line Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Geoambiente on-line Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Matemática ;
+        issn = 2177-5095
+      >
+
+      comment[publisher] = Universidade Federal de Goiás - Campus Jataí
+      param[base_url] = http://revistas.jatai.ufg.br/
+      param[journal_id] = matematica
+
+      au < exists ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Eletrônica de Matemática Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Eletrônica de Matemática Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = RevLet – Revista Virtual de Letras ;
+        issn = 2176-9125
+      >
+
+      comment[publisher] = Universidade Federal de Goiás - Campus Jataí
+      param[base_url] = http://revistas.jatai.ufg.br/
+      param[journal_id] = revlet
+
+      au < exists ; 2009 ; 1 ; RevLet – Revista Virtual de Letras Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; RevLet – Revista Virtual de Letras Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; RevLet – Revista Virtual de Letras Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; RevLet – Revista Virtual de Letras Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; RevLet – Revista Virtual de Letras Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Nursing and Health ;
+        eissn = 2236-1987
+      >
+
+      comment[publisher] = Universidade Federal de Pelotas
+      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[journal_id] = enfermagemesaude
+
+      au < exists ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ciência da Madeira ;
+        eissn = 2177-6830
+      >
+
+      comment[publisher] = Universidade Federal de Pelotas
+      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[journal_id] = cienciadamadeira
+
+      au < exists ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais da Semana Educa ;
+        issn = 2179-8389
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = semanaeduca
+
+      au < exists ; 2010 ; 1 ; Anais da Semana Educa Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Anais da Semana Educa Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Anais da Semana Educa Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Anais da Semana Educa Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Primeira Versão ;
+        issn = 2236-4412
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = primeiraversao
+
+      au < exists ; 2011 ; 1 ; Primeira Versão Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Primeira Versão Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Primeira Versão Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Ciências da Amazônia ;
+        issn = 2317-5729
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = rolimdemoura
+
+      au < exists ; 2012 ; 1 ; Revista Brasileira de Ciências da Amazônia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Brasileira de Ciências da Amazônia Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração e Negócios da Amazônia ;
+        issn = 2176-8366
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = rara
+
+      au < exists ; 2009 ; 1 ; Revista de Administração e Negócios da Amazônia Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista de Administração e Negócios da Amazônia Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista de Administração e Negócios da Amazônia Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista de Administração e Negócios da Amazônia Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista de Administração e Negócios da Amazônia Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Língua Viva ;
+        eissn = 2237-9800
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br
+      param[journal_id] = linguaviva
+
+      au < exists ; 2011 ; 1 ; Revista Eletrônica Língua Viva Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Eletrônica Língua Viva Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Eletrônica Língua Viva Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Gaia ;
+        eissn = 2237-4035
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = revistagaia
+
+      au < exists ; 2011 ; 1 ; Revista Gaia Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Gaia Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Gaia Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Igarapé ;
+        issn =  2238-7587
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = igarape
+
+      au < exists ; 2012 ; 1 ; Revista Igarapé Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Igarapé Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Pesquisa & Criação ;
+        issn = 1982-7857
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = propesq
+
+      au < exists ; 2008 ; 1 ; Revista Pesquisa & Criação Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Pesquisa & Criação Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Pesquisa & Criação Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Pesquisa & Criação Volume 4 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Pesquisa & Criação Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Pesquisa & Criação Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Práxis Pedagógica ;
+        issn = 1518-9341 ;
+        eissn = 2237-5406
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = praxis
+
+      au < exists ; 2012 ; 1 ; Revista Práxis Pedagógica Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Práxis Pedagógica Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Veredas Amazônicas ;
+        eissn = 2237- 4043
+      >
+
+      comment[publisher] = Universidade Federal de Rondônia
+      param[base_url] = http://www.periodicos.unir.br/
+      param[journal_id] = veredasamazonicas
+
+      au < exists ; 2011 ; 1 ; Revista Veredas Amazônicas Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Veredas Amazônicas Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Veredas Amazônicas Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Acta Geográfica ;
+        issn = 1980-5772 ;
+        eissn = 2177-4307
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = actageo
+
+      au < exists ; 2007 ; 1 ; Acta Geográfica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Acta Geográfica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Acta Geográfica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Acta Geográfica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Acta Geográfica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Acta Geográfica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Acta Geográfica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Agroambiente On-line  ;
+        eissn = 1982-8470
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = agroambiente
+
+      au < exists ; 2007 ; 1 ; Revista Agroambiente On-line  Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Agroambiente On-line  Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Agroambiente On-line  Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Agroambiente On-line  Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Agroambiente On-line  Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Agroambiente On-line  Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Agroambiente On-line  Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração de Roraima ;
+        issn = 2237-8057
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = adminrr
+
+      au < exists ; 2011 ; 1 ; Revista de Administração de Roraima Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Administração de Roraima Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Administração de Roraima Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Textos & Debates ;
+        issn = 1413-9987 ;
+        eissn = 2317-1448
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = textosedebates
+
+      au < exists ; 1995 ; 1 ; Textos & Debates Volume 1 ; 1995 >
+      au < exists ; 1996 ; 2 ; Textos & Debates Volume 2 ; 1996 >
+      au < exists ; 1997 ; 3 ; Textos & Debates Volume 3 ; 1997 >
+      au < exists ; 1998 ; 4 ; Textos & Debates Volume 4 ; 1998 >
+      au < exists ; 1999 ; 5 ; Textos & Debates Volume 5 ; 1999 >
+      au < exists ; 2000 ; 6 ; Textos & Debates Volume 6 ; 2000 >
+      au < exists ; 2001 ; 7 ; Textos & Debates Volume 7 ; 2001 >
+      au < exists ; 2002 ; 8 ; Textos & Debates Volume 8 ; 2002 >
+      au < exists ; 2003 ; 9 ; Textos & Debates Volume 9 ; 2003 >
+      au < exists ; 2004 ; 10 ; Textos & Debates Volume 10 ; 2004 >
+      au < exists ; 2005 ; 11 ; Textos & Debates Volume 11 ; 2005 >
+      au < exists ; 2006 ; 12 ; Textos & Debates Volume 12 ; 2006 >
+      au < exists ; 2007 ; 13 ; Textos & Debates Volume 13 ; 2007 >
+      au < exists ; 2008 ; 14 ; Textos & Debates Volume 14 ; 2008 >
+      au < exists ; 2009 ; 15 ; Textos & Debates Volume 15 ; 2009 >
+      au < exists ; 2010 ; 16 ; Textos & Debates Volume 16 ; 2010 >
+      au < exists ; 2011 ; 17 ; Textos & Debates Volume 17 ; 2011 >
+      au < exists ; 2012 ; 18 ; Textos & Debates Volume 18 ; 2012 >
+      au < expected ; 2013 ; 19 ; Textos & Debates Volume 19 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Biota Amazônia ;
+        issn = 2179-5746
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = biota
+
+      au < exists ; 2011 ; 1 ; Biota Amazônia Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Biota Amazônia Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Biota Amazônia Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ciência Equatorial ;
+        issn = 2179-9563
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = cienciaequatorial
+
+      au < exists ; 2011 ; 1 ; Ciência Equatorial Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Ciência Equatorial Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Ciência Equatorial Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estação Científica ;
+        issn = 2179-1902
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = estacao
+
+      au < exists ; 2011 ; 1 ; Estação Científica Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Estação Científica Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Estação Científica Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Letras Escreve ;
+        issn =  2238-8060
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = letras
+
+      au < exists ; 2011 ; 1 ; Letras Escreve Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Letras Escreve Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Letras Escreve Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Planeta Amazônia ;
+        issn = 2177-1642
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = planeta
+
+      au < exists ; 2009 ; 1 ; Planeta Amazônia Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Planeta Amazônia Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Planeta Amazônia Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Planeta Amazônia Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Planeta Amazônia Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = PRACS ;
+        eissn = 1984-4352
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = pracs
+
+      au < exists ; 2008 ; 1 ; PRACS Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; PRACS Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; PRACS Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; PRACS Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; PRACS Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; PRACS Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista BIOTERRA ;
+        issn = 1519-5228
+      >
+
+      comment[publisher] = Universidade Federal do Amapá
+      param[base_url] = http://periodicos.unifap.br/
+      param[journal_id] = bioterra
+
+      au < expected ; 2013 ; 1 ; Revista BIOTERRA Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista “Fisioterapia & Saúde Funcional ;
+        eissn = 2238-8028
+      >
+
+      comment[publisher] = Universidade Federal do Ceará - UFC
+      param[base_url] = http://www.fisioterapiaesaudefuncional.ufc.br/
+      param[journal_id] = fisioterapia
+
+      au < exists ; 2012 ; 1 ; Revista “Fisioterapia & Saúde Funcional Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista “Fisioterapia & Saúde Funcional Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Amazônica ;
+        eissn = 2176-0675
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = amazonica
+
+      au < exists ; 2012 ; 1 ; Amazônica Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Amazônica Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Hendu ;
+        issn = 2236-6334
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = hendu
+
+      au < exists ; 2010 ; 1 ; Hendu Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Hendu Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Hendu Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Hendu Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Novos Cadernos NAEA ;
+        issn = 1516-6481 ;
+        eissn = 2179-7536
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = ncn
+
+      au < exists ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
+      au < exists ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
+      au < exists ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
+      au < exists ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
+      au < exists ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
+      au < exists ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
+      au < exists ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
+      au < exists ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
+      au < exists ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
+      au < exists ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
+      au < exists ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
+      au < exists ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
+      au < exists ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
+      au < exists ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
+      au < exists ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
+      au < expected ; 2013 ; 16 ; Novos Cadernos NAEA Volume 16 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REBAC ;
+        issn = 1807-8338
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = rebac
+
+      au < exists ; 2005 ; 1 ; REBAC Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; REBAC Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; REBAC Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; REBAC Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; REBAC Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; REBAC Volume 6 ; 2010 >
+      au < expected ; 2011 ; 7 ; REBAC Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; REBAC Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; REBAC Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ver a Educação ;
+        issn = 1413-1498
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = rve
+
+      au < exists ; 2011 ; 1 ; Revista Ver a Educação Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Ver a Educação Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Ver a Educação Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sociedade, Contabilidade e Gestão ;
+        issn = 1982-73421
+      >
+
+      comment[publisher] = Universidade Federal do Rio de Janeiro
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = ufrj
+
+      au < exists ; 2006 ; 1 ; Sociedade, Contabilidade e Gestão Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Sociedade, Contabilidade e Gestão Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Sociedade, Contabilidade e Gestão Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Sociedade, Contabilidade e Gestão Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Sociedade, Contabilidade e Gestão Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Sociedade, Contabilidade e Gestão Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Sociedade, Contabilidade e Gestão Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Sociedade, Contabilidade e Gestão Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ambiente Contábil ;
+        issn = 2176-9036
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = Ambiente
+
+      au < exists ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Acta Scientiae ;
+        issn = 1517-4492 ;
+        eissn = 2178-7727
+      >
+
+      comment[publisher] = Universidade Luterana do Brasil
+      param[base_url] = http://www.periodicos.ulbra.br/
+      param[journal_id] = acta
+
+      au < exists ; 1999 ; 1 ; Acta Scientiae Volume 1 ; 1999 >
+      au < exists ; 2000 ; 2 ; Acta Scientiae Volume 2 ; 2000 >
+      au < exists ; 2001 ; 3 ; Acta Scientiae Volume 3 ; 2001 >
+      au < exists ; 2002 ; 4 ; Acta Scientiae Volume 4 ; 2002 >
+      au < exists ; 2003 ; 5 ; Acta Scientiae Volume 5 ; 2003 >
+      au < exists ; 2004 ; 6 ; Acta Scientiae Volume 6 ; 2004 >
+      au < exists ; 2005 ; 7 ; Acta Scientiae Volume 7 ; 2005 >
+      au < exists ; 2006 ; 8 ; Acta Scientiae Volume 8 ; 2006 >
+      au < exists ; 2007 ; 9 ; Acta Scientiae Volume 9 ; 2007 >
+      au < exists ; 2008 ; 10 ; Acta Scientiae Volume 10 ; 2008 >
+      au < exists ; 2009 ; 11 ; Acta Scientiae Volume 11 ; 2009 >
+      au < exists ; 2010 ; 12 ; Acta Scientiae Volume 12 ; 2010 >
+      au < exists ; 2011 ; 13 ; Acta Scientiae Volume 13 ; 2011 >
+      au < exists ; 2012 ; 14 ; Acta Scientiae Volume 14 ; 2012 >
+      au < expected ; 2013 ; 15 ; Acta Scientiae Volume 15 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Iniciação Científica da ULBRA ;
+        eissn = 2317-4323
+      >
+
+      comment[publisher] = Universidade Luterana do Brasil
+      param[base_url] = http://www.periodicos.ulbra.br/
+      param[journal_id] = ic
+
+      au < exists ; 2010 ; 1 ; Revista de Iniciação Científica da ULBRA Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Iniciação Científica da ULBRA Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Iniciação Científica da ULBRA Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Iniciação Científica da ULBRA Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista CADE ;
+        issn = 2317-3653
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = cade
+
+      au < exists ; 2012 ; 1 ; Revista CADE Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista CADE Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ciências da Religião: História e Sociedade ;
+        issn = 1980-9425
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = cr
+
+      au < exists ; 2003 ; 1 ; Revista Ciências da Religião: História e Sociedade Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Revista Ciências da Religião: História e Sociedade Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Revista Ciências da Religião: História e Sociedade Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Revista Ciências da Religião: História e Sociedade Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Revista Ciências da Religião: História e Sociedade Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Revista Ciências da Religião: História e Sociedade Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Revista Ciências da Religião: História e Sociedade Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Revista Ciências da Religião: História e Sociedade Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Revista Ciências da Religião: História e Sociedade Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Revista Ciências da Religião: História e Sociedade Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista Ciências da Religião: História e Sociedade Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração Mackenzie ;
+        issn = 1518-6776 ;
+        eissn = 1678-6971
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = RAM
+
+      au < exists ; 2000 ; 1 ; Revista de Administração Mackenzie Volume 1 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista de Administração Mackenzie Volume 2 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista de Administração Mackenzie Volume 3 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista de Administração Mackenzie Volume 4 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista de Administração Mackenzie Volume 5 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista de Administração Mackenzie Volume 6 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista de Administração Mackenzie Volume 7 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista de Administração Mackenzie Volume 8 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista de Administração Mackenzie Volume 9 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista de Administração Mackenzie Volume 10 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista de Administração Mackenzie Volume 11 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista de Administração Mackenzie Volume 12 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista de Administração Mackenzie Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista de Administração Mackenzie Volume 14 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Economia Mackenzie ;
+        issn = 1678-5002
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = rem
+
+      au < exists ; 2003 ; 1 ; Revista de Economia Mackenzie Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Revista de Economia Mackenzie Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Revista de Economia Mackenzie Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Revista de Economia Mackenzie Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Revista de Economia Mackenzie Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Revista de Economia Mackenzie Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Revista de Economia Mackenzie Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Revista de Economia Mackenzie Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Revista de Economia Mackenzie Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Revista de Economia Mackenzie Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista de Economia Mackenzie Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Direito Mackenzie ;
+        issn = 1517-6851
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = rmd
+
+      au < exists ; 2000 ; 1 ; Revista Direito Mackenzie Volume 1 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista Direito Mackenzie Volume 2 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista Direito Mackenzie Volume 3 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista Direito Mackenzie Volume 4 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista Direito Mackenzie Volume 5 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista Direito Mackenzie Volume 6 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista Direito Mackenzie Volume 7 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista Direito Mackenzie Volume 8 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista Direito Mackenzie Volume 9 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista Direito Mackenzie Volume 10 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista Direito Mackenzie Volume 11 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista Direito Mackenzie Volume 12 ; 2011 >
+      au < expected ; 2012 ; 13 ; Revista Direito Mackenzie Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista Direito Mackenzie Volume 14 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Mackenzie de Educação Física e Esporte ;
+        issn = 1678-2577 ;
+        eissn = 1980-6892
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = remef
+
+      au < exists ; 2002 ; 1 ; Revista Mackenzie de Educação Física e Esporte Volume 1 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Mackenzie de Educação Física e Esporte Volume 2 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Mackenzie de Educação Física e Esporte Volume 3 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Mackenzie de Educação Física e Esporte Volume 4 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Mackenzie de Educação Física e Esporte Volume 5 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Mackenzie de Educação Física e Esporte Volume 6 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Mackenzie de Educação Física e Esporte Volume 7 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Mackenzie de Educação Física e Esporte Volume 8 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Mackenzie de Educação Física e Esporte Volume 9 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Mackenzie de Educação Física e Esporte Volume 10 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Mackenzie de Educação Física e Esporte Volume 11 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Mackenzie de Educação Física e Esporte Volume 12 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Mackenzie de Engenharia e Computação ;
+        issn = 2236-9813
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = rmec
+
+      au < exists ; 2000 ; 1 ; Revista Mackenzie de Engenharia e Computação Volume 1 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista Mackenzie de Engenharia e Computação Volume 2 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista Mackenzie de Engenharia e Computação Volume 3 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista Mackenzie de Engenharia e Computação Volume 4 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista Mackenzie de Engenharia e Computação Volume 5 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista Mackenzie de Engenharia e Computação Volume 6 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista Mackenzie de Engenharia e Computação Volume 7 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista Mackenzie de Engenharia e Computação Volume 8 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista Mackenzie de Engenharia e Computação Volume 9 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista Mackenzie de Engenharia e Computação Volume 10 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista Mackenzie de Engenharia e Computação Volume 11 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista Mackenzie de Engenharia e Computação Volume 12 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista Mackenzie de Engenharia e Computação Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista Mackenzie de Engenharia e Computação Volume 14 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Todas as Letras ;
+        eissn = 1980-6914
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = tl
+
+      au < exists ; 1999 ; 1 ; Revista Todas as Letras Volume 1 ; 1999 >
+      au < exists ; 2000 ; 2 ; Revista Todas as Letras Volume 2 ; 2000 >
+      au < exists ; 2001 ; 3 ; Revista Todas as Letras Volume 3 ; 2001 >
+      au < exists ; 2002 ; 4 ; Revista Todas as Letras Volume 4 ; 2002 >
+      au < exists ; 2003 ; 5 ; Revista Todas as Letras Volume 5 ; 2003 >
+      au < exists ; 2004 ; 6 ; Revista Todas as Letras Volume 6 ; 2004 >
+      au < exists ; 2005 ; 7 ; Revista Todas as Letras Volume 7 ; 2005 >
+      au < exists ; 2006 ; 8 ; Revista Todas as Letras Volume 8 ; 2006 >
+      au < exists ; 2007 ; 9 ; Revista Todas as Letras Volume 9 ; 2007 >
+      au < exists ; 2008 ; 10 ; Revista Todas as Letras Volume 10 ; 2008 >
+      au < exists ; 2009 ; 11 ; Revista Todas as Letras Volume 11 ; 2009 >
+      au < exists ; 2010 ; 12 ; Revista Todas as Letras Volume 12 ; 2010 >
+      au < exists ; 2011 ; 13 ; Revista Todas as Letras Volume 13 ; 2011 >
+      au < exists ; 2012 ; 14 ; Revista Todas as Letras Volume 14 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista Todas as Letras Volume 15 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Trama Interdisciplinar ;
+        issn = 2177-5672
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://editorarevistas.mackenzie.br/
+      param[journal_id] = tint
+
+      au < exists ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Atos de Pesquisa em Educação ;
+        eissn = 1809-0354
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = atosdepesquisa
+
+      au < exists ; 2006 ; 1 ; Atos de Pesquisa em Educação Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Atos de Pesquisa em Educação Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Atos de Pesquisa em Educação Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Atos de Pesquisa em Educação Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Atos de Pesquisa em Educação Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Atos de Pesquisa em Educação Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Atos de Pesquisa em Educação Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Atos de Pesquisa em Educação Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Mathematical Modelling and Applicatio ;
+        issn = 2178-2423
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = modelling
+
+      au < exists ; 2009 ; 1 ; Journal of Mathematical Modelling and Applicatio Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Journal of Mathematical Modelling and Applicatio Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Journal of Mathematical Modelling and Applicatio Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Journal of Mathematical Modelling and Applicatio Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Journal of Mathematical Modelling and Applicatio Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Linguagens - Revista de Letras, Artes e Comunicação ;
+        eissn = 1981-9943
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = linguagens
+
+      au < exists ; 2007 ; 1 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Linguagens - Revista de Letras, Artes e Comunicação Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Modelagem na Educação Matemática ;
+        eissn = 2178-5422
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = modelagem
+
+      au < exists ; 2010 ; 1 ; Modelagem na Educação Matemática Volume 1 ; 2010 >
+      au < expected ; 2011 ; 2 ; Modelagem na Educação Matemática Volume 2 ; 2011 >
+      au < expected ; 2012 ; 3 ; Modelagem na Educação Matemática Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Modelagem na Educação Matemática Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = O Teatro Transcende ;
+        eissn = 2236-6644
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = oteatrotranscende
+
+      au < exists ; 2009 ; 1 ; O Teatro Transcende Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; O Teatro Transcende Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; O Teatro Transcende Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; O Teatro Transcende Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; O Teatro Transcende Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Desenvolvimento Regional ;
+        eissn = 2317-5443
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rbdr
+
+      au < expected ; 2013 ; 1 ; Revista Brasileira de Desenvolvimento Regional Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos Ambientais ;
+        eissn = 1983-1501
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rea
+
+      au < exists ; 2007 ; 1 ; Revista de Estudos Ambientais Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista de Estudos Ambientais Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista de Estudos Ambientais Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista de Estudos Ambientais Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista de Estudos Ambientais Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista de Estudos Ambientais Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista de Estudos Ambientais Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Negócios ;
+        eissn = 1980-4431
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rn
+
+      au < exists ; 1996 ; 1 ; Revista de Negócios Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista de Negócios Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Revista de Negócios Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Revista de Negócios Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Revista de Negócios Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Revista de Negócios Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Revista de Negócios Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Revista de Negócios Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Revista de Negócios Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Revista de Negócios Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Revista de Negócios Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Revista de Negócios Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Revista de Negócios Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Revista de Negócios Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Revista de Negócios Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Revista de Negócios Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Revista de Negócios Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Revista de Negócios Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Dynamis ;
+        eissn = 1982-4866
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = dynamis
+
+      au < exists ; 2007 ; 1 ; Revista Dynamis Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Dynamis Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Dynamis Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Dynamis Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Dynamis Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Dynamis Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Dynamis Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Jurídica ;
+        eissn = 1982-4858
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = juridica
+
+      au < exists ; 2007 ; 1 ; Revista Jurídica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Jurídica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Jurídica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Jurídica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Jurídica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Jurídica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Jurídica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Universo Contábil ;
+        eissn = 1809-3337
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = universocontabil
+
+      au < exists ; 2005 ; 1 ; Revista Universo Contábil Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Universo Contábil Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Universo Contábil Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Universo Contábil Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Universo Contábil Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Universo Contábil Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Universo Contábil Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Universo Contábil Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Universo Contábil Volume 9 ; 2013 >
+
+  }
+
+}
