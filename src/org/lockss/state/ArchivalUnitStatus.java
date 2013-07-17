@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.116 2013-03-06 08:06:55 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.116.12.1 2013-07-17 10:12:47 easyonthemayo Exp $
  */
 
 /*
@@ -1190,6 +1190,17 @@ public class ArchivalUnitStatus
 		       AdminServletManager.SERVLET_LIST_OBJECTS,
 		       PropUtil.fromArgs("type", "files",
 					 "auid", au.getAuId())));
+
+      if (AdminServletManager.SERVLET_LIST_FILE_TYPES.isEnabled(theDaemon)
+          /*&& FitsUtil.areAuFilesAvailable(au)*/
+          ) {
+        addLink(urlLinks,
+            new StatusTable
+                .SrvLink("File Types",
+                AdminServletManager.SERVLET_LIST_FILE_TYPES,
+                PropUtil.fromArgs("auid", au.getAuId())));
+      }
+
       if (au.getArchiveFileTypes() != null) {
 	addLink(urlLinks,
 		new StatusTable

@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: beans.xml,v 1.3 2013-03-22 17:32:46 fergaloy-sf Exp $
+ $Id: beans.xml,v 1.3.8.1 2013-07-17 10:12:46 easyonthemayo Exp $
  Web services endpoint definitions.
 ========================================================================
 
@@ -40,12 +40,16 @@ in this Software without prior written authorization from Stanford University.
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
-  <jaxws:endpoint id="daemonStatusService" 
-    implementor="org.lockss.ws.status.DaemonStatusServiceImpl" 
+  <jaxws:endpoint id="daemonStatusService"
+    implementor="org.lockss.ws.status.DaemonStatusServiceImpl"
     address="/DaemonStatusService" />
 
-  <jaxws:endpoint id="counterReportsService" 
-    implementor="org.lockss.ws.reports.CounterReportsServiceImpl" 
+  <jaxws:endpoint id="counterReportsService"
+    implementor="org.lockss.ws.reports.CounterReportsServiceImpl"
     address="/CounterReportsService" />
+
+  <jaxws:endpoint id="fitsService"
+    implementor="org.lockss.ws.fits.FitsServiceImpl"
+    address="/FitsService" />
 
 </beans>

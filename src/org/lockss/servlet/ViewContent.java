@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.26 2013-01-16 08:07:51 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.26.14.1 2013-07-17 10:12:47 easyonthemayo Exp $
  */
 
 /*
@@ -35,8 +35,6 @@ package org.lockss.servlet;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.util.regex.Pattern;
 
 import org.mortbay.http.*;
 import org.mortbay.html.*;
@@ -199,6 +197,15 @@ public class ViewContent extends LockssServlet {
     Page page = newPage();
     layoutErrorBlock(page);
 
+    addCssLocations(page);
+    addJavascriptLocations(page);
+    Script fitsScript = new Script(String.format(
+        //"$(document).ready(function(){ loadTypeIntoElement('%s','%s','%s','%s') });",
+        "$(document).ready(function(){ updateWithFitsReport('%s','%s','%s','%s') });",
+        FITS_DESC_ELEMENT_ID, FITS_TOOLS_ELEMENT_ID, auid, url
+    ));
+    page.add(fitsScript);
+
     Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     tbl.newRow();
     tbl.newCell("align=left");
@@ -210,14 +217,23 @@ public class ViewContent extends LockssServlet {
     tbl.add("URL:&nbsp;");
     tbl.newCell("align=left");
     tbl.add(url);
+    // XXX I've removed the following that started a new table, for consistency
+    // of layout
+    /*
     page.add("<font size=+1>");
     page.add(tbl);
     page.add("</font>");
     tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-//     tbl.newRow();
-//     tbl.newCell("colspan=2 align=center");
-    addPropRow(tbl, "Content Type",
+    //tbl.newRow();
+    //tbl.newCell("colspan=2 align=center");
+    */
+    addPropRow(tbl, "Header Content Type",
 	       props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+
+    String spinner = "<img src='/images/ajax-loader.gif'/>";
+    addPropRowWithValueId(tbl, "FITS Content Type", "<span class=''>Analysing ...</span> "+spinner,
+        FITS_DESC_ELEMENT_ID);
+
     addPropRow(tbl, "Length", clen);
     try {
       String versionStr = Integer.toString(cu.getVersion());
@@ -309,6 +325,15 @@ public class ViewContent extends LockssServlet {
     tbl.add(val);
   }
 
+  void addPropRowWithValueId(Table tbl, String prop, String val, String valElementId) {
+    tbl.newRow();
+    tbl.newCell("align=left");
+    tbl.add(prop);
+    tbl.add(":&nbsp;");
+    tbl.newCell("align=left id="+valElementId);
+    tbl.add(val);
+  }
+
   void displayContent() {
     if (log.isDebug3()) {
       log.debug3("props: " + props);
@@ -369,4 +394,15 @@ public class ViewContent extends LockssServlet {
     page.add(comp);
     endPage(page);
   }
+
+  protected void addJavascriptLocations(Page page) {
+    addJavaScriptLocation(page, "js/jquery.min-1.8.js");
+    addJavaScriptLocation(page, "js/fitsWebService.js");
+    addJavaScriptLocation(page, "js/bootstrap.min.js");
+  }
+  /** Name of the element to be updated with the FITS content type description. */
+  private static String FITS_DESC_ELEMENT_ID = "fitsType";
+  /** Name of the element to be updated with the FITS tools summary. */
+  private static String FITS_TOOLS_ELEMENT_ID = "fitsTools";
+
 }

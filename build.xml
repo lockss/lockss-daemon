@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.346 2013-07-10 21:57:28 fergaloy-sf Exp $
+ $Id: build.xml,v 1.346.2.1 2013-07-17 10:12:38 easyonthemayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -396,8 +396,62 @@ Args:
     <pathelement path="${log4j.jar}" />
   </path>
 
+  <!-- FITS jars -->
+  <property name="saxpath.jar" value="${lib}/fits/saxpath.jar" />
+  <property name="saxon9.jar" value="${lib}/fits/saxon9.jar" />
+  <property name="commons-configuration.jar" value="${lib}/fits/commons-configuration-1.5.jar" />
+  <property name="fits.jar" value="${lib}/fits/fits.jar" />
+  <property name="jhove-module.jar" value="${lib}/fits/jhove/jhove-module.jar" />
+  <property name="JhoveApp.jar" value="${lib}/fits/jhove/JhoveApp.jar" />
+  <property name="jhove.jar" value="${lib}/fits/jhove/jhove.jar" />
+  <property name="jhove-handler.jar" value="${lib}/fits/jhove/jhove-handler.jar" />
+  <property name="jaxen-jdom.jar" value="${lib}/fits/jaxen-jdom.jar" />
+  <property name="saxon9-jdom.jar" value="${lib}/fits/saxon9-jdom.jar" />
+  <property name="saxon9-dom.jar" value="${lib}/fits/saxon9-dom.jar" />
+  <property name="woodstox-core-lgpl.jar" value="${lib}/fits/woodstox-core-lgpl-4.0.7.jar" />
+  <property name="droid.jar" value="${lib}/fits/droid/droid.jar" />
+  <property name="AllLibraries.jar" value="${lib}/fits/droid/AllLibraries.jar" />
+  <property name="jh.jar" value="${lib}/fits/droid/jh.jar" />
+  <property name="looks.jar" value="${lib}/fits/droid/looks-1.2.2.jar" />
+  <property name="soap.jar" value="${lib}/fits/droid/soap.jar" />
+  <property name="jsr173_1.0_api.jar" value="${lib}/fits/droid/jsr173_1.0_api.jar" />
+  <property name="jaxb-api.jar" value="${lib}/fits/droid/jaxb-api.jar" />
+  <property name="jdom.jar" value="${lib}/fits/jdom.jar" />
+  <property name="ots.jar" value="${lib}/fits/ots.jar" />
+  <property name="stax2-api.jar" value="${lib}/fits/stax2-api-3.0.1.jar" />
+  <property name="jaxen-core.jar" value="${lib}/fits/jaxen-core.jar" />
+
+  <!-- FITS classpath -->
+  <path id="fits.classpath">
+    <!-- FITS-only jars -->
+    <pathelement path="${saxpath.jar}" />
+    <pathelement path="${saxon9.jar}" />
+    <pathelement path="${commons-configuration.jar}" />
+    <pathelement path="${fits.jar}" />
+    <pathelement path="${jhove-module.jar}" />
+    <pathelement path="${JhoveApp.jar}" />
+    <pathelement path="${jhove.jar}" />
+    <pathelement path="${jhove-handler.jar}" />
+    <pathelement path="${jaxen-jdom.jar}" />
+    <pathelement path="${saxon9-jdom.jar}" />
+    <pathelement path="${saxon9-dom.jar}" />
+    <pathelement path="${woodstox-core-lgpl.jar}" />
+    <pathelement path="${droid.jar}" />
+    <pathelement path="${AllLibraries.jar}" />
+    <pathelement path="${jh.jar}" />
+    <pathelement path="${looks.jar}" />
+    <pathelement path="${soap.jar}" />
+    <pathelement path="${jsr173_1.0_api.jar}" />
+    <pathelement path="${jaxb-api.jar}" />
+    <pathelement path="${jdom.jar}" />
+    <pathelement path="${ots.jar}" />
+    <pathelement path="${stax2-api.jar}" />
+    <pathelement path="${jaxen-core.jar}" />
+  </path>
+
   <!--  Classpaths -->
   <path id="compile.classpath">
+    <path refid="fits.classpath" />
     <pathelement path="${commons.lang.jar}" />
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />

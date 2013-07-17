@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.38 2013-06-19 23:08:26 fergaloy-sf Exp $
+ * $Id: AdminServletManager.java,v 1.38.2.1 2013-07-17 10:12:47 easyonthemayo Exp $
  */
 
 /*
@@ -405,6 +405,18 @@ public class AdminServletManager extends BaseServletManager {
    OpenUrlQuery.DEFAULT_ENABLE_QUERY);
    }};*/
 
+  public static final ServletDescr SERVLET_LIST_FILE_TYPES =
+      new ServletDescr(ListAuFileTypes.SERVLET_NAME,
+          ListAuFileTypes.class,
+          "List File Types",
+          /*"ListFileTypes",
+          (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),*/
+          "List file types of AU contents") {
+        public boolean isEnabled(LockssDaemon daemon) {
+          return CurrentConfig.getBooleanParam(ListAuFileTypes.PARAM_ENABLE_FILE_TYPES,
+              ListAuFileTypes.DEFAULT_ENABLE_FILE_TYPES);
+        }};
+
   protected static final ServletDescr LINK_LOGS =
           new ServletDescr(null,
           null,
@@ -550,6 +562,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_LIST_HOLDINGS,
     SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
+      SERVLET_LIST_FILE_TYPES,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     LINK_LOGS,
@@ -591,6 +604,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_LIST_HOLDINGS,
     SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
+      SERVLET_LIST_FILE_TYPES,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     LINK_LOGS,
@@ -633,6 +647,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_LIST_HOLDINGS,
     SERVLET_COUNTER_REPORTS,
     //SERVLET_OPENURL_QUERY,
+      SERVLET_LIST_FILE_TYPES,
     LINK_LOGS,
     LINK_ISOS,
     LINK_EXPORTS,
