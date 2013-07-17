@@ -186,12 +186,11 @@
     >
 
     param[journal_id] = revislav
-    comment[notReady] = Not compatible with current OJS2 plugin
 
-    au < notReady ; 2008 ; 1 ; Revista Digital do LAV Volume 1 ; 1 >
-    au < notReady ; 2009 ; 2 ; Revista Digital do LAV Volume 2 ; 2 >
-    au < notReady ; 2010 ; 3 ; Revista Digital do LAV Volume 3 ; 3 >
-    au < notReady ; 2011 ; 4 ; Revista Digital do LAV Volume 4 ; 4 >
+    au < testing ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 >
+    au < testing ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 >
+    au < testing ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 >
+    au < testing ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 >
     au < released ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 >
 
