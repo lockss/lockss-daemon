@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.38 2011-07-07 05:23:04 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.39 2013-07-17 22:54:46 barry409 Exp $
  */
 
 /*
@@ -201,6 +201,13 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_PEER_ADDRESS_MAP = PREFIX + "peerAddressMap";
 
   /**
+   * The max size of the LRU cache from AuId to agreement map.
+   */
+  public static final String PARAM_AGREE_MAPS_CACHE_MAX
+    = PREFIX + "agreeMapsCache.max";
+  public static final int DEFAULT_AGREE_MAPS_CACHE_MAX = 50;
+
+  /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
    */
   static LockssRandom theRandom = new LockssRandom();
@@ -265,11 +272,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private boolean isMergeRestoredAgreemMap = DEFAULT_MERGE_RESTORED_AGREE_MAP;
 
   /**
-   * <p>Maps ArchivalUnit, by auid, to its agreement map.  Each agreement
-   * map in tern maps a PeerIdentity to its corresponding IdentityAgreement
-   * object.</p>
+   * <p>Maps ArchivalUnit, by auid, to its agreement map.  Each
+   * agreement map in turn maps a PeerIdentity to its corresponding
+   * IdentityAgreement object. The LRU cache allows IdentityAgreement
+   * objects to be collected when they are no longer in use.</p>
    */
-  private Map<String,Map> agreeMaps = new HashMap();
+  private final UniqueRefLruCache agreeMapsCache =
+    new UniqueRefLruCache(ConfigManager.getCurrentConfig().
+      getInt(PARAM_AGREE_MAPS_CACHE_MAX, DEFAULT_AGREE_MAPS_CACHE_MAX));
 
   private float minPercentPartialAgreement = DEFAULT_MIN_PERCENT_AGREEMENT;
 
@@ -1316,12 +1326,15 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   protected Map findAuAgreeMap(ArchivalUnit au) {
     Map map;
-    synchronized (agreeMaps) {
-      map = (Map)agreeMaps.get(au.getAuId());
+    // agreeMapsCache's methods are synchronized, but this code needs
+    // to check and store an unitialized HashMap atomically, so needs
+    // to synchronize.
+    synchronized (agreeMapsCache) {
+      map = (Map)agreeMapsCache.get(au.getAuId());
       if (map == null) {
         map = new HashMap();
         map.put(AGREE_MAP_INIT_KEY, "true");
-        agreeMaps.put(au.getAuId(), map);
+        agreeMapsCache.put(au.getAuId(), map);
       }
     }
     synchronized (map) {
