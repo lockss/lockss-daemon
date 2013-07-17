@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.25 2013-07-14 03:05:21 dshr Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.26 2013-07-17 22:42:42 barry409 Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.io.File;
+import java.io.StringReader;
 import java.util.*;
 
 import junit.framework.Test;
@@ -986,7 +987,58 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertEquals(disagree, idmgr.getDisagreed(mau));
   }
 
+  public void testLoadIdentityAgreementCompat() throws Exception {
+    double epsilon = 0.0001;
+    XStreamSerializer deserializer;
+    IdentityManager.IdentityAgreement identityAgreement;
 
+    String noHintsSerialized =
+      "  <org.lockss.protocol.IdentityManager-IdentityAgreement>\n" +
+      "    <lastAgree>12345</lastAgree>\n" +
+      "    <lastDisagree>67890</lastDisagree>\n" +
+      "    <percentAgreement>0.7</percentAgreement>\n" +
+      "    <highestPercentAgreement>0.8</highestPercentAgreement>\n" +
+      "    <id>TCP:[127.0.0.1]:8805</id>\n" +
+      "  </org.lockss.protocol.IdentityManager-IdentityAgreement>\n";
+    deserializer = new XStreamSerializer();
+    identityAgreement = (IdentityManager.IdentityAgreement)
+      deserializer.deserialize(new StringReader(noHintsSerialized));
+
+    assertEquals(12345, identityAgreement.getLastAgree());
+    assertEquals(67890, identityAgreement.getLastDisagree());
+    assertEquals(0.7, identityAgreement.getPercentAgreement(), epsilon);
+    assertEquals(0.8, identityAgreement.getHighestPercentAgreement(), epsilon);
+    assertEquals("TCP:[127.0.0.1]:8805", identityAgreement.getId());
+
+    // No hints in the serialized structure, so -1.0 provided.
+    assertEquals(-1.0, identityAgreement.getPercentAgreementHint(), epsilon);
+    assertEquals(-1.0, identityAgreement.getHighestPercentAgreementHint(),
+		 epsilon);
+
+    String haveHintsSerialized =
+      "  <org.lockss.protocol.IdentityManager-IdentityAgreement>\n" +
+      "    <lastAgree>12345</lastAgree>\n" +
+      "    <lastDisagree>67890</lastDisagree>\n" +
+      "    <percentAgreement>0.7</percentAgreement>\n" +
+      "    <highestPercentAgreement>0.8</highestPercentAgreement>\n" +
+      "    <percentAgreementHint>0.4</percentAgreementHint>\n" +
+      "    <highestPercentAgreementHint>0.5</highestPercentAgreementHint>\n" +
+      "    <haveHints>true</haveHints>\n" +
+      "    <id>TCP:[127.0.0.1]:8805</id>\n" +
+      "  </org.lockss.protocol.IdentityManager-IdentityAgreement>\n";
+    deserializer = new XStreamSerializer();
+    identityAgreement = (IdentityManager.IdentityAgreement)
+      deserializer.deserialize(new StringReader(haveHintsSerialized));
+
+    assertEquals(12345, identityAgreement.getLastAgree());
+    assertEquals(67890, identityAgreement.getLastDisagree());
+    assertEquals(0.7, identityAgreement.getPercentAgreement(), epsilon);
+    assertEquals(0.8, identityAgreement.getHighestPercentAgreement(), epsilon);
+    assertEquals(0.4, identityAgreement.getPercentAgreementHint(), epsilon);
+    assertEquals(0.5, identityAgreement.getHighestPercentAgreementHint(),
+		 epsilon);
+    assertEquals("TCP:[127.0.0.1]:8805", identityAgreement.getId());
+  }
 
   /**
    * Tests that the IP address info fed to the IdentityManagerStatus object
