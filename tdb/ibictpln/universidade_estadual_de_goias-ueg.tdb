@@ -227,9 +227,9 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = revista_administracao
 
-      au < exists ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 >
+      au < manifest ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 >
+      au < manifest ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 >
+      au < manifest ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista de Administração da UEG Volume 4 ; 2013 >
 
   }

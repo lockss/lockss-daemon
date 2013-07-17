@@ -65,8 +65,8 @@
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = matematica
 
-      au < exists ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
+      au < manifest ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
+      au < manifest ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
       au < exists ; 2011 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2011 >
       au < exists ; 2012 ; 4 ; Revista Eletrônica de Matemática Volume 4 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Eletrônica de Matemática Volume 5 ; 2013 >

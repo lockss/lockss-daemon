@@ -158,7 +158,7 @@
       param[base_url] = http://www.periodicos.unir.br/
       param[journal_id] = praxis
 
-      au < exists ; 2012 ; 1 ; Revista Práxis Pedagógica Volume 1 ; 2012 >
+      au < manifest ; 2012 ; 1 ; Revista Práxis Pedagógica Volume 1 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista Práxis Pedagógica Volume 2 ; 2013 >
 
   }

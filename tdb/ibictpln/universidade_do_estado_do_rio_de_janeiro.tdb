@@ -17,14 +17,14 @@
       param[base_url] = http://www.periodicos.proped.pro.br/
       param[journal_id] = childhood
 
-      au < exists ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Childhood & Philosophy Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
+      au < manifest ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
+      au < manifest ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
+      au < manifest ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
+      au < manifest ; 2008 ; 4 ; Childhood & Philosophy Volume 4 ; 2008 >
+      au < manifest ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
+      au < manifest ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
+      au < manifest ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
+      au < manifest ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
       au < expected ; 2013 ; 9 ; Childhood & Philosophy Volume 9 ; 2013 >
 
   }
@@ -73,19 +73,19 @@
       param[base_url] = http://www.periodicos.proped.pro.br/
       param[journal_id] = revistateias
 
-      au < exists ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
-      au < exists ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
-      au < exists ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
-      au < exists ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
-      au < exists ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
-      au < exists ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
-      au < exists ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
-      au < exists ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
-      au < exists ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
-      au < exists ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
-      au < exists ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
-      au < exists ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
-      au < exists ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
+      au < manifest ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
+      au < manifest ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
+      au < manifest ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
+      au < manifest ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
+      au < manifest ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
+      au < manifest ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
+      au < manifest ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
+      au < manifest ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
+      au < manifest ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
+      au < manifest ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
+      au < manifest ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
+      au < manifest ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
+      au < manifest ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista Teias Volume 14 ; 2013 >
 
   }
