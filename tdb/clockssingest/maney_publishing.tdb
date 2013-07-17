@@ -4590,8 +4590,6 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; status2 ; year ; name ; param[volume_name] >
     
-    comment[notReady] = crawl failure, can't fetch permission page
-
     au < manifest ; exists ; 1982-1983 ; T'ang Studies Volume 1982 ; 1982 > 
     au < manifest ; exists ; 1984 ; T'ang Studies Volume 1984 ; 1984 > 
     au < manifest ; exists ; 1985 ; T'ang Studies Volume 1985 ; 1985 > 
@@ -4615,7 +4613,7 @@
     au < manifest ; exists ; 2009 ; T'ang Studies Volume 27 ; 27 > 
     au < released ; crawling ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
     au < released ; crawling ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
-    au < notReady ; exists ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
+    au < released ; manifest ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
     au < expected ; exists ; 2013 ; T'ang Studies Volume 2013 ; 2013 > 
 
   }
