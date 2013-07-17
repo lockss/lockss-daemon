@@ -1,0 +1,292 @@
+{
+  publisher <
+    name = Fundação Getúlio Vargas
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Boletim do Centro de Pesquisas Administrativas da EBAP ;
+        issn = 0101-1871
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = boletimebap
+
+      au < exists ; 1964 ; 1 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 1 ; 1964 >
+      au < exists ; 1965 ; 2 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 2 ; 1965 >
+      au < exists ; 1966 ; 3 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 3 ; 1966 >
+      au < exists ; 1967 ; 4 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 4 ; 1967 >
+      au < expected ; 1968 ; 5 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 5 ; 1968 >
+      au < expected ; 1969 ; 6 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 6 ; 1969 >
+      au < expected ; 1970 ; 7 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 7 ; 1970 >
+      au < expected ; 1971 ; 8 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 8 ; 1971 >
+      au < expected ; 1972 ; 9 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 9 ; 1972 >
+      au < expected ; 1973 ; 10 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 10 ; 1973 >
+      au < expected ; 1974 ; 11 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 11 ; 1974 >
+      au < expected ; 1975 ; 12 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 12 ; 1975 >
+      au < expected ; 1976 ; 13 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 13 ; 1976 >
+      au < expected ; 1977 ; 14 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 14 ; 1977 >
+      au < expected ; 1978 ; 15 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 15 ; 1978 >
+      au < expected ; 1979 ; 16 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 16 ; 1979 >
+      au < expected ; 1980 ; 17 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 17 ; 1980 >
+      au < expected ; 1981 ; 18 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 18 ; 1981 >
+      au < expected ; 1982 ; 19 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 19 ; 1982 >
+      au < expected ; 1983 ; 20 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 20 ; 1983 >
+      au < expected ; 1984 ; 21 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 21 ; 1984 >
+      au < expected ; 1985 ; 22 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 22 ; 1985 >
+      au < expected ; 1986 ; 23 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 23 ; 1986 >
+      au < expected ; 1987 ; 24 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 24 ; 1987 >
+      au < expected ; 1988 ; 25 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 25 ; 1988 >
+      au < expected ; 1989 ; 26 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 26 ; 1989 >
+      au < expected ; 1990 ; 27 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 27 ; 1990 >
+      au < expected ; 1991 ; 28 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 28 ; 1991 >
+      au < expected ; 1992 ; 29 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 29 ; 1992 >
+      au < expected ; 1993 ; 30 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 30 ; 1993 >
+      au < expected ; 1994 ; 31 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 31 ; 1994 >
+      au < expected ; 1995 ; 32 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 32 ; 1995 >
+      au < expected ; 1996 ; 33 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 33 ; 1996 >
+      au < expected ; 1997 ; 34 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 34 ; 1997 >
+      au < expected ; 1998 ; 35 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 35 ; 1998 >
+      au < expected ; 1999 ; 36 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 36 ; 1999 >
+      au < expected ; 2000 ; 37 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 37 ; 2000 >
+      au < expected ; 2001 ; 38 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 38 ; 2001 >
+      au < expected ; 2002 ; 39 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 39 ; 2002 >
+      au < expected ; 2003 ; 40 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 40 ; 2003 >
+      au < expected ; 2004 ; 41 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 41 ; 2004 >
+      au < expected ; 2005 ; 42 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 42 ; 2005 >
+      au < expected ; 2006 ; 43 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 43 ; 2006 >
+      au < expected ; 2007 ; 44 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 44 ; 2007 >
+      au < expected ; 2008 ; 45 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 45 ; 2008 >
+      au < expected ; 2009 ; 46 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 46 ; 2009 >
+      au < expected ; 2010 ; 47 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 47 ; 2010 >
+      au < expected ; 2011 ; 48 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 48 ; 2011 >
+      au < expected ; 2012 ; 49 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 49 ; 2012 >
+      au < expected ; 2013 ; 50 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 50 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Review of Finance  ;
+        issn = 1679-0731 ;
+        eissn = 1984-5146
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = rbfin
+
+      au < exists ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 >
+      au < exists ; 2004 ; 2 ; Brazilian Review of Finance  Volume 2 ; 2004 >
+      au < exists ; 2005 ; 3 ; Brazilian Review of Finance  Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Brazilian Review of Finance  Volume 4 ; 2006 >
+      au < exists ; 2007 ; 5 ; Brazilian Review of Finance  Volume 5 ; 2007 >
+      au < exists ; 2008 ; 6 ; Brazilian Review of Finance  Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Brazilian Review of Finance  Volume 7 ; 2009 >
+      au < exists ; 2010 ; 8 ; Brazilian Review of Finance  Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Brazilian Review of Finance  Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Brazilian Review of Finance  Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Brazilian Review of Finance  Volume 11 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos Gestão Pública e Cidadania ;
+        issn = 2236-5710
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = cgpc
+
+      au < exists ; 2010 ; 1 ; Cadernos Gestão Pública e Cidadania Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Cadernos Gestão Pública e Cidadania Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Cadernos Gestão Pública e Cidadania Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Cadernos Gestão Pública e Cidadania Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GVcasos ;
+        eissn = 2179-135X
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = gvcasos
+
+      au < exists ; 2010 ; 1 ; GVcasos Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; GVcasos Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; GVcasos Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; GVcasos Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Acadêmica Observatório de Inovação do Turismo ;
+        issn = 1980-6965
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = oit
+
+      au < exists ; 2006 ; 1 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração Pública ;
+        issn = 0034-7612
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = rap
+
+      au < exists ; 1967 ; 1 ; Revista de Administração Pública Volume 1 ; 1967 >
+      au < exists ; 1968 ; 2 ; Revista de Administração Pública Volume 2 ; 1968 >
+      au < exists ; 1969 ; 3 ; Revista de Administração Pública Volume 3 ; 1969 >
+      au < exists ; 1970 ; 4 ; Revista de Administração Pública Volume 4 ; 1970 >
+      au < exists ; 1971 ; 5 ; Revista de Administração Pública Volume 5 ; 1971 >
+      au < exists ; 1972 ; 6 ; Revista de Administração Pública Volume 6 ; 1972 >
+      au < exists ; 1973 ; 7 ; Revista de Administração Pública Volume 7 ; 1973 >
+      au < exists ; 1974 ; 8 ; Revista de Administração Pública Volume 8 ; 1974 >
+      au < exists ; 1975 ; 9 ; Revista de Administração Pública Volume 9 ; 1975 >
+      au < exists ; 1976 ; 10 ; Revista de Administração Pública Volume 10 ; 1976 >
+      au < exists ; 1977 ; 11 ; Revista de Administração Pública Volume 11 ; 1977 >
+      au < exists ; 1978 ; 12 ; Revista de Administração Pública Volume 12 ; 1978 >
+      au < exists ; 1979 ; 13 ; Revista de Administração Pública Volume 13 ; 1979 >
+      au < exists ; 1980 ; 14 ; Revista de Administração Pública Volume 14 ; 1980 >
+      au < exists ; 1981 ; 15 ; Revista de Administração Pública Volume 15 ; 1981 >
+      au < exists ; 1982 ; 16 ; Revista de Administração Pública Volume 16 ; 1982 >
+      au < exists ; 1983 ; 17 ; Revista de Administração Pública Volume 17 ; 1983 >
+      au < exists ; 1984 ; 18 ; Revista de Administração Pública Volume 18 ; 1984 >
+      au < exists ; 1985 ; 19 ; Revista de Administração Pública Volume 19 ; 1985 >
+      au < exists ; 1986 ; 20 ; Revista de Administração Pública Volume 20 ; 1986 >
+      au < exists ; 1987 ; 21 ; Revista de Administração Pública Volume 21 ; 1987 >
+      au < exists ; 1988 ; 22 ; Revista de Administração Pública Volume 22 ; 1988 >
+      au < exists ; 1989 ; 23 ; Revista de Administração Pública Volume 23 ; 1989 >
+      au < exists ; 1990 ; 24 ; Revista de Administração Pública Volume 24 ; 1990 >
+      au < exists ; 1991 ; 25 ; Revista de Administração Pública Volume 25 ; 1991 >
+      au < exists ; 1992 ; 26 ; Revista de Administração Pública Volume 26 ; 1992 >
+      au < exists ; 1993 ; 27 ; Revista de Administração Pública Volume 27 ; 1993 >
+      au < exists ; 1994 ; 28 ; Revista de Administração Pública Volume 28 ; 1994 >
+      au < exists ; 1995 ; 29 ; Revista de Administração Pública Volume 29 ; 1995 >
+      au < exists ; 1996 ; 30 ; Revista de Administração Pública Volume 30 ; 1996 >
+      au < exists ; 1997 ; 31 ; Revista de Administração Pública Volume 31 ; 1997 >
+      au < exists ; 1998 ; 32 ; Revista de Administração Pública Volume 32 ; 1998 >
+      au < exists ; 1999 ; 33 ; Revista de Administração Pública Volume 33 ; 1999 >
+      au < exists ; 2000 ; 34 ; Revista de Administração Pública Volume 34 ; 2000 >
+      au < exists ; 2001 ; 35 ; Revista de Administração Pública Volume 35 ; 2001 >
+      au < exists ; 2002 ; 36 ; Revista de Administração Pública Volume 36 ; 2002 >
+      au < exists ; 2003 ; 37 ; Revista de Administração Pública Volume 37 ; 2003 >
+      au < exists ; 2004 ; 38 ; Revista de Administração Pública Volume 38 ; 2004 >
+      au < exists ; 2005 ; 39 ; Revista de Administração Pública Volume 39 ; 2005 >
+      au < exists ; 2006 ; 40 ; Revista de Administração Pública Volume 40 ; 2006 >
+      au < exists ; 2007 ; 41 ; Revista de Administração Pública Volume 41 ; 2007 >
+      au < exists ; 2008 ; 42 ; Revista de Administração Pública Volume 42 ; 2008 >
+      au < exists ; 2009 ; 43 ; Revista de Administração Pública Volume 43 ; 2009 >
+      au < exists ; 2010 ; 44 ; Revista de Administração Pública Volume 44 ; 2010 >
+      au < exists ; 2011 ; 45 ; Revista de Administração Pública Volume 45 ; 2011 >
+      au < exists ; 2012 ; 46 ; Revista de Administração Pública Volume 46 ; 2012 >
+      au < expected ; 2013 ; 47 ; Revista de Administração Pública Volume 47 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Estudos Históricos ;
+        issn = 0103-2186 
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = reh
+
+      au < exists ; 1988 ; 1 ; Revista Estudos Históricos Volume 1 ; 1988 >
+      au < exists ; 1989 ; 2 ; Revista Estudos Históricos Volume 2 ; 1989 >
+      au < exists ; 1990 ; 3 ; Revista Estudos Históricos Volume 3 ; 1990 >
+      au < exists ; 1991 ; 4 ; Revista Estudos Históricos Volume 4 ; 1991 >
+      au < exists ; 1992 ; 5 ; Revista Estudos Históricos Volume 5 ; 1992 >
+      au < exists ; 1993 ; 6 ; Revista Estudos Históricos Volume 6 ; 1993 >
+      au < exists ; 1994 ; 7 ; Revista Estudos Históricos Volume 7 ; 1994 >
+      au < exists ; 1995 ; 8 ; Revista Estudos Históricos Volume 8 ; 1995 >
+      au < exists ; 1996 ; 9 ; Revista Estudos Históricos Volume 9 ; 1996 >
+      au < exists ; 1997 ; 10 ; Revista Estudos Históricos Volume 10 ; 1997 >
+      au < exists ; 1998 ; 11 ; Revista Estudos Históricos Volume 11 ; 1998 >
+      au < exists ; 1999 ; 12 ; Revista Estudos Históricos Volume 12 ; 1999 >
+      au < exists ; 2000 ; 13 ; Revista Estudos Históricos Volume 13 ; 2000 >
+      au < exists ; 2001 ; 14 ; Revista Estudos Históricos Volume 14 ; 2001 >
+      au < exists ; 2002 ; 15 ; Revista Estudos Históricos Volume 15 ; 2002 >
+      au < exists ; 2003 ; 16 ; Revista Estudos Históricos Volume 16 ; 2003 >
+      au < exists ; 2004 ; 17 ; Revista Estudos Históricos Volume 17 ; 2004 >
+      au < exists ; 2005 ; 18 ; Revista Estudos Históricos Volume 18 ; 2005 >
+      au < exists ; 2006 ; 19 ; Revista Estudos Históricos Volume 19 ; 2006 >
+      au < exists ; 2007 ; 20 ; Revista Estudos Históricos Volume 20 ; 2007 >
+      au < exists ; 2008 ; 21 ; Revista Estudos Históricos Volume 21 ; 2008 >
+      au < exists ; 2009 ; 22 ; Revista Estudos Históricos Volume 22 ; 2009 >
+      au < exists ; 2010 ; 23 ; Revista Estudos Históricos Volume 23 ; 2010 >
+      au < exists ; 2011 ; 24 ; Revista Estudos Históricos Volume 24 ; 2011 >
+      au < exists ; 2012 ; 25 ; Revista Estudos Históricos Volume 25 ; 2012 >
+      au < expected ; 2013 ; 26 ; Revista Estudos Históricos Volume 26 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ibero-Americana de Estudos Legislativos ;
+        issn = 2179-8419
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = riel
+
+      au < exists ; 2010 ; 1 ; Revista Ibero-Americana de Estudos Legislativos Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ibero-Americana de Estudos Legislativos Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ibero-Americana de Estudos Legislativos Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ibero-Americana de Estudos Legislativos Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Technological Learning and Industrial Innovation Working Paper Series ;
+        issn = 2316-7726
+      >
+
+      comment[publisher] = Fundação Getúlio Vargas
+      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[journal_id] = tlii-wps
+
+      au < exists ; 2012 ; 1 ; Technological Learning and Industrial Innovation Working Paper Series Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2 ; 2013 >
+
+  }
+
+}

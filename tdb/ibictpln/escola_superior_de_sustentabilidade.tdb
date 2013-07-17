@@ -1,0 +1,99 @@
+{
+  publisher <
+    name = Escola Superior de Sustentabilidade
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Natural Resources ;
+        issn = 2237-9290
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = naturalresources
+
+      au < exists ; 2011 ; 1 ; Natural Resources Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Natural Resources Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Natural Resources Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Nature and Conservation ;
+        issn = 1983-8344
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = nature
+
+      au < exists ; 2008 ; 1 ; Nature and Conservation Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Nature and Conservation Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Nature and Conservation Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Nature and Conservation Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Nature and Conservation Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Nature and Conservation Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Administração Científica ;
+        issn = 2179-684X
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = rbadm
+
+      au < exists ; 2010 ; 1 ; Revista Brasileira de Administração Científica Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Brasileira de Administração Científica Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Brasileira de Administração Científica Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Brasileira de Administração Científica Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ibero-Americana de Ciências Ambientais ;
+        issn = 2179-6858
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = rica
+
+      au < exists ; 2010 ; 1 ; Revista Ibero-Americana de Ciências Ambientais Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ibero-Americana de Ciências Ambientais Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ibero-Americana de Ciências Ambientais Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ibero-Americana de Ciências Ambientais Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Scire Salutis ;
+        issn = 2236-9600
+      >
+
+      comment[publisher] = Escola Superior de Sustentabilidade
+      param[base_url] = http://www.arvore.org.br/seer/
+      param[journal_id] = sciresalutis
+
+      au < exists ; 2011 ; 1 ; Scire Salutis Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Scire Salutis Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Scire Salutis Volume 3 ; 2013 >
+
+  }
+
+}

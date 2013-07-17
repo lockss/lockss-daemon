@@ -1,0 +1,61 @@
+{
+  publisher <
+    name = Universidade do Contestado
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Ágora: revista de divulgação científica ;
+        eissn = 2237-9010
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = agora
+
+      au < exists ; 2009 ; 1 ; Ágora: revista de divulgação científica Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Ágora: revista de divulgação científica Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Ágora: revista de divulgação científica Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Ágora: revista de divulgação científica Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Ágora: revista de divulgação científica Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DRd-Desenvolvimento Regional em debate ;
+        eissn = 2237-9029
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = drd
+
+      au < exists ; 2011 ; 1 ; DRd-Desenvolvimento Regional em debate Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; DRd-Desenvolvimento Regional em debate Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; DRd-Desenvolvimento Regional em debate Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Saúde e meio ambiente: revista interdisciplinar ;
+        eissn = 2316-347X
+      >
+
+      comment[publisher] = Universidade do Contestado
+      param[base_url] = http://www.periodicos.unc.br/
+      param[journal_id] = sma
+
+      au < exists ; 2012 ; 1 ; Saúde e meio ambiente: revista interdisciplinar Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Saúde e meio ambiente: revista interdisciplinar Volume 2 ; 2013 >
+
+  }
+
+}

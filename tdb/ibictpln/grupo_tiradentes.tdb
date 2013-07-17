@@ -1,0 +1,73 @@
+{
+  publisher <
+    name = Grupo Tiradentes
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Interfaces Científica – Direito ;
+        issn = 2316-381X
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = direito
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científica – Direito Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científica – Direito Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas – Educação ;
+        issn = 2316-3828
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = educacao
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Educação Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Educação Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas-Humanas e Sociais ;
+        issn = 2316-3801
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = humanas
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas-Humanas e Sociais Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces Científicas – Saúde e Ambiente ;
+        issn = 2316-3798
+      >
+
+      comment[publisher] = Grupo Tiradentes
+      param[base_url] = https://periodicos.set.edu.br/
+      param[journal_id] = saude
+
+      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2 ; 2013 >
+
+  }
+
+}

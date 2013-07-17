@@ -1,0 +1,241 @@
+{
+  publisher <
+    name = Universidade Regional de Blumenau
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Atos de Pesquisa em Educação ;
+        eissn = 1809-0354
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = atosdepesquisa
+
+      au < exists ; 2006 ; 1 ; Atos de Pesquisa em Educação Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Atos de Pesquisa em Educação Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Atos de Pesquisa em Educação Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Atos de Pesquisa em Educação Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Atos de Pesquisa em Educação Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Atos de Pesquisa em Educação Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Atos de Pesquisa em Educação Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Atos de Pesquisa em Educação Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Mathematical Modelling and Applicatio ;
+        issn = 2178-2423
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = modelling
+
+      au < exists ; 2009 ; 1 ; Journal of Mathematical Modelling and Applicatio Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Journal of Mathematical Modelling and Applicatio Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Journal of Mathematical Modelling and Applicatio Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Journal of Mathematical Modelling and Applicatio Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Journal of Mathematical Modelling and Applicatio Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Linguagens-Revista de Letras, Artes e Comunicação ;
+        eissn = 1981-9943
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = linguagens
+
+      au < exists ; 2007 ; 1 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Linguagens-Revista de Letras, Artes e Comunicação Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Modelagem na Educação Matemática ;
+        eissn = 2178-5422
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = modelagem
+
+      au < exists ; 2010 ; 1 ; Modelagem na Educação Matemática Volume 1 ; 2010 >
+      au < expected ; 2011 ; 2 ; Modelagem na Educação Matemática Volume 2 ; 2011 >
+      au < expected ; 2012 ; 3 ; Modelagem na Educação Matemática Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Modelagem na Educação Matemática Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = O Teatro Transcende ;
+        eissn = 2236-6644
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = oteatrotranscende
+
+      au < exists ; 2009 ; 1 ; O Teatro Transcende Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; O Teatro Transcende Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; O Teatro Transcende Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; O Teatro Transcende Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; O Teatro Transcende Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Desenvolvimento Regional ;
+        eissn = 2317-5443
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rbdr
+
+      au < expected ; 2013 ; 1 ; Revista Brasileira de Desenvolvimento Regional Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos Ambientais ;
+        eissn = 1983-1501
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rea
+
+      au < exists ; 2007 ; 1 ; Revista de Estudos Ambientais Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista de Estudos Ambientais Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista de Estudos Ambientais Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista de Estudos Ambientais Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista de Estudos Ambientais Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista de Estudos Ambientais Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista de Estudos Ambientais Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Negócios ;
+        eissn = 1980-4431
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = rn
+
+      au < exists ; 1996 ; 1 ; Revista de Negócios Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista de Negócios Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Revista de Negócios Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Revista de Negócios Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Revista de Negócios Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Revista de Negócios Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Revista de Negócios Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Revista de Negócios Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Revista de Negócios Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Revista de Negócios Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Revista de Negócios Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Revista de Negócios Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Revista de Negócios Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Revista de Negócios Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Revista de Negócios Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Revista de Negócios Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Revista de Negócios Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Revista de Negócios Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Dynamis ;
+        eissn = 1982-4866
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = dynamis
+
+      au < exists ; 2007 ; 1 ; Revista Dynamis Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Dynamis Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Dynamis Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Dynamis Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Dynamis Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Dynamis Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Dynamis Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Jurídica ;
+        eissn = 1982-4858
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = juridica
+
+      au < exists ; 2007 ; 1 ; Revista Jurídica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Jurídica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Jurídica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Jurídica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Jurídica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Jurídica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Jurídica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Universo Contábil ;
+        eissn = 1809-3337
+      >
+
+      comment[publisher] = Universidade Regional de Blumenau
+      param[base_url] = http://proxy.furb.br/ojs/
+      param[journal_id] = universocontabil
+
+      au < exists ; 2005 ; 1 ; Revista Universo Contábil Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Universo Contábil Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Universo Contábil Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Universo Contábil Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Universo Contábil Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Universo Contábil Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Universo Contábil Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Universo Contábil Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Universo Contábil Volume 9 ; 2013 >
+
+  }
+
+}

@@ -1,0 +1,196 @@
+{
+  publisher <
+    name = Pontifícia Universidade Católica de Goiás-PUC Goiás
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Fragmentos de Cultura ;
+        issn = 1983-7828
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = fragmentos
+
+      au < exists ; 2006 ; 1 ; Fragmentos de Cultura Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Fragmentos de Cultura Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Fragmentos de Cultura Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Fragmentos de Cultura Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Fragmentos de Cultura Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Fragmentos de Cultura Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Fragmentos de Cultura Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Fragmentos de Cultura Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Habitus ;
+        issn = 1983-7798
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = habitus
+
+      au < exists ; 2005 ; 1 ; Habitus Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Habitus Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Habitus Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Habitus Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Habitus Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Habitus Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Habitus Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Habitus Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Habitus Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mosaico ;
+        issn = 1983-7801
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = mosaico
+
+      au < exists ; 2008 ; 1 ; Mosaico Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Mosaico Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Mosaico Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Mosaico Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Mosaico Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Mosaico Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Panorama ;
+        issn = 2237-1087
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = panorama
+
+      au < exists ; 2011 ; 1 ; Panorama Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Panorama Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Panorama Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Caminhos ;
+        issn = 1678-3034 ;
+        eissn = 1983-778X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = caminhos
+
+      au < exists ; 2005 ; 1 ; Revista Caminhos Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Caminhos Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Caminhos Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Caminhos Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Caminhos Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Caminhos Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Caminhos Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Caminhos Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Caminhos Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Educativa  ;
+        issn = 1983-7771
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = educativa
+
+      au < exists ; 2005 ; 1 ; Revista Educativa  Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Educativa  Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Educativa  Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Educativa  Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Educativa  Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Educativa  Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Educativa  Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Educativa  Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Educativa  Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Estudos ;
+        issn = 1983-781X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = estudos
+
+      au < exists ; 2006 ; 1 ; Revista Estudos Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Estudos Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Estudos Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Estudos Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Estudos Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Estudos Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Estudos Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Estudos Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Guará Linguagem e Literatura ;
+        issn = 2237-4957
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = guara
+
+      au < exists ; 2011 ; 1 ; Revista Guará Linguagem e Literatura Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Guará Linguagem e Literatura Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Guará Linguagem e Literatura Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ser ;
+        issn = 2177-3319
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Goiás-PUC Goiás
+      param[base_url] = http://seer.ucg.br/
+      param[journal_id] = ser
+
+      au < exists ; 2009 ; 1 ; Ser Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Ser Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Ser Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Ser Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Ser Volume 5 ; 2013 >
+
+  }
+
+}

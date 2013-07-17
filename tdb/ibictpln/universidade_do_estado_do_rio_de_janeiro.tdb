@@ -1,0 +1,93 @@
+{
+  publisher <
+    name = Universidade do Estado do Rio de Janeiro
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Childhood & Philosophy ;
+        issn = 1984-5987
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.periodicos.proped.pro.br/
+      param[journal_id] = childhood
+
+      au < exists ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Childhood & Philosophy Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Childhood & Philosophy Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  ;
+        eissn =  1984-3291
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = UERJ
+
+      au < exists ; 1996 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ  Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Teias ;
+        issn = 1518-5370 ;
+        eissn = 1518-5370
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.periodicos.proped.pro.br/
+      param[journal_id] = revistateias
+
+      au < exists ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista Teias Volume 14 ; 2013 >
+
+  }
+
+}

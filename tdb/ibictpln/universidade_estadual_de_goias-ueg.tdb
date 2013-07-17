@@ -1,0 +1,393 @@
+{
+  publisher <
+    name = Universidade Estadual de Goiás-UEG
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Anais do Congresso de História e Literatura: Tempo e Narrativa ;
+        issn = 2317-4641
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = anais_congresso
+
+      au < expected ; 2013 ; 1 ; Anais do Congresso de História e Literatura: Tempo e Narrativa Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Encontro de Acadêmicos de Pedagogia e Educadores ;
+        issn = 2317-1421
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = anais_itaberai
+
+      au < exists ; 2012 ; 1 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Encontro de Acadêmicos de Pedagogia e Educadores Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário de Educação, Linguagem e Tecnologias ;
+        issn = 2238-3735
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = selt
+
+      au < exists ; 2011 ; 1 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Seminário de Educação, Linguagem e Tecnologias Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola ;
+        issn = 2317-4951
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = simposiocieaa
+
+      au < exists ; 2012 ; 1 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Simpósio Nacional do CieAA, Simpósio Nacional de História e Colóquio UEG na Escola Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas ;
+        issn = 2238-1015
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = sineep
+
+      au < exists ; 2011 ; 1 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Simpósio Nacional Espaço, Economia e Políticas Públicas Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Simpósio Regional de História (SRH)-UEG UnU Jussara ;
+        issn = 2316-8390
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = srhjussara
+
+      au < exists ; 2012 ; 1 ; Anais do Simpósio Regional de História (SRH)-UEG UnU Jussara Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Simpósio Regional de História (SRH)-UEG UnU Jussara Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás ;
+        issn = 2316-8307
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = ppub
+
+      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO ;
+        issn = 2316-6428
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = historiaporangatu
+
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais Eletrônicos da Semana de História da UEG / UnU Porangatu-GO Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu ;
+        issn = 2237-2571
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = congresso_acac
+
+      au < exists ; 2012 ; 1 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais Eletrônicos do Congresso Acadêmico Científico da UEG de Porangatu Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Building the way-Revista do Curso de Letras da UEG/Itapuranga ;
+        issn = 2237-2075
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = buildingtheway
+
+      au < exists ; 2012 ; 1 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Building the way-Revista do Curso de Letras da UEG/Itapuranga Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Élisée-Revista de Geografia da UEG ;
+        issn = 2316-4360
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = elisee
+
+      au < exists ; 2012 ; 1 ; Élisée-Revista de Geografia da UEG Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Élisée-Revista de Geografia da UEG Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas ;
+        issn = 1984-6576
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revelli
+
+      au < expected ; 2013 ; 1 ; REVELLI – Revista de Educação, Língua e Literatura da UEG-Inhumas Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Agrotecnologia ;
+        issn = 2179-5959
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = agrotecnologia
+
+      au < exists ; 2010 ; 1 ; Revista Agrotecnologia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Agrotecnologia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Agrotecnologia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Agrotecnologia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração da UEG ;
+        issn = 2236-1197
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revista_administracao
+
+      au < exists ; 2010 ; 1 ; Revista de Administração da UEG Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Administração da UEG Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Administração da UEG Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Administração da UEG Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Biotecnologia & Ciência ;
+        issn = 2238-6629
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = biociencia
+
+      au < exists ; 2012 ; 1 ; Revista de Biotecnologia & Ciência Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de Biotecnologia & Ciência Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Economia da UEG ;
+        issn = 1809-970X
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = economia
+
+      au < exists ; 2005 ; 1 ; Revista de Economia da UEG Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Economia da UEG Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Economia da UEG Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Economia da UEG Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Economia da UEG Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Economia da UEG Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista de Economia da UEG Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista de Economia da UEG Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Economia da UEG Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de História da UEG ;
+        issn = 2316-4379
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revistahistoria
+
+      au < exists ; 2012 ; 1 ; Revista de História da UEG Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de História da UEG Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica-Expedições: Teoria da História e Historiografia ;
+        issn = 2179-6386
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revista_geth
+
+      au < exists ; 2010 ; 1 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica-Expedições: Teoria da História e Historiografia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Plurais-Virtual ;
+        issn = 2238-3751
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = revistapluraisvirtual
+
+      au < exists ; 2011 ; 1 ; Revista Plurais-Virtual Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Plurais-Virtual Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Plurais-Virtual Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Territorial ;
+        issn = 2317-0360
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = territorial
+
+      au < exists ; 2012 ; 1 ; Revista Territorial Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Territorial Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Praxia ;
+        issn = 2317-7357
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = praxia
+
+      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH ;
+        issn = 2175-2606
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = spp_jic_unucseh
+
+      au < exists ; 2012 ; 1 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Seminário de Pesquisa dos professores e Jornada de Iniciação Científica da UnUCSEH Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Temporis[ação] ;
+        issn = 2317-5516
+      >
+
+      comment[publisher] = Universidade Estadual de Goiás-UEG
+      param[base_url] = http://www.prp.ueg.br/revista/
+      param[journal_id] = temporisacao
+
+      au < exists ; 2010 ; 1 ; Temporis[ação] Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Temporis[ação] Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Temporis[ação] Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Temporis[ação] Volume 4 ; 2013 >
+
+  }
+
+}

@@ -1,0 +1,79 @@
+{
+  publisher <
+    name = Instituto Federal Fluminense
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Boletim do Observatório Ambiental Alberto Ribeiro Lamego ;
+        issn = 2177-4560
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = boletim
+
+      au < exists ; 2007 ; 1 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Boletim do Observatório Ambiental Alberto Ribeiro Lamego Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bolsista de Valor ;
+        issn = 2179-6971
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = BolsistaDeValor
+
+      au < exists ; 2010 ; 1 ; Bolsista de Valor Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Bolsista de Valor Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Bolsista de Valor Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Bolsista de Valor Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Vértices ;
+        issn = 1809-2667
+      >
+
+      comment[publisher] = Instituto Federal Fluminense
+      param[base_url] = http://essentiaeditora.iff.edu.br/
+      param[journal_id] = vertices
+
+      au < exists ; 1997 ; 1 ; Vértices Volume 1 ; 1997 >
+      au < exists ; 1998 ; 2 ; Vértices Volume 2 ; 1998 >
+      au < exists ; 1999 ; 3 ; Vértices Volume 3 ; 1999 >
+      au < exists ; 2000 ; 4 ; Vértices Volume 4 ; 2000 >
+      au < exists ; 2001 ; 5 ; Vértices Volume 5 ; 2001 >
+      au < exists ; 2002 ; 6 ; Vértices Volume 6 ; 2002 >
+      au < exists ; 2003 ; 7 ; Vértices Volume 7 ; 2003 >
+      au < exists ; 2004 ; 8 ; Vértices Volume 8 ; 2004 >
+      au < exists ; 2005 ; 9 ; Vértices Volume 9 ; 2005 >
+      au < exists ; 2006 ; 10 ; Vértices Volume 10 ; 2006 >
+      au < exists ; 2007 ; 11 ; Vértices Volume 11 ; 2007 >
+      au < exists ; 2008 ; 12 ; Vértices Volume 12 ; 2008 >
+      au < exists ; 2009 ; 13 ; Vértices Volume 13 ; 2009 >
+      au < exists ; 2010 ; 14 ; Vértices Volume 14 ; 2010 >
+      au < exists ; 2011 ; 15 ; Vértices Volume 15 ; 2011 >
+      au < exists ; 2012 ; 16 ; Vértices Volume 16 ; 2012 >
+      au < expected ; 2013 ; 17 ; Vértices Volume 17 ; 2013 >
+
+  }
+
+}

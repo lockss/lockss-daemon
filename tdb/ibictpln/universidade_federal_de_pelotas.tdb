@@ -1,0 +1,44 @@
+{
+  publisher <
+    name = Universidade Federal de Pelotas
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Journal of Nursing and Health ;
+        eissn = 2236-1987
+      >
+
+      comment[publisher] = Universidade Federal de Pelotas
+      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[journal_id] = enfermagemesaude
+
+      au < exists ; 2011 ; 1 ; Journal of Nursing and Health Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Journal of Nursing and Health Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Journal of Nursing and Health Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ciência da Madeira ;
+        eissn = 2177-6830
+      >
+
+      comment[publisher] = Universidade Federal de Pelotas
+      param[base_url] = http://www.ufpel.tche.br/revistas/
+      param[journal_id] = cienciadamadeira
+
+      au < exists ; 2010 ; 1 ; Revista Ciência da Madeira Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ciência da Madeira Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ciência da Madeira Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ciência da Madeira Volume 4 ; 2013 >
+
+  }
+
+}

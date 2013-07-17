@@ -1,0 +1,668 @@
+{
+  publisher <
+    name = Universidade Estadual de Londrina
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Antitéses ;
+        eissn = 1984-3356
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = antiteses
+
+      au < exists ; 2008 ; 1 ; Antitéses Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Antitéses Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Antitéses Volume 3 ; 2010 >
+      au < exists ; 2011 ; 4 ; Antitéses Volume 4 ; 2011 >
+      au < exists ; 2012 ; 5 ; Antitéses Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Antitéses Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ASSOBRAFIR Ciência ;
+        eissn = 2177-9333
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = rebrafis
+
+      au < exists ; 2009 ; 1 ; ASSOBRAFIR Ciência Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; ASSOBRAFIR Ciência Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; ASSOBRAFIR Ciência Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; ASSOBRAFIR Ciência Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; ASSOBRAFIR Ciência Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = BBR-Biochemistry and Biotechnology Reports ;
+        eissn = 2316-5200
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = bbr
+
+      au < exists ; 2012 ; 1 ; BBR-Biochemistry and Biotechnology Reports Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; BBR-Biochemistry and Biotechnology Reports Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Discursos Fotográficos ;
+        issn = 1808-5652 ;
+        eissn = 1984-7939
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = discursosfotograficos
+
+      au < exists ; 2005 ; 1 ; Discursos Fotográficos Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; Discursos Fotográficos Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; Discursos Fotográficos Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; Discursos Fotográficos Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; Discursos Fotográficos Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; Discursos Fotográficos Volume 6 ; 2010 >
+      au < exists ; 2011 ; 7 ; Discursos Fotográficos Volume 7 ; 2011 >
+      au < exists ; 2012 ; 8 ; Discursos Fotográficos Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; Discursos Fotográficos Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Economia e Região ;
+        eissn = 2317-627X
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = ecoreg
+
+      au < expected ; 2013 ; 1 ; Economia e Região Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Entretextos ;
+        eissn = 1519-5392
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = entretextos
+
+      au < exists ; 2006 ; 1 ; Entretextos Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Entretextos Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Entretextos Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Entretextos Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Entretextos Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Entretextos Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Entretextos Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Entretextos Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Espaço para a Saúde ;
+        eissn = 1517-7130
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = espacoparasaude
+
+      au < exists ; 2010 ; 1 ; Espaço para a Saúde Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Espaço para a Saúde Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Espaço para a Saúde Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Espaço para a Saúde Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos Interdisciplinares em Psicologia ;
+        eissn = 2236-6407
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = eip
+
+      au < exists ; 2010 ; 1 ; Estudos Interdisciplinares em Psicologia Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Estudos Interdisciplinares em Psicologia Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Estudos Interdisciplinares em Psicologia Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Estudos Interdisciplinares em Psicologia Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GEOGRAFIA (Londrina) ;
+        eissn = 0102-3888
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = geografia
+
+      au < exists ; 2001 ; 1 ; GEOGRAFIA (Londrina) Volume 1 ; 2001 >
+      au < exists ; 2002 ; 2 ; GEOGRAFIA (Londrina) Volume 2 ; 2002 >
+      au < exists ; 2003 ; 3 ; GEOGRAFIA (Londrina) Volume 3 ; 2003 >
+      au < exists ; 2004 ; 4 ; GEOGRAFIA (Londrina) Volume 4 ; 2004 >
+      au < exists ; 2005 ; 5 ; GEOGRAFIA (Londrina) Volume 5 ; 2005 >
+      au < exists ; 2006 ; 6 ; GEOGRAFIA (Londrina) Volume 6 ; 2006 >
+      au < exists ; 2007 ; 7 ; GEOGRAFIA (Londrina) Volume 7 ; 2007 >
+      au < exists ; 2008 ; 8 ; GEOGRAFIA (Londrina) Volume 8 ; 2008 >
+      au < exists ; 2009 ; 9 ; GEOGRAFIA (Londrina) Volume 9 ; 2009 >
+      au < exists ; 2010 ; 10 ; GEOGRAFIA (Londrina) Volume 10 ; 2010 >
+      au < exists ; 2011 ; 11 ; GEOGRAFIA (Londrina) Volume 11 ; 2011 >
+      au < exists ; 2012 ; 12 ; GEOGRAFIA (Londrina) Volume 12 ; 2012 >
+      au < expected ; 2013 ; 13 ; GEOGRAFIA (Londrina) Volume 13 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GERMINAL: Marxismo e Educação em Debate ;
+        eissn = 2175-5604
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = germinal
+
+      au < exists ; 2009 ; 1 ; GERMINAL: Marxismo e Educação em Debate Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; GERMINAL: Marxismo e Educação em Debate Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; GERMINAL: Marxismo e Educação em Debate Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; GERMINAL: Marxismo e Educação em Debate Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; GERMINAL: Marxismo e Educação em Debate Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História & Ensino ;
+        eissn = 2238-3018
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = histensino
+
+      au < exists ; 1995 ; 1 ; História & Ensino Volume 1 ; 1995 >
+      au < exists ; 1996 ; 2 ; História & Ensino Volume 2 ; 1996 >
+      au < exists ; 1997 ; 3 ; História & Ensino Volume 3 ; 1997 >
+      au < exists ; 1998 ; 4 ; História & Ensino Volume 4 ; 1998 >
+      au < exists ; 1999 ; 5 ; História & Ensino Volume 5 ; 1999 >
+      au < exists ; 2000 ; 6 ; História & Ensino Volume 6 ; 2000 >
+      au < exists ; 2001 ; 7 ; História & Ensino Volume 7 ; 2001 >
+      au < exists ; 2002 ; 8 ; História & Ensino Volume 8 ; 2002 >
+      au < exists ; 2003 ; 9 ; História & Ensino Volume 9 ; 2003 >
+      au < exists ; 2004 ; 10 ; História & Ensino Volume 10 ; 2004 >
+      au < exists ; 2005 ; 11 ; História & Ensino Volume 11 ; 2005 >
+      au < exists ; 2006 ; 12 ; História & Ensino Volume 12 ; 2006 >
+      au < exists ; 2007 ; 13 ; História & Ensino Volume 13 ; 2007 >
+      au < exists ; 2008 ; 14 ; História & Ensino Volume 14 ; 2008 >
+      au < exists ; 2009 ; 15 ; História & Ensino Volume 15 ; 2009 >
+      au < exists ; 2010 ; 16 ; História & Ensino Volume 16 ; 2010 >
+      au < exists ; 2011 ; 17 ; História & Ensino Volume 17 ; 2011 >
+      au < exists ; 2012 ; 18 ; História & Ensino Volume 18 ; 2012 >
+      au < expected ; 2013 ; 19 ; História & Ensino Volume 19 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Informação & Informação ;
+        eissn = 1981-8920
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = informacao
+
+      au < exists ; 1996 ; 1 ; Informação & Informação Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Informação & Informação Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Informação & Informação Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Informação & Informação Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Informação & Informação Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Informação & Informação Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Informação & Informação Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Informação & Informação Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Informação & Informação Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Informação & Informação Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Informação & Informação Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Informação & Informação Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Informação & Informação Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Informação & Informação Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Informação & Informação Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Informação & Informação Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Informação & Informação Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Informação & Informação Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Informação@Profissões ;
+        eissn = 2317-4390
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = infoprof
+
+      au < exists ; 2012 ; 1 ; Informação@Profissões Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Informação@Profissões Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mediações ;
+        issn = 1414-0543 ;
+        eissn = 2176-6665
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = mediacoes
+
+      au < exists ; 1996 ; 1 ; Mediações Volume 1 ; 1996 >
+      au < exists ; 1997 ; 2 ; Mediações Volume 2 ; 1997 >
+      au < exists ; 1998 ; 3 ; Mediações Volume 3 ; 1998 >
+      au < exists ; 1999 ; 4 ; Mediações Volume 4 ; 1999 >
+      au < exists ; 2000 ; 5 ; Mediações Volume 5 ; 2000 >
+      au < exists ; 2001 ; 6 ; Mediações Volume 6 ; 2001 >
+      au < exists ; 2002 ; 7 ; Mediações Volume 7 ; 2002 >
+      au < exists ; 2003 ; 8 ; Mediações Volume 8 ; 2003 >
+      au < exists ; 2004 ; 9 ; Mediações Volume 9 ; 2004 >
+      au < exists ; 2005 ; 10 ; Mediações Volume 10 ; 2005 >
+      au < exists ; 2006 ; 11 ; Mediações Volume 11 ; 2006 >
+      au < exists ; 2007 ; 12 ; Mediações Volume 12 ; 2007 >
+      au < exists ; 2008 ; 13 ; Mediações Volume 13 ; 2008 >
+      au < exists ; 2009 ; 14 ; Mediações Volume 14 ; 2009 >
+      au < exists ; 2010 ; 15 ; Mediações Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Mediações Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Mediações Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Mediações Volume 18 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Portal de Cartografia das Geociências ;
+        eissn = 1983-6546 
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = portalcartografia
+
+      au < exists ; 2008 ; 1 ; Portal de Cartografia das Geociências Volume 1 ; 2008 >
+      au < exists ; 2009 ; 2 ; Portal de Cartografia das Geociências Volume 2 ; 2009 >
+      au < exists ; 2010 ; 3 ; Portal de Cartografia das Geociências Volume 3 ; 2010 >
+      au < expected ; 2011 ; 4 ; Portal de Cartografia das Geociências Volume 4 ; 2011 >
+      au < expected ; 2012 ; 5 ; Portal de Cartografia das Geociências Volume 5 ; 2012 >
+      au < expected ; 2013 ; 6 ; Portal de Cartografia das Geociências Volume 6 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Projetica ;
+        eissn = 2236-2207
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = projetica
+
+      au < exists ; 2010 ; 1 ; Projetica Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Projetica Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Projetica Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Projetica Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos Contábeis ;
+        eissn = 2237-0099
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = rec
+
+      au < exists ; 2010 ; 1 ; Revista de Estudos Contábeis Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Estudos Contábeis Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Estudos Contábeis Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Estudos Contábeis Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista do Direito Público ;
+        eissn = 1980-511X
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = direitopub
+
+      au < exists ; 2006 ; 1 ; Revista do Direito Público Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista do Direito Público Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista do Direito Público Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista do Direito Público Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista do Direito Público Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista do Direito Público Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista do Direito Público Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista do Direito Público Volume 8 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Scientia Iuris ;
+        issn = 1415-6490 ;
+        eissn = 2178-8189
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = iuris
+
+      au < exists ; 1997 ; 1 ; Scientia Iuris Volume 1 ; 1997 >
+      au < exists ; 1998 ; 2 ; Scientia Iuris Volume 2 ; 1998 >
+      au < exists ; 1999 ; 3 ; Scientia Iuris Volume 3 ; 1999 >
+      au < exists ; 2000 ; 4 ; Scientia Iuris Volume 4 ; 2000 >
+      au < exists ; 2001 ; 5 ; Scientia Iuris Volume 5 ; 2001 >
+      au < exists ; 2002 ; 6 ; Scientia Iuris Volume 6 ; 2002 >
+      au < exists ; 2003 ; 7 ; Scientia Iuris Volume 7 ; 2003 >
+      au < exists ; 2004 ; 8 ; Scientia Iuris Volume 8 ; 2004 >
+      au < exists ; 2005 ; 9 ; Scientia Iuris Volume 9 ; 2005 >
+      au < exists ; 2006 ; 10 ; Scientia Iuris Volume 10 ; 2006 >
+      au < exists ; 2007 ; 11 ; Scientia Iuris Volume 11 ; 2007 >
+      au < exists ; 2008 ; 12 ; Scientia Iuris Volume 12 ; 2008 >
+      au < exists ; 2009 ; 13 ; Scientia Iuris Volume 13 ; 2009 >
+      au < exists ; 2010 ; 14 ; Scientia Iuris Volume 14 ; 2010 >
+      au < exists ; 2011 ; 15 ; Scientia Iuris Volume 15 ; 2011 >
+      au < exists ; 2012 ; 16 ; Scientia Iuris Volume 16 ; 2012 >
+      au < expected ; 2013 ; 17 ; Scientia Iuris Volume 17 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Agrárias ;
+        issn = 1676-546X ;
+        eissn = 1679-0359
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = semaagraias
+
+      au < exists ; 1978 ; 1 ; Semina: Ciências Agrárias Volume 1 ; 1978 >
+      au < exists ; 1979 ; 2 ; Semina: Ciências Agrárias Volume 2 ; 1979 >
+      au < exists ; 1980 ; 3 ; Semina: Ciências Agrárias Volume 3 ; 1980 >
+      au < exists ; 1981 ; 4 ; Semina: Ciências Agrárias Volume 4 ; 1981 >
+      au < exists ; 1982 ; 5 ; Semina: Ciências Agrárias Volume 5 ; 1982 >
+      au < exists ; 1983 ; 6 ; Semina: Ciências Agrárias Volume 6 ; 1983 >
+      au < exists ; 1984 ; 7 ; Semina: Ciências Agrárias Volume 7 ; 1984 >
+      au < exists ; 1985 ; 8 ; Semina: Ciências Agrárias Volume 8 ; 1985 >
+      au < exists ; 1986 ; 9 ; Semina: Ciências Agrárias Volume 9 ; 1986 >
+      au < exists ; 1987 ; 10 ; Semina: Ciências Agrárias Volume 10 ; 1987 >
+      au < exists ; 1988 ; 11 ; Semina: Ciências Agrárias Volume 11 ; 1988 >
+      au < exists ; 1989 ; 12 ; Semina: Ciências Agrárias Volume 12 ; 1989 >
+      au < exists ; 1990 ; 13 ; Semina: Ciências Agrárias Volume 13 ; 1990 >
+      au < exists ; 1991 ; 14 ; Semina: Ciências Agrárias Volume 14 ; 1991 >
+      au < exists ; 1992 ; 15 ; Semina: Ciências Agrárias Volume 15 ; 1992 >
+      au < exists ; 1993 ; 16 ; Semina: Ciências Agrárias Volume 16 ; 1993 >
+      au < exists ; 1994 ; 17 ; Semina: Ciências Agrárias Volume 17 ; 1994 >
+      au < exists ; 1995 ; 18 ; Semina: Ciências Agrárias Volume 18 ; 1995 >
+      au < exists ; 1996 ; 19 ; Semina: Ciências Agrárias Volume 19 ; 1996 >
+      au < exists ; 1997 ; 20 ; Semina: Ciências Agrárias Volume 20 ; 1997 >
+      au < exists ; 1998 ; 21 ; Semina: Ciências Agrárias Volume 21 ; 1998 >
+      au < exists ; 1999 ; 22 ; Semina: Ciências Agrárias Volume 22 ; 1999 >
+      au < exists ; 2000 ; 23 ; Semina: Ciências Agrárias Volume 23 ; 2000 >
+      au < exists ; 2001 ; 24 ; Semina: Ciências Agrárias Volume 24 ; 2001 >
+      au < exists ; 2002 ; 25 ; Semina: Ciências Agrárias Volume 25 ; 2002 >
+      au < exists ; 2003 ; 26 ; Semina: Ciências Agrárias Volume 26 ; 2003 >
+      au < exists ; 2004 ; 27 ; Semina: Ciências Agrárias Volume 27 ; 2004 >
+      au < exists ; 2005 ; 28 ; Semina: Ciências Agrárias Volume 28 ; 2005 >
+      au < exists ; 2006 ; 29 ; Semina: Ciências Agrárias Volume 29 ; 2006 >
+      au < exists ; 2007 ; 30 ; Semina: Ciências Agrárias Volume 30 ; 2007 >
+      au < exists ; 2008 ; 31 ; Semina: Ciências Agrárias Volume 31 ; 2008 >
+      au < exists ; 2009 ; 32 ; Semina: Ciências Agrárias Volume 32 ; 2009 >
+      au < exists ; 2010 ; 33 ; Semina: Ciências Agrárias Volume 33 ; 2010 >
+      au < exists ; 2011 ; 34 ; Semina: Ciências Agrárias Volume 34 ; 2011 >
+      au < exists ; 2012 ; 35 ; Semina: Ciências Agrárias Volume 35 ; 2012 >
+      au < expected ; 2013 ; 36 ; Semina: Ciências Agrárias Volume 36 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Biológicas e da Saúde ;
+        issn = 1676-5435 ;
+        eissn = 1679-0367
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = seminabio
+
+      au < exists ; 1980 ; 1 ; Semina: Ciências Biológicas e da Saúde Volume 1 ; 1980 >
+      au < exists ; 1981 ; 2 ; Semina: Ciências Biológicas e da Saúde Volume 2 ; 1981 >
+      au < exists ; 1982 ; 3 ; Semina: Ciências Biológicas e da Saúde Volume 3 ; 1982 >
+      au < exists ; 1983 ; 4 ; Semina: Ciências Biológicas e da Saúde Volume 4 ; 1983 >
+      au < exists ; 1984 ; 5 ; Semina: Ciências Biológicas e da Saúde Volume 5 ; 1984 >
+      au < exists ; 1985 ; 6 ; Semina: Ciências Biológicas e da Saúde Volume 6 ; 1985 >
+      au < exists ; 1986 ; 7 ; Semina: Ciências Biológicas e da Saúde Volume 7 ; 1986 >
+      au < exists ; 1987 ; 8 ; Semina: Ciências Biológicas e da Saúde Volume 8 ; 1987 >
+      au < exists ; 1988 ; 9 ; Semina: Ciências Biológicas e da Saúde Volume 9 ; 1988 >
+      au < exists ; 1989 ; 10 ; Semina: Ciências Biológicas e da Saúde Volume 10 ; 1989 >
+      au < exists ; 1990 ; 11 ; Semina: Ciências Biológicas e da Saúde Volume 11 ; 1990 >
+      au < exists ; 1991 ; 12 ; Semina: Ciências Biológicas e da Saúde Volume 12 ; 1991 >
+      au < exists ; 1992 ; 13 ; Semina: Ciências Biológicas e da Saúde Volume 13 ; 1992 >
+      au < exists ; 1993 ; 14 ; Semina: Ciências Biológicas e da Saúde Volume 14 ; 1993 >
+      au < exists ; 1994 ; 15 ; Semina: Ciências Biológicas e da Saúde Volume 15 ; 1994 >
+      au < exists ; 1995 ; 16 ; Semina: Ciências Biológicas e da Saúde Volume 16 ; 1995 >
+      au < exists ; 1996 ; 17 ; Semina: Ciências Biológicas e da Saúde Volume 17 ; 1996 >
+      au < exists ; 1997 ; 18 ; Semina: Ciências Biológicas e da Saúde Volume 18 ; 1997 >
+      au < exists ; 1998 ; 19 ; Semina: Ciências Biológicas e da Saúde Volume 19 ; 1998 >
+      au < exists ; 1999 ; 20 ; Semina: Ciências Biológicas e da Saúde Volume 20 ; 1999 >
+      au < exists ; 2000 ; 21 ; Semina: Ciências Biológicas e da Saúde Volume 21 ; 2000 >
+      au < exists ; 2001 ; 22 ; Semina: Ciências Biológicas e da Saúde Volume 22 ; 2001 >
+      au < exists ; 2002 ; 23 ; Semina: Ciências Biológicas e da Saúde Volume 23 ; 2002 >
+      au < exists ; 2003 ; 24 ; Semina: Ciências Biológicas e da Saúde Volume 24 ; 2003 >
+      au < exists ; 2004 ; 25 ; Semina: Ciências Biológicas e da Saúde Volume 25 ; 2004 >
+      au < exists ; 2005 ; 26 ; Semina: Ciências Biológicas e da Saúde Volume 26 ; 2005 >
+      au < exists ; 2006 ; 27 ; Semina: Ciências Biológicas e da Saúde Volume 27 ; 2006 >
+      au < exists ; 2007 ; 28 ; Semina: Ciências Biológicas e da Saúde Volume 28 ; 2007 >
+      au < exists ; 2008 ; 29 ; Semina: Ciências Biológicas e da Saúde Volume 29 ; 2008 >
+      au < exists ; 2009 ; 30 ; Semina: Ciências Biológicas e da Saúde Volume 30 ; 2009 >
+      au < exists ; 2010 ; 31 ; Semina: Ciências Biológicas e da Saúde Volume 31 ; 2010 >
+      au < exists ; 2011 ; 32 ; Semina: Ciências Biológicas e da Saúde Volume 32 ; 2011 >
+      au < exists ; 2012 ; 33 ; Semina: Ciências Biológicas e da Saúde Volume 33 ; 2012 >
+      au < expected ; 2013 ; 34 ; Semina: Ciências Biológicas e da Saúde Volume 34 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Exatas e Tecnológicas ;
+        issn = 1676-5451 ;
+        eissn = 1679-0375
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = semexatas
+
+      au < exists ; 1979 ; 1 ; Semina: Ciências Exatas e Tecnológicas Volume 1 ; 1979 >
+      au < exists ; 1980 ; 2 ; Semina: Ciências Exatas e Tecnológicas Volume 2 ; 1980 >
+      au < exists ; 1981 ; 3 ; Semina: Ciências Exatas e Tecnológicas Volume 3 ; 1981 >
+      au < exists ; 1982 ; 4 ; Semina: Ciências Exatas e Tecnológicas Volume 4 ; 1982 >
+      au < exists ; 1983 ; 5 ; Semina: Ciências Exatas e Tecnológicas Volume 5 ; 1983 >
+      au < exists ; 1984 ; 6 ; Semina: Ciências Exatas e Tecnológicas Volume 6 ; 1984 >
+      au < exists ; 1985 ; 7 ; Semina: Ciências Exatas e Tecnológicas Volume 7 ; 1985 >
+      au < exists ; 1986 ; 8 ; Semina: Ciências Exatas e Tecnológicas Volume 8 ; 1986 >
+      au < exists ; 1987 ; 9 ; Semina: Ciências Exatas e Tecnológicas Volume 9 ; 1987 >
+      au < exists ; 1988 ; 10 ; Semina: Ciências Exatas e Tecnológicas Volume 10 ; 1988 >
+      au < exists ; 1989 ; 11 ; Semina: Ciências Exatas e Tecnológicas Volume 11 ; 1989 >
+      au < exists ; 1990 ; 12 ; Semina: Ciências Exatas e Tecnológicas Volume 12 ; 1990 >
+      au < exists ; 1991 ; 13 ; Semina: Ciências Exatas e Tecnológicas Volume 13 ; 1991 >
+      au < exists ; 1992 ; 14 ; Semina: Ciências Exatas e Tecnológicas Volume 14 ; 1992 >
+      au < exists ; 1993 ; 15 ; Semina: Ciências Exatas e Tecnológicas Volume 15 ; 1993 >
+      au < exists ; 1994 ; 16 ; Semina: Ciências Exatas e Tecnológicas Volume 16 ; 1994 >
+      au < exists ; 1995 ; 17 ; Semina: Ciências Exatas e Tecnológicas Volume 17 ; 1995 >
+      au < exists ; 1996 ; 18 ; Semina: Ciências Exatas e Tecnológicas Volume 18 ; 1996 >
+      au < exists ; 1997 ; 19 ; Semina: Ciências Exatas e Tecnológicas Volume 19 ; 1997 >
+      au < exists ; 1998 ; 20 ; Semina: Ciências Exatas e Tecnológicas Volume 20 ; 1998 >
+      au < exists ; 1999 ; 21 ; Semina: Ciências Exatas e Tecnológicas Volume 21 ; 1999 >
+      au < exists ; 2000 ; 22 ; Semina: Ciências Exatas e Tecnológicas Volume 22 ; 2000 >
+      au < exists ; 2001 ; 23 ; Semina: Ciências Exatas e Tecnológicas Volume 23 ; 2001 >
+      au < exists ; 2002 ; 24 ; Semina: Ciências Exatas e Tecnológicas Volume 24 ; 2002 >
+      au < exists ; 2003 ; 25 ; Semina: Ciências Exatas e Tecnológicas Volume 25 ; 2003 >
+      au < exists ; 2004 ; 26 ; Semina: Ciências Exatas e Tecnológicas Volume 26 ; 2004 >
+      au < exists ; 2005 ; 27 ; Semina: Ciências Exatas e Tecnológicas Volume 27 ; 2005 >
+      au < exists ; 2006 ; 28 ; Semina: Ciências Exatas e Tecnológicas Volume 28 ; 2006 >
+      au < exists ; 2007 ; 29 ; Semina: Ciências Exatas e Tecnológicas Volume 29 ; 2007 >
+      au < exists ; 2008 ; 30 ; Semina: Ciências Exatas e Tecnológicas Volume 30 ; 2008 >
+      au < exists ; 2009 ; 31 ; Semina: Ciências Exatas e Tecnológicas Volume 31 ; 2009 >
+      au < exists ; 2010 ; 32 ; Semina: Ciências Exatas e Tecnológicas Volume 32 ; 2010 >
+      au < exists ; 2011 ; 33 ; Semina: Ciências Exatas e Tecnológicas Volume 33 ; 2011 >
+      au < exists ; 2012 ; 34 ; Semina: Ciências Exatas e Tecnológicas Volume 34 ; 2012 >
+      au < expected ; 2013 ; 35 ; Semina: Ciências Exatas e Tecnológicas Volume 35 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Semina: Ciências Sociais e Humanas ;
+        issn = 1676-5443 ;
+        eissn = 679-0383
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = seminasoc
+
+      au < exists ; 1992 ; 1 ; Semina: Ciências Sociais e Humanas Volume 1 ; 1992 >
+      au < exists ; 1993 ; 2 ; Semina: Ciências Sociais e Humanas Volume 2 ; 1993 >
+      au < exists ; 1994 ; 3 ; Semina: Ciências Sociais e Humanas Volume 3 ; 1994 >
+      au < exists ; 1995 ; 4 ; Semina: Ciências Sociais e Humanas Volume 4 ; 1995 >
+      au < exists ; 1996 ; 5 ; Semina: Ciências Sociais e Humanas Volume 5 ; 1996 >
+      au < exists ; 1997 ; 6 ; Semina: Ciências Sociais e Humanas Volume 6 ; 1997 >
+      au < exists ; 1998 ; 7 ; Semina: Ciências Sociais e Humanas Volume 7 ; 1998 >
+      au < exists ; 1999 ; 8 ; Semina: Ciências Sociais e Humanas Volume 8 ; 1999 >
+      au < exists ; 2000 ; 9 ; Semina: Ciências Sociais e Humanas Volume 9 ; 2000 >
+      au < exists ; 2001 ; 10 ; Semina: Ciências Sociais e Humanas Volume 10 ; 2001 >
+      au < exists ; 2002 ; 11 ; Semina: Ciências Sociais e Humanas Volume 11 ; 2002 >
+      au < exists ; 2003 ; 12 ; Semina: Ciências Sociais e Humanas Volume 12 ; 2003 >
+      au < exists ; 2004 ; 13 ; Semina: Ciências Sociais e Humanas Volume 13 ; 2004 >
+      au < exists ; 2005 ; 14 ; Semina: Ciências Sociais e Humanas Volume 14 ; 2005 >
+      au < exists ; 2006 ; 15 ; Semina: Ciências Sociais e Humanas Volume 15 ; 2006 >
+      au < exists ; 2007 ; 16 ; Semina: Ciências Sociais e Humanas Volume 16 ; 2007 >
+      au < exists ; 2008 ; 17 ; Semina: Ciências Sociais e Humanas Volume 17 ; 2008 >
+      au < exists ; 2009 ; 18 ; Semina: Ciências Sociais e Humanas Volume 18 ; 2009 >
+      au < exists ; 2010 ; 19 ; Semina: Ciências Sociais e Humanas Volume 19 ; 2010 >
+      au < exists ; 2011 ; 20 ; Semina: Ciências Sociais e Humanas Volume 20 ; 2011 >
+      au < exists ; 2012 ; 21 ; Semina: Ciências Sociais e Humanas Volume 21 ; 2012 >
+      au < expected ; 2013 ; 22 ; Semina: Ciências Sociais e Humanas Volume 22 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Serviço Social em Revista ;
+        eissn = 1679-4842
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = ssrevista
+
+      au < exists ; 2009 ; 1 ; Serviço Social em Revista Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Serviço Social em Revista Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Serviço Social em Revista Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Serviço Social em Revista Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Serviço Social em Revista Volume 5 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Signum: Estudos da Linguagem ;
+        issn = 1516-3083 ;
+        eissn = 2237-4876
+      >
+
+      comment[publisher] = Universidade Estadual de Londrina
+      param[base_url] = http://www.uel.br/revistas/uel/
+      param[journal_id] = signum
+
+      au < exists ; 1998 ; 1 ; Signum: Estudos da Linguagem Volume 1 ; 1998 >
+      au < exists ; 1999 ; 2 ; Signum: Estudos da Linguagem Volume 2 ; 1999 >
+      au < exists ; 2000 ; 3 ; Signum: Estudos da Linguagem Volume 3 ; 2000 >
+      au < exists ; 2001 ; 4 ; Signum: Estudos da Linguagem Volume 4 ; 2001 >
+      au < exists ; 2002 ; 5 ; Signum: Estudos da Linguagem Volume 5 ; 2002 >
+      au < exists ; 2003 ; 6 ; Signum: Estudos da Linguagem Volume 6 ; 2003 >
+      au < exists ; 2004 ; 7 ; Signum: Estudos da Linguagem Volume 7 ; 2004 >
+      au < exists ; 2005 ; 8 ; Signum: Estudos da Linguagem Volume 8 ; 2005 >
+      au < exists ; 2006 ; 9 ; Signum: Estudos da Linguagem Volume 9 ; 2006 >
+      au < exists ; 2007 ; 10 ; Signum: Estudos da Linguagem Volume 10 ; 2007 >
+      au < exists ; 2008 ; 11 ; Signum: Estudos da Linguagem Volume 11 ; 2008 >
+      au < exists ; 2009 ; 12 ; Signum: Estudos da Linguagem Volume 12 ; 2009 >
+      au < exists ; 2010 ; 13 ; Signum: Estudos da Linguagem Volume 13 ; 2010 >
+      au < exists ; 2011 ; 14 ; Signum: Estudos da Linguagem Volume 14 ; 2011 >
+      au < exists ; 2012 ; 15 ; Signum: Estudos da Linguagem Volume 15 ; 2012 >
+      au < expected ; 2013 ; 16 ; Signum: Estudos da Linguagem Volume 16 ; 2013 >
+
+  }
+
+}

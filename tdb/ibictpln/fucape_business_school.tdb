@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = FUCAPE Business School
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Brazilian Business Review ;
+        issn = 1807-734X
+      >
+
+      comment[publisher] = FUCAPE Business School
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = fucape
+
+      au < exists ; 2009 ; 1 ; Brazilian Business Review Volume 1 ; 2009 >
+      au < expected ; 2010 ; 2 ; Brazilian Business Review Volume 2 ; 2010 >
+      au < expected ; 2011 ; 3 ; Brazilian Business Review Volume 3 ; 2011 >
+      au < expected ; 2012 ; 4 ; Brazilian Business Review Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Brazilian Business Review Volume 5 ; 2013 >
+
+  }
+
+}

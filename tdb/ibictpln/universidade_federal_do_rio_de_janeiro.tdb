@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Universidade Federal do Rio de Janeiro
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Sociedade, Contabilidade e Gestão ;
+        issn = 1982-7342
+      >
+
+      comment[publisher] = Universidade Federal do Rio de Janeiro
+      param[base_url] = http://www.atena.org.br/
+      param[journal_id] = ufrj
+
+      au < exists ; 2006 ; 1 ; Sociedade, Contabilidade e Gestão Volume 1 ; 2006 >
+      au < exists ; 2007 ; 2 ; Sociedade, Contabilidade e Gestão Volume 2 ; 2007 >
+      au < exists ; 2008 ; 3 ; Sociedade, Contabilidade e Gestão Volume 3 ; 2008 >
+      au < exists ; 2009 ; 4 ; Sociedade, Contabilidade e Gestão Volume 4 ; 2009 >
+      au < exists ; 2010 ; 5 ; Sociedade, Contabilidade e Gestão Volume 5 ; 2010 >
+      au < exists ; 2011 ; 6 ; Sociedade, Contabilidade e Gestão Volume 6 ; 2011 >
+      au < exists ; 2012 ; 7 ; Sociedade, Contabilidade e Gestão Volume 7 ; 2012 >
+      au < expected ; 2013 ; 8 ; Sociedade, Contabilidade e Gestão Volume 8 ; 2013 >
+
+  }
+
+}

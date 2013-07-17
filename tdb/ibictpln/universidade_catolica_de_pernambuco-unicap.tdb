@@ -1,0 +1,66 @@
+{
+  publisher <
+    name = Universidade Católica de Pernambuco-UNICAP
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Ágora Filosófica ;
+        issn = 1982-999x
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = agora
+
+      au < exists ; 2007 ; 1 ; Ágora Filosófica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Ágora Filosófica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Ágora Filosófica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Ágora Filosófica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Ágora Filosófica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Ágora Filosófica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Ágora Filosófica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Paralellus ;
+        issn =  2178-8162
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = paralellus
+
+      au < exists ; 2010 ; 1 ; Paralellus Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Paralellus Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Paralellus Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Paralellus Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Teologia e Ciências da Religião da UNICAP ;
+        issn = 1679-5393 ;
+        eissn = 2237-907X
+      >
+
+      comment[publisher] = Universidade Católica de Pernambuco-UNICAP
+      param[base_url] = http://www.unicap.br/ojs-2.3.4/
+      param[journal_id] = theo
+
+      au < exists ; 2011 ; 1 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Teologia e Ciências da Religião da UNICAP Volume 3 ; 2013 >
+
+  }
+
+}

@@ -1,0 +1,114 @@
+{
+  publisher <
+    name = Universidade Federal do Pará
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Amazônica ;
+        eissn = 2176-0675
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = amazonica
+
+      au < exists ; 2012 ; 1 ; Amazônica Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Amazônica Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Hendu ;
+        issn = 2236-6334
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = hendu
+
+      au < exists ; 2010 ; 1 ; Hendu Volume 1 ; 2010 >
+      au < exists ; 2011 ; 2 ; Hendu Volume 2 ; 2011 >
+      au < exists ; 2012 ; 3 ; Hendu Volume 3 ; 2012 >
+      au < expected ; 2013 ; 4 ; Hendu Volume 4 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Novos Cadernos NAEA ;
+        issn = 1516-6481 ;
+        eissn = 2179-7536
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = ncn
+
+      au < exists ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
+      au < exists ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
+      au < exists ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
+      au < exists ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
+      au < exists ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
+      au < exists ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
+      au < exists ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
+      au < exists ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
+      au < exists ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
+      au < exists ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
+      au < exists ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
+      au < exists ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
+      au < exists ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
+      au < exists ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
+      au < exists ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
+      au < expected ; 2013 ; 16 ; Novos Cadernos NAEA Volume 16 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REBAC ;
+        issn = 1807-8338
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = rebac
+
+      au < exists ; 2005 ; 1 ; REBAC Volume 1 ; 2005 >
+      au < exists ; 2006 ; 2 ; REBAC Volume 2 ; 2006 >
+      au < exists ; 2007 ; 3 ; REBAC Volume 3 ; 2007 >
+      au < exists ; 2008 ; 4 ; REBAC Volume 4 ; 2008 >
+      au < exists ; 2009 ; 5 ; REBAC Volume 5 ; 2009 >
+      au < exists ; 2010 ; 6 ; REBAC Volume 6 ; 2010 >
+      au < expected ; 2011 ; 7 ; REBAC Volume 7 ; 2011 >
+      au < expected ; 2012 ; 8 ; REBAC Volume 8 ; 2012 >
+      au < expected ; 2013 ; 9 ; REBAC Volume 9 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ver a Educação ;
+        issn = 1413-1498
+      >
+
+      comment[publisher] = Universidade Federal do Pará
+      param[base_url] = http://www.periodicos.ufpa.br/
+      param[journal_id] = rve
+
+      au < exists ; 2011 ; 1 ; Revista Ver a Educação Volume 1 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Ver a Educação Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Ver a Educação Volume 3 ; 2013 >
+
+  }
+
+}

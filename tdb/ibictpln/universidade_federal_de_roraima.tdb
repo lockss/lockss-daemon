@@ -1,0 +1,103 @@
+{
+  publisher <
+    name = Universidade Federal de Roraima
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Acta Geográfica ;
+        issn = 1980-5772 ;
+        eissn = 2177-4307
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = actageo
+
+      au < exists ; 2007 ; 1 ; Acta Geográfica Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Acta Geográfica Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Acta Geográfica Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Acta Geográfica Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Acta Geográfica Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Acta Geográfica Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Acta Geográfica Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Agroambiente On-line  ;
+        eissn = 1982-8470
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = agroambiente
+
+      au < exists ; 2007 ; 1 ; Revista Agroambiente On-line  Volume 1 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Agroambiente On-line  Volume 2 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Agroambiente On-line  Volume 3 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Agroambiente On-line  Volume 4 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Agroambiente On-line  Volume 5 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Agroambiente On-line  Volume 6 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Agroambiente On-line  Volume 7 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração de Roraima ;
+        issn = 2237-8057
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = adminrr
+
+      au < exists ; 2011 ; 1 ; Revista de Administração de Roraima Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Administração de Roraima Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Administração de Roraima Volume 3 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Textos & Debates ;
+        issn = 1413-9987 ;
+        eissn = 2317-1448
+      >
+
+      comment[publisher] = Universidade Federal de Roraima
+      param[base_url] = http://revista.ufrr.br/
+      param[journal_id] = textosedebates
+
+      au < exists ; 1995 ; 1 ; Textos & Debates Volume 1 ; 1995 >
+      au < exists ; 1996 ; 2 ; Textos & Debates Volume 2 ; 1996 >
+      au < exists ; 1997 ; 3 ; Textos & Debates Volume 3 ; 1997 >
+      au < exists ; 1998 ; 4 ; Textos & Debates Volume 4 ; 1998 >
+      au < exists ; 1999 ; 5 ; Textos & Debates Volume 5 ; 1999 >
+      au < exists ; 2000 ; 6 ; Textos & Debates Volume 6 ; 2000 >
+      au < exists ; 2001 ; 7 ; Textos & Debates Volume 7 ; 2001 >
+      au < exists ; 2002 ; 8 ; Textos & Debates Volume 8 ; 2002 >
+      au < exists ; 2003 ; 9 ; Textos & Debates Volume 9 ; 2003 >
+      au < exists ; 2004 ; 10 ; Textos & Debates Volume 10 ; 2004 >
+      au < exists ; 2005 ; 11 ; Textos & Debates Volume 11 ; 2005 >
+      au < exists ; 2006 ; 12 ; Textos & Debates Volume 12 ; 2006 >
+      au < exists ; 2007 ; 13 ; Textos & Debates Volume 13 ; 2007 >
+      au < exists ; 2008 ; 14 ; Textos & Debates Volume 14 ; 2008 >
+      au < exists ; 2009 ; 15 ; Textos & Debates Volume 15 ; 2009 >
+      au < exists ; 2010 ; 16 ; Textos & Debates Volume 16 ; 2010 >
+      au < exists ; 2011 ; 17 ; Textos & Debates Volume 17 ; 2011 >
+      au < exists ; 2012 ; 18 ; Textos & Debates Volume 18 ; 2012 >
+      au < expected ; 2013 ; 19 ; Textos & Debates Volume 19 ; 2013 >
+
+  }
+
+}

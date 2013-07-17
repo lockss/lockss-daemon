@@ -1,0 +1,71 @@
+{
+  publisher <
+    name = Universidade Federal da Bahia-UFBA
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Cadernos de Arte e Antropologia ;
+        issn = 2238-0361
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = cadernosaa
+
+      au < exists ; 2012 ; 1 ; Cadernos de Arte e Antropologia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Cadernos de Arte e Antropologia Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Dança: Revista do Programa de pós-graduação em Dança ;
+        issn = 2317-3777
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = revistadanca
+
+      au < exists ; 2012 ; 1 ; Dança: Revista do Programa de pós-graduação em Dança Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Dança: Revista do Programa de pós-graduação em Dança Volume 2 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Direito Animal ;
+        issn = 2317-4552
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = RBDA
+
+      au < expected ; 2013 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Gestão e Tecnologias Ambientais ;
+        issn = 2317-563X
+      >
+
+      comment[publisher] = Universidade Federal da Bahia-UFBA
+      param[base_url] = http://www.portalseer.ufba.br/
+      param[journal_id] = gesta
+
+      au < expected ; 2013 ; 1 ; Revista Eletrônica de Gestão e Tecnologias Ambientais Volume 1 ; 2013 >
+
+  }
+
+}
