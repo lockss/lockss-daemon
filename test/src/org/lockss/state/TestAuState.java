@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.18 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.19 2013-07-17 05:02:14 dshr Exp $
  */
 
 /*
@@ -356,6 +356,23 @@ public class TestAuState extends LockssTestCase {
     assertNull(aus.getFeatureVersion(Plugin.Feature.Poll));
   }
 
+  public void testLastContentChange() {
+    TimeBase.setSimulated(10);
+    AuState aus = new AuState(mau, historyRepo);
+    aus.newCrawlStarted();
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(20,aus.getLastContentChange());
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(20,aus.getLastContentChange());
+    TimeBase.step(10);
+    aus.newCrawlFinished(1, "foo");
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(50,aus.getLastContentChange());
+  }
+    
   public static void main(String[] argv) {
     String[] testCaseList = { TestAuState.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

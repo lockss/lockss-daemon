@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.94 2013-03-14 06:38:02 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.95 2013-07-17 05:02:13 dshr Exp $
  */
 
 /*
@@ -467,6 +467,10 @@ public class BaseUrlCacher implements UrlCacher {
 	}
 	leaf.setNewProperties(headers);
 	leaf.sealNewVersion();
+	AuState aus = AuUtil.getAuState(au);
+        if (aus != null) {
+          aus.contentChanged();
+        }
       } catch (StreamUtil.InputException ex) {
 	throw resultMap.mapException(au, conn, ex.getIOCause(), null);
       } catch (StreamUtil.OutputException ex) {

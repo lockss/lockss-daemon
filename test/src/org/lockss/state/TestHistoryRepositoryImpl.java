@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.79 2012-08-06 03:34:46 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.80 2013-07-17 05:02:14 dshr Exp $
  */
 
 /*
@@ -304,6 +304,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    2, 1.0, 1.0,
 				    SubstanceChecker.State.Yes,
 				    "SubstVer3", "MetadatVer7",
+				    12345,
 				    repository);
 
     assertEquals("SubstVer3",
@@ -337,6 +338,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 		 loadedState.getFeatureVersion(Plugin.Feature.Substance));
     assertEquals("MetadatVer7",
 		 loadedState.getFeatureVersion(Plugin.Feature.Metadata));
+    assertEquals(12345, loadedState.getLastContentChange());
     assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
 
     // check crawl urls
@@ -400,8 +402,28 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreOverwrite() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, 321, 333,
-				  -1, null, 1, 1.0, 1.0, repository);
+    AuState auState = new AuState(mau,
+				  123, // lastCrawlTime
+				  321, // lastCrawlAttempt
+				  -1, // lastCrawlResult
+				  null, // lastCrawlResultMsg,
+				  321, // lastTopLevelPoll
+				  333, // lastPollStart
+				  -1, // lastPollresult
+				  null, // lastPollresultMsg
+				  0, // pollDuration
+				  -1, // lastTreeWalk
+				  null, // crawlUrls
+				  null, // accessType
+				  1, // clockssSubscriptionState
+				  1.0, // v3Agreement
+				  1.0, // highestV3Agreement
+				  SubstanceChecker.State.Unknown,
+				  null, // substanceVersion
+				  null, // metadataVersion
+				  0, // lastContentChange
+				  repository);
+
     repository.storeAuState(auState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							       mau);
@@ -413,8 +435,27 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     fis.close();
     String expectedStr = baos.toString();
 
-    auState = new AuState(mau, 1234, 4321, 4321, 5555,
-			  -1, null, 1, 1.0, 1.0, repository);
+    auState = new AuState(mau,
+			  1234, // lastCrawlTime
+			  4321, // lastCrawlAttempt
+			  -1, // lastCrawlResult
+			  null, // lastCrawlResultMsg,
+			  4321, // lastTopLevelPoll
+			  5555, // lastPollStart
+			  -1, // lastPollresult
+			  null, // lastPollresultMsg
+			  0, // pollDuration
+			  -1, // lastTreeWalk
+			  null, // crawlUrls
+			  null, // accessType
+			  1, // clockssSubscriptionState
+			  1.0, // v3Agreement
+			  1.0, // highestV3Agreement
+			  SubstanceChecker.State.Unknown,
+			  null, // substanceVersion
+			  null, // metadataVersion
+			  0, // lastContentChange
+			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
     assertEquals(4321, auState.getLastCrawlAttempt());
@@ -436,8 +477,27 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(5555, auState.getLastPollStart());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
-    auState = new AuState(mau, 123, 321, 321, 333,
-			  -1, null, 1, 1.0, 1.0, repository);
+    auState = new AuState(mau,
+			  123, // lastCrawlTime
+			  321, // lastCrawlAttempt
+			  -1, // lastCrawlResult
+			  null, // lastCrawlResultMsg,
+			  321, // lastTopLevelPoll
+			  333, // lastPollStart
+			  -1, // lastPollresult
+			  null, // lastPollresultMsg
+			  0, // pollDuration
+			  -1, // lastTreeWalk
+			  null, // crawlUrls
+			  null, // accessType
+			  1, // clockssSubscriptionState
+			  1.0, // v3Agreement
+			  1.0, // highestV3Agreement
+			  SubstanceChecker.State.Unknown,
+			  null, // substanceVersion
+			  null, // metadataVersion
+			  0, // lastContentChange
+			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());

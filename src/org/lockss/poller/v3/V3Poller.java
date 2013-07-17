@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.164 2013-07-16 04:00:17 dshr Exp $
+ * $Id: V3Poller.java,v 1.165 2013-07-17 05:02:13 dshr Exp $
  */
 
 /*
@@ -744,8 +744,7 @@ public class V3Poller extends BasePoll {
     int ret = POLL_VARIANT_POR;
     ArchivalUnit au = spec.getCachedUrlSet().getArchivalUnit();
     AuState aus = AuUtil.getAuState(au);
-    // XXX need time of last crawl that collected content
-    long lastCrawlTime = aus.getLastCrawlTime();
+    long lastCrawlTime = aus.getLastContentChange();
     int lastCrawlResult = aus.getLastCrawlResult();
     int lastCrawlUrls = aus.getCrawlUrls().size();
     // XXX need time of last PoR time, not last poll

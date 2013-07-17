@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.92 2013-04-14 05:25:38 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.93 2013-07-17 05:02:13 dshr Exp $
  */
 
 /*
@@ -275,6 +275,7 @@ public class HistoryRepositoryImpl
 				auState.getSubstanceState(),
 				auState.getFeatureVersion(Plugin.Feature.Substance),
 				auState.getFeatureVersion(Plugin.Feature.Metadata),
+				auState.getLastContentChange(),
 				this);
       return res;
     }

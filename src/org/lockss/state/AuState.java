@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.46 2013-07-16 04:00:17 dshr Exp $
+ * $Id: AuState.java,v 1.47 2013-07-17 05:02:13 dshr Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class AuState implements LockssSerializable {
   protected SubstanceChecker.State hasSubstance;
   protected String substanceVersion;
   protected String metadataVersion;
+  protected long lastContentChange;     // last time a new URL version created
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -99,11 +100,33 @@ public class AuState implements LockssSerializable {
   transient int urlUpdateCntr = 0;
 
   public AuState(ArchivalUnit au, HistoryRepository historyRepo) {
-    this(au, -1, -1, -1, -1, -1, null,
-	 CLOCKSS_SUB_UNKNOWN, -1.0, -1.0, historyRepo);
+    this(au,
+	 -1, // lastCrawlTime
+	 -1, // lastCrawlAttempt
+	 -1, // lastCrawlResult
+	 null, // lastCrawlResultMsg,
+	 -1, // lastTopLevelPoll
+	 -1, // lastPollStart
+	 -1, // lastPollresult
+	 null, // lastPollresultMsg
+	 0, // pollDuration
+	 -1, // lastTreeWalk
+	 null, // crawlUrls
+	 null, // accessType
+	 CLOCKSS_SUB_UNKNOWN, // clockssSubscriptionState
+	 -1.0, // v3Agreement
+	 -1.0, // highestV3Agreement
+	 SubstanceChecker.State.Unknown,
+	 null, // substanceVersion
+	 null, // metadataVersion
+	 0, // lastContentChange
+	 historyRepo);
   }
 
-  public AuState(ArchivalUnit au,
+  /**
+   * DSHR believes this constructor is obsolete and should be removed
+   */
+  protected AuState(ArchivalUnit au,
 		 long lastCrawlTime, long lastCrawlAttempt,
 		 long lastTopLevelPoll, long lastPollStart,
 		 long lastTreeWalk, HashSet crawlUrls,
@@ -119,6 +142,7 @@ public class AuState implements LockssSerializable {
 	 SubstanceChecker.State.Unknown,
 	 null,				// substanceFeatureVersion
 	 null,				// metadataFeatureVersion
+	 TimeBase.nowMs(),              // lastContentChange
 	 historyRepo);
   }
 
@@ -136,6 +160,7 @@ public class AuState implements LockssSerializable {
 		 SubstanceChecker.State hasSubstance,
 		 String substanceVersion,
 		 String metadataVersion,
+		 long lastContentChange,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -156,6 +181,7 @@ public class AuState implements LockssSerializable {
     this.hasSubstance = hasSubstance;
     this.substanceVersion = substanceVersion;
     this.metadataVersion = metadataVersion;
+    this.lastContentChange = lastContentChange;
     this.historyRepo = historyRepo;
   }
 
@@ -229,6 +255,14 @@ public class AuState implements LockssSerializable {
       return CrawlerStatus.getDefaultMessage(lastCrawlResult);
     }
     return lastCrawlResultMsg;
+  }
+
+  /**
+   * @return last time a new version of a URL was created. Note that
+   * only the first such change per crawl is noted.
+   */
+  public long getLastContentChange() {
+    return lastContentChange;
   }
 
   /**
@@ -361,6 +395,24 @@ public class AuState implements LockssSerializable {
     historyRepo.storeAuState(this);
   }
 
+  /**
+   * Records a content change
+   */
+  public void contentChanged() {
+    // Is a crawl in progress?
+    if (previousCrawlState != null) {
+      // Is the previous content change after the start of this
+      // crawl?
+      if (lastContentChange > lastCrawlAttempt) {
+	// Yes - we already know this crawl changed things
+	return;
+      }
+    }
+    // Yes - this is the first change in this crawl.
+    lastContentChange = TimeBase.nowMs();
+    historyRepo.storeAuState(this);
+  }
+
   private AuState copy() {
     return new AuState(au,
 		       lastCrawlTime, lastCrawlAttempt,
@@ -373,6 +425,7 @@ public class AuState implements LockssSerializable {
 		       v3Agreement, highestV3Agreement,
 		       hasSubstance,
 		       substanceVersion, metadataVersion,
+		       lastContentChange,
 		       null);
   }
 
