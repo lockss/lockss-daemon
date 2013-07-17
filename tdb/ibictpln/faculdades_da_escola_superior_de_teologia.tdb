@@ -15,21 +15,21 @@
       >
 
       comment[publisher] = Faculdades da Escola Superior de Teologia
-      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = estudos_teologicos
 
-      au < exists ; 2001 ; 1 ; Estudos Teológicos Volume 1 ; 2001 >
-      au < exists ; 2002 ; 2 ; Estudos Teológicos Volume 2 ; 2002 >
-      au < exists ; 2003 ; 3 ; Estudos Teológicos Volume 3 ; 2003 >
-      au < exists ; 2004 ; 4 ; Estudos Teológicos Volume 4 ; 2004 >
-      au < exists ; 2005 ; 5 ; Estudos Teológicos Volume 5 ; 2005 >
-      au < exists ; 2006 ; 6 ; Estudos Teológicos Volume 6 ; 2006 >
-      au < exists ; 2007 ; 7 ; Estudos Teológicos Volume 7 ; 2007 >
-      au < exists ; 2008 ; 8 ; Estudos Teológicos Volume 8 ; 2008 >
-      au < exists ; 2009 ; 9 ; Estudos Teológicos Volume 9 ; 2009 >
-      au < exists ; 2010 ; 10 ; Estudos Teológicos Volume 10 ; 2010 >
-      au < exists ; 2011 ; 11 ; Estudos Teológicos Volume 11 ; 2011 >
-      au < exists ; 2012 ; 12 ; Estudos Teológicos Volume 12 ; 2012 >
+      au < manifest ; 2001 ; 1 ; Estudos Teológicos Volume 1 ; 2001 >
+      au < manifest ; 2002 ; 2 ; Estudos Teológicos Volume 2 ; 2002 >
+      au < manifest ; 2003 ; 3 ; Estudos Teológicos Volume 3 ; 2003 >
+      au < manifest ; 2004 ; 4 ; Estudos Teológicos Volume 4 ; 2004 >
+      au < manifest ; 2005 ; 5 ; Estudos Teológicos Volume 5 ; 2005 >
+      au < manifest ; 2006 ; 6 ; Estudos Teológicos Volume 6 ; 2006 >
+      au < manifest ; 2007 ; 7 ; Estudos Teológicos Volume 7 ; 2007 >
+      au < manifest ; 2008 ; 8 ; Estudos Teológicos Volume 8 ; 2008 >
+      au < manifest ; 2009 ; 9 ; Estudos Teológicos Volume 9 ; 2009 >
+      au < manifest ; 2010 ; 10 ; Estudos Teológicos Volume 10 ; 2010 >
+      au < manifest ; 2011 ; 11 ; Estudos Teológicos Volume 11 ; 2011 >
+      au < manifest ; 2012 ; 12 ; Estudos Teológicos Volume 12 ; 2012 >
       au < expected ; 2013 ; 13 ; Estudos Teológicos Volume 13 ; 2013 >
 
   }
@@ -43,7 +43,7 @@
       >
 
       comment[publisher] = Faculdades da Escola Superior de Teologia
-      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
       au < exists ; 2010 ; 1 ; identidade! Volume 1 ; 2010 >
@@ -61,7 +61,7 @@
       >
 
       comment[publisher] = Faculdades da Escola Superior de Teologia
-      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = npp
 
       au < exists ; 2010 ; 1 ; Protestantismo em Revista Volume 1 ; 2010 >
@@ -79,7 +79,7 @@
       >
 
       comment[publisher] = Faculdades da Escola Superior de Teologia
-      param[base_url] = http://est.tempsite.ws//periodicos/
+      param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = tear
 
       au < exists ; 2012 ; 1 ; TEAR ONLINE Volume 1 ; 2012 >

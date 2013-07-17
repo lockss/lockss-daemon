@@ -16,17 +16,19 @@
       comment[publisher] = Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
       param[journal_id] = cadernovirtual
+      
+      comment[notReady] = error on accessing abstracts eg http://www.portaldeperiodicos.idp.edu.br/index.php/cadernovirtual/article/view/45
 
-      au < exists ; 2003 ; 1 ; Caderno Virtual Volume 1 ; 2003 >
-      au < exists ; 2004 ; 2 ; Caderno Virtual Volume 2 ; 2004 >
-      au < exists ; 2005 ; 3 ; Caderno Virtual Volume 3 ; 2005 >
-      au < exists ; 2006 ; 4 ; Caderno Virtual Volume 4 ; 2006 >
-      au < exists ; 2007 ; 5 ; Caderno Virtual Volume 5 ; 2007 >
-      au < exists ; 2008 ; 6 ; Caderno Virtual Volume 6 ; 2008 >
-      au < exists ; 2009 ; 7 ; Caderno Virtual Volume 7 ; 2009 >
-      au < exists ; 2010 ; 8 ; Caderno Virtual Volume 8 ; 2010 >
-      au < exists ; 2011 ; 9 ; Caderno Virtual Volume 9 ; 2011 >
-      au < exists ; 2012 ; 10 ; Caderno Virtual Volume 10 ; 2012 >
+      au < notReady ; 2003 ; 3-4 ; Caderno Virtual Volume 3-4 ; 2003 >
+      au < notReady ; 2004 ; 7-9 ; Caderno Virtual Volume 7-9 ; 2004 >
+      au < notReady ; 2005 ; 11-12 ; Caderno Virtual Volume 11-12 ; 2005 >
+      au < doesNotExist ; 0 ; ; Caderno Virtual Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 13-16 ; Caderno Virtual Volume 13-16 ; 2007 >
+      au < notReady ; 2008 ; 17-19 ; Caderno Virtual Volume 17-19 ; 2008 >
+      au < notReady ; 2009 ; 20 ; Caderno Virtual Volume 20 ; 2009 >
+      au < notReady ; 2010 ; 21-22 ; Caderno Virtual Volume 21-22 ; 2010 >
+      au < notReady ; 2011 ; 9 ; Caderno Virtual Volume 9 ; 2011 >
+      au < notReady ; 2012 ; 10 ; Caderno Virtual Volume 10 ; 2012 >
       au < expected ; 2013 ; 11 ; Caderno Virtual Volume 11 ; 2013 >
 
   }
@@ -42,10 +44,10 @@
       param[base_url] = http://www.direitopublico.idp.edu.br/
       param[journal_id] = direitopublico
 
-      au < exists ; 2008 ; 1 ; Direito Público Volume 1 ; 2008 >
-      au < exists ; 2009 ; 2 ; Direito Público Volume 2 ; 2009 >
-      au < exists ; 2010 ; 3 ; Direito Público Volume 3 ; 2010 >
-      au < exists ; 2011 ; 4 ; Direito Público Volume 4 ; 2011 >
+      au < manifest ; 2008 ; 1 ; Direito Público Volume 1 ; 2008 >
+      au < manifest ; 2009 ; 2 ; Direito Público Volume 2 ; 2009 >
+      au < manifest ; 2010 ; 3 ; Direito Público Volume 3 ; 2010 >
+      au < manifest ; 2011 ; 4 ; Direito Público Volume 4 ; 2011 >
       au < expected ; 2012 ; 5 ; Direito Público Volume 5 ; 2012 >
       au < expected ; 2013 ; 6 ; Direito Público Volume 6 ; 2013 >
 

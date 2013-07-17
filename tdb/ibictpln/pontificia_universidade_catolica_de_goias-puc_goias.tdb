@@ -17,13 +17,13 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = fragmentos
 
-      au < exists ; 2006 ; 1 ; Fragmentos de Cultura Volume 1 ; 2006 >
-      au < exists ; 2007 ; 2 ; Fragmentos de Cultura Volume 2 ; 2007 >
-      au < exists ; 2008 ; 3 ; Fragmentos de Cultura Volume 3 ; 2008 >
-      au < exists ; 2009 ; 4 ; Fragmentos de Cultura Volume 4 ; 2009 >
-      au < exists ; 2010 ; 5 ; Fragmentos de Cultura Volume 5 ; 2010 >
-      au < exists ; 2011 ; 6 ; Fragmentos de Cultura Volume 6 ; 2011 >
-      au < exists ; 2012 ; 7 ; Fragmentos de Cultura Volume 7 ; 2012 >
+      au < manifest ; 2006 ; 1 ; Fragmentos de Cultura Volume 1 ; 2006 >
+      au < manifest ; 2007 ; 2 ; Fragmentos de Cultura Volume 2 ; 2007 >
+      au < manifest ; 2008 ; 3 ; Fragmentos de Cultura Volume 3 ; 2008 >
+      au < manifest ; 2009 ; 4 ; Fragmentos de Cultura Volume 4 ; 2009 >
+      au < manifest ; 2010 ; 5 ; Fragmentos de Cultura Volume 5 ; 2010 >
+      au < manifest ; 2011 ; 6 ; Fragmentos de Cultura Volume 6 ; 2011 >
+      au < manifest ; 2012 ; 7 ; Fragmentos de Cultura Volume 7 ; 2012 >
       au < expected ; 2013 ; 8 ; Fragmentos de Cultura Volume 8 ; 2013 >
 
   }
@@ -39,14 +39,14 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = habitus
 
-      au < exists ; 2005 ; 1 ; Habitus Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Habitus Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Habitus Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Habitus Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Habitus Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Habitus Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Habitus Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Habitus Volume 8 ; 2012 >
+      au < manifest ; 2005 ; 1 ; Habitus Volume 1 ; 2005 >
+      au < manifest ; 2006 ; 2 ; Habitus Volume 2 ; 2006 >
+      au < manifest ; 2007 ; 3 ; Habitus Volume 3 ; 2007 >
+      au < manifest ; 2008 ; 4 ; Habitus Volume 4 ; 2008 >
+      au < manifest ; 2009 ; 5 ; Habitus Volume 5 ; 2009 >
+      au < manifest ; 2010 ; 6 ; Habitus Volume 6 ; 2010 >
+      au < manifest ; 2011 ; 7 ; Habitus Volume 7 ; 2011 >
+      au < manifest ; 2012 ; 8 ; Habitus Volume 8 ; 2012 >
       au < expected ; 2013 ; 9 ; Habitus Volume 9 ; 2013 >
 
   }
@@ -100,15 +100,14 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = caminhos
 
-      au < exists ; 2005 ; 1 ; Revista Caminhos Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista Caminhos Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista Caminhos Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista Caminhos Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista Caminhos Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista Caminhos Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista Caminhos Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Revista Caminhos Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Caminhos Volume 9 ; 2013 >
+      au < manifest ; 2006 ; 4 ; Revista Caminhos Volume 2 ; 2006 >
+      au < manifest ; 2007 ; 5 ; Revista Caminhos Volume 3 ; 2007 >
+      au < manifest ; 2008 ; 6 ; Revista Caminhos Volume 4 ; 2008 >
+      au < manifest ; 2009 ; 7 ; Revista Caminhos Volume 5 ; 2009 >
+      au < manifest ; 2010 ; 8 ; Revista Caminhos Volume 6 ; 2010 >
+      au < manifest ; 2011 ; 9 ; Revista Caminhos Volume 7 ; 2011 >
+      au < manifest ; 2012 ; 10 ; Revista Caminhos Volume 8 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista Caminhos Volume 9 ; 2013 >
 
   }
 
@@ -123,15 +122,14 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = educativa
 
-      au < exists ; 2005 ; 1 ; Revista Educativa  Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista Educativa  Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista Educativa  Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista Educativa  Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista Educativa  Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista Educativa  Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista Educativa  Volume 7 ; 2011 >
-      au < exists ; 2012 ; 8 ; Revista Educativa  Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Educativa  Volume 9 ; 2013 >
+      au < manifest ; 2006 ; 9 ; Revista Educativa  Volume 2 ; 2006 >
+      au < manifest ; 2007 ; 10 ; Revista Educativa  Volume 3 ; 2007 >
+      au < manifest ; 2008 ; 11 ; Revista Educativa  Volume 4 ; 2008 >
+      au < manifest ; 2009 ; 12 ; Revista Educativa  Volume 5 ; 2009 >
+      au < manifest ; 2010 ; 13 ; Revista Educativa  Volume 6 ; 2010 >
+      au < manifest ; 2011 ; 14 ; Revista Educativa  Volume 7 ; 2011 >
+      au < manifest ; 2012 ; 15 ; Revista Educativa  Volume 8 ; 2012 >
+      au < expected ; 2013 ; 16 ; Revista Educativa  Volume 9 ; 2013 >
 
   }
 
@@ -146,13 +144,13 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = estudos
 
-      au < exists ; 2006 ; 1 ; Revista Estudos Volume 1 ; 2006 >
-      au < exists ; 2007 ; 2 ; Revista Estudos Volume 2 ; 2007 >
-      au < exists ; 2008 ; 3 ; Revista Estudos Volume 3 ; 2008 >
-      au < exists ; 2009 ; 4 ; Revista Estudos Volume 4 ; 2009 >
-      au < exists ; 2010 ; 5 ; Revista Estudos Volume 5 ; 2010 >
-      au < exists ; 2011 ; 6 ; Revista Estudos Volume 6 ; 2011 >
-      au < exists ; 2012 ; 7 ; Revista Estudos Volume 7 ; 2012 >
+      au < manifest ; 2006 ; 1 ; Revista Estudos Volume 1 ; 2006 >
+      au < manifest ; 2007 ; 2 ; Revista Estudos Volume 2 ; 2007 >
+      au < manifest ; 2008 ; 3 ; Revista Estudos Volume 3 ; 2008 >
+      au < manifest ; 2009 ; 4 ; Revista Estudos Volume 4 ; 2009 >
+      au < manifest ; 2010 ; 5 ; Revista Estudos Volume 5 ; 2010 >
+      au < manifest ; 2011 ; 6 ; Revista Estudos Volume 6 ; 2011 >
+      au < manifest ; 2012 ; 7 ; Revista Estudos Volume 7 ; 2012 >
       au < expected ; 2013 ; 8 ; Revista Estudos Volume 8 ; 2013 >
 
   }
@@ -168,8 +166,8 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = guara
 
-      au < exists ; 2011 ; 1 ; Revista Guará Linguagem e Literatura Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista Guará Linguagem e Literatura Volume 2 ; 2012 >
+      au < manifest ; 2011 ; 1 ; Revista Guará Linguagem e Literatura Volume 1 ; 2011 >
+      au < manifest ; 2012 ; 2 ; Revista Guará Linguagem e Literatura Volume 2 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Guará Linguagem e Literatura Volume 3 ; 2013 >
 
   }
@@ -185,7 +183,7 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = ser
 
-      au < exists ; 2009 ; 1 ; Ser Volume 1 ; 2009 >
+      au < manifest ; 2009 ; 1 ; Ser Volume 1 ; 2009 >
       au < expected ; 2010 ; 2 ; Ser Volume 2 ; 2010 >
       au < expected ; 2011 ; 3 ; Ser Volume 3 ; 2011 >
       au < expected ; 2012 ; 4 ; Ser Volume 4 ; 2012 >

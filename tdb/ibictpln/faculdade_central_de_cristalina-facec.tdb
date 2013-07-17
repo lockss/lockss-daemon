@@ -17,7 +17,7 @@
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaepesquisaemadministracao
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
+      au < manifest ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
       au < expected ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 2 ; 2010 >
       au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 3 ; 2011 >
       au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 4 ; 2012 >
@@ -74,7 +74,7 @@
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaensinoepesquisaemturismo
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
+      au < manifest ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
       au < expected ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 2 ; 2010 >
       au < expected ; 2011 ; 3 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 3 ; 2011 >
       au < expected ; 2012 ; 4 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 4 ; 2012 >
@@ -93,7 +93,7 @@
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = formacaodeprofessores
 
-      au < exists ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
+      au < manifest ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
       au < expected ; 2010 ; 2 ; Revista Brasileira de Formação de Professores Volume 2 ; 2010 >
       au < expected ; 2011 ; 3 ; Revista Brasileira de Formação de Professores Volume 3 ; 2011 >
       au < expected ; 2012 ; 4 ; Revista Brasileira de Formação de Professores Volume 4 ; 2012 >
