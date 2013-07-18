@@ -34,11 +34,11 @@
       param[base_url] = http://www.revistaseletronicas.fmu.br/
       param[journal_id] = RMDIR
 
-      au < exists ; 2009 ; 1 ; Revista FMU Direito Volume 1 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista FMU Direito Volume 2 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista FMU Direito Volume 3 ; 2011 >
-      au < expected ; 2012 ; 4 ; Revista FMU Direito Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista FMU Direito Volume 5 ; 2013 >
+      au < exists ; 2009 ; 23 ; Revista FMU Direito Volume 23 ; 2009 >
+      au < exists ; 2010 ; 24 ; Revista FMU Direito Volume 24 ; 2010 >
+      au < exists ; 2011 ; 25 ; Revista FMU Direito Volume 25 ; 2011 >
+      au < expected ; 2012 ; 26 ; Revista FMU Direito Volume 26 ; 2012 >
+      au < expected ; 2013 ; 27 ; Revista FMU Direito Volume 27 ; 2013 >
 
   }
 
