@@ -17,10 +17,10 @@
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = actabrasileira
 
-      au < exists ; 2010 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Acta Brasileira do Movimento Humano Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Acta Brasileira do Movimento Humano Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Acta Brasileira do Movimento Humano Volume 4 ; 2013 >
+      au < exists ; 2010 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 (2010) ; 2010 >
+      au < exists ; 2011 ; 1 ; Acta Brasileira do Movimento Humano Volume 1 (2011) ; 2011 >
+      au < exists ; 2012 ; 2 ; Acta Brasileira do Movimento Humano Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; Acta Brasileira do Movimento Humano Volume 3 ; 2013 >
 
   }
 
@@ -35,16 +35,10 @@
       param[base_url] = http://revista.ulbrajp.edu.br/ojs/
       param[journal_id] = ciencia
 
-      au < exists ; 2004 ; 1 ; Ciência & Consciência Volume 1 ; 2004 >
-      au < exists ; 2005 ; 2 ; Ciência & Consciência Volume 2 ; 2005 >
-      au < exists ; 2006 ; 3 ; Ciência & Consciência Volume 3 ; 2006 >
-      au < exists ; 2007 ; 4 ; Ciência & Consciência Volume 4 ; 2007 >
-      au < exists ; 2008 ; 5 ; Ciência & Consciência Volume 5 ; 2008 >
-      au < exists ; 2009 ; 6 ; Ciência & Consciência Volume 6 ; 2009 >
-      au < exists ; 2010 ; 7 ; Ciência & Consciência Volume 7 ; 2010 >
-      au < exists ; 2011 ; 8 ; Ciência & Consciência Volume 8 ; 2011 >
-      au < expected ; 2012 ; 9 ; Ciência & Consciência Volume 9 ; 2012 >
-      au < expected ; 2013 ; 10 ; Ciência & Consciência Volume 10 ; 2013 >
+      au < exists ; 2010 ; 1 ; Ciência & Consciência Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 1 ; Ciência & Consciência Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 1 ; Ciência & Consciência Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 1 ; Ciência & Consciência Volume 2013 ; 2013 >
 
   }
 
