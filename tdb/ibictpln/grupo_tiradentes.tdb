@@ -17,8 +17,8 @@
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = direito
 
-      au < exists ; 2012 ; 1 ; Revista Interfaces Científica – Direito Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Interfaces Científica – Direito Volume 2 ; 2013 >
+      au < manifest ; 2012 ; 2012 ; Revista Interfaces Científica – Direito Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2013 ; Revista Interfaces Científica – Direito Volume 2013 ; 2013 >
 
   }
 
@@ -33,8 +33,8 @@
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = educacao
 
-      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Educação Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Educação Volume 2 ; 2013 >
+      au < manifest ; 2012 ; 2012 ; Revista Interfaces Científicas – Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Revista Interfaces Científicas – Educação Volume 2013 ; 2013 >
 
   }
 
@@ -49,8 +49,8 @@
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = humanas
 
-      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas-Humanas e Sociais Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2 ; 2013 >
+      au < manifest ; 2012 ; 2012 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Revista Interfaces Científicas-Humanas e Sociais Volume 2013 ; 2013 >
 
   }
 
@@ -65,8 +65,8 @@
       param[base_url] = https://periodicos.set.edu.br/
       param[journal_id] = saude
 
-      au < exists ; 2012 ; 1 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2 ; 2013 >
+      au < manifest ; 2012 ; 2012 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Revista Interfaces Científicas – Saúde e Ambiente Volume 2013 ; 2013 >
 
   }
 
