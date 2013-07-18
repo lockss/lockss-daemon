@@ -63,14 +63,13 @@
       comment[publisher] = Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.portaldeperiodicos.idp.edu.br/
       param[journal_id] = observatorio
+      
+      comment[notReady] = Check to see if abstracts are available. eg http://www.portaldeperiodicos.idp.edu.br/index.php/observatorio/article/view/103
 
-      au < exists ; 2007 ; 1 ; Observatório da Jurisdição Constitucional Volume 1 ; 2007 >
-      au < exists ; 2008 ; 2 ; Observatório da Jurisdição Constitucional Volume 2 ; 2008 >
-      au < exists ; 2009 ; 3 ; Observatório da Jurisdição Constitucional Volume 3 ; 2009 >
-      au < exists ; 2010 ; 4 ; Observatório da Jurisdição Constitucional Volume 4 ; 2010 >
-      au < exists ; 2011 ; 5 ; Observatório da Jurisdição Constitucional Volume 5 ; 2011 >
-      au < exists ; 2012 ; 6 ; Observatório da Jurisdição Constitucional Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Observatório da Jurisdição Constitucional Volume 7 ; 2013 >
+      au < exists ; 2007-2010 ; 0 ; Observatório da Jurisdição Constitucional Volume 0 ; 0000 >
+      au < exists ; 2010-2011 ; 4 ; Observatório da Jurisdição Constitucional Volume 4 ; 0004 >
+      au < exists ; 2011-2012 ; 5 ; Observatório da Jurisdição Constitucional Volume 5 ; 0005 >
+      au < exists ; 2013 ; 6 ; Observatório da Jurisdição Constitucional Volume 6 ; 2013 >
 
   }
 
