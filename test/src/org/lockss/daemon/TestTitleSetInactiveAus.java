@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.8 2013-01-09 09:38:56 tlipkis Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.9 2013-07-18 19:30:03 tlipkis Exp $
  */
 
 /*
@@ -71,8 +71,8 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     pluginMgr.ensurePluginLoaded(key);
     mp = (MockPlugin)pluginMgr.getPlugin(key);
 
-    d1 = new ConfigParamDescr("key1");
-    d2 = new ConfigParamDescr("key2");
+    d1 = new ConfigParamDescr("base_url");
+    d2 = new ConfigParamDescr("volume");
     cpa1 = new ConfigParamAssignment(d1, "a");
     cpa2 = new ConfigParamAssignment(d2, "foo");
     cpa3 = new ConfigParamAssignment(d2, "bar");
@@ -84,7 +84,9 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     tc2.setParams(ListUtil.list(cpa1, cpa3));
 
     mp.setTitleConfigMap(MapUtil.map(tc1.getDisplayName(), tc1,
-				     tc2.getDisplayName(), tc2));
+				     tc2.getDisplayName(), tc2),
+			 MapUtil.map(tc1.getAuId(pluginMgr), tc1,
+				     tc2.getAuId(pluginMgr), tc2));
 
     mp.setAuConfigDescrs(ListUtil.list(d1, d2));
     mau1 = new MyMockArchivalUnit();
@@ -93,10 +95,10 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     mau2.setPlugin(mp);
     mau1.setName("auname1");
     mau2.setName("title2");
-    mau1.setConfiguration(ConfigurationUtil.fromArgs("key1", "a",
-						     "key2", "foo"));
-    mau2.setConfiguration(ConfigurationUtil.fromArgs("key1", "a",
-						     "key2", "bar"));
+    mau1.setConfiguration(ConfigurationUtil.fromArgs("base_url", "a",
+						     "volume", "foo"));
+    mau2.setConfiguration(ConfigurationUtil.fromArgs("base_url", "a",
+						     "volume", "bar"));
   }
 
   public void tearDown() throws Exception {

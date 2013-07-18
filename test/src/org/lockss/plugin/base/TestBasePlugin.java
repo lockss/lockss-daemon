@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.26 2011-11-08 20:21:50 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.27 2013-07-18 19:30:03 tlipkis Exp $
  */
 
 /*
@@ -56,12 +56,17 @@ public class TestBasePlugin extends LockssTestCase {
   static final String AUPARAM_VOL = PD_VOL.getKey();
   static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
+  static String MY_PLUG_ID =
+    "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
+
   MyBasePlugin mbp;
 
   public void setUp() throws Exception {
     super.setUp();
-    mbp = new MyBasePlugin();
-    mbp.initPlugin(getMockLockssDaemon());
+    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    String key = PluginManager.pluginKeyFromId(MY_PLUG_ID);
+    pmgr.ensurePluginLoaded(key);
+    mbp = (MyBasePlugin)pmgr.getPlugin(key);
   }
 
   public void tearDown() throws Exception {
@@ -173,6 +178,11 @@ public class TestBasePlugin extends LockssTestCase {
     p2.put("journalTitle", "hj");
     p2.put("plugin", plugName);
     p2.put("pluginVersion", "4");
+    p2.put("param.1.key", AUPARAM_VOL);
+    p2.put("param.1.value", "vol_2");
+    p2.put("param.2.key", AUPARAM_YEAR);
+    p2.put("param.2.value", "year_2");
+    p2.put("param.2.editable", "true");
     p2.put("attributes.attr1", "av111");
     p2.put("attributes.attr2", "av222");
     
@@ -183,9 +193,7 @@ public class TestBasePlugin extends LockssTestCase {
     tdb.addTdbAuFromProperties(p2);
     
     // install a new configuration with the TDB
-    Configuration config = ConfigManager.newConfiguration();
-    config.setTdb(tdb);
-    ConfigurationUtil.installConfig(config);
+    ConfigurationUtil.setTdb(tdb);
 
     assertSameElements(ListUtil.list("It's", "Howl"),
 		       mbp.getSupportedTitles());
@@ -286,7 +294,7 @@ public class TestBasePlugin extends LockssTestCase {
         factory2.createFilteredInputStream(null, null, null)));
   }
 
-  private static class MyBasePlugin extends BasePlugin {
+  public static class MyBasePlugin extends BasePlugin {
     String name;
     String version;
     List configDescrs;
