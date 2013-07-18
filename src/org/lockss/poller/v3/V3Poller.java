@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.166 2013-07-18 03:14:11 dshr Exp $
+ * $Id: V3Poller.java,v 1.167 2013-07-18 21:58:04 dshr Exp $
  */
 
 /*
@@ -730,6 +730,8 @@ public class V3Poller extends BasePoll {
 				 DEFAULT_V3_ALL_LOCAL_POLLS);
     allPoPPolls = c.getBoolean(PARAM_V3_ALL_POP_POLLS,
 				 DEFAULT_V3_ALL_POP_POLLS);
+    repairerThreshold = c.getInt(PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
+				     DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS);
     }
 
   /**
@@ -761,7 +763,7 @@ public class V3Poller extends BasePoll {
       ret = POLL_VARIANT_LOCAL;
       log.debug3("Local poll forced");
     } else if (lastPollTime > lastCrawlTime &&
-	       agreePeersLastPoll > minAgreePeersLastPoll) {
+	       agreePeersLastPoll >= minAgreePeersLastPoll) {
       // AU in good shape - does not need PoR poll
       int willingRepairers = idManager.getCachesToRepairFrom(au).size();
       log.debug3("Repairers " + willingRepairers + " vs " +
@@ -802,10 +804,11 @@ public class V3Poller extends BasePoll {
     // peers whose times are threshold or less before lastPoRPoll
     for (Iterator it = agreeMap.entrySet().iterator(); it.hasNext(); ) {
       Map.Entry ent = (Map.Entry)it.next();
-      long delta = lastPoRPoll - ((Long)ent.getValue()).longValue();
+      long agreeTime = ((Long)ent.getValue()).longValue();
+      long delta = lastPoRPoll - agreeTime;
       PeerIdentity pid = (PeerIdentity)ent.getKey();
       // Map includes agreement in local polls, so must exclude local ID.
-      if (delta <= threshold && !pid.isLocalIdentity()) {
+      if (delta >= 0 && delta < threshold && !pid.isLocalIdentity()) {
 	ret++;
       }
     }

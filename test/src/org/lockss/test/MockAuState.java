@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.25 2011-08-21 23:58:32 tlipkis Exp $
+ * $Id: MockAuState.java,v 1.26 2013-07-18 21:58:04 dshr Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ public class MockAuState extends AuState {
 
   public void setLastCrawlTime(long newCrawlTime) {
     lastCrawlTime = newCrawlTime;
+  }
+
+  public void setLastContentChange(long newTime) {
+    lastContentChange = newTime;
   }
 
   public void setLastTopLevelPollTime(long newPollTime) {

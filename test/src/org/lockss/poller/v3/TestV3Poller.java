@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.59 2013-07-14 03:05:21 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.60 2013-07-18 21:58:04 dshr Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
+import org.lockss.state.*;
 
 import static org.lockss.util.Constants.*;
 
@@ -569,7 +570,124 @@ public class TestV3Poller extends LockssTestCase {
     ud.setVoteBlocks(vb);
     return ud;
   }
-  
+
+  public void testCountLastPoRAgreePeers() throws Exception {
+    TimeBase.setSimulated(1000L);
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    ArchivalUnit au = v3Poller.getAu();
+    assertNotNull(au);
+    assertTrue(au instanceof MockArchivalUnit);
+    MockArchivalUnit mau = (MockArchivalUnit)au;
+    AuState aus = AuUtil.getAuState(au);
+    assertNotNull(aus);
+    assertTrue(aus instanceof MockAuState);
+    MockAuState maus = (MockAuState)aus;
+    maus.setLastTopLevelPollTime(200L);
+    assertEquals(200L, maus.getLastTopLevelPollTime());
+    maus.setPollDuration(100L);
+    assertEquals(100L, maus.getPollDuration());
+    Map agreeMap = idMgr.getAgreed(mau);
+    assertNotNull(agreeMap);
+    assertEquals(0L, agreeMap.size());
+    PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
+    assertFalse(p1.isLocalIdentity());
+    PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
+    assertFalse(p2.isLocalIdentity());
+    PeerIdentity p3 = findPeerIdentity("TCP:[1.2.3.7]:1111");
+    assertFalse(p3.isLocalIdentity());
+    PeerIdentity p4 = findPeerIdentity("TCP:[1.2.3.8]:1111");
+    assertFalse(p4.isLocalIdentity());
+    PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
+    assertFalse(p5.isLocalIdentity());
+    // Add local ID - local poll finished at 900
+    agreeMap.put(pollerId, 900L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoP poll finished at 700
+    agreeMap.put(p5, 700L);
+    agreeMap.put(p4, 700L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoR poll between 0 and 100
+    agreeMap.put(p3, 10L);
+    agreeMap.put(p2, 20L);
+    agreeMap.put(p1, 30L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoR poll between 100 and 200
+    agreeMap.put(p3, 150L);
+    agreeMap.put(p2, 160L);
+    agreeMap.put(p1, 170L);
+    assertEquals(3, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Make it look like p1 subsequently agreed in a PoP poll
+    agreeMap.put(p3, 500L);
+    assertEquals(2, v3Poller.countLastPoRAgreePeers(mau, maus));
+  }
+
+  public void testChoosePollVariant() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
+				 "3");
+    TimeBase.setSimulated(1000L);
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    ArchivalUnit au = v3Poller.getAu();
+    assertNotNull(au);
+    assertTrue(au instanceof MockArchivalUnit);
+    MockArchivalUnit mau = (MockArchivalUnit)au;
+    AuState aus = AuUtil.getAuState(au);
+    assertNotNull(aus);
+    assertTrue(aus instanceof MockAuState);
+    MockAuState maus = (MockAuState)aus;
+    PollSpec ps = v3Poller.getPollSpec();
+    assertNotNull(ps);
+    Map agreeMap = idMgr.getAgreed(mau);
+    assertNotNull(agreeMap);
+    assertEquals(0L, agreeMap.size());
+    PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
+    assertFalse(p1.isLocalIdentity());
+    PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
+    assertFalse(p2.isLocalIdentity());
+    PeerIdentity p3 = findPeerIdentity("TCP:[1.2.3.7]:1111");
+    assertFalse(p3.isLocalIdentity());
+    PeerIdentity p4 = findPeerIdentity("TCP:[1.2.3.8]:1111");
+    assertFalse(p4.isLocalIdentity());
+    PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
+    assertFalse(p5.isLocalIdentity());
+    // First poll is PoR
+    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    // Now crawl and get content
+    maus.setLastContentChange(100);
+    maus.setLastCrawlTime(100);
+    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    // Now poll but get disagreement
+    maus.setLastTopLevelPollTime(200);
+    maus.setPollDuration(100L);
+    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    // Now get 2 agreements, repairer threshold is 3
+    agreeMap.put(p3, 150L);
+    agreeMap.put(p2, 160L);
+    assertEquals(V3Poller.POLL_VARIANT_POP, v3Poller.choosePollVariant(ps, 3));
+    // Add another agreement
+    agreeMap.put(p1, 170L);
+    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now crawl again, but get no content
+    maus.setLastCrawlTime(300);
+    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now crawl again, get content
+    maus.setLastCrawlTime(300);
+    maus.setLastContentChange(300);
+    assertEquals(V3Poller.POLL_VARIANT_POR,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now poll but get disagreement
+    maus.setLastTopLevelPollTime(500);
+    maus.setPollDuration(100L);
+    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    // Now get 3 agreement, repairer threshold is 3
+    agreeMap.put(p3, 450L);
+    agreeMap.put(p2, 460L);
+    agreeMap.put(p1, 460L);
+    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+		 v3Poller.choosePollVariant(ps, 3));
+  }
+
   public void testIsPeerEligible() throws Exception {
     V3Poller v3Poller = makeV3Poller("testing poll key");
     assertFalse(v3Poller.isPeerEligible(pollerId));
@@ -1778,12 +1896,27 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   static class MyIdentityManager extends IdentityManagerImpl {
+    Map myMap = null;
     IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
 						ArchivalUnit au) {
       Map map = findAuAgreeMap(au);
       synchronized (map) {
 	return findPeerIdentityAgreement(map, pid);
       }
+    }
+
+    public Map getAgreed(ArchivalUnit au) {
+      if (myMap == null) {
+	myMap = new HashMap();
+      }
+      return myMap;
+    }
+    
+    public List getCachesToRepairFrom(ArchivalUnit au) {
+      if (myMap == null) {
+	myMap = new HashMap();
+      }
+      return new ArrayList(myMap.keySet());
     }
 
     public void storeIdentities() throws ProtocolException {
