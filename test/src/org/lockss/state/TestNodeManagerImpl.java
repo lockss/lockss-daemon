@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.140 2012-08-08 07:15:45 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.141 2013-07-18 19:29:35 tlipkis Exp $
  */
 /*
  Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
@@ -247,12 +247,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     Vector subFiles = new Vector(2);
     subFiles.add(getCus(mau, TEST_URL));
     ((MockCachedUrlSet) cus).setHashItSource(subFiles);
-    assertNull(nodeManager.activeNodes.get(results.getPollKey()));
+    assertNull(nodeManager.getActiveNodes().get(results.getPollKey()));
     nodeManager.startPoll(cus, results, false);
-    assertSame(nodeManager.activeNodes.get(results.getPollKey()), nodeManager
-        .getNodeState(cus));
+    assertSame(nodeManager.getNodeState(cus),
+	       nodeManager.getActiveNodes().get(results.getPollKey()));
     nodeManager.updatePollResults(cus, results);
-    assertNull(nodeManager.activeNodes.get(results.getPollKey()));
+    assertNull(nodeManager.getActiveNodes().get(results.getPollKey()));
   }
 
   public void testNonLocalStartPollStates() throws Exception {

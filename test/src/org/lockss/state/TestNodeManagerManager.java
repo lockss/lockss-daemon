@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerManager.java,v 1.2 2004-10-18 03:40:31 tlipkis Exp $
+ * $Id: TestNodeManagerManager.java,v 1.3 2013-07-18 19:29:35 tlipkis Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class TestNodeManagerManager extends LockssTestCase {
 
     public void startService() {
       super.startService();
-      nodeStateCacheSize = nodeMgrMgr.paramNodeStateCacheSize;
+      nodeStateCacheSize = getNodeManagerManager().paramNodeStateCacheSize;
     }
 
     public void setNodeStateCacheSize(int size) {

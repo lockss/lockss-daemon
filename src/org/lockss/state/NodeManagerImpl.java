@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.222 2013-07-18 03:14:11 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.223 2013-07-18 19:29:35 tlipkis Exp $
  */
 
 /*
@@ -57,20 +57,15 @@ public class NodeManagerImpl
     org.lockss.poller.v3.V3PollFactory.DEFAULT_ENABLE_V3_POLLER;
   
   // the various necessary managers
-  NodeManagerManager nodeMgrMgr;
+  LockssDaemon theDaemon;
   HistoryRepository historyRepo;
-  AlertManager alertMgr;
   private LockssRepository lockssRepo;
-  PollManager pollManager;
-  ActivityRegulator regulator;
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
   // state and caches for this AU
   ArchivalUnit managedAu;
   AuState auState;
   UniqueRefLruCache nodeCache;
-  private boolean isGlobalNodeCache =
-    NodeManagerManager.DEFAULT_GLOBAL_CACHE_ENABLED;
   HashMap activeNodes;
 
    //the set of nodes marked damaged (these are nodes which have lost content
@@ -87,24 +82,21 @@ public class NodeManagerImpl
     super.startService();
     // gets all the managers
     if (logger.isDebug2()) logger.debug2("Starting: " + managedAu);
-    LockssDaemon theDaemon = getDaemon();
-    nodeMgrMgr = theDaemon.getNodeManagerManager();
+    theDaemon = getDaemon();
     historyRepo = theDaemon.getHistoryRepository(managedAu);
     lockssRepo = theDaemon.getLockssRepository(managedAu);
-    pollManager = theDaemon.getPollManager();
-    regulator = theDaemon.getActivityRegulator(managedAu);
-    alertMgr = theDaemon.getAlertManager();
     // initializes the state info
-    isGlobalNodeCache = nodeMgrMgr.isGlobalNodeCache();
-    if (isGlobalNodeCache) {
-      nodeCache = nodeMgrMgr.getGlobalNodeCache();
+    if (getNodeManagerManager().isGlobalNodeCache()) {
+      nodeCache = getNodeManagerManager().getGlobalNodeCache();
     } else {
-      nodeCache = new UniqueRefLruCache(nodeMgrMgr.paramNodeStateCacheSize);
+      nodeCache = new UniqueRefLruCache(getNodeManagerManager().paramNodeStateCacheSize);
     }
-    activeNodes = new HashMap();
 
     auState = historyRepo.loadAuState();
-    damagedNodes = historyRepo.loadDamagedNodeSet();
+
+    // damagedNodes not used for V3, avoid file lookup per AU
+//     damagedNodes = historyRepo.loadDamagedNodeSet();
+    damagedNodes = new DamagedNodeSet(managedAu, historyRepo);
 
     logger.debug2("NodeManager successfully started");
   }
@@ -125,8 +117,35 @@ public class NodeManagerImpl
     logger.debug2("NodeManager successfully stopped");
   }
 
+  NodeManagerManager getNodeManagerManager() {
+    return theDaemon.getNodeManagerManager();
+  }
+
+  PollManager getPollManager() {
+    return theDaemon.getPollManager();
+  }
+
+  AlertManager getAlertManager() {
+    return theDaemon.getAlertManager();
+  }
+
+  ActivityRegulator getActivityRegulator() {
+    return theDaemon.getActivityRegulator(managedAu);
+  }
+
+  synchronized Map getActiveNodes() {
+    if (activeNodes == null) {
+      activeNodes = new HashMap();
+    }
+    return activeNodes;
+  }
+
+  boolean isGlobalNodeCache() {
+    return nodeCache == getNodeManagerManager().getGlobalNodeCache();
+  }
+
   public void setNodeStateCacheSize(int size) {
-    if (nodeCache != null && !isGlobalNodeCache &&
+    if (nodeCache != null && !isGlobalNodeCache() &&
 	nodeCache.getMaxSize() != size) {
       nodeCache.setMaxSize(size);
     }
@@ -180,7 +199,7 @@ public class NodeManagerImpl
                                          poll.getUprBound(),
 					 poll.type);
         // if poll isn't running and it was our poll
-        if (!pollManager.isPollRunning(pollSpec)) {
+        if (!getPollManager().isPollRunning(pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
           // set duration to the deadline of the dead poll
           // this is important because it could still be running in other caches
@@ -205,7 +224,7 @@ public class NodeManagerImpl
   }
 
   Object nodeCacheKey(String canonUrl) {
-    if (isGlobalNodeCache) {
+    if (isGlobalNodeCache()) {
       return new KeyPair(this, canonUrl);
     }
     return canonUrl;
@@ -222,7 +241,7 @@ public class NodeManagerImpl
    * @return Iterator the NodeStates
    */
   Iterator getCacheEntries() {
-    if (isGlobalNodeCache) {
+    if (isGlobalNodeCache()) {
       // must return just our entries from global cache
       Collection auEntries = new ArrayList();
       for (Iterator iter = nodeCache.snapshot().iterator(); iter.hasNext(); ) {
@@ -357,7 +376,7 @@ public class NodeManagerImpl
                                         tally.isMyPoll());
     ((NodeStateImpl)nodeState).addPollState(pollState);
     // store nodestate for active poll
-    activeNodes.put(tally.getPollKey(), nodeState);
+    getActiveNodes().put(tally.getPollKey(), nodeState);
     if (logger.isDebug2()) {
       logger.debug2("Starting poll for url '" +
                     nodeState.getCachedUrlSet().getUrl() + " " +
@@ -371,13 +390,13 @@ public class NodeManagerImpl
    * Only used for V1 polls - called from PollManager
    */
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
-    NodeState nodeState = (NodeState)activeNodes.get(results.getPollKey());
+    NodeState nodeState = (NodeState)getActiveNodes().get(results.getPollKey());
     if (nodeState == null) {
       nodeState = getNodeState(cus);
     }
     updateState(nodeState, results);
     // remove from active nodes
-    activeNodes.remove(results.getPollKey());
+    getActiveNodes().remove(results.getPollKey());
   }
 
   // Callers should call AuState directly when NodeManager goes.
@@ -633,7 +652,7 @@ public class NodeManagerImpl
     if (repairCol.size() > 0) {
       String key = results.getPollKey();
       markNodesForRepair(repairCol, key, results.getCachedUrlSet(), true,
-                         pollManager.acquirePollLock(key));
+                         getPollManager().acquirePollLock(key));
       repairsDone = true;
     }
 
@@ -711,7 +730,7 @@ public class NodeManagerImpl
         case PollState.REPAIRING:
           // if repair poll, we're repaired
           logger.debug2("won repair poll, state = repaired.");
-          alertMgr.raiseAlert(Alert.auAlert(Alert.REPAIR_COMPLETE,managedAu)
+          getAlertManager().raiseAlert(Alert.auAlert(Alert.REPAIR_COMPLETE,managedAu)
                     .setAttribute(Alert.ATTR_TEXT,"Repair of " +
                                   results.getCachedUrlSet().getUrl()
                                   + " successful"));
@@ -749,7 +768,7 @@ public class NodeManagerImpl
         logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired and we leave it our damaged table
         pollState.status = PollState.UNREPAIRABLE;
-        alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
+        getAlertManager().raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
                             .setAttribute(Alert.ATTR_TEXT,"Repair of " +
                                           results.getCachedUrlSet().getUrl()
                                           + " fails to resolve poll."));
@@ -1015,12 +1034,12 @@ public class NodeManagerImpl
 					       lastHistory.getType());
           if ((lastHistory.isOurPoll())) {
             // if should recall and is our incomplete poll
-            if (pollManager.isPollRunning(lastPollSpec)) {
+            if (getPollManager().isPollRunning(lastPollSpec)) {
               logger.debug2("unfinished poll already running, so not"+
                             " recalling.");
             } else {
               // if this poll should be running make sure it is running.
-              if (!nodeMgrMgr.paramRestartNonexpiredPolls &&
+              if (!getNodeManagerManager().paramRestartNonexpiredPolls &&
                   ((lastHistory.startTime + lastHistory.duration) >
                   TimeBase.nowMs())) {
                logger.debug2("unfinished poll's duration not elapsed, so not"+
@@ -1144,7 +1163,7 @@ public class NodeManagerImpl
             // give poll info for replay
             String key = results.getPollKey();
             markNodesForRepair(repairUrl, key, nodeState.getCachedUrlSet(),
-                               false, pollManager.acquirePollLock(key));
+                               false, getPollManager().acquirePollLock(key));
           }
           else {
             // no poll info to replay
@@ -1310,7 +1329,7 @@ public class NodeManagerImpl
 					 lastHistory.type);
     boolean shouldRecallLastPoll =
         ((lastHistory.getStartTime() + lastHistory.getDuration() +
-	  nodeMgrMgr.paramRecallDelay)
+	  getNodeManagerManager().paramRecallDelay)
          <= TimeBase.nowMs());
     if (!shouldRecallLastPoll) {
       // too early to act, regardless of state
@@ -1322,12 +1341,12 @@ public class NodeManagerImpl
       case PollState.RUNNING:
       case PollState.UNFINISHED:
         // if this poll should be running make sure it is running.
-        if (!pollManager.isPollRunning(lastPollSpec)) {
+        if (!getPollManager().isPollRunning(lastPollSpec)) {
           // if should recall and is our incomplete poll
           if ((lastHistory.isOurPoll())) {
             // only restart if it has expired, since other caches will still be
             // running it otherwise
-            if (nodeMgrMgr.paramRestartNonexpiredPolls ||
+            if (getNodeManagerManager().paramRestartNonexpiredPolls ||
                 ((lastHistory.startTime + lastHistory.duration) <
                 TimeBase.nowMs())) {
               if (!reportOnly) {
@@ -1464,7 +1483,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
-    if (pollManager.callPoll(spec) == null) {
+    if (getPollManager().callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a top level poll on " + spec);
       }
@@ -1545,7 +1564,7 @@ public class NodeManagerImpl
       CachedUrlSet cus, boolean isNamePoll, ActivityRegulator.Lock lock) {
     if (pollKey!=null) {
       logger.debug2("suspending poll " + pollKey);
-      pollManager.suspendPoll(pollKey);
+      getPollManager().suspendPoll(pollKey);
     } else {
       logger.debug2("no poll found to suspend");
     }
@@ -1677,7 +1696,7 @@ public class NodeManagerImpl
       logger.debug2("Re-calling a " + Poll.POLL_NAME[lastPoll.type] +
 		    " poll on " + spec);
     }
-    if (pollManager.callPoll(spec) == null) {
+    if (getPollManager().callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to re-call a " + Poll.POLL_NAME[lastPoll.type] +
 		      " poll on " + spec);
@@ -1693,7 +1712,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a poll on " + spec);
     }
-    if (pollManager.callPoll(spec) == null) {
+    if (getPollManager().callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a poll on " + spec);
       }
@@ -1835,7 +1854,7 @@ public class NodeManagerImpl
         int activity = (isNamePoll ? ActivityRegulator.STANDARD_NAME_POLL
             : ActivityRegulator.REPAIR_CRAWL);
         ActivityRegulator.CusLock cusLock =
-            (ActivityRegulator.CusLock)regulator.changeAuLockToCusLock(
+            (ActivityRegulator.CusLock)getActivityRegulator().changeAuLockToCusLock(
             auLock, cus, activity, Constants.HOUR);
         if (cusLock!=null) {
           // schedule repair
@@ -1864,7 +1883,7 @@ public class NodeManagerImpl
 
         // get the locks back and start repairs on them
         // if some CUSets were denied, they'll be tried again eventually
-        List lockList = regulator.changeAuLockToCusLocks(auLock,
+        List lockList = getActivityRegulator().changeAuLockToCusLocks(auLock,
             cusReqList);
         Iterator lockIter = lockList.iterator();
         while (lockIter.hasNext()) {
@@ -1918,7 +1937,7 @@ public class NodeManagerImpl
         } else {
           state.setState(NodeState.SNCUSS_POLL_REPLAYING);
         }
-        pollManager.resumePoll(success, pollCookie.pollKey, pollCookie.lock);
+        getPollManager().resumePoll(success, pollCookie.pollKey, pollCookie.lock);
       } else {
         // if we need to release our lock, make sure we do it.
         if(pollCookie.lock != null) {
