@@ -14,14 +14,10 @@
       >
 
       comment[publisher] = FUCAPE Business School
-      param[base_url] = http://www.atena.org.br/
+      param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
       param[journal_id] = fucape
 
-      au < exists ; 2009 ; 1 ; Brazilian Business Review Volume 1 ; 2009 >
-      au < expected ; 2010 ; 2 ; Brazilian Business Review Volume 2 ; 2010 >
-      au < expected ; 2011 ; 3 ; Brazilian Business Review Volume 3 ; 2011 >
-      au < expected ; 2012 ; 4 ; Brazilian Business Review Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Brazilian Business Review Volume 5 ; 2013 >
+      au < exists ; 2009 ; 6 ; Brazilian Business Review Volume 6 ; 2009 >
 
   }
 
