@@ -68,11 +68,11 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Dialogo
 
-      au < manifest ; 2009 ; 1 ; DIÁLOGO Volume 1 ; 2009 >
-      au < manifest ; 2010 ; 2 ; DIÁLOGO Volume 2 ; 2010 >
-      au < manifest ; 2011 ; 3 ; DIÁLOGO Volume 3 ; 2011 >
-      au < manifest ; 2012 ; 4 ; DIÁLOGO Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; DIÁLOGO Volume 5 ; 2013 >
+      au < manifest ; 2009 ; 15 ; DIÁLOGO Volume 15 ; 2009 >
+      au < manifest ; 2010 ; 16-17 ; DIÁLOGO Volume 16-17 ; 2010 >
+      au < manifest ; 2011 ; 18-19 ; DIÁLOGO Volume 18-19 ; 2011 >
+      au < manifest ; 2012 ; 20-21 ; DIÁLOGO Volume 20-21 ; 2012 >
+      au < expected ; 2013 ; 22 ; DIÁLOGO Volume 22 ; 2013 >
 
   }
 
@@ -87,13 +87,13 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Educacao
 
-      au < manifest ; 2007 ; 1 ; Educação, Ciência e Cultura Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Educação, Ciência e Cultura Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Educação, Ciência e Cultura Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Educação, Ciência e Cultura Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Educação, Ciência e Cultura Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Educação, Ciência e Cultura Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Educação, Ciência e Cultura Volume 7 ; 2013 >
+      au < manifest ; 2007 ; 12 ; Educação, Ciência e Cultura Volume 12 ; 2007 >
+      au < manifest ; 2008 ; 13 ; Educação, Ciência e Cultura Volume 13 ; 2008 >
+      au < manifest ; 2009 ; 14 ; Educação, Ciência e Cultura Volume 14 ; 2009 >
+      au < manifest ; 2010 ; 15 ; Educação, Ciência e Cultura Volume 15 ; 2010 >
+      au < manifest ; 2011 ; 16 ; Educação, Ciência e Cultura Volume 16 ; 2011 >
+      au < manifest ; 2012 ; 17 ; Educação, Ciência e Cultura Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Educação, Ciência e Cultura Volume 18 ; 2013 >
 
   }
 
@@ -135,13 +135,13 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Mouseion
 
-      au < manifest ; 2007 ; 1 ; Mouseion Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Mouseion Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Mouseion Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Mouseion Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Mouseion Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Mouseion Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Mouseion Volume 7 ; 2013 >
+      au < manifest ; 2007 ; 1-2 ; Mouseion Volume 1-2 ; 2007 >
+      au < manifest ; 2008 ; 3-4 ; Mouseion Volume 3-4 ; 2008 >
+      au < manifest ; 2009 ; 5-6 ; Mouseion Volume 5-6 ; 2009 >
+      au < manifest ; 2010 ; 7-8 ; Mouseion Volume 7-8 ; 2010 >
+      au < manifest ; 2011 ; 9-10 ; Mouseion Volume 9-10 ; 2011 >
+      au < manifest ; 2012 ; 11-13 ; Mouseion Volume 11-13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Mouseion Volume 14 ; 2013 >
 
   }
 

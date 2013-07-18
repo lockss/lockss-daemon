@@ -14,12 +14,12 @@
       >
 
       comment[publisher] = Associação Brasileira de História das Religiões
-      param[base_url] = http://www.abhr.org.br/
+      param[base_url] = http://www.abhr.org.br/plura/ojs/
       param[journal_id] = anais
 
-      au < exists ; 2011 ; 1 ; Anais dos Simpósios da ABHR Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Anais dos Simpósios da ABHR Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Anais dos Simpósios da ABHR Volume 3 ; 2013 >
+      au < exists ; 2011 ; 12 ; Anais dos Simpósios da ABHR Volume 12 ; 2011 >
+      au < exists ; 2012 ; 13 ; Anais dos Simpósios da ABHR Volume 13 ; 2012 >
+      au < expected ; 2013 ; 14 ; Anais dos Simpósios da ABHR Volume 14 ; 2013 >
 
   }
 
