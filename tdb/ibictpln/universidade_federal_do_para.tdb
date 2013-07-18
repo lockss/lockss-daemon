@@ -17,7 +17,7 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = amazonica
 
-      au < exists ; 2012 ; 1 ; Amazônica Volume 1 ; 2012 >
+      au < manifest ; 2012 ; 1 ; Amazônica Volume 1 ; 2012 >
       au < expected ; 2013 ; 2 ; Amazônica Volume 2 ; 2013 >
 
   }
