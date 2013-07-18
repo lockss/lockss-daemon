@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicPeriod.java,v 1.1 2013-05-22 23:52:05 fergaloy-sf Exp $
+ * $Id: TestBibliographicPeriod.java,v 1.2 2013-07-18 16:55:06 fergaloy-sf Exp $
  */
 
 /*
@@ -39,7 +39,6 @@
 package org.lockss.subscription;
 
 import java.util.List;
-
 import org.lockss.test.LockssTestCase;
 
 public class TestBibliographicPeriod extends LockssTestCase {
@@ -53,41 +52,41 @@ public class TestBibliographicPeriod extends LockssTestCase {
    * Check the behavior of BibliographicPeriod(String).
    */
   public final void testConstructor1String() {
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod("").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(" ").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=true]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod("-").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=true]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod(" -").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=true]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod("- ").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=true]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod(" - ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("1954").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("1954 ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954 ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("19 54").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("1 9 5 4").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1 9 5 4 ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod("1954-").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("-1954").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("1954-1954").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1988, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=null]]",
 	new BibliographicPeriod("1954-1988").toString());
   }
 
@@ -95,42 +94,37 @@ public class TestBibliographicPeriod extends LockssTestCase {
    * Check the behavior of BibliographicPeriod(String, String).
    */
   public final void testConstructor2Strings() {
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
-	new BibliographicPeriod(null, null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    String nullString = null;
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
+	new BibliographicPeriod(nullString, nullString).toString());
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null, "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null, " ").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod("", null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(" ", null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod("", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(" ", " ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("1954", "1954").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954", "1954 ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954 ", "1 9 5 4").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1988, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=null]]",
 	new BibliographicPeriod("1954", "1988").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1988, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=null]]",
 	new BibliographicPeriod("1954 ", " 1988").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1988, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=null]]",
 	new BibliographicPeriod("1 9 5 4", " 1 9 8 8 ").toString());
-
-    try {
-      new BibliographicPeriod("-", null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, "-");
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=-, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
+	new BibliographicPeriod("-", null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=-, volume=null, issue=null]]",
+	new BibliographicPeriod(null, "-").toString());
   }
 
   /**
@@ -138,82 +132,64 @@ public class TestBibliographicPeriod extends LockssTestCase {
    * String, String).
    */
   public final void testConstructor6Strings() {
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null, null, null, null, null, null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null, "", null, "", null, "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(null, " ", null, " ", null, " ").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod("", null, "", null, "", null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(" ", null, " ", null, " ", null).toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod("", "", "", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=null, endEdge=null]",
 	new BibliographicPeriod(" ", " ", " ", " ", " ", " ").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod("1954", "", "", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954(4), endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954", "4", "", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954(4)(2), endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=2], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod("1954 ", " 4", "2", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=(4)(2), endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=4, issue=2], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod(" ", "4 ", " 2", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954()(2), endEdge=, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=2], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
 	new BibliographicPeriod(" 1954 ", "", " 2", "", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=1954, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null]]",
 	new BibliographicPeriod("", "", "", "1954", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=1954(4), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=null]]",
 	new BibliographicPeriod("", "", "", " 1954", "4", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=1954(4)(2), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=2]]",
 	new BibliographicPeriod("", "", "", "1954 ", " 4", "2").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=(4)(2), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=4, issue=2]]",
 	new BibliographicPeriod("", "", "", " ", "4 ", " 2").toString());
-    assertEquals("BibliographicPeriod [startEdge=, endEdge=1954()(2), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=2]]",
 	new BibliographicPeriod("", "", "", " 1954 ", "", " 2").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954, endEdge=1988, allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=null]]",
 	new BibliographicPeriod("1954", "", "", "1988", "", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954(4), endEdge=1988(12), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=null], endEdge=BibliographicPeriodEdge [year=1988, volume=12, issue=null]]",
 	new BibliographicPeriod(" 1954", "4", "", "1988", "12", "").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954(4)(2), endEdge=1988(12)(28), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=4, issue=2], endEdge=BibliographicPeriodEdge [year=1988, volume=12, issue=28]]",
 	new BibliographicPeriod("1954 ", " 4", "2", "1988", "12", "28")
     .toString());
-    assertEquals("BibliographicPeriod [startEdge=(4)(2), endEdge=(12)(28), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=4, issue=2], endEdge=BibliographicPeriodEdge [year=null, volume=12, issue=28]]",
 	new BibliographicPeriod(" ", "4 ", " 2", "", "12", "28").toString());
-    assertEquals("BibliographicPeriod [startEdge=1954()(2), endEdge=1988()(28), allTime=false]",
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=1954, volume=null, issue=2], endEdge=BibliographicPeriodEdge [year=1988, volume=null, issue=28]]",
 	new BibliographicPeriod(" 1954 ", "", " 2", "1988", "", "28")
     .toString());
-
-    try {
-      new BibliographicPeriod("-", null, null, null, null, null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, "-", null, null, null, null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, null, "-", null, null, null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, null, null, "-", null, null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, null, null, null, "-", null);
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      new BibliographicPeriod(null, null, null, null, null, "-");
-      fail("BibliographicPeriod() should throw");
-    } catch (IllegalArgumentException iae) {}
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=-, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
+	new BibliographicPeriod("-", null, null, null, null, null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=-, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
+	new BibliographicPeriod(null, "-", null, null, null, null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=-], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null]]",
+	new BibliographicPeriod(null, null, "-", null, null, null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=-, volume=null, issue=null]]",
+	new BibliographicPeriod(null, null, null, "-", null, null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=-, issue=null]]",
+	new BibliographicPeriod(null, null, null, null, "-", null).toString());
+    assertEquals("BibliographicPeriod [startEdge=BibliographicPeriodEdge [year=null, volume=null, issue=null], endEdge=BibliographicPeriodEdge [year=null, volume=null, issue=-]]",
+	new BibliographicPeriod(null, null, null, null, null, "-").toString());
   }
 
   /**
@@ -310,119 +286,12 @@ public class TestBibliographicPeriod extends LockssTestCase {
     assertEquals("-2000", rangesAsString("-2000"));
     assertEquals("1900-2000", rangesAsString("1900-2000"));
     assertEquals("1900,1910,1920", rangesAsString("1900,1910,1920"));
+    assertEquals("1900,1910,1920", rangesAsString("1920,1910,1900"));
   }
 
   private String rangesAsString(String ranges) {
     return BibliographicPeriod
 	.rangesAsString(BibliographicPeriod.createList(ranges));
-  }
-
-  /**
-   * Check the behavior of displayablePeriodEdge().
-   */
-  public final void testDisplayablePeriodEdge() {
-    assertEquals("",
-	BibliographicPeriod.displayablePeriodEdge(null, null, null));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge("", null, null));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge(null, "", null));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge(null, null, ""));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge("", "", null));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge(null, "", ""));
-    assertEquals("", BibliographicPeriod.displayablePeriodEdge("", null, ""));
-    assertEquals("1900",
-	BibliographicPeriod.displayablePeriodEdge("1900", null, null));
-    assertEquals("1900",
-	BibliographicPeriod.displayablePeriodEdge("1900", "", null));
-    assertEquals("1900",
-	BibliographicPeriod.displayablePeriodEdge("1900", null, ""));
-    assertEquals("1900",
-	BibliographicPeriod.displayablePeriodEdge("1900", "", ""));
-    assertEquals("1900(1)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "1", null));
-    assertEquals("1900(1)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "1", ""));
-    assertEquals("1900(11)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "11", null));
-    assertEquals("1900(11)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "11", ""));
-    assertEquals("1900(2)(3)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "2", "3"));
-    assertEquals("1900(2)(10)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "2", "10"));
-    assertEquals("1900(11)(2)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "11", "2"));
-    assertEquals("1900(11)(12)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "11", "12"));
-    assertEquals("1900()(4)",
-	BibliographicPeriod.displayablePeriodEdge("1900", null, "4"));
-    assertEquals("1900()(4)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "", "4"));
-    assertEquals("1900()(11)",
-	BibliographicPeriod.displayablePeriodEdge("1900", null, "11"));
-    assertEquals("1900()(11)",
-	BibliographicPeriod.displayablePeriodEdge("1900", "", "11"));
-    assertEquals("(1)",
-	BibliographicPeriod.displayablePeriodEdge(null, "1", null));
-    assertEquals("(1)",
-	BibliographicPeriod.displayablePeriodEdge("", "1", null));
-    assertEquals("(1)",
-	BibliographicPeriod.displayablePeriodEdge(null, "1", ""));
-    assertEquals("(1)", BibliographicPeriod.displayablePeriodEdge("", "1", ""));
-    assertEquals("(11)",
-	BibliographicPeriod.displayablePeriodEdge(null, "11", null));
-    assertEquals("(11)",
-	BibliographicPeriod.displayablePeriodEdge("", "11", null));
-    assertEquals("(11)",
-	BibliographicPeriod.displayablePeriodEdge(null, "11", ""));
-    assertEquals("(11)",
-	BibliographicPeriod.displayablePeriodEdge("", "11", ""));
-    assertEquals("(2)(3)",
-	BibliographicPeriod.displayablePeriodEdge(null, "2", "3"));
-    assertEquals("(2)(3)",
-	BibliographicPeriod.displayablePeriodEdge("", "2", "3"));
-    assertEquals("(2)(13)",
-	BibliographicPeriod.displayablePeriodEdge(null, "2", "13"));
-    assertEquals("(2)(13)",
-	BibliographicPeriod.displayablePeriodEdge("", "2", "13"));
-    assertEquals("(11)(2)",
-	BibliographicPeriod.displayablePeriodEdge(null, "11", "2"));
-    assertEquals("(11)(2)",
-	BibliographicPeriod.displayablePeriodEdge("", "11", "2"));
-    assertEquals("(11)(12)",
-	BibliographicPeriod.displayablePeriodEdge(null, "11", "12"));
-    assertEquals("(11)(12)",
-	BibliographicPeriod.displayablePeriodEdge("", "11", "12"));
-    assertEquals("()(4)",
-	BibliographicPeriod.displayablePeriodEdge(null, null, "4"));
-    assertEquals("()(4)",
-	BibliographicPeriod.displayablePeriodEdge("", null, "4"));
-    assertEquals("()(4)",
-	BibliographicPeriod.displayablePeriodEdge(null, "", "4"));
-    assertEquals("()(4)",
-	BibliographicPeriod.displayablePeriodEdge("", "", "4"));
-    assertEquals("()(11)",
-	BibliographicPeriod.displayablePeriodEdge(null, null, "11"));
-    assertEquals("()(11)",
-	BibliographicPeriod.displayablePeriodEdge("", null, "11"));
-    assertEquals("()(11)",
-	BibliographicPeriod.displayablePeriodEdge(null, "", "11"));
-    assertEquals("()(11)",
-	BibliographicPeriod.displayablePeriodEdge("", "", "11"));
-
-    try {
-      BibliographicPeriod.displayablePeriodEdge("-", null, null);
-      fail("BibliographicPeriod.displayablePeriodEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      BibliographicPeriod.displayablePeriodEdge(null, "-", null);
-      fail("BibliographicPeriod.displayablePeriodEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      BibliographicPeriod.displayablePeriodEdge(null, null, "-");
-      fail("BibliographicPeriod.displayablePeriodEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
   }
 
   /**
@@ -566,279 +435,6 @@ public class TestBibliographicPeriod extends LockssTestCase {
   }
 
   /**
-   * Check the behavior of extractEdgeYear().
-   */
-  public final void testExtractEdgeYear() {
-    assertNull(BibliographicPeriod.extractEdgeYear(null));
-    assertNull(BibliographicPeriod.extractEdgeYear(""));
-    assertNull(BibliographicPeriod.extractEdgeYear("()(1)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("()(10)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(1)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(10)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(1)(2)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(1)(10)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(10)(1)"));
-    assertNull(BibliographicPeriod.extractEdgeYear("(10)(11)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(2)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(12)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999()(1)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999()(12)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(2)(5)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(2)(15)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(12)(5)"));
-    assertEquals("1999", BibliographicPeriod.extractEdgeYear("1999(12)(15)"));
-
-    try {
-      BibliographicPeriod.extractEdgeYear("-");
-      fail("BibliographicPeriod.extractEdgeYear() should throw");
-    } catch (IllegalArgumentException iae) {}
-  }
-
-  /**
-   * Check the behavior of extractEdgeVolume().
-   */
-  public final void testExtractEdgeVolume() {
-    assertNull(BibliographicPeriod.extractEdgeVolume(null));
-    assertNull(BibliographicPeriod.extractEdgeVolume(""));
-    assertEquals("", BibliographicPeriod.extractEdgeVolume("()(1)"));
-    assertEquals("", BibliographicPeriod.extractEdgeVolume("()(10)"));
-    assertEquals("1", BibliographicPeriod.extractEdgeVolume("(1)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeVolume("(10)"));
-    assertEquals("1", BibliographicPeriod.extractEdgeVolume("(1)(2)"));
-    assertEquals("1", BibliographicPeriod.extractEdgeVolume("(1)(10)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeVolume("(10)(1)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeVolume("(10)(11)"));
-    assertNull(BibliographicPeriod.extractEdgeVolume("1999"));
-    assertEquals("2", BibliographicPeriod.extractEdgeVolume("1999(2)"));
-    assertEquals("12", BibliographicPeriod.extractEdgeVolume("1999(12)"));
-    assertEquals("", BibliographicPeriod.extractEdgeVolume("1999()(2)"));
-    assertEquals("", BibliographicPeriod.extractEdgeVolume("1999()(12)"));
-    assertEquals("2", BibliographicPeriod.extractEdgeVolume("1999(2)(5)"));
-    assertEquals("2", BibliographicPeriod.extractEdgeVolume("1999(2)(15)"));
-    assertEquals("12", BibliographicPeriod.extractEdgeVolume("1999(12)(5)"));
-    assertEquals("12", BibliographicPeriod.extractEdgeVolume("1999(12)(15)"));
-
-    try {
-      BibliographicPeriod.extractEdgeVolume("-");
-      fail("BibliographicPeriod.extractEdgeVolume() should throw");
-    } catch (IllegalArgumentException iae) {}
-  }
-
-  /**
-   * Check the behavior of extractEdgeIssue().
-   */
-  public final void testExtractEdgeIssue() {
-    assertNull(BibliographicPeriod.extractEdgeIssue(null));
-    assertNull(BibliographicPeriod.extractEdgeIssue(""));
-    assertEquals("1", BibliographicPeriod.extractEdgeIssue("()(1)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeIssue("()(10)"));
-    assertNull(BibliographicPeriod.extractEdgeIssue("(1)"));
-    assertNull(BibliographicPeriod.extractEdgeIssue("(10)"));
-    assertEquals("2", BibliographicPeriod.extractEdgeIssue("(1)(2)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeIssue("(1)(10)"));
-    assertEquals("1", BibliographicPeriod.extractEdgeIssue("(10)(1)"));
-    assertEquals("10", BibliographicPeriod.extractEdgeIssue("(11)(10)"));
-    assertNull(BibliographicPeriod.extractEdgeIssue("1999"));
-    assertNull(BibliographicPeriod.extractEdgeIssue("1999(2)"));
-    assertNull(BibliographicPeriod.extractEdgeIssue("1999(12)"));
-    assertEquals("1", BibliographicPeriod.extractEdgeIssue("1999()(1)"));
-    assertEquals("12", BibliographicPeriod.extractEdgeIssue("1999()(12)"));
-    assertEquals("5", BibliographicPeriod.extractEdgeIssue("1999(1)(5)"));
-    assertEquals("15", BibliographicPeriod.extractEdgeIssue("1999(1)(15)"));
-    assertEquals("5", BibliographicPeriod.extractEdgeIssue("1999(12)(5)"));
-    assertEquals("15", BibliographicPeriod.extractEdgeIssue("1999(12)(15)"));
-
-    try {
-      BibliographicPeriod.extractEdgeIssue("-");
-      fail("BibliographicPeriod.extractEdgeIssue() should throw");
-    } catch (IllegalArgumentException iae) {}
-  }
-
-  /**
-   * Check the behavior of matchEdgeToEdge().
-   */
-  public final void testMatchEdgeToEdge() {
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, false, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", true, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", true, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", false, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", false, null));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, false, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, false, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", true, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", true, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", true, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", true, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", false, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", false, ""));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", false, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(" ", false, " "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, "2000"));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, " 2000"));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, "2000 "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, true, " 2000 "));
-    assertEquals("",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2 0 0 0 "));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge(null, false, "2000"));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", true, "2000"));
-    assertEquals("", BibliographicPeriod.matchEdgeToEdge("", false, "2000"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(3)"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2000(3)"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(3) "));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2000(3) "));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2 0 0 0 ( 3 ) "));
-    assertEquals("(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(3)"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(3)"));
-    assertEquals("(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(3)"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(12)"));
-    assertEquals("(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(12)"));
-    assertEquals("(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(12)"));
-    assertEquals("(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(12)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000()(3)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2000()(3)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000()(3) "));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2000()(3) "));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, " 2 0 0 0 ( ) ( 3 ) "));
-    assertEquals("()(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000()(3)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000()(3)"));
-    assertEquals("()(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000()(3)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000()(12)"));
-    assertEquals("()(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000()(12)"));
-    assertEquals("()(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000()(12)"));
-    assertEquals("()(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000()(12)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(3)(4)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(3)(4)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(3)(4)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(3)(4)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(3)(12)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(3)(12)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(3)(12)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(3)(12)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(11)(4)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(11)(4)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(11)(4)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(11)(4)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge(null, true, "2000(11)(12)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge(null, false, "2000(11)(12)"));
-    assertEquals("(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("", true, "2000(11)(12)"));
-    assertEquals("(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("", false, "2000(11)(12)"));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1900", true, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900 ", true, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1900 ", true, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1 9 0 0 ", true, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1900", false, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900 ", false, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1900 ", false, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge(" 1 9 0 0 ", false, null));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, ""));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, ""));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000"));
-    assertEquals("1900",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000"));
-    assertEquals("1900(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(3)"));
-    assertEquals("1900(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(3)"));
-    assertEquals("1900(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(12)"));
-    assertEquals("1900(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(12)"));
-    assertEquals("1900()(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000()(6)"));
-    assertEquals("1900()(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000()(6)"));
-    assertEquals("1900()(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000()(11)"));
-    assertEquals("1900()(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000()(11)"));
-    assertEquals("1900(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(3)(4)"));
-    assertEquals("1900(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(3)(4)"));
-    assertEquals("1900(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(3)(10)"));
-    assertEquals("1900(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(3)(10)"));
-    assertEquals("1900(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(12)(5)"));
-    assertEquals("1900(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(12)(5)"));
-    assertEquals("1900(0)(0)",
-	BibliographicPeriod.matchEdgeToEdge("1900", true, "2000(10)(11)"));
-    assertEquals("1900(9999)(9999)",
-	BibliographicPeriod.matchEdgeToEdge("1900", false, "2000(10)(11)"));
-
-    try {
-      BibliographicPeriod.matchEdgeToEdge("-", true, null);
-      fail("BibliographicPeriod.matchEdgeToEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
-
-    try {
-      BibliographicPeriod.matchEdgeToEdge(null, false, "-");
-      fail("BibliographicPeriod.matchEdgeToEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
-  }
-
-  /**
    * Check the behavior of matchRangeEdgesToEdge().
    */
   public final void testMatchRangeEdgesToEdge() {
@@ -884,17 +480,16 @@ public class TestBibliographicPeriod extends LockssTestCase {
     assertEquals("1900(8)(5)-2000(12)(3)",
 	matchStringRangeEdgesToEdge("1900(8)(5)-2000(12)(3)",
 	    "2000(1)(2)"));
-
-    try {
-      matchStringRangeEdgesToEdge(null, "-");
-      fail("BibliographicPeriod.matchRangeEdgesToEdge() should throw");
-    } catch (IllegalArgumentException iae) {}
+    assertEquals("", matchStringRangeEdgesToEdge(null, "-"));
+    assertEquals("", matchStringRangeEdgesToEdge(null, "(-)"));
+    assertEquals("", matchStringRangeEdgesToEdge(null, "()(-)"));
   }
 
-  private String matchStringRangeEdgesToEdge(String range, String matchingEdge) {
+  private String matchStringRangeEdgesToEdge(String range,
+      String matchingEdge) {
     return BibliographicPeriod
-	.matchRangeEdgesToEdge(new BibliographicPeriod(range), matchingEdge)
-	.toCanonicalString();
+	.matchRangeEdgesToEdge(new BibliographicPeriod(range),
+	    new BibliographicPeriodEdge(matchingEdge)).toCanonicalString();
   }
 
   /**
@@ -1145,6 +740,7 @@ public class TestBibliographicPeriod extends LockssTestCase {
    * Check the behavior of isAllTime().
    */
   public final void testIsAllTime() {
+    String nullString = null;
     assertFalse(new BibliographicPeriod(null).isAllTime());
     assertFalse(new BibliographicPeriod("").isAllTime());
     assertFalse(new BibliographicPeriod(" ").isAllTime());
@@ -1163,7 +759,7 @@ public class TestBibliographicPeriod extends LockssTestCase {
     assertFalse(new BibliographicPeriod("-1954").isAllTime());
     assertFalse(new BibliographicPeriod("1954-1954").isAllTime());
     assertFalse(new BibliographicPeriod("1954-1988").isAllTime());
-    assertFalse(new BibliographicPeriod(null, null).isAllTime());
+    assertFalse(new BibliographicPeriod(nullString, nullString).isAllTime());
     assertFalse(new BibliographicPeriod(null, "").isAllTime());
     assertFalse(new BibliographicPeriod(null, " ").isAllTime());
     assertFalse(new BibliographicPeriod("", null).isAllTime());
