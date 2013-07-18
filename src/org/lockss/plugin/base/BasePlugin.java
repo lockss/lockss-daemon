@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.84 2012-09-06 04:01:51 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.85 2013-07-18 19:29:07 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,10 @@ public abstract class BasePlugin
   protected LockssDaemon theDaemon;
   protected PluginManager pluginMgr;
   protected Collection<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
+  // Title -> TitleConfig
   protected Map<String, TitleConfig> titleConfigMap;
+  // auid -> TitleConfig
+  protected Map<String, TitleConfig> auidTitleConfigMap;
   // XXX need to generalize this
   protected CacheResultMap resultMap;
   protected MimeTypeMap mimeMap;
@@ -177,6 +180,16 @@ public abstract class BasePlugin
     return (TitleConfig)titleConfigMap.get(title);
   }
 
+  /**
+   * Default implementation looks in titleConfigMap.
+   */
+  public TitleConfig getTitleConfigFromAuId(String auid) {
+    if (auidTitleConfigMap == null) {
+      return null;
+    }
+    return auidTitleConfigMap.get(auid);
+  }
+
   /** Set up our titleConfigMap from the title definitions in the
    * Configuration.  Each title config looks like:<pre>
    * org.lockss.title.uid.title=Sample Title
@@ -208,6 +221,7 @@ public abstract class BasePlugin
   private void setTitleConfigs(Tdb tdb) {
     String myId = getPluginId();
     Map<String, TitleConfig> titleMap = new HashMap<String,TitleConfig>();
+    Map<String, TitleConfig> auidMap = new HashMap<String,TitleConfig>();
     for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(myId)) {
       TdbAu tdbAu = tdbAuId.getTdbAu();
       String pluginId = tdbAu.getPluginId();
@@ -223,6 +237,7 @@ public abstract class BasePlugin
           log.warning("Previous def   : " + oldTc);
         }
         titleMap.put(title, tc);
+	auidMap.put(tc.getAuId(pluginMgr, this), tc);
       } else {
         if (log.isDebug3()) {
           log.debug3("titleConfig: " + tdbAu.getName());
@@ -231,13 +246,15 @@ public abstract class BasePlugin
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
     if (!titleMap.isEmpty()) {
-      setTitleConfigMap(titleMap);
+      setTitleConfigMap(titleMap, auidMap);
       notifyAusTitleDbChanged();
     }
   }
 
-  protected void setTitleConfigMap(Map<String, TitleConfig> titleConfigMap) {
-    this.titleConfigMap = titleConfigMap;
+  protected void setTitleConfigMap(Map<String, TitleConfig> titleMap,
+				   Map<String, TitleConfig> auidMap) {
+    this.titleConfigMap = titleMap;
+    this.auidTitleConfigMap = auidMap;
     pluginMgr.resetTitles();
   }
 

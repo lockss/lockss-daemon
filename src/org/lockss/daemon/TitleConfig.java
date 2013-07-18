@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.21 2013-03-16 22:03:17 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.22 2013-07-18 19:29:07 tlipkis Exp $
  */
 
 /*
@@ -401,20 +401,31 @@ public class TitleConfig {
   /** Generate Properties that will result in this TitleConfig when loaded
    * by BasePlugin */
   public Properties toProperties(String propAbbr) {
-    String pre = "org.lockss.title." + propAbbr + ".";
+    return toPropertiesWithPrefix("org.lockss.title." + propAbbr + ".");
+  }
+
+  /** Generate Property subtree for this TitleConfig */
+  public Properties toProperties() {
+    return toPropertiesWithPrefix("");
+  }
+
+  /** Generate Property subtree below prefix for this TitleConfig
+   * @param prefix the root of the Property tree (should end with ".")
+   */
+  private Properties toPropertiesWithPrefix(String prefix) {
     Properties p = new OrderedProperties();
-    p.put(pre+"title", getDisplayName());
-    p.put(pre+"plugin", getPluginName());
+    p.put(prefix+"title", getDisplayName());
+    p.put(prefix+"plugin", getPluginName());
     if (pluginVersion != null) {
-      p.put(pre+"pluginVersion", getPluginVersion());
+      p.put(prefix+"pluginVersion", getPluginVersion());
     }
     if (journalTitle != null) {
-      p.put(pre+"journalTitle", getJournalTitle());
+      p.put(prefix+"journalTitle", getJournalTitle());
     }
     if (params != null) {
       for (int ix = 0; ix < params.size(); ix++) {
         ConfigParamAssignment cpa = (ConfigParamAssignment)params.get(ix);
-        String ppre = pre + "param." + (ix+1) + ".";
+        String ppre = prefix + "param." + (ix+1) + ".";
         p.put(ppre + "key", cpa.getParamDescr().getKey());
         p.put(ppre + "value", cpa.getValue());
       }

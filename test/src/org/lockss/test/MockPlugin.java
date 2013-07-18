@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.34 2012-12-03 15:31:16 rwincewicz Exp $
+ * $Id: MockPlugin.java,v 1.35 2013-07-18 19:29:07 tlipkis Exp $
  */
 
 /*
@@ -173,8 +173,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     }
   }
 
-  public void setTitleConfigMap(Map<String, TitleConfig> titleConfigMap) {
+  @Override
+  public void setTitleConfigMap(Map<String, TitleConfig> titleConfigMap,
+				Map<String, TitleConfig> auidMap) {
     this.titleConfigMap = titleConfigMap;
+    this.auidTitleConfigMap = auidMap;
   }
 
   public void setPluginName(String name) {
