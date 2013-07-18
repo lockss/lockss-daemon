@@ -18,19 +18,25 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = estudos_teologicos
 
-      au < manifest ; 2001 ; 1 ; Estudos Teológicos Volume 1 ; 2001 >
-      au < manifest ; 2002 ; 2 ; Estudos Teológicos Volume 2 ; 2002 >
-      au < manifest ; 2003 ; 3 ; Estudos Teológicos Volume 3 ; 2003 >
-      au < manifest ; 2004 ; 4 ; Estudos Teológicos Volume 4 ; 2004 >
-      au < manifest ; 2005 ; 5 ; Estudos Teológicos Volume 5 ; 2005 >
-      au < manifest ; 2006 ; 6 ; Estudos Teológicos Volume 6 ; 2006 >
-      au < manifest ; 2007 ; 7 ; Estudos Teológicos Volume 7 ; 2007 >
-      au < manifest ; 2008 ; 8 ; Estudos Teológicos Volume 8 ; 2008 >
-      au < manifest ; 2009 ; 9 ; Estudos Teológicos Volume 9 ; 2009 >
-      au < manifest ; 2010 ; 10 ; Estudos Teológicos Volume 10 ; 2010 >
-      au < manifest ; 2011 ; 11 ; Estudos Teológicos Volume 11 ; 2011 >
-      au < manifest ; 2012 ; 12 ; Estudos Teológicos Volume 12 ; 2012 >
-      au < expected ; 2013 ; 13 ; Estudos Teológicos Volume 13 ; 2013 >
+      au < exists ; 1995 ; 35 ; Estudos Teológicos Volume 35 ; 1995 >
+      au < exists ; 1996 ; 36 ; Estudos Teológicos Volume 36 ; 1996 >
+      au < exists ; 1997 ; 37 ; Estudos Teológicos Volume 37 ; 1997 >
+      au < exists ; 1998 ; 38 ; Estudos Teológicos Volume 38 ; 1998 >
+      au < exists ; 1999 ; 39 ; Estudos Teológicos Volume 39 ; 1999 >
+      au < exists ; 2000 ; 40 ; Estudos Teológicos Volume 40 ; 2000 >
+      au < manifest ; 2001 ; 41 ; Estudos Teológicos Volume 41 ; 2001 >
+      au < manifest ; 2002 ; 42 ; Estudos Teológicos Volume 42 ; 2002 >
+      au < manifest ; 2003 ; 43 ; Estudos Teológicos Volume 43 ; 2003 >
+      au < manifest ; 2004 ; 44 ; Estudos Teológicos Volume 44 ; 2004 >
+      au < manifest ; 2005 ; 45 ; Estudos Teológicos Volume 45 ; 2005 >
+      au < manifest ; 2006 ; 46 ; Estudos Teológicos Volume 46 ; 2006 >
+      au < manifest ; 2007 ; 47 ; Estudos Teológicos Volume 47 ; 2007 >
+      au < manifest ; 2008 ; 48 ; Estudos Teológicos Volume 48 ; 2008 >
+      au < manifest ; 2009 ; 49 ; Estudos Teológicos Volume 49 ; 2009 >
+      au < manifest ; 2010 ; 50 ; Estudos Teológicos Volume 50 ; 2010 >
+      au < manifest ; 2011 ; 51 ; Estudos Teológicos Volume 51 ; 2011 >
+      au < manifest ; 2012 ; 52 ; Estudos Teológicos Volume 52 ; 2012 >
+      au < expected ; 2013 ; 53 ; Estudos Teológicos Volume 53 ; 2013 >
 
   }
 
@@ -46,10 +52,10 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = identidade
 
-      au < exists ; 2010 ; 1 ; identidade! Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; identidade! Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; identidade! Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; identidade! Volume 4 ; 2013 >
+      au < exists ; 2010 ; 15 ; identidade! Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; identidade! Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; identidade! Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; identidade! Volume 18 ; 2013 >
 
   }
 
@@ -62,7 +68,7 @@
 
       comment[publisher] = Faculdades da Escola Superior de Teologia
       param[base_url] = http://est.tempsite.ws/periodicos/
-      param[journal_id] = npp
+      param[journal_id] = nepp
 
       au < exists ; 2010 ; 1 ; Protestantismo em Revista Volume 1 ; 2010 >
       au < exists ; 2011 ; 2 ; Protestantismo em Revista Volume 2 ; 2011 >
