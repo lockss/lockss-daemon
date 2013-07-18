@@ -14,59 +14,13 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = boletimebap
 
       au < exists ; 1964 ; 1 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 1 ; 1964 >
       au < exists ; 1965 ; 2 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 2 ; 1965 >
       au < exists ; 1966 ; 3 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 3 ; 1966 >
       au < exists ; 1967 ; 4 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 4 ; 1967 >
-      au < expected ; 1968 ; 5 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 5 ; 1968 >
-      au < expected ; 1969 ; 6 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 6 ; 1969 >
-      au < expected ; 1970 ; 7 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 7 ; 1970 >
-      au < expected ; 1971 ; 8 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 8 ; 1971 >
-      au < expected ; 1972 ; 9 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 9 ; 1972 >
-      au < expected ; 1973 ; 10 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 10 ; 1973 >
-      au < expected ; 1974 ; 11 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 11 ; 1974 >
-      au < expected ; 1975 ; 12 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 12 ; 1975 >
-      au < expected ; 1976 ; 13 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 13 ; 1976 >
-      au < expected ; 1977 ; 14 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 14 ; 1977 >
-      au < expected ; 1978 ; 15 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 15 ; 1978 >
-      au < expected ; 1979 ; 16 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 16 ; 1979 >
-      au < expected ; 1980 ; 17 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 17 ; 1980 >
-      au < expected ; 1981 ; 18 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 18 ; 1981 >
-      au < expected ; 1982 ; 19 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 19 ; 1982 >
-      au < expected ; 1983 ; 20 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 20 ; 1983 >
-      au < expected ; 1984 ; 21 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 21 ; 1984 >
-      au < expected ; 1985 ; 22 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 22 ; 1985 >
-      au < expected ; 1986 ; 23 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 23 ; 1986 >
-      au < expected ; 1987 ; 24 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 24 ; 1987 >
-      au < expected ; 1988 ; 25 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 25 ; 1988 >
-      au < expected ; 1989 ; 26 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 26 ; 1989 >
-      au < expected ; 1990 ; 27 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 27 ; 1990 >
-      au < expected ; 1991 ; 28 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 28 ; 1991 >
-      au < expected ; 1992 ; 29 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 29 ; 1992 >
-      au < expected ; 1993 ; 30 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 30 ; 1993 >
-      au < expected ; 1994 ; 31 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 31 ; 1994 >
-      au < expected ; 1995 ; 32 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 32 ; 1995 >
-      au < expected ; 1996 ; 33 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 33 ; 1996 >
-      au < expected ; 1997 ; 34 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 34 ; 1997 >
-      au < expected ; 1998 ; 35 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 35 ; 1998 >
-      au < expected ; 1999 ; 36 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 36 ; 1999 >
-      au < expected ; 2000 ; 37 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 37 ; 2000 >
-      au < expected ; 2001 ; 38 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 38 ; 2001 >
-      au < expected ; 2002 ; 39 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 39 ; 2002 >
-      au < expected ; 2003 ; 40 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 40 ; 2003 >
-      au < expected ; 2004 ; 41 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 41 ; 2004 >
-      au < expected ; 2005 ; 42 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 42 ; 2005 >
-      au < expected ; 2006 ; 43 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 43 ; 2006 >
-      au < expected ; 2007 ; 44 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 44 ; 2007 >
-      au < expected ; 2008 ; 45 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 45 ; 2008 >
-      au < expected ; 2009 ; 46 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 46 ; 2009 >
-      au < expected ; 2010 ; 47 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 47 ; 2010 >
-      au < expected ; 2011 ; 48 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 48 ; 2011 >
-      au < expected ; 2012 ; 49 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 49 ; 2012 >
-      au < expected ; 2013 ; 50 ; Boletim do Centro de Pesquisas Administrativas da EBAP Volume 50 ; 2013 >
 
   }
 
@@ -79,7 +33,7 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = rbfin
 
       au < exists ; 2003 ; 1 ; Brazilian Review of Finance  Volume 1 ; 2003 >
@@ -104,13 +58,13 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = cgpc
 
-      au < exists ; 2010 ; 1 ; Cadernos Gestão Pública e Cidadania Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Cadernos Gestão Pública e Cidadania Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Cadernos Gestão Pública e Cidadania Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Cadernos Gestão Pública e Cidadania Volume 4 ; 2013 >
+      au < exists ; 2010 ; 15 ; Cadernos Gestão Pública e Cidadania Volume 15 ; 2010 >
+      au < exists ; 2011 ; 16 ; Cadernos Gestão Pública e Cidadania Volume 16 ; 2011 >
+      au < exists ; 2012 ; 17 ; Cadernos Gestão Pública e Cidadania Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; Cadernos Gestão Pública e Cidadania Volume 18 ; 2013 >
 
   }
 
@@ -122,13 +76,14 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = gvcasos
 
-      au < exists ; 2010 ; 1 ; GVcasos Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; GVcasos Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; GVcasos Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; GVcasos Volume 4 ; 2013 >
+      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (0) ; 0000 >
+      au < exists ; 2010 ; 0 ; GVcasos Volume 0 (2010) ; 2010 >
+      au < exists ; 2011 ; 1 ; GVcasos Volume 1 ; 2011 >
+      au < exists ; 2012 ; 2 ; GVcasos Volume 2 ; 2012 >
+      au < expected ; 2013 ; 3 ; GVcasos Volume 3 ; 2013 >
 
   }
 
@@ -140,7 +95,7 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = oit
 
       au < exists ; 2006 ; 1 ; Revista Acadêmica Observatório de Inovação do Turismo Volume 1 ; 2006 >
@@ -162,7 +117,7 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = rap
 
       au < exists ; 1967 ; 1 ; Revista de Administração Pública Volume 1 ; 1967 >
@@ -223,7 +178,7 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = reh
 
       au < exists ; 1988 ; 1 ; Revista Estudos Históricos Volume 1 ; 1988 >
@@ -236,16 +191,16 @@
       au < exists ; 1995 ; 8 ; Revista Estudos Históricos Volume 8 ; 1995 >
       au < exists ; 1996 ; 9 ; Revista Estudos Históricos Volume 9 ; 1996 >
       au < exists ; 1997 ; 10 ; Revista Estudos Históricos Volume 10 ; 1997 >
-      au < exists ; 1998 ; 11 ; Revista Estudos Históricos Volume 11 ; 1998 >
-      au < exists ; 1999 ; 12 ; Revista Estudos Históricos Volume 12 ; 1999 >
-      au < exists ; 2000 ; 13 ; Revista Estudos Históricos Volume 13 ; 2000 >
-      au < exists ; 2001 ; 14 ; Revista Estudos Históricos Volume 14 ; 2001 >
-      au < exists ; 2002 ; 15 ; Revista Estudos Históricos Volume 15 ; 2002 >
-      au < exists ; 2003 ; 16 ; Revista Estudos Históricos Volume 16 ; 2003 >
-      au < exists ; 2004 ; 17 ; Revista Estudos Históricos Volume 17 ; 2004 >
-      au < exists ; 2005 ; 18 ; Revista Estudos Históricos Volume 18 ; 2005 >
-      au < exists ; 2006 ; 19 ; Revista Estudos Históricos Volume 19 ; 2006 >
-      au < exists ; 2007 ; 20 ; Revista Estudos Históricos Volume 20 ; 2007 >
+      au < exists ; 1998 ; 11-12 ; Revista Estudos Históricos Volume 11-12 ; 1998 >
+      au < exists ; 1999 ; 13 ; Revista Estudos Históricos Volume 13 ; 1999 >
+      au < exists ; 2000 ; 14 ; Revista Estudos Históricos Volume 14 ; 2000 >
+      au < exists ; 2001 ; 2001 ; Revista Estudos Históricos Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2002 ; Revista Estudos Históricos Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2003 ; Revista Estudos Históricos Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2004 ; Revista Estudos Históricos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2005 ; Revista Estudos Históricos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2006 ; Revista Estudos Históricos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2007 ; Revista Estudos Históricos Volume 2007 ; 2007 >
       au < exists ; 2008 ; 21 ; Revista Estudos Históricos Volume 21 ; 2008 >
       au < exists ; 2009 ; 22 ; Revista Estudos Históricos Volume 22 ; 2009 >
       au < exists ; 2010 ; 23 ; Revista Estudos Históricos Volume 23 ; 2010 >
@@ -263,13 +218,12 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = riel
 
-      au < exists ; 2010 ; 1 ; Revista Ibero-Americana de Estudos Legislativos Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista Ibero-Americana de Estudos Legislativos Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista Ibero-Americana de Estudos Legislativos Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista Ibero-Americana de Estudos Legislativos Volume 4 ; 2013 >
+      au < exists ; 2010 ; 2010 ; Revista Ibero-Americana de Estudos Legislativos Volume 2010 ; 2010 >
+      au < exists ; 2012 ; 2012 ; Revista Ibero-Americana de Estudos Legislativos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Revista Ibero-Americana de Estudos Legislativos Volume 2013 ; 2013 >
 
   }
 
@@ -281,11 +235,11 @@
       >
 
       comment[publisher] = Fundação Getúlio Vargas
-      param[base_url] = http://bibliotecadigital.fgv.br/
+      param[base_url] = http://bibliotecadigital.fgv.br/ojs/
       param[journal_id] = tlii-wps
 
-      au < exists ; 2012 ; 1 ; Technological Learning and Industrial Innovation Working Paper Series Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2 ; 2013 >
+      au < exists ; 2012 ; 2012 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2013 ; Technological Learning and Industrial Innovation Working Paper Series Volume 2013 ; 2013 >
 
   }
 
