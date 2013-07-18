@@ -772,6 +772,10 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
                                      'org.lockss.poll.v3.enablePoPVoting': True,
                                      'org.lockss.poll.v3.enablePoPPolls': True}
 
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'PoP Complete', u'100.00% Agreement') )
+
     def _verify_repair( self, nodes ):
         # XXX need to identify files not count them
         node_count = 0

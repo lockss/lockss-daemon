@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.47 2013-07-17 05:02:13 dshr Exp $
+ * $Id: AuState.java,v 1.48 2013-07-18 03:14:11 dshr Exp $
  */
 
 /*
@@ -60,11 +60,11 @@ public class AuState implements LockssSerializable {
   protected long lastCrawlAttempt;
   protected String lastCrawlResultMsg;
   protected int lastCrawlResult;
-  protected long lastTopLevelPoll;	// last completed poll
-  protected long lastPollStart;		// last time a poll started
-  protected String lastPollResultMsg;
-  protected int lastPollResult;
-  protected long pollDuration;		// average of last two poll durations
+  protected long lastTopLevelPoll;	// last completed PoR poll
+  protected long lastPollStart;		// last time a PoR poll started
+  protected String lastPollResultMsg;   // result of last PoR poll
+  protected int lastPollResult;         // ditto
+  protected long pollDuration;		// average of last two PoRpoll durations
   protected int clockssSubscriptionStatus;
   protected double v3Agreement = -1.0;
   protected double highestV3Agreement = -1.0;
@@ -73,6 +73,7 @@ public class AuState implements LockssSerializable {
   protected String substanceVersion;
   protected String metadataVersion;
   protected long lastContentChange;     // last time a new URL version created
+  protected long lastTimePollCompleted; // for any poll variant
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -274,11 +275,19 @@ public class AuState implements LockssSerializable {
   }
 
   /**
-   * Returns the last time a top level poll completed.
+   * Returns the last time a PoR poll completed.
    * @return the last poll time in ms
    */
   public long getLastTopLevelPollTime() {
     return lastTopLevelPoll;
+  }
+
+  /**
+   * Returns the last time any poll completed.
+   * @return the last poll time in ms
+   */
+  public long getLastTimePollCompleted() {
+    return lastTimePollCompleted;
   }
 
   /**
@@ -457,34 +466,28 @@ public class AuState implements LockssSerializable {
   /**
    * Sets the last poll time to the current time.  Saves itself to disk.
    */
-  public void pollFinished(int result, String resultMsg) {
-    lastPollResultMsg = resultMsg;
+  public void pollFinished(int result) {
+    long now = TimeBase.nowMs();
     switch (result) {
     case V3Poller.POLLER_STATUS_COMPLETE:
-      lastTopLevelPoll = TimeBase.nowMs();
-      // fall through
-    default:
-      lastPollResult = result;
-      lastPollResultMsg = resultMsg;
+      lastTopLevelPoll = now;
+      // Fall through
+    case V3Poller.POLLER_STATUS_COMPLETE_POP:
+    case V3Poller.POLLER_STATUS_COMPLETE_LOCAL:
+      lastTimePollCompleted = now;
       break;
     }
+    lastPollResult = result;
     setPollDuration(TimeBase.msSince(lastPollAttempt));
     previousPollState = null;
     historyRepo.storeAuState(this);
   }
 
   /**
-   * Sets the last poll time to the current time.  Saves itself to disk.
-   */
-  public void pollFinished(int result) {
-    pollFinished(result, null);
-  }
-
-  /**
-   * Sets the last poll time to the current time.  Saves itself to disk.
+   * Sets the last poll time to the current time. Only for V1 polls.
    */
   public void pollFinished() {
-    pollFinished(V3Poller.POLLER_STATUS_COMPLETE, null);
+    pollFinished(V3Poller.POLLER_STATUS_COMPLETE); // XXX Bogus!
   }
 
   public void setV3Agreement(double d) {

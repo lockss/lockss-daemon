@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.19 2013-07-17 05:02:14 dshr Exp $
+ * $Id: TestAuState.java,v 1.20 2013-07-18 03:14:12 dshr Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class TestAuState extends LockssTestCase {
 
     TimeBase.setSimulated(t1);
     aus.pollStarted();
-    // these should now reflect the previoud poll, not the active one
+    // these should now reflect the previous poll, not the active one
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
@@ -183,20 +183,18 @@ public class TestAuState extends LockssTestCase {
     assertNotNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(t2);
-    aus.pollFinished(V3Poller.POLLER_STATUS_ERROR, "Plorg");
+    aus.pollFinished(V3Poller.POLLER_STATUS_ERROR);
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_ERROR, aus.getLastPollResult());
-    assertEquals("Plorg", aus.getLastPollResultMsg());
     assertEquals(t2, aus.getPollDuration());
     assertFalse(aus.isPollActive());
 
     TimeBase.setSimulated(t3);
-    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, "Syrah");
+    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE);
     assertEquals(t3, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
     assertEquals((t3 + t2) / 2, aus.getPollDuration());
     assertFalse(aus.isPollActive());
 
@@ -204,7 +202,6 @@ public class TestAuState extends LockssTestCase {
     assertEquals(t3, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
     assertFalse(aus.isPollActive());
 
     TimeBase.setSimulated(t4);
@@ -212,7 +209,6 @@ public class TestAuState extends LockssTestCase {
     assertEquals(t3, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
   }
 
   public void testV3Agreement() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.221 2012-06-25 05:50:20 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.222 2013-07-18 03:14:11 dshr Exp $
  */
 
 /*
@@ -367,6 +367,9 @@ public class NodeManagerImpl
     }
   }
 
+  /**
+   * Only used for V1 polls - called from PollManager
+   */
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
     NodeState nodeState = (NodeState)activeNodes.get(results.getPollKey());
     if (nodeState == null) {
@@ -421,8 +424,8 @@ public class NodeManagerImpl
   }
 
   /**
-   * Update the PollState and NodeState to reflect the finished poll.  Sets the
-   * node to be ready for its next action.
+   * Update the PollState and NodeState to reflect the finished V1 poll.
+   * Sets the node to be ready for its next action.
    * @param nodeState NodeState
    * @param results Tallier
    */

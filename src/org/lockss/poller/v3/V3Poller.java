@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.165 2013-07-17 05:02:13 dshr Exp $
+ * $Id: V3Poller.java,v 1.166 2013-07-18 03:14:11 dshr Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class V3Poller extends BasePoll {
   public static final String[] PEER_STATUS_STRINGS =
   {
    "Initialized", "Invited", "Accepted Poll", "Sent Nominees",
-   "Waiting for Vote", "Voted", "Complete", "Error", "Dropped Out",
+   "Waiting for Vote", "Voted", "PoR Complete", "Error", "Dropped Out",
    "Declined Poll", "No Time Available", "Didn't Vote", "No Response",
    "No Nominations",
   };
@@ -104,12 +104,15 @@ public class V3Poller extends BasePoll {
   public static final int POLLER_STATUS_WAITING_REPAIRS = 10;
   public static final int POLLER_STATUS_WAITING_EXIT = 11;
   public static final int POLLER_STATUS_ABORTED = 12;
+  public static final int POLLER_STATUS_COMPLETE_POP = 13;
+  public static final int POLLER_STATUS_COMPLETE_LOCAL = 14;
 
   public static final String[] POLLER_STATUS_STRINGS =
   {
    "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
    "Tallying", "Complete", "No Quorum", "Error", "Expired", 
-   "Waiting for Repairs", "Finishing", "Aborted",
+   "Waiting for Repairs", "Finishing", "Aborted", "PoP Complete",
+   "Local Complete",
   };
 
   /* Poll variants */
@@ -177,12 +180,6 @@ public class V3Poller extends BasePoll {
     PREFIX + "allLocalPolls";
   public static final boolean DEFAULT_V3_ALL_LOCAL_POLLS = false;
 
-  /**
-   * Threshold agreement below which all polls must be PoR
-   */
-  public static final String PARAM_AGREEMENT_THRESHOLD_FOR_POP_POLLS =
-    PREFIX + "agreementThresholdForPoPPolls";
-  public static final double DEFAULT_AGREEMENT_THESHOLD_FOR_POR_POLLS = 100.0;
   /**
    * Threshold number of willing repairers above which polls can be local
    */
@@ -517,7 +514,6 @@ public class V3Poller extends BasePoll {
   private boolean allLocalPolls = DEFAULT_V3_ALL_LOCAL_POLLS;
   private boolean enablePoPPolls = DEFAULT_V3_ENABLE_POP_POLLS;
   private boolean allPoPPolls = DEFAULT_V3_ALL_POP_POLLS;
-  private double agreementThreshold = DEFAULT_AGREEMENT_THESHOLD_FOR_POR_POLLS;
   private int repairerThreshold = DEFAULT_THRESHOLD_REPAIRERS_LOCAL_POLLS;
 
   private SchedulableTask task;
@@ -591,7 +587,7 @@ public class V3Poller extends BasePoll {
     int modulus = 0;
 
     // Determine poll variant
-    switch (choosePollVariant(spec)) {
+    switch (choosePollVariant(spec, quorum)) {
     default:
       log.error("Bad poll variant: ");
       // Fall through
@@ -738,8 +734,10 @@ public class V3Poller extends BasePoll {
 
   /**
    * @return the code for the variant of the poll to call.
+   * @param spec the PollSpec
+   * @param quorum the expected quorum
    */
-  protected int choosePollVariant(PollSpec spec) {
+  protected int choosePollVariant(PollSpec spec, int quorum) {
     // Poll is PoR unless conditions fulfilled
     int ret = POLL_VARIANT_POR;
     ArchivalUnit au = spec.getCachedUrlSet().getArchivalUnit();
@@ -747,11 +745,13 @@ public class V3Poller extends BasePoll {
     long lastCrawlTime = aus.getLastContentChange();
     int lastCrawlResult = aus.getLastCrawlResult();
     int lastCrawlUrls = aus.getCrawlUrls().size();
-    // XXX need time of last PoR time, not last poll
+    // This is now time of last PoR time, not last poll
     long lastPollTime = aus.getLastTopLevelPollTime();
-    // XXX need agreement from last PoR poll
-    // XXX or should use highest agreement?
-    double lastPollAgreement = aus.getV3Agreement();
+    int agreePeersLastPoll = countLastPoRAgreePeers(au, aus);
+    // XXX When we track the agreement from different variant polls
+    // XXX separately this can be the quorum, but until then there
+    // XXX is a possibility of undercounting
+    int minAgreePeersLastPoll = quorum - 1; // XXX DSHR hack for now
     if (allPoPPolls) {
       // For testing
       ret = POLL_VARIANT_POP;
@@ -761,7 +761,7 @@ public class V3Poller extends BasePoll {
       ret = POLL_VARIANT_LOCAL;
       log.debug3("Local poll forced");
     } else if (lastPollTime > lastCrawlTime &&
-	       lastPollAgreement > agreementThreshold) {
+	       agreePeersLastPoll > minAgreePeersLastPoll) {
       // AU in good shape - does not need PoR poll
       int willingRepairers = idManager.getCachesToRepairFrom(au).size();
       log.debug3("Repairers " + willingRepairers + " vs " +
@@ -775,10 +775,40 @@ public class V3Poller extends BasePoll {
       }
     } else {
       log.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
-		 lastCrawlTime + ") last agree" + lastPollAgreement +
-		 " threshold " + agreementThreshold);
+		 lastCrawlTime + ") last agree" + agreePeersLastPoll +
+		 " threshold " + minAgreePeersLastPoll);
     }
     log.debug2("Poll variant: " + pollVariantName[ret]);
+    return ret;
+  }
+
+  /**
+   * @return an estimate of the number of peers that agreed in the
+   * last PoR poll.
+   * @param au the ArchvalUnit being polled
+   * @param aus the state of the AU
+   * XXX this needs to be changed when we are tracking the agreement
+   * XXX from different poll variants separately to only count agreement
+   * XXX PoR polls. Until then there is a possibility that the same peer's
+   * XXX agreement in a subsequent PoP poll could result in an undercount.
+   */
+  protected int countLastPoRAgreePeers(ArchivalUnit au, AuState aus) {
+    int ret = 0;
+    // agreeMap maps peer ID to last agree time
+    Map agreeMap = idManager.getAgreed(au);
+    long lastPoRPoll = aus.getLastTopLevelPollTime();
+    long threshold = aus.getPollDuration();
+    // Iterate through the agreeMap counting the number of agreeing
+    // peers whose times are threshold or less before lastPoRPoll
+    for (Iterator it = agreeMap.entrySet().iterator(); it.hasNext(); ) {
+      Map.Entry ent = (Map.Entry)it.next();
+      long delta = lastPoRPoll - ((Long)ent.getValue()).longValue();
+      PeerIdentity pid = (PeerIdentity)ent.getKey();
+      // Map includes agreement in local polls, so must exclude local ID.
+      if (delta <= threshold && !pid.isLocalIdentity()) {
+	ret++;
+      }
+    }
     return ret;
   }
 
@@ -818,9 +848,15 @@ public class V3Poller extends BasePoll {
   boolean reserveScheduleTime(int maxParticipants) {
     CachedUrlSet cus = this.getCachedUrlSet();
     long hashEst = cus.estimatedHashDuration();
+    int modulus = pollerState.getModulus();
     long receiptBuffer = calculateReceiptBuffer();
     long now = TimeBase.nowMs();
-    
+
+    if (modulus > 1) {
+      // We're only going to hash 1/modulus of the files, so adjust the
+      // hash estimate
+      hashEst /= modulus;
+    }
     // Estimate of when the vote is over and we can start tallying
     Deadline earliestStart = Deadline.at(pollerState.getVoteDeadline());
     Deadline latestFinish =
@@ -1053,7 +1089,17 @@ public class V3Poller extends BasePoll {
     setStatus(status);
     pollManager.countPollEndEvent(status);
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-    auState.pollFinished(status);
+    int modulus = pollerState.getModulus();
+    int quorum = pollerState.getQuorum();
+    if (status != POLLER_STATUS_COMPLETE) {
+      auState.pollFinished(status);
+    } else if (modulus == 0 && quorum > 0) {
+      auState.pollFinished(POLLER_STATUS_COMPLETE); // PoR poll
+    } else if (quorum == 0) {
+      auState.pollFinished(POLLER_STATUS_COMPLETE_LOCAL); // Local poll
+    } else {
+      auState.pollFinished(POLLER_STATUS_COMPLETE_POP); // PoP poll
+    }
     if (task != null && !task.isExpired()) {
       log.debug2("Cancelling task");
       task.cancel();

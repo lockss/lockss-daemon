@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.26 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.27 2013-07-18 03:14:11 dshr Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class BlockHasher extends GenericHasher {
   private boolean includeUrl = false;
   private boolean ignoreFilesOutsideCrawlSpec =
     DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC;
-  private int filesIgnored = 0;
+  protected int filesIgnored = 0;
 
   protected MessageDigest[] initialDigests;
   protected byte[][] initByteArrays;
