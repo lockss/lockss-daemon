@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.52 2013-03-18 19:19:33 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.53 2013-07-18 19:28:20 tlipkis Exp $
  */
 
 /*
@@ -372,9 +372,16 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     this(messageDir, daemon);
     try {
       decodeMsg(inputStream);
+    } catch (ProtocolException ex) {
+      if (log.isDebug3()) {
+	log.error("Unreadable Packet", ex);
+      } else {
+	log.error("Unreadable Packet: " + ex);
+      }
+      throw ex;
     } catch (IOException ex) {
       log.error("Unreadable Packet", ex);
-      throw new ProtocolException("Unable to decode pkt.");
+      throw new ProtocolException("Unable to decode pkt.", ex);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.73 2013-04-01 00:44:41 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.74 2013-07-18 19:28:20 tlipkis Exp $
  */
 
 /*
@@ -557,7 +557,7 @@ public class DefinablePlugin extends BasePlugin {
 				  DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
 	if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug(mime + " filter: " + factName);
+	  log.debug2(mime + " filter: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
