@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.23 2013-06-06 06:34:26 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.24 2013-07-18 19:27:39 tlipkis Exp $
  */
 
 /*
@@ -255,6 +255,15 @@ public class ConfigurationUtil {
   public static boolean addFromUrl(String url) throws IOException {
     return installConfig(merge(CurrentConfig.getCurrentConfig(),
                                fromUrlList(ListUtil.list(url))));
+  }
+
+  /** Install the Tdb in the current config
+   * @param url URL of a config file.
+   */
+  public static boolean setTdb(Tdb tdb) {
+    Configuration config = ConfigManager.newConfiguration();
+    config.setTdb(tdb);
+    return installConfig(merge(CurrentConfig.getCurrentConfig(), config));
   }
 
   /** Install the supplied Configuration as the current configuration.
