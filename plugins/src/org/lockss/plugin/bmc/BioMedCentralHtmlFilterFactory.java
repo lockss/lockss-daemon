@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.8 2012-11-20 20:33:23 ldoan Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.9 2013-07-19 21:05:05 aishizaki Exp $
  */
 
 /*
@@ -81,9 +81,9 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         // Contains copyright year; also now references Springer 
         HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
         // Institution-dependent link resolvers
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
         // Institution-dependent greeting
-        HtmlNodeFilters.tagWithAttribute("span", "id", "username"),
+        HtmlNodeFilters.tagWithAttribute("li", "class", "greeting"),
         // Malformed HTML
         HtmlNodeFilters.tagWithAttribute("span", "id", "articles-tab"),
         // A usage counter/glif that gets updated over time
@@ -92,6 +92,10 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
 	HtmlNodeFilters.tagWithAttribute("a", "class", "banner-ad"),
 	// Contains adverstising <a class="skyscraper-ad" 
 	HtmlNodeFilters.tagWithAttribute("a", "class", "skyscraper-ad"),
+	// google ad - may change?
+        HtmlNodeFilters.tagWithAttributeRegex("dl", "class", "google-ad.*"),
+        // Social networking links (have counters)
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "social-networking-links"),
         // An open access link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
         // A highly accessed link/glyph that may get added
