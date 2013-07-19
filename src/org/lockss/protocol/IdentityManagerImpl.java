@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.39 2013-07-17 22:54:46 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.40 2013-07-19 17:12:51 barry409 Exp $
  */
 
 /*
@@ -278,8 +278,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * objects to be collected when they are no longer in use.</p>
    */
   private final UniqueRefLruCache agreeMapsCache =
-    new UniqueRefLruCache(ConfigManager.getCurrentConfig().
-      getInt(PARAM_AGREE_MAPS_CACHE_MAX, DEFAULT_AGREE_MAPS_CACHE_MAX));
+    new UniqueRefLruCache(DEFAULT_AGREE_MAPS_CACHE_MAX);
 
   private float minPercentPartialAgreement = DEFAULT_MIN_PERCENT_AGREEMENT;
 
@@ -1528,6 +1527,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       if (changedKeys.contains(PARAM_UI_STEM_MAP)) {
 	pidUiStemMap = makePidUiStemMap(config.getList(PARAM_UI_STEM_MAP));
       }
+      int agreeMapsCacheMax = ConfigManager.getCurrentConfig().
+	getInt(PARAM_AGREE_MAPS_CACHE_MAX, DEFAULT_AGREE_MAPS_CACHE_MAX);
+      agreeMapsCache.setMaxSize(agreeMapsCacheMax);
       setPeerAddresses(config.getList(PARAM_PEER_ADDRESS_MAP));
       configV3Identities();
     }
