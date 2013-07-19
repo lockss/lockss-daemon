@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.26 2013-07-17 22:42:42 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.27 2013-07-19 17:11:59 barry409 Exp $
  */
 
 /*
@@ -988,7 +988,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testLoadIdentityAgreementCompat() throws Exception {
-    double epsilon = 0.0001;
     XStreamSerializer deserializer;
     IdentityManager.IdentityAgreement identityAgreement;
 
@@ -1006,14 +1005,13 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
     assertEquals(12345, identityAgreement.getLastAgree());
     assertEquals(67890, identityAgreement.getLastDisagree());
-    assertEquals(0.7, identityAgreement.getPercentAgreement(), epsilon);
-    assertEquals(0.8, identityAgreement.getHighestPercentAgreement(), epsilon);
+    assertEquals(0.7f, identityAgreement.getPercentAgreement());
+    assertEquals(0.8f, identityAgreement.getHighestPercentAgreement());
     assertEquals("TCP:[127.0.0.1]:8805", identityAgreement.getId());
 
     // No hints in the serialized structure, so -1.0 provided.
-    assertEquals(-1.0, identityAgreement.getPercentAgreementHint(), epsilon);
-    assertEquals(-1.0, identityAgreement.getHighestPercentAgreementHint(),
-		 epsilon);
+    assertEquals(-1.0f, identityAgreement.getPercentAgreementHint());
+    assertEquals(-1.0f, identityAgreement.getHighestPercentAgreementHint());
 
     String haveHintsSerialized =
       "  <org.lockss.protocol.IdentityManager-IdentityAgreement>\n" +
@@ -1032,11 +1030,10 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
     assertEquals(12345, identityAgreement.getLastAgree());
     assertEquals(67890, identityAgreement.getLastDisagree());
-    assertEquals(0.7, identityAgreement.getPercentAgreement(), epsilon);
-    assertEquals(0.8, identityAgreement.getHighestPercentAgreement(), epsilon);
-    assertEquals(0.4, identityAgreement.getPercentAgreementHint(), epsilon);
-    assertEquals(0.5, identityAgreement.getHighestPercentAgreementHint(),
-		 epsilon);
+    assertEquals(0.7f, identityAgreement.getPercentAgreement());
+    assertEquals(0.8f, identityAgreement.getHighestPercentAgreement());
+    assertEquals(0.4f, identityAgreement.getPercentAgreementHint());
+    assertEquals(0.5f, identityAgreement.getHighestPercentAgreementHint());
     assertEquals("TCP:[127.0.0.1]:8805", identityAgreement.getId());
   }
 
