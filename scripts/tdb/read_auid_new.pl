@@ -208,7 +208,7 @@ while (my $line = <>) {
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
         #For reporting at the end
-        #$man_url = $start_url 
+        #$man_url = $start_url ;
     if (($resp_m->is_success) && ($resp_m->is_success)) {
       my $man_contents = $resp_m->content;
       my $start_contents = $resp_s->content;
