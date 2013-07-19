@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.6 2012-11-28 22:10:39 ldoan Exp $
+ * $Id: TestBioMedCentralPluginHtmlFilterFactory.java,v 1.7 2013-07-19 21:23:08 aishizaki Exp $
  */
 
 /*
@@ -189,6 +189,35 @@ public class TestBioMedCentralPluginHtmlFilterFactory extends LockssTestCase {
         ENC);
 
     assertEquals(SkyscraperAdHtmlHashFiltered,StringUtil.fromInputStream(inA));
+
+  }
+  private static final String SocialNetworkingHash = "<ul id=\"social-networking-links\">"+
+        "<li>"+
+        "<div class=\"fb-like\" data-href=\"http://genomebiology.com/2011/12/10/R101\" data-send=\"false\" data-layout=\"button_count\" data-width=\"100\" data-show-faces=\"false\" data-action=\"recommend\"></div>"+
+        "</li></ul>Hello World";
+  private static final String SocialNetworkingHashFiltered = "Hello World";
+
+  public void testFilterSocialNetworking() throws Exception {
+    InputStream inA;
+    /* SkyscraperAd */     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(SocialNetworkingHash),
+        ENC);
+
+    assertEquals(SocialNetworkingHashFiltered,StringUtil.fromInputStream(inA));
+
+  }
+  private static final String GoogleAdHash = "<dl class=\"google-ad wide \">"+
+        "<dt class=\"hide\">"+
+        "</dt></dl>Hello World";
+  private static final String GoogleAdHashFiltered = "Hello World";
+
+  public void testFilterGoogleAd() throws Exception {
+    InputStream inA;
+    /* SkyscraperAd */     
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(GoogleAdHash),
+        ENC);
+
+    assertEquals(GoogleAdHashFiltered,StringUtil.fromInputStream(inA));
 
   }
 }
