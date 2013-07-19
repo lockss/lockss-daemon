@@ -195,27 +195,31 @@ while (my $line = <>) {
         sleep(5);
         
   } elsif ($plugin eq "ClockssOJS2Plugin") {
+        #Url with permission statement
         $url_m = sprintf("%sindex.php/%s/about/editorialPolicies", 
             $param{base_url}, $param{journal_id});
         $man_url = uri_unescape($url_m);
         my $req_m = HTTP::Request->new(GET, $man_url);
         my $resp_m = $ua->request($req_m);
+        #Url with list of urls for issues
         $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
         $start_url = uri_unescape($url_s);
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
+        #For reporting at the end
+        $man_url = $start_url 
     if (($resp_m->is_success) && ($resp_m->is_success)) {
       my $man_contents = $resp_m->content;
       my $start_contents = $resp_s->content;
       if (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
-    $result = "Manifest"
+         $result = "Manifest"
       } else {
-    $result = "--"
+         $result = "--"
       }
-  } else {
+    } else {
       $result = "--"
-  }
+    }
         sleep(5);
         
   } elsif ($plugin eq "TaylorAndFrancisPlugin") {
