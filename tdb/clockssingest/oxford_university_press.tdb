@@ -836,6 +836,8 @@
 
     param[base_url] = http://ajh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1988 ; American Journal of Hypertension Volume 1 ; 1 ; >
     au < manifest ; exists ; 1989 ; American Journal of Hypertension Volume 2 ; 2 ; >
@@ -861,7 +863,7 @@
     au < crawling ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; >
     au < crawling ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
-    au < testing ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
+    au < notReady ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
 
   }
@@ -12032,10 +12034,11 @@
 
     param[base_url] = http://jpids.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[nR] = RT 5641 fetch error
 
     {
     
-    au < testing ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
+    au < notReady ; exists ; 2012 ; Journal of the Pediatric Infectious Diseases Society Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Journal of the Pediatric Infectious Diseases Society Volume 2 ; 2 ; >
     
     }
@@ -12626,6 +12629,7 @@
 
     param[base_url] = http://jsh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1967-1968 ; Journal of Social History Volume 1 ; 1 ; >
     au < manifest ; exists ; 1968-1969 ; Journal of Social History Volume 2 ; 2 ; >
@@ -12672,7 +12676,7 @@
     au < released ; crawling ; 2009-2010 ; Journal of Social History Volume 43 ; 43 ; >
     au < zapped ; down ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < released ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
-    au < testing ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
+    au < notReady ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
     au < expected ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
 
     }
@@ -12689,10 +12693,11 @@
 
     param[base_url] = http://jscr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[nrR] = RT 5641 fetch error
 
     au < crawling ; exists ; 2010 ; Journal of Surgical Case Reports Volume 2010 ; 2010 ; >
     au < crawling ; exists ; 2011 ; Journal of Surgical Case Reports Volume 2011 ; 2011 ; >
-    au < testing ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
+    au < notReady ; exists ; 2012 ; Journal of Surgical Case Reports Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; Journal of Surgical Case Reports Volume 2013 ; 2013 ; >
 
   }
@@ -12720,6 +12725,7 @@
 
     param[base_url] = http://jts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[nR] = RT 5641 fetch error
 
     au < manifest ; exists ; 1899-1900 ; The Journal of Theological Studies Volume os-I ; os-I ; >
     au < manifest ; exists ; 1900-1901 ; The Journal of Theological Studies Volume os-II ; os-II ; >
@@ -12833,7 +12839,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 ; >
     au < released ; crawling ; 2011 ; The Journal of Theological Studies Volume 62 ; 62 ; >
-    au < testing ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
+    au < notReady ; exists ; 2012 ; The Journal of Theological Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Journal of Theological Studies Volume 64 ; 64 ; >
 
     }
