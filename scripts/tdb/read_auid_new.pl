@@ -208,7 +208,7 @@ while (my $line = <>) {
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
         #For reporting at the end
-        $man_url = $start_url 
+        #$man_url = $start_url 
     if (($resp_m->is_success) && ($resp_m->is_success)) {
       my $man_contents = $resp_m->content;
       my $start_contents = $resp_s->content;
@@ -655,86 +655,6 @@ while (my $line = <>) {
     }
     sleep(5);
                 
-  } elsif ($plugin eq "IgiGlobalBooksPlugin") {
-    # manifest "%slockss/books.aspx", base_url
-    # start_url "%sgateway/book/%s", base_url, volume
-    # base_url http://www.igi-global.com/
-    $url = sprintf("%slockss/books.aspx", 
-      $param{base_url});
-    $url_book = sprintf("%sgateway/book/%s",
-      $param{base_url}, $param{volume});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$clockss_tag/)) {
-        if ($man_contents =~ m/$url_book/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        } 
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(5);
-        
-  } elsif ($plugin eq "ClockssIgiGlobalBooksPlugin") {
-    $url = sprintf("%slockss/journal-issues.aspx?issn=%s&volume=%s", 
-      $param{base_url}, $param{journal_issn}, $param{volume});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
-        if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        } 
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(5);
-                
-  } elsif ($plugin eq "RoyalSocietyOfChemistryPlugin") {
-    $url = sprintf("%spublishing/journals/lockss/?journalcode=%s&volume=%s&year=%d", 
-      $param{base_url}, $param{journal_code}, $param{volume_name}, $param{year});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-        if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
-          $vol_title = $1;
-          $vol_title =~ s/\s*\n\s*/ /g;
-          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-            $vol_title = "\"" . $vol_title . "\"";
-          }
-        } 
-        $result = "Manifest"
-      } else {
-        $result = "--NO_TAG--"
-      }
-    } else {
-      $result = "--REQ_FAIL--"
-    }
-    sleep(5);
-        
   } elsif ($plugin eq "ClockssRoyalSocietyOfChemistryPlugin") {
     $url = sprintf("%spublishing/journals/lockss/?journalcode=%s&volume=%s&year=%d", 
       $param{base_url}, $param{journal_code}, $param{volume_name}, $param{year});
