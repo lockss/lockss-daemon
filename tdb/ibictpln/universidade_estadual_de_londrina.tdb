@@ -349,9 +349,9 @@
       param[base_url] = http://www.uel.br/revistas/uel/
       param[journal_id] = projetica
 
-      au < exists ; 2010 ; 1 ; Projetica Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Projetica Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Projetica Volume 3 ; 2012 >
+      au < manifest ; 2010 ; 1 ; Projetica Volume 1 ; 2010 >
+      au < manifest ; 2011 ; 2 ; Projetica Volume 2 ; 2011 >
+      au < manifest ; 2012 ; 3 ; Projetica Volume 3 ; 2012 >
       au < expected ; 2013 ; 4 ; Projetica Volume 4 ; 2013 >
 
   }
