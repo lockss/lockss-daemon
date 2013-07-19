@@ -194,6 +194,30 @@ while (my $line = <>) {
   }
         sleep(5);
         
+  } elsif ($plugin eq "ClockssOJS2Plugin") {
+        $url_m = sprintf("%sindex.php/%s/about/editorialPolicies", 
+            $param{base_url}, $param{journal_id});
+        $man_url = uri_unescape($url_m);
+        my $req_m = HTTP::Request->new(GET, $man_url);
+        my $resp_m = $ua->request($req_m);
+        $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
+            $param{base_url}, $param{journal_id}, $param{year});
+        $start_url = uri_unescape($url_s);
+        my $req_s = HTTP::Request->new(GET, $start_url);
+        my $resp_s = $ua->request($req_s);
+    if (($resp_m->is_success) && ($resp_m->is_success)) {
+      my $man_contents = $resp_m->content;
+      my $start_contents = $resp_s->content;
+      if (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
+    $result = "Manifest"
+      } else {
+    $result = "--"
+      }
+  } else {
+      $result = "--"
+  }
+        sleep(5);
+        
   } elsif ($plugin eq "TaylorAndFrancisPlugin") {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -603,6 +627,61 @@ while (my $line = <>) {
     sleep(5);
         
   } elsif ($plugin eq "ClockssIgiGlobalPlugin") {
+    $url = sprintf("%slockss/journal-issues.aspx?issn=%s&volume=%s", 
+      $param{base_url}, $param{journal_issn}, $param{volume});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$igi_tag/)) {
+        if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+                
+  } elsif ($plugin eq "IgiGlobalBooksPlugin") {
+    # manifest "%slockss/books.aspx", base_url
+    # start_url "%sgateway/book/%s", base_url, volume
+    # base_url http://www.igi-global.com/
+    $url = sprintf("%slockss/books.aspx", 
+      $param{base_url});
+    $url_book = sprintf("%sgateway/book/%s",
+      $param{base_url}, $param{volume});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/$clockss_tag/)) {
+        if ($man_contents =~ m/$url_book/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest"
+      } else {
+        $result = "--NO_TAG--"
+      }
+    } else {
+      $result = "--REQ_FAIL--"
+    }
+    sleep(5);
+        
+  } elsif ($plugin eq "ClockssIgiGlobalBooksPlugin") {
     $url = sprintf("%slockss/journal-issues.aspx?issn=%s&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume});
     $man_url = uri_unescape($url);
