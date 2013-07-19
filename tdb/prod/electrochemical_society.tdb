@@ -69,7 +69,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Solid State Letters Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Solid State Letters Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Solid State Letters Volume 2 ; 2 >
     
   }
 
@@ -86,7 +86,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Electrochemistry Letters Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Electrochemistry Letters Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Electrochemistry Letters Volume 2 ; 2 >
     
   }
 
