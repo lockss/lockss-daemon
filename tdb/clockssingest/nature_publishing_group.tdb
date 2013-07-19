@@ -2068,7 +2068,6 @@
       issnl = 1525-0016
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = mt
 
     au < exists ; exists ; 2000 ; Molecular Therapy Volume 1 (2000) ; 2000 ; 1 >
@@ -2090,7 +2089,7 @@
     au < released ; crawling ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
-    au < testing ; exists ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
+    au < released ; manifest ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
     au < crawling ; exists ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
 
   }
