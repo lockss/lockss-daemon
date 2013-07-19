@@ -4338,6 +4338,7 @@
 
     param[base_url] = http://dh.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[nR] = RU 4470 needs hash filter
 
     au < manifest ; exists ; 1977 ; Diplomatic History Volume 1 ; 1 ; >
     au < manifest ; exists ; 1978 ; Diplomatic History Volume 2 ; 2 ; >
@@ -4374,7 +4375,7 @@
     au < released ; manifest ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
     au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
-    au < testing ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
+    au < notReady ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Diplomatic History Volume 37 ; 37 ; >
 
   }
