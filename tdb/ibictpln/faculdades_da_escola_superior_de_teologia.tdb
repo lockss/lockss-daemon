@@ -18,12 +18,12 @@
       param[base_url] = http://est.tempsite.ws/periodicos/
       param[journal_id] = estudos_teologicos
 
-      au < exists ; 1995 ; 35 ; Estudos Teológicos Volume 35 ; 1995 >
-      au < exists ; 1996 ; 36 ; Estudos Teológicos Volume 36 ; 1996 >
-      au < exists ; 1997 ; 37 ; Estudos Teológicos Volume 37 ; 1997 >
-      au < exists ; 1998 ; 38 ; Estudos Teológicos Volume 38 ; 1998 >
-      au < exists ; 1999 ; 39 ; Estudos Teológicos Volume 39 ; 1999 >
-      au < exists ; 2000 ; 40 ; Estudos Teológicos Volume 40 ; 2000 >
+      au < manifest ; 1995 ; 35 ; Estudos Teológicos Volume 35 ; 1995 >
+      au < manifest ; 1996 ; 36 ; Estudos Teológicos Volume 36 ; 1996 >
+      au < manifest ; 1997 ; 37 ; Estudos Teológicos Volume 37 ; 1997 >
+      au < manifest ; 1998 ; 38 ; Estudos Teológicos Volume 38 ; 1998 >
+      au < manifest ; 1999 ; 39 ; Estudos Teológicos Volume 39 ; 1999 >
+      au < manifest ; 2000 ; 40 ; Estudos Teológicos Volume 40 ; 2000 >
       au < manifest ; 2001 ; 41 ; Estudos Teológicos Volume 41 ; 2001 >
       au < manifest ; 2002 ; 42 ; Estudos Teológicos Volume 42 ; 2002 >
       au < manifest ; 2003 ; 43 ; Estudos Teológicos Volume 43 ; 2003 >
