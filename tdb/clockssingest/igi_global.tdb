@@ -1772,7 +1772,7 @@
 
     au < crawling ; exists ; 2010 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 2 ; 2 > 
-    au < crawling ; exists ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
+    au < testing ; exists ; 2012 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 4 ; 4 > 
 
   }
@@ -1790,7 +1790,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
-    au < crawling ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
+    au < testing ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
 
   }
@@ -1807,7 +1807,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
     au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < crawling ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < testing ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
 
   }
@@ -1954,7 +1954,7 @@
 
     param[journal_issn] = 2160-9837
 
-    au < crawling ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
+    au < testing ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
     au < expected ; exists ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 > 
 
   }
@@ -2530,7 +2530,7 @@
     param[journal_issn] = 2155-6261
 
     au < released ; crawling ; 2011 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 1 ; 1 > 
-    au < crawling ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
+    au < testing ; exists ; 2012 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 2 ; 2 > 
     au < expected ; exists ; 2013 ; International Journal of Wireless Networks and Broadband Technologies (IJWNBT) Volume 3 ; 3 > 
 
   }
