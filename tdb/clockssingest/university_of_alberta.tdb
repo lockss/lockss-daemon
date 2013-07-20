@@ -40,14 +40,14 @@
         plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin 
         param[journal_id] = eblip
 
-        au < exists ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
-        au < exists ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
-        au < exists ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
-        au < exists ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
-        au < exists ; exists ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
-        au < exists ; exists ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
-        au < exists ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
-        au < expected ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
+        au < manifest ; exists ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+        au < manifest ; exists ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+        au < manifest ; exists ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+        au < manifest ; exists ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+        au < manifest ; exists ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+        au < manifest ; exists ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+        au < manifest ; exists ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+        au < manifest ; exists ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
       }
       
     }
