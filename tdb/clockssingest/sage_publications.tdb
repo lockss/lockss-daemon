@@ -3164,7 +3164,7 @@
         au < crawling ; exists ; 2009 ; The Bible Translator Volume 60 ; 60 >
         au < crawling ; exists ; 2010 ; The Bible Translator Volume 61 ; 61 >
         au < crawling ; exists ; 2011 ; The Bible Translator Volume 62 ; 62 >
-        au < crawling ; exists ; 2012 ; The Bible Translator Volume 63 ; 63 >
+        au < testing ; exists ; 2012 ; The Bible Translator Volume 63 ; 63 >
         au < crawling ; exists ; 2013 ; The Bible Translator Volume 64 ; 64 >
 
       }
@@ -12469,7 +12469,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ksm.sagepub.com/
 
-      au < crawling ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
+      au < testing ; exists ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 ; >
       au < expected ; exists ; 2013 ; IIM Kozhikode Society & Management Review Volume 2 ; 2 ; >
 
     }
@@ -19045,7 +19045,7 @@
       au < zapped ; down ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 ; >
       au < released ; crawling ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 ; >
       au < zapped ; down ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 ; >
-      au < crawling ; exists ; 2012-2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
+      au < testing ; exists ; 2012-2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 ; >
       au < expected ; exists ; 2013-2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 ; >
 
     }
@@ -26477,7 +26477,7 @@
 
         au < crawling ; exists ; 2010 ; New Labor Forum Volume 19 ; 19 ; >
         au < crawling ; exists ; 2011 ; New Labor Forum Volume 20 ; 20 ; >
-        au < crawling ; exists ; 2012 ; New Labor Forum Volume 21 ; 21 ; >
+        au < testing ; exists ; 2012 ; New Labor Forum Volume 21 ; 21 ; >
         au < crawling ; exists ; 2013 ; New Labor Forum Volume 22 ; 22 ; >
 
     }
@@ -33269,7 +33269,7 @@
       au < zapped ; down ; 2009 ; Studies in History Volume 25 ; 25 ; >
       au < zapped ; down ; 2010 ; Studies in History Volume 26 ; 26 ; >
       au < released ; crawling ; 2011 ; Studies in History Volume 27 ; 27 ; >
-      au < crawling ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
+      au < testing ; exists ; 2012 ; Studies in History Volume 28 ; 28 ; >
       au < expected ; exists ; 2013 ; Studies in History Volume 29 ; 29 ; >
       
     }
@@ -37700,7 +37700,7 @@
       au < crawling ; exists ; 2009 ; Australian Journal of Education Volume 53 ; 53 ; >
       au < crawling ; exists ; 2010 ; Australian Journal of Education Volume 54 ; 54 ; >
       au < crawling ; exists ; 2011 ; Australian Journal of Education Volume 55 ; 55 ; >
-      au < crawling ; exists ; 2012 ; Australian Journal of Education Volume 56 ; 56 ; >
+      au < testing ; exists ; 2012 ; Australian Journal of Education Volume 56 ; 56 ; >
       au < crawling ; exists ; 2013 ; Australian Journal of Education Volume 57 ; 57 ; >
 
     }
@@ -37831,7 +37831,7 @@
     au < crawling ; exists ; 2009 ; Australian Journal of Career Development Volume 18 ; 18 ; >
     au < crawling ; exists ; 2010 ; Australian Journal of Career Development Volume 19 ; 19 ; >
     au < crawling ; exists ; 2011 ; Australian Journal of Career Development Volume 20 ; 20 ; >
-    au < crawling ; exists ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 ; >
+    au < testing ; exists ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 ; >
 
     }
@@ -38900,7 +38900,7 @@
         au < crawling ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 ; >
         au < crawling ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 ; >
         au < crawling ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 ; >
-        au < crawling ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
+        au < testing ; exists ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
         au < exists ; exists ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 ; >
   
       }
@@ -38935,7 +38935,7 @@
         au < crawling ; exists ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 ; >
         au < crawling ; exists ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 ; >
         au < crawling ; exists ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 ; >
-        au < crawling ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
+        au < testing ; exists ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 ; >
         au < crawling ; exists ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 ; >
 
     }
@@ -38963,7 +38963,7 @@
         au < crawling ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 ; >
         au < crawling ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 ; >
         au < crawling ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 ; >
-        au < crawling ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
+        au < testing ; exists ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 ; >
         au < exists ; exists ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 ; >
   
     }
@@ -38988,7 +38988,7 @@
         au < crawling ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 ; >
         au < crawling ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 ; >
         au < crawling ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
-        au < crawling ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
+        au < testing ; exists ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
         au < exists ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
   
       }
@@ -39285,7 +39285,7 @@
         au < crawling ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
         au < crawling ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
         au < crawling ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
-        au < crawling ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
+        au < testing ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
         au < exists ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
   
       }
