@@ -58,7 +58,7 @@
 
     param[journal_name] = ijm
 
-    au < testing ; 2011 ; 2011 ; International Journal of Myriapodology Issues 4-6 >
+    au < ready ; 2011 ; 2011 ; International Journal of Myriapodology Issues 4-6 >
     au < ready ; 2012 ; 2012 ; International Journal of Myriapodology Issue 7 >
 
    }
@@ -88,10 +88,12 @@
       issnl = 1314-4057
     >
 
+    comment[notReady] = V2011 Java Heap Space Error
+
     param[journal_name] = mycokeys
 
-    au < testing ; 2011 ; 2011 ; MycoKeys Issue 1 >
-    au < testing ; 2012 ; 2012 ; MycoKeys Issues 2-6 >
+    au < notReady ; 2011 ; 2011 ; MycoKeys Issue 1 >
+    au < ready ; 2012 ; 2012 ; MycoKeys Issues 2-6 >
 
    }
 
@@ -104,7 +106,7 @@
 
     param[journal_name] = natureconservation
 
-    au < testing ; 2012 ; 2012 ; Nature Conservation Issue 1-3 >
+    au < ready ; 2012 ; 2012 ; Nature Conservation Issue 1-3 >
 
    }
 
@@ -118,9 +120,11 @@
     >
 
     param[journal_name] = neobiota
+    
+    comment[notReady] = V2012 Java Heap Space Error
 
-    au < testing ; 2011 ; 2011 ; NeoBiota Issues 9-11 >
-    au < testing ; 2012 ; 2012 ; NeoBiota Issues 12-15 >
+    au < ready ; 2011 ; 2011 ; NeoBiota Issues 9-11 >
+    au < notReady ; 2012 ; 2012 ; NeoBiota Issues 12-15 >
 
    }
 
@@ -135,9 +139,9 @@
 
     param[journal_name] = phytokeys
 
-    au < testing ; 2010 ; 2010 ; PhytoKeys Issue 1 >
-    au < testing ; 2011 ; 2011 ; PhytoKeys Issues 2-7 >
-    au < testing ; 2012 ; 2012 ; PhytoKeys Issues 8-19 >
+    au < ready ; 2010 ; 2010 ; PhytoKeys Issue 1 >
+    au < ready ; 2011 ; 2011 ; PhytoKeys Issues 2-7 >
+    au < ready ; 2012 ; 2012 ; PhytoKeys Issues 8-19 >
 
    }
 
@@ -152,7 +156,7 @@
 
     param[journal_name] = subtbiol
 
-    au < testing ; 2011 ; 2011 ; Subterranean Biology Issues 8-9 >
+    au < ready ; 2011 ; 2011 ; Subterranean Biology Issues 8-9 >
 
 
    }
@@ -165,14 +169,16 @@
       eissn = 1313-2970 ;
       issnl = 1313-2970
     >
+    
+    comment[notReady] = V2011,2012 Java Heap Space Error
 
     param[journal_name] = zookeys
 
-    au < testing ; 2008 ; 2008 ; ZooKeys Issues 1-4 >
-    au < testing ; 2009 ; 2009 ; ZooKeys Issues 5-31 >
-    au < testing ; 2010 ; 2010 ; ZooKeys Issues 32-73 >
-    au < testing ; 2011 ; 2011 ; ZooKeys Issues 74-160 >
-    au < testing ; 2012 ; 2012 ; ZooKeys Issues 161-255 >
+    au < ready ; 2008 ; 2008 ; ZooKeys Issues 1-4 >
+    au < ready ; 2009 ; 2009 ; ZooKeys Issues 5-31 >
+    au < notReady ; 2010 ; 2010 ; ZooKeys Issues 32-73 >
+    au < notReady ; 2011 ; 2011 ; ZooKeys Issues 74-160 >
+    au < notReady ; 2012 ; 2012 ; ZooKeys Issues 161-255 >
 
    }
 
