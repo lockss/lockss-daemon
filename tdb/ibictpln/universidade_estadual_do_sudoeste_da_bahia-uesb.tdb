@@ -17,15 +17,17 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = cadernosdeciencias
 
-      au < exists ; 2005 ; 1 ; Cadernos de Ciências Sociais Aplicadas Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Cadernos de Ciências Sociais Aplicadas Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Cadernos de Ciências Sociais Aplicadas Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Cadernos de Ciências Sociais Aplicadas Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Cadernos de Ciências Sociais Aplicadas Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Cadernos de Ciências Sociais Aplicadas Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 ; 2011 >
-      au < expected ; 2012 ; 8 ; Cadernos de Ciências Sociais Aplicadas Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Cadernos de Ciências Sociais Aplicadas Volume 9 ; 2013 >
+      au < exists ; 1997 ; 1 ; Cadernos de Ciências Sociais Aplicadas Volume 1 ; 1997 >
+      au < exists ; 1998 ; 2 ; Cadernos de Ciências Sociais Aplicadas Volume 2 ; 1998 >
+      au < exists ; 2005 ; 3 ; Cadernos de Ciências Sociais Aplicadas Volume 3 ; 2005 >
+      au < exists ; 2006 ; 4 ; Cadernos de Ciências Sociais Aplicadas Volume 4 ; 2006 >
+      au < doesNotExist ; 2007 ; 5 ; Cadernos de Ciências Sociais Aplicadas Volume 5 ; 2007 >
+      au < doesNotExist ; 2008 ; 6 ; Cadernos de Ciências Sociais Aplicadas Volume 6 ; 2008 >
+      au < exists ; 2009 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2009) ; 2009 >
+      au < exists ; 2010 ; 7 ; Cadernos de Ciências Sociais Aplicadas Volume 7 (2010) ; 2010 >
+      au < exists ; 2011 ; 8 ; Cadernos de Ciências Sociais Aplicadas Volume 8 ; 2011 >
+      au < exists ; 2012 ; 9 ; Cadernos de Ciências Sociais Aplicadas Volume 9 ; 2012 >
+      au < expected ; 2013 ; 10 ; Cadernos de Ciências Sociais Aplicadas Volume 10 ; 2013 >
 
   }
 
@@ -41,15 +43,15 @@
       param[base_url] = http://www.estudosdalinguagem.org/seer/
       param[journal_id] = estudosdalinguagem
 
-      au < manifest ; 2005 ; 1 ; Estudos da Língua(gem) Volume 1 ; 2005 >
-      au < manifest ; 2006 ; 2 ; Estudos da Língua(gem) Volume 2 ; 2006 >
-      au < manifest ; 2007 ; 3 ; Estudos da Língua(gem) Volume 3 ; 2007 >
-      au < manifest ; 2008 ; 4 ; Estudos da Língua(gem) Volume 4 ; 2008 >
-      au < manifest ; 2009 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2009 >
-      au < manifest ; 2010 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2010 >
-      au < manifest ; 2011 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2011 >
-      au < manifest ; 2012 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2013 >
+      au < manifest ; 2005 ; 1-2 ; Estudos da Língua(gem) Volume 1-2 ; 2005 >
+      au < manifest ; 2006 ; 3-4 ; Estudos da Língua(gem) Volume 3-4 ; 2006 >
+      au < manifest ; 2007 ; 5 ; Estudos da Língua(gem) Volume 5 ; 2007 >
+      au < manifest ; 2008 ; 6 ; Estudos da Língua(gem) Volume 6 ; 2008 >
+      au < manifest ; 2009 ; 7 ; Estudos da Língua(gem) Volume 7 ; 2009 >
+      au < manifest ; 2010 ; 8 ; Estudos da Língua(gem) Volume 8 ; 2010 >
+      au < manifest ; 2011 ; 9 ; Estudos da Língua(gem) Volume 9 ; 2011 >
+      au < manifest ; 2012 ; 10 ; Estudos da Língua(gem) Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Estudos da Língua(gem) Volume 11 ; 2013 >
 
   }
 
@@ -81,15 +83,14 @@
       param[base_url] = http://periodicos.uesb.br/
       param[journal_id] = floema
 
-      au < exists ; 2005 ; 1 ; Floema. Caderno de Teoria e História Literária Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Floema. Caderno de Teoria e História Literária Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Floema. Caderno de Teoria e História Literária Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Floema. Caderno de Teoria e História Literária Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Floema. Caderno de Teoria e História Literária Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Floema. Caderno de Teoria e História Literária Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Floema. Caderno de Teoria e História Literária Volume 7 ; 2011 >
-      au < expected ; 2012 ; 8 ; Floema. Caderno de Teoria e História Literária Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Floema. Caderno de Teoria e História Literária Volume 9 ; 2013 >
+      au < exists ; 2005 ; 1,1a,2 ; Floema. Caderno de Teoria e História Literária Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2b,2a,3,4 ; Floema. Caderno de Teoria e História Literária Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3a ; Floema. Caderno de Teoria e História Literária Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4a ; Floema. Caderno de Teoria e História Literária Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5,5a ; Floema. Caderno de Teoria e História Literária Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6-7 ; Floema. Caderno de Teoria e História Literária Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8-9 ; Floema. Caderno de Teoria e História Literária Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 10-11 ; Floema. Caderno de Teoria e História Literária Volume 2012 ; 2012 >
 
   }
 
@@ -159,7 +160,7 @@
       au < exists ; 2010 ; 6 ; Práxis Educacional Volume 6 ; 2010 >
       au < exists ; 2011 ; 7 ; Práxis Educacional Volume 7 ; 2011 >
       au < exists ; 2012 ; 8 ; Práxis Educacional Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Práxis Educacional Volume 9 ; 2013 >
+      au < exists ; 2013 ; 9 ; Práxis Educacional Volume 9 ; 2013 >
 
   }
 
