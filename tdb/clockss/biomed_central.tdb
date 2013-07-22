@@ -2114,7 +2114,7 @@
       au < crawling ; exists ; 2009 ; Asia Pacific Family Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2010 ; Asia Pacific Family Medicine Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Asia Pacific Family Medicine Volume 10 ; 10 >
-      au < testing ; exists ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
+      au < released ; manifest ; 2012 ; Asia Pacific Family Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2013 ; Asia Pacific Family Medicine Volume 12 ; 12 >
 
     }
@@ -2484,7 +2484,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2009 ; Cardiovascular Diabetology Volume 8 ; 8 >
       au < released ; crawling ; 2010 ; Cardiovascular Diabetology Volume 9 ; 9 >
       au < released ; crawling ; 2011 ; Cardiovascular Diabetology Volume 10 ; 10 >
-      au < crawling ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
+      au < testing ; exists ; 2012 ; Cardiovascular Diabetology Volume 11 ; 11 >
       au < manifest ; exists ; 2013 ; Cardiovascular Diabetology Volume 12 ; 12 >
 
     }
@@ -2508,7 +2508,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2009 ; Cardiovascular Ultrasound Volume 7 ; 7 >
       au < released ; crawling ; 2010 ; Cardiovascular Ultrasound Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
-      au < crawling ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
+      au < testing ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
       au < manifest ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
 
     }
@@ -2542,7 +2542,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2045-3701
 
       au < released ; crawling ; 2011 ; Cell & Bioscience Volume 1 ; 1 >
-      au < crawling ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
+      au < testing ; exists ; 2012 ; Cell & Bioscience Volume 2 ; 2 >
       au < manifest ; exists ; 2013 ; Cell & Bioscience Volume 3 ; 3 >
 
     }
