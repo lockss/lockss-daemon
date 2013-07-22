@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlHashFilterFactory.java,v 1.6 2013-06-21 22:02:17 alexandraohlson Exp $
+ * $Id: MetaPressHtmlHashFilterFactory.java,v 1.7 2013-07-22 21:54:15 etenbrink Exp $
  */
 
 /*
@@ -120,6 +120,8 @@ public class MetaPressHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "PersonalizationPanel"),
         // Remote address and user agent
         HtmlNodeFilters.tagWithAttribute("div", "class", "MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails"),
+        // User Detail information (IP, Server, and user agent)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "FooterUserDetailContainer"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
