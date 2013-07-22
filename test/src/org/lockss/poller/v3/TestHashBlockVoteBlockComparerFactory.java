@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashBlockVoteBlockComparerFactory.java,v 1.2 2013-07-09 16:45:03 barry409 Exp $
+ * $Id: TestHashBlockVoteBlockComparerFactory.java,v 1.3 2013-07-22 16:41:25 barry409 Exp $
  */
 
 /*
@@ -245,6 +245,32 @@ public class TestHashBlockVoteBlockComparerFactory extends LockssTestCase {
       
       // This was clobbered.
       voteBlock = makeVoteBlock(nonces[i], "bbb");
+      assertFalse(comparer.sharesVersion(voteBlock));
+
+      voteBlock = makeVoteBlock(nonces[i], "ccc");
+      assertTrue(comparer.sharesVersion(voteBlock));
+    }
+  }
+
+  public void testCompareVoterHashError() throws Exception {
+    HashBlock ourHashBlock = makeHashBlock("http://example.com/foo");
+    addVersion(ourHashBlock, "aaa");
+    addVersion(ourHashBlock, "bbb");
+    addVersion(ourHashBlock, "ccc");
+    
+    V3Poller.HashIndexer hashIndexer = makeHashIndexer(ourHashBlock);
+    HashBlockVoteBlockComparerFactory factory =
+      HashBlockVoteBlockComparerFactory.makeFactory(ourHashBlock, hashIndexer);
+    
+    for (int i = 0; i < nonces.length; i++) {
+      VoteBlockComparer comparer = factory.forIndex(i);
+
+      VoteBlock voteBlock;
+      voteBlock = makeVoteBlock(nonces[i], "aaa");
+      assertTrue(comparer.sharesVersion(voteBlock));
+      
+      voteBlock = makeVoteBlock(nonces[i], "bbb");
+      setHashError(voteBlock, 0);
       assertFalse(comparer.sharesVersion(voteBlock));
 
       voteBlock = makeVoteBlock(nonces[i], "ccc");
