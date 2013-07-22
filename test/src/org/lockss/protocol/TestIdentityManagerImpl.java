@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.27 2013-07-19 17:11:59 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.28 2013-07-22 20:59:53 barry409 Exp $
  */
 
 /*
@@ -131,7 +131,6 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath);
-    p.setProperty(IdentityManager.PARAM_MIN_PERCENT_AGREEMENT, "0.9");
     return p;
   }
 
@@ -581,6 +580,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   
   public void testSignalPartialAgreementDisagreementThreshold()
       throws Exception {
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MIN_PERCENT_AGREEMENT,
+ 				  "50");
     TimeBase.setSimulated(10);
     setupPeer123();
 
