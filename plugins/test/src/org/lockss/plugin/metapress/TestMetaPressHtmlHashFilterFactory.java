@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.4 2013-06-21 22:02:17 alexandraohlson Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.5 2013-07-22 21:21:07 etenbrink Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 
 public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
-  static String ENC = Constants.DEFAULT_ENCODING;
+  static String ENC = Constants.ENCODING_UTF_8;
 
   private MetaPressHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
@@ -64,7 +64,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
           "<div id=\"SitePrivacyPolicy\" align=\"center\" class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails\">" +
           "<a style=\"padding:0.6em;\" href=\"http://public.metapress.com/download/common/MetaPress_Privacy.pdf\" target=\"_blank\">Metapress Privacy Policy</a>" +
           "</div><div class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails\">" +
-          "Remote Address:&nbsp;171.66.236.239&nbsp;�&nbsp;Server:&nbsp;MPSHQWBRDR02P<br>HTTP User Agent:&nbsp;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17<br><br>" +
+          "Remote Address:&nbsp;171.66.236.239&nbsp;�&nbsp;Server:&nbsp;MPSHQWBRDR02P<br>HTTP User Agent:&nbsp;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/536.26.17 (KHTML, like Gecko) Version/6.0.2 Safari/536.26.17<br><br>" +
           "</div><div class=\"MetaPress_Products_Reader_Web_UI_Controls_FooterControlUserDetails\" align=\"center\">" +
           "</div>" +
           "</div>" +
@@ -123,7 +123,33 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
           "<br /><br /><img src=\"../images/common/spacer.gif\" style=\"height:1px;width:176;\" />" +           
           "</td>";
 
-  public void testFiltering() throws Exception {
+  // and this string meets the criteria for FooterUserDetailContainer
+  static final String footerInfo2Html =
+      "<div class=\"footer-copyright-privacy\">" +
+          "<div class=\"DynamicContent\">" +
+          "Copyright&nbsp;©" +
+          "</div>" +
+          "</div>" +
+          "<div class=\"FooterUserDetailContainer\">" +
+          "<div id=\"toggle\">" +
+          "<a id=\"open\" class=\"open\">Support Information</a>" +
+          "<a id=\"close\" class=\"close\">Support Information (click to close)</a>" +           
+          "</div>" +
+          "<div class=\"FooterUserDetailContainerPanel\">" +
+          "<B>Remote Address:</B>&nbsp;171.66.236.252&nbsp;<B>•&nbsp;Server:" +
+          "</B>&nbsp;MPSHQWBRDR01P<br><B>HTTP User Agent:</B>&nbsp;Mozilla/5.0 " +
+          "(X11; Ubuntu; Linux x86_64; rv:22.0) Gecko/20100101 Firefox/22.0<br><br>" +
+          "</div>" +
+          "</div>";
+  static final String footerInfo2Filtered =
+      "<div class=\"footer-copyright-privacy\">" +
+          "<div class=\"DynamicContent\">" +
+          "Copyright&nbsp;©" +
+          "</div>" +
+          "</div>";
+
+
+    public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
@@ -143,6 +169,11 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(personalMenuHtml), ENC);
 
     assertEquals(personalMenuFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau,
+        new StringInputStream(footerInfo2Html), ENC);
+
+    assertEquals(footerInfo2Filtered,StringUtil.fromInputStream(inA));
     
     
   }
