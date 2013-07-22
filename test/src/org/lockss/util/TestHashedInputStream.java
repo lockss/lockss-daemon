@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashedInputStream.java,v 1.1 2013-07-07 04:05:44 dshr Exp $
+ * $Id: TestHashedInputStream.java,v 1.2 2013-07-22 18:07:40 dshr Exp $
  */
 
 /*
@@ -37,6 +37,11 @@ import org.lockss.test.*;
 
 public class TestHashedInputStream extends LockssTestCase {
 
+  /*
+   * NB - the specification of HashedInputStream is that it
+   * hashes the entire content of the unerlying stream whether
+   * or not the client reads it.
+   */
   private byte[] emptyStream = new byte[0];
   private byte[] fullStream = new byte[77];
 
@@ -75,8 +80,8 @@ public class TestHashedInputStream extends LockssTestCase {
     MockMessageDigest md = makeMessageDigest();
     HashedInputStream is = new HashedInputStream(inp, md);
     assertEquals(-1, is.read());
-    assertEquals(0, md.getUpdatedBytes().length);
     is.close();
+    assertEquals(0, md.getUpdatedBytes().length);
   }
 
   public void testFullStreamReadOne() throws IOException {
@@ -86,8 +91,8 @@ public class TestHashedInputStream extends LockssTestCase {
     assertEquals(fullStream[0], is.read());
     byte[] t = new byte[1];
     t[0] = fullStream[0];
-    assertEquals(t, md.getUpdatedBytes());
     is.close();
+    assertEquals(fullStream, md.getUpdatedBytes());
   }
 
   public void testFullStreamReadBuff() throws IOException {
@@ -97,8 +102,8 @@ public class TestHashedInputStream extends LockssTestCase {
     byte[] t = new byte[fullStream.length];
     assertEquals(fullStream.length, is.read(t));
     assertEquals(fullStream, t);
-    assertEquals(t, md.getUpdatedBytes());
     is.close();
+    assertEquals(fullStream, md.getUpdatedBytes());
   }
 
   public void testFullStreamReadOffset() throws IOException {
@@ -114,7 +119,40 @@ public class TestHashedInputStream extends LockssTestCase {
       assertEquals(t[i+off], fullStream[i]);
       p[i] = t[i + off];
     }
-    assertEquals(p, md.getUpdatedBytes());
     is.close();
+    assertEquals(fullStream, md.getUpdatedBytes());
+  }
+
+  public void testMarkReset() throws IOException {
+    InputStream inp = makeFullStream();
+    MockMessageDigest md = makeMessageDigest();
+    HashedInputStream is = new HashedInputStream(inp, md);
+    byte[] t = new byte[11];
+    int len = t.length;
+    byte[] p = new byte[len*3];
+    for (int i = 0; i < len; i++) {
+      // We read len bytes, then call mark()
+      p[i] = fullStream[i];
+      // We read len bytes, then call reset()
+      p[i+len] = fullStream[i+len];
+      // We read len bytes
+      p[i+2*len] = fullStream[i+len];
+    }
+    assertEquals(len, is.read(t));
+    for (int i = 0; i < len; i++) {
+      assertEquals(t[i], p[i]);
+    }
+    is.mark(2*len);
+    assertEquals(len, is.read(t));
+    for (int i = 0; i < len; i++) {
+      assertEquals(t[i], p[i+len]);
+    }
+    is.reset();
+    assertEquals(len, is.read(t));
+    for (int i = 0; i < len; i++) {
+      assertEquals(t[i], p[i+2*len]);
+    }
+    is.close();
+    assertEquals(fullStream, md.getUpdatedBytes());
   }
 }

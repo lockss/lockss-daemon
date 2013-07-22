@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.8 2010-05-12 03:52:37 tlipkis Exp $
+ * $Id: SimpleHasher.java,v 1.9 2013-07-22 18:07:39 dshr Exp $
  */
 
 /*
@@ -197,11 +197,13 @@ public class SimpleHasher {
     public void blockDone(HashBlock block) {
       filesHashed++;
       HashBlock.Version ver = block.currentVersion();
-      if (ver.getHashError() != null) {
-	// Pylorus' diff() depends upon the first 20 characters of this string
-	outs.println("Hash error (see log)        " + block.getUrl());
-      } else {
-	outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+      if (ver != null) {
+	if (ver.getHashError() != null) {
+	  // Pylorus' diff() depends upon the first 20 characters of this string
+	  outs.println("Hash error (see log)        " + block.getUrl());
+	} else {
+	  outs.println(byteString(ver.getHashes()[0]) + "   " + block.getUrl());
+	}
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.167 2013-07-18 21:58:04 dshr Exp $
+ * $Id: V3Poller.java,v 1.168 2013-07-22 18:07:40 dshr Exp $
  */
 
 /*
@@ -3493,6 +3493,7 @@ public class V3Poller extends BasePoll {
     pollManager = null;
     idManager = null;
     urlTallier = null;
+    activePoll = false;
   }
 
   private PsmMachine makeMachine() {
