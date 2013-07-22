@@ -21,8 +21,9 @@
       
     >
     param[journal_issn] = 2305-7890
+    comment[nR] = journal on OJS, need to confirm and wait for manifests RT 5104
 
-    au < testing ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
+    au < notReady ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
    
   }
   
