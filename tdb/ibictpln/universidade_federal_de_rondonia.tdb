@@ -17,10 +17,10 @@
       param[base_url] = http://www.periodicos.unir.br/
       param[journal_id] = semanaeduca
 
-      au < exists ; 2010 ; 1 ; Anais da Semana Educa Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Anais da Semana Educa Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Anais da Semana Educa Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Anais da Semana Educa Volume 4 ; 2013 >
+      au < exists ; 2010 ; 2010 ; Anais da Semana Educa Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2011 ; Anais da Semana Educa Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2012 ; Anais da Semana Educa Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Anais da Semana Educa Volume 2013 ; 2013 >
 
   }
 
@@ -35,8 +35,8 @@
       param[base_url] = http://www.periodicos.unir.br/
       param[journal_id] = primeiraversao
 
-      au < exists ; 2011 ; 1 ; Primeira Versão Volume 1 ; 2011 >
-      au < exists ; 2012 ; 2 ; Primeira Versão Volume 2 ; 2012 >
+      au < exists ; 2011 ; 31 ; Primeira Versão Volume 31 ; 2011 >
+      au < exists ; 2012 ; 32 ; Primeira Versão Volume 32 ; 2012 >
       au < expected ; 2013 ; 3 ; Primeira Versão Volume 3 ; 2013 >
 
   }
@@ -72,7 +72,7 @@
       au < exists ; 2010 ; 2 ; Revista de Administração e Negócios da Amazônia Volume 2 ; 2010 >
       au < exists ; 2011 ; 3 ; Revista de Administração e Negócios da Amazônia Volume 3 ; 2011 >
       au < exists ; 2012 ; 4 ; Revista de Administração e Negócios da Amazônia Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista de Administração e Negócios da Amazônia Volume 5 ; 2013 >
+      au < exists ; 2013 ; 5 ; Revista de Administração e Negócios da Amazônia Volume 5 ; 2013 >
 
   }
 
@@ -105,8 +105,6 @@
       param[journal_id] = revistagaia
 
       au < exists ; 2011 ; 1 ; Revista Gaia Volume 1 ; 2011 >
-      au < expected ; 2012 ; 2 ; Revista Gaia Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Gaia Volume 3 ; 2013 >
 
   }
 
@@ -121,8 +119,8 @@
       param[base_url] = http://www.periodicos.unir.br/
       param[journal_id] = igarape
 
-      au < exists ; 2012 ; 1 ; Revista Igarapé Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Igarapé Volume 2 ; 2013 >
+      au < exists ; 2012 ; 2012 ; Revista Igarapé Volume 2012 ; 2012 >
+      au < exists ; 2013 ; 2013 ; Revista Igarapé Volume 2013 ; 2013 >
 
   }
 
@@ -137,12 +135,11 @@
       param[base_url] = http://www.periodicos.unir.br/
       param[journal_id] = propesq
 
-      au < exists ; 2008 ; 1 ; Revista Pesquisa & Criação Volume 1 ; 2008 >
-      au < exists ; 2009 ; 2 ; Revista Pesquisa & Criação Volume 2 ; 2009 >
-      au < exists ; 2010 ; 3 ; Revista Pesquisa & Criação Volume 3 ; 2010 >
-      au < exists ; 2011 ; 4 ; Revista Pesquisa & Criação Volume 4 ; 2011 >
-      au < expected ; 2012 ; 5 ; Revista Pesquisa & Criação Volume 5 ; 2012 >
-      au < expected ; 2013 ; 6 ; Revista Pesquisa & Criação Volume 6 ; 2013 >
+      au < exists ; 2008 ; 7 ; Revista Pesquisa & Criação Volume 7 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Pesquisa & Criação Volume 8 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Pesquisa & Criação Volume 9 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Pesquisa & Criação Volume 10 ; 2011 >
+      au < expected ; 2012 ; 11 ; Revista Pesquisa & Criação Volume 11 ; 2012 >
 
   }
 
