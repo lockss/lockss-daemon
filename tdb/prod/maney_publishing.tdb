@@ -76,32 +76,32 @@
     au < notReady ; 1957-1958 ; Ambix Volume 6 ; 6 > 
     au < notReady ; 1959 ; Ambix Volume 7 ; 7 >
     au < doNotProcess ; 1960 ; Ambix Volume 8 ; 8 >
-    au < releasing ; 1961 ; Ambix Volume 9 ; 9 >
+    au < released ; 1961 ; Ambix Volume 9 ; 9 >
     au < notReady ; 1962 ; Ambix Volume 10 ; 10 >
-    au < releasing ; 1963 ; Ambix Volume 11 ; 11 >
-    au < releasing ; 1964 ; Ambix Volume 12 ; 12 > 
+    au < released ; 1963 ; Ambix Volume 11 ; 11 >
+    au < released ; 1964 ; Ambix Volume 12 ; 12 > 
     au < notReady ; 1965-1966 ; Ambix Volume 13 ; 13 > 
     au < notReady ; 1967 ; Ambix Volume 14 ; 14 >
-    au < releasing ; 1968 ; Ambix Volume 15 ; 15 >
+    au < released ; 1968 ; Ambix Volume 15 ; 15 >
     au < notReady ; 1969 ; Ambix Volume 16 ; 16 >
-    au < releasing ; 1970 ; Ambix Volume 17 ; 17 >
-    au < releasing ; 1971 ; Ambix Volume 18 ; 18 >
+    au < released ; 1970 ; Ambix Volume 17 ; 17 >
+    au < released ; 1971 ; Ambix Volume 18 ; 18 >
     au < notReady ; 1972 ; Ambix Volume 19 ; 19 >
     au < notReady ; 1973 ; Ambix Volume 20 ; 20 >
-    au < releasing ; 1974 ; Ambix Volume 21 ; 21 >
-    au < releasing ; 1975 ; Ambix Volume 22 ; 22 >
+    au < released ; 1974 ; Ambix Volume 21 ; 21 >
+    au < released ; 1975 ; Ambix Volume 22 ; 22 >
     au < notReady ; 1976 ; Ambix Volume 23 ; 23 >
-    au < releasing ; 1977 ; Ambix Volume 24 ; 24 >
-    au < releasing ; 1978 ; Ambix Volume 25 ; 25 >
+    au < released ; 1977 ; Ambix Volume 24 ; 24 >
+    au < released ; 1978 ; Ambix Volume 25 ; 25 >
     au < notReady ; 1979 ; Ambix Volume 26 ; 26 >
-    au < releasing ; 1980 ; Ambix Volume 27 ; 27 >
+    au < released ; 1980 ; Ambix Volume 27 ; 27 >
     au < notReady ; 1981 ; Ambix Volume 28 ; 28 >
-    au < releasing ; 1982 ; Ambix Volume 29 ; 29 >
+    au < released ; 1982 ; Ambix Volume 29 ; 29 >
     au < notReady ; 1983 ; Ambix Volume 30 ; 30 >
     au < notReady ; 1984 ; Ambix Volume 31 ; 31 >
-    au < releasing ; 1985 ; Ambix Volume 32 ; 32 >
+    au < released ; 1985 ; Ambix Volume 32 ; 32 >
     au < notReady ; 1986 ; Ambix Volume 33 ; 33 >
-    au < releasing ; 1987 ; Ambix Volume 34 ; 34 >
+    au < released ; 1987 ; Ambix Volume 34 ; 34 >
     au < released ; 1988 ; Ambix Volume 35 ; 35 >
     au < released ; 1989 ; Ambix Volume 36 ; 36 >
     au < notReady ; 1990 ; Ambix Volume 37 ; 37 >
@@ -322,7 +322,7 @@
     au < released ; 1999 ; British Corrosion Journal Volume 34 ; 34 > 
     au < released ; 2000 ; British Corrosion Journal Volume 35 ; 35 > 
     au < released ; 2001 ; British Corrosion Journal Volume 36 ; 36 > 
-    au < releasing ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
+    au < released ; 2002 ; British Corrosion Journal Volume 37 ; 37 >
 
   }
 
@@ -400,14 +400,14 @@
     implicit < status ; year ; name ; param[volume_name] >
     comment[continued_from] = 0309-7765
 
-    au < releasing ; 2002 ; Bronte Studies Volume 27 ; 27 > 
+    au < released ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
     au < doesNotExist ; 2004 ; Bronte Studies Volume 29 ; 29 > 
-    au < releasing ; 2005 ; Bronte Studies Volume 30 ; 30 > 
-    au < releasing ; 2006 ; Bronte Studies Volume 31 ; 31 > 
-    au < releasing ; 2007 ; Bronte Studies Volume 32 ; 32 > 
+    au < released ; 2005 ; Bronte Studies Volume 30 ; 30 > 
+    au < released ; 2006 ; Bronte Studies Volume 31 ; 31 > 
+    au < released ; 2007 ; Bronte Studies Volume 32 ; 32 > 
     au < doNotProcess ; 2008 ; Bronte Studies Volume 33 ; 33 > 
-    au < releasing ; 2009 ; Bronte Studies Volume 34 ; 34 > 
+    au < released ; 2009 ; Bronte Studies Volume 34 ; 34 > 
     au < released ; 2010 ; Bronte Studies Volume 35 ; 35 > 
     au < released ; 2011 ; Bronte Studies Volume 36 ; 36 > 
     au < released ; 2012 ; Bronte Studies Volume 37 ; 37 > 
@@ -436,7 +436,7 @@
 
     au < released ; 2009 ; Bubble Science, Engineering and Technology Volume 1 ; 1 > 
     au < notReady ; 2010 ; Bubble Science, Engineering and Technology Volume 2 ; 2 > 
-    au < releasing ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
+    au < released ; 2011 ; Bubble Science, Engineering and Technology Volume 3 ; 3 > 
     au < released ; 2012 ; Bubble Science, Engineering and Technology Volume 4 ; 4 > 
     au < expected ; 2013 ; Bubble Science, Engineering and Technology Volume 5 ; 5 > 
 
@@ -550,18 +550,18 @@
     comment[notReady] = RU4507, different pdf fontname used
 
     au < notReady ; 1962 ; Canadian Metallurgical Quarterly Volume 1 ; 1 >
-    au < releasing ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
-    au < releasing ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
-    au < releasing ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
+    au < released ; 1963 ; Canadian Metallurgical Quarterly Volume 2 ; 2 >
+    au < released ; 1964 ; Canadian Metallurgical Quarterly Volume 3 ; 3 >
+    au < released ; 1965 ; Canadian Metallurgical Quarterly Volume 4 ; 4 >
     au < notReady ; 1966 ; Canadian Metallurgical Quarterly Volume 5 ; 5 >
     au < notReady ; 1967 ; Canadian Metallurgical Quarterly Volume 6 ; 6 >
-    au < releasing ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
+    au < released ; 1968 ; Canadian Metallurgical Quarterly Volume 7 ; 7 >
     au < notReady ; 1969 ; Canadian Metallurgical Quarterly Volume 8 ; 8 >
-    au < releasing ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
+    au < released ; 1970 ; Canadian Metallurgical Quarterly Volume 9 ; 9 >
     au < notReady ; 1971 ; Canadian Metallurgical Quarterly Volume 10 ; 10 >
-    au < releasing ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
+    au < released ; 1972 ; Canadian Metallurgical Quarterly Volume 11 ; 11 >
     au < notReady ; 1973 ; Canadian Metallurgical Quarterly Volume 12 ; 12 >
-    au < releasing ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
+    au < released ; 1974 ; Canadian Metallurgical Quarterly Volume 13 ; 13 >
     au < notReady ; 1975 ; Canadian Metallurgical Quarterly Volume 14 ; 14 >
     au < notReady ; 1976 ; Canadian Metallurgical Quarterly Volume 15 ; 15 >
     au < doesNotExist ; 1977 ; Canadian Metallurgical Quarterly Volume 16 ; 16 >
@@ -3098,9 +3098,9 @@
     au < notReady ; 2007 ; Medieval Sermon Studies Volume 51 ; 51 > 
     au < notReady ; 2008 ; Medieval Sermon Studies Volume 52 ; 52 > 
     au < notReady ; 2009 ; Medieval Sermon Studies Volume 53 ; 53 > 
-    au < releasing ; 2010 ; Medieval Sermon Studies Volume 54 ; 54 > 
-    au < releasing ; 2011 ; Medieval Sermon Studies Volume 55 ; 55 > 
-    au < releasing ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 > 
+    au < released ; 2010 ; Medieval Sermon Studies Volume 54 ; 54 > 
+    au < released ; 2011 ; Medieval Sermon Studies Volume 55 ; 55 > 
+    au < released ; 2012 ; Medieval Sermon Studies Volume 56 ; 56 > 
     au < expected ; 2013 ; Medieval Sermon Studies Volume 57 ; 57 > 
 
   }
@@ -4475,7 +4475,7 @@
     au < manifest ; 2009 ; T'ang Studies Volume 27 ; 27 > 
     au < released ; 2010 ; T'ang Studies Volume 2010 ; 2010 > 
     au < released ; 2011 ; T'ang Studies Volume 2011 ; 2011 > 
-    au < releasing ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
+    au < released ; 2012 ; T'ang Studies Volume 2012 ; 2012 > 
     au < expected ; 2013 ; T'ang Studies Volume 2013 ; 2013 > 
 
   }
