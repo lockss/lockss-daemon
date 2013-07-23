@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.5 2013-07-22 21:21:07 etenbrink Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.6 2013-07-23 18:53:34 etenbrink Exp $
  */
 
 /*
@@ -152,6 +152,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
     public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
+    InputStreamReader inT;
 
     inA = fact.createFilteredInputStream(mau,
            new StringInputStream(inst1), ENC);
@@ -172,9 +173,10 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
     
     inA = fact.createFilteredInputStream(mau,
         new StringInputStream(footerInfo2Html), ENC);
+    inT = new InputStreamReader(new StringInputStream(footerInfo2Filtered), 
+        ENC);
 
-    assertEquals(footerInfo2Filtered,StringUtil.fromInputStream(inA));
-    
+    assertEquals(StringUtil.fromReader(inT),StringUtil.fromInputStream(inA));
     
   }
 
