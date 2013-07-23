@@ -17,15 +17,14 @@
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = acp
 
-      au < exists ; 2005 ; 1 ; Anais dos Congressos de Pedagogia Volume 1 ; 2005 >
-      au < exists ; 2006 ; 2 ; Anais dos Congressos de Pedagogia Volume 2 ; 2006 >
-      au < exists ; 2007 ; 3 ; Anais dos Congressos de Pedagogia Volume 3 ; 2007 >
-      au < exists ; 2008 ; 4 ; Anais dos Congressos de Pedagogia Volume 4 ; 2008 >
-      au < exists ; 2009 ; 5 ; Anais dos Congressos de Pedagogia Volume 5 ; 2009 >
-      au < exists ; 2010 ; 6 ; Anais dos Congressos de Pedagogia Volume 6 ; 2010 >
-      au < exists ; 2011 ; 7 ; Anais dos Congressos de Pedagogia Volume 7 ; 2011 >
-      au < expected ; 2012 ; 8 ; Anais dos Congressos de Pedagogia Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Anais dos Congressos de Pedagogia Volume 9 ; 2013 >
+      au < exists ; 2005 ; 4 ; Anais dos Congressos de Pedagogia Volume 4 ; 2005 >
+      au < exists ; 2006 ; 5 ; Anais dos Congressos de Pedagogia Volume 5 ; 2006 >
+      au < exists ; 2007 ; 23 ; Anais dos Congressos de Pedagogia Volume 23 ; 2007 >
+      au < exists ; 2008 ; 24 ; Anais dos Congressos de Pedagogia Volume 24 ; 2008 >
+      au < exists ; 2009 ; 25 ; Anais dos Congressos de Pedagogia Volume 25 ; 2009 >
+      au < exists ; 2011 ; 26 ; Anais dos Congressos de Pedagogia Volume 26 ; 2011 >
+      au < expected ; 2012 ; 27 ; Anais dos Congressos de Pedagogia Volume 27 ; 2012 >
+      au < expected ; 2013 ; 28 ; Anais dos Congressos de Pedagogia Volume 28 ; 2013 >
 
   }
 
@@ -38,19 +37,19 @@
 
       comment[publisher] = Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
-      param[journal_id] = geoambiente#.Udw71zucehI
+      param[journal_id] = geoambiente
 
       au < exists ; 2003 ; 1 ; Geoambiente on-line Volume 1 ; 2003 >
-      au < exists ; 2004 ; 2 ; Geoambiente on-line Volume 2 ; 2004 >
-      au < exists ; 2005 ; 3 ; Geoambiente on-line Volume 3 ; 2005 >
-      au < exists ; 2006 ; 4 ; Geoambiente on-line Volume 4 ; 2006 >
-      au < exists ; 2007 ; 5 ; Geoambiente on-line Volume 5 ; 2007 >
-      au < exists ; 2008 ; 6 ; Geoambiente on-line Volume 6 ; 2008 >
-      au < exists ; 2009 ; 7 ; Geoambiente on-line Volume 7 ; 2009 >
-      au < exists ; 2010 ; 8 ; Geoambiente on-line Volume 8 ; 2010 >
-      au < exists ; 2011 ; 9 ; Geoambiente on-line Volume 9 ; 2011 >
-      au < exists ; 2012 ; 10 ; Geoambiente on-line Volume 10 ; 2012 >
-      au < expected ; 2013 ; 11 ; Geoambiente on-line Volume 11 ; 2013 >
+      au < exists ; 2004 ; 2-3 ; Geoambiente on-line Volume 2-3 ; 2004 >
+      au < exists ; 2005 ; 4-5 ; Geoambiente on-line Volume 4-5 ; 2005 >
+      au < exists ; 2006 ; 6-7 ; Geoambiente on-line Volume 6-7 ; 2006 >
+      au < exists ; 2007 ; 8-9 ; Geoambiente on-line Volume 8-9 ; 2007 >
+      au < exists ; 2008 ; 10-11 ; Geoambiente on-line Volume 10-11 ; 2008 >
+      au < exists ; 2009 ; 12-13 ; Geoambiente on-line Volume 12-13 ; 2009 >
+      au < exists ; 2010 ; 14-15 ; Geoambiente on-line Volume 14-15 ; 2010 >
+      au < exists ; 2011 ; 16-17 ; Geoambiente on-line Volume 16-17 ; 2011 >
+      au < exists ; 2012 ; 18-19 ; Geoambiente on-line Volume 18-19 ; 2012 >
+      au < expected ; 2013 ; 20-21 ; Geoambiente on-line Volume 20-21 ; 2013 >
 
   }
 
@@ -67,9 +66,7 @@
 
       au < manifest ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
       au < manifest ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2011 >
-      au < exists ; 2012 ; 4 ; Revista Eletrônica de Matemática Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista Eletrônica de Matemática Volume 5 ; 2013 >
+      au < exists ; 2013 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2013 >
 
   }
 
@@ -86,9 +83,6 @@
 
       au < exists ; 2009 ; 1 ; RevLet – Revista Virtual de Letras Volume 1 ; 2009 >
       au < exists ; 2010 ; 2 ; RevLet – Revista Virtual de Letras Volume 2 ; 2010 >
-      au < expected ; 2011 ; 3 ; RevLet – Revista Virtual de Letras Volume 3 ; 2011 >
-      au < expected ; 2012 ; 4 ; RevLet – Revista Virtual de Letras Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; RevLet – Revista Virtual de Letras Volume 5 ; 2013 >
 
   }
 
