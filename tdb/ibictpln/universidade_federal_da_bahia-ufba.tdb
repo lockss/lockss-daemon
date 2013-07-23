@@ -49,7 +49,8 @@
       param[base_url] = http://www.portalseer.ufba.br/
       param[journal_id] = RBDA
 
-      au < expected ; 2013 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 2013 >
+      au < exists ; 2006 ; 1 ; Revista Brasileira de Direito Animal Volume 1 ; 0001 >
+      au < exists ; 2013 ; 8 ; Revista Brasileira de Direito Animal Volume 8 ; 2013 >
 
   }
 
