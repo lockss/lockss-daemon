@@ -15,7 +15,7 @@
           issn = 2213-7467 
         >
   
-        param[base_url] = http://www.amses-journal.com
+        param[base_url] = http://www.amses-journal.com/
         param[journal_issn] = 2213-7467 
         comment[platform] = BMC
   
@@ -31,7 +31,7 @@
           eissn = 1687-1847 
         >
   
-        param[base_url] = http://www.advancesindifferenceequations.com
+        param[base_url] = http://www.advancesindifferenceequations.com/
         param[journal_issn] = 1687-1839 
         comment[platform] = BMC
   
@@ -49,7 +49,7 @@
           issn = 2193-7532 
         >
   
-        param[base_url] = http://www.agrifoodecon.com
+        param[base_url] = http://www.agrifoodecon.com/
         param[journal_issn] = 2193-7532 
         comment[platform] = BMC
   
@@ -64,7 +64,7 @@
           eissn = 2191-0855 
         >
   
-        param[base_url] = http://www.amb-express.com
+        param[base_url] = http://www.amb-express.com/
         param[journal_issn] = 2191-0855 
         comment[platform] = BMC
   
@@ -81,7 +81,7 @@
           eissn = 2110-5820 
         >
   
-        param[base_url] = http://www.annalsofintensivecare.com
+        param[base_url] = http://www.annalsofintensivecare.com/
         param[journal_issn] = 2110-5820 
         comment[platform] = BMC
   
@@ -98,7 +98,7 @@
           issn = 2195-3007 
         >
   
-        param[base_url] = http://www.ajgiph.com
+        param[base_url] = http://www.ajgiph.com/
         param[journal_issn] = 2195-3007 
         comment[platform] = BMC
   
@@ -113,11 +113,26 @@
           issn = 1559-4106 
         >
   
-        param[base_url] = http://www.biointerphases.com
+        param[base_url] = http://www.biointerphases.com/
         param[journal_issn] = 1559-4106 
         comment[platform] = BMC
   
         au < expected ; 2013 ; Biointerphases Volume 8 ; 8 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Botanical Studies ;
+          eissn = 1999-3110 
+        >
+  
+        param[base_url] = http://www.as-botanicalstudies.com/
+        param[journal_issn] = 1999-3110 
+        comment[platform] = BMC
+  
+        au < exists ; 2013 ; Botanical Studies Volume 2013 ; 2013 >
   
     }
   
@@ -130,7 +145,7 @@
           issnl = 1687-2762
         >
   
-        param[base_url] = http://www.boundaryvalueproblems.com
+        param[base_url] = http://www.boundaryvalueproblems.com/
         param[journal_issn] = 1687-2770 
         comment[platform] = BMC
   
@@ -153,7 +168,7 @@
           issn = 2195-2701 
         >
   
-        param[base_url] = http://www.cityterritoryarchitecture.com
+        param[base_url] = http://www.cityterritoryarchitecture.com/
         param[journal_issn] = 2195-2701 
         comment[platform] = BMC
   
@@ -168,7 +183,7 @@
           issn = 2001-1326
         >
   
-        param[base_url] = http://www.clintransmed.com
+        param[base_url] = http://www.clintransmed.com/
         param[journal_issn] = 2001-1326 
         comment[platform] = BMC
   
@@ -184,7 +199,7 @@
           issn = 2192-1121 
         >
   
-        param[base_url] = http://www.comcjournal.com
+        param[base_url] = http://www.comcjournal.com/
         param[journal_issn] = 2192-1121 
         comment[platform] = BMC
   
@@ -200,7 +215,7 @@
           issn = 2194-3206 
         >
   
-        param[base_url] = http://www.casmodeling.com
+        param[base_url] = http://www.casmodeling.com/
         param[journal_issn] = 2194-3206 
         comment[platform] = BMC
   
@@ -215,7 +230,7 @@
           issn = 2195-3961 
         >
   
-        param[base_url] = http://www.computationalcognitivescience.com
+        param[base_url] = http://www.computationalcognitivescience.com/
         param[journal_issn] = 2195-3961 
         comment[platform] = BMC
   
@@ -230,7 +245,7 @@
           issn = 2193-7680 
         >
   
-        param[base_url] = http://www.crimesciencejournal.com
+        param[base_url] = http://www.crimesciencejournal.com/
         param[journal_issn] = 2193-7680 
         comment[platform] = BMC
   
@@ -246,7 +261,7 @@
           issn = 2194-9794 
         >
   
-        param[base_url] = http://www.crisiscommunicationsjournal.com
+        param[base_url] = http://www.crisiscommunicationsjournal.com/
         param[journal_issn] = 2194-9794 
         comment[platform] = BMC
   
@@ -262,7 +277,7 @@
           eissn = 2036-7902
         >
   
-        param[base_url] = http://www.criticalultrasoundjournal.com
+        param[base_url] = http://www.criticalultrasoundjournal.com/
         param[journal_issn] = 2036-7902
         comment[platform] = BMC
   
@@ -278,7 +293,7 @@
           issn = 2193-8636 
         >
   
-        param[base_url] = http://www.decisionanalyticsjournal.com
+        param[base_url] = http://www.decisionanalyticsjournal.com/
         param[journal_issn] = 2193-8636 
         comment[platform] = BMC
   
@@ -293,7 +308,7 @@
           issn = 2194-6434 
         >
   
-        param[base_url] = http://www.earth-perspectives.com
+        param[base_url] = http://www.earth-perspectives.com/
         param[journal_issn] = 2194-6434 
         comment[platform] = BMC
   
@@ -308,7 +323,7 @@
           eissn = 2192-1709 
         >
   
-        param[base_url] = http://www.ecologicalprocesses.com
+        param[base_url] = http://www.ecologicalprocesses.com/
         param[journal_issn] = 2192-1709 
         comment[platform] = BMC
   
@@ -324,7 +339,7 @@
           eissn = 2191-219X 
         >
   
-        param[base_url] = http://www.ejnmmires.com
+        param[base_url] = http://www.ejnmmires.com/
         param[journal_issn] = 2191-219X 
         comment[platform] = BMC
   
@@ -341,7 +356,7 @@
           issn = 2192-0567 
         >
   
-        param[base_url] = http://www.energsustainsoc.com
+        param[base_url] = http://www.energsustainsoc.com/
         param[journal_issn] = 2192-0567 
         comment[platform] = BMC
   
@@ -358,7 +373,7 @@
           eissn = 2190-4715 
         >
   
-        param[base_url] = http://www.enveurope.com
+        param[base_url] = http://www.enveurope.com/
         param[journal_issn] = 2190-4715 
         comment[platform] = BMC
   
@@ -375,7 +390,7 @@
           issn = 2193-2697 
         >
   
-        param[base_url] = http://www.environmentalsystemsresearch.com
+        param[base_url] = http://www.environmentalsystemsresearch.com/
         param[journal_issn] = 2193-2697 
         comment[platform] = BMC
   
@@ -391,7 +406,7 @@
           issn = 2193-1127 
         >
   
-        param[base_url] = http://www.epjdatascience.com
+        param[base_url] = http://www.epjdatascience.com/
         param[journal_issn] = 2193-1127 
         comment[platform] = BMC
   
@@ -407,7 +422,7 @@
           issn = 2195-0008 
         >
   
-        param[base_url] = http://www.epjnonlinearbiomedphys.com
+        param[base_url] = http://www.epjnonlinearbiomedphys.com/
         param[journal_issn] = 2195-0008 
         comment[platform] = BMC
   
@@ -422,7 +437,7 @@
           issn = 2196-0763 
         >
   
-        param[base_url] = http://www.epjquantumtechnology.com
+        param[base_url] = http://www.epjquantumtechnology.com/
         param[journal_issn] = 2196-0763 
         comment[platform] = BMC
   
@@ -437,7 +452,7 @@
           issn = 2195-7045 
         >
   
-        param[base_url] = http://www.epjtechniquesandinstrumentation.com
+        param[base_url] = http://www.epjtechniquesandinstrumentation.com/
         param[journal_issn] = 2195-7045 
         comment[platform] = BMC
   
@@ -453,7 +468,7 @@
           eissn = 1687-6180
         >
   
-        param[base_url] = http://asp.eurasipjournals.com
+        param[base_url] = http://asp.eurasipjournals.com/
         param[journal_issn] = 1687-6172
         comment[platform] = BMC
   
@@ -472,7 +487,7 @@
           eissn = 1687-4722
         >
   
-        param[base_url] = http://asmp.eurasipjournals.com
+        param[base_url] = http://asmp.eurasipjournals.com/
         param[journal_issn] = 1687-4714
         comment[platform] = BMC
   
@@ -494,7 +509,7 @@
           eissn = 1687-4153
         >
   
-        param[base_url] = http://bsb.eurasipjournals.com
+        param[base_url] = http://bsb.eurasipjournals.com/
         param[journal_issn] = 1687-4145
         comment[platform] = BMC
   
@@ -517,7 +532,7 @@
           eissn = 1687-3963
         >
   
-        param[base_url] = http://jes.eurasipjournals.com
+        param[base_url] = http://jes.eurasipjournals.com/
         param[journal_issn] = 1687-3955
         comment[platform] = BMC
   
@@ -540,7 +555,7 @@
           eissn = 1687-5281
         >
   
-        param[base_url] = http://jivp.eurasipjournals.com
+        param[base_url] = http://jivp.eurasipjournals.com/
         param[journal_issn] = 1687-5176
         comment[platform] = BMC
   
@@ -562,7 +577,7 @@
           eissn = 1687-417X
         >
   
-        param[base_url] = http://jis.eurasipjournals.com
+        param[base_url] = http://jis.eurasipjournals.com/
         param[journal_issn] = 1687-4161
         comment[platform] = BMC
   
@@ -584,7 +599,7 @@
           eissn = 1687-1499
         >
   
-        param[base_url] = http://jwcn.eurasipjournals.com
+        param[base_url] = http://jwcn.eurasipjournals.com/
         param[journal_issn] = 1687-1472
         comment[platform] = BMC
   
@@ -604,7 +619,7 @@
           issnl = 1936-6426
         >
   
-        param[base_url] = http://www.evolution-outreach.com
+        param[base_url] = http://www.evolution-outreach.com/
         param[journal_issn] = 1936-6434 
         comment[platform] = BMC
   
@@ -619,7 +634,7 @@
           issn = 2193-0414 
         >
   
-        param[base_url] = http://www.firesciencereviews.com
+        param[base_url] = http://www.firesciencereviews.com/
         param[journal_issn] = 2193-0414 
         comment[platform] = BMC
   
@@ -637,7 +652,7 @@
           issnl = 1687-1812
         >
   
-        param[base_url] = http://www.fixedpointtheoryandapplications.com
+        param[base_url] = http://www.fixedpointtheoryandapplications.com/
         param[journal_issn] = 1687-1812 
         comment[platform] = BMC
   
@@ -661,7 +676,7 @@
           issn = 2195-9706 
         >
   
-        param[base_url] = http://www.geothermal-energy-journal.com
+        param[base_url] = http://www.geothermal-energy-journal.com/
         param[journal_issn] = 2195-9706 
         comment[platform] = BMC
   
@@ -676,7 +691,7 @@
           issn = 2194-7899 
         >
   
-        param[base_url] = http://www.healthandjusticejournal.com
+        param[base_url] = http://www.healthandjusticejournal.com/
         param[journal_issn] = 2194-7899 
         comment[platform] = BMC
   
@@ -691,7 +706,7 @@
           eissn = 2191-1991 
         >
   
-        param[base_url] = http://www.healtheconomicsreview.com
+        param[base_url] = http://www.healtheconomicsreview.com/
         param[journal_issn] = 2191-1991 
         comment[platform] = BMC
   
@@ -710,7 +725,7 @@
           issnl = 1877-6558
         >
   
-        param[base_url] = http://www.thehugojournal.com
+        param[base_url] = http://www.thehugojournal.com/
         param[journal_issn] = 1877-6566
         comment[platform] = BMC
   
@@ -726,7 +741,7 @@
           issn = 2192-1962 
         >
   
-        param[base_url] = http://www.hcis-journal.com
+        param[base_url] = http://www.hcis-journal.com/
         param[journal_issn] = 2192-1962 
         comment[platform] = BMC
   
@@ -743,7 +758,7 @@
           issn = 2193-9616 
         >
   
-        param[base_url] = http://www.in-silico-pharmacology.com
+        param[base_url] = http://www.in-silico-pharmacology.com/
         param[journal_issn] = 2193-9616 
         comment[platform] = BMC
   
@@ -758,7 +773,7 @@
           issn = 2193-9772 
         >
   
-        param[base_url] = http://www.immijournal.com
+        param[base_url] = http://www.immijournal.com/
         param[journal_issn] = 2193-9772 
         comment[platform] = BMC
   
@@ -774,7 +789,7 @@
           issn = 2008-6970 
         >
   
-        param[base_url] = http://www.intaquares.com
+        param[base_url] = http://www.intaquares.com/
         param[journal_issn] = 2008-6970 
         comment[platform] = BMC
   
@@ -790,7 +805,7 @@
           issn = 2008-6695 
         >
   
-        param[base_url] = http://www.advancedstructeng.com
+        param[base_url] = http://www.advancedstructeng.com/
         param[journal_issn] = 2008-6695 
         comment[platform] = BMC
   
@@ -806,7 +821,7 @@
           issn = 2194-7511 
         >
   
-        param[base_url] = http://www.journalbipolardisorders.com
+        param[base_url] = http://www.journalbipolardisorders.com/
         param[journal_issn] = 2194-7511 
         comment[platform] = BMC
   
@@ -822,7 +837,7 @@
           eissn = 1865-1380
         >
   
-        param[base_url] = http://www.intjem.com
+        param[base_url] = http://www.intjem.com/
         param[journal_issn] = 1865-1372
         comment[platform] = BMC
   
@@ -839,7 +854,7 @@
           issn = 2251-6832 
         >
   
-        param[base_url] = http://www.journal-ijeee.com
+        param[base_url] = http://www.journal-ijeee.com/
         param[journal_issn] = 2251-6832 
         comment[platform] = BMC
   
@@ -855,7 +870,7 @@
           issn = 2228-5547 
         >
   
-        param[base_url] = http://www.industchem.com
+        param[base_url] = http://www.industchem.com/
         param[journal_issn] = 2228-5547 
         comment[platform] = BMC
   
@@ -871,7 +886,7 @@
           issn = 2251-7715 
         >
   
-        param[base_url] = http://www.ijrowa.com
+        param[base_url] = http://www.ijrowa.com/
         param[journal_issn] = 2251-7715 
         comment[platform] = BMC
   
@@ -887,7 +902,7 @@
           issn = 2228-5326 
         >
   
-        param[base_url] = http://www.inl-journal.com
+        param[base_url] = http://www.inl-journal.com/
         param[journal_issn] = 2228-5326 
         comment[platform] = BMC
   
@@ -903,7 +918,7 @@
           issn = 2193-9012 
         >
   
-        param[base_url] = http://www.izajoels.com
+        param[base_url] = http://www.izajoels.com/
         param[journal_issn] = 2193-9012 
         comment[platform] = BMC
   
@@ -919,7 +934,7 @@
           issn = 2193-9020 
         >
   
-        param[base_url] = http://www.izajold.com
+        param[base_url] = http://www.izajold.com/
         param[journal_issn] = 2193-9020 
         comment[platform] = BMC
   
@@ -935,7 +950,7 @@
           issn = 2193-8997 
         >
   
-        param[base_url] = http://www.izajole.com
+        param[base_url] = http://www.izajole.com/
         param[journal_issn] = 2193-8997 
         comment[platform] = BMC
   
@@ -951,7 +966,7 @@
           issn = 2193-9004 
         >
   
-        param[base_url] = http://www.izajolp.com
+        param[base_url] = http://www.izajolp.com/
         param[journal_issn] = 2193-9004 
         comment[platform] = BMC
   
@@ -967,7 +982,7 @@
           issn = 2193-9039 
         >
   
-        param[base_url] = http://www.izajom.com
+        param[base_url] = http://www.izajom.com/
         param[journal_issn] = 2193-9039 
         comment[platform] = BMC
   
@@ -983,7 +998,7 @@
           issn = 2093-3371 
         >
   
-        param[base_url] = http://www.jast-journal.com
+        param[base_url] = http://www.jast-journal.com/
         param[journal_issn] = 2093-3371 
         comment[platform] = BMC
   
@@ -998,7 +1013,7 @@
           issn = 2191-5040 
         >
   
-        param[base_url] = http://www.appliedvolc.com
+        param[base_url] = http://www.appliedvolc.com/
         param[journal_issn] = 2191-5040 
         comment[platform] = BMC
   
@@ -1014,7 +1029,7 @@
           issn = 2196-1115 
         >
   
-        param[base_url] = http://www.journalofbigdata.com
+        param[base_url] = http://www.journalofbigdata.com/
         param[journal_issn] = 2196-1115 
         comment[platform] = BMC
   
@@ -1029,7 +1044,7 @@
           issn = 2192-113X 
         >
   
-        param[base_url] = http://www.journalofcloudcomputing.com
+        param[base_url] = http://www.journalofcloudcomputing.com/
         param[journal_issn] = 2192-113X 
         comment[platform] = BMC
   
@@ -1045,7 +1060,7 @@
           issn = 2194-3990  
         >
   
-        param[base_url] = http://www.computationalsurgery.com
+        param[base_url] = http://www.computationalsurgery.com/
         param[journal_issn] = 2194-3990 
         comment[platform] = BMC
   
@@ -1060,7 +1075,7 @@
           issn = 2193-2409 
         >
   
-        param[base_url] = http://www.journalofeconomicstructures.com
+        param[base_url] = http://www.journalofeconomicstructures.com/
         param[journal_issn] = 2193-2409 
         comment[platform] = BMC
   
@@ -1077,7 +1092,7 @@
           eissn = 1129-2377
         >
   
-        param[base_url] = http://www.thejournalofheadacheandpain.com
+        param[base_url] = http://www.thejournalofheadacheandpain.com/
         param[journal_issn] = 1129-2369
         comment[platform] = BMC
   
@@ -1092,7 +1107,7 @@
           issn = 2251-712X 
         >
   
-        param[base_url] = http://www.jiei-tsb.com
+        param[base_url] = http://www.jiei-tsb.com/
         param[journal_issn] = 2251-712X 
         comment[platform] = BMC
   
@@ -1110,7 +1125,7 @@
           issnl = 1025-5834
         >
   
-        param[base_url] = http://www.journalofinequalitiesandapplications.com
+        param[base_url] = http://www.journalofinequalitiesandapplications.com/
         param[journal_issn] = 1029-242X 
         comment[platform] = BMC
   
@@ -1133,7 +1148,7 @@
           issn = 2192-5372 
         >
   
-        param[base_url] = http://www.innovation-entrepreneurship.com
+        param[base_url] = http://www.innovation-entrepreneurship.com/
         param[journal_issn] = 2192-5372 
         comment[platform] = BMC
   
@@ -1149,7 +1164,7 @@
           issn = 2194-0827 
         >
   
-        param[base_url] = http://www.journalofinteractionscience.com
+        param[base_url] = http://www.journalofinteractionscience.com/
         param[journal_issn] = 2194-0827 
         comment[platform] = BMC
   
@@ -1166,7 +1181,7 @@
           issnl = 1867-4828
         >
   
-        param[base_url] = http://www.jisajournal.com
+        param[base_url] = http://www.jisajournal.com/
         param[journal_issn] = 1869-0238 
         comment[platform] = BMC
   
@@ -1181,7 +1196,7 @@
           eissn = 2190-8567
         >
   
-        param[base_url] = http://www.mathematical-neuroscience.com
+        param[base_url] = http://www.mathematical-neuroscience.com/
         param[journal_issn] = 2190-8567
         comment[platform] = BMC
   
@@ -1198,7 +1213,7 @@
           eissn = 2190-5983 
         >
   
-        param[base_url] = http://www.mathematicsinindustry.com
+        param[base_url] = http://www.mathematicsinindustry.com/
         param[journal_issn] = 2190-5983 
         comment[platform] = BMC
   
@@ -1215,7 +1230,7 @@
           issn = 2193-8865 
         >
   
-        param[base_url] = http://www.jnanochem.com
+        param[base_url] = http://www.jnanochem.com/
         param[journal_issn] = 2193-8865 
         comment[platform] = BMC
   
@@ -1230,7 +1245,7 @@
           eissn = 1869-5760 
         >
   
-        param[base_url] = http://www.joii-journal.com
+        param[base_url] = http://www.joii-journal.com/
         param[journal_issn] = 1869-5760 
         comment[platform] = BMC
   
@@ -1245,7 +1260,7 @@
           eissn = 2210-4690 
         >
   
-        param[base_url] = http://www.journalofremanufacturing.com
+        param[base_url] = http://www.journalofremanufacturing.com/
         param[journal_issn] = 2210-4690 
         comment[platform] = BMC
   
@@ -1262,7 +1277,7 @@
           issn = 2195-1721 
         >
   
-        param[base_url] = http://www.jserd.com
+        param[base_url] = http://www.jserd.com/
         param[journal_issn] = 2195-1721 
         comment[platform] = BMC
   
@@ -1277,7 +1292,7 @@
           issn = 2195-5832 
         >
   
-        param[base_url] = http://www.jsdajournal.com
+        param[base_url] = http://www.jsdajournal.com/
         param[journal_issn] = 2195-5832 
         comment[platform] = BMC
   
@@ -1292,7 +1307,7 @@
           issn = 2251-7235 
         >
   
-        param[base_url] = http://www.jtaphys.com
+        param[base_url] = http://www.jtaphys.com/
         param[journal_issn] = 2251-7235 
         comment[platform] = BMC
   
@@ -1308,7 +1323,7 @@
           issn = 2195-5468 
         >
   
-        param[base_url] = http://www.juaa-journal.com
+        param[base_url] = http://www.juaa-journal.com/
         param[journal_issn] = 2195-5468 
         comment[platform] = BMC
   
@@ -1323,7 +1338,7 @@
           issn = 2229-0443 
         >
   
-        param[base_url] = http://www.languagetestingasia.com
+        param[base_url] = http://www.languagetestingasia.com/
         param[journal_issn] = 2229-0443 
         comment[platform] = BMC
   
@@ -1340,7 +1355,7 @@
           issn = 2195-7819 
         >
   
-        param[base_url] = http://www.lsspjournal.com
+        param[base_url] = http://www.lsspjournal.com/
         param[journal_issn] = 2195-7819 
         comment[platform] = BMC
   
@@ -1355,7 +1370,7 @@
           issn = 2212-9790 
         >
   
-        param[base_url] = http://www.maritimestudiesjournal.com
+        param[base_url] = http://www.maritimestudiesjournal.com/
         param[journal_issn] = 2212-9790 
         comment[platform] = BMC
   
@@ -1371,7 +1386,7 @@
           issn = 2251-7456 
         >
   
-        param[base_url] = http://www.iaumath.com
+        param[base_url] = http://www.iaumath.com/
         param[journal_issn] = 2251-7456 
         comment[platform] = BMC
   
@@ -1387,7 +1402,7 @@
           issn = 2213-9621 
         >
   
-        param[base_url] = http://www.mnsl-journal.com
+        param[base_url] = http://www.mnsl-journal.com/
         param[journal_issn] = 2213-9621 
         comment[platform] = BMC
   
@@ -1402,7 +1417,7 @@
           issn = 2191-5059
         >
   
-        param[base_url] = http://www.multilingual-education.com
+        param[base_url] = http://www.multilingual-education.com/
         param[journal_issn] = 2191-5059
         comment[platform] = BMC
   
@@ -1420,7 +1435,7 @@
           eissn = 1556-276X
         >
   
-        param[base_url] = http://www.nanoscalereslett.com
+        param[base_url] = http://www.nanoscalereslett.com/
         param[journal_issn] = 1931-7573
         comment[platform] = BMC
   
@@ -1442,7 +1457,7 @@
           issn = 1179-5395
         >
   
-        param[base_url] = http://www.nzjforestryscience.com
+        param[base_url] = http://www.nzjforestryscience.com/
         param[journal_issn] = 1179-5395
         comment[platform] = BMC
   
@@ -1457,7 +1472,7 @@
           issn = 2192-2853
         >
   
-        param[base_url] = http://www.optnano.com
+        param[base_url] = http://www.optnano.com/
         param[journal_issn] = 2192-2853
         comment[platform] = BMC
   
@@ -1473,7 +1488,7 @@
           eissn = 2191-2858
         >
   
-        param[base_url] = http://www.orgmedchemlett.com
+        param[base_url] = http://www.orgmedchemlett.com/
         param[journal_issn] = 2191-2858
         comment[platform] = BMC
   
@@ -1490,7 +1505,7 @@
           eissn = 2041-7136
         >
   
-        param[base_url] = http://www.pastoralismjournal.com
+        param[base_url] = http://www.pastoralismjournal.com/
         param[journal_issn] = 2041-7136
         comment[platform] = BMC
   
@@ -1507,7 +1522,7 @@
           eissn = 2191-2521
         >
   
-        param[base_url] = http://www.planetary-science.com
+        param[base_url] = http://www.planetary-science.com/
         param[journal_issn] = 2191-2521
         comment[platform] = BMC
   
@@ -1523,7 +1538,7 @@
           eissn = 2194-0517
         >
   
-        param[base_url] = http://www.progressbiomaterials.com
+        param[base_url] = http://www.progressbiomaterials.com/
         param[journal_issn] = 2194-0517
         comment[platform] = BMC
   
@@ -1539,7 +1554,7 @@
           issn = 1723-7785
         >
   
-        param[base_url] = http://www.progressinorthodontics.com
+        param[base_url] = http://www.progressinorthodontics.com/
         param[journal_issn] = 1723-7785
         comment[platform] = BMC
   
@@ -1554,7 +1569,7 @@
           eissn = 2211-1522
         >
   
-        param[base_url] = http://www.psywb.com
+        param[base_url] = http://www.psywb.com/
         param[journal_issn] = 2211-1522
         comment[platform] = BMC
   
@@ -1573,7 +1588,7 @@
           issnl = 1939-8425
         >
   
-        param[base_url] = http://www.thericejournal.com
+        param[base_url] = http://www.thericejournal.com/
         param[journal_issn] = 1939-8433
         comment[platform] = BMC
   
@@ -1589,7 +1604,7 @@
           issn = 2194-6876
         >
   
-        param[base_url] = http://www.scalablecomputingjournal.com
+        param[base_url] = http://www.scalablecomputingjournal.com/
         param[journal_issn] = 2194-6876
         comment[platform] = BMC
   
@@ -1604,7 +1619,7 @@
           eissn = 2190-8532
         >
   
-        param[base_url] = http://www.security-informatics.com
+        param[base_url] = http://www.security-informatics.com/
         param[journal_issn] = 2190-8532
         comment[platform] = BMC
   
@@ -1620,7 +1635,7 @@
           issn = 2193-1801
         >
   
-        param[base_url] = http://www.springerplus.com
+        param[base_url] = http://www.springerplus.com/
         param[journal_issn] = 2193-1801
         comment[platform] = BMC
   
@@ -1636,7 +1651,7 @@
           issn = 2213-0802
         >
   
-        param[base_url] = http://www.transrespmed.com
+        param[base_url] = http://www.transrespmed.com/
         param[journal_issn] = 2213-0802
         comment[platform] = BMC
   
@@ -1651,7 +1666,7 @@
           issn = 2213-7459
         >
   
-        param[base_url] = http://www.viejournal.com
+        param[base_url] = http://www.viejournal.com/
         param[journal_issn] = 2213-7459
         comment[platform] = BMC
   
@@ -1671,7 +1686,7 @@
           eissn = 2190-5738
         >
   
-        param[base_url] = http://www.springer.com/13205
+        param[base_url] = http://www.springer.com/13205/
         param[journal_issn] = 2190-572X
         comment[platform] = Springer
   
@@ -1689,7 +1704,7 @@
           eissn = 2190-5517 
         >
   
-        param[base_url] = http://www.springer.com/13204
+        param[base_url] = http://www.springer.com/13204/
         param[journal_issn] = 2190-5509
         comment[platform] = Springer
   
@@ -1707,7 +1722,7 @@
           eissn = 2190-5533 
         >
   
-        param[base_url] = http://www.springer.com/13203
+        param[base_url] = http://www.springer.com/13203/
         param[journal_issn] = 2190-5525
         comment[platform] = Springer
   
@@ -1724,7 +1739,7 @@
           eissn = 2190-5495 
         >
   
-        param[base_url] = http://www.springer.com/13201
+        param[base_url] = http://www.springer.com/13201/
         param[journal_issn] = 2190-5487
         comment[platform] = Springer
   
@@ -1742,7 +1757,7 @@
           eissn = 2193-5351 
         >
   
-        param[base_url] = http://www.springer.com/40065
+        param[base_url] = http://www.springer.com/40065/
         param[journal_issn] = 2193-5343 
         comment[platform] = Springer
   
@@ -1758,7 +1773,7 @@
           eissn = 1664-3615
         >
   
-        param[base_url] = http://www.springer.com/13373
+        param[base_url] = http://www.springer.com/13373/
         param[journal_issn] = 1664-3615
         comment[platform] = Springer
   
@@ -1776,7 +1791,7 @@
           eissn = 1861-9541
         >
   
-        param[base_url] = http://www.springer.com/11434
+        param[base_url] = http://www.springer.com/11434/
         param[journal_issn] = 1001-6538
         comment[platform] = Springer
   
@@ -1807,7 +1822,7 @@
           eissn = 2195-2248
         >
   
-        param[base_url] = http://www.springer.com/40309
+        param[base_url] = http://www.springer.com/40309/
         param[journal_issn] = 2195-2248
         comment[platform] = Springer
   
@@ -1823,7 +1838,7 @@
           eissn = 1866-8887
         >
   
-        param[base_url] = http://www.springer.com/12544
+        param[base_url] = http://www.springer.com/12544/
         param[journal_issn] = 1867-0717
         comment[platform] = Springer
   
@@ -1843,7 +1858,7 @@
           eissn = 2190-7579
         >
   
-        param[base_url] = http://www.springer.com/materials/special+types/journal/13404
+        param[base_url] = http://www.springer.com/materials/special+types/journal/13404/
         param[journal_issn] = 2190-7579
         comment[platform] = Springer
   
@@ -1900,7 +1915,7 @@
           issn = 1869-4101
         >
   
-        param[base_url] = http://www.springer.com/medicine/radiology/journal/13244
+        param[base_url] = http://www.springer.com/medicine/radiology/journal/13244/
         param[journal_issn] = 1869-4101
         comment[platform] = Springer
   
@@ -1918,7 +1933,7 @@
           eissn = 2234-1315
         >
   
-        param[base_url] = http://www.springer.com/engineering/civil+engineering/journal/40069
+        param[base_url] = http://www.springer.com/engineering/civil+engineering/journal/40069/
         param[journal_issn] = 2234-1315
         comment[platform] = Springer
   
@@ -1937,7 +1952,7 @@
           eissn = 2192-6395
         >
   
-        param[base_url] = http://www.springer.com/13753
+        param[base_url] = http://www.springer.com/13753/
         param[journal_issn] = 2095-0055
         comment[platform] = Springer
   
@@ -1955,7 +1970,7 @@
           issn = 2226-4108
         >
   
-        param[base_url] = http://www.springer.com/40145
+        param[base_url] = http://www.springer.com/40145/
         param[journal_issn] = 2226-4108
         comment[platform] = Springer
   
@@ -1972,7 +1987,7 @@
           eissn = 1590-9999
         >
   
-        param[base_url] = http://www.springer.com/10195
+        param[base_url] = http://www.springer.com/10195/
         param[journal_issn] = 1590-9921
         comment[platform] = Springer
   
@@ -2001,7 +2016,7 @@
           eissn = 2190-0566
         >
   
-        param[base_url] = http://www.springer.com/13202
+        param[base_url] = http://www.springer.com/13202/
         param[journal_issn] = 2190-0558
         comment[platform] = Springer
   
@@ -2019,7 +2034,7 @@
           eissn = 2194-1467
         >
   
-        param[base_url] = http://www.springer.com/materials/journal/40243
+        param[base_url] = http://www.springer.com/materials/journal/40243/
         param[journal_issn] = 2194-1459
         comment[platform] = Springer
   
@@ -2035,7 +2050,7 @@
           eissn = 2192-2209
         >
   
-        param[base_url] = http://www.springer.com/13659
+        param[base_url] = http://www.springer.com/13659/
         param[journal_issn] = 2192-2209
         comment[platform] = Springer
   
@@ -2053,7 +2068,7 @@
           eissn = 2190-7439
         >
   
-        param[base_url] = http://www.springer.com/13320
+        param[base_url] = http://www.springer.com/13320/
         param[journal_issn] = 1674-9251
         comment[platform] = Springer
   
@@ -2071,7 +2086,7 @@
           eissn = 1615-6617
         >
   
-        param[base_url] = http://www.springer.com/10202
+        param[base_url] = http://www.springer.com/10202/
         param[journal_issn] = 1615-6609
         comment[platform] = Springer
   
@@ -2087,7 +2102,7 @@
           eissn = 1869-1889
         >
   
-        param[base_url] = http://www.springer.com/11427
+        param[base_url] = http://www.springer.com/11427/
         param[journal_issn] = 1674-7305
         comment[platform] = Springer
   
@@ -2119,7 +2134,7 @@
           eissn = 1869-4195
         >
   
-        param[base_url] = http://www.springer.com/13209
+        param[base_url] = http://www.springer.com/13209/
         param[journal_issn] = 1869-4187
         comment[platform] = Springer
   
@@ -2138,7 +2153,7 @@
           eissn = 1828-8928
         >
   
-        param[base_url] = http://www.springer.com/11751
+        param[base_url] = http://www.springer.com/11751/
         param[journal_issn] = 1828-8936
         comment[platform] = Springer
   
