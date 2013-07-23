@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.19 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.20 2013-07-23 21:47:45 fergaloy-sf Exp $
  */
 
 /*
@@ -684,6 +684,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and m." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
       + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
       + " and u." + URL_COLUMN + " = ?";
+
+  // Query to update the publication proprietary identifier.
+  private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
+      + PUBLICATION_TABLE
+      + " set " + PUBLICATION_ID_COLUMN + " = ?"
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -2434,6 +2440,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
 
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, bookSeriesSeq, proprietaryId);
+
       // Find or create the book.
       bookSeq = findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle,
 	  mdItemSeq, proprietaryId);
@@ -2541,6 +2550,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the ISBN values in the metadata, if new.
       addNewMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
       log.debug3(DEBUG_HEADER + "added new title ISBNs.");
+
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
     }
 
     if (log.isDebug2())
@@ -2624,6 +2636,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the ISSN values in the metadata, if new.
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
+
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
     }
 
     return publicationSeq;
@@ -3132,6 +3147,51 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "issns.size() = " + issns.size());
     return issns;
+  }
+
+  /**
+   * Updates in the database the publication proprietary identifier, if not
+   * empty.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the publication identifier.
+   * @param publicationId
+   *          A String with the publication proprietary identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateNonEmptyPublicationId(Connection conn, Long publicationSeq,
+      String publicationId) throws DbException {
+    final String DEBUG_HEADER = "updateNonEmptyPublicationId(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+      log.debug2(DEBUG_HEADER + "publicationId = " + publicationId);
+    }
+
+    if (StringUtil.isNullString(publicationId)) {
+      return;
+    }
+
+    PreparedStatement updatePublicationId =
+	dbManager.prepareStatement(conn, UPDATE_PUBLICATION_ID_QUERY);
+
+    try {
+      updatePublicationId.setString(1, publicationId);
+      updatePublicationId.setLong(2, publicationSeq);
+      int count = dbManager.executeUpdate(updatePublicationId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the publication proprietary identifier", sqle);
+      log.error("publicationSeq = '" + publicationSeq + "'.");
+      log.error("publicationId = '" + publicationId + "'.");
+      log.error("SQL = '" + UPDATE_PUBLICATION_ID_QUERY + "'.");
+      throw new DbException(
+	  "Cannot update the publication proprietary identifier", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePublicationId);
+    }
   }
 
   /**
