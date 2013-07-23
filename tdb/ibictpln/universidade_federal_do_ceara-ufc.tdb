@@ -9,7 +9,7 @@
   {
 
       title <
-        name = Revista “Fisioterapia & Saúde Funcional ;
+        name = Fisioterapia & Saúde Funcional ;
         eissn = 2238-8028
       >
 
@@ -17,8 +17,8 @@
       param[base_url] = http://www.fisioterapiaesaudefuncional.ufc.br/
       param[journal_id] = fisioterapia
 
-      au < manifest ; 2012 ; 1 ; Revista “Fisioterapia & Saúde Funcional Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista “Fisioterapia & Saúde Funcional Volume 2 ; 2013 >
+      au < manifest ; 2012 ; 1 ; Fisioterapia & Saúde Funcional Volume 1 ; 2012 >
+      au < exists ; 2013 ; 2 ; Fisioterapia & Saúde Funcional Volume 2 ; 2013 >
 
   }
 
