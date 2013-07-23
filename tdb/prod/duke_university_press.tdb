@@ -1521,7 +1521,7 @@
       param[base_url] = http://lofe.dukejournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
-      au < HighWirePressH20Plugin ; ready ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; releasing ; 2011 ; Limnology and Oceanography: Fluids and Environments Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Limnology and Oceanography: Fluids and Environments Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Limnology and Oceanography: Fluids and Environments Volume 3 ; 3 >
 
