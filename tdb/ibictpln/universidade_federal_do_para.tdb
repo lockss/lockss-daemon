@@ -17,8 +17,11 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = amazonica
 
-      au < manifest ; 2012 ; 1 ; Amazônica Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Amazônica Volume 2 ; 2013 >
+      au < exists ; 2009 ; 1 ; Amazônica Volume 1 ; 2009 >
+      au < exists ; 2010 ; 2 ; Amazônica Volume 2 ; 2010 >
+      au < exists ; 2011 ; 3 ; Amazônica Volume 3 ; 2011 >
+      au < exists ; 2012 ; 4 ; Amazônica Volume 4 ; 2012 >
+      au < expected ; 2013 ; 5 ; Amazônica Volume 5 ; 2013 >
 
   }
 
@@ -88,9 +91,6 @@
       au < exists ; 2008 ; 4 ; REBAC Volume 4 ; 2008 >
       au < exists ; 2009 ; 5 ; REBAC Volume 5 ; 2009 >
       au < exists ; 2010 ; 6 ; REBAC Volume 6 ; 2010 >
-      au < expected ; 2011 ; 7 ; REBAC Volume 7 ; 2011 >
-      au < expected ; 2012 ; 8 ; REBAC Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; REBAC Volume 9 ; 2013 >
 
   }
 
@@ -105,9 +105,7 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = rve
 
-      au < exists ; 2011 ; 1 ; Revista Ver a Educação Volume 1 ; 2011 >
-      au < expected ; 2012 ; 2 ; Revista Ver a Educação Volume 2 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Ver a Educação Volume 3 ; 2013 >
+      au < exists ; 2011 ; 12 ; Revista Ver a Educação Volume 12 ; 2011 >
 
   }
 

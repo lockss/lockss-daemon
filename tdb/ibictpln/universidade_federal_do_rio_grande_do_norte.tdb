@@ -14,14 +14,14 @@
       >
 
       comment[publisher] = Universidade Federal do Rio Grande do Norte
-      param[base_url] = http://www.atena.org.br/
+      param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
       param[journal_id] = Ambiente
 
       au < exists ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
       au < exists ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
       au < exists ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
       au < exists ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
+      au < exists ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
 
   }
 
