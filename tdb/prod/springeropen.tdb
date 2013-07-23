@@ -132,7 +132,7 @@
         param[journal_issn] = 1999-3110 
         comment[platform] = BMC
   
-        au < exists ; 2013 ; Botanical Studies Volume 2013 ; 2013 >
+        au < exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
   
     }
   
@@ -346,6 +346,21 @@
         au < exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
         au < expected ; 2013 ; EJNMMI Research Volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Empirical Research in Vocational Education and Training ;
+          issn = 1877-6345 
+        >
+  
+        param[base_url] = http://www.ervet-journal.com/
+        param[journal_issn] = 1877-6345 
+        comment[platform] = BMC
+  
+        au < exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
   
     }
   
