@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.21 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.22 2013-07-23 13:52:04 dshr Exp $
  */
 
 /*
@@ -525,6 +525,7 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, localHashHandler.getMissing());
   }
   
+  static int urlIndex = 4;
   public void testOneContentLocalHashSuspect(int stepSize)
       throws Exception {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
@@ -539,7 +540,7 @@ public class TestBlockHasher extends LockssTestCase {
     CIProperties props = new CIProperties();
     props.put(CachedUrl.PROPERTY_CHECKSUM,
 	      "SHA-1:deadbeef");
-    addContent(mau, urls[4], "foo", props);
+    addContent(mau, urls[urlIndex], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
@@ -548,9 +549,9 @@ public class TestBlockHasher extends LockssTestCase {
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
-    assertEvent(urls[4], 3, "foo", events.get(0), false);
+    assertEvent(urls[urlIndex], 3, "foo", events.get(0), false);
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
-    assertTrue(asuv.isSuspect(urls[4], 0));
+    assertTrue(asuv.isSuspect(urls[urlIndex], 0));
     // Second pass should exclude the suspect URL
     // NB - test confirms that BlocksHasher handles case of
     // URL with 0 versions.
@@ -566,6 +567,10 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, localHashHandler.getMatch());
     assertEquals(0, localHashHandler.getMismatch());
     assertEquals(0, localHashHandler.getMissing());
+    // At this point the only version URL is flagged suspect in the repo.
+    // Left that way, a subsequent invocation of this method
+    // will fail because the URL version won't be hashed.
+    urlIndex++;
   }
   
   public void testOneContentLocalHashMissing(int stepSize)
@@ -724,6 +729,12 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentLocalHashBad(1);
     testOneContentLocalHashBad(3);
     testOneContentLocalHashBad(100);
+  }
+  
+  public void testOneContentLocalHashSuspect() throws Exception {
+    testOneContentLocalHashSuspect(1);
+    testOneContentLocalHashSuspect(3);
+    testOneContentLocalHashSuspect(100);
   }
   
   public void testOneContentLocalHashMissing() throws Exception {
@@ -1375,7 +1386,12 @@ public class TestBlockHasher extends LockssTestCase {
     List<Event> events = new ArrayList();
 
     public void blockDone(HashBlock hblock) {
-      events.add(new Event(hblock, hblock.currentVersion().getHashes()));
+      HashBlock.Version hbv = hblock.currentVersion();
+      if (hbv != null) {
+        events.add(new Event(hblock, hbv.getHashes()));
+      } else {
+        log.critical("null HashBlock.Version");
+      }
     }
  
     public void reset() {
