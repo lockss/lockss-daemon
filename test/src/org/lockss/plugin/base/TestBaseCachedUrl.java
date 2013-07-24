@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.23 2013-07-07 04:05:43 dshr Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.24 2013-07-24 18:39:13 tlipkis Exp $
  */
 
 /*
