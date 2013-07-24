@@ -24,7 +24,7 @@
       au < manifest ; 2010 ; 5 ; Atos de Pesquisa em Educação Volume 5 ; 2010 >
       au < manifest ; 2011 ; 6 ; Atos de Pesquisa em Educação Volume 6 ; 2011 >
       au < manifest ; 2012 ; 7 ; Atos de Pesquisa em Educação Volume 7 ; 2012 >
-      au < expected ; 2013 ; 8 ; Atos de Pesquisa em Educação Volume 8 ; 2013 >
+      au < exists ; 2013 ; 8 ; Atos de Pesquisa em Educação Volume 8 ; 2013 >
 
   }
 
@@ -39,11 +39,11 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = modelling
 
-      au < manifest ; 2009 ; 1 ; Journal of Mathematical Modelling and Applicatio Volume 1 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Journal of Mathematical Modelling and Applicatio Volume 2 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Journal of Mathematical Modelling and Applicatio Volume 3 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Journal of Mathematical Modelling and Applicatio Volume 4 ; 2012 >
-      au < expected ; 2013 ; 5 ; Journal of Mathematical Modelling and Applicatio Volume 5 ; 2013 >
+      au < manifest ; 2009 ; 2009 ; Journal of Mathematical Modelling and Applicatio Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 2010 ; Journal of Mathematical Modelling and Applicatio Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 2011 ; Journal of Mathematical Modelling and Applicatio Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 2012 ; Journal of Mathematical Modelling and Applicatio Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2013 ; Journal of Mathematical Modelling and Applicatio Volume 2013 ; 2013 >
 
   }
 
@@ -80,9 +80,6 @@
       param[journal_id] = modelagem
 
       au < manifest ; 2010 ; 1 ; Modelagem na Educação Matemática Volume 1 ; 2010 >
-      au < expected ; 2011 ; 2 ; Modelagem na Educação Matemática Volume 2 ; 2011 >
-      au < expected ; 2012 ; 3 ; Modelagem na Educação Matemática Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Modelagem na Educação Matemática Volume 4 ; 2013 >
 
   }
 
@@ -97,10 +94,10 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = oteatrotranscende
 
-      au < manifest ; 2009 ; 15 ; O Teatro Transcende Volume 1 ; 2009 >
-      au < manifest ; 2011 ; 16 ; O Teatro Transcende Volume 3 ; 2011 >
-      au < manifest ; 2012 ; 17 ; O Teatro Transcende Volume 4 ; 2012 >
-      au < expected ; 2013 ; 18 ; O Teatro Transcende Volume 5 ; 2013 >
+      au < manifest ; 2009 ; 15 ; O Teatro Transcende Volume 15 ; 2009 >
+      au < manifest ; 2011 ; 16 ; O Teatro Transcende Volume 16 ; 2011 >
+      au < manifest ; 2012 ; 17 ; O Teatro Transcende Volume 17 ; 2012 >
+      au < expected ; 2013 ; 18 ; O Teatro Transcende Volume 18 ; 2013 >
 
   }
 
@@ -115,7 +112,7 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = rbdr
 
-      au < expected ; 2013 ; 1 ; Revista Brasileira de Desenvolvimento Regional Volume 1 ; 2013 >
+      au < exists ; 2013 ; 1 ; Revista Brasileira de Desenvolvimento Regional Volume 1 ; 2013 >
 
   }
 
@@ -130,13 +127,13 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = rea
 
-      au < manifest ; 2007 ; 1 ; Revista de Estudos Ambientais Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Revista de Estudos Ambientais Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Revista de Estudos Ambientais Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Revista de Estudos Ambientais Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Revista de Estudos Ambientais Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Revista de Estudos Ambientais Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista de Estudos Ambientais Volume 7 ; 2013 >
+      au < manifest ; 2007 ; 9 ; Revista de Estudos Ambientais Volume 9 ; 2007 >
+      au < manifest ; 2008 ; 10 ; Revista de Estudos Ambientais Volume 10 ; 2008 >
+      au < manifest ; 2009 ; 11 ; Revista de Estudos Ambientais Volume 11 ; 2009 >
+      au < manifest ; 2010 ; 12 ; Revista de Estudos Ambientais Volume 12 ; 2010 >
+      au < manifest ; 2011 ; 13 ; Revista de Estudos Ambientais Volume 13 ; 2011 >
+      au < manifest ; 2012 ; 14 ; Revista de Estudos Ambientais Volume 14 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista de Estudos Ambientais Volume 15 ; 2013 >
 
   }
 
@@ -183,13 +180,13 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = dynamis
 
-      au < manifest ; 2007 ; 1 ; Revista Dynamis Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Revista Dynamis Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Revista Dynamis Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Revista Dynamis Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Revista Dynamis Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Revista Dynamis Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista Dynamis Volume 7 ; 2013 >
+      au < manifest ; 2007 ; 13 ; Revista Dynamis Volume 13 ; 2007 >
+      au < manifest ; 2008 ; 14 ; Revista Dynamis Volume 14 ; 2008 >
+      au < manifest ; 2009 ; 15 ; Revista Dynamis Volume 15 ; 2009 >
+      au < manifest ; 2010 ; 16 ; Revista Dynamis Volume 16 ; 2010 >
+      au < manifest ; 2011 ; 17 ; Revista Dynamis Volume 17 ; 2011 >
+      au < manifest ; 2012 ; 18 ; Revista Dynamis Volume 18 ; 2012 >
+      au < exists ; 2013 ; 19 ; Revista Dynamis Volume 19 ; 2013 >
 
   }
 
@@ -204,13 +201,13 @@
       param[base_url] = http://proxy.furb.br/ojs/
       param[journal_id] = juridica
 
-      au < manifest ; 2007 ; 1 ; Revista Jurídica Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Revista Jurídica Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Revista Jurídica Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Revista Jurídica Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Revista Jurídica Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Revista Jurídica Volume 6 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista Jurídica Volume 7 ; 2013 >
+      au < manifest ; 2007 ; 11 ; Revista Jurídica Volume 11 ; 2007 >
+      au < manifest ; 2008 ; 12 ; Revista Jurídica Volume 12 ; 2008 >
+      au < manifest ; 2009 ; 13 ; Revista Jurídica Volume 13 ; 2009 >
+      au < manifest ; 2010 ; 14 ; Revista Jurídica Volume 14 ; 2010 >
+      au < manifest ; 2011 ; 15 ; Revista Jurídica Volume 15 ; 2011 >
+      au < manifest ; 2012 ; 16 ; Revista Jurídica Volume 16 ; 2012 >
+      au < expected ; 2013 ; 17 ; Revista Jurídica Volume 17 ; 2013 >
 
   }
 
@@ -233,7 +230,7 @@
       au < manifest ; 2010 ; 6 ; Revista Universo Contábil Volume 6 ; 2010 >
       au < manifest ; 2011 ; 7 ; Revista Universo Contábil Volume 7 ; 2011 >
       au < manifest ; 2012 ; 8 ; Revista Universo Contábil Volume 8 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Universo Contábil Volume 9 ; 2013 >
+      au < exists ; 2013 ; 9 ; Revista Universo Contábil Volume 9 ; 2013 >
 
   }
 
