@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.22 2013-07-23 13:52:04 dshr Exp $
+ * $Id: TestBlockHasher.java,v 1.23 2013-07-24 19:14:10 tlipkis Exp $
  */
 
 /*
@@ -180,6 +180,24 @@ public class TestBlockHasher extends LockssTestCase {
 		eventObj);
   }
 
+  void assertEvent(String expectedUrl,
+		   long expectedUnfilteredLength, long expectedFilteredLength,
+		   String expectedString, Object eventObj, boolean includeUrl) {
+    assertEvent(expectedUrl, expectedUnfilteredLength, expectedFilteredLength,
+		( includeUrl
+		  ? ListUtil.list(bytes(expectedUrl + expectedString))
+		  : ListUtil.list(bytes(expectedString))),
+		eventObj);
+  }
+
+  void assertEvent(String expectedUrl,
+		   long expectedUnfilteredLength, long expectedFilteredLength,
+		   List hashed, Object eventObj) {
+    assertEvent(expectedUrl, expectedUnfilteredLength, expectedFilteredLength,
+		(byte[][])hashed.toArray(EMPTY_BYTE_ARRAY_ARRAY),
+		eventObj);
+  }
+
   void assertEvent(String expectedUrl, long expectedLength,
 		   byte[][]expectedHashed, Object eventObj) {
     assertEvent(expectedUrl, expectedLength, expectedLength,
@@ -210,6 +228,16 @@ public class TestBlockHasher extends LockssTestCase {
     for (HashBlock.Version v : hblock.getVersions()) {
       assertNotNull("Hash error should not have been null", 
                     event.hblock.lastVersion().getHashError());  
+    }
+  }
+
+  public void assertEventWithError(String url, Object eventObj, String exPat) {
+    Event event = (Event)eventObj;
+    HashBlock hblock = event.hblock;
+    assertEquals(event.hblock.url, url);
+    for (HashBlock.Version v : hblock.getVersions()) {
+      assertMatchesRE(exPat,
+		      event.hblock.lastVersion().getHashError().toString());
     }
   }
 
@@ -369,7 +397,6 @@ public class TestBlockHasher extends LockssTestCase {
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC, "true");
     hasher = new BlockHasher(cus, digs, inits, null);
     assertTrue(hasher.isIncluded(cu));
-    log.critical("removing: " + urls[2]);
     mau.removeUrlToBeCached(urls[2]);
     assertFalse(hasher.isIncluded(cu));
     mau.addUrlToBeCached(urls[2]);
@@ -430,13 +457,21 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContent(100, true);
   }
   
+  void enableLocalHash(String blockHasherAlg) {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true",
+				  BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
+				  blockHasherAlg);
+  }
+
+  void enableLocalHash(String blockHasherAlg, String urlCacherAlg) {
+    enableLocalHash(blockHasherAlg);
+    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
+				  urlCacherAlg);
+  }
+
   public void testOneContentLocalHashGood(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "SHA-1");
+    enableLocalHash("SHA-1", "SHA-1");
 
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -463,12 +498,7 @@ public class TestBlockHasher extends LockssTestCase {
   
   public void testOneContentLocalHashObsolete(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "MD5");
-
+    enableLocalHash("SHA-1", "MD5");
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -496,11 +526,7 @@ public class TestBlockHasher extends LockssTestCase {
   
   public void testOneContentLocalHashBad(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "MD5");
+    enableLocalHash("SHA-1", "MD5");
 
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -525,14 +551,9 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, localHashHandler.getMissing());
   }
   
-  static int urlIndex = 4;
-  public void testOneContentLocalHashSuspect(int stepSize)
+  public void testOneContentLocalHashSuspect(int stepSize, int urlIndex)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "MD5");
+    enableLocalHash("SHA-1", "MD5");
 
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -545,6 +566,7 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
+    hasher.setExcludeSuspectVersions(true);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
@@ -558,6 +580,7 @@ public class TestBlockHasher extends LockssTestCase {
     RecordingEventHandler handRec2 = new RecordingEventHandler();
     BlockHasher hasher2 = new BlockHasher(cus, digs, inits, handRec2);
     hasher2.setFiltered(false);
+    hasher2.setExcludeSuspectVersions(true);
     MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
     hasher2.setLocalHashHandler(localHashHandler);
     assertEquals(0, hashToEnd(hasher2, stepSize));
@@ -567,18 +590,11 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, localHashHandler.getMatch());
     assertEquals(0, localHashHandler.getMismatch());
     assertEquals(0, localHashHandler.getMissing());
-    // At this point the only version URL is flagged suspect in the repo.
-    // Left that way, a subsequent invocation of this method
-    // will fail because the URL version won't be hashed.
-    urlIndex++;
   }
   
   public void testOneContentLocalHashMissing(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-
+    enableLocalHash("SHA-1");
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -602,10 +618,7 @@ public class TestBlockHasher extends LockssTestCase {
   
   public void testOneContentLocalHashMissing2(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-
+    enableLocalHash("SHA-1");
     // First pass creates the stored hash
     CIProperties props = new CIProperties();
     RecordingEventHandler handRec = new RecordingEventHandler();
@@ -651,14 +664,99 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, localHashHandler.getMissing());
   }
   
+  String randomString(int len) {
+    return org.apache.commons.lang.RandomStringUtils.randomAlphabetic(len);
+  }
+
+  public void testOneContentLocalHashIncompleteRead()
+      throws Exception {
+    enableLocalHash("SHA-1");
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    mau.setHashFilterFactory(new IncompleteReadFilterFactory(250));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    String cont = randomString(100000);	// must be longer than will be buffered
+    addContent(mau, urls[4], cont, props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(true);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(250, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    // The hash should have finished
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 100000, 250, cont.substring(0, 250),
+		events.get(0), false);
+    // But no localhash because the underlying stream wasn't completely read
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+  
+  // Filter reset relies on BaseCachedUrl wrapping HashedInputStream in a
+  // BufferedInputStream; this doesn't test that because it uses
+  // MockCachedUrl
+  public void testOneContentLocalHashMarkReset() throws Exception {
+    enableLocalHash("SHA-1");
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    mau.setHashFilterFactory(new MarkResetFilterFactory(20000, 18000));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    String cont = randomString(100000);	// must be longer than will be buffered
+    addContent(mau, urls[4], cont, props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(true);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    assertEquals(118000, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    assertEvent(urls[4], 100000, 118000, cont.substring(0, 18000) + cont,
+		events.get(0), false);
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(1, localHashHandler.getMissing());
+  }
+
+  public void testOneContentLocalHashMarkIllegalReset() throws Exception {
+    enableLocalHash("SHA-1");
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    mau.setHashFilterFactory(new MarkResetFilterFactory(10000, 18000));
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    CIProperties props = new CIProperties();
+    String cont = randomString(100000);	// must be longer than will be buffered
+    addContent(mau, urls[4], cont, props);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.setFiltered(true);
+    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
+    hasher.setLocalHashHandler(localHashHandler);
+    // Throws IOException: Resetting to invalid mark before any bytes hashed
+    assertEquals(0, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    List<Event> events = handRec.getEvents();
+    assertEquals(1, events.size());
+    HashBlock hb = events.get(0).hblock;
+    assertEventWithError(urls[4], events.get(0),
+			 "IOException: Resetting to invalid mark");
+    assertEquals(0, localHashHandler.getMatch());
+    assertEquals(0, localHashHandler.getMismatch());
+    assertEquals(0, localHashHandler.getMissing());
+  }
+
   public void testOneContentLocalHashGoodNoDigest(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "SHA-1");
-
+    enableLocalHash("SHA-1", "SHA-1");
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -684,12 +782,7 @@ public class TestBlockHasher extends LockssTestCase {
   
   public void testOneContentLocalHashBadNoDigest(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "MD5");
-
+    enableLocalHash("SHA-1", "MD5");
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -732,9 +825,11 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   public void testOneContentLocalHashSuspect() throws Exception {
-    testOneContentLocalHashSuspect(1);
-    testOneContentLocalHashSuspect(3);
-    testOneContentLocalHashSuspect(100);
+    // Must use a different urlindex each time as file gets marked suspect
+    // and isn't hashed next time
+    testOneContentLocalHashSuspect(1, 4);
+    testOneContentLocalHashSuspect(3, 5);
+    testOneContentLocalHashSuspect(100, 6);
   }
   
   public void testOneContentLocalHashMissing() throws Exception {
@@ -816,13 +911,8 @@ public class TestBlockHasher extends LockssTestCase {
 
   public void testOneContentThreeVersionsLocalHashGood(int stepSize)
       throws Exception {
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "true");
-    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_LOCAL_HASH_ALGORITHM,
-				  "SHA-1");
-    ConfigurationUtil.addFromArgs(BaseUrlCacher.PARAM_CHECKSUM_ALGORITHM,
-				  "SHA-1");
-
-    CaptureBlocksEventHandler blockHandler = 
+    enableLocalHash("SHA-1", "SHA-1");
+    CaptureBlocksEventHandler blockHandler =
       new CaptureBlocksEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -1009,6 +1099,8 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   public void testSeveralContentWithThrowing(int stepSize) throws Exception {
+//     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_ENABLE_LOCAL_HASH, "false");
+
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -1021,6 +1113,7 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = {null};
     MyMockBlockHasher hasher =
       new MyMockBlockHasher(cus, digs, inits, handRec);
+    hasher.setExcludeSuspectVersions(true);
     hasher.throwOnOpen(urls[6]);
 
     hashToEnd(hasher, stepSize);
@@ -1368,6 +1461,10 @@ public class TestBlockHasher extends LockssTestCase {
       this.hblock = hblock;
       this.byteArrays = byteArrays;
     }
+
+    public String toString() {
+      return "[Ev: hb: " + hblock + "]";
+    }
   }
 
   class CaptureBlocksEventHandler implements BlockHasher.EventHandler {
@@ -1390,7 +1487,7 @@ public class TestBlockHasher extends LockssTestCase {
       if (hbv != null) {
         events.add(new Event(hblock, hbv.getHashes()));
       } else {
-        log.critical("null HashBlock.Version");
+        log.warning("null HashBlock.Version");
       }
     }
  
@@ -1456,7 +1553,7 @@ public class TestBlockHasher extends LockssTestCase {
     int nMissing = 0;
 
     MyLocalHashHandler() {
-      log.debug3("New LOcalHashHandler");
+      log.debug3("New LocalHashHandler");
     }
     /**
      * Local hash match
@@ -1507,6 +1604,51 @@ public class TestBlockHasher extends LockssTestCase {
       StringFilter filt = new StringFilter(rdr, "w");
       filt.setIgnoreCase(true);
       return new ReaderInputStream(filt);
+    }
+  }
+
+  public class IncompleteReadFilterFactory implements FilterFactory {
+    int len;
+
+    IncompleteReadFilterFactory(int len) {
+      this.len = len;
+    }
+
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      try {
+	StreamUtil.copy(in, baos, len);
+      } catch (IOException e) {
+	throw new RuntimeException(e);
+      }
+      return new ByteArrayInputStream(baos.toByteArray());
+    }
+  }
+
+  public class MarkResetFilterFactory implements FilterFactory {
+    int mark;
+    int resetAt;
+
+    MarkResetFilterFactory(int mark, int resetAt) {
+      this.mark = mark;
+      this.resetAt = resetAt;
+    }
+
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      in.mark(mark);
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      try {
+	StreamUtil.copy(in, baos, resetAt);
+	in.reset();
+	StreamUtil.copy(in, baos);
+      } catch (IOException e) {
+	throw new RuntimeException(e);
+      }
+      return new ByteArrayInputStream(baos.toByteArray());
     }
   }
 }

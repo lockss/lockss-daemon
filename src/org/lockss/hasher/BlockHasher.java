@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.27 2013-07-18 03:14:11 dshr Exp $
+ * $Id: BlockHasher.java,v 1.28 2013-07-24 19:14:10 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.security.*;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.oro.text.regex.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -77,6 +78,8 @@ public class BlockHasher extends GenericHasher {
   private boolean includeUrl = false;
   private boolean ignoreFilesOutsideCrawlSpec =
     DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC;
+  private boolean isExcludeSuspectVersions = false;
+
   protected int filesIgnored = 0;
 
   protected MessageDigest[] initialDigests;
@@ -95,7 +98,7 @@ public class BlockHasher extends GenericHasher {
   MessageDigest[] peerDigests;
   List<Pattern> excludeUrlPats;
   private HashMap<String,MessageDigest> localHashDigestMap = null;
-  private MessageDigest currentVersionLocalDigest = null;
+  private HashedInputStream.Hasher currentVersionLocalHasher = null;
   private String localHashAlgorithm = null;
   private byte[] currentVersionStoredHash = null;
   private LocalHashHandler localHashHandler = null;
@@ -178,6 +181,18 @@ public class BlockHasher extends GenericHasher {
   /** Tell the hasher whether to include the URL in the hash */
   public void setIncludeUrl(boolean val) {
     includeUrl = val;
+  }
+
+  /** Tell the hasher whether to exclude versions of CUs that are marked as
+   * suspect due to checksum mismatch. */
+  public void setExcludeSuspectVersions(boolean val) {
+    isExcludeSuspectVersions = val;
+  }
+
+  /** Tell the hasher whether to exclude versions of CUs that are marked as
+   * suspect due to checksum mismatch. */
+  public boolean isExcludeSuspectVersions() {
+    return isExcludeSuspectVersions;
   }
 
   /** Tell the BlockHasher to run all the hashed URLs through a substance
@@ -269,81 +284,22 @@ public class BlockHasher extends GenericHasher {
     curVer = cuVersions[vix];
     verBytesRead = 0;
     cloneDigests();
-    if (localHashDigestMap != null) {
-      /*
-       * Local Hash is enabled. Does this version have a hash
-       * in the properties?
-       */
-      String useHashAlgorithm = localHashAlgorithm;
-      currentVersionStoredHash = null;
-      CIProperties verProps = curVer.getProperties();
-      if (verProps.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
-	// Parse the hash in the properties
-	String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
-	HashResult hr = null;
-	String algorithm = null;
-	byte[] hash = null;
-	try {
-	  hr = HashResult.make(cksumProp);
-	  algorithm = hr.getAlgorithm();
-	  hash = hr.getBytes();
-	} catch (HashResult.IllegalByteArray ex) {
-	    log.error(cksumProp + " badly formatted checksum");
-	}
-	// Does the current version have content?
-	if (curVer.hasContent()) {
-	  // Yes, we need to verify the checksum against the content
-	  if (log.isDebug3()) {
-	    log.debug3(curVer.getUrl() + ":" + curVer.getVersion() + " checksum " + cksumProp);
-	  }
-	  useHashAlgorithm = algorithm;
-	  currentVersionStoredHash = hash;
-	} else {
-	  // Checksum but no content - record this version as suspect
-	  log.error(curVer.getUrl() + ":" + curVer.getVersion() + " checksum but no content");
-	  markAsSuspect(curVer, algorithm, null, hash);
-	  useHashAlgorithm = null;
-	  currentVersionStoredHash = null;
-	}
-      } else {
-	// No checksum in the properties - make one
-	if (log.isDebug3()) {
-	  log.debug3(curVer.getUrl() + ":" + curVer.getVersion() + " no checksum property");
-	}
-      }
-      if (useHashAlgorithm != null) {
-	// Either to create or to verify a hash in the properties
-	// we need to hash this version's unfiltered content with
-	// useHashAlgorithm. Do we already have a suitable MessageDigest?
-	currentVersionLocalDigest = localHashDigestMap.get(useHashAlgorithm);
-	if (currentVersionLocalDigest == null) {
-	  // No - make one
-	  try {
-	    currentVersionLocalDigest =
-	      MessageDigest.getInstance(useHashAlgorithm);
-	    localHashDigestMap.put(useHashAlgorithm, currentVersionLocalDigest);
-	    if (log.isDebug3()) {
-	      log.debug3("Created MessageDigest " + useHashAlgorithm +
-			 " for " + curVer.getUrl() + ":" + curVer.getVersion());
-	    }
-	  } catch (NoSuchAlgorithmException ex) {
-	    log.error(useHashAlgorithm + " for " + curVer.getUrl() +
-		      ":" + curVer.getVersion() + " throws " + ex);
-	    currentVersionLocalDigest = null;
-	  }
-	}
-      }
-    }
+
+    String useHashAlgorithm = startVersionLocalHash();
+
     // Account for nonce in hash count
     verBytesHashed = nonceLength();
     try {
-      if (currentVersionLocalDigest == null) {
-	log.debug3("No local hash for " + curVer.getUrl());
+      HashedInputStream.Hasher hasher = null;
+      if (useHashAlgorithm != null) {
+	hasher = getStreamHasher(useHashAlgorithm);
+      }
+      if (hasher == null) {
 	is = getInputStream(curVer);
       } else {
-	log.debug3("Local hash for " + curVer.getUrl());
-	currentVersionLocalDigest.reset();
-	is = getInputStream(curVer, currentVersionLocalDigest);
+	if (isTrace) log.debug3("Local hash for " + curVer.getUrl());
+	currentVersionLocalHasher = hasher;
+	is = getInputStream(curVer, currentVersionLocalHasher);
       }
       return true;
     } catch (OutOfMemoryError e) {
@@ -359,36 +315,119 @@ public class BlockHasher extends GenericHasher {
     }
   }
 
+  /** Return the algorithm to use for local hash for the current file, or
+   * null */
+  String startVersionLocalHash() {
+    String useAlg = null;
+    if (localHashDigestMap != null) {
+      // Default to configured hash alg, maybe change if file already has
+      // hash in properties
+      useAlg = localHashAlgorithm;
+      currentVersionStoredHash = null;
+      CIProperties verProps = curVer.getProperties();
+      if (verProps.containsKey(CachedUrl.PROPERTY_CHECKSUM)) {
+	// Parse the hash in the properties
+	String cksumProp = verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM);
+	String algorithm = null;
+	byte[] hash = null;
+	try {
+	  HashResult hr = HashResult.make(cksumProp);
+	  algorithm = hr.getAlgorithm();
+	  hash = hr.getBytes();
+	  if (isTrace) log.debug3("Found current hash: " + hr);
+	} catch (HashResult.IllegalByteArray ex) {
+	  log.error(cksumProp + " badly formatted checksum");
+	  return null;
+	}
+	// Does the current version have content?
+	if (curVer.hasContent()) {
+	  // Yes, we need to verify the checksum against the content
+	  if (isTrace) {
+	    log.debug3(curVer.getUrl() + ":" + curVer.getVersion() +
+		       " checksum " + cksumProp);
+	  }
+	  useAlg = algorithm;
+	  currentVersionStoredHash = hash;
+	} else {
+	  // Checksum but no content - record this version as suspect
+	  log.error(curVer.getUrl() + ":" + curVer.getVersion() +
+		    " checksum but no content");
+	  markAsSuspect(curVer, algorithm, null, hash);
+	  useAlg = null;
+	  currentVersionStoredHash = null;
+	}
+      } else {
+	// No checksum in the properties - make one (
+	if (isTrace) {
+	  log.debug3(curVer.getUrl() + ":" + curVer.getVersion() +
+		     " no checksum property");
+	}
+      }
+    }
+    return useAlg;
+  }
+
+  private HashedInputStream.Hasher getStreamHasher(String alg) {
+    // Either to create or to verify a hash in the properties we need to
+    // hash this version's unfiltered content with the specified algorithm.
+    // Do we already have a suitable MessageDigest?
+    MessageDigest dig = localHashDigestMap.get(alg);
+    if (dig != null) {
+      // Yes, reset it
+      dig.reset();
+    } else {
+      // No, make one
+      try {
+	dig = MessageDigest.getInstance(alg);
+	localHashDigestMap.put(alg, dig);
+	if (isTrace) {
+	  log.debug3("Created MessageDigest " + alg +
+		     " for " + curVer.getUrl() + ":" + curVer.getVersion());
+	}
+      } catch (NoSuchAlgorithmException ex) {
+	log.error(alg + " for " + curVer.getUrl() +
+		  ":" + curVer.getVersion() + " throws " + ex);
+	return null;
+      }
+    }
+    return new HashedInputStream.Hasher(dig);
+  }
+
   protected void startNode() {
     getCurrentCu();
     if (isTrace) log.debug3("startNode(" + curCu + ")");
     hblock = new HashBlock(curCu);    
     vix = -1;
-    int ix = 0;
-    CachedUrl[] allVers = curCu.getCuVersions();
-    CachedUrl[] tempVers = new CachedUrl[allVers.length];
-    ensureAuSuspectUrlVersions();
-    for (int i = 0; i < allVers.length && ix < maxVersions; i++) {
-      if (!asuv.isSuspect(allVers[i].getUrl(), allVers[i].getVersion())) {
-        if (log.isDebug3()) {
-          log.debug3(allVers[i].getUrl() + " ver " + allVers[i].getVersion() + " not suspect");
-        }
-        tempVers[ix++] = allVers[i];
-      } else {
-        if (log.isDebug3()) {
-          log.debug3(allVers[i].getUrl() + " ver " + allVers[i].getVersion() + " suspect");
-        }
-      }
-    }
-    if (log.isDebug3()) {
-      log.debug3("# versions: " + ix);
-    }
-    cuVersions = new CachedUrl[ix];
-    for (int i = 0; i < ix; i++) {
-      cuVersions[i] = tempVers[i];
+    if (isExcludeSuspectVersions) {
+      cuVersions = pruneSuspectVersions(curCu);
+    } else {
+      cuVersions = curCu.getCuVersions(getMaxVersions());
     }
   }
   
+  private CachedUrl[] pruneSuspectVersions(CachedUrl cu) {
+    ensureAuSuspectUrlVersions();
+    if (asuv.isEmpty()) {
+      return cu.getCuVersions(getMaxVersions());
+    }
+    CachedUrl[] vers = cu.getCuVersions();
+    int outIx = 0;
+    for (int inIx = 0; inIx < vers.length && outIx < maxVersions; inIx++) {
+      CachedUrl verCu = vers[inIx];
+      if (!asuv.isSuspect(verCu.getUrl(), verCu.getVersion())) {
+        if (isTrace) log.debug3("Not suspect: " + verCu); 
+	if (outIx != inIx) {
+	  vers[outIx] = vers[inIx];
+	}
+	outIx++;
+      } else {
+        if (isTrace) log.debug3("Suspect: " + verCu);
+      }
+    }
+    if (isTrace) log.debug3("# versions: " + outIx);
+    return (CachedUrl[])ArrayUtils.subarray(vers, 0, outIx);
+  }
+
   protected void endOfNode() {
     super.endOfNode();
     if (hblock != null) {
@@ -520,9 +559,10 @@ public class BlockHasher extends GenericHasher {
   }
 
   protected HashBlock.Version endVersion(Throwable hashError) {
-    if (currentVersionLocalDigest != null) {
+    if (currentVersionLocalHasher != null &&
+	currentVersionLocalHasher.isValid()) {
       // Local hash is enabled for this version
-      byte[] hashOfContent = currentVersionLocalDigest.digest();
+      byte[] hashOfContent = currentVersionLocalHasher.getDigest().digest();
       if (currentVersionStoredHash != null) {
 	// This vesion has a stored hash in the properties
 	log.debug3("Computed: " + ByteArray.toHexString(hashOfContent) +
@@ -540,7 +580,7 @@ public class BlockHasher extends GenericHasher {
 	// No checksum property - create one
 	localHashHandler.missing(curVer, localHashAlgorithm, hashOfContent);
       }
-      currentVersionLocalDigest = null;
+      currentVersionLocalHasher = null;
       currentVersionStoredHash = null;
     }
     if (hblock != null) {
@@ -625,7 +665,7 @@ public class BlockHasher extends GenericHasher {
      * @param curVer CachedUrl of the version for which mismatch was detected
      */
     public void match(CachedUrl curVer) {
-      if (log.isDebug3()) {
+      if (isTrace) {
 	log.debug3(curVer.getUrl() + ":" + curVer.getVersion() +
 		   " local hash OK");
       }
