@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.8 2012-11-15 13:21:42 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.9 2013-07-24 16:50:37 easyonthemayo Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.apache.commons.lang.StringUtils;
 import java.util.*;
 //import java.util.regex.Pattern;
 
+import org.apache.commons.lang.math.NumberUtils;
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.PatternMatcherInput;
 import org.apache.oro.text.regex.Perl5Matcher;
@@ -685,8 +686,8 @@ public class BibliographicUtil {
     if (rn2) return mf1;
 
     // Are these strings digit-numerical and/or numerical?
-    boolean i1 = NumberUtil.isInteger(lastVal);
-    boolean i2 = NumberUtil.isInteger(thisVal);
+    boolean i1 = NumberUtils.isDigits(lastVal);
+    boolean i2 = NumberUtils.isDigits(thisVal);
     boolean n1 = NumberUtil.isNumber(lastVal);
     boolean n2 = NumberUtil.isNumber(thisVal);
     // If one is digit-numerical and the other is non-numerical,
@@ -747,9 +748,10 @@ public class BibliographicUtil {
     // Create a sequence based on the type of these tokens
 
     // Simple integer sequence
-    if (NumberUtil.isInteger(seqTokS) && NumberUtil.isInteger(seqTokE)) {
-      int s = NumberUtil.parseInt(seqTokS);
-      int e = NumberUtil.parseInt(seqTokE);
+    //if (NumberUtil.isInteger(seqTokS) && NumberUtil.isInteger(seqTokE)) {
+    if (NumberUtil.isIntegerDigits(seqTokS) && NumberUtil.isIntegerDigits(seqTokE)) {
+      int s = Integer.parseInt(seqTokS);
+      int e = Integer.parseInt(seqTokE);
       int[] intSeq = NumberUtil.constructSequence(s, e, delta);
       // Default is not to pad numbers in the seq
       int padlen = 0;
@@ -1207,7 +1209,7 @@ public class BibliographicUtil {
     public static SequenceIterator getInstance(String s, String e) {
       if (s==null || e==null || s.equals(e)) return new PredefinedSequenceIterator(s);
       try {
-        if (NumberUtil.isInteger(s) && NumberUtil.isInteger(e)) {
+        if (NumberUtil.isIntegerDigits(s) && NumberUtil.isIntegerDigits(e)) {
           return new IntegerSequenceIterator(s, e);
         }
         else if (NumberUtil.isNormalisedRomanNumber(StringUtils.upperCase(s)) &&
