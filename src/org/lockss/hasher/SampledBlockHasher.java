@@ -1,5 +1,5 @@
 /*
- * $Id: SampledBlockHasher.java,v 1.8 2013-07-18 03:14:11 dshr Exp $
+ * $Id: SampledBlockHasher.java,v 1.9 2013-07-24 19:01:09 tlipkis Exp $
  */
 
 /*
@@ -137,8 +137,6 @@ public class SampledBlockHasher extends BlockHasher {
    * are included.
    */
   public final static class FractionalInclusionPolicy {
-    private static final Logger log =
-      Logger.getLogger(SampledBlockHasher.class);
 
     private final int modulus;
     private final byte[] sampleNonce;
