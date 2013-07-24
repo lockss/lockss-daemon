@@ -47,10 +47,10 @@
       param[base_url] = http://www.periodicos.ulbra.br/
       param[journal_id] = ic
 
-      au < exists ; 2010 ; 1 ; Revista de Iniciação Científica da ULBRA Volume 1 ; 2010 >
-      au < exists ; 2011 ; 2 ; Revista de Iniciação Científica da ULBRA Volume 2 ; 2011 >
-      au < exists ; 2012 ; 3 ; Revista de Iniciação Científica da ULBRA Volume 3 ; 2012 >
-      au < expected ; 2013 ; 4 ; Revista de Iniciação Científica da ULBRA Volume 4 ; 2013 >
+      au < exists ; 2010 ; 8 ; Revista de Iniciação Científica da ULBRA Volume 8 ; 2010 >
+      au < exists ; 2011 ; 9 ; Revista de Iniciação Científica da ULBRA Volume 9 ; 2011 >
+      au < exists ; 2012 ; 10 ; Revista de Iniciação Científica da ULBRA Volume 10 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista de Iniciação Científica da ULBRA Volume 11 ; 2013 >
 
   }
 
