@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksCoordinator.java,v 1.4 2013-07-12 16:12:53 dshr Exp $
+ * $Id: VoteBlocksCoordinator.java,v 1.5 2013-07-24 20:09:37 barry409 Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ final class VoteBlocksCoordinator {
   private String prevUrl = "";
 
   /**
-   * @param participants An ordered List of participants.
+   * @param iterators An ordered List of VoteBlocksIterator instances.
    */
   public VoteBlocksCoordinator(List<VoteBlocksIterator> iterators) {
     Comparator<Entry> comparator = new Comparator<Entry>() {
@@ -166,21 +166,17 @@ final class VoteBlocksCoordinator {
 	return VoteBlock.compareUrls(url1, url2);
       }
     };
-    if (iterators.size() > 0) {
-      // Throws IllegalArgumentException if iterators.size() is zero.
-      this.iteratorQueue =
-	new java.util.PriorityQueue<Entry>(iterators.size(), comparator);
-    } else {
-      this.iteratorQueue = null;
-    }
+    int initialCapacity = iterators.isEmpty()? 1 : iterators.size();
+    // Throws IllegalArgumentException if initialCapacity is zero, so
+    // make initialCapacity 1 for empty iterators.
+    this.iteratorQueue =
+      new java.util.PriorityQueue<Entry>(initialCapacity, comparator);
     this.entryList = new ArrayList<Entry>();
 
-    if (iterators.size() > 0) {
-      for (VoteBlocksIterator iterator: iterators) {
-	Entry entry = new Entry(iterator);
-	entryList.add(entry);
-	iteratorQueue.add(entry);
-      }
+    for (VoteBlocksIterator iterator: iterators) {
+      Entry entry = new Entry(iterator);
+      entryList.add(entry);
+      iteratorQueue.add(entry);
     }
   }
 
@@ -230,7 +226,6 @@ final class VoteBlocksCoordinator {
     // priority queue. Not tested, but it's assumed to be more
     // efficient.
     for (Entry entry : entryList) {
-      // if iteratorQueue == null entryList is empty, so won't get here
       iteratorQueue.remove(entry);
       // todo(bhayes): Change VoteBlockIterator to support a "seek"
       // operation.
@@ -275,8 +270,11 @@ final class VoteBlocksCoordinator {
   }
 
   /**
-   * If {@code false} calls to {@link #getVoteBlock} will not throw
-   * {@link IllegalArgumentException} due to a spoiled iterator.
+   * If {@code false} then calls to {@link #getVoteBlock} will not
+   * throw {@link IllegalArgumentException} due to a spoiled iterator.
+   *
+   * @param iteratorIndex The index into the {@link List} of {@code
+   * iterators} supplied at construction.
    * @return true iff the iterator has thrown, or was initially null.
    */
   public boolean isSpoiled(int iteratorIndex) {
@@ -292,8 +290,13 @@ final class VoteBlocksCoordinator {
    * VoteBlockIterator} passed in at creation, or {@code null} if the
    * {@link VoteBlockIterator} was does not have a {@link VoteBlock}
    * for that URL.
+   *
+   * @param url The URL. Must equal or sort before the current value
+   * of {@link #peekUrl}.
+   * @param iteratorIndex The index into the {@link List} of {@code
+   * iterators} supplied at construction.
    * @throws IllegalArgumentException if the URL is {@code null}, or
-   * sorts before a previousls supplied URL, or greater than the
+   * sorts before a previously supplied URL, or greater than the
    * current value of {@link #peekUrl}.
    * @throws IllegalArgumentException if the {@link VoteBlockIterator}
    * is spoiled. 

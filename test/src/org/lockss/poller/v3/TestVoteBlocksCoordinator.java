@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksCoordinator.java,v 1.1 2013-06-17 18:39:08 barry409 Exp $
+ * $Id: TestVoteBlocksCoordinator.java,v 1.2 2013-07-24 20:09:37 barry409 Exp $
  */
 
 /*
@@ -98,6 +98,16 @@ public class TestVoteBlocksCoordinator extends LockssTestCase {
     new VoteBlocksCoordinator(iterators);
   }
 
+  public void testNoIterators() throws Exception {
+    // The List is allowed to be empty.
+    VoteBlock[][] voteBlocks = {};
+    iterators = Collections.EMPTY_LIST;
+    VoteBlocksCoordinator coordinator = 
+      new VoteBlocksCoordinator(iterators);
+ 
+    assertNull(coordinator.peekUrl());
+  }
+
   public void testNullIterator() throws Exception {
     // A null VoteBlocksIterator instance means the votes are spoiled.
     VoteBlocksCoordinator coordinator = 
@@ -163,7 +173,7 @@ public class TestVoteBlocksCoordinator extends LockssTestCase {
 	assertEquals(findVoteBlock(url, voteBlocks[iteratorIndex]), voteBlock);
       }
     }
-    assertEquals(coordinator.peekUrl(), null);
+    assertNull(coordinator.peekUrl());
   }
 
   public void testUnconsumed() throws Exception {
@@ -186,6 +196,7 @@ public class TestVoteBlocksCoordinator extends LockssTestCase {
     try {
       // Try to advance when there is still an unconsumed VoteBlock for foo1.
       coordinator.getVoteBlock("http://test.com/foo2", 0);
+      fail("Expected exception not thrown.");
     } catch (IllegalArgumentException e) {
       // expected
     }
@@ -207,6 +218,7 @@ public class TestVoteBlocksCoordinator extends LockssTestCase {
     try {
       // Try to call with a URL before the previous one.
       coordinator.getVoteBlock("http://test.com/foo1a", 0);
+      fail("Expected exception not thrown.");
     } catch (IllegalArgumentException e) {
       // expected
     }
@@ -327,7 +339,7 @@ public class TestVoteBlocksCoordinator extends LockssTestCase {
 	}
       }
     }
-    assertEquals(coordinator.peekUrl(), null);
+    assertNull(coordinator.peekUrl());
   }
 
   public void testPeek() throws Exception {
