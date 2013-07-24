@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.17 2012-10-09 00:00:13 pgust Exp $
+ * $Id: NumberUtil.java,v 1.17.26.1 2013-07-24 16:51:11 easyonthemayo Exp $
  */
 
 /*
@@ -31,7 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util;
 
+import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.oro.text.regex.Pattern;
 import org.lockss.exporter.biblio.BibliographicOrderScorer;
 import org.lockss.exporter.biblio.BibliographicUtil;
 
@@ -67,7 +69,13 @@ public class NumberUtil {
     rtn.put("I", 1);
     romanToNum = Collections.unmodifiableMap(rtn);
   }
-  
+
+  /**
+   * Pattern to match a string parsable as an integer, that is 1 to 9 digits,
+   * optionally preceded by a sign.
+   */
+  private static final Pattern integerPtn = RegexpUtil.uncheckedCompile("^[+-]?\\d{1,9}$");
+
   /** Roman number token formatting strings used by parseRoman() */
   private static String[] romanFmt = {"%s", "(%s)", "((%s))"}; // OK for ints
 
@@ -557,6 +565,30 @@ public class NumberUtil {
   }
 
   /**
+   * Determines whether the input string consists of only 1 to 9 digits,
+   * optionally after a sign. This will cover years and should be ample to
+   * represent numerical tokens within a volume identifier. This method is
+   * intended to provide a much faster alternative to {@link #isInteger}.
+   * A true result here indicates that the string can be parsed as an Integer.
+   * Note that a Roman numeral does not count as an integer.
+   * As an alternative that also checks if the string can
+   * be parsed as a Roman numeral, use {@link #isNumber}.
+   *
+   * @param s the input String
+   * @return <tt>true</tt> if the input string represents a (signed) integer
+   */
+  public static boolean isIntegerDigits(String s) {
+    // Check for null string
+    if (StringUtil.isNullString(s)) return false;
+    return RegexpUtil.getMatcher().matches(s, integerPtn);
+    // Alternative using Apache NumberUtils
+    // If string starts with a sign, remove it
+    /*if (s.startsWith("-") || s.startsWith("+")) s = s.substring(1);
+    return s!=null && s.length()<=9 && s.length()>=1
+        && NumberUtils.isDigits(s);*/
+  }
+
+  /**
    * Determines whether the input string represents an integer, that is,
    * can be parsed directly as an integer. Note that a Roman numeral does not
    * count as an integer. As an alternative that also checks if the string can
@@ -591,8 +623,8 @@ public class NumberUtil {
    */
   public static boolean isNumber(String s) {
     if (StringUtil.isNullString(s)) return false;
-    // First try as an integer
-    if (isInteger(s)) return true;
+    // First try as digits
+    if (isIntegerDigits(s)) return true;
     // Secondly try as a Roman numeral, requiring normalisation
     try {
       NumberUtil.parseRomanNumber(s.toUpperCase());
@@ -605,7 +637,8 @@ public class NumberUtil {
   /**
    * Determines whether the input string contains any digits and can therefore
    * can be considered to include at least one number. Note that this is
-   * different to both {@link #isInteger} and {@link #isNumber}. A return value
+   * different to {@link #isInteger}, {@link #isIntegerDigits} and {@link #isNumber}.
+   * A return value
    * of <tt>true</tt> does not indicate that the string can be parsed as a
    * number (though that may be true), but that it contains numbers. The method
    * works by looking at each character in turn, in the anticipation that it
@@ -622,15 +655,15 @@ public class NumberUtil {
 
   /**
    * Determines whether the input string is a mix of digits and non-digits.
-   * This is established by checking that it cannot be parsed as an integer but
-   * does contain digits. It does not check whether the string has tokens that
+   * This is established by checking that it does not consist of purely digits
+   * but does contain digits. It does not check whether the string has tokens that
    * can be parsed as Roman numbers, so a string like "vol-XI" is not considered
    * to have mixed formats.
    * @param s the input string
    * @return <tt>true</tt> if the input string contains both digits and non-digits
    */
   public static boolean isMixedFormat(String s) {
-    return !isInteger(s) && containsDigit(s);
+    return !NumberUtils.isDigits(s) && containsDigit(s);
   }
 
   /**
@@ -809,6 +842,7 @@ public class NumberUtil {
   public static short parseShort(String s) 
     throws NumberFormatException {
     try {
+      if (!StringUtil.isNullString(s)) s = s.trim();
       return Short.parseShort(s);
     } catch (NumberFormatException ex) {
       int value = NumberUtil.parseRomanNumber(s);
@@ -854,6 +888,7 @@ public class NumberUtil {
   public static long parseLong(String s) 
     throws NumberFormatException {
     try {
+      if (!StringUtil.isNullString(s)) s = s.trim();
       return Long.parseLong(s);
     } catch (NumberFormatException ex) {
       return NumberUtil.parseRomanNumber(s);
@@ -872,6 +907,7 @@ public class NumberUtil {
   public static float parseFloat(String s) 
     throws NumberFormatException {
     try {
+      if (!StringUtil.isNullString(s)) s = s.trim();
       return Float.parseFloat(s);
     } catch (NumberFormatException ex) {
       return NumberUtil.parseRomanNumber(s);
@@ -890,6 +926,7 @@ public class NumberUtil {
   public static double parseDouble(String s) 
     throws NumberFormatException {
     try {
+      if (!StringUtil.isNullString(s)) s = s.trim();
       return Double.parseDouble(s);
     } catch (NumberFormatException ex) {
       return NumberUtil.parseRomanNumber(s);
@@ -948,7 +985,7 @@ public class NumberUtil {
    * @throws NumberFormatException if the String does not represent a valid
    *    number in the Roman number system
    */
-  public static int parseRomanNumber(String roman) 
+  public static int parseRomanNumber(String roman)
     throws NumberFormatException {
     return parseRomanNumber(roman, false);
   }
@@ -974,7 +1011,7 @@ public class NumberUtil {
    * @throws NumberFormatException if the String does not represent a valid
    *    number in the Roman number system
    */
-  public static int parseRomanNumber(String roman, boolean validate) 
+  public static int parseRomanNumber(String roman, boolean validate)
     throws NumberFormatException {
     int romanValue = NumberUtil.parseRomanNumber(roman, (List<String>)null);
         

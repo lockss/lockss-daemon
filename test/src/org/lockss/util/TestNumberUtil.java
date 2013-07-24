@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.12 2012-10-09 00:24:38 pgust Exp $
+ * $Id: TestNumberUtil.java,v 1.12.26.1 2013-07-24 16:51:12 easyonthemayo Exp $
  */
 
 /*
@@ -227,6 +227,32 @@ public class TestNumberUtil extends LockssTestCase {
   }
 
   /**
+   * Test whether strings are recognised as digits only up to a length parsable
+   * as integer.
+   */
+  public final void testIsIntegerDigits() {
+    assertTrue(NumberUtil.isIntegerDigits("100"));
+    assertTrue(NumberUtil.isIntegerDigits("0"));
+    assertTrue(NumberUtil.isIntegerDigits("1"));
+    assertTrue(NumberUtil.isIntegerDigits("123456789"));
+    // Part of the contract of this method is that strings yielding true
+    // should parse as integers
+    assertTrue(NumberUtil.isInteger("100"));
+    assertTrue(NumberUtil.isInteger("0"));
+    assertTrue(NumberUtil.isInteger("1"));
+    assertTrue(NumberUtil.isInteger("123456789"));
+
+    // Too long
+    assertFalse(NumberUtil.isIntegerDigits("1234567890"));
+    // Not digits
+    assertFalse(NumberUtil.isIntegerDigits("99.9"));
+    assertFalse(NumberUtil.isIntegerDigits("not an integer"));
+    assertFalse(NumberUtil.isIntegerDigits("100 non numbers"));
+    assertFalse(NumberUtil.isIntegerDigits(""));
+    assertFalse(NumberUtil.isIntegerDigits(null));
+  }
+
+  /**
    * Test whether strings parse as integers.
    */
   public final void testIsInteger() {
@@ -247,6 +273,19 @@ public class TestNumberUtil extends LockssTestCase {
     assertTrue(NumberUtil.isNumber("XVII"));
     assertTrue(NumberUtil.isNumber("N"));
 
+    // signed numbers
+    assertTrue(NumberUtil.isNumber("-100"));
+    assertTrue(NumberUtil.isNumber("-00"));
+    assertTrue(NumberUtil.isNumber("-123456789"));
+    assertTrue(NumberUtil.isNumber("+100"));
+    assertTrue(NumberUtil.isNumber("+00"));
+    assertTrue(NumberUtil.isNumber("+123456789"));
+
+    // signed Roman numbers not allowed
+    assertFalse(NumberUtil.isNumber("+C"));
+    assertFalse(NumberUtil.isNumber("-XVII"));
+
+    // Not numbers
     assertFalse(NumberUtil.isNumber("99.9"));
     assertFalse(NumberUtil.isNumber("not an integer"));
     assertFalse(NumberUtil.isNumber("100 non numbers"));
