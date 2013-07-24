@@ -1,5 +1,5 @@
 /*
- * $Id: HashedInputStream.java,v 1.3.2.1 2013-07-22 18:07:47 dshr Exp $
+ * $Id: HashedInputStream.java,v 1.3.2.2 2013-07-24 18:59:04 tlipkis Exp $
  */
 
 /*
@@ -32,153 +32,37 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.io.InputStream;
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.security.MessageDigest;
 
 /**
- * Wrap a MessageDigest around an InputStream such that, after the
- * stream is closed, the MessageDigest will contain the hash of th
- * entire content of the underlying stream.
+ * An InputStream wrapper that feeds all the bytes read to a MessageDigest
  */
-
 public class HashedInputStream extends InputStream {
-  private BufferedInputStream bis;
-  private HashedInputStreamImpl hisi;
   protected static Logger logger = Logger.getLogger("HashedInputStream");
 
-  private class HashedInputStreamImpl extends InputStream {
-    private InputStream is;
-    private MessageDigest md;
-
-    /**
-     * Construct a HashedInputStreamImpl from an InputStream and a
-     * MessageDigest. The data read from the InputStream will be
-     * fed to the MessageDigest.
-     * @param is the underlying <code>InputStream</code>.
-     * @param md the <code>MessageDigest</code>
-     */
-    public HashedInputStreamImpl(InputStream is, MessageDigest md) {
-      this.is = is;
-      this.md = md;
-      logger.debug3("New HashedInputStreamImpl");
-    }
-
-    /**
-     * From <code>InputStream</code>
-     */
-    public int available() throws IOException {
-      return is.available();
-    }
-
-    /**
-     * From <code>InputStream</code>
-     */
-    public void close() throws IOException {
-      byte[] buf = new byte[1024];
-      int len = 0;
-      while((len = read(buf)) > 0) {
-	logger.debug3("Hashing " + len + " bytes during close");
-      }
-      IOUtil.safeClose(is);
-    }
-
-    /**
-     * From <code>InputStream</code>
-     * @param readlimit int limit on number of bytes read ahead of mark
-     */
-    public void mark(int readlimit) {
-      throw new UnsupportedOperationException("mark not supported");
-    }
-
-    /**
-     * From <code>InputStream</code>
-     */
-    public boolean markSupported() {
-      return false;
-    }
-
-    /**
-     * Read and hash the next byte from the <code>InputStream</code>
-     * @return number of bytes read and hashed
-     */
-    public int read() throws IOException {
-      byte[] buf = new byte[1];
-      int ret = read(buf);
-      if (ret == 1) {
-	return buf[0];
-      } else {
-	return ret;
-      }
-    }
-
-    /**
-     * Read and hash up to <code>buf.length</code> bytes from the
-     * <code>InputStream</code>
-     * @param buf byte[] of bytes read
-     * @return number of bytes read and hashed
-     */
-    public int read(byte[] buf) throws IOException {
-      return read(buf, 0, buf.length);
-    }
-
-    /**
-     * Read and hash up to <code>len</code> bytes to <code>off</code>
-     * in the <code>buf</code> array from the <code>InputStream</code>
-     * @param buf byte[] of bytes read
-     * @param off int offset in <code>buf</buf>
-     * @param len int max number of bytes to read and hash
-     * @return number of bytes read and hashed
-     */
-    public int read(byte[] buf, int off, int len) throws IOException {
-      int ret = is.read(buf, off, len);
-      if (ret > 0) {
-	if (logger.isDebug3()) {
-	  logger.debug3("Hashing " + ret + " bytes from " + off);
-	}
-	md.update(buf, off, ret);
-      } else {
-	if (logger.isDebug3()) {
-	  logger.debug3("0 or fewer bytes read");
-	}
-      }
-      return ret;
-    }
-  
-    /**
-     * From <code>InputStream</code>
-     */
-    public void reset() throws IOException {
-      throw new UnsupportedOperationException("reset not supported");
-    }
-
-    /**
-     * From <code>InputStream</code>
-     * @param n long number of bytes to skip
-     * @return number of bytes skipped
-     */
-    public long skip(long n) throws IOException {
-      throw new UnsupportedOperationException("skip not supported");
-    }
-
-  }
+  private InputStream is;
+  private Hasher hasher;
+  private boolean isClosed = false;
 
   /**
    * Construct a HashedInputStream from an InputStream and a
-   * MessageDigest. The data read from the InputStream will be
-   * fed to the MessageDigest.
+   * HashedInputStream.Hasher containing a MessageDigest. The data read
+   * from the InputStream will be fed to the MessageDigest.  The hasher
+   * will be marked valid iff the complete underlying stream is read,
    * @param is the underlying <code>InputStream</code>.
-   * @param md the <code>MessageDigest</code>
+   * @param hasher a HashedInputStream.Hasher containing the MessageDigest
+   * to be updated.
    */
-  public HashedInputStream(InputStream is, MessageDigest md) {
+  public HashedInputStream(InputStream is, Hasher hasher) {
     if (is == null) {
       throw new IllegalArgumentException("null is invalid");
     }
-    if (md == null) {
-      throw new IllegalArgumentException("null md invalid");
+    if (hasher == null) {
+      throw new IllegalArgumentException("null hasher invalid");
     }
-    hisi = new HashedInputStreamImpl(is, md);
-    bis = new BufferedInputStream(hisi);
+    this.is = is;
+    this.hasher = hasher;
     logger.debug3("New HashedInputStream");
   }
 
@@ -186,14 +70,28 @@ public class HashedInputStream extends InputStream {
    * From <code>InputStream</code>
    */
   public int available() throws IOException {
-    return bis.available();
+    return is.available();
   }
 
   /**
-   * From <code>InputStream</code>
+   * From <code>InputStream</code>.  Sets hash valid iff all bytes have
+   * been read from the underlying stream.
    */
   public void close() throws IOException {
-    IOUtil.safeClose(bis);
+    if (isClosed) {
+      return;
+    }
+    // If haven't yet determined that all bytes were read...
+    if (!hasher.isValid()) {
+      // If bytes are known to be available, don't set valid.
+      if (available() == 0) {
+	// available() == 0 isn't required to mean stream is at EOF; trying
+	// to read a byte will set valid if we are at EOF
+	read();
+      }
+    }
+    isClosed = true;
+    IOUtil.safeClose(is);
   }
 
   /**
@@ -201,14 +99,14 @@ public class HashedInputStream extends InputStream {
    * @param readlimit int limit on number of bytes read ahead of mark
    */
   public void mark(int readlimit) {
-    bis.mark(readlimit);
+    throw new UnsupportedOperationException("mark not supported");
   }
 
   /**
    * From <code>InputStream</code>
    */
   public boolean markSupported() {
-    return bis.markSupported();
+    return false;
   }
 
   /**
@@ -216,7 +114,13 @@ public class HashedInputStream extends InputStream {
    * @return number of bytes read and hashed
    */
   public int read() throws IOException {
-    return bis.read();
+    byte[] buf = new byte[1];
+    int ret = read(buf);
+    if (ret == 1) {
+      return buf[0];
+    } else {
+      return check(ret);
+    }
   }
 
   /**
@@ -226,7 +130,7 @@ public class HashedInputStream extends InputStream {
    * @return number of bytes read and hashed
    */
   public int read(byte[] buf) throws IOException {
-    return bis.read(buf);
+    return check(read(buf, 0, buf.length));
   }
 
   /**
@@ -238,14 +142,25 @@ public class HashedInputStream extends InputStream {
    * @return number of bytes read and hashed
    */
   public int read(byte[] buf, int off, int len) throws IOException {
-    return bis.read(buf, off, len);
+    int ret = is.read(buf, off, len);
+    if (ret > 0) {
+      if (logger.isDebug3()) {
+	logger.debug3("Hashing " + ret + " bytes from " + off);
+      }
+      hasher.md.update(buf, off, ret);
+    } else {
+      if (logger.isDebug3()) {
+	logger.debug3("0 or fewer bytes read");
+      }
+    }
+    return check(ret);
   }
   
   /**
    * From <code>InputStream</code>
    */
   public void reset() throws IOException {
-    bis.reset();
+    throw new UnsupportedOperationException("reset not supported");
   }
 
   /**
@@ -254,7 +169,43 @@ public class HashedInputStream extends InputStream {
    * @return number of bytes skipped
    */
   public long skip(long n) throws IOException {
-    return bis.skip(n);
+    throw new UnsupportedOperationException("skip not supported");
+  }
+
+  private int check(int n) {
+    if (n < 0) {
+      hasher.setValid(true);
+    }
+    return n;
+  }
+
+  private long check(long n) {
+    if (n < 0) {
+      hasher.setValid(true);
+    }
+    return n;
+  }
+
+
+  public static class Hasher {
+    private boolean valid = false;
+    private MessageDigest md;
+
+    public Hasher(MessageDigest md) {
+      this.md = md;
+    }
+
+    private void setValid(boolean val) {
+      valid = val;
+    }
+
+    public MessageDigest getDigest() {
+      return md;
+    }
+
+    public boolean isValid() {
+      return valid;
+    }
   }
 
 }
