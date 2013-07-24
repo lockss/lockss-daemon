@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.168 2013-07-22 18:07:40 dshr Exp $
+ * $Id: V3Poller.java,v 1.169 2013-07-24 19:02:18 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,13 @@ public class V3Poller extends BasePoll {
   public static final String PARAM_V3_ENABLE_LOCAL_POLLS =
     PREFIX + "enableLocalPolls";
   public static final boolean DEFAULT_V3_ENABLE_LOCAL_POLLS = false;
+  
+  /** If true, suspect versions are excluded from being hashed by the
+   * poller.
+   */
+  public static final String PARAM_V3_EXCLUDE_SUSPECT_VERSIONS =
+    PREFIX + "excludeSuspectVersions";
+  public static final boolean DEFAULT_V3_EXCLUDE_SUSPECT_VERSIONS = true;
   
   /** For testing, if true, all polls are local.
    */
@@ -1785,35 +1792,25 @@ public class V3Poller extends BasePoll {
    *
    * @return true iff the hash is scheduled successfully.
    */
-  protected boolean scheduleHash(CachedUrlSet cu,
+  protected boolean scheduleHash(CachedUrlSet cus,
 				 Deadline deadline,
                                  HashService.Callback cb,
                                  BlockHasher.EventHandler eh) {
-    return scheduleHash(cu, -1, deadline, cb, eh);
+    return scheduleHash(cus, -1, deadline, cb, eh);
   }
 
-  protected boolean scheduleHash(CachedUrlSet cu,
+  protected boolean scheduleHash(CachedUrlSet cus,
 				 int maxVersions,
 				 Deadline deadline,
                                  HashService.Callback cb,
                                  BlockHasher.EventHandler eh) {
-    log.debug("Scheduling " + cu + "(" + maxVersions + ") hash for poll "
+    log.debug("Scheduling " + cus + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
     if (isSampledPoll()) {
-      log.info("Sampled poll: " + inclusionPolicy.typeString());
+      log.debug("Sampled hash: " + inclusionPolicy.typeString());
     }
-    BlockHasher hasher = isSampledPoll() ?
-      new SampledBlockHasher(cu,
-			     maxVersions,
-			     initHasherDigests(),
-			     initHasherByteArrays(),
-			     eh,
-			     inclusionPolicy) :
-      new BlockHasher(cu,
-		      maxVersions,
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      eh);
+    BlockHasher hasher = makeHasher(cus, maxVersions, eh);
+
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
     
@@ -1829,6 +1826,28 @@ public class V3Poller extends BasePoll {
       setStatus(oldStatus);
     }
     return res;
+  }
+
+  BlockHasher makeHasher(CachedUrlSet cus, int maxVersions,
+			   BlockHasher.EventHandler eh) {
+    BlockHasher hasher = isSampledPoll() ?
+      new SampledBlockHasher(cus,
+			     maxVersions,
+			     initHasherDigests(),
+			     initHasherByteArrays(),
+			     eh,
+			     inclusionPolicy) :
+      new BlockHasher(cus,
+		      maxVersions,
+		      initHasherDigests(),
+		      initHasherByteArrays(),
+		      eh);
+
+    if (CurrentConfig.getBooleanParam(PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
+				      DEFAULT_V3_EXCLUDE_SUSPECT_VERSIONS)) {
+      hasher.setExcludeSuspectVersions(true);
+    }
+    return hasher;
   }
 
   /**

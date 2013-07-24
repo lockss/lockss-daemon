@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.60 2013-07-18 21:58:04 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.61 2013-07-24 19:02:18 tlipkis Exp $
  */
 
 /*
@@ -413,6 +413,38 @@ public class TestV3Poller extends LockssTestCase {
     List<ParticipantUserData> symmetricParticipants =
       symmetricParticipants(v3Poller);
     assertTrue(symmetricParticipants.size() == numSym);
+  }
+
+  public void testMakeHasher() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
+					       -1, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherSampled() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_ALL_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_MODULUS, "1000");
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
+					       -1, null);
+    assertTrue("Hasher: " + hasher + " should be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherNoExcludeSuspect() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
+				  "false");
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
+					       -1, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertFalse(hasher.isExcludeSuspectVersions());
   }
 
   public void testInitHasherByteArraysAll() throws Exception {
