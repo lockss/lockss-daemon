@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.51 2013-07-07 04:05:44 dshr Exp $
+ * $Id: MockCachedUrl.java,v 1.51.4.1 2013-07-24 18:55:44 tlipkis Exp $
  */
 
 /*
@@ -192,13 +192,18 @@ public class MockCachedUrl implements CachedUrl {
 
   // Read interface - used by the proxy.
 
-  public InputStream getUnfilteredInputStream(MessageDigest md) {
+  private InputStream newHashedInputStream(InputStream is,
+					   HashedInputStream.Hasher hasher) {
+    return new BufferedInputStream(new HashedInputStream(is, hasher));
+  }
+
+  public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
     log.debug3("MockCachedUrl.getUnfilteredInputStream with " +
-	       (md == null ? "no " : "") + "MessageDigest");
-    if (md == null) {
+	       (hasher == null ? "no " : "") + "Hasher");
+    if (hasher == null) {
       return getUnfilteredInputStream();
     }
-    return new HashedInputStream(getUnfilteredInputStream(), md);
+    return newHashedInputStream(getUnfilteredInputStream(), hasher);
   }
 
   public InputStream getUnfilteredInputStream() {
@@ -225,7 +230,7 @@ public class MockCachedUrl implements CachedUrl {
     return openForHashing(null);
   }
 
-  public InputStream openForHashing(MessageDigest md) {
+  public InputStream openForHashing(HashedInputStream.Hasher hasher) {
     String contentType = getContentType();
     InputStream is = null;
     // look for a FilterFactory
@@ -233,8 +238,8 @@ public class MockCachedUrl implements CachedUrl {
       FilterFactory fact = au.getHashFilterFactory(contentType);
       if (fact != null) {
 	InputStream unfis = getUnfilteredInputStream();
-	if (md != null) {
-	  unfis = new HashedInputStream(unfis, md);
+	if (hasher != null) {
+	  unfis = newHashedInputStream(unfis, hasher);
 	}
 	if (log.isDebug3()) {
 	  log.debug3("Filtering " + contentType +
