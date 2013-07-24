@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.8.58.1 2013-07-22 18:07:46 dshr Exp $
+ * $Id: SimpleHasher.java,v 1.8.58.2 2013-07-24 18:56:45 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class SimpleHasher {
   private byte[] verifier;
   private boolean isFiltered = false;
   private boolean isIncludeUrl = false;
+  private boolean isExcludeSuspectVersions = false;
   private boolean isBase64 = false;
 
   private int nbytes = 1000;
@@ -99,6 +100,15 @@ public class SimpleHasher {
   }
 
   /**
+   * Determines whether to exclude file versions that are marked suspect
+   * Default is false
+   * @param val if true exclude suspect versions
+   */
+  public void setExcludeSuspectVersions(boolean val) {
+    isExcludeSuspectVersions = val;
+  }
+
+  /**
    * If true, result is a Base64 string; if false (the default), result is
    * a hex string
    */
@@ -135,6 +145,7 @@ public class SimpleHasher {
 					 new BlockEventHandler(blockOuts));
 
     hasher.setIncludeUrl(isIncludeUrl);
+    hasher.setExcludeSuspectVersions(isExcludeSuspectVersions);
     doHash(hasher);
     if (footer != null) {
       blockOuts.println(footer);
