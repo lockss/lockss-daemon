@@ -1579,6 +1579,7 @@
     param[journal_issn] = 1742-6596
     comment[param] = eissn preferred
     comment[notReady170] = crawl failure
+    comment[notReady] = low agreement
 
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 1 ; 1 >
     au < manifest ; exists ; 2004 ; Journal of Physics: Conference Series Volume 2 ; 2 >
@@ -1927,27 +1928,27 @@
     au < released ; crawling ; 2012 ; Journal of Physics: Conference Series Volume 345 ; 345 >
     au < released ; crawling ; 2012 ; Journal of Physics: Conference Series Volume 346 ; 346 >
     au < released ; crawling ; 2012 ; Journal of Physics: Conference Series Volume 347 ; 347 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 348 ; 348 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 349 ; 349 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 350 ; 350 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 351 ; 351 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 352 ; 352 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 353 ; 353 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 354 ; 354 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 355 ; 355 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 356 ; 356 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 357 ; 357 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 358 ; 358 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 359 ; 359 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 360 ; 360 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 361 ; 361 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 362 ; 362 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 363 ; 363 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 364 ; 364 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 365 ; 365 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 366 ; 366 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 367 ; 367 >
-    au < testing ; exists ; 2012 ; Journal of Physics: Conference Series Volume 368 ; 368 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 348 ; 348 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 349 ; 349 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 350 ; 350 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 351 ; 351 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 352 ; 352 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 353 ; 353 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 354 ; 354 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 355 ; 355 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 356 ; 356 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 357 ; 357 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 358 ; 358 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 359 ; 359 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 360 ; 360 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 361 ; 361 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 362 ; 362 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 363 ; 363 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 364 ; 364 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 365 ; 365 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 366 ; 366 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 367 ; 367 >
+    au < notReady ; exists ; 2012 ; Journal of Physics: Conference Series Volume 368 ; 368 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 369 ; 369 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 370 ; 370 >
     au < crawling ; exists ; 2012 ; Journal of Physics: Conference Series Volume 371 ; 371 >
