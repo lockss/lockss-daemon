@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampledBlockHasher.java,v 1.7 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: TestSampledBlockHasher.java,v 1.7.2.1 2013-07-24 18:56:31 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 
 public class TestSampledBlockHasher extends LockssTestCase {
+  private static final Logger log = Logger.getLogger("TestSampledBlockHasher");
+
   private static final String TEST_URL_BASE = "http://www.test.com/blah/";
   private static final String TEST_URL = TEST_URL_BASE+"blah.html";
   private static final String TEST_FILE_CONTENT = "This is a test file ";
