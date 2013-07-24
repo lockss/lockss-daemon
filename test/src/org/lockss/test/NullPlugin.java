@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.119 2013-07-07 04:05:44 dshr Exp $
+ * $Id: NullPlugin.java,v 1.119.4.1 2013-07-24 18:57:26 tlipkis Exp $
  */
 
 /*
@@ -211,16 +211,16 @@ public class NullPlugin {
       return new StringInputStream("");
     }
 
-    public InputStream getUnfilteredInputStream(MessageDigest md) {
-      return new HashedInputStream(new StringInputStream(""), md);
+    public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
+      return new HashedInputStream(new StringInputStream(""), hasher);
     }
 
     public InputStream openForHashing() {
       return getUnfilteredInputStream();
     }
 
-    public InputStream openForHashing(MessageDigest md) {
-      return new HashedInputStream(getUnfilteredInputStream(), md);
+    public InputStream openForHashing(HashedInputStream.Hasher hasher) {
+      return new HashedInputStream(getUnfilteredInputStream(), hasher);
     }
 
     public Reader openForReading() {

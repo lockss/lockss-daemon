@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.49 2013-07-14 03:05:20 dshr Exp $
+ * $Id: BaseCachedUrl.java,v 1.49.2.1 2013-07-24 18:57:26 tlipkis Exp $
  */
 
 /*
@@ -143,17 +143,18 @@ public class BaseCachedUrl implements CachedUrl {
   /**
    * Return a stream suitable for hashing with a hash of the unfiltered
    * content.
-   * @param md MessageDigest for the unfiltered content.
+   * @param hasher HashedInputStream.Hasher containing MessageDigest to be
+   * updated
    * @return an InputStream
    */
-  public InputStream openForHashing(MessageDigest md) {
+  public InputStream openForHashing(HashedInputStream.Hasher hasher) {
     if (CurrentConfig.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM,
 				      DEFAULT_SHOULD_FILTER_HASH_STREAM)) {
       logger.debug3("Filtering on, returning filtered stream");
-      return getFilteredStream(md);
+      return getFilteredStream(hasher);
     } else {
       logger.debug3("Filtering off, returning unfiltered stream");
-      return getUnfilteredInputStream(md);
+      return getUnfilteredInputStream(hasher);
     }
   }
 
@@ -176,12 +177,18 @@ public class BaseCachedUrl implements CachedUrl {
     return rnc.getInputStream();
   }
 
-  public InputStream getUnfilteredInputStream(MessageDigest md) {
-    if (md == null) {
-      return getUnfilteredInputStream();
+  public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
+    InputStream is = getUnfilteredInputStream();
+    if (hasher != null) {
+      is = newHashedInputStream(is, hasher);
     }
-    ensureRnc();
-    return new HashedInputStream(rnc.getInputStream(), md);
+    return is;
+  }
+
+  // Clients of CachedUrl expect InputStreams to support mark/reset
+  private InputStream newHashedInputStream(InputStream is,
+					   HashedInputStream.Hasher hasher) {
+    return new BufferedInputStream(new HashedInputStream(is, hasher));
   }
 
   public String getContentType() {
@@ -300,7 +307,7 @@ public class BaseCachedUrl implements CachedUrl {
     return getFilteredStream(null);
   }
 
-  protected InputStream getFilteredStream(MessageDigest md) {
+  protected InputStream getFilteredStream(HashedInputStream.Hasher hasher) {
     String contentType = getContentType();
     // first look for a FilterFactory
     FilterFactory fact = au.getHashFilterFactory(contentType);
@@ -310,8 +317,8 @@ public class BaseCachedUrl implements CachedUrl {
 		      " with " + fact.getClass().getName());
       }
       InputStream unfis = getUnfilteredInputStream();
-      if (md != null) {
-	unfis = new HashedInputStream(unfis, md);
+      if (hasher != null) {
+	unfis = newHashedInputStream(unfis, hasher);
       }
       try {
 	return fact.createFilteredInputStream(au, unfis, getEncoding());
@@ -326,7 +333,7 @@ public class BaseCachedUrl implements CachedUrl {
     // then look for deprecated FilterRule
     FilterRule fr = au.getFilterRule(contentType);
     if (fr != null) {
-      if (md != null) {
+      if (hasher != null) {
 	throw new IllegalArgumentException("LocalHash incompatible with FilterRule");
       }
       if (logger.isDebug3()) {
@@ -344,8 +351,8 @@ public class BaseCachedUrl implements CachedUrl {
     }
     if (logger.isDebug3()) logger.debug3("Not filtering " + contentType);
     InputStream ret = getUnfilteredInputStream();
-    if (md != null) {
-      ret = new HashedInputStream(ret, md);
+    if (hasher != null) {
+      ret = newHashedInputStream(ret, hasher);
     }
     return ret;
   }
