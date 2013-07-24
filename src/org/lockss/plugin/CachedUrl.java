@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.31 2013-07-07 04:05:43 dshr Exp $
+ * $Id: CachedUrl.java,v 1.32 2013-07-24 19:00:41 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.security.MessageDigest;
 
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
@@ -146,7 +145,7 @@ public interface CachedUrl extends CachedUrlSetNode {
   * @return a {@link InputStream} object from which the
   *         unfiltered content of the cached url can be read.
   */
-  public InputStream getUnfilteredInputStream(MessageDigest md);
+  public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher);
 
   /**
    * Get an inputstream of the content suitable for hashing.
@@ -161,7 +160,7 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @param md MessageDigest to hash the unfiltered content
    * @return an {@link InputStream}
    */
-  public InputStream openForHashing(MessageDigest md);
+  public InputStream openForHashing(HashedInputStream.Hasher hasher);
 
   /**
    * Return a reader on this CachedUrl

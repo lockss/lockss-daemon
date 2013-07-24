@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.33 2013-07-07 04:05:43 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.34 2013-07-24 19:00:41 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class PTestPlugin {
       return new StringInputStream(contents);
     }
 
-    public InputStream getUnfilteredInputStream(MessageDigest md) {
+    public InputStream getUnfilteredInputStream(HashedInputStream.Hasher hasher) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
@@ -118,7 +118,7 @@ public class PTestPlugin {
       return getUnfilteredInputStream();
     }
 
-    public InputStream openForHashing(MessageDigest md) {
+    public InputStream openForHashing(HashedInputStream.Hasher hasher) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
