@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.53 2013-06-20 05:07:48 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.53.4.1 2013-07-24 18:58:34 tlipkis Exp $
  */
 
 /*
@@ -98,6 +98,7 @@ public class HashCUS extends LockssServlet {
   static final String KEY_HASH_TYPE = "hashtype";
   static final String KEY_RECORD = "record";
   static final String KEY_BACKGROUND = "background";
+  static final String KEY_EXCLUDE_SUSPECT = "excludeSuspect";
   static final String KEY_ACTION = "action";
   static final String KEY_MIME = "mime";
   static final String KEY_FILE_ID = "file";
@@ -192,6 +193,7 @@ public class HashCUS extends LockssServlet {
     byte[] challenge;
     byte[] verifier;
     boolean isRecord;
+    boolean isExcludeSuspectVersions = false;
     boolean isBackground = false;
     String alg;
     HashType hType = DEFAULT_HASH_TYPE;
@@ -494,6 +496,8 @@ public class HashCUS extends LockssServlet {
     params.lower = getParameter(KEY_LOWER);
     params.upper = getParameter(KEY_UPPER);
     params.isRecord = (getParameter(KEY_RECORD) != null);
+    params.isExcludeSuspectVersions =
+      (getParameter(KEY_EXCLUDE_SUSPECT) != null);
     params.alg = req.getParameter(KEY_ALG);
     if (StringUtil.isNullString(params.alg)) {
       params.alg = LcapMessage.getDefaultHashAlgorithm();
@@ -867,6 +871,12 @@ public class HashCUS extends LockssServlet {
     tbl.newCell();
     tbl.newCell();
     tbl.add("&nbsp;&nbsp;");
+    tbl.add(checkBox("Exclude suspect versions", "true", KEY_EXCLUDE_SUSPECT,
+		     ddd.isExcludeSuspectVersions));
+    tbl.newRow();
+    tbl.newCell();
+    tbl.newCell();
+    tbl.add("&nbsp;&nbsp;");
     tbl.add(checkBox("Background", "false", KEY_BACKGROUND, ddd.isBackground));
 
     centeredBlock.add(tbl);
@@ -1233,6 +1243,7 @@ public class HashCUS extends LockssServlet {
       }
       hasher = new SimpleHasher(ddd.digest, ddd.challenge, ddd.verifier);
       hasher.setFiltered(true);
+      hasher.setExcludeSuspectVersions(ddd.isExcludeSuspectVersions);
       hasher.setBase64Result(ddd.resEncoding == ResultEncoding.Base64);
       hasher.doV3Hash(ddd.cus, ddd.blockFile, sb.toString(), "# end\n");
     }
