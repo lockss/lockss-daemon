@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.92 2013-07-14 03:05:20 dshr Exp $
+ * $Id: V3Voter.java,v 1.92.2.1 2013-07-24 18:58:21 tlipkis Exp $
  */
 
 /*
@@ -932,21 +932,9 @@ public class V3Voter extends BasePoll {
     if (isSampledPoll()) {
       log.debug("Vote in sampled poll: "+inclusionPolicy.typeString());
     }
-    CachedUrlSet cus = voterUserData.getCachedUrlSet();
-    BlockHasher hasher = isSampledPoll() ?
-      new SampledBlockHasher(cus,
-			     -1, // XXX maxversions?
-			     initHasherDigests(),
-			     initHasherByteArrays(),
-			     new BlockEventHandler(),
-			     inclusionPolicy) :
-      new BlockHasher(cus,
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      new BlockEventHandler());
-    if (subChecker != null) {
-      hasher.setSubstanceChecker(subChecker);
-    }
+    BlockHasher hasher = makeHasher(voterUserData.getCachedUrlSet(),
+				    -1	// XXX
+				    );
     HashService hashService = theDaemon.getHashService();
     Deadline hashDeadline = task.getLatestFinish();
 
@@ -970,6 +958,29 @@ public class V3Voter extends BasePoll {
                 "out of poll " + getKey());
     }
     return scheduled;
+  }
+
+  BlockHasher makeHasher(CachedUrlSet cus, int maxVersions) {
+    BlockHasher hasher = isSampledPoll() ?
+      new SampledBlockHasher(cus,
+			     maxVersions,
+			     initHasherDigests(),
+			     initHasherByteArrays(),
+			     new BlockEventHandler(),
+			     inclusionPolicy) :
+      new BlockHasher(cus,
+		      maxVersions,
+		      initHasherDigests(),
+		      initHasherByteArrays(),
+		      new BlockEventHandler());
+    if (subChecker != null) {
+      hasher.setSubstanceChecker(subChecker);
+    }
+    if (CurrentConfig.getBooleanParam(V3Poller.PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
+				      V3Poller.DEFAULT_V3_EXCLUDE_SUSPECT_VERSIONS)) {
+      hasher.setExcludeSuspectVersions(true);
+    }
+    return hasher;
   }
 
   /**

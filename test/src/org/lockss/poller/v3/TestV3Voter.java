@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.19 2012-08-13 20:47:28 barry409 Exp $
+ * $Id: TestV3Voter.java,v 1.19.28.1 2013-07-24 18:58:21 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@
 package org.lockss.poller.v3;
 
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.plugin.*;
@@ -43,6 +43,7 @@ import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
+import org.lockss.hasher.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -53,7 +54,7 @@ public class TestV3Voter extends LockssTestCase {
   V3Voter voter;
   MockLockssDaemon lockssDaemon;
   PeerIdentity repairRequestor;
-  ArchivalUnit au;
+  MockArchivalUnit au;
   MockAuState aus;
   RepositoryNode repoNode;
   V3LcapMessage startMsg;
@@ -102,6 +103,17 @@ public class TestV3Voter extends LockssTestCase {
     getMockLockssDaemon().setNodeManager(nodeManager, au);
     nodeManager.setAuState(aus);
 
+    MockCachedUrlSet cus = (MockCachedUrlSet)au.getAuCachedUrlSet();
+    cus.setEstimatedHashDuration(1000);
+    List files = new ArrayList();
+    MockCachedUrl cu = (MockCachedUrl)au.addUrl(repairUrl, false, true);
+    // Add mock file content.
+    cu.setContent("This is content for repair url " + repairUrl);
+    files.add(cu);
+
+    cus.setHashItSource(files);
+    cus.setFlatItSource(files);
+  
     repairRequestor = findPid("TCP:[192.168.0.100]:9723");
 
     startMsg = new V3LcapMessage(au.getAuId(), "key", "1",
@@ -158,6 +170,34 @@ public class TestV3Voter extends LockssTestCase {
 				  "[1w,1.0],[20w,.1]");
     assertEquals(1.0, nominateWeight(1*WEEK, 0), .01);
     assertEquals(0.1, nominateWeight(20*WEEK, 0), .01);
+  }
+
+  public void testMakeHasher() throws Exception {
+    BlockHasher hasher = voter.makeHasher(au.getAuCachedUrlSet(), -1);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherSampled() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_ALL_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_MODULUS, "1000");
+    startMsg.setModulus(1000);
+    voter = new V3Voter(lockssDaemon, startMsg);
+    BlockHasher hasher = voter.makeHasher(au.getAuCachedUrlSet(), -1);
+    assertTrue("Hasher: " + hasher + " should be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherNoExcludeSuspect() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
+				  "false");
+    BlockHasher hasher = voter.makeHasher(au.getAuCachedUrlSet(), -1);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertFalse(hasher.isExcludeSuspectVersions());
   }
 
   static String PARAM_OVERHEAD_LOAD =
