@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.10 2006-06-02 20:27:16 smorabito Exp $
+ * $Id: MockMessageDigest.java,v 1.10.126.1 2013-07-24 18:59:26 tlipkis Exp $
  */
 
 /*
@@ -43,12 +43,12 @@ import java.util.*;
 
 public class MockMessageDigest extends MessageDigest implements Cloneable {
 
-  Vector inputList;
+  LinkedList<Byte> inputList;
 
 
   public MockMessageDigest(){
     super("Mock hash algorithm");
-    inputList = new Vector();
+    inputList = new LinkedList<Byte>();
   }
 
   /**
@@ -150,7 +150,7 @@ public class MockMessageDigest extends MessageDigest implements Cloneable {
   }
 
   protected void engineReset() {
-    inputList = new Vector();
+    inputList = new LinkedList<Byte>();
   }
 
   protected void engineUpdate(byte[] input, int offset, int len) {
@@ -163,8 +163,9 @@ public class MockMessageDigest extends MessageDigest implements Cloneable {
 
   protected byte[] engineDigest() {
     byte[] bytes = new byte[inputList.size()];
-    for (int ii=0; ii<inputList.size(); ii++ ) {
-      bytes[ii] = ((Byte)inputList.elementAt(ii)).byteValue();
+    int ix = 0;
+    for (byte v : inputList) {
+      bytes[ix++] = v;
     }
     return bytes;
   }
@@ -174,7 +175,7 @@ public class MockMessageDigest extends MessageDigest implements Cloneable {
    */
   public Object clone() {
     MockMessageDigest retVal = new MockMessageDigest();
-    retVal.inputList = (Vector)inputList.clone();
+    retVal.inputList = (LinkedList)inputList.clone();
     return retVal;
   }
 }
