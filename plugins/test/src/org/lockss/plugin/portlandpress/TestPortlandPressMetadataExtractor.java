@@ -1,5 +1,5 @@
 /*
- * $Id: TestPortlandPressMetadataExtractor.java,v 1.1 2013-01-24 22:40:18 alexandraohlson Exp $
+ * $Id: TestPortlandPressMetadataExtractor.java,v 1.2 2013-07-25 20:55:02 alexandraohlson Exp $
  */
 
 /*
@@ -41,8 +41,6 @@ import org.lockss.config.*;
 import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.aiaa.AIAAHtmlMetadataExtractorFactory;
-import org.lockss.plugin.copernicus.CopernicusRisMetadataExtractorFactory;
 import org.lockss.plugin.simulated.*;
 
 
