@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.5 2012-12-20 19:09:14 janicecheng Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.6 2013-07-25 22:07:47 alexandraohlson Exp $
  */
 
 /*
@@ -34,9 +34,13 @@ package org.lockss.plugin.iop;
 
 import java.io.InputStream;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.Div;
+import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -54,6 +58,10 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains variable links to other content ("users also read", "related review articles", etc.)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"),
+        // The right column is an accordion that contains toc anchor links, related articles, related review articles, etc
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "rightCol"),
+        // may not be an issue, but concerned that mathjax exposure will change
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "mathJaxControls"),
         // Last 10 articles viewed; not the best characterization but unique enough
         HtmlNodeFilters.tagWithAttribute("div", "class", "tabs javascripted"),
         // Contains the institution name and/or banner

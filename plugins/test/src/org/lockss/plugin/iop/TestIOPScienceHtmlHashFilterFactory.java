@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.1 2012-12-31 20:51:00 pgust Exp $
+ * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.2 2013-07-25 22:07:48 alexandraohlson Exp $
  */
 
 package org.lockss.plugin.iop;
@@ -41,8 +41,70 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
   private static final String WhiteSpace1 = "\n  <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n (543KB)\n </li>";
   
   private static final String WhiteSpace2 = "\n\n      <li><a href=\"/content/pdf/1477-7525-8-103.pdf\">PDF</a>\n       (543KB)\n      </li>";
-
+ 
   
+  private static final String mathJaxHtml =
+      "<div class=\"mathJaxControls\" style=\"display:none\">" +
+          "<!-- add mathjax logo here and hide mathjax text -->" +
+          "<a class=\"mjbadge\" href=\"http://www.mathjax.org/\">Mathjax</a>" +
+          "<a href=\"#\" id=\"mathJaxOn\">On</a> | <a href=\"#\" class=\"selectedMathJaxOption\" id=\"mathJaxOff\">Off</a>" +
+          "</div>" +
+          "<br clear=\"all\"/>";
+  private static final String mathJaxHtmlFiltered =
+          "<br clear=\"all\"/>";
+ 
+  private static final String rightColHtml =
+      "<div id=\"rightCol\">" +
+          "<ul class=\"accordion\">" +
+          "    <li><h5>Contents</h5>" +
+          "<ol class=\"accordion open\">" +
+          "<li><a href=\"#artAbst\">Abstract</a></li>" +
+          "    <li>" +
+          "        <h5>Related Articles</h5>" +
+          "        <ol class=\"accordion\">" +
+          "                <li>" +
+          "                    <a href=\"/xx?rel=sem&amp;relno=1\"" +
+          "                       title=\"Semicond. Sci. Technol., xx, yy\"" +
+          "                       >" +
+          "                            1. title here" +
+          "                    </a>" +
+          "                </li>" +
+          "                <li>" +
+          "                    <a href=\"/zz?rel=sem&amp;relno=2\"" +
+          "                       title=\"Semicond. Sci. Technol., zz, qq\"" +
+          "                       >" +
+          "                            2. another title here" +
+          "                    </a>" +
+          "                </li>" +
+          "        </ol>" +
+          "    </li>" +
+          "    <li>" +
+          "        <h5>Related Review Articles</h5>" +
+          "        <ol class=\"accordion\">" +
+          "                <li>" +
+          "                    <a href=\"/pp?rel=rev&amp;relno=1\"" +
+          "                       title=\"Semicond. Sci. Technol., pp, ss\"" +
+          "                       >" +
+          "                            1. title three" +
+          "                    </a>" +
+          "                </li>" +
+          "        </ol>" +
+          "    </li>" +
+          "<li>" +
+          "    <h5>Journal links</h5>" +
+          "    <ul class=\"accordion\">" +
+          "    <li><a href=\"/nn\" title=\"Journal home\">Journal home</a></li>" +
+          "    <li><a href=\"/nn/page/Scope\">Scope</a></li>" +
+          "    </ul>" +
+          "</li>" +
+          "</ul>" +
+          "<div id=\"tabStop\">&nbsp;</div>" +
+          "</div>" +
+          "<br clear=\"all\"/>";
+  private static final String rightColHtmlFiltered =
+          "<br clear=\"all\"/>";
+
+
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
@@ -61,5 +123,17 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
         ENC);
 
     assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
+    
+    /* rightCol test */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(rightColHtml),
+        ENC);
+    assertEquals(rightColHtmlFiltered,StringUtil.fromInputStream(inA));
+    
+    /* mathjax text */
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(mathJaxHtml),
+        ENC);
+    assertEquals(mathJaxHtmlFiltered,StringUtil.fromInputStream(inA));
+        
+    
   }
 }
