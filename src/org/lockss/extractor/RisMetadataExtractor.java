@@ -46,7 +46,7 @@ import org.lockss.util.*;
  * first line of data should always be the TY (reference type)
  * there may be empty lines before the first line
  */
-public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
+public class RisMetadataExtractor implements FileMetadataExtractor {
 	
 	static Logger log = Logger.getLogger("RisMetadataExtractor");
 	private MultiMap risTagToMetadataField;
@@ -123,6 +123,16 @@ public class RisMetadataExtractor extends SimpleFileMetadataExtractor {
 		delimiter = delim;
 	}
 	*/
+	
+	@Override
+	public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+	    throws IOException, PluginException {
+	  ArticleMetadata md = extract(target, cu);
+	  if (md != null) {
+	    emitter.emitMetadata(cu, md);
+	  }
+	}	
+
 	/**
 	 * Extract metadata from the content of the cu, which should be an RIS file.
 	 * Reads line by line inserting the 2 character code and value into the raw map.
