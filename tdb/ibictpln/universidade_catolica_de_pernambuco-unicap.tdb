@@ -38,9 +38,9 @@
       param[base_url] = http://www.unicap.br/ojs-2.3.4/
       param[journal_id] = paralellus
 
-      au < manifest ; 2010 ; 1 ; Paralellus Volume 1 ; 2010 >
-      au < manifest ; 2011 ; 2 ; Paralellus Volume 2 ; 2011 >
-      au < manifest ; 2012 ; 3 ; Paralellus Volume 3 ; 2012 >
+      au < doNotProcess ; 2010 ; 1 ; Paralellus Volume 1 ; 2010 >
+      au < doNotProcess ; 2011 ; 2 ; Paralellus Volume 2 ; 2011 >
+      au < doNotProcess ; 2012 ; 3 ; Paralellus Volume 3 ; 2012 >
       au < expected ; 2013 ; 4 ; Paralellus Volume 4 ; 2013 >
 
   }
