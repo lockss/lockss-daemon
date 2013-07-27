@@ -17,11 +17,11 @@
       param[base_url] = http://www.atena.org.br/revista/ojs-2.2.3-06/
       param[journal_id] = Ambiente
 
-      au < manifest ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
-      au < manifest ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
+      au < doNotProcess ; 2009 ; 1 ; Revista Ambiente Contábil Volume 1 ; 2009 >
+      au < doNotProcess ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2 ; 2010 >
+      au < doNotProcess ; 2011 ; 3 ; Revista Ambiente Contábil Volume 3 ; 2011 >
+      au < doNotProcess ; 2012 ; 4 ; Revista Ambiente Contábil Volume 4 ; 2012 >
+      au < doNotProcess ; 2013 ; 5 ; Revista Ambiente Contábil Volume 5 ; 2013 >
 
   }
 

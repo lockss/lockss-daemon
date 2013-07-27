@@ -28,7 +28,7 @@
     au < released ; 2006 ; 7 ; Educação Volume 7 ; 2006 >
     au < released ; 2007 ; 8 ; Educação Volume 8 ; 2007 >
     au < released ; 2008 ; 9 ; Educação Volume 9 ; 2008 >
-    au < manifest ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
+    au < doNotProcess ; 2009 ; 10 ; Educação Volume 10 ; 2009 >
     au < released ; 2010 ; 11 ; Educação Volume 11 ; 2010 >
     au < notReady ; 2011 ; 12 ; Educação Volume 12 ; 2011 >
     au < notReady ; 2012 ; 13 ; Educação Volume 13 ; 2012 >
@@ -187,10 +187,10 @@
 
     param[journal_id] = revislav
 
-    au < ready ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 >
-    au < ready ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 >
-    au < ready ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 >
-    au < ready ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 >
+    au < doNotProcess ; 2008 ; 0001 ; Revista Digital do LAV Volume 1 ; 0001 >
+    au < doNotProcess ; 2009 ; 0002 ; Revista Digital do LAV Volume 2 ; 0002 >
+    au < doNotProcess ; 2010 ; 0003 ; Revista Digital do LAV Volume 3 ; 0003 >
+    au < doNotProcess ; 2011 ; 0004 ; Revista Digital do LAV Volume 4 ; 0004 >
     au < released ; 2012 ; 2012 ; Revista Digital do LAV Volume 2012 ; 2012 >
     au < manifest ; 2013 ; 2013 ; Revista Digital do LAV Volume 2013 ; 2013 >
 
