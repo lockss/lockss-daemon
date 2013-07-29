@@ -17132,7 +17132,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
     au < released ; crawling ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; >
     au < released ; crawling ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
-    au < testing ; exists ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
+    au < released ; manifest ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
 
     }
@@ -17245,7 +17245,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
     au < released ; crawling ; 2011 ; The Quarterly Journal of Mathematics Volume 62 ; 62 ; >
-    au < testing ; exists ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
+    au < released ; manifest ; 2012 ; The Quarterly Journal of Mathematics Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mathematics Volume 64 ; 64 ; >
 
     }
@@ -17340,7 +17340,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
     au < released ; crawling ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 64 ; 64 ; >
-    au < testing ; exists ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
+    au < released ; manifest ; 2012 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 66 ; 66 ; >
 
     }
@@ -17524,7 +17524,7 @@
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 145 ; 145 ; >
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 146 ; 146 ; >
     au < released ; crawling ; 2011 ; Radiation Protection Dosimetry Volume 147 ; 147 ; >
-    au < testing ; exists ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
+    au < released ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
     au < testing ; exists ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; >
     au < testing ; exists ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; >
     au < testing ; exists ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
@@ -17593,7 +17593,7 @@
     au < released ; crawling ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Refugee Survey Quarterly Volume 29 ; 29 ; >
     au < released ; crawling ; 2011 ; Refugee Survey Quarterly Volume 30 ; 30 ; >
-    au < testing ; exists ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
+    au < released ; manifest ; 2012 ; Refugee Survey Quarterly Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Refugee Survey Quarterly Volume 32 ; 32 ; >
 
     }
@@ -17733,7 +17733,7 @@
     param[base_url] = http://rcfs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < testing ; exists ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
+    au < released ; manifest ; 2012 ; Review of Corporate Finance Studies Volume 1 ; 1 ; >
     au < expected ; exists ; 2013 ; Review of Corporate Finance Studies Volume 2 ; 2 ; >
 
   }
@@ -17936,7 +17936,7 @@
     au < released ; crawling ; 2009 ; The Review of English Studies Volume 60 ; 60 ; >
     au < released ; crawling ; 2010 ; The Review of English Studies Volume 61 ; 61 ; >
     au < released ; crawling ; 2011 ; The Review of English Studies Volume 62 ; 62 ; >
-    au < testing ; exists ; 2012 ; The Review of English Studies Volume 63 ; 63 ; >
+    au < released ; manifest ; 2012 ; The Review of English Studies Volume 63 ; 63 ; >
     au < crawling ; exists ; 2013 ; The Review of English Studies Volume 64 ; 64 ; >
 
     }
@@ -18557,7 +18557,7 @@
     au < zapped ; down ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Social History of Medicine Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; Social History of Medicine Volume 24 ; 24 ; >
-    au < testing ; exists ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
+    au < released ; manifest ; 2012 ; Social History of Medicine Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Social History of Medicine Volume 26 ; 26 ; >
 
     }
@@ -18727,7 +18727,7 @@
     au < released ; crawling ; 2009 ; Social Work Volume 54 ; 54 ; >
     au < zapped ; down ; 2010 ; Social Work Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; Social Work Volume 56 ; 56 ; >
-    au < testing ; exists ; 2012 ; Social Work Volume 57 ; 57 ; >
+    au < released ; manifest ; 2012 ; Social Work Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; Social Work Volume 58 ; 58 ; >
 
   }
@@ -18762,7 +18762,7 @@
     au < zapped ; down ; 2009 ; Social Work Research Volume 33 ; 33 ; >
     au < zapped ; down ; 2010 ; Social Work Research Volume 34 ; 34 ; >
     au < released ; crawling ; 2011 ; Social Work Research Volume 35 ; 35 ; >
-    au < testing ; exists ; 2012 ; Social Work Research Volume 36 ; 36 ; >
+    au < released ; manifest ; 2012 ; Social Work Research Volume 36 ; 36 ; >
     au < crawling ; exists ; 2013 ; Social Work Research Volume 37 ; 37 ; >
 
   }
@@ -19588,7 +19588,7 @@
     au < crawling ; exists ; 2009 ; Uniform Law Review Volume 14 ; 14 ; >
     au < crawling ; exists ; 2010 ; Uniform Law Review Volume 15 ; 15 ; >
     au < crawling ; exists ; 2011 ; Uniform Law Review Volume 16 ; 16 ; >
-    au < testing ; exists ; 2012 ; Uniform Law Review Volume 17 ; 17 ; >
+    au < released ; manifest ; 2012 ; Uniform Law Review Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Uniform Law Review Volume 18 ; 18 ; >
 
     }
