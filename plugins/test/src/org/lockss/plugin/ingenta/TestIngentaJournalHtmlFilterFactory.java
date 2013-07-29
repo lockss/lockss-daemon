@@ -57,7 +57,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     {"div", "class", "heading"},
     // filter out <div class="advertisingbanner"> that encloses 
     // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
-    {"div", "class", "advertisingbanner"},
+   {"div", "class", "advertisingbanner"},
     // filter out <li class="data"> that encloses a reference for the
     // article: reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
@@ -82,8 +82,8 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     {"div", "class", "right-col-download"},                                                               
     // Filter out <div id="cart-navbar">...</div>
     {"div", "id", "cart-navbar"},   
-    //   // Filter out <div class="heading-macfix article-access-options">...</div>
-    //  {"div", "class", "heading-macfix article-access-options"},                                                                           
+    // Filter out <div class="heading-macfix">...</div>
+    {"div", "class", "heading-macfix"},                                                                           
     // Filter out <div id="baynote-recommendations">...</div>
     {"div", "id", "baynote-recommendations"},
     // Filter out <div id="bookmarks-container">...</div>
@@ -145,7 +145,7 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       assertEquals(filteredHtml, StringUtil.fromInputStream(htmlIn));
     }
   }
-  //test some straight html strings with explicit tests
+  //test AdvertisingBannerHtml with explicit tests
   private static final String AdvertisingBannerHtml =
 	        "<p>The chickens were decidedly cold.</p>" +
 	          "<div class=\"advertisingbanner\"> " +
@@ -156,6 +156,18 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 	          "</div>";
 	        
   private static final String AdvertisingBannerHtmlFiltered =
+	        "<p>The chickens were decidedly cold.</p>" ;
+
+  //test span rust with explicit tests
+  private static final String HeadingMacfixHtml =
+	        "<p>The chickens were decidedly cold.</p>" +
+	          "<div class=\"heading-macfix\"> " +
+	          "<span class=\"rust\"> 2" +
+	          "</span> references have been identified for this article, " +
+	          "of which <span class=\"rust\">2</span> have matches and can be" +
+	          "accessed below </div>";
+	        
+  private static final String HeadingMacfixHtmlFiltered =
 	        "<p>The chickens were decidedly cold.</p>" ;
 
   public void testFilterAdvertising() throws Exception {
