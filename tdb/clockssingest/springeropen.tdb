@@ -128,6 +128,21 @@
     {
   
         title <
+          name = Botanical Studies ;
+          eissn = 1999-3110 
+        >
+  
+        param[base_url] = http://www.as-botanicalstudies.com/
+        param[journal_issn] = 1999-3110 
+        comment[platform] = BMC
+  
+        au < expected ; exists ; 2013 ; Botanical Studies Volume 54 ; 54 >
+  
+    }
+  
+    {
+  
+        title <
           name = Boundary Value Problems ;
           issn = 1687-2762 ;
           eissn = 1687-2770 ;
@@ -335,6 +350,21 @@
         au < exists ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < exists ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
         au < expected ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
+  
+    }
+  
+    {
+  
+        title <
+          name = Empirical Research in Vocational Education and Training ;
+          issn = 1877-6345 
+        >
+  
+        param[base_url] = http://www.ervet-journal.com/
+        param[journal_issn] = 1877-6345 
+        comment[platform] = BMC
+  
+        au < expected ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
   
     }
   
