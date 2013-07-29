@@ -16,7 +16,7 @@
   
     param[journal_id] = loosestrife
 
-    au < testing ; 2011 ; Loosestrife: A Journal of Prairie Writing Volume 1 ; 1 ; 2011 >
+    au < ready ; 2011 ; Loosestrife: A Journal of Prairie Writing Volume 1 ; 1 ; 2011 >
 
   }
   
@@ -30,8 +30,8 @@
 
     au < released ; 2010 ; Prairie Fire Review of Books Volume 10 ; 10 ; 2010 >
     au < released ; 2011 ; Prairie Fire Review of Books Volume 11 ; 11 ; 2011 >
-    au < testing ; 2012 ; Prairie Fire Review of Books Volume 12 ; 12 ; 2012 >
-    au < testing ; 2013 ; Prairie Fire Review of Books Volume 13 ; 13 ; 2013 >
+    au < ready ; 2012 ; Prairie Fire Review of Books Volume 12 ; 12 ; 2012 >
+    au < ready ; 2013 ; Prairie Fire Review of Books Volume 13 ; 13 ; 2013 >
 
   }
   
@@ -44,13 +44,13 @@
   
     param[journal_id] = sa_jhe
 
-    au < testing ; 1996 ; Summer Academe: A Journal of Higher Education Volume 1 ; 1 ; 1996 >
-    au < testing ; 1997 ; Summer Academe: A Journal of Higher Education Volume 2 ; 2 ; 1997 >
-    au < testing ; 2000 ; Summer Academe: A Journal of Higher Education Volume 3 ; 3 ; 2000 >
-    au < testing ; 2003 ; Summer Academe: A Journal of Higher Education Volume 4 ; 4 ; 2003 >
-    au < testing ; 2005 ; Summer Academe: A Journal of Higher Education Volume 5 ; 5 ; 2005 >
-    au < testing ; 2009 ; Summer Academe: A Journal of Higher Education Volume 6 ; 6 ; 2009 >
-    au < testing ; 2013 ; Summer Academe: A Journal of Higher Education Volume 7 ; 7 ; 2013 >
+    au < ready ; 1996 ; Summer Academe: A Journal of Higher Education Volume 1 ; 1 ; 1996 >
+    au < manifest ; 1997 ; Summer Academe: A Journal of Higher Education Volume 2 ; 2 ; 1997 >
+    au < ready ; 2000 ; Summer Academe: A Journal of Higher Education Volume 3 ; 3 ; 2000 >
+    au < ready ; 2003 ; Summer Academe: A Journal of Higher Education Volume 4 ; 4 ; 2003 >
+    au < manifest ; 2005 ; Summer Academe: A Journal of Higher Education Volume 5 ; 5 ; 2005 >
+    au < ready ; 2009 ; Summer Academe: A Journal of Higher Education Volume 6 ; 6 ; 2009 >
+    au < ready ; 2013 ; Summer Academe: A Journal of Higher Education Volume 7 ; 7 ; 2013 >
 
   }
   
