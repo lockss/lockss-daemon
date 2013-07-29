@@ -4,9 +4,6 @@
     name = University of Alabama at Birmingham
   >
   
-  param[base_url] = http://oh.mhsl.uab.edu/
-  plugin = edu.uab.adpn.oralhistory.UABOralHistoryPlugin
-  implicit < status ; name >
 
   {
 
@@ -14,8 +11,26 @@
       name = University of Alabama at Birmingham Oral History Collection
     >
     
+    plugin = edu.uab.adpn.oralhistory.UABOralHistoryPlugin
+    param[base_url] = http://oh.mhsl.uab.edu/
+    implicit < status ; name >
+
     au < released ; University of Alabama at Birmingham Oral History Collection >
 
+  }
+
+  {
+
+    title <
+      name = University of Alabama at Birmingham Collections
+    >
+    
+    plugin = edu.uab.adpn.directory.UabDirectoryPlugin
+    param[base_url] = http://archie.mhsl.uab.edu/LOCKSS/
+    implicit < status ; name ; param[directory] >
+    
+    au < testing ; University of Alabama at Birmingham Collections: Spring 2013 ETDs ; 2013_Spring_ETDs >
+    
   }
 
 }

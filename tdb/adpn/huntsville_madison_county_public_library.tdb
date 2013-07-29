@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Huntsville-Madison County Public Library
+  >
+  
+  {
+  
+    title <
+      name = Huntsville-Madison County Public Library Collections
+    >
+  
+    plugin = org.hmcpl.directory.HmcplDirectoryPlugin
+    param[base_url] = http://hmcpl.org/collections/archives/
+    implicit < status ; name ; param[directory] >
+    
+    au < testing ; Huntsville-Madison County Public Library Collections: Dr. Fearn's Notebook Collection ; Dr.FearnNotesandFormulas >
+  
+  }
+
+}
