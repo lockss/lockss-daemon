@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.6 2013-07-23 18:53:34 etenbrink Exp $
+ * $Id: TestMetaPressHtmlHashFilterFactory.java,v 1.7 2013-07-29 16:52:33 alexandraohlson Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
   static final String footerInfo2Html =
       "<div class=\"footer-copyright-privacy\">" +
           "<div class=\"DynamicContent\">" +
-          "Copyright&nbsp;©" +
+          "Copyright&nbsp;\u00a9" + //unicode 00A9 is the copyright symbol
           "</div>" +
           "</div>" +
           "<div class=\"FooterUserDetailContainer\">" +
@@ -144,7 +144,7 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
   static final String footerInfo2Filtered =
       "<div class=\"footer-copyright-privacy\">" +
           "<div class=\"DynamicContent\">" +
-          "Copyright&nbsp;©" +
+          "Copyright&nbsp;\u00a9" +
           "</div>" +
           "</div>";
 
@@ -171,11 +171,12 @@ public class TestMetaPressHtmlHashFilterFactory extends LockssTestCase {
 
     assertEquals(personalMenuFiltered,StringUtil.fromInputStream(inA));
     
+    /* Use encoding to generate the InputStream to handle int'l char */
     inA = fact.createFilteredInputStream(mau,
-        new StringInputStream(footerInfo2Html), ENC);
-    inT = new InputStreamReader(new StringInputStream(footerInfo2Filtered), 
-        ENC);
-
+        new ByteArrayInputStream(footerInfo2Html.getBytes(ENC)), ENC);
+    inT = new InputStreamReader(new ByteArrayInputStream(footerInfo2Filtered.getBytes(ENC)), 
+        ENC); 
+ 
     assertEquals(StringUtil.fromReader(inT),StringUtil.fromInputStream(inA));
     
   }
