@@ -63,8 +63,8 @@
       issnl = 0257-7941
     >
 
-    param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl
-	comment[asl] = the url structure is the new version
+    param[base_url] = http://www.ayurvedajournals.org/scienceoflife/asl/index.php/asl/
+    comment[asl] = the url structure is the new version
     comment[0] = base_url & journal are not up yet.
 
   }
@@ -468,7 +468,7 @@
       issnl = 1735-3327
    >
 
-    param[base_url] = http://drj.mui.ac.ir/index.php/drj
+    param[base_url] = http://drj.mui.ac.ir/index.php/drj/
     comment[drj] = the url structure is the new version
 
     au < exists ; 2003 ; Dental Research Journal Volume 1 (2003) ; 2003 ; 1 >
@@ -1110,7 +1110,7 @@
 
     param[base_url] = http://www.ijoem.com/
     param[journal_issn] = 0973-2284
-	comment[ijoem] =  the issns are not consistent between medknow website and the journal's website
+    comment[ijoem] =  the issns are not consistent between medknow website and the journal's website
 
     au < exists ; 2003 ; Indian Journal of Occupational and Environmental Medicine Volume 7 ; 2003 ; 7 >
     au < exists ; 2004 ; Indian Journal of Occupational and Environmental Medicine Volume 8 ; 2004 ; 8 >
@@ -1861,8 +1861,8 @@
       issnl = 2008-7802 
     >
 
-    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm
-	comment[ijpm] = the url structure is the new version
+    param[base_url] = http://ijpm.mui.ac.ir/index.php/ijpm/
+    comment[ijpm] = the url structure is the new version
 
     au < exists ; 2010 ; International Journal of Preventive Medicine Volume 1 ; 2010 ; 1 >
     au < exists ; 2011 ; International Journal of Preventive Medicine Volume 2 ; 2011 ; 2 >
@@ -1938,8 +1938,8 @@
       issnl = 1735-9066
    >
 
-    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr
-	comment[ijnmr] = the url structure is the new version
+    param[base_url] = http://ijnmr.mui.ac.ir/index.php/ijnmr/
+    comment[ijnmr] = the url structure is the new version
 
     au < exists ; 2002 ; Iranian Journal of Nursing and Midwifery Research Volume 7 ; 2002 ; 7 >
     au < exists ; 2003 ; Iranian Journal of Nursing and Midwifery Research Volume 8 ; 2003 ; 8 >
@@ -2664,8 +2664,8 @@
       issnl = 2228-7477
    >
 
-    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss
-	comment[jmss] = the url structure is the new version
+    param[base_url] = http://jmss.mui.ac.ir/index.php/jmss/
+    comment[jmss] = the url structure is the new version
 
     au < exists ; 2011 ; Journal of Medical Signals & Sensors Volume 1 ; 2011 ; 1 >
     au < exists ; 2012 ; Journal of Medical Signals & Sensors Volume 2 ; 2012 ; 2 >
@@ -2979,9 +2979,9 @@
       issnl = 1735-1995
    >
 
-    param[base_url] = http://www.journals.mui.ac.ir/jrms
+    param[base_url] = http://www.journals.mui.ac.ir/jrms/
     comment[jrms] = the url structure is the new version
-	
+    
     {
       attr[au_coverage_depth] = abstracts
       
@@ -3514,8 +3514,8 @@
       issnl = 1735-5362
     >
 
-    param[base_url] = http://rps.mui.ac.ir/index.php/jrps
- 	comment[jrps] = the url structure is the new version
+    param[base_url] = http://rps.mui.ac.ir/index.php/jrps/
+    comment[jrps] = the url structure is the new version
 
     au < exists ; 2006 ; Research in Pharmaceutical Sciences Volume 1 ; 2006 ; 1 >
     au < exists ; 2007 ; Research in Pharmaceutical Sciences Volume 2 ; 2007 ; 2 >
@@ -3589,7 +3589,7 @@
    >
 
     param[base_url] = http://www.saudioj.org/
-	comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
+    comment[soj] = the website info for this journal is incorrect in Medknow Publications website.
     comment[0] = base_url & journal are not up yet
 
 
