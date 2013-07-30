@@ -5598,7 +5598,7 @@
         issnl = 2050-490X
       >
 
-      param[base_url] = http://www.regenmedres.com
+      param[base_url] = http://www.regenmedres.com/
       param[journal_issn] = 2050-490X
 
       au < expected ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
