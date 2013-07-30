@@ -20573,7 +20573,7 @@
       eissn = 2049-5846
     >
 
-    param[base_url] = http://migration.oxfordjournals.org
+    param[base_url] = http://migration.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -20592,7 +20592,7 @@
       issn = 0375-9687 
     >
 
-    param[base_url] = http://ptpsupp.oxfordjournals.org
+    param[base_url] = http://ptpsupp.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
