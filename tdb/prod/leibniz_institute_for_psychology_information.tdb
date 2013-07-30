@@ -6,8 +6,8 @@
   >
 
       implicit < status ; year ; name ; param[year] >
-      param[base_url] = http://www.psychopen.eu
-      plugin = needs.plgin
+      param[base_url] = http://www.psychopen.eu/
+      plugin = needs.plugin
 
   {
     title <

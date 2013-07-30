@@ -5,7 +5,7 @@
   >
 
       implicit < status ; year ; name ; param[year] >
-      plugin = needs.plgin
+      plugin = needs.plugin
 
   {
     title <
@@ -13,7 +13,7 @@
       issn = 1841-0413
     >
 
-      param[base_url] = http://www.psychopen.eu
+      param[base_url] = http://www.psychopen.eu/
       param[journal_id] = ejop
   
   }
@@ -24,7 +24,7 @@
       issn = 2195-3325
     >
 
-      param[base_url] = http://www.psychopen.eu
+      param[base_url] = http://www.psychopen.eu/
       param[journal_id] = jspp
   
 
@@ -36,7 +36,7 @@
       issn = 1981-6472
     >
 
-      param[base_url] = http://www.psychopen.eu
+      param[base_url] = http://www.psychopen.eu/
       param[journal_id] = interpersona
   
   }
@@ -47,7 +47,7 @@
       issn = 2193-7281
     >
 
-      param[base_url] = http://www.psychopen.eu
+      param[base_url] = http://www.psychopen.eu/
       param[journal_id] = psyct
   
   }
@@ -58,7 +58,7 @@
       issn = 2182-438X
     >
 
-      param[base_url] = http://www.psychopen.eu
+      param[base_url] = http://www.psychopen.eu/
       param[journal_id] = pch
   
   }
