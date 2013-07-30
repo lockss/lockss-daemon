@@ -18,7 +18,7 @@
       param[base_url] = http://digdata1.lib.auburn.edu/AAESpub_AULibraries/Bulletins/
 
       au < testing ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 001-400 ; Bulletins_001_400 >
-      au < testing ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 401-700 ; Bulletins_401_700 >
+      au < releasing ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 401-700 ; Bulletins_401_700 >
 
     }
     
@@ -36,7 +36,7 @@
 
       au < testing ; Auburn University AAES Publications (Outsourced) Digital Collection: A folders ; A_folders >
       au < testing ; Auburn University AAES Publications (Outsourced) Digital Collection: B-G folders ; B_G_folders >
-      au < testing ; Auburn University AAES Publications (Outsourced) Digital Collection: H folders ; H_folders >
+      au < releasing ; Auburn University AAES Publications (Outsourced) Digital Collection: H folders ; H_folders >
       au < testing ; Auburn University AAES Publications (Outsourced) Digital Collection: I-Z folders ; I_Z_folders >
       
     }
@@ -158,7 +158,7 @@
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters 0-B ; Letters_0_B >
       au < testing ; Auburn University Civil War Documents Digital Collection: Letters: Letters C-D ; Letters_C_D >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters E-K ; Letters_E_K >
-      au < ready ; Auburn University Civil War Documents Digital Collection: Letters: Letters L-M ; Letters_L_M >
+      au < releasing ; Auburn University Civil War Documents Digital Collection: Letters: Letters L-M ; Letters_L_M >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters N-Q ; Letters_N_Q >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters R-S ; Letters_R_S >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters T-Z ; Letters_T_Z >
