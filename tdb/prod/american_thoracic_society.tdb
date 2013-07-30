@@ -77,7 +77,7 @@
     
       plugin = needs.plugin
       implicit < status ; year ; name ; param[volume_name] >
-      param[base_url] = http://www.atsjournals.org/journal/ajrccm
+      param[base_url] = http://www.atsjournals.org/journal/ajrccm/
       
       au < exists ; 1987 ; American Journal of Respiratory and Critical Care Medicine Volume 136 ; 136 >
       au < exists ; 1988 ; American Journal of Respiratory and Critical Care Medicine Volume 137 ; 137 >
