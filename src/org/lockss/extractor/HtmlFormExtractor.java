@@ -307,37 +307,28 @@ public class HtmlFormExtractor {
     FormFieldRestrictions restrictions = null;
     if(m_fieldRestrictions != null)
     {
-      if(id != null) {
-        restrictions = m_fieldRestrictions.get(FORM_ID);
-        if(restrictions != null &&  !restrictions.isAllowed(id))
-        {
-          return false;
-        }
-      }
-
-      if(name != null)
+      restrictions = m_fieldRestrictions.get(FORM_ID);
+      if(restrictions != null &&  !restrictions.isAllowed(id))
       {
-        restrictions = m_fieldRestrictions.get(FORM_NAME);
-        if(restrictions != null && !restrictions.isAllowed(name))
-        {
-          return false;
-        }
+        return false;
       }
-      if(action != null) {
-        restrictions = m_fieldRestrictions.get(FORM_ACTION);
-        if(restrictions != null && !restrictions.isAllowed(action))
-        {
-          return false;
-        }
+      restrictions = m_fieldRestrictions.get(FORM_NAME);
+      if(restrictions != null && !restrictions.isAllowed(name))
+      {
+        return false;
       }
 
-      if(val != null) {
-        restrictions = m_fieldRestrictions.get(SUBMIT_VALUE);
-        if(restrictions != null && !restrictions.isAllowed(val))
-        {
-          return false;
-        }
+      restrictions = m_fieldRestrictions.get(FORM_ACTION);
+      if(restrictions != null && !restrictions.isAllowed(action))
+      {
+        return false;
       }
+      restrictions = m_fieldRestrictions.get(SUBMIT_VALUE);
+      if(restrictions != null && !restrictions.isAllowed(val))
+      {
+        return false;
+      }
+
     }
     return true;
   }
@@ -1190,7 +1181,7 @@ public class HtmlFormExtractor {
    * this is the union of the include list (if non-null) less the exclude list
    * (if non-null)
    */
-  public static class FormFieldRestrictions{
+  public static class FormFieldRestrictions {
     Set<String> m_include;
     Set<String> m_exclude;
 
@@ -1229,7 +1220,6 @@ public class HtmlFormExtractor {
       boolean allow = true;
 
       if(m_exclude != null) {
-
         allow = !m_exclude.contains(value);
       }
       if(allow && m_include != null) {
