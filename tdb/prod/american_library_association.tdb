@@ -15,7 +15,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.cro3.org
+      param[base_url] = http://www.cro3.org/
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1988 ; Choice Reviews Online Volume 26 ; 26 >
