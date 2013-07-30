@@ -147,7 +147,7 @@ We are pleased to announce that %s additional archival %s now available for pres
 
   s = breakdownByPublisher(s, lst)
 
-  s = s + '''Please add these AUs to your LOCKSS box by logging in to the Web-based user interface and selecting Journal Configuration, then Add Titles.
+  s = s + '''Please add these AUs to your LOCKSS box by logging in to the Web-based user interface and selecting Journal Configuration, then Add AUs.
 
 If you encounter any problem in the process or have any question, do not reply to this message; instead please send a help request to lockss-support@lockss.org for assistance.
 
@@ -214,11 +214,11 @@ Help: lockss-support (at) lockss (dot) org
 
 STEP 1: ACCESS THE WEB USER INTERFACE
 
-Access the Web user interface of your LOCKSS box, for instance http://lockssbox.university.edu:8081/ (replace lockssbox.university.edu with the host name of the LOCKSS box at your institution), then click "Journal Configuration", then "Add Titles".
+Access the Web user interface of your LOCKSS box, for instance http://lockssbox.university.edu:8081/ (replace lockssbox.university.edu with the host name of the LOCKSS box at your institution), then click "Journal Configuration", then "Add AUs".
 
 STEP 2: SELECT GROUPS OF ARCHIVAL UNITS
 
-Select the groups of archival units you want to see in step 3, such as "All Oxford University Press AUs", then click the "Select Titles" button.
+Select the groups of archival units you want to see in step 3, such as "All Oxford University Press AUs", then click the "Select AUs" button.
 
 STEP 3: SELECT ARCHIVAL UNITS
 
