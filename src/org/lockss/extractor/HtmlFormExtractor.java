@@ -91,7 +91,15 @@ public class HtmlFormExtractor {
     "text", "search", "tel", "url", "email", "password",
     "datetime", "date", "month", "week", "time", "datetime-local", "number",
     "range", "color"
-  );
+  )
+      ;
+  /**
+   * Map key values for determining whether or not to process a form
+   */
+  public static final String FORM_ID = "form_id";
+  public static final String FORM_NAME = "form_name";
+  public static final String FORM_ACTION = "form_action";
+  public static final String SUBMIT_VALUE = "form_submit_value";
 
   /**
    * The max number of urls a form extractor should generate
@@ -144,6 +152,7 @@ public class HtmlFormExtractor {
    * The key used to store the currently open form
    */
   private static final String DEF_OPEN_FORM_ID = "*open*";
+
 
   /**
    * The table of FormFieldRestrictions by field name
@@ -290,6 +299,47 @@ public class HtmlFormExtractor {
 
     }
     m_forms.put(el.id(), new FormUrlGenerator(el));
+  }
+
+  protected boolean shouldProcessForm(String id, String name,
+                                      String action, String val) {
+    boolean process_form = true;
+    FormFieldRestrictions restrictions = null;
+    if(m_fieldRestrictions != null)
+    {
+      if(id != null) {
+        restrictions = m_fieldRestrictions.get(FORM_ID);
+        if(restrictions != null &&  !restrictions.isAllowed(id))
+        {
+          return false;
+        }
+      }
+
+      if(name != null)
+      {
+        restrictions = m_fieldRestrictions.get(FORM_NAME);
+        if(restrictions != null && !restrictions.isAllowed(name))
+        {
+          return false;
+        }
+      }
+      if(action != null) {
+        restrictions = m_fieldRestrictions.get(FORM_ACTION);
+        if(restrictions != null && !restrictions.isAllowed(action))
+        {
+          return false;
+        }
+      }
+
+      if(val != null) {
+        restrictions = m_fieldRestrictions.get(SUBMIT_VALUE);
+        if(restrictions != null && !restrictions.isAllowed(val))
+        {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 
   /**
@@ -523,6 +573,11 @@ public class HtmlFormExtractor {
     String m_id;
 
     /**
+     * the form name
+     */
+    String m_name;
+
+    /**
      * the list of submit button or input elements for this form
      */
     List<Element> m_submits;
@@ -546,6 +601,7 @@ public class HtmlFormExtractor {
       // encoding type for post (url encoding is always used for put)
       m_enctype = el.attr("enctype");
       m_id = el.attr("id");
+      m_name = el.attr("name");
 
       if(StringUtil.isNullString(m_charset) ||
         !Charset.isSupported(m_charset)) {
@@ -803,23 +859,25 @@ public class HtmlFormExtractor {
         String name = el.attr("name");
         String type = el.attr("type");
         String val = el.attr("value");
-        if(!StringUtil.isNullString(name) && !StringUtil.isNullString(val)) {
-          // add the name/value pair for this submit
-          addControl(type, name, val, true, false);
-        }
-
-        FormElementCollector m_collector =
-          new FormElementCollector(this, m_controls, action,
-                                   method, enctype);
-        for(String link : m_collector) {
-          if(!StringUtil.isNullString(link)) {
-            m_numFormUrls++;
-            cb.foundLink(link);
+        // make sure we should process this form
+        if(shouldProcessForm(m_id, m_name, action, val)) {
+          if(!StringUtil.isNullString(name) && !StringUtil.isNullString(val)) {
+            // add the name/value pair for this submit
+            addControl(type, name, val, true, false);
           }
-        }
-        if(name != null) {
-          // now remove any added submit name:value pair
-          m_controls.remove(name);
+          FormElementCollector m_collector =
+              new FormElementCollector(this, m_controls, action,
+                  method, enctype);
+          for(String link : m_collector) {
+            if(!StringUtil.isNullString(link)) {
+              m_numFormUrls++;
+              cb.foundLink(link);
+            }
+          }
+          if(name != null) {
+            // now remove any added submit name:value pair
+            m_controls.remove(name);
+          }
         }
       }
     }
