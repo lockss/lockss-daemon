@@ -4736,7 +4736,7 @@ comment[bmr] = journal archive available, but no new volumes
         eissn = 2052-3211
       >
 
-      param[base_url] = http://www.joppp.org
+      param[base_url] = http://www.joppp.org/
       param[journal_issn] = 2052-3211
 
       au < expected ; exists ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 1 ; 1 >
@@ -5535,7 +5535,7 @@ comment[bmr] = journal archive available, but no new volumes
         issnl = 2050-490X
       >
 
-      param[base_url] = http://www.regenmedres.com
+      param[base_url] = http://www.regenmedres.com/
       param[journal_issn] = 2050-490X
 
       au < expected ; exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
