@@ -3,7 +3,7 @@
   publisher <
     name = Future Science ;
     info[contract] = 2012 ;
-    info[tester] = 8
+    info[tester] = 7
   >
 
   plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
@@ -23,7 +23,7 @@
     au < manifest ; exists ; 2009 ; Bioanalysis Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Bioanalysis Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Bioanalysis Volume 3 ; 3 >
-    au < testing ; exists ; 2012 ; Bioanalysis Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; Bioanalysis Volume 4 ; 4 >
     au < expected ; exists ; 2013 ; Bioanalysis Volume 5 ; 5 >
     
   }
@@ -40,7 +40,7 @@
 
     au < manifest ; exists ; 2010 ; Biofuels Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; Biofuels Volume 2 ; 2 >
-    au < testing ; exists ; 2012 ; Biofuels Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Biofuels Volume 3 ; 3 >
     au < expected ; exists ; 2013 ; Biofuels Volume 4 ; 4 >
    
   }
@@ -56,7 +56,7 @@
 
     au < manifest ; exists ; 2010 ; Carbon Management Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; Carbon Management Volume 2 ; 2 >
-    au < testing ; exists ; 2012 ; Carbon Management Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Carbon Management Volume 3 ; 3 >
     au < expected ; exists ; 2013 ; Carbon Management Volume 4 ; 4 >
   
   }
@@ -71,7 +71,7 @@
     param[journal_id] = cli
 
     au < manifest ; exists ; 2011 ; Clinical Investigation Volume 1 ; 1 >
-    au < testing ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 >
+    au < crawling ; exists ; 2012 ; Clinical Investigation Volume 2 ; 2 >
     au < expected ; exists ; 2013 ; Clinical Investigation Volume 3 ; 3 >
     
   }
@@ -89,7 +89,7 @@
     au < manifest ; exists ; 2009 ; Future Medicinal Chemistry Volume 1 ; 1 >
     au < manifest ; exists ; 2010 ; Future Medicinal Chemistry Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Future Medicinal Chemistry Volume 3 ; 3 >
-    au < testing ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
+    au < crawling ; exists ; 2012 ; Future Medicinal Chemistry Volume 4 ; 4 >
     au < expected ; exists ; 2013 ; Future Medicinal Chemistry Volume 5 ; 5 >
     
   }
@@ -103,7 +103,7 @@
     
     param[journal_id] = ppa
 
-    au < testing ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
+    au < crawling ; exists ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
     
   }
@@ -119,7 +119,7 @@
 
     au < manifest ; exists ; 2010 ; Therapeutic Delivery Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; Therapeutic Delivery Volume 2 ; 2 >
-    au < testing ; exists ; 2012 ; Therapeutic Delivery Volume 3 ; 3 >
+    au < crawling ; exists ; 2012 ; Therapeutic Delivery Volume 3 ; 3 >
     au < expected ; exists ; 2013 ; Therapeutic Delivery Volume 4 ; 4 >
     
   }

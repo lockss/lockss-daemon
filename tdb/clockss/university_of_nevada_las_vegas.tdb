@@ -10,12 +10,12 @@
   
     title < 
       name = Journal of Praxis in Multicultural Education ;
-      issn = 2161-2978 ;
-      eissn = 1931-0242 
+      issn = 1931-0242;
+      eissn = 2161-2978
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
-    param[base_url] = http://digitalcommons.library.unlv.edu/
+    param[base_url] = http://digitalscholarship.unlv.edu/
     param[journal_abbr] = jpme
     implicit < status1 ; status; year ; name ; param[volume] >
 
@@ -25,6 +25,8 @@
     au < manifest ; exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 >
+    au < crawling ; exists ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 >
 
   }
 

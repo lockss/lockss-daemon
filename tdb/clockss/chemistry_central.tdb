@@ -26,11 +26,11 @@
       
       au < manifest ; exists ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
-      au < manifest ; exists ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
-      au < manifest ; exists ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
-      au < manifest ; exists ; 2011 ; Chemistry Central Journal Volume 5 ; 5 >
+      au < crawling ; exists ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
+      au < crawling ; exists ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
+      au < crawling ; exists ; 2011 ; Chemistry Central Journal Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Chemistry Central Journal Volume 6 ; 6 >
-      au < manifest ; exists ; 2013 ; Chemistry Central Journal Volume 7 ; 7 >
+      au < crawling ; exists ; 2013 ; Chemistry Central Journal Volume 7 ; 7 >
       
     }
   
@@ -55,11 +55,11 @@
     au < manifest ; exists ; 2006 ; Geochemical Transactions Volume 7 ; 7 >
     au < manifest ; exists ; 2007 ; Geochemical Transactions Volume 8 ; 8 >
     au < manifest ; exists ; 2008 ; Geochemical Transactions Volume 9 ; 9 >
-    au < manifest ; exists ; 2009 ; Geochemical Transactions Volume 10 ; 10 >
-    au < manifest ; exists ; 2010 ; Geochemical Transactions Volume 11 ; 11 >
-    au < manifest ; exists ; 2011 ; Geochemical Transactions Volume 12 ; 12 >
+    au < crawling ; exists ; 2009 ; Geochemical Transactions Volume 10 ; 10 >
+    au < crawling ; exists ; 2010 ; Geochemical Transactions Volume 11 ; 11 >
+    au < crawling ; exists ; 2011 ; Geochemical Transactions Volume 12 ; 12 >
     au < crawling ; exists ; 2012 ; Geochemical Transactions Volume 13 ; 13 >
-    au < manifest ; exists ; 2013 ; Geochemical Transactions Volume 14 ; 14 >
+    au < crawling ; exists ; 2013 ; Geochemical Transactions Volume 14 ; 14 >
 
   }
 
@@ -74,7 +74,7 @@
     param[base_url] = http://www.heritagesciencejournal.com/
     param[journal_issn] = 2050-7445
     
-    au < manifest ; exists ; 2013 ; Heritage Science Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; Heritage Science Volume 1 ; 1 >
 
   }
   
@@ -89,11 +89,11 @@
     param[base_url] = http://www.jcheminf.com/
     param[journal_issn] = 1758-2946
     
-    au < manifest ; exists ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 >
-    au < manifest ; exists ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 >
-    au < manifest ; exists ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 >
+    au < crawling ; exists ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 >
+    au < crawling ; exists ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 >
     au < crawling ; exists ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 >
-    au < manifest ; exists ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 >
 
   }
   
@@ -108,10 +108,10 @@
     param[base_url] = http://www.jsystchem.com/
     param[journal_issn] = 1759-2208
     
-    au < manifest ; exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; Journal of Systems Chemistry Volume 1 ; 1 >
+    au < crawling ; exists ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
     au < crawling ; exists ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 >
-    au < manifest ; exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
+    au < crawling ; exists ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
 
   }
   
@@ -126,7 +126,7 @@
     param[base_url] = http://www.sustainablechemicalprocesses.com/
     param[journal_issn] = 2043-7129
     
-    au < manifest ; exists ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 >
+    au < crawling ; exists ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 >
 
   }
   
