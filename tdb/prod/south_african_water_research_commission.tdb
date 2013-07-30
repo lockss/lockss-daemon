@@ -15,7 +15,7 @@
     
     rights = openaccess
     plugin = za.ac.nlsa.lockss.plugin.WaterSAPlugin
-    param[base_url] = za.ac.nlsa.lockss.plugin.WaterSAPlugin
+    param[base_url] = http://www.wrc.org.za/
     implicit < status ; year ; name ; volume ; param[year] >    
 
     au < down ; 1998 ; Water SA 1998 ; 24 ; 1998 >
