@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.3 2013-07-15 19:38:22 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.3.2.1 2013-07-31 20:49:06 clairegriffin Exp $
  */
 
 /*
@@ -200,6 +200,16 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       HtmlFormExtractor.FieldIterator> formGenerators) {
     m_formGenerators = formGenerators;
   }
+
+  public Map<String, HtmlFormExtractor.FormFieldRestrictions>
+      getFormRestrictors() {
+    return m_formRestrictors;
+  }
+
+  public Map<String, HtmlFormExtractor.FieldIterator> getFormGenerators() {
+    return m_formGenerators;
+  }
+
 
   /**
    * Parse content on InputStream,  call cb.foundUrl() for each URL found

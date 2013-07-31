@@ -841,7 +841,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 		assertEquals(expected, cb.getFoundUrls());
 	}
 
-	//Forms test cases
+	/*Forms test cases
 	// based upon highwire test case
 	public void testFormOneHiddenAttribute() throws IOException {
 		String url1 = "http://www.example.com/bioone/cgi/;F2?filename=jci116136F2.ppt";
@@ -1344,58 +1344,7 @@ public class TestHtmlParserLinkExtractor extends LockssTestCase {
 //		assertEquals(1000000, parseSingleSource(source).size());
 //	}
 	
-	public void testTooManyCheckBoxesAreCapped() throws IOException {
-		m_extractor = new HtmlParserLinkExtractor(4000, false, false);
-		String source = "<html><head><title>Test</title></head><body>"
-				+ "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
-				+ "<input type=\"checkbox\" name=\"cb1\" />"
-				+ "<input type=\"checkbox\" name=\"cb2\" />"
-				+ "<input type=\"checkbox\" name=\"cb3\" />"
-				+ "<input type=\"checkbox\" name=\"cb4\" />"
-				+ "<input type=\"checkbox\" name=\"cb5\" />"
-				+ "<input type=\"checkbox\" name=\"cb6\" />"
-				+ "<input type=\"checkbox\" name=\"cb7\" />"
-				+ "<input type=\"checkbox\" name=\"cb8\" />"
-				+ "<input type=\"checkbox\" name=\"cb9\" />"
-				+ "<input type=\"checkbox\" name=\"cb10\" />"
-				+ "<input type=\"checkbox\" name=\"cb11\" />"
-				+ "<input type=\"checkbox\" name=\"cb12\" />"
-				+ "<input type=\"submit\"/>" + "</form></html>";
-		assertEquals(4000, parseSingleSource(source).size());
-	}
-
-	
-	public void testLargeNumberOfCheckBoxes() throws IOException {
-		String source = "<html><head><title>Test</title></head><body>"
-			+ "<form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
-			+ "<input type=\"checkbox\" name=\"cb1\" />"
-			+ "<input type=\"checkbox\" name=\"cb2\" />"
-			+ "<input type=\"checkbox\" name=\"cb3\" />"
-			+ "<input type=\"checkbox\" name=\"cb4\" />"
-			+ "<input type=\"checkbox\" name=\"cb5\" />"
-			+ "<input type=\"checkbox\" name=\"cb6\" />"
-			+ "<input type=\"checkbox\" name=\"cb7\" />"
-			+ "<input type=\"checkbox\" name=\"cb8\" />"
-			+ "<input type=\"checkbox\" name=\"cb9\" />"
-			+ "<input type=\"checkbox\" name=\"cb10\" />"
-			+ "<input type=\"checkbox\" name=\"cb11\" />"
-			+ "<input type=\"checkbox\" name=\"cb12\" />"
-			+ "<input type=\"checkbox\" name=\"cb13\" />"
-			+ "<input type=\"checkbox\" name=\"cb14\" />"
-			+ "<input type=\"checkbox\" name=\"cb15\" />"
-			+ "<input type=\"submit\"/>" + "</form></html>";
-		assertEquals(32768, parseSingleSource(source).size());
-	}
-
-	public void testFormWithNoStartTag() throws IOException {
-		String source = "<html><head><title>Test</title></head><body>"
-			+ "</form><form action=\"http://www.example.com/bioone/cgi/\" method=\"get\">"
-			+ "<input type=\"hidden\" name=\"arg1\" value=\"value1\" />"
-			+ "<input type=\"hidden\" name=\"arg2\" value=\"value2\"/>"
-			+ "<input type=\"submit\"/>" + "</form></html>";
-		assertEquals(SetUtil.set("http://www.example.com/bioone/cgi/?arg1=value1&arg2=value2"), parseSingleSource(source));		
-	}
-	
+ */
 	private void checkBadTags(String[] badTags, String closeTag)
 			throws IOException {
 		String url = "http://www.example.com/web_link.html";

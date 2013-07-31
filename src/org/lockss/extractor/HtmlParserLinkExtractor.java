@@ -75,49 +75,14 @@ import org.lockss.util.UrlUtil;
 public class HtmlParserLinkExtractor implements LinkExtractor {
   public static final String PREFIX = Configuration.PREFIX + "extractor" +
       ".htmlparser.";
-  public static final String PARAM_MAX_FORM_URLS =
-      PREFIX + "max_form_urls";
-  public static final int DEFAULT_MAX_FORM_URLS = 1000000;
-
-  public static final String PARAM_STATISTICS_ENABLED =
-      PREFIX + "statistics_enabled";
-  public static final boolean DEFAULT_STATISTICS_ENABLED = false;
-
-  public static final String PARAM_NORMALIZE_FORM_URLS =
-      PREFIX + "statistics_enabled";
-  public static final boolean DEFAULT_NORMALIZE_FORM_URLS = false;
 
   private static final Logger logger =
       Logger.getLogger("HtmlParserLinkExtractor");
 
-  private int m_maxFormUrls;
-  private boolean m_statisticsEnabled;
-  private boolean m_normalizeFormUrls;
   private boolean isBaseSet = false;
   // the AU
 
-  // For testing
-  public HtmlParserLinkExtractor(int maxFormUrls,
-                                 boolean enableStatistics,
-                                 boolean normalizeFormUrls) {
-    m_maxFormUrls = maxFormUrls;
-    m_statisticsEnabled = enableStatistics;
-    m_normalizeFormUrls = normalizeFormUrls;
-  }
-
   public HtmlParserLinkExtractor() {
-    // set max form urls
-    m_maxFormUrls = CurrentConfig.getIntParam(PARAM_MAX_FORM_URLS,
-                                              DEFAULT_MAX_FORM_URLS);
-
-    // set statistics on/off - def off
-    m_statisticsEnabled = CurrentConfig.getBooleanParam
-        (PARAM_STATISTICS_ENABLED,
-         DEFAULT_STATISTICS_ENABLED);
-
-    // set the normalization - def off
-    m_normalizeFormUrls = CurrentConfig.getBooleanParam
-        (PARAM_NORMALIZE_FORM_URLS, DEFAULT_NORMALIZE_FORM_URLS);
 
   }
 
@@ -160,10 +125,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
         , encoding);
 
     Parser p = new Parser(new Lexer(new Page(in, encoding)));
-    if (m_statisticsEnabled) {
-      stats.startMeasurement("HtmlParser");
-      current_cb = stats.wrapCallback(cb, "HtmlParser");
-    }
     try {
       p.visitAllNodesWith(
           new LinkExtractorNodeVisitor(au, srcUrl, current_cb, encoding));
@@ -180,22 +141,8 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
     // For legacy reasons, we want to ensure link extraction using a more
     // permissive Gosling parser.
     //
-    // TODO(vibhor): Instead of copying the IOStream,
-    // we should be able to specify pass multiple
-    // link extractors in the plugin (for same mime type) and reopen stream
-    // for each.
-    if (m_statisticsEnabled) {
-      stats.startMeasurement("Gosling");
-      current_cb = stats.wrapCallback(cb, "Gosling");
-    }
-
     new GoslingHtmlLinkExtractor().extractUrls(au, inCopy, encoding,
                                                srcUrl, current_cb);
-    if (m_statisticsEnabled) {
-      stats.stopMeasurement();
-      stats.compareExtractors("Gosling", "HtmlParser", "AU: " + au.toString()
-          + " src URL=" + srcUrl);
-    }
   }
 
   /**
@@ -285,313 +232,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
      * @param cb A callback to record extracted links.
      */
     public void extractLink(ArchivalUnit au, Callback cb);
-  }
-
-  /**
-   * @author mlanken, vibhor, fred all possible links are emitted from
-   *         emitLinks
-   */
-  public class FormProcessor {
-
-    Vector<FormInputWrapper> m_orderedTags;
-    Map<String, RadioFormInput> m_nameToRadioInput;
-    private FormTag m_formTag;
-    private boolean m_isSubmitSeen;
-
-    public FormProcessor(FormTag formTag) {
-      this.m_formTag = formTag;
-      m_orderedTags = new Vector<HtmlParserLinkExtractor.FormInputWrapper>();
-      m_nameToRadioInput = new HashMap<String, HtmlParserLinkExtractor
-          .FormProcessor.RadioFormInput>();
-      m_isSubmitSeen = false;
-    }
-
-    public void submitSeen() {
-      m_isSubmitSeen = true;
-    }
-
-    public void addTag(Tag tag) {
-      if ("submit".equalsIgnoreCase(tag.getAttribute("type"))) {
-        // HACK(vibhor): If the submit button has a value,
-        // browser will send its value in a POST form.
-        m_orderedTags.add(new HiddenFormInput(tag));
-        submitSeen();
-        return;
-      }
-      String name = tag.getAttribute("name");
-      if (name == null || name.isEmpty()) {
-        logger.warning("Form input tag with no name found. Skipping");
-        return;
-      }
-
-      if (tag instanceof SelectTag) {
-        m_orderedTags.add(new SingleSelectFormInput((SelectTag) tag));
-      }
-      else if (tag instanceof InputTag) {
-        String type = tag.getAttribute("type");
-        if (type.equalsIgnoreCase("hidden")) {
-          m_orderedTags.add(new HiddenFormInput(tag));
-        }
-        else if (type.equalsIgnoreCase("checkbox")) {
-          m_orderedTags.add(new CheckboxFormInput(tag));
-        }
-        else if (type.equalsIgnoreCase("radio")) {
-          RadioFormInput in = m_nameToRadioInput.get(name);
-          if (in != null) {
-            in.add(tag);
-            return;
-          }
-          in = new RadioFormInput();
-          m_nameToRadioInput.put(name, in);
-          in.add(tag);
-          m_orderedTags.add(in);
-        }
-      }
-    }
-
-    public void emitLinks(ArchivalUnit au, Callback cb) {
-      // Do not extract links if submit button is not seen in the form.
-      if (!m_isSubmitSeen)
-        return;
-
-      // Get the absolute base url from action attribute.
-      String baseUrl = m_formTag.extractFormLocn();
-
-      FormUrlIterator iter = new FormUrlIterator(m_orderedTags, baseUrl);
-      iter.initialize();
-
-      // TODO(fkautz): Instead of using a custom normalizer,
-      // investigate and use PluginManager to normalize the form
-      // urls. This
-      // way we can share the logic between crawler and proxyhandler. (We do
-      // a similar normalization in ProxyHandler
-      // .java)
-      // ***NOTE: We only need to use a normalizer if the task to use proxy
-      // request header fails.***
-      FormUrlNormalizer normalizer = new FormUrlNormalizer(true, null);
-      boolean isPost = m_formTag.getFormMethod().equalsIgnoreCase("post");
-      while (iter.hasMore()) {
-        String link = iter.nextUrl();
-        if (isPost) {
-          try {
-            link = normalizer.normalizeUrl(link, au);
-          }
-          catch (PluginException e) {
-            // TODO Auto-generated catch block   - what should we do here?
-            e.printStackTrace();
-          }
-        }
-        cb.foundLink(link);
-      }
-    }
-
-    private class HiddenFormInput implements FormInputWrapper {
-      private Tag m_tag;
-
-      public HiddenFormInput(Tag tag) {
-        m_tag = tag;
-      }
-
-      @Override
-      public FormUrlInput[] getUrlComponents() {
-        FormUrlInput[] l = new FormUrlInput[1];
-        String name = m_tag.getAttribute("name");
-        if (name == null || name.isEmpty()) {
-          return null; // should never reach this, return null for defense
-        }
-        l[0] = new FormUrlInput(name, m_tag.getAttribute("value"));
-        return l;
-      }
-    }
-
-    private class RadioFormInput implements FormInputWrapper {
-      // Assumed to be all input type=radio of same name.
-      Vector<InputTag> m_inputs;
-      String m_name;
-
-      public RadioFormInput() {
-        m_inputs = new Vector<InputTag>();
-        m_name = null;
-      }
-
-      public void add(Tag tag) {
-        String tagName = tag.getAttribute("name");
-        if (m_name == null) {
-          m_name = tagName;
-          if (m_name.isEmpty()) {
-            // shouldn't ever reach this
-            logger.warning("Radio button with no name. Skipping.");
-            return;
-          }
-        }
-        if (!tagName.equalsIgnoreCase(m_name)) {
-          // should never reach this
-          logger.error("Radio button for different group. Skipping.");
-          return;
-        }
-
-        if (!(tag instanceof InputTag) || !tag.getAttribute("type")
-            .equalsIgnoreCase("radio")) {
-          // should never reach this
-          logger.error("Not a radio button. Skipping.");
-          return;
-        }
-
-        m_inputs.add((InputTag) tag);
-      }
-
-      @Override
-      public FormUrlInput[] getUrlComponents() {
-        if (m_name == null || m_name.isEmpty()) {
-          // should never reach this
-          logger.error("Not a radio button. Skipping");
-          return null;
-        }
-
-        FormUrlInput[] l = new FormUrlInput[m_inputs.size()];
-        int i = 0;
-        // Like single select, radio allows ONLY one value at a time
-        // (unlike multi-select or checkbox).
-        for (InputTag in : m_inputs) {
-          l[i++] = new FormUrlInput(m_name, in.getAttribute("value"));
-        }
-        return l;
-      }
-    }
-
-    private class CheckboxFormInput implements FormInputWrapper {
-      // Assumed to be all input type=radio of same name.
-      private Tag m_tag;
-
-      public CheckboxFormInput(Tag tag) {
-        m_tag = tag;
-      }
-
-      @Override
-      public FormUrlInput[] getUrlComponents() {
-        String name = m_tag.getAttribute("name");
-        if (name == null || name.isEmpty())
-          return null; // shouldn't ever reach this, defensive
-        // Only 2 possible values on/off (value sent or empty)
-        FormUrlInput[] l = new FormUrlInput[2];
-        String value = m_tag.getAttribute("value");
-        if (value == null || value.isEmpty())
-          value = "on";
-        l[0] = new FormUrlInput(name, value);
-        l[1] = new FormUrlInput(name, "");
-        return l;
-      }
-    }
-
-    private class SingleSelectFormInput implements FormInputWrapper {
-      private SelectTag m_selectTag;
-
-      public SingleSelectFormInput(SelectTag tag) {
-        m_selectTag = tag;
-      }
-
-      @Override
-      public FormUrlInput[] getUrlComponents() {
-        FormUrlInput l[] = new FormUrlInput[m_selectTag.getOptionTags().length];
-        String name = m_selectTag.getAttribute("name");
-        if (name == null || name.isEmpty()) {
-          // shouldn't ever reach this, defensive
-          return null;
-        }
-        OptionTag[] options = m_selectTag.getOptionTags();
-        int i = 0;
-        for (OptionTag option : options) {
-          l[i++] = new FormUrlInput(name, option.getAttribute("value"));
-        }
-        return l;
-      }
-    }
-
-  }
-
-  public class FormUrlIterator {
-    private Vector<FormInputWrapper> m_tags;
-    private Vector<FormUrlInput[]> m_components;
-    private int[] m_currentPositions;
-    private int m_totalUrls;
-    private int m_numUrlSeen;
-    private String m_baseUrl;
-
-    public FormUrlIterator(Vector<FormInputWrapper> tags, String baseUrl) {
-      m_tags = tags;
-      m_components = new Vector<FormUrlInput[]>();
-      m_totalUrls = 1;
-      m_currentPositions = null;
-      m_numUrlSeen = 0;
-      m_baseUrl = baseUrl;
-    }
-
-    public void initialize() {
-      for (FormInputWrapper tag : m_tags) {
-        FormUrlInput[] urlComponents = tag.getUrlComponents();
-        if (urlComponents != null && urlComponents.length > 0) {
-          if (m_maxFormUrls > m_totalUrls * urlComponents.length) {
-            m_totalUrls *= urlComponents.length;
-          }
-          else {
-            m_totalUrls = m_maxFormUrls;
-          }
-          m_components.add(tag.getUrlComponents());
-        }
-      }
-      m_currentPositions = new int[m_components.size()];
-      for (int i = 0; i < m_currentPositions.length; ++i) {
-        m_currentPositions[i] = 0;
-      }
-
-      if (m_totalUrls > m_maxFormUrls)
-        m_totalUrls = m_maxFormUrls;
-    }
-
-    public boolean hasMore() {
-      return m_numUrlSeen < m_totalUrls;
-    }
-
-    public String nextUrl() {
-      if (!hasMore()) return null;
-
-      boolean isFirstArgSeen = false;
-      String url = m_baseUrl;
-      int i = 0;
-      for (FormUrlInput[] components : m_components) {
-        url += (isFirstArgSeen ? '&' : '?') + components[this
-            .m_currentPositions[i++]].toString();
-        isFirstArgSeen = true;
-      }
-      incrementPositions_();
-      return url;
-    }
-
-    private boolean isLastComponent(int i) {
-      return (m_currentPositions[i] + 1) >= m_components.get(i).length;
-    }
-
-    private void incrementPositions_() {
-      if (!hasMore()) return;
-
-      m_numUrlSeen++;
-
-      // If we have 3 select-option values, 1 checkbox and 2 radiobuttons,
-      // we can have 3 X 2 X 2 combinations:
-      // This is how the iteration works:
-      // <0,0,0> <0,0,1> <0,1,0> <0,1, 1>....<2,1,1>
-      for (int i = 0; i < m_currentPositions.length; ++i) {
-        if (isLastComponent(i)) {
-          if (i + 1 == m_currentPositions.length) break;
-          m_currentPositions[i] = 0;
-        }
-        else {
-          m_currentPositions[i]++;
-          break;
-        }
-      }
-    }
-
   }
 
 
@@ -724,8 +364,7 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
    * extraction from the current document. An instance of this class is passed
    * to {@link Parser#visitAllNodesWith} which invokes visitTag & visitEngTag
    * for each tag in the document tree. For each tag, a corresponding {@link
-   * TagLinkExtractor} object is used to emit links or in case of forms, a
-   * {@link FormProcessor} is used.
+   * TagLinkExtractor} object is used to emit links.
    *
    * @author nvibhor
    */
@@ -739,7 +378,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
     private boolean m_inFormMode;
     private Callback m_emit;
     private FormUrlNormalizer m_normalizer;
-    private FormProcessor m_formProcessor;
 
     /**
      * Constructor
@@ -759,8 +397,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       m_encoding = encoding;
       m_isBaseUrlMalformed = false;
       m_inScriptMode = false;
-      m_normalizer = new FormUrlNormalizer();
-      m_formProcessor = null;
 
       // TODO: Refactor this custom callback to its own class for better
       // readability.
@@ -782,11 +418,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
               }
               logger.debug3("Found link (custom callback) after resolver:" +
                                 url);
-              //previously, a length check was done here
-              // sort form parameters if enabled
-              if (m_normalizeFormUrls) {
-                url = m_normalizer.normalizeUrl(url, m_au);
-              }
               logger.debug3("Found link (custom callback) after normalizer:"
                                 + url);
               // emit the processed url
@@ -794,9 +425,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
             }
             catch (MalformedURLException e) {
               //if the link is malformed, we can safely ignore it
-            }
-            catch (PluginException e) {
-              //If a PluginException results,  it can be safely ignored
             }
           }
         }
@@ -825,13 +453,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       if ("form".equalsIgnoreCase(tag.getTagName())
           && tag.getStartPosition() != tag.getEndPosition()) {
         m_inFormMode = false;
-        if (m_formProcessor == null) {
-          logger.error("Null FormProcessor while trying to emit links.");
-          return;
-        }
-        m_formProcessor.emitLinks(m_au, m_emit);
-        // Cleanup form processor
-        m_formProcessor = null;
       }
     }
 
@@ -851,20 +472,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
         }
         // Visited a form tag, enter form mode and start form processing logic.
         m_inFormMode = true;
-        if (m_formProcessor != null) {
-          logger.error("Internal inconsistency for formprocessor_");
-          logger.error(Thread.currentThread().getStackTrace().toString());
-        }
-        // Initialize form processor
-        m_formProcessor = new FormProcessor((FormTag) tag);
-      }
-
-      // An input/select tag inside a form mode should be handled by form
-      // processor.
-      if (m_inFormMode
-          && (tag instanceof InputTag || tag instanceof SelectTag)) {
-        m_formProcessor.addTag(tag);
-        return;
       }
 
       // We currently skip processing script tags.
