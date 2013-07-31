@@ -512,8 +512,8 @@
 
     param[journal_id] = cddis
 
-    au < released ; manifest ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
-    au < released ; manifest ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
+    au < released ; crawling ; 2011 ; Cell Death & Disease Volume 1 ; 2011 ; 1 >
+    au < released ; crawling ; 2011 ; Cell Death & Disease Volume 2 ; 2011 ; 2 >
     au < released ; crawling ; 2012 ; Cell Death & Disease Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Cell Death & Disease Volume 4 ; 2013 ; 4 >
 
@@ -559,10 +559,10 @@
 
     param[journal_id] = cmi
 
-    au < released ; manifest ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
-    au < released ; manifest ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
-    au < released ; manifest ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
-    au < released ; manifest ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
+    au < released ; crawling ; 2008 ; Cellular & Molecular Immunology Volume 5 ; 2008 ; 5 >
+    au < released ; crawling ; 2009 ; Cellular & Molecular Immunology Volume 6 ; 2009 ; 6 >
+    au < released ; crawling ; 2010 ; Cellular & Molecular Immunology Volume 7 ; 2010 ; 7 >
+    au < released ; crawling ; 2011 ; Cellular & Molecular Immunology Volume 8 ; 2011 ; 8 >
     au < released ; crawling ; 2012 ; Cellular & Molecular Immunology Volume 9 ; 2012 ; 9 >
     au < exists ; exists ; 2013 ; Cellular & Molecular Immunology Volume 10 ; 2013 ; 10 >
 
@@ -580,7 +580,7 @@
     comment[notReady] = no substance
 
     au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
-    au < released ; manifest ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
+    au < released ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
     au < released ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
 
@@ -664,7 +664,7 @@
     au < zapped ; down ; 2011 ; Clinical Pharmacology & Therapeutics Volume 89 ; 2011 ; 89 >
     au < released ; crawling ; 2011 ; Clinical Pharmacology & Therapeutics Volume 90 ; 2011 ; 90 >
     au < released ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 91 ; 2012 ; 91 >
-	au < released ; manifest ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 >
+	au < released ; crawling ; 2012 ; Clinical Pharmacology & Therapeutics Volume 92 ; 2012 ; 92 >
 	au < crawling ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 93 ; 2013 ; 93 >
 	au < crawling ; exists ; 2013 ; Clinical Pharmacology & Therapeutics Volume 94 ; 2013 ; 94 >
 
@@ -1017,7 +1017,7 @@
     au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
     au < notReady ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
     au < notReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
-    au < released ; manifest ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
+    au < released ; crawling ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
   }
 
@@ -1372,7 +1372,7 @@
     comment[notReady] = no substance (404 error) as of 6/10/13
 
     au < notReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
-    au < released ; manifest ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
+    au < released ; crawling ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
     au < notReady ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
 
   }
@@ -1387,10 +1387,10 @@
 
     param[journal_id] = ijos
 
-    au < released ; manifest ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 >
-    au < released ; manifest ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
-    au < released ; manifest ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
-    au < released ; manifest ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
+    au < released ; crawling ; 2009 ; International Journal of Oral Science Volume 1 ; 2009 ; 1 >
+    au < released ; crawling ; 2010 ; International Journal of Oral Science Volume 2 ; 2010 ; 2 >
+    au < released ; crawling ; 2011 ; International Journal of Oral Science Volume 3 ; 2011 ; 3 >
+    au < released ; crawling ; 2012 ; International Journal of Oral Science Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; International Journal of Oral Science Volume 5 ; 2013 ; 5 >
 
   }
@@ -1442,7 +1442,7 @@
     au < exists ; exists ; 2006 ; JID Symposium Proceedings Volume 11 ; 2006 ; 11 >
     au < exists ; exists ; 2007 ; JID Symposium Proceedings Volume 12 ; 2007 ; 12 >
     au < released ; crawling ; 2008 ; JID Symposium Proceedings Volume 13 ; 2008 ; 13 >
-    au < released ; manifest ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
+    au < released ; crawling ; 2009 ; JID Symposium Proceedings Volume 14 ; 2009 ; 14 >
     au < released ; crawling ; 2011 ; JID Symposium Proceedings Volume 15 ; 2011 ; 15 >
 
   }
@@ -1510,11 +1510,11 @@
     au < exists ; exists ; 2005 ; Journal of Cerebral Blood Flow and Metabolism Volume 25 ; 2005 ; 25 >
     au < exists ; exists ; 2006 ; Journal of Cerebral Blood Flow and Metabolism Volume 26 ; 2006 ; 26 >
     au < exists ; exists ; 2007 ; Journal of Cerebral Blood Flow and Metabolism Volume 27 ; 2007 ; 27 >
-    au < released ; manifest ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
+    au < released ; crawling ; 2008 ; Journal of Cerebral Blood Flow and Metabolism Volume 28 ; 2008 ; 28 >
     au < released ; crawling ; 2009 ; Journal of Cerebral Blood Flow and Metabolism Volume 29 ; 2009 ; 29 >
     au < released ; crawling ; 2010 ; Journal of Cerebral Blood Flow and Metabolism Volume 30 ; 2010 ; 30 >
-    au < released ; manifest ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
-    au < released ; manifest ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
+    au < released ; crawling ; 2011 ; Journal of Cerebral Blood Flow and Metabolism Volume 31 ; 2011 ; 31 >
+    au < released ; crawling ; 2012 ; Journal of Cerebral Blood Flow and Metabolism Volume 32 ; 2012 ; 32 >
     au < crawling ; exists ; 2013 ; Journal of Cerebral Blood Flow and Metabolism Volume 33 ; 2013 ; 33 >
 
 
@@ -1627,7 +1627,7 @@
     au < zapped ; down ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Journal of Human Hypertension Volume 25 ; 2011 ; 25 >
-    au < released ; manifest ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
+    au < released ; crawling ; 2012 ; Journal of Human Hypertension Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Journal of Human Hypertension Volume 27 ; 2013 ; 27 >
 
   }
@@ -1913,7 +1913,7 @@
 
     param[journal_id] = kisup
 
-    au < released ; manifest ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
+    au < released ; crawling ; 2011 ; Kidney International Supplements Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Kidney International Supplements Volume 2 ; 2012 ; 2 >
     au < exists ; exists ; 2013 ; Kidney International Supplements Volume 3 ; 2013 ; 3 >
 
@@ -1939,11 +1939,11 @@
     au < exists ; exists ; 2005 ; Laboratory Investigation Volume 85 ; 2005 ; 85 >
     au < exists ; exists ; 2006 ; Laboratory Investigation Volume 86 ; 2006 ; 86 >
     au < exists ; exists ; 2007 ; Laboratory Investigation Volume 87 ; 2007 ; 87 >
-    au < released ; manifest ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
-    au < released ; manifest ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
-    au < released ; manifest ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
+    au < released ; crawling ; 2008 ; Laboratory Investigation Volume 88 ; 2008 ; 88 >
+    au < released ; crawling ; 2009 ; Laboratory Investigation Volume 89 ; 2009 ; 89 >
+    au < released ; crawling ; 2010 ; Laboratory Investigation Volume 90 ; 2010 ; 90 >
     au < released ; crawling ; 2011 ; Laboratory Investigation Volume 91 ; 2011 ; 91 >
-    au < released ; manifest ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
+    au < released ; crawling ; 2012 ; Laboratory Investigation Volume 92 ; 2012 ; 92 >
     au < crawling ; exists ; 2013 ; Laboratory Investigation Volume 93 ; 2013 ; 93 >
 
   }
@@ -1974,7 +1974,7 @@
     au < released ; crawling ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
     au < released ; crawling ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
     au < released ; crawling ; 2011 ; Leukemia Volume 25 ; 2011 ; 25 >
-    au < released ; manifest ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
+    au < released ; crawling ; 2012 ; Leukemia Volume 26 ; 2012 ; 26 >
     au < crawling ; exists ; 2013 ; Leukemia Volume 27 ; 2013 ; 27 >
   }
 
@@ -2001,8 +2001,8 @@
     au < released ; crawling ; 2008 ; Modern Pathology Volume 21 ; 2008 ; 21 >
     au < released ; crawling ; 2009 ; Modern Pathology Volume 22 ; 2009 ; 22 >
     au < released ; crawling ; 2010 ; Modern Pathology Volume 23 ; 2010 ; 23 >
-    au < released ; manifest ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
-    au < released ; manifest ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
+    au < released ; crawling ; 2011 ; Modern Pathology Volume 24 ; 2011 ; 24 >
+    au < released ; crawling ; 2012 ; Modern Pathology Volume 25 ; 2012 ; 25 >
     au < crawling ; exists ; 2013 ; Modern Pathology Volume 26 ; 2013 ; 26 >
 
   }
@@ -2089,7 +2089,7 @@
     au < released ; crawling ; 2009 ; Molecular Therapy Volume 17 ; 2009 ; 17 >
     au < released ; crawling ; 2010 ; Molecular Therapy Volume 18 ; 2010 ; 18 >
     au < released ; crawling ; 2011 ; Molecular Therapy Volume 19 ; 2011 ; 19 >
-    au < released ; manifest ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
+    au < released ; crawling ; 2012 ; Molecular Therapy Volume 20 ; 2012 ; 20 >
     au < crawling ; exists ; 2013 ; Molecular Therapy Volume 21 ; 2013 ; 21 >
 
   }
@@ -3680,8 +3680,8 @@
 
     param[journal_id] = nutd
     
-    au < released ; manifest ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
-    au < released ; manifest ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
+    au < released ; crawling ; 2011 ; Nutrition & Diabetes Volume 1 ; 2011 ; 1 >
+    au < released ; crawling ; 2012 ; Nutrition & Diabetes Volume 2 ; 2012 ; 2 >
   
   }
     
@@ -3832,15 +3832,15 @@
     au < manifest ; exists ; 2006 ; Pediatric Research Volume 60 ; 2006 ; 60 >
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 61 ; 2007 ; 61 >
     au < manifest ; exists ; 2007 ; Pediatric Research Volume 62 ; 2007 ; 62 >
-    au < released ; manifest ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
-    au < released ; manifest ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
+    au < released ; crawling ; 2008 ; Pediatric Research Volume 63 ; 2008 ; 63 >
+    au < released ; crawling ; 2008 ; Pediatric Research Volume 64 ; 2008 ; 64 >
     au < testing ; exists ; 2009 ; Pediatric Research Volume 65 ; 2009 ; 65 >
     au < testing ; exists ; 2009 ; Pediatric Research Volume 66 ; 2009 ; 66 >
     au < testing ; exists ; 2010 ; Pediatric Research Volume 67 ; 2010 ; 67 >
     au < testing ; exists ; 2010 ; Pediatric Research Volume 68 ; 2010 ; 68 >
     au < testing ; exists ; 2011 ; Pediatric Research Volume 69 ; 2011 ; 69 >
     au < testing ; exists ; 2011 ; Pediatric Research Volume 70 ; 2011 ; 70 >
-    au < released ; manifest ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
+    au < released ; crawling ; 2012 ; Pediatric Research Volume 71 ; 2012 ; 71 >
     au < testing ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
     au < crawling ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
     au < crawling ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 >
@@ -3885,11 +3885,11 @@
 
 	au < manifest ; exists ; 2006 ; Polymer Journal Volume 38 ; 2006 ; 38 >
     au < manifest ; exists ; 2007 ; Polymer Journal Volume 39 ; 2007 ; 39 >
-    au < released ; manifest ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
-    au < released ; manifest ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
-    au < released ; manifest ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
-    au < released ; manifest ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
-    au < released ; manifest ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
+    au < released ; crawling ; 2008 ; Polymer Journal Volume 40 ; 2008 ; 40 >
+    au < released ; crawling ; 2009 ; Polymer Journal Volume 41 ; 2009 ; 41 >
+    au < released ; crawling ; 2010 ; Polymer Journal Volume 42 ; 2010 ; 42 >
+    au < released ; crawling ; 2011 ; Polymer Journal Volume 43 ; 2011 ; 43 >
+    au < released ; crawling ; 2012 ; Polymer Journal Volume 44 ; 2012 ; 44 >
     au < crawling ; exists ; 2013 ; Polymer Journal Volume 45 ; 2013 ; 45 >
   }
   {
@@ -4058,7 +4058,7 @@
     au < released ; crawling ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < released ; crawling ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     au < released ; crawling ; 2011 ; Spinal Cord Volume 49 ; 2011 ; 49 >
-    au < released ; manifest ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
+    au < released ; crawling ; 2012 ; Spinal Cord Volume 50 ; 2012 ; 50 >
     au < crawling ; exists ; 2013 ; Spinal Cord Volume 51 ; 2013 ; 51 >
 
   }
@@ -4089,7 +4089,7 @@
     au < released ; crawling ; 2011 ; Vital Volume 8 ; 2011 ; 8 >
     au < released ; crawling ; 2011 ; Vital Volume 9 (2011) ; 2011 ; 9 >
     au < released ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
-    au < released ; manifest ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
+    au < released ; crawling ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
     au < crawling ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
 
   }
