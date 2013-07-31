@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlCrawlFilterFactory.java,v 1.1 2013-06-13 21:45:46 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlCrawlFilterFactory.java,v 1.2 2013-07-31 21:43:56 alexandraohlson Exp $
  */
 
 /*
@@ -38,8 +38,6 @@ import junit.framework.Test;
 
 import org.lockss.util.*;
 import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.americanmeteorologicalsociety.AMetSocHtmlCrawlFilterFactory;
-import org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory;
 import org.lockss.test.*;
 
 public class TestFutureScienceHtmlCrawlFilterFactory extends LockssTestCase {

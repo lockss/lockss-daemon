@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -76,8 +76,8 @@
   </entry>
   <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
   <entry>
-    <string>au_url_normalizer</string>
-    <org.lockss.util.Default />
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.americansocietyofcivilengineers.ASCEHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>

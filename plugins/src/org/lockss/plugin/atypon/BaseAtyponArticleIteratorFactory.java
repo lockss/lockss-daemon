@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.2 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.3 2013-07-31 21:43:58 alexandraohlson Exp $
  */
 
 /*
@@ -91,9 +91,7 @@ implements ArticleIteratorFactory,
     final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
     // link extractor used forms to pick up this URL
     
-    //IN PROGRESS: In order to meet the needs of all Atypon children, the url normalizer
-    // needs to work in conjunction with the linkextractor to ensure that when available the downloaded RIS information
-    // lives at the following url
+    // After normalization, the citation information will live at this URL if it exists
     final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
 
     

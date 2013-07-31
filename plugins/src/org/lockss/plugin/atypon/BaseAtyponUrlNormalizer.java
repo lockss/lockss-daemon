@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.2 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.3 2013-07-31 21:43:58 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -24,54 +24,90 @@
  */
 package org.lockss.plugin.atypon;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 
+/* This URL normalizer is vanilla for those children that don't do citation download
+ * 
+ */
 public class BaseAtyponUrlNormalizer implements UrlNormalizer {
-
+  protected static Logger log = 
+      Logger.getLogger("BaseAtyponUrlNormalizer");
   protected static final String SUFFIX = "?cookieSet=1";
   
-  // IN PROGRESS - In order to support the needs of all the Atypon children, this needs to change
-  // to an implementation with some abstract methods so that the child can set a list or set
-  // of parameters that need to be included or excluded for action/downloadCitation
-  // We want to end up with .../action/downloadCitation?doi=blah%2Fblah&format=ris&include=cit
-  // but different child plugins have variations on what their forms produce, such as:  
-
-  //downloaded Citations have extra things we want to get rid of
-  protected static final String CITATION_DOWNLOAD_URL = "action/downloadCitation"; 
-  protected static final String DOWNLOAD_NAME = "&downloadFileName=";
-  // take off even the include=cit because we may have to add &format=ris on first
-  protected static final String CIT_SIAM_SUFFIX = "&include=cit&submit=Download+publication+citation+data";
-  protected static final String CIT_FS_SUFFIX = "&include=cit&submit=Download+article+metadata";
-  
-
   /* 
-   *  Several Atypon plugins do this
-   * A child could choose to avoid this entirely by setting it to org.lockss.util.Default
-   * or they could write their own child implementation.
+   * CITATION DOWNLOAD URL CLEANUP
+   *  for those Atypon children that use form download for citation information, the resulting URLs
+   *  will be automatically normalized to match what the article iterator expects
    */
+  protected static final String CITATION_DOWNLOAD_URL = "action/downloadCitation"; // how we identify these URLs 
+  private final String DOI_ARG = "doi";
+  private final String FORMAT_ARG = "format";
+  private final String INCLUDE_ARG = "include";
+  //These are the things that we need to end up with, in this order
+  private final String[] NEEDED_ARGUMENTS = {DOI_ARG, FORMAT_ARG, INCLUDE_ARG}; 
+
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
-    
-    // The following is only important f
-    if (url.contains(CITATION_DOWNLOAD_URL)) {
-      if (url.contains(DOWNLOAD_NAME)) {
-        url = url.replaceFirst("&downloadFileName=[^&]+", "");
-      }
-      url = StringUtils.chomp(url, CIT_SIAM_SUFFIX);
-      url = StringUtils.chomp(url,CIT_FS_SUFFIX);
-      // NOW, if we don't already have &format=, then add it on as a RIS
-      if (!(url.contains("&format="))) {
-        url= url + "&format=ris";       
-      }
-      if (!(url.contains("&include=cit"))) {
-        url = url + "&include=cit";
-      }
-      
-    }
-    return StringUtils.chomp(url, SUFFIX);
-  }
 
+    //log.setLevel("debug3");
+    // Only do this normalization for correctly formatted form downloaded citation URLs
+    int qmark = url.indexOf("?");
+    if (url.contains(CITATION_DOWNLOAD_URL) && (url.contains(DOI_ARG + "=")) && (qmark >= 0)) {
+       Map<String, String> argMap = new HashMap<String, String>();
+       String oneArg;
+       String argKey;
+       String argVal;
+       int splitIndex;
+              
+      log.debug3("orig citation download url: " + url);
+      String cit_arg_string = url.substring(qmark+1);
+      log.debug3("citation url args in: " + cit_arg_string);
+
+      // put all the args in to a map
+      String[] cit_arg_list = cit_arg_string.split("&");
+      int num_args = cit_arg_list.length;
+      for (int i = 0; i < num_args; i++) {
+        oneArg = cit_arg_list[i];
+        log.debug3("argument: " + oneArg);
+        splitIndex = oneArg.indexOf("=");
+        argKey = oneArg.substring(0, splitIndex);
+        argVal = oneArg.substring(splitIndex+1);
+        log.debug3("map entry: " + argKey + "  " + argVal);
+        argMap.put(argKey,  argVal);
+      }
+
+       StringBuilder new_url = new StringBuilder(url.substring(0,qmark));
+      // add on DOI arg - this must be here
+      if (argMap.containsKey(DOI_ARG)) {
+        new_url.append("?" + DOI_ARG + "=" + argMap.get(DOI_ARG));
+      } 
+      // add on format arg
+      if (argMap.containsKey(FORMAT_ARG)) {
+        new_url.append("&" + FORMAT_ARG + "=" + argMap.get(FORMAT_ARG));
+      } else {
+        // this could happen - make it "ris"
+        log.debug3("no format on this citation download url");
+        new_url.append("&" + FORMAT_ARG + "=ris");
+      }
+      // add on include arg
+      if (argMap.containsKey(INCLUDE_ARG)) {
+        new_url.append("&" + INCLUDE_ARG + "=" + argMap.get(INCLUDE_ARG));
+      } else {
+        // this could happen - make it "cit"
+        log.debug3("no include on this citation download url");
+        new_url.append("&" + INCLUDE_ARG + "=cit");
+      }
+      log.debug3("normalized citation download url: " + new_url);
+      return new_url.toString();
+    }
+    // this wasn't a citation download URL (or it had malformed arguments so we can't normalize)
+    return StringUtils.chomp(url, SUFFIX); /* standard non citation download specific URLS */
+  }
 }

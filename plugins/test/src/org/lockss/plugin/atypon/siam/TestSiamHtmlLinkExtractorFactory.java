@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamLinkExtractorFactory.java,v 1.1 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.1 2013-07-31 21:43:57 alexandraohlson Exp $
  */
 /*
 
@@ -31,37 +31,23 @@
 
 package org.lockss.plugin.atypon.siam;
 
-/* used by the temporary read from file portion */
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
-import java.util.TimeZone;
-
 import org.lockss.plugin.UrlNormalizer;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
-import org.lockss.extractor.HtmlFormExtractor;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.RegexpCssLinkExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.Constants;
-import org.lockss.util.IOUtil;
 import org.lockss.util.SetUtil;
-import org.lockss.util.StringUtil;
 
 
-public class TestSiamLinkExtractorFactory extends LockssTestCase {
+public class TestSiamHtmlLinkExtractorFactory extends LockssTestCase {
   UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
 
-  private SiamLinkExtractorFactory fact;
+  private SiamHtmlLinkExtractorFactory fact;
   private LinkExtractor m_extractor;
   private MyLinkExtractorCallback m_callback;
   static String ENC = Constants.DEFAULT_ENCODING;
@@ -116,7 +102,7 @@ public class TestSiamLinkExtractorFactory extends LockssTestCase {
       super.setUp();
       m_mau = new MockArchivalUnit();
       m_callback = new MyLinkExtractorCallback();
-      fact = new SiamLinkExtractorFactory();
+      fact = new SiamHtmlLinkExtractorFactory();
       m_extractor = fact.createLinkExtractor("html");
  
     }
@@ -133,10 +119,13 @@ public class TestSiamLinkExtractorFactory extends LockssTestCase {
     String norm_url;
     Set<String> result_strings = parseSingleSource(citationForm);
     Set<String> norm_urls = new HashSet<String>();
+    
+    // if the additional SIAM restriction didn't work, you would end up with 12 URLS due to duplication 
+    assertEquals(6, result_strings.size());
 
     for (String url : result_strings) {
       norm_url = normalizer.normalizeUrl(url, m_mau);
-      //log.info("normalized form URL: " + norm_url);
+      //log.info("normalized citation form URL: " + norm_url);
       norm_urls.add(norm_url);
     }
     assertEquals(expectedUrls,norm_urls);

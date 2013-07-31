@@ -56,11 +56,7 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
   </entry>
-    <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
-   <entry>
-    <string>au_url_normalizer</string>
-    <org.lockss.util.Default />
-  </entry>
+  <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
   <entry>
     <string>application/pdf_filter_factory</string>
     <org.lockss.util.Default />

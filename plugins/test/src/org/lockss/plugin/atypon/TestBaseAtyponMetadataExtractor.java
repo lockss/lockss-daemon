@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponMetadataExtractor.java,v 1.2 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: TestBaseAtyponMetadataExtractor.java,v 1.3 2013-07-31 21:43:56 alexandraohlson Exp $
  */
 /*
 
@@ -209,9 +209,9 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
       sb.append("\nA1  - ");
       sb.append(auth);
     }
-    sb.append("\nY1  - ");
+    sb.append("\nDA  - ");
     sb.append(goodDate);
-    sb.append("\nJO  - ");
+    sb.append("\nJF  - ");
     sb.append(goodJournal);
     sb.append("\nSP  - ");
     sb.append(goodStartPage);
@@ -243,12 +243,12 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
   public void testExtractGoodRisContent() throws Exception {
     String goodContent = createGoodRisContent();
     log.debug3(goodContent);
-    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris";
+    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris&include=cit";
     MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
-    FileMetadataExtractor me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any, "text/plain");
+    FileMetadataExtractor me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
@@ -274,6 +274,57 @@ public class TestBaseAtyponMetadataExtractor extends LockssTestCase {
     assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
 
   }
-
   
+  /* the extractor checks if data is missing it uses possible alternate RIS tags */
+  private String createAlternateRisContent() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("TY  - JOUR");
+    for(String auth : goodAuthors) {
+      sb.append("\nAU  - ");
+      sb.append(auth);
+    }
+    sb.append("\nY1  - ");
+    sb.append(goodDate);
+    sb.append("\nT2  - ");
+    sb.append(goodJournal);
+    sb.append("\nT1  - ");
+    sb.append(goodTitle);
+    sb.append("\nPB  - ");
+    sb.append(goodPublisher);
+    sb.append("\nER  -");
+    return sb.toString();
+  }
+  /**
+   * Method that creates a simulated Cached URL from the source code provided by 
+   * the goodContent String. It then asserts that the metadata extracted, by using
+   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code. 
+   * @throws Exception
+   */
+  public void testExtractAlternateRisContent() throws Exception {
+    String goodContent = createAlternateRisContent();
+    log.debug3(goodContent);
+    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI + "&format=ris&include=cit";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
+    FileMetadataExtractor me = new BaseAtyponRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+
+    Iterator<String> actAuthIter = md.getList(MetadataField.FIELD_AUTHOR).iterator();
+    for(String expAuth : goodAuthors) {
+      assertEquals(expAuth, actAuthIter.next());
+    }
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodJournal, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+  }
+
+
 }

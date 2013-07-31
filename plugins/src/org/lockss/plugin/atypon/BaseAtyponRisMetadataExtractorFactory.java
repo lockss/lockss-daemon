@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.1 2013-07-01 22:18:05 alexandraohlson Exp $
+ * $Id: BaseAtyponRisMetadataExtractorFactory.java,v 1.2 2013-07-31 21:43:58 alexandraohlson Exp $
  */
 
 /*
@@ -32,54 +32,84 @@
 
 package org.lockss.plugin.atypon;
 
+import java.io.IOException;
+
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 /*
- * TY  - JOUR
-T1  - Estimating the Eigenvalue Error of Markov State Models
-AU  - Djurdjevac, N.
-AU  - Sarich, M.
-AU  - Schütte, C.
-Y1  - 2012/01/01
-PY  - 2012
-DA  - 2012/01/01
+ *  NOTE: I have found the following:
+ *  JO is often used (incorrectly) but consistently as the abbreviated form of the journal title, use JF and then T2 in preference
+ *  Y1 usually is the same as DA, but not always, use DA if it's there
+TY  - JOUR
+T1  - <article title>
+AU  - <author>
+AU  - <other author>
+Y1  - <date, often same as DA, often slightly later>
+PY  - <year of pub>
+DA  - <date of pub>
 N1  - doi: 10.1137/100798910
-DO  - 10.1137/100798910
-T2  - Multiscale Modeling & Simulation
-JF  - Multiscale Modeling & Simulation
-JO  - Multiscale Model. Simul.
-SP  - 61
-EP  - 81
-VL  - 10
-IS  - 1
-PB  - Society for Industrial and Applied Mathematics
-SN  - 1540-3459
+DO  - 10.1137/100798910 
+T2  - <journal title>
+JF  - <journal title>
+JO  - <abbreviated journal title>
+SP  - <start page>
+EP  - <end page>
+VL  - <volume>
+IS  - <issue>
+PB  - <publisher but possibly imprint>
+SN  - <issn>
 M3  - doi: 10.1137/100798910
 UR  - http://dx.doi.org/10.1137/100798910
-Y2  - 2013/06/28
-ER  - 
+Y2  - <later date - meaning?>
+ER  -  
  * 
  */
 public class BaseAtyponRisMetadataExtractorFactory
-  implements FileMetadataExtractorFactory {
+implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("BaseAtyponRisMetadataExtractorFactory");
-  
+
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
-							   String contentType)
-      throws PluginException {
-    
+      String contentType)
+          throws PluginException {
+
     log.debug3("Inside Base Atypon Metadata extractor factory for RIS files");
-    
-    RisMetadataExtractor ris = new RisMetadataExtractor();
-    
-    ris.addRisTag("JO", MetadataField.FIELD_JOURNAL_TITLE);
-    ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
-    ris.addRisTag("Y1", MetadataField.FIELD_DATE);
-    ris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
-     return ris;
+
+    BaseAtyponRisMetadataExtractor ba_ris = new BaseAtyponRisMetadataExtractor();
+
+    ba_ris.addRisTag("A1", MetadataField.FIELD_AUTHOR);
+    ba_ris.addRisTag("UR", MetadataField.FIELD_ACCESS_URL);
+    return ba_ris;
+  }
+
+  public static class BaseAtyponRisMetadataExtractor
+  extends RisMetadataExtractor {
+
+    // override this to do some additional attempts to get valid data before emitting
+    @Override
+    public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter) 
+        throws IOException, PluginException {
+      ArticleMetadata am = extract(target, cu); 
+
+      /* if the cooked data isn't complete, we could try to pick up from secondary tags in raw data */
+      if (am.get(MetadataField.FIELD_JOURNAL_TITLE) == null) {
+        if (am.getRaw("T2") != null) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("T2"));
+        } else if (am.getRaw("JO") != null) {
+          am.put(MetadataField.FIELD_JOURNAL_TITLE, am.getRaw("JO")); // might be unabbreviated version
+        }
+      } 
+      if (am.get(MetadataField.FIELD_DATE) == null) {
+        if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
+          am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
+        }
+      }
+      emitter.emitMetadata(cu, am);
+    }
+
   }
 
 }
