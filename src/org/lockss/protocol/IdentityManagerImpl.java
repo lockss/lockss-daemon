@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.41 2013-07-19 18:12:22 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.42 2013-07-31 17:41:43 barry409 Exp $
  */
 
 /*
@@ -1109,6 +1109,30 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       ida.setPercentAgreementHint(percent);
       storeIdentityAgreement(au);
     }
+  }
+
+  /**
+   * Signal the completion of a local hash check.
+   *
+   * @param filesCount The number of files checked.
+   * @param urlCount The number of URLs checked.
+   * @param agreeCount The number of files which agreed with their
+   * previous hash value.
+   * @param disagreeCount The number of files which disagreed with
+   * their previous hash value.
+   * @param missingCount The number of files which had no previous
+   * hash value.
+   */
+  public void signalLocalHashComplete(int filesCount, int distinctUrlCount,
+				      int agreeCount, int disagreeCount,
+				      int missingCount) {
+    log.debug("called signalLocalHashComplete("+
+	      "filesCount="+filesCount+
+	      ", distinctUrlCount="+distinctUrlCount+
+	      ", agreeCount="+agreeCount+
+	      ", disagreeCount="+disagreeCount+
+	      ", missingCount="+missingCount+
+	      ")");
   }
 
   /**
