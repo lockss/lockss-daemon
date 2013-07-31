@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityAgreementList.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
+* $Id: IdentityAgreementList.java,v 1.3 2013-07-31 18:12:17 barry409 Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.protocol;
 import java.io.Serializable;
 import java.util.*;
 
+// CASTOR: Phase out with Castor
 /**
  * This class exists purely for marshalling purposes.  Castor has some
  * difficulty marshalling inner classes, and this wrapper helps.
