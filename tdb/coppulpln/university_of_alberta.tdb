@@ -29,9 +29,9 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = aps
         
-        au < manifest ; 2011 ; aboriginal policy studies Volume 1 ; 2011 ; 1 >
-        au < manifest ; 2012 ; aboriginal policy studies Volume 2 (2012) ; 2012 ; 2 >
-        au < manifest ; 2013 ; aboriginal policy studies Volume 2 (2013) ; 2013 ; 2 >
+        au < testing ; 2011 ; aboriginal policy studies Volume 1 ; 2011 ; 1 >
+        au < testing ; 2012 ; aboriginal policy studies Volume 2 (2012) ; 2012 ; 2 >
+        au < testing ; 2013 ; aboriginal policy studies Volume 2 (2013) ; 2013 ; 2 >
         
       }
 
@@ -75,12 +75,12 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = af
 
-        au < manifest ; 2008 ; Alternative Francophone Volume 1 (2008) ; 2008 ; 1 >
-        au < manifest ; 2009 ; Alternative Francophone Volume 1 (2009) ; 2009 ; 1 >
-        au < manifest ; 2010 ; Alternative Francophone Volume 1 (2010) ; 2010 ; 1 >
-        au < manifest ; 2011 ; Alternative Francophone Volume 1 (2011) ; 2011 ; 1 >
-        au < manifest ; 2012 ; Alternative Francophone Volume 1 (2012) ; 2012 ; 1 >
-        au < manifest ; 2013 ; Alternative Francophone Volume 1 (2013) ; 2013 ; 1 >
+        au < testing ; 2008 ; Alternative Francophone Volume 1 (2008) ; 2008 ; 1 >
+        au < testing ; 2009 ; Alternative Francophone Volume 1 (2009) ; 2009 ; 1 >
+        au < testing ; 2010 ; Alternative Francophone Volume 1 (2010) ; 2010 ; 1 >
+        au < testing ; 2011 ; Alternative Francophone Volume 1 (2011) ; 2011 ; 1 >
+        au < testing ; 2012 ; Alternative Francophone Volume 1 (2012) ; 2012 ; 1 >
+        au < testing ; 2013 ; Alternative Francophone Volume 1 (2013) ; 2013 ; 1 >
         
       }
 
@@ -109,9 +109,9 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = cjas-rcea
 
-        au < manifest ; 2009 ; Canadian Journal of African Studies Volume 43 ; 2009 ; 43 >
-        au < manifest ; 2010 ; Canadian Journal of African Studies Volume 44 ; 2010 ; 44 >
-        au < manifest ; 2011 ; Canadian Journal of African Studies Volume 45 ; 2011 ; 45 >
+        au < testing ; 2009 ; Canadian Journal of African Studies Volume 43 ; 2009 ; 43 >
+        au < testing ; 2010 ; Canadian Journal of African Studies Volume 44 ; 2010 ; 44 >
+        au < testing ; 2011 ; Canadian Journal of African Studies Volume 45 ; 2011 ; 45 >
         
       }
 
@@ -156,11 +156,11 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = cjfy
 
-        au < manifest ; 2008 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 1 ; 2008 ; 1 >
-        au < manifest ; 2009 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2 ; 2002 ; 2 >
-        au < manifest ; 2011 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 3 ; 2011 ; 3 >
-        au < manifest ; 2012 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 4 ; 2012 ; 4 >
-        au < manifest ; 2013 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 5 ; 2013 ; 5 >
+        au < testing ; 2008 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 1 ; 2008 ; 1 >
+        au < testing ; 2009 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 2 ; 2002 ; 2 >
+        au < testing ; 2011 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 3 ; 2011 ; 3 >
+        au < testing ; 2012 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 4 ; 2012 ; 4 >
+        au < testing ; 2013 ; Canadian Journal of Family and Youth / Le Journal Canadien de Famille et de la Jeunesse Volume 5 ; 2013 ; 5 >
         
       }
 
@@ -189,12 +189,12 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = cjs
 
-        au < manifest ; 2008 ; Canadian Journal of Sociology Volume 33 ; 2008 ; 33 >
-        au < manifest ; 2009 ; Canadian Journal of Sociology Volume 34 ; 2009 ; 34 >
-        au < manifest ; 2010 ; Canadian Journal of Sociology Volume 35 ; 2010 ; 35 >
-        au < manifest ; 2011 ; Canadian Journal of Sociology Volume 36 ; 2011 ; 36 >
-        au < manifest ; 2012 ; Canadian Journal of Sociology Volume 37 ; 2012 ; 37 >
-        au < manifest ; 2013 ; Canadian Journal of Sociology Volume 38 ; 2012 ; 38 >
+        au < testing ; 2008 ; Canadian Journal of Sociology Volume 33 ; 2008 ; 33 >
+        au < testing ; 2009 ; Canadian Journal of Sociology Volume 34 ; 2009 ; 34 >
+        au < testing ; 2010 ; Canadian Journal of Sociology Volume 35 ; 2010 ; 35 >
+        au < testing ; 2011 ; Canadian Journal of Sociology Volume 36 ; 2011 ; 36 >
+        au < testing ; 2012 ; Canadian Journal of Sociology Volume 37 ; 2012 ; 37 >
+        au < testing ; 2013 ; Canadian Journal of Sociology Volume 38 ; 2012 ; 38 >
         
       }
 
@@ -226,41 +226,41 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = crcl
 
-      au < manifest ; 1974 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 1 ; 1974 ; 1 >
-      au < manifest ; 1975 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 2 ; 1975 ; 2 >
-      au < manifest ; 1976 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 3 ; 1976 ; 3 >
-      au < manifest ; 1977 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 4 ; 1977 ; 4 >
-      au < manifest ; 1978 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 5 ; 1978 ; 5 >
-      au < manifest ; 1979 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 6 ; 1979 ; 6 >
-      au < manifest ; 1980 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 7 ; 1980 ; 7 >
-      au < manifest ; 1981 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 8 ; 1981 ; 8 >
-      au < manifest ; 1982 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 9 ; 1982 ; 9 >
-      au < manifest ; 1983 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 10 ; 1983 ; 10 >
-      au < manifest ; 1984 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 11 ; 1984 ; 11 >
-      au < manifest ; 1985 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 12 ; 1985 ; 12 >
-      au < manifest ; 1986 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 13 ; 1986 ; 13 >
-      au < manifest ; 1987 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 14 ; 1987 ; 14 >
-      au < manifest ; 1988 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 15 ; 1988 ; 15 >
-      au < manifest ; 1989 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 16 ; 1989 ; 16 >
-      au < manifest ; 1990 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 17 ; 1990 ; 17 >
-      au < manifest ; 1991 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 18 ; 1991 ; 18 >
-      au < manifest ; 1992 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 ; 19 >
-      au < manifest ; 1993 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 ; 20 >
-      au < manifest ; 1994 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 ; 21 >
-      au < manifest ; 1995 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 ; 22 >
-      au < manifest ; 1996 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 ; 23 >
-      au < manifest ; 1997 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 ; 24 >
-      au < manifest ; 1998 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 ; 25 >
-      au < manifest ; 1999 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 ; 26 >
-      au < manifest ; 2000 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 ; 27 >
-      au < manifest ; 2001 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 28 ; 2001 ; 28 >
-      au < manifest ; 2002 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 29 ; 2002 ; 29 >
-      au < manifest ; 2003 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 30 ; 2003 ; 30 >
-      au < manifest ; 2004 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 31 ; 2004 ; 31 >
-      au < manifest ; 2005 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 32 ; 2005 ; 32 >
-      au < manifest ; 2006 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 33 ; 2006 ; 33 >
-      au < manifest ; 2007 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 34 ; 2007 ; 34 >
-      au < manifest ; 2008 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 35 ; 2008 ; 35 >
+      au < testing ; 1974 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 1 ; 1974 ; 1 >
+      au < testing ; 1975 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 2 ; 1975 ; 2 >
+      au < testing ; 1976 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 3 ; 1976 ; 3 >
+      au < testing ; 1977 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 4 ; 1977 ; 4 >
+      au < testing ; 1978 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 5 ; 1978 ; 5 >
+      au < testing ; 1979 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 6 ; 1979 ; 6 >
+      au < testing ; 1980 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 7 ; 1980 ; 7 >
+      au < testing ; 1981 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 8 ; 1981 ; 8 >
+      au < testing ; 1982 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 9 ; 1982 ; 9 >
+      au < testing ; 1983 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 10 ; 1983 ; 10 >
+      au < testing ; 1984 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 11 ; 1984 ; 11 >
+      au < testing ; 1985 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 12 ; 1985 ; 12 >
+      au < testing ; 1986 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 13 ; 1986 ; 13 >
+      au < testing ; 1987 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 14 ; 1987 ; 14 >
+      au < testing ; 1988 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 15 ; 1988 ; 15 >
+      au < testing ; 1989 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 16 ; 1989 ; 16 >
+      au < testing ; 1990 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 17 ; 1990 ; 17 >
+      au < testing ; 1991 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 18 ; 1991 ; 18 >
+      au < testing ; 1992 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 19 ; 1992 ; 19 >
+      au < testing ; 1993 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 20 ; 1993 ; 20 >
+      au < testing ; 1994 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 21 ; 1994 ; 21 >
+      au < testing ; 1995 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 22 ; 1995 ; 22 >
+      au < testing ; 1996 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 23 ; 1996 ; 23 >
+      au < testing ; 1997 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 24 ; 1997 ; 24 >
+      au < testing ; 1998 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 25 ; 1998 ; 25 >
+      au < testing ; 1999 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 26 ; 1999 ; 26 >
+      au < testing ; 2000 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 27 ; 2000 ; 27 >
+      au < testing ; 2001 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 28 ; 2001 ; 28 >
+      au < testing ; 2002 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 29 ; 2002 ; 29 >
+      au < testing ; 2003 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 30 ; 2003 ; 30 >
+      au < testing ; 2004 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 31 ; 2004 ; 31 >
+      au < testing ; 2005 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 32 ; 2005 ; 32 >
+      au < testing ; 2006 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 33 ; 2006 ; 33 >
+      au < testing ; 2007 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 34 ; 2007 ; 34 >
+      au < testing ; 2008 ; Canadian Review of Comparative Literature / Revue Canadienne de Littérature Comparée Volume 35 ; 2008 ; 35 >
 
     }
 
@@ -274,45 +274,45 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = csp
 
-      au < manifest ; 1974 ; Canadian Studies in Population Volume 1 ; 1974 ; 1 >
-      au < manifest ; 1975 ; Canadian Studies in Population Volume 2 ; 1975 ; 2 >
-      au < manifest ; 1976 ; Canadian Studies in Population Volume 3 ; 1976 ; 3 >
-      au < manifest ; 1977 ; Canadian Studies in Population Volume 4 ; 1977 ; 4 >
-      au < manifest ; 1978 ; Canadian Studies in Population Volume 5 ; 1978 ; 5 >
-      au < manifest ; 1979 ; Canadian Studies in Population Volume 6 ; 1979 ; 6 >
-      au < manifest ; 1980 ; Canadian Studies in Population Volume 7 ; 1980 ; 7 >
-      au < manifest ; 1981 ; Canadian Studies in Population Volume 8 ; 1981 ; 8 >
-      au < manifest ; 1982 ; Canadian Studies in Population Volume 9 ; 1982 ; 9 >
-      au < manifest ; 1983 ; Canadian Studies in Population Volume 10 ; 1983 ; 10 >
-      au < manifest ; 1984 ; Canadian Studies in Population Volume 11 ; 1984 ; 11 >
-      au < manifest ; 1985 ; Canadian Studies in Population Volume 12 ; 1985 ; 12 >
-      au < manifest ; 1986 ; Canadian Studies in Population Volume 13 ; 1986 ; 13 >
-      au < manifest ; 1987 ; Canadian Studies in Population Volume 14 ; 1987 ; 14 >
-      au < manifest ; 1988 ; Canadian Studies in Population Volume 15 ; 1988 ; 15 >
-      au < manifest ; 1989 ; Canadian Studies in Population Volume 16 ; 1989 ; 16 >
-      au < manifest ; 1990 ; Canadian Studies in Population Volume 17 ; 1990 ; 17 >
-      au < manifest ; 1991 ; Canadian Studies in Population Volume 18 ; 1991 ; 18 >
-      au < manifest ; 1992 ; Canadian Studies in Population Volume 19 ; 1992 ; 19 >
-      au < manifest ; 1993 ; Canadian Studies in Population Volume 20 ; 1993 ; 20 >
-      au < manifest ; 1994 ; Canadian Studies in Population Volume 21 ; 1994 ; 21 >
-      au < manifest ; 1995 ; Canadian Studies in Population Volume 22 ; 1995 ; 22 >
-      au < manifest ; 1996 ; Canadian Studies in Population Volume 23 ; 1996 ; 23 >
-      au < manifest ; 1997 ; Canadian Studies in Population Volume 24 ; 1997 ; 24 >
-      au < manifest ; 1998 ; Canadian Studies in Population Volume 25 ; 1998 ; 25 >
-      au < manifest ; 1999 ; Canadian Studies in Population Volume 26 ; 1999 ; 26 >
-      au < manifest ; 2000 ; Canadian Studies in Population Volume 27 ; 2000 ; 27 >
-      au < manifest ; 2001 ; Canadian Studies in Population Volume 28 ; 2001 ; 28 >
-      au < manifest ; 2002 ; Canadian Studies in Population Volume 29 ; 2002 ; 29 >
-      au < manifest ; 2003 ; Canadian Studies in Population Volume 30 ; 2003 ; 30 >
-      au < manifest ; 2004 ; Canadian Studies in Population Volume 31 ; 2004 ; 31 >
-      au < manifest ; 2005 ; Canadian Studies in Population Volume 32 ; 2005 ; 32 >
-      au < manifest ; 2006 ; Canadian Studies in Population Volume 33 ; 2006 ; 33 >
-      au < manifest ; 2007 ; Canadian Studies in Population Volume 34 ; 2007 ; 34 >
-      au < manifest ; 2008 ; Canadian Studies in Population Volume 35 ; 2008 ; 35 >
-      au < manifest ; 2009 ; Canadian Studies in Population Volume 36 ; 2009 ; 36 >
-      au < manifest ; 2010 ; Canadian Studies in Population Volume 37 ; 2010 ; 37 >
-      au < manifest ; 2011 ; Canadian Studies in Population Volume 38 ; 2011 ; 38 >
-      au < manifest ; 2012 ; Canadian Studies in Population Volume 39 ; 2012 ; 39 >
+      au < testing ; 1974 ; Canadian Studies in Population Volume 1 ; 1974 ; 1 >
+      au < testing ; 1975 ; Canadian Studies in Population Volume 2 ; 1975 ; 2 >
+      au < testing ; 1976 ; Canadian Studies in Population Volume 3 ; 1976 ; 3 >
+      au < testing ; 1977 ; Canadian Studies in Population Volume 4 ; 1977 ; 4 >
+      au < testing ; 1978 ; Canadian Studies in Population Volume 5 ; 1978 ; 5 >
+      au < testing ; 1979 ; Canadian Studies in Population Volume 6 ; 1979 ; 6 >
+      au < testing ; 1980 ; Canadian Studies in Population Volume 7 ; 1980 ; 7 >
+      au < testing ; 1981 ; Canadian Studies in Population Volume 8 ; 1981 ; 8 >
+      au < testing ; 1982 ; Canadian Studies in Population Volume 9 ; 1982 ; 9 >
+      au < testing ; 1983 ; Canadian Studies in Population Volume 10 ; 1983 ; 10 >
+      au < testing ; 1984 ; Canadian Studies in Population Volume 11 ; 1984 ; 11 >
+      au < testing ; 1985 ; Canadian Studies in Population Volume 12 ; 1985 ; 12 >
+      au < testing ; 1986 ; Canadian Studies in Population Volume 13 ; 1986 ; 13 >
+      au < testing ; 1987 ; Canadian Studies in Population Volume 14 ; 1987 ; 14 >
+      au < testing ; 1988 ; Canadian Studies in Population Volume 15 ; 1988 ; 15 >
+      au < testing ; 1989 ; Canadian Studies in Population Volume 16 ; 1989 ; 16 >
+      au < testing ; 1990 ; Canadian Studies in Population Volume 17 ; 1990 ; 17 >
+      au < testing ; 1991 ; Canadian Studies in Population Volume 18 ; 1991 ; 18 >
+      au < testing ; 1992 ; Canadian Studies in Population Volume 19 ; 1992 ; 19 >
+      au < testing ; 1993 ; Canadian Studies in Population Volume 20 ; 1993 ; 20 >
+      au < testing ; 1994 ; Canadian Studies in Population Volume 21 ; 1994 ; 21 >
+      au < testing ; 1995 ; Canadian Studies in Population Volume 22 ; 1995 ; 22 >
+      au < testing ; 1996 ; Canadian Studies in Population Volume 23 ; 1996 ; 23 >
+      au < testing ; 1997 ; Canadian Studies in Population Volume 24 ; 1997 ; 24 >
+      au < testing ; 1998 ; Canadian Studies in Population Volume 25 ; 1998 ; 25 >
+      au < testing ; 1999 ; Canadian Studies in Population Volume 26 ; 1999 ; 26 >
+      au < testing ; 2000 ; Canadian Studies in Population Volume 27 ; 2000 ; 27 >
+      au < testing ; 2001 ; Canadian Studies in Population Volume 28 ; 2001 ; 28 >
+      au < testing ; 2002 ; Canadian Studies in Population Volume 29 ; 2002 ; 29 >
+      au < testing ; 2003 ; Canadian Studies in Population Volume 30 ; 2003 ; 30 >
+      au < testing ; 2004 ; Canadian Studies in Population Volume 31 ; 2004 ; 31 >
+      au < testing ; 2005 ; Canadian Studies in Population Volume 32 ; 2005 ; 32 >
+      au < testing ; 2006 ; Canadian Studies in Population Volume 33 ; 2006 ; 33 >
+      au < testing ; 2007 ; Canadian Studies in Population Volume 34 ; 2007 ; 34 >
+      au < testing ; 2008 ; Canadian Studies in Population Volume 35 ; 2008 ; 35 >
+      au < testing ; 2009 ; Canadian Studies in Population Volume 36 ; 2009 ; 36 >
+      au < testing ; 2010 ; Canadian Studies in Population Volume 37 ; 2010 ; 37 >
+      au < testing ; 2011 ; Canadian Studies in Population Volume 38 ; 2011 ; 38 >
+      au < testing ; 2012 ; Canadian Studies in Population Volume 39 ; 2012 ; 39 >
 
     }
 
@@ -344,15 +344,15 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = complicity
 
-        au < manifest ; 2004 ; Complicity: An International Journal of Complexity and Education Volume 1 ; 2004 ; 1 >
-        au < manifest ; 2005 ; Complicity: An International Journal of Complexity and Education Volume 2 ; 2005 ; 2 >
-        au < manifest ; 2006 ; Complicity: An International Journal of Complexity and Education Volume 3 ; 2006 ; 3 >
-        au < manifest ; 2007 ; Complicity: An International Journal of Complexity and Education Volume 4 ; 2007 ; 4 >
-        au < manifest ; 2008 ; Complicity: An International Journal of Complexity and Education Volume 5 ; 2008 ; 5 >
-        au < manifest ; 2009 ; Complicity: An International Journal of Complexity and Education Volume 6 ; 2009 ; 6 >
-        au < manifest ; 2010 ; Complicity: An International Journal of Complexity and Education Volume 7 ; 2010 ; 7 >
-        au < manifest ; 2011 ; Complicity: An International Journal of Complexity and Education Volume 8 ; 2011 ; 8 >
-        au < manifest ; 2012 ; Complicity: An International Journal of Complexity and Education Volume 9 ; 2012 ; 9 >
+        au < testing ; 2004 ; Complicity: An International Journal of Complexity and Education Volume 1 ; 2004 ; 1 >
+        au < testing ; 2005 ; Complicity: An International Journal of Complexity and Education Volume 2 ; 2005 ; 2 >
+        au < testing ; 2006 ; Complicity: An International Journal of Complexity and Education Volume 3 ; 2006 ; 3 >
+        au < testing ; 2007 ; Complicity: An International Journal of Complexity and Education Volume 4 ; 2007 ; 4 >
+        au < testing ; 2008 ; Complicity: An International Journal of Complexity and Education Volume 5 ; 2008 ; 5 >
+        au < testing ; 2009 ; Complicity: An International Journal of Complexity and Education Volume 6 ; 2009 ; 6 >
+        au < testing ; 2010 ; Complicity: An International Journal of Complexity and Education Volume 7 ; 2010 ; 7 >
+        au < testing ; 2011 ; Complicity: An International Journal of Complexity and Education Volume 8 ; 2011 ; 8 >
+        au < testing ; 2012 ; Complicity: An International Journal of Complexity and Education Volume 9 ; 2012 ; 9 >
         
       }
 
@@ -367,10 +367,10 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = constellations
 
-      au < manifest ; 2009 ; Constellations Volume 1 ; 2009 ; 1 >
-      au < manifest ; 2010 ; Constellations Volume 1-2 ; 2010 ; 1-2 >
-      au < manifest ; 2011 ; Constellations Volume 2-3 ; 2011 ; 2-3 >
-      au < manifest ; 2012 ; Constellations Volume 3-4 ; 2012 ; 3-4 >
+      au < testing ; 2009 ; Constellations Volume 1 ; 2009 ; 1 >
+      au < testing ; 2010 ; Constellations Volume 1-2 ; 2010 ; 1-2 >
+      au < testing ; 2011 ; Constellations Volume 2-3 ; 2011 ; 2-3 >
+      au < testing ; 2012 ; Constellations Volume 3-4 ; 2012 ; 3-4 >
 
     }
 
@@ -383,26 +383,26 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = constitutional_forum
 
-      au < manifest ; 1989 ; Constitutional Forum / Forum constitutionnel Volume 1 ; 1989 ; 1 >
-      au < manifest ; 1990 ; Constitutional Forum / Forum constitutionnel Volume 2 ; 1990 ; 2 >
-      au < manifest ; 1991 ; Constitutional Forum / Forum constitutionnel Volume 3 ; 1991 ; 3 >
-      au < manifest ; 1992 ; Constitutional Forum / Forum constitutionnel Volume 4 ; 1992 ; 4 >
-      au < manifest ; 1994 ; Constitutional Forum / Forum constitutionnel Volume 5-6 ; 1994 ; 5-6 >
-      au < manifest ; 1995 ; Constitutional Forum / Forum constitutionnel Volume 7 ; 1995 ; 7 >
-      au < manifest ; 1996 ; Constitutional Forum / Forum constitutionnel Volume 8 ; 1996 ; 8 >
-      au < manifest ; 1997 ; Constitutional Forum / Forum constitutionnel Volume 9 ; 1997 ; 9 >
-      au < manifest ; 1998 ; Constitutional Forum / Forum constitutionnel Volume 10 ; 1998 ; 10 >
-      au < manifest ; 1999 ; Constitutional Forum / Forum constitutionnel Volume 11 ; 1999 ; 11 >
-      au < manifest ; 2001 ; Constitutional Forum / Forum constitutionnel Volume 12 ; 2001 ; 12 >
-      au < manifest ; 2003 ; Constitutional Forum / Forum constitutionnel Volume 13 ; 2003 ; 13 >
-      au < manifest ; 2005 ; Constitutional Forum / Forum constitutionnel Volume 13-14 ; 2005 ; 13-14 >
-      au < manifest ; 2006 ; Constitutional Forum / Forum constitutionnel Volume 15 ; 2006 ; 15 >
-      au < manifest ; 2007 ; Constitutional Forum / Forum constitutionnel Volume 16 ; 2007 ; 16 >
-      au < manifest ; 2008 ; Constitutional Forum / Forum constitutionnel Volume 17 ; 2008 ; 17 >
-      au < manifest ; 2009 ; Constitutional Forum / Forum constitutionnel Volume 18 ; 2009 ; 18 >
-      au < manifest ; 2011 ; Constitutional Forum / Forum constitutionnel Volume 20 ; 2011 ; 20 >
-      au < manifest ; 2012 ; Constitutional Forum / Forum constitutionnel Volume 21 ; 2012 ; 21 >
-      au < manifest ; 2013 ; Constitutional Forum / Forum constitutionnel Volume 21-22 ; 2013 ; 21-22 >
+      au < testing ; 1989 ; Constitutional Forum / Forum constitutionnel Volume 1 ; 1989 ; 1 >
+      au < testing ; 1990 ; Constitutional Forum / Forum constitutionnel Volume 2 ; 1990 ; 2 >
+      au < testing ; 1991 ; Constitutional Forum / Forum constitutionnel Volume 3 ; 1991 ; 3 >
+      au < testing ; 1992 ; Constitutional Forum / Forum constitutionnel Volume 4 ; 1992 ; 4 >
+      au < testing ; 1994 ; Constitutional Forum / Forum constitutionnel Volume 5-6 ; 1994 ; 5-6 >
+      au < testing ; 1995 ; Constitutional Forum / Forum constitutionnel Volume 7 ; 1995 ; 7 >
+      au < testing ; 1996 ; Constitutional Forum / Forum constitutionnel Volume 8 ; 1996 ; 8 >
+      au < testing ; 1997 ; Constitutional Forum / Forum constitutionnel Volume 9 ; 1997 ; 9 >
+      au < testing ; 1998 ; Constitutional Forum / Forum constitutionnel Volume 10 ; 1998 ; 10 >
+      au < testing ; 1999 ; Constitutional Forum / Forum constitutionnel Volume 11 ; 1999 ; 11 >
+      au < testing ; 2001 ; Constitutional Forum / Forum constitutionnel Volume 12 ; 2001 ; 12 >
+      au < testing ; 2003 ; Constitutional Forum / Forum constitutionnel Volume 13 ; 2003 ; 13 >
+      au < testing ; 2005 ; Constitutional Forum / Forum constitutionnel Volume 13-14 ; 2005 ; 13-14 >
+      au < testing ; 2006 ; Constitutional Forum / Forum constitutionnel Volume 15 ; 2006 ; 15 >
+      au < testing ; 2007 ; Constitutional Forum / Forum constitutionnel Volume 16 ; 2007 ; 16 >
+      au < testing ; 2008 ; Constitutional Forum / Forum constitutionnel Volume 17 ; 2008 ; 17 >
+      au < testing ; 2009 ; Constitutional Forum / Forum constitutionnel Volume 18 ; 2009 ; 18 >
+      au < testing ; 2011 ; Constitutional Forum / Forum constitutionnel Volume 20 ; 2011 ; 20 >
+      au < testing ; 2012 ; Constitutional Forum / Forum constitutionnel Volume 21 ; 2012 ; 21 >
+      au < testing ; 2013 ; Constitutional Forum / Forum constitutionnel Volume 21-22 ; 2013 ; 21-22 >
 
     }
 
@@ -463,15 +463,15 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = esc
 
-        au < manifest ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 ; 29 >
-        au < manifest ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 ; 30 >
-        au < manifest ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 ; 31 >
-        au < manifest ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 ; 32 >
-        au < manifest ; 2007 ; ESC: English Studies in Canada Volume 33 ; 2007 ; 33 >
-        au < manifest ; 2008 ; ESC: English Studies in Canada Volume 34 ; 2008 ; 34 >
-        au < manifest ; 2009 ; ESC: English Studies in Canada Volume 35 ; 2009 ; 35 >
-        au < manifest ; 2010 ; ESC: English Studies in Canada Volume 36 ; 2010 ; 36 >
-        au < manifest ; 2011 ; ESC: English Studies in Canada Volume 37 ; 2011 ; 37 >
+        au < testing ; 2003 ; ESC: English Studies in Canada Volume 29 ; 2003 ; 29 >
+        au < testing ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 ; 30 >
+        au < testing ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 ; 31 >
+        au < testing ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 ; 32 >
+        au < testing ; 2007 ; ESC: English Studies in Canada Volume 33 ; 2007 ; 33 >
+        au < testing ; 2008 ; ESC: English Studies in Canada Volume 34 ; 2008 ; 34 >
+        au < testing ; 2009 ; ESC: English Studies in Canada Volume 35 ; 2009 ; 35 >
+        au < testing ; 2010 ; ESC: English Studies in Canada Volume 36 ; 2010 ; 36 >
+        au < testing ; 2011 ; ESC: English Studies in Canada Volume 37 ; 2011 ; 37 >
         
       }
 
@@ -498,9 +498,9 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = eureka
 
-        au < manifest ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 ; 1 >
-        au < manifest ; 2011 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 2 ; 2011 ; 2 >
-        au < manifest ; 2012 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 3 ; 2012 ; 3 >
+        au < testing ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 ; 1 >
+        au < testing ; 2011 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 2 ; 2011 ; 2 >
+        au < testing ; 2012 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 3 ; 2012 ; 3 >
         
       }
 
@@ -531,14 +531,14 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = eblip
 
-        au < manifest ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
-        au < manifest ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
-        au < manifest ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
-        au < manifest ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
-        au < manifest ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
-        au < manifest ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
-        au < manifest ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
-        au < manifest ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
+        au < testing ; 2006 ; Evidence Based Library and Information Practice Volume 1 ; 2006 ; 1 >
+        au < testing ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 ; 2 >
+        au < testing ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 ; 3 >
+        au < testing ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 ; 4 >
+        au < testing ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 ; 5 >
+        au < testing ; 2011 ; Evidence Based Library and Information Practice Volume 6 ; 2011 ; 6 >
+        au < testing ; 2012 ; Evidence Based Library and Information Practice Volume 7 ; 2012 ; 7 >
+        au < testing ; 2013 ; Evidence Based Library and Information Practice Volume 8 ; 2013 ; 8 >
       
       }
 
@@ -554,12 +554,12 @@
       param[journal_id] = eei
       comment[eei1] = subscription title
 
-      au < manifest ; 2007 ; Exceptionality Education International Volume 17 ; 2007 ; 17 >
-      au < manifest ; 2008 ; Exceptionality Education International Volume 18 ; 2008 ; 18 >
-      au < manifest ; 2009 ; Exceptionality Education International Volume 19 ; 2009 ; 19 >
-      au < manifest ; 2010 ; Exceptionality Education International Volume 20 ; 2010 ; 20 >
-      au < manifest ; 2011 ; Exceptionality Education International Volume 21 ; 2011 ; 21 >
-      au < manifest ; 2012 ; Exceptionality Education International Volume 22 ; 2012 ; 22 >
+      au < testing ; 2007 ; Exceptionality Education International Volume 17 ; 2007 ; 17 >
+      au < testing ; 2008 ; Exceptionality Education International Volume 18 ; 2008 ; 18 >
+      au < testing ; 2009 ; Exceptionality Education International Volume 19 ; 2009 ; 19 >
+      au < testing ; 2010 ; Exceptionality Education International Volume 20 ; 2010 ; 20 >
+      au < testing ; 2011 ; Exceptionality Education International Volume 21 ; 2011 ; 21 >
+      au < testing ; 2012 ; Exceptionality Education International Volume 22 ; 2012 ; 22 >
 
     }
 
@@ -584,8 +584,8 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = imaginations
 
-        au < manifest ; 2010 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 1 ; 2010 ; 1 >
-        au < manifest ; 2011 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 2 ; 2011 ; 2 >
+        au < testing ; 2010 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 1 ; 2010 ; 1 >
+        au < testing ; 2011 ; Imaginations: Journal of Cross-Cultural Image Studies / Revue d'Études Interculturelles de l'Image Volume 2 ; 2011 ; 2 >
         
       }
 
@@ -618,16 +618,16 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = ijqm
         
-        au < manifest ; 2004 ; International Journal of Qualitative Methods Volume 3 ; 2004 ; 3 >
-        au < manifest ; 2005 ; International Journal of Qualitative Methods Volume 4 ; 2005 ; 4 >
-        au < manifest ; 2006 ; International Journal of Qualitative Methods Volume 5 ; 2006 ; 5 >
-        au < manifest ; 2007 ; International Journal of Qualitative Methods Volume 6 ; 2007 ; 6 >
-        au < manifest ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 2008 ; 7 >
-        au < manifest ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 2009 ; 8 >
-        au < manifest ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 2010 ; 9 >
-        au < manifest ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 2011 ; 10 >
-        au < manifest ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 2012 ; 11 >
-        au < manifest ; 2013 ; International Journal of Qualitative Methods Volume 12 ; 2013 ; 12 >
+        au < testing ; 2004 ; International Journal of Qualitative Methods Volume 3 ; 2004 ; 3 >
+        au < testing ; 2005 ; International Journal of Qualitative Methods Volume 4 ; 2005 ; 4 >
+        au < testing ; 2006 ; International Journal of Qualitative Methods Volume 5 ; 2006 ; 5 >
+        au < testing ; 2007 ; International Journal of Qualitative Methods Volume 6 ; 2007 ; 6 >
+        au < testing ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 2008 ; 7 >
+        au < testing ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 2009 ; 8 >
+        au < testing ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 2010 ; 9 >
+        au < testing ; 2011 ; International Journal of Qualitative Methods Volume 10 ; 2011 ; 10 >
+        au < testing ; 2012 ; International Journal of Qualitative Methods Volume 11 ; 2012 ; 11 >
+        au < testing ; 2013 ; International Journal of Qualitative Methods Volume 12 ; 2013 ; 12 >
 
       }
 
@@ -642,7 +642,7 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = invoke
 
-      au < manifest ; 2012 ; invoke Volume 1 ; 2012 ; 1 >
+      au < testing ; 2012 ; invoke Volume 1 ; 2012 ; 1 >
 
     }
 
@@ -671,12 +671,12 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = jcie
 
-        au < manifest ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 ; 1 >
-        au < manifest ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 ; 2 >
-        au < manifest ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 ; 3 >
-        au < manifest ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 ; 4 >
-        au < manifest ; 2010 ; Journal of Contemporary Issues in Education Volume 5 ; 2010 ; 5 >
-        au < manifest ; 2011 ; Journal of Contemporary Issues in Education Volume 6 ; 2011 ; 6 >
+        au < testing ; 2006 ; Journal of Contemporary Issues in Education Volume 1 ; 2006 ; 1 >
+        au < testing ; 2007 ; Journal of Contemporary Issues in Education Volume 2 ; 2007 ; 2 >
+        au < testing ; 2008 ; Journal of Contemporary Issues in Education Volume 3 ; 2008 ; 3 >
+        au < testing ; 2009 ; Journal of Contemporary Issues in Education Volume 4 ; 2009 ; 4 >
+        au < testing ; 2010 ; Journal of Contemporary Issues in Education Volume 5 ; 2010 ; 5 >
+        au < testing ; 2011 ; Journal of Contemporary Issues in Education Volume 6 ; 2011 ; 6 >
 
       }
 
@@ -704,12 +704,12 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = jpps
 
-      au < manifest ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 ; 10 >
-      au < manifest ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 ; 11 >
-      au < manifest ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 ; 12 >
-      au < manifest ; 2010 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 13 ; 2010 ; 13 >
-      au < manifest ; 2011 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 14 ; 2011 ; 14 >
-      au < manifest ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 15 ; 2012 ; 15 >
+      au < testing ; 2007 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 10 ; 2007 ; 10 >
+      au < testing ; 2008 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 11 ; 2008 ; 11 >
+      au < testing ; 2009 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 12 ; 2009 ; 12 >
+      au < testing ; 2010 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 13 ; 2010 ; 13 >
+      au < testing ; 2011 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 14 ; 2011 ; 14 >
+      au < testing ; 2012 ; Journal of Pharmacy & Pharmaceutical Sciences Volume 15 ; 2012 ; 15 >
 
     }
 
@@ -722,15 +722,15 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = langandlit
 
-      au < manifest ; 2004 ; Language and Literacy Volume 6 ; 2004 ; 6 >
-      au < manifest ; 2005 ; Language and Literacy Volume 7 ; 2005 ; 7 >
-      au < manifest ; 2006 ; Language and Literacy Volume 8 ; 2006 ; 8 >
-      au < manifest ; 2007 ; Language and Literacy Volume 9 ; 2007 ; 9 >
-      au < manifest ; 2008 ; Language and Literacy Volume 10 ; 2008 ; 10 >
-      au < manifest ; 2009 ; Language and Literacy Volume 11 ; 2009 ; 11 >
-      au < manifest ; 2010 ; Language and Literacy Volume 12 ; 2010 ; 12 >
-      au < manifest ; 2011 ; Language and Literacy Volume 13 ; 2011 ; 13 >
-      au < manifest ; 2012 ; Language and Literacy Volume 14 ; 2012 ; 14 >
+      au < testing ; 2004 ; Language and Literacy Volume 6 ; 2004 ; 6 >
+      au < testing ; 2005 ; Language and Literacy Volume 7 ; 2005 ; 7 >
+      au < testing ; 2006 ; Language and Literacy Volume 8 ; 2006 ; 8 >
+      au < testing ; 2007 ; Language and Literacy Volume 9 ; 2007 ; 9 >
+      au < testing ; 2008 ; Language and Literacy Volume 10 ; 2008 ; 10 >
+      au < testing ; 2009 ; Language and Literacy Volume 11 ; 2009 ; 11 >
+      au < testing ; 2010 ; Language and Literacy Volume 12 ; 2010 ; 12 >
+      au < testing ; 2011 ; Language and Literacy Volume 13 ; 2011 ; 13 >
+      au < testing ; 2012 ; Language and Literacy Volume 14 ; 2012 ; 14 >
 
     }
 
@@ -743,7 +743,7 @@
       param[base_url] = https://ejournals.library.ualberta.ca/
       param[journal_id] = eudaimons
 
-      au < manifest ; 2011 ; The Lyceum Volume 1 ; 2011 ; 1 >
+      au < testing ; 2011 ; The Lyceum Volume 1 ; 2011 ; 1 >
 
     }
 
@@ -791,18 +791,18 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = jhs
 
-        au < manifest ; 1997 ; Journal of Hebrew Scriptures Volume 1 ; 1997 ; 1 >
-        au < manifest ; 1999 ; Journal of Hebrew Scriptures Volume 2 ; 1999 ; 2 >
-        au < manifest ; 2001 ; Journal of Hebrew Scriptures Volume 3 ; 2001 ; 3 >
-        au < manifest ; 2003 ; Journal of Hebrew Scriptures Volume 4 ; 2003 ; 4 >
-        au < manifest ; 2005 ; Journal of Hebrew Scriptures Volume 5 ; 2005 ; 5 >
-        au < manifest ; 2006 ; Journal of Hebrew Scriptures Volume 6 ; 2006 ; 6 >
-        au < manifest ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 ; 7 >
-        au < manifest ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 ; 8 >
-        au < manifest ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 ; 9 >
-        au < manifest ; 2010 ; Journal of Hebrew Scriptures Volume 10 ; 2010 ; 10 >
-        au < manifest ; 2011 ; Journal of Hebrew Scriptures Volume 11 ; 2011 ; 11 >
-        au < manifest ; 2012 ; Journal of Hebrew Scriptures Volume 12 ; 2012 ; 12 >
+        au < testing ; 1997 ; Journal of Hebrew Scriptures Volume 1 ; 1997 ; 1 >
+        au < testing ; 1999 ; Journal of Hebrew Scriptures Volume 2 ; 1999 ; 2 >
+        au < testing ; 2001 ; Journal of Hebrew Scriptures Volume 3 ; 2001 ; 3 >
+        au < testing ; 2003 ; Journal of Hebrew Scriptures Volume 4 ; 2003 ; 4 >
+        au < testing ; 2005 ; Journal of Hebrew Scriptures Volume 5 ; 2005 ; 5 >
+        au < testing ; 2006 ; Journal of Hebrew Scriptures Volume 6 ; 2006 ; 6 >
+        au < testing ; 2007 ; Journal of Hebrew Scriptures Volume 7 ; 2007 ; 7 >
+        au < testing ; 2008 ; Journal of Hebrew Scriptures Volume 8 ; 2008 ; 8 >
+        au < testing ; 2009 ; Journal of Hebrew Scriptures Volume 9 ; 2009 ; 9 >
+        au < testing ; 2010 ; Journal of Hebrew Scriptures Volume 10 ; 2010 ; 10 >
+        au < testing ; 2011 ; Journal of Hebrew Scriptures Volume 11 ; 2011 ; 11 >
+        au < testing ; 2012 ; Journal of Hebrew Scriptures Volume 12 ; 2012 ; 12 >
 
       }
 
@@ -843,22 +843,22 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = pi
 
-        au < manifest ; 1992 ; Past Imperfect Volume 1 ; 1992 ; 1 >
-        au < manifest ; 1993 ; Past Imperfect Volume 2 ; 1993 ; 2 >
-        au < manifest ; 1994 ; Past Imperfect Volume 3 ; 1994 ; 3 >
-        au < manifest ; 1995 ; Past Imperfect Volume 4 ; 1995 ; 4 >
-        au < manifest ; 1996 ; Past Imperfect Volume 5 ; 1996 ; 5 >
-        au < manifest ; 1997 ; Past Imperfect Volume 6 ; 1997 ; 6 >
-        au < manifest ; 1998 ; Past Imperfect Volume 7 ; 1998 ; 7 >
-        au < manifest ; 1999 ; Past Imperfect Volume 8 ; 1999 ; 8 >
-        au < manifest ; 2000 ; Past Imperfect Volume 9 ; 2001 ; 9 >
-        au < manifest ; 2004 ; Past Imperfect Volume 10 ; 2004 ; 10 >
-        au < manifest ; 2005 ; Past Imperfect Volume 11 ; 2005 ; 11 >
-        au < manifest ; 2006 ; Past Imperfect Volume 12 ; 2006 ; 12 >
-        au < manifest ; 2007 ; Past Imperfect Volume 13 ; 2007 ; 13 >
-        au < manifest ; 2008 ; Past Imperfect Volume 14 ; 2008 ; 14 >
-        au < manifest ; 2009 ; Past Imperfect Volume 15 ; 2009 ; 15 >
-        au < manifest ; 2010 ; Past Imperfect Volume 16 ; 2010 ; 16 >
+        au < testing ; 1992 ; Past Imperfect Volume 1 ; 1992 ; 1 >
+        au < testing ; 1993 ; Past Imperfect Volume 2 ; 1993 ; 2 >
+        au < testing ; 1994 ; Past Imperfect Volume 3 ; 1994 ; 3 >
+        au < testing ; 1995 ; Past Imperfect Volume 4 ; 1995 ; 4 >
+        au < testing ; 1996 ; Past Imperfect Volume 5 ; 1996 ; 5 >
+        au < testing ; 1997 ; Past Imperfect Volume 6 ; 1997 ; 6 >
+        au < testing ; 1998 ; Past Imperfect Volume 7 ; 1998 ; 7 >
+        au < testing ; 1999 ; Past Imperfect Volume 8 ; 1999 ; 8 >
+        au < testing ; 2000 ; Past Imperfect Volume 9 ; 2001 ; 9 >
+        au < testing ; 2004 ; Past Imperfect Volume 10 ; 2004 ; 10 >
+        au < testing ; 2005 ; Past Imperfect Volume 11 ; 2005 ; 11 >
+        au < testing ; 2006 ; Past Imperfect Volume 12 ; 2006 ; 12 >
+        au < testing ; 2007 ; Past Imperfect Volume 13 ; 2007 ; 13 >
+        au < testing ; 2008 ; Past Imperfect Volume 14 ; 2008 ; 14 >
+        au < testing ; 2009 ; Past Imperfect Volume 15 ; 2009 ; 15 >
+        au < testing ; 2010 ; Past Imperfect Volume 16 ; 2010 ; 16 >
 
       }
 
@@ -900,10 +900,10 @@
         param[base_url] = https://ejournals.library.ualberta.ca/
         param[journal_id] = tc
 
-        au < manifest ; 2008 ; TranscUlturAl Volume 1 (2008) ; 2008 ; 1 >
-        au < manifest ; 2009 ; TranscUlturAl Volume 1 (2009) ; 2009 ; 1 >
-        au < manifest ; 2010 ; TranscUlturAl Volume 1 (2010) ; 2010 ; 1 >
-        au < manifest ; 2011 ; TranscUlturAl Volume 1 (2011) ; 2011 ; 1 >
+        au < testing ; 2008 ; TranscUlturAl Volume 1 (2008) ; 2008 ; 1 >
+        au < testing ; 2009 ; TranscUlturAl Volume 1 (2009) ; 2009 ; 1 >
+        au < testing ; 2010 ; TranscUlturAl Volume 1 (2010) ; 2010 ; 1 >
+        au < testing ; 2011 ; TranscUlturAl Volume 1 (2011) ; 2011 ; 1 >
 
       }
 
