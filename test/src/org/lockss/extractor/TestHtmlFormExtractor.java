@@ -962,6 +962,45 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     assertIsomorphic(expected, parseSingleSource(form));
   }
 
+  public void testNullNotAccepted() throws Exception {
+    final String abstractWithForm=
+        "<html><head><title>Test Title</title></head><body>" +
+        " <table border=\"0\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\"><tr><td align=\"center\" class=\"section_head quickSearch_head\">" +
+        "Quick Search</td></tr><tr><td class=\"quickSearch_content\"><form method=\"post\" action=\"\" " +
+        "onSubmit=\"onAuthorSearchClick(this); return false;\" name=\"frmQuickSearch\"><input type=\"hidden\" name=\"type\" value=\"simple\"/><input type=\"hidden\" name=\"action\" " +
+        "value=\"search\"/><input type=\"hidden\" name=\"nh\" value=\"10\"/><input type=\"hidden\" name=\"displaySummary\" value=\"false\"/>" +
+        "<table width=\"100%\" border=\"0\" cellpadding=\"4\" cellspacing=\"0\" bgcolor=\"#FFFFFF\"><tr><td valign=\"top\" width=\"100%\">" +
+        "<span class=\"black9pt\"><select name=\"dbname\" size=\"1\"><option value=\"fus\" selected=\"\">" +
+        "Future Science</option><script type=\"text/javascript\">" +
+        "                               genSideQuickSearch('8','medline','PubMed');" +
+        "                       </script>  <script type=\"text/javascript\">" +
+        "                               genSideQuickSearch('16','crossref','CrossRef'); " +
+        "                       </script> </select> for </span></td></tr>" +
+        "<!-- quicksearch authors --><tr><td valign=\"top\" width=\"100%\" class=\"pageTitle\">" +
+        "Author:</td></tr><tr><td valign=\"top\" width=\"100%\" class=\"black9pt\">" +
+        "<table border=\"0\" cellpadding=\"2\" cellspacing=\"1\" width=\"100%\"><tr><td valign=\"top\">" +
+        "<input class=\"input_boxes\" value=\"Matyus, Peter\" name=\"author\" type=\"checkbox\"/></td><td>" +
+        "<input type=\"HIDDEN\" name=\"checkboxNum\" value=\"1\"/> Peter   Matyus </td></tr>" +
+        "</table></td></tr><!-- /quicksearch authors --><!-- quicksearch keywords --><!-- /quicksearch keywords --><tr>" +
+        "<td valign=\"top\" width=\"100%\" class=\"black9pt\"><input type=\"hidden\" name=\"result\" value=\"true\"/>" +
+        "<input type=\"hidden\" name=\"type\" value=\"simple\"/>" +
+        "<span class=\"black9pt\"><input type=\"image\" border=\"0\" src=\"/templates/jsp/_midtier/_FFA/_fus/images/searchButton.gif\" " +
+        "align=\"right\" alt=\"Search\"/></span></td></tr>" +
+        " </table></form></td></tr>" +
+        "</table>" +
+        "</body>" +
+        "</html>";
+        /* only include forms with the name "frmCitMgr" */
+    Set<String> include = SetUtil.fromCSV("frmCitmgr");
+
+    HtmlFormExtractor.FormFieldRestrictions include_restrictions =
+        new HtmlFormExtractor.FormFieldRestrictions(include,null);
+    restrictions.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
+
+    Set<String> result = parseSingleSource(abstractWithForm);
+
+  }
+
   public void testFixedListGenerator() throws Exception {
     HtmlFormExtractor.FieldIterator iter;
     String base = "http://www.example.com/bioone/cgi/?";
@@ -1039,7 +1078,6 @@ public class TestHtmlFormExtractor extends LockssTestCase {
         = new HashMap<String, HtmlFormExtractor.FieldIterator>();
 
   }
-
 
   private StringBuilder openDoc() {
     StringBuilder sb = new StringBuilder();

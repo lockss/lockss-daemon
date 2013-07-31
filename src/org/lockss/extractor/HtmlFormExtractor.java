@@ -1227,6 +1227,22 @@ public class HtmlFormExtractor {
       }
       return allow;
     }
+
+    public Set<String> getInclude() {
+      return m_include;
+    }
+
+    public void setInclude(final Set<String> include) {
+      m_include = include;
+    }
+
+    public Set<String> getExclude() {
+      return m_exclude;
+    }
+
+    public void setExclude(final Set<String> exclude) {
+      m_exclude = exclude;
+    }
   }
 
   /**
