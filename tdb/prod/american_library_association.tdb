@@ -18,15 +18,31 @@
       param[base_url] = http://www.cro3.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1988 ; Choice Reviews Online Volume 26 ; 26 >
-      au < exists ; 1989 ; Choice Reviews Online Volume 27 ; 27 >
-      au < exists ; 1990 ; Choice Reviews Online Volume 28 ; 28 >
-      au < exists ; 1991 ; Choice Reviews Online Volume 29 ; 29 >
-      au < exists ; 1992 ; Choice Reviews Online Volume 30 ; 30 >
-      au < exists ; 1993 ; Choice Reviews Online Volume 31 ; 31 >
-      au < exists ; 1994 ; Choice Reviews Online Volume 32 ; 32 >
-      au < exists ; 1995 ; Choice Reviews Online Volume 33 ; 33 >
-      au < exists ; 1996 ; Choice Reviews Online Volume 34 ; 34 >
+      au < manifest ; 1988-1989 ; Choice Reviews Online Volume 26 ; 26 >
+      au < manifest ; 1989-1990 ; Choice Reviews Online Volume 27 ; 27 >
+      au < manifest ; 1990-1991 ; Choice Reviews Online Volume 28 ; 28 >
+      au < manifest ; 1991-1992 ; Choice Reviews Online Volume 29 ; 29 >
+      au < manifest ; 1992-1993 ; Choice Reviews Online Volume 30 ; 30 >
+      au < manifest ; 1993-1994 ; Choice Reviews Online Volume 31 ; 31 >
+      au < manifest ; 1994-1995 ; Choice Reviews Online Volume 32 ; 32 >
+      au < manifest ; 1995-1996 ; Choice Reviews Online Volume 33 ; 33 >
+      au < manifest ; 1996-1997 ; Choice Reviews Online Volume 34 ; 34 >
+      au < exists ; 1997-1998 ; Choice Reviews Online Volume 35 ; 35 >
+      au < exists ; 1998-1999 ; Choice Reviews Online Volume 36 ; 36 >
+      au < exists ; 1999-2000 ; Choice Reviews Online Volume 37 ; 37 >
+      au < exists ; 2000-2001 ; Choice Reviews Online Volume 38 ; 38 >
+      au < exists ; 2001-2002 ; Choice Reviews Online Volume 39 ; 39 >
+      au < exists ; 2002-2003 ; Choice Reviews Online Volume 40 ; 40 >
+      au < exists ; 2003-2004 ; Choice Reviews Online Volume 41 ; 41 >
+      au < exists ; 2004-2005 ; Choice Reviews Online Volume 42 ; 42 >
+      au < exists ; 2005-2006 ; Choice Reviews Online Volume 43 ; 43 >
+      au < exists ; 2006-2007 ; Choice Reviews Online Volume 44 ; 44 >
+      au < exists ; 2007-2008 ; Choice Reviews Online Volume 45 ; 45 >
+      au < exists ; 2008-2009 ; Choice Reviews Online Volume 46 ; 46 >
+      au < exists ; 2009-2010 ; Choice Reviews Online Volume 47 ; 47 >
+      au < exists ; 2010-2011 ; Choice Reviews Online Volume 48 ; 48 >
+      au < exists ; 2011-2012 ; Choice Reviews Online Volume 49 ; 49 >
+      au < exists ; 2012-2013 ; Choice Reviews Online Volume 50 ; 50 >
 
     }
 
