@@ -18,7 +18,7 @@
       eissn = 1746-6091
     >
 
-    param[journal_id] = 122773
+    param[journal_issn] = 1746-6091
     
     au < exists ; exists ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
     au < exists ; exists ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 >
@@ -41,19 +41,10 @@
       eissn = 1746-6113
     >
     
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = wab
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.WhitingAndBirchPdfTransform
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
-    comment[continued_by] = 1759-5150
-    param[journal_id] = jpthsw
-    param[journal_issn] = 1460-6690
+    param[journal_issn] = 1746-6113
 
-    au < manifest ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
-    au < manifest ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
+    au < exists ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
+    au < exists ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
 
   }
 
@@ -65,7 +56,7 @@
     >
     
     comment[continued_from] = 1460-6690 
-    param[journal_id] = 122774   
+    param[journal_issn] = 1759-5150
       
     au < exists ; exists ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
     au < exists ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
@@ -84,7 +75,7 @@
       eissn = 1746-6105
     >
     
-    param[journal_id] = 122775
+    param[journal_issn] = 1746-6105
     
     au < exists ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
     au < exists ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
@@ -102,7 +93,7 @@
       issn = 1987-8710 
     >
     
-    param[journal_id] = 122776
+    param[journal_issn] = 1987-8710
 
     au < exists ; exists ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
     au < expected ; exists ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
