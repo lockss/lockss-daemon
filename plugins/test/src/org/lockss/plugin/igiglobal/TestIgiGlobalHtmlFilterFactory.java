@@ -109,6 +109,23 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 		  "</div>";
   private static final String trialImageHtmlFiltered = "<br>";
 
+  private static final String SearchBoxHtml =
+		  "<br>" +
+          "<span class=\"search-contents\" style=\"float:left;width:350px;font-size:12px;border:0px;padding:3px 0px 0px 0px;\">\n" +
+          "<span class=\"text-box-container\">\n" +
+          "<input id=\"txtKeywords\" type=\"text\" onkeypress=\"return SearchBookFulltextHandleEnter(event, 59159, 'b125a75b-d141-4da1-951e-10140c69f2eb', 'a3vazy55pkgddj55m1fkw545');\"" +
+          " title=\"Full text search term(s)\" class=\"SearchTextBox TextBoxWatermark text-box\" style=\"width:175px;\" />\n" +
+          "</span>\n" +
+          "<span class=\"search\">\n" +
+          "<span class=\"search-button\" onclick=\"RemoveSpecialCharacters();SearchBookFulltext(59159, 'b125a75b-d141-4da1-951e-10140c69f2eb', 'a3vazy55pkgddj55m1fkw545');\"></span>" +
+          "</span>\n" +
+          "<span class=\"reset\">\n" +
+          "<span onclick=\"RemoveSpecialCharacters();SearchBookFulltextReset();\" class=\"link-gray-s\">Reset</span>\n" +
+          "</span>" +
+          "</span>" ;
+  
+  private static final String SearchBoxHtmlFiltered = "<br>";
+
   private static final String goodHtml =
 	  "Hello\n" +
 	  "<div class=\"relatedcats\">\n" +
