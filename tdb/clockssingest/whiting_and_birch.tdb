@@ -67,11 +67,11 @@
     comment[continued_from] = 1460-6690 
     param[journal_id] = 122774   
       
-    au < manifest ; exists ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
-    au < manifest ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
-    au < manifest ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
-    au < testing ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
-    au < testing ; exists ; 2011-2012 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
+    au < exists ; exists ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
+    au < exists ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
+    au < exists ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
+    au < exists ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
+    au < exists ; exists ; 2011-2012 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
     au < expected ; exists ; 2012-2013 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
     
   }    
@@ -86,12 +86,12 @@
     
     param[journal_id] = 122775
     
-    au < manifest ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
-    au < manifest ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
-    au < manifest ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
-    au < notReady ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
-    au < notReady ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
-    au < notReady ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
+    au < exists ; exists ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
+    au < exists ; exists ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
+    au < exists ; exists ; 2007-2008 ; Social Work and Social Sciences Review Volume 13 ; 13 >
+    au < exists ; exists ; 2010-2011 ; Social Work and Social Sciences Review Volume 14 ; 14 >
+    au < exists ; exists ; 2011-2012 ; Social Work and Social Sciences Review Volume 15 ; 15 >
+    au < exists ; exists ; 2012-2013 ; Social Work and Social Sciences Review Volume 16 ; 16 >
     
   }
 
@@ -104,7 +104,7 @@
     
     param[journal_id] = 122776
 
-    au < testing ; exists ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
     au < expected ; exists ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
     
   }
