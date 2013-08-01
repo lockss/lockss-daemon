@@ -106,6 +106,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
         // Favorite button
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
+        // Search box
+        HtmlNodeFilters.tagWithAttribute("span", "class", "search-contents"),
         
         //IGI Global books identifies library with access in header
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_lblHeader"),
