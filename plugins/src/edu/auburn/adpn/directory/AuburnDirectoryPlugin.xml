@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -57,11 +57,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
-    <int>99</int>
+    <int>1</int>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
