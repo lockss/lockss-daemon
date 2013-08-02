@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireHtmlFilterFactory.java,v 1.2 2012-09-26 20:59:28 alexandraohlson Exp $
+ * $Id: TestHighWireHtmlFilterFactory.java,v 1.3 2013-08-02 23:00:34 etenbrink Exp $
  */
 
 /*
@@ -49,11 +49,20 @@ public class TestHighWireHtmlFilterFactory extends LockssTestCase {
     mau = new MockArchivalUnit();
   }
 
-  private static final String inst1 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	<NOBR><STRONG>Institution: Periodicals Department/Lane Library</STRONG></NOBR>\n	<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as Personal Subscriber</A></NOBR>";
+  private static final String inst1 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	" +
+      "<NOBR><STRONG>Institution: Periodicals Department/Lane Library</STRONG></NOBR>\n	" +
+      "<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">" +
+      "Sign In as Personal Subscriber</A></NOBR>";
 
-  private static final String inst2 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	<NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n	<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as Personal Subscriber</A></NOBR>";
+  private static final String inst2 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	" +
+      "<NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n	" +
+      "<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">" +
+      "Sign In as Personal Subscriber</A></NOBR>";
 
-  private static final String inst3 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n    <NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n      <NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as SOMETHING SOMETHING</A></NOBR>";
+  private static final String inst3 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n    " +
+      "<NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n      " +
+      "<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">" +
+      "Sign In as SOMETHING SOMETHING</A></NOBR>";
 
   public void testFiltering() throws Exception {
     InputStream inA;
