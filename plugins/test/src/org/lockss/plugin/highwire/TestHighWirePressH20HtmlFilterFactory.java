@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.13 2013-04-22 20:17:28 alexandraohlson Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.14 2013-08-05 18:01:32 etenbrink Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.highwire;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.test.*;
 
 public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
@@ -265,16 +264,31 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
 
   private static final String institutionLogoHtml =
       "        <div id=\"col-3\">" +
+          "<a class=\"hwac-institutional-logo\">" +
           "<img alt=\"Stanford University\"" +
           "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
           "class=\"hwac-institutional-logo\" />" +
-          "<div id=\"sidebar-global-nav\">";
+          "</a>" +
+          "<div id=\"something-nav\">";
   
   private static final String institutionLogoFiltered = 
       " <div id=\"col-3\">" +
-          "<div id=\"sidebar-global-nav\">";
+          "<div id=\"something-nav\">";
+
+  private static final String sidebarGlobalNavHtml =
+      "    <div id=\"col-3\">" +
+          "<div id=\"sidebar-global-nav\">" +
+          "<ul class=\"button-list pub-links\"> " +
+          "<li class=\"first\"><a title=\"About the Journal\" href=\"http://" +
+          "www.minersoc.org/clayminm.html\"><span>About the Journal</span></a></li>" +
+          "</ul>" +
+          "</div>" +
+          "<div id=\"something-nav\">";
   
-  
+  private static final String sidebarGlobalNavFiltered = 
+      " <div id=\"col-3\">" +
+          "<div id=\"something-nav\">";
+
   private static final String tocBannerAdHtml =
       "   <div id=\"content-block\">" +
       "<ul class=\"toc-banner-ads\">" +
@@ -327,6 +341,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToString(accessCheckHtml, accessCheckFiltered);
     assertFilterToString(institutionLogoHtml, institutionLogoFiltered);
     assertFilterToString(tocBannerAdHtml, tocBannerAdFiltered);
+    assertFilterToString(sidebarGlobalNavHtml, sidebarGlobalNavFiltered);
   }
 
   private void assertFilterToSame(String str1, String Str2) throws Exception {
