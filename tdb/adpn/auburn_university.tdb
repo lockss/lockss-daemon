@@ -17,7 +17,7 @@
   
       param[base_url] = http://digdata1.lib.auburn.edu/AAESpub_AULibraries/Bulletins/
 
-      au < ready ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 001-400 ; Bulletins_001_400 >
+      au < releasing ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 001-400 ; Bulletins_001_400 >
       au < released ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins 401-700 ; Bulletins_401_700 >
 
     }
@@ -26,7 +26,7 @@
 
       param[base_url] = http://digdata1.lib.auburn.edu/AAESpub_AULibraries/
 
-      au < ready ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Bulletins Non-Bulletins ; NonBulletins >
+      au < releasing ; Auburn University AAES Publications (Local) Digital Collection: Bulletins: Non-Bulletins ; NonBulletins >
     
     }
     
@@ -34,10 +34,10 @@
     
       param[base_url] = http://digdata1.lib.auburn.edu/AAESpub_NorthernMicrographics/
 
-      au < ready ; Auburn University AAES Publications (Outsourced) Digital Collection: A folders ; A_folders >
-      au < ready ; Auburn University AAES Publications (Outsourced) Digital Collection: B-G folders ; B_G_folders >
+      au < releasing ; Auburn University AAES Publications (Outsourced) Digital Collection: A folders ; A_folders >
+      au < releasing ; Auburn University AAES Publications (Outsourced) Digital Collection: B-G folders ; B_G_folders >
       au < released ; Auburn University AAES Publications (Outsourced) Digital Collection: H folders ; H_folders >
-      au < ready ; Auburn University AAES Publications (Outsourced) Digital Collection: I-Z folders ; I_Z_folders >
+      au < releasing ; Auburn University AAES Publications (Outsourced) Digital Collection: I-Z folders ; I_Z_folders >
       
     }
 
@@ -156,7 +156,7 @@
       param[base_url] = http://digdata4.lib.auburn.edu/CivilWar_Documents/Letters/
     
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters 0-B ; Letters_0_B >
-      au < ready ; Auburn University Civil War Documents Digital Collection: Letters: Letters C-D ; Letters_C_D >
+      au < releasing ; Auburn University Civil War Documents Digital Collection: Letters: Letters C-D ; Letters_C_D >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters E-K ; Letters_E_K >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters L-M ; Letters_L_M >
       au < released ; Auburn University Civil War Documents Digital Collection: Letters: Letters N-Q ; Letters_N_Q >
