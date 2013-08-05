@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.44 2013-04-22 20:17:28 alexandraohlson Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.45 2013-08-05 18:04:22 etenbrink Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
-import org.htmlparser.tags.HeadingTag;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.htmlparser.visitors.NodeVisitor;
@@ -76,6 +75,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads-ft"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-global-nav"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
         // May contain institution-specific data e.g. OUP
@@ -151,6 +151,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
         
+        // rmg.geoscienceworld.org
+        HtmlNodeFilters.tagWithAttribute("a", "class", "hwac-institutional-logo"),
         //claymin.geoscienceworld.org
         HtmlNodeFilters.tagWithAttribute("img", "class", "hwac-institutional-logo"),
         HtmlNodeFilters.tagWithAttribute("input", "type", "hidden"),
