@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -61,10 +61,10 @@
   </entry>
   <entry>
     <string>au_crawl_depth</string>
-    <int>1</int>
+    <int>99</int>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>5356800000</long>
+    <long>2419200000</long>
   </entry>
 </map>
