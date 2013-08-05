@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>29</string>
+    <string>30</string>
   </entry>
   <!--  This is a list of OJS2 Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
@@ -36,7 +36,7 @@
     <map>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -124,12 +124,11 @@
     <list>
       <!-- new - making index.php and journal_id optional, removed [0-9]+ for some rules -->
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$", base_url_host</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", base_url, journal_id, year</string>
-      <string>2,"^%s(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url, journal_id</string>
-      <string>1,"^%s(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url, journal_id</string>
-      <!-- the following url is redirected-to from the start_url for Ubiquity Press -->
+      <string>4,"^https?://%s/", base_url_host</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?(gateway/lockss\?year=%d|about/editorialPolicies)$", base_url_host, journal_id, year</string>
+      <string>2,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/viewFile/[0-9]+(/[0-9]+)?/%%20http:", base_url_host, journal_id</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?(article|issue)/(download|downloadSuppFile|view|viewArticle|viewDownloadInterstitial|viewFile|viewPDFInterstitial|viewRST)/", base_url_host, journal_id</string>
+      <string>1,"^https?://%s/(index\.php/)?(%s/)?rt/(bio|findingReferences|metadata|printerFriendly|suppFileMetadata|suppFiles)/", base_url_host, journal_id</string>
     </list>
   </entry>
   <entry>
