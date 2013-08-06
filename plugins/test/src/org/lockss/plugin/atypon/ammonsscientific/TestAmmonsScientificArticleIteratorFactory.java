@@ -47,7 +47,7 @@ public class TestAmmonsScientificArticleIteratorFactory extends ArticleIteratorT
 	
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
 	
-  private final String PLUGIN_NAME = "org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificPlugin";
+  private final String PLUGIN_NAME = "org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin";
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
