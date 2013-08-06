@@ -17,6 +17,18 @@
     >
 
       param[journal_id] = ejop
+      
+      au < exists ; exists ; 2005 ; Europe’s Journal of Psychology Volume 1 ; 1 >
+      au < exists ; exists ; 2006 ; Europe’s Journal of Psychology Volume 2 ; 2 >
+      au < exists ; exists ; 2007 ; Europe’s Journal of Psychology Volume 3 ; 3 >
+      au < exists ; exists ; 2008 ; Europe’s Journal of Psychology Volume 4 ; 4 >
+      au < exists ; exists ; 2009 ; Europe’s Journal of Psychology Volume 5 ; 5 >
+      au < exists ; exists ; 2010 ; Europe’s Journal of Psychology Volume 6 ; 6 >
+      au < exists ; exists ; 2011 ; Europe’s Journal of Psychology Volume 7 ; 7 >
+      au < exists ; exists ; 2012 ; Europe’s Journal of Psychology Volume 8 ; 8 >
+      au < exists ; exists ; 2013 ; Europe’s Journal of Psychology Volume 9 ; 9 >
+      
+      
   
   }
 
@@ -28,6 +40,9 @@
 
       param[journal_id] = ejcop
   
+      au < exists ; exists ; 2009 ; Europe’s Journal of Psychology Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; Europe’s Journal of Psychology Volume 2 ; 2 >
+
   }
 
   {
@@ -38,6 +53,14 @@
 
       param[journal_id] = interpersona
   
+      au < exists ; exists ; 2007 ; Europe’s Journal of Psychology Volume 1 ; 1 >
+      au < exists ; exists ; 2008 ; Europe’s Journal of Psychology Volume 2 ; 2 >
+      au < exists ; exists ; 2009 ; Europe’s Journal of Psychology Volume 3 ; 3 >
+      au < exists ; exists ; 2010 ; Europe’s Journal of Psychology Volume 4 ; 4 >
+      au < exists ; exists ; 2011 ; Europe’s Journal of Psychology Volume 5 ; 5 >
+      au < exists ; exists ; 2012 ; Europe’s Journal of Psychology Volume 6 ; 6 >
+      au < exists ; exists ; 2013 ; Europe’s Journal of Psychology Volume 7 ; 7 >
+
   }
 
   {
@@ -48,6 +71,7 @@
 
       param[journal_id] = jspp
   
+      au < expected ; exists ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 1 >
 
   }
 
@@ -58,6 +82,9 @@
     >
 
       param[journal_id] = psyct
+
+      au < exists ; exists ; 2012 ; Psychological Thought Volume 5 ; 5 >
+      au < exists ; exists ; 2013 ; Psychological Thought Volume 6 ; 6 >
   
   }
 
@@ -69,6 +96,9 @@
 
       param[journal_id] = pch
   
+      au < exists ; exists ; 2012 ; Psychology, Community & Health Volume 1 ; 1 >
+      au < exists ; exists ; 2013 ; Psychology, Community & Health Volume 2 ; 2 >
+
   }
 
 }

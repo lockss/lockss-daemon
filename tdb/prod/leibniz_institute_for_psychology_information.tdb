@@ -17,6 +17,16 @@
 
       param[journal_id] = ejop
   
+      au < exists ; 2005 ; Europe’s Journal of Psychology Volume 1 ; 2005 >
+      au < exists ; 2006 ; Europe’s Journal of Psychology Volume 2 ; 2006 >
+      au < exists ; 2007 ; Europe’s Journal of Psychology Volume 3 ; 2007 >
+      au < exists ; 2008 ; Europe’s Journal of Psychology Volume 4 ; 2008 >
+      au < exists ; 2009 ; Europe’s Journal of Psychology Volume 5 ; 2009 >
+      au < exists ; 2010 ; Europe’s Journal of Psychology Volume 6 ; 2010 >
+      au < exists ; 2011 ; Europe’s Journal of Psychology Volume 7 ; 2011 >
+      au < exists ; 2012 ; Europe’s Journal of Psychology Volume 8 ; 2012 >
+      au < exists ; 2013 ; Europe’s Journal of Psychology Volume 9 ; 2013 >
+
   }
 
   {
@@ -27,6 +37,9 @@
 
       param[journal_id] = ejcop
   
+      au < exists ; 2009 ; Europe’s Journal of Psychology Volume 1 ; 2009 >
+      au < exists ; 2013 ; Europe’s Journal of Psychology Volume 2 ; 2013 >
+
   }
 
   {
@@ -37,6 +50,14 @@
 
       param[journal_id] = interpersona
   
+      au < exists ; 2007 ; Europe’s Journal of Psychology Volume 1 ; 2007 >
+      au < exists ; 2008 ; Europe’s Journal of Psychology Volume 2 ; 2008 >
+      au < exists ; 2009 ; Europe’s Journal of Psychology Volume 3 ; 2009 >
+      au < exists ; 2010 ; Europe’s Journal of Psychology Volume 4 ; 2010 >
+      au < exists ; 2011 ; Europe’s Journal of Psychology Volume 5 ; 2011 >
+      au < exists ; 2012 ; Europe’s Journal of Psychology Volume 6 ; 2012 >
+      au < exists ; 2013 ; Europe’s Journal of Psychology Volume 7 ; 2013 >
+
   }
 
   {
@@ -47,6 +68,7 @@
 
       param[journal_id] = jspp
   
+      au < expected ; 2013 ; Journal of Social and Political Psychology Volume 1 ; 2013 >
 
   }
 
@@ -58,6 +80,9 @@
 
       param[journal_id] = psyct
   
+      au < exists ; 2012 ; Psychological Thought Volume 5 ; 2012 >
+      au < exists ; 2013 ; Psychological Thought Volume 6 ; 2013 >
+  
   }
 
   {
@@ -68,6 +93,9 @@
 
       param[journal_id] = pch
   
+      au < exists ; 2012 ; Psychology, Community & Health Volume 1 ; 2012 >
+      au < exists ; 2013 ; Psychology, Community & Health Volume 2 ; 2013 >
+
   }
 
 }
