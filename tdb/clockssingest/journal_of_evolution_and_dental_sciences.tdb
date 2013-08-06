@@ -1,0 +1,21 @@
+{
+
+  publisher <
+    name = Journal of Evolution and Medical and Dental Sciences ;
+    info[contract] = 2013 ;
+    info[tester] = 0 ;
+  >
+  
+  plugin = needs.plugin
+  param[base_url] = https://www.jemds.com
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+  
+  {
+    title <
+      name = Journal of Evolution and Medical and Dental Sciences
+      issn = 2278-4748 ;
+      eissn = 2278-4748
+    >
+
+  }
+}
