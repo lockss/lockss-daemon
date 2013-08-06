@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.4 2013-06-13 21:45:46 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -43,10 +43,10 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
     filt = new FutureScienceHtmlHashFilterFactory();
     mau = new MockArchivalUnit();
   }
-  
+
   private static final String topBannerHtml = "<start><div class=\"institutionBanner\" >Access provided by CLOCKSS archive </div><end>";
   private static final String topBannerHtmlFiltered = "<start><end>";
-  
+
   private static final String loginHtml = 
       "<tr><td colspan=\"2\" align=\"right\" valign=\"bottom\" class=\"identitiesBar\" style=\"padding-bottom:3px;\">" +
           "<span class=\"identitiesWelcome\">Welcome</span>" +
@@ -57,12 +57,60 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</tr>" +
           "</table>";
   private static final String loginHtmlFiltered =
-      "<tr><td colspan=\"2\" align=\"right\" valign=\"bottom\" class=\"identitiesBar\" style=\"padding-bottom:3px;\">" +
-          "<span class=\"identitiesWelcome\">Welcome</span>" +
+      "<tr>" +
+          "</tr>" +
+          "</table>";
+
+  private static final String rssFeedHtml =
+      "<font color=\"#000000\">" +                                                                                                                                                       
+          "<a href=\"http://www.future-science.com/action/showFeed?ui=0&mi=3d07wf&ai=rw&jc=fmc&type=etoc&feed=rss\">" + 
+          "<img src=\"/templates/jsp/_midtier/_FFA/images/xml.gif\" align=\"absbottom\" border=\"0\" />" +
+          "</a></font>&nbsp;";
+
+  private static final String rssFeedHtmlFiltered =
+      "<font color=\"#000000\">" +                                                                                                                                                       
+          "</font>&nbsp;";
+
+
+  private static final String freeHtml =
+      "    <!--totalCount15--><!--modified:1375798955000-->" +
+          "<h2 class=\"tocHeading\">" +
+          "<span class=\"subj-group\">Special Focus Issue</span>" +
+          "</h2>" +
+          "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.4155/xxx\"/>" +
+          "<br />" +
+          "</td>" +
+          "<td valign=\"top\">" +
+          "<div class=\"art_title\">" +
+          "<img src=\"/templates/jsp/_midtier/_FFA/images/free.gif\" alt=\"\" border=\"0\"/> &nbsp;Title Here" +
+          "</div>" +
           "</td>" +
           "</tr>" +
           "</table>";
-  
+
+  private static final String freeHtmlFiltered =
+      "    <!--totalCount15--><!--modified:1375798955000-->" +
+          "<h2 class=\"tocHeading\">" +
+          "<span class=\"subj-group\">Special Focus Issue</span>" +
+          "</h2>" +
+          "<table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
+          "<tr>" +
+          "<td align=\"right\" valign=\"top\" width=\"18\">" +
+          "<input type=\"checkbox\" name=\"doi\" value=\"10.4155/xxx\"/>" +
+          "<br />" +
+          "</td>" +
+          "<td valign=\"top\">" +
+          "<div class=\"art_title\">" +
+          " &nbsp;Title Here" +
+          "</div>" +
+          "</td>" +
+          "</tr>" +
+          "</table>";
+
+
   private static final String footerHtml = 
       "<hr size=\"1\" />" +
           "<!-- contact info -->" +
@@ -99,7 +147,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "<td align=\"center\" class=\"section_head quickLinks_head\">Quick Links</td></tr>" +
           "<tr></tr>" +
           "</table>";
-  
+
   private static final String sideMenuHtml =
       "      <td valign=\"top\" width=\"165\">" +
           "  <table class=\"sideMenu mceItemTable\" cellpadding=\"2\" width=\"165\">" +
@@ -146,7 +194,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "  </div></td><td width=\"10\">&nbsp;</td>";
   private static final String alsoReadHtmlFiltered =
       "<td></td><td width=\"10\">&nbsp;</td>";
-  
+
   private static final String adPlaceholderHtml = 
       "<tr><td align=\"center\">" +
           "<form action=\"/action/doSearch\" name=\"quickSearchBoxForm\" class=\"quickSearchBoxForm\" method=\"get\">" +
@@ -176,7 +224,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "   </td>" +
           "</tr>" +
           "</table>";
-  
+
   private static final String adPlaceholderFiltered = 
       "<tr>" +
           "</tr>" +
@@ -193,7 +241,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "   </td>" +
           "</tr>" +
           "</table>";
-  
+
   private static final String adPlaceholderLimitTest =
       "<table><tr><td><h1>YES</h1><h1>YES</h1><h1>YES</h1></td>" +
           "<td><h1>NO</h1><h1>NO</h1><!-- placeholder id=null, description=test --><a href=\"foo\"></a></td>" +
@@ -204,12 +252,12 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
       "<table><tr><td><h1>YES</h1><h1>YES</h1><h1>YES</h1></td>" +
           "<td>YES<table><tr><td>YES</td><td><h3>YES</h3></td></tr></table></td>" +
           "</tr></table>";
-  
+
   private static final String adSimple =
       "<html><body<table><tr><td><!-- placeholder id=null --></td></tr></table></body></html>";
   private static final String adSimpleFiltered =
       "<html><body><table><tr></tr></table></body></html>";
-  
+
   private static final String citedBySection =
       "</div><!-- /abstract content --><!-- fulltext content -->" +
           "<div class=\"citedBySection\"><a name=\"citedBySection\"></a><h2>Cited by</h2>" +
@@ -230,9 +278,54 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "<!-- /fulltext content -->" +
           "<div class=\"article_link\">"; 
 
+  // expert-reviews uses slightly different text for bottom information
+  // for the filter to work there needs to be a parent of the node to remove (as in real life examples)
+  private static final String expReviewsBottom =
+      "<body>" +
+          "!--end main menu-->" +
+          "<table>foo goes here </table>" +
+          "<br />" +
+          "<div class=\"bottomSiteMapLink\">" +
+          "<a class=\"siteMapLink\" href=\"/\">Home</a> | " +
+          "<br />" +
+          "<a class=\"siteMapLink\" href=\"/page/advertisers\">For Advertisers</a>" +
+          "<span style=\"COLOR: rgb(0,127,97)\"> </span>" +
+          "<a class=\"siteMapLink\" href=\"/page/reprints.jsp\">Reprints and Supplements</a> " +
+          "<span style=\"COLOR: rgb(0,127,97)\">|</span> " +
+          "<a class=\"siteMapLink\" href=\"/page/advertising\">Advertising</a>" +
+          "<span style=\"COLOR: rgb(0,127,97)\"> | " +
+          "<a class=\"siteMapLink\" href=\"/page/pressrelease\">Press Releases and News</a></span>" +
+          "<span style=\"COLOR: rgb(0,127,97)\"> |</span> " +
+          "<a class=\"siteMapLink\" href=\"/page/fdhelp\">Help</a>" +
+          "<br />" +
+          "<a href=\"http://www.crossref.org/\">" +
+          "<img style=\"WIDTH: 80px; HEIGHT: 31px\" alt=\"\" src=\"/userimages/blah.gif\" border=\"0\" height=\"35\" hspace=\"0\" width=\"80\" /></a>  " +
+          "<a href=\"http://www.projectcounter.org/\">" +
+          "<img style=\"WIDTH: 81px; HEIGHT: 31px\" alt=\"\" src=\"/userimages/blah.gif\" border=\"0\" height=\"33\" hspace=\"0\" width=\"85\" /></a>" +
+          "<br />" +
+          "</div>" +
+          "<hr size=\"1\" />" +
+          "<!-- contact info -->" +
+          "<div style=\"text-align: center;\">" +
+          "<span class=\"fontSize1\">Copyright © 2013 Informa Plc. All rights reserved." +
+          "<br />" +
+          "<br />" +
+          " This site is owned and operated by whatever plus contact info." +
+          "<br />" +
+          "</span></div>" +
+          "<span class=\"fontSize1\"></span>" + 
+          "</body>";
 
+  private static final String expReviewsBottomFiltered =
+      "<body>" +
+          "!--end main menu-->" +
+          "<table>foo goes here </table>" +
+          "<br />" +
+          "<hr size=\"1\" />" +
+          "<!-- contact info -->" +
+          "<span class=\"fontSize1\"></span>" + 
+          "</body>";
 
-  
   public void test_topBannerHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(topBannerHtml),
@@ -240,7 +333,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
 
     assertEquals(topBannerHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void test_loginHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(loginHtml),
@@ -254,7 +347,14 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         Constants.DEFAULT_ENCODING);
 
     assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+    actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(expReviewsBottom),
+        Constants.DEFAULT_ENCODING);
+
+    assertEquals(expReviewsBottomFiltered, StringUtil.fromInputStream(actIn));
   }
+
   public void test_quickLinksHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(quickLinksHtml),
@@ -276,7 +376,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
 
     assertEquals(alsoReadHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void test_adPlaceholder() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(adSimple),
@@ -284,21 +384,37 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
 
     assertEquals(adSimpleFiltered, StringUtil.fromInputStream(actIn));
   }
-  
+
   public void test_adPlaceholderAgain() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(adPlaceholderLimitTest),
         Constants.DEFAULT_ENCODING);
     assertEquals(adPlaceholderLimitFiltered, StringUtil.fromInputStream(actIn));
-    
+
   }
-  
+
   public void test_citedBySection() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(citedBySection),
         Constants.DEFAULT_ENCODING);
     assertEquals(citedBySectionFiltered, StringUtil.fromInputStream(actIn));
-    
+
   }
- 
+
+  public void test_rssFeedSection() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(rssFeedHtml),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(rssFeedHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+
+  public void test_freeGlyphSection() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(freeHtml),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(freeHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.1 2013-07-31 21:43:59 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.2 2013-08-06 22:45:13 alexandraohlson Exp $
  */
 /*
 
@@ -63,53 +63,68 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
           "</div>" +
           "</div><!-- /fulltext content -->" +
           "</div>";
-  
-private static final String citedByFiltered = 
-"</div>";
-  
+
+  private static final String citedByFiltered = 
+      "</div>";
+
   /* copyright in the footer of pages */
-private static final String copyrightHtml = 
-"<div id=\"footer\">" +
-    "<script type=\"text/javascript\" async=\"true\" src=\"http://www.google-analytics.com/ga.js\"></script>" +
-    "<ul>" +
-    "<li><img src=\"/templates/jsp/_style2/_AP/_ams/images/amsseal-blue3.jpg\" /></li>" +
-    "<li>" +
-    "<b><a target=\"_blank\" href=\"http://www.ametsoc.org/pubs/cr_2005.html\">© 2012</a> American Meteorological Society <a target=\"_blank\" href=\"http://www.ametsoc.org/disclaim.html\">Privacy Policy and Disclaimer</a>" +
-    "<br />" +
-    "Headquarters: 45 Beacon Street Boston, MA 02108-3693" +
-    "<br />" +
-    " DC Office: 1120 G Street, NW, Suite 800 Washington DC, 20005-3826" +
-    "<br />" +
-    "<a target=\"_blank\" href=\"mailto:amsinfo@ametsoc.org\">amsinfo@ametsoc.org</a> Phone: 617-227-2425 Fax: 617-742-8718" +
-    "<br />" +
-    "<a target=\"_blank\" href=\"http://allenpress.com/\">Allen Press, Inc</a>. assists in the online publication of AMS journals</b>" +
-    "</li>" +
-    "</ul>" +
-    "<div id=\"atypon\">" +
-    "<img src=\"/templates/jsp/_style2/_AP/_ams/images/pwrd_by_atypon.gif\" />" +
-    "</div>" +
-    "<div class=\"clearfix\">&nbsp;</div>" +
-    "</div>\n" +
-    "</div>";
-  
+  private static final String copyrightHtml = 
+      "<div id=\"footer\">" +
+          "<script type=\"text/javascript\" async=\"true\" src=\"http://www.google-analytics.com/ga.js\"></script>" +
+          "<ul>" +
+          "<li><img src=\"/templates/jsp/_style2/_AP/_ams/images/amsseal-blue3.jpg\" /></li>" +
+          "<li>" +
+          "<b><a target=\"_blank\" href=\"http://www.ametsoc.org/pubs/cr_2005.html\">© 2012</a> American Meteorological Society <a target=\"_blank\" href=\"http://www.ametsoc.org/disclaim.html\">Privacy Policy and Disclaimer</a>" +
+          "<br />" +
+          "Headquarters: 45 Beacon Street Boston, MA 02108-3693" +
+          "<br />" +
+          " DC Office: 1120 G Street, NW, Suite 800 Washington DC, 20005-3826" +
+          "<br />" +
+          "<a target=\"_blank\" href=\"mailto:amsinfo@ametsoc.org\">amsinfo@ametsoc.org</a> Phone: 617-227-2425 Fax: 617-742-8718" +
+          "<br />" +
+          "<a target=\"_blank\" href=\"http://allenpress.com/\">Allen Press, Inc</a>. assists in the online publication of AMS journals</b>" +
+          "</li>" +
+          "</ul>" +
+          "<div id=\"atypon\">" +
+          "<img src=\"/templates/jsp/_style2/_AP/_ams/images/pwrd_by_atypon.gif\" />" +
+          "</div>" +
+          "<div class=\"clearfix\">&nbsp;</div>" +
+          "</div>\n" +
+          "</div>";
+
   private static final String copyrightFiltered = 
       " </div>";
-  
-  /* institutionBanner section */
-  private static final String identityBarHtml =
-      "<div id=\"identity-bar\">" +
-          "<span id=\"institution-banner-text\"></span>" +
-          "<span id=\"individual-menu\">" +
-          "<a href=\"/action/ssostart?idp=https%3A%2F%2Fshib.ametsoc.org%2Fshibboleth%2Fidp\">Sign In</a>" +
-          "<span style=\"font-weight:bold;\"> or </span>" +
-          "<a href=\"https://journals.ametsoc.org/action/showLogin?uri=%2Fdoi%2Ffull%2F10.1175%2FJAS-D-11-0289.1\">" +
-          "Institutional Administrator" +
-          "</a>|<a href=\"/page/about/mobile\">Mobile</a>  |Help</a> " +
-          " </span>" +
-          "</div>Nothing Left";
 
-  private static final String identityBarFiltered =
-      "Nothing Left";
+  /* institutionBanner section */
+  private static final String headerHtml =
+      "        <div id=\"header\">" +
+          "<!-- placeholder id=null, description=Header - Mobile Button -->" +
+          "<div id=\"identity-bar\">" +
+          "    <span id=\"institution-banner-text\">" +
+          "    </span>" +
+          "</div>" +
+          "<img src=\"/templates/jsp/_style2/_AP/_ams/images/ams_banner.gif\" alt=\"AMS Journals\" width=\"980\" height=\"59\" />" +
+          "<div class=\"headerContainer\" id=\"headerBottomContainer\">" +
+          "    <div id=\"quickSearchBox\">" +
+          "    </div>" +
+          "    <div class=\"headerSubContainer\" id=\"headerBottomSubContainer\">" +
+          "        <ul class=\"headerNavBar\" id=\"headerBottomNavBar\">" +
+          "            <li><a href=\"/\">Journals</a></li>" +
+          "            <li><a href=\"http://www.ametsoc.org/pubs/subscribe/index.html\">Subscribe</a></li>" +
+          "            <li><a href=\"http://www.ametsoc.org/pubs/arcindex.html\">For Authors</a></li>" +
+          "            <li><a href=\"/page/information\">Information</a></li>" +
+          "            <li><a href=\"/help\">Online Help</a></li>" +
+          "        </ul>" +
+          "    </div>" +
+          "</div>" +
+          "    <div id=\"breadcrumbs\">" +
+          "    </div>" +
+          "        </div>BOOM";
+
+
+  private static final String headerFiltered =
+      " BOOM";
+
 
   /* script call that generates institution specific thingie */
   private static final String scriptHtml = 
@@ -134,40 +149,58 @@ private static final String copyrightHtml =
 
   /* current issue will change over time */
   private static final String journalNavHtml =
-      "<div class=\"panel panel_228\"  id=\"journalNavPanel\">" +
-          "<div class=\"panelTopLeft\"></div>" +
-          "<div class=\"panelTopMiddle panel_228_width\"><h3>Volume 92 Issue 12 <br /> (December 2011)</h3></div>" +
-          "<div class=\"panelTopRight\"></div>" +
-          "<div class=\"panelBody panel_228_pad\">" +
-          "<div id=\"nextprev\">" +
-          "<span id=\"nextIssue\">" +
-          "<a href=\"http://journals.ametsoc.org/toc/bams/93/1\">Next</a>&gt;" +
-          "</span>" +
-          "<span id=\"prevIssue\">&lt;" +
-          "<a href=\"http://journals.ametsoc.org/toc/bams/92/11\">Previous</a>" +
-          "</span>" +
-          "</div><br/>" +
-          "<div id=\"smallIssueCover\">" +
-          "<img src=\"/na101/home/literatum/publisher/ams/journals/content/bams/cover.jpg\" /><br/>" +
-          "</div><br/>" +
-          "<a href=\"http://journals.ametsoc.org/toc/bams/93/11\">Current Issue</a><br/>" +
-          "<a href=\"/loi/bams\">Available Issues</a><br/>" +
-          "<a href=\"http://journals.ametsoc.org/toc/bams/0/0\">Early Online Releases</a><br/>" +
-          " <a href=\"/action/showAuthorIndex?journalCode=bams\">Author Index</a>" +
-          "<!-- placeholder id=null, description=Issue Navigator Ad --> " +
-          "</div>" +
-          "<div class=\"panelBottomLeft\"></div>" +
-          "<div class=\"panelBottomMiddle panel_228_width\"></div>" +
-          "<div class=\"panelBottomRight\"></div>" +
+      "        <div id=\"content\">" +
+          "            <div class=\"panelContent\">" +
+          "                <div id=\"leftColumn\">" +
+          "<div class=\"panel panel_228\"  id=\"journalNavPanel\">" +
+          "    <div class=\"panelTopLeft\"></div>" +
+          "    <div class=\"panelTopMiddle panel_228_width\">" +
+          "        <h3>Volume 2 Issue 4 <br /> (October 2010)</h3>" +
+          "    </div>" +
+          "    <div class=\"panelBody panel_228_pad\">" +
+          "            <div id=\"nextprev\">" +
+          "            </div><br/>" +
+          "        <!-- placeholder id=null, description=Issue Navigator Ad -->" +
+          "    </div>" +
+          "    <div class=\"panelBottomLeft\"></div>" +
+          "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+          "    <div class=\"panelBottomRight\"></div>" +
           "</div>" +
           "<div class=\"panel panel_228\"  id=\"journalInfoPanel\">" +
-          "<div class=\"panelTopLeft\"></div>" +
-          "<div class=\"panelTopMiddle panel_228_width\">";
+          "    <div class=\"panelTopLeft\"></div>" +
+          "    <div class=\"panelTopMiddle panel_228_width\">" +
+          "        <h3>Journal Information</h3>" +
+          "    </div>" +
+          "</div>" +
+          "<div class=\"panel panel_228\" id=\"journalInfoPanel\">" +
+          "    <!-- placeholder id=null, description=Journal Info Ad -->" +
+          "</div>" +
+          "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
+          "    <div class=\"panelTopLeft\"></div>" +
+          "    <div class=\"panelTopMiddle panel_228_width\">" +
+          "        <h3>&nbsp;</h3>" +
+          "    </div>" +
+          "    <div class=\"panelTopRight\"></div>" +
+          "    <div class=\"panelBody panel_228_pad\">" +
+          "<h2 style=\"text-align: center;\"> </h2>" +
+          "    </div>" +
+          "    <div class=\"panelBottomLeft\"></div>" +
+          "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+          "    <div class=\"panelBottomRight\"></div>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+
 
   private static final String journalNavFiltered = 
-      "<div class=\"panel panel_228\" id=\"journalInfoPanel\">" +
-          "<div class=\"panelTopLeft\"></div>" +
-          "<div class=\"panelTopMiddle panel_228_width\">";
+      " <div id=\"content\">" +
+          "<div class=\"panelContent\">" +
+          "<div id=\"leftColumn\">" +
+          "</div>" +
+          "</div>" +
+          "</div>";
+
 
   private static final String referenceInstitutionHtml=
       "<td valign=\"top\">Benedict" +
@@ -197,22 +230,22 @@ private static final String copyrightHtml =
 
   private static final String scanTableHtml1=
       "<div id=\"s3a\" class=\"NLM_sec NLM_sec_level_2\">  <span class=\"title2\" id=\"d2160184e521\">a. QA1: blah</span>" +
-      "  <p>blah <i>G</i><sub>0</sub> blah (<a class=\"ref NLM_xref-bibr\" " +
-      "href=\"javascript:popRef2('i1558-8432-47-4-1006-Iqbal1')\">Iqbal 1983</a>):                                           <table " +
-      "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
-      "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
-      "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
-      
-      private static final String scanTableHtml2=
-          "<div id=\"s3a\" class=\"NLM_sec NLM_sec_level_2\">  <span class=\"title2\" id=\"d801221e521\">a. QA1: blah</span>" +
+          "  <p>blah <i>G</i><sub>0</sub> blah (<a class=\"ref NLM_xref-bibr\" " +
+          "href=\"javascript:popRef2('i1558-8432-47-4-1006-Iqbal1')\">Iqbal 1983</a>):                                           <table " +
+          "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
+          "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
+          "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
+
+  private static final String scanTableHtml2=
+      "<div id=\"s3a\" class=\"NLM_sec NLM_sec_level_2\">  <span class=\"title2\" id=\"d801221e521\">a. QA1: blah</span>" +
           "  <p>blah <i>G</i><sub>0</sub> blah (<a class=\"ref NLM_xref-bibr\" " +
           "href=\"javascript:popRef2('i1558-8432-47-4-1006-Iqbal1')\">Iqbal 1983</a>):      <table " +
           "class=\"formula\" style=\"width:100%;vertical-align:middle\" align=\"center\" border=\"0\" " +
           "cellpadding=\"0\" cellspacing=\"0\" id=\"i1558-8432-47-4-1006-eq1\"><tr><td width=\"90%\" align=\"center\">" +
           "<img src=\"/na101/blah.gif\" alt=\"\" id=\"_e1\"/></td></tr></table>";
-      
-      private static final String changeableCommentsHtml =
-          "<div id=\"tocContent\"><!--totalCount11--><!--modified:1368793519000--><h2 class=\"tocHeading\">" +
+
+  private static final String changeableCommentsHtml =
+      "<div id=\"tocContent\"><!--totalCount11--><!--modified:1368793519000--><h2 class=\"tocHeading\">" +
           "<span class=\"subj-group\">ARTICLES </span></h2><table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
           "<tr>" +
           "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1501</td>" +
@@ -224,8 +257,8 @@ private static final String copyrightHtml =
           "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
           "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/XXX1234\">Abstract</a>" +
           "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/XXX1234\">Full Text</a>";
-      private static final String changeableCommentsFiltered =
-          "<div id=\"tocContent\"><h2 class=\"tocHeading\">" +
+  private static final String changeableCommentsFiltered =
+      "<div id=\"tocContent\"><h2 class=\"tocHeading\">" +
           "<span class=\"subj-group\">ARTICLES </span></h2><table border=\"0\" width=\"100%\" class=\"articleEntry\">" +
           "<tr>" +
           "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1501</td>" +
@@ -237,52 +270,52 @@ private static final String copyrightHtml =
           "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
           "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/XXX1234\">Abstract</a>" +
           "<a class=\"ref nowrap\" href=\"/doi/full/10.1175/XXX1234\">Full Text</a>";
-      
-      private static final String emptyHTagOne =
-          "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
-              "    <div class=\"panelTopLeft\"></div>" +
-              "    <div class=\"panelTopMiddle panel_228_width\">" +
-              "    <h3></h3>" +
-              "    </div>" +
-              "    <div class=\"panelTopRight\"></div>" +
-              "    <div class=\"panelBody panel_228_pad\">" +
-              "" +
-              "&nbsp;" +
-              "" +
-              "" +
-              "    </div>" +
-              "    <div class=\"panelBottomLeft\"></div>" +
-              "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
-              "    <div class=\"panelBottomRight\"></div>" +
-              "</div>";
-      
-      private static final String emptyHTagTwo =
-          "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
-              "    <div class=\"panelTopLeft\"></div>" +
-              "    <div class=\"panelTopMiddle panel_228_width\">" +
-              "       <h3>&nbsp;</h3>" +
-              "    </div>" +
-              "    <div class=\"panelTopRight\"></div>" +
-              "    <div class=\"panelBody panel_228_pad\">" +
-              "        " +
-              "<h2 style=\"text-align: center;\"> </h2>" +
-              "" +
-              "        " +
-              "    </div>" +
-              "    <div class=\"panelBottomLeft\"></div>" +
-              "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
-              "    <div class=\"panelBottomRight\"></div>" +
-              "</div>";
-      
+
+  private static final String emptyHTagOne =
+      "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
+          "    <div class=\"panelTopLeft\"></div>" +
+          "    <div class=\"panelTopMiddle panel_228_width\">" +
+          "    <h3></h3>" +
+          "    </div>" +
+          "    <div class=\"panelTopRight\"></div>" +
+          "    <div class=\"panelBody panel_228_pad\">" +
+          "" +
+          "&nbsp;" +
+          "" +
+          "" +
+          "    </div>" +
+          "    <div class=\"panelBottomLeft\"></div>" +
+          "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+          "    <div class=\"panelBottomRight\"></div>" +
+          "</div>";
+
+  private static final String emptyHTagTwo =
+      "<div class=\"panel panel_228\"  id=\"sitetoolsPanel\">" +
+          "    <div class=\"panelTopLeft\"></div>" +
+          "    <div class=\"panelTopMiddle panel_228_width\">" +
+          "       <h3>&nbsp;</h3>" +
+          "    </div>" +
+          "    <div class=\"panelTopRight\"></div>" +
+          "    <div class=\"panelBody panel_228_pad\">" +
+          "        " +
+          "<h2 style=\"text-align: center;\"> </h2>" +
+          "" +
+          "        " +
+          "    </div>" +
+          "    <div class=\"panelBottomLeft\"></div>" +
+          "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
+          "    <div class=\"panelBottomRight\"></div>" +
+          "</div>";
+
 
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
-   inA = fact.createFilteredInputStream(mau, new StringInputStream(identityBarHtml),
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(headerHtml),
         ENC);
-    assertEquals(identityBarFiltered,StringUtil.fromInputStream(inA));
-    
+    assertEquals(headerFiltered,StringUtil.fromInputStream(inA));
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(referenceInstitutionHtml),
         ENC);
     assertEquals(referenceInstitutionFiltered,StringUtil.fromInputStream(inA));
@@ -290,26 +323,26 @@ private static final String copyrightHtml =
     inA = fact.createFilteredInputStream(mau, new StringInputStream(scriptHtml),
         ENC);
     assertEquals(scriptFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(journalNavHtml),
         ENC);
     assertEquals(journalNavFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(copyrightHtml),
         ENC);
     assertEquals(copyrightFiltered,StringUtil.fromInputStream(inA));
- 
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citedByHtml),
         ENC);
     assertEquals(citedByFiltered,StringUtil.fromInputStream(inA));
-    
-/* in this case, check against two versions that really existed - filter both and compare result */
+
+    /* in this case, check against two versions that really existed - filter both and compare result */
     inA = fact.createFilteredInputStream(mau, new StringInputStream(scanTableHtml1),
         ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(scanTableHtml2),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(changeableCommentsHtml),
         ENC);
     assertEquals(changeableCommentsFiltered,StringUtil.fromInputStream(inA));

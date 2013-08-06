@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.4 2013-06-13 21:45:46 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.futurescience;
 
@@ -39,10 +39,8 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.Remark;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.CompositeTag;
 import org.htmlparser.tags.Div;
 import org.htmlparser.tags.TableColumn;
-import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
@@ -50,6 +48,10 @@ import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 
+/* Don't extend BaseAtyponHtmlHashFilterFactory because 1) FutureScienceGroup is somewhat different
+ * AND because we need to keep the comments for some context specific filtering and then
+ * we can remove them at the end 
+ */
 public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
 
   @Override
@@ -58,37 +60,53 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
       String encoding)
           throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+
+        //Stuff on both toc and article pages
         // Variable identifiers - institution doing the crawl  - including genSfxLinks() which is the institution button
         new TagNameFilter("script"),
         // contains the institution banner on both TOC and article pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "institutionBanner"),
         // welcome and login
-        HtmlNodeFilters.tagWithAttribute("span", "class", "identitiesName"),
+        HtmlNodeFilters.tagWithAttribute("td", "class", "identitiesBar"),
         // footer at the bottom with copyright, etc.
         HtmlNodeFilters.tagWithAttribute("div", "class", "bottomContactInfo"),
-        // article page - right side column has "related articles found in:" in the Quick Links box
-        HtmlNodeFilters.tagWithAttribute("td", "class", "quickLinks_content"),
+        // footer at the bottom 
+        HtmlNodeFilters.tagWithAttribute("div", "class", "bottomSiteMapLink"),
         // Left side columns has list of Journals (might change over time) and current year's catalog
-        //<table class="sideMenu mceItemTable" cellpadding="2" width="165">
         HtmlNodeFilters.tagWithAttribute("table", "class", "sideMenu mceItemTable"),
-        
+        // rss feed link can have variable text in it; exists both as "link" and "a"
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "&feed=rss"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
+
+        //TOC stuff
+        HtmlNodeFilters.tagWithAttribute("td",  "class", "MarketingMessageArea"),
+        HtmlNodeFilters.tagWithAttribute("table",  "class", "quickLinks"), 
+
+
+        // article page - right side column - no identifier to remove entire column
+        // but we can remove the specific contents
+        HtmlNodeFilters.tagWithAttribute("td", "class", "quickLinks_content"),
+        HtmlNodeFilters.tagWithAttribute("td", "class", "quickSearch_content"),
+
         // article pages (abstract, reference, full) have a "cited by" section which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        
+
         // articles have a section "Users who read this also read..." which is tricky to isolate
         // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
         // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
         HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
 
-        // TOC has ad placeholders in various places - tricky to isolate
-        // The comment is always there, the ad may or may not follow
-        // The placeholder comments appear to always be in <td> </td> chunks, often with other stuff as well
-        // Look for <!-- placeholder id=null...--> comment and if there is one, remove the <a .....> .... </a> chunk after it
-        // This is most easily done by removing the entire <td> </td> tag element
-       new NodeFilter() {      
+        // Some article listings have a "free" glif. That change status over time, so remove the image
+        //NOTE - there may still be an issue with extra spaces added when image is present
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "/images/free.gif$", true),
+
+        new NodeFilter() {      
           // look for a <td> that has a comment <!-- placeholder id=null....--> child somewhere in it. If it's there remove it.
           @Override public boolean accept(Node node) {
-            if (!(node instanceof TableColumn)) return false;
+            if (!(node instanceof TableColumn) && (!(node instanceof Div))) return false;
+            // Add placeholder is in a comment which may have associated enclosing <td></td> if there is an ad
+            // Look for <!-- placeholder id=null...--> comment and if there is one, remove the enclosing <td></td>
+            if (node instanceof TableColumn) {
               Node childNode = node.getFirstChild();
               while (childNode != null) {
                 if (childNode instanceof Remark) {
@@ -98,10 +116,17 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
                 childNode = childNode.getNextSibling();
               }
               return false;
+            } else {
+              // Expert Reviews puts copyright info in unmarked section but it is immediately preceeded by <!--contact info-->
+              Node prevSib = node.getPreviousSibling();
+              if (prevSib instanceof Remark) {
+                String remarkText = prevSib.getText();
+                if ( (remarkText != null) && remarkText.contains("contact info")) return true;
+              }
+              return false;
+            }
           }
         }
-        
-        // Some article listings have a "free" glif. Might that change status over time?
 
     };
     return new HtmlFilterInputStream(in,

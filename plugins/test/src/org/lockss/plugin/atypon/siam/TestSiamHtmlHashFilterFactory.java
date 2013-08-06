@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlHashFilterFactory.java,v 1.4 2013-06-11 21:06:28 alexandraohlson Exp $
+ * $Id: TestSiamHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
  */
 /*
 
@@ -97,7 +97,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           " <a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/x\">PDF (1862 KB)</a>" +
           "  </td>" +
           " </tr>";
-  
+
   private static final String citedAnchorHtml =
       "<ul class=\"linkList blockLinks separators centered\" id=\"articleToolList\">" +
           "<li class=\"articleToolLi showAbstract current\">" +
@@ -167,105 +167,174 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
   private static final String footerFiltered =
       "</body>";
 
-  private static final String sessionHistory =
-      "<div class=\"view\">" +
-          "<div class=\"view-inner\">" +
-          "            <div class=\"panel panel_476\"  id=\"sessionHistory\">" +
+
+  private static final String leftColumn =
+      "<div class=\"yui3-g \">" +
+          "  <div class=\"yui3-u yui3-u-1-4 \" >" +
+          "    <div class=\"inner\">" +
+          "      <div class=\"dropzone ui-corner-all \" id=\"dropzone-Left-Sidebar\">" +
+          "" +
+          "<div  id=\"widget-4796\" class=\"widget type-browseVolume ui-helper-clearfix\">" +
+          "  <div class=\"view\">" +
+          "    <div class=\"view-inner\">" +
+          "      <div class=\"panel panel_476\" id=\"volumelisting\"> " +
+          "        <div class=\"box\"> " +
+          "          <div class=\"header \"> <h3>Browse Volumes</h3> </div> " +
+          "          <div class=\"no-top-border\"> " +
+          "            <div class=\"box-inner\"> <a href=\"http://epubs.siam.org/toc/mmsubt/11/3\"> Issue in Progress </a> </div> " +
+          "          </div> " +
+          "        </div> " +
+          "      </div> " +
+          "    </div>" +
+          "  </div>" +
+          "</div>" +
+          "" +
+          "<div id=\"widget-4801\" class=\"widget type-authorSearch ui-helper-clearfix\">" +
+          "  <div class=\"view\">" +
+          "    <div class=\"view-inner\">" +
+          "      <div class=\"authorSearchBox\"></div>" +
+          "    </div>" +
+          "  </div>" +
+          "</div>" +
+          "" +
+          "      </div>" +
+          "    </div>" +
+          "  </div>" +
+          "</div>";
+  private static final String leftColumnFiltered =
+      "<div class=\"yui3-g \">" +
+          "  <div class=\"yui3-u yui3-u-1-4 \" >" +
+          "    <div class=\"inner\">" +
+          "      " +
+          "    </div>" +
+          "  </div>" +
+          "</div>";
+
+  private static final String rightColumn =
+      "<div id=\"articleContent\"><p class=\"fulltext\"></p><!-- abstract content -->" +
+          "<div class=\"landSubjectHeading\"></div>" +
+          "  <h1 class=\"arttitle\">A Title</h1>" +
+          "<div id=\"pubHisDataDiv\">" +
+          "<div id=\"publicationDataPanel\" class=\"panel\">" +
           "<div class=\"box\">" +
-          "   <div class=\"header \">" +
-          "        <h3>Session History</h3>" +
-          "    </div>" +
-          "        <div class=\"no-top-border\">" +
-          "        <div class=\"box-inner\">" +
-          "   <div class=\"sessionViewed\">" +
-          "       <div class=\"label\">Recently Viewed</div>" +
-          "       <ul class=\"sessionHistory\" >" +
-          "          <li><a href=\"/doi/abs/10.1137/x\">Split Bregman Methods and Frame Based Image Restoration</a></li>" +
-          "  </ul>" +
-          "   </div></div></div></div></div></div></div>BOO";
-  private static final String sessionHistoryFiltered =
-      "<div class=\"view\">" +
-          "<div class=\"view-inner\">" +
-          "            </div></div>BOO";
+          "<div class=\"header\"><h3>Related Databases</h3></div>" +
+          "<div class=\"box-inner\"><h3 class=\"keywords\">Web of Science</h3> You must be logged in with an active subscription to view this.</div></div></div>" +
+          "<div id=\"historyPanel\" class=\"panel\">" +
+          "<div class=\"box\">" +
+          "<div class=\"header\"><h3>Article Data</h3></div>" +
+          "<div class=\"box-inner\">" +
+          "<div><h3 class=\"keywords\">History</h3>" +
+          "<div>Submitted: 19  May  2011</div>" +
+          "<div>Accepted: 19 October 2011</div>" +
+          "<div>Published online: 06 March 2012</div></div>" +
+          "<div><h3 class=\"keywords\">Keywords</h3></div>" +
+          "<div><h3 class=\"keywords\">AMS Subject Headings</h3>" +
+          "</div>" +
+          "</div></div></div>" +
+          "<div id=\"publicationDataPanel\" class=\"panel\">" +
+          "<div class=\"box\">" +
+          "<div class=\"header\"><h3>Publication Data</h3></div>" +
+          "</div>" +
+          "</div>" +
+          "</div></div>";
 
+  private static final String rightColumnFiltered =
+      "<div id=\"articleContent\"><p class=\"fulltext\"></p>" +
+          "<div class=\"landSubjectHeading\"></div>" +
+          "  <h1 class=\"arttitle\">A Title</h1>" +
+          "</div>";
 
-  private static final String sideBars =
-
-      "<div class=\"panel\">" +
-          "<div class=\"box collapsible open\">" +
-          "    <div class=\"header publicationSideBar\">" +
-          "        <h3>Notify Me!</h3>" +
-          "    </div>" +
-          "    <div class=\"box-inner\">" +
-          "        <div>" +
-          "                    <a href=\"/action/fu?action=addJournal&amp;journalCode=mmsubt\">" +
-          "                        E-mail Alerts" +
-          "                    </a>" +
+  private static final String header =
+      "<div id=\"header\">" +
+          "<!-- placeholder id=null, description=Maintenance Message -->" +
+          "  <div class=\"welcome stackContents\">" +
+          "    <div id=\"topHeaderBar\">" +
+          "      <div class=\"searchBar\">" +
+          "        <div class=\"quicksearch\">" +
+          "          <div id=\"quickSearchTabs\" class=\"yui-navset quickSearch\">" +
+          "            <ul class=\"yui-nav\">" +
+          "              <li class=\"selected\">" +
+          "                <a href=\"#search\">Keyword</a>" +
+          "              </li>" +
+          "              <li >" +
+          "                <a href=\"#citation\">Citation</a>" +
+          "              </li>" +
+          "            </ul>" +
+          "          </div>" +
           "        </div>" +
-          "        <div>" +
-          "                    <a href=\"/action/showFeed?type=etoc&amp;feed=rss&amp;jc=mmsubt\">" +
-          "                        RSS Feeds" +
-          "                    </a>" +
-          "        </div>" +
+          "      </div>" +
+          "      <div id=\"bannerImage\"></div>" +
+          "      <div class=\"loginIdentity\"></div>" +
+          "      <div class=\"stacked\"></div>" +
           "    </div>" +
-          "    <div class=\"footer\"></div>" +
+          "  </div>" +
+          "</div>BOOM";
+
+  private static final String headerFiltered =
+      "BOOM";
+
+  private static final String free = 
+      "<!--totalCount12--><!--modified:1374685645000-->" +
+          "<div><div><div id=\"art110842545\" class=\"notSelectedRow\">" +
+          "<table class=\"articleEntry\">" +
+          "<tr><td align=\"left\" valign=\"top\" width=\"18\">" +
+          "<br>" +
+          "</br>" +
+          "<img src=\"/templates/jsp/_style2/_pagebuilder/_c3/_siam/images/access_full.gif\" alt=\"full access\" title=\"full access\" class=\"accessIcon\" />" +
+          "</td>" +
+          "<td valign=\"top\"><a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">" +
+          "<div class=\"art_title\">TITLE</div>" +
+          "</a>" +
+          "<div class=\"citation tocCitation\">Multiscale Model. Simul. 10-1 (2012)," +
+          "<span class=\"ciationPageRange\">pp. 1-27" +
+          "</span>" +
+          "<a href=\"http://dx.doi.org/10.1137/110842545\" class=\"ref doi\">http://dx.doi.org/10.1137/110842545" +
+          "</a> |  Cited " +
+          "<b>1" +                                                                                                                                                                            
+          "</b> time" +
           "</div>" +
-          "</div>";
-  private static final String sideBarsFiltered =
-      "<div class=\"panel\">" +
+          "<div class=\"doiCrossRef\">" +
+          "</div>" +
+          "<div class=\"pubDate\">Online Publication Date: January 2012" +
+          "</div>" +
+          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">Abstract" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" href=\"/doi/ref/10.1137/110842545\">References" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/110842545\">PDF (328 KB)" +
+          "</a> " +
+          "</td>" +
+          "</tr>" +
+          "</table>" +
+          "</div>" +
           "</div>";
 
-  private static final String browseVolumes =
-      "<div class=\"view\">" +
-          "<div class=\"view-inner\">" +
-          "<div class=\"panel panel_476\" id=\"volumelisting\"> <div class=\"box\">" +
-          "<div class=\"header \"> <h3>Browse Volumes</h3> </div>" +
-          "<div class=\"no-top-border\">" +
-          "<div class=\"box-inner\"> <a href=\"http://epubs.siam.org/\"> Issue in Progress </a>" +
-          "<div id=\"selectyearrange\"> Year Range:&nbsp;" +
-          "<select id=\"volyears\" onchange=\"return showDecade();\"> 2010 2010" +
-          "<option value=\"dec_2010s\" selected>2010-Current</option> 2000 2010" +
-          "<option value=\"dec_2000s\">2000-2009</option>" +
-          "</select> </div> <div id=\"decadeList\">" +
-          "<div class=\"decade\" id=\"dec_2010s\" style=\"\"> <div class=\"volume\" id=\"vol_10_2010s\">" +
-          "<div class=\"volInfo\" onclick=\"return showVolume('vol_10_2010s')\">" +
-          "<div class=\"volNum\">Volume 10</div> <div class=\"volYear\">2012</div> </div>" +
-          "</div> </div> </div> </div> </div> <div class=\"footer\"></div> </div> </div>" +
-          "<script type=\"text/javascript\">" +
-          "</script>" +
+  private static final String freeFiltered =
+      "<div><div><div id=\"art110842545\" class=\"notSelectedRow\">" +
+          "<table class=\"articleEntry\">" +
+          "<tr><td align=\"left\" valign=\"top\" width=\"18\">" +
+          "<br>" +
+          "</br>" +
+          "</td>" +
+          "<td valign=\"top\"><a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">" +
+          "<div class=\"art_title\">TITLE</div>" +
+          "</a>" +
+          "<div class=\"doiCrossRef\">" +
           "</div>" +
+          "<div class=\"pubDate\">Online Publication Date: January 2012" +
           "</div>" +
-          "</div>";
-  private static final String browseVolumesFiltered =
-      "<div class=\"view\">" +
-          "<div class=\"view-inner\">" +
-          "</div>" +
+          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1137/110842545\">Abstract" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" href=\"/doi/ref/10.1137/110842545\">References" +
+          "</a> | " +
+          "<a class=\"ref nowrap\" target=\"_blank\" title=\"Opens new window\" href=\"/doi/pdf/10.1137/110842545\">PDF (328 KB)" +
+          "</a> " +
+          "</td>" +
+          "</tr>" +
+          "</table>" +
           "</div>" +
           "</div>";
-  
-  private static final String issueNavHtml =
-      "     <div id=\"issueNav\">" +
-          " <div id=\"prevNextNav\">" +
-          "     <div id=\"issueSearch\">" +
-          "         <form action=\"/action/doSearch\" method=\"get\"><input type=\"text\" name=\"searchText\" value=\"\" size=\"17\" />" +
-          "             <input type=\"hidden\" name=\"issue\" value=\"4\" />" +
-          "             <input type=\"hidden\" name=\"journalCode\" value=\"mmsubt\" />" +
-          "             <input type=\"hidden\" name=\"volume\" value=\"10\" />" +
-          "             <input type=\"hidden\" name=\"filter\" value=\"issue\" />" +
-          "             <input type=\"submit\" value=\"Search Issue\" /></form>" +
-          "     </div>" +
-          "     <a href=\"javascript:toggleSlide('issueSearch')\">Search Issue</a> |" +      
-          "        <img src=\"/templates/jsp/_style2/_pagebuilder/_c3/images/rss_32.png\" />" +
-          "<a href=\"http://epubs.siam.org/action/showFeed?ui=0&mi=3d6gcp&ai=s9&jc=mmsubt&type=etoc&feed=rss\">RSS</a>" +     
-          "    <br/>" +      
-          "        <a href=\"/toc/mmsubt/10/3\">Previous Issue</a>" +           
-          "        <a href=\"/toc/mmsubt/11/1\"> Next Issue</a>" +      
-          " </div>" +
-          " <div id=\"coverDate\">";
-  private static final String issueNavFiltered =
-      "     <div id=\"issueNav\"> " +
-          " <div id=\"coverDate\">";     
-  
+
   private static final String changeableCommentsHtml =
       "<label for=\"markall\">Select All</label>" +
           "<hr/>" +
@@ -276,7 +345,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
           "<hr/>" +
           "<div>" +
           "<div><div id=\"art120871894\" class=\"notSelectedRow\">";
-  
+
   private static final String adChunkHtml=
       "</div>" +
           "<div class=\"mainAd\">" +
@@ -301,50 +370,57 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citationEntry),
         ENC);
     assertEquals(citationEntryFiltered,StringUtil.fromInputStream(inA));
-    
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(citedAnchorHtml),
         ENC);
     assertEquals(citedAnchorHtmlFiltered, StringUtil.fromInputStream(inA));
   }
 
-  public void testInstitution() throws Exception {
+  public void testTopBottom() throws Exception {
     InputStream inA;
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(header),
+        ENC);
+    assertEquals(headerFiltered,StringUtil.fromInputStream(inA));
 
     inA = fact.createFilteredInputStream(mau, new StringInputStream(institutionBanner),
         ENC);
     assertEquals(institutionBannerFiltered,StringUtil.fromInputStream(inA));
+
     inA = fact.createFilteredInputStream(mau, new StringInputStream(scriptFindIt),
         ENC);
     assertEquals(scriptFindItFiltered,StringUtil.fromInputStream(inA));
+
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(footer),
+        ENC);
+    assertEquals(footerFiltered,StringUtil.fromInputStream(inA));
   }
 
   public void testSideBars() throws Exception {
     InputStream inA;
 
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(footer),
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(leftColumn),
         ENC);
-    assertEquals(footerFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(leftColumnFiltered,StringUtil.fromInputStream(inA));
 
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(sessionHistory),
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(rightColumn),
         ENC);
-    assertEquals(sessionHistoryFiltered,StringUtil.fromInputStream(inA));
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(sideBars),
-        ENC);
-    assertEquals(sideBarsFiltered,StringUtil.fromInputStream(inA));
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(browseVolumes),
-        ENC);
-    assertEquals(browseVolumesFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(rightColumnFiltered,StringUtil.fromInputStream(inA));
+
+
   }
-  
-  public void testNavSearch() throws Exception {
+
+
+  public void testFreeGlyph() throws Exception {
     InputStream inA;
 
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(issueNavHtml),
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(free),
         ENC);
-    assertEquals(issueNavFiltered,StringUtil.fromInputStream(inA));
+    assertEquals(freeFiltered,StringUtil.fromInputStream(inA));
 
   }
-  
+
+
   public void testComments() throws Exception {
     InputStream inA;
 
@@ -353,7 +429,7 @@ public class TestSiamHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(changeableCommentsFiltered,StringUtil.fromInputStream(inA));
 
   }
-  
+
   public void testAds() throws Exception {
     InputStream inA;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.1 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.2 2013-08-06 22:45:13 alexandraohlson Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
@@ -36,15 +36,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.List;
-import java.util.Vector;
-
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.Remark;
 import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.HeadingTag;
-import org.htmlparser.tags.TableColumn;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
@@ -54,33 +48,46 @@ import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
-import org.lockss.filter.html.HtmlNodeFilters.HasAttributeRegexFilter;
 import org.lockss.plugin.*;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
+/* 
+ * Don't extend BaseAtyponHtmlHashFilterFactory because we need to do more 
+ * extensive filtering with spaces, etc.
+ */
 public class AMetSocHtmlHashFilterFactory implements FilterFactory {
-  
+
   Logger log = Logger.getLogger("AMetSocHtmlHashFilterFactoryy");
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
+      InputStream in,
+      String encoding)
+          throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Variable identifiers - institution doing the crawl
         new TagNameFilter("script"),
-        // Contains name and logo of institution
-        HtmlNodeFilters.tagWithAttribute("div", "id", "identity-bar"),
+        // Contains the library specific "find it" button
+        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+        // May be empty, may contain "free" glif if appropriate
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "accessLegend"),
+        // Contains name and logo of institution, access, etc
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // Contains copyright year
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains "current issue" link which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalNavPanel"),
+        // Contains "current issue" link which will change over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "journalInfoPanel"),
+        // Contains "current issue" link which will change over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sitetoolsPanel"),
+        // Remove the image with the free glif since it may be added later
+        HtmlNodeFilters.tagWithAttribute("image", "class", "accessIcon"),
+
         // Contains the changeable list of citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        // Contains the library specific "find it" button
-        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
+
         // Remove <hX> tags that have no content or only spaces as content
         // It would be nicer to do this as "all heading tags" but that doesn't seem available in the api
         HtmlNodeFilters.tagWithTextRegex("h1","^(\\s|(&nbsp;))*$"),
@@ -90,50 +97,50 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithTextRegex("h5","^(\\s|(&nbsp;))*$"),
         HtmlNodeFilters.tagWithTextRegex("h6","^(\\s|(&nbsp;))*$"),
     };
-        HtmlTransform xform = new HtmlTransform() {
-          @Override
-          public NodeList transform(NodeList nodeList) throws IOException {
-            try {
-              nodeList.visitAllNodesWith(new NodeVisitor() {
-                @Override
-                public void visitTag(Tag tag) {
-                  String tagName = tag.getTagName().toLowerCase();
-                  // Need to remove <span class="titleX" id="xxxxx"> because id is variable
-                  // cannot remove span tag pair because contents are content. Just remove the id value
-                  if ( ("span".equals(tagName))  && (tag.getAttribute("id") != null) ){
-                    tag.setAttribute("id", "0");
-                  }
-                }
-              });
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
+              // Need to remove <span class="titleX" id="xxxxx"> because id is variable
+              // cannot remove span tag pair because contents are content. Just remove the id value
+              if ( ("span".equals(tagName))  && (tag.getAttribute("id") != null) ){
+                tag.setAttribute("id", "0");
+              }
             }
-            catch (Exception exc) {
-              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-            }
-            return nodeList;
-          }
-        };   
+          });
+        }
+        catch (Exception exc) {
+          log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+        }
+        return nodeList;
+      }
+    };   
 
-        
-        // Also need white space filter to condense multiple white spaces down to 1
-        InputStream filtered = new HtmlFilterInputStream(in,
-            encoding,
-            new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
 
-        Reader reader = FilterUtil.getReader(filtered, encoding);
-        
-        // first subsitute plain white space for &nbsp;
-        String[][] unifySpaces = new String[][] { 
-            // inconsistent use of nbsp v empty space - do this replacement first
-            {"&nbsp;", " "}, 
-        };
-        Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
-            unifySpaces, false);   
-        
-        //now consolidate white space before doing additional tagfilter stuff
-        Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
-        
-        Reader filtReader = makeFilteredReader(WSReader);
-        return new ReaderInputStream(filtReader);
+    // Also need white space filter to condense multiple white spaces down to 1
+    InputStream filtered = new HtmlFilterInputStream(in,
+        encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
+
+    Reader reader = FilterUtil.getReader(filtered, encoding);
+
+    // first subsitute plain white space for &nbsp;
+    String[][] unifySpaces = new String[][] { 
+        // inconsistent use of nbsp v empty space - do this replacement first
+        {"&nbsp;", " "}, 
+    };
+    Reader NBSPFilter = StringFilter.makeNestedFilter(reader,
+        unifySpaces, false);   
+
+    //now consolidate white space before doing additional tagfilter stuff
+    Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
+
+    Reader filtReader = makeFilteredReader(WSReader);
+    return new ReaderInputStream(filtReader);
   }
 
 
@@ -148,14 +155,14 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
         new TagPair("<!--","-->")
         );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    
+
     /*
      *  Now remove tags with a single white space in between them
      */
     String[][] findAndReplace = new String[][] { 
         // remove empty space between tags
         {"> <", "><"},
-                // remove leading space after tags (extra spaces will already have been consolidated down to one 
+        // remove leading space after tags (extra spaces will already have been consolidated down to one 
         {"> ", ">"},
     };
     Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,

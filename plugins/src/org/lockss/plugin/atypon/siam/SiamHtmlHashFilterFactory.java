@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.4 2013-06-11 21:06:29 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:14 alexandraohlson Exp $
  */
 
 /*
@@ -28,93 +28,47 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.siam;
 
 import java.io.InputStream;
-import java.io.Reader;
-
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
-import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
-import org.htmlparser.util.SimpleNodeIterator;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.HtmlTagFilter.TagPair;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
-import org.lockss.util.ListUtil;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class SiamHtmlHashFilterFactory implements FilterFactory {
+/* Siam can use the BaseAtyponHtmlHashFilter and extend it for the extra bits it needs */
+public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
-      String encoding)
-          throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Variable identifiers - institution doing the crawl  - including genSfxLinks() which is the institution button
-        new TagNameFilter("script"),
-        // contains the institution banner on both TOC and article pages
+      String encoding) {
+    NodeFilter[] siamfilter = new NodeFilter[] {
+        // contains the institution banner on both TOC and article pages, not always in header
         HtmlNodeFilters.tagWithAttribute("div", "class", "institutionBanner"),
-        // left panel in article contains "browse volumes" which change over time
-        HtmlNodeFilters.tagWithAttribute("div", "id", "volumelisting"),
+        // On TOC contains argument in rss href that is time dependent, but none of this is needed for hash
+        HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+        // the entire left column which can have browseVolumes, browsing history, tools, etc
+        HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),
+        // the entire right column at article level - tracks changeable history about this article
+        HtmlNodeFilters.tagWithAttribute("div", "id", "pubHisDataDiv"),
         // Contains the changeable list of citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        // May contain " | Cited x# times"; also contains journal/page for this article, but should be okay to hash out
+        // On TOC article item may contain " | Cited x# times"; also contains journal/page for this article, but should be okay to hash out
         HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
-        //Session History variable
-        HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
-        // Contains copyright year
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        // Contains argument in rss href that is time dependent, but none of this is needed for hash
-        HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+        // at top of article, list of types of format of the article will also have "Cited by" anchor once the article has been cited
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "articleToolList"),        
+
         // proactive removal of possible ad location although it's currently empty
-        HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),     
-        // at top of article, list of types of format of the article will also have "Cited by" ancho if the article has been cited
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "articleToolList"),
-        
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            // on a TOC, side panel items are not obviously marked as such
-            // Looking for <div class="box collapsible open"...> with first child <div class="header publicationSideBar"...>
-            if (!(node instanceof Div)) return false;
-            String divClass = ((CompositeTag)node).getAttribute("class");
-            if ( (divClass==null) || !(divClass.contains("box collapsible")) ) return false;
-            for (SimpleNodeIterator iter = ((CompositeTag)node).elements() ; iter.hasMoreNodes() ; ) {
-              Node n = iter.nextNode();
-              if (!(n instanceof Div)) { continue; }
-              String childClass = ((CompositeTag)n).getAttribute("class");
-              if ( (childClass !=null) && (childClass.contains("publicationSideBar")) ) {
-                return true;
-              }
-            }
-            return false;
-          }
-        }
+        HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),  
     };
-    InputStream filtered = new HtmlFilterInputStream(in,
-        encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    /* comments contain dates specific stuff, like
-     * <!--totalCount14--><!--modified:1368461028000-->
-     * we aren't currently using comments for any other search/replace, so just remove them all
-     */
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(
-        new TagPair("<!--","-->")
-        ));
-    return new ReaderInputStream(tagFilter);
+
+    // super.createFilteredInputStream adds siamfilter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, siamfilter);
 
   }
 }
