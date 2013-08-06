@@ -52,20 +52,20 @@ public class TestAmmonsScientificArticleIteratorFactory extends ArticleIteratorT
   private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String BASE_URL2_KEY = ConfigParamDescr.BASE_URL2.getKey();
-  static final String JOURNAL_ABBR_KEY = ConfigParamDescr.JOURNAL_ABBR.getKey();
+  static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private final String BASE_URL = "http://www.example.com/";
   private final String BASE_URL2 = "http:/cdn.example.com/";
   private final String VOLUME_NAME = "108";
-  private final String JOURNAL_ABBR = "PR0";
-  private final String CRAWLRULE0 = String.format("toc/%s/%s/", JOURNAL_ABBR, VOLUME_NAME);
-  private final String CRAWLRULE1 = String.format("doi/(pdf|pdfplus|abs|full|suppl)/\\d+\\.\\d+/(\\d+\\.){0,5}%s\\.%s.*", JOURNAL_ABBR, VOLUME_NAME);
+  private final String JOURNAL_ID = "PR0";
+  private final String CRAWLRULE0 = String.format("toc/%s/%s/", JOURNAL_ID, VOLUME_NAME);
+  private final String CRAWLRULE1 = String.format("doi/(pdf|pdfplus|abs|full|suppl)/\\d+\\.\\d+/(\\d+\\.){0,5}%s\\.%s.*", JOURNAL_ID, VOLUME_NAME);
   private static final int DEFAULT_FILESIZE = 3000;
   private static Pattern regexpattern;
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(BASE_URL_KEY, BASE_URL,
             BASE_URL2_KEY, BASE_URL2,
             VOLUME_NAME_KEY, VOLUME_NAME,
-            JOURNAL_ABBR_KEY, JOURNAL_ABBR);
+            JOURNAL_ID_KEY, JOURNAL_ID);
 
   public void setUp() throws Exception {
     super.setUp();
@@ -90,7 +90,7 @@ public class TestAmmonsScientificArticleIteratorFactory extends ArticleIteratorT
 	    Configuration conf = ConfigManager.newConfiguration();
 	    conf.put("root", rootPath);
 	    conf.put(BASE_URL_KEY, BASE_URL);
-	    conf.put("journal_abbr", JOURNAL_ABBR);
+	    conf.put("journal_id", JOURNAL_ID);
 	    conf.put("volume_name", VOLUME_NAME);
 	    conf.put("depth", "1");
 	    conf.put("branch", "4");
