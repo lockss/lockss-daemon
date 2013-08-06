@@ -77,26 +77,26 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
 # Find HighWire plugin dupes
-echo "---------------------"
-echo "---------------------"
-echo "GLN. HighWire Dupe AUs across plugins"
-cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_g_all
-cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_g_dedupe
-cat $tpath/HW_g_all | wc -l
-cat $tpath/HW_g_dedupe | wc -l
-diff $tpath/HW_g_all $tpath/HW_g_dedupe
-diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | wc -l
-echo "expect 19"
-echo " "
-echo "---------------------"
-echo "---------------------"
-echo "CLOCKSS. HighWire Dupe AUs across plugins"
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_c_all
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_c_dedupe
-diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | sort
-diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | wc -l
-echo "expect 89"
-echo " "
+#echo "---------------------"
+#echo "---------------------"
+#echo "GLN. HighWire Dupe AUs across plugins"
+#cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_g_all
+#cat ../../tdb/prod/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_g_dedupe
+#cat $tpath/HW_g_all | wc -l
+#cat $tpath/HW_g_dedupe | wc -l
+#diff $tpath/HW_g_all $tpath/HW_g_dedupe
+#diff $tpath/HW_g_all $tpath/HW_g_dedupe | grep "< " | wc -l
+#echo "expect 19"
+#echo " "
+#echo "---------------------"
+#echo "---------------------"
+#echo "CLOCKSS. HighWire Dupe AUs across plugins"
+#cat ../../tdb/clockssingest/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 > $tpath/HW_c_all
+#cat ../../tdb/clockssingest/*.tdb | ./tdbout -Q 'plugin ~ "highwire"' -URD -t param[base_url],param[volume_name],param[volume],status,publisher | perl -pe 's/\t+/ /g' | sort -k 1,2 -u > $tpath/HW_c_dedupe
+#diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | sort
+#diff $tpath/HW_c_all $tpath/HW_c_dedupe | grep "< " | wc -l
+#echo "expect 89"
+#echo " "
 #
 # Find issn problems in gln title database
 echo "---------------------"
