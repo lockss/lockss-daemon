@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlCrawlFilterFactory.java,v 1.1 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: AIAAHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -39,20 +39,15 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class AIAAHtmlCrawlFilterFactory implements FilterFactory {
+public class AIAAHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Contains citations which can lead out to another volume or journal
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return super.createFilteredInputStream(au, in, encoding);
   }
 
 }

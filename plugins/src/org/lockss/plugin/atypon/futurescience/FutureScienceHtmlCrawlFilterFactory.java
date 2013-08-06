@@ -1,4 +1,4 @@
-/* $Id: FutureScienceHtmlCrawlFilterFactory.java,v 1.1 2013-06-13 21:45:46 alexandraohlson Exp $
+/* $Id: FutureScienceHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -27,7 +27,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.futurescience;
 
@@ -38,6 +38,7 @@ import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 /*
  *
@@ -46,33 +47,26 @@ import org.lockss.plugin.*;
  * extraneous links
  * 
  */
-public class FutureScienceHtmlCrawlFilterFactory implements FilterFactory {
+public class FutureScienceHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+  //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
+  //Browse Volumes section okay because crawl rules will exclude
+  NodeFilter[] filters = new NodeFilter[] {
+      // article pages (abstract, reference, full) have a "cited by" section which will change over time
+      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
 
-  @Override
+      // articles have a section "Users who read this also read..." which is tricky to isolate
+      // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
+      // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
+      HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
+
+      //bibliography on an article page
+      HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
+
+  };
+
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    
-    //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
-    //Browse Volumes section okay because crawl rules will exclude
-    NodeFilter[] filters = new NodeFilter[] {
-        // article pages (abstract, reference, full) have a "cited by" section which will change over time
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        
-        // articles have a section "Users who read this also read..." which is tricky to isolate
-        // It's a little scary, but <div class="full_text"> seems only to be used for this section (not to be confused with fulltext)
-        // though I could verify that it is followed by <div class="header_divide"><h3>Users who read this article also read:</h3></div>
-        HtmlNodeFilters.tagWithAttribute("div", "class", "full_text"),
-        
-        //bibliography on an article page
-        HtmlNodeFilters.tagWithAttribute("table",  "class", "references"),
-
-    };
-    return new 
-      HtmlFilterInputStream(in,
-                            encoding,
-                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+      InputStream in, String encoding) throws PluginException{ 
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }

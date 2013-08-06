@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.3 2013-07-10 16:54:54 aishizaki Exp $
+ * $Id: ASCEHtmlHashFilterFactory.java,v 1.4 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -38,37 +38,34 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class ASCEHtmlHashFilterFactory implements FilterFactory {
+public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in, String encoding) {
     
-    NodeFilter[] filters = new NodeFilter[] {
-        // <div class="welcome stackContents"> - institutionBanner,
-        // loginIdentity, and linkList topLinks menu
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "welcome stackContents"),
-        //
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-        //
-        HtmlNodeFilters.tagWithAttribute("div", "class", "mainMenu"),
-        // <div id="prevNextNav"> - rss
-	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
-        // <div id="tocTools"> - view Cart line
+    NodeFilter[] asceFilters = new NodeFilter[] {
+        // <header> filtered in BaseAtypon
+	HtmlNodeFilters.tagWithAttribute("div", "id", "issueNav"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "tocTools"),
-        // <td class="toggle"> - '+' sign next Show Abstract
         HtmlNodeFilters.tagWithAttributeRegex("td", "class", "toggle"),
-	// <div class="dropzone ui-corner-all " 
+	//article, toc: <div class="dropzone ui-corner-all " 
 	// id="dropzone-Left-Sidebar"> - tornados ad, session history.
 	HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),	
-	// <div class="citedBySection">
+	//article: <div class="citedBySection">
 	HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-	// footer and footer_message
-	HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-          new TagNameFilter("script"),
+	//toc: <div class="citation tocCitation">
+	HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
+	// footer and footer_message filtered in BaseAtypon
+        //  new TagNameFilter("script"),
     };
-    return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    
+    // super.createFilteredInputStream adds asceFilters to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, asceFilters);
     }
     
 }

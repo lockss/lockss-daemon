@@ -1,4 +1,4 @@
-/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.1 2013-06-11 21:06:29 alexandraohlson Exp $
+/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -27,7 +27,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.siam;
 
@@ -38,6 +38,7 @@ import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 /*
  *
@@ -46,29 +47,24 @@ import org.lockss.plugin.*;
  * extraneous links
  * 
  */
-public class SiamHtmlCrawlFilterFactory implements FilterFactory {
+public class SiamHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    
-    //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
-    //Browse Volumes section okay because crawl rules will exclude
-    NodeFilter[] filters = new NodeFilter[] {
+
+  //PrevArt/NextArt and PrevIss/NextIss okay - terminate at boundaries 
+  //Browse Volumes section okay because crawl rules will exclude
+  NodeFilter[] filters = new NodeFilter[] {
       // tracks articles previously viewed
       HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
       // area with links to articles that cite this one
-      HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
       //  articles that were references for this article
       HtmlNodeFilters.tagWithAttribute("div",  "class", "abstractReferences"),
+  };
 
-    };
-    return new 
-      HtmlFilterInputStream(in,
-                            encoding,
-                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+      InputStream in, String encoding) throws PluginException{ 
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }

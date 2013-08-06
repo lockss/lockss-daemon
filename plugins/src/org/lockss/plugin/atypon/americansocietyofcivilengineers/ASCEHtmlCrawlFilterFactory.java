@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.1 2013-05-13 21:10:25 ldoan Exp $
+ * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.americansocietyofcivilengineers;
 
@@ -39,34 +39,32 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 
-public class ASCEHtmlCrawlFilterFactory implements FilterFactory {
+public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
+  static NodeFilter[] filters = new NodeFilter[] {
+    // left column section history
+    // <div class="sessionViewed">
+    // http://ascelibrary.org/toc/jaeied/18/4
+    // necessary since some urls are opaque (not including year and/or volume)
+    // so can't differentiate urls from different AUs.
+    // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
+    HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
+    // <div class="citedBySection"></div>
+    //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+    // <div id="relatedContent"
+    HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
+    // right near top - links to previous or next issue
+    // <div id="prevNextNav">
+    HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
+  };
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // left column section history
-        // <div class="sessionViewed">
-	// http://ascelibrary.org/toc/jaeied/18/4
-        // necessary since some urls are opaque (not including year and/or volume)
-        // so can't differentiate urls from different AUs.
-        // http://ascelibrary.org/doi/full/10.1061/(ASCE)CO.1943-7862.0000372
-	HtmlNodeFilters.tagWithAttribute("div", "class", "sessionViewed"),
-	// <div class="citedBySection"></div>
-	HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-	// <div id="relatedContent"
-	HtmlNodeFilters.tagWithAttribute("div", "id", "relatedContent"),
-	// right near top - links to previous or next issue
-	// <div id="prevNextNav">
-	HtmlNodeFilters.tagWithAttribute("div", "id", "prevNextNav"),
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+      InputStream in,
+      String encoding)
+  throws PluginException{
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
-
 }

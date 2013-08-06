@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.1 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: AMetSocHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.atypon.americanmeteorologicalsociety;
 
@@ -43,33 +43,29 @@ import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class AMetSocHtmlCrawlFilterFactory implements FilterFactory {
+public class AMetSocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Contains citations which can lead out to another volume or journal
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        // do not follow an "original article" link back to a previous volume
-        // do not follow a "corrigendum" link ahead to a future volume
-        new NodeFilter() {
-          @Override public boolean accept(Node node) {
-            // on a TOC, class="ref" on an article page, class="errata"
-            if (!(node instanceof LinkTag)) return false;
-            if ( (!("ref".equals(((CompositeTag)node).getAttribute("class")))) &&
-                (!("errata".equals(((CompositeTag)node).getAttribute("class")))) ) return false;
-            String allText = ((CompositeTag)node).toPlainTextString();
-            //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
-            return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") );
-            }
+  NodeFilter[] filters = new NodeFilter[] {
+      // do not follow an "original article" link back to a previous volume
+      // do not follow a "corrigendum" link ahead to a future volume
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+          // on a TOC, class="ref" on an article page, class="errata"
+          if (!(node instanceof LinkTag)) return false;
+          if ( (!("ref".equals(((CompositeTag)node).getAttribute("class")))) &&
+              (!("errata".equals(((CompositeTag)node).getAttribute("class")))) ) return false;
+          String allText = ((CompositeTag)node).toPlainTextString();
+          //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
+          return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") );
         }
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+      },
+  };
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+      InputStream in, String encoding) throws PluginException{ 
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }

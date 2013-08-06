@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - mep/audrey</string>
+    <string>testing - collin/audrey</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressPlugin</string>
+    <string>org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -33,9 +33,10 @@
       </entry>
     </map>
   </entry> 
+  
   <entry>
     <string>plugin_name</string>
-    <string>NRC Research Plugin (CLOCKSS)</string>
+    <string>Ammons Scientific Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -47,7 +48,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"NRC Research Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Ammons Scientific Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -72,15 +73,17 @@
   </entry>  
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlHashFilterFactory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.atypon.nrcresearchpress.ClockssNRCResearchPressHtmlCrawlFilterFactory</string>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
-  <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <org.lockss.util.Default />
-  </entry>
+    <!--  The base plugin DOES provide ArticleIterator, htmlMetadataExtractor, PdfFilter and UrlNormalizer - remove those you don't want. -->
+
 </map>    

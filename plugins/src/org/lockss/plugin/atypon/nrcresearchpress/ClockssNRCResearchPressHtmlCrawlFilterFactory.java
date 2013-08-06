@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -32,12 +32,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.nrcresearchpress;
 
 import java.io.InputStream;
-
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 /*
  *
@@ -46,13 +46,7 @@ import org.lockss.plugin.*;
  * extraneous links
  * 
  */
-public class ClockssNRCResearchPressHtmlCrawlFilterFactory implements FilterFactory {
-
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
+public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
       // Will exclude these tags from the stream:
       //   all stuff in the left sidebar
@@ -65,14 +59,15 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory implements FilterFact
       // center area above the current issue (has links to prev/next/all issues)
       HtmlNodeFilters.tagWithAttribute("div", "class", "box-pad border-gray margin-bottom clearfix"),
       //   area with links to articles that cite this one
-      HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
       //   spider link in this tag
       HtmlNodeFilters.tagWithAttribute("span", "id", "hide"),
     };
-    return new 
-      HtmlFilterInputStream(in,
-                            encoding,
-                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-  }
+    @Override
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+        InputStream in, String encoding) throws PluginException{ 
+      return super.createFilteredInputStream(au, in, encoding, filters);
+    }
+
 
 }

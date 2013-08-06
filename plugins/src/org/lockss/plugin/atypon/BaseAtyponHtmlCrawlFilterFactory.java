@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: BaseAtyponHtmlCrawlFilterFactory.java,v 1.1 2013-08-06 21:09:32 aishizaki Exp $
  */
 
 /*
@@ -36,34 +36,22 @@ import java.io.InputStream;
 import java.util.Arrays;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
 /**
- * BaseAtyponHtmlHashFilterFactory
- * The basic AtyponHtmlHashFilterFactory
- * Child plugins can extend this class and add publisher specific hash filters,
- * if necessary.  Common hashes can be easily added and be available to children.
- * Otherwise, this can be used by child plugins if no other hash filters are 
- * needed.
+ * BaseAtyponHtmlCrawlFilterFactory
+ * The basic AtyponHtmlCrawlFilterFactory
+ * Child plugins can extend this class and add publisher specific crawl filters,
+ * if necessary.  Common crawl filters can be easily added and be available to 
+ * children.  Otherwise, this can be used by child plugins if no other crawl 
+ * filters are needed.
  */
 
-public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
+public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
-    // 7/22/2013 starting to use a more aggressive hashing policy-
-    // these are on both issue and article pages
-    // leave only the content
-    HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-    // filter out javascript
-    new TagNameFilter("script"),
-    //filter out comments
-    HtmlNodeFilters.commentWithRegex(".*"),
-    // stylesheets
-    HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-    // these are only on issue toc pages
-    HtmlNodeFilters.tagWithAttribute("img", "class", "accessIcon"),
-    // these are only on article pages
+    HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
   };
 
   /** Create an array of NodeFilters that combines the atyponBaseFilters with
@@ -82,7 +70,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * @param encoding  The encoding
    */
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding) {
+      InputStream in, String encoding) throws PluginException{
 
     return new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)));
@@ -96,7 +84,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
    * @param moreNodes An array of NodeFilters to be excluded with atyponBaseFilters
    */ 
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding, NodeFilter[] moreNodes) {
+              InputStream in, String encoding, NodeFilter[] moreNodes) 
+    throws PluginException {
     NodeFilter[] bothFilters = addTo(moreNodes);
     return new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)));
