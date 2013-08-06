@@ -1,4 +1,4 @@
-/*  $Id: TestASCEHtmlHashFilterFactory.java,v 1.4 2013-08-06 21:24:25 aishizaki Exp $
+/*  $Id: TestBaseAtyponHtmlHashFilterFactory.java,v 1.1 2013-08-06 21:24:24 aishizaki Exp $
  
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 
@@ -27,7 +27,7 @@
 
  */
 
-package org.lockss.plugin.atypon.americansocietyofcivilengineers;
+package org.lockss.plugin.atypon;
 
 import java.io.InputStream;
 
@@ -37,13 +37,13 @@ import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
 
-public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
-  private ASCEHtmlHashFilterFactory fact;
+public class TestBaseAtyponHtmlHashFilterFactory extends LockssTestCase {
+  private BaseAtyponHtmlHashFilterFactory fact;
   private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
-    fact = new ASCEHtmlHashFilterFactory();
+    fact = new BaseAtyponHtmlHashFilterFactory();
   }
   
   private static final String withHeader =
@@ -99,121 +99,25 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
   private static final String withoutHeader =
       "<div class=\"block\"></div>";
       
-  private static final String withIssueNav =
-      "<div class=\"block\">"
-          + "<div id=\"issueNav\">"
-          + "<div id=\"prevNextNav\">"
-          + "<div id=\"issueSearch\">"
-          + "<form action=\"/action/doSearch\" method=\"get\">"
-          + "<input type=\"text\" name=\"searchText\" value=\"\" size=\"17\">"
-          + "<input type=\"hidden\" name=\"issue\" value=\"1\">"
-          + "<input type=\"hidden\" name=\"journalCode\" value=\"ijgnai\">"
-          + "<input type=\"hidden\" name=\"volume\" value=\"12\">"
-          + "<input type=\"hidden\" name=\"filter\" value=\"issue\">"
-          + "<input type=\"submit\" value=\"Search Issue\"></form>"
-          + "</div>"
-          + "<a href=\"javascript:toggleSlide('issueSearch')\">"
-          + "Search Issue</a> |"
-          + "<img src=\"/templates/jsp/_style2/_pagebuilder/_c3/"
-          + "images/rss_32.png\">"
-          + "<a href=\"http://boguspublisherlibrary.org/action/showFeed?"
-          + "ui=0&amp;mi=3f0cur&amp;ai=s4&amp;jc=ijgnai&amp;type=etoc&amp;"
-          + "feed=rss\">RSS</a>"
-          + "<br>"
-          + "<a href=\"/toc/ijgnai/11/6\">Previous Issue</a>"
-          + "<a href=\"/toc/ijgnai/12/2\"> Next Issue</a>"
-          + "</div>"
-          + "</div>"
-          + "</div>";
-
-  private static final String withoutIssueNav =
-      "<div class=\"block\"></div>";
+  private static final String withJScript =
+      "<script type=\"text/javascript\">"
+      +"var curvyCornersVerbose = false;"
+      +"</script>Hello World";
+  private static final String withoutJScript =
+      "Hello World";
   
-  private static final String withTocTools =
-      "<div class=\"block\">"
-          + "<div id=\"tocTools\">"
-          + "<div class=\"body\">"
-          + "<span id=\"selected\">"
-          + "<div id=\"selectedCount\">0</div>"
-          + "<img src=\"/templates/jsp/_style2/_pagebuilder/_c3/"
-          + "images/actionsarrow.png\">"
-          + "</span>"
-          + "<span>"
-          + "<ul class=\"linkList blockLinks separators toclinks\">"
-          + "<li class=\"noBorder label\">SELECTED:</li>"
-          + "<li class=\"noBorder\">"
-          + "<a href=\"javascript:submitArticles(document.frmAbs, "
-          + "'/action/showCitFormats');\">Export Citations</a></li>"
-          + "<li><a href=\"javascript:expandAbstracts();\">"
-          + "Show/Hide Abstracts</a></li>"
-          + "<li><a href=\"javascript:submitArticles(document.frmAbs, "
-          + "'/personalize/addFavoriteArticle');\">Add to MyArticles</a></li>"
-          + "<li><a href=\"javascript:submitArticles(document.frmAbs, "
-          + "'/action/showMailPage');\">Email</a></li>"
-          + "<li class=\"noBorder cart\">"
-          + "<a href=\"https://secure.boguspublisher.org/BOGUSPUBLISHERWebSite/Secure/"
-          + "CheckOut/AddToCart.aspx\">View</a>"
-          + "<img class=\"cart-image\" src=\"/templates/jsp/_style2/"
-          + "_pagebuilder/_c3/images/cartview.gif\">"
-          + "</li>"
-          + "</ul>"
-          + "</span>"
-          + "</div>"
-          + "</div>"
-          + "</div>";
+  private static final String withStylesheet =
+      "<link rel=\"stylesheet\" type=\"text/css\""
+      +"\"href=\"/templates/jsp/grids-min.css\">Hello World";
+ 
+  private static final String withoutStylesheet =
+    "Hello World";
   
-  private static final String withoutTocTools =
-      "<div class=\"block\"></div>";
-
-  
-  private static final String withToggle =
-      "<div class=\"block\">"
-          + "<td class=\"toggle\"><p>"
-          + "<a href=\"javascript:showHideAbs"
-          + "('10.1061/(BOGUSPUBLISHER)GM.1943-5622.0000074', "
-          + "'AbsBOGUSPUBLISHERGM194356220000074', "
-          + "'showAbsBOGUSPUBLISHERGM194356220000074');\">+</a></p></td>"
-          + "</div>";
-  
-  private static final String withoutToggle =
-      "<div class=\"block\"></div>";
-
-  private static final String withDropzoneLeftSidebar =
-      "<div class=\"block\">"
-          + "<div class=\"dropzone ui-corner-all \" id=\"dropzone-Left-Sidebar\">"
-          + "<div id=\"widget-11339\" class=\"widget type-ad-placeholder ui-helper-clearfix\">"
-          + "<div class=\"view\">"
-          + "<div class=\"view-inner\">"
-          + "<a title=\"Rebuilding After a Tornado\" "
-          + "href=\"/action/clickThrough?id=1245&amp;url=%2Fpage%2Fnhrefo%2F"
-          + "rebuildingafteratornado&amp;loc=%2Fdoi%2Fabs%2F10.1061%2F%2528"
-          + "BOGUSPUBLISHER%2529GM.1943-5622.0000040&amp;pubId=40224104\">"
-          + "<center><img src=\"/sda/1245/Tornados.jpg\" "
-          + "alt=\"Rebuilding After a Tornado\"></center></a><br>"
-          + "</div>"
-          + "</div>"
-          + "</div>"
-          + "</div>"
-          + "</div>";
-
-  private static final String withoutDropzoneLeftSidebar =
-      "<div class=\"block\"></div>";
-  
-  private static final String withCitedBySection =
-      "<div class=\"block\">"
-          + "<div class=\"citedBySection\"><a name=\"citedBySection\"></a>"
-          + "<br><br><h2>Cited by</h2>"
-          + "<div class=\"citedByEntry\">"
-          + "<a class=\"entryAuthor\" href=\"blahblah\"></a>"
-          + "</div>"
-          + "<div class=\"citedByEntry\">"
-          + "<a class=\"entryAuthor\" href=\"blahAuthor\">"
-          + "</div>"
-          + "</div>"
-          + "</div>";
-  
-  private static final String withoutCitedBySection =
-      "<div class=\"block\"></div>";
+  private static final String withAccessIcon =
+      "<div class=\"block\"><img src=\"/templates/jsp/images/access_full.gif\""
+      +"\" class=\"accessIcon\">Hello World</div>";
+  private static final String withoutAccessIcon =
+    "<div class=\"block\">Hello World</div>";
 
   private static final String withFooter =
       "<div class=\"block\">"
@@ -284,28 +188,17 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
       "</li>>"+
       "</div>" +
       "</div>Hello World";
+  
   private static final String withoutHeaderMainMenu = "Hello World";
   
   private static final String withStylesheets = 
     "<link rel=\"stylesheet\" type=\"text/css\" href=\"/templates/jsp/_style2/_pagebuilder/reset-fonts-grids.css\">Hello World";
   private static final String withoutStylesheets ="Hello World";
-
-  private static final String withAccessIcon =
-    "<div class=\"block\"><img src=\"/templates/jsp/images/access_full.gif\""
-    +"\" class=\"accessIcon\">Hello World</div>";
-  private static final String withoutAccessIcon =
-    "<div class=\"block\">Hello World</div>";
-  
-  private static final String withJScript =
-      "<script type=\"text/javascript\">"
-      +"var curvyCornersVerbose = false;"
-      +"</script>Hello World";
-  private static final String withoutJScript =
-      "Hello World";
   
   private static final String withComments =
     "<!--totalCount15--><!--modified:1374684679000-->Hello World";
   private static final String withoutComments ="Hello World";
+
   
   /*
    *  Compare Html and HtmlHashFiltered
@@ -315,38 +208,6 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withHeader), Constants.DEFAULT_ENCODING);
     assertEquals(withoutHeader, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testIssueNavHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withIssueNav), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutIssueNav, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testTocToolsHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withTocTools), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutTocTools, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testToggleHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withToggle), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutToggle, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testDropzoneLeftSidebarHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withDropzoneLeftSidebar),
-                              Constants.DEFAULT_ENCODING);
-    assertEquals(withoutDropzoneLeftSidebar,
-                 StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testCitedBySectionHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCitedBySection), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutCitedBySection, StringUtil.fromInputStream(actIn));
   }
         
   public void testFooterHtmlFiltering() throws Exception {
@@ -377,6 +238,12 @@ public class TestASCEHtmlHashFilterFactory extends LockssTestCase {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withJScript), Constants.DEFAULT_ENCODING);
     assertEquals(withoutJScript, StringUtil.fromInputStream(actIn));
+  }
+  
+  public void testStyleSheets() throws Exception {
+    InputStream actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(withStylesheet), Constants.DEFAULT_ENCODING);
+    assertEquals(withoutStylesheet, StringUtil.fromInputStream(actIn));
   }
   
   public void testAccessIcon() throws Exception {
