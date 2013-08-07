@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.6 2013-08-07 22:57:23 alexandraohlson Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.InputStream;
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Remark;
+import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.Div;
@@ -75,8 +76,8 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         // Left side columns has list of Journals (might change over time) and current year's catalog
         HtmlNodeFilters.tagWithAttribute("table", "class", "sideMenu mceItemTable"),
         // rss feed link can have variable text in it; exists both as "link" and "a"
-        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "&feed=rss"),
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "feed=rss"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "feed=rss"),
 
         //TOC stuff
         HtmlNodeFilters.tagWithAttribute("td",  "class", "MarketingMessageArea"),
@@ -119,7 +120,11 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
             } else {
               // Expert Reviews puts copyright info in unmarked section but it is immediately preceeded by <!--contact info-->
               Node prevSib = node.getPreviousSibling();
-              if (prevSib instanceof Remark) {
+              // there may be text nodes before the comment (for newlines)
+              while ((prevSib != null) && (prevSib instanceof Text)) {
+                prevSib = prevSib.getPreviousSibling();
+              }
+              if ((prevSib != null) && (prevSib instanceof Remark)) {
                 String remarkText = prevSib.getText();
                 if ( (remarkText != null) && remarkText.contains("contact info")) return true;
               }
