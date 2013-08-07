@@ -146,7 +146,8 @@ public class FillInUnknownNames {
         values = origKbart.getValues();
         origPub = origKbart.get(PUB_TITLE);
         newPub = origPub;
-        if ( !(origPub == null) && (origPub.contains(UNKNOWN_PUB)) ) {
+//        if ( !(origPub == null) && (origPub.contains(UNKNOWN_PUB)) ) {
+        if ( origPub != null) {
           /* see if you can substitute something from the modMap */
           origPISSN = origKbart.get(PISSN_TITLE);
           origEISSN = origKbart.get(EISSN_TITLE);
