@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.22 2013-07-29 22:35:26 janicecheng Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.23 2013-08-07 23:07:03 etenbrink Exp $
  */ 
 
 /*
@@ -56,6 +56,20 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Filter out <div id="header">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        // Filter out <div id="rightnavbar">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rightnavbar"), 
+        // Filter out <div id="footerarea">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footerarea"),
+        // Filter out <div class="article-pager">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "class", "article-pager"),
+        // Filter out <div id="purchaseexpand"...>...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "purchaseexpand"),
+        // Filter out <div id="moredetails">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "moredetails"),
+        // Filter out <div id="moreLikeThis">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "moreLikeThis"),
         // filter out <link rel="stylesheet" href="..."> because Ingenta has
         // bad habit of adding a version number to the CSS file name
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
@@ -64,9 +78,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // number of reference links won't be the same because not all 
         // the referenced articles are available at a given institution.
         HtmlNodeFilters.tagWithAttribute("div", "class", "heading"),
-        // filter out <div class="advertisingbanner"> that encloses 
+        // filter out <div class="advertisingbanner[ clear]"> that encloses 
         // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
-        HtmlNodeFilters.tagWithAttribute("div", "class", "advertisingbanner"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisingbanner[^\"]*"),
         // filter out <li class="data"> that encloses a reference for the
         // article: reference links won't be the same because not all 
         // the referenced articles are available at a given institution.
@@ -89,11 +103,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out <div id="vertical-ad">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "vertical-ad"),
         // Filter out <div class="right-col-download">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "class", "right-col-download"),                                                               
+        HtmlNodeFilters.tagWithAttribute("div", "class", "right-col-download"),
         // Filter out <div id="cart-navbar">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "cart-navbar"),   
-        // Filter out <div class="heading-macfix article-access-options">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "class", "heading-macfix"), 
         // Filter out <div id="baynote-recommendations">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "baynote-recommendations"),
         // Filter out <div id="bookmarks-container">...</div>
