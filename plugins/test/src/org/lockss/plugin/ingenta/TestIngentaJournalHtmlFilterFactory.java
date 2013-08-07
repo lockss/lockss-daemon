@@ -50,14 +50,30 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 
   // block tags from IngentaJouranlHtmlFilterFactory
   String blockIds[][] = new String[][] {
+    // only tests the constructed tag rather than actual example from page
+    // Filter out <div id="header">...</div>
+    {"div", "id", "header"},
+    // Filter out <div id="footerarea">...</div>
+    {"div", "id", "footerarea"},
+    // Filter out <div id="rightnavbar">...</div>
+    {"div", "id", "rightnavbar"},
+    // Filter out <div class="article-pager">...</div>
+    {"div", "class", "article-pager"},
+    // Filter out <div id="purchaseexpand"...>...</div>
+    {"div", "id", "purchaseexpand"},
+    // Filter out <div id="moredetails">...</div>
+    {"div", "id", "moredetails"},
+    // Filter out <div id="moreLikeThis">...</div>
+    {"div", "id", "moreLikeThis"},
     // filter out <div class="heading"> that encloses a statement with
     // the number of references and the number that can be referenced: 
     // number of reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
     {"div", "class", "heading"},
-    // filter out <div class="advertisingbanner"> that encloses 
+    // filter out <div class="advertisingbanner[ clear]"> that encloses 
     // GA_googleFillSlot("TopLeaderboard") & GA_googleFillSlot("Horizontal_banner")
-   {"div", "class", "advertisingbanner"},
+    {"div", "class", "advertisingbanner"},
+    {"div", "class", "advertisingbanner clear"},
     // filter out <li class="data"> that encloses a reference for the
     // article: reference links won't be the same because not all 
     // the referenced articles are available at a given institution.
@@ -79,11 +95,9 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     // Filter out <div id="vertical-ad">...</div>
     {"div", "id", "vertical-ad"},      
     // Filter out <div class="right-col-download">...</div>
-    {"div", "class", "right-col-download"},                                                               
+    {"div", "class", "right-col-download"},
     // Filter out <div id="cart-navbar">...</div>
     {"div", "id", "cart-navbar"},   
-    // Filter out <div class="heading-macfix">...</div>
-    {"div", "class", "heading-macfix"},                                                                           
     // Filter out <div id="baynote-recommendations">...</div>
     {"div", "id", "baynote-recommendations"},
     // Filter out <div id="bookmarks-container">...</div>
