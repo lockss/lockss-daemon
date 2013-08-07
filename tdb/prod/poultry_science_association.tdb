@@ -19,6 +19,22 @@
     param[base_url] = http://japr.fass.org/
     comment[notReady] = articles available after 12 months. test later. for highwire check this link http://highwire.stanford.edu/lists/freeart.dtl
 
+    au < HighWireStrVolPlugin ; superseded ; 1992 ; The Journal of Applied Poultry Research Volume 1 [superseded] ; 1 >
+    au < HighWireStrVolPlugin ; superseded ; 1993 ; The Journal of Applied Poultry Research Volume 2 [superseded] ; 2 >
+    au < HighWireStrVolPlugin ; superseded ; 1994 ; The Journal of Applied Poultry Research Volume 3 [superseded] ; 3 >
+    au < HighWireStrVolPlugin ; doesNotExist ; 1995 ; The Journal of Applied Poultry Research Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; superseded ; 1996 ; The Journal of Applied Poultry Research Volume 5 [superseded] ; 5 >
+    au < HighWireStrVolPlugin ; superseded ; 1997 ; The Journal of Applied Poultry Research Volume 6 [superseded] ; 6 >
+    au < HighWireStrVolPlugin ; doesNotExist ; 1998 ; The Journal of Applied Poultry Research Volume 7 ; 7 >
+    au < HighWireStrVolPlugin ; superseded ; 1999 ; The Journal of Applied Poultry Research Volume 8 [superseded] ; 8 >
+    au < HighWireStrVolPlugin ; superseded ; 2000 ; The Journal of Applied Poultry Research Volume 9 [superseded] ; 9 >
+    au < HighWireStrVolPlugin ; superseded ; 2001 ; The Journal of Applied Poultry Research Volume 10 [superseded] ; 10 >
+    au < HighWireStrVolPlugin ; superseded ; 2002 ; The Journal of Applied Poultry Research Volume 11 [superseded] ; 11 >
+    au < HighWireStrVolPlugin ; superseded ; 2003 ; The Journal of Applied Poultry Research Volume 12 [superseded] ; 12 >
+    au < HighWireStrVolPlugin ; superseded ; 2004 ; The Journal of Applied Poultry Research Volume 13 [superseded] ; 13 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; The Journal of Applied Poultry Research Volume 14 [superseded] ; 14 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; The Journal of Applied Poultry Research Volume 15 [superseded] ; 15 >
+
     au < HighWirePressPlugin ; down ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 >
     au < HighWirePressPlugin ; down ; 1994 ; The Journal of Applied Poultry Research Volume 3 ; 3 >
