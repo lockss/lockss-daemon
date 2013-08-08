@@ -1,5 +1,5 @@
 /*
- * $Id: StringPool.java,v 1.2 2013-05-08 09:10:43 tlipkis Exp $
+ * $Id: StringPool.java,v 1.3 2013-08-08 06:01:27 tlipkis Exp $
  */
 
 /*
@@ -44,9 +44,11 @@ public class StringPool {
   public static StringPool AU_CONFIG_PROPS = new StringPool("AU config props");
   public static StringPool HTTP_HEADERS = new StringPool("HTTP headers");
   public static StringPool PLUGIN_IDS = new StringPool("Plugin IDs");
+  public static StringPool FEATURE_VERSIONS = new StringPool("Feature Versions");
 
   private String name;
   private Map<String,String> map;
+  private boolean sealed = false;
 
   public StringPool(String name) {
     this(name, 20);
@@ -59,11 +61,18 @@ public class StringPool {
   }
 
   /** Return the instance of the string already in the pool, if any, else
-   * add this instance and return it. */
+   * add this instance and return it.
+   * @param str the String to be interned.  If null, null is returned. */
   public synchronized String intern(String str) {
     if (true) {
+      if (str == null) {
+	return str;
+      }
       String res = map.get(str);
       if (res == null) {
+	if (sealed) {
+	  return str;
+	}
 	map.put(str, str);
 	res = str;
       }
@@ -71,6 +80,16 @@ public class StringPool {
     } else {
       return str;
     }
+  }
+
+  /** Seal the pool, so that no new additions will be made.  If {@link
+   * #intern(String)} is called with a string that matches an existing
+   * entry the interned entry will be returned, else the argument.
+   * Intended for contexts in which a predictable standard set of strings
+   * appear as well as one-off strings that would needlessly fill the
+   * pool. */
+  public void seal() {
+    sealed = true;
   }
 
   private int sumStringChars() {
