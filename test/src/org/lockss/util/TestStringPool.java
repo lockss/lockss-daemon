@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringPool.java,v 1.1 2012-06-25 05:53:43 tlipkis Exp $
+ * $Id: TestStringPool.java,v 1.1.30.1 2013-08-08 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class TestStringPool extends LockssTestCase {
 
   public void testIntern() {
     StringPool pool = new StringPool("name");
+    assertNull(pool.intern(null));
     String s1 = new String("foo");
     String s2 = new String("foo");
     assertNotSame(s1, s2);
@@ -51,6 +52,27 @@ public class TestStringPool extends LockssTestCase {
 
     assertNotSame(exp, s2);
     assertSame(exp, pool.intern(s2));
-    assertNull(StringUtil.truncateAtAny(null, null));
+  }
+
+  public void testSealed() {
+    StringPool pool = new StringPool("name");
+    pool.intern("str1");
+    pool.intern("str2");
+    pool.seal();
+
+    assertNull(pool.intern(null));
+    String s1 = new String("str1");
+    String s2 = new String("str1");
+    assertNotSame(s1, s2);
+    String int1 = pool.intern(s1);
+    assertNotSame(s1, int1);
+    assertSame(int1, pool.intern(s2));
+
+    String s3 = new String("str2");
+    assertNotSame(s3, pool.intern(s3));
+    String s4 = new String("strxxx");
+    String s5 = new String("strxxx");
+    assertSame(s4, pool.intern(s4));
+    assertSame(s5, pool.intern(s5));
   }
 }
