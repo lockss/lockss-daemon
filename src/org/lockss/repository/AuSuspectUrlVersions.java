@@ -1,5 +1,5 @@
 /*
- * $Id: AuSuspectUrlVersions.java,v 1.3 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: AuSuspectUrlVersions.java,v 1.4 2013-08-08 05:58:43 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.hasher.HashResult;
  * Instances represent the set of versions of urls in an AU that
  * have been marked suspect because they failed a local hash
  * verification, meaning that either the url's content or its
- * stored hash is corrupt.
+ * stored hash is corrupt.  This class is thread safe.
  */
 public class AuSuspectUrlVersions implements LockssSerializable {
   public class SuspectUrlVersion implements LockssSerializable {
@@ -77,13 +77,13 @@ public class AuSuspectUrlVersions implements LockssSerializable {
       this.storedHash = storedHash;
     }
 
-    protected String getUrl() {
+    public String getUrl() {
       return url;
     }
-    protected int getVersion() {
+    public int getVersion() {
       return version;
     }
-    protected long getCreated() {
+    public long getCreated() {
       return created;
     }
     public int hashCode() {
@@ -114,14 +114,14 @@ public class AuSuspectUrlVersions implements LockssSerializable {
    * Return true if the version of the url has been marked suspect.
    * @return true if version of url has been marked suspect
    */
-  public boolean isSuspect(String url, int version) {
+  public synchronized boolean isSuspect(String url, int version) {
     return suspectVersions.contains(new SuspectUrlVersion(url, version));
   }
 
   /**
    * Mark the version of the url as suspect
    */
-  public void markAsSuspect(String url, int version) {
+  public synchronized void markAsSuspect(String url, int version) {
     if (isSuspect(url, version)) {
       throw new UnsupportedOperationException("Re-marking as suspect");
     }
@@ -131,8 +131,10 @@ public class AuSuspectUrlVersions implements LockssSerializable {
   /**
    * Mark the version of the url as suspect
    */
-  public void markAsSuspect(String url, int version, String algorithm,
-			    byte[] computedHash, byte[] storedHash) {
+  public synchronized void markAsSuspect(String url, int version,
+					 String algorithm,
+					 byte[] computedHash,
+					 byte[] storedHash) {
     if (isSuspect(url, version)) {
       throw new UnsupportedOperationException("Re-marking as suspect");
     }
@@ -143,8 +145,9 @@ public class AuSuspectUrlVersions implements LockssSerializable {
   /**
    * Mark the version of the url as suspect
    */
-  public void markAsSuspect(String url, int version,
-			    HashResult computedHash, HashResult storedHash) {
+  public synchronized void markAsSuspect(String url, int version,
+					 HashResult computedHash,
+					 HashResult storedHash) {
     if (isSuspect(url, version)) {
       throw new UnsupportedOperationException("Re-marking as suspect");
     }
@@ -153,7 +156,13 @@ public class AuSuspectUrlVersions implements LockssSerializable {
   }
 
   /** Return true if the set is empty */
-  public boolean isEmpty() {
+  public synchronized boolean isEmpty() {
     return suspectVersions.isEmpty();
   }
+
+  /** Return the collection of SuspectUrlVersion */
+  public synchronized Collection<SuspectUrlVersion> getSuspectList() {
+    return new ArrayList(suspectVersions);
+  }
+
 }
