@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.42 2013-07-31 17:41:43 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.43 2013-08-08 00:16:00 barry409 Exp $
  */
 
 /*
@@ -1109,6 +1109,28 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       ida.setPercentAgreementHint(percent);
       storeIdentityAgreement(au);
     }
+  }
+
+  /**
+   * Signal partial agreement with a peer on a given archival unit following
+   * a V3 poll.
+   *
+   * @param agreementType The {@link AgreementType} to be recorded.
+   * @param pid The {@link PeerIdentity} of the agreeing peer.
+   * @param au The {@link ArchivalUnit}.
+   * @param agreement A number between {@code 0.0} and {@code 1.0}
+   *                   representing the percentage of agreement on the
+   *                   portion of the AU polled.
+   */
+  public void signalPartialAgreement(AgreementType agreementType, 
+				     PeerIdentity pid, ArchivalUnit au,
+                                     float agreement) {
+    log.debug("called signalPartialAgreement("+
+	      "agreementType="+agreementType+
+	      ", pid="+pid+
+	      ", au="+au+
+	      ", agreement"+agreement+
+	      ")");
   }
 
   /**

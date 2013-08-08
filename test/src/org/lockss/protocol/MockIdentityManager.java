@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.20 2013-07-31 17:41:43 barry409 Exp $
+* $Id: MockIdentityManager.java,v 1.21 2013-08-08 00:16:00 barry409 Exp $
  */
 
 /*
@@ -64,36 +64,44 @@ public class MockIdentityManager implements IdentityManager {
     super();
   }
 
+  @Override
   public void initService(LockssApp daemon) throws LockssAppException {
 //     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void startService() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void stopService() {
 //     throw new UnsupportedOperationException("not implemented");
   }
 
 
+  @Override
   public PeerIdentity findPeerIdentity(String key) {
     return (PeerIdentity)piMap.get(key);
   }
   
+  @Override
   public void removePeer(String key) {
     piMap.remove(key);
   }
 
+  @Override
   public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
     String key = ""+addr+port;
     return new MockPeerIdentity(key);
   }
 
+  @Override
   public PeerIdentity ipAddrToPeerIdentity(IPAddr addr) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public PeerIdentity stringToPeerIdentity(String idKey)
       throws IdentityManager.MalformedIdentityKeyException {
     return (PeerIdentity)piMap.get(idKey);
@@ -103,10 +111,12 @@ public class MockIdentityManager implements IdentityManager {
     piMap.put(idKey, pi);
   }
 
+  @Override
   public IPAddr identityToIPAddr(PeerIdentity pid) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public PeerIdentity getLocalPeerIdentity(int pollVersion) {
     switch (pollVersion) {
     case 3:
@@ -117,14 +127,17 @@ public class MockIdentityManager implements IdentityManager {
     }
   }
 
+  @Override
   public List<PeerIdentity> getLocalPeerIdentities() {
     return ListUtil.list(getLocalPeerIdentity(3));
   }
 
+  @Override
   public IPAddr getLocalIPAddr() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public boolean isLocalIdentity(PeerIdentity id) {
     log.debug3("Checking if "+id+" is the local identity "+localId);
     return id == localId;
@@ -135,14 +148,17 @@ public class MockIdentityManager implements IdentityManager {
     this.localId = id;
   }
 
+  @Override
   public boolean isLocalIdentity(String idStr) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void rememberEvent(PeerIdentity id, int event, LcapMessage msg) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public int getMaxReputation() {
     return maxRep;
   }
@@ -155,6 +171,7 @@ public class MockIdentityManager implements IdentityManager {
     this.maxRep = maxRep;
   }
 
+  @Override
   public int getReputation(PeerIdentity id) {
     Integer rep = (Integer)repMap.get(id);
     if (rep == null) {
@@ -169,34 +186,48 @@ public class MockIdentityManager implements IdentityManager {
 
 
   /** @deprecated */
+  @Override
   public IdentityListBean getIdentityListBean() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
   
+  @Override
   public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
                                      float percentAgreement) {
     throw new UnsupportedOperationException("not implemented");
   }
   
+  @Override
   public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
                                      float percentAgreement) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
+  public void signalPartialAgreement(AgreementType agreementType, 
+				     PeerIdentity pid, ArchivalUnit au,
+                                     float agreement) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  @Override
   public void signalLocalHashComplete(int filesCount, int distinctUrlCount,
 				      int agreeCount, int disagreeCount,
 				      int missingCount) {
     throw new UnsupportedOperationException("not implemented");
   }
   
+  @Override
   public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -230,19 +261,23 @@ public class MockIdentityManager implements IdentityManager {
 //     idMap = null;
 //   }
 
+  @Override
   public void changeReputation(PeerIdentity id, int changeKind) {
     throw new UnsupportedOperationException("not implemented");
     //      idMap.put(id, new Integer(changeKind));
   }
 
+  @Override
   public void storeIdentities() throws ProtocolException {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void storeIdentities(ObjectSerializer serializer) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public LockssApp getApp() {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -264,57 +299,68 @@ public class MockIdentityManager implements IdentityManager {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
 
+  @Override
   public Map getAgreed(ArchivalUnit au) {
     return (Map)agreeMap.get(au);
   }
 
+  @Override
   public Map getDisagreed(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public List getCachesToRepairFrom(ArchivalUnit au) {
     Map map = getAgreed(au);
     if (map == null) return Collections.EMPTY_LIST;
     return new ArrayList(map.keySet());
   }
 
+  @Override
   public boolean hasAgreed(String ip, ArchivalUnit au)
       throws IdentityManager.MalformedIdentityKeyException {
     return hasAgreed(stringToPeerIdentity(ip), au);
   }
 
+  @Override
   public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au) {
     Map map = getAgreed(au);
     if (map == null) return false;
     return map.containsKey(pid);
   }
 
+  @Override
   public boolean hasAgreeMap(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
       throws IOException {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public void writeIdentityDbTo(OutputStream out) throws IOException {
 //     throw new UnsupportedOperationException("not implemented");
   }
 
-   public void setAgeedForAu(ArchivalUnit au, Map map) {
-     agreeMap.put(au, map);
-   }
+  public void setAgeedForAu(ArchivalUnit au, Map map) {
+    agreeMap.put(au, map);
+  }
 
+  // XXX What does it mean to have unused protected methods on a mock?
   protected LcapIdentity findLcapIdentity(PeerIdentity pid,
 					  IPAddr addr, int port) {
     throw new UnsupportedOperationException("not implemented");
@@ -323,43 +369,53 @@ public class MockIdentityManager implements IdentityManager {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public Collection getUdpPeerIdentities() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public Collection getTcpPeerIdentities() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public Collection getTcpPeerIdentities(Predicate peerPredicate) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public LcapIdentity findLcapIdentity(PeerIdentity pid, String key) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public List<PeerIdentityStatus> getPeerIdentityStatusList() {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public PeerIdentityStatus getPeerIdentityStatus(PeerIdentity pid) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public PeerIdentityStatus getPeerIdentityStatus(String key) {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  @Override
   public float getHighestPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
     // TODO Auto-generated method stub
     return 0.0f;
   }
 
+  @Override
   public float getPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
     return 0.0f;
   }
 
+  @Override
   public float getHighestPercentAgreementHint(PeerIdentity pid,
 					      ArchivalUnit au) {
     return 0.0f;
@@ -369,6 +425,7 @@ public class MockIdentityManager implements IdentityManager {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
 
+  @Override
   public String getUiUrlStem(PeerIdentity pid) {
     return null;
   }

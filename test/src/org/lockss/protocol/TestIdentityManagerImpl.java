@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.28 2013-07-22 20:59:53 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.29 2013-08-08 00:16:00 barry409 Exp $
  */
 
 /*
@@ -608,6 +608,21 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     
     assertEquals(expectedDisagree, idmgr.getDisagreed(mau));
     assertEquals(expectedAgree, idmgr.getAgreed(mau));
+  }
+
+  public void testSignalWithAgreementType() throws Exception {
+    setupPeer123();
+
+    // Nothing but logging the call at present.
+    idmgr.signalPartialAgreement(IdentityManager.AgreementType.POR,
+				 peer1, mau, 0.49f);
+  }
+
+  public void testSignalLocalHashComplete() throws Exception {
+    setupPeer123();
+
+    // Nothing but logging the call at present.
+    idmgr.signalLocalHashComplete(1, 2, 3, 4, 5);
   }
 
   public void testGetIdentityAgreements() throws Exception {
