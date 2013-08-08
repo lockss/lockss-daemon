@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.48 2013-07-18 03:14:11 dshr Exp $
+ * $Id: AuState.java,v 1.49 2013-08-08 06:01:08 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus;
@@ -60,9 +61,8 @@ public class AuState implements LockssSerializable {
   protected long lastCrawlAttempt;
   protected String lastCrawlResultMsg;
   protected int lastCrawlResult;
-  protected long lastTopLevelPoll;	// last completed PoR poll
-  protected long lastPollStart;		// last time a PoR poll started
-  protected String lastPollResultMsg;   // result of last PoR poll
+  protected long lastTopLevelPoll;	// last completed PoR poll time
+  protected long lastPollStart;		// last time a poll started
   protected int lastPollResult;         // ditto
   protected long pollDuration;		// average of last two PoRpoll durations
   protected int clockssSubscriptionStatus;
@@ -73,7 +73,9 @@ public class AuState implements LockssSerializable {
   protected String substanceVersion;
   protected String metadataVersion;
   protected long lastContentChange;     // last time a new URL version created
-  protected long lastTimePollCompleted; // for any poll variant
+  protected long lastPoPPoll;		// last completed PoP poll time
+  protected int lastPoPPollResult;	// result of last PoP poll
+  protected long lastLocalPoll;		// last completed Local poll time
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -82,9 +84,6 @@ public class AuState implements LockssSerializable {
 
   // saves previous lastCrawl* state while crawl is running
   protected transient AuState previousCrawlState = null;
-
-  // saves previous lastPoll* state while poll is running
-  protected transient AuState previousPollState = null;
 
   // Runtime (non-state) vars
   protected transient ArchivalUnit au;
@@ -97,6 +96,8 @@ public class AuState implements LockssSerializable {
   // deprecated, kept for compatibility with old state files
   /** @deprecated */
   protected transient boolean hasV3Poll = false;
+  // No longer set, never had a non-standard value
+  protected transient String lastPollResultMsg;   // result of last poll
 
   transient int urlUpdateCntr = 0;
 
@@ -121,6 +122,9 @@ public class AuState implements LockssSerializable {
 	 null, // substanceVersion
 	 null, // metadataVersion
 	 0, // lastContentChange
+	 -1, // lastPoPPoll
+	 -1, // lastPoPPollResult
+	 -1, // lastLocalPoll
 	 historyRepo);
   }
 
@@ -144,6 +148,7 @@ public class AuState implements LockssSerializable {
 	 null,				// substanceFeatureVersion
 	 null,				// metadataFeatureVersion
 	 TimeBase.nowMs(),              // lastContentChange
+	 -1, -1, -1,
 	 historyRepo);
   }
 
@@ -162,6 +167,9 @@ public class AuState implements LockssSerializable {
 		 String substanceVersion,
 		 String metadataVersion,
 		 long lastContentChange,
+		 long lastPoPPoll,
+		 int lastPoPPollResult,
+		 long lastLocalPoll,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -183,6 +191,9 @@ public class AuState implements LockssSerializable {
     this.substanceVersion = substanceVersion;
     this.metadataVersion = metadataVersion;
     this.lastContentChange = lastContentChange;
+    this.lastPoPPoll = lastPoPPoll;
+    this.lastPoPPollResult = lastPoPPollResult;
+    this.lastLocalPoll = lastLocalPoll;
     this.historyRepo = historyRepo;
   }
 
@@ -196,10 +207,6 @@ public class AuState implements LockssSerializable {
 
   public boolean isCrawlActive() {
     return previousCrawlState != null;
-  }
-
-  public boolean isPollActive() {
-    return previousPollState != null;
   }
 
   /**
@@ -283,11 +290,35 @@ public class AuState implements LockssSerializable {
   }
 
   /**
-   * Returns the last time any poll completed.
+   * Returns the last time a PoP poll completed.
+   * @return the last poll time in ms
+   */
+  public long getLastPoPPoll() {
+    return lastPoPPoll;
+  }
+
+  /**
+   * Returns the last time a Local poll completed.
+   * @return the last poll time in ms
+   */
+  public long getLastLocalPoll() {
+    return lastLocalPoll;
+  }
+
+  /**
+   * Returns the last PoP poll result.
+   * @return the last poll time in ms
+   */
+  public int getLastPoPPollResult() {
+    return lastPoPPollResult;
+  }
+
+  /**
+   * Returns the last time a PoP or PoR poll completed.
    * @return the last poll time in ms
    */
   public long getLastTimePollCompleted() {
-    return lastTimePollCompleted;
+    return Math.max(lastTopLevelPoll, lastPoPPoll);
   }
 
   /**
@@ -295,9 +326,6 @@ public class AuState implements LockssSerializable {
    * @return the last poll time in ms
    */
   public long getLastPollStart() {
-    if (isPollActive()) {
-      return previousPollState.getLastPollStart();
-    }
     return lastPollStart;
   }
 
@@ -314,27 +342,35 @@ public class AuState implements LockssSerializable {
    * Returns the result code of the last poll
    */
   public int getLastPollResult() {
-    if (isPollActive()) {
-      return previousPollState.getLastPollResult();
-    }
     return lastPollResult;
   }
 
   /**
-   * Returns the result of the last poll
+   * Returns the result of the last PoR poll
    */
   public String getLastPollResultMsg() {
-    if (isPollActive()) {
-      return previousPollState.getLastPollResultMsg();
+    if (lastPollResult < 0) {
+      return null;
     }
-    if (lastPollResultMsg == null) {
-      try {
-	return V3Poller.getStatusString(lastPollResult);
-      } catch (IndexOutOfBoundsException e) {
-	return null;
-      }
+    try {
+      return V3Poller.getStatusString(lastPollResult);
+    } catch (IndexOutOfBoundsException e) {
+      return "Poll result " + lastPollResult;
     }
-    return lastPollResultMsg;
+  }
+
+  /**
+   * Returns the result of the last PoP poll
+   */
+  public String getLastPoPPollResultMsg() {
+    if (lastPoPPollResult < 0) {
+      return null;
+    }
+    try {
+      return V3Poller.getStatusString(lastPoPPollResult);
+    } catch (IndexOutOfBoundsException e) {
+      return "Poll result " + lastPollResult;
+    }
   }
 
   /**
@@ -435,24 +471,16 @@ public class AuState implements LockssSerializable {
 		       hasSubstance,
 		       substanceVersion, metadataVersion,
 		       lastContentChange,
+		       lastPoPPoll, lastPoPPollResult,
+		       lastLocalPoll,
 		       null);
-  }
-
-  private void saveLastPoll() {
-    if (previousPollState != null) {
-      logger.error("saveLastPoll() called twice", new Throwable());
-    }
-    previousPollState = copy();
   }
 
   /**
    * Sets the last time a poll was started.
    */
   public void pollStarted() {
-    saveLastPoll();
     lastPollStart = TimeBase.nowMs();
-    lastPollResult = Crawler.STATUS_RUNNING_AT_CRASH;
-    lastPollResultMsg = null;
     historyRepo.storeAuState(this);
   }
 
@@ -466,20 +494,29 @@ public class AuState implements LockssSerializable {
   /**
    * Sets the last poll time to the current time.  Saves itself to disk.
    */
-  public void pollFinished(int result) {
+  public void pollFinished(int result, V3Poller.PollVariant variant) {
     long now = TimeBase.nowMs();
-    switch (result) {
-    case V3Poller.POLLER_STATUS_COMPLETE:
-      lastTopLevelPoll = now;
-      // Fall through
-    case V3Poller.POLLER_STATUS_COMPLETE_POP:
-    case V3Poller.POLLER_STATUS_COMPLETE_LOCAL:
-      lastTimePollCompleted = now;
+    boolean complete = result == V3Poller.POLLER_STATUS_COMPLETE;
+    switch (variant) {
+    case PoR:
+      if (complete) {
+	lastTopLevelPoll = now;
+      }
+      lastPollResult = result;
+      setPollDuration(TimeBase.msSince(lastPollAttempt));
+      break;
+    case PoP:
+      if (complete) {
+	lastPoPPoll = now;
+      }
+      lastPoPPollResult = result;
+      break;
+    case Local:
+      if (complete) {
+	lastLocalPoll = now;
+      }
       break;
     }
-    lastPollResult = result;
-    setPollDuration(TimeBase.msSince(lastPollAttempt));
-    previousPollState = null;
     historyRepo.storeAuState(this);
   }
 
@@ -487,7 +524,8 @@ public class AuState implements LockssSerializable {
    * Sets the last poll time to the current time. Only for V1 polls.
    */
   public void pollFinished() {
-    pollFinished(V3Poller.POLLER_STATUS_COMPLETE); // XXX Bogus!
+    pollFinished(V3Poller.POLLER_STATUS_COMPLETE,
+		 V3Poller.PollVariant.PoR); // XXX Bogus!
   }
 
   public void setV3Agreement(double d) {
@@ -632,6 +670,23 @@ public class AuState implements LockssSerializable {
   public void storeAuState() {
     historyRepo.storeAuState(this);
   }
+
+  /**
+   * Avoid duplicating common strings
+   */
+  protected void postUnmarshal(LockssApp lockssContext) {
+    lastPollResultMsg = null;		// no longer used
+    StringPool featPool = StringPool.FEATURE_VERSIONS;
+    if (substanceVersion != null) {
+      substanceVersion = featPool.intern(substanceVersion);
+    }
+    if (metadataVersion != null) {
+      metadataVersion = featPool.intern(metadataVersion);
+    }
+    StringPool cPool = CrawlerStatus.CRAWL_STATUS_POOL;
+    lastCrawlResultMsg = cPool.intern(lastCrawlResultMsg);
+  }
+
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
