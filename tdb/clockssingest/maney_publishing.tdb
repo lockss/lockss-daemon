@@ -3761,8 +3761,8 @@
     au < doNotProcess ; doNotProcess ; 2008 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 19 ; 19 > 
     au < doNotProcess ; doNotProcess ; 2009 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 20 ; 20 > 
     au < doNotProcess ; doNotProcess ; 2010 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 21 ; 21 > 
-    au < doNotProcess ; doNotProcess ; 2011 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 22 ; 22 > 
-    au < crawling ; exists ; 2012 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 23 ; 23 > 
+    au < released ; manifest ; 2011 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 22 ; 22 > 
+    au < released ; manifest ; 2012 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 23 ; 23 > 
     au < expected ; exists ; 2013 ; Packaging, Transport, Storage and Security of Radioactive Material Volume 24 ; 24 > 
 
   }
@@ -3785,7 +3785,7 @@
     
     comment[continued_from] = 0272-4936 
     
-    au < crawling ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
+    au < testing ; exists ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 >
     au < manifest ; exists ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 >
     
   }
@@ -3900,7 +3900,7 @@
     
     comment[continued_from] = 0003-4983
     
-    au < crawling ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
+    au < testing ; exists ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; exists ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
     
   }
