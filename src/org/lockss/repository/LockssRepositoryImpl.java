@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.90 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.91 2013-08-08 05:59:00 tlipkis Exp $
  */
 
 /*
@@ -398,8 +398,9 @@ public class LockssRepositoryImpl
   }
 
   /**
-   * Return true if the AU has a record of suspect URL versions.  Does not
-   * put anything in the cache so can be used in iteration over AUs.
+   * Return true if the AU has a record of suspect URL versions, even if
+   * that record is empty.  Does not put anything in the cache so can be
+   * used in iteration over AUs.
    */
   public boolean hasSuspectUrlVersions(ArchivalUnit au) {
     return repoMgr.getSuspectVersionsCache().get(au) != null
