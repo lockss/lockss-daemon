@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.19 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: LockssRepository.java,v 1.20 2013-08-08 05:56:59 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,13 @@ public interface LockssRepository extends LockssAuManager {
   public void storeSuspectUrlVersions(ArchivalUnit au,
 				      AuSuspectUrlVersions asuv)
       throws SerializationException;
+
+  /**
+   * Return true if the AU has a record of suspect URL versions, even if
+   * that record is empty.  Does not put anything in the cache so can be
+   * used in iteration over AUs.
+   */
+  public boolean hasSuspectUrlVersions(ArchivalUnit au);
 
   /**
    * Thrown when an unexpected error is encountered while caching.

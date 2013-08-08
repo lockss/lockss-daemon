@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.14 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: MockLockssRepository.java,v 1.15 2013-08-08 05:56:59 tlipkis Exp $
  */
 
 /*
@@ -144,4 +144,7 @@ public class MockLockssRepository implements LockssRepository {
 				      AuSuspectUrlVersions asuv) {
   }
 
+  public boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    return false;
+  }
 }
