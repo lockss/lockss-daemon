@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.89 2013-07-07 04:05:43 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.89.4.1 2013-08-08 05:49:12 tlipkis Exp $
  */
 
 /*
@@ -806,10 +806,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         try {
           Properties myProps = loadProps(currentPropsFile);
           myProps.setProperty(NODE_WAS_INACTIVE_PROPERTY, "true");
-          OutputStream os =
-              new BufferedOutputStream(new FileOutputStream(currentPropsFile));
-          myProps.store(os, "HTTP headers for " + url);
-          os.close();
+	  writeProps(currentPropsFile, myProps, url);
         } catch (IOException e) {
           logger.error("Couldn't set 'was inactive' property for last version of: "+url,
 		       e);
@@ -909,10 +906,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
           Properties myProps = loadProps(tempPropsFile);
           myProps.setProperty(LOCKSS_VERSION_NUMBER,
                               Integer.toString(currentVersion));
-          OutputStream os = new BufferedOutputStream(new FileOutputStream(
-              tempPropsFile));
-          myProps.store(os, "HTTP headers for " + url);
-          os.close();
+	  writeProps(tempPropsFile, myProps, url);
         } catch (IOException ioe) {
           String err = "Couldn't reset property version number: " + url;
           logger.error(err);
@@ -939,6 +933,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (!identicalVersion) {
         invalidateCachedValues(true);
       }
+    }
+  }
+
+  private void writeProps(File toFile, Properties props, String url)
+      throws IOException {
+    OutputStream os = null;
+    try {
+      os = new BufferedOutputStream(new FileOutputStream(toFile));
+      props.store(os, "HTTP headers for " + url);
+    } finally {
+      IOUtil.safeClose(os);
     }
   }
 
@@ -1185,7 +1190,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // copy the props and sort
       Properties myProps = SortedProperties.fromProperties(newProps);
       try {
-        OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
         int versionToWrite = currentVersion + 1;
         if (versionToWrite <= 0) {
           // this is an error condition which shouldn't occur
@@ -1194,8 +1198,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
           versionToWrite = 1;
         }
         myProps.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(versionToWrite));
-        myProps.store(os, "HTTP headers for " + url);
-        os.close();
+	writeProps(tempPropsFile, myProps, url);
       } catch (IOException ioe) {
         try {
           logger.error("Couldn't write properties for " +
@@ -1854,6 +1857,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	return RepositoryNodeVersionImpl.this.getContentFile();
       }
 
+      protected File getPropsFile() {
+	return getVersionedPropsFile(version);
+      }
+
       protected Properties getProps() {
 	if (props == null) {
 	  File propsFile = getVersionedPropsFile(version);
@@ -1866,9 +1873,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	return props;
       }
 
+      protected void updateProps(Properties newProps) {
+	props = newProps;
+      }
+
+
       protected void handleOpenError(IOException e) {
       }
-  }
+    }
 
   }
 
@@ -1901,27 +1913,55 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return props;
     }
 
+    protected void updateProps(Properties newProps) {
+      props = newProps;
+      curProps = props;
+    }
+
     /**
      * Add a new property - only to be used for a restricted set of properties
      * @param key
      * @param value
      */
     public synchronized void addProperty(String key, String value) {
-      for (int i = 0; i < allowedKeys.length; i++) {
-	if (allowedKeys[i].equalsIgnoreCase(key)) {
-	  // The key is OK
-	  if (curProps.containsKey(key)) {
-	    throw new UnsupportedOperationException("Props contain: " + key);
-	  }
-	  Properties myProps = (Properties)curProps.clone();
-	  myProps.setProperty(key, value);
-	  makeNewVersion();
-	  setNewProperties(myProps);
-	  sealNewVersion(true);
+      for (String allowed : allowedKeys) {
+	if (allowed.equalsIgnoreCase(key)) {
+	  addProperty0(key, value);
 	  return;
 	}
       }
-      throw new UnsupportedOperationException("Not allowed: " + key);
+      throw new IllegalArgumentException("Not allowed: " + key);
+    }
+
+    private void addProperty0(String key, String value) {
+      CIProperties newProps = CIProperties.fromProperties(getProps());
+      if (newProps.containsKey(key)) {
+	throw new IllegalStateException("Props already contain: " + key);
+      }
+      newProps.setProperty(key, value);
+
+      updateCurrentVerProperties(newProps);
+    }
+
+    private void updateCurrentVerProperties(Properties props) {
+      File tempVerPropsFile =
+	new File(getContentDir(), TEMP_PROPS_FILENAME + "." + currentVersion);
+      try {
+	writeProps(tempVerPropsFile, props, url);
+      } catch (IOException e) {
+	String err = "Couldn't add property: " + url;
+	logger.error(err, e);
+	throw new LockssRepository.RepositoryStateException(err, e);
+      }
+      // rename new properties
+      File propsFile = getPropsFile();
+
+      if (!PlatformUtil.updateAtomically(tempVerPropsFile, propsFile)) {
+	String err = "Couldn't rename temp property version: " + url;
+	logger.error(err);
+	throw new LockssRepository.RepositoryStateException(err);
+      }
+      updateProps(props);
     }
 
     public synchronized void release() {
@@ -1947,6 +1987,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     protected File getContentFile() {
       return curInputFile;
+    }
+
+    protected File getPropsFile() {
+      return currentPropsFile;
     }
 
     protected Properties getProps() {
