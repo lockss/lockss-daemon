@@ -6,9 +6,9 @@
     info[tester] = 7
   >
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.atypon.futurescience.ClockssFutureSciencePlugin
   param[base_url] = http://www.futuremedicine.com/
-  implicit < status ; status2 ; year ; name ; param[year] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
   
@@ -19,15 +19,15 @@
     
     param[journal_id] = ahe
 
-    au < doNotProcess ; exists ; 2005 ; Aging Health Volume 1 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Aging Health Volume 2 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Aging Health Volume 3 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Aging Health Volume 4 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Aging Health Volume 5 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Aging Health Volume 6 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Aging Health Volume 7 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Aging Health Volume 8 ; 2012 >
-    au < expected ; exists ; 2013 ; Aging Health Volume 9 ; 2013 >
+    au < exists ; exists ; 2005 ; Aging Health Volume 1 ; 1 >
+    au < exists ; exists ; 2006 ; Aging Health Volume 2 ; 2 >
+    au < exists ; exists ; 2007 ; Aging Health Volume 3 ; 3 >
+    au < exists ; exists ; 2008 ; Aging Health Volume 4 ; 4 >
+    au < exists ; exists ; 2009 ; Aging Health Volume 5 ; 5 >
+    au < exists ; exists ; 2010 ; Aging Health Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Aging Health Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; Aging Health Volume 8 ; 8 >
+    au < expected ; exists ; 2013 ; Aging Health Volume 9 ; 9 >
     
   }
 
@@ -40,13 +40,13 @@
     
     param[journal_id] = bmm
 
-    au < doNotProcess ; exists ; 2007 ; Biomarkers in Medicine Volume 1 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Biomarkers in Medicine Volume 2 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 2012 >
-    au < expected ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 2013 >
+    au < exists ; exists ; 2007 ; Biomarkers in Medicine Volume 1 ; 1 >
+    au < exists ; exists ; 2008 ; Biomarkers in Medicine Volume 2 ; 2 >
+    au < exists ; exists ; 2009 ; Biomarkers in Medicine Volume 3 ; 3 >
+    au < exists ; exists ; 2010 ; Biomarkers in Medicine Volume 4 ; 4 >
+    au < exists ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
+    au < exists ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
+    au < expected ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
    
   }
 
@@ -59,8 +59,8 @@
     
     param[journal_id] = bmt
 
-    au < doNotProcess ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
   
   }
 
@@ -73,14 +73,14 @@
     
     param[journal_id] = clp
 
-    au < doNotProcess ; exists ; 2006 ; Clinical Lipidology Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Clinical Lipidology Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Clinical Lipidology Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Clinical Lipidology Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Clinical Lipidology Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Clinical Lipidology Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     
   }
 
@@ -93,16 +93,16 @@
     
     param[journal_id] = cpr
 
-    au < doNotProcess ; exists ; 2004 ; Clinical Practice Volume 1 ; 2004 >
-    au < doNotProcess ; exists ; 2005 ; Clinical Practice Volume 2 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Clinical Practice Volume 3 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Clinical Practice Volume 4 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Clinical Practice Volume 5 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Clinical Practice Volume 6 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Clinical Practice Volume 7 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Clinical Practice Volume 8 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Clinical Practice Volume 9 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Practice Volume 10 ; 2013 >
+    au < exists ; exists ; 2004 ; Clinical Practice Volume 1 ; 1 >
+    au < exists ; exists ; 2005 ; Clinical Practice Volume 2 ; 2 >
+    au < exists ; exists ; 2006 ; Clinical Practice Volume 3 ; 3 >
+    au < exists ; exists ; 2007 ; Clinical Practice Volume 4 ; 4 >
+    au < exists ; exists ; 2008 ; Clinical Practice Volume 5 ; 5 >
+    au < exists ; exists ; 2009 ; Clinical Practice Volume 6 ; 6 >
+    au < exists ; exists ; 2010 ; Clinical Practice Volume 7 ; 7 >
+    au < exists ; exists ; 2011 ; Clinical Practice Volume 8 ; 8 >
+    au < exists ; exists ; 2012 ; Clinical Practice Volume 9 ; 9 >
+    au < expected ; exists ; 2013 ; Clinical Practice Volume 10 ; 10 >
     
   }
 
@@ -115,8 +115,8 @@
     
     param[journal_id] = cns
 
-    au < doNotProcess ; exists ; 2012 ; CNS Oncology Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; CNS Oncology Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; CNS Oncology Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; CNS Oncology Volume 2 ; 2 >
     
   }
 
@@ -129,8 +129,8 @@
     
     param[journal_id] = crc
 
-    au < doNotProcess ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; Colorectal Cancer Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Colorectal Cancer Volume 2 ; 2 >
     
   }
 
@@ -144,9 +144,9 @@
     
     param[journal_id] = dmt
 
-    au < doNotProcess ; exists ; 2011 ; Diabetes Management Volume 1 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Diabetes Management Volume 2 ; 2012 >
-    au < expected ; exists ; 2013 ; Diabetes Management Volume 3 ; 2013 >
+    au < exists ; exists ; 2011 ; Diabetes Management Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
+    au < expected ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
   
   }
 
@@ -159,11 +159,11 @@
     
     param[journal_id] = epi
 
-    au < doNotProcess ; exists ; 2009 ; Epigenomics Volume 1 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Epigenomics Volume 2 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Epigenomics Volume 3 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Epigenomics Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Epigenomics Volume 5 ; 2013 >
+    au < exists ; exists ; 2009 ; Epigenomics Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Epigenomics Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Epigenomics Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Epigenomics Volume 4 ; 4 >
+    au < expected ; exists ; 2013 ; Epigenomics Volume 5 ; 5 >
      
   }
 
@@ -177,15 +177,15 @@
     
     param[journal_id] = fca
 
-    au < doNotProcess ; exists ; 2005 ; Future Cardiology Volume 1 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Future Cardiology Volume 2 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Future Cardiology Volume 3 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future Cardiology Volume 4 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Future Cardiology Volume 5 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Future Cardiology Volume 6 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Future Cardiology Volume 7 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Future Cardiology Volume 8 ; 2012 >
-    au < expected ; exists ; 2013 ; Future Cardiology Volume 9 ; 2013 >
+    au < exists ; exists ; 2005 ; Future Cardiology Volume 1 ; 1 >
+    au < exists ; exists ; 2006 ; Future Cardiology Volume 2 ; 2 >
+    au < exists ; exists ; 2007 ; Future Cardiology Volume 3 ; 3 >
+    au < exists ; exists ; 2008 ; Future Cardiology Volume 4 ; 4 >
+    au < exists ; exists ; 2009 ; Future Cardiology Volume 5 ; 5 >
+    au < exists ; exists ; 2010 ; Future Cardiology Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Future Cardiology Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; Future Cardiology Volume 8 ; 8 >
+    au < expected ; exists ; 2013 ; Future Cardiology Volume 9 ; 9 >
     
   }
 
@@ -198,14 +198,14 @@
     
     param[journal_id] = fmb
 
-    au < doNotProcess ; exists ; 2006 ; Future Microbiology Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Future Microbiology Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future Microbiology Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Future Microbiology Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Future Microbiology Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Future Microbiology Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Future Microbiology Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Future Microbiology Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Future Microbiology Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Future Microbiology Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Future Microbiology Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Future Microbiology Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Future Microbiology Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Future Microbiology Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Future Microbiology Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Future Microbiology Volume 8 ; 8 >
     
   }
 
@@ -219,14 +219,14 @@
     
     param[journal_id] = fnl
 
-    au < doNotProcess ; exists ; 2006 ; Future Neurology Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Future Neurology Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future Neurology Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Future Neurology Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Future Neurology Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Future Neurology Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Future Neurology Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Future Neurology Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Future Neurology Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Future Neurology Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Future Neurology Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Future Neurology Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Future Neurology Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Future Neurology Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Future Neurology Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Future Neurology Volume 8 ; 8 >
     
   }
 
@@ -240,15 +240,15 @@
     
     param[journal_id] = fon
 
-    au < doNotProcess ; exists ; 2005 ; Future Oncology Volume 1 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Future Oncology Volume 2 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Future Oncology Volume 3 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future Oncology Volume 4 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Future Oncology Volume 5 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Future Oncology Volume 6 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Future Oncology Volume 7 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Future Oncology Volume 8 ; 2012 >
-    au < expected ; exists ; 2013 ; Future Oncology Volume 9 ; 2013 >
+    au < exists ; exists ; 2005 ; Future Oncology Volume 1 ; 1 >
+    au < exists ; exists ; 2006 ; Future Oncology Volume 2 ; 2 >
+    au < exists ; exists ; 2007 ; Future Oncology Volume 3 ; 3 >
+    au < exists ; exists ; 2008 ; Future Oncology Volume 4 ; 4 >
+    au < exists ; exists ; 2009 ; Future Oncology Volume 5 ; 5 >
+    au < exists ; exists ; 2010 ; Future Oncology Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Future Oncology Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; Future Oncology Volume 8 ; 8 >
+    au < expected ; exists ; 2013 ; Future Oncology Volume 9 ; 9 >
     
   }
 
@@ -262,14 +262,14 @@
     
     param[journal_id] = fvl
 
-    au < doNotProcess ; exists ; 2006 ; Future Virology Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Future Virology Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future Virology Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Future Virology Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Future Virology Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Future Virology Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Future Virology Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Future Virology Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Future Virology Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Future Virology Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Future Virology Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Future Virology Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Future Virology Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Future Virology Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Future Virology Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Future Virology Volume 8 ; 8 >
     
   }
 
@@ -283,8 +283,8 @@
     param[journal_id] = hiv
     comment[continued_by] = 1758-4310
 
-    au < doNotProcess ; exists ; 2007 ; Future HIV Therapy Volume 1 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Future HIV Therapy Volume 2 ; 2008 >
+    au < exists ; exists ; 2007 ; Future HIV Therapy Volume 1 ; 1 >
+    au < exists ; exists ; 2008 ; Future HIV Therapy Volume 2 ; 2 >
     
   }
 
@@ -298,8 +298,8 @@
     param[journal_id] = hiv
     comment[continues] = 1746-9600
 
-    au < doNotProcess ; exists ; 2009 ; HIV Therapy Volume 3 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; HIV Therapy Volume 4 ; 2010 >
+    au < exists ; exists ; 2009 ; HIV Therapy Volume 3 ; 3 >
+    au < exists ; exists ; 2010 ; HIV Therapy Volume 4 ; 4 >
     
   }
 
@@ -312,11 +312,11 @@
     
     param[journal_id] = iim
 
-    au < doNotProcess ; exists ; 2009 ; Imaging in Medicine Volume 1 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Imaging in Medicine Volume 2 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Imaging in Medicine Volume 3 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 2013 >
+    au < exists ; exists ; 2009 ; Imaging in Medicine Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Imaging in Medicine Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Imaging in Medicine Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Imaging in Medicine Volume 4 ; 4 >
+    au < expected ; exists ; 2013 ; Imaging in Medicine Volume 5 ; 5 >
     
   }
 
@@ -330,11 +330,11 @@
     
     param[journal_id] = imt
 
-    au < doNotProcess ; exists ; 2009 ; Immunotherapy Volume 1 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Immunotherapy Volume 2 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Immunotherapy Volume 3 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Immunotherapy Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Immunotherapy Volume 5 ; 2013 >
+    au < exists ; exists ; 2009 ; Immunotherapy Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 >
+    au < expected ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 >
     
   }
 
@@ -348,14 +348,14 @@
     
     param[journal_id] = ijr
 
-    au < doNotProcess ; exists ; 2006 ; International Journal of Clinical Rheumatology Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; International Journal of Clinical Rheumatology Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; International Journal of Clinical Rheumatology Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; International Journal of Clinical Rheumatology Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; International Journal of Clinical Rheumatology Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; International Journal of Clinical Rheumatology Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; International Journal of Clinical Rheumatology Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; International Journal of Clinical Rheumatology Volume 8 ; 8 >
     
   }
 
@@ -368,8 +368,8 @@
     
     param[journal_id] = ijh
 
-    au < doNotProcess ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; International Journal of Hematologic Oncology Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; International Journal of Hematologic Oncology Volume 2 ; 2 >
     
   }
 
@@ -383,11 +383,11 @@
     
     param[journal_id] = ica
 
-    au < doNotProcess ; exists ; 2009 ; Interventional Cardiology Volume 1 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 2013 >
+    au < exists ; exists ; 2009 ; Interventional Cardiology Volume 1 ; 1 >
+    au < exists ; exists ; 2010 ; Interventional Cardiology Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Interventional Cardiology Volume 3 ; 3 >
+    au < exists ; exists ; 2012 ; Interventional Cardiology Volume 4 ; 4 >
+    au < expected ; exists ; 2013 ; Interventional Cardiology Volume 5 ; 5 >
     
   }
 
@@ -400,8 +400,8 @@
     
     param[journal_id] = cer
 
-    au < doNotProcess ; exists ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; Journal of Comparative Effectiveness Research Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Journal of Comparative Effectiveness Research Volume 2 ; 2 >
     
   }
 
@@ -414,8 +414,8 @@
     
     param[journal_id] = lmt
 
-    au < doNotProcess ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 2012 >
-    au < expected ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2013 >
+    au < exists ; exists ; 2012 ; Lung Cancer Management Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Lung Cancer Management Volume 2 ; 2 >
     
   }
 
@@ -429,14 +429,14 @@
     
     param[journal_id] = nnm
 
-    au < doNotProcess ; exists ; 2006 ; Nanomedicine Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Nanomedicine Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Nanomedicine Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Nanomedicine Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Nanomedicine Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Nanomedicine Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Nanomedicine Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Nanomedicine Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Nanomedicine Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Nanomedicine Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Nanomedicine Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Nanomedicine Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Nanomedicine Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Nanomedicine Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
     
   }
 
@@ -449,9 +449,9 @@
     
     param[journal_id] = npy
 
-    au < doNotProcess ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2012 >
-    au < expected ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 2013 >
+    au < exists ; exists ; 2011 ; Neuropsychiatry Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Neuropsychiatry Volume 2 ; 2 >
+    au < expected ; exists ; 2013 ; Neuropsychiatry Volume 3 ; 3 >
     
   }
 
@@ -464,9 +464,9 @@
     
     param[journal_id] = pmt
 
-    au < doNotProcess ; exists ; 2011 ; Pain Management Volume 1 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Pain Management Volume 2 ; 2012 >
-    au < expected ; exists ; 2013 ; Pain Management Volume 3 ; 2013 >
+    au < exists ; exists ; 2011 ; Pain Management Volume 1 ; 1 >
+    au < exists ; exists ; 2012 ; Pain Management Volume 2 ; 2 >
+    au < expected ; exists ; 2013 ; Pain Management Volume 3 ; 3 >
     
   }
 
@@ -480,10 +480,10 @@
     
     param[journal_id] = phe
 
-    au < doNotProcess ; exists ; 2007 ; Pediatric Health Volume 1 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Pediatric Health Volume 2 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Pediatric Health Volume 3 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Pediatric Health Volume 4 ; 2010 >
+    au < exists ; exists ; 2007 ; Pediatric Health Volume 1 ; 1 >
+    au < exists ; exists ; 2008 ; Pediatric Health Volume 2 ; 2 >
+    au < exists ; exists ; 2009 ; Pediatric Health Volume 3 ; 3 >
+    au < exists ; exists ; 2010 ; Pediatric Health Volume 4 ; 4 >
    
   }
 
@@ -497,16 +497,16 @@
     
     param[journal_id] = pme
 
-    au < doNotProcess ; exists ; 2004 ; Personalized Medicine Volume 1 ; 2004 >
-    au < doNotProcess ; exists ; 2005 ; Personalized Medicine Volume 2 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Personalized Medicine Volume 3 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Personalized Medicine Volume 4 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Personalized Medicine Volume 5 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Personalized Medicine Volume 6 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Personalized Medicine Volume 7 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Personalized Medicine Volume 8 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Personalized Medicine Volume 9 ; 2012 >
-    au < expected ; exists ; 2013 ; Personalized Medicine Volume 10 ; 2013 >
+    au < exists ; exists ; 2004 ; Personalized Medicine Volume 1 ; 1 >
+    au < exists ; exists ; 2005 ; Personalized Medicine Volume 2 ; 2 >
+    au < exists ; exists ; 2006 ; Personalized Medicine Volume 3 ; 3 >
+    au < exists ; exists ; 2007 ; Personalized Medicine Volume 4 ; 4 >
+    au < exists ; exists ; 2008 ; Personalized Medicine Volume 5 ; 5 >
+    au < exists ; exists ; 2009 ; Personalized Medicine Volume 6 ; 6 >
+    au < exists ; exists ; 2010 ; Personalized Medicine Volume 7 ; 7 >
+    au < exists ; exists ; 2011 ; Personalized Medicine Volume 8 ; 8 >
+    au < exists ; exists ; 2012 ; Personalized Medicine Volume 9 ; 9 >
+    au < expected ; exists ; 2013 ; Personalized Medicine Volume 10 ; 10 >
     
   }
 
@@ -520,20 +520,20 @@
     
     param[journal_id] = pgs
 
-    au < doNotProcess ; exists ; 2000 ; Pharmacogenomics Volume 1 ; 2000 >
-    au < doNotProcess ; exists ; 2001 ; Pharmacogenomics Volume 2 ; 2001 >
-    au < doNotProcess ; exists ; 2002 ; Pharmacogenomics Volume 3 ; 2002 >
-    au < doNotProcess ; exists ; 2003 ; Pharmacogenomics Volume 4 ; 2003 >
-    au < doNotProcess ; exists ; 2004 ; Pharmacogenomics Volume 5 ; 2004 >
-    au < doNotProcess ; exists ; 2005 ; Pharmacogenomics Volume 6 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Pharmacogenomics Volume 7 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Pharmacogenomics Volume 8 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Pharmacogenomics Volume 9 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Pharmacogenomics Volume 10 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Pharmacogenomics Volume 13 ; 2012 >
-    au < expected ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 2013 >
+    au < exists ; exists ; 2000 ; Pharmacogenomics Volume 1 ; 1 >
+    au < exists ; exists ; 2001 ; Pharmacogenomics Volume 2 ; 2 >
+    au < exists ; exists ; 2002 ; Pharmacogenomics Volume 3 ; 3 >
+    au < exists ; exists ; 2003 ; Pharmacogenomics Volume 4 ; 4 >
+    au < exists ; exists ; 2004 ; Pharmacogenomics Volume 5 ; 5 >
+    au < exists ; exists ; 2005 ; Pharmacogenomics Volume 6 ; 6 >
+    au < exists ; exists ; 2006 ; Pharmacogenomics Volume 7 ; 7 >
+    au < exists ; exists ; 2007 ; Pharmacogenomics Volume 8 ; 8 >
+    au < exists ; exists ; 2008 ; Pharmacogenomics Volume 9 ; 9 >
+    au < exists ; exists ; 2009 ; Pharmacogenomics Volume 10 ; 10 >
+    au < exists ; exists ; 2010 ; Pharmacogenomics Volume 11 ; 11 >
+    au < exists ; exists ; 2011 ; Pharmacogenomics Volume 12 ; 12 >
+    au < exists ; exists ; 2012 ; Pharmacogenomics Volume 13 ; 13 >
+    au < expected ; exists ; 2013 ; Pharmacogenomics Volume 14 ; 14 >
     
   }
 
@@ -547,14 +547,14 @@
     
     param[journal_id] = rme
 
-    au < doNotProcess ; exists ; 2006 ; Regenerative Medicine Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Regenerative Medicine Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Regenerative Medicine Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Regenerative Medicine Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Regenerative Medicine Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Regenerative Medicine Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Regenerative Medicine Volume 7 ; 2012 >
-    au < expected ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 2013 >
+    au < exists ; exists ; 2006 ; Regenerative Medicine Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; Regenerative Medicine Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; Regenerative Medicine Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; Regenerative Medicine Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; Regenerative Medicine Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Regenerative Medicine Volume 6 ; 6 >
+    au < exists ; exists ; 2012 ; Regenerative Medicine Volume 7 ; 7 >
+    au < expected ; exists ; 2013 ; Regenerative Medicine Volume 8 ; 8 >
     
   }
 
@@ -567,15 +567,15 @@
     
     param[journal_id] = whe
 
-    au < doNotProcess ; exists ; 2005 ; Women's Health Volume 1 ; 2005 >
-    au < doNotProcess ; exists ; 2006 ; Women's Health Volume 2 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Women's Health Volume 3 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Women's Health Volume 4 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Women's Health Volume 5 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Women's Health Volume 6 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Women's Health Volume 7 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Women's Health Volume 8 ; 2012 >
-    au < expected ; exists ; 2013 ; Women's Health Volume 9 ; 2013 >
+    au < exists ; exists ; 2005 ; Women's Health Volume 1 ; 1 >
+    au < exists ; exists ; 2006 ; Women's Health Volume 2 ; 2 >
+    au < exists ; exists ; 2007 ; Women's Health Volume 3 ; 3 >
+    au < exists ; exists ; 2008 ; Women's Health Volume 4 ; 4 >
+    au < exists ; exists ; 2009 ; Women's Health Volume 5 ; 5 >
+    au < exists ; exists ; 2010 ; Women's Health Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Women's Health Volume 7 ; 7 >
+    au < exists ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
+    au < expected ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
     
   }
 
