@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.13 2012-11-08 06:22:04 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.14 2013-08-08 05:55:58 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,8 @@ public class CrawlerStatus {
 
 
   static Map<Integer,String> DEFAULT_MESSAGES = new HashMap();
+  public static StringPool CRAWL_STATUS_POOL = new StringPool("Crawl Status");
+
   static {
     DEFAULT_MESSAGES.put(Crawler.STATUS_UNKNOWN, "Unknown");
     DEFAULT_MESSAGES.put(Crawler.STATUS_QUEUED, "Pending");
@@ -156,6 +158,12 @@ public class CrawlerStatus {
 			 "Interrupted by daemon exit");
     DEFAULT_MESSAGES.put(Crawler.STATUS_EXTRACTOR_ERROR,
 			 "Link extractor error");
+
+    // Put all these strings in a sealed StringPool
+    for (String s : DEFAULT_MESSAGES.values()) {
+      CRAWL_STATUS_POOL.intern(s);
+    }
+    CRAWL_STATUS_POOL.seal();
   }
 
   private static int ctr = 0;		// Instance counter (for getKey())
