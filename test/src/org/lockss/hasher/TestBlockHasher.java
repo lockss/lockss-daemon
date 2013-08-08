@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.23 2013-07-24 19:14:10 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.24 2013-08-08 05:56:23 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.BlockHasher.EventHandler;
+import org.lockss.hasher.BlockHasher.LocalHashResult;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.crawler.*;
@@ -294,7 +295,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     cus.setHashItSource(Collections.EMPTY_LIST);
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    CachedUrlSetHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
     assertEmpty(handRec.getEvents());
@@ -309,24 +310,24 @@ public class TestBlockHasher extends LockssTestCase {
     byte[][] inits = {null, null};
     
     // First hasher should have default hashUpTo
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, hand0);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, hand0);
     assertEquals(hasher.getMaxVersions(),
                  BlockHasher.DEFAULT_HASH_MAX_VERSIONS);
     
     ConfigurationUtil.setFromArgs(BlockHasher.PARAM_HASH_MAX_VERSIONS, "99");
     
-    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, hand0);
+    BlockHasher hasher2 = new MyBlockHasher(cus, digs, inits, hand0);
     assertEquals(hasher2.getMaxVersions(), 99);
     
     ConfigurationUtil.setFromArgs(BlockHasher.PARAM_HASH_MAX_VERSIONS, "18");
 
-    BlockHasher hasher3 = new BlockHasher(cus, digs, inits, hand0);
+    BlockHasher hasher3 = new MyBlockHasher(cus, digs, inits, hand0);
     assertEquals(hasher3.getMaxVersions(), 18);
 
-    BlockHasher hasher4 = new BlockHasher(cus, -1, digs, inits, hand0);
+    BlockHasher hasher4 = new MyBlockHasher(cus, -1, digs, inits, hand0);
     assertEquals(hasher4.getMaxVersions(), 18);
 
-    BlockHasher hasher5 = new BlockHasher(cus, 4, digs, inits, hand0);
+    BlockHasher hasher5 = new MyBlockHasher(cus, 4, digs, inits, hand0);
     assertEquals(hasher5.getMaxVersions(), 4);
   }
 
@@ -337,7 +338,7 @@ public class TestBlockHasher extends LockssTestCase {
     cus.setEstimatedHashDuration(54321);
     MessageDigest[] digs = { dig, dig };
     byte[][] inits = {null, null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, hand0);
+    CachedUrlSetHasher hasher = new MyBlockHasher(cus, digs, inits, hand0);
     assertSame(cus, hasher.getCachedUrlSet());
     assertEquals(54321, hasher.getEstimatedHashDuration());
     assertEquals("B(2)", hasher.typeString());
@@ -367,7 +368,7 @@ public class TestBlockHasher extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     // Should NOT throw IllegalArgumentException.
     CachedUrlSetHasher hasher =
-      new BlockHasher(cus, testDigs, inits, blockHandler);
+      new MyBlockHasher(cus, testDigs, inits, blockHandler);
   }
   
   public void testIsIncluded() throws Exception {
@@ -379,7 +380,7 @@ public class TestBlockHasher extends LockssTestCase {
     cus.setHashItSource(Collections.EMPTY_LIST);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, null);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, null);
     assertFalse(hasher.isIncluded(cu));
     addContent(mau, urls[2], s1);
     assertTrue(hasher.isIncluded(cu));
@@ -395,7 +396,7 @@ public class TestBlockHasher extends LockssTestCase {
     // next test need new hashers as config, exclude pats, are accessed at
     // creation
     ConfigurationUtil.addFromArgs(BlockHasher.PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC, "true");
-    hasher = new BlockHasher(cus, digs, inits, null);
+    hasher = new MyBlockHasher(cus, digs, inits, null);
     assertTrue(hasher.isIncluded(cu));
     mau.removeUrlToBeCached(urls[2]);
     assertFalse(hasher.isIncluded(cu));
@@ -404,11 +405,11 @@ public class TestBlockHasher extends LockssTestCase {
 
     List<String> pats = ListUtil.list("not-there");
     mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(pats));
-    hasher = new BlockHasher(cus, digs, inits, null);
+    hasher = new MyBlockHasher(cus, digs, inits, null);
     assertTrue(hasher.isIncluded(cu));
     pats = ListUtil.list("x\\.html");
     mau.setExcludeUrlsFromPollsPatterns(RegexpUtil.compileRegexps(pats));
-    hasher = new BlockHasher(cus, digs, inits, null);
+    hasher = new MyBlockHasher(cus, digs, inits, null);
     assertFalse(hasher.isIncluded(cu));
   }
 
@@ -418,7 +419,7 @@ public class TestBlockHasher extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    CachedUrlSetHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
     assertEmpty(handRec.getEvents());
@@ -432,7 +433,7 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo");
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     if (includeUrl) {
       hasher.setIncludeUrl(includeUrl);
       assertEquals(urls[4].length() + 3, hashToEnd(hasher, stepSize));
@@ -482,18 +483,18 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(1, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(1, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+//     assertEquals(LocalHashResult.Agree, hasher.getLocalHashResult());
   }
   
   public void testOneContentLocalHashObsolete(int stepSize)
@@ -508,18 +509,19 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    MyBlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.suppressMarkAsSuspect(false);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(1, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(1, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+//     assertEquals(LocalHashResult.Agree, hasher.getLocalHashResult());
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertFalse(asuv.isSuspect(urls[4], 0));
   }
@@ -537,18 +539,18 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(1, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(1, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+//     assertEquals(LocalHashResult.Disagree, hasher.getLocalHashResult());
   }
   
   public void testOneContentLocalHashSuspect(int stepSize, int urlIndex)
@@ -564,7 +566,8 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[urlIndex], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    MyBlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
+    hasher.suppressMarkAsSuspect(false);
     hasher.setFiltered(false);
     hasher.setExcludeSuspectVersions(true);
     assertEquals(3, hashToEnd(hasher, stepSize));
@@ -572,24 +575,30 @@ public class TestBlockHasher extends LockssTestCase {
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[urlIndex], 3, "foo", events.get(0), false);
+
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(1, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertTrue(asuv.isSuspect(urls[urlIndex], 0));
     // Second pass should exclude the suspect URL
     // NB - test confirms that BlocksHasher handles case of
     // URL with 0 versions.
     RecordingEventHandler handRec2 = new RecordingEventHandler();
-    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, handRec2);
+    BlockHasher hasher2 = new MyBlockHasher(cus, digs, inits, handRec2);
     hasher2.setFiltered(false);
     hasher2.setExcludeSuspectVersions(true);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher2.setLocalHashHandler(localHashHandler);
     assertEquals(0, hashToEnd(hasher2, stepSize));
     assertTrue(hasher2.finished());
     List<Event> events2 = handRec2.getEvents();
     assertEquals(0, events2.size());
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr2 = hasher2.getLocalHashResult();
+    assertEquals(1, lhr2.getSkippedVersions());
+    assertEquals(0, lhr2.getMatchingVersions());
+    assertEquals(0, lhr2.getNewlySuspectVersions());
+    assertEquals(0, lhr2.getNewlyHashedVersions());
   }
   
   public void testOneContentLocalHashMissing(int stepSize)
@@ -602,18 +611,23 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(1, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(1, lhr.getNewlyHashedVersions());
+
+    // ensure that the checksum property was stored on the CU
+    CachedUrl cu = mau.makeCachedUrl(urls[4]);
+    CIProperties props2 = cu.getProperties();
+    assertEquals("SHA-1:0BEEC7B5EA3F0FDBC95D0DD47F3C5BC275DA8A33",
+		 props2.get(CachedUrl.PROPERTY_CHECKSUM));
   }
   
   public void testOneContentLocalHashMissing2(int stepSize)
@@ -627,41 +641,49 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
     assertEquals(3, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(1, lhr.getNewlyHashedVersions());
     // Second pass validates it
     RecordingEventHandler handRec2 = new RecordingEventHandler();
-    BlockHasher hasher2 = new BlockHasher(cus, digs, inits, handRec2);
+    BlockHasher hasher2 = new MyBlockHasher(cus, digs, inits, handRec2);
     hasher2.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher2.setLocalHashHandler(localHashHandler);
     assertEquals(3, hashToEnd(hasher2, stepSize));
     assertTrue(hasher2.finished());
     List<Event> events2 = handRec2.getEvents();
     assertEquals(1, events2.size());
     assertEvent(urls[4], 3, "foo", events2.get(0), false);
-    assertEquals(1, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr2 = hasher2.getLocalHashResult();
+    assertEquals(1, lhr2.getMatchingVersions());
+    assertEquals(0, lhr2.getNewlySuspectVersions());
+    assertEquals(0, lhr2.getNewlyHashedVersions());
+    AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
+    assertFalse(asuv.isSuspect(urls[4], 0));
     // Third pass has corrupt content
+    MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(urls[4]);
+    String corrupt = "Corrupt Content";
+    cu.setContent(corrupt);
     RecordingEventHandler handRec3 = new RecordingEventHandler();
-    BlockHasher hasher3 = new BlockHasher(cus, digs, inits, handRec3);
+    MyBlockHasher hasher3 = new MyBlockHasher(cus, digs, inits, handRec3);
+    hasher3.suppressMarkAsSuspect(false);
     hasher3.setFiltered(false);
-    localHashHandler = new MyLocalHashHandler();
-    hasher3.setLocalHashHandler(localHashHandler);
-    assertEquals(3, hashToEnd(hasher3, stepSize));
+    assertEquals(corrupt.length(), hashToEnd(hasher3, stepSize));
     assertTrue(hasher3.finished());
     List<Event> events3 = handRec3.getEvents();
     assertEquals(1, events3.size());
-    assertEvent(urls[4], 3, "foo", events3.get(0), false);
-    assertEquals(1, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr3 = hasher3.getLocalHashResult();
+    assertEquals(0, lhr3.getMatchingVersions());
+    assertEquals(1, lhr3.getNewlySuspectVersions());
+    assertEquals(0, lhr3.getNewlyHashedVersions());
+    assertTrue(asuv.isSuspect(urls[4], 0));
   }
   
   String randomString(int len) {
@@ -680,10 +702,8 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], cont, props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(true);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(250, hashToEnd(hasher, 100));
     assertTrue(hasher.finished());
     // The hash should have finished
@@ -692,9 +712,12 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(urls[4], 100000, 250, cont.substring(0, 250),
 		events.get(0), false);
     // But no localhash because the underlying stream wasn't completely read
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
+    // XXXXXXXXXXXXXXXXXXXXX
+    // ensure no valid hash
   }
   
   // Filter reset relies on BaseCachedUrl wrapping HashedInputStream in a
@@ -711,19 +734,18 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], cont, props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(true);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(118000, hashToEnd(hasher, 100));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 100000, 118000, cont.substring(0, 18000) + cont,
 		events.get(0), false);
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(1, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(1, lhr.getNewlyHashedVersions());
   }
 
   public void testOneContentLocalHashMarkIllegalReset() throws Exception {
@@ -737,10 +759,8 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], cont, props);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(true);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     // Throws IOException: Resetting to invalid mark before any bytes hashed
     assertEquals(0, hashToEnd(hasher, 100));
     assertTrue(hasher.finished());
@@ -749,9 +769,10 @@ public class TestBlockHasher extends LockssTestCase {
     HashBlock hb = events.get(0).hblock;
     assertEventWithError(urls[4], events.get(0),
 			 "IOException: Resetting to invalid mark");
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
   }
 
   public void testOneContentLocalHashGoodNoDigest(int stepSize)
@@ -766,18 +787,17 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { };
     byte[][] inits = { };
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(0, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(1, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(1, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
   }
   
   public void testOneContentLocalHashBadNoDigest(int stepSize)
@@ -792,18 +812,17 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], "foo", props);
     MessageDigest[] digs = { };
     byte[][] inits = { };
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     assertEquals(0, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
     assertEquals(1, events.size());
     assertEvent(urls[4], 3, "foo", events.get(0), false);
-    assertEquals(0, localHashHandler.getMatch());
-    assertEquals(1, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(0, lhr.getMatchingVersions());
+    assertEquals(1, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
   }
   
   public void testOneContentLocalHashGood() throws Exception {
@@ -838,12 +857,20 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContentLocalHashMissing(100);
   }
   
-  public void testOneContentLocalHashMissing2() throws Exception {
+  // These mark suspect versions so must be in separate tests
+  public void testOneContentLocalHashMissing2a() throws Exception {
     testOneContentLocalHashMissing2(1);
+  }
+  
+  public void testOneContentLocalHashMissing2b() throws Exception {
     testOneContentLocalHashMissing2(3);
+  }
+  
+  public void testOneContentLocalHashMissing2c() throws Exception {
     testOneContentLocalHashMissing2(100);
   }
   
+
   public void testOneContentLocalHashGoodNoDigest() throws Exception {
     testOneContentLocalHashGoodNoDigest(1);
     testOneContentLocalHashGoodNoDigest(3);
@@ -870,7 +897,7 @@ public class TestBlockHasher extends LockssTestCase {
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, blockHandler);
     hasher.setIncludeUrl(includeUrl);
     // 9 bytes total for all three versions.
     if (includeUrl) {
@@ -946,10 +973,8 @@ public class TestBlockHasher extends LockssTestCase {
     }
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, blockHandler);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, blockHandler);
     hasher.setFiltered(false);
-    MyLocalHashHandler localHashHandler = new MyLocalHashHandler();
-    hasher.setLocalHashHandler(localHashHandler);
     // 9 bytes total for all three versions.
     assertEquals(9, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
@@ -963,9 +988,10 @@ public class TestBlockHasher extends LockssTestCase {
     assertEqualBytes(bytes("ccc"), versions[0].getHashes());
     assertEqualBytes(bytes("bb"), versions[1].getHashes());
     assertEqualBytes(bytes("aaaa"), versions[2].getHashes());
-    assertEquals(3, localHashHandler.getMatch());
-    assertEquals(0, localHashHandler.getMismatch());
-    assertEquals(0, localHashHandler.getMissing());
+    LocalHashResult lhr = hasher.getLocalHashResult();
+    assertEquals(3, lhr.getMatchingVersions());
+    assertEquals(0, lhr.getNewlySuspectVersions());
+    assertEquals(0, lhr.getNewlyHashedVersions());
   }
 
   public void testOneContentThreeVersionsLocalHashGood() throws Exception {
@@ -987,7 +1013,7 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[4], str);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     if (!isFiltered) {
       hasher.setFiltered(false);
     }
@@ -1015,7 +1041,7 @@ public class TestBlockHasher extends LockssTestCase {
     cu.setExists(true);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    CachedUrlSetHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     assertEquals(4, hashToEnd(hasher, 100));
     assertTrue(hasher.finished());
     assertTrue(is.isClosed());
@@ -1032,7 +1058,7 @@ public class TestBlockHasher extends LockssTestCase {
     cu.setExists(true);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    CachedUrlSetHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.hashStep(2);
     assertFalse(hasher.finished());
     assertFalse(is.isClosed());
@@ -1069,7 +1095,7 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[13], s5);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setIncludeUrl(includeUrl);
     int len =
       s1.length() + s2.length() + s3.length() + s4.length() + s5.length();
@@ -1111,8 +1137,8 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[9], s5);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    MyMockBlockHasher hasher =
-      new MyMockBlockHasher(cus, digs, inits, handRec);
+    MyBlockHasher hasher =
+      new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setExcludeSuspectVersions(true);
     hasher.throwOnOpen(urls[6]);
 
@@ -1189,7 +1215,7 @@ public class TestBlockHasher extends LockssTestCase {
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handler);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handler);
 
     int len = url4v1.length() + url5v1.length() + url5v2.length() + 
               url5v3.length() + url5v3.length() + url6v1.length() +
@@ -1263,8 +1289,8 @@ public class TestBlockHasher extends LockssTestCase {
     
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
-    MyMockBlockHasher hasher =
-      new MyMockBlockHasher(cus, digs, inits, handler);
+    MyBlockHasher hasher =
+      new MyBlockHasher(cus, digs, inits, handler);
     
     hasher.throwOnRead(errcu1);
     hasher.throwOnOpen(errcu2);
@@ -1335,7 +1361,7 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[7], s3);
     MessageDigest[] digs = { dig };
     byte[][] inits = { bytes(chal) };
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
@@ -1369,7 +1395,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest dig2 = new MockMessageDigest();
     MessageDigest[] digs = { dig, dig2 };
     byte[][] inits = {null, null};
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
@@ -1405,7 +1431,7 @@ public class TestBlockHasher extends LockssTestCase {
     MessageDigest dig3 = new MockMessageDigest();
     MessageDigest[] digs = { dig, dig2, dig3 };
     byte[][] inits = { null, bytes(chal2), bytes(chal3) };
-    BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    BlockHasher hasher = new MyBlockHasher(cus, digs, inits, handRec);
     hasher.setIncludeUrl(true);
     int len = s1.length() + s2.length() + s3.length() +
       urls[4].length() + urls[6].length() + urls[7].length();
@@ -1500,19 +1526,20 @@ public class TestBlockHasher extends LockssTestCase {
     }
   }
   
-  class MyMockBlockHasher extends BlockHasher {
+  class MyBlockHasher extends BlockHasher {
     Map throwOnOpen = new HashMap();
     Map throwOnRead = new HashMap();
+    boolean suppressMarkAsSuspect = true;
 
-    public MyMockBlockHasher(CachedUrlSet cus, MessageDigest[] digests,
-                     byte[][]initByteArrays, EventHandler cb) {
+    public MyBlockHasher(CachedUrlSet cus, MessageDigest[] digests,
+			 byte[][]initByteArrays, EventHandler cb) {
       super(cus, digests, initByteArrays, cb);
  
     }
     
-    public MyMockBlockHasher(CachedUrlSet cus, int maxVersions,
-                     MessageDigest[] digests,
-                     byte[][]initByteArrays, EventHandler cb) {
+    public MyBlockHasher(CachedUrlSet cus, int maxVersions,
+			 MessageDigest[] digests,
+			 byte[][]initByteArrays, EventHandler cb) {
       super(cus, maxVersions, digests, initByteArrays, cb);
     }
     
@@ -1545,57 +1572,23 @@ public class TestBlockHasher extends LockssTestCase {
 				     ? new IOException("Reading from hash input stream") : null,
 				     null);
     }
+
+    void suppressMarkAsSuspect(boolean val) {
+      suppressMarkAsSuspect = val;
+    }
+
+    @Override
+    protected void markAsSuspect(CachedUrl cu, String alg,
+				 byte[] contentHash,
+				 byte[] storedHash) {
+      if (!suppressMarkAsSuspect) {
+	super.markAsSuspect(cu, alg, contentHash, storedHash);
+      }
+    }
+
+
   }
 
-  public class MyLocalHashHandler implements BlockHasher.LocalHashHandler {
-    int nMatch = 0;
-    int nMismatch = 0;
-    int nMissing = 0;
-
-    MyLocalHashHandler() {
-      log.debug3("New LocalHashHandler");
-    }
-    /**
-     * Local hash match
-     * @param curVer CachedUrl of the version for which mismatch was detected
-     */
-    public void match(CachedUrl curVer) {
-      nMatch++;
-      log.debug3("Match #" + nMatch);
-    }
-    public int getMatch() {
-      return nMatch;
-    }
-    /**
-     * Local hash mismatch
-     * @param curVer CachedUrl of the version for which mismatch was detected
-     * @param alg message digest algorithm in use
-     * @param contentHash computed message digest of current content
-     * @param storedHash message digest in version properties
-     */
-    public void mismatch(CachedUrl curVer, String alg, byte[] contentHash,
-			 byte[] storedHash) {
-      nMismatch++;
-      log.debug3("Mismatch #" + nMismatch);
-    }
-    public int getMismatch() {
-      return nMismatch;
-    }
-    /**
-     * Local hash missing
-     * @param curVer CachedUrl of the version without hash
-     * @param alg String name of hash algorithm
-     * @param hash byte array of computed hash
-     */
-    public void missing(CachedUrl curVer, String alg, byte[] hash) {
-      nMissing++;
-      log.debug3("Missing #" + nMissing);
-    }
-    public int getMissing() {
-      return nMissing;
-    }
-  }
-  
   public class SimpleFilterFactory implements FilterFactory {
     public InputStream createFilteredInputStream(ArchivalUnit au,
 						 InputStream in,
