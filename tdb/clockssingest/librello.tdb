@@ -1,0 +1,47 @@
+{
+
+  publisher <
+    name = Librello ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+  implicit < status ; status2 ; year ; name ; volume ; param[year] >
+
+  {
+    title <
+      name = Challenges in Sustainability 
+    >
+
+  }
+
+  {
+    title <
+      name = Journal of Human Security ;
+      issn = 1835-3800
+    >
+
+  }
+
+  {
+    title <
+      name = Media and Communication
+    >
+
+  }
+
+  {
+    title <
+      name = Politics and Governance
+    >
+
+  }
+
+  {
+    title <
+      name = Social Inclusion
+    >
+
+  }
+}
