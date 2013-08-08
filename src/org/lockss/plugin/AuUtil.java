@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.38 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.38.2.1 2013-08-08 05:45:54 tlipkis Exp $
  */
 
 /*
@@ -87,11 +87,26 @@ public class AuUtil {
     return repo.getSuspectUrlVersions(au);
   }
 
+  /**
+   * Update the stored record of suspect versions for the AU
+   * @param au the AU
+   * @param asuv the AuSuspectUrlVersions object to store
+   */
   public static void saveSuspectUrlVersions(ArchivalUnit au,
 					    AuSuspectUrlVersions asuv)
       throws SerializationException {
     LockssRepository repo = getDaemon(au).getLockssRepository(au);
     repo.storeSuspectUrlVersions(au, asuv);
+  }
+
+  /**
+   * Return the AuSuspectUrlVersions object for the AU
+   * @param au the AU
+   * @return the AuSuspectUrlVersions
+   */
+  public static boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    return repo.hasSuspectUrlVersions(au);
   }
 
   public static AuNodeImpl getAuRepoNode(ArchivalUnit au) {
