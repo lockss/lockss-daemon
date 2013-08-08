@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.32 2013-07-24 19:00:41 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.33 2013-08-08 05:57:25 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,10 @@ public interface CachedUrl extends CachedUrlSetNode {
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
 
   /** Checksum: The checksum (hash) of the content in <alg>:<hash> format */
-  public static final String PROPERTY_CHECKSUM = "X-Lockss-checksum";
+  // XXX This must be lowercase, as it's sometimes get/put in a
+  // case-sensitive context in RepositoryNode.  The use of CIProperties
+  // should be pushed down into the repository.
+  public static final String PROPERTY_CHECKSUM = "x-lockss-checksum";
   /**
    * Return a version-specific CachedUrl for the specified content version
    * @throws UnsupportedOperationException if node has no versions
