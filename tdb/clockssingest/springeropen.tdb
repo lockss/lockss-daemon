@@ -1425,7 +1425,7 @@
         param[journal_issn] = 2213-9621 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
+        au < manifest ; exists ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
   
     }
   
