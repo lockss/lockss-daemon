@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.80 2013-07-17 05:02:14 dshr Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.80.2.1 2013-08-08 05:51:41 tlipkis Exp $
  */
 
 /*
@@ -305,6 +305,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    SubstanceChecker.State.Yes,
 				    "SubstVer3", "MetadatVer7",
 				    12345,
+				    111222, // lastPoPPoll
+				    7, // lastPoPPollResult
+				    222333, // lastLocalPoll
 				    repository);
 
     assertEquals("SubstVer3",
@@ -329,7 +332,12 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(321000, loadedState.getLastTopLevelPollTime());
     assertEquals(222000, loadedState.getLastPollStart());
     assertEquals(3, loadedState.getLastPollResult());
-    assertEquals("pollres", loadedState.getLastPollResultMsg());
+    assertEquals("Inviting Peers", loadedState.getLastPollResultMsg());
+
+    assertEquals(111222, loadedState.getLastPoPPoll());
+    assertEquals(7, loadedState.getLastPoPPollResult());
+    assertEquals(222333, loadedState.getLastLocalPoll());
+
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
@@ -422,6 +430,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  null, // substanceVersion
 				  null, // metadataVersion
 				  0, // lastContentChange
+				  444, // lastPoPPoll
+				  8, // lastPoPPollResult
+				  -1, // lastLocalPoll
 				  repository);
 
     repository.storeAuState(auState);
@@ -455,6 +466,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  null, // substanceVersion
 			  null, // metadataVersion
 			  0, // lastContentChange
+			  -1, // lastPoPPoll
+			  -1, // lastPoPPollResult
+			  -1, // lastLocalPoll
 			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
@@ -497,6 +511,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  null, // substanceVersion
 			  null, // metadataVersion
 			  0, // lastContentChange
+			  444, // lastPoPPoll
+			  8, // lastPoPPollResult
+			  -1, // lastLocalPoll
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);

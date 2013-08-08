@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.15 2013-07-17 05:02:14 dshr Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.15.2.1 2013-08-08 05:51:41 tlipkis Exp $
  */
 
 /*
@@ -161,6 +161,9 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 			      null, // substanceVersion
 			      null, // metadataVersion
 			      0, // lastContentChange
+			      -1, // lastPoPPoll
+			      -1, // lastPoPPollResult
+			      -1, // lastLocalPoll
 			      (HistoryRepository)null);
     assertFalse(au.shouldCallTopLevelPoll(aus));
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
