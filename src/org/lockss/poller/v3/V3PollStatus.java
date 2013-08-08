@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.48 2013-05-29 17:18:12 barry409 Exp $
+* $Id: V3PollStatus.java,v 1.48.4.1 2013-08-08 05:46:59 tlipkis Exp $
  */
 
 /*
@@ -630,11 +630,13 @@ public class V3PollStatus {
         return;
       }
       if (poll == null) return;
-      table.setColumnDescriptors(colDescs, getDefaultCols(table, poll));
-      table.setDefaultSortRules(sortRules);
       table.setSummaryInfo(getSummary(poll, table));
       table.setTitle("Status of Poll " + key);
-      table.setRows(getRows(table, poll));
+      if (!poll.isLocalPoll()) {
+	table.setColumnDescriptors(colDescs, getDefaultCols(table, poll));
+	table.setDefaultSortRules(sortRules);
+	table.setRows(getRows(table, poll));
+      }
     }
 
     private List<String> getDefaultCols(StatusTable table, V3Poller poll) {
@@ -704,6 +706,9 @@ public class V3PollStatus {
                                   ColumnDescriptor.TYPE_STRING,
 				  makeAuRef(poll.getAu(),
 					    ArchivalUnitStatus.AU_STATUS_TABLE_NAME)));
+      summary.add(new SummaryInfo("Type",
+                                  ColumnDescriptor.TYPE_STRING,
+                                  poll.getPollVariant()));
       summary.add(new SummaryInfo("Status",
                                   ColumnDescriptor.TYPE_STRING,
                                   poll.getStatusString()));
@@ -712,7 +717,8 @@ public class V3PollStatus {
                                     ColumnDescriptor.TYPE_STRING,
                                     pollerState.getErrorDetail()));
       }
-      if (poll.getStatus() == POLLER_STATUS_COMPLETE) {
+      if (poll.getStatus() == POLLER_STATUS_COMPLETE
+	  && !poll.isLocalPoll()) {
 	summary.add(new SummaryInfo("Agreement",
 				    ColumnDescriptor.TYPE_AGREEMENT,
 				    poll.getPercentAgreement()));
@@ -725,9 +731,11 @@ public class V3PollStatus {
       summary.add(new SummaryInfo("Start Time",
                                   ColumnDescriptor.TYPE_DATE,
                                   new Long(poll.getCreateTime())));
-      summary.add(new SummaryInfo("Vote Deadline",
-                                  ColumnDescriptor.TYPE_DATE,
-                                  new Long(poll.getVoteDeadline())));
+      if (!poll.isLocalPoll()) {
+	summary.add(new SummaryInfo("Vote Deadline",
+				    ColumnDescriptor.TYPE_DATE,
+				    new Long(poll.getVoteDeadline())));
+      }
       summary.add(new SummaryInfo("Duration",
                                   ColumnDescriptor.TYPE_TIME_INTERVAL,
                                   new Long(poll.getDuration())));
