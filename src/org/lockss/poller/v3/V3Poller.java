@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.167.2.2 2013-07-24 18:58:21 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.167.2.3 2013-08-08 05:47:20 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
+import org.lockss.hasher.BlockHasher.LocalHashResult;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.*;
@@ -84,7 +85,7 @@ public class V3Poller extends BasePoll {
   public static final String[] PEER_STATUS_STRINGS =
   {
    "Initialized", "Invited", "Accepted Poll", "Sent Nominees",
-   "Waiting for Vote", "Voted", "PoR Complete", "Error", "Dropped Out",
+   "Waiting for Vote", "Voted", "Complete", "Error", "Dropped Out",
    "Declined Poll", "No Time Available", "Didn't Vote", "No Response",
    "No Nominations",
   };
@@ -104,27 +105,29 @@ public class V3Poller extends BasePoll {
   public static final int POLLER_STATUS_WAITING_REPAIRS = 10;
   public static final int POLLER_STATUS_WAITING_EXIT = 11;
   public static final int POLLER_STATUS_ABORTED = 12;
-  public static final int POLLER_STATUS_COMPLETE_POP = 13;
-  public static final int POLLER_STATUS_COMPLETE_LOCAL = 14;
 
   public static final String[] POLLER_STATUS_STRINGS =
   {
    "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
    "Tallying", "Complete", "No Quorum", "Error", "Expired", 
-   "Waiting for Repairs", "Finishing", "Aborted", "PoP Complete",
-   "Local Complete",
+   "Waiting for Repairs", "Finishing", "Aborted",
   };
 
-  /* Poll variants */
-  public static final int POLL_VARIANT_POR = 0;
-  public static final int POLL_VARIANT_POP = 1;
-  public static final int POLL_VARIANT_LOCAL = 2;
-  public static final String[] pollVariantName = {
-    "Proof of Retrievability",
-    "Proof of Possession",
-    "Local",
-  };
+  public enum PollVariant {
+    PoR("Proof of Repairability"),
+      PoP("Proof of Possession"),
+      Local("Local");
 
+    final String printString;
+    PollVariant(String printString) {
+      this.printString = printString;
+    }
+
+    public String toString() {
+      return printString;
+    }
+  }
+    
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** Quorum for V3 polls. */
@@ -540,6 +543,8 @@ public class V3Poller extends BasePoll {
   private boolean enableHashStats = DEFAULT_V3_ENABLE_HASH_STATS;
 
   private long tallyEnd;
+  private LocalHashResult lhr = null;
+
 
   // Probability of repairing from another cache.  A number between
   // 0.0 and 1.0.
@@ -594,18 +599,19 @@ public class V3Poller extends BasePoll {
     int modulus = 0;
 
     // Determine poll variant
-    switch (choosePollVariant(spec, quorum)) {
-    default:
-      log.error("Bad poll variant: ");
-      // Fall through
-    case POLL_VARIANT_POR:
+    PollVariant pvar = choosePollVariant(spec, quorum);
+    switch (pvar) {
+    case PoR:
       break;
-    case POLL_VARIANT_POP:
+    case PoP:
       modulus = c.getInt(PARAM_V3_MODULUS, DEFAULT_V3_MODULUS);
       break;
-    case POLL_VARIANT_LOCAL:
+    case Local:
       quorum = 0;
       // XXX should set maxVersions too
+      break;
+    default:
+      log.error("Bad poll variant: " + pvar);
       break;
     }
 
@@ -613,7 +619,7 @@ public class V3Poller extends BasePoll {
 				      duration, pollEnd,
                                       outerCircleTarget,
                                       quorum, voteMargin,
-				      hashAlg, modulus, 
+				      hashAlg, modulus, pvar,
 				      maxRepairs);
     
     this.inclusionPolicy = createInclusionPolicy();
@@ -746,9 +752,9 @@ public class V3Poller extends BasePoll {
    * @param spec the PollSpec
    * @param quorum the expected quorum
    */
-  protected int choosePollVariant(PollSpec spec, int quorum) {
+  protected PollVariant choosePollVariant(PollSpec spec, int quorum) {
     // Poll is PoR unless conditions fulfilled
-    int ret = POLL_VARIANT_POR;
+    PollVariant ret = PollVariant.PoR;
     ArchivalUnit au = spec.getCachedUrlSet().getArchivalUnit();
     AuState aus = AuUtil.getAuState(au);
     long lastCrawlTime = aus.getLastContentChange();
@@ -763,11 +769,11 @@ public class V3Poller extends BasePoll {
     int minAgreePeersLastPoll = quorum - 1; // XXX DSHR hack for now
     if (allPoPPolls) {
       // For testing
-      ret = POLL_VARIANT_POP;
+      ret = PollVariant.PoP;
       log.debug3("PoP poll forced");
     } else if (allLocalPolls) {
       // For testing
-      ret = POLL_VARIANT_LOCAL;
+      ret = PollVariant.Local;
       log.debug3("Local poll forced");
     } else if (lastPollTime > lastCrawlTime &&
 	       agreePeersLastPoll >= minAgreePeersLastPoll) {
@@ -777,17 +783,17 @@ public class V3Poller extends BasePoll {
 		 repairerThreshold);
       if (willingRepairers < repairerThreshold) {
 	// AU lacks willing repairers, call PoP poll
-	ret = POLL_VARIANT_POP;
+	ret = PollVariant.PoP;
       } else {
 	// AU in good shape with repairers, call local poll
-	ret = POLL_VARIANT_LOCAL;
+	ret = PollVariant.Local;
       }
     } else {
       log.debug3("Last (poll/crawl) times: (" + lastPollTime + "/" +
 		 lastCrawlTime + ") last agree" + agreePeersLastPoll +
 		 " threshold " + minAgreePeersLastPoll);
     }
-    log.debug2("Poll variant: " + pollVariantName[ret]);
+    log.debug2("Poll variant: " + ret);
     return ret;
   }
 
@@ -971,8 +977,10 @@ public class V3Poller extends BasePoll {
   public void startPoll() {
     pollManager.countEvent(EventCtr.Polls);
     if (!resumedPoll) {
-      // Construct the initial inner circle only once
-      constructInnerCircle(pollerState.getQuorum());
+      if (!isLocalPoll()) {
+	// Construct the initial inner circle only once
+	constructInnerCircle(pollerState.getQuorum());
+      }
       setStatus(V3Poller.POLLER_STATUS_INVITING_PEERS);
     }
     
@@ -1048,7 +1056,10 @@ public class V3Poller extends BasePoll {
       }
     }
     
-    if (enableInvitations) {
+    if (isLocalPoll()) {
+      // start tally immediately
+      voteTallyStart.expire();
+    } else if (enableInvitations) {
       // Set up an event on the timer queue to check for accepted peers.
       // If we haven't got enough peers, invite more.
       log.debug("Scheduling check for more peers to invite in " +
@@ -1099,17 +1110,7 @@ public class V3Poller extends BasePoll {
     setStatus(status);
     pollManager.countPollEndEvent(status);
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-    int modulus = pollerState.getModulus();
-    int quorum = pollerState.getQuorum();
-    if (status != POLLER_STATUS_COMPLETE) {
-      auState.pollFinished(status);
-    } else if (modulus == 0 && quorum > 0) {
-      auState.pollFinished(POLLER_STATUS_COMPLETE); // PoR poll
-    } else if (quorum == 0) {
-      auState.pollFinished(POLLER_STATUS_COMPLETE_LOCAL); // Local poll
-    } else {
-      auState.pollFinished(POLLER_STATUS_COMPLETE_POP); // PoP poll
-    }
+    auState.pollFinished(status, getPollVariant());
     if (task != null && !task.isExpired()) {
       log.debug2("Cancelling task");
       task.cancel();
@@ -1793,23 +1794,22 @@ public class V3Poller extends BasePoll {
    * @return true iff the hash is scheduled successfully.
    */
   protected boolean scheduleHash(CachedUrlSet cus,
+				 boolean isRepair,
 				 Deadline deadline,
                                  HashService.Callback cb,
                                  BlockHasher.EventHandler eh) {
-    return scheduleHash(cus, -1, deadline, cb, eh);
+    return scheduleHash(cus, -1, isRepair, deadline, cb, eh);
   }
 
   protected boolean scheduleHash(CachedUrlSet cus,
 				 int maxVersions,
+				 boolean isRepair,
 				 Deadline deadline,
                                  HashService.Callback cb,
                                  BlockHasher.EventHandler eh) {
     log.debug("Scheduling " + cus + "(" + maxVersions + ") hash for poll "
 	      + pollerState.getPollKey());
-    if (isSampledPoll()) {
-      log.debug("Sampled hash: " + inclusionPolicy.typeString());
-    }
-    BlockHasher hasher = makeHasher(cus, maxVersions, eh);
+    BlockHasher hasher = makeHasher(cus, maxVersions, isRepair, eh);
 
     // Now schedule the hash
     HashService hashService = theDaemon.getHashService();
@@ -1829,19 +1829,25 @@ public class V3Poller extends BasePoll {
   }
 
   BlockHasher makeHasher(CachedUrlSet cus, int maxVersions,
-			   BlockHasher.EventHandler eh) {
-    BlockHasher hasher = isSampledPoll() ?
-      new SampledBlockHasher(cus,
-			     maxVersions,
-			     initHasherDigests(),
-			     initHasherByteArrays(),
-			     eh,
-			     inclusionPolicy) :
-      new BlockHasher(cus,
-		      maxVersions,
-		      initHasherDigests(),
-		      initHasherByteArrays(),
-		      eh);
+			 boolean isRepair,
+			 BlockHasher.EventHandler eh) {
+
+    BlockHasher hasher;
+    if (isSampledPoll() && !isRepair) {
+      log.debug("Sampled hash: " + inclusionPolicy.typeString());
+      hasher = new SampledBlockHasher(cus,
+				      maxVersions,
+				      initHasherDigests(),
+				      initHasherByteArrays(),
+				      eh,
+				      inclusionPolicy);
+    } else {
+      hasher = new BlockHasher(cus,
+			       maxVersions,
+			       initHasherDigests(),
+			       initHasherByteArrays(),
+			       eh);
+    }
 
     if (CurrentConfig.getBooleanParam(PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
 				      DEFAULT_V3_EXCLUDE_SUSPECT_VERSIONS)) {
@@ -2253,9 +2259,6 @@ public class V3Poller extends BasePoll {
             voteComplete();
           }
 	  // todo(bhayes): else debug2 pending and active remaining?
-	  if (hasher instanceof BlockHasher) {
-	      ((BlockHasher)hasher).signalLocalHashResult(cus.getArchivalUnit());
-	  }
         }
       };
 
@@ -2264,12 +2267,33 @@ public class V3Poller extends BasePoll {
       getAu().makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     boolean hashing = scheduleHash(blockCus,
 				   repairHashAllVersions ? -1 : 1,
+				   true,
 				   Deadline.at(pollerState.getPollDeadline()),
                                    hashDone,
                                    blockDone);
     if (!hashing) {
       // CR: leave repair pending
       log.warning("Failed to schedule a repair check hash for block " + url);
+    }
+  }
+
+  void reportLocalHashResult() {
+    if (isSampledPoll()) {
+      return;
+    }
+    if (pollerState.getRepairQueue().size() > 0) {
+      return;
+    }
+    log.debug2("Recording local hash result: " + lhr);
+    PeerIdentity pid =
+      idManager.getLocalPeerIdentity(Poll.V3_PROTOCOL);
+    switch (lhr.getLhr()) {
+    case Agree:
+      idManager.signalAgreed(pid, getAu());
+      break;
+    case Disagree:
+      idManager.signalDisagreed(pid, getAu());
+      break;
     }
   }
 
@@ -2280,6 +2304,7 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
+    reportLocalHashResult();
     completeVotersAndUpdateRepairers();
 
     if (hasQuorum()) {
@@ -2291,9 +2316,11 @@ public class V3Poller extends BasePoll {
       stats.setAgreement(auId, getPercentAgreement());
       stats.setLastPollTime(auId, TimeBase.nowMs());
       stats.incrementNumPolls(auId);
-      // Update the last poll time on the AU.
+      // Update the AU's agreement if PoR poll
       AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-      auState.setV3Agreement(getPercentAgreement());
+      if (getPollVariant() == PollVariant.PoR) {
+	auState.setV3Agreement(getPercentAgreement());
+      }
       signalAuEvent();
     }
     setStatus(V3Poller.POLLER_STATUS_WAITING_EXIT);
@@ -2376,6 +2403,7 @@ public class V3Poller extends BasePoll {
   public float getPercentAgreement() {
     float agreeingUrls = (float)getAgreedUrls().size();
     float talliedUrls = (float)getTalliedUrls().size();
+    log.debug2("Agree: " + agreeingUrls + ", tallied: " + talliedUrls);
     float agreement;
     if (talliedUrls > 0)
       agreement = agreeingUrls / talliedUrls;
@@ -2596,10 +2624,6 @@ public class V3Poller extends BasePoll {
     Map availMap = getAvailablePeers();
     log.debug3("constructInnerCircle: quorum = " + quorum + ", " +
 	       availMap.size() + " available");
-    if (enableLocalPolls && quorum <= 0) {
-      log.debug2("Local poll, empty inner circle");
-      return;
-    }
     Collection innerCircleVoters = findNPeersToInvite(getTargetSize());
     log.debug2("Selected " + innerCircleVoters.size()
 	       + " participants for poll ID " + pollerState.getPollKey());
@@ -3080,6 +3104,7 @@ public class V3Poller extends BasePoll {
       // At this point theParticipants is fixed, and should not be changed.
       lockParticipants();
       if (!scheduleHash(cus,
+			false,
 			Deadline.at(tallyEnd),
 			new HashingCompleteCallback(),
 			new BlockEventHandler())) {
@@ -3164,10 +3189,15 @@ public class V3Poller extends BasePoll {
         log.warning("Poll hash failed", e);
 	// CR: too extreme.  what if pending repairs?
         stopPoll(POLLER_STATUS_ERROR);
-      } else if (hasQuorum()) {
-        finishTally();
       } else {
-	voteComplete();
+	if (hasher instanceof BlockHasher) {
+	  lhr = ((BlockHasher)hasher).getLocalHashResult();
+	}
+	if (hasQuorum()) {
+	  finishTally();
+	} else {
+	  voteComplete();
+	}
       }
     }
   }
@@ -3250,6 +3280,10 @@ public class V3Poller extends BasePoll {
     return !activePoll;
   }
 
+  public boolean isLocalPoll() {
+    return getPollVariant() == PollVariant.Local;
+  }
+
   /** Close the poll.
       @return true if the poll was previously open. */
   synchronized boolean checkAndCompletePoll() {
@@ -3284,6 +3318,13 @@ public class V3Poller extends BasePoll {
    */
   public int getVersion() {
     return pollerState.getProtocolVersion();
+  }
+  
+  /**
+   * Return the poll varient.
+   */
+  public PollVariant getPollVariant() {
+    return pollerState.getPollVariant();
   }
   
   /**
