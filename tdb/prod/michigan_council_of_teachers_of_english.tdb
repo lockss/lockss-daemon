@@ -12,7 +12,7 @@
       issn = 2168-149X 
     >
     
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
     param[base_url] = http://scholarworks.gvsu.edu/
     param[journal_abbr] = lajm
     implicit < status ; year ; name ; param[volume] >
