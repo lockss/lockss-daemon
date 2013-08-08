@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.10 2012-09-18 19:09:21 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.10.26.1 2013-08-08 05:44:16 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus.*;
+import static org.lockss.crawler.CrawlerStatus.CRAWL_STATUS_POOL;
 import static org.lockss.crawler.CrawlerStatus.ReferrerType;
 
 /**
@@ -130,6 +131,17 @@ public class TestCrawlerStatus extends LockssTestCase {
 		 c1.getDefaultMessage(Crawler.STATUS_RUNNING_AT_CRASH));
     assertEquals("Link extractor error",
 		 c1.getDefaultMessage(Crawler.STATUS_EXTRACTOR_ERROR));
+  }
+
+  public void testInternedStatusStrings() {
+    CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
+    for (int stat = 0; stat <= Crawler.STATUS_LAST; stat++) {
+      String s = c1.getDefaultMessage(stat);
+      assertSame(s, CRAWL_STATUS_POOL.intern(new String(s)));
+    }
+    String s1 = new String("Nonstandard status string");
+    assertSame(s1, CRAWL_STATUS_POOL.intern(s1));
+    assertNotSame(s1, CRAWL_STATUS_POOL.intern(new String(s1)));
   }
 
   public void testGetCrawlStatus() {
