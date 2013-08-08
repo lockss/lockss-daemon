@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.37 2013-06-17 18:18:52 barry409 Exp $
+ * $Id: PollerStateBean.java,v 1.38 2013-08-08 05:57:41 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
+import org.lockss.poller.v3.V3Poller.PollVariant;
 
 /**
  * Persistant state object for the V3Poller.
@@ -64,6 +65,7 @@ public class PollerStateBean implements LockssSerializable {
   private PeerIdentity pollerId;
   private String hashAlgorithm;
   private int modulus;
+  private PollVariant variant;
   private long createTime;
   private int quorum;
   private int voteMargin;
@@ -117,7 +119,7 @@ public class PollerStateBean implements LockssSerializable {
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
                          long duration, long pollDeadline,
 			 int outerCircleTarget, int quorum, int voteMargin,
-			 String hashAlg, int modulus,
+			 String hashAlg, int modulus, PollVariant variant,
 			 int maxRepairs) {
     this.pollerId = orig;
     this.pollKey = pollKey;
@@ -132,6 +134,7 @@ public class PollerStateBean implements LockssSerializable {
     this.spec = spec;
     this.hashAlgorithm = hashAlg;
     this.modulus = modulus;
+    this.variant = variant;
     this.createTime = TimeBase.nowMs();
     this.quorum = quorum;
     this.voteMargin = voteMargin;
@@ -235,6 +238,10 @@ public class PollerStateBean implements LockssSerializable {
 
   public void setModulus(int modulus) {
     this.modulus = modulus;
+  }
+
+  public PollVariant getPollVariant() {
+    return variant;
   }
 
   public void setPollDeadline(long l) {
