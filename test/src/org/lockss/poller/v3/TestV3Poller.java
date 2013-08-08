@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.61 2013-07-24 19:02:18 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.62 2013-08-08 05:58:12 tlipkis Exp $
  */
 
 /*
@@ -417,8 +417,14 @@ public class TestV3Poller extends LockssTestCase {
 
   public void testMakeHasher() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
-    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
-					       -1, null);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+
+    hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+				 true, null);
     assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
 		hasher instanceof SampledBlockHasher);
     assertTrue(hasher.isExcludeSuspectVersions());
@@ -429,9 +435,16 @@ public class TestV3Poller extends LockssTestCase {
 				  V3Poller.PARAM_V3_ALL_POP_POLLS, "true",
 				  V3Poller.PARAM_V3_MODULUS, "1000");
     V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
-    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
-					       -1, null);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
     assertTrue("Hasher: " + hasher + " should be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+
+    // Make a repair hasher, shouldn't be sampled
+    hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+				 true, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
 		hasher instanceof SampledBlockHasher);
     assertTrue(hasher.isExcludeSuspectVersions());
   }
@@ -440,8 +453,8 @@ public class TestV3Poller extends LockssTestCase {
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
 				  "false");
     V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
-    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(),
-					       -1, null);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
     assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
 		hasher instanceof SampledBlockHasher);
     assertFalse(hasher.isExcludeSuspectVersions());
@@ -682,41 +695,41 @@ public class TestV3Poller extends LockssTestCase {
     PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
     assertFalse(p5.isLocalIdentity());
     // First poll is PoR
-    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
     // Now crawl and get content
     maus.setLastContentChange(100);
     maus.setLastCrawlTime(100);
-    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(200);
     maus.setPollDuration(100L);
-    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
     // Now get 2 agreements, repairer threshold is 3
     agreeMap.put(p3, 150L);
     agreeMap.put(p2, 160L);
-    assertEquals(V3Poller.POLL_VARIANT_POP, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(V3Poller.PollVariant.PoP, v3Poller.choosePollVariant(ps, 3));
     // Add another agreement
     agreeMap.put(p1, 170L);
-    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+    assertEquals(V3Poller.PollVariant.Local,
 		 v3Poller.choosePollVariant(ps, 3));
     // Now crawl again, but get no content
     maus.setLastCrawlTime(300);
-    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+    assertEquals(V3Poller.PollVariant.Local,
 		 v3Poller.choosePollVariant(ps, 3));
     // Now crawl again, get content
     maus.setLastCrawlTime(300);
     maus.setLastContentChange(300);
-    assertEquals(V3Poller.POLL_VARIANT_POR,
+    assertEquals(V3Poller.PollVariant.PoR,
 		 v3Poller.choosePollVariant(ps, 3));
     // Now poll but get disagreement
     maus.setLastTopLevelPollTime(500);
     maus.setPollDuration(100L);
-    assertEquals(V3Poller.POLL_VARIANT_POR, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
     // Now get 3 agreement, repairer threshold is 3
     agreeMap.put(p3, 450L);
     agreeMap.put(p2, 460L);
     agreeMap.put(p1, 460L);
-    assertEquals(V3Poller.POLL_VARIANT_LOCAL,
+    assertEquals(V3Poller.PollVariant.Local,
 		 v3Poller.choosePollVariant(ps, 3));
   }
 
