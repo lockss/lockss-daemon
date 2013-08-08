@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.65 2013-07-14 03:05:21 dshr Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.66 2013-08-08 06:00:07 tlipkis Exp $
  */
 
 /*
@@ -1155,42 +1155,57 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
-  public void testAddProperty(boolean keepAllProps) throws Exception {
-    if (keepAllProps) {
-      Properties conf = new Properties();
-      conf.setProperty(RepositoryNodeImpl.PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE, "true");
-      ConfigurationUtil.setCurrentConfigFromProps(conf);
-    }
+  // More addProperty tests below in testGetNodeVersions()
+  public void testAddProperty() throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 2");
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/test.cache",
         "test stream", props);
 
-    RepositoryNode.RepositoryNodeContents contents = leaf.getNodeContents();
-    props = contents.getProperties();
-    // close stream to allow the file to be renamed later
-    // XXX 'getProperties()' creates an input stream, and 'release()' just
-    // sets it to null.  The rename still fails in Windows unless the stream
-    // is closed first.
-    contents.getInputStream().close();
-    contents.release();
+    RepositoryNode.RepositoryNodeContents rnc0 = leaf.getNodeContents();
+    // get two more rncs on the same node
+    RepositoryNode.RepositoryNodeContents rnc1 = leaf.getNodeContents();
+    RepositoryNode.RepositoryNodeContents rnc2 = leaf.getNodeContents();
+    // and have one of them load the props
+    rnc2.getProperties();
+    assertNotSame(rnc0, rnc1);
 
-    assertEquals("value 2", props.getProperty("test 1"));
+    // original props
+    Properties rnc0p1 = rnc0.getProperties();
+    assertEquals("value 2", rnc0p1.getProperty("test 1"));
 
-    contents.addProperty(CachedUrl.PROPERTY_CHECKSUM, "checksum");
-    contents.getInputStream().close();
-    contents.release();
-    props = leaf.getNodeContents().getProperties();
+    // add prop to node
+    rnc0.addProperty(CachedUrl.PROPERTY_CHECKSUM, "checksum");
+
+    // old Properties object isn't updated.
+    assertFalse(rnc0p1.containsKey(CachedUrl.PROPERTY_CHECKSUM));
+
+    // rnc properties should have new prop
+    Properties rnc0p2 = rnc0.getProperties();
+    // not essential, but this is the way it works
+    assertNotSame(rnc0p1, rnc0p2);
+    assertEquals("checksum", rnc0p2.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+    assertEquals("value 2", rnc0p2.getProperty("test 1"));
+
+    // previously obtained rnc whose properties hadn't already been loaded
+    // has new prop
+    Properties rnc1p1 = rnc1.getProperties();
+    assertEquals("checksum", rnc1p1.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+    assertEquals("value 2", rnc1p1.getProperty("test 1"));
+
+    // previously obtained rnc whose properties *had* already been loaded
+    // doesn't have new prop
+    Properties rnc2p1 = rnc2.getProperties();
+    assertFalse(rnc2p1.containsKey(CachedUrl.PROPERTY_CHECKSUM));
+    assertEquals("value 2", rnc2p1.getProperty("test 1"));
+
+    RepositoryNode.RepositoryNodeContents rnc = leaf.getNodeContents();
+    props = rnc.getProperties();
     assertNotNull(props);
     assertTrue(props.containsKey(CachedUrl.PROPERTY_CHECKSUM));
     assertEquals("checksum", props.getProperty(CachedUrl.PROPERTY_CHECKSUM));
-    
-  }
 
-  public void testAddProperty() throws Exception {
-    testAddProperty(false);
-    testAddProperty(true);
   }
 
   RepositoryNode createNodeWithCorruptProps(String url) throws Exception {
@@ -1235,6 +1250,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(ListUtil.list(leaf2), ListUtil.fromIterator(childIt));
   }
 
+  static String PROP_VAL_STEM = "valstem_";
+  static String PROP_KEY = "key";
+
   static String cntnt(int ix) {
     return "content " + ix + "ABCDEFGHIJKLMNOPQRSTUVWXYZ".substring(0, ix);
   }
@@ -1242,17 +1260,43 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     return cntnt(ix).length();
   }
 
+  void checkVersion(RepositoryNodeVersion nodeVer,
+		    int exp, String addedPropVal)
+      throws IOException {
+    RepositoryNode.RepositoryNodeContents rnc = nodeVer.getNodeContents();
+    String verCont = getRNCContent(rnc);
+    Properties verProps = rnc.getProperties();
+    log.debug("ver: " + nodeVer.getVersion() + ", content: " + verCont);
+    log.debug2("ver: " + nodeVer.getVersion() + ", " +
+	       StringUtil.shortName(props.getClass()) + ": " + verProps);
+    assertEquals(exp, nodeVer.getVersion());
+
+    assertEquals(cntnt(exp), verCont);
+    assertEquals(lngth(exp), nodeVer.getContentSize());
+    assertEquals(PROP_VAL_STEM+exp, verProps.getProperty(PROP_KEY));
+
+    assertEquals(addedPropVal,
+		 verProps.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+
+
+    // ensure can reread content from same rnc
+    assertEquals(verCont, getRNCContent(rnc));
+  }
+
+  void addPropToVersion(RepositoryNodeVersion nodeVer, String propVal) {
+    RepositoryNode.RepositoryNodeContents rnc = nodeVer.getNodeContents();
+    rnc.addProperty(CachedUrl.PROPERTY_CHECKSUM, propVal);
+  }
+  
   public void testGetNodeVersion() throws Exception {
     int max = 5;
     String url = "http://www.example.com/versionedcontent.txt";
-    String key = "key";
-    String val = "grrl";
     Properties props = new Properties();
 
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions
     for (int ix = 1; ix <= max; ix++) {
-      props.setProperty(key, val+ix);
+      props.setProperty(PROP_KEY, PROP_VAL_STEM+ix);
       createContentVersion(leaf, cntnt(ix), props);
     }
     // getNodeVersion(current) should return the main node
@@ -1261,65 +1305,54 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // loop through other versions checking version, content, props
     for (int ix = 1; ix < max; ix++) {
       RepositoryNodeVersion nodeVer = leaf.getNodeVersion(ix);
-      log.debug("ver: " + nodeVer.getVersion() + ", content: " +
-		getLeafContent(nodeVer));
-      assertEquals(ix, nodeVer.getVersion());
-
-      assertEquals(cntnt(ix), getLeafContent(nodeVer));
-      assertEquals(lngth(ix), nodeVer.getContentSize());
-      props = nodeVer.getNodeContents().getProperties();
-      assertEquals(val+ix, props.getProperty(key));
+      checkVersion(nodeVer, ix, null);
     }
   }
 
   public void testGetNodeVersions() throws Exception {
     int max = 5;
     String url = "http://www.example.com/versionedcontent.txt";
-    String key = "key";
-    String val = "grrl";
     Properties props = new Properties();
 
     RepositoryNode leaf = repo.createNewNode(url);
     // create several versions
     for (int ix = 1; ix <= max; ix++) {
-      props.setProperty(key, val+ix);
+      props.setProperty(PROP_KEY, PROP_VAL_STEM+ix);
       createContentVersion(leaf, cntnt(ix), props);
     }
     // check expected current version number
     assertEquals(max, leaf.getCurrentVersion());
     assertEquals(max, leaf.getVersion());
 
-    // checking version, content, props of current version
+    // check version, content, props of current version
     assertEquals(cntnt(max), getLeafContent(leaf));
     assertEquals(lngth(max), leaf.getContentSize());
     props = leaf.getNodeContents().getProperties();
-    assertEquals(val+max, props.getProperty(key));
+    assertEquals(PROP_VAL_STEM+max, props.getProperty(PROP_KEY));
 
     // ask for all older versions
     RepositoryNodeVersion[] vers = leaf.getNodeVersions();
     assertEquals(max, vers.length);
+    RepositoryNode.RepositoryNodeContents[] rncs =
+      new RepositoryNode.RepositoryNodeContents[max];
     // loop through them checking version, content, props
-    for (int ix = 0; ix < max-1; ix++) {
+    for (int ix = 0; ix < max; ix++) {
       int exp = max - ix;
       RepositoryNodeVersion nodeVer = vers[ix];
-      log.debug("ver: " + nodeVer.getVersion() + ", content: " +
-		getLeafContent(nodeVer));
-      assertEquals(exp, nodeVer.getVersion());
 
-      assertEquals(cntnt(exp), getLeafContent(nodeVer));
-      assertEquals(lngth(exp), nodeVer.getContentSize());
-      props = nodeVer.getNodeContents().getProperties();
-      assertEquals(val+exp, props.getProperty(key));
+      rncs[ix] = nodeVer.getNodeContents();
+      
+      checkVersion(nodeVer, exp, null);
     }
 
     // now ask for and check a subset of the older versions
     assertTrue("max must be at least 4 for this test", max >= 4);
     int numver = max - 2;
-    vers = leaf.getNodeVersions(numver);
-    assertEquals(numver, vers.length);
-    for (int ix = 0; ix < numver-1; ix++) {
+    RepositoryNodeVersion[] subvers = leaf.getNodeVersions(numver);
+    assertEquals(numver, subvers.length);
+    for (int ix = 0; ix < numver; ix++) {
       int exp = max - ix;
-      RepositoryNodeVersion nodeVer = vers[ix];
+      RepositoryNodeVersion nodeVer = subvers[ix];
       log.debug("ver: " + nodeVer.getVersion() + ", content: " +
 		getLeafContent(nodeVer));
       assertEquals(exp, nodeVer.getVersion());
@@ -1327,8 +1360,25 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       assertEquals(cntnt(exp), getLeafContent(nodeVer));
       assertEquals(lngth(exp), nodeVer.getContentSize());
       props = nodeVer.getNodeContents().getProperties();
-      assertEquals(val+exp, props.getProperty(key));
+      assertEquals(PROP_VAL_STEM+exp, props.getProperty(PROP_KEY));
     }
+
+    // Add a property to selected versions, ensure only the correct
+    // versions change
+
+    addPropToVersion(vers[0], "5new1");
+    checkVersion(vers[0], 5, "5new1");
+    for (int ix = 1; ix <= 4; ix++) {
+      checkVersion(vers[ix], max-ix, null);
+    }
+
+    addPropToVersion(vers[2], "3new1");
+    checkVersion(vers[2], 3, "3new1");
+    checkVersion(vers[0], 5, "5new1");
+    for (int ix : new int[]{1,3,4}) {
+      checkVersion(vers[ix], max-ix, null);
+    }
+
   }
 
   public void testIllegalVersionOperations() throws Exception {

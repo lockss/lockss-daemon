@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.25 2013-07-24 19:01:59 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.26 2013-08-08 06:00:07 tlipkis Exp $
  */
 
 /*
@@ -453,6 +453,39 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CIProperties urlProps = cu.getProperties();
       assertEquals("value", urlProps.getProperty("test"));
       assertEquals("value2", urlProps.getProperty("test2"));
+    }
+
+    public void testAddProperty() throws Exception {
+      CIProperties newProps = new CIProperties();
+      newProps.setProperty("test", "value");
+      newProps.setProperty("test2", "value2");
+      createLeaf(url1, null, newProps);
+
+      CachedUrl cu = getTestCu(url1);
+      cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, "foobar");
+      CIProperties urlProps = cu.getProperties();
+      assertEquals("value", urlProps.getProperty("test"));
+      assertEquals("value2", urlProps.getProperty("test2"));
+      assertEquals("foobar", urlProps.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+
+      CachedUrl cu2 = getTestCu(url1);
+      CIProperties urlProps2 = cu2.getProperties();
+      assertEquals("value", urlProps2.getProperty("test"));
+      assertEquals("value2", urlProps2.getProperty("test2"));
+      assertEquals("foobar",
+		   urlProps2.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+
+      try {
+	cu2.addProperty(CachedUrl.PROPERTY_CHECKSUM, "22222");
+	fail("2nd attempt to add checksum property should fail");
+      } catch (IllegalStateException e) {
+      }
+
+      try {
+	cu2.addProperty("illegal prop", "123");
+	fail("Attempt to add unapproved property should fail");
+      } catch (IllegalArgumentException e) {
+      }
     }
 
     public void testGetReader() throws Exception {
