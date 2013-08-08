@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Association of Jewish Libraries
+  >
+  
+  {
+  
+    title <
+      name = Judaica Librarianship ;
+      issn = 2330-2976 ;
+      issnl = 2330-2976
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://ajlpublishing.org/
+    param[journal_abbr] = jl
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2013 ; Judaica Librarianship Volume 16 ; 16 >
+
+  }
+
+}
