@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Academy Health
+  >
+  
+  {
+  
+    title <
+      name = eGEMs ;
+      issn = 2327-9214 ;
+      issnl = 2327-9214
+    >
+    
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
+    param[base_url] = http://repository.academyhealth.org/
+    param[journal_abbr] = egems
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 2013 ; eGEMs Volume 1 ; 1 >
+
+  }
+
+}
