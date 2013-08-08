@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.116 2013-03-06 08:06:55 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.116.14.1 2013-08-08 05:49:36 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,7 @@ public class ArchivalUnitStatus
   public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
+  public static final String SUSPECT_VERSIONS_TABLE_NAME = "SuspectVersions";
   public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
   public static final String AUS_WITH_URL_TABLE_NAME = "AusWithUrl";
 
@@ -126,6 +127,8 @@ public class ArchivalUnitStatus
                                       new PeerRepair(theDaemon));
     statusServ.registerStatusAccessor(FILE_VERSIONS_TABLE_NAME,
                                       new FileVersions(theDaemon));
+    statusServ.registerStatusAccessor(SUSPECT_VERSIONS_TABLE_NAME,
+                                      new SuspectVersions(theDaemon));
     statusServ.registerStatusAccessor(AU_DEFINITION_TABLE_NAME,
                                       new AuConfiguration(theDaemon));
     statusServ.registerStatusAccessor(AUS_WITH_URL_TABLE_NAME,
@@ -343,7 +346,7 @@ public class ArchivalUnitStatus
       }
 
       rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
-      rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
+      rowMap.put("AuLastPoll", new Long(auState.getLastTimePollCompleted()));
       
       Object stat;
       if (isV3) {
@@ -353,7 +356,7 @@ public class ArchivalUnitStatus
         // history, so we just show a friendlier message.
         //
         if (auState.getHighestV3Agreement() < 0 ||
-	    auState.getLastTopLevelPollTime() <= 0) {
+	    auState.getLastTimePollCompleted() <= 0) {
 	  if (cmStatus.isRunningNCCrawl(au)) {
 	    stat = new OrderedObject("Crawling", STATUS_ORDER_CRAWLING);
 	  } else {
@@ -965,7 +968,7 @@ public class ArchivalUnitStatus
       Object recentPollStat = null;
       if (AuUtil.getProtocolVersion(au) == Poll.V3_PROTOCOL) {
         if (state.getV3Agreement() < 0) {
-          if (state.lastCrawlTime < 0) {
+          if (state.lastCrawlTime < 0  && !AuUtil.isPubDown(au)) {
             stat = "Waiting for Crawl";
           } else {
             stat = "Waiting for Poll";
@@ -1137,7 +1140,21 @@ public class ArchivalUnitStatus
 					      pollResult));
 	}
       }
-
+      String lastPoPMsg = state.getLastPoPPollResultMsg();
+      if (!StringUtil.isNullString(lastPoPMsg)) {
+	res.add(new StatusTable.SummaryInfo("Last PoP Poll",
+					    ColumnDescriptor.TYPE_DATE,
+					    new Long(state.getLastPoPPoll())));
+	res.add(new StatusTable.SummaryInfo("Last PoP Poll Result",
+					    ColumnDescriptor.TYPE_STRING,
+					    lastPoPMsg));
+      }
+      long lastLocal = state.getLastLocalPoll();
+      if (lastLocal > 0) {
+	res.add(new StatusTable.SummaryInfo("Last Local Poll",
+					    ColumnDescriptor.TYPE_DATE,
+					    new Long(lastLocal)));
+      }
       PollManager pm = theDaemon.getPollManager();
       boolean isCrawling = cmStatus.isRunningNCCrawl(au);
       boolean isPolling = pm.isPollRunning(au);
@@ -1173,6 +1190,17 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  peers));
+
+      if (AuUtil.hasSuspectUrlVersions(au)) {
+	StatusTable.Reference suspectRef =
+	  new StatusTable.Reference("Suspect Versions",
+				    SUSPECT_VERSIONS_TABLE_NAME,
+				    au.getAuId());
+
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    suspectRef));
+      }
 
       List urlLinks = new ArrayList();
 
@@ -1479,6 +1507,55 @@ public class ArchivalUnitStatus
       return rowMap;
     }
 
+  }
+
+  static class SuspectVersions extends PerAuTable {
+
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Url", "Url", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Version", "Version", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor("Discovered", "Discovered",
+			   ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("Computed", "Computed Hash",
+			   ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Stored", "Stored Hash",
+			   ColumnDescriptor.TYPE_STRING)
+      );
+
+    private static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("Url", true));
+
+    SuspectVersions(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected void populateTable(StatusTable table, ArchivalUnit au)
+        throws StatusService.NoSuchTableException {
+      table.setTitle("Suspect URLs in " + au.getName());
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(table, au));
+    }
+
+    private List getRows(StatusTable table, ArchivalUnit au)
+	throws StatusService.NoSuchTableException {
+      AuSuspectUrlVersions asuv;
+      if (!AuUtil.hasSuspectUrlVersions(au) ||
+	  (asuv = AuUtil.getSuspectUrlVersions(au)).isEmpty()) {
+	return null;
+      }
+      List rowL = new ArrayList();
+      for (AuSuspectUrlVersions.SuspectUrlVersion suv : asuv.getSuspectList()) {
+	Map row = new HashMap();
+	row.put("Url", suv.getUrl());
+	row.put("Version", suv.getVersion());
+	row.put("Discovered", suv.getCreated());
+	row.put("Computed", suv.getComputedHash().toString());
+	row.put("Stored", suv.getStoredHash().toString());
+	rowL.add(row);
+	}
+      return rowL;
+    }
   }
 
   /** list of peers that have said they don't have the AU.  Primarily for
