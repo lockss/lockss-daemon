@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.38 2013-06-19 23:08:26 fergaloy-sf Exp $
+ * $Id: AdminServletManager.java,v 1.39 2013-08-09 14:31:06 rwincewicz Exp $
  */
 
 /*
@@ -339,6 +339,10 @@ public class AdminServletManager extends BaseServletManager {
           "Display Content Status",
           ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
           "Status of LOCKSS box contents");
+  protected static final ServletDescr SERVLET_DISPLAY_CONTENT_TAB =
+          new ServletDescr("DisplayContentTab",
+          DisplayContentTab.class,
+          "Display Content Tab");
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
           new ServletDescr("ViewContent",
           ViewContent.class,
@@ -580,6 +584,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_PROXY_INFO,
 //    SERVLET_DAEMON_STATUS_NEW,
     SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT_TAB,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
     SERVLET_TIME_GATE,
@@ -622,6 +627,7 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DAEMON_STATUS,
 //    SERVLET_DAEMON_STATUS_NEW,
     SERVLET_DISPLAY_CONTENT_STATUS,
+    SERVLET_DISPLAY_CONTENT_TAB,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
     SERVLET_TIME_GATE,

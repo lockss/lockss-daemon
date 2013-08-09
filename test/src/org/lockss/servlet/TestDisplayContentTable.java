@@ -109,13 +109,4 @@ public class TestDisplayContentTable extends LockssTestCase {
     String cleanedName = DisplayContentTable.cleanName(name);
     assertEquals("T_e_s_t", cleanedName);
   }
-  
-  public void testRowCss() {
-    Integer rowCount1 = 0;
-    String rowCss1 = DisplayContentTable.rowCss(rowCount1);
-    assertEquals("even-row", rowCss1);
-    Integer rowCount2 = 1;
-    String rowCss2 = DisplayContentTable.rowCss(rowCount2);
-    assertEquals("odd-row", rowCss2);
-  }
 }
