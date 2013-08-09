@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.14 2013-08-05 18:01:32 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.15 2013-08-09 20:05:15 etenbrink Exp $
  */
 
 /*
@@ -263,31 +263,40 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "</div>";
 
   private static final String institutionLogoHtml =
-      "        <div id=\"col-3\">" +
-          "<a class=\"hwac-institutional-logo\">" +
-          "<img alt=\"Stanford University\"" +
-          "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
-          "class=\"hwac-institutional-logo\" />" +
-          "</a>" +
-          "<div id=\"something-nav\">";
+      " <a class=\"hwac-institutional-logo\">" +
+      "<img alt=\"Stanford University\"" +
+      "src=\"/userimage/891eef32-7e9f-4198-9886-31192686655e-20120118\"" +
+      "class=\"hwac-institutional-logo\" />" +
+      "</a>" +
+      "<div id=\"something-nav\">";
   
   private static final String institutionLogoFiltered = 
-      " <div id=\"col-3\">" +
-          "<div id=\"something-nav\">";
+      " <div id=\"something-nav\">";
 
   private static final String sidebarGlobalNavHtml =
-      "    <div id=\"col-3\">" +
-          "<div id=\"sidebar-global-nav\">" +
-          "<ul class=\"button-list pub-links\"> " +
-          "<li class=\"first\"><a title=\"About the Journal\" href=\"http://" +
-          "www.minersoc.org/clayminm.html\"><span>About the Journal</span></a></li>" +
-          "</ul>" +
-          "</div>" +
-          "<div id=\"something-nav\">";
+      " <div id=\"sidebar-global-nav\">" +
+      "<ul class=\"button-list pub-links\"> " +
+      "<li class=\"first\"><a title=\"About the Journal\" href=\"http://" +
+      "www.minersoc.org/clayminm.html\"><span>About the Journal</span></a></li>" +
+      "</ul>" +
+      "</div>" +
+      "<div id=\"something-nav\">";
   
   private static final String sidebarGlobalNavFiltered = 
-      " <div id=\"col-3\">" +
-          "<div id=\"something-nav\">";
+      " <div id=\"something-nav\">";
+
+  private static final String col3Html =
+      " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
+      "<div id=\"col-3\" style=\"height: 1616px;\">" +
+      "<div id=\"sidebar-current-issue\" class=\"content-box\">" +
+      "<div class=\"cb-contents\"></div></div><div id=\"sidebar-global-nav\">" +
+      "</div><div class=\"most-links-box \"></div>" +
+      "<ul class=\"tower-ads\"><li class=\"no-ad tower\"><span>  </span></li></ul>" +
+      "</div><script type=\"text/javascript\"></script></div>";
+  
+  private static final String col3Filtered = 
+      " <div id=\"generic\" class=\"hw-gen-page pagetype-content\">" +
+        "</div>";
 
   private static final String tocBannerAdHtml =
       "   <div id=\"content-block\">" +
@@ -342,6 +351,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToString(institutionLogoHtml, institutionLogoFiltered);
     assertFilterToString(tocBannerAdHtml, tocBannerAdFiltered);
     assertFilterToString(sidebarGlobalNavHtml, sidebarGlobalNavFiltered);
+    assertFilterToString(col3Html, col3Filtered);
   }
 
   private void assertFilterToSame(String str1, String Str2) throws Exception {
