@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -33,11 +33,11 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -67,6 +67,7 @@
   <entry>
     <string>au_crawlrules</string>
     <!--  CRAWL COMMENT BLOCK
+    - "imgJawr" exclusion is Taylor&Francis child specific. See RU4586 - removeable after that gets dealt with
     - include all image/css files that live under base_url
     - specifically include images/figures/tables that live under
          <base>/na101/home/literatum/publisher/<publisher_id>/journals/<dirname>/<journal_id>/....
@@ -82,6 +83,7 @@
     massmedical and t&f have a number of additions 
      -->
     <list>
+      <string>2,&quot;^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$&quot;, base_url</string>
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>

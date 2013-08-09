@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.3 2013-07-02 17:16:47 aishizaki Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.4 2013-08-09 19:07:46 alexandraohlson Exp $
  */
 
 /*
@@ -78,9 +78,6 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
-      
-      tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
-      tagMap.put("dc.Date", MetadataField.FIELD_DATE);
       
       tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
       tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);      

@@ -9,30 +9,8 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
-  <entry> 
-  <!-- same as parent BaseAtypon, but increased Poll, to reflect changes in 
-       hash/crawl filter MUST track parent's feature_version_map - Unless 
-       substance or metadata changes in this child only, Poll should be the 
-       only number that is changed independently of the parent's.
-   -->
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-        <string>5</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-        <string>3</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-        <string>1</string>
-      </entry>
-    </map>
-  </entry> 
   <entry>
     <string>plugin_name</string>
     <string>NRC Research Plugin (CLOCKSS)</string>
@@ -43,7 +21,7 @@
   </entry>
     <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
