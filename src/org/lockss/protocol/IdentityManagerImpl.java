@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.43 2013-08-08 00:16:00 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.44 2013-08-09 18:35:24 barry409 Exp $
  */
 
 /*
@@ -1392,10 +1392,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   public boolean hasAgreeMap(ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      return !map.isEmpty();
-    }
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    return hRep.getIdentityAgreementFile().exists();
   }
   
   public synchronized void removePeer(String key) {

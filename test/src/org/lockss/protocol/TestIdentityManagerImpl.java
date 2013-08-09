@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.29 2013-08-08 00:16:00 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.30 2013-08-09 18:35:24 barry409 Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.StringReader;
 import java.util.*;
 
@@ -680,10 +681,35 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
   public void testHasAgreeMap() throws Exception {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    final File nonExistingFile = new File(tempDirPath, "nofile");
+
+    MockHistoryRepository hRep = new MockHistoryRepository() {
+	private File agreementFile = nonExistingFile;
+	
+	@Override
+	public void storeIdentityAgreements(List list) {
+	  try {
+	    agreementFile = File.createTempFile("id_agreement", ".xml");
+	  } catch (IOException e) {
+	    fail("couldn't create temp file", e);
+	  }
+	  agreementFile.deleteOnExit();
+	  super.storeIdentityAgreements(list);
+	}
+
+	@Override
+	public File getIdentityAgreementFile() {
+	  return agreementFile;
+	}
+      };
+    theDaemon.setHistoryRepository(hRep, mau);
 
     assertFalse(idmgr.hasAgreeMap(mau));
     idmgr.signalAgreed(peer1, mau);
     assertTrue(idmgr.hasAgreeMap(mau));
+
+    // Make sure that nothing has created this by accident.
+    assertFalse(nonExistingFile.exists());
   }
 
   // ensure that deisctivating and reactivating an AU gets it's old data
