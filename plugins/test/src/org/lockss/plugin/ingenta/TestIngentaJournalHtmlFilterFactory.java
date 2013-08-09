@@ -98,6 +98,8 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     {"div", "class", "right-col-download"},
     // Filter out <div id="cart-navbar">...</div>
     {"div", "id", "cart-navbar"},   
+    // Filter out <div class="heading-macfix">...</div>
+    {"div", "class", "heading-macfix"},                                                                           
     // Filter out <div id="baynote-recommendations">...</div>
     {"div", "id", "baynote-recommendations"},
     // Filter out <div id="bookmarks-container">...</div>
