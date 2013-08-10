@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.92 2013-08-10 20:47:11 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.93 2013-08-10 20:59:28 tlipkis Exp $
  */
 
 /*
@@ -405,8 +405,11 @@ public class LockssRepositoryImpl
   public boolean hasSuspectUrlVersions(ArchivalUnit au) {
     AuSuspectUrlVersions asuv =
       (AuSuspectUrlVersions)repoMgr.getSuspectVersionsCache().get(au);
-    return (asuv != null && !asuv.isEmpty())
-      || getAsuvFile().exists();
+    if (asuv != null) {
+      return !asuv.isEmpty();
+    } else {
+      return getAsuvFile().exists();
+    }
   }
 
   private AuSuspectUrlVersions loadSuspectUrlVersions(ArchivalUnit au) {
