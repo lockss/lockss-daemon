@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.96 2013-03-19 04:26:15 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.96.14.1 2013-08-10 20:40:12 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final int CRAWL_RULE_CONTAINS_SET_THRESHOLD = 12;
 
   public static final String PREFIX_NUMERIC = "numeric_";
-  public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
   public static final String DEFAULT_AU_EXPLODER_PATTERN = null;
   public static final String KEY_AU_NAME = "au_name";
   public static final String KEY_AU_CRAWL_RULES = "au_crawlrules";
@@ -84,7 +83,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String KEY_AU_CRAWL_WINDOW = "au_crawlwindow";
   public static final String KEY_AU_CRAWL_WINDOW_SER = "au_crawlwindow_ser";
   public static final String KEY_AU_EXPECTED_BASE_PATH = "au_expected_base_path";
-  public static final String KEY_AU_CRAWL_DEPTH = "au_crawl_depth";
+  public static final String KEY_AU_REFETCH_DEPTH = "au_refetch_depth";
+  public static final int DEFAULT_AU_REFETCH_DEPTH = 1;
+  // The old name of au_refetch_depth
+  public static final String KEY_AU_CRAWL_DEPTH_OBSOLESCENT = "au_crawl_depth";
 
   public static final String KEY_AU_PERMISSION_URL = "au_permission_url";
   // The old name of au_permission_url
@@ -591,7 +593,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 			     null, rule, follow_links,
 			     makeLoginPageChecker());
     } else { // for now use the default spider crawl spec
-      int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
+      int depth = definitionMap.getInt(KEY_AU_REFETCH_DEPTH,
+				       DEFAULT_AU_REFETCH_DEPTH);
       String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
 						  DEFAULT_AU_EXPLODER_PATTERN);
       ExploderHelper eh = getDefinablePlugin().getExploderHelper();

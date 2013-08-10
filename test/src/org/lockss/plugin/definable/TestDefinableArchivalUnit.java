@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.64 2013-03-27 16:06:48 alexandraohlson Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.64.6.1 2013-08-10 20:40:11 tlipkis Exp $
  */
 
 /*
@@ -714,9 +714,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEmpty(au.getAuFeatureUrls("au_title"));
   }
 
-  public void testObsolescentAuManifest() throws Exception {
+  public void testObsolescentPluginFields() throws Exception {
     PluginManager pmgr = getMockLockssDaemon().getPluginManager();
-    // Load a plugin definition with the old au_manifest
+    // Load a plugin definition with the old au_manifest, au_crawl_depth
     String pname = "org.lockss.plugin.definable.GoodPlugin";
     String key = PluginManager.pluginKeyFromId(pname);
     assertTrue("Plugin was not successfully loaded",
@@ -731,6 +731,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals(ListUtil.list("http://base.foo/base_path/perm.page"),
 		 au.getPermissionPages());
+    SpiderCrawlSpec cspec = (SpiderCrawlSpec)au.getCrawlSpec();
+    assertEquals(4, cspec.getRefetchDepth());
   }
 
   public void testIsNotBulkContent() throws Exception {

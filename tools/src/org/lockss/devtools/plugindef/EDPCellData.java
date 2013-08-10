@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.18 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: EDPCellData.java,v 1.18.66.1 2013-08-10 20:40:11 tlipkis Exp $
  */
 
 /*
@@ -98,8 +98,8 @@ public class EDPCellData {
     else if(key.equals(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY)) {
       m_data = edp.getCrawlFilterFactories();
     }
-    else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
-      m_data = new Integer(edp.getAuCrawlDepth());
+    else if(key.equals(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH)) {
+      m_data = new Integer(edp.getAuRefetchDepth());
     }
     else if(key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW)) {
       m_data = edp.getAuCrawlWindow();
@@ -233,9 +233,9 @@ public class EDPCellData {
       m_plugin.setPluginNotes((String)m_data);
       m_displayString = data;
     }
-    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH)) {
+    else if(m_key.equals(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH)) {
       m_data = new Integer(data);
-      m_plugin.setAuCrawlDepth(((Integer)m_data).intValue());
+      m_plugin.setAuRefetchDepth(((Integer)m_data).intValue());
     }
     else if(m_key.equals(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW)) {
       m_data = data;

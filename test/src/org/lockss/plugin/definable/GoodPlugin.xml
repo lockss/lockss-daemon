@@ -32,6 +32,11 @@
     </list>
   </entry>
   <entry>
+    <!-- The old name for au_refetch_depth -->
+    <string>au_crawl_depth</string>
+    <int>4</int>
+  </entry>
+  <entry>
     <string>au_redirect_to_login_url_pattern</string>
     <string>&quot;%sloginpage&quot;, base_url</string>
   </entry>

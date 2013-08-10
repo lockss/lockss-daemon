@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.13 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.13.66.1 2013-08-10 20:40:10 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int INDEX_FILTERRULES = 10;
   protected static final int INDEX_HASH_FILTERFACTORIES = 11;
   protected static final int INDEX_CRAWL_FILTERFACTORIES = 12;
-  protected static final int INDEX_CRAWLDEPTH = 13;
+  protected static final int INDEX_REFETCHDEPTH = 13;
   protected static final int INDEX_CRAWLWINDOW = 14;
   protected static final int INDEX_CRAWLWINDOWSER = 15;
   protected static final int INDEX_EXCEPTIONS = 16;
