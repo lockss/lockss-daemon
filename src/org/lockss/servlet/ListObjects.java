@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.24.4.1 2013-08-10 20:59:32 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.24.4.2 2013-08-10 21:01:38 tlipkis Exp $
  */
 
 /*
@@ -102,8 +102,6 @@ public class ListObjects extends LockssServlet {
 	new FileList().execute();
       } else if (type.equalsIgnoreCase("filesm")) {
 	new FileMemberList().execute();
-//       } else if (type.equalsIgnoreCase("suspect")) {
-// 	new SuspectVersionsList().execute();
       } else if (type.equalsIgnoreCase("articles")) {
 	boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
 	if (isDoi) {
@@ -492,28 +490,6 @@ public class ListObjects extends LockssServlet {
     }
     
   }
-
-//   class SuspectVersionsList extends BaseList {
-
-//     void doBody() throws IOException {
-      
-//       if (!AuUtil.hasSuspectUrlVersions(au)) {
-// 	AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(au);
-// 	if (!asuv.isEmpty()) {
-// 	  for (
-// 	}
-
-//       for (ArchivalUnit au : pluginMgr.getAllAus()) {
-// 	if (includeInternalAus || !pluginMgr.isInternalAu(au)) {
-// 	  processAu(au);
-// 	}
-//       }
-//     }
-
-//     /** Subs must process each AU */
-//     abstract void processAu(ArchivalUnit au);
-    
-//   }
 
   /** Base for lists of AUs */
   abstract class BaseAuList extends BaseList {
