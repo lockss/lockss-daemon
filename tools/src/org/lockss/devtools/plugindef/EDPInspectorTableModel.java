@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.20 2009-10-20 22:38:16 tlipkis Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.21 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -113,8 +113,8 @@ public class EDPInspectorTableModel extends AbstractTableModel
     new InspectorEntry(DefinableArchivalUnit.SUFFIX_CRAWL_FILTER_FACTORY,
                        "Crawl Filter Factories",
                        inspectorCellEditor),
-    new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
-                       "Default Crawl Depth"),
+    new InspectorEntry(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH,
+                       "Default Refetch Depth"),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW,
                        "Configurable Crawl Window Class"),
     new InspectorEntry(DefinableArchivalUnit.KEY_AU_CRAWL_WINDOW_SER,

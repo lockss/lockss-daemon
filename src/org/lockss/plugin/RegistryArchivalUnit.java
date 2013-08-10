@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.28 2012-03-12 05:23:46 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.29 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   static final boolean DEFAULT_ENABLE_REGISTRY_POLLS = true;
 
   private String m_registryUrl = null;
-  private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
+  private int m_refetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private List m_permissionCheckers = null;
   private boolean recomputeRegName = true;
   private boolean enablePolls = DEFAULT_ENABLE_REGISTRY_POLLS;
@@ -102,7 +102,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   protected void setConfig(Configuration config,
 			   Configuration prevConfig,
 			   Configuration.Differences changedKeys) {
-    m_maxRefetchDepth =
+    m_refetchDepth =
       config.getInt(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH,
 		    NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH);
     fetchRateLimiter = recomputeFetchRateLimiter(fetchRateLimiter);
@@ -223,7 +223,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules();
     List startUrls = getNewContentCrawlUrls();
     return new SpiderCrawlSpec(startUrls, startUrls, rule,
-			       m_maxRefetchDepth, null, null);
+			       m_refetchDepth, null, null);
   }
 
   /**

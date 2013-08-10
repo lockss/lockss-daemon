@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.37 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: DebugPanel.java,v 1.38 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class DebugPanel extends LockssServlet {
   static final String KEY_NAME_TYPE = "name_type";
   static final String KEY_AUID = "auid";
   static final String KEY_URL = "url";
-  static final String KEY_CRAWL_DEPTH = "depth";
+  static final String KEY_REFETCH_DEPTH = "depth";
 
   static final String ACTION_MAIL_BACKUP = "Mail Backup File";
   static final String ACTION_THROW_IOEXCEPTION = "Throw IOException";
@@ -153,7 +153,7 @@ public class DebugPanel extends LockssServlet {
     if (!StringUtil.isNullString(action)) {
 
       formAuid = getParameter(KEY_AUID);
-      formDepth = getParameter(KEY_CRAWL_DEPTH);
+      formDepth = getParameter(KEY_REFETCH_DEPTH);
 
       UserAccount acct = getUserAccount();
       if (acct != null) {
@@ -317,7 +317,7 @@ public class DebugPanel extends LockssServlet {
       if (deep) {
 	int d = Integer.parseInt(formDepth);
 	if (d < 0) {
-	  errMsg = "Illegal depth: " + d;
+	  errMsg = "Illegal refetch depth: " + d;
 	  return false;
 	}
 	req.setRefetchDepth(d);
@@ -325,7 +325,7 @@ public class DebugPanel extends LockssServlet {
 
       }
     } catch (NumberFormatException e) {
-      errMsg = "Illegal depth: " + formDepth;
+      errMsg = "Illegal refetch depth: " + formDepth;
       return false;
     } catch (RuntimeException e) {
       log.error("Couldn't create CrawlReq: " + au, e);
@@ -555,7 +555,7 @@ public class DebugPanel extends LockssServlet {
 				  ( showForceCrawl
 				    ? ACTION_FORCE_START_DEEP_CRAWL
 				    : ACTION_START_DEEP_CRAWL));
-      Input depthText = new Input(Input.Text, KEY_CRAWL_DEPTH, formDepth);
+      Input depthText = new Input(Input.Text, KEY_REFETCH_DEPTH, formDepth);
       depthText.setSize(4);
       setTabOrder(depthText);
       frm.add("<br><center>"+deepCrawl+" " + depthText + "</center>");

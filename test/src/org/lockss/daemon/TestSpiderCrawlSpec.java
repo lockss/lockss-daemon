@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpiderCrawlSpec.java,v 1.4 2007-09-24 18:37:13 dshr Exp $
+ * $Id: TestSpiderCrawlSpec.java,v 1.5 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -86,16 +86,16 @@ public class TestSpiderCrawlSpec extends LockssTestCase {
 		 l2, cs.getStartingUrls());
   }
 
-  public void testThrowsIfRecrawlDepthLessThanOne() {
+  public void testThrowsIfRefetchDepthLessThanOne() {
     try {
       SpiderCrawlSpec cs = new SpiderCrawlSpec("blah", rule, 0);
-      fail("Trying to construct a CrawlSpec with a RecrawlDepth less "
+      fail("Trying to construct a CrawlSpec with a RefetchDepth less "
 	   +"than 1 should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }
 
-  public void testRecrawlDepthDefaultsTo1() {
+  public void testRefetchDepthDefaultsTo1() {
     SpiderCrawlSpec cs = new SpiderCrawlSpec("blah", rule);
     assertEquals(1, cs.getRefetchDepth());
   }

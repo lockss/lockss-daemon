@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.74 2013-07-18 19:28:20 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.75 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -236,10 +236,17 @@ public class DefinablePlugin extends BasePlugin {
 
   // Move any values from obsolescent keys to their official key
   void processObsolescentFields(TypedEntryMap map) {
+    // au_manifest -> au_permission_url
     if (map.containsKey(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT)) {
       map.setMapElement(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 			map.getMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT));
       map.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT);
+    }
+    // au_crawl_depth -> au_refetch_depth
+    if (map.containsKey(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT)) {
+      map.setMapElement(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH,
+			map.getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT));
+      map.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT);
     }
   }
 

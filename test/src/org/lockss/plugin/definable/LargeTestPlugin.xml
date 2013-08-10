@@ -36,7 +36,7 @@
 <!--     <string>org.lockss.plugin.definable.MissingHtmlFilterFactory</string> -->
 <!--   </entry> -->
   <entry>
-    <string>au_crawl_depth</string>
+    <string>au_refetch_depth</string>
     <int>3</int>
   </entry>
   <entry>

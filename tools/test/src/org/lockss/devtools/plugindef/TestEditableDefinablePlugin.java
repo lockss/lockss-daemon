@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.39 2012-07-09 07:50:14 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.40 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -269,23 +269,23 @@ public class TestEditableDefinablePlugin
     assertEquals("version", version, edPlugin.getVersion());
   }
 
-  public void testSetAndRemoveAuCrawlDepth() {
+  public void testSetAndRemoveAuRefetchDepth() {
     int defDepth = 1;
     int expected = 4;
-    int actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
+    int actual = edPlugin.getMap().getInt(KEY_AU_REFETCH_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
-    edPlugin.setAuCrawlDepth(expected);
-    actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
-    assertEquals("crawl depth", expected, actual);
+    edPlugin.setAuRefetchDepth(expected);
+    actual = edPlugin.getMap().getInt(KEY_AU_REFETCH_DEPTH, defDepth);
+    assertEquals("refetch depth", expected, actual);
 
-    edPlugin.removeAuCrawlDepth();
-    actual = edPlugin.getMap().getInt(KEY_AU_CRAWL_DEPTH, defDepth);
+    edPlugin.removeAuRefetchDepth();
+    actual = edPlugin.getMap().getInt(KEY_AU_REFETCH_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
   }
 
-  public void testSetAndRemoveAuCrawlRules() {
+  public void testSetAndRemoveAuRefetchRules() {
     Collection defRules = ListUtil.list();
     Collection expRules = ListUtil.list("rule1", "rule2");
     Collection actRules;

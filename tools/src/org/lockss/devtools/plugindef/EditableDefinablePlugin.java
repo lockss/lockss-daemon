@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.35 2012-03-19 17:54:24 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.36 2013-08-10 20:49:46 tlipkis Exp $
  */
 
 /*
@@ -526,23 +526,23 @@ public class EditableDefinablePlugin extends DefinablePlugin {
     definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
   }
 
-  public void setAuCrawlDepth(int depth) {
+  public void setAuRefetchDepth(int depth) {
     // Default (1) reasonably stable; not saving explicitly unless changed
-    logger.info("Setting the AU crawl depth to: " + depth);
-    definitionMap.putInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH, depth);
+    logger.info("Setting the AU refetch depth to: " + depth);
+    definitionMap.putInt(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH, depth);
   }
 
-  public int getAuCrawlDepth() {
+  public int getAuRefetchDepth() {
     // Default (1) reasonably stable; not saving explicitly unless changed
-    int ret = definitionMap.getInt(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH,
-                                   DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
-    logger.debug("The AU crawl depth is: " + ret);
+    int ret = definitionMap.getInt(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH,
+                                   DefinableArchivalUnit.DEFAULT_AU_REFETCH_DEPTH);
+    logger.debug("The AU refetch depth is: " + ret);
     return ret;
   }
 
-  public void removeAuCrawlDepth() {
-    logger.info("Removing the AU crawl depth");
-    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH);
+  public void removeAuRefetchDepth() {
+    logger.info("Removing the AU refetch depth");
+    definitionMap.removeMapElement(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH);
   }
 
   public void setAuPauseTime(long pausetime) {
