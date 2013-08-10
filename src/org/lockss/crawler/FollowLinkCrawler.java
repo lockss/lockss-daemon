@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.95 2012-11-21 04:09:14 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.95.22.1 2013-08-10 20:39:08 tlipkis Exp $
  */
 
 /*
@@ -61,18 +61,24 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
   public static final String PREFIX = Configuration.PREFIX + "crawler.";
 
+  /** If true, previously-collected pages will be reparsed on each crawl.
+   * (Necessary to ensure fetch failures are retried on the next crawl.) */
   public static final String PARAM_REPARSE_ALL =
     PREFIX + "reparseAll";
   public static final boolean DEFAULT_REPARSE_ALL = true;
 
+  /** If false, The charset specified in response headers will be ignored
+   * when parsing to extract URLs */
   public static final String PARAM_PARSE_USE_CHARSET =
     PREFIX + "parseUseCharset";
   public static final boolean DEFAULT_PARSE_USE_CHARSET = true;
 
+  /** Not implemented */
   public static final String PARAM_PERSIST_CRAWL_LIST =
     PREFIX + "persistCrawlList";
   public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
 
+  /** Size of LRU cache of URLs excluded by the crawl rules */
   public static final String PARAM_EXCLUDED_CACHE_SIZE =
     PREFIX + "excludedCacheSize";
   public static final int DEFAULT_EXCLUDED_CACHE_SIZE = 1000;
@@ -80,31 +86,38 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   public static final String PARAM_REFETCH_DEPTH =
     PREFIX + "refetchDepth.au.<auid>";
 
+  /** The maximum link depth that will be followed */
   public static final String PARAM_MAX_CRAWL_DEPTH =
     PREFIX + "maxCrawlDepth";
-  //testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
+  /** Obsolete */
   public static final String PARAM_CLEAR_DAMAGE_ON_FETCH =
     PREFIX + "clearDamageOnFetch";
   public static final boolean DEFAULT_CLEAR_DAMAGE_ON_FETCH = true;
 
+  /** Obsolete */
   public static final String PARAM_REFETCH_IF_DAMAGED =
     PREFIX + "refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
 
+  /** Enable archive exploding on fetch, for files that match
+   * plugin-supplied patterns. */
   public static final String PARAM_EXPLODE_ARCHIVES =
     PREFIX + "explodeArchives";
   public static final boolean DEFAULT_EXPLODE_ARCHIVES = true;
 
+  /** Store archive files in addition to exploding them */
   public static final String PARAM_STORE_ARCHIVES =
     PREFIX + "storeArchives";
   public static final boolean DEFAULT_STORE_ARCHIVES = false;
 
+  /** Email address to which crawl-end reports will be sent */
   public static final String PARAM_CRAWL_END_REPORT_EMAIL =
     PREFIX + "crawlEndReportEmail";
   public static final String DEFAULT_CRAWL_END_REPORT_EMAIL = null;
 
+  /** Hash algorithm used to report fixity in crawl end report */
   public static final String PARAM_CRAWL_END_REPORT_HASH_ALG =
     PREFIX + "crawlEndReportHashAlg";
   public static final String DEFAULT_CRAWL_END_REPORT_HASH_ALG = "SHA-1";
