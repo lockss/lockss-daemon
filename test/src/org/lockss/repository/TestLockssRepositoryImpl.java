@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.67 2013-07-15 07:31:27 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.67.2.1 2013-08-10 20:38:55 tlipkis Exp $
  */
 
 /*
@@ -166,7 +166,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(repo.hasSuspectUrlVersions(mau));
 
     AuSuspectUrlVersions asuv = repo.getSuspectUrlVersions(mau);
-    assertTrue(repo.hasSuspectUrlVersions(mau));
+    assertFalse(repo.hasSuspectUrlVersions(mau));
     assertNotNull(asuv);
     assertTrue(asuv.isEmpty());
     // Might as well test the result here
@@ -174,17 +174,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(asuv.isSuspect(url1, 1));
     assertFalse(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
+    assertFalse(repo.hasSuspectUrlVersions(mau));
     asuv.markAsSuspect(url1, 1);
     assertFalse(asuv.isEmpty());
     assertFalse(asuv.isSuspect(url1, 0));
     assertTrue(asuv.isSuspect(url1, 1));
     assertFalse(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
+    assertTrue(repo.hasSuspectUrlVersions(mau));
     asuv.markAsSuspect(url2, 0);
     assertFalse(asuv.isSuspect(url1, 0));
     assertTrue(asuv.isSuspect(url1, 1));
     assertTrue(asuv.isSuspect(url2, 0));
     assertFalse(asuv.isSuspect(url2, 1));
+    assertTrue(repo.hasSuspectUrlVersions(mau));
 
     HashResult res1 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
     HashResult res2 = HashResult.make(ByteArray.makeRandomBytes(8), "Al");
