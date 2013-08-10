@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.25.4.1 2013-07-24 18:55:17 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.25.4.2 2013-08-10 20:38:41 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.plugin.*;
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
   protected static Logger log = Logger.getLogger("GenericHasher");
-  protected boolean isTrace = log.isDebug3();
 
   protected CachedUrlSet cus = null;
   protected ArchivalUnit au = null;
@@ -59,6 +58,8 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected boolean isFinished = false;
   protected boolean isAborted = false;
   protected boolean isFiltered = true;
+
+  private boolean isTrace = log.isDebug3();
 
   protected GenericHasher(CachedUrlSet cus) {
     if (cus == null) {

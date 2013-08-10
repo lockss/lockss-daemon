@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.26 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: GenericContentHasher.java,v 1.26.74.1 2013-08-10 20:38:41 tlipkis Exp $
  */
 
 /*
@@ -54,10 +54,10 @@ public class GenericContentHasher extends GenericHasher {
   private byte[] contentBytes = null;
   private int nameIdx = -1;
 
-
   private InputStream is = null;
   private long hashedContentSize = 0;
 
+  private boolean isTrace = log.isDebug3();
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);

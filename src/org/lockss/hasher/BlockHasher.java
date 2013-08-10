@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.27.2.2 2013-08-08 05:45:23 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.27.2.3 2013-08-10 20:38:41 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,7 @@ public class BlockHasher extends GenericHasher {
   String prevSuspectUrl = null;
   String prevMissingUrl = null;
 
+  private boolean isTrace = log.isDebug3();
    
   protected SubstanceChecker subChecker = null;
 
