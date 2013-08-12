@@ -1,0 +1,326 @@
+{
+
+  publisher <
+    name = Mark Allen Group ;
+    info[contract] = 2013 ;
+    info[tester] = 0 ;
+    comment[platform] = Atypon
+  >
+  
+  plugin = needs.plugin
+
+  comment[0] = MA Health
+  
+  {
+    title <
+      name = African Journal of Midwifery and Women's Health ;
+      issn = 1759-7374 ;
+      eissn = 2052-4293 
+    >
+    
+    param[base_url] = http://www.africanjournalofmidwifery.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Cardiac Nursing ;
+      issn = 1749-6403 ;
+      eissn = 2052-2207 
+    >
+    
+    param[base_url] = http://www.cardiac-nursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Community Nursing ;
+      issn = 1462-4753 ;
+      eissn = 2052-2215 
+    >
+    
+    param[base_url] = http://www.bjcn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Healthcare Assistants ;
+      issn = 1753-1586 ;
+      eissn = 2052-4420 
+    >
+    
+    param[base_url] = http://www.healthcare-assistants.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Healthcare Management ;
+      issn = 1358-0574 ;
+      eissn = 1759-7382 
+    >
+    
+    param[base_url] = http://www.bjhcm.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Hospital Medicine ;
+      issn = 1750-8460 ;
+      eissn = 1759-7390 
+    >
+    
+    param[base_url] = http://www.bjhm.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Mental Health Nursing ;
+      issn = 2049-5919 ;
+      eissn = 2052-496X 
+    >
+    
+    param[base_url] = http://www.bjmhn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Midwifery ;
+      issn = 0969-4900 ;
+      eissn = 2052-4307 
+    >
+    
+    param[base_url] = http://www.britishjournalofmidwifery.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Neuroscience Nursing ;
+      issn = 1747-0307 ;
+      eissn = 2052-2800 
+    >
+    
+    param[base_url] = http://www.bjnn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Nursing ;
+      issn = 0966-0461 ;
+      eissn = 2052-2819 
+    >
+    
+    param[base_url] = http://www.britishjournalofnursing.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of School Nursing ;
+      issn = 1752-2803 ;
+      eissn = 2052-2827 
+    >
+    
+    param[base_url] = http://www.school-nursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Wellbeing ;
+      issn = 2043-9393 
+    >
+    
+    param[base_url] = http://www.britishjournalofwellbeing.com/
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Dental Nursing ;
+      issn = 1749-6799 ;
+      eissn = 1759-7404
+       
+    >
+    
+    param[base_url] = http://www.dental-nursing.co.uk/
+    
+  }
+
+  {
+    title <
+      name = Gastrointestinal Nursing ;
+      issn = 1479-5248 ;
+      eissn = 2052-2835 
+    >
+    
+    param[base_url] = http://www.gastrointestinalnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Independent Nurse ;
+      issn = 1747-9800 ;
+      eissn = 2052-2843 
+    >
+    
+    param[base_url] = http://www.independentnurse.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Ophthalmic Practice ;
+      issn = 2044-5504 ;
+      eissn = 2052-2851 
+    >
+    
+    param[base_url] = http://www.ijop.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Palliative Nursing ;
+      issn = 1357-6321 ;
+      eissn = 2052-286X 
+    >
+    
+    param[base_url] = http://www.ijpn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Therapy and Rehabilitation ;
+      issn = 1741-1645 ;
+      eissn = 1759-779X 
+    >
+    
+    param[base_url] = http://www.ijtr.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Paramedic Practice ;
+      eissn = 2052-4889 
+    >
+    
+    param[base_url] = http://www.internationaljpp.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Aesthetic Nursing ;
+      issn = 2050-3717 ;
+      eissn = 2052-2878 
+    >
+    
+    param[base_url] = http://www.aestheticnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Children's and Young People's Nursing ;
+      issn = 1753-1594 ;
+      eissn = 2052-2886 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Health Visiting ;
+      issn = 2050-8719 ;
+      eissn = 2052-2908 
+    >
+    
+    param[base_url] = http://www.journalofhealthvisiting.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Paramedic Practice ;
+      issn = 1759-1376 ;
+      eissn = 2041-9457 
+    >
+    
+    param[base_url] = http://www.paramedicpractice.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Renal Nursing ;
+      issn = 2041-1448 ;
+      eissn = 2052-2894 
+    >
+    
+    param[base_url] = http://www.renalnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Wound Care ;
+      issn = 0969-0700 ;
+      eissn = 2052-2916 
+    >
+    
+    param[base_url] = http://www.journalofwoundcare.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Nurse Prescribing ;
+      issn = 1479-9189 ;
+      eissn = 2052-2924 
+    >
+    
+    param[base_url] = http://www.nurseprescribing.com/
+
+    
+  }
+ 
+}
