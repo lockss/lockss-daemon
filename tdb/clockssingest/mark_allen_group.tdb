@@ -323,4 +323,92 @@
     
   }
  
+  {
+    title <
+      name = Nursing and Residential Care ;
+      issn = 1465-9301 ;
+      eissn = 2052-2932 
+    >
+    
+    param[base_url] = http://www.nursingresidentialcare.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Practice Nursing ;
+      issn = 0964-9271 ;
+      eissn = 2052-2940 
+    >
+    
+    param[base_url] = http://www.practicenursing.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Companion Animal ;
+      issn = 0964-9271 ;
+      eissn = 2052-2940 
+    >
+    
+    param[base_url] = http://www.ukvet.co.uk/view/caHome.html
+    comment[0] = need to update base_url
+
+    
+  }
+ 
+  {
+    title <
+      name = Equine Health ;
+      issn = 2047-9867 ;
+      eissn = 2052-2967 
+    >
+    
+    param[base_url] = http://www.equinehealthmagazine.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Livestock ;
+      issn = 2053-0862 ;
+      eissn = 2053-0870 
+    >
+    
+    param[base_url] = http://www.ukvet.co.uk/view/lsHome.html
+    comment[0] = need to update base_url
+
+    
+  }
+ 
+  {
+    title <
+      name = The Veterinary Nurse ;
+      issn = 2044-0065 ;
+      eissn = 2052-2959 
+    >
+    
+    param[base_url] = http://www.theveterinarynurse.com/
+
+    
+  }
+
+  {
+    title <
+      name = WoundCare (supplement of British Journal of Community Nursing) ;
+      issn = 1748-8710 ;
+      eissn = 2052-5311 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+ 
+ 
 }
