@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.4 2013-05-30 22:56:04 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.5 2013-08-13 21:39:25 alexandraohlson Exp $
  */
 
 /*
@@ -34,8 +34,11 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.InputStream;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -55,8 +58,23 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
         //Ads from the publisher
         HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
-        // links to references articles might be under taylor and francis
+        // links to T&F articles go directly to other article
         HtmlNodeFilters.tagWithAttribute("div",  "id", "referencesPanel"),
+        // If cited by other T&F could go directly to other article 
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "citationsPanel"),     
+        
+        // on a Corrigendum abstract or full text page, there will be a link to "Original Article"
+        // and on the Original Article page there will be a link back to the "Corrigendum"
+        // No obvious attributes, so just look for the text
+        new NodeFilter() {
+          @Override public boolean accept(Node node) {
+            if (!(node instanceof LinkTag)) return false;
+            String allText = ((CompositeTag)node).toPlainTextString();
+            //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
+            return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") 
+                || allText.matches("(?is).*Correction.*"));
+          }
+        },
     };
     return new HtmlFilterInputStream(in,
                                      encoding,

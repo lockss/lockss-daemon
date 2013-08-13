@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisUrlNormalizer.java,v 1.1 2012-05-05 14:00:54 pgust Exp $
+ * $Id: TestTaylorAndFrancisUrlNormalizer.java,v 1.2 2013-08-13 21:39:26 alexandraohlson Exp $
  */
 
 /*
@@ -66,6 +66,35 @@ public class TestTaylorAndFrancisUrlNormalizer extends LockssTestCase {
                  normalizer.normalizeUrl("https://www.example.com//foo", null));
     assertEquals("ftp://www.example.com/foo",
                  normalizer.normalizeUrl("ftp://www.example.com//foo", null));
+    
+    // Test normalization for downloaded citation form URLS
+        assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=refworks&include=ref",
+            normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=refworks&include=ref", null));
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=bibtex&include=ref",
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=bibtex&include=ref", null));
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=ref",
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris&include=ref", null));
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=cit",
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris&include=cit", null));
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=abs",
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris&include=abs", null));
+
+    //versions I haven't actually seen show up, but let's be proactive    
+    //no dbPub
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=cit",  
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris&include=cit", null));
+    //direct before dbPub
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=cit",  
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?direct=true&dbPub=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris&include=cit", null));
+    //no format
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=cit",  
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?dbPub=false&direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&include=cit", null));
+    //no include
+    assertEquals("http://www.example.com/action/downloadCitation?doi=10.1080%2F19419899.2010.534489&format=ris&include=cit",  
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?direct=true&doi=10.1080%2F19419899.2010.534489&downloadFileName=tandf_rpse202_159&format=ris", null));
+    //neither format=ris&include=cit 
+    assertEquals("http://www.example.com/action/downloadCitation?doi=11.1111%2F12345&format=ris&include=cit",
+        normalizer.normalizeUrl("http://www.example.com/action/downloadCitation?doi=11.1111%2F12345", null));
   }
   
 

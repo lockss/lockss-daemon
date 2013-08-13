@@ -34,6 +34,8 @@ import java.util.List;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.lockss.config.TdbAu;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
@@ -41,9 +43,11 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.TypedEntryMap;
 
 
 public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -109,18 +113,18 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
 
       for (int j = 0; j < cookedIdentifierList.size(); j++) {
 
-    	  // If our dc.Identifier field has a comma in it, its content is a comma-delimited list of
-    	  // the journal title, volume, issue, and page range associated with the article.
-    	  // The journal title itself may contain commas, so the list is parsed backwards and all content
-    	  // before ", Vol." is assumed to be part of the journal title.
+        // If our dc.Identifier field has a comma in it, its content is a comma-delimited list of
+        // the journal title, volume, issue, and page range associated with the article.
+        // The journal title itself may contain commas, so the list is parsed backwards and all content
+        // before ", Vol." is assumed to be part of the journal title.
         // Cannot assume that the split is ", " (with space), so split on "," only and remove leading spaces later
 
-// This whole thing isn't ideal.  We're counting on the metadata always having standard formatting
+        // This whole thing isn't ideal.  We're counting on the metadata always having standard formatting
         // not to mention that the doi could have a comma in it...
         // While I'll go with the comma split, I am adding regexp checking to try to 
         // find stuff wherever possible. Ultimately there is only so much we can do - for example when a title is missing entirely
         // Here are some real examples (sanitized to protect the innocent):
-        
+
         // comma in title
         //<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"One, Two &amp; Three, Vol. 19, No. 6, December 2010, pp. 555-567\"></meta>"                
         // no comma after title
@@ -199,8 +203,8 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     		  if ( !journalTitle.isEmpty()) am.put(MetadataField.FIELD_JOURNAL_TITLE, journalTitle);
     		  if ( !volume.isEmpty()) am.put(MetadataField.FIELD_VOLUME, volume);
     		  if ( !issue.isEmpty()) am.put(MetadataField.FIELD_ISSUE, issue);
-    		  if ( !spage.isEmpty()) am.put(MetadataField.FIELD_START_PAGE, spage);
-    		  if ( !epage.isEmpty()) am.put(MetadataField.FIELD_END_PAGE, epage);
+                  if ( !spage.isEmpty()) am.put(MetadataField.FIELD_START_PAGE, spage);
+                  if ( !epage.isEmpty()) am.put(MetadataField.FIELD_END_PAGE, epage);
     	  }
     	  else if (MetadataUtil.isDoi(cookedIdentifierList.get(j))) {
     		  doi = cookedIdentifierList.get(j);
@@ -213,7 +217,44 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       // once available, we'll use FIELD_PUBLISHER_IMPRINT for the sub publisher (eg. Routledge, Garland, etc)
       am.put(MetadataField.FIELD_PUBLISHER, "Taylor & Francis Group");
       am.put(MetadataField.DC_FIELD_PUBLISHER, "Taylor & Francis Group");
-      emitter.emitMetadata(cu, am);
+      
+      /* BIG IMPORTANT COMMENT */
+      /* Taylor & Francis has opaque URLs and in the event of accidental overcrawling, an article could end
+       * up getting collected that isn't actually in this AU. 
+       * Verify the metadata against the known parameters of the AU to make sure that we don't emit metadata
+       * for any articles that shouldn't be in this AU.  It's a final last-ditch protective check.
+       * If I can't get any valid metadata then don't emit because we can't verify it is in the AU
+       */
+      Boolean definitelyInAU = true;
+      
+      ArchivalUnit TandF_au = cu.getArchivalUnit();
+      // Get the AU's volume name from the AU properties. This must be set
+      //this is temporary for debugging
+      TypedEntryMap tfProps = TandF_au.getProperties();
+      String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+      //String AU_volume = TandF_au.getProperties().getString(ConfigParamDescr.VOLUME_NAME.getKey());
+      // Get the AU's journal_title from the tdbdonfig portion of the AU
+      TdbAu tf_tau = TandF_au.getTdbAu();
+      String AU_journal_title = (tf_tau == null) ? null : tf_tau.getJournalTitle();
+      
+      // If we couldn't extract journal title or volume from metadata, we can't verify this is in the correct AU
+      definitelyInAU = !( journalTitle.isEmpty() && volume.isEmpty() );
+      // If we're still good and if we got a journal title, compare it to the AU journal title
+      if (definitelyInAU && !(journalTitle.isEmpty())) {
+        definitelyInAU =  ( (AU_journal_title != null) && (AU_journal_title.equals(journalTitle)));
+      }
+      // If we're still good and if we got a volume name, compare it to the AU volume name
+      if (definitelyInAU && !(volume.isEmpty())) {
+        definitelyInAU =  ( (AU_volume != null) && (AU_volume.equals(volume)));
+      }
+      if (definitelyInAU) {
+        // Well we might as well pick up and fill in this since we're already peeking in the AU
+        String AU_issn = (tf_tau == null) ? null : tf_tau.getIssn();
+        String AU_eissn = (tf_tau == null) ? null : tf_tau.getEissn();
+        if ( (AU_issn != null) && !AU_issn.isEmpty()) am.put(MetadataField.FIELD_ISSN, AU_issn);
+        if ( (AU_eissn != null) && !AU_eissn.isEmpty()) am.put(MetadataField.FIELD_EISSN, AU_eissn);
+        emitter.emitMetadata(cu, am);
+      }
     }
 
     private void TrimWhitespace(ArticleMetadata am, MetadataField md) {

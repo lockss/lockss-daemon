@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.10 2012-11-29 01:19:33 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.11 2013-08-13 21:39:25 alexandraohlson Exp $
  */
 
 /*
@@ -81,6 +81,20 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "hd"),
         // Footer contains copyright year and other potentially variable items
         HtmlNodeFilters.tagWithAttribute("div", "id", "ft"),
+        
+        // Maximal filtering. Take out non-content sections proactively
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "cookieBanner"),//cookie warning
+        HtmlNodeFilters.tagWithAttribute("div", "id", "primarySubjects"),//top search are
+        HtmlNodeFilters.tagWithAttribute("div", "id", "secondarySubjects"), //bottom affiliations
+        HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit1"), //left column
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit3"), //right column 
+        
+        // Google translate related stuff - RU 4642 (not on all browsers)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "goog-gt-tt"),
+        
+        // what follows here may no longer be all needed due to the maximal filtering - but leave it in
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // Contains a cookie or session ID

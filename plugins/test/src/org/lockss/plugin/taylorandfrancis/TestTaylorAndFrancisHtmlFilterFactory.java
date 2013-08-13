@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.9 2013-05-30 22:56:04 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.10 2013-08-13 21:39:26 alexandraohlson Exp $
  */
 
 /*
@@ -128,6 +128,38 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "<div class=\"tabsPanel hide\" id=\"permissionsPanel\">" +
             "" +
             "</div>DONE";
+    
+    // unmarked links to corrigendum <--> original article on abstract and full text pages
+    private static final String articleCorrigendumListing =
+        "<div class=\"access\">" +
+            "<ul class=\"clear\">" +
+            "<li><a class=\"txt\" href=\"/doi/full/10.1080/19325611003733229\">View full text</a></li>" +
+            "<li><a class=\"pdf\" target=\"_blank\" href=\"/doi/pdf/10.1080/19325611003733229\">Download full text</a></li>" +
+            "<li><a href=\"/doi/abs/10.1080/19325610903015661\"><nobr>Original Article</nobr></a></li>" +
+            "</ul>" +
+            "</div>" +
+            "<div class=\"access\">" +
+            "<ul class=\"clear\">" +
+            "<li><a class=\"txt\" href=\"/doi/full/10.1080/19325610903015661\">View full text</a></li>" +
+            "<li><a class=\"pdf\" target=\"_blank\" href=\"/doi/pdf/10.1080/19325610903015661\">Download full text</a></li>" +
+            "<li><a href=\"/doi/abs/10.1080/19325611003733229\"><nobr>Correction</nobr></a></li>" +
+            "</ul>" +
+            "</div>";
+    private static final String articleCorrigendumFiltered = 
+        "<div class=\"access\">" +
+            "<ul class=\"clear\">" +
+            "<li><a class=\"txt\" href=\"/doi/full/10.1080/19325611003733229\">View full text</a></li>" +
+            "<li><a class=\"pdf\" target=\"_blank\" href=\"/doi/pdf/10.1080/19325611003733229\">Download full text</a></li>" +
+            "<li></li>" +
+            "</ul>" +
+            "</div>" +
+            "<div class=\"access\">" +
+            "<ul class=\"clear\">" +
+            "<li><a class=\"txt\" href=\"/doi/full/10.1080/19325610903015661\">View full text</a></li>" +
+            "<li><a class=\"pdf\" target=\"_blank\" href=\"/doi/pdf/10.1080/19325610903015661\">Download full text</a></li>" +
+            "<li></li>" +
+            "</ul>" +
+            "</div>";
 
     public void setUp() throws Exception {
       super.setUp();
@@ -141,6 +173,15 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                        Constants.DEFAULT_ENCODING);
       assertEquals(StringUtil.fromInputStream(actIn),
                    referencesFiltered);
+    }
+    
+    public void testCorrigendumFiltering() throws Exception {
+      InputStream actIn =
+        fact.createFilteredInputStream(mau,
+                                       new StringInputStream(articleCorrigendumListing),
+                                       Constants.DEFAULT_ENCODING);
+      assertEquals(StringUtil.fromInputStream(actIn),
+                   articleCorrigendumFiltered);
     }
     
   }
@@ -217,6 +258,95 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     // Trailing space is due to the WhiteSpaceFilter
     private static final String javascriptHtmlHashFiltered = 
         "<noscript> onversion/1070139620/?label=_s1RCLTo-QEQ5JGk_gM&amp;amp;guid=ON&amp;amp; </noscript> ";
+    
+    private static final String googleStuffHtml = 
+        "<td colspan=\"1\" style=\"border-style: none\">" +
+            "<div>" +
+            "<!-- placeholder id=null, description=abstract-googleTranslate -->" +
+            "<div id=\"google_translate_element\">" +
+            "<div class=\"skiptranslate goog-te-gadget\" dir=\"ltr\" style=\"\">" +
+            "<div id=\":0.targetLanguage\" style=\"white-space: nowrap; \" class=\"goog-te-gadget-simple\">" +
+            "</div></div></div>" +
+            "<script type=\"text/javascript\">" +
+            "function googleTranslateElementInit() {" +
+            "  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'foo'}, 'google_translate_element');" +
+            "}" +
+            "</script>" +
+            "<script type=\"text/javascript\" src=\"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit\"></script>" +
+            "<a href=\"/action/clickThrough?id=blah\">Translator&nbsp;disclaimer</a>" +
+            "</div>" +
+            "<div id=\"goog-gt-tt\" class=\"skiptranslate\" dir=\"ltr\">" +
+            "<div style=\"padding: 8px;\">" +
+            "<div>" +
+            "<div class=\"logo\"><img src=\"http://www.foo.png\" width=\"20\" height=\"20\"></div>" +
+            "<iframe style=\"width:348px;height:1.1em;float:right;\" id=\"signin_status\" border=\"0\" frameborder=\"0\" " +
+            "src=\"//translate.google.com/translate/tminfo?continue=http%3A%2F%2Ftranslate.google.com%2Fmanager%2Fwebsite%2Fstatic_files%2Fhtml%2Freload.html\"></iframe>" +
+            "</div></div>" +
+            "<div class=\"top\" style=\"padding: 8px; float: left; width: 100%;\"><h1 class=\"title gray\">Original text</h1></div>" +
+            "<div class=\"middle\" style=\"padding: 8px;\">" +
+            "<div class=\"original-text\"></div></div>" +
+            "<div class=\"bottom\" style=\"padding: 8px;\">" +
+            "<div class=\"activity-links\"><span class=\"activity-link\">Contribute a better translation</span><span class=\"activity-link\"></span></div>" +
+            "<div class=\"started-activity-container\"><hr style=\"color: #CCC; background-color: #CCC; height: 1px; border: none;\">" +
+            "<div class=\"activity-root\"></div></div></div>" +
+            "<div class=\"status-message\" style=\"display: none; \"></div>" +
+            "</div>" +
+            "</td>";
+    private static final String googleStuffFiltered = 
+        "<td colspan=\"1\" style=\"border-style: none\">" +
+            "<div>" +
+            "<a href=\"/action/clickThrough?id=blah\">Translator&nbsp;disclaimer</a>" +
+            "</div>" +
+            "</td>";
+    
+    private static final String socialMediaHtml = 
+        "<div class=\"social clear\">" +
+            "<ul>" +
+            " <li class=\"share\">" +
+            "   </li>" +
+            "   <li class=\"add\">" +
+            "   <a href=\"/action/addFavoritePublication?doi=10.1080%2Fblah\">" +
+            "     Add to shortlist" +
+            "   </a>" +
+            "    </li>" +
+            "    <li class=\"link\">" +
+            "    <a href=\"#\" class=\"permaLink dropDownLabel\">" +
+            "    Link" +
+            "    </a>" +
+            "    <div class=\"dropDown dropDownAlt\">" +
+            "    <div class=\"bd\">" +
+            "    <h6>Permalink</h6>" +
+            "    <p>" +
+            "     <a href=\"http://dx.doi.org/10.1080/blah\" class=\"url\">" +
+            "    http://dx.doi.org/10.1080/blah" +
+            "    </a>" +
+            "    </p>" +
+            "    </div>" +
+            "    <div class=\"ft\"></div>" +
+            "    <div class=\"shadow\"></div>" +
+            "    </div>" +
+            "    </li>" +
+            "    <li class=\"cite\">" +
+            "    <a href=\"/action/showCitFormats?doi=10.1080%2Fblah\">" +
+            "    Download Citation" +
+            "    </a>" +
+            "   </li>" +
+            "  </ul>" +
+            "  <ul class=\"recommend\">" +
+            "  <li class=\"rec\">" +
+            "        Recommend to:" +
+            "    </li>" +
+            "  <li class=\"friend last\">" +
+            "    <a href=\"/action/showMailPage?href=%2Fdoi%2Fabs%2F10.1080%2Fblah&amp;title=Glorious+Adventure&amp;type=article&amp;doi=10.1080%2Fblah\">" +
+            "     A friend" +
+            "    </a>" +
+            "   </li>" +
+            "  </ul>" +
+            "</div>KEEP ME";
+
+    private static final String socialMediaFiltered = 
+        "KEEP ME";
+
 
          
     
@@ -495,6 +625,19 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals("<strong>Version of record first published:</strong>",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream("<strong>Version of record first published:</strong>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testGoogleStuff() throws Exception {
+      assertEquals(googleStuffFiltered,
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream(googleStuffHtml),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    public void testSocialMedia() throws Exception {
+      assertEquals(socialMediaFiltered,
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream(socialMediaHtml),
                                                                              Constants.DEFAULT_ENCODING)));
     }
   

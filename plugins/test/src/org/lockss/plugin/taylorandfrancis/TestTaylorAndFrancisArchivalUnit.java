@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.6 2013-04-29 22:46:46 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.7 2013-08-13 21:39:26 alexandraohlson Exp $
  */
 
 /*
@@ -163,6 +163,10 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"toc/rabr20/39/1", true, tfAu, cus);
     // wrong volume
     shouldCacheTest(ROOT_URL+"toc/rabr20/12/index.html", false, tfAu, cus);
+    // a few special crawl rules in BaseAtypon specific to T&F
+    shouldCacheTest(ROOT_URL+"doi/abs/10.1111/ABC.2010.XYZ?tab=permissions", false, tfAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/abs/10.1111/ABC.2010.XYZ", true, tfAu, cus);
+    shouldCacheTest(ROOT_URL+"imgJawr/cb1468962619/templates/jsp/_style2/_tandf/images/favicon.png", false, tfAu, cus);
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, tfAu, cus);
     // other sites

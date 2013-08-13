@@ -8,64 +8,24 @@
     <string>org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>35</string>
+  </entry>  
+  <entry>
     <string>plugin_name</string>
     <string>Taylor &amp; Francis Plugin (CLOCKSS)</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>34</string>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</string>
   </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>35</string>
+  </entry>  
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Metadata</string>
-	<string>12</string>
-      </entry>
-      <entry>
-        <string>Poll</string>
-	<string>15</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-	<string>1</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
   </entry>
   <entry>
     <string>au_name</string>
@@ -76,108 +36,10 @@
     <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>2,&quot;^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$&quot;, base_url</string>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(v_[0-9]+)?$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sclockss/%s/%s/index\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
-      <string>2,&quot;^%sdoi/(citedby/|.*\?tab=permissions)&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/&quot;, base_url</string>
-      <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>&quot;^%sdoi/(full|pdf)/&quot;, base_url</string>
-    </list>
-  </entry>
-  <!--  Set up different windows with different crawl rate; in place of au_def_pause_time -->
-  <entry>
-    <string>au_rate_limiter_info</string>
-    <org.lockss.plugin.RateLimiterInfo>
-    <rate>1/6s</rate>
-    <cond>
-	<entry>
-	  <org.lockss.daemon.CrawlWindows-Daily>
-	    <from>12:00</from>
-	    <to>24:00</to>
-	    <timeZoneId>America/Los_Angeles</timeZoneId>
-	  </org.lockss.daemon.CrawlWindows-Daily>
-	  <org.lockss.plugin.RateLimiterInfo>
-	    <rate>1/2s</rate>
-	  </org.lockss.plugin.RateLimiterInfo>
-	</entry>
-    <entry>
-	  <org.lockss.daemon.CrawlWindows-Daily>
-	    <from>24:00</from>
-	    <to>12:00</to>
-	    <timeZoneId>America/Los_Angeles</timeZoneId>
-	  </org.lockss.daemon.CrawlWindows-Daily>
-	  <org.lockss.plugin.RateLimiterInfo>
-	    <rate>1/6s</rate>
-    </org.lockss.plugin.RateLimiterInfo>
-	</entry>
-   </cond>
-  </org.lockss.plugin.RateLimiterInfo>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-    <entry>
-      <string>au_title</string>
-      <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
-    </entry>
-    </map>
-  </entry>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>  
   <entry>
     <string>clockss_override</string>
     <map>

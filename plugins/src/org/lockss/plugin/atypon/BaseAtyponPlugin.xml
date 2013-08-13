@@ -75,6 +75,7 @@
     - do not need to explicitly include the start_url
     - include the TOC using the journal__id and volume_name to keep from leaking in to other volumes
     - exclude the usual traps
+    - exclude the article with the permission tab. It's redundant
     - include the article in all possible formats - which live under non-deterministic DOI path; do not terminate, could go deeper
     - use basic DOI pattern, to whit: PREFIX = one or more digits and dots [0-9.]+; SUFFIX = not a slash
     - The following may not be needed by all Atypon publishers, but won't hurt:
@@ -83,11 +84,12 @@
     massmedical and t&f have a number of additions 
      -->
     <list>
-      <string>2,&quot;^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$&quot;, base_url</string>
+      <string>2,"^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", base_url</string>
       <string>1,"^https?://%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url_host</string>
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>
       <string>2,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[-.9]+$", base_url</string>
+      <string>2,"^%sdoi/.*\?tab=permissions", base_url</string>      
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[^/]+", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup|downloadCitation)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>
     </list>

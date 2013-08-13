@@ -1,0 +1,40 @@
+{
+  publisher <
+    name = name = Taylor & Francis
+  >
+
+  plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin
+  param[base_url] = http://www.tandfonline.com/
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = Life, Pain & Death ;
+      issn = 1965-1234 ;
+      eissn = 1965-4321 ;
+      issnl = 1965-0000
+    >
+
+    param[journal_id] = lpd 
+
+    au < released ; 2010 ; Life, Pain & Death Volume 19 ; 19 >
+    au < released ; 1009 ; Life, Pain & Death Volume 18 ; 18 >
+    au < released ; 1992 ; Life, Pain & Death Volume 4 ; 4 > 
+  }
+  
+    {
+  
+    title <
+      name = Alternate TandF Journal ;
+      issn = 1800-5555 ;
+      eissn = 1801-6666 ;
+      issnl = 1965-0000
+    >
+
+    param[journal_id] = atfj 
+
+    au < released ; 1998 ; Alternate TandF Journal Volume 4 ; 4 >    
+  }
+
+}

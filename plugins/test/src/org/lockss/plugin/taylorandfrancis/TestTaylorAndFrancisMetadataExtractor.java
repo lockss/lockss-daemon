@@ -30,89 +30,116 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.simulated.*;
 
-/**
- * One of the articles used to get the HTML source for this plugin is:
- * http://www.tandfonline.com/doi/full/10.1080/09639284.2010.501577
+/*
+ * 
+ * Testing T&F Metadata extraction is complicated because we have to verify whether the CU being extracted
+ * by verifying its retrieved metadata against the AU it's part of (to avoid emitting data for overcollected
+ * CU's due to crawl leakage). 
+ * 
+ * Each test AU has a corresponding set of information in test_tandf_setup.xml tdb file
+ * The AU configuration in this file and the information in the tdb file must stay in sync
  *
  */
 public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
 
   static Logger log = Logger.getLogger("TestTaylorAndFrancisMetadataExtractor");
 
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  private static String BASE_URL = "http://www.tandfonline.com/";  
+
+  // setup for TEST AU#1  
+  private ArchivalUnit tfau1;  
+  private static final String AU1_NAME = "Life, Pain & Death Volume 19";
+  // for verification
+  static String goodUrl1 = "http://www.tandfonline.com/toc/lpd/19/6";
+  static String goodJournalTitle = "Life, Pain & Death";
+  static String goodVolume = "19";
+  static String goodISSN = "1965-1234";
+  static String goodEISSN = "1965-4321";
+  static String goodJID = "lpd";
+  
+  //setup for TEST AU#2
+  private ArchivalUnit tfau2;  
+  private static final String AU2_NAME = "Alternate TandF Journal Volume 4";  
+  // for verification
+  static String goodUrl2 = "http://www.tandfonline.com/toc/atfj/4/6";
+  static String alternateJournalTitle = "Alternate TandF Journal";
+  static String alternateVolume = "4";
+  static String alternateISSN = "1800-5555";
+  static String alternateEISSN = "1801-6666";
+  static String alternateJID = "atfj";
+
+  //setup for TEST AU#3
+  private ArchivalUnit tfau3;
+  private static final String AU3_NAME = "Life, Pain & Death Volume 4";  
+  // for verification - same as AU#1 but different volume
+  static String goodUrl3 = "http://www.tandfonline.com/toc/lpd/4/6";
+  static String thirdJournalTitle = "Life, Pain & Death";
+  static String thirdVolume = "4";
+  static String thirdISSN = "1800-5555";
+  static String thirdEISSN = "1801-6666";
+  static String thirdJID = "lpd";
+  
   private MockLockssDaemon theDaemon;
-  private SimulatedArchivalUnit sau; // Simulated AU to generate content
-  private ArchivalUnit tafau; // Taylor and Francis AU
-  private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
+  
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin"; // XML file in org.lockss.plugin.taylorandfrancis package
-
-  private static String BASE_URL = "http://www.tandfonline.com/";
-  private static String SIM_ROOT = BASE_URL + "toc/tafjn/"; // Simulated journal ID: "Taylor and Francis Journal"
-
+  /* (non-Javadoc)
+   * @see org.lockss.test.LockssTestCase#setUp()
+   */
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();
-
+    setUpDiskSpace(); 
+    
+    // get the daemon up and going for testing
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
+    
+    ConfigurationUtil.addFromUrl(getResource("test_tandf_setup.xml"));
+    Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
 
-    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,	simAuConfig(tempDirPath));
-    tafau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, taylorAndFrancisAuConfig());
+    TdbAu tau1 = tdb.getTdbAusLikeName(AU1_NAME).get(0);
+    assertNotNull("Didn't find named TdbAu: " + AU1_NAME, tau1);
+    tfau1 = PluginTestUtil.createAndStartAu(tau1);
+    assertNotNull(tfau1);
+    TypedEntryMap auConfig =  tfau1.getProperties();
+    assertEquals(BASE_URL, auConfig.getString(BASE_URL_KEY));
+    
+    TdbAu tau2 = tdb.getTdbAusLikeName(AU2_NAME).get(0);
+    assertNotNull("Didn't find named TdbAu: " + AU2_NAME, tau2);
+    tfau2 = PluginTestUtil.createAndStartAu(tau2);
+    assertNotNull(tfau2);
+    
+    TdbAu tau3 = tdb.getTdbAusLikeName(AU3_NAME).get(0);
+    assertNotNull("Didn't find named TdbAu: " + AU3_NAME, tau3);
+    tfau3 = PluginTestUtil.createAndStartAu(tau3);
+    assertNotNull(tfau3);
   }
 
   public void tearDown() throws Exception {
-    sau.deleteContentTree();
+    //sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
-  Configuration simAuConfig(String rootPath) {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("root", rootPath);
-    conf.put("base_url", SIM_ROOT);
-    conf.put("depth", "2");
-    conf.put("branch", "3");
-    conf.put("numFiles", "7");
-    conf.put("fileTypes",""	+ (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
-    conf.put("default_article_mime_type", "application/html");
-    return conf;
-  }
-
-  /**
-   * Configuration method. 
-   * @return
-   */
-  Configuration taylorAndFrancisAuConfig() {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("base_url", BASE_URL);
-    conf.put("volume_name", "19");
-    conf.put("journal_id", "tafjn");
-    return conf;
-  }
-
   // the metadata that should be extracted
   String goodDOI = "10.1080/09639284.2010.501577";
-  String goodVolume = "19";
+  String goodDOI_pt1 = "10.1080";
+  String goodDOI_pt2 = "09639284.2010.501577";
   String goodIssue = "6";
   String goodStartPage = "555";
-  String goodISSN = "1234-5678";
   String goodAuthor = "Melvin Harbison";
   String[] goodAuthors = new String[] {"Melvin Harbison", "Desmond McCallan"};
   String goodSubject = "food and culture; alternative treatment approaches; rhyme therapy"; // Cardinality of dc.subject is single even though content is identical to the keywords field
@@ -126,14 +153,16 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
   String goodCoverage = "world";
   String goodSource = "http://dx.doi.org/10.1080/09639284.2010.501577";
   String goodArticleTitle = "Something Terribly Interesting: A Stirring Report";
-  String[] goodKeywords = new String[] {"food and culture", "alternative treatment approaches", "rhyme therapy"};
-  String goodJournalTitle = "Life, Pain & Death";
+  String[] goodKeywords = new String[] {"food and culture", "alternative treatment approaches", "rhyme therapy"}; 
   String goodAbsUrl = "http://www.tandfonline.com/doi/abs/10.1080/09639284.2010.501577";
   String goodPdfUrl = "http://www.tandfonline.com/doi/pdf/10.1080/09639284.2010.501577";
   String goodHtmUrl = "http://www.tandfonline.com/doi/full/10.1080/09639284.2010.501577";
+  
+  /* THIS SECTION TESTS THE HTML TAG EXTRACTION */
 
+  // Maps to TFAU1
   // a chunk of html source code from the publisher's site from where the metadata should be extracted
-  String goodContent = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>\n"
+  String goodContentAU1 = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>\n"
           + "<title>Taylor &amp; Francis Online  :: Something Terribly Interesting: A Stirring Report - Research and Results - Volume 19,\nIssue 6 </title>\n"
           + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n"
           + "<meta name=\"robots\" content=\"noarchive,nofollow\" />\n"
@@ -154,26 +183,20 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
           + "<meta name=\"dc.Coverage\" content=\"" + goodCoverage + "\"></meta>"
           + "<meta name=\"keywords\" content=\"" + goodKeywords[0] + "; " + goodKeywords[1] + "; " + goodKeywords[2] + "\"></meta>";
   
-  
   /**
    * Method that creates a simulated Cached URL from the source code provided by the goodContent String.
    * It then asserts that the metadata extracted with TaylorAndFrancisHtmlMetadataExtractorFactory
    * match the metadata in the source code. 
    * @throws Exception
    */
-    public void testExtractFromGoodContent() throws Exception {
-    String url = "http://www.tandfonline.com/toc/tafjn/19/6";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(goodContent);
-    cu.setContentSize(goodContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    public void testExtractFromGoodContentAU1() throws Exception {
+    List<ArticleMetadata> mdlist;
+    
+    mdlist = setupContentForAU(tfau1, goodUrl1, goodContentAU1);
+    
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-
     assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
@@ -194,6 +217,7 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals(goodSource, md.get(MetadataField.DC_FIELD_SOURCE));
     assertEquals(Arrays.asList(goodKeywords), md.getList(MetadataField.FIELD_KEYWORDS));
   }
+  
 
   // a chunk of HTML source code from where the TaylorAndFrancisHtmlMetadataExtractorFactory should NOT be able to extract metadata
   String badContent = "<html><head><title>" 
@@ -204,61 +228,39 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     + "  <div id=\"issn\">"
     + "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
     + goodISSN + " </div>\n";
-
-  /**
-   * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
-   * the TaylorAndFrancisHtmlMetadataExtractorFactory as the source code is broken.
-   * @throws Exception
-   */
+ 
   public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(badContent);
-    cu.setContentSize(badContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertNull(md.get(MetadataField.FIELD_DOI));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
-    assertNull(md.get(MetadataField.FIELD_START_PAGE));
-    assertNull(md.get(MetadataField.FIELD_ISSN));
-
-     //the meta info was outside the head section - parser extractor won't get it 
-    //assertEquals(1, md.rawSize());
-   // assertEquals("bar", md.getRaw("foo")); 
+    List<ArticleMetadata> mdlist;
+    
+    mdlist = setupContentForAU(tfau1, goodUrl1, badContent);
+    // nothing was emitted because we couldn't get enough metadata to verify it belongs in this au
+    assertEmpty(mdlist);
   }	
-  
+
+  // Maps to TFAU3
   String encodedContent = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>\n"
       + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n"
       + "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\""
-      + "\u201c" + "BOO" + "\u201d" + ", Vol. 19, No. 6, December 2010, pp. 555" + "\u2013" + "567\"></meta>"
+      + "\u201c" + goodJournalTitle + "\u201d" + ", Vol. 4, No. 6, December 2010, pp. 555" + "\u2013" + "567\"></meta>"
       + "<meta name=\"dc.Title\" content=\""
-      + "\u201c" + "BOO" + "\u201d" + "\"></meta>"      
+      + "\u201c" + goodJournalTitle + "\u201d" + "\"></meta>"      
       + "</head>";
   
+  // Because the journal_title in the metadata doesn't match the journal title in the TDB for this AU, it will not emit.
   public void testEncodedContent() throws Exception {
-    String goodTitle = "\u201c" + "BOO" + "\u201d";
+    String goodTitle = "\u201c" + goodJournalTitle + "\u201d";
+    List<ArticleMetadata> mdlist;
     
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(encodedContent);
-    cu.setContentSize(encodedContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
+    mdlist = setupContentForAU(tfau3, goodUrl3, encodedContent);
+    assertEmpty(mdlist);
+/*    ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
+    
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
-    assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));*/
   }
 
+  // Maps to TFAU1
   // When a the coden doesn't have spaces before the comma, it can cause problems - note the use of -u2013 for the hyphen - endash - encoding safe
   String noSpaceContent = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\"><head>\n" +
       "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>\n" +
@@ -266,28 +268,25 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
       "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>" +
       "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"678176\"></meta>" +
       "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/15538605.2012.678176\"></meta>" +
-      "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Journal of LGBT Issues in Counseling,Vol. 6, No. 2, April-June 2012, pp. 96\u2013117\"></meta>";
+      "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"" + goodJournalTitle +",Vol. 19, No. 2, April-June 2012, pp. 96\u2013117\"></meta>";
 
   public void testNoSpaceContent() throws Exception {
     String goodTitle = "An Integrative, Empowerment Model for Helping Lesbian, Gay, and Bisexual Youth Negotiate the Coming-Out Process";
+    List<ArticleMetadata> mdlist;
     
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(noSpaceContent);
-    cu.setContentSize(noSpaceContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    mdlist = setupContentForAU(tfau1, goodUrl1, noSpaceContent);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
+    
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
     assertEquals("96", md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals("Journal of LGBT Issues in Counseling", md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
   }
   
-  String noJournalTitleContent =
+  // Metadata is for Irish Educational Studies, Vol 31
+  // which does not match the TFAU2 against which we're testing
+  String wrongJournalContent =
       "<meta name=\"dc.Title\" content=\"Engagement\"></meta>"+
           "<meta name=\"dc.Creator\" content=\" Stephanie   Burley \"></meta>"+
           "<meta name=\"dc.Publisher\" content=\" Taylor &amp; Francis Group \"></meta>"+
@@ -295,129 +294,199 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
           "<meta name=\"dc.Format\" content=\"text/HTML\"></meta>"+
           "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"596666\"></meta>"+
           "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/03323315.2011.596666\"></meta>"+
-          "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Irish Educational Studies Vol. 31, No. 2, June 2012, pp. 175\u2013190\"></meta>"+
+          "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Irish Educational Studies, Vol. 31, No. 2, June 2012, pp. 175\u2013190\"></meta>"+
           "<meta name=\"dc.Source\" content=\"http://dx.doi.org/10.1080/03323315.2011.596666\"></meta>";
   
-  public void testNoJournalTitleContent() throws Exception {
-
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(noJournalTitleContent);
-    cu.setContentSize(noJournalTitleContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertEquals("10.1080/03323315.2011.596666", md.get(MetadataField.FIELD_DOI));
-    assertEquals("Irish Educational Studies", md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals("31", md.get(MetadataField.FIELD_VOLUME));
-    assertEquals("2", md.get(MetadataField.FIELD_ISSUE));
-    assertEquals("175", md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals("190", md.get(MetadataField.FIELD_END_PAGE));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+  public void testWrongJournalTitleContent() throws Exception {
+   List<ArticleMetadata> mdlist;
+    
+    mdlist = setupContentForAU(tfau2, goodUrl2, wrongJournalContent);
+    // nothing got emitted because it shouldn't have been in this AU
+    assertEmpty(mdlist);
   }
 
+// Because it can't pick up a Journal Title or Volume from the coden line, it doesn't emit
   String badIdentifierContent =
       "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"567009\"></meta>" +
 "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/13567888.2011.567009\"></meta>" + 
 "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Volume 17, Comment 1 Ð January 2011\"></meta>";
   
   public void testbadIdentifierContent() throws Exception {
+   List<ArticleMetadata> mdlist;
+    
+    mdlist = setupContentForAU(tfau2, goodUrl2, wrongJournalContent);
+    // nothing got emitted because it shouldn't have been in this AU
+    assertEmpty(mdlist);
+  }
+  
+  /* THIS SECTION TESTS THE RIS EXTRACTION */
+  /*
+   * TY  - JOUR
+  TY  - JOUR
+  T1  - Title of Article
+  AU  - Author1, Suzie
+  AU  - Author2, Kevin
+  Y1  - 2011/02/18
+  PY  - 2011
+  DA  - 2011/04/07
+  N1  - doi: 10.1080/19419899.2010.534489
+  DO  - 10.1080/19419899.2010.534489
+  T2  - Psychology & Sexuality
+  JF  - Psychology & Sexuality
+  JO  - Psychology & Sexuality
+  SP  - 159
+  EP  - 180
+  VL  - 2
+  IS  - 2
+  PB  - Routledge
+  SN  - 1941-9899
+  M3  - doi: 10.1080/19419899.2010.534489
+  UR  - http://dx.doi.org/10.1080/19419899.2010.534489
+  Y2  - 2013/07/26
+  ER  - 
+   * 
+   */
+  
+  String goodRisDate = "2011/09/21";
+  String goodEndPage = "666";
+  String goodImprintPublisher = "Routledge";
+  
+  private String createGoodRisContent() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("TY  - JOUR");
+    for(String auth : goodAuthors) {
+      sb.append("\nAU  - ");
+      sb.append(auth);
+    }
+    sb.append("\nY1  - ");
+    sb.append(goodRisDate);
+    sb.append("\nDA  - ");
+    sb.append(goodRisDate);
+    sb.append("\nJO  - ");
+    sb.append(goodJournalTitle);
+    sb.append("\nSP  - ");
+    sb.append(goodStartPage);
+    sb.append("\nEP  - ");
+    sb.append(goodEndPage);
+    sb.append("\nVL  - ");
+    sb.append(goodVolume);
+    sb.append("\nIS  - ");
+    sb.append(goodIssue);
+    sb.append("\nSN  - ");
+    sb.append(goodISSN);
+    sb.append("\nT1  - ");
+    sb.append(goodArticleTitle);
+    sb.append("\nPB  - ");
+    sb.append(goodImprintPublisher);
+    sb.append("\nDO  - ");
+    sb.append(goodDOI);
+    sb.append("\nUR  - ");
+    sb.append(goodUrl1);
+    sb.append("\nER  -");
+    return sb.toString();
+  }
+  /**
+   * Method that creates a simulated Cached URL from the source code provided by 
+   * the goodContent String. It then asserts that the metadata extracted, by using
+   * the MetaPressRisMetadataExtractorFactory, match the metadata in the source code. 
+   * This matches to TFAU1
+   * @throws Exception
+   */
+  public void testExtractGoodRisContent() throws Exception {
+    String goodContent = createGoodRisContent();
+    log.debug3(goodContent);
+    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI_pt1 + "%2F" + goodDOI_pt2 + "&format=ris&include=cit";  
+    UrlCacher uc = tfau1.makeUrlCacher(url);
+    uc.storeContent(IOUtils.toInputStream(goodContent, "utf-8"),getContentRisProperties());
+    CachedUrl cu = uc.getCachedUrl();
+    
+    FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(badIdentifierContent);
-    cu.setContentSize(badIdentifierContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
-    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals("10.1080/13567888.2011.567009", md.get(MetadataField.FIELD_DOI));
-    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(null, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(null, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(null, md.get(MetadataField.FIELD_START_PAGE));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodEndPage, md.get(MetadataField.FIELD_END_PAGE));
+    assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
+    Iterator<String> actAuthIter = md.getList(MetadataField.FIELD_AUTHOR).iterator();
+    for(String expAuth : goodAuthors) {
+      assertEquals(expAuth, actAuthIter.next());
+    }
+    assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodRisDate, md.get(MetadataField.FIELD_DATE));
+
+    assertEquals(goodImprintPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodUrl1, md.get(MetadataField.FIELD_ACCESS_URL));
+
   }
   
-  String noVolumeContent =
-      "<meta name=\"dc.Identifier\" scheme=\"publisher-id\" content=\"739174\"></meta>" +
-          "<meta name=\"dc.Identifier\" scheme=\"doi\" content=\"10.1080/09500782.2012.739174\"></meta>" +
-          "<meta name=\"dc.Identifier\" scheme=\"coden\" content=\"Language and Education, preprint, 2012, pp. 1Ð24\"></meta>";
+  private String createWrongAURisContent() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("TY  - JOUR");
+    for(String auth : goodAuthors) {
+      sb.append("\nAU  - ");
+      sb.append(auth);
+    }
+    sb.append("\nDA  - ");
+    sb.append(goodRisDate);
+    sb.append("\nJO  - ");
+    sb.append(alternateJournalTitle);
+    sb.append("\nVL  - ");
+    sb.append(goodVolume);
+    sb.append("\nER  -");
+    return sb.toString();
+  }
+  
+  public void testExtractWrongAURisContent() throws Exception {
+    String wrongContent = createWrongAURisContent();
+    log.debug3(wrongContent);
+    String url = BASE_URL + "action/downloadCitation?doi=" + goodDOI_pt1 + "%2F" + goodDOI_pt2 + "&format=ris&include=cit";  
+    UrlCacher uc = tfau1.makeUrlCacher(url);
+    uc.storeContent(IOUtils.toInputStream(wrongContent, "utf-8"),getContentRisProperties());
+    CachedUrl cu = uc.getCachedUrl();
+    
+    FileMetadataExtractor me = new TaylorAndFrancisRisMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/plain");
+    FileMetadataListExtractor mle =
+        new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
 
-  // Since we never get a Vol, we don't every pick up a title.  This is probably best. Let the correct title come from the TDB
-  public void testNoVolumeContent() throws Exception {
+    assertEmpty(mdlist);
 
-    String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, tafau);
-    cu.setContent(noVolumeContent);
-    cu.setContentSize(noVolumeContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+  }
+
+
+  /* private support methods */
+  
+  private List<ArticleMetadata> setupContentForAU(ArchivalUnit au, String url, String content) throws IOException, PluginException {
+    UrlCacher uc = au.makeUrlCacher(url);
+    uc.storeContent(IOUtils.toInputStream(content, "utf-8"),getContentHtmlProperties());
+    CachedUrl cu = uc.getCachedUrl();
     FileMetadataExtractor me = new TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor();
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-    assertEquals("10.1080/09500782.2012.739174", md.get(MetadataField.FIELD_DOI));
-    // it's the best we can do 
-    assertEquals(null, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(null, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(null, md.get(MetadataField.FIELD_ISSUE));
-    // encoding issue...fix later
-    //assertEquals("1", md.get(MetadataField.FIELD_START_PAGE));
-    //assertEquals("24", md.get(MetadataField.FIELD_END_PAGE));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-  }
-  /**
-   * Inner class that where a number of Archival Units can be created
-   *
-   */
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
-
-    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
-      return new MySimulatedContentGenerator(fileRoot);
-    }
-
-  }
-
-  /**
-   * Inner class to create HTML source code simulated content
-   *
-   */
-  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
-    protected MySimulatedContentGenerator(String fileRoot) {
-      super(fileRoot);
-    }
-
-    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
-			
-      String file_content = "<html><head><title>" + filename + "</title></head><body>\n";
-			
-      file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
-      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
-      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
-
-      file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
-      file_content += "\n</body></html>";
-      logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
-		    + file_content);
-
-      return file_content;
-    }
+    return mle.extract(MetadataTarget.Any(), cu);
   }
   
+  private CIProperties getContentHtmlProperties() {
+    CIProperties cProps = new CIProperties();
+    // the CU checks the X-Lockss-content-type, not the content-type to determine encoding
+    cProps.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html; charset=UTF-8");
+    cProps.put("Content-type",  "text/html; charset=UTF-8");
+    return cProps;
+  }
+  private CIProperties getContentRisProperties() {
+    CIProperties cProps = new CIProperties();
+    // the CU checks the X-Lockss-content-type, not the content-type to determine encoding
+    cProps.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain; charset=UTF-8");
+    cProps.put("Content-type",  "text/plain; charset=UTF-8");
+    return cProps;
+  }
 }
 

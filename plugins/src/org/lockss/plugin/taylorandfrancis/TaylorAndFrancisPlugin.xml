@@ -12,27 +12,36 @@
     <string>Taylor &amp; Francis Plugin</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>34</string>
-  </entry>
-  <entry>
     <string>plugin_publishing_platform</string>
     <string>Atypon</string>
+  </entry>   
+  <entry>
+    <string>plugin_version</string>
+    <string>35</string>
   </entry>
+<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>6</string>
+  </entry>   
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-	<string>12</string>
+	    <string>13</string>
       </entry>
       <entry>
         <string>Poll</string>
-	<string>15</string>
+	    <string>16</string>
       </entry>
       <entry>
         <string>Substance</string>
-	<string>1</string>
+	    <string>2</string>
       </entry>
     </map>
   </entry>
@@ -72,24 +81,6 @@
     <string>&quot;Taylor &amp; Francis Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>au_start_url</string>
-    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>2,&quot;^%simgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$&quot;, base_url</string>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(v_[0-9]+)?$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss/%s/%s/index\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s/%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%sdoi/[^/]+/[^/]+/[-.9]+$&quot;, base_url</string>
-      <string>2,&quot;^%sdoi/(citedby/|.*\?tab=permissions)&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/&quot;, base_url</string>
-      <string>1,&quot;^%saction/(showCitFormats|downloadCitation|showPopup)\?&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisUrlNormalizer</string>
   </entry>
@@ -106,12 +97,6 @@
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory</string>
   </entry>
   <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>&quot;^%sdoi/(full|pdf)/&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
@@ -121,30 +106,23 @@
     </map>
   </entry>
   <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisArticleIteratorFactory</string>
+  <string>text/plain_metadata_extractor_factory_map</string>
+  <map>
+    <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
   </entry>
   <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
     <map>
-    <entry>
-      <string>au_title</string>
-      <string>&quot;%sloi/%s&quot;, base_url, journal_id</string>
-    </entry>
-    <entry>
-      <string>au_volume</string>
-      <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-    </entry>
-    <entry>
-      <string>au_issue</string>
-      <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
-    </entry>
-    </map>
-  </entry>
+      <entry>
+    <string>*;RIS</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisRisMetadataExtractorFactory</string>
+   </entry>
+  </map>
+  </entry>    
   <!--  Set up different windows with different crawl rate; in place of au_def_pause_time -->
   <entry>
     <string>au_rate_limiter_info</string>
@@ -177,9 +155,5 @@
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_au_config_user_msg</string>
-    <string>&quot;Atypon Systems host this Taylor &amp; Francis archival unit (AU) and require that you &lt;a href=&apos;http://www.tandfonline.com/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional Taylor &amp; Francis account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the Taylor &amp; Francis site. You only need to register the IP address of your LOCKSS box once for all Taylor &amp; Francis AUs.&quot;</string>
   </entry>
 </map>
