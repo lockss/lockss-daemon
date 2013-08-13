@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.14 2013-08-08 05:55:58 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.15 2013-08-13 06:19:43 tlipkis Exp $
  */
 
 /*
@@ -872,7 +872,7 @@ public class CrawlerStatus {
     return referrers.hasReferrersOfType(rt);
   }
 
-  public List<String> getReferrers(String url) {
+  public synchronized List<String> getReferrers(String url) {
     return referrers.getReferrers(url);  
   }
 
@@ -1128,6 +1128,7 @@ public class CrawlerStatus {
     Map map;
     RecordReferrersMode recordMode;
     RecordReferrerTypes recordTypes;
+    boolean isSealed = false;
 
     ReferrerMap(RecordReferrersMode recordMode,
 		RecordReferrerTypes recordTypes) {
@@ -1217,7 +1218,12 @@ public class CrawlerStatus {
       if (val == null) {
 	return Collections.EMPTY_LIST;
       } else if (val instanceof List) {
-	return (List<String>)val;
+	List<String> lst = (List<String>)val;
+	if (isSealed()) {
+	  return lst;
+	} else {
+	  return new ArrayList<String>(lst);
+	}
       } else {
 	return Collections.singletonList((String)val);
       }
@@ -1227,7 +1233,12 @@ public class CrawlerStatus {
       if (!keepColl) {
 	map = null;
       }
+      isSealed = true;
       return this;
+    }
+
+    public boolean isSealed() {
+      return isSealed;
     }
   }
 
