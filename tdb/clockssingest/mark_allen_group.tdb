@@ -9,8 +9,6 @@
   
   plugin = needs.plugin
 
-  comment[0] = MA Health
-  
   {
     title <
       name = African Journal of Midwifery and Women's Health ;
@@ -410,5 +408,76 @@
     
   }
  
+  {
+    title <
+      name = Five to Eleven ;
+      issn = 1744-7240 
+    >
+    
+    param[base_url] = 
+
+    
+  }
+
+  {
+    title <
+      name = 5 to 7 Educator ;
+      issn = 1746-7500 ;
+      eissn = 2052-4595 
+    >
+    
+    param[base_url] = http://www.intered.uk.com/cgi-bin/go.pl/library/issues.html?journal_uid=19
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = Child Care ;
+      issn = 1753-9900 ;
+      eissn = 2052-4579 
+    >
+    
+    param[base_url] = http://www.practicalpreschool.com/magazine/childcare.shtml
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = Children & Young People Now ;
+      issn = 1755-8093 
+    >
+    
+    param[base_url] = http://www.cypnow.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Early Years Educator (EYE) ;
+      issn = 1465-931X ;
+      eissn = 2052-4617 
+    >
+    
+    param[base_url] = http://www.earlyyearseducator.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Fundraising for Schools ;
+      issn = 1755-5094 ;
+      eissn = 2052-4625 
+    >
+    
+    param[base_url] = http://www.fundraisingschools.co.uk/
+
+    
+  }
  
 }
