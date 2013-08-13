@@ -49,9 +49,8 @@
 
     param[journal_id] = gmi
     param[journal_issn] = 0966-9671
-    comment[notReady] = low agreement, different pdf version #
 
-    au < notReady ; 2005 ; Greener Management International Volume 2005 ; 2005 >
+    au < ready ; 2005 ; Greener Management International Volume 2005 ; 2005 >
     au < released ; 2006 ; Greener Management International Volume 2006 ; 2006 >
     au < released ; 2007 ; Greener Management International Volume 2007 ; 2007 >
 
