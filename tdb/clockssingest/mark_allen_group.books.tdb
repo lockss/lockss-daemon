@@ -1,0 +1,139 @@
+{
+
+  publisher <
+    name = Mark Allen Group ;
+    info[contract] = 2013 ;
+    info[tester] = 0 ;
+    comment[platform] = Atypon
+  >
+  
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; isbn ; param[isbn] ; name ; author >
+
+  {
+    title <
+      name = Practical Pre-School Books
+    >
+    
+    param[base_url] = http://www.practicalpreschoolbooks.com/
+
+    au < exists ; exists ;  ; 9781907241703 ; 9781907241703 ; Child-Initiated Learning ; Jennie Lindon >
+    au < exists ; exists ;  ; 9781907241468 ; 9781907241468 ; Enabling Environments in the Early Years ; >
+    au < exists ; exists ;  ; 9781907241888 ; 9781907241888 ; Faiths and Festivals ; >
+    au < exists ; exists ;  ; 9781907241529 ; 9781907241529 ; How Children Learn ; >
+    au < exists ; exists ;  ; 9781907241543 ; 9781907241543 ; How Children Learn - Book 2 ; >
+    au < exists ; exists ;  ; 9781907241666 ; 9781907241666 ; Parents as Partners ; >
+    au < exists ; exists ;  ; 9781907241901 ; 9781907241901 ; Sensory Play ; >
+    au < exists ; exists ;  ; 9781907241727 ; 9781907241727 ; Supporting Children's Social Development ; >
+    au < exists ; exists ;  ; 9781909101029 ; 9781909101029 ; The Early Years Gardening Handbook ; >
+    au < exists ; exists ;  ; 9781907241628 ; 9781907241628 ; The EYFS Inspection in Practice ; >
+    au < exists ; exists ;  ; 9781907241840 ; 9781907241840 ; What Does It Mean to Be Five? ; >
+    au < exists ; exists ;  ; 9781907241765 ; 9781907241765 ; What Does it Mean to be One? ; >
+    au < exists ; exists ;  ; 9781907241802 ; 9781907241802 ; What does it mean to be three? ; >
+    au < exists ; exists ;  ; 9781907241642 ; 9781907241642 ; Early Years Observation and Planning in Practice ; >
+    au < exists ; exists ;  ; 9781907241925 ; 9781907241925 ; Role Play ; >
+    au < exists ; exists ;  ; 9781907241826 ; 9781907241826 ; What Does it Mean to be Four? ; >
+    au < exists ; exists ;  ; 9781907241789 ; 9781907241789 ; What Does it Mean to be Two? ; >
+    au < exists ; exists ;  ; 9781856424462 ; 9781856424462 ; Fundamental Aspects of Legal, Ethical and Professional Issues in Nursing 2nd Edition ; >
+    au < exists ; exists ;  ; 9781907241482 ; 9781907241482 ; Inclusion and Diversity in the Early Years ; >
+    au < exists ; exists ;  ; 9781909102682 ; 9781909102682 ; A Yearful of Assemblies ; >
+    au < exists ; exists ;  ; 9781909102484 ; 9781909102484 ; Curriculum Focus - History KS1 ; >
+    au < exists ; exists ;  ; 9781907515927 ; 9781907515927 ; Draw Across the Curriculum ; >
+    au < exists ; exists ;  ; 9781907241581 ; 9781907241581 ; How Children Learn 4: Thinking on Special Educational Needs and Inclusion ; >
+    au < exists ; exists ;  ; 9781856424486 ; 9781856424486 ; Legal Aspects of Medicines 2nd Edition ; >
+    au < exists ; exists ;  ; 9781856425001 ; 9781856425001 ; Staff Nurse Survival Guide ; >
+    au < exists ; exists ;  ; 9781909102200 ; 9781909102200 ; Great Sporting Moments ; >
+    au < exists ; exists ;  ; 9781909101586 ; 9781909101586 ; Planning for Learning through Minibeasts ; >
+    au < exists ; exists ;  ; 9781909101968 ; 9781909101968 ; Planning for Learning through the Sea ; >
+    au < exists ; exists ;  ; 9781909101869 ; 9781909101869 ; Planning for Learning through Weather ; >
+    au < exists ; exists ;  ; 9781909102408 ; 9781909102408 ; Un, deux, trois! Lower Juniors Years 3-4 ; >
+    au < exists ; exists ;  ; 9781909102583 ; 9781909102583 ; Using Stories to Teach Maths Ages 4 to 7 ; >
+    au < exists ; exists ;  ; 9781909102064 ; 9781909102064 ; Using Stories to Teach Maths Ages 7 to 9 ; >
+    au < exists ; exists ;  ; 9781909102668 ; 9781909102668 ; Creative Curriculum KS1 ; >
+    au < exists ; exists ;  ; 9781909102125 ; 9781909102125 ; Creative Curriculum KS2 ; >
+    au < exists ; exists ;  ; 9781907241949 ; 9781907241949 ; Outdoor Play ; >
+    au < exists ; exists ;  ; 9781909101340 ; 9781909101340 ; Planning for Learning through Autumn ; >
+    au < exists ; exists ;  ; 9781909101463 ; 9781909101463 ; Planning for Learning through Food ; >
+    au < exists ; exists ;  ; 9781907241963 ; 9781907241963 ; Heuristic Play ; >
+    au < exists ; exists ;  ; 9781907241567 ; 9781907241567 ; How Children Learn - Book 3: Contemporary Thinking and Theorists ; >
+    au < exists ; exists ;  ; 9781909101241 ; 9781909101241 ; Meeting Special Needs: A practical guide to support children with Attention Deficit Hyperactivity Disorder (ADHD) ; >
+    au < exists ; exists ;  ; 9781909101401 ; 9781909101401 ; Planning for Learning through Colour ; >
+    au < exists ; exists ;  ; 9781909101289 ; 9781909101289 ; Planning for Learning through ICT ; >
+    au < exists ; exists ;  ; 9781907515767 ; 9781907515767 ; Reading Explorers Year 3 ; >
+    au < exists ; exists ;  ; 9781909101104 ; 9781909101104 ; Get, Set, GO! Fundraising ; >
+    au < exists ; exists ;  ; 9781909101265 ; 9781909101265 ; Meeting Special Needs: A practical guide to support children with Autistic Spectrum Disorders (Autism) ; >
+    au < exists ; exists ;  ; 9781909101166 ; 9781909101166 ; Meeting Special Needs: A practical guide to support children with Dyslexia ; >
+    au < exists ; exists ;  ; 9781909101548 ; 9781909101548 ; Planning for Learning through Journeys ; >
+    au < exists ; exists ;  ; 9781909101562 ; 9781909101562 ; Planning for Learning through Making Music ; >
+    au < exists ; exists ;  ; 9781909101364 ; 9781909101364 ; Planning for Learning through Books ; >
+    au < exists ; exists ;  ; 9781909101388 ; 9781909101388 ; Planning for Learning through Clothes ; >
+    au < exists ; exists ;  ; 9781909101487 ; 9781909101487 ; Planning for Learning through Games ; >
+    au < exists ; exists ;  ; 9781909101500 ; 9781909101500 ; Planning for Learning through Growth ; >
+    au < exists ; exists ;  ; 9781909101524 ; 9781909101524 ; Planning for Learning through Houses and Homes ; >
+    au < exists ; exists ;  ; 9781909101685 ; 9781909101685 ; Planning for Learning through Recycling ; >
+    au < exists ; exists ;  ; 9781909101722 ; 9781909101722 ; Planning for Learning through Shopping ; >
+    au < exists ; exists ;  ; 9781909101807 ; 9781909101807 ; Planning for Learning through Summer ; >
+    au < exists ; exists ;  ; 9781909101944 ; 9781909101944 ; Planning for Learning through the Environment ; >
+    au < exists ; exists ;  ; 9781909280021 ; 9781909280021 ; Planning for Learning through The Twelve Days of Christmas ; >
+    au < exists ; exists ;  ; 9781909101821 ; 9781909101821 ; Planning for Learning through Toys ; >
+    au < exists ; exists ;  ; 9781909101845 ; 9781909101845 ; Planning for Learning through Water ; >
+    au < exists ; exists ;  ; 9781909101920 ; 9781909101920 ; Planning for Learning through Winter ; >
+    au < exists ; exists ;  ; 9781907241505 ; 9781907241505 ; Transitions in the Early Years ; >
+    au < exists ; exists ;  ; 9781909102460 ; 9781909102460 ; Grammar Springboards Years 5 - 6 ; >
+    au < exists ; exists ;  ; 9781909101227 ; 9781909101227 ; Meeting Special Needs: A practical guide to support children with Speech, Language and Communication Needs (SLCN) ; >
+    au < exists ; exists ;  ; 9781909101326 ; 9781909101326 ; Planning for Learning through Animals ; >
+    au < exists ; exists ;  ; 9781909101449 ; 9781909101449 ; Planning for Learning through Farms ; >
+    au < exists ; exists ;  ; 9781909101708 ; 9781909101708 ; Planning for Learning through Shapes ; >
+    au < exists ; exists ;  ; 9781909102422 ; 9781909102422 ; Un, deux, trois! Upper Juniors Years 5-6 ; >
+    au < exists ; exists ;  ; 9781909101203 ; 9781909101203 ; Meeting Special Needs: A practical guide to support children with Epilepsy ; >
+    au < exists ; exists ;  ; 9781909101623 ; 9781909101623 ; Planning for Learning through Nursery Rhymes ; >
+    au < exists ; exists ;  ; 9781907241864 ; 9781907241864 ; Using ICT in the Early Years ; >
+    au < exists ; exists ;  ; 9781909102521 ; 9781909102521 ; Using Stories to Teach ICT Ages 6 to 7 ; >
+    au < exists ; exists ;  ; 9781909102248 ; 9781909102248 ; It's easy to teach - Poetry ; >
+    au < exists ; exists ;  ; 9781909101647 ; 9781909101647 ; Planning for Learning through Opposites ; >
+    au < exists ; exists ;  ; 9781909280007 ; 9781909280007 ; Planning for Learning through the Senses ; >
+    au < exists ; exists ;  ; 9781909280069 ; 9781909280069 ; Planning for the Early Years: The Local Community ; >
+    au < exists ; exists ;  ; 9781909101883 ; 9781909101883 ; Planning for Learning through What Are Things Made From? ; >
+    au < exists ; exists ;  ; 9781909280120 ; 9781909280120 ; The Early Literacy Handbook ; >
+    au < exists ; exists ;  ; 9781909280045 ; 9781909280045 ; Planning for Learning to use Phonics ; >
+    au < exists ; exists ;  ; 9781909280168 ; 9781909280168 ; Planning for the Early Years: Storytelling and storymaking ; >
+    au < exists ; exists ;  ; 9781909280106 ; 9781909280106 ; Special Educational Needs in Practice (Revised Edition) ; >
+    au < exists ; exists ;  ; 9781909102347 ; 9781909102347 ; Starting with A collection of Stories and Poems ; >
+    au < exists ; exists ;  ; 9781907241680 ; 9781907241680 ; The Key Person Approach ; >
+    au < exists ; exists ;  ; 9781909280144 ; 9781909280144 ; Understanding Behaviour in the Early Years ; >
+    au < exists ; exists ;  ; 9781909280182 ; 9781909280182 ; What does it mean to be two? Revised edition ; >
+    
+  }
+
+  {
+    title <
+      name = Hopscotch
+    >
+    
+    param[base_url] = http://www.hopscotchbooks.com/
+    
+    au < exists ; exists ;  ; 9781909101180 ; 9781909101180 ; Meeting Special Needs: A practical guide to support children with Dyspraxia ; >
+    au < exists ; exists ;  ; 9781909101302 ; 9781909101302 ; Planning for Learning through All About Me ; >
+    au < exists ; exists ;  ; 9781909101425 ; 9781909101425 ; Planning for Learning through Fairy Stories ; >
+    au < exists ; exists ;  ; 9781909101982 ; 9781909101982 ; Planning for Learning through the Seasons ; >
+    au < exists ; exists ;  ; 9781909101661 ; 9781909101661 ; Planning for Learning through People Who Help Us ; >
+    au < exists ; exists ;  ; 9781909101784 ; 9781909101784 ; Planning for Learning through Spring ; >
+    au < exists ; exists ;  ; 9781909101906 ; 9781909101906 ; Planning for Learning through Where I Live ; >
+    au < exists ; exists ;  ; 9781909102088 ; 9781909102088 ; Using Stories to Teach ICT Ages 5 to 6 ; >
+    au < exists ; exists ;  ; 9781909102163 ; 9781909102163 ; Healthy Schools, Healthy Lives ; >
+    au < exists ; exists ;  ; 9781907515828 ; 9781907515828 ; Reading Explorers Year 6 ; >
+    au < exists ; exists ;  ; 9781907515989 ; 9781907515989 ; Environment Poetry ; >
+    au < exists ; exists ;  ; 9781909101067 ; 9781909101067 ; Encouraging Early Sports Skills ; >
+    au < exists ; exists ;  ; 9781909101128 ; 9781909101128 ; Get, Set, GO! Sustainability ; >
+    au < exists ; exists ;  ; 9781907241444 ; 9781907241444 ; Planning for Effective Early Learning ; >
+    au < exists ; exists ;  ; 9781856424424 ; 9781856424424 ; Clinical Teaching Made Easy ; >
+    au < exists ; exists ;  ; 9781909101760 ; 9781909101760 ; Planning for Learning through Space ; >
+    au < exists ; exists ;  ; 9781907241987 ; 9781907241987 ; Play and Learning in the Early Years ; >
+    au < exists ; exists ;  ; 9781909101005 ; 9781909101005 ; Stepping Stones to Creativity ; >
+    
+
+    
+  }
+
+
+}
