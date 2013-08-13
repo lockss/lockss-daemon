@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.245 2013-05-08 09:09:52 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.245.6.1 2013-08-13 06:19:16 tlipkis Exp $
  */
 
 /*
@@ -3093,24 +3093,30 @@ public class PluginManager
 	PluginInfo info;
 	try {
 	  info = retrievePlugin(pluginName, pluginLoader);
-	  info.setCuUrl(url);
-	  info.setRegistryAu(au);
-	  List urls = info.getResourceUrls();
-	  if (urls != null && !urls.isEmpty()) {
-	    String jar = urls.get(0).toString();
-	    if (jar != null) {
-	      // If the blessed jar path is a substring of the jar:
-	      // url from which the actual plugin resource or class
-	      // was loaded, then it is a loadable plugin.
-	      boolean isLoadable =
-		jar.indexOf(blessedUrl.getFile()) > 0;
-	      info.setIsOnLoadablePath(isLoadable);
+	  if (info == null) {
+	    log.warning("Probable plugin packaging error: plugin " +
+			pluginName + " not found in " + cu.getUrl());
+	    continue;
+	  } else {
+	    info.setCuUrl(url);
+	    info.setRegistryAu(au);
+	    List urls = info.getResourceUrls();
+	    if (urls != null && !urls.isEmpty()) {
+	      String jar = urls.get(0).toString();
+	      if (jar != null) {
+		// If the blessed jar path is a substring of the jar:
+		// url from which the actual plugin resource or class
+		// was loaded, then it is a loadable plugin.
+		boolean isLoadable =
+		  jar.indexOf(blessedUrl.getFile()) > 0;
+		info.setIsOnLoadablePath(isLoadable);
+	      }
 	    }
+	    plugin = info.getPlugin();
 	  }
-	  plugin = info.getPlugin();
 	} catch (Exception ex) {
 	  log.error(String.format("Unable to load plugin %s", pluginName), ex);
-	  return;
+	  continue;
 	}
 
 	PluginVersion version = null;
