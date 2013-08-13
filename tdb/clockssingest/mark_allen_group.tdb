@@ -415,6 +415,7 @@
     >
     
     param[base_url] = 
+    comment[0] = website is not up yet
 
     
   }
@@ -480,4 +481,205 @@
     
   }
  
+  {
+    title <
+      name = Headteacher Update ;
+      issn = 1478-5307 ;
+      eissn = 2052-4633 
+    >
+    
+    param[base_url] = http://www.headteacher-update.com/
+    comment[pdf] = file from http://content.yudu.com
+
+    
+  }
+  
+  {
+    title <
+      name = Nursery World ;
+      issn = 0029-6422 
+    >
+    
+    param[base_url] = http://www.nurseryworld.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Practical Pre-School ;
+      issn = 1366-610X ;
+      eissn = 2052-4587 
+    >
+    
+    param[base_url] = http://www.practicalpreschool.com/
+
+    
+  }
+
+  {
+    title <
+      name = Primary Teacher Update ;
+      issn = 2047-8917 ;
+      eissn = 2052-4609 
+    >
+    
+    param[base_url] = http://www.primaryteacherupdate.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = SecEd ;
+      issn = 1479-7704 
+    >
+    
+    param[base_url] = http://www.sec-ed.co.uk/
+
+    
+  }
+ 
+  {
+    title <
+      name = Facilities UK Handbook ;
+      issn = 2052-9759 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = HR ;
+      issn = 0964-8380 
+    >
+    
+    param[base_url] = http://www.hrmagazine.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Land Mobile ;
+      issn = 1352-2701 
+    >
+    
+    param[base_url] = http://www.landmobile.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = PrintWeek ;
+      issn = 1350-9829 
+    >
+    
+    param[base_url] = http://www.printweek.com/
+
+    
+  }
+
+  {
+    title <
+      name = Pro Shop Europe ;
+      issn = 1355-2740 
+    >
+    
+    param[base_url] = http://www.proshopeurope.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Recycling & Waste World ;
+      issn = 1759-7366 
+    >
+    
+    param[base_url] = http://www.recyclingwasteworld.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Recycling & Waste World Handbook;
+      issn =  
+    >
+    
+    param[base_url] = http://www.recyclingwasteworld.co.uk/handbook.shtml
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = TETRA Today ;
+      issn = 2045-8665 ;
+      eissn = 2045-8673
+ 
+    >
+    
+    param[base_url] = http://www.tetra-awards.com/tetra-today/
+    comment[pdf] = file from http://content.yudu.com
+
+    
+  }
+
+  {
+    title <
+      name = Carriage Driving ;
+      issn = 0958-1820
+ 
+    >
+    
+    param[base_url] = http://www.carriage-driving.com/
+
+    
+  }
+
+  {
+    title <
+      name = Hampshire - the county magazine ;
+      issn = 0017-7113
+ 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Jazzwise ;
+      issn = 1368-0021
+ 
+    >
+    
+    param[base_url] = http://www.jazzwisemagazine.com/
+
+    
+  }
+
+  {
+    title <
+      name = Wiltshire Life ;
+      issn = 1358-0582
+ 
+    >
+    
+    param[base_url] = http://www.wiltshirelife.co.uk/
+
+    
+  }
+
 }
