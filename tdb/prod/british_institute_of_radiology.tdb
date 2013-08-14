@@ -18,7 +18,6 @@
     >
 
     param[base_url] = http://bjr.birjournals.org/
-    comment[notReady] = missing images, retest later
     
     au < released ; 1928 ; British Journal of Radiology Volume 1 ; 1 >
     au < released ; 1929 ; British Journal of Radiology Volume 2 ; 2 >
@@ -95,7 +94,7 @@
     au < released ; 2000 ; British Journal of Radiology Volume 73 ; 73 >
     au < released ; 2001 ; British Journal of Radiology Volume 74 ; 74 >
     au < released ; 2002 ; British Journal of Radiology Volume 75 ; 75 >
-    au < notReady ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
+    au < ready ; 2003 ; British Journal of Radiology Volume 76 ; 76 >
     au < released ; 2004 ; British Journal of Radiology Volume 77 ; 77 >
     au < released ; 2005 ; British Journal of Radiology Volume 78 ; 78 >
     au < released ; 2006 ; British Journal of Radiology Volume 79 ; 79 >
