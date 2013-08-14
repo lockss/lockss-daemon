@@ -8,7 +8,7 @@
 
     attr[contract] = 2012
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.metapress.MetaPressPlugin
     param[base_url] = http://essential.metapress.com/content/
     implicit < status ; year ; name ; param[volume_name] >
     
@@ -21,7 +21,7 @@
       eissn = 1746-6091
      >
      
-     param[journal_id] = 122773
+     param[journal_issn] = 1746-6091
      
      
      au < manifest ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 >
@@ -46,16 +46,7 @@
       issnl = 1460-6690
     >
     
-    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = wab
-    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.WhitingAndBirchPdfTransform
-    implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_by] = 1759-5150
-    param[journal_id] = jpthsw                                  
-    param[journal_issn] = 1460-6690
+    param[journal_issn] = 1746-6113
 
     au < manifest ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
     au < manifest ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
@@ -68,9 +59,9 @@
       name = The Journal of Practice Teaching and Learning ;
       issn = 1759-5150
     >
-   	
-   	comment[continued_from] = 1460-6690
-    param[journal_id] = 122774 
+
+    comment[continued_from] = 1460-6690
+    param[journal_issn] = 1759-5150 
       
     au < manifest ; 2006 ; The Journal of Practice Teaching and Learning Volume 7 ; 7 >
     au < manifest ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
@@ -90,7 +81,7 @@
       issnl = 0953-5225
     >
 
-    param[journal_id] = 122775
+    param[journal_issn] = 1746-6105
 
     au < manifest ; 2004 ; Social Work and Social Sciences Review Volume 11 ; 11 >
     au < manifest ; 2005-2007 ; Social Work and Social Sciences Review Volume 12 ; 12 >
@@ -109,7 +100,7 @@
       
     >
     
-    param[journal_id] = 122776
+    param[journal_issn] = 1987-8710
 
     au < manifest ; 2012 ; Journal of Social Policy and Social Work in Transition Volume 3 ; 3 >
     au < expected ; 2013 ; Journal of Social Policy and Social Work in Transition Volume 4 ; 4 >
