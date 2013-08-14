@@ -4,7 +4,7 @@
     info[tester] = 8
     
   >
-     attr[contract] = 2012
+
      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin  
      implicit < status ; year ; name ; param[volume_name] >
      
