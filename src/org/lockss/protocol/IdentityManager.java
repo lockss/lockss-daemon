@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.87 2008-10-07 18:14:29 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.87.80.1 2013-08-14 22:11:53 barry409 Exp $
  */
 
 /*
@@ -391,7 +391,7 @@ public interface IdentityManager extends LockssManager {
   
   /**
    * Signal partial agreement with a peer on a given archival unit following
-   * a V3 poll at the voter based ont eh hint in the receipt.
+   * a V3 poll at the voter based on the hint in the receipt.
    * 
    * @param pid  The PeerIdentity of the agreeing peer.
    * @param au  The {@link ArchivalUnit}.
@@ -400,6 +400,22 @@ public interface IdentityManager extends LockssManager {
    */
   public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
                                          float agreement);
+
+  /**
+   * Signal the completion of a local hash check.
+   *
+   * @param filesCount The number of files checked.
+   * @param urlCount The number of URLs checked.
+   * @param agreeCount The number of files which agreed with their
+   * previous hash value.
+   * @param disagreeCount The number of files which disagreed with
+   * their previous hash value.
+   * @param missingCount The number of files which had no previous
+   * hash value.
+   */
+  public void signalLocalHashComplete(int filesCount, int urlCount,
+				      int agreeCount, int disagreeCount,
+				      int missingCount);
   
   /**
    * Return the percent agreement for a given peer on a given

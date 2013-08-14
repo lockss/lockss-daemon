@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.19 2008-10-07 18:14:29 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.19.80.1 2013-08-14 22:11:53 barry409 Exp $
  */
 
 /*
@@ -188,6 +188,12 @@ public class MockIdentityManager implements IdentityManager {
   
   public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
                                      float percentAgreement) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void signalLocalHashComplete(int filesCount, int distinctUrlCount,
+				      int agreeCount, int disagreeCount,
+				      int missingCount) {
     throw new UnsupportedOperationException("not implemented");
   }
   
