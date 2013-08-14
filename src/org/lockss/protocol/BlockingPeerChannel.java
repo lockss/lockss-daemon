@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.31 2011-10-03 05:54:54 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.31.42.1 2013-08-14 23:26:34 barry409 Exp $
  */
 
 /*
@@ -691,10 +691,9 @@ class BlockingPeerChannel implements PeerChannel {
       peer = pid;
       log.debug3("Got peer: " + peer);
       // ensure a compatible peer address
-      PeerAddress hispad = peer.getPeerAddress();
-      if (!hispad.isStream()) {
+      if (! peer.isV3()) {
 	throw new ProtocolException("Incompatible PeerAddress type: " +
-				    hispad);
+				    peer.getPeerAddress());
       }
       // XXX If this is an incoming connection, need to make outgoing
       // connection to peerid just received, send an echo nonce message

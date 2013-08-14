@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.41.2.3 2013-08-14 22:45:19 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.41.2.4 2013-08-14 23:26:34 barry409 Exp $
  */
 
 /*
@@ -1300,7 +1300,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       for (IdentityAgreement ida : map.values()) {
 	try {
 	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
-	  if (includeV1 || pid.getPeerAddress().isStream()) {
+	  if (includeV1 || pid.isV3()) {
 	    res.add(ida);
 	  }
 	} catch (MalformedIdentityKeyException e) {
