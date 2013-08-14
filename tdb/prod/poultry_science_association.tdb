@@ -20,35 +20,32 @@
     comment[notReady] = articles available after 12 months. test later. for highwire check this link http://highwire.stanford.edu/lists/freeart.dtl
 
     au < HighWireStrVolPlugin ; superseded ; 1992 ; The Journal of Applied Poultry Research Volume 1 [superseded] ; 1 >
-    au < HighWireStrVolPlugin ; superseded ; 1993 ; The Journal of Applied Poultry Research Volume 2 [superseded] ; 2 >
-    au < HighWireStrVolPlugin ; superseded ; 1994 ; The Journal of Applied Poultry Research Volume 3 [superseded] ; 3 >
-    au < HighWireStrVolPlugin ; doesNotExist ; 1995 ; The Journal of Applied Poultry Research Volume 4 ; 4 >
-    au < HighWireStrVolPlugin ; superseded ; 1996 ; The Journal of Applied Poultry Research Volume 5 [superseded] ; 5 >
-    au < HighWireStrVolPlugin ; superseded ; 1997 ; The Journal of Applied Poultry Research Volume 6 [superseded] ; 6 >
-    au < HighWireStrVolPlugin ; doesNotExist ; 1998 ; The Journal of Applied Poultry Research Volume 7 ; 7 >
-    au < HighWireStrVolPlugin ; superseded ; 1999 ; The Journal of Applied Poultry Research Volume 8 [superseded] ; 8 >
-    au < HighWireStrVolPlugin ; superseded ; 2000 ; The Journal of Applied Poultry Research Volume 9 [superseded] ; 9 >
-    au < HighWireStrVolPlugin ; superseded ; 2001 ; The Journal of Applied Poultry Research Volume 10 [superseded] ; 10 >
-    au < HighWireStrVolPlugin ; superseded ; 2002 ; The Journal of Applied Poultry Research Volume 11 [superseded] ; 11 >
-    au < HighWireStrVolPlugin ; superseded ; 2003 ; The Journal of Applied Poultry Research Volume 12 [superseded] ; 12 >
-    au < HighWireStrVolPlugin ; superseded ; 2004 ; The Journal of Applied Poultry Research Volume 13 [superseded] ; 13 >
-    au < HighWireStrVolPlugin ; superseded ; 2005 ; The Journal of Applied Poultry Research Volume 14 [superseded] ; 14 >
-    au < HighWireStrVolPlugin ; superseded ; 2006 ; The Journal of Applied Poultry Research Volume 15 [superseded] ; 15 >
-
     au < HighWirePressPlugin ; down ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 >
+    au < HighWireStrVolPlugin ; superseded ; 1993 ; The Journal of Applied Poultry Research Volume 2 [superseded] ; 2 >
     au < HighWirePressPlugin ; down ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 >
+    au < HighWireStrVolPlugin ; superseded ; 1994 ; The Journal of Applied Poultry Research Volume 3 [superseded] ; 3 >
     au < HighWirePressPlugin ; down ; 1994 ; The Journal of Applied Poultry Research Volume 3 ; 3 >
     au < HighWirePressPlugin ; down ; 1995 ; The Journal of Applied Poultry Research Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; superseded ; 1996 ; The Journal of Applied Poultry Research Volume 5 [superseded] ; 5 >
     au < HighWirePressPlugin ; down ; 1996 ; The Journal of Applied Poultry Research Volume 5 ; 5 >
+    au < HighWireStrVolPlugin ; superseded ; 1997 ; The Journal of Applied Poultry Research Volume 6 [superseded] ; 6 >
     au < HighWirePressPlugin ; down ; 1997 ; The Journal of Applied Poultry Research Volume 6 ; 6 >
     au < HighWirePressPlugin ; down ; 1998 ; The Journal of Applied Poultry Research Volume 7 ; 7 >
+    au < HighWireStrVolPlugin ; superseded ; 1999 ; The Journal of Applied Poultry Research Volume 8 [superseded] ; 8 >
     au < HighWirePressPlugin ; down ; 1999 ; The Journal of Applied Poultry Research Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; superseded ; 2000 ; The Journal of Applied Poultry Research Volume 9 [superseded] ; 9 >
     au < HighWirePressPlugin ; down ; 2000 ; The Journal of Applied Poultry Research Volume 9 ; 9 >
+    au < HighWireStrVolPlugin ; superseded ; 2001 ; The Journal of Applied Poultry Research Volume 10 [superseded] ; 10 >
     au < HighWirePressPlugin ; down ; 2001 ; The Journal of Applied Poultry Research Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; superseded ; 2002 ; The Journal of Applied Poultry Research Volume 11 [superseded] ; 11 >
     au < HighWirePressPlugin ; down ; 2002 ; The Journal of Applied Poultry Research Volume 11 ; 11 >
+    au < HighWireStrVolPlugin ; superseded ; 2003 ; The Journal of Applied Poultry Research Volume 12 [superseded] ; 12 >
     au < HighWirePressPlugin ; down ; 2003 ; The Journal of Applied Poultry Research Volume 12 ; 12 >
+    au < HighWireStrVolPlugin ; superseded ; 2004 ; The Journal of Applied Poultry Research Volume 13 [superseded] ; 13 >
     au < HighWirePressPlugin ; down ; 2004 ; The Journal of Applied Poultry Research Volume 13 ; 13 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; The Journal of Applied Poultry Research Volume 14 [superseded] ; 14 >
     au < HighWirePressPlugin ; down ; 2005 ; The Journal of Applied Poultry Research Volume 14 ; 14 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; The Journal of Applied Poultry Research Volume 15 [superseded] ; 15 >
     au < HighWirePressPlugin ; down ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 >
     au < HighWirePressPlugin ; down ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 >
     au < HighWirePressPlugin ; down ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 >
@@ -146,14 +143,23 @@
     au < HighWirePressH20Plugin ; released ; 1994 ; Poultry Science Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; released ; 1995 ; Poultry Science Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; released ; 1996 ; Poultry Science Volume 75 ; 75 >
+    au < HighWireStrVolPlugin ; superseded ; 1997 ; Poultry Science Volume 76 [superseded] ; 76 >
     au < HighWirePressPlugin ; down ; 1997 ; Poultry Science Volume 76 ; 76 >
+    au < HighWireStrVolPlugin ; superseded ; 1998 ; Poultry Science Volume 77 [superseded] ; 77 >
     au < HighWirePressPlugin ; down ; 1998 ; Poultry Science Volume 77 ; 77 >
+    au < HighWireStrVolPlugin ; superseded ; 1999 ; Poultry Science Volume 78 [superseded] ; 78 >
     au < HighWirePressPlugin ; down ; 1999 ; Poultry Science Volume 78 ; 78 >
+    au < HighWireStrVolPlugin ; superseded ; 2000 ; Poultry Science Volume 79 [superseded] ; 79 >
     au < HighWirePressPlugin ; down ; 2000 ; Poultry Science Volume 79 ; 79 >
+    au < HighWireStrVolPlugin ; superseded ; 2001 ; Poultry Science Volume 80 [superseded] ; 80 >
     au < HighWirePressPlugin ; down ; 2001 ; Poultry Science Volume 80 ; 80 >
+    au < HighWireStrVolPlugin ; superseded ; 2002 ; Poultry Science Volume 81 [superseded] ; 81 >
     au < HighWirePressPlugin ; down ; 2002 ; Poultry Science Volume 81 ; 81 >
+    au < HighWireStrVolPlugin ; superseded ; 2003 ; Poultry Science Volume 82 [superseded] ; 82 >
     au < HighWirePressPlugin ; down ; 2003 ; Poultry Science Volume 82 ; 82 >
+    au < HighWireStrVolPlugin ; superseded ; 2004 ; Poultry Science Volume 83 [superseded] ; 83 >
     au < HighWirePressPlugin ; down ; 2004 ; Poultry Science Volume 83 ; 83 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; Poultry Science Volume 84 [superseded] ; 84 >
     au < HighWirePressPlugin ; down ; 2005 ; Poultry Science Volume 84 ; 84 >
     au < HighWirePressPlugin ; down ; 2006 ; Poultry Science Volume 85 ; 85 >
     au < HighWirePressPlugin ; down ; 2007 ; Poultry Science Volume 86 ; 86 >
