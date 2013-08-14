@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.14 2011-07-07 05:23:04 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.15 2013-08-14 23:27:15 barry409 Exp $
  */
 
 /*
@@ -99,6 +99,13 @@ public class PeerIdentity implements LockssSerializable {
       return ((PeerAddress.Ip)pAddr).getIPAddr();
     }
     return null;
+  }
+
+  /**
+   * @return {@code true} iff this is a V3 PeerIdentity.
+   */
+  public boolean isV3() {
+    return getPeerAddress().isStream();
   }
 
   /** Return a best guess at the URL at which to reach this peer's UI. */

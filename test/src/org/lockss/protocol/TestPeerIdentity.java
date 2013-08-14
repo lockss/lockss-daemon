@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerIdentity.java,v 1.7 2011-07-07 05:23:03 tlipkis Exp $
+ * $Id: TestPeerIdentity.java,v 1.8 2013-08-14 23:27:15 barry409 Exp $
  */
 
 /*
@@ -117,5 +117,12 @@ public class TestPeerIdentity extends LockssTestCase {
     PeerIdentity back3 = (PeerIdentity)deserializer.deserialize(temp3);
     assertEquals(pidv3.getIdString(), back3.getIdString());
     assertEquals(pidv3.getPeerAddress(), back3.getPeerAddress());
+  }
+
+  public void testIsV3() throws Exception {
+    PeerIdentity pidv3 = new PeerIdentity("tcp:[1.1.1.1]:111");
+    assertTrue(pidv3.isV3());
+    PeerIdentity pidv1 = new PeerIdentity("12.34.56.78");
+    assertFalse(pidv1.isV3());
   }
 }
