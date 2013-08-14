@@ -7,7 +7,7 @@
   >
 
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
-    param[base_url] = http://essential.metapress.com/content/
+    param[base_url] = http://essential.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >
     
 
