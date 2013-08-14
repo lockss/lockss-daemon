@@ -14,7 +14,6 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://www.cmaj.ca/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[notReady] = missing pdf files
 
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Canadian Medical Association Journal Volume 94 [tables of contents only] ; 94 >
     au < HighWirePressH20Plugin ; manifest ; 1966 ; Canadian Medical Association Journal Volume 95 [tables of contents only] ; 95 >
@@ -111,7 +110,7 @@
     au < HighWirePressH20Plugin ; released ; 2009 ; Canadian Medical Association Journal Volume 181 ; 181 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Canadian Medical Association Journal Volume 182 ; 182 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Canadian Medical Association Journal Volume 183 ; 183 >
-    au < HighWirePressH20Plugin ; notReady ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
+    au < HighWirePressH20Plugin ; ready ; 2012 ; Canadian Medical Association Journal Volume 184 ; 184 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Canadian Medical Association Journal Volume 185 ; 185 >
 
   }
