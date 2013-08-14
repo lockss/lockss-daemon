@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.87.80.1 2013-08-14 22:11:53 barry409 Exp $
+ * $Id: IdentityManager.java,v 1.87.80.2 2013-08-14 22:31:16 barry409 Exp $
  */
 
 /*
@@ -402,6 +402,21 @@ public interface IdentityManager extends LockssManager {
                                          float agreement);
 
   /**
+   * Signal partial agreement with a peer on a given archival unit following
+   * a V3 poll.
+   *
+   * @param agreementType The {@link AgreementType} to be recorded.
+   * @param pid The {@link PeerIdentity} of the agreeing peer.
+   * @param au The {@link ArchivalUnit}.
+   * @param agreement A number between {@code 0.0} and {@code 1.0}
+   *                   representing the percentage of agreement on the
+   *                   portion of the AU polled.
+   */
+  public void signalPartialAgreement(AgreementType agreementType, 
+				     PeerIdentity pid, ArchivalUnit au,
+                                     float agreement);
+
+  /**
    * Signal the completion of a local hash check.
    *
    * @param filesCount The number of files checked.
@@ -525,6 +540,45 @@ public interface IdentityManager extends LockssManager {
   public PeerIdentityStatus getPeerIdentityStatus(String key);
 
   public String getUiUrlStem(PeerIdentity pid);
+
+  /**
+   * Different agreement situations we record.
+   *
+   * Note: in a symmetric poll the poller and voter will not
+   * necessarily record the same percent agreement, since each may
+   * have content for URLs which the other does not. Since the hint
+   * received after a symmetric poll is the other participant's
+   * recorded percent agreement, the calculated percent agreements are
+   * used to decide if a repair request should be honored, and hints
+   * are used to try to find willing repairers likely to honor repair
+   * requests. */
+  public enum AgreementType {
+    /** A poll with all content hashed and tallied. Recorded by
+     * poller. 
+     */
+    POR,
+    /** A poll with a selection of the content hashed and
+     * tallied. Recorded by poller. */
+    POP,
+    /** A POR poll where a voter has called for the poller's
+     * hashes. Recorded by voter. */
+    SYMMETRIC_POR,
+    /** A POP poll where a voter has called for the poller's
+     * hashes. Recorded by voter. */
+    SYMMETRIC_POP,
+    /** The hint given a voter by the poller after a POR
+     * poll. Recorded by voter. */
+    POR_HINT,
+    /** The hint given a voter by the poller after a POP
+     * poll. Recorded by voter. */
+    POP_HINT,
+    /** The hint given a poller by a voter after a symmetric POR
+     * poll. Recorded by poller. */
+    SYMMETRIC_POR_HINT,
+    /** The hint given a poller by a voter after a symmetric POP
+     * poll. Recorded by poller. */
+    SYMMETRIC_POP_HINT
+  }
 
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;
