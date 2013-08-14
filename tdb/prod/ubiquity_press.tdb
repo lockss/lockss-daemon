@@ -182,6 +182,17 @@
     
     {
     
+      param[base_url] = http://pia-journal.co.uk/
+      param[journal_id] = pia
+
+      au < superseded ; 2009 ; Papers from the Institute of Archaeology Volume 19 [superseded] ; 19 ; 2009 >
+      au < superseded ; 2010 ; Papers from the Institute of Archaeology Volume 20 [superseded] ; 20 ; 2010 >
+      au < superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 [superseded] ; 21 ; 2011 >
+    
+    }
+    
+    {
+    
       param[base_url] = http://www.pia-journal.co.uk/
       param[journal_id] = pia
 
