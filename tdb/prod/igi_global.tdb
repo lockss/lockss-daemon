@@ -563,10 +563,9 @@
       eissn = 2166-7306
     >
 
-    comment[0] = forthcoming in 2013
     param[journal_issn] = 2166-7292
 
-    au < expected ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 >
+    au < manifest ; 2013 ; International Journal of Conceptual Structures and Smart Applications (IJCSSA) Volume 1 ; 1 >
 
   }
 
@@ -1098,7 +1097,7 @@
     au < released ; 2010 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 3 ; 3 >
-    au < expected ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 >
+    au < manifest ; 2013 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 4 ; 4 >
 
 
   }
@@ -1116,7 +1115,7 @@
     au < released ; 2010 ; International Journal of Green Computing (IJGC) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Green Computing (IJGC) Volume 2 ; 2 >
     au < released ; 2012 ; International Journal of Green Computing (IJGC) Volume 3 ; 3 >
-    au < expected ; 2013 ; International Journal of Green Computing (IJGC) Volume 4 ; 4 >
+    au < manifest ; 2013 ; International Journal of Green Computing (IJGC) Volume 4 ; 4 >
 
   }
 
@@ -2717,7 +2716,7 @@
     au < manifest ; 2010 ; Journal of Information Technology Research (JITR) Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Information Technology Research (JITR) Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Information Technology Research (JITR) Volume 5 ; 5 >
-    au < expected ; 2013 ; Journal of Information Technology Research (JITR) Volume 6 ; 6 >
+    au < manifest ; 2013 ; Journal of Information Technology Research (JITR) Volume 6 ; 6 >
 
   }
 
