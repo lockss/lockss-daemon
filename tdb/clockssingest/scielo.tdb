@@ -8,16 +8,2850 @@
   
   plugin = needs.plugin
   param[base_url] = http://www.scielo.br/
-  implicit < status ; status2 ; year ; name ; param[year] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
   
-  {
-  
-    title <
-      name =  SciELO  
+    {
 
-   
-    >
+      title <
+        name = ABCD. Arquivos Brasileiros de Cirurgia Digestiva (São Paulo);
+        issn = 0102-6720
+      >
 
- 
-  }
+    }
+
+    {
+
+      title <
+        name = Acta Amazonica;
+        issn = 0044-5967
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Botanica Brasilica;
+        issn = 0102-3306
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Cirurgica Brasileira;
+        issn = 0102-8650
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Limnologica Brasiliensia;
+        issn = 2179-975X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Ortopédica Brasileira;
+        issn = 1413-7852
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Paulista de Enfermagem;
+        issn = 0103-2100
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Scientiarum. Agronomy;
+        issn = 1807-8621
+      >
+
+    }
+
+    {
+
+      title <
+        name = Acta Scientiarum. Animal Sciences;
+        issn = 1807-8672
+      >
+
+    }
+
+    {
+
+      title <
+        name = Afro-Ásia;
+        issn = 0002-0591
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ágora: Estudos em Teoria Psicanalítica;
+        issn = 1516-1498
+      >
+
+    }
+
+    {
+
+      title <
+        name = Alea : Estudos Neolatinos;
+        issn = 1517-106X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Alfa : Revista de Linguística (São José do Rio Preto);
+        issn = 1981-5794
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ambiente & Sociedade;
+        issn = 1414-753X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ambiente Construído;
+        issn = 1678-8621
+      >
+
+    }
+
+    {
+
+      title <
+        name = Anais Brasileiros de Dermatologia;
+        issn = 0365-0596
+      >
+
+    }
+
+    {
+
+      title <
+        name = Anais da Academia Brasileira de Ciências;
+        issn = 0001-3765
+      >
+
+    }
+
+    {
+
+      title <
+        name = Anais da Escola Superior de Agricultura Luiz de Queiroz;
+        issn = 0071-1276
+      >
+
+    }
+
+    {
+
+      title <
+        name = Anais da Sociedade Entomológica do Brasil;
+        issn = 0301-8059
+      >
+
+    }
+
+    {
+
+      title <
+        name = Anais do Museu Paulista: História e Cultura Material;
+        issn = 0101-4714
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivo Brasileiro de Medicina Veterinária e Zootecnia;
+        issn = 0102-0935
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos Brasileiros de Cardiologia;
+        issn = 0066-782X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos Brasileiros de Endocrinologia & Metabologia;
+        issn = 0004-2730
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos Brasileiros de Oftalmologia;
+        issn = 0004-2749
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos de Gastroenterologia;
+        issn = 0004-2803
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos de Neuro-Psiquiatria;
+        issn = 0004-282X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Arquivos Internacionais de Otorrinolaringologia;
+        issn = 1809-4872
+      >
+
+    }
+
+    {
+
+      title <
+        name = ARS (São Paulo);
+        issn = 1678-5320
+      >
+
+    }
+
+    {
+
+      title <
+        name = Avaliação: Revista da Avaliação da Educação Superior (Campinas);
+        issn = 1414-4077
+      >
+
+    }
+
+    {
+
+      title <
+        name = Bakhtiniana: Revista de Estudos do Discurso;
+        issn = 2176-4573
+      >
+
+    }
+
+    {
+
+      title <
+        name = BAR - Brazilian Administration Review;
+        issn = 1807-7692
+      >
+
+    }
+
+    {
+
+      title <
+        name = Biota Neotropica;
+        issn = 1676-0603
+      >
+
+    }
+
+    {
+
+      title <
+        name = Bolema: Boletim de Educação Matemática;
+        issn = 0103-636X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Boletim de Ciências Geodésicas;
+        issn = 1982-2170
+      >
+
+    }
+
+    {
+
+      title <
+        name = Boletim do Instituto Oceanográfico;
+        issn = 0373-5524
+      >
+
+    }
+
+    {
+
+      title <
+        name = Boletim do Instituto Paulista de Oceanografia;
+        issn = 0100-4239
+      >
+
+    }
+
+    {
+
+      title <
+        name = Boletim do Museu Paraense Emílio Goeldi. Ciências Humanas;
+        issn = 1981-8122
+      >
+
+    }
+
+    {
+
+      title <
+        name = Bragantia;
+        issn = 0006-8705
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Archives of Biology and Technology;
+        issn = 1516-8913
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Dental Journal;
+        issn = 0103-6440
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Biology;
+        issn = 1519-6984
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Botany;
+        issn = 0100-8404
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Chemical Engineering;
+        issn = 0104-6632
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Food Technology;
+        issn = 1981-6723
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Genetics;
+        issn = 0100-8455
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Infectious Diseases;
+        issn = 1413-8670
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Medical and Biological Research;
+        issn = 0100-879X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Microbiology;
+        issn = 1517-8382
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Oceanography;
+        issn = 1679-8759
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Oral Sciences;
+        issn = 1677-3225
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Otorhinolaryngology;
+        issn = 1808-8694
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Pharmaceutical Sciences;
+        issn = 1984-8250
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Physical Therapy;
+        issn = 1413-3555
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Physics;
+        issn = 0103-9733
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Plant Physiology;
+        issn = 1677-0420
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Journal of Veterinary Research and Animal Science;
+        issn = 1413-9596
+      >
+
+    }
+
+    {
+
+      title <
+        name = Brazilian Oral Research;
+        issn = 1806-8324
+      >
+
+    }
+
+    {
+
+      title <
+        name = Caderno CRH;
+        issn = 0103-4979
+      >
+
+    }
+
+    {
+
+      title <
+        name = Caderno de Estudos;
+        issn = 1413-9251
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cadernos CEDES;
+        issn = 0101-3262
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cadernos de Pesquisa;
+        issn = 0100-1574
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cadernos de Saúde Pública;
+        issn = 0102-311X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cadernos EBAPE.BR;
+        issn = 1679-3951
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cadernos Pagu;
+        issn = 0104-8333
+      >
+
+    }
+
+    {
+
+      title <
+        name = Cerâmica;
+        issn = 0366-6913
+      >
+
+    }
+
+    {
+
+      title <
+        name = CERNE;
+        issn = 0104-7760
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ciência & Educação (Bauru);
+        issn = 1516-7313
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ciência & Saúde Coletiva;
+        issn = 1413-8123
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ciência da Informação;
+        issn = 0100-1965
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ciência e Agrotecnologia;
+        issn = 1413-7054
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ciência Rural;
+        issn = 0103-8478
+      >
+
+    }
+
+    {
+
+      title <
+        name = Clinics;
+        issn = 1807-5932
+      >
+
+    }
+
+    {
+
+      title <
+        name = CoDAS;
+        issn = 2317-1782
+      >
+
+    }
+
+    {
+
+      title <
+        name = Coluna/Columna;
+        issn = 1808-1851
+      >
+
+    }
+
+    {
+
+      title <
+        name = Computational & Applied Mathematics;
+        issn = 1807-0302
+      >
+
+    }
+
+    {
+
+      title <
+        name = Contexto Internacional;
+        issn = 0102-8529
+      >
+
+    }
+
+    {
+
+      title <
+        name = Crop Breeding and Applied Biotechnology;
+        issn = 1984-7033
+      >
+
+    }
+
+    {
+
+      title <
+        name = Dados;
+        issn = 0011-5258
+      >
+
+    }
+
+    {
+
+      title <
+        name = DELTA: Documentação de Estudos em Lingüística Teórica e Aplicada;
+        issn = 0102-4450
+      >
+
+    }
+
+    {
+
+      title <
+        name = Dental Press Journal of Orthodontics;
+        issn = 2176-9451
+      >
+
+    }
+
+    {
+
+      title <
+        name = Eclética Química;
+        issn = 0100-4670
+      >
+
+    }
+
+    {
+
+      title <
+        name = Economia Aplicada;
+        issn = 1413-8050
+      >
+
+    }
+
+    {
+
+      title <
+        name = Economia e Sociedade;
+        issn = 0104-0618
+      >
+
+    }
+
+    {
+
+      title <
+        name = Educação & Realidade;
+        issn = 2175-6236
+      >
+
+    }
+
+    {
+
+      title <
+        name = Educação & Sociedade;
+        issn = 0101-7330
+      >
+
+    }
+
+    {
+
+      title <
+        name = Educação e Pesquisa;
+        issn = 1517-9702
+      >
+
+    }
+
+    {
+
+      title <
+        name = Educação em Revista;
+        issn = 0102-4698
+      >
+
+    }
+
+    {
+
+      title <
+        name = Educar em Revista;
+        issn = 0104-4060
+      >
+
+    }
+
+    {
+
+      title <
+        name = Einstein (São Paulo);
+        issn = 1679-4508
+      >
+
+    }
+
+    {
+
+      title <
+        name = Engenharia Agrícola;
+        issn = 0100-6916
+      >
+
+    }
+
+    {
+
+      title <
+        name = Engenharia Sanitaria e Ambiental ;
+        issn = 1413-4152
+      >
+
+    }
+
+    {
+
+      title <
+        name = Ensaio: Avaliação e Políticas Públicas em Educação;
+        issn = 0104-4036
+      >
+
+    }
+
+    {
+
+      title <
+        name = Entomología y Vectores;
+        issn = 0328-0381
+      >
+
+    }
+
+    {
+
+      title <
+        name = Escola Anna Nery;
+        issn = 1414-8145
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos Afro-Asiáticos;
+        issn = 0101-546X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos Avançados;
+        issn = 0103-4014
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos de Literatura Brasileira Contemporânea;
+        issn = 2316-4018
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos de Psicologia (Campinas);
+        issn = 0103-166X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos de Psicologia (Natal);
+        issn = 1413-294X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos Econômicos (São Paulo);
+        issn = 0101-4161
+      >
+
+    }
+
+    {
+
+      title <
+        name = Estudos Históricos (Rio de Janeiro);
+        issn = 0103-2186
+      >
+
+    }
+
+    {
+
+      title <
+        name = Fisioterapia e Pesquisa;
+        issn = 1809-2950
+      >
+
+    }
+
+    {
+
+      title <
+        name = Fisioterapia em Movimento;
+        issn = 0103-5150
+      >
+
+    }
+
+    {
+
+      title <
+        name = Fitopatologia Brasileira;
+        issn = 0100-4158
+      >
+
+    }
+
+    {
+
+      title <
+        name = Food Science and Technology (Campinas);
+        issn = 0101-2061
+      >
+
+    }
+
+    {
+
+      title <
+        name = Fractal : Revista de Psicologia;
+        issn = 1984-0292
+      >
+
+    }
+
+    {
+
+      title <
+        name = Genetics and Molecular Biology;
+        issn = 1415-4757
+      >
+
+    }
+
+    {
+
+      title <
+        name = Gestão & Produção;
+        issn = 0104-530X
+      >
+
+    }
+
+    {
+
+      title <
+        name = História (São Paulo);
+        issn = 0101-9074
+      >
+
+    }
+
+    {
+
+      title <
+        name = História da Educação;
+        issn = 2236-3459
+      >
+
+    }
+
+    {
+
+      title <
+        name = História, Ciências, Saúde-Manguinhos;
+        issn = 0104-5970
+      >
+
+    }
+
+    {
+
+      title <
+        name = Hoehnea;
+        issn = 2236-8906
+      >
+
+    }
+
+    {
+
+      title <
+        name = Horizontes Antropológicos;
+        issn = 0104-7183
+      >
+
+    }
+
+    {
+
+      title <
+        name = Horticultura Brasileira;
+        issn = 0102-0536
+      >
+
+    }
+
+    {
+
+      title <
+        name = Iheringia. Série Zoologia;
+        issn = 0073-4721
+      >
+
+    }
+
+    {
+
+      title <
+        name = Interações (Campo Grande);
+        issn = 1518-7012
+      >
+
+    }
+
+    {
+
+      title <
+        name = Intercom: Revista Brasileira de Ciências da Comunicação;
+        issn = 1809-5844
+      >
+
+    }
+
+    {
+
+      title <
+        name = Interface - Comunicação, Saúde, Educação;
+        issn = 1414-3283
+      >
+
+    }
+
+    {
+
+      title <
+        name = International Archives of Otorhinolaryngology;
+        issn = 1809-4864
+      >
+
+    }
+
+    {
+
+      title <
+        name = International braz j urol;
+        issn = 1677-5538
+      >
+
+    }
+
+    {
+
+      title <
+        name = JISTEM - Journal of Information Systems and Technology Management;
+        issn = 1807-1775
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal Brasileiro de Nefrologia;
+        issn = 0101-2800
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal Brasileiro de Patologia e Medicina Laboratorial;
+        issn = 1676-2444
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal Brasileiro de Pneumologia;
+        issn = 1806-3713
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal Brasileiro de Psiquiatria;
+        issn = 0047-2085
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal da Sociedade Brasileira de Fonoaudiologia;
+        issn = 2179-6491
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal de Pediatria;
+        issn = 0021-7557
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal de Pneumologia;
+        issn = 0102-3586
+      >
+
+    }
+
+    {
+
+      title <
+        name = Jornal Vascular Brasileiro;
+        issn = 1677-5449
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of  Coloproctology (Rio de Janeiro);
+        issn = 2237-9363
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Applied Oral Science;
+        issn = 1678-7757
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Epilepsy and Clinical Neurophysiology;
+        issn = 1676-2649
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Microwaves, Optoelectronics and Electromagnetic Applications;
+        issn = 2179-1074
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Seed Science;
+        issn = 2317-1537
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Brazilian Chemical Society;
+        issn = 0103-5053
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Brazilian Computer Society;
+        issn = 0104-6500
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Brazilian Society of Mechanical Sciences;
+        issn = 0100-7386
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of the Brazilian Society of Mechanical Sciences and Engineering;
+        issn = 1678-5878
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Venomous Animals and Toxins;
+        issn = 0104-7930
+      >
+
+    }
+
+    {
+
+      title <
+        name = Journal of Venomous Animals and Toxins including Tropical Diseases;
+        issn = 1678-9199
+      >
+
+    }
+
+    {
+
+      title <
+        name = Kriterion: Revista de Filosofia;
+        issn = 0100-512X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Latin American Journal of Solids and Structures;
+        issn = 1679-7825
+      >
+
+    }
+
+    {
+
+      title <
+        name = Linguagem em (Dis)curso;
+        issn = 1518-7632
+      >
+
+    }
+
+    {
+
+      title <
+        name = Lua Nova: Revista de Cultura e Política;
+        issn = 0102-6445
+      >
+
+    }
+
+    {
+
+      title <
+        name = Machado de Assis em Linha;
+        issn = 1983-6821
+      >
+
+    }
+
+    {
+
+      title <
+        name = Mana;
+        issn = 0104-9313
+      >
+
+    }
+
+    {
+
+      title <
+        name = Manuscrito;
+        issn = 0100-6045
+      >
+
+    }
+
+    {
+
+      title <
+        name = Matéria (Rio de Janeiro);
+        issn = 1517-7076
+      >
+
+    }
+
+    {
+
+      title <
+        name = Materials Research;
+        issn = 1516-1439
+      >
+
+    }
+
+    {
+
+      title <
+        name = Memórias do Instituto Oswaldo Cruz;
+        issn = 0074-0276
+      >
+
+    }
+
+    {
+
+      title <
+        name = Motriz: Revista de Educação Física;
+        issn = 1980-6574
+      >
+
+    }
+
+    {
+
+      title <
+        name = Neotropical Entomology;
+        issn = 1519-566X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Neotropical Ichthyology;
+        issn = 1679-6225
+      >
+
+    }
+
+    {
+
+      title <
+        name = Nova Economia;
+        issn = 0103-6351
+      >
+
+    }
+
+    {
+
+      title <
+        name = Novos Estudos - CEBRAP;
+        issn = 0101-3300
+      >
+
+    }
+
+    {
+
+      title <
+        name = Opinião Pública;
+        issn = 0104-6276
+      >
+
+    }
+
+    {
+
+      title <
+        name = Organizações & Sociedade;
+        issn = 1984-9230
+      >
+
+    }
+
+    {
+
+      title <
+        name = Paidéia (Ribeirão Preto);
+        issn = 0103-863X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pandaemonium Germanicum;
+        issn = 1982-8837
+      >
+
+    }
+
+    {
+
+      title <
+        name = Papéis Avulsos de Zoologia (São Paulo);
+        issn = 0031-1049
+      >
+
+    }
+
+    {
+
+      title <
+        name = Per Musi;
+        issn = 1517-7599
+      >
+
+    }
+
+    {
+
+      title <
+        name = Perspectivas em Ciência da Informação;
+        issn = 1413-9936
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pesquisa Agropecuária Brasileira;
+        issn = 0100-204X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pesquisa Agropecuária Tropical;
+        issn = 1983-4063
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pesquisa Odontológica Brasileira;
+        issn = 1517-7491
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pesquisa Operacional;
+        issn = 0101-7438
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pesquisa Veterinária Brasileira;
+        issn = 0100-736X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Physis: Revista de Saúde Coletiva;
+        issn = 0103-7331
+      >
+
+    }
+
+    {
+
+      title <
+        name = Planta Daninha;
+        issn = 0100-8358
+      >
+
+    }
+
+    {
+
+      title <
+        name = Polímeros;
+        issn = 0104-1428
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pró-Fono Revista de Atualização Científica;
+        issn = 0104-5687
+      >
+
+    }
+
+    {
+
+      title <
+        name = Pro-Posições;
+        issn = 0103-7307
+      >
+
+    }
+
+    {
+
+      title <
+        name = Produção;
+        issn = 0103-6513
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psico-USF;
+        issn = 1413-8271
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia & Sociedade;
+        issn = 0102-7182
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia Clínica;
+        issn = 0103-5665
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia em Estudo;
+        issn = 1413-7372
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia Escolar e Educacional;
+        issn = 1413-8557
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia USP;
+        issn = 0103-6564
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia: Ciência e Profissão;
+        issn = 1414-9893
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia: Reflexão e Crítica;
+        issn = 0102-7972
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psicologia: Teoria e Pesquisa;
+        issn = 0102-3772
+      >
+
+    }
+
+    {
+
+      title <
+        name = Psychology & Neuroscience;
+        issn = 1983-3288
+      >
+
+    }
+
+    {
+
+      title <
+        name = Química Nova;
+        issn = 0100-4042
+      >
+
+    }
+
+    {
+
+      title <
+        name = Radiologia Brasileira;
+        issn = 0100-3984
+      >
+
+    }
+
+    {
+
+      title <
+        name = RAE eletrônica;
+        issn = 1676-5648
+      >
+
+    }
+
+    {
+
+      title <
+        name = RAM. Revista de Administração Mackenzie;
+        issn = 1678-6971
+      >
+
+    }
+
+    {
+
+      title <
+        name = REAd. Revista Eletrônica de Administração (Porto Alegre);
+        issn = 1413-2311
+      >
+
+    }
+
+    {
+
+      title <
+        name = Religião & Sociedade;
+        issn = 0100-8587
+      >
+
+    }
+
+    {
+
+      title <
+        name = Rem: Revista Escola de Minas;
+        issn = 0370-4467
+      >
+
+    }
+
+    {
+
+      title <
+        name = REMHU : Revista Interdisciplinar da Mobilidade Humana ;
+        issn = 1980-8585
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Árvore;
+        issn = 0100-6762
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Anestesiologia;
+        issn = 0034-7094
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Biologia;
+        issn = 0034-7108
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Cardiologia Invasiva;
+        issn = 2179-8397
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciência Avícola;
+        issn = 1516-635X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciência do Solo;
+        issn = 0100-0683
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciência Política;
+        issn = 0103-3352
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciências do Esporte;
+        issn = 0101-3289
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciências Farmacêuticas;
+        issn = 1516-9332
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ciências Sociais;
+        issn = 0102-6909
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Cineantropometria & Desempenho Humano;
+        issn = 1980-0037
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Cirurgia Cardiovascular;
+        issn = 0102-7638
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Cirurgia Plástica;
+        issn = 1983-5175
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Coloproctologia;
+        issn = 0101-9880
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Economia;
+        issn = 0034-7140
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Educação;
+        issn = 1413-2478
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Educação Especial;
+        issn = 1413-6538
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Educação Física e Esporte;
+        issn = 1807-5509
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Educação Médica;
+        issn = 0100-5502
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Enfermagem;
+        issn = 0034-7167
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Engenharia Agrícola e Ambiental;
+        issn = 1415-4366
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Engenharia Biomédica;
+        issn = 1517-3151
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ensino de Física;
+        issn = 1806-1117
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Entomologia;
+        issn = 0085-5626
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Epidemiologia;
+        issn = 1415-790X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Estudos de População;
+        issn = 0102-3098
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Farmacognosia;
+        issn = 0102-695X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Fisiologia Vegetal;
+        issn = 0103-3131
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Fruticultura;
+        issn = 0100-2945
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Geofísica;
+        issn = 0102-261X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Geriatria e Gerontologia;
+        issn = 1809-9823
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ginecologia e Obstetrícia;
+        issn = 0100-7203
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Hematologia e Hemoterapia;
+        issn = 1516-8484
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de História;
+        issn = 0102-0188
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Linguística Aplicada;
+        issn = 1984-6398
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Medicina do Esporte;
+        issn = 1517-8692
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Meteorologia;
+        issn = 0102-7786
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Oceanografia;
+        issn = 1413-7739
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Oftalmologia;
+        issn = 0034-7280
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Ortopedia;
+        issn = 0102-3616
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Otorrinolaringologia;
+        issn = 0034-7299
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Parasitologia Veterinária;
+        issn = 1984-2961
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Plantas Medicinais;
+        issn = 1516-0572
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Política Internacional;
+        issn = 0034-7329
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Psiquiatria;
+        issn = 1516-4446
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Reumatologia;
+        issn = 0482-5004
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Saúde e Produção Animal;
+        issn = 1519-9940
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Saúde Materno Infantil ;
+        issn = 1519-3829
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Saúde Ocupacional;
+        issn = 0303-7657
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Sementes;
+        issn = 0101-3122
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Terapia Intensiva;
+        issn = 0103-507X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Zoologia;
+        issn = 0101-8175
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Brasileira de Zootecnia;
+        issn = 1516-3598
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista CEFAC;
+        issn = 1516-1846
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Ceres;
+        issn = 0034-737X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Ciência Agronômica;
+        issn = 1806-6690
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Contabilidade & Finanças;
+        issn = 1519-7077
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Associação Médica Brasileira;
+        issn = 0104-4230
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Educação Física / UEM;
+        issn = 1983-3083
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Escola de Enfermagem da USP;
+        issn = 0080-6234
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Faculdade de Educação;
+        issn = 0102-2555
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Sociedade Brasileira de Fonoaudiologia;
+        issn = 1516-8034
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista da Sociedade Brasileira de Medicina Tropical;
+        issn = 0037-8682
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Administração (São Paulo);
+        issn = 0080-2107
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Administração Contemporânea;
+        issn = 1415-6555
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Administração de Empresas;
+        issn = 0034-7590
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Administração Pública;
+        issn = 0034-7612
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Antropologia;
+        issn = 0034-7701
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Economia Contemporânea;
+        issn = 1415-9848
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Economia e Sociologia Rural;
+        issn = 0103-2003
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Economia Política;
+        issn = 0101-3157
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Microbiologia;
+        issn = 0001-3714
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Nutrição;
+        issn = 1415-5273
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Odontologia da UNESP;
+        issn = 1807-2577
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Odontologia da Universidade de São Paulo;
+        issn = 0103-0663
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Psiquiatria Clínica;
+        issn = 0101-6083
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Psiquiatria do Rio Grande do Sul;
+        issn = 0101-8108
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Saúde Pública;
+        issn = 0034-8910
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista de Sociologia e Política;
+        issn = 0104-4478
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Dental Press de Ortodontia e Ortopedia Facial;
+        issn = 1415-5419
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Direito GV;
+        issn = 1808-2432
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista do Colégio Brasileiro de Cirurgiões;
+        issn = 0100-6991
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista do Departamento de Psicologia. UFF;
+        issn = 0104-8023
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista do Hospital das Clínicas;
+        issn = 0041-8781
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista do Instituto de Estudos Brasileiros;
+        issn = 0020-3874
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista do Instituto de Medicina Tropical de São Paulo;
+        issn = 0036-4665
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Dor;
+        issn = 1806-0013
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Estudos Feministas;
+        issn = 0104-026X
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Gaúcha de Enfermagem;
+        issn = 1983-1447
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista IBRACON de Estruturas e Materiais;
+        issn = 1983-4195
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Katálysis;
+        issn = 1414-4980
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Latino-Americana de Enfermagem;
+        issn = 0104-1169
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Latinoamericana de Psicopatologia Fundamental;
+        issn = 1415-4714
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Odonto Ciência;
+        issn = 1980-6523
+      >
+
+    }
+
+    {
+
+      title <
+        name = Revista Paulista de Pediatria;
+        issn = 0103-0582
+      >
+
+    }
+
+    {
+
+      title <
+        name = Rodriguésia;
+        issn = 2175-7860
+      >
+
+    }
+
+    {
+
+      title <
+        name = São Paulo em Perspectiva;
+        issn = 0102-8839
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sao Paulo Medical Journal;
+        issn = 1516-3180
+      >
+
+    }
+
+    {
+
+      title <
+        name = Saúde e Sociedade;
+        issn = 0104-1290
+      >
+
+    }
+
+    {
+
+      title <
+        name = Saúde em Debate;
+        issn = 0103-1104
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sba: Controle & Automação Sociedade Brasileira de Automatica;
+        issn = 0103-1759
+      >
+
+    }
+
+    {
+
+      title <
+        name = Scientia Agricola;
+        issn = 0103-9016
+      >
+
+    }
+
+    {
+
+      title <
+        name = Scientiae Studia;
+        issn = 1678-3166
+      >
+
+    }
+
+    {
+
+      title <
+        name = Serviço Social & Sociedade;
+        issn = 0101-6628
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sexualidad, Salud y Sociedad (Rio de Janeiro);
+        issn = 1984-6487
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sociedade & Natureza;
+        issn = 1982-4513
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sociedade e Estado;
+        issn = 0102-6992
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sociologias;
+        issn = 1517-4522
+      >
+
+    }
+
+    {
+
+      title <
+        name = Soldagem & Inspeção;
+        issn = 0104-9224
+      >
+
+    }
+
+    {
+
+      title <
+        name = Summa Phytopathologica;
+        issn = 0100-5405
+      >
+
+    }
+
+    {
+
+      title <
+        name = Sur. Revista Internacional de Direitos Humanos;
+        issn = 1806-6445
+      >
+
+    }
+
+    {
+
+      title <
+        name = TEMA (São Carlos);
+        issn = 2179-8451
+      >
+
+    }
+
+    {
+
+      title <
+        name = Tempo;
+        issn = 1413-7704
+      >
+
+    }
+
+    {
+
+      title <
+        name = Tempo Social;
+        issn = 0103-2070
+      >
+
+    }
+
+    {
+
+      title <
+        name = Texto & Contexto - Enfermagem;
+        issn = 0104-0707
+      >
+
+    }
+
+    {
+
+      title <
+        name = Trabalho, Educação e Saúde;
+        issn = 1981-7746
+      >
+
+    }
+
+    {
+
+      title <
+        name = Trabalhos em Linguística Aplicada;
+        issn = 0103-1813
+      >
+
+    }
+
+    {
+
+      title <
+        name = Trans/Form/Ação;
+        issn = 0101-3173
+      >
+
+    }
+
+    {
+
+      title <
+        name = Transinformação;
+        issn = 0103-3786
+      >
+
+    }
+
+    {
+
+      title <
+        name = Trends in Psychiatry and Psychotherapy;
+        issn = 2237-6089
+      >
+
+    }
+
+    {
+
+      title <
+        name = Tropical Plant Pathology;
+        issn = 1982-5676
+      >
+
+    }
+
+    {
+
+      title <
+        name = urbe. Revista Brasileira de Gestão Urbana;
+        issn = 2175-3369
+      >
+
+    }
+
+    {
+
+      title <
+        name = Varia Historia;
+        issn = 0104-8775
+      >
+
+    }
+
+    {
+
+      title <
+        name = Vibrant: Virtual Brazilian Anthropology;
+        issn = 1809-4341
+      >
+
+    }
+
+    {
+
+      title <
+        name = Zoologia (Curitiba);
+        issn = 1984-4670
+      >
+
+    }
+
 }
