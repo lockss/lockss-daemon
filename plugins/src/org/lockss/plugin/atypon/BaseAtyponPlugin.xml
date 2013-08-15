@@ -79,6 +79,7 @@
     - include the article in all possible formats - which live under non-deterministic DOI path; do not terminate, could go deeper
     - use basic DOI pattern, to whit: PREFIX = one or more digits and dots [0-9.]+; SUFFIX = not a slash
     - The following may not be needed by all Atypon publishers, but won't hurt:
+    - exclude a doi/<type>/<DOIprefix>/null?sequence=.... (taylor&francis)    
     - some publishers show in-line images in larger format using URL with show*Image and variations for other formats
     - there can be additional arguments ([^=]+=[^&]*&)* between the showBlah? and the doi= at the end
     massmedical and t&f have a number of additions 
@@ -89,6 +90,7 @@
       <string>1,"^%sna101/home/literatum/publisher/[^/]+/journals/[^/]+/%s/", base_url, journal_id</string>   
       <string>1,"^%stoc/%s/%s/", base_url, journal_id, volume_name</string>
       <string>2,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[-.9]+$", base_url</string>
+      <string>2,"^%sdoi/[^/]+/[0-9.]+/null\?", base_url</string>      
       <string>2,"^%sdoi/.*\?tab=permissions", base_url</string>      
       <string>1,"^%sdoi/(pdf|pdfplus|full|abs|ref|suppl|video[^/]+)/[0-9.]+/[^/]+", base_url</string>
       <string>1,"^%saction/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup|downloadCitation)\?([^=]+=[^&amp;]*&amp;)*doi=", base_url</string>

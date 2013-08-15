@@ -66,6 +66,10 @@
     <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPdfFilterFactory</string>
   </entry>
   <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisArticleIteratorFactory</string>
+  </entry> 
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>

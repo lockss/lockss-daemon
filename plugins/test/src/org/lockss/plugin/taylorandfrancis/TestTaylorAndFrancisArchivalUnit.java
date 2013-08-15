@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.7 2013-08-13 21:39:26 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArchivalUnit.java,v 1.8 2013-08-15 19:25:27 alexandraohlson Exp $
  */
 
 /*
@@ -167,6 +167,8 @@ public class TestTaylorAndFrancisArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL+"doi/abs/10.1111/ABC.2010.XYZ?tab=permissions", false, tfAu, cus);
     shouldCacheTest(ROOT_URL+"doi/abs/10.1111/ABC.2010.XYZ", true, tfAu, cus);
     shouldCacheTest(ROOT_URL+"imgJawr/cb1468962619/templates/jsp/_style2/_tandf/images/favicon.png", false, tfAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/abs/10.1111/null?sequence=rlsh20%2F2012%2Frlsh20.v033.i01%2Frlsh20.v033.i01%2Fproduction", false, tfAu, cus);
+    shouldCacheTest(ROOT_URL+"doi/full/10.1111/null?sequence=rlsh20%2F2012%2Frlsh20.v033.i01%2Frlsh20.v033.i01%2Fproduction", false, tfAu, cus);
     // LOCKSS
     shouldCacheTest("http://lockss.stanford.edu", false, tfAu, cus);
     // other sites

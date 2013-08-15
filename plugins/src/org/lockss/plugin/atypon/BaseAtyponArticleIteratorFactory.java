@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.3 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.4 2013-08-15 19:25:27 alexandraohlson Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ implements ArticleIteratorFactory,
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
-    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
     
     // various aspects of an article
     final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
@@ -150,6 +150,13 @@ implements ArticleIteratorFactory,
 
     return builder.getSubTreeArticleIterator();
   }
+  
+  // Enclose the method that creates the builder to allow a child to do additional processing
+  // for example Taylor&Francis
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+   return new SubTreeArticleIteratorBuilder(au);
+  }
+  
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
