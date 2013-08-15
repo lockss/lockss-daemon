@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.11 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: TestCuUrl.java,v 1.12 2013-08-15 08:18:58 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.net.*;
-import java.util.Properties;
+import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.*;
 import org.lockss.test.*;
@@ -150,6 +150,18 @@ public class TestCuUrl extends LockssTestCase {
     InputStream in = uconn.getInputStream();
     Reader r = new InputStreamReader(in);
     assertEquals(testContents[n], StringUtil.fromReader(r));
+
+    Map hdrFields = uconn.getHeaderFields();
+    assertEquals(MapUtil.map("x-lockss-content-type",
+			     ListUtil.list(testTypes[n]),
+			     "content-length",
+			     ListUtil.list(""+testContents[n].length())),
+		 hdrFields);
+    try {
+      hdrFields.put("foo", "bar");
+      fail("getHeaderFields() is required to return an unmodifiable map");
+    } catch (UnsupportedOperationException e) {
+    }
   }
 
   public void testIsCuUrl() {

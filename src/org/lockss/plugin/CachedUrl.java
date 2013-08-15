@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.33 2013-08-08 05:57:25 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.34 2013-08-15 08:18:59 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 
+import org.mortbay.http.HttpFields;
 import org.lockss.util.*;
 import org.lockss.rewriter.*;
 import org.lockss.extractor.*;
@@ -88,7 +89,9 @@ public interface CachedUrl extends CachedUrlSetNode {
    * redirects.  Not predictable; don't use. */
   public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
 
-  /** Date: from response, as a long */
+  /** Local time when file collected.  *Not* derived from the Date: header
+   * from the server, which is stored separately if present.  Poorly named
+   * but cannot be changed. */
   public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
   public static final String PROPERTY_LAST_MODIFIED = "last-modified";
@@ -98,6 +101,42 @@ public interface CachedUrl extends CachedUrlSetNode {
   // case-sensitive context in RepositoryNode.  The use of CIProperties
   // should be pushed down into the repository.
   public static final String PROPERTY_CHECKSUM = "x-lockss-checksum";
+
+  /** CachedUrl properties that the daemon uses internally, should not be
+   * served with content */
+
+  public String[] LOCKSS_INTERNAL_PROPERTIES = {
+    PROPERTY_CONTENT_TYPE,
+    PROPERTY_CONTENT_URL,
+    PROPERTY_NODE_URL,
+    PROPERTY_ORIG_URL,
+    PROPERTY_REDIRECTED_TO,
+    org.lockss.repository.RepositoryNodeImpl.LOCKSS_VERSION_NUMBER,
+  };
+				       
+  /** CachedUrl properties that reflect the audit process, conditionally
+   * served with content (see {@link
+   * org.lockss.jatty.ProxyManager#PARAM_INCLUDE_LOCKSS_AUDIT_PROPS}) */
+
+  public String[] LOCKSS_AUDIT_PROPERTIES = {
+    PROPERTY_REPAIR_FROM,
+    PROPERTY_REPAIR_DATE,
+    PROPERTY_CHECKSUM,
+  };
+
+  /** Response headers whose original values are useful to carry along with
+   * the content, but which are overwritten if the content is served by the
+   * proxy to another LOCKSS daemon.  The original value of these headers
+   * will be preserved (and served) as a header with the original name
+   * prefixed by {@value
+   * org.lockss.jetty.CuResourceHandler#ORIG_HEADER_PREFIX} . */
+
+  public String[] LOCKSS_PREFIX_ORIG_PROPERTIES = {
+    HttpFields.__Date,
+    HttpFields.__Server,
+    PROPERTY_FETCH_TIME,
+  };
+
   /**
    * Return a version-specific CachedUrl for the specified content version
    * @throws UnsupportedOperationException if node has no versions
