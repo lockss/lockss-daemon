@@ -1,5 +1,5 @@
 /*
- * $Id: CuResourceHandler.java,v 1.4 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: CuResourceHandler.java,v 1.4.138.1 2013-08-15 08:17:10 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: CuResourceHandler.java,v 1.4 2005-10-07 16:19:55 thib_gc Exp $
+// $Id: CuResourceHandler.java,v 1.4.138.1 2013-08-15 08:17:10 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -45,12 +45,21 @@ import org.mortbay.util.*;
 /** A LockssResourceHandler that creates a Resource from the url stored in
     the X-Lockss-Cu field of the request. */
 public class CuResourceHandler extends LockssResourceHandler {
+
+  /** Request header stored by ProxyHandler to pass CuUrl string to
+   * LockssResourceHandler */
+  public static String REQUEST_CU_URL = "X-Lockss-Cu";
+
+  /** Prefix added to field name to preserve the value served by the origin
+   * server */
+  public static String ORIG_HEADER_PREFIX = "X-Lockss-Orig-";
+
   public CuResourceHandler(LockssDaemon daemon) {
     super(daemon);
   }
   public Resource getResource(HttpRequest request, String pathInContext)
       throws IOException {
-    String cuurl = request.getField("Lockss-Cu");
+    String cuurl = request.getField(REQUEST_CU_URL);
     if (cuurl == null) {
       return null;
     }

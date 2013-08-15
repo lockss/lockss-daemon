@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.89.4.1 2013-08-08 05:49:12 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.89.4.2 2013-08-15 08:17:09 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public static final boolean DEFAULT_DEACTIVATE_NODE_ON_ERROR = true;
 
   // properties set in the content properties, such as 'current.props'
-  static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
+  public static final String LOCKSS_VERSION_NUMBER =
+    "org.lockss.version.number";
   static final String NODE_WAS_INACTIVE_PROPERTY = "org.lockss.node.was.inactive";
   // properties set in the node properties
   static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";

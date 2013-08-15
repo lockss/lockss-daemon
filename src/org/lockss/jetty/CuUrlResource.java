@@ -1,5 +1,5 @@
 /*
- * $Id: CuUrlResource.java,v 1.6 2011-03-03 18:56:42 tlipkis Exp $
+ * $Id: CuUrlResource.java,v 1.6.48.1 2013-08-15 08:17:10 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.jetty;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 import org.mortbay.http.*;
 import org.mortbay.util.*;
@@ -118,6 +119,13 @@ public class CuUrlResource extends URLResource {
   public String getProperty(String name) {
     if (checkConnection()) {
       return _connection.getHeaderField(name);
+    }
+    return null;
+  }
+
+  public Map<String,List<String>> getPropertyMap() {
+    if (checkConnection()) {
+      return _connection.getHeaderFields();
     }
     return null;
   }

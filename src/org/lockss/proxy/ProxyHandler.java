@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.81 2013-07-15 19:44:35 clairegriffin Exp $
+ * $Id: ProxyHandler.java,v 1.81.2.1 2013-08-15 08:17:09 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.81 2013-07-15 19:44:35 clairegriffin Exp $
+// $Id: ProxyHandler.java,v 1.81.2.1 2013-08-15 08:17:09 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -53,6 +53,7 @@ import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
+import org.lockss.jetty.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.AbstractHttpHandler;
 import org.mortbay.log.LogFactory;
@@ -1102,7 +1103,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 
 
   /**
-   * Add a Lockss-Cu: field to the request with the locksscu: url to serve
+   * Add a X-Lockss-Cu: field to the request with the locksscu: url to serve
    * from the cache, then allow request to be passed on to a
    * LockssResourceHandler.
    * @param pathInContext the path
@@ -1124,7 +1125,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     // Save current state then make request editable
     int oldState = request.getState();
     request.setState(HttpMessage.__MSG_EDITABLE);
-    request.setField("Lockss-Cu", CuUrl.fromCu(cu).toString());
+    request.setField(CuResourceHandler.REQUEST_CU_URL,
+		     CuUrl.fromCu(cu).toString());
     request.setState(oldState);
     // Add a header to the response to identify content from LOCKSS cache
     response.setField(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);

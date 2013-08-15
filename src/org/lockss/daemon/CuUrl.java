@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.17 2005-10-07 16:19:55 thib_gc Exp $
+* $Id: CuUrl.java,v 1.17.138.1 2013-08-15 08:17:10 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 import org.mortbay.http.*;
 import org.lockss.app.*;
@@ -177,6 +178,29 @@ public class CuUrl {
 	val = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
       }
       return val;
+    }
+
+    // This makes a copy as it needs to return a Map<String,List<String>>.
+    // Would be more efficient to return a Map that's a view onto the
+    // Properties, which returns a new singleton list on each value access.
+
+    private Map headerFields = null;
+
+    public Map getHeaderFields() {
+      if (headerFields == null) {
+	try {
+	  connect();
+	} catch (IOException e) {
+	  return null;
+	}
+	CIProperties props = cu.getProperties();
+	Map res = new HashMap();
+	for (Map.Entry ent : props.entrySet()) {
+	  res.put(ent.getKey(), Collections.singletonList(ent.getValue()));
+	}
+	headerFields = Collections.unmodifiableMap(res);
+      }
+      return headerFields;
     }
 
     public String getContentType() {

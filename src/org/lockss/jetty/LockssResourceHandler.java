@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.18 2013-02-27 06:00:53 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.18.14.1 2013-08-15 08:17:10 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.18 2013-02-27 06:00:53 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.18.14.1 2013-08-15 08:17:10 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -668,11 +668,10 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         ResourceCache.ResourceMetaData metaData =
             (ResourceCache.ResourceMetaData)resource.getAssociate();
 
+	CuUrlResource cur = null;
 	String ctype = null;
-
-	// XXX should we copy more of the properties here?
 	if (resource instanceof CuUrlResource) {
-	  CuUrlResource cur = (CuUrlResource)resource;
+	  cur = (CuUrlResource)resource;
 	  ctype = cur.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 	}
 	if (ctype == null) {
@@ -700,7 +699,87 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 
         if (_acceptRanges && response.getHttpRequest().getDotVersion()>0)
             response.setField(HttpFields.__AcceptRanges,"bytes");
+
+	if (cur != null) {
+	  addStoredHeaders(response, cur);
+	}
     }
+
+  // Headers that should never be copied from one connection to another.
+  // Copied from ProxyHandler._DontProxyHeaders
+  String[] DONT_PROXY_HEADERS = {
+    HttpFields.__Connection,
+    HttpFields.__ProxyConnection,
+    HttpFields.__Connection,
+    HttpFields.__KeepAlive,
+    HttpFields.__TransferEncoding,
+    HttpFields.__TE,
+    HttpFields.__Trailer,
+    HttpFields.__ProxyAuthorization,
+    HttpFields.__ProxyAuthenticate,
+    HttpFields.__Upgrade,
+  };
+
+  private void addStoredHeaders(HttpResponse response,
+				CuUrlResource cur) {
+    Map<String,List<String>> hdrMap = cur.getPropertyMap();
+    for (Map.Entry<String,List<String>> ent : hdrMap.entrySet()) {
+      String key = ent.getKey();
+      List<String> valLst = ent.getValue();
+
+      // CuUrlResource always produces one-element lists; skip if malformed
+      if (valLst.size() != 1) {
+	log.warn("Unexpected CuUrlResource property list for " +
+		 key + " (" + valLst.size() + " items): " + valLst);
+	continue;
+      }
+
+      // Maintain the original value of some keys by prefixing with orig_
+      if (isHeaderKey(key, CachedUrl.LOCKSS_PREFIX_ORIG_PROPERTIES)) {
+	String prefKey = origPrefix(key);
+	// Don't replace existing orig_ header
+	if (response.getField(prefKey) != null) {
+	  continue;
+	}
+	response.setField(prefKey, valLst.get(0));
+	continue;
+      }
+
+      // Skip keys that already have a value in the response
+      if (response.getField(key) != null) {
+	continue;
+      }
+
+      // Skip internal props and connection-oriented props
+      if (isHeaderKey(key, CachedUrl.LOCKSS_INTERNAL_PROPERTIES) ||
+	  isHeaderKey(key, DONT_PROXY_HEADERS)) {
+	continue;
+      }
+
+      // If configured to copy response props, or if this is an audit prop
+      // (repair info, checksum) that we're configured to include, store it
+      // in the response.
+      if (isHeaderKey(key, CachedUrl.LOCKSS_AUDIT_PROPERTIES)
+	  ? proxyMgr.isIncludeLockssAuditProps()
+	  : proxyMgr.isCopyStoredResponseHeaders()) {
+
+	response.setField(key, valLst.get(0));
+      }
+    }
+  }
+
+  boolean isHeaderKey(String key, String[] keyset) {
+    for (String s : keyset) {
+      if (key.equalsIgnoreCase(s)) {
+	return true;
+      }
+    }
+    return false;
+  }
+
+  private String origPrefix(String s) {
+    return CuResourceHandler.ORIG_HEADER_PREFIX + s;
+  }
 
     /* ------------------------------------------------------------ */
     public void sendData(HttpRequest request,
