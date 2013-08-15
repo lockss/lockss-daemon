@@ -41551,7 +41551,7 @@ comment[mpj] = now published by Brill
     param[base_url] = http://sco.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 >
+    au < manifest ; 2013 ; SAGE Open Medical Case Reports Volume 1 ; 1 >
 
     }
 
@@ -42907,7 +42907,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
-        au < HighWirePressH20Plugin ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
   
       }
   
