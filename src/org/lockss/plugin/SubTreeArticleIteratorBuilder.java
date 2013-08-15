@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIteratorBuilder.java,v 1.3 2013-04-29 20:23:17 thib_gc Exp $
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.4 2013-08-15 00:44:34 thib_gc Exp $
  */
 
 /*
@@ -954,6 +954,9 @@ public class SubTreeArticleIteratorBuilder {
     setFullTextFromRoles(Arrays.asList(roles));
   }
 
+  /**
+   * @since 1.60
+   */
   public void setRoleFromOtherRoles(String newRole, List<String> otherRoles) {
     if (iterator == null) {
       throw new IllegalStateException("Cannot create a subtree article iterator until the AU and the spec are set");
@@ -964,16 +967,25 @@ public class SubTreeArticleIteratorBuilder {
     iterator.rolesFromOtherRoles.put(newRole, otherRoles);
   }
 
+  /**
+   * @since 1.60
+   */
   public void setRoleFromOtherRoles(String newRole, String... otherRoles) {
     setRoleFromOtherRoles(newRole, Arrays.asList(otherRoles));
   }
 
+  /**
+   * @since 1.60
+   */
   public void setSpec(MetadataTarget target,
                       List<String> rootTemplates,
                       String patternTemplate) {
     setSpec(target, rootTemplates, patternTemplate, 0);
   }
   
+  /**
+   * @since 1.60
+   */
   public void setSpec(MetadataTarget target,
                       List<String> rootTemplates,
                       String patternTemplate,
@@ -985,12 +997,18 @@ public class SubTreeArticleIteratorBuilder {
     setSpec(spec);
   }
 
+  /**
+   * @since 1.60
+   */
   public void setSpec(MetadataTarget target,
                       String rootTemplate,
                       String patternTemplate) {
     setSpec(target, Arrays.asList(rootTemplate), patternTemplate, 0);
   }
 
+  /**
+   * @since 1.60
+   */
   public void setSpec(MetadataTarget target,
                       String rootTemplate,
                       String patternTemplate,
@@ -998,6 +1016,9 @@ public class SubTreeArticleIteratorBuilder {
     setSpec(target, Arrays.asList(rootTemplate), patternTemplate, patternTemplateFlags);
   }
 
+  /**
+   * @since 1.60
+   */
   public void setSpec(SubTreeArticleIterator.Spec spec) {
     if (this.spec != null) {
       throw new IllegalStateException("Spec is already set");
@@ -1006,10 +1027,28 @@ public class SubTreeArticleIteratorBuilder {
     maybeMakeSubTreeArticleIterator();
   }
   
-  protected void maybeMakeSubTreeArticleIterator() {
-    if (au != null && spec != null && iterator == null) {
-      this.iterator = new BuildableSubTreeArticleIterator(au, spec);
-    }
+  /**
+   * <p>
+   * Instantiates a {@link BuildableSubTreeArticleIterator}. If you override
+   * this class, you may also need to override
+   * {@link BuildableSubTreeArticleIterator} accordingly, as the two
+   * collaborate.
+   * </p>
+   * 
+   * @return An instance of {@link BuildableSubTreeArticleIterator}.
+   * @since 1.63
+   */
+  protected BuildableSubTreeArticleIterator instantiateBuildableIterator() {
+    return new BuildableSubTreeArticleIterator(au, spec);
   }
   
+  /**
+   * @since 1.60
+   */
+  protected void maybeMakeSubTreeArticleIterator() {
+    if (au != null && spec != null && iterator == null) {
+      this.iterator = instantiateBuildableIterator();
+    }
+  }
+
 }
