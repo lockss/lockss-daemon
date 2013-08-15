@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.11 2011-06-21 22:10:35 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.11.46.1 2013-08-15 08:15:57 tlipkis Exp $
  */
 
 /*
@@ -45,9 +45,12 @@ public class AuditProxyManager extends BaseProxyManager {
   private static Logger log = Logger.getLogger("AuditProxy");
 
   public static final String PREFIX = Configuration.PREFIX + "proxy.audit.";
+  /** Start audit proxy if true. */
   public static final String PARAM_START = PREFIX + "start";
   public static final boolean DEFAULT_START = false;
 
+  /** If true, audit proxy will generate a manifest index along with a 404
+   * error, just like the normal proxy does */
   public static final String PARAM_INDEX = PREFIX + "index";
   public static final boolean DEFAULT_INDEX = false;
 
