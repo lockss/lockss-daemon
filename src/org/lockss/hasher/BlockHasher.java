@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.27.2.3 2013-08-10 20:38:41 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.27.2.4 2013-08-16 19:34:54 tlipkis Exp $
  */
 
 /*
@@ -106,10 +106,6 @@ public class BlockHasher extends GenericHasher {
   private AuSuspectUrlVersions asuv = null;
 
   LocalHashResult lhr = new LocalHashResult();
-  String prevMatchingUrl = null;
-  String prevSkippedUrl = null;
-  String prevSuspectUrl = null;
-  String prevMissingUrl = null;
 
   private boolean isTrace = log.isDebug3();
    
@@ -615,12 +611,7 @@ public class BlockHasher extends GenericHasher {
       log.debug3(cu.getUrl() + ":" + cu.getVersion() +
 		 " local hash OK");
     }
-    lhr.matchingVersions++;
-    String url = cu.getUrl();
-    if (!url.equals(prevMatchingUrl)) {
-      prevMatchingUrl = url;
-      lhr.matchingUrls++;
-    }
+    lhr.match(cu.getUrl());
   }
 
   /**
@@ -634,12 +625,7 @@ public class BlockHasher extends GenericHasher {
 			  byte[] storedHash) {
     log.error(cu.getUrl() + ":" + cu.getVersion() +
 	      " hash mismatch");
-    lhr.newlySuspectVersions++;
-    String url = cu.getUrl();
-    if (!url.equals(prevSuspectUrl)) {
-      prevSuspectUrl = url;
-      lhr.newlySuspectUrls++;
-    }
+    lhr.newlySuspect(cu.getUrl());
     markAsSuspect(cu, alg, contentHash, storedHash);
   }
 
@@ -652,12 +638,7 @@ public class BlockHasher extends GenericHasher {
   protected void missing(CachedUrl cu, String alg, byte[] hash) {
     String hashStr = alg + ":" + ByteArray.toHexString(hash);
     log.debug3("Storing checksum: " + hashStr);
-    lhr.newlyHashedVersions++;
-    String url = cu.getUrl();
-    if (!url.equals(prevMissingUrl)) {
-      prevMissingUrl = url;
-      lhr.newlyHashedUrls++;
-    }
+    lhr.newlyHashed(cu.getUrl());
     try {
       cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, hashStr);
     } catch (UnsupportedOperationException ex) {
@@ -668,12 +649,7 @@ public class BlockHasher extends GenericHasher {
   /** Skipped because already suspect */
   protected void skipped(CachedUrl cu) {
     if (isTrace) log.debug3("Skipped (already suspect): " + cu);
-    lhr.skippedVersions++;
-    String url = cu.getUrl();
-    if (!url.equals(prevSkippedUrl)) {
-      prevSkippedUrl = url;
-      lhr.skippedUrls++;
-    }
+    lhr.skipped(cu.getUrl());
   }
 
   // Overridable for testing
@@ -702,6 +678,7 @@ public class BlockHasher extends GenericHasher {
   }
 
   public LocalHashResult getLocalHashResult() {
+    if (log.isDebug2()) log.debug2("getLocalHashResult: " + lhr);
     return lhr;
   }
 
@@ -714,63 +691,7 @@ public class BlockHasher extends GenericHasher {
     void blockDone(HashBlock hblock);
   }
 
-  // Temporary
-  public enum Lhr { None, Agree, Disagree };
 
-  public class LocalHashResult {
-
-    private int matchingVersions = 0;
-    private int matchingUrls = 0;
-    private int newlySuspectVersions = 0;
-    private int newlySuspectUrls = 0;
-    private int newlyHashedVersions = 0;
-    private int newlyHashedUrls = 0;
-    private int skippedVersions = 0;
-    private int skippedUrls = 0;
-
-    // Temporary
-    public Lhr getLhr() {
-      if (!enableLocalHash || newlyHashedVersions != 0) {
-	return Lhr.None;
-      }
-      // every URL was verified against previous hash
-      return (newlySuspectVersions == 0)
-	? Lhr.Agree
-	: Lhr.Disagree;
-    }
-
-    public int getMatchingVersions() {
-      return matchingVersions;
-    }
-
-    public int getMatchingUrls() {
-      return matchingUrls;
-    }
-
-    public int getNewlySuspectVersions() {
-      return newlySuspectVersions;
-    }
-
-    public int getNewlySuspectUrls() {
-      return newlySuspectUrls;
-    }
-
-    public int getNewlyHashedVersions() {
-      return newlyHashedVersions;
-    }
-
-    public int getNewlyHashedUrls() {
-      return newlyHashedUrls;
-    }
-
-    public int getSkippedVersions() {
-      return skippedVersions;
-    }
-
-    public int getSkippedUrls() {
-      return skippedUrls;
-    }
-  }
 
 
 }
