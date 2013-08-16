@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.19.80.2 2013-08-14 22:31:17 barry409 Exp $
+* $Id: MockIdentityManager.java,v 1.19.80.3 2013-08-16 19:35:32 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.hasher.*;
 import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 
 /**
@@ -221,9 +222,7 @@ public class MockIdentityManager implements IdentityManager {
   }
 
   @Override
-  public void signalLocalHashComplete(int filesCount, int distinctUrlCount,
-				      int agreeCount, int disagreeCount,
-				      int missingCount) {
+  public void signalLocalHashComplete(LocalHashResult lhr) {
     throw new UnsupportedOperationException("not implemented");
   }
   

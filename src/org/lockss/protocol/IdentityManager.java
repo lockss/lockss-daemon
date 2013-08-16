@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.87.80.2 2013-08-14 22:31:16 barry409 Exp $
+ * $Id: IdentityManager.java,v 1.87.80.3 2013-08-16 19:35:32 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.lockss.hasher.*;
 
 /**
  * <p>Abstraction for identity of a LOCKSS cache. Currently wraps an
@@ -428,9 +429,7 @@ public interface IdentityManager extends LockssManager {
    * @param missingCount The number of files which had no previous
    * hash value.
    */
-  public void signalLocalHashComplete(int filesCount, int urlCount,
-				      int agreeCount, int disagreeCount,
-				      int missingCount);
+  public void signalLocalHashComplete(LocalHashResult lhr);
   
   /**
    * Return the percent agreement for a given peer on a given
