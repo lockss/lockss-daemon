@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.74 2012-09-06 03:59:41 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.74.28.1 2013-08-19 22:40:04 barry409 Exp $
  */
 
 /*
@@ -357,10 +357,7 @@ public class RepairCrawler extends BaseCrawler {
   protected void fetchFromSomeCache(String url, int numCacheRetries)
       throws CacheException, LockssUrlConnection.CantProxyException {
     IdentityManager idm = getIdentityManager();
-    Collection repairers = idm.getCachesToRepairFrom(au);
-    if (repairers == null) {
-      throw new LockssUrlConnection.CantProxyException("We don't have agree history with any caches");
-    }
+    Collection<PeerIdentity> repairers = idm.getCachesToRepairFrom(au);
     int iz = 0;
     boolean repaired = false;
     for (Iterator it = repairers.iterator();

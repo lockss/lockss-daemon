@@ -1,5 +1,5 @@
 /*
- * $Id: PollUtil.java,v 1.13 2013-07-05 17:42:59 barry409 Exp $
+ * $Id: PollUtil.java,v 1.13.4.1 2013-08-19 22:40:05 barry409 Exp $
  */
 
 /*
@@ -416,37 +416,34 @@ public class PollUtil {
 					  IdentityManager idMgr) {
     double repairThreshold = pollMgr.getMinPercentForRepair();
     int willing = 0;
-
-    for (IdentityManager.IdentityAgreement ida
-	   : idMgr.getIdentityAgreements(au)) {
-      try {
-	if (ida.getHighestPercentAgreementHint() <= repairThreshold) {
-	  if (log.isDebug3()) {
-	    log.debug3("Not willing: " + repairThreshold + " >= " + ida);
-	  }
-	  continue;
+    Map<PeerIdentity, PeerAgreement> porHints =
+      idMgr.getAgreements(au, AgreementType.POR_HINT);
+    for (Map.Entry<PeerIdentity, PeerAgreement> ent: porHints.entrySet()) {
+      PeerIdentity pid = ent.getKey();
+      PeerAgreement agreement = ent.getValue();
+      // XXX Not just less-than, but less-or-equal?
+      if (agreement.getHighestPercentAgreement() <= repairThreshold) {
+	if (log.isDebug3()) {
+	  log.debug3("Not willing: " + repairThreshold + " >= " + agreement);
 	}
-	PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	if (pollMgr.isNoInvitationSubnet(pid)) {
-	  if (log.isDebug3()) {
-	    log.debug3("No invitation subnet: " + ida);
-	  }
-	  continue;
-	}
-	PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
-	long lastMessageTime = status.getLastMessageTime();
-	long noMessageFor = TimeBase.nowMs() - lastMessageTime;
-	if (noMessageFor > pollMgr.getWillingRepairerLiveness()) {
-	  if (log.isDebug3()) {
-	    log.debug3("No message for " + noMessageFor + ": " + ida);
-	  }
-	  continue;
-	}
-	willing++;
-      } catch (IdentityManager.MalformedIdentityKeyException e) {
-	log.warning("Malformed id key in IdentityAgreement", e);
 	continue;
       }
+      if (pollMgr.isNoInvitationSubnet(pid)) {
+	if (log.isDebug3()) {
+	  log.debug3("No invitation subnet: " + pid);
+	}
+	continue;
+      }
+      PeerIdentityStatus status = idMgr.getPeerIdentityStatus(pid);
+      long lastMessageTime = status.getLastMessageTime();
+      long noMessageFor = TimeBase.nowMs() - lastMessageTime;
+      if (noMessageFor > pollMgr.getWillingRepairerLiveness()) {
+	if (log.isDebug3()) {
+	  log.debug3("No message for " + noMessageFor + ": " + pid);
+	}
+	continue;
+      }
+      willing++;
     }
     return willing;
   }

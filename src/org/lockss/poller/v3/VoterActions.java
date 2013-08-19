@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.33.4.1 2013-08-16 19:35:33 tlipkis Exp $
+ * $Id: VoterActions.java,v 1.33.4.2 2013-08-19 22:40:05 barry409 Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.plugin.*;
 import org.lockss.poller.RepairPolicy;
 import org.lockss.protocol.*;
-import org.lockss.protocol.IdentityManager.AgreementType;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 
@@ -298,7 +297,6 @@ public class VoterActions {
 				  ? AgreementType.SYMMETRIC_POP_HINT
 				  : AgreementType.SYMMETRIC_POR_HINT),
 				 poller, au, (float) agreementHint);
-    idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
     if (! ud.isSymmetricPoll()) {
       if (msg.getVoterNonce2() != null) {
 	log.error("Poller sent nonce2 outside of symmetric poll");
@@ -335,7 +333,6 @@ public class VoterActions {
 				      ? AgreementType.SYMMETRIC_POP
 				      : AgreementType.SYMMETRIC_POR),
 				     poller, au, vbt.percentAgreement());
-	idmgr.signalPartialAgreement(poller, au, vbt.percentAgreement());
       }
     }
     return V3Events.evtReceiptOk;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3PollFactory.java,v 1.13 2013-07-16 04:00:17 dshr Exp $
+ * $Id: TestV3PollFactory.java,v 1.13.2.1 2013-08-19 22:40:07 barry409 Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.protocol.IdentityManager.IdentityAgreement;
 import org.lockss.protocol.V3LcapMessage.PollNak;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
@@ -296,11 +295,6 @@ public class TestV3PollFactory extends LockssTestCase {
     "TCP:[10.1.0.8]:3141", "TCP:[10.1.0.9]:3141",
   };
 
-
-  private IdentityAgreement getIda(PeerIdentity pid) {
-    return idmgr.findTestIdentityAgreement(pid, testAu);
-  }
-
   private PeerIdentityStatus getStatus(PeerIdentity pid) {
     return idmgr.getPeerIdentityStatus(pid);
   }
@@ -315,9 +309,8 @@ public class TestV3PollFactory extends LockssTestCase {
       idmgr.findLcapIdentity(pid, key);
       PeerIdentityStatus status = getStatus(pid);
       status.setLastMessageTime(900);
-      IdentityAgreement ida = getIda(pid);
-      ida.setPercentAgreementHint(hint);
-      assertEquals(hint, ida.getHighestPercentAgreementHint());
+      idmgr.signalPartialAgreementHint(pid, testAu, hint);
+      assertEquals(hint, idmgr.getHighestPercentAgreementHint(pid, testAu));
       hint += 0.1f;
     }
     return peerIds;
@@ -327,7 +320,6 @@ public class TestV3PollFactory extends LockssTestCase {
 
   public void testCountWillingRepairers() throws Exception {
     TimeBase.setSimulated(1000);
-    IdentityAgreement ida;
     PeerIdentityStatus status;
     ConfigurationUtil.addFromArgs(V3Voter.PARAM_MIN_PERCENT_AGREEMENT_FOR_REPAIRS,
 				  "25",
@@ -335,15 +327,15 @@ public class TestV3PollFactory extends LockssTestCase {
 				  "200");
     peerIds = makePeers(peerNames);
     assertEquals(7, thePollFactory.countWillingRepairers(testAu));
-    ida = getIda(peerIds[9]);
-    ida.setPercentAgreementHint(0.1f);
+    PeerIdentity pid = peerIds[9];
+    idmgr.signalPartialAgreementHint(pid, testAu, 0.1f);
     // lower last hint shouldn't change count
-    assertEquals(0.1f, ida.getPercentAgreementHint());
-    assertEquals(0.9f, ida.getHighestPercentAgreementHint(), 0.01f);
+    assertEquals(0.1f, idmgr.getPercentAgreementHint(pid, testAu));
+    assertEquals(0.9f, idmgr.getHighestPercentAgreementHint(pid, testAu), 0.01f);
     assertEquals(7, thePollFactory.countWillingRepairers(testAu));
 
-    ida = getIda(peerIds[1]);
-    ida.setPercentAgreementHint(0.4f);
+    pid = peerIds[1];
+    idmgr.signalPartialAgreementHint(pid, testAu, 0.4f);
     assertEquals(8, thePollFactory.countWillingRepairers(testAu));
 
     status = getStatus(peerIds[8]);
@@ -456,14 +448,7 @@ public class TestV3PollFactory extends LockssTestCase {
   }
 
   static class MyIdentityManager extends IdentityManagerImpl {
-    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
-						ArchivalUnit au) {
-      Map map = findAuAgreeMap(au);
-      synchronized (map) {
-	return findPeerIdentityAgreement(map, pid);
-      }
-    }
-
+    @Override
     public void storeIdentities() throws ProtocolException {
     }
   }

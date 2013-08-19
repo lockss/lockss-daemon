@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.116.14.1 2013-08-08 05:49:36 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.116.14.2 2013-08-19 22:40:06 barry409 Exp $
  */
 
 /*
@@ -1856,26 +1856,36 @@ public class ArchivalUnitStatus
 
     public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
       Map statsMap = new HashMap();
-      for (Iterator iter = idMgr.getIdentityAgreements(au).iterator();
-	   iter.hasNext(); ) {
-	IdentityManager.IdentityAgreement ida =
-	  (IdentityManager.IdentityAgreement)iter.next();
-	try {
-	  PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
-	  if (ida.getHighestPercentAgreement() >= 0.0 ||
-	      ida.getHighestPercentAgreementHint() >= 0.0) {
-	    CacheStats stats = new CacheStats(pid);
-	    statsMap.put(pid, stats);
-	    stats.lastAgreeTime = ida.getLastAgree();
-	    stats.lastDisagreeTime = ida.getLastDisagree();
-	    stats.highestAgreement = ida.getHighestPercentAgreement();
-	    stats.lastAgreement = ida.getPercentAgreement();
-	    stats.highestAgreementHint = ida.getHighestPercentAgreementHint();
-	    stats.lastAgreementHint = ida.getPercentAgreementHint();
-	  }
-	} catch (IdentityManager.MalformedIdentityKeyException e) {
-	  logger.warning("Malformed id key in IdentityAgreement", e);
-	  continue;
+      Map<PeerIdentity, PeerAgreement> porMap =
+	idMgr.getAgreements(au, AgreementType.POR);
+      Map<PeerIdentity, PeerAgreement> porHintMap =
+	idMgr.getAgreements(au, AgreementType.POR_HINT);
+
+      // Create the union of the keys.
+      Set<PeerIdentity> pids = new HashSet();
+      pids.addAll(porMap.keySet());
+      pids.addAll(porHintMap.keySet());
+      for (PeerIdentity pid: pids) {
+	PeerAgreement porAgreement = porMap.get(pid);
+	PeerAgreement porHintAgreement = porHintMap.get(pid);
+	if (porAgreement == null) {
+	  porAgreement = PeerAgreement.NO_AGREEMENT;
+	}
+	if (porHintAgreement == null) {
+	  porHintAgreement = PeerAgreement.NO_AGREEMENT;
+	}
+	
+	if (porAgreement.getHighestPercentAgreement() >= 0.0 ||
+	    porHintAgreement.getHighestPercentAgreement() >= 0.0) {
+	  CacheStats stats = new CacheStats(pid);
+	  statsMap.put(pid, stats);
+	  // stats.lastAgreeTime = ida.getLastAgree();
+	  // stats.lastDisagreeTime = ida.getLastDisagree();
+	  stats.highestAgreement = porAgreement.getHighestPercentAgreement();
+	  stats.lastAgreement = porAgreement.getPercentAgreement();
+	  stats.highestAgreementHint =
+	    porHintAgreement.getHighestPercentAgreement();
+	  stats.lastAgreementHint = porHintAgreement.getPercentAgreement();
 	}
       }
       return statsMap;

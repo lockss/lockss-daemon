@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.167.2.4 2013-08-16 19:35:33 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.167.2.5 2013-08-19 22:40:05 barry409 Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
-import org.lockss.protocol.IdentityManager.AgreementType;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;

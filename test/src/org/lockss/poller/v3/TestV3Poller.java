@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.60.2.2 2013-08-08 05:47:19 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.60.2.3 2013-08-19 22:40:07 barry409 Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
-import org.lockss.protocol.IdentityManager.IdentityAgreement;
 import org.lockss.util.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
@@ -287,10 +286,6 @@ public class TestV3Poller extends LockssTestCase {
     return testau.getAuId() + "," + pid.getIdString();
   }
 
-  private IdentityAgreement getIda(PeerIdentity pid) {
-    return idMgr.findTestIdentityAgreement(pid, testau);
-  }
-
   double invitationWeight(String pidkey, long lastInvite, long lastMsg)
       throws Exception {
     return invitationWeight(findPeerIdentity(pidkey), lastInvite, lastMsg);
@@ -322,8 +317,7 @@ public class TestV3Poller extends LockssTestCase {
     status.setLastMessageTime(lastMsg);
     status.setLastPollInvitationTime(lastInvite);
     if (highestAgreement >= 0) {
-      IdentityAgreement ida = getIda(pid);
-      ida.setPercentAgreement(highestAgreement);
+      idMgr.signalPartialAgreement(pid, testau, highestAgreement);
     }
     return poller.invitationWeight(status);
   }
@@ -1942,14 +1936,8 @@ public class TestV3Poller extends LockssTestCase {
 
   static class MyIdentityManager extends IdentityManagerImpl {
     Map myMap = null;
-    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
-						ArchivalUnit au) {
-      Map map = findAuAgreeMap(au);
-      synchronized (map) {
-	return findPeerIdentityAgreement(map, pid);
-      }
-    }
 
+    @Override
     public Map getAgreed(ArchivalUnit au) {
       if (myMap == null) {
 	myMap = new HashMap();
@@ -1957,6 +1945,7 @@ public class TestV3Poller extends LockssTestCase {
       return myMap;
     }
     
+    @Override
     public List getCachesToRepairFrom(ArchivalUnit au) {
       if (myMap == null) {
 	myMap = new HashMap();
@@ -1964,6 +1953,7 @@ public class TestV3Poller extends LockssTestCase {
       return new ArrayList(myMap.keySet());
     }
 
+    @Override
     public void storeIdentities() throws ProtocolException {
     }
   }

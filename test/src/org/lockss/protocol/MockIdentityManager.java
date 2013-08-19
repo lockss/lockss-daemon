@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.19.80.3 2013-08-16 19:35:32 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.19.80.4 2013-08-19 22:40:07 barry409 Exp $
  */
 
 /*
@@ -304,15 +304,16 @@ public class MockIdentityManager implements IdentityManager {
   }
 
   @Override
-  public Map getDisagreed(ArchivalUnit au) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-  @Override
   public List getCachesToRepairFrom(ArchivalUnit au) {
     Map map = getAgreed(au);
     if (map == null) return Collections.EMPTY_LIST;
     return new ArrayList(map.keySet());
+  }
+
+  @Override
+  public Map<PeerIdentity, PeerAgreement> getAgreements(ArchivalUnit au,
+							AgreementType type) {
+    throw new UnsupportedOperationException("not implemented");
   }
 
   @Override
@@ -330,11 +331,6 @@ public class MockIdentityManager implements IdentityManager {
 
   @Override
   public boolean hasAgreeMap(ArchivalUnit au) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
-  @Override
-  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 

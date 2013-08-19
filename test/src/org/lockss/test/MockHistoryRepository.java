@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.20 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.20.80.1 2013-08-19 22:40:08 barry409 Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.DatedPeerIdSet;
+import org.lockss.protocol.AuAgreements;
 import org.lockss.config.Configuration;
 
 /**
@@ -51,8 +52,8 @@ public class MockHistoryRepository implements HistoryRepository {
   public HashMap storedNodes = new HashMap();
   private File auStateFile = null;
 
-  private List storedIdentityAgreement = null;
-  private List loadedIdentityAgreement = null;
+  private Object storedIdentityAgreement = null;
+  private Object loadedIdentityAgreement = null;
 
   private int timesStoreDamagedNodeSetCalled = 0;
 
@@ -130,19 +131,29 @@ public class MockHistoryRepository implements HistoryRepository {
     auStateFile = file;
   }
 
-  public void storeIdentityAgreements(List list) {
-    this.storedIdentityAgreement = list;
+  @Override
+  public void storeIdentityAgreements(AuAgreements auAgreements) {
+    storedIdentityAgreement = auAgreements;
   }
 
-  public List loadIdentityAgreements() {
+  @Override
+  public Object loadIdentityAgreements() {
     return loadedIdentityAgreement;
   }
 
-  public void setLoadedIdentityAgreement(List list) {
-    this.loadedIdentityAgreement = list;
+  public void setLoadedIdentityAgreement(AuAgreements auAgreements) {
+    loadedIdentityAgreement = auAgreements;
   }
 
-  public List getStoredIdentityAgreement() {
+  /**
+   * Used to inject pre-AuAgreements agreement structures for
+   * loading tests. See TestAuAgreements.
+   */
+  public void setLoadedIdentityAgreement(List loadedIdentityAgreement) {
+    this.loadedIdentityAgreement = loadedIdentityAgreement;
+  }
+
+  public Object getStoredIdentityAgreement() {
     return storedIdentityAgreement;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.93.2.1 2013-08-08 05:51:41 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.93.2.2 2013-08-19 22:40:07 barry409 Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.DatedPeerIdSet;
 import org.lockss.protocol.DatedPeerIdSetImpl;
 import org.lockss.protocol.IdentityAgreementList;
 import org.lockss.protocol.IdentityManager;
+import org.lockss.protocol.AuAgreements;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.repository.LockssRepository.RepositoryStateException;
 import org.lockss.util.*;
@@ -350,47 +351,49 @@ public class HistoryRepositoryImpl
   }
 
   /**
-   * <p>Loads an identity agreement list.</p>
-   * @return A list of identity agreements.
+   * <p>Loads an identity agreement.</p>
+   * @return The saved {@link Object}.
    * @see #loadIdentityAgreements(ObjectSerializer)
    */
-  public List loadIdentityAgreements() {
+  public Object loadIdentityAgreements() {
     return loadIdentityAgreements(makeIdentityAgreementListSerializer());
   }
+
   /**
-   * <p>Loads an identity agreement list using the given
+   * <p>Loads an identity agreement using the given
    * deserializer.</p>
    * @param deserializer A deserializer instance.
-   * @return A list of identity agreements.
+   * @return The saved {@link Object}, or {@code null} if no instance
+   * is found.
    * @throws RepositoryStateException if an error condition arises
    *                                  that is neither a file not found
    *                                  exception nor a serialization
    *                                  exception.
    */
-  List loadIdentityAgreements(ObjectSerializer deserializer) {
+  Object loadIdentityAgreements(ObjectSerializer deserializer) {
     logger.debug3("Loading identity agreements for AU '" + storedAu.getName() + "'");
     File idFile = getIdentityAgreementFile();
     String errorString = "Could not load identity agreements for AU '" + storedAu.getName() + "'";
 
     try {
       // CASTOR: remove unwrap() when Castor is phased out
-      return (List)unwrap(deserializer.deserialize(idFile));
+      return unwrap(deserializer.deserialize(idFile));
     }
     catch (SerializationException.FileNotFound fnf) {
       logger.debug2("No identities file for AU '" + storedAu.getName() + "'");
-      // drop down to return empty list
+      // drop down to return null
     }
     catch (SerializationException se) {
       logger.error(errorString, se);
-      // drop down to return empty list
+      // drop down to return null
     }
     catch (InterruptedIOException exc) {
       logger.error(errorString, exc);
       throw new RepositoryStateException(errorString, exc);
     }
 
-    // Default: return empty list
-    return new ArrayList();
+    // Default: return null
+    return null;
   }
 
   /**
@@ -611,30 +614,31 @@ public class HistoryRepositoryImpl
   }
 
   /**
-   * <p>Stores an identity agreement list.</p>
-   * @param idList     A list of identity agreements.
+   * <p>Stores an identity agreement instance.</p>
+   * @param auAgreements A {@link AuAgreements} instance.
    * @see #storeIdentityAgreements(ObjectSerializer, List)
    */
-  public void storeIdentityAgreements(List idList) {
+  public void storeIdentityAgreements(AuAgreements auAgreements) {
     // CASTOR: change to makeObjectSerializer() when Castor is phased out
-    storeIdentityAgreements(makeIdentityAgreementListSerializer(), idList);
+    storeIdentityAgreements(makeIdentityAgreementListSerializer(),
+			    auAgreements);
   }
 
   /**
-   * <p>Stores an identity agreement list using the given serializer
+   * <p>Stores an identity agreement instance using the given serializer
    * instance.</p>
    * @param serializer A serializer instance.
-   * @param idList     A list of identity agreements.
+   * @param auAgreements A {@link AuAgreements} instance.
    * @throws RepositoryStateException if an error condition arises.
    */
   void storeIdentityAgreements(ObjectSerializer serializer,
-                               List idList) {
+                               AuAgreements auAgreements) {
     logger.debug3("Storing identity agreements for AU '" + storedAu.getName() + "'");
     File file = prepareFile(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
 
     try {
-      // CASTOR: remove wrap() when Castor is phased out
-      serializer.serialize(file, wrap(idList));
+      // CR: I assume I need not wrap()
+      serializer.serialize(file, auAgreements);
     }
     catch (Exception exc) {
       String errorString = "Could not store identity agreements for AU '" + storedAu.getName() + "'";
