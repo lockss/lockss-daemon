@@ -5,15 +5,11 @@
     info[tester] = 4
   >
 
-  plugin = org.lockss.plugin.aiaa.AIAAPlugin
+  plugin = org.lockss.plugin.atypon.aiaa.AIAAPlugin
   param[base_url] = http://arc.aiaa.org/
   implicit < status ; year; name ; param[volume_name] >
   
-comment[aiaa] = plugin in development: platform is Atypon
-comment[todo_1] = review and update list of titles
-comment[todo_2] = add journal_id param for all journals
-comment[todo_3] = add AUs for all journals
-comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/lockss/ja/49
+  comment[manifest] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/lockss/ja/49
 
   {
 
@@ -66,15 +62,15 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < exists ; 2001 ; AIAA Journal Volume 39 ; 39 >
     au < exists ; 2002 ; AIAA Journal Volume 40 ; 40 >
     au < exists ; 2003 ; AIAA Journal Volume 41 ; 41 >
-    au < ready ; 2004 ; AIAA Journal Volume 42 ; 42 >
-    au < ready ; 2005 ; AIAA Journal Volume 43 ; 43 >
-    au < ready ; 2006 ; AIAA Journal Volume 44 ; 44 >
-    au < ready ; 2007 ; AIAA Journal Volume 45 ; 45 >
-    au < ready ; 2008 ; AIAA Journal Volume 46 ; 46 >
-    au < ready ; 2009 ; AIAA Journal Volume 47 ; 47 >
-    au < ready ; 2010 ; AIAA Journal Volume 48 ; 48 >
-    au < ready ; 2011 ; AIAA Journal Volume 49 ; 49 >
-    au < ready ; 2012 ; AIAA Journal Volume 50 ; 50 >
+    au < manifest ; 2004 ; AIAA Journal Volume 42 ; 42 >
+    au < manifest ; 2005 ; AIAA Journal Volume 43 ; 43 >
+    au < manifest ; 2006 ; AIAA Journal Volume 44 ; 44 >
+    au < manifest ; 2007 ; AIAA Journal Volume 45 ; 45 >
+    au < manifest ; 2008 ; AIAA Journal Volume 46 ; 46 >
+    au < manifest ; 2009 ; AIAA Journal Volume 47 ; 47 >
+    au < manifest ; 2010 ; AIAA Journal Volume 48 ; 48 >
+    au < manifest ; 2011 ; AIAA Journal Volume 49 ; 49 >
+    au < manifest ; 2012 ; AIAA Journal Volume 50 ; 50 >
     au < manifest ; 2013 ; AIAA Journal Volume 51 ; 51 >
 
   } 
@@ -150,15 +146,15 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     >
     param[journal_id] = jacic
 
-    au < ready ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
-    au < ready ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
-    au < ready ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
-    au < ready ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
-    au < ready ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
-    au < ready ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
-    au < ready ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
-    au < ready ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
-    au < ready ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
+    au < manifest ; 2004 ; Journal of Aerospace Computing, Information, and Communication Volume 1 ; 1 >
+    au < manifest ; 2005 ; Journal of Aerospace Computing, Information, and Communication Volume 2 ; 2 >
+    au < manifest ; 2006 ; Journal of Aerospace Computing, Information, and Communication Volume 3 ; 3 >
+    au < manifest ; 2007 ; Journal of Aerospace Computing, Information, and Communication Volume 4 ; 4 >
+    au < manifest ; 2008 ; Journal of Aerospace Computing, Information, and Communication Volume 5 ; 5 >
+    au < manifest ; 2009 ; Journal of Aerospace Computing, Information, and Communication Volume 6 ; 6 >
+    au < manifest ; 2010 ; Journal of Aerospace Computing, Information, and Communication Volume 7 ; 7 >
+    au < manifest ; 2011 ; Journal of Aerospace Computing, Information, and Communication Volume 8 ; 8 >
+    au < manifest ; 2012 ; Journal of Aerospace Computing, Information, and Communication Volume 9 ; 9 >
     au < expected ; 2013 ; Journal of Aerospace Computing, Information, and Communication Volume 10 ; 10 >
 
   }
@@ -173,14 +169,14 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     >
     param[journal_id] = ja
 
-    au < ready ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
-    au < ready ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
-    au < ready ; 1966 ; Journal of Aircraft Volume 3 ; 3 >
-    au < ready ; 1967 ; Journal of Aircraft Volume 4 ; 4 >
-    au < ready ; 1968 ; Journal of Aircraft Volume 5 ; 5 >
-    au < ready ; 1969 ; Journal of Aircraft Volume 6 ; 6 >
-    au < ready ; 1970 ; Journal of Aircraft Volume 7 ; 7 >
-    au < ready ; 1971 ; Journal of Aircraft Volume 8 ; 8 >
+    au < manifest ; 1964 ; Journal of Aircraft Volume 1 ; 1 >
+    au < manifest ; 1965 ; Journal of Aircraft Volume 2 ; 2 >
+    au < manifest ; 1966 ; Journal of Aircraft Volume 3 ; 3 >
+    au < manifest ; 1967 ; Journal of Aircraft Volume 4 ; 4 >
+    au < manifest ; 1968 ; Journal of Aircraft Volume 5 ; 5 >
+    au < manifest ; 1969 ; Journal of Aircraft Volume 6 ; 6 >
+    au < manifest ; 1970 ; Journal of Aircraft Volume 7 ; 7 >
+    au < manifest ; 1971 ; Journal of Aircraft Volume 8 ; 8 >
     au < manifest ; 1972 ; Journal of Aircraft Volume 9 ; 9 >
     au < manifest ; 1973 ; Journal of Aircraft Volume 10 ; 10 >
     au < manifest ; 1974 ; Journal of Aircraft Volume 11 ; 11 >
@@ -214,14 +210,14 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 2002 ; Journal of Aircraft Volume 39 ; 39 >
     au < manifest ; 2003 ; Journal of Aircraft Volume 40 ; 40 >
     au < manifest ; 2004 ; Journal of Aircraft Volume 41 ; 41 >
-    au < notReady ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
-    au < notReady ; 2006 ; Journal of Aircraft Volume 43 ; 43 >
-    au < notReady ; 2007 ; Journal of Aircraft Volume 44 ; 44 >
-    au < notReady ; 2008 ; Journal of Aircraft Volume 45 ; 45 >
-    au < notReady ; 2009 ; Journal of Aircraft Volume 46 ; 46 >
-    au < notReady ; 2010 ; Journal of Aircraft Volume 47 ; 47 >
-    au < ready ; 2011 ; Journal of Aircraft Volume 48 ; 48 >
-    au < ready ; 2012 ; Journal of Aircraft Volume 49 ; 49 >
+    au < manifest ; 2005 ; Journal of Aircraft Volume 42 ; 42 >
+    au < manifest ; 2006 ; Journal of Aircraft Volume 43 ; 43 >
+    au < manifest ; 2007 ; Journal of Aircraft Volume 44 ; 44 >
+    au < manifest ; 2008 ; Journal of Aircraft Volume 45 ; 45 >
+    au < manifest ; 2009 ; Journal of Aircraft Volume 46 ; 46 >
+    au < manifest ; 2010 ; Journal of Aircraft Volume 47 ; 47 >
+    au < manifest ; 2011 ; Journal of Aircraft Volume 48 ; 48 >
+    au < manifest ; 2012 ; Journal of Aircraft Volume 49 ; 49 >
     au < expected ; 2013 ; Journal of Aircraft Volume 50 ; 50 >
 
   }
@@ -240,9 +236,9 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 1978 ; Journal of Energy Volume 2 ; 2 >
     au < manifest ; 1979 ; Journal of Energy Volume 3 ; 3 >
     au < manifest ; 1980 ; Journal of Energy Volume 4 ; 4 >
-    au < ready ; 1981 ; Journal of Energy Volume 5 ; 5 >
-    au < ready ; 1982 ; Journal of Energy Volume 6 ; 6 >
-    au < ready ; 1983 ; Journal of Energy Volume 7 ; 7 >
+    au < manifest ; 1981 ; Journal of Energy Volume 5 ; 5 >
+    au < manifest ; 1982 ; Journal of Energy Volume 6 ; 6 >
+    au < manifest ; 1983 ; Journal of Energy Volume 7 ; 7 >
 
   }
 
@@ -283,14 +279,14 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 2002 ; Journal of Guidance, Control, and Dynamics Volume 25 ; 25 >
     au < manifest ; 2003 ; Journal of Guidance, Control, and Dynamics Volume 26 ; 26 >
     au < manifest ; 2004 ; Journal of Guidance, Control, and Dynamics Volume 27 ; 27 >
-    au < ready ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
-    au < ready ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
-    au < ready ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 >
-    au < testing ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 >
-    au < testing ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 >
-    au < testing ; 2010 ; Journal of Guidance, Control, and Dynamics Volume 33 ; 33 >
-    au < testing ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 >
-    au < testing ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 >
+    au < manifest ; 2005 ; Journal of Guidance, Control, and Dynamics Volume 28 ; 28 >
+    au < manifest ; 2006 ; Journal of Guidance, Control, and Dynamics Volume 29 ; 29 >
+    au < manifest ; 2007 ; Journal of Guidance, Control, and Dynamics Volume 30 ; 30 >
+    au < manifest ; 2008 ; Journal of Guidance, Control, and Dynamics Volume 31 ; 31 >
+    au < manifest ; 2009 ; Journal of Guidance, Control, and Dynamics Volume 32 ; 32 >
+    au < manifest ; 2010 ; Journal of Guidance, Control, and Dynamics Volume 33 ; 33 >
+    au < manifest ; 2011 ; Journal of Guidance, Control, and Dynamics Volume 34 ; 34 >
+    au < manifest ; 2012 ; Journal of Guidance, Control, and Dynamics Volume 35 ; 35 >
     au < expected ; 2013 ; Journal of Guidance, Control, and Dynamics Volume 36 ; 36 >
 
   }
@@ -371,14 +367,14 @@ comment[todo_4] = manifest for Journal of Aircraft v.49 is http://arc.aiaa.org/l
     au < manifest ; 2002 ; Journal of Propulsion and Power Volume 18 ; 18 >
     au < manifest ; 2003 ; Journal of Propulsion and Power Volume 19 ; 19 >
     au < manifest ; 2004 ; Journal of Propulsion and Power Volume 20 ; 20 >
-    au < testing ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
-    au < testing ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
-    au < testing ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
-    au < testing ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
-    au < testing ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
-    au < testing ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
-    au < testing ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
-    au < testing ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
+    au < manifest ; 2005 ; Journal of Propulsion and Power Volume 21 ; 21 >
+    au < manifest ; 2006 ; Journal of Propulsion and Power Volume 22 ; 22 >
+    au < manifest ; 2007 ; Journal of Propulsion and Power Volume 23 ; 23 >
+    au < manifest ; 2008 ; Journal of Propulsion and Power Volume 24 ; 24 >
+    au < manifest ; 2009 ; Journal of Propulsion and Power Volume 25 ; 25 >
+    au < manifest ; 2010 ; Journal of Propulsion and Power Volume 26 ; 26 >
+    au < manifest ; 2011 ; Journal of Propulsion and Power Volume 27 ; 27 >
+    au < manifest ; 2012 ; Journal of Propulsion and Power Volume 28 ; 28 >
     au < expected ; 2013 ; Journal of Propulsion and Power Volume 29 ; 29 >
 
   }
