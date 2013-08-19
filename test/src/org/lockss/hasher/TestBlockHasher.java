@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.24 2013-08-08 05:56:23 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.25 2013-08-19 20:24:49 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.BlockHasher.EventHandler;
-import org.lockss.hasher.BlockHasher.LocalHashResult;
 import org.lockss.util.*;
 import org.lockss.filter.*;
 import org.lockss.crawler.*;
@@ -494,7 +493,6 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(1, lhr.getMatchingVersions());
     assertEquals(0, lhr.getNewlySuspectVersions());
     assertEquals(0, lhr.getNewlyHashedVersions());
-//     assertEquals(LocalHashResult.Agree, hasher.getLocalHashResult());
   }
   
   public void testOneContentLocalHashObsolete(int stepSize)
@@ -521,7 +519,6 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(1, lhr.getMatchingVersions());
     assertEquals(0, lhr.getNewlySuspectVersions());
     assertEquals(0, lhr.getNewlyHashedVersions());
-//     assertEquals(LocalHashResult.Agree, hasher.getLocalHashResult());
     AuSuspectUrlVersions asuv = AuUtil.getSuspectUrlVersions(mau);
     assertFalse(asuv.isSuspect(urls[4], 0));
   }
@@ -550,7 +547,6 @@ public class TestBlockHasher extends LockssTestCase {
     assertEquals(0, lhr.getMatchingVersions());
     assertEquals(1, lhr.getNewlySuspectVersions());
     assertEquals(0, lhr.getNewlyHashedVersions());
-//     assertEquals(LocalHashResult.Disagree, hasher.getLocalHashResult());
   }
   
   public void testOneContentLocalHashSuspect(int stepSize, int urlIndex)
