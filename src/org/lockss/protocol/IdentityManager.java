@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.90 2013-08-19 20:25:28 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.91 2013-08-19 22:33:18 barry409 Exp $
  */
 
 /*
@@ -462,26 +462,38 @@ public interface IdentityManager extends LockssManager {
    * @return agreement, -1.0 if not known */
   public float getHighestPercentAgreementHint(PeerIdentity pid,
 					      ArchivalUnit au);
+
   /**
-   * <p>Peers with whom we have had any disagreement since the last
-   * toplevel agreement are placed at the end of the list.</p>
+   * A list of peers with whom we have had a POR poll and a result
+   * above the minimum threshold for repair.
+   *
+   * NOTE: No particular order should be assumed.
+   * NOTE: This does NOT use the "hint", which would be more reasonable.
+   *
    * @param au ArchivalUnit to look up PeerIdentities for.
    * @return List of peers from which to try to fetch repairs for the
    *         AU.
    */
-  public List getCachesToRepairFrom(ArchivalUnit au);
+  public List<PeerIdentity> getCachesToRepairFrom(ArchivalUnit au);
+
+  /**
+   * Return a mapping for each peer for which we have an agreement of
+   * the requested type, to the {@link PeerAgreement} record for that
+   * peer.
+   *
+   * @param au The {@link ArchivalUnit} in question.
+   * @param type The {@link AgreementType} to look for.
+   * @return A Map mapping each {@link PeerIdentity} which has an
+   * agreement of the requested type to the {@link PeerAgreement} for
+   * that type.
+   */
+  public Map<PeerIdentity, PeerAgreement> getAgreements(ArchivalUnit au,
+							AgreementType type);
 
   public boolean hasAgreed(String ip, ArchivalUnit au)
       throws MalformedIdentityKeyException;
 
   public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au);
-
-  /**
-   * <p>Returns a collection of IdentityManager.IdentityAgreement for
-   * each peer that we have a record of agreeing or disagreeing with
-   * us.
-   */
-  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au);
 
   /**
    * <p>Return map peer -> last agree time. Used for logging and
@@ -490,11 +502,8 @@ public interface IdentityManager extends LockssManager {
   public Map getAgreed(ArchivalUnit au);
 
   /**
-   * <p>Returns map peer -> last disagree time. Used for logging and
-   * debugging</p>.
+   * @return {@code true} iff there are no data on agreements.
    */
-  public Map getDisagreed(ArchivalUnit au);
-
   public boolean hasAgreeMap(ArchivalUnit au);
   
   /**
@@ -540,45 +549,6 @@ public interface IdentityManager extends LockssManager {
 
   public String getUiUrlStem(PeerIdentity pid);
 
-  /**
-   * Different agreement situations we record.
-   *
-   * Note: in a symmetric poll the poller and voter will not
-   * necessarily record the same percent agreement, since each may
-   * have content for URLs which the other does not. Since the hint
-   * received after a symmetric poll is the other participant's
-   * recorded percent agreement, the calculated percent agreements are
-   * used to decide if a repair request should be honored, and hints
-   * are used to try to find willing repairers likely to honor repair
-   * requests. */
-  public enum AgreementType {
-    /** A poll with all content hashed and tallied. Recorded by
-     * poller. 
-     */
-    POR,
-    /** A poll with a selection of the content hashed and
-     * tallied. Recorded by poller. */
-    POP,
-    /** A POR poll where a voter has called for the poller's
-     * hashes. Recorded by voter. */
-    SYMMETRIC_POR,
-    /** A POP poll where a voter has called for the poller's
-     * hashes. Recorded by voter. */
-    SYMMETRIC_POP,
-    /** The hint given a voter by the poller after a POR
-     * poll. Recorded by voter. */
-    POR_HINT,
-    /** The hint given a voter by the poller after a POP
-     * poll. Recorded by voter. */
-    POP_HINT,
-    /** The hint given a poller by a voter after a symmetric POR
-     * poll. Recorded by poller. */
-    SYMMETRIC_POR_HINT,
-    /** The hint given a poller by a voter after a symmetric POP
-     * poll. Recorded by poller. */
-    SYMMETRIC_POP_HINT
-  }
-
   public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;
     private long lastDisagree = 0;
@@ -600,8 +570,12 @@ public interface IdentityManager extends LockssManager {
 
     private String id = null;
 
+    IdentityAgreement(String id) {
+      this.id = id;
+    }
+
     public IdentityAgreement(PeerIdentity pid) {
-      this.id = pid.getIdString();
+      this(pid.getIdString());
     }
 
     // needed for marshalling
@@ -623,6 +597,10 @@ public interface IdentityManager extends LockssManager {
       this.lastDisagree = lastDisagree;
     }
     
+    public long getLastSignalTime() {
+      return lastAgree > lastDisagree ? lastAgree : lastDisagree;
+    }
+
     public float getHighestPercentAgreement() {
       return agreePercentValue(highestPercentAgreement);
     }

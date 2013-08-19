@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.81 2013-08-08 06:01:08 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.82 2013-08-19 22:33:22 barry409 Exp $
  */
 
 /*
@@ -577,46 +577,47 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     TimeBase.setReal();
   }
 
-  public void testStoreIdentityAgreements() throws Exception {
-    IdentityManager.IdentityAgreement id1 =
-      new IdentityManager.IdentityAgreement(testID1);
-    id1.setLastAgree(123);
-    id1.setLastDisagree(321);
-    id1.setPercentAgreement(0.5f);
-    IdentityManager.IdentityAgreement id2 =
-      new IdentityManager.IdentityAgreement(testID2);
-    id2.setLastAgree(456);
-    id2.setLastDisagree(654);
-    id2.setPercentAgreementHint(0.8f);
-
-    repository.storeIdentityAgreements(ListUtil.list(id1, id2));
-    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
-							       mau);
-    filePath += HistoryRepositoryImpl.IDENTITY_AGREEMENT_FILE_NAME;
-    File xmlFile = new File(filePath);
-    assertTrue(xmlFile.exists());
-
-    List idList = repository.loadIdentityAgreements();
-    assertEquals(2, idList.size());
-    id1 = (IdentityManager.IdentityAgreement)idList.get(0);
-    assertNotNull(id1);
-    assertSame(testID1, idmgr.stringToPeerIdentity(id1.getId()));
-    assertEquals(123, id1.getLastAgree());
-    assertEquals(321, id1.getLastDisagree());
-    assertEquals(.5f, id1.getPercentAgreement());
-    assertEquals(.5f, id1.getHighestPercentAgreement());
-    assertEquals(-1.0f, id1.getPercentAgreementHint());
-    assertEquals(-1.0f, id1.getHighestPercentAgreementHint());
-
-    id2 = (IdentityManager.IdentityAgreement)idList.get(1);
-    assertSame(testID2, idmgr.stringToPeerIdentity(id2.getId()));
-    assertEquals(456, id2.getLastAgree());
-    assertEquals(654, id2.getLastDisagree());
-    assertEquals(0.0f, id2.getPercentAgreement());
-    assertEquals(0.0f, id2.getHighestPercentAgreement());
-    assertEquals(0.8f, id2.getPercentAgreementHint());
-    assertEquals(0.8f, id2.getHighestPercentAgreementHint());
-  }
+  // TODO: Decide how to split this test between here and TestPeerAgreements
+//  public void testStoreIdentityAgreements() throws Exception {
+//    IdentityManager.IdentityAgreement id1 =
+//      new IdentityManager.IdentityAgreement(testID1);
+//    id1.setLastAgree(123);
+//    id1.setLastDisagree(321);
+//    id1.setPercentAgreement(0.5f);
+//    IdentityManager.IdentityAgreement id2 =
+//      new IdentityManager.IdentityAgreement(testID2);
+//    id2.setLastAgree(456);
+//    id2.setLastDisagree(654);
+//    id2.setPercentAgreementHint(0.8f);
+//
+//    repository.storeIdentityAgreements(ListUtil.list(id1, id2));
+//    String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+//							       mau);
+//    filePath += HistoryRepositoryImpl.IDENTITY_AGREEMENT_FILE_NAME;
+//    File xmlFile = new File(filePath);
+//    assertTrue(xmlFile.exists());
+//
+//    List idList = repository.loadIdentityAgreements();
+//    assertEquals(2, idList.size());
+//    id1 = (IdentityManager.IdentityAgreement)idList.get(0);
+//    assertNotNull(id1);
+//    assertSame(testID1, idmgr.stringToPeerIdentity(id1.getId()));
+//    assertEquals(123, id1.getLastAgree());
+//    assertEquals(321, id1.getLastDisagree());
+//    assertEquals(.5f, id1.getPercentAgreement());
+//    assertEquals(.5f, id1.getHighestPercentAgreement());
+//    assertEquals(-1.0f, id1.getPercentAgreementHint());
+//    assertEquals(-1.0f, id1.getHighestPercentAgreementHint());
+//
+//    id2 = (IdentityManager.IdentityAgreement)idList.get(1);
+//    assertSame(testID2, idmgr.stringToPeerIdentity(id2.getId()));
+//    assertEquals(456, id2.getLastAgree());
+//    assertEquals(654, id2.getLastDisagree());
+//    assertEquals(0.0f, id2.getPercentAgreement());
+//    assertEquals(0.0f, id2.getHighestPercentAgreement());
+//    assertEquals(0.8f, id2.getPercentAgreementHint());
+//    assertEquals(0.8f, id2.getHighestPercentAgreementHint());
+//  }
 
   /**
    * <p>Verifies that the serializers in use by the history repository

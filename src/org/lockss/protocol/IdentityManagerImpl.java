@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.46 2013-08-19 20:25:28 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.47 2013-08-19 22:33:18 barry409 Exp $
  */
 
 /*
@@ -1032,7 +1032,18 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param au  The {@link ArchivalUnit}.
    */
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
-    signalAgreed(pid, au, TimeBase.nowMs(), 1.0f);
+    signalPartialAgreement(pid, au, 1.0f);
+  }
+
+  /**
+   * <p>Signals that we've disagreed with pid on any level poll on
+   * au.</p>
+   * <p>Only called if we're on the winning side.</p>
+   * @param pid The PeerIdentity of the disagreeing peer.
+   * @param au  The {@link ArchivalUnit}.
+   */
+  public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
+    signalPartialAgreement(pid, au, 0.0f);
   }
 
   /**
@@ -1045,15 +1056,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public void signalPartialAgreement(PeerIdentity pid, ArchivalUnit au,
                                      float percent) {
-    // If the agreement is below a certain percent, this is a disagreement.
-    // The percent agreement is configured with the
-    // MIN_PERCENT_PARTIAL_AGREEMENT parameter, and the MIN_URL_AGREEMENT
-    // parameter.
-    if (percent >= minPercentPartialAgreement)
-      signalAgreed(pid, au, TimeBase.nowMs(), percent);
-    else
-      signalDisagreed(pid, au, TimeBase.nowMs(), percent);
-
+    signalPartialAgreement(AgreementType.POR, pid, au, percent);
   }
 
   /**
@@ -1065,27 +1068,17 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return The percent agreement for this AU and peer.
    */
   public float getPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-      if (ida == null) {
-        return -1.0f;
-      } else {
-        return ida.getPercentAgreement();
-      }
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    float percentAgreement = auAgreements.
+      findPeerAgreement(pid, AgreementType.POR). getPercentAgreement();
+    return percentAgreement;
   }
   
   public float getHighestPercentAgreement(PeerIdentity pid, ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-      if (ida == null) {
-        return -1.0f;
-      } else {
-        return ida.getHighestPercentAgreement();
-      }
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    float highestPercentAgreement = auAgreements.
+      findPeerAgreement(pid, AgreementType.POR). getHighestPercentAgreement();
+    return highestPercentAgreement;
   }
 
   /**
@@ -1098,18 +1091,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
 					 float percent) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null au");
-    } else if (pid == null) {
-      throw new IllegalArgumentException("Called with null pid");
-    }
-    log.debug3("signalPartialAgreementHint(" + pid + "," + au + "," + percent + ")");
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
-      ida.setPercentAgreementHint(percent);
-      storeIdentityAgreement(au);
-    }
+    signalPartialAgreement(AgreementType.POR_HINT, pid, au, percent);
   }
 
   /**
@@ -1119,19 +1101,34 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param agreementType The {@link AgreementType} to be recorded.
    * @param pid The {@link PeerIdentity} of the agreeing peer.
    * @param au The {@link ArchivalUnit}.
-   * @param agreement A number between {@code 0.0} and {@code 1.0}
-   *                   representing the percentage of agreement on the
-   *                   portion of the AU polled.
+   * @param agreement A number between {@code 0.0} and {@code
+   *                   1.0} representing the percentage of agreement
+   *                   on the portion of the AU polled.
    */
   public void signalPartialAgreement(AgreementType agreementType, 
 				     PeerIdentity pid, ArchivalUnit au,
                                      float agreement) {
-    log.debug("called signalPartialAgreement("+
-	      "agreementType="+agreementType+
-	      ", pid="+pid+
-	      ", au="+au+
-	      ", agreement"+agreement+
-	      ")");
+    log.debug3("called signalPartialAgreement("+
+	       "agreementType="+agreementType+
+	       ", pid="+pid+
+	       ", au="+au+
+	       ", agreement"+agreement+
+	       ")");
+
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    if (pid == null) {
+      throw new IllegalArgumentException("Called with null pid");
+    }
+    if (agreement < 0.0f || agreement > 1.0f) {
+      throw new IllegalArgumentException("pecentAgreement must be between "+
+				   "0.0 and 1.0. It was: "+agreement);
+    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    auAgreements.signalPartialAgreement(pid, agreementType, agreement,
+					  TimeBase.nowMs());
+    auAgreements.store(getHistoryRepository(au));
   }
 
   /**
@@ -1159,109 +1156,52 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @return The percent agreement hint for this AU and peer.
    */
   public float getPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-      if (ida == null) {
-        return -1.0f;
-      } else {
-        return ida.getPercentAgreementHint();
-      }
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    return auAgreements.findPeerAgreement(pid, AgreementType.POR_HINT).
+      getPercentAgreement();
   }
   
   public float getHighestPercentAgreementHint(PeerIdentity pid, ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-      if (ida == null) {
-        return -1.0f;
-      } else {
-        return ida.getHighestPercentAgreementHint();
-      }
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    return auAgreements.findPeerAgreement(pid, AgreementType.POR_HINT).
+      getHighestPercentAgreement();
   }
 
   /**
-   * For V1 polls, the partialAgreement flag is meaningless (and ignored)
-   */
-  private void signalAgreed(PeerIdentity pid, ArchivalUnit au,
-                            long time, float percentAgreement) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null au");
-    } else if (pid == null) {
-      throw new IllegalArgumentException("Called with null pid");
-    }
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
-      if (time > ida.getLastAgree()) {
-	ida.setLastAgree(time);
-        ida.setPercentAgreement(percentAgreement);
-	storeIdentityAgreement(au);
-      }
-    }
-  }
-
-  /**
-   * <p>Signals that we've disagreed with pid on any level poll on
-   * au.</p>
-   * <p>Only called if we're on the winning side.</p>
-   * @param pid The PeerIdentity of the disagreeing peer.
-   * @param au  The {@link ArchivalUnit}.
-   */
-  public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
-    signalDisagreed(pid, au, TimeBase.nowMs(), 0.0f);
-  }
-
-  /**
-   * For V1 polls, the percentAgreement flag is meaningless (and ignored)
-   */
-  private void signalDisagreed(PeerIdentity pid, ArchivalUnit au,
-                               long time, float percentAgreement) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null au");
-    } else if (pid == null) {
-      throw new IllegalArgumentException("Called with null pid");
-    }
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
-      if (time > ida.getLastDisagree()) {
-        ida.setLastDisagree(time);
-        ida.setPercentAgreement(percentAgreement);
-        storeIdentityAgreement(au);
-      }
-    }
-  }
-
-  /**
-   * <p>Peers with whom we have had any disagreement since the last
-   * toplevel agreement are placed at the end of the list.</p>
+   * A list of peers with whom we have had a POR poll and a result
+   * above the minimum threshold for repair.
+   *
+   * NOTE: No particular order should be assumed.
+   * NOTE: This does NOT use the "hint", which would be more reasonable.
+   *
    * @param au ArchivalUnit to look up PeerIdentities for.
    * @return List of peers from which to try to fetch repairs for the
-   *         AU.
+   *         AU. Never {@code null}.
    */
-  public List getCachesToRepairFrom(ArchivalUnit au) {
+  public List<PeerIdentity> getCachesToRepairFrom(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    Map map = findAuAgreeMap(au);
-    List res = new LinkedList();
-    synchronized (map) {
-      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
-        Map.Entry ent = (Map.Entry)it.next();
-        IdentityAgreement ida = (IdentityAgreement)ent.getValue();
-        if (ida.hasAgreed()) {
-          if (ida.getLastDisagree() > ida.getLastAgree()) {
-            res.add(ent.getKey());
-          } else {
-            res.add(0, ent.getKey());
-          }
-        }
-      }
-    }
-    return res;
+    // NOTE: some tests rely on the MockIdentityManager changing
+    // getAgreed() and having that change getCachesToRepairFrom
+    return new ArrayList(getAgreed(au).keySet());
+  }
+
+  /**
+   * Return a mapping for each peer for which we have an agreement of
+   * the requested type, to the {@link PeerAgreement} record for that
+   * peer.
+   *
+   * @param au The {@link ArchivalUnit} in question.
+   * @param type The {@link AgreementType} to look for.
+   * @return A Map mapping each {@link PeerIdentity} which has an
+   * agreement of the requested type to the {@link PeerAgreement} for
+   * that type.
+   */
+  public Map<PeerIdentity, PeerAgreement> getAgreements(ArchivalUnit au,
+							AgreementType type) {
+    AuAgreements auAgreements = findAuAgreements(au);
+    return auAgreements.getAgreements(type);
   }
 
   public boolean hasAgreed(String ip, ArchivalUnit au)
@@ -1270,122 +1210,82 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au) {
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-      return ida != null ? ida.hasAgreed() : false;
-    }
-  }
-
-  /**
-   * <p>Returns a collection of IdentityManager.IdentityAgreement for
-   * each peer that we have a record of agreeing or disagreeing with
-   * us.
-   */
-  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null au");
-    }
-    Map<String,IdentityAgreement> map = findAuAgreeMap(au);
-    synchronized (map) {
-      boolean includeV1 = localPeerIdentities[Poll.V1_PROTOCOL] != null;
-      ArrayList<IdentityAgreement> res = new ArrayList<IdentityAgreement>();
-      for (IdentityAgreement ida : map.values()) {
-	try {
-	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
-	  if (includeV1 || pid.isV3()) {
-	    res.add(ida);
-	  }
-	} catch (MalformedIdentityKeyException e) {
-	  // just don't add to result
-	}
-      }
-      return res;
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    return auAgreements.hasAgreed(pid, minPercentPartialAgreement);
   }
 
   /**
    * <p>Return map peer -> last agree time. Used for logging and
    * debugging.</p>
    */
-  public Map getAgreed(ArchivalUnit au) {
+  public Map<PeerIdentity, Long> getAgreed(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    Map map = findAuAgreeMap(au);
-    Map res = new HashMap();
-    synchronized (map) {
-      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
-	Map.Entry ent = (Map.Entry)it.next();
-	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
-	if (ida.hasAgreed()) {
-	  res.put(ent.getKey(), new Long(ida.getLastAgree()));
+    AuAgreements auAgreements = findAuAgreements(au);
+    Map<PeerIdentity, PeerAgreement> agreements =
+      auAgreements.getAgreements(AgreementType.POR);
+    Map<PeerIdentity, Long> result = new HashMap();
+    for (Map.Entry<PeerIdentity, PeerAgreement> ent: agreements.entrySet()) {
+      PeerAgreement agreement = ent.getValue();
+      long percentAgreementTime = ent.getValue().getPercentAgreementTime();
+      if (agreement.getHighestPercentAgreement() 
+	  >= minPercentPartialAgreement) {
+	PeerIdentity pid = ent.getKey();
+	result.put(pid, Long.valueOf(percentAgreementTime));
+      }
+    }
+    return result;
+  }
+
+  // Used only for testing
+  void forceReload(ArchivalUnit au) {
+    AuAgreements auAgreements = findAuAgreements(au);
+    auAgreements.forceReload();
+  }
+
+  protected AuAgreements findAuAgreements(ArchivalUnit au) {
+    AuAgreements auAgreements;
+    
+    // agreeMapsCache's methods are synchronized, but this code stores
+    // an unloaded AuAgreements and then gives up the lock while the
+    // instance is loaded.
+    HistoryRepository hRep = getHistoryRepository(au);
+    synchronized (agreeMapsCache) {
+      auAgreements = (AuAgreements)agreeMapsCache.get(au.getAuId());
+      if (auAgreements == null) {
+        auAgreements = AuAgreements.makeUnloaded();
+        agreeMapsCache.put(au.getAuId(), auAgreements);
+      }
+    }
+    
+    // Several threads may be holding the same instance, and
+    // synchronizing on it. Only one will load or merge. The rest will
+    // see the loaded instance [assuming forceReload isn't called].
+    synchronized (auAgreements.getLoadLock()) {
+      if (auAgreements.isLoadNeeded()) {
+	if (isMergeRestoredAgreemMap) {
+	  auAgreements.loadAndMerge(hRep, this);
+	} else {
+	  auAgreements.load(hRep, this);
 	}
       }
     }
-    return res;
-  }
-
-  /**
-   * <p>Returns map peer -> last disagree time. Used for logging and
-   * debugging</p>.
-   */
-  public Map getDisagreed(ArchivalUnit au) {
-    if (au == null) {
-      throw new IllegalArgumentException("Called with null au");
-    }
-    Map map = findAuAgreeMap(au);
-    Map res = new HashMap();
-    synchronized (map) {
-      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
-        Map.Entry ent = (Map.Entry)it.next();
-        IdentityAgreement ida = (IdentityAgreement)ent.getValue();
-        if (ida.getLastDisagree() != 0) {
-          res.put(ent.getKey(), new Long(ida.getLastDisagree()));
-        }
-      }
-    }
-    return res;
-  }
-
-  protected IdentityAgreement findPeerIdentityAgreement(Map map,
-							PeerIdentity pid) {
-    // called in synchronized block
-
-    IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-    if (ida == null) {
-      ida = new IdentityAgreement(pid);
-      map.put(pid, ida);
-    }
-    return ida;
-  }
-
-  static String AGREE_MAP_INIT_KEY = "needs_init";
-
-  protected Map findAuAgreeMap(ArchivalUnit au) {
-    Map map;
-    // agreeMapsCache's methods are synchronized, but this code needs
-    // to check and store an unitialized HashMap atomically, so needs
-    // to synchronize.
-    synchronized (agreeMapsCache) {
-      map = (Map)agreeMapsCache.get(au.getAuId());
-      if (map == null) {
-        map = new HashMap();
-        map.put(AGREE_MAP_INIT_KEY, "true");
-        agreeMapsCache.put(au.getAuId(), map);
-      }
-    }
-    synchronized (map) {
-      if (map.containsKey(AGREE_MAP_INIT_KEY)) {
-        loadIdentityAgreement(map, au);
-        map.remove(AGREE_MAP_INIT_KEY);
-      }
-    }
-    return map;
+    return auAgreements;
   }
 
   public boolean hasAgreeMap(ArchivalUnit au) {
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    synchronized (agreeMapsCache) {
+      AuAgreements auAgreements =
+	(AuAgreements)agreeMapsCache.get(au.getAuId());
+      // If we have a value in the map, it should be synched to the
+      // file.
+      if (auAgreements != null) {
+	return auAgreements.haveAgreements();
+      }
+    }
+    
+    HistoryRepository hRep = getHistoryRepository(au);
     return hRep.getIdentityAgreementFile().exists();
   }
   
@@ -1422,19 +1322,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
       throws IOException {
-    // XXX hokey way to have the acceess performed by the object that has the
+    // have the access performed by the object that has the
     // appropriate lock
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      File file = hRep.getIdentityAgreementFile();
-      InputStream in = new BufferedInputStream(new FileInputStream(file));
-      try {
-        StreamUtil.copy(in, out);
-      } finally {
-        IOUtil.safeClose(in);
-      }
-    }
+    AuAgreements auAgreements = findAuAgreements(au);
+    auAgreements.writeTo(getHistoryRepository(au), out);
   }
 
   /**
@@ -1445,88 +1336,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException {
-    // XXX hokey way to have the acceess performed by the object that has the
+    // have the access performed by the object that has the
     // appropriate lock
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      File file = hRep.getIdentityAgreementFile();
-      OutputStream out = new FileOutputStream(file);
-      try {
-        StreamUtil.copy(in, out);
-      } finally {
-        IOUtil.safeClose(out);
-        map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
-      }
-    }
-  }
-
-  private Map loadIdentityAgreement(Map map, ArchivalUnit au) {
-    //only called within a synchronized block, so we don't need to
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    List list = null;
-    
-    try {
-      list = hRep.loadIdentityAgreements();
-    } catch (LockssRepositoryException e) {
-      log.error("loadIdentityAgreement", e);
-      // Should anything else be done in case of error?
-    }
-    if (map == null) {
-      map = new HashMap();
-    }
-    if (list == null) {
-      if (!isMergeRestoredAgreemMap) {
-        map.clear();
-      }
-    } else {
-      Set prevOnlyPids = new HashSet(map.keySet());
-      for (Iterator it = list.iterator(); it.hasNext(); ) {
-        IdentityAgreement ida = (IdentityAgreement)it.next();
-        try {
-          PeerIdentity pid = stringToPeerIdentity(ida.getId());
-          if (isMergeRestoredAgreemMap) {
-            ida = mergeIdAgreement((IdentityAgreement)map.get(pid), ida);
-          } else {
-            prevOnlyPids.remove(pid);
-          }
-          map.put(pid, ida);
-        } catch (MalformedIdentityKeyException e) {
-          log.warning("Couldn't load agreement for key " + ida.getId(), e);
-        }
-      }
-      if (!isMergeRestoredAgreemMap) {
-        for (Iterator it = prevOnlyPids.iterator(); it.hasNext(); ) {
-          Object pid = it.next();
-          if (pid instanceof PeerIdentity) {
-            map.remove(pid);
-          }
-        }
-      }
-    }
-    return map;
-  }
-
-  private void storeIdentityAgreement(ArchivalUnit au) {
-    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    Map map = findAuAgreeMap(au);
-    synchronized (map) {
-      try {
-        hRep.storeIdentityAgreements(new ArrayList(map.values()));
-      } catch (LockssRepositoryException e) {
-        log.error("storeIdentityAgreement", e);
-        // Should anything else be done in case of error?
-      }
-    }
-  }
-
-  private IdentityAgreement mergeIdAgreement(IdentityAgreement prev,
-					     IdentityAgreement ida) {
-    if (prev == null) {
-      return ida;
-    }
-    prev.mergeFrom(ida);
-    return prev;
+    AuAgreements auAgreements = findAuAgreements(au);
+    auAgreements.readFrom(getHistoryRepository(au), in);
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -1659,6 +1472,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     if (f.exists() && f.canWrite()) {
       f.delete();
     }
+  }
+
+  HistoryRepository getHistoryRepository(ArchivalUnit au) {
+    return getDaemon().getHistoryRepository(au);
   }
 
 }

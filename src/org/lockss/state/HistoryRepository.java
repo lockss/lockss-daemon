@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.20 2009-05-06 16:36:36 tlipkis Exp $
+ * $Id: HistoryRepository.java,v 1.21 2013-08-19 22:33:21 barry409 Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.List;
 import org.lockss.plugin.*;
 import org.lockss.protocol.DatedPeerIdSet;
+import org.lockss.protocol.AuAgreements;
 import org.lockss.repository.*;
 import org.lockss.app.LockssAuManager;
 
@@ -72,18 +73,25 @@ public interface HistoryRepository extends LockssAuManager {
   public void loadPollHistories(NodeState nodeState);
 
   /**
-   * Stores IdentityAgreement list
-   * @param list the list of {@link
-   * org.lockss.protocol.IdentityManager.IdentityAgreement}s
+   * Stores {@link AuAgreements}.
+   * @param auAgreements The {@link AuAgreements} for this AU.
    */
-  public void storeIdentityAgreements(List list) throws LockssRepositoryException;
+  public void storeIdentityAgreements(AuAgreements auAgreements)
+      throws LockssRepositoryException;
 
   /**
-   * Loads and returns IdentityAgreement list
-   * @return List the list {@link
-   * org.lockss.protocol.IdentityManager.IdentityAgreement}s
+   * Loads and returns the saved {@link Object} representing the agreements.
+   *
+   * From daemon release 1.62, the daemon saves {@link
+   * AuAgreements}.
+   *
+   * Prior to release 1.62, the daemon saved {@link
+   * List<IdentityManager.IdentityAgreement>}.
+   *
+   * @return an {@link Object}, or {@code null} if there are no saved
+   * agreements.
    */
-  public List loadIdentityAgreements() throws LockssRepositoryException;
+  public Object loadIdentityAgreements() throws LockssRepositoryException;
 
   /** Return identity agreement File for this AU
    */
