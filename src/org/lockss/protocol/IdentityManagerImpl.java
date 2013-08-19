@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.45 2013-08-14 23:27:15 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.46 2013-08-19 20:25:28 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.repository.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 import org.lockss.util.SerializationException.FileNotFound;
+import org.lockss.hasher.*;
 
 /**
  * <p>Abstraction for identity of a LOCKSS cache. Currently wraps an
@@ -1145,16 +1146,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param missingCount The number of files which had no previous
    * hash value.
    */
-  public void signalLocalHashComplete(int filesCount, int distinctUrlCount,
-				      int agreeCount, int disagreeCount,
-				      int missingCount) {
-    log.debug("called signalLocalHashComplete("+
-	      "filesCount="+filesCount+
-	      ", distinctUrlCount="+distinctUrlCount+
-	      ", agreeCount="+agreeCount+
-	      ", disagreeCount="+disagreeCount+
-	      ", missingCount="+missingCount+
-	      ")");
+  public void signalLocalHashComplete(LocalHashResult lhr) {
+    log.debug("called signalLocalHashComplete("+ lhr + ")");
   }
 
   /**

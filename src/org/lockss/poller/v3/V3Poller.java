@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.170 2013-08-08 05:58:12 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.171 2013-08-19 20:25:28 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
-import org.lockss.hasher.BlockHasher.LocalHashResult;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.poller.*;
@@ -51,6 +50,7 @@ import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
+import org.lockss.protocol.IdentityManager.AgreementType;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
@@ -119,6 +119,7 @@ public class V3Poller extends BasePoll {
       Local("Local");
 
     final String printString;
+
     PollVariant(String printString) {
       this.printString = printString;
     }
@@ -2285,16 +2286,7 @@ public class V3Poller extends BasePoll {
       return;
     }
     log.debug2("Recording local hash result: " + lhr);
-    PeerIdentity pid =
-      idManager.getLocalPeerIdentity(Poll.V3_PROTOCOL);
-    switch (lhr.getLhr()) {
-    case Agree:
-      idManager.signalAgreed(pid, getAu());
-      break;
-    case Disagree:
-      idManager.signalDisagreed(pid, getAu());
-      break;
-    }
+    idManager.signalLocalHashComplete(lhr);
   }
 
   // The vote is over.
@@ -2382,9 +2374,15 @@ public class V3Poller extends BasePoll {
 	    ud.getPercentAgreement() >= pollManager.getMinPercentForRepair()) {
 	  newRepairees++;
 	}
-        this.idManager.signalPartialAgreement(ud.getVoterId(), getAu(), 
-                                              ud.getPercentAgreement());
+	
+        idManager.signalPartialAgreement((isSampledPoll()
+					  ? AgreementType.POP
+					  : AgreementType.POR),
+					 ud.getVoterId(), getAu(), 
+					 ud.getPercentAgreement());
         
+        idManager.signalPartialAgreement(ud.getVoterId(), getAu(), 
+					 ud.getPercentAgreement());
       }
     }
     if (newRepairees > 0) {

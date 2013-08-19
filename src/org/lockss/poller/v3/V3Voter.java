@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.94 2013-08-08 05:58:24 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.95 2013-08-19 20:25:28 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetHasher;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.hasher.*;
-import org.lockss.hasher.BlockHasher.LocalHashResult;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.PollSerializerException;
@@ -1181,17 +1180,8 @@ public class V3Voter extends BasePoll {
 	  default:
 	    if (hasher instanceof BlockHasher && !isSampledPoll()) {
 	      LocalHashResult lhr = ((BlockHasher)hasher).getLocalHashResult();
-	      PeerIdentity pid =
-		getIdentityManager().getLocalPeerIdentity(Poll.V3_PROTOCOL);
-	      switch (lhr.getLhr()) {
-	      case Agree:
-		getIdentityManager().signalAgreed(pid, getAu());
-		break;
-	      case Disagree:
-		getIdentityManager().signalDisagreed(pid, getAu());
-		break;
-	      }	      
-
+	      log.debug2("Recording local hash result: " + lhr);
+	      idManager.signalLocalHashComplete(lhr);
 	    }
 	    hashComplete();
 	    break;

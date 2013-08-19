@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.30 2013-08-09 18:35:24 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.31 2013-08-19 20:25:28 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
+import org.lockss.hasher.*;
 import org.lockss.test.*;
 
 /** Test cases for org.lockss.protocol.IdentityManager that assume the
@@ -623,7 +624,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     setupPeer123();
 
     // Nothing but logging the call at present.
-    idmgr.signalLocalHashComplete(1, 2, 3, 4, 5);
+    idmgr.signalLocalHashComplete(new LocalHashResult());
   }
 
   public void testGetIdentityAgreements() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.33 2013-07-05 17:43:00 barry409 Exp $
+ * $Id: VoterActions.java,v 1.34 2013-08-19 20:25:28 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.poller.PollManager.EventCtr;
 import org.lockss.plugin.*;
 import org.lockss.poller.RepairPolicy;
 import org.lockss.protocol.*;
+import org.lockss.protocol.IdentityManager.AgreementType;
 import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 
@@ -293,6 +294,10 @@ public class VoterActions {
     PeerIdentity poller = ud.getPollerId();
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
     ArchivalUnit au = ud.getVoter().getAu();
+    idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
+				  ? AgreementType.SYMMETRIC_POP_HINT
+				  : AgreementType.SYMMETRIC_POR_HINT),
+				 poller, au, (float) agreementHint);
     idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
     if (! ud.isSymmetricPoll()) {
       if (msg.getVoterNonce2() != null) {
@@ -326,6 +331,10 @@ public class VoterActions {
 		  " disagree: " + nDisagree +
 		  " Voter only: " + nVoterOnly +
 		  " Poller only: " + nPollerOnly);
+	idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
+				      ? AgreementType.SYMMETRIC_POP
+				      : AgreementType.SYMMETRIC_POR),
+				     poller, au, vbt.percentAgreement());
 	idmgr.signalPartialAgreement(poller, au, vbt.percentAgreement());
       }
     }
