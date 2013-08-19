@@ -18,10 +18,11 @@
     param[base_url] = http://www.jsswr.org/
     param[journal_id] = jsswr
 
+    comment[notReady] = waiting on them to fix their site so that we do not need a specialized plugin unnecessarily RT5317
     
-    au < ready ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
-    au < ready ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
-    au < ready ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
+    au < notReady ; 2010 ; Journal of the Society for Social Work and Research Volume 1 ; 1 ; 2010 >
+    au < notReady ; 2011 ; Journal of the Society for Social Work and Research Volume 2 ; 2 ; 2011 >
+    au < notReady ; 2012 ; Journal of the Society for Social Work and Research Volume 3 ; 3 ; 2012 >
     au < manifest ; 2013 ; Journal of the Society for Social Work and Research Volume 4 ; 4 ; 2013 >
     
   }
