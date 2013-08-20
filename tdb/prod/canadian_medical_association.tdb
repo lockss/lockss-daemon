@@ -98,10 +98,14 @@
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Canadian Medical Association Journal Volume 169 ; 169 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Canadian Medical Association Journal Volume 170 ; 170 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Canadian Medical Association Journal Volume 171 ; 171 >
-    au < HighWirePressPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
-    au < HighWirePressPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
-    au < HighWirePressPlugin ; down ; 2006 ; Canadian Medical Association Journal Volume 174 ; 174 >
-    au < HighWirePressPlugin ; down ; 2006 ; Canadian Medical Association Journal Volume 175 ; 175 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 172 ; 172 >
+    au < HighWirePressPlugin ; superseded ; 2005 ; Canadian Medical Association Journal Volume 172 [superseded] ; 172 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; Canadian Medical Association Journal Volume 173 ; 173 >
+    au < HighWirePressPlugin ; superseded ; 2005 ; Canadian Medical Association Journal Volume 173 [superseded] ; 173 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Canadian Medical Association Journal Volume 174 ; 174 >
+    au < HighWirePressPlugin ; superseded ; 2006 ; Canadian Medical Association Journal Volume 174 [superseded] ; 174 >
+    au < HighWireStrVolPlugin ; down ; 2006 ; Canadian Medical Association Journal Volume 175 ; 175 >
+    au < HighWirePressPlugin ; superseded ; 2006 ; Canadian Medical Association Journal Volume 175 [superseded] ; 175 >
     au < HighWirePressPlugin ; down ; 2007 ; Canadian Medical Association Journal Volume 176 ; 176 >
     au < HighWirePressPlugin ; down ; 2007 ; Canadian Medical Association Journal Volume 177 ; 177 >
     au < HighWirePressPlugin ; down ; 2008 ; Canadian Medical Association Journal Volume 178 ; 178 >
