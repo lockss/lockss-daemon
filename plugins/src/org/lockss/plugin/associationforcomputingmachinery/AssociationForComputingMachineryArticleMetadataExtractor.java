@@ -49,13 +49,11 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
   private AcmEmitter emit = null;
   private static Logger log = Logger.getLogger("ACMArticleMetadataExtractor");
 
-  public AssociationForComputingMachineryArticleMetadataExtractor() 
-  {
-    super();
+  public AssociationForComputingMachineryArticleMetadataExtractor() {
+    //super();
   }
 
-  protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) 
-  {
+  protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) {
     if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
       am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
   }
@@ -63,16 +61,18 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
   @Override
   public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
       throws IOException, PluginException {
+    log.debug3("extract("+ target.getPurpose()+", "+af+", "+emit+")");
     if (emit == null)
       emit = new AcmEmitter(af,emitter);
-    if (emit.hasEmitted(af.getFullTextUrl()))
+    
+    if (emit.hasEmitted(af.getFullTextUrl())) {
+      log.debug3(af.getFullTextUrl()+"  Already Emitted");   
       return;
-
+    }
     CachedUrl cu = af.getFullTextCu();
     FileMetadataExtractor me = null;
-
-    if (cu != null)
-    {
+    log.debug3("cu to extract = "+cu);
+    if (cu != null){
       try {
         me = cu.getFileMetadataExtractor(target);
 
@@ -104,7 +104,7 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
     String publisher = (tdbau == null) ? "ACM" : tdbau.getPublisherName();
 
     ArticleMetadata md = new ArticleMetadata();
-    md.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+    addAccessUrl(md, cu);
     if (year != null) md.put(MetadataField.FIELD_DATE, year);
     if (publisher != null) md.put(MetadataField.FIELD_PUBLISHER,
         publisher);
@@ -123,19 +123,18 @@ public class AssociationForComputingMachineryArticleMetadataExtractor implements
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      if (collectedArticles.contains(cu.getUrl()))
-        return;
+      //if (collectedArticles.contains(cu.getUrl()))
+      //  return;
       collectedArticles.add(cu.getUrl());
-      addAccessUrl(am, cu);
       parent.emitMetadata(af, am);
+      //collectedArticles.clear();
     }
 
     void setParentEmitter(Emitter parent) {
       this.parent = parent;
     }
 
-    public boolean hasEmitted(String url)
-    {
+    public boolean hasEmitted(String url) {
       return collectedArticles.contains(url);
     }
   }

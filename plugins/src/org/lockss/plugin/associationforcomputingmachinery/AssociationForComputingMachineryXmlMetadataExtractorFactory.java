@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.12 2013-05-21 20:46:09 aishizaki Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.13 2013-08-20 22:54:36 aishizaki Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ implements FileMetadataExtractorFactory {
         if (node == null) {
           return null;
         }
-
+        log.debug3("getValue("+node+")");
         NodeList articleNodes = node.getChildNodes(); ///periodical/section/?
 
         for (int m = 0; m < articleNodes.getLength(); m++) {
@@ -310,7 +310,8 @@ implements FileMetadataExtractorFactory {
       MetadataField.FIELD_ISBN,
       MetadataField.DC_FIELD_RIGHTS,
       MetadataField.FIELD_PUBLISHER,
-      MetadataField.FIELD_PROPRIETARY_IDENTIFIER
+      MetadataField.FIELD_PROPRIETARY_IDENTIFIER,
+      MetadataField.FIELD_ACCESS_URL
     };
 
     /**
@@ -324,25 +325,22 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException, PluginException {
-      log.debug3("Attempting to extract metadata from cu: "+cu);
+      log.debug3("extract metadata from cu: "+cu);
       CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(cu.getArchivalUnit(), getMetadataFile(cu));
 
-     // will come back and fix this soon.  I promise.
       if (metadataCu.getUrl().contains("TEST00")) { //TODO: make this check better
-        //log.debug3("  Au: "+cu.getArchivalUnit());
-        //log.debug3("  metadatafile: "+getMetadataFile(cu));
-        //log.debug3("  metadataCU: "+metadataCu);
+        //System.out.println("  Au: "+cu.getArchivalUnit());
+        //System.out.println("  metadatafile: "+getMetadataFile(cu));
+        //System.out.println("  metadataCU: "+metadataCu);
         metadataCu = cu;
       }
       
-      if (metadataCu == null || !metadataCu.hasContent())
-      {
+      if (metadataCu == null || !metadataCu.hasContent()) {
         log.debug3("The metadata file does not exist in the au: "+metadataCu.getUrl());
         return;
       }
 
       currCachedUrl = cu;
-
       do_extract(target, metadataCu, emitter);
       // need to release created CU
       AuUtil.safeRelease(metadataCu);
@@ -372,7 +370,7 @@ implements FileMetadataExtractorFactory {
             am.put(ACM_FIELD_JOURNAL_TITLE,  am.get(ACM_FIELD_PROC_DESC));
           }
         }
-       
+
         emitAllMetadata(am, emit);
         return am;
       } catch (XPathExpressionException ex) {
@@ -390,6 +388,7 @@ implements FileMetadataExtractorFactory {
      * @param emit - an AcmEmitter to emit the metadata
      */
     private void emitAllMetadata(ArticleMetadata journalMetadata, Emitter emit) {	    	
+      //log.debug3("currCachedUrlListsize = "+ cachedUrlList.size());  
       for (int i = 0; i < cachedUrlList.size(); ++i) {
         ArticleMetadata am = articleMetadataList.get(i);
         CachedUrl cu = cachedUrlList.get(i);
@@ -399,7 +398,9 @@ implements FileMetadataExtractorFactory {
             am.put(journalMetadataFields[j], 
                    journalMetadata.get(journalMetadataFields[j]));
         }
-
+        // if this doesn't get set here, BaseArticleMetadataExtractor:addTdbDefaults()
+        // will set it wrongly
+        am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
         emit.emitMetadata(cu, am);
       }
 
@@ -417,7 +418,7 @@ implements FileMetadataExtractorFactory {
       ArticleMetadata am = new ArticleMetadata();
       putMetadataIn(am);
       CachedUrl toStore = currCachedUrl.getArchivalUnit().makeCachedUrl(getPdfUrl(am.get(MetadataField.DC_FIELD_IDENTIFIER)));
-
+      log.debug3("storeCurrentArticleRec:" + am +",   " + toStore);    
       articleMetadataList.add(am);
       cachedUrlList.add(toStore);
     }
@@ -443,6 +444,7 @@ implements FileMetadataExtractorFactory {
     {
       for (int i = 0; i < xpathValArr.length; ++i) {
         am.put(articleMetadataFields[i], xpathValArr[i]);
+        log.debug3("putMetadataIn:  "+  articleMetadataFields[i]+ ", "+   xpathValArr[i]);   
       }
     }
   }

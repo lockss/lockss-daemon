@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -28,7 +28,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>
@@ -40,7 +40,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/acm-released/2012/7nov2012/NEW-JOUR-JDIQ-V4I1-2378016/NEW-JOUR-JDIQ-V4I1-2378016.xml -->
-      <string>"^%s%d/.+\.xml$", base_url, year</string>
+      <string>"^%s%d/.+\.(pdf|html|xml|mov)$", base_url, year</string>
     </list>
   </entry>
   <entry>
