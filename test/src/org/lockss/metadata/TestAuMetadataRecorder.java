@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuMetadataRecorder.java,v 1.4 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: TestAuMetadataRecorder.java,v 1.5 2013-08-20 16:40:05 fergaloy-sf Exp $
  */
 
 /*
@@ -719,7 +719,17 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       new AuMetadataRecorder(task, metadataManager, sau0)
 	  .recordMetadata(conn, metadata.iterator());
 
-      fail("Should be illegal to record a journal with no title or ISS");
+      // Check that 1 publisher exist.
+      assertEquals(1, countPublishers(conn) - initialPublisherCount);
+
+      // Check that 6 publication exist.
+      assertEquals(6, countPublications(conn) - initialPublicationCount);
+
+      // Check that 1 archival unit exists.
+      assertEquals(1, countArchivalUnits(conn) - initialAuMdCount);
+
+      // Check that 6 articles exist.
+      assertEquals(6, countAuMetadataItems(conn) - initialArticleCount);
     } catch (MetadataException me) {
       // Expected.
     } finally {
