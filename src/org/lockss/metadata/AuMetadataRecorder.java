@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.12 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.13 2013-08-20 16:30:38 fergaloy-sf Exp $
  */
 
 /*
@@ -571,8 +571,10 @@ public class AuMetadataRecorder {
       journalTitle = mdinfo.journalTitle;
       log.debug3(DEBUG_HEADER + "journalTitle = " + journalTitle);
 
+      // Check whether no name was received in the metadata.
       if (StringUtil.isNullString(journalTitle)) {
-	throw new MetadataException("Journal title is missing", mdinfo);
+	// Yes: Synthesize a name.
+	journalTitle = synthesizePublicationTitle(mdinfo);
       }
 
       // Get any ISBN values received in the metadata.
@@ -606,6 +608,50 @@ public class AuMetadataRecorder {
       // item.
       parentSeq = mdManager.findPublicationMetadataItem(conn, publicationSeq);
       log.debug3(DEBUG_HEADER + "parentSeq = " + parentSeq);
+
+      // Find the publication names.
+      Map<String, String> names = mdManager.getMdItemNames(conn, parentSeq);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "names.size() = " + names.size());
+
+      // Loop through each publication name.
+      for (Map.Entry<String, String> entry : names.entrySet()) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "entry = " + entry);
+
+	// Check whether this is the primary name.
+	if (entry.getValue().equals(PRIMARY_NAME_TYPE)) {
+	  // Yes: Check whether the publication name has been synthesized.
+	  if (journalTitle.startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
+	    // Yes: Check whether this is not a synthesized name.
+	    if (!entry.getKey().startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
+	      // Yes: Remove any synthesized names.
+	      mdManager.removeNotPrimarySynthesizedMdItemNames(conn, parentSeq);
+
+	      // Use the primary name instead of the synthesized name.
+	      journalTitle = entry.getKey();
+	    }
+	  } else {
+	    // No: Check whether this is a synthesized name.
+	    if (entry.getKey().startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
+	      // Yes: Update the synthesized primary name with the current one.
+	      mdManager.updatePrimarySynthesizedMdItemName(conn, parentSeq,
+		  journalTitle);
+
+	      // Remove the previously entered non-primary name for this
+	      // publication.
+	      mdManager.removeNotPrimaryMdItemName(conn, parentSeq,
+		  journalTitle);
+	    }
+	  }
+
+	  break;
+	}
+      }
+
+      if (!journalTitle.startsWith(UNKNOWN_TITLE_NAME_ROOT)) {
+	// Remove any previously synthesized names for this publication.
+	mdManager.removeNotPrimarySynthesizedMdItemNames(conn, parentSeq);
+      }
 
       // Get the type of the parent.
       parentMdItemType = getMdItemTypeName(conn, parentSeq);
@@ -682,6 +728,47 @@ public class AuMetadataRecorder {
     updateOrCreateMdItem(conn, mdinfo);
 
     log.debug3(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Creates a synthetic publication title using the available metadata.
+   * 
+   * @param mdinfo
+   *          An ArticleMetadataInfo providing the metadata.
+   * @return a String with the synthetic publication title.
+   */
+  private String synthesizePublicationTitle(ArticleMetadataInfo mdinfo) {
+    final String DEBUG_HEADER = "synthesizePublicationTitle(): ";
+    String result = null;
+
+    // Check whether the metadata included the ISBN.
+    if (!StringUtil.isNullString(mdinfo.isbn)) {
+      // Yes: Use it.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/isbn=" + mdinfo.isbn;
+      // No: Check whether the metadata included the eISBN.
+    } else if (!StringUtil.isNullString(mdinfo.eisbn)) {
+      // Yes: Use it.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/eisbn=" + mdinfo.eisbn;
+      // No: Check whether the metadata included the ISSN.
+    } else if (!StringUtil.isNullString(mdinfo.issn)) {
+      // Yes: Use it.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/issn=" + mdinfo.issn;
+      // No: Check whether the metadata included the eISSN.
+    } else if (!StringUtil.isNullString(mdinfo.eissn)) {
+      // Yes: Use it.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/eissn=" + mdinfo.eissn;
+      // No: Check whether the metadata included the proprietary identifier.
+    } else if (!StringUtil.isNullString(mdinfo.proprietaryIdentifier)) {
+      // Yes: Use it.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/journalId="
+	  + mdinfo.proprietaryIdentifier;
+    } else {
+      // No: Generate a random name.
+      result = UNKNOWN_TITLE_NAME_ROOT + "/id=" +  + TimeBase.nowMs();
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   /**

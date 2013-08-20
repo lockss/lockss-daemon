@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.20 2013-07-23 21:47:45 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.21 2013-08-20 16:30:38 fergaloy-sf Exp $
  */
 
 /*
@@ -690,6 +690,31 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + PUBLICATION_TABLE
       + " set " + PUBLICATION_ID_COLUMN + " = ?"
       + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
+  static final String UNKNOWN_TITLE_NAME_ROOT = "UNKNOWN_TITLE";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " like '" + UNKNOWN_TITLE_NAME_ROOT + "%'"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
+  // Query to update the primary name of a metadata item.
+  private static final String UPDATE_MD_ITEM_PRIMARY_NAME_QUERY = "update "
+      + MD_ITEM_NAME_TABLE
+      + " set " + NAME_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -6287,5 +6312,111 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	+ "' publisher: " + publisher + "'");
 
     return DbManager.truncateVarchar(normal, maxColumnWidth);
+  }
+
+  /**
+   * Removes a non-primary metadata item name from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param name
+   *          A String with the non-primary metadata item name to be removed.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void removeNotPrimaryMdItemName(Connection conn, Long mdItemSeq, String name)
+      throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimaryMdItemName(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      deleteName.setString(2, name);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message = "Cannot remove metadata item non-primary name";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("name = '" + name + "'.");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
+  /**
+   * Removes non-primary metadata item synthesized names from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void removeNotPrimarySynthesizedMdItemNames(Connection conn, Long mdItemSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimarySynthesizedMdItemNames(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message =
+	  "Cannot remove metadata item non-primary synthesized names";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
+  /**
+   * Updates the primary name of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the identifier of the metadata item.
+   * @param primaryName
+   *          A String with the primary name of the metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void updatePrimarySynthesizedMdItemName(Connection conn, Long mdItemSeq,
+      String primaryName) throws DbException {
+    final String DEBUG_HEADER = "updatePrimarySynthesizedMdItemName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "primaryName = " + primaryName);
+    }
+
+    PreparedStatement updatePrimaryName =
+	dbManager.prepareStatement(conn, UPDATE_MD_ITEM_PRIMARY_NAME_QUERY);
+
+    try {
+      updatePrimaryName.setString(1, primaryName);
+      updatePrimaryName.setLong(2, mdItemSeq);
+      int count = dbManager.executeUpdate(updatePrimaryName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the primary name", sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("primaryName = '" + primaryName + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_PRIMARY_NAME_QUERY + "'.");
+      throw new DbException("Cannot update the primary name", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePrimaryName);
+    }
   }
 }
