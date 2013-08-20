@@ -16,10 +16,14 @@
 
     param[base_url] = http://www.lifescied.org/
 
-    au < HighWirePressPlugin ; down ; 2002 ; CBE - Life Sciences Education Volume 1 ; 1 >
-    au < HighWirePressPlugin ; down ; 2003 ; CBE - Life Sciences Education Volume 2 ; 2 >
-    au < HighWirePressPlugin ; down ; 2004 ; CBE - Life Sciences Education Volume 3 ; 3 >
-    au < HighWirePressPlugin ; down ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
+    au < HighWireStrVolPlugin ; down ; 2002 ; CBE - Life Sciences Education Volume 1 ; 1 >
+    au < HighWirePressPlugin ; superseded ; 2002 ; CBE - Life Sciences Education Volume 1 [superseded] ; 1 >
+    au < HighWireStrVolPlugin ; down ; 2003 ; CBE - Life Sciences Education Volume 2 ; 2 >
+    au < HighWirePressPlugin ; superseded ; 2003 ; CBE - Life Sciences Education Volume 2 [superseded] ; 2 >
+    au < HighWireStrVolPlugin ; down ; 2004 ; CBE - Life Sciences Education Volume 3 ; 3 >
+    au < HighWirePressPlugin ; superseded ; 2004 ; CBE - Life Sciences Education Volume 3 [superseded] ; 3 >
+    au < HighWireStrVolPlugin ; down ; 2005 ; CBE - Life Sciences Education Volume 4 ; 4 >
+    au < HighWirePressPlugin ; superseded ; 2005 ; CBE - Life Sciences Education Volume 4 [superseded] ; 4 >
     au < HighWirePressH20Plugin ; released ; 2006 ; CBE - Life Sciences Education Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; released ; 2007 ; CBE - Life Sciences Education Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; released ; 2008 ; CBE - Life Sciences Education Volume 7 ; 7 >
