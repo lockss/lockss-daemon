@@ -907,28 +907,29 @@
   {
     param[journal_id] = saj
     comment[0] = Journal changes to Scottish Archaeological Journal at Volume 22 with new journal id saj
+    comment[1] = Volume 1-22 released incorrectly.
     
-    au < down ; crawling ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
-    au < down ; crawling ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
-    au < down ; crawling ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
-    au < down ; crawling ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
-    au < down ; crawling ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
-    au < down ; crawling ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
-    au < down ; crawling ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
-    au < down ; crawling ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
-    au < down ; crawling ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
-    au < down ; crawling ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
-    au < down ; crawling ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
-    au < down ; crawling ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
-    au < down ; crawling ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
-    au < down ; crawling ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
-    au < down ; crawling ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
-    au < down ; crawling ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
-    au < down ; crawling ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
-    au < down ; crawling ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
-    au < down ; crawling ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
-    au < down ; crawling ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
-    au < down ; crawling ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    au < superseded ; crawling ; 1969 ; Scottish Archaeological Journal Volume 1 [superseded] ; 1 >
+    au < superseded ; crawling ; 1971 ; Scottish Archaeological Journal Volume 2 [superseded] ; 2 >
+    au < superseded ; crawling ; 1974 ; Scottish Archaeological Journal Volume 3 [superseded] ; 3 >
+    au < superseded ; crawling ; 1976 ; Scottish Archaeological Journal Volume 4 [superseded] ; 4 >
+    au < superseded ; crawling ; 1978 ; Scottish Archaeological Journal Volume 5 [superseded] ; 5 >
+    au < superseded ; crawling ; 1979 ; Scottish Archaeological Journal Volume 6 [superseded] ; 6 >
+    au < superseded ; crawling ; 1980 ; Scottish Archaeological Journal Volume 7 [superseded] ; 7 >
+    au < superseded ; crawling ; 1981 ; Scottish Archaeological Journal Volume 8 [superseded] ; 8 >
+    au < superseded ; crawling ; 1982 ; Scottish Archaeological Journal Volume 9 [superseded] ; 9 >
+    au < superseded ; crawling ; 1983 ; Scottish Archaeological Journal Volume 10 [superseded] ; 10 >
+    au < superseded ; crawling ; 1984 ; Scottish Archaeological Journal Volume 11 [superseded] ; 11 >
+    au < superseded ; crawling ; 1985 ; Scottish Archaeological Journal Volume 12 [superseded] ; 12 >
+    au < superseded ; crawling ; 1986 ; Scottish Archaeological Journal Volume 13 [superseded] ; 13 >
+    au < superseded ; crawling ; 1987 ; Scottish Archaeological Journal Volume 14 [superseded] ; 14 >
+    au < superseded ; crawling ; 1988 ; Scottish Archaeological Journal Volume 15 [superseded] ; 15 >
+    au < superseded ; crawling ; 1989 ; Scottish Archaeological Journal Volume 16 [superseded] ; 16 >
+    au < superseded ; crawling ; 1991 ; Scottish Archaeological Journal Volume 17 [superseded] ; 17 >
+    au < superseded ; crawling ; 1993 ; Scottish Archaeological Journal Volume 18 [superseded] ; 18 >
+    au < superseded ; crawling ; 1994 ; Scottish Archaeological Journal Volume 19 [superseded] ; 19 >
+    au < superseded ; crawling ; 1996 ; Scottish Archaeological Journal Volume 20 [superseded] ; 20 >
+    au < superseded ; crawling ; 1998 ; Scottish Archaeological Journal Volume 21 [superseded] ; 21 >
     au < released ; crawling ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
     au < released ; crawling ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
     au < released ; crawling ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
