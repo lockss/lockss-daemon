@@ -53,6 +53,8 @@
         au < released ; 2006 ; Zwingliana Volume 33 ; 33 ; 2006 >
         au < released ; 2007 ; Zwingliana Volume 34 ; 34 ; 2007 >
         au < released ; 2008 ; Zwingliana Volume 35 ; 35 ; 2008 >
+        au < doNotProcess ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 >
+        au < superseded ; 2010 ; Zwingliana Volume 37 [superseded] ; 37 ; 2009 >
         
       }
       
@@ -63,7 +65,7 @@
         comment[years] = Rolling last 3 years no substance.
 
         au < released ; 2009 ; Zwingliana Volume 36 ; 36 ; 2009 >
-        au < released ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
+        au < notReady ; 2010 ; Zwingliana Volume 37 ; 37 ; 2010 >
         au < notReady ; 2011 ; Zwingliana Volume 38 ; 38 ; 2011 >
         au < notReady ; 2012 ; Zwingliana Volume 39 ; 39 ; 2012 >
         au < expected ; 2013 ; Zwingliana Volume 40 ; 40 ; 2013 >
