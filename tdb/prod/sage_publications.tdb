@@ -24549,7 +24549,7 @@ comment[mpj] = now published by Brill
         au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < HighWireStrVolPlugin ; doesNotExist ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
 
       }
 
@@ -24586,7 +24586,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < exists ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
         au < doNotProcess ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
-        au < doNotProcess ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
+        au < exists ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
         au < released ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 >
         au < released ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 >
         au < manifest ; 2013 ; Journal of Psychoeducational Assessment Volume 31 ; 31 >
@@ -41901,17 +41901,17 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://cr.rsmjournals.com/
   
-        au < HighWirePressPlugin ; down ; 2001 ; Clinical Risk Volume 7 [superseded] ; 7 >
-        au < HighWirePressPlugin ; down ; 2002 ; Clinical Risk Volume 8 [superseded] ; 8 >
-        au < HighWirePressPlugin ; down ; 2003 ; Clinical Risk Volume 9 [superseded] ; 9 >
-        au < HighWirePressPlugin ; down ; 2004 ; Clinical Risk Volume 10 [superseded] ; 10 >
-        au < HighWirePressPlugin ; down ; 2005 ; Clinical Risk Volume 11 [superseded] ; 11 >
-        au < HighWirePressPlugin ; down ; 2006 ; Clinical Risk Volume 12 [superseded] ; 12 >
-        au < HighWirePressPlugin ; down ; 2007 ; Clinical Risk Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2008 ; Clinical Risk Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2009 ; Clinical Risk Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2010 ; Clinical Risk Volume 16 [superseded] ; 16 >
-        au < HighWirePressPlugin ; down ; 2011 ; Clinical Risk Volume 17 [superseded] ; 17 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Clinical Risk Volume 7 ; 7 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Clinical Risk Volume 8 ; 8 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Clinical Risk Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Clinical Risk Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Clinical Risk Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Clinical Risk Volume 12 ; 12 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Clinical Risk Volume 13 ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Clinical Risk Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Clinical Risk Volume 15 ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Clinical Risk Volume 16 ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Clinical Risk Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; down ; 2012 ; Clinical Risk Volume 18 [superseded] ; 18 >
   
       }
@@ -42465,9 +42465,9 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; down ; 2006 ; Hand Therapy Volume 11 ; 11 >
         au < HighWirePressH20Plugin ; down ; 2007 ; Hand Therapy Volume 12 ; 12 >
         au < HighWirePressH20Plugin ; down ; 2008 ; Hand Therapy Volume 13 ; 13 >
-        au < HighWirePressPlugin ; down ; 2009 ; Hand Therapy Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2010 ; Hand Therapy Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2011 ; Hand Therapy Volume 16 [superseded] ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Hand Therapy Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Hand Therapy Volume 15 ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Hand Therapy Volume 16 ; 16 >
       
       }
       
@@ -42527,52 +42527,52 @@ comment[mpj] = now published by Brill
         
         comment[platform] = HighWire H10
       
-        au < down ; 2001 ; He@lth Information on the Internet Volume 21 [superseded] ; 21 >
-        au < down ; 2001 ; He@lth Information on the Internet Volume 22 [superseded] ; 22 >
-        au < down ; 2001 ; He@lth Information on the Internet Volume 23 [superseded] ; 23 >
-        au < down ; 2001 ; He@lth Information on the Internet Volume 24 [superseded] ; 24 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 25 [superseded] ; 25 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 26 [superseded] ; 26 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 27 [superseded] ; 27 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 28 [superseded] ; 28 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 29 [superseded] ; 29 >
-        au < down ; 2002 ; He@lth Information on the Internet Volume 30 [superseded] ; 30 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 31 [superseded] ; 31 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 32 [superseded] ; 32 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 33 [superseded] ; 33 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 34 [superseded] ; 34 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 35 [superseded] ; 35 >
-        au < down ; 2003 ; He@lth Information on the Internet Volume 36 [superseded] ; 36 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 37 [superseded] ; 37 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 38 [superseded] ; 38 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 39 [superseded] ; 39 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 40 [superseded] ; 40 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 41 [superseded] ; 41 >
-        au < down ; 2004 ; He@lth Information on the Internet Volume 42 [superseded] ; 42 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 43 [superseded] ; 43 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 44 [superseded] ; 44 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 45 [superseded] ; 45 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 46 [superseded] ; 46 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 47 [superseded] ; 47 >
-        au < down ; 2005 ; He@lth Information on the Internet Volume 48 [superseded] ; 48 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 49 [superseded] ; 49 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 50 [superseded] ; 50 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 51 [superseded] ; 51 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 52 [superseded] ; 52 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 53 [superseded] ; 53 >
-        au < down ; 2006 ; He@lth Information on the Internet Volume 54 [superseded] ; 54 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 55 [superseded] ; 55 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 56 [superseded] ; 56 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 57 [superseded] ; 57 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 58 [superseded] ; 58 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 59 [superseded] ; 59 >
-        au < down ; 2007 ; He@lth Information on the Internet Volume 60 [superseded] ; 60 >
-        au < down ; 2008 ; He@lth Information on the Internet Volume 61 [superseded] ; 61 >
-        au < down ; 2008 ; He@lth Information on the Internet Volume 62 [superseded] ; 62 >
-        au < down ; 2008 ; He@lth Information on the Internet Volume 63 [superseded] ; 63 >
+        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
+        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
+        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
+        au < doesNotExist ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
+        au < doesNotExist ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+        au < doesNotExist ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+        au < doesNotExist ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
+        au < doesNotExist ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
+        au < doesNotExist ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+        au < doesNotExist ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
         au < doNotProcess ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
-        au < down ; 2008 ; He@lth Information on the Internet Volume 65 [superseded] ; 65 >
-        au < down ; 2008 ; He@lth Information on the Internet Volume 66 [superseded] ; 66 >
+        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+        au < doesNotExist ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
   
       }
   
@@ -42726,13 +42726,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ijcp.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; down ; 2005 ; International Journal of Care Pathways Volume 9 [superseded] ; 9 >
-        au < HighWirePressPlugin ; down ; 2006 ; International Journal of Care Pathways Volume 10 [superseded] ; 10 >
-        au < HighWirePressPlugin ; down ; 2007 ; International Journal of Care Pathways Volume 11 [superseded] ; 11 >
-        au < HighWirePressPlugin ; down ; 2008 ; International Journal of Care Pathways Volume 12 [superseded] ; 12 >
-        au < HighWirePressPlugin ; down ; 2009 ; International Journal of Care Pathways Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2010 ; International Journal of Care Pathways Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2011 ; International Journal of Care Pathways Volume 15 [superseded] ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
   
       }
   
@@ -42742,13 +42742,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://icp.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 >
   
@@ -42834,17 +42834,17 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://jhsrp.rsmjournals.com/
   
-        au < HighWirePressPlugin ; down ; 2001 ; Journal of Health Services Research & Policy Volume 6 [superseded] ; 6 >
-        au < HighWirePressPlugin ; down ; 2002 ; Journal of Health Services Research & Policy Volume 7 [superseded] ; 7 >
-        au < HighWirePressPlugin ; down ; 2003 ; Journal of Health Services Research & Policy Volume 8 [superseded] ; 8 >
-        au < HighWirePressPlugin ; down ; 2004 ; Journal of Health Services Research & Policy Volume 9 [superseded] ; 9 >
-        au < HighWirePressPlugin ; down ; 2005 ; Journal of Health Services Research & Policy Volume 10 [superseded] ; 10 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of Health Services Research & Policy Volume 11 [superseded] ; 11 >
-        au < HighWirePressPlugin ; down ; 2007 ; Journal of Health Services Research & Policy Volume 12 [superseded] ; 12 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of Health Services Research & Policy Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of Health Services Research & Policy Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of Health Services Research & Policy Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2011 ; Journal of Health Services Research & Policy Volume 16 [superseded] ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
   
       }
   
@@ -42852,17 +42852,17 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://hsr.sagepub.com/
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
   
@@ -42884,13 +42884,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jmb.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; down ; 2005 ; Journal of Medical Biography Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of Medical Biography Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2007 ; Journal of Medical Biography Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of Medical Biography Volume 16 [superseded] ; 16 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Biography Volume 17 [superseded] ; 17 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Biography Volume 18 [superseded] ; 18 >
-        au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Biography Volume 19 [superseded] ; 19 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Journal of Medical Biography Volume 13 [superseded] ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Journal of Medical Biography Volume 14 [superseded] ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Journal of Medical Biography Volume 15 [superseded] ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Journal of Medical Biography Volume 16 [superseded] ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Journal of Medical Biography Volume 17 [superseded] ; 17 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of Medical Biography Volume 18 [superseded] ; 18 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Journal of Medical Biography Volume 19 [superseded] ; 19 >
   
       }
   
@@ -42899,13 +42899,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jmb.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
   
@@ -42929,20 +42929,20 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://jms.rsmjournals.com/
   
-        au < HighWirePressPlugin ; down ; 1998 ; Journal of Medical Screening Volume 5 [superseded] ; 5 >
-        au < HighWirePressPlugin ; down ; 1999 ; Journal of Medical Screening Volume 6 [superseded] ; 6 >
-        au < HighWirePressPlugin ; down ; 2000 ; Journal of Medical Screening Volume 7 [superseded] ; 7 >
-        au < HighWirePressPlugin ; down ; 2001 ; Journal of Medical Screening Volume 8 [superseded] ; 8 >
-        au < HighWirePressPlugin ; down ; 2002 ; Journal of Medical Screening Volume 9 [superseded] ; 9 >
-        au < HighWirePressPlugin ; down ; 2003 ; Journal of Medical Screening Volume 10 [superseded] ; 10 >
-        au < HighWirePressPlugin ; down ; 2004 ; Journal of Medical Screening Volume 11 [superseded] ; 11 >
-        au < HighWirePressPlugin ; down ; 2005 ; Journal of Medical Screening Volume 12 [superseded] ; 12 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of Medical Screening Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2007 ; Journal of Medical Screening Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of Medical Screening Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of Medical Screening Volume 16 [superseded] ; 16 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of Medical Screening Volume 17 [superseded] ; 17 >
-        au < HighWirePressPlugin ; down ; 2011 ; Journal of Medical Screening Volume 18 [superseded] ; 18 >
+        au < HighWirePressPlugin ; doesNotExist ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
   
       }
   
@@ -42950,20 +42950,20 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://msc.sagepub.com/
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
   
@@ -42986,22 +42986,22 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jtt.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; down ; 1996 ; Journal of Telemedicine and Telecare Volume 2 [superseded] ; 2 >
-        au < HighWirePressPlugin ; down ; 1997 ; Journal of Telemedicine and Telecare Volume 3 [superseded] ; 3 >
-        au < HighWirePressPlugin ; down ; 1998 ; Journal of Telemedicine and Telecare Volume 4 [superseded] ; 4 >
-        au < HighWirePressPlugin ; down ; 1999 ; Journal of Telemedicine and Telecare Volume 5 [superseded] ; 5 >
-        au < HighWirePressPlugin ; down ; 2000 ; Journal of Telemedicine and Telecare Volume 6 [superseded] ; 6 >
-        au < HighWirePressPlugin ; down ; 2001 ; Journal of Telemedicine and Telecare Volume 7 [superseded] ; 7 >
-        au < HighWirePressPlugin ; down ; 2002 ; Journal of Telemedicine and Telecare Volume 8 [superseded] ; 8 >
-        au < HighWirePressPlugin ; down ; 2003 ; Journal of Telemedicine and Telecare Volume 9 [superseded] ; 9 >
-        au < HighWirePressPlugin ; down ; 2004 ; Journal of Telemedicine and Telecare Volume 10 [superseded] ; 10 >
-        au < HighWirePressPlugin ; down ; 2005 ; Journal of Telemedicine and Telecare Volume 11 [superseded] ; 11 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of Telemedicine and Telecare Volume 12 [superseded] ; 12 >
-        au < HighWirePressPlugin ; down ; 2007 ; Journal of Telemedicine and Telecare Volume 13 [superseded] ; 13 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of Telemedicine and Telecare Volume 14 [superseded] ; 14 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of Telemedicine and Telecare Volume 15 [superseded] ; 15 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of Telemedicine and Telecare Volume 16 [superseded] ; 16 >
-        au < HighWirePressPlugin ; down ; 2011 ; Journal of Telemedicine and Telecare Volume 17 [superseded] ; 17 >
+        au < HighWirePressPlugin ; doesNotExist ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+        au < HighWirePressPlugin ; doesNotExist ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+        au < HighWirePressPlugin ; doesNotExist ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
   
       }
   
@@ -43011,22 +43011,22 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jtt.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
   
@@ -43050,53 +43050,53 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://jrsm.rsmjournals.com/
   
-        au < HighWirePressPlugin ; down ; 1965 ; Journal of the Royal Society of Medicine Volume 58 [superseded] ; 58 >
-        au < HighWirePressPlugin ; down ; 1966 ; Journal of the Royal Society of Medicine Volume 59 [superseded] ; 59 >
-        au < HighWirePressPlugin ; down ; 1967 ; Journal of the Royal Society of Medicine Volume 60 [superseded] ; 60 >
-        au < HighWirePressPlugin ; down ; 1968 ; Journal of the Royal Society of Medicine Volume 61 [superseded] ; 61 >
-        au < HighWirePressPlugin ; down ; 1969 ; Journal of the Royal Society of Medicine Volume 62 [superseded] ; 62 >
-        au < HighWirePressPlugin ; down ; 1970 ; Journal of the Royal Society of Medicine Volume 63 [superseded] ; 63 >
-        au < HighWirePressPlugin ; down ; 1971 ; Journal of the Royal Society of Medicine Volume 64 [superseded] ; 64 >
-        au < HighWirePressPlugin ; down ; 1972 ; Journal of the Royal Society of Medicine Volume 65 [superseded] ; 65 >
-        au < HighWirePressPlugin ; down ; 1973 ; Journal of the Royal Society of Medicine Volume 66 [superseded] ; 66 >
-        au < HighWirePressPlugin ; down ; 1974 ; Journal of the Royal Society of Medicine Volume 67 [superseded] ; 67 >
-        au < HighWirePressPlugin ; down ; 1975 ; Journal of the Royal Society of Medicine Volume 68 [superseded] ; 68 >
-        au < HighWirePressPlugin ; down ; 1976 ; Journal of the Royal Society of Medicine Volume 69 [superseded] ; 69 >
-        au < HighWirePressPlugin ; down ; 1977 ; Journal of the Royal Society of Medicine Volume 70 [superseded] ; 70 >
-        au < HighWirePressPlugin ; down ; 1978 ; Journal of the Royal Society of Medicine Volume 71 [superseded] ; 71 >
-        au < HighWirePressPlugin ; down ; 1979 ; Journal of the Royal Society of Medicine Volume 72 [superseded] ; 72 >
-        au < HighWirePressPlugin ; down ; 1980 ; Journal of the Royal Society of Medicine Volume 73 [superseded] ; 73 >
-        au < HighWirePressPlugin ; down ; 1981 ; Journal of the Royal Society of Medicine Volume 74 [superseded] ; 74 >
-        au < HighWirePressPlugin ; down ; 1982 ; Journal of the Royal Society of Medicine Volume 75 [superseded] ; 75 >
-        au < HighWirePressPlugin ; down ; 1983 ; Journal of the Royal Society of Medicine Volume 76 [superseded] ; 76 >
-        au < HighWirePressPlugin ; down ; 1984 ; Journal of the Royal Society of Medicine Volume 77 [superseded] ; 77 >
-        au < HighWirePressPlugin ; down ; 1985 ; Journal of the Royal Society of Medicine Volume 78 [superseded] ; 78 >
-        au < HighWirePressPlugin ; down ; 1986 ; Journal of the Royal Society of Medicine Volume 79 [superseded] ; 79 >
-        au < HighWirePressPlugin ; down ; 1987 ; Journal of the Royal Society of Medicine Volume 80 [superseded] ; 80 >
-        au < HighWirePressPlugin ; down ; 1988 ; Journal of the Royal Society of Medicine Volume 81 [superseded] ; 81 >
-        au < HighWirePressPlugin ; down ; 1989 ; Journal of the Royal Society of Medicine Volume 82 [superseded] ; 82 >
-        au < HighWirePressPlugin ; down ; 1990 ; Journal of the Royal Society of Medicine Volume 83 [superseded] ; 83 >
-        au < HighWirePressPlugin ; down ; 1991 ; Journal of the Royal Society of Medicine Volume 84 [superseded] ; 84 >
-        au < HighWirePressPlugin ; down ; 1992 ; Journal of the Royal Society of Medicine Volume 85 [superseded] ; 85 >
-        au < HighWirePressPlugin ; down ; 1993 ; Journal of the Royal Society of Medicine Volume 86 [superseded] ; 86 >
-        au < HighWirePressPlugin ; down ; 1994 ; Journal of the Royal Society of Medicine Volume 87 [superseded] ; 87 >
-        au < HighWirePressPlugin ; down ; 1995 ; Journal of the Royal Society of Medicine Volume 88 [superseded] ; 88 >
-        au < HighWirePressPlugin ; down ; 1996 ; Journal of the Royal Society of Medicine Volume 89 [superseded] ; 89 >
-        au < HighWirePressPlugin ; down ; 1997 ; Journal of the Royal Society of Medicine Volume 90 [superseded] ; 90 >
-        au < HighWirePressPlugin ; down ; 1998 ; Journal of the Royal Society of Medicine Volume 91 [superseded] ; 91 >
-        au < HighWirePressPlugin ; down ; 1999 ; Journal of the Royal Society of Medicine Volume 92 [superseded] ; 92 >
-        au < HighWirePressPlugin ; down ; 2000 ; Journal of the Royal Society of Medicine Volume 93 [superseded] ; 93 >
-        au < HighWirePressPlugin ; down ; 2001 ; Journal of the Royal Society of Medicine Volume 94 [superseded] ; 94 >
-        au < HighWirePressPlugin ; down ; 2002 ; Journal of the Royal Society of Medicine Volume 95 [superseded] ; 95 >
-        au < HighWirePressPlugin ; down ; 2003 ; Journal of the Royal Society of Medicine Volume 96 [superseded] ; 96 >
-        au < HighWirePressPlugin ; down ; 2004 ; Journal of the Royal Society of Medicine Volume 97 [superseded] ; 97 >
-        au < HighWirePressPlugin ; down ; 2005 ; Journal of the Royal Society of Medicine Volume 98 [superseded] ; 98 >
-        au < HighWirePressPlugin ; down ; 2006 ; Journal of the Royal Society of Medicine Volume 99 [superseded] ; 99 >
-        au < HighWirePressPlugin ; down ; 2007 ; Journal of the Royal Society of Medicine Volume 100 [superseded] ; 100 >
-        au < HighWirePressPlugin ; down ; 2008 ; Journal of the Royal Society of Medicine Volume 101 [superseded] ; 101 >
-        au < HighWirePressPlugin ; down ; 2009 ; Journal of the Royal Society of Medicine Volume 102 [superseded] ; 102 >
-        au < HighWirePressPlugin ; down ; 2010 ; Journal of the Royal Society of Medicine Volume 103 [superseded] ; 103 >
-        au < HighWirePressPlugin ; down ; 2011 ; Journal of the Royal Society of Medicine Volume 104 [superseded] ; 104 >
+        au < HighWirePressPlugin ; doesNotExist ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
+        au < HighWirePressPlugin ; doesNotExist ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
+        au < HighWirePressPlugin ; doesNotExist ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
+        au < HighWirePressPlugin ; doesNotExist ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
+        au < HighWirePressPlugin ; doesNotExist ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
+        au < HighWirePressPlugin ; doesNotExist ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
+        au < HighWirePressPlugin ; doesNotExist ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
+        au < HighWirePressPlugin ; doesNotExist ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
+        au < HighWirePressPlugin ; doesNotExist ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
+        au < HighWirePressPlugin ; doesNotExist ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
+        au < HighWirePressPlugin ; doesNotExist ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
+        au < HighWirePressPlugin ; doesNotExist ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
+        au < HighWirePressPlugin ; doesNotExist ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
+        au < HighWirePressPlugin ; doesNotExist ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
+        au < HighWirePressPlugin ; doesNotExist ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
+        au < HighWirePressPlugin ; doesNotExist ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
+        au < HighWirePressPlugin ; doesNotExist ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
+        au < HighWirePressPlugin ; doesNotExist ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
+        au < HighWirePressPlugin ; doesNotExist ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
+        au < HighWirePressPlugin ; doesNotExist ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
+        au < HighWirePressPlugin ; doesNotExist ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
+        au < HighWirePressPlugin ; doesNotExist ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
+        au < HighWirePressPlugin ; doesNotExist ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
+        au < HighWirePressPlugin ; doesNotExist ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
+        au < HighWirePressPlugin ; doesNotExist ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
+        au < HighWirePressPlugin ; doesNotExist ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
+        au < HighWirePressPlugin ; doesNotExist ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
+        au < HighWirePressPlugin ; doesNotExist ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
+        au < HighWirePressPlugin ; doesNotExist ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
+        au < HighWirePressPlugin ; doesNotExist ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
+        au < HighWirePressPlugin ; doesNotExist ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
+        au < HighWirePressPlugin ; doesNotExist ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
+        au < HighWirePressPlugin ; doesNotExist ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
+        au < HighWirePressPlugin ; doesNotExist ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
+        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
+        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
+        au < HighWirePressPlugin ; doesNotExist ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
   
       }
   
@@ -43104,53 +43104,53 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://jrs.sagepub.com/
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; exists ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; exists ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; exists ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; exists ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; exists ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; exists ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; exists ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; exists ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; exists ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; exists ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; exists ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; exists ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; exists ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; exists ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; exists ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
         au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
   
@@ -43387,18 +43387,18 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mlj.rsmjournals.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; down ; 1999 ; Medico-Legal Journal Volume 67 [superseded] ; 67 >
-        au < HighWirePressPlugin ; down ; 2000 ; Medico-Legal Journal Volume 68 [superseded] ; 68 >
-        au < HighWirePressPlugin ; down ; 2001 ; Medico-Legal Journal Volume 69 [superseded] ; 69 >
-        au < HighWirePressPlugin ; down ; 2002 ; Medico-Legal Journal Volume 70 [superseded] ; 70 >
-        au < HighWirePressPlugin ; down ; 2003 ; Medico-Legal Journal Volume 71 [superseded] ; 71 >
-        au < HighWirePressPlugin ; down ; 2004 ; Medico-Legal Journal Volume 72 [superseded] ; 72 >
-        au < HighWirePressPlugin ; down ; 2005 ; Medico-Legal Journal Volume 73 [superseded] ; 73 >
-        au < HighWirePressPlugin ; down ; 2006 ; Medico-Legal Journal Volume 74 [superseded] ; 74 >
-        au < HighWirePressPlugin ; down ; 2007 ; Medico-Legal Journal Volume 75 [superseded] ; 75 >
-        au < HighWirePressPlugin ; down ; 2008 ; Medico-Legal Journal Volume 76 [superseded] ; 76 >
-        au < HighWirePressPlugin ; down ; 2009 ; Medico-Legal Journal Volume 77 [superseded] ; 77 >
-        au < HighWirePressPlugin ; down ; 2010 ; Medico-Legal Journal Volume 78 [superseded] ; 78 >
+        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
         au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
   
       }
@@ -43409,19 +43409,19 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mlj.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; doNotProcess ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
   
