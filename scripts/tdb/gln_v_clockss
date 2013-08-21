@@ -62,7 +62,7 @@ then
   echo "CLOCKSS file does not exist"
 fi
 # Ignore this file?
-if [[ $file == "american_medical_association.tdb" || $file == "purdue_university_press.tdb" || $file == "centro_de_filosofia_da_universidade_de_lisboa.tdb" ]]
+if [[ $file == "american_medical_association.tdb" || $file == "purdue_university_press.tdb" || $file == "centro_de_filosofia_da_universidade_de_lisboa.tdb" || $file == "iop_publishing.tdb" ]]
 then
   echo "Ignore files"
   exists_cks=0
