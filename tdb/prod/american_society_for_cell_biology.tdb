@@ -59,21 +59,33 @@
       au < HighWirePressPlugin ; superseded ; 1994 ; Molecular Biology of the Cell Volume 5 [superseded] ; 5 >
       au < HighWireStrVolPlugin ; down ; 1995 ; Molecular Biology of the Cell Volume 6 [abstracts only] ; 6 >
       au < HighWirePressPlugin ; superseded ; 1995 ; Molecular Biology of the Cell Volume 6 [superseded] ; 6 >
+
       au < HighWirePressH20Plugin ; exists ; 1996 ; Molecular Biology of the Cell Volume 7 [abstracts only] ; 7 >
     }
-    au < HighWirePressPlugin ; down ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
-    au < HighWirePressPlugin ; down ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
-    au < HighWirePressPlugin ; down ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
-    au < HighWirePressPlugin ; down ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
-    au < HighWirePressPlugin ; down ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
+    au < HighWirePressPlugin ; doesNotExist ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
+    au < HighWirePressPlugin ; doesNotExist ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
+    au < HighWirePressPlugin ; doesNotExist ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
+    au < HighWirePressPlugin ; doesNotExist ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
+    au < HighWirePressPlugin ; doesNotExist ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
+    au < HighWirePressPlugin ; doesNotExist ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
+    au < HighWirePressPlugin ; doesNotExist ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
+    au < HighWirePressPlugin ; doesNotExist ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
+    au < HighWirePressPlugin ; doesNotExist ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
+    au < HighWirePressPlugin ; doesNotExist ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
+
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Molecular Biology of the Cell Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Molecular Biology of the Cell Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Molecular Biology of the Cell Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Molecular Biology of the Cell Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Molecular Biology of the Cell Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Molecular Biology of the Cell Volume 13 ; 13 >
-    au < HighWirePressPlugin ; down ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
-    au < HighWirePressPlugin ; down ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Molecular Biology of the Cell Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Molecular Biology of the Cell Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2005 ; Molecular Biology of the Cell Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; released ; 2006 ; Molecular Biology of the Cell Volume 17 ; 17 >
-    au < HighWirePressPlugin ; down ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
-    au < HighWirePressPlugin ; down ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
-    au < HighWirePressPlugin ; down ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Molecular Biology of the Cell Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Molecular Biology of the Cell Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Molecular Biology of the Cell Volume 20 ; 20 >
     au < HighWirePressH20Plugin ; released ; 2010 ; Molecular Biology of the Cell Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Molecular Biology of the Cell Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Molecular Biology of the Cell Volume 23 ; 23 >
