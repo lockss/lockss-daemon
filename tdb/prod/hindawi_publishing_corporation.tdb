@@ -1806,7 +1806,7 @@
     >
 
     comment[superseded] = see journal id 'ijde/', only testing pages found in the listed volumes
-	
+    
     param[journal_id] = denm
 
     au < superseded ; Differential Equations and Nonlinear Mechanics Volume 2006 [superseded] ; 2006 ; 2006 ; 2006 >
@@ -3096,8 +3096,8 @@
       issnl = 1687-9848
     >
 
-	comment[ijpe] = This journal is transferring to BMC, but it's still available in Hindawi
-	
+    comment[ijpe] = This journal is transferring to BMC, but it's still available in Hindawi
+    
     param[journal_id] = ijpe
 
     au < down ; International Journal of Pediatric Endocrinology Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -3689,7 +3689,7 @@
       issnl = 1173-9126
     >
 
-	comment[jamds] = the url "http://www.hindawi.com/journals/jamds/" redirects to "http://www.hindawi.com/journals/ads/"
+    comment[jamds] = the url "http://www.hindawi.com/journals/jamds/" redirects to "http://www.hindawi.com/journals/ads/"
 
     param[journal_id] = jamds
 
@@ -3719,7 +3719,7 @@
       issnl = 1048-9533
     >
 
-	comment[jamsa] = see journal code 'ijsa'
+    comment[jamsa] = see journal code 'ijsa'
 
     param[journal_id] = jamsa
 
@@ -4157,8 +4157,8 @@
       issnl = 1687-9821
     >
 
-	comment[jmag] = this journal has ceased publication
-	 
+    comment[jmag] = this journal has ceased publication
+     
     param[journal_id] = jmag
 
     au < doesNotExist ; Journal of Magnetism Volume 2008 ; 2008 ; 2008 ; 2008 >
@@ -5071,8 +5071,8 @@
       issnl = 1478-6478
     >
 
-	comment[psse] = this page cannot be found
-	
+    comment[psse] = this page cannot be found
+    
     param[journal_id] = psse
 
     au < down ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 ; 1 ; 1994 >
@@ -5338,9 +5338,9 @@
       eissn = 1687-6717 ;
       issnl = 1687-6709
     >
-	
-	comment[superseded] = see journal id 'bcri'
-	
+    
+    comment[superseded] = see journal id 'bcri'
+    
     param[journal_id] = rlbc
 
     au < superseded ; Research Letters in Biochemistry Volume 2008 [superseded] ; 2008 ; 2008 ; 2008 >
@@ -5358,9 +5358,9 @@
       issnl = 1687-6741
     >
 
-	comment[superseded] = see journal id 'jece'
-	comment[down] = potentially down instead? No longer redirects, jece makes no sense.
-	
+    comment[superseded] = see journal id 'jece'
+    comment[down] = potentially down instead? No longer redirects, jece makes no sense.
+    
     param[journal_id] = rlc
 
     au < superseded ; Research Letters in Communications Volume 2007 [superseded] ; 2007 ; 2007 ; 2007 >
@@ -5492,8 +5492,8 @@
       eissn = 1687-6938 ;
       issnl = 1687-6865
     >
-	comment[superseded] = see journal id 'oci'
-	
+    comment[superseded] = see journal id 'oci'
+    
     param[journal_id] = rloc
 
     au < superseded ; Research Letters in Organic Chemistry Volume 2008 [superseded] ; 2008 ; 2008 ; 2008 >
@@ -5511,7 +5511,7 @@
       issnl = 1687-6873
     >
     
-	comment[superseded] = see journal id 'apc'
+    comment[superseded] = see journal id 'apc'
 
     param[journal_id] = rlpc
 
@@ -5531,8 +5531,8 @@
       issnl = 1687-689X
     >
     
-	comment[superseded] = see journal id 'phys'
-	
+    comment[superseded] = see journal id 'phys'
+    
     param[journal_id] = rlp
 
     au < superseded ; Research Letters in Physics Volume 2008 [superseded] ; 2008 ; 2008 ; 2008 >
@@ -5550,7 +5550,7 @@
       issnl = 1687-6911
     >
 
-	comment[superseded] = see journal id 'jece'
+    comment[superseded] = see journal id 'jece'
     
     param[journal_id] = rlsp
 
@@ -5719,8 +5719,8 @@
       issnl = 1687-5397
     >
     
-	comment[tsm] = this page cannot be found
-	
+    comment[tsm] = this page cannot be found
+    
     param[journal_id] = tsm
 
     au < down ; Texture, Stress, and Microstructure Volume 1 (1972) ; 1972 ; 1 ; 1972 >
@@ -5853,7 +5853,7 @@
 
     param[journal_id] = vlsi
 
-	comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
+    comment[vlsi1998] = 403 error on http://downloads.hindawi.com/journals/vlsi/1998/028524.pdf
 
     au < released ; VLSI Design Volume 1 (1992) ; 1992 ; 1 ; 1992 >
     au < released ; VLSI Design Volume 2 (1993) ; 1993 ; 2 ; 1993 >
