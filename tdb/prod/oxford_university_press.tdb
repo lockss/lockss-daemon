@@ -10385,7 +10385,7 @@
     param[base_url] = http://deafed.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+    au < doesNotExist ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
 
     }
 
@@ -10404,7 +10404,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Deaf Studies and Deaf Education Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Deaf Studies and Deaf Education Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Deaf Studies and Deaf Education Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
     au < HighWirePressPlugin ; down ; 2008 ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
