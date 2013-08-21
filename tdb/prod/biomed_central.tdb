@@ -10,7 +10,7 @@
   {
 
     plugin = org.lockss.plugin.bmc.BMCPlugin
-    param[base_url] = http://www.biomedcentral.com/    
+    param[base_url] = http://www.biomedcentral.com/
 
     {
       title <
@@ -340,16 +340,16 @@
       attr[journal_code] = bmcpharmacoltoxicol
       comment[continued_by] = 2050-6511
 
-      au < down ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
-      au < down ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
-      au < down ; 2003 ; BMC Clinical Pharmacology Volume 3 ; 3 >
-      au < down ; 2004 ; BMC Clinical Pharmacology Volume 4 ; 4 >
-      au < down ; 2005 ; BMC Clinical Pharmacology Volume 5 ; 5 >
-      au < down ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 >
-      au < down ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 >
-      au < down ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < down ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
-      au < down ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < released ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
+      au < released ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
+      au < released ; 2003 ; BMC Clinical Pharmacology Volume 3 ; 3 >
+      au < released ; 2004 ; BMC Clinical Pharmacology Volume 4 ; 4 >
+      au < released ; 2005 ; BMC Clinical Pharmacology Volume 5 ; 5 >
+      au < released ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 >
+      au < released ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 >
+      au < released ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < released ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < released ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < manifest ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
       
@@ -1348,18 +1348,19 @@
       attr[journal_code] = bmcpharmacol
       comment[0] = Journal stopped at the end of 2012, merged with BMC Clinical Parmacology, and became BMC Pharmacology & Toxicology
       comment[continued_by] = 2050-6511
+      comment[volume_11] = not on any delta machine.
 
-      au < down ; 2001 ; BMC Pharmacology Volume 1 ; 1 >
-      au < down ; 2002 ; BMC Pharmacology Volume 2 ; 2 >
-      au < down ; 2003 ; BMC Pharmacology Volume 3 ; 3 >
-      au < down ; 2004 ; BMC Pharmacology Volume 4 ; 4 >
-      au < down ; 2005 ; BMC Pharmacology Volume 5 ; 5 >
-      au < down ; 2006 ; BMC Pharmacology Volume 6 ; 6 >
-      au < down ; 2007 ; BMC Pharmacology Volume 7 ; 7 >
-      au < down ; 2008 ; BMC Pharmacology Volume 8 ; 8 >
-      au < down ; 2009 ; BMC Pharmacology Volume 9 ; 9 >
-      au < down ; 2010 ; BMC Pharmacology Volume 10 ; 10 >
-      au < down ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
+      au < superseded ; 2001 ; BMC Pharmacology Volume 1 [superseded] ; 1 >
+      au < superseded ; 2002 ; BMC Pharmacology Volume 2 [superseded] ; 2 >
+      au < superseded ; 2003 ; BMC Pharmacology Volume 3 [superseded] ; 3 >
+      au < superseded ; 2004 ; BMC Pharmacology Volume 4 [superseded] ; 4 >
+      au < superseded ; 2005 ; BMC Pharmacology Volume 5 [superseded] ; 5 >
+      au < superseded ; 2006 ; BMC Pharmacology Volume 6 [superseded] ; 6 >
+      au < superseded ; 2007 ; BMC Pharmacology Volume 7 [superseded] ; 7 >
+      au < superseded ; 2008 ; BMC Pharmacology Volume 8 [superseded] ; 8 >
+      au < superseded ; 2009 ; BMC Pharmacology Volume 9 [superseded] ; 9 >
+      au < superseded ; 2010 ; BMC Pharmacology Volume 10 [superseded] ; 10 >
+      au < doesNotExist ; 2011 ; BMC Pharmacology Volume 11 ; 11 >
 
     }
 
