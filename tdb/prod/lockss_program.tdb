@@ -34,6 +34,8 @@
     {
 
       param[base_url] = http://www.lockss.org/za/proxy/
+      
+      comment[0] = not found on any delta machine. keep anyway.
     
       au < down ; 2006 ; LOCKSS Card 2006 (South Africa Proxy Edition) ; 2006 >
     
