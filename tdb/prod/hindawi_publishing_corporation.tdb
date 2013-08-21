@@ -3418,33 +3418,34 @@
       issnl = 2090-3332
     >
 
-    comment[superseded] = see journal code 'jamsa'
+    comment[location] = see 'jamsa', redirects to ijsa.
+    comment[sighting] = seen online 8/20/1013
     param[journal_id] = ijsa
 
     au < ready ; Journal of Applied Mathematics and Simulation Volume 1 (1987) ; 1987 ; 1 ; 1987 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 ; 1988 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 ; 1989 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 ; 1990 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 ; 1991 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 ; 1992 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 ; 1993 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 ; 1994 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 ; 1995 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 ; 1996 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 ; 1997 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 ; 1998 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 ; 1999 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 ; 2000 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 ; 2001 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 ; 2002 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 ; 2003 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2004 ; 2004 ; 2004 ; 2004 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2005 ; 2005 ; 2005 ; 2005 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2006 ; 2006 ; 2006 ; 2006 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2007 ; 2007 ; 2007 ; 2007 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2008 ; 2008 ; 2008 ; 2008 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 ; 2009 >
-    au < ready ; Journal of Applied Mathematics and Simulation Volume 2010 ; 2010 ; 2010 ; 2010 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 1 (1988) ; 1988 ; 1 ; 1988 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2 (1989) ; 1989 ; 2 ; 1989 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 3 (1990) ; 1990 ; 3 ; 1990 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 4 (1991) ; 1991 ; 4 ; 1991 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 5 (1992) ; 1992 ; 5 ; 1992 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 6 (1993) ; 1993 ; 6 ; 1993 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 7 (1994) ; 1994 ; 7 ; 1994 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 8 (1995) ; 1995 ; 8 ; 1995 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 9 (1996) ; 1996 ; 9 ; 1996 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 10 (1997) ; 1997 ; 10 ; 1997 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 11 (1998) ; 1998 ; 11 ; 1998 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 12 (1999) ; 1999 ; 12 ; 1999 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 13 (2000) ; 2000 ; 13 ; 2000 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 14 (2001) ; 2001 ; 14 ; 2001 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 15 (2002) ; 2002 ; 15 ; 2002 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 16 (2003) ; 2003 ; 16 ; 2003 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2005 ; 2005 ; 2005 ; 2005 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2006 ; 2006 ; 2006 ; 2006 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2007 ; 2007 ; 2007 ; 2007 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2008 ; 2008 ; 2008 ; 2008 >
+    au < released ; Journal of Applied Mathematics and Simulation Volume 2009 ; 2009 ; 2009 ; 2009 >
+    au < released ; International Journal of Stochastic Analysis Volume 2010 ; 2010 ; 2010 ; 2010 >
     au < released ; International Journal of Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
     au < manifest ; International Journal of Stochastic Analysis Volume 2012 ; 2012 ; 2012 ; 2012 >
     au < manifest ; International Journal of Stochastic Analysis Volume 2013 ; 2013 ; 2013 ; 2013 >
@@ -3722,31 +3723,34 @@
     comment[jamsa] = see journal code 'ijsa'
 
     param[journal_id] = jamsa
+    
+    comment[0] = These AUs were never added to the delta machines, and now jamsa redirects to ijsa.
+    comment[1] = Moved from superseded to doesNotExist.
 
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) [superseded] ; 1988 ; 1 ; 1988 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) [superseded] ; 1989 ; 2 ; 1989 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 3 (1990) [superseded] ; 1990 ; 3 ; 1990 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 4 (1991) [superseded] ; 1991 ; 4 ; 1991 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 5 (1992) [superseded] ; 1992 ; 5 ; 1992 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 6 (1993) [superseded] ; 1993 ; 6 ; 1993 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 7 (1994) [superseded] ; 1994 ; 7 ; 1994 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 8 (1995) [superseded] ; 1995 ; 8 ; 1995 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 9 (1996) [superseded] ; 1996 ; 9 ; 1996 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 10 (1997) [superseded] ; 1997 ; 10 ; 1997 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 11 (1998) [superseded] ; 1998 ; 11 ; 1998 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 12 (1999) [superseded] ; 1999 ; 12 ; 1999 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 13 (2000) [superseded] ; 2000 ; 13 ; 2000 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 14 (2001) [superseded] ; 2001 ; 14 ; 2001 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 15 (2002) [superseded] ; 2002 ; 15 ; 2002 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 16 (2003) [superseded] ; 2003 ; 16 ; 2003 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2004 [superseded] ; 2004 ; 2004 ; 2004 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2005 [superseded] ; 2005 ; 2005 ; 2005 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2006 [superseded] ; 2006 ; 2006 ; 2006 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2007 [superseded] ; 2007 ; 2007 ; 2007 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 [superseded] ; 2008 ; 2008 ; 2008 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2009 [superseded] ; 2009 ; 2009 ; 2009 >
-    au < superseded ; Journal of Applied Mathematics and Stochastic Analysis Volume 2010 [superseded] ; 2010 ; 2010 ; 2010 >
-    au < notReady ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) [superseded] ; 1988 ; 1 ; 1988 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) [superseded] ; 1989 ; 2 ; 1989 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 3 (1990) [superseded] ; 1990 ; 3 ; 1990 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 4 (1991) [superseded] ; 1991 ; 4 ; 1991 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 5 (1992) [superseded] ; 1992 ; 5 ; 1992 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 6 (1993) [superseded] ; 1993 ; 6 ; 1993 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 7 (1994) [superseded] ; 1994 ; 7 ; 1994 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 8 (1995) [superseded] ; 1995 ; 8 ; 1995 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 9 (1996) [superseded] ; 1996 ; 9 ; 1996 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 10 (1997) [superseded] ; 1997 ; 10 ; 1997 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 11 (1998) [superseded] ; 1998 ; 11 ; 1998 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 12 (1999) [superseded] ; 1999 ; 12 ; 1999 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 13 (2000) [superseded] ; 2000 ; 13 ; 2000 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 14 (2001) [superseded] ; 2001 ; 14 ; 2001 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 15 (2002) [superseded] ; 2002 ; 15 ; 2002 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 16 (2003) [superseded] ; 2003 ; 16 ; 2003 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2004 [superseded] ; 2004 ; 2004 ; 2004 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2005 [superseded] ; 2005 ; 2005 ; 2005 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2006 [superseded] ; 2006 ; 2006 ; 2006 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2007 [superseded] ; 2007 ; 2007 ; 2007 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2008 [superseded] ; 2008 ; 2008 ; 2008 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2009 [superseded] ; 2009 ; 2009 ; 2009 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2010 [superseded] ; 2010 ; 2010 ; 2010 >
+    au < doesNotExist ; Journal of Applied Mathematics and Stochastic Analysis Volume 2011 ; 2011 ; 2011 ; 2011 >
 
   }
 
