@@ -43,10 +43,10 @@
       comment[continued_by] = 2161-9549 Freshwater Science in January 2012
  
       comment[AUs048] = 024 was tested and released normally, accidentally deleted and reinstated.
-      comment[AUs48] = 24 was accidentally created on 7/8/2011.
+      comment[AUs48] = 24 was accidentally created on 7/8/2011, but not successfully released to the field.
 
       au < down ; 2005 ; Journal of the North American Benthological Society Volume 024 ; 024 >
-      au < down ; 2005 ; Journal of the North American Benthological Society Volume 24 ; 24 >
+      au < doesNotExist ; 2005 ; Journal of the North American Benthological Society Volume 24 ; 24 >
       
     }
 

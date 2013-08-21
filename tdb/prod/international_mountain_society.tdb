@@ -19,10 +19,10 @@
       param[journal_id] = 0276-4741
   
       comment[AUs048] = 024 was tested and released normally, accidentally deleted and reinstated.
-      comment[AUs48] = 24 was accidentally created on 6/28/2011.
+      comment[AUs48] = 24 was accidentally created on 6/28/2011, but not successfully released to the field.
 
       au < down ; 2004 ; Mountain Research and Development Volume 024 ; 024 >
-      au < down ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
+      au < doesNotExist ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
       
     }
 
