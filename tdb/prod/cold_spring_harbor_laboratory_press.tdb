@@ -18,7 +18,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cshprotocols.cshlp.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[notReady] = failed to create hash compare
 
       au < released ; 2006 ; Cold Spring Harbor Protocols Volume 2006 ; 2006 >
       au < released ; 2007 ; Cold Spring Harbor Protocols Volume 2007 ; 2007 >
@@ -26,7 +25,7 @@
       au < released ; 2009 ; Cold Spring Harbor Protocols Volume 2009 ; 2009 >
       au < released ; 2010 ; Cold Spring Harbor Protocols Volume 2010 ; 2010 >
       au < released ; 2011 ; Cold Spring Harbor Protocols Volume 2011 ; 2011 >
-      au < notReady ; 2012; Cold Spring Harbor Protocols Volume 2012 ; 2012 >
+      au < ready ; 2012; Cold Spring Harbor Protocols Volume 2012 ; 2012 >
       au < manifest ; 2013; Cold Spring Harbor Protocols Volume 2013 ; 2013 >
       
     }
