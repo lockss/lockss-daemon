@@ -735,11 +735,10 @@
       issnl = 1947-9077
     >
     param[journal_issn] = 1947-9077
-    comment[0] = title mismatch with extra IGI and addition metadata description
 
     au < released ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 >
     au < released ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 >
-    au < notReady ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 >
+    au < ready ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 >
     au < expected ; 2013 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 >
 
   }
