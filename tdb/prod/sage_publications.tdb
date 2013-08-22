@@ -24586,7 +24586,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < exists ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
         au < doNotProcess ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
-        au < exists ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
+        au < manifest ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
         au < released ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 >
         au < released ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 >
         au < manifest ; 2013 ; Journal of Psychoeducational Assessment Volume 31 ; 31 >
@@ -42742,13 +42742,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://icp.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; exists ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; International Journal of Care Pathways Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Care Pathways Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Care Pathways Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; International Journal of Care Pathways Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 >
   
@@ -42852,17 +42852,17 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://hsr.sagepub.com/
   
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Health Services Research & Policy Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Health Services Research & Policy Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Health Services Research & Policy Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Health Services Research & Policy Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Health Services Research & Policy Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Health Services Research & Policy Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Health Services Research & Policy Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Health Services Research & Policy Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
   
@@ -42899,13 +42899,13 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jmb.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Medical Biography Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Medical Biography Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Medical Biography Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Medical Biography Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
   
@@ -43410,18 +43410,18 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressH20Plugin ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
   
