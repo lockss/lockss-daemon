@@ -17,7 +17,7 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Cippus
 
-      au < manifest ; 2012 ; 1 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 1 ; 2012 >
+      au < testing ; 2012 ; 1 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 1 ; 2012 >
       au < expected ; 2013 ; 2 ; CIPPUS – REVISTA DE INICIAÇÃO CIENTÍFICA Volume 2 ; 2013 >
 
   }
@@ -33,10 +33,10 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = conhecimento_diversidade
 
-      au < manifest ; 2009 ; 1 ; Conhecimento & Diversidade Volume 1 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Conhecimento & Diversidade Volume 2 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Conhecimento & Diversidade Volume 3 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Conhecimento & Diversidade Volume 4 ; 2012 >
+      au < testing ; 2009 ; 1 ; Conhecimento & Diversidade Volume 1 ; 2009 >
+      au < testing ; 2010 ; 2 ; Conhecimento & Diversidade Volume 2 ; 2010 >
+      au < testing ; 2011 ; 3 ; Conhecimento & Diversidade Volume 3 ; 2011 >
+      au < testing ; 2012 ; 4 ; Conhecimento & Diversidade Volume 4 ; 2012 >
       au < expected ; 2013 ; 5 ; Conhecimento & Diversidade Volume 5 ; 2013 >
 
   }
@@ -52,7 +52,7 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = desenvolve
 
-      au < manifest ; 2012 ; 1 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 1 ; 2012 >
+      au < testing ; 2012 ; 1 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 1 ; 2012 >
       au < expected ; 2013 ; 2 ; DESENVOLVE – REVISTA DE GESTÃO DO UNILASALLE Volume 2 ; 2013 >
 
   }
@@ -68,10 +68,10 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Dialogo
 
-      au < manifest ; 2009 ; 15 ; DIÁLOGO Volume 15 ; 2009 >
-      au < manifest ; 2010 ; 16-17 ; DIÁLOGO Volume 16-17 ; 2010 >
-      au < manifest ; 2011 ; 18-19 ; DIÁLOGO Volume 18-19 ; 2011 >
-      au < manifest ; 2012 ; 20-21 ; DIÁLOGO Volume 20-21 ; 2012 >
+      au < testing ; 2009 ; 15 ; DIÁLOGO Volume 15 ; 2009 >
+      au < testing ; 2010 ; 16-17 ; DIÁLOGO Volume 16-17 ; 2010 >
+      au < testing ; 2011 ; 18-19 ; DIÁLOGO Volume 18-19 ; 2011 >
+      au < testing ; 2012 ; 20-21 ; DIÁLOGO Volume 20-21 ; 2012 >
       au < expected ; 2013 ; 22 ; DIÁLOGO Volume 22 ; 2013 >
 
   }
@@ -87,12 +87,12 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Educacao
 
-      au < manifest ; 2007 ; 12 ; Educação, Ciência e Cultura Volume 12 ; 2007 >
-      au < manifest ; 2008 ; 13 ; Educação, Ciência e Cultura Volume 13 ; 2008 >
-      au < manifest ; 2009 ; 14 ; Educação, Ciência e Cultura Volume 14 ; 2009 >
-      au < manifest ; 2010 ; 15 ; Educação, Ciência e Cultura Volume 15 ; 2010 >
-      au < manifest ; 2011 ; 16 ; Educação, Ciência e Cultura Volume 16 ; 2011 >
-      au < manifest ; 2012 ; 17 ; Educação, Ciência e Cultura Volume 17 ; 2012 >
+      au < testing ; 2007 ; 12 ; Educação, Ciência e Cultura Volume 12 ; 2007 >
+      au < testing ; 2008 ; 13 ; Educação, Ciência e Cultura Volume 13 ; 2008 >
+      au < testing ; 2009 ; 14 ; Educação, Ciência e Cultura Volume 14 ; 2009 >
+      au < testing ; 2010 ; 15 ; Educação, Ciência e Cultura Volume 15 ; 2010 >
+      au < testing ; 2011 ; 16 ; Educação, Ciência e Cultura Volume 16 ; 2011 >
+      au < testing ; 2012 ; 17 ; Educação, Ciência e Cultura Volume 17 ; 2012 >
       au < expected ; 2013 ; 18 ; Educação, Ciência e Cultura Volume 18 ; 2013 >
 
   }
@@ -108,18 +108,18 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = interfaces
 
-      au < manifest ; 2001 ; 1 ; Interfaces Brasil/Canadá Volume 1 ; 2001 >
-      au < manifest ; 2002 ; 2 ; Interfaces Brasil/Canadá Volume 2 ; 2002 >
-      au < manifest ; 2003 ; 3 ; Interfaces Brasil/Canadá Volume 3 ; 2003 >
-      au < manifest ; 2004 ; 4 ; Interfaces Brasil/Canadá Volume 4 ; 2004 >
-      au < manifest ; 2005 ; 5 ; Interfaces Brasil/Canadá Volume 5 ; 2005 >
-      au < manifest ; 2006 ; 6 ; Interfaces Brasil/Canadá Volume 6 ; 2006 >
-      au < manifest ; 2007 ; 7 ; Interfaces Brasil/Canadá Volume 7 ; 2007 >
-      au < manifest ; 2008 ; 8 ; Interfaces Brasil/Canadá Volume 8 ; 2008 >
-      au < manifest ; 2009 ; 9 ; Interfaces Brasil/Canadá Volume 9 ; 2009 >
-      au < manifest ; 2010 ; 10 ; Interfaces Brasil/Canadá Volume 10 ; 2010 >
-      au < manifest ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 >
-      au < manifest ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 >
+      au < testing ; 2001 ; 1 ; Interfaces Brasil/Canadá Volume 1 ; 2001 >
+      au < testing ; 2002 ; 2 ; Interfaces Brasil/Canadá Volume 2 ; 2002 >
+      au < testing ; 2003 ; 3 ; Interfaces Brasil/Canadá Volume 3 ; 2003 >
+      au < testing ; 2004 ; 4 ; Interfaces Brasil/Canadá Volume 4 ; 2004 >
+      au < testing ; 2005 ; 5 ; Interfaces Brasil/Canadá Volume 5 ; 2005 >
+      au < testing ; 2006 ; 6 ; Interfaces Brasil/Canadá Volume 6 ; 2006 >
+      au < testing ; 2007 ; 7 ; Interfaces Brasil/Canadá Volume 7 ; 2007 >
+      au < testing ; 2008 ; 8 ; Interfaces Brasil/Canadá Volume 8 ; 2008 >
+      au < testing ; 2009 ; 9 ; Interfaces Brasil/Canadá Volume 9 ; 2009 >
+      au < testing ; 2010 ; 10 ; Interfaces Brasil/Canadá Volume 10 ; 2010 >
+      au < testing ; 2011 ; 11 ; Interfaces Brasil/Canadá Volume 11 ; 2011 >
+      au < testing ; 2012 ; 12 ; Interfaces Brasil/Canadá Volume 12 ; 2012 >
       au < expected ; 2013 ; 13 ; Interfaces Brasil/Canadá Volume 13 ; 2013 >
 
   }
@@ -135,12 +135,12 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Mouseion
 
-      au < manifest ; 2007 ; 1-2 ; Mouseion Volume 1-2 ; 2007 >
-      au < manifest ; 2008 ; 3-4 ; Mouseion Volume 3-4 ; 2008 >
-      au < manifest ; 2009 ; 5-6 ; Mouseion Volume 5-6 ; 2009 >
-      au < manifest ; 2010 ; 7-8 ; Mouseion Volume 7-8 ; 2010 >
-      au < manifest ; 2011 ; 9-10 ; Mouseion Volume 9-10 ; 2011 >
-      au < manifest ; 2012 ; 11-13 ; Mouseion Volume 11-13 ; 2012 >
+      au < testing ; 2007 ; 1-2 ; Mouseion Volume 1-2 ; 2007 >
+      au < testing ; 2008 ; 3-4 ; Mouseion Volume 3-4 ; 2008 >
+      au < testing ; 2009 ; 5-6 ; Mouseion Volume 5-6 ; 2009 >
+      au < testing ; 2010 ; 7-8 ; Mouseion Volume 7-8 ; 2010 >
+      au < testing ; 2011 ; 9-10 ; Mouseion Volume 9-10 ; 2011 >
+      au < testing ; 2012 ; 11-13 ; Mouseion Volume 11-13 ; 2012 >
       au < expected ; 2013 ; 14 ; Mouseion Volume 14 ; 2013 >
 
   }
@@ -156,12 +156,12 @@
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Rbca
 
-      au < manifest ; 2007 ; 1 ; Revista de Ciências Ambientais Volume 1 ; 2007 >
-      au < manifest ; 2008 ; 2 ; Revista de Ciências Ambientais Volume 2 ; 2008 >
-      au < manifest ; 2009 ; 3 ; Revista de Ciências Ambientais Volume 3 ; 2009 >
-      au < manifest ; 2010 ; 4 ; Revista de Ciências Ambientais Volume 4 ; 2010 >
-      au < manifest ; 2011 ; 5 ; Revista de Ciências Ambientais Volume 5 ; 2011 >
-      au < manifest ; 2012 ; 6 ; Revista de Ciências Ambientais Volume 6 ; 2012 >
+      au < testing ; 2007 ; 1 ; Revista de Ciências Ambientais Volume 1 ; 2007 >
+      au < testing ; 2008 ; 2 ; Revista de Ciências Ambientais Volume 2 ; 2008 >
+      au < testing ; 2009 ; 3 ; Revista de Ciências Ambientais Volume 3 ; 2009 >
+      au < testing ; 2010 ; 4 ; Revista de Ciências Ambientais Volume 4 ; 2010 >
+      au < testing ; 2011 ; 5 ; Revista de Ciências Ambientais Volume 5 ; 2011 >
+      au < testing ; 2012 ; 6 ; Revista de Ciências Ambientais Volume 6 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista de Ciências Ambientais Volume 7 ; 2013 >
 
   }
