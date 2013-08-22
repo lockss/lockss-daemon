@@ -9,10 +9,7 @@
     
   >
   
-  comment[plugin] = Do not change plugin till crawling AUs have been deleted from ingest machines.
-  comment[delete] = Cannot delete till ingest1 is back up.
-
-  plugin = org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificPlugin
+  plugin = org.lockss.plugin.atypon.ammonsscientific.ClockssAmmonsScientificPlugin
   param[base_url] = http://www.amsciepub.com/
   implicit < status ;  status2 ; year ; name ; param[volume_name] >
   
@@ -25,7 +22,7 @@
     
     param[journal_abbr] = cp
  
-    au < crawling ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
 
   }
@@ -39,7 +36,7 @@
     
     param[journal_abbr] = it
  
-    au < crawling ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
+    au < manifest ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 >
 
   }
@@ -160,11 +157,11 @@
     au < manifest ; exists ; 2009 ; Psychological Reports Volume 105 ; 105 >
     au < manifest ; exists ; 2010 ; Psychological Reports Volume 106 ; 106 >
     au < manifest ; exists ; 2010 ; Psychological Reports Volume 107 ; 107 >
-    au < crawling ; exists ; 2011 ; Psychological Reports Volume 108 ; 108 >
-    au < crawling ; exists ; 2011 ; Psychological Reports Volume 109 ; 109 >
-    au < crawling ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 >
-    au < crawling ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 >
-    au < crawling ; exists ; 2013 ; Pyschological Reports Volume 112 ; 112 >
+    au < manifest ; exists ; 2011 ; Psychological Reports Volume 108 ; 108 >
+    au < manifest ; exists ; 2011 ; Psychological Reports Volume 109 ; 109 >
+    au < manifest ; exists ; 2012 ; Psychological Reports Volume 110 ; 110 >
+    au < manifest ; exists ; 2012 ; Psychological Reports Volume 111 ; 111 >
+    au < manifest ; exists ; 2013 ; Pyschological Reports Volume 112 ; 112 >
     
     
   }
@@ -289,9 +286,9 @@
     au < manifest ; exists ; 2009 ; Perceptual and Motor Skills Volume 109 ; 109 >
     au < manifest ; exists ; 2010 ; Perceptual and Motor Skills Volume 110 ; 110 >
     au < manifest ; exists ; 2010 ; Perceptual and Motor Skills Volume 111 ; 111 >
-    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 >
-    au < crawling ; exists ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 >
-    au < crawling ; exists ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 >
+    au < manifest ; exists ; 2011 ; Perceptual and Motor Skills Volume 112 ; 112 >
+    au < manifest ; exists ; 2011 ; Perceptual and Motor Skills Volume 113 ; 113 >
+    au < manifest ; exists ; 2012 ; Perceptual and Motor Skills Volume 114 ; 114 >
     au < expected ; exists ; 2013 ; Perceptual and Motor Skills Volume 115 ; 115 >
   }
 }
