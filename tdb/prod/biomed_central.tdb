@@ -3483,7 +3483,7 @@
 
       au < released ; 2010 ; Genome Integrity Volume 1 ; 1 >
       au < released ; 2011 ; Genome Integrity Volume 2 ; 2 >
-      au < manifest ; 2012 ; Genome Integrity Volume 3 ; 3 >
+      au < testing ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < manifest ; 2013 ; Genome Integrity Volume 4 ; 4 >
       
     }
@@ -3516,7 +3516,7 @@
       param[base_url] = http://www.gigasciencejournal.com/
       param[journal_issn] = 2047-217X
 
-      au < manifest ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < testing ; 2012 ; GigaScience Volume 1 ; 1 >
       au < manifest ; 2013 ; GigaScience Volume 2 ; 2 >
 
     }
