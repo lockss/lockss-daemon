@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.37 2012-11-13 22:49:40 alexandraohlson Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.38 2013-08-23 03:34:01 etenbrink Exp $
  */
 
 /*
@@ -159,6 +159,11 @@ public class SimulatedContentGenerator {
    * file-types.
    */
   public static final int FILE_TYPE_XML = 32;
+  /**
+   * File-type value for XML files.  Independent bitwise from the other
+   * file-types.
+   */
+  public static final int FILE_TYPE_XHTML = 64;
 
   // how deep the tree extends
   private int treeDepth = 4;
@@ -546,6 +551,9 @@ public class SimulatedContentGenerator {
     if ((getFileTypes() & FILE_TYPE_XML) > 0) {
       createXmlFile(parentDir, fileNum, depth, branchNum, isAbnormal);
     }
+    if ((getFileTypes() & FILE_TYPE_XHTML) > 0) {
+      createXhtmlFile(parentDir, fileNum, depth, branchNum, isAbnormal);
+    }
   }
 
   private void createTxtFile(File parentDir, int fileNum, int depth,
@@ -588,9 +596,25 @@ public class SimulatedContentGenerator {
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
-      logger.debug3("Creating HTML file at " + file.getAbsolutePath());
+      logger.debug3("Creating XML file at " + file.getAbsolutePath());
       String file_content = getXmlFileContent(filename, fileNum, depth,
 					       branchNum, isAbnormal);
+      pw.print(file_content);
+      pw.flush();
+      pw.close();
+      fos.close();
+    } catch (Exception e) { System.err.println(e); }
+  }
+  private void createXhtmlFile(File parentDir, int fileNum, int depth,
+      int branchNum, boolean isAbnormal) {
+    try {
+      String filename = getFileName(fileNum, FILE_TYPE_XHTML);
+      File file = new File(parentDir, filename);
+      FileOutputStream fos = new FileOutputStream(file);
+      PrintWriter pw = new PrintWriter(fos);
+      logger.debug3("Creating XHTML file at " + file.getAbsolutePath());
+      String file_content = getHtmlFileContent(filename, fileNum, depth,
+          branchNum, isAbnormal);
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -878,6 +902,9 @@ public class SimulatedContentGenerator {
       if (isSpringer) {
 	fileName.append(".Meta");
       }
+      break;
+    case FILE_TYPE_XHTML:
+      fileName.append( ".xhtml");
       break;
     }
     return fileName.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.28 2009-10-26 13:51:45 dshr Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.29 2013-08-23 03:34:01 etenbrink Exp $
  */
 
 /*
@@ -165,6 +165,9 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     expectedStr = "016" + SimulatedContentGenerator.FILE_PREFIX + ".xml";
     assertEquals(expectedStr, scgen.getFileName(16,
         SimulatedContentGenerator.FILE_TYPE_XML));
+    expectedStr = "017" + SimulatedContentGenerator.FILE_PREFIX + ".xhtml";
+    assertEquals(expectedStr, scgen.getFileName(17,
+        SimulatedContentGenerator.FILE_TYPE_XHTML));
 
     // Test with maxFilenameLength set.
 
