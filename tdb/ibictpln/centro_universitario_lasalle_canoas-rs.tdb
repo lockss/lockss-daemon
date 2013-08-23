@@ -134,10 +134,11 @@
       comment[publisher] = Centro Universitário Lasalle Canoas-RS
       param[base_url] = http://www.revistas.unilasalle.edu.br/
       param[journal_id] = Mouseion
+      comment[notReady] = appears to be TOC only
 
-      au < testing ; 2007 ; 1-2 ; Mouseion Volume 1-2 ; 2007 >
-      au < testing ; 2008 ; 3-4 ; Mouseion Volume 3-4 ; 2008 >
-      au < testing ; 2009 ; 5-6 ; Mouseion Volume 5-6 ; 2009 >
+      au < notReady ; 2007 ; 1-2 ; Mouseion Volume 1-2 ; 2007 >
+      au < notReady ; 2008 ; 3-4 ; Mouseion Volume 3-4 ; 2008 >
+      au < notReady ; 2009 ; 5-6 ; Mouseion Volume 5-6 ; 2009 >
       au < ready ; 2010 ; 7-8 ; Mouseion Volume 7-8 ; 2010 >
       au < ready ; 2011 ; 9-10 ; Mouseion Volume 9-10 ; 2011 >
       au < ready ; 2012 ; 11-13 ; Mouseion Volume 11-13 ; 2012 >
