@@ -5,7 +5,7 @@
     comment[0] = back content only or no access to content for five most recent years
   >
 
-    plugin = org/lockss/plugin/mathematicalsciencespublishers/MathematicalSciencesPublishersPlugin
+    plugin = org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin
     param[base_url] = http://msp.org/
     implicit < status ; year ; name ; param[year] >
 
