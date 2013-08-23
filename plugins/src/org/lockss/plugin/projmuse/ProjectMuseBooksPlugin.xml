@@ -1,0 +1,122 @@
+ <map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - audrey </string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.56.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Project MUSE Books Plugin, Base URL %s, eisbn %s", base_url, eisbn13</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Project MUSE Books Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- basically picks up anything under the book eisbn, but some
+         book cover jpgs can be outside the eisbn/* umbrella and are
+         currently ignored.
+      -->
+    <list>
+      <string>1,"%sbooks/%s/*", base_url, eisbn13</string>
+      <string>1,"%stemplate[\d]{4}/", base_url</string>
+      <string>1,"%scgi-bin/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sbooks/lockss_books.html", base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sbooks/%s", base_url, eisbn13</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%sbooks/%s/%s-[\d]+.pdf", base_url, eisbn13, eisbn13</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>"%sbooks/%s", base_url, eisbn13</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>"%sbooks/%s", base_url, eisbn13</string>
+    </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>eisbn13</key>
+        <displayName>eISBN13</displayName>
+        <description>electronic ISBN 13</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+  </entry>
+</map>
