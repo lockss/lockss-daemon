@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghHtmlMetadataExtractorFactory.java,v 1.2 2012-11-26 19:02:12 alexandraohlson Exp $
+ * $Id: EdinburghHtmlMetadataExtractorFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -41,52 +41,29 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
 
 
 public class EdinburghHtmlMetadataExtractorFactory 
-  implements FileMetadataExtractorFactory {
+  extends BaseAtyponHtmlMetadataExtractorFactory {
   static Logger log = Logger.getLogger("EdinburghHtmlMetadataExtractorFactory");
 
-  public FileMetadataExtractor 
-    createFileMetadataExtractor(MetadataTarget target, String contentType)
+  @Override
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException {
     return new EdinburghHtmlMetadataExtractor();
   }
 
   public static class EdinburghHtmlMetadataExtractor 
-    implements FileMetadataExtractor {
-
-    // Map Google Scholar HTML meta tag names to cooked metadata fields
-    private static MultiMap tagMap = new MultiValueMap();
-    static {
-      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
-      tagMap.put("dc.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
-      
-      tagMap.put("dc.Date", MetadataField.FIELD_DATE);
-      tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
-      
-      tagMap.put("dc.Creator",
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(";")));
-      tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
-      
-      tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("dc.Title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("dc.Rights", MetadataField.DC_FIELD_RIGHTS);
-      tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);
-      tagMap.put("dc.Format", MetadataField.DC_FIELD_FORMAT);
-      tagMap.put("dc.Source",MetadataField.DC_FIELD_SOURCE);
-      tagMap.put("dc.Language", MetadataField.DC_FIELD_LANGUAGE);
-      tagMap.put("dc.Coverage",MetadataField.DC_FIELD_COVERAGE);
-    }
+    extends BaseAtyponHtmlMetadataExtractor {
     
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
+      // extract but do some more processing before emitting
       ArticleMetadata am = 
-        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);
+          new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
+      am.cook(getTagMap()); //parent set the tagMap
       
       // publisher name does not appear anywhere on the page in this form
       am.put(MetadataField.FIELD_PUBLISHER, "Edinburgh University Press");

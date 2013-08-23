@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.4 2013-08-09 19:07:46 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -69,8 +69,8 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       tagMap.put("dc.Date", MetadataField.DC_FIELD_DATE);
       
       tagMap.put("dc.Creator",
-                 new MetadataField(MetadataField.FIELD_AUTHOR,
-                                   MetadataField.splitAt(";")));
+          new MetadataField(MetadataField.FIELD_AUTHOR,
+              MetadataField.splitAt(";")));
       tagMap.put("dc.Creator", MetadataField.DC_FIELD_CREATOR);
       
       tagMap.put("dc.Title", MetadataField.FIELD_ARTICLE_TITLE);
@@ -78,6 +78,11 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       
       tagMap.put("dc.Publisher", MetadataField.DC_FIELD_PUBLISHER);
       tagMap.put("dc.Publisher", MetadataField.FIELD_PUBLISHER);
+      
+      tagMap.put("dc.Subject", MetadataField.DC_FIELD_SUBJECT);
+      tagMap.put("dc.Subject", 
+          new MetadataField(MetadataField.FIELD_KEYWORDS,
+              MetadataField.splitAt(";")));
       
       tagMap.put("dc.Description", MetadataField.DC_FIELD_DESCRIPTION);
       tagMap.put("dc.Type", MetadataField.DC_FIELD_TYPE);      
@@ -143,6 +148,10 @@ public class BaseAtyponHtmlMetadataExtractorFactory
       }
  
       emitter.emitMetadata(cu, am);
+    }
+    
+    protected MultiMap getTagMap() {
+      return tagMap;
     }
   }
 }

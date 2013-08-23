@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.3 2013-07-31 21:43:58 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.4 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -33,8 +33,9 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 
-/* This URL normalizer is vanilla for those children that don't do citation download
- * 
+/*
+ * Removes cookiset and handles cleanup of the citation download URLs
+ * probably sufficient as is for most Atypon children 
  */
 public class BaseAtyponUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
@@ -55,8 +56,17 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
 
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
+    
+    // This originated in T&F, BioOne and BloomsburyQ but useful to avoid malformed URLs
+    // Turn any mid-URL double slashes in to single slashes
+    int ind = url.indexOf("://");
+    if (ind >= 0) {
+      ind = url.indexOf("//", ind + 3);
+      if (ind >= 0) {
+        url = url.substring(0, ind) + url.substring(ind + 1);
+      }
+    }
 
-    //log.setLevel("debug3");
     // Only do this normalization for correctly formatted form downloaded citation URLs
     int qmark = url.indexOf("?");
     if (url.contains(CITATION_DOWNLOAD_URL) && (url.contains(DOI_ARG + "=")) && (qmark >= 0)) {
@@ -107,6 +117,7 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
       log.debug3("normalized citation download url: " + new_url);
       return new_url.toString();
     }
+    
     // this wasn't a citation download URL (or it had malformed arguments so we can't normalize)
     return StringUtils.chomp(url, SUFFIX); /* standard non citation download specific URLS */
   }

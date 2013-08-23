@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: AIAAHtmlCrawlFilterFactory.java,v 1.3 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -34,10 +34,7 @@ package org.lockss.plugin.atypon.aiaa;
 
 import java.io.InputStream;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 

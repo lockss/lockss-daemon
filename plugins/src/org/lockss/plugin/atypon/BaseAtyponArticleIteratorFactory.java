@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.4 2013-08-15 19:25:27 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -98,11 +98,28 @@ implements ArticleIteratorFactory,
     builder.setSpec(target,
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    // The orer in which these aspects are added is important. They determine which will trigger
+    // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
+    // lower aspects aren't looked for, once you get a match.
 
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(PDF_PATTERN,
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up PDFPLUS to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(PDFPLUS_PATTERN,
+        PDFPLUS_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE); //hmmm... only want this one to be this if pdf doesn't exist
+    /* ArticleFiles.ROLE_FULL_TEXT_PDFPLUS); */ // this should be ROLE_PDFPLUS when it's defined
+    
+    // set up full text html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(HTML_PATTERN,
+        HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
+
 
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a FULL_TEXT_CU until this is deprecated
@@ -111,18 +128,6 @@ implements ArticleIteratorFactory,
         ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
-
-    // set up full text html to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(HTML_PATTERN,
-        HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA); // use for metadata if abstract doesn't exist
-
-    // set up PDFPLUS to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(PDFPLUS_PATTERN,
-        PDFPLUS_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE); //hmmm... only want this one to be this if pdf doesn't exist
-    /* ArticleFiles.ROLE_FULL_TEXT_PDFPLUS); */ // this should be ROLE_PDFPLUS when it's defined
 
     // set a role, but it isn't sufficient to trigger an ArticleFiles
     builder.addAspect(REFERENCES_REPLACEMENT,
@@ -142,6 +147,12 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_FULL_TEXT_PDF,
     ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);  // this should be ROLE_PDFPLUS when it's defined
 
+    // The order in which we want to define what a PDF is 
+    // if we only have PDFPLUS, that should become a FULL_TEXT_PDF
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+    ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE); // this should be ROLE_PDFPLUS when it's defined
+    
     // set the ROLE_ARTICLE_METADATA to the first one that exists 
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_CITATION_RIS,

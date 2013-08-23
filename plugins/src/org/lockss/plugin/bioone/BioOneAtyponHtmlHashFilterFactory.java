@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.3 2011-12-14 02:04:56 thib_gc Exp $
+ * $Id: BioOneAtyponHtmlHashFilterFactory.java,v 1.4 2013-08-23 20:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -65,9 +65,23 @@ public class BioOneAtyponHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
         // Contains reverse citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "titleTools"),
         /*
          * Hash filter
          */
+        //implementing maximal filtering concept - leaving in legacy filters for safety
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mainFooter"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "goog-gt-tt"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "contentNav"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "contentSidebar"),
+        new TagNameFilter("script"), //javascript
+        HtmlNodeFilters.commentWithRegex(".*"), //comments
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"), //stylesheets
+        HtmlNodeFilters.tagWithAttribute("img", "class", "accessIcon"), //free or restricted   
+        HtmlNodeFilters.tagWithAttribute("div", "class", "gWidgetContainer"), //google widget stuff
+        
         // Contains site-specific SFX code
         new TagNameFilter("script"),
         // Contains recent impact factors and journal rankings

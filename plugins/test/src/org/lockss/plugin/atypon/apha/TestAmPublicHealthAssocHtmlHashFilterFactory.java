@@ -1,5 +1,5 @@
 /*
- * $Id: TestAmPublicHealthAssocHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: TestAmPublicHealthAssocHtmlHashFilterFactory.java,v 1.2 2013-08-23 20:20:42 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -45,30 +45,6 @@ public class TestAmPublicHealthAssocHtmlHashFilterFactory extends LockssTestCase
     mau = new MockArchivalUnit();
   }
   
-  private static final String topBannerHtml =
-      "<start><div id=\"identity-bar\">" +
-          "    <div class=\"headerAd\">" +
-          "        <!-- placeholder id=null, description=Header - Mobile Button -->" +
-          "    </div>" +
-          "        <div class=\"headerAd\">" +
-          "            <!-- placeholder id=null, description=Home Banner Ad --><!-- Begin EHS Head Tag -->" +
-          "<center><script type=\"text/javascript\">" +
-          "var ehs_site=\"ehs.pro.apha.ajph\";" +
-          "var ehs_zone=\"\";" +
-          "// DO NOT CHANGE ANYTHING BELOW" +
-          "var ehs_protocol=(document.location.protocol==\"https:\") ? \"https://\" : \"http://\";" +
-          "var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/tag/';" +
-          "document.write('<scr'+'ipt type=\"text/javascript\" src=\"'+ehs_tagsrc+'\"></scr'+'ipt>');" +
-          "</script><br></center>" +
-          "<!-- End EHS Body Tag -->" +
-          "</div>" +
-          "<span id=\"institution-banner-text\"><span class=\"institutionBannerText\">STANFORD UNIV MED CTR</span> </span>" +
-          "    <span id=\"individual-menu\">" +
-          "    </span>" +
-          "</div><end>";
-
-  private static final String topBannerHtmlFiltered =
-      "<start><end>";
   
   private static final String footerHtml =
       "<start><div id=\"footer\">" +
@@ -89,50 +65,7 @@ public class TestAmPublicHealthAssocHtmlHashFilterFactory extends LockssTestCase
       "<start></div>" +
           "</body><end>";
   
-  private static final String journalInfoHtml =
-      "<start><div class=\"panel panel_228\"  id=\"journalNavPanel\">" +
-          "   <div class=\"panelTopLeft\"></div>" +
-          "    <div class=\"panelTopMiddle panel_228_width\">" +
-          "        <h3>Volume 102, Issue 12 (December 2012)</h3>" +
-          "    </div>" +
-          "    <div class=\"panelTopRight\"></div>" +
-          "    <div class=\"panelBody panel_228_pad\">" +
-          "            <div id=\"nextprev\">" +
-          "            </div><br/>" +
-          "        <div id=\"smallIssueCover\">" +
-          "            <a href=\"/loi/ajph\">" +
-          "                <img src=\"/na101/blah.cover.jpg\" /><br/>" +
-          "            </a>" +
-          "        </div><br/>" +
-          "        <a href=\"http://ajph.aphapublications.org/toc/ajph/103/5\" id=\"linklargeStyle\">Current Issue</a><br/>" +
-          "        <a href=\"/loi/ajph\" id=\"linklargeStyle\">Available Issues</a><br/>" +
-          "        <a href=\"http://ajph.aphapublications.org/toc/ajph/0/0\">" +
-          "          First Look" +
-          "        </a>" +
-          "   </div>" +
-          "</div>" +
-          "<div class=\"panel panel_228\"  id=\"journalInfoPanel\">" +
-          "    <div class=\"panelTopLeft\"></div>" +
-          "    <div class=\"panelTopMiddle panel_228_width\">" +
-          "        <h3>Journal Information</h3>" +
-          "    </div>" +
-          "    <div class=\"panelTopRight\"></div>" +
-          "    <div class=\"panelBody panel_228_pad\">" +
-          "    <p style=\"text-align: center;\">LOTS OF INFO<br />" +
-          "    </div>" +
-          "</div><end>";
-
-  private static final String journalInfoHtmlFiltered =
-      "<start><end>";
   
-  public void test_topBannerHtml() throws Exception {
-    InputStream actIn = filt.createFilteredInputStream(mau,
-        new StringInputStream(topBannerHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(topBannerHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
   public void test_footerHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(footerHtml),
@@ -141,12 +74,5 @@ public class TestAmPublicHealthAssocHtmlHashFilterFactory extends LockssTestCase
     assertEquals(footerHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
 
-  public void test_journalInfoHtml() throws Exception {
-    InputStream actIn = filt.createFilteredInputStream(mau,
-        new StringInputStream(journalInfoHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(journalInfoHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
 
 }

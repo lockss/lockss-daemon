@@ -1,4 +1,4 @@
-/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+/* $Id: SiamHtmlCrawlFilterFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -55,8 +55,6 @@ public class SiamHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
   NodeFilter[] filters = new NodeFilter[] {
       // tracks articles previously viewed
       HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
-      // area with links to articles that cite this one
-      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
       //  articles that were references for this article
       HtmlNodeFilters.tagWithAttribute("div",  "class", "abstractReferences"),
   };

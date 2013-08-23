@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisUrlNormalizer.java,v 1.3 2013-08-13 21:39:26 alexandraohlson Exp $
+ * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.1 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,30 +30,21 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.taylorandfrancis;
+package org.lockss.plugin.atypon.apha;
+
+import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
-import org.lockss.util.Logger;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
+public class AmPublicHealthAssocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
-public class TaylorAndFrancisUrlNormalizer extends BaseAtyponUrlNormalizer {
-  
-  protected static Logger log = 
-      Logger.getLogger("TaylorAndFrancisUrlNormalizer"); 
-      
-  @Override
-  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
-    // Normalize double-slash
-    int ind = url.indexOf("://");
-    if (ind >= 0) {
-      ind = url.indexOf("//", ind + 3);
-      if (ind >= 0) {
-        url = url.substring(0, ind) + url.substring(ind + 1);
-      }
-    }
-    return super.normalizeUrl(url, au);
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    return super.createFilteredInputStream(au, in, encoding);
   }
 
 }

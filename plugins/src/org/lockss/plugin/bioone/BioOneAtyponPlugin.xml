@@ -8,73 +8,31 @@
     <string>org.lockss.plugin.bioone.BioOneAtyponPlugin</string>
   </entry>
   <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>  
+  <entry>
     <string>plugin_name</string>
     <string>BioOne Plugin (Atypon Systems Platform)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
+  </entry>
+<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.56.0</string>
-  </entry>
-  <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Poll</string>
-	<string>5</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-	<string>1</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
-  </entry>
+    <string>plugin_parent_version</string>
+    <string>7</string>
+  </entry>   
   <entry>
     <string>au_name</string>
     <string>"BioOne Plugin (Atypon Systems Platform), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
-  </entry>
+<!--  This needs to be in the child because of the special case for the 'coas' journal -->  
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -109,22 +67,8 @@
         </map>
       </entry>
     </map>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>4,"^https?://%s/", base_url_host</string>
-      <string>1,"^%stoc/%s/%s($|/)", base_url, journal_id, volume_name</string>
-      <string>2,"^%sdoi/[^/]+/[^/]+/[-.9]+$", base_url</string>
-      <string>2,"^%saction/showFullPopup\?doi=.*&amp;id=$", base_url</string>
-      <string>1,"^%s(action/showFullPopup\?doi=|doi/)", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.bioone.BioOneAtyponUrlNormalizer</string>
-  </entry>
+  </entry>  
+<!--  the pdf filter, article iterator, link extractor, & metadata extractor come from BaseAtypon inheritance -->  
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bioone.BioOneAtyponHtmlHashFilterFactory</string>
@@ -134,25 +78,7 @@
     <string>org.lockss.plugin.bioone.BioOneAtyponHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.bioone.BioOneAtyponPdfFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>"^%sdoi/(full|pdf)/", base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
-  </entry>
-  <entry>
-    <string>plugin_au_config_user_msg</string>
-    <string>&quot;Atypon Systems host this BioOne archival unit (AU) and require that you &lt;a href=&apos;http://www.bioone.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional BioOne account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the BioOne site. You only need to register the IP address of your LOCKSS box once for all BioOne AUs.&quot;</string>
-  </entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bioone.BioOneAtyponUrlNormalizer</string>
+  </entry>  
 </map>

@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.1 2013-07-31 21:43:57 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.2 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -33,51 +33,32 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.aiaa;
 
 import java.io.InputStream;
-import java.io.Reader;
-
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class AIAAHtmlHashFilterFactory implements FilterFactory {
+public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Variable identifiers - institution doing the crawl
-        new TagNameFilter("script"),
-        // Contains name and logo of institution
-        HtmlNodeFilters.tagWithAttribute("div", "class", "institutionBanner"),
-        // Contains shopping cart, login button
-        HtmlNodeFilters.tagWithAttribute("div", "class", "loginIdentity"),
-        // Contains the current year
-        HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
+      InputStream in,
+      String encoding) {
+    NodeFilter[] afilters = new NodeFilter[] {
+ 
         // Contains the changeable list of citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
-        // Contains link to current issue which changes over time
-        HtmlNodeFilters.tagWithAttribute("div", "class", "issueNavigator"),
-        // Contains subscription info/pricing which may change over time
-        HtmlNodeFilters.tagWithAttribute("div", "class", "product"),
+        // the entire left column which can have browseVolumes, browsing history, tools, etc
+        HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),
+        // not necessarily used, but we wouldn't want an ad
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "mainAd"),
+        
     };
-    InputStream filtered = new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    Reader filteredReader = FilterUtil.getReader(filtered,encoding);
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(   
-            new TagPair("<!--", "-->")
-            ));   
-    return new ReaderInputStream(tagFilter);
+    // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, afilters);
+
   }
 
 }

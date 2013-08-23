@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisUrlNormalizer.java,v 1.2 2013-08-13 21:39:26 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisUrlNormalizer.java,v 1.3 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -33,12 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.taylorandfrancis;
 
 import org.lockss.plugin.UrlNormalizer;
+import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 import org.lockss.test.LockssTestCase;
 
 public class TestTaylorAndFrancisUrlNormalizer extends LockssTestCase {
 
   public void testNormalizeUrl() throws Exception {
-    UrlNormalizer normalizer = new TaylorAndFrancisUrlNormalizer();
+    //UrlNormalizer normalizer = new TaylorAndFrancisUrlNormalizer();
+    UrlNormalizer normalizer = new BaseAtyponUrlNormalizer();
     // No change expected
     assertEquals("http://www.example.com/foo",
                  normalizer.normalizeUrl("http://www.example.com/foo", null));

@@ -1,5 +1,5 @@
 /*
- * $Id: AmPublicHealthAssocHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+ * $Id: AmPublicHealthAssocHtmlHashFilterFactory.java,v 1.2 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -39,25 +39,23 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class AmPublicHealthAssocHtmlHashFilterFactory implements FilterFactory {
+public class AmPublicHealthAssocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Variable identifiers - institution doing the crawl
-        new TagNameFilter("script"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "journalInfoPanel"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "journalNavPanel"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "identity-bar"),
+                                               String encoding) {
+    NodeFilter[] aphafilters = new NodeFilter[] {
+        // the rest is covered by parent
+        HtmlNodeFilters.tagWithAttribute("div", "id", "leftColumn"),
     };
     
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, aphafilters);
 
   }
 

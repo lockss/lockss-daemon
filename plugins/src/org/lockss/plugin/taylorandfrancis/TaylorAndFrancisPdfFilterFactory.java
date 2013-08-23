@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.4 2012-11-20 01:16:29 thib_gc Exp $
+ * $Id: TaylorAndFrancisPdfFilterFactory.java,v 1.5 2013-08-23 20:20:41 alexandraohlson Exp $
  */
 
 /*
@@ -32,23 +32,22 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory;
 
-public class TaylorAndFrancisPdfFilterFactory extends SimplePdfFilterFactory {
+public class TaylorAndFrancisPdfFilterFactory extends BaseAtyponPdfFilterFactory {
 
   public TaylorAndFrancisPdfFilterFactory() {
     super();
   }
   
+  // Do what BaseAtypon does, plus one additional transformation
   @Override
   public void transform(ArchivalUnit au,
                         PdfDocument pdfDocument)
       throws PdfException {
-    pdfDocument.unsetCreationDate();
-    pdfDocument.unsetModificationDate();
-    PdfUtil.normalizeTrailerId(pdfDocument);
+    super.transform(au, pdfDocument);
     PdfUtil.normalizePageTokenStreams(pdfDocument);
   }
   

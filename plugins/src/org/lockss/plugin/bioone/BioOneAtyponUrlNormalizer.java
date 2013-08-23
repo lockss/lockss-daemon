@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponUrlNormalizer.java,v 1.4 2013-02-19 18:53:32 janicecheng Exp $
+ * $Id: BioOneAtyponUrlNormalizer.java,v 1.5 2013-08-23 20:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -35,14 +35,19 @@ package org.lockss.plugin.bioone;
 import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+import org.lockss.util.Logger;
 
 
-public class BioOneAtyponUrlNormalizer implements UrlNormalizer {
+public class BioOneAtyponUrlNormalizer extends BaseAtyponUrlNormalizer {
 
   protected static final String[] endings = new String[] {
     "?cookieSet=1",
     "?prevSearch=",
   };
+  
+  protected static Logger log = 
+      Logger.getLogger("BioOneAtyponUrlNormalizer");
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
@@ -63,16 +68,8 @@ public class BioOneAtyponUrlNormalizer implements UrlNormalizer {
     	url = url.substring(0, ind);
     }
 
-    // Normalize double-slash
-    ind = url.indexOf("://");
-    if (ind >= 0) {
-      ind = url.indexOf("//", ind + 3);
-      if (ind >= 0) {
-        url = url.substring(0, ind) + url.substring(ind + 1);
-      }
-    }
-    
-    return url;
+    // call the parent to handle citation download URLs
+    return super.normalizeUrl(url, au);
   }
 
 }

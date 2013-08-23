@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressCrawlHtmlFilterFactory.java,v 1.3 2012-09-24 17:36:05 alexandraohlson Exp $
+ * $Id: EdinburghUniversityPressCrawlHtmlFilterFactory.java,v 1.4 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -39,24 +39,22 @@ import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
-public class EdinburghUniversityPressCrawlHtmlFilterFactory implements FilterFactory {
+public class EdinburghUniversityPressCrawlHtmlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
+    NodeFilter[] edFilters = new NodeFilter[] {
         // Contains logo of institution
         HtmlNodeFilters.tagWithAttribute("img", "id", "accessLogo"),
         // Contains "most downloaded articles" section
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
-        // Contains citations which can lead out to another volume or journal
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return super.createFilteredInputStream(au, in, encoding, edFilters);
   }
 
 }

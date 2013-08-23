@@ -8,147 +8,33 @@
     <string>org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.48.0</string>
-  </entry>
-  <entry>
     <string>plugin_version</string>
-    <string>24</string>
-  </entry>
-  <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Atypon</string>
-  </entry>
-  <entry>
-    <string>plugin_feature_version_map</string>
-    <map>
-      <entry>
-        <string>Poll</string>
-        <string>3</string>
-      </entry>
-      <entry>
-        <string>Metadata</string>
-        <string>1</string>
-      </entry>
-      <entry>
-        <string>Substance</string>
-        <string>3</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>&quot;Edinburgh University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Edinburgh University Press Plugin (CLOCKSS)</string>
+  </entry>  
+  <entry>
+    <string>au_name</string>
+    <string>"Edinburgh University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-    <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sclockss/%s/%s/index.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%stoc/%s(\.[0-9]+)?/%s(/[^/]+)?$&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$&quot;, base_url</string>
-      <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/&quot;, base_url</string>
-    </list>
-  </entry>
+    <string>plugin_parent_version</string>
+    <string>25</string>
+  </entry>  
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-  	  <entry>
-  	    <string>au_title</string>
-        <string>&quot;%sjournal/%s&quot;, base_url, journal_id</string>
-  	  </entry>
-  	  <entry>
-  	    <string>au_issue</string>
-        <string>&quot;%stoc/%s/%s/%s&quot;, base_url, journal_id, volume_name, issue</string>
-  	  </entry>
-	  <entry>
-	    <string>au_volume</string>
-    	<string>&quot;%sclockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
-	  </entry>
-  	</map>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressUrlNormalizer</string>
-  </entry>
-  <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
-  </entry>
-  <entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHashHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlFilterFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>au_substance_url_pattern</string>
-    <list>
-      <string>&quot;^%sdoi/(full|pdf|pdfplus)/&quot;, base_url</string>
-    </list>
-  </entry>
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*;DublinCore</string>
-        <string>org.lockss.plugin.edinburgh.EdinburghHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>plugin_config_props</string>
-    <list>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>journal_id</key>
-        <displayName>Journal Identifier</displayName>
-        <description>Identifier for journal (often used as part of file names)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url</key>
-        <displayName>Base URL</displayName>
-        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
-        <type>3</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>volume_name</key>
-        <displayName>Volume Name</displayName>
-        <type>1</type>
-        <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-    </list>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
   </entry>
   <entry>
     <string>clockss_override</string>

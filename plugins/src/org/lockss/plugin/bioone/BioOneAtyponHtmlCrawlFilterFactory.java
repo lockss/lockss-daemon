@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.2 2011-09-19 19:58:14 thib_gc Exp $
+ * $Id: BioOneAtyponHtmlCrawlFilterFactory.java,v 1.3 2013-08-23 20:20:39 alexandraohlson Exp $
  */
 
 /*
@@ -48,12 +48,18 @@ public class BioOneAtyponHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains most-read articles in the same journal (etc.)
-        HtmlNodeFilters.tagWithAttribute("div", "class", "relatedContent"),
-        // Contains related articles (etc.)
+
+        // Can exclude this entire item because we need the download citation links
+        //HtmlNodeFilters.tagWithAttribute("div", "class", "relatedContent"),
+        // instead we shall filter out the following components on an article page:
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "articleViews"),
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "Share"),
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "share"), //just in case
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticleSearch"),
-        // Contains reverse citations
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citingArticles"),
+        // and the following on a TOC page:
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "titleTools"),
+
         // Contains reverse citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };

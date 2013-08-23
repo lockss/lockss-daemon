@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.4 2012-11-26 19:02:12 alexandraohlson Exp $
+ * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
  */
 
 /*
@@ -35,34 +35,37 @@ package org.lockss.plugin.edinburgh;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 
-public class EdinburghUniversityPressHashHtmlFilterFactory implements FilterFactory {
+public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Variable identifiers
-        new TagNameFilter("script"),
+      InputStream in,
+      String encoding) {
+    NodeFilter[] edFilter = new NodeFilter[] {        
+        //Implementing maximal filtering - leave old stuff for safety though already be filtered in larger chunks
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "masthead"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mainNavContainer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "advSearchNavBottom"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "mainBreadCrumb"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "journalTitleContainer"),
+        
         // Contains name and logo of institution
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^institutionBanner"),
         // Current web site seems to do it this way...
         HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^institutionBanner"),
-        // Contains "most downloaded articles" section
+        // left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
-        // Contains the current year
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains the changeable list of citations
         HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, edFilter);
 
   }
 
