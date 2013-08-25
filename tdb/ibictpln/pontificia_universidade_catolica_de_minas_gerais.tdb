@@ -1,0 +1,466 @@
+{
+  publisher <
+    name = Pontifícia Universidade Católica de Minas Gerais
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Abakós ;
+        eissn = 2316-9451
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = abakos
+
+      au < exists ; 2012 ; 1 ; Abakós Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Abakós Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Arquitetura e Urbanismo ;
+        eissn = 2316-1752
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = Arquiteturaeurbanismo
+
+      au < exists ; 2003 ; 1 ; Cadernos de Arquitetura e Urbanismo Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Cadernos de Arquitetura e Urbanismo Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Cadernos de Arquitetura e Urbanismo Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Cadernos de Arquitetura e Urbanismo Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Cadernos de Arquitetura e Urbanismo Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Cadernos de Arquitetura e Urbanismo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Cadernos de Arquitetura e Urbanismo Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Cadernos de Arquitetura e Urbanismo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Cadernos de Arquitetura e Urbanismo Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 10 ; Cadernos de Arquitetura e Urbanismo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Cadernos de Arquitetura e Urbanismo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Arquivo Brasileiro de Odontologia ;
+        eissn = 2178-0595
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = Arquivobrasileiroodontologia
+
+      au < exists ; 2007 ; 1 ; Arquivo Brasileiro de Odontologia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Arquivo Brasileiro de Odontologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Arquivo Brasileiro de Odontologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Arquivo Brasileiro de Odontologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Arquivo Brasileiro de Odontologia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Arquivo Brasileiro de Odontologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Arquivo Brasileiro de Odontologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos CESPUC de Pesquisa ;
+        eissn = 1517-3917
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = cadernoscespuc
+
+      au < exists ; 2009 ; 1 ; Cadernos CESPUC de Pesquisa Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Cadernos CESPUC de Pesquisa Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 3 ; Cadernos CESPUC de Pesquisa Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Cadernos CESPUC de Pesquisa Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Cadernos CESPUC de Pesquisa Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de História ;
+        eissn = 2237-8871
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = cadernoshistoria
+
+      au < exists ; 1995 ; 1 ; Cadernos de História Volume 1995 ; 1995 >
+      au < exists ; 1997 ; 2 ; Cadernos de História Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; Cadernos de História Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; Cadernos de História Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; Cadernos de História Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; Cadernos de História Volume 2001 ; 2001 >
+      au < exists ; 2005 ; 7 ; Cadernos de História Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Cadernos de História Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Cadernos de História Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Cadernos de História Volume 2008 ; 2008 >
+      au < exists ; 2010 ; 11 ; Cadernos de História Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Cadernos de História Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Cadernos de História Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Cadernos de História Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Conjuntura Internacional ;
+        eissn = 1809-6182
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = conjuntura
+
+      au < exists ; 2012 ; 1 ; Conjuntura Internacional Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Conjuntura Internacional Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ContraPonto ;
+        eissn = 2237-9940
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = contraponto
+
+      au < exists ; 2011 ; 1 ; ContraPonto Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; ContraPonto Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; ContraPonto Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista da Faculdade Mineira de Direito ;
+        eissn = 1808-9429
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = Direito
+
+      au < exists ; 2009 ; 1 ; Revista da Faculdade Mineira de Direito Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista da Faculdade Mineira de Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista da Faculdade Mineira de Direito Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista da Faculdade Mineira de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista da Faculdade Mineira de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica do Curso de Direito ;
+        eissn = 2176-977X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = DireitoSerro
+
+      au < exists ; 2010 ; 1 ; Revista Eletrônica do Curso de Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica do Curso de Direito Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica do Curso de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica do Curso de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Dispositiva ;
+        eissn = 2237-9967
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = dispositiva
+
+      au < exists ; 2012 ; 1 ; Dispositiva Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Dispositiva Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Economia & Gestão ;
+        eissn = 1984-6606
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = economiaegestao
+
+      au < exists ; 2004 ; 1 ; Revista Economia & Gestão Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista Economia & Gestão Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista Economia & Gestão Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista Economia & Gestão Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista Economia & Gestão Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista Economia & Gestão Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista Economia & Gestão Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista Economia & Gestão Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista Economia & Gestão Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Revista Economia & Gestão Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Enfermagem Revista ;
+        eissn = 2238-7218
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = enfermagemrevista
+
+      au < exists ; 2012 ; 1 ; Enfermagem Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Enfermagem Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos Internacionais: Revista de Relações Internacionais da PUC Minas ;
+        eissn = 2317-773X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = estudosinternacionais
+
+      au < expected ; 2013 ; 1 ; Estudos Internacionais: Revista de Relações Internacionais da PUC Minas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Fronteira: Revista de Iniciação Científica em Relações Internacionais ;
+        eissn = 1679-5377
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = fronteira
+
+      au < exists ; 2001 ; 1 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 11 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 12 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Caderno de Geografia ;
+        eissn = 0103-8427
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = geografia
+
+      au < exists ; 2007 ; 1 ; Caderno de Geografia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Caderno de Geografia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Caderno de Geografia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Caderno de Geografia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Caderno de Geografia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Caderno de Geografia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Caderno de Geografia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História em Curso ;
+        eissn = 2178-1044
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = historiaemcurso
+
+      au < exists ; 2009 ; 1 ; História em Curso Volume 2009 ; 2009 >
+      au < exists ; 2012 ; 2 ; História em Curso Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; História em Curso Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Horizonte ;
+        eissn = 2175-5841
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = horizonte
+
+      au < exists ; 1997 ; 1 ; Horizonte Volume 1997 ; 1997 >
+      au < exists ; 2003 ; 2 ; Horizonte Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Horizonte Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Horizonte Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Horizonte Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Horizonte Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Horizonte Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Horizonte Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Horizonte Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Horizonte Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Horizonte Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Horizonte Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pedagogia em Ação ;
+        eissn = 2175-7003
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = pedagogiacao
+
+      au < exists ; 2009 ; 1 ; Pedagogia em Ação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Pedagogia em Ação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Pedagogia em Ação Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Pedagogia em Ação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Pedagogia em Ação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Percurso Acadêmico ;
+        eissn = 2236-0603
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = percursoacademico
+
+      au < exists ; 2011 ; 1 ; Percurso Acadêmico Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Percurso Acadêmico Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Percurso Acadêmico Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Psicologia em Revista ;
+        eissn = 1678-9563
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = psicologiaemrevista
+
+      au < exists ; 2002 ; 1 ; Psicologia em Revista Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Psicologia em Revista Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Psicologia em Revista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Psicologia em Revista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Psicologia em Revista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Psicologia em Revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Psicologia em Revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Psicologia em Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Psicologia em Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Psicologia em Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Psicologia em Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Psicologia em Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sapere Aude ;
+        eissn = 2177-6342
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = SapereAude
+
+      au < exists ; 2010 ; 1 ; Sapere Aude Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Sapere Aude Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Sapere Aude Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Sapere Aude Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Scripta ;
+        eissn = 1516-4039
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = scripta
+
+      au < exists ; 2008 ; 1 ; Scripta Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Scripta Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Scripta Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Scripta Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Scripta Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Scripta Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sinapse Múltipla ;
+        eissn = 2316-4514
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de Minas Gerais
+      param[base_url] = http://periodicos.pucminas.br/
+      param[journal_id] = sinapsemultipla
+
+      au < exists ; 2012 ; 1 ; Sinapse Múltipla Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Sinapse Múltipla Volume 2013 ; 2013 >
+
+  }
+
+}
