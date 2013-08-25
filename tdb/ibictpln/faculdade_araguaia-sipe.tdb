@@ -1,0 +1,43 @@
+{
+  publisher <
+    name = Faculdade Araguaia-SIPE
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Anuário Discente ;
+        issn = 1517-6444 ;
+        eissn = 2178-6879
+      >
+
+      comment[publisher] = Faculdade Araguaia-SIPE
+      param[base_url] = http://www.rbep.inep.gov.br/
+      param[journal_id] = anuario
+
+      au < exists ; 2012 ; 1 ; Anuário Discente Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anuário Discente Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia ;
+        eissn = 2236-8779
+      >
+
+      comment[publisher] = Faculdade Araguaia-SIPE
+      param[base_url] = http://www.rbep.inep.gov.br/
+      param[journal_id] = renefara
+
+      au < exists ; 2011 ; 1 ; RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia Volume 2013 ; 2013 >
+
+  }
+
+}

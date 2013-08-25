@@ -1,0 +1,106 @@
+{
+  publisher <
+    name = Faculdades Integradas Teresa D'Ávila
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Ângulo ;
+        issn = 1984-7947
+      >
+
+      comment[publisher] = Faculdades Integradas Teresa D'Ávila
+      param[base_url] = http://publicacoes.fatea.br/
+      param[journal_id] = angulo
+
+      au < exists ; 2007 ; 1 ; Ângulo Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Ângulo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Ângulo Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 4 ; Ângulo Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Ângulo Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Ângulo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Ângulo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação, Cultura e Comunicação ;
+        issn = 2177-5087
+      >
+
+      comment[publisher] = Faculdades Integradas Teresa D'Ávila
+      param[base_url] = http://publicacoes.fatea.br/
+      param[journal_id] = eccom
+
+      au < exists ; 2010 ; 1 ; Educação, Cultura e Comunicação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Educação, Cultura e Comunicação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Educação, Cultura e Comunicação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Educação, Cultura e Comunicação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Janus ;
+        issn = 1984-7998
+      >
+
+      comment[publisher] = Faculdades Integradas Teresa D'Ávila
+      param[base_url] = http://publicacoes.fatea.br/
+      param[journal_id] = janus
+
+      au < exists ; 2004 ; 1 ; Janus Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Janus Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Janus Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Janus Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Janus Volume 2008 ; 2008 >
+      au < exists ; 2012 ; 6 ; Janus Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Janus Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Administração da Fatea ;
+        issn = 2176-8412
+      >
+
+      comment[publisher] = Faculdades Integradas Teresa D'Ávila
+      param[base_url] = http://publicacoes.fatea.br/
+      param[journal_id] = raf
+
+      au < exists ; 2008 ; 1 ; Revista de Administração da Fatea Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista de Administração da Fatea Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista de Administração da Fatea Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista de Administração da Fatea Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista de Administração da Fatea Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista de Administração da Fatea Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Enfermagem do Vale do Paraíba ;
+        eissn = 2237-7646
+      >
+
+      comment[publisher] = Faculdades Integradas Teresa D'Ávila
+      param[base_url] = http://publicacoes.fatea.br/
+      param[journal_id] = reenvap
+
+      au < exists ; 2011 ; 1 ; Revista Eletrônica de Enfermagem do Vale do Paraíba Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Eletrônica de Enfermagem do Vale do Paraíba Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Eletrônica de Enfermagem do Vale do Paraíba Volume 2013 ; 2013 >
+
+  }
+
+}

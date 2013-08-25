@@ -1,0 +1,52 @@
+{
+  publisher <
+    name = Faculdades Associadas de Uberaba
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Fazu em revista ;
+        issn = 1806-1699 ;
+        eissn = 2236-0328
+      >
+
+      comment[publisher] = Faculdades Associadas de Uberaba
+      param[base_url] = http://www.fazu.br/ojs/
+      param[journal_id] = fazuemrevista
+
+      au < exists ; 2004 ; 1 ; Fazu em revista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Fazu em revista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Fazu em revista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Fazu em revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Fazu em revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Fazu em revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Fazu em revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Fazu em revista Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 9 ; Fazu em revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Fazu em revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Pós-Graduação da Fazu ;
+        eissn = 2238-1570
+      >
+
+      comment[publisher] = Faculdades Associadas de Uberaba
+      param[base_url] = http://www.fazu.br/ojs/
+      param[journal_id] = posfazu
+
+      au < exists ; 2010 ; 1 ; Cadernos de Pós-Graduação da Fazu Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Cadernos de Pós-Graduação da Fazu Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Cadernos de Pós-Graduação da Fazu Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Cadernos de Pós-Graduação da Fazu Volume 2013 ; 2013 >
+
+  }
+
+}
