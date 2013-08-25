@@ -1,0 +1,1168 @@
+{
+  publisher <
+    name = Pontifícia Universidade Católica de São Paulo
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Acesso Aberto: Boletim do Portal de Revistas Eletrônicas da PUC-SP ;
+        issn = 2316-638X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = acessoaberto
+
+      au < exists ; 2012 ; 1 ; Acesso Aberto: Boletim do Portal de Revistas Eletrônicas da PUC-SP Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Acesso Aberto: Boletim do Portal de Revistas Eletrônicas da PUC-SP Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = A Peste: Revista de Psicanálise e Sociedade e Filosofia ;
+        issn = 2175-6104
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = apeste
+
+      au < exists ; 2009 ; 1 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 3 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; A Peste: Revista de Psicanálise e Sociedade e Filosofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Aurora ;
+        issn = 1982-6672
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = aurora
+
+      au < exists ; 2007 ; 1 ; Aurora Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Aurora Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Aurora Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Aurora Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Aurora Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Aurora Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Aurora Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bakhitiniana ;
+        issn = 2176-4573
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = bakhtiniana
+
+      au < exists ; 2009 ; 1 ; Bakhitiniana Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Bakhitiniana Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Bakhitiniana Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Bakhitiniana Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Bakhitiniana Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bordas ;
+        issn = 2237-9649
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = bordas
+
+      au < exists ; 2004 ; 1 ; Bordas Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Bordas Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Bordas Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Bordas Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Bordas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Bordas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Bordas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Bordas Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 9 ; Bordas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Bordas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Caderno de Administração ;
+        issn = 1414-7394
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = caadm
+
+      au < exists ; 2011 ; 1 ; Caderno de Administração Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Caderno de Administração Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Caderno de Administração Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Circumscribere: International Journal for the History of Science ;
+        issn = 1980-7651 ;
+        eissn =  
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = circumhc
+
+      au < exists ; 2006 ; 1 ; Circumscribere: International Journal for the History of Science Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Circumscribere: International Journal for the History of Science Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Circumscribere: International Journal for the History of Science Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Circumscribere: International Journal for the History of Science Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Circumscribere: International Journal for the History of Science Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Circumscribere: International Journal for the History of Science Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Circumscribere: International Journal for the History of Science Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Circumscribere: International Journal for the History of Science Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cognitio-Estudos ;
+        eissn = 1809-8428
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = cognitio
+
+      au < exists ; 2004 ; 1 ; Cognitio-Estudos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Cognitio-Estudos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Cognitio-Estudos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Cognitio-Estudos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Cognitio-Estudos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Cognitio-Estudos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Cognitio-Estudos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Cognitio-Estudos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Cognitio-Estudos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Cognitio-Estudos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cognitio: Revista de Filosofia ;
+        issn = 1518-7187 ;
+        eissn = 2316-5278
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = cognitiofilosofia
+
+      au < exists ; 2000 ; 1 ; Cognitio: Revista de Filosofia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Cognitio: Revista de Filosofia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Cognitio: Revista de Filosofia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Cognitio: Revista de Filosofia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Cognitio: Revista de Filosofia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Cognitio: Revista de Filosofia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Cognitio: Revista de Filosofia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Cognitio: Revista de Filosofia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Cognitio: Revista de Filosofia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Cognitio: Revista de Filosofia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Cognitio: Revista de Filosofia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Cognitio: Revista de Filosofia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Cognitio: Revista de Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Cognitio: Revista de Filosofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cordis: Revista Eletrônica de História Social da Cidade ;
+        eissn = 2176-4174
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = cordis
+
+      au < exists ; 2008 ; 1 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Cultura Teológica ;
+        issn = 0104-0529 ;
+        eissn = 2317-4307
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = culturateo
+
+      au < exists ; 1992 ; 1 ; Revista de Cultura Teológica Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 2 ; Revista de Cultura Teológica Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 3 ; Revista de Cultura Teológica Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 4 ; Revista de Cultura Teológica Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 5 ; Revista de Cultura Teológica Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 6 ; Revista de Cultura Teológica Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 7 ; Revista de Cultura Teológica Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 8 ; Revista de Cultura Teológica Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 9 ; Revista de Cultura Teológica Volume 2000 ; 2000 >
+      au < exists ; 2005 ; 10 ; Revista de Cultura Teológica Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 11 ; Revista de Cultura Teológica Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 12 ; Revista de Cultura Teológica Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 13 ; Revista de Cultura Teológica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 14 ; Revista de Cultura Teológica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 15 ; Revista de Cultura Teológica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 16 ; Revista de Cultura Teológica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 17 ; Revista de Cultura Teológica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 18 ; Revista de Cultura Teológica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Científica e-Curriculum ;
+        eissn = 1809-3876
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = curriculum
+
+      au < exists ; 2005 ; 1 ; Revista Científica e-Curriculum Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Científica e-Curriculum Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Científica e-Curriculum Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Científica e-Curriculum Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Científica e-Curriculum Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Científica e-Curriculum Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Científica e-Curriculum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Científica e-Curriculum Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Científica e-Curriculum Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DELTA: Documentação e Estudos em Linguística Teórica e Aplicada ;
+        issn = 1678-460X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = delta
+
+      au < exists ; 2011 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Distúrbios da Comunicação ;
+        issn = 0102-762X ;
+        eissn = 2176-2774
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = dic
+
+      au < exists ; 1986 ; 1 ; Distúrbios da Comunicação Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 2 ; Distúrbios da Comunicação Volume 1987 ; 1987 >
+      au < exists ; 1989 ; 3 ; Distúrbios da Comunicação Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 4 ; Distúrbios da Comunicação Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 5 ; Distúrbios da Comunicação Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 6 ; Distúrbios da Comunicação Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 7 ; Distúrbios da Comunicação Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 8 ; Distúrbios da Comunicação Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 9 ; Distúrbios da Comunicação Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 10 ; Distúrbios da Comunicação Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 11 ; Distúrbios da Comunicação Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 12 ; Distúrbios da Comunicação Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 13 ; Distúrbios da Comunicação Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 14 ; Distúrbios da Comunicação Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 15 ; Distúrbios da Comunicação Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 16 ; Distúrbios da Comunicação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 17 ; Distúrbios da Comunicação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 18 ; Distúrbios da Comunicação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 19 ; Distúrbios da Comunicação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 20 ; Distúrbios da Comunicação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 21 ; Distúrbios da Comunicação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 22 ; Distúrbios da Comunicação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 23 ; Distúrbios da Comunicação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 24 ; Distúrbios da Comunicação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 25 ; Distúrbios da Comunicação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 26 ; Distúrbios da Comunicação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 27 ; Distúrbios da Comunicação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista ecopolítica ;
+        issn = 2316-2600
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = ecopolitica
+
+      au < exists ; 2011 ; 1 ; Revista ecopolítica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista ecopolítica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista ecopolítica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação Matemática Pesquisa ;
+        issn = 1983-3156
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = emp
+
+      au < exists ; 1999 ; 1 ; Educação Matemática Pesquisa Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Educação Matemática Pesquisa Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Educação Matemática Pesquisa Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Educação Matemática Pesquisa Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Educação Matemática Pesquisa Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Educação Matemática Pesquisa Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Educação Matemática Pesquisa Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Educação Matemática Pesquisa Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Educação Matemática Pesquisa Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Educação Matemática Pesquisa Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Educação Matemática Pesquisa Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Educação Matemática Pesquisa Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Educação Matemática Pesquisa Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Educação Matemática Pesquisa Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Educação Matemática Pesquisa Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = The ESPecialist ;
+        issn = 0102-7077
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = esp
+
+      au < exists ; 1983 ; 1 ; The ESPecialist Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 2 ; The ESPecialist Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 3 ; The ESPecialist Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 4 ; The ESPecialist Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 5 ; The ESPecialist Volume 1987 ; 1987 >
+      au < exists ; 1996 ; 6 ; The ESPecialist Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 7 ; The ESPecialist Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 8 ; The ESPecialist Volume 1998 ; 1998 >
+      au < exists ; 2000 ; 9 ; The ESPecialist Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 10 ; The ESPecialist Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 11 ; The ESPecialist Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 12 ; The ESPecialist Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 13 ; The ESPecialist Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 14 ; The ESPecialist Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 15 ; The ESPecialist Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 16 ; The ESPecialist Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 17 ; The ESPecialist Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 18 ; The ESPecialist Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 19 ; The ESPecialist Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 20 ; The ESPecialist Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 21 ; The ESPecialist Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 22 ; The ESPecialist Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = E-Verbo ;
+        issn = 2236-8175
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = e-verbo
+
+      au < exists ; 2011 ; 1 ; E-Verbo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; E-Verbo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; E-Verbo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = FronteiraZ ;
+        issn = 1983-4373
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = fronteiraz
+
+      au < exists ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; FronteiraZ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Galáxia ;
+        issn = 1982-2553
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = galaxia
+
+      au < exists ; 2001 ; 1 ; Galáxia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Galáxia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Galáxia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Galáxia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Galáxia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História da Ciência e Ensino ;
+        issn = 2178-2911
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = hcensino
+
+      au < exists ; 2010 ; 1 ; História da Ciência e Ensino Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; História da Ciência e Ensino Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; História da Ciência e Ensino Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; História da Ciência e Ensino Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Hypnos ;
+        issn = 2177-5346
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = hypnos
+
+      au < exists ; 1996 ; 1 ; Hypnos Volume 1996 ; 1996 >
+      au < exists ; 2005 ; 2 ; Hypnos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Hypnos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Hypnos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Hypnos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Hypnos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Hypnos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Hypnos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Hypnos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Hypnos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista do Instituto GeoGebra Internacional de São Paulo ;
+        eissn = 2237-9657
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = IGISP
+
+      au < exists ; 2012 ; 1 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Intercâmbio ;
+        issn = 2237-759X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = intercambio
+
+      au < exists ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
+      au < exists ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Kairós ;
+        issn = 2176-901X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = kairos
+
+      au < exists ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Kairós Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Kairós Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Kalíope ;
+        issn = 1808-6977
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = kaliope
+
+      au < exists ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Kalíope Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Kalíope Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Leitura Flutuante ;
+        issn = 2175-7291
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = leituraflutuante
+
+      au < exists ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Leitura Flutuante Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos Metrópole ;
+        issn = 1517-2422 ;
+        eissn = 2236-9996
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = metropole
+
+      au < exists ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Nexi ;
+        eissn = 2237-8383
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = nexi
+
+      au < exists ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = NURES: Revista do Núcleo de Estudos de Religião e Sociedade ;
+        eissn = 1981-156X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = nures
+
+      au < exists ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Produção Discente em Educação Matemática ;
+        eissn = 2238-8044
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = pdemat
+
+      au < exists ; 2012 ; 1 ; Revista de Produção Discente em Educação Matemática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de Produção Discente em Educação Matemática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pensamento & Realidade ;
+        issn = 1415-5109 ;
+        eissn = 2237-4418
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = pensamentorealidade
+
+      au < exists ; 1998 ; 1 ; Pensamento & Realidade Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Pensamento & Realidade Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Pensamento & Realidade Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Pensamento & Realidade Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Pensamento & Realidade Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Pensamento & Realidade Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Pensamento & Realidade Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Pensamento & Realidade Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Pensamento & Realidade Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Pensamento & Realidade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Pensamento & Realidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Pensamento & Realidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Pensamento & Realidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Pensamento & Realidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Pensamento & Realidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Pensamento & Realidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ponto-e-Vírgula ;
+        issn = 1982-4807
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = pontoevirgula
+
+      au < exists ; 2007 ; 1 ; Ponto-e-Vírgula Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Ponto-e-Vírgula Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Ponto-e-Vírgula Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Ponto-e-Vírgula Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Ponto-e-Vírgula Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Ponto-e-Vírgula Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Ponto-e-Vírgula Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Psicologia Revista ;
+        issn = 1413-4063
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = psicorevista
+
+      au < exists ; 2009 ; 1 ; Psicologia Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Psicologia Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Psicologia Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Psicologia Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Psicologia Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Administração em Diálogo ;
+        issn = 2178-0080
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = rad
+
+      au < exists ; 1999 ; 1 ; Revista Administração em Diálogo Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Revista Administração em Diálogo Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Revista Administração em Diálogo Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Revista Administração em Diálogo Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Revista Administração em Diálogo Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Revista Administração em Diálogo Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Revista Administração em Diálogo Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Revista Administração em Diálogo Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Revista Administração em Diálogo Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Revista Administração em Diálogo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Revista Administração em Diálogo Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Revista Administração em Diálogo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Revista Administração em Diálogo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Revista Administração em Diálogo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista Administração em Diálogo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REB: Revista Eletrônica de Biologia ;
+        eissn = 1983-7682
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = reb
+
+      au < exists ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; REB: Revista Eletrônica de Biologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Carreiras e Pessoas ;
+        issn = 2237-1427
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = ReCaPe
+
+      au < exists ; 2011 ; 1 ; Revista de Carreiras e Pessoas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Carreiras e Pessoas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Carreiras e Pessoas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Computação e Tecnologia ;
+        issn = 2176-7998
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = ReCET
+
+      au < exists ; 2009 ; 1 ; Revista de Computação e Tecnologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista de Computação e Tecnologia Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 3 ; Revista de Computação e Tecnologia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista de Computação e Tecnologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista de Computação e Tecnologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica da Faculdade de Direito ;
+        eissn = 1984-1094
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = red
+
+      au < exists ; 2008 ; 1 ; Revista Eletrônica da Faculdade de Direito Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Eletrônica da Faculdade de Direito Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 4 ; Revista Eletrônica da Faculdade de Direito Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Eletrônica da Faculdade de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Eletrônica da Faculdade de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REVELETEO: Revista de Teologia ;
+        eissn = 2177-952X
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = reveleteo
+
+      au < exists ; 2007 ; 1 ; REVELETEO: Revista de Teologia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; REVELETEO: Revista de Teologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; REVELETEO: Revista de Teologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; REVELETEO: Revista de Teologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; REVELETEO: Revista de Teologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; REVELETEO: Revista de Teologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; REVELETEO: Revista de Teologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Rever: Revista de Estudos da Religião ;
+        issn = 1677-1222
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = rever
+
+      au < exists ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Rever: Revista de Estudos da Religião Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista l@el em (dis-)curso ;
+        eissn = 2175-4640
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = revlael
+
+      au < exists ; 2009 ; 1 ; Revista l@el em (dis-)curso Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista l@el em (dis-)curso Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista l@el em (dis-)curso Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Projeto História ;
+        eissn = 2176-2767
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = revph
+
+      au < exists ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 >
+      au < exists ; 1984 ; 3 ; Projeto História Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 4 ; Projeto História Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 5 ; Projeto História Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
+      au < exists ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 9 ; Projeto História Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 10 ; Projeto História Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 11 ; Projeto História Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 12 ; Projeto História Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 13 ; Projeto História Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 14 ; Projeto História Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 15 ; Projeto História Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 16 ; Projeto História Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 17 ; Projeto História Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 18 ; Projeto História Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 19 ; Projeto História Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 20 ; Projeto História Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 21 ; Projeto História Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 22 ; Projeto História Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 23 ; Projeto História Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 28 ; Projeto História Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista da Faculdade de Ciências Médicas de Sorocaba ;
+        issn = 1517-8242 ;
+        eissn = 1984-4840
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = RFCMS
+
+      au < exists ; 1999 ; 1 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista da Faculdade de Ciências Médicas de Sorocaba Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = RISUS: Revista de Inovação e Sustentabilidade ;
+        issn = 2179-3565
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = risus
+
+      au < exists ; 2010 ; 1 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; RISUS: Revista de Inovação e Sustentabilidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pesquisa & Debate ;
+        issn = 1806-9029
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = rpe
+
+      au < exists ; 1998 ; 1 ; Pesquisa & Debate Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Pesquisa & Debate Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Pesquisa & Debate Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Pesquisa & Debate Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Pesquisa & Debate Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Pesquisa & Debate Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Pesquisa & Debate Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Pesquisa & Debate Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Pesquisa & Debate Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Pesquisa & Debate Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Pesquisa & Debate Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Pesquisa & Debate Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Pesquisa & Debate Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = TECCOGs: Revista Digital de Tecnologias Cognitivas ;
+        issn = 1984-3585
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = teccogs
+
+      au < exists ; 2010 ; 1 ; TECCOGs: Revista Digital de Tecnologias Cognitivas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; TECCOGs: Revista Digital de Tecnologias Cognitivas Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; TECCOGs: Revista Digital de Tecnologias Cognitivas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; TECCOGs: Revista Digital de Tecnologias Cognitivas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Tessituras & Criação ;
+        eissn = 2236-3912
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = tessituras
+
+      au < exists ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Tessituras & Criação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Tessituras & Criação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Último Andar ;
+        issn = 1980-8305
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = ultimoandar
+
+      au < exists ; 2005 ; 1 ; Último Andar Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Último Andar Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Último Andar Volume 2007 ; 2007 >
+      au < exists ; 2009 ; 4 ; Último Andar Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Último Andar Volume 2010 ; 2010 >
+      au < exists ; 2012 ; 6 ; Último Andar Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Último Andar Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = VERBUM ;
+        issn = 2316-3267
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = verbum
+
+      au < exists ; 2012 ; 1 ; VERBUM Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; VERBUM Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Verve: Revista semestral autogestionária do Nu-Sol ;
+        issn = 1676-9090
+      >
+
+      comment[publisher] = Pontifícia Universidade Católica de São Paulo
+      param[base_url] = http://revistas.pucsp.br/
+      param[journal_id] = verve
+
+      au < exists ; 2002 ; 1 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 11 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Verve: Revista semestral autogestionária do Nu-Sol Volume 2013 ; 2013 >
+
+  }
+
+}

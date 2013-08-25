@@ -1,0 +1,245 @@
+{
+  publisher <
+    name = Portal de Revistas Eletrônicas-UCB
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília ;
+        eissn = 1981-2132
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = comunicologia
+
+      au < exists ; 2008 ; 1 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Comunicologia-Revista de Comunicação e Epistemologia da Universidade Católica de Brasília Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Economic Analysis of Law Review ;
+        issn = 2178-0587
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = EALR
+
+      au < exists ; 2010 ; 1 ; Economic Analysis of Law Review Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Economic Analysis of Law Review Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Economic Analysis of Law Review Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Economic Analysis of Law Review Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação Física em Revista ;
+        issn = 1983-6643
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = efr
+
+      au < exists ; 2007 ; 1 ; Educação Física em Revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Educação Física em Revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Educação Física em Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Educação Física em Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Educação Física em Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Educação Física em Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Educação Física em Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Esferas-Revista Interprogramas de Pós-graduação em Comunicação do Centro Oeste ;
+        issn = 2316-7122
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = esf
+
+      au < exists ; 2012 ; 1 ; Esferas-Revista Interprogramas de Pós-graduação em Comunicação do Centro Oeste Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Esferas-Revista Interprogramas de Pós-graduação em Comunicação do Centro Oeste Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ORAL SCIENCES ;
+        issn = 1808-8821
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = oralsciences
+
+      au < exists ; 2005 ; 1 ; ORAL SCIENCES Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; ORAL SCIENCES Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; ORAL SCIENCES Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; ORAL SCIENCES Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; ORAL SCIENCES Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; ORAL SCIENCES Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 7 ; ORAL SCIENCES Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; ORAL SCIENCES Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; ORAL SCIENCES Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Ciência e Movimento ;
+        issn = 0103-1716
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = RBCM
+
+      au < exists ; 1987 ; 1 ; Revista Brasileira de Ciência e Movimento Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 2 ; Revista Brasileira de Ciência e Movimento Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 3 ; Revista Brasileira de Ciência e Movimento Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 4 ; Revista Brasileira de Ciência e Movimento Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 5 ; Revista Brasileira de Ciência e Movimento Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 6 ; Revista Brasileira de Ciência e Movimento Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 7 ; Revista Brasileira de Ciência e Movimento Volume 1993 ; 1993 >
+      au < exists ; 2001 ; 8 ; Revista Brasileira de Ciência e Movimento Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 9 ; Revista Brasileira de Ciência e Movimento Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 10 ; Revista Brasileira de Ciência e Movimento Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 11 ; Revista Brasileira de Ciência e Movimento Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 12 ; Revista Brasileira de Ciência e Movimento Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 13 ; Revista Brasileira de Ciência e Movimento Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 14 ; Revista Brasileira de Ciência e Movimento Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 15 ; Revista Brasileira de Ciência e Movimento Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 16 ; Revista Brasileira de Ciência e Movimento Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 17 ; Revista Brasileira de Ciência e Movimento Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 18 ; Revista Brasileira de Ciência e Movimento Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 19 ; Revista Brasileira de Ciência e Movimento Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 20 ; Revista Brasileira de Ciência e Movimento Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics ;
+        issn = 1676-8000
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = rbee
+
+      au < exists ; 2007 ; 1 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Brasileira de Economia de Empresas / Brazilian Journal of Business Economics Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Dialogos ;
+        issn = 1677-8898
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = RDL
+
+      au < exists ; 2002 ; 1 ; Revista Dialogos Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Dialogos Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Dialogos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Dialogos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Dialogos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Dialogos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Dialogos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Dialogos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Dialogos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Dialogos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Dialogos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Dialogos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Letras ;
+        issn = 1982-842X
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = RL
+
+      au < exists ; 2008 ; 1 ; Revista de Letras Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista de Letras Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista de Letras Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista de Letras Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista de Letras Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista de Letras Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Medicina e Saúde de Brasília ;
+        issn = 2238-5339
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = rmsbr
+
+      au < exists ; 2012 ; 1 ; Revista de Medicina e Saúde de Brasília Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de Medicina e Saúde de Brasília Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista do Curso de Mestrado da Universidade Católica de Brasília ;
+        issn = 1980-8860
+      >
+
+      comment[publisher] = Portal de Revistas Eletrônicas-UCB
+      param[base_url] = http://portalrevistas.ucb.br/
+      param[journal_id] = rvmd
+
+      au < exists ; 2007 ; 1 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista do Curso de Mestrado da Universidade Católica de Brasília Volume 2013 ; 2013 >
+
+  }
+
+}
