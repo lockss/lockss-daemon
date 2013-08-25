@@ -1,0 +1,130 @@
+{
+  publisher <
+    name = Centro Universitário de Belo Horizonte
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = e-Scientia ;
+        eissn = 1984-7688
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = dcbas
+
+      au < exists ; 2008 ; 1 ; e-Scientia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; e-Scientia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; e-Scientia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; e-Scientia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; e-Scientia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; e-Scientia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = e-Xacta ;
+        eissn = 1984-3151
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = dcet
+
+      au < exists ; 2008 ; 1 ; e-Xacta Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; e-Xacta Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; e-Xacta Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; e-Xacta Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; e-Xacta Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; e-Xacta Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = e-Hum ;
+        eissn = 1984-767X
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = dchla
+
+      au < exists ; 2008 ; 1 ; e-Hum Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; e-Hum Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; e-Hum Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; e-Hum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; e-Hum Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; e-Hum Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = e-Cevitas ;
+        eissn = 1984-2716
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = dcjpg
+
+      au < exists ; 2008 ; 1 ; e-Cevitas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; e-Cevitas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; e-Cevitas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; e-Cevitas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; e-Cevitas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; e-Cevitas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = e-Tec ;
+        eissn = 1984-7696
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = dtec
+
+      au < exists ; 2008 ; 1 ; e-Tec Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; e-Tec Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; e-Tec Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 4 ; e-Tec Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; e-Tec Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; e-Tec Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = e-Com ;
+        eissn = 1983-0890
+      >
+
+      comment[publisher] = Centro Universitário de Belo Horizonte
+      param[base_url] = http://revistas.unibh.br/
+      param[journal_id] = ecom
+
+      au < exists ; 2007 ; 1 ; e-Com Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; e-Com Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; e-Com Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; e-Com Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; e-Com Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; e-Com Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; e-Com Volume 2013 ; 2013 >
+
+  }
+
+}

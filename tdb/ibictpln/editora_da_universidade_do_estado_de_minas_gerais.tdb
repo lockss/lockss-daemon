@@ -1,0 +1,50 @@
+{
+  publisher <
+    name = Editora da Universidade do Estado de Minas Gerais
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Educação em Foco ;
+        issn = 2317-0093
+      >
+
+      comment[publisher] = Editora da Universidade do Estado de Minas Gerais
+      param[base_url] = http://www.uemg.br/openjournal/
+      param[journal_id] = educacaoemfoco
+
+      au < exists ; 2008 ; 1 ; Educação em Foco Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Educação em Foco Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Educação em Foco Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Educação em Foco Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Educação em Foco Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Educação em Foco Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mal-Estar e Sociedade ;
+        issn = 1983-6651 ;
+        eissn = 2238-2801
+      >
+
+      comment[publisher] = Editora da Universidade do Estado de Minas Gerais
+      param[base_url] = http://www.uemg.br/openjournal/
+      param[journal_id] = malestar
+
+      au < exists ; 2008 ; 1 ; Mal-Estar e Sociedade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Mal-Estar e Sociedade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Mal-Estar e Sociedade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Mal-Estar e Sociedade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Mal-Estar e Sociedade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Mal-Estar e Sociedade Volume 2013 ; 2013 >
+
+  }
+
+}

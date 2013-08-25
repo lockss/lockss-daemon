@@ -1,0 +1,200 @@
+{
+  publisher <
+    name = Centro Universitário de Brasília-UNICEUB
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Universitas: Arquitetura e Comunicação Social ;
+        issn = 2175-7461 ;
+        eissn = 2179-488X 
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = arqcom
+
+      au < exists ; 2008 ; 1 ; Universitas: Arquitetura e Comunicação Social Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Universitas: Arquitetura e Comunicação Social Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Universitas: Arquitetura e Comunicação Social Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Universitas: Arquitetura e Comunicação Social Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Universitas: Arquitetura e Comunicação Social Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Universitas: Arquitetura e Comunicação Social Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Universitas: Ciências da Saúde ;
+        issn = 1678-5398 ;
+        eissn = 1981-9730
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = cienciasaude
+
+      au < exists ; 2003 ; 1 ; Universitas: Ciências da Saúde Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Universitas: Ciências da Saúde Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Universitas: Ciências da Saúde Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Universitas: Ciências da Saúde Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Universitas: Ciências da Saúde Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Universitas: Ciências da Saúde Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Universitas: Ciências da Saúde Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Universitas: Ciências da Saúde Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Universitas: Ciências da Saúde Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Universitas: Ciências da Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Universitas: Ciências da Saúde Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Universitas: Gestão e TI ;
+        issn = 2179-8311 ;
+        eissn = 2179-832X
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = gti
+
+      au < exists ; 2011 ; 1 ; Universitas: Gestão e TI Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Universitas: Gestão e TI Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Universitas: Gestão e TI Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Universitas Jus (UniCEUB Law Journal) ;
+        issn = 1519-9045 ;
+        eissn = 1982-8268
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = jus
+
+      au < exists ; 2007 ; 1 ; Universitas Jus (UniCEUB Law Journal) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Universitas Jus (UniCEUB Law Journal) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Universitas Jus (UniCEUB Law Journal) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Universitas Jus (UniCEUB Law Journal) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Universitas Jus (UniCEUB Law Journal) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Universitas Jus (UniCEUB Law Journal) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Universitas Jus (UniCEUB Law Journal) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) ;
+        eissn = 1980-8887
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = pade
+
+      au < exists ; 2006 ; 1 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 6 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Padê: Estudos em filosofia, raça, gênero e direitos humanos (encerrada) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) ;
+        issn = 1809-9602 ;
+        eissn = 1808-7477
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = prisma
+
+      au < exists ; 2004 ; 1 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 9 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Prismas: Direito, Políticas Públicas e Mundialização (substituída pela Revista de Direito Internacional) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) ;
+        issn = 2179-8338 ;
+        eissn = 2236-1677
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = RBPP
+
+      au < exists ; 2011 ; 1 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Brasileira de Políticas Públicas (Brazilian Journal of Law and Public Policy) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Direito Internacional (Brazilian Journal of International Law) ;
+        issn = 2236-997X ;
+        eissn = 2237-1036
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = rdi
+
+      au < exists ; 2011 ; 1 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Direito Internacional (Brazilian Journal of International Law) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Universitas Humanas ;
+        issn = 1984-9419 ;
+        eissn = 2175-7488
+      >
+
+      comment[publisher] = Centro Universitário de Brasília-UNICEUB
+      param[base_url] = http://www.publicacoesacademicas.uniceub.br/
+      param[journal_id] = universitashumanas
+
+      au < exists ; 2008 ; 1 ; Universitas Humanas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Universitas Humanas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Universitas Humanas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Universitas Humanas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Universitas Humanas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Universitas Humanas Volume 2013 ; 2013 >
+
+  }
+
+}
