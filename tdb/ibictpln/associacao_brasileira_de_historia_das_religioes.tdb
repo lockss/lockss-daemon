@@ -16,9 +16,11 @@
       comment[publisher] = Associação Brasileira de História das Religiões
       param[base_url] = http://www.abhr.org.br/plura/ojs/
       param[journal_id] = anais
+      
+      comment[notReady] = Structure of urls is non-standard. May need new crawl rule.
 
-      au < testing ; 2011 ; 12 ; Anais dos Simpósios da ABHR Volume 12 ; 2011 >
-      au < testing ; 2012 ; 13 ; Anais dos Simpósios da ABHR Volume 13 ; 2012 >
+      au < notReady ; 2011 ; 12 ; Anais dos Simpósios da ABHR Volume 12 ; 2011 >
+      au < notReady ; 2012 ; 13 ; Anais dos Simpósios da ABHR Volume 13 ; 2012 >
       au < expected ; 2013 ; 14 ; Anais dos Simpósios da ABHR Volume 14 ; 2013 >
 
   }
