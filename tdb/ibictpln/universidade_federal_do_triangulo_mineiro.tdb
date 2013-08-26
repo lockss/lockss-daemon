@@ -1,0 +1,99 @@
+{
+  publisher <
+    name = Universidade Federal do Triângulo Mineiro
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Arquivos de Ciências do Esporte ;
+        issn = 2317-7136
+      >
+
+      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = aces
+
+      au < expected ; 2013 ; 1 ; Arquivos de Ciências do Esporte Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Enfermagem e Atenção  ;
+        issn = 2317-1154
+      >
+
+      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = enfer
+
+      au < exists ; 2012 ; 1 ; Revista de Enfermagem e Atenção  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista de Enfermagem e Atenção  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Intertexto ;
+        issn = 1981-0601
+      >
+
+      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = intertexto
+
+      au < exists ; 2008 ; 1 ; Revista Intertexto Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Intertexto Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Intertexto Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Intertexto Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista Intertexto Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Intertexto Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Triângulo ;
+        issn = 2175-1609
+      >
+
+      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = revistatriangulo
+
+      au < exists ; 2008 ; 1 ; Revista Triângulo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Triângulo Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Triângulo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Triângulo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista Triângulo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Triângulo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista do SELL ;
+        issn = 1983-3873
+      >
+
+      comment[publisher] = Universidade Federal do Triângulo Mineiro
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = sell
+
+      au < exists ; 2008 ; 1 ; Revista do SELL Volume 2008 ; 2008 >
+      au < exists ; 2010 ; 2 ; Revista do SELL Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista do SELL Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Revista do SELL Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista do SELL Volume 2013 ; 2013 >
+
+  }
+
+}

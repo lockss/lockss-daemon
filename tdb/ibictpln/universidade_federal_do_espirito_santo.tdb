@@ -1,0 +1,376 @@
+{
+  publisher <
+    name = Universidade Federal do Espírito Santo
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista Ágora ;
+        issn = 1980-0096
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = agora
+
+      au < exists ; 2005 ; 1 ; Revista Ágora Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Ágora Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Ágora Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Ágora Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Ágora Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Ágora Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Ágora Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Ágora Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Ágora Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Argumentum ;
+        issn = 2176-9575
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = argumentum
+
+      au < exists ; 2009 ; 1 ; Argumentum Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Argumentum Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Argumentum Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Argumentum Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Argumentum Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Congresso Nacional de Estudos Linguísticos ;
+        issn = 2237-9789
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = conel
+
+      au < exists ; 2011 ; 1 ; Anais do Congresso Nacional de Estudos Linguísticos Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Congresso Nacional de Estudos Linguísticos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Congresso Nacional de Estudos Linguísticos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Dimensões: revista de História da Ufes ;
+        issn = 1517-2120 ;
+        eissn = 2179-8869
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = dimensoes
+
+      au < exists ; 1990 ; 1 ; Dimensões: revista de História da Ufes Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 2 ; Dimensões: revista de História da Ufes Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 3 ; Dimensões: revista de História da Ufes Volume 1992 ; 1992 >
+      au < exists ; 1995 ; 6 ; Dimensões: revista de História da Ufes Volume 1995 ; 1995 >
+      au < exists ; 1997 ; 8 ; Dimensões: revista de História da Ufes Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 9 ; Dimensões: revista de História da Ufes Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 10 ; Dimensões: revista de História da Ufes Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 11 ; Dimensões: revista de História da Ufes Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 12 ; Dimensões: revista de História da Ufes Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 13 ; Dimensões: revista de História da Ufes Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 14 ; Dimensões: revista de História da Ufes Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 15 ; Dimensões: revista de História da Ufes Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 16 ; Dimensões: revista de História da Ufes Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 17 ; Dimensões: revista de História da Ufes Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 18 ; Dimensões: revista de História da Ufes Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 19 ; Dimensões: revista de História da Ufes Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 20 ; Dimensões: revista de História da Ufes Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 21 ; Dimensões: revista de História da Ufes Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 22 ; Dimensões: revista de História da Ufes Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 23 ; Dimensões: revista de História da Ufes Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 24 ; Dimensões: revista de História da Ufes Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Pesquisa em Educação ;
+        issn = 2317-742X
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = educacao
+
+      au < exists ; 2009 ; 1 ; Cadernos de Pesquisa em Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Cadernos de Pesquisa em Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Cadernos de Pesquisa em Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Cadernos de Pesquisa em Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Cadernos de Pesquisa em Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Geografares ;
+        issn = 1518-2002 ;
+        eissn = 2175-3709
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = geografares
+
+      au < exists ; 2000 ; 1 ; Geografares Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Geografares Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Geografares Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Geografares Volume 2003 ; 2003 >
+      au < exists ; 2006 ; 7 ; Geografares Volume 2006 ; 2006 >
+      au < exists ; 2008 ; 9 ; Geografares Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Geografares Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Geografares Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Geografares Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Geografares Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Geografares Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário Nacional de Educação, Diversidade Sexual e Direitos Humanos ;
+        issn = 2316-4948
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = gepss
+
+      au < exists ; 2012 ; 1 ; Anais do Seminário Nacional de Educação, Diversidade Sexual e Direitos Humanos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Anais do Seminário Nacional de Educação, Diversidade Sexual e Direitos Humanos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = GETPol: Anais do Colóquio do Grupo de Estudos de Teoria Política ;
+        issn = 2316-9788
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = getpol
+
+      au < exists ; 2012 ; 1 ; GETPol: Anais do Colóquio do Grupo de Estudos de Teoria Política Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; GETPol: Anais do Colóquio do Grupo de Estudos de Teoria Política Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Global Media Journal ;
+        issn = 1550-7521
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = gmj
+
+      au < exists ; 2009 ; 1 ; Global Media Journal Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 2 ; Global Media Journal Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 3 ; Global Media Journal Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Global Media Journal Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Global Media Journal Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Litterae ;
+        issn = 2238-1848
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = litterae
+
+      au < exists ; 2012 ; 1 ; Litterae Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Litterae Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Música e Linguagem ;
+        issn = 2316-3488
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = musicaelinguagem
+
+      au < exists ; 2012 ; 1 ; Música e Linguagem Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Música e Linguagem Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = PERcursos Linguísticos ;
+        issn = 2236-2592
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = percursos
+
+      au < exists ; 2011 ; 1 ; PERcursos Linguísticos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; PERcursos Linguísticos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; PERcursos Linguísticos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Gestão & Conexões ;
+        eissn =  2317-5087
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = ppgadm
+
+      au < exists ; 2012 ; 1 ; Revista Gestão & Conexões Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Gestão & Conexões Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Estudos Literários ;
+        eissn = 1809-9831
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = reel
+
+      au < exists ; 2005 ; 1 ; Revista Eletrônica de Estudos Literários Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Eletrônica de Estudos Literários Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Eletrônica de Estudos Literários Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Eletrônica de Estudos Literários Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Eletrônica de Estudos Literários Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Eletrônica de Estudos Literários Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Eletrônica de Estudos Literários Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Eletrônica de Estudos Literários Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Eletrônica de Estudos Literários Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Simbiótica ;
+        issn = 2316-1620
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = simbiotica
+
+      au < exists ; 2012 ; 1 ; Simbiótica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Simbiótica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Sinais ;
+        eissn = 1981-3988
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = sinais
+
+      au < exists ; 2007 ; 1 ; Revista Sinais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Sinais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Sinais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Sinais Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Sinais Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Sinais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Sinais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anais do Seminário Nacional da Pós-Graduação em Ciências Sociais ;
+        issn = 2237-3314
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = SNPGCS
+
+      au < exists ; 2011 ; 1 ; Anais do Seminário Nacional da Pós-Graduação em Ciências Sociais Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Anais do Seminário Nacional da Pós-Graduação em Ciências Sociais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Anais do Seminário Nacional da Pós-Graduação em Ciências Sociais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sofia ;
+        eissn = 2317-2339
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = sofia
+
+      au < exists ; 2012 ; 1 ; Sofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Sofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Temporalis ;
+        issn = 2238-1856
+      >
+
+      comment[publisher] = Universidade Federal do Espírito Santo
+      param[base_url] = http://www.periodicos.ufes.br/
+      param[journal_id] = temporalis
+
+      au < exists ; 2010 ; 1 ; Temporalis Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Temporalis Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Temporalis Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Temporalis Volume 2013 ; 2013 >
+
+  }
+
+}

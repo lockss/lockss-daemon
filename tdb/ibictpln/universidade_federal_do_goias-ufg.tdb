@@ -1,0 +1,622 @@
+{
+  publisher <
+    name = Universidade Federal do Goiás-UFG
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = revista Ateliê Geográfico ;
+        issn = 1982-1956
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = atelie
+
+      au < exists ; 2007 ; 1 ; revista Ateliê Geográfico Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; revista Ateliê Geográfico Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; revista Ateliê Geográfico Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; revista Ateliê Geográfico Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; revista Ateliê Geográfico Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; revista Ateliê Geográfico Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; revista Ateliê Geográfico Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Boletim Goiano de Geografia ;
+        issn = 1984-8501
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = bgg
+
+      au < exists ; 1981 ; 1 ; Boletim Goiano de Geografia Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 2 ; Boletim Goiano de Geografia Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 3 ; Boletim Goiano de Geografia Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 4 ; Boletim Goiano de Geografia Volume 1984 ; 1984 >
+      au < exists ; 1988 ; 8 ; Boletim Goiano de Geografia Volume 1988 ; 1988 >
+      au < exists ; 1990 ; 10 ; Boletim Goiano de Geografia Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 11 ; Boletim Goiano de Geografia Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 12 ; Boletim Goiano de Geografia Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 13 ; Boletim Goiano de Geografia Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 14 ; Boletim Goiano de Geografia Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 15 ; Boletim Goiano de Geografia Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 16 ; Boletim Goiano de Geografia Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 17 ; Boletim Goiano de Geografia Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 18 ; Boletim Goiano de Geografia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 19 ; Boletim Goiano de Geografia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 20 ; Boletim Goiano de Geografia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 21 ; Boletim Goiano de Geografia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 22 ; Boletim Goiano de Geografia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 23 ; Boletim Goiano de Geografia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 24 ; Boletim Goiano de Geografia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 25 ; Boletim Goiano de Geografia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 26 ; Boletim Goiano de Geografia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 27 ; Boletim Goiano de Geografia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 28 ; Boletim Goiano de Geografia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 29 ; Boletim Goiano de Geografia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 30 ; Boletim Goiano de Geografia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 31 ; Boletim Goiano de Geografia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 32 ; Boletim Goiano de Geografia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 33 ; Boletim Goiano de Geografia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Comunicação & Informação ;
+        issn = 1415-5842
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = ci
+
+      au < exists ; 1998 ; 1 ; Comunicação & Informação Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Comunicação & Informação Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Comunicação & Informação Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Comunicação & Informação Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Comunicação & Informação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Comunicação & Informação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Comunicação & Informação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Comunicação & Informação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Comunicação & Informação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Comunicação & Informação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Comunicação & Informação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Comunicação & Informação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Comunicação & Informação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Comunicação & Informação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Comunicação & Informação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Comunicação & Informação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sociedade e Cultura ;
+        issn = 1415-8566 ;
+        eissn = 1980-8194
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = fchf
+
+      au < exists ; 1998 ; 1 ; Sociedade e Cultura Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Sociedade e Cultura Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Sociedade e Cultura Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Sociedade e Cultura Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Sociedade e Cultura Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Sociedade e Cultura Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Sociedade e Cultura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Sociedade e Cultura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Sociedade e Cultura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Sociedade e Cultura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Sociedade e Cultura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Sociedade e Cultura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Sociedade e Cultura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Sociedade e Cultura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Sociedade e Cultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Sociedade e Cultura Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pensar a Prática ;
+        issn = 1415-4676 ;
+        eissn = 1980-6183
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = fef
+
+      au < exists ; 1998 ; 1 ; Pensar a Prática Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Pensar a Prática Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Pensar a Prática Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Pensar a Prática Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Pensar a Prática Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Pensar a Prática Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Pensar a Prática Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Pensar a Prática Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Pensar a Prática Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Pensar a Prática Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Pensar a Prática Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Pensar a Prática Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Pensar a Prática Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Pensar a Prática Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Pensar a Prática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Pensar a Prática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História Revista ;
+        issn = 1414-6312 ;
+        eissn = 1984-4530
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = historia
+
+      au < exists ; 1996 ; 1 ; História Revista Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; História Revista Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; História Revista Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; História Revista Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; História Revista Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; História Revista Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 7 ; História Revista Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 8 ; História Revista Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 9 ; História Revista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 10 ; História Revista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 11 ; História Revista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 12 ; História Revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 13 ; História Revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 14 ; História Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 15 ; História Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 16 ; História Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 17 ; História Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 18 ; História Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Inter Ação ;
+        issn = 0101-7136 ;
+        eissn = 1981-8416
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = interacao
+
+      au < exists ; 1998 ; 1 ; Revista Inter Ação Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Revista Inter Ação Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Revista Inter Ação Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Revista Inter Ação Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Revista Inter Ação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Revista Inter Ação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Revista Inter Ação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Revista Inter Ação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Revista Inter Ação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Revista Inter Ação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Revista Inter Ação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Revista Inter Ação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Revista Inter Ação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Revista Inter Ação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Revista Inter Ação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Revista Inter Ação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Música Hodie
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = musica
+
+      au < exists ; 2001 ; 1 ; Música Hodie Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Música Hodie Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Música Hodie Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Música Hodie Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Música Hodie Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Música Hodie Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Música Hodie Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Música Hodie Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Música Hodie Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Música Hodie Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Música Hodie Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Música Hodie Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Música Hodie Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista OPSIS ;
+        issn = 1519-3276 ;
+        eissn = 2177-5648
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = Opsis
+
+      au < exists ; 2001 ; 1 ; Revista OPSIS Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista OPSIS Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista OPSIS Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista OPSIS Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista OPSIS Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista OPSIS Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista OPSIS Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista OPSIS Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista OPSIS Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista OPSIS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista OPSIS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista OPSIS Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Revista OPSIS Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pesquisa Agropecuária Tropical  ;
+        eissn = 1983-4063
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = pat
+
+      au < exists ; 1971 ; 1 ; Pesquisa Agropecuária Tropical  Volume 1971 ; 1971 >
+      au < exists ; 1972 ; 2 ; Pesquisa Agropecuária Tropical  Volume 1972 ; 1972 >
+      au < exists ; 1973 ; 3 ; Pesquisa Agropecuária Tropical  Volume 1973 ; 1973 >
+      au < exists ; 1974 ; 4 ; Pesquisa Agropecuária Tropical  Volume 1974 ; 1974 >
+      au < exists ; 1975 ; 5 ; Pesquisa Agropecuária Tropical  Volume 1975 ; 1975 >
+      au < exists ; 1976 ; 6 ; Pesquisa Agropecuária Tropical  Volume 1976 ; 1976 >
+      au < exists ; 1977 ; 7 ; Pesquisa Agropecuária Tropical  Volume 1977 ; 1977 >
+      au < exists ; 1978 ; 8 ; Pesquisa Agropecuária Tropical  Volume 1978 ; 1978 >
+      au < exists ; 1979 ; 9 ; Pesquisa Agropecuária Tropical  Volume 1979 ; 1979 >
+      au < exists ; 1980 ; 10 ; Pesquisa Agropecuária Tropical  Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 11 ; Pesquisa Agropecuária Tropical  Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 12 ; Pesquisa Agropecuária Tropical  Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 13 ; Pesquisa Agropecuária Tropical  Volume 1983 ; 1983 >
+      au < exists ; 1986 ; 16 ; Pesquisa Agropecuária Tropical  Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 17 ; Pesquisa Agropecuária Tropical  Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 18 ; Pesquisa Agropecuária Tropical  Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 19 ; Pesquisa Agropecuária Tropical  Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 20 ; Pesquisa Agropecuária Tropical  Volume 1990 ; 1990 >
+      au < exists ; 1992 ; 22 ; Pesquisa Agropecuária Tropical  Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 23 ; Pesquisa Agropecuária Tropical  Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 24 ; Pesquisa Agropecuária Tropical  Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 25 ; Pesquisa Agropecuária Tropical  Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 26 ; Pesquisa Agropecuária Tropical  Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 27 ; Pesquisa Agropecuária Tropical  Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 28 ; Pesquisa Agropecuária Tropical  Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 29 ; Pesquisa Agropecuária Tropical  Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 30 ; Pesquisa Agropecuária Tropical  Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 31 ; Pesquisa Agropecuária Tropical  Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 32 ; Pesquisa Agropecuária Tropical  Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 33 ; Pesquisa Agropecuária Tropical  Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 34 ; Pesquisa Agropecuária Tropical  Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 35 ; Pesquisa Agropecuária Tropical  Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 36 ; Pesquisa Agropecuária Tropical  Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 37 ; Pesquisa Agropecuária Tropical  Volume 2007 ; 2007 >
+      au < expected ; 2008 ; 38 ; Pesquisa Agropecuária Tropical  Volume 2008 ; 2008 >
+      au < expected ; 2009 ; 39 ; Pesquisa Agropecuária Tropical  Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 40 ; Pesquisa Agropecuária Tropical  Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 41 ; Pesquisa Agropecuária Tropical  Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 42 ; Pesquisa Agropecuária Tropical  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 43 ; Pesquisa Agropecuária Tropical  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Philósophos-Revista de Filosofia ;
+        issn = 1414-2236 ;
+        eissn = 1982-2928
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = philosophos
+
+      au < exists ; 1996 ; 1 ; Philósophos-Revista de Filosofia Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; Philósophos-Revista de Filosofia Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; Philósophos-Revista de Filosofia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; Philósophos-Revista de Filosofia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; Philósophos-Revista de Filosofia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; Philósophos-Revista de Filosofia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 7 ; Philósophos-Revista de Filosofia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 8 ; Philósophos-Revista de Filosofia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 9 ; Philósophos-Revista de Filosofia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 10 ; Philósophos-Revista de Filosofia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 11 ; Philósophos-Revista de Filosofia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 12 ; Philósophos-Revista de Filosofia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 13 ; Philósophos-Revista de Filosofia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 14 ; Philósophos-Revista de Filosofia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 15 ; Philósophos-Revista de Filosofia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 16 ; Philósophos-Revista de Filosofia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 17 ; Philósophos-Revista de Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 18 ; Philósophos-Revista de Filosofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Poíesis Pedagógica ;
+        issn = 2178-4442
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = poiesis
+
+      au < exists ; 2003 ; 1 ; Poíesis Pedagógica Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Poíesis Pedagógica Volume 2004 ; 2004 >
+      au < exists ; 2006 ; 4 ; Poíesis Pedagógica Volume 2006 ; 2006 >
+      au < exists ; 2008 ; 6 ; Poíesis Pedagógica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Poíesis Pedagógica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Poíesis Pedagógica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Poíesis Pedagógica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Poíesis Pedagógica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Poíesis Pedagógica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Biologia Neotropical ;
+        issn = 1807-9652 ;
+        eissn = 2178-0579
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = RBN
+
+      au < exists ; 2004 ; 1 ; Revista de Biologia Neotropical Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista de Biologia Neotropical Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista de Biologia Neotropical Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista de Biologia Neotropical Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista de Biologia Neotropical Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista de Biologia Neotropical Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista de Biologia Neotropical Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista de Biologia Neotropical Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista de Biologia Neotropical Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Revista de Biologia Neotropical Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REEC-Revista Eletrônica de Engenharia Civil ;
+        issn = 2179-0612
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = reec
+
+      au < exists ; 2010 ; 1 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; REEC-Revista Eletrônica de Engenharia Civil Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Farmácia ;
+        issn = 1808-0804
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = REF
+
+      au < exists ; 2004 ; 1 ; Revista Eletrônica de Farmácia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista Eletrônica de Farmácia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista Eletrônica de Farmácia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista Eletrônica de Farmácia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista Eletrônica de Farmácia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista Eletrônica de Farmácia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista Eletrônica de Farmácia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista Eletrônica de Farmácia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista Eletrônica de Farmácia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Revista Eletrônica de Farmácia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Itinerarius Reflectionis ;
+        issn = 1807-9342
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = ritref
+
+      au < exists ; 2005 ; 1 ; Itinerarius Reflectionis Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Itinerarius Reflectionis Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Itinerarius Reflectionis Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Itinerarius Reflectionis Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Itinerarius Reflectionis Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Itinerarius Reflectionis Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Itinerarius Reflectionis Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Itinerarius Reflectionis Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Itinerarius Reflectionis Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Signótica ;
+        issn = 0103-7250 ;
+        eissn = 2316-3690
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = sig
+
+      au < exists ; 1987 ; 1 ; Signótica Volume 1987 ; 1987 >
+      au < exists ; 1990 ; 4 ; Signótica Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 5 ; Signótica Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 6 ; Signótica Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 7 ; Signótica Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 8 ; Signótica Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 9 ; Signótica Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 10 ; Signótica Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 11 ; Signótica Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 12 ; Signótica Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 13 ; Signótica Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 14 ; Signótica Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 15 ; Signótica Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 16 ; Signótica Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 17 ; Signótica Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 18 ; Signótica Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 19 ; Signótica Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 20 ; Signótica Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 21 ; Signótica Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 22 ; Signótica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 23 ; Signótica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 24 ; Signótica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 25 ; Signótica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 26 ; Signótica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 27 ; Signótica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Polyphonía/Solta a voz ;
+        issn = 2236-0514 ;
+        eissn = 2238-8850
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = sv
+
+      au < exists ; 2002 ; 1 ; Polyphonía/Solta a voz Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Polyphonía/Solta a voz Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Polyphonía/Solta a voz Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Polyphonía/Solta a voz Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Polyphonía/Solta a voz Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Polyphonía/Solta a voz Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Polyphonía/Solta a voz Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Polyphonía/Solta a voz Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Polyphonía/Solta a voz Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Polyphonía/Solta a voz Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 11 ; Polyphonía/Solta a voz Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Polyphonía/Solta a voz Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Terceiro Incluído ;
+        issn = 2237-079X
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = teri
+
+      au < exists ; 2011 ; 1 ; Revista Terceiro Incluído Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Terceiro Incluído Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Terceiro Incluído Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ciência Animal Brasileira ;
+        issn = 1518-2797  ;
+        eissn = 1809-6891
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = vet
+
+      au < exists ; 2000 ; 1 ; Ciência Animal Brasileira Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Ciência Animal Brasileira Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Ciência Animal Brasileira Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Ciência Animal Brasileira Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Ciência Animal Brasileira Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Ciência Animal Brasileira Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Ciência Animal Brasileira Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Ciência Animal Brasileira Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Ciência Animal Brasileira Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Ciência Animal Brasileira Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Ciência Animal Brasileira Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Ciência Animal Brasileira Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Ciência Animal Brasileira Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Ciência Animal Brasileira Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Visualidades ;
+        issn = 2317-6784  ;
+        eissn = 1679-6748
+      >
+
+      comment[publisher] = Universidade Federal do Goiás-UFG
+      param[base_url] = http://www.revistas.ufg.br/
+      param[journal_id] = VISUAL
+
+      au < exists ; 2003 ; 1 ; Visualidades Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Visualidades Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Visualidades Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Visualidades Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Visualidades Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Visualidades Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Visualidades Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Visualidades Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Visualidades Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Visualidades Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Visualidades Volume 2013 ; 2013 >
+
+  }
+
+}

@@ -25,4 +25,312 @@
 
   }
 
+  {
+
+      title <
+        name = Revista Ambiente Contábil  ;
+        issn = 2176-9036
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = ambiente
+
+      au < exists ; 2009 ; 1 ; Revista Ambiente Contábil  Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Ambiente Contábil  Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Ambiente Contábil  Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Ambiente Contábil  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Ambiente Contábil  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bagoas-Estudos gays: gêneros e sexualidades ;
+        issn = 2316-6185
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = bagoas
+
+      au < exists ; 2007 ; 1 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Bagoas-Estudos gays: gêneros e sexualidades Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista meuip Cronos ;
+        issn = 1518-0689 ;
+        eissn = 1982-5560
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = cronos
+
+      au < exists ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 >
+      au < exists ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Educação em Questão
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = educacaoemquestao
+
+      au < exists ; 2008 ; 1 ; Revista Educação em Questão Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Educação em Questão Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Educação em Questão Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Educação em Questão Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista Educação em Questão Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Educação em Questão Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REVISTA EXTENSÃO E SOCIEDADE ;
+        issn = 2178-6054
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = extensaoesociedade
+
+      au < exists ; 2010 ; 1 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; REVISTA EXTENSÃO E SOCIEDADE Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses ;
+        issn = 2177-1146
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = imburana
+
+      au < exists ; 2010 ; 1 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Imburana: revista do Núcleo Câmara Cascudo de Estudos Norte-Rio-Grandenses Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = The Journal of Surgical and Clinical Research, ;
+        issn = 2179-7889
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = jscr
+
+      au < exists ; 2010 ; 1 ; The Journal of Surgical and Clinical Research, Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; The Journal of Surgical and Clinical Research, Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; The Journal of Surgical and Clinical Research, Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; The Journal of Surgical and Clinical Research, Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mneme-Revista de Humanidades ;
+        issn = 1518-3394
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = mneme
+
+      au < exists ; 2003 ; 1 ; Mneme-Revista de Humanidades Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Mneme-Revista de Humanidades Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Mneme-Revista de Humanidades Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Mneme-Revista de Humanidades Volume 2006 ; 2006 >
+      au < exists ; 2008 ; 6 ; Mneme-Revista de Humanidades Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Mneme-Revista de Humanidades Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Mneme-Revista de Humanidades Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Mneme-Revista de Humanidades Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Mneme-Revista de Humanidades Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Mneme-Revista de Humanidades Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Odisseia ;
+        issn = 1883-2435
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = odisseia
+
+      au < exists ; 2008 ; 1 ; Revista Odisseia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Odisseia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Odisseia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Odisseia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Odisseia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Odisseia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Princípios: Revista de Filosofia (UFRN) ;
+        issn = 0104-8694 ;
+        eissn = 1983-2109
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = principios
+
+      au < exists ; 1994 ; 1 ; Princípios: Revista de Filosofia (UFRN) Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 2 ; Princípios: Revista de Filosofia (UFRN) Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 3 ; Princípios: Revista de Filosofia (UFRN) Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 4 ; Princípios: Revista de Filosofia (UFRN) Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 5 ; Princípios: Revista de Filosofia (UFRN) Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 6 ; Princípios: Revista de Filosofia (UFRN) Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 7 ; Princípios: Revista de Filosofia (UFRN) Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 8 ; Princípios: Revista de Filosofia (UFRN) Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 9 ; Princípios: Revista de Filosofia (UFRN) Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 10 ; Princípios: Revista de Filosofia (UFRN) Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 11 ; Princípios: Revista de Filosofia (UFRN) Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 12 ; Princípios: Revista de Filosofia (UFRN) Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 13 ; Princípios: Revista de Filosofia (UFRN) Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 14 ; Princípios: Revista de Filosofia (UFRN) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 15 ; Princípios: Revista de Filosofia (UFRN) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 16 ; Princípios: Revista de Filosofia (UFRN) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 17 ; Princípios: Revista de Filosofia (UFRN) Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 18 ; Princípios: Revista de Filosofia (UFRN) Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 19 ; Princípios: Revista de Filosofia (UFRN) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 20 ; Princípios: Revista de Filosofia (UFRN) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista PublICa ;
+        issn = 1981-8297
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = publica
+
+      au < exists ; 2005 ; 1 ; Revista PublICa Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista PublICa Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista PublICa Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista PublICa Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista PublICa Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 6 ; Revista PublICa Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 7 ; Revista PublICa Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Revista PublICa Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista PublICa Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Inovação Tecnológica em Saúde  ;
+        issn = 2236-1103
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = reb
+
+      au < exists ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Respiratory and CardioVascular Physical Therapy ;
+        issn = 2238-4677
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = revistadefisioterapia
+
+      au < exists ; 2012 ; 1 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Journal of Respiratory and CardioVascular Physical Therapy Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sociedade e Território ;
+        issn = 2177-8396
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = sociedadeeterritorio
+
+      au < exists ; 2009 ; 1 ; Sociedade e Território Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Sociedade e Território Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Sociedade e Território Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Sociedade e Território Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Sociedade e Território Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Vivência: Revista de Antropologia ;
+        issn = 2238-6009
+      >
+
+      comment[publisher] = Universidade Federal do Rio Grande do Norte-UFRN
+      param[base_url] = http://periodicos.ufrn.br/
+      param[journal_id] = vivencia
+
+      au < exists ; 2012 ; 1 ; Vivência: Revista de Antropologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Vivência: Revista de Antropologia Volume 2013 ; 2013 >
+
+  }
+
 }

@@ -1,0 +1,100 @@
+{
+  publisher <
+    name = Universidade Federal Fluminense
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = AntroPolítica ;
+        issn = 2179-7331
+      >
+
+      comment[publisher] = Universidade Federal Fluminense
+      param[base_url] = http://www.revistas.uff.br/
+      param[journal_id] = antropolitica
+
+      au < exists ; 2009 ; 1 ; AntroPolítica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; AntroPolítica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; AntroPolítica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; AntroPolítica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; AntroPolítica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ECOS: Estudos Contemporâneos da Subjetividade ;
+        issn = 2237-941X
+      >
+
+      comment[publisher] = Universidade Federal Fluminense
+      param[base_url] = http://www.uff.br/periodicoshumanas/
+      param[journal_id] = ecos
+
+      au < exists ; 2011 ; 1 ; ECOS: Estudos Contemporâneos da Subjetividade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; ECOS: Estudos Contemporâneos da Subjetividade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; ECOS: Estudos Contemporâneos da Subjetividade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ensaios ;
+        issn = 2175-0564
+      >
+
+      comment[publisher] = Universidade Federal Fluminense
+      param[base_url] = http://www.uff.br/periodicoshumanas/
+      param[journal_id] = ensaios
+
+      au < exists ; 2010 ; 1 ; Revista Ensaios Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Ensaios Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Ensaios Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Ensaios Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Fractal: Revista de Psicologia ;
+        issn = 1984-0292
+      >
+
+      comment[publisher] = Universidade Federal Fluminense
+      param[base_url] = http://www.uff.br/periodicoshumanas/
+      param[journal_id] = Fractal
+
+      au < exists ; 1989 ; 1 ; Fractal: Revista de Psicologia Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 2 ; Fractal: Revista de Psicologia Volume 1990 ; 1990 >
+      au < exists ; 1993 ; 5 ; Fractal: Revista de Psicologia Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 6 ; Fractal: Revista de Psicologia Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 7 ; Fractal: Revista de Psicologia Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 8 ; Fractal: Revista de Psicologia Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 9 ; Fractal: Revista de Psicologia Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 10 ; Fractal: Revista de Psicologia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 11 ; Fractal: Revista de Psicologia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 12 ; Fractal: Revista de Psicologia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 13 ; Fractal: Revista de Psicologia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 14 ; Fractal: Revista de Psicologia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 15 ; Fractal: Revista de Psicologia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 16 ; Fractal: Revista de Psicologia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 17 ; Fractal: Revista de Psicologia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 18 ; Fractal: Revista de Psicologia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 19 ; Fractal: Revista de Psicologia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 20 ; Fractal: Revista de Psicologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 21 ; Fractal: Revista de Psicologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 22 ; Fractal: Revista de Psicologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 23 ; Fractal: Revista de Psicologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 24 ; Fractal: Revista de Psicologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 25 ; Fractal: Revista de Psicologia Volume 2013 ; 2013 >
+
+  }
+
+}
