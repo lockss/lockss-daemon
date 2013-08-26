@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
    <entry>
     <string>plugin_publishing_platform</string>
@@ -30,11 +30,11 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -144,6 +144,15 @@
     <string>plugin_au_config_user_msg</string>
     <string>"Atypon Systems hosts this archival unit (AU) and require that you &lt;a href=&apos;%saction/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs.", base_url</string>
   </entry>
+<!--  Children will probably need to extend these and then use their own crawl/hash filters -->  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string> 
+    <string>org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory</string>
+  </entry>    
   <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.BaseAtyponPdfFilterFactory</string>

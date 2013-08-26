@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: ASCEHtmlCrawlFilterFactory.java,v 1.3 2013-08-26 20:05:38 alexandraohlson Exp $
  */
 
 /*
@@ -41,6 +41,9 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
+
+// be sure not to CRAWL filter out entire left column "dropzone-Left-sidebar" because
+// we need to be able to pick up action/showCitFormats link
 
 public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
   static NodeFilter[] filters = new NodeFilter[] {

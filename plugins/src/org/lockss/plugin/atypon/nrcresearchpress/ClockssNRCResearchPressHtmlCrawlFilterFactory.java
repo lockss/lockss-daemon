@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.3 2013-08-26 20:05:37 alexandraohlson Exp $
  */
 
 /*
@@ -51,8 +51,11 @@ public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtm
       // Will exclude these tags from the stream:
       //   all stuff in the left sidebar
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"),
-      //   all the stuff in the right sidebar
-      HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-right"),
+
+      // Cannot filter out entire sidebar-right because we need to pick up the dowload citations
+      // action/showCitFormats link - so remove smaller chunks, but most excluded through crawl rules anyway
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "addthis_toolbox"),
+      
       //  strip below the main title with links to Home, About, Journals, etc...
       HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),
       // from issue TOC (e.g. http://www.nrcresearchpress.com/toc/cgj/36/5)
