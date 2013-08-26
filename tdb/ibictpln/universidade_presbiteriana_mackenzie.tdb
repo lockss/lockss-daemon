@@ -216,4 +216,55 @@
 
   }
 
+  {
+
+      title <
+        name = Cadernos de Pós-Graduação em Arquitetura e Urbanismo ;
+        issn = 1809-4120
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://www.mackenzie.br/dhtm/seer/
+      param[journal_id] = cpgau
+
+      au < exists ; 2001 ; 1 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Cadernos de Pós-Graduação em Arquitetura e Urbanismo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Jovens Pesquisadores ;
+        issn = 1806-8634
+      >
+
+      comment[publisher] = Universidade Presbiteriana Mackenzie
+      param[base_url] = http://www.mackenzie.br/dhtm/seer/
+      param[journal_id] = jovenspesquisadores
+
+      au < exists ; 2004 ; 1 ; Jovens Pesquisadores Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Jovens Pesquisadores Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Jovens Pesquisadores Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Jovens Pesquisadores Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Jovens Pesquisadores Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Jovens Pesquisadores Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Jovens Pesquisadores Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Jovens Pesquisadores Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Jovens Pesquisadores Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Jovens Pesquisadores Volume 2013 ; 2013 >
+
+  }
+
 }

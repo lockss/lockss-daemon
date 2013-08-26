@@ -1,0 +1,79 @@
+{
+  publisher <
+    name = Universidade Federal Rural do Semi-Árido-UFERSA-
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Acta Veterinaria Brasilica ;
+        issn = 1981-5484
+      >
+
+      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      param[base_url] = http://periodicos.ufersa.edu.br/revistas/
+      param[journal_id] = acta
+
+      au < exists ; 2007 ; 1 ; Acta Veterinaria Brasilica Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Acta Veterinaria Brasilica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Acta Veterinaria Brasilica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Acta Veterinaria Brasilica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Acta Veterinaria Brasilica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Acta Veterinaria Brasilica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Acta Veterinaria Brasilica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Animal Behaviour and Biometeorology ;
+        issn = 2318-1265
+      >
+
+      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      param[base_url] = http://periodicos.ufersa.edu.br/revistas/
+      param[journal_id] = jabb
+
+      au < expected ; 2013 ; 1 ; Journal of Animal Behaviour and Biometeorology Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Caatinga ;
+        issn = 0100-316X ;
+        eissn = 1983-2125
+      >
+
+      comment[publisher] = Universidade Federal Rural do Semi-Árido-UFERSA-
+      param[base_url] = http://periodicos.ufersa.edu.br/revistas/
+      param[journal_id] = sistema
+
+      au < exists ; 1976 ; 1 ; Revista Caatinga Volume 1976 ; 1976 >
+      au < exists ; 1977 ; 2 ; Revista Caatinga Volume 1977 ; 1977 >
+      au < exists ; 1978 ; 3 ; Revista Caatinga Volume 1978 ; 1978 >
+      au < exists ; 1984 ; 9 ; Revista Caatinga Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 10 ; Revista Caatinga Volume 1985 ; 1985 >
+      au < exists ; 1989 ; 14 ; Revista Caatinga Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 15 ; Revista Caatinga Volume 1990 ; 1990 >
+      au < exists ; 1994 ; 19 ; Revista Caatinga Volume 1994 ; 1994 >
+      au < exists ; 1996 ; 21 ; Revista Caatinga Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 22 ; Revista Caatinga Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 23 ; Revista Caatinga Volume 1998 ; 1998 >
+      au < exists ; 2006 ; 31 ; Revista Caatinga Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 32 ; Revista Caatinga Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 33 ; Revista Caatinga Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 34 ; Revista Caatinga Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 35 ; Revista Caatinga Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 36 ; Revista Caatinga Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 37 ; Revista Caatinga Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 38 ; Revista Caatinga Volume 2013 ; 2013 >
+
+  }
+
+}
