@@ -621,9 +621,9 @@ comment[mn20] = URL with 403 Forbidden error
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = us_japan_womens_journal
-      attr[journal_id] =
+      attr[journal_id] = jwj
 
-      au < expected ; 2013 ; U.S.-Japan Women's Journal Volume 1 ; 1 >
+      au < expected ; 2013 ; U.S.-Japan Women's Journal Volume 43 ; 43 >
     
     }
   }
