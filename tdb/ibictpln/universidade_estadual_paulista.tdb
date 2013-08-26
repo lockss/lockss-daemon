@@ -1,0 +1,1195 @@
+{
+  publisher <
+    name = Universidade Estadual Paulista
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Caderno de Pesquisa ;
+        eissn = 2179-4286
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = cadernopesquisa
+
+      au < exists ; 2010 ; 1 ; Caderno de Pesquisa Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 2 ; Caderno de Pesquisa Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; Caderno de Pesquisa Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Caderno de Pesquisa Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = CAMINE: Caminhos da Educação ;
+        eissn = 2175-4217
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = caminhos
+
+      au < exists ; 2009 ; 1 ; CAMINE: Caminhos da Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; CAMINE: Caminhos da Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; CAMINE: Caminhos da Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; CAMINE: Caminhos da Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; CAMINE: Caminhos da Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = O Direito Alternativo ;
+        eissn = 2236-7950
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = direitoalternativo
+
+      au < exists ; 2011 ; 1 ; O Direito Alternativo Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; O Direito Alternativo Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; O Direito Alternativo Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica de Direito ;
+        eissn = 2179-4359
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = direitounesp
+
+      au < exists ; 2010 ; 1 ; Revista Eletrônica de Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Eletrônica de Direito Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Eletrônica de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos Jurídicos UNESP ;
+        issn = 1414-3097 ;
+        eissn = 2179-5177
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = estudosjuridicosunesp
+
+      au < exists ; 2010 ; 1 ; Revista de Estudos Jurídicos UNESP Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Estudos Jurídicos UNESP Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Estudos Jurídicos UNESP Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Estudos Jurídicos UNESP Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História e Cultura ;
+        eissn = 2238-6270
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = historiaecultura
+
+      au < exists ; 2012 ; 1 ; História e Cultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; História e Cultura Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Serviço Social & Realidade ;
+        issn = 1413-4233 ;
+        eissn = 2176-0896
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://periodicos.franca.unesp.br/
+      param[journal_id] = SSR
+
+      au < exists ; 2007 ; 1 ; Serviço Social & Realidade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Serviço Social & Realidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Serviço Social & Realidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Serviço Social & Realidade Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Serviço Social & Realidade Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Serviço Social & Realidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Serviço Social & Realidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Alfa: Revista de Linguística ;
+        eissn = 1981-5794
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = alfa
+
+      au < exists ; 1962 ; 1 ; Alfa: Revista de Linguística Volume 1962 ; 1962 >
+      au < exists ; 1963 ; 2 ; Alfa: Revista de Linguística Volume 1963 ; 1963 >
+      au < exists ; 1964 ; 3 ; Alfa: Revista de Linguística Volume 1964 ; 1964 >
+      au < exists ; 1965 ; 4 ; Alfa: Revista de Linguística Volume 1965 ; 1965 >
+      au < exists ; 1966 ; 5 ; Alfa: Revista de Linguística Volume 1966 ; 1966 >
+      au < exists ; 1967 ; 6 ; Alfa: Revista de Linguística Volume 1967 ; 1967 >
+      au < exists ; 1968 ; 7 ; Alfa: Revista de Linguística Volume 1968 ; 1968 >
+      au < exists ; 1969 ; 8 ; Alfa: Revista de Linguística Volume 1969 ; 1969 >
+      au < exists ; 1970 ; 9 ; Alfa: Revista de Linguística Volume 1970 ; 1970 >
+      au < exists ; 1971 ; 10 ; Alfa: Revista de Linguística Volume 1971 ; 1971 >
+      au < exists ; 1972 ; 11 ; Alfa: Revista de Linguística Volume 1972 ; 1972 >
+      au < exists ; 1973 ; 12 ; Alfa: Revista de Linguística Volume 1973 ; 1973 >
+      au < exists ; 1974 ; 13 ; Alfa: Revista de Linguística Volume 1974 ; 1974 >
+      au < exists ; 1976 ; 14 ; Alfa: Revista de Linguística Volume 1976 ; 1976 >
+      au < exists ; 1980 ; 15 ; Alfa: Revista de Linguística Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 16 ; Alfa: Revista de Linguística Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 17 ; Alfa: Revista de Linguística Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 18 ; Alfa: Revista de Linguística Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 19 ; Alfa: Revista de Linguística Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 20 ; Alfa: Revista de Linguística Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 21 ; Alfa: Revista de Linguística Volume 1986 ; 1986 >
+      au < exists ; 1988 ; 22 ; Alfa: Revista de Linguística Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 23 ; Alfa: Revista de Linguística Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 24 ; Alfa: Revista de Linguística Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 25 ; Alfa: Revista de Linguística Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 26 ; Alfa: Revista de Linguística Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 27 ; Alfa: Revista de Linguística Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 28 ; Alfa: Revista de Linguística Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 29 ; Alfa: Revista de Linguística Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 30 ; Alfa: Revista de Linguística Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 31 ; Alfa: Revista de Linguística Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 32 ; Alfa: Revista de Linguística Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 33 ; Alfa: Revista de Linguística Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 34 ; Alfa: Revista de Linguística Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 35 ; Alfa: Revista de Linguística Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 36 ; Alfa: Revista de Linguística Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 37 ; Alfa: Revista de Linguística Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 38 ; Alfa: Revista de Linguística Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 39 ; Alfa: Revista de Linguística Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 40 ; Alfa: Revista de Linguística Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 41 ; Alfa: Revista de Linguística Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 42 ; Alfa: Revista de Linguística Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 43 ; Alfa: Revista de Linguística Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 44 ; Alfa: Revista de Linguística Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 45 ; Alfa: Revista de Linguística Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 46 ; Alfa: Revista de Linguística Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 47 ; Alfa: Revista de Linguística Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Semiótica Aplicada ;
+        eissn = 1679-3404
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = casa
+
+      au < exists ; 2003 ; 1 ; Cadernos de Semiótica Aplicada Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Cadernos de Semiótica Aplicada Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Cadernos de Semiótica Aplicada Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Cadernos de Semiótica Aplicada Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Cadernos de Semiótica Aplicada Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Cadernos de Semiótica Aplicada Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Cadernos de Semiótica Aplicada Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Cadernos de Semiótica Aplicada Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Cadernos de Semiótica Aplicada Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Cadernos de Semiótica Aplicada Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Cadernos de Semiótica Aplicada Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos de Sociologia ;
+        eissn = 1982-4718
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = estudos
+
+      au < exists ; 1996 ; 1 ; Estudos de Sociologia Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; Estudos de Sociologia Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; Estudos de Sociologia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; Estudos de Sociologia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; Estudos de Sociologia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; Estudos de Sociologia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 7 ; Estudos de Sociologia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 8 ; Estudos de Sociologia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 9 ; Estudos de Sociologia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 10 ; Estudos de Sociologia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 11 ; Estudos de Sociologia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 12 ; Estudos de Sociologia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 13 ; Estudos de Sociologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 14 ; Estudos de Sociologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 15 ; Estudos de Sociologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 16 ; Estudos de Sociologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 17 ; Estudos de Sociologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 18 ; Estudos de Sociologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ibero-Americana de Estudos em Educação ;
+        eissn = 1982-5587
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = iberoamericana
+
+      au < exists ; 2006 ; 1 ; Revista Ibero-Americana de Estudos em Educação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Ibero-Americana de Estudos em Educação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Ibero-Americana de Estudos em Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Ibero-Americana de Estudos em Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Ibero-Americana de Estudos em Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Ibero-Americana de Estudos em Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Ibero-Americana de Estudos em Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Ibero-Americana de Estudos em Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Itinerários: Revista de Literatura ;
+        issn = 0103-815x
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = itinerarios
+
+      au < exists ; 1990 ; 1 ; Itinerários: Revista de Literatura Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 2 ; Itinerários: Revista de Literatura Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 3 ; Itinerários: Revista de Literatura Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 4 ; Itinerários: Revista de Literatura Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 5 ; Itinerários: Revista de Literatura Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 6 ; Itinerários: Revista de Literatura Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 7 ; Itinerários: Revista de Literatura Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 8 ; Itinerários: Revista de Literatura Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 9 ; Itinerários: Revista de Literatura Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 10 ; Itinerários: Revista de Literatura Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 11 ; Itinerários: Revista de Literatura Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 12 ; Itinerários: Revista de Literatura Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 13 ; Itinerários: Revista de Literatura Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 14 ; Itinerários: Revista de Literatura Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 15 ; Itinerários: Revista de Literatura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 16 ; Itinerários: Revista de Literatura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 17 ; Itinerários: Revista de Literatura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 18 ; Itinerários: Revista de Literatura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 19 ; Itinerários: Revista de Literatura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 20 ; Itinerários: Revista de Literatura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 21 ; Itinerários: Revista de Literatura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 22 ; Itinerários: Revista de Literatura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 23 ; Itinerários: Revista de Literatura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 24 ; Itinerários: Revista de Literatura Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Letras ;
+        eissn = 1981-7886
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = letras
+
+      au < exists ; 1960 ; 1 ; Revista de Letras Volume 1960 ; 1960 >
+      au < exists ; 1961 ; 2 ; Revista de Letras Volume 1961 ; 1961 >
+      au < exists ; 1962 ; 3 ; Revista de Letras Volume 1962 ; 1962 >
+      au < exists ; 1963 ; 4 ; Revista de Letras Volume 1963 ; 1963 >
+      au < exists ; 1964 ; 5 ; Revista de Letras Volume 1964 ; 1964 >
+      au < exists ; 1965 ; 6 ; Revista de Letras Volume 1965 ; 1965 >
+      au < exists ; 1966 ; 7 ; Revista de Letras Volume 1966 ; 1966 >
+      au < exists ; 1967 ; 8 ; Revista de Letras Volume 1967 ; 1967 >
+      au < exists ; 1968 ; 9 ; Revista de Letras Volume 1968 ; 1968 >
+      au < exists ; 1969 ; 10 ; Revista de Letras Volume 1969 ; 1969 >
+      au < exists ; 1970 ; 11 ; Revista de Letras Volume 1970 ; 1970 >
+      au < exists ; 1972 ; 12 ; Revista de Letras Volume 1972 ; 1972 >
+      au < exists ; 1973 ; 13 ; Revista de Letras Volume 1973 ; 1973 >
+      au < exists ; 1974 ; 14 ; Revista de Letras Volume 1974 ; 1974 >
+      au < exists ; 1975 ; 15 ; Revista de Letras Volume 1975 ; 1975 >
+      au < exists ; 1976 ; 16 ; Revista de Letras Volume 1976 ; 1976 >
+      au < exists ; 1977 ; 17 ; Revista de Letras Volume 1977 ; 1977 >
+      au < exists ; 1980 ; 18 ; Revista de Letras Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 19 ; Revista de Letras Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 20 ; Revista de Letras Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 21 ; Revista de Letras Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 22 ; Revista de Letras Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 23 ; Revista de Letras Volume 1985 ; 1985 >
+      au < exists ; 1987 ; 24 ; Revista de Letras Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 25 ; Revista de Letras Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 26 ; Revista de Letras Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 27 ; Revista de Letras Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 28 ; Revista de Letras Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 29 ; Revista de Letras Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 30 ; Revista de Letras Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 31 ; Revista de Letras Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 32 ; Revista de Letras Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 33 ; Revista de Letras Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 34 ; Revista de Letras Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 35 ; Revista de Letras Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 36 ; Revista de Letras Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 37 ; Revista de Letras Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 38 ; Revista de Letras Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 39 ; Revista de Letras Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 40 ; Revista de Letras Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 41 ; Revista de Letras Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 42 ; Revista de Letras Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 43 ; Revista de Letras Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 44 ; Revista de Letras Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 45 ; Revista de Letras Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 46 ; Revista de Letras Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 47 ; Revista de Letras Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 48 ; Revista de Letras Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 49 ; Revista de Letras Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 50 ; Revista de Letras Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Lettres Françaises ;
+        issn = 1414-025X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = lettres
+
+      au < exists ; 1995 ; 1 ; Lettres Françaises Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 2 ; Lettres Françaises Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 3 ; Lettres Françaises Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 4 ; Lettres Françaises Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 5 ; Lettres Françaises Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 6 ; Lettres Françaises Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 7 ; Lettres Françaises Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 8 ; Lettres Françaises Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 9 ; Lettres Françaises Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 10 ; Lettres Françaises Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 11 ; Lettres Françaises Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 12 ; Lettres Françaises Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 13 ; Lettres Françaises Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 14 ; Lettres Françaises Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 15 ; Lettres Françaises Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 16 ; Lettres Françaises Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 17 ; Lettres Françaises Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 18 ; Lettres Françaises Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 19 ; Lettres Françaises Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Perspectivas: Revista de Ciências Sociais ;
+        issn = 0101-3459 ;
+        eissn = 1984-0241
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = perspectivas
+
+      au < exists ; 1976 ; 1 ; Perspectivas: Revista de Ciências Sociais Volume 1976 ; 1976 >
+      au < exists ; 1977 ; 2 ; Perspectivas: Revista de Ciências Sociais Volume 1977 ; 1977 >
+      au < exists ; 1980 ; 3 ; Perspectivas: Revista de Ciências Sociais Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 4 ; Perspectivas: Revista de Ciências Sociais Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 5 ; Perspectivas: Revista de Ciências Sociais Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 6 ; Perspectivas: Revista de Ciências Sociais Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 7 ; Perspectivas: Revista de Ciências Sociais Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 8 ; Perspectivas: Revista de Ciências Sociais Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 9 ; Perspectivas: Revista de Ciências Sociais Volume 1986 ; 1986 >
+      au < exists ; 1988 ; 10 ; Perspectivas: Revista de Ciências Sociais Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 11 ; Perspectivas: Revista de Ciências Sociais Volume 1989 ; 1989 >
+      au < exists ; 1991 ; 12 ; Perspectivas: Revista de Ciências Sociais Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 13 ; Perspectivas: Revista de Ciências Sociais Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 14 ; Perspectivas: Revista de Ciências Sociais Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 15 ; Perspectivas: Revista de Ciências Sociais Volume 1994 ; 1994 >
+      au < exists ; 1996 ; 16 ; Perspectivas: Revista de Ciências Sociais Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 17 ; Perspectivas: Revista de Ciências Sociais Volume 1997 ; 1997 >
+      au < exists ; 2000 ; 18 ; Perspectivas: Revista de Ciências Sociais Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 19 ; Perspectivas: Revista de Ciências Sociais Volume 2001 ; 2001 >
+      au < exists ; 2003 ; 20 ; Perspectivas: Revista de Ciências Sociais Volume 2003 ; 2003 >
+      au < exists ; 2005 ; 21 ; Perspectivas: Revista de Ciências Sociais Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 22 ; Perspectivas: Revista de Ciências Sociais Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 23 ; Perspectivas: Revista de Ciências Sociais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 24 ; Perspectivas: Revista de Ciências Sociais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 25 ; Perspectivas: Revista de Ciências Sociais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 26 ; Perspectivas: Revista de Ciências Sociais Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 27 ; Perspectivas: Revista de Ciências Sociais Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 28 ; Perspectivas: Revista de Ciências Sociais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 29 ; Perspectivas: Revista de Ciências Sociais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = REDD: Revista Espaço de Diálogo e Desconexão ;
+        eissn = 1984-1736
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = redd
+
+      au < exists ; 2008 ; 1 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Segurança Urbana e Juventude ;
+        eissn = 1984-5103
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://seer.fclar.unesp.br/
+      param[journal_id] = seguranca
+
+      au < exists ; 2008 ; 1 ; Revista Segurança Urbana e Juventude Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Segurança Urbana e Juventude Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Segurança Urbana e Juventude Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Segurança Urbana e Juventude Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Segurança Urbana e Juventude Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Segurança Urbana e Juventude Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Alimentos e Nutrição Araraquara ;
+        issn = 0103-4235 ;
+        eissn = 2179-4448
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
+      param[journal_id] = alimentos
+
+      au < exists ; 1989 ; 1 ; Alimentos e Nutrição Araraquara Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 2 ; Alimentos e Nutrição Araraquara Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 3 ; Alimentos e Nutrição Araraquara Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 4 ; Alimentos e Nutrição Araraquara Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 5 ; Alimentos e Nutrição Araraquara Volume 1993 ; 1993 >
+      au < exists ; 1995 ; 6 ; Alimentos e Nutrição Araraquara Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 7 ; Alimentos e Nutrição Araraquara Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 8 ; Alimentos e Nutrição Araraquara Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 9 ; Alimentos e Nutrição Araraquara Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 10 ; Alimentos e Nutrição Araraquara Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 11 ; Alimentos e Nutrição Araraquara Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 12 ; Alimentos e Nutrição Araraquara Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 13 ; Alimentos e Nutrição Araraquara Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 14 ; Alimentos e Nutrição Araraquara Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 15 ; Alimentos e Nutrição Araraquara Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 16 ; Alimentos e Nutrição Araraquara Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 17 ; Alimentos e Nutrição Araraquara Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 18 ; Alimentos e Nutrição Araraquara Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 19 ; Alimentos e Nutrição Araraquara Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 20 ; Alimentos e Nutrição Araraquara Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 21 ; Alimentos e Nutrição Araraquara Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 22 ; Alimentos e Nutrição Araraquara Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 23 ; Alimentos e Nutrição Araraquara Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 24 ; Alimentos e Nutrição Araraquara Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Ciências Farmacêuticas Básica e Aplicada ;
+        issn = 1808-4532 ;
+        eissn = 2179-443X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://serv-bib.fcfar.unesp.br/seer/
+      param[journal_id] = Cien_Farm
+
+      au < exists ; 2005 ; 1 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Geografia  ;
+        issn = 0100-7912 ;
+        eissn = 1983-8700
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = ageteo
+
+      au < exists ; 1976 ; 1 ; Geografia  Volume 1976 ; 1976 >
+      au < exists ; 1977 ; 2 ; Geografia  Volume 1977 ; 1977 >
+      au < exists ; 1978 ; 3 ; Geografia  Volume 1978 ; 1978 >
+      au < exists ; 1979 ; 4 ; Geografia  Volume 1979 ; 1979 >
+      au < exists ; 1980 ; 5 ; Geografia  Volume 1980 ; 1980 >
+      au < exists ; 1981 ; 6 ; Geografia  Volume 1981 ; 1981 >
+      au < exists ; 1982 ; 7 ; Geografia  Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 8 ; Geografia  Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 9 ; Geografia  Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 10 ; Geografia  Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 11 ; Geografia  Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 12 ; Geografia  Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 13 ; Geografia  Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 14 ; Geografia  Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 15 ; Geografia  Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 16 ; Geografia  Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 17 ; Geografia  Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 18 ; Geografia  Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 19 ; Geografia  Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 20 ; Geografia  Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 21 ; Geografia  Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 22 ; Geografia  Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 23 ; Geografia  Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 24 ; Geografia  Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 25 ; Geografia  Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 26 ; Geografia  Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 27 ; Geografia  Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 28 ; Geografia  Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 29 ; Geografia  Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 30 ; Geografia  Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 31 ; Geografia  Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 32 ; Geografia  Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 33 ; Geografia  Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 34 ; Geografia  Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 35 ; Geografia  Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 36 ; Geografia  Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 37 ; Geografia  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 38 ; Geografia  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bolema: Boletim de educação Matemática ;
+        eissn = 1980-4415
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = bolema
+
+      au < exists ; 1985 ; 1 ; Bolema: Boletim de educação Matemática Volume 1985 ; 1985 >
+      au < exists ; 1989 ; 2 ; Bolema: Boletim de educação Matemática Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 3 ; Bolema: Boletim de educação Matemática Volume 1990 ; 1990 >
+      au < exists ; 1992 ; 4 ; Bolema: Boletim de educação Matemática Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 5 ; Bolema: Boletim de educação Matemática Volume 1993 ; 1993 >
+      au < exists ; 2000 ; 6 ; Bolema: Boletim de educação Matemática Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 7 ; Bolema: Boletim de educação Matemática Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 8 ; Bolema: Boletim de educação Matemática Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 9 ; Bolema: Boletim de educação Matemática Volume 2003 ; 2003 >
+      au < exists ; 2005 ; 10 ; Bolema: Boletim de educação Matemática Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 11 ; Bolema: Boletim de educação Matemática Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 12 ; Bolema: Boletim de educação Matemática Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 13 ; Bolema: Boletim de educação Matemática Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 14 ; Bolema: Boletim de educação Matemática Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 15 ; Bolema: Boletim de educação Matemática Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 16 ; Bolema: Boletim de educação Matemática Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 17 ; Bolema: Boletim de educação Matemática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 18 ; Bolema: Boletim de educação Matemática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = CLIMEP: Climatologia e Estudos da Paisagem ;
+        eissn = 1980-654X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = climatologia
+
+      au < exists ; 2006 ; 1 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação: Teoria e Prática ;
+        eissn = 1981-8106
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = educacao
+
+      au < exists ; 1998 ; 1 ; Educação: Teoria e Prática Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Educação: Teoria e Prática Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Educação: Teoria e Prática Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Educação: Teoria e Prática Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Educação: Teoria e Prática Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Educação: Teoria e Prática Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Educação: Teoria e Prática Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Educação: Teoria e Prática Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Educação: Teoria e Prática Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Educação: Teoria e Prática Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Educação: Teoria e Prática Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Educação: Teoria e Prática Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Educação: Teoria e Prática Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Educação: Teoria e Prática Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Educação: Teoria e Prática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Educação: Teoria e Prática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Espaço@Ação ;
+        eissn = 1982-2049
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = espacoacao
+
+      au < exists ; 2007 ; 1 ; Espaço@Ação Volume 2007 ; 2007 >
+      au < expected ; 2008 ; 2 ; Espaço@Ação Volume 2008 ; 2008 >
+      au < expected ; 2009 ; 3 ; Espaço@Ação Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 4 ; Espaço@Ação Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Espaço@Ação Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Espaço@Ação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Espaço@Ação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos Geográficos: Revista Eletrônica de Geografia ;
+        eissn = 1678-698X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = estgeo
+
+      au < exists ; 2003 ; 1 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Estudos Geográficos: Revista Eletrônica de Geografia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Geociências ;
+        eissn = 1980-900X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = geociencias
+
+      au < exists ; 1982 ; 1 ; Geociências Volume 1982 ; 1982 >
+      au < exists ; 1983 ; 2 ; Geociências Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 3 ; Geociências Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 4 ; Geociências Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 5 ; Geociências Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 6 ; Geociências Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 7 ; Geociências Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 8 ; Geociências Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 9 ; Geociências Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 10 ; Geociências Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 11 ; Geociências Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 12 ; Geociências Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 13 ; Geociências Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 14 ; Geociências Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 15 ; Geociências Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 16 ; Geociências Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 17 ; Geociências Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 18 ; Geociências Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 19 ; Geociências Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 20 ; Geociências Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 21 ; Geociências Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 22 ; Geociências Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 23 ; Geociências Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 24 ; Geociências Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 25 ; Geociências Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 26 ; Geociências Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 27 ; Geociências Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 28 ; Geociências Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 29 ; Geociências Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 30 ; Geociências Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 31 ; Geociências Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 32 ; Geociências Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Holos Environment ;
+        eissn = 1519-8634
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = holos
+
+      au < exists ; 2001 ; 1 ; Holos Environment Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Holos Environment Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Holos Environment Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Holos Environment Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Holos Environment Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Holos Environment Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Holos Environment Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Holos Environment Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Holos Environment Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Holos Environment Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Holos Environment Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Holos Environment Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Holos Environment Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Motriz ;
+        issn = 1980-6574
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = motriz
+
+      au < exists ; 1995 ; 1 ; Motriz Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 2 ; Motriz Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 3 ; Motriz Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 4 ; Motriz Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 5 ; Motriz Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 6 ; Motriz Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 7 ; Motriz Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 8 ; Motriz Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 9 ; Motriz Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 10 ; Motriz Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 11 ; Motriz Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 12 ; Motriz Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 13 ; Motriz Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 14 ; Motriz Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 15 ; Motriz Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 16 ; Motriz Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 17 ; Motriz Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 18 ; Motriz Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 19 ; Motriz Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Naturalia ;
+        issn = 0101-1944 ;
+        eissn = 2177-0727
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = naturalia
+
+      au < exists ; 2003 ; 1 ; Naturalia Volume 2003 ; 2003 >
+      au < exists ; 2008 ; 2 ; Naturalia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Naturalia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Naturalia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Naturalia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Naturalia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Naturalia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = OLAM: Ciência e Tecnologia ;
+        eissn = 1982-7784
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = olam
+
+      au < exists ; 2001 ; 1 ; OLAM: Ciência e Tecnologia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; OLAM: Ciência e Tecnologia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; OLAM: Ciência e Tecnologia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; OLAM: Ciência e Tecnologia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; OLAM: Ciência e Tecnologia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; OLAM: Ciência e Tecnologia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; OLAM: Ciência e Tecnologia Volume 2007 ; 2007 >
+      au < exists ; 2011 ; 8 ; OLAM: Ciência e Tecnologia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 9 ; OLAM: Ciência e Tecnologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; OLAM: Ciência e Tecnologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pesquisa em Educação Ambiental ;
+        issn = 2177-580X
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
+      param[journal_id] = pesquisa
+
+      au < exists ; 2006 ; 1 ; Pesquisa em Educação Ambiental Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Pesquisa em Educação Ambiental Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Pesquisa em Educação Ambiental Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Pesquisa em Educação Ambiental Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Pesquisa em Educação Ambiental Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Pesquisa em Educação Ambiental Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Pesquisa em Educação Ambiental Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Pesquisa em Educação Ambiental Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Aurora ;
+        eissn = 1982-2004
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = aurora
+
+      au < exists ; 2007 ; 1 ; Revista Aurora Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Aurora Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Aurora Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Aurora Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista Aurora Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista Aurora Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Aurora Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Baleia na Rede: estudos em arte e sociedade ;
+        eissn = 1808-8473
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = baleianarede
+
+      au < exists ; 2003 ; 1 ; Baleia na Rede: estudos em arte e sociedade Volume 2003 ; 2003 >
+      au < exists ; 2005 ; 2 ; Baleia na Rede: estudos em arte e sociedade Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Baleia na Rede: estudos em arte e sociedade Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Baleia na Rede: estudos em arte e sociedade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Baleia na Rede: estudos em arte e sociedade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Baleia na Rede: estudos em arte e sociedade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Baleia na Rede: estudos em arte e sociedade Volume 2010 ; 2010 >
+      au < exists ; 2012 ; 8 ; Baleia na Rede: estudos em arte e sociedade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Baleia na Rede: estudos em arte e sociedade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Journal of International Relations ;
+        eissn = 2237-7743
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = bjir
+
+      au < exists ; 2012 ; 1 ; Brazilian Journal of International Relations Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Brazilian Journal of International Relations Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Journal of Information Science ;
+        eissn = 1981-1640
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = bjis
+
+      au < exists ; 2006 ; 1 ; Brazilian Journal of Information Science Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Brazilian Journal of Information Science Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Brazilian Journal of Information Science Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Brazilian Journal of Information Science Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Brazilian Journal of Information Science Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Brazilian Journal of Information Science Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Brazilian Journal of Information Science Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Brazilian Journal of Information Science Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos CEDEM ;
+        eissn = 2236-0247
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = cedem
+
+      au < exists ; 2008 ; 1 ; Cadernos CEDEM Volume 2008 ; 2008 >
+      au < exists ; 2011 ; 2 ; Cadernos CEDEM Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Cadernos CEDEM Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Cadernos CEDEM Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação em Revista ;
+        issn = 1518-7926 ;
+        eissn = 2236-5192
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = educacaoemrevista
+
+      au < exists ; 2001 ; 1 ; Educação em Revista Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Educação em Revista Volume 2002 ; 2002 >
+      au < exists ; 2004 ; 3 ; Educação em Revista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Educação em Revista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Educação em Revista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Educação em Revista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Educação em Revista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Educação em Revista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Educação em Revista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Educação em Revista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Educação em Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Educação em Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = LEVS-Revista do Laboratório de Estudos da Violência e Segurança ;
+        eissn = 1983-2192
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = levs
+
+      au < exists ; 2008 ; 1 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Novos Rumos ;
+        eissn = 0102-5864
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = novosrumos
+
+      au < exists ; 2012 ; 1 ; Revista Novos Rumos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Novos Rumos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista ORG & DEMO ;
+        eissn = 2238-5703
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = orgdemo
+
+      au < exists ; 2000 ; 1 ; Revista ORG & DEMO Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista ORG & DEMO Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista ORG & DEMO Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista ORG & DEMO Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista ORG & DEMO Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista ORG & DEMO Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista ORG & DEMO Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista ORG & DEMO Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista ORG & DEMO Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista ORG & DEMO Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista ORG & DEMO Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista ORG & DEMO Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista ORG & DEMO Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista ORG & DEMO Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Informação e Cognição ;
+        eissn = 1807-8281
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = reic
+
+      au < exists ; 1999 ; 1 ; Revista Eletrônica Informação e Cognição Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Revista Eletrônica Informação e Cognição Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Revista Eletrônica Informação e Cognição Volume 2001 ; 2001 >
+      au < exists ; 2005 ; 4 ; Revista Eletrônica Informação e Cognição Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Eletrônica Informação e Cognição Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Eletrônica Informação e Cognição Volume 2007 ; 2007 >
+      au < expected ; 2008 ; 7 ; Revista Eletrônica Informação e Cognição Volume 2008 ; 2008 >
+      au < expected ; 2009 ; 8 ; Revista Eletrônica Informação e Cognição Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 9 ; Revista Eletrônica Informação e Cognição Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 10 ; Revista Eletrônica Informação e Cognição Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 11 ; Revista Eletrônica Informação e Cognição Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Eletrônica Informação e Cognição Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Iniciação Científica da FFC ;
+        eissn = 1415-8612
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = ric
+
+      au < exists ; 2004 ; 1 ; Revista de Iniciação Científica da FFC Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista de Iniciação Científica da FFC Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista de Iniciação Científica da FFC Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista de Iniciação Científica da FFC Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista de Iniciação Científica da FFC Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista de Iniciação Científica da FFC Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista de Iniciação Científica da FFC Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista de Iniciação Científica da FFC Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista de Iniciação Científica da FFC Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Revista de Iniciação Científica da FFC Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Schème: Revista Eletrônica de Psicologia e Epistemologia Genéticas ;
+        eissn = 1984-1655
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = scheme
+
+      au < exists ; 2012 ; 1 ; Schème: Revista Eletrônica de Psicologia e Epistemologia Genéticas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Schème: Revista Eletrônica de Psicologia e Epistemologia Genéticas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Trans/Form/Ação ;
+        eissn = 0101-3173
+      >
+
+      comment[publisher] = Universidade Estadual Paulista
+      param[base_url] = http://www2.marilia.unesp.br/
+      param[journal_id] = transformacao
+
+      au < exists ; 1997 ; 1 ; Trans/Form/Ação Volume 1997 ; 1997 >
+      au < exists ; 1999 ; 2 ; Trans/Form/Ação Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Trans/Form/Ação Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Trans/Form/Ação Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Trans/Form/Ação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Trans/Form/Ação Volume 2003 ; 2003 >
+      au < expected ; 2013 ; 7 ; Trans/Form/Ação Volume 2013 ; 2013 >
+
+  }
+
+}

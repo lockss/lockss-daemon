@@ -1,0 +1,51 @@
+{
+  publisher <
+    name = Universidade Federal de Juiz de Fora
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Revista de APS ;
+        issn = 1809-8363
+      >
+
+      comment[publisher] = Universidade Federal de Juiz de Fora
+      param[base_url] = http://www.aps.ufjf.br/
+      param[journal_id] = aps
+
+      au < exists ; 2008 ; 1 ; Revista de APS Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista de APS Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista de APS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista de APS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista de APS Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista de APS Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = HURevista ;
+        issn = 1982-8047
+      >
+
+      comment[publisher] = Universidade Federal de Juiz de Fora
+      param[base_url] = http://www.aps.ufjf.br/
+      param[journal_id] = hurevista
+
+      au < exists ; 2006 ; 1 ; HURevista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; HURevista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; HURevista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; HURevista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; HURevista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; HURevista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; HURevista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; HURevista Volume 2013 ; 2013 >
+
+  }
+
+}

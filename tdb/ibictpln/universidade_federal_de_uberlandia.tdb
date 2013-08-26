@@ -1,0 +1,687 @@
+{
+  publisher <
+    name = Universidade Federal de Uberlândia
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Artcultura ;
+        issn = 1516-8603 ;
+        eissn = 2178-3845
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = artcultura
+
+      au < exists ; 2004 ; 1 ; Artcultura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Artcultura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Artcultura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Artcultura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Artcultura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Artcultura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Artcultura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Artcultura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Artcultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Artcultura Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Bioscience Journal ;
+        issn = 1516-3725 ;
+        eissn = 1981-3163
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = biosciencejournal
+
+      au < exists ; 2001 ; 1 ; Bioscience Journal Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Bioscience Journal Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Bioscience Journal Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Bioscience Journal Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Bioscience Journal Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Bioscience Journal Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Bioscience Journal Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Bioscience Journal Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Bioscience Journal Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Bioscience Journal Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Bioscience Journal Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Bioscience Journal Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Bioscience Journal Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Brazilian Geographical Journal: Geosciences and Humanities  research medium ;
+        issn = 2179-2321
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = braziliangeojournal
+
+      au < exists ; 2010 ; 1 ; Brazilian Geographical Journal: Geosciences and Humanities  research medium Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Brazilian Geographical Journal: Geosciences and Humanities  research medium Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Brazilian Geographical Journal: Geosciences and Humanities  research medium Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Brazilian Geographical Journal: Geosciences and Humanities  research medium Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de História ;
+        eissn = 1981-3104
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = cadernoshistoria
+
+      au < exists ; 2005 ; 1 ; Cadernos de História Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Cadernos de História Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Cadernos de História Volume 2007 ; 2007 >
+      au < expected ; 2008 ; 4 ; Cadernos de História Volume 2008 ; 2008 >
+      au < expected ; 2009 ; 5 ; Cadernos de História Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 6 ; Cadernos de História Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 7 ; Cadernos de História Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Cadernos de História Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Cadernos de História Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Caminhos de Geografia ;
+        issn = 1678-6343
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = caminhosdegeografia
+
+      au < exists ; 2007 ; 1 ; Caminhos de Geografia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Caminhos de Geografia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Caminhos de Geografia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Caminhos de Geografia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Caminhos de Geografia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Caminhos de Geografia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Caminhos de Geografia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Campo-Território: Revista de Geografia Agrária ;
+        issn = 1809-6271
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = campoterritorio
+
+      au < exists ; 2006 ; 1 ; Campo-Território: Revista de Geografia Agrária Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Campo-Território: Revista de Geografia Agrária Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Campo-Território: Revista de Geografia Agrária Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Campo-Território: Revista de Geografia Agrária Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Campo-Território: Revista de Geografia Agrária Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Campo-Território: Revista de Geografia Agrária Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Campo-Território: Revista de Geografia Agrária Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Campo-Território: Revista de Geografia Agrária Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Pesquisa do CDHIS ;
+        issn = 1518-7640 ;
+        eissn = 1981-3090
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = cdhis
+
+      au < exists ; 2010 ; 1 ; Cadernos de Pesquisa do CDHIS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Cadernos de Pesquisa do CDHIS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Cadernos de Pesquisa do CDHIS Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Cadernos de Pesquisa do CDHIS Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de História da Educação ;
+        issn = 1807-3859 ;
+        eissn = 1982-7806
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = che
+
+      au < exists ; 2002 ; 1 ; Cadernos de História da Educação Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Cadernos de História da Educação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Cadernos de História da Educação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Cadernos de História da Educação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Cadernos de História da Educação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Cadernos de História da Educação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Cadernos de História da Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Cadernos de História da Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Cadernos de História da Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Cadernos de História da Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Cadernos de História da Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Cadernos de História da Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ciência & Engenharia ;
+        issn = 0103-944X ;
+        eissn = 1983-4071
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = cieng
+
+      au < exists ; 2005 ; 1 ; Ciência & Engenharia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Ciência & Engenharia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Ciência & Engenharia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Ciência & Engenharia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Ciência & Engenharia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Ciência & Engenharia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Ciência & Engenharia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Ciência & Engenharia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Ciência & Engenharia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Crítica e Sociedade ;
+        issn = 2237-0579
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = criticasociedade
+
+      au < exists ; 2011 ; 1 ; Revista Crítica e Sociedade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Crítica e Sociedade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Crítica e Sociedade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Diversa Prática ;
+        issn = 2317-0751
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = diversapratica
+
+      au < exists ; 2012 ; 1 ; Diversa Prática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Diversa Prática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Domínios de Linguagem ;
+        issn = 1980-5799
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = dominiosdelinguagem
+
+      au < exists ; 2007 ; 1 ; Domínios de Linguagem Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Domínios de Linguagem Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Domínios de Linguagem Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Domínios de Linguagem Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Domínios de Linguagem Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Domínios de Linguagem Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Domínios de Linguagem Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação e Filosofia ;
+        issn = 0102-6801 ;
+        eissn = 1982-596X
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = EducacaoFilosofia
+
+      au < exists ; 1986 ; 1 ; Educação e Filosofia Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 2 ; Educação e Filosofia Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 3 ; Educação e Filosofia Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 4 ; Educação e Filosofia Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 5 ; Educação e Filosofia Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 6 ; Educação e Filosofia Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 7 ; Educação e Filosofia Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 8 ; Educação e Filosofia Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 9 ; Educação e Filosofia Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 10 ; Educação e Filosofia Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 11 ; Educação e Filosofia Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 12 ; Educação e Filosofia Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 13 ; Educação e Filosofia Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 14 ; Educação e Filosofia Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 15 ; Educação e Filosofia Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 16 ; Educação e Filosofia Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 17 ; Educação e Filosofia Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 18 ; Educação e Filosofia Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 19 ; Educação e Filosofia Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 20 ; Educação e Filosofia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 21 ; Educação e Filosofia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 22 ; Educação e Filosofia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 23 ; Educação e Filosofia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 24 ; Educação e Filosofia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 25 ; Educação e Filosofia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 26 ; Educação e Filosofia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 27 ; Educação e Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 28 ; Educação e Filosofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ensino em Re-Vista ;
+        eissn = 1983-1730
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = emrevista
+
+      au < exists ; 1992 ; 1 ; Ensino em Re-Vista Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 2 ; Ensino em Re-Vista Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 3 ; Ensino em Re-Vista Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 4 ; Ensino em Re-Vista Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 5 ; Ensino em Re-Vista Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 6 ; Ensino em Re-Vista Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 7 ; Ensino em Re-Vista Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 8 ; Ensino em Re-Vista Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 9 ; Ensino em Re-Vista Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 10 ; Ensino em Re-Vista Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 11 ; Ensino em Re-Vista Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 12 ; Ensino em Re-Vista Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 13 ; Ensino em Re-Vista Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 14 ; Ensino em Re-Vista Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 15 ; Ensino em Re-Vista Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 16 ; Ensino em Re-Vista Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 17 ; Ensino em Re-Vista Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 18 ; Ensino em Re-Vista Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 19 ; Ensino em Re-Vista Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 20 ; Ensino em Re-Vista Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 21 ; Ensino em Re-Vista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 22 ; Ensino em Re-Vista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista História & Perspectivas ;
+        eissn = 2176-4352
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = historiaperspectivas
+
+      au < exists ; 1991 ; 1 ; Revista História & Perspectivas Volume 1991 ; 1991 >
+      au < exists ; 2003 ; 2 ; Revista História & Perspectivas Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista História & Perspectivas Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista História & Perspectivas Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista História & Perspectivas Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista História & Perspectivas Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista História & Perspectivas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista História & Perspectivas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista História & Perspectivas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista História & Perspectivas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista História & Perspectivas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista História & Perspectivas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Horizonte Científico ;
+        issn = 1808-3064
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = horizontecientifico
+
+      au < exists ; 2007 ; 1 ; Horizonte Científico Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Horizonte Científico Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Horizonte Científico Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Horizonte Científico Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Horizonte Científico Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Horizonte Científico Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Horizonte Científico Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Hygeia ;
+        issn = 1980-1726
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = hygeia
+
+      au < exists ; 2005 ; 1 ; Hygeia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Hygeia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Hygeia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Hygeia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Hygeia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Hygeia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Hygeia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Hygeia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Hygeia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Biosafety and Biosecurity ;
+        issn = 2179-5096
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = intbiosafetybiosecurity
+
+      au < exists ; 2010 ; 1 ; International Journal of Biosafety and Biosecurity Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; International Journal of Biosafety and Biosecurity Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; International Journal of Biosafety and Biosecurity Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; International Journal of Biosafety and Biosecurity Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Caderno Espaço Feminino ;
+        issn = 1516-9286 ;
+        eissn = 1981-3982
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = neguem
+
+      au < exists ; 1994 ; 1 ; Caderno Espaço Feminino Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 2 ; Caderno Espaço Feminino Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 3 ; Caderno Espaço Feminino Volume 1996 ; 1996 >
+      au < exists ; 1998 ; 5 ; Caderno Espaço Feminino Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 6 ; Caderno Espaço Feminino Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 7 ; Caderno Espaço Feminino Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 8 ; Caderno Espaço Feminino Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 9 ; Caderno Espaço Feminino Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 10 ; Caderno Espaço Feminino Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 11 ; Caderno Espaço Feminino Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 12 ; Caderno Espaço Feminino Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 13 ; Caderno Espaço Feminino Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 14 ; Caderno Espaço Feminino Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 15 ; Caderno Espaço Feminino Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 16 ; Caderno Espaço Feminino Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 17 ; Caderno Espaço Feminino Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 18 ; Caderno Espaço Feminino Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 19 ; Caderno Espaço Feminino Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 20 ; Caderno Espaço Feminino Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Olhares & Trilhas ;
+        issn = 1518-2851 ;
+        eissn = 1983-3857
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = olharesetrilhas
+
+      au < exists ; 2000 ; 1 ; Olhares & Trilhas Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Olhares & Trilhas Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Olhares & Trilhas Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Olhares & Trilhas Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Olhares & Trilhas Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Olhares & Trilhas Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Olhares & Trilhas Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Olhares & Trilhas Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Olhares & Trilhas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Olhares & Trilhas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Olhares & Trilhas Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 12 ; Olhares & Trilhas Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 13 ; Olhares & Trilhas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Olhares & Trilhas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = ouvirOUver ;
+        issn = 1983-1005
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = ouvirouver
+
+      au < exists ; 2005 ; 1 ; ouvirOUver Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; ouvirOUver Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; ouvirOUver Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; ouvirOUver Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; ouvirOUver Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; ouvirOUver Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; ouvirOUver Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; ouvirOUver Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; ouvirOUver Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Educação Popular ;
+        issn = 1982-7660
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = reveducpop
+
+      au < exists ; 2002 ; 1 ; Revista de Educação Popular Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista de Educação Popular Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista de Educação Popular Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista de Educação Popular Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista de Educação Popular Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista de Educação Popular Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista de Educação Popular Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista de Educação Popular Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista de Educação Popular Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista de Educação Popular Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista de Educação Popular Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista de Educação Popular Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Em Extensão ;
+        issn = 1982-7687
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = revextensao
+
+      au < exists ; 1999 ; 1 ; Em Extensão Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Em Extensão Volume 2000 ; 2000 >
+      au < exists ; 2004 ; 6 ; Em Extensão Volume 2004 ; 2004 >
+      au < exists ; 2006 ; 8 ; Em Extensão Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Em Extensão Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Em Extensão Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Em Extensão Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Em Extensão Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Em Extensão Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Em Extensão Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Em Extensão Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Economia Ensaios ;
+        issn = 1983-1944
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = revistaeconomiaensaios
+
+      au < exists ; 2000 ; 1 ; Revista Economia Ensaios Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Revista Economia Ensaios Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Revista Economia Ensaios Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Revista Economia Ensaios Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Revista Economia Ensaios Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Revista Economia Ensaios Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Revista Economia Ensaios Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Revista Economia Ensaios Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Revista Economia Ensaios Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Revista Economia Ensaios Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Revista Economia Ensaios Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Revista Economia Ensaios Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Revista Economia Ensaios Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Revista Economia Ensaios Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Educação e Políticas em Debate ;
+        issn = 2238-8346
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = revistaeducaopoliticas
+
+      au < exists ; 2012 ; 1 ; Revista Educação e Políticas em Debate Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Educação e Políticas em Debate Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista da Faculdade de Direito ;
+        issn = 2178-0498
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = revistafadir
+
+      au < exists ; 2006 ; 1 ; Revista da Faculdade de Direito Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista da Faculdade de Direito Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista da Faculdade de Direito Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista da Faculdade de Direito Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista da Faculdade de Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista da Faculdade de Direito Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista da Faculdade de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista da Faculdade de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Sociedade & Natureza ;
+        issn = 1982-4513
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = sociedadenatureza
+
+      au < exists ; 2004 ; 1 ; Revista Sociedade & Natureza Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Revista Sociedade & Natureza Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Revista Sociedade & Natureza Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Revista Sociedade & Natureza Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Revista Sociedade & Natureza Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Revista Sociedade & Natureza Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Revista Sociedade & Natureza Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Revista Sociedade & Natureza Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Revista Sociedade & Natureza Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Revista Sociedade & Natureza Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Veterinária Notícias ;
+        issn = 1983-0777
+      >
+
+      comment[publisher] = Universidade Federal de Uberlândia
+      param[base_url] = http://www.seer.ufu.br/
+      param[journal_id] = vetnot
+
+      au < exists ; 2005 ; 1 ; Veterinária Notícias Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Veterinária Notícias Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Veterinária Notícias Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Veterinária Notícias Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Veterinária Notícias Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Veterinária Notícias Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Veterinária Notícias Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Veterinária Notícias Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Veterinária Notícias Volume 2013 ; 2013 >
+
+  }
+
+}

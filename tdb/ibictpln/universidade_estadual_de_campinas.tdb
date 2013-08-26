@@ -82,4 +82,120 @@
 
   }
 
+  {
+
+      title <
+        name = Ciências em Foco ;
+        issn = 2178-1826
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas
+      param[base_url] = http://www.fae.unicamp.br/
+      param[journal_id] = cef
+
+      au < exists ; 2008 ; 1 ; Ciências em Foco Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Ciências em Foco Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Ciências em Foco Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Ciências em Foco Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Ciências em Foco Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Ciências em Foco Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Educação Temática Digital ;
+        issn = 1676-2592
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas
+      param[base_url] = http://www.fae.unicamp.br/
+      param[journal_id] = etd
+
+      au < exists ; 2005 ; 1 ; Educação Temática Digital Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Educação Temática Digital Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Educação Temática Digital Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Educação Temática Digital Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Educação Temática Digital Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Educação Temática Digital Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Educação Temática Digital Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Educação Temática Digital Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Educação Temática Digital Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista HISTEDBR On-line ;
+        eissn = 1676-2584
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas
+      param[base_url] = http://www.fae.unicamp.br/
+      param[journal_id] = histedbr
+
+      au < exists ; 2009 ; 1 ; Revista HISTEDBR On-line Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista HISTEDBR On-line Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista HISTEDBR On-line Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista HISTEDBR On-line Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista HISTEDBR On-line Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Filosofia e Educação ;
+        issn = 1984-9605
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas
+      param[base_url] = http://www.fae.unicamp.br/
+      param[journal_id] = rfe
+
+      au < exists ; 2009 ; 1 ; Filosofia e Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Filosofia e Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Filosofia e Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Filosofia e Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Filosofia e Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Zetetiké: Revista de Educação Matemática ;
+        issn = 2176-1744
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas
+      param[base_url] = http://www.fae.unicamp.br/
+      param[journal_id] = zetetike
+
+      au < exists ; 1993 ; 1 ; Revista Zetetiké: Revista de Educação Matemática Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 2 ; Revista Zetetiké: Revista de Educação Matemática Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 3 ; Revista Zetetiké: Revista de Educação Matemática Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 4 ; Revista Zetetiké: Revista de Educação Matemática Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 5 ; Revista Zetetiké: Revista de Educação Matemática Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 6 ; Revista Zetetiké: Revista de Educação Matemática Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 7 ; Revista Zetetiké: Revista de Educação Matemática Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 8 ; Revista Zetetiké: Revista de Educação Matemática Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 9 ; Revista Zetetiké: Revista de Educação Matemática Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 10 ; Revista Zetetiké: Revista de Educação Matemática Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 11 ; Revista Zetetiké: Revista de Educação Matemática Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 12 ; Revista Zetetiké: Revista de Educação Matemática Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 13 ; Revista Zetetiké: Revista de Educação Matemática Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 14 ; Revista Zetetiké: Revista de Educação Matemática Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 15 ; Revista Zetetiké: Revista de Educação Matemática Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 16 ; Revista Zetetiké: Revista de Educação Matemática Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 17 ; Revista Zetetiké: Revista de Educação Matemática Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 18 ; Revista Zetetiké: Revista de Educação Matemática Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 19 ; Revista Zetetiké: Revista de Educação Matemática Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 20 ; Revista Zetetiké: Revista de Educação Matemática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 21 ; Revista Zetetiké: Revista de Educação Matemática Volume 2013 ; 2013 >
+
+  }
+
 }

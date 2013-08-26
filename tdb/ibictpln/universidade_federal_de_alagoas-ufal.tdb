@@ -1,0 +1,138 @@
+{
+  publisher <
+    name = Universidade Federal de Alagoas-UFAL
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Debates em Educação ;
+        issn = 2175-6600
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = debateseducacao
+
+      au < exists ; 2009 ; 1 ; Debates em Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Debates em Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Debates em Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Debates em Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Debates em Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Extensão em Debate ;
+        issn = 2236-5842
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = extensaoemdebate
+
+      au < exists ; 2010 ; 1 ; Revista Extensão em Debate Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 2 ; Revista Extensão em Debate Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; Revista Extensão em Debate Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Extensão em Debate Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica Ecnomia Política do Desenvolvimento  ;
+        issn = 1984-0756
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = repb
+
+      au < exists ; 2008 ; 1 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Eletrônica Ecnomia Política do Desenvolvimento  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ciência Agrícola ;
+        issn = 0103-8699
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = revistacienciaagricola
+
+      au < exists ; 1991 ; 1 ; Revista Ciência Agrícola Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 2 ; Revista Ciência Agrícola Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 3 ; Revista Ciência Agrícola Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 4 ; Revista Ciência Agrícola Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 5 ; Revista Ciência Agrícola Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 6 ; Revista Ciência Agrícola Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 7 ; Revista Ciência Agrícola Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 8 ; Revista Ciência Agrícola Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 9 ; Revista Ciência Agrícola Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 10 ; Revista Ciência Agrícola Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 11 ; Revista Ciência Agrícola Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 12 ; Revista Ciência Agrícola Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 13 ; Revista Ciência Agrícola Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 14 ; Revista Ciência Agrícola Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 15 ; Revista Ciência Agrícola Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 16 ; Revista Ciência Agrícola Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 17 ; Revista Ciência Agrícola Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 18 ; Revista Ciência Agrícola Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 19 ; Revista Ciência Agrícola Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 20 ; Revista Ciência Agrícola Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 21 ; Revista Ciência Agrícola Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 22 ; Revista Ciência Agrícola Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 23 ; Revista Ciência Agrícola Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Iberoamericana de Turismo-RITUR ;
+        issn = 2236-6040
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = ritur
+
+      au < exists ; 2011 ; 1 ; Revista Iberoamericana de Turismo-RITUR Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Iberoamericana de Turismo-RITUR Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Iberoamericana de Turismo-RITUR Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Eletrônica do Mestrado em Direito ;
+        issn = 2237-2261
+      >
+
+      comment[publisher] = Universidade Federal de Alagoas-UFAL
+      param[base_url] = http://www.seer.ufal.br/
+      param[journal_id] = rmdufal
+
+      au < exists ; 2010 ; 1 ; Revista Eletrônica do Mestrado em Direito Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 2 ; Revista Eletrônica do Mestrado em Direito Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 3 ; Revista Eletrônica do Mestrado em Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Eletrônica do Mestrado em Direito Volume 2013 ; 2013 >
+
+  }
+
+}

@@ -1,0 +1,83 @@
+{
+  publisher <
+    name = Universidade Estadual de Campinas, Instituto de Estudos da Linguagem
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Liames-Línguas Indígenas e Americanas ;
+        issn = 1678-0531 ;
+        eissn = 2177-7160
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas, Instituto de Estudos da Linguagem
+      param[base_url] = http://www.iel.unicamp.br/revista/
+      param[journal_id] = liames
+
+      au < exists ; 2001 ; 1 ; Liames-Línguas Indígenas e Americanas Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Liames-Línguas Indígenas e Americanas Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Liames-Línguas Indígenas e Americanas Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Liames-Línguas Indígenas e Americanas Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Liames-Línguas Indígenas e Americanas Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Liames-Línguas Indígenas e Americanas Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Liames-Línguas Indígenas e Americanas Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Liames-Línguas Indígenas e Americanas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Liames-Línguas Indígenas e Americanas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Liames-Línguas Indígenas e Americanas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Liames-Línguas Indígenas e Americanas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Liames-Línguas Indígenas e Americanas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Liames-Línguas Indígenas e Americanas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Remate de Males ;
+        issn = 0103-183X
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas, Instituto de Estudos da Linguagem
+      param[base_url] = http://www.iel.unicamp.br/revista/
+      param[journal_id] = remate
+
+      au < exists ; 1980 ; 1 ; Remate de Males Volume 1980 ; 1980 >
+      au < exists ; 1983 ; 2 ; Remate de Males Volume 1983 ; 1983 >
+      au < exists ; 1984 ; 3 ; Remate de Males Volume 1984 ; 1984 >
+      au < exists ; 1985 ; 4 ; Remate de Males Volume 1985 ; 1985 >
+      au < exists ; 1986 ; 5 ; Remate de Males Volume 1986 ; 1986 >
+      au < exists ; 1987 ; 6 ; Remate de Males Volume 1987 ; 1987 >
+      au < exists ; 1988 ; 7 ; Remate de Males Volume 1988 ; 1988 >
+      au < exists ; 1989 ; 8 ; Remate de Males Volume 1989 ; 1989 >
+      au < exists ; 1990 ; 9 ; Remate de Males Volume 1990 ; 1990 >
+      au < exists ; 1991 ; 10 ; Remate de Males Volume 1991 ; 1991 >
+      au < exists ; 1992 ; 11 ; Remate de Males Volume 1992 ; 1992 >
+      au < exists ; 1993 ; 12 ; Remate de Males Volume 1993 ; 1993 >
+      au < exists ; 1994 ; 13 ; Remate de Males Volume 1994 ; 1994 >
+      au < exists ; 1995 ; 14 ; Remate de Males Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 15 ; Remate de Males Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 16 ; Remate de Males Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 17 ; Remate de Males Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 18 ; Remate de Males Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 19 ; Remate de Males Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 20 ; Remate de Males Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 21 ; Remate de Males Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 22 ; Remate de Males Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 23 ; Remate de Males Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 24 ; Remate de Males Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 25 ; Remate de Males Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 26 ; Remate de Males Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 27 ; Remate de Males Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 28 ; Remate de Males Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 29 ; Remate de Males Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 30 ; Remate de Males Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 31 ; Remate de Males Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 32 ; Remate de Males Volume 2013 ; 2013 >
+
+  }
+
+}
