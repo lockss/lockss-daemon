@@ -5400,13 +5400,15 @@
       eissn = 1879-0844 ;
       issnl = 1388-9842
     >
-
+    
+    comment[0] = moving to Wiley Blackwell 
+    
     {
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
+    au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 [to delete] ; 10 ; >
     au < zapped ; down ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
     }
@@ -5425,7 +5427,7 @@
     au < manifest ; exists ; 2005 ; European Journal of Heart Failure Volume 7 ; 7 ; >
     au < manifest ; exists ; 2006 ; European Journal of Heart Failure Volume 8 ; 8 ; >
     au < manifest ; exists ; 2007 ; European Journal of Heart Failure Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; European Journal of Heart Failure Volume 13 ; 13 ; >
