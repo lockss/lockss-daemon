@@ -1,0 +1,48 @@
+{
+  publisher <
+    name = Universidade Estadual de Campinas, Faculdade de Educação
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Ciências em Foco ;
+        eissn = 2178-1826
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas, Faculdade de Educação
+      param[base_url] = http://www.fae.unicamp.br/revista/
+      param[journal_id] = cef
+
+      au < exists ; 2008 ; 1 ; Ciências em Foco Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Ciências em Foco Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Ciências em Foco Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Ciências em Foco Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Ciências em Foco Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Ciências em Foco Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Filosofia e Educação ;
+        eissn = 1984-9605
+      >
+
+      comment[publisher] = Universidade Estadual de Campinas, Faculdade de Educação
+      param[base_url] = http://www.fae.unicamp.br/revista/
+      param[journal_id] = rfe
+
+      au < exists ; 2009 ; 1 ; Filosofia e Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Filosofia e Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Filosofia e Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Filosofia e Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Filosofia e Educação Volume 2013 ; 2013 >
+
+  }
+
+}

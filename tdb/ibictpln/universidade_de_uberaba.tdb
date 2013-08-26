@@ -1,0 +1,79 @@
+{
+  publisher <
+    name = Universidade de Uberaba
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Encontro de Pesquisa em Educação ;
+        issn = 2237-8022
+      >
+
+      comment[publisher] = Universidade de Uberaba
+      param[base_url] = http://revistas.uniube.br/
+      param[journal_id] = anais
+
+      au < exists ; 2003 ; 1 ; Encontro de Pesquisa em Educação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Encontro de Pesquisa em Educação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Encontro de Pesquisa em Educação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Encontro de Pesquisa em Educação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Encontro de Pesquisa em Educação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Encontro de Pesquisa em Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Encontro de Pesquisa em Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Encontro de Pesquisa em Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Encontro de Pesquisa em Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Encontro de Pesquisa em Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Encontro de Pesquisa em Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Jurídica Democracia, Direito & Cidadania ;
+        eissn = 2178-0226
+      >
+
+      comment[publisher] = Universidade de Uberaba
+      param[base_url] = http://revistas.uniube.br/
+      param[journal_id] = ddc
+
+      au < exists ; 2010 ; 1 ; Revista Jurídica Democracia, Direito & Cidadania Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Jurídica Democracia, Direito & Cidadania Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Jurídica Democracia, Direito & Cidadania Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Jurídica Democracia, Direito & Cidadania Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Profissão Docente Online ;
+        eissn = 1519-0919
+      >
+
+      comment[publisher] = Universidade de Uberaba
+      param[base_url] = http://revistas.uniube.br/
+      param[journal_id] = rpd
+
+      au < exists ; 2001 ; 1 ; Revista Profissão Docente Online Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista Profissão Docente Online Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista Profissão Docente Online Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista Profissão Docente Online Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista Profissão Docente Online Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista Profissão Docente Online Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista Profissão Docente Online Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista Profissão Docente Online Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista Profissão Docente Online Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista Profissão Docente Online Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista Profissão Docente Online Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista Profissão Docente Online Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Revista Profissão Docente Online Volume 2013 ; 2013 >
+
+  }
+
+}

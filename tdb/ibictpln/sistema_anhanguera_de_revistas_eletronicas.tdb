@@ -1,0 +1,258 @@
+{
+  publisher <
+    name = Sistema Anhanguera de Revistas Eletrônicas
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Anais do Seminário de Prod. Acadêmica da Anhanguera ;
+        issn = 2236-3696 ;
+        eissn = 2236-2258
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = ansem
+
+      au < exists ; 2010 ; 1 ; Anais do Seminário de Prod. Acadêmica da Anhanguera Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Anais do Seminário de Prod. Acadêmica da Anhanguera Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Anais do Seminário de Prod. Acadêmica da Anhanguera Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Anais do Seminário de Prod. Acadêmica da Anhanguera Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anuário da Produção Acadêmica Docente ;
+        issn = 1982-3169 ;
+        eissn = 2178-6860
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = anudo
+
+      au < exists ; 2007 ; 1 ; Anuário da Produção Acadêmica Docente Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Anuário da Produção Acadêmica Docente Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Anuário da Produção Acadêmica Docente Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Anuário da Produção Acadêmica Docente Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Anuário da Produção Acadêmica Docente Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Anuário da Produção Acadêmica Docente Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Anuário da Produção Acadêmica Docente Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anuário da Produção de Inic. Científica Discente ;
+        issn = 1517-6444 ;
+        eissn = 2178-6879
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = anuic
+
+      au < exists ; 2007 ; 1 ; Anuário da Produção de Inic. Científica Discente Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Anuário da Produção de Inic. Científica Discente Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Anuário da Produção de Inic. Científica Discente Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Anuário da Produção de Inic. Científica Discente Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Anuário da Produção de Inic. Científica Discente Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Anuário da Produção de Inic. Científica Discente Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Anuário da Produção de Inic. Científica Discente Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Anuário de Prod. Científica dos Cursos de Pós-Graduação ;
+        issn = 1980-0371 ;
+        eissn = 2178-6887
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = anupg
+
+      au < exists ; 2006 ; 1 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 6 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Anuário de Prod. Científica dos Cursos de Pós-Graduação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Ciências Exatas e Tecnologia ;
+        issn = 1980-1793 ;
+        eissn = 2178-6895
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rcext
+
+      au < exists ; 2006 ; 1 ; Revista de Ciências Exatas e Tecnologia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista de Ciências Exatas e Tecnologia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista de Ciências Exatas e Tecnologia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista de Ciências Exatas e Tecnologia Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 5 ; Revista de Ciências Exatas e Tecnologia Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 6 ; Revista de Ciências Exatas e Tecnologia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Revista de Ciências Exatas e Tecnologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista de Ciências Exatas e Tecnologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Ciências Gerenciais ;
+        issn = 1415-6571 ;
+        eissn = 2178-6909
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rcger
+
+      au < exists ; 2005 ; 1 ; Revista de Ciências Gerenciais Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Ciências Gerenciais Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Ciências Gerenciais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Ciências Gerenciais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Ciências Gerenciais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Ciências Gerenciais Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista de Ciências Gerenciais Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Revista de Ciências Gerenciais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Ciências Gerenciais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Direito ;
+        issn = 1415-658X ;
+        eissn = 2178-6917
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rdire
+
+      au < exists ; 2005 ; 1 ; Revista de Direito Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Direito Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Direito Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Direito Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Direito Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista de Direito Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Revista de Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Direito Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Educação ;
+        issn = 1415-7772 ;
+        eissn = 2178-6933
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = reduc
+
+      au < exists ; 2005 ; 1 ; Revista de Educação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista de Educação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista de Educação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista de Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista de Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista de Educação Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 7 ; Revista de Educação Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Revista de Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista de Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Encontro Revista de Psicologia ;
+        issn = 1676-5478 ;
+        eissn = 2178-6941
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rencp
+
+      au < exists ; 2007 ; 1 ; Encontro Revista de Psicologia Volume 2007 ; 2007 >
+      au < exists ; 2009 ; 2 ; Encontro Revista de Psicologia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Encontro Revista de Psicologia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Encontro Revista de Psicologia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Encontro Revista de Psicologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Encontro Revista de Psicologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ensaios e Ciência ;
+        issn = 1415-6938 ;
+        eissn = 2178-695X
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rensc
+
+      au < exists ; 2005 ; 1 ; Ensaios e Ciência Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Ensaios e Ciência Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Ensaios e Ciência Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Ensaios e Ciência Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Ensaios e Ciência Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Ensaios e Ciência Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Ensaios e Ciência Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Ensaios e Ciência Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Ensaios e Ciência Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Tradução & Comunicação ;
+        issn = 0101-2789 ;
+        eissn = 2178-6976
+      >
+
+      comment[publisher] = Sistema Anhanguera de Revistas Eletrônicas
+      param[base_url] = http://sare.anhanguera.com/
+      param[journal_id] = rtcom
+
+      au < exists ; 2006 ; 1 ; Tradução & Comunicação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Tradução & Comunicação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Tradução & Comunicação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Tradução & Comunicação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Tradução & Comunicação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Tradução & Comunicação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Tradução & Comunicação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Tradução & Comunicação Volume 2013 ; 2013 >
+
+  }
+
+}

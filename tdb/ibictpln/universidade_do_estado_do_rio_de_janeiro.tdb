@@ -90,4 +90,630 @@
 
   }
 
+  {
+
+      title <
+        name = Cadernos do IME: Série Informática ;
+        issn = 1413-9024 ;
+        eissn = 2317-2193
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = cadinf
+
+      au < exists ; 2002 ; 1 ; Cadernos do IME: Série Informática Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Cadernos do IME: Série Informática Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Cadernos do IME: Série Informática Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Cadernos do IME: Série Informática Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Cadernos do IME: Série Informática Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Cadernos do IME: Série Informática Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Cadernos do IME: Série Informática Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Cadernos do IME: Série Informática Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Cadernos do IME: Série Informática Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Cadernos do IME: Série Informática Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 11 ; Cadernos do IME: Série Informática Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Cadernos do IME: Série Informática Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = CERES: Nutrição & Saúde ;
+        issn = 1981-0881
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = ceres
+
+      au < exists ; 2006 ; 1 ; CERES: Nutrição & Saúde Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; CERES: Nutrição & Saúde Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; CERES: Nutrição & Saúde Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; CERES: Nutrição & Saúde Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; CERES: Nutrição & Saúde Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; CERES: Nutrição & Saúde Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; CERES: Nutrição & Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; CERES: Nutrição & Saúde Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Contemporânea ;
+        issn = 1806-0498
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = contemporanea
+
+      au < exists ; 2009 ; 1 ; Revista Contemporânea Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Contemporânea Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Contemporânea Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Contemporânea Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Contemporânea Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = DEMETRA: Alimentação, Nutrição & Saúde ;
+        eissn = 2238-913X
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = demetra
+
+      au < exists ; 2012 ; 1 ; DEMETRA: Alimentação, Nutrição & Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; DEMETRA: Alimentação, Nutrição & Saúde Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Ekstasis: Revista de Hermenêutica e Fenomenologia ;
+        eissn = 2336-4786
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = Ekstasis
+
+      au < exists ; 2012 ; 1 ; Ekstasis: Revista de Hermenêutica e Fenomenologia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Ekstasis: Revista de Hermenêutica e Fenomenologia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Enfermagem UERJ ;
+        issn = 0104-3552
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = enfermagemuerj
+
+      au < exists ; 2012 ; 1 ; Revista Enfermagem UERJ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Enfermagem UERJ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Espaço e Cultura ;
+        eissn = 2317-4161
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = espacoecultura
+
+      au < exists ; 1995 ; 1 ; Espaço e Cultura Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 2 ; Espaço e Cultura Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 3 ; Espaço e Cultura Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 4 ; Espaço e Cultura Volume 1998 ; 1998 >
+      au < exists ; 2005 ; 5 ; Espaço e Cultura Volume 2005 ; 2005 >
+      au < exists ; 2007 ; 6 ; Espaço e Cultura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Espaço e Cultura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Espaço e Cultura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Espaço e Cultura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Espaço e Cultura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Espaço e Cultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Espaço e Cultura Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Geo UERJ ;
+        issn = 1415-7543 ;
+        eissn = 1981-9021
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = geouerj
+
+      au < exists ; 1997 ; 1 ; Geo UERJ Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 2 ; Geo UERJ Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 3 ; Geo UERJ Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 4 ; Geo UERJ Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 5 ; Geo UERJ Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 6 ; Geo UERJ Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 7 ; Geo UERJ Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 8 ; Geo UERJ Volume 2004 ; 2004 >
+      au < exists ; 2007 ; 9 ; Geo UERJ Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Geo UERJ Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Geo UERJ Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Geo UERJ Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Geo UERJ Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Geo UERJ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Geo UERJ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Interagir: Pensando a Extensão ;
+        issn = 1519-8847
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = interagir
+
+      au < exists ; 2006 ; 1 ; Interagir: Pensando a Extensão Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Interagir: Pensando a Extensão Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Interagir: Pensando a Extensão Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Interagir: Pensando a Extensão Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Interagir: Pensando a Extensão Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Interagir: Pensando a Extensão Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Interagir: Pensando a Extensão Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Interagir: Pensando a Extensão Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Interseções: Revista de Estudos Interdisciplinares ;
+        eissn = 2317-1456
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = intersecoes
+
+      au < exists ; 2010 ; 1 ; Interseções: Revista de Estudos Interdisciplinares Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Interseções: Revista de Estudos Interdisciplinares Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Interseções: Revista de Estudos Interdisciplinares Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Interseções: Revista de Estudos Interdisciplinares Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Intratextos ;
+        issn = 2176-6789
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = intratextos
+
+      au < exists ; 2009 ; 1 ; Revista Intratextos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Intratextos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Intratextos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Intratextos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Intratextos Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Logos: Comunicação e Universidade ;
+        issn = 0104-9933 ;
+        eissn = 1982-2391
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = logos
+
+      au < exists ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Logos: Comunicação e Universidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Mural Internacional ;
+        issn = 2177-7314
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = muralinternacional
+
+      au < exists ; 2010 ; 1 ; Mural Internacional Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Mural Internacional Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Mural Internacional Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Mural Internacional Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista NEIBA: Cadernos Argentina-Brasil ;
+        issn = 2317-3459
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = neiba
+
+      au < exists ; 2012 ; 1 ; Revista NEIBA: Cadernos Argentina-Brasil Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista NEIBA: Cadernos Argentina-Brasil Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = História, Natureza e Espaço ;
+        eissn = 2317-8361
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = niesbf
+
+      au < exists ; 2012 ; 1 ; História, Natureza e Espaço Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; História, Natureza e Espaço Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pensares em Revista ;
+        eissn = 2317-2215
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = pensaresemrevista
+
+      au < exists ; 2012 ; 1 ; Pensares em Revista Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Pensares em Revista Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Periferia ;
+        issn = 1984-9540
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = periferia
+
+      au < exists ; 2009 ; 1 ; Periferia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Periferia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Periferia Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 4 ; Periferia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Periferia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Polêmica ;
+        eissn = 1676-0727
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = polemica
+
+      au < exists ; 2006 ; 1 ; Polêmica Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Polêmica Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Polêmica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Polêmica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Polêmica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Polêmica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Polêmica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Polêmica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Psicologia  e Saber Social ;
+        issn = 2238-779X
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = psi-sabersocial
+
+      au < exists ; 2012 ; 1 ; Psicologia  e Saber Social Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Psicologia  e Saber Social Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Direito do Petróleo, Gás e Energia ;
+        issn = 2317-5583
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = rbdp
+
+      au < exists ; 2006 ; 1 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 6 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 7 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Contabilidade do Mestrado em Ciências Contábeis ;
+        eissn = 1984-3291
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = rcmccuerj
+
+      au < exists ; 1996 ; 1 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 1997 ; 1997 >
+      au < exists ; 1998 ; 3 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 4 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 1999 ; 1999 >
+      au < exists ; 2003 ; 5 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista de Contabilidade do Mestrado em Ciências Contábeis Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Direito e Práxis ;
+        issn = 2179-8966
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = revistaceaju
+
+      au < exists ; 2010 ; 1 ; Revista Direito e Práxis Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Direito e Práxis Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Direito e Práxis Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Direito e Práxis Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista em Pauta ;
+        issn = 1414-8609 ;
+        eissn = 2238-3786
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = revistaempauta
+
+      au < exists ; 2007 ; 1 ; Revista em Pauta Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista em Pauta Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista em Pauta Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista em Pauta Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista em Pauta Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista em Pauta Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista em Pauta Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Italiano UERJ ;
+        issn = 2236-4064
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = revistaitalianouerj
+
+      au < exists ; 2010 ; 1 ; Revista Italiano UERJ Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Italiano UERJ Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Italiano UERJ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Italiano UERJ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista da Faculdade de Direito da UERJ ;
+        issn = 2236-3475
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = rfduerj
+
+      au < exists ; 2010 ; 1 ; Revista da Faculdade de Direito da UERJ Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista da Faculdade de Direito da UERJ Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista da Faculdade de Direito da UERJ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista da Faculdade de Direito da UERJ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Finanças Públicas, Tributação e Desenvolvimento ;
+        issn = 2317-837X
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = rfptd
+
+      au < expected ; 2013 ; 1 ; Revista de Finanças Públicas, Tributação e Desenvolvimento Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Internacional de Ciências ;
+        issn = 2316-7041
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = ric
+
+      au < exists ; 2011 ; 1 ; Revista Internacional de Ciências Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista Internacional de Ciências Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Internacional de Ciências Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sexualidad, Salude y Sociedad: Revista Latinoamericana ;
+        issn = 1984-6487
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = SexualidadSaludySociedad
+
+      au < exists ; 2009 ; 1 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista SOLETRAS ;
+        eissn = 2316-8838
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = soletras
+
+      au < exists ; 2001 ; 1 ; Revista SOLETRAS Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 2 ; Revista SOLETRAS Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 3 ; Revista SOLETRAS Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 4 ; Revista SOLETRAS Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 5 ; Revista SOLETRAS Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 6 ; Revista SOLETRAS Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 7 ; Revista SOLETRAS Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista SOLETRAS Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista SOLETRAS Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista SOLETRAS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 11 ; Revista SOLETRAS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 12 ; Revista SOLETRAS Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 13 ; Revista SOLETRAS Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Tamoios ;
+        issn = 1980-4490
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.e-publicacoes.uerj.br/
+      param[journal_id] = tamoios
+
+      au < exists ; 2005 ; 1 ; Revista Tamoios Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Revista Tamoios Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Revista Tamoios Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Revista Tamoios Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Revista Tamoios Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Revista Tamoios Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Revista Tamoios Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Revista Tamoios Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Revista Tamoios Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Arcos Design ;
+        issn = 1984-5596
+      >
+
+      comment[publisher] = Universidade do Estado do Rio de Janeiro
+      param[base_url] = http://www.esdi.uerj.br/
+      param[journal_id] = arcos
+
+      au < exists ; 1998 ; 1 ; Arcos Design Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Arcos Design Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Arcos Design Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Arcos Design Volume 2001 ; 2001 >
+      au < exists ; 2009 ; 5 ; Arcos Design Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Arcos Design Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Arcos Design Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 8 ; Arcos Design Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Arcos Design Volume 2013 ; 2013 >
+
+  }
+
 }

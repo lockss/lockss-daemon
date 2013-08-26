@@ -1,0 +1,78 @@
+{
+  publisher <
+    name = Universidade Estadual da Paraíba-UEPB
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Dataveni@ ;
+        issn = 2177-1170  ;
+        eissn = 1519-9916
+      >
+
+      comment[publisher] = Universidade Estadual da Paraíba-UEPB
+      param[base_url] = http://revista.uepb.edu.br/
+      param[journal_id] = datavenia
+
+      au < exists ; 2008 ; 1 ; Dataveni@ Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Dataveni@ Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Dataveni@ Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Dataveni@ Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Dataveni@ Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Dataveni@ Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pesquisa Brasileira em Odontopediatria e Clínica Integrada ;
+        issn = 1519-0501 ;
+        eissn = 1983-4632
+      >
+
+      comment[publisher] = Universidade Estadual da Paraíba-UEPB
+      param[base_url] = http://revista.uepb.edu.br/
+      param[journal_id] = pboci
+
+      au < exists ; 2007 ; 1 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Pesquisa Brasileira em Odontopediatria e Clínica Integrada Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Qualit@s ;
+        issn = 1677 4280
+      >
+
+      comment[publisher] = Universidade Estadual da Paraíba-UEPB
+      param[base_url] = http://revista.uepb.edu.br/
+      param[journal_id] = qualitas
+
+      au < exists ; 2002 ; 1 ; Qualit@s Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Qualit@s Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Qualit@s Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Qualit@s Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Qualit@s Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Qualit@s Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Qualit@s Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Qualit@s Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Qualit@s Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Qualit@s Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Qualit@s Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Qualit@s Volume 2013 ; 2013 >
+
+  }
+
+}

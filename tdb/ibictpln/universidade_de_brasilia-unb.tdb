@@ -1,0 +1,519 @@
+{
+  publisher <
+    name = Universidade de Brasília-UNB
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental ;
+        eissn = 1984-249X
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = archai
+
+      au < exists ; 2008 ; 1 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; ARCHAI: Revista de Estudos sobre as Origens do Pensamento Ocidental Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = revista Belas Infiéis ;
+        issn = 2316-6614
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = belasinfieis
+
+      au < exists ; 2012 ; 1 ; revista Belas Infiéis Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; revista Belas Infiéis Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = revista eletrônica Ciência & Tecnologia Social ;
+        issn = 2236-7837
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = cts
+
+      au < exists ; 2011 ; 1 ; revista eletrônica Ciência & Tecnologia Social Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; revista eletrônica Ciência & Tecnologia Social Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; revista eletrônica Ciência & Tecnologia Social Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Em tempo de histórias ;
+        eissn = 2316-1191
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = emtempos
+
+      au < exists ; 2002 ; 1 ; Em tempo de histórias Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Em tempo de histórias Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Em tempo de histórias Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Em tempo de histórias Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Em tempo de histórias Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Em tempo de histórias Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Em tempo de histórias Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Em tempo de histórias Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Em tempo de histórias Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Em tempo de histórias Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Em tempo de histórias Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Em tempo de histórias Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Direito & Sensibilidade ;
+        issn = 2237-0455 ;
+        eissn = 2237-1001
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = enedex
+
+      au < exists ; 2011 ; 1 ; Revista Direito & Sensibilidade Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Direito & Sensibilidade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Direito & Sensibilidade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Estudos de Literatura Brasileira Contemporânea ;
+        issn = 1518-0158 ;
+        eissn = 2316-4018
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = estudos
+
+      au < exists ; 1999 ; 1 ; Estudos de Literatura Brasileira Contemporânea Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Estudos de Literatura Brasileira Contemporânea Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Estudos de Literatura Brasileira Contemporânea Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Estudos de Literatura Brasileira Contemporânea Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Estudos de Literatura Brasileira Contemporânea Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Estudos de Literatura Brasileira Contemporânea Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Estudos de Literatura Brasileira Contemporânea Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Estudos de Literatura Brasileira Contemporânea Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Estudos de Literatura Brasileira Contemporânea Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Estudos de Literatura Brasileira Contemporânea Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Estudos de Literatura Brasileira Contemporânea Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Estudos de Literatura Brasileira Contemporânea Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Estudos de Literatura Brasileira Contemporânea Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Estudos de Literatura Brasileira Contemporânea Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Estudos de Literatura Brasileira Contemporânea Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Filosofia Moderna e Contemporânea  ;
+        eissn = 2317-9570
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = fmc
+
+      au < expected ; 2013 ; 1 ; Revista de Filosofia Moderna e Contemporânea  Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Cadernos de Linguagem e Sociedade ;
+        issn = 0104-9712 ;
+        eissn = 2179-4790
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = les
+
+      au < exists ; 1995 ; 1 ; Cadernos de Linguagem e Sociedade Volume 1995 ; 1995 >
+      au < exists ; 1996 ; 2 ; Cadernos de Linguagem e Sociedade Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 3 ; Cadernos de Linguagem e Sociedade Volume 1997 ; 1997 >
+      au < exists ; 1999 ; 4 ; Cadernos de Linguagem e Sociedade Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; Cadernos de Linguagem e Sociedade Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; Cadernos de Linguagem e Sociedade Volume 2001 ; 2001 >
+      au < exists ; 2003 ; 7 ; Cadernos de Linguagem e Sociedade Volume 2003 ; 2003 >
+      au < exists ; 2005 ; 8 ; Cadernos de Linguagem e Sociedade Volume 2005 ; 2005 >
+      au < exists ; 2007 ; 9 ; Cadernos de Linguagem e Sociedade Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Cadernos de Linguagem e Sociedade Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Cadernos de Linguagem e Sociedade Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Cadernos de Linguagem e Sociedade Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Cadernos de Linguagem e Sociedade Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Cadernos de Linguagem e Sociedade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Cadernos de Linguagem e Sociedade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Linguística Antropológica ;
+        issn = 2317-1375
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = ling
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Linguística Antropológica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Brasileira de Linguística Antropológica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Brasileira de Linguística Antropológica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Brasileira de Linguística Antropológica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Linguística Antropológica Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Linhas Críticas ;
+        issn = 1516-4896 ;
+        eissn = 1981-0431
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = linhascriticas
+
+      au < expected ; 2013 ; 1 ; Linhas Críticas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Boletim Meridiano 47 ;
+        issn = 1518-1219
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = MED
+
+      au < exists ; 2000 ; 1 ; Boletim Meridiano 47 Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 2 ; Boletim Meridiano 47 Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 3 ; Boletim Meridiano 47 Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 4 ; Boletim Meridiano 47 Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 5 ; Boletim Meridiano 47 Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 6 ; Boletim Meridiano 47 Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 7 ; Boletim Meridiano 47 Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 8 ; Boletim Meridiano 47 Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 9 ; Boletim Meridiano 47 Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 10 ; Boletim Meridiano 47 Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 11 ; Boletim Meridiano 47 Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 12 ; Boletim Meridiano 47 Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 13 ; Boletim Meridiano 47 Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 14 ; Boletim Meridiano 47 Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Museologia & Interdisciplinaridade ;
+        issn = 2238-5436 
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = museologia
+
+      au < exists ; 2012 ; 1 ; Revista Museologia & Interdisciplinaridade Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Museologia & Interdisciplinaridade Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Música em Contexto ;
+        issn = 1980-5802
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = Musica
+
+      au < exists ; 2007 ; 1 ; Música em Contexto Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Música em Contexto Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Música em Contexto Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Música em Contexto Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Música em Contexto Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Música em Contexto Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Música em Contexto Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Noctua ;
+        issn = 2237-1443
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = noctua
+
+      au < exists ; 2009 ; 1 ; Revista Noctua Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Noctua Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Noctua Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Noctua Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Noctua Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Pólemos-Revista dos Estudantes de Filosofia ;
+        issn = 2238-7692
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = polemos
+
+      au < exists ; 2012 ; 1 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Pólemos-Revista dos Estudantes de Filosofia Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Ciência Política ;
+        issn = 2178-4884
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = rbcp
+
+      au < exists ; 2009 ; 1 ; Revista Brasileira de Ciência Política Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Revista Brasileira de Ciência Política Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Revista Brasileira de Ciência Política Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Revista Brasileira de Ciência Política Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Brasileira de Ciência Política Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Direito, Estado e Recursos Naturais ;
+        eissn = 2237-2709
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = rdern
+
+      au < exists ; 2011 ; 1 ; Revista de Direito, Estado e Recursos Naturais Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista de Direito, Estado e Recursos Naturais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Direito, Estado e Recursos Naturais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista dos Estudantes de Direito da Universidade de Brasília (UnB) ;
+        issn = 1981-9684  ;
+        eissn = 2177-6458
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = redunb
+
+      au < exists ; 1996 ; 1 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 1996 ; 1996 >
+      au < exists ; 1997 ; 2 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 1997 ; 1997 >
+      au < exists ; 1999 ; 4 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 5 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 6 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2001 ; 2001 >
+      au < exists ; 2007 ; 7 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 8 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 9 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 10 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2010 ; 2010 >
+      au < exists ; 2012 ; 11 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista dos Estudantes de Direito da Universidade de Brasília (UnB) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Estudos e Pesquisas sobre as Américas ;
+        issn = 1984-1639
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = repam
+
+      au < exists ; 2007 ; 1 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista de Estudos e Pesquisas sobre as Américas Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Sul-Americana de Filosofia e Educação
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = resafe
+
+      au < exists ; 2003 ; 1 ; Revista Sul-Americana de Filosofia e Educação Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 2 ; Revista Sul-Americana de Filosofia e Educação Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 3 ; Revista Sul-Americana de Filosofia e Educação Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 4 ; Revista Sul-Americana de Filosofia e Educação Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 5 ; Revista Sul-Americana de Filosofia e Educação Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 6 ; Revista Sul-Americana de Filosofia e Educação Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 7 ; Revista Sul-Americana de Filosofia e Educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 8 ; Revista Sul-Americana de Filosofia e Educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 9 ; Revista Sul-Americana de Filosofia e Educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 10 ; Revista Sul-Americana de Filosofia e Educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista Sul-Americana de Filosofia e Educação Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasiliense de Pós-Graduação em Ciências Sociais ;
+        issn = 2317-0344
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = revistapos
+
+      au < exists ; 2012 ; 1 ; Revista Brasiliense de Pós-Graduação em Ciências Sociais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Brasiliense de Pós-Graduação em Ciências Sociais Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Pesquisa em Políticas Públicas (RP3) ;
+        issn = 2317-921X
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = rp3
+
+      au < expected ; 2013 ; 1 ; Revista de Pesquisa em Políticas Públicas (RP3) Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ser Social ;
+        issn = 2178-8987 ;
+        eissn = 1415-6946
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = SER_Social
+
+      au < exists ; 1998 ; 1 ; Revista Ser Social Volume 1998 ; 1998 >
+      au < exists ; 1999 ; 2 ; Revista Ser Social Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 3 ; Revista Ser Social Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 4 ; Revista Ser Social Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 5 ; Revista Ser Social Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 6 ; Revista Ser Social Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 7 ; Revista Ser Social Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 8 ; Revista Ser Social Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 9 ; Revista Ser Social Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 10 ; Revista Ser Social Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 11 ; Revista Ser Social Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 12 ; Revista Ser Social Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 13 ; Revista Ser Social Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 14 ; Revista Ser Social Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 15 ; Revista Ser Social Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 16 ; Revista Ser Social Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Sustentabilidade em Debate ;
+        issn = 2177-7675 ;
+        eissn = 2179-9067
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = sust
+
+      au < exists ; 2010 ; 1 ; Sustentabilidade em Debate Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Sustentabilidade em Debate Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Sustentabilidade em Debate Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Sustentabilidade em Debate Volume 2013 ; 2013 >
+
+  }
+
+  {
+
+      title <
+        name = Traduzires ;
+        eissn = 2238-7749
+      >
+
+      comment[publisher] = Universidade de Brasília-UNB
+      param[base_url] = http://seer.bce.unb.br/
+      param[journal_id] = traduzires
+
+      au < expected ; 2013 ; 1 ; Traduzires Volume 2013 ; 2013 >
+
+  }
+
+}
