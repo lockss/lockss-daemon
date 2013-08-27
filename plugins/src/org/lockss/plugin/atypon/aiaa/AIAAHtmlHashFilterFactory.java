@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.2 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.3 2013-08-27 20:21:31 alexandraohlson Exp $
  */
 
 /*
@@ -46,8 +46,6 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
       String encoding) {
     NodeFilter[] afilters = new NodeFilter[] {
  
-        // Contains the changeable list of citations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
         // the entire left column which can have browseVolumes, browsing history, tools, etc
         HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),
         // not necessarily used, but we wouldn't want an ad

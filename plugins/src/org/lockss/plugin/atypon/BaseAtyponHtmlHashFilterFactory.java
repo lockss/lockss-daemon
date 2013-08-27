@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.2 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.3 2013-08-27 20:21:31 alexandraohlson Exp $
  */
 
 /*
@@ -63,7 +63,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
     // these are only on issue toc pages
     HtmlNodeFilters.tagWithAttribute("img", "class", "accessIcon"),
-    // these are only on article pages
+    // Contains the changeable list of citations
+    HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
   };
 
   /** Create an array of NodeFilters that combines the atyponBaseFilters with

@@ -1,5 +1,5 @@
 /*
- * $Id: SiamHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:14 alexandraohlson Exp $
+ * $Id: SiamHtmlHashFilterFactory.java,v 1.6 2013-08-27 20:21:31 alexandraohlson Exp $
  */
 
 /*
@@ -54,8 +54,6 @@ public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),
         // the entire right column at article level - tracks changeable history about this article
         HtmlNodeFilters.tagWithAttribute("div", "id", "pubHisDataDiv"),
-        // Contains the changeable list of citations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
         // On TOC article item may contain " | Cited x# times"; also contains journal/page for this article, but should be okay to hash out
         HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
         // at top of article, list of types of format of the article will also have "Cited by" anchor once the article has been cited

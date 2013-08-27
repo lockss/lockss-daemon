@@ -1,5 +1,5 @@
 /*
- * $Id: ASCEHtmlHashFilterFactory.java,v 1.4 2013-08-06 21:09:32 aishizaki Exp $
+ * $Id: ASCEHtmlHashFilterFactory.java,v 1.5 2013-08-27 20:21:31 alexandraohlson Exp $
  */
 
 /*
@@ -54,8 +54,6 @@ public class ASCEHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 	//article, toc: <div class="dropzone ui-corner-all " 
 	// id="dropzone-Left-Sidebar"> - tornados ad, session history.
 	HtmlNodeFilters.tagWithAttribute("div", "id", "dropzone-Left-Sidebar"),	
-	//article: <div class="citedBySection">
-	HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
 	//toc: <div class="citation tocCitation">
 	HtmlNodeFilters.tagWithAttribute("div", "class", "citation tocCitation"),
 	// footer and footer_message filtered in BaseAtypon
