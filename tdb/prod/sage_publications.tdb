@@ -36552,6 +36552,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Studies in Microeconomics ;
+        issn = 2321-0222 ;
+        issnl = 2321-0222
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://mic.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Studies in Religion/Sciences Religieuses ;
         issn = 0008-4298 ;
         eissn = 2042-0587 

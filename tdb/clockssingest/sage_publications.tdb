@@ -33297,6 +33297,25 @@
 
     }
 
+    {
+
+      title <
+        name = Studies in Microeconomics ;
+        issn = 2321-0222 ;
+        issnl = 2321-0222
+      >
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://mic.sagepub.com/
+
+        au < exists ; exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
+
+      }
+
+    }
+
   {
 
     title <
