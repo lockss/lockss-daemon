@@ -1,4 +1,4 @@
- <!--  $Id: PensoftPlugin.xml,v 1.8 2013-07-10 21:34:36 aishizaki Exp $-->
+ <!--  $Id: PensoftPlugin.xml,v 1.9 2013-08-27 22:21:37 thib_gc Exp $-->
  <map>
   <entry>
     <string>plugin_status</string>
@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Pensoft Plugin </string>
+    <string>Pensoft Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
