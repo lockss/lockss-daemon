@@ -740,7 +740,7 @@
 
     au < manifest ; exists ; 2010 ; International Journal of Digital Library Systems (IJDLS) Volume 1 ; 1 > 
     au < released ; crawling ; 2011 ; International Journal of Digital Library Systems (IJDLS) Volume 2 ; 2 > 
-    au < testing ; exists ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
+    au < released ; manifest ; 2012 ; International Journal of Digital Library Systems (IJDLS) Volume 3 ; 3 > 
     au < expected ; exists ; 2013 ; International Journal of Digital Library Systems (IJDLS) Volume 4 ; 4 > 
 
   }
@@ -1789,7 +1789,7 @@
     au < manifest ; exists ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 > 
     au < crawling ; exists ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 > 
     au < released ; crawling ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 > 
-    au < testing ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
+    au < expected ; exists ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 > 
     au < expected ; exists ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 > 
 
   }
@@ -1803,11 +1803,11 @@
     >
     param[journal_issn] = 1947-928X
 
-    au < manifest ; exists ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
-    au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
-    au < released ; crawling ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
-    au < testing ; exists ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
-    au < expected ; exists ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
+    au < manifest ; exists ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 > 
+    au < manifest ; exists ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 > 
+    au < released ; crawling ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 > 
+    au < expected ; exists ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 > 
+    au < expected ; exists ; 2014 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 > 
 
   }
 
@@ -1953,8 +1953,8 @@
 
     param[journal_issn] = 2160-9837
 
-    au < testing ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
-    au < expected ; exists ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 1 ; 1 > 
+    au < expected ; exists ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 > 
 
   }
 
