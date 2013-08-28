@@ -15,7 +15,8 @@
 
       comment[publisher] = Universidade Estadual Paulista
       param[base_url] = http://periodicos.franca.unesp.br/
-      param[journal_id] = cadernopesquisa
+      param[journal_id] = cardernopesquisa
+      comment[0] = possibly cadernopesquisa ?
 
       au < exists ; 2010 ; 1 ; Caderno de Pesquisa Volume 2010 ; 2010 >
       au < expected ; 2011 ; 2 ; Caderno de Pesquisa Volume 2011 ; 2011 >
