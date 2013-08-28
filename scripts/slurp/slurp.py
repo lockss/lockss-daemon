@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.12 2012-10-31 21:02:06 thib_gc Exp $
+# $Id: slurp.py,v 1.13 2013-08-28 19:03:59 thib_gc Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.2'
+__version__ = '0.5.3'
 
 from datetime import datetime
 import optparse
@@ -76,6 +76,9 @@ def slurp_option_parser():
     parser.add_option('--aus',
                       action='store_true',                     
                       help='Gathers data about the active AUs. Implies -a/--auids')
+    parser.add_option('--articles',
+                      action='store_true',                     
+                      help='Gathers the articles for each active AU. Implies -a/--auids')
     parser.add_option('-c', '--commdata',
                       action='store_true',                     
                       help='Gathers data about peer communication')
@@ -129,6 +132,7 @@ class SlurpThread(threading.Thread):
         if self.__options.auids: self.__slurp_auids()
         if self.__options.aus: self.__slurp_aus()
         if self.__options.agreement: self.__slurp_agreement()
+        if self.__options.articles: self.__slurp_articles()
         if self.__options.commdata: self.__slurp_commdata()
 
     def __slurp_auids(self):
@@ -203,6 +207,23 @@ class SlurpThread(threading.Thread):
                        ui_to_datetime(vals['LastAgree']))
         self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_AGREEMENT)
 
+    def __slurp_articles(self):
+        for aid, auid in self.__db.get_auids_for_session(self.__sid):
+            retries = 0
+            while retries <= self.__options.daemon_ui_retries:
+                try:
+                    lst = self.__ui.getListOfArticles(lockss_daemon.AU(auid))
+                    break
+                except URLError:
+                    retries = retries + 1
+            else:
+                continue # Go on to the next AUID ###FIXME
+
+            self.__db.make_many_articles(aid, lst)
+
+        self.__db.or_session_flags(self.__sid, slurpdb.SESSIONS_FLAGS_ARTICLES)
+
+
     def __slurp_commdata(self):
         retries = 0
         while retries <= self.__options.daemon_ui_retries:
@@ -233,6 +254,7 @@ def slurp_validate_options(parser, options):
     if options.daemon_ui_pass is None: parser.error('-P/--daemon-ui-pass is required')
     if options.aus is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.agreement is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
+    if options.articles is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.auid_regex:
         try: r = re.compile(options.auid_regex)
         except: parser.error('-r/--auid-regex regular expression is invalid: %s' % (options.auid_regex,))

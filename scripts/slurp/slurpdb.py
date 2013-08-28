@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.10 2012-10-31 21:02:06 thib_gc Exp $
+# $Id: slurpdb.py,v 1.11 2013-08-28 19:03:59 thib_gc Exp $
 
 __copyright__ = '''\
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.3'
+__version__ = '0.5.4'
 
 from datetime import datetime
 import optparse
@@ -329,6 +329,19 @@ class SlurpDb(object):
         cursor.close()
         self.__commit()
 
+    def make_many_articles(self, aid, list_of_articles):
+        self.__raise_if_closed()
+        cursor = self.__cursor()
+        cursor.executemany('''\
+                INSERT INTO %s
+                (%s, %s)
+                VALUES (%%s, %%s)
+        ''' % (ARTICLES,
+               ARTICLES_AID, ARTICLES_ARTICLE),
+        [(aid, art) for art in list_of_articles])
+        cursor.close()
+        self.__commit()
+
     def __datetime_to_db(self, py_datetime):
         if py_datetime is None: return None
         return py_datetime.strftime(SlurpDb.DB_STRFTIME)
@@ -484,11 +497,28 @@ SESSIONS_FLAGS_AUS = 0x2
 SESSIONS_FLAGS_AGREEMENT = 0x4
 SESSIONS_FLAGS_AUIDS_REGEX = 0x8
 SESSIONS_FLAGS_COMMDATA = 0x10
+SESSIONS_FLAGS_ARTICLES = 0x20
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')
 AUIDS_SID = Column(AUIDS, 'sid')
 AUIDS_AUID = Column(AUIDS, 'auid', 511)
+
+AGREEMENT = Table('agreement', 1)
+AGREEMENT_ID = Column(AGREEMENT, 'id')
+AGREEMENT_AID = Column(AGREEMENT, 'aid')
+AGREEMENT_PEER = Column(AGREEMENT, 'peer', 31)
+AGREEMENT_HIGHEST_AGREEMENT = Column(AGREEMENT, 'highest_agreement')
+AGREEMENT_LAST_AGREEMENT = Column(AGREEMENT, 'last_agreement')
+AGREEMENT_HIGHEST_AGREEMENT_HINT = Column(AGREEMENT, 'highest_agreement_hint')
+AGREEMENT_LAST_AGREEMENT_HINT = Column(AGREEMENT, 'last_agreement_hint')
+AGREEMENT_CONSENSUS = Column(AGREEMENT, 'consensus')
+AGREEMENT_LAST_CONSENSUS = Column(AGREEMENT, 'last_consensus')
+
+ARTICLES = Table('articles', 1)
+ARTICLES_ID = Column(ARTICLES, 'id')
+ARTICLES_AID = Column(ARTICLES, 'aid')
+ARTICLES_ARTICLE = Column(ARTICLES, 'article', 511)
 
 AUS = Table('aus', 2)
 AUS_ID = Column(AUS, 'id')
@@ -510,17 +540,6 @@ AUS_CONTENT_SIZE = Column(AUS, 'content_size')
 AUS_DISK_USAGE = Column(AUS, 'disk_usage')
 AUS_TITLE = Column(AUS, 'title', 511, 'utf-8')
 
-AGREEMENT = Table('agreement', 1)
-AGREEMENT_ID = Column(AGREEMENT, 'id')
-AGREEMENT_AID = Column(AGREEMENT, 'aid')
-AGREEMENT_PEER = Column(AGREEMENT, 'peer', 31)
-AGREEMENT_HIGHEST_AGREEMENT = Column(AGREEMENT, 'highest_agreement')
-AGREEMENT_LAST_AGREEMENT = Column(AGREEMENT, 'last_agreement')
-AGREEMENT_HIGHEST_AGREEMENT_HINT = Column(AGREEMENT, 'highest_agreement_hint')
-AGREEMENT_LAST_AGREEMENT_HINT = Column(AGREEMENT, 'last_agreement_hint')
-AGREEMENT_CONSENSUS = Column(AGREEMENT, 'consensus')
-AGREEMENT_LAST_CONSENSUS = Column(AGREEMENT, 'last_consensus')
-
 COMMDATA = Table('commdata', 1)
 COMMDATA_ID = Column(COMMDATA, 'id')
 COMMDATA_SID = Column(COMMDATA, 'sid')
@@ -539,8 +558,9 @@ COMMDATA_NEXT_RETRY = Column(COMMDATA, 'next_retry')
 ALL_TABLES = [TABLES,
               SESSIONS,
               AUIDS,
-              AUS,
               AGREEMENT,
+              ARTICLES,
+              AUS,
               COMMDATA]
 
 def slurpdb_option_parser(parser=None):
