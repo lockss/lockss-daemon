@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.11 2013-08-28 19:03:59 thib_gc Exp $
+# $Id: slurpdb.py,v 1.12 2013-08-28 19:33:57 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -498,6 +498,7 @@ SESSIONS_FLAGS_AGREEMENT = 0x4
 SESSIONS_FLAGS_AUIDS_REGEX = 0x8
 SESSIONS_FLAGS_COMMDATA = 0x10
 SESSIONS_FLAGS_ARTICLES = 0x20
+SESSIONS_FLAGS_AUIDS_LIST = 0x40
 
 AUIDS = Table('auids', 1)
 AUIDS_ID = Column(AUIDS, 'id')

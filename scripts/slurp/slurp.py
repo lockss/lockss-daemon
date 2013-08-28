@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.13 2013-08-28 19:03:59 thib_gc Exp $
+# $Id: slurp.py,v 1.14 2013-08-28 19:33:57 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -28,7 +28,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.5.3'
+__version__ = '0.5.4'
 
 from datetime import datetime
 import optparse
@@ -78,13 +78,16 @@ def slurp_option_parser():
                       help='Gathers data about the active AUs. Implies -a/--auids')
     parser.add_option('--articles',
                       action='store_true',                     
-                      help='Gathers the articles for each active AU. Implies -a/--auids')
+                      help='Gathers the articles for the active AUs. Implies -a/--auids')
     parser.add_option('-c', '--commdata',
                       action='store_true',                     
                       help='Gathers data about peer communication')
     parser.add_option('-g', '--agreement',
                       action='store_true',                     
                       help='Gathers data about peer agreement for the active AUs. Implies -a/--auids')
+    parser.add_option('-l', '--auid-list',
+                      metavar='FILE',                     
+                      help='Only processes AUIDs read from FILE')
     parser.add_option('-r', '--auid-regex',
                       metavar='REGEX',                     
                       help='Only processes AUIDs that match REGEX')
@@ -138,9 +141,22 @@ class SlurpThread(threading.Thread):
     def __slurp_auids(self):
         flag = slurpdb.SESSIONS_FLAGS_AUIDS
         list_of_auids = self.__ui.getListOfAuids()
-        r0 = options.auid_regex
-        if r0:
-            r = re.compile(r0)
+        # Maybe narrow down to a list
+        fstr = options.auid_list
+        if fstr is not None:
+            f = open(fstr)
+            external_auids = set()
+            line = f.readline()
+            while line != '':
+                if line[-1] == '\n': line = line[0:-1]
+                external_auids.add(line)
+                line = f.readline()
+            list_of_auids = filter(lambda a: a in external_auids, list_of_auids)
+            flag = flag | slurpdb.SESSIONS_FLAGS_AUIDS_LIST
+        # Maybe narrow down to a regex
+        rstr = options.auid_regex
+        if rstr is not None:
+            r = re.compile(rstr)
             list_of_auids = filter(lambda a: r.search(a), list_of_auids)
             flag = flag | slurpdb.SESSIONS_FLAGS_AUIDS_REGEX
         self.__db.make_many_auids(self.__sid, list_of_auids)
@@ -255,9 +271,14 @@ def slurp_validate_options(parser, options):
     if options.aus is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.agreement is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
     if options.articles is not None: setattr(parser.values, parser.get_option('--auids').dest, True)
-    if options.auid_regex:
+    if options.auid_regex is not None:
         try: r = re.compile(options.auid_regex)
         except: parser.error('-r/--auid-regex regular expression is invalid: %s' % (options.auid_regex,))
+    if options.auid_list is not None:
+        try:
+            f = open(options.auid_list)
+            f.close()
+        except: parser.error('-l/--auid-list file cannot be opened: %s' % (options.auid_list,))
     if options.auids is None and options.commdata is None: parser.error('No action specified')
 
 def slurp_validate_args(parser, options, args):
