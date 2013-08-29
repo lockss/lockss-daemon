@@ -925,13 +925,12 @@
 
     title <
       name = American Journal of Physiology - Renal Physiology ;
-      issn = 0363-6127 ;
-      eissn = 1522-1466 ;
-      issnl = 0363-6127
+      issn = 1931-857X ;
+      eissn = 1522-1466
     >
 
     param[base_url] = http://ajprenal.physiology.org/
-
+    comment[0] = other possible issn 0363-6127
     {
 
       pluginSuffix = HighWireStrVolPlugin
