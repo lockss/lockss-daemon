@@ -127,6 +127,20 @@
   {
 
     title <
+      name = Biomaterials Science ;
+      issn = 2047-4830 ;
+      eissn = 2047-4849
+    >
+
+    param[journal_code] = bm
+
+    au < doNotProcess ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
+
+  }
+
+  {
+
+    title <
       name = Chemical Communications ;
       issn = 0009-241X  
     >
