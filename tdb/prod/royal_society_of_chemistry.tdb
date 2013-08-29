@@ -167,6 +167,23 @@
   {
 
     title <
+      name = Chemical Communications (London) ;
+      issn = 1359-7345 ;
+      eissn = 1364-548X
+    >
+
+    param[journal_code] = c1
+
+    au < doNotProcess ; 1965 ; Chemical Communications 1965 ; 0 ; 1965 >
+    au < doNotProcess ; 1966 ; Chemical Communications 1966 ; 0 ; 1966 >
+    au < doNotProcess ; 1967 ; Chemical Communications 1967 ; 0 ; 1967 >
+    au < doNotProcess ; 1968 ; Chemical Communications 1968 ; 0 ; 1968 >
+
+  }
+
+  {
+
+    title <
       name = Chemical Society Reviews ;
       issn = 0306-0012 ;
       eissn = 1460-4744 ;
