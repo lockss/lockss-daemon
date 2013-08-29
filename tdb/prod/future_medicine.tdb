@@ -66,15 +66,33 @@
   {
   
     title < 
+      name = Future Lipidology ;
+      issn = 1746-0875 ;
+      eissn = 1746-0883
+    >
+    comment[continued_by] = Clinical Lipidology, 1758-4299
+    param[journal_id] = flp
+
+    au < exists ; 2006 ; Future Lipidology Volume 1 ; 1 >
+    au < exists ; 2007 ; Future Lipidology Volume 2 ; 2 >
+    au < exists ; 2008 ; Future Lipidology Volume 3 ; 3 >
+    au < exists ; 2009 ; Future Lipidology Volume 4 ; 4 >
+    au < exists ; 2010 ; Future Lipidology Volume 5 ; 5 >
+    au < exists ; 2011 ; Future Lipidology Volume 6 ; 6 >
+    au < exists ; 2012 ; Future Lipidology Volume 7 ; 7 >
+    au < exists ; 2013 ; Future Lipidology Volume 8 ; 8 >
+
+  }
+
+  {
+  
+    title < 
       name = Clinical Lipidology ;
       issn = 1758-4299
     >
-    
+    comment[continued_from] = Future Lipidology
     param[journal_id] = clp
 
-    au < exists ; 2006 ; Clinical Lipidology Volume 1 ; 1 >
-    au < exists ; 2007 ; Clinical Lipidology Volume 2 ; 2 >
-    au < exists ; 2008 ; Clinical Lipidology Volume 3 ; 3 >
     au < exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
     au < exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
     au < exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
@@ -340,16 +358,29 @@
   {
   
     title < 
+      name = Future Rheumatology ;
+      issn = 1746-0816 ;
+      eissn = 1746-0824
+    >
+    comment[continued_by] = International Journal of Clinical Rheumatology 1758-4272
+    param[journal_id] = frm
+
+    au < exists ; 2006 ; Future Rheumatology Volume 1 ; 1 >
+    au < exists ; 2007 ; Future Rheumatology Volume 2 ; 2 >
+    au < exists ; 2008 ; Future Rheumatology Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title < 
       name = International Journal of Clinical Rheumatology ;
       issn = 1758-4272 ;
       eissn = 1758-4280
     >
-    
+    comment[continued_from] = Future Rheumatology 1758-4272
     param[journal_id] = ijr
 
-    au < exists ; 2006 ; International Journal of Clinical Rheumatology Volume 1 ; 1 >
-    au < exists ; 2007 ; International Journal of Clinical Rheumatology Volume 2 ; 2 >
-    au < exists ; 2008 ; International Journal of Clinical Rheumatology Volume 3 ; 3 >
     au < exists ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 4 >
     au < exists ; 2010 ; International Journal of Clinical Rheumatology Volume 5 ; 5 >
     au < exists ; 2011 ; International Journal of Clinical Rheumatology Volume 6 ; 6 >
@@ -436,6 +467,22 @@
     au < exists ; 2011 ; Nanomedicine Volume 6 ; 6 >
     au < exists ; 2012 ; Nanomedicine Volume 7 ; 7 >
     au < exists ; 2013 ; Nanomedicine Volume 8 ; 8 >
+
+  }
+
+  {
+  
+    title < 
+      name = Neurodegenerative Disease Management ;
+      issn = 1758-2024 ;
+      eissn = 1758-2032
+    >
+    
+    param[journal_id] = nmt
+
+    au < exists ; 2011 ; Neurodegenerative Disease Management Volume 1 ; 1 >
+    au < exists ; 2012 ; Neurodegenerative Disease Management Volume 2 ; 2 >
+    au < exists ; 2013 ; Neurodegenerative Disease Management Volume 3 ; 3 >
 
   }
 
