@@ -1,5 +1,5 @@
 /*
- * $Id: MassachusettsMedicalSocietyRisFilterFactory.java,v 1.2 2012-11-20 01:13:26 thib_gc Exp $
+ * $Id: MassachusettsMedicalSocietyRisFilterFactory.java,v 1.3 2013-08-29 22:41:23 alexandraohlson Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
+/* 
+ * Using a local version of RisFilterInputStream until the org.lockss.filter version is released
+ * (probably 1.63).  Until then you cannot include org.lockss.filter or there will be ambiguity.
+ */
 import java.io.InputStream;
 
 import org.lockss.daemon.PluginException;

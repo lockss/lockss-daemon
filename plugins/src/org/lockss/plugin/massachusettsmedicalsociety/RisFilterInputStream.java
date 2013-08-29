@@ -1,5 +1,5 @@
 /*
- * $Id: RisFilterInputStream.java,v 1.2 2012-10-02 09:25:08 thib_gc Exp $
+ * $Id: RisFilterInputStream.java,v 1.3 2013-08-29 22:41:24 alexandraohlson Exp $
  */
 
 /*
@@ -32,6 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.massachusettsmedicalsociety;
 
+/* 
+ * Using a local version of RisFilterInputStream until the org.lockss.filter version is released
+ * (probably 1.63).  Until then you cannot include org.lockss.filter or there will be ambiguity.
+ * Once it's available, remove this version
+ */
 import java.io.*;
 import java.util.*;
 
