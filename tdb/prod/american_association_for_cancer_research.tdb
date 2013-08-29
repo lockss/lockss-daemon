@@ -253,6 +253,37 @@
   {
   
     title <
+      name = Cell Growth and Differentiation ;
+      issn = 1044-9523
+    >
+
+    {
+
+      pluginSuffix = HighWirePressPlugin
+      param[base_url] = http://cgd.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 1990 ; Clinical Cancer Research Volume 1 ; 1 >
+      au < exists ; 1991 ; Clinical Cancer Research Volume 2 ; 2 >
+      au < exists ; 1992 ; Clinical Cancer Research Volume 3 ; 3 >
+      au < exists ; 1993 ; Clinical Cancer Research Volume 4 ; 4 >
+      au < exists ; 1994 ; Clinical Cancer Research Volume 5 ; 5 >
+      au < exists ; 1995 ; Clinical Cancer Research Volume 6 ; 6 >
+      au < exists ; 1996 ; Clinical Cancer Research Volume 7 ; 7 >
+      au < exists ; 1997 ; Clinical Cancer Research Volume 8 ; 8 >
+      au < exists ; 1998 ; Clinical Cancer Research Volume 9 ; 9 >
+      au < exists ; 1999 ; Clinical Cancer Research Volume 10 ; 10 >
+      au < exists ; 2000 ; Clinical Cancer Research Volume 11 ; 11 >
+      au < exists ; 2001 ; Clinical Cancer Research Volume 12 ; 12 >
+      au < exists ; 2002 ; Clinical Cancer Research Volume 13 ; 13 >
+
+    }
+
+  }
+
+  {
+  
+    title <
       name = Molecular Cancer Research ;
       issn = 1541-7786 ;
       eissn = 1557-3125 ;
