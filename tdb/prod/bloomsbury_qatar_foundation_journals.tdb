@@ -6,7 +6,7 @@
   >
 
   rights = openaccess  
-  plugin = org.lockss.plugin.atypon.BloomsburyQatarPlugin
+  plugin = org.lockss.plugin.atypon.bloomsburyqatar.BloomsburyQatarPlugin
   param[base_url] = http://www.qscience.com/
   implicit < status ; year ; name ; param[volume_name] >
   
