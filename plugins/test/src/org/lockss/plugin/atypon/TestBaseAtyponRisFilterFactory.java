@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponRisFilterFactory.java,v 1.1 2013-08-29 22:41:23 alexandraohlson Exp $
+ * $Id: TestBaseAtyponRisFilterFactory.java,v 1.2 2013-08-29 22:45:44 alexandraohlson Exp $
  */
 /*
 
@@ -34,16 +34,8 @@
 package org.lockss.plugin.atypon;
 
 import java.io.InputStream;
-import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.extractor.*;
-import org.lockss.filter.RisFilterInputStream;
-import org.lockss.plugin.*;
-import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
-import org.lockss.plugin.copernicus.CopernicusRisMetadataExtractorFactory;
 
 
 public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
