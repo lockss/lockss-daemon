@@ -1816,13 +1816,12 @@
       issnl = 1947-928X
     >
     param[journal_issn] = 1947-928X
-    comment[notReady_2012] = blank manifest page
 
-    au < manifest ; 2009 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 >
-    au < manifest ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 >
-    au < released ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 >
-    au < notReady ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 >
-    au < expected ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 >
+    au < manifest ; 2010 ; International Journal of Natural Computing Research (IJNCR) Volume 1 ; 1 >
+    au < manifest ; 2011 ; International Journal of Natural Computing Research (IJNCR) Volume 2 ; 2 >
+    au < released ; 2012 ; International Journal of Natural Computing Research (IJNCR) Volume 3 ; 3 >
+    au < expected ; 2013 ; International Journal of Natural Computing Research (IJNCR) Volume 4 ; 4 >
+    au < expected ; 2014 ; International Journal of Natural Computing Research (IJNCR) Volume 5 ; 5 >
 
 
   }
@@ -1971,8 +1970,8 @@
     comment[nR] = substance check failed, see RT 4726
     param[journal_issn] = 2160-9837
 
-    au < notReady ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 >
-    au < expected ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 >
+    au < notReady ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 1 ; 1 >
+    au < expected ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 >
 
   }
 
