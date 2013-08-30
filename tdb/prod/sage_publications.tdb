@@ -39205,25 +39205,48 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Veterinary Pathology ;
-        issn = 0300-9858 ;
-        eissn = 1544-2217 ;
-        issnl = 0300-9858 
+        name = Pathologia veterinaria ;
+        issn = 0031-2975 ;
+        issnl = 0031-2975 
       >
 
+        comment[continued_by] = Veterinary Pathology
+        
       {
 
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://vet.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < manifest ; 1964 ; Veterinary Pathology Volume 1 ; 1 >
-        au < manifest ; 1965 ; Veterinary Pathology Volume 2 ; 2 >
-        au < manifest ; 1966 ; Veterinary Pathology Volume 3 ; 3 >
-        au < manifest ; 1967 ; Veterinary Pathology Volume 4 ; 4 >
-        au < manifest ; 1968 ; Veterinary Pathology Volume 5 ; 5 >
-        au < manifest ; 1969 ; Veterinary Pathology Volume 6 ; 6 >
-        au < manifest ; 1970 ; Veterinary Pathology Volume 7 ; 7 >
+        au < manifest ; 1964 ; Pathologia veterinaria Volume 1 ; 1 >
+        au < manifest ; 1965 ; Pathologia veterinaria Volume 2 ; 2 >
+        au < manifest ; 1966 ; Pathologia veterinaria Volume 3 ; 3 >
+        au < manifest ; 1967 ; Pathologia veterinaria Volume 4 ; 4 >
+        au < manifest ; 1968 ; Pathologia veterinaria Volume 5 ; 5 >
+        au < manifest ; 1969 ; Pathologia veterinaria Volume 6 ; 6 >
+        au < manifest ; 1970 ; Pathologia veterinaria Volume 7 ; 7 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Veterinary Pathology ;
+        issn = 0300-9858 ;
+        eissn = 1544-2217 ;
+        issnl = 0300-9858 
+      >
+       
+       comment[continued_from] = Pathologia veterinaria
+       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://vet.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
         au < manifest ; 1971 ; Veterinary Pathology Volume 8 ; 8 >
         au < manifest ; 1972 ; Veterinary Pathology Volume 9 ; 9 >
         au < manifest ; 1973 ; Veterinary Pathology Volume 10 ; 10 >
