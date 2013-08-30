@@ -20,7 +20,7 @@
       eissn = 2220-2730
     >
     
-    param[journal_dir] = ahcsps
+    param[journal_id] = ahcsps
  
     au < released ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
     au < released ; crawling ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
@@ -34,7 +34,7 @@
       eissn = 2220-2749
     >
     
-    param[journal_dir] = avi
+    param[journal_id] = avi
 
     au < released ; crawling ; 2010 ; Avicenna Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Avicenna Volume 2011 ; 2011 >
@@ -49,7 +49,7 @@
       eissn = 2220-2757
     >
     
-    param[journal_dir] = cis
+    param[journal_id] = cis
 
     au < released ; crawling ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >
@@ -64,7 +64,7 @@
       eissn = 1703-1958
     >
     
-    param[journal_dir] = nmejre
+    param[journal_id] = nmejre
 
     au < released ; crawling ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
     au < released ; crawling ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
@@ -82,7 +82,7 @@
       eissn = 2219-8962
     >
     
-    param[journal_dir] = pil
+    param[journal_id] = pil
 
     au < released ; crawling ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >
@@ -98,7 +98,7 @@
       eissn = 2220-251X
     >
     
-    param[journal_dir] = qfarf
+    param[journal_id] = qfarf
 
     au < released ; crawling ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
@@ -113,7 +113,7 @@
       eissn = 2223-506X
     >
     
-    param[journal_dir] = connect
+    param[journal_id] = connect
 
     au < released ; crawling ; 2011 ; QScience Connect Volume 2011 ; 2011 >
     au < released ; crawling ; 2012 ; QScience Connect Volume 2012 ; 2012 >
@@ -128,7 +128,7 @@
       eissn = 2220-2765
     >
     
-    param[journal_dir] = stsp
+    param[journal_id] = stsp
 
     au < released ; crawling ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
     au < released ; crawling ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
