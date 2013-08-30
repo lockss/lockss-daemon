@@ -4723,7 +4723,7 @@
     {
 
       title <
-        name = Career Development and Transition for Exceptional Individuals ;
+        name = Career Development for Exceptional Individuals ;
         issn = 0885-7288 ;
         eissn = 1557-5047 ;
         issnl = 0885-7288
@@ -4779,6 +4779,28 @@
         au < doNotProcess ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 >
         au < released ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 >
         au < released ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Career Development and Transition for Exceptional Individuals ;
+        issn = 2165-1434 ;
+        eissn = 2165-5144 ;
+        issnl = 2165-1434
+      >
+
+       comment[previously] = Career Development for Exceptional Individuals
+       
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://cde.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
         au < released ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 >
         au < manifest ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 >
 
