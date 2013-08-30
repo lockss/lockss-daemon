@@ -29199,7 +29199,7 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Music Educators Journal Volume 97 ; 97 >
         au < released ; 2011 ; Music Educators Journal Volume 98 ; 98 >
         au < released ; 2012 ; Music Educators Journal Volume 99 ; 99 >
-        au < expected ; 2013 ; Music Educators Journal Volume 100 ; 100 >
+        au < manifest ; 2013 ; Music Educators Journal Volume 100 ; 100 >
 
       }
 
@@ -33614,8 +33614,8 @@ comment[mpj] = now published by Brill
         au < released ; 2009-2010 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 >
         au < released ; 2010-2011 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 >
         au < released ; 2011-2012 ; Rehabilitation Counseling Bulletin Volume 55 ; 55 >
-        au < released ; 2012 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
-        au < expected ; 2013 ; Rehabilitation Counseling Bulletin Volume 57 ; 57 >
+        au < released ; 2012-2013 ; Rehabilitation Counseling Bulletin Volume 56 ; 56 >
+        au < manifest ; 2013-2014 ; Rehabilitation Counseling Bulletin Volume 57 ; 57 >
 
       }
 
@@ -42082,7 +42082,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; exists ; 2009 ; Clinical Risk Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; exists ; 2010 ; Clinical Risk Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; exists ; 2011 ; Clinical Risk Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2012 ; Clinical Risk Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Clinical Risk Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Clinical Risk Volume 19 ; 19 >
   
       }
