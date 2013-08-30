@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.9 2013-06-26 17:37:51 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.10 2013-08-30 17:08:15 barry409 Exp $
  */
 
 /*
@@ -242,7 +242,8 @@ class VoteBlocksTallier {
     // agreement is based only on the subset we have.
     int total = getCount(Category.AGREE) +
       getCount(Category.DISAGREE) +
-      getCount(Category.VOTER_ONLY);
+      getCount(Category.VOTER_ONLY) +
+      getCount(Category.POLLER_ONLY);
     return total == 0 ? 0.0f : ((float)getCount(Category.AGREE))/total;
   }
 }
