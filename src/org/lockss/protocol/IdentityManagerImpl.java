@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.47 2013-08-19 22:33:18 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.48 2013-08-30 20:28:09 barry409 Exp $
  */
 
 /*
@@ -269,8 +269,6 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   File iddbFile = null;
 
   int[] reputationDeltas = new int[10];
-
-  private boolean isMergeRestoredAgreemMap = DEFAULT_MERGE_RESTORED_AGREE_MAP;
 
   /**
    * <p>Maps ArchivalUnit, by auid, to its agreement map.  Each
@@ -1238,38 +1236,19 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     return result;
   }
 
-  // Used only for testing
-  void forceReload(ArchivalUnit au) {
-    AuAgreements auAgreements = findAuAgreements(au);
-    auAgreements.forceReload();
-  }
-
   protected AuAgreements findAuAgreements(ArchivalUnit au) {
     AuAgreements auAgreements;
-    
-    // agreeMapsCache's methods are synchronized, but this code stores
-    // an unloaded AuAgreements and then gives up the lock while the
-    // instance is loaded.
+    String auId = au.getAuId();
+
     HistoryRepository hRep = getHistoryRepository(au);
-    synchronized (agreeMapsCache) {
-      auAgreements = (AuAgreements)agreeMapsCache.get(au.getAuId());
-      if (auAgreements == null) {
-        auAgreements = AuAgreements.makeUnloaded();
-        agreeMapsCache.put(au.getAuId(), auAgreements);
-      }
-    }
-    
-    // Several threads may be holding the same instance, and
-    // synchronizing on it. Only one will load or merge. The rest will
-    // see the loaded instance [assuming forceReload isn't called].
-    synchronized (auAgreements.getLoadLock()) {
-      if (auAgreements.isLoadNeeded()) {
-	if (isMergeRestoredAgreemMap) {
-	  auAgreements.loadAndMerge(hRep, this);
-	} else {
-	  auAgreements.load(hRep, this);
-	}
-      }
+    auAgreements = (AuAgreements)agreeMapsCache.get(auId);
+
+    if (auAgreements == null) {
+      auAgreements = AuAgreements.make(hRep, this);
+      // Multiple threads might have constructed an instance, but
+      // exactly one will put it in the cache. The rest will get that
+      // copy.
+      auAgreements = (AuAgreements)agreeMapsCache.putIfNew(auId, auAgreements);
     }
     return auAgreements;
   }
@@ -1313,6 +1292,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  // NOTE: The calls to HistoryRepository to store and load
+  // AuAgreements are serialized by locking the AuAgreements instance
+  // for the AU. The writeTo and ReadFrom calls are used from
+  // RemoteApi to save and restore back-ups, and need to make sure
+  // that the locking of the HistoryRepository is correct, so those
+  // calls are sent through the AuAgreements, via the
+  // IdentityManagerImpl.
+
   /**
    * <p>Copies the identity agreement file for the AU to the given
    * stream.</p>
@@ -1322,8 +1309,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
   public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
       throws IOException {
-    // have the access performed by the object that has the
-    // appropriate lock
+    // have the file access performed by the AuAgreements instance,
+    // since it has the appropriate lock
     AuAgreements auAgreements = findAuAgreements(au);
     auAgreements.writeTo(getHistoryRepository(au), out);
   }
@@ -1333,13 +1320,15 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * file for the AU.</p>
    * @param au An archival unit.
    * @param in An input stream to read from.
+   * @return {@code true} if the copy was successful and the au's
+   * {@link AuAgreements} instance now reflects the new content.
    */
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException {
-    // have the access performed by the object that has the
-    // appropriate lock
+    // have the file access performed by the AuAgreements instance,
+    // since it has the appropriate lock
     AuAgreements auAgreements = findAuAgreements(au);
-    auAgreements.readFrom(getHistoryRepository(au), in);
+    auAgreements.readFrom(getHistoryRepository(au), this, in);
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -1368,9 +1357,6 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       updatesBeforeStoring =
         config.getLong(PARAM_UPDATES_BEFORE_STORING,
                        DEFAULT_UPDATES_BEFORE_STORING);
-      isMergeRestoredAgreemMap =
-        config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
-                          DEFAULT_MERGE_RESTORED_AGREE_MAP);
       minPercentPartialAgreement =
         config.getPercentage(PARAM_MIN_PERCENT_AGREEMENT,
                              DEFAULT_MIN_PERCENT_AGREEMENT);
