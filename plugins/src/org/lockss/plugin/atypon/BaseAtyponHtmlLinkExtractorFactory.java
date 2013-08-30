@@ -1,4 +1,4 @@
-/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.1 2013-07-31 21:43:58 alexandraohlson Exp $
+/* $Id: BaseAtyponHtmlLinkExtractorFactory.java,v 1.2 2013-08-30 22:21:56 alexandraohlson Exp $
  */
 
 /*
@@ -59,18 +59,14 @@ implements LinkExtractorFactory {
    * restrict the form download URLs to just those forms with the name="frmCitMgr"
    */
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType) {
-    Set<String> include = new HashSet<String>();
-    Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictor
+    Map<String, HtmlFormExtractor.FormFieldRestrictions> baseRestrictor
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
 
-    /* only include forms with the name "frmCitMgr" */
-    include = SetUtil.fromCSV("frmCitmgr");
-    HtmlFormExtractor.FormFieldRestrictions include_restrictions = new HtmlFormExtractor.FormFieldRestrictions(include,null);
-    restrictor.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
+    baseRestrictor = setUpBaseRestrictor();
     
     // set up the link extractor with specific includes and excludes
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
-    extractor.setFormRestrictors(restrictor);
+    extractor.setFormRestrictors(baseRestrictor);
     return extractor;
   }
 
@@ -79,14 +75,10 @@ implements LinkExtractorFactory {
    * This method merges the child restrictions with the necessary base restriction
    */
   public org.lockss.extractor.LinkExtractor createLinkExtractor(String mimeType, Map<String, HtmlFormExtractor.FormFieldRestrictions> child_restrictor) {
-    Set<String> base_include = new HashSet<String>();
     Map<String, HtmlFormExtractor.FormFieldRestrictions> base_restrictor
     = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
     
-    // only include forms with the name "frmCitMgr" 
-    base_include = SetUtil.fromCSV("frmCitmgr");
-    HtmlFormExtractor.FormFieldRestrictions base_restrictions = new HtmlFormExtractor.FormFieldRestrictions(base_include,null);
-    base_restrictor.put(HtmlFormExtractor.FORM_NAME, base_restrictions);
+    base_restrictor = setUpBaseRestrictor();
     
     // did the child add in any additional restrictions?
     if (child_restrictor != null) {
@@ -113,5 +105,24 @@ implements LinkExtractorFactory {
     JsoupHtmlLinkExtractor extractor = new JsoupHtmlLinkExtractor();
     extractor.setFormRestrictors(base_restrictor);
     return extractor;
+  }
+  
+  private Map<String, HtmlFormExtractor.FormFieldRestrictions> setUpBaseRestrictor() {
+    Set<String> include = new HashSet<String>();
+    Set<String> exclude = new HashSet<String>();
+    Map<String, HtmlFormExtractor.FormFieldRestrictions> restrictor
+    = new HashMap<String, HtmlFormExtractor.FormFieldRestrictions>();
+
+    /* only include forms with the name "frmCitMgr" */
+    include = SetUtil.fromCSV("frmCitmgr");
+    HtmlFormExtractor.FormFieldRestrictions include_restrictions = new HtmlFormExtractor.FormFieldRestrictions(include,null);
+    restrictor.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
+    
+    /* now set up an exclude restriction on "format" */ 
+    exclude = SetUtil.fromCSV("refworks,refworks-cn"); 
+    HtmlFormExtractor.FormFieldRestrictions exclude_restrictions = new HtmlFormExtractor.FormFieldRestrictions(null, exclude);
+    restrictor.put("format", exclude_restrictions);
+    
+    return restrictor;
   }
 }
