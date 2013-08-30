@@ -1,5 +1,5 @@
 /*
- * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.1 2013-07-31 21:43:57 alexandraohlson Exp $
+ * $Id: TestSiamHtmlLinkExtractorFactory.java,v 1.2 2013-08-30 22:45:58 alexandraohlson Exp $
  */
 /*
 
@@ -112,8 +112,6 @@ public class TestSiamHtmlLinkExtractorFactory extends LockssTestCase {
     expectedUrls = SetUtil.set(
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=ris&include=cit",
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=bibtex&include=cit",
-        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks&include=cit",
-        SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=refworks-cn&include=cit",
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=endnote&include=cit",
         SIAM_BASE_URL + "action/downloadCitation?doi=" + DOI_START + "%2F" + DOI_END + "&format=medlars&include=cit");      
     String norm_url;
@@ -121,7 +119,8 @@ public class TestSiamHtmlLinkExtractorFactory extends LockssTestCase {
     Set<String> norm_urls = new HashSet<String>();
     
     // if the additional SIAM restriction didn't work, you would end up with 12 URLS due to duplication 
-    assertEquals(6, result_strings.size());
+    // refworks and refworks-cn is restricted out by base atypon 
+    assertEquals(4, result_strings.size());
 
     for (String url : result_strings) {
       norm_url = normalizer.normalizeUrl(url, m_mau);
