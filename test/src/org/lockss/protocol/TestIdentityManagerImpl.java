@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.27.2.4 2013-08-19 22:40:08 barry409 Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.27.2.5 2013-08-30 20:27:53 barry409 Exp $
  */
 
 /*
@@ -887,132 +887,123 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     ida.setPercentAgreement(0.1f);
     loadList.add(ida);
     
-    // We have no agreements, loading loads some.
-    assertEmpty(idmgr.getAgreed(mau));
-
     hRep.setLoadedIdentityAgreement(loadList);
-    idmgr.forceReload(mau);
 
     Map agree = new HashMap();
     agree.put(peer1, new Long(10));
     agree.put(peer2, new Long(10));
     assertEquals(agree, idmgr.getAgreed(mau));
-
-    //    Map disagree = new HashMap();
-    //    disagree.put(peer1, new Long(10));
-    //    disagree.put(peer3, new Long(10));
-    //    assertEquals(disagree, idmgr.getDisagreed(mau));
   }
 
-  public void testLoadIdentityAgreementMerge() throws Exception {
-    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
-                                  "true");
-
-    MockHistoryRepository hRep = new MockHistoryRepository();
-    theDaemon.setHistoryRepository(hRep, mau);
-
-    setupV3Peer123();
-
-    List loadList = new ArrayList(3);
-
-    IdentityManager.IdentityAgreement ida =
-        new IdentityManager.IdentityAgreement(peer1);
-    ida.setLastAgree(10);
-    ida.setLastDisagree(10);
-    ida.setPercentAgreement(0.9f);
-    loadList.add(ida);
-
-    ida = new IdentityManager.IdentityAgreement(peer2);
-    ida.setLastAgree(10);
-    ida.setPercentAgreement(0.9f);
-    loadList.add(ida);
-
-    ida = new IdentityManager.IdentityAgreement(peer3);
-    ida.setLastDisagree(10);
-    ida.setPercentAgreement(0.1f);
-    loadList.add(ida);
-
-    TimeBase.setSimulated(9);
-    idmgr.signalAgreed(peer1, mau);
-    idmgr.signalDisagreed(peer2, mau);
-
-    TimeBase.step(2);
-    idmgr.signalAgreed(peer2, mau);
-    idmgr.signalDisagreed(peer2, mau);
-    idmgr.signalAgreed(peer3, mau);
-
-    Map agree = new HashMap();
-    agree.put(peer1, new Long(9));
-    agree.put(peer2, new Long(11));
-    agree.put(peer3, new Long(11));
-
-    // We have agreements, reloading doesn't clobber them.
-    assertEquals(agree, idmgr.getAgreed(mau));
-
-    hRep.setLoadedIdentityAgreement(loadList);
-    assertFalse(idmgr.getAgreed(mau).isEmpty());
-    idmgr.forceReload(mau);
-
-    assertEquals(agree, idmgr.getAgreed(mau));
-
-    //    Map disagree = new HashMap();
-    //    disagree.put(peer1, new Long(10));
-    //    disagree.put(peer2, new Long(11));
-    //    disagree.put(peer3, new Long(10));
-    //    assertEquals(disagree, idmgr.getDisagreed(mau));
-  }
-
-  public void testLoadIdentityAgreementNoMerge() throws Exception {
-    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
-                                  "false");
-
-    MockHistoryRepository hRep = new MockHistoryRepository();
-    theDaemon.setHistoryRepository(hRep, mau);
-
-    setupV3Peer123();
-
-    List loadList = new ArrayList(3);
-
-    IdentityManager.IdentityAgreement ida =
-        new IdentityManager.IdentityAgreement(peer1);
-    ida.setLastAgree(10);
-    ida.setPercentAgreement(0.9f);
-    ida.setLastDisagree(10);
-    loadList.add(ida);
-
-    ida = new IdentityManager.IdentityAgreement(peer2);
-    ida.setLastAgree(10);
-    ida.setPercentAgreement(0.9f);
-    loadList.add(ida);
-
-    ida = new IdentityManager.IdentityAgreement(peer3);
-    ida.setLastDisagree(10);
-    ida.setPercentAgreement(0.1f);
-    loadList.add(ida);
-
-    TimeBase.setSimulated(9);
-    idmgr.signalAgreed(peer1, mau);
-    idmgr.signalDisagreed(peer2, mau);
-
-    TimeBase.step(2);
-    idmgr.signalAgreed(peer2, mau);
-    idmgr.signalDisagreed(peer2, mau);
-    idmgr.signalAgreed(peer3, mau);
-
-    Map agree = new HashMap();
-    agree.put(peer1, new Long(10));
-    agree.put(peer2, new Long(10));
-
-    hRep.setLoadedIdentityAgreement(loadList);
-    idmgr.forceReload(mau);
-
-    assertEquals(agree, idmgr.getAgreed(mau));
-
-    //    Map disagree = new HashMap();
-    //    disagree.put(peer1, new Long(10));
-    //    disagree.put(peer3, new Long(10));
-    //    assertEquals(disagree, idmgr.getDisagreed(mau));
-  }
+//  public void testLoadIdentityAgreementMerge() throws Exception {
+//    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
+//                                  "true");
+//
+//    MockHistoryRepository hRep = new MockHistoryRepository();
+//    theDaemon.setHistoryRepository(hRep, mau);
+//
+//    setupV3Peer123();
+//
+//    List loadList = new ArrayList(3);
+//
+//    IdentityManager.IdentityAgreement ida =
+//        new IdentityManager.IdentityAgreement(peer1);
+//    ida.setLastAgree(10);
+//    ida.setLastDisagree(10);
+//    ida.setPercentAgreement(0.9f);
+//    loadList.add(ida);
+//
+//    ida = new IdentityManager.IdentityAgreement(peer2);
+//    ida.setLastAgree(10);
+//    ida.setPercentAgreement(0.9f);
+//    loadList.add(ida);
+//
+//    ida = new IdentityManager.IdentityAgreement(peer3);
+//    ida.setLastDisagree(10);
+//    ida.setPercentAgreement(0.1f);
+//    loadList.add(ida);
+//
+//    TimeBase.setSimulated(9);
+//    idmgr.signalAgreed(peer1, mau);
+//    idmgr.signalDisagreed(peer2, mau);
+//
+//    TimeBase.step(2);
+//    idmgr.signalAgreed(peer2, mau);
+//    idmgr.signalDisagreed(peer2, mau);
+//    idmgr.signalAgreed(peer3, mau);
+//
+//    Map agree = new HashMap();
+//    agree.put(peer1, new Long(9));
+//    agree.put(peer2, new Long(11));
+//    agree.put(peer3, new Long(11));
+//
+//    // We have agreements, reloading doesn't clobber them.
+//    assertEquals(agree, idmgr.getAgreed(mau));
+//
+//    hRep.setLoadedIdentityAgreement(loadList);
+//    assertFalse(idmgr.getAgreed(mau).isEmpty());
+//    idmgr.forceReload(mau);
+//
+//    assertEquals(agree, idmgr.getAgreed(mau));
+//
+//    //    Map disagree = new HashMap();
+//    //    disagree.put(peer1, new Long(10));
+//    //    disagree.put(peer2, new Long(11));
+//    //    disagree.put(peer3, new Long(10));
+//    //    assertEquals(disagree, idmgr.getDisagreed(mau));
+//  }
+//
+//  public void testLoadIdentityAgreementNoMerge() throws Exception {
+//    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
+//                                  "false");
+//
+//    MockHistoryRepository hRep = new MockHistoryRepository();
+//    theDaemon.setHistoryRepository(hRep, mau);
+//
+//    setupV3Peer123();
+//
+//    List loadList = new ArrayList(3);
+//
+//    IdentityManager.IdentityAgreement ida =
+//        new IdentityManager.IdentityAgreement(peer1);
+//    ida.setLastAgree(10);
+//    ida.setPercentAgreement(0.9f);
+//    ida.setLastDisagree(10);
+//    loadList.add(ida);
+//
+//    ida = new IdentityManager.IdentityAgreement(peer2);
+//    ida.setLastAgree(10);
+//    ida.setPercentAgreement(0.9f);
+//    loadList.add(ida);
+//
+//    ida = new IdentityManager.IdentityAgreement(peer3);
+//    ida.setLastDisagree(10);
+//    ida.setPercentAgreement(0.1f);
+//    loadList.add(ida);
+//
+//    TimeBase.setSimulated(9);
+//    idmgr.signalAgreed(peer1, mau);
+//    idmgr.signalDisagreed(peer2, mau);
+//
+//    TimeBase.step(2);
+//    idmgr.signalAgreed(peer2, mau);
+//    idmgr.signalDisagreed(peer2, mau);
+//    idmgr.signalAgreed(peer3, mau);
+//
+//    Map agree = new HashMap();
+//    agree.put(peer1, new Long(10));
+//    agree.put(peer2, new Long(10));
+//
+//    hRep.setLoadedIdentityAgreement(loadList);
+//    idmgr.forceReload(mau);
+//
+//    assertEquals(agree, idmgr.getAgreed(mau));
+//
+//    //    Map disagree = new HashMap();
+//    //    disagree.put(peer1, new Long(10));
+//    //    disagree.put(peer3, new Long(10));
+//    //    assertEquals(disagree, idmgr.getDisagreed(mau));
+//  }
 
   public void testLoadIdentityAgreementCompat() throws Exception {
     XStreamSerializer deserializer;

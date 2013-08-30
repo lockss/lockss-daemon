@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuAgreements.java,v 1.1.2.2 2013-08-19 22:40:07 barry409 Exp $
+ * $Id: TestAuAgreements.java,v 1.1.2.3 2013-08-30 20:27:53 barry409 Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ package org.lockss.protocol;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.*;
 import java.util.*;
 
 
@@ -45,9 +48,9 @@ public class TestAuAgreements extends LockssTestCase {
   MockHistoryRepository hRep;
 
   public void setUp() {
-    peerIdentityList = ListUtil.list(new MockPeerIdentity("id1"),
-				     new MockPeerIdentity("id2"),
-				     new MockPeerIdentity("id3"));
+    peerIdentityList = ListUtil.list(new MockPeerIdentity("id0"),
+				     new MockPeerIdentity("id1"),
+				     new MockPeerIdentity("id2"));
     idMgr = new MockIdentityManager();
     for (int i = 0; i < peerIdentityList.size(); i++) {
       PeerIdentity pid = peerIdentityList.get(i);
@@ -57,49 +60,66 @@ public class TestAuAgreements extends LockssTestCase {
     hRep = new MockHistoryRepository();
   }
 
-  public void testCreateInitial() throws Exception {
+  public void testCreateEmpty() throws Exception {
     AuAgreements auAgreements;
 
     // hRep.loadIdentityAgreements will return null.
     hRep.setLoadedIdentityAgreement((AuAgreements)null);
-    auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.load(hRep, idMgr);
-    }
+    auAgreements = AuAgreements.make(hRep, idMgr);
+    assertFalse(auAgreements.haveAgreements());
 
     hRep.setLoadedIdentityAgreement(Collections.EMPTY_LIST);
-    auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.load(hRep, idMgr);
+    auAgreements = AuAgreements.make(hRep, idMgr);
+    assertFalse(auAgreements.haveAgreements());
+
+    hRep = new MockHistoryRepository() {
+	@Override public Object loadIdentityAgreements() {
+	  return "should not work";
+	}
+      };
+    try {
+      AuAgreements.make(hRep, idMgr);
+      fail();
+    } catch (IllegalArgumentException e) {
+      // expected
     }
   }
 
-  public void testSignalPartialAgreement() {
-    AuAgreements auAgreements;
-    PeerIdentity pid = peerIdentityList.get(0);
-    auAgreements = AuAgreements.makeUnloaded();
+  public void testMakeWithAuAgreements() throws Exception {
+    // Create an AuAgreements object and put some agreements in it.
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    signalPartialAgreements(auAgreements, AgreementType.POR,
+			    50.0f, 100);
+    signalPartialAgreements(auAgreements, AgreementType.POR,
+			    40.0f, 200);
 
-    int i = 0;
-    for (AgreementType type: AgreementType.values()) {
-      auAgreements.signalPartialAgreement(pid, type, (50.0f+i)/100, 100+i);
-      auAgreements.signalPartialAgreement(pid, type, (40.0f+i)/100, 200+i);
-      i++;
-    }
+    checkPercentAgreements(auAgreements, AgreementType.POR,
+			   40.0f, 200);
+    checkHighestPercentAgreements(auAgreements, AgreementType.POR,
+				  50.0f, 100);
 
-    i = 0;
-    for (AgreementType type: AgreementType.values()) {
-      PeerAgreement agreement = auAgreements.findPeerAgreement(pid, type);
-      assertEquals((40.0f+i)/100, agreement.getPercentAgreement());
-      assertEquals(200+i, agreement.getPercentAgreementTime());
-      assertEquals((50.0f+i)/100, agreement.getHighestPercentAgreement());
-      assertEquals(100+i, agreement.getHighestPercentAgreementTime());
-      i++;
-    }
+    // Make auAgreements store.
+    auAgreements.store(hRep);
+    // Tell hRep to use the stored instance to load.
+    hRep.setLoadedIdentityAgreement(
+      (AuAgreements)hRep.getStoredIdentityAgreement());
+
+    // Load the saved AuAgreements into a new instance.
+    AuAgreements auAgreementsLoad = AuAgreements.make(hRep, idMgr);
+    // Note: AuAgreements does not override equals(), so this is
+    // Object.equals()
+    // The instance is different
+    assertNotEquals(auAgreements, auAgreementsLoad);
+
+    assertTrue(auAgreements.haveAgreements());
+    // Check that they are as expected.
+    checkPercentAgreements(auAgreements, AgreementType.POR,
+			   40.0f, 200);
+    checkHighestPercentAgreements(auAgreements, AgreementType.POR,
+				  50.0f, 100);
   }
 
-  public void testLoadWithList() throws Exception {
+  public void testMakeWithList() throws Exception {
     // Create pre-1.62 List agreements.
     List<IdentityManager.IdentityAgreement> identityAgreementList =
       new ArrayList();
@@ -122,13 +142,10 @@ public class TestAuAgreements extends LockssTestCase {
     // Tell hRep to use the old-style list.
     hRep.setLoadedIdentityAgreement(identityAgreementList);
 
-    // Load the List
-    AuAgreements auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.load(hRep, idMgr);
-    }
+    // make using the List
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
 
+    // Check the values
     for (int i = 0; i < peerIdentityList.size(); i++) {
       PeerIdentity pid = peerIdentityList.get(i);
       IdentityManager.IdentityAgreement expected = identityAgreementList.get(i);
@@ -147,8 +164,9 @@ public class TestAuAgreements extends LockssTestCase {
     }
   }
 
-  public void testLoadWithListV1() throws Exception {
-    // Create pre-1.62 List agreements, but make the 
+  public void testMakeWithListV1() throws Exception {
+    // Create pre-1.62 List agreements, but make one of the
+    // PeerIdentities not-V3
     peerIdentityList = ListUtil.list(new MockPeerIdentity("id1"),
 				     new MockPeerIdentity("id2") {
 	@Override public boolean isV3() {return false;}
@@ -180,12 +198,8 @@ public class TestAuAgreements extends LockssTestCase {
     // Tell hRep to use the old-style list.
     hRep.setLoadedIdentityAgreement(identityAgreementList);
 
-    // Load the List
-    AuAgreements auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.load(hRep, idMgr);
-    }
+    // make using the List
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
 
     for (int i = 0; i < peerIdentityList.size(); i++) {
       if (i == 1) {
@@ -217,9 +231,43 @@ public class TestAuAgreements extends LockssTestCase {
     }
   }
 
-  public void testLoadWithAuAgreements() throws Exception {
-    // Create AuAgreements object and put some agreements in it.
-    AuAgreements auAgreements = AuAgreements.makeUnloaded();
+  public void testHaveAgreements() {
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+
+    assertFalse(auAgreements.haveAgreements());
+
+    PeerIdentity pid = peerIdentityList.get(0);
+    auAgreements.signalPartialAgreement(pid, AgreementType.POR_HINT, 0.5f, 100);
+
+    assertTrue(auAgreements.haveAgreements());
+  }
+
+  public void testSignalPartialAgreement() {
+    AuAgreements auAgreements;
+    PeerIdentity pid = peerIdentityList.get(0);
+    auAgreements = AuAgreements.make(hRep, idMgr);
+
+    int i = 0;
+    for (AgreementType type: AgreementType.values()) {
+      auAgreements.signalPartialAgreement(pid, type, (50.0f+i)/100, 100+i);
+      auAgreements.signalPartialAgreement(pid, type, (40.0f+i)/100, 200+i);
+      i++;
+    }
+
+    i = 0;
+    for (AgreementType type: AgreementType.values()) {
+      PeerAgreement agreement = auAgreements.findPeerAgreement(pid, type);
+      assertEquals((40.0f+i)/100, agreement.getPercentAgreement());
+      assertEquals(200+i, agreement.getPercentAgreementTime());
+      assertEquals((50.0f+i)/100, agreement.getHighestPercentAgreement());
+      assertEquals(100+i, agreement.getHighestPercentAgreementTime());
+      i++;
+    }
+  }
+
+  public void testStore() throws Exception {
+    // Create an AuAgreements object and put some agreements in it.
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
     signalPartialAgreements(auAgreements, AgreementType.POR,
 			    50.0f, 100);
     signalPartialAgreements(auAgreements, AgreementType.POR,
@@ -230,96 +278,130 @@ public class TestAuAgreements extends LockssTestCase {
     checkHighestPercentAgreements(auAgreements, AgreementType.POR,
 				  50.0f, 100);
 
-    // Make auAgreements store.
+    assertEquals(null, hRep.getStoredIdentityAgreement());
+    // Make auAgreements store into the Mock.
     auAgreements.store(hRep);
-    // Tell hRep to use the stored instance to load.
-    hRep.setLoadedIdentityAgreement(
-      (AuAgreements)hRep.getStoredIdentityAgreement());
-
-    // Load the saved AuAgreements into a new instance.
-    auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.load(hRep, idMgr);
-    }
-
-    // Check that they are as expected.
-    checkPercentAgreements(auAgreements, AgreementType.POR,
-			   40.0f, 200);
-    checkHighestPercentAgreements(auAgreements, AgreementType.POR,
-				  50.0f, 100);
+    assertEquals(auAgreements, hRep.getStoredIdentityAgreement());
   }
 
-  // Merging when we have no agreements should indeed merge.
-  public void testMergeWithAuAgreementsEmpty() throws Exception {
-    // Create AuAgreements object and put some agreements in it.
-    AuAgreements auAgreements = AuAgreements.makeUnloaded();
-    signalPartialAgreements(auAgreements, AgreementType.POR,
-			    50.0f, 100);
-    signalPartialAgreements(auAgreements, AgreementType.POR,
-			    40.0f, 200);
+  public void testWriteTo() throws Exception {
+    String content = "This is some content.";
+    final File historyFile =
+      FileTestUtil.writeTempFile("#id_agreement", "xml", content);
+    MockHistoryRepository hRep = new MockHistoryRepository() {
+	@Override public File getIdentityAgreementFile() {
+	  return historyFile;
+	}
+      };
 
-    checkPercentAgreements(auAgreements, AgreementType.POR,
-			   40.0f, 200);
-    checkHighestPercentAgreements(auAgreements, AgreementType.POR,
-				  50.0f, 100);
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    auAgreements.writeTo(hRep, out);
 
-    // Make auAgreements store.
-    auAgreements.store(hRep);
-    // Tell hRep to use the stored instance to load.
-    hRep.setLoadedIdentityAgreement(
-      (AuAgreements)hRep.getStoredIdentityAgreement());
-
-    // Merge the saved AuAgreements into a new instance.
-    auAgreements = AuAgreements.makeUnloaded();
-    synchronized (auAgreements.getLoadLock()) {
-      assertTrue(auAgreements.isLoadNeeded());
-      auAgreements.loadAndMerge(hRep, idMgr);
-    }
-
-    checkPercentAgreements(auAgreements, AgreementType.POR,
-			   40.0f, 200);
-    checkHighestPercentAgreements(auAgreements, AgreementType.POR,
-				  50.0f, 100);
+    // The content was copied into the OutputStream.
+    assertEquals(content, out.toString("UTF-8"));
   }
 
-  // Merging when we have agreements should not merge.
-  public void testMergeWithAuAgreementsNonempty() throws Exception {
-    MockHistoryRepository hRep = new MockHistoryRepository();
+  public void testReadFrom() throws Exception {
+    // NOTE: The mock doesn't actually deserialize the file content to
+    // restore the agreements.
+    String agreement = "this is an AuAgreements";
+    final File historyFile = FileTestUtil.tempFile("#id_agreement", "xml");
 
-    // Create AuAgreements object and signal some POR agreements
-    AuAgreements auAgreementsPOR = AuAgreements.makeUnloaded();
-    signalPartialAgreements(auAgreementsPOR, AgreementType.POR,
-			    50.0f, 100);
+    MockHistoryRepository hRep = new MockHistoryRepository() {
+	@Override public File getIdentityAgreementFile() {
+	  return historyFile;
+	}
+      };
 
-    // Make a AuAgreements with POR_HINT values
-    AuAgreements peerAgreementHINT = AuAgreements.makeUnloaded();
-
-    signalPartialAgreements(peerAgreementHINT, AgreementType.POR_HINT,
+    AuAgreements auAgreementsVal = AuAgreements.make(hRep, idMgr);
+    signalPartialAgreements(auAgreementsVal, AgreementType.SYMMETRIC_POP,
 			    10.0f, 300);
+    
+    // Make auAgreements before the History knows anything to load.
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    checkAgreementsMissing(auAgreements, AgreementType.SYMMETRIC_POP);
 
-    // Make auAgreementsPOR store.
-    auAgreementsPOR.store(hRep);
-    // Tell hRep to use the stored instance to load.
+    // Tell the History to use auAgreementsVal.
+    auAgreementsVal.store(hRep);
     hRep.setLoadedIdentityAgreement(
       (AuAgreements)hRep.getStoredIdentityAgreement());
 
-    // Merge the saved AuAgreements into a new instance.
-    peerAgreementHINT.forceReload();
-    synchronized (peerAgreementHINT.getLoadLock()) {
-      assertTrue(peerAgreementHINT.isLoadNeeded());
-      peerAgreementHINT.loadAndMerge(hRep, idMgr);
-    }
+    // Do the readFrom
+    auAgreements.readFrom(hRep, idMgr,
+			  new ByteArrayInputStream(agreement.getBytes()));
 
-    checkPercentAgreements(peerAgreementHINT, AgreementType.POR_HINT,
+    // The agreement was restored
+    checkPercentAgreements(auAgreements, AgreementType.SYMMETRIC_POP,
 			   10.0f, 300);
-    // And nothing recorded for any POR, because the file was ignored.
-    checkAgreementsMissing(peerAgreementHINT, AgreementType.POR);
+    // The file was copied.
+    assertEquals(agreement.getBytes(),
+		 FileUtils.readFileToByteArray(historyFile));
+  }
+
+  public void testReadFromNonempty() throws Exception {
+    // NOTE: The mock doesn't actually deserialize the file content to
+    // restore the agreements.
+    String previousAgreement = "previous agreement";
+    String agreement = "this is an AuAgreements";
+    final File historyFile = FileTestUtil.writeTempFile("#id_agreement", "xml",
+							previousAgreement);
+
+    MockHistoryRepository hRep = new MockHistoryRepository() {
+	@Override public File getIdentityAgreementFile() {
+	  return historyFile;
+	}
+
+	@Override public MockAuState loadAuState() {
+	  return new MockAuState(new MockArchivalUnit("Mock AU"));
+	}
+      };
+
+    AuAgreements auAgreementsVal = AuAgreements.make(hRep, idMgr);
+    signalPartialAgreements(auAgreementsVal, AgreementType.SYMMETRIC_POP,
+			    10.0f, 300);
+    
+    // Make auAgreements before the History knows anything to load.
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    checkAgreementsMissing(auAgreements, AgreementType.SYMMETRIC_POP);
+
+    // Tell the History to use auAgreementsVal.
+    auAgreementsVal.store(hRep);
+    hRep.setLoadedIdentityAgreement(
+      (AuAgreements)hRep.getStoredIdentityAgreement());
+
+    // Put some content in auAgreements, then try the read.
+    auAgreements.signalPartialAgreement(
+      peerIdentityList.get(1), AgreementType.POR,
+      0.5f, 100);
+    auAgreements.readFrom(hRep, idMgr,
+			  new ByteArrayInputStream(agreement.getBytes()));
+
+    // The agreement was not restored
+    checkAgreementsMissing(auAgreements, AgreementType.SYMMETRIC_POP);
+
+    // The file was not copied.
+    assertEquals(previousAgreement.getBytes(),
+		 FileUtils.readFileToByteArray(historyFile));
+  }
+
+  public void testFindPeerAgreement() {
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    PeerIdentity pid = peerIdentityList.get(0);
+
+    PeerAgreement peerAgreement = 
+      auAgreements.findPeerAgreement(pid, AgreementType.POR_HINT);
+    assertEquals(PeerAgreement.NO_AGREEMENT, peerAgreement);
+
+    auAgreements.signalPartialAgreement(pid, AgreementType.POR_HINT, 0.5f, 100);
+
+    peerAgreement = auAgreements.findPeerAgreement(pid, AgreementType.POR_HINT);
+    assertEquals(100, peerAgreement.getPercentAgreementTime());
   }
 
   public void testHasAgreed() {
     // Create AuAgreements object empty.
-    AuAgreements auAgreements = AuAgreements.makeUnloaded();
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
     PeerIdentity pid = peerIdentityList.get(0);
     assertFalse(auAgreements.hasAgreed(pid, 0.0f));
     // in fact, its value is -1.0f
@@ -337,6 +419,43 @@ public class TestAuAgreements extends LockssTestCase {
     assertTrue(auAgreements.hasAgreed(pid, 0.3f));
     assertTrue(auAgreements.hasAgreed(pid, 0.5f));
     assertFalse(auAgreements.hasAgreed(pid, 0.500001f));
+  }
+
+  public void testGetAgreements() {
+    AuAgreements auAgreements = AuAgreements.make(hRep, idMgr);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR_HINT, 0.1f, 101);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR_HINT, 0.0f, 100);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(2),
+					AgreementType.POR_HINT, 0.2f, 102);
+
+    auAgreements.signalPartialAgreement(peerIdentityList.get(1),
+					AgreementType.POR, 0.1f, 201);
+    auAgreements.signalPartialAgreement(peerIdentityList.get(0),
+					AgreementType.POR, 0.0f, 200);
+
+    Map<PeerIdentity, PeerAgreement> map;
+    map = auAgreements.getAgreements(AgreementType.POR_HINT);
+    assertEquals(3, map.size());
+    for (int i = 0; i < 3; i++) {
+      PeerIdentity pid = peerIdentityList.get(i);
+      PeerAgreement peerAgreement = map.get(pid);
+      assertNotNull(peerAgreement);
+      assertEquals(100+i, peerAgreement.getPercentAgreementTime());
+    }
+
+    map = auAgreements.getAgreements(AgreementType.POR);
+    assertEquals(2, map.size());
+    for (int i = 0; i < 2; i++) {
+      PeerIdentity pid = peerIdentityList.get(i);
+      PeerAgreement peerAgreement = map.get(pid);
+      assertNotNull(peerAgreement);
+      assertEquals(200+i, peerAgreement.getPercentAgreementTime());
+    }
+
+    map = auAgreements.getAgreements(AgreementType.SYMMETRIC_POR);
+    assertTrue(map.isEmpty());
   }
 
   // Signal a sterotyped set of partial agreements

@@ -1,5 +1,5 @@
 /*
- * $Id: AuAgreements.java,v 1.1.2.2 2013-08-19 22:40:06 barry409 Exp $
+ * $Id: AuAgreements.java,v 1.1.2.3 2013-08-30 20:27:52 barry409 Exp $
  */
 
 /*
@@ -61,8 +61,6 @@ public class AuAgreements implements LockssSerializable {
    */
   protected static Logger log = Logger.getLogger(IdentityManagerImpl.class);
 
-  // Do we need to load or merge from the HistoryRepository?
-  private transient boolean isLoadNeeded;
   // A collection of polling agreements as stored in the
   // HistoryRepository. The content is cached in map, and the two
   // structures are synchronized when needed. See updateListFromMap and
@@ -73,20 +71,43 @@ public class AuAgreements implements LockssSerializable {
   private transient Map<PeerIdentity, PeerAgreements> map;
 
   private AuAgreements() {
-    this.isLoadNeeded = true;
     this.map = new HashMap();
   }
 
   /**
-   * Create a new instance with no content, ready to be loaded.
+   * Create a new instance.
+   * @param hRep The {@link HistoryRepository} to use.
+   * @param idMgr A {@link IdentityManager} to translate {@link
+   * String}s to {@link PeerIdentity} instances.
    */
-  public static AuAgreements makeUnloaded() {
-    return new AuAgreements();
+  public static AuAgreements make(HistoryRepository hRep,
+				  IdentityManager idMgr) {
+    AuAgreements auAgreements = new AuAgreements();
+    auAgreements.loadFrom(getRawAgreements(hRep), idMgr);
+    return auAgreements;
   }
 
+  /**
+   * @param hRep A {@link HistoryRepository} to use.
+   * @return The value and type from {@link
+   * HistoryRepository#loadIdentityAgreements}, or {@code null} if the
+   * no value is available.
+   */
+  private static Object getRawAgreements(HistoryRepository hRep) {
+    Object rawAgreements = null;
+    try {
+      rawAgreements = hRep.loadIdentityAgreements();
+    } catch (LockssRepositoryException e) {
+      ArchivalUnit au = hRep.loadAuState().getArchivalUnit();
+      log.error("getRawAgreements au="+au, e);
+      // Should anything else be done in case of error?
+    }
+    return rawAgreements;
+  }
+
+  @Override
   public String toString() {
-    return "AuAgreements[isLoadNeeded="+isLoadNeeded+
-      ", list="+list+
+    return "AuAgreements[list="+list+
       ", map="+map+
       "]";
   }
@@ -113,108 +134,12 @@ public class AuAgreements implements LockssSerializable {
     }
   }
 
-  /**
-   * The {@link Object} returned must be synchronized to call {@link
-   * #isLoadNeeded}, {@link #load}, or {@link loadAndMerge}. The
-   * typical use pattern would be to synchronize, and call {@link
-   * #load}, or {@link loadAndMerge} if {@link #isLoadNeeded} returns
-   * {@code true}.
-   */
-  public Object getLoadLock() {
-    return this;
-  }
-
-  /**
-   * @return {@code true} iff the instance needs to be loaded.
-   * Must be called with {@link #getLoadLock} held.
-   */
-  public boolean isLoadNeeded() {
-    return isLoadNeeded;
-  }
-
-  // package-level for testing.
-  /**
-   * Force this instance to be reloaded next time {@link
-   * #findAgreements} is called.
-   * Acquires {@link #getLoadLock} as a leaf lock.
-   */
-  void forceReload() {
-    synchronized (getLoadLock()) {
-      isLoadNeeded = true;
-    }
-  }
-
-  /**
-   * Call the {@link HistoryRepository} to load the currrent
-   * representation of the history. 
-   *
-   * If there is no prior agreement history in the {@link
-   * HistoryRepository} or there is an error trying to read it, an
-   * empty past history is assumed.
-   *
-   * Must be called with {@link #getLoadLock} held.
-   *
-   * @param hRep A {@link HistoryRepository} to use.
-   * @param idMgr A {@link IdentityManager} to translate {@link
-   * String}s to {@link PeerIdentity} instances.
-   */
-  public void load(HistoryRepository hRep,
-		   IdentityManager idMgr) {
-    isLoadNeeded = false;
-    loadFrom(getRawAgreements(hRep), idMgr);
-  }
-
-  /**
-   * If there are agreements already present, do nothing. Otherwise
-   * call the {@link HistoryRepository} to load the currrent
-   * representation of the history.
-   *
-   * If there is no prior agreement history in the {@link
-   * HistoryRepository} or there is an error trying to read it, an
-   * empty past history is assumed.
-   *
-   * Must be called with {@link #getLoadLock} held.
-   *
-   * @param hRep A {@link HistoryRepository} to use.
-   * @param idMgr A {@link IdentityManager} to translate {@link
-   * String}s to {@link PeerIdentity} instances.
-   */
-  public void loadAndMerge(HistoryRepository hRep,
-			   IdentityManager idMgr) {
-    isLoadNeeded = false;
-      
-    if (haveAgreements()) {
-      log.debug("Merge ignored; already have agreements.");
-    } else {
-      Object rawAgreements = getRawAgreements(hRep);
-      loadFrom(rawAgreements, idMgr);
-    }
-  }
-
-  /**
-   * @param hRep A {@link HistoryRepository} to use.
-   * @return The value and type from {@link
-   * HistoryRepository#loadIdentityAgreements}, or {@code null} if the
-   * no value is available.
-   */
-  private Object getRawAgreements(HistoryRepository hRep) {
-    Object rawAgreements = null;
-    try {
-      rawAgreements = hRep.loadIdentityAgreements();
-    } catch (LockssRepositoryException e) {
-      ArchivalUnit au = hRep.loadAuState().getArchivalUnit();
-      log.error("getRawAgreements au="+au, e);
-      // Should anything else be done in case of error?
-    }
-    return rawAgreements;
-  }
-
   // NOTE: Since this instance is already in the cache and used for
   // initialization synchronization, we change the internal state to
   // be that of the Object supplied -- even if it is an instance of
   // AuAgreements.
 
-  void loadFrom(Object rawAgreements, IdentityManager idMgr) {
+  private void loadFrom(Object rawAgreements, IdentityManager idMgr) {
     if (rawAgreements == null) {
       loadInitial();
     } else if (rawAgreements instanceof AuAgreements) {
@@ -230,19 +155,19 @@ public class AuAgreements implements LockssSerializable {
   }
 
   // Create when the history has nothing
-  void loadInitial() {
+  private void loadInitial() {
     this.list = new ArrayList();
   }
 
   // The format used in daemon 1.62 and beyond.
-  void loadFromAuAgreements(AuAgreements auAgreements) {
+  private void loadFromAuAgreements(AuAgreements auAgreements) {
     // Copy over the non-transient instance variables.
     this.list = auAgreements.list;
   }
 
   // The format used prior to daemon 1.62
-  void loadFromList(List<IdentityManager.IdentityAgreement> list,
-		    IdentityManager idMgr) {
+  private void loadFromList(List<IdentityManager.IdentityAgreement> list,
+			    IdentityManager idMgr) {
     this.list = makePeerAgreementsList(list, idMgr);
   }
 
@@ -304,6 +229,14 @@ public class AuAgreements implements LockssSerializable {
     return map;
   }
 
+  // NOTE: The calls to HistoryRepository to store and load
+  // AuAgreements are serialized by locking the AuAgreements instance
+  // for the AU. The writeTo and ReadFrom calls are used from
+  // RemoteApi to save and restore back-ups, and need to make sure
+  // that the locking of the HistoryRepository is correct, so those
+  // calls are sent through the AuAgreements, via the
+  // IdentityManagerImpl.
+
   /**
    * <p>Copies the identity agreement file for the AU to the given
    * stream.</p>
@@ -323,24 +256,38 @@ public class AuAgreements implements LockssSerializable {
   }
 
   /**
-   * <p>Installs the contents of the stream as the identity agreement
-   * file for the AU.</p>
+   * <p>If there are no agreements, deserialize the contents of the
+   * stream as the identity agreement file for the AU. Otherwise,
+   * ignore the contents of the file.</p>
    * @param hRep A {@link HistoryRepository} to use.
+   * @param idMgr A {@link IdentityManager} to translate {@link
+   * String}s to {@link PeerIdentity} instances.
    * @param in An input stream to read from.
    */
   public synchronized void readFrom(HistoryRepository hRep,
+				    IdentityManager idMgr,
 				    InputStream in) throws IOException {
-    // We might or might not have agreements present, and might or
-    // might not be expected to merge.
-    File file = hRep.getIdentityAgreementFile();
-    OutputStream out = new FileOutputStream(file);
-    try {
-      StreamUtil.copy(in, out);
-    } finally {
-      IOUtil.safeClose(out);
-      // Issue: can't do this lazy, or we can lose the old stuff. Need
-      // to merge and save at this point. Was always so.
-      forceReload();
+    if (haveAgreements()) {
+      ArchivalUnit au = hRep.loadAuState().getArchivalUnit();
+      log.debug("Ignoring request to restore "+au);
+    } else {
+      File file = hRep.getIdentityAgreementFile();
+      OutputStream out = new FileOutputStream(file);
+      boolean copyFinished = false;
+      try  {
+	StreamUtil.copy(in, out);
+	copyFinished = true;
+	// If the copy fails, we remain empty.  The file may be
+	// corrupt and unusable, but if the copy failed, we don't
+	// detect that here.
+	loadFrom(getRawAgreements(hRep), idMgr);
+      } finally {
+	if (! copyFinished) {
+	  ArchivalUnit au = hRep.loadAuState().getArchivalUnit();
+	  log.debug("Copy failed restoring "+au);
+	}
+	IOUtil.safeClose(out);
+      }
     }
   }
 
