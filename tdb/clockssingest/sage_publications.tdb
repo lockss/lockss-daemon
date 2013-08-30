@@ -4182,7 +4182,8 @@
     title <
       name = Career Development and Transition for Exceptional Individuals ;
       issn = 0885-7288 ;
-      eissn = 1557-5047
+      eissn = 1557-5047 ;
+      issnl = 0885-7288
     >
 
     param[base_url] = http://cde.sagepub.com/
@@ -4235,13 +4236,33 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
       au < zapped ; down ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 ; >
       au < released ; crawling ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 ; >
-      au < released ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
-      au < crawling ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
 
     }
 
   }
 
+    {
+
+      title <
+        name = Career Development and Transition for Exceptional Individuals ;
+        issn = 2165-1434 ;
+        eissn = 2165-5144 ;
+        issnl = 2165-1434
+      >
+
+       comment[previously] = Career Development for Exceptional Individuals
+       
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://cde.sagepub.com/
+
+        au < released ; crawling ; 2012 ; Career Development and Transition for Exceptional Individuals Volume 35 ; 35 ; >
+        au < crawling ; exists ; 2013 ; Career Development and Transition for Exceptional Individuals Volume 36 ; 36 ; >
+
+      }
+
+    }
   {
   
     title <
@@ -5614,6 +5635,72 @@
 
   }
 
+    {
+
+      title <
+        name = Alternative Health Practitioner ;
+        issn = 1076-1675 ;
+        eissn = 2162-447X
+      >
+        comment[one] = Till 1999 Alternative Health Practitioner. 1076-1675 2162-447X
+        comment[two] = Till 2011-01-01 Complementary Health Practice Revew 1533-2101
+        comment[tri] = Finally, to Journal of Evidence-Based Complementary & Alternative Medicine 2156-5872
+
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://chp.sagepub.com/
+
+        au < manifest ; exists ; 1995 ; Alternative Health Practitioner Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1996 ; Alternative Health Practitioner Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1997 ; Alternative Health Practitioner Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1998 ; Alternative Health Practitioner Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1999 ; Alternative Health Practitioner Volume 5 ; 5 ; >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Complementary Health Practice Review ;
+        issn = 1533-2101
+      >
+        comment[one] = Till 1999 Alternative Health Practitioner. 1076-1675 2162-447X
+        comment[two] = Till 2011-01-01 Complementary Health Practice Revew 1533-2101
+        comment[tri] = Finally, to Journal of Evidence-Based Complementary & Alternative Medicine 2156-5872
+
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+
+      au < down ; crawling ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 ; >
+      au < zapped ; down ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+
+    }
+    
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://chp.sagepub.com/
+
+        au < manifest ; exists ; 2000 ; Complementary Health Practice Review Volume 6 ; 6 ; >
+        au < manifest ; exists ; 2001 ; Complementary Health Practice Review Volume 7 ; 7 ; >
+        au < manifest ; exists ; 2003 ; Complementary Health Practice Review Volume 8 ; 8 ; >
+        au < manifest ; exists ; 2004 ; Complementary Health Practice Review Volume 9 ; 9 ; >
+        au < manifest ; exists ; 2005 ; Complementary Health Practice Review Volume 10 ; 10 ; >
+        au < manifest ; exists ; 2006 ; Complementary Health Practice Review Volume 11 ; 11 ; >
+        au < manifest ; exists ; 2007 ; Complementary Health Practice Review Volume 12 ; 12 ; >
+        au < doNotProcess ; doNotProcess ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 ; >
+        au < doNotProcess ; doNotProcess ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; >
+        au < zapped ; down ; 2010 ; Complementary Health Practice Review Volume 15 ; 15 ; >
+
+      }
+
+    }
+
   {
   
     title <
@@ -5628,33 +5715,8 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
-      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-
-      au < down ; crawling ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 ; >
-      au < zapped ; down ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-
-    }
-
-    {
-
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1995 ; Complementary Health Practice Review Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1996 ; Complementary Health Practice Review Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1997 ; Complementary Health Practice Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1998 ; Complementary Health Practice Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1999 ; Complementary Health Practice Review Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2000 ; Complementary Health Practice Review Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2001 ; Complementary Health Practice Review Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2003 ; Complementary Health Practice Review Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2004 ; Complementary Health Practice Review Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2005 ; Complementary Health Practice Review Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2006 ; Complementary Health Practice Review Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2007 ; Complementary Health Practice Review Volume 12 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; Complementary Health Practice Review Volume 13 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; Complementary Health Practice Review Volume 14 ; 14 ; >
-      au < zapped ; down ; 2010 ; Complementary Health Practice Review Volume 15 ; 15 ; >
       au < released ; crawling ; 2011 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 16 ; 16 ; >
       au < released ; crawling ; 2012 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Journal of Evidence-Based Complementary & Alternative Medicine Volume 18 ; 18 ; >
@@ -7747,6 +7809,26 @@
       au < zapped ; down ; 2010 ; Drug Information Journal Volume 44 ; 44 ; >
       au < zapped ; down ; 2011 ; Drug Information Journal Volume 45 ; 45 ; >
       au < released ; crawling ; 2012 ; Drug Information Journal Volume 46 ; 46 ; >
+  
+      }
+  
+    }
+  
+    {
+  
+        title <
+          name = Therapeutic Innovation & Regulatory Science ;
+          issn = 2168-4790 ;
+          eissn = 2168-4804
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://dij.sagepub.com/
+        
+        comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
+        
       au < crawling ; exists ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 ; >
 
     }
@@ -20258,6 +20340,37 @@
 
   }
 
+    {
+  
+        title <
+          name = JALA (Charlottesville, Va.) ;
+          issn = 1535-5535 ;
+          eissn = 1540-2452 ;
+          issnl = 1535-5535 
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://jla.sagepub.com/
+  
+        au < exists ; exists ; 1999 ; JALA (Charlottesville, Va.) Volume 4 ; 4 ; >
+        au < exists ; exists ; 2000 ; JALA (Charlottesville, Va.) Volume 5 ; 5 ; >
+        au < exists ; exists ; 2001 ; JALA (Charlottesville, Va.) Volume 6 ; 6 ; >
+        au < exists ; exists ; 2002 ; JALA (Charlottesville, Va.) Volume 7 ; 7 ; >
+        au < exists ; exists ; 2003 ; JALA (Charlottesville, Va.) Volume 8 ; 8 ; >
+        au < exists ; exists ; 2004 ; JALA (Charlottesville, Va.) Volume 9 ; 9 ; >
+        au < exists ; exists ; 2005 ; JALA (Charlottesville, Va.) Volume 10 ; 10 ; >
+        au < exists ; exists ; 2006 ; JALA (Charlottesville, Va.) Volume 11 ; 11 ; >
+        au < exists ; exists ; 2007 ; JALA (Charlottesville, Va.) Volume 12 ; 12 ; >
+        au < exists ; exists ; 2008 ; JALA (Charlottesville, Va.) Volume 13 ; 13 ; >
+        au < exists ; exists ; 2009 ; JALA (Charlottesville, Va.) Volume 14 ; 14 ; >
+        au < exists ; exists ; 2010 ; JALA (Charlottesville, Va.) Volume 15 ; 15 ; >
+  
+      }
+  
+    }
+
   {
 
       title <
@@ -22302,6 +22415,11 @@
 
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
+
+
+
+
+
 
       au < down ; crawling ; 2008 ; Journal of Social and Personal Relationships Volume 25 ; 25 ; >
       au < zapped ; down ; 2009 ; Journal of Social and Personal Relationships Volume 26 ; 26 ; >
@@ -35855,6 +35973,33 @@
 
   }
 
+    {
+
+      title <
+        name = Pathologia veterinaria ;
+        issn = 0031-2975 ;
+        issnl = 0031-2975 
+      >
+
+        comment[continued_by] = Veterinary Pathology
+        
+      {
+
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://vet.sagepub.com/
+
+        au < manifest ; exists ; 1964 ; Pathologia veterinaria Volume 1 ; 1 ; >
+        au < manifest ; exists ; 1965 ; Pathologia veterinaria Volume 2 ; 2 ; >
+        au < manifest ; exists ; 1966 ; Pathologia veterinaria Volume 3 ; 3 ; >
+        au < manifest ; exists ; 1967 ; Pathologia veterinaria Volume 4 ; 4 ; >
+        au < manifest ; exists ; 1968 ; Pathologia veterinaria Volume 5 ; 5 ; >
+        au < manifest ; exists ; 1969 ; Pathologia veterinaria Volume 6 ; 6 ; >
+        au < manifest ; exists ; 1970 ; Pathologia veterinaria Volume 7 ; 7 ; >
+
+      }
+
+    }
+
   {
 
     title <
@@ -35863,19 +36008,13 @@
       eissn = 1544-2217 
     >
 
-    param[base_url] = http://vet.sagepub.com/
+       param[base_url] = http://vet.sagepub.com/
+       comment[continued_from] = Pathologia veterinaria
 
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists ; 1964 ; Veterinary Pathology Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1965 ; Veterinary Pathology Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1966 ; Veterinary Pathology Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1967 ; Veterinary Pathology Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1968 ; Veterinary Pathology Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1969 ; Veterinary Pathology Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1970 ; Veterinary Pathology Volume 7 ; 7 ; >
       au < manifest ; exists ; 1971 ; Veterinary Pathology Volume 8 ; 8 ; >
       au < manifest ; exists ; 1972 ; Veterinary Pathology Volume 9 ; 9 ; >
       au < manifest ; exists ; 1973 ; Veterinary Pathology Volume 10 ; 10 ; >
