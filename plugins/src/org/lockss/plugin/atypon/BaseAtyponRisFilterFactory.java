@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.1 2013-08-29 22:41:23 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.2 2013-08-30 20:07:39 alexandraohlson Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ package org.lockss.plugin.atypon;
  * Using a local version of RisFilterInputStream until the org.lockss.filter version is released
  * (probably 1.63).  Until then you cannot include org.lockss.filter or there will be ambiguity.
  */
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -61,6 +62,7 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       String encoding)
           throws PluginException {
 
+    InputStream inBuf = null; // to make sure mark() is supported
     /* 
      * RIS files are collected with content type text/plain (encoding) and so
      * we have to filter all text/plain and then determine if they're a RIS file 
@@ -70,11 +72,17 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
     try {
       BufferedReader bReader;
       boolean isRisFile = false;
-      in.mark(1000); // not sure about the limit...just reading far enough to identify file type
+      
+      if (in.markSupported() != true) {
+        inBuf = new BufferedInputStream(in); //wrap the one that came in
+      } else {
+        inBuf =  in; //use the one passed in
+      }
+      inBuf.mark(1000); // not sure about the limit...just reading far enough to identify file type
       int BUF_LEN = 1000;
 
       // take only up to 1000 bytes in from the input stream
-      bReader = new BufferedReader(new InputStreamReader(in, encoding));
+      bReader = new BufferedReader(new InputStreamReader(inBuf, encoding));
       char[] buffer = new char[BUF_LEN];
       int charsIn = bReader.read(buffer, 0, BUF_LEN); // might be less than 1000
       if (charsIn > 0) { //only if we managed to actually get something (not an empty file)
@@ -87,17 +95,17 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
           isRisFile=true;
         }
       }
-      in.reset();
+      inBuf.reset();
       if (isRisFile) {
-        return new RisFilterInputStream(in, encoding, "Y2");
+        return new RisFilterInputStream(inBuf, encoding, "Y2");
       }
-      return in;
+      return inBuf;
 
     } catch (UnsupportedEncodingException e) {
       log.debug2("Internal error (unsupported encoding)");
     } catch (IOException e) {
       log.debug2("Internal error (IO exception");
     }
-    return in; // necessary for the "catch"
+    return inBuf; // necessary for the "catch"
   }
 }

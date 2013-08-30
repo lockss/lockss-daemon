@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponRisFilterFactory.java,v 1.3 2013-08-29 23:07:53 alexandraohlson Exp $
+ * $Id: TestBaseAtyponRisFilterFactory.java,v 1.4 2013-08-30 20:07:39 alexandraohlson Exp $
  */
 /*
 
@@ -99,12 +99,13 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
 
   }
 
-  private static final String realFileRis = "org/lockss/plugin/atypon/Test_ris.html";
-  private static final String realFileRisExpected = "org/lockss/plugin/atypon/Test_risExpected.html";
-  private static final String realFileBib = "org/lockss/plugin/atypon/Test_bib.html";
-  private static final String realFileMedlars = "org/lockss/plugin/atypon/Test_medlars.html";
+  // Using the getResourceAsStream() will find these in the current directory
+  private static final String realFileRis = "Test_ris.txt";
+  private static final String realFileRisExpected = "Test_risExpected.txt";
+  private static final String realFileBib = "Test_bib.txt";
+  private static final String realFileMedlars = "Test_medlars.txt";
 
-  /*
+
   public void testFromFilesFiltering() throws Exception {
     InputStream file_input = null;
     InputStream file_expected_input = null;
@@ -114,30 +115,40 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
 
     try {
       // RIS FILE - should filter out the Y2 
-      file_input = getClass().getClassLoader().getResourceAsStream(realFileRis);
-      file_expected_input = getClass().getClassLoader().getResourceAsStream(realFileRisExpected); // no Y2 in this file
+
+      file_input = getResourceAsStream(realFileRis);
+      file_expected_input = getResourceAsStream(realFileRisExpected); // no Y2 in this file
       filteredInput = fact.createFilteredInputStream(mau, file_input, Constants.DEFAULT_ENCODING); //run through filter
       string_expected = StringUtil.fromInputStream(file_expected_input);
-      //InputStream checkExpected = fact.createFilteredInputStream(mau,  file_expected_input,  Constants.DEFAULT_ENCODING);
-      //string_expected = StringUtil.fromInputStream(checkExpected);
-      string_filtered = StringUtil.fromInputStream(filteredInput); 
+      string_filtered = StringUtil.fromInputStream(filteredInput);  
       assertEquals(string_expected, string_filtered);
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(file_expected_input);
+      IOUtil.safeClose(filteredInput);
       
       // BIB FILE - should be unchanged 
-      file_input = getClass().getClassLoader().getResourceAsStream(realFileBib);
-      file_expected_input = getClass().getClassLoader().getResourceAsStream(realFileBib); //identical
+      file_input = getResourceAsStream(realFileBib);
+      file_expected_input = getResourceAsStream(realFileBib); //identical
+      assertTrue(file_input != null);
+      assertTrue(file_expected_input != null);
       filteredInput = fact.createFilteredInputStream(mau, file_input, Constants.DEFAULT_ENCODING);
       string_expected = StringUtil.fromInputStream(file_expected_input); // unchanged from original
       string_filtered = StringUtil.fromInputStream(filteredInput); 
       assertEquals(string_expected, string_filtered);
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(file_expected_input);
       
       // MEDLARS FILE - should be unchanged 
-      file_input = getClass().getClassLoader().getResourceAsStream(realFileMedlars);
-      file_expected_input = getClass().getClassLoader().getResourceAsStream(realFileMedlars); //identical
+      file_input = getResourceAsStream(realFileMedlars);
+      file_expected_input = getResourceAsStream(realFileMedlars); //identical
+      assertTrue(file_input != null);
+      assertTrue(file_expected_input != null);
       filteredInput = fact.createFilteredInputStream(mau, file_input, Constants.DEFAULT_ENCODING);
       string_expected = StringUtil.fromInputStream(file_expected_input); //unchanged from original
       string_filtered = StringUtil.fromInputStream(filteredInput); 
       assertEquals(string_expected, string_filtered);
+      IOUtil.safeClose(file_input);
+      IOUtil.safeClose(file_expected_input);
 
     }finally {
       IOUtil.safeClose(file_input);
@@ -147,6 +158,6 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
    
 
   }
-*/
+
 
 }
