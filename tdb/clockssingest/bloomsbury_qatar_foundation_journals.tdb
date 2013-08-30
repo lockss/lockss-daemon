@@ -9,7 +9,6 @@
   >
   
   rights = openaccess
-  plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
   param[base_url] = http://www.qscience.com/
   implicit < status ;  status2 ; year ; name ; param[volume_name] >
   
@@ -20,7 +19,8 @@
       eissn = 2220-2730
     >
     
-    param[journal_id] = ahcsps
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = ahcsps
  
     au < released ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
     au < released ; crawling ; 2012 ; Aswan Heart Centre: Science and Practice Series Volume 2012 ; 2012 >
@@ -34,7 +34,8 @@
       eissn = 2220-2749
     >
     
-    param[journal_id] = avi
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = avi
 
     au < released ; crawling ; 2010 ; Avicenna Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Avicenna Volume 2011 ; 2011 >
@@ -49,7 +50,8 @@
       eissn = 2220-2757
     >
     
-    param[journal_id] = cis
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = cis
 
     au < released ; crawling ; 2010 ; Contemporary Islamic Studies Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Contemporary Islamic Studies Volume 2011 ; 2011 >
@@ -64,7 +66,8 @@
       eissn = 1703-1958
     >
     
-    param[journal_id] = nmejre
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = nmejre
 
     au < released ; crawling ; 2006 ; Near and Middle Eastern Journal of Research in Education Volume 1 (2006) ; 1 >
     au < released ; crawling ; 2007 ; Near and Middle Eastern Journal of Research in Education Volume 2 (2007) ; 2 > 
@@ -82,7 +85,8 @@
       eissn = 2219-8962
     >
     
-    param[journal_id] = pil
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = pil
 
     au < released ; crawling ; 2010 ; Perspectives in International Librarianship Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Perspectives in International Librarianship Volume 2011 ; 2011 >
@@ -98,7 +102,8 @@
       eissn = 2220-251X
     >
     
-    param[journal_id] = qfarf
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = qfarf
 
     au < released ; crawling ; 2010 ; Qatar Foundation Annual Research Forum Proceedings Volume 2010 ; 2010 >
     au < released ; crawling ; 2011 ; Qatar Foundation Annual Research Forum Proceedings Volume 2011 ; 2011 >
@@ -113,7 +118,8 @@
       eissn = 2223-506X
     >
     
-    param[journal_id] = connect
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = connect
 
     au < released ; crawling ; 2011 ; QScience Connect Volume 2011 ; 2011 >
     au < released ; crawling ; 2012 ; QScience Connect Volume 2012 ; 2012 >
@@ -128,7 +134,8 @@
       eissn = 2220-2765
     >
     
-    param[journal_id] = stsp
+    plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_dir] = stsp
 
     au < released ; crawling ; 2010 ; Sustainable Technologies, Systems and Policies Volume 2010 ; 2010 >
     au < released ; crawling ; 2012 ; Sustainable Technologies, Systems and Policies Volume 2012 ; 2012 >
