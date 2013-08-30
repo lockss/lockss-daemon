@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.17 2013-03-31 23:51:15 pgust Exp $
+ * $Id: MetadataField.java,v 1.18 2013-08-30 17:43:18 alexandraohlson Exp $
  */
 
 /*
@@ -160,8 +160,19 @@ public class MetadataField {
       Cardinality.Single,eisbnvalid);
   
   public static final String KEY_PUBLISHER = "publisher";
+  // You cannot put in an empty string or a null value for publisher
+  private static Validator publishervalid = new Validator() {
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize so that it is never set to null or to empty string
+      if( (val == null) || val.isEmpty()) {
+        throw new MetadataException.ValidationException("Illegal publisher: empty string"); 
+      }
+      return val;
+    }
+  };
   public static final MetadataField FIELD_PUBLISHER = new MetadataField(
-      KEY_PUBLISHER, Cardinality.Single);
+      KEY_PUBLISHER, Cardinality.Single,publishervalid);
 
   public static final String KEY_VOLUME = "volume";
   public static final MetadataField FIELD_VOLUME = new MetadataField(
@@ -191,8 +202,19 @@ public class MetadataField {
       KEY_ARTICLE_TITLE, Cardinality.Single);
 
   public static final String KEY_JOURNAL_TITLE = "journal.title";
+  // You cannot put in an empty string or a null value for journal title
+  private static Validator jtitlevalid = new Validator() {
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize journal title so that it is never set to null or to empty string
+      if( (val == null) || val.isEmpty()) {
+        throw new MetadataException.ValidationException("Illegal title: empty string"); 
+      }
+      return val;
+    }
+  };
   public static final MetadataField FIELD_JOURNAL_TITLE = new MetadataField(
-      KEY_JOURNAL_TITLE, Cardinality.Single);
+      KEY_JOURNAL_TITLE, Cardinality.Single, jtitlevalid);
 
   /* Author is currently a delimited list of one or more authors. */
   
