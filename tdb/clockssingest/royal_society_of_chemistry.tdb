@@ -122,6 +122,20 @@
   }
 
   {
+
+    title <
+      name = Biomaterials Science ;
+      issn = 2047-4830 ;
+      eissn = 2047-4849
+    >
+
+    param[journal_code] = bm
+
+    au < doNotProcess ; doNotProcess ; 2013 ; CBiomaterials Science Volume 1 ; 1 ; 2013 >
+
+  }
+
+  {
   
     title <
       name = Chemical Communications ;
@@ -146,6 +160,23 @@
     au < down ; down ; 2010 ; Chemical Communications Volume 46 [superseded] ; 0 ; 2010 >
     au < doNotProcess ; doNotProcess ; 2010 ; Chemical Communications Volume 46 ; 46 ; 2010 >
   
+  }
+
+  {
+
+    title <
+      name = Chemical Communications (London) ;
+      issn = 1359-7345 ;
+      eissn = 1364-548X
+    >
+
+    param[journal_code] = c1
+
+    au < doNotProcess ; doNotProcess ; 1965 ; Chemical Communications 1965 ; 0 ; 1965 >
+    au < doNotProcess ; doNotProcess ; 1966 ; Chemical Communications 1966 ; 0 ; 1966 >
+    au < doNotProcess ; doNotProcess ; 1967 ; Chemical Communications 1967 ; 0 ; 1967 >
+    au < doNotProcess ; doNotProcess ; 1968 ; Chemical Communications 1968 ; 0 ; 1968 >
+
   }
 
   {
