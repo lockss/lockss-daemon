@@ -9,15 +9,17 @@ echo "---------------------"
 echo "---------------------"
 echo "*Status typos gln: "
 cat ../../tdb/prod/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
-echo "*Status typos clockssingest: "
+echo "*Status variations clockssingest: "
 #cat ../../tdb/clockssingest/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist | grep -vx crawling | grep -vx zapped
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -c status,status2 | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "released,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "zapped,down" | grep -vw "doesNotExist,doesNotExist"
+echo "*Status typos ibictpln: "
+cat ../../tdb/ibictpln/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 #
 # Find plugins listed in tdb files, that don't exist
+echo "---------------------"
+echo "---------------------"
 # Script is run from lockss-daemon/scripts/tdb
 # These items should be run from lockss-daemon/plugins/src
-echo "---------------------"
-echo "---------------------"
 echo "*Plugins that don't exist, but are listed in tdb files: "
 cd ../../plugins/src
 grep -rl --include "*.xml" "plugin_identifier" * | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
@@ -29,52 +31,77 @@ diff $tpath/ab.txt $tpath/ac.txt | grep "^> "
 cd ../../scripts/tdb
 #
 # Find duplicate auids in the gln title database
+echo "---------------------"
+echo "---------------------"
 cat ../../tdb/prod/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "---------------------"
-echo "---------------------"
 echo "GLN. All AUids = $allAUs"
 echo "GLN. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
 # Find duplicate auids in the clockss title database
+echo "---------------------"
+echo "---------------------"
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "---------------------"
-echo "---------------------"
 echo "CLOCKSS. All AUids = $allAUs"
 echo "CLOCKSS. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
+# Find duplicate auids in the ibictpln title database
+echo "---------------------"
+echo "---------------------"
+cat ../../tdb/ibictpln/*.tdb | ./tdbout -AXEa | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "IBICT. All AUids = $allAUs"
+echo "IBICT. AUids without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
 # Find duplicate name/plugin pairs in the gln title database
+echo "---------------------"
+echo "---------------------"
 cat ../../tdb/prod/*.tdb | ./tdbout -AXE -c plugin,name | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "---------------------"
-echo "---------------------"
 echo "GLN. All plugin/names = $allAUs"
 echo "GLN. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
 #
 # Find duplicate name/plugin pairs in the clockss title database
+echo "---------------------"
+echo "---------------------"
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -AXE -c plugin,name | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
-echo "---------------------"
-echo "---------------------"
 echo "CLOCKSS. All plugin/names = $allAUs"
 echo "CLOCKSS. Plugin/names without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 echo " "
+#
+# Find duplicate name/plugin pairs in the ibictpln title database
+echo "---------------------"
+echo "---------------------"
+cat ../../tdb/ibictpln/*.tdb | ./tdbout -AXE -c plugin,name | sort > $tpath/allAUs
+uniq $tpath/allAUs > $tpath/dedupedAUs
+allAUs=`cat $tpath/allAUs | wc -l`
+uniqAUs=`cat $tpath/dedupedAUs | wc -l`
+echo "IBICT. All plugin/names = $allAUs"
+echo "IBICT. Plugin/names without duplicates = $uniqAUs"
+diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
+echo " "
+#
 #
 # Find HighWire plugin dupes
 #echo "---------------------"
@@ -110,6 +137,13 @@ echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. ISSN issues"
 cat ../../tdb/clockssingest/*.tdb | ./tdbout -t publisher,title,issn,eissn | sort -u > $tpath/issn
+./scrub_table.pl $tpath/issn
+#
+# Find issn problems in ibictpln title database
+echo "---------------------"
+echo "---------------------"
+echo "IBICT. ISSN issues"
+cat ../../tdb/ibictpln/*.tdb | ./tdbout -t publisher,title,issn,eissn | sort -u > $tpath/issn
 ./scrub_table.pl $tpath/issn
 #
 # Find Muse titles that don't have attr[journal_id]
