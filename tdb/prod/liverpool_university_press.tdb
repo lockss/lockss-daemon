@@ -598,7 +598,6 @@
     param[base_url] = http://liverpool.metapress.com/
     implicit < status ; year ; name ; param[volume_name] >      
     param[journal_issn] = 0142-7849 
-    comment[0] = RU4501, no permission statement on manifest page
 
     au < manifest ; 1993 ; Third World Planning Review Volume 15 ; 15 >
     au < manifest ; 1994 ; Third World Planning Review Volume 16 ; 16 >
