@@ -1796,13 +1796,12 @@
       issnl = 1941-6318
     >
     
-    comment[nR] = substance check failed, see RT 4726
     param[journal_issn] = 1941-6318
 
     au < manifest ; 2009 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 1 ; 1 >
     au < manifest ; 2010 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 2 ; 2 >
     au < released ; 2011 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 3 ; 3 >
-    au < notReady ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 >
+    au < expected ; 2012 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Nanotechnology and Molecular Computation (IJNMC) Volume 5 ; 5 >
 
   }
