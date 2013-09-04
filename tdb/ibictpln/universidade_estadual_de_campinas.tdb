@@ -5,7 +5,6 @@
   >
 
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  param[base_url] = http://www.fae.unicamp.br/revista/
   implicit < status ; year ; volume ; name ; param[year] >
 
   {
@@ -15,6 +14,7 @@
       issn = 1676-2592
     >
 
+    param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = etd
 
     au < released ; 1999 ; 1 ; ETD - Educação Temática Digital Volume 1 (1999) ; 1999 >
@@ -41,12 +41,14 @@
       issn = 1676-2584
     >
 
+    param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = histedbr
 
     au < released ; 2009 ; 9 ; Revista HISTEDBR On-Line Volume 9 ; 2009 >
     au < released ; 2010 ; 10 ; Revista HISTEDBR On-Line Volume 10 ; 2010 >
     au < released ; 2011 ; 11 ; Revista HISTEDBR On-Line Volume 11 ; 2011 >
     au < released ; 2012 ; 12 ; Revista HISTEDBR On-Line Volume 12 ; 2012 >
+    au < expected ; 2013 ; 13 ; Revista HISTEDBR On-Line Volume 13 ; 2013 >
 
   }
 
@@ -57,6 +59,7 @@
       eissn = 2176-1744
     >
 
+    param[base_url] = http://www.fae.unicamp.br/revista/
     param[journal_id] = zetetike
 
     au < released ; 1993 ; 1 ; Zetetiké Volume 1 ; 1993 >
@@ -90,7 +93,7 @@
       >
 
       comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.fae.unicamp.br/
+      param[base_url] = http://www.fae.unicamp.br/revista/
       param[journal_id] = etd
 
       au < exists ; 2005 ; 1 ; Educação Temática Digital Volume 2005 ; 2005 >
@@ -108,31 +111,12 @@
   {
 
       title <
-        name = Revista HISTEDBR On-line ;
-        eissn = 1676-2584
-      >
-
-      comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.fae.unicamp.br/
-      param[journal_id] = histedbr
-
-      au < exists ; 2009 ; 1 ; Revista HISTEDBR On-line Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; Revista HISTEDBR On-line Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; Revista HISTEDBR On-line Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; Revista HISTEDBR On-line Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista HISTEDBR On-line Volume 2013 ; 2013 >
-
-  }
-
-  {
-
-      title <
         name = Revista Zetetiké: Revista de Educação Matemática ;
         issn = 2176-1744
       >
 
       comment[publisher] = Universidade Estadual de Campinas
-      param[base_url] = http://www.fae.unicamp.br/
+      param[base_url] = http://www.fae.unicamp.br/revista/
       param[journal_id] = zetetike
 
       au < exists ; 1993 ; 1 ; Revista Zetetiké: Revista de Educação Matemática Volume 1993 ; 1993 >
