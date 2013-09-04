@@ -9,23 +9,23 @@
   {
 
       title <
-        name = Revista Evidência ;
-        issn = 1808-2307
+        name = Evidência: olhares e pesquisa em saberes educacionais ;
+        issn = 1808-2327
       >
 
       comment[publisher] = Centro Universitário do Planalto de Araxá
-      param[base_url] = http://seer.fclar.unesp.br/
+      param[base_url] = http://www.uniaraxa.edu.br/ojs/
       param[journal_id] = evidencia
 
-      au < exists ; 2005 ; 1 ; Revista Evidência Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Revista Evidência Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Revista Evidência Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Revista Evidência Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Revista Evidência Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Revista Evidência Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Revista Evidência Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Revista Evidência Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Revista Evidência Volume 2013 ; 2013 >
+      au < exists ; 2005 ; 1 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Evidência: olhares e pesquisa em saberes educacionais Volume 2013 ; 2013 >
 
   }
 
