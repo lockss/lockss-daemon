@@ -17,6 +17,7 @@
 
       au < HighWirePressH20Plugin ; exists ; 2012 ; Endocrine Connections Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; Endocrine Connections Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; Endocrine Connections Volume 3 ; 3 >
 
     }
 
@@ -81,6 +82,9 @@
       au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Endocrinology Volume 168 ; 168 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; European Journal of Endocrinology Volume 169 ; 169 >
       au < HighWirePressH20Plugin ; expected ; 2013 ; European Journal of Endocrinology Volume 170 ; 170 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; European Journal of Endocrinology Volume 171 ; 171 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; European Journal of Endocrinology Volume 172 ; 172 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; European Journal of Endocrinology Volume 173 ; 173 >
 
     }
 
@@ -246,6 +250,8 @@
       au < HighWirePressH20Plugin ; released ; 2012 ; Reproduction Volume 144 ; 144 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Reproduction Volume 145 ; 145 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Reproduction Volume 146 ; 146 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; Reproduction Volume 147 ; 147 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; Reproduction Volume 148 ; 148 >
 
     }
 
