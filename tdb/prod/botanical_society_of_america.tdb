@@ -38,6 +38,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; American Journal of Botany Volume 98 ; 98 >
     au < HighWirePressH20Plugin ; manifest ; 2012 ; American Journal of Botany Volume 99 ; 99 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; American Journal of Botany Volume 100 ; 100 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; American Journal of Botany Volume 101 ; 101 >
 
   }
 
@@ -56,6 +57,7 @@
       param[journal_id] = apps
 
       au < manifest ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
+      au < expected ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 >
       
     }
   }

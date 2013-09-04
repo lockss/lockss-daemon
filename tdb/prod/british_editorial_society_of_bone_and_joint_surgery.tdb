@@ -17,6 +17,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
+    au < expected ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
     
   }
   
@@ -34,6 +35,7 @@
     rights = openaccess
 
     au < exists ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
+    au < expected ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
     
   }
   
@@ -137,6 +139,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; The Bone & Joint Journal Volume 95 ; 95-B >
+    au < expected ; 2014 ; The Bone & Joint Journal Volume 96 ; 96-B >
 
   }
 
