@@ -41,6 +41,7 @@
       au < ready ; 2011 ; Chemistry Central Journal Volume 5 ; 5 >
       au < ready ; 2012 ; Chemistry Central Journal Volume 6 ; 6 >
       au < manifest ; 2013 ; Chemistry Central Journal Volume 7 ; 7 >
+      au < expected ; 2014 ; Chemistry Central Journal Volume 8 ; 8 >
       
     }
   
@@ -70,6 +71,7 @@
     au < released ; 2011 ; Geochemical Transactions Volume 12 ; 12 >
     au < manifest ; 2012 ; Geochemical Transactions Volume 13 ; 13 >
     au < manifest ; 2013 ; Geochemical Transactions Volume 14 ; 14 >
+    au < expected ; 2014 ; Geochemical Transactions Volume 15 ; 15 >
 
   }
 
@@ -85,6 +87,7 @@
     param[journal_issn] = 2050-7445
     
     au < manifest ; 2013 ; Heritage Science Volume 1 ; 1 >
+    au < expected ; 2014 ; Heritage Science Volume 2 ; 2 >
 
   }
   
@@ -104,6 +107,7 @@
     au < ready ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 >
     au < ready ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 >
     au < manifest ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 >
+    au < expected ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 >
 
   }
   
@@ -122,6 +126,7 @@
     au < released ; 2011 ; Journal of Systems Chemistry Volume 2 ; 2 >
     au < released ; 2012 ; Journal of Systems Chemistry Volume 3 ; 3 >
     au < manifest ; 2013 ; Journal of Systems Chemistry Volume 4 ; 4 >
+    au < expected ; 2014 ; Journal of Systems Chemistry Volume 5 ; 5 >
 
   }
   
@@ -137,6 +142,7 @@
     param[journal_issn] = 2043-7129
     
     au < manifest ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 >
+    au < expected ; 2014 ; Sustainable Chemical Processes Volume 2 ; 2 >
 
   }
   
