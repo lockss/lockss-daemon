@@ -15,7 +15,7 @@
       >
 
       comment[publisher] = Faculdade Araguaia-SIPE
-      param[base_url] = http://www.rbep.inep.gov.br/
+      param[base_url] = http://www.fara.edu.br/sipe/
       param[journal_id] = anuario
 
       au < exists ; 2012 ; 1 ; Anuário Discente Volume 2012 ; 2012 >
@@ -31,7 +31,7 @@
       >
 
       comment[publisher] = Faculdade Araguaia-SIPE
-      param[base_url] = http://www.rbep.inep.gov.br/
+      param[base_url] = http://www.fara.edu.br/sipe/
       param[journal_id] = renefara
 
       au < exists ; 2011 ; 1 ; RENEFARA-Revista Eletrônica de Educação da Faculdade Araguaia Volume 2011 ; 2011 >
