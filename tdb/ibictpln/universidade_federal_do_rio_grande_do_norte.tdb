@@ -28,7 +28,7 @@
   {
 
       title <
-        name = Revista Ambiente Contábil  ;
+        name = Revista Ambiente Contábil ;
         issn = 2176-9036
       >
 
@@ -36,11 +36,11 @@
       param[base_url] = http://periodicos.ufrn.br/
       param[journal_id] = ambiente
 
-      au < manifest ; 2009 ; 1 ; Revista Ambiente Contábil  Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Revista Ambiente Contábil  Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Revista Ambiente Contábil  Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Revista Ambiente Contábil  Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; Revista Ambiente Contábil  Volume 2013 ; 2013 >
+      au < manifest ; 2009 ; 1 ; Revista Ambiente Contábil Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 2 ; Revista Ambiente Contábil Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 3 ; Revista Ambiente Contábil Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 4 ; Revista Ambiente Contábil Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Revista Ambiente Contábil Volume 2013 ; 2013 >
 
   }
 
@@ -68,7 +68,7 @@
   {
 
       title <
-        name = Revista meuip Cronos ;
+        name = Revista meuip Cronos ;
         issn = 1518-0689 ;
         eissn = 1982-5560
       >
@@ -77,16 +77,16 @@
       param[base_url] = http://periodicos.ufrn.br/
       param[journal_id] = cronos
 
-      au < manifest ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 >
-      au < manifest ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 >
+      au < manifest ; 2003 ; 1 ; Revista meuip Cronos Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 2 ; Revista meuip Cronos Volume 2004 ; 2004 >
+      au < manifest ; 2006 ; 4 ; Revista meuip Cronos Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 5 ; Revista meuip Cronos Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 6 ; Revista meuip Cronos Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 7 ; Revista meuip Cronos Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 8 ; Revista meuip Cronos Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 9 ; Revista meuip Cronos Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 10 ; Revista meuip Cronos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 11 ; Revista meuip Cronos Volume 2013 ; 2013 >
 
   }
 
@@ -268,7 +268,7 @@
   {
 
       title <
-        name = Revista Brasileira de Inovação Tecnológica em Saúde  ;
+        name = Revista Brasileira de Inovação Tecnológica em Saúde ;
         issn = 2236-1103
       >
 
@@ -276,9 +276,9 @@
       param[base_url] = http://periodicos.ufrn.br/
       param[journal_id] = reb
 
-      au < manifest ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde  Volume 2013 ; 2013 >
+      au < manifest ; 2011 ; 1 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 2 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Brasileira de Inovação Tecnológica em Saúde Volume 2013 ; 2013 >
 
   }
 

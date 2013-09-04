@@ -99,7 +99,7 @@
   {
 
       title <
-        name = Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás ;
+        name = Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás ;
         issn = 2316-8307
       >
 
@@ -107,7 +107,7 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = ppub
 
-      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 >
+      au < exists ; 2012 ; 1 ; Anais do Seminário sobre Políticas Públicas e Aspectos das Mudanças Institucionais no Brasil e em Goiás Volume 1 ; 2012 >
 
   }
 
@@ -334,7 +334,7 @@
   {
 
       title <
-        name = Revista Praxia ;
+        name = Revista Praxia ;
         issn = 2317-7357
       >
 
@@ -342,8 +342,8 @@
       param[base_url] = http://www.prp.ueg.br/revista/
       param[journal_id] = praxia
 
-      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 >
-      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 >
+      au < exists ; 2012 ; 1 ; Revista Praxia Volume 1 ; 2012 >
+      au < expected ; 2013 ; 2 ; Revista Praxia Volume 2 ; 2013 >
 
   }
 

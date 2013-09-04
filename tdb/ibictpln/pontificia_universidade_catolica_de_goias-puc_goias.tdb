@@ -114,7 +114,7 @@
   {
 
       title <
-        name = Revista Educativa  ;
+        name = Revista Educativa ;
         issn = 1983-7771
       >
 
@@ -122,14 +122,14 @@
       param[base_url] = http://seer.ucg.br/
       param[journal_id] = educativa
 
-      au < manifest ; 2006 ; 9 ; Revista Educativa  Volume 9 ; 2006 >
-      au < manifest ; 2007 ; 10 ; Revista Educativa  Volume 10 ; 2007 >
-      au < manifest ; 2008 ; 11 ; Revista Educativa  Volume 11 ; 2008 >
-      au < manifest ; 2009 ; 12 ; Revista Educativa  Volume 12 ; 2009 >
-      au < manifest ; 2010 ; 13 ; Revista Educativa  Volume 13 ; 2010 >
-      au < manifest ; 2011 ; 14 ; Revista Educativa  Volume 14 ; 2011 >
-      au < manifest ; 2012 ; 15 ; Revista Educativa  Volume 15 ; 2012 >
-      au < expected ; 2013 ; 16 ; Revista Educativa  Volume 16 ; 2013 >
+      au < manifest ; 2006 ; 9 ; Revista Educativa Volume 9 ; 2006 >
+      au < manifest ; 2007 ; 10 ; Revista Educativa Volume 10 ; 2007 >
+      au < manifest ; 2008 ; 11 ; Revista Educativa Volume 11 ; 2008 >
+      au < manifest ; 2009 ; 12 ; Revista Educativa Volume 12 ; 2009 >
+      au < manifest ; 2010 ; 13 ; Revista Educativa Volume 13 ; 2010 >
+      au < manifest ; 2011 ; 14 ; Revista Educativa Volume 14 ; 2011 >
+      au < manifest ; 2012 ; 15 ; Revista Educativa Volume 15 ; 2012 >
+      au < expected ; 2013 ; 16 ; Revista Educativa Volume 16 ; 2013 >
 
   }
 

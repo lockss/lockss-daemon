@@ -9,7 +9,7 @@
   {
 
       title <
-        name = revista Ateliê Geográfico ;
+        name = revista Ateliê Geográfico ;
         issn = 1982-1956
       >
 
@@ -17,13 +17,13 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = atelie
 
-      au < manifest ; 2007 ; 1 ; revista Ateliê Geográfico Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 2 ; revista Ateliê Geográfico Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 3 ; revista Ateliê Geográfico Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 4 ; revista Ateliê Geográfico Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 5 ; revista Ateliê Geográfico Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 6 ; revista Ateliê Geográfico Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; revista Ateliê Geográfico Volume 2013 ; 2013 >
+      au < manifest ; 2007 ; 1 ; revista Ateliê Geográfico Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 2 ; revista Ateliê Geográfico Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 3 ; revista Ateliê Geográfico Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 4 ; revista Ateliê Geográfico Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 5 ; revista Ateliê Geográfico Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 6 ; revista Ateliê Geográfico Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; revista Ateliê Geográfico Volume 2013 ; 2013 >
 
   }
 
@@ -283,7 +283,7 @@
   {
 
       title <
-        name = Pesquisa Agropecuária Tropical  ;
+        name = Pesquisa Agropecuária Tropical ;
         eissn = 1983-4063
       >
 
@@ -291,46 +291,46 @@
       param[base_url] = http://www.revistas.ufg.br/
       param[journal_id] = pat
 
-      au < manifest ; 1971 ; 1 ; Pesquisa Agropecuária Tropical  Volume 1971 ; 1971 >
-      au < manifest ; 1972 ; 2 ; Pesquisa Agropecuária Tropical  Volume 1972 ; 1972 >
-      au < manifest ; 1973 ; 3 ; Pesquisa Agropecuária Tropical  Volume 1973 ; 1973 >
-      au < manifest ; 1974 ; 4 ; Pesquisa Agropecuária Tropical  Volume 1974 ; 1974 >
-      au < manifest ; 1975 ; 5 ; Pesquisa Agropecuária Tropical  Volume 1975 ; 1975 >
-      au < manifest ; 1976 ; 6 ; Pesquisa Agropecuária Tropical  Volume 1976 ; 1976 >
-      au < manifest ; 1977 ; 7 ; Pesquisa Agropecuária Tropical  Volume 1977 ; 1977 >
-      au < manifest ; 1978 ; 8 ; Pesquisa Agropecuária Tropical  Volume 1978 ; 1978 >
-      au < manifest ; 1979 ; 9 ; Pesquisa Agropecuária Tropical  Volume 1979 ; 1979 >
-      au < manifest ; 1980 ; 10 ; Pesquisa Agropecuária Tropical  Volume 1980 ; 1980 >
-      au < manifest ; 1981 ; 11 ; Pesquisa Agropecuária Tropical  Volume 1981 ; 1981 >
-      au < manifest ; 1982 ; 12 ; Pesquisa Agropecuária Tropical  Volume 1982 ; 1982 >
-      au < manifest ; 1983 ; 13 ; Pesquisa Agropecuária Tropical  Volume 1983 ; 1983 >
-      au < manifest ; 1986 ; 16 ; Pesquisa Agropecuária Tropical  Volume 1986 ; 1986 >
-      au < manifest ; 1987 ; 17 ; Pesquisa Agropecuária Tropical  Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; 18 ; Pesquisa Agropecuária Tropical  Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; 19 ; Pesquisa Agropecuária Tropical  Volume 1989 ; 1989 >
-      au < manifest ; 1990 ; 20 ; Pesquisa Agropecuária Tropical  Volume 1990 ; 1990 >
-      au < manifest ; 1992 ; 22 ; Pesquisa Agropecuária Tropical  Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; 23 ; Pesquisa Agropecuária Tropical  Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 24 ; Pesquisa Agropecuária Tropical  Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 25 ; Pesquisa Agropecuária Tropical  Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 26 ; Pesquisa Agropecuária Tropical  Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 27 ; Pesquisa Agropecuária Tropical  Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 28 ; Pesquisa Agropecuária Tropical  Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 29 ; Pesquisa Agropecuária Tropical  Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 30 ; Pesquisa Agropecuária Tropical  Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 31 ; Pesquisa Agropecuária Tropical  Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 32 ; Pesquisa Agropecuária Tropical  Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 33 ; Pesquisa Agropecuária Tropical  Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 34 ; Pesquisa Agropecuária Tropical  Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 35 ; Pesquisa Agropecuária Tropical  Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 36 ; Pesquisa Agropecuária Tropical  Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 37 ; Pesquisa Agropecuária Tropical  Volume 2007 ; 2007 >
-      au < expected ; 2008 ; 38 ; Pesquisa Agropecuária Tropical  Volume 2008 ; 2008 >
-      au < expected ; 2009 ; 39 ; Pesquisa Agropecuária Tropical  Volume 2009 ; 2009 >
-      au < expected ; 2010 ; 40 ; Pesquisa Agropecuária Tropical  Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 41 ; Pesquisa Agropecuária Tropical  Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 42 ; Pesquisa Agropecuária Tropical  Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 43 ; Pesquisa Agropecuária Tropical  Volume 2013 ; 2013 >
+      au < manifest ; 1971 ; 1 ; Pesquisa Agropecuária Tropical Volume 1971 ; 1971 >
+      au < manifest ; 1972 ; 2 ; Pesquisa Agropecuária Tropical Volume 1972 ; 1972 >
+      au < manifest ; 1973 ; 3 ; Pesquisa Agropecuária Tropical Volume 1973 ; 1973 >
+      au < manifest ; 1974 ; 4 ; Pesquisa Agropecuária Tropical Volume 1974 ; 1974 >
+      au < manifest ; 1975 ; 5 ; Pesquisa Agropecuária Tropical Volume 1975 ; 1975 >
+      au < manifest ; 1976 ; 6 ; Pesquisa Agropecuária Tropical Volume 1976 ; 1976 >
+      au < manifest ; 1977 ; 7 ; Pesquisa Agropecuária Tropical Volume 1977 ; 1977 >
+      au < manifest ; 1978 ; 8 ; Pesquisa Agropecuária Tropical Volume 1978 ; 1978 >
+      au < manifest ; 1979 ; 9 ; Pesquisa Agropecuária Tropical Volume 1979 ; 1979 >
+      au < manifest ; 1980 ; 10 ; Pesquisa Agropecuária Tropical Volume 1980 ; 1980 >
+      au < manifest ; 1981 ; 11 ; Pesquisa Agropecuária Tropical Volume 1981 ; 1981 >
+      au < manifest ; 1982 ; 12 ; Pesquisa Agropecuária Tropical Volume 1982 ; 1982 >
+      au < manifest ; 1983 ; 13 ; Pesquisa Agropecuária Tropical Volume 1983 ; 1983 >
+      au < manifest ; 1986 ; 16 ; Pesquisa Agropecuária Tropical Volume 1986 ; 1986 >
+      au < manifest ; 1987 ; 17 ; Pesquisa Agropecuária Tropical Volume 1987 ; 1987 >
+      au < manifest ; 1988 ; 18 ; Pesquisa Agropecuária Tropical Volume 1988 ; 1988 >
+      au < manifest ; 1989 ; 19 ; Pesquisa Agropecuária Tropical Volume 1989 ; 1989 >
+      au < manifest ; 1990 ; 20 ; Pesquisa Agropecuária Tropical Volume 1990 ; 1990 >
+      au < manifest ; 1992 ; 22 ; Pesquisa Agropecuária Tropical Volume 1992 ; 1992 >
+      au < manifest ; 1993 ; 23 ; Pesquisa Agropecuária Tropical Volume 1993 ; 1993 >
+      au < manifest ; 1994 ; 24 ; Pesquisa Agropecuária Tropical Volume 1994 ; 1994 >
+      au < manifest ; 1995 ; 25 ; Pesquisa Agropecuária Tropical Volume 1995 ; 1995 >
+      au < manifest ; 1996 ; 26 ; Pesquisa Agropecuária Tropical Volume 1996 ; 1996 >
+      au < manifest ; 1997 ; 27 ; Pesquisa Agropecuária Tropical Volume 1997 ; 1997 >
+      au < manifest ; 1998 ; 28 ; Pesquisa Agropecuária Tropical Volume 1998 ; 1998 >
+      au < manifest ; 1999 ; 29 ; Pesquisa Agropecuária Tropical Volume 1999 ; 1999 >
+      au < manifest ; 2000 ; 30 ; Pesquisa Agropecuária Tropical Volume 2000 ; 2000 >
+      au < manifest ; 2001 ; 31 ; Pesquisa Agropecuária Tropical Volume 2001 ; 2001 >
+      au < manifest ; 2002 ; 32 ; Pesquisa Agropecuária Tropical Volume 2002 ; 2002 >
+      au < manifest ; 2003 ; 33 ; Pesquisa Agropecuária Tropical Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 34 ; Pesquisa Agropecuária Tropical Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 35 ; Pesquisa Agropecuária Tropical Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 36 ; Pesquisa Agropecuária Tropical Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 37 ; Pesquisa Agropecuária Tropical Volume 2007 ; 2007 >
+      au < expected ; 2008 ; 38 ; Pesquisa Agropecuária Tropical Volume 2008 ; 2008 >
+      au < expected ; 2009 ; 39 ; Pesquisa Agropecuária Tropical Volume 2009 ; 2009 >
+      au < expected ; 2010 ; 40 ; Pesquisa Agropecuária Tropical Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 41 ; Pesquisa Agropecuária Tropical Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 42 ; Pesquisa Agropecuária Tropical Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 43 ; Pesquisa Agropecuária Tropical Volume 2013 ; 2013 >
 
   }
 
@@ -568,7 +568,7 @@
 
       title <
         name = Ciência Animal Brasileira ;
-        issn = 1518-2797  ;
+        issn = 1518-2797 ;
         eissn = 1809-6891
       >
 
@@ -597,7 +597,7 @@
 
       title <
         name = Visualidades ;
-        issn = 2317-6784  ;
+        issn = 2317-6784 ;
         eissn = 1679-6748
       >
 
