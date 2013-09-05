@@ -919,21 +919,21 @@
   {
 
       title <
-        name = Revista Aurora ;
-        eissn = 1982-2004
+        name = Aurora ;
+        eissn = 1982-8004
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = aurora
 
-      au < exists ; 2007 ; 1 ; Revista Aurora Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 2 ; Revista Aurora Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 3 ; Revista Aurora Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 4 ; Revista Aurora Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 5 ; Revista Aurora Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 6 ; Revista Aurora Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 7 ; Revista Aurora Volume 2013 ; 2013 >
+      au < exists ; 2007 ; 1 ; Aurora Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Aurora Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Aurora Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Aurora Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 5 ; Aurora Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 6 ; Aurora Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Aurora Volume 2013 ; 2013 >
 
   }
 
@@ -945,7 +945,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = baleianarede
 
       au < exists ; 2003 ; 1 ; Baleia na Rede: estudos em arte e sociedade Volume 2003 ; 2003 >
@@ -968,7 +968,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = bjir
 
       au < exists ; 2012 ; 1 ; Brazilian Journal of International Relations Volume 2012 ; 2012 >
@@ -984,7 +984,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = bjis
 
       au < exists ; 2006 ; 1 ; Brazilian Journal of Information Science Volume 2006 ; 2006 >
@@ -1006,7 +1006,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = cedem
 
       au < exists ; 2008 ; 1 ; Cadernos CEDEM Volume 2008 ; 2008 >
@@ -1025,7 +1025,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = educacaoemrevista
 
       au < exists ; 2001 ; 1 ; Educação em Revista Volume 2001 ; 2001 >
@@ -1051,7 +1051,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = levs
 
       au < exists ; 2008 ; 1 ; LEVS-Revista do Laboratório de Estudos da Violência e Segurança Volume 2008 ; 2008 >
@@ -1071,7 +1071,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = novosrumos
 
       au < exists ; 2012 ; 1 ; Revista Novos Rumos Volume 2012 ; 2012 >
@@ -1087,7 +1087,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = orgdemo
 
       au < exists ; 2000 ; 1 ; Revista ORG & DEMO Volume 2000 ; 2000 >
@@ -1115,7 +1115,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = reic
 
       au < exists ; 1999 ; 1 ; Revista Eletrônica Informação e Cognição Volume 1999 ; 1999 >
@@ -1141,7 +1141,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = ric
 
       au < exists ; 2004 ; 1 ; Revista de Iniciação Científica da FFC Volume 2004 ; 2004 >
@@ -1165,7 +1165,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = scheme
 
       au < exists ; 2012 ; 1 ; Schème: Revista Eletrônica de Psicologia e Epistemologia Genéticas Volume 2012 ; 2012 >
@@ -1181,7 +1181,7 @@
       >
 
       comment[publisher] = Universidade Estadual Paulista
-      param[base_url] = http://www2.marilia.unesp.br/
+      param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = transformacao
 
       au < exists ; 1997 ; 1 ; Trans/Form/Ação Volume 1997 ; 1997 >
