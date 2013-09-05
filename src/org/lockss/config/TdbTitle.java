@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.15 2013-04-01 16:53:44 pgust Exp $
+ * $Id: TdbTitle.java,v 1.16 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database title.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.15 2013-04-01 16:53:44 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.16 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 public class TdbTitle {
   /**
@@ -939,4 +939,21 @@ public class TdbTitle {
   public String toString() {
     return "[TdbTitle: " + name + "]";
   }
+
+  /**
+   * TODO: Where do the sorted archival units come from?
+   * Provides a sorted list of the archival units for this title.
+   *
+   * @return a List<TdbAu> with the sorted archival units.
+   */
+  public List<TdbAu> getSortedTdbAus() {
+    final String DEBUG_HEADER = "getSortedTdbAus(): ";
+    List<TdbAu> sortedTdbAus = new ArrayList<TdbAu>(getTdbAus());
+    Collections.sort(sortedTdbAus);
+
+    if (logger.isDebug3())
+      logger.debug3(DEBUG_HEADER + "sortedTdbAus = " + sortedTdbAus);
+    return sortedTdbAus;
+  }
+
 }

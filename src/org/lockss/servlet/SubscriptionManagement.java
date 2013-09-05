@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManagement.java,v 1.4 2013-06-19 23:06:57 fergaloy-sf Exp $
+ * $Id: SubscriptionManagement.java,v 1.5 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -122,7 +122,8 @@ public class SubscriptionManagement extends LockssServlet {
       "Invalid subscribed ranges";
   private static final String BAD_UNSUBSCRIBED_RANGES_MSG =
       "Invalid unsubscribed ranges";
-
+  private static final String MISSING_TITLE_AUS_MSG =
+      "Could not find title AUs";
   private static final int LETTERS_IN_ALPHABET = 26;
   private static final int DEFAULT_LETTERS_PER_TAB = 3;
 
@@ -338,7 +339,8 @@ public class SubscriptionManagement extends LockssServlet {
   /**
    * Provides the CSS classes for the column headers of the tabbed content.
    * 
-   * @return a List<String> with the CSS classes for the column headers of the tabbed content.
+   * @return a List<String> with the CSS classes for the column headers of the
+   *         tabbed content.
    */
   private List<String> getColumnHeaderCssClasses() {
     // Lazy loading.
@@ -786,10 +788,27 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "publication = " + publication);
 
+    // Check whether the publication has no TdbTitle.
+    if (publication.getTdbTitle() == null) {
+      // Yes: Get the publication name.
+      String publicationName = publication.getPublicationName();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationName = "
+	  + publicationName);
+
+      // Report the problem.
+      String message =
+	  "Cannot find tdbTitle with name '" + publicationName + "'.";
+      log.error(message);
+      status.addStatusEntry(publication.getPublicationName(), false,
+	  MISSING_TITLE_AUS_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subscription = null");
+      return null;
+    }
+
     String subscribedRangesText = "";
     String unsubscribedRangesText = "";
-    Collection<BibliographicPeriod> subscribedRanges;
-    Collection<BibliographicPeriod> unsubscribedRanges;
+    List<BibliographicPeriod> subscribedRanges;
+    List<BibliographicPeriod> unsubscribedRanges;
     Subscription subscription = null;
 
     Integer publicationNumber = publication.getPublicationNumber();
@@ -824,7 +843,7 @@ public class SubscriptionManagement extends LockssServlet {
 	  // Get the unsubscribed ranges as a collection.
 	  try {
 	    unsubscribedRanges =
-		BibliographicPeriod.createCollection(unsubscribedRangesText);
+		BibliographicPeriod.createList(unsubscribedRangesText);
 	  } catch (IllegalArgumentException iae) {
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_UNSUBSCRIBED_RANGES_MSG, null);
@@ -833,14 +852,19 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Validate the specified unsubscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(unsubscribedRanges, publication);
+
 	  // Check whether the unsubscribed ranges are valid.
-	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
+	  if (invalidRanges == null || invalidRanges.size() == 0) {
 	    // Yes: Remember them.
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
 	    // No: Report the problem.
-	    status.addStatusEntry(publication.getPublicationName(), false,
-		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -875,7 +899,7 @@ public class SubscriptionManagement extends LockssServlet {
 	  // Get the unsubscribed ranges as a collection.
 	  try {
 	    unsubscribedRanges =
-		BibliographicPeriod.createCollection(unsubscribedRangesText);
+		BibliographicPeriod.createList(unsubscribedRangesText);
 	  } catch (IllegalArgumentException iae) {
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_UNSUBSCRIBED_RANGES_MSG, null);
@@ -884,16 +908,21 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Validate the specified unsubscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(unsubscribedRanges, publication);
+
 	  // Check whether the unsubscribed ranges are valid.
-	  if (subManager.areAllRangesValid(unsubscribedRanges)) {
+	  if (invalidRanges == null || invalidRanges.size() == 0) {
 	    // Yes: Remember them.
 	    subscription = new Subscription();
 	    subscription.setPublication(publication);
 	    subscription.setUnsubscribedRanges(unsubscribedRanges);
 	  } else {
 	    // No: Report the problem.
-	    status.addStatusEntry(publication.getPublicationName(), false,
-		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -917,7 +946,7 @@ public class SubscriptionManagement extends LockssServlet {
 	  try {
 	    // Get the subscribed ranges as a collection.
 	    subscribedRanges =
-		BibliographicPeriod.createCollection(subscribedRangesText);
+		BibliographicPeriod.createList(subscribedRangesText);
 	  } catch (IllegalArgumentException iae) {
 	    status.addStatusEntry(publication.getPublicationName(), false,
 		BAD_SUBSCRIBED_RANGES_MSG, null);
@@ -926,8 +955,12 @@ public class SubscriptionManagement extends LockssServlet {
 	    return null;
 	  }
 
+	  // Validate the specified subscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(subscribedRanges, publication);
+
 	  // Check whether the subscribed ranges are valid.
-	  if (subManager.areAllRangesValid(subscribedRanges)) {
+	  if (invalidRanges == null || invalidRanges.size() == 0) {
 	    // Yes: Remember them.
 	    if (subscription == null) {
 	      subscription = new Subscription();
@@ -937,8 +970,9 @@ public class SubscriptionManagement extends LockssServlet {
 	    subscription.setSubscribedRanges(subscribedRanges);
 	  } else {
 	    // No: Report the problem.
-	    status.addStatusEntry(publication.getPublicationName(), false,
-		BAD_SUBSCRIBED_RANGES_MSG, null);
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2())
 	      log.debug2(DEBUG_HEADER + "subscription = null");
 	    return null;
@@ -950,6 +984,34 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
     return subscription;
+  }
+
+  /**
+   * Adds to the status report any ranges that are not valid.
+   * 
+   * @param status
+   *          A SubscriptionOperationStatus where to record the invalid ranges.
+   * @param invalidRanges
+   *          A Collection<BibliographicPeriod> with the invalid ranges.
+   * @param publicationName
+   *          A String with the name of the publication with the invalid ranges.
+   */
+  private void reportInvalidRanges(SubscriptionOperationStatus status,
+      Collection<BibliographicPeriod> invalidRanges, String publicationName) {
+    StringBuilder message = new StringBuilder(BAD_UNSUBSCRIBED_RANGES_MSG);
+    boolean isFirst = true;
+
+    for (BibliographicPeriod range : invalidRanges) {
+      if (isFirst) {
+	message.append(": '");
+      } else {
+	message.append(", '");
+      }
+
+      message.append(range.toDisplayableString()).append("'");
+    }
+
+    status.addStatusEntry(publicationName, false, message.toString(), null);
   }
 
   /**
@@ -1654,13 +1716,32 @@ public class SubscriptionManagement extends LockssServlet {
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
 
+    SerialPublication publication = subscription.getPublication();
+
+    // Check whether the publication has no TdbTitle.
+    if (publication.getTdbTitle() == null) {
+      // Yes: Get the publication name.
+      String publicationName = publication.getPublicationName();
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationName = "
+	  + publicationName);
+
+      // Report the problem.
+      String message =
+	  "Cannot find tdbTitle with name '" + publicationName + "'.";
+      log.error(message);
+      status.addStatusEntry(publication.getPublicationName(), false,
+	  MISSING_TITLE_AUS_MSG, null);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
+    }
+
     boolean subsChanged = false;
     boolean unsubsChanged = false;
     String subscribedRangesText = "";
     String unsubscribedRangesText = "";
-    Collection<BibliographicPeriod> subscribedRanges =
+    List<BibliographicPeriod> subscribedRanges =
 	subscription.getSubscribedRanges();
-    Collection<BibliographicPeriod> unsubscribedRanges =
+    List<BibliographicPeriod> unsubscribedRanges =
 	subscription.getUnsubscribedRanges();
     String subscribedRangesAsString = "";
     String unsubscribedRangesAsString = "";
@@ -1721,7 +1802,7 @@ public class SubscriptionManagement extends LockssServlet {
 	// Handle modified unsubscribed ranges.
 	try {
 	  unsubscribedRanges =
-	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	      BibliographicPeriod.createList(unsubscribedRangesText);
 	} catch (IllegalArgumentException iae) {
 	  status.addStatusEntry(
 	      subscription.getPublication().getPublicationName(), false,
@@ -1731,10 +1812,16 @@ public class SubscriptionManagement extends LockssServlet {
 	}
 
 	if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
-	  if (!subManager.areAllRangesValid(unsubscribedRanges)) {
-	    status.addStatusEntry(
-		subscription.getPublication().getPublicationName(), false,
-		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	  // Validate the specified unsubscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(unsubscribedRanges, publication);
+
+	  // Check whether any unsubscribed ranges are not valid.
+	  if (invalidRanges != null && invalidRanges.size() > 0) {
+	    // Yes: Report the problem.
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }
@@ -1801,7 +1888,7 @@ public class SubscriptionManagement extends LockssServlet {
       if (unsubsChanged) {
 	try {
 	  unsubscribedRanges =
-	      BibliographicPeriod.createCollection(unsubscribedRangesText);
+	      BibliographicPeriod.createList(unsubscribedRangesText);
 	} catch (IllegalArgumentException iae) {
 	  status.addStatusEntry(
 	      subscription.getPublication().getPublicationName(), false,
@@ -1811,10 +1898,16 @@ public class SubscriptionManagement extends LockssServlet {
 	}
 
 	if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
-	  if (!subManager.areAllRangesValid(unsubscribedRanges)) {
-	    status.addStatusEntry(
-		subscription.getPublication().getPublicationName(), false,
-		BAD_UNSUBSCRIBED_RANGES_MSG, null);
+	  // Validate the specified unsubscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(unsubscribedRanges, publication);
+
+	  // Check whether any unsubscribed ranges are not valid.
+	  if (invalidRanges != null && invalidRanges.size() > 0) {
+	    // Yes: Report the problem.
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }
@@ -1853,7 +1946,7 @@ public class SubscriptionManagement extends LockssServlet {
       if (subsChanged) {
 	try {
 	  subscribedRanges =
-	      BibliographicPeriod.createCollection(subscribedRangesText);
+	      BibliographicPeriod.createList(subscribedRangesText);
 	} catch (IllegalArgumentException iae) {
 	  status.addStatusEntry(
 	      subscription.getPublication().getPublicationName(), false,
@@ -1863,10 +1956,16 @@ public class SubscriptionManagement extends LockssServlet {
 	}
 
 	if (subscribedRanges != null && subscribedRanges.size() > 0) {
-	  if (!subManager.areAllRangesValid(subscribedRanges)) {
-	    status.addStatusEntry(
-		subscription.getPublication().getPublicationName(), false,
-		BAD_SUBSCRIBED_RANGES_MSG, null);
+	  // Validate the specified subscribed ranges.
+	  Collection<BibliographicPeriod> invalidRanges =
+	      subManager.validateRanges(subscribedRanges, publication);
+
+	  // Check whether any subscribed ranges are not valid.
+	  if (invalidRanges != null && invalidRanges.size() > 0) {
+	    // Yes: Report the problem.
+	    reportInvalidRanges(status, invalidRanges,
+		publication.getPublicationName());
+
 	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
 	    return false;
 	  }

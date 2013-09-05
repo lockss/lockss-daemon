@@ -1,5 +1,5 @@
 /*
- * $Id: SerialPublication.java,v 1.1 2013-05-22 23:40:20 fergaloy-sf Exp $
+ * $Id: SerialPublication.java,v 1.2 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -32,7 +32,10 @@
 package org.lockss.subscription;
 
 import static org.lockss.db.DbManager.*;
+import java.util.Collection;
 import org.lockss.config.TdbTitle;
+import org.lockss.config.TdbUtil;
+import org.lockss.util.Logger;
 
 /**
  * Representation of a serial publication for subscription purposes.
@@ -40,6 +43,8 @@ import org.lockss.config.TdbTitle;
  * @author Fernando Garcia-Loygorri
  */
 public class SerialPublication {
+  private static final Logger log = Logger.getLogger(SerialPublication.class);
+
   private Integer publicationNumber;
   private String publicationName;
   private String platformName = NO_PLATFORM;
@@ -106,7 +111,61 @@ public class SerialPublication {
     this.proprietaryId = proprietaryId;
   }
 
+  /**
+   * Provides the TdbTitle that corresponds to this publication.
+   * 
+   * @return a TdbTitle that corresponds to this publication.
+   */
   public TdbTitle getTdbTitle() {
+    final String DEBUG_HEADER = "getTdbTitle(): ";
+
+    // Check whether the publication has no TdbTitle.
+    if (tdbTitle == null) {
+      // Yes: Get the TdbTitles for the publication name.
+      Collection<TdbTitle> tdbTitles =
+	  TdbUtil.getTdb().getTdbTitlesByName(publicationName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbTitles = " + tdbTitles);
+
+      // Check whether a TdbTitle was found.
+      if (tdbTitles != null && tdbTitles.size() > 0) {
+	// Yes: Check whether there is a single title.
+	if (tdbTitles.size() == 1) {
+	  // Yes: Populate it into the publication.
+	  setTdbTitle(tdbTitles.iterator().next());
+	} else {
+	  // No: Check whether the publication has a publisher name.
+	  if (publisherName != null) {
+	    // Yes.
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	    // Loop through all the titles.
+	    for (TdbTitle tdbTitle : tdbTitles) {
+	      // Get the title publisher name.
+	      String titlePublisherName = tdbTitle.getTdbPublisher().getName();
+	      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+		  + "titlePublisherName = " + titlePublisherName);
+
+	      // Check whether this title belongs to the publication publisher.
+	      if (publisherName.equals(titlePublisherName)) {
+		// Yes: Populate this title into the publication.
+		setTdbTitle(tdbTitle);
+		break;
+	      }
+	    }
+	  }
+	}
+      }
+    }
+      
+    // Check whether the publication still has no TdbTitle.
+    if (tdbTitle == null) {
+      // Yes: Report the problem.
+      String message = "Cannot find tdbTitle with name '" + publicationName
+	  + "' for publisher with name '" + publisherName + "'.";
+      log.error(message);
+    }
+
     return tdbTitle;
   }
 

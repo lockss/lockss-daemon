@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicPeriodEdge.java,v 1.1 2013-07-18 16:51:04 fergaloy-sf Exp $
+ * $Id: BibliographicPeriodEdge.java,v 1.2 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -31,8 +31,9 @@
  */
 package org.lockss.subscription;
 
-import org.lockss.exporter.biblio.BibliographicOrderScorer.SORT_FIELD;
+import java.util.List;
 import org.lockss.util.Logger;
+import org.lockss.util.NumberUtil;
 import org.lockss.util.StringUtil;
 
 /**
@@ -40,19 +41,9 @@ import org.lockss.util.StringUtil;
  * 
  * @author Fernando Garcia-Loygorri
  */
-public class BibliographicPeriodEdge
-    implements Comparable<BibliographicPeriodEdge> {
+public class BibliographicPeriodEdge {
   public static final BibliographicPeriodEdge INFINITY_EDGE =
       new BibliographicPeriodEdge();
-
-  private static final String FAR_PAST_EDGE_VALUE = "0";
-  private static final String FAR_FUTURE_EDGE_VALUE = "9999";
-
-  public static final BibliographicPeriodEdge FAR_PAST_EDGE =
-      new BibliographicPeriodEdge(FAR_PAST_EDGE_VALUE);
-
-  public static final BibliographicPeriodEdge FAR_FUTURE_EDGE =
-      new BibliographicPeriodEdge(FAR_FUTURE_EDGE_VALUE);
 
   private static final Logger log =
       Logger.getLogger(BibliographicPeriodEdge.class);
@@ -72,7 +63,7 @@ public class BibliographicPeriodEdge
    * 
    * @param edge A String with the text representation of the edge.
    */
-  public BibliographicPeriodEdge(String edge) {
+  BibliographicPeriodEdge(String edge) {
     // Extract the year.
     setYear(extractEdgeYear(edge));
 
@@ -90,7 +81,7 @@ public class BibliographicPeriodEdge
    * @param volume A String with the volume of the period edge.
    * @param issue A String with the issue of the period edge.
    */
-  public BibliographicPeriodEdge(String year, String volume, String issue) {
+  BibliographicPeriodEdge(String year, String volume, String issue) {
     // Save the year.
     setYear(clean(year));
 
@@ -116,9 +107,17 @@ public class BibliographicPeriodEdge
     int volumeStart = edge.indexOf("(");
 
     if (volumeStart == -1) {
+      if (edge.indexOf(")") != -1) {
+	throw new IllegalArgumentException("Unbalanced parentheses");
+      }
+
       return clean(edge);
     } else if (volumeStart == 0) {
       return null;
+    }
+
+    if (edge.substring(0, volumeStart).indexOf(")") != -1) {
+      throw new IllegalArgumentException("Unbalanced parentheses");
     }
 
     return clean(edge.substring(0, volumeStart));
@@ -196,47 +195,53 @@ public class BibliographicPeriodEdge
     return result;
   }
 
-  public String getYear() {
+  String getYear() {
     return year;
   }
-  public void setYear(String year) {
+  void setYear(String year) {
     this.year = year;
   }
-  public String getVolume() {
+  String getVolume() {
     return volume;
   }
-  public void setVolume(String volume) {
+  void setVolume(String volume) {
     this.volume = volume;
   }
-  public String getIssue() {
+  String getIssue() {
     return issue;
   }
-  public void setIssue(String issue) {
+  void setIssue(String issue) {
     this.issue = issue;
   }
 
-  public String getDisplayableYear() {
+  String getDisplayableYear() {
     return year == null ? "" : year;
   }
 
-  public String getDisplayableVolume() {
+  String getDisplayableVolume() {
     return volume == null ? "" : volume;
   }
 
-  public String getDisplayableIssue() {
+  String getDisplayableIssue() {
     return issue == null ? "" : issue;
   }
 
+  /**
+   * Provides an indication of whether this period edge extends to infinity.
+   * 
+   * @return a boolean with <code>true</code> if this period edge extends to
+   *         infinity, <code>false</code> otherwise.
+   */
   public boolean isInfinity() {
     return year == null && volume == null && issue == null;
   }
 
   /**
-   * Provides the properties of the edge in a form suitable for display.
+   * Provides the properties of this period edge in a form suitable for display.
    * 
    * @return a String with the edge properties in a form suitable for display.
    */
-  public String toDisplayableString() {
+  String toDisplayableString() {
     if (isInfinity()) {
       return "";
     }
@@ -275,117 +280,160 @@ public class BibliographicPeriodEdge
   }
 
   /**
-   * Provides this period edge in a format matching another edge.
+   * Provides an indication of whether this period edge matches any of the
+   * passed ranges.
    * 
-   * @param edge
-   *          A BibliographicPeriod with the edge to be formatted.
-   * @param isStart
-   *          A boolean with an indication of whether the edge to be formatted
-   *          is the start edge of the period.
-   * @param matchingEdge
-   *          A BibliographicPeriodEdge with the edge to be used to match the
-   *          reformatted edge.
-   * @return a BibliographicPeriodEdge with the reformatted period edge.
+   * A numeric year-only edge matches if the its value falls in or between the
+   * start and end edges of a range.
+   * 
+   * A non-numeric year-only edge matches if its value is the same as the year
+   * of the start or end edges of a range.
+   * 
+   * An edge with a volume and/or issue matches if a range has that exact edge
+   * as its start and/or end edge.
+   * 
+   * @param ranges
+   *          A Collection<BibliographicPeriod> with the ranges against which to
+   *          check the period edge.
+   * @return a boolean with <code>true</code> if this period edge matches any of
+   *         the ranges, <code>false</code> otherwise.
    */
-  public BibliographicPeriodEdge matchEdgeToEdge(boolean isStart,
-      BibliographicPeriodEdge matchingEdge) {
-    final String DEBUG_HEADER = "matchEdgeToEdge(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "isStart = " + isStart);
-      log.debug2(DEBUG_HEADER + "matchingEdge = " + matchingEdge);
+  boolean matches(List<BibliographicPeriod> ranges) {
+    final String DEBUG_HEADER = "matches(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ranges = " + ranges);
+
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "year = " + year);
+      log.debug3(DEBUG_HEADER + "volume = " + volume);
+      log.debug3(DEBUG_HEADER + "issue = " + issue);
     }
 
-    // Extract the properties of the edge to be reformatted.
-    String edgeYear = getYear();
-    if (log.isDebug3()) log.debug3("edgeYear = '" + edgeYear + "'.");
+    // Check whether the definition of this period includes a volume and or an
+    // issue.
+    if (!isFullYear()) {
+      // Yes: Loop through all the passed ranges.
+      for (BibliographicPeriod range : ranges) {
+	// Check whether this edge match any of the ranges edges.
+	if (equals(range.getStartEdge()) || equals(range.getEndEdge())) {
+	  // Yes: The edge matches one of the ranges.
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	  return true;
+	}
+      }
 
-    String edgeVolume = getVolume();
-    if (log.isDebug3()) log.debug3("edgeVolume = '" + edgeVolume + "'.");
-
-    String edgeIssue = getIssue();
-    if (log.isDebug3()) log.debug3("edgeIssue = '" + edgeIssue + "'.");
-
-    // Check whether the matching edge has a volume but the edge to be
-    // reformatted does not.
-    if (matchingEdge != null
-	&& !StringUtil.isNullString(matchingEdge.getVolume())
-	&& StringUtil.isNullString(edgeVolume)) {
-      // Yes: Assign a volume to the edge to be reformatted.
-      edgeVolume = isStart ? FAR_PAST_EDGE_VALUE : FAR_FUTURE_EDGE_VALUE;
+      // The edge does not match any of the ranges.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is false.");
+      return false;
     }
 
-    // Check whether the matching edge has an issue but the edge does not.
-    if (matchingEdge != null
-	&& !StringUtil.isNullString(matchingEdge.getIssue())
-	&& StringUtil.isNullString(edgeIssue)) {
-      // Yes: Assign an issue to the edge to be reformatted.
-      edgeIssue = isStart ? FAR_PAST_EDGE_VALUE : FAR_FUTURE_EDGE_VALUE;
+    // No: Check whether the year is not a number.
+    if (!NumberUtil.isNumber(year)) {
+      // Yes: Loop through all the passed ranges.
+      for (BibliographicPeriod range : ranges) {
+	// Check whether the years match.
+	if (year != null && (year.equals(range.getStartEdge().getYear())
+	    || year.equals(range.getEndEdge().getYear()))) {
+	  // Yes: The edge matches one of the ranges.
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	  return true;
+	}
+      }
+
+      // The edge does not match any of the ranges.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is false.");
+      return false;
     }
 
-    // Rebuild the edge to be reformatted.
-    BibliographicPeriodEdge matchedEdge =
-	new BibliographicPeriodEdge(edgeYear, edgeVolume, edgeIssue);
-    if (log.isDebug2()) log.debug2("matchedEdge = "
-	+ matchedEdge.toDisplayableString() + ".");
-    return matchedEdge;
+    // No: Get the numeric year value.
+    int yearAsInt = NumberUtil.parseInt(year);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "yearAsInt = " + yearAsInt);
+
+    // Loop through all the passed ranges.
+    for (BibliographicPeriod range : ranges) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
+
+      // Check whether the range does not extends to the far past.
+      if (!range.getStartEdge().isInfinity()) {
+	// Yes: Get the range start year.
+	String rangeYear = range.getStartEdge().getYear();
+
+	// Check whether the range start year is a number.
+	if (NumberUtil.isNumber(rangeYear)) {
+	  // Yes: Get the the range start year as a number.
+	  int rangeYearAsInt = NumberUtil.parseInt(rangeYear);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "rangeYearAsInt = " + rangeYearAsInt);
+
+	  // Check whether the years match.
+	  if (yearAsInt == rangeYearAsInt) {
+	    // Yes: The edge matches this range.
+	    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	    return true;
+	  }
+
+	  // No: Check whether the year of this edge is smaller than the range
+	  // start year.
+	  if (yearAsInt < rangeYearAsInt) {
+	    // Yes: This edge cannot match this range.
+	    continue;
+	  }
+	} else {
+	  // No: This edge cannot match this range.
+	  continue;
+	}
+      }
+
+      // Check whether the range extends to the far future.
+      if (range.getEndEdge().isInfinity()) {
+	// Yes: This edge is smaller than the end of the range and so it matches
+	// this range.
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	return true;
+      }
+
+      // No: Get the range end year.
+      String rangeYear = range.getEndEdge().getYear();
+
+      // Check whether the range end year is a number.
+      if (NumberUtil.isNumber(rangeYear)) {
+	// Yes: Get the the range end year as a number.
+	int rangeYearAsInt = NumberUtil.parseInt(rangeYear);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "rangeYearAsInt = " + rangeYearAsInt);
+
+	// Check whether the years match.
+	if (yearAsInt == rangeYearAsInt) {
+	  // Yes: The edge matches this range.
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	  return true;
+	}
+
+	// No: Check whether the year of this edge is smaller than the
+	// range end year.
+	if (yearAsInt < rangeYearAsInt) {
+	  // Yes: The edge matches this range.
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
+	  return true;
+	}
+      }
+    }
+
+    // The edge does not match any of the ranges.
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is false.");
+    return false;
   }
 
   /**
-   * Provides an indication of whether this period edge follows another.
+   * Provides an indication of whether this period edge specifies a publication
+   * full year.
    * 
-   * @param other
-   *          A BibliographicPeriodEdge with the candidate period edge to
-   *          precede this one.
-   * @return a boolean with <code>true</code> if this period edge follows the
-   *         other period edge, <code>false</code> otherwise.
+   * @return a boolean with <code>true</code> if this period edge specifies a
+   *         publication full year, <code>false</code> otherwise.
    */
-  boolean follows(BibliographicPeriodEdge other) {
-    final String DEBUG_HEADER = "follows(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "this = " + this);
-      log.debug2(DEBUG_HEADER + "other = " + other);
-    }
-
-    boolean result = false;
-
-    if (other == null) {
-      return result;
-    }
-
-    String previousYear = other.getYear();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "previousYear = " + previousYear);
-
-    String nextYear = getYear();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "nextYear = " + nextYear);
-
-    String previousVolume = other.getVolume();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "previousVolume = " + previousVolume);
-
-    String nextVolume = getVolume();
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "nextVolume = " + nextVolume);
-
-    try {
-      if (nextYear != null && previousYear != null) {
-	if (!nextYear.equals(previousYear)) {
-	  result = SORT_FIELD.YEAR.areIncreasing(previousYear, nextYear);
-	} else {
-	  if (nextVolume != null && previousVolume != null
-	      && !nextVolume.equals(previousVolume)) {
-	    result =
-		SORT_FIELD.VOLUME.areIncreasing(previousVolume, nextVolume);
-	  }
-	}
-      } else if (nextVolume != null && previousVolume != null
-	  && !nextVolume.equals(previousVolume)) {
-	result = SORT_FIELD.VOLUME.areIncreasing(previousVolume, nextVolume);
-      }
-    } catch (NumberFormatException e) {
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
+  boolean isFullYear() {
+    return (isInfinity()
+	|| (!StringUtil.isNullString(year) && StringUtil.isNullString(volume)
+	    && StringUtil.isNullString(issue)));
   }
 
   @Override
@@ -435,26 +483,6 @@ public class BibliographicPeriodEdge
     }
 
     return true;
-  }
-
-  @Override
-  public int compareTo(BibliographicPeriodEdge other) {
-    final String DEBUG_HEADER = "follows(): ";
-
-    if (follows(other)) {
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + this + " follows " + other);
-      return 1;
-    }
-
-    if (other != null && other.follows(this)) {
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + this + " precedes " + other);
-      return -1;
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + this + " is same as " + other);
-    return 0;
   }
 
   @Override

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.26 2013-05-10 14:35:49 fergaloy-sf Exp $
+ * $Id: TdbAu.java,v 1.27 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.exporter.biblio.BibliographicItem;
 import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.plugin.*;
+import org.lockss.subscription.BibliographicPeriod;
 import org.lockss.util.*;
 
 
@@ -48,7 +49,8 @@ import org.lockss.util.*;
  *
  * @author  Philip Gust
  */
-public class TdbAu implements BibliographicItem {
+// TODO: Remove Comparable after testing.
+public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   /**
    * Set up logger
    */
@@ -88,6 +90,8 @@ public class TdbAu implements BibliographicItem {
    * The key for identity testing
    */
   private final Id tdbAuId = new Id();
+
+  private List<BibliographicPeriod> publicationRanges;
 
   /**
    * This class encapsulates the key for a TdbAu.  As with
@@ -1027,5 +1031,47 @@ public class TdbAu implements BibliographicItem {
    */
   public String toString() {
     return "[TdbAu: " + name + "]";
+  }
+
+  /**
+   * TODO: Where do the publication ranges come from?
+   * Provides a list of the publication ranges covered by this Archival Unit.
+   *
+   * @return a List<BibliographicPeriod> with the publication ranges.
+   */
+  public List<BibliographicPeriod> getPublicationRanges() {
+    // TODO: Provide a real implementation instead of this mock-up.
+    if (publicationRanges == null) {
+      publicationRanges = new ArrayList<BibliographicPeriod>();
+      publicationRanges.add(new BibliographicPeriod(getStartYear(),
+	getStartVolume(), getStartIssue(), getEndYear(), getEndVolume(),
+	getEndIssue()));
+    }
+
+    return publicationRanges;
+  }
+
+  /**
+   * TODO: Where do the publication ranges come from?
+   *
+   * At the moment this is only used for setting up tests.
+   */
+  public void setPublicationRanges(List<BibliographicPeriod> ranges) {
+    publicationRanges = ranges;
+  }
+
+  // TODO: Remove after testing.
+  // Used to get the sorted TdbAus in TdbTitle for testing.
+  @Override
+  public int compareTo(TdbAu other) {
+    if (!StringUtil.isNullString(getStartYear()) && other != null) {
+      return getStartYear().compareTo(other.getStartYear());
+    } else if (!StringUtil.isNullString(getStartVolume()) && other != null) {
+      return getStartVolume().compareTo(other.getStartVolume());
+    } else if (!StringUtil.isNullString(getStartIssue()) && other != null) {
+      return getStartIssue().compareTo(other.getStartIssue());
+    }
+
+    return 0;
   }
 }

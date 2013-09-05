@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.5 2013-07-24 17:52:17 easyonthemayo Exp $
+ * $Id: TestSubscriptionManager.java,v 1.6 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -41,15 +41,19 @@ package org.lockss.subscription;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
+import org.lockss.config.TdbTestUtil;
+import org.lockss.config.TdbTitle;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
@@ -65,7 +69,6 @@ import org.lockss.test.ConfigurationUtil;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.PlatformUtil;
-import org.lockss.util.StringUtil;
 
 public class TestSubscriptionManager extends LockssTestCase {
   private String tempDirPath;
@@ -81,7 +84,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     tempDirPath = getTempDir().getAbsolutePath();
 
-    // set derby database log 
+    // Set derby database log 
     System.setProperty("derby.stream.error.file",
                        new File(tempDirPath,"derby.log").getAbsolutePath());
 
@@ -130,194 +133,6 @@ public class TestSubscriptionManager extends LockssTestCase {
                                 SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "7");
     return conf;
-  }
-
-  /**
-   * Check the behavior of areAllRangesValid().
-   */
-  public final void testAreAllRangesValid() {
-    assertTrue(areAllRangesValid(""));
-    /*assertTrue(areAllRangesValid("1234567890123456"
-	+ "1234567890123456" + "1234567890123456" + "1234567890123456"));*/
-    assertFalse(areAllRangesValid("1234567890123456"
-	+ "1234567890123456" + "1234567890123456" + "1234567890123456" + "1"));
-    assertTrue(areAllRangesValid("-"));
-    assertTrue(areAllRangesValid("1900-"));
-    assertTrue(areAllRangesValid("-2000"));
-    assertTrue(areAllRangesValid("2000-2001"));
-    assertFalse(areAllRangesValid("2010-2001"));
-    assertTrue(areAllRangesValid("0-9999"));
-    assertFalse(areAllRangesValid("2000(10)-1999"));
-    assertTrue(areAllRangesValid("2000(10)-2000"));
-    assertTrue(areAllRangesValid("2000(10)-2001"));
-    assertTrue(areAllRangesValid("2000(10)-2001(0)"));
-    assertFalse(areAllRangesValid("2000-1999(10)"));
-    assertTrue(areAllRangesValid("2000-2000(10)"));
-    assertTrue(areAllRangesValid("2000-2001(10)"));
-    assertTrue(areAllRangesValid("2000(0)-2001(10)"));
-    assertTrue(areAllRangesValid("2000(10)-2000(11)"));
-    assertFalse(areAllRangesValid("2002(10)-2000(11)"));
-    assertTrue(areAllRangesValid("2000(12)-2001(11)"));
-    assertFalse(areAllRangesValid("2000(12)-2000(11)"));
-    assertTrue(areAllRangesValid("2000(0)-2000(9999)"));
-    assertTrue(areAllRangesValid("0(0)-9999(9999)"));
-    assertTrue(areAllRangesValid("2000(10)-"));
-    assertTrue(areAllRangesValid("2000(10)-9999(9999)"));
-    assertFalse(areAllRangesValid("2000(10)-0(0)"));
-    assertTrue(areAllRangesValid("-2000(10)"));
-    assertTrue(areAllRangesValid("0(0)-2000(10)"));
-    assertFalse(areAllRangesValid("9999(9999)-2000(10)"));
-    assertTrue(areAllRangesValid("2000()()-2000"));
-    assertTrue(areAllRangesValid("2000()()-2001"));
-    assertTrue(areAllRangesValid("2000-2000()()"));
-    assertTrue(areAllRangesValid("2000-2001()()"));
-    assertTrue(areAllRangesValid("2000()()-2000(0)"));
-    assertTrue(areAllRangesValid("2000()()-2000(9999)"));
-    assertTrue(areAllRangesValid("2000(1)-2000()()"));
-    assertTrue(areAllRangesValid("2000(1)-2001()()"));
-    assertTrue(areAllRangesValid("2000()()-2000()()"));
-    assertTrue(areAllRangesValid("2000()()-2001()()"));
-    assertTrue(areAllRangesValid("2000(10)(2)-2000(11)(7)"));
-    assertFalse(areAllRangesValid("2003(10)(2)-2000(11)(7)"));
-    assertFalse(areAllRangesValid("2000(13)(2)-2000(11)(7)"));
-    assertTrue(areAllRangesValid("2000(13)(2)-2001(11)(7)"));
-    assertFalse(areAllRangesValid("2000(10)(9)-2000(10)(7)"));
-    assertTrue(areAllRangesValid("2000(10)(9)-2001(10)(7)"));
-    assertTrue(areAllRangesValid("2000(0)(0)-2000(9999)(9999)"));
-    assertTrue(areAllRangesValid("0(0)(0)-9999(9999)(9999)"));
-    assertTrue(areAllRangesValid("2000()(1)-2000(0)(1)"));
-    assertTrue(areAllRangesValid("2000()(1)-2000(9999)(1)"));
-    assertTrue(areAllRangesValid("2000()(1)-2000()()"));
-    assertTrue(areAllRangesValid("2000()(1)-2001()()"));
-    assertFalse(areAllRangesValid("2000()(1)-2000()(0)"));
-    assertTrue(areAllRangesValid("2000()(1)-2000()(1)"));
-    assertTrue(areAllRangesValid("2000()(1)-2000()(3)"));
-    assertTrue(areAllRangesValid("2000()(1)-2001()(0)"));
-    assertTrue(areAllRangesValid("(10)-(11)"));
-    assertFalse(areAllRangesValid("(12)-(11)"));
-    assertTrue(areAllRangesValid("(0)-(9999)"));
-    assertTrue(areAllRangesValid("(10)(2)-(11)(7)"));
-    assertFalse(areAllRangesValid("(12)(2)-(11)(7)"));
-    assertTrue(areAllRangesValid("(10)(9)-(11)(7)"));
-    assertTrue(areAllRangesValid("(0)(0)-(9999)(9999)"));
-    assertTrue(areAllRangesValid("()(2)-()(7)"));
-    assertFalse(areAllRangesValid("()(8)-()(7)"));
-    assertTrue(areAllRangesValid("()(0)-()(9999)"));
-    assertFalse(areAllRangesValid("a-2000"));
-    assertTrue(areAllRangesValid("2000(10)-2001"));
-    assertTrue(areAllRangesValid("2000(10)-2001()"));
-    assertTrue(areAllRangesValid("2000()(3)-2001"));
-    assertTrue(areAllRangesValid("2000()(3)-2001()()"));
-    assertTrue(areAllRangesValid("2000(4)(3)-2001()()"));
-    assertTrue(areAllRangesValid("2000(4)-2000()()"));
-    assertTrue(areAllRangesValid("2000(4)-2001()()"));
-    assertTrue(areAllRangesValid("0(0)(0)-9999()()"));
-    assertTrue(areAllRangesValid("0()()-9999()()"));
-    assertTrue(areAllRangesValid("()()-9999()()"));
-    assertTrue(areAllRangesValid("0()()-9999(x)()"));
-    assertTrue(areAllRangesValid("0()()-9999(x)(c)"));
-    assertTrue(areAllRangesValid(","));
-    assertTrue(areAllRangesValid("1999,"));
-    assertTrue(areAllRangesValid(",2000"));
-    assertTrue(areAllRangesValid("1900,1950"));
-    assertTrue(areAllRangesValid("1920,,2020"));
-  }
-
-  /**
-   * Provides an indication of whether the passed subscription ranges are valid.
-   * 
-   * @param subscriptionRanges
-   *          A String with the subscription ranges to be validated.
-   * @return a boolean with <code>true</code> if all the passed subscription
-   *         ranges are valid, <code>false</code> otherwise.
-   */
-  boolean areAllRangesValid(String subscriptionRanges) {
-    return subManager.areAllRangesValid(BibliographicPeriod
-	.createCollection(subscriptionRanges));
-  }
-
-  /**
-   * Check the behavior of displayableAuPeriod().
-   */
-  public final void testDisplayableAuPeriod() throws TdbException {
-    Properties properties = new Properties();
-    properties.setProperty("title", "MyTitle");
-    properties.setProperty("journalTitle", "MyJournalTitle");
-    properties.setProperty("plugin", "MyPlugin");
-    properties.setProperty("attributes.publisher", "MyPublisher");
-
-    TdbAu tdbAu = createTdbAu(properties);
-    assertTrue(StringUtil.isNullString(subManager.displayableAuPeriod(tdbAu)));
-
-    properties.setProperty("attributes.year", "1954");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.year", "");
-    properties.setProperty("attributes.volume", "4");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("(4)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.volume", "");
-    properties.setProperty("attributes.issue", "2");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("()(2)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.year", "1954");
-    properties.setProperty("attributes.volume", "4");
-    properties.setProperty("attributes.issue", "");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954(4)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.volume", "");
-    properties.setProperty("attributes.issue", "2");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954()(2)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.year", "");
-    properties.setProperty("attributes.volume", "4");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("(4)(2)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.year", "1954-1988");
-    properties.setProperty("attributes.volume", "");
-    properties.setProperty("attributes.issue", "");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954-1988", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.volume", "4");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954(4)-1988(4)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.volume", "4-12");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954(4)-1988(12)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.volume", "");
-    properties.setProperty("attributes.issue", "2");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954()(2)-1988()(2)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.issue", "2-28");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("1954()(2)-1988()(28)", subManager.displayableAuPeriod(tdbAu));
-
-    properties.setProperty("attributes.year", "");
-    properties.setProperty("attributes.volume", "4-12");
-
-    tdbAu = createTdbAu(properties);
-    assertEquals("(4)(2)-(12)(28)", subManager.displayableAuPeriod(tdbAu));
   }
 
   /**
@@ -498,12 +313,294 @@ public class TestSubscriptionManager extends LockssTestCase {
     assertEquals("df3", repos.get(8));
     assertEquals("df4", repos.get(9));
   }
+  
+  /**
+   * Check the behavior of isRangeValid().
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIsRangeValid() throws TdbException {
+    
+    TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
+
+    List<TdbAu> tdbAus = title.getSortedTdbAus();
+    assertEquals(3, tdbAus.size());
+
+    TdbAu tdbAu54 = tdbAus.get(0);
+
+    tdbAu54.setPublicationRanges(Arrays
+	.asList(new BibliographicPeriod("1954(4)(2)"),
+	    new BibliographicPeriod("1954(4)(4)-1954(4)(6)")));
+
+    TdbAu tdbAu78 = tdbAus.get(1);
+
+    tdbAu78.setPublicationRanges(Arrays
+	.asList(new BibliographicPeriod("1978")));
+
+    TdbAu tdbAu88 = tdbAus.get(2);
+
+    tdbAu88.setPublicationRanges(Arrays.
+	asList(new BibliographicPeriod("1988(12)(28)-2001(1)(1)")));
+
+    // Create the publication corresponding to the archival unit.
+    SerialPublication publication = new SerialPublication();
+    publication.setPublicationName("Test Publication");
+    publication.setTdbTitle(title);
+
+    assertTrue(isRangeValid("-", publication));
+    assertTrue(isRangeValid("", publication));
+    assertTrue(isRangeValid(" ", publication));
+    assertTrue(isRangeValid("1953-", publication));
+    assertTrue(isRangeValid("1954-", publication));
+    assertTrue(isRangeValid("1955-", publication));
+    assertTrue(isRangeValid("1978-", publication));
+    assertTrue(isRangeValid("1979-", publication));
+    assertTrue(isRangeValid("1988-", publication));
+    assertTrue(isRangeValid("1989-", publication));
+    assertTrue(isRangeValid("2001-", publication));
+    assertTrue(isRangeValid("2002-", publication));
+    assertTrue(isRangeValid("-1953", publication));
+    assertTrue(isRangeValid("-1954", publication));
+    assertTrue(isRangeValid("-1955", publication));
+    assertTrue(isRangeValid("-1978", publication));
+    assertTrue(isRangeValid("-1979", publication));
+    assertTrue(isRangeValid("-1988", publication));
+    assertTrue(isRangeValid("-1989", publication));
+    assertTrue(isRangeValid("-2001", publication));
+    assertTrue(isRangeValid("-2002", publication));
+    assertTrue(isRangeValid("1953-1953", publication));
+    assertTrue(isRangeValid("1953-1954", publication));
+    assertTrue(isRangeValid("1953-1955", publication));
+    assertTrue(isRangeValid("1953-1978", publication));
+    assertTrue(isRangeValid("1953-1979", publication));
+    assertTrue(isRangeValid("1953-1988", publication));
+    assertTrue(isRangeValid("1953-1989", publication));
+    assertTrue(isRangeValid("1953-2001", publication));
+    assertTrue(isRangeValid("1953-2002", publication));
+    assertTrue(isRangeValid("1954-1954", publication));
+    assertTrue(isRangeValid("1954-1955", publication));
+    assertTrue(isRangeValid("1954-1978", publication));
+    assertTrue(isRangeValid("1954-1979", publication));
+    assertTrue(isRangeValid("1954-1988", publication));
+    assertTrue(isRangeValid("1954-1989", publication));
+    assertTrue(isRangeValid("1954-2001", publication));
+    assertTrue(isRangeValid("1954-2002", publication));
+    assertTrue(isRangeValid("1955-1955", publication));
+    assertTrue(isRangeValid("1955-1978", publication));
+    assertTrue(isRangeValid("1955-1979", publication));
+    assertTrue(isRangeValid("1955-1988", publication));
+    assertTrue(isRangeValid("1955-1989", publication));
+    assertTrue(isRangeValid("1955-2001", publication));
+    assertTrue(isRangeValid("1955-2002", publication));
+    assertTrue(isRangeValid("1978-1978", publication));
+    assertTrue(isRangeValid("1978-1979", publication));
+    assertTrue(isRangeValid("1978-1988", publication));
+    assertTrue(isRangeValid("1978-1989", publication));
+    assertTrue(isRangeValid("1978-2001", publication));
+    assertTrue(isRangeValid("1978-2002", publication));
+    assertTrue(isRangeValid("1979-1979", publication));
+    assertTrue(isRangeValid("1979-1988", publication));
+    assertTrue(isRangeValid("1979-1989", publication));
+    assertTrue(isRangeValid("1979-2001", publication));
+    assertTrue(isRangeValid("1979-2002", publication));
+    assertTrue(isRangeValid("1988-1988", publication));
+    assertTrue(isRangeValid("1988-1989", publication));
+    assertTrue(isRangeValid("1988-2001", publication));
+    assertTrue(isRangeValid("1988-2002", publication));
+    assertTrue(isRangeValid("1989-1989", publication));
+    assertTrue(isRangeValid("1989-2001", publication));
+    assertTrue(isRangeValid("1989-2002", publication));
+    assertTrue(isRangeValid("2001-2001", publication));
+    assertTrue(isRangeValid("2001-2002", publication));
+    assertTrue(isRangeValid("2002-2002", publication));
+
+    assertFalse(isRangeValid("1953-1953(1)(2)", publication));
+    assertFalse(isRangeValid("1953-1954(1)(1)", publication));
+    assertFalse(isRangeValid("1953-1954(4)", publication));
+    assertFalse(isRangeValid("1953-(4)", publication));
+    assertFalse(isRangeValid("1953-1954()(2)", publication));
+    assertFalse(isRangeValid("1953-1954()(4)", publication));
+    assertFalse(isRangeValid("1953-1954()(6)", publication));
+    assertFalse(isRangeValid("1953-()(2)", publication));
+    assertFalse(isRangeValid("1953-()(4)", publication));
+    assertFalse(isRangeValid("1953-()(6)", publication));
+    assertFalse(isRangeValid("1953-1954(4)(1)", publication));
+    assertTrue(isRangeValid("1953-1954(4)(2)", publication));
+    assertFalse(isRangeValid("1953-1954(4)(3)", publication));
+    assertTrue(isRangeValid("1953-1954(4)(4)", publication));
+    assertFalse(isRangeValid("1953-1954(4)(5)", publication));
+    assertTrue(isRangeValid("1953-1954(4)(6)", publication));
+    assertFalse(isRangeValid("1953-1954(4)(7)", publication));
+    assertFalse(isRangeValid("1953-1955(4)(2)", publication));
+    assertFalse(isRangeValid("1953-1978(1)(2)", publication));
+    assertFalse(isRangeValid("1953-1988(11)(28)", publication));
+    assertFalse(isRangeValid("1953-1988(12)", publication));
+    assertFalse(isRangeValid("1953-(12)", publication));
+    assertFalse(isRangeValid("1953-1988()(28)", publication));
+    assertFalse(isRangeValid("1953-()(28)", publication));
+    assertFalse(isRangeValid("1953-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1953-1988(12)(28)", publication));
+    assertFalse(isRangeValid("1953-1989(8)(9)", publication));
+    assertFalse(isRangeValid("1953-1990(9)(0)", publication));
+    assertFalse(isRangeValid("1953-1991(9)(1)", publication));
+    assertFalse(isRangeValid("1953-1992(9)(2)", publication));
+    assertFalse(isRangeValid("1953-1993(9)(3)", publication));
+    assertFalse(isRangeValid("1953-1994(9)(4)", publication));
+    assertFalse(isRangeValid("1953-1995(9)(5)", publication));
+    assertFalse(isRangeValid("1953-1996(9)(6)", publication));
+    assertFalse(isRangeValid("1953-1997(9)(7)", publication));
+    assertFalse(isRangeValid("1953-1998(9)(8)", publication));
+    assertFalse(isRangeValid("1953-1999(9)(9)", publication));
+    assertFalse(isRangeValid("1953-2000(0)(0)", publication));
+    assertFalse(isRangeValid("1953-2001(1)", publication));
+    assertFalse(isRangeValid("1953-(1)", publication));
+    assertFalse(isRangeValid("1953-2001()(1)", publication));
+    assertFalse(isRangeValid("1953-()(1)", publication));
+    assertFalse(isRangeValid("1953-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1953-2001(1)(1)", publication));
+    assertFalse(isRangeValid("1953-2001(1)(2)", publication));
+    assertFalse(isRangeValid("1953-2002(1)(1)", publication));
+    assertTrue(isRangeValid("1954-1955(4)(2)", publication));
+    assertTrue(isRangeValid("1954-1978(1)(2)", publication));
+    assertTrue(isRangeValid("1954-1988(11)(28)", publication));
+    assertTrue(isRangeValid("1954-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1954-1988(12)(28)", publication));
+    assertTrue(isRangeValid("1954-1989(8)(9)", publication));
+    assertTrue(isRangeValid("1954-1990(9)(0)", publication));
+    assertTrue(isRangeValid("1954-1991(9)(1)", publication));
+    assertTrue(isRangeValid("1954-1992(9)(2)", publication));
+    assertTrue(isRangeValid("1954-1993(9)(3)", publication));
+    assertTrue(isRangeValid("1954-1994(9)(4)", publication));
+    assertTrue(isRangeValid("1954-1995(9)(5)", publication));
+    assertTrue(isRangeValid("1954-1996(9)(6)", publication));
+    assertTrue(isRangeValid("1954-1997(9)(7)", publication));
+    assertTrue(isRangeValid("1954-1998(9)(8)", publication));
+    assertTrue(isRangeValid("1954-1999(9)(9)", publication));
+    assertTrue(isRangeValid("1954-2000(0)(0)", publication));
+    assertTrue(isRangeValid("1954-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1954-2001(1)(1)", publication));
+    assertTrue(isRangeValid("1954-2001(1)(2)", publication));
+    assertTrue(isRangeValid("1954-2002(1)(1)", publication));
+    assertFalse(isRangeValid("1954(4)-1955(4)(2)", publication));
+    assertFalse(isRangeValid("1954(4)-1978(1)(2)", publication));
+    assertFalse(isRangeValid("1954(4)-1988(11)(28)", publication));
+    assertFalse(isRangeValid("1954(4)-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1954(4)-1988(12)(28)", publication));
+    assertFalse(isRangeValid("1954(4)-1989(8)(9)", publication));
+    assertFalse(isRangeValid("1954(4)-1990(9)(0)", publication));
+    assertFalse(isRangeValid("1954(4)-1991(9)(1)", publication));
+    assertFalse(isRangeValid("1954(4)-1992(9)(2)", publication));
+    assertFalse(isRangeValid("1954(4)-1993(9)(3)", publication));
+    assertFalse(isRangeValid("1954(4)-1994(9)(4)", publication));
+    assertFalse(isRangeValid("1954(4)-1995(9)(5)", publication));
+    assertFalse(isRangeValid("1954(4)-1996(9)(6)", publication));
+    assertFalse(isRangeValid("1954(4)-1997(9)(7)", publication));
+    assertFalse(isRangeValid("1954(4)-1998(9)(8)", publication));
+    assertFalse(isRangeValid("1954(4)-1999(9)(9)", publication));
+    assertFalse(isRangeValid("1954(4)-2000(0)(0)", publication));
+    assertFalse(isRangeValid("1954(4)-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1954(4)-2001(1)(1)", publication));
+    assertFalse(isRangeValid("1954(4)-2001(1)(2)", publication));
+    assertFalse(isRangeValid("1954(4)-2002(1)(1)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1955(4)(2)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1978(1)(2)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1988(11)(28)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1954(4)(3)-1988(12)(28)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1989(8)(9)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1990(9)(0)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1991(9)(1)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1992(9)(2)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1993(9)(3)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1994(9)(4)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1995(9)(5)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1996(9)(6)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1997(9)(7)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1998(9)(8)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-1999(9)(9)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-2000(0)(0)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1954(4)(3)-2001(1)(1)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-2001(1)(2)", publication));
+    assertFalse(isRangeValid("1954(4)(3)-2002(1)(1)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1955(4)(2)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1978(1)(2)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1988(11)(28)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1988(12)(28)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1989(8)(9)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1990(9)(0)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1991(9)(1)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1992(9)(2)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1993(9)(3)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1994(9)(4)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1995(9)(5)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1996(9)(6)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1997(9)(7)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1998(9)(8)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-1999(9)(9)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-2000(0)(0)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-2001(1)(1)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-2001(1)(2)", publication));
+    assertTrue(isRangeValid("1954(4)(6)-2002(1)(1)", publication));
+    assertFalse(isRangeValid("1977-1978(1)(2)", publication));
+    assertFalse(isRangeValid("1977-1988(11)(28)", publication));
+    assertFalse(isRangeValid("1977-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1977-1988(12)(28)", publication));
+    assertFalse(isRangeValid("1977-1989(8)(9)", publication));
+    assertFalse(isRangeValid("1977-1990(9)(0)", publication));
+    assertFalse(isRangeValid("1977-1991(9)(1)", publication));
+    assertFalse(isRangeValid("1977-1992(9)(2)", publication));
+    assertFalse(isRangeValid("1977-1993(9)(3)", publication));
+    assertFalse(isRangeValid("1977-1994(9)(4)", publication));
+    assertFalse(isRangeValid("1977-1995(9)(5)", publication));
+    assertFalse(isRangeValid("1977-1996(9)(6)", publication));
+    assertFalse(isRangeValid("1977-1997(9)(7)", publication));
+    assertFalse(isRangeValid("1977-1998(9)(8)", publication));
+    assertFalse(isRangeValid("1977-1999(9)(9)", publication));
+    assertFalse(isRangeValid("1977-2000(0)(0)", publication));
+    assertFalse(isRangeValid("1977-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1977-2001(1)(1)", publication));
+    assertFalse(isRangeValid("1977-2001(1)(2)", publication));
+    assertFalse(isRangeValid("1977-2002(1)(1)", publication));
+    assertTrue(isRangeValid("1978-1988(11)(28)", publication));
+    assertTrue(isRangeValid("1978-1988(12)(27)", publication));
+    assertTrue(isRangeValid("1978-1988(12)(28)", publication));
+    assertTrue(isRangeValid("1978-1989(8)(9)", publication));
+    assertTrue(isRangeValid("1978-1990(9)(0)", publication));
+    assertTrue(isRangeValid("1978-1991(9)(1)", publication));
+    assertTrue(isRangeValid("1978-1992(9)(2)", publication));
+    assertTrue(isRangeValid("1978-1993(9)(3)", publication));
+    assertTrue(isRangeValid("1978-1994(9)(4)", publication));
+    assertTrue(isRangeValid("1978-1995(9)(5)", publication));
+    assertTrue(isRangeValid("1978-1996(9)(6)", publication));
+    assertTrue(isRangeValid("1978-1997(9)(7)", publication));
+    assertTrue(isRangeValid("1978-1998(9)(8)", publication));
+    assertTrue(isRangeValid("1978-1999(9)(9)", publication));
+    assertTrue(isRangeValid("1978-2000(0)(0)", publication));
+    assertTrue(isRangeValid("1978-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1978-2001(1)(1)", publication));
+    assertTrue(isRangeValid("1978-2001(1)(2)", publication));
+    assertTrue(isRangeValid("1978-2002(1)(1)", publication));
+    assertTrue(isRangeValid("1995-1996(9)(6)", publication));
+    assertTrue(isRangeValid("1995-1997(9)(7)", publication));
+    assertTrue(isRangeValid("1995-1998(9)(8)", publication));
+    assertTrue(isRangeValid("1995-1999(9)(9)", publication));
+    assertTrue(isRangeValid("1995-2000(0)(0)", publication));
+    assertTrue(isRangeValid("1995-2001(1)(0)", publication));
+    assertTrue(isRangeValid("1995-2001(1)(1)", publication));
+    assertTrue(isRangeValid("1995-2001(1)(2)", publication));
+    assertTrue(isRangeValid("1995-2002(1)(1)", publication));
+  }
+
+  private boolean isRangeValid(String range, SerialPublication pub) {
+    return subManager.isRangeValid(new BibliographicPeriod(range), pub);
+  }
 
   /**
    * Check the behavior of configureAus().
    */
-  public final void testConfigureAus()
-      throws TdbException, IOException, DbException, SubscriptionException {
+  public final void testConfigureAus() throws Exception {
     // Specify the relevant properties of the archival unit.
     Properties properties = new Properties();
     properties.setProperty("title", "MyTitle");
@@ -525,44 +622,630 @@ public class TestSubscriptionManager extends LockssTestCase {
     publication.setPublicationName(tdbAu.getName());
     publication.setTdbTitle(tdbAu.getTdbTitle());
 
-    // Create the subscription to the publication.
+    // Create the skeleton subscription to the publication.
     Subscription subscription = new Subscription();
     subscription.setPublication(publication);
-    subscription.setSubscribedRanges(Collections
-	.singleton(new BibliographicPeriod("1900-1999")));
 
+    BatchAuStatus status;
     Connection conn = dbManager.getConnection();
 
-    // The AU is not added because it is already configured.
-    assertNull(subManager.configureAus(conn, subscription));
+    assertNull(configureAu(conn, tdbAu, subscription, "-", null));
 
-    // Delete the AU so that it can be added.
-    pluginManager
-    .deleteAu(pluginManager.getAuFromId(tdbAu.getAuId(pluginManager)));
+    // Delete the AU so that it can be added again.
+    pluginManager.deleteAu(pluginManager.getAuFromId(tdbAu
+	  .getAuId(pluginManager)));
 
-    // The AU is added.
-    BatchAuStatus status = subManager.configureAus(conn, subscription);
+    status = configureAu(conn, tdbAu, subscription, "-", null);
     assertNotNull(status);
     assertEquals(1, status.getOkCnt());
 
-    // Delete the AU so that it can be added again.
-    pluginManager
-    .deleteAu(pluginManager.getAuFromId(tdbAu.getAuId(pluginManager)));
+    status = configureAu(conn, tdbAu, subscription, "1900-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
 
-    // Place the AU outside the subscribed range.
+    status = configureAu(conn, tdbAu, subscription, "1954-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1955-", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "-1953", null));
+
+    status = configureAu(conn, tdbAu, subscription, "-1954", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1900-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1955-1999", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1953", null));
+
+    status = configureAu(conn, tdbAu, subscription, "1900-1954", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1999",
+	"1950-1960"));
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-1999", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1954(4)-1954(4)", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1954(4)", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "-1954(4)", null));
+
+    // Specify the relevant properties of another archival unit.
+    properties = new Properties();
+    properties.setProperty("title", "MyTitle2");
+    properties.setProperty("journalTitle", "MyJournalTitle2");
+    properties.setProperty("plugin",
+	"org.lockss.plugin.simulated.SimulatedPlugin");
+    properties.setProperty("attributes.publisher", "MyPublisher2");
+    properties.setProperty("attributes.year", "1954");
+    properties.setProperty("attributes.volume", "4");
+    properties.setProperty("param.1.key", "root");
+    properties.setProperty("param.1.value", tempDirPath + "/0");
+    properties.setProperty("param.2.key", "base_url");
+    properties.setProperty("param.2.value", "http://www.title3.org/");
+
+    // Create the archival unit.
+    tdbAu = createTdbAu(properties);
+
+    // Create the publication corresponding to the archival unit.
+    publication = new SerialPublication();
+    publication.setPublicationName(tdbAu.getName());
+    publication.setTdbTitle(tdbAu.getTdbTitle());
+
+    // Create the skeleton subscription to the publication.
+    subscription = new Subscription();
+    subscription.setPublication(publication);
+
+    status = configureAu(conn, tdbAu, subscription, "-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1900-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1955-", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "-1953", null));
+
+    status = configureAu(conn, tdbAu, subscription, "-1954", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1900-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1955-1999", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1953", null));
+
+    status = configureAu(conn, tdbAu, subscription, "1900-1954", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1999",
+	"1950-1960"));
+
+    status = configureAu(conn, tdbAu, subscription, "1954(4)-", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954(4)-1999", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954(4)-1954(5)", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954(4)-1954(4)", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1954(3)-1954(4)", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "1900-1954(4)", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    status = configureAu(conn, tdbAu, subscription, "-1954(4)", null);
+    assertNotNull(status);
+    assertEquals(1, status.getOkCnt());
+
+    assertNull(configureAu(conn, tdbAu, subscription, "1954(3)-", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1954(3)-1999", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "1900-1954(5)", null));
+    assertNull(configureAu(conn, tdbAu, subscription, "-1954(5)", null));
+  }
+
+  private BatchAuStatus configureAu(Connection conn, TdbAu tdbAu,
+      Subscription subscription, String subscribedRanges,
+      String unsubscribedRanges) throws IOException, DbException,
+      SubscriptionException {
     subscription.setSubscribedRanges(Collections
-	.singleton(new BibliographicPeriod("1988-1999")));
-
-    // The AU is not added because it is not inside the subscribed range.
-    assertNull(subManager.configureAus(conn, subscription));
-
-    // Place the AU inside the subscribed range and the unsubscribed range.
-    subscription.setSubscribedRanges(Collections
-	.singleton(new BibliographicPeriod("1900-1999")));
+	.singletonList(new BibliographicPeriod(subscribedRanges)));
     subscription.setUnsubscribedRanges(Collections
-	.singleton(new BibliographicPeriod("1950-1960")));
+	.singletonList(new BibliographicPeriod(unsubscribedRanges)));
 
-    // The AU is not added because it is inside the unsubscribed range.
-    assertNull(subManager.configureAus(conn, subscription));
+    // The AU is added.
+    BatchAuStatus status = subManager.configureAus(conn, subscription);
+
+    if (status != null && status.getOkCnt() == 1) {
+      // Delete the AU so that it can be added again.
+      pluginManager.deleteAu(pluginManager.getAuFromId(tdbAu
+	  .getAuId(pluginManager)));
+    }
+
+    return status;
+  }
+  
+  /**
+   * Check the behavior of matchesTitleTdbAu().
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testMatchesTitleTdbAu() throws TdbException {
+    // Specify the relevant properties of the archival unit.
+    Properties properties = new Properties();
+    properties.setProperty("title", "MyTitle");
+    properties.setProperty("journalTitle", "MyJournalTitle");
+    properties.setProperty("plugin",
+	"org.lockss.plugin.simulated.SimulatedPlugin");
+    properties.setProperty("attributes.publisher", "MyPublisher");
+    properties.setProperty("attributes.year", "1954");
+    properties.setProperty("param.1.key", "root");
+    properties.setProperty("param.1.value", tempDirPath + "/0");
+    properties.setProperty("param.2.key", "base_url");
+    properties.setProperty("param.2.value", "http://www.title3.org/");
+
+    // Create the archival unit.
+    TdbAu tdbAu = createTdbAu(properties);
+
+    List<BibliographicPeriod> ranges =
+	Arrays.asList(new BibliographicPeriod("1954(4)(2)"),
+	    new BibliographicPeriod("1954(4)(4)-1954(4)(6)"),
+	    new BibliographicPeriod("1988(12)(28)-2001(1)(1)"));
+
+    tdbAu.setPublicationRanges(ranges);
+
+    // Create the publication corresponding to the archival unit.
+    SerialPublication pub = new SerialPublication();
+    pub.setPublicationName(tdbAu.getName());
+    pub.setTdbTitle(tdbAu.getTdbTitle());
+
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1900-"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1900-1953"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1953"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1900-1954"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(1)(1)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(1)(1)-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1900-1954(4)(2)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(1)(1)-1954(4)(2)"),
+	pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(1)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(1)-1954(4)(2)"),
+	pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(2)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(2)-"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1900-1954(4)(3)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(1)-1954(4)(3)"),
+	pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(3)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(3)-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(3)-1954(4)(4)"),
+	pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(4)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(4)-"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(5)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(6)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1954(4)(3)-1954(4)(6)"),
+	pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(7)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1954(4)(5)-1954(4)(8)"),
+	pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1900-1955"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1955-"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1955-1987"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1987-1988"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("1987-1988(12)(27)"),
+	pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988(12)(1)-1988(12)(28)"),
+	pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988(12)(28)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod(
+	"1988(12)(27)-1988(12)(29)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988-1989"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1988-1989(1)(1)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1989-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1989-1999"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1999-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1989-2001"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1989-2001(1)(1)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("1989-2001(1)(2)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("2001"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("2001-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("2001(1)(1)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("2001(1)(2)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("2002-"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-2002"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-2002"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-2001"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-2001(1)(1)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-2000(1)(1)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-2000"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1988"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1988(12)(28)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-1988(12)(1)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1987"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1954"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1954(4)(6)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-1954(4)(5)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1954(4)(4)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-1954(4)(3)"), pub));
+    assertTrue(matchesTdbAu(new BibliographicPeriod("-1954(4)(2)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-1954(4)(1)"), pub));
+    assertFalse(matchesTdbAu(new BibliographicPeriod("-1953"), pub));
+  }
+
+  private boolean matchesTdbAu(BibliographicPeriod range,
+      SerialPublication publication) {
+    return subManager.matchesTitleTdbAu(range, publication);
+  }
+  
+  /**
+   * Check the behavior of getCoveredTdbAus().
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testGetCoveredTdbAus() throws TdbException {
+    TdbTitle title = TdbTestUtil.makeRangeTestTitle(false);
+
+    List<TdbAu> tdbAus = title.getSortedTdbAus();
+    assertEquals(3, tdbAus.size());
+
+    TdbAu tdbAu54 = tdbAus.get(0);
+
+    tdbAu54.setPublicationRanges(Arrays
+	.asList(new BibliographicPeriod("1954(4)(2)"),
+	    new BibliographicPeriod("1954(4)(4)-1954(4)(6)")));
+
+    TdbAu tdbAu78 = tdbAus.get(1);
+
+    tdbAu78.setPublicationRanges(Arrays
+	.asList(new BibliographicPeriod("1978")));
+
+    TdbAu tdbAu88 = tdbAus.get(2);
+
+    tdbAu88.setPublicationRanges(Arrays.
+	asList(new BibliographicPeriod("1988(12)(28)-2001(1)(1)")));
+
+    assertEquals(0, coveredAus(title, "", "").size());
+    assertEquals(3, coveredAus(title, "-", "").size());
+    assertEquals(0, coveredAus(title, "", "-").size());
+    assertEquals(0, coveredAus(title, "-", "-").size());
+    assertEquals(3, coveredAus(title, "1953-", "").size());
+    assertEquals(0, coveredAus(title, "1953-", "1953-").size());
+    assertEquals(0, coveredAus(title, "1953-", "1954-").size());
+    assertEquals(1, coveredAus(title, "1953-", "1955-").size());
+    assertEquals(1, coveredAus(title, "1953-", "1978-").size());
+    assertEquals(2, coveredAus(title, "1953-", "1979-").size());
+    assertEquals(2, coveredAus(title, "1953-", "1988-").size());
+    assertEquals(2, coveredAus(title, "1953-", "2000-").size());
+    assertEquals(2, coveredAus(title, "1953-", "2001-").size());
+    assertEquals(3, coveredAus(title, "1953-", "2002-").size());
+    assertEquals(3, coveredAus(title, "1954-", "").size());
+    assertEquals(0, coveredAus(title, "1954-", "1954-").size());
+    assertEquals(1, coveredAus(title, "1954-", "1955-").size());
+    assertEquals(1, coveredAus(title, "1954-", "1978-").size());
+    assertEquals(2, coveredAus(title, "1954-", "1979-").size());
+    assertEquals(2, coveredAus(title, "1954-", "1988-").size());
+    assertEquals(2, coveredAus(title, "1954-", "2000-").size());
+    assertEquals(2, coveredAus(title, "1954-", "2001-").size());
+    assertEquals(3, coveredAus(title, "1954-", "2002-").size());
+    assertEquals(2, coveredAus(title, "1955-", "").size());
+    assertEquals(0, coveredAus(title, "1955-", "1955-").size());
+    assertEquals(0, coveredAus(title, "1955-", "1978-").size());
+    assertEquals(1, coveredAus(title, "1955-", "1979-").size());
+    assertEquals(1, coveredAus(title, "1955-", "1988-").size());
+    assertEquals(1, coveredAus(title, "1955-", "2000-").size());
+    assertEquals(1, coveredAus(title, "1955-", "2001-").size());
+    assertEquals(2, coveredAus(title, "1955-", "2002-").size());
+    assertEquals(2, coveredAus(title, "1977-", "").size());
+    assertEquals(2, coveredAus(title, "1978-", "").size());
+    assertEquals(0, coveredAus(title, "1978-", "1978-").size());
+    assertEquals(1, coveredAus(title, "1978-", "1979-").size());
+    assertEquals(1, coveredAus(title, "1978-", "1988-").size());
+    assertEquals(1, coveredAus(title, "1978-", "2000-").size());
+    assertEquals(1, coveredAus(title, "1978-", "2001-").size());
+    assertEquals(2, coveredAus(title, "1978-", "2002-").size());
+    assertEquals(1, coveredAus(title, "1979-", "").size());
+    assertEquals(0, coveredAus(title, "1979-", "1979-").size());
+    assertEquals(0, coveredAus(title, "1979-", "1988-").size());
+    assertEquals(0, coveredAus(title, "1979-", "2000-").size());
+    assertEquals(0, coveredAus(title, "1979-", "2001-").size());
+    assertEquals(1, coveredAus(title, "1979-", "2002-").size());
+    assertEquals(1, coveredAus(title, "1987-", "").size());
+    assertEquals(1, coveredAus(title, "1988-", "").size());
+    assertEquals(0, coveredAus(title, "1988-", "1988-").size());
+    assertEquals(0, coveredAus(title, "1988-", "2000-").size());
+    assertEquals(0, coveredAus(title, "1988-", "2001-").size());
+    assertEquals(1, coveredAus(title, "1988-", "2002-").size());
+    assertEquals(1, coveredAus(title, "1989-", "").size());
+    assertEquals(0, coveredAus(title, "1989-", "1989-").size());
+    assertEquals(0, coveredAus(title, "1989-", "2000-").size());
+    assertEquals(0, coveredAus(title, "1989-", "2001-").size());
+    assertEquals(1, coveredAus(title, "1989-", "2002-").size());
+    assertEquals(1, coveredAus(title, "2000-", "").size());
+    assertEquals(1, coveredAus(title, "2001-", "").size());
+    assertEquals(0, coveredAus(title, "2001-", "2001-").size());
+    assertEquals(1, coveredAus(title, "2001-", "2002-").size());
+    assertEquals(0, coveredAus(title, "2002-", "").size());
+    assertEquals(0, coveredAus(title, "2002-", "2002-").size());
+    assertEquals(0, coveredAus(title, "-1953", "").size());
+    assertEquals(0, coveredAus(title, "-1953", "-1953").size());
+    assertEquals(0, coveredAus(title, "-1953", "-1954").size());
+    assertEquals(1, coveredAus(title, "-1954", "").size());
+    assertEquals(1, coveredAus(title, "-1954", "-1953").size());
+    assertEquals(0, coveredAus(title, "-1954", "-1954").size());
+    assertEquals(1, coveredAus(title, "-1955", "").size());
+    assertEquals(1, coveredAus(title, "-1955", "-1953").size());
+    assertEquals(0, coveredAus(title, "-1955", "-1954").size());
+    assertEquals(0, coveredAus(title, "-1955", "-1955").size());
+    assertEquals(1, coveredAus(title, "-1977", "").size());
+    assertEquals(0, coveredAus(title, "-1977", "-1977").size());
+    assertEquals(2, coveredAus(title, "-1978", "").size());
+    assertEquals(2, coveredAus(title, "-1978", "-1953").size());
+    assertEquals(1, coveredAus(title, "-1978", "-1954").size());
+    assertEquals(1, coveredAus(title, "-1978", "-1955").size());
+    assertEquals(0, coveredAus(title, "-1978", "-1978").size());
+    assertEquals(2, coveredAus(title, "-1979", "").size());
+    assertEquals(2, coveredAus(title, "-1979", "-1953").size());
+    assertEquals(1, coveredAus(title, "-1979", "-1954").size());
+    assertEquals(1, coveredAus(title, "-1979", "-1955").size());
+    assertEquals(0, coveredAus(title, "-1979", "-1978").size());
+    assertEquals(0, coveredAus(title, "-1979", "-1979").size());
+    assertEquals(2, coveredAus(title, "-1987", "").size());
+    assertEquals(0, coveredAus(title, "-1987", "-1987").size());
+    assertEquals(3, coveredAus(title, "-1988", "").size());
+    assertEquals(3, coveredAus(title, "-1988", "-1953").size());
+    assertEquals(2, coveredAus(title, "-1988", "-1954").size());
+    assertEquals(2, coveredAus(title, "-1988", "-1955").size());
+    assertEquals(1, coveredAus(title, "-1988", "-1978").size());
+    assertEquals(1, coveredAus(title, "-1988", "-1979").size());
+    assertEquals(0, coveredAus(title, "-1988", "-1988").size());
+    assertEquals(3, coveredAus(title, "-1989", "").size());
+    assertEquals(3, coveredAus(title, "-1989", "-1953").size());
+    assertEquals(2, coveredAus(title, "-1989", "-1954").size());
+    assertEquals(2, coveredAus(title, "-1989", "-1955").size());
+    assertEquals(1, coveredAus(title, "-1989", "-1978").size());
+    assertEquals(1, coveredAus(title, "-1989", "-1979").size());
+    assertEquals(0, coveredAus(title, "-1989", "-1988").size());
+    assertEquals(0, coveredAus(title, "-1989", "-1989").size());
+    assertEquals(3, coveredAus(title, "-2000", "").size());
+    assertEquals(0, coveredAus(title, "-2000", "-2000").size());
+    assertEquals(3, coveredAus(title, "-2001", "").size());
+    assertEquals(3, coveredAus(title, "-2001", "-1953").size());
+    assertEquals(2, coveredAus(title, "-2001", "-1954").size());
+    assertEquals(2, coveredAus(title, "-2001", "-1955").size());
+    assertEquals(1, coveredAus(title, "-2001", "-1978").size());
+    assertEquals(1, coveredAus(title, "-2001", "-1979").size());
+    assertEquals(0, coveredAus(title, "-2001", "-1988").size());
+    assertEquals(0, coveredAus(title, "-2001", "-1989").size());
+    assertEquals(0, coveredAus(title, "-2001", "-2001").size());
+    assertEquals(3, coveredAus(title, "-2002", "").size());
+    assertEquals(3, coveredAus(title, "-2002", "-1953").size());
+    assertEquals(2, coveredAus(title, "-2002", "-1954").size());
+    assertEquals(2, coveredAus(title, "-2002", "-1955").size());
+    assertEquals(1, coveredAus(title, "-2002", "-1978").size());
+    assertEquals(1, coveredAus(title, "-2002", "-1979").size());
+    assertEquals(0, coveredAus(title, "-2002", "-1988").size());
+    assertEquals(0, coveredAus(title, "-2002", "-1989").size());
+    assertEquals(0, coveredAus(title, "-2002", "-2001").size());
+    assertEquals(0, coveredAus(title, "-2002", "-2001").size());
+    assertEquals(1, coveredAus(title, "1953-1954", "").size());
+    assertEquals(0, coveredAus(title, "1953-1954", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1953-1954", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1953-1955", "").size());
+    assertEquals(0, coveredAus(title, "1953-1955", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1953-1955", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1953-1955", "1953-1977").size());
+    assertEquals(1, coveredAus(title, "1953-1977", "").size());
+    assertEquals(0, coveredAus(title, "1953-1977", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1953-1977", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1953-1977", "1953-1977").size());
+    assertEquals(0, coveredAus(title, "1953-1977", "1953-1978").size());
+    assertEquals(2, coveredAus(title, "1953-1978", "").size());
+    assertEquals(1, coveredAus(title, "1953-1978", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1953-1978", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1953-1978", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1953-1978", "1953-1979").size());
+    assertEquals(2, coveredAus(title, "1953-1979", "").size());
+    assertEquals(1, coveredAus(title, "1953-1979", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1953-1979", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1953-1979", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1953-1979", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1953-1979", "1953-1987").size());
+    assertEquals(2, coveredAus(title, "1953-1987", "").size());
+    assertEquals(0, coveredAus(title, "1953-1987", "1953-1987").size());
+    assertEquals(3, coveredAus(title, "1953-1988", "").size());
+    assertEquals(2, coveredAus(title, "1953-1988", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1953-1988", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1953-1988", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1953-1988", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1953-1988", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1953-1988", "1953-1989").size());
+    assertEquals(3, coveredAus(title, "1953-1989", "").size());
+    assertEquals(2, coveredAus(title, "1953-1989", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1953-1989", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1953-1989", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1953-1989", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1953-1989", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1953-1989", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1953-1989", "1953-2000").size());
+    assertEquals(3, coveredAus(title, "1953-2000", "").size());
+    assertEquals(0, coveredAus(title, "1953-2000", "1953-2000").size());
+    assertEquals(3, coveredAus(title, "1953-2001", "").size());
+    assertEquals(2, coveredAus(title, "1953-2001", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1953-2001", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1953-2001", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1953-2001", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1953-2001", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1953-2001", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1953-2001", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1953-2001", "1953-2002").size());
+    assertEquals(3, coveredAus(title, "1953-2002", "").size());
+    assertEquals(2, coveredAus(title, "1953-2002", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1953-2002", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1953-2002", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1953-2002", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1953-2002", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1953-2002", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1953-2002", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1953-2002", "1953-2002").size());
+    assertEquals(1, coveredAus(title, "1954-1955", "").size());
+    assertEquals(0, coveredAus(title, "1954-1955", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1954-1955", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1954-1955", "1953-1977").size());
+    assertEquals(1, coveredAus(title, "1954-1977", "").size());
+    assertEquals(0, coveredAus(title, "1954-1977", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1954-1977", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1954-1977", "1953-1977").size());
+    assertEquals(0, coveredAus(title, "1954-1977", "1953-1978").size());
+    assertEquals(2, coveredAus(title, "1954-1978", "").size());
+    assertEquals(1, coveredAus(title, "1954-1978", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1954-1978", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1954-1978", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1954-1978", "1953-1979").size());
+    assertEquals(2, coveredAus(title, "1954-1979", "").size());
+    assertEquals(1, coveredAus(title, "1954-1979", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1954-1979", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1954-1979", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1954-1979", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1954-1979", "1953-1987").size());
+    assertEquals(2, coveredAus(title, "1954-1987", "").size());
+    assertEquals(0, coveredAus(title, "1954-1987", "1953-1987").size());
+    assertEquals(3, coveredAus(title, "1954-1988", "").size());
+    assertEquals(2, coveredAus(title, "1954-1988", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1954-1988", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1954-1988", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1954-1988", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1954-1988", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1954-1988", "1953-1989").size());
+    assertEquals(3, coveredAus(title, "1954-1989", "").size());
+    assertEquals(2, coveredAus(title, "1954-1989", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1954-1989", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1954-1989", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1954-1989", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1954-1989", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1954-1989", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1954-1989", "1953-2000").size());
+    assertEquals(3, coveredAus(title, "1954-2000", "").size());
+    assertEquals(0, coveredAus(title, "1954-2000", "1953-2000").size());
+    assertEquals(3, coveredAus(title, "1954-2001", "").size());
+    assertEquals(2, coveredAus(title, "1954-2001", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1954-2001", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1954-2001", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1954-2001", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1954-2001", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1954-2001", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1954-2001", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1954-2001", "1953-2002").size());
+    assertEquals(3, coveredAus(title, "1954-2002", "").size());
+    assertEquals(2, coveredAus(title, "1954-2002", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1954-2002", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1954-2002", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1954-2002", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1954-2002", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1954-2002", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1954-2002", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1954-2002", "1953-2002").size());
+    assertEquals(0, coveredAus(title, "1955-1977", "").size());
+    assertEquals(0, coveredAus(title, "1955-1977", "1953-1954").size());
+    assertEquals(0, coveredAus(title, "1955-1977", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1955-1977", "1953-1977").size());
+    assertEquals(0, coveredAus(title, "1955-1977", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1955-1978", "").size());
+    assertEquals(1, coveredAus(title, "1955-1978", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1955-1978", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1955-1978", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1955-1978", "1953-1979").size());
+    assertEquals(1, coveredAus(title, "1955-1979", "").size());
+    assertEquals(1, coveredAus(title, "1955-1979", "1953-1954").size());
+    assertEquals(1, coveredAus(title, "1955-1979", "1953-1955").size());
+    assertEquals(0, coveredAus(title, "1955-1979", "1953-1978").size());
+    assertEquals(0, coveredAus(title, "1955-1979", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1955-1979", "1953-1987").size());
+    assertEquals(1, coveredAus(title, "1955-1987", "").size());
+    assertEquals(0, coveredAus(title, "1955-1987", "1953-1987").size());
+    assertEquals(2, coveredAus(title, "1955-1988", "").size());
+    assertEquals(2, coveredAus(title, "1955-1988", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1955-1988", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1955-1988", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1955-1988", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1955-1988", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1955-1988", "1953-1989").size());
+    assertEquals(2, coveredAus(title, "1955-1989", "").size());
+    assertEquals(2, coveredAus(title, "1955-1989", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1955-1989", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1955-1989", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1955-1989", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1955-1989", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1955-1989", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1955-1989", "1953-2000").size());
+    assertEquals(2, coveredAus(title, "1955-2000", "").size());
+    assertEquals(0, coveredAus(title, "1955-2000", "1953-2000").size());
+    assertEquals(2, coveredAus(title, "1955-2001", "").size());
+    assertEquals(2, coveredAus(title, "1955-2001", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1955-2001", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1955-2001", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1955-2001", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1955-2001", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1955-2001", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1955-2001", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1955-2001", "1953-2002").size());
+    assertEquals(2, coveredAus(title, "1955-2002", "").size());
+    assertEquals(2, coveredAus(title, "1955-2002", "1953-1954").size());
+    assertEquals(2, coveredAus(title, "1955-2002", "1953-1955").size());
+    assertEquals(1, coveredAus(title, "1955-2002", "1953-1978").size());
+    assertEquals(1, coveredAus(title, "1955-2002", "1953-1979").size());
+    assertEquals(0, coveredAus(title, "1955-2002", "1953-1988").size());
+    assertEquals(0, coveredAus(title, "1955-2002", "1953-1989").size());
+    assertEquals(0, coveredAus(title, "1955-2002", "1953-2001").size());
+    assertEquals(0, coveredAus(title, "1955-2002", "1953-2002").size());
+  }
+
+  private Set<TdbAu> coveredAus(TdbTitle tdbTitle,
+      String subscribedRanges, String unsubscribedRanges) {
+    return subManager.getCoveredTdbAus(tdbTitle,
+	BibliographicPeriod.createList(subscribedRanges),
+	BibliographicPeriod.createList(unsubscribedRanges));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicPeriod.java,v 1.2 2013-07-18 16:55:06 fergaloy-sf Exp $
+ * $Id: BibliographicPeriod.java,v 1.3 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -34,11 +34,9 @@ package org.lockss.subscription;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import org.lockss.exporter.biblio.BibliographicItemAdapter;
 import org.lockss.exporter.biblio.BibliographicUtil;
-import org.lockss.exporter.biblio.BibliographicOrderScorer.SORT_FIELD;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -47,8 +45,7 @@ import org.lockss.util.StringUtil;
  * 
  * @author Fernando Garcia-Loygorri
  */
-public class BibliographicPeriod extends BibliographicItemAdapter
-    implements Comparable<BibliographicPeriod> {
+public class BibliographicPeriod extends BibliographicItemAdapter {
 
   public static final String EDGES_SEPARATOR = "-";
 
@@ -57,6 +54,8 @@ public class BibliographicPeriod extends BibliographicItemAdapter
 
   private static final Logger log = Logger.getLogger(BibliographicPeriod.class);
   private static final String RANGES_SEPARATOR = ",";
+  private static final String NULL_EDGE_ERROR_MESSAGE =
+      "Cannot create a BibliographicPeriod with one null edge";
 
   private BibliographicPeriodEdge startEdge;
   private BibliographicPeriodEdge endEdge;
@@ -179,6 +178,19 @@ public class BibliographicPeriod extends BibliographicItemAdapter
   }
 
   /**
+   * Constructor with the two period edges as text.
+   * 
+   * @param startEdge
+   *          A String with the period start edge.
+   * @param endEdge
+   *          A String with the period end edge.
+   */
+  public BibliographicPeriod(String startEdge, String endEdge) {
+    this(new BibliographicPeriodEdge(startEdge),
+	new BibliographicPeriodEdge(endEdge));
+  }
+
+  /**
    * Constructor with the two period edges.
    * 
    * @param startEdge A BibliographicPeriodEdge with the period start edge.
@@ -190,38 +202,11 @@ public class BibliographicPeriod extends BibliographicItemAdapter
       return;
     } else if ((startEdge == null && endEdge != null) ||
 	(startEdge != null && endEdge == null)) {
-      throw new IllegalArgumentException("Cannot create a BibliographicPeriod "
-	+ "with one null edge");
+      throw new IllegalArgumentException(NULL_EDGE_ERROR_MESSAGE);
     }
 
-    this.startEdge = startEdge;
-    this.endEdge = endEdge;
-
-    // Populate base class members.
-    setYear(startEdge.getDisplayableYear() + EDGES_SEPARATOR
-	  + endEdge.getDisplayableYear());
-    setVolume(startEdge.getDisplayableVolume() + EDGES_SEPARATOR
-	  + endEdge.getDisplayableVolume());
-    setIssue(startEdge.getDisplayableIssue() + EDGES_SEPARATOR
-	  + endEdge.getDisplayableIssue());
-  }
-
-  /**
-   * Constructor with the text representations of the two period edges.
-   * 
-   * @param startEdgeText
-   *          A String with the text representations of the period start edge.
-   * @param endEdgeText
-   *          A String with the text representations of the period end edge.
-   */
-  public BibliographicPeriod(String startEdgeText, String endEdgeText) {
-    if (StringUtil.isNullString(removeSpaces(startEdgeText))
-	&& StringUtil.isNullString(removeSpaces(endEdgeText))) {
-      return;
-    }
-
-    startEdge = new BibliographicPeriodEdge(startEdgeText);
-    endEdge = new BibliographicPeriodEdge(endEdgeText);
+    setStartEdge(startEdge);
+    setEndEdge(endEdge);
 
     // Populate base class members.
     setYear(startEdge.getDisplayableYear() + EDGES_SEPARATOR
@@ -279,43 +264,47 @@ public class BibliographicPeriod extends BibliographicItemAdapter
   }
 
   /**
-   * Provides a collection of periods from a text representation.
+   * Provides a list of periods from a text representation.
    *
    * @param text A String with the text representation of the periods.
-   * @return a Collection<BibliographicPeriod> with the periods.
+   * @return a List<BibliographicPeriod> with the periods.
    */
-  public static Collection<BibliographicPeriod> createCollection(String text) {
-    if (StringUtil.isNullString(text)) {
-      return Collections.singleton(new BibliographicPeriod(removeSpaces(text)));
+  public static List<BibliographicPeriod> createList(String text) {
+    if (StringUtil.isNullString(removeSpaces(text))) {
+      return new ArrayList<BibliographicPeriod>();
     }
 
-    return createCollection(BibliographicUtil
+    return createList(BibliographicUtil
 	.splitRangeSet(removeSpaces(text)));
   }
 
   /**
-   * Provides a collection of periods from a collection of period text
+   * Provides a list of periods from a collection of period text
    * representations.
    * 
    * @param textPeriods
-   *          A Collection<String> with the text representations of the periods.
-   * @return a Collection<BibliographicPeriod> with the periods.
+   *          A List<String> with the text representations of the periods.
+   * @return a List<BibliographicPeriod> with the periods.
    */
-  private static Collection<BibliographicPeriod> createCollection(
-      Collection<String> textPeriods) {
-    final String DEBUG_HEADER = "createCollection(): ";
+  private static List<BibliographicPeriod> createList(List<String> textPeriods)
+  {
+    final String DEBUG_HEADER = "createList(): ";
     if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "textPeriods.size() = " + textPeriods.size());
+      log.debug2(DEBUG_HEADER + "textPeriods = " + textPeriods);
 
-    Collection<BibliographicPeriod> periods = new HashSet<BibliographicPeriod>(
-	textPeriods.size());
+    List<BibliographicPeriod> periods =
+	new ArrayList<BibliographicPeriod>(textPeriods.size());
 
     for (String textPeriod : textPeriods) {
+      if (textPeriod != null && textPeriod.length() == 0) {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Ignoring empty period.");
+	continue;
+      }
+
       periods.add(new BibliographicPeriod(textPeriod));
     }
 
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "periods.size() = " + periods.size());
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "periods = " + periods);
     return periods;
   }
 
@@ -332,10 +321,7 @@ public class BibliographicPeriod extends BibliographicItemAdapter
 
     StringBuilder result = null;
 
-    // Sort the ranges.
-    List<BibliographicPeriod> rangesAsList = sort(ranges);
-
-    for (BibliographicPeriod range : rangesAsList) {
+    for (BibliographicPeriod range : ranges) {
       if (result == null) {
 	result = new StringBuilder(range.toDisplayableString());
       } else {
@@ -344,302 +330,6 @@ public class BibliographicPeriod extends BibliographicItemAdapter
     }
 
     return result.toString();
-  }
-
-  /**
-   * Sorts a collection of ranges.
-   *
-   * @param ranges A Collection<BibliographicPeriod> with the ranges.
-   * @return a String with passed collection of ranges.
-   */
-  public static List<BibliographicPeriod> sort(
-      Collection<BibliographicPeriod> ranges) {
-
-    if (ranges == null || ranges.size() < 1) {
-      return new ArrayList<BibliographicPeriod>();
-    }
-
-    // Sort the ranges.
-    List<BibliographicPeriod> rangesAsList =
-	new ArrayList<BibliographicPeriod>(ranges);
-
-    Collections.sort(rangesAsList);
-
-    return rangesAsList;
-  }
-
-  /**
-   * Coalesces a collection of periods.
-   * 
-   * @param periods
-   *          A Collection<BibliographicPeriod> with the periods to be
-   *          coalesced.
-   * @return a List<BibliographicPeriod> with the coalesced periods.
-   */
-  public static List<BibliographicPeriod> coalesce(
-      Collection<BibliographicPeriod> periods) {
-    final String DEBUG_HEADER = "coalesce(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "periods = " + periods);
-
-    List<BibliographicPeriod> coalesced;
-
-    if (periods == null || periods.size() < 1) {
-      coalesced = new ArrayList<BibliographicPeriod>();
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "coalesced = " + coalesced);
-      return coalesced;
-    }
-
-    // Sort the periods.
-    List<BibliographicPeriod> sortedPeriods = BibliographicPeriod.sort(periods);
-
-    int sortedPeriodCount = sortedPeriods.size();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "sortedPeriodCount = " + sortedPeriodCount);
-
-    if (sortedPeriodCount < 2) {
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "coalesced = " + sortedPeriods);
-      return sortedPeriods;
-    }
-
-    coalesced = new ArrayList<BibliographicPeriod>(sortedPeriodCount);
-
-    BibliographicPeriod previous = sortedPeriods.get(0);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "previous = " + previous);
-
-    for (int i = 1; i < sortedPeriodCount; i++) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "i = " + i);
-
-      BibliographicPeriod current = sortedPeriods.get(i);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "current = " + current);
-
-      if (current.intersects(previous)
-	  || current.immediatelyFollows(previous)) {
-	previous.coalesce(current);
-      } else {
-	coalesced.add(previous);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "coalesced = " + coalesced);
-
-	previous = current;
-      }
-
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "previous = " + previous);
-    }
-
-    coalesced.add(previous);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "coalesced = " + coalesced);
-    return coalesced;
-  }
-
-  /**
-   * Provides an indication of whether this period follows immediately another.
-   * 
-   * @param other
-   *          A BibliographicPeriod with the candidate period to immediately
-   *          precede this one.
-   * @return a boolean with <code>true</code> if this period follows immediately
-   *         the other period, <code>false</code> otherwise.
-   */
-  private boolean immediatelyFollows(BibliographicPeriod other) {
-    final String DEBUG_HEADER = "immediatelyFollows(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "this = " + this);
-      log.debug2(DEBUG_HEADER + "other = " + other);
-    }
-
-    boolean result = false;
-
-    String previousYear = other.getEndEdge().getYear();
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "previousYear = " + previousYear);
-    String nextYear = getStartEdge().getYear();
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "nextYear = " + nextYear);
-
-    String previousVolume = other.getEndEdge().getVolume();
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "previousVolume = " + previousVolume);
-    String nextVolume = getStartEdge().getVolume();
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "nextVolume = " + nextVolume);
-
-    try {
-      if (nextYear != null && previousYear != null
-	  && !nextYear.equals(previousYear)) {
-	result = SORT_FIELD.YEAR.areConsecutive(previousYear, nextYear);
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-
-	if (result && nextVolume != null && previousVolume != null) {
-	  result = SORT_FIELD.VOLUME.areConsecutive(previousVolume, nextVolume);
-	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-	}
-      } else if (nextVolume != null && previousVolume != null
-	  && !nextVolume.equals(previousVolume)) {
-	result = SORT_FIELD.VOLUME.areConsecutive(previousVolume, nextVolume);
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-      }
-    } catch (NumberFormatException e) {
-    }
-
-    return result;
-  }
-
-  /**
-   * Coalesces another period into this one, if appropriate.
-   * 
-   * @param other
-   *          A BibliographicPeriod with the candidate period to be coalesced
-   *          into this one.
-   */
-  private void coalesce(BibliographicPeriod other) {
-    final String DEBUG_HEADER = "coalesce(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "other = " + other);
-
-    // Check whether this is a wider period than the other.
-    if (isAllFuture() || other == null || other.isEmpty()) {
-      // Yes.
-      return;
-    }
-
-    // No: Extend the period to the future.
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endEdge = "
-	+ endEdge.toDisplayableString() + "=>"
-	+ other.getEndEdge().toDisplayableString());
-    setEndEdge(other.getEndEdge());
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Provides an indication of whether this period intersects a passed range.
-   * 
-   * @param range
-   *          A BibliographicPeriod with the range against which to check the
-   *          period.
-   * @return a boolean with <code>true</code> if this period intersects the
-   *         range, <code>false</code> otherwise.
-   */
-  boolean intersects(BibliographicPeriod range) {
-    final String DEBUG_HEADER = "intersects(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "range = " + range);
-
-    // Check whether there is no range to intersect.
-    if (range == null || range.isEmpty()) {
-      // Yes: The period cannot intersect the range.
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
-      return false;
-    }
-
-    return intersects(Collections.singleton(range));
-  }
-
-  /**
-   * Provides a list of periods from a text representation.
-   *
-   * @param text A String with the text representation of the periods.
-   * @return a List<BibliographicPeriod> with the periods.
-   */
-  static List<BibliographicPeriod> createList(String text) {
-    if (StringUtil.isNullString(text)) {
-      return Collections
-	  .singletonList(new BibliographicPeriod(removeSpaces(text)));
-    }
-
-    return createList(BibliographicUtil.splitRangeSet(removeSpaces(text)));
-  }
-
-  /**
-   * Provides a list of periods from a collection of period text
-   * representations.
-   * 
-   * @param textPeriods
-   *          A Collection<String> with the text representations of the periods.
-   * @return a List<BibliographicPeriod> with the periods.
-   */
-  private static List<BibliographicPeriod> createList(
-      Collection<String> textPeriods) {
-    final String DEBUG_HEADER = "createList(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "textPeriods.size() = " + textPeriods.size());
-
-    List<BibliographicPeriod> periods = new ArrayList<BibliographicPeriod>(
-	textPeriods.size());
-
-    for (String textPeriod : textPeriods) {
-      periods.add(new BibliographicPeriod(textPeriod));
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "periods.size() = " + periods.size());
-    return periods;
-  }
-
-  /**
-   * Provides a copy of a passed range reformatted to match a passed edge.
-   * 
-   * @param range
-   *          A BibliographicPeriod with the range to be formatted.
-   * @param matchingEdge
-   *          A BibliographicPeriodEdge with the edge to be used to match the
-   *          edges of the reformatted range.
-   * @return a BibliographicPeriod with the reformatted range.
-   */
-  static BibliographicPeriod matchRangeEdgesToEdge(BibliographicPeriod range,
-      BibliographicPeriodEdge matchingEdge) {
-    final String DEBUG_HEADER = "matchRangeEdgesToEdge(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "range = " + range);
-      log.debug2(DEBUG_HEADER + "matchingEdge = " + matchingEdge);
-    }
-
-    BibliographicPeriodEdge startEdge = range.getStartEdge();
-    BibliographicPeriodEdge endEdge = range.getEndEdge();
-    BibliographicPeriod matchedRange = null;
-
-    if (startEdge == null && endEdge == null) {
-      matchedRange = range;
-    } else if (startEdge == null) {
-      // Create a matched range by matching the end edge.
-      matchedRange = new BibliographicPeriod(null,
-  	  endEdge.matchEdgeToEdge(false, matchingEdge));
-    } else if (endEdge == null) {
-      // Create a matched range by matching the start edge.
-      matchedRange = new BibliographicPeriod(startEdge.matchEdgeToEdge(true,
-	    matchingEdge), null);
-    } else {
-    // Create a matched range by matching its edges.
-      matchedRange = new BibliographicPeriod(startEdge.matchEdgeToEdge(true,
-	    matchingEdge), endEdge.matchEdgeToEdge(false, matchingEdge));
-    }
-
-    if (log.isDebug2()) log.debug2("matchedRange = " + matchedRange);
-    return matchedRange;
-  }
-
-  /**
-   * Extends into the far future a lis of periods.
-   * 
-   * @param periods A List<BibliographicPeriod> with the periods to be extended.
-   */
-  static void extendFuture(List<BibliographicPeriod> periods) {
-    final String DEBUG_HEADER = "extendFuture(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "periods.size() = " + periods.size());
-
-    if (periods == null || periods.size() < 1) {
-      return;
-    }
-
-    BibliographicPeriod lastPeriod = periods.get(periods.size() - 1);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "lastPeriod = " + lastPeriod);
-
-    if (lastPeriod.isAllTime() || lastPeriod.isAllFuture()
-	|| lastPeriod.getStartEdge() == null) {
-      return;
-    }
-
-    lastPeriod.setEndEdge(BibliographicPeriodEdge.INFINITY_EDGE);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "lastPeriod = " + lastPeriod);
   }
 
   public BibliographicPeriodEdge getStartEdge() {
@@ -660,14 +350,6 @@ public class BibliographicPeriod extends BibliographicItemAdapter
 
   public boolean isAllTime() {
     return !isEmpty() && startEdge.isInfinity() && endEdge.isInfinity();
-  }
-
-  public boolean isAllPast() {
-    return !isEmpty() && startEdge.isInfinity();
-  }
-
-  public boolean isAllFuture() {
-    return !isEmpty() && endEdge.isInfinity();
   }
 
   public boolean isEmpty() {
@@ -694,328 +376,223 @@ public class BibliographicPeriod extends BibliographicItemAdapter
     return endEdge.toDisplayableString();
   }
 
-  public String toCanonicalString() {
+  /**
+   * Provides an indication of whether this period matches any of the passed
+   * periods.
+   * 
+   * @param others
+   *          A Collection<BibliographicPeriod> with the periods against which
+   *          to check ehether this period matches any of them.
+   * @return a boolean with <code>true</code> if this period matches any of the
+   *         the other periods, <code>false</code> otherwise.
+   */
+  public boolean matches(List<BibliographicPeriod> others) {
+    final String DEBUG_HEADER = "matches(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "others = " + others);
+
+    // Check whether this is an empty period.
     if (isEmpty()) {
-      return "";
+      // Yes: It cannot match any of the other periods.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
     }
 
-    return startEdge.toDisplayableString() + EDGES_SEPARATOR
-	+ endEdge.toDisplayableString();
-  }
-
-  @Override
-  public String toString() {
-    return "BibliographicPeriod [startEdge=" + startEdge + ", endEdge="
-	+ endEdge + "]";
-  }
-
-  @Override
-  public int compareTo(BibliographicPeriod other) {
-    if (getStartEdge() != null && other != null) {
-      return getStartEdge().compareTo(other.getStartEdge());
-    } else if (getEndEdge() != null && other != null) {
-      return getStartEdge().compareTo(other.getStartEdge());
+    // Check whether this period covers all time.
+    if (isAllTime()) {
+      // Yes: It matches any other period.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true");
+      return true;
     }
 
-    return 0;
+    // Check whether there are no other periods to match.
+    if (others == null || others.size() < 1) {
+      // Yes: This period cannot match the others.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
+    }
+
+    // Normalize this period.
+    BibliographicPeriod normalizedThis = normalize();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "normalizedThis = " + normalizedThis);
+
+    // Get the start edge of this normalized period.
+    BibliographicPeriodEdge normalizedStartEdge = normalizedThis.getStartEdge();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "normalizedStartEdge = " + normalizedStartEdge);
+
+    // Get the end edge of this normalized period.
+    BibliographicPeriodEdge normalizedEndEdge = normalizedThis.getEndEdge();
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "normalizedEndEdge = " + normalizedEndEdge);
+
+    List<BibliographicPeriod> normalizedOthers =
+	new ArrayList<BibliographicPeriod>();
+    
+    // Loop through all the other periods.
+    for (BibliographicPeriod other : others) {
+      BibliographicPeriod normalizedOther = other.normalize();
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "normalizedOther = " + normalizedOther);
+
+      // Check whether this period shares an edge with the other one. 
+      if (normalizedStartEdge.equals(normalizedOther.getStartEdge())
+	  || normalizedStartEdge.equals(normalizedOther.getEndEdge())
+	  || normalizedEndEdge.equals(normalizedOther.getStartEdge())
+	  || normalizedEndEdge.equals(normalizedOther.getEndEdge())) {
+	// Yes: This period matches the other period.
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true");
+	return true;
+      }
+
+      // Normalize it and add it to the collection of normalized other periods.
+      normalizedOthers.add(other.normalize());
+    }
+
+    // Check whether the definition of this period includes volumes and/or
+    // issues for both edges.
+    if (!startEdge.isFullYear() && !endEdge.isFullYear()) {
+      // Yes: This period cannot match the others.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "normalizedOthers = " + normalizedOthers);
+
+    // Check whether the definition of this period does not include volumes
+    // and/or issues.
+    if (includesFullYears()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "includesFullYears = true");
+
+      // Check whether any of the edges of this period match any of the other
+      // periods.
+      if (normalizedStartEdge.matches(normalizedOthers)
+	  || normalizedEndEdge.matches(normalizedOthers)) {
+	// Yes: This period matches one of the other periods.
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "matches = true");
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true");
+	return true;
+      }
+
+      // No: Reverse the roles and try again.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "matches = false");
+
+      List<BibliographicPeriod> normalizedThisAsList =
+	  Collections.singletonList(normalizedThis);
+
+      // Loop through all the other periods.
+      for (BibliographicPeriod normalizedOther : normalizedOthers) {
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "normalizedOther = " + normalizedOther);
+
+	// Get the start edge of the current other period.
+	BibliographicPeriodEdge normalizedOtherEdge =
+	    normalizedOther.getStartEdge();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "normalizedOtherEdge = "
+	    + normalizedOtherEdge);
+
+	// Make the other period edge cover only full years.
+	normalizedOtherEdge.setVolume(null);
+	normalizedOtherEdge.setIssue(null);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "normalizedRangeEdge = " + normalizedOtherEdge);
+	  
+	// Check whether the start edge of the current other period matches
+	// this period.
+	if (normalizedOtherEdge.matches(normalizedThisAsList)) {
+	  // Yes: This period matches one of the other periods.
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reverse = true");
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true");
+	  return true;
+	}
+
+	// No: Get the end edge of the current other period.
+	normalizedOtherEdge = normalizedOther.getEndEdge();
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "normalizedOtherEdge = "
+	    + normalizedOtherEdge);
+
+	// Make the other period edge cover only full years.
+	normalizedOtherEdge.setVolume(null);
+	normalizedOtherEdge.setIssue(null);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	    + "normalizedRangeEdge = " + normalizedOtherEdge);
+	  
+	// Check whether the end edge of the current other period matches this
+	// period.
+	if (normalizedOtherEdge.matches(normalizedThisAsList)) {
+	  // Yes: This period matches one of the other periods.
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reverse = true");
+	  if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true");
+	  return true;
+	}
+      }
+
+      // This period does not match any of the others.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "reverse = false");
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
+    }
+
+    // No: The definition of one of the edges of this period includes a volume
+    // and/or an issue: Check whether the start edge is not the one.
+    if (!startEdge.isInfinity() && startEdge.isFullYear()) {
+      // Yes.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "isFarPast = false");
+
+      // Determine whether this edge matches any of the other periods.
+      boolean result = normalizedStartEdge.matches(normalizedOthers);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "matches = " + result);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Check whether the end edge of this period is the far future or is the one
+    // that includes a volume and/or an issue.
+    if (endEdge.isInfinity() || !endEdge.isFullYear()) {
+      // Yes: This period does not match any of the others.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
+      return false;
+    }
+
+    // No: Determine whether this edge matches any of the other periods.
+    boolean result = normalizedStartEdge.matches(normalizedOthers);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "matches = " + result);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 
   /**
-   * Provides a normalized version of this object, with both edges explicitly
-   * declared and specified in a common format.
+   * Provides a normalized version of this period specified in a common format.
    * 
-   * @return a BibliographicPeriod with the normalized version of the object.
+   * @return a BibliographicPeriod with the normalized version of the period.
    */
-  public BibliographicPeriod normalize() {
+  private BibliographicPeriod normalize() {
     final String DEBUG_HEADER = "normalize(): ";
-    BibliographicPeriod normalized =
-	new BibliographicPeriod(toDisplayableString());
-
-    // Check whether it is the full time period.
-    if (normalized.isAllTime()) {
-      // Yes: Synthesize the two edges.
-      normalized.setStartEdge(BibliographicPeriodEdge.FAR_PAST_EDGE);
-      normalized.setEndEdge(BibliographicPeriodEdge.FAR_FUTURE_EDGE);
-    } else {
-      // No: Check whether it is not empty.
-      if (!normalized.isEmpty()) {
-	// Yes.
-	BibliographicPeriodEdge originalStartEdge = normalized.getStartEdge();
-	BibliographicPeriodEdge originalEndEdge = normalized.getEndEdge();
-
-	// Check whether there is no start edge.
-	if (originalStartEdge.isInfinity()) {
-	  // Yes: Synthesize the start edge matching the format of the end edge.
-	  normalized.setStartEdge(BibliographicPeriodEdge.FAR_PAST_EDGE
-	      .matchEdgeToEdge(true, originalEndEdge));
-	  // No: Check whether there is no end edge.
-	} else if (originalEndEdge.isInfinity()) {
-	  // Yes: Synthesize the end edge matching the format of the start edge.
-	  normalized.setEndEdge(BibliographicPeriodEdge.FAR_FUTURE_EDGE
-	      .matchEdgeToEdge(false, originalStartEdge));
-	} else {
-	  // No: Rebuild the period matching the format of each edge against the
-	  // other edge.
-	  normalized.setStartEdge(originalStartEdge.matchEdgeToEdge(true,
-	      originalEndEdge));
-	  normalized.setEndEdge(originalEndEdge.matchEdgeToEdge(false,
-	      normalized.getStartEdge()));
-	}
-      }
-    }
-
     // Reformat the period with a common format.
-    normalized = new BibliographicPeriod(BibliographicUtil.
-	normaliseIdentifier(normalized.toDisplayableString()));
+    BibliographicPeriod normalized = new BibliographicPeriod(BibliographicUtil
+	.normaliseIdentifier(toDisplayableString()));
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "normalized = '" + normalized + "'.");
     return normalized;
   }
 
   /**
-   * Provides an indication of whether this period intersects any of the passed
-   * ranges.
+   * Provides an indication of whether this period includes only publication
+   * full years.
    * 
-   * @param ranges
-   *          A Collection<BibliographicPeriod> with the ranges against which to
-   *          check the period.
-   * @return a boolean with <code>true</code> if this period intersects any of
-   *         the ranges, <code>false</code> otherwise.
+   * @return a boolean with <code>true</code> if this period includes only
+   *         publication full years, <code>false</code> otherwise.
    */
-  boolean intersects(Collection<BibliographicPeriod> ranges) {
-    final String DEBUG_HEADER = "intersects(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ranges = " + ranges);
-
-    // Check whether there are no ranges to intersect.
-    if (ranges == null || ranges.size() < 1) {
-      // Yes: The period cannot intersect the ranges.
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false");
-      return false;
-    }
-
-    Collection<BibliographicPeriod> normalizedRanges =
-	new HashSet<BibliographicPeriod>();
-    
-    // Loop through all the passed ranges.
-    for (BibliographicPeriod range : ranges) {
-      // Normalize it and add it to the collection of normalized ranges.
-      normalizedRanges.add(range.normalize());
-    }
-
-    // Check whether the period intersects any of the normalized ranges.
-    boolean result = intersectsNormalized(normalizedRanges);
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
-    return result;
+  public boolean includesFullYears() {
+    return (isAllTime()
+	|| ((startEdge == null || startEdge.isFullYear())
+	    && (endEdge == null || endEdge.isFullYear())));
   }
 
-  /**
-   * Provides an indication of whether this period intersects any of the passed
-   * normalized ranges.
-   * 
-   * @param ranges
-   *          A Collection<BibliographicPeriod> with the normalized ranges
-   *          against which to check the period.
-   * @return a boolean with <code>true</code> if this period intersects any of
-   *         the ranges, <code>false</code> otherwise.
-   */
-  private boolean intersectsNormalized(
-      Collection<BibliographicPeriod> normalizedRanges) {
-    final String DEBUG_HEADER = "intersectsNormalized(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "normalizedRanges.size() = "
-	  + normalizedRanges.size());
-
-    BibliographicPeriod normalizedPeriod = normalize();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "normalizedPeriod = " + normalizedPeriod);
-
-    // Reformat the ranges so that their edges match the format of the period.
-    String ranges = rangesAsString(matchRangeEdgesToPeriod(normalizedRanges,
-	normalizedPeriod));
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ranges = " + ranges);
-
-    // Get the period start edge.
-    BibliographicPeriodEdge startEdge = normalizedPeriod.getStartEdge();
-    String startEdgeText = "";
-
-    if (startEdge != null) {
-      startEdgeText = startEdge.toDisplayableString();
-    }
-
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "startEdgeText = " + startEdgeText);
-
-    // Check whether the edge is covered by one of the ranges.
-    if (BibliographicUtil.coverageIncludes(ranges, startEdgeText)) {
-      // Yes: No need for any more work.
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "coverageIncludes result is true.");
-      return true;
-    } else {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "coverageIncludes(" + ranges
-	  + "," + startEdgeText + ") returns false.");
-    }
-
-    // No: Get the period end edge.
-    BibliographicPeriodEdge endEdge = normalizedPeriod.getEndEdge();
-    String endEdgeText = "";
-
-    // Check whether it is different than the start edge.
-    if ((startEdge == null && endEdge != null)
-	|| (startEdge != null && !startEdge.equals(endEdge))) {
-      
-      // Yes: Check it separately.
-      if (endEdge != null) {
-	endEdgeText = endEdge.toDisplayableString();
-      }
-
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "endEdgeText = " + endEdgeText);
-
-      // Check whether the edge is covered by one of the ranges.
-      if (BibliographicUtil.coverageIncludes(ranges, endEdgeText)) {
-	// Yes: No need for any more work.
-	if (log.isDebug2())
-	  log.debug2(DEBUG_HEADER + "coverageIncludes result is true.");
-	return true;
-      } else {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "coverageIncludes("
-	    + ranges + "," + endEdgeText + ") returns false.");
-      }
-    }
-
-    // Turn around the situation and repeat the checks with the period and the
-    // ranges roles reversed.
-    Collection<String> splitRanges = BibliographicUtil.splitRangeSet(ranges);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "splitRanges.size() = " + splitRanges.size());
-
-    // Loop through the ranges.
-    for (String range : splitRanges) {
-      // Get the start edge of the range.
-      startEdgeText = BibliographicUtil.getRangeSetStart(range);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "startEdgeText = " + startEdgeText);
-
-      // Check whether the edge is covered by the period.
-      if (BibliographicUtil
-	  .coverageIncludes(normalizedPeriod.toDisplayableString(),
-	      startEdgeText)) {
-	// Yes: No need for any more work.
-	if (log.isDebug2())
-	  log.debug2(DEBUG_HEADER + "coverageIncludes result is true.");
-	return true;
-      } else {
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "coverageIncludes("
-	    + normalizedPeriod.toDisplayableString() + "," + startEdgeText
-	    + ") returns false.");
-      }
-
-      // No: Get the end edge of the range.
-      endEdgeText = BibliographicUtil.getRangeSetEnd(range);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "endEdge = " + endEdge);
-
-      // Check whether it is different than the start edge.
-      if ((startEdgeText == null && endEdgeText != null)
-	  || (startEdgeText != null && !startEdgeText.equals(endEdgeText))) {
-
-	// Yes: Check whether the edge is covered by the period.
-	if (BibliographicUtil
-	    .coverageIncludes(normalizedPeriod.toDisplayableString(),
-		endEdgeText)) {
-	  // Yes: No need for any more work.
-	  if (log.isDebug2())
-	    log.debug2(DEBUG_HEADER + "coverageIncludes result is true.");
-	  return true;
-	} else {
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "coverageIncludes("
-	      + normalizedPeriod.toDisplayableString() + "," + endEdgeText
-	      + ") returns false.");
-	}
-      }
-    }
-
-    // At this point, all the checks have been made and no intersection has been
-    // found.
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Ultimate result is false.");
-    return false;
-  }
-
-  /**
-   * Provides a copy of a collection of passed ranges reformatted so that their
-   * edges match the format of those of a passed period.
-   * 
-   * @param ranges
-   *          A Collection<String> with the ranges to be reformatted.
-   * @param period
-   *          A String with the period with the edges to be used to match the
-   *          edges of the reformatted ranges.
-   * 
-   * @return a Collection<String> with the reformatted ranges.
-   */
-  private Collection<BibliographicPeriod> matchRangeEdgesToPeriod(
-      Collection<BibliographicPeriod> ranges, BibliographicPeriod period) {
-    final String DEBUG_HEADER = "matchRangeEdgesToPeriod(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "ranges.size() = " + ranges.size());
-      log.debug2(DEBUG_HEADER + "period = " + period);
-    }
-
-    // Use the first period edge as the matching edge used to reformat the
-    // ranges.
-    BibliographicPeriodEdge matchingEdge = period.getStartEdge();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "matchingEdge = " + matchingEdge);
-
-    Collection<BibliographicPeriod> matchedRanges =
-	new HashSet<BibliographicPeriod>(ranges.size());
-
-    // Loop through all the ranges.
-    for (BibliographicPeriod range : ranges) {
-      // Match the format of the range edges to that of the matching edge.
-      matchedRanges.add(matchRangeEdgesToEdge(range, matchingEdge));
-    }
-
-    if (log.isDebug2())
-      log.debug2("matchedRanges.size() = " + matchedRanges.size());
-    return matchedRanges;
-  }
-
-  /**
-   * Provides the subset of ranges from a passed set of ranges that intersect
-   * this period.
-   * 
-   * @param ranges
-   *          A Collection<BibliographicPeriod> with the ranges to be checked.
-   * @return a Collection<String> with the subset of ranges that intersect this
-   *         period.
-   */
-  public Collection<BibliographicPeriod> intersection(
-      Collection<BibliographicPeriod> ranges) {
-    final String DEBUG_HEADER = "intersection(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "ranges.size() = " + ranges.size());
-
-    Collection<BibliographicPeriod> result = new HashSet<BibliographicPeriod>();
-
-    // Loop through all the candidate ranges.
-    for (BibliographicPeriod range : ranges) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
-
-      // Check whether this range covers everything.
-      if (range.isAllTime()) {
-	// Yes: Add it to the result set.
-	result.add(range);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Matched");
-	// No: Check whether this range intersects this period.
-      } else if (intersects(range)) {
-	// Yes: Add it to the result set.
-	result.add(range);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Matched");
-      }
-    }
-
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "result.size() = " + result.size());
-    return result;
+  @Override
+  public String toString() {
+    return "BibliographicPeriod [startEdge=" + startEdge + ", endEdge="
+	+ endEdge + "]";
   }
 }

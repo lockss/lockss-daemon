@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.25 2013-07-10 21:59:20 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.26 2013-09-05 18:49:46 fergaloy-sf Exp $
  */
 
 /*
@@ -505,14 +505,17 @@ public class DbManager extends BaseLockssDaemonManager
   /** Subscription identifier column. */
   public static final String SUBSCRIPTION_SEQ_COLUMN = "subscription_seq";
 
-  /** Requests column. */
+  /** Subscription range column. */
   public static final String RANGE_COLUMN = "range";
 
-  /** Requests column. */
+  /** Subscription range type column. */
   public static final String SUBSCRIBED_COLUMN = "subscribed";
 
   /** Name of the Archival Unit problem description column. */
   public static final String PROBLEM_COLUMN = "problem";
+
+  /** Subscription range index column. */
+  public static final String RANGE_IDX_COLUMN = "range_idx";
 
   //
   // Maximum lengths of variable text length database columns.
@@ -1818,6 +1821,11 @@ public class DbManager extends BaseLockssDaemonManager
       + " set " + VERSION_COLUMN + " = ?"
       + " where " + SYSTEM_COLUMN + " = ?";
 
+  // SQL statement that adds the index column to the subscription range table.
+  private static final String ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN = "alter "
+      + "table " + SUBSCRIPTION_RANGE_TABLE
+      + " add column " + RANGE_IDX_COLUMN + " smallint not null default 0";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -1853,7 +1861,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 7;
+  private int targetDatabaseVersion = 8;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2330,6 +2338,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom5To6(conn);
 	} else if (from == 6) {
 	  updateDatabaseFrom6To7(conn);
+	} else if (from == 7) {
+	  updateDatabaseFrom7To8(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2621,9 +2631,7 @@ public class DbManager extends BaseLockssDaemonManager
    *          A String with the name of the table to create, if missing.
    * @param tableCreateSql
    *          A String with the SQL code used to create the table, if missing.
-   * @return <code>true</code> if the table did not exist and it was created,
-   *         <code>false</code> otherwise.
-   * @throws DbMigratorException
+   * @throws DbException
    *           if any problem occurred creating the table.
    */
   protected void createTableBeforeReady(Connection conn, String tableName,
@@ -5739,6 +5747,51 @@ public class DbManager extends BaseLockssDaemonManager
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
     } finally {
       DbManager.safeCloseStatement(createSchema);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 7 to version 8.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom7To8(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom7To8(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Add the subscription range index column.
+    addSubscriptionRangeIndexColumn(conn);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Adds the index column to the subscription range table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void addSubscriptionRangeIndexColumn(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "addSubscriptionRangeIndexColumn(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    PreparedStatement statement = null;
+
+    try {
+      statement = prepareStatementBeforeReady(conn,
+	  ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN);
+
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } finally {
+      DbManager.safeCloseStatement(statement);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");

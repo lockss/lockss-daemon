@@ -1,5 +1,5 @@
 /*
- * $Id: Subscription.java,v 1.1 2013-05-22 23:40:20 fergaloy-sf Exp $
+ * $Id: Subscription.java,v 1.2 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -31,8 +31,8 @@
  */
 package org.lockss.subscription;
 
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Representation of a serial publication subscription.
@@ -42,8 +42,8 @@ import java.util.HashSet;
 public class Subscription {
   private SerialPublication publication;
   private Long subscriptionSeq;
-  private Collection<BibliographicPeriod> subscribedRanges;
-  private Collection<BibliographicPeriod> unsubscribedRanges;
+  private List<BibliographicPeriod> subscribedRanges;
+  private List<BibliographicPeriod> unsubscribedRanges;
 
   public SerialPublication getPublication() {
     return publication;
@@ -61,53 +61,53 @@ public class Subscription {
     this.subscriptionSeq = subscriptionSeq;
   }
 
-  public Collection<BibliographicPeriod> getSubscribedRanges() {
+  public List<BibliographicPeriod> getSubscribedRanges() {
     return subscribedRanges;
   }
 
-  public void setSubscribedRanges(Collection<BibliographicPeriod> ranges) {
+  public void setSubscribedRanges(List<BibliographicPeriod> ranges) {
     if (ranges == null || ranges.size() == 0) {
       subscribedRanges = ranges;
       return;
     }
 
-    subscribedRanges = new HashSet<BibliographicPeriod>(ranges.size());
+    subscribedRanges = new ArrayList<BibliographicPeriod>(ranges.size());
     subscribedRanges.addAll(ranges);
   }
 
-  public boolean addSubscribedRanges(Collection<BibliographicPeriod> ranges) {
+  public boolean addSubscribedRanges(List<BibliographicPeriod> ranges) {
     if (ranges == null || ranges.size() == 0) {
       return false;
     }
 
     if (subscribedRanges == null) {
-      subscribedRanges = new HashSet<BibliographicPeriod>(ranges.size());
+      subscribedRanges = new ArrayList<BibliographicPeriod>(ranges.size());
     }
 
     return subscribedRanges.addAll(ranges);
   }
 
-  public Collection<BibliographicPeriod> getUnsubscribedRanges() {
+  public List<BibliographicPeriod> getUnsubscribedRanges() {
     return unsubscribedRanges;
   }
 
-  public void setUnsubscribedRanges(Collection<BibliographicPeriod> ranges) {
+  public void setUnsubscribedRanges(List<BibliographicPeriod> ranges) {
     if (ranges == null || ranges.size() == 0) {
       unsubscribedRanges = ranges;
       return;
     }
 
-    unsubscribedRanges = new HashSet<BibliographicPeriod>(ranges.size());
+    unsubscribedRanges = new ArrayList<BibliographicPeriod>(ranges.size());
     unsubscribedRanges.addAll(ranges);
   }
 
-  public boolean addUnsubscribedRanges(Collection<BibliographicPeriod> ranges) {
+  public boolean addUnsubscribedRanges(List<BibliographicPeriod> ranges) {
     if (ranges == null || ranges.size() == 0) {
       return false;
     }
 
     if (unsubscribedRanges == null) {
-      unsubscribedRanges = new HashSet<BibliographicPeriod>(ranges.size());
+      unsubscribedRanges = new ArrayList<BibliographicPeriod>(ranges.size());
     }
 
     return unsubscribedRanges.addAll(ranges);

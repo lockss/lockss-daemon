@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.9 2013-07-18 16:55:06 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.10 2013-09-05 18:49:47 fergaloy-sf Exp $
  */
 
 /*
@@ -62,7 +62,6 @@ import org.lockss.config.TdbTitle;
 import org.lockss.config.TdbUtil;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
-import org.lockss.exporter.biblio.BibliographicUtil;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
@@ -150,9 +149,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   // Query to find the subscription ranges of a publication.
   private static final String FIND_SUBSCRIPTION_RANGES_QUERY = "select "
       + RANGE_COLUMN
+      + "," + RANGE_IDX_COLUMN
       + " from " + SUBSCRIPTION_RANGE_TABLE
       + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
-      + " and " + SUBSCRIBED_COLUMN + " = ?";
+      + " and " + SUBSCRIBED_COLUMN + " = ?"
+      + " order by " + RANGE_IDX_COLUMN;
 
   // Query to add a subscription range.
   private static final String INSERT_SUBSCRIPTION_RANGE_QUERY = "insert into "
@@ -160,14 +161,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + "(" + SUBSCRIPTION_SEQ_COLUMN
       + "," + RANGE_COLUMN
       + "," + SUBSCRIBED_COLUMN
-      + ") values (?,?,?)";
-
-  // Query to delete a subscription range.
-  private static final String DELETE_SUBSCRIPTION_RANGE_QUERY = "delete from "
-      + SUBSCRIPTION_RANGE_TABLE
+      + "," + RANGE_IDX_COLUMN
+      + ") values (?,?,?,"
+      + "(select coalesce(max(" + RANGE_IDX_COLUMN + "), 0) + 1"
+      + " from " + SUBSCRIPTION_RANGE_TABLE
       + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
-      + " and " + RANGE_COLUMN + " = ?"
-      + " and " + SUBSCRIBED_COLUMN + " = ?";
+      + " and " + SUBSCRIBED_COLUMN + " = ?))";
 
   // Query to delete all of the ranges of one type of a subscription.
   private static final String DELETE_ALL_SUBSCRIPTION_RANGES_TYPE_QUERY =
@@ -211,6 +210,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",pl." + PLATFORM_NAME_COLUMN
       + ",sr." + RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
+      + ",sr." + RANGE_IDX_COLUMN
       + " from " + SUBSCRIPTION_TABLE + " s"
       + "," + PUBLICATION_TABLE + " p"
       + "," + PUBLISHER_TABLE + " pr"
@@ -227,7 +227,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",n." + NAME_COLUMN
       + ",pl." + PLATFORM_NAME_COLUMN
       + ",sr." + RANGE_COLUMN
-      + ",sr." + SUBSCRIBED_COLUMN;
+      + ",sr." + SUBSCRIBED_COLUMN
+      + ",sr." + RANGE_IDX_COLUMN;
 
   // Query to get the count of subscriptions.
   private static final String COUNT_SUBSCRIBED_PUBLICATIONS_QUERY = "select"
@@ -239,6 +240,15 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ", " + SUBSCRIPTION_RANGE_TABLE + " sr"
       + " where s." + SUBSCRIPTION_SEQ_COLUMN + " = sr."
       + SUBSCRIPTION_SEQ_COLUMN + ")";
+
+  private static final String CANNOT_CONNECT_TO_DB_ERROR_MESSAGE =
+      "Cannot connect to the database";
+
+  private static final String CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE = "Cannot "
+      + "determine whether this is the first run of the subscription manager";
+
+  private static final String CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE =
+      "Cannot rollback the connection";
 
   // The database manager.
   private DbManager dbManager = null;
@@ -258,11 +268,15 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   // The current TdbTitle when processing multiple TdbAus.
   private TdbTitle currentTdbTitle;
 
-  // The current set of subscribed ranges when processing multiple TdbAus.
-  private Collection<BibliographicPeriod> currentSubscribedRanges;
+  // The current list of subscribed ranges when processing multiple TdbAus.
+  private List<BibliographicPeriod> currentSubscribedRanges;
 
-  // The current set of unsubscribed ranges when processing multiple TdbAus.
-  private Collection<BibliographicPeriod> currentUnsubscribedRanges;
+  // The current list of unsubscribed ranges when processing multiple TdbAus.
+  private List<BibliographicPeriod> currentUnsubscribedRanges;
+
+  // The current set of TdbAus matched by the subscribed ranges and not matched
+  // by the unsubscribed ranges when processing multiple TdbAus.
+  private Set<TdbAu> currentCoveredTdbAus;
 
   // The list of repositories to use when configuring AUs.
   private List<String> repositories = null;
@@ -413,14 +427,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     Connection conn = null;
     boolean isFirstRun = false;
-    String message = "Cannot connect to database";
+    String message = CANNOT_CONNECT_TO_DB_ERROR_MESSAGE;
 
     try {
       // Get a connection to the database.
       conn = dbManager.getConnection();
 
-      message = "Cannot determine whether this is the first run of the "
-	  + "subscription manager";
+      message = CANNOT_CHECK_FIRST_RUN_ERROR_MESSAGE;
 
       // Determine whether this is the first run of the subscription manager.
       isFirstRun = countUnconfiguredAus(conn) == 0;
@@ -464,7 +477,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	}
       }
     } catch (SQLException sqle) {
-      log.error("Cannot rollback the connection", sqle);
+      log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }
@@ -581,13 +594,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    // Yes: Get the archival unit period.
-    BibliographicPeriod period =
-	new BibliographicPeriod(tdbAu.getStartYear(),
-	    tdbAu.getStartVolume(), tdbAu.getStartIssue(),
-	    tdbAu.getEndYear(), tdbAu.getEndVolume(), tdbAu.getEndIssue());
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
-
     if (log.isDebug3()) {
       log.debug3(DEBUG_HEADER + "currentTdbTitle = " + currentTdbTitle);
       log.debug3(DEBUG_HEADER + "tdbAu.getTdbTitle() = " + tdbAu.getTdbTitle());
@@ -600,10 +606,14 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       currentTdbTitle = tdbAu.getTdbTitle();
 
       // Get the subscription ranges for the archival unit title.
-      currentSubscribedRanges = new HashSet<BibliographicPeriod>();
-      currentUnsubscribedRanges = new HashSet<BibliographicPeriod>();
+      currentSubscribedRanges = new ArrayList<BibliographicPeriod>();
+      currentUnsubscribedRanges = new ArrayList<BibliographicPeriod>();
 
       populateTitleSubscriptionRanges(conn, currentTdbTitle,
+	  currentSubscribedRanges, currentUnsubscribedRanges);
+
+      // Get the archival units covered by the subscription.
+      currentCoveredTdbAus = getCoveredTdbAus(currentTdbTitle,
 	  currentSubscribedRanges, currentUnsubscribedRanges);
     } else {
       // No: Reuse the title data from the previous archival unit.
@@ -613,8 +623,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Check whether the archival unit covers a subscribed range and it does not
     // cover any unsubscribed range.
-    if (period.intersects(currentSubscribedRanges)
-	&& !period.intersects(currentUnsubscribedRanges)) {
+    if (currentCoveredTdbAus.contains(tdbAu)) {
       // Yes: Add the archival unit configuration to those to be configured.
       config = addAuConfiguration(tdbAu, auId, config);
 
@@ -683,25 +692,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides the period covered by an archival unit in a form suitable to be
-   * displayed.
-   * 
-   * @param au
-   *          A TdbAu with the archival unit.
-   * @return a String with the period covered by the archival unit in a form
-   *         suitable to be displayed.
-   */
-  String displayableAuPeriod(TdbAu au) {
-    // Get the archival unit period.
-    BibliographicPeriod period = new BibliographicPeriod(au.getStartYear(),
-	au.getStartVolume(), au.getStartIssue(), au.getEndYear(),
-	au.getEndVolume(), au.getEndIssue());
-
-    // Return the displayable text.
-    return period.toDisplayableString();
-  }
-
-  /**
    * Populates the sets of subscribed and unsubscribed ranges for a title.
    * 
    * @param conn
@@ -709,19 +699,23 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param title
    *          A TdbTitle with the title.
    * @param subscribedRanges
-   *          A Collection<BibliographicPeriod> to be populated with the title
+   *          A List<BibliographicPeriod> to be populated with the title
    *          subscribed ranges, if any.
    * @param unsubscribedRanges
-   *          A Collection<BibliographicPeriod> to be populated with the title
+   *          A List<BibliographicPeriod> to be populated with the title
    *          unsubscribed ranges, if any.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private void populateTitleSubscriptionRanges(Connection conn, TdbTitle title,
-      Collection<BibliographicPeriod> subscribedRanges,
-      Collection<BibliographicPeriod> unsubscribedRanges) throws DbException {
+      List<BibliographicPeriod> subscribedRanges,
+      List<BibliographicPeriod> unsubscribedRanges) throws DbException {
     final String DEBUG_HEADER = "populateTitleSubscriptionRanges(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "title = " + title);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
+      log.debug2(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
+    }
 
     // Get the title identifier.
     String titleId = title.getId();
@@ -807,6 +801,160 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Provides the archival units of a title that are covered by a passed list of
+   * subscribed ranges and they are not covered by a passed list of unsubscribed
+   * ranges.
+   * 
+   * @param title
+   *          A TdbTitle with the title involved.
+   * @param subscribedRanges
+   *          A List<BibliographicPeriod> with the list of subscribed ranges.
+   * @param unsubscribedRanges
+   *          A List<BibliographicPeriod> with the list of un subscribed ranges.
+   * @return a Set<TdbAu> with the archival units covered by the subscribed
+   *         ranges and not covered by the unsubscribed ranges.
+   */
+  Set<TdbAu> getCoveredTdbAus(TdbTitle title,
+      List<BibliographicPeriod> subscribedRanges,
+      List<BibliographicPeriod> unsubscribedRanges) {
+    final String DEBUG_HEADER = "getCoveredTdbAus(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "title = " + title);
+      log.debug2(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
+      log.debug2(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
+    }
+
+    // Initialize the result.
+    Set<TdbAu> result = new HashSet<TdbAu>();
+
+    // Get the publication archival units.
+    List<TdbAu> tdbAus = title.getSortedTdbAus();
+
+    // Do nothing more if the publication has no archival units.
+    if (tdbAus == null || tdbAus.size() < 1) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "tdbAus.size() = " + tdbAus.size());
+
+    // Loop through all the subscribed ranges.
+    for (BibliographicPeriod range : subscribedRanges) {
+      // Add to the result all the archival units covered by the subscribed
+      // range.
+      result.addAll(getRangeCoveredTdbAus(range, tdbAus));
+    }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "result = " + result);
+
+    // Do nothing more if there are no unsubscribed ranges.
+    if (unsubscribedRanges != null && unsubscribedRanges.size() > 0) {
+      // Loop through all the unsubscribed ranges.
+      for (BibliographicPeriod range : unsubscribedRanges) {
+	// remove from the result all the archival units covered by the
+	// unsubscribed range.
+	result.removeAll(getRangeCoveredTdbAus(range, tdbAus));
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides the subset of archival units from a passed superset of archival
+   * units that are covered by a passed publication range.
+   * 
+   * @param range
+   *          A BibliographicPeriod with the publication range.
+   * @param tdbAus
+   *          A List<TdbAu> with the TdbAu objects to check for coverage.
+   * @return a List<TdbAu> with the archival units covered by the range.
+   */
+  private List<TdbAu> getRangeCoveredTdbAus(BibliographicPeriod range,
+      List<TdbAu> tdbAus) {
+    final String DEBUG_HEADER = "getRangeCoveredTdbAus(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "range = " + range.toDisplayableString());
+
+    List<TdbAu> result = new ArrayList<TdbAu>();
+
+    // Check whether the range covers nothing.
+    if (range == null || range.isEmpty()) {
+      // Yes: Return an empty result.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+      return result;
+    }
+
+    // Check whether the range covers everything.
+    if (range.isAllTime()) {
+      // Yes: Return all the passed archival units.
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + tdbAus);
+      return tdbAus;
+    }
+
+    int firstIndex = -1;
+    int lastIndex = -1;
+
+    // Check whether the range start is in the far past.
+    if (range.getStartEdge().isInfinity()) {
+      // Yes: The first archival unit to be returned is the first one passed.
+      firstIndex = 0;
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "firstIndex = " + firstIndex);
+      // No: Check whether the range end is in the far future.
+    } else if (range.getEndEdge().isInfinity()) {
+      // Yes: The last archival unit to be returned is the last one passed.
+      lastIndex = tdbAus.size() - 1;
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "lastIndex = " + lastIndex);
+    }
+
+    int currentIndex = 0;
+
+    // Loop through all the passed archival units.
+    for (TdbAu tdbAu : tdbAus) {
+      // Check whether the range matches any of the publication ranges of the
+      // archival unit.
+      if (range.matches(tdbAu.getPublicationRanges())) {
+	// Yes: Check whether this is the first AU covered by the range.
+	if (firstIndex == -1) {
+	  // Yes: Remember it.
+	  firstIndex = currentIndex;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "firstIndex = " + firstIndex);
+	}
+
+	// Check whether the last AU covered by the range is known.
+	if (lastIndex == tdbAus.size() - 1) {
+	  // Yes: The subsset is now known.
+	  break;
+	} else {
+	  // No: This AU is a candidate to be the last one.
+	  lastIndex = currentIndex;
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "lastIndex = " + lastIndex);
+	}
+      }
+
+      // Point to the next archival unit.
+      currentIndex++;
+    }
+
+    // Check whether any archival units are covered by the range.
+    if (firstIndex != -1) {
+      // Yes: Add to the result the archival units covered by the range.
+      for (int index = firstIndex; index <= lastIndex; index++) {
+	result.add(tdbAus.get(index));
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
    * Configures a batch of archival units into the system.
    * 
    * @param config
@@ -833,7 +981,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (status.hasNotOk()) {
 	// Yes: Report them.
 	for (BatchAuStatus.Entry stat : status.getStatusList()) {
-	  if (!stat.isOk()) {
+	  if (!stat.isOk() && stat.getExplanation() != null) {
 	    log.error("Error configuring AU '" + stat.getName() + "': "
 		+ stat.getExplanation());
 	  }
@@ -1079,14 +1227,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscribed
    *          A boolean with the subscribed attribute of the ranges to be
    *          provided.
-   * @return a Collection<BibliographicPeriod> with the ranges for the
-   *         subscription.
+   * @return a List<BibliographicPeriod> with the ranges for the subscription.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Collection<BibliographicPeriod> findSubscriptionRanges(
-      Connection conn, Long subscriptionSeq, boolean subscribed)
-      throws DbException {
+  private List<BibliographicPeriod> findSubscriptionRanges(Connection conn,
+      Long subscriptionSeq, boolean subscribed) throws DbException {
     final String DEBUG_HEADER = "findSubscriptionsRanges(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
@@ -1094,7 +1240,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     String range;
-    Collection<BibliographicPeriod> ranges = new HashSet<BibliographicPeriod>();
+    List<BibliographicPeriod> ranges = new ArrayList<BibliographicPeriod>();
     String query = FIND_SUBSCRIPTION_RANGES_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = " + query);
 
@@ -1145,7 +1291,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     try {
       conn = dbManager.getConnection();
     } catch (DbException dbe) {
-      log.error("Cannot obtain a database connection", dbe);
+      log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
       status.addStatusEntry(null, false, dbe.getMessage(), null);
       return status;
     }
@@ -1221,8 +1367,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Get the periods covered by the title currently configured archival units,
     // indexed by platform.
-    Map<String, Collection<BibliographicPeriod>> periodsByPlatform =
-	getTitleConfiguredPeriodsByPlatform(title, configuredAus);
+    Map<String, List<BibliographicPeriod>> periodsByPlatform =
+	getTitleConfiguredCoveragePeriodsByPlatform(title.getSortedTdbAus(),
+	    configuredAus);
 
     try {
       // Find the publisher in the database or create it.
@@ -1241,8 +1388,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       for (String platform : periodsByPlatform.keySet()) {
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "platform = " + platform);
 
-	Collection<BibliographicPeriod> periods =
-	    periodsByPlatform.get(platform);
+	List<BibliographicPeriod> periods = periodsByPlatform.get(platform);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "periods = " + periods);
 
 	// Create the subscriptions for the configured archival units for the
@@ -1275,28 +1421,24 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param configuredAus
    *          A List<TdbAu> with the archival units already configured in the
    *          system.
-   * @return a Map<String, Collection<BibliographicPeriod>> with the periods
-   *         covered by the currently configured archival units of the title,
-   *         indexed by platform.
+   * @return a Map<String, List<BibliographicPeriod>> with the periods covered
+   *         by the currently configured archival units of the title, indexed by
+   *         platform.
    */
-  private Map<String, Collection<BibliographicPeriod>>
-  getTitleConfiguredPeriodsByPlatform(TdbTitle title,
+  private Map<String, List<BibliographicPeriod>>
+  getTitleConfiguredCoveragePeriodsByPlatform(List<TdbAu> titleAus,
       List<TdbAu> configuredAus) {
-    final String DEBUG_HEADER = "getTitleConfiguredPeriodsByPlatform(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "title = " + title);
+    final String DEBUG_HEADER =
+	"getTitleConfiguredCoveragePeriodsByPlatform(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "titleAus = " + titleAus);
 
-    // Get the title archival units. 
-    Collection<TdbAu> titleAus = title.getTdbAus();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "titleAus.size() = " + titleAus.size());
+    Map<String, List<BibliographicPeriod>> periodsByPlatform =
+	new HashMap<String, List<BibliographicPeriod>>();
 
-    Map<String, Collection<BibliographicPeriod>> periodsByPlatform =
-	new HashMap<String, Collection<BibliographicPeriod>>();
-
-    String pluginId;
-    String platform;
-    Collection<BibliographicPeriod> periods;
-    BibliographicPeriod period;
+    String platform = null;
+    String lastPlatform = null;
+    List<BibliographicPeriod> periods = null;
+    BibliographicPeriod period = null;
 
     // Loop through all the title archival units.
     for (TdbAu au : titleAus) {
@@ -1306,7 +1448,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	// Check whether the archival unit is configured.
 	if (configuredAus.contains(au)) {
 	  // Yes: Get the plugin identifier.
-	  pluginId = PluginManager.pluginKeyFromName(au.getPluginId());
+	  String pluginId = PluginManager.pluginKeyFromName(au.getPluginId());
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
 
@@ -1315,37 +1457,90 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "platform = " + platform);
 
-	  // Check whether this platform already exists in the result map.
-	  if (periodsByPlatform.containsKey(platform)) {
-	    // Yes: Get the collection of periods for this platform already in
-	    // the result map.
-	    periods = periodsByPlatform.get(platform);
-	  } else {
-	    // No: Initialize the collection of periods.
-	    periods = new HashSet<BibliographicPeriod>();
+	  // Check whether there is a platform change.
+	  if (lastPlatform != null && !lastPlatform.equals(platform)) {
+	    // Check whether there is a period defined by the previous archival
+	    // unit that needs to be saved.
+	    if (period != null) {
+	      // Yes: Add it to the list of periods.
+	      periods.add(period);
+	      if (log.isDebug3())
+		log.debug3(DEBUG_HEADER + "periods.size() = " + periods.size());
+
+	      period = null;
+
+	      // Add the list of periods to the result map.
+	      periodsByPlatform.put(lastPlatform, periods);
+
+	      lastPlatform = platform;
+	    }
 	  }
 
-	  // Get the archival unit period.
-	  period = new BibliographicPeriod(au.getStartYear(),
-	      au.getStartVolume(), au.getStartIssue(), au.getEndYear(),
-	      au.getEndVolume(), au.getEndIssue());
+	  // Check whether this platform already exists in the result map.
+	  if (periodsByPlatform.containsKey(platform)) {
+	    // Yes: Get the list of periods for this platform already in the
+	    // result map.
+	    periods = periodsByPlatform.get(platform);
+	  } else {
+	    // No: Initialize the list of periods.
+	    periods = new ArrayList<BibliographicPeriod>();
+	  }
+
+	  List<BibliographicPeriod> auRanges = au.getPublicationRanges();
+	  int auRangesLastIndex = auRanges.size() - 1;
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auRangesLastIndex = "
+	      + auRangesLastIndex);
+
+	  // Check whether this configured archival unit follows another
+	  // configured archival unit for the same platform.
+	  if (period != null) {
+	    // Yes: Extend the period to the end edge of the last publication
+	    // range of the archival unit.
+	    period = new BibliographicPeriod(period.getStartEdge(),
+		auRanges.get(auRangesLastIndex).getEndEdge());
+	  } else {
+	    // No: Initialize the subscription period with the start edge of
+	    // the first publication range of the archival unit and the end edge
+	    // of the last publication range of the archival unit.
+	    period = new BibliographicPeriod(auRanges.get(0).getStartEdge(),
+		auRanges.get(auRangesLastIndex).getEndEdge());
+	  }
+
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
-
-	  // Add it to the collection of periods.
-	  periods.add(period);
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "periods.size() = " + periods.size());
-
-	  // Add the collection of periods to the result map.
-	  periodsByPlatform.put(platform, periods);
 	} else {
 	  // No: Nothing more to do with this archival unit.
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "Unconfigured au = " + au);
+
+	  // Check whether there is a period defined by the previous archival
+	  // unit that needs to be saved.
+	  if (period != null) {
+	    // Yes: Add it to the list of periods.
+	    periods.add(period);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "periods.size() = " + periods.size());
+
+	    period = null;
+
+	    // Add the list of periods to the result map.
+	    periodsByPlatform.put(platform, periods);
+	  }
 	}
       } catch (RuntimeException re) {
 	log.error("Cannot find the periods for AU " + au, re);
       }
+    }
+
+    // Check whether there is a period defined by the last archival unit that
+    // needs to be saved.
+    if (period != null) {
+      // Yes: Add it to the list of periods.
+      periods.add(period);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "periods.size() = " + periods.size());
+
+      // Add the list of periods to the result map.
+      periodsByPlatform.put(platform, periods);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1361,7 +1556,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param platform
    *          A String with the publication platform.
    * @param periods
-   *          A Collection<BibliographicPeriod> with the periods of the archival
+   *          A List<BibliographicPeriod> with the periods of the archival
    *          units.
    * @param conn
    *          A Connection with the database connection to be used.
@@ -1369,7 +1564,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   private void subscribePublicationPlatformConfiguredAus(Long publicationSeq,
-      String platform, Collection<BibliographicPeriod> periods, Connection conn)
+      String platform, List<BibliographicPeriod> periods, Connection conn)
       throws DbException {
     final String DEBUG_HEADER = "subscribePublicationPlatformConfiguredAus(): ";
     if (log.isDebug2()) {
@@ -1377,8 +1572,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "platform = " + platform);
       log.debug2(DEBUG_HEADER + "periods = " + periods);
     }
-
-    Collection<BibliographicPeriod> rangesForPeriod;
 
     // Find the publishing platform in the database or create it.
     Long platformSeq = mdManager.findOrCreatePlatform(conn, platform);
@@ -1391,69 +1584,37 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
 
-    // Find the subscribed ranges for this subscription.
-    Collection<BibliographicPeriod> subscribedRanges =
-	findSubscriptionRanges(conn, subscriptionSeq, true);
-
-    // Find the unsubscribed ranges for this subscription.
-    Collection<BibliographicPeriod> unsubscribedRanges =
-	findSubscriptionRanges(conn, subscriptionSeq, false);
-
-    // Loop through all the periods covered by the title currently configured
-    // archival units for this platform.
-    for (BibliographicPeriod period : periods) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
-
-      // Check whether this period is not already part of the subscribed ranges.
-      if (!period.intersects(subscribedRanges)) {
-	// Yes: Add it to the subscribed ranges.
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Add period.");
-	subscribedRanges.add(period);
-      }
-
-      // Check whether this period is part of the unsubscribed ranges.
-      if (period.intersects(unsubscribedRanges)) {
-	// Yes: Find the unsubscribed ranges covering this period.
-	rangesForPeriod = period.intersection(unsubscribedRanges);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER
-	    + "rangesForPeriod.size() = " + rangesForPeriod.size());
-
-	// Loop through all the unsubscribed ranges covering this period.
-	for (BibliographicPeriod range : rangesForPeriod) {
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
-
-	  // Delete this unsubscribed range.
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Delete range.");
-	  deleteSubscriptionRange(conn, subscriptionSeq, range, false);
-	  unsubscribedRanges.remove(range);
-	}
-      }
-    }
-
     // Delete all the subscribed ranges.
     int deletedRangesCount =
 	deleteSubscriptionTypeRanges(conn, subscriptionSeq, true);
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "deletedRangesCount = " + deletedRangesCount);
 
-    // Sort the subscribed ranges.
-    List<BibliographicPeriod> sortedSubscribedRanges =
-	BibliographicPeriod.sort(subscribedRanges);
-
-    // Coalesce the subscribed ranges, if possible.
-    List<BibliographicPeriod> coalescedSubscribedRanges =
-	BibliographicPeriod.coalesce(sortedSubscribedRanges);
-
-    // Extend the subscribed ranges into the far future.
-    BibliographicPeriod.extendFuture(coalescedSubscribedRanges);
+    // Get the count of periods to persist.
+    int periodCount = periods.size();
 
     // Loop through all the coalesced subscribed ranges covered by the title
     // currently configured archival units for this platform.
-    for (BibliographicPeriod period : coalescedSubscribedRanges) {
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
+    for (BibliographicPeriod period : periods) {
+      if (log.isDebug3()) {
+	log.debug3(DEBUG_HEADER + "period = " + period);
+	log.debug3(DEBUG_HEADER + "periodCount = " + periodCount);
+      }
 
-      // Persist it.
-      persistSubscriptionRange(conn, subscriptionSeq, period, true);
+      // Check whether this is the last period.
+      if (periodCount-- == 1) {
+	// Yes: Extend it to the far future and persist it.
+	BibliographicPeriod lastPeriod =
+	    new BibliographicPeriod(period.getStartEdge(),
+		BibliographicPeriodEdge.INFINITY_EDGE);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "lastPeriod = " + lastPeriod);
+
+	persistSubscriptionRange(conn, subscriptionSeq, lastPeriod, true);
+      } else {
+	// No: Just persist it.
+	persistSubscriptionRange(conn, subscriptionSeq, period, true);
+      }
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -1538,6 +1699,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       insertSubscriptionRange.setLong(1, subscriptionSeq);
       insertSubscriptionRange.setString(2, range.toDisplayableString());
       insertSubscriptionRange.setBoolean(3, subscribed);
+      insertSubscriptionRange.setLong(4, subscriptionSeq);
+      insertSubscriptionRange.setBoolean(5, subscribed);
 
       count = dbManager.executeUpdate(insertSubscriptionRange);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
@@ -1554,55 +1717,6 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
     return count;
-  }
-
-  /**
-   * Deletes a subscription range from the database.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param subscriptionSeq
-   *          A Long with the identifier of the subscription.
-   * @param range
-   *          A BibliographicPeriod with the subscription range.
-   * @param subscribed
-   *          A boolean with the indication of whether the LOCKSS installation
-   *          is subscribed to the publication range or not.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void deleteSubscriptionRange(Connection conn, Long subscriptionSeq,
-      BibliographicPeriod range, boolean subscribed) throws DbException {
-    final String DEBUG_HEADER = "deleteSubscriptionRange(): ";
-    if (log.isDebug2()) {
-      log.debug2(DEBUG_HEADER + "subscriptionSeq = " + subscriptionSeq);
-      log.debug2(DEBUG_HEADER + "range = " + range);
-      log.debug2(DEBUG_HEADER + "subscribed = " + subscribed);
-    }
-
-    int count = 0;
-    PreparedStatement deleteSubscriptionRange =
-	dbManager.prepareStatement(conn, DELETE_SUBSCRIPTION_RANGE_QUERY);
-
-    try {
-      deleteSubscriptionRange.setLong(1, subscriptionSeq);
-      deleteSubscriptionRange.setString(2, range.toDisplayableString());
-      deleteSubscriptionRange.setBoolean(3, subscribed);
-
-      count = dbManager.executeUpdate(deleteSubscriptionRange);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } catch (SQLException sqle) {
-      log.error("Cannot delete subscription range", sqle);
-      log.error("SQL = '" + DELETE_SUBSCRIPTION_RANGE_QUERY + "'.");
-      log.error("subscriptionSeq = " + subscriptionSeq);
-      log.error("range = " + range);
-      log.error("subscribed = " + subscribed);
-      throw new DbException("Cannot delete subscription range", sqle);
-    } finally {
-      DbManager.safeCloseStatement(deleteSubscriptionRange);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "count = " + count);
   }
 
   /**
@@ -1774,9 +1888,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "subscribed = " + subscribed);
 
-	// Convert the text ranges into a collection of bibliographic periods.
-	Collection<BibliographicPeriod> periods =
-	    BibliographicPeriod.createCollection(ranges);
+	// Convert the text ranges into a list of bibliographic periods.
+	List<BibliographicPeriod> periods =
+	    BibliographicPeriod.createList(ranges);
 
 	// Check whether this is another range for the same subscription as the
 	// last one.
@@ -2271,34 +2385,42 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Provides an indication of whether the passed subscription ranges are valid.
+   * Validates subscription ranges.
    * 
    * @param subscriptionRanges
-   *          A Collection<BibliographicPeriod> with the subscription ranges to
-   *          be validated.
-   * @return a boolean with <code>true</code> if all the passed subscription
-   *         ranges are valid, <code>false</code> otherwise.
+   *          A List<BibliographicPeriod> with the subscription ranges to be
+   *          validated.
+   * @param publication
+   *          A SerialPublication with the publication data.
+   * @return a List<BibliographicPeriod> with the subscription ranges that are
+   *         not valid.
    */
-  public boolean areAllRangesValid(
-      Collection<BibliographicPeriod> subscriptionRanges) {
-    final String DEBUG_HEADER = "areAllRangesValid(): ";
+  public List<BibliographicPeriod> validateRanges(
+      List<BibliographicPeriod> subscriptionRanges,
+      SerialPublication publication) {
+    final String DEBUG_HEADER = "validateRanges(): ";
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "subscriptionRanges = " + subscriptionRanges);
+
+    List<BibliographicPeriod> invalidRanges =
+	new ArrayList<BibliographicPeriod>();
 
     // Loop through all  the subscription ranges.
     for (BibliographicPeriod range : subscriptionRanges) {
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
 
       // Check whether this range is not valid.
-      if (!range.isEmpty() && !isRangeValid(range)) {
-	// Yes: Report the problem.
-	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is false.");
-	return false;
+      if (range.isEmpty() || !isRangeValid(range, publication)) {
+	// Yes: Add it to the result.
+	invalidRanges.add(range);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "Range '" + range + "' is not valid.");
       }
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
-    return true;
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "invalidRanges = " + invalidRanges);
+    return invalidRanges;
   }
 
   /**
@@ -2306,35 +2428,75 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * 
    * @param range
    *          A BibliographicPeriod with the subscription range to be validated.
+   * @param publication
+   *          A SerialPublication with the publication data.
    * @return a boolean with <code>true</code> if the passed subscription range
    *         is valid, <code>false</code> otherwise.
    */
-  private boolean isRangeValid(BibliographicPeriod range) {
+  boolean isRangeValid(BibliographicPeriod range,
+      SerialPublication publication) {
     final String DEBUG_HEADER = "isRangeValid(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "range = " + range);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "range = " + range);
+      log.debug2(DEBUG_HEADER + "publication = " + publication);
+    }
 
     // Get the range textual definition.
     String text = range.toDisplayableString();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "text = " + text);
 
     // Check whether the range textual definition is too long for the database.
-    if (range.toDisplayableString().length() > MAX_RANGE_COLUMN) {
+    if (text.length() > MAX_RANGE_COLUMN) {
       // Yes: Report the problem.
-      log.error("Invalid length (" + range.toDisplayableString().length()
-	  + ") for range '" + range.toDisplayableString() + "'.");
+      log.error("Invalid length (" + text.length() + ") for range '" + text
+	  + "'.");
       return false;
     }
 
-    // Check whether the normalized range is valid.
-    if (!BibliographicUtil.isRange(range.normalize().toCanonicalString())) {
-      // No: Report the problem.
-      log.error("Range '" + range.toDisplayableString()
-	  + "' does not fit the expected pattern.");
-      return false;
+    // Check whether the range does not involve volumes or issues.
+    if (range.includesFullYears()) {
+      // Yes: Year-only ranges are always valid.
+      return true;
     }
 
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true.");
-    return true;
+    // No: Determine whether the range matches any TdbAu of the publication.
+    boolean result = matchesTitleTdbAu(range, publication);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Provides an indication of whether the passed range matches any Archival
+   * Unit of a publication.
+   * 
+   * @param range
+   *          A BibliographicPeriod with the publication range to be matched.
+   * @param publication
+   *          A SerialPublication with the publication data.
+   * @return a boolean with <code>true</code> if the passed range matches any
+   *         Archival Unit of this publication, <code>false</code> otherwise.
+   */
+  boolean matchesTitleTdbAu(BibliographicPeriod range,
+      SerialPublication publication) {
+    final String DEBUG_HEADER = "matchesTitleTdbAu(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "range = " + range);
+
+    // Loop through the publication archival units.
+    for (TdbAu tdbAu : publication.getTdbTitle().getTdbAus()) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "tdbAu = " + tdbAu);
+
+      // Check whether the range matches any of the publication ranges of the
+      // current archival unit.
+      if (range.matches(tdbAu.getPublicationRanges())) {
+	// Yes: No need to check any further.
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is true");
+	return true;
+      }
+    }
+
+    // No: The range does not match any Archival Unit of the publication.
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result is false");
+    return false;
   }
 
   /**
@@ -2367,7 +2529,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       // Get a connection to the database.
       conn = dbManager.getConnection();
     } catch (DbException dbe) {
-      log.error("Cannot connect to database", dbe);
+      log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
 
       for (Subscription subscription : subscriptions) {
 	status.addStatusEntry(subscription.getPublication()
@@ -2390,7 +2552,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Persist the subscription in the database.
 	  persistSubscription(conn, subscription);
 
-	  Collection<BibliographicPeriod> subscribedRanges =
+	  List<BibliographicPeriod> subscribedRanges =
 	      subscription.getSubscribedRanges();
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
@@ -2417,7 +2579,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot add subscription " + subscription, ise);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2428,7 +2590,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot add subscription " + subscription, ioe);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2439,7 +2601,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot add subscription " + subscription, dbe);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2450,7 +2612,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot add subscription " + subscription, se);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2481,12 +2643,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
 
     // Get the subscription ranges.
-    Collection<BibliographicPeriod> subscribedRanges =
+    List<BibliographicPeriod> subscribedRanges =
 	subscription.getSubscribedRanges();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
 
-    Collection<BibliographicPeriod> unsubscribedRanges =
+    List<BibliographicPeriod> unsubscribedRanges =
 	subscription.getUnsubscribedRanges();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
@@ -2565,7 +2727,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "subscription = " + subscription);
 
     // Get the subscribed ranges.
-    Collection<BibliographicPeriod> subscribedRanges =
+    List<BibliographicPeriod> subscribedRanges =
 	subscription.getSubscribedRanges();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
@@ -2582,26 +2744,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Check whether the publication has no TdbTitle.
     if (publication.getTdbTitle() == null) {
-      // Yes: Get the publication name.
-      String publicationName = publication.getPublicationName();
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "publicationName = "
-	  + publicationName);
-
-      // Get the TdbTitles for the publication name.
-      Collection<TdbTitle> tdbTitles =
-	  TdbUtil.getTdb().getTdbTitlesByName(publicationName);
-
-      // Check whether a TdbTitle was found.
-      if (tdbTitles != null && tdbTitles.size() > 0) {
-	// Yes: Populate it into the publication.
-	publication.setTdbTitle(tdbTitles.iterator().next());
-      } else {
-	// No: Report the problem.
-	String message =
-	    "Cannot find tdbTitle with name '" + publicationName + "'.";
-	log.error(message);
-	throw new SubscriptionException(message);
-      }
+      // Yes: Report the problem.
+      String message = "Cannot find tdbTitle with name '"
+	  + publication.getPublicationName() + "'.";
+      log.error(message);
+      throw new SubscriptionException(message);
     }
 
     // Configure the archival units.
@@ -2617,13 +2764,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscriptionSeq
    *          A Long with the subscription identifier.
    * @param subscribedRanges
-   *          A Collection<BibliographicPeriod> with the subscription subscribed
+   *          A List<BibliographicPeriod> with the subscription subscribed
    *          ranges to be persisted.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int persistSubscribedRanges(Connection conn, Long subscriptionSeq,
-      Collection<BibliographicPeriod> subscribedRanges) throws DbException {
+      List<BibliographicPeriod> subscribedRanges) throws DbException {
     int count = 0;
 
     if (subscribedRanges != null) {
@@ -2644,13 +2791,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscriptionSeq
    *          A Long with the subscription identifier.
    * @param unsubscribedRanges
-   *          A Collection<BibliographicPeriod> with the subscription
-   *          unsubscribed ranges to be persisted.
+   *          A List<BibliographicPeriod> with the subscription unsubscribed
+   *          ranges to be persisted.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   private int persistUnsubscribedRanges(Connection conn, Long subscriptionSeq,
-      Collection<BibliographicPeriod> unsubscribedRanges) throws DbException {
+      List<BibliographicPeriod> unsubscribedRanges) throws DbException {
     int count = 0;
 
     if (unsubscribedRanges != null) {
@@ -2672,11 +2819,11 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param publication
    *          A SerialPublication with the publication involved.
    * @param subscribedRanges
-   *          A Collection<BibliographicPeriod> with the subscribed ranges of
-   *          the publication.
+   *          A List<BibliographicPeriod> with the subscribed ranges of the
+   *          publication.
    * @param unsubscribedRanges
-   *          A Collection<BibliographicPeriod> with the unsubscribed ranges of
-   *          the publication.
+   *          A List<BibliographicPeriod> with the unsubscribed ranges of the
+   *          publication.
    * @return a BatchAuStatus with the status of the operation.
    * @throws IOException
    *           if there are problems configuring the archival units.
@@ -2685,9 +2832,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    */
   private BatchAuStatus configureAus(Connection conn,
       SerialPublication publication,
-      Collection<BibliographicPeriod> subscribedRanges,
-      Collection<BibliographicPeriod> unsubscribedRanges)
-      throws IOException, DbException {
+      List<BibliographicPeriod> subscribedRanges,
+      List<BibliographicPeriod> unsubscribedRanges)
+	  throws IOException, DbException {
     final String DEBUG_HEADER = "configureAus(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "publication = " + publication);
@@ -2695,61 +2842,41 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "unsubscribedRanges = " + unsubscribedRanges);
     }
 
-    // Get the publication archival units.
-    Collection<TdbAu> tdbAus = publication.getTdbTitle().getTdbAus();
-
-    // Do nothing more if the publication has no archival units.
-    if (tdbAus == null || tdbAus.size() < 1) {
-      return null;
-    }
-
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "tdbAus.size() = " + tdbAus.size());
-
-    String auId;
-    ArchivalUnit au;
+    // Get the publication archival units covered by the subscription.
+    Set<TdbAu> coveredTdbAus = getCoveredTdbAus(publication.getTdbTitle(),
+	subscribedRanges, unsubscribedRanges);
 
     // Initialize the configuration used to configure the archival units.
     Configuration config = ConfigManager.newConfiguration();
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
 
-    // Loop through all the publication TDB archival units.
-    for (TdbAu tdbAu : tdbAus) {
+    // Loop through all the covered publication archival units.
+    for (TdbAu tdbAu : coveredTdbAus) {
       // Get the archival unit identifier.
-      auId = tdbAu.getAuId(pluginManager);
+      String auId = tdbAu.getAuId(pluginManager);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
 
       // Get the archival unit.
-      au = pluginManager.getAuFromId(auId);
+      ArchivalUnit au = pluginManager.getAuFromId(auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
       // Check whether the archival unit is not active
       if (au == null || !pluginManager.isActiveAu(au)) {
+	// Yes: Add the the archival unit to the configuration of those to be
+	// configured.
+	config = addAuConfiguration(tdbAu, auId, config);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
 
-	// Yes: Get the archival unit period.
-	BibliographicPeriod period =
-	    new BibliographicPeriod(tdbAu.getStartYear(),
-		tdbAu.getStartVolume(), tdbAu.getStartIssue(),
-		tdbAu.getEndYear(), tdbAu.getEndVolume(), tdbAu.getEndIssue());
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
-
-	// Check whether the period intersects any subscribed range and it does
-	// not intersect any of the unsubscribed ranges.
-	if (period.intersects(subscribedRanges)
-	    && !period.intersects(unsubscribedRanges)) {
-	  // Yes: Add the the archival unit to the configuration of those to be
-	  // configured.
-	  config = addAuConfiguration(tdbAu, auId, config);
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "config = " + config);
-
-	  // Delete the AU from the unconfigured AU table, if it is there.
-	  removeFromUnconfiguredAus(conn, auId);
-	}
+	// Delete the AU from the unconfigured AU table, if it is there.
+	removeFromUnconfiguredAus(conn, auId);
+      } else {
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "TdbAu '" + tdbAu
+	    + "' is already configured.");
       }
     }
 
-    // Configure the archival units that are covered by the subscribed ranges
-    // and not covered by the unsubscribed ranges.
+    // Configure the unconfigured archival units that are covered by the
+    // subscription.
     return configureAuBatch(config);
   }
 
@@ -2783,7 +2910,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       // Get a connection to the database.
       conn = dbManager.getConnection();
     } catch (DbException dbe) {
-      log.error("Cannot connect to database", dbe);
+      log.error(CANNOT_CONNECT_TO_DB_ERROR_MESSAGE, dbe);
 
       for (Subscription subscription : subscriptions) {
 	status.addStatusEntry(subscription.getPublication()
@@ -2806,7 +2933,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Update the subscription in the database.
 	  updateSubscription(conn, subscription);
 
-	  Collection<BibliographicPeriod> subscribedRanges =
+	  List<BibliographicPeriod> subscribedRanges =
 	      subscription.getSubscribedRanges();
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "subscribedRanges = " + subscribedRanges);
@@ -2833,7 +2960,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot update subscription " + subscription, ise);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2844,7 +2971,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot update subscription " + subscription, ioe);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2855,7 +2982,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot update subscription " + subscription, dbe);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2866,7 +2993,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	      conn.rollback();
 	    }
 	  } catch (SQLException sqle) {
-	    log.error("Cannot roll back the connection", sqle);
+	    log.error(CANNOT_ROLL_BACK_DB_CONNECTION_ERROR_MESSAGE, sqle);
 	  }
 	  log.error("Cannot update subscription " + subscription, se);
 	  status.addStatusEntry(subscription.getPublication()
@@ -2907,7 +3034,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.debug3(DEBUG_HEADER + "deletedRangesCount = " + deletedRangesCount);
 
     // Get the subscribed ranges.
-    Collection<BibliographicPeriod> ranges = subscription.getSubscribedRanges();
+    List<BibliographicPeriod> ranges = subscription.getSubscribedRanges();
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "subscribedRanges = " + ranges);
 
@@ -2973,7 +3100,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * @param subscriptionSeq
    *          A Long with the identifier of the subscription.
    * @param ranges
-   *          A Collection<BibliographicPeriod> with the subscription ranges.
+   *          A List<BibliographicPeriod> with the subscription ranges.
    * @param subscribed
    *          A boolean with the indication of whether the LOCKSS installation
    *          is subscribed to the publication range or not.
@@ -2981,7 +3108,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   private void persistSubscriptionRanges(Connection conn, Long subscriptionSeq,
-      Collection<BibliographicPeriod> ranges, boolean subscribed)
+      List<BibliographicPeriod> ranges, boolean subscribed)
       throws DbException {
     final String DEBUG_HEADER = "persistSubscriptionRanges(): ";
     if (log.isDebug2()) {
