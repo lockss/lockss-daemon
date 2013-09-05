@@ -1027,7 +1027,8 @@ simpleV3Tests = unittest.TestSuite( ( FormatExpectedAgreementTestCase(),
 
 symmetricV3Tests = unittest.TestSuite( ( SimpleV3SymmetricTestCase(),
                                          NoQuorumSymmetricV3TestCase(),
-                                      TotalLossRecoverySymmetricV3TestCase() ) )
+#                                       TotalLossRecoverySymmetricV3TestCase()
+                                         ) )
 
 popV3Tests = unittest.TestSuite( ( SimpleV3PoPTestCase(),
                                    SimpleV3PoPCompatibilityTestCase(),
