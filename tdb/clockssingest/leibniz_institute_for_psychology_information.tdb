@@ -8,7 +8,7 @@
 
       implicit < status ; status2 ; year ; name ; param[year] >
       param[base_url] = http://www.psychopen.eu/
-      plugin = needs.plugin
+      plugin = plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
   {
     title <
