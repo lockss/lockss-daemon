@@ -38,6 +38,7 @@
     au < manifest ; exists ; 2011 ; American Journal of Botany Volume 98 ; 98 >
     au < manifest ; exists ; 2012 ; American Journal of Botany Volume 99 ; 99 >
     au < crawling ; exists ; 2013 ; American Journal of Botany Volume 100 ; 100 >
+    au < expected ; exists ; 2014 ; American Journal of Botany Volume 101 ; 101 >
 
   }
 
@@ -56,6 +57,7 @@
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < crawling ; exists ; 2013 ; Applications in Plant Sciences Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Applications in Plant Sciences Volume 2 ; 2 >
 
     }
   }
