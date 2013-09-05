@@ -24,6 +24,7 @@
     comment[nR] = journal on OJS, need to confirm and wait for manifests RT 5104
 
     au < notReady ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
+    au < expected ; exists ; 2014 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 13 ; 13 >
    
   }
   
@@ -39,6 +40,7 @@
     param[journal_issn] = 2306-4560
     
     au < testing ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 >
+    au < expected ; exists ; 2014 ; Bangladesh Journal of Endosurgery Volume 2 ; 2 >
    
   }
 
