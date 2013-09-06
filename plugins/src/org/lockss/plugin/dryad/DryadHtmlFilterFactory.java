@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlFilterFactory.java,v 1.1 2013-09-04 20:21:20 etenbrink Exp $
+ * $Id: DryadHtmlFilterFactory.java,v 1.2 2013-09-06 00:02:44 etenbrink Exp $
  */ 
 
 /*
@@ -61,6 +61,8 @@ public class DryadHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "ds-options-wrapper"),
         // div id="ds-footer-wrapper"
         HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
+        // div id="sharemediv"
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sharemediv"),
         // filter out tr with inner text "Pageviews"
         HtmlNodeFilters.lowestLevelMatchFilter(
             HtmlNodeFilters.tagWithTextRegex("tr", 

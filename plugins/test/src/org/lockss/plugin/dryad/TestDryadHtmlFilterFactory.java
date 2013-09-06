@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestDryadHtmlFilterFactory.java,v 1.1 2013-09-04 20:22:42 etenbrink Exp $
+/    * $Id: TestDryadHtmlFilterFactory.java,v 1.2 2013-09-06 00:03:29 etenbrink Exp $
  */
 
 /*
@@ -545,30 +545,6 @@ public class TestDryadHtmlFilterFactory extends LockssTestCase {
 " " +
 " <a href=\"/resource/doi:10.5061/dryad.1970/citation/bib\">BibTex </a>" +
 "<span class=\"italics\">(compatible with BibDesk, LaTeX)</span>" +
-"</td>" +
-"</tr>" +
-"</table>" +
-"</div>" +
-"<div id=\"sharemediv\">" +
-"<table style=\"width: 100%;\">" +
-"<tr>" +
-"<td>" +
-"<a href=\"http://www.delicious.com/save\">" +
-"</a>" +
-"</td>" +
-"<td>" +
-"</td>" +
-"<td>" +
-"<a href=\"http://reddit.com/submit\">" +
-"<img alt=\"Reddit\" src=\"http://reddit.com/static/spreddit7.gif\" border=\"0px;\" /> </a>" +
-"</td>" +
-"<td>" +
-"<a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-count=\"none\" data-via=\"datadryad\" data-url=\"http://dx.doi.org/doi:10.5061/dryad.1970\">Tweet</a>" +
-"</td>" +
-"<td>" +
-"<a href=\"http://www.mendeley.com/import/?url=http://datadryad.org/resource/doi:10.5061/dryad.1970\">" +
-"<img alt=\"Mendeley\" src=\"http://www.mendeley.com/graphics/mendeley.png\" border=\"0px;\" />" +
-"</a>" +
 "</td>" +
 "</tr>" +
 "</table>" +
