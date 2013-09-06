@@ -152,8 +152,9 @@ public class TestJsoupHtmlMetaTagExtractor extends
     String html = StringUtil.fromReader(new InputStreamReader(istr,
         Constants.ENCODING_UTF_8));
     ArticleMetadata am = extractFrom(html);
-    assertEquals("L\u221E structures on mapping cones".getBytes(),
-                  am.getRawList("citation_title").get(0).getBytes());
+    String utf8=new String("L\u221E structures on mapping cones".getBytes(),Constants.ENCODING_UTF_8);
+    assertEquals(utf8,
+                  am.getRawList("citation_title").get(0));
   }
 
   private class MyFileMetadataExtractorFactory
