@@ -83,7 +83,7 @@
 
       comment[publisher] = Universidade Salvador-UNIFACS
       param[base_url] = http://www.revistas.unifacs.br/
-      param[journal_id] = rgh
+      param[journal_id] = rgb
 
       au < exists ; 1999 ; 1 ; Gestão & Planejamento-G&P Volume 1999 ; 1999 >
       au < exists ; 2000 ; 2 ; Gestão & Planejamento-G&P Volume 2000 ; 2000 >
@@ -142,11 +142,6 @@
       au < exists ; 2005 ; 9 ; Seminário Estudantil de Produção Acadêmica Volume 2005 ; 2005 >
       au < exists ; 2006 ; 10 ; Seminário Estudantil de Produção Acadêmica Volume 2006 ; 2006 >
       au < exists ; 2007 ; 11 ; Seminário Estudantil de Produção Acadêmica Volume 2007 ; 2007 >
-      au < expected ; 2008 ; 12 ; Seminário Estudantil de Produção Acadêmica Volume 2008 ; 2008 >
-      au < expected ; 2009 ; 13 ; Seminário Estudantil de Produção Acadêmica Volume 2009 ; 2009 >
-      au < expected ; 2010 ; 14 ; Seminário Estudantil de Produção Acadêmica Volume 2010 ; 2010 >
-      au < expected ; 2011 ; 15 ; Seminário Estudantil de Produção Acadêmica Volume 2011 ; 2011 >
-      au < expected ; 2012 ; 16 ; Seminário Estudantil de Produção Acadêmica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Seminário Estudantil de Produção Acadêmica Volume 2013 ; 2013 >
 
   }
