@@ -459,6 +459,23 @@
 
   {
     title <
+      name = JMM Case Reports ;
+      eissn = 2053-3721
+    >
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://jmmcr.sgmjournals.org/
+
+      au < expected ; exists ; 2013 ; JMM Case Reports Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+    title <
       name = Microbiology ;
       issn = 1350-0872 ;
       eissn = 1465-2080 ;
