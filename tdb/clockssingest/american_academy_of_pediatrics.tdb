@@ -87,6 +87,9 @@
     
       plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < down ; exists ; 2001 ; AAP News Volume 19 ; 19 >
+      au < down ; exists ; 2002 ; AAP News Volume 20 ; 20 >
 
       au < zapped ; down ; 2008 ; AAP News Volume 29 ; 29 >
       au < zapped ; down ; 2009 ; AAP News Volume 30 ; 30 >
@@ -116,8 +119,8 @@
       au < manifest ; exists ; 2000 ; AAP News Volume 16 ; 16 >
       au < manifest ; exists ; 2000 ; AAP News Volume 17 ; 17 >
       au < manifest ; exists ; 2001 ; AAP News Volume 18 ; 18 >
-      au < manifest ; exists ; 2001 ; AAP News Volume 19 ; 19 >
-      au < manifest ; exists ; 2002 ; AAP News Volume 20 ; 20 >
+      au < doNotProcess ; doNotProcess ; 2001 ; AAP News Volume 19 ; 19 >
+      au < doNotProcess ; doNotProcess ; 2002 ; AAP News Volume 20 ; 20 >
       au < manifest ; exists ; 2002 ; AAP News Volume 21 ; 21 >
       au < manifest ; exists ; 2003 ; AAP News Volume 22 ; 22 >
       au < manifest ; exists ; 2003 ; AAP News Volume 23 ; 23 >
@@ -443,29 +446,20 @@
     
     comment[0] = This is a serialized book. As of 8/2012 HW has not put up manifests.
     comment[1] = Waiting for manifest pages. See RT 4877.
-
-    implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] >
-    pluginPrefix = org.lockss.plugin.highwire.
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://aapredbook.aappublications.org/
     
     comment[online] = The 2012 Volume is located at aapredbook.aapublications.org, and other volumes will eventually move there.
     comment[doNotProcess] = wait for jounral move to new url
-    comment[notReady] = RU4596, no substance gets, testing by Evan
-    {
-      param[base_url] = http://redbookarchive.aappublications.org/
+    comment[notReady] = RU4596, no substance gets
 
-      au < ClockssHighWirePressPlugin ; notReady ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
-      au < ClockssHighWirePressPlugin ; notReady ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < ClockssHighWirePressPlugin ; notReady ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < ClockssHighWirePressPlugin ; notReady ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
-    }
-
-    {
-      param[base_url] = http://aapredbook.aappublications.org/
-      
-      au < ClockssHighWirePressH20Plugin ; notReady ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2013 ; Red Book Online Volume 2 ; 2 >
-      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Red Book Online Volume 3 ; 3 >
-      }
+    au < doNotProcess ; exists ; 2000 ; Red Book Online Volume 2000 ; 2000 >
+    au < doNotProcess ; exists ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+    au < doNotProcess ; exists ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+    au < doNotProcess ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+    au < notReady ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; Red Book Online Volume 2 ; 2 >
+    au < expected ; exists ; 2014 ; Red Book Online Volume 3 ; 3 >
 
   }
 
