@@ -57,6 +57,7 @@
       au < manifest ; 2013 ; 2013 ; Advances in Geosciences Volume 35 ; 35 >
       au < exists ; 2013 ; 2013 ; Advances in Geosciences Volume 36 ; 36 >
       au < expected ; 2014 ; 2014 ; Advances in Geosciences Volume 37 ; 37 >
+      au < expected ; 2014 ; 2014 ; Advances in Geosciences Volume 38 ; 38 >
     
    }
     
@@ -360,7 +361,7 @@
       issn = 0016-7312
     >
       attr[journal_id] = GH
-      param[base_url] = http://www.geographica-helvetica.net/
+      param[base_url] = http://www.geogr-helv.net/
       param[home_url] = http://www.geographica-helvetica.net/
 
       au < exists ; 1946 ; 1946 ; Geographica Helvetica Volume 1 ; 1 >

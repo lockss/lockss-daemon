@@ -1521,7 +1521,7 @@
 
       param[journal_issn] = 2048-4739
       
-      au < exists ; 2012 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
+      au < expected ; 2013 ; International Journal of Computational Complexity and Intelligent Algorithms Volume 1 ; 1 >
 
     }
 
@@ -1537,8 +1537,8 @@
       param[journal_issn] = 1757-1189
       
       au < released ; 2009-2010 ; International Journal of Computational Economics and Econometrics Volume 1 ; 1 >
-      au < released ; 2011 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
-      au < expected ; 2012 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
+      au < released ; 2011-2012 ; International Journal of Computational Economics and Econometrics Volume 2 ; 2 >
+      au < expected ; 2013-2014 ; International Journal of Computational Economics and Econometrics Volume 3 ; 3 >
 
     }
 
@@ -3924,9 +3924,10 @@
       >
 
       param[journal_issn] = 1758-8723
+      comment[0] = no content in 2012
       
       au < released ; 2010-2011 ; International Journal of Intelligent Engineering Informatics Volume 1 ; 1 >
-      au < expected ; 2012 ; International Journal of Intelligent Engineering Informatics Volume 2 ;2 >
+      au < exists ; 2013 ; International Journal of Intelligent Engineering Informatics Volume 2 ;2 >
 
     }
 
