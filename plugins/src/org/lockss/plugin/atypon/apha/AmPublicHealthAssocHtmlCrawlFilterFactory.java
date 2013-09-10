@@ -1,5 +1,5 @@
 /*
- * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.1 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: AmPublicHealthAssocHtmlCrawlFilterFactory.java,v 1.2 2013-09-10 16:09:30 alexandraohlson Exp $
  */
 
 /*
@@ -34,17 +34,60 @@ package org.lockss.plugin.atypon.apha;
 
 import java.io.InputStream;
 
+import org.htmlparser.Node;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.tags.BulletList;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 
 public class AmPublicHealthAssocHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
-
+  
+  NodeFilter[] filters = new NodeFilter[] {
+      // Avoid following links between Errata <--> Original articles on either a TOC or article page
+      // The links are only differentiated by the title they are given which varies 
+      // depending on location
+      // On table of contents, the links have a 'class="ref ...."'
+      // On article page, no class, but grandparent is <ul id="articleToolsFormat">
+      new NodeFilter() {
+        @Override public boolean accept(Node node) {
+ 
+          if (!(node instanceof LinkTag)) return false;
+          String classAttr = ((CompositeTag)node).getAttribute("class");
+          String allText = ((CompositeTag)node).toPlainTextString();
+          Boolean testText = false;
+          
+          // figure out if we meet either situation to warrant checking the text value
+          if ( classAttr != null) {
+            if ( !(classAttr.contains("ref")) ) return false;
+            testText = true; //we've meet one set of conditions
+          } else {
+            // could be the article page case, no class set
+            Node parentNode = node.getParent();
+            Node grandparentNode = (parentNode != null) ? parentNode.getParent() : null;
+            if ( (grandparentNode != null) && ( grandparentNode instanceof BulletList) ) {
+              String idAttr = ((CompositeTag)grandparentNode).getAttribute("id");
+              if ( (idAttr == null) || (!(idAttr.equals("articleToolsFormats"))) ) return false;
+              testText = true;
+            }
+          }
+          //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
+          //On a TOC page it is "Erratum" or "Original Article" on an article page it can be "Original"
+          if (testText) {
+          return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Erratum.*") 
+              || allText.matches("(?is).*Errata.*") || allText.matches("(?is).*Original.*") );
+          }
+          return false; // neither case
+        }
+      },
+  };
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    return super.createFilteredInputStream(au, in, encoding);
+    return super.createFilteredInputStream(au, in, encoding, filters);
   }
 
 }
