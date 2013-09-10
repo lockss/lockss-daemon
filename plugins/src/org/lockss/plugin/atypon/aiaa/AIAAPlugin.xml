@@ -43,4 +43,8 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAPdfFilterFactory</string>
   </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkExtractorFactory</string>
+  </entry> 
 </map>
