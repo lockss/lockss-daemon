@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.10 2013-08-13 21:39:26 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.11 2013-09-10 19:13:20 alexandraohlson Exp $
  */
 
 /*
@@ -347,8 +347,34 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     private static final String socialMediaFiltered = 
         "KEEP ME";
 
+    private static final String secondaryHtml =
+        "<div class=\"secondarySubjects module grid3 clear\">" +
+            "<div class=\"subUnit\">" +
+            "    <h3>Librarians</h3>" +
+            "<ul>" +
+            "    <li>" +
+            "    ONE" +
+            "    </li>" +
+            "    <li>" +
+            "    TWO" +
+            "    </li>" +
+            "</ul>" +
+            "</div>" +
+            "<div class=\"subUnit\">" +
+            "    <h3>Help and Information</h3>" +
+            "<ul>" +
+            "    <li>" +
+            "    ONE" +
+            "    </li>" +
+            "    <li>" +
+            "    TWO" +
+            "    </li>" +
+            "</ul>" +
+            "</div>" +
+            "</div>";
 
-         
+    private static final String secondaryFiltered =
+        "";
     
     public void setUp() throws Exception {
       super.setUp();
@@ -639,6 +665,12 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream(socialMediaHtml),
                                                                              Constants.DEFAULT_ENCODING)));
+    }
+    public void testBottomRemoval() throws Exception {
+      assertEquals(secondaryFiltered,
+          StringUtil.fromInputStream(fact.createFilteredInputStream(null, 
+                  new StringInputStream(secondaryHtml),
+                  Constants.DEFAULT_ENCODING)));
     }
   
   }

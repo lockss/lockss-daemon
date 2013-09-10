@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.11 2013-08-13 21:39:25 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.12 2013-09-10 19:13:20 alexandraohlson Exp $
  */
 
 /*
@@ -84,9 +84,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         
         // Maximal filtering. Take out non-content sections proactively
         HtmlNodeFilters.tagWithAttribute("div",  "id", "cookieBanner"),//cookie warning
-        HtmlNodeFilters.tagWithAttribute("div", "id", "primarySubjects"),//top search are
-        HtmlNodeFilters.tagWithAttribute("div", "id", "secondarySubjects"), //bottom affiliations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^primarySubjects"),//top search area - can have addt'l words
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^secondarySubjects"), //bottom affiliations 
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^secondarySubjects"), //bottom affiliations - found it this way (also?) 
+        HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc 
         HtmlNodeFilters.tagWithAttribute("div",  "id", "unit1"), //left column
         HtmlNodeFilters.tagWithAttribute("div",  "id", "unit3"), //right column 
         
