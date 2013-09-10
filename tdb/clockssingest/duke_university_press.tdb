@@ -39,6 +39,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literary Scholarship 2011 ; 2009 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; American Literary Scholarship 2012 ; 2010 >
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2013 ; American Literary Scholarship 2013 ; 2011 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; American Literary Scholarship 2014 ; 2012 >
 
     }
 
@@ -73,6 +74,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Literature Volume 83 ; 83 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; American Literature Volume 84 ; 84 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; American Literature Volume 85 ; 85 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; American Literature Volume 86 ; 86 >
 
     }
 
@@ -107,6 +109,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; American Speech Volume 86 ; 86 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; American Speech Volume 87 ; 87 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; American Speech Volume 88 ; 88 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; American Speech Volume 89 ; 89 >
 
     }
 
@@ -141,6 +144,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; boundary 2 Volume 38 ; 38 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; boundary 2 Volume 39 ; 39 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; boundary 2 Volume 40 ; 40 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; boundary 2 Volume 41 ; 41 >
 
     }
 
@@ -192,6 +196,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 26 ; 26 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 27 ; 27 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 28 ; 28 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 29 ; 29 >
 
     }
 
@@ -281,6 +286,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Common Knowledge Volume 17 ; 17 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Common Knowledge Volume 18 ; 18 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Common Knowledge Volume 19 ; 19 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Common Knowledge Volume 20 ; 20 >
 
     }
 
@@ -315,6 +321,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Literature Volume 63 ; 63 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Comparative Literature Volume 64 ; 64 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Comparative Literature Volume 65 ; 65 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Comparative Literature Volume 66 ; 66 >
 
     }
 
@@ -368,6 +375,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Comparative Studies of South Asia, Africa and the Middle East Volume 31 ; 31 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Comparative Studies of South Asia, Africa and the Middle East Volume 32 ; 32 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Comparative Studies of South Asia, Africa and the Middle East Volume 33 ; 33 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Comparative Studies of South Asia, Africa and the Middle East Volume 34 ; 34 >
 
     }
 
@@ -397,6 +405,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Cultural Politics Volume 7 ; 7 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Cultural Politics Volume 8 ; 8 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Cultural Politics Volume 9 ; 9 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Cultural Politics Volume 10 ; 10 >
 
     }
 
@@ -431,6 +440,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; differences: A Journal of Feminist Cultural Studies Volume 22 ; 22 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; differences: A Journal of Feminist Cultural Studies Volume 23 ; 23 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; differences: A Journal of Feminist Cultural Studies Volume 24 ; 24 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; differences: A Journal of Feminist Cultural Studies Volume 25 ; 25 >
 
     }
 
@@ -448,6 +458,7 @@
 
       plugin = needs.plugin
       param[base_url] = http://projecteuclid.org/dmj/
+      comment[base_url] = http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&page=past&handle=euclid.dmj
       implicit < status ; status2 ; year ; name ; param[volume_name] >
 
       au < exists ; exists ; 1935 ; Duke Mathematical Journal Volume 1 ; 1 >
@@ -612,6 +623,7 @@
       au < exists ; exists ; 2011 ; Duke Mathematical Journal Volume 160 ; 160 >
       au < exists ; exists ; 2012 ; Duke Mathematical Journal Volume 161 ; 161 >
       au < exists ; exists ; 2013 ; Duke Mathematical Journal Volume 162 ; 162 >
+      au < expected ; exists ; 2014 ; Duke Mathematical Journal Volume 163 ; 163 >
 
     }
   }
@@ -638,6 +650,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; East Asian Science, Technology and Society: An International Journal Volume 5 ; 5 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; East Asian Science, Technology and Society: An International Journal Volume 6 ; 6 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; East Asian Science, Technology and Society: An International Journal Volume 7 ; 7 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; East Asian Science, Technology and Society: An International Journal Volume 8 ; 8 >
 
     }
 
@@ -671,6 +684,7 @@
       au < ClockssHighWirePressH20Plugin ; manifest ; exists ; 2011 ; Eighteenth-Century Life Volume 35 ; 35 >
       au < ClockssHighWirePressH20Plugin ; released ; crawling ; 2012 ; Eighteenth-Century Life Volume 36 ; 36 >
       au < ClockssHighWirePressH20Plugin ; crawling ; exists ; 2013 ; Eighteenth-Century Life Volume 37 ; 37 >
+      au < ClockssHighWirePressH20Plugin ; expected ; exists ; 2014 ; Eighteenth-Century Life Volume 38 ; 38 >
 
     }
 
