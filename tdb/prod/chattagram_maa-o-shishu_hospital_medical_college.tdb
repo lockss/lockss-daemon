@@ -24,6 +24,7 @@
     comment[0] = appears to be on OJS2
 
     au < notReady ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 >
+    au < expected ; 2014 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 13 ; 13 >
    
   }
   
@@ -40,6 +41,7 @@
     param[journal_issn] = 2306-4560
     
     au < testing ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 ; 1 >
+    au < expected ; 20134 ; Bangladesh Journal of Endosurgery Volume 2 ; 2 >
    
   }
 
