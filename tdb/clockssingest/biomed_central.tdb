@@ -35,7 +35,7 @@
       au < released ; crawling ; 2010 ; BMC Anesthesiology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Anesthesiology Volume 11 ; 11 >
       au < testing ; exists ; 2012 ; BMC Anesthesiology Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; BMC Anesthesiology Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; BMC Anesthesiology Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; BMC Anesthesiology Volume 14 ; 14 >
       
     }
@@ -63,7 +63,7 @@
       au < released ; crawling ; 2010 ; BMC Biochemistry Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < testing ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
-      au < manifest ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 >
+      au < crawling ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 >
       au < expected ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
 
     }
@@ -91,7 +91,7 @@
       au < testing ; exists ; 2010 ; BMC Bioinformatics Volume 11 ; 11 >
       au < testing ; exists ; 2011 ; BMC Bioinformatics Volume 12 ; 12 >
       au < testing ; exists ; 2012 ; BMC Bioinformatics Volume 13 ; 13 >
-      au < manifest ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 >
+      au < crawling ; exists ; 2013 ; BMC Bioinformatics Volume 14 ; 14 >
       au < expected ; exists ; 2014 ; BMC Bioinformatics Volume 15 ; 15 >
 
     }
@@ -116,7 +116,7 @@
       au < testing ; exists ; 2010 ; BMC Biology Volume 8 ; 8 >
       au < released ; crawling ; 2011 ; BMC Biology Volume 9 ; 9 >
       au < testing ; exists ; 2012 ; BMC Biology Volume 10 ; 10 >
-      au < manifest ; exists ; 2013 ; BMC Biology Volume 11 ; 11 >
+      au < crawling ; exists ; 2013 ; BMC Biology Volume 11 ; 11 >
       au < expected ; exists ; 2014 ; BMC Biology Volume 12 ; 12 >
 
     }
@@ -136,7 +136,7 @@
       au < crawling ; exists ; 2010 ; BMC Biophysics Volume 3 ; 3 >
       au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
       au < crawling ; exists ; 2012 ; BMC Biophysics Volume 5 ; 5 >
-      au < manifest ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
+      au < crawling ; exists ; 2013 ; BMC Biophysics Volume 6 ; 6 >
       au < expected ; exists ; 2014 ; BMC Biophysics Volume 7 ; 7 >
 
     }
@@ -163,7 +163,7 @@
       au < released ; crawling ; 2010 ; BMC Biotechnology Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Biotechnology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Biotechnology Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; BMC Biotechnology Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; BMC Biotechnology Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; BMC Biotechnology Volume 14 ; 14 >
 
     }
@@ -199,7 +199,7 @@
       attr[journal_code] = bmchematol
       comment[journal_title] = journal name and journal code change in 2013, same issn used
 
-      au < manifest ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
       
       }
@@ -228,7 +228,7 @@
       au < crawling ; exists ; 2010 ; BMC Cancer Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Cancer Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Cancer Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; BMC Cancer Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; BMC Cancer Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; BMC Cancer Volume 14 ; 14 >
 
     }
@@ -256,7 +256,7 @@
       au < crawling ; exists ; 2010 ; BMC Cardiovascular Disorders Volume 10 ; 10 >
       au < released ; crawling ; 2011 ; BMC Cardiovascular Disorders Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Cardiovascular Disorders Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; BMC Cardiovascular Disorders Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; BMC Cardiovascular Disorders Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; BMC Cardiovascular Disorders Volume 14 ; 14 >
 
     }
@@ -284,7 +284,7 @@
       au < crawling ; exists ; 2010 ; BMC Cell Biology Volume 11 ; 11 >
       au < released ; crawling ; 2011 ; BMC Cell Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Cell Biology Volume 13 ; 13 >
-      au < manifest ; exists ; 2013 ; BMC Cell Biology Volume 14 ; 14 >
+      au < crawling ; exists ; 2013 ; BMC Cell Biology Volume 14 ; 14 >
       au < expected ; exists ; 2014 ; BMC Cell Biology Volume 15 ; 15 >
 
     }
