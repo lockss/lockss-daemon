@@ -947,17 +947,35 @@
       plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = kms
+      comment[0] = From 2013, this journal is available as an annual book publication
       implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
       au < released ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
       au < released ; 2011 ; Katherine Mansfield Studies Volume 3 ; 3 >
       au < released ; 2012 ; Katherine Mansfield Studies Volume 4 ; 4 >
-      au < expected ; 2013 ; Katherine Mansfield Studies Volume 5 ; 5 >
-      au < expected ; 2014 ; Katherine Mansfield Studies Volume 6 ; 6 >
     
     }
     
+  }
+
+  {
+
+
+    title <
+      name = Katherine Mansfield and the (Post)colonial ;
+      isbn = 9780748669097 
+     >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = kmsj
+      comment[continues] = 2041-4501
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2013 ; Katherine Mansfield and the (Post)colonial Edition 1 ; 1 >
+      au < expected ; 2014 ; Katherine Mansfield and the (Post)colonial Edition 2 ; 2 >
+
   }
 
   {

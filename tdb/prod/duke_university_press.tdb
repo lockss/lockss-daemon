@@ -216,7 +216,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; boundary 2 Volume 38 ; 38 >
       au < HighWirePressH20Plugin ; released ; 2012 ; boundary 2 Volume 39 ; 39 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; boundary 2 Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; boundary 3 Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; boundary 2 Volume 41 ; 41 >
 
     }
     
@@ -2356,6 +2356,7 @@
     
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
+      comment[0] = no content in 2012
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >  
       
       au < HighWirePressH20Plugin ; released ; 2000 ; Publication of the American Dialect Society Volume 84 ; 84 >
@@ -2371,9 +2372,8 @@
       au < HighWirePressH20Plugin ; released ; 2009 ; Publication of the American Dialect Society Volume 94 ; 94 >
       au < HighWirePressH20Plugin ; released ; 2010 ; Publication of the American Dialect Society Volume 95 ; 95 >
       au < HighWirePressH20Plugin ; released ; 2011 ; Publication of the American Dialect Society Volume 96 ; 96 >
-      au < HighWirePressH20Plugin ; released ; 2012 ; Publication of the American Dialect Society Volume 97 ; 97 >
-      au < HighWirePressH20Plugin ; expected ; 2013 ; Publication of the American Dialect Society Volume 98 ; 98 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Publication of the American Dialect Society Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; released ; 2013 ; Publication of the American Dialect Society Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; Publication of the American Dialect Society Volume 98 ; 98 >
 
     }
   
@@ -2632,7 +2632,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Social Science History Volume 35 ; 35 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Social Science History Volume 36 ; 36 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Social Science History Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Social Science History Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; expected ; 2014 ; Social Science History Volume 38 ; 38 >
 
     }
   
