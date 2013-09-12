@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.53.10</string>
+    <string>1.62.0</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>6</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -72,7 +72,7 @@
     <string>org.lockss.plugin.wiley.WileyArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>application/pdf_metadata_extractor_factory_map</string>
+    <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*;DublinCore</string>
