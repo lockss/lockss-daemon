@@ -35,22 +35,27 @@ import org.lockss.util.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-/**
- * One of the articles used to get the xml source for this plugin is:
- * http://clockss-ingest.lockss.org/sourcefiles/aip-dev/2010/AIP_xml_9.tar.gz/AIP_xml_9.tar/./APPLAB/vol_96/iss_1/01212_1.xml 
+/*
+ * Two of the articles used to get the xml source for this plugin is:
+ * http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/2011
+ *                                      /A/ADMA23.16.zip!/1810_ftp.wml.xml
+ * http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/2011
+ *                                      /2/25271.1.zip!/15_ftp.wml.xml
  */
 public class TestWileyMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestAmericanInstituteOfPhysicsMetadataExtractorFactory");
+  static Logger log = Logger.getLogger("TestWileyMetadataExtractorFactory");
 
   private MockArchivalUnit hau;		
   private MockLockssDaemon theDaemon;
 
-  private static String BASE_URL = "http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/";
+  private static String BASE_URL =
+      "http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/";
 
   @SuppressWarnings("unused")
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = setUpDiskSpace();//even though you don't use path, you need to call method
+    // even though you don't use path, you need to call method setUpDiskSpace
+    String tempDirPath = setUpDiskSpace();
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
@@ -66,14 +71,16 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     super.tearDown();
   }
 
-
-  /* The journal title is pulled from the journal code in the URL */
-  String realUrlBaseA = BASE_URL + "2011/A/AEN49.1.zip!/";
-  String realUrlBase0 = BASE_URL + "2011/0/049.1.zip!/";
-  String realPdfUrlA = "j.1440-6055.2009.00720.x.pdf"; //Australian Journal of Entomology
-  String realXmlUrlA = "j.1440-6055.2009.00720.x.wml.xml"; //Australian Journal of Entomology
-  String realPdfUrlB = "j.1440-6055.2009.00725.x.pdf"; // Australian Journal of Entomology
-  String realXmlUrlB = "j.1440-6055.2009.00725.x.wml.xml"; // Australian Journal of Entomology
+  // use journal XXXX27.14 for testing
+  String realUrlBaseA = BASE_URL + "2011/A/XXXX27.14.zip!/";
+  String realUrlBase2 = BASE_URL + "2011/2/25271.1.zip!/";
+  String realPdfUrlBaseA = "1810_ftp.pdf"; 
+  String realXmlUrlBaseA = "1810_ftp.wml.xml"; 
+  String realPdfUrlBase2 = "15_ftp.pdf"; 
+  String realXmlUrlBase2 = "15_ftp.wml.xml";
+  // test xml with no <body>, field_coverage=abstract
+  String realCoverImagePdfUrlBaseA = "1803_ftp.pdf"; 
+  String realNoBobyTagXmlUrlBaseA = "1803_hdp.wml.xml"; 
   
   String goodTitle = "Article Title";
   String goodJTitle = "JournalTitle";
@@ -82,39 +89,32 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
   {
     goodAuthors.add("Doe, John");
   }
-  String goodPrintIssn = "1234-5678";
-  String goodEissn = "8765-4321";
-  String goodVolume = "49";
-  String goodDate = "2010-02";
-  String goodIssue = "1";
-  String goodPageFirst = "34";
-  String goodPageLast = "43";
-  String goodDoi = "10.1111/j.1440-6055.2009.00732.x";
-  String goodPropId = "AEN";
+  String goodPrintIssn = "0935-9648";
+  String goodEissn = "1521-4095";
+  String goodVolume = "23";
+  String goodDate = "2011-04-26";
+  String goodIssue = "16";
+  String goodPageFirst = "1810";
+  String goodPageLast = "1828";
+  String goodDoi = "10.1002/adma.201003991";
+  String goodPropId = "ADMA";
   String hardwiredPublisher = "John Wiley & Sons, Inc.";
+  // test for XXXX.27.14
+  String urlJournalIdBaseA = "XXXX"; // extract using plugin JOURNAL_PATTERN
+  String urlVolumeBaseA = "27";      
+  String urlIssueBaseA = "14"; 
+  
   ArrayList<String> goodKeywords = new ArrayList<String>();
   {
-    goodKeywords.add("commercialisation");
-    goodKeywords.add("Helicoverpa");
+    goodKeywords.add("organic semiconductors");
+    goodKeywords.add("solar cells");
+    goodKeywords.add("hybrid materials");
+    goodKeywords.add("titanium oxide");
   }
   String goodDescription = "Summary";
   String goodRights = "Rights";
-//  xpathMap.put("/component/header/contentMeta/titleGroup/title", MetadataField.FIELD_ARTICLE_TITLE);
-//  xpathMap.put("/component/header/publicationMeta[@level='product']/titleGroup/title", MetadataField.FIELD_JOURNAL_TITLE);
-//  xpathMap.put("/component/header/publicationMeta[@level='product']/issn[@type='print']", MetadataField.FIELD_ISSN);
-//  xpathMap.put("/component/header/publicationMeta[@level='product']/issn[@type='electronic']", MetadataField.FIELD_EISSN);
-//  xpathMap.put("/component/header/publicationMeta[@level='product']/idGroup/id[@type='product']/@value", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
-//  xpathMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalVolume']", MetadataField.FIELD_VOLUME);
-//  xpathMap.put("/component/header/publicationMeta[@level='part']/numberingGroup/numbering[@type='journalIssue']", MetadataField.FIELD_ISSUE);
-//  xpathMap.put("/component/header/publicationMeta[@level='part']/coverDate/@startDate", MetadataField.FIELD_DATE);
-//  xpathMap.put("/component/header/publicationMeta[@level='unit']/numberingGroup/numbering[@type='pageFirst']", MetadataField.FIELD_START_PAGE);
-//  xpathMap.put("/component/header/publicationMeta[@level='unit']/numberingGroup/numbering[@type='pageLast']", MetadataField.FIELD_END_PAGE);
-//  xpathMap.put("/component/header/publicationMeta[@level='unit']/doi", MetadataField.FIELD_DOI);
-//  xpathMap.put("/component/header/contentMeta/keywordGroup/keyword", MetadataField.FIELD_KEYWORDS);
-//  xpathMap.put("/component/header/publicationMeta[@level='product']/publisherInfo/publisherName", MetadataField.FIELD_PUBLISHER);
-//  xpathMap.put("/component/header/contentMeta/creators/creator[@creatorRole='author']/personName", MetadataField.FIELD_AUTHOR);
+  String goodCoverage = "abstract";
 
-  // content with title specified
   String goodContent =
       "<component>" +
         "<header>" +
@@ -127,6 +127,8 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "<keywordGroup>" +
               "<keyword>" + goodKeywords.get(0) + "</keyword>" +
               "<keyword>" + goodKeywords.get(1) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(2) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(3) + "</keyword>" +
             "</keywordGroup>" +
             "<creators>" +
               "<creator creatorRole=\"author\">" +
@@ -153,7 +155,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
           "</publicationMeta>" +
             
           "<publicationMeta level=\"part\">" +
-            "<coverDate startDate=\"" + goodDate + "\">February 2010</coverDate>" +
+            "<coverDate startDate=\"" + goodDate + "\">April 2011</coverDate>" +
             "<numberingGroup>" +
               "<numbering type=\"journalVolume\">" + goodVolume + "</numbering>" +
               "<numbering type=\"journalIssue\">" + goodIssue + "</numbering>" +
@@ -169,10 +171,17 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
           "</publicationMeta>" +
 
         "</header>" +
+        "<body>" +
+          "<section xml:id=\"sec1-1\">" +
+            "<title type=\"main\">1. Introduction</title>" +
+          "</section>" +
+        "</body>" +
       "</component>";
-
-  // metadata with no title specified
-  String noTitleContent =
+  
+    // good abstract content with no <body> tag, 
+    // its corresponding pdf is not full-text, 
+    // containing only cover image and/or abstract image
+    String goodNoBodyTagContent =
       "<component>" +
         "<header>" +
           "<contentMeta>" +
@@ -184,6 +193,71 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "<keywordGroup>" +
               "<keyword>" + goodKeywords.get(0) + "</keyword>" +
               "<keyword>" + goodKeywords.get(1) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(2) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(3) + "</keyword>" +
+            "</keywordGroup>" +
+            "<creators>" +
+              "<creator creatorRole=\"author\">" +
+                "<personName>" +
+                  "<givenNames>John</givenNames>" +
+                  "<familyName>Doe</familyName>" +
+                "</personName>" +
+              "</creator>" +
+            "</creators>" +
+          "</contentMeta>" +
+       
+          "<publicationMeta level=\"product\">" +
+            "<publisherInfo>" +
+              "<publisherName>" + goodPublisher + "</publisherName>" +
+            "</publisherInfo>" +
+            "<titleGroup>" +
+              "<title>" + goodJTitle + "</title>" +
+            "</titleGroup>" +
+            "<issn type=\"print\">" + goodPrintIssn + "</issn>" +
+            "<issn type=\"electronic\">" + goodEissn + "</issn>" +
+            "<idGroup>" +
+              "<id type=\"product\" value=\"" + goodPropId + "\" />" +
+            "</idGroup>" +
+          "</publicationMeta>" +
+            
+          "<publicationMeta level=\"part\">" +
+            "<coverDate startDate=\"" + goodDate + 
+                                                  "\">April 2011</coverDate>" +
+            "<numberingGroup>" +
+              "<numbering type=\"journalVolume\">" + goodVolume + 
+                                                               "</numbering>" +
+              "<numbering type=\"journalIssue\">" + goodIssue + 
+                                                               "</numbering>" +
+            "</numberingGroup>" +
+          "</publicationMeta>" +
+            
+          "<publicationMeta level=\"unit\">" +
+            "<numberingGroup>" +
+              "<numbering type=\"pageFirst\">" + goodPageFirst + 
+                                                               "</numbering>" +
+              "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
+            "</numberingGroup>" +
+            "<doi>" + goodDoi + "</doi>" +
+          "</publicationMeta>" +
+
+        "</header>" +
+      "</component>";
+
+  // content missing journal title, journal id, volume and issue
+  String missingMetadataContent =
+      "<component>" +
+        "<header>" +
+          "<contentMeta>" +
+            "<titleGroup>" +
+              "<title>" +
+                goodTitle +
+              "</title>" +
+            "</titleGroup>" +
+            "<keywordGroup>" +
+              "<keyword>" + goodKeywords.get(0) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(1) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(2) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(3) + "</keyword>" +
             "</keywordGroup>" +
             "<creators>" +
               "<creator creatorRole=\"author\">" +
@@ -204,45 +278,43 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "</titleGroup>" +
             "<issn type=\"print\">" + goodPrintIssn + "</issn>" +
             "<issn type=\"electronic\">" + goodEissn + "</issn>" +
-            "<idGroup>" +
-              "<id type=\"product\" value=\"" + goodPropId + "\" />" +
-            "</idGroup>" +
           "</publicationMeta>" +
             
           "<publicationMeta level=\"part\">" +
-            "<coverDate startDate=\"" + goodDate + "\">February 2010</coverDate>" +
-            "<numberingGroup>" +
-              "<numbering type=\"journalVolume\">" + goodVolume + "</numbering>" +
-              "<numbering type=\"journalIssue\">" + goodIssue + "</numbering>" +
-            "</numberingGroup>" +
+            "<coverDate startDate=\"" + goodDate + 
+                                                  "\">April 2011</coverDate>" +
           "</publicationMeta>" +
             
           "<publicationMeta level=\"unit\">" +
             "<numberingGroup>" +
-              "<numbering type=\"pageFirst\">" + goodPageFirst + "</numbering>" +
+              "<numbering type=\"pageFirst\">" + goodPageFirst + 
+                                                               "</numbering>" +
               "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
             "</numberingGroup>" +
             "<doi>" + goodDoi + "</doi>" +
           "</publicationMeta>" +
 
         "</header>" +
+        "<body>" +
+          "<section xml:id=\"sec1-1\">" +
+            "<title type=\"main\">1. Introduction</title>" +
+          "</section>" +
+        "</body>" +
       "</component>";
 
-
   public void testExtractFromGoodContent() throws Exception {
-    // test with content with title
-    String pdfUrl = realUrlBaseA + realPdfUrlA;
-    String xmlUrl = realUrlBaseA + realXmlUrlA;
+    String pdfUrl = realUrlBaseA + realPdfUrlBaseA;
+    String xmlUrl = realUrlBaseA + realXmlUrlBaseA;
     hau.addUrl(pdfUrl);
     hau.addUrl(xmlUrl, goodContent);
-    CachedUrl pdfCu = hau.makeCachedUrl(pdfUrl);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -257,24 +329,30 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    assertEquals(goodPropId, 
+                 md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // hard-wire publisher name because Wiley has different imprints,
+    // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // full-text content (with <body> tag)
+    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
   }
   
-  public void testExtractFromNoTitleContent() throws Exception {
-    // test with content with no title -- uses journalID instead
-    String pdfUrl = realUrlBaseA + realPdfUrlB;
-    String xmlUrl = realUrlBaseA + realXmlUrlB;
+  // missing journal title, journal id, volume, and issue metadata
+  // use <path to source file>/A/XXXX27.14.zip
+  public void testExtractFromBaseAMissingMetaContent() throws Exception {
+    String pdfUrl = realUrlBaseA + realPdfUrlBaseA;
+    String xmlUrl = realUrlBaseA + realXmlUrlBaseA;
     hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, noTitleContent);
-    CachedUrl pdfCu = hau.makeCachedUrl(pdfUrl);
+    hau.addUrl(xmlUrl, missingMetadataContent);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -283,118 +361,95 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodPrintIssn, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-    assertEquals("UNKNOWN_TITLE/issn=" + goodPrintIssn, 
-                 md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // get journal id, volume, and issue from xml url path
+    assertEquals(urlVolumeBaseA, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(urlIssueBaseA, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(urlJournalIdBaseA,
+                 md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // hard-wire publisher name because Wiley has different imprints,
+    // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // full-text content (with <body> tag)
+    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+  }
+
+  // missing journal title, journal id, volume, and issue metadata
+  // use <path to source file>/2/25271.1.zip  
+  public void testExtractFromBase2MissingMetaContent() throws Exception {
+    String pdfUrl = realUrlBase2 + realPdfUrlBase2;
+    String xmlUrl = realUrlBase2 + realXmlUrlBase2;
+    hau.addUrl(pdfUrl);
+    hau.addUrl(xmlUrl, missingMetadataContent);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
+    FileMetadataExtractor me =
+      new WileyMetadataExtractorFactory.WileyMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+   
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodPrintIssn, md.get(MetadataField.FIELD_ISSN));
+    assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
+    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // journal id, volume and issue can be extracted from url .../25271.1.zip
+    // can not get these values from the zip file name.
+    assertNull(md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    assertNull(md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    // full-text content (with <body> tag)
+    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
   }
   
-  public void testExtractFromGoodContentAndNoTitle() throws Exception {
-    // test with content with title
-    String pdfUrl = realUrlBaseA + realPdfUrlA;
-    String xmlUrl = realUrlBaseA + realXmlUrlA;
-    hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, goodContent);
-    CachedUrl pdfCu = hau.makeCachedUrl(pdfUrl);
-    FileMetadataExtractor me =
-      new WileyMetadataExtractorFactory.WileyMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertEquals(goodPrintIssn, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-    assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-    assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-
-    // test with no title content following content with title
-    pdfUrl = realUrlBaseA + realPdfUrlB;
-    xmlUrl = realUrlBaseA + realXmlUrlB;
-    hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, noTitleContent);
-    pdfCu = hau.makeCachedUrl(pdfUrl);
-    mle = new FileMetadataListExtractor(me);
-    mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
-    assertNotEmpty(mdlist);
-    md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertEquals(goodPrintIssn, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
-    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-    assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-    assertEquals(goodPropId, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-    assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-  }
-
   // empty content
   String emptyContent =
       "<component>" +
       "</component>";
 
-
+  // even if the content is empty, we still get the 
+  // synthesized metadata such as publisher, journal id, volume, and issue
   public void testExtractFromEmptyContent() throws Exception {
-    // test empty content in "A" directory with no journal ID prefix
-    String pdfUrl = realUrlBaseA + realPdfUrlA;
-    String xmlUrl = realUrlBaseA + realXmlUrlA;
+    String pdfUrl = realUrlBaseA + realPdfUrlBaseA;
+    String xmlUrl = realUrlBaseA + realXmlUrlBaseA;
     hau.addUrl(pdfUrl);
     hau.addUrl(xmlUrl, emptyContent);
-    CachedUrl pdfCu = hau.makeCachedUrl(pdfUrl);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     assertNull(md.get(MetadataField.FIELD_DOI));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals("UNKNOWN_TITLE/journalId=" + goodPropId, 
-        md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
+    // get journal id, volume, and issue from xml url path
+    assertEquals(urlVolumeBaseA, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(urlIssueBaseA, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(urlJournalIdBaseA,
+                 md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // hard-wire publisher name because Wiley has different imprints,
+    // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-
-    // test empty content in "0" directory with no journal ID prefix
-    pdfUrl = realUrlBase0 + realPdfUrlA;
-    xmlUrl = realUrlBase0 + realXmlUrlA;
-    hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, emptyContent);
-    pdfCu = hau.makeCachedUrl(pdfUrl);
-    mle = new FileMetadataListExtractor(me);
-    mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
-    assertEmpty(mdlist);
-}
+    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+  }
 
   // bad content -- not XML
   String badContent =
@@ -405,43 +460,72 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     goodDescription + " </div>\n";
 
   public void testExtractFromBadContent() throws Exception {
-    // test bad content in "A" directory with journal ID prefix
-    String pdfUrl = realUrlBaseA + realPdfUrlA;
-    String xmlUrl = realUrlBaseA + realXmlUrlA;
+    String pdfUrl = realUrlBaseA + realPdfUrlBaseA;
+    String xmlUrl = realUrlBaseA + realXmlUrlBaseA;
     hau.addUrl(pdfUrl);
     hau.addUrl(xmlUrl, badContent);
-    CachedUrl pdfCu = hau.makeCachedUrl(pdfUrl);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     assertNull(md.get(MetadataField.FIELD_DOI));
-    assertNull(md.get(MetadataField.FIELD_VOLUME));
-    assertNull(md.get(MetadataField.FIELD_ISSUE));
     assertNull(md.get(MetadataField.FIELD_START_PAGE));
     assertNull(md.get(MetadataField.FIELD_ISSN));
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals("UNKNOWN_TITLE/journalId=" + goodPropId, 
-        md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
+    // get journal id, volume, and issue from xml url path
+    assertEquals(urlVolumeBaseA, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(urlIssueBaseA, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(urlJournalIdBaseA, 
+                 md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // hard-wire publisher name because Wiley has different imprints,
+    // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-
-    // test bad content in "0" directory with no journal ID prefix
-    pdfUrl = realUrlBase0 + realPdfUrlA;
-    xmlUrl = realUrlBase0 + realXmlUrlA;
+    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+  }
+  
+  // test xml with <header> but no <body> tags - likely an abstract
+  public void testNoBodyTagContent() throws Exception{
+    String pdfUrl = realUrlBaseA + realCoverImagePdfUrlBaseA;
+    String xmlUrl = realUrlBaseA + realNoBobyTagXmlUrlBaseA;
     hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, badContent);
-    pdfCu = hau.makeCachedUrl(pdfUrl);
-    mle = new FileMetadataListExtractor(me);
-    mdlist = mle.extract(MetadataTarget.Any(), pdfCu);
-    assertEmpty(mdlist);
+    hau.addUrl(xmlUrl, goodNoBodyTagContent);
+    CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
+    FileMetadataExtractor me =
+      new WileyMetadataExtractorFactory.WileyMetadataExtractor();
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xmlCu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+   
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodPrintIssn, md.get(MetadataField.FIELD_ISSN));
+    assertEquals(goodEissn, md.get(MetadataField.FIELD_EISSN));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
+    assertEquals(goodJTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodPropId, 
+                 md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+    // hard-wire publisher name because Wiley has different imprints,
+    // to be consistent for board report
+    assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    assertEquals(goodCoverage, md.get(MetadataField.FIELD_COVERAGE));    
  }
   
 }
