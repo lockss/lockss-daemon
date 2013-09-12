@@ -5135,7 +5135,7 @@
       param[journal_issn] = 1678-9199
 
       au < manifest ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
-      au < expected ; 2014 ; Journal of Venemous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
+      au < expected ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
 
     }
 
@@ -5492,6 +5492,7 @@
 
       param[base_url] = http://www.nonlinearbiomedphys.com/
       param[journal_issn] = 1753-4631
+      comment[0] = no publication after 2012
 
       au < released ; 2007 ; Nonlinear Biomedical Physics Volume 1 ; 1 >
       au < released ; 2008 ; Nonlinear Biomedical Physics Volume 2 ; 2 >
@@ -5499,8 +5500,6 @@
       au < released ; 2010 ; Nonlinear Biomedical Physics Volume 4 ; 4 >
       au < released ; 2011 ; Nonlinear Biomedical Physics Volume 5 ; 5 >
       au < manifest ; 2012 ; Nonlinear Biomedical Physics Volume 6 ; 6 >
-      au < expected ; 2013 ; Nonlinear Biomedical Physics Volume 7 ; 7 >
-      au < expected ; 2014 ; Nonlinear Biomedical Physics Volume 8 ; 8 >
 
     }
 
@@ -5578,6 +5577,7 @@
 
       param[base_url] = http://www.opennetworkbiology.com/
       param[journal_issn] = 2046-7826
+      comment[0] = no publication yet, 09/12/2013
 
       au < expected ; 2013 ; Open Network Biology Volume 1 ; 1 >
       au < expected ; 2014 ; Open Network Biology Volume 2 ; 2 >
@@ -5860,6 +5860,7 @@
 
       param[base_url] = http://www.regenmedres.com/
       param[journal_issn] = 2050-490X
+      comment[0] = no publication yet, 09/12/2013
 
       au < expected ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
       au < expected ; 2014 ; Regenerative Medicine Research Volume 2 ; 2 >
@@ -6363,6 +6364,7 @@
 
       param[base_url] = http://www.vjoes.org/
       param[journal_issn] = 2050-7410
+      comment[0] = no publication yet, 09/12/2013
 
       au < expected ; 2013 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 1 ; 1 >
       au < expected ; 2014 ; Video Journal of Endoscopic Surgery and Interventional Techniques Volume 2 ; 2 >
