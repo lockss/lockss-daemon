@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoteBlocksTallier.java,v 1.4 2013-06-04 22:45:10 barry409 Exp $
+ * $Id: TestVoteBlocksTallier.java,v 1.5 2013-09-13 18:36:03 barry409 Exp $
  */
 
 /*
@@ -37,312 +37,431 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.protocol.*;
-import org.lockss.poller.*;
 
 
 public class TestVoteBlocksTallier extends LockssTestCase {
-  MyContent[] content = null;
-  MockLockssDaemon daemon;
-  private File tempDir;
-  String tempDirPath;
+  List<VoteBlock> sharedVoteBlocks = new ArrayList<VoteBlock>();
 
   public void setUp() throws Exception {
     super.setUp();
-    daemon = getMockLockssDaemon();
-    tempDir = getTempDir();
-    tempDirPath = tempDir.getAbsolutePath();
-    Properties p = new Properties();
-    p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
-    p.setProperty(V3Voter.PARAM_ALL_SYMMETRIC_POLLS, "true");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
-    IdentityManager idMgr = new V3TestUtils.NoStoreIdentityManager();
-    daemon.setIdentityManager(idMgr);
-    idMgr.initService(daemon);
-    content = new MyContent[20];
-    for (int i = 0 ; i < content.length ; i++ ) {
-      content[i] = new MyContent("http://www.example.com/test-" + i + ".html");
+    for (int i = 0 ; i < 20 ; i++ ) {
+      sharedVoteBlocks.add(makeVoteBlock(i));
     }
   }
 
   /**
-   * Execute a test in which the poller has URLs:
-   * content[p1..p2-1] and content[p3..p4-1]
-   * and the voter has URLs:
-   * content[v1..v2-1] and content[v3..v4-1]
-   * and they disagree about URL: content[d]
+   * Test the two VoteBlocks against each other, and verify that the
+   * tallies are as expected.
    */
-  private void doTest(int v1, int v2, int v3, int v4,
-		      int p1, int p2, int p3, int p4, int d) throws Exception {
-    doTest(v1, v2, v3, v4, p1, p2, p3, p4, d, 1, 1);
-  }
-
-  /**
-   * Execute a test in which the poller has URLs:
-   * content[p1..p2-1] and content[p3..p4-1]
-   * and the voter has URLs:
-   * content[v1..v2-1] and content[v3..v4-1]
-   * The voter has vVer versions and the poller has pVer versions,
-   * and they disagree about URL: content[d]
-   */
-  private void doTest(int v1, int v2, int v3, int v4,
-		      int p1, int p2, int p3, int p4,
-		      int d, int vVer, int pVer) throws Exception {
-    VoteBlocks vBlocks = new MyVoteBlocks(v1, v2, v3, v4, d, vVer);
-    assertNotNull(vBlocks);
-    assert(vBlocks.size() >= 0);
-    VoteBlocks pBlocks = new MyVoteBlocks(p1, p2, p3, p4, 100, pVer);
-    assertNotNull(pBlocks);
-    assert(pBlocks.size() >= 0);
+  private void doTest(VoteBlocks vBlocks, VoteBlocks pBlocks,
+		     int agree, int disagree, int vOnly, int pOnly)
+      throws Exception {
     VoteBlocksTallier vbt = VoteBlocksTallier.make();
     vbt.tallyVoteBlocks(vBlocks, pBlocks);
-    int numAgree = vbt.getCount(VoteBlocksTallier.Category.AGREE);
-    int shouldAgree = 0;
-    if (min(v1,v2) >= 0 && min(p1,p2) >= 0) {
-      shouldAgree += atLeastZero(min(v2,p2) - max(v1,p1));
+    assertEquals("AGREE is incorrect",
+		 agree, vbt.getCount(VoteBlocksTallier.Category.AGREE));
+    assertEquals("DISAGREE is incorrect",
+		 disagree, vbt.getCount(VoteBlocksTallier.Category.DISAGREE));
+    assertEquals("VOTER_ONLY is incorrect",
+		 vOnly, vbt.getCount(VoteBlocksTallier.Category.VOTER_ONLY));
+    assertEquals("POLLER_ONLY is incorrect",
+		 pOnly, vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY));
+  }
+
+  /**
+   * Test all URLs agree.
+   */
+  public void testAllAgree() throws Exception {
+    VoteBlocksBuilder builder;
+    for (int size = 0; size < 10; size++) {
+      builder = new VoteBlocksBuilder();
+      builder.addShared(0, size);
+      doTest(builder.build(), builder.build(), size, 0, 0, 0);
     }
-    if (min(v3,v4) >= 0 && min(p3,p4) >= 0) {
-      shouldAgree += atLeastZero(min(v4,p4) - max(v3,p3));
+  }
+  
+  /**
+   * Test same size, but one disagrees
+   */
+  public void testOneDisagree() throws Exception {
+    for (int size = 1; size < 4; size++) {
+      for (int loc = 0; loc < size-1; loc++) {
+	VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	builder.addShared(0, size);
+	VoteBlocks vBlocks = builder.build();
+	builder.addUnshared(loc);
+	VoteBlocks pBlocks = builder.build();
+	doTest(vBlocks, pBlocks, size-1, 1, 0, 0);
+      }
     }
-    int numDisagree = vbt.getCount(VoteBlocksTallier.Category.DISAGREE);
-    int shouldDisagree = 0;
-    if (max(v1,p1) <= d && d <= min(v2,p2)) {
-      // The URL they disagree on is in the first range they both have.
-      shouldAgree--;
-      shouldDisagree++;
-    } else if (max(v3,p3) <= d && d <= min(v4,p4)) {
-      // The URL they disagree on is in the second range they both have.
-      shouldAgree--;
-      shouldDisagree++;
+  }
+  
+  /**
+   * Test one missing at poller.
+   */
+  public void testPollerMissingOne() throws Exception {
+    for (int size = 1; size < 5; size++) {
+      for (int loc = 0; loc < size-1; loc++) {
+	VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	builder.addShared(0, size);
+	VoteBlocks vBlocks = builder.build();
+	builder.remove(loc);
+	VoteBlocks pBlocks = builder.build();
+	doTest(vBlocks, pBlocks, size-1, 0, 1, 0);
+      }
     }
-    int numVoterOnly = vbt.getCount(VoteBlocksTallier.Category.VOTER_ONLY);
-    int shouldVoterOnly = atLeastZero(p1 - v1) + atLeastZero(v2 - p2) +
-      atLeastZero(p3 - v3) + atLeastZero(v4 - p4);
-    int numPollerOnly = vbt.getCount(VoteBlocksTallier.Category.POLLER_ONLY);
-    int shouldPollerOnly = atLeastZero(v1 - p1) + atLeastZero(p2 - v2) +
-      atLeastZero(v3 - p3) + atLeastZero(p4 - v4);
-    assertEquals(shouldAgree, numAgree);
-    assertEquals(shouldDisagree, numDisagree);
-    assertEquals(shouldPollerOnly, numPollerOnly);
-    assertEquals(shouldVoterOnly, numVoterOnly);
-  }
-
-  public void testNoneAgree() throws Exception {
-    doTest(-1, -1, 0, 0, -1, -1, 0, 0, 100);
   }
   
-  public void testOneAgree() throws Exception {
-    doTest(-1, -1, 0, 1, -1, -1, 0, 1, 100);
+  /**
+   * Test one missing at voter.
+   */
+  public void testVoterMissingOne() throws Exception {
+    for (int size = 1; size < 5; size++) {
+      for (int loc = 0; loc < size-1; loc++) {
+	VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	builder.addShared(0, size);
+	VoteBlocks pBlocks = builder.build();
+	builder.remove(loc);
+	VoteBlocks vBlocks = builder.build();
+	doTest(vBlocks, pBlocks, size-1, 0, 0, 1);
+      }
+    }
   }
   
-  public void testTwoAgree() throws Exception {
-    doTest(-1, -1, 0, 2, -1, -1, 0, 2, 100);
+  /**
+   * Test empty poller.
+   */
+  public void testEmptyPoller() throws Exception {
+    for (int size = 1; size < 5; size++) {
+      VoteBlocksBuilder builder = new VoteBlocksBuilder();
+      VoteBlocks pBlocks = builder.build();
+      builder.addShared(0, size);
+      VoteBlocks vBlocks = builder.build();
+      doTest(vBlocks, pBlocks, 0, 0, size, 0);
+    }
   }
   
-  public void testTenAgree() throws Exception {
-    doTest(-1, -1, 0, 10, -1, -1, 0, 10, 100);
-  }
-  
-  public void testThreeOneDisagree() throws Exception {
-    doTest(-1, -1, 0, 3, -1, -1, 0, 3, 1);
-  }
-  
-  public void testVThreePFour() throws Exception {
-    doTest(-1, -1, 0, 3, -1, -1, 0, 4, 100);
-  }
-  
-  public void testVFourPThree() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100);
-  }
-  
-  public void testVGap() throws Exception {
-    doTest(0, 3, 5, 10, 0, 5, 5, 10, 100);
-  }
-  
-  public void testVGapOneDisagree() throws Exception {
-    doTest(0, 3, 5, 10, 0, 5, 5, 10, 7);
-  }
-  
-  public void testPGap() throws Exception {
-    doTest(0, 5, 5, 10, 0, 3, 5, 10, 100);
-  }
-  
-  public void testVFourPThreeThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, 3);
-  }
-  
-  public void testVFourPThreeThreeVsFiveVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, 5);
-  }
-  
-  public void testVFourPThreeFiveVsThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 5, 3);
-  }
-  
-  public void testVFourPThreeMinusThreeVsFiveVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -3, 5);
-  }
-  
-  public void testVFourPThreeFiveVsMinusThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 5, -3);
-  }
-  
-  public void testVFourPThreeDisagreeTwoMinusThreeVsFiveVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 2, -3, 5);
-  }
-  
-  public void testVFourPThreeDisagreeTwoFiveVsMinusThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 2, 5, -3);
-  }
-  
-  public void testVFourPThreeThreeVsMinusFiveVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, 3, -5);
-  }
-  
-  public void testVFourPThreeMinusFiveVsThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -5, 3);
-  }
-  
-  public void testVFourPThreeMinusThreeVsMinusFiveVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -3, -5);
-  }
-  
-  public void testVFourPThreeMinusFiveVsMinusThreeVersion() throws Exception {
-    doTest(-1, -1, 0, 4, -1, -1, 0, 3, 100, -5, -3);
-  }
-  
-  private int min(int a, int b) {
-    return ( a < b ? a : b );
-  }
-
-  private int max(int a, int b) {
-    return ( a > b ? a : b );
-  }
-
-  private int atLeastZero(int a) {
-    return ( a > 0 ? a : 0 );
-  }
-
-  private int abs(int a) {
-    return ( a > 0 ? a : -a );
-  }
-
-  private class MyContent {
-    String url;
-    byte[] plainHash;
-    byte[] noncedHash;
-
-    MyContent(String url) {
-      this.url = url;
-      this.plainHash = ByteArray.makeRandomBytes(20);
-      this.noncedHash = ByteArray.makeRandomBytes(20);
+  /**
+   * Test empty voter.
+   */
+  public void testEmptyVoter() throws Exception {
+    for (int size = 1; size < 5; size++) {
+      VoteBlocksBuilder builder = new VoteBlocksBuilder();
+      VoteBlocks vBlocks = builder.build();
+      builder.addShared(0, size);
+      VoteBlocks pBlocks = builder.build();
+      doTest(vBlocks, pBlocks, 0, 0, 0, size);
     }
   }
 
-  public class MyVoteBlocks implements VoteBlocks {
-    ArrayList<VoteBlock> blocks = new ArrayList<VoteBlock>();
-    String url;
+  /**
+   * Test when one is missing from the voter and one disagrees.
+   */
+  public void testVoterMissingOneDisagree() throws Exception {
+    final int size = 5;
+    for (int diff = 0; diff < size; diff++) {
+      for (int miss = 0; miss < size; miss++) {
+	if (miss != diff) {
+	  VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	  builder.addShared(0, size);
+	  VoteBlocks pBlocks = builder.build();
+	  builder.remove(miss).addUnshared(diff);
+	  VoteBlocks vBlocks = builder.build();
+	  doTest(vBlocks, pBlocks, size-2, 1, 0, 1);
+	}
+      }
+    }
+  }
+
+  /**
+   * Test when one is missing from the poller and one disagrees.
+   */
+  public void testPollerMissingOneDisagree() throws Exception {
+    final int size = 5;
+    for (int diff = 0; diff < size; diff++) {
+      for (int miss = 0; miss < size; miss++) {
+	if (miss != diff) {
+	  VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	  builder.addShared(0, size);
+	  VoteBlocks vBlocks = builder.build();
+	  builder.remove(miss).addUnshared(diff);
+	  VoteBlocks pBlocks = builder.build();
+	  doTest(vBlocks, pBlocks, size-2, 1, 1, 0);
+	}
+      }
+    }
+  }
+  
+  /**
+   * Test when one is missing from each of the voter and poller, and
+   * there is also a disagreement.
+   */
+  public void testBothMissingDisagree() throws Exception {
+    final int size = 5;
+    for (int diff = 0; diff < size; diff++) {
+      for (int pMiss = 0; pMiss < size; pMiss++) {
+	for (int vMiss = 0; vMiss < size; vMiss++) {
+	  if (vMiss != pMiss &&
+	      pMiss != diff &&
+	      diff != vMiss) {
+	    VoteBlocksBuilder builder = new VoteBlocksBuilder();
+	    builder.addShared(0, size).remove(vMiss);
+	    VoteBlocks vBlocks = builder.build();
+	    builder = new VoteBlocksBuilder();
+	    builder.addShared(0, size).remove(pMiss).addUnshared(diff);
+	    VoteBlocks pBlocks = builder.build();
+	    doTest(vBlocks, pBlocks, size-3, 1, 1, 1);
+	  }
+	}
+      }
+    }
+  }
+
+  // The VoteBlocksTallier uses VoteBlockVoteBlockComparerFactory and
+  // VoteBlockComparer to deal with versions. More extensive testing
+  // of matching with versions is in testing for that class.
+
+  /**
+   * Test a single URL with multiple versions, none shared.
+   */
+  public void testNoMatchVersions() throws Exception {
+    int size = 5;
+    String url = "http://www.example.com/test-00.html";
+    VoteBlock vVoteBlock = new VoteBlock(url);
+    VoteBlock pVoteBlock = new VoteBlock(url);
+    for (int i = 0; i < size; i++) {
+      vVoteBlock.addVersion(0, 1000, // filtered offset/length
+			    0, 1000, // unfiltered offset/length
+			    ByteArray.makeRandomBytes(20), // Plain hash
+			    ByteArray.makeRandomBytes(20), // Nonced hash
+			    false); // Hash error
+      pVoteBlock.addVersion(0, 1000, // filtered offset/length
+			    0, 1000, // unfiltered offset/length
+			    ByteArray.makeRandomBytes(20), // Plain hash
+			    ByteArray.makeRandomBytes(20), // Nonced hash
+			    false); // Hash error
+    }
+    MyVoteBlocks vBlocks = new MyVoteBlocks(ListUtil.list(vVoteBlock));
+    MyVoteBlocks pBlocks = new MyVoteBlocks(ListUtil.list(pVoteBlock));
+    doTest(vBlocks, pBlocks, 0, 1, 0, 0);
+  }
+
+  /**
+   * Test a single URL with multiple versions, one shared.
+   */
+  public void testMatchOneVersion() throws Exception {
+    int size = 5;
+    String url = "http://www.example.com/test-00.html";
+    VoteBlock vVoteBlock = new VoteBlock(url);
+    VoteBlock pVoteBlock = new VoteBlock(url);
+
+    for (int agree = 0; agree < size; agree++) {
+      for (int i = 0; i < size; i++) {
+	byte[] plainHash = ByteArray.makeRandomBytes(20);
+	byte[] noncedHash = ByteArray.makeRandomBytes(20);
+      
+	vVoteBlock.addVersion(0, 1000, // filtered offset/length
+			      0, 1000, // unfiltered offset/length
+			      plainHash,
+			      noncedHash,
+			      false); // Hash error
+	// At every version except "agree", generate new hash
+	// values. Version number "agree" is shared between poller and
+	// voter.
+	if (i != agree) {
+	  plainHash = ByteArray.makeRandomBytes(20);
+	  noncedHash = ByteArray.makeRandomBytes(20);
+	}
+	pVoteBlock.addVersion(0, 1000, // filtered offset/length
+			      0, 1000, // unfiltered offset/length
+			      plainHash,
+			      noncedHash,
+			      false); // Hash error
+      }
+      MyVoteBlocks vBlocks = new MyVoteBlocks(ListUtil.list(vVoteBlock));
+      MyVoteBlocks pBlocks = new MyVoteBlocks(ListUtil.list(pVoteBlock));
+      doTest(vBlocks, pBlocks, 1, 0, 0, 0);
+    }
+  }
+
+  /**
+   * Construct a VoteBlock for the given index, with precisely one
+   * version.
+   */
+  private VoteBlock makeVoteBlock(int i) {
+    // Format to make sure the URLs in numerical order are also in
+    // canonical order.
+    if (i > 99 || i < 0) {
+      fail("Unacceptable value for i: "+i);
+    }
+    String url = String.format("http://www.example.com/test-%02d.html", i);
+    VoteBlock vb = new VoteBlock(url);
+    vb.addVersion(0, 1000, // filtered offset/length
+		  0, 1000, // unfiltered offset/length
+		  ByteArray.makeRandomBytes(20), // Plain hash
+		  ByteArray.makeRandomBytes(20), // Nonced hash
+		  false); // Hash error
+    return vb;
+  }
+
+  /**
+   * A helper class to create {@link VoteBlock}s instances. Shared
+   * {@link VoteBlock} instances will be drawn from {@link
+   * sharedVoteBlocks}. Unshared {@link VoteBlock} instances will have
+   * random byte arrays for their hashes.
+   */
+  private class VoteBlocksBuilder {
+    /** A sorted set of versions to include in the {@link VoteBlocks}. */
+    private final TreeSet<Integer> included = new TreeSet<Integer>();
+    /** A subset of {@link #included} which should not be pulled from
+     * {@link sharedVoteBlocks}. */
+    private final Set<Integer> unshared = new HashSet<Integer>();
+
+    /**
+     * Return the {@link MyVoteBlocks} instance as specified.
+     */
+    public VoteBlocks build() {
+      ArrayList<VoteBlock> blocks = new ArrayList<VoteBlock>();
+      for (int i: included) {
+	// Note: If some test asks for a block out of range, throw and
+	// go fix the test.
+	VoteBlock voteBlock = unshared.contains(i)
+	  ? makeVoteBlock(i)
+	  : sharedVoteBlocks.get(i);
+	blocks.add(voteBlock);
+      }
+      return new MyVoteBlocks(blocks);
+    }
+
+    private void checkArgs(int start, int end) {
+      assertTrue("start must be non-negative", 0 <= start);
+      assertTrue("end must be less than VoteBlocks.size()",
+		 end < sharedVoteBlocks.size());
+      assertTrue("start must be less than or equal to end", start <= end);
+    }
+
+    private void checkArgs(int index) {
+      assertTrue("index must be non-negative", 0 <= index);
+      assertTrue("index must be less than VoteBlocks.size()",
+		 index < sharedVoteBlocks.size());
+    }
+
+    /**
+     * Add {@link VoteBlock}s from {@link sharedVoteBlocks} for the
+     * URLs from {@code start} (inclusive) to {@code end} (exclusive).
+     */
+    public VoteBlocksBuilder addShared(int start, int end) {
+      checkArgs(start, end);
+      for (int i = start; i < end; i++) {
+	included.add(i);
+	unshared.remove(i);
+      }
+      return this;
+    }
+
+    /**
+     * Add the {@link VoteBlock} from {@link sharedVoteBlocks} for URL
+     * {@code index}.
+     */
+    public VoteBlocksBuilder addShared(int index) {
+      checkArgs(index);
+      return addShared(index, index+1);
+    }
+
+    /**
+     * Add unique {@link VoteBlock}s for the URLs from {@code start}
+     * (inclusive) to {@code end} (exclusive).
+     */
+    public VoteBlocksBuilder addUnshared(int start, int end) {
+      checkArgs(start, end);
+      for (int i = start; i < end; i++) {
+	included.add(i);
+	unshared.add(i);
+      }
+      return this;
+    }
+
+    /**
+     * Add a unique {@link VoteBlock} for URL {@code index}.
+     */
+    public VoteBlocksBuilder addUnshared(int index) {
+      checkArgs(index);
+      return addUnshared(index, index+1);
+    }
+
+    /**
+     * Remove {@link VoteBlock}s for the URLs from {@code start}
+     * (inclusive) to {@code end} (exclusive).
+     */
+    public VoteBlocksBuilder remove(int start, int end) {
+      checkArgs(start, end);
+      for (int i = start; i < end; i++) {
+	included.remove(i);
+	unshared.remove(i);
+      }
+      return this;
+    }
+
+    /**
+     * Remove the {@link VoteBlock} for URL {@code index}.
+     */
+    public VoteBlocksBuilder remove(int index) {
+      checkArgs(index);
+      return remove(index, index+1);
+    }
+
+  }
+
+  /**
+   * Implement {@link VoteBlocks}. The only method used is {@code
+   * #iterator}.
+   */
+  private class MyVoteBlocks implements VoteBlocks {
+    final List<VoteBlock> blocks;
     
-    MyVoteBlocks(int b1, int b2, int b3, int b4, int d, int numVer) {
-      if (b1 >= 0) {
-	for (int i = b1; i < b2; i++) {
-	  VoteBlock vb = new VoteBlock(content[i].url);
-	  for (int j = 0; j < (numVer-1); j++) {
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  ByteArray.makeRandomBytes(20),
-			  ByteArray.makeRandomBytes(20),
-			  false); // Hash error
-	  }
-	  if (i != d) {
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  content[i].plainHash,
-			  content[i].noncedHash,
-			  false); // Hash error
-	  } else {
-	    // Voter & poller disagree on content[d]
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  ByteArray.makeRandomBytes(20),
-			  ByteArray.makeRandomBytes(20),
-			  false); // Hash error
-	  }
-	  if (numVer < 0) {
-	    numVer = -numVer;
-	  }
-	  for (int j = 0; j < (numVer-1); j++) {
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  ByteArray.makeRandomBytes(20),
-			  ByteArray.makeRandomBytes(20),
-			  false); // Hash error
-	  }
-	  blocks.add(vb);
-	}
-      }
-      if (b3 >= 0) {
-	for (int i = b3; i < b4; i++) {
-	  VoteBlock vb = new VoteBlock(content[i].url);
-	  if (i != d) {
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  content[i].plainHash,
-			  content[i].noncedHash,
-			  false); // Hash error
-	  } else {
-	    // Voter & poller disagree on content[d]
-	    vb.addVersion(0, 1000, // filtered offset/length
-			  0, 1000, // unfiltered offset/length
-			  ByteArray.makeRandomBytes(20),
-			  ByteArray.makeRandomBytes(20),
-			  false); // Hash error
-	  }
-	  blocks.add(vb);
-	}
-      }
-    }
-
-    public void addVoteBlock(VoteBlock vb) {
-      blocks.add(vb);
-    }
-
-    public InputStream getInputStream() throws IOException {
-      throw new IOException("not implemented");
-    }
-
-    public VoteBlock getVoteBlock(String url) {
-      for (VoteBlock vb : blocks) {
-	if (vb.getUrl().equals(url)) {
-	  return vb;
-	}
-      }
-      return null;
+    MyVoteBlocks(List<VoteBlock> blocks) {
+      this.blocks = blocks;
     }
  
-    public VoteBlocksIterator iterator() throws FileNotFoundException {
+    public VoteBlocksIterator iterator() {
       return new MyVoteBlocksIterator(blocks);
     }
 
+    public void addVoteBlock(VoteBlock vb) {
+      fail("addVoteBlock is not implemented");
+    }
+
+    public InputStream getInputStream() {
+      fail("getInputStream is not implemented");
+      return null;
+    }
+
+    public VoteBlock getVoteBlock(String url) {
+      fail("getVoteBlock is not implemented");
+      return null;
+    }
+
     public int size() {
-      return blocks.size();
+      fail("size is not implemented");
+      return -1;
     }
 
     public long getEstimatedEncodedLength() {
-      return 1000;
+      fail("getEstimatedEncodedLength is not implemented");
+      return -1L;
     }
 
     public void release() {
+      fail("release is not implemented");
     }
   }
     
   class MyVoteBlocksIterator implements VoteBlocksIterator {
-    ArrayList<VoteBlock> list;
+    List<VoteBlock> list;
     int index;
 
-    MyVoteBlocksIterator(ArrayList<VoteBlock> list) {
+    MyVoteBlocksIterator(List<VoteBlock> list) {
       this.list = list;
       index = 0;
     }
@@ -352,14 +471,14 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     }
   
     public VoteBlock next() {
-      if (index < list.size()) {
+      if (hasNext()) {
 	return list.get(index++);
       }
       throw new NoSuchElementException();
     }
   
     public VoteBlock peek() {
-      if (index < list.size()) {
+      if (hasNext()) {
 	return list.get(index);
       }
       return null;
@@ -368,5 +487,4 @@ public class TestVoteBlocksTallier extends LockssTestCase {
     public void release() {
     }
   }
-
 }
