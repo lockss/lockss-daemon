@@ -1,10 +1,10 @@
 /*
- * $Id:
+ * $Id: WileyArticleIteratorFactory.java,v 1.5 2013-09-13 22:39:21 ldoan Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,22 +48,20 @@ import org.lockss.util.Logger;
  * with mime-type pdf and xml. Content has inconstitent file name formats.
  * 
  * Full-text:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                      /2012/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.pdf
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                      /2011/A/ADMA23.16!/1810_ftp.pdf
+ * <base_url>/<year>/[A-Z0-9]/xxxxx.zip!/filename.[pdf|xml]
+ *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.pdf
+ *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.wml.xml
  * 
- * Cover image/ Abstract:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                      /2011/A/1803_ftp.pdf
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                      /2011/A/1803_hdp.wml.xml
+ * Cover image: <base_url><year>/A/1803_ftp.pdf
+ * Abstract:    <base_url>/<year>/A/1803_hdp.wml.xml
+ *      
+ * Article metadata in all xmls.
  */
 public class WileyArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = 
-                          Logger.getLogger("WileyArticleIteratorFactory");
+                          Logger.getLogger(WileyArticleIteratorFactory.class);
   
   // no need to set ROOT_TEMPLATE since all content is under <base_url>/<year>
   protected static final String PATTERN_TEMPLATE = 

@@ -1,5 +1,5 @@
 /*
- * $Id:
+ * $Id: WileyMetadataExtractorFactory.java,v 1.10 2013-09-13 22:40:16 ldoan Exp $
  */
 
 /*
@@ -56,21 +56,21 @@ import org.w3c.dom.NodeList;
 /*
  * Implements a FileMetadataExtractorFactory for Wiley source content
  * Files used to write this class constructed from Wiley FTP archive:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/2011/A/ADMA23.16.zip
- * Metadata found in all xmls (full-text and abstract)
+ *      <base_url>/<year>/A/ADMA23.16.zip 
+ *           
+ * Metadata found in all xmls (full-text and abstract).
+ * 
  * Full-text xml:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                 /2012/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.wml.xml
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                 /2011/A/ADMA23.16!/1810_ftp.wml.xml
+ *      <base_url>/<year>/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.wml.xml
+ *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.wml.xml
+ *      
  * Abstract xml:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-released
- *                 /2011/A/1803_hdp.wml.xml
+ *      <base_url>/<year>/A/1803_hdp.wml.xml
  */
   public class WileyMetadataExtractorFactory
     implements FileMetadataExtractorFactory {
     
-    static Logger log = Logger.getLogger("WileyMetadataExtractorFactory");
+    static Logger log = Logger.getLogger(WileyMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
