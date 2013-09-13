@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>84</string>
+    <string>85</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>14</string>
+        <string>15</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -122,6 +122,8 @@
       <string>2,"^%slookup/volpage/%s(/[^/]+)?$", base_url, volume_name</string>
       <string>2,"^%scontent/%s/suppl_[0-9]*\.author-index$", base_url, volume_name</string>
       <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](with-ds=|rss=)", base_url, volume_name</string>
+      <!-- Do not crawl any most-read links -->
+      <string>2,"^%s.*/most-read", base_url</string>
       <string>1,"^%s(content|lookup/volpage)/%s(/|\.)", base_url, volume_name</string>
       <string>1,"^%s(cgi/content/[^/]+/%s|content/vol%s)/", base_url, volume_name, volume_name</string>
       <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
