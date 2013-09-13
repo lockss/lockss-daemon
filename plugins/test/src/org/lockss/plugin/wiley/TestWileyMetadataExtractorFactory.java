@@ -36,11 +36,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 /*
- * Two of the articles used to get the xml source for this plugin is:
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/2011
- *                                      /A/ADMA23.16.zip!/1810_ftp.wml.xml
- * http://clockss-ingest.lockss.org/sourcefiles/wiley-dev/2011
- *                                      /2/25271.1.zip!/15_ftp.wml.xml
+ * Wiley stores metadata in xmls.
  */
 public class TestWileyMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestWileyMetadataExtractorFactory");
@@ -73,30 +69,30 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
 
   // use journal XXXX27.14 for testing
   String realUrlBaseA = BASE_URL + "2011/A/XXXX27.14.zip!/";
-  String realUrlBase2 = BASE_URL + "2011/2/25271.1.zip!/";
-  String realPdfUrlBaseA = "1810_ftp.pdf"; 
-  String realXmlUrlBaseA = "1810_ftp.wml.xml"; 
-  String realPdfUrlBase2 = "15_ftp.pdf"; 
-  String realXmlUrlBase2 = "15_ftp.wml.xml";
+  String realUrlBase2 = BASE_URL + "2011/2/11111.1.zip!/";
+  String realPdfUrlBaseA = "1810test_ftp.pdf"; 
+  String realXmlUrlBaseA = "1810test_ftp.wml.xml"; 
+  String realPdfUrlBase2 = "15test_ftp.pdf"; 
+  String realXmlUrlBase2 = "15test_ftp.wml.xml";
   // test xml with no <body>, field_coverage=abstract
-  String realCoverImagePdfUrlBaseA = "1803_ftp.pdf"; 
-  String realNoBobyTagXmlUrlBaseA = "1803_hdp.wml.xml"; 
+  String realCoverImagePdfUrlBaseA = "1803test_ftp.pdf"; 
+  String realNoBobyTagXmlUrlBaseA = "1803test_hdp.wml.xml"; 
   
   String goodTitle = "Article Title";
   String goodJTitle = "JournalTitle";
   String goodPublisher = "John Wiley and Sons";
   ArrayList<String> goodAuthors = new ArrayList<String>();
   {
-    goodAuthors.add("Doe, John");
+    goodAuthors.add("Doe, Deer");
   }
-  String goodPrintIssn = "0935-9648";
-  String goodEissn = "1521-4095";
+  String goodPrintIssn = "0101-0101";
+  String goodEissn = "1010-1010";
   String goodVolume = "23";
   String goodDate = "2011-04-26";
   String goodIssue = "16";
   String goodPageFirst = "1810";
   String goodPageLast = "1828";
-  String goodDoi = "10.1002/adma.201003991";
+  String goodDoi = "10.1111/xxxx.222222222";
   String goodPropId = "ADMA";
   String hardwiredPublisher = "John Wiley & Sons, Inc.";
   // test for XXXX.27.14
@@ -106,10 +102,10 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
   
   ArrayList<String> goodKeywords = new ArrayList<String>();
   {
-    goodKeywords.add("organic semiconductors");
-    goodKeywords.add("solar cells");
-    goodKeywords.add("hybrid materials");
-    goodKeywords.add("titanium oxide");
+    goodKeywords.add("organic organic");
+    goodKeywords.add("solar solar");
+    goodKeywords.add("hybrid hybrid");
+    goodKeywords.add("titanium titanium");
   }
   String goodDescription = "Summary";
   String goodRights = "Rights";
@@ -133,7 +129,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "<creators>" +
               "<creator creatorRole=\"author\">" +
                 "<personName>" +
-                  "<givenNames>John</givenNames>" +
+                  "<givenNames>Deer</givenNames>" +
                   "<familyName>Doe</familyName>" +
                 "</personName>" +
               "</creator>" +
@@ -199,7 +195,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "<creators>" +
               "<creator creatorRole=\"author\">" +
                 "<personName>" +
-                  "<givenNames>John</givenNames>" +
+                  "<givenNames>Deer</givenNames>" +
                   "<familyName>Doe</familyName>" +
                 "</personName>" +
               "</creator>" +
@@ -262,7 +258,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
             "<creators>" +
               "<creator creatorRole=\"author\">" +
                 "<personName>" +
-                  "<givenNames>John</givenNames>" +
+                  "<givenNames>Deer</givenNames>" +
                   "<familyName>Doe</familyName>" +
                 "</personName>" +
               "</creator>" +
@@ -377,7 +373,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
   }
 
   // missing journal title, journal id, volume, and issue metadata
-  // use <path to source file>/2/25271.1.zip  
+  // use <path to source file>/2/11111.1.zip  
   public void testExtractFromBase2MissingMetaContent() throws Exception {
     String pdfUrl = realUrlBase2 + realPdfUrlBase2;
     String xmlUrl = realUrlBase2 + realXmlUrlBase2;
@@ -403,7 +399,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    // journal id, volume and issue can be extracted from url .../25271.1.zip
+    // journal id, volume and issue can be extracted from url .../11111.1.zip
     // can not get these values from the zip file name.
     assertNull(md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
     assertNull(md.get(MetadataField.FIELD_VOLUME));
