@@ -10800,7 +10800,7 @@
       au < zapped ; down ; 2010 ; Genes & Cancer Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Genes & Cancer Volume 2 ; 2 ; >
       au < released ; crawling ; 2012 ; Genes & Cancer Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2013 ; Genes & Cancer Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2013 ; Genes & Cancer Volume 4 ; 4 ; >
 
     }
 
@@ -10823,7 +10823,7 @@
       au < released ; crawling ; 2010 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 1 ; 1 ; >
       au < released ; crawling ; 2011 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 2 ; 2 ; >
       au < released ; crawling ; 2012 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2013 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2013 ; Geriatric Orthopaedic Surgery & Rehabilitation Volume 4 ; 4 ; >
 
     }
 
@@ -20404,7 +20404,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://lrs.sagepub.com/
   
-        au < manifest ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
+        au < crawling ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
   
       }
   
@@ -25982,7 +25982,7 @@
       au < released ; crawling ; 2010 ; Music Educators Journal Volume 97 ; 97 ; >
       au < released ; crawling ; 2011 ; Music Educators Journal Volume 98 ; 98 ; >
       au < released ; crawling ; 2012 ; Music Educators Journal Volume 99 ; 99 ; >
-      au < manifest ; exists ; 2013 ; Music Educators Journal Volume 100 ; 100 ; >
+      au < crawling ; exists ; 2013 ; Music Educators Journal Volume 100 ; 100 ; >
 
     }
     
@@ -28014,7 +28014,7 @@
       au < released ; crawling ; 2010 ; Policy, Politics, & Nursing Practice Volume 11 ; 11 ; >
       au < released ; crawling ; 2011 ; Policy, Politics, & Nursing Practice Volume 12 ; 12 ; >
       au < released ; crawling ; 2012 ; Policy, Politics, & Nursing Practice Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2013 ; Policy, Politics, & Nursing Practice Volume 14 ; 14 ; >
 
     }
 
@@ -34809,7 +34809,7 @@
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 114 ; 114 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 115 ; 115 ; >
       au < crawling ; exists ; 2013 ; Thesis Eleven Volume 116 ; 116 ; >
-      au < manifest ; exists ; 2013 ; Thesis Eleven Volume 117 ; 117 ; >
+      au < crawling ; exists ; 2013 ; Thesis Eleven Volume 117 ; 117 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 118 ; 118 ; >
       au < expected ; exists ; 2013 ; Thesis Eleven Volume 119 ; 119 ; >
 
@@ -37061,7 +37061,7 @@
       au < released ; crawling ; 2010 ; Journal of Infrastructure Development Volume 2 ; 2 ; >
       au < released ; crawling ; 2011 ; Journal of Infrastructure Development Volume 3 ; 3 ; >
       au < zapped ; down ; 2012 ; Journal of Infrastructure Development Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 ; >
+      au < crawling ; exists ; 2013 ; Journal of Infrastructure Development Volume 5 ; 5 ; >
 
     }
 
@@ -37659,7 +37659,7 @@
       au < crawling ; exists ; 2010 ; Sociological Methodology Volume 40 ; 40 ; >
       au < crawling ; exists ; 2011 ; Sociological Methodology Volume 41 ; 41 ; >
       au < released ; crawling ; 2012 ; Sociological Methodology Volume 42 ; 42 ; >
-      au < manifest ; exists ; 2013 ; Sociological Methodology Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2013 ; Sociological Methodology Volume 43 ; 43 ; >
 
     }
 
@@ -37942,7 +37942,7 @@
     au < crawling ; exists ; 2010 ; Asia Pacific Business Review Volume 6 ; 6 ; >
     au < crawling ; exists ; 2011 ; Asia Pacific Business Review Volume 7 ; 7 ; >
     au < released ; crawling ; 2012 ; Asia-Pacific Journal of Management Research and Innovation Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2013 ; Asia-Pacific Journal of Management Research and Innovation Volume 9 ; 9 ; >
 
     }
 
@@ -39147,7 +39147,7 @@
         au < crawling ; exists ; 2010 ; Journal of Medical Biography Volume 18 ; 18 ; >
         au < crawling ; exists ; 2011 ; Journal of Medical Biography Volume 19 ; 19 ; >
         au < released ; crawling ; 2012 ; Journal of Medical Biography Volume 20 ; 20 ; >
-        au < manifest ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2013 ; Journal of Medical Biography Volume 21 ; 21 ; >
   
       }
   
