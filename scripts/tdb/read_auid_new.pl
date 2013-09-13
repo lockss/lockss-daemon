@@ -444,7 +444,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+      if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && ($man_contents =~ m/<a href="[^"]*$param{volume_name}/)) {
         if ($man_contents =~ m/<TITLE>\s*(.*)\s*<\/TITLE>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
