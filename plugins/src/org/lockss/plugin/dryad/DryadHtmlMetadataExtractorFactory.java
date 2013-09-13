@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.1 2013-09-04 20:21:20 etenbrink Exp $
+ * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.2 2013-09-13 20:14:29 etenbrink Exp $
  */
 
 /*
@@ -44,8 +44,9 @@ import org.lockss.plugin.*;
 
 
 /*
- * Metadata on an abstract page http://d
+ * Metadata on an abstract page http://http://datadryad.org/resource/doi:<doi>
  * in the form of:
+ * <meta content="MolEcol-<uid>" name="DC.identifier">
  */
 
 public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -79,7 +80,8 @@ public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorF
           new MetadataField(MetadataField.FIELD_KEYWORDS,
               MetadataField.splitAt(";")));
       tagMap.put("dc.description", MetadataField.DC_FIELD_DESCRIPTION);
-      tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);      
+      tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);
+      tagMap.put("dcterms.haspart", MetadataField.DC_FIELD_RELATION);
     }
 
     @Override
