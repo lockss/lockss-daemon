@@ -448,7 +448,8 @@
 
     param[journal_issn] = 0295-5075
     comment[param] = print issn preferred
-    comment[notReady] = RU4518, crawl failure
+    comment[notReady97] = RU4518, crawl failure
+    comment[notReady99_100] = PD-41, related review articles
 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 1 ; 1 > 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 2 ; 2 > 
