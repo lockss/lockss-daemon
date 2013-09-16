@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.11 2012-05-23 11:58:39 pgust Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.12 2013-09-16 22:10:00 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -51,122 +52,92 @@ public class HighWirePressH20ArticleIteratorFactory
     "\"%scontent/%s/\", base_url, volume_name";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"^%scontent/%s/([^/]+/)?[^/]+\\.full(\\.pdf)?$\", base_url, volume_name";
+    "\"^%scontent/%s/((?:[^/]+/)?[^/]+)(?:.*[.]body|[.]full(?:[.]pdf)?)$\", " +
+    "base_url, volume_name";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new
-      HighWirePressH20ArticleIterator(au,
-				      new SubTreeArticleIterator.Spec()
-				      .setTarget(target)
-				      .setRootTemplate(ROOT_TEMPLATE)
-				      .setPatternTemplate(PATTERN_TEMPLATE));
-  }
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    // various aspects of an article
+    // http://bjo.bmj.com/content/96/1/1.full
+    // http://bjo.bmj.com/content/96/1/1.full.pdf
+    // http://bjo.bmj.com/content/96/1/1.full.pdf+html
+    // http://bjo.bmj.com/content/96/1/1.extract
+    // http://bjo.bmj.com/content/96/1/1.short
+    // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
+    // and 
+    // http://aapredbook.aappublications.org/content/1/SEC70/SEC72/SEC74.body
+    
+    final Pattern BODY_PATTERN = Pattern.compile(
+        "/([^/]+)[.]body$", Pattern.CASE_INSENSITIVE);
+    
+    final Pattern HTML_PATTERN = Pattern.compile(
+        "/([^/]+)[.]full$", Pattern.CASE_INSENSITIVE);
+    
+    final Pattern PDF_PATTERN = Pattern.compile(
+        "/([^/]+)[.]full[.]pdf$", Pattern.CASE_INSENSITIVE);
+    
+    // how to change from one form (aspect) of article to another
+    final String HTML_REPLACEMENT = "/$1.full";
+    final String PDF_REPLACEMENT = "/$1.full.pdf";
+    final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
+    final String ABSTRACT_REPLACEMENT = "/$1.abstract";
+    final String EXTRACT_REPLACEMENT = "/$1.extract";
+    final String BODY_REPLACEMENT = "/$1.body";
+    final String FIGURES_REPLACEMENT = "/$1.figures-only";
+    final String SUPPL_REPLACEMENT = "/$1/suppl/DC1";
+    
+    builder.setSpec(target,
+        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
-  protected static class HighWirePressH20ArticleIterator
-    extends SubTreeArticleIterator {
-    
-    protected static Pattern HTML_PATTERN =
-      Pattern.compile("/([^/]+)\\.full$", Pattern.CASE_INSENSITIVE);
-    
-    protected static Pattern PDF_PATTERN =
-      Pattern.compile("/([^/]+)\\.full\\.pdf$", Pattern.CASE_INSENSITIVE);
-    
-    public HighWirePressH20ArticleIterator(ArchivalUnit au,
-                                           SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      
-      mat = HTML_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextHtml(cu, mat);
-      }
-        
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
-      }
-      
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
+    // set up full or full.pdf to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
+    // until this is deprecated
+    builder.addAspect(
+        BODY_PATTERN, BODY_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
-					       Matcher htmlMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
-//      guessFullTextPdf(af, htmlMat);
-//      guessOtherParts(af, htmlMat);
-      return af;
-    }
-    
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full"));
-      if (htmlCu != null && htmlCu.hasContent()) {
-        return null;
-      }
-      ArticleFiles af = new ArticleFiles();
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
 
-      CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full.pdf+html"));
-      if (pdfLandCu != null && pdfLandCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, pdfLandCu);
-        af.setFullTextCu(pdfLandCu);
-      }
-      else {
-        af.setFullTextCu(pdfCu);
-      }
-//      guessOtherParts(af, pdfMat);
-      return af;
-    }
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    // set up pdf landing page to be an aspect
+    builder.addAspect(
+        PDF_LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    // set up abstract/extract to be an aspect
+    builder.addAspect(Arrays.asList(
+        ABSTRACT_REPLACEMENT, EXTRACT_REPLACEMENT),
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    // set up figures-only to be an aspect
+    builder.addAspect(FIGURES_REPLACEMENT,
+        ArticleFiles.ROLE_FIGURES_TABLES);
+
+    // set up suppl to be an aspect
+    builder.addAspect(SUPPL_REPLACEMENT,
+        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_ABSTRACT);
     
-//    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-//      guessAbstract(af, mat);
-//      guessFigures(af, mat);
-//      guessSupplementaryMaterials(af, mat);
-//    }
-//    
-//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1.pdf"));
-//      if (pdfCu != null && pdfCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//        CachedUrl pdfLandCu = au.makeCachedUrl(mat.replaceFirst("/$1.full.pdf+html"));
-//        if (pdfLandCu != null && pdfLandCu.hasContent()) {
-//          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-//        }
-//      }
-//    }
-//
-//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.abstract"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-//      }
-//    }
-//    
-//    protected void guessFigures(ArticleFiles af, Matcher mat) {
-//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.figures-only"));
-//      if (absCu != null && absCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
-//      }
-//    }
-//    
-//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-//      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/$1/suppl/DCSupplemental"));
-//      if (suppinfoCu != null && suppinfoCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
-//      }
-//    }
-//    
+    return builder.getSubTreeArticleIterator();
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
