@@ -362,7 +362,7 @@
     au < exists ; exists ; Allgemeine Homöopathische Zeitung 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Allgemeine Homöopathische Zeitung 2012 ; 2012 ; 2012 >
     au < exists ; exists ; Allgemeine Homöopathische Zeitung 2013 ; 2013 ; 2013 >
-    au < exists ; exists ; Allgemeine Homöopathische Zeitung 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; Allgemeine Homöopathische Zeitung 2014 ; 2014 ; 2014 >
 
     }
 
@@ -1145,7 +1145,7 @@
    au < exists ; exists ; Ergopraxis 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Ergopraxis 2012 ; 2012 ; 2012 >
    au < exists ; exists ; Ergopraxis 2013 ; 2013 ; 2013 >
-   au < exists ; exists ; Ergopraxis 2014 ; 2014 ; 2014 >
+   au < expected ; exists ; Ergopraxis 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1246,7 +1246,7 @@
    au < exists ; exists ; Evidence-Based Spine-Care Journal 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Evidence-Based Spine-Care Journal 2012 ; 2012 ; 2012 >
    au < exists ; exists ; Evidence-Based Spine-Care Journal 2013 ; 2013 ; 2013 >
-   au < exists ; exists ; Evidence-Based Spine-Care Journal 2014 ; 2014 ; 2014 >
+   au < expected ; exists ; Evidence-Based Spine-Care Journal 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2526,6 +2526,7 @@
     au < exists ; exists ; Neuroradiologie Scan 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Neuroradiologie Scan 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Neuroradiologie Scan 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Neuroradiologie Scan 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2545,6 +2546,7 @@
     au < exists ; exists ; neuroreha 2011 ; 2011 ; 2011 >
     au < exists ; exists ; neuroreha 2012 ; 2012 ; 2012 >
     au < expected ; exists ; neuroreha 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; neuroreha 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2574,6 +2576,7 @@
     au < exists ; exists ; Notarzt Der 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Notarzt Der 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Notarzt Der 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Notarzt Der 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2596,6 +2599,7 @@
     au < exists ; exists ; Notfallmedizin up2date 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Notfallmedizin up2date 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Notfallmedizin up2date 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Notfallmedizin up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2622,6 +2626,7 @@
     au < exists ; exists ; Nuklearmediziner Der 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Nuklearmediziner Der 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Nuklearmediziner Der 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Nuklearmediziner Der 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2650,6 +2655,7 @@
     au < exists ; exists ; OP-Journal 2011 ; 2011 ; 2011 >
     au < exists ; exists ; OP-Journal 2012 ; 2012 ; 2012 >
     au < expected ; exists ; OP-Journal 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; OP-Journal 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2667,6 +2673,7 @@
 
     au < expected ; exists ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2689,6 +2696,7 @@
     au < exists ; exists ; Orthopädie und Unfallchirurgie up2date 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Orthopädie und Unfallchirurgie up2date 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Orthopädie und Unfallchirurgie up2date 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Orthopädie und Unfallchirurgie up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2715,6 +2723,7 @@
     au < exists ; exists ; Orthopedic Trauma Directions 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Orthopedic Trauma Directions 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Orthopedic Trauma Directions 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Orthopedic Trauma Directions 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2741,6 +2750,7 @@
     au < exists ; exists ; Osteosynthesis & Trauma Care 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Osteosynthesis & Trauma Care 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Osteosynthesis & Trauma Care 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Osteosynthesis & Trauma Care 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2768,6 +2778,7 @@
     au < exists ; exists ; Osteosynthese International 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Osteosynthese International 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Osteosynthese International 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Osteosynthese International 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2790,6 +2801,7 @@
     au < exists ; exists ; Pädiatrie up2date 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Pädiatrie up2date 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Pädiatrie up2date 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Pädiatrie up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2845,6 +2857,7 @@
     au < exists ; exists ; pferde spiegel 2011 ; 2011 ; 2011 >
     au < exists ; exists ; pferde spiegel 2012 ; 2012 ; 2012 >
     au < expected ; exists ; pferde spiegel 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; pferde spiegel 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2906,6 +2919,7 @@
     au < exists ; exists ; Pharmacopsychiatry 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Pharmacopsychiatry 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Pharmacopsychiatry 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Pharmacopsychiatry 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2943,6 +2957,7 @@
     au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2961,6 +2976,7 @@
     au < exists ; exists ; physiopraxis 2011 ; 2011 ; 2011 >
     au < exists ; exists ; physiopraxis 2012 ; 2012 ; 2012 >
     au < expected ; exists ; physiopraxis 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; physiopraxis 2014 ; 2014 ; 2014 >
 
   }
 
@@ -2984,6 +3000,7 @@
     au < exists ; exists ; physioscience 2011 ; 2011 ; 2011 >
     au < exists ; exists ; physioscience 2012 ; 2012 ; 2012 >
     au < expected ; exists ; physioscience 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; physioscience 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3012,6 +3029,7 @@
     au < exists ; exists ; PiD - Psychotherapie im Dialog 2011 ; 2011 ; 2011 >
     au < exists ; exists ; PiD - Psychotherapie im Dialog 2012 ; 2012 ; 2012 >
     au < expected ; exists ; PiD - Psychotherapie im Dialog 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; PiD - Psychotherapie im Dialog 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3042,6 +3060,7 @@
    au < exists ; exists ; Plant Biology 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Plant Biology 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Plant Biology 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Plant Biology 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3118,6 +3137,7 @@
    au < exists ; exists ; Planta Medica 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Planta Medica 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Planta Medica 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Planta Medica 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3147,6 +3167,7 @@
    au < exists ; exists ; Pneumologie 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Pneumologie 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Pneumologie 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Pneumologie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3175,6 +3196,7 @@
    au < exists ; exists ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie 2011 ; 2011 ; 2011 >
    au < exists ; exists ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie 2012 ; 2012 ; 2012 >
    au < expected ; exists ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; PPmP - Psychotherapie - Psychosomatik - Medizinische Psychologie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3202,6 +3224,7 @@
    au < exists ; exists ; Psych Pflege Heute 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Psych Pflege Heute 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Psych Pflege Heute 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Psych Pflege Heute 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3224,6 +3247,7 @@
    au < exists ; exists ; Psychiatrie und Psychotherapie up2date 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Psychiatrie und Psychotherapie up2date 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Psychiatrie und Psychotherapie up2date 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Psychiatrie und Psychotherapie up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3251,6 +3275,7 @@
    au < exists ; exists ; Psychiatrische Praxis 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Psychiatrische Praxis 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Psychiatrische Praxis 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Psychiatrische Praxis 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3276,6 +3301,7 @@
    au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3303,6 +3329,7 @@
    au < exists ; exists ; Radiologie up2date 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Radiologie up2date 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Radiologie up2date 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Radiologie up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3323,6 +3350,7 @@
    au < exists ; exists ; Radiopraxis 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Radiopraxis 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Radiopraxis 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Radiopraxis 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3351,6 +3379,7 @@
    au < exists ; exists ; Rehabilitation Die 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Rehabilitation Die 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Rehabilitation Die 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Rehabilitation Die 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3367,6 +3396,7 @@
 
    au < exists ; exists ; retten! 2012 ; 2012 ; 2012 >
    au < expected ; exists ; retten! 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; retten! 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3447,6 +3477,7 @@
     au < exists ; exists ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren 2011 ; 2011 ; 2011 >
     au < exists ; exists ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren 2012 ; 2012 ; 2012 >
     au < expected ; exists ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3493,6 +3524,7 @@
    au < exists ; exists ; Seminars in Hearing 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Hearing 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Hearing 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Hearing 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3538,6 +3570,7 @@
    au < exists ; exists ; Seminars in Interventional Radiology 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Interventional Radiology 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Interventional Radiology 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Interventional Radiology 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3586,6 +3619,7 @@
    au < exists ; exists ; Seminars in Liver Disease 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Liver Disease 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Liver Disease 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Liver Disease 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3618,6 +3652,7 @@
    au < exists ; exists ; Seminars in Musculoskeletal Radiology 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Musculoskeletal Radiology 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Musculoskeletal Radiology 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Musculoskeletal Radiology 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3666,6 +3701,7 @@
    au < exists ; exists ; Seminars in Neurology 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Neurology 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Neurology 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Neurology 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3695,6 +3731,7 @@
    au < exists ; exists ; Seminars in Neurosurgery 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Neurosurgery 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Neurosurgery 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Neurosurgery 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3722,6 +3759,7 @@
    au < exists ; exists ; Seminars in Plastic Surgery 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Plastic Surgery 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Plastic Surgery 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Plastic Surgery 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3751,6 +3789,7 @@
    au < exists ; exists ; Seminars in Reproductive Medicine 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Reproductive Medicine 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Reproductive Medicine 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Reproductive Medicine 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3786,6 +3825,7 @@
    au < exists ; exists ; Seminars in Respiratory and Critical Care Medicine 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Seminars in Respiratory and Critical Care Medicine 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Seminars in Respiratory and Critical Care Medicine 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Seminars in Respiratory and Critical Care Medicine 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3831,6 +3871,7 @@
     au < exists ; exists ; Seminars in Speech and Language 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Seminars in Speech and Language 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Seminars in Speech and Language 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Seminars in Speech and Language 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3886,6 +3927,7 @@
     au < exists ; exists ; Seminars in Thrombosis and Hemostasis 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Seminars in Thrombosis and Hemostasis 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Seminars in Thrombosis and Hemostasis 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Seminars in Thrombosis and Hemostasis 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3911,6 +3953,7 @@
     au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Senologie - Zeitschrift für Mammadiagnostik und -therapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3939,6 +3982,7 @@
     au < exists ; exists ; Skull Base 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Skull Base 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Skull Base 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Skull Base 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3986,6 +4030,7 @@
     au < exists ; exists ; Sleep And Breathing 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Sleep And Breathing 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Sleep And Breathing 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Sleep And Breathing 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4028,6 +4073,7 @@
    au < exists ; exists ; Sportverletzung - Sportschaden 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Sportverletzung - Sportschaden 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Sportverletzung - Sportschaden 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Sportverletzung - Sportschaden 2014 ; 2014 ; 2014 >
 
    }
 
@@ -4057,6 +4103,7 @@
    au < exists ; exists ; Sprache Stimme Gehör 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Sprache Stimme Gehör 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Sprache Stimme Gehör 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Sprache Stimme Gehör 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4086,6 +4133,7 @@
    au < exists ; exists ; Suchttherapie 2011 ; 2011 ; 2011 >
    au < exists ; exists ; Suchttherapie 2012 ; 2012 ; 2012 >
    au < expected ; exists ; Suchttherapie 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; Suchttherapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4110,6 +4158,7 @@
    au < exists ; exists ; SYNFACTS 2011 ; 2011 ; 2011 >
    au < exists ; exists ; SYNFACTS 2012 ; 2012 ; 2012 >
    au < expected ; exists ; SYNFACTS 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; SYNFACTS 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4150,6 +4199,7 @@
    au < exists ; exists ; SYNLETT 2011 ; 2011 ; 2011 >
    au < exists ; exists ; SYNLETT 2012 ; 2012 ; 2012 >
    au < expected ; exists ; SYNLETT 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; SYNLETT 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4190,6 +4240,7 @@
    au < exists ; exists ; SYNTHESIS 2011 ; 2011 ; 2011 >
    au < exists ; exists ; SYNTHESIS 2012 ; 2012 ; 2012 >
    au < expected ; exists ; SYNTHESIS 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; SYNTHESIS 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4216,6 +4267,7 @@
    au < exists ; exists ; team spiegel 2011 ; 2011 ; 2011 >
    au < exists ; exists ; team spiegel 2012 ; 2012 ; 2012 >
    au < expected ; exists ; team spiegel 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; team spiegel 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4235,6 +4287,7 @@
    au < exists ; exists ; team-konkret 2011 ; 2011 ; 2011 >
    au < exists ; exists ; team-konkret 2012 ; 2012 ; 2012 >
    au < expected ; exists ; team-konkret 2013 ; 2013 ; 2013 >
+   au < expected ; exists ; team-konkret 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4285,6 +4338,7 @@
     au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2011 ; 2011 ; 2011 >
     au < exists ; exists ; The Thoracic and Cardiovascular Surgeon 2012 ; 2012 ; 2012 >
     au < expected ; exists ; The Thoracic and Cardiovascular Surgeon 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; The Thoracic and Cardiovascular Surgeon 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4321,6 +4375,7 @@
     au < exists ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Transfusionsmedizin - Immunhämatologie, Hämotherapie, Immungenetik, Zelltherapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4350,6 +4405,7 @@
     au < exists ; exists ; TumorDiagnostik & Therapie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; TumorDiagnostik & Therapie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; TumorDiagnostik & Therapie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; TumorDiagnostik & Therapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4399,6 +4455,7 @@
     au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Ultraschall in der Medizin - European Journal of Ultrasound 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4425,6 +4482,7 @@
     au < exists ; exists ; veterinär spiegel 2011 ; 2011 ; 2011 >
     au < exists ; exists ; veterinär spiegel 2012 ; 2012 ; 2012 >
     au < expected ; exists ; veterinär spiegel 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; veterinär spiegel 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4447,6 +4505,7 @@
     au < exists ; exists ; Via medici 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Via medici 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Via medici 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Via medici 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4476,6 +4535,7 @@
     au < exists ; exists ; Viszeralchirurgie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Viszeralchirurgie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Viszeralchirurgie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Viszeralchirurgie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4498,6 +4558,7 @@
     au < exists ; exists ; Zahnmedizin up2date 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zahnmedizin up2date 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zahnmedizin up2date 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zahnmedizin up2date 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4520,6 +4581,7 @@
     au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Ganzheitliche Tiermedizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4549,6 +4611,7 @@
     au < exists ; exists ; Zeitschrift für Gastroenterologie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Gastroenterologie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Gastroenterologie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Gastroenterologie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4578,6 +4641,7 @@
     au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Geburtshilfe und Neonatologie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4651,6 +4715,7 @@
     au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Klassische Homöopathie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Klassische Homöopathie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Klassische Homöopathie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4671,6 +4736,7 @@
     au < exists ; exists ; Zeitschrift für Komplementärmedizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Komplementärmedizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Komplementärmedizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Komplementärmedizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4693,6 +4759,7 @@
     au < exists ; exists ; Zeitschrift für Orthomolekulare Medizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Orthomolekulare Medizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Orthomolekulare Medizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Orthomolekulare Medizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4715,6 +4782,7 @@
     au < exists ; exists ; Zeitschrift für Orthopädie und Unfallchirurgie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Orthopädie und Unfallchirurgie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Orthopädie und Unfallchirurgie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Orthopädie und Unfallchirurgie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4764,6 +4832,7 @@
     au < exists ; exists ; Zeitschrift für Orthopädie und ihre Grenzgebiete 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Orthopädie und ihre Grenzgebiete 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Orthopädie und ihre Grenzgebiete 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Orthopädie und ihre Grenzgebiete 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4793,6 +4862,7 @@
     au < exists ; exists ; Zeitschrift für Palliativmedizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Palliativmedizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Palliativmedizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Palliativmedizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4817,6 +4887,7 @@
     au < exists ; exists ; Zeitschrift für Phytotherapie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Phytotherapie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Phytotherapie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Phytotherapie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4845,6 +4916,7 @@
     au < exists ; exists ; Zeitschrift für Sexualforschung 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Sexualforschung 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Sexualforschung 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Sexualforschung 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4874,6 +4946,7 @@
     au < exists ; exists ; Zeitschrift für Chirurgie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Chirurgie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Chirurgie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Chirurgie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4903,6 +4976,7 @@
     au < exists ; exists ; Zeitschrift für Gynäkologie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Gynäkologie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Gynäkologie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Gynäkologie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4932,6 +5006,7 @@
     au < exists ; exists ; Zeitschrift für Kinderchirurgie 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Kinderchirurgie 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Kinderchirurgie 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Kinderchirurgie 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4958,6 +5033,7 @@
     au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2011 ; 2011 ; 2011 >
     au < exists ; exists ; Zeitschrift für Allgemeinmedizin 2012 ; 2012 ; 2012 >
     au < expected ; exists ; Zeitschrift für Allgemeinmedizin 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; Zeitschrift für Allgemeinmedizin 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4984,6 +5060,7 @@
     au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2011 ; 2011 ; 2011 >
     au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2012 ; 2012 ; 2012 >
     au < exists ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; ZWR - Das Deutsche Zahnärzteblatt 2014 ; 2014 ; 2014 >
 
   }
 
