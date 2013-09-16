@@ -138,13 +138,14 @@
   {
   
     title < 
-      name = Interpretation 
+      name = Interpretation ;
+      issn = 2324-8858 ; 
+      eissn = 2324-8866
     >
-    comment[0] = to publish Aug 2013
-    comment[1] = needs issn
     
-    param[journal_id] = interpretation
+    param[journal_id] = inteio
 
+    au < doNotProcess ; doNotProcess ; 2013 ; Interpretation Volume 1 ; 1 >
 
    
   }
