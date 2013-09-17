@@ -29,7 +29,7 @@
         issn = 1092-9576
       >
 
-      plugin = plugin = org.lockss.plugin.bepress.BePressPlugin
+      plugin = org.lockss.plugin.bepress.BePressPlugin
       param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ejab
       implicit < status ; year ; name ; param[volume] >
@@ -58,7 +58,7 @@
         eissn = 2168-5738
       >
 
-      plugin = plugin = org.lockss.plugin.bepress.BePressPlugin
+      plugin = org.lockss.plugin.bepress.BePressPlugin
       param[base_url] = http://ir.uiowa.edu/
       param[journal_abbr] = ijcs
       implicit < status ; year ; name ; param[volume] >
