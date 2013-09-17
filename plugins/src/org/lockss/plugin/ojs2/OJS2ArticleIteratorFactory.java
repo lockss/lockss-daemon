@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.7 2013-06-20 20:31:30 ldoan Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.8 2013-09-17 21:43:15 ldoan Exp $
  */
 
 /*
@@ -283,19 +283,21 @@ public class OJS2ArticleIteratorFactory
                                            "r\u00e9sum\u00e9",
                                        });
       
-     if (cu != null) {
-       log.debug2("Abstract url: " + cu.getUrl());
-       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-       return;
-     }
-      
-     // Find a single undecorated link
-     cu = doGuessSingleUrl(map, "/article/view/[^/]+$");
-     if (cu == null) {
-       // Alternatively, try a single full link
-       cu = doGuessSingleUrl(map, "/article/view/[^/]+/[^/]+$");
-     }         
-         
+      if (cu == null) {
+        // Find a single undecorated link
+        cu = doGuessSingleUrl(map, "/article/view/[^/]+$");
+        if (cu == null) {
+          // Alternatively, try a single full link
+          cu = doGuessSingleUrl(map, "/article/view/[^/]+/[^/]+$");
+        }         
+      }  
+    
+      if (cu != null) {
+        log.debug2("Abstract url: " + cu.getUrl());
+        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+        return;
+      }
+    
     }
 
     // This method handles full text urls with both labels 'HTML' or 'Full Text'
@@ -539,20 +541,5 @@ public class OJS2ArticleIteratorFactory
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     
   } // createArticleMetadataExtractor
-
-  public static void main(String[] args) throws Exception {
-    
-    Lexer.STRICT_REMARKS = false;
-    InputStreamSource source = new InputStreamSource(new FileInputStream("/tmp/h0"), "UTF-8");
-    Parser parser = new Parser(new Lexer(new Page(source)), new OJS2ArticleIterator.LoggerAdapter("http://www.nano-reviews.net/index.php/nano/issue/view/431"));
-    // NodeList nodeList = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle"));
-
-    for (SimpleNodeIterator iter = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle")).elements() ; iter.hasMoreNodes() ; ) {
-      NodeList links = new NodeList();
-      ((Node)iter.nextNode()).collectInto(links, HtmlNodeFilters.tagWithAttribute("a", "href"));
-      System.out.println(links);
-    }
-    
-  } // main
   
 } // OJS2ArticleIteratorFactory
