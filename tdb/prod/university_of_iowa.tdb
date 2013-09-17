@@ -4,10 +4,6 @@
     name = University of Iowa
   >
 
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    implicit < status ; year ; name ; param[volume] >
-    param[base_url] = http://muse.jhu.edu/
-
     {
       title <
         name = Syllecta Classica ;
@@ -15,11 +11,82 @@
         eissn = 2160-5157
       >
 
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; year ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+
       param[journal_dir] = syllecta_classica
       attr[journal_id] = syl
 
       au < released ; 2009 ; Syllecta Classica Volume 20 ; 20 >
       au < released ; 2010 ; Syllecta Classica Volume 21 ; 21 >
+
+    }
+    
+    {
+      title <
+        name = Electronic Journal of Africana Bibliography ;
+        issn = 1092-9576
+      >
+
+      plugin = plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = ejab
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
+      au < exists ; 1997 ; Electronic Journal of Africana Bibliography Volume 2 ; 2 >
+      au < exists ; 1997 ; Electronic Journal of Africana Bibliography Volume 3 ; 3 >
+      au < exists ; 1999 ; Electronic Journal of Africana Bibliography Volume 4 ; 4 >
+      au < exists ; 1999 ; Electronic Journal of Africana Bibliography Volume 5 ; 5 >
+      au < exists ; 2000 ; Electronic Journal of Africana Bibliography Volume 6 ; 6 >
+      au < exists ; 2001 ; Electronic Journal of Africana Bibliography Volume 7 ; 7 >
+      au < exists ; 2002 ; Electronic Journal of Africana Bibliography Volume 8 ; 8 >
+      au < exists ; 2004 ; Electronic Journal of Africana Bibliography Volume 9 ; 9 >
+      au < exists ; 2006 ; Electronic Journal of Africana Bibliography Volume 10 ; 10 >
+      au < exists ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
+      au < exists ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
+      au < exists ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
+      au < expected ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
+
+    }
+    
+    {
+      title <
+        name = Iowa Journal of Cultural Studies ;
+        issn = 2168-569X ;
+        eissn = 2168-5738
+      >
+
+      plugin = plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = ijcs
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 >
+      au < exists ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 >
+      au < exists ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 >
+      au < exists ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 >
+      au < exists ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 >
+      au < exists ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 >
+      au < exists ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 >
+      au < exists ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 >
+      au < exists ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 >
+      au < exists ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 >
+      au < exists ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 >
+      au < exists ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 >
+      au < exists ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 >
+      au < exists ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 >
+      au < exists ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 >
+      au < exists ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 >
+      au < exists ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 >
+      au < exists ; 2006 ; Iowa Journal of Cultural Studies Volume 9 ; 9 >
+      au < exists ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 >
+      au < exists ; 2009 ; Iowa Journal of Cultural Studies Volume 11 ; 11 >
+      au < exists ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 >
+      au < exists ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 >
+      au < exists ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 >
+      au < expected ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
 
     }
     
