@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = Southwest Journal of Pulmonary and Critical Care ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+	comment[platform] = custom
+	
+    plugin = needs.plugin
+ 
+    {
+  
+    title < 
+      name = Southwest Journal of Pulmonary and Critical Care ;
+      eissn = 2160-6773
+    >
+
+
+    }
+
+}
