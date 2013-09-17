@@ -1,10 +1,10 @@
 /*
- * $Id: WileyMetadataExtractorFactory.java,v 1.10 2013-09-13 22:40:16 ldoan Exp $
+ * $Id: WileyMetadataExtractorFactory.java,v 1.11 2013-09-17 18:15:15 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,7 @@ import org.w3c.dom.NodeList;
  * 
  * Full-text xml:
  *      <base_url>/<year>/A/AAB102.1.zip!/j.1744-7348.1983.tb02660.x.wml.xml
- *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.wml.xml
+ *      <base_url>/<year>/A/ADMA23.16.zip!/1810_ftp.wml.xml
  *      
  * Abstract xml:
  *      <base_url>/<year>/A/1803_hdp.wml.xml
@@ -207,12 +207,10 @@ import org.w3c.dom.NodeList;
     // Use XmlDomMetadataExtractor to extract raw metadata, map
     // to cooked fields, then extract extra tags by reading the file.
     @Override
-    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+    public void extract(MetadataTarget target, CachedUrl xmlCu, Emitter emitter)
         throws IOException, PluginException {
-      log.debug3("Attempting to extract metadata from cu: " + cu);
-      String xmlUrl = cu.getUrl();
-      ArchivalUnit au = cu.getArchivalUnit();
-      CachedUrl xmlCu = au.makeCachedUrl(xmlUrl);
+      log.debug3("Attempting to extract metadata from cu: " + xmlCu);
+      String xmlUrl = xmlCu.getUrl();
       try {
         if (xmlCu.hasContent()) {
           ArticleMetadata am;
@@ -248,7 +246,7 @@ import org.w3c.dom.NodeList;
             am.putIfBetter(MetadataField.FIELD_ISSUE, mat.group(3));
           }
                       
-          emitter.emitMetadata(cu, am);
+          emitter.emitMetadata(xmlCu, am);
             
         } else {
           log.siteError("Missing XML file: " + xmlUrl);

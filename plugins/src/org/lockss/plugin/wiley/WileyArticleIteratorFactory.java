@@ -1,5 +1,5 @@
 /*
- * $Id: WileyArticleIteratorFactory.java,v 1.5 2013-09-13 22:39:21 ldoan Exp $
+ * $Id: WileyArticleIteratorFactory.java,v 1.6 2013-09-17 18:15:15 thib_gc Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ import org.lockss.util.Logger;
  */
 public class WileyArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+
+  public static final String ROLE_COVER_IMAGE = "Cover image";
 
   protected static Logger log = 
                           Logger.getLogger(WileyArticleIteratorFactory.class);
@@ -131,14 +133,14 @@ public class WileyArticleIteratorFactory
         // if hdp xml exists, then the pdf is a cover image
         // and the hdp xml is an abstract and contains not <body> tag
         if (hdpXmlCu.hasContent()) {
-          af.setRoleCu("Cover image", cu); // cover image pdf
+          af.setRoleCu(ROLE_COVER_IMAGE, cu); // cover image pdf
           af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, hdpXmlCu);
           af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, hdpXmlCu);
         } else {
           setRoleFullText(af, cu);
         }
       } 
-      if (spec.getTarget() != MetadataTarget.Article()) {
+      if (!spec.getTarget().isArticle()) {
         guessAdditionalFiles(af, matPdf);
       }
       return af;
