@@ -90,4 +90,172 @@
 
     }
     
+    {
+      title <
+        name = Iowa Journal of Literary Studies ;
+        issn = 0743-2747 ;
+        eissn = 2325-8845
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = ijls
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
+      au < exists ; 1978 ; Iowa Journal of Literary Studies Volume 2 ; 2 >
+      au < exists ; 1981 ; Iowa Journal of Literary Studies Volume 3 ; 3 >
+      au < exists ; 1983 ; Iowa Journal of Literary Studies Volume 4 ; 4 >
+      au < exists ; 1984 ; Iowa Journal of Literary Studies Volume 5 ; 5 >
+      au < exists ; 1985 ; Iowa Journal of Literary Studies Volume 6 ; 6 >
+      au < exists ; 1986 ; Iowa Journal of Literary Studies Volume 7 ; 7 >
+      au < exists ; 1987 ; Iowa Journal of Literary Studies Volume 8 ; 8 >
+      au < exists ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
+      au < exists ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
+      au < exists ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
+      au < expected ; 2014 ; Iowa Journal of Literary Studies Volume 12 ; 12 >
+
+    }
+    
+    {
+      title <
+        name = Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies ;
+        issn = 2168-538X
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = mathal
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
+      au < exists ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
+      au < exists ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
+      au < expected ; 2014 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
+
+    }
+    
+    {
+      title <
+        name = Medieval Feminist Forum ;
+        issn = 1536-8742 ;
+        eissn = 2151-6073
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = mff
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 >
+      au < exists ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 >
+      au < exists ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 >
+      au < exists ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 >
+      au < exists ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 >
+      au < exists ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 >
+      au < exists ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 >
+      au < exists ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 >
+      au < exists ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 >
+      au < exists ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 >
+      au < exists ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 >
+      au < exists ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 >
+      au < exists ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 >
+      au < exists ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 >
+      au < exists ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 >
+      au < exists ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 >
+      au < exists ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 >
+      au < exists ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 >
+      au < exists ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 >
+      au < exists ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 >
+      au < exists ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 >
+      au < exists ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 >
+      au < exists ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 >
+      au < exists ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 >
+      au < exists ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 >
+      au < exists ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 >
+      au < exists ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 >
+      au < exists ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 >
+      au < exists ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 >
+      au < exists ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 >
+      au < exists ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 >
+      au < exists ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 >
+      au < exists ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 >
+      au < exists ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 >
+      au < exists ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 >
+      au < exists ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 >
+      au < exists ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 >
+      au < exists ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 >
+      au < exists ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 >
+      au < exists ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 >
+      au < exists ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 >
+      au < exists ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 >
+      au < exists ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 >
+      au < exists ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 >
+      au < exists ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 >
+      au < exists ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 >
+      au < exists ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 >
+      au < exists ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 >
+      au < expected ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 >
+
+    }
+    
+    {
+      title <
+        name = Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention ;
+        issn = 2151-2957
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = poroi
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 >
+      au < exists ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 >
+      au < exists ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 >
+      au < exists ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 >
+      au < exists ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 >
+      au < exists ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 >
+      au < exists ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 >
+      au < exists ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 >
+      au < exists ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
+      au < expected ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
+
+    }
+    
+    {
+      title <
+        name = Proceedings in Obstetrics and Gynecology ;
+        issn = 2154-4751
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = pog
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 2010 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 >
+      au < exists ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 >
+      au < exists ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 >
+      au < expected ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 >
+
+    }
+    
+    {
+      title <
+        name = Walt Whitman Quarterly Review ;
+        issn = 0737-0679 ;
+        eissn = 2153-3695
+      >
+
+      plugin = org.lockss.plugin.bepress.BePressPlugin
+      param[base_url] = http://ir.uiowa.edu/
+      param[journal_abbr] = wwqr
+      implicit < status ; year ; name ; param[volume] >
+
+      au < exists ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 >
+      au < expected ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 >
+
+    }
+    
 }
