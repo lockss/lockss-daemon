@@ -8,6 +8,8 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
+  comment[moving] = moving to Atypon on 20131024
+  
   {
 
     title <
