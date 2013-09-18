@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.31 2013-08-08 06:01:08 tlipkis Exp $
+ * $Id: AuStateBean.java,v 1.32 2013-09-18 05:39:13 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,8 @@ public class AuStateBean extends AuState {
 				      auState.lastContentChange,
 				      auState.lastPoPPoll,
 				      auState.lastPoPPollResult,
-				      auState.lastLocalPoll,
+				      auState.lastLocalHashScan,
+				      auState.lastLocalHashMismatch,
 				      null);
   }
 

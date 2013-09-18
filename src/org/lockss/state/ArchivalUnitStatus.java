@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.118 2013-08-19 22:33:21 barry409 Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.119 2013-09-18 05:39:13 tlipkis Exp $
  */
 
 /*
@@ -1149,9 +1149,9 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    lastPoPMsg));
       }
-      long lastLocal = state.getLastLocalPoll();
+      long lastLocal = state.getLastLocalHashScan();
       if (lastLocal > 0) {
-	res.add(new StatusTable.SummaryInfo("Last Local Poll",
+	res.add(new StatusTable.SummaryInfo("Last Local Hash Scan",
 					    ColumnDescriptor.TYPE_DATE,
 					    new Long(lastLocal)));
       }
