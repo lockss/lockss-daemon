@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.63 2013-08-19 22:33:21 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.64 2013-09-18 05:38:04 tlipkis Exp $
  */
 
 /*
@@ -660,7 +660,29 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(2, v3Poller.countLastPoRAgreePeers(mau, maus));
   }
 
-  public void testChoosePollVariant() throws Exception {
+  public void testChoosePollVariantPorOnly() throws Exception {
+    testChoosePollVariant(false, false);
+  }
+
+  public void testChoosePollVariantPoRPoP() throws Exception {
+    testChoosePollVariant(true, false);
+  }
+
+  public void testChoosePollVariantPoRLocal() throws Exception {
+    testChoosePollVariant(false, true);
+  }
+
+  public void testChoosePollVariantPoRPoPLocal() throws Exception {
+    testChoosePollVariant(true, true);
+  }
+
+  public void testChoosePollVariant(boolean enablePoPPolls,
+				    boolean enableLocalPolls) throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS,
+				  "" + enablePoPPolls,
+				  V3Poller.PARAM_V3_ENABLE_LOCAL_POLLS,
+				  "" + enableLocalPolls);
+
     ConfigurationUtil.addFromArgs(V3Poller.PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
 				 "3");
     TimeBase.setSimulated(1000L);
@@ -701,14 +723,18 @@ public class TestV3Poller extends LockssTestCase {
     // Now get 2 agreements, repairer threshold is 3
     agreeMap.put(p3, 150L);
     agreeMap.put(p2, 160L);
-    assertEquals(V3Poller.PollVariant.PoP, v3Poller.choosePollVariant(ps, 3));
+    assertEquals(  enablePoPPolls
+		   ? V3Poller.PollVariant.PoP : V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
     // Add another agreement
     agreeMap.put(p1, 170L);
-    assertEquals(V3Poller.PollVariant.Local,
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
 		 v3Poller.choosePollVariant(ps, 3));
     // Now crawl again, but get no content
     maus.setLastCrawlTime(300);
-    assertEquals(V3Poller.PollVariant.Local,
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
 		 v3Poller.choosePollVariant(ps, 3));
     // Now crawl again, get content
     maus.setLastCrawlTime(300);
@@ -723,7 +749,8 @@ public class TestV3Poller extends LockssTestCase {
     agreeMap.put(p3, 450L);
     agreeMap.put(p2, 460L);
     agreeMap.put(p1, 460L);
-    assertEquals(V3Poller.PollVariant.Local,
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
 		 v3Poller.choosePollVariant(ps, 3));
   }
 
