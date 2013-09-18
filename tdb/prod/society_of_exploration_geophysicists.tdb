@@ -138,15 +138,45 @@
   
     title < 
       name = Interpretation 
+      issn = 2324-8858 ; 
+      eissn = 2324-8866
     >
-    comment[0] = to publish Aug 2013
-    comment[1] = needs issn
-    
-    param[journal_id] = interpretation
 
+    param[journal_id] = inteio
 
+    au < doNotProcess ; 2013 ; Interpretation Volume 1 ; 1 >
    
   }
   
+  {
+  
+    title < 
+      name = Journal of Environmental and Engineering Geophysics ;
+      issn = 1083-1363 ; 
+      eissn = 1943-2658
+    >
+    
+    param[journal_id] = jeeg
+
+    au < doNotProcess ; 1995-1996 ; Journal of Environmental and Engineering Geophysics Volume 1 ; 1 >
+    au < doNotProcess ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  >
+    au < doNotProcess ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  >
+    au < doNotProcess ; 1999 ; Journal of Environmental and Engineering Geophysics Volume 4 ; 4  >
+    au < doNotProcess ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  >
+    au < doNotProcess ; 2001 ; Journal of Environmental and Engineering Geophysics Volume 6 ; 6  >
+    au < doNotProcess ; 2002 ; Journal of Environmental and Engineering Geophysics Volume 7 ; 7  >
+    au < doNotProcess ; 2003 ; Journal of Environmental and Engineering Geophysics Volume 8 ; 8  >
+    au < doNotProcess ; 2004 ; Journal of Environmental and Engineering Geophysics Volume 9 ; 9  >
+    au < doNotProcess ; 2005 ; Journal of Environmental and Engineering Geophysics Volume 10 ; 10 >
+    au < doNotProcess ; 2006 ; Journal of Environmental and Engineering Geophysics Volume 11 ; 11 >
+    au < doNotProcess ; 2007 ; Journal of Environmental and Engineering Geophysics Volume 12 ; 12 >
+    au < doNotProcess ; 2008 ; Journal of Environmental and Engineering Geophysics Volume 13 ; 13 >
+    au < doNotProcess ; 2009 ; Journal of Environmental and Engineering Geophysics Volume 14 ; 14 >
+    au < doNotProcess ; 2010 ; Journal of Environmental and Engineering Geophysics Volume 15 ; 15 >
+    au < doNotProcess ; 2011 ; Journal of Environmental and Engineering Geophysics Volume 16 ; 16 >
+    au < doNotProcess ; 2012 ; Journal of Environmental and Engineering Geophysics Volume 17 ; 17 >
+    au < doNotProcess ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 >
+   
+  }
 
 }
