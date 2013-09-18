@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlocksTallier.java,v 1.9.4.1 2013-08-30 17:18:04 barry409 Exp $
+ * $Id: VoteBlocksTallier.java,v 1.9.4.2 2013-09-18 05:30:18 tlipkis Exp $
  */
 
 /*
@@ -238,8 +238,9 @@ class VoteBlocksTallier {
    * voter.
    */
   public final float percentAgreement() {
-    // NOTE: Ignore the URLs the poller had but we didn't. The
-    // agreement is based only on the subset we have.
+    // XXX Split into two numbers: the overall agreement (taking all URLs
+    // into account) and the repairability metric proving possession
+    // (taking only URLs we have into account)
     int total = getCount(Category.AGREE) +
       getCount(Category.DISAGREE) +
       getCount(Category.VOTER_ONLY) +
