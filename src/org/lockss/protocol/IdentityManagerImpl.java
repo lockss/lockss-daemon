@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.48 2013-08-30 20:28:09 barry409 Exp $
+ * $Id: IdentityManagerImpl.java,v 1.49 2013-09-18 05:38:47 tlipkis Exp $
  */
 
 /*
@@ -1106,13 +1106,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   public void signalPartialAgreement(AgreementType agreementType, 
 				     PeerIdentity pid, ArchivalUnit au,
                                      float agreement) {
-    log.debug3("called signalPartialAgreement("+
-	       "agreementType="+agreementType+
-	       ", pid="+pid+
-	       ", au="+au+
-	       ", agreement"+agreement+
-	       ")");
-
+    if (log.isDebug3()) {
+      log.debug3("called signalPartialAgreement("+
+		 "agreementType="+agreementType+
+		 ", pid="+pid+
+		 ", au="+au+
+		 ", agreement"+agreement+
+		 ")");
+    }
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
