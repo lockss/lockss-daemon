@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.121 2013-06-19 23:08:26 fergaloy-sf Exp $
+ * $Id: LockssDaemon.java,v 1.122 2013-09-18 05:37:25 tlipkis Exp $
  */
 
 /*
@@ -889,7 +889,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
     AlertManager alertMgr = getAlertManager();
     alertMgr.raiseAlert(Alert.cacheAlert(Alert.DAEMON_STARTED),
-                          "LOCKSS daemon started");
+			"LOCKSS daemon " +
+			ConfigManager.getDaemonVersion().displayString() +
+			" started");
   }
 
 
