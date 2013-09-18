@@ -20,6 +20,9 @@
 
       au < released ; 2009 ; Syllecta Classica Volume 20 ; 20 >
       au < released ; 2010 ; Syllecta Classica Volume 21 ; 21 >
+      au < manifest ; 2011 ; Syllecta Classica Volume 22 ; 22 >
+      au < manifest ; 2012 ; Syllecta Classica Volume 23 ; 23 >
+      au < expected ; 2013 ; Syllecta Classica Volume 24 ; 24 >
 
     }
     
@@ -34,19 +37,19 @@
       param[journal_abbr] = ejab
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
-      au < manifest ; 1997 ; Electronic Journal of Africana Bibliography Volume 2 ; 2 >
-      au < manifest ; 1997 ; Electronic Journal of Africana Bibliography Volume 3 ; 3 >
-      au < manifest ; 1999 ; Electronic Journal of Africana Bibliography Volume 4 ; 4 >
-      au < manifest ; 1999 ; Electronic Journal of Africana Bibliography Volume 5 ; 5 >
-      au < manifest ; 2000 ; Electronic Journal of Africana Bibliography Volume 6 ; 6 >
-      au < manifest ; 2001 ; Electronic Journal of Africana Bibliography Volume 7 ; 7 >
-      au < manifest ; 2002 ; Electronic Journal of Africana Bibliography Volume 8 ; 8 >
-      au < manifest ; 2004 ; Electronic Journal of Africana Bibliography Volume 9 ; 9 >
-      au < manifest ; 2006 ; Electronic Journal of Africana Bibliography Volume 10 ; 10 >
-      au < manifest ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
-      au < manifest ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
-      au < testing ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
+      au < testing ; 1997 ; Electronic Journal of Africana Bibliography Volume 1 ; 1 >
+      au < testing ; 1997 ; Electronic Journal of Africana Bibliography Volume 2 ; 2 >
+      au < testing ; 1997 ; Electronic Journal of Africana Bibliography Volume 3 ; 3 >
+      au < testing ; 1999 ; Electronic Journal of Africana Bibliography Volume 4 ; 4 >
+      au < testing ; 1999 ; Electronic Journal of Africana Bibliography Volume 5 ; 5 >
+      au < testing ; 2000 ; Electronic Journal of Africana Bibliography Volume 6 ; 6 >
+      au < testing ; 2001 ; Electronic Journal of Africana Bibliography Volume 7 ; 7 >
+      au < testing ; 2002 ; Electronic Journal of Africana Bibliography Volume 8 ; 8 >
+      au < testing ; 2004 ; Electronic Journal of Africana Bibliography Volume 9 ; 9 >
+      au < testing ; 2006 ; Electronic Journal of Africana Bibliography Volume 10 ; 10 >
+      au < testing ; 2009 ; Electronic Journal of Africana Bibliography Volume 11 ; 11 >
+      au < testing ; 2009 ; Electronic Journal of Africana Bibliography Volume 12 ; 12 >
+      au < ready ; 2012 ; Electronic Journal of Africana Bibliography Volume 13 ; 13 >
       au < expected ; 2014 ; Electronic Journal of Africana Bibliography Volume 14 ; 14 >
 
     }
@@ -63,27 +66,27 @@
       param[journal_abbr] = ijcs
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 >
-      au < manifest ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 >
-      au < manifest ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 >
-      au < manifest ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 >
-      au < manifest ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 >
-      au < manifest ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 >
-      au < manifest ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 >
-      au < manifest ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 >
+      au < wanted ; 1993 ; Iowa Journal of Cultural Studies Volume 1993 ; 1993 >
+      au < wanted ; 1994 ; Iowa Journal of Cultural Studies Volume 1994 ; 1994 >
+      au < wanted ; 1995 ; Iowa Journal of Cultural Studies Volume 1995 ; 1995 >
+      au < wanted ; 1996 ; Iowa Journal of Cultural Studies Volume 1996 ; 1996 >
+      au < wanted ; 1997 ; Iowa Journal of Cultural Studies Volume 1997 ; 1997 >
+      au < wanted ; 1998 ; Iowa Journal of Cultural Studies Volume 1998 ; 1998 >
+      au < wanted ; 1999 ; Iowa Journal of Cultural Studies Volume 1999 ; 1999 >
+      au < wanted ; 2000 ; Iowa Journal of Cultural Studies Volume 2000 ; 2000 >
+      au < wanted ; 2001 ; Iowa Journal of Cultural Studies Volume 2001 ; 2001 >
+      au < wanted ; 2002 ; Iowa Journal of Cultural Studies Volume 1 ; 1 >
+      au < wanted ; 2002 ; Iowa Journal of Cultural Studies Volume 2 ; 2 >
+      au < wanted ; 2003 ; Iowa Journal of Cultural Studies Volume 3 ; 3 >
+      au < wanted ; 2004 ; Iowa Journal of Cultural Studies Volume 4 ; 4 >
+      au < wanted ; 2004 ; Iowa Journal of Cultural Studies Volume 5 ; 5 >
+      au < wanted ; 2005 ; Iowa Journal of Cultural Studies Volume 6 ; 6 >
+      au < wanted ; 2005 ; Iowa Journal of Cultural Studies Volume 7 ; 7 >
+      au < wanted ; 2006 ; Iowa Journal of Cultural Studies Volume 8 ; 8 >
       au < doesNotExist ; 2006 ; Iowa Journal of Cultural Studies Volume 9 ; 9 >
-      au < manifest ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 >
+      au < wanted ; 2009 ; Iowa Journal of Cultural Studies Volume 10 ; 10 >
       au < doesNotExist ; 2009 ; Iowa Journal of Cultural Studies Volume 11 ; 11 >
-      au < testing ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 >
+      au < ready ; 2010 ; Iowa Journal of Cultural Studies Volume 12 ; 12 >
       au < doesNotExist ; 2010 ; Iowa Journal of Cultural Studies Volume 13 ; 13 >
       au < manifest ; 2013 ; Iowa Journal of Cultural Studies Volume 14 ; 14 >
       au < expected ; 2014 ; Iowa Journal of Cultural Studies Volume 15 ; 15 >
@@ -102,17 +105,17 @@
       param[journal_abbr] = ijls
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
-      au < manifest ; 1978 ; Iowa Journal of Literary Studies Volume 2 ; 2 >
-      au < manifest ; 1981 ; Iowa Journal of Literary Studies Volume 3 ; 3 >
-      au < manifest ; 1983 ; Iowa Journal of Literary Studies Volume 4 ; 4 >
-      au < manifest ; 1984 ; Iowa Journal of Literary Studies Volume 5 ; 5 >
-      au < manifest ; 1985 ; Iowa Journal of Literary Studies Volume 6 ; 6 >
-      au < manifest ; 1986 ; Iowa Journal of Literary Studies Volume 7 ; 7 >
-      au < manifest ; 1987 ; Iowa Journal of Literary Studies Volume 8 ; 8 >
-      au < manifest ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
-      au < manifest ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
-      au < testing ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
+      au < wanted ; 1977 ; Iowa Journal of Literary Studies Volume 1 ; 1 >
+      au < wanted ; 1978 ; Iowa Journal of Literary Studies Volume 2 ; 2 >
+      au < wanted ; 1981 ; Iowa Journal of Literary Studies Volume 3 ; 3 >
+      au < wanted ; 1983 ; Iowa Journal of Literary Studies Volume 4 ; 4 >
+      au < wanted ; 1984 ; Iowa Journal of Literary Studies Volume 5 ; 5 >
+      au < wanted ; 1985 ; Iowa Journal of Literary Studies Volume 6 ; 6 >
+      au < wanted ; 1986 ; Iowa Journal of Literary Studies Volume 7 ; 7 >
+      au < wanted ; 1987 ; Iowa Journal of Literary Studies Volume 8 ; 8 >
+      au < wanted ; 1988 ; Iowa Journal of Literary Studies Volume 9 ; 9 >
+      au < wanted ; 1989 ; Iowa Journal of Literary Studies Volume 10 ; 10 >
+      au < ready ; 1991 ; Iowa Journal of Literary Studies Volume 11 ; 11 >
       au < expected ; 2014 ; Iowa Journal of Literary Studies Volume 12 ; 12 >
 
     }
@@ -128,9 +131,9 @@
       param[journal_abbr] = mathal
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
-      au < manifest ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
-      au < testing ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
+      au < wanted ; 2011 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 1 ; 1 >
+      au < wanted ; 2012 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 2 ; 2 >
+      au < ready ; 2013 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 3 ; 3 >
       au < expected ; 2014 ; Mathal/Mashal: Journal of Islamic and Judaic Multidisciplinary Studies Volume 4 ; 4 >
 
     }
@@ -147,54 +150,54 @@
       param[journal_abbr] = mff
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 >
-      au < manifest ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 >
-      au < manifest ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 >
-      au < manifest ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 >
-      au < manifest ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 >
-      au < manifest ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 >
-      au < manifest ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 >
-      au < manifest ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 >
-      au < manifest ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 >
-      au < manifest ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 >
-      au < manifest ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 >
-      au < manifest ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 >
-      au < manifest ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 >
-      au < manifest ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 >
-      au < manifest ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 >
-      au < manifest ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 >
-      au < manifest ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 >
-      au < manifest ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 >
-      au < manifest ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 >
-      au < manifest ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 >
-      au < manifest ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 >
-      au < manifest ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 >
-      au < manifest ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 >
-      au < manifest ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 >
-      au < manifest ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 >
-      au < manifest ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 >
-      au < manifest ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 >
-      au < manifest ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 >
-      au < manifest ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 >
-      au < manifest ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 >
-      au < manifest ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 >
-      au < manifest ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 >
-      au < manifest ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 >
-      au < manifest ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 >
-      au < manifest ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 >
-      au < manifest ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 >
-      au < manifest ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 >
-      au < manifest ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 >
-      au < manifest ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 >
-      au < manifest ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 >
-      au < manifest ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 >
-      au < manifest ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 >
-      au < manifest ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 >
-      au < manifest ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 >
-      au < manifest ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 >
-      au < manifest ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 >
-      au < manifest ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 >
-      au < testing ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 >
+      au < wanted ; 1986 ; Medieval Feminist Forum Volume 1 ; 1 >
+      au < wanted ; 1986 ; Medieval Feminist Forum Volume 2 ; 2 >
+      au < wanted ; 1987 ; Medieval Feminist Forum Volume 3 ; 3 >
+      au < wanted ; 1987 ; Medieval Feminist Forum Volume 4 ; 4 >
+      au < wanted ; 1988 ; Medieval Feminist Forum Volume 5 ; 5 >
+      au < wanted ; 1988 ; Medieval Feminist Forum Volume 6 ; 6 >
+      au < wanted ; 1989 ; Medieval Feminist Forum Volume 7 ; 7 >
+      au < wanted ; 1989 ; Medieval Feminist Forum Volume 8 ; 8 >
+      au < wanted ; 1990 ; Medieval Feminist Forum Volume 9 ; 9 >
+      au < wanted ; 1990 ; Medieval Feminist Forum Volume 10 ; 10 >
+      au < wanted ; 1991 ; Medieval Feminist Forum Volume 11 ; 11 >
+      au < wanted ; 1991 ; Medieval Feminist Forum Volume 12 ; 12 >
+      au < wanted ; 1992 ; Medieval Feminist Forum Volume 13 ; 13 >
+      au < wanted ; 1992 ; Medieval Feminist Forum Volume 14 ; 14 >
+      au < wanted ; 1993 ; Medieval Feminist Forum Volume 15 ; 15 >
+      au < wanted ; 1993 ; Medieval Feminist Forum Volume 16 ; 16 >
+      au < wanted ; 1994 ; Medieval Feminist Forum Volume 17 ; 17 >
+      au < wanted ; 1994 ; Medieval Feminist Forum Volume 18 ; 18 >
+      au < wanted ; 1995 ; Medieval Feminist Forum Volume 19 ; 19 >
+      au < wanted ; 1995 ; Medieval Feminist Forum Volume 20 ; 20 >
+      au < wanted ; 1996 ; Medieval Feminist Forum Volume 21 ; 21 >
+      au < wanted ; 1996 ; Medieval Feminist Forum Volume 22 ; 22 >
+      au < wanted ; 1997 ; Medieval Feminist Forum Volume 23 ; 23 >
+      au < wanted ; 1997 ; Medieval Feminist Forum Volume 24 ; 24 >
+      au < wanted ; 1998 ; Medieval Feminist Forum Volume 25 ; 25 >
+      au < wanted ; 1998 ; Medieval Feminist Forum Volume 26 ; 26 >
+      au < wanted ; 1999 ; Medieval Feminist Forum Volume 27 ; 27 >
+      au < wanted ; 1999 ; Medieval Feminist Forum Volume 28 ; 28 >
+      au < wanted ; 2000 ; Medieval Feminist Forum Volume 29 ; 29 >
+      au < wanted ; 2000 ; Medieval Feminist Forum Volume 30 ; 30 >
+      au < wanted ; 2001 ; Medieval Feminist Forum Volume 31 ; 31 >
+      au < wanted ; 2001 ; Medieval Feminist Forum Volume 32 ; 32 >
+      au < wanted ; 2002 ; Medieval Feminist Forum Volume 33 ; 33 >
+      au < wanted ; 2002 ; Medieval Feminist Forum Volume 34 ; 34 >
+      au < wanted ; 2003 ; Medieval Feminist Forum Volume 35 ; 35 >
+      au < wanted ; 2003 ; Medieval Feminist Forum Volume 36 ; 36 >
+      au < wanted ; 2004 ; Medieval Feminist Forum Volume 37 ; 37 >
+      au < wanted ; 2004 ; Medieval Feminist Forum Volume 38 ; 38 >
+      au < wanted ; 2005 ; Medieval Feminist Forum Volume 39 ; 39 >
+      au < wanted ; 2005 ; Medieval Feminist Forum Volume 40 ; 40 >
+      au < wanted ; 2006 ; Medieval Feminist Forum Volume 41 ; 41 >
+      au < wanted ; 2006 ; Medieval Feminist Forum Volume 42 ; 42 >
+      au < wanted ; 2007 ; Medieval Feminist Forum Volume 43 ; 43 >
+      au < wanted ; 2008 ; Medieval Feminist Forum Volume 44 ; 44 >
+      au < wanted ; 2009 ; Medieval Feminist Forum Volume 45 ; 45 >
+      au < wanted ; 2010 ; Medieval Feminist Forum Volume 46 ; 46 >
+      au < wanted ; 2011 ; Medieval Feminist Forum Volume 47 ; 47 >
+      au < ready ; 2012 ; Medieval Feminist Forum Volume 48 ; 48 >
       au < expected ; 2013 ; Medieval Feminist Forum Volume 49 ; 49 >
 
     }
@@ -210,15 +213,15 @@
       param[journal_abbr] = poroi
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 >
-      au < manifest ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 >
-      au < manifest ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 >
-      au < manifest ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 >
-      au < manifest ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 >
-      au < manifest ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 >
-      au < manifest ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 >
-      au < manifest ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 >
-      au < testing ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
+      au < wanted ; 2001 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 1 ; 1 >
+      au < wanted ; 2003 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 2 ; 2 >
+      au < wanted ; 2004 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 3 ; 3 >
+      au < wanted ; 2005 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 4 ; 4 >
+      au < wanted ; 2008 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 5 ; 5 >
+      au < wanted ; 2009 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 6 ; 6 >
+      au < wanted ; 2011 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 7 ; 7 >
+      au < wanted ; 2012 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 8 ; 8 >
+      au < ready ; 2013 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 9 ; 9 >
       au < expected ; 2014 ; Poroi: An Interdisciplinary Journal of Rhetorical Analysis and Invention Volume 10 ; 10 >
 
     }
@@ -234,9 +237,9 @@
       param[journal_abbr] = pog
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 >
-      au < manifest ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 >
-      au < testing ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 >
+      au < wanted ; 2010 ; Proceedings in Obstetrics and Gynecology Volume 1 ; 1 >
+      au < wanted ; 2011 ; Proceedings in Obstetrics and Gynecology Volume 2 ; 2 >
+      au < ready ; 2013 ; Proceedings in Obstetrics and Gynecology Volume 3 ; 3 >
       au < expected ; 2014 ; Proceedings in Obstetrics and Gynecology Volume 4 ; 4 >
 
     }
@@ -253,36 +256,36 @@
       param[journal_abbr] = wwqr
       implicit < status ; year ; name ; param[volume] >
 
-      au < manifest ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 >
-      au < manifest ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 >
-      au < manifest ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 >
-      au < manifest ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 >
-      au < manifest ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 >
-      au < manifest ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 >
-      au < manifest ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 >
-      au < manifest ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 >
-      au < manifest ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 >
-      au < manifest ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 >
-      au < manifest ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 >
-      au < manifest ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 >
-      au < manifest ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 >
-      au < manifest ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 >
-      au < manifest ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 >
-      au < manifest ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 >
-      au < manifest ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 >
-      au < manifest ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 >
-      au < manifest ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 >
-      au < manifest ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 >
-      au < manifest ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 >
-      au < manifest ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 >
-      au < manifest ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 >
-      au < manifest ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 >
-      au < manifest ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 >
-      au < manifest ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 >
-      au < manifest ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 >
-      au < manifest ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 >
-      au < manifest ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 >
-      au < testing ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 >
+      au < wanted ; 1983-1984 ; Walt Whitman Quarterly Review Volume 1 ; 1 >
+      au < wanted ; 1984-1985 ; Walt Whitman Quarterly Review Volume 2 ; 2 >
+      au < wanted ; 1985-1986 ; Walt Whitman Quarterly Review Volume 3 ; 3 >
+      au < wanted ; 1986-1987 ; Walt Whitman Quarterly Review Volume 4 ; 4 >
+      au < wanted ; 1987-1988 ; Walt Whitman Quarterly Review Volume 5 ; 5 >
+      au < wanted ; 1988-1989 ; Walt Whitman Quarterly Review Volume 6 ; 6 >
+      au < wanted ; 1989-1990 ; Walt Whitman Quarterly Review Volume 7 ; 7 >
+      au < wanted ; 1990-1991 ; Walt Whitman Quarterly Review Volume 8 ; 8 >
+      au < wanted ; 1991-1992 ; Walt Whitman Quarterly Review Volume 9 ; 9 >
+      au < wanted ; 1992-1993 ; Walt Whitman Quarterly Review Volume 10 ; 10 >
+      au < wanted ; 1993-1994 ; Walt Whitman Quarterly Review Volume 11 ; 11 >
+      au < wanted ; 1994-1995 ; Walt Whitman Quarterly Review Volume 12 ; 12 >
+      au < wanted ; 1995-1996 ; Walt Whitman Quarterly Review Volume 13 ; 13 >
+      au < wanted ; 1996-1997 ; Walt Whitman Quarterly Review Volume 14 ; 14 >
+      au < wanted ; 1997-1998 ; Walt Whitman Quarterly Review Volume 15 ; 15 >
+      au < wanted ; 1998-1999 ; Walt Whitman Quarterly Review Volume 16 ; 16 >
+      au < wanted ; 1999-2000 ; Walt Whitman Quarterly Review Volume 17 ; 17 >
+      au < wanted ; 2000-2001 ; Walt Whitman Quarterly Review Volume 18 ; 18 >
+      au < wanted ; 2001-2002 ; Walt Whitman Quarterly Review Volume 19 ; 19 >
+      au < wanted ; 2002-2003 ; Walt Whitman Quarterly Review Volume 20 ; 20 >
+      au < wanted ; 2003-2004 ; Walt Whitman Quarterly Review Volume 21 ; 21 >
+      au < wanted ; 2004-2005 ; Walt Whitman Quarterly Review Volume 22 ; 22 >
+      au < wanted ; 2005-2006 ; Walt Whitman Quarterly Review Volume 23 ; 23 >
+      au < wanted ; 2006-2007 ; Walt Whitman Quarterly Review Volume 24 ; 24 >
+      au < wanted ; 2007-2008 ; Walt Whitman Quarterly Review Volume 25 ; 25 >
+      au < wanted ; 2008-2009 ; Walt Whitman Quarterly Review Volume 26 ; 26 >
+      au < wanted ; 2009-2010 ; Walt Whitman Quarterly Review Volume 27 ; 27 >
+      au < wanted ; 2010-2011 ; Walt Whitman Quarterly Review Volume 28 ; 28 >
+      au < wanted ; 2011-2012 ; Walt Whitman Quarterly Review Volume 29 ; 29 >
+      au < ready ; 2012-2013 ; Walt Whitman Quarterly Review Volume 30 ; 30 >
       au < expected ; 2013-2014 ; Walt Whitman Quarterly Review Volume 31 ; 31 >
 
     }
