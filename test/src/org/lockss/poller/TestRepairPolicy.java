@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairPolicy.java,v 1.2 2012-09-21 20:55:15 barry409 Exp $
+ * $Id: TestRepairPolicy.java,v 1.3 2013-09-18 05:37:43 tlipkis Exp $
  */
 
 /*
@@ -143,6 +143,28 @@ public class TestRepairPolicy extends LockssTestCase {
     RepairPolicy rp = pollManager.getRepairPolicy();
     assertTrue(rp.shouldServeAuRepair(reqPid, highAgreeAu));
     assertFalse(rp.shouldServeAuRepair(reqPid, lowAgreeAu));
+  }
+
+  public void testAgreementType() throws Exception {
+    RepairPolicy rp = pollManager.getRepairPolicy();
+    MockArchivalUnit au;
+    EnumSet<AgreementType> permitRepairAgreements =
+      EnumSet.of(AgreementType.POR, AgreementType.SYMMETRIC_POR,
+		 AgreementType.POP, AgreementType.SYMMETRIC_POP);
+    
+    for (AgreementType type: AgreementType.values()) {
+      au = (MockArchivalUnit)PollTestPlugin.PTArchivalUnit.
+	createFromListOfRootUrls(rooturls);
+      setUpAu(au);
+      assertFalse(rp.shouldServeAuRepair(reqPid, au));
+      idManager.signalPartialAgreement(type, reqPid, au, (float)0.05);
+      assertFalse(rp.shouldServeAuRepair(reqPid, au));
+      // shouldServeRepair if and only if the type is one of those
+      // listed above.
+      idManager.signalPartialAgreement(type, reqPid, au, (float)0.95);
+      assertEquals(permitRepairAgreements.contains(type),
+		   rp.shouldServeAuRepair(reqPid, au));
+    }
   }
 
   public void testDisallowV3Repair() throws Exception {
