@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.80.2.2 2013-08-19 22:40:08 barry409 Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.80.2.3 2013-09-18 05:31:28 tlipkis Exp $
  */
 
 /*
@@ -307,7 +307,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    12345,
 				    111222, // lastPoPPoll
 				    7, // lastPoPPollResult
-				    222333, // lastLocalPoll
+				    222333, // lastLocalHashScan
+				    222444, // lastLocalHashMismatch
 				    repository);
 
     assertEquals("SubstVer3",
@@ -336,7 +337,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 
     assertEquals(111222, loadedState.getLastPoPPoll());
     assertEquals(7, loadedState.getLastPoPPollResult());
-    assertEquals(222333, loadedState.getLastLocalPoll());
+    assertEquals(222333, loadedState.getLastLocalHashScan());
+    assertEquals(222444, loadedState.getLastLocalHashMismatch());
 
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
@@ -432,7 +434,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  0, // lastContentChange
 				  444, // lastPoPPoll
 				  8, // lastPoPPollResult
-				  -1, // lastLocalPoll
+				  -1, // lastLocalHashScan
+				  -1, // lastLocalHashMismatch
 				  repository);
 
     repository.storeAuState(auState);
@@ -468,7 +471,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  0, // lastContentChange
 			  -1, // lastPoPPoll
 			  -1, // lastPoPPollResult
-			  -1, // lastLocalPoll
+			  -1, // lastLocalHashScan
+			  -1, // lastLocalHashMismatch
 			  repository);
     repository.storeAuState(auState);
     assertEquals(1234, auState.getLastCrawlTime());
@@ -513,7 +517,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  0, // lastContentChange
 			  444, // lastPoPPoll
 			  8, // lastPoPPollResult
-			  -1, // lastLocalPoll
+			  -1, // lastLocalHashScan
+			  -1, // lastLocalHashMismatch
 			  repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);

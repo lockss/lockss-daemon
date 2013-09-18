@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.48.2.1 2013-08-08 05:51:42 tlipkis Exp $
+ * $Id: AuState.java,v 1.48.2.2 2013-09-18 05:31:28 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,9 @@ public class AuState implements LockssSerializable {
   protected long lastContentChange;     // last time a new URL version created
   protected long lastPoPPoll;		// last completed PoP poll time
   protected int lastPoPPollResult;	// result of last PoP poll
-  protected long lastLocalPoll;		// last completed Local poll time
+  protected long lastLocalHashScan;	// last completed local hash scan
+  protected long lastLocalHashMismatch;	// last time a new local hash
+					// mismatch was detected
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -124,7 +126,8 @@ public class AuState implements LockssSerializable {
 	 0, // lastContentChange
 	 -1, // lastPoPPoll
 	 -1, // lastPoPPollResult
-	 -1, // lastLocalPoll
+	 -1, // lastLocalHashScan
+	 -1, // lastLocalHashMismatch
 	 historyRepo);
   }
 
@@ -148,7 +151,7 @@ public class AuState implements LockssSerializable {
 	 null,				// substanceFeatureVersion
 	 null,				// metadataFeatureVersion
 	 TimeBase.nowMs(),              // lastContentChange
-	 -1, -1, -1,
+	 -1, -1, -1, -1,
 	 historyRepo);
   }
 
@@ -169,7 +172,8 @@ public class AuState implements LockssSerializable {
 		 long lastContentChange,
 		 long lastPoPPoll,
 		 int lastPoPPollResult,
-		 long lastLocalPoll,
+		 long lastLocalHashScan,
+		 long lastLocalHashMismatch,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -193,7 +197,8 @@ public class AuState implements LockssSerializable {
     this.lastContentChange = lastContentChange;
     this.lastPoPPoll = lastPoPPoll;
     this.lastPoPPollResult = lastPoPPollResult;
-    this.lastLocalPoll = lastLocalPoll;
+    this.lastLocalHashScan = lastLocalHashScan;
+    this.lastLocalHashMismatch = lastLocalHashMismatch;
     this.historyRepo = historyRepo;
   }
 
@@ -298,11 +303,20 @@ public class AuState implements LockssSerializable {
   }
 
   /**
-   * Returns the last time a Local poll completed.
-   * @return the last poll time in ms
+   * Returns the last time a Local hash scan completed.
+   * @return the last scan time in ms
    */
-  public long getLastLocalPoll() {
-    return lastLocalPoll;
+  public long getLastLocalHashScan() {
+    return lastLocalHashScan;
+  }
+
+  /**
+   * Returns the last time a Local hash scan found a new mismatch (thus
+   * marked a new suspect version)
+   * @return the last new mismatch time in ms
+   */
+  public long getLastLocalHashMismatch() {
+    return lastLocalHashMismatch;
   }
 
   /**
@@ -369,7 +383,7 @@ public class AuState implements LockssSerializable {
     try {
       return V3Poller.getStatusString(lastPoPPollResult);
     } catch (IndexOutOfBoundsException e) {
-      return "Poll result " + lastPollResult;
+      return "Poll result " + lastPoPPollResult;
     }
   }
 
@@ -472,7 +486,8 @@ public class AuState implements LockssSerializable {
 		       substanceVersion, metadataVersion,
 		       lastContentChange,
 		       lastPoPPoll, lastPoPPollResult,
-		       lastLocalPoll,
+		       lastLocalHashScan,
+		       lastLocalHashMismatch,
 		       null);
   }
 
@@ -513,7 +528,7 @@ public class AuState implements LockssSerializable {
       break;
     case Local:
       if (complete) {
-	lastLocalPoll = now;
+	lastLocalHashScan = now;
       }
       break;
     }
