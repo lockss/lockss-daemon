@@ -1,5 +1,5 @@
 /*
- * $Id: AuAgreements.java,v 1.2 2013-08-30 20:28:09 barry409 Exp $
+ * $Id: AuAgreements.java,v 1.3 2013-09-18 05:38:33 tlipkis Exp $
  */
 
 /*
@@ -186,6 +186,12 @@ public class AuAgreements implements LockssSerializable {
 	  log.debug("Ignoring non-V3 peer: "+pid);
 	  continue;
 	}
+	// Discard local hash data stored by early builds of 1.62
+	if (pid.isLocalIdentity()) {
+	  log.debug("Ignoring local identify: "+pid);
+	  continue;
+	}
+
       } catch (IdentityManager.MalformedIdentityKeyException e) {
 	log.warning("Couldn't load agreement for key "+idAgreement.getId(), e);
       }
