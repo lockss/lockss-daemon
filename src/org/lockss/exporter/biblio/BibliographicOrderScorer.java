@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.6 2012-11-14 12:05:09 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.7 2013-09-18 11:36:13 easyonthemayo Exp $
  */
 
 /*
@@ -292,8 +292,12 @@ public final class BibliographicOrderScorer {
     }
     ;
 
-    /** Whether the BibliographicItem has a valid value on the field. */
-    public boolean hasValue(BibliographicItem au) { return getValue(au)!=null; }
+    /** Whether the BibliographicItem has a valid (non-null and non-empty)
+     * value on the field. */
+    public boolean hasValue(BibliographicItem au) {
+      //return getValue(au)!=null;
+      return !StringUtil.isNullString(getValue(au));
+    }
     // Abstract methods for SORT_FIELD
     /** The 'other' or secondary sort field when this is the primary sort field. */
     public abstract SORT_FIELD other();
@@ -352,6 +356,8 @@ public final class BibliographicOrderScorer {
 
     public final float volScore, yearScore, volListScore, yearListScore, score;
 
+    public boolean hasMissingVolValues, hasMissingYearValues;
+
     /**
      * Create a ConsistencyScore from the values in a Calculator object.
      * @param calc a calculator that has performed the calculations
@@ -397,25 +403,45 @@ public final class BibliographicOrderScorer {
     }
 
     /**
-     * The volume score is satisfactory if the overall score meets the
-     * TOTAL_SCORE_THRESHOLD, or the individual volume scores both meet the
-     * VOLUME_SCORE_THRESHOLD. This method should be used to check whether a
-     * volume ordering yields a 'good enough' set of scores for the volume field.
-     * <p>
-     * The point of this is to prevent an algorithm from having to check the
-     * year ordering. In some cases the year ordering can yield a slightly
-     * better score than volume because the years look more complete when
-     * ordered although the volumes become more seriously messed up.
-     * See for example Springer titles "Bulletin Géodésique (1946 - 1975)" and
-     * "Journal of Economics".
-     * Another approach would be to discount the year scores slightly or to
-     * take account of the size of breaks in an ordering as well as their
-     * presence and direction (see countProportionOf(Negative)Breaks methods).
-     * <p>
-     * Note that volume is the preferred indicator as years can be far more
-     * unreliable and harder to interpret.
+     * Whether all internal scores are zero, in which case we probably need to
+     * find another way of deciding between volume and year.
      * @return
      */
+    public boolean allScoresAreZero() {
+      return yearScore==0 && yearListScore==0
+          && volScore==0 && volListScore==0;
+    }
+
+    /**
+     * Whether the year scores are consistently better than the volume scores
+     * under this ordering.
+     * @return
+     */
+    public boolean yearScoresAreBetter() {
+      return yearScore > volScore && yearListScore > volListScore;
+    }
+
+
+    /**
+       * The volume score is satisfactory if the overall score meets the
+       * TOTAL_SCORE_THRESHOLD, or the individual volume scores both meet the
+       * VOLUME_SCORE_THRESHOLD. This method should be used to check whether a
+       * volume ordering yields a 'good enough' set of scores for the volume field.
+       * <p>
+       * The point of this is to prevent an algorithm from having to check the
+       * year ordering. In some cases the year ordering can yield a slightly
+       * better score than volume because the years look more complete when
+       * ordered although the volumes become more seriously messed up.
+       * See for example Springer titles "Bulletin Géodésique (1946 - 1975)" and
+       * "Journal of Economics".
+       * Another approach would be to discount the year scores slightly or to
+       * take account of the size of breaks in an ordering as well as their
+       * presence and direction (see countProportionOf(Negative)Breaks methods).
+       * <p>
+       * Note that volume is the preferred indicator as years can be far more
+       * unreliable and harder to interpret.
+       * @return
+       */
     public boolean isVolumeScoreSatisfactory() {
       return score >= TOTAL_SCORE_THRESHOLD
           || (volScore >=VOLUME_SCORE_THRESHOLD && volListScore >=VOLUME_SCORE_THRESHOLD)
@@ -427,9 +453,15 @@ public final class BibliographicOrderScorer {
      * @return
      */
     public String toString() {
-      return String.format("ConsistencyScore vol %f \t year %f \t " +
-          "volList %f \t yearList %f \t Overall %s",
-          volScore, yearScore, volListScore, yearListScore, score);
+      StringBuilder sb = new StringBuilder(
+          String.format("ConsistencyScore vol %f \t year %f \t " +
+              "volList %f \t yearList %f \t Overall %s",
+              volScore, yearScore, volListScore, yearListScore, score
+          )
+      );
+      if (hasMissingVolValues) sb.append(" (missing volume values)");
+      if (hasMissingYearValues) sb.append(" (missing year values)");
+      return sb.toString();
     }
 
 
@@ -471,12 +503,29 @@ public final class BibliographicOrderScorer {
       this.ranges = calc.ranges;
     }
 
+    /**
+     * @deprecated only used by getConsistencyScoreOld
+     */
     public ConsistencyScoreWithRanges(float volScore, float yearScore,
                                       float volListScore, float yearListScore,
                                       List<TitleRange> ranges) {
       super(volScore, yearScore, volListScore, yearListScore);
       this.ranges = ranges;
+      checkForMissingFieldValues();
     }
+
+    protected void checkForMissingFieldValues() {
+      // Check for missing field values
+      for (TitleRange range : ranges) {
+        for (BibliographicItem au : range.items) {
+          if (!SORT_FIELD.VOLUME.hasValue(au)) this.hasMissingVolValues = true;
+          if (!SORT_FIELD.YEAR.hasValue(au)) this.hasMissingYearValues = true;
+          // Return if we already know the answer for both
+          if (hasMissingVolValues && hasMissingYearValues) return;
+        }
+      }
+    }
+
   }
 
   /**
@@ -721,6 +770,7 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areValuesIncreasing(String first, String second)
       throws NumberFormatException {
+    //if (first==null || second==null) return false; //throw new NumberFormatException("Null value");
     return areValuesIncreasing(NumberUtil.parseInt(first),
         NumberUtil.parseInt(second));
   }
@@ -737,6 +787,7 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areValuesDecreasing(String first, String second)
       throws NumberFormatException {
+    //if (first==null || second==null) return false; //throw new NumberFormatException("Null value");
     return NumberUtil.parseInt(first) > NumberUtil.parseInt(second);
   }
 
@@ -760,11 +811,6 @@ public final class BibliographicOrderScorer {
    * For example, "s1-4" and "s1-15" are considered to be generally increasing.
    * The final token can be Roman or Arabic as we use
    * {@link NumberUtil.areIntegersConsecutive}.
-   * <p>
-   * XXX Note: This method can throw NPEs and index out of bounds Exceptions if the
-   * servlet is interrupted in the browser and then resubmitted. It seems the
-   * matcher gets confused.
-   * </p>
    *
    * @param first a String representing the first volume
    * @param second a String representing the subsequent volume
@@ -773,6 +819,7 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areVolumesIncreasing(String first, String second)
       throws NumberFormatException {
+    if (first==null || second==null) return false; //throw new NumberFormatException("Null value");
     // If the strings are equal, there's no need to tokenise
     if (first.equals(second)) return true;
     Perl5Matcher matcher = RegexpUtil.getMatcher();
@@ -842,6 +889,7 @@ public final class BibliographicOrderScorer {
    */
   static final boolean areYearsIncreasing(String first, String second)
       throws NumberFormatException {
+    if (first==null || second==null) return false; //throw new NumberFormatException("Null value");
     return areYearsIncreasing(NumberUtil.parseInt(first),
         NumberUtil.parseInt(second));
   }
@@ -1596,6 +1644,10 @@ public final class BibliographicOrderScorer {
   // methods for volume and year.
   // The newer approach which calls combined methods appears to be no faster,
   // and in fact slightly slower for the very small numbers of AUs in titles
+
+  /**
+   * @deprecated
+   */
   protected static final ConsistencyScoreWithRanges getConsistencyScoreOld(
       List<? extends BibliographicItem> aus,
       List<TitleRange> ranges) {
@@ -1611,16 +1663,31 @@ public final class BibliographicOrderScorer {
   /**
    * Look at the scores and decide whether the volume ordering yields a net
    * benefit over the year scores and should be preferred.
+   * If the orderings are isomorphic, the relative benefits will be equal,
+   * so we should check first if the year scores are better than vol scores.
    * @param volScore  the ConsistencyScore for volume ordering
    * @param yearScore the ConsistencyScore for year ordering
    * @return whether to prefer the volume ordering
    */
   public static final boolean preferVolume(ConsistencyScore volScore,
                                            ConsistencyScore yearScore) {
-    // Use the volume ordering if the benefit of using it outweighs
-    // the loss to year orderings
-    return calculateRelativeBenefitToVolume(volScore, yearScore) >=
-        calculateRelativeLossToYear(volScore, yearScore);
+
+    // If both scores contain zero scores, we have to decide another way,
+    // so prefer volume if it has a full set of values, otherwise year.
+    if (volScore.allScoresAreZero() && yearScore.allScoresAreZero()) {
+      return !volScore.hasMissingVolValues;
+    }
+
+    // If there are non-zero scores, calculate relative benefit and loss
+    float volBenefit = calculateRelativeBenefitToVolume(volScore, yearScore);
+    float yrLoss = calculateRelativeLossToYear(volScore, yearScore);
+
+    // If benefit scores are equal, check if year scores are greater; otherwise prefer volume
+    if (volBenefit == yrLoss) {
+      return !(volScore.yearScoresAreBetter() && yearScore.yearScoresAreBetter());
+    }
+    // Use the volume ordering if the benefit of using it outweighs the loss to year orderings
+    else return volBenefit > yrLoss;
   }
 
   /**
@@ -1718,6 +1785,7 @@ public final class BibliographicOrderScorer {
       Score redScore = countProportionOfRedundancyInRange(aus);
       Score brkScore = countBreaksInRange(aus);
       Score negbrkScore = countProportionOfNegativeBreaksInRange(aus);
+      //System.out.format("red %s, brk %s, negbrk %s", redScore, brkScore, negbrkScore);
       this.volumeListConsistency = (1-redScore.volScore) * (1-brkScore.volScore) * (1-negbrkScore.volScore);
       this.yearListConsistency = (1-redScore.yearScore) * (1-brkScore.yearScore) * (1-negbrkScore.yearScore);
     }
@@ -1753,6 +1821,13 @@ public final class BibliographicOrderScorer {
       this.yearScore = yearScore;
     }
 
+    @Override
+    public String toString() {
+      return "Score{" +
+          "volScore=" + volScore +
+          ", yearScore=" + yearScore +
+          '}';
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.8 2012-11-15 13:21:41 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.9 2013-09-18 11:36:14 easyonthemayo Exp $
  */
 
 /*
@@ -750,6 +750,13 @@ public class TestBibliographicUtil extends LockssTestCase {
    * TestBibliographicOrderScorer.
    */
   public final void testChangeOfFormats() {
+    assertTrue(  changeOfFormats("1", null) );
+    assertTrue(  changeOfFormats(null, "1") );
+    // No change of formats where neither value can be parsed as a number
+    assertFalse( changeOfFormats("string", null) );
+    assertFalse( changeOfFormats(null, "string") );
+    assertFalse( changeOfFormats(null, null) );
+
     assertTrue(  changeOfFormats("string", "1") );
     assertTrue(  changeOfFormats("1", "string") );
     assertFalse( changeOfFormats("1", "1") );

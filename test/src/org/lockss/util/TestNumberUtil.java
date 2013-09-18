@@ -1,5 +1,5 @@
 /*
- * $Id: TestNumberUtil.java,v 1.13 2013-07-24 16:50:38 easyonthemayo Exp $
+ * $Id: TestNumberUtil.java,v 1.14 2013-09-18 11:36:14 easyonthemayo Exp $
  */
 
 /*
@@ -313,6 +313,7 @@ public class TestNumberUtil extends LockssTestCase {
     assertTrue(NumberUtil.isMixedFormat("A string with 1 digit!"));
 
     assertFalse(NumberUtil.containsDigit(""));
+    assertFalse(NumberUtil.containsDigit(null));
     assertFalse(NumberUtil.containsDigit("XI"));
     assertFalse(NumberUtil.containsDigit("a string"));
   }

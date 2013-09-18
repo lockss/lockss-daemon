@@ -1,5 +1,5 @@
 /*
- * $Id: NumberUtil.java,v 1.18 2013-07-24 16:50:38 easyonthemayo Exp $
+ * $Id: NumberUtil.java,v 1.19 2013-09-18 11:36:14 easyonthemayo Exp $
  */
 
 /*
@@ -625,6 +625,7 @@ public class NumberUtil {
     if (StringUtil.isNullString(s)) return false;
     // First try as digits
     if (isIntegerDigits(s)) return true;
+    //if (NumberUtils.isDigits(s)) return true;
     // Secondly try as a Roman numeral, requiring normalisation
     try {
       NumberUtil.parseRomanNumber(s.toUpperCase());
@@ -647,6 +648,7 @@ public class NumberUtil {
    * @return <tt>true</tt> if the input string contains any digits
    */
   public static boolean containsDigit(String s) {
+    if (s==null) return false;
     for (char c : s.toCharArray()) {
       if (Character.isDigit(c)) return true;
     }

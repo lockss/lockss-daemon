@@ -208,6 +208,27 @@ public class TestBibliographicOrderScorer extends TestCase {
     au < released ; Laser Chemistry Volume 11 (1991) ; 1991 ; 11 ; 1991 >
 
     ---------------------------------------------------------------------------
+    (7) Volume scheme changes; years remain consistent.
+
+    au < released ; Abstract and Applied Analysis Volume 5 (2000) ; 2000 ; 5 ; 2000 >
+    au < released ; Abstract and Applied Analysis Volume 6 (2001) ; 2001 ; 6 ; 2001 >
+    au < released ; Abstract and Applied Analysis Volume 7 (2002) ; 2002 ; 7 ; 2002 >
+    au < released ; Abstract and Applied Analysis Volume 2003 ; 2003 ; 2003 ; 2003 >
+    au < released ; Abstract and Applied Analysis Volume 2004 ; 2004 ; 2004 ; 2004 >
+    au < released ; Abstract and Applied Analysis Volume 2005 ; 2005 ; 2005 ; 2005 >
+
+    ---------------------------------------------------------------------------
+    (8) Publication year gaps with no volume field (primarily Libertas Academica)
+
+    au < released ; 2009 ; Advances in Tumor Virology Volume 1 ; 2009 >
+    au < released ; 2011 ; Advances in Tumor Virology Volume 2 ; 2011 >
+
+    au < released ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
+    au < released ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
+    au < released ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
+    au < released ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2012 >
+
+    ---------------------------------------------------------------------------
    */
 
   // A list of AUs whose years and volumes are very well behaved. The volume 
@@ -240,6 +261,8 @@ public class TestBibliographicOrderScorer extends TestCase {
   List<BibliographicItem> geoSocLonMem;       // Should be ordered by volume
   List<BibliographicItem> geoSocLonSP;        // Should be ordered by volume
   List<BibliographicItem> laserChem;
+  List<BibliographicItem> aaa;                 // Should be ordered/range-split by year
+  List<BibliographicItem> tumVir;             // Should be ordered/range-split by year
 
   // Record all the problematic test AUs in a list
   List<List<BibliographicItem>> problemTitles;
@@ -1012,6 +1035,48 @@ public class TestBibliographicOrderScorer extends TestCase {
         laserChem6, laserChem7, laserChem8, laserChem9, laserChem10
     );
     consistentSequences.add(laserChem);
+
+    // ----------------------------------------------------------------------
+    BibliographicItem aaa1  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 5 (2000)")
+        .setYear("2000")
+        .setVolume("5");
+    BibliographicItem aaa2  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 6 (2001)")
+        .setYear("2001")
+        .setVolume("6");
+    BibliographicItem aaa3  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 7 (2002)")
+        .setYear("2002")
+        .setVolume("7");
+    BibliographicItem aaa4  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 2003")
+        .setYear("2003")
+        .setVolume("2003");
+    BibliographicItem aaa5  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 2004")
+        .setYear("2004")
+        .setVolume("2004");
+    BibliographicItem aaa6  = new BibliographicItemImpl()
+        .setName("Abstract and Applied Analysis Volume 2005")
+        .setYear("2005")
+        .setVolume("2005");
+
+    aaa = Arrays.asList(aaa1, aaa2, aaa3, aaa4, aaa5, aaa6);
+
+    // ----------------------------------------------------------------------
+    // Advances in Tumor Virology has no volume field filled in, so should
+    // depend only on year, which in this case includes a gap
+    BibliographicItem tumVir1  = new BibliographicItemImpl()
+        .setName("Advances in Tumor Virology Volume 1")
+        .setYear("2009");
+        //.setVolume("");
+    BibliographicItem tumVir2  = new BibliographicItemImpl()
+        .setName("Advances in Tumor Virology Volume 2")
+        .setYear("2011");
+        //.setVolume("");
+
+    tumVir = Arrays.asList(tumVir1, tumVir2);
   }
 
   protected void tearDown() throws Exception {
@@ -1699,6 +1764,20 @@ public class TestBibliographicOrderScorer extends TestCase {
     checkCountProportionOfBreaksInRange(VOL, afrTod, 0, 0);
     checkCountProportionOfBreaksInRange(YR,  afrTod, 0, 0);
 
+    // laserChem
+    checkCountProportionOfBreaksInRange(VOL, laserChem, 0, 0);
+    checkCountProportionOfBreaksInRange(YR,  laserChem, 0, 0);
+
+    // aaa
+    checkCountProportionOfBreaksInRange(VOL, aaa, 1, 0);
+    checkCountProportionOfBreaksInRange(YR,  aaa, 1, 0);
+
+    // tumVir
+    // Due to the lack of volume values, all pairs will be considered to have
+    // breaks between them
+    checkCountProportionOfBreaksInRange(VOL, tumVir, 1, 1);
+    checkCountProportionOfBreaksInRange(YR,  tumVir, 1, 1);
+
   }
 
   /**
@@ -1721,6 +1800,9 @@ public class TestBibliographicOrderScorer extends TestCase {
     checkCountProportionOfUniquelyYearBreaks(geoSocLonMem, 0);
     checkCountProportionOfUniquelyYearBreaks(geoSocLonSP, 0);
     checkCountProportionOfUniquelyYearBreaks(afrTod, 0);
+    checkCountProportionOfUniquelyYearBreaks(laserChem, 0);
+    checkCountProportionOfUniquelyYearBreaks(aaa, 0);
+    checkCountProportionOfUniquelyYearBreaks(tumVir, 1);
   }
 
   /**
@@ -1785,6 +1867,20 @@ public class TestBibliographicOrderScorer extends TestCase {
     // afrTod
     checkCountProportionOfNegativeBreaksInRange(VOL, afrTod, 0);
     checkCountProportionOfNegativeBreaksInRange(YR,  afrTod, 0);
+
+    // laserChem
+    checkCountProportionOfNegativeBreaksInRange(VOL, laserChem, 0);
+    checkCountProportionOfNegativeBreaksInRange(YR,  laserChem, 0);
+
+    // aaa
+    checkCountProportionOfNegativeBreaksInRange(VOL, aaa, 0);
+    checkCountProportionOfNegativeBreaksInRange(YR,  aaa, 0);
+
+    // tumVir
+    // Due to the lack of volume values, all vol pairs will be considered to have
+    // breaks between them (method tests the "other" field)
+    checkCountProportionOfNegativeBreaksInRange(VOL, tumVir, 0);
+    checkCountProportionOfNegativeBreaksInRange(YR,  tumVir, 1);
 
   }
 
@@ -1851,6 +1947,19 @@ public class TestBibliographicOrderScorer extends TestCase {
     checkCountProportionOfRedundancyInRange(YR,  afrTod, 0, 0);
     // (no redundancy expected with new definition - consecutive duplicates allowed)
 
+    // laserChem
+    checkCountProportionOfRedundancyInRange(VOL, laserChem, 0, 0);
+    checkCountProportionOfRedundancyInRange(YR,  laserChem, 0, 0);
+
+    // aaa
+    checkCountProportionOfRedundancyInRange(VOL, aaa, 0, 0);
+    checkCountProportionOfRedundancyInRange(YR,  aaa, 0, 0);
+
+    // tumVir
+    // Volumes will get a high score as there no values
+    checkCountProportionOfRedundancyInRange(VOL, tumVir, 1, 0);
+    checkCountProportionOfRedundancyInRange(YR,  tumVir, 1, 0);
+
   }
 
   /**
@@ -1862,6 +1971,13 @@ public class TestBibliographicOrderScorer extends TestCase {
     for (List<BibliographicItem> aus : problemTitles) {
       assertMonotonicIncreaseOnTheSortedField(aus);
     }
+    // Test AAA - monotonically increasing on both fields
+    assertTrue(BibliographicOrderScorer.isMonotonicallyIncreasing(aaa, YR));
+    assertTrue(BibliographicOrderScorer.isMonotonicallyIncreasing(aaa, VOL));
+
+    // Test TumVir - monotonically increasing on year but not empty volumes
+    assertTrue(BibliographicOrderScorer.isMonotonicallyIncreasing(tumVir, YR));
+    assertFalse(BibliographicOrderScorer.isMonotonicallyIncreasing(tumVir, VOL));
   }
 
   /**
@@ -1878,6 +1994,11 @@ public class TestBibliographicOrderScorer extends TestCase {
     // use something like Levenstein distance.
     assertFalse( changeOfFormats("s1-1", "volume 8") );
     assertFalse( changeOfFormats("99", "ill") );
+    // Example of consecutive volume values taken from AAA
+    assertFalse( changeOfFormats("7", "2003") );
+    // Test AAA - There is no recognisable change of formats on either field
+    assertFalse(containsChangeOfFormats(aaa, YR));
+    assertFalse(containsChangeOfFormats(aaa, VOL));
   }
 
   /**
@@ -2174,6 +2295,7 @@ public class TestBibliographicOrderScorer extends TestCase {
         // Indices that do not appear in either of these lists can be ordered either way 
       }
     }
+
     // Consistent sequence - single range
     for (List<BibliographicItem> aus : consistentSequences) {
       List<TitleRange> ranges = Arrays.asList(new TitleRange(aus));
@@ -2184,6 +2306,45 @@ public class TestBibliographicOrderScorer extends TestCase {
       boolean preferVolume = BibliographicOrderScorer.preferVolume(csVol, csYear);
       assertTrue(preferVolume);
     }
+
+    // Test AAA - prefer year as it is more consistent
+    orderVolYear(aaa);
+    ConsistencyScore csVol = BibliographicOrderScorer.getConsistencyScore(aaa, Arrays.asList(new TitleRange(aaa)));
+    orderYearVol(aaa);
+    ConsistencyScore csYear = BibliographicOrderScorer.getConsistencyScore(aaa, Arrays.asList(new TitleRange(aaa)));
+    // Vol scoring should show years to be better
+    assertTrue(csVol.yearsAreFullyConsistent());
+    assertFalse(csVol.volumesAreFullyConsistent());
+    assertTrue(csVol.yearScoresAreBetter());
+    // Year scoring should show years to be better
+    assertTrue(csYear.yearsAreFullyConsistent());
+    assertFalse(csYear.volumesAreFullyConsistent());
+    assertTrue(csYear.yearScoresAreBetter());
+    // Therefore year should be preferred
+    assertFalse(
+        String.format("AAA should prefer Year to Vol:\n  %s\n  %s", csVol, csYear),
+        BibliographicOrderScorer.preferVolume(csVol, csYear)
+    );
+
+    // Test TumVir - prefer year as volumes are empty!
+    List<BibliographicItem> myTumVir = new ArrayList<BibliographicItem>();
+    myTumVir.addAll(tumVir);
+    myTumVir.add(
+        new BibliographicItemImpl()
+            .setName("Advances in Tumor Virology Volume 3")
+            .setYear("2012")
+    );
+    tumVir = myTumVir;
+
+    orderVolYear(tumVir);
+    csVol = BibliographicOrderScorer.getConsistencyScore(tumVir, Arrays.asList(new TitleRange(tumVir)));
+    orderYearVol(tumVir);
+    csYear = BibliographicOrderScorer.getConsistencyScore(tumVir, Arrays.asList(new TitleRange(tumVir)));
+    // Year should be preferred due to missing volume values
+    assertFalse(
+        String.format("TumVir should prefer Year to Vol:\n  %s\n  %s", csVol, csYear),
+        BibliographicOrderScorer.preferVolume(csVol, csYear)
+    );
   }
 
   /**
@@ -2338,7 +2499,7 @@ public class TestBibliographicOrderScorer extends TestCase {
    * the primary sort field. Then we test whether the method gives the expected
    * proportion on the secondary (other) sort field, based on the expected 
    * number of breaks. The values of the primary sort field, having been 
-   * ordered on that field, should all show 0 negative breaks.
+   * ordered on that field, should all show 0 negative breaks (unless some are empty).
    *
    * @param sortField the primary field on which to sort the aus
    * @param aus the list of BibliographicItems to test with
@@ -2359,23 +2520,28 @@ public class TestBibliographicOrderScorer extends TestCase {
     assertValidProportion(val);
     assertEquals(((float)expBreaks)/denom, val);
     // Sanity check
-    assertEquals(0f, BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(
-	aus, sortField));
+    if (hasMissingValues(aus, sortField))
+      assertTrue(BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(
+          aus, sortField) > 0f);
+    else
+      assertEquals(0f, BibliographicOrderScorer.countProportionOfNegativeBreaksInRange(
+          aus, sortField));
   }
 
-  /**
-   * Run tests on the countProportionOfRedundancyInRange method, using the 
-   * given list of BibliographicItems and primary sort field. The aus are first shuffled, 
-   * and then sorted by volume then year, or year then volume, depending on 
-   * the primary sort field. Then we test whether the method gives the expected
-   * proportions, which are based on the expected number of redundant entries 
-   * for each field.
-   *
-   * @param sortField the primary field on which to sort the aus
-   * @param aus the list of BibliographicItems to test with
-   * @param expVolBreaks the expected number of volume breaks given the sort field
-   * @param expYrBreaks the expected number of year breaks given the sort field
-   */
+    /**
+     * Run tests on the countProportionOfRedundancyInRange method, using the
+     * given list of BibliographicItems and primary sort field. The aus are first shuffled,
+     * and then sorted by volume then year, or year then volume, depending on
+     * the primary sort field. Then we test whether the method gives the expected
+     * proportions, which are based on the expected number of redundant entries
+     * for each field. If the field has empty values, we expect a high
+     * redundancy of 1.
+     *
+     * @param sortField the primary field on which to sort the aus
+     * @param aus the list of BibliographicItems to test with
+     * @param expVolBreaks the expected number of volume breaks given the sort field
+     * @param expYrBreaks the expected number of year breaks given the sort field
+     */
   private final void checkCountProportionOfRedundancyInRange(SORT_FIELD sortField,
                                                          List<BibliographicItem> aus,
                                                          int expVolBreaks,
@@ -2385,13 +2551,21 @@ public class TestBibliographicOrderScorer extends TestCase {
     // Get the denominator for calculating proportions. Equal to 1 less than the 
     // number of aus.
     float denom = (float)aus.size();
+
     // Check the results
     float yrVal = BibliographicOrderScorer.countProportionOfRedundancyInRange(aus, YR);
     assertValidProportion(yrVal);
-    assertEquals(((float)expYrBreaks)/denom, yrVal);
+    if (hasMissingValues(aus, YR))
+      assertEquals(1f, yrVal);
+    else
+      assertEquals(((float)expYrBreaks)/denom, yrVal);
+
     float volVal = BibliographicOrderScorer.countProportionOfRedundancyInRange(aus, VOL);
     assertValidProportion(volVal);
-    assertEquals(((float)expVolBreaks)/denom, volVal);
+    if (hasMissingValues(aus, VOL))
+      assertEquals(1f, volVal);
+    else
+      assertEquals(((float)expVolBreaks)/denom, volVal);
   }
 
   /**
@@ -2496,6 +2670,14 @@ public class TestBibliographicOrderScorer extends TestCase {
     System.out.format("---\n");
     for (BibliographicItem bi : aus)
       System.out.format("%s (%s)\n", bi.getVolume(), bi.getYear());
+  }
+
+
+  private boolean hasMissingValues(List<BibliographicItem> aus, SORT_FIELD fieldToCheck) {
+    for (BibliographicItem au : aus) {
+      if (!fieldToCheck.hasValue(au)) return true;
+    }
+    return false;
   }
 
 }

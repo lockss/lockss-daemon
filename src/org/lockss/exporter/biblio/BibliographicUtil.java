@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.9 2013-07-24 16:50:37 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.10 2013-09-18 11:36:14 easyonthemayo Exp $
  */
 
 /*
@@ -656,6 +656,8 @@ public class BibliographicUtil {
    * non-digits (does not contain digits), we cannot decide if there is a change
    * of formats and return false.
    * <p>
+   * If both values are empty, the result is false.
+   * <p>
    * In future it might be desirable to use a more complex measure
    * of similarity or difference, for example Levenstein distance or a regexp
    * and tokenisation. (For example if the formats are both string, test that
@@ -666,7 +668,7 @@ public class BibliographicUtil {
    * @return true if one string contains only digits while the other is not parsable as a number
    */
   public static final boolean changeOfFormats(String lastVal, String thisVal) {
-
+    if (lastVal==null && thisVal==null) return false;
     boolean rn1 = NumberUtil.isRomanNumber(lastVal);
     boolean rn2 = NumberUtil.isRomanNumber(thisVal);
     // TODO It might be better to only allow normalised Roman numbers using NumberUtil.parseRomanNumber(s, true);
