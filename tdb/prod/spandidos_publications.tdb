@@ -62,4 +62,69 @@
 
   }
 
+  {
+    title <
+      name = Experimental and Therapeutic Medicine ;
+      issn = 1792-0981 ;
+      eissn = 1792-1015
+    >
+    
+    param[journal_id] = etm
+
+    au < exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Molecular Medicine ;
+      issn = 1107-3756 ;
+      eissn = 1791-244X
+    >
+    
+    param[journal_id] = ijmm
+
+    au < exists ; 1998 ; International Journal of Molecular Medicine Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Biomedical Reports ;
+      issn = 2049-9434 ;
+      eissn = 2049-9442
+    >
+    
+    param[journal_id] = br
+
+    au < exists ; 2013 ; Biomedical Reports Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Oncology Reports ;
+      issn = 1021-335X ;
+      eissn = 1791-2431
+    >
+    
+    param[journal_id] = or
+
+    au < exists ; 2013 ; Oncology Reports Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Molecular Medicine Reports ;
+      issn = 1791-2997 ;
+      eissn = 1791-3004
+    >
+    
+    param[journal_id] = mmr
+
+    au < exists ; 2008 ; Oncology Reports Volume 1 ; 1 >
+
+  }
+
 }
