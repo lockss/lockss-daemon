@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.167.2.5 2013-08-19 22:40:05 barry409 Exp $
+ * $Id: V3Poller.java,v 1.167.2.6 2013-09-18 05:30:06 tlipkis Exp $
  */
 
 /*
@@ -782,10 +782,10 @@ public class V3Poller extends BasePoll {
       log.debug3("Repairers " + willingRepairers + " vs " +
 		 repairerThreshold);
       if (willingRepairers < repairerThreshold) {
-	// AU lacks willing repairers, call PoP poll
-	ret = PollVariant.PoP;
-      } else {
-	// AU in good shape with repairers, call local poll
+	// AU lacks willing repairers, call PoP poll if enabled, else PoR
+	ret = enablePoPPolls ? PollVariant.PoP : PollVariant.PoR;
+      } else if (enableLocalPolls) {
+	// AU in good shape with repairers, call local poll if enabled
 	ret = PollVariant.Local;
       }
     } else {
@@ -820,8 +820,7 @@ public class V3Poller extends BasePoll {
       long agreeTime = ((Long)ent.getValue()).longValue();
       long delta = lastPoRPoll - agreeTime;
       PeerIdentity pid = (PeerIdentity)ent.getKey();
-      // Map includes agreement in local polls, so must exclude local ID.
-      if (delta >= 0 && delta < threshold && !pid.isLocalIdentity()) {
+      if (delta >= 0 && delta < threshold) {
 	ret++;
       }
     }
