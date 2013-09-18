@@ -1,5 +1,5 @@
 /*
- * $Id: RepairPolicy.java,v 1.4 2012-09-24 18:51:29 barry409 Exp $
+ * $Id: RepairPolicy.java,v 1.4.26.1 2013-09-18 05:29:47 tlipkis Exp $
  */
 
 /*
@@ -41,8 +41,10 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.poller.ReputationTransfers;
+import org.lockss.protocol.AgreementType;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.LcapStreamComm;
+import org.lockss.protocol.PeerAgreement;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.RepositoryNode;
 import org.lockss.state.AuState;
@@ -102,6 +104,11 @@ public class RepairPolicy {
   // todo(bhayes): URL agreement should be a per-AU property, not a
   // daemon property.
   private boolean perUrlAgreement = DEFAULT_ENABLE_PER_URL_AGREEMENT;
+
+  // An agreement of any of these types will permit a repair.
+  private static final EnumSet<AgreementType> permitRepairAgreements =
+    EnumSet.of(AgreementType.POR, AgreementType.SYMMETRIC_POR,
+	       AgreementType.POP, AgreementType.SYMMETRIC_POP);
 
   private final PollManager pollManager;
   private final IdentityManager idManager;
@@ -235,13 +242,22 @@ public class RepairPolicy {
     log.debug2("Minimum percent agreement required for repair: "
 	       + minPercentForRepair);
 
-    for (PeerIdentity pid: 
-	   reputationTransfers.getAllReputationsTransferredFrom(reqPid)) {
-      float percentAgreement = idManager.getHighestPercentAgreement(pid, au);
-      log.debug2("peer " + pid + " has agreement " + percentAgreement);
-      if (percentAgreement >= minPercentForRepair) {
-	log.debug2("Returning true: " + pid);
-	return true;
+
+    for (AgreementType type: permitRepairAgreements) {
+      Map<PeerIdentity, PeerAgreement> agreements =
+	idManager.getAgreements(au, type);
+      for (PeerIdentity pid: 
+	     reputationTransfers.getAllReputationsTransferredFrom(reqPid)) {
+	PeerAgreement agreement = agreements.get(pid);
+	if (agreement != null) {
+	  float percentAgreement = agreement.getHighestPercentAgreement();
+	  log.debug2("peer " + pid + " has "+ type +
+		     " agreement " + percentAgreement);
+	  if (percentAgreement >= minPercentForRepair) {
+	    log.debug2("Returning true: " + pid);
+	    return true;
+	  }
+	}
       }
     }
     log.debug2("Returning false.");
