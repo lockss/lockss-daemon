@@ -59,9 +59,9 @@
     comment[0] = content not online yet
     param[journal_issn] = 1080-286X
 
-    au < exists ; 2011 ; Information Technology Management Volume 24 ; 24 >
-    au < exists ; 2012 ; Information Technology Management Volume 25 ; 25 >
-    au < expected ; 2013 ; Information Technology Management Volume 26 ; 26 >
+    au < expected ; 1988 ; Information Technology Management Volume 1 ; 1 >
+    au < expected ; 1989 ; Information Technology Management Volume 2 ; 2 >
+    au < expected ; 1990 ; Information Technology Management Volume 3 ; 3 >
 
 
   }
@@ -1934,10 +1934,10 @@
       eissn = 2166-7284
     >
 
-    comment[0] = forthcoming in 2013
+    comment[0] = forthcoming in 2014 as of 9-18-2013
     param[journal_issn] = 2166-7276
 
-    au < expected ; 2013 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) Volume 1 ; 1 >
+    au < expected ; 2014 ; International Journal of Pharmacology and Pharmaceutical Technology (IJPPT) Volume 1 ; 1 >
 
   }
 
