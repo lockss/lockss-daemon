@@ -23,6 +23,7 @@
       
       au < zapped ; down ; 2012 ; African Journal of Accounting, Auditing and Finance Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; African Journal of Accounting, Auditing and Finance Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; African Journal of Accounting, Auditing and Finance Volume 3 ; 3 >
 
     }
 
@@ -39,6 +40,7 @@
       
       au < released ; crawling ; 2012 ; African Journal of Economic and Sustainable Development Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; African Journal of Economic and Sustainable Development Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; African Journal of Economic and Sustainable Development Volume 3 ; 3 >
 
     }
 
@@ -58,6 +60,7 @@
       au < released ; crawling ; 2010-2011 ; Afro-Asian Journal of Finance and Accounting Volume 2 ; 2 >
       au < zapped ; down ; 2012 ; Afro-Asian Journal of Finance and Accounting Volume 3 ; 3 >
       au < expected ; exists ; 2013 ; Afro-Asian Journal of Finance and Accounting Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Afro-Asian Journal of Finance and Accounting Volume 5 ; 5 >
 
     }
 
@@ -75,6 +78,7 @@
       au < manifest ; exists ; 2008-2009 ; American Journal of Finance and Accounting Volume 1 ; 1 >
       au < released ; crawling ; 2010-2011 ; American Journal of Finance and Accounting Volume 2 ; 2 >
       au < expected ; exists ; 2012-2013 ; American Journal of Finance and Accounting Volume 3 ; 3 >
+      au < expected ; exists ; 2014-2015 ; American Journal of Finance and Accounting Volume 4 ; 4 >
 
     }
 
@@ -91,8 +95,9 @@
       
       au < manifest ; exists ; 2005-2007 ; Atoms for Peace: an International Journal Volume 1 ; 1 >
       au < manifest ; exists ; 2008-2009 ; Atoms for Peace: an International Journal Volume 2 ; 2 >
-      au < released ; crawling ; 2010 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
-      au < expected ; exists ; 2011 ; Atoms for Peace: an International Journal Volume 4 ; 4 >
+      au < released ; crawling ; 2010-2012 ; Atoms for Peace: an International Journal Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; Atoms for Peace: an International Journal Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Atoms for Peace: an International Journal Volume 5 ; 5 >
 
     }
 
@@ -108,8 +113,8 @@
       param[journal_issn] = 1754-7326
 
       au < released ; crawling ; 2008-2010 ; The Botulinum Journal Volume 1 ; 1 >
-      au < zapped ; down ; 2011 ; The Botulinum Journal Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; The Botulinum Journal Volume 3 ; 3 >
+      au < zapped ; down ; 2011-2013 ; The Botulinum Journal Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; The Botulinum Journal Volume 3 ; 3 >
 
     }
 
@@ -134,6 +139,7 @@
       au < zapped ; down ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 >
       au < released ; crawling ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Electronic Government, an International Journal Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; Electronic Government, an International Journal Volume 11 ; 11 >
 
     }
 
@@ -149,8 +155,8 @@
       param[journal_issn] = 1758-1516
       
       au < released ; crawling ; 2009-2010 ; European Journal of Cross-Cultural Competence and Management Volume 1 ; 1 >
-      au < zapped ; down ; 2011 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
+      au < zapped ; down ; 2011-2012 ; European Journal of Cross-Cultural Competence and Management Volume 2 ; 2 >
+      au < expected ; exists ; 2013-2014 ; European Journal of Cross-Cultural Competence and Management Volume 3 ; 3 >
 
     }
 
@@ -172,6 +178,7 @@
       au < zapped ; down ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; European Journal of Industrial Engineering Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; European Journal of Industrial Engineering Volume 8 ; 8 >
 
     }
 
@@ -193,6 +200,7 @@
       au < zapped ; down ; 2011 ; European Journal of International Management Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; European Journal of International Management Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; European Journal of International Management Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; European Journal of International Management Volume 8 ; 8 >
 
     }
 
@@ -222,6 +230,7 @@
       au < released ; crawling ; 2011 ; Global Business and Economics Review Volume 13 ; 13 >
       au < zapped ; down ; 2012 ; Global Business and Economics Review Volume 14 ; 14 >
       au < crawling ; exists ; 2013 ; Global Business and Economics Review Volume 15 ; 15 >
+      au < expected ; exists ; 2014 ; Global Business and Economics Review Volume 16 ; 16 >
 
     }
 
@@ -242,7 +251,7 @@
       au < zapped ; down ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 >
       au < zapped ; down ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Abrasive Technology Volume 6 ; 6 >
-      
+      au < expected ; exists ; 2014 ; International Journal of Abrasive Technology Volume 7 ; 7 >
       
     }
 
@@ -261,6 +270,7 @@
       au < released ; crawling ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 >
       au < released ; crawling ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 >
       au < released ; crawling ; 2013 ; International Journal of Accounting and Finance Volume 4 ; 4 >
+      au < released ; crawling ; 2014 ; International Journal of Accounting and Finance Volume 5 ; 5 >
 
     }
 
@@ -284,6 +294,7 @@
       au < released ; crawling ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 10 ; 10 >
 
     }
 
@@ -308,6 +319,7 @@
       au < zapped ; down ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
       au < zapped ; down ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
       au < crawling ; exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 11 ; 11 >
 
     }
 
@@ -342,6 +354,7 @@
       au < zapped ; down ; 2011 ; International Journal of Advanced Intelligence Paradigms Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Advanced Intelligence Paradigms Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Advanced Intelligence Paradigms Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Advanced Intelligence Paradigms Volume 6 ; 6 >
 
     }
 
@@ -361,6 +374,7 @@
       au < zapped ; down ; 2011 ; International Journal of Advanced Mechatronic Systems Volume 3 ; 3 > 
       au < zapped ; down ; 2012 ; International Journal of Advanced Mechatronic Systems Volume 4 ; 4 > 
       au < crawling ; exists ; 2013 ; International Journal of Advanced Mechatronic Systems Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Advanced Mechatronic Systems Volume 6 ; 6 >
 
     }
 
@@ -381,6 +395,7 @@
       au < manifest ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 >
       au < released ; crawling ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 >
       au < released ; crawling ; 2013 ; International Journal of Advanced Media and Communication Volume 5 ; 5 >
+      au < released ; crawling ; 2014 ; International Journal of Advanced Media and Communication Volume 6 ; 6 >
 
     }
 
@@ -400,6 +415,7 @@
       au < zapped ; down ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 >
       au < zapped ; down ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Advanced Operations Management Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Advanced Operations Management Volume 6 ; 6 >
 
     }
 
@@ -417,6 +433,7 @@
       au < released ; crawling ; 2010-2011 ; International Journal of Aerodynamics Volume 1 ; 1 >
       au < released ; crawling ; 2012 ; International Journal of Aerodynamics Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; International Journal of Aerodynamics Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Aerodynamics Volume 4 ; 4 >
 
     }
 
@@ -430,12 +447,14 @@
       >
 
       param[journal_issn] = 1746-1383
+      comment[0] = no issue in 2012
       
       au < manifest ; exists ; 2007 ; International Journal of Agent-Oriented Software Engineering Volume 1 ; 1 >
       au < manifest ; exists ; 2008 ; International Journal of Agent-Oriented Software Engineering Volume 2 ; 2 >
       au < manifest ; exists ; 2009 ; International Journal of Agent-Oriented Software Engineering Volume 3 ; 3 >
       au < released ; crawling ; 2010-2011 ; International Journal of Agent-Oriented Software Engineering Volume 4 ; 4 >
-      au < expected ; exists ; 2012 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 >
+      au < expected ; exists ; 2013 ; International Journal of Agent-Oriented Software Engineering Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Agent-Oriented Software Engineering Volume 6 ; 6 >
 
     }
 
@@ -452,6 +471,7 @@
       
       au < zapped ; down ; 2012 ; International Journal of Agile and Extreme Software Development Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Agile and Extreme Software Development Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of Agile and Extreme Software Development Volume 3 ; 3 >
 
     }
 
@@ -472,6 +492,7 @@
       au < released ; crawling ; 2009-2011 ; International Journal of Agile Systems and Management Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Agile Systems and Management Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Agile Systems and Management Volue 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Agile Systems and Management Volue 7 ; 7 >
 
     }
 
@@ -494,8 +515,9 @@
       au < manifest ; exists ; 2007 ; International Journal of Agricultural Resources, Governance and Ecology Volume 6 ; 6 >
       au < manifest ; exists ; 2008 ; International Journal of Agricultural Resources, Governance and Ecology Volume 7 ; 7 >
       au < manifest ; exists ; 2009 ; International Journal of Agricultural Resources, Governance and Ecology Volume 8 ; 8 >
-      au < released ; crawling ; 2011 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
-      au < expected ; exists ; 2012 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
+      au < released ; crawling ; 2011-2012 ; International Journal of Agricultural Resources, Governance and Ecology Volume 9 ; 9 >
+      au < expected ; exists ; 2013 ; International Journal of Agricultural Resources, Governance and Ecology Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; International Journal of Agricultural Resources, Governance and Ecology Volume 11 ; 11 >
       
     }
 
@@ -511,7 +533,9 @@
       param[journal_issn] = 1741-8011
       
       au < manifest ; exists ; 2006-2007 ; International Journal of Alternative Propulsion Volume 1 ; 1 >
-      au < manifest ; exists ; 2008 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
+      au < manifest ; exists ; 2008-2012 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Alternative Propulsion Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Alternative Propulsion Volume 4 ; 4 >
 
     }
 
@@ -529,6 +553,7 @@
       au < manifest ; exists ; 2008-2009 ; International Journal of Applied Cryptography Volume 1 ; 1 >
       au < released ; crawling ; 2010-2012 ; International Journal of Applied Cryptography Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; International Journal of Applied Cryptography Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Applied Cryptography Volume 4 ; 4 >
 
     }
 
