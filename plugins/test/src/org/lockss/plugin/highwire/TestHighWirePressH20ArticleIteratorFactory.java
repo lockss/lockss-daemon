@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20ArticleIteratorFactory.java,v 1.1 2013-09-16 22:06:45 etenbrink Exp $
+ * $Id: TestHighWirePressH20ArticleIteratorFactory.java,v 1.2 2013-09-20 22:35:03 etenbrink Exp $
  */
 
 /*
@@ -90,8 +90,10 @@ public class TestHighWirePressH20ArticleIteratorFactory extends ArticleIteratorT
     conf.put(VOLUME_NAME_KEY, "1");
     conf.put("depth", "1");
     conf.put("branch", "1");
-    conf.put("numFiles", "2");
-    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_HTML);
+    conf.put("numFiles", "7");
+    conf.put("fileTypes", "" +
+        (SimulatedContentGenerator.FILE_TYPE_PDF |
+         SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "" + DEFAULT_FILESIZE);
     return conf;
   }
@@ -152,16 +154,35 @@ public class TestHighWirePressH20ArticleIteratorFactory extends ArticleIteratorT
      *  what you would find in a "real" crawl with HighWirePressH20:
      *  <base_url>content/<vol>/<iss>/pg.full
      */
-
-    String pat1 = "(\\d+)file[.]html";
-    // turn xxfile.html into full text
-    String repAbs = "/content/1/1/$1.full";
-    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, repAbs);
-
+    
+    String pat0 = "(?!branch)00([12])file[.]html";
+    // turn xxfile.html into body
+    String rep0b = "/content/$1/SEC$1.body";
+    String rep0e = "/content/$1/SEC$1.extract";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0b);
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0e);
+    
+    String pat1 = "branch(\\d+)/(\\d+[3-5])file[.]html";
+    String rep1 = "/content/1/$1/$2.full";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, rep1);
+    
+    String pat2 = "branch(\\d+)/(\\d+[1-3])file[.]pdf";
+    String rep2 = "/content/1/$1/$2.full.pdf";
+    PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat2, rep2);
+    
+    String pat3 = "branch(\\d+)/(\\d+[356])file[.]html";
+    String rep3 = "/content/1/$1/$2.full.pdf+html";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat3, rep3);
+    
+    String pat4 = "branch(\\d+)/(\\d+[7])file[.]html";
+    String rep4 = "/content/1/$1/$2.extract";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat4, rep4);
+    
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
     int countFullText= 0;
     int countMetadata = 0;
+    int countPdf = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       count ++;
@@ -174,17 +195,25 @@ public class TestHighWirePressH20ArticleIteratorFactory extends ArticleIteratorT
       if (cu != null) {
         ++countMetadata;
       }
+      cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF);
+      if (cu != null) {
+        ++countPdf;
+      }
     }
-    // potential article count is 2 (1 branches * 2 files each branch) = 2
-    int expCount = 2;
+    // potential article count is 6 (1 body + (1 branch * 7 files each branch))
+    // less the extract only and pdf landing only
+    int expCount = 6;
 
     log.debug3("Article count is " + count);
     assertEquals(expCount, count);
 
-    // you will get a full text for ALL articles
+    // you will get full text for ALL articles
     assertEquals(expCount, countFullText);
     
-    // you will get metadata for ALL articles
-    assertEquals(expCount, countMetadata); //don't count the one where we removed everything
+    // you will get metadata for all but 2
+    assertEquals(expCount-2, countMetadata); // no metadata for pdf only
+    
+    // you will get pdf for 3
+    assertEquals(3, countPdf);
   }
 }
