@@ -20,7 +20,7 @@
     >
     
     {
-      plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+      plugin = org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin
       param[journal_dir] = ahcsps
  
       au < released ; crawling ; 2011 ; Aswan Heart Centre: Science and Practice Series Volume 2011 ; 2011 >
