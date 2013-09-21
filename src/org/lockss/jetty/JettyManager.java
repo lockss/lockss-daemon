@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.30 2009-11-05 17:43:49 dshr Exp $
+ * $Id: JettyManager.java,v 1.30.68.1 2013-09-21 05:39:03 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,8 @@ public abstract class JettyManager
     super.startService();
     resourceMgr = getApp().getResourceManager();
     oneTimeJettySetup();
-    resetConfig();
+    resetConfig();			// run setConfig() unconditionally
+					// to set defaults in subclasses
   }
 
   // synchronized on class

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.15 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: GenericNameHasher.java,v 1.15.76.1 2013-09-21 05:39:03 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ public class GenericNameHasher extends GenericHasher {
 
   byte[] nameBytes = null;
   int nameIdx = -1;
+
+  private boolean isTrace = log.isDebug3();
 
   public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
     super(cus, dig);

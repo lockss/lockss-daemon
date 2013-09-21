@@ -1,5 +1,5 @@
 /*
- * $Id: OrderedVoteBlocksIterator.java,v 1.1 2013-06-04 17:50:31 barry409 Exp $
+ * $Id: OrderedVoteBlocksIterator.java,v 1.1.4.1 2013-09-21 05:39:00 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,8 @@ public class OrderedVoteBlocksIterator implements VoteBlocksIterator {
   private void check() throws IOException {
     if (prevBlock != null && iterator.peek() != null) {
       if (prevBlock.compareTo(iterator.peek()) >= 0) {
-	throw new OrderException("VoteBlocks misordered.");
+	throw new OrderException("VoteBlocks misordered: prev:\""+ prevBlock+
+				 "\", peek: \""+iterator.peek()+"\"");
       }
     }
   }

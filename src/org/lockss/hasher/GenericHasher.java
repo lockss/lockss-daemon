@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.25 2013-07-07 04:05:43 dshr Exp $
+ * $Id: GenericHasher.java,v 1.25.6.1 2013-09-21 05:39:04 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,6 @@ import org.lockss.plugin.*;
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
   protected static Logger log = Logger.getLogger("GenericHasher");
-  protected boolean isTrace = log.isDebug3();
 
   protected CachedUrlSet cus = null;
   protected ArchivalUnit au = null;
@@ -59,6 +58,8 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected boolean isFinished = false;
   protected boolean isAborted = false;
   protected boolean isFiltered = true;
+
+  private boolean isTrace = log.isDebug3();
 
   protected GenericHasher(CachedUrlSet cus) {
     if (cus == null) {
@@ -113,8 +114,10 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     return isFiltered ? cu.openForHashing() : cu.getUnfilteredInputStream();
   }
 
-  protected InputStream getInputStream(CachedUrl cu, MessageDigest md) {
-    return isFiltered ? cu.openForHashing(md) : cu.getUnfilteredInputStream(md);
+  protected InputStream getInputStream(CachedUrl cu,
+				       HashedInputStream.Hasher hasher) {
+    return isFiltered ? cu.openForHashing(hasher)
+      : cu.getUnfilteredInputStream(hasher);
   }
 
   /** Subclass should override to return proper array of digest */

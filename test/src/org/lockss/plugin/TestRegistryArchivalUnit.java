@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.14 2012-03-12 05:23:46 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.14.34.1 2013-09-21 05:37:58 tlipkis Exp $
  */
 
 /*
@@ -141,8 +141,31 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
 				  "false");
     ArchivalUnit au = regPlugin.createAu(auConfig);
-    AuState aus = new AuState(au, 123, 321, -1, -1,
-			  -1, null, 1, 1.0, 1.0, (HistoryRepository)null);
+    AuState aus = new AuState(au,
+			      123, // lastCrawlTime
+			      321, // lastCrawlAttempt
+			      -1, // lastCrawlResult
+			      null, // lastCrawlResultMsg,
+			      -1, // lastTopLevelPoll
+			      -1, // lastPollStart
+			      -1, // lastPollresult
+			      null, // lastPollresultMsg
+			      0, // pollDuration
+			      -1, // lastTreeWalk
+			      null, // crawlUrls
+			      null, // accessType
+			      1, // clockssSubscriptionState
+			      1.0, // v3Agreement
+			      1.0, // highestV3Agreement
+			      SubstanceChecker.State.Unknown,
+			      null, // substanceVersion
+			      null, // metadataVersion
+			      0, // lastContentChange
+			      -1, // lastPoPPoll
+			      -1, // lastPoPPollResult
+			      -1, // lastLocalHashScan
+			      -1, // lastLocalHashMismatch
+			      (HistoryRepository)null);
     assertFalse(au.shouldCallTopLevelPoll(aus));
     ConfigurationUtil.setFromArgs(RegistryArchivalUnit.PARAM_ENABLE_REGISTRY_POLLS,
 				  "true");

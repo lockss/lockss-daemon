@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.13 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: MockLockssRepository.java,v 1.13.106.1 2013-09-21 05:37:54 tlipkis Exp $
  */
 
 /*
@@ -134,5 +134,17 @@ public class MockLockssRepository implements LockssRepository {
     // add to node cache and weak reference cache
     nodeCache.put(urlKey, node);
     return node;
+  }
+
+  public AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
+    return null;
+  }
+
+  public void storeSuspectUrlVersions(ArchivalUnit au,
+				      AuSuspectUrlVersions asuv) {
+  }
+
+  public boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    return false;
   }
 }

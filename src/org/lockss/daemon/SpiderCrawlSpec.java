@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.10 2011-05-18 04:09:55 tlipkis Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.10.48.1 2013-09-21 05:39:04 tlipkis Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
 
   /**
    * Create a SpiderCrawlSpec with the specified single start url and rule.
-   * Defaults to recrawl depth of 1.
+   * Defaults to refetch depth of 1.
    * @param url specifies the starting point for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.

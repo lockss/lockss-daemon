@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.18 2011-06-20 07:00:06 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.18.46.1 2013-09-21 05:37:55 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
+import org.lockss.poller.v3.V3Poller.PollVariant;
 import org.lockss.util.TimeBase;
 
 public class TestAuState extends LockssTestCase {
@@ -62,6 +63,9 @@ public class TestAuState extends LockssTestCase {
   int t2 = 12000;
   int t3 = 14000;
   int t4 = 17000;
+  int t5 = 23000;
+  int t6 = 25000;
+  int t7 = 25001;
 
   public void testCrawlStarted() throws Exception {
     MyAuState aus = new MyAuState(mau, historyRepo);
@@ -163,56 +167,107 @@ public class TestAuState extends LockssTestCase {
     assertEquals(1500, aus.getPollDuration());
   }
 
-  public void testPollStarted() throws Exception {
+  public void testPollTimeAndResult() throws Exception {
     MyAuState aus = new MyAuState(mau, historyRepo);
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
+    assertEquals(null, aus.getLastPollResultMsg());
+    assertEquals(-1, aus.getLastPoPPoll());
+    assertEquals(-1, aus.getLastPoPPollResult());
+    assertEquals(null, aus.getLastPoPPollResultMsg());
+    assertEquals(-1, aus.getLastLocalHashScan());
+    assertEquals(-1, aus.getLastTimePollCompleted());
     assertEquals(0, aus.getPollDuration());
-    assertFalse(aus.isPollActive());
     assertNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(t1);
     aus.pollStarted();
-    // these should now reflect the previoud poll, not the active one
+    // running poll
+    assertEquals(t1, aus.getLastPollStart());
+    // These haven't been updated yet
     assertEquals(-1, aus.getLastTopLevelPollTime());
-    assertEquals(-1, aus.getLastPollStart());
     assertEquals(-1, aus.getLastPollResult());
     assertEquals(0, aus.getPollDuration());
-    assertTrue(aus.isPollActive());
+    assertEquals(-1, aus.getLastTimePollCompleted());
     assertNotNull(historyRepo.theAuState);
 
     TimeBase.setSimulated(t2);
-    aus.pollFinished(V3Poller.POLLER_STATUS_ERROR, "Plorg");
+    aus.pollFinished(V3Poller.POLLER_STATUS_ERROR, PollVariant.PoR);
     assertEquals(-1, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_ERROR, aus.getLastPollResult());
-    assertEquals("Plorg", aus.getLastPollResultMsg());
+    assertEquals("Error", aus.getLastPollResultMsg());
     assertEquals(t2, aus.getPollDuration());
-    assertFalse(aus.isPollActive());
+    assertEquals(-1, aus.getLastPoPPoll());
+    assertEquals(-1, aus.getLastPoPPollResult());
+    assertEquals(null, aus.getLastPoPPollResultMsg());
+    assertEquals(-1, aus.getLastLocalHashScan());
+    assertEquals(-1, aus.getLastTimePollCompleted());
 
     TimeBase.setSimulated(t3);
-    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, "Syrah");
+    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, PollVariant.PoR);
     assertEquals(t3, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
+    assertEquals("Complete", aus.getLastPollResultMsg());
     assertEquals((t3 + t2) / 2, aus.getPollDuration());
-    assertFalse(aus.isPollActive());
+    assertEquals(-1, aus.getLastPoPPoll());
+    assertEquals(-1, aus.getLastPoPPollResult());
+    assertEquals(null, aus.getLastPoPPollResultMsg());
+    assertEquals(-1, aus.getLastLocalHashScan());
+    assertEquals(t3, aus.getLastTimePollCompleted());
+
+    TimeBase.setSimulated(t4);
+    aus.pollFinished(V3Poller.POLLER_STATUS_NO_QUORUM, PollVariant.PoP);
+    assertEquals(t3, aus.getLastTopLevelPollTime());
+    assertEquals(t1, aus.getLastPollStart());
+    assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
+    assertEquals("Complete", aus.getLastPollResultMsg());
+    assertEquals((t3 + t2) / 2, aus.getPollDuration());
+    assertEquals(-1, aus.getLastPoPPoll());
+    assertEquals(V3Poller.POLLER_STATUS_NO_QUORUM, aus.getLastPoPPollResult());
+    assertEquals(-1, aus.getLastLocalHashScan());
+    assertEquals("No Quorum", aus.getLastPoPPollResultMsg());
+    assertEquals(t3, aus.getLastTimePollCompleted());
+
+    TimeBase.setSimulated(t5);
+    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, PollVariant.PoP);
+    assertEquals(t3, aus.getLastTopLevelPollTime());
+    assertEquals(t1, aus.getLastPollStart());
+    assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
+    assertEquals("Complete", aus.getLastPollResultMsg());
+    assertEquals((t3 + t2) / 2, aus.getPollDuration());
+    assertEquals(t5, aus.getLastPoPPoll());
+    assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPoPPollResult());
+    assertEquals("Complete", aus.getLastPoPPollResultMsg());
+    assertEquals(-1, aus.getLastLocalHashScan());
+    assertEquals(t5, aus.getLastTimePollCompleted());
+    aus.pollFinished(V3Poller.POLLER_STATUS_NO_QUORUM, PollVariant.PoP);
+
+    TimeBase.setSimulated(t6);
+    aus.pollFinished(V3Poller.POLLER_STATUS_COMPLETE, PollVariant.Local);
+    assertEquals(t3, aus.getLastTopLevelPollTime());
+    assertEquals(t1, aus.getLastPollStart());
+    assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
+    assertEquals("Complete", aus.getLastPollResultMsg());
+    assertEquals((t3 + t2) / 2, aus.getPollDuration());
+    assertEquals(t5, aus.getLastPoPPoll());
+    assertEquals(V3Poller.POLLER_STATUS_NO_QUORUM, aus.getLastPoPPollResult());
+    assertEquals("No Quorum", aus.getLastPoPPollResultMsg());
+    assertEquals(t6, aus.getLastLocalHashScan());
+    assertEquals(t5, aus.getLastTimePollCompleted());
 
     aus = aus.simulateStoreLoad();
     assertEquals(t3, aus.getLastTopLevelPollTime());
     assertEquals(t1, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
-    assertFalse(aus.isPollActive());
 
-    TimeBase.setSimulated(t4);
+    TimeBase.setSimulated(t7);
     aus.pollStarted();
     assertEquals(t3, aus.getLastTopLevelPollTime());
-    assertEquals(t1, aus.getLastPollStart());
+    assertEquals(t7, aus.getLastPollStart());
     assertEquals(V3Poller.POLLER_STATUS_COMPLETE, aus.getLastPollResult());
-    assertEquals("Syrah", aus.getLastPollResultMsg());
   }
 
   public void testV3Agreement() throws Exception {
@@ -356,6 +411,23 @@ public class TestAuState extends LockssTestCase {
     assertNull(aus.getFeatureVersion(Plugin.Feature.Poll));
   }
 
+  public void testLastContentChange() {
+    TimeBase.setSimulated(10);
+    AuState aus = new AuState(mau, historyRepo);
+    aus.newCrawlStarted();
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(20,aus.getLastContentChange());
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(20,aus.getLastContentChange());
+    TimeBase.step(10);
+    aus.newCrawlFinished(1, "foo");
+    TimeBase.step(10);
+    aus.contentChanged();
+    assertEquals(50,aus.getLastContentChange());
+  }
+    
   public static void main(String[] argv) {
     String[] testCaseList = { TestAuState.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

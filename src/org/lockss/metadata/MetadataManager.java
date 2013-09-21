@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.19 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.19.6.1 2013-09-21 05:39:02 tlipkis Exp $
  */
 
 /*
@@ -684,6 +684,37 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and m." + MD_ITEM_SEQ_COLUMN + " = u." + MD_ITEM_SEQ_COLUMN
       + " and u." + FEATURE_COLUMN + " = '" + ACCESS_URL_FEATURE + "'"
       + " and u." + URL_COLUMN + " = ?";
+
+  // Query to update the publication proprietary identifier.
+  private static final String UPDATE_PUBLICATION_ID_QUERY = "update "
+      + PUBLICATION_TABLE
+      + " set " + PUBLICATION_ID_COLUMN + " = ?"
+      + " where " + PUBLICATION_SEQ_COLUMN + " = ?";
+
+  static final String UNKNOWN_TITLE_NAME_ROOT = "UNKNOWN_TITLE";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
+  // Query to delete a metadata item non-primary name.
+  private static final String DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY = "delete "
+      + "from " + MD_ITEM_NAME_TABLE
+      + " where "
+      + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_COLUMN + " like '" + UNKNOWN_TITLE_NAME_ROOT + "%'"
+      + " and " + NAME_TYPE_COLUMN + " = '" + NOT_PRIMARY_NAME_TYPE + "'";
+
+  // Query to update the primary name of a metadata item.
+  private static final String UPDATE_MD_ITEM_PRIMARY_NAME_QUERY = "update "
+      + MD_ITEM_NAME_TABLE
+      + " set " + NAME_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?"
+      + " and " + NAME_TYPE_COLUMN + " = '" + PRIMARY_NAME_TYPE + "'";
 
   /**
    * Map of running reindexing tasks keyed by their AuIds
@@ -2434,6 +2465,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
 
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, bookSeriesSeq, proprietaryId);
+
       // Find or create the book.
       bookSeq = findOrCreateBook(conn, pIsbn, eIsbn, publisherSeq, bookTitle,
 	  mdItemSeq, proprietaryId);
@@ -2541,6 +2575,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the ISBN values in the metadata, if new.
       addNewMdItemIsbns(conn, mdItemSeq, pIsbn, eIsbn);
       log.debug3(DEBUG_HEADER + "added new title ISBNs.");
+
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
     }
 
     if (log.isDebug2())
@@ -2624,6 +2661,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       // Add to the database the ISSN values in the metadata, if new.
       addNewMdItemIssns(conn, mdItemSeq, pIssn, eIssn);
       log.debug3(DEBUG_HEADER + "added new title ISSNs.");
+
+      // Update in the database the proprietary identifier, if not empty.
+      updateNonEmptyPublicationId(conn, publicationSeq, proprietaryId);
     }
 
     return publicationSeq;
@@ -3132,6 +3172,51 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "issns.size() = " + issns.size());
     return issns;
+  }
+
+  /**
+   * Updates in the database the publication proprietary identifier, if not
+   * empty.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param publicationSeq
+   *          A Long with the publication identifier.
+   * @param publicationId
+   *          A String with the publication proprietary identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateNonEmptyPublicationId(Connection conn, Long publicationSeq,
+      String publicationId) throws DbException {
+    final String DEBUG_HEADER = "updateNonEmptyPublicationId(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "publicationSeq = " + publicationSeq);
+      log.debug2(DEBUG_HEADER + "publicationId = " + publicationId);
+    }
+
+    if (StringUtil.isNullString(publicationId)) {
+      return;
+    }
+
+    PreparedStatement updatePublicationId =
+	dbManager.prepareStatement(conn, UPDATE_PUBLICATION_ID_QUERY);
+
+    try {
+      updatePublicationId.setString(1, publicationId);
+      updatePublicationId.setLong(2, publicationSeq);
+      int count = dbManager.executeUpdate(updatePublicationId);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the publication proprietary identifier", sqle);
+      log.error("publicationSeq = '" + publicationSeq + "'.");
+      log.error("publicationId = '" + publicationId + "'.");
+      log.error("SQL = '" + UPDATE_PUBLICATION_ID_QUERY + "'.");
+      throw new DbException(
+	  "Cannot update the publication proprietary identifier", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePublicationId);
+    }
   }
 
   /**
@@ -6227,5 +6312,111 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	+ "' publisher: " + publisher + "'");
 
     return DbManager.truncateVarchar(normal, maxColumnWidth);
+  }
+
+  /**
+   * Removes a non-primary metadata item name from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param name
+   *          A String with the non-primary metadata item name to be removed.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void removeNotPrimaryMdItemName(Connection conn, Long mdItemSeq, String name)
+      throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimaryMdItemName(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      deleteName.setString(2, name);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message = "Cannot remove metadata item non-primary name";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("name = '" + name + "'.");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAME_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
+  /**
+   * Removes non-primary metadata item synthesized names from the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void removeNotPrimarySynthesizedMdItemNames(Connection conn, Long mdItemSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "removeNotPrimarySynthesizedMdItemNames(): ";
+    PreparedStatement deleteName =
+	dbManager.prepareStatement(conn, DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY);
+
+    try {
+      deleteName.setLong(1, mdItemSeq);
+      int count = dbManager.executeUpdate(deleteName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      String message =
+	  "Cannot remove metadata item non-primary synthesized names";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq + ".");
+      log.error("SQL = '" + DELETE_NOT_PRIMARY_MDITEM_NAMES_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(deleteName);
+    }
+  }
+
+  /**
+   * Updates the primary name of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the identifier of the metadata item.
+   * @param primaryName
+   *          A String with the primary name of the metadata item.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void updatePrimarySynthesizedMdItemName(Connection conn, Long mdItemSeq,
+      String primaryName) throws DbException {
+    final String DEBUG_HEADER = "updatePrimarySynthesizedMdItemName(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "primaryName = " + primaryName);
+    }
+
+    PreparedStatement updatePrimaryName =
+	dbManager.prepareStatement(conn, UPDATE_MD_ITEM_PRIMARY_NAME_QUERY);
+
+    try {
+      updatePrimaryName.setString(1, primaryName);
+      updatePrimaryName.setLong(2, mdItemSeq);
+      int count = dbManager.executeUpdate(updatePrimaryName);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+    } catch (SQLException sqle) {
+      log.error("Cannot update the primary name", sqle);
+      log.error("mdItemSeq = '" + mdItemSeq + "'.");
+      log.error("primaryName = '" + primaryName + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_PRIMARY_NAME_QUERY + "'.");
+      throw new DbException("Cannot update the primary name", sqle);
+    } finally {
+      DbManager.safeCloseStatement(updatePrimaryName);
+    }
   }
 }

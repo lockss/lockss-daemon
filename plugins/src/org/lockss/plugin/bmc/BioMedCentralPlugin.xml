@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
     </map>
   </entry>
@@ -76,7 +76,8 @@
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%sregistration", base_url</string>
       <string>2,"^%scontent/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
-      <string>2,"^%scontent/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>
+      <string>2,"^%scontent/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>-->
+      <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
       <string>1,"^%scontent/(%s|notes)/", base_url, volume_name</string>
       <string>1,"^%s(articles/browse\.asp|content)\?(date=&amp;volume=%s)[^0-9]", base_url, volume_name</string>
       <string>1,"^%scontent/pdf/", base_url</string>
@@ -93,7 +94,7 @@
            exclude:  http://genomebiology.com/2002/3/2/comment/1002/postcomment
                      http://genomebiology.com/2002/3/2/comment/1002?fmt_view=mobile
         --> 
-      <string>1,"^%scontent/issue/image/%s/2/", base_url, volume_name</string>
+      <string>1,"^%scontent/issue/image/%s/", base_url, volume_name</string>
  </list>
   </entry>
   <entry>

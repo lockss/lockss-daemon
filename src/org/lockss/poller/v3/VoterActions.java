@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.33 2013-07-05 17:43:00 barry409 Exp $
+ * $Id: VoterActions.java,v 1.33.6.1 2013-09-21 05:39:00 tlipkis Exp $
  */
 
 /*
@@ -293,7 +293,10 @@ public class VoterActions {
     PeerIdentity poller = ud.getPollerId();
     IdentityManager idmgr = ud.getVoter().getIdentityManager();
     ArchivalUnit au = ud.getVoter().getAu();
-    idmgr.signalPartialAgreementHint(poller, au, (float) agreementHint);
+    idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
+				  ? AgreementType.SYMMETRIC_POP_HINT
+				  : AgreementType.SYMMETRIC_POR_HINT),
+				 poller, au, (float) agreementHint);
     if (! ud.isSymmetricPoll()) {
       if (msg.getVoterNonce2() != null) {
 	log.error("Poller sent nonce2 outside of symmetric poll");
@@ -326,7 +329,10 @@ public class VoterActions {
 		  " disagree: " + nDisagree +
 		  " Voter only: " + nVoterOnly +
 		  " Poller only: " + nPollerOnly);
-	idmgr.signalPartialAgreement(poller, au, vbt.percentAgreement());
+	idmgr.signalPartialAgreement((ud.getVoter().isSampledPoll()
+				      ? AgreementType.SYMMETRIC_POP
+				      : AgreementType.SYMMETRIC_POR),
+				     poller, au, vbt.percentAgreement());
       }
     }
     return V3Events.evtReceiptOk;

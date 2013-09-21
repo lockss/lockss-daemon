@@ -1,5 +1,5 @@
 /*
- * $Id: AuHealthMetric.java,v 1.6 2012-01-12 00:49:40 easyonthemayo Exp $
+ * $Id: AuHealthMetric.java,v 1.6.40.1 2013-09-21 05:39:05 tlipkis Exp $
  */
 
 /*
@@ -356,9 +356,6 @@ public class AuHealthMetric {
   public int getNumberOfRepairers() {
     IdentityManager idMgr = AuUtil.getDaemon(au).getIdentityManager();
     Collection repairers = idMgr.getCachesToRepairFrom(au);
-    if (repairers == null) {
-      return 0;
-    }
     return repairers.size();
   }
 

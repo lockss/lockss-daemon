@@ -1,5 +1,5 @@
 /*
- * $Id: TestVersionCounts.java,v 1.2 2013-06-26 04:44:34 tlipkis Exp $
+ * $Id: TestVersionCounts.java,v 1.2.4.1 2013-09-21 05:37:56 tlipkis Exp $
  */
 
 /*
@@ -154,9 +154,14 @@ public class TestVersionCounts extends LockssTestCase {
   }
 
   private V3Poller makeV3Poller(String key) throws Exception {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId("mock");
+    mau.getPlugin().initPlugin(daemon);
     PollSpec ps =
-      new MockPollSpec(new MockCachedUrlSet(new MockCachedUrlSetSpec()),
+      new MockPollSpec(mau, "http://www.example.com/",
 		       null, null, Poll.V3_POLL);
+    MockNodeManager nodeMgr = new MockNodeManager();
+    daemon.setNodeManager(nodeMgr, mau);
     return new V3Poller(ps, daemon, null, key, 20000, "SHA-1");
   }
   

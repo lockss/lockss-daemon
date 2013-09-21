@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.8 2013-06-26 04:46:45 tlipkis Exp $
+ * $Id: SubscriptionManager.java,v 1.8.4.1 2013-09-21 05:38:57 tlipkis Exp $
  */
 
 /*
@@ -586,7 +586,12 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	new BibliographicPeriod(tdbAu.getStartYear(),
 	    tdbAu.getStartVolume(), tdbAu.getStartIssue(),
 	    tdbAu.getEndYear(), tdbAu.getEndVolume(), tdbAu.getEndIssue());
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
+
+    if (log.isDebug3()) {
+      log.debug3(DEBUG_HEADER + "currentTdbTitle = " + currentTdbTitle);
+      log.debug3(DEBUG_HEADER + "tdbAu.getTdbTitle() = " + tdbAu.getTdbTitle());
+    }
 
     // Check whether this archival unit belongs to a different title than the
     // previous archival unit processed.
@@ -1433,8 +1438,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
     // Sort the subscribed ranges.
     List<BibliographicPeriod> sortedSubscribedRanges =
-	new ArrayList<BibliographicPeriod>(subscribedRanges);
-    BibliographicUtil.sortByVolumeYear(sortedSubscribedRanges);
+	BibliographicPeriod.sort(subscribedRanges);
 
     // Coalesce the subscribed ranges, if possible.
     List<BibliographicPeriod> coalescedSubscribedRanges =

@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.37 2013-03-14 06:38:49 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.37.14.1 2013-09-21 05:39:02 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,38 @@ public class AuUtil {
   public static AuState getAuState(ArchivalUnit au) {
     NodeManager nodeManager = getDaemon(au).getNodeManager(au);
     return nodeManager.getAuState();
+  }
+
+  /**
+   * Return the AuSuspectUrlVersions object for the AU
+   * @param au the AU
+   * @return the AuSuspectUrlVersions
+   */
+  public static AuSuspectUrlVersions getSuspectUrlVersions(ArchivalUnit au) {
+    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    return repo.getSuspectUrlVersions(au);
+  }
+
+  /**
+   * Update the stored record of suspect versions for the AU
+   * @param au the AU
+   * @param asuv the AuSuspectUrlVersions object to store
+   */
+  public static void saveSuspectUrlVersions(ArchivalUnit au,
+					    AuSuspectUrlVersions asuv)
+      throws SerializationException {
+    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    repo.storeSuspectUrlVersions(au, asuv);
+  }
+
+  /**
+   * Return the AuSuspectUrlVersions object for the AU
+   * @param au the AU
+   * @return the AuSuspectUrlVersions
+   */
+  public static boolean hasSuspectUrlVersions(ArchivalUnit au) {
+    LockssRepository repo = getDaemon(au).getLockssRepository(au);
+    return repo.hasSuspectUrlVersions(au);
   }
 
   public static AuNodeImpl getAuRepoNode(ArchivalUnit au) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPeerIdentity.java,v 1.6 2008-12-16 00:52:23 edwardsb1 Exp $
+ * $Id: MockPeerIdentity.java,v 1.6.80.1 2013-09-21 05:37:56 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,13 @@ public class MockPeerIdentity extends PeerIdentity {
 
   public PeerAddress getPeerAddress() {
     throw new UnsupportedOperationException("not implemented");
+  }
+
+  /**
+   * @return {@code true} iff this is a V3 PeerIdentity.
+   */
+  public boolean isV3() {
+    return true;
   }
 
   /**

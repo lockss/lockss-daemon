@@ -1,5 +1,5 @@
 /*
-* $Id: ProtocolException.java,v 1.3 2003-07-21 02:39:29 dshr Exp $
+* $Id: ProtocolException.java,v 1.3.180.1 2013-09-21 05:39:00 tlipkis Exp $
  */
 
 /*
@@ -48,5 +48,13 @@ public class ProtocolException extends IOException {
 
   public ProtocolException(String msg) {
     super(msg);
+  }
+
+  public ProtocolException(Throwable cause) {
+    super(cause);
+  }
+
+  public ProtocolException(String msg, Throwable cause) {
+    super(msg, cause);
   }
 }

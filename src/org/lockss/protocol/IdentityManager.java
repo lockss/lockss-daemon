@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.87 2008-10-07 18:14:29 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.87.82.1 2013-09-21 05:39:00 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.lockss.hasher.*;
 
 /**
  * <p>Abstraction for identity of a LOCKSS cache. Currently wraps an
@@ -391,7 +392,7 @@ public interface IdentityManager extends LockssManager {
   
   /**
    * Signal partial agreement with a peer on a given archival unit following
-   * a V3 poll at the voter based ont eh hint in the receipt.
+   * a V3 poll at the voter based on the hint in the receipt.
    * 
    * @param pid  The PeerIdentity of the agreeing peer.
    * @param au  The {@link ArchivalUnit}.
@@ -400,6 +401,35 @@ public interface IdentityManager extends LockssManager {
    */
   public void signalPartialAgreementHint(PeerIdentity pid, ArchivalUnit au,
                                          float agreement);
+
+  /**
+   * Signal partial agreement with a peer on a given archival unit following
+   * a V3 poll.
+   *
+   * @param agreementType The {@link AgreementType} to be recorded.
+   * @param pid The {@link PeerIdentity} of the agreeing peer.
+   * @param au The {@link ArchivalUnit}.
+   * @param agreement A number between {@code 0.0} and {@code 1.0}
+   *                   representing the percentage of agreement on the
+   *                   portion of the AU polled.
+   */
+  public void signalPartialAgreement(AgreementType agreementType, 
+				     PeerIdentity pid, ArchivalUnit au,
+                                     float agreement);
+
+  /**
+   * Signal the completion of a local hash check.
+   *
+   * @param filesCount The number of files checked.
+   * @param urlCount The number of URLs checked.
+   * @param agreeCount The number of files which agreed with their
+   * previous hash value.
+   * @param disagreeCount The number of files which disagreed with
+   * their previous hash value.
+   * @param missingCount The number of files which had no previous
+   * hash value.
+   */
+  public void signalLocalHashComplete(LocalHashResult lhr);
   
   /**
    * Return the percent agreement for a given peer on a given
@@ -432,26 +462,38 @@ public interface IdentityManager extends LockssManager {
    * @return agreement, -1.0 if not known */
   public float getHighestPercentAgreementHint(PeerIdentity pid,
 					      ArchivalUnit au);
+
   /**
-   * <p>Peers with whom we have had any disagreement since the last
-   * toplevel agreement are placed at the end of the list.</p>
+   * A list of peers with whom we have had a POR poll and a result
+   * above the minimum threshold for repair.
+   *
+   * NOTE: No particular order should be assumed.
+   * NOTE: This does NOT use the "hint", which would be more reasonable.
+   *
    * @param au ArchivalUnit to look up PeerIdentities for.
    * @return List of peers from which to try to fetch repairs for the
    *         AU.
    */
-  public List getCachesToRepairFrom(ArchivalUnit au);
+  public List<PeerIdentity> getCachesToRepairFrom(ArchivalUnit au);
+
+  /**
+   * Return a mapping for each peer for which we have an agreement of
+   * the requested type, to the {@link PeerAgreement} record for that
+   * peer.
+   *
+   * @param au The {@link ArchivalUnit} in question.
+   * @param type The {@link AgreementType} to look for.
+   * @return A Map mapping each {@link PeerIdentity} which has an
+   * agreement of the requested type to the {@link PeerAgreement} for
+   * that type.
+   */
+  public Map<PeerIdentity, PeerAgreement> getAgreements(ArchivalUnit au,
+							AgreementType type);
 
   public boolean hasAgreed(String ip, ArchivalUnit au)
       throws MalformedIdentityKeyException;
 
   public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au);
-
-  /**
-   * <p>Returns a collection of IdentityManager.IdentityAgreement for
-   * each peer that we have a record of agreeing or disagreeing with
-   * us.
-   */
-  public Collection<IdentityAgreement> getIdentityAgreements(ArchivalUnit au);
 
   /**
    * <p>Return map peer -> last agree time. Used for logging and
@@ -460,11 +502,8 @@ public interface IdentityManager extends LockssManager {
   public Map getAgreed(ArchivalUnit au);
 
   /**
-   * <p>Returns map peer -> last disagree time. Used for logging and
-   * debugging</p>.
+   * @return {@code true} iff there are no data on agreements.
    */
-  public Map getDisagreed(ArchivalUnit au);
-
   public boolean hasAgreeMap(ArchivalUnit au);
   
   /**
@@ -531,8 +570,12 @@ public interface IdentityManager extends LockssManager {
 
     private String id = null;
 
+    IdentityAgreement(String id) {
+      this.id = id;
+    }
+
     public IdentityAgreement(PeerIdentity pid) {
-      this.id = pid.getIdString();
+      this(pid.getIdString());
     }
 
     // needed for marshalling
@@ -554,6 +597,10 @@ public interface IdentityManager extends LockssManager {
       this.lastDisagree = lastDisagree;
     }
     
+    public long getLastSignalTime() {
+      return lastAgree > lastDisagree ? lastAgree : lastDisagree;
+    }
+
     public float getHighestPercentAgreement() {
       return agreePercentValue(highestPercentAgreement);
     }

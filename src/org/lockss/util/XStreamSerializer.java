@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.27 2012-09-06 23:01:36 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.27.26.1 2013-09-21 05:38:56 tlipkis Exp $
  */
 
 /*
@@ -139,6 +139,43 @@ public class XStreamSerializer extends ObjectSerializer {
                                                                                                     4,
                                                                                                     20);
 
+  }
+  /*
+   * end PRIVATE STATIC INNER CLASS
+   * ==============================
+   */
+
+  /*
+   * begin PRIVATE STATIC INNER CLASS
+   * ================================
+   */
+  /** HashResult converter - writes & reads "alg:hash" */
+  private static class LockssHashResultConverter implements Converter {
+
+    public boolean canConvert(Class type) {
+      return type.equals(org.lockss.hasher.HashResult.class);
+    }
+
+    public void marshal(Object obj,
+                        HierarchicalStreamWriter writer,
+                        MarshallingContext context) {
+      
+      org.lockss.hasher.HashResult hr = (org.lockss.hasher.HashResult)obj;
+      if (hr.getAlgorithm() == null) {
+	throw new ConversionException("Can't serialize HashResult with no algorithm");
+      }
+      writer.setValue(((org.lockss.hasher.HashResult)obj).toString());
+    }
+
+    public Object unmarshal(HierarchicalStreamReader reader,
+                            UnmarshallingContext context) {
+      String value = reader.getValue();
+      try {
+	return org.lockss.hasher.HashResult.make(value);
+      } catch (Exception e) {
+	throw new ConversionException("Cannot parse HashResult: " + value);
+      }
+    }
   }
   /*
    * end PRIVATE STATIC INNER CLASS
@@ -732,6 +769,7 @@ public class XStreamSerializer extends ObjectSerializer {
       xs = new XStream(reflectionProvider, driver);
       xs.setMarshallingStrategy(new LockssReferenceByXPathMarshallingStrategy(lockssContext));
       xs.registerConverter(new LockssDateConverter());
+      xs.registerConverter(new LockssHashResultConverter());
       initialized = true;
     }
   }

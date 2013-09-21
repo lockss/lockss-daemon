@@ -63,8 +63,8 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     StringBuilder builder = openDoc();
     StringBuilder f1 = new StringBuilder();
     StringBuilder f2 = new StringBuilder();
-    openForm(f1,"http://www.example.com/bioone/cgi/;F2","form1");
-    openForm(f2,"http://www.example.com/bioone/cgi/;F2", null);
+    openForm(f1,"http://www.example.com/bioone/cgi/;F2","form1", null);
+    openForm(f2,"http://www.example.com/bioone/cgi/;F2", null, null);
     HashMap<String, String> inmap = new HashMap<String, String>(5);
     inmap.put("type", "text");
     inmap.put("name", "fname");
@@ -98,8 +98,8 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     StringBuilder builder = openDoc();
     StringBuilder f1 = new StringBuilder();
     StringBuilder f2 = new StringBuilder();
-    openForm(f1,"http://www.example.com/bioone/cgi/;F2","form1");
-    openForm(f2,"http://www.example.com/bioone/cgi/;F2", null);
+    openForm(f1,"http://www.example.com/bioone/cgi/;F2","form1", null);
+    openForm(f2,"http://www.example.com/bioone/cgi/;F2", null, null);
     HashMap<String, String> inmap = new HashMap<String, String>(5);
     inmap.put("type", "text");
     inmap.put("name", "fname");
@@ -802,6 +802,99 @@ public class TestHtmlFormExtractor extends LockssTestCase {
   }
 
   public void testFormRestrictions() throws Exception {
+    HtmlFormExtractor.FormFieldRestrictions restricted;
+    String base1 = "http://www.example.com/bioone/cgi/";
+    String base2 = "http://www.example.com/biotwo/cgi/";
+    Set<String> expected = new java.util.HashSet<String>();
+    // test simple select element
+    List<String> elements = ListUtil.fromCSV("one,two,three,four");
+    StringBuilder sb = openDoc();
+    sb.append(formWithOneSelect("f1", "form1", base1, "opt1", elements));
+    sb.append("\n");
+    sb.append(formWithOneSelect("f2", "form2", base2, "opt2", elements));
+    closeDoc(sb);
+    String form = sb.toString();
+    for(String val : elements) {
+      expected.add(base1 + "?" + "opt1="+ val);
+      expected.add(base2 + "?" + "opt2="+ val);
+    }
+    expected.add(base1);
+    expected.add(base2);
+    // no restrictions
+    assertIsomorphic(expected, parseSingleSource(form));
+
+    Set<String> incl = new HashSet<String>();
+    Set<String> excl = new HashSet<String>();
+
+    // restrict all forms with name
+    excl = SetUtil.fromCSV("form1");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(null, excl);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base2 + "?" + "opt2="+ val);
+    }
+    expected.add(base2);
+    restrictions.put(HtmlFormExtractor.FORM_NAME, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+
+    // allow only forms with name
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(excl, null);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base1 + "?" + "opt1="+ val);
+    }
+    expected.add(base1);
+    restrictions.put(HtmlFormExtractor.FORM_NAME, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+    restrictions.clear();
+
+    // restrict all forms with id
+    excl = SetUtil.fromCSV("f1");
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(null, excl);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base2 + "?" + "opt2="+ val);
+    }
+    expected.add(base2);
+    restrictions.put(HtmlFormExtractor.FORM_ID, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+    // allow only forms with id
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(excl, null);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base1 + "?" + "opt1="+ val);
+    }
+    expected.add(base1);
+    restrictions.put(HtmlFormExtractor.FORM_ID, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+    restrictions.clear();
+
+    // restrict all forms with action
+    excl = SetUtil.fromCSV(base1);
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(null, excl);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base2 + "?" + "opt2="+ val);
+    }
+    expected.add(base2);
+    restrictions.put(HtmlFormExtractor.FORM_ACTION, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+    // allow only forms with action
+    restricted = new HtmlFormExtractor.FormFieldRestrictions(excl, null);
+    expected.clear();
+    for(String val : elements) {
+      expected.add(base1 + "?" + "opt1="+ val);
+    }
+    expected.add(base1);
+    restrictions.put(HtmlFormExtractor.FORM_ACTION, restricted);
+    assertIsomorphic(expected, parseSingleSource(form));
+    restrictions.clear();
+
+    // restrict all forms with submit value
+    // allow all forms with submit value
+  }
+
+  public void testFormElementRestrictions() throws Exception {
     Set<String> incl = new HashSet<String>();
     Set<String> excl = new HashSet<String>();
     HtmlFormExtractor.FormFieldRestrictions restricted;
@@ -809,7 +902,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     Set<String> expected = new java.util.HashSet<String>();
     // test simple select element
     List<String> elements = ListUtil.fromCSV("one,two,three,four");
-    String form = formWithSelect("restrict", elements);
+    String form = pageWithOneSelect("restrict", elements);
     for(String val : elements) {
       expected.add(base+ "restrict="+val);
     }
@@ -869,13 +962,52 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     assertIsomorphic(expected, parseSingleSource(form));
   }
 
+  public void testNullNotAccepted() throws Exception {
+    final String abstractWithForm=
+        "<html><head><title>Test Title</title></head><body>" +
+        " <table border=\"0\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\"><tr><td align=\"center\" class=\"section_head quickSearch_head\">" +
+        "Quick Search</td></tr><tr><td class=\"quickSearch_content\"><form method=\"post\" action=\"\" " +
+        "onSubmit=\"onAuthorSearchClick(this); return false;\" name=\"frmQuickSearch\"><input type=\"hidden\" name=\"type\" value=\"simple\"/><input type=\"hidden\" name=\"action\" " +
+        "value=\"search\"/><input type=\"hidden\" name=\"nh\" value=\"10\"/><input type=\"hidden\" name=\"displaySummary\" value=\"false\"/>" +
+        "<table width=\"100%\" border=\"0\" cellpadding=\"4\" cellspacing=\"0\" bgcolor=\"#FFFFFF\"><tr><td valign=\"top\" width=\"100%\">" +
+        "<span class=\"black9pt\"><select name=\"dbname\" size=\"1\"><option value=\"fus\" selected=\"\">" +
+        "Future Science</option><script type=\"text/javascript\">" +
+        "                               genSideQuickSearch('8','medline','PubMed');" +
+        "                       </script>  <script type=\"text/javascript\">" +
+        "                               genSideQuickSearch('16','crossref','CrossRef'); " +
+        "                       </script> </select> for </span></td></tr>" +
+        "<!-- quicksearch authors --><tr><td valign=\"top\" width=\"100%\" class=\"pageTitle\">" +
+        "Author:</td></tr><tr><td valign=\"top\" width=\"100%\" class=\"black9pt\">" +
+        "<table border=\"0\" cellpadding=\"2\" cellspacing=\"1\" width=\"100%\"><tr><td valign=\"top\">" +
+        "<input class=\"input_boxes\" value=\"Matyus, Peter\" name=\"author\" type=\"checkbox\"/></td><td>" +
+        "<input type=\"HIDDEN\" name=\"checkboxNum\" value=\"1\"/> Peter   Matyus </td></tr>" +
+        "</table></td></tr><!-- /quicksearch authors --><!-- quicksearch keywords --><!-- /quicksearch keywords --><tr>" +
+        "<td valign=\"top\" width=\"100%\" class=\"black9pt\"><input type=\"hidden\" name=\"result\" value=\"true\"/>" +
+        "<input type=\"hidden\" name=\"type\" value=\"simple\"/>" +
+        "<span class=\"black9pt\"><input type=\"image\" border=\"0\" src=\"/templates/jsp/_midtier/_FFA/_fus/images/searchButton.gif\" " +
+        "align=\"right\" alt=\"Search\"/></span></td></tr>" +
+        " </table></form></td></tr>" +
+        "</table>" +
+        "</body>" +
+        "</html>";
+        /* only include forms with the name "frmCitMgr" */
+    Set<String> include = SetUtil.fromCSV("frmCitmgr");
+
+    HtmlFormExtractor.FormFieldRestrictions include_restrictions =
+        new HtmlFormExtractor.FormFieldRestrictions(include,null);
+    restrictions.put(HtmlFormExtractor.FORM_NAME, include_restrictions);
+
+    Set<String> result = parseSingleSource(abstractWithForm);
+
+  }
+
   public void testFixedListGenerator() throws Exception {
     HtmlFormExtractor.FieldIterator iter;
     String base = "http://www.example.com/bioone/cgi/?";
     // test fixed list generator
     List<String> elements = ListUtil.fromCSV("one,two,three,four");
     iter = new HtmlFormExtractor.FixedListFieldGenerator("genfixed", elements);
-    String form = formWithInput("text", "genfixed", null);
+    String form = pageWithOneInput("text", "genfixed", null);
     generators.put("genfixed", iter);
     Set<String> expected = new java.util.HashSet<String>();
     for(String val : elements) {
@@ -889,7 +1021,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     String base = "http://www.example.com/bioone/cgi/?";
 
     iter = new HtmlFormExtractor.IntegerFieldIterator("genints",1,5,1);
-    String form = formWithInput("text", "genints", null);
+    String form = pageWithOneInput("text", "genints", null);
     generators.put("genints", iter);
     Set<String> expected = new java.util.HashSet<String>();
     for(int val=1; val<=5; val++) {
@@ -910,7 +1042,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     String base = "http://www.example.com/bioone/cgi/?";
 
     iter = new HtmlFormExtractor.FloatFieldIterator("genfloats", 0.0f,1.0f,0.2f);
-    String form = formWithInput("text", "genfloats", null);
+    String form = pageWithOneInput("text", "genfloats", null);
     generators.put("genfloats", iter);
     Set<String> expected = new java.util.HashSet<String>();
     for(float val=0.0f; val<=1.0f; val+=0.2f) {
@@ -930,7 +1062,7 @@ public class TestHtmlFormExtractor extends LockssTestCase {
                        " end:"+sdf.format(end.getTime()));
     iter = new HtmlFormExtractor.CalendarFieldGenerator("gencal", start, end,
         Calendar.MONTH,1, "yyyy-MM-dd");
-    String form = formWithInput("text", "gencal", null);
+    String form = pageWithOneInput("text", "gencal", null);
     generators.put("gencal", iter);
     Set<String> expected = new java.util.HashSet<String>();
     for(int val=1; val<=6; val++) {
@@ -947,7 +1079,6 @@ public class TestHtmlFormExtractor extends LockssTestCase {
 
   }
 
-
   private StringBuilder openDoc() {
     StringBuilder sb = new StringBuilder();
     sb.append("<html><head><title>Test</title></head><body>");
@@ -959,13 +1090,16 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     return sb.toString();
   }
 
-  private void openForm(StringBuilder sb, String action, String id) {
-    sb.append("<form action=");
-    sb.append(action);
+  private void openForm(StringBuilder sb, String action,
+                        final String id, final String name) {
+    sb.append("<form action=\"").append(action).append("\"");
     if(id != null)
     {
-      sb.append(" id=");
-      sb.append(id);
+      sb.append(" id=\"").append(id).append("\"");
+    }
+    if(name != null)
+    {
+      sb.append(" name=\"").append(name).append("\"");
     }
     sb.append(">");
   }
@@ -1021,35 +1155,63 @@ public class TestHtmlFormExtractor extends LockssTestCase {
     return m_callback.getFoundUrls();
   }
 
-  private String formWithSelect(String selName, List<String> options)
+  private String pageWithOneSelect(String selName, List<String> options)
   {
+    StringBuilder sb = openDoc();
+    sb.append(formWithOneSelect(selName, options));
+    sb.append("\n</html>");
+    return sb.toString();
+  }
+
+  private String pageWithOneInput(String inType, String inName, String inValue)
+  {
+
     StringBuilder sb = new StringBuilder();
     sb.append("<html><head><title>Test Title</title></head><body>");
-    sb.append("<form action=\"http://www.example.com/bioone/cgi/\"");
-    sb.append(" method=\"get\">\n");
-    sb.append("<select name=\"").append(selName).append("\">\n");
+    sb.append(formWithOneInput(inType, inName, inValue));
+    sb.append("</html>");
+   return sb.toString();
+  }
+
+  private String formWithOneInput(String inType, String inName, String inValue)
+  {
+    String defAction = "http://www.example.com/bioone/cgi/";
+    return formWithOneInput(null, null, defAction,inType, inName, inValue);
+  }
+
+  private String formWithOneInput(String fId, String fName, String fAction,
+                                  String inType, String inName, String inValue)
+  {
+    StringBuilder sb = new StringBuilder();
+    String val = inValue == null ? "" : inValue;
+    openForm(sb, fAction, fId, fName);
+    sb.append("<input type=\"").append(inType).append("\"");
+    sb.append(" name=\"").append(inName).append("\"");
+    sb.append(" value=\"").append(val).append("\"/>");
+    sb.append("\n<input type=\"submit\"/>");
+    closeForm(sb);
+    return sb.toString();
+  }
+
+  private String formWithOneSelect(String selName, List<String> options)
+  {
+    String defAction = "http://www.example.com/bioone/cgi/";
+    return formWithOneSelect(null, null, defAction, selName, options);
+  }
+  private String formWithOneSelect(String fId, String fName, String fAction,
+                                   String selName, List<String> options)
+  {
+    StringBuilder sb = new StringBuilder();
+    openForm(sb, fAction, fId, fName);
+    sb.append("\n<select name=\"").append(selName).append("\">\n");
     for(String value : options){
       sb.append("<option value=\"").append(value).append("\"/>").append
           (value).append("</option>\n");
     }
     sb.append("</select>\n");
-    sb.append("\n<input type=\"submit\"/>").append("</form></html>");
+    sb.append("\n<input type=\"submit\"/>").append("</form>");
+    closeForm(sb);
     return sb.toString();
-  }
-
-  private String formWithInput(String inType, String inName, String inValue)
-  {
-
-    StringBuilder sb = new StringBuilder();
-    String val = inValue == null ? "" : inValue;
-    sb.append("<html><head><title>Test Title</title></head><body>");
-    sb.append("<form action=\"http://www.example.com/bioone/cgi/\"");
-    sb.append(" method=\"get\">\n");
-    sb.append("<input type=\"").append(inType).append("\"");
-    sb.append(" name=\"").append(inName).append("\"");
-    sb.append(" value=\"").append(val).append("\"/>");
-    sb.append("\n<input type=\"submit\"/>").append("</form></html>");
-   return sb.toString();
   }
 
   private static class MyLinkExtractorCallback implements

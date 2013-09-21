@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.23 2013-07-07 04:05:43 dshr Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.23.6.1 2013-09-21 05:37:58 tlipkis Exp $
  */
 
 /*
@@ -151,9 +151,9 @@ public class TestBaseCachedUrl extends LockssTestCase {
       return super.getFilteredStream();
     }
 
-    protected InputStream getFilteredStream(MessageDigest md) {
+    protected InputStream getFilteredStream(HashedInputStream.Hasher hasher) {
       gotFilteredStream = true;
-      return super.getFilteredStream(md);
+      return super.getFilteredStream(hasher);
     }
 
     public boolean hasContent() {
@@ -297,13 +297,17 @@ public class TestBaseCachedUrl extends LockssTestCase {
       String str = "This is a filtered stream";
       mau.setHashFilterFactory(new MyMockFilterFactory(new StringInputStream(str)));
       MockMessageDigest md = new MockMessageDigest();
-
+      HashedInputStream.Hasher hasher = new HashedInputStream.Hasher(md);
       CachedUrl cu = getTestCu(url1);
-      InputStream urlIs = cu.openForHashing(md);
+      assertFalse(hasher.isValid());
+      InputStream urlIs = cu.openForHashing(hasher);
+      // hasher.isValid() not checked yet because it will be true iff
+      // filter pre-reads input (which it happens to).
       String result = StringUtil.fromInputStream(urlIs);
       logger.debug3("Want: " + str);
       logger.debug3("Get: " + result);
       assertEquals(str, result);
+      assertTrue(hasher.isValid());
       InputStream hashedStream = new ByteArrayInputStream(md.getUpdatedBytes());
       String hashInput = StringUtil.fromInputStream(hashedStream);
       logger.debug3("Hasher gets: " + hashInput);
@@ -380,6 +384,50 @@ public class TestBaseCachedUrl extends LockssTestCase {
 		   args.get(1));
     }
 
+    String randomString(int len) {
+      return org.apache.commons.lang.RandomStringUtils.randomAlphabetic(len);
+    }
+
+    public void testFilterReset() throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      String unfilt = randomString(100000); // must be longer than will be buffered
+      createLeaf(url1, unfilt, null);
+      mau.setHashFilterFactory(new MarkResetFilterFactory(20000, 18000));
+      MockMessageDigest md = new MockMessageDigest();
+      HashedInputStream.Hasher hasher = new HashedInputStream.Hasher(md);
+      CachedUrl cu = getTestCu(url1);
+      assertFalse(hasher.isValid());
+      InputStream urlIs = cu.openForHashing(hasher);
+      // hasher.isValid() not checked yet because it will be true iff
+      // filter pre-reads input (which it happens to).
+      String result = StringUtil.fromInputStream(urlIs);
+      assertEquals(unfilt.substring(0, 18000) + unfilt, result);
+      assertTrue(hasher.isValid());
+      InputStream hashedStream = new ByteArrayInputStream(md.getUpdatedBytes());
+      String hashInput = StringUtil.fromInputStream(hashedStream);
+      assertEquals(unfilt, hashInput);
+    }
+
+    public void testFilterIllegalReset() throws Exception {
+      String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
+      ConfigurationUtil.setCurrentConfigFromString(config);
+      String unfilt = randomString(20000);
+      createLeaf(url1, unfilt, null);
+      mau.setHashFilterFactory(new MarkResetFilterFactory(5000, 10000));
+      MockMessageDigest md = new MockMessageDigest();
+      HashedInputStream.Hasher hasher = new HashedInputStream.Hasher(md);
+      CachedUrl cu = getTestCu(url1);
+      assertFalse(hasher.isValid());
+      try {
+	InputStream urlIs = cu.openForHashing(hasher);
+	fail("reset to invalid mark should throw");
+      } catch (Exception e) {
+	assertMatchesRE("IOException: Resetting to invalid mark", e.toString());
+      }
+      assertFalse(hasher.isValid());
+    }
+
     public void testGetContentSize() throws Exception {
       createLeaf(url1, content1, null);
       createLeaf(url2, content2, null);
@@ -405,6 +453,39 @@ public class TestBaseCachedUrl extends LockssTestCase {
       CIProperties urlProps = cu.getProperties();
       assertEquals("value", urlProps.getProperty("test"));
       assertEquals("value2", urlProps.getProperty("test2"));
+    }
+
+    public void testAddProperty() throws Exception {
+      CIProperties newProps = new CIProperties();
+      newProps.setProperty("test", "value");
+      newProps.setProperty("test2", "value2");
+      createLeaf(url1, null, newProps);
+
+      CachedUrl cu = getTestCu(url1);
+      cu.addProperty(CachedUrl.PROPERTY_CHECKSUM, "foobar");
+      CIProperties urlProps = cu.getProperties();
+      assertEquals("value", urlProps.getProperty("test"));
+      assertEquals("value2", urlProps.getProperty("test2"));
+      assertEquals("foobar", urlProps.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+
+      CachedUrl cu2 = getTestCu(url1);
+      CIProperties urlProps2 = cu2.getProperties();
+      assertEquals("value", urlProps2.getProperty("test"));
+      assertEquals("value2", urlProps2.getProperty("test2"));
+      assertEquals("foobar",
+		   urlProps2.getProperty(CachedUrl.PROPERTY_CHECKSUM));
+
+      try {
+	cu2.addProperty(CachedUrl.PROPERTY_CHECKSUM, "22222");
+	fail("2nd attempt to add checksum property should fail");
+      } catch (IllegalStateException e) {
+      }
+
+      try {
+	cu2.addProperty("illegal prop", "123");
+	fail("Attempt to add unapproved property should fail");
+      } catch (IllegalArgumentException e) {
+      }
     }
 
     public void testGetReader() throws Exception {
@@ -456,11 +537,9 @@ public class TestBaseCachedUrl extends LockssTestCase {
 						 String encoding) {
       args.add(ListUtil.list(au, encoding));
       try {
-	int len;
-	while ((len = unfilteredIn.available()) > 0) {
-	  byte[] buf = new byte[len];
-	  unfilteredIn.read(buf);
-	}
+	// read to EOF
+	byte[] buf = new byte[100];
+	while (unfilteredIn.read(buf) >= 0);
       } catch (IOException e) {
 	fail("threw: " + e);
       }
@@ -472,6 +551,30 @@ public class TestBaseCachedUrl extends LockssTestCase {
     }
   }
 
+  static class MarkResetFilterFactory implements FilterFactory {
+    int mark;
+    int resetAt;
+
+    MarkResetFilterFactory(int mark, int resetAt) {
+      this.mark = mark;
+      this.resetAt = resetAt;
+    }
+
+    public InputStream createFilteredInputStream(ArchivalUnit au,
+						 InputStream in,
+						 String encoding) {
+      in.mark(mark);
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      try {
+	StreamUtil.copy(in, baos, resetAt);
+	in.reset();
+	StreamUtil.copy(in, baos);
+      } catch (IOException e) {
+	throw new RuntimeException(e);
+      }
+      return new ByteArrayInputStream(baos.toByteArray());
+    }
+  }
   class MyAu extends NullPlugin.ArchivalUnit {
     public FilterRule getFilterRule(String mimeType) {
       return new FilterRule() {

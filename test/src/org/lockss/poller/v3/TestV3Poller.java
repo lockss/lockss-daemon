@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.57 2013-06-26 17:37:51 barry409 Exp $
+ * $Id: TestV3Poller.java,v 1.57.4.1 2013-09-21 05:37:56 tlipkis Exp $
  */
 
 /*
@@ -41,12 +41,12 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.ShouldNotHappenException;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
-import org.lockss.protocol.IdentityManager.IdentityAgreement;
 import org.lockss.util.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.test.*;
 import org.lockss.hasher.*;
+import org.lockss.state.*;
 
 import static org.lockss.util.Constants.*;
 
@@ -286,10 +286,6 @@ public class TestV3Poller extends LockssTestCase {
     return testau.getAuId() + "," + pid.getIdString();
   }
 
-  private IdentityAgreement getIda(PeerIdentity pid) {
-    return idMgr.findTestIdentityAgreement(pid, testau);
-  }
-
   double invitationWeight(String pidkey, long lastInvite, long lastMsg)
       throws Exception {
     return invitationWeight(findPeerIdentity(pidkey), lastInvite, lastMsg);
@@ -321,8 +317,7 @@ public class TestV3Poller extends LockssTestCase {
     status.setLastMessageTime(lastMsg);
     status.setLastPollInvitationTime(lastInvite);
     if (highestAgreement >= 0) {
-      IdentityAgreement ida = getIda(pid);
-      ida.setPercentAgreement(highestAgreement);
+      idMgr.signalPartialAgreement(pid, testau, highestAgreement);
     }
     return poller.invitationWeight(status);
   }
@@ -379,27 +374,84 @@ public class TestV3Poller extends LockssTestCase {
   public void testParticipantSizesAll() throws Exception {
     // All symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo");
-    doTestParticipantSizes(v3Poller, initialPeers.size());
+    doTestParticipantSizes(v3Poller, initialPeers.size(), voters.length);
   }
   public void testParticipantSizesTwo() throws Exception {
     // 2 symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo", 2);
-    doTestParticipantSizes(v3Poller, 2);
+    doTestParticipantSizes(v3Poller, 2, voters.length);
   }
   public void testParticipantSizesNone() throws Exception {
     // No symmetric participants
     V3Poller v3Poller = makeInittedV3Poller("foo", 0);
-    doTestParticipantSizes(v3Poller, 0);
+    doTestParticipantSizes(v3Poller, 0, voters.length);
+  }
+  public void testParticipantSizesNoVoters() throws Exception {
+    // No participants
+    Properties p = new Properties();
+    // Set PARAM_V3_ENABLE_LOCAL_POLLS true
+    p.setProperty(V3Poller.PARAM_V3_ENABLE_LOCAL_POLLS, "true");
+    // Set PARAM_V3_ALL_LOCAL_POLLS true
+    p.setProperty(V3Poller.PARAM_V3_ALL_LOCAL_POLLS, "true");
+    ConfigurationUtil.addFromProps(p);
+
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    doTestParticipantSizes(v3Poller, 0, 0);
   }
 
-  protected void doTestParticipantSizes(V3Poller v3Poller,
-					int numSym) throws Exception {
+  protected void doTestParticipantSizes(V3Poller v3Poller, int numSym,
+					int numVoters) throws Exception {
     Map<PeerIdentity,ParticipantUserData> innerCircle =
       theParticipants(v3Poller);
-    assertEquals(innerCircle.size(), voters.length);
+    assertEquals(numVoters, innerCircle.size());
     List<ParticipantUserData> symmetricParticipants =
       symmetricParticipants(v3Poller);
     assertTrue(symmetricParticipants.size() == numSym);
+  }
+
+  public void testMakeHasher() throws Exception {
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+
+    hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+				 true, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherSampled() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_ALL_POP_POLLS, "true",
+				  V3Poller.PARAM_V3_MODULUS, "1000");
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
+    assertTrue("Hasher: " + hasher + " should be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+
+    // Make a repair hasher, shouldn't be sampled
+    hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+				 true, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertTrue(hasher.isExcludeSuspectVersions());
+  }
+
+  public void testMakeHasherNoExcludeSuspect() throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_EXCLUDE_SUSPECT_VERSIONS,
+				  "false");
+    V3Poller v3Poller = makeInittedV3Poller("foo", 0, 0);
+    BlockHasher hasher = v3Poller.makeHasher(testau.getAuCachedUrlSet(), -1,
+					     false, null);
+    assertFalse("Hasher: " + hasher + " shouldn't be a SampledBlockHasher",
+		hasher instanceof SampledBlockHasher);
+    assertFalse(hasher.isExcludeSuspectVersions());
   }
 
   public void testInitHasherByteArraysAll() throws Exception {
@@ -557,7 +609,151 @@ public class TestV3Poller extends LockssTestCase {
     ud.setVoteBlocks(vb);
     return ud;
   }
-  
+
+  public void testCountLastPoRAgreePeers() throws Exception {
+    TimeBase.setSimulated(1000L);
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    ArchivalUnit au = v3Poller.getAu();
+    assertNotNull(au);
+    assertTrue(au instanceof MockArchivalUnit);
+    MockArchivalUnit mau = (MockArchivalUnit)au;
+    AuState aus = AuUtil.getAuState(au);
+    assertNotNull(aus);
+    assertTrue(aus instanceof MockAuState);
+    MockAuState maus = (MockAuState)aus;
+    maus.setLastTopLevelPollTime(200L);
+    assertEquals(200L, maus.getLastTopLevelPollTime());
+    maus.setPollDuration(100L);
+    assertEquals(100L, maus.getPollDuration());
+    Map agreeMap = idMgr.getAgreed(mau);
+    assertNotNull(agreeMap);
+    assertEquals(0L, agreeMap.size());
+    PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
+    assertFalse(p1.isLocalIdentity());
+    PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
+    assertFalse(p2.isLocalIdentity());
+    PeerIdentity p3 = findPeerIdentity("TCP:[1.2.3.7]:1111");
+    assertFalse(p3.isLocalIdentity());
+    PeerIdentity p4 = findPeerIdentity("TCP:[1.2.3.8]:1111");
+    assertFalse(p4.isLocalIdentity());
+    PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
+    assertFalse(p5.isLocalIdentity());
+    // Add local ID - local poll finished at 900
+    agreeMap.put(pollerId, 900L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoP poll finished at 700
+    agreeMap.put(p5, 700L);
+    agreeMap.put(p4, 700L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoR poll between 0 and 100
+    agreeMap.put(p3, 10L);
+    agreeMap.put(p2, 20L);
+    agreeMap.put(p1, 30L);
+    assertEquals(0, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Add result of PoR poll between 100 and 200
+    agreeMap.put(p3, 150L);
+    agreeMap.put(p2, 160L);
+    agreeMap.put(p1, 170L);
+    assertEquals(3, v3Poller.countLastPoRAgreePeers(mau, maus));
+    // Make it look like p1 subsequently agreed in a PoP poll
+    agreeMap.put(p3, 500L);
+    assertEquals(2, v3Poller.countLastPoRAgreePeers(mau, maus));
+  }
+
+  public void testChoosePollVariantPorOnly() throws Exception {
+    testChoosePollVariant(false, false);
+  }
+
+  public void testChoosePollVariantPoRPoP() throws Exception {
+    testChoosePollVariant(true, false);
+  }
+
+  public void testChoosePollVariantPoRLocal() throws Exception {
+    testChoosePollVariant(false, true);
+  }
+
+  public void testChoosePollVariantPoRPoPLocal() throws Exception {
+    testChoosePollVariant(true, true);
+  }
+
+  public void testChoosePollVariant(boolean enablePoPPolls,
+				    boolean enableLocalPolls) throws Exception {
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_V3_ENABLE_POP_POLLS,
+				  "" + enablePoPPolls,
+				  V3Poller.PARAM_V3_ENABLE_LOCAL_POLLS,
+				  "" + enableLocalPolls);
+
+    ConfigurationUtil.addFromArgs(V3Poller.PARAM_THRESHOLD_REPAIRERS_LOCAL_POLLS,
+				 "3");
+    TimeBase.setSimulated(1000L);
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    ArchivalUnit au = v3Poller.getAu();
+    assertNotNull(au);
+    assertTrue(au instanceof MockArchivalUnit);
+    MockArchivalUnit mau = (MockArchivalUnit)au;
+    AuState aus = AuUtil.getAuState(au);
+    assertNotNull(aus);
+    assertTrue(aus instanceof MockAuState);
+    MockAuState maus = (MockAuState)aus;
+    PollSpec ps = v3Poller.getPollSpec();
+    assertNotNull(ps);
+    Map agreeMap = idMgr.getAgreed(mau);
+    assertNotNull(agreeMap);
+    assertEquals(0L, agreeMap.size());
+    PeerIdentity p1 = findPeerIdentity("TCP:[127.0.0.1]:5009");
+    assertFalse(p1.isLocalIdentity());
+    PeerIdentity p2 = findPeerIdentity("TCP:[1.2.3.4]:5009");
+    assertFalse(p2.isLocalIdentity());
+    PeerIdentity p3 = findPeerIdentity("TCP:[1.2.3.7]:1111");
+    assertFalse(p3.isLocalIdentity());
+    PeerIdentity p4 = findPeerIdentity("TCP:[1.2.3.8]:1111");
+    assertFalse(p4.isLocalIdentity());
+    PeerIdentity p5 = findPeerIdentity("TCP:[4.5.6.2]:1111");
+    assertFalse(p5.isLocalIdentity());
+    // First poll is PoR
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Now crawl and get content
+    maus.setLastContentChange(100);
+    maus.setLastCrawlTime(100);
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Now poll but get disagreement
+    maus.setLastTopLevelPollTime(200);
+    maus.setPollDuration(100L);
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Now get 2 agreements, repairer threshold is 3
+    agreeMap.put(p3, 150L);
+    agreeMap.put(p2, 160L);
+    assertEquals(  enablePoPPolls
+		   ? V3Poller.PollVariant.PoP : V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Add another agreement
+    agreeMap.put(p1, 170L);
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now crawl again, but get no content
+    maus.setLastCrawlTime(300);
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now crawl again, get content
+    maus.setLastCrawlTime(300);
+    maus.setLastContentChange(300);
+    assertEquals(V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
+    // Now poll but get disagreement
+    maus.setLastTopLevelPollTime(500);
+    maus.setPollDuration(100L);
+    assertEquals(V3Poller.PollVariant.PoR, v3Poller.choosePollVariant(ps, 3));
+    // Now get 3 agreement, repairer threshold is 3
+    agreeMap.put(p3, 450L);
+    agreeMap.put(p2, 460L);
+    agreeMap.put(p1, 460L);
+    assertEquals(  enableLocalPolls
+		   ? V3Poller.PollVariant.Local : V3Poller.PollVariant.PoR,
+		 v3Poller.choosePollVariant(ps, 3));
+  }
+
   public void testIsPeerEligible() throws Exception {
     V3Poller v3Poller = makeV3Poller("testing poll key");
     assertFalse(v3Poller.isPeerEligible(pollerId));
@@ -824,6 +1020,117 @@ public class TestV3Poller extends LockssTestCase {
     // poller has foo2a.
     assertEquals("2/0/1/0/1/0",
 		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
+  }
+  
+  public void testTallyBlocksSucceedsWithNoVersionVote() throws Exception {
+
+    V3Poller v3Poller = makeV3Poller("testing poll key");
+    
+    PeerIdentity id1 = findPeerIdentity("TCP:[127.0.0.1]:8990");
+    PeerIdentity id2 = findPeerIdentity("TCP:[127.0.0.1]:8991");
+    PeerIdentity id3 = findPeerIdentity("TCP:[127.0.0.1]:8992");
+    PeerIdentity id4 = findPeerIdentity("TCP:[127.0.0.1]:8993");
+        
+    String [] urls_poller =
+    { 
+     "http://test.com/foo1",
+     "http://test.com/foo2",
+     "http://test.com/foo3"
+    };
+    
+    HashBlock [] hashblocks =
+    {
+     makeHashBlock("http://test.com/foo1", "content for foo1"),
+     makeHashBlock("http://test.com/foo2", "content for foo2"),
+     makeHashBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter1_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter2_voteblocks =
+    {
+     makeVoteBlock("http://test.com/foo1", "content for foo1"),
+     makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+     makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter3_voteblocks =
+    {
+      makeVoteBlock("http://test.com/foo1", "content for foo1"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    VoteBlock [] voter4_voteblocks =
+    {
+      makeVoteBlock("http://test.com/foo1"), // voter3 votes "present"
+      makeVoteBlock("http://test.com/foo2a", "content for foo2a"),
+      makeVoteBlock("http://test.com/foo3", "content for foo3")
+    };
+    
+    v3Poller.theParticipants.put(id1, makeParticipant(id1, v3Poller,
+                                                      voter1_voteblocks));
+    v3Poller.theParticipants.put(id2, makeParticipant(id2, v3Poller,
+                                                      voter2_voteblocks));
+    v3Poller.theParticipants.put(id3, makeParticipant(id3, v3Poller,
+                                                      voter3_voteblocks));
+    v3Poller.theParticipants.put(id4, makeParticipant(id4, v3Poller,
+                                                      voter4_voteblocks));
+    v3Poller.lockParticipants();
+    // Finally, let's test.
+    
+    BlockTally tally;
+    
+    // The results expected are based on a quorum of 3.
+    assertEquals(3, v3Poller.getQuorum());
+    assertEquals(75, v3Poller.getVoteMargin());
+
+    tally = v3Poller.tallyBlock(hashblocks[0]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult());
+    // All but id4 should agree
+    assertEquals(3, tally.getAgreeVoters().size());
+    Collection<ParticipantUserData> disagree = tally.getDisagreeVoters();
+    assertEquals(1, disagree.size());
+    assertTrue(disagree.contains(v3Poller.theParticipants.get(id4)));
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+
+    tally = v3Poller.tallyBlock(hashblocks[1]);
+    assertEquals(BlockTally.Result.LOST_POLLER_ONLY_BLOCK,
+		 tally.getTallyResult());
+    assertSameElements(v3Poller.theParticipants.values(),
+		       tally.getPollerOnlyBlockVoters());
+    try {
+      tally.getRepairVoters();
+      fail("expected ShouldNotHappenException was not thrown.");
+    } catch (ShouldNotHappenException ex) {
+      // Expected
+    }
+    
+    tally = v3Poller.tallyBlock(hashblocks[2]);
+    assertEquals(BlockTally.Result.WON, tally.getTallyResult());
+    assertSameElements(v3Poller.theParticipants.values(),
+		       tally.getAgreeVoters());
+
+    // String is agree/disagree/pollerOnly/voterOnly/neither/spoiled
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id1).getVoteCounts().votes());
+    assertEquals("2/0/1/1/0/0",
+		 v3Poller.theParticipants.get(id2).getVoteCounts().votes());
+    // This voter sees a "neither" URL, since neither it nor the
+    // poller has foo2a.
+    assertEquals("2/0/1/0/1/0",
+		 v3Poller.theParticipants.get(id3).getVoteCounts().votes());
+    assertEquals("1/1/1/1/0/0",
+		 v3Poller.theParticipants.get(id4).getVoteCounts().votes());
   }
   
   private Collection<String> publisherRepairUrls(V3Poller v3Poller) {
@@ -1516,16 +1823,20 @@ public class TestV3Poller extends LockssTestCase {
   }
   
   private MyV3Poller makeInittedV3Poller(String key) throws Exception {
-    return makeInittedV3Poller(key, 6);
+    return makeInittedV3Poller(key, 6, voters.length);
   }
 
   private MyV3Poller makeInittedV3Poller(String key,
 					   int numSym) throws Exception {
+    return makeInittedV3Poller(key, numSym, voters.length);
+  }
+  private MyV3Poller makeInittedV3Poller(String key, int numSym,
+					 int numVoters) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
     MyV3Poller p = new MyV3Poller(ps, theDaemon, pollerId, key, 20000,
                                           "SHA-1");
-    p.constructInnerCircle(voters.length);
+    p.constructInnerCircle(numVoters);
     Map<PeerIdentity,ParticipantUserData> innerCircle = theParticipants(p);
     for (int ix = 0; ix < voters.length; ix++) {
       PeerIdentity pid = voters[ix];
@@ -1651,14 +1962,25 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   static class MyIdentityManager extends IdentityManagerImpl {
-    IdentityAgreement findTestIdentityAgreement(PeerIdentity pid,
-						ArchivalUnit au) {
-      Map map = findAuAgreeMap(au);
-      synchronized (map) {
-	return findPeerIdentityAgreement(map, pid);
+    Map myMap = null;
+
+    @Override
+    public Map getAgreed(ArchivalUnit au) {
+      if (myMap == null) {
+	myMap = new HashMap();
       }
+      return myMap;
+    }
+    
+    @Override
+    public List getCachesToRepairFrom(ArchivalUnit au) {
+      if (myMap == null) {
+	myMap = new HashMap();
+      }
+      return new ArrayList(myMap.keySet());
     }
 
+    @Override
     public void storeIdentities() throws ProtocolException {
     }
   }

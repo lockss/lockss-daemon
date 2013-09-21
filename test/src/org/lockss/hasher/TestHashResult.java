@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashResult.java,v 1.5 2013-05-10 17:00:21 barry409 Exp $
+ * $Id: TestHashResult.java,v 1.5.10.1 2013-09-21 05:37:59 tlipkis Exp $
  */
 
 /*
@@ -32,10 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.hasher;
 
+import java.io.*;
+import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestHashResult extends LockssTestCase {
   public static byte[] bytes = {0, 1, 2};
+  public static byte[] bytes2 = {2, 1, 0};
   public static byte[] empty_bytes = {};
 
   public void testCreate() {
@@ -44,13 +48,19 @@ public class TestHashResult extends LockssTestCase {
 
   public void testCreateNoBytes() {
     try {
-      HashResult.make(null);
+      HashResult.make((byte[])null);
       fail();
     } catch (HashResult.IllegalByteArray e) {
       // expected
     }
     try {
       HashResult.make(empty_bytes);
+      fail();
+    } catch (HashResult.IllegalByteArray e) {
+      // expected
+    }
+    try {
+      HashResult.make((String)null);
       fail();
     } catch (HashResult.IllegalByteArray e) {
       // expected
@@ -77,12 +87,133 @@ public class TestHashResult extends LockssTestCase {
   public void testEqualsAndHashCode() {
     HashResult o1 = HashResult.make(bytes);
     HashResult o2 = HashResult.make(bytes);
+    HashResult o3 = HashResult.make(bytes2);
+    HashResult o4 = HashResult.make(bytes, "fooalg");
+    HashResult o5 = HashResult.make(bytes, "baralg");
     
     // o1 and o2 are not == but are equals.
-    assertFalse(o1 == o2);
+    assertNotSame(o1, o2);
     assertTrue(o1.equals(o2));
     assertTrue(o2.equals(o1));
 
+    assertFalse(o1.equals(o3));
+    assertFalse(o3.equals(o1));
+
+    assertFalse(o4.equals(o1));
+    assertFalse(o1.equals(o4));
+
+    assertFalse(o4.equals(o5));
+    assertFalse(o5.equals(o4));
+
     assertEquals(o1.hashCode(), o2.hashCode());
   }
+
+  private String[] bad = {
+    "deadbeef",
+    "SHA-1:",
+    "SHA-1:bar",
+    ":deadbeef"
+  };
+
+  public void testMakeFromString() {
+    String good = "SHA-1:deadbeef";
+    HashResult hr = HashResult.make(good);
+    assertEquals(0, good.compareToIgnoreCase(hr.toString()));
+    for (int i = 0; i < bad.length; i++) {
+      try {
+	hr = HashResult.make(bad[i]);
+	fail("Should be illegal: " + bad[i]);
+      } catch (HashResult.IllegalByteArray ex) {
+	// Expected
+      }
+    }
+  }
+
+  // Simple holder class to serialize/deserialize a HashResult field
+  static class Holder implements LockssSerializable {
+    HashResult hr;
+
+    Holder() {}
+    Holder(HashResult hr) {
+      this.hr = hr;
+    }
+  }
+
+  // Deserialize and return a Holder from the string
+  Holder deser(String s) throws Exception {
+    return (Holder)(new XStreamSerializer().deserialize(new StringReader(s)));
+  }
+
+  // Return the serialized representation of the object
+  String ser(LockssSerializable o) throws Exception {
+    File tf = File.createTempFile("ser", ".xml");
+    new XStreamSerializer().serialize(tf, o);
+    return StringUtil.fromFile(tf);
+  }
+
+  String xmlhr(String hr) {
+    return "<org.lockss.hasher.TestHashResult-Holder>" +
+      "<hr>" + hr + "</hr>" +
+      "</org.lockss.hasher.TestHashResult-Holder>";
+  }
+
+  public void testDeser() throws Exception {
+    String good[] = {
+      "SHA-1:deadbeef",
+      "foo:0123456789abcdef",
+    };
+    String bad[] = {
+      "SHA-1:deadfeet",	      // not hex
+      "foo:",		      // no hash value
+      "feed",		      // no algorithm - currently illegal
+    };
+
+    for (String s : good) {
+      assertEquals(HashResult.make(s), deser(xmlhr(s)).hr);
+    }
+
+    for (String s : bad) {
+      try {
+	deser(xmlhr(s));
+	fail("Should fail to deserialize: " + s);
+      } catch (SerializationException e) {
+      }
+    }
+  }
+
+  // Uppercase the hash part of the string to agree with HashResult.toString()
+  String canonHr(String s) {
+    List<String> l = StringUtil.breakAt(s, ":");
+    if (l.size() == 2) {
+      return l.get(0) + ":" + l.get(1).toUpperCase();
+    }
+    return s.toUpperCase();
+  }
+
+  public void testSer() throws Exception {
+    String good[] = {
+      "SHA-1:deadbeef",
+      "SHA-256:5454ABCD",
+      "foo:0123456789abcdef",
+    };
+    String bad[] = {
+      "SHA-1:deadfeet",
+    };
+
+    for (String s : good) {
+      String xml = ser(new Holder(HashResult.make(s)));
+      assertMatchesRE("<hr>" + canonHr(s) + "</hr>", xml);
+    }
+
+    // Currently illegal to serialize HashResult with no algorithm
+    HashResult hr1 = HashResult.make(ByteArray.fromHexString("feed1234"));
+    Holder hd1 = new Holder(hr1);
+    try {
+      ser(hd1);
+      fail("Should fail to serialize: " + hr1);
+    } catch (SerializationException e) {
+    }
+  }
+
+
 }

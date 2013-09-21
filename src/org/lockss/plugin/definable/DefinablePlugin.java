@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.73 2013-04-01 00:44:41 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.73.6.1 2013-09-21 05:39:01 tlipkis Exp $
  */
 
 /*
@@ -236,10 +236,17 @@ public class DefinablePlugin extends BasePlugin {
 
   // Move any values from obsolescent keys to their official key
   void processObsolescentFields(TypedEntryMap map) {
+    // au_manifest -> au_permission_url
     if (map.containsKey(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT)) {
       map.setMapElement(DefinableArchivalUnit.KEY_AU_PERMISSION_URL,
 			map.getMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT));
       map.removeMapElement(DefinableArchivalUnit.KEY_AU_MANIFEST_OBSOLESCENT);
+    }
+    // au_crawl_depth -> au_refetch_depth
+    if (map.containsKey(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT)) {
+      map.setMapElement(DefinableArchivalUnit.KEY_AU_REFETCH_DEPTH,
+			map.getMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT));
+      map.removeMapElement(DefinableArchivalUnit.KEY_AU_CRAWL_DEPTH_OBSOLESCENT);
     }
   }
 
@@ -557,7 +564,7 @@ public class DefinablePlugin extends BasePlugin {
 				  DefinableArchivalUnit.SUFFIX_HASH_FILTER_FACTORY);
 	if (val instanceof String) {
 	  String factName = (String)val;
-	  log.debug(mime + " filter: " + factName);
+	  log.debug2(mime + " filter: " + factName);
 	  MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	  FilterFactory fact =
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.11 2008-10-02 06:49:22 tlipkis Exp $
+ * $Id: IdentityManagerStatus.java,v 1.11.86.1 2013-09-21 05:39:00 tlipkis Exp $
  */
 
 /*
@@ -156,7 +156,7 @@ public class IdentityManagerStatus
       PeerIdentity pid = status.getPeerIdentity();
       if (!pid.isLocalIdentity() &&
 	  (includeWrongGroup || isGroupMatch(status, myGroups))) {
-	if (includeV1 || pid.getPeerAddress().isStream()) {
+	if (includeV1 || pid.isV3()) {
 	  table.add(makeRow(pid, status));
 	}
       }

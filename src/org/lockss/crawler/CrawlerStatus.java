@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.13 2012-11-08 06:22:04 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.13.28.1 2013-09-21 05:39:05 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,8 @@ public class CrawlerStatus {
 
 
   static Map<Integer,String> DEFAULT_MESSAGES = new HashMap();
+  public static StringPool CRAWL_STATUS_POOL = new StringPool("Crawl Status");
+
   static {
     DEFAULT_MESSAGES.put(Crawler.STATUS_UNKNOWN, "Unknown");
     DEFAULT_MESSAGES.put(Crawler.STATUS_QUEUED, "Pending");
@@ -156,6 +158,12 @@ public class CrawlerStatus {
 			 "Interrupted by daemon exit");
     DEFAULT_MESSAGES.put(Crawler.STATUS_EXTRACTOR_ERROR,
 			 "Link extractor error");
+
+    // Put all these strings in a sealed StringPool
+    for (String s : DEFAULT_MESSAGES.values()) {
+      CRAWL_STATUS_POOL.intern(s);
+    }
+    CRAWL_STATUS_POOL.seal();
   }
 
   private static int ctr = 0;		// Instance counter (for getKey())
@@ -864,7 +872,7 @@ public class CrawlerStatus {
     return referrers.hasReferrersOfType(rt);
   }
 
-  public List<String> getReferrers(String url) {
+  public synchronized List<String> getReferrers(String url) {
     return referrers.getReferrers(url);  
   }
 
@@ -1120,6 +1128,7 @@ public class CrawlerStatus {
     Map map;
     RecordReferrersMode recordMode;
     RecordReferrerTypes recordTypes;
+    boolean isSealed = false;
 
     ReferrerMap(RecordReferrersMode recordMode,
 		RecordReferrerTypes recordTypes) {
@@ -1209,7 +1218,12 @@ public class CrawlerStatus {
       if (val == null) {
 	return Collections.EMPTY_LIST;
       } else if (val instanceof List) {
-	return (List<String>)val;
+	List<String> lst = (List<String>)val;
+	if (isSealed()) {
+	  return lst;
+	} else {
+	  return new ArrayList<String>(lst);
+	}
       } else {
 	return Collections.singletonList((String)val);
       }
@@ -1219,7 +1233,12 @@ public class CrawlerStatus {
       if (!keepColl) {
 	map = null;
       }
+      isSealed = true;
       return this;
+    }
+
+    public boolean isSealed() {
+      return isSealed;
     }
   }
 

@@ -149,7 +149,7 @@
        eissn =  2047-9816
      >
        
-       param[base_url] = http://ar-sr.sagepub.com/
+       param[base_url] = http://arr.sagepub.com/
        pluginSuffix = ClockssHighWirePressH20Plugin
        
        au < exists ; exists ; 2012 ; Acta Radiologica Short Reports Volume 1 ; 1 ; >
@@ -25353,7 +25353,7 @@
         au < zapped ; down ; 2009-2010 ; Medical Law International Volume 10 ; 10 ; >
         au < zapped ; down ; 2011 ; Medical Law International Volume 11 ; 11 ; >
         au < released ; crawling ; 2012 ; Medical Law International Volume 12 ; 12 ; >
-        au < expected ; exists ; 2013 ; Medical Law International Volume 13 ; 13 ; >
+        au < crawling ; exists ; 2013 ; Medical Law International Volume 13 ; 13 ; >
         
       }
       
@@ -37965,7 +37965,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://crr.sagepub.com/
 
-    au < exists ; exists ; 2013 ; Critical Research on Religion Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; Critical Research on Religion Volume 1 ; 1 ; >
 
     }
 
@@ -39056,7 +39056,7 @@
         au < exists ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 ; >
         au < exists ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 ; >
         au < exists ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 ; >
-        au < exists ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 ; >
   
       }
   
@@ -39454,7 +39454,7 @@
         au < exists ; exists ; 2010 ; Ultrasound Volume 18 ; 18 ; >
         au < exists ; exists ; 2011 ; Ultrasound Volume 19 ; 19 ; >
         au < exists ; exists ; 2012 ; Ultrasound Volume 20 ; 20 ; >
-        au < exists ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
+        au < crawling ; exists ; 2013 ; Ultrasound Volume 21 ; 21 ; >
   
       }
   
