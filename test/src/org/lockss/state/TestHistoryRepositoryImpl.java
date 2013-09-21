@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.83 2013-09-18 05:39:12 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.84 2013-09-21 04:33:48 tlipkis Exp $
  */
 
 /*
@@ -338,7 +338,8 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(111222, loadedState.getLastPoPPoll());
     assertEquals(7, loadedState.getLastPoPPollResult());
     assertEquals(222333, loadedState.getLastLocalHashScan());
-    assertEquals(222444, loadedState.getLastLocalHashMismatch());
+    // Disabled for 1.62
+//     assertEquals(222444, loadedState.getLastLocalHashMismatch());
 
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());

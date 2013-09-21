@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.50 2013-09-18 05:39:13 tlipkis Exp $
+ * $Id: AuState.java,v 1.51 2013-09-21 04:33:48 tlipkis Exp $
  */
 
 /*
@@ -76,8 +76,12 @@ public class AuState implements LockssSerializable {
   protected long lastPoPPoll;		// last completed PoP poll time
   protected int lastPoPPollResult;	// result of last PoP poll
   protected long lastLocalHashScan;	// last completed local hash scan
-  protected long lastLocalHashMismatch;	// last time a new local hash
-					// mismatch was detected
+
+  // XXX not used in 1.62 - made transient so not committed to having it in
+  // state file
+  protected transient long lastLocalHashMismatch; // last time a new local
+						  // hash mismatch was
+						  // detected
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
