@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressArticleIteratorFactory.java,v 1.1 2013-01-24 22:40:18 alexandraohlson Exp $
+ * $Id: PortlandPressArticleIteratorFactory.java,v 1.2 2013-09-23 19:20:05 etenbrink Exp $
  */
 
 /*
@@ -35,164 +35,118 @@ package org.lockss.plugin.portlandpress;
 import java.util.Iterator;
 import java.util.regex.*;
 
-import org.apache.commons.lang.StringUtils;
-
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-/*
- * Article lives at three locations:  
- * Abstract: <baseurl>/<jid>/<volnum>/
- *           <lettersnums>.htm
- *           <lettersnums>add.htm - supplementary stuff
- *           <lettersnums>add.mov  - ex - quicktime movie
- *           <lettersnums>add.pdf - ex - online data
- * PDF & legacy html: <base-url>/<jid>/<volnum>/startpagenum/ 
- *           <lettersnums>.htm
- *           <lettersnums>.pdf  (note that pdf filename does not start with jid)
- * Enhanced full text version: <base-url>/<jid>/ev/<volnum>/<stpage>
- *           <lettersnums_ev.htm>
- * notes startpgaenum can have letters in it
- * lettersnums seems to be catenated <jid><volnum><startpagenum> except for pdf which is <volnjum><startpagenum>
- */
-
 public class PortlandPressArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("PortlandPressArticleIteratorFactory");
+  protected static Logger log =
+      Logger.getLogger("PortlandPressArticleIteratorFactory");
   
- protected static final String ROOT_TEMPLATE = "\"%s%s/%s/\", base_url, journal_id, volume_name";  
-//  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";  
-  // pick up the abstract as the logical definition of one article - lives one level higher than pdf & fulltext
+  protected static final String ROOT_TEMPLATE =
+      "\"%s%s/%s/\", base_url, journal_id, volume_name";  
+  
+  // pick up the abstract as the logical definition of one article
+  // - lives one level higher than pdf & fulltext
   // pick up <lettersnums>.htm, but not <lettersnums>add.htm
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/%s/(?![^/]+add\\.htm)%s[^/]+\\.htm\", base_url,journal_id, volume_name, journal_id";
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%s%s/%s/(?![^/]+add[.]htm)%.3s[^/]+[.]htm\", " +
+      "base_url,journal_id, volume_name, journal_id";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-        return new PortlandPressArticleIterator(au,
-                                         new SubTreeArticleIterator.Spec()
-                                             .setTarget(target)
-                                             .setRootTemplate(ROOT_TEMPLATE)
-                                             .setPatternTemplate(PATTERN_TEMPLATE));
-  }
-
-  protected static class PortlandPressArticleIterator extends SubTreeArticleIterator {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    /*
+     * Article lives at three locations:  
+     * <baseurl>/<jid>/<volnum>/                : Abstract
+     *           <lettersnums>.htm
+     *           <lettersnums>add.htm - supplementary stuff
+     *           <lettersnums>add.mov  - ex - quicktime movie
+     *           <lettersnums>add.pdf - ex - online data
+     * <base-url>/<jid>/<volnum>/startpagenum/  : PDF & legacy html
+     *           <lettersnums>.htm
+     *           <lettersnums>.pdf  (note that pdf filename does not start with jid)
+     * <base-url>/<jid>/ev/<volnum>/<stpage>    : Enhanced full text version
+     *           <lettersnums_ev.htm>
+     * notes: startpagenum can have letters in it
+     * lettersnums seems to be concatenated <jid{max 3 chars}><volnum><startpagenum>
+     *    except for pdf which is <volnum><startpagenum>
+     */
+    
+    // various aspects of an article
+    // http://www.clinsci.org/cs/120/cs1200013add.htm
+    // http://essays.biochemistry.org/bsessays/048/bse0480001.htm
+    // http://essays.biochemistry.org/bsessays/048/0001/0480001.pdf
+    // http://essays.biochemistry.org/bsessays/048/0001/bse0480001.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_ev.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evf01.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evrefs.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evtab01.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evtext01.htm
+    // http://essays.biochemistry.org/bsessays/ev/048/0045/bse0480045_evtitle.htm
     
     // Identify groups in the pattern "/(<jid>)/(<volnum>)/(<articlenum>).htm
     // articlenum is <jid><volnum><pageno> and we need pageno to find the content files
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+)/([^/]+)/([^/]+)\\.htm$", Pattern.CASE_INSENSITIVE);
-
-    public PortlandPressArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-      }
+    final Pattern ABSTRACT_PATTERN = Pattern.compile(
+        "/([^/]{1,3})([^/]*)/([^/]+)/\\1\\3([^/]+)[.]htm$", Pattern.CASE_INSENSITIVE);
     
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      log.info("article url?: " + url);
-      
-      Matcher mat = ABSTRACT_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processAbstract(cu, mat);
-      }
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
+    final Pattern HTML_PATTERN = Pattern.compile(
+        "/([^/]{1,3})([^/]*)/([^/]+)/([^/]+)/\\1\\3\\4[.]htm$", Pattern.CASE_INSENSITIVE);
     
-    protected ArticleFiles processAbstract(CachedUrl cu, Matcher mat) {
-      ArticleFiles af = new ArticleFiles();
-
-      /* the abstract is NOT a full text cu so you're going to have to look for 
-       * one even ifyou're only counting articles
-       */
-      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-      guessAdditionalFiles(af, mat);
-      return af;
-    }
- 
-    protected void guessAdditionalFiles(ArticleFiles af, Matcher mat) {    
-      /*
-       * If the standard html file exists, set that as the fullTextCu
-       * If not, look for a PDF first and then an extended html
-       * Once you have the full text CU, only proceed if you aren't just counting articles
-       */
-      String jidString = mat.group(1);
-      String volString = mat.group(2);
-      String fileString = mat.group(3);
-      String newURL = null;
-      boolean articleTarget = false;
-      
-      /* minimize the work you do if you are just counting articles */
-      if ( (spec.getTarget() != null) && (spec.getTarget().isArticle())) {
-        articleTarget = true;
-      }
-      
-      // fileString should be <jid><vol><pageno> and we need to pull out <pageno>
-      if ( fileString.contains(volString)) {
-        String pageString = StringUtils.substringAfter(fileString,volString);
-        String pdfFilename = StringUtils.substringAfter(fileString, jidString);
-
-        /* legacy html lives in a <pageno> subdirectory */
-        newURL = mat.replaceFirst("/$1/$2/" + pageString + "/$3.htm");
-        CachedUrl htmlCu = au.makeCachedUrl(newURL);
-        if (htmlCu != null && htmlCu.hasContent()) {
-          af.setFullTextCu(htmlCu);
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-          
-        }
-        AuUtil.safeRelease(htmlCu);
-
-        if ((af.getFullTextCu() == null) || !articleTarget){
-          // still need an article or doing more AF identification for metadata extraction 
-          /* pdf file lives in a <pageno> subdirectory and the filename is just <vol><pageno>.pdf with no <jid>*/
-          newURL = mat.replaceFirst("/$1/$2/" + pageString + "/" + pdfFilename + ".pdf");
-          CachedUrl pdfCu = au.makeCachedUrl(newURL);
-          if (pdfCu != null && pdfCu.hasContent()) {
-            if (af.getFullTextCu() == null) {
-              af.setFullTextCu(pdfCu);
-            }
-            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-          }
-          AuUtil.safeRelease(pdfCu);
-          
-        }
-
-        if ((af.getFullTextCu() == null) || !articleTarget){
-          /* extended html lives in ../ev/<volnum>/<pageno> directory */
-          newURL = mat.replaceFirst("/$1/ev/$2/" + pageString + "/$3_ev.htm");
-          htmlCu = au.makeCachedUrl(newURL);
-          if (htmlCu != null && htmlCu.hasContent()) {
-            if (af.getFullTextCu() == null) {
-              af.setFullTextCu(htmlCu);
-            }
-            if (af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML) == null) {
-              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-            }
-          }
-          AuUtil.safeRelease(htmlCu);
-        }
+    final Pattern PDF_PATTERN = Pattern.compile(
+        "/([^/]{1,3})([^/]*)/([^/]+)/([^/]+)/\\3\\4[.]pdf$", Pattern.CASE_INSENSITIVE);
     
-        if (!articleTarget){
-          /* you'll only pick up this stuff if you are doing metadata */
-          /* supplementary files landing page, lives in the same place as the abstract */
-          newURL = mat.replaceFirst("/$1/$2/$3add.htm");
-          CachedUrl supCu = au.makeCachedUrl(newURL);
-          if (supCu != null && supCu.hasContent()) {
-            af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, supCu);
-          }
-          AuUtil.safeRelease(supCu);
-        }
-
-      } /* if the filename doesn't contain the volnum then the scheme is different than expected */
-    }
+    // how to change from one form (aspect) of article to another
+    final String ABSTRACT_REPLACEMENT = "/$1$2/$3/$1$3$4.htm";
+    final String HTML_REPLACEMENT = "/$1$2/$3/$4/$1$3$4.htm";
+    final String PDF_REPLACEMENT = "/$1$2/$3/$4/$3$4.pdf";
+    final String ADD_REPLACEMENT = "/$1$2/$3/$1$3$4add.htm";
+    final String EV_REPLACEMENT = "/$1$2/ev/$3/$4/$1$3$4_ev.htm";
+    
+    
+    builder.setSpec(target,
+        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    // set up abstract to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
+    // until this is deprecated
+    builder.addAspect(
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up *add.htm to be a suppl aspect
+    builder.addAspect(ADD_REPLACEMENT,
+        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+    
+    builder.addAspect(
+        EV_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
+        ArticleFiles.ROLE_ABSTRACT);
+    
+    return builder.getSubTreeArticleIterator();
   }
   
   @Override
