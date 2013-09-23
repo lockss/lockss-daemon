@@ -209,10 +209,10 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tint
 
-      au < testing ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
-      au < testing ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
-      au < testing ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
-      au < testing ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
+      au < ready ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
+      au < ready ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
+      au < ready ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
+      au < ready ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
 
   }
 
