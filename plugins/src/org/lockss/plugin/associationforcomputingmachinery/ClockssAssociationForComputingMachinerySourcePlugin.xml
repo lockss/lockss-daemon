@@ -64,4 +64,13 @@
       </entry>
     </map>
   </entry>
-</map>    
+  <entry>
+    <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+ </map>    

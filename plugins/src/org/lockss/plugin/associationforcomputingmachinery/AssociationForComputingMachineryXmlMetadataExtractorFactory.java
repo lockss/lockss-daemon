@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.13 2013-08-20 22:54:36 aishizaki Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.14 2013-09-23 15:20:50 aishizaki Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ import java.util.*;
 import org.apache.commons.collections.map.*;
 import javax.xml.xpath.XPathExpressionException;
 import org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryCachedUrl;
+import org.lockss.plugin.base.BaseCachedUrl;
 
 /**
  * Files used to write this class constructed from ACM FTP archive:
@@ -64,24 +65,24 @@ implements FileMetadataExtractorFactory {
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
-          throws PluginException {
+  throws PluginException {
     return new ACMXmlMetadataExtractor();
   }
 
   public static class ACMXmlMetadataExtractor 
   implements FileMetadataExtractor {
-    
+
     private static  Validator titlevalid = new Validator(){
       public String validate(ArticleMetadata am,MetadataField field,String val)
-          throws MetadataException.ValidationException {
+      throws MetadataException.ValidationException {
         // normalize title entries so that it's never set to empty string"/>
-          if(val.isEmpty()) {
-            throw new MetadataException.ValidationException("Illegal title: empty string"); 
-          }
-          return val;
-          }
-     };
-    
+        if(val.isEmpty()) {
+          throw new MetadataException.ValidationException("Illegal title: empty string"); 
+        }
+        return val;
+      }
+    };
+
     // We're going to override the MetadataField.FIELD_JOURNAL_TITLE 
     // this local version will ensure against an empty string. 
     // This improvement should get added in the daemon when possible
@@ -96,18 +97,18 @@ implements FileMetadataExtractorFactory {
     //ACM_FIELD_AUTHOR, which is the same as Metadatafield.FIELD_AUTHOR, but has
     //a splitter ("; ") defined.  The addition of the splitter causes
     //ArticleMetadata.putMulti() to be called
-    private static  Validator authorvalid = new Validator(){
+    private static  Validator authorvalid = new Validator() {
       public String validate(ArticleMetadata am,MetadataField field,String val)
-          throws MetadataException.ValidationException {
+      throws MetadataException.ValidationException {
         // normalize author entries especially with no names .
         // For example : <meta name="citation_authors" content=", "/>
-          if(!MetadataUtil.isAuthor(val)) {
-            throw new MetadataException.ValidationException("Illegal Author: " 
-          + val);
-          }
-          return val;
-          }
-     };
+        if(!MetadataUtil.isAuthor(val)) {
+          throw new MetadataException.ValidationException("Illegal Author: " 
+              + val);
+        }
+        return val;
+      }
+    };
     private static final MetadataField ACM_FIELD_AUTHOR = new MetadataField(
         MetadataField.KEY_AUTHOR, Cardinality.Multi, authorvalid, MetadataField.splitAt("; "));
 
@@ -140,7 +141,8 @@ implements FileMetadataExtractorFactory {
     private static CachedUrl currCachedUrl;
     private static ArrayList<ArticleMetadata> articleMetadataList = new ArrayList<ArticleMetadata>();
     private static ArrayList<CachedUrl> cachedUrlList = new ArrayList<CachedUrl>();
-
+    private static CachedUrl currMetadataUrl;
+    private static ArticleMetadata journalMetadata = new ArticleMetadata();
     /** NodeValue for creating value of subfields from article_rec's parent tag */
     static private final NodeValue SECTION_VALUE = new NodeValue() {
       @Override
@@ -240,35 +242,50 @@ implements FileMetadataExtractorFactory {
       }
     };
 
-    private static void clear()
-    {
+    private static void clear() {
       for (int i = 0; i < xpathValArr.length; ++i) {
         xpathValArr[i] = "";
       }
     }
 
-    /** Map of raw xpath key to node value function */
+     private final static String PERIODICAL_JOURNAL_NAME = "/periodical/journal_rec/journal_name";
+     private final static String PERIODICAL_JOURNAL_CODE = "/periodical/journal_rec/journal_code";
+     private final static String PERIODICAL_JOURNAL_ISSN = "/periodical/journal_rec/issn";
+     private final static String PERIODICAL_JOURNAL_EISSN = "/periodical/journal_rec/eissn";
+     private final static String PERIODICAL_JOURNAL_PUBLISHER_NAME = "/periodical/journal_rec/publisher/publisher_name";
+     private final static String PERIODICAL_ISSUE_VOLUME = "/periodical/issue_rec/volume";
+     private final static String PERIODICAL_ISSUE_ISSUE = "/periodical/issue_rec/issue";
+     private final static String PERIODICAL_ISSUE_DATE = "/periodical/issue_rec/issue_date";
+     private final static String PROCEEDING_CONFERENCE_STARTDATE = "/proceeding/conference_rec/conference_date/start_date";
+     private final static String PROCEEDING_TITLE = "/proceeding/proceeding_rec/proc_title";
+     private final static String PROCEEDING_DESC = "/proceeding/proceeding_rec/proc_desc";
+     private final static String PROCEEDING_ACRONYM = "/proceeding/proceeding_rec/acronym";
+     private final static String PROCEEDING_ISBN = "/proceeding/proceeding_rec/isbn";
+     private final static String PROCEEDING_COPYRIGHT_YEAR = "/proceeding/proceeding_rec/copyright_year";
+     private final static String PROCEEDING_PUBLISHER_NAME = "/proceeding/proceeding_rec/publisher/publisher_name";
+     
+     /** Map of raw xpath key to node value function */
     static private final Map<String,XPathValue> nodeMap = 
-        new HashMap<String,XPathValue>();
+      new HashMap<String,XPathValue>();
     static {
       // normal journal article schema
-      nodeMap.put("/periodical/journal_rec/journal_name", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/journal_rec/journal_code", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/journal_rec/issn", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/journal_rec/eissn", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/journal_rec/publisher/publisher_name", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/issue_rec/volume", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/issue_rec/issue", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/periodical/issue_rec/issue_date", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_JOURNAL_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_JOURNAL_CODE, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_JOURNAL_ISSN, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_JOURNAL_EISSN, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_JOURNAL_PUBLISHER_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_ISSUE_VOLUME, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_ISSUE_ISSUE, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PERIODICAL_ISSUE_DATE, XmlDomMetadataExtractor.TEXT_VALUE);
 
       // conference proceeding schema
-      nodeMap.put("/proceeding/conference_rec/conference_date/start_date", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/proc_title", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/proc_desc", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/acronym", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/isbn", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/copyright_year", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/proceeding/proceeding_rec/publisher/publisher_name", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_CONFERENCE_STARTDATE, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_TITLE, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_DESC, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_ACRONYM, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_ISBN, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_COPYRIGHT_YEAR, XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put(PROCEEDING_PUBLISHER_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
 
       // individual article's metadata
       nodeMap.put("/periodical/section", SECTION_VALUE);
@@ -281,23 +298,23 @@ implements FileMetadataExtractorFactory {
     static private final MultiValueMap xpathMap = new MultiValueMap();
     static {
       // normal journal article schema
-      xpathMap.put("/periodical/journal_rec/journal_name", ACM_FIELD_JOURNAL_TITLE);
-      xpathMap.put("/periodical/journal_rec/journal_code", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
-      xpathMap.put("/periodical/journal_rec/issn", MetadataField.FIELD_ISSN);
-      xpathMap.put("/periodical/journal_rec/eissn", MetadataField.FIELD_EISSN);
-      xpathMap.put("/periodical/journal_rec/publisher/publisher_name", MetadataField.FIELD_PUBLISHER);
-      xpathMap.put("/periodical/issue_rec/volume", MetadataField.FIELD_VOLUME);
-      xpathMap.put("/periodical/issue_rec/issue", MetadataField.FIELD_ISSUE);
-      xpathMap.put("/periodical/issue_rec/issue_date", MetadataField.FIELD_DATE);
+      xpathMap.put(PERIODICAL_JOURNAL_NAME, ACM_FIELD_JOURNAL_TITLE);
+      xpathMap.put(PERIODICAL_JOURNAL_CODE, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+      xpathMap.put(PERIODICAL_JOURNAL_ISSN, MetadataField.FIELD_ISSN);
+      xpathMap.put(PERIODICAL_JOURNAL_EISSN, MetadataField.FIELD_EISSN);
+      xpathMap.put(PERIODICAL_JOURNAL_PUBLISHER_NAME, MetadataField.FIELD_PUBLISHER);
+      xpathMap.put(PERIODICAL_ISSUE_VOLUME, MetadataField.FIELD_VOLUME);
+      xpathMap.put(PERIODICAL_ISSUE_ISSUE, MetadataField.FIELD_ISSUE);
+      xpathMap.put(PERIODICAL_ISSUE_DATE, MetadataField.FIELD_DATE);
 
       // conference proceeding schema
-      xpathMap.put("/proceeding/conference_rec/conference_date/start_date", MetadataField.FIELD_DATE);
-      xpathMap.put("/proceeding/proceeding_rec/proc_title", ACM_FIELD_JOURNAL_TITLE);
-      xpathMap.put("/proceeding/proceeding_rec/proc_desc", ACM_FIELD_PROC_DESC);
-      xpathMap.put("/proceeding/proceeding_rec/acronym", MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
-      xpathMap.put("/proceeding/proceeding_rec/isbn", MetadataField.FIELD_ISBN);
-      xpathMap.put("/proceeding/proceeding_rec/copyright_year", MetadataField.DC_FIELD_RIGHTS);
-      xpathMap.put("/proceeding/proceeding_rec/publisher/publisher_name", MetadataField.FIELD_PUBLISHER);
+      xpathMap.put(PROCEEDING_CONFERENCE_STARTDATE, MetadataField.FIELD_DATE);
+      xpathMap.put(PROCEEDING_TITLE, ACM_FIELD_JOURNAL_TITLE);
+      xpathMap.put(PROCEEDING_DESC, ACM_FIELD_PROC_DESC);
+      xpathMap.put(PROCEEDING_ACRONYM, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+      xpathMap.put(PROCEEDING_ISBN, MetadataField.FIELD_ISBN);
+      xpathMap.put(PROCEEDING_COPYRIGHT_YEAR, MetadataField.DC_FIELD_RIGHTS);
+      xpathMap.put(PROCEEDING_PUBLISHER_NAME, MetadataField.FIELD_PUBLISHER);
     }
 
     static private final MetadataField[] journalMetadataFields = {
@@ -324,17 +341,12 @@ implements FileMetadataExtractorFactory {
      */
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-        throws IOException, PluginException {
+    throws IOException, PluginException {
       log.debug3("extract metadata from cu: "+cu);
-      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(cu.getArchivalUnit(), getMetadataFile(cu));
+      ArchivalUnit au = cu.getArchivalUnit();
 
-      if (metadataCu.getUrl().contains("TEST00")) { //TODO: make this check better
-        //System.out.println("  Au: "+cu.getArchivalUnit());
-        //System.out.println("  metadatafile: "+getMetadataFile(cu));
-        //System.out.println("  metadataCU: "+metadataCu);
-        metadataCu = cu;
-      }
-      
+      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(au.makeCachedUrl(getMetadataFile(cu)));      //CachedUrl metadataCu = au.makeCachedUrl(getMetadataFile(cu));
+         
       if (metadataCu == null || !metadataCu.hasContent()) {
         log.debug3("The metadata file does not exist in the au: "+metadataCu.getUrl());
         return;
@@ -354,41 +366,56 @@ implements FileMetadataExtractorFactory {
      * @param in the Xml input stream to parse
      * @param emitter the emitter to output the resulting ArticleMetadata
      */
-    public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
-        throws IOException, PluginException {
+    public ArticleMetadata do_extract(MetadataTarget target, CachedUrl metadataCu, Emitter emit)
+    throws IOException, PluginException {
       try {
-        ArticleMetadata am = 
-            new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
-        am.cook(xpathMap);
-        
-        // If not present, add "ACM" publisher name (shouldn't happen!)
-        am.putIfBetter(MetadataField.FIELD_PUBLISHER, "ACM");
-        
-        // If the journal_title is empty, we might be able to get what we need from a different field....give it a try
-        if ( am.get(ACM_FIELD_JOURNAL_TITLE) == null ) {
-          if (am.get(ACM_FIELD_PROC_DESC) != null) {
-            am.put(ACM_FIELD_JOURNAL_TITLE,  am.get(ACM_FIELD_PROC_DESC));
-          }
-        }
+        ArticleMetadata am;
 
+        log.debug("do_extract("+metadataCu.getUrl()+")");
+        // Only process metadata file once - reset the currMetadataUrl when
+        // processing the next metadata file ; works since ACM has multiple
+        // metadata files per "process-batch"        
+        if ((currMetadataUrl == null) || 
+            ((currMetadataUrl != null) && !(currMetadataUrl.getUrl().equals(metadataCu.getUrl())))) {
+          currMetadataUrl = metadataCu;
+          am = new XmlDomMetadataExtractor(nodeMap).extract(target, metadataCu);
+          am.cook(xpathMap);
+        } else {
+          am = new ArticleMetadata();
+        }
+          // If not present, add "ACM" publisher name (shouldn't happen!)
+          am.putIfBetter(MetadataField.FIELD_PUBLISHER, "ACM");
+
+          // If the journal_title is empty, we might be able to get what we need from a different field....give it a try
+          if ( am.get(ACM_FIELD_JOURNAL_TITLE) == null ) {
+            if (am.get(ACM_FIELD_PROC_DESC) != null) {
+              am.put(ACM_FIELD_JOURNAL_TITLE,  am.get(ACM_FIELD_PROC_DESC));
+            }
+          }
+        
         emitAllMetadata(am, emit);
+        
+        // need to release created CU
+        AuUtil.safeRelease(metadataCu);
+
         return am;
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
         ex2.initCause(ex);
         throw ex2;
       }
+      
     }
 
     /**
      * Emits metadata for all of the CachedUrl's stored in CachedUrlList using
      * articleMetadataList
      * @param journalMetadata - contains metadata which applies to every article
-     * 	in the volume and which is copied into their individual ArticleMetadata
+     *  in the volume and which is copied into their individual ArticleMetadata
      * @param emit - an AcmEmitter to emit the metadata
      */
-    private void emitAllMetadata(ArticleMetadata journalMetadata, Emitter emit) {	    	
-      //log.debug3("currCachedUrlListsize = "+ cachedUrlList.size());  
+    private void emitAllMetadata(ArticleMetadata journalMetadata, Emitter emit) {               
+      log.debug3("currCachedUrlListsize = "+ cachedUrlList.size());  
       for (int i = 0; i < cachedUrlList.size(); ++i) {
         ArticleMetadata am = articleMetadataList.get(i);
         CachedUrl cu = cachedUrlList.get(i);
@@ -407,44 +434,35 @@ implements FileMetadataExtractorFactory {
       cachedUrlList.clear();
       articleMetadataList.clear();
     }
-
     /**
      * Stores a CachedUrl and ArticleMetadata for the most recently extracted
      * article so that it can be emitted later when we have access to journal
-     * metadata values (see emitAllMetadata())
+     * metadata values
      */
-    private static void storeCurrentArticleRec()
-    {
+    private static void storeCurrentArticleRec() {
       ArticleMetadata am = new ArticleMetadata();
       putMetadataIn(am);
-      CachedUrl toStore = currCachedUrl.getArchivalUnit().makeCachedUrl(getPdfUrl(am.get(MetadataField.DC_FIELD_IDENTIFIER)));
-      log.debug3("storeCurrentArticleRec:" + am +",   " + toStore);    
+      ArchivalUnit au = currCachedUrl.getArchivalUnit();
+
+      CachedUrl toStore = 
+        au.makeCachedUrl((am.get(MetadataField.DC_FIELD_IDENTIFIER)));
+
+      log.debug3("storeCurrentArticleRec:" + am +",   " + toStore);
+
       articleMetadataList.add(am);
       cachedUrlList.add(toStore);
     }
 
-    /**
-     * Uses the currCachedUrl and the current article_rec/.../fname to
-     * generate the Url of the current article
-     * @return the current article's pathname
-     */
-    private static String getPdfUrl(String fileName)
-    {
-      Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.xml)",Pattern.CASE_INSENSITIVE);
-      Matcher matcher = pattern.matcher(currCachedUrl.getUrl());
-      return matcher.replaceFirst("$1$2/"+fileName);
-    }
 
     /**
      * Moves an article's metadata from the xpathValArr to an actual
      * ArticleMetadata object
      * @param am - the object to store the article's metadata in
      */
-    private static void putMetadataIn(ArticleMetadata am)
-    {
+    private static void putMetadataIn(ArticleMetadata am) {
       for (int i = 0; i < xpathValArr.length; ++i) {
         am.put(articleMetadataFields[i], xpathValArr[i]);
-        log.debug3("putMetadataIn:  "+  articleMetadataFields[i]+ ", "+   xpathValArr[i]);   
+        log.debug3("putMetadataIn:  "+ articleMetadataFields[i]+ ", "+ xpathValArr[i]);   
       }
     }
   }
@@ -455,10 +473,14 @@ implements FileMetadataExtractorFactory {
    * @param cu - address of a sibling of the metadata file
    * @return the metadata file's pathname
    */
-  private static String getMetadataFile(CachedUrl cu)
-  {
-    Pattern pattern = Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)(/[^/]+.xml)",Pattern.CASE_INSENSITIVE);
+  private static String getMetadataFile(CachedUrl cu) {
+    //html files have an extra directory layer:
+    //http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2011/4oct2011/NEW-MAG-ELERN-V2011I9-2025356/2025357/110906_i_bozarth.html
+    Pattern pattern = 
+      Pattern.compile("(http://clockss-ingest.lockss.org/sourcefiles/[^/]+/[\\d]+/[^/]+/)([^/]+)/([^/]+/)?([^/]+.(html|pdf|mov))",Pattern.CASE_INSENSITIVE);
     Matcher matcher = pattern.matcher(cu.getUrl());
-    return matcher.replaceFirst("$1$2/$2.xml");
+    String mdfName = matcher.replaceFirst("$1$2/$2.xml");
+    return mdfName;
   }
+
 }

@@ -29,7 +29,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.associationforcomputingmachinery;
 
 import java.io.IOException;
-import java.util.HashSet;
 
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
@@ -46,96 +45,128 @@ import org.lockss.util.Logger;
 
 public class AssociationForComputingMachineryArticleMetadataExtractor implements ArticleMetadataExtractor{
 
-  private AcmEmitter emit = null;
-  private static Logger log = Logger.getLogger("ACMArticleMetadataExtractor");
+  private static Logger log = Logger.getLogger("AssociationForComputingMachineryArticleMetadataExtractor");
 
+  protected String cuRole = null;
+  protected boolean isAddTdbDefaults = true;
+
+  /** Create an ArticleMetadataExtractor that applies a
+   * FileMetadataExtractor to the {@link ArticleFiles}'s full text CU.
+   */
   public AssociationForComputingMachineryArticleMetadataExtractor() {
-    //super();
   }
 
-  protected void addAccessUrl(ArticleMetadata am, CachedUrl cu) {
-    if (!am.hasValidValue(MetadataField.FIELD_ACCESS_URL)) 
-      am.put(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+  /** Create an ArticleMetadataExtractor that applies a
+   * FileMetadataExtractor to the CachedUrl associated with a named role.
+   * @param cuRole the role from which to extract file metadata
+   */
+  public AssociationForComputingMachineryArticleMetadataExtractor(String cuRole) {
+    this.cuRole = cuRole;
+
   }
 
-  @Override
-  public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
-      throws IOException, PluginException {
-    log.debug3("extract("+ target.getPurpose()+", "+af+", "+emit+")");
-    if (emit == null)
-      emit = new AcmEmitter(af,emitter);
-    
-    if (emit.hasEmitted(af.getFullTextUrl())) {
-      log.debug3(af.getFullTextUrl()+"  Already Emitted");   
-      return;
-    }
-    CachedUrl cu = af.getFullTextCu();
-    FileMetadataExtractor me = null;
-    log.debug3("cu to extract = "+cu);
-    if (cu != null){
-      try {
-        me = cu.getFileMetadataExtractor(target);
+  /** Determines whether the emitter will use the TDB to supply values for
+   * ArticleMetadata fields that have no valid value.  This is true by
+   * default.
+   * @param val
+   * @returns this, for chaining
+   */
+  public AssociationForComputingMachineryArticleMetadataExtractor setAddTdbDefaults(boolean val) {
+    isAddTdbDefaults = val;
+    return this;
+  }
 
-        if (me != null) {
-          me.extract(target, cu, emit);
-        } else {
-          emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
-        }
-      } catch (RuntimeException e) {
-        log.debug("for af (" + af + ")", e);
+  /** Returns full text CU 
+   *
+   */
+  protected CachedUrl getCuToExtract(ArticleFiles af) {
+    //return cuRole != null ? af.getRoleCu(cuRole) : af.getFullTextCu();
+    return af.getFullTextCu();
+  }
 
-        if (me != null)
-          try {
-            emit.emitMetadata(cu, getDefaultArticleMetadata(cu));
-          }
-        catch (RuntimeException e2) {
-          log.debug("retry with default metadata for af (" + af + ")", e2);
-        }
-      } finally {
-        AuUtil.safeRelease(cu);
+  /** Return true if TDB defaults should be added to emitted ArticleMetadata.
+   */
+  protected boolean isAddTdbDefaults() {
+    return isAddTdbDefaults;
+  }
+
+  /** For standard bibiographic metadata fields for which the extractor did
+   * not produce a valid value, fill in a value from the TDB if available.
+   * @param af the ArticleFiles on which extract() was called.
+   * @param cu the CachedUrl selected by {@link #getCuToExtract(ArticleFiles)}.
+   * @param am the ArticleMetadata being emitted.
+   */
+  protected void addTdbDefaults(ArticleFiles af,
+                                CachedUrl cu, ArticleMetadata am) {
+    if (log.isDebug3()) log.debug3("addTdbDefaults("+af+", "+cu+", "+am+")");
+    if (!cu.getArchivalUnit().isBulkContent()) {
+      // Fill in missing values rom TDB if TDB entries reflect bibliographic
+      // information for the content. This is not the case for bulk data
+      TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+      if (log.isDebug3()) log.debug3("tc; "+tc);
+      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+      if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
+      if (tdbau != null) {
+        if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
+        am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
+        am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
+        am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
+        am.putIfBetter(MetadataField.FIELD_EISSN, tdbau.getEissn());
+        am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
+        am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
+        am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
+        am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+        am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
       }
     }
+    if (log.isDebug3()) log.debug3("adding("+af.getFullTextCu());
+    am.putIfBetter(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
+    if (log.isDebug3()) log.debug3("am: ("+am);
   }
 
-  ArticleMetadata getDefaultArticleMetadata(CachedUrl cu) {
-    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-    String year = (tdbau == null) ? null : tdbau.getStartYear();
-    String publisher = (tdbau == null) ? "ACM" : tdbau.getPublisherName();
-
-    ArticleMetadata md = new ArticleMetadata();
-    addAccessUrl(md, cu);
-    if (year != null) md.put(MetadataField.FIELD_DATE, year);
-    if (publisher != null) md.put(MetadataField.FIELD_PUBLISHER,
-        publisher);
-    return md;
-  }
-
-  class AcmEmitter implements FileMetadataExtractor.Emitter {
+  class MyEmitter implements FileMetadataExtractor.Emitter {
     private Emitter parent;
     private ArticleFiles af;
-    private HashSet<String> collectedArticles;
+   
 
-    AcmEmitter(ArticleFiles af, Emitter parent) {
+    MyEmitter(ArticleFiles af, Emitter parent) {
       this.af = af;
       this.parent = parent;
-      collectedArticles = new HashSet<String>();
     }
 
     public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
-      //if (collectedArticles.contains(cu.getUrl()))
-      //  return;
-      collectedArticles.add(cu.getUrl());
       parent.emitMetadata(af, am);
-      //collectedArticles.clear();
     }
 
-    void setParentEmitter(Emitter parent) {
-      this.parent = parent;
-    }
+  }
 
-    public boolean hasEmitted(String url) {
-      return collectedArticles.contains(url);
+  public void extract(MetadataTarget target, ArticleFiles af,
+                      ArticleMetadataExtractor.Emitter emitter)
+      throws IOException, PluginException {
+
+    MyEmitter myEmitter = new MyEmitter(af, emitter);
+    CachedUrl cu = getCuToExtract(af);
+    // pass cu that's the ArticleFile
+    // let the ACMXmlMetadataExtractor get the xml from the cu
+    // so we can emit metadata per ArticleFile instead of all at once
+    if (log.isDebug3()) log.debug3("extract(" + af + "), cu: " + cu);
+    if (cu != null) {
+      try {
+        FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
+        if (me != null) {
+          me.extract(target, cu, myEmitter);
+          AuUtil.safeRelease(cu);
+          return;
+        }
+      } catch (IOException ex) {
+        log.warning("Error in FileMetadataExtractor", ex);
+      }
+      // generate default metadata in case of null filemetadataextractor or
+      // IOException.
+
+      ArticleMetadata am = new ArticleMetadata();
+      myEmitter.emitMetadata(cu, am);
+      AuUtil.safeRelease(cu);
     }
   }
 }

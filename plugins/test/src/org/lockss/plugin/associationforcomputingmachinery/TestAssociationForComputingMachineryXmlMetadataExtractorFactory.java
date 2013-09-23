@@ -39,7 +39,9 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
 import org.lockss.plugin.*;
+import org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryArticleMetadataExtractor.MyEmitter;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
@@ -50,36 +52,43 @@ import org.lockss.plugin.simulated.*;
 public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestACMXmlMetadataExtractorFactory");
 
-  private SimulatedArchivalUnit sau; // Simulated AU to generate content
+  //private SimulatedArchivalUnit sau; // Simulated AU to generate content
   //private ArchivalUnit hau; // ACM AU
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
+  protected MockPlugin plugin;
+  private LockssRepository repo;
 
   private static String PLUGIN_NAME = "org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin";
 
-  private static String BASE_URL = "http://www.test.com";
-  private static String SIM_ROOT = BASE_URL + "cgi/reprint/";
+  private static String BASE_URL = "http://clockss-ingest.lockss.org/";
+  private static String SIM_ROOT = BASE_URL + "sourcefiles/acm/dev/";
 
   public void setUp() throws Exception {
     super.setUp();
+    CIProperties props = new CIProperties();
     String tempDirPath = setUpDiskSpace();
-
+    //props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    //ConfigurationUtil.setCurrentConfigFromProps(props);
     theDaemon = getMockLockssDaemon();
+    mau = new MockArchivalUnit();
+    //plugin = new MockPlugin();
+    //plugin.initPlugin(theDaemon);
+    //mau.setPlugin(plugin);
+    //repo = theDaemon.getLockssRepository(mau);
+    theDaemon.getNodeManager(mau);
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
 
-    //sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-    //    simAuConfig(tempDirPath));
-    //hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, acmAuConfig());
-    mau = new MockArchivalUnit();
     mau.setConfiguration(acmAuConfig());
   }
 
   public void tearDown() throws Exception {
     //sau.deleteContentTree();
+    repo = theDaemon.getLockssRepository(mau);
     theDaemon.stopDaemon();
     super.tearDown();
   }
@@ -89,13 +98,7 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
     conf.put("root", rootPath);
     conf.put("base_url", SIM_ROOT);
     conf.put("year", "2012");
-    //conf.put("depth", "2");
-    //conf.put("branch", "3");
-    //conf.put("numFiles", "7");
-    //conf.put( "fileTypes",""
-    //    + (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_XML));
-    //conf.put("default_article_mime_type", "application/pdf");
-    //conf.put("binFileSize", "7");
+
     return conf;
   }
 
@@ -105,7 +108,8 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
     conf.put("year", "2012");
     return conf;
   }
-
+  String pdfUrl = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-TEST00/DummyMetadataTest.pdf";
+  String badPdfUrl = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-BADTEST00/DummyMetadataTest.pdf";
   String goodJournal = "Journal Name";
   String goodIssn = "0000-0000";
   String goodEissn = "1111-1111";
@@ -235,8 +239,8 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
   "</authors>"+
   "<fulltext>"+
   "<file>"+
-  "<seq_no>5</seq_no>"+
-  "<fname>DummyMetadata</fname>"+
+  "<seq_no>1</seq_no>"+
+  "<fname>"+pdfUrl+"</fname>"+
   "</file>"+
   "</fulltext>"+
   "<ccc>"+
@@ -250,21 +254,23 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
   "</periodical>";
 
   public void testExtractFromGoodContent() throws Exception {
-    String url = "http://www.clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-TEST00/TEST-TEST00.xml";
+    String metadataUrl = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-TEST00/TEST-TEST00.xml";
+
     CIProperties xmlHeader = new CIProperties();
-    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-    MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
+    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+    MockCachedUrl mcu = mau.addUrl(metadataUrl, true, true, xmlHeader);
+    MockCachedUrl pcu = mau.addUrl(pdfUrl, true, true, xmlHeader);
     
     mcu.setContent(goodContent);
     mcu.setContentSize(goodContent.length());
     mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-   
+    
     FileMetadataExtractor me = new AssociationForComputingMachineryXmlMetadataExtractorFactory.ACMXmlMetadataExtractor();
     assertNotNull(me);
     mcu.setFileMetadataExtractor(me);
     
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pcu);
     assertNotEmpty(mdlist);
     
     ArticleMetadata md = mdlist.get(0);
@@ -298,11 +304,12 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
     + "</article_rec>\n" +"</BODY></HTML>";
 
   public void testExtractFromBadContent() throws Exception {
-    String url = "http://www.clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-TEST00/TEST-TEST00.xml";
+    String metadataUrl = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/8aug2010/TEST-BADTEST00/TEST-BADTEST00.xml";
     CIProperties xmlHeader = new CIProperties();
     xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-    MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
-     
+    MockCachedUrl mcu = mau.addUrl(metadataUrl, true, true, xmlHeader);
+    MockCachedUrl pcu = mau.addUrl(badPdfUrl, true, true, xmlHeader);
+
     mcu.setContent(badContent);
     mcu.setContentSize(badContent.length());
     mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
@@ -310,7 +317,7 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
     FileMetadataExtractor me = new AssociationForComputingMachineryXmlMetadataExtractorFactory.ACMXmlMetadataExtractor();
     assertNotNull(me);
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), pcu);
     assertNotNull(mdlist);
 
   }
@@ -353,7 +360,7 @@ public class TestAssociationForComputingMachineryXmlMetadataExtractorFactory ext
     }
 
   }
-  */
+*/
 
   /**
    * Inner class that where a number of Archival Units can be created
