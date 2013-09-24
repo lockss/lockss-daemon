@@ -28,6 +28,18 @@
   
   
   
+  {
+
+    title <
+      name = 2D Materials
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = Y
+
+    au < expected ; exists ; 2014 ; 2D Materials Volume 1 ; 1 > 
+
+  }
 
   {
 
@@ -2247,6 +2259,19 @@
   {
 
     title <
+      name = Materials Research Express
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = Z
+
+    au < expected ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
+
+  }
+
+  {
+
+    title <
       name = Measurement Science and Technology ;
       issn = 0957-0233 ;
       eissn = 1361-6501 ;
@@ -3620,6 +3645,19 @@
     au < manifest ; exists ; 1930 ; Transactions of the Optical Society Volume 31 ; 31  > 
     au < manifest ; exists ; 1931 ; Transactions of the Optical Society Volume 32 ; 32  > 
     au < manifest ; exists ; 1932 ; Transactions of the Optical Society Volume 33 ; 33  >
+
+  }
+
+  {
+
+    title <
+      name = Translational Materials Research
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = X
+
+    au < expected ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
 
   }
 
