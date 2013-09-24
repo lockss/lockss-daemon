@@ -28,7 +28,7 @@
       name = Insights: the UKSG journal ;
       eissn = 2048-7754
     >
-    comment[continued_from] = 0953-0460
+    comment[continues] = 0953-0460
     param[journal_issn] = 2048-7754
     implicit < status ; status2 ; year ; name ; param[volume_name]>
     

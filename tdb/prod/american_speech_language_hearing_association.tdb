@@ -197,7 +197,7 @@
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jslhr.asha.org/
       implicit < status ; year ; name ; param[volume_name] >
-      comment[continued_from] = 0022-4677
+      comment[continues] = 0022-4677
 
       au < manifest ; 1958 ; Journal of Speech, Language, and Hearing Research Volume 1 ; 1 >
       au < manifest ; 1959 ; Journal of Speech, Language, and Hearing Research Volume 2 ; 2 >

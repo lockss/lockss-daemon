@@ -47,7 +47,7 @@
       issnl = 0020-7713
       >
   
-      comment[continued_from] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
+      comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
       comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
       
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -98,7 +98,7 @@
       issnl = 1466-5026
     >
 
-      comment[continued_from] = International Journal of Systematic Bacteriology 0020-7713
+      comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
@@ -482,7 +482,7 @@
       issnl = 1350-0872
     >
     
-      comment[continued_from] = Journal of General Microbiology 0022-1287 as of Jan 1994
+      comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://mic.sgmjournals.org/
