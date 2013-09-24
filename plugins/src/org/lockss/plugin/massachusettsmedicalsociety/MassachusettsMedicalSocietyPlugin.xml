@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -24,7 +24,7 @@
     <map>
       <entry>
         <string>Poll</string>
-		<string>2</string>
+		<string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -173,5 +173,11 @@
   <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
   </entry>
 </map>
