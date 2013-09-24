@@ -440,7 +440,7 @@
     {
     
     param[journal_id] = ijhac
-    comment[continued_from] = 0957-0144
+    comment[continues] = 0957-0144
     comment[0] = current journal id is ijhac V1/2007 to present. Old journal_id = hac 1994-2002, V6-14
     comment[1] = future AUs added by accident.
 
@@ -641,7 +641,7 @@
      >
      
     param[journal_id] = jshs
-    comment[continued_from] = 0269-5030
+    comment[continues] = 0269-5030
 
     au < released ; crawling ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
     au < released ; crawling ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
