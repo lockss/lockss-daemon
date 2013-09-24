@@ -10277,7 +10277,7 @@
         param[base_url] = http://cpr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        comment[continued_from] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
+        comment[continues] = European Journal of Cardiovascular Prevention & Rehabilitation, 1741-8267
         comment[0] = Previous issues are at the same url.
         
         au < released ; 2012 ; European Journal of Preventive Cardiology Volume 19 ; 19 >
@@ -20921,7 +20921,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         eissn = 1753-4267 
       >
 
-      comment[continued_from] = 1743-2839
+      comment[continues] = 1743-2839
       comment[ini] = In 2007 continued from Journal of Endotoxin Research.
 
       {
@@ -22758,7 +22758,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         eissn = 1757-1782 
       >
 
-      comment[continued_from] = British Journal of Infection Control 2009-, 1469-0446
+      comment[continues] = British Journal of Infection Control 2009-, 1469-0446
 
       {
 
@@ -26437,7 +26437,7 @@ comment[mpj] = now published by Brill
         eissn = 1757-9147
       >
       
-      comment[continued_from] = 1466-4240
+      comment[continues] = 1466-4240
       comment[pph] = name changed from The Journal of the Royal Society for the Promotion of Health
 
       {
@@ -39233,7 +39233,7 @@ comment[mpj] = now published by Brill
         issnl = 0031-2975 
       >
 
-        comment[continued_by] = Veterinary Pathology
+        comment[continued_by] = 0300-9858 Veterinary Pathology
         
       {
 
@@ -39262,7 +39262,7 @@ comment[mpj] = now published by Brill
         issnl = 0300-9858 
       >
        
-       comment[continued_from] = Pathologia veterinaria
+       comment[continues] = 0031-2975 Pathologia veterinaria
        
       {
 

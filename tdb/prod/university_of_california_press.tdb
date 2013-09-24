@@ -217,7 +217,7 @@
       param[base_url] = http://caliber.ucpress.net/
       param[journal_id] = as
       implicit < status ; year ; name ; param[volume_name] >
-      comment[continued_from] = 0362-8949
+      comment[continues] = 0362-8949
 
       au < down ; 2001 ; Asian Survey Volume 41 ; 41 >
       au < down ; 2002 ; Asian Survey Volume 42 ; 42 >
