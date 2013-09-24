@@ -17,7 +17,8 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < exists ; 2012 ; Bone & Joint 360 Volume 1 ; 1 >
-    au < expected ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < exists ; 2013 ; Bone & Joint 360 Volume 2 ; 2 >
+    au < expected ; 2014 ; Bone & Joint 360 Volume 3 ; 3 >
     
   }
   
@@ -35,7 +36,8 @@
     rights = openaccess
 
     au < exists ; 2012 ; Bone & Joint Research Volume 1 ; 1 >
-    au < expected ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < exists ; 2013 ; Bone & Joint Research Volume 2 ; 2 >
+    au < expected ; 2014 ; Bone & Joint Research Volume 3 ; 3 >
     
   }
   
@@ -132,7 +134,7 @@
       eissn = 2049-4408
     >
     
-    comment[continued_from] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
+    comment[continues] = Journal of Bone & Joint Surgery, British Volume, issn 0301-620X, eissn 2044-5377 as of Jan 1 2013
     
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.bjj.boneandjoint.org.uk/
