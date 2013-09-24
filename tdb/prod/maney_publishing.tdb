@@ -27,7 +27,7 @@
     param[journal_id] = aac 
     param[journal_issn] = 1743-6753
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0967-9782
+    comment[continues] = 0967-9782
 
     comment[UX] = Complete
 
@@ -395,7 +395,7 @@
     param[journal_issn] = 1474-8932
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0309-7765
+    comment[continues] = 0309-7765
 
     au < released ; 2002 ; Bronte Studies Volume 27 ; 27 > 
     au < doesNotExist ; 2003 ; Bronte Studies Volume 28 ; 28 > 
@@ -888,7 +888,7 @@
     param[journal_id] = cest 
     param[journal_issn] = 1478-422X
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0007-0599
+    comment[continues] = 0007-0599
 
     au < doNotProcess ; 2003 ; Corrosion Engineering, Science and Technology Volume 38 ; 38 > 
     au < doNotProcess ; 2004 ; Corrosion Engineering, Science and Technology Volume 39 ; 39 > 
@@ -1674,7 +1674,7 @@
     param[journal_issn] = 1758-1206
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[continued_from] = 0372-0187
+    comment[continues] = 0372-0187
 
     au < doNotProcess ; 2009 ; International Journal for the History of Engineering & Technology Volume 79 ; 79 > 
     au < released ; 2010 ; International Journal for the History of Engineering & Technology Volume 80 ; 80 > 
@@ -1734,7 +1734,7 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ManeyPdfTransform
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[continued_from] = 0969-7950
+    comment[continues] = 0969-7950
     
     au < released ; 2012 ; International Journal of Developmental Disabilities Volume 58 ; 58 > 
     au < doNotProcess ; 2013 ; International Journal of Developmental Disabilities Volume 59 ; 59 > 
@@ -1757,7 +1757,7 @@
     param[journal_id] = ihm
     param[journal_issn] = 2047-9700
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 1753-3031
+    comment[continues] = 1753-3031
     
     au < released ; 2012 ; International Journal of Healthcare Management Volume 5 ; 5 > 
     au < manifest ; 2013 ; International Journal of Healthcare Management Volume 6 ; 6 > 
@@ -1872,7 +1872,7 @@
     param[journal_id] = imtlr 
     param[journal_issn] = 0367-9020
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0076-6690
+    comment[continues] = 0076-6690
     comment[continued_by] = 0308-4590
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
     
@@ -1900,7 +1900,7 @@
     param[journal_id] = imtr 
     param[journal_issn] = 0308-4590 
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0367-9020
+    comment[continues] = 0367-9020
     comment[continued_by] = 0950-6608
     comment[historical_titles] = see 0076-6690 for vols 1-16, 0367-9020 for vols 17-20, 0308-4590 for vols 21-31 and 0950-6608 for vols 32 onwards
 
@@ -1961,7 +1961,7 @@
     param[journal_id] = iwp 
     param[journal_issn] = 2042-6445
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0020-3203
+    comment[continues] = 0020-3203
     comment[dnp] = RU4219 manifest pages but html pending plugin workaround or publisher fix
     
     au < doNotProcess ; 2010 ; International Wood Products Journal Volume 1 ; 1 > 
@@ -2898,7 +2898,7 @@
     param[journal_id] = lih 
     param[journal_issn] = 1758-3489
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0024-2306
+    comment[continues] = 0024-2306
 
     au < manifest ; 2009 ; Library & Information History Volume 25 ; 25 > 
     au < released ; 2010 ; Library & Information History Volume 26 ; 26 > 
@@ -3014,7 +3014,7 @@
     param[journal_id] = mst 
     param[journal_issn] = 0267-0836
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0306-3453
+    comment[continues] = 0306-3453
     comment[notReady] = GA_googleAddAttr
     
     au < notReady ; 1985 ; Materials Science and Technology Volume 1 ; 1 > 
@@ -3737,7 +3737,7 @@
     param[journal_id] = pch 
     param[journal_issn] = 2046-9047
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0272-4936 
+    comment[continues] = 0272-4936 
     
     au < manifest ; 2012 ; Paediatrics and International Child Health Volume 32 ; 32 > 
     au < manifest ; 2013 ; Paediatrics and International Child Health Volume 33 ; 33 > 
@@ -3848,7 +3848,7 @@
     param[journal_id] = pgh
     param[journal_issn] = 2047-7724
     implicit < status ; year ; name ; param[volume_name] >
-    comment[continued_from] = 0003-4983
+    comment[continues] = 0003-4983
     
     au < manifest ; 2012 ; Pathogens and Global Health Volume 106 ; 106 >
     au < manifest ; 2013 ; Pathogens and Global Health Volume 107 ; 107 >
@@ -4837,7 +4837,7 @@
     param[journal_issn] = 1521-5385
     implicit < status ; year ; name ; param[volume_name] >
 
-    comment[continued_from] = 0893-2344 
+    comment[continues] = 0893-2344 
     
     au < manifest ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
     au < manifest ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 

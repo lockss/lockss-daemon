@@ -852,7 +852,7 @@
       param[base_url] = http://www.euppublishing.com/
       param[journal_id] = jshs
       implicit < status ; year ; name ; param[volume_name] >
-      comment[continued_from] = 0269-5030
+      comment[continues] = 0269-5030
       
       au < released ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
       au < released ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >

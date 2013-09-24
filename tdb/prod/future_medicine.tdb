@@ -88,7 +88,7 @@
       name = Clinical Lipidology ;
       issn = 1758-4299
     >
-    comment[continued_from] = Future Lipidology
+    comment[continues] = Future Lipidology
     param[journal_id] = clp
 
     au < exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
@@ -127,7 +127,7 @@
       name = Clinical Practice ;
       issn = 2044-9038
     >
-    comment[continued_from] = Therapy, 1475-0708
+    comment[continues] = Therapy, 1475-0708
     param[journal_id] = cpr
 
     au < exists ; 2012 ; Clinical Practice Volume 9 ; 9 >
@@ -402,7 +402,7 @@
       issn = 1758-4272 ;
       eissn = 1758-4280
     >
-    comment[continued_from] = Future Rheumatology 1758-4272
+    comment[continues] = Future Rheumatology 1758-4272
     param[journal_id] = ijr
 
     au < exists ; 2009 ; International Journal of Clinical Rheumatology Volume 4 ; 4 >

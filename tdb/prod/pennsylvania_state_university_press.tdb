@@ -354,7 +354,7 @@
     
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 2010-2012 on JSTOR/PSU Press
-      comment[continued_from] = 0742-5503
+      comment[continues] = 0742-5503
     
     }
     
@@ -363,7 +363,7 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       comment[title_history] = issn1974-1983 (years 1974-1983), issn0742-5503 (years 1984-2009), issn1947-6566 (years 2010-2012). only issn1947-6566 archived in Muse.
-      comment[continued_from] = 0742-5503
+      comment[continues] = 0742-5503
       param[journal_dir] = journal_of_medieval_religious_cultures
       attr[journal_id] = mrc
 
@@ -414,7 +414,7 @@
     
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 2006-2012 on JSTOR/PSU Press.
-      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+      comment[continues] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
       
     }
     
@@ -425,7 +425,7 @@
           
       param[journal_dir] = journal_of_moravian_history
       attr[journal_id] = moh
-      comment[continued_from] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
+      comment[continues] = 0886-1730 JSTOR/Moravian Historical Society? years 1857-2000
 
       au < released ; 2012 ; The Journal of Moravian History Volume 12 ; 12 >
       au < manifest ; 2013 ; The Journal of Moravian History Volume 13 ; 13 >
@@ -547,7 +547,7 @@
       
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 1989-2012 on JSTOR/PSU Press. full run, vols 1-12
-      comment[continued_from] = 0742-5503
+      comment[continues] = 0742-5503
       comment[overlap] = years 2005-2010 on Manchester Univ. Press/Ingenta
     }
     {
@@ -577,7 +577,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 1984-2009 on JSTOR/PSU Press
       comment[continued_by] = 1947-6566
-      comment[continued_from] = 0737-5840
+      comment[continues] = 0737-5840
       
     }
     
