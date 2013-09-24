@@ -4839,18 +4839,18 @@
 
     comment[continued_from] = 0893-2344 
     
-    au < testing ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
-    au < testing ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
-    au < testing ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
-    au < testing ; 2000-2001 ; Twentieth-Century China Volume 26 ; 26 > 
-    au < testing ; 2001-2002 ; Twentieth-Century China Volume 27 ; 27 > 
-    au < testing ; 2002-2003 ; Twentieth-Century China Volume 28 ; 28 > 
-    au < testing ; 2003-2004 ; Twentieth-Century China Volume 29 ; 29 > 
-    au < testing ; 2004-2005 ; Twentieth-Century China Volume 30 ; 30 > 
-    au < testing ; 2006 ; Twentieth-Century China Volume 31 ; 31 > 
-    au < testing ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
-    au < testing ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
-    au < testing ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
+    au < manifest ; 1997-1998 ; Twentieth-Century China Volume 23 ; 23 > 
+    au < manifest ; 1998-1999 ; Twentieth-Century China Volume 24 ; 24 > 
+    au < manifest ; 1999-2000 ; Twentieth-Century China Volume 25 ; 25 > 
+    au < manifest ; 2000-2001 ; Twentieth-Century China Volume 26 ; 26 > 
+    au < manifest ; 2001-2002 ; Twentieth-Century China Volume 27 ; 27 > 
+    au < manifest ; 2002-2003 ; Twentieth-Century China Volume 28 ; 28 > 
+    au < manifest ; 2003-2004 ; Twentieth-Century China Volume 29 ; 29 > 
+    au < manifest ; 2004-2005 ; Twentieth-Century China Volume 30 ; 30 > 
+    au < manifest ; 2006 ; Twentieth-Century China Volume 31 ; 31 > 
+    au < manifest ; 2007 ; Twentieth-Century China Volume 32 ; 32 > 
+    au < manifest ; 2008 ; Twentieth-Century China Volume 33 ; 33 > 
+    au < manifest ; 2009 ; Twentieth-Century China Volume 34 ; 34 > 
     au < released ; 2010 ; Twentieth-Century China Volume 35 ; 35 > 
     au < released ; 2011 ; Twentieth-Century China Volume 36 ; 36 > 
     au < released ; 2012 ; Twentieth-Century China Volume 37 ; 37 > 
@@ -4977,23 +4977,23 @@
     param[journal_issn] = 0729-2473
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < testing ; 1983 ; War & Society Volume 1 ; 1 > 
-    au < testing ; 1984 ; War & Society Volume 2 ; 2 > 
-    au < testing ; 1985 ; War & Society Volume 3 ; 3 > 
-    au < testing ; 1986 ; War & Society Volume 4 ; 4 > 
-    au < testing ; 1987 ; War & Society Volume 5 ; 5 > 
-    au < testing ; 1988 ; War & Society Volume 6 ; 6 > 
-    au < testing ; 1989 ; War & Society Volume 7 ; 7 > 
-    au < testing ; 1990 ; War & Society Volume 8 ; 8 > 
-    au < testing ; 1991 ; War & Society Volume 9 ; 9 > 
-    au < testing ; 1992 ; War & Society Volume 10 ; 10 > 
-    au < testing ; 1993 ; War & Society Volume 11 ; 11 > 
-    au < testing ; 1994 ; War & Society Volume 12 ; 12 > 
-    au < testing ; 1995 ; War & Society Volume 13 ; 13 > 
-    au < testing ; 1996 ; War & Society Volume 14 ; 14 > 
-    au < testing ; 1997 ; War & Society Volume 15 ; 15 > 
-    au < testing ; 1998 ; War & Society Volume 16 ; 16 > 
-    au < testing ; 1999 ; War & Society Volume 17 ; 17 > 
+    au < manifest ; 1983 ; War & Society Volume 1 ; 1 > 
+    au < manifest ; 1984 ; War & Society Volume 2 ; 2 > 
+    au < manifest ; 1985 ; War & Society Volume 3 ; 3 > 
+    au < manifest ; 1986 ; War & Society Volume 4 ; 4 > 
+    au < manifest ; 1987 ; War & Society Volume 5 ; 5 > 
+    au < manifest ; 1988 ; War & Society Volume 6 ; 6 > 
+    au < manifest ; 1989 ; War & Society Volume 7 ; 7 > 
+    au < manifest ; 1990 ; War & Society Volume 8 ; 8 > 
+    au < manifest ; 1991 ; War & Society Volume 9 ; 9 > 
+    au < manifest ; 1992 ; War & Society Volume 10 ; 10 > 
+    au < manifest ; 1993 ; War & Society Volume 11 ; 11 > 
+    au < manifest ; 1994 ; War & Society Volume 12 ; 12 > 
+    au < manifest ; 1995 ; War & Society Volume 13 ; 13 > 
+    au < manifest ; 1996 ; War & Society Volume 14 ; 14 > 
+    au < manifest ; 1997 ; War & Society Volume 15 ; 15 > 
+    au < manifest ; 1998 ; War & Society Volume 16 ; 16 > 
+    au < manifest ; 1999 ; War & Society Volume 17 ; 17 > 
     au < released ; 2000 ; War & Society Volume 18 ; 18 > 
     au < released ; 2001 ; War & Society Volume 19 ; 19 > 
     au < released ; 2002 ; War & Society Volume 20 ; 20 > 
