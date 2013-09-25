@@ -16,6 +16,7 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcbas
+      comment[notReady] = One machine missed a few pages
 
       au < ready ; 2008 ; 1 ; e-Scientia Volume 2008 ; 2008 >
       au < ready ; 2009 ; 2 ; e-Scientia Volume 2009 ; 2009 >
@@ -36,6 +37,7 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcet
+      comment[notReady] = One machine missed a few pages
 
       au < ready ; 2008 ; 1 ; e-Xacta Volume 2008 ; 2008 >
       au < ready ; 2009 ; 2 ; e-Xacta Volume 2009 ; 2009 >
@@ -76,6 +78,7 @@
       comment[publisher] = Centro Universitário de Belo Horizonte
       param[base_url] = http://revistas.unibh.br/
       param[journal_id] = dcjpg
+      comment[notReady] = One machine missed a few pages and some whitespace issues perhaps
 
       au < ready ; 2008 ; 1 ; e-Cevitas Volume 2008 ; 2008 >
       au < ready ; 2009 ; 2 ; e-Cevitas Volume 2009 ; 2009 >
