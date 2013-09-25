@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,10 +21,10 @@
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
-  </entry>  
+    <string>13</string>
+  </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;IGI Global Plugin (CLOCKSS), Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
+    <string>"IGI Global Plugin (CLOCKSS), Base URL %s, Journal ISSN %s, Volume %s", base_url, journal_issn, volume</string>
   </entry>
 </map>

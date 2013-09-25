@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -34,22 +34,22 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s&quot;, base_url, journal_issn, volume</string>
+    <string>"IGI Global Plugin, Base URL %s, Journal ISSN %s, Volume %s", base_url, journal_issn, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+    <string>"%slockss/journal-issues.aspx?issn=%s&amp;volume=%s", base_url, journal_issn, volume</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>&quot;%sjournals.aspx?p=%s&quot;, base_url, journal_issn</string>
+        <string>"%sjournals.aspx?p=%s", base_url, journal_issn</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>&quot;%slockss/journal-issues.aspx?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume</string>
+        <string>"%slockss/journal-issues.aspx?issn=%s&amp;volume=%s", base_url, journal_issn, volume</string>
       </entry>
     </map>
   </entry>
