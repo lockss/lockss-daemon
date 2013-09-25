@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.igiglobal;
 
-import java.io.File;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -39,7 +38,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -49,7 +47,7 @@ import org.lockss.util.*;
  */
 public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase {
   
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
+  private SimulatedArchivalUnit sau;  // Simulated AU to generate content
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
   private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.IgiGlobalPlugin";
@@ -100,7 +98,8 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals("Article file root URL pattern changed or incorrect", 
-        ListUtil.list(BASE_URL + "gateway/article/", BASE_URL + "gateway/chapter/"), getRootUrls(artIter));
+        ListUtil.list(BASE_URL + "gateway/article/", BASE_URL + 
+            "gateway/chapter/"), getRootUrls(artIter));
   }
   
   public void testUrlsWithPrefixes() throws Exception {
@@ -148,20 +147,36 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
         {
           CachedUrl cu = (CachedUrl)cusn;
-          if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+          if (cuPdf == null && 
+              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
           {
             cuPdf = cu;
           }
-          else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+          else if (cuHtml == null && 
+              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
           {
             cuHtml = cu;
           }
         }
         cusn = cuIter.next();
       }
+      byte[] b = new byte [1024];
+      cuHtml.getUnfilteredInputStream().read(b, 0, 1024);
+      String landingPage = new String(b);
+      landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
+          "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
+          "xxxx\n</BODY>");
       for (String url : urls) {
         uc = au.makeUrlCacher(url);
-        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        if (url.contains("full-text-html")) {
+          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        }
+        else if (url.contains("full-text-pdf")) {
+          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+          url = url.replace("full-text-pdf", "pdf");
+          uc = au.makeUrlCacher(url);
+          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        }
       }
     }
     
@@ -187,7 +202,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
       ArticleFiles af = artIter.next();
       String[] act = {
           af.getFullTextUrl(),
-          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
+          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
           af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
       };
       String[] exp = expStack.pop();
@@ -199,5 +214,5 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
       else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
     }
     
-  }			
+  }
 }
