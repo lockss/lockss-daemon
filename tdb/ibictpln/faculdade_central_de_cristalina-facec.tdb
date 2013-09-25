@@ -16,8 +16,9 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaepesquisaemadministracao
+      comment[notReady] = no permission page
 
-      au < testing ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 >
 
   }
 
@@ -62,8 +63,9 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = docenciaensinoepesquisaemturismo
+      comment[notReady] = no permission page
 
-      au < testing ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
+      au < notready ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 >
 
   }
 
@@ -77,8 +79,9 @@
       comment[publisher] = Faculdade Central de Cristalina-FACEC
       param[base_url] = http://www.facec.edu.br/seer/
       param[journal_id] = formacaodeprofessores
+      comment[notReady] = no permission page
 
-      au < testing ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 >
 
   }
 
