@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.6 2013-05-14 22:37:23 alexandraohlson Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.7 2013-09-25 19:01:23 etenbrink Exp $
  */
 
 /*
@@ -32,14 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.igiglobal;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.Iterator;
-import java.util.regex.*;
+import java.util.regex.*;import org.lockss.util.ListUtil;
 
+
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Constants;
-import org.lockss.util.ListUtil;
+import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 
 /*
@@ -57,10 +61,13 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static Logger log = Logger.getLogger("IgiArticleIteratorFactory");
   
-  protected static final String JOURNAL_ROOT_TEMPLATE = "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
-  protected static final String BOOK_ROOT_TEMPLATE = "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
+  protected static final String JOURNAL_ROOT_TEMPLATE =
+      "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
+  protected static final String BOOK_ROOT_TEMPLATE =
+      "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
 
-  protected static final String PATTERN_TEMPLATE = "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
 
   
   @Override
@@ -68,15 +75,16 @@ public class IgiGlobalArticleIteratorFactory
                                                       MetadataTarget target)
       throws PluginException {
     return new IgiGlobalArticleIterator(au,
-                                         new SubTreeArticleIterator.Spec()
-                                             .setTarget(target)
-                                             .setRootTemplates(ListUtil.list(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE))
-                                             .setPatternTemplate(PATTERN_TEMPLATE));
+        new SubTreeArticleIterator.Spec()
+            .setTarget(target)
+            .setRootTemplates(Arrays.asList(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE))
+            .setPatternTemplate(PATTERN_TEMPLATE));
   }
 
   protected static class IgiGlobalArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile("(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+    protected Pattern ABSTRACT_PATTERN = Pattern.compile(
+        "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
     
     public IgiGlobalArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
@@ -100,30 +108,66 @@ public class IgiGlobalArticleIteratorFactory
     protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      guessPdf(af, absMat);
       guessFullText(af, absMat);
       return af;
     }
     
-    //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
-    // actually a pdf file. 
-    // we are not picking up the straight pdf which lives at:
-    // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
-    // but currently we only have one ROLE_FULL_TEXT_PDF role to use
     protected void guessFullText(ArticleFiles af, Matcher mat) {
-      String pdfUrlBase = mat.replaceFirst("$1/full-text-pdf/$2");
       String htmlUrlBase = mat.replaceFirst("$1/full-text-html/$2");
-      CachedUrl pdfCu = au.makeCachedUrl(pdfUrlBase);
       CachedUrl htmlCu = au.makeCachedUrl(htmlUrlBase);
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setFullTextCu(pdfCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
       if (htmlCu != null && htmlCu.hasContent()) {
         af.setFullTextCu(htmlCu);
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       } 
     }
-
+    
+    //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
+    // actually a pdf file. 
+    // we pick up the pdf which lives at: 
+    // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
+    //<iframe src="/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dE-Survey+Methodology">
+    protected void guessPdf(ArticleFiles af, Matcher mat) {
+      String pdfUrlBase = mat.replaceFirst("$1/full-text-pdf/$2");
+      CachedUrl pdfCu = au.makeCachedUrl(pdfUrlBase);
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setFullTextCu(pdfCu);
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
+        BufferedReader bReader = null;
+        try {
+          bReader = new BufferedReader(new InputStreamReader(
+              pdfCu.getUnfilteredInputStream(), pdfCu.getEncoding())
+              );
+          Matcher matcher;
+          Pattern patternPdf = Pattern.compile(
+              "<iframe[^>]* src=\"/(pdf.aspx?[^\"]+)\"", Pattern.CASE_INSENSITIVE);
+          
+          // go through the cached URL content line by line
+          for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
+            matcher = patternPdf.matcher(line);
+            if (matcher.find()) {
+              String baseUrl = au.getConfiguration().get("base_url");
+              String pdfUrl = matcher.group(1);
+              // use unescapeHtml to convert &amp; to &
+              pdfCu = au.makeCachedUrl(baseUrl + StringEscapeUtils.unescapeHtml(pdfUrl));
+              if (pdfCu == null || !pdfCu.hasContent()) {
+                pdfCu = au.makeCachedUrl(baseUrl + pdfUrl);
+              }
+              if (pdfCu != null && pdfCu.hasContent()) {
+                af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+              }
+              break;
+            }
+          }
+        } catch (Exception e) {
+          // probably not serious, so warn
+          log.warning(e + " : Looking for /pdf.aspx");
+        }
+        finally {
+          IOUtil.safeClose(bReader);
+        }
+      }
+    }
   }
   
   @Override
