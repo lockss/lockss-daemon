@@ -24,11 +24,10 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.igiglobal;
 
-import java.io.File;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -39,7 +38,6 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -50,61 +48,61 @@ import org.lockss.util.*;
  *  where & is encoded as %26 and = is encoded as %3D and tid is the chapter number; ptid is the book number
  */
 public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTestCase {
-	
-	private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-	private final String ARTICLE_FAIL_MSG = "Article files not created properly";
-	private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
-	private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin";
-	static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-	static final String BOOK_ISBN_KEY = "book_isbn";
-	static final String VOLUME_NUMBER_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
-	private final String BASE_URL = "http://www.example.com/";
-	private final String VOLUME_NUMBER = "464";
-	private final String BOOK_ISBN = "9781591407928";
-	private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
-												BASE_URL_KEY, BASE_URL,
-												VOLUME_NUMBER_KEY, VOLUME_NUMBER,
-												BOOK_ISBN_KEY, BOOK_ISBN);
-	private static final int DEFAULT_FILESIZE = 3000;
-
+  
+  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
+  private final String ARTICLE_FAIL_MSG = "Article files not created properly";
+  private final String PATTERN_FAIL_MSG = "Article file URL pattern changed or incorrect";
+  private final String PLUGIN_NAME = "org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin";
+  static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+  static final String BOOK_ISBN_KEY = "book_isbn";
+  static final String VOLUME_NUMBER_KEY = ConfigParamDescr.VOLUME_NUMBER.getKey();
+  private final String BASE_URL = "http://www.example.com/";
+  private final String VOLUME_NUMBER = "464";
+  private final String BOOK_ISBN = "9781591407928";
+  private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
+      BASE_URL_KEY, BASE_URL,
+      VOLUME_NUMBER_KEY, VOLUME_NUMBER,
+      BOOK_ISBN_KEY, BOOK_ISBN);
+  private static final int DEFAULT_FILESIZE = 3000;
+  
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = setUpDiskSpace();
-
+    
     au = createAu();
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
   
   public void tearDown() throws Exception {
-	    sau.deleteContentTree();
-	    super.tearDown();
-	  }
-
+    sau.deleteContentTree();
+    super.tearDown();
+  }
+  
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-      PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
+        PluginTestUtil.createAndStartAu(PLUGIN_NAME, AU_CONFIG);
   }
   
   Configuration simAuConfig(String rootPath) {
-	    Configuration conf = ConfigManager.newConfiguration();
-	    conf.put("root", rootPath);
-	    conf.put(BASE_URL_KEY, BASE_URL);
-	    conf.put("depth", "1");
-	    conf.put("branch", "2");
-	    conf.put("numFiles", "6");
-	    conf.put("fileTypes",
-	             "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
-	                   | SimulatedContentGenerator.FILE_TYPE_PDF));
-	    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
-	    return conf;
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put(BASE_URL_KEY, BASE_URL);
+    conf.put("depth", "1");
+    conf.put("branch", "2");
+    conf.put("numFiles", "6");
+    conf.put("fileTypes",
+        "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
+            | SimulatedContentGenerator.FILE_TYPE_PDF));
+    conf.put("binFileSize", ""+DEFAULT_FILESIZE);
+    return conf;
   }
-
+  
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertEquals("Article file root URL pattern changed or incorrect" ,
         ListUtil.list(BASE_URL + "gateway/article/", BASE_URL + "gateway/chapter/"), getRootUrls(artIter));
   }
-
+  
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
@@ -113,8 +111,8 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/book/464"); //Book TOC
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "gateway/full-text-pdf/20212");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, BASE_URL + "chapter/survey-methodology/20212");
-   }
-
+  }
+  
   /*
    * Chapter abstract: http://www.igi-global.com/gateway/chapter/20212
    * Chapter PDF with frames: http://www.igi-global.com/gateway/chapter/full-text-pdf/20212
@@ -128,51 +126,51 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // In other cases we're missing one of the pieces
     // This is to test edge cases in the ArticleIterator
     String[] urls = {
-					    BASE_URL + "gateway/chapter/full-text-pdf/2222",
-					    BASE_URL + "gateway/chapter/full-text-pdf/55656",
-					    BASE_URL + "gateway/chapter/full-text-pdf/12345",
-					    BASE_URL + "gateway/chapter/11111",
-					    BASE_URL + "gateway/chapter/55656",
-					    BASE_URL + "gateway/chapter/54321",
-					    BASE_URL + "gateway/book/464",
-					    BASE_URL,
-					    BASE_URL + "gateway"
-    				};
+        BASE_URL + "gateway/chapter/full-text-pdf/2222",
+        BASE_URL + "gateway/chapter/full-text-pdf/55656",
+        BASE_URL + "gateway/chapter/full-text-pdf/12345",
+        BASE_URL + "gateway/chapter/11111",
+        BASE_URL + "gateway/chapter/55656",
+        BASE_URL + "gateway/chapter/54321",
+        BASE_URL + "gateway/book/464",
+        BASE_URL,
+        BASE_URL + "gateway"
+    };
     Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
     
     if(cuIter.hasNext()){
-	    CachedUrlSetNode cusn = cuIter.next();
-	    CachedUrl cuPdf = null;
-	    CachedUrl cuHtml = null;
-	    UrlCacher uc;
-	    //
-	    // The only thing we seem to be doing with the content that was created in the SimulatedAU 
-	    // Is to pick up one PDF cu and one HTML cu
-	    // Only the HTML CU is used and then only to put content in to other html URLs in the UrlCacher
-	    //
-	    while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
-		{
-	    	if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
-	    	{
-	    		CachedUrl cu = (CachedUrl)cusn;
-	    		if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
-	    		{
-	    			cuPdf = cu;
-	    		}
-	    		else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
-	    		{
-	    			cuHtml = cu;
-	    		}
-	    	}
-	    	cusn = cuIter.next();
-		}
-	    
-	    // add a URL with content to the "real" au
-	    // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
-	    for (String url : urls) {
-	      uc = au.makeUrlCacher(url);
-              uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
-	    }
+      CachedUrlSetNode cusn = cuIter.next();
+      CachedUrl cuPdf = null;
+      CachedUrl cuHtml = null;
+      UrlCacher uc;
+      //
+      // The only thing we seem to be doing with the content that was created in the SimulatedAU 
+      // Is to pick up one PDF cu and one HTML cu
+      // Only the HTML CU is used and then only to put content in to other html URLs in the UrlCacher
+      //
+      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null))
+      {
+        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
+        {
+          CachedUrl cu = (CachedUrl)cusn;
+          if(cuPdf == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+          {
+            cuPdf = cu;
+          }
+          else if (cuHtml == null && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+          {
+            cuHtml = cu;
+          }
+        }
+        cusn = cuIter.next();
+      }
+      
+      // add a URL with content to the "real" au
+      // oddly, they'll all be html...the PDF URLs have an thml frameset so this is okay
+      for (String url : urls) {
+        uc = au.makeUrlCacher(url);
+        uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+      }
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
@@ -180,16 +178,16 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // FULL_TEXT_PDF
     // ABSTRACT - must have abstract to even get picked up
     String [] af1 = {null,
-    		     null,
-    		     BASE_URL + "gateway/chapter/11111"};
+        null,
+        BASE_URL + "gateway/chapter/11111"};
     
     String [] af2 = {null,
-		     null,
-		     BASE_URL + "gateway/chapter/54321"};
+        null,
+        BASE_URL + "gateway/chapter/54321"};
     
     String [] af3 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
-		     BASE_URL + "gateway/chapter/full-text-pdf/55656",
-		     BASE_URL + "gateway/chapter/55656"};
+        BASE_URL + "gateway/chapter/full-text-pdf/55656",
+        BASE_URL + "gateway/chapter/55656"};
     
     expStack.push(af3);
     expStack.push(af2);
@@ -197,19 +195,19 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     
     for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
     {
-    		ArticleFiles af = artIter.next();
-    		String[] act = {
-					af.getFullTextUrl(),
-					af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
-					af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
-					};
-    		String[] exp = expStack.pop();
-    		if(act.length == exp.length){
-    			for(int i = 0;i< act.length; i++){
-	    			assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
-	    		}
-    		}
-    		else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
+      ArticleFiles af = artIter.next();
+      String[] act = {
+          af.getFullTextUrl(),
+          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
+          af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
+      };
+      String[] exp = expStack.pop();
+      if(act.length == exp.length){
+        for(int i = 0;i< act.length; i++){
+          assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
+        }
+      }
+      else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
     }
     
   }			
