@@ -416,8 +416,12 @@
       issnl = 2161-1610
     >
 
-    comment[0] = forthcoming
     param[journal_issn] = 2161-1610
+
+    au < exists ; 2012 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 1 ; 1 > 
+    au < expected ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 > 
+    au < expected ; 2014 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 3 ; 3 > 
+
   }
 
   {
@@ -1770,7 +1774,7 @@
     au < released ; 2011 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 2 ; 2 >
     au < manifest ; 2013 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 3 ; 3 >
-    au < expected ; 2014 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Voluem 4 ; 4 >
+    au < expected ; 2014 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 4 ; 4 >
 
   }
 
@@ -2370,7 +2374,7 @@
 
     au < released ; 2012 ; International Journal of Sustainable Economies Management (IJSEM) Volume 1 ; 1 >
     au < manifest ; 2013 ; International Journal of Sustainable Economies Management (IJSEM) Volume 2 ; 2 >
-    au < expected ; 2014 ; International Jorunal of Sustainable Economies Management (IJSEM) Volume 3 ; 3 >
+    au < expected ; 2014 ; International Journal of Sustainable Economies Management (IJSEM) Volume 3 ; 3 >
 
 
   }
@@ -2493,7 +2497,7 @@
     au < released ; 2011 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 1 ; 1 >
     au < released ; 2012 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 2 ; 2 >
     au < expected ; 2013 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 4 ; 4 >
-    au < expected ; 2014 ; Internaitonal Journal of Technology and Educational Marketing (IJTEM) Volume 5 ; 5 >
+    au < expected ; 2014 ; International Journal of Technology and Educational Marketing (IJTEM) Volume 5 ; 5 >
 
   }
 
