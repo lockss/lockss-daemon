@@ -200,7 +200,7 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     		ArticleFiles af = artIter.next();
     		String[] act = {
 					af.getFullTextUrl(),
-					af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
+					af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
 					af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
 					};
     		String[] exp = expStack.pop();
