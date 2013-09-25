@@ -33,9 +33,9 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 
 /*
- * Trims this http://www.igi-global.com/gateway/contentowned/articles.aspx?titleid=55606&accesstype=infosci
+ * Trims   http://www.igi-global.com/gateway/contentowned/articles.aspx?titleid=55606&accesstype=infosci
  * to this http://www.igi-global.com/gateway/contentowned/articles.aspx?titleid=55606 to avoid duplicate pages
- * also works with &accestype=.*
+ * also works with ?v=.*
  */
 
 public class IgiGlobalUrlNormalizer implements UrlNormalizer {
