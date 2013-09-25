@@ -2535,7 +2535,62 @@
     au < exists ; exists ; manuelletherapie 2012 ; 2012 ; 2012 >  
   
   }
+
+  {
   
+    title < 
+      name = Metabolism and Nutrition in Oncology ;
+      eissn = 2194-735X
+      
+    >
+    param[journal_id] = 10.1055/s-00024359
+    comment[years] = 2013-current
+
+    au < exists ; exists ; Metabolism and Nutrition in Oncology 2013 ; 2013 ; 2013 >
+
+  }
+
+  {
+  
+    title < 
+      name = min - Minimally Invasive Neurosurgery ;
+      issn = 0946-7211 ;
+      eissn = 1439-2291
+      
+    >
+    param[journal_id] = 10.1055/s-00000039
+    comment[years] = 1958-current
+
+  }
+
+  {
+  
+    title < 
+      name = Neurochirurgie Scan ;
+      issn = 2195-9919 ;
+      eissn = 2195-9927
+      
+    >
+    param[journal_id] = 10.1055/s-00024713
+    comment[years] = 2013-current
+
+    au < exists ; exists ; Neurochirurgie Scan 2013 ; 2013 ; 2013 >
+
+  }
+
+  {
+  
+    title < 
+      name = Neuropediatrics ;
+      issn = 0174-304X ;
+      eissn = 1439-1899
+      
+    >
+    param[journal_id] = 10.1055/s-00000041
+    comment[years] = 1980-current
+
+  }
+
   {
   
     title < 
@@ -2645,7 +2700,74 @@
   
   
   }
-  
+
+  {
+    title <
+      name = Notfall & Hausarztmedizin ;
+      issn = 1865-0791 ;
+      eissn = 1865-0805
+        
+    >
+    param[journal_id] = 10.1055/s-00000123
+    comment[years] = 2004-current 
+
+   au < exists ; exists ; Notfall & Hausarztmedizin 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Notfall & Hausarztmedizin 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) ;
+      issn = 1612-8591 ;
+      eissn = 1612-8613
+        
+    >
+    param[journal_id] = 10.1055/s-00000124
+    comment[years] = 2004-current 
+
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
+      name = Notfall Medizin ;
+      issn = 1617-0482 ;
+      eissn = 1439-250X
+        
+    >
+    param[journal_id] = 10.1055/s-00000044
+    comment[years] = 2003-current 
+
+   au < exists ; exists ; Notfall Medizin 2003 ; 2003 ; 2003 >
+   au < exists ; exists ; Notfall Medizin 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Notfall Medizin 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Notfall Medizin 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Notfall Medizin 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Notfall Medizin 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Notfall Medizin 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Notfall Medizin 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Notfall Medizin 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Notfall Medizin 2012 ; 2012 ; 2012 >
+
+  }
+
   {
     title <
       name = Notfallmedizin up2date ;
@@ -3221,6 +3343,20 @@
 
   {
     title <
+      name = PSYCH up2date ;
+      issn = 2194-8895 ;
+      eissn = 2194-8909
+      
+    >
+    param[journal_id] = 10.1055/s-00023601
+    comment[years] = 2012-current
+
+   au < exists ; exists ; PSYCH up2date 2012 ; 2012 ; 2012 >
+
+  }
+
+  {
+    title <
       name = Psych Pflege Heute ;
       issn = 0949-1619 ;
       eissn = 1439-0213
@@ -3310,6 +3446,31 @@
    au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2011 ; 2011 ; 2011 >      
    au < exists ; exists ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie 2012 ; 2012 ; 2012 >  
   
+  }
+
+  {
+    title <
+      name = Psychotraumatologie ;
+      eissn = 1439-8931
+      
+    >
+    param[journal_id] = 10.1055/s-00000113
+    comment[years] = 2000-current
+
+   au < exists ; exists ; Psychotraumatologie 2000 ; 2000 ; 2000 >
+   au < exists ; exists ; Psychotraumatologie 2001 ; 2001 ; 2001 >
+   au < exists ; exists ; Psychotraumatologie 2002 ; 2002 ; 2002 >
+   au < exists ; exists ; Psychotraumatologie 2003 ; 2003 ; 2003 >
+   au < exists ; exists ; Psychotraumatologie 2004 ; 2004 ; 2004 >
+   au < exists ; exists ; Psychotraumatologie 2005 ; 2005 ; 2005 >
+   au < exists ; exists ; Psychotraumatologie 2006 ; 2006 ; 2006 >
+   au < exists ; exists ; Psychotraumatologie 2007 ; 2007 ; 2007 >
+   au < exists ; exists ; Psychotraumatologie 2008 ; 2008 ; 2008 >
+   au < exists ; exists ; Psychotraumatologie 2009 ; 2009 ; 2009 >
+   au < exists ; exists ; Psychotraumatologie 2010 ; 2010 ; 2010 >
+   au < exists ; exists ; Psychotraumatologie 2011 ; 2011 ; 2011 >
+   au < exists ; exists ; Psychotraumatologie 2012 ; 2012 ; 2012 >
+
   }
 
   {
@@ -4267,6 +4428,21 @@
   {
   
     title < 
+      name = The Thoracic and Cardiovascular Surgeon Reports ;
+      issn = 2194-7635 ;
+      eissn = 2194-7643
+      
+    >
+   param[journal_id] = 10.1055/s-00024355
+   comment[years] = 2013-current 
+
+    au < exists ; exists ; The Thoracic and Cardiovascular Surgeon Reports 2013 ; 2013 ; 2013 >
+
+  }
+
+  {
+  
+    title < 
       name = Tierarzthelfer/in konkret ;
       issn = 1614-8754 ;
       eissn = 1865-3987
@@ -4440,7 +4616,22 @@
     au < exists ; exists ; Viszeralchirurgie 2012 ; 2012 ; 2012 >     
     
   }
+
+  {
   
+    title < 
+      name = XX Die Zeitschrift für Frauen in der Medizin ;
+      issn = 2193-584X ;
+      eissn = 2193-5858
+      
+    >
+    param[journal_id] = 10.1055/s-00000184
+    comment[years] = 2012-current
+
+    au < exists ; exists ; XX Die Zeitschrift für Frauen in der Medizin 2012 ; 2012 ; 2012 >
+
+  }
+
   {
   
     title < 
