@@ -23,7 +23,7 @@
     >
     param[journal_id] = journal
 
-    au < manifest ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 ; 2013 >
+    au < crawling ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 ; 12 ; 2013 >
     au < expected ; exists ; 2014 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 13 ; 13 ; 2014 >
    
   }
