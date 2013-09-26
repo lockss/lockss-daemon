@@ -5,7 +5,7 @@
 
   plugin = org.lockss.plugin.projmuse.ProjectMuseBooksPlugin
   param[base_url] = http://muse.jhu.edu/
-  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn13] >
+  implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
 
   {
 
@@ -119,10 +119,10 @@
       au < manifest ; 2010 ; 9780801898150 ; 9780801899300 ; Financing the Athenian Fleet: Public Taxation and Social Relations ; 9780801899300 >
       au < manifest ; 2010 ; 9780801898327 ; 9780801899492 ; Late Roman Spain and Its Cities ; 9780801899492 >
       au < manifest ; 2011 ; 9780812220346 ; 9780812205527 ; The Digest of Justinian, Volume 2 ; 9780812205527 >
-      au < manifest ; 2011 ; 9780812220353 ; 9780812205534 ; The Digest of Justinian, Volume 3 ; 9780812205534 >
-      au < manifest ; 2011 ; 9780812220360 ; 9780812205541 ; The Digest of Justinian, Volume 4 ; 9780812205541 >
-      au < manifest ; 2012 ; 9781934536445 ; 9781934536551 ; The New Chronology of Iron Age Gordion: The Sanctuary's Imperial Architectural Development, Conflict with Christianity, and Final Days ; 9781934536551 >
-      au < testing ; 2012 ; 9780812222098 ; 9780812207699 ; The Satires of Horace ; 9780812207699 >
+      au < testing ; 2011 ; 9780812220353 ; 9780812205534 ; The Digest of Justinian, Volume 3 ; 9780812205534 >
+      au < testing ; 2011 ; 9780812220360 ; 9780812205541 ; The Digest of Justinian, Volume 4 ; 9780812205541 >
+      au < testing ; 2012 ; 9781934536445 ; 9781934536551 ; The New Chronology of Iron Age Gordion: The Sanctuary's Imperial Architectural Development, Conflict with Christianity, and Final Days ; 9781934536551 >
+      au < manifest ; 2012 ; 9780812222098 ; 9780812207699 ; The Satires of Horace ; 9780812207699 >
 
   }
 
