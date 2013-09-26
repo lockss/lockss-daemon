@@ -2074,10 +2074,9 @@
       issnl = 2160-9837
     >
 
-    comment[nR] = substance check failed, see RT 4726
     param[journal_issn] = 2160-9837
 
-    au < notReady ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 1 ; 1 >
+    au < ready ; 2012 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 1 ; 1 >
     au < expected ; 2013 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 2 ; 2 >
     au < expected ; 2014 ; International Journal of Productivity Management and Assessment Technologies (IJPMAT) Volume 3 ; 3 >
 
