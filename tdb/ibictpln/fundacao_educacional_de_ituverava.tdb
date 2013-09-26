@@ -17,11 +17,12 @@
       comment[publisher] = Fundação Educacional de Ituverava
       param[base_url] = http://www.nucleus.feituverava.com.br/
       param[journal_id] = animalium
+      comment[notReady] = Fetch error
 
-      au < testing ; 2009 ; 1 ; Revista Nucleus Animalium Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Revista Nucleus Animalium Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Revista Nucleus Animalium Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Revista Nucleus Animalium Volume 2012 ; 2012 >
+      au < notReady ; 2009 ; 1 ; Revista Nucleus Animalium Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 2 ; Revista Nucleus Animalium Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 3 ; Revista Nucleus Animalium Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 4 ; Revista Nucleus Animalium Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Nucleus Animalium Volume 2013 ; 2013 >
 
   }
@@ -37,16 +38,17 @@
       comment[publisher] = Fundação Educacional de Ituverava
       param[base_url] = http://www.nucleus.feituverava.com.br/
       param[journal_id] = nucleus
+      comment[notReady] = Fetch Error
 
-      au < testing ; 2003 ; 1 ; Revista Nucleus Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 2 ; Revista Nucleus Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 3 ; Revista Nucleus Volume 2005 ; 2005 >
-      au < testing ; 2007 ; 4 ; Revista Nucleus Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista Nucleus Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista Nucleus Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista Nucleus Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista Nucleus Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista Nucleus Volume 2012 ; 2012 >
+      au < notReady ; 2003 ; 1 ; Revista Nucleus Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 2 ; Revista Nucleus Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 3 ; Revista Nucleus Volume 2005 ; 2005 >
+      au < notReady ; 2007 ; 4 ; Revista Nucleus Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 5 ; Revista Nucleus Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 6 ; Revista Nucleus Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 7 ; Revista Nucleus Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 8 ; Revista Nucleus Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 9 ; Revista Nucleus Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista Nucleus Volume 2013 ; 2013 >
 
   }
