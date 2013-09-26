@@ -1,5 +1,5 @@
 /*
- * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.3 2013-06-07 21:20:36 aishizaki Exp $
+ * $Id: TestBMCPluginHtmlFilterFactory.java,v 1.4 2013-09-26 22:40:46 aishizaki Exp $
  */
 
 /*
@@ -36,6 +36,8 @@ import java.io.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.test.*;
 
 public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
@@ -56,18 +58,33 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
       + "<ul>Fill in SOMETHING SOMETHING</ul>";
   
   private static final String inst1result = "<ul>Fill in SOMETHING SOMETHING</ul>";
- 
-  private static final String inst3 = "<ul id=\"social-networking-links\"> LALALA </ul>Hello World";
-  private static final String inst4 = "<div id=\"impact-factor\" class=\"official\"></div>Hello World";
-  private static final String inst5 = "<a href=\"/sfx_links?ui=1471-2105-13-230&amp;bibl=B1\" onclick=\"popup('/sfx_links?ui=1471-2105-13-230&amp;bibl=B1','SFXMenu','460','420'); return false;\"><img src=\"/sfx_links?getImage\" alt=\"OpenURL\" align=\"absmiddle\"></a>Hello World";
-  private static final String inst6 = "<a href=\"http://www.helloworld.com/about/mostviewed/\"><img alt=\"Highly Accessed\" src=\"/images/articles/highlyaccessed-large.png\" class=\"access mr15\"/></a>Hello World";
-  private static final String commonResult = "Hello World";
+  private static final char cNewL = '\n';
+  private static final char cFormf = '\f';
+  private static final char cEnter = '\r';
+  private static final char[] cArr = {cNewL, cFormf, cEnter};
+  private static final String whiteSp = new String(cArr);
+  // add random whitespaces to test whitespace filter 
+  //    must add at least one whitespace char to match commonResult
+  private static final String inst3 = "  <ul id=\"social-networking-links\"> LALALA </ul>  Hello World";
+  private static final String inst4 = " <div id=\"impact-factor\" class=\"official\"></div>     Hello World";
+  private static final String inst5 = "   <a href=\"/sfx_links?ui=1471-2105-13-230&amp;bibl=B1\" onclick=\"popup('/sfx_links?ui=1471-2105-13-230&amp;bibl=B1','SFXMenu','460','420'); return false;\">          <img src=\"/sfx_links?getImage\" alt=\"OpenURL\" align=\"absmiddle\"></a>Hello World";
+  private static final String inst6 = "          <a href=\"http://www.helloworld.com/about/mostviewed/\">  <img alt=\"Highly Accessed\" src=\"/images/articles/highlyaccessed-large.png\" class=\"access mr15\"/>       </a>Hello World";
+  private static final String inst7 = " <link rel=\"stylesheet\" type=\"text/css\" href=\"/bmcbioinformatics/css/themes/1002.css?1330085853225\" media=\"screen, print\"/>       Hello World";
+  // new extreme hashing - should remove headers, footers and both right/left navigation and ad areas
+  private static final String inst8 ="<div id=\"branding\" role=\"banner\"> <dl class=\"google-ad wide \">"+
+            " </dl></div>       Hello World";
+  private static final String inst9 ="<div id=\"something\" class=\"left-article-box\"> <dl class=\"google-ad wide \">"+
+      whiteSp + " </dl>  </div>       Hello World";
+  private static final String inst10 = whiteSp + "<div id=\"article-navigation-bar\" role=\"banner\"> <dl class=\"google-ad wide \">"+
+  " </dl>         </div>       Hello World";
+  // added a space before 'Hello World' to match consolidated white space
+  private static final String commonResult = " Hello World";
+
 
   public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
-    InputStream inC;
-    InputStream inD;
+    String sA, sB;
 
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst1),
         ENC);
@@ -76,29 +93,58 @@ public class TestBMCPluginHtmlFilterFactory extends LockssTestCase {
 
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
-    inB.reset();
+    inB.close();
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst2), ENC);
-  
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(inst1result),
+        ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
     inB.close();
+    
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst3), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    //assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    sA=StringUtil.fromInputStream(inA);
+    sB=StringUtil.fromInputStream(inB);
+    assertEquals(sA, sB);
+    inA.close();
+    inB.close();    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst4), ENC);
     inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
-    inB.reset();    
-    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst4), ENC);
-    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
-    inA.close();
-    inB.reset();    
+    inB.close();    
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst5), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
-    inB.reset();    
+    inB.close();    
     inA = fact.createFilteredInputStream(mau, new StringInputStream(inst6), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst7), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst8), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst9), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
+    assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
+    inA.close();
+    inB.close();
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(inst10), ENC);
+    inB = fact.createFilteredInputStream(mau, new StringInputStream(commonResult), ENC);
     assertEquals(StringUtil.fromInputStream(inA), StringUtil.fromInputStream(inB));
     inA.close();
     inB.close();
   }
+  
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.2 2013-06-07 21:20:36 aishizaki Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.3 2013-09-26 22:40:46 aishizaki Exp $
  */
 
 /*
@@ -59,14 +59,24 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("iframe"),
         // Contains ads
         new TagNameFilter("object"),
+        //filter out comments
+        HtmlNodeFilters.commentWithRegex(".*"),
+        // stylesheets
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+        // upper area above the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
+        // left-hand area next to the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "class", "left-article-box"),
+        // right-hand area next to the article - Extreme Hash filtering!
+        HtmlNodeFilters.tagWithAttribute("div", "id", "article-navigation-bar"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
         // Contains the menu  <ul class="primary-nav">
         HtmlNodeFilters.tagWithAttribute("ul", "class", "primary-nav"),
-       // Contains advertising
-       HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad"),
         // Contains advertising  <dl class="google-ad wide ">
         HtmlNodeFilters.tagWithAttribute("dl", "class", "google-ad wide "),
         //Contains the terms and conditions,copyright year & links to springer
@@ -87,12 +97,18 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
         // A highly accessed link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
+        // Institution-dependent image
+        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/sfx_links\\?.*"),
         // Institution-dependent link resolvers  v2 - added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
         // Institution-dependent link resolvers   v1
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp.*"), };
-    return new HtmlFilterInputStream(in, encoding,
+    InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // added whitespace filter
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
+
   }
 
 }
