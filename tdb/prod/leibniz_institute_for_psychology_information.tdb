@@ -38,8 +38,8 @@
       param[base_url] = http://ejcop.psychopen.eu/
       param[journal_id] = ejcop
   
-      au < exists ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 2009 >
-      au < exists ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2013 >
+      au < manifest ; 2009 ; The European Journal of Counselling Psychology Volume 1 ; 2009 >
+      au < manifest ; 2013 ; The European Journal of Counselling Psychology Volume 2 ; 2013 >
 
   }
 
