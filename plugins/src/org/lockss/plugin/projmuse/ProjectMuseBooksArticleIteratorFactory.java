@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseBooksArticleIteratorFactory.java,v 1.1 2013-08-23 21:42:49 aishizaki Exp $
+ * $Id: ProjectMuseBooksArticleIteratorFactory.java,v 1.2 2013-09-26 18:36:22 wkwilson Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class ProjectMuseBooksArticleIteratorFactory
   protected static Logger log = Logger.getLogger("ProjectMuseBooksArticleIteratorFactory");
   
   protected static final String ROOT_TEMPLATE = "\"%sbooks/\", base_url"; // params from tdb file corresponding to AU
-  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s/%s-[\\d]+\", base_url, eisbn13, eisbn13";
+  protected static final String PATTERN_TEMPLATE = "\"^%sbooks/%s/%s-[\\d]+\", base_url, eisbn, eisbn";
   // http://muse.jhu.edu/books/9780299107635/9780299107635-2.pdf
   
   @Override
@@ -64,8 +64,7 @@ public class ProjectMuseBooksArticleIteratorFactory
     builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     // only meaningful substance on this page is pdfs
     builder.addAspect(PDF_PATTERN, PDF_REPL, ArticleFiles.ROLE_FULL_TEXT_PDF);
-    builder.addAspect(HTML_PATTERN, HTML_REPL, ArticleFiles.ROLE_FULL_TEXT_HTML, 
-                      ArticleFiles.ROLE_ARTICLE_METADATA);
+    builder.addAspect(HTML_PATTERN, HTML_REPL, ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_ABSTRACT,
