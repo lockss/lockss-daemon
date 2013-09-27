@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Sage Triggered Content Plugin, Base URL %s, Journal Abbreviation %s, Volume %s&quot;, base_url, journal_dir, volume_name</string>
+    <string>"Sage Triggered Content Plugin, Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_dir, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -26,30 +26,30 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$&quot;, base_url, base_url2</string>
-      <string>1,&quot;%s%s_%d_%s&quot;, base_url, journal_dir, year, volume_name</string>
-      <string>2,&quot;^(%s|%s)page&quot;, base_url, base_url2</string>
+      <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url, base_url2</string>
+      <string>1,"%s%s_%d_%s", base_url, journal_dir, year, volume_name</string>
+      <string>2,"^(%s|%s)page", base_url, base_url2</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s&quot;, base_url2</string>
+    <string>"%s", base_url2</string>
   </entry>
   <entry>
-  	<string>au_manifest</string>
-  		<list>
-  			<string>&quot;%s%s_%d_%s_1/index.htm&quot;, base_url, journal_dir, year, volume_name</string>
-  			<string>&quot;%s&quot;, base_url2</string>
-  		</list>
+    <string>au_manifest</string>
+      <list>
+        <string>"%s%s_%d_%s_1/index.htm", base_url, journal_dir, year, volume_name</string>
+        <string>"%s", base_url2</string>
+      </list>
   </entry>
   <entry>
-  	<string>au_feature_urls</string>
-  	<map>
-  	  <entry>
-  	    <string>au_title</string>
-        <string>&quot;%s&quot;, base_url</string>
-  	  </entry>
-  	</map>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -67,7 +67,7 @@
     <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
-     	<string>*</string>
+        <string>*</string>
         <string>org.lockss.plugin.sage.SageTriggeredContentMetadataExtractorFactory</string>
       </entry>
     </map>
