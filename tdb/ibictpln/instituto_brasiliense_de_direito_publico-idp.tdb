@@ -43,7 +43,7 @@
       comment[publisher] = Instituto Brasiliense de Direito Público-IDP
       param[base_url] = http://www.direitopublico.idp.edu.br/
       param[journal_id] = direitopublico
-      comment[notReady] = Fetch error
+      comment[notReady] = repository error
 
       au < notReady ; 2008 ; 1 ; Direito Público Volume 1 ; 2008 >
       au < notReady ; 2009 ; 2 ; Direito Público Volume 2 ; 2009 >
