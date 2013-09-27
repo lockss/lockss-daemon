@@ -131,7 +131,7 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
 		  "</pub_info>"+
 		  "</jrn_info>"+
 		  "<art_info>"+
-		  "<art_title>Article Title"+
+		  "<art_title>Article\nTitle"+
 		  "</art_title>"+
 		  "<art_stitle>Article Subtitle</art_stitle>"+
 		  "<art_author>"+
