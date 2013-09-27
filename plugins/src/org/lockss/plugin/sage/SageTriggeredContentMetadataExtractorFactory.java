@@ -1,5 +1,5 @@
 /*
- * $Id: SageTriggeredContentMetadataExtractorFactory.java,v 1.2 2013-09-26 23:18:12 etenbrink Exp $
+ * $Id: SageTriggeredContentMetadataExtractorFactory.java,v 1.3 2013-09-27 17:54:19 etenbrink Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
+import org.lockss.extractor.XmlDomMetadataExtractor.TextValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -115,6 +116,14 @@ implements FileMetadataExtractorFactory {
       }
     };
     
+    // extend XPathValue, needed because some titles have extra CR chars
+    static private final XPathValue TITLE_VALUE = new TextValue() {
+      @Override
+      public String getValue(String s) {
+        return (s == null) ? s : s.replace("\n", " ");
+      }
+    };
+    
     /** Map of raw xpath key to node value function */
     static private final Map<String,XPathValue> nodeMap = 
         new HashMap<String,XPathValue>();
@@ -127,7 +136,7 @@ implements FileMetadataExtractorFactory {
       nodeMap.put("/SAGEmeta/header/jrn_info/iss", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/SAGEmeta/header/jrn_info/date", DATE_VALUE);
       nodeMap.put("/SAGEmeta/header/jrn_info/pub_info/pub_name", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("/SAGEmeta/header/art_info/art_title", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("/SAGEmeta/header/art_info/art_title", TITLE_VALUE);
       nodeMap.put("/SAGEmeta/header/art_info/art_author/per_aut", AUTHOR_VALUE);
       nodeMap.put("/SAGEmeta/header/art_info/spn", XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put("/SAGEmeta/header/art_info/epn", XmlDomMetadataExtractor.TEXT_VALUE);
