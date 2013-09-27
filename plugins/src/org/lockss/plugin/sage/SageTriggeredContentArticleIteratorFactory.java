@@ -34,6 +34,7 @@ import java.util.regex.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -107,8 +108,9 @@ public class SageTriggeredContentArticleIteratorFactory implements ArticleIterat
     }
   }
   
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-	      throws PluginException {
-	    return new SageTriggeredContentArticleMetadataExtractor();
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
