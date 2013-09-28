@@ -6,6 +6,8 @@
   plugin = org.lockss.plugin.projmuse.ProjectMuseBooksPlugin
   param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
+  
+  comment[notReady] = No permission to crawl the Supplement Collections. Waiting for action from PM.
 
   {
 
@@ -133,16 +135,16 @@
         type = bookSeries
       >
 
-      au < testing ; 1987 ;  ; 9780813555331 ; Black Athena: Afroasiatic Roots of Classical Civilization, Volume I: The Fabrication of Ancient Greece, 1785-1985 ; 9780813555331 >
-      au < testing ; 1998 ; 9780292728080 ; 9780292799110 ; Antiphon and Andocides ; 9780292799110 >
+      au < notReady ; 1987 ;  ; 9780813555331 ; Black Athena: Afroasiatic Roots of Classical Civilization, Volume I: The Fabrication of Ancient Greece, 1785-1985 ; 9780813555331 >
+      au < notReady ; 1998 ; 9780292728080 ; 9780292799110 ; Antiphon and Andocides ; 9780292799110 >
       au < testing ; 2000 ; 9780292731219 ; 9780292799158 ; History and Silence: Purge and Rehabilitation of Memory in Late Antiquity ; 9780292799158 >
-      au < testing ; 2001 ; 9780292760547 ; 9780292797901 ; Greek and Roman Comedy: Translations and Interpretations of Four Representative Plays ; 9780292797901 >
+      au < notReady ; 2001 ; 9780292760547 ; 9780292797901 ; Greek and Roman Comedy: Translations and Interpretations of Four Representative Plays ; 9780292797901 >
       au < testing ; 2001 ; 9780801867903 ; 9780801877193 ; Remembering Defeat: Civil War and Civic Memory in Ancient Athens ; 9780801877193 >
-      au < testing ; 2002 ; 9780292728417 ; 9780292796454 ; Antiphon the Athenian: Oratory, Law, and Justice in the Age of the Sophists ; 9780292796454 >
+      au < notReady ; 2002 ; 9780292728417 ; 9780292796454 ; Antiphon the Athenian: Oratory, Law, and Justice in the Age of the Sophists ; 9780292796454 >
       au < testing ; 2002 ; 9780809331369 ; 9780809390137 ; Gorgias and the New Sophistic Rhetoric ; 9780809390137 >
       au < testing ; 2004 ; 9780292702301 ; 9780292797550 ; From Ikaria to the Stars: Classical Mythification, Ancient and Modern ; 9780292797550 >
       au < testing ; 2004 ; 9780801886362 ; 9781421402772 ; The Thebaid: Seven against Thebes ; 9781421402772 >
-      au < testing ; 2006 ; 9780807830635 ; 9781469603438 ; Art of Forgetting: Disgrace and Oblivion in Roman Political Culture ; 9781469603438 >
+      au < notReady ; 2006 ; 9780807830635 ; 9781469603438 ; Art of Forgetting: Disgrace and Oblivion in Roman Political Culture ; 9781469603438 >
       au < testing ; 2006 ; 9780292706040 ; 9780292795877 ; Diodorus Siculus, Books 11-12.37.1: Greek History, 480-431 BC--the Alternative Version ; 9780292795877 >
       au < testing ; 2006 ; 9780252029882 ; 9780252092954 ; Indo-European Sacred Space: Vedic and Roman Cult ; 9780252092954 >
       au < testing ; 2006 ; 9780292706873 ; 9780292796287 ; The Religion of the Etruscans ; 9780292796287 >
@@ -150,7 +152,7 @@
       au < testing ; 2010 ; 9780292719392 ; 9780292793521 ; Diodorus Siculus, The Persian Wars to the Fall of Athens: Books 11-14.34 (480-401 BCE) ; 9780292793521 >
       au < testing ; 2011 ; 9780812240351 ; 9780812201574 ; Grammar and Christianity in the Late Roman World ; 9780812201574 >
       au < testing ; 2012 ; 9780813210216 ; 9780813220901 ; Christian and Pagan in the Roman Empire ; 9780813220901 >
-      au < testing ; 2012 ; 9780813214078 ; 9780813216386 ; Rhetoric in Antiquity ; 9780813216386 >
+      au < notReady ; 2012 ; 9780813214078 ; 9780813216386 ; Rhetoric in Antiquity ; 9780813216386 >
 
   }
 
@@ -2748,13 +2750,13 @@
 
       au < testing ; 1972 ; 9780801892684 ; 9780801895210 ; Medical America in the Nineteenth Century: Readings from the Literature ; 9780801895210 >
       au < testing ; 1974 ; 9780801817625 ; 9781421400570 ; Western Attitudes toward Death: From the Middle Ages to the Present ; 9781421400570 >
-      au < testing ; 1976 ; 9780777001264 ; 9782760523371 ; Le troisième registre de Tadoussac: Miscellaneorum Liber ; 9782760523371 >
-      au < testing ; 1981 ; 9780807117682 ; 9780807148129 ; From Rebellion to Revolution: Afro-American Slave Revolts in the Making of the Modern World ; 9780807148129 >
-      au < testing ; 1983 ; 9782760508118 ; 9782760522329 ; De la curatelle au curateur public: 50 ans de protection ; 9782760522329 >
+      au < notReady ; 1976 ; 9780777001264 ; 9782760523371 ; Le troisième registre de Tadoussac: Miscellaneorum Liber ; 9782760523371 >
+      au < notReady ; 1981 ; 9780807117682 ; 9780807148129 ; From Rebellion to Revolution: Afro-American Slave Revolts in the Making of the Modern World ; 9780807148129 >
+      au < notReady ; 1983 ; 9782760508118 ; 9782760522329 ; De la curatelle au curateur public: 50 ans de protection ; 9782760522329 >
       au < testing ; 1983 ; 9782760503786 ; 9782760522732 ; Dominique-Marie Varlet: Lettres du Canada et de la Louisiane (1713-1724) ; 9782760522732 >
-      au < testing ; 1983 ; 9782760503441 ; 9782760520363 ; Histoire du sport de l'Antiquité au XIXe siècle ; 9782760520363 >
+      au < notReady ; 1983 ; 9782760503441 ; 9782760520363 ; Histoire du sport de l'Antiquité au XIXe siècle ; 9782760520363 >
       au < testing ; 1983 ; 9782760508613 ; 9782760521186 ; Justine Lacoste-Beaubien et l'Hôpital Sainte-Justine ; 9782760521186 >
-      au < testing ; 1983 ; 9782760505858 ; 9782760523043 ; Le parti colonial français: Eléments d'histoire ; 9782760523043 >
+      au < notReady ; 1983 ; 9782760505858 ; 9782760523043 ; Le parti colonial français: Eléments d'histoire ; 9782760523043 >
       au < testing ; 1983 ; 9780777002384 ; 9782760523364 ; Le travail du chaume dans la région du Lac St-Pierre ; 9782760523364 >
       au < testing ; 1983 ; 9780777002124 ; 9782760522558 ; Les champions des femmes: Examen du discours sur la supériorité des femmes 1400-1800 ; 9782760522558 >
       au < testing ; 1983 ; 9780777001530 ; 9782760522572 ; Les entrepreneur dans la politique argentine 1955-73 ; 9782760522572 >
