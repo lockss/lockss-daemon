@@ -7242,7 +7242,8 @@
 
       param[journal_issn] = 2049-405X
       
-      au < manifest ; exists ; 2012 ; International Journal of Swarm Intelligence Volume 1 ; 1 >
+      au < manifest ; exists ; 2013 ; International Journal of Swarm Intelligence Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; International Journal of Swarm Intelligence Volume 2 ; 2 >
 
     }
 
@@ -7261,6 +7262,7 @@
       au < zapped ; down ; 2010-2011 ; International Journal of System of Systems Engineering Volume 2 ; 2 >
       au < released ; crawling ; 2012 ; International Journal of System of Systems Engineering Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of System of Systems Engineering Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; International Journal of System of Systems Engineering Volume 5 ; 5 >
 
     }
 
@@ -7277,6 +7279,7 @@
       
       au < released ; crawling ; 2012 ; International Journal of Systems Control and Information Processing Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Systems Control and Information Processing Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of Systems Control and Information Processing Volume 3 ; 3 >
 
     }
 
@@ -7296,6 +7299,7 @@
       au < zapped ; down ; 2011 ; International Journal of Systems, Control and Communications Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Systems, Control and Communications Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Systems, Control and Communications Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Systems, Control and Communications Volume 6 ; 6 >
 
     }
 
@@ -7314,6 +7318,7 @@
       au < released ; crawling ; 2009-2010 ; International Journal of Teaching and Case Studies Volume 2 ; 2 >
       au < zapped ; down ; 2011 ; International Journal of Teaching and Case Studies Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; International Journal of Teaching and Case Studies Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; International Journal of Teaching and Case Studies Volume 5 ; 5 >
 
     }
 
@@ -7327,10 +7332,11 @@
       >
 
       param[journal_issn] = 1746-5389
+      comment[0] = no issue in 2012, 2013
       
       au < manifest ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 >
       au < zapped ; down ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Technoentrepreneurship Volume 3 ; 3 >
 
     }
 
@@ -7351,6 +7357,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technological Learning, Innovation and Development Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Technological Learning, Innovation and Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Technological Learning, Innovation and Development Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Technological Learning, Innovation and Development Volume 7 ; 7 >
 
     }
 
@@ -7372,6 +7379,7 @@
       au < zapped ; down ; 2010-2011 ; International Journal of Technology and Globalisation Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Technology and Globalisation Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; International Journal of Technology and Globalisation Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; International Journal of Technology and Globalisation Volume 8 ; 8 >
 
     }
 
@@ -7391,6 +7399,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technology Enhanced Learning Volume 3 ; 3 >
       au < released ; crawling ; 2012 ; International Journal of Technology Enhanced Learning Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Enhanced Learning Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Enhanced Learning Volume 6 ; 6 >
 
     }
 
@@ -7414,6 +7423,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technology Intelligence and Planning Volume 7 ; 7 >
       au < zapped ; down ; 2012 ; International Journal of Technology Intelligence and Planning Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Intelligence and Planning Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Intelligence and Planning Volume 10 ; 10 >
 
     }
 
@@ -7490,6 +7500,12 @@
       au < released ; crawling ; 2012 ; International Journal of Technology Management Volume 60 ; 60 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Management Volume 61 ; 61 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Management Volume 62 ; 62 >
+      au < exists ; exists ; 2013 ; International Journal of Technology Management Volume 63 ; 63 >
+      au < expected ; exists ; 2013 ; International Journal of Technology Management Volume 64 ; 64 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 65 ; 65 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 66 ; 66 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 67 ; 67 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Management Volume 68 ; 68 >
 
     }
 
@@ -7512,6 +7528,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technology Marketing Volume 6 ; 6 >
       au < zapped ; down ; 2012 ; International Journal of Technology Marketing Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Technology Marketing Volume 8 ; 8 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Marketing Volume 9 ; 9 >
 
     }
 
@@ -7528,6 +7545,7 @@
       
       au < released ; crawling ; 2012 ; International Journal of Technology Policy and Law Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Technology Policy and Law Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Policy and Law Volume 3 ; 3 >
 
     }
 
@@ -7554,6 +7572,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 >
       au < released ; crawling ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 >
       au < expected ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 >
+      au < expected ; exists ; 2014 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 >
 
     }
 
@@ -7581,6 +7600,7 @@
       au < zapped ; down ; 2011 ; International Journal of Technology, Policy and Management Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; International Journal of Technology, Policy and Management Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; International Journal of Technology, Policy and Management Volume 13 ; 13 >
+      au < expected ; exists ; 2014 ; International Journal of Technology, Policy and Management Volume 14 ; 14 >
 
     }
 
@@ -7594,10 +7614,11 @@
       >
 
       param[journal_issn] = 2046-4541
+      comment[0] = no issue in 2012
       
       au < zapped ; down ; 2011 ; International Journal of the Built Environment and Asset Management Volume 1 ; 1 >
-      au < expected ; exists ; 2012 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
-      au < expected ; exists ; 2013 ; International Journal of the Built Environment and Asset Management Volume 3 ; 3 >
+      au < expected ; exists ; 2013 ; International Journal of the Built Environment and Asset Management Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of the Built Environment and Asset Management Volume 3 ; 3 >
 
     }
 
@@ -7613,8 +7634,9 @@
       param[journal_issn] = 1756-0004
       
       au < released ; crawling ; 2009-2010 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 1 ; 1 >
-      au < zapped ; down ; 2011 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Theoretical and Applied Multiscale Mechanics Volume 4 ; 4 >
 
     }
 
@@ -7632,6 +7654,7 @@
       au < zapped ; down ; 2010-2011 ; International Journal of Tourism Anthropology Volume 1 ; 1 >
       au < released ; crawling ; 2012 ; International Journal of Tourism Anthropology Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; International Journal of Tourism Anthropology Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Tourism Anthropology Volume 4 ; 4 >
 
     }
 
@@ -7649,9 +7672,9 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Tourism Policy Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; International Journal of Tourism Policy Volume 2 ; 2 >
       au < released ; crawling ; 2010 ; International Journal of Tourism Policy Volume 3 ; 3 >
-      au < zapped ; down ; 2011 ; International Journal of Tourism Policy Volume 4 ; 4 >
-      au < released ; crawling ; 2012 ; International Journal of Tourism Policy Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Tourism Policy Volume 6 ; 6 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Tourism Policy Volume 4 ; 4 >
+      au < released ; crawling ; 2013 ; International Journal of Tourism Policy Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Tourism Policy Volume 6 ; 6 >
 
     }
 
@@ -7672,6 +7695,7 @@
       au < zapped ; down ; 2011 ; International Journal of Trade and Global Markets Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; International Journal of Trade and Global Markets Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Trade and Global Markets Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Trade and Global Markets Volume 7 ; 7 >
 
     }
 
@@ -7689,6 +7713,7 @@
       au < zapped ; down ; 2010-2011 ; International Journal of Transitions and Innovation Systems Volume 1 ; 1 >
       au < released ; crawling ; 2012 ; International Journal of Transitions and Innovation Systems Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; International Journal of Transitions and Innovation Systems Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Transitions and Innovation Systems Volume 4 ; 4 >
 
     }
 
@@ -7703,7 +7728,8 @@
 
       param[journal_issn] = 2048-8386
       
-      au < released ; crawling ; 2012 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
+      au < released ; crawling ; 2013 ; International Journal of Trust Management in Computing and Communications Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; International Journal of Trust Management in Computing and Communications Volume 2 ; 2 >
 
     }
 
@@ -7719,8 +7745,9 @@
       param[journal_issn] = 1758-7298
       
       au < released ; crawling ; 2009-2010 ; International Journal of Ultra Wideband Communications and Systems Volume 1 ; 1 >
-      au < zapped ; down ; 2011 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
-      au < expected ; exists ; 2012 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
+      au < zapped ; down ; 2011-2012 ; International Journal of Ultra Wideband Communications and Systems Volume 2 ; 2 >
+      au < expected ; exists ; 2013 ; International Journal of Ultra Wideband Communications and Systems Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Ultra Wideband Communications and Systems Volume 4 ; 4 >
 
     }
 
@@ -7742,6 +7769,7 @@
       au < zapped ; down ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < released ; crawling ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
       au < expected ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; International Journal of Value Chain Management Volume 8 ; 8 >
 
     }
 
@@ -7767,6 +7795,7 @@
       au < zapped ; down ; 2011 ; International Journal of Vehicle Autonomous Systems Volume 9 ; 9 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Autonomous Systems Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Autonomous Systems Volume 11 ; 11 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Autonomous Systems Volume 12 ; 12 >
 
     }
 
@@ -7825,6 +7854,9 @@
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Design Volume 61 ; 61 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Design Volume 62 ; 62 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Design Volume 63 ; 63 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Design Volume 64 ; 64 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Design Volume 65 ; 65 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Design Volume 66 ; 66 >
 
     }
 
@@ -7838,10 +7870,12 @@
       >
 
       param[journal_issn] = 1741-8208
+      comment[0] = no issue in 2012
       
       au < manifest ; exists ; 2005-2008 ; International Journal of Vehicle Information and Communication Systems Volume 1 ; 1 >
       au < zapped ; down ; 2009-2011 ; International Journal of Vehicle Information and Communication Systems Volume 2 ; 2 >
-      au < crawling ; exists ; 2012 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 >
+      au < crawling ; exists ; 2013 ; International Journal of Vehicle Information and Communication Systems Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Information and Communication Systems Volume 4 ; 4 >
 
     }
 
