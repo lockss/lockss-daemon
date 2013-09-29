@@ -7899,6 +7899,7 @@
       au < zapped ; down ; 2011 ; International Journal of Vehicle Noise and Vibration Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Noise and Vibration Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Noise and Vibration Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Noise and Vibration Volume 10 ; 10 >
 
     }
 
@@ -7912,8 +7913,9 @@
       >
 
       param[journal_issn] = 1745-3208
+      comment[0] = title is not yet published on 9/28/2013
       
-      au < expected ; exists ; 2013 ; International Journal of Vehicle Performance Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Performance Volume 1 ; 1 >
 
     }
 
@@ -7933,8 +7935,8 @@
       au < manifest ; exists ; 2008 ; International Journal of Vehicle Safety Volume 3 ; 3 >
       au < manifest ; exists ; 2009 ; International Journal of Vehicle Safety Volume 4 ; 4 >
       au < zapped ; down ; 2010-2011 ; International Journal of Vehicle Safety Volume 5 ; 5 >
-      au < released ; crawling ; 2012 ; International Journal of Vehicle Safety Volume 6 ; 6 >
-      au < expected ; exists ; 2013 ; International Journal of Vehicle Safety Volume 7 ; 7 >
+      au < released ; crawling ; 2012-2013 ; International Journal of Vehicle Safety Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Safety Volume 7 ; 7 >
 
     }
 
@@ -7957,6 +7959,7 @@
       au < zapped ; down ; 2011 ; International Journal of Vehicle Systems Modelling and Testing Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Vehicle Systems Modelling and Testing Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Vehicle Systems Modelling and Testing Volume 8 ; 8 >
+      au < expected ; exists ; 2014 ; International Journal of Vehicle Systems Modelling and Testing Volume 9 ; 9 >
 
     }
 
@@ -7991,9 +7994,9 @@
       au < manifest ; exists ; 2005-2007 ; International Journal of Water Volume 3 ; 3 >
       au < manifest ; exists ; 2008 ; International Journal of Water Volume 4 ; 4 >
       au < released ; crawling ; 2009-2010 ; International Journal of Water Volume 5 ; 5 >
-      au < released ; crawling ; 2011 ; International Journal of Water Volume 6 ; 6 >
-      au < released ; crawling ; 2012 ; International Journal of Water Volume 7 ; 7 >
-      au < expected ; exists ; 2013 ; International Journal of Water Volume 8 ; 8 >
+      au < released ; crawling ; 2011-2012 ; International Journal of Water Volume 6 ; 6 >
+      au < released ; crawling ; 2013 ; International Journal of Water Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; International Journal of Water Volume 8 ; 8 >
 
     }
 
@@ -8017,6 +8020,7 @@
       au < zapped ; down ; 2011 ; International Journal of Web and Grid Services Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web and Grid Services Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Web and Grid Services Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; International Journal of Web and Grid Services Volume 10 ; 10 >
 
     }
 
@@ -8040,6 +8044,7 @@
       au < zapped ; down ; 2011 ; International Journal of Web Based Communities Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; International Journal of Web Based Communities Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; International Journal of Web Based Communities Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; International Journal of Web Based Communities Volume 10 ; 10 >
 
     }
 
@@ -8062,6 +8067,7 @@
       au < zapped ; down ; 2010-2011 ; International Journal of Web Engineering and Technology Volume 6 ; 6 >
       au < released ; crawling ; 2012 ; International Journal of Web Engineering and Technology Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Journal of Web Engineering and Technology Volume 8 ; 8 >
+      au < expected ; exists ; 2014 ; International Journal of Web Engineering and Technology Volume 9 ; 9 >
 
     }
 
@@ -8077,7 +8083,8 @@
       param[journal_issn] = 1757-8809
       
       au < zapped ; down ; 2011-2012 ; International Journal of Web Science Volume 1 ; 1 >
-      au < expected ; exists ; 2013 ; International Journal of Web Science Volume 2 ; 2 >
+      au < exists ; exists ; 2013 ; International Journal of Web Science Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of Web Science Volume 3 ; 3 >
 
     }
 
@@ -8098,6 +8105,7 @@
       au < released ; crawling ; 2010 ; International Journal of Wireless and Mobile Computing Volume 4 ; 4 >
       au < zapped ; down ; 2011-2012 ; International Journal of Wireless and Mobile Computing Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; International Journal of Wireless and Mobile Computing Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; International Journal of Wireless and Mobile Computing Volume 7 ; 7 >
 
     }
 
@@ -8114,6 +8122,7 @@
       
       au < released ; crawling ; 2012 ; International Journal of Work Innovation Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Work Innovation Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; International Journal of Work Innovation Volume 3 ; 3 >
 
     }
 
@@ -8132,8 +8141,8 @@
       au < manifest ; exists ; 2007-2008 ; International Journal of Work Organisation and Emotion Volume 2 ; 2 >
       au < released ; crawling ; 2009-2010 ; International Journal of Work Organisation and Emotion Volume 3 ; 3 >
       au < zapped ; down ; 2011 ; International Journal of Work Organisation and Emotion Volume 4 ; 4 >
-      au < released ; crawling ; 2012 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
-      au < expected ; exists ; 2013 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
+      au < released ; crawling ; 2012-2013 ; International Journal of Work Organisation and Emotion Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; International Journal of Work Organisation and Emotion Volume 6 ; 6 >
 
     }
 
@@ -8152,6 +8161,7 @@
       au < released ; crawling ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 >
       au < zapped ; down ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; Interdisciplinary Environmental Review Volume 14 ; 14 >
+      au < expected ; exists ; 2014 ; Interdisciplinary Environmental Review Volume 15 ; 15 >
 
     }
 
@@ -8172,6 +8182,7 @@
       au < zapped ; down ; 2011 ; Journal for Global Business Advancement Volume 4 ; 4 >
       au < released ; crawling ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; Journal for Global Business Advancement Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; Journal for Global Business Advancement Volume 7 ; 7 >
 
     }
 
@@ -8193,6 +8204,7 @@
       au < released ; crawling ; 2010-2011 ; Journal for International Business and Entrepreneurship Development Volume 5 ; 5 >
       au < zapped ; down ; 2012 ; Journal for International Business and Entrepreneurship Development Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Journal for International Business and Entrepreneurship Development Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; Journal for International Business and Entrepreneurship Development Volume 8 ; 8 >
 
     }
 
@@ -8218,6 +8230,7 @@
       au < zapped ; down ; 2011 ; Journal of Design Research Volume 9 ; 9 >
       au < zapped ; down ; 2012 ; Journal of Design Research Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Journal of Design Research Volume 11 ; 11 >
+      au < expected ; exists ; 2014 ; Journal of Design Research Volume 12 ; 12 >
 
     }
 
@@ -8231,8 +8244,9 @@
       >
 
       param[journal_issn] = 2041-384X
+      comment[0] = title is not yet published on 9/28/2013
       
-      au < expected ; exists ; 2013 ; Luxury Intelligence, An International Journal Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Luxury Intelligence, An International Journal Volume 1 ; 1 >
 
     }
 
@@ -8260,6 +8274,7 @@
       au < zapped ; down ; 2011 ; Progress in Computational Fluid Dynamics, An International Journal Volume 11 ; 11 >
       au < released ; crawling ; 2012 ; Progress in Computational Fluid Dynamics, An International Journal Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; Progress in Computational Fluid Dynamics, An International Journal Volume 13 ; 13 >
+      au < expected ; exists ; 2014 ; Progress in Computational Fluid Dynamics, An International Journal Volume 14 ; 14 >
 
     }
 
@@ -8280,7 +8295,9 @@
       au < manifest ; exists ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 >
       au < manifest ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 >
       au < manifest ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 >
-      au < released ; crawling ; 2010 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
+      au < released ; crawling ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 >
+      au < exists ; exists ; 2013 ; Progress in Industrial Ecology, An International Journal Volume 8 ; 8 >
+      au < released ; exists ; 2014 ; Progress in Industrial Ecology, An International Journal Volume 9 ; 9 >
 
     }
 
@@ -8304,6 +8321,7 @@
       au < zapped ; down ; 2011 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 7 ; 7 >
       au < released ; crawling ; 2012 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 9 ; 9 >
+      au < expected ; exists ; 2014 ; World Review of Entrepreneurship, Management and Sustainable Development Volume 10 ; 10 >
 
     }
 
@@ -8322,6 +8340,7 @@
       au < manifest ; exists ; 2008-2009 ; World Review of Intermodal Transportation Research Volume 2 ; 2 >
       au < zapped ; down ; 2010-2011 ; World Review of Intermodal Transportation Research Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; World Review of Intermodal Transportation Research Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; World Review of Intermodal Transportation Research Volume 5 ; 5 >
 
     }
 
@@ -8346,6 +8365,7 @@
       au < zapped ; down ; 2010-2011 ; World Review of Science, Technology and Sustainable Development Volume 8 ; 8 >
       au < released ; crawling ; 2012 ; World Review of Science, Technology and Sustainable Development Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; World Review of Science, Technology and Sustainable Development Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; World Review of Science, Technology and Sustainable Development Volume 11 ; 11 >
 
     }
 
