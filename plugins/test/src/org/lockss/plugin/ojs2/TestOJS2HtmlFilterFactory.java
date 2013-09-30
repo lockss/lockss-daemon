@@ -47,23 +47,58 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   //HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarKeywordCloud"),
   // Some OJS sites have a subscription status area
  // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarSubscription"),
+  // Some OJS sites have a language switcher, which can change over time
+  // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebarLanguageToggle"),
+  // Top-level menu items sometimes change over time
+  // HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
   // Popular location for sidebar customizations
   //HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
   
   private static final String sidebarKeywordCloudHtml =
 		 "<div class=\"block\" id=\"sidebarUser\"><div id=\"sidebarKeywordCloud\"></div></div>";
   private static final String sidebarKeywordCloudHtmlFiltered =
-  		 "<div class=\"block\" id=\"sidebarUser\"></div>";
+      "<div class=\"block\" id=\"sidebarUser\"></div>";
   
   private static final String sidebarSubscriptionHtml =
-		 "<div id=\"sidebarSubscription\"><a class=\"blockTitle\" href=\"http://pkp.sfu.ca/ojs/\" id=\"developedBy\">Open Journal Systems</a></div>";
+      "<div id=\"sidebarSubscription\"><a class=\"blockTitle\" href=\"http://pkp.sfu.ca/ojs/\" id=\"developedBy\">Open Journal Systems</a></div>";
   private static final String sidebarSubscriptionHtmlFiltered =
-	  	 "";
+      "";
+  
+  private static final String sidebarLanguageToggleHtml =
+      "<div id=\"sidebarLanguageToggle\" class=\"block\">\n.....</div>";
+  private static final String sidebarLanguageToggleHtmlFiltered =
+        "";
+  
+  private static final String navbarHtml =
+      "<div id=\"navbar\">\n" + 
+      "  <ul class=\"menu\">\n........" + 
+      "  </ul>\n......." + 
+      "</div>";
+  private static final String navbarHtmlFiltered =
+      "";
   
   private static final String customHtml =
-			 "<div id=\"header\"><div id=\"custom\"></div></div>";
+      "<div id=\"header\"><div id=\"custom\"></div></div>";
   private static final String customHtmlFiltered =
-	  		 "<div id=\"header\"></div>";
+      "<div id=\"header\"></div>";
+  
+  // new TagNameFilter("script"),
+  // Date accessed is a variable
+  // HtmlNodeFilters.tagWithTextRegex("div", "Date accessed: "),
+  // The version of the OJS software, which can change over time, appears in a tag
+  // HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
+  // Header image with variable dimensions
+  // HtmlNodeFilters.tagWithAttribute("div", "id", "headerTitle"),
+  // For Ubiquity Press
+  // HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
+  // For JLIS.it: landing pages contain user view count
+  // HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews")
+  
+  
+  private static final String scriptHtml =
+      "<head><script type=\"text/javascript\" async=\"\" src=\"http://www.google-analytics.com/ga.js\"></script></head";
+  private static final String scriptHtmlFiltered =
+      "<head></head>";
   
   private static final String dateAccessedHtml = 
     "<div class=\"separator\">" +
@@ -73,18 +108,37 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   		"net/index.php/more/path/here\" target=\"_new\">http://sampleurl" +
   		".net/index.php/more/path/here</a>&gt;. Date accessed" +
   		": 13 Jul. 2012.</div></div><div class=\"separator\"></div>";
-  
   private static final String dateAccessedHtmlFiltered = 
     "<div class=\"separator\"></div></div><div class=\"separator\"></div>";
+  
+  private static final String generatorHtml =
+      "<head><meta name=\"generator\"></head>";
+  private static final String generatorHtmlFiltered =
+      "<head></head>";
   
   private static final String headerImageHtml =
     "<div id=\"headerTitle\"><h1>" +
     "<img src=\"http://www.tellusa.net/public/journals/27/" +
     "pageHeaderTitleImage_en_US.jpg\" width=\"750\" height=\"90\" " +
     "alt=\"Page Header\" /></h1></div>";
-  
   private static final String headerImageHtmlFiltered =
     "";
+  
+  private static final String rightSidebarHtml =
+      "<div id=\"header\"><div id=\"rightSidebar\">\n" + 
+      "<div id=\"sidebarRTAuthorBios\" class=\"block\">\n</div>\n" + 
+      "<div id=\"sidebarRTRelatedItems\" class=\"block\">\n</div>\n" + 
+      "</div></div>";
+  private static final String rightSidebarHtmlFiltered =
+      "<div id=\"header\"></div>";
+  
+  private static final String viewsHtml =
+      "<div id=\"header\"><span class=\"ArticleViews\">- Views:<span content=\"UserPageVisits: \n" + 
+      "234\n\" itemprop=\"interactionCount\"> \n234\n" + 
+      "</span></span></div>";
+  private static final String viewsHtmlFiltered =
+      "<div id=\"header\"></div>";
+  
 
   
   public void testSidebarKeywordCloudFiltering() throws Exception {
@@ -128,6 +182,46 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
 
     assertEquals(headerImageHtmlFiltered, StringUtil.fromInputStream(actIn));
+  }
+
+  public void testRemaining() throws Exception {
+    InputStream actIn;
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(sidebarLanguageToggleHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(sidebarLanguageToggleHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(navbarHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(navbarHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(scriptHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(scriptHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(generatorHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(generatorHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(rightSidebarHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(rightSidebarHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
+    actIn = fact.createFilteredInputStream(mau,
+        new StringInputStream(viewsHtml),
+        Constants.DEFAULT_ENCODING);
+    
+    assertEquals(viewsHtmlFiltered, StringUtil.fromInputStream(actIn));
+    
   }
 
 }
