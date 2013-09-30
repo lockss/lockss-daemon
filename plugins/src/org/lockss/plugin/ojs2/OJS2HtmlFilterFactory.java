@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.7 2012-12-24 00:33:35 ldoan Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.8 2013-09-30 19:47:45 etenbrink Exp $
  */
 
 /*
@@ -63,8 +63,10 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("meta", "name", "generator"),
             // Header image with variable dimensions
             HtmlNodeFilters.tagWithAttribute("div", "id", "headerTitle"),
-	    // For Ubiquity Press
-	    HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar")
+            // For Ubiquity Press
+            HtmlNodeFilters.tagWithAttribute("div", "id", "rightSidebar"),
+            // For JLIS.it: landing pages contain user view count
+            HtmlNodeFilters.tagWithAttribute("span", "class", "ArticleViews")
         };
         return new HtmlFilterInputStream(in,
                                          encoding,
