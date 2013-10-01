@@ -7252,7 +7252,8 @@
         issnl = 2049-4041
       >
 
-      param[journal_issn] = 2049-405X
+      param[journal_issn] = 2049-4041
+      comment[issn] = manifest page use issn
       
       au < exists ; exists ; 2013 ; International Journal of Swarm Intelligence Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; International Journal of Swarm Intelligence Volume 2 ; 2 >
