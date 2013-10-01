@@ -19,15 +19,19 @@
       param[base_url] = http://eaces.liuc.it/
       implicit < status ; year ; name ; volume ; param[year] >
       
+      comment[0] = no manifest pages online after 2008 as of 2013/10.
+      
       au < released ; 2004 ; European Journal of Comparative Economics 2004 ; 1 ; 2004 >
       au < released ; 2005 ; European Journal of Comparative Economics 2005 ; 2 ; 2005 >
-      au < wanted ; 2006 ; European Journal of Comparative Economics 2006 ; 3 ; 2006 >
-      au < wanted ; 2007 ; European Journal of Comparative Economics 2007 ; 4 ; 2007 >
-      au < wanted ; 2008 ; European Journal of Comparative Economics 2008 ; 5 ; 2008 >
+      au < manifest ; 2006 ; European Journal of Comparative Economics 2006 ; 3 ; 2006 >
+      au < manifest ; 2007 ; European Journal of Comparative Economics 2007 ; 4 ; 2007 >
+      au < manifest ; 2008 ; European Journal of Comparative Economics 2008 ; 5 ; 2008 >
       au < exists ; 2009 ; European Journal of Comparative Economics 2009 ; 6 ; 2009 >
       au < exists ; 2010 ; European Journal of Comparative Economics 2010 ; 7 ; 2010 >
       au < exists ; 2011 ; European Journal of Comparative Economics 2011 ; 8 ; 2011 >
-      au < expected ; 2012 ; European Journal of Comparative Economics 2012 ; 9 ; 2012 >
+      au < exists ; 2012 ; European Journal of Comparative Economics 2012 ; 9 ; 2012 >
+      au < exists ; 2013 ; European Journal of Comparative Economics 2013 ; 10 ; 2013 >
+      au < expected ; 2014 ; European Journal of Comparative Economics 2014 ; 11 ; 2014 >
     
     }
     
