@@ -6,6 +6,8 @@
     info[tester] = 0
   >
 
+     plugin = needs.plugin
+     param[base_url] = http://www.cysjournal.ca/
 
   {
     
@@ -14,8 +16,7 @@
        issn = 1913-1925
      >
 
-     plugin = needs.plugin
-     param[base_url] = http://http://www.cysjournal.ca/
+     param[journal_id] = cysj
 
   }
    

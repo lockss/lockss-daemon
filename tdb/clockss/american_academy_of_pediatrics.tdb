@@ -66,6 +66,8 @@
       au < released ; crawling ; 2012 ; AAP Grand Rounds Volume 28 ; 28 >
       au < crawling ; exists ; 2013 ; AAP Grand Rounds Volume 29 ; 29 >
       au < crawling ; exists ; 2013 ; AAP Grand Rounds Volume 30 ; 30 >
+      au < expected ; exists ; 2014 ; AAP Grand Rounds Volume 31 ; 31 >
+      au < expected ; exists ; 2014 ; AAP Grand Rounds Volume 32 ; 32 >
 
     }
   
@@ -85,9 +87,6 @@
     
       plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
-    
-      au < down ; exists ; 2001 ; AAP News Volume 19 ; 19 >
-      au < down ; exists ; 2002 ; AAP News Volume 20 ; 20 >
 
       au < zapped ; down ; 2008 ; AAP News Volume 29 ; 29 >
       au < zapped ; down ; 2009 ; AAP News Volume 30 ; 30 >
@@ -117,8 +116,8 @@
       au < manifest ; exists ; 2000 ; AAP News Volume 16 ; 16 >
       au < manifest ; exists ; 2000 ; AAP News Volume 17 ; 17 >
       au < manifest ; exists ; 2001 ; AAP News Volume 18 ; 18 >
-      au < doNotProcess ; doNotProcess ; 2001 ; AAP News Volume 19 ; 19 >
-      au < doNotProcess ; doNotProcess ; 2002 ; AAP News Volume 20 ; 20 >
+      au < manifest ; exists ; 2001 ; AAP News Volume 19 ; 19 >
+      au < manifest ; exists ; 2002 ; AAP News Volume 20 ; 20 >
       au < manifest ; exists ; 2002 ; AAP News Volume 21 ; 21 >
       au < manifest ; exists ; 2003 ; AAP News Volume 22 ; 22 >
       au < manifest ; exists ; 2003 ; AAP News Volume 23 ; 23 >
@@ -133,6 +132,7 @@
       au < released ; crawling ; 2011 ; AAP News Volume 32 ; 32 >
       au < released ; crawling ; 2012 ; AAP News Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; AAP News Volume 34 ; 34 >
+      au < expected ; exists ; 2014 ; AAP News Volume 35 ; 35 >
 
     }
   
@@ -151,6 +151,7 @@
       au < exists ; exists ; 2011 ; Hospital Pediatrics Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Hospital Pediatrics Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; Hospital Pediatrics Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Hospital Pediatrics Volume 4 ; 4 >
 
   }
   
@@ -192,6 +193,7 @@
       au < released ; crawling ; 2011 ; NeoReviews Volume 12 ; 12 >
       au < released ; crawling ; 2012 ; NeoReviews Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; NeoReviews Volume 14 ; 14 >
+      au < expected ; exists ; 2014 ; NeoReviews Volume 15 ; 15 >
 
     }
   
@@ -357,6 +359,8 @@
       au < released ; crawling ; 2012 ; Pediatrics Volume 130 ; 130 >
       au < crawling ; exists ; 2013 ; Pediatrics Volume 131 ; 131 >
       au < crawling ; exists ; 2013 ; Pediatrics Volume 132 ; 132 >
+      au < expected ; exists ; 2014 ; Pediatrics Volume 133 ; 133 >
+      au < expected ; exists ; 2014 ; Pediatrics Volume 134 ; 134 >
 
     }
   
@@ -421,6 +425,7 @@
       au < released ; crawling ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
       au < released ; crawling ; 2012 ; Pediatrics in Review Volume 33 ; 33 >
       au < crawling ; exists ; 2013 ; Pediatrics in Review Volume 34 ; 34 >
+      au < expected ; exists ; 2014 ; Pediatrics in Review Volume 35 ; 35 >
 
     }
   
@@ -430,7 +435,6 @@
 
     title <
       name = Red Book Online ;
-      type = book ;
       issn = 1080-0131 ;
       eissn = 1544-9300 ;
       issnl = 1080-0131
@@ -451,6 +455,7 @@
     au < doNotProcess ; exists ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     au < notReady ; exists ; 2012 ; Red Book Online Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Red Book Online Volume 2 ; 2 >
+    au < expected ; exists ; 2014 ; Red Book Online Volume 3 ; 3 >
 
   }
 

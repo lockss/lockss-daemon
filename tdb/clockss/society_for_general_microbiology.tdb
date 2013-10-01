@@ -47,7 +47,7 @@
       issnl = 0020-7713
       >
   
-      comment[continued_from] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
+      comment[continues] = International Bulletin of Bacterial Nomenclature and Taxonomy 0096-266X
       comment[continued_by] = International Journal of Systematic and Evolutionary Bacteriology 1466-5026
       
       pluginSuffix = ClockssHighWirePressH20Plugin
@@ -98,7 +98,7 @@
       issnl = 1466-5026
     >
 
-      comment[continued_from] = International Journal of Systematic Bacteriology 0020-7713
+      comment[continues] = International Journal of Systematic Bacteriology 0020-7713
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ijs.sgmjournals.org/
@@ -459,13 +459,30 @@
 
   {
     title <
+      name = JMM Case Reports ;
+      eissn = 2053-3721
+    >
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://jmmcr.sgmjournals.org/
+
+      au < expected ; exists ; 2013 ; JMM Case Reports Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
+    title <
       name = Microbiology ;
       issn = 1350-0872 ;
       eissn = 1465-2080 ;
       issnl = 1350-0872
     >
     
-      comment[continued_from] = Journal of General Microbiology 0022-1287 as of Jan 1994
+      comment[continues] = Journal of General Microbiology 0022-1287 as of Jan 1994
 
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://mic.sgmjournals.org/

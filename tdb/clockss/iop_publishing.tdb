@@ -28,6 +28,18 @@
   
   
   
+  {
+
+    title <
+      name = 2D Materials
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = Y
+
+    au < expected ; exists ; 2014 ; 2D Materials Volume 1 ; 1 > 
+
+  }
 
   {
 
@@ -448,7 +460,8 @@
 
     param[journal_issn] = 0295-5075
     comment[param] = print issn preferred
-    comment[notReady] = RU4518, crawl failure
+    comment[notReady97] = RU4518, crawl failure
+    comment[notReady99_100] = PD-41, related review articles
 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 1 ; 1 > 
     au < manifest ; exists ; 1986 ; EPL (Europhysics Letters) Volume 2 ; 2 > 
@@ -551,6 +564,9 @@
     au < notReady ; exists ; 2012 ; EPL (Europhysics Letters) Volume 99 ; 99 >
     au < notReady ; exists ; 2012 ; EPL (Europhysics Letters) Volume 100 ; 100 >
     au < crawling ; exists ; 2013 ; EPL (Europhysics Letters) Volume 101 ; 101 >
+    au < manifest ; exists ; 2013 ; EPL (Europhysics Letters) Volume 102 ; 102 >
+    au < manifest ; exists ; 2013 ; EPL (Europhysics Letters) Volume 103 ; 103 >
+    au < exists ; exists ; 2013 ; EPL (Europhysics Letters) Volume 104 ; 104 >
 
   }
 
@@ -2032,16 +2048,16 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 449 ; 449 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 450 ; 450 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 451 ; 451 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 452 ; 452 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 453 ; 453 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 454 ; 454 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 455 ; 455 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 456 ; 456 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 457 ; 457 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 458 ; 458 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 459 ; 459 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 452 ; 452 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 453 ; 453 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 454 ; 454 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 455 ; 455 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 456 ; 456 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 457 ; 457 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 458 ; 458 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 459 ; 459 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 460 ; 460 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 461 ; 461 >
+    au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 461 ; 461 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 462 ; 462 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 463 ; 463 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 464 ; 464 >
@@ -2237,6 +2253,19 @@
     au < manifest ; exists ; 1985 ; Journal of the Society for Radiological Protection Volume 5 ; 5 > 
     au < manifest ; exists ; 1986 ; Journal of the Society for Radiological Protection Volume 6 ; 6 > 
     au < manifest ; exists ; 1987 ; Journal of the Society for Radiological Protection Volume 7 ; 7 > 
+
+  }
+
+  {
+
+    title <
+      name = Materials Research Express
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = Z
+
+    au < expected ; exists ; 2014 ; Materials Research Express Volume 1 ; 1 > 
 
   }
 
@@ -3616,6 +3645,19 @@
     au < manifest ; exists ; 1930 ; Transactions of the Optical Society Volume 31 ; 31  > 
     au < manifest ; exists ; 1931 ; Transactions of the Optical Society Volume 32 ; 32  > 
     au < manifest ; exists ; 1932 ; Transactions of the Optical Society Volume 33 ; 33  >
+
+  }
+
+  {
+
+    title <
+      name = Translational Materials Research
+    >
+    
+    comment[new] = coming out in 2014
+    param[journal_issn] = X
+
+    au < expected ; exists ; 2014 ; Translational Materials Research Volume 1 ; 1 > 
 
   }
 

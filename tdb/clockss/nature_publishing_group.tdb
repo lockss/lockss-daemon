@@ -1899,7 +1899,7 @@
     au < exists ; exists ; 2010 ; Kidney International Volume 78 (2010) ; 2010 ; 78 >
     au < released ; crawling ; 2011 ; Kidney International Volume 79 ; 2011 ; 79 >
     au < testing ; exists ; 2011 ; Kidney International Volume 80 ; 2011 ; 80 >
-    au < testing ; exists ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
+    au < released ; manifest ; 2012 ; Kidney International Volume 81 ; 2012 ; 81 >
     au < expected ; exists ; 2013 ; Kidney International Volume 82 ; 2013 ; 82 >
   }
 
@@ -2044,7 +2044,6 @@
       name = Molecular Systems Biology ;
       eissn = 1744-4292
     >
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = msb
 
     au < exists ; exists ; 2005 ; Molecular Systems Biology Volume 1 ; 2005 ; 1 >
@@ -2055,7 +2054,7 @@
     au < exists ; exists ; 2010 ; Molecular Systems Biology Volume 6 ; 2010 ; 6 >
     au < exists ; exists ; 2011 ; Molecular Systems Biology Volume 7 ; 2011 ; 7 >
     au < exists ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
-    au < exists ; exists ; 2013 ; Molecular Systems Biology Volume 9 ; 2013 ; 9 >
+    au < crawling ; exists ; 2013 ; Molecular Systems Biology Volume 9 ; 2013 ; 9 >
 
   }
 
@@ -2702,8 +2701,17 @@
     au < crawling ; exists ; 2013 ; Nature Volume 497 ; 2013 ; 497 >
     au < crawling ; exists ; 2013 ; Nature Volume 498 ; 2013 ; 498 >
     au < crawling ; exists ; 2013 ; Nature Volume 499 ; 2013 ; 499 >
-    au < expected ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
-    au < expected ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 >
+    au < crawling ; exists ; 2013 ; Nature Volume 500 ; 2013 ; 500 >
+    au < crawling ; exists ; 2013 ; Nature Volume 501 ; 2013 ; 501 >
+    au < expected ; exists ; 2014 ; Nature Volume 502 ; 2014 ; 502 >
+    au < expected ; exists ; 2014 ; Nature Volume 503 ; 2014 ; 503 >
+    au < expected ; exists ; 2014 ; Nature Volume 504 ; 2014 ; 504 >
+    au < expected ; exists ; 2014 ; Nature Volume 505 ; 2014 ; 505 >
+    au < expected ; exists ; 2014 ; Nature Volume 506 ; 2014 ; 506 >
+    au < expected ; exists ; 2014 ; Nature Volume 507 ; 2014 ; 507 >
+    au < expected ; exists ; 2014 ; Nature Volume 508 ; 2014 ; 508 >
+    au < expected ; exists ; 2014 ; Nature Volume 509 ; 2014 ; 509 >
+    au < expected ; exists ; 2014 ; Nature Volume 510 ; 2014 ; 510 >
 
   }
 
@@ -4079,7 +4087,7 @@
     au < exists ; exists ; 2004 ; Vital Volume 1 (2004) ; 2004 ; 1 >
     au < manifest ; exists ; 2005 ; Vital Volume 1 (2005) ; 2005 ; 1 >
     au < manifest ; exists ; 2005 ; Vital Volume 2 ; 2005 ; 2 >
-    au < exists ; exists ; 2006 ; Vital Volume 3 ; 2006 ; 3 >
+    au < manifest ; exists ; 2006 ; Vital Volume 3 ; 2006 ; 3 >
     au < exists ; exists ; 2007 ; Vital Volume 4 ; 2007 ; 4 >
     au < released ; crawling ; 2008 ; Vital Volume 5 ; 2008 ; 5 >
     au < released ; crawling ; 2008 ; Vital Volume 6 (2008) ; 2008 ; 6 >
