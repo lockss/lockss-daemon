@@ -534,7 +534,7 @@ while (my $line = <>) {
     sleep(5);
   } elsif ($plugin eq "BloomsburyQatarPlugin") {
     $url = sprintf("%slockss/%s/%s/index.html", 
-      $param{base_url}, $param{journal_dir}, $param{volume_name});
+      $param{base_url}, $param{journal_id}, $param{volume_name});
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
