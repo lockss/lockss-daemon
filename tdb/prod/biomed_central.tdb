@@ -4984,7 +4984,7 @@
       param[base_url] = http://www.journalotohns.com/
       param[journal_issn] = 1916-0216
 
-      au < expected ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
+      au < manifest ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
       au < expected ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
 
     }
