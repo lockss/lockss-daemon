@@ -42,10 +42,11 @@
       eissn = 1746-6113
     >
     
+    comment[continued_by] = 1759-5150 
     param[journal_issn] = 1746-6113
 
-    au < expected ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
-    au < expected ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
+    au < exists ; exists ; 2004 ; The Journal of Practice Teaching in Health and Social Work Volume 5 ; 5 >
+    au < exists ; exists ; 2005 ; The Journal of Practice Teaching in Health and Social Work Volume 6 ; 6 >
 
   }
 
@@ -63,8 +64,8 @@
     au < manifest ; exists ; 2008 ; The Journal of Practice Teaching and Learning Volume 8 ; 8 >
     au < manifest ; exists ; 2009 ; The Journal of Practice Teaching and Learning Volume 9 ; 9 >
     au < manifest ; exists ; 2010-2011 ; The Journal of Practice Teaching and Learning Volume 10 ; 10 >
-    au < crawling ; exists ; 2011-2012 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
-    au < expected ; exists ; 2012-2013 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
+    au < crawling ; exists ; 2011-2013 ; The Journal of Practice Teaching and Learning Volume 11 ; 11 >
+    au < expected ; exists ; 2014-2015 ; The Journal of Practice Teaching and Learning Volume 12 ; 12 >
     
   }    
   
