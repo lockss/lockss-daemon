@@ -7,7 +7,7 @@
   >
 
     param[base_url] = http://www.insectbiodiversity.org
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; param[year] ; name >
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     
   {
@@ -22,7 +22,8 @@
     
       param[journal_id] = jib
 
-      au < exists ; exists ; 2013 ; Journal of Insect Biodiversity Volume 1 ; 2013 >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Insect Biodiversity Volume 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Journal of Insect Biodiversity Volume 2 >
 
     }
     
