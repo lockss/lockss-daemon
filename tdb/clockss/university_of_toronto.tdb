@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = University of Toronto 
+  >
+  
+  {
+  
+    title <
+      name = Global Summitry Journal ;
+      issn = 2291-4110 ;
+      issnl = 2291-4110
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://globalsummitry.org/
+    param[journal_abbr] = gsj
+    implicit < status1 ; status ; year ; name ; param[volume] >
+
+    au < crawling ; exists ; 2013 ; Global Summitry Journal Volume 1 ; 1 >
+    au < expected ; exists ; 2014 ; Global Summitry Journal Volume 2 ; 2 >
+
+  }
+
+}

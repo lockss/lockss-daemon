@@ -1,0 +1,127 @@
+{
+
+  publisher <
+    name = IUScholarWorks ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+  implicit < status1 ; status ; year ; name ; volume ; param[year] >
+
+  {
+    title <
+      name = Artifact ;
+      issn = 1749-3471
+    >
+
+  }
+
+  {
+    title <
+      name = Anthropology of East Europe Review ;
+      issn = 2153-2913
+    >
+
+  }
+
+  {
+    title <
+      name = Black Diaspora Review
+    >
+
+  }
+
+  {
+    title <
+      name = Illuminare: A Student Journal in Recreation, Parks, and Tourism Studies;
+      issn = 2158-9089 
+    >
+
+  }
+
+  {
+    title <
+      name = Indiana University Bookman ;
+      issn = 0019-6800
+    >
+
+  }
+
+  {
+    title <
+      name = Inter-American Journal of Education for Democracy ;
+      issn = 1941-7799
+    >
+
+  }
+
+  {
+    title <
+      name = International Journal of Designs for Learning ;
+      issn = 2159-449X
+    >
+
+  }
+
+  {
+    title <
+      name = InULA Notes: Indiana University Librarians Association
+    >
+
+  }
+
+  {
+    title <
+      name = Journal of Teaching and Learning with Technology ;
+      issn = 2165-2554
+    >
+
+  }
+
+  {
+    title <
+      name = Journal of the Indiana University Student Personnel Association
+    >
+
+  }
+
+  {
+    title <
+      name = Journal of the Scholarship of Teaching and Learning ;
+      issn = 1527-9316
+    >
+
+  }
+
+  {
+    title <
+      name = Museum Anthropology Review ;
+      issn = 1938-5145
+    >
+
+  }
+
+  {
+    title <
+      name = New Directions in Folklore ;
+      issn = 2161-9964
+    >
+
+  }
+
+  {
+    title <
+      name = Palaeontologica Electronica ;
+      issn = 1094-8074
+    >
+
+  }
+
+  {
+    title <
+      name = The Workshop
+    >
+
+  }
+}

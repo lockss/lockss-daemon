@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Insect Biodiversity Research Group ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+    param[base_url] = http://www.insectbiodiversity.org
+    implicit < status1 ; status ; year ; param[year] ; name >
+    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+    
+  {
+ 
+    title < 
+      name = Journal of Insect Biodiversity ;
+      issn = 2147-7612 ;
+      issnl = 2147-7612
+    >
+
+    {
+    
+      param[journal_id] = jib
+
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Insect Biodiversity Volume 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Journal of Insect Biodiversity Volume 2 >
+
+    }
+    
+    
+  }
+
+}

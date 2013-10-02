@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Association of Jewish Libraries ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+  
+  {
+  
+    title <
+      name = Judaica Librarianship ;
+      issn = 2330-2976 ;
+      issnl = 2330-2976
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = http://ajlpublishing.org/
+    param[journal_abbr] = jl
+    implicit < status1 ; status ; year ; name ; param[volume] >
+
+    au < crawling ; exists ; 2013 ; Judaica Librarianship Volume 16 ; 16 >
+    au < expected ; exists ; 2014 ; Judaica Librarianship Volume 17 ; 17 >
+
+  }
+
+}

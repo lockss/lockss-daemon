@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Dryad ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+    plugin = org.lockss.plugin.dryad.ClockssDryadPlugin
+    param[base_url] = http://datadryad.org/
+    implicit < status1 ; status ; param[volume_name] ; name >
+    
+    comment[manifest] = while new plugin is developed.
+
+  {
+  
+    title < 
+      name = Dryad Digital Repository
+     >
+     
+     au < exists ; exists ; 1 ; Dryad Digital Repository URL List 1 >
+     
+  }
+}

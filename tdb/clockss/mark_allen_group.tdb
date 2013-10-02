@@ -1,0 +1,685 @@
+{
+
+  publisher <
+    name = Mark Allen Group ;
+    info[contract] = 2013 ;
+    info[tester] = 0 ;
+    comment[platform] = Atypon
+  >
+  
+  plugin = needs.plugin
+
+  {
+    title <
+      name = African Journal of Midwifery and Women's Health ;
+      issn = 1759-7374 ;
+      eissn = 2052-4293 
+    >
+    
+    param[base_url] = http://www.africanjournalofmidwifery.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Cardiac Nursing ;
+      issn = 1749-6403 ;
+      eissn = 2052-2207 
+    >
+    
+    param[base_url] = http://www.cardiac-nursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Community Nursing ;
+      issn = 1462-4753 ;
+      eissn = 2052-2215 
+    >
+    
+    param[base_url] = http://www.bjcn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Healthcare Assistants ;
+      issn = 1753-1586 ;
+      eissn = 2052-4420 
+    >
+    
+    param[base_url] = http://www.healthcare-assistants.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Healthcare Management ;
+      issn = 1358-0574 ;
+      eissn = 1759-7382 
+    >
+    
+    param[base_url] = http://www.bjhcm.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Hospital Medicine ;
+      issn = 1750-8460 ;
+      eissn = 1759-7390 
+    >
+    
+    param[base_url] = http://www.bjhm.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Mental Health Nursing ;
+      issn = 2049-5919 ;
+      eissn = 2052-496X 
+    >
+    
+    param[base_url] = http://www.bjmhn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Midwifery ;
+      issn = 0969-4900 ;
+      eissn = 2052-4307 
+    >
+    
+    param[base_url] = http://www.britishjournalofmidwifery.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Neuroscience Nursing ;
+      issn = 1747-0307 ;
+      eissn = 2052-2800 
+    >
+    
+    param[base_url] = http://www.bjnn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Nursing ;
+      issn = 0966-0461 ;
+      eissn = 2052-2819 
+    >
+    
+    param[base_url] = http://www.britishjournalofnursing.com/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of School Nursing ;
+      issn = 1752-2803 ;
+      eissn = 2052-2827 
+    >
+    
+    param[base_url] = http://www.school-nursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = British Journal of Wellbeing ;
+      issn = 2043-9393 
+    >
+    
+    param[base_url] = http://www.britishjournalofwellbeing.com/
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Dental Nursing ;
+      issn = 1749-6799 ;
+      eissn = 1759-7404
+       
+    >
+    
+    param[base_url] = http://www.dental-nursing.co.uk/
+    
+  }
+
+  {
+    title <
+      name = Gastrointestinal Nursing ;
+      issn = 1479-5248 ;
+      eissn = 2052-2835 
+    >
+    
+    param[base_url] = http://www.gastrointestinalnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Independent Nurse ;
+      issn = 1747-9800 ;
+      eissn = 2052-2843 
+    >
+    
+    param[base_url] = http://www.independentnurse.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Ophthalmic Practice ;
+      issn = 2044-5504 ;
+      eissn = 2052-2851 
+    >
+    
+    param[base_url] = http://www.ijop.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Palliative Nursing ;
+      issn = 1357-6321 ;
+      eissn = 2052-286X 
+    >
+    
+    param[base_url] = http://www.ijpn.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Journal of Therapy and Rehabilitation ;
+      issn = 1741-1645 ;
+      eissn = 1759-779X 
+    >
+    
+    param[base_url] = http://www.ijtr.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = International Paramedic Practice ;
+      eissn = 2052-4889 
+    >
+    
+    param[base_url] = http://www.internationaljpp.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Aesthetic Nursing ;
+      issn = 2050-3717 ;
+      eissn = 2052-2878 
+    >
+    
+    param[base_url] = http://www.aestheticnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Children's and Young People's Nursing ;
+      issn = 1753-1594 ;
+      eissn = 2052-2886 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Health Visiting ;
+      issn = 2050-8719 ;
+      eissn = 2052-2908 
+    >
+    
+    param[base_url] = http://www.journalofhealthvisiting.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Paramedic Practice ;
+      issn = 1759-1376 ;
+      eissn = 2041-9457 
+    >
+    
+    param[base_url] = http://www.paramedicpractice.com/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Renal Nursing ;
+      issn = 2041-1448 ;
+      eissn = 2052-2894 
+    >
+    
+    param[base_url] = http://www.renalnursing.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Journal of Wound Care ;
+      issn = 0969-0700 ;
+      eissn = 2052-2916 
+    >
+    
+    param[base_url] = http://www.journalofwoundcare.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Nurse Prescribing ;
+      issn = 1479-9189 ;
+      eissn = 2052-2924 
+    >
+    
+    param[base_url] = http://www.nurseprescribing.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Nursing and Residential Care ;
+      issn = 1465-9301 ;
+      eissn = 2052-2932 
+    >
+    
+    param[base_url] = http://www.nursingresidentialcare.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Practice Nursing ;
+      issn = 0964-9271 ;
+      eissn = 2052-2940 
+    >
+    
+    param[base_url] = http://www.practicenursing.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Companion Animal ;
+      issn = 0964-9271 ;
+      eissn = 2052-2940 
+    >
+    
+    param[base_url] = http://www.ukvet.co.uk/view/caHome.html
+    comment[0] = need to update base_url
+
+    
+  }
+ 
+  {
+    title <
+      name = Equine Health ;
+      issn = 2047-9867 ;
+      eissn = 2052-2967 
+    >
+    
+    param[base_url] = http://www.equinehealthmagazine.com/
+
+    
+  }
+ 
+  {
+    title <
+      name = Livestock ;
+      issn = 2053-0862 ;
+      eissn = 2053-0870 
+    >
+    
+    param[base_url] = http://www.ukvet.co.uk/view/lsHome.html
+    comment[0] = need to update base_url
+
+    
+  }
+ 
+  {
+    title <
+      name = The Veterinary Nurse ;
+      issn = 2044-0065 ;
+      eissn = 2052-2959 
+    >
+    
+    param[base_url] = http://www.theveterinarynurse.com/
+
+    
+  }
+
+  {
+    title <
+      name = WoundCare (supplement of British Journal of Community Nursing) ;
+      issn = 1748-8710 ;
+      eissn = 2052-5311 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+ 
+  {
+    title <
+      name = Five to Eleven ;
+      issn = 1744-7240 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = 5 to 7 Educator ;
+      issn = 1746-7500 ;
+      eissn = 2052-4595 
+    >
+    
+    param[base_url] = http://www.intered.uk.com/cgi-bin/go.pl/library/issues.html?journal_uid=19
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = Child Care ;
+      issn = 1753-9900 ;
+      eissn = 2052-4579 
+    >
+    
+    param[base_url] = http://www.practicalpreschool.com/magazine/childcare.shtml
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = Children & Young People Now ;
+      issn = 1755-8093 
+    >
+    
+    param[base_url] = http://www.cypnow.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Early Years Educator (EYE) ;
+      issn = 1465-931X ;
+      eissn = 2052-4617 
+    >
+    
+    param[base_url] = http://www.earlyyearseducator.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Fundraising for Schools ;
+      issn = 1755-5094 ;
+      eissn = 2052-4625 
+    >
+    
+    param[base_url] = http://www.fundraisingschools.co.uk/
+
+    
+  }
+ 
+  {
+    title <
+      name = Headteacher Update ;
+      issn = 1478-5307 ;
+      eissn = 2052-4633 
+    >
+    
+    param[base_url] = http://www.headteacher-update.com/
+    comment[pdf] = file from http://content.yudu.com
+
+    
+  }
+  
+  {
+    title <
+      name = Nursery World ;
+      issn = 0029-6422 
+    >
+    
+    param[base_url] = http://www.nurseryworld.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Practical Pre-School ;
+      issn = 1366-610X ;
+      eissn = 2052-4587 
+    >
+    
+    param[base_url] = http://www.practicalpreschool.com/
+
+    
+  }
+
+  {
+    title <
+      name = Primary Teacher Update ;
+      issn = 2047-8917 ;
+      eissn = 2052-4609 
+    >
+    
+    param[base_url] = http://www.primaryteacherupdate.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = SecEd ;
+      issn = 1479-7704 
+    >
+    
+    param[base_url] = http://www.sec-ed.co.uk/
+
+    
+  }
+ 
+  {
+    title <
+      name = Facilities UK Handbook ;
+      issn = 2052-9759 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = HR ;
+      issn = 0964-8380 
+    >
+    
+    param[base_url] = http://www.hrmagazine.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Land Mobile ;
+      issn = 1352-2701 
+    >
+    
+    param[base_url] = http://www.landmobile.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = PrintWeek ;
+      issn = 1350-9829 
+    >
+    
+    param[base_url] = http://www.printweek.com/
+
+    
+  }
+
+  {
+    title <
+      name = Pro Shop Europe ;
+      issn = 1355-2740 
+    >
+    
+    param[base_url] = http://www.proshopeurope.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Recycling & Waste World ;
+      issn = 1759-7366 
+    >
+    
+    param[base_url] = http://www.recyclingwasteworld.co.uk/
+
+    
+  }
+
+  {
+    title <
+      name = Recycling & Waste World Handbook;
+      issn =  
+    >
+    
+    param[base_url] = http://www.recyclingwasteworld.co.uk/handbook.shtml
+    comment[0] = need to update base_url
+
+    
+  }
+
+  {
+    title <
+      name = TETRA Today ;
+      issn = 2045-8665 ;
+      eissn = 2045-8673
+ 
+    >
+    
+    param[base_url] = http://www.tetra-awards.com/tetra-today/
+    comment[pdf] = file from http://content.yudu.com
+
+    
+  }
+
+  {
+    title <
+      name = Carriage Driving ;
+      issn = 0958-1820
+ 
+    >
+    
+    param[base_url] = http://www.carriage-driving.com/
+
+    
+  }
+
+  {
+    title <
+      name = Hampshire - the county magazine ;
+      issn = 0017-7113
+ 
+    >
+    
+    param[base_url] = 
+    comment[0] = website is not up yet
+
+    
+  }
+
+  {
+    title <
+      name = Jazzwise ;
+      issn = 1368-0021
+ 
+    >
+    
+    param[base_url] = http://www.jazzwisemagazine.com/
+
+    
+  }
+
+  {
+    title <
+      name = Wiltshire Life ;
+      issn = 1358-0582
+ 
+    >
+    
+    param[base_url] = http://www.wiltshirelife.co.uk/
+
+    
+  }
+
+}

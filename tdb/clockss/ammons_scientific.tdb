@@ -20,7 +20,7 @@
       issn = 2165-2228
     >
     
-    param[journal_abbr] = cp
+    param[journal_id] = cp
  
     au < manifest ; exists ; 2012 ; Comprehensive Psychology Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Comprehensive Psychology Volume 2 ; 2 >
@@ -35,7 +35,7 @@
       issn = 2165-2236
     >
     
-    param[journal_abbr] = it
+    param[journal_id] = it
  
     au < manifest ; exists ; 2012 ; Innovative Teaching Volume 1 ; 1 >
     au < expected ; exists ; 2013 ; Innovative Teaching Volume 2 ; 2 >
@@ -50,7 +50,7 @@
       issn = 0033-2941
     >
     
-    param[journal_abbr] = pr0
+    param[journal_id] = pr0
  
     au < manifest ; exists ; 1955 ; Psychological Reports Volume 1 ; 1 >
     au < manifest ; exists ; 1956 ; Psychological Reports Volume 2 ; 2 >
@@ -176,7 +176,7 @@
       eissn = 0031-5125
     >
     
-    param[journal_abbr] = pms
+    param[journal_id] = pms
 
     au < manifest ; exists ; 1949 ; Perceptual and Motor Skills Volume 1 ; 1 >
     au < manifest ; exists ; 1950 ; Perceptual and Motor Skills Volume 2 ; 2 >
