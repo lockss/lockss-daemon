@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressArticleIteratorFactory.java,v 1.2 2013-09-23 19:20:05 etenbrink Exp $
+ * $Id: PortlandPressArticleIteratorFactory.java,v 1.3 2013-10-02 17:59:36 etenbrink Exp $
  */
 
 /*
@@ -120,12 +120,12 @@ public class PortlandPressArticleIteratorFactory
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_ARTICLE_METADATA,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
     
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
