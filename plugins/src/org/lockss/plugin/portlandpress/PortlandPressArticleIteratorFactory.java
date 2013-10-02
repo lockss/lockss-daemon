@@ -1,5 +1,5 @@
 /*
- * $Id: PortlandPressArticleIteratorFactory.java,v 1.3 2013-10-02 17:59:36 etenbrink Exp $
+ * $Id: PortlandPressArticleIteratorFactory.java,v 1.4 2013-10-02 19:15:14 etenbrink Exp $
  */
 
 /*
@@ -115,8 +115,8 @@ public class PortlandPressArticleIteratorFactory
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     // set up abstract to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
-    // until this is deprecated
+    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
+    // until this fulltext concept is deprecated
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT,
@@ -124,8 +124,13 @@ public class PortlandPressArticleIteratorFactory
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
     
     builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
+        EV_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
     
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
@@ -134,10 +139,6 @@ public class PortlandPressArticleIteratorFactory
     // set up *add.htm to be a suppl aspect
     builder.addAspect(ADD_REPLACEMENT,
         ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
-    
-    builder.addAspect(
-        EV_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
