@@ -1537,6 +1537,7 @@
         issnl = 1740-0546
       >
 
+      param[journal_issn] = 1740-0554
       comment[0] = title is not yet published on 4/11/2013
       
       au < expected ; 2014 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 >
@@ -1641,7 +1642,7 @@
 
       param[journal_issn] = 1755-4985
       
-      au < released ; 2009-2010 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
+      au < released ; 2009-2012 ; International Journal of Computational Intelligence Studies Volume 1 ; 1 >
       au < exists ; 2013 ; International Journal of Computational Intelligence Studies Volume 2 ; 2 >
       au < expected ; 2014 ; International Journal of Computational Intelligence Studies Volume 3 ; 3 >
 
@@ -2162,7 +2163,7 @@
 
       param[journal_issn] = 1753-5220
       
-      au < released ; 2009-2009 ; International Journal of Digital Culture and Electronic Tourism Volume 1 ; 1 >
+      au < released ; 2008-2009 ; International Journal of Digital Culture and Electronic Tourism Volume 1 ; 1 >
 
     }
 
