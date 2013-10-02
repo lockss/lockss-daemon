@@ -33,17 +33,17 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = cr
 
-      au < releasing ; 2003 ; 1 ; Revista Ciências da Religião: História e Sociedade Volume 1 ; 2003 >
-      au < releasing ; 2004 ; 2 ; Revista Ciências da Religião: História e Sociedade Volume 2 ; 2004 >
-      au < releasing ; 2005 ; 3 ; Revista Ciências da Religião: História e Sociedade Volume 3 ; 2005 >
-      au < releasing ; 2006 ; 4 ; Revista Ciências da Religião: História e Sociedade Volume 4 ; 2006 >
-      au < releasing ; 2007 ; 5 ; Revista Ciências da Religião: História e Sociedade Volume 5 ; 2007 >
-      au < releasing ; 2008 ; 6 ; Revista Ciências da Religião: História e Sociedade Volume 6 ; 2008 >
-      au < releasing ; 2009 ; 7 ; Revista Ciências da Religião: História e Sociedade Volume 7 ; 2009 >
-      au < releasing ; 2010 ; 8 ; Revista Ciências da Religião: História e Sociedade Volume 8 ; 2010 >
-      au < releasing ; 2011 ; 9 ; Revista Ciências da Religião: História e Sociedade Volume 9 ; 2011 >
-      au < releasing ; 2012 ; 10 ; Revista Ciências da Religião: História e Sociedade Volume 10 ; 2012 >
-      au < releasing ; 2013 ; 11 ; Revista Ciências da Religião: História e Sociedade Volume 11 ; 2013 >
+      au < released ; 2003 ; 1 ; Revista Ciências da Religião: História e Sociedade Volume 1 ; 2003 >
+      au < released ; 2004 ; 2 ; Revista Ciências da Religião: História e Sociedade Volume 2 ; 2004 >
+      au < released ; 2005 ; 3 ; Revista Ciências da Religião: História e Sociedade Volume 3 ; 2005 >
+      au < released ; 2006 ; 4 ; Revista Ciências da Religião: História e Sociedade Volume 4 ; 2006 >
+      au < released ; 2007 ; 5 ; Revista Ciências da Religião: História e Sociedade Volume 5 ; 2007 >
+      au < released ; 2008 ; 6 ; Revista Ciências da Religião: História e Sociedade Volume 6 ; 2008 >
+      au < released ; 2009 ; 7 ; Revista Ciências da Religião: História e Sociedade Volume 7 ; 2009 >
+      au < released ; 2010 ; 8 ; Revista Ciências da Religião: História e Sociedade Volume 8 ; 2010 >
+      au < released ; 2011 ; 9 ; Revista Ciências da Religião: História e Sociedade Volume 9 ; 2011 >
+      au < released ; 2012 ; 10 ; Revista Ciências da Religião: História e Sociedade Volume 10 ; 2012 >
+      au < released ; 2013 ; 11 ; Revista Ciências da Religião: História e Sociedade Volume 11 ; 2013 >
 
   }
 
@@ -112,8 +112,8 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmd
 
-      au < releasing ; 2000 ; 1 ; Revista Direito Mackenzie Volume 1 ; 2000 >
-      au < releasing ; 2011 ; 5 ; Revista Direito Mackenzie Volume 5 ; 2011 >
+      au < released ; 2000 ; 1 ; Revista Direito Mackenzie Volume 1 ; 2000 >
+      au < released ; 2011 ; 5 ; Revista Direito Mackenzie Volume 5 ; 2011 >
       au < expected ; 2012 ; 6 ; Revista Direito Mackenzie Volume 6 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista Direito Mackenzie Volume 7 ; 2013 >
 
@@ -157,14 +157,14 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = rmec
 
-      au < releasing ; 2000 ; 1 ; Revista Mackenzie de Engenharia e Computação Volume 1 ; 2000 >
-      au < releasing ; 2001 ; 2 ; Revista Mackenzie de Engenharia e Computação Volume 2 ; 2001 >
-      au < releasing ; 2002 ; 3 ; Revista Mackenzie de Engenharia e Computação Volume 3 ; 2002 >
-      au < releasing ; 2003 ; 4 ; Revista Mackenzie de Engenharia e Computação Volume 4 ; 2003 >
-      au < releasing ; 2004 ; 5 ; Revista Mackenzie de Engenharia e Computação Volume 5 ; 2004 >
-      au < releasing ; 2009 ; 6 ; Revista Mackenzie de Engenharia e Computação Volume 6 ; 2009 >
-      au < releasing ; 2011 ; 11 ; Revista Mackenzie de Engenharia e Computação Volume 11 ; 2011 >
-      au < releasing ; 2012 ; 12 ; Revista Mackenzie de Engenharia e Computação Volume 12 ; 2012 >
+      au < released ; 2000 ; 1 ; Revista Mackenzie de Engenharia e Computação Volume 1 ; 2000 >
+      au < released ; 2001 ; 2 ; Revista Mackenzie de Engenharia e Computação Volume 2 ; 2001 >
+      au < released ; 2002 ; 3 ; Revista Mackenzie de Engenharia e Computação Volume 3 ; 2002 >
+      au < released ; 2003 ; 4 ; Revista Mackenzie de Engenharia e Computação Volume 4 ; 2003 >
+      au < released ; 2004 ; 5 ; Revista Mackenzie de Engenharia e Computação Volume 5 ; 2004 >
+      au < released ; 2009 ; 6 ; Revista Mackenzie de Engenharia e Computação Volume 6 ; 2009 >
+      au < released ; 2011 ; 11 ; Revista Mackenzie de Engenharia e Computação Volume 11 ; 2011 >
+      au < released ; 2012 ; 12 ; Revista Mackenzie de Engenharia e Computação Volume 12 ; 2012 >
       au < expected ; 2013 ; 13 ; Revista Mackenzie de Engenharia e Computação Volume 13 ; 2013 >
 
   }
@@ -209,10 +209,10 @@
       param[base_url] = http://editorarevistas.mackenzie.br/
       param[journal_id] = tint
 
-      au < releasing ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
-      au < releasing ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
+      au < released ; 2010 ; 1 ; Revista Trama Interdisciplinar Volume 1 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista Trama Interdisciplinar Volume 2 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista Trama Interdisciplinar Volume 3 ; 2012 >
+      au < released ; 2013 ; 4 ; Revista Trama Interdisciplinar Volume 4 ; 2013 >
 
   }
 

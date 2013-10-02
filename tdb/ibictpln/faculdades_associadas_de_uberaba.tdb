@@ -18,14 +18,14 @@
       param[base_url] = http://www.fazu.br/ojs/
       param[journal_id] = fazuemrevista
 
-      au < releasing ; 2004 ; 1 ; Fazu em revista Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 2 ; Fazu em revista Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 3 ; Fazu em revista Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 4 ; Fazu em revista Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 5 ; Fazu em revista Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 6 ; Fazu em revista Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 7 ; Fazu em revista Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 8 ; Fazu em revista Volume 2011 ; 2011 >
+      au < released ; 2004 ; 1 ; Fazu em revista Volume 2004 ; 2004 >
+      au < released ; 2005 ; 2 ; Fazu em revista Volume 2005 ; 2005 >
+      au < released ; 2006 ; 3 ; Fazu em revista Volume 2006 ; 2006 >
+      au < released ; 2007 ; 4 ; Fazu em revista Volume 2007 ; 2007 >
+      au < released ; 2008 ; 5 ; Fazu em revista Volume 2008 ; 2008 >
+      au < released ; 2009 ; 6 ; Fazu em revista Volume 2009 ; 2009 >
+      au < released ; 2010 ; 7 ; Fazu em revista Volume 2010 ; 2010 >
+      au < released ; 2011 ; 8 ; Fazu em revista Volume 2011 ; 2011 >
       au < expected ; 2012 ; 9 ; Fazu em revista Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Fazu em revista Volume 2013 ; 2013 >
 
@@ -42,9 +42,9 @@
       param[base_url] = http://www.fazu.br/ojs/
       param[journal_id] = posfazu
 
-      au < releasing ; 2010 ; 1 ; Cadernos de Pós-Graduação da Fazu Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Cadernos de Pós-Graduação da Fazu Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Cadernos de Pós-Graduação da Fazu Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Cadernos de Pós-Graduação da Fazu Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Cadernos de Pós-Graduação da Fazu Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Cadernos de Pós-Graduação da Fazu Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Cadernos de Pós-Graduação da Fazu Volume 2013 ; 2013 >
 
   }
