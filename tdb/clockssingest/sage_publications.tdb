@@ -2285,6 +2285,41 @@
   {
   
     title <
+      name = Annals of Pharmacotherapy ;
+      issn = 1060-0280 ;
+      eissn = 1542-6270 
+    >
+
+    param[base_url] = http://aop.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 1998 ; Annals of Pharmacotherapy Volume 32 ; 32 ; >
+      au < exists ; exists ; 1999 ; Annals of Pharmacotherapy Volume 33 ; 33 ; >
+      au < exists ; exists ; 2000 ; Annals of Pharmacotherapy Volume 34 ; 34 ; >
+      au < exists ; exists ; 2001 ; Annals of Pharmacotherapy Volume 35 ; 35 ; >
+      au < exists ; exists ; 2002 ; Annals of Pharmacotherapy Volume 36 ; 36 ; >
+      au < exists ; exists ; 2003 ; Annals of Pharmacotherapy Volume 37 ; 37 ; >
+      au < exists ; exists ; 2004 ; Annals of Pharmacotherapy Volume 38 ; 38 ; >
+      au < exists ; exists ; 2005 ; Annals of Pharmacotherapy Volume 39 ; 39 ; >
+      au < exists ; exists ; 2006 ; Annals of Pharmacotherapy Volume 40 ; 40 ; >
+      au < exists ; exists ; 2007 ; Annals of Pharmacotherapy Volume 41 ; 41 ; >
+      au < exists ; exists ; 2008 ; Annals of Pharmacotherapy Volume 42 ; 42 ; >
+      au < exists ; exists ; 2009 ; Annals of Pharmacotherapy Volume 43 ; 43 ; >
+      au < exists ; exists ; 2010 ; Annals of Pharmacotherapy Volume 44 ; 44 ; >
+      au < exists ; exists ; 2011 ; Annals of Pharmacotherapy Volume 45 ; 45 ; >
+      au < exists ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
+      au < exists ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
+
+    }
+
+  }
+
+  {
+  
+    title <
       name = Anthropological Theory ;
       issn = 1463-4996 ;
       eissn = 1741-2641
@@ -21470,6 +21505,38 @@
       au < released ; crawling ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 ; >
       au < released ; crawling ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 ; >
       au < crawling ; exists ; 2013 ; Journal of Pharmacy Practice Volume 26 ; 26 ; >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Pharmacy Technology ;
+      issn = 8755-1225 ;
+      eissn = 1549-4810 
+    >
+
+    param[base_url] = http://pmt.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2001 ; Journal of Pharmacy Technology Volume 17 ; 17 ; >
+      au < exists ; exists ; 2002 ; Journal of Pharmacy Technology Volume 18 ; 18 ; >
+      au < exists ; exists ; 2003 ; Journal of Pharmacy Technology Volume 19 ; 19 ; >
+      au < exists ; exists ; 2004 ; Journal of Pharmacy Technology Volume 20 ; 20 ; >
+      au < exists ; exists ; 2005 ; Journal of Pharmacy Technology Volume 21 ; 21 ; >
+      au < exists ; exists ; 2006 ; Journal of Pharmacy Technology Volume 22 ; 22 ; >
+      au < exists ; exists ; 2007 ; Journal of Pharmacy Technology Volume 23 ; 23 ; >
+      au < exists ; exists ; 2008 ; Journal of Pharmacy Technology Volume 24 ; 24 ; >
+      au < exists ; exists ; 2009 ; Journal of Pharmacy Technology Volume 25 ; 25 ; >
+      au < exists ; exists ; 2010 ; Journal of Pharmacy Technology Volume 26 ; 26 ; >
+      au < exists ; exists ; 2011 ; Journal of Pharmacy Technology Volume 27 ; 27 ; >
+      au < exists ; exists ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 ; >
+      au < exists ; exists ; 2013 ; Journal of Pharmacy Technology Volume 29 ; 29 ; >
 
     }
 
