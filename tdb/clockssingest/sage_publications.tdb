@@ -5670,6 +5670,7 @@
         comment[one] = Till 1999 Alternative Health Practitioner. 1076-1675 2162-447X
         comment[two] = Till 2011-01-01 Complementary Health Practice Revew 1533-2101
         comment[tri] = Finally, to Journal of Evidence-Based Complementary & Alternative Medicine 2156-5872
+        param[base_url] = http://chp.sagepub.com/
 
     {
 
@@ -5684,7 +5685,6 @@
       {
 
         pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = http://chp.sagepub.com/
 
         au < manifest ; exists ; 2000 ; Complementary Health Practice Review Volume 6 ; 6 ; >
         au < manifest ; exists ; 2001 ; Complementary Health Practice Review Volume 7 ; 7 ; >
