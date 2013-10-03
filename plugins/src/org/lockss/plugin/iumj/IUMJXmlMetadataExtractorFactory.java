@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.5 2013-04-02 22:41:52 aishizaki Exp $
+ * $Id: IUMJXmlMetadataExtractorFactory.java,v 1.6 2013-10-03 17:36:35 etenbrink Exp $
  */
 
 /*
@@ -35,7 +35,8 @@ package org.lockss.plugin.iumj;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.xml.xpath.XPathExpressionException;
 
@@ -44,6 +45,7 @@ import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.XmlDomMetadataExtractor.TextValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.*;
 
@@ -51,28 +53,38 @@ import org.lockss.plugin.*;
 /**
  * This class implements a FileMetadataExtractorFactory for IUMJ content
  */
-  public class IUMJXmlMetadataExtractorFactory
-    implements FileMetadataExtractorFactory {
-    static Logger log = Logger.getLogger("IUMJXmlMetadataExtractorFactory");
-
+public class IUMJXmlMetadataExtractorFactory
+implements FileMetadataExtractorFactory {
+  static Logger log = Logger.getLogger("IUMJXmlMetadataExtractorFactory");
+  
   @Override 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
     return new IUMJXmlMetadataExtractor();
   }
-
-/**
- * This class implements a FileMetadataExtractor for IUMJ content.
- */
+  
+  /**
+   * This class implements a FileMetadataExtractor for IUMJ content.
+   */
   public static class IUMJXmlMetadataExtractor 
-    implements FileMetadataExtractor {
+  implements FileMetadataExtractor {
     
     
     // Indices for volume, start page, and end page
     // Format: 48 (1999) 139 - 154
-    protected static final int VOL_INDEX = 0;
-    protected static final int SPAGE_INDEX = 2;
-    protected static final int EPAGE_INDEX = 4;
+    static private final Pattern exPat = Pattern.compile(
+        "Indiana Univ. Math. J. ([^ ]+) [(][0-9]{4}[)] ([^ ]+) - ([^ ]+)");
+    
+    // extend XPathValue, needed because some fields have extra CR chars
+    static private final XPathValue TRIM_VALUE = new TextValue() {
+      @Override
+      public String getValue(String s) {
+        s = s.replace("\n", " ");
+        s = s.trim();
+        return s;
+      }
+    };
+    
     
     /*  The following Map maps raw xpath keys to raw node values 
      *  the first value in the put are XPath expressions that search the XML  
@@ -85,21 +97,21 @@ import org.lockss.plugin.*;
     static {
       // Our XmlDomMetadataExtractor doesn't support namespaces, so just
       // find any node in the tree with the name that we want
-      nodeMap.put("//*[name()='dc:title']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:creator']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:description']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:publisher']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:date']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:type']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:format']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:identifier']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:source']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:language']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:relation']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:coverage']", XmlDomMetadataExtractor.TEXT_VALUE);
-      nodeMap.put("//*[name()='dc:rights']", XmlDomMetadataExtractor.TEXT_VALUE);
+      nodeMap.put("//*[name()='dc:title']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:creator']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:description']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:publisher']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:date']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:type']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:format']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:identifier']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:source']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:language']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:relation']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:coverage']", TRIM_VALUE);
+      nodeMap.put("//*[name()='dc:rights']", TRIM_VALUE);
     }
-
+    
     /*  The following Map maps raw xpath keys to cooked MetadataField
      *  the first value in the put are XPath expressions that search the XML 
      *  file for the named metadata; here it's stored as both dc and FIELD_*
@@ -113,7 +125,8 @@ import org.lockss.plugin.*;
       xpathMap.put("//*[name()='dc:creator']", MetadataField.FIELD_AUTHOR);
       xpathMap.put("//*[name()='dc:description']", MetadataField.DC_FIELD_DESCRIPTION);
       xpathMap.put("//*[name()='dc:publisher']", MetadataField.DC_FIELD_PUBLISHER);
-      xpathMap.put("//*[name()='dc:publisher']", MetadataField.FIELD_PUBLISHER);
+      // get publisher name from tdb, as the metadata was inconsistent
+      // xpathMap.put("//*[name()='dc:publisher']", MetadataField.FIELD_PUBLISHER);
       xpathMap.put("//*[name()='dc:date']", MetadataField.DC_FIELD_DATE);
       xpathMap.put("//*[name()='dc:date']", MetadataField.FIELD_DATE);
       xpathMap.put("//*[name()='dc:type']", MetadataField.DC_FIELD_TYPE);
@@ -124,8 +137,16 @@ import org.lockss.plugin.*;
       xpathMap.put("//*[name()='dc:relation']", MetadataField.DC_FIELD_RELATION);
       xpathMap.put("//*[name()='dc:coverage']", MetadataField.DC_FIELD_COVERAGE);
       xpathMap.put("//*[name()='dc:rights']", MetadataField.DC_FIELD_RIGHTS);
+      xpathMap.put("//*[name()='dc:identifier']", MetadataField.FIELD_DOI);
+      xpathMap.put("scraped_oaicite_issue", MetadataField.FIELD_ISSUE);
+      xpathMap.put("//*[name()='dc:relation']", new MetadataField(
+          MetadataField.FIELD_VOLUME, MetadataField.extract(exPat, 1)));
+      xpathMap.put("//*[name()='dc:relation']", new MetadataField(
+          MetadataField.FIELD_START_PAGE, MetadataField.extract(exPat, 2)));
+      xpathMap.put("//*[name()='dc:relation']", new MetadataField(
+          MetadataField.FIELD_END_PAGE, MetadataField.extract(exPat, 3)));
     }
-
+    
     /**
      * Use XmlMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract extra tags by reading the file.
@@ -138,62 +159,58 @@ import org.lockss.plugin.*;
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException, PluginException {
       try {
-        ArticleMetadata am;
+        ArticleMetadata am = null;
+        Pattern patternUrl = Pattern.compile(
+            "META/(.+)/([0-9]+)([0-9]{3})[.]xml");
+        Matcher urlmat = patternUrl.matcher(cu.getUrl());
+        if (!urlmat.find()) {
+          Exception ex = new Exception(
+              "Error: metatdata pattern does not match " + cu.getUrl());
+          throw ex;
+        }
+        String citeUrl = urlmat.replaceFirst("oai/$1/$2/$2$3/$2$3.html");
+        CachedUrl citeCu = cu.getArchivalUnit().makeCachedUrl(citeUrl); 
+        
+        am = new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
+        
+        BufferedReader bReader = null;
         try {
-          String xmlUrl = cu.getUrl().replaceFirst("IUMJ/FTDLOAD/([^/]+)/[^/]+/([^/]+)/pdf", "META/$1/$2\\.xml");
-          CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
-          try {
-	    am = new XmlDomMetadataExtractor(nodeMap).extract(target, xmlCu);
-	  } finally {
-	    AuUtil.safeRelease(xmlCu);
-	  }
-        } finally {
-          AuUtil.safeRelease(cu);
+          bReader = new BufferedReader(citeCu.openForReading());
+          
+          //<span  class="ent">     issue</span> = 1,
+          Pattern patternIssue = Pattern.compile(
+              "<span [^>]+>[^<]*issue[^<]*</span> = ([^,]*),",
+              Pattern.CASE_INSENSITIVE);
+          // go through the cached URL content line by line
+          for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
+            Matcher matcher = patternIssue.matcher(line);
+            if (matcher.find()) {
+              am.putRaw("scraped_oaicite_issue", matcher.group(1).trim());
+              break;
+            }
+          }
+        } catch (Exception e) {
+          log.debug(e + " : Missing/malformed cite");
+        }
+        finally {
+          IOUtil.safeClose(bReader);
+          AuUtil.safeRelease(citeCu);
         }
         
         am.cook(xpathMap);
-        
-        String line = am.get(MetadataField.DC_FIELD_RELATION);
-        
-        if (line != null) {
-          addVolumeAndPages(line, am);
-        }
-        
         emitter.emitMetadata(cu,  am);
         
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
         ex2.initCause(ex);
         throw ex2;
+      } catch (Exception e) {
+        log.debug(e + " : Missing/malformed metadata");
       }
-    }
-    
-    protected void addVolumeAndPages(String line, ArticleMetadata ret) {
-      String flag = "Indiana Univ. Math. J. ";
-      int index = StringUtil.indexOfIgnoreCase(line, flag);
-      if (index <= 0) {
-        log.debug(line + ": flag \"" + flag + "\" not found");
-        return;
-      }
-          
-      try {
-        index += flag.length();
-        String volAndPages = line.substring(index, line.length());
-        
-        Vector<String> volAndPagesVector = StringUtil.breakAt(volAndPages, ' ');
-        
-        String vol = volAndPagesVector.elementAt(VOL_INDEX);
-        String spage = volAndPagesVector.elementAt(SPAGE_INDEX);
-        String epage = volAndPagesVector.elementAt(EPAGE_INDEX);
-      
-        ret.put(MetadataField.FIELD_VOLUME, vol);
-        ret.put(MetadataField.FIELD_START_PAGE, spage);
-        ret.put(MetadataField.FIELD_END_PAGE, epage);
-        
-      } catch (Exception ex) {
-        log.debug("Encountered malformed dc.relation value during" +
-        		"metadata extraction: " + line);
+      finally {
+        AuUtil.safeRelease(cu);
       }
     }
   }
+  
 }
