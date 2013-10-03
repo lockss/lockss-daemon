@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJArticleIteratorFactory.java,v 1.3 2013-04-01 16:34:03 aishizaki Exp $
+ * $Id: IUMJArticleIteratorFactory.java,v 1.4 2013-10-03 17:35:29 etenbrink Exp $
  */
 
 /*
@@ -43,70 +43,85 @@ import org.lockss.util.Logger;
 public class IUMJArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
-
+  
   protected static Logger log =
-    Logger.getLogger("IUMJArticleIteratorFactory");
-
+      Logger.getLogger("IUMJArticleIteratorFactory");
+  
   protected static final String ROOT_TEMPLATE =
-    "\"%sIUMJ/FTDLOAD/%d/\", base_url, year";
+      "\"%sIUMJ/FTDLOAD/%d/\", base_url, year";
   
   protected static final String PATTERN_TEMPLATE =
-    "\"%sIUMJ/FTDLOAD/(%d)/%s/([^/]+)/pdf\", base_url, year, volume_name";
-
+      "\"%sIUMJ/FTDLOAD/(%d)/(%s)/([^/]+)/pdf\", base_url, year, volume_name";
+  
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new
-      IUMJArticleIterator(au,
-              new SubTreeArticleIterator.Spec()
-              .setTarget(target)
-              .setRootTemplate(ROOT_TEMPLATE)
-              .setPatternTemplate(PATTERN_TEMPLATE));
-  }
-
-  protected static class IUMJArticleIterator
-    extends SubTreeArticleIterator {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    protected static Pattern PDF_PATTERN =
-      Pattern.compile("IUMJ/FTDLOAD/([^/]+)/[^/]+/([^/]+)/pdf", Pattern.CASE_INSENSITIVE);
+    // various aspects of an article
+    // http://www.iumj.indiana.edu/IUMJ/FTDLOAD/1984/33/33001/pdf
+    // http://www.iumj.indiana.edu/IUMJ/ABS/1984/33001
+    // http://www.iumj.indiana.edu/IUMJ/FULLTEXT/1984/33/33001
+    // http://www.iumj.indiana.edu/META/1984/33001.xml
+    // http://www.iumj.indiana.edu/oai/1984/33/33008/33001.html
+    // http://www.iumj.indiana.edu/IUMJ/FTDLOAD/1984/33/33001/djvu
+    // http://www.iumj.indiana.edu/oai/1984/33/33001/33001_abs.pdf
+    // 
     
-    public IUMJArticleIterator(ArchivalUnit au,
-                                           SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
+    final Pattern PDF_PATTERN = Pattern.compile(
+        "IUMJ/FTDLOAD/([^/]+)/([^/]+)/([^/]+)/pdf", 
+        Pattern.CASE_INSENSITIVE);
     
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
-      }
-      
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
+    // how to change from one form (aspect) of article to another
+    final String PDF_REPLACEMENT = "IUMJ/FTDLOAD/$1/$2/$3/pdf";
+    final String ABSTRACT_REPLACEMENT = "IUMJ/ABS/$1/$3";
+    final String FT_LANDING_REPLACEMENT = "IUMJ/FULLTEXT/$1/$2/$3";
+    final String METADATA_REPLACEMENT = "META/$1/$3.xml";
+    final String OIA_CITE_REPLACEMENT = "oai/$1/$2/$3/$3.html";
     
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      
-      ArticleFiles af = new ArticleFiles();
-      CachedUrl xmlCu = au.makeCachedUrl(pdfMat.replaceFirst("META/$1/$2\\.xml"));
-      
-      if (xmlCu != null && xmlCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-        af.setFullTextCu(pdfCu);
-      }
-      
-      return af;
-    }
+    builder.setSpec(target,
+        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    // set up pdf to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    // set up abstract to be an aspect
+    builder.addAspect(
+        ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
+    
+    // set up abstract to be an aspect
+    builder.addAspect(
+        FT_LANDING_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    
+    // set up metadata to be an aspect
+    builder.addAspect(
+        METADATA_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // set up oia metadata to be an aspect
+    builder.addAspect(
+        OIA_CITE_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION);
+    
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    // In this case, there are two jobs, one for counting articles (abstract is 
+    // good) and the other for metadata (PDF is correct)
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_PDF, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    
+    return builder.getSubTreeArticleIterator();
   }
   
+  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
+  
 }
