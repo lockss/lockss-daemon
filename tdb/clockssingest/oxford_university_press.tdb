@@ -2372,6 +2372,25 @@
   {
 
     title <
+      name = British  Geriatrics Society ;
+      issn =  ;
+      eissn = ;
+      issnl = 
+    >
+
+    {
+    param[base_url] = http://www.bgs.org.uk/
+    pluginSuffix = ClockssHighWirePlugin
+    comment[no_aus] = Added title re: PD-144, but the title appears to be a publisher or aggregator in its own right. I can't find ISSN/EISSN so the fields are blank.
+
+
+    }
+  }
+
+
+  {
+
+    title <
       name = The British Journal of Aesthetics ;
       issn = 0007-0904 ;
       eissn = 1468-2842 ;
@@ -14419,6 +14438,26 @@
     au < released ; crawling ; 2011 ; Music and Letters Volume 92 ; 92 ; >
     au < testing ; exists ; 2012 ; Music and Letters Volume 93 ; 93 ; >
     au < crawling ; exists ; 2013 ; Music and Letters Volume 94 ; 94 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Music Theory Spectrum ;
+      issn = 0195-6167 ;
+      eissn = 1533-8339 ;
+      issnl = 0195-6167
+    >
+
+    {
+
+    param[base_url] = http://mts.oxfordjournals.org
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; expected ; 2014 ; Music Theory Spectrum Volume 1 ; 1 ; >
 
     }
 
