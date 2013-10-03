@@ -28,6 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.igiglobal;
 
+import java.io.ByteArrayInputStream;
 import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Pattern;
@@ -35,6 +36,7 @@ import java.util.regex.Pattern;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
@@ -121,6 +123,8 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String[] urls = {
+        BASE_URL + "pdf.aspx",
+        BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         BASE_URL + "gateway/article/full-text-html/11111",
         BASE_URL + "gateway/article/full-text-pdf/2222",
         BASE_URL + "gateway/article/full-text-html/55656",
@@ -160,8 +164,8 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         }
         cusn = cuIter.next();
       }
-      byte[] b = new byte [1024];
-      cuHtml.getUnfilteredInputStream().read(b, 0, 1024);
+      byte[] b = new byte [512];
+      cuHtml.getUnfilteredInputStream().read(b, 0, 350);
       String landingPage = new String(b);
       landingPage = landingPage.replace("</BODY>", "xxxx <iframe random=\"stuff\" " +
           "src=\"/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title\">" +
@@ -171,11 +175,21 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         if (url.contains("full-text-html")) {
           uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
         }
-        else if (url.contains("full-text-pdf")) {
+        else if (url.contains("articles/full-text-pdf")) {
           uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
           url = url.replace("full-text-pdf", "pdf");
           uc = au.makeUrlCacher(url);
           uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        }
+        else if (url.contains("full-text-pdf")) {
+          uc.storeContent(new ByteArrayInputStream(landingPage.getBytes()),
+              cuHtml.getProperties());
+        }
+        else if (url.contains("/pdf.aspx")) {
+          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        }
+        else if (url.matches(".*gateway/article/[0-9]+$")) {
+          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
         }
       }
     }
@@ -183,26 +197,37 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {BASE_URL + "gateway/article/full-text-html/11111",
         null,
+        null,
         BASE_URL + "gateway/article/11111"};
     
     String [] af2 = {null,
+        null,
         null,
         BASE_URL + "gateway/article/54321"};
     
     String [] af3 = {BASE_URL + "gateway/article/full-text-html/55656",
         BASE_URL + "gateway/article/full-text-pdf/55656",
+        BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         BASE_URL + "gateway/article/55656"};
     
     expStack.push(af3);
     expStack.push(af2);
     expStack.push(af1);
     
-    for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
+    SubTreeArticleIterator artIter = null;
+    Iterator<ArticleFiles> iter =  au.getArticleIterator(MetadataTarget.Article());
+    assertNotNull("ArticleIterator is null", iter);
+    assert(iter instanceof SubTreeArticleIterator);
+    artIter = (SubTreeArticleIterator)iter;
+    //  artIter = createSubTreeIter();
+    
+    while (artIter.hasNext()) 
     {
       ArticleFiles af = artIter.next();
       String[] act = {
           af.getFullTextUrl(),
           af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
+          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
           af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT)
       };
       String[] exp = expStack.pop();
