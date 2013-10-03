@@ -1,5 +1,5 @@
 /*
- * $Id: TestIUMJArticleIteratorFactory.java,v 1.1 2013-04-01 16:34:03 aishizaki Exp $
+ * $Id: TestIUMJArticleIteratorFactory.java,v 1.2 2013-10-03 17:37:21 etenbrink Exp $
  */
 
 /*
@@ -32,22 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iumj;
 
-import java.io.IOException;
-import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.daemon.SingleNodeCachedUrlSetSpec;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
