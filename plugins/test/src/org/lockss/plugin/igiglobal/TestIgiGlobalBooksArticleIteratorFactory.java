@@ -35,6 +35,7 @@ import java.util.regex.Pattern;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
@@ -193,7 +194,13 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     expStack.push(af2);
     expStack.push(af1);
     
-    for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
+    SubTreeArticleIterator artIter = null;
+    Iterator<ArticleFiles> iter =  au.getArticleIterator(MetadataTarget.Article());
+    assertNotNull("ArticleIterator is null", iter);
+    assert(iter instanceof SubTreeArticleIterator);
+    artIter = (SubTreeArticleIterator)iter;
+    
+    while (artIter.hasNext()) 
     {
       ArticleFiles af = artIter.next();
       String[] act = {
