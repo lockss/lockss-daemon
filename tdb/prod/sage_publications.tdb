@@ -2596,7 +2596,7 @@
 
         param[base_url] = http://aop.sagepub.com/
         pluginSuffix = HighWirePressH20Plugin
-        implicit < status ; year ; name ; param[volume] >
+        implicit < status ; year ; name ; param[volume_name] >
 
         au < exists ; 1998 ; Annals of Pharmacotherapy Volume 32 ; 32 >
         au < exists ; 1999 ; Annals of Pharmacotherapy Volume 33 ; 33 >
