@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.27 2013-07-18 19:30:03 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.27.2.1 2013-10-03 19:43:55 tlipkis Exp $
  */
 
 /*
@@ -154,6 +154,14 @@ public class TestBasePlugin extends LockssTestCase {
   }
 
   public void testInitTitleDB() throws TdbException {
+    testInitTitleDB(false);
+  }
+
+  public void testInitTitleDBWithError() throws TdbException {
+    testInitTitleDB(true);
+  }
+
+  public void testInitTitleDB(boolean includeError) throws TdbException {
     String plugName = "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     
@@ -186,11 +194,25 @@ public class TestBasePlugin extends LockssTestCase {
     p2.put("attributes.attr1", "av111");
     p2.put("attributes.attr2", "av222");
     
+    // This entry is missing the required vol param
+    Properties perr = new Properties();
+    perr.put("title", "Bad Entry");
+    perr.put("journalTitle", "jtitle");
+    perr.put("plugin", plugName);
+    perr.put("pluginVersion", "4");
+    perr.put("param.2.key", AUPARAM_YEAR);
+    perr.put("param.2.value", "year_42");
+    perr.put("param.2.editable", "true");
+
+
     // populate the title database from the properties
     Tdb tdb = new Tdb();
     tdb.addTdbAuFromProperties(p0);
     tdb.addTdbAuFromProperties(p1);
     tdb.addTdbAuFromProperties(p2);
+    if (includeError) {
+      tdb.addTdbAuFromProperties(perr);
+    }
     
     // install a new configuration with the TDB
     ConfigurationUtil.setTdb(tdb);

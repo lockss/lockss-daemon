@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.85 2013-07-18 19:29:07 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.85.2.1 2013-10-03 19:43:55 tlipkis Exp $
  */
 
 /*
@@ -224,24 +224,31 @@ public abstract class BasePlugin
     Map<String, TitleConfig> auidMap = new HashMap<String,TitleConfig>();
     for (TdbAu.Id tdbAuId : tdb.getTdbAuIds(myId)) {
       TdbAu tdbAu = tdbAuId.getTdbAu();
-      String pluginId = tdbAu.getPluginId();
-      if (myId.equals(pluginId)) {
-        if (log.isDebug2()) {
-          log.debug2("my titleConfig: " + tdbAu);
-        }
-        String title = tdbAu.getName();
-        TitleConfig tc = new TitleConfig(tdbAu, this);
-        TitleConfig oldTc = titleMap.get(title);
-        if (oldTc != null && !tc.equals(oldTc)) {
-          log.warning("Duplicate title: " + tc);
-          log.warning("Previous def   : " + oldTc);
-        }
-        titleMap.put(title, tc);
-	auidMap.put(tc.getAuId(pluginMgr, this), tc);
-      } else {
-        if (log.isDebug3()) {
-          log.debug3("titleConfig: " + tdbAu.getName());
-        }
+      // Prevent tdb errors from aborting this process
+      try {
+	String pluginId = tdbAu.getPluginId();
+	if (myId.equals(pluginId)) {
+	  if (log.isDebug2()) {
+	    log.debug2("my titleConfig: " + tdbAu);
+	  }
+	  String title = tdbAu.getName();
+	  TitleConfig tc = new TitleConfig(tdbAu, this);
+	  TitleConfig oldTc = titleMap.get(title);
+	  if (oldTc != null && !tc.equals(oldTc)) {
+	    log.warning("Duplicate title: " + tc);
+	    log.warning("Previous def   : " + oldTc);
+	  }
+	  // Compute auid before updating any maps, as it might throw
+	  String auid = tc.getAuId(pluginMgr, this);
+	  auidMap.put(auid, tc);
+	  titleMap.put(title, tc);
+	} else {
+	  if (log.isDebug3()) {
+	    log.debug3("titleConfig: " + tdbAu.getName());
+	  }
+	}
+      } catch (RuntimeException e) {
+	log.warning("Error processing Tdb entry: " + tdbAu.getName(), e);
       }
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
