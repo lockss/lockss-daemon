@@ -1,5 +1,5 @@
 /*
- * $Id: TestIUMJXmlMetadataExtractorFactory.java,v 1.2 2013-04-02 22:41:52 aishizaki Exp $
+ * $Id: TestIUMJXmlMetadataExtractorFactory.java,v 1.3 2013-10-03 17:38:13 etenbrink Exp $
  */
 
 /*
@@ -32,20 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iumj;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.simulated.*;
 
 /**
  * One of the files used to get the xml source for this plugin is:
@@ -97,18 +90,18 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
   String goodIdentifier = "10.1512/iumj.2011.60.3949";
   String goodSource = "10.1512/iumj.2011.60.3949";
   String goodLanguage = "en";
-  String goodRelation = "HelloWorld Univ. Math. J. 60 (2011) 41 - 76";
+  String goodRelation = "HelloWorld Indiana Univ. Math. J. 60 (2011) 41 - 76";
   String goodCoverage = "state-of-the-art mathematics";
   String goodRights = "http://www.hello.world.edu/Librarians/sublicense.pdf";
 
   String goodContent = 
     "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" +
     "<oai_dc:dc xmlns:oai_dc=\"http://www.openarchives.org/OAI/2.0/oai_dc/ \" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd\">"+
-    "<dc:title>" + goodTitle + "</dc:title> " +
+    "<dc:title>\n\t" + goodTitle + "</dc:title> " +
     "<dc:creator>" + goodCreator+ "</dc:creator> " +
     "<dc:description>" + goodDescription + "</dc:description> " +
-    "<dc:publisher>" + goodFPublisher + "</dc:publisher> " +
-    "<dc:date>" +goodDate+ "</dc:date> " +
+    "<dc:publisher>\n" + goodFPublisher + "</dc:publisher> " +
+    "<dc:date>\n" +goodDate+ "</dc:date> " +
     "<dc:type>" + goodType + "</dc:type> " +
     "<dc:format>" + goodFormat + "</dc:format> " +
     "<dc:identifier>" + goodIdentifier + "</dc:identifier> " +
@@ -119,11 +112,32 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
     "<dc:rights>" + goodRights + "</dc:rights> " +
     "</oai_dc:dc>" ;
   
+  String oai = "<title>Citation Index</title>\n" + 
+      "<div class=\"citecont\">\n" + 
+      "<pre style=\"padding:15px;\"><hr /><h3>BibTeX</h3>\n" + 
+      "<span  class=\"ent\">    author</span> = <span  class=\"brace\">\"</span>M. Author<span  class=\"brace\">\"</span>,\n" + 
+      "<span  class=\"ent\">     title</span> = <span  class=\"brace\">\"</span>......<span  class=\"brace\">\"</span>,\n" + 
+      "<span  class=\"ent\">   journal</span> = <span  class=\"brace\">\"</span>....<span  class=\"brace\">\"</span>,\n" + 
+      "<span  class=\"ent\">    volume</span> = 33,\n" + 
+      "<span  class=\"ent\">      year</span> = 1984,\n" + 
+      "<span  class=\"ent\">     issue</span> = 1,\n" + 
+      "<span  class=\"ent\">     pages</span> = <span  class=\"brace\">\"</span>1--29<span  class=\"brace\">\"</span>,\n";
+  
   public void testExtractFromGoodContent() throws Exception {
-    String url = BASE_URL+"vol1/issue2/art3/";
-    CIProperties xmlHeader = new CIProperties();
-    xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-    MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
+    String url1 = BASE_URL+"IUMJ/FTDLOAD/1984/33/33001/pdf";
+    String url2 = BASE_URL+"META/1984/33001.xml";
+    String url3 = BASE_URL+"oai/1984/33/33001/33001.html";
+    CIProperties lclHeader = new CIProperties();
+    lclHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    MockCachedUrl mcu = mau.addUrl(url3, true, true, lclHeader);
+    mcu.setContent(oai);
+    mcu.setContentSize(oai.length());
+    lclHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+    mcu = mau.addUrl(url1, true, true, lclHeader);
+    mcu.setContent("not much");
+    mcu.setContentSize(8);
+    lclHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+    mcu = mau.addUrl(url2, true, true, lclHeader);
     mcu.setContent(goodContent);
     mcu.setContentSize(goodContent.length());
     
@@ -142,7 +156,8 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodCreator, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodDescription, md.get(MetadataField.DC_FIELD_DESCRIPTION));
     assertEquals(goodFPublisher, md.get(MetadataField.DC_FIELD_PUBLISHER));
-    assertEquals(goodFPublisher, md.get(MetadataField.FIELD_PUBLISHER));
+    // now get publisher name from tdb, as the metadata was inconsistent
+    // assertEquals(goodFPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodDate, md.get(MetadataField.DC_FIELD_DATE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
 
@@ -169,7 +184,7 @@ public class TestIUMJXmlMetadataExtractorFactory extends LockssTestCase {
     + "</article_rec>\n";
 
   public void testExtractFromBadContent() throws Exception {
-    String url = BASE_URL+"vol1/issue2/bad3/";
+    String url = BASE_URL+"META/badvol1/1002/1002.xml";
     CIProperties xmlHeader = new CIProperties();
     xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
     MockCachedUrl mcu = mau.addUrl(url, true, true, xmlHeader);
