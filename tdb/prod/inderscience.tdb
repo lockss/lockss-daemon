@@ -316,8 +316,14 @@
       au < released ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 7 ; 7 >
       au < released ; 2011 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 8 ; 8 >
       au < released ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 9 ; 9 > 
-      au < manifest ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 10 ; 10 >
-      au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 11 ; 11 >
+      au < manifest ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 11 ; 11 >
+      au < exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 12 ; 12 >
+      au < exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 13 ; 13 >
+      au < exists ; 2013 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 14 ; 14 >
+      au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 15 ; 15 >
+      au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 16 ; 16 >
+      au < expected ; 2014 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 17 ; 17 >
 
     }
 
@@ -995,8 +1001,14 @@
       au < released ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Biomedical Engineering and Technology Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Biomedical Engineering and Technology Volume 8 ; 8 >
-      au < manifest ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 10 ; 10 >
+      au < manifest ; 2012 ; International Journal of Biomedical Engineering and Technology Volume 9 ; 9 >
+      au < exists ; 2012 ; International Journal of Biomedical Engineering and Technology Volume 10 ; 10 >
+      au < exists ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 11 ; 11 >
+      au < exists ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 12 ; 12 >
+      au < exists ; 2013 ; International Journal of Biomedical Engineering and Technology Volume 13 ; 13 >
+      au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 14 ; 14 >
+      au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 15 ; 15 >
+      au < expected ; 2014 ; International Journal of Biomedical Engineering and Technology Volume 16 ; 16 >
 
     }
 
@@ -1120,8 +1132,11 @@
       au < released ; 2011 ; International Journal of Business and Globalisation Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Business and Globalisation Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Business and Globalisation Volume 8 ; 8 >
-      au < manifest ; 2013 ; International Journal of Business and Globalisation Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Business and Globalisation Volume 10 ; 10 >
+      au < manifest ; 2012 ; International Journal of Business and Globalisation Volume 9 ; 9 >
+      au < exists ; 2013 ; International Journal of Business and Globalisation Volume 10 ; 10 >
+      au < exists ; 2013 ; International Journal of Business and Globalisation Volume 11 ; 11 >
+      au < expected ; 2014 ; International Journal of Business and Globalisation Volume 12 ; 12 >
+      au < expected ; 2014 ; International Journal of Business and Globalisation Volume 13 ; 13 >
 
     }
 
@@ -1283,8 +1298,14 @@
       au < released ; 2011 ; International Journal of Business Information Systems Volume 7 ; 7 >
       au < released ; 2011 ; International Journal of Business Information Systems Volume 8 ; 8 >
       au < released ; 2012 ; International Journal of Business Information Systems Volume 9 ; 9 >
-      au < manifest ; 2013 ; International Journal of Business Information Systems Volume 10 ; 10 >
-      au < expected ; 2014 ; International Journal of Business Information Systems Volume 11 ; 11 >
+      au < manifest ; 2012 ; International Journal of Business Information Systems Volume 10 ; 10 >
+      au < exists ; 2012 ; International Journal of Business Information Systems Volume 11 ; 11 >
+      au < exists ; 2013 ; International Journal of Business Information Systems Volume 12 ; 12 >
+      au < exists ; 2013 ; International Journal of Business Information Systems Volume 13 ; 13 >
+      au < exists ; 2013 ; International Journal of Business Information Systems Volume 14 ; 14 >
+      au < expected ; 2014 ; International Journal of Business Information Systems Volume 15 ; 15 >
+      au < expected ; 2014 ; International Journal of Business Information Systems Volume 16 ; 16 >
+      au < expected ; 2014 ; International Journal of Business Information Systems Volume 17 ; 17 >
 
     }
 
@@ -1523,8 +1544,11 @@
       au < released ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Communication Networks and Distributed Systems Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 8 ; 8 >
-      au < manifest ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 9 ; 9 >
-      au < expected ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 10 ; 10 >
+      au < manifest ; 2012 ; International Journal of Communication Networks and Distributed Systems Volume 9 ; 9 >
+      au < exists ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 10 ; 10 >
+      au < exists ; 2013 ; International Journal of Communication Networks and Distributed Systems Volume 11 ; 11 >
+      au < expected ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 12 ; 12 >
+      au < expected ; 2014 ; International Journal of Communication Networks and Distributed Systems Volume 13 ; 13 >
 
     }
 
@@ -1948,9 +1972,9 @@
       >
 
       param[journal_issn] = 2043-8354
-      comment[0] = title is not yet published on 9/19/2013
       
-      au < expected ; 2014 ; International Journal of Creative Computing Volume 1 ; 1 >
+      au < exists ; 2013 ; International Journal of Creative Computing Volume 1 ; 1 >
+      au < expected ; 2014 ; International Journal of Creative Computing Volume 2 ; 2 >
 
     }
 
@@ -2087,7 +2111,9 @@
       au < released ; 2011 ; International Journal of Data Mining and Bioinformatics Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Data Mining and Bioinformatics Volume 6 ; 6 >
       au < manifest ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 7 ; 7 >
-      au < expected ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 8 ; 8 >
+      au < exists ; 2013 ; International Journal of Data Mining and Bioinformatics Volume 8 ; 8 >
+      au < expected ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 9 ; 9 >
+      au < expected ; 2014 ; International Journal of Data Mining and Bioinformatics Volume 10 ; 10 >
 
     }
 
@@ -2292,7 +2318,9 @@
       au < released ; 2011 ; International Journal of Economics and Business Research Volume 3 ; 3 >
       au < released ; 2012 ; International Journal of Economics and Business Research Volume 4 ; 4 >
       au < manifest ; 2013 ; International Journal of Economics and Business Research Volume 5 ; 5 >
-      au < expected ; 2014 ; International Journal of Economics and Business Research Volume 6 ; 6 >
+      au < exists ; 2013 ; International Journal of Economics and Business Research Volume 6 ; 6 >
+      au < expected ; 2014 ; International Journal of Economics and Business Research Volume 7 ; 7 >
+      au < expected ; 2014 ; International Journal of Economics and Business Research Volume 8 ; 8 >
 
     }
 
@@ -2940,8 +2968,11 @@
       au < released ; 2011 ; International Journal of Environment and Waste Management Volume 7 ; 7 >
       au < released ; 2011 ; International Journal of Environment and Waste Management Volume 8 ; 8 >
       au < released ; 2012 ; International Journal of Environment and Waste Management Volume 9 ; 9 >
-      au < manifest ; 2013 ; International Journal of Environment and Waste Management Volume 10 ; 10 >
-      au < expected ; 2014 ; International Journal of Environment and Waste Management Volume 11 ; 11 >
+      au < manifest ; 2012 ; International Journal of Environment and Waste Management Volume 10 ; 10 >
+      au < exists ; 2013 ; International Journal of Environment and Waste Management Volume 11 ; 11 >
+      au < exists ; 2013 ; International Journal of Environment and Waste Management Volume 12 ; 12 >
+      au < expected ; 2014 ; International Journal of Environment and Waste Management Volume 13 ; 13 >
+      au < expected ; 2014 ; International Journal of Environment and Waste Management Volume 14 ; 14 >
 
     }
 
@@ -3050,8 +3081,11 @@
       au < released ; 2011 ; International Journal of Exergy Volume 8 ; 8 >
       au < released ; 2011 ; International Journal of Exergy Volume 9 ; 9 >
       au < released ; 2012 ; International Journal of Exergy Volume 10 ; 10 >
-      au < manifest ; 2013 ; International Journal of Exergy Volume 11 ; 11 >
-      au < expected ; 2014 ; International Journal of Exergy Volume 12 ; 12 >
+      au < manifest ; 2012 ; International Journal of Exergy Volume 11 ; 11 >
+      au < exists ; 2013 ; International Journal of Exergy Volume 12 ; 12 >
+      au < exists ; 2013 ; International Journal of Exergy Volume 13 ; 13 >
+      au < expected ; 2014 ; International Journal of Exergy Volume 14 ; 14 >
+      au < expected ; 2014 ; International Journal of Exergy Volume 15 ; 15 >
 
     }
 
@@ -3657,7 +3691,9 @@
       au < released ; 2011 ; International Journal of Indian Culture and Business Management Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Indian Culture and Business Management Volume 5 ; 5 >
       au < manifest ; 2013 ; International Journal of Indian Culture and Business Management Volume 6 ; 6 >
-      au < expected ; 2014 ; International Journal of Indian Culture and Business Management Volume 7 ; 7 >
+      au < exists ; 2013 ; International Journal of Indian Culture and Business Management Volume 7 ; 7 >
+      au < expected ; 2014 ; International Journal of Indian Culture and Business Management Volume 8 ; 8 >
+      au < expected ; 2014 ; International Journal of Indian Culture and Business Management Volume 9 ; 9 >
 
     }
 
@@ -4750,7 +4786,9 @@
       au < released ; 2012 ; International Journal of Machining and Machinability of Materials Volume 11 ; 11 >
       au < released ; 2012 ; International Journal of Machining and Machinability of Materials Volume 12 ; 12 >
       au < manifest ; 2013 ; International Journal of Machining and Machinability of Materials Volume 13 ; 13 >
-      au < expected ; 2014 ; International Journal of Machining and Machinability of Materials Volume 14 ; 14 >
+      au < exists ; 2013 ; International Journal of Machining and Machinability of Materials Volume 14 ; 14 >
+      au < expected ; 2014 ; International Journal of Machining and Machinability of Materials Volume 15 ; 15 >
+      au < expected ; 2014 ; International Journal of Machining and Machinability of Materials Volume 16 ; 16 >
 
     }
 
