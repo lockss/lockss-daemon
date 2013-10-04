@@ -5860,9 +5860,8 @@
 
       param[base_url] = http://www.regenmedres.com/
       param[journal_issn] = 2050-490X
-      comment[0] = no publication yet, 09/12/2013
 
-      au < expected ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
+      au < exists ; 2013 ; Regenerative Medicine Research Volume 1 ; 1 >
       au < expected ; 2014 ; Regenerative Medicine Research Volume 2 ; 2 >
 
     }
