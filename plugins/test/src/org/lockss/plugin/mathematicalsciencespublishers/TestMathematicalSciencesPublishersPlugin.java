@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.1 2013-08-23 02:27:39 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.2 2013-10-04 01:44:45 etenbrink Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.mathematicalsciencespublishers." +
-                      "MathematicalSciencesPublishersPlugin");
+                      "ClockssMathematicalSciencesPublishersPlugin");
   }
 
   public void testGetAuNullConfig()
@@ -114,12 +114,14 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Mathematical Sciences Publishers Plugin, Base URL http://www.example.com/, " +
+    assertEquals("Mathematical Sciences Publishers Plugin (CLOCKSS), " +
+        "Base URL http://www.example.com/, " +
         "Journal ID j_id, Year 2004", au.getName());
   }
 
   public void testGetPluginId() {
-    assertEquals("org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin",
+    assertEquals("org.lockss.plugin.mathematicalsciencespublishers." +
+        "ClockssMathematicalSciencesPublishersPlugin",
         plugin.getPluginId());
   }
 

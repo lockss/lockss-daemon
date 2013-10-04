@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.1 2013-08-23 02:27:39 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersArticleIteratorFactory.java,v 1.2 2013-10-04 01:44:45 etenbrink Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestMathematicalSciencesPublishersArticleIteratorFactory extends Ar
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
 
   private final String PLUGIN_NAME =
-      "org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin";
+      "org.lockss.plugin.mathematicalsciencespublishers.ClockssMathematicalSciencesPublishersPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
