@@ -14896,7 +14896,7 @@
     {
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://mts.oxfordjournals.org
+    param[base_url] = http://mts.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; expected ; 2014 ; Music Theory Spectrum Volume 1 ; 1 >
@@ -17449,6 +17449,23 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 >
 
     }
+
+  }
+
+  {
+
+    title <
+      name = Public Policy & Aging Report ;
+      issn = 1055-3037 ;
+      eissn = 2053-4892 ;
+      issnl = 1055-3037
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://ppar.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWireH20Plugin ; expected ; 2014 ; Public Policy & Aging Report Volume 1 ; 1 >
 
   }
 
