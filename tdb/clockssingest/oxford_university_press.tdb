@@ -14457,7 +14457,7 @@
     param[base_url] = http://mts.oxfordjournals.org
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; expected ; 2014 ; Music Theory Spectrum Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; Music Theory Spectrum Volume 1 ; 1 ; >
 
     }
 
