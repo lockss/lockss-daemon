@@ -7,8 +7,6 @@
   param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
-  comment[notReady] = No permission to crawl the Supplement Collections. Waiting for action from PM.
-
   {
 
       title <
@@ -124,7 +122,7 @@
       au < released ; 2011 ; 9780812220353 ; 9780812205534 ; The Digest of Justinian, Volume 3 ; 9780812205534 >
       au < released ; 2011 ; 9780812220360 ; 9780812205541 ; The Digest of Justinian, Volume 4 ; 9780812205541 >
       au < released ; 2012 ; 9781934536445 ; 9781934536551 ; The New Chronology of Iron Age Gordion: The Sanctuary's Imperial Architectural Development, Conflict with Christianity, and Final Days ; 9781934536551 >
-      au < testing ; 2012 ; 9780812222098 ; 9780812207699 ; The Satires of Horace ; 9780812207699 >
+      au < ready ; 2012 ; 9780812222098 ; 9780812207699 ; The Satires of Horace ; 9780812207699 >
 
   }
 
@@ -135,7 +133,7 @@
         type = bookSeries
       >
 
-      au < manifest ; 1987 ;  ; 9780813555331 ; Black Athena: Afroasiatic Roots of Classical Civilization, Volume I: The Fabrication of Ancient Greece, 1785-1985 ; 9780813555331 >
+      au < ready ; 1987 ;  ; 9780813555331 ; Black Athena: Afroasiatic Roots of Classical Civilization, Volume I: The Fabrication of Ancient Greece, 1785-1985 ; 9780813555331 >
       au < manifest ; 1998 ; 9780292728080 ; 9780292799110 ; Antiphon and Andocides ; 9780292799110 >
       au < manifest ; 2000 ; 9780292731219 ; 9780292799158 ; History and Silence: Purge and Rehabilitation of Memory in Late Antiquity ; 9780292799158 >
       au < manifest ; 2001 ; 9780292760547 ; 9780292797901 ; Greek and Roman Comedy: Translations and Interpretations of Four Representative Plays ; 9780292797901 >
@@ -465,208 +463,208 @@
       au < released ; 1998 ; 9781566395762 ; 9781439907702 ; Claiming America ; 9781439907702 >
       au < released ; 1998 ; 9780824819927 ; 9780824861919 ; Clash of Spirits: The History of Power and Sugar Planter Hegemony on a Visayan Island ; 9780824861919 >
       au < released ; 1998 ; 9780814755679 ; 9780814759707 ; Clipped Wings: The Rise and Fall of the Women Airforce Service Pilots (WASPS) of World War II ; 9780814759707 >
-      au < testing ; 1998 ; 9781557531469 ; 9781612490632 ; Falcon and the Eagle: Montenegro and Austria-Hungary, 1908-1914 ; 9781612490632 >
-      au < testing ; 1998 ; 9780812234671 ; 9780812202427 ; Fragments of Empire: Capital, Slavery, and Indian Indentured Labor in the British Caribbean ; 9780812202427 >
-      au < testing ; 1998 ; 9780870134807 ; 9780870139338 ; Frederick Douglass: freedom's voice, 1818-1845 ; 9780870139338 >
-      au < testing ; 1998 ; 9780817309787 ; 9780817380892 ; G Company's War: Two Personal Accounts of the Campaigns in Europe, 1944-1945 ; 9780817380892 >
-      au < testing ; 1998 ; 9780776604725 ; 9780776616001 ; Genealogica & Heraldica: Ottawa 1996 ; 9780776616001 >
-      au < testing ; 1998 ; 9780824819255 ; 9780824862855 ; Hirohito and War: Imperial Tradition and Military Decision Making in Prewar Japan ; 9780824862855 >
-      au < testing ; 1998 ; 9780889202887 ; 9780889208407 ; How Silent Were the Churches?: Canadian Protestantism and the Jewish Plight during the Nazi Era ; 9780889208407 >
-      au < testing ; 1998 ; 9780776604893 ; 9780776616124 ; Images of Canadianness: Visions on Canada's Politics, Culture, and Economics ; 9780776616124 >
-      au < testing ; 1998 ; 9780824819279 ; 9780824862947 ; Imperial Benevolence: Making British Authority in the Pacific Islands ; 9780824862947 >
-      au < testing ; 1998 ; 9780295976457 ; 9780295801360 ; Imprisoned Apart: The World War II Correspondence of an Issei Couple ; 9780295801360 >
-      au < testing ; 1998 ; 9780824819316 ; 9780824863159 ; Japan's Competing Modernities: Issues in Culture and Democracy, 19001930 ; 9780824863159 >
-      au < testing ; 1998 ; 9780814726389 ; 9780814727973 ; Jews, Slaves, and the Slave Trade: Setting the Record Straight ; 9780814727973 >
-      au < testing ; 1998 ; 9780299157906 ; 9780299157937 ; Jumping the Line: The Adventures and Misadventures of an American Radical ; 9780299157937 >
-      au < testing ; 1998 ; 9780791437995 ; 9781438413662 ; Lubavitcher Women in America: Identity and Activism in the Postwar Era ; 9781438413662 >
-      au < testing ; 1998 ; 9780813120706 ; 9780813170572 ; MASH: An Army Surgeon in Korea ; 9780813170572 >
-      au < testing ; 1998 ; 9780824817473 ; 9780824863692 ; My Gun, My Brother: The World of the Papua New Guinea Colonial Police, 19201960 ; 9780824863692 >
-      au < testing ; 1998 ; 9782760304796 ; 9782760316614 ; Néologie canadienne de Jacques Viger: Manuscrits de 1810 ; 9782760316614 >
-      au < testing ; 1998 ; 9780870134470 ; 9780870139482 ; Profiles in diversity: women in the new South Africa ; 9780870139482 >
-      au < testing ; 1998 ;  ; 9780776616803 ; Quebec and Its Historians: The Twentieth Century ; 9780776616803 >
-      au < testing ; 1998 ; 9780824818944 ; 9780824864118 ; Remaking Micronesia: Discourses over Development in a Pacific Territory 19441982 ; 9780824864118 >
-      au < testing ; 1998 ;  ; 9781439904565 ; Rethinking the Cold War ; 9781439904565 >
-      au < testing ; 1998 ; 9780824819668 ; 9780824864224 ; Sacred Texts and Buried Treasures: Issues on the Historical Archaeology of Ancient Japan ; 9780824864224 >
-      au < testing ; 1998 ; 9780814719053 ; 9780814785300 ; Servants of Allah: African Muslims Enslaved in the Americas ; 9780814785300 >
-      au < testing ; 1998 ; 9780295977164 ; 9780295800622 ; The Atomic West ; 9780295800622 >
-      au < testing ; 1998 ; 9780814713235 ; 9780814739211 ; The Columbian Orator ; 9780814739211 >
-      au < testing ; 1998 ; 9780817356088 ; 9780817383251 ; The Command of the Air ; 9780817383251 >
-      au < testing ; 1998 ; 9780776604763 ; 9780776617121 ; The Fallacy of Race and the Shoah ; 9780776617121 >
-      au < testing ; 1998 ; 9780812216561 ; 9780812204728 ; The First Crusade: "The Chronicle of Fulcher of Chartres" and Other Source Materials ; 9780812204728 >
-      au < testing ; 1998 ; 9780870815171 ; 9781607321279 ; The Invasion of Indian Country in the Twentieth Century: American Capitalism and Tribal Natural Resources ; 9781607321279 >
-      au < testing ; 1998 ; 9780824818975 ; 9780824864804 ; The Japanese Way of Tea: From Its Origins in China to Sen Rikyu ; 9780824864804 >
-      au < testing ; 1998 ; 9789622094468 ; 9789888052912 ; The Last Half Century of Chinese Overseas ; 9789888052912 >
-      au < testing ; 1998 ; 9780814327623 ; 9780814335864 ; The Long Winter Ends ; 9780814335864 >
-      au < testing ; 1998 ; 9780889202627 ; 9780889206175 ; The Netherlandic Presence in Ontario: Pillars, Class and Dutch Ethnicity ; 9780889206175 >
-      au < testing ; 1998 ; 9780814713266 ; 9780814709108 ; The Scar That Binds: American Culture and the Vietnam War ; 9780814709108 >
-      au < testing ; 1998 ; 9781884836367 ; 9781935603405 ; The Sunday Game: At the Dawn of Professional Football ; 9781935603405 >
-      au < testing ; 1998 ; 9780814781012 ; 9780814788912 ; The Tie That Binds: Identity and Political Attitudes in the Post-Civil Rights Generation ; 9780814788912 >
-      au < testing ; 1998 ; 9780812216677 ; 9780812200492 ; The Transmission of Culture in Early Modern Europe ; 9780812200492 >
-      au < testing ; 1998 ; 9780824819224 ; 9780824865146 ; The Upright Brush: Yan Zhenqing's Calligraphy and Song Literati Politics ; 9780824865146 >
-      au < testing ; 1998 ; 9780889202900 ; 9780889207035 ; Women Theorists on Society and Politics ; 9780889207035 >
-      au < testing ; 1999 ; 9781563680823 ; 9781563681554 ; Alandra's Lilacs: The Story of a Mother and Her Deaf Daughter ; 9781563681554 >
-      au < testing ; 1999 ; 9781557531414 ; 9781612490700 ; Albania at War, 1939-1945 ; 9781612490700 >
-      au < testing ; 1999 ; 9780813121093 ; 9780813127422 ; Albanian Escape: The True Story of U.S. Army Nurses Behind Enemy Lines ; 9780813127422 >
-      au < testing ; 1999 ; 9780870135422 ; 9780870138973 ; Angelina Grimké: rhetoric, identity, and the radical imagination ; 9780870138973 >
-      au < testing ; 1999 ; 9780814774861 ; 9780814769201 ; Another Self: Middle-Class American Women and Their Friends in the Twentieth Century ; 9780814769201 >
-      au < testing ; 1999 ; 9781557531407 ; 9781612490687 ; Aristocratic Redoubt: The Austro-Hungarian Foreign Office on the Eve of the First World War ; 9781612490687 >
-      au < testing ; 1999 ; 9780812217001 ; 9780812200614 ; Aristocratic Women in Medieval France ; 9780812200614 >
-      au < testing ; 1999 ; 9780870134913 ; 9780870139673 ; Battle for the soul: Métis children encounter evangelical Protestants at Mackinaw Mission, 1823-1837 ; 9780870139673 >
-      au < testing ; 1999 ; 9780814781289 ; 9780814786826 ; Battleground of Desire: The Struggle for Self -Control in Modern America ; 9780814786826 >
-      au < testing ; 1999 ; 9780889203204 ; 9780889206229 ; Between a Rock and a Hard Place: A Historical Geography of the Finns in the Sudbury Area ; 9780889206229 >
-      au < testing ; 1999 ; 9781578061723 ; 9781621031390 ; Birth Chairs, Midwives, and Medicine ; 9781621031390 >
-      au < testing ; 1999 ; 9780826321480 ; 9780826330017 ; Bloody Valverde: A Civil War Battle on the Rio Grande, February 21, 1862 ; 9780826330017 >
-      au < testing ; 1999 ; 9780791443132 ; 9781438424538 ; Brush with Death, A: An Artist in the Death Camps ; 9781438424538 >
-      au < testing ; 1999 ; 9780295977959 ; 9780295800530 ; Civil Society in Central Asia ; 9780295800530 >
-      au < testing ; 1999 ; 9780812216967 ; 9780812203127 ; Court Culture and the Origins of a Royalist Tradition in Early Stuart England ; 9780812203127 >
-      au < testing ; 1999 ; 9780889203174 ; 9780889207141 ; Cross-Currents: Hydroelectricity and the Engineering of Northern Ontario ; 9780889207141 >
-      au < testing ; 1999 ; 9781563682551 ; 9781563681967 ; Crying Hands: Eugenics and Deaf People in Nazi Germany ; 9781563681967 >
-      au < testing ; 1999 ; 9780824818852 ; 9780824862169 ; Defining Chu: Image and Reality in Ancient China ; 9780824862169 >
-      au < testing ; 1999 ; 9780299165642 ; 9780299165635 ; Fascism in Spain, 1923-1977 ; 9780299165635 >
-      au < testing ; 1999 ; 9780813918822 ; 9780813929125 ; Founding Friendship: George Washington, James Madison, and the Creation of the American Republic ; 9780813929125 >
-      au < testing ; 1999 ; 9780824821531 ; 9780824862640 ; Generation Later: Household Strategies and Economic Change in the Rural Philippines ; 9780824862640 >
-      au < testing ; 1999 ; 9780814706718 ; 9780814707838 ; Heavenly Serbia: From Myth to Genocide ; 9780814707838 >
-      au < testing ; 1999 ; 9780295980133 ; 9780295989747 ; Irrigated Eden: The Making of an Agricultural Landscape in the American West ; 9780295989747 >
-      au < testing ; 1999 ; 9780870135088 ; 9780870139055 ; Justin Smith Morrill: father of the land-grant colleges ; 9780870139055 >
-      au < testing ; 1999 ; 9780824819644 ; 9780824863227 ; Kaempfer's Japan: Tokugawa Culture Observed ; 9780824863227 >
-      au < testing ; 1999 ; 9782760305137 ; 9782760316492 ; Les Immigrants préférés: Les Belges ; 9782760316492 >
-      au < testing ; 1999 ; 9780870135279 ; 9780870139314 ; Letters from Robben Island: a selection of Ahmed Kathrada's prison correspondence, 1964-1989 ; 9780870139314 >
-      au < testing ; 1999 ; 9780813121413 ; 9780813128023 ; Lincoln on Lincoln ; 9780813128023 >
-      au < testing ; 1999 ; 9789622094864 ; 9789882202115 ; Macau: A Cultural Janus ; 9789882202115 >
-      au < testing ; 1999 ; 9780295981147 ; 9780295989914 ; Making Salmon: An Environmental History of the Northwest Fisheries Crisis ; 9780295989914 >
-      au < testing ; 1999 ; 9780814774953 ; 9780814769058 ; Outside the Lines: African Americans and the Integration of the National Football League ; 9780814769058 >
-      au < testing ; 1999 ; 9780812217247 ; 9780812200478 ; Parades and the Politics of the Street: Festive Culture in the Early American Republic ; 9780812200478 >
-      au < testing ; 1999 ; 9780824816193 ; 9780824863883 ; Passages to Modernity: Motherhood, Childhood and Social Reform in Early Twentieth Century Japan ; 9780824863883 >
-      au < testing ; 1999 ; 9781557531865 ; 9781612490564 ; Regions in the History of Central Europe ; 9781612490564 >
-      au < testing ; 1999 ; 9780299164140 ; 9780299164133 ; Requiem for a German Past: A Boyhood among the Nazis ; 9780299164133 >
-      au < testing ; 1999 ; 9780824819309 ; 9780824864194 ; Ruins of Identity paper ; 9780824864194 >
-      au < testing ; 1999 ; 9780812216646 ; 9780812204285 ; Rum Punch and Revolution: Taverngoing and Public Life in Eighteenth-Century Philadelphia ; 9780812204285 >
-      au < testing ; 1999 ; 9780820321042 ; 9780820340807 ; Running a Thousand Miles for Freedom: The Escape of William and Ellen Craft from Slavery ; 9780820340807 >
-      au < testing ; 1999 ; 9780791441176 ; 9781438436500 ; Spiritual Life, A: A Jewish Feminist Journey ; 9781438436500 >
-      au < testing ; 1999 ; 9780824821173 ; 9780824864460 ; Staying Local in the Global Village: Bali in the Twentieth Century ; 9780824864460 >
-      au < testing ; 1999 ; 9780889202962 ; 9780889206502 ; The Crime of Crimes: Demonology and Politics in France, 1560-1620 ; 9780889206502 >
-      au < testing ; 1999 ; 9780889202948 ; 9780889207592 ; The Cross in the Dark Valley: The Canadian Protestant Missionary Movement in the Japanese Empire, 1931-1945 ; 9780889207592 >
-      au < testing ; 1999 ; 9780824820633 ; 9780824864705 ; The Eyes of Power: Art and Early Tokugawa Authority ; 9780824864705 >
-      au < testing ; 1999 ; 9780472110087 ; 9780472022656 ; The German Problem Transformed: Institutions, Politics, and Foreign Policy, 1945-1995 ; 9780472022656 >
-      au < testing ; 1999 ; 9780813121185 ; 9780813127590 ; The Intrepid Guerrillas of North Luzon ; 9780813127590 >
-      au < testing ; 1999 ; 9780472086092 ; 9780472023561 ; The Jews of Georgian England, 1714-1830: Tradition and Change in a Liberal Society ; 9780472023561 >
-      au < testing ; 1999 ; 9780824818265 ; 9780824865689 ; The Last Tosa: Iwasa Katsumochi Matabei, Bridge to Ukiyo-e ; 9780824865689 >
-      au < testing ; 1999 ; 9780889203303 ; 9780889205598 ; The Life and Letters of Annie Leake Tuttle: Working for the Best ; 9780889205598 >
-      au < testing ; 1999 ; 9780299164942 ; 9780299164935 ; The Other Mother: A Lesbian's Fight for Her Daughter ; 9780299164935 >
-      au < testing ; 1999 ; 9780824821777 ; 9780824864910 ; The People Trade: Pacific Laborers and New Caledonia, 18651930 ; 9780824864910 >
-      au < testing ; 1999 ; 9780814706794 ; 9780814705285 ; The Political Economy of Hope and Fear: Capitalism and the Black Condition in America ; 9780814705285 >
-      au < testing ; 1999 ; 9780812213829 ; 9780812200706 ; The Promised Lands: The Low Countries Under Burgundian Rule, 1369-1530 ; 9780812200706 >
-      au < testing ; 1999 ; 9780824820640 ; 9780824864996 ; The Rousing Drum: Ritual Practice in a Japanese Community ; 9780824864996 >
-      au < testing ; 1999 ; 9780814735817 ; 9780814744505 ; The Turning: A History of Vietnam Veterans Against the War ; 9780814744505 >
-      au < testing ; 1999 ; 9780472110063 ; 9780472024285 ; Titles, Conflict, and Land Use: The Development of Property Rights and Land Reform on the Brazilian Amazon Frontier ; 9780472024285 >
-      au < testing ; 1999 ; 9780824820374 ; 9780824865498 ; Visions of Ryukyu: Identity and Ideology in Early-Modern Thought and Politics ; 9780824865498 >
-      au < testing ; 1999 ; 9780791440216 ; 9781438404479 ; Voices of Yugoslav Jewry ; 9781438404479 >
-      au < testing ; 1999 ; 9780824820398 ; 9780824865511 ; Voyages and Beaches: Pacific Encounters, 17691840 ; 9780824865511 >
-      au < testing ; 1999 ; 9780814751503 ; 9780814738016 ; William M. Kunstler: The Most Hated Lawyer in America ; 9780814738016 >
-      au < testing ; 2000 ; 9780874173451 ; 9780874175271 ; A Fateful Time: The Background And Legislative History Of The Indian Reorganization Act ; 9780874175271 >
-      au < testing ; 2000 ; 9781563681011 ; 9781563681530 ; A Mighty Change: An Anthology of Deaf American Writing, 1816-1864 ; 9781563681530 >
-      au < testing ; 2000 ; 9780814793664 ; 9780814795125 ; A Peculiar Crusade: Willis M. Everett and the Malmedy Massacre ; 9780814795125 >
-      au < testing ; 2000 ; 9780824820916 ; 9780824861308 ; A Voyage Round the World, Volumes I & II ; 9780824861308 >
-      au < testing ; 2000 ; 9780295979144 ; 9780295800585 ; Adios to Tears: The Memoirs of a Japanese-Peruvian Internee in U.S. Concentration Camps ; 9780295800585 >
-      au < testing ; 2000 ; 9780813121482 ; 9780813127446 ; All This Hell: U.S. Nurses Imprisoned by the Japanese ; 9780813127446 >
-      au < testing ; 2000 ; 9780820322247 ; 9780820327259 ; Amistad Revolt: Memory, Slavery, and the Politics of Identity in the United States and Sierra Leone ; 9780820327259 >
-      au < testing ; 2000 ; 9780824822385 ; 9780824861445 ; Anatomy of a Crisis: Education, Development, and the State in Cambodia, 19531998 ; 9780824861445 >
-      au < testing ; 2000 ;  ; 9780803202757 ; And the Witnesses Were Silent: The Confessing Church and the Persecution of the Jews ; 9780803202757 >
-      au < testing ; 2000 ;  ; 9780803201774 ; Atlanta 1864: Last Chance for the Confederacy ; 9780803201774 >
-      au < testing ; 2000 ; 9782760305106 ; 9782760315457 ; Au fil des ans: L'Union catholique des fermières de la province d'Ontario de 1936 à 1945 ; 9782760315457 >
-      au < testing ; 2000 ; 9780292787438 ; 9780292797918 ; Barrios Norteños: St. Paul and Midwestern Mexican Communities in the Twentieth Century ; 9780292797918 >
-      au < testing ; 2000 ; 9780824822880 ; 9780824861636 ; Between the Folds: Stories of Cloth, Lives and Travels from Sumba ; 9780824861636 >
-      au < testing ; 2000 ; 9780814706626 ; 9780814705223 ; Black and Multiracial Politics in America ; 9780814705223 >
-      au < testing ; 2000 ;  ; 9780803200173 ; Black Elk Lives: Conversations with the Black Elk Family ; 9780803200173 >
-      au < testing ; 2000 ; 9780889203518 ; 9780889205895 ; Children in English-Canadian Society: Framing the Twentieth-Century Consensus ; 9780889205895 >
-      au < testing ; 2000 ; 9789622095014 ; 9789882200661 ; Chinese Archery ; 9789882200661 >
-      au < testing ; 2000 ; 9780791445396 ; 9780791492758 ; Constructing Boundaries: Jewish and Arab Workers in Mandatory Palestine ; 9780791492758 >
-      au < testing ; 2000 ; 9781557531988 ; 9781612491080 ; Constructing the Criollo Archive ; 9781612491080 >
-      au < testing ; 2000 ; 9780472086979 ; 9780472023585 ; Coping With Poverty: The Social Contexts of Neighborhood, Work, and Family in the African-American Community ; 9780472023585 >
-      au < testing ; 2000 ; 9780814756201 ; 9780814759929 ; Dance Hall Days: Intimacy and Leisure Among Working-Class Immigrants in the United States ; 9780814759929 >
-      au < testing ; 2000 ; 9780870135606 ; 9780870138959 ; Democracy and development in Mali ; 9780870138959 >
-      au < testing ; 2000 ;  ; 9780803202337 ; Documents of United States Indian Policy (Third Edition) ; 9780803202337 >
-      au < testing ; 2000 ; 9780870134920 ; 9781609171551 ; Fish in the Lakes, Wild Rice, and Game in Abundance: Testimony on Behalf of Mille Lacs Ojibwe Hunting and Fishing Rights ; 9781609171551 >
-      au < testing ; 2000 ; 9780824821883 ; 9780824862633 ; Generals and Scholars: Military Rule in Medieval Korea ; 9780824862633 >
-      au < testing ; 2000 ; 9780295983158 ; 9780295989853 ; George Perkins Marsh: Prophet of Conservation ; 9780295989853 >
-      au < testing ; 2000 ; 9780253338051 ; 9780253108937 ; Griots at War: Conflict, Conciliation, and Caste in Mande ; 9780253108937 >
-      au < testing ; 2000 ; 9780472111435 ; 9780472023844 ; Harmony and the Balance: An Intellectual History of Seventeenth-Century English Economic Thought ; 9780472023844 >
-      au < testing ; 2000 ; 9780824822897 ; 9780824862763 ; Hawai`i Chronicles III: World War Two in Hawai`i, from the pages of Paradise of the Pacific ; 9780824862763 >
-      au < testing ; 2000 ; 9780873513951 ; 9780873517362 ; Haymakers: A Chronicle of Five Farm Families ; 9780873517362 >
-      au < testing ; 2000 ; 9780295979625 ; 9780295802220 ; Henry M. Jackson: A Life in Politics ; 9780295802220 >
-      au < testing ; 2000 ; 9780873513852 ; 9780873516723 ; Honor the Grandmothers: Dakota and Lakota Women Tell Their Stories ; 9780873516723 >
-      au < testing ; 2000 ; 9780824822927 ; 9780824863081 ; Japanese Culture ; 9780824863081 >
-      au < testing ; 2000 ; 9780824820626 ; 9780824863166 ; Japan's Imperial Diplomacy: Consuls, Treaty Ports and War in China, 18951938 ; 9780824863166 >
-      au < testing ; 2000 ; 9780824822828 ; 9780824863180 ; John A. Burns ; 9780824863180 >
-      au < testing ; 2000 ;  ; 9780803200340 ; Kit Carson and the Indians ; 9780803200340 >
-      au < testing ; 2000 ; 9780292708808 ; 9780292798205 ; La Revolución: Mexico's Great Revolution as Memory, Myth, and History ; 9780292798205 >
-      au < testing ; 2000 ;  ; 9780803200791 ; LaDonna Harris: A Comanche Life ; 9780803200791 >
-      au < testing ; 2000 ; 9780813121567 ; 9780813129402 ; Lincoln of Kentucky ; 9780813129402 >
-      au < testing ; 2000 ; 9780824819804 ; 9780824863517 ; Mapping Chengde ; 9780824863517 >
-      au < testing ; 2000 ; 9780791448038 ; 9780791491522 ; Medical Progress and Social Reality: A Reader in Nineteenth-Century Medicine and Literature ; 9780791491522 >
-      au < testing ; 2000 ; 9780877457015 ; 9781587293047 ; Memoirs of a Cold War Son ; 9781587293047 >
-      au < testing ; 2000 ; 9780292787377 ; 9780292799257 ; Michoacán and Eden: Vasco de Quiroga and the Evangelization of Western Mexico ; 9780292799257 >
-      au < testing ; 2000 ; 9781931968546 ; 9781935603221 ; Murder, Culture, and Injustice: Four Sensational Cases in American History ; 9781935603221 >
-      au < testing ; 2000 ; 9780824822866 ; 9780824863722 ; Nature, Culture, and History: The "Knowing" of Oceania ; 9780824863722 >
-      au < testing ; 2000 ; 9781578062423 ; 9781621035862 ; Obituaries in American Culture ; 9781621035862 >
-      au < testing ; 2000 ; 9780870815584 ; 9781607321323 ; Quetzalcoatl and the Irony of Empire: Myths and Prophecies in the Aztec Tradition, Revised Edition ; 9781607321323 >
-      au < testing ; 2000 ; 9780814736159 ; 9780814744574 ; Race Woman: The Lives of Shirley Graham Du Bois ; 9780814744574 >
-      au < testing ; 2000 ; 9780824821487 ; 9780824864125 ; Remaking the Chinese City: Modernity and National Identity, 19001950 ; 9780824864125 >
-      au < testing ; 2000 ; 9780824821890 ; 9780824864163 ; Remembrance of Pacific Pasts ; 9780824864163 >
-      au < testing ; 2000 ; 9780292712249 ; 9780292798243 ; Renewing the Maya World: Expressive Culture in a Highland Town ; 9780292798243 >
-      au < testing ; 2000 ; 9780889203440 ; 9780889205383 ; Secondary Sources in the History of Canadian Medicine: A Bibliography / Bibliographie de l'Histoire de la Médecine / Volume 2 ; 9780889205383 >
-      au < testing ; 2000 ; 9780271020631 ; 9780271052687 ; Sweet Land of Liberty: The Ordeal of the American Revolution in Northampton County, Pennsylvania ; 9780271052687 >
-      au < testing ; 2000 ; 9780292781672 ; 9780292798816 ; Tales of Two Cities: Race and Economic Culture in Early Republican North and South America ; 9780292798816 >
-      au < testing ; 2000 ; 9780801898181 ; 9780801872853 ; Technological Change and the United States Navy, 1865-1945 ; 9780801872853 >
-      au < testing ; 2000 ; 9780812217223 ; 9780812200140 ; The Complexion of Race: Categories of Difference in Eighteenth-Century British Culture ; 9780812200140 >
-      au < testing ; 2000 ; 9780814722121 ; 9780814722909 ; The Debate Over Slavery: Antislavery and Proslavery Liberalism in Antebellum America ; 9780814722909 >
-      au < testing ; 2000 ; 9780812217452 ; 9780812200300 ; The Envy of Angels: Cathedral Schools and Social Ideals in Medieval Europe, 950-1200 ; 9780812200300 >
-      au < testing ; 2000 ; 9780824822637 ; 9780824864743 ; The Gates of Power: Monks, Courtiers and Warriors in Premodern Japan ; 9780824864743 >
-      au < testing ; 2000 ; 9780253338068 ; 9780253108470 ; The Good, the Bad, and the Beautiful: Discourse about Values in Yoruba Culture ; 9780253108470 >
-      au < testing ; 2000 ; 9781566397742 ; 9781439903933 ; The Money Pitch: Baseball Free Agency and Salary Arbitration ; 9781439903933 >
-      au < testing ; 2000 ; 9780889203242 ; 9780889207769 ; The Shape of the Great Pyramid ; 9780889207769 >
-      au < testing ; 2000 ; 9780472110612 ; 9780472024186 ; The Social Politics of Medieval Diplomacy: Anglo-German Relations (1066-1307) ; 9780472024186 >
-      au < testing ; 2000 ; 9780812235623 ; 9780812203813 ; Uncommon Dominion: Venetian Crete and the Myth of Ethnic Purity ; 9780812203813 >
-      au < testing ; 2000 ;  ; 9780803202894 ; Vichy's Afterlife: History and Counterhistory in Postwar France ; 9780803202894 >
-      au < testing ; 2000 ; 9780292708853 ; 9780292798199 ; Warm Springs Millennium: Voices from the Reservation ; 9780292798199 >
-      au < testing ; 2000 ; 9780791446492 ; 9780791492222 ; Which Lessons Matter?: American Foreign Policy Decision Making in the Middle East, 1979-1987 ; 9780791492222 >
-      au < testing ; 2000 ; 9780877457305 ; 9781587293412 ; Whitman and the Irish ; 9781587293412 >
-      au < testing ; 2001 ; 9782760305182 ; 9782760315297 ; À l'ombre de l'INCO: Étude de la transition d'une communauté canadienne-française de la région de Sudbury (1890-1972) ; 9782760315297 >
-      au < testing ; 2001 ; 9780877457596 ; 9781587293276 ; A Perfect Picture of Hell: Eyewitness Accounts by Civil War Prisoners from the 12th Iowa ; 9781587293276 >
-      au < testing ; 2001 ; 9780889203433 ; 9780889208834 ; A Year Inland: The Journal of a Hudson's Bay Company Winterer ; 9780889208834 >
-      au < testing ; 2001 ; 9780776605418 ; 9780776615325 ; Aboriginal People and Other Canadians: Shaping New Relationships ; 9780776615325 >
-      au < testing ; 2001 ; 9781557532015 ; 9781612490694 ; Ambivalence of Identity: The Austrian Experience of Nation-Building in a Modern Society ; 9781612490694 >
-      au < testing ; 2001 ; 9781603441322 ; 9781603443296 ; Americans All!: Foreign-born Soldiers in World War I ; 9781603443296 >
-      au < testing ; 2001 ; 9780814726976 ; 9780814728154 ; An Interracial Movement of the Poor: Community Organizing and the New Left in the 1960s ; 9780814728154 >
-      au < testing ; 2001 ; 9780813920443 ; 9780813921709 ; Bacchus and Civic Order: The Culture of Drink in Early Modern Germany ; 9780813921709 >
-      au < testing ; 2001 ; 9780824823917 ; 9780824861544 ; Bandits, Eunuchs and the Son of Heaven ; 9780824861544 >
-      au < testing ; 2001 ; 9780813122175 ; 9780813170824 ; Blood on the Moon: The Assassination of Abraham Lincoln ; 9780813170824 >
-      au < testing ; 2001 ; 9780820322339 ; 9780820342351 ; Blue Coat or Powdered Wig: Free People of Color in Pre-Revolutionary Saint Domingue ; 9780820342351 >
-      au < testing ; 2001 ; 9780295980911 ; 9780295801131 ; Color-line to Borderlands: The Matrix of American Ethnic Studies ; 9780295801131 >
-      au < testing ; 2001 ; 9780813920597 ; 9780813921693 ; Coming to Terms with Democracy: Federalist Intellectuals and the Shaping of an American Culture, 1800-1828 ; 9780813921693 >
-      au < testing ; 2001 ; 9780292712324 ; 9780292798236 ; Consuming Grief: Compassionate Cannibalism in an Amazonian Society ; 9780292798236 >
-      au < testing ; 2001 ; 9780870135705 ; 9780870139284 ; Control and order in French colonial Louisbourg, 1713-1758 ; 9780870139284 >
-      au < testing ; 2001 ; 9780824821913 ; 9780824861995 ; Controlling the Dragon ; 9780824861995 >
-      au < testing ; 2001 ; 9780814788066 ; 9780814789087 ; Copyrights and Copywrongs: The Rise of Intellectual Property and How it Threatens Creativity ; 9780814789087 >
-      au < testing ; 2001 ; 9780814731444 ; 9780814733332 ; Critical Race Narratives: A Study of Race, Rhetoric and Injury ; 9780814733332 >
-      au < testing ; 2001 ; 9780292725300 ; 9780292798267 ; Cultural Logics and Global Economies: Maya Identity in Thought and Practice ; 9780292798267 >
-      au < testing ; 2001 ; 9780812236101 ; 9780812203172 ; Curiosities and Texts: The Culture of Collecting in Early Modern England ; 9780812203172 >
-      au < testing ; 2001 ;  ; 9780803200203 ; Essays on Hitler's Europe ; 9780803200203 >
-      au < testing ; 2001 ; 9780889203457 ; 9780889205970 ; Faku: Rulership and Colonialism in the Mpondo Kingdom (c. 1780-1867) ; 9780889205970 >
-      au < testing ; 2001 ; 9781566398343 ; 9781439907788 ; Forgotten Conquests: Rereading New World History from the Margins ; 9781439907788 >
-      au < testing ; 2001 ; 9780813122243 ; 9780813170800 ; Fugitives: Evading and Escaping the Japanese ; 9780813170800 >
-      au < testing ; 2001 ; 9780814719398 ; 9780814744079 ; Guess Who's Coming to Dinner Now?: Multicultural Conservatism in America ; 9780814744079 >
-      au < testing ; 2001 ;  ; 9780803202450 ; Ham, Eggs, and Corn Cake: A Nebraska Territory Diary ; 9780803202450 >
-      au < testing ; 2001 ; 9780817310585 ; 9780817313630 ; Here and There in Mexico: The Travel Writings of Mary Ashley Townsend ; 9780817313630 >
-      au < testing ; 2001 ; 9780801867002 ; 9780801876608 ; Homelands: A Geography of Culture and Place across America ; 9780801876608 >
-      au < testing ; 2001 ; 9789622095267 ; 9789882201613 ; Hong Kong Invaded!: A 'Ninety-Seven Nightmare ; 9789882201613 >
-      au < testing ; 2001 ; 9780814731352 ; 9780814733318 ; How Effective is Strategic Bombing?: Lessons Learned From World War II to Kosovo ; 9780814733318 >
-      au < testing ; 2001 ; 9781578063994 ; 9781604731354 ; I Always Wanted to Fly: America's Cold War Airmen ; 9781604731354 >
-      au < testing ; 2001 ; 9781558493124 ; 9781613760802 ; Imperial Brotherhood: Gender and the Making of Cold War Foreign Policy ; 9781613760802 >
-      au < testing ; 2001 ; 9780814793688 ; 9780814784624 ; In The Company Of Black Men: The African Influence on African American Culture in New York City ; 9780814784624 >
-      au < testing ; 2001 ; 9780299168643 ; 9780299168636 ; In Times of Crisis: Essays on European Culture, Germans, and Jews ; 9780299168636 >
-      au < testing ; 2001 ; 9780877457671 ; 9781587293382 ; Intimate with Walt: Selections from Whitman's Conversations with Horace Traubel, 1888-1892 ; 9781587293382 >
-      au < testing ; 2001 ; 9780817310936 ; 9780817313302 ; Island Lives: Historical Archaeologies of the Caribbean ; 9780817313302 >
+      au < ready ; 1998 ; 9781557531469 ; 9781612490632 ; Falcon and the Eagle: Montenegro and Austria-Hungary, 1908-1914 ; 9781612490632 >
+      au < ready ; 1998 ; 9780812234671 ; 9780812202427 ; Fragments of Empire: Capital, Slavery, and Indian Indentured Labor in the British Caribbean ; 9780812202427 >
+      au < ready ; 1998 ; 9780870134807 ; 9780870139338 ; Frederick Douglass: freedom's voice, 1818-1845 ; 9780870139338 >
+      au < ready ; 1998 ; 9780817309787 ; 9780817380892 ; G Company's War: Two Personal Accounts of the Campaigns in Europe, 1944-1945 ; 9780817380892 >
+      au < ready ; 1998 ; 9780776604725 ; 9780776616001 ; Genealogica & Heraldica: Ottawa 1996 ; 9780776616001 >
+      au < ready ; 1998 ; 9780824819255 ; 9780824862855 ; Hirohito and War: Imperial Tradition and Military Decision Making in Prewar Japan ; 9780824862855 >
+      au < ready ; 1998 ; 9780889202887 ; 9780889208407 ; How Silent Were the Churches?: Canadian Protestantism and the Jewish Plight during the Nazi Era ; 9780889208407 >
+      au < ready ; 1998 ; 9780776604893 ; 9780776616124 ; Images of Canadianness: Visions on Canada's Politics, Culture, and Economics ; 9780776616124 >
+      au < ready ; 1998 ; 9780824819279 ; 9780824862947 ; Imperial Benevolence: Making British Authority in the Pacific Islands ; 9780824862947 >
+      au < ready ; 1998 ; 9780295976457 ; 9780295801360 ; Imprisoned Apart: The World War II Correspondence of an Issei Couple ; 9780295801360 >
+      au < ready ; 1998 ; 9780824819316 ; 9780824863159 ; Japan's Competing Modernities: Issues in Culture and Democracy, 19001930 ; 9780824863159 >
+      au < ready ; 1998 ; 9780814726389 ; 9780814727973 ; Jews, Slaves, and the Slave Trade: Setting the Record Straight ; 9780814727973 >
+      au < ready ; 1998 ; 9780299157906 ; 9780299157937 ; Jumping the Line: The Adventures and Misadventures of an American Radical ; 9780299157937 >
+      au < ready ; 1998 ; 9780791437995 ; 9781438413662 ; Lubavitcher Women in America: Identity and Activism in the Postwar Era ; 9781438413662 >
+      au < ready ; 1998 ; 9780813120706 ; 9780813170572 ; MASH: An Army Surgeon in Korea ; 9780813170572 >
+      au < ready ; 1998 ; 9780824817473 ; 9780824863692 ; My Gun, My Brother: The World of the Papua New Guinea Colonial Police, 19201960 ; 9780824863692 >
+      au < ready ; 1998 ; 9782760304796 ; 9782760316614 ; Néologie canadienne de Jacques Viger: Manuscrits de 1810 ; 9782760316614 >
+      au < ready ; 1998 ; 9780870134470 ; 9780870139482 ; Profiles in diversity: women in the new South Africa ; 9780870139482 >
+      au < ready ; 1998 ;  ; 9780776616803 ; Quebec and Its Historians: The Twentieth Century ; 9780776616803 >
+      au < ready ; 1998 ; 9780824818944 ; 9780824864118 ; Remaking Micronesia: Discourses over Development in a Pacific Territory 19441982 ; 9780824864118 >
+      au < ready ; 1998 ;  ; 9781439904565 ; Rethinking the Cold War ; 9781439904565 >
+      au < ready ; 1998 ; 9780824819668 ; 9780824864224 ; Sacred Texts and Buried Treasures: Issues on the Historical Archaeology of Ancient Japan ; 9780824864224 >
+      au < ready ; 1998 ; 9780814719053 ; 9780814785300 ; Servants of Allah: African Muslims Enslaved in the Americas ; 9780814785300 >
+      au < ready ; 1998 ; 9780295977164 ; 9780295800622 ; The Atomic West ; 9780295800622 >
+      au < ready ; 1998 ; 9780814713235 ; 9780814739211 ; The Columbian Orator ; 9780814739211 >
+      au < ready ; 1998 ; 9780817356088 ; 9780817383251 ; The Command of the Air ; 9780817383251 >
+      au < ready ; 1998 ; 9780776604763 ; 9780776617121 ; The Fallacy of Race and the Shoah ; 9780776617121 >
+      au < ready ; 1998 ; 9780812216561 ; 9780812204728 ; The First Crusade: "The Chronicle of Fulcher of Chartres" and Other Source Materials ; 9780812204728 >
+      au < ready ; 1998 ; 9780870815171 ; 9781607321279 ; The Invasion of Indian Country in the Twentieth Century: American Capitalism and Tribal Natural Resources ; 9781607321279 >
+      au < ready ; 1998 ; 9780824818975 ; 9780824864804 ; The Japanese Way of Tea: From Its Origins in China to Sen Rikyu ; 9780824864804 >
+      au < ready ; 1998 ; 9789622094468 ; 9789888052912 ; The Last Half Century of Chinese Overseas ; 9789888052912 >
+      au < ready ; 1998 ; 9780814327623 ; 9780814335864 ; The Long Winter Ends ; 9780814335864 >
+      au < ready ; 1998 ; 9780889202627 ; 9780889206175 ; The Netherlandic Presence in Ontario: Pillars, Class and Dutch Ethnicity ; 9780889206175 >
+      au < ready ; 1998 ; 9780814713266 ; 9780814709108 ; The Scar That Binds: American Culture and the Vietnam War ; 9780814709108 >
+      au < ready ; 1998 ; 9781884836367 ; 9781935603405 ; The Sunday Game: At the Dawn of Professional Football ; 9781935603405 >
+      au < ready ; 1998 ; 9780814781012 ; 9780814788912 ; The Tie That Binds: Identity and Political Attitudes in the Post-Civil Rights Generation ; 9780814788912 >
+      au < ready ; 1998 ; 9780812216677 ; 9780812200492 ; The Transmission of Culture in Early Modern Europe ; 9780812200492 >
+      au < ready ; 1998 ; 9780824819224 ; 9780824865146 ; The Upright Brush: Yan Zhenqing's Calligraphy and Song Literati Politics ; 9780824865146 >
+      au < ready ; 1998 ; 9780889202900 ; 9780889207035 ; Women Theorists on Society and Politics ; 9780889207035 >
+      au < ready ; 1999 ; 9781563680823 ; 9781563681554 ; Alandra's Lilacs: The Story of a Mother and Her Deaf Daughter ; 9781563681554 >
+      au < ready ; 1999 ; 9781557531414 ; 9781612490700 ; Albania at War, 1939-1945 ; 9781612490700 >
+      au < ready ; 1999 ; 9780813121093 ; 9780813127422 ; Albanian Escape: The True Story of U.S. Army Nurses Behind Enemy Lines ; 9780813127422 >
+      au < ready ; 1999 ; 9780870135422 ; 9780870138973 ; Angelina Grimké: rhetoric, identity, and the radical imagination ; 9780870138973 >
+      au < ready ; 1999 ; 9780814774861 ; 9780814769201 ; Another Self: Middle-Class American Women and Their Friends in the Twentieth Century ; 9780814769201 >
+      au < ready ; 1999 ; 9781557531407 ; 9781612490687 ; Aristocratic Redoubt: The Austro-Hungarian Foreign Office on the Eve of the First World War ; 9781612490687 >
+      au < ready ; 1999 ; 9780812217001 ; 9780812200614 ; Aristocratic Women in Medieval France ; 9780812200614 >
+      au < ready ; 1999 ; 9780870134913 ; 9780870139673 ; Battle for the soul: Métis children encounter evangelical Protestants at Mackinaw Mission, 1823-1837 ; 9780870139673 >
+      au < ready ; 1999 ; 9780814781289 ; 9780814786826 ; Battleground of Desire: The Struggle for Self -Control in Modern America ; 9780814786826 >
+      au < ready ; 1999 ; 9780889203204 ; 9780889206229 ; Between a Rock and a Hard Place: A Historical Geography of the Finns in the Sudbury Area ; 9780889206229 >
+      au < ready ; 1999 ; 9781578061723 ; 9781621031390 ; Birth Chairs, Midwives, and Medicine ; 9781621031390 >
+      au < ready ; 1999 ; 9780826321480 ; 9780826330017 ; Bloody Valverde: A Civil War Battle on the Rio Grande, February 21, 1862 ; 9780826330017 >
+      au < ready ; 1999 ; 9780791443132 ; 9781438424538 ; Brush with Death, A: An Artist in the Death Camps ; 9781438424538 >
+      au < ready ; 1999 ; 9780295977959 ; 9780295800530 ; Civil Society in Central Asia ; 9780295800530 >
+      au < ready ; 1999 ; 9780812216967 ; 9780812203127 ; Court Culture and the Origins of a Royalist Tradition in Early Stuart England ; 9780812203127 >
+      au < ready ; 1999 ; 9780889203174 ; 9780889207141 ; Cross-Currents: Hydroelectricity and the Engineering of Northern Ontario ; 9780889207141 >
+      au < ready ; 1999 ; 9781563682551 ; 9781563681967 ; Crying Hands: Eugenics and Deaf People in Nazi Germany ; 9781563681967 >
+      au < ready ; 1999 ; 9780824818852 ; 9780824862169 ; Defining Chu: Image and Reality in Ancient China ; 9780824862169 >
+      au < ready ; 1999 ; 9780299165642 ; 9780299165635 ; Fascism in Spain, 1923-1977 ; 9780299165635 >
+      au < ready ; 1999 ; 9780813918822 ; 9780813929125 ; Founding Friendship: George Washington, James Madison, and the Creation of the American Republic ; 9780813929125 >
+      au < ready ; 1999 ; 9780824821531 ; 9780824862640 ; Generation Later: Household Strategies and Economic Change in the Rural Philippines ; 9780824862640 >
+      au < ready ; 1999 ; 9780814706718 ; 9780814707838 ; Heavenly Serbia: From Myth to Genocide ; 9780814707838 >
+      au < ready ; 1999 ; 9780295980133 ; 9780295989747 ; Irrigated Eden: The Making of an Agricultural Landscape in the American West ; 9780295989747 >
+      au < ready ; 1999 ; 9780870135088 ; 9780870139055 ; Justin Smith Morrill: father of the land-grant colleges ; 9780870139055 >
+      au < ready ; 1999 ; 9780824819644 ; 9780824863227 ; Kaempfer's Japan: Tokugawa Culture Observed ; 9780824863227 >
+      au < ready ; 1999 ; 9782760305137 ; 9782760316492 ; Les Immigrants préférés: Les Belges ; 9782760316492 >
+      au < ready ; 1999 ; 9780870135279 ; 9780870139314 ; Letters from Robben Island: a selection of Ahmed Kathrada's prison correspondence, 1964-1989 ; 9780870139314 >
+      au < ready ; 1999 ; 9780813121413 ; 9780813128023 ; Lincoln on Lincoln ; 9780813128023 >
+      au < ready ; 1999 ; 9789622094864 ; 9789882202115 ; Macau: A Cultural Janus ; 9789882202115 >
+      au < ready ; 1999 ; 9780295981147 ; 9780295989914 ; Making Salmon: An Environmental History of the Northwest Fisheries Crisis ; 9780295989914 >
+      au < ready ; 1999 ; 9780814774953 ; 9780814769058 ; Outside the Lines: African Americans and the Integration of the National Football League ; 9780814769058 >
+      au < ready ; 1999 ; 9780812217247 ; 9780812200478 ; Parades and the Politics of the Street: Festive Culture in the Early American Republic ; 9780812200478 >
+      au < ready ; 1999 ; 9780824816193 ; 9780824863883 ; Passages to Modernity: Motherhood, Childhood and Social Reform in Early Twentieth Century Japan ; 9780824863883 >
+      au < ready ; 1999 ; 9781557531865 ; 9781612490564 ; Regions in the History of Central Europe ; 9781612490564 >
+      au < ready ; 1999 ; 9780299164140 ; 9780299164133 ; Requiem for a German Past: A Boyhood among the Nazis ; 9780299164133 >
+      au < ready ; 1999 ; 9780824819309 ; 9780824864194 ; Ruins of Identity paper ; 9780824864194 >
+      au < ready ; 1999 ; 9780812216646 ; 9780812204285 ; Rum Punch and Revolution: Taverngoing and Public Life in Eighteenth-Century Philadelphia ; 9780812204285 >
+      au < ready ; 1999 ; 9780820321042 ; 9780820340807 ; Running a Thousand Miles for Freedom: The Escape of William and Ellen Craft from Slavery ; 9780820340807 >
+      au < ready ; 1999 ; 9780791441176 ; 9781438436500 ; Spiritual Life, A: A Jewish Feminist Journey ; 9781438436500 >
+      au < ready ; 1999 ; 9780824821173 ; 9780824864460 ; Staying Local in the Global Village: Bali in the Twentieth Century ; 9780824864460 >
+      au < ready ; 1999 ; 9780889202962 ; 9780889206502 ; The Crime of Crimes: Demonology and Politics in France, 1560-1620 ; 9780889206502 >
+      au < ready ; 1999 ; 9780889202948 ; 9780889207592 ; The Cross in the Dark Valley: The Canadian Protestant Missionary Movement in the Japanese Empire, 1931-1945 ; 9780889207592 >
+      au < ready ; 1999 ; 9780824820633 ; 9780824864705 ; The Eyes of Power: Art and Early Tokugawa Authority ; 9780824864705 >
+      au < ready ; 1999 ; 9780472110087 ; 9780472022656 ; The German Problem Transformed: Institutions, Politics, and Foreign Policy, 1945-1995 ; 9780472022656 >
+      au < ready ; 1999 ; 9780813121185 ; 9780813127590 ; The Intrepid Guerrillas of North Luzon ; 9780813127590 >
+      au < ready ; 1999 ; 9780472086092 ; 9780472023561 ; The Jews of Georgian England, 1714-1830: Tradition and Change in a Liberal Society ; 9780472023561 >
+      au < ready ; 1999 ; 9780824818265 ; 9780824865689 ; The Last Tosa: Iwasa Katsumochi Matabei, Bridge to Ukiyo-e ; 9780824865689 >
+      au < ready ; 1999 ; 9780889203303 ; 9780889205598 ; The Life and Letters of Annie Leake Tuttle: Working for the Best ; 9780889205598 >
+      au < ready ; 1999 ; 9780299164942 ; 9780299164935 ; The Other Mother: A Lesbian's Fight for Her Daughter ; 9780299164935 >
+      au < ready ; 1999 ; 9780824821777 ; 9780824864910 ; The People Trade: Pacific Laborers and New Caledonia, 18651930 ; 9780824864910 >
+      au < ready ; 1999 ; 9780814706794 ; 9780814705285 ; The Political Economy of Hope and Fear: Capitalism and the Black Condition in America ; 9780814705285 >
+      au < ready ; 1999 ; 9780812213829 ; 9780812200706 ; The Promised Lands: The Low Countries Under Burgundian Rule, 1369-1530 ; 9780812200706 >
+      au < ready ; 1999 ; 9780824820640 ; 9780824864996 ; The Rousing Drum: Ritual Practice in a Japanese Community ; 9780824864996 >
+      au < ready ; 1999 ; 9780814735817 ; 9780814744505 ; The Turning: A History of Vietnam Veterans Against the War ; 9780814744505 >
+      au < ready ; 1999 ; 9780472110063 ; 9780472024285 ; Titles, Conflict, and Land Use: The Development of Property Rights and Land Reform on the Brazilian Amazon Frontier ; 9780472024285 >
+      au < ready ; 1999 ; 9780824820374 ; 9780824865498 ; Visions of Ryukyu: Identity and Ideology in Early-Modern Thought and Politics ; 9780824865498 >
+      au < ready ; 1999 ; 9780791440216 ; 9781438404479 ; Voices of Yugoslav Jewry ; 9781438404479 >
+      au < ready ; 1999 ; 9780824820398 ; 9780824865511 ; Voyages and Beaches: Pacific Encounters, 17691840 ; 9780824865511 >
+      au < ready ; 1999 ; 9780814751503 ; 9780814738016 ; William M. Kunstler: The Most Hated Lawyer in America ; 9780814738016 >
+      au < ready ; 2000 ; 9780874173451 ; 9780874175271 ; A Fateful Time: The Background And Legislative History Of The Indian Reorganization Act ; 9780874175271 >
+      au < ready ; 2000 ; 9781563681011 ; 9781563681530 ; A Mighty Change: An Anthology of Deaf American Writing, 1816-1864 ; 9781563681530 >
+      au < ready ; 2000 ; 9780814793664 ; 9780814795125 ; A Peculiar Crusade: Willis M. Everett and the Malmedy Massacre ; 9780814795125 >
+      au < ready ; 2000 ; 9780824820916 ; 9780824861308 ; A Voyage Round the World, Volumes I & II ; 9780824861308 >
+      au < ready ; 2000 ; 9780295979144 ; 9780295800585 ; Adios to Tears: The Memoirs of a Japanese-Peruvian Internee in U.S. Concentration Camps ; 9780295800585 >
+      au < ready ; 2000 ; 9780813121482 ; 9780813127446 ; All This Hell: U.S. Nurses Imprisoned by the Japanese ; 9780813127446 >
+      au < ready ; 2000 ; 9780820322247 ; 9780820327259 ; Amistad Revolt: Memory, Slavery, and the Politics of Identity in the United States and Sierra Leone ; 9780820327259 >
+      au < ready ; 2000 ; 9780824822385 ; 9780824861445 ; Anatomy of a Crisis: Education, Development, and the State in Cambodia, 19531998 ; 9780824861445 >
+      au < ready ; 2000 ;  ; 9780803202757 ; And the Witnesses Were Silent: The Confessing Church and the Persecution of the Jews ; 9780803202757 >
+      au < ready ; 2000 ;  ; 9780803201774 ; Atlanta 1864: Last Chance for the Confederacy ; 9780803201774 >
+      au < ready ; 2000 ; 9782760305106 ; 9782760315457 ; Au fil des ans: L'Union catholique des fermières de la province d'Ontario de 1936 à 1945 ; 9782760315457 >
+      au < ready ; 2000 ; 9780292787438 ; 9780292797918 ; Barrios Norteños: St. Paul and Midwestern Mexican Communities in the Twentieth Century ; 9780292797918 >
+      au < ready ; 2000 ; 9780824822880 ; 9780824861636 ; Between the Folds: Stories of Cloth, Lives and Travels from Sumba ; 9780824861636 >
+      au < ready ; 2000 ; 9780814706626 ; 9780814705223 ; Black and Multiracial Politics in America ; 9780814705223 >
+      au < ready ; 2000 ;  ; 9780803200173 ; Black Elk Lives: Conversations with the Black Elk Family ; 9780803200173 >
+      au < ready ; 2000 ; 9780889203518 ; 9780889205895 ; Children in English-Canadian Society: Framing the Twentieth-Century Consensus ; 9780889205895 >
+      au < ready ; 2000 ; 9789622095014 ; 9789882200661 ; Chinese Archery ; 9789882200661 >
+      au < ready ; 2000 ; 9780791445396 ; 9780791492758 ; Constructing Boundaries: Jewish and Arab Workers in Mandatory Palestine ; 9780791492758 >
+      au < ready ; 2000 ; 9781557531988 ; 9781612491080 ; Constructing the Criollo Archive ; 9781612491080 >
+      au < ready ; 2000 ; 9780472086979 ; 9780472023585 ; Coping With Poverty: The Social Contexts of Neighborhood, Work, and Family in the African-American Community ; 9780472023585 >
+      au < ready ; 2000 ; 9780814756201 ; 9780814759929 ; Dance Hall Days: Intimacy and Leisure Among Working-Class Immigrants in the United States ; 9780814759929 >
+      au < ready ; 2000 ; 9780870135606 ; 9780870138959 ; Democracy and development in Mali ; 9780870138959 >
+      au < ready ; 2000 ;  ; 9780803202337 ; Documents of United States Indian Policy (Third Edition) ; 9780803202337 >
+      au < ready ; 2000 ; 9780870134920 ; 9781609171551 ; Fish in the Lakes, Wild Rice, and Game in Abundance: Testimony on Behalf of Mille Lacs Ojibwe Hunting and Fishing Rights ; 9781609171551 >
+      au < ready ; 2000 ; 9780824821883 ; 9780824862633 ; Generals and Scholars: Military Rule in Medieval Korea ; 9780824862633 >
+      au < ready ; 2000 ; 9780295983158 ; 9780295989853 ; George Perkins Marsh: Prophet of Conservation ; 9780295989853 >
+      au < ready ; 2000 ; 9780253338051 ; 9780253108937 ; Griots at War: Conflict, Conciliation, and Caste in Mande ; 9780253108937 >
+      au < ready ; 2000 ; 9780472111435 ; 9780472023844 ; Harmony and the Balance: An Intellectual History of Seventeenth-Century English Economic Thought ; 9780472023844 >
+      au < ready ; 2000 ; 9780824822897 ; 9780824862763 ; Hawai`i Chronicles III: World War Two in Hawai`i, from the pages of Paradise of the Pacific ; 9780824862763 >
+      au < ready ; 2000 ; 9780873513951 ; 9780873517362 ; Haymakers: A Chronicle of Five Farm Families ; 9780873517362 >
+      au < ready ; 2000 ; 9780295979625 ; 9780295802220 ; Henry M. Jackson: A Life in Politics ; 9780295802220 >
+      au < ready ; 2000 ; 9780873513852 ; 9780873516723 ; Honor the Grandmothers: Dakota and Lakota Women Tell Their Stories ; 9780873516723 >
+      au < ready ; 2000 ; 9780824822927 ; 9780824863081 ; Japanese Culture ; 9780824863081 >
+      au < ready ; 2000 ; 9780824820626 ; 9780824863166 ; Japan's Imperial Diplomacy: Consuls, Treaty Ports and War in China, 18951938 ; 9780824863166 >
+      au < ready ; 2000 ; 9780824822828 ; 9780824863180 ; John A. Burns ; 9780824863180 >
+      au < ready ; 2000 ;  ; 9780803200340 ; Kit Carson and the Indians ; 9780803200340 >
+      au < ready ; 2000 ; 9780292708808 ; 9780292798205 ; La Revolución: Mexico's Great Revolution as Memory, Myth, and History ; 9780292798205 >
+      au < ready ; 2000 ;  ; 9780803200791 ; LaDonna Harris: A Comanche Life ; 9780803200791 >
+      au < ready ; 2000 ; 9780813121567 ; 9780813129402 ; Lincoln of Kentucky ; 9780813129402 >
+      au < ready ; 2000 ; 9780824819804 ; 9780824863517 ; Mapping Chengde ; 9780824863517 >
+      au < ready ; 2000 ; 9780791448038 ; 9780791491522 ; Medical Progress and Social Reality: A Reader in Nineteenth-Century Medicine and Literature ; 9780791491522 >
+      au < ready ; 2000 ; 9780877457015 ; 9781587293047 ; Memoirs of a Cold War Son ; 9781587293047 >
+      au < ready ; 2000 ; 9780292787377 ; 9780292799257 ; Michoacán and Eden: Vasco de Quiroga and the Evangelization of Western Mexico ; 9780292799257 >
+      au < ready ; 2000 ; 9781931968546 ; 9781935603221 ; Murder, Culture, and Injustice: Four Sensational Cases in American History ; 9781935603221 >
+      au < ready ; 2000 ; 9780824822866 ; 9780824863722 ; Nature, Culture, and History: The "Knowing" of Oceania ; 9780824863722 >
+      au < ready ; 2000 ; 9781578062423 ; 9781621035862 ; Obituaries in American Culture ; 9781621035862 >
+      au < ready ; 2000 ; 9780870815584 ; 9781607321323 ; Quetzalcoatl and the Irony of Empire: Myths and Prophecies in the Aztec Tradition, Revised Edition ; 9781607321323 >
+      au < ready ; 2000 ; 9780814736159 ; 9780814744574 ; Race Woman: The Lives of Shirley Graham Du Bois ; 9780814744574 >
+      au < ready ; 2000 ; 9780824821487 ; 9780824864125 ; Remaking the Chinese City: Modernity and National Identity, 19001950 ; 9780824864125 >
+      au < ready ; 2000 ; 9780824821890 ; 9780824864163 ; Remembrance of Pacific Pasts ; 9780824864163 >
+      au < ready ; 2000 ; 9780292712249 ; 9780292798243 ; Renewing the Maya World: Expressive Culture in a Highland Town ; 9780292798243 >
+      au < ready ; 2000 ; 9780889203440 ; 9780889205383 ; Secondary Sources in the History of Canadian Medicine: A Bibliography / Bibliographie de l'Histoire de la Médecine / Volume 2 ; 9780889205383 >
+      au < ready ; 2000 ; 9780271020631 ; 9780271052687 ; Sweet Land of Liberty: The Ordeal of the American Revolution in Northampton County, Pennsylvania ; 9780271052687 >
+      au < ready ; 2000 ; 9780292781672 ; 9780292798816 ; Tales of Two Cities: Race and Economic Culture in Early Republican North and South America ; 9780292798816 >
+      au < ready ; 2000 ; 9780801898181 ; 9780801872853 ; Technological Change and the United States Navy, 1865-1945 ; 9780801872853 >
+      au < ready ; 2000 ; 9780812217223 ; 9780812200140 ; The Complexion of Race: Categories of Difference in Eighteenth-Century British Culture ; 9780812200140 >
+      au < ready ; 2000 ; 9780814722121 ; 9780814722909 ; The Debate Over Slavery: Antislavery and Proslavery Liberalism in Antebellum America ; 9780814722909 >
+      au < ready ; 2000 ; 9780812217452 ; 9780812200300 ; The Envy of Angels: Cathedral Schools and Social Ideals in Medieval Europe, 950-1200 ; 9780812200300 >
+      au < ready ; 2000 ; 9780824822637 ; 9780824864743 ; The Gates of Power: Monks, Courtiers and Warriors in Premodern Japan ; 9780824864743 >
+      au < ready ; 2000 ; 9780253338068 ; 9780253108470 ; The Good, the Bad, and the Beautiful: Discourse about Values in Yoruba Culture ; 9780253108470 >
+      au < ready ; 2000 ; 9781566397742 ; 9781439903933 ; The Money Pitch: Baseball Free Agency and Salary Arbitration ; 9781439903933 >
+      au < ready ; 2000 ; 9780889203242 ; 9780889207769 ; The Shape of the Great Pyramid ; 9780889207769 >
+      au < ready ; 2000 ; 9780472110612 ; 9780472024186 ; The Social Politics of Medieval Diplomacy: Anglo-German Relations (1066-1307) ; 9780472024186 >
+      au < ready ; 2000 ; 9780812235623 ; 9780812203813 ; Uncommon Dominion: Venetian Crete and the Myth of Ethnic Purity ; 9780812203813 >
+      au < ready ; 2000 ;  ; 9780803202894 ; Vichy's Afterlife: History and Counterhistory in Postwar France ; 9780803202894 >
+      au < ready ; 2000 ; 9780292708853 ; 9780292798199 ; Warm Springs Millennium: Voices from the Reservation ; 9780292798199 >
+      au < ready ; 2000 ; 9780791446492 ; 9780791492222 ; Which Lessons Matter?: American Foreign Policy Decision Making in the Middle East, 1979-1987 ; 9780791492222 >
+      au < ready ; 2000 ; 9780877457305 ; 9781587293412 ; Whitman and the Irish ; 9781587293412 >
+      au < ready ; 2001 ; 9782760305182 ; 9782760315297 ; À l'ombre de l'INCO: Étude de la transition d'une communauté canadienne-française de la région de Sudbury (1890-1972) ; 9782760315297 >
+      au < ready ; 2001 ; 9780877457596 ; 9781587293276 ; A Perfect Picture of Hell: Eyewitness Accounts by Civil War Prisoners from the 12th Iowa ; 9781587293276 >
+      au < ready ; 2001 ; 9780889203433 ; 9780889208834 ; A Year Inland: The Journal of a Hudson's Bay Company Winterer ; 9780889208834 >
+      au < ready ; 2001 ; 9780776605418 ; 9780776615325 ; Aboriginal People and Other Canadians: Shaping New Relationships ; 9780776615325 >
+      au < ready ; 2001 ; 9781557532015 ; 9781612490694 ; Ambivalence of Identity: The Austrian Experience of Nation-Building in a Modern Society ; 9781612490694 >
+      au < ready ; 2001 ; 9781603441322 ; 9781603443296 ; Americans All!: Foreign-born Soldiers in World War I ; 9781603443296 >
+      au < ready ; 2001 ; 9780814726976 ; 9780814728154 ; An Interracial Movement of the Poor: Community Organizing and the New Left in the 1960s ; 9780814728154 >
+      au < ready ; 2001 ; 9780813920443 ; 9780813921709 ; Bacchus and Civic Order: The Culture of Drink in Early Modern Germany ; 9780813921709 >
+      au < ready ; 2001 ; 9780824823917 ; 9780824861544 ; Bandits, Eunuchs and the Son of Heaven ; 9780824861544 >
+      au < ready ; 2001 ; 9780813122175 ; 9780813170824 ; Blood on the Moon: The Assassination of Abraham Lincoln ; 9780813170824 >
+      au < ready ; 2001 ; 9780820322339 ; 9780820342351 ; Blue Coat or Powdered Wig: Free People of Color in Pre-Revolutionary Saint Domingue ; 9780820342351 >
+      au < ready ; 2001 ; 9780295980911 ; 9780295801131 ; Color-line to Borderlands: The Matrix of American Ethnic Studies ; 9780295801131 >
+      au < ready ; 2001 ; 9780813920597 ; 9780813921693 ; Coming to Terms with Democracy: Federalist Intellectuals and the Shaping of an American Culture, 1800-1828 ; 9780813921693 >
+      au < ready ; 2001 ; 9780292712324 ; 9780292798236 ; Consuming Grief: Compassionate Cannibalism in an Amazonian Society ; 9780292798236 >
+      au < ready ; 2001 ; 9780870135705 ; 9780870139284 ; Control and order in French colonial Louisbourg, 1713-1758 ; 9780870139284 >
+      au < ready ; 2001 ; 9780824821913 ; 9780824861995 ; Controlling the Dragon ; 9780824861995 >
+      au < ready ; 2001 ; 9780814788066 ; 9780814789087 ; Copyrights and Copywrongs: The Rise of Intellectual Property and How it Threatens Creativity ; 9780814789087 >
+      au < ready ; 2001 ; 9780814731444 ; 9780814733332 ; Critical Race Narratives: A Study of Race, Rhetoric and Injury ; 9780814733332 >
+      au < ready ; 2001 ; 9780292725300 ; 9780292798267 ; Cultural Logics and Global Economies: Maya Identity in Thought and Practice ; 9780292798267 >
+      au < ready ; 2001 ; 9780812236101 ; 9780812203172 ; Curiosities and Texts: The Culture of Collecting in Early Modern England ; 9780812203172 >
+      au < ready ; 2001 ;  ; 9780803200203 ; Essays on Hitler's Europe ; 9780803200203 >
+      au < ready ; 2001 ; 9780889203457 ; 9780889205970 ; Faku: Rulership and Colonialism in the Mpondo Kingdom (c. 1780-1867) ; 9780889205970 >
+      au < ready ; 2001 ; 9781566398343 ; 9781439907788 ; Forgotten Conquests: Rereading New World History from the Margins ; 9781439907788 >
+      au < ready ; 2001 ; 9780813122243 ; 9780813170800 ; Fugitives: Evading and Escaping the Japanese ; 9780813170800 >
+      au < ready ; 2001 ; 9780814719398 ; 9780814744079 ; Guess Who's Coming to Dinner Now?: Multicultural Conservatism in America ; 9780814744079 >
+      au < ready ; 2001 ;  ; 9780803202450 ; Ham, Eggs, and Corn Cake: A Nebraska Territory Diary ; 9780803202450 >
+      au < ready ; 2001 ; 9780817310585 ; 9780817313630 ; Here and There in Mexico: The Travel Writings of Mary Ashley Townsend ; 9780817313630 >
+      au < ready ; 2001 ; 9780801867002 ; 9780801876608 ; Homelands: A Geography of Culture and Place across America ; 9780801876608 >
+      au < ready ; 2001 ; 9789622095267 ; 9789882201613 ; Hong Kong Invaded!: A 'Ninety-Seven Nightmare ; 9789882201613 >
+      au < ready ; 2001 ; 9780814731352 ; 9780814733318 ; How Effective is Strategic Bombing?: Lessons Learned From World War II to Kosovo ; 9780814733318 >
+      au < ready ; 2001 ; 9781578063994 ; 9781604731354 ; I Always Wanted to Fly: America's Cold War Airmen ; 9781604731354 >
+      au < ready ; 2001 ; 9781558493124 ; 9781613760802 ; Imperial Brotherhood: Gender and the Making of Cold War Foreign Policy ; 9781613760802 >
+      au < ready ; 2001 ; 9780814793688 ; 9780814784624 ; In The Company Of Black Men: The African Influence on African American Culture in New York City ; 9780814784624 >
+      au < ready ; 2001 ; 9780299168643 ; 9780299168636 ; In Times of Crisis: Essays on European Culture, Germans, and Jews ; 9780299168636 >
+      au < ready ; 2001 ; 9780877457671 ; 9781587293382 ; Intimate with Walt: Selections from Whitman's Conversations with Horace Traubel, 1888-1892 ; 9781587293382 >
+      au < ready ; 2001 ; 9780817310936 ; 9780817313302 ; Island Lives: Historical Archaeologies of the Caribbean ; 9780817313302 >
       au < manifest ; 2001 ; 9780824824143 ; 9780824863128 ; Japanese Sports ; 9780824863128 >
       au < manifest ; 2001 ; 9780295981628 ; 9780295801629 ; Landscape Traveled by Coyote and Crane: The World of the Schitsu'umsh (Coeur d'Alene Indians) ; 9780295801629 >
       au < manifest ; 2001 ; 9780873514064 ; 9780873517393 ; Last Full Measure: The Life and Death of the First Minnesota Volunteers ; 9780873517393 >
