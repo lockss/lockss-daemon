@@ -6,6 +6,7 @@
   >
 
   comment[platform] = Developed by Highwire.
+  rights = openaccess
   
   plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
   param[base_url] = https://peerj.com/
