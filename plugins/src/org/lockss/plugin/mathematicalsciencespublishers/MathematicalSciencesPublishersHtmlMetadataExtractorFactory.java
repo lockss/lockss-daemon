@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.1 2013-08-23 02:26:23 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.2 2013-10-07 15:53:59 etenbrink Exp $
  */
 
 /*
@@ -32,9 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.mathematicalsciencespublishers;
 
-//import java.io.*;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,6 +47,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.repository.LockssRepository;
 
 
 /*
@@ -68,7 +70,8 @@ import org.lockss.plugin.*;
  */
 
 public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("MathematicalSciencesPublishersHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(
+      MathematicalSciencesPublishersHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
@@ -101,11 +104,14 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       tagMap.put("scraped_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("scraped_publication_date", MetadataField.FIELD_DATE);
     }
-
+    
+    private Pattern whiteSpacePat = Pattern.compile("\\s+");
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException {
-      ArticleMetadata am = supeRextract(target, cu); // super.extract(target, cu);
+      ArticleMetadata am = supeRextract(target, cu); // XXX replace with following line
+// XXX     ArticleMetadata am = super.extract(target, cu);
       
       // attempt to get doi. etc from xhtml file
       if ((am.getRaw("citation_doi") == null) || 
@@ -113,7 +119,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
         
         String colContent="";
         // get the content
-        BufferedReader bReader = new BufferedReader(cu.openForReading());     
+        BufferedReader bReader = new BufferedReader(openForReading(cu));
         
         try {
           Matcher matcher;
@@ -174,7 +180,22 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       
       return am;
     }
-    
+    // XXX do not forget to remove when new method to get charset encoding is released
+    // XXX probably in BaseCachedUrl
+    private Reader openForReading(CachedUrl cu) {
+      try {
+        return new BufferedReader(new InputStreamReader(
+            cu.getUnfilteredInputStream(), Constants.ENCODING_UTF_8));
+      } catch (IOException e) {
+        // XXX Wrong Exception.  Should this method be declared to throw
+        // UnsupportedEncodingException?
+        log.error("Creating InputStreamReader for '" + cu.getUrl() + "'", e);
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't create InputStreamReader:" + e.toString());
+      }
+    }
+
+    // XXX replaces super.extract; remove when SimpleHtmlMetaTagMetadataExtractor updated
     private ArticleMetadata supeRextract(MetadataTarget target, CachedUrl cu)
         throws IOException {
       if (cu == null) {
@@ -182,7 +203,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       }
       ArticleMetadata ret = new ArticleMetadata();
       BufferedReader bReader =
-        new BufferedReader(cu.openForReading());
+        new BufferedReader(openForReading(cu));
       for (String line = bReader.readLine();
      line != null;
      line = bReader.readLine()) {
@@ -210,9 +231,10 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
             if (nextLine == null) {
               break;
             }
-            // XXX here we want to trim leading spaces
             if (line.endsWith("=") && nextLine.startsWith(" ")) {
-              nextLine = nextLine.replaceFirst("\\s+", "");
+              // here we trim leading spaces from nextLine
+              Matcher m = whiteSpacePat.matcher(nextLine);
+              nextLine = m.replaceFirst("");
             }
             line += nextLine;
             continue;
@@ -226,7 +248,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       IOUtil.safeClose(bReader);
       return ret;
     }
-    
+    // XXX replaces super.addTag; remove when SimpleHtmlMetaTagMetadataExtractor updated
     private void addTag(String line, ArticleMetadata ret) {
       String nameFlag = "name=\"";
       int nameBegin = StringUtil.indexOfIgnoreCase(line, nameFlag);
@@ -270,14 +292,15 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       String content = line.substring(contentBegin, contentEnd);
       putValue(ret, name, content);
     }
-    
-    private void putValue(ArticleMetadata ret, String name, String content) {
+    // XXX replaces protected super.putValue; remove when SimpleHtmlMetaTagMetadataExtractor updated
+    protected void putValue(ArticleMetadata ret, String name, String content) {
       // filter raw HTML tags embedded within content -- publishers get sloppy
       content = HtmlUtil.stripHtmlTags(content);
       // remove character entities from content
       content = StringEscapeUtils.unescapeHtml(content);
-      // normalize multiple whitespace chars to a single space character
-      content = content.replaceAll("\\s+", " ");
+      // normalize multiple whitespace characters to a single space character
+      Matcher m = whiteSpacePat.matcher(content);
+      content = m.replaceAll(" ");
       
       if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
       ret.putRaw(name, content);
