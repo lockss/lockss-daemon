@@ -15,7 +15,8 @@
   {
   
     title < 
-      name = PeerJ Archives
+      name = PeerJ Archives ;
+      issn = 2167-8359
     >    
   
     param[peerj_site] = archives
@@ -27,7 +28,8 @@
   {
   
     title < 
-      name = PeerJ PrePrints
+      name = PeerJ PrePrints ;
+      issn = 2167-9843
     >
 
     param[peerj_site] = archives-preprints
