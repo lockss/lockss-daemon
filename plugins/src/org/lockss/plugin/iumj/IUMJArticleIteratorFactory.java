@@ -1,5 +1,5 @@
 /*
- * $Id: IUMJArticleIteratorFactory.java,v 1.4 2013-10-03 17:35:29 etenbrink Exp $
+ * $Id: IUMJArticleIteratorFactory.java,v 1.5 2013-10-07 20:35:29 etenbrink Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class IUMJArticleIteratorFactory
                ArticleMetadataExtractorFactory {
   
   protected static Logger log =
-      Logger.getLogger("IUMJArticleIteratorFactory");
+      Logger.getLogger(IUMJArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE =
       "\"%sIUMJ/FTDLOAD/%d/\", base_url, year";
