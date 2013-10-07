@@ -22,7 +22,9 @@
       
      param[journal_issn] = 2050-4551 
      
-     au < manifest ; 2009 ; Alexandria Volume 21 ; 21 >
+     comment[manifest] = gln permission statement gone. 2050-4551
+     
+     au < exists ; 2009 ; Alexandria Volume 21 ; 21 >
      au < released ; 2011 ; Alexandria Volume 22 ; 22 >
      au < released ; 2012 ; Alexandria Volume 23 ; 23 >
      au < expected ; 2013 ; Alexandria Volume 24 ; 24 >
@@ -66,21 +68,23 @@
       
      param[journal_issn] = 2050-456X
      
-     au < manifest ; 1999 ; Gothic Studies Volume 1 ; 1 >
-     au < manifest ; 2000 ; Gothic Studies Volume 2 ; 2 >
-     au < manifest ; 2001 ; Gothic Studies Volume 3 ; 3 >
-     au < manifest ; 2002 ; Gothic Studies Volume 4 ; 4 >
-     au < manifest ; 2003 ; Gothic Studies Volume 5 ; 5 >
-     au < manifest ; 2004 ; Gothic Studies Volume 6 ; 6 >
-     au < manifest ; 2005 ; Gothic Studies Volume 7 ; 7 >
-     au < manifest ; 2006 ; Gothic Studies Volume 8 ; 8 >
-     au < manifest ; 2007 ; Gothic Studies Volume 9 ; 9 >
-     au < manifest ; 2008 ; Gothic Studies Volume 10 ; 10 >
-     au < manifest ; 2009 ; Gothic Studies Volume 11 ; 11 >
-     au < manifest ; 2010 ; Gothic Studies Volume 12 ; 12 >
+     comment[manifest] = gln permission statement gone. 2050-456X
+     
+     au < exists ; 1999 ; Gothic Studies Volume 1 ; 1 >
+     au < exists ; 2000 ; Gothic Studies Volume 2 ; 2 >
+     au < exists ; 2001 ; Gothic Studies Volume 3 ; 3 >
+     au < exists ; 2002 ; Gothic Studies Volume 4 ; 4 >
+     au < exists ; 2003 ; Gothic Studies Volume 5 ; 5 >
+     au < exists ; 2004 ; Gothic Studies Volume 6 ; 6 >
+     au < exists ; 2005 ; Gothic Studies Volume 7 ; 7 >
+     au < exists ; 2006 ; Gothic Studies Volume 8 ; 8 >
+     au < exists ; 2007 ; Gothic Studies Volume 9 ; 9 >
+     au < exists ; 2008 ; Gothic Studies Volume 10 ; 10 >
+     au < exists ; 2009 ; Gothic Studies Volume 11 ; 11 >
+     au < exists ; 2010 ; Gothic Studies Volume 12 ; 12 >
      au < released ; 2011 ; Gothic Studies Volume 13 ; 13 >
      au < released ; 2012 ; Gothic Studies Volume 14 ; 14 >
-     au < manifest ; 2013 ; Gothic Studies Volume 15 ; 15 >
+     au < exists ; 2013 ; Gothic Studies Volume 15 ; 15 >
      au < expected ; 2014 ; Gothic Studies Volume 16 ; 16 >
     
     }
@@ -173,10 +177,12 @@
       
      param[journal_issn] = 2050-4918
      
-     au < manifest ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
-     au < manifest ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
-     au < manifest ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
-     au < manifest ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
+     comment[manifest] = gln permission statement gone. 2050-4918
+     
+     au < exists ; 2007 ; Irish Economic and Social History Volume 34 ; 34 >
+     au < exists ; 2008 ; Irish Economic and Social History Volume 35 ; 35 >
+     au < exists ; 2009 ; Irish Economic and Social History Volume 36 ; 36 >
+     au < exists ; 2010 ; Irish Economic and Social History Volume 37 ; 37 >
      au < released ; 2011 ; Irish Economic and Social History Volume 38 ; 38 >
      au < released ; 2012 ; Irish Economic and Social History Volume 39 ; 39 >
      au < expected ; 2013 ; Irish Economic and Social History Volume 40 ; 40 >
@@ -196,8 +202,10 @@
       
      param[journal_issn] = 2050-5280
      
-     au < manifest ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
-     au < manifest ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
+     comment[manifest] = gln permission statement gone. 2050-5280
+     
+     au < exists ; 2009 ; Irish Journal of Sociology Volume 17 ; 17 >
+     au < exists ; 2010 ; Irish Journal of Sociology Volume 18 ; 18 >
      au < released ; 2011 ; Irish Journal of Sociology Volume 19 ; 19 >
      au < released ; 2012 ; Irish Journal of Sociology Volume 20 ; 20 >
      au < expected ; 2013 ; Irish Journal of Sociology Volume 21 ; 21 >
