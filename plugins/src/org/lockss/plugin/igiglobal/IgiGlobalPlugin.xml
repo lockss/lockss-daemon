@@ -58,12 +58,12 @@
     <list>
       <string>2,"^%smembership/login", base_url</string>
       <string>2,"(/App_Master){2}", base_url</string>
-      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.+)?$", base_url</string>
+      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)([?]v=.+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sgateway/contentowned/articles\.aspx", base_url</string>
+      <string>1,"^%sgateway/contentowned/articles[.]aspx", base_url</string>
       <string>1,"^%sgateway/(issue|article(/full-text-pdf|/full-text-html)?)/[0-9]+$", base_url</string>
-      <string>1,"^%spdf\.aspx\?", base_url</string>
-      <string>1,"^%sviewtitle\.aspx\?titleid=[0-9]+$", base_url</string>
+      <string>1,"^%spdf[.]aspx[?]", base_url</string>
+      <string>1,"^%sviewtitle[.]aspx[?]titleid=[0-9]+$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -106,8 +106,8 @@
     <list>
       <string>"^%sgateway/article/full-text-html/[0-9]+$", base_url</string>
       <string>"^%sgateway/article/full-text-pdf/[0-9]+$", base_url</string>
-      <string>"^%sviewtitle\.aspx\?titleid=[0-9]+$", base_url</string>
-      <string>"^%spdf\.aspx\?", base_url</string>
+      <string>"^%sviewtitle[.]aspx[?]titleid=[0-9]+$", base_url</string>
+      <string>"^%spdf[.]aspx[?]", base_url</string>
     </list>
   </entry>
   <entry>
