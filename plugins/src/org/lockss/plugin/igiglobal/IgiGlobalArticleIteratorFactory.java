@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.8 2013-10-03 15:55:23 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.9 2013-10-07 16:45:38 etenbrink Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class IgiGlobalArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("IgiGlobalArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(IgiGlobalArticleIteratorFactory.class);
   
   protected static final String JOURNAL_ROOT_TEMPLATE =
       "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
@@ -110,10 +110,10 @@ public class IgiGlobalArticleIteratorFactory
       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
       
       // minimize the work you do if you are just counting articles
-      if ((spec.getTarget() != null) && (spec.getTarget().isArticle())) {
+      if ((spec.getTarget() == null) || (!spec.getTarget().isArticle())) {
         guessPdf(af, absMat);
-        guessFullText(af, absMat);
       }
+      guessFullText(af, absMat);
       
       return af;
     }
