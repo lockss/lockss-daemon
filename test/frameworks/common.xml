@@ -54,6 +54,8 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+        <value>org.lockss.plugin.peerj.ClockssPeerJPlugin</value>
+        <value>org.lockss.plugin.peerj.PeerJPlugin</value>
         <value>org.lockss.plugin.wiley.ClockssWileySourcePlugin</value>
         <value>org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin</value>
         <value>org.lockss.plugin.medknow.MedknowPlugin</value>
@@ -120,8 +122,8 @@
         <value>org.molvis.plugin.MolVisPlugin</value>
         <value>org.lockss.plugin.ojs.OJSPlugin</value>
         <value>org.lockss.plugin.ojs2.OJS2Plugin</value>
-	<value>org.lockss.plugin.ojs2.ClockssOJS2Plugin</value>
-	<value>org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin</value>
+	      <value>org.lockss.plugin.ojs2.ClockssOJS2Plugin</value>
+	      <value>org.lockss.plugin.biologicinstitute.ClockssBiologicInstitutePlugin</value>
         <value>edu.upenn.library.plugin.clcweb.CLCWebPlugin</value>
         <value>edu.wisc.library.plugin.CortlandReviewPlugin</value>
         <value>edu.wisc.library.plugin.CortlandReview00Plugin</value>
