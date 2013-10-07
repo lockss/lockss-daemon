@@ -10,7 +10,7 @@
   plugin = org.lockss.plugin.peerj.ClockssPeerJPlugin
   param[base_url] = https://peerj.com/
     
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; status2 ; year ; name ; param[year] >
 
   {
   
@@ -20,7 +20,7 @@
   
     param[peerj_site] = archives
     
-    au < exists ; 2013 ; PeerJ Archives: 2013 ; 2013 > 
+    au < exists ; exists ; 2013 ; PeerJ Archives: 2013 ; 2013 > 
     
   }
   
@@ -32,7 +32,7 @@
 
     param[peerj_site] = archives-preprints
     
-    au < exists ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
+    au < exists ; exists ; 2013 ; PeerJ PrePrint Archives: 2013 ; 2013 > 
 
   }
 
