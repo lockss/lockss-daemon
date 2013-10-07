@@ -2392,25 +2392,6 @@
   {
 
     title <
-      name = British  Geriatrics Society ;
-      issn =  ;
-      eissn = ;
-      issnl = 
-    >
-
-    {
-    pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://www.bgs.org.uk/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[no_aus] = Added title re: PD-144, but the title appears to be a publisher or aggregator in its own right. I can't find ISSN/EISSN so the fields are blank.
-
-
-    }
-  }
-
-  {
-
-    title <
       name = The British Journal of Aesthetics ;
       issn = 0007-0904 ;
       eissn = 1468-2842 ;
