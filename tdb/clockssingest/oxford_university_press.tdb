@@ -16943,7 +16943,7 @@
     param[base_url] = http://ppar.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; expected ; 2014 ; Public Policy & Aging Report Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; Public Policy & Aging Report Volume 1 ; 1 ; >
 
   }
 
