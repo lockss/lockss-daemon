@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.1 2013-08-23 02:21:27 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.2 2013-10-07 15:56:02 etenbrink Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ implements ArticleIteratorFactory,
       "\"%s%s/%s/\", base_url, journal_id, year"; 
 
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s%s/%s/[0-9-]+/p.+\\.xhtml\", base_url, journal_id, year";
+      "\"^%s%s/%s/[0-9-]+/p.+[.]xhtml\", base_url, journal_id, year";
   
   // MSP publisher, article content may look like this but you do not know
   // how many of the aspects will exist for a particular journal
