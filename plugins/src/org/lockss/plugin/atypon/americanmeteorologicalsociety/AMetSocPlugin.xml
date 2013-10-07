@@ -9,8 +9,26 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>  
+<!--  updating out of sync with parent, must have own feature_version_map -->  
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>8</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>9</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>4</string>
+      </entry>
+    </map>
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>American Meteorological Society Plugin</string>

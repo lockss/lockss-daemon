@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.2 2013-08-06 22:45:13 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.3 2013-10-07 20:36:23 alexandraohlson Exp $
  */
 
 /*
@@ -138,9 +138,18 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
 
     //now consolidate white space before doing additional tagfilter stuff
     Reader WSReader = new WhiteSpaceFilter(NBSPFilter);
-
     Reader filtReader = makeFilteredReader(WSReader);
-    return new ReaderInputStream(filtReader);
+
+    // jeez. bogus occasional addition of trailing space in "ref nowrap "
+    String[][] findAndReplace = new String[][] {
+        // use of &nbsp; or " " inconsistent over time
+        {"ref nowrap ", "ref nowrap"}, 
+    };
+
+    Reader stringFilter = StringFilter.makeNestedFilter(filtReader,
+                                                          findAndReplace,
+                                                          false);
+    return new ReaderInputStream(stringFilter);
   }
 
 

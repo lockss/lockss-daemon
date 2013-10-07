@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.2 2013-08-06 22:45:13 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.3 2013-10-07 20:36:23 alexandraohlson Exp $
  */
 /*
 
@@ -306,9 +306,20 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
           "    <div class=\"panelBottomMiddle panel_228_width\"></div>" +
           "    <div class=\"panelBottomRight\"></div>" +
           "</div>";
+  
+  private static final String spaceInClassName = 
+      "<p>" + 
+          "<span class=\"author\">Fred Q. Writer</span><br />" +
+          "<a class=\"ref nowrap  \" href=\"/doi/abs/10.1175/12345\">Abstract</a>" +
+          "</p>";
+  private static final String spaceInClassNameFiltered = 
+      "<p>" + 
+          "<span class=\"author\">Fred Q. Writer</span><br />" +
+          "<a class=\"ref nowrap\" href=\"/doi/abs/10.1175/12345\">Abstract</a>" +
+          "</p>";
 
-
-  public void testFiltering() throws Exception {
+  
+          public void testFiltering() throws Exception {
     InputStream inA;
     InputStream inB;
 
@@ -352,6 +363,11 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
     inB = fact.createFilteredInputStream(mau, new StringInputStream(emptyHTagTwo),
         ENC);
     assertEquals(StringUtil.fromInputStream(inA),StringUtil.fromInputStream(inB));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(spaceInClassName),
+        ENC);
+    assertEquals(spaceInClassNameFiltered,StringUtil.fromInputStream(inA));
+
 
   }
 }
