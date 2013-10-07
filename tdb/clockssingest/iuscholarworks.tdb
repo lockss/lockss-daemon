@@ -232,6 +232,7 @@
       issn = 2165-2554
     >
 
+      param[base_url] = http://jotlt.indiana.edu/
       param[journal_id] = jotlt
 
       au < exists ; exists ; 2012 ; 2012 ; Journal of Teaching and Learning with Technology Volume 1 ; 1 >
