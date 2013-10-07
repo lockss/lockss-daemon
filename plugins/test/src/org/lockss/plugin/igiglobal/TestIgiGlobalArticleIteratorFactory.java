@@ -200,7 +200,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         null,
         BASE_URL + "gateway/article/11111"};
     
-    String [] af2 = {null,
+    String [] af2 = {BASE_URL + "gateway/article/54321",
         null,
         null,
         BASE_URL + "gateway/article/54321"};

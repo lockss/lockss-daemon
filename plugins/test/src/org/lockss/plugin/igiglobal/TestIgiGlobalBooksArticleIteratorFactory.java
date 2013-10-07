@@ -129,6 +129,7 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
         BASE_URL + "gateway/chapter/full-text-pdf/2222",
         BASE_URL + "gateway/chapter/full-text-pdf/55656",
         BASE_URL + "gateway/chapter/full-text-pdf/12345",
+        BASE_URL + "gateway/chapter/full-text-html/54321",
         BASE_URL + "gateway/chapter/11111",
         BASE_URL + "gateway/chapter/55656",
         BASE_URL + "gateway/chapter/54321",
@@ -177,11 +178,11 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // fulltextcu
     // FULL_TEXT_PDF
     // ABSTRACT - must have abstract to even get picked up
-    String [] af1 = {null,
+    String [] af1 = {BASE_URL + "gateway/chapter/11111",
         null,
         BASE_URL + "gateway/chapter/11111"};
     
-    String [] af2 = {null,
+    String [] af2 = {BASE_URL + "gateway/chapter/full-text-html/54321",
         null,
         BASE_URL + "gateway/chapter/54321"};
     
