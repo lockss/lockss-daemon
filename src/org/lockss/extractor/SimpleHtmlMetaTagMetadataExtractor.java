@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.12 2013-06-28 18:48:05 pgust Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.13 2013-10-07 15:22:38 etenbrink Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang.StringEscapeUtils;
 
 import org.lockss.util.*;
@@ -41,7 +44,8 @@ import org.lockss.plugin.*;
 public class SimpleHtmlMetaTagMetadataExtractor
   extends SimpleFileMetadataExtractor {
 
-  static Logger log = Logger.getLogger("SimpleHtmlMetaTagMetadataExtractor");
+  static Logger log = Logger.getLogger(SimpleHtmlMetaTagMetadataExtractor.class);
+  private Pattern whiteSpacePat = Pattern.compile("\\s+");
 
   public SimpleHtmlMetaTagMetadataExtractor() {
   }
@@ -80,6 +84,11 @@ public class SimpleHtmlMetaTagMetadataExtractor
           String nextLine = bReader.readLine();
           if (nextLine == null) {
             break;
+          }
+          if (line.endsWith("=") && nextLine.startsWith(" ")) {
+            // here we trim leading spaces from nextLine
+            Matcher m = whiteSpacePat.matcher(nextLine);
+            nextLine = m.replaceFirst("");
           }
           line += nextLine;
           continue;
@@ -134,13 +143,18 @@ public class SimpleHtmlMetaTagMetadataExtractor
     }
       
     String content = line.substring(contentBegin, contentEnd);
+    putValue(ret, name, content);
+  }
+  
+  protected void putValue(ArticleMetadata ret, String name, String content) {
     // filter raw HTML tags embedded within content -- publishers get sloppy
     content = HtmlUtil.stripHtmlTags(content);
     // remove character entities from content
     content = StringEscapeUtils.unescapeHtml(content);
-    // normalize multiple whitespces to a single space character
-    content = content.replaceAll("\\s+", " ");
-
+    // normalize multiple whitespace characters to a single space character
+    Matcher m = whiteSpacePat.matcher(content);
+    content = m.replaceAll(" ");
+    
     if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
     ret.putRaw(name, content);
   }
