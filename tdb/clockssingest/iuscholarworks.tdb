@@ -6,7 +6,7 @@
     info[tester] = 0
   >
 
-    param[base_url] = https://scholarworks.iu.edu/
+    param[base_url] = https://scholarworks.iu.edu/journals/
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     implicit < status ; status2 ; year ; param[year] ; name ; volume >
 
@@ -61,7 +61,7 @@
       au < exists ; exists ; 2010 ; 2010 ; Anthropology of East Europe Review Volume 28 ; 28 >
       au < exists ; exists ; 2011 ; 2011 ; Anthropology of East Europe Review Volume 29 ; 29 >
       au < exists ; exists ; 2012 ; 2012 ; Anthropology of East Europe Review Volume 30 ; 30 >
-      au < exists ; exists ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 >
+      au < testing ; exists ; 2013 ; 2013 ; Anthropology of East Europe Review Volume 31 ; 31 >
       au < expected ; exists ; 2014 ; 2014 ; Anthropology of East Europe Review Volume 32 ; 32 >
 
   }
