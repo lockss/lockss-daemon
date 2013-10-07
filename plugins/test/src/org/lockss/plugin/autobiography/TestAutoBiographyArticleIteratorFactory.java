@@ -1,4 +1,8 @@
 /*
+ * $Id: TestAutoBiographyArticleIteratorFactory.java,v 1.2 2013-10-07 16:18:50 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
