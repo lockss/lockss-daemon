@@ -315,6 +315,10 @@
     title <
       name = The Workshop
     >
+    
+      param[journal_id] = 18cy
+
+      au < exists ; exists ; 2013 ; 2013 ; The Workshop Volume 2013 ; 0000 >
 
   }
 }
