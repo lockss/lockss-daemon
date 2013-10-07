@@ -1,10 +1,10 @@
 /*
- * $Id: TestIUMJArticleIteratorFactory.java,v 1.3 2013-10-07 18:05:04 etenbrink Exp $
+ * $Id: TestIUMJArticleIteratorFactory.java,v 1.4 2013-10-07 20:23:57 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iumj;
 
+import java.util.Iterator;
+import java.util.Stack;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
@@ -64,6 +66,7 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
       VOLUME_NAME_KEY, VOLUME_NAME,
       YEAR_KEY, YEAR);
   private static final int DEFAULT_FILESIZE = 3000;
+  private final String ARTICLE_FAIL_MSG = "Article files not created properly";
   
   protected String cuRole = null;
   ArticleMetadataExtractor.Emitter emitter;
@@ -99,7 +102,8 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
     conf.put("numFiles", "5");
     conf.put("fileTypes", "" + (
         SimulatedContentGenerator.FILE_TYPE_HTML |
-        SimulatedContentGenerator.FILE_TYPE_PDF | 
+        SimulatedContentGenerator.FILE_TYPE_PDF |
+        SimulatedContentGenerator.FILE_TYPE_XML |
         SimulatedContentGenerator.FILE_TYPE_TXT));
     conf.put("binFileSize", ""+DEFAULT_FILESIZE);
     return conf;
@@ -113,10 +117,8 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
   }
   
   public void testCrawlRules() throws Exception {
-    //SubTreeArticleIterator artIter = createSubTreeIter();
-    //Pattern pat = getPattern(artIter);
     // use a substance pattern from the crawl rules
-    String re_pattern =BASE_URL+String.format(CRAWLRULE0);    
+    String re_pattern = BASE_URL+String.format(CRAWLRULE0);
     regexpattern = Pattern.compile(re_pattern);
     Pattern pat = regexpattern;
     //http://www.iumj.indiana.edu/IUMJ/ABS/2006/2675
@@ -138,5 +140,145 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
     assertNotMatchesRE(pat, BASE_URL + "IUMJ/FTDLOAD/2006/55/2558/213/pdf");
     
   }
+  
+  /*
+   * PDF Full Text: http://www.iumj.indiana.edu/IUMJ/FTDLOAD/2006/55/55001/pdf
+   * HTML Abstract: http://www.iumj.indiana.edu/IUMJ/ABS/2006/55001
+   * HTML FullText: http://www.iumj.indiana.edu/IUMJ/FULLTEXT/2006/55/55001
+   * Metadata: http://www.iumj.indiana.edu/META/2006/55001.xml
+   */
+  public void testCreateArticleFiles() throws Exception {
+    PluginTestUtil.crawlSimAu(sau);
+    String[] urls = {
+        BASE_URL + "IUMJ/YEAR/2006",
+        BASE_URL + "IUMJ/ISSUE/2006/1",
 
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55001/pdf",
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55001",
+        BASE_URL + "META/2006/55001.xml",
+        BASE_URL + "IUMJ/ABS/2006/55001",
+        BASE_URL + "oai/2006/55/55001/55001.html",
+
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55002/pdf",
+//      BASE_URL + "IUMJ/FULLTEXT/2006/55/55002",
+        BASE_URL + "META/2006/55002.xml",
+        BASE_URL + "IUMJ/ABS/2006/55002",
+        BASE_URL + "oai/2006/55/55002/55002.html",
+
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55003/pdf",
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55003",
+        BASE_URL + "META/2006/55003.xml",
+//        BASE_URL + "IUMJ/ABS/2006/55003",
+//        BASE_URL + "oai/2006/55/55003/55003.html",
+
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55008/pdf",
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55008",
+//        BASE_URL + "META/2006/55008.xml",
+        BASE_URL + "IUMJ/ABS/2006/55008",
+        BASE_URL + "oai/2006/55/55008/55008.html",
+        BASE_URL + "",
+        BASE_URL
+    };
+    Iterator<CachedUrlSetNode> cuIter = sau.getAuCachedUrlSet().contentHashIterator();
+    
+    if(cuIter.hasNext()){
+      CachedUrlSetNode cusn = cuIter.next();
+      CachedUrl cuPdf = null;
+      CachedUrl cuHtml = null;
+      CachedUrl cuXml = null;
+      UrlCacher uc;
+      while(cuIter.hasNext() && (cuPdf == null || cuHtml == null || cuXml == null))
+      {
+        if(cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL && cusn.hasContent())
+        {
+          CachedUrl cu = (CachedUrl)cusn;
+          if (cuPdf == null && 
+              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF))
+          {
+            cuPdf = cu;
+          }
+          else if (cuHtml == null && 
+              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML))
+          {
+            cuHtml = cu;
+          }
+          else if (cuXml == null && 
+              cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_XML))
+          {
+            cuXml = cu;
+          }
+        }
+        cusn = cuIter.next();
+      }
+      
+      for (String url : urls) {
+        uc = au.makeUrlCacher(url);
+        if (url.contains("IUMJ/FULLTEXT")) {
+          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        }
+        else if (url.contains("/pdf")) {
+          uc.storeContent(cuPdf.getUnfilteredInputStream(), cuPdf.getProperties());
+        }
+        else if (url.contains("META")) {
+          uc.storeContent(cuXml.getUnfilteredInputStream(), cuXml.getProperties());
+        }
+        else {
+          uc.storeContent(cuHtml.getUnfilteredInputStream(), cuHtml.getProperties());
+        }
+      }
+    }
+    
+    Stack<String[]> expStack = new Stack<String[]>();
+    String [] af1 = {
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55001/pdf",
+        BASE_URL + "META/2006/55001.xml",
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55001",
+        BASE_URL + "IUMJ/ABS/2006/55001",
+        BASE_URL + "oai/2006/55/55001/55001.html"};
+    
+    String [] af2 = {
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55002/pdf",
+        BASE_URL + "META/2006/55002.xml",
+        null,
+        BASE_URL + "IUMJ/ABS/2006/55002",
+        BASE_URL + "oai/2006/55/55002/55002.html"};
+    
+    String [] af3 = {
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55003/pdf",
+        BASE_URL + "META/2006/55003.xml",
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55003",
+        null,
+        null};
+    
+    String [] af4 = {
+        BASE_URL + "IUMJ/FTDLOAD/2006/55/55008/pdf",
+        null,
+        BASE_URL + "IUMJ/FULLTEXT/2006/55/55008",
+        BASE_URL + "IUMJ/ABS/2006/55008",
+        BASE_URL + "oai/2006/55/55008/55008.html"};
+    
+    expStack.push(af4);
+    expStack.push(af3);
+    expStack.push(af2);
+    expStack.push(af1);
+    
+    for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
+    {
+      ArticleFiles af = artIter.next();
+      String[] act = {
+          af.getFullTextUrl(),
+          af.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
+          af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
+          af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
+          af.getRoleUrl(ArticleFiles.ROLE_CITATION)
+      };
+      String[] exp = expStack.pop();
+      if(act.length == exp.length){
+        for(int i = 0;i< act.length; i++){
+          assertEquals(ARTICLE_FAIL_MSG + " Expected: " + exp[i] + " Actual: " + act[i], exp[i],act[i]);
+        }
+      }
+      else fail(ARTICLE_FAIL_MSG + " length of expected and actual ArticleFiles content not the same:" + exp.length + "!=" + act.length);
+    }
+  }
 }
