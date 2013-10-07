@@ -1,0 +1,159 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.peerj.PeerJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>PeerJ Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.62.0</string>
+  </entry>
+  <entry>
+  <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"PeerJ Plugin, Base URL %s, PeerJ Site %s, Volume %s", base_url, peerj_site, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <list>
+      <string>"%slockss.txt", base_url</string>
+      <!-- hardwire cloudfront host in case publisher changes it -->
+      <string>"https://dfzljdn9uc3pi.cloudfront.net/lockss.txt"</string>
+      <string>"https://d3amtssd1tejdt.cloudfront.net/lockss.txt"</string>
+      <string>"https://d2pdyyx74uypu5.cloudfront.net/lockss.txt"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f|swf)$", base_url</string>
+      <!-- hardwire cloudfront host in case publisher changes it -->
+      <string>2,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/images/"</string>
+      <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/%s/", volume_name</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s\+", base_url</string>
+      <string>2,"^%suser/", base_url</string>
+      <string>1,"^%s%s/", base_url, peerj_site</string>
+      <string>1,"^%s(articles|preprints)/index.html\?month=%s-[0-9]+$", base_url, volume_name</string>
+      <string>1,"^%s(articles|preprints|reviews)/[0-9]+/$", base_url</string>
+      <string>2,"^%s(articles|preprints)/[0-9]+/(author|editor)-[0-9]+$", base_url</string>
+      <string>1,"^%s(articles|preprints)/[0-9]+\.(bib|pdf|ris|xml|html|rdf|json|unixref)$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s(articles|preprints)/[0-9]+/$", base_url</string>
+      <string>"^%s(articles|preprints)/[0-9]+\.(pdf|xml)$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>peerj_site</key>
+        <displayName>PeerJ Site</displayName>
+        <type>1</type>
+        <size>50</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_volume</string>
+        <string>"%s%s/?year=%s", base_url, peerj_site, volume_name</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.peerj.PeerJArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.peerj.PeerJRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.util.urlconn.CacheException$UnretryableException</string>
+    </list>
+  </entry>
+</map>

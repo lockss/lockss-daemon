@@ -1,0 +1,50 @@
+<map>
+  <!-- Inherited from PeerjPlugin.xml. -->  
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.peerj.ClockssPeerJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>PeerJ Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.peerj.PeerJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"PeerJ Plugin (CLOCKSS), Base URL %s, PeerJ Site %s, Year %s", base_url, peerj_site, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.peerj.ClockssPeerJArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.util.urlconn.CacheException$UnretryableException</string>
+    </list>
+  </entry>
+</map>
