@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.9 2013-10-07 16:45:38 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.10 2013-10-07 22:56:18 etenbrink Exp $
  */
 
 /*
@@ -108,6 +108,7 @@ public class IgiGlobalArticleIteratorFactory
     protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+      af.setFullTextCu(absCu);
       
       // minimize the work you do if you are just counting articles
       if ((spec.getTarget() == null) || (!spec.getTarget().isArticle())) {
