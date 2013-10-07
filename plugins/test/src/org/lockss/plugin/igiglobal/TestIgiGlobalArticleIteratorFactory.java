@@ -214,14 +214,7 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     expStack.push(af2);
     expStack.push(af1);
     
-    SubTreeArticleIterator artIter = null;
-    Iterator<ArticleFiles> iter =  au.getArticleIterator(MetadataTarget.Article());
-    assertNotNull("ArticleIterator is null", iter);
-    assert(iter instanceof SubTreeArticleIterator);
-    artIter = (SubTreeArticleIterator)iter;
-    //  artIter = createSubTreeIter();
-    
-    while (artIter.hasNext()) 
+    for ( SubTreeArticleIterator artIter = createSubTreeIter(); artIter.hasNext(); ) 
     {
       ArticleFiles af = artIter.next();
       String[] act = {
