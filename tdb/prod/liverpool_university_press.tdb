@@ -19,7 +19,7 @@
 
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
     param[base_url] = http://liverpool.metapress.com/
-    implicit < status ; year ; name ; param[volume_name] >    
+    implicit < status ; year ; name ; param[volume_name] >
     param[journal_issn] = 2046-2913
 
     au < released ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
@@ -48,7 +48,7 @@
 
     plugin = org.lockss.plugin.metapress.MetaPressPlugin
     param[base_url] = http://liverpool.metapress.com/
-    implicit < status ; year ; name ; param[volume_name] >      
+    implicit < status ; year ; name ; param[volume_name] >
     param[journal_issn] = 1757-8078
 
     au < released ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 >
@@ -58,7 +58,7 @@
     au < released ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 >
     au < released ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 >
     au < released ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 >
-    au < released ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >    
+    au < released ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 >
     au < released ; 2011 ; British Journal of Canadian Studies Volume 24 ; 24 >
     au < released ; 2012 ; British Journal of Canadian Studies Volume 25 ; 25 >
     au < manifest ; 2013 ; British Journal of Canadian Studies Volume 26 ; 26 >
