@@ -1,5 +1,5 @@
 /*
- * $Id: FitsUtil.java,v 1.1.2.1 2013-07-17 10:12:47 easyonthemayo Exp $
+ * $Id: FitsUtil.java,v 1.1.2.1.2.1 2013-10-08 20:05:15 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.truezip.TFileCache;
+//import org.lockss.truezip.TFileCache;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -83,16 +83,11 @@ public class FitsUtil {
       FITS_URL
   );
 
-  public static String fitsHome;
-
-
   /** Shared instance of FITS; it's not clear whether this object is thread safe,
    * so we should synchronize on its usage. */
   private static Fits fits;
-  /** A temp file cache to manage files of dumped CachedUrl streams. */
-  private static TFileCache tFileCache;
-  /** Any error message generated when instantiating the FITS object. */
-  private static String errorMsg;
+//   /** A temp file cache to manage files of dumped CachedUrl streams. */
+//   private static TFileCache tFileCache;
 
   /** Intialise the FITS object and temp file cache. */
   static {
@@ -101,32 +96,29 @@ public class FitsUtil {
       // Could throw NPE or SecurityException
       String s = org.apache.commons.lang.StringUtils.class
           .getProtectionDomain().getCodeSource().getLocation().getPath();
-      fitsHome = s.substring(0, s.lastIndexOf(File.separator)).concat(File.separator).concat("fits");
+      String fitsHome = s.substring(0, s.lastIndexOf(File.separator)).concat(File.separator).concat("fits");
       log.debug("Using FITS_HOME: "+fitsHome);
       // Could throw FitsConfigurationException
       fits = new Fits(fitsHome);
     } catch (RuntimeException e) {
-      fitsHome = null;
+//       fitsHome = null;
       // The arg-less ctr looks for env var FITS_HOME:
       try {
         log.debug("Relying on FITS_HOME in environment variable");
         fits = new Fits();
       } catch (FitsException e1) {
-        e1.printStackTrace();
-        errorMsg = e.getMessage();
+	log.warning("Can't create Fits", e);
         fits = null;
       }
     } catch (FitsConfigurationException e) {
-      e.printStackTrace();
-      errorMsg = e.getMessage();
+      log.warning("Can't configure Fits", e);
     }
 
     /*
     try {
       tFileCache = new TFileCache(FileUtil.createTempDir("fits", null));
     } catch (IOException e) {
-      e.printStackTrace();
-      errorMsg = e.getMessage();
+      log.warning("???", e);
       tFileCache = null;
     }
     */
@@ -162,14 +154,11 @@ public class FitsUtil {
       final FitsOutput fitsOut = doFitsAnalysis(au, url);
       return getContentType(fitsOut);
     } catch (FitsException e) {
-      log.warning("FITS analysis error: "+e);
-      e.printStackTrace();
+      log.warning("FITS analysis error", e);
     } catch (IOException e) {
-      log.warning("Stream could not be written to file: "+e);
-      e.printStackTrace();
+      log.warning("Stream could not be written to file", e);
     } catch (NullPointerException e) {
-      log.warning("Could not find the requested AU cached URL: "+e);
-      e.printStackTrace();
+      log.warning("Could not find the requested AU cached URL", e);
     }
     return UNKNOWN_TYPE;
   }
@@ -186,11 +175,9 @@ public class FitsUtil {
       //final FitsOutput fitsOut = doFitsAnalysis(file.getFullTextCu());
       return getContentType(fitsOut);
     } catch (FitsException e) {
-      log.warning("FITS analysis error: "+e);
-      e.printStackTrace();
+      log.warning("FITS analysis error", e);
     } catch (IOException e) {
-      log.warning("Stream could not be written to file: "+e);
-      e.printStackTrace();
+      log.warning("Stream could not be written to file", e);
     }
     return UNKNOWN_TYPE;
   }
@@ -205,10 +192,10 @@ public class FitsUtil {
     try {
       return getContentType(doFitsAnalysis(inputStream));
     } catch (FitsException e) {
-      e.printStackTrace();
+      log.warning("FITS error", e);
       return UNKNOWN_TYPE;
     } catch (IOException e) {
-      e.printStackTrace();
+      log.warning("FITS error", e);
       return UNKNOWN_TYPE;
     }
   }
@@ -223,7 +210,7 @@ public class FitsUtil {
     try {
       return getContentType(doFitsAnalysis(file));
     } catch (FitsException e) {
-      e.printStackTrace();
+      log.warning("FITS error", e);
       return UNKNOWN_TYPE;
     }
   }
