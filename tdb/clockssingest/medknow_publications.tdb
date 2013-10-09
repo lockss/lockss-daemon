@@ -2976,7 +2976,8 @@
     au < exists ; exists ; 2010 ; Journal of Pharmaceutical Negative Results Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Journal of Pharmaceutical Negative Results Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Journal of Pharmaceutical Negative Results Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2013 ; Journal of Pharmaceutical Negative Results Volume 4 ; 2013 ; 4 >
+    au < exists ; exists ; 2013 ; Journal of Pharmaceutical Negative Results Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Journal of Pharmaceutical Negative Results Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -2994,7 +2995,8 @@
     au < exists ; exists ; 2010 ; Journal of Pharmacology and Pharmacotherapeutics Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Journal of Pharmacology and Pharmacotherapeutics Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Journal of Pharmacology and Pharmacotherapeutics Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2013 ; Journal of Pharmacology and Pharmacotherapeutics Volume 4 ; 2013 ; 4 >
+    au < exists ; exists ; 2013 ; Journal of Pharmacology and Pharmacotherapeutics Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Journal of Pharmacology and Pharmacotherapeutics Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -3014,6 +3016,7 @@
     au < exists ; exists ; 2011 ; Journal of Pharmacy and Bioallied Sciences Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Journal of Pharmacy and Bioallied Sciences Volume 4 ; 2012 ; 4 >
     au < exists ; exists ; 2013 ; Journal of Pharmacy and Bioallied Sciences Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Journal of Pharmacy and Bioallied Sciences Volume 6 ; 2014 ; 6 >
 
   }
 
@@ -3065,7 +3068,8 @@
     au < exists ; exists ; 2010 ; Journal of Postgraduate Medicine Volume 56 ; 2010 ; 56 >
     au < exists ; exists ; 2011 ; Journal of Postgraduate Medicine Volume 57 ; 2011 ; 57 >
     au < exists ; exists ; 2012 ; Journal of Postgraduate Medicine Volume 58 ; 2012 ; 58 >
-    au < expected ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 >
+    au < exists ; exists ; 2013 ; Journal of Postgraduate Medicine Volume 59 ; 2013 ; 59 >
+    au < expected ; exists ; 2014 ; Journal of Postgraduate Medicine Volume 60 ; 2014 ; 60 >
 
   }
 
@@ -3103,6 +3107,7 @@
       au < exists ; exists ; 2002 ; Journal of Research in Medical Sciences Volume 7 [Abstract only] ; 2002 ; 7 >
       au < exists ; exists ; 2003 ; Journal of Research in Medical Sciences Volume 8 [Abstract only] ; 2003 ; 8 >
     }
+    
     au < exists ; exists ; 2004 ; Journal of Research in Medical Sciences Volume 9 ; 2004 ; 9 >
     au < exists ; exists ; 2005 ; Journal of Research in Medical Sciences Volume 10 ; 2005 ; 10 >
     au < exists ; exists ; 2006 ; Journal of Research in Medical Sciences Volume 11 ; 2006 ; 11 >
@@ -3113,6 +3118,7 @@
     au < exists ; exists ; 2011 ; Journal of Research in Medical Sciences Volume 16 ; 2011 ; 16 >
     au < exists ; exists ; 2012 ; Journal of Research in Medical Sciences Volume 17 ; 2012 ; 17 >
     au < exists ; exists ; 2013 ; Journal of Research in Medical Sciences Volume 18 ; 2013 ; 18 >
+    au < expected ; exists ; 2014 ; Journal of Research in Medical Sciences Volume 19 ; 2014 ; 19 >
 
   }
 
@@ -3131,7 +3137,8 @@
     au < exists ; exists ; 2010 ; Journal of Surgical Technique and Case Report Volume 2 ; 2010 ; 2 >
     au < exists ; exists ; 2011 ; Journal of Surgical Technique and Case Report Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Journal of Surgical Technique and Case Report Volume 4 ; 2012 ; 4 >
-    au < expected ; exists ; 2013 ; Journal of Surgical Technique and Case Report Volume 5 ; 2013 ; 5 >
+    au < exists ; exists ; 2013 ; Journal of Surgical Technique and Case Report Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Journal of Surgical Technique and Case Report Volume 6 ; 2014 ; 6 >
 
   }
 
@@ -3148,6 +3155,7 @@
 
     au < exists ; exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 >
     au < exists ; exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 >
+    au < exists ; exists ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 >
 
   }
     
@@ -3166,7 +3174,7 @@
     au < exists ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 >
     au < exists ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 >
-    au < expected ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 5 ; 2014 ; 5 >
 
   }
     
@@ -3211,6 +3219,7 @@
     au < exists ; exists ; 2011 ; Lung India Volume 28 ; 2011 ; 28 >
     au < exists ; exists ; 2012 ; Lung India Volume 29 ; 2012 ; 29 >
     au < exists ; exists ; 2013 ; Lung India Volume 30 ; 2013 ; 30 >
+    au < expected ; exists ; 2014 ; Lung India Volume 31 ; 2014 ; 31 >
 
   }
     
@@ -3244,7 +3253,7 @@
     au < exists ; exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 >
     au < exists ; exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 >
     au < exists ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 >
-    au < expected ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 >
+    au < expected ; exists ; 2014 ; Medical Law Cases - For Doctors Volume 6 ; 2014 ; 6 >
 
   }
 
