@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.347 2013-08-30 18:36:49 tlipkis Exp $
+ $Id: build.xml,v 1.348 2013-10-09 04:14:11 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -342,8 +342,9 @@ Args:
   <!--  Files -->
   <property name="default.releasename.file" value="${src}/defaultreleasename"/>
   <property name="test.classpath.file" value="${test}/test-classpath"/>
-  <property name="production.classpath.file" value="${lib}/run-classpath"/>
-  <property name="production.packinglist.file" value="${lib}/packing-list"/>
+  <property name="run.classpath.file" value="${test}/run-classpath"/>
+  <property name="openbsd.classpath.file" value="${lib}/run-classpath"/>
+  <property name="openbsd.packinglist.file" value="${lib}/packing-list"/>
   <property name="run.props" value="${lib}/run-props"/>
   <property name="maxheap.script" value="${lib}/maxheap"/>
   <!--  This path is also known to org.lockss.util.BuildInfo class -->
@@ -518,7 +519,7 @@ Args:
   <!-- Packing list isn't really a path but handy way to do it. -->
   <path id="prod.packing.list">
     <path refid="run.classpath" />
-    <pathelement path="${production.classpath.file}" />
+    <pathelement path="${openbsd.classpath.file}" />
     <pathelement path="${run.props}" />
     <pathelement path="${maxheap.script}" />
   </path>
@@ -809,8 +810,9 @@ The target you have selected requires compiling under JDK 1.7.
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
-    <delete file="${production.classpath.file}" quiet="true"/>
-    <delete file="${production.packinglist.file}" quiet="true"/>
+    <delete file="${run.classpath.file}" quiet="true"/>
+    <delete file="${openbsd.classpath.file}" quiet="true"/>
+    <delete file="${openbsd.packinglist.file}" quiet="true"/>
     <delete file="${run.props}" quiet="true"/>
     <delete file="${maxheap.script}" quiet="true"/>
     <delete quiet="true" verbose="true">
@@ -1153,6 +1155,10 @@ The target you have selected requires compiling under JDK 1.7.
       <include name="**/" />
       <metainf dir="${src}/META-INF" includes="**" />
     </jar>
+    <!-- Write production classpath to a file, so scripts can get it -->
+    <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
+      targetos="${detected.os}" />
+    <echo message="${tmp.run.clspth}" file="${run.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -1339,12 +1345,12 @@ Must specify output dir with -Doutdir=dir
   <target name="package" depends="jar-lockss,check-libs"
    description="Produce all files for a production package" >
     <!-- Write run classpath file -->
-    <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
+    <pathconvert refid="prod.run.classpath" property="tmp.prod.clspth"
       targetos="${detected.os}">
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
-    <echo message="${tmp.run.clspth}" file="${production.classpath.file}"/>
+    <echo message="${tmp.prod.clspth}" file="${openbsd.classpath.file}"/>
     <!-- Write run-props -->
     <echo file="${run.props}">ULIMIT_DATA=unlimited
 ULIMIT_MEMORY=unlimited
@@ -1364,7 +1370,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
       <!-- entity codes below are open and close curly brace -->
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
-    <echo message="${tmp.packing.list}" file="${production.packinglist.file}"/>
+    <echo message="${tmp.packing.list}" file="${openbsd.packinglist.file}"/>
   </target>
 
   <!-- ==================================================================== -->
