@@ -3278,7 +3278,8 @@
     au < exists ; exists ; 2010 ; Mens Sana Monographs Volume 8 ; 2010 ; 8 >
     au < exists ; exists ; 2011 ; Mens Sana Monographs Volume 9 ; 2011 ; 9 >
     au < exists ; exists ; 2012 ; Mens Sana Monographs Volume 10 ; 2012 ; 10 >
-    au < expected ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 >
+    au < exists ; exists ; 2013 ; Mens Sana Monographs Volume 11 ; 2013 ; 11 >
+    au < expected ; exists ; 2014 ; Mens Sana Monographs Volume 12 ; 2014 ; 12 >
 
   }
 
@@ -3300,6 +3301,7 @@
     au < exists ; exists ; 2011 ; Middle East African Journal of Ophthalmology Volume 18 ; 2011 ; 18 >
     au < exists ; exists ; 2012 ; Middle East African Journal of Ophthalmology Volume 19 ; 2012 ; 19 >
     au < exists ; exists ; 2013 ; Middle East African Journal of Ophthalmology Volume 20 ; 2013 ; 20 >
+    au < expected ; exists ; 2014 ; Middle East African Journal of Ophthalmology Volume 21 ; 2014 ; 21 >
 
   }
 
@@ -3317,7 +3319,8 @@
     au < exists ; exists ; 2010 ; National Journal of Maxillofacial Surgery Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; National Journal of Maxillofacial Surgery Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; National Journal of Maxillofacial Surgery Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2013 ; National Journal of Maxillofacial Surgery Volume 4 ; 2013 ; 4 >
+    au < exists ; exists ; 2013 ; National Journal of Maxillofacial Surgery Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; National Journal of Maxillofacial Surgery Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -3352,7 +3355,8 @@
     au < exists ; exists ; 2010 ; Neurology India Volume 58 ; 2010 ; 58 >
     au < exists ; exists ; 2011 ; Neurology India Volume 59 ; 2011 ; 59 >
     au < exists ; exists ; 2012 ; Neurology India Volume 60 ; 2012 ; 60 >
-    au < expected ; exists ; 2013 ; Neurology India Volume 61 ; 2013 ; 61 >
+    au < exists ; exists ; 2013 ; Neurology India Volume 61 ; 2013 ; 61 >
+    au < expected ; exists ; 2014 ; Neurology India Volume 62 ; 2014 ; 62 >
 
   }
 
@@ -3375,7 +3379,8 @@
     au < exists ; exists ; 2010 ; Nigerian Journal of Clinical Practice Volume 13 ; 2010 ; 13 >
     au < exists ; exists ; 2011 ; Nigerian Journal of Clinical Practice Volume 14 ; 2011 ; 14 >
     au < exists ; exists ; 2012 ; Nigerian Journal of Clinical Practice Volume 15 ; 2012 ; 15 >
-    au < expected ; exists ; 2013 ; Nigerian Journal of Clinical Practice Volume 16 ; 2013 ; 16 >
+    au < exists ; exists ; 2013 ; Nigerian Journal of Clinical Practice Volume 16 ; 2013 ; 16 >
+    au < expected ; exists ; 2014 ; Nigerian Journal of Clinical Practice Volume 17 ; 2014 ; 17 >
 
   }
 
@@ -3389,9 +3394,12 @@
     param[base_url] = http://www.nigerianjsurg.com/
     param[journal_issn] = 1117-6806
 
+    au < exists ; exists ; 2009 ; Nigerian Journal of Surgery Volume 15 ; 2009 ; 15 >
+    au < exists ; exists ; 2010 ; Nigerian Journal of Surgery Volume 16 ; 2010 ; 16 >
     au < exists ; exists ; 2011 ; Nigerian Journal of Surgery Volume 17 ; 2011 ; 17 >
     au < exists ; exists ; 2012 ; Nigerian Journal of Surgery Volume 18 ; 2012 ; 18 >
-    au < expected ; exists ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 >
+    au < exists ; exists ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 >
+    au < expected ; exists ; 2014 ; Nigerian Journal of Surgery Volume 20 ; 2014 ; 20 >
 
   }
 
@@ -3410,7 +3418,8 @@
     au < exists ; exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 >
     au < exists ; exists ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 >
     au < exists ; exists ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 >
-    au < expected ; exists ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 >
+    au < exists ; exists ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 >
+    au < expected ; exists ; 2014 ; Nigerian Medical Journal Volume 55 ; 2014 ; 55 >
 
   }
 
@@ -3439,7 +3448,8 @@
     au < exists ; exists ; 2010 ; Noise and Health Volume 12 ; 2010 ; 12 >
     au < exists ; exists ; 2011 ; Noise and Health Volume 13 ; 2011 ; 13 >
     au < exists ; exists ; 2012 ; Noise and Health Volume 14 ; 2012 ; 14 >
-    au < expected ; exists ; 2013 ; Noise and Health Volume 15 ; 2013 ; 15 >
+    au < exists ; exists ; 2013 ; Noise and Health Volume 15 ; 2013 ; 15 >
+    au < expected ; exists ; 2014 ; Noise and Health Volume 16 ; 2014 ; 16 >
 
   }
 
@@ -3459,7 +3469,8 @@
     au < exists ; exists ; 2010 ; Oman Journal of Ophthalmology Volume 3 ; 2010 ; 3 >
     au < exists ; exists ; 2011 ; Oman Journal of Ophthalmology Volume 4 ; 2011 ; 4 >
     au < exists ; exists ; 2012 ; Oman Journal of Ophthalmology Volume 5 ; 2012 ; 5 >
-    au < expected ; exists ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
+    au < exists ; exists ; 2013 ; Oman Journal of Ophthalmology Volume 6 ; 2013 ; 6 >
+    au < expected ; exists ; 2014 ; Oman Journal of Ophthalmology Volume 7 ; 2014 ; 7 >
 
   }
 
@@ -3478,6 +3489,7 @@
     au < exists ; exists ; 2011 ; Perspectives in Clinical Research Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Perspectives in Clinical Research Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Perspectives in Clinical Research Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Perspectives in Clinical Research Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -3495,7 +3507,7 @@
     au < exists ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -3518,7 +3530,8 @@
     au < exists ; exists ; 2010 ; Pharmacognosy Magazine Volume 6 ; 2010 ; 6 >
     au < exists ; exists ; 2011 ; Pharmacognosy Magazine Volume 7 ; 2011 ; 7 >
     au < exists ; exists ; 2012 ; Pharmacognosy Magazine Volume 8 ; 2012 ; 8 >
-    au < expected ; exists ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 >
+    au < exists ; exists ; 2013 ; Pharmacognosy Magazine Volume 9 ; 2013 ; 9 >
+    au < expected ; exists ; 2014 ; Pharmacognosy Magazine Volume 10 ; 2014 ; 10 >
 
   }
 
@@ -3538,6 +3551,7 @@
     au < exists ; exists ; 2011 ; Pharmacognosy Research Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Pharmacognosy Research Volume 4 ; 2012 ; 4 >
     au < exists ; exists ; 2013 ; Pharmacognosy Research Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Pharmacognosy Research Volume 6 ; 2014 ; 6 >
 
   }  
 
@@ -3558,7 +3572,8 @@
     au < exists ; exists ; 2010 ; Pharmacognosy Reviews Volume 4 ; 2010 ; 4 >
     au < exists ; exists ; 2011 ; Pharmacognosy Reviews Volume 5 ; 2011 ; 5 >
     au < exists ; exists ; 2012 ; Pharmacognosy Reviews Volume 6 ; 2012 ; 6 >
-    au < expected ; exists ; 2013 ; Pharmacognosy Reviews Volume 7 ; 2013 ; 7 >
+    au < exists ; exists ; 2013 ; Pharmacognosy Reviews Volume 7 ; 2013 ; 7 >
+    au < expected ; exists ; 2014 ; Pharmacognosy Reviews Volume 8 ; 2014 ; 8 >
 
   }  
 
@@ -3575,7 +3590,8 @@
 
     au < exists ; exists ; 2011 ; Pulmonary Circulation Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Pulmonary Circulation Volume 2 ; 2012 ; 2 >
-    au < expected ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 >
+    au < exists ; exists ; 2013 ; Pulmonary Circulation Volume 3 ; 2013 ; 3 >
+    au < expected ; exists ; 2014 ; Pulmonary Circulation Volume 4 ; 2014 ; 4 >
 
   }  
         
@@ -3594,7 +3610,8 @@
     au < exists ; exists ; 2010 ; PVRI Review Volume 2 ; 2010 ; 2 >
     au < exists ; exists ; 2011 ; PVRI Review Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; PVRI Review Volume 4 ; 2012 ; 4 >
-    au < expected ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 >
+    au < exists ; exists ; 2013 ; PVRI Review Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; PVRI Review Volume 6 ; 2014 ; 6 >
 
   }
         
@@ -3610,6 +3627,8 @@
 
     au < exists ; exists ; 2010 ; Radiation Protection and Environment Volume 33 ; 2010 ; 33 >
     au < exists ; exists ; 2011 ; Radiation Protection and Environment Volume 34 ; 2011 ; 34 >
+    au < exists ; exists ; 2012 ; Radiation Protection and Environment Volume 35 ; 2012 ; 35 >
+    au < expected ; exists ; 2014 ; Radiation Protection and Environment Volume 36 ; 2014 ; 36 >
 
   }
         
@@ -3623,8 +3642,11 @@
 
     param[base_url] = http://www.rljae.org/
     param[journal_issn] = 2013-8393
+    comment[0] = no volume 2
 
     au < exists ; exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 >
+    au < exists ; exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 >
+    au < expected ; exists ; 2014 ; Ramon Llull Journal of Applied Ethics Volume 3 ; 2014 ; 3 >
 
   }  
         
@@ -3647,6 +3669,7 @@
     au < exists ; exists ; 2011 ; Research in Pharmaceutical Sciences Volume 6 ; 2011 ; 6 >
     au < exists ; exists ; 2012 ; Research in Pharmaceutical Sciences Volume 7 ; 2012 ; 7 >
     au < exists ; exists ; 2013 ; Research in Pharmaceutical Sciences Volume 8 ; 2013 ; 8 >
+    au < expected ; exists ; 2014 ; Research in Pharmaceutical Sciences Volume 9 ; 2014 ; 9 >
 
   }  
     
@@ -3667,7 +3690,8 @@
     au < exists ; exists ; 2010 ; Saudi Journal of Anaesthesia Volume 4 ; 2010 ; 4 >
     au < exists ; exists ; 2011 ; Saudi Journal of Anaesthesia Volume 5 ; 2011 ; 5 >
     au < exists ; exists ; 2012 ; Saudi Journal of Anaesthesia Volume 6 ; 2012 ; 6 >
-    au < expected ; exists ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 >
+    au < exists ; exists ; 2013 ; Saudi Journal of Anaesthesia Volume 7 ; 2013 ; 7 >
+    au < expected ; exists ; 2014 ; Saudi Journal of Anaesthesia Volume 8 ; 2014 ; 8 >
 
   }
     
@@ -3701,6 +3725,7 @@
     au < exists ; exists ; 2011 ; Saudi Journal of Gastroenterology Volume 17 ; 2011 ; 17 >
     au < exists ; exists ; 2012 ; Saudi Journal of Gastroenterology Volume 18 ; 2012 ; 18 >
     au < exists ; exists ; 2013 ; Saudi Journal of Gastroenterology Volume 19 ; 2013 ; 19 >
+    au < expected ; exists ; 2014 ; Saudi Journal of Gastroenterology Volume 20 ; 2014 ; 20 >
 
   }
     
@@ -3747,6 +3772,7 @@
     au < exists ; exists ; 2011 ; Surgical Neurology International Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Surgical Neurology International Volume 3 ; 2012 ; 3 >
     au < exists ; exists ; 2013 ; Surgical Neurology International Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Surgical Neurology International Volume 5 ; 2014 ; 5 >
 
   }
   
@@ -3763,6 +3789,8 @@
 
     au < exists ; exists ; 2010 ; Systematic Reviews in Pharmacy Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Systematic Reviews in Pharmacy Volume 2 ; 2011 ; 2 >
+    au < exists ; exists ; 2012 ; Systematic Reviews in Pharmacy Volume 3 ; 2012 ; 3 >
+    au < expected ; exists ; 2014 ; Systematic Reviews in Pharmacy Volume 4 ; 2014 ; 4 >
 
   }
   
@@ -3786,7 +3814,8 @@
     au < exists ; exists ; 2010 ; Toxicology International Volume 17 ; 2010 ; 17 >
     au < exists ; exists ; 2011 ; Toxicology International Volume 18 ; 2011 ; 18 >
     au < exists ; exists ; 2012 ; Toxicology International Volume 19 ; 2012 ; 19 >
-    au < expected ; exists ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
+    au < exists ; exists ; 2013 ; Toxicology International Volume 20 ; 2013 ; 20 >
+    au < expected ; exists ; 2014 ; Toxicology International Volume 21 ; 2014 ; 21 >
 
   }
   
@@ -3803,10 +3832,11 @@
 
     au < exists ; exists ; 2011 ; Tropical Parasitology Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Tropical Parasitology Volume 2 ; 2012 ; 2 >
-    au < expected ; exists ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 >
+    au < exists ; exists ; 2013 ; Tropical Parasitology Volume 3 ; 2013 ; 3 >
+    au < expected ; exists ; 2014 ; Tropical Parasitology Volume 4 ; 2014 ; 4 >
 
   }
-            
+
   {
     title <
       name = Urology Annals ;
@@ -3822,10 +3852,11 @@
     au < exists ; exists ; 2010 ; Urology Annals Volume 2 ; 2010 ; 2 >
     au < exists ; exists ; 2011 ; Urology Annals Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Urology Annals Volume 4 ; 2012 ; 4 >
-    au < expected ; exists ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 >
+    au < exists ; exists ; 2013 ; Urology Annals Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Urology Annals Volume 6 ; 2014 ; 6 >
 
   }
-            
+
   {
     title <
       name = World Journal of Nuclear Medicine ;
@@ -3845,7 +3876,8 @@
     au < exists ; exists ; 2010 ; World Journal of Nuclear Medicine Volume 9 ; 2010 ; 9 >
     au < exists ; exists ; 2011 ; World Journal of Nuclear Medicine Volume 10 ; 2011 ; 10 >
     au < exists ; exists ; 2012 ; World Journal of Nuclear Medicine Volume 11 ; 2012 ; 11 >
-    au < expected ; exists ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 >
+    au < exists ; exists ; 2013 ; World Journal of Nuclear Medicine Volume 12 ; 2013 ; 12 >
+    au < expected ; exists ; 2014 ; World Journal of Nuclear Medicine Volume 13 ; 2014 ; 13 >
 
   }
   
@@ -3871,7 +3903,11 @@
     au < exists ; exists ; 2011 ; Young Scientists Journal Volume 9 ; 2011 ; 9 >
     au < exists ; exists ; 2011 ; Young Scientists Journal Volume 10 ; 2011 ; 10 >
     au < exists ; exists ; 2012 ; Young Scientists Journal Volume 11 ; 2012 ; 11 >
-    au < expected ; exists ; 2013 ; Young Scientists Journal Volume 12 ; 2013 ; 12 >
+    au < exists ; exists ; 2012 ; Young Scientists Journal Volume 12 ; 2012 ; 12 >
+    au < exists ; exists ; 2013 ; Young Scientists Journal Volume 13 ; 2013 ; 13 >
+    au < expected ; exists ; 2013 ; Young Scientists Journal Volume 14 ; 2013 ; 14 >
+    au < expected ; exists ; 2013 ; Young Scientists Journal Volume 15 ; 2014 ; 15 >
+    au < expected ; exists ; 2013 ; Young Scientists Journal Volume 16 ; 2014 ; 16 >
 
   }
 
