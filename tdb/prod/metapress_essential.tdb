@@ -279,15 +279,8 @@
       eissn = 2050-2885
     >
     
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = 
-    implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 1028-7825
-    param[journal_id] = nbi
-    param[journal_issn] = 2050-2877
+    param[journal_id] = 122857
 
     au < exists ; 2012 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 18 ; 18 >
     au < expected ; 2013 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 19 ; 19 >
