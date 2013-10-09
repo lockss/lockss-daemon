@@ -62,20 +62,16 @@
       <string>2,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/images/"</string>
       <string>1,"^https://(dfzljdn9uc3pi|d3amtssd1tejdt|d2pdyyx74uypu5).cloudfront.net/%s/", volume_name</string>
       <string>4,"^%s", base_url</string>
-      <string>2,"^%s\+", base_url</string>
-      <string>2,"^%suser/", base_url</string>
-      <string>1,"^%s%s/", base_url, peerj_site</string>
-      <string>1,"^%s(articles|preprints)/index.html\?month=%s-[0-9]+$", base_url, volume_name</string>
-      <string>1,"^%s(articles|preprints|reviews)/[0-9]+/$", base_url</string>
+      <string>1,"^%s(articles|preprints)/index\.html\?month=%s-[0-9]+$", base_url, volume_name</string>
+      <string>1,"^%s(articles|preprints|reviews)/[0-9]+/?$", base_url</string>
       <string>2,"^%s(articles|preprints)/[0-9]+/(author|editor)-[0-9]+$", base_url</string>
-      <string>1,"^%s(articles|preprints)/[0-9]+\.(bib|pdf|ris|xml|html|rdf|json|unixref)$", base_url</string>
+      <string>1,"^%s(articles|preprints)/[0-9]+\.[^/]+$", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s(articles|preprints)/[0-9]+/$", base_url</string>
-      <string>"^%s(articles|preprints)/[0-9]+\.(pdf|xml)$", base_url</string>
+      <string>"^%s(articles|preprints)/[0-9]+\.pdf$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -148,7 +144,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
