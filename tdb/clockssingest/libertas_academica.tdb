@@ -330,6 +330,7 @@
     >
 
     param[journal_id] = 140
+    comment[0] = no issue in 2011
 
     au < manifest ; exists ; 2008 ; Cell Communication Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
@@ -612,13 +613,13 @@
     >
 
     param[journal_id] = 88
-    comment[0] = no years 2013 as of 10/4/13
+    comment[0] = no years 2010, 2013 as of 10/4/13
 
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Psychiatry Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Psychiatry Volume 2 ; 2009 >
     au < released ; crawling ; 2011 ; Clinical Medicine Insights: Psychiatry Volume 3 ; 2011 >
     au < released ; crawling ; 2012 ; Clinical Medicine Insights: Psychiatry Volume 4 ; 2012 >
-    au < expected ; exists ; 2013 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 2013 >
+    au < expected ; exists ; 2014 ; Clinical Medicine Insights: Psychiatry Volume 5 ; 2014 >
 
   }
   
@@ -1105,7 +1106,6 @@
     au < crawling ; exists ; 2013 ; Indian Journal of Clinical Medicine Volume 4 ; 2013 >
     au < expected ; exists ; 2014 ; Indian Journal of Clinical Medicine Volume 5 ; 2014 >
 
-
   }
   
   {
@@ -1312,6 +1312,7 @@
     >
     
     param[journal_id] = 147
+    comment[0] = no issue in 2011, 2012
     
     au < manifest ; exists ; 2009 ; Lymphona and Chronic Lymphocytic Leukemias Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Lymphona and Chronic Lymphocytic Leukemias Volume 2 ; 2010 >
@@ -1371,9 +1372,10 @@
     au < manifest ; exists ; 2008 ; Microbiology Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Microbiology Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Microbiology Insights Volume 3 ; 2010 >
-    au < released ; crawling ; 2012 ; Microbiology Insights Volume 4 ; 2012 >
-    au < crawling ; exists ; 2013 ; Microbiology Insights Volume 5 ; 2013 >
-    au < expected ; exists ; 2014 ; Microbiology Insights Volume 6 ; 2014 >
+    au < exists ; exists ; 2011 ; Microbiology Insights Volume 4 ; 2011 >
+    au < released ; crawling ; 2012 ; Microbiology Insights Volume 5 ; 2012 >
+    au < crawling ; exists ; 2013 ; Microbiology Insights Volume 6 ; 2013 >
+    au < expected ; exists ; 2014 ; Microbiology Insights Volume 7 ; 2014 >
     
   }
   
@@ -1390,9 +1392,10 @@
     au < manifest ; exists ; 2008 ; Nutrition and Metabolic Insights Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Nutrition and Metabolic Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Nutrition and Metabolic Insights Volume 3 ; 2010 >
-    au < released ; crawling ; 2012 ; Nutrition and Metabolic Insights Volume 4 ; 2012 >
-    au < crawling ; exists ; 2013 ; Nutrition and Metabolic Insights Volume 5 ; 2013 >
-    au < expected ; exists ; 2014 ; Nutrition and Metabolic Insights Volume 6 ; 2014 >
+    au < exists ; exists ; 2011 ; Nutrition and Metabolic Insights Volume 4 ; 2011 >
+    au < released ; crawling ; 2012 ; Nutrition and Metabolic Insights Volume 5 ; 2012 >
+    au < crawling ; exists ; 2013 ; Nutrition and Metabolic Insights Volume 6 ; 2013 >
+    au < expected ; exists ; 2014 ; Nutrition and Metabolic Insights Volume 7 ; 2014 >
     
   }
   
@@ -1597,7 +1600,6 @@
     >
 
     param[journal_id] = 52
-    
     comment[0] = skips year 2011
 
     au < manifest ; exists ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
@@ -1617,7 +1619,6 @@
     >
 
     param[journal_id] = 102
-
     comment[0] = no 2011, 2012, or 2013, as of 4/25/2013
     
     au < manifest ; exists ; 2008 ; Signal Transduction Insights Volume 1 ; 2008 >
