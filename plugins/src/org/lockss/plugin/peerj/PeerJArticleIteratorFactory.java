@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJArticleIteratorFactory.java,v 1.1 2013-10-07 05:53:44 ldoan Exp $
+ * $Id: PeerJArticleIteratorFactory.java,v 1.2 2013-10-09 22:35:04 ldoan Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ implements ArticleIteratorFactory,
   protected static Logger log = 
       Logger.getLogger(PeerJArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
+  protected static final String ROOT_TEMPLATE = "\"%sarticles/\", base_url";
   
   protected static final String PATTERN_TEMPLATE = 
       "\"^%s(articles)/([0-9]+)(\\.pdf)?$\", base_url";
@@ -90,15 +90,6 @@ implements ArticleIteratorFactory,
   // <peerjbase>.com/articles/55.rdf
   // <peerjbase>.com/articles/55.json
   // <peerjbase>.com/articles/55.unixref
-  // from PrePrint Archives site
-  // <peerjbase>.com/preprints/14/
-  // <peerjbase>.com/preprints/14.pdf
-  // <peerjbase>.com/preprints/14.bib
-  // <peerjbase>.com/preprints/14.ris
-  // <peerjbase>.com/preprints/14.xml
-  // <peerjbase>.com/preprints/14.html
-  // <peerjbase>.com/preprints/14.rdf
-  // <peerjbase>.com/preprints/14.json
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
