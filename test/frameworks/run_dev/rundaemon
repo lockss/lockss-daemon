@@ -5,15 +5,12 @@ group="dev"
 arg_mem="-Xmx250m"
 
 prop_url="http://props.lockss.org:8001/daemon/lockss.xml"
+CLASSPATH=lib/lockss.jar:`cat ${PROJECT_DIR}/test/run-classpath`
 
 while true ; do
   case "$1" in
     "-classpath" )
-      if [ -z "$CLASSPATH" ] ; then
-	CLASSPATH="$2"
-      else
-	CLASSPATH="$CLASSPATH":"$2"
-      fi
+      CLASSPATH="$2"
       echo "CLASSPATH=$CLASSPATH"
       shift; shift; continue;;
     "-debug" )
@@ -76,7 +73,6 @@ mkdir -p lib
 cp "${PROJECT_DIR}/lib/lockss.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
-CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 # Transform paths when running under cygwin
 if [ "$TERM" = "cygwin" ]; then
   CLASSPATH=`cygpath -w -p $CLASSPATH`
