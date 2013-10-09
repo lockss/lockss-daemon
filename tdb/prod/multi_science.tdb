@@ -522,34 +522,12 @@
     >
 
     comment[clockss] = Permission given for CLOCKSS only
+    param[journal_issn] = 1475-4738
+    comment[0] = no content up yet on 10/9/2013
 
-
-  }
-
-
-  {
-
-    title <
-      name = Sports Science Handbook Vol. 1 A-H ;
-      type = book ;
-      isbn = 9780906522363
-    >
-
-    param[journal_issn] = rg4462
+    au < expected ; 2013 ; Noise Notes Volume 1 ; 1 >
 
   }
-
-
-  {
-
-    title <
-      name = Sports Science Handbook Vol. 2 I-Z ;
-      type = book ;
-      isbn = 9780906522370
-    >
-
-  }
-
 
   {
 
