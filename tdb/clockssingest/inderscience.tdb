@@ -540,7 +540,7 @@
       param[journal_issn] = 1741-8011
       
       au < manifest ; exists ; 2006-2007 ; International Journal of Alternative Propulsion Volume 1 ; 1 >
-      au < manifest ; exists ; 2008-2012 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
+      au < crawling ; exists ; 2008-2012 ; International Journal of Alternative Propulsion Volume 2 ; 2 >
       au < expected ; exists ; 2013 ; International Journal of Alternative Propulsion Volume 3 ; 3 >
       au < expected ; exists ; 2014 ; International Journal of Alternative Propulsion Volume 4 ; 4 >
 
@@ -5814,7 +5814,7 @@
 
       param[journal_issn] = 1752-6590
       
-      au < manifest ; exists ; 2008-2012 ; International Journal of Ocean Systems Management Volume 1 ; 1 >
+      au < crawling ; exists ; 2008-2012 ; International Journal of Ocean Systems Management Volume 1 ; 1 >
       au < expected ; exists ; 2013 ; International Journal of Ocean Systems Management Volume 2 ; 2 >
       au < expected ; exists ; 2014 ; International Journal of Ocean Systems Management Volume 3 ; 3 >
 
