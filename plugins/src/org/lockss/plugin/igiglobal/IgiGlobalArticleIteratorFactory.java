@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.10 2013-10-07 22:56:18 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.11 2013-10-09 23:14:21 etenbrink Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class IgiGlobalArticleIteratorFactory
       af.setFullTextCu(absCu);
       
       // minimize the work you do if you are just counting articles
-      if ((spec.getTarget() == null) || (!spec.getTarget().isArticle())) {
+      if ((spec.getTarget() == null) || spec.getTarget().isAny()) {
         guessPdf(af, absMat);
       }
       guessFullText(af, absMat);
