@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssPeerJArticleIteratorFactory.java,v 1.1 2013-10-07 05:53:44 ldoan Exp $
+ * $Id: ClockssPeerJArticleIteratorFactory.java,v 1.2 2013-10-09 22:18:40 ldoan Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ implements ArticleIteratorFactory,
   protected static Logger log = 
       Logger.getLogger(ClockssPeerJArticleIteratorFactory.class);
 
-  protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
+  protected static final String ROOT_TEMPLATE = "\"%spreprints/\", base_url";
   
   protected static final String PATTERN_TEMPLATE = 
       "\"^%s(preprints)/([0-9]+)(\\.pdf)?$\", base_url";
@@ -66,14 +66,14 @@ implements ArticleIteratorFactory,
   private static String XML_REPLACEMENT = "/$1/$2.xml";
   private static String BIB_REPLACEMENT = "/$1/$2.bib";
   private static String RIS_REPLACEMENT = "/$1/$2.ris";
-  private static String ALTERNATE_HTML_REPLACEMENT = "/$1/$2.html";
+  private static String ALTERNATE_ABSTRACT_REPLACEMENT = "/$1/$2.html";
   private static String ALTERNATE_RDF_REPLACEMENT = "/$1/$2.rdf";
   private static String ALTERNATE_JSON_REPLACEMENT = "/$1/$2.json";
   // only in Archives site not in Preprints site
   private static String ALTERNATE_UNIXREF_REPLACEMENT = "/$1/$2.unixref";
   
   public static final String ROLE_ABSTRACT_XML = "AbstractXml";  
-  public static final String ROLE_ALTERNATE_ABSTRACT_HTML = 
+  public static final String ROLE_ALTERNATE_ABSTRACT = 
                                                  "AlternateAbstractHtml";
   public static final String ROLE_ALTERNATE_RDF = "AlternateRdf";
   public static final String ROLE_ALTERNATE_JSON = "AlternateJson";
@@ -148,7 +148,7 @@ implements ArticleIteratorFactory,
       // full-text html file from <link rel> tag found from page source
       // this link is not found from web pages
       builder.addAspect(
-          ALTERNATE_HTML_REPLACEMENT, ROLE_ALTERNATE_ABSTRACT_HTML);
+          ALTERNATE_ABSTRACT_REPLACEMENT, ROLE_ALTERNATE_ABSTRACT);
       
       builder.addAspect(ALTERNATE_RDF_REPLACEMENT, ROLE_ALTERNATE_RDF);
       
@@ -160,9 +160,8 @@ implements ArticleIteratorFactory,
       
       // The order in which we want to define full_text_cu.
       // First one that exists will get the job
-      builder.setFullTextFromRoles(
-          ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_FULL_TEXT_HTML, 
-          ROLE_ALTERNATE_ABSTRACT_HTML, ArticleFiles.ROLE_ABSTRACT); 
+      builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF, 
+          ROLE_ALTERNATE_ABSTRACT, ArticleFiles.ROLE_ABSTRACT); 
           
       return builder.getSubTreeArticleIterator();
     }
