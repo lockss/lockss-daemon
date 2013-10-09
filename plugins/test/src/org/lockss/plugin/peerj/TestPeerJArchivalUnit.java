@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJArchivalUnit.java,v 1.1 2013-10-07 05:56:14 ldoan Exp $
+ * $Id: TestPeerJArchivalUnit.java,v 1.2 2013-10-09 23:01:38 ldoan Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
                     true, peerjArchivesAu, cus);  
     // toc page for an issue
     // https://peerj.com/articles/index.html?month=2013-09
-    shouldCacheTest(ROOT_URL + "xxxxSite/index.html?month=2013-09", 
+    shouldCacheTest(ROOT_URL + "articles/index.html?month=2013-09", 
                     true, peerjArchivesAu, cus);
     // article files
     // https://peerj.com/articles/55/
@@ -147,15 +147,15 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     // https://peerj.com/articles/55.rdf
     // https://peerj.com/articles/55.json
     // https://peerj.com/articles/55.unixref
-    shouldCacheTest(ROOT_URL+"xxxxSite/55/", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.bib", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.pdf", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.ris", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.xml", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.html", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.rdf", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.json", true, peerjArchivesAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxSite/55.unixref", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55/", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.bib", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.pdf", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.ris", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.xml", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.html", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.rdf", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.json", true, peerjArchivesAu, cus);
+    shouldCacheTest(ROOT_URL+"articles/55.unixref", true, peerjArchivesAu, cus);
     // images figures and tables can live here
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-2x.jpg
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-full.png
@@ -183,8 +183,8 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "xxxxPreprintsSite/?year=2013", 
                     true, peerjPreprintsAu, cus);  
     // toc page for an issue
-    // https://peerj.com/articles/index.html?month=2013-09
-    shouldCacheTest(ROOT_URL + "xxxxPreprintsSite/index.html?month=2013-09", 
+    // https://peerj.com/preprints/index.html?month=2013-09
+    shouldCacheTest(ROOT_URL + "preprints/index.html?month=2013-09", 
                     true, peerjPreprintsAu, cus);
     // preprints files
     // https://peerj.com/preprints/14/
@@ -195,29 +195,35 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     // https://peerj.com/preprints/14.html
     // https://peerj.com/preprints/14.rdf
     // https://peerj.com/preprints/14.json
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14/", 
+    shouldCacheTest(ROOT_URL+"preprints/14/", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.bib", 
+    shouldCacheTest(ROOT_URL+"preprints/14.bib", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.pdf", 
+    shouldCacheTest(ROOT_URL+"preprints/14.pdf", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.ris", 
+    shouldCacheTest(ROOT_URL+"preprints/14.ris", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.xml", 
+    shouldCacheTest(ROOT_URL+"preprints/14.xml", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.html", 
+    shouldCacheTest(ROOT_URL+"preprints/14.html", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.rdf", 
+    shouldCacheTest(ROOT_URL+"preprints/14.rdf", 
                     true, peerjPreprintsAu, cus);
-    shouldCacheTest(ROOT_URL+"xxxxPreprintsSite/14.json", 
+    shouldCacheTest(ROOT_URL+"preprints/14.json", 
                     true, peerjPreprintsAu, cus);
     // images figures and tables can live here
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-2x.jpg
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-full.png
+    // https://d3amtssd1tejdt.cloudfront.net/2013/21/1/figure1.png
+    // https://d2pdyyx74uypu5.cloudfront.net/lockss.txt
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
     		    + "/2013/55/1/fig-1-2x.jpg", true, peerjPreprintsAu, cus);   
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
                     + "/2013/55/1/fig-1-full.png", true, peerjPreprintsAu, cus);   
+    shouldCacheTest("https://d3amtssd1tejdt.cloudfront.net"
+                    + "/2013/21/1/figure1.png", true, peerjPreprintsAu, cus);   
+    shouldCacheTest("https://d2pdyyx74uypu5.cloudfront.net/lockss.txt",
+                    true, peerjPreprintsAu, cus);   
     // missing peerj_site param - should not get crawled
     shouldCacheTest(ROOT_URL + "?year=2012", false, peerjPreprintsAu, cus);  
     // LOCKSS
@@ -234,7 +240,6 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
   
   public void testStartUrlConstruction() throws Exception {
     String expected = ROOT_URL + "xxxxSite/?year=2013";
-    //DefinableArchivalUnit peerjAu = makeAu(baseUrl, VOLUME_NAME, PEERJ_SITE);
     assertEquals(ListUtil.list(expected), peerjArchivesAu.getNewContentCrawlUrls());
   }
   

@@ -51,18 +51,16 @@ import org.lockss.util.ListUtil;
 import org.lockss.util.StringUtil;
 
 /*
- * PeerJ Archives Preprints site is in Clockss only.
- *   article files:
- *   full text pdf      - <baser_url>/preprints/14.pdf
- *   abstract           - <baser_url>/preprints/14/      (including full text)
- *   full text xml      - <baser_url>/preprints/14.xml
- *   citation bib       - <baser_url>/preprints/14.bib
- *   citation ris       - <baser_url>/preprints/14.ris
- *   alternate html     - <baser_url>/preprints/14.html
- *   alternate rdf      - <baser_url>/preprints/14.rdf
- *   alternate json     - <baser_url>/preprints/14.json
- *   alternate unixref  - <baser_url>/preprints/14.unixref
- *   
+ * Test run with PeerJ Archives Preprints site.
+ *   preprint files:
+ *   full text pdf      - <base_url>/preprints/14.pdf
+ *   abstract           - <base_url>/preprints/14/    
+ *   abstract xml       - <base_url>/preprints/14.xml
+ *   citation bib       - <base_url>/preprints/14.bib
+ *   citation ris       - <base_url>/preprints/14.ris
+ *   alternate html     - <base_url>/preprints/14.html
+ *   alternate rdf      - <base_url>/preprints/14.rdf
+ *   alternate json     - <base_url>/preprints/14.json
  */
 public class TestClockssPeerJArticleIteratorFactory 
   extends ArticleIteratorTestCase {
@@ -78,22 +76,15 @@ public class TestClockssPeerJArticleIteratorFactory
   
   private static final int DEFAULT_FILESIZE = 3000;
   
-  public static final String ROLE_ABSTRACT_XML = "AbstractXml";  
-  public static final String ROLE_ALTERNATE_ABSTRACT_HTML = 
-                                                "AlternateAbstractHtml";
-  public static final String ROLE_ALTERNATE_RDF = "AlternateRdf";
-  public static final String ROLE_ALTERNATE_JSON = "AlternateJson";
-  public static final String ROLE_ALTERNATE_UNIXREF = "AlternateUnixref";
-
   private static final int EXP_DELETED_FILE_COUNT = 8;
-   private static final int EXP_FULL_TEXT_COUNT = 12;
-   private static final int EXP_PDF_COUNT = 8; // after deleteBlock
-   private static final int EXP_XML_COUNT = 8; // after deleteBlock
-   private static final int EXP_ABS_COUNT = 12;
-   private static final int EXP_BIB_COUNT = 12;
-   private static final int EXP_RIS_COUNT = 12;
-   private static final int EXP_ARTICLE_METADATA_COUNT = 12;
-   private static final int EXP_ALTERNATE_FILE_COUNT = 36;
+  private static final int EXP_FULL_TEXT_COUNT = 12;
+  private static final int EXP_PDF_COUNT = 8; // after deleteBlock
+  private static final int EXP_XML_COUNT = 8; // after deleteBlock
+  private static final int EXP_ABS_COUNT = 12;
+  private static final int EXP_BIB_COUNT = 12;
+  private static final int EXP_RIS_COUNT = 12;
+  private static final int EXP_ARTICLE_METADATA_COUNT = 12;
+  private static final int EXP_ALTERNATE_FILE_COUNT = 36;
  
   public void setUp() throws Exception {
     super.setUp();
@@ -137,7 +128,7 @@ public class TestClockssPeerJArticleIteratorFactory
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL), getRootUrls(artIter));
+    assertEquals(ListUtil.list(BASE_URL + "preprints/"), getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
@@ -178,7 +169,6 @@ public class TestClockssPeerJArticleIteratorFactory
     String alternateHtmlRep = "/preprints/$1$2.html";
     String alternateJsonRep = "/preprints/$1$2.json";
     String alternateRdfRep = "/preprints/$1$2.rdf";
-    String alternateUnixrefRep = "/preprints/$1$2.unixref";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, absRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, xmlRep);
@@ -186,7 +176,6 @@ public class TestClockssPeerJArticleIteratorFactory
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, risRep);    
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateHtmlRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateJsonRep);
-    PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateUnixrefRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateRdfRep);
   
     // Remove some URLs
@@ -211,7 +200,7 @@ public class TestClockssPeerJArticleIteratorFactory
     // builds in PeerJArticleIteratorFactory
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     
-    // each branch has 12 alternate files (3 rdf, 3 json, 3 unixref, 3 html)
+    // each branch has 9 alternate files (3 rdf, 3 json, 3 html)
     int count = 0;
     int countPdfOnly = 0;
     int countXmlOnly = 0;
@@ -234,7 +223,7 @@ public class TestClockssPeerJArticleIteratorFactory
       if (!StringUtil.isNullString(url) && url.endsWith(".pdf")) {
         ++countPdfOnly;
       }
-      url = af.getRoleUrl(ROLE_ABSTRACT_XML);
+      url = af.getRoleUrl(ClockssPeerJArticleIteratorFactory.ROLE_ABSTRACT_XML);
       if (!StringUtil.isNullString(url) && url.endsWith(".xml")) {
         ++countXmlOnly;
       }
@@ -258,15 +247,15 @@ public class TestClockssPeerJArticleIteratorFactory
       }
       // count all alternate files together
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_ABSTRACT_HTML))) {
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_ABSTRACT))) {
         ++countAlternateFileOnly;
       }
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_RDF))) {
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF))) {
         ++countAlternateFileOnly;
       }
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_JSON))) {
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON))) {
         ++countAlternateFileOnly;
       }
     }

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,17 +51,17 @@ import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
 
 /*
- * PeerJ Archives site is in GLN only.
+ * Test with PeerJ Archives site.
  *   article files:
- *   full text pdf      - <baser_url>/articles/55.pdf
- *   abstract           - <baser_url>/articles/55/      (including full text)
- *   full text xml      - <baser_url>/articles/55.xml
- *   citation bib       - <baser_url>/articles/55.bib
- *   citation ris       - <baser_url>/articles/55.ris
- *   alternate html     - <baser_url>/articles/55.html
- *   alternate rdf      - <baser_url>/articles/55.rdf
- *   alternate json     - <baser_url>/articles/55.json
- *   alternate unixref  - <baser_url>/articles/55.unixref
+ *   full text pdf      - <base_url>/articles/55.pdf
+ *   abstract           - <base_url>/articles/55/    (part of full text)
+ *   full text xml      - <base_url>/articles/55.xml
+ *   citation bib       - <base_url>/articles/55.bib
+ *   citation ris       - <base_url>/articles/55.ris
+ *   alternate html     - <base_url>/articles/55.html
+ *   alternate rdf      - <base_url>/articles/55.rdf
+ *   alternate json     - <base_url>/articles/55.json
+ *   alternate unixref  - <base_url>/articles/55.unixref
  *   
  */
 public class TestPeerJArticleIteratorFactory 
@@ -78,24 +78,15 @@ public class TestPeerJArticleIteratorFactory
   
   private static final int DEFAULT_FILESIZE = 3000;
   
-  public static final String ROLE_ALTERNATE_FULL_TEXT_HTML = 
-                                        "AlternateFullTextHtml";
-  public static final String ROLE_ALTERNATE_ABSTRACT_RDF_XML = 
-                                        "AlternateRdf";
-  public static final String ROLE_ALTERNATE_ABSTRACT_JSON = 
-                                        "AlternateJson";
-  public static final String ROLE_ALTERNATE_UNIXREF_XML = 
-                                        "AlternateUnixref";
-  
-   private static final int EXP_DELETED_FILE_COUNT = 8;
-   private static final int EXP_FULL_TEXT_COUNT = 12;
-   private static final int EXP_PDF_COUNT = 8; // after deleteBlock
-   private static final int EXP_XML_COUNT = 8; // after deleteBlock
-   private static final int EXP_ABS_COUNT = 12;
-   private static final int EXP_BIB_COUNT = 12;
-   private static final int EXP_RIS_COUNT = 12;
-   private static final int EXP_ARTICLE_METADATA_COUNT = 12;
-   private static final int EXP_ALTERNATE_FILE_COUNT = 48;
+  private static final int EXP_DELETED_FILE_COUNT = 8;
+  private static final int EXP_FULL_TEXT_COUNT = 12;
+  private static final int EXP_PDF_COUNT = 8; // after deleteBlock
+  private static final int EXP_XML_COUNT = 8; // after deleteBlock
+  private static final int EXP_ABS_COUNT = 12;
+  private static final int EXP_BIB_COUNT = 12;
+  private static final int EXP_RIS_COUNT = 12;
+  private static final int EXP_ARTICLE_METADATA_COUNT = 12;
+  private static final int EXP_ALTERNATE_FILE_COUNT = 48;
  
   public void setUp() throws Exception {
     super.setUp();
@@ -139,7 +130,7 @@ public class TestPeerJArticleIteratorFactory
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL), getRootUrls(artIter));
+    assertEquals(ListUtil.list(BASE_URL + "articles/"), getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
@@ -164,7 +155,7 @@ public class TestPeerJArticleIteratorFactory
   // full text xml      - http://www.example.com/articles/1003.xml
   // citation bib       - http://www.example.com/articles/1003.bib
   // citation ris       - http://www.example.com/articles/1003.ris
-  // altertnate html    - http://www.example.com/articles/1003.html
+  // alternate html     - http://www.example.com/articles/1003.html
   // alternate rdf      - http://www.example.com/articles/1003.rdf
   // alternate json     - http://www.example.com/articles/1003.json
   // alternate unixref  - http://www.example.com/articles/1003.unixref
@@ -261,19 +252,19 @@ public class TestPeerJArticleIteratorFactory
       }
       // count all alternate files together
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_FULL_TEXT_HTML))) {
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_FULL_TEXT_HTML))) {
         ++countAlternateFileOnly;
       }
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_ABSTRACT_RDF_XML))) {
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF))) {
         ++countAlternateFileOnly;
       }
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_ABSTRACT_JSON))) {
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON))) {
         ++countAlternateFileOnly;
       }
       if (!StringUtil.isNullString(af.getRoleUrl(
-          ROLE_ALTERNATE_UNIXREF_XML))) {
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_UNIXREF))) {
         ++countAlternateFileOnly;
       }
     }
