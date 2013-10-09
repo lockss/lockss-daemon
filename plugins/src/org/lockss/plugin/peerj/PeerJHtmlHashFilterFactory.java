@@ -1,5 +1,5 @@
 /*
- * $Id: PeerJHtmlHashFilterFactory.java,v 1.1 2013-10-07 05:53:44 ldoan Exp $
+ * $Id: PeerJHtmlHashFilterFactory.java,v 1.2 2013-10-09 22:55:37 ldoan Exp $
  */
 
 /*
@@ -70,60 +70,48 @@ public class PeerJHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
-        //filter out comments
+        // filter out comments
         HtmlNodeFilters.commentWithRegex(".*"),
-        // topnavbar <div class="navbar navbar-fixed-top navbar-inverse">
+        // top navbar - brand name, search, article, etc.
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "navbar navbar-fixed-top navbar-inverse"),
-        // topnavbar <div class="item-top-navbar-inner">
+        // top navbar - logo, socialism, etc.
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "item-top-navbar-inner"),
-        // <div class="alert alert-warning"    
+        // from preprints near top "is not a peer-reviewed venue"
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "alert alert-warning"),
-        // follow button and flag
-        // <div class="btn-group notification-actions-btn" 
+        // left column - follow button and flag
         HtmlNodeFilters.tagWithAttributeRegex(
             "div", "class", ".*notification-actions-btn"),
-        // leftnav <div class="article-navigation">
+        // left column - article navigation
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "article-navigation"),
-        // leftbar <div class="subjects-navigation">
+        // left column - subject areas
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "subjects-navigation"),
-        // leftbar counter <div id="article-item-metrics-container">
+        // left column - counter
         HtmlNodeFilters.tagWithAttribute(
             "div", "id", "article-item-metrics-container"),
-        // <div class="pj-socialism-container">
+        // near top - socialism
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "pj-socialism-container"),
-        // remove "Save to Mendeley" and "Read in ReadCube" from "Download as"
-        // leftbar section, since it can be varied from preprints side such as
-        // http://www.mendeley.com/import/?doi=10.7287/peerj.preprints.14v1
-        // http://www.readcube.com/articles/10.7717/peerj.46
-        HtmlNodeFilters.tagWithText("a", "Save to Mendeley"),
-        HtmlNodeFilters.tagWithText("a", "Read in ReadCube"),
-        // rightbar <div class="span2 article-item-rightbar-wrap article-sidebar"
+        // right column - all
         HtmlNodeFilters.tagWithAttributeRegex(
             "div", "class", ".*article-item-rightbar-wrap.*"),
-        // <div id="flagModal"
+        // annotations
         HtmlNodeFilters.tagWithAttribute("div", "id", "flagModal"),
-        // <div id="followModal"
         HtmlNodeFilters.tagWithAttribute("div", "id", "followModal"),
-        // <div id="unfollowModal"
         HtmlNodeFilters.tagWithAttribute("div", "id", "unfollowModal"),
-        // <div id="metricsModal"
         HtmlNodeFilters.tagWithAttribute("div", "id", "metricsModal"),
-        // <div id="shareModal"
         HtmlNodeFilters.tagWithAttribute("div", "id", "shareModal"),
-        // foot <div class="foot">
-        HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
-        // <div class="tab-content annotation-tab-content">
         HtmlNodeFilters.tagWithAttribute(
             "div", "class", "tab-content annotation-tab-content"),
-        // <ul class="nav nav-tabs annotation-tabs-nav">
         HtmlNodeFilters.tagWithAttribute(
             "ul", "class", "nav nav-tabs annotation-tabs-nav"),
+        // foot
+        HtmlNodeFilters.tagWithAttribute("div", "class", "foot"),
+        // <div class="tab-content annotation-tab-content">
      };
 
     return new HtmlFilterInputStream(in, encoding, 
