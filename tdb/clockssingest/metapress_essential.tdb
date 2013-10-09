@@ -30,6 +30,7 @@
     au < exists ; exists ; 2011 ; Black Theology: An International Journal Volume 9 ; 9 >
     au < exists ; exists ; 2012 ; Black Theology: An International Journal Volume 10 ; 10 >
     au < exists ; exists ; 2013 ; Black Theology: An International Journal Volume 11 ; 11 >
+    au < expected ; exists ; 2014 ; Black Theology: An International Journal Volume 12 ; 12 >
   
   }
 
@@ -47,7 +48,8 @@
     au < exists ; exists ; 2010 ; Comparative and Continental Philosophy Volume 2 ; 2 >
     au < exists ; exists ; 2011 ; Comparative and Continental Philosophy Volume 3 ; 3 >
     au < exists ; exists ; 2012 ; Comparative and Continental Philosophy Volume 4 ; 4 >
-    au < expected ; exists ; 2013 ; Comparative and Continental Philosophy Volume 5 ; 5 >
+    au < exists ; exists ; 2013 ; Comparative and Continental Philosophy Volume 5 ; 5 >
+    au < expected ; exists ; 2014 ; Comparative and Continental Philosophy Volume 6 ; 6 >
   
   }
 
@@ -75,6 +77,7 @@
     au < exists ; exists ; 2011 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 12 ; 12 >
     au < exists ; exists ; 2012 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 13 ; 13 >
     au < exists ; exists ; 2013 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 14 ; 14 >
+    au < expected ; exists ; 2014 ; Critical Horizons: A Journal of Philosophy & Social Theory Volume 15 ; 15 >
   
   }
 
@@ -94,6 +97,7 @@
     au < exists ; exists ; 2011 ; Practical Theology Volume 4 ; 4 >
     au < exists ; exists ; 2012 ; Practical Theology Volume 5 ; 5 >
     au < exists ; exists ; 2013 ; Practical Theology Volume 6 ; 6 >
+    au < expected ; exists ; 2014 ; Practical Theology Volume 7 ; 7 >
   
   }
 
@@ -119,6 +123,7 @@
     au < exists ; exists ; 2011 ; Journal of Critical Realism Volume 10 ; 10 >
     au < exists ; exists ; 2012 ; Journal of Critical Realism Volume 11 ; 11 >
     au < exists ; exists ; 2013 ; Journal of Critical Realism Volume 12 ; 12 >
+    au < expected ; exists ; 2014 ; Journal of Critical Realism Volume 13 ; 13 >
   
   }
 
@@ -134,7 +139,8 @@
     
     au < exists ; exists ; 2011 ; Journal for the Study of Spirituality Volume 1 ; 1 >
     au < exists ; exists ; 2012 ; Journal for the Study of Spirituality Volume 2 ; 2 >
-    au < expected ; exists ; 2013 ; Journal for the Study of Spirituality Volume 3 ; 3 >
+    au < exists ; exists ; 2013 ; Journal for the Study of Spirituality Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; Journal for the Study of Spirituality Volume 4 ; 4 >
   
   }
 
@@ -150,7 +156,8 @@
     
     au < exists ; exists ; 2011 ; Medieval Mystical Theology Volume 20 ; 20 >
     au < exists ; exists ; 2012 ; Medieval Mystical Theology Volume 21 ; 21 >
-    au < expected ; exists ; 2013 ; Medieval Mystical Theology Volume 22 ; 22 >
+    au < exists ; exists ; 2013 ; Medieval Mystical Theology Volume 22 ; 22 >
+    au < expected ; exists ; 2014 ; Medieval Mystical Theology Volume 23 ; 23 >
   
   }
 
@@ -175,6 +182,9 @@
     au < exists ; exists ; 2009 ; Reformation and Renaissance Review Volume 11 ; 11 >
     au < exists ; exists ; 2010 ; Reformation and Renaissance Review Volume 12 ; 12 >
     au < exists ; exists ; 2011 ; Reformation and Renaissance Review Volume 13 ; 13 >
+    au < exists ; exists ; 2012 ; Reformation and Renaissance Review Volume 14 ; 14 >
+    au < expected ; exists ; 2013 ; Reformation and Renaissance Review Volume 15 ; 15 >
+    au < expected ; exists ; 2014 ; Reformation and Renaissance Review Volume 16 ; 16 >
   
   }
 
@@ -206,6 +216,9 @@
     au < exists ; exists ; 2009 ; Theology & Sexuality Volume 15 ; 15 >
     au < exists ; exists ; 2010 ; Theology & Sexuality Volume 16 ; 16 >
     au < exists ; exists ; 2011 ; Theology & Sexuality Volume 17 ; 17 >
+    au < exists ; exists ; 2012 ; Theology & Sexuality Volume 18 ; 18 >
+    au < expected ; exists ; 2013 ; Theology & Sexuality Volume 19 ; 19 >
+    au < expected ; exists ; 2014 ; Theology & Sexuality Volume 20 ; 20 >
   
   }
 
@@ -232,6 +245,7 @@
     au < exists ; exists ; 2011 ; Political Theology Volume 12 ; 12 >
     au < exists ; exists ; 2012 ; Political Theology Volume 13 ; 13 >
     au < exists ; exists ; 2013 ; Political Theology Volume 14 ; 14 >
+    au < expected ; exists ; 2014 ; Political Theology Volume 15 ; 15 >
   
   }
 
@@ -244,6 +258,7 @@
     >
 
     param[journal_id] = 122848
+    comment[continued_by] = 2050-2877
     
     au < exists ; exists ; 1995 ; Human Reproduction & Genetic Ethics Volume 1 ; 1 >
     au < exists ; exists ; 1996 ; Human Reproduction & Genetic Ethics Volume 2 ; 2 >
@@ -273,18 +288,12 @@
       eissn = 2050-2885
     >
     
-    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-    param[base_url] = http://www.ingentaconnect.com/
-    param[api_url] = http://api.ingentaconnect.com/
-    param[graphics_url] = http://graphics.ingentaconnect.com/
-    param[publisher_id] = 
-    implicit < status ; status2 ; year ; name ; param[volume_name] >
     comment[continues] = 1028-7825
-    param[journal_id] = nbi
-    param[journal_issn] = 2050-2877
+    param[journal_id] = 122857
 
     au < exists ; exists ; 2012 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 18 ; 18 >
     au < expected ; exists ; 2013 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 19 ; 19 >
+    au < expected ; exists ; 2014 ; The New Bioethics: A Multidisciplinary Journal of Biotechnology and the Body Volume 20 ; 20 >
 
   }
 
@@ -308,6 +317,7 @@
     au < exists ; exists ; 2011 ; Journal of Adult Theological Education Volume 8 ; 8 >
     au < exists ; exists ; 2012 ; Journal of Adult Theological Education Volume 9 ; 9 >
     au < expected ; exists ; 2013 ; Journal of Adult Theological Education Volume 10 ; 10 >
+    au < expected ; exists ; 2014 ; Journal of Adult Theological Education Volume 11 ; 11 >
   
   }
 
@@ -330,7 +340,8 @@
     au < exists ; exists ; 2010 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 8 ; 8 >
     au < exists ; exists ; 2011 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 9 ; 9 >
     au < exists ; exists ; 2012 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 10 ; 10 >
-    au < expected ; exists ; 2013 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 11 ; 11 >
+    au < exists ; exists ; 2013 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 11 ; 11 >
+    au < expected ; exists ; 2013 ; Rural Theology: international, ecumenical and interdisciplinary perspectives Volume 12 ; 12 >
   
   }
 
@@ -352,6 +363,7 @@
     au < exists ; exists ; 2011 ; Reformation Volume 16 ; 16 >
     au < exists ; exists ; 2012 ; Reformation Volume 17 ; 17 >
     au < expected ; exists ; 2013 ; Reformation Volume 18 ; 18 >
+    au < expected ; exists ; 2014 ; Reformation Volume 19 ; 19 >
   
   }
 
