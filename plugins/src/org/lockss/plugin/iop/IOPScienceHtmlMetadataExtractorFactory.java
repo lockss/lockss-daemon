@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceHtmlMetadataExtractorFactory.java,v 1.1 2012-04-27 19:41:30 akanshab01 Exp $
+ * $Id: IOPScienceHtmlMetadataExtractorFactory.java,v 1.2 2013-10-10 00:08:22 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@ import org.lockss.plugin.*;
  * http://iopscience.iop.org/2043-6262/1/4/043003
  */
 public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("IOPScienceHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(IOPScienceHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -66,8 +66,8 @@ public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtra
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
       //  <meta name="citation_publication_date" content="2011-01-25" />
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
-      //<meta name="citation_title" content="Polymer materials with spatially graded morphologies: preparation, characterization and utilization" />
-      tagMap.put("citation_title",MetadataField.FIELD_ARTICLE_TITLE);
+      //<meta name="citation_title" content="Polymer materials with spatially..." />
+      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       //<meta name="citation_issn" content="2043-6262"/>
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
       //<meta name="citation_volume" content="1" />
@@ -81,6 +81,8 @@ public class IOPScienceHtmlMetadataExtractorFactory implements FileMetadataExtra
       //<meta name="citation_journal_title" content="Advances in Natural Sciences:
       //Nanoscience and Nanotechnology" />
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      // <meta name="citation_publisher" content="IOP Publishing" />
+      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
     }
 
     @Override
