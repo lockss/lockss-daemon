@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPMetadataExtractor.java,v 1.2 2012-08-08 07:19:52 tlipkis Exp $
+ * $Id: TestIOPMetadataExtractor.java,v 1.3 2013-10-10 00:09:50 etenbrink Exp $
  */
 
 /*
@@ -32,19 +32,13 @@
 
 package org.lockss.plugin.iop;
 
-import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.crawler.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
 /**
@@ -54,14 +48,14 @@ import org.lockss.plugin.simulated.*;
  */
 public class TestIOPMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestIOPScienceMetadataExtractor");
+  static Logger log = Logger.getLogger(TestIOPMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
   private ArchivalUnit bau; // IOPScience AU
-  private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.iop.ClockssIOPSciencePlugin"; // XML file in org.lockss.plugin.IOPScience package
+  // XML file in org.lockss.plugin.IOPScience package
+  private static String PLUGIN_NAME = "org.lockss.plugin.iop.ClockssIOPSciencePlugin";
 
   private static String BASE_URL = "http://iopscience.iop.org/";
   private static String SIM_ROOT = BASE_URL + "xyzjn/";
@@ -94,7 +88,9 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     conf.put("depth", "2");
     conf.put("branch", "3");
     conf.put("numFiles", "7");
-    conf.put("fileTypes",""	+ (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
+    conf.put("fileTypes",""	+ (
+        SimulatedContentGenerator.FILE_TYPE_PDF +
+        SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("default_article_mime_type", "application/html");
     return conf;
   }
@@ -113,7 +109,8 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
   
   // the metadata that should be extracted
   String goodDOI = "10.1088/2043-6262/1/4/043003";
-  String goodArticleTitle = "Polymer materials with spatially graded morphologies: preparation, characterization and utilization";
+  String goodArticleTitle = "Polymer materials with spatially graded morphologies: " +
+      "preparation, characterization and utilization";
   String goodVolume = "1";
   String goodIssue = "4";
   String goodStartPage = "043003";
@@ -157,10 +154,11 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new IOPScienceHtmlMetadataExtractorFactory.IOPScienceHtmlMetadataExtractor();
+    FileMetadataExtractor me = 
+        new IOPScienceHtmlMetadataExtractorFactory.IOPScienceHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -177,7 +175,8 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
   }
 
-  // a chunk of html source code from where the NatureHtmlMetadataExtractorFactory should NOT be able to extract metadata
+  // a chunk of html source code from where the IOPScienceHtmlMetadataExtractorFactory
+  // should NOT be able to extract metadata
   String badContent = "<HTML><HEAD><TITLE>"
     + goodArticleTitle
     + "</TITLE></HEAD><BODY>\n"
@@ -188,7 +187,8 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     + goodISSN + " </div>\n";
 
   /**
-   * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
+   * Method that creates a simulated Cached URL from the source code provided by the
+   * badContent String. It then asserts that NO metadata is extracted by using 
    * the IOPScienceHtmlMetadataExtractorFactory as the source code is broken.
    * @throws Exception
    */
@@ -198,10 +198,11 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    FileMetadataExtractor me = new IOPScienceHtmlMetadataExtractorFactory.IOPScienceHtmlMetadataExtractor();
+    FileMetadataExtractor me = 
+        new IOPScienceHtmlMetadataExtractorFactory.IOPScienceHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -242,7 +243,8 @@ public class TestIOPMetadataExtractor extends LockssTestCase {
       super(fileRoot);
     }
 
-    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+    public String getHtmlFileContent(String filename, int fileNum, int depth, 
+        int branchNum, boolean isAbnormal) {
 			
       String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
 			
