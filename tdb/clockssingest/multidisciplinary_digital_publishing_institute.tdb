@@ -21,6 +21,7 @@
 
       au < exists ; exists ; 2012 ; Actuators Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Actuators Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Actuators Volume 3 ; 3 >
 
   }
 
@@ -37,6 +38,7 @@
       au < exists ; exists ; 2011 ; Administrative Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Administrative Sciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Administrative Sciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Administrative Sciences Volume 4 ; 4 >
 
   }
 
@@ -51,6 +53,7 @@
       param[journal_issn] = 2226-4310
 
       au < exists ; exists ; 2013 ; Aerospace Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Aerospace Volume 2 ; 2 >
 
   }
 
@@ -67,6 +70,7 @@
       au < exists ; exists ; 2011 ; Agriculture Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Agriculture Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Agriculture Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Agriculture Volume 4 ; 4 >
 
   }
 
@@ -83,6 +87,7 @@
       au < exists ; exists ; 2011 ; Agronomy Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Agronomy Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Agronomy Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Agronomy Volume 4 ; 4 >
 
   }
 
@@ -102,6 +107,7 @@
       au < exists ; exists ; 2011 ; Algorithms Volume 4 ; 4 >
       au < exists ; exists ; 2012 ; Algorithms Volume 5 ; 5 >
       au < exists ; exists ; 2013 ; Algorithms Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; Algorithms Volume 7 ; 7 >
 
   }
 
@@ -118,6 +124,7 @@
       au < exists ; exists ; 2011 ; Animals Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Animals Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Animals Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Animals Volume 4 ; 4 >
 
   }
 
@@ -133,6 +140,7 @@
 
       au < exists ; exists ; 2012 ; Antibiotics Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Antibiotics Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Antibiotics Volume 3 ; 3 >
 
   }
 
@@ -148,6 +156,7 @@
 
       au < exists ; exists ; 2012 ; Antibodies Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Antibodies Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Antibodies Volume 3 ; 3 >
 
   }
 
@@ -163,6 +172,7 @@
 
       au < exists ; exists ; 2012 ; Antioxidants Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Antioxidants Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Antioxidants Volume 3 ; 3 >
 
   }
 
@@ -179,6 +189,7 @@
       au < exists ; exists ; 2011 ; Applied Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Applied Sciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Applied Sciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Applied Sciences Volume 4 ; 4 >
 
   }
 
@@ -194,6 +205,7 @@
 
       au < exists ; exists ; 2012 ; Arts Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Arts Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Arts Volume 3 ; 3 >
 
   }
 
@@ -211,6 +223,7 @@
       au < exists ; exists ; 2011 ; Atmosphere Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Atmosphere Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Atmosphere Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Atmosphere Volume 5 ; 5 >
 
   }
 
@@ -225,6 +238,7 @@
       param[journal_issn] = 2218-2004
 
       au < exists ; exists ; 2013 ; Atoms Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Atoms Volume 2 ; 2 >
 
   }
 
@@ -240,6 +254,7 @@
 
       au < exists ; exists ; 2012 ; Axioms Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Axioms Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Axioms Volume 3 ; 3 >
 
   }
 
@@ -256,6 +271,7 @@
       au < exists ; exists ; 2011 ; Behavioral Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Behavioral Sciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Behavioral Sciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Behavioral Sciences Volume 4 ; 4 >
 
   }
 
@@ -271,6 +287,7 @@
 
       au < exists ; exists ; 2012 ; Biology Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Biology Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Biology Volume 3 ; 3 >
 
   }
 
@@ -285,6 +302,7 @@
       param[journal_issn] = 2227-9059
 
       au < exists ; exists ; 2013 ; Biomedicines Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Biomedicines Volume 2 ; 2 >
 
   }
 
@@ -301,6 +319,7 @@
       au < exists ; exists ; 2011 ; Biomolecules Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Biomolecules Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Biomolecules Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Biomolecules Volume 4 ; 4 >
 
   }
 
@@ -317,6 +336,7 @@
       au < exists ; exists ; 2011 ; Biosensors Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Biosensors Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Biosensors Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Biosensors Volume 4 ; 4 >
 
   }
 
@@ -333,6 +353,7 @@
       au < exists ; exists ; 2011 ; Brain Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Brain Sciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Brain Sciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Brain Sciences Volume 4 ; 4 >
 
   }
 
@@ -349,6 +370,7 @@
       au < exists ; exists ; 2011 ; Buildings Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Buildings Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Buildings Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Buildings Volume 4 ; 4 >
 
   }
 
@@ -367,6 +389,7 @@
       au < exists ; exists ; 2011 ; Cancers Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Cancers Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Cancers Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Cancers Volume 6 ; 6 >
 
   }
 
@@ -383,6 +406,7 @@
       au < exists ; exists ; 2011 ; Catalysts Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Catalysts Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Catalysts Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Catalysts Volume 4 ; 4 >
 
   }
 
@@ -398,6 +422,7 @@
 
       au < exists ; exists ; 2012 ; Cells Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Cells Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Cells Volume 3 ; 3 >
 
   }
 
@@ -415,6 +440,7 @@
       au < exists ; exists ; 2011 ; Challenges Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Challenges Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Challenges Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Challenges Volume 5 ; 5 >
 
   }
 
@@ -429,6 +455,7 @@
       param[journal_issn] = 2227-9040
 
       au < exists ; exists ; 2013 ; Chemosensors Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Chemosensors Volume 2 ; 2 >
 
   }
 
@@ -443,6 +470,7 @@
       param[journal_issn] = 2227-9075
 
       au < exists ; exists ; 2013 ; Chromatography Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Chromatography Volume 2 ; 2 >
 
   }
 
@@ -457,6 +485,7 @@
       param[journal_issn] = 2225-1154
 
       au < exists ; exists ; 2013 ; Climate Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Climate Volume 2 ; 2 >
 
   }
 
@@ -473,6 +502,7 @@
       au < exists ; exists ; 2011 ; Coatings Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Coatings Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Coatings Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Coatings Volume 4 ; 4 >
 
   }
 
@@ -487,6 +517,7 @@
       param[journal_issn] = 2079-3197
 
       au < exists ; exists ; 2013 ; Computation Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Computation Volume 2 ; 2 >
 
   }
 
@@ -502,6 +533,7 @@
 
       au < exists ; exists ; 2012 ; Computers Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Computers Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Computers Volume 3 ; 3 >
 
   }
 
@@ -516,6 +548,7 @@
       param[journal_issn] = 2079-9284
 
       au < exists ; exists ; 2013 ; Cosmetics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Cosmetics Volume 2 ; 2 >
 
   }
 
@@ -532,6 +565,7 @@
       au < exists ; exists ; 2011 ; Crystals Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Crystals Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Crystals Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Crystals Volume 4 ; 4 >
 
   }
 
@@ -546,6 +580,7 @@
       param[journal_issn] = 2304-6767
 
       au < exists ; exists ; 2013 ; Dentistry Journal Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Dentistry Journal Volume 2 ; 2 >
 
   }
 
@@ -562,6 +597,7 @@
       au < exists ; exists ; 2011 ; Diagnostics Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Diagnostics Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Diagnostics Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Diagnostics Volume 4 ; 4 >
 
   }
 
@@ -576,6 +612,7 @@
       param[journal_issn] = 2079-9721
 
       au < exists ; exists ; 2013 ; Diseases Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Diseases Volume 2 ; 2 >
 
   }
 
@@ -594,6 +631,7 @@
       au < exists ; exists ; 2011 ; Diversity Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Diversity Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Diversity Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Diversity Volume 6 ; 6 >
 
   }
 
@@ -608,6 +646,7 @@
       param[journal_issn] = 2225-1146
 
       au < exists ; exists ; 2013 ; Econometrics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Econometrics Volume 2 ; 2 >
 
   }
 
@@ -622,6 +661,7 @@
       param[journal_issn] = 2227-7099
 
       au < exists ; exists ; 2013 ; Economies Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Economies Volume 2 ; 2 >
 
   }
 
@@ -638,6 +678,7 @@
       au < exists ; exists ; 2011 ; Education Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Education Sciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Education Sciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Education Sciences Volume 4 ; 4 >
 
   }
 
@@ -653,6 +694,7 @@
 
       au < exists ; exists ; 2012 ; Electronics Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Electronics Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Electronics Volume 3 ; 3 >
 
   }
 
@@ -672,6 +714,7 @@
       au < exists ; exists ; 2011 ; Energies Volume 4 ; 4 >
       au < exists ; exists ; 2012 ; Energies Volume 5 ; 5 >
       au < exists ; exists ; 2013 ; Energies Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; Energies Volume 7 ; 7 >
 
   }
 
@@ -700,6 +743,7 @@
       au < exists ; exists ; 2011 ; Entropy Volume 13 ; 13 >
       au < exists ; exists ; 2012 ; Entropy Volume 14 ; 14 >
       au < exists ; exists ; 2013 ; Entropy Volume 15 ; 15 >
+      au < expected ; exists ; 2014 ; Entropy Volume 16 ; 16 >
 
   }
 
@@ -714,6 +758,7 @@
       param[journal_issn] = 2079-6439
 
       au < exists ; exists ; 2013 ; Fibers Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Fibers Volume 2 ; 2 >
 
   }
 
@@ -729,6 +774,7 @@
 
       au < exists ; exists ; 2012 ; Foods Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Foods Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Foods Volume 3 ; 3 >
 
   }
 
@@ -746,6 +792,7 @@
       au < exists ; exists ; 2011 ; Forests Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Forests Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Forests Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Forests Volume 5 ; 5 >
 
   }
 
@@ -764,6 +811,7 @@
       au < exists ; exists ; 2011 ; Future Internet Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Future Internet Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Future Internet Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Future Internet Volume 6 ; 6 >
 
   }
 
@@ -778,6 +826,7 @@
       param[journal_issn] = 2075-4434
 
       au < exists ; exists ; 2013 ; Galaxies Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Galaxies Volume 2 ; 2 >
 
   }
 
@@ -795,6 +844,7 @@
       au < exists ; exists ; 2011 ; Games Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Games Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Games Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Games Volume 5 ; 5 >
 
   }
 
@@ -812,6 +862,7 @@
       au < exists ; exists ; 2011 ; Genes Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Genes Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Genes Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Genes Volume 5 ; 5 >
 
   }
 
@@ -828,6 +879,7 @@
       au < exists ; exists ; 2011 ; Geosciences Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Geosciences Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Geosciences Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Geosciences Volume 4 ; 4 >
 
   }
 
@@ -842,6 +894,7 @@
       param[journal_issn] = 2227-9032
 
       au < exists ; exists ; 2013 ; Healthcare Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Healthcare Volume 2 ; 2 >
 
   }
 
@@ -857,6 +910,7 @@
 
       au < exists ; exists ; 2012 ; Humanities Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Humanities Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Humanities Volume 3 ; 3 >
 
   }
 
@@ -871,6 +925,7 @@
       param[journal_issn] = 2227-9709
 
       au < exists ; exists ; 2013 ; Informatics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Informatics Volume 2 ; 2 >
 
   }
 
@@ -888,6 +943,7 @@
       au < exists ; exists ; 2011 ; Information Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Information Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Information Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Information Volume 5 ; 5 >
 
   }
 
@@ -902,6 +958,7 @@
       param[journal_issn] = 2304-6740
 
       au < exists ; exists ; 2013 ; Inorganics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Inorganics Volume 2 ; 2 >
 
   }
 
@@ -919,6 +976,7 @@
       au < exists ; exists ; 2011 ; Insects Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Insects Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Insects Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Insects Volume 5 ; 5 >
 
   }
 
@@ -942,6 +1000,7 @@
       au < exists ; exists ; 2011 ; International Journal of Environmental Research and Public Health Volume 8 ; 8 >
       au < exists ; exists ; 2012 ; International Journal of Environmental Research and Public Health Volume 9 ; 9 >
       au < exists ; exists ; 2013 ; International Journal of Environmental Research and Public Health Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; International Journal of Environmental Research and Public Health Volume 11 ; 11 >
 
   }
 
@@ -956,6 +1015,7 @@
       param[journal_issn] = 2227-7072
 
       au < exists ; exists ; 2013 ; International Journal of Financial Studies Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; International Journal of Financial Studies Volume 2 ; 2 >
 
   }
 
@@ -983,6 +1043,7 @@
       au < exists ; exists ; 2011 ; International Journal of Molecular Sciences Volume 12 ; 12 >
       au < exists ; exists ; 2012 ; International Journal of Molecular Sciences Volume 13 ; 13 >
       au < exists ; exists ; 2013 ; International Journal of Molecular Sciences Volume 14 ; 14 >
+      au < expected ; exists ; 2014 ; International Journal of Molecular Sciences Volume 15 ; 15 >
 
   }
 
@@ -998,6 +1059,7 @@
 
       au < exists ; exists ; 2012 ; ISPRS International Journal of Geo-Information Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; ISPRS International Journal of Geo-Information Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; ISPRS International Journal of Geo-Information Volume 3 ; 3 >
 
   }
 
@@ -1013,6 +1075,7 @@
 
       au < exists ; exists ; 2012 ; Journal of Clinical Medicine Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Journal of Clinical Medicine Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Journal of Clinical Medicine Volume 3 ; 3 >
 
   }
 
@@ -1027,6 +1090,7 @@
       param[journal_issn] = 2221-3759
 
       au < exists ; exists ; 2013 ; Journal of Developmental Biology Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Journal of Developmental Biology Volume 2 ; 2 >
 
   }
 
@@ -1044,6 +1108,7 @@
       au < exists ; exists ; 2011 ; Journal of Functional Biomaterials Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Journal of Functional Biomaterials Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Journal of Functional Biomaterials Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Journal of Functional Biomaterials Volume 5 ; 5 >
 
   }
 
@@ -1058,6 +1123,7 @@
       param[journal_issn] = 2079-3200
 
       au < exists ; exists ; 2013 ; Journal of Intelligence Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Journal of Intelligence Volume 2 ; 2 >
 
   }
 
@@ -1074,6 +1140,7 @@
       au < exists ; exists ; 2011 ; Journal of Low Power Electronics and Applications Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Journal of Low Power Electronics and Applications Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Journal of Low Power Electronics and Applications Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Journal of Low Power Electronics and Applications Volume 4 ; 4 >
 
   }
 
@@ -1088,6 +1155,7 @@
       param[journal_issn] = 2077-1312
 
       au < exists ; exists ; 2013 ; Journal of Marine Science and Engineering Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Journal of Marine Science and Engineering Volume 2 ; 2 >
 
   }
 
@@ -1104,6 +1172,7 @@
       au < exists ; exists ; 2011 ; Journal of Personalized Medicine Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Journal of Personalized Medicine Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Journal of Personalized Medicine Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Journal of Personalized Medicine Volume 4 ; 4 >
 
   }
 
@@ -1119,6 +1188,7 @@
 
       au < exists ; exists ; 2012 ; Journal of Sensor and Actuator Networks Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Journal of Sensor and Actuator Networks Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Journal of Sensor and Actuator Networks Volume 3 ; 3 >
 
   }
 
@@ -1134,6 +1204,7 @@
 
       au < exists ; exists ; 2012 ; Land Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Land Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Land Volume 3 ; 3 >
 
   }
 
@@ -1149,6 +1220,7 @@
 
       au < exists ; exists ; 2012 ; Laws Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Laws Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Laws Volume 3 ; 3 >
 
   }
 
@@ -1165,6 +1237,7 @@
       au < exists ; exists ; 2011 ; Life Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Life Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Life Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Life Volume 4 ; 4 >
 
   }
 
@@ -1179,6 +1252,7 @@
       param[journal_issn] = 2075-4442
 
       au < exists ; exists ; 2013 ; Lubricants Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Lubricants Volume 2 ; 2 >
 
   }
 
@@ -1193,6 +1267,7 @@
       param[journal_issn] = 2075-1702
 
       au < exists ; exists ; 2013 ; Machines Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Machines Volume 2 ; 2 >
 
   }
 
@@ -1217,6 +1292,7 @@
       au < exists ; exists ; 2011 ; Marine Drugs Volume 9 ; 9 >
       au < exists ; exists ; 2012 ; Marine Drugs Volume 10 ; 10 >
       au < exists ; exists ; 2013 ; Marine Drugs Volume 11 ; 11 >
+      au < expected ; exists ; 2014 ; Marine Drugs Volume 12 ; 12 >
 
   }
 
@@ -1236,6 +1312,7 @@
       au < exists ; exists ; 2011 ; Materials Volume 4 ; 4 >
       au < exists ; exists ; 2012 ; Materials Volume 5 ; 5 >
       au < exists ; exists ; 2013 ; Materials Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; Materials Volume 7 ; 7 >
 
   }
 
@@ -1250,6 +1327,7 @@
       param[journal_issn] = 2227-7390
 
       au < exists ; exists ; 2013 ; Mathematics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Mathematics Volume 2 ; 2 >
 
   }
 
@@ -1264,6 +1342,7 @@
       param[journal_issn] = 2076-3271
 
       au < exists ; exists ; 2013 ; Medical Sciences Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Medical Sciences Volume 2 ; 2 >
 
   }
 
@@ -1280,6 +1359,7 @@
       au < exists ; exists ; 2011 ; Membranes Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Membranes Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Membranes Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Membranes Volume 4 ; 4 >
 
   }
 
@@ -1296,6 +1376,7 @@
       au < exists ; exists ; 2011 ; Metabolites Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Metabolites Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Metabolites Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Metabolites Volume 4 ; 4 >
 
   }
 
@@ -1312,6 +1393,7 @@
       au < exists ; exists ; 2011 ; Metals Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Metals Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Metals Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Metals Volume 4 ; 4 >
 
   }
 
@@ -1327,6 +1409,7 @@
 
       au < exists ; exists ; 2012 ; Microarrays Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Microarrays Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Microarrays Volume 3 ; 3 >
 
   }
 
@@ -1344,6 +1427,7 @@
       au < exists ; exists ; 2011 ; Micromachines Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Micromachines Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Micromachines Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Micromachines Volume 5 ; 5 >
 
   }
 
@@ -1358,6 +1442,7 @@
       param[journal_issn] = 2076-2607
 
       au < exists ; exists ; 2013 ; Microorganisms Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Microorganisms Volume 2 ; 2 >
 
   }
 
@@ -1374,6 +1459,7 @@
       au < exists ; exists ; 2011 ; Minerals Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Minerals Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Minerals Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Minerals Volume 4 ; 4 >
 
   }
 
@@ -1399,6 +1485,7 @@
       au < exists ; exists ; 2011 ; Molbank Volume 2011 ; 2011 >
       au < exists ; exists ; 2012 ; Molbank Volume 2012 ; 2012 >
       au < exists ; exists ; 2013 ; Molbank Volume 2013 ; 2013 >
+      au < expected ; exists ; 2014 ; Molbank Volume 2014 ; 2014 >
 
   }
 
@@ -1431,6 +1518,7 @@
       au < exists ; exists ; 2011 ; Molecules Volume 16 ; 16 >
       au < exists ; exists ; 2012 ; Molecules Volume 17 ; 17 >
       au < exists ; exists ; 2013 ; Molecules Volume 18 ; 18 >
+      au < expected ; exists ; 2014 ; Molecules Volume 19 ; 19 >
 
   }
 
@@ -1447,6 +1535,7 @@
       au < exists ; exists ; 2011 ; Nanomaterials Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Nanomaterials Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Nanomaterials Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Nanomaterials Volume 4 ; 4 >
 
   }
 
@@ -1465,6 +1554,7 @@
       au < exists ; exists ; 2011 ; Nutrients Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Nutrients Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Nutrients Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Nutrients Volume 6 ; 6 >
 
   }
 
@@ -1479,6 +1569,7 @@
       param[journal_issn] = 2304-6732
 
       au < exists ; exists ; 2013 ; Optics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Optics Volume 2 ; 2 >
 
   }
 
@@ -1494,6 +1585,7 @@
 
       au < exists ; exists ; 2012 ; Pathogens Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Pathogens Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Pathogens Volume 3 ; 3 >
 
   }
 
@@ -1517,6 +1609,7 @@
       au < exists ; exists ; 2011 ; Pharmaceuticals Volume 8 ; 8 >
       au < exists ; exists ; 2012 ; Pharmaceuticals Volume 9 ; 9 >
       au < exists ; exists ; 2013 ; Pharmaceuticals Volume 10 ; 10 >
+      au < expected ; exists ; 2014 ; Pharmaceuticals Volume 11 ; 11 >
 
   }
 
@@ -1535,6 +1628,7 @@
       au < exists ; exists ; 2011 ; Pharmaceutics Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Pharmaceutics Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Pharmaceutics Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Pharmaceutics Volume 6 ; 6 >
 
   }
 
@@ -1549,6 +1643,7 @@
       param[journal_issn] = 2226-4787
 
       au < exists ; exists ; 2013 ; Pharmacy Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Pharmacy Volume 2 ; 2 >
 
   }
 
@@ -1564,6 +1659,7 @@
 
       au < exists ; exists ; 2012 ; Plants Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Plants Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Plants Volume 3 ; 3 >
 
   }
 
@@ -1582,6 +1678,7 @@
       au < exists ; exists ; 2011 ; Polymers Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Polymers Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Polymers Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Polymers Volume 6 ; 6 >
 
   }
 
@@ -1596,6 +1693,7 @@
       param[journal_issn] = 2227-9717
 
       au < exists ; exists ; 2013 ; Processes Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Processes Volume 2 ; 2 >
 
   }
 
@@ -1610,6 +1708,7 @@
       param[journal_issn] = 2227-7382
 
       au < exists ; exists ; 2013 ; Proteomes Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Proteomes Volume 2 ; 2 >
 
   }
 
@@ -1624,6 +1723,7 @@
       param[journal_issn] = 2304-6775
 
       au < exists ; exists ; 2013 ; Publications Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Publications Volume 2 ; 2 >
 
   }
 
@@ -1641,6 +1741,7 @@
       au < exists ; exists ; 2011 ; Religions Volume 2 ; 2 >
       au < exists ; exists ; 2012 ; Religions Volume 3 ; 3 >
       au < exists ; exists ; 2013 ; Religions Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Religions Volume 5 ; 5 >
 
   }
 
@@ -1659,6 +1760,7 @@
       au < exists ; exists ; 2011 ; Remote Sensing Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Remote Sensing Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Remote Sensing Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Remote Sensing Volume 6 ; 6 >
 
   }
 
@@ -1674,6 +1776,7 @@
 
       au < exists ; exists ; 2012 ; Resources Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Resources Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Resources Volume 3 ; 3 >
 
   }
 
@@ -1688,6 +1791,7 @@
       param[journal_issn] = 2227-9091
 
       au < exists ; exists ; 2013 ; Risks Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Risks Volume 2 ; 2 >
 
   }
 
@@ -1703,6 +1807,7 @@
 
       au < exists ; exists ; 2012 ; Robotics Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Robotics Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Robotics Volume 3 ; 3 >
 
   }
 
@@ -1729,6 +1834,7 @@
       au < exists ; exists ; 2011 ; Sensors Volume 11 ; 11 >
       au < exists ; exists ; 2012 ; Sensors Volume 12 ; 12 >
       au < exists ; exists ; 2013 ; Sensors Volume 13 ; 13 >
+      au < expected ; exists ; 2014 ; Sensors Volume 14 ; 14 >
 
   }
 
@@ -1744,6 +1850,7 @@
 
       au < exists ; exists ; 2012 ; Social Sciences Volume 1 ; 1 >
       au < exists ; exists ; 2013 ; Social Sciences Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; Social Sciences Volume 3 ; 3 >
 
   }
 
@@ -1760,6 +1867,7 @@
       au < exists ; exists ; 2011 ; Societies Volume 1 ; 1 >
       au < exists ; exists ; 2012 ; Societies Volume 2 ; 2 >
       au < exists ; exists ; 2013 ; Societies Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Societies Volume 4 ; 4 >
 
   }
 
@@ -1774,6 +1882,7 @@
       param[journal_issn] = 2075-4663
 
       au < exists ; exists ; 2013 ; Sports Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Sports Volume 2 ; 2 >
 
   }
 
@@ -1792,6 +1901,7 @@
       au < exists ; exists ; 2011 ; Sustainability Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Sustainability Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Sustainability Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Sustainability Volume 6 ; 6 >
 
   }
 
@@ -1810,6 +1920,7 @@
       au < exists ; exists ; 2011 ; Symmetry Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Symmetry Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Symmetry Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Symmetry Volume 6 ; 6 >
 
   }
 
@@ -1824,6 +1935,7 @@
       param[journal_issn] = 2079-8954
 
       au < exists ; exists ; 2013 ; Systems Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Systems Volume 2 ; 2 >
 
   }
 
@@ -1838,6 +1950,7 @@
       param[journal_issn] = 2227-7080
 
       au < exists ; exists ; 2013 ; Technologies Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Technologies Volume 2 ; 2 >
 
   }
 
@@ -1852,6 +1965,7 @@
       param[journal_issn] = 2305-6304
 
       au < exists ; exists ; 2013 ; Toxics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Toxics Volume 2 ; 2 >
 
   }
 
@@ -1870,6 +1984,7 @@
       au < exists ; exists ; 2011 ; Toxins Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Toxins Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Toxins Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Toxins Volume 6 ; 6 >
 
   }
 
@@ -1884,6 +1999,7 @@
       param[journal_issn] = 2076-393X
 
       au < exists ; exists ; 2013 ; Vaccines Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; Vaccines Volume 2 ; 2 >
 
   }
 
@@ -1902,6 +2018,7 @@
       au < exists ; exists ; 2011 ; Viruses Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Viruses Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Viruses Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Viruses Volume 6 ; 6 >
 
   }
 
@@ -1920,6 +2037,7 @@
       au < exists ; exists ; 2011 ; Water Volume 3 ; 3 >
       au < exists ; exists ; 2012 ; Water Volume 4 ; 4 >
       au < exists ; exists ; 2013 ; Water Volume 5 ; 5 >
+      au < expected ; exists ; 2014 ; Water Volume 6 ; 6 >
 
   }
 
