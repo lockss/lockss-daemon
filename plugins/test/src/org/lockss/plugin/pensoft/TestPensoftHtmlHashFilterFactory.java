@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.3 2013-07-10 21:57:00 aishizaki Exp $
+ * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.4 2013-10-10 23:17:52 aishizaki Exp $
  */
 
 /*
@@ -108,15 +108,24 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     "onclick=\"displayMessage2('login-form.php?SESID=020254c9122ebd1bf1f37e24b639181d',604,348);return false;\" class=\"menu\">Email/RSS Alerts</a>"+
     "Hello World";
   private static final String HtmlHashI = "<script type=\"text/javascript\">"+
-    "</script>Hello World";
+    "Not Included"+"</script>Hello World";
   private static final String HtmlHashJ = "<noscript>"+
-  "</noscript>Hello World"; 
+    "Not Included"+"</noscript>Hello World"; 
   private static final String HtmlHashK = "<td width=\"186\" valign=\"top\" class=textver10>"+
-  "</td>Hello World";
+    "Not Included"+"</td>Hello World";
   private static final String HtmlHashL = "<table width=\"186\">"+
-  "</table>Hello World";
+    "Not Included"+"</table>Hello World";
   private static final String HtmlHashM = "<div id=newscont>"+
-  "</div>Hello World";
+    "Not Included"+"</div>Hello World";
+  private static final String HtmlHashN = "<td width=\"165\" class=\"green\">Viewed by : <span class=more3 >3434</span></td>"+
+    "Random Stuff"+
+    "<td class=\"green2\" valign=\"top\"><b>doi: "+
+    "</b>10.3897/biorisk.7.1969<br><b>Published:</b> 17.10.2012"+
+    "<br /><br /><b>Viewed by: </b>3424"+
+    "<td class=\"more3\">Hello World </td>";
+  private static final String HtmlHashNFiltered = "Random Stuff<td class=\"more3\">Hello World </td>";
+  private static final String HtmlHashO = "<td align=center><a href=\"journals/zookeys/issue/341/\" class=more3>Current Issue</a></td>"+
+    "Hello World";
   
   public void testFilterA() throws Exception {
     InputStream inA;
@@ -129,6 +138,7 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
     assertEquals(HtmlHashAFiltered, filtStrA);
    
   }
+
   public void testFilterB() throws Exception {
     InputStream inB;
 
@@ -195,6 +205,53 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(HtmlHashM), ENC);    
     filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashEFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashO), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashEFiltered, filtStr);
+
   }
+
+  public void testFilterViewedBy() throws Exception {
+    InputStream in;
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashN), ENC);    
+    String filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashNFiltered, filtStr);
+
+  }
+/*
+  static final String input_1 = 
+      "org/lockss/plugin/pensoft/orig.html";
+  static final String input_2 = 
+      "org/lockss/plugin/pensoft/orig_mod.html";
+
+  //Test using real, downloaded files to be sure to catch all issues
+  public void testCase_fromFile() throws Exception {
+    InputStream input1 = null;
+    InputStream input2 = null;
+    InputStream filtered1 = null;
+    InputStream filtered2 = null;
+
+    try {
+    input1 = getClass().getClassLoader().getResourceAsStream(input_1);
+    filtered1 = fact.createFilteredInputStream(mau,
+        input1,Constants.DEFAULT_ENCODING);
+    
+    input2 = getClass().getClassLoader().getResourceAsStream(input_2);
+    filtered2 = fact.createFilteredInputStream(mau,
+        input2,Constants.DEFAULT_ENCODING);
+    
+    String s_filtered1 = StringUtil.fromInputStream(filtered1);
+    String s_filtered2 = StringUtil.fromInputStream(filtered2); 
+    assertEquals(s_filtered1, s_filtered2);
+    } finally {
+      IOUtil.safeClose(input1);
+      IOUtil.safeClose(input2);
+      IOUtil.safeClose(filtered1);
+      IOUtil.safeClose(filtered2);
+    }
+  }
+  */
 
 }
