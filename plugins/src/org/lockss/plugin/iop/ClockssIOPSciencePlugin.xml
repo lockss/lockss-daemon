@@ -9,18 +9,18 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -65,43 +65,42 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;IOP Publishing Plugin (IOPscience for CLOCKSS), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"IOP Publishing Plugin (IOPscience for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+    <string>"%s%s/%s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
     <entry>
       <string>au_title</string>
-      <string>&quot;%s%s&quot;, base_url, journal_issn</string>
+      <string>"%s%s", base_url, journal_issn</string>
     </entry>
     <entry>
       <string>au_volume</string>
-      <string>&quot;%s%s/%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>"%s%s/%s", base_url, journal_issn, volume_name</string>
     </entry>
     <entry>
       <string>au_issue</string>
-      <string>&quot;%s%s/%s/%s&quot;, base_url, journal_issn, volume_name, issue</string>
+      <string>"%s%s/%s/%s", base_url, journal_issn, volume_name, issue</string>
     </entry>
     <entry>
       <string>au_article</string>
-      <string>&quot;%s%s/%s/%s/%06d&quot;, base_url, journal_issn, volume_name, issue, article</string>
+      <string>"%s%s/%s/%s/%06d", base_url, journal_issn, volume_name, issue, article</string>
     </entry>
     </map>
   </entry> 
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%s/%s$&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/article$&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/&quot;, base_url, journal_issn, volume_name</string>
-      <string>2,&quot;^%s%s/%s/[^/]+/[^/]+/(cites|related|metrics)$&quot;, base_url, journal_issn, volume_name</string>
-      <string>1,&quot;^%s%s/%s/&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/%s$", base_url, journal_issn, volume_name</string>
+      <string>2,"^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/", base_url, journal_issn, volume_name</string>
+      <string>2,"^%s%s/%s/[^/]+/[^/]+/(cites|related|metrics)$", base_url, journal_issn, volume_name</string>
+      <string>1,"^%s%s/%s/", base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -115,8 +114,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%s%s/%s/[^/]+/[^/]+/fulltext$&quot;, base_url, journal_issn, volume_name</string>
-      <string>&quot;^%s%s/%s/[^/]+/[^/]+/pdf/.*\.pdf$&quot;, base_url, journal_issn, volume_name</string>
+      <string>"^%s%s/%s/[^/]+/[^/]+/fulltext$", base_url, journal_issn, volume_name</string>
+      <string>"^%s%s/%s/[^/]+/[^/]+/pdf/.*[.]pdf$", base_url, journal_issn, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -144,5 +143,9 @@
         <long>100</long>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.iop.IOPScienceUrlNormalizer</string>
   </entry>
 </map>
