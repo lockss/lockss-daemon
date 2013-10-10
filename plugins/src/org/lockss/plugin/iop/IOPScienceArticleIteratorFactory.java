@@ -1,10 +1,10 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.5 2011-10-11 07:36:28 thib_gc Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.6 2013-10-10 00:09:20 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,7 @@ Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.iop;
 
@@ -45,122 +45,93 @@ public class IOPScienceArticleIteratorFactory
     implements ArticleIteratorFactory,
                ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger("IOPScienceArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger(IOPScienceArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%s%s/%s\", base_url, journal_issn, volume_name";
+  protected static final String ROOT_TEMPLATE =
+      "\"%s%s/%s\", base_url, journal_issn, volume_name";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/%s/[^/]+/[^/]+/(fulltext|pdf/[^/]+\\.pdf)$\", base_url, journal_issn, volume_name";
-
+  protected static final String PATTERN_TEMPLATE =
+      "\"^%s%s/%s/[^/]+/[^/]+(?:/(?:fulltext|pdf/[^/]+[.]pdf))?$\"," +
+      " base_url, journal_issn, volume_name";
+  
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    return new IOPScienceArticleIterator(au,
-                                         new SubTreeArticleIterator.Spec()
-                                             .setTarget(target)
-                                             .setRootTemplate(ROOT_TEMPLATE)
-                                             .setPatternTemplate(PATTERN_TEMPLATE),
-                                         target);
-  }
-
-  protected static class IOPScienceArticleIterator extends SubTreeArticleIterator {
-
-    protected Pattern HTML_PATTERN = Pattern.compile("/([^/]+)/([^/]+)/([^/]+)/([^/]+)/fulltext$", Pattern.CASE_INSENSITIVE);
+  public Iterator<ArticleFiles> createArticleIterator(
+      ArchivalUnit au, MetadataTarget target)
+          throws PluginException {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    protected Pattern PDF_PATTERN = Pattern.compile("/([^/]+)/([^/]+)/([^/]+)/([^/]+)/pdf/[^/]+\\.pdf$", Pattern.CASE_INSENSITIVE);
+    // various aspects of an article
+    // http://iopscience.iop.org/1478-3975/8/1/015001
+    // http://iopscience.iop.org/1478-3975/8/1/015001/refs
+    // http://iopscience.iop.org/1478-3975/8/1/015001/cites
+    // http://iopscience.iop.org/1478-3975/8/1/015001/fulltext
+    // http://iopscience.iop.org/1478-3975/8/1/015001/pdf/1478-3975_8_1_015001.pdf
     
-    protected MetadataTarget target;
+    // Identify groups in the pattern "/(<jissn>)/(<volnum>)/(<issnum>)/(<articlenum>).*
+    // The format of the ISSN is an eight digit number, 
+    // divided by a hyphen into two four-digit numbers.
+    // The last digit, which may be 0–9 or an X, is a check digit. 
+    final Pattern ABSTRACT_PATTERN = Pattern.compile(
+        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)$",
+        Pattern.CASE_INSENSITIVE);
     
-    public IOPScienceArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec,
-                                     MetadataTarget target) {
-      super(au, spec);
-      this.target = target;
-    }
+    final Pattern HTML_PATTERN = Pattern.compile(
+        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/fulltext$",
+        Pattern.CASE_INSENSITIVE);
     
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-
-      mat = HTML_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextHtml(cu, mat);
-      }
-
-      mat = PDF_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextPdf(cu, mat);
-      }
-
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
+    final Pattern PDF_PATTERN = Pattern.compile(
+        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/pdf/\\1_\\2_\\3_\\4[.]pdf$",
+        Pattern.CASE_INSENSITIVE);
     
-    protected ArticleFiles processFullTextHtml(CachedUrl htmlCu,
-                                               Matcher htmlMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(htmlCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      if (target != MetadataTarget.Article) {
-        guessFullTextPdf(af, htmlMat);
-        guessAbstract(af, htmlMat);
-        guessReferences(af, htmlMat);
-        guessSupplementaryMaterials(af, htmlMat);
-      }
-      return af;
-    }
+    // how to change from one form (aspect) of article to another
+    final String ABSTRACT_REPLACEMENT = "/$1/$2/$3/$4";
+    final String HTML_REPLACEMENT = "/$1/$2/$3/$4/fulltext";
+    final String PDF_REPLACEMENT = "/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf";
+    final String REFS_REPLACEMENT = "/$1/$2/$3/$4/refs";
+    final String SUPPL_REPLACEMENT = "/$1/$2/$3/$4/media";
     
-    protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1/$2/$3/$4/fulltext"));
-      if (htmlCu != null && htmlCu.hasContent()) {
-        return null;
-      }
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(pdfCu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      if (target != MetadataTarget.Article) {
-        guessAbstract(af, pdfMat);
-        guessReferences(af, pdfMat);
-        guessSupplementaryMaterials(af, pdfMat);
-      }
-      return af;
-    }
+    builder.setSpec(target,
+        ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf"));
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-    }
-
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
-    }
-
-    protected void guessReferences(ArticleFiles af, Matcher mat) {
-      CachedUrl refCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/$4/refs"));
-      if (refCu != null && refCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
-      }
-    }
-
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl suppCu = au.makeCachedUrl(mat.replaceFirst("/$1/$2/$3/$4/media"));
-      if (suppCu != null && suppCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
-      }
-    }
-
+    // set up abstract to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means it is considered a FULL_TEXT_CU
+    // until this fulltext concept is deprecated
+    builder.addAspect(
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // set up fulltext to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    builder.addAspect(
+        PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    builder.addAspect(
+        REFS_REPLACEMENT,
+        ArticleFiles.ROLE_REFERENCES);
+    
+    builder.addAspect(
+        SUPPL_REPLACEMENT,
+        ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS);
+    
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML, 
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+    
+    return builder.getSubTreeArticleIterator();
   }
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(null);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
+  
 }
