@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlHashFilterFactory.java,v 1.1 2013-04-19 22:49:44 alexandraohlson Exp $
+/* $Id: ClockssNRCResearchPressHtmlHashFilterFactory.java,v 1.2 2013-10-11 20:03:33 alexandraohlson Exp $
  *  
  */
 
@@ -34,32 +34,48 @@ package org.lockss.plugin.atypon.nrcresearchpress;
 
 import java.io.InputStream;
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
-import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.Logger;
 
-public class ClockssNRCResearchPressHtmlHashFilterFactory implements FilterFactory {
-  protected static Logger log = Logger.getLogger("ClockssNRCResearchPressHtmlHashFilterFactory");
+public class ClockssNRCResearchPressHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
+  protected static Logger log = Logger.getLogger(ClockssNRCResearchPressHtmlHashFilterFactory.class);
+  
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      InputStream in, String encoding) throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
+                                               InputStream in,
+                                               String encoding) {
+    NodeFilter[] nrcfilters = new NodeFilter[] {
         // hash filter
-        // institution banner   
-        HtmlNodeFilters.tagWithAttribute("div", "class", "institutionBanner"),
-        // Filters all embedded JavaScript
-        HtmlNodeFilters.tagWithAttribute("script", "type", "text/javascript"),
-        // "Find it at Stanford" button
-        HtmlNodeFilters.tagWithAttribute("a", "title", "OpenURL STANFORD UNIVERSITY"),
-        //HtmlNodeFilters.tagWithAttribute("img", "alt", "OpenURL STANFORD UNIVERSITY"),
-
+        // comments, scripts, header, footer, citedBySection handled by parent
+        // top header
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "top-bar-wrapper"),
+        // banner 
+        HtmlNodeFilters.tagWithAttribute("div",  "class", "banner"),
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "nav-wrapper"),
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "breadcrumbs"),
+        HtmlNodeFilters.tagWithAttribute("table",  "class", "mceItemTable"),
+        // Remove link to "citing articles" because it only appears after an
+        // article has cited this one - enclosing <li> will be extra
+        // but this will stabilize 
+        HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-citing"), 
+        // Remove link to "also read" 
+        HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-recommended"), 
+        // Do NOT hash out link to related articles, because it could be 
+        // a correction/corrected article link which we need to know about
+        // <a class="icon-related">
+        // hash out entire left sidebar
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "sidebar-left"), 
+        //can't crawl filter this because it has citation download link, but ok
+        //to hash
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "sidebar-right"), 
     };
 
-    OrFilter combFilter = new OrFilter(filters);
-    HtmlTransform xf1 = HtmlNodeFilterTransform.exclude(combFilter);
-    InputStream filteredStream = new HtmlFilterInputStream(in, encoding, xf1);
-    return filteredStream;
+    // super.createFilteredInputStream adds nrc filter to the baseAtyponFilters
+    // and returns the filtered input stream using an array of NodeFilters that 
+    // combine the two arrays of NodeFilters.
+    return super.createFilteredInputStream(au, in, encoding, nrcfilters);
   }
 
 }

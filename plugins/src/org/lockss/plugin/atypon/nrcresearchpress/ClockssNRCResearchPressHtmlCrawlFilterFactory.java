@@ -1,4 +1,4 @@
-/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.3 2013-08-26 20:05:37 alexandraohlson Exp $
+/* $Id: ClockssNRCResearchPressHtmlCrawlFilterFactory.java,v 1.4 2013-10-11 20:03:33 alexandraohlson Exp $
  */
 
 /*
@@ -49,22 +49,25 @@ import org.lockss.plugin.atypon.BaseAtyponHtmlCrawlFilterFactory;
 public class ClockssNRCResearchPressHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
       // Will exclude these tags from the stream:
+      //   citedBySection handled by BaseAtypon
       //   all stuff in the left sidebar
       HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-left"),
-
-      // Cannot filter out entire sidebar-right because we need to pick up the dowload citations
-      // action/showCitFormats link - so remove smaller chunks, but most excluded through crawl rules anyway
+      // Cannot filter out entire sidebar-right because we need to pick up the 
+      //dowload citations -so remove smaller chunk
       HtmlNodeFilters.tagWithAttributeRegex("div", "class", "addthis_toolbox"),
-      
       //  strip below the main title with links to Home, About, Journals, etc...
       HtmlNodeFilters.tagWithAttribute("div", "id", "nav-wrapper"),
       // from issue TOC (e.g. http://www.nrcresearchpress.com/toc/cgj/36/5)
       // center area above the current issue (has links to prev/next/all issues)
       HtmlNodeFilters.tagWithAttribute("div", "class", "box-pad border-gray margin-bottom clearfix"),
-      //   area with links to articles that cite this one
-      //HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
       //   spider link in this tag
       HtmlNodeFilters.tagWithAttribute("span", "id", "hide"),
+      // Remove link to "citing articles" 
+      HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-citing"), 
+      // Remove link to "also read" 
+      HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-recommended"), 
+      // Remove link to correction/corrected article 
+      HtmlNodeFilters.tagWithAttribute("a",  "class", "icon-related"),
     };
     @Override
     public InputStream createFilteredInputStream(ArchivalUnit au,
