@@ -17,8 +17,8 @@
       param[base_url] = http://rc.rcjournal.com/
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < testing ; 2003 ; Respiratory Care Volume 48 ; 48 >
-      au < testing ; 2004 ; Respiratory Care Volume 49 ; 49 >
+      au < manifest ; 2003 ; Respiratory Care Volume 48 ; 48 >
+      au < manifest ; 2004 ; Respiratory Care Volume 49 ; 49 >
       au < released ; 2005 ; Respiratory Care Volume 50 ; 50 >
       au < released ; 2006 ; Respiratory Care Volume 51 ; 51 >
       au < released ; 2007 ; Respiratory Care Volume 52 ; 52 >
