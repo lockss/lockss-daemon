@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerJArchivalUnit.java,v 1.2 2013-10-09 23:01:38 ldoan Exp $
+ * $Id: TestPeerJArchivalUnit.java,v 1.3 2013-10-11 02:21:20 ldoan Exp $
  */
 
 /*
@@ -159,10 +159,16 @@ public class TestPeerJArchivalUnit extends LockssTestCase {
     // images figures and tables can live here
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-2x.jpg
     // https://dfzljdn9uc3pi.cloudfront.net/2013/55/1/fig-1-full.png
+    // https://d3amtssd1tejdt.cloudfront.net/2013/21/1/figure1.png
+    // https://d2pdyyx74uypu5.cloudfront.net/2013/22/2/figure2.jpg
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
     		    + "/2013/55/1/fig-1-2x.jpg", true, peerjArchivesAu, cus);   
     shouldCacheTest("https://dfzljdn9uc3pi.cloudfront.net"
                     + "/2013/55/1/fig-1-full.png", true, peerjArchivesAu, cus);   
+    shouldCacheTest("https://d3amtssd1tejdt.cloudfront.net"
+                    + "/2013/21/1/figure1.png", true, peerjArchivesAu, cus);
+    shouldCacheTest("https://d2pdyyx74uypu5.cloudfront.net"
+                   + "/2013/22/2/figure2.jpg", true, peerjArchivesAu, cus);   
     // missing peerj_site param - should not get crawled
     shouldCacheTest(ROOT_URL + "?year=2012", false, peerjArchivesAu, cus);  
     // LOCKSS
