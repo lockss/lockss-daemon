@@ -8,7 +8,7 @@
 
   >
   
-  plugin = org.lockss.plugin.metapress.ClockssOJS2Plugin
+  plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   param[base_url] = http://bjendo.org/
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
   
