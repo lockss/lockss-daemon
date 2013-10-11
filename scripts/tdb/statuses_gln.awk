@@ -32,7 +32,7 @@ BEGIN {
       if (r[pn] == "") {
         if ((substr(p[pn],1,2) <= "American H")) {
           r[pn] = "5"
-        } else if ((substr(p[pn],1,2) >= "AMerican I") && (substr(p[pn],1,2) <= "Bz")) {
+        } else if ((substr(p[pn],1,2) >= "American I") && (substr(p[pn],1,2) <= "Bz")) {
           r[pn] = "4"
         } else if ((substr(p[pn],1,2) >= "CA") && (substr(p[pn],1,2) <= "Nz")) {
           r[pn] = "5"
