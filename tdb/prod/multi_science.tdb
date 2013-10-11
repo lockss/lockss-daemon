@@ -227,8 +227,8 @@
 
     au < manifest ; 2009 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 1 ; 1 >
     au < released ; 2010 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 2 ; 2 >
-    au < released ; 2011 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
-    au < exists ; 2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 4 ; 4 >
+    au < released ; 2011-2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 3 ; 3 >
+    au < expected ; 2012 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 4 ; 4 >
     au < expected ; 2013 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 5 ; 5 >
     au < expected ; 2014 ; International Journal of Emerging Multidisciplinary Fluid Sciences Volume 6 ; 6 >
 
@@ -264,6 +264,7 @@
     param[journal_issn] = 1759-3107
 
     au < released ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
+    au < exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
