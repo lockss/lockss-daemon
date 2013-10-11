@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.38 2011-11-09 21:36:29 tlipkis Exp $
+ * $Id: Plugin.java,v 1.39 2013-10-11 22:43:21 fergaloy-sf Exp $
  */
 
 /*
@@ -211,6 +211,13 @@ public interface Plugin {
    */
   public String getDefaultArticleMimeType();
 
+  /**
+   * Provides an indication of whether this is a plugin for bulk content.
+   * 
+   * @return a boolean with <code>true</code> if this is a plugin for bulk
+   *         content, <code>false</code> otherwise.
+   */
+  public boolean isBulkContent();
 
   /**
    * Names of daemon features whose operation is influenced by plugins.

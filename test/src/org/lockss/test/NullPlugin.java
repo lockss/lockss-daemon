@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.120 2013-07-24 19:01:59 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.121 2013-10-11 22:43:23 fergaloy-sf Exp $
  */
 
 /*
@@ -155,6 +155,10 @@ public class NullPlugin {
 			       String contentType,
 			       org.lockss.plugin.ArchivalUnit au) {
       return null;
+    }
+
+    public boolean isBulkContent() {
+      return false;
     }
   }
 
