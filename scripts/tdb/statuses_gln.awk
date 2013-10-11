@@ -30,9 +30,9 @@ BEGIN {
   #    n[pn] = $2
       r[pn] = $3
       if (r[pn] == "") {
-        if ((substr(p[pn],1,2) <= "Am")) {
-          r[pn] = "7"
-        } else if ((substr(p[pn],1,2) >= "An") && (substr(p[pn],1,2) <= "Bz")) {
+        if ((substr(p[pn],1,2) <= "American H")) {
+          r[pn] = "5"
+        } else if ((substr(p[pn],1,2) >= "AMerican I") && (substr(p[pn],1,2) <= "Bz")) {
           r[pn] = "4"
         } else if ((substr(p[pn],1,2) >= "CA") && (substr(p[pn],1,2) <= "Nz")) {
           r[pn] = "5"
