@@ -7,7 +7,7 @@
 
   >
   
-  plugin = org.lockss.plugin.ojs.OJS2Plugin
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
   param[base_url] = http://bjendo.org/
   implicit < status ; year ; name ; volume ; param[year] >
 
