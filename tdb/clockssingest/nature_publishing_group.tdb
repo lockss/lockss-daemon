@@ -43,7 +43,6 @@
       issnl = 0002-9270
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = ajg
     comment[notReady] = fetch error on ingest 3 RT 4106
 
@@ -233,7 +232,7 @@
       eissn = 1476-5373
 
     >
-    comment[0] = need to confirm if this is under contract
+    
     param[journal_id] = bdj
 
     au < manifest ; exists ; 1970 ; British Dental Journal Volume 128 ; 1970 ; 128 >
@@ -608,7 +607,6 @@
       issnl = 0009-9236
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = clpt
 
     au < exists ; exists ; 1980 ; Clinical Pharmacology & Therapeutics Volume 27 ; 1980 ; 27 >
@@ -754,7 +752,6 @@
       eissn = 1469-3178 ;
       issnl = 1469-221X
     >
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = embor
 
     au < manifest ; exists ; 2000 ; EMBO Reports Volume 1 ; 2000 ; 1 >
@@ -830,7 +827,6 @@
       issnl = 1018-4813
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = ejhg
 
     au < manifest ; exists ; 1998 ; European Journal of Human Genetics Volume 6 ; 1998 ; 6 >
@@ -862,7 +858,6 @@
       issnl = 1462-0049
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = ebd
 
     au < exists ; exists ; 1998 ; Evidence-Based Dentistry Volume 1 (1998) ; 1998 ; 1 >
@@ -1443,7 +1438,6 @@
       issnl = 1751-7362
     >
 
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = ismej
 
     au < manifest ; exists ; 2007 ; The ISME Journal Volume 1 ; 2007 ; 1 >
@@ -1466,7 +1460,6 @@
       issnl = 1087-0024
     >
 
-    comment[0] = need to confirm if this is under contract
     comment[1] = There is no volume published in 2010, 2011 is the last issue as of 1/18/13
     param[journal_id] = jidsp
 
@@ -1520,7 +1513,6 @@
       issnl = 0271-678X
     >
 
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = jcbfm
 
     au < exists ; exists ; 1981 ; Journal of Cerebral Blood Flow and Metabolism Volume 1 ; 1981 ; 1 >
@@ -1861,7 +1853,6 @@
       issnl = 0085-2538
     >
 
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = ki
 
     au < exists ; exists ; 1972 ; Kidney International Volume 1 (1972) ; 1972 ; 1 >
@@ -1976,7 +1967,6 @@
       issnl = 0023-6837
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = labinvest
 
     au < exists ; exists ; 2000 ; Laboratory Investigation Volume 80 ; 2000 ; 80 >
@@ -2171,7 +2161,6 @@
       issnl = 1933-0219
     >
 
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = mi
 
     au < released ; crawling ; 2008 ; Mucosal Immunology Volume 1 ; 2008 ; 1 >
@@ -2898,7 +2887,6 @@
       eissn = 1753-9315
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = climate
     comment[1] = online-only publication 2007-2010
 
@@ -3721,7 +3709,6 @@
       issnl = 0893-133X
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = npp
 
     au < manifest ; exists ; 1994 ; Neuropsychopharmacology Volume 11 ; 1994 ; 11 >
@@ -4046,7 +4033,6 @@
       eissn = 1945-3477
     >
 
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = scibx
 
     au < exists ; exists ; 2008 ; SciBX: Science-Business eXchange Volume 1 ; 2008 ; 1 >
@@ -4194,7 +4180,6 @@
       issnl = 1741-7503
     >
     
-    comment[0] = need to confirm if this is under contract
     param[journal_id] = vital
 
     au < manifest ; exists ; 2003 ; Vital Volume 1 (2003) ; 2003 ; 1 >
