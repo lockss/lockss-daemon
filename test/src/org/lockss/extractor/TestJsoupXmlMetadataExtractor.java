@@ -142,7 +142,9 @@ public class TestJsoupXmlMetadataExtractor extends
     public FileMetadataExtractor createFileMetadataExtractor(
                                   MetadataTarget target, String mimeType)
         throws PluginException {
-      return new JsoupXmlTagExtractor(Arrays.asList(TEST_TAGS));
+      JsoupTagExtractor extractor = new JsoupTagExtractor(MIME_TYPE_XML);
+      extractor.setSelectors(Arrays.asList(TEST_TAGS));
+      return extractor;
     }
   }
 

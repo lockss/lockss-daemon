@@ -6,9 +6,7 @@ import org.lockss.daemon.*;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.nio.charset.Charset;
 
 /**
  * Created with IntelliJ IDEA. User: claire Date: 03/09/2013 Time: 15:32 To
@@ -20,9 +18,6 @@ public class TestJsoupHtmlMetaTagExtractor extends
     super.setUp();
   }
 
-  public TestJsoupHtmlMetaTagExtractor() {
-  }
-
   public FileMetadataExtractorFactory getFactory() {
     return new MyFileMetadataExtractorFactory();
   }
@@ -31,14 +26,6 @@ public class TestJsoupHtmlMetaTagExtractor extends
     return Constants.MIME_TYPE_HTML;
   }
 
-  /**
-   *
-   * Method: emitMetadata(CachedUrl cu, ArticleMetadata metadata)
-   *
-   */
-  public void testEmitMetadata() throws Exception {
-//TODO: Test goes here...
-  }
   public void testSingleTag() throws Exception {
     String text = "<meta name=\"FirstName\" content=\"FirstContent\">";
     assertRawEquals("firstname", "FirstContent", extractFrom(text));
@@ -145,6 +132,7 @@ public class TestJsoupHtmlMetaTagExtractor extends
 
   public void testProblemFile() throws Exception {
     String prob_url = "http://msp.org/ant/2007/1-3/p03.xhtml";
+    System.out.println(Charset.defaultCharset());
     InputStream istr = UrlUtil.openInputStream(prob_url);
     //NB. StringUtil.fromInputStream() encodes as ENCODING_ISO_8859_1
     // This is incorrect for xhtml files which defaults to utf-8/16 or the
@@ -152,7 +140,8 @@ public class TestJsoupHtmlMetaTagExtractor extends
     String html = StringUtil.fromReader(new InputStreamReader(istr,
         Constants.ENCODING_UTF_8));
     ArticleMetadata am = extractFrom(html);
-    String utf8=new String("L\u221E structures on mapping cones".getBytes(),Constants.ENCODING_UTF_8);
+    String utf8=new String("L\u221E structures on mapping cones".getBytes(),
+        Constants.ENCODING_UTF_8);
     assertEquals(utf8,
                   am.getRawList("citation_title").get(0));
   }
@@ -164,7 +153,7 @@ public class TestJsoupHtmlMetaTagExtractor extends
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                              String mimeType)
         throws PluginException {
-      return new JsoupHtmlMetaTagExtractor();
+      return new JsoupTagExtractor(mimeType);
     }
   }
 }

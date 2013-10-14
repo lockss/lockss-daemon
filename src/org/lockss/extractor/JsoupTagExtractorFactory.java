@@ -17,14 +17,11 @@ public class JsoupTagExtractorFactory implements FileMetadataExtractorFactory {
                                                            String contentType)
       throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new JsoupHtmlMetaTagExtractor();
-    }
 
-    if("text/xml".equalsIgnoreCase(mimeType) ||
-        "application/xml".equalsIgnoreCase(mimeType))
-    {
-      return new JsoupXmlTagExtractor();
+    if ("text/html".equalsIgnoreCase(mimeType) ||
+        "text/xml".equalsIgnoreCase(mimeType) ||
+        "application/xml".equalsIgnoreCase(mimeType)) {
+      return new JsoupTagExtractor(mimeType);
     }
     return null;
   }

@@ -1,0 +1,196 @@
+package org.lockss.extractor;
+
+import org.apache.commons.lang.StringEscapeUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
+import org.jsoup.select.Elements;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.util.HtmlUtil;
+import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Collection;
+import java.util.Map;
+
+public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
+  static Logger theLog = Logger.getLogger("JsoupTagExtractor");
+
+  static final String DEFAULT_META_TAG = "meta";
+  protected Collection<String> m_selectors;
+  String m_mimeType;
+  Parser m_parser;
+  boolean m_isHtml = true;
+
+  /**
+   * default constructor which will process meta selectors only
+   * kept for backwards compatiblity
+   */
+  public JsoupTagExtractor(String mimeType ) {
+    m_mimeType = mimeType;
+
+    if ("text/html".equalsIgnoreCase(mimeType)) {
+      m_parser = Parser.htmlParser();
+    }
+    else if("text/xml".equalsIgnoreCase(mimeType) ||
+       "application/xml".equalsIgnoreCase(mimeType))
+    {
+      m_parser = Parser.xmlParser();
+      m_isHtml =false;
+    }
+  }
+
+  /**
+   * Create an extractor that will extract the value(s) of the xml selectors in
+   * <code>selMap.keySet()</code>
+   * @param selMap a map from XML selectors to cooked keys.  (Only the set of
+   * selectors is used by this object.)
+   */
+  public JsoupTagExtractor(Map selMap) {
+    m_selectors = selMap.keySet();
+  }
+
+  /**
+   * set the selectors for extraction
+   * @param selMap the map with keys to to be used as the selectors for extraction
+   */
+  public void setSelectors(Map selMap)
+  {
+    m_selectors = selMap.keySet();
+  }
+
+  /**
+   * set the selectors for extraction
+   * @param selectors the collection of selectors we will extract data from
+   */
+  public void setSelectors(Collection<String> selectors)
+  {
+    m_selectors = selectors;
+  }
+
+  public String getMimeType()
+  {
+    return m_mimeType;
+  }
+
+  @Override
+  public ArticleMetadata extract(final MetadataTarget target,
+                                 final CachedUrl cu) throws
+      IOException, PluginException {
+    // validate input
+    if (cu == null) {
+      throw new IllegalArgumentException("extract() called with null CachedUrl");
+    }
+    ArticleMetadata am_ret = new ArticleMetadata();
+    if(cu.getContentSize() > 0) {
+      InputStream in = cu.getUnfilteredInputStream();
+      // we pass in null for charset to determine from http-equiv meta selector
+      Document doc = Jsoup.parse(in, null, cu.getUrl(), m_parser);
+      if(m_isHtml && (m_selectors == null || m_selectors.isEmpty())) {
+        // just use the default "meta" tag (backwards compatible)
+        extractMetaTags(doc, am_ret);
+      }
+      else {
+        // extract all selectors in m_selectors
+        extractSelectors(doc, am_ret);
+      }
+    }
+    return am_ret;
+  }
+
+  /**
+   * extract the <meta...></meta> selectors
+   * @param doc the parsed jsoup document
+   * @param articleMeta the ArticleMetadata to store the name/content pairs
+   */
+  void extractMetaTags(Document doc, ArticleMetadata articleMeta)
+  {
+    Elements metas = doc.select(DEFAULT_META_TAG);
+    String name;
+    String content;
+    for (Element meta : metas)
+    {
+      name = meta.attr("name");
+      content = meta.attr("content");
+      if(!StringUtil.isNullString(content) && !StringUtil.isNullString(name))
+      {
+        content = processHtml(name, content);
+        if (theLog.isDebug3()) theLog.debug3("Add: "+ name + " = " + content);
+        articleMeta.putRaw(name, content);
+      }
+    }
+   }
+
+
+  /**
+   * extract the values for the as defined by the selectors and store them in
+   * article. These can be selectors or they can be css/jquery selection strings
+   * metadata
+   * @param doc the jsoup parsed doc
+   * @param articleMeta the ArticleMetadata in which to store the selector/value(s)
+   */
+  void extractSelectors(Document doc, ArticleMetadata articleMeta)
+  {
+
+    // if we don't have any selectors there is nothing to do, so we return
+    if(m_selectors == null || m_selectors.isEmpty()) return;
+
+    for(String selector : m_selectors) {
+      String val;
+      Elements elements = doc.select(selector);
+      for(Element element : elements) {
+        if(element.hasText()) {
+          if(m_isHtml)  {
+            val = processHtml(selector, element.text());
+          }
+          else {
+            val = processXml(selector, element.text());
+          }
+          if (theLog.isDebug3()) theLog.debug3("Add: "+ selector + " = " +val);
+          articleMeta.putRaw(selector, val);
+        }
+      }
+    }
+  }
+
+  /**
+   * take the value for a selector from an html page and perform the necessary
+   * transformations to regularize it for storing in the article metadata.
+   * this will strip embedded html selectors, unescape any escaped html and remove
+   * any extra spaces.
+   *
+   * @param name the selector name
+   * @param value the value
+   * @return the regularized value
+   */
+  private String processHtml(final String name, String value) {
+    value = HtmlUtil.stripHtmlTags(value);
+    // remove character entities from content
+    value = StringEscapeUtils.unescapeHtml(value);
+    // normalize multiple whitespaces to a single space character
+    value = value.replaceAll("\\s+", " ");
+    return value;
+  }
+
+  /**
+   * take the value for a selector from an xml page and perform the necessary
+   * transformations to regularize it for storing in the article metadata.
+   * this will unescape any escaped xml and remove any extra spaces.
+   *
+   * @param name the selector name
+   * @param value the value
+   * @return the regularized value
+   */
+  private String processXml(final String name, String value) {
+    // remove character entities from content
+    value = StringEscapeUtils.unescapeXml(value);
+    // normalize multiple whitespaces to a single space character
+    value = value.replaceAll("\\s+", " ");
+    return value;
+  }
+
+}
