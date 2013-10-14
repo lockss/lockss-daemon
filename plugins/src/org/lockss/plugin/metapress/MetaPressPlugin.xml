@@ -1,22 +1,26 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing - etenbrink/???</string>
+    <string>testing - ???</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.metapress.MetaPressPlugin</string>
   </entry>
   <entry>
+    <string>plugin_name</string>
+    <string>Metapress Plugin</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -31,10 +35,6 @@
   <entry>
     <string>required_daemon_version</string>
     <string>1.54.0</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Metapress Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
