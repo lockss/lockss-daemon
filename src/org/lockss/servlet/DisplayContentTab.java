@@ -38,10 +38,7 @@ import org.lockss.daemon.Crawler;
 import org.lockss.daemon.status.ColumnDescriptor;
 import org.lockss.daemon.status.StatusService;
 import org.lockss.daemon.status.StatusTable;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.AuUtil;
-import org.lockss.plugin.Plugin;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
@@ -56,6 +53,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.DecimalFormat;
 import java.text.Format;
+import java.text.Normalizer;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.List;
@@ -75,6 +73,8 @@ public class DisplayContentTab extends LockssServlet {
     private String sortKey;
     private String groupKey;
     private String typeKey;
+    private String filterKey;
+    private String timeKey;
     private StatusService statSvc;
     private int outputFmt;
     private List rules;
@@ -87,12 +87,12 @@ public class DisplayContentTab extends LockssServlet {
     private String type;
 
     private ArrayList<String> columnArrayList = new ArrayList<String>() {{
-        add("Title");
+        add("");
         add("Year");
-        add("ISSN-L");
         add("Collected");
         add("Last crawl");
         add("Last poll");
+        add("");
     }};
 
     private Page page;
@@ -103,6 +103,10 @@ public class DisplayContentTab extends LockssServlet {
     private static final String CLOCK_ICON = "images/button_clock.png";
     private static final String QUESTION_ICON = "images/button_question.png";
     private static final String EXTERNAL_LINK_ICON = "images/external_link.png";
+    private static final String EXPAND_ICON = "images/extend-right.gif";
+    private static final String COLLAPSE_ICON = "images/expanded.gif";
+    private static final String PLUS_ICON = "images/control_add.png";
+    private static final String DELETE_ICON = "images/decline.png";
 
     protected void resetLocals() {
         super.resetLocals();
@@ -210,6 +214,14 @@ public class DisplayContentTab extends LockssServlet {
         } else {
             auEnd = auEndString.charAt(0);
         }
+        filterKey = req.getParameter("filter");
+        if (StringUtil.isNullString(filterKey)) {
+            filterKey = "";
+        }
+        timeKey = req.getParameter("timeKey");
+        if (StringUtil.isNullString(timeKey)) {
+            timeKey = "";
+        }
         switch (outputFmt) {
             case OUTPUT_HTML:
                 doHtmlStatusTable();
@@ -217,13 +229,21 @@ public class DisplayContentTab extends LockssServlet {
         }
     }
 
-    private TreeMap<String, TreeSet<ArchivalUnit>> getAusByPublisherName(Character start, Character end) {
-        TreeMap<String, TreeSet<ArchivalUnit>> aus = new TreeMap<String, TreeSet<ArchivalUnit>>();
-        TreeMap<String, TreeSet<ArchivalUnit>> allAus =
-                DisplayContentTable.orderAusByPublisher(filterAus(TdbUtil.getConfiguredAus()));
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPublisherName() {
+        return getAusByPublisherName('A', 'Z', "none", "");
+    }
+
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPublisherName(Character start, Character end, String filterType, String filterKey) {
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> aus = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> allAus;
+                if ("none".equals(filterType)) {
+                    allAus = DisplayContentTable.orderAusByPublisherAndTitle(TdbUtil.getConfiguredAus(), filterKey);
+                } else {
+                    allAus = DisplayContentTable.orderAusByPublisherAndTitle(filterAus(TdbUtil.getConfiguredAus(), filterType), filterKey);
+                }
         for (int i = start; i < end; i++) {
-            for (Map.Entry<String, TreeSet<ArchivalUnit>> stringTreeSetEntry : allAus.entrySet()) {
-                Map.Entry<String, TreeSet<ArchivalUnit>> pairs = (Map.Entry) stringTreeSetEntry;
+            for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> stringTreeSetEntry : allAus.entrySet()) {
+                Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> pairs = (Map.Entry) stringTreeSetEntry;
                 String publisherName = pairs.getKey().toLowerCase();
                 String startLetter = Character.toString((char) i);
                 if (publisherName.startsWith(startLetter.toLowerCase())) {
@@ -234,28 +254,36 @@ public class DisplayContentTab extends LockssServlet {
         return aus;
     }
 
-    private TreeMap<String, TreeSet<ArchivalUnit>> getAusByPluginName(Character start, Character end) {
-        TreeMap<String, TreeSet<ArchivalUnit>> aus = new TreeMap<String, TreeSet<ArchivalUnit>>();
-        TreeMap<Plugin, TreeSet<ArchivalUnit>> allAus =
-                DisplayContentTable.orderAusByPlugin(filterAus(TdbUtil.getConfiguredAus()));
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPluginName() {
+        return getAusByPluginName('A', 'Z', "none", "");
+    }
+
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPluginName(Character start, Character end, String filterType, String filterKey) {
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> aus = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> allAus;
+        if ("none".equals(filterType)) {
+          allAus = DisplayContentTable.orderAusByPluginAndTitle(TdbUtil.getConfiguredAus(), filterKey);
+        } else {
+          allAus = DisplayContentTable.orderAusByPluginAndTitle(filterAus(TdbUtil.getConfiguredAus(), filterType), filterKey);
+        }
         for (int i = start; i < end; i++) {
-        for (Map.Entry<Plugin, TreeSet<ArchivalUnit>> stringTreeSetEntry : allAus.entrySet()) {
-            Map.Entry<Plugin, TreeSet<ArchivalUnit>> pairs = (Map.Entry) stringTreeSetEntry;
-            String pluginName = pairs.getKey().getPluginName().toLowerCase();
+        for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> stringTreeSetEntry : allAus.entrySet()) {
+            Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> pairs = (Map.Entry) stringTreeSetEntry;
+            String pluginName = pairs.getKey().toLowerCase();
             String startLetter = Character.toString((char) i);
             if (pluginName.startsWith(startLetter.toLowerCase())) {
-                aus.put(pairs.getKey().getPluginName(), pairs.getValue());
+                aus.put(pairs.getKey(), pairs.getValue());
             }
         }
         }
         return aus;
     }
 
-    private Collection<ArchivalUnit> filterAus(Collection<ArchivalUnit> aus) {
+    private static Collection<ArchivalUnit> filterAus(Collection<ArchivalUnit> aus, String filterType) {
         Collection<ArchivalUnit> filteredAus;
-        if ("books".equals(type)) {
+        if ("books".equals(filterType)) {
             filteredAus = TdbUtil.filterAusByType(aus, TdbUtil.ContentType.BOOKS);
-        } else if ("journals".equals(type)) {
+        } else if ("journals".equals(filterType)) {
             filteredAus = TdbUtil.filterAusByType(aus, TdbUtil.ContentType.JOURNALS);
         } else {
             filteredAus = TdbUtil.filterAusByType(aus, TdbUtil.ContentType.ALL);
@@ -270,20 +298,34 @@ public class DisplayContentTab extends LockssServlet {
     // Build the table, adding elements to page
     private Page doHtmlStatusTable0() throws IOException {
         page = new Page();
+        addJS("js/DisplayContentTab.js");
         Table divTable = createTabDiv(auStart);
-        TreeMap<String, TreeSet<ArchivalUnit>> aus;
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> aus;
         if ("plugin".equals(groupKey)) {
-            aus = getAusByPluginName(auStart, auEnd);
+            aus = getAusByPluginName(auStart, auEnd, type, filterKey);
         } else {
-            aus = getAusByPublisherName(auStart, auEnd);
+            aus = getAusByPublisherName(auStart, auEnd, type, filterKey);
         }
-        for (Map.Entry<String, TreeSet<ArchivalUnit>> entry : aus.entrySet()) {
+        for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> entry : aus.entrySet()) {
             createTabContent(divTable, entry.getKey(), entry.getValue());
         }
-        addJS("js/jquery-2.0.3.min.js");
-        addJS("js/jquery-ui-1.10.3.min.js");
-        addJS("js/auDetails.js");
-        page.add(divTable);
+        Form tabForm = new Form();
+        tabForm.attribute("onsubmit", "return confirm('Do you wish to delete the selected items?');");
+        tabForm.method("GET");
+        tabForm.add(divTable);
+        if (aus.size() > 0) {
+//          Input formAdd = new Input("submit", "addSubmit");
+//          formAdd.attribute("value", "Add selected");
+//          formAdd.attribute("id", "add-submit");
+//          formAdd.attribute("class", "submit-button");
+//          tabForm.add(formAdd);
+          Input formDelete = new Input("submit", "deleteSubmit");
+          formDelete.attribute("value", "Delete selected");
+          formDelete.attribute("id", "delete-submit");
+          formDelete.attribute("class", "submit-button");
+          tabForm.add(formDelete);
+        }
+        page.add(tabForm);
         return page;
     }
 
@@ -295,20 +337,11 @@ public class DisplayContentTab extends LockssServlet {
      */
     private Table createTabDiv(Character letter) {
 
-        Block tabDiv = new Block("div", "id=\"" + letter + "\"");
-        Table divTable = new Table(0, "class=\"status-table\" cellspacing=\"0\"");
-        divTable.newRow();
-        divTable.addCell("");
-        log.error("Columns: " + columnArrayList.toString());
-        for (String columnArray : columnArrayList) {
-            Block columnHeader = new Block(Block.Bold);
-            columnHeader.add(columnArray);
-            divTable.addCell(columnHeader, "class=\"column-header\"");
-        }
+        Block tabDiv = new Block(Block.Div, "id='" + letter + "'");
+        Table divTable = new Table(0, "class='status-table' cellspacing='0'");
         tabDiv.add(divTable);
-        Block tabsDiv = new Block(Block.Div, "id=\"tabs\"");
+        Block tabsDiv = new Block(Block.Div, "id='tabs'");
         tabsDiv.add(tabDiv);
-//        page.add(tabsDiv);
         return divTable;
     }
 
@@ -321,16 +354,15 @@ public class DisplayContentTab extends LockssServlet {
      * @throws java.io.UnsupportedEncodingException
      *
      */
-    private static void createTabContent(Table divTable, String sortName,
-                                         TreeSet<ArchivalUnit> auSet) throws UnsupportedEncodingException {
-        String cleanNameString = cleanName(sortName);
-        createTitleRow(divTable, sortName);
+    private void createTabContent(Table divTable, String sortName,
+                                         TreeMap<String, TreeSet<ArchivalUnit>> auSet) throws UnsupportedEncodingException {
         if (auSet != null) {
-            int rowCount = 0;
-            for (ArchivalUnit au : auSet) {
-                createAuRow(divTable, au, cleanNameString, rowCount);
-                rowCount++;
+            String cleanNameString = cleanName(sortName);
+            createTitleRow(divTable, sortName, auSet.size());
+            for (Map.Entry<String, TreeSet<ArchivalUnit>> filteredAu : auSet.entrySet()) {
+                createAuRow(divTable, filteredAu, cleanNameString);
             }
+            addClearRow(divTable, cleanNameString, false);
         }
     }
 
@@ -340,56 +372,129 @@ public class DisplayContentTab extends LockssServlet {
      * @param divTable The table object to add to
      * @param sortName Name of the publisher or plugin
      */
-    private static void createTitleRow(Table divTable, String sortName) {
+    private void createTitleRow(Table divTable, String sortName, Integer auCount) {
         String cleanNameString = cleanName(sortName);
         divTable.newRow();
         Link headingLink = new Link("javascript:showRows('" + cleanNameString
                 + "_class', '" + cleanNameString + "_id', '" + cleanNameString
-                + "_AUimage')");
-        headingLink.attribute("id=\"" + cleanNameString + "_id\"");
-        Image headingLinkImage = new Image("images/expand.png");
-        headingLinkImage.attribute("id =\"" + cleanNameString + "_AUimage\"");
-        headingLinkImage.attribute("class=\"title-icon\"");
-        headingLinkImage.attribute("alt", "Expand AU");
-        headingLinkImage.attribute("title", "Expand AU");
+                + "_AUimage', '" + cleanNameString + "')");
+        headingLink.attribute("id='" + cleanNameString + "_id'");
+        headingLink.attribute("class='pub-title'");
+        Image headingLinkImage = new Image(PLUS_ICON);
+        headingLinkImage.attribute("id ='" + cleanNameString + "_AUimage'");
+        headingLinkImage.attribute("class='publisher-icon'");
+        headingLinkImage.attribute("alt", "Expand Title");
+        headingLinkImage.attribute("title", "Expand Title");
         headingLink.add(headingLinkImage);
-        headingLink.add(sortName);
+        StringBuilder titleCountString = new StringBuilder("title");
+        if (auCount != 1) {
+            titleCountString.append("s");
+        }
+        headingLink.add(HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + " (" + auCount + " " + titleCountString.toString() + ")");
         Block boldHeadingLink = new Block(Block.Bold);
         boldHeadingLink.add(headingLink);
-        divTable.addHeading(boldHeadingLink, "class=\"pub-title\"");
+        Block pubDiv = new Block(Block.Div);
+        Link removePubLink = new Link("DisplayContentStatus?deletePublisher=" + urlEncode(sortName));
+        removePubLink.attribute("onClick=\"return confirm('Confirm deletion of AUs associated with the publisher " + HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + "');\"");
+        Image deleteIcon = new Image(DELETE_ICON);
+        deleteIcon.attribute("class", "publisher-delete");
+        deleteIcon.attribute("alt", "Delete publisher");
+        deleteIcon.attribute("title", "Delete publisher");
+        removePubLink.add(deleteIcon);
+        pubDiv.add(boldHeadingLink);
+        Block pubSpan = new Block(Block.Span);
+        pubSpan.attribute("class='remove-au-button'");
+        pubSpan.add(removePubLink);
+        pubDiv.add(pubSpan);
+        divTable.addHeading(pubDiv, "class='pub-title' colspan='7'");
+        addClearRow(divTable, cleanNameString, true);
+    }
+
+    private Boolean filterAu(ArchivalUnit au) {
+        if (StringUtil.isNullString(filterKey)) {
+            return true;
+        } else {
+            AuState auState = AuUtil.getAuState(au);
+            if ("neverCrawled".equals(filterKey)) {
+                log.error("Last crawl result: " + auState.getLastCrawlResult());
+                return auState.getLastCrawlResult() == Crawler.STATUS_QUEUED || auState.getLastCrawlResult() == -1;
+            } else if ("noSubstance".equals(filterKey)) {
+                return auState.hasNoSubstance();
+            } else if ("noPermission".equals(filterKey)) {
+                return auState.getLastCrawlResult() == Crawler.STATUS_NO_PUB_PERMISSION;
+            } else if ("serverDown".equals(filterKey)) {
+                return auState.getLastCrawlResult() == Crawler.STATUS_FETCH_ERROR;
+            } else {
+                return true;
+            }
+        }
     }
 
     /**
      * Creates table rows for each AU
      *
+     *
      * @param divTable        The table object to add to
-     * @param au              Archival unit object for this row
+     * @param auMap              Archival unit object for this row
      * @param cleanNameString Sanitised name used to create classes and divs
-     * @param rowCount        Row number, used to allocate CSS class
      * @throws UnsupportedEncodingException
      */
-    private static void createAuRow(Table divTable, ArchivalUnit au,
-                                    String cleanNameString, int rowCount)
-            throws UnsupportedEncodingException {
-        String rowClass = rowCss(rowCount);
-        TdbAu tdbAu = TdbUtil.getTdbAu(au);
-        AuState auState = AuUtil.getAuState(au);
-        String auName = au.getName();
-        String cleanedAuName = cleanAuName(auName);
-        String encodedHref = URLEncoder.encode(au.getAuId(), "UTF-8");
+    private void createAuRow(Table divTable, Map.Entry<String, TreeSet<ArchivalUnit>> auMap,
+                                    String cleanNameString) throws UnsupportedEncodingException {
+        String title = auMap.getKey();
+        String cleanTitleString = cleanName(title);
+        TreeSet<ArchivalUnit> auSet = auMap.getValue();
+
+        if (auSet.size() > 0) {
+        ArchivalUnit firstAu = auSet.first();
+        TdbAu firstTdbAu = TdbUtil.getTdbAu(firstAu);
         divTable.newRow();
-        Block newRow = divTable.row();
-        newRow.attribute("class", cleanNameString + "_class hide-row "
+        Block columnRow = divTable.row();
+        columnRow.attribute("class", cleanNameString + "_class column-row hide-row");
+        divTable.addCell("", "class=\"checkboxDiv\"");
+        for (String columnArray : columnArrayList) {
+            Block columnHeader = new Block(Block.Bold);
+            columnHeader.add(columnArray);
+            divTable.addCell(columnHeader, "class=\"column-header\"");
+        }
+        divTable.newRow();
+        Block titleDiv = divTable.row();
+        titleDiv.attribute("id", cleanName(title) + "_title");
+        titleDiv.attribute("class", "journal-title " + cleanNameString + "_class hide-row");
+        Table titleTable = new Table();
+        titleTable.attribute("class", "title-table");
+        Input titleCheckbox = new Input(Input.Checkbox, cleanNameString + "_checkbox");
+        titleCheckbox.attribute("onClick", "titleCheckbox(this, \"" + cleanTitleString + "\")");
+        Block titleCheckboxDiv = new Block(Block.Div);
+        titleCheckboxDiv.attribute("class", "checkboxDiv");
+        titleCheckboxDiv.add(titleCheckbox);
+        divTable.addCell(titleCheckboxDiv, "class=\"checkboxDiv\"");
+        addTitleRow(titleTable, "Title:", HtmlUtil.encode(firstTdbAu.getJournalTitle(), HtmlUtil.ENCODE_TEXT));
+        addTitleRow(titleTable, "Print ISSN:", firstTdbAu.getIssn());
+        addTitleRow(titleTable, "E-ISSN:", firstTdbAu.getEissn());
+        divTable.addCell(titleTable, "colspan=\"6\"");
+        int rowCount = 0;
+        for (ArchivalUnit au : auSet) {
+        if (filterAu(au)) {
+          String rowClass = rowCss(rowCount);
+          TdbAu tdbAu = TdbUtil.getTdbAu(au);
+          AuState auState = AuUtil.getAuState(au);
+          String auName = HtmlUtil.encode(au.getName(), HtmlUtil.ENCODE_TEXT);
+          String cleanedAuName = cleanAuName(auName);
+          String encodedHref = URLEncoder.encode(au.getAuId(), "UTF-8");
+          divTable.newRow();
+          Block newRow = divTable.row();
+          newRow.attribute("class", cleanNameString + "_class hide-row "
                 + rowClass);
-        Block auDiv = new Block(Block.Div);
-        auDiv.attribute("id", cleanedAuName + "_title");
-        auDiv.attribute("class", "au-title");
-        Link auLink = new Link("DaemonStatus");
-        if (tdbAu != null) {
+          Block auDiv = new Block(Block.Div);
+          auDiv.attribute("id", cleanedAuName + "_au_title");
+          auDiv.attribute("class", "au-title");
+          Link auLink = new Link("DaemonStatus");
+          if (tdbAu != null) {
             auLink.attribute("onClick", "updateDiv('" + cleanedAuName + "', '"
-                    + au.getAuId() + "', '"
+                    + au.getAuId() + "', '" + cleanNameString + "-au', '"
                     + cleanNameString + tdbAu.getYear() + "_image');return false");
-            Image auLinkImage = new Image("images/expand.png");
+            Image auLinkImage = new Image(EXPAND_ICON);
             auLinkImage.attribute("id", cleanNameString + tdbAu.getYear() + "_image");
             auLinkImage.attribute("class", "title-icon");
             auLinkImage.attribute("alt", "Expand Volume");
@@ -397,19 +502,24 @@ public class DisplayContentTab extends LockssServlet {
             auLink.add(auLinkImage);
             auLink.add(auName);
             auDiv.add(auLink);
-            divTable.addCell(auDiv);
-            divTable.addCell(tdbAu.getJournalTitle());
+              Block checkboxDiv = new Block(Block.Div);
+              checkboxDiv.attribute("class", "checkboxDiv");
+              Input checkbox = new Input("checkbox", "deleteAu");
+              checkbox.attribute("value", au.getAuId());
+              checkbox.attribute("class", "chkbox " + cleanTitleString + "_chkbox");
+              checkboxDiv.add(checkbox);
+            divTable.addCell(checkboxDiv, "class='checkboxDiv'");
+            divTable.addCell(auDiv, "class='au-title-cell'");
             divTable.addCell(tdbAu.getYear());
-            divTable.addCell(tdbAu.getIssn());
             divTable.addCell(checkCollected(au));
-            divTable.addCell(dateString(new Date(auState.getLastCrawlTime())));
-            divTable.addCell(dateString(new Date(auState.getLastPollStart())));
-        } else {
+            divTable.addCell(showTimeElapsed(auState.getLastCrawlTime(), timeKey));
+            divTable.addCell(showTimeElapsed(auState.getLastPollStart(), timeKey));
+          } else {
             log.debug("TdbAu not found for Au " + au.getName());
             auLink.attribute("onClick", "updateDiv('" + cleanedAuName + "', '"
-                    + au.getAuId() + "', '"
+                    + au.getAuId() + "', '" + cleanNameString + "-au', '"
                     + cleanNameString + rowCount + "_image');return false");
-            Image auLinkImage = new Image("images/expand.png");
+            Image auLinkImage = new Image(EXPAND_ICON);
             auLinkImage.attribute("id", cleanNameString + rowCount + "_image");
             auLinkImage.attribute("class", "title-icon");
             auLinkImage.attribute("alt", "Expand Volume");
@@ -422,21 +532,137 @@ public class DisplayContentTab extends LockssServlet {
             divTable.addCell("unknown");
             divTable.addCell("unknown");
             divTable.addCell(checkCollected(au));
+          }
+          Block serveContentDiv = new Block(Block.Div);
+          serveContentDiv.attribute("class", "au-serve-content-div");
+          Link serveContentLink = new Link("ServeContent?auid=" + encodedHref);
+          serveContentLink.target("_blank");
+          Image externalLinkImage = new Image(EXTERNAL_LINK_ICON);
+          serveContentLink.add("Serve content<sup>" + externalLinkImage + "</sup>");
+          serveContentLink.attribute("class", "au-link");
+          serveContentDiv.add("[ " + serveContentLink + " ]");
+          divTable.addCell(serveContentDiv);
+          divTable.newRow("class='hide-row " + rowClass + " " + cleanNameString + "-au' id='" + cleanedAuName + "_row'");
+          Block detailsDiv = new Block(Block.Div);
+          detailsDiv.attribute("id", cleanedAuName + "_cell");
+          detailsDiv.attribute("class", rowClass);
+          divTable.addCell(detailsDiv, "colspan='7' id='" + cleanedAuName + "'");
         }
-        Block serveContentDiv = new Block(Block.Div);
-        serveContentDiv.attribute("class", "au-serve-content-div");
-        Link serveContentLink = new Link("ServeContent?auid=" + encodedHref);
-        serveContentLink.target("_blank");
-        Image externalLinkImage = new Image(EXTERNAL_LINK_ICON);
-        serveContentLink.add("Serve content<sup>" + externalLinkImage + "</sup>");
-        serveContentLink.attribute("class", "au-link");
-        serveContentDiv.add("[ " + serveContentLink + " ]");
-        divTable.addCell(serveContentDiv);
-        divTable.newRow("class='hide-row " + rowClass + "' id='" + cleanedAuName + "_row'");
-        Block detailsDiv = new Block(Block.Div);
-        detailsDiv.attribute("id", cleanedAuName + "_cell");
-        detailsDiv.attribute("class", rowClass);
-        divTable.addCell(detailsDiv, "colspan='8' id='" + cleanedAuName + "'");
+            rowCount++;
+        }
+        }
+        addClearRow(divTable, cleanNameString, true);
+    }
+
+    private void addClearRow(Table table, String titleString, Boolean hidden) {
+        table.newRow();
+        StringBuilder classString = new StringBuilder("class=\"clear-row");
+        if (hidden) {
+            classString.append(" " + titleString + "_class hide-row");
+        }
+        classString.append(" colspan=\"7\"");
+        table.addCell("", classString.toString());
+    }
+
+    private void addTitleRow(Table table, String key, String value) {
+        table.newRow();
+        table.addCell(key);
+        Block titleBold = new Block(Block.Bold);
+        titleBold.add(value);
+        table.addCell(titleBold);
+    }
+
+    public static String showTimeElapsed(Long date, String timeKey) {
+        String result;
+        Date current = Calendar.getInstance().getTime();
+        if ("accurate".equals(timeKey) || (current.getTime() - date) > 86400) {
+            result = dateString(new Date(date));
+        } else {
+        Date dateTime = new Date(date);
+        Long val = dateTime.getTime();
+        if (val == 0 || val == -1) {
+            return "never";
+        } else {
+        StringBuilder sb = new StringBuilder();
+        long diffInSeconds = (current.getTime() - dateTime.getTime()) / 1000;
+        long sec = (diffInSeconds >= 60 ? diffInSeconds % 60 : diffInSeconds);
+        long min = (diffInSeconds = (diffInSeconds / 60)) >= 60 ? diffInSeconds % 60 : diffInSeconds;
+        long hrs = (diffInSeconds = (diffInSeconds / 60)) >= 24 ? diffInSeconds % 24 : diffInSeconds;
+        long days = (diffInSeconds = (diffInSeconds / 24)) >= 30 ? diffInSeconds % 30 : diffInSeconds;
+        long months = (diffInSeconds = (diffInSeconds / 30)) >= 12 ? diffInSeconds % 12 : diffInSeconds;
+        long years = (diffInSeconds = (diffInSeconds / 12));
+
+        if (years > 0) {
+            if (years == 1) {
+                sb.append("a year");
+            } else {
+                sb.append(years + " years");
+            }
+            if (years <= 6 && months > 0) {
+                if (months == 1) {
+                    sb.append(" and a month");
+                } else {
+                    sb.append(" and " + months + " months");
+                }
+            }
+        } else if (months > 0) {
+            if (months == 1) {
+                sb.append("a month");
+            } else {
+                sb.append(months + " months");
+            }
+            if (months <= 6 && days > 0) {
+                if (days == 1) {
+                    sb.append(" and a day");
+                } else {
+                    sb.append(" and " + days + " days");
+                }
+            }
+        } else if (days > 0) {
+            if (days == 1) {
+                sb.append("a day");
+            } else {
+                sb.append(days + " days");
+            }
+            if (days <= 3 && hrs > 0) {
+                if (hrs == 1) {
+                    sb.append(" and an hour");
+                } else {
+                    sb.append(" and " + hrs + " hours");
+                }
+            }
+        } else if (hrs > 0) {
+            if (hrs == 1) {
+                sb.append("an hour");
+            } else {
+                sb.append(hrs + " hours");
+            }
+            if (min > 1) {
+                sb.append(" and " + min + " minutes");
+            }
+        } else if (min > 0) {
+            if (min == 1) {
+                sb.append("a minute");
+            } else {
+                sb.append(min + " minutes");
+            }
+            if (sec > 1) {
+                sb.append(" and " + sec + " seconds");
+            }
+        } else {
+            if (sec <= 1) {
+                sb.append("about a second");
+            } else {
+                sb.append("about " + sec + " seconds");
+            }
+        }
+
+        sb.append(" ago");
+
+        result = sb.toString();
+        }
+        }
+        return result;
     }
 
     /**
@@ -445,10 +671,11 @@ public class DisplayContentTab extends LockssServlet {
      * @param au Archival unit
      * @return URL of relevant image
      */
-    private static Image checkCollected(ArchivalUnit au) {
+    public static Image checkCollected(ArchivalUnit au) {
         Image collectedImage;
         AuState state = AuUtil.getAuState(au);
         int crawlResult = state.getLastCrawlResult();
+        boolean substance = state.hasCrawled();
         if (crawlResult == Crawler.STATUS_SUCCESSFUL) {
             collectedImage = new Image(OK_ICON);
             collectedImage.attribute("title", "AU has been collected");
@@ -467,7 +694,11 @@ public class DisplayContentTab extends LockssServlet {
             collectedImage.attribute("title", "An error occurred when collecting AU");
             collectedImage.attribute("alt", "An error occurred when collecting AU");
         } else if (crawlResult == Crawler.STATUS_NO_PUB_PERMISSION) {
-            collectedImage = new Image(CANCEL_ICON);
+            if (substance) {
+              collectedImage = new Image(WARN_ICON);
+            } else {
+              collectedImage = new Image(CANCEL_ICON);
+            }
             collectedImage.attribute("title", "Permission error");
             collectedImage.attribute("alt", "Permission error");
         } else {
@@ -485,12 +716,12 @@ public class DisplayContentTab extends LockssServlet {
      * @return Returns sanitised string
      */
     public static String cleanName(String name) {
-        return name.replace(" ", "_").replace("&", "").replace("(", "")
-                .replace(")", "");
+        return java.text.Normalizer.normalize(HtmlUtil.encode(name.replace(" ", "_").replace("&", "").replace("(", "")
+                .replace(")", "").replace(",", "").replace("+", "_").replace(".", "_"), HtmlUtil.ENCODE_TEXT), Normalizer.Form.NFC);
     }
 
     public static String cleanAuName(String auName) {
-        return auName.replaceAll(" ", "_");
+        return auName.replaceAll(" ", "_").replaceAll(",", "");
     }
 
     /**

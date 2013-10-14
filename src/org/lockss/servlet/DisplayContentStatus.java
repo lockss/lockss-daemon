@@ -43,6 +43,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.commons.lang.time.FastDateFormat;
 import org.lockss.config.*;
 import org.lockss.daemon.status.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.util.*;
@@ -68,6 +69,9 @@ public class DisplayContentStatus extends LockssServlet {
   private String sortKey;
   private String groupKey;
   private String typeKey;
+  private String filterKey;
+  private String tabKey;
+  private String timeKey;
   private StatusService statSvc;
   private int outputFmt;
   private java.util.List rules;
@@ -76,6 +80,7 @@ public class DisplayContentStatus extends LockssServlet {
   private RemoteApi remoteApi;
   private String action;
   private String auName;
+  private String deleteMessage;
 
   protected void resetLocals() {
     super.resetLocals();
@@ -114,6 +119,43 @@ public class DisplayContentStatus extends LockssServlet {
 
     action = req.getParameter(ACTION_TAG);
     auName = req.getParameter(AU_TO_REMOVE);
+    if ("Delete selected".equals(req.getParameter("submit"))) {
+      String[] deleteAUs = req.getParameterValues("deleteAu");
+      if (deleteAUs != null) {
+        log.error("AUs: " + Arrays.asList(deleteAUs));
+        doRemoveAus(Arrays.asList(deleteAUs));
+      } else {
+        log.error("No AUs selected");
+        deleteMessage = "No AUs selected!";
+      }
+    }
+
+    String publisher = req.getParameter("deletePublisher");
+      if (!StringUtil.isNullString(publisher)) {
+        TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> auMap = DisplayContentTab.getAusByPublisherName();
+          ArrayList<String> auIds = new ArrayList<String>();
+          if (auMap.containsKey(publisher)) {
+           Iterator it = auMap.entrySet().iterator();
+              while (it.hasNext()) {
+                  Map.Entry pairs = (Map.Entry)it.next();
+                  String publisherString = pairs.getKey().toString();
+                  log.error("Publisher: " + publisher);
+                  log.error("Publisher string: " + publisherString);
+                  if (publisher.equals(publisherString)) {
+                    TreeMap<String, TreeSet<ArchivalUnit>> titleMap = (TreeMap<String, TreeSet<ArchivalUnit>>)pairs.getValue();
+                    Iterator titleIterator = titleMap.entrySet().iterator();
+                      while (titleIterator.hasNext()) {
+                          Map.Entry titlePairs = (Map.Entry)titleIterator.next();
+                          TreeSet<ArchivalUnit> auSet = (TreeSet<ArchivalUnit>)titlePairs.getValue();
+                          for (ArchivalUnit au : auSet) {
+                            auIds.add(au.getAuId());
+                          }
+                      }
+                  }
+              }
+            doRemoveAus(auIds);
+          }
+      }
 
     if (action != null && auName != null) {
       String auString = URLDecoder.decode(auName, "UTF-8");
@@ -184,6 +226,9 @@ public class DisplayContentStatus extends LockssServlet {
       groupKey = "publisher";
     }
     typeKey = req.getParameter("type");
+    filterKey = req.getParameter("filterKey");
+    tabKey = req.getParameter("tab");
+    timeKey = req.getParameter("timeKey");
 
     switch (outputFmt) {
       case OUTPUT_HTML:
@@ -227,10 +272,12 @@ public class DisplayContentStatus extends LockssServlet {
     //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
     // 		       concatParams("text=1", req.getQueryString())));
     //       page.add("</center><br><br>");
-
+//    page.add(deleteMessage);
+    deleteMessage = null;
     DisplayContentTable content = new DisplayContentTable(page, groupKey, 
-            typeKey);
-
+            typeKey, filterKey, timeKey);
+//    Script selectTab = new Script("$( \"#tabs\" ).tabs(\"select\", 3);");
+//    page.addHeader(selectTab);
     return page;
   }
 
@@ -333,6 +380,10 @@ public class DisplayContentStatus extends LockssServlet {
   private Page doHtmlStatusTable0() throws IOException {
     Page page;
     page = newTablePage();
+    if (tabKey != null) {
+      Script tabSelect = new Script("$(document).ready(function () {$(\"#tabs\").tabs({ active: " + tabKey + " })});");
+      page.addHeader(tabSelect);
+    }
     return page;
   }
 
