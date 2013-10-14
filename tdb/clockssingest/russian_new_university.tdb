@@ -13,8 +13,8 @@
       issn = 2304-7232 
     >
     
-    plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
-    param[base_url] = http://www.cardiometry.net/index.php/
+    plugin = needs.plugin
+    param[base_url] = http://www.cardiometry.net/
     param[journal_id] = cardiometry
     implicit < status ; status2 ; year ; param[year] ; name ; volume >
     comment[nR] = publisher needs to put manifests back up RT 5271
