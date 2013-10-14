@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.8 2013-09-17 21:43:15 ldoan Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.9 2013-10-14 19:55:33 etenbrink Exp $
  */
 
 /*
@@ -90,12 +90,21 @@ public class OJS2ArticleIteratorFactory
     // http://www.ancient-asia-journal.com/article/view/aa.10202/33
     // Biologic Institute has both index.php and journal_id (main)
     // http://bio-complexity.org/ojs/index.php/main/article/view/BIO-C.2011.3
-    List roots = ListUtil.list(String.format("%sindex.php/%s/issue/view", base_url, journal_id.toLowerCase()),
-                               String.format("%sindex.php/%s/issue/view", base_url, journal_id.toUpperCase()),
-                               String.format("%s%s/issue/view", base_url, journal_id.toLowerCase()),
-                               String.format("%s%s/issue/view", base_url, journal_id.toUpperCase()),
-                               String.format("%sindex.php/issue/view", base_url),
-			       String.format("%sissue/view", base_url));
+    List<String> roots = ListUtil.list(
+        String.format("%sindex.php/issue/view", base_url),
+        String.format("%sissue/view", base_url),
+        String.format("%sindex.php/%s/issue/view", base_url, journal_id),
+        String.format("%s%s/issue/view", base_url, journal_id)
+        );
+    if (!journal_id.toLowerCase().equals(journal_id)) {
+      roots.add(String.format("%sindex.php/%s/issue/view", base_url, journal_id.toLowerCase()));
+      roots.add(String.format("%s%s/issue/view", base_url, journal_id.toLowerCase()));
+    }
+    if (!journal_id.toUpperCase().equals(journal_id)) {
+      roots.add(String.format("%sindex.php/%s/issue/view", base_url, journal_id.toUpperCase()));
+      roots.add(String.format("%s%s/issue/view", base_url, journal_id.toUpperCase()));
+    }
+    
     return new OJS2ArticleIterator(au,
                                    new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
@@ -394,13 +403,17 @@ public class OJS2ArticleIteratorFactory
       if (mat.find()) {
         CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/article/view/$1/$3"));
         
-	try {
-	  if (pdfCu != null && pdfCu.hasContent() &&
-	      pdfCu.getContentType().startsWith("application/pdf")) {
-	    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
-	    af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-	  }
-	} finally {
+        try {
+          if (pdfCu != null && pdfCu.hasContent()) {
+            if (pdfCu.getContentType().startsWith(Constants.MIME_TYPE_PDF)) {
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, cu);
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+            }
+            else if (pdfCu.getContentType().startsWith("text")) {
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
+            }
+          }
+        } finally {
           AuUtil.safeRelease(pdfCu);
         }
         return;
