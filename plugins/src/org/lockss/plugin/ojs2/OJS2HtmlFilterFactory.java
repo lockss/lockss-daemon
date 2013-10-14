@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlFilterFactory.java,v 1.8 2013-09-30 19:47:45 etenbrink Exp $
+ * $Id: OJS2HtmlFilterFactory.java,v 1.9 2013-10-14 19:55:19 etenbrink Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "navbar"),
             // Popular location for sidebar customizations
             HtmlNodeFilters.tagWithAttribute("div", "id", "custom"),
+            //  the order of <meta> tags changes capriciously, which slows down testing
+            new TagNameFilter("head"),
             // Site customizations often involve Javascript (e.g. Google Analytics), which can change over time
             new TagNameFilter("script"),
             // Date accessed is a variable
