@@ -16,15 +16,15 @@ $(document).ready(function () {
         }
         lastChecked = this;
     });
-    var form = document.getElementById('submitForm');
-    form.addEventListener('submit', function(e) {
-        if (button == 'add') {
+//    var form = document.getElementById('submitForm');
+//    form.addEventListener('submit', function(e) {
+//        if (button == 'add') {
 //            alert("Add");
-        }
-        if (button == 'delete') {
-            confirm("Are you sure you want to delete the selected AUs?");
-        }
-    });
+//        }
+//        if (button == 'delete') {
+//            confirm("Are you sure you want to delete the selected AUs?");
+//        }
+//    });
 });
 
 function hideMessages() {
