@@ -2216,15 +2216,18 @@
 
   {
     title <
-      name = Journal of Clinical Rheumatology in Ayurveda ;
+      name = ASL- Musculoskeletal Diseases ;
       issn = 2231-072X ;
       issnl = 2231-072X
    >
 
-    param[base_url] = http://www.ayurvedarheumatology.org/
+    param[base_url] = http://msd.ancientscienceoflife.org/
     param[journal_issn] = 2231-072X
-    comment[base_url] = redirect to http://msd.ancientscienceoflife.org/
-    comment[0] = journal is not up yet
+    comment[base_url] = old url http://www.ayurvedarheumatology.org/
+    comment[title] = old title Journal of Clinical Rheumatology in Ayurveda
+
+    au < exists ; 2013 ; ASL- Musculoskeletal Diseases Volume 1 ; 2013 ; 1 >
+    au < expected ; 2014 ; ASL- Musculoskeletal Diseases Volume 2 ; 2014 ; 2 >
 
   }
 
