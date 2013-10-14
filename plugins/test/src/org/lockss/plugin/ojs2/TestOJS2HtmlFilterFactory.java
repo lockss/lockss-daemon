@@ -96,9 +96,10 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
   
   
   private static final String scriptHtml =
-      "<head><script type=\"text/javascript\" async=\"\" src=\"http://www.google-analytics.com/ga.js\"></script></head";
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><script type=\"text/javascript\" " +
+      "async=\"\" src=\"http://www.google-analytics.com/ga.js\"></script></head";
   private static final String scriptHtmlFiltered =
-      "<head></head>";
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\">";
   
   private static final String dateAccessedHtml = 
     "<div class=\"separator\">" +
@@ -112,9 +113,9 @@ public class TestOJS2HtmlFilterFactory extends LockssTestCase {
     "<div class=\"separator\"></div></div><div class=\"separator\"></div>";
   
   private static final String generatorHtml =
-      "<head><meta name=\"generator\"></head>";
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"generator\"></head>";
   private static final String generatorHtmlFiltered =
-      "<head></head>";
+      "<html xmlns=\"http://www.w3.org/1999/xhtml\">";
   
   private static final String headerImageHtml =
     "<div id=\"headerTitle\"><h1>" +
