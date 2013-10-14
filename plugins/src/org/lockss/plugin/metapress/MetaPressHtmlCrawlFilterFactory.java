@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.1 2011-10-04 10:43:59 thib_gc Exp $
+ * $Id: MetaPressHtmlCrawlFilterFactory.java,v 1.2 2013-10-14 19:39:32 etenbrink Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class MetaPressHtmlCrawlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Reverse citations
         HtmlNodeFilters.tagWithAttribute("div", "id", "References"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "references"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
