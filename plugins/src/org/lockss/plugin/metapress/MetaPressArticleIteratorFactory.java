@@ -1,5 +1,5 @@
 /*
- * $Id: MetaPressArticleIteratorFactory.java,v 1.5 2013-05-21 19:05:26 thib_gc Exp $
+ * $Id: MetaPressArticleIteratorFactory.java,v 1.6 2013-10-14 19:38:49 etenbrink Exp $
  */
 
 /*
@@ -89,14 +89,19 @@ public class MetaPressArticleIteratorFactory
       log.warning("Mismatch between article iterator factory and article iterator: "+ url);
       return null;
     }
-    //http://inderscience.metapress.com/content/kv824m8x38336011/fulltext.pdfmap={FullTextPdfLanding=[BCU: http://inderscience.metapress.com/content/p20687286306321u], FullTextPdfFile=[BCU: http://inderscience.metapress.com/content/p20687286306321u/fulltext.pdf], IssueMetadata=[BCU: http://inderscience.metapress.com/content/p20687286306321u], Citation=[BCU: http://inderscience.metapress.com/export.mpx?code=P20687286306321U&mode=ris], Abstract=[BCU: http://inderscience.metapress.com/content/p20687286306321u]}])
+    //http://inderscience.metapress.com/content/kv824m8x38336011/fulltext.pdfmap={
+    // FullTextPdfLanding=[BCU: http://inderscience.metapress.com/content/p20687286306321u],
+    // FullTextPdfFile=[BCU: http://inderscience.metapress.com/content/p20687286306321u/fulltext.pdf],
+    // IssueMetadata=[BCU: http://inderscience.metapress.com/content/p20687286306321u],
+    // Citation=[BCU: http://inderscience.metapress.com/export.mpx?code=P20687286306321U&mode=ris],
+    // Abstract=[BCU: http://inderscience.metapress.com/content/p20687286306321u]}])
 
     //http://inderscience.metapress.com/export.mpx?code=KV824M8X38336011&mode=ris
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      if (target != MetadataTarget.Article) {
+      if (!target.isArticle()) {
         guessAbstract(af, pdfMat);
         guessFullTextHtml(af, pdfMat);
         guessReferences(af, pdfMat);
