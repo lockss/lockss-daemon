@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssPeerJArticleIteratorFactory.java,v 1.2 2013-10-09 22:18:40 ldoan Exp $
+ * $Id: ClockssPeerJArticleIteratorFactory.java,v 1.3 2013-10-15 18:51:50 ldoan Exp $
  */
 
 /*
@@ -69,15 +69,13 @@ implements ArticleIteratorFactory,
   private static String ALTERNATE_ABSTRACT_REPLACEMENT = "/$1/$2.html";
   private static String ALTERNATE_RDF_REPLACEMENT = "/$1/$2.rdf";
   private static String ALTERNATE_JSON_REPLACEMENT = "/$1/$2.json";
-  // only in Archives site not in Preprints site
-  private static String ALTERNATE_UNIXREF_REPLACEMENT = "/$1/$2.unixref";
   
   public static final String ROLE_ABSTRACT_XML = "AbstractXml";  
   public static final String ROLE_ALTERNATE_ABSTRACT = 
                                                  "AlternateAbstractHtml";
   public static final String ROLE_ALTERNATE_RDF = "AlternateRdf";
   public static final String ROLE_ALTERNATE_JSON = "AlternateJson";
-  public static final String ROLE_ALTERNATE_UNIXREF = "AlternateUnixref";
+  //public static final String ROLE_ALTERNATE_UNIXREF = "AlternateUnixref";
 
   // PeerJ'a article content looks like:
   // from Archives site
@@ -153,10 +151,6 @@ implements ArticleIteratorFactory,
       builder.addAspect(ALTERNATE_RDF_REPLACEMENT, ROLE_ALTERNATE_RDF);
       
       builder.addAspect(ALTERNATE_JSON_REPLACEMENT, ROLE_ALTERNATE_JSON);
-      
-      // only in Archives site not in Preprints site
-      builder.addAspect(
-          ALTERNATE_UNIXREF_REPLACEMENT, ROLE_ALTERNATE_UNIXREF);
       
       // The order in which we want to define full_text_cu.
       // First one that exists will get the job
