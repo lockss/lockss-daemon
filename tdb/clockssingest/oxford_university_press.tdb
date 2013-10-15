@@ -13538,7 +13538,6 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
-    comment[notReady] = needs hash filter RU 4875
 
     au < zapped ; down ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
     au < zapped ; down ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
@@ -13576,7 +13575,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Literary and Linguistic Computing Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Literary and Linguistic Computing Volume 26 ; 26 ; >
-    au < notReady ; exists ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
+    au < released ; manifest ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Literary and Linguistic Computing Volume 28 ; 28 ; >
     au < expected ; exists ; 2014 ; Literary and Linguistic Computing Volume 29 ; 29 ; >
 
