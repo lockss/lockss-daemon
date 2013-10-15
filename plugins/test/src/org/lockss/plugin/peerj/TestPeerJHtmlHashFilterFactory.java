@@ -279,13 +279,7 @@ private static final String withFlagModal =
     assertEquals(withoutRightbarWrap, StringUtil.fromInputStream(actIn));
   }
       
-  public void testwithFlagModalFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withHead), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutHead, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testFiltering() throws Exception {
+  public void testFlagModalFiltering() throws Exception {
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withFlagModal), Constants.DEFAULT_ENCODING);
     assertEquals(withoutFlagModal, StringUtil.fromInputStream(actIn));
