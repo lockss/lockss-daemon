@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ONIXMessage release="3.0">
+<Header>
+<Sender>
+<SenderName>Test Content Group</SenderName>
+<ContactName>CoreSource</ContactName>
+<EmailAddress>partnersupport@test.com</EmailAddress>
+</Sender>
+<Addressee>
+<AddresseeName>CLOCKSS</AddresseeName>
+</Addressee>
+<SentDateTime>20130701T080307Z</SentDateTime>
+</Header>
+<!-- first sanitized example (from bexpress/Momentum) -->
+<Product>
+<RecordReference>978160650126X</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781606501260</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>01</ProductIDType>
+<IDTypeName>Safari FPI</IDTypeName>
+<IDValue>978160650124X</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>06</ProductIDType>
+<IDValue>10.5643/9781606501260</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E107</ProductFormDetail>
+<ProductFormDescription>Web PDF</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<EpubTechnicalProtection>00</EpubTechnicalProtection>
+<Collection>
+<CollectionType>10</CollectionType>
+<CollectionIdentifier>
+<CollectionIDType>06</CollectionIDType>
+<IDTypeName>DOI</IDTypeName>
+<IDValue>10.1111/9781606501260</IDValue>
+</CollectionIdentifier>
+</Collection>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>Book Title One</TitleText>
+<Subtitle>A Test for JUnit</Subtitle>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<ContributorRole>A01</ContributorRole>
+<PersonName>David W. Author</PersonName>
+<PersonNameInverted>Author, David W.</PersonNameInverted>
+<NamesBeforeKey>David W.</NamesBeforeKey>
+<KeyNames>Author</KeyNames>
+</Contributor>
+<NoEdition/>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+<Extent>
+<ExtentType>00</ExtentType>
+<ExtentValue>158</ExtentValue>
+<ExtentUnit>03</ExtentUnit>
+</Extent>
+<Illustrated>01</Illustrated>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>TEC020000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+<SubjectHeadingText>A test of stuff</SubjectHeadingText>
+</Subject>
+<AudienceCode>06</AudienceCode>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>02</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[Foo]]></Text>
+</TextContent>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[Foo]]></Text>
+</TextContent>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[Foo]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Momentum Press</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Momentum Press</PublisherName>
+</Publisher>
+<CountryOfPublication>NY</CountryOfPublication>
+<PublishingStatus>04</PublishingStatus>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20091026</Date>
+</PublishingDate>
+<CopyrightStatement>
+<CopyrightYear>2009</CopyrightYear>
+<CopyrightOwner>
+<PersonName>Momentum Press</PersonName>
+</CopyrightOwner>
+</CopyrightStatement>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<Territory>
+<RegionsIncluded>WORLD</RegionsIncluded>
+</Territory>
+</SalesRights>
+</PublishingDetail>
+<RelatedMaterial>
+<RelatedWork>
+<WorkRelationCode>02</WorkRelationCode>
+<WorkIdentifier>
+<WorkIDType>15</WorkIDType>
+<IDValue>9781606501240</IDValue>
+</WorkIdentifier>
+</RelatedWork>
+<RelatedProduct>
+<ProductRelationCode>13</ProductRelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781606501240</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+</RelatedMaterial>
+<ProductSupply/>
+</Product>
+<!-- Second sanitized example (berghahn)-->
+<Product>
+<RecordReference>9780857451480</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780857458510</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>13</ProductIDType>
+<IDValue>XXXXX .O73 2007</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E101</ProductFormDetail>
+<ProductFormDescription>EPUB</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<NoCollection/>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>A Second Book Title</TitleText>
+<Subtitle>Perspectives</Subtitle>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>B01</ContributorRole>
+<PersonName>Sally von Author-Name</PersonName>
+<PersonNameInverted>Author-Name, Sally von</PersonNameInverted>
+<BiographicalNote>Sally von Author-Name has written other books (Berghahn 2006).</BiographicalNote>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>B01</ContributorRole>
+<PersonName>Fernanda Editor</PersonName>
+<PersonNameInverted>Editor, Fernanda</PersonNameInverted>
+<BiographicalNote>Fernanda Editor is a Lecturer (Brill 2006).</BiographicalNote>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+<Extent>
+<ExtentType>00</ExtentType>
+<ExtentValue>184</ExtentValue>
+<ExtentUnit>03</ExtentUnit>
+</Extent>
+<Illustrated>01</Illustrated>
+<Subject>
+<MainSubject/>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>SOC002000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>REL000000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>LAW000000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+<SubjectCode>JHM</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+<SubjectHeadingText>anth, soci_lega</SubjectHeadingText>
+</Subject>
+<AudienceCode>06</AudienceCode>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>04</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="02"><![CDATA[<p>Contents
+<p>List of Plates
+<p>Preface
+
+<p>Chapter 1. Introduction
+<p>Sally von Author-Name and Fernanda Editor
+
+<p>Chapter 2. Order and STuff
+<p>Simon Alpha
+
+<p>Chapter 3. Pride and Honour
+<p>Alex Beta
+
+<p>Chapter 4. Order and Individualism
+<p>Fernanda Editor
+
+<p>Chapter 5. Vigilante Groups
+<p>Tito Omega
+
+<p>Notes on Contributors
+<p>Index]]></Text>
+</TextContent>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="02"><![CDATA[Foo]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Berghahn Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Berghahn Books</PublisherName>
+</Publisher>
+<CityOfPublication>New York, NY</CityOfPublication>
+<CountryOfPublication>US</CountryOfPublication>
+<PublishingStatus>02</PublishingStatus>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20110615</Date>
+</PublishingDate>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<Territory>
+<RegionsIncluded>WORLD</RegionsIncluded>
+</Territory>
+</SalesRights>
+</PublishingDetail>
+<RelatedMaterial>
+<RelatedWork>
+<WorkRelationCode>02</WorkRelationCode>
+<WorkIdentifier>
+<WorkIDType>15</WorkIDType>
+<IDValue>9781845451980</IDValue>
+</WorkIdentifier>
+</RelatedWork>
+<RelatedProduct>
+<ProductRelationCode>13</ProductRelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780857451480</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+</RelatedMaterial>
+<ProductSupply>
+<Market>
+<Territory>
+<RegionsIncluded>WORLD</RegionsIncluded>
+</Territory>
+</Market>
+</ProductSupply>
+</Product>
+<!-- 2nd redundant example, just different format-->
+<Product>
+<RecordReference>9780857458510</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780857458510</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>13</ProductIDType>
+<IDValue>XXXXX .O73 2007</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E107</ProductFormDetail>
+<ProductFormDescription>Web PDF</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<NoCollection/>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>A Second Book Title</TitleText>
+<Subtitle>Perspectives</Subtitle>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>B01</ContributorRole>
+<PersonName>Sally von Author-Name</PersonName>
+<PersonNameInverted>Author-Name, Sally von</PersonNameInverted>
+<BiographicalNote>Sally von Author-Name has written other books (Berghahn 2006).</BiographicalNote>
+</Contributor>
+<Contributor>
+<SequenceNumber>2</SequenceNumber>
+<ContributorRole>B01</ContributorRole>
+<PersonName>Fernanda Editor</PersonName>
+<PersonNameInverted>Editor, Fernanda</PersonNameInverted>
+<BiographicalNote>Fernanda Editor is a Lecturer (Brill 2006).</BiographicalNote>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+<Illustrated>01</Illustrated>
+<Subject>
+<MainSubject/>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>SOC002000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>REL000000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>LAW000000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+<SubjectCode>JHM</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+<SubjectHeadingText>anth, soci_lega</SubjectHeadingText>
+</Subject>
+<AudienceCode>06</AudienceCode>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>04</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="02"><![CDATA[<p>Contents
+<p>List of Plates
+<p>Preface
+
+<p>Chapter 1. Introduction
+<p>Sally von Author-Name and Fernanda Editor
+
+<p>Chapter 2. Order and STuff
+<p>Simon Alpha
+
+<p>Chapter 3. Pride and Honour
+<p>Alex Beta
+
+<p>Chapter 4. Order and Individualism
+<p>Fernanda Editor
+
+<p>Chapter 5. Vigilante Groups
+<p>Tito Omega
+
+<p>Notes on Contributors
+<p>Index]]></Text>
+</TextContent>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="02"><![CDATA[Foo]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Berghahn Books</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Berghahn Books</PublisherName>
+</Publisher>
+<CountryOfPublication>NY</CountryOfPublication>
+<PublishingStatus>04</PublishingStatus>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20110603</Date>
+</PublishingDate>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<Territory>
+<RegionsIncluded>WORLD</RegionsIncluded>
+</Territory>
+</SalesRights>
+</PublishingDetail>
+<RelatedMaterial>
+<RelatedWork>
+<WorkRelationCode>02</WorkRelationCode>
+<WorkIdentifier>
+<WorkIDType>15</WorkIDType>
+<IDValue>9781845451980</IDValue>
+</WorkIdentifier>
+</RelatedWork>
+<RelatedProduct>
+<ProductRelationCode>13</ProductRelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780857451480</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+</RelatedMaterial>
+<ProductSupply>
+<Market>
+<Territory>
+<RegionsIncluded>WORLD</RegionsIncluded>
+</Territory>
+</Market>
+</ProductSupply>
+</Product>
+<!-- 3rd sanitized example (from channelview) -->
+<Product>
+<RecordReference>9781847699110</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781847699110</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E101</ProductFormDetail>
+<ProductFormDescription>EPUB</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<Collection>
+<CollectionType>10</CollectionType>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>02</TitleElementLevel>
+<PartNumber>29</PartNumber>
+<TitleText>New Collection Title</TitleText>
+</TitleElement>
+</TitleDetail>
+</Collection>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>English Title of Book</TitleText>
+<Subtitle>From A to Z</Subtitle>
+</TitleElement>
+<TitleElement>
+<TitleElementLevel>02</TitleElementLevel>
+<TitleText>New Perspectives</TitleText>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<ContributorRole>A01</ContributorRole>
+<PersonName>Mary BWriter</PersonName>
+<PersonNameInverted>BWriter, Mary</PersonNameInverted>
+<NamesBeforeKey>Mary</NamesBeforeKey>
+<KeyNames>BWriter</KeyNames>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+<Extent>
+<ExtentType>00</ExtentType>
+<ExtentValue>195</ExtentValue>
+<ExtentUnit>03</ExtentUnit>
+</Extent>
+<Illustrated>01</Illustrated>
+<Subject>
+<SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+<SubjectCode>LAN000000</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+<SubjectCode>2AB</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+<SubjectCode>E</SubjectCode>
+</Subject>
+<Subject>
+<SubjectSchemeIdentifier>12</SubjectSchemeIdentifier>
+<SubjectCode>JNF</SubjectCode>
+</Subject>
+<AudienceCode>06</AudienceCode>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[This book unravels]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Multilingual Matters</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Channel View Publications</PublisherName>
+</Publisher>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20130205</Date>
+</PublishingDate>
+<CopyrightStatement>
+<CopyrightYear>2013</CopyrightYear>
+<CopyrightOwner>
+<PersonName>Author</PersonName>
+</CopyrightOwner>
+</CopyrightStatement>
+<SalesRights>
+<SalesRightsType>01</SalesRightsType>
+<Territory>
+<CountriesIncluded>AD AE AF AG AI AL AM AN AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW</CountriesIncluded>
+</Territory>
+</SalesRights>
+</PublishingDetail>
+<RelatedMaterial>
+<RelatedWork>
+<WorkRelationCode>02</WorkRelationCode>
+<WorkIdentifier>
+<WorkIDType>01</WorkIDType>
+<IDValue>BORJIA9090</IDValue>
+</WorkIdentifier>
+</RelatedWork>
+<RelatedProduct>
+<ProductRelationCode>13</ProductRelationCode>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9781847699080</IDValue>
+</ProductIdentifier>
+</RelatedProduct>
+</RelatedMaterial>
+<ProductSupply/>
+</Product>
+<!--  4th special case - test will not have matching file for content -->
+<Product>
+<RecordReference>1111111111111</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>1111111111111</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E101</ProductFormDetail>
+<ProductFormDescription>EPUB</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>Book With No Content</TitleText>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<ContributorRole>A01</ContributorRole>
+<PersonName>Sam Q. Blah</PersonName>
+<PersonNameInverted>Blah, Sam Q.</PersonNameInverted>
+<NamesBeforeKey>Sam</NamesBeforeKey>
+<KeyNames>Blah</KeyNames>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[This book unravels]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Nonexistent Matters</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Testing Publications</PublisherName>
+</Publisher>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20120101</Date>
+</PublishingDate>
+<CopyrightStatement>
+<CopyrightYear>2012</CopyrightYear>
+<CopyrightOwner>
+<PersonName>Author</PersonName>
+</CopyrightOwner>
+</CopyrightStatement>
+</PublishingDetail>
+<ProductSupply/>
+</Product>
+<!--  5th test case where we have epub but no pdf content file -->
+<!--  4th special case - test will not have matching file for content -->
+<Product>
+<RecordReference>2222222222222</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>2222222222222</IDValue>
+</ProductIdentifier>
+<DescriptiveDetail>
+<ProductComposition>00</ProductComposition>
+<ProductForm>EA</ProductForm>
+<ProductFormDetail>E101</ProductFormDetail>
+<ProductFormDescription>EPUB</ProductFormDescription>
+<PrimaryContentType>10</PrimaryContentType>
+<TitleDetail>
+<TitleType>01</TitleType>
+<TitleElement>
+<TitleElementLevel>01</TitleElementLevel>
+<TitleText>Book With EPUB Content</TitleText>
+</TitleElement>
+</TitleDetail>
+<Contributor>
+<ContributorRole>A01</ContributorRole>
+<PersonName>Lurlene Smith</PersonName>
+<PersonNameInverted>Smith, Lurlene</PersonNameInverted>
+</Contributor>
+<EditionNumber>1</EditionNumber>
+<Language>
+<LanguageRole>01</LanguageRole>
+<LanguageCode>eng</LanguageCode>
+</Language>
+</DescriptiveDetail>
+<CollateralDetail>
+<TextContent>
+<TextType>03</TextType>
+<ContentAudience>00</ContentAudience>
+<Text textformat="06"><![CDATA[This book unravels]]></Text>
+</TextContent>
+</CollateralDetail>
+<PublishingDetail>
+<Imprint>
+<ImprintName>Testing Matters</ImprintName>
+</Imprint>
+<Publisher>
+<PublishingRole>01</PublishingRole>
+<PublisherName>Testing Publications</PublisherName>
+</Publisher>
+<PublishingDate>
+<PublishingDateRole>01</PublishingDateRole>
+<Date dateformat="00">20120101</Date>
+</PublishingDate>
+<CopyrightStatement>
+<CopyrightYear>2012</CopyrightYear>
+<CopyrightOwner>
+<PersonName>Author</PersonName>
+</CopyrightOwner>
+</CopyrightStatement>
+</PublishingDetail>
+<ProductSupply/>
+</Product>
+</ONIXMessage>

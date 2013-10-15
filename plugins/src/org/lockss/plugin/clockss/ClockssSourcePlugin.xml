@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Parent Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>"Parent Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -34,14 +34,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>2,&quot;^%s%d/.*;O=[AD]$&quot;, base_url, year</string>
-      <string>1,&quot;^%s%d/&quot;, base_url, year</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
+      <string>2,"^%s%d/.*\.md5sum$", base_url, year</string>
+      <string>1,"^%s%d/", base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%d/&quot;, base_url, year</string>
+    <string>"%s%d/", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
