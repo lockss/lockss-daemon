@@ -1,4 +1,4 @@
-/*
+/* $Id: TestPeerJArticleIteratorFactory.java,v 1.3 2013-10-15 18:55:20 ldoan Exp $
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,13 +28,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.peerj;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
-
-import org.lockss.util.ListUtil;
-import org.lockss.util.StringUtil;
-import org.lockss.state.NodeManager;
-import org.lockss.test.ArticleIteratorTestCase;
+import junit.framework.Test;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.CachedUrlSetSpec;
@@ -49,31 +47,23 @@ import org.lockss.plugin.PluginTestUtil;
 import org.lockss.plugin.SubTreeArticleIterator;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
+import org.lockss.state.NodeManager;
+import org.lockss.test.ArticleIteratorTestCase;
+import org.lockss.util.ListUtil;
+import org.lockss.util.StringUtil;
 
-/*
- * Test with PeerJ Archives site.
- *   article files:
- *   full text pdf      - <base_url>/articles/55.pdf
- *   abstract           - <base_url>/articles/55/    (part of full text)
- *   full text xml      - <base_url>/articles/55.xml
- *   citation bib       - <base_url>/articles/55.bib
- *   citation ris       - <base_url>/articles/55.ris
- *   alternate html     - <base_url>/articles/55.html
- *   alternate rdf      - <base_url>/articles/55.rdf
- *   alternate json     - <base_url>/articles/55.json
- *   alternate unixref  - <base_url>/articles/55.unixref
- *   
- */
 public class TestPeerJArticleIteratorFactory 
   extends ArticleIteratorTestCase {
   
-  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-        
-  private static final String PLUGIN_NAME =
-      "org.lockss.plugin.peerj.PeerJPlugin";
-   
+  SimulatedArchivalUnit sau;
+  String variantPeerjSite;
+  String variantBaseConstant;
+  String variantPluginName;
+  String variantArticleName;
+  String variantPeerjXmlRole;
+  List<String> variantAlternateRoles;
+    
   private static final String BASE_URL = "http://www.example.com/";
-  private static final String PEERJ_SITE = "archives";
   private static final String VOLUME_NAME = "2013";
   
   private static final int DEFAULT_FILESIZE = 3000;
@@ -86,8 +76,7 @@ public class TestPeerJArticleIteratorFactory
   private static final int EXP_BIB_COUNT = 12;
   private static final int EXP_RIS_COUNT = 12;
   private static final int EXP_ARTICLE_METADATA_COUNT = 12;
-  private static final int EXP_ALTERNATE_FILE_COUNT = 48;
- 
+  
   public void setUp() throws Exception {
     super.setUp();
     
@@ -103,16 +92,16 @@ public class TestPeerJArticleIteratorFactory
   
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-        PluginTestUtil.createAndStartAu(PLUGIN_NAME,  peerjAuConfig());
+        PluginTestUtil.createAndStartAu(variantPluginName,  peerjAuConfig());
   }
-  
+    
   private Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", BASE_URL);
-    conf.put("depth", "1");
-    conf.put("branch", "4");
-    conf.put("numFiles", "3");
+    conf.put("depth", Integer.toString(1));
+    conf.put("branch", Integer.toString(4));
+    conf.put("numFiles", Integer.toString(3));
     conf.put("fileTypes",
         "" + (  SimulatedContentGenerator.FILE_TYPE_PDF        
             | SimulatedContentGenerator.FILE_TYPE_XML));
@@ -123,14 +112,15 @@ public class TestPeerJArticleIteratorFactory
   private Configuration peerjAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
-    conf.put("peerj_site", PEERJ_SITE);
+    conf.put("peerj_site", variantPeerjSite);
     conf.put("volume_name", VOLUME_NAME);
     return conf;
   }
   
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
-    assertEquals(ListUtil.list(BASE_URL + "articles/"), getRootUrls(artIter));
+    assertEquals(ListUtil.list(BASE_URL + variantBaseConstant + "/"), 
+                 getRootUrls(artIter));
   }
 
   public void testUrlsWithPrefixes() throws Exception {
@@ -140,39 +130,48 @@ public class TestPeerJArticleIteratorFactory
     // PATTERN_TEMPLATE = 
     //  "\"^%s(articles)/([0-9]+)(\\.pdf)?$\", base_url";
     
-    assertNotMatchesRE(pat, "http://www.example.com/articles/55.pdfbad");
-    assertMatchesRE(pat, "http://www.example.com/articles/55");
-    assertMatchesRE(pat, "http://www.example.com/articles/55.pdf");
+    assertNotMatchesRE(pat, BASE_URL + variantBaseConstant + "/" 
+                            + variantArticleName + ".pdfbad");
+    assertMatchesRE(pat, BASE_URL + variantBaseConstant + "/" 
+                            + variantArticleName + "");
+    assertMatchesRE(pat, BASE_URL + variantBaseConstant + "/" 
+                            + variantArticleName + ".pdf");
   }
   
-  // simulated cached urls:
-  // total number files = 24; // 1 depth, 4 branches, 3 files
-  // 1003 means branch #1 and file  #3
-  // there are 9 different file formats
-  // 
-  // full text pdf      - http://www.example.com/articles/1003.pdf
-  // abstract           - http://www.example.com/articles/1003
-  // full text xml      - http://www.example.com/articles/1003.xml
-  // citation bib       - http://www.example.com/articles/1003.bib
-  // citation ris       - http://www.example.com/articles/1003.ris
-  // alternate html     - http://www.example.com/articles/1003.html
-  // alternate rdf      - http://www.example.com/articles/1003.rdf
-  // alternate json     - http://www.example.com/articles/1003.json
-  // alternate unixref  - http://www.example.com/articles/1003.unixref
-  //
+  /*
+   * simulated cached urls:
+   * total number files = 24;  // 1 depth, 4 branches, 3 files
+   * 1003 means branch #1 and file  #3
+   * there are 9 different file formats
+   * base_constant is either 'articles' or 'preprints'
+   * 
+   * full text pdf      - <base_url>/<base_constant>/1003.pdf
+   * abstract           - <base_url>/<base_constant>/1003
+   * full text xml      - <base_url>/<base_constant>/1003.xml
+   * citation bib       - <base_url>/<base_constant>/1003.bib
+   * citation ris       - <base_url>/<base_constant>/1003.ris
+   * altertnate html    - <base_url>/<base_constant>/1003.html
+   * alternate rdf      - <base_url>/<base_constant>/1003.rdf
+   * alternate json     - <base_url>/<base_constant>/1003.json
+   * alternate unixref  - <base_url>/<base_constant>/1003.unixref
+   */
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
 
+    // 48 for Archives site
+    // 36 for Preprints since it does not have unixref files
+    int expAlternateFileCount = 12 * variantAlternateRoles.size();
+    
     String pdfPat = "branch(\\d+)/(\\d+)file\\.pdf";
-    String pdfRep = "/articles/$1$2.pdf";
-    String absRep = "/articles/$1$2";
-    String xmlRep = "/articles/$1$2.xml";
-    String bibRep = "/articles/$1$2.bib";
-    String risRep = "/articles/$1$2.ris";
-    String alternateHtmlRep = "/articles/$1$2.html";
-    String alternateJsonRep = "/articles/$1$2.json";
-    String alternateRdfRep = "/articles/$1$2.rdf";
-    String alternateUnixrefRep = "/articles/$1$2.unixref";
+    String pdfRep = "/" + variantBaseConstant + "/$1$2.pdf";
+    String absRep = "/" + variantBaseConstant + "/$1$2";
+    String xmlRep = "/" + variantBaseConstant + "/$1$2.xml";
+    String bibRep = "/" + variantBaseConstant + "/$1$2.bib";
+    String risRep = "/" + variantBaseConstant + "/$1$2.ris";
+    String alternateHtmlRep = "/" + variantBaseConstant + "/$1$2.html";
+    String alternateJsonRep = "/" + variantBaseConstant + "/$1$2.json";
+    String alternateRdfRep = "/" + variantBaseConstant + "/$1$2.rdf";
+    String alternateUnixrefRep = "/" + variantBaseConstant + "/$1$2.unixref";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, pdfRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, absRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, xmlRep);
@@ -182,17 +181,17 @@ public class TestPeerJArticleIteratorFactory
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateJsonRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateUnixrefRep);
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pdfPat, alternateRdfRep);
-  
+
     // Remove some URLs
     int deletedFileCount = 0; 
-    for (Iterator it = 
+    for (Iterator<CachedUrlSetNode> it = 
         au.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
-      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
+      CachedUrlSetNode cusn = it.next();
       if (cusn instanceof CachedUrl) {
         CachedUrl cu = (CachedUrl)cusn;
         String url = cu.getUrl();
         log.info("au cached url: " + url);
-        if (url.contains("/articles/") 
+        if (url.contains(variantBaseConstant) 
             && (url.endsWith("1.xml") || url.endsWith("2.pdf"))) {
           deleteBlock(cu);
           ++deletedFileCount;
@@ -228,7 +227,7 @@ public class TestPeerJArticleIteratorFactory
       if (!StringUtil.isNullString(url) && url.endsWith(".pdf")) {
         ++countPdfOnly;
       }
-      url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_XML);
+      url = af.getRoleUrl(variantPeerjXmlRole);
       if (!StringUtil.isNullString(url) && url.endsWith(".xml")) {
         ++countXmlOnly;
       }
@@ -250,22 +249,13 @@ public class TestPeerJArticleIteratorFactory
           af.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA))) { 
         ++countArticleMetadataOnly;
       }
+
       // count all alternate files together
-      if (!StringUtil.isNullString(af.getRoleUrl(
-          PeerJArticleIteratorFactory.ROLE_ALTERNATE_FULL_TEXT_HTML))) {
-        ++countAlternateFileOnly;
-      }
-      if (!StringUtil.isNullString(af.getRoleUrl(
-          PeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF))) {
-        ++countAlternateFileOnly;
-      }
-      if (!StringUtil.isNullString(af.getRoleUrl(
-          PeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON))) {
-        ++countAlternateFileOnly;
-      }
-      if (!StringUtil.isNullString(af.getRoleUrl(
-          PeerJArticleIteratorFactory.ROLE_ALTERNATE_UNIXREF))) {
-        ++countAlternateFileOnly;
+      for (int i = 0; i < variantAlternateRoles.size(); i++) {
+        if (!StringUtil.isNullString(
+            af.getRoleUrl(variantAlternateRoles.get(i).toString()))) {
+          ++countAlternateFileOnly;
+        }        
       }
     }
     
@@ -277,7 +267,7 @@ public class TestPeerJArticleIteratorFactory
     assertEquals(EXP_BIB_COUNT, countBibOnly);
     assertEquals(EXP_RIS_COUNT, countRisOnly);
     assertEquals(EXP_ARTICLE_METADATA_COUNT, countArticleMetadataOnly);
-    assertEquals(EXP_ALTERNATE_FILE_COUNT, countAlternateFileOnly);    
+    assertEquals(expAlternateFileCount, countAlternateFileOnly);    
    }
  
   private void deleteBlock(CachedUrl cu) throws IOException {
@@ -288,5 +278,66 @@ public class TestPeerJArticleIteratorFactory
     NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
     nm.deleteNode(cus);
   }
+  
+  /*
+   * PeerJ Archives site is in GLN only.
+   *   article files:
+   *   full text pdf      - <baser_url>/articles/55.pdf
+   *   abstract           - <baser_url>/articles/55/     (including full text)
+   *   full text xml      - <baser_url>/articles/55.xml
+   *   citation bib       - <baser_url>/articles/55.bib
+   *   citation ris       - <baser_url>/articles/55.ris
+   *   alternate html     - <baser_url>/articles/55.html
+   *   alternate rdf      - <baser_url>/articles/55.rdf
+   *   alternate json     - <baser_url>/articles/55.json
+   *   alternate unixref  - <baser_url>/articles/55.unixref
+   */
+ public static class TestLockss extends TestPeerJArticleIteratorFactory {
+    
+    public TestLockss() {
+      variantPluginName = "org.lockss.plugin.peerj.PeerJPlugin";
+      variantPeerjSite = "archives";
+      variantBaseConstant = "articles";
+      variantArticleName = "55";
+      variantPeerjXmlRole = ArticleFiles.ROLE_FULL_TEXT_XML;
+      variantAlternateRoles = Arrays.asList(
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_FULL_TEXT_HTML,
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF,
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON,
+          PeerJArticleIteratorFactory.ROLE_ALTERNATE_UNIXREF);
+    }
+  }
 
+ /*
+  * PeerJ Archives Preprints site is in Clockss only.
+  *   article files:
+  *   full text pdf      - <baser_url>/preprints/14.pdf
+  *   abstract           - <baser_url>/preprints/14/      (including full text)
+  *   full text xml      - <baser_url>/preprints/14.xml
+  *   citation bib       - <baser_url>/preprints/14.bib
+  *   citation ris       - <baser_url>/preprints/14.ris
+  *   alternate html     - <baser_url>/preprints/14.html
+  *   alternate rdf      - <baser_url>/preprints/14.rdf
+  *   alternate json     - <baser_url>/preprints/14.json
+  */
+  public static class TestClockss extends TestPeerJArticleIteratorFactory {
+    public TestClockss() {
+      variantPluginName = "org.lockss.plugin.peerj.ClockssPeerJPlugin";
+      variantPeerjSite = "archives-preprints";
+      variantBaseConstant = "preprints";
+      variantArticleName = "14";
+      variantPeerjXmlRole = ClockssPeerJArticleIteratorFactory.ROLE_ABSTRACT_XML;
+      variantAlternateRoles = Arrays.asList(
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_ABSTRACT,
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_RDF,
+          ClockssPeerJArticleIteratorFactory.ROLE_ALTERNATE_JSON);
+    }   
+  }
+
+  public static Test suite() {
+    return variantSuites(new Class[] {
+        TestLockss.class,
+        TestClockss.class
+      });
+  }
 }
