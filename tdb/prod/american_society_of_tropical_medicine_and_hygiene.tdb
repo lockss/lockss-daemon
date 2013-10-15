@@ -18,7 +18,7 @@
     param[base_url] = http://www.ajtmh.org/
     implicit < status ; year ; name ; param[volume_name] >
     
-    comment[notReady] = Login pages for content available only to association members stops crawling. See RT 4356, RT 3375.
+    comment[doNotProcess] = Login pages for content available only to association members stops crawling. See RT 4356, RT 3375.
 
     au < manifest ; 1921 ; The American Journal of Tropical Medicine and Hygiene Volume s1-1 ; s1-1 >
     au < manifest ; 1922 ; The American Journal of Tropical Medicine and Hygiene Volume s1-2 ; s1-2 >
@@ -119,21 +119,21 @@
     au < released ; 2002 ; The American Journal of Tropical Medicine and Hygiene Volume 66 ; 66 >
     au < released ; 2002 ; The American Journal of Tropical Medicine and Hygiene Volume 67 ; 67 >
     au < released ; 2003 ; The American Journal of Tropical Medicine and Hygiene Volume 68 ; 68 >
-    au < notReady ; 2003 ; The American Journal of Tropical Medicine and Hygiene Volume 69 ; 69 >
-    au < notReady ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 70 ; 70 >
-    au < notReady ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 71 ; 71 >
+    au < doNotProcess ; 2003 ; The American Journal of Tropical Medicine and Hygiene Volume 69 ; 69 >
+    au < doNotProcess ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 70 ; 70 >
+    au < doNotProcess ; 2004 ; The American Journal of Tropical Medicine and Hygiene Volume 71 ; 71 >
     au < released ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 72 ; 72 >
-    au < notReady ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 73 ; 73 >
+    au < doNotProcess ; 2005 ; The American Journal of Tropical Medicine and Hygiene Volume 73 ; 73 >
     au < released ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 74 ; 74 >
-    au < notReady ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 75 ; 75 >
+    au < doNotProcess ; 2006 ; The American Journal of Tropical Medicine and Hygiene Volume 75 ; 75 >
     au < released ; 2007 ; The American Journal of Tropical Medicine and Hygiene Volume 76 ; 76 >
-    au < notReady ; 2007 ; The American Journal of Tropical Medicine and Hygiene Volume 77 ; 77 >
+    au < doNotProcess ; 2007 ; The American Journal of Tropical Medicine and Hygiene Volume 77 ; 77 >
     au < released ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 78 ; 78 >
-    au < notReady ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
+    au < doNotProcess ; 2008 ; The American Journal of Tropical Medicine and Hygiene Volume 79 ; 79 >
     au < released ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 80 ; 80 >
-    au < notReady ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
+    au < doNotProcess ; 2009 ; The American Journal of Tropical Medicine and Hygiene Volume 81 ; 81 >
     au < released ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 82 ; 82 >
-    au < notReady ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
+    au < doNotProcess ; 2010 ; The American Journal of Tropical Medicine and Hygiene Volume 83 ; 83 >
     au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 84 ; 84 >
     au < released ; 2011 ; The American Journal of Tropical Medicine and Hygiene Volume 85 ; 85 >
     au < released ; 2012 ; The American Journal of Tropical Medicine and Hygiene Volume 86 ; 86 >
