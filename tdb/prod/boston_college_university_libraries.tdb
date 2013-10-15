@@ -131,9 +131,9 @@
       param[base_url] = http://ejournals.bc.edu/ojs/
       param[journal_id] = ctsa
       
-      au < exists ; 2004 ; Proceedings of the Catholic Theological Society of America Volume 59 (2004) ; 59 ; 2004 >
-      au < exists ; 2012 ; Proceedings of the Catholic Theological Society of America Volume 67 (2012) ; 67 ; 2012 >
-      au < exists ; 2013 ; Proceedings of the Catholic Theological Society of America Volume 68 (2013) ; 68 ; 2013 >
+      au < manifest ; 2004 ; Proceedings of the Catholic Theological Society of America Volume 59 (2004) ; 59 ; 2004 >
+      au < manifest ; 2012 ; Proceedings of the Catholic Theological Society of America Volume 67 (2012) ; 67 ; 2012 >
+      au < manifest ; 2013 ; Proceedings of the Catholic Theological Society of America Volume 68 (2013) ; 68 ; 2013 >
       au < expected ; 2014 ; Proceedings of the Catholic Theological Society of America Volume 69 (2014) ; 69 ; 2014 >
 
     }         
