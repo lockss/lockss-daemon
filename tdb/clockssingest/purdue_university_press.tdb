@@ -33,6 +33,7 @@
     au < manifest ; exists ; 2011 ; Comparative Literature and Culture Volume 13 ; 13 >
     au < released ; crawling ; 2012 ; Comparative Literature and Culture Volume 14 ; 14 >
     au < crawling ; exists ; 2013 ; Comparative Literature and Culture Volume 15 ; 15 >
+    au < expected ; exists ; 2014 ; Comparative Literature and Culture Volume 16 ; 16 >
  
   }
   
@@ -53,6 +54,7 @@
     au < manifest ; exists ; 2011 ; Data Curation Profile Volume 3 ; 3 >
     au < released ; crawling ; 2012 ; Data Curation Profile Volume 4 ; 4 >
     au < crawling ; exists ; 2013 ; Data Curation Profile Volume 5 ; 5 >
+    au < expected ; exists ; 2014 ; Data Curation Profile Volume 6 ; 6 >
 
   }
   
@@ -75,6 +77,7 @@
     au < manifest ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 >
     au < released ; crawling ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 >
+    au < expected ; exists ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 >
 
   }
   
@@ -93,6 +96,7 @@
     au < manifest ; exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 >
     au < released ; crawling ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 >
 
   }
   
@@ -108,14 +112,14 @@
     param[journal_abbr] = jhpee
     implicit < status ; status2 ; year ; name ; param[volume] >
     
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 >
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 >
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 >
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 >
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 >
-    au < released ; crawling ; 2012 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 >
-    au < expected ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 >
-    au < expected ; exists ; 2012 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 >
+    au < released ; crawling ; 2000 ; Journal of Human Performance in Extreme Environments Volume 5 ; 5 >
+    au < released ; crawling ; 2001 ; Journal of Human Performance in Extreme Environments Volume 6 ; 6 >
+    au < released ; crawling ; 2003 ; Journal of Human Performance in Extreme Environments Volume 7 ; 7 >
+    au < released ; crawling ; 2005 ; Journal of Human Performance in Extreme Environments Volume 8 ; 8 >
+    au < released ; crawling ; 2006 ; Journal of Human Performance in Extreme Environments Volume 9 ; 9 >
+    au < released ; crawling ; 2012-2013 ; Journal of Human Performance in Extreme Environments Volume 10 ; 10 >
+    au < expected ; exists ; 2013 ; Journal of Human Performance in Extreme Environments Volume 11 ; 11 >
+    au < expected ; exists ; 2014 ; Journal of Human Performance in Extreme Environments Volume 12 ; 12 >
 
   }
 
@@ -134,6 +138,7 @@
     au < manifest ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 >
     au < released ; crawling ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 >
     
   }
 
@@ -155,6 +160,7 @@
     au < released ; crawling ; 2012 ; Journal of Problem Solving Research Volume 4 ; 4 >
     au < released ; crawling ; 2012 ; Journal of Problem Solving Research Volume 5 ; 5 >
     au < manifest ; exists ; 2013 ; Journal of Problem Solving Research Volume 6 ; 6 >
+    au < expected ; exists ; 2014 ; Journal of Problem Solving Research Volume 7 ; 7 >
 
   }
   
