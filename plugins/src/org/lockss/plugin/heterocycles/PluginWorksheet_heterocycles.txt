@@ -6,7 +6,6 @@ filling in the answer to questions. Cut and paste specific URLs to support
 your notes and to allow subsequent readers to understand your 
 analysis.
 
-
 ---------------------GENERAL INFORMATION-----------------------------
 Name of publisher: The Japan Institute of Heterocyclic Chemistry
 
@@ -76,21 +75,18 @@ each that exists. If you can generalize to a pattern (eg.
   <base_url>/clockss/libraries/journal/<volume_name>/
     ex: http://www.heterocycles.jp/clockss/libraries/journal/83/
 
-  <base_url>/clockss/downloads/(PDF|PDFwithLinks|PDFsi)/[^/]+/<volume_name>/
+  <base_url>/clockss/downloads/(PDF|PDFwithLinks|PDFsi)/[^/]+/<volume_name>/<article number>
     ex: http://www.heterocycles.jp/clockss/downloads/PDF/23208/83/1
         http://www.heterocycles.jp/clockss/downloads/PDFwithLinks/21577/83/1
         http://www.heterocycles.jp/clockss/downloads/PDFsi/21702/83/7
 
-  <base_url>/clockss/libraries/fulltext/[^/]+/<volume_name>/
+  <base_url>/clockss/libraries/fulltext/[^/]+/<volume_name>/<article number>
     ex: http://www.heterocycles.jp/clockss/libraries/fulltext/21568/83/1
   
   images urls look like:  
     ex: http://www.heterocycles.jp/scimg/0/0000046858?style=opaque&width=500
         http://www.heterocycles.jp/clockss/img/cycle.gif
   
-  what do we do about PDFwithLinks? Collect? Not collect?
-  ex: http://www.heterocycles.jp/clockss/downloads/PDFwithLinks/22960/87/1
-
 Journal Front Page (we won't collect, but need to know):
 * does 'Home' button usually the Journal Front Page?
 http://www.heterocycles.jp/newlibrary/libraries/prepress
@@ -261,10 +257,15 @@ following:
 pairs that includes creation or modification date
 sfxlink javascript commands
 
+* html pages reviewed for hash filtering:
+   start url - http://www.heterocycles.jp/clockss/manifest/vol/87
+   issue     - http://www.heterocycles.jp/clockss/libraries/journal/87/9
+   full text - http://www.heterocycles.jp/clockss/libraries/fulltext/22950/87/9
+
 * Do not hash out: <head> contains metadata and constant css paths.
   (current not enough metadata yet)
-* footer
-* will probably find more when writing hash filter
+
+* filter header and footer
 
 Anything else you think might need to be removed from hashing??
 
@@ -328,6 +329,10 @@ provide the format options and some examples for download.
 Some publishers don't provide explicit metadata and we need to parse 
 the source html for basic information. Is that the case?
 * metadata not found.
+** It's not required, though nice to have, that the publisher provides 
+   metadata, for Clockss harvest content (dark archives). Metadata is needed 
+   only when the content is triggered. Until then, no need to write
+   metadata extractor.
 * suggestion for metadata request from the publisher. 1-15 are what I usually
 encounter:
 1.  publisher
