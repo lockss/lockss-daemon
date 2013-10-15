@@ -166,7 +166,7 @@
 
     param[base_url] = http://ecst.ecsdl.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = volume 38, 46, 47, 48, 51 are not available
+    comment[0] = volume 38, 48, 55, 56 are not available on 10/15/2013
     comment[notReady] = needs hash filter RU 4503
 
     au < HighWirePressH20Plugin ; released ; 2005 ; ECS Transactions Volume 1 ; 1 >
@@ -213,16 +213,25 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; ECS Transactions Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 45 ; 45 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; ECS Transactions Volume 46 ; 46 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; ECS Transactions Volume 47 ; 47 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ECS Transactions Volume 49 ; 49 >
     au < HighWirePressH20Plugin ; notReady ; 2012 ; ECS Transactions Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; ECS Transactions Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Transactions Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; ECS Transactions Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; expected ; 2013 ; ECS Transactions Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; ECS Transactions Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; ECS Transactions Volume 65 ; 65 >
     
   }
 
