@@ -1,6 +1,7 @@
 {
   publisher <
-    name = Project MUSE
+    name = Project MUSE ;
+    info[tester] = 4
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMuseBooksPlugin
