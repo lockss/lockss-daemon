@@ -1480,7 +1480,8 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; AoB PLANTS Volume 2010 ; 2010 >
     au < HighWirePressH20Plugin ; released ; 2011 ; AoB PLANTS Volume 2011 ; 2011 >
     au < HighWirePressH20Plugin ; released ; 2012 ; AoB PLANTS Volume 2012 ; 2012 >
-    au < HighWirePressH20Plugin ; expected ; 2013 ; AoB PLANTS Volume 2013 ; 2013 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; AoB PLANTS Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; AoB PLANTS Volume 6 ; 6 >
 
   }
 
@@ -4828,6 +4829,9 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; English Historical Review Volume CXXVI ; CXXVI >
     au < HighWirePressH20Plugin ; released ; 2012 ; English Historical Review Volume CXXVII ; CXXVII >
     au < HighWirePressH20Plugin ; expected ; 2013 ; English Historical Review Volume CXXVIII ; CXXVIII >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; English Historical Review Volume 127 ; 127 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; English Historical Review Volume 128 ; 128 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; English Historical Review Volume 129 ; 129 >
 
     }
 
