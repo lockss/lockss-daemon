@@ -69,30 +69,26 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   
   private static final String stuffScriptHtml =
 		 "<body>" +
-		 "<div id=\"footer\">" +
-		 "</div>" +
-		 "<script type=\"text/javascript\"></script>" +
+		 "<script type=\"text/javascript\">!!!</script>" +
 		 "</body>";
   private static final String stuffScriptHtmlFiltered =
 	  	 "<body>" +
-		 "<div id=\"footer\">" +
-		 "</div>" +
 		 "</body>";
   
   private static final String stuffScriptStuffHtml =
 		  "<header> \"Stuff\" </header>" +
           "<img scr= \"http://images.jpg\"/>" +
-          "<script type=\"text/javascript\"></script>" +
+          "<script type=\"text/javascript\">!!!</script>" +
           "<div class=\"logo\"></div>" +
           "<a href=\"/\" id=\"ctl00_logourl\"></a>" +
-          "<script type=\"text/javascript\"></script>" +
-          "<div id=\"footer\"></div>";	  
+          "<script type=\"text/javascript\">!!!</script>" +
+          "<div id=\"blah\"></div>";	  
   private static final String stuffScriptStuffHtmlFiltered =
 		  "<header>\"Stuff\" </header>" +
 		  "<img scr= \"http://images.jpg\"/>" +
 		  "<div class=\"logo\"></div>" +
           "<a href=\"/\" id=\"ctl00_logourl\"></a>" +	  
-		  "<div id=\"footer\"></div>";
+		  "<div id=\"blah\"></div>";
   
   private static final String leftColumnHtml =
 		"<div class=\"left_column\"><div id=\"left_column\" class=\"InnerRight\">\n" +
@@ -130,7 +126,6 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
           "</head></html>";
 
   private static final String cleaningUpHeaderStuffHtmlFiltered = 
-          "<html>" +
           "</html>";
   
   private static final String svgContentHtml = 
@@ -143,7 +138,7 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
           "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
           "" +
           "<g transform=\"matrix(.017,0,0,-.017,13.313,12.013)\"><use xlink:href=\"#x2F\"/></g><g transform=\"matrix(.017,0,0,-.017,20.316,12.013)\">" +
-          "<use xlink:href=\"#x1D6FC\"/></g></svg>"; 
+          "<use xlink:href=\"#x1D6tFC\"/></g></svg>"; 
 
   private static final String svgContentFiltered =
       "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
