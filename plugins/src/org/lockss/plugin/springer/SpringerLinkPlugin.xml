@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>48</string>
+    <string>49</string>
   </entry>
   <entry>
     <string>au_crawl_depth</string>
@@ -159,6 +159,6 @@
   </entry>
   <entry>
     <string>plugin_delete_extra_files</string>
-    <string>true</string>
+    <boolean>true</boolean>
   </entry>
 </map>
