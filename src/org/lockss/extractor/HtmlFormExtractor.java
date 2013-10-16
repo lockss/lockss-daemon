@@ -471,7 +471,8 @@ public class HtmlFormExtractor {
       Element el = (Element) node;
       if(m_openForm == null) {
         // we found a end tag with no matching begin
-        theLogger.siteWarning("HtmlFormExtractor found unmatched form tag.");
+        if(theLogger.isDebug())
+          theLogger.debug("HtmlFormExtractor found unmatched form tag.");
         return;
       }
       open_ct--;
@@ -639,19 +640,20 @@ public class HtmlFormExtractor {
       String type = el.attr("type");
       String val = el.attr("value");
       boolean req = el.hasAttr("required");
-      String src = el.attr("src");
+      JsoupHtmlLinkExtractor.checkLink(el,m_cb,"src");
+      //String src = el.attr("src");
       // unlike buttons which use the img tag, input tags use a "src" attribute
-      if(!StringUtil.isNullString(src)) {
-        m_cb.foundLink(src);
-      }
+      //if(!StringUtil.isNullString(src)) {
+      // m_cb.foundLink(src);
+      //}
       if(type.equalsIgnoreCase("submit")) {
         addSubmit(el, name, val);
       }
       else if(type.equalsIgnoreCase("image")) {
         // input tags of type "image" use a "src" attribute
-        if(src != null) {
-          m_cb.foundLink(src);
-        }
+        //if(src != null) {
+        //  m_cb.foundLink(src);
+        //}
         // but it acts like a submit button
         addSubmit(el, name, val);
       }

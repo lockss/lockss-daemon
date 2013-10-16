@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupHtmlLinkExtractor.java,v 1.4 2013-07-30 20:37:34 clairegriffin Exp $
+ * $Id: JsoupHtmlLinkExtractor.java,v 1.5 2013-10-16 01:46:57 clairegriffin Exp $
  */
 
 /*
@@ -269,6 +269,12 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       m_statsMgr.stopMeasurement();
     }
   }
+  public static void checkLink(final Node node, final Callback cb,
+                               final String attr) {
+    if(node.hasAttr(attr) && !StringUtil.isNullString(node.attr(attr))) {
+      cb.foundLink(node.attr("abs:"+attr));
+    }
+  }
 
   /**
    * Node Visitor for JSoup parser
@@ -389,7 +395,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
       if("mailto".equalsIgnoreCase(baseProto) || relative != null
         && StringUtil.startsWithIgnoreCase(relative, "mailto:")) {
         return null;
-      }
+       }
       return UrlUtil.resolveUri(base, relative);
     }
 
@@ -511,8 +517,9 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                          final ArchivalUnit au,
                          final Callback cb) {
       super.tagBegin(node, au, cb);
-      if(!m_baseSet && node.hasAttr("href")) {
-        String href = node.attr("href");
+      if(!m_baseSet && node.hasAttr("href")
+          && !StringUtil.isNullString(node.attr("href"))) {
+        String href = node.attr("abs:href");
         try {
           String newBase =
             m_nodeVisitor.resolveUri(m_nodeVisitor.getBaseUrl(), href);
@@ -589,13 +596,13 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
     public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
       super.tagBegin(node, au, cb);
       for(String attr : m_Attrs) {
-        if(node.hasAttr(attr)) {
-          cb.foundLink(node.attr(attr));
-        }
+        checkLink(node, cb, attr);
       }
 
     }
   }
+
+
 
   /**
    * Link Extractor for the script tag
@@ -614,10 +621,7 @@ public class JsoupHtmlLinkExtractor implements LinkExtractor {
                          final Callback cb) {
       super.tagBegin(node, au, cb);
       m_nodeVisitor.setInScript(true);
-      if(node.hasAttr("src")) {
-        cb.foundLink(node.attr("src"));
-      }
-
+      checkLink(node,cb, "src");
     }
 
     @Override
