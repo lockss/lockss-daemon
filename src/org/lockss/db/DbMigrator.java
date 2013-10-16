@@ -1,5 +1,5 @@
 /*
- * $Id: DbMigrator.java,v 1.1 2013-07-10 21:59:46 fergaloy-sf Exp $
+ * $Id: DbMigrator.java,v 1.2 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -692,23 +692,23 @@ public class DbMigrator extends DbManager {
       // Check whether this is the first execution of the migration process.
       if (isFirstExecution) {
 	// Yes: Add the indices for version 3.
-	createIndices(targetConn, VERSION_3_INDEX_CREATE_QUERIES);
+	executeDdlQueries(targetConn, VERSION_3_INDEX_CREATE_QUERIES);
 
 	// Add the indices for version 4.
-	createIndices(targetConn, VERSION_4_INDEX_CREATE_QUERIES);
+	executeDdlQueries(targetConn, VERSION_4_INDEX_CREATE_QUERIES);
 
 	// Add the indices for version 5.
-	createIndices(targetConn, VERSION_5_INDEX_CREATE_QUERIES);
+	executeDdlQueries(targetConn, VERSION_5_INDEX_CREATE_QUERIES);
 
 	// Check whether the database version is at least 6.
 	if (dbVersion >= 6) {
 	  // Yes: Add the indices for version 6.
-	  createIndices(targetConn, VERSION_6_INDEX_CREATE_QUERIES);
+	  executeDdlQueries(targetConn, VERSION_6_INDEX_CREATE_QUERIES);
 
 	  // Check whether the database version is at least 7.
 	  if (dbVersion >= 7) {
 	    // Yes: Add the indices for version 7.
-	    createIndices(targetConn, VERSION_7_INDEX_CREATE_QUERIES);
+	    executeDdlQueries(targetConn, VERSION_7_INDEX_CREATE_QUERIES);
 	  }
 	}
       }

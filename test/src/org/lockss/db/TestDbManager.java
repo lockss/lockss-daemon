@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.7 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.8 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class TestDbManager extends LockssTestCase {
     conn = null;
     try {
       DbManager.commitOrRollback(conn, logger);
-    } catch (NullPointerException sqle) {
+    } catch (DbException dbe) {
     }
   }
 

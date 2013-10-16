@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.13 2013-08-20 16:30:38 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.14 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.db.DbManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
@@ -163,6 +164,7 @@ public class AuMetadataRecorder {
   private final String auId;
   private final String auKey;
   private final String pluginId;
+  private final boolean isBulkContent;
 
   // Database identifiers related to the AU. 
   private Long publisherSeq = null;
@@ -199,6 +201,7 @@ public class AuMetadataRecorder {
     this.au = au;
 
     plugin = au.getPlugin();
+    isBulkContent = plugin.isBulkContent();
     platform = plugin.getPublishingPlatform();
     pluginVersion = mdManager.getPluginMetadataVersionNumber(plugin);
     auId = au.getAuId();
@@ -673,7 +676,8 @@ public class AuMetadataRecorder {
       log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
 
       // Find the plugin or create it.
-      pluginSeq = mdManager.findOrCreatePlugin(conn, pluginId, platformSeq);
+      pluginSeq = mdManager.findOrCreatePlugin(conn, pluginId, platformSeq,
+	  isBulkContent);
       log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
 
       // Skip it if the plugin could not be found or created.
@@ -706,9 +710,18 @@ public class AuMetadataRecorder {
 
     // Check whether it is a new Archival Unit metadata.
     if (auMdSeq == null) {
-      // Yes: Add to the database the new Archival Unit metadata.
+      long creationTime = 0;
+
+      // Check whether it is possible to obtain the Archival Unit creation time.
+      if (au != null && AuUtil.getAuState(au) != null) {
+	// Yes: Get it.
+	creationTime = AuUtil.getAuCreationTime(au);
+      }
+
+      // Add to the database the new Archival Unit metadata.
       auMdSeq = mdManager.addAuMd(conn, auSeq, pluginVersion,
-                                  NEVER_EXTRACTED_EXTRACTION_TIME);
+                                  NEVER_EXTRACTED_EXTRACTION_TIME,
+                                  creationTime);
       log.debug3(DEBUG_HEADER + "new auSeq = " + auMdSeq);
 
       // Skip it if the new Archival Unit metadata could not be created.
@@ -864,6 +877,11 @@ public class AuMetadataRecorder {
       }
     }
 
+    // Get the earliest fetch time of the metadata items URLs.
+    long fetchTime =
+	AuUtil.getAuUrlsEarliestFetchTime(au, featuredUrlMap.values());
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+
     // Get the access URL received in the metadata.
     String accessUrl = mdinfo.accessUrl;
     log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
@@ -900,7 +918,7 @@ public class AuMetadataRecorder {
     if (newAu) {
       // Yes: Create the new metadata item in the database.
       mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq, auMdSeq,
-	  date, coverage);
+	  date, coverage, fetchTime);
       log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
 
       mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
@@ -915,7 +933,7 @@ public class AuMetadataRecorder {
       if (mdItemSeq == null) {
 	// Yes: Create it.
 	mdItemSeq = mdManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-	    auMdSeq, date, coverage);
+	    auMdSeq, date, coverage, fetchTime);
 	log.debug3(DEBUG_HEADER + "new mdItemSeq = " + mdItemSeq);
 
 	mdManager.addMdItemName(conn, mdItemSeq, itemTitle, PRIMARY_NAME_TYPE);
@@ -926,14 +944,9 @@ public class AuMetadataRecorder {
 
     log.debug3(DEBUG_HEADER + "newMdItem = " + newMdItem);
 
-    String volume = null;
-
-    // Check  whether this is a journal article.
-    if (MD_ITEM_TYPE_JOURNAL_ARTICLE.equals(mdItemType)) {
-      // Yes: Get the volume received in the metadata.
-      volume = mdinfo.volume;
-      log.debug3(DEBUG_HEADER + "volume = " + volume);
-    }
+    // Get the volume received in the metadata.
+    String volume = mdinfo.volume;
+    log.debug3(DEBUG_HEADER + "volume = " + volume);
 
     // Get the authors received in the metadata.
     Set<String> authors = mdinfo.authorSet;

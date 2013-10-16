@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.26 2013-09-05 18:49:46 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.27 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTransientException;
 import java.sql.Statement;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import javax.sql.DataSource;
@@ -54,6 +55,10 @@ import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.metadata.MetadataManager;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.PluginManager;
 import org.lockss.util.*;
 
 public class DbManager extends BaseLockssDaemonManager
@@ -297,6 +302,9 @@ public class DbManager extends BaseLockssDaemonManager
   /** Name of the Archival Unit problem table. */
   public static final String AU_PROBLEM_TABLE = "au_problem";
 
+  /** Name of the table used to identify the last run of incremental tasks. */
+  public static final String LAST_RUN_TABLE = "last_run";
+
   //
   // Database table column names.
   //
@@ -374,7 +382,7 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String PLUGIN_ID_COLUMN = "plugin_id";
 
   /** Name of the plugin platform column. */
-  public static final String PLATFORM_COLUMN = "platform";
+  public static final String OBSOLETE_PLATFORM_COLUMN = "platform";
 
   /** Archival unit sequential identifier column. */
   public static final String AU_SEQ_COLUMN = "au_seq";
@@ -517,6 +525,21 @@ public class DbManager extends BaseLockssDaemonManager
   /** Subscription range index column. */
   public static final String RANGE_IDX_COLUMN = "range_idx";
 
+  /** Archival Unit creation time column. */
+  public static final String CREATION_TIME_COLUMN = "creation_time";
+
+  /** Metadata item fetch time column. */
+  public static final String FETCH_TIME_COLUMN = "fetch_time";
+
+  /** Plugin bulk content indication column. */
+  public static final String IS_BULK_CONTENT_COLUMN = "is_bulk_content";
+
+  /** Last run label column. */
+  public static final String LABEL_COLUMN = "label";
+
+  /** Last run last value column. */
+  public static final String LAST_VALUE_COLUMN = "last_value";
+
   //
   // Maximum lengths of variable text length database columns.
   //
@@ -623,6 +646,12 @@ public class DbManager extends BaseLockssDaemonManager
 
   /** Length of the problem column. */
   public static final int MAX_PROBLEM_COLUMN = 512;
+
+  /** Length of the label column. */
+  public static final int MAX_LABEL_COLUMN = 32;
+
+  /** Length of the last value column. */
+  public static final int MAX_LAST_VALUE_COLUMN = 32;
 
   //
   //Types of metadata items.
@@ -775,7 +804,7 @@ public class DbManager extends BaseLockssDaemonManager
       + PLUGIN_TABLE + " ("
       + PLUGIN_SEQ_COLUMN + " --BigintSerialPk--,"
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
-      + PLATFORM_COLUMN + " varchar(" + MAX_PLATFORM_COLUMN + ")"
+      + OBSOLETE_PLATFORM_COLUMN + " varchar(" + MAX_PLATFORM_COLUMN + ")"
       + ")";
 
   // Query to create the table for recording archival units.
@@ -1037,6 +1066,14 @@ public class DbManager extends BaseLockssDaemonManager
       + PLUGIN_ID_COLUMN + " varchar(" + MAX_PLUGIN_ID_COLUMN + ") not null,"
       + AU_KEY_COLUMN + " varchar(" + MAX_AU_KEY_COLUMN + ") not null,"
       + PROBLEM_COLUMN + " varchar(" + MAX_PROBLEM_COLUMN + ") not null"
+      + ")";
+
+  // Query to create the table for identifying the last run of incremental
+  // tasks.
+  protected static final String CREATE_LAST_RUN_TABLE_QUERY = "create table "
+      + LAST_RUN_TABLE + " ("
+      + LABEL_COLUMN + " varchar(" + MAX_LABEL_COLUMN + ") not null,"
+      + LAST_VALUE_COLUMN + " varchar(" + MAX_LAST_VALUE_COLUMN + ") not null"
       + ")";
 
   // The SQL code used to create the necessary version 1 database tables.
@@ -1648,13 +1685,13 @@ public class DbManager extends BaseLockssDaemonManager
   // Query to update the null platforms of plugins.
   private static final String UPDATE_PLUGIN_NULL_PLATFORM_QUERY = "update "
       + PLUGIN_TABLE
-      + " set " + PLATFORM_COLUMN + " = ?"
-      + " where " + PLATFORM_COLUMN + " is null";
+      + " set " + OBSOLETE_PLATFORM_COLUMN + " = ?"
+      + " where " + OBSOLETE_PLATFORM_COLUMN + " is null";
   
   // SQL statement that obtains all the existing platform names in the plugin
   // table.
   private static final String GET_VERSION_2_PLATFORMS = "select distinct "
-      + PLATFORM_COLUMN
+      + OBSOLETE_PLATFORM_COLUMN
       + " from " + PLUGIN_TABLE;
 
   // Query to add a platform.
@@ -1668,13 +1705,7 @@ public class DbManager extends BaseLockssDaemonManager
   private static final String UPDATE_PLUGIN_PLATFORM_SEQ_QUERY = "update "
       + PLUGIN_TABLE
       + " set " + PLATFORM_SEQ_COLUMN + " = ?"
-      + " where " + PLATFORM_COLUMN + " = ?";
-
-  // SQL statement that removes the obsolete platform column from the plugin
-  // table.
-  private static final String REMOVE_OBSOLETE_PLUGIN_PLATFORM_COLUMN = "alter "
-      + "table " + PLUGIN_TABLE
-      + " drop column " + PLATFORM_COLUMN + " restrict";
+      + " where " + OBSOLETE_PLATFORM_COLUMN + " = ?";
 
   // SQL statement that nulls out publication dates.
   private static final String SET_PUBLICATION_DATES_TO_NULL = "update "
@@ -1822,9 +1853,168 @@ public class DbManager extends BaseLockssDaemonManager
       + " where " + SYSTEM_COLUMN + " = ?";
 
   // SQL statement that adds the index column to the subscription range table.
-  private static final String ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN = "alter "
-      + "table " + SUBSCRIPTION_RANGE_TABLE
+  private static final String ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN_QUERY =
+      "alter table " + SUBSCRIPTION_RANGE_TABLE
       + " add column " + RANGE_IDX_COLUMN + " smallint not null default 0";
+
+  // The SQL code used to create the necessary version 9 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_9_TABLE_CREATE_QUERIES =
+    new LinkedHashMap<String, String>() {{
+      put(LAST_RUN_TABLE, CREATE_LAST_RUN_TABLE_QUERY);
+    }};
+
+  // The SQL code used to add the necessary version 9 database table columns.
+  private static final String[] VERSION_9_COLUMN_ADD_QUERIES = new String[] {
+    "alter table " + PLUGIN_TABLE + " add column " + IS_BULK_CONTENT_COLUMN
+    + " boolean not null default false",
+    "alter table " + AU_MD_TABLE + " add column " + CREATION_TIME_COLUMN
+    + " bigint not null default -1",
+    "alter table " + MD_ITEM_TABLE + " add column " + FETCH_TIME_COLUMN
+    + " bigint not null default -1"
+    };
+
+  // SQL statements that create the necessary version 9 indices.
+  protected static final String[] VERSION_9_INDEX_CREATE_QUERIES =
+    new String[] {
+    "create index idx2_" + AU_TABLE + " on " + AU_TABLE
+    + "(" + PLUGIN_SEQ_COLUMN + ")",
+    "create index idx2_" + AU_MD_TABLE + " on " + AU_MD_TABLE
+    + "(" + AU_SEQ_COLUMN + ")",
+    "create index idx3_" + AU_MD_TABLE + " on " + AU_MD_TABLE
+    + "(" + CREATION_TIME_COLUMN + ")",
+    "create index idx4_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + MD_ITEM_TYPE_SEQ_COLUMN + ")",
+    "create index idx5_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + FETCH_TIME_COLUMN + ")",
+    "create index idx3_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + PUBLICATION_TABLE + " on " + PUBLICATION_TABLE
+    + "(" + PUBLISHER_SEQ_COLUMN + ")",
+    "create index idx2_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx3_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + NAME_TYPE_COLUMN + ")",
+    "create index idx2_" + PENDING_AU_TABLE + " on " + PENDING_AU_TABLE
+    + "(" + PRIORITY_COLUMN + ")",
+    "create index idx2_" + AUTHOR_TABLE + " on " + AUTHOR_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx1_" + KEYWORD_TABLE + " on " + KEYWORD_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx1_" + DOI_TABLE + " on " + DOI_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + DOI_TABLE + " on " + DOI_TABLE
+    + "(" + DOI_COLUMN + ")",
+    "create index idx4_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
+    + "(" + PLATFORM_SEQ_COLUMN + ")",
+    "create index idx1_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + URL_COLUMN + ")",
+    "create index idx2_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + IN_AGGREGATION_COLUMN + ")",
+    "create index idx1_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + FULL_REQUESTS_COLUMN + ")",
+    "create index idx6_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + SECTION_REQUESTS_COLUMN + ")",
+    "create index idx1_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx1_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + PUBLICATION_YEAR_COLUMN + ")"
+  };
+
+  // SQL statement that obtains all existing plugin identifiers in the database.
+  private static final String GET_ALL_PLUGIN_IDS_QUERY = "select distinct "
+      + PLUGIN_ID_COLUMN
+      + " from " + PLUGIN_TABLE;
+
+  // Query to update the bulk content indication of a plugin.
+  private static final String UPDATE_PLUGIN_IS_BULK_CONTENT_QUERY = "update "
+      + PLUGIN_TABLE
+      + " set " + IS_BULK_CONTENT_COLUMN + " = ?"
+      + " where " + PLUGIN_ID_COLUMN + " = ?";
+
+  // SQL statement that obtains all existing plugin identifier/AU key pairs in
+  // the database for Archival Units with unknown creation times.
+  private static final String GET_PLUGIN_IDS_AU_KEYS_QUERY = "select "
+      + "p." + PLUGIN_ID_COLUMN
+      + ", a." + AU_KEY_COLUMN
+      + ", am." + AU_MD_SEQ_COLUMN
+      + " from " + PLUGIN_TABLE + " p"
+      + "," + AU_TABLE + " a"
+      + "," + AU_MD_TABLE + " am"
+      + " where p." + PLUGIN_SEQ_COLUMN + " = a." + PLUGIN_SEQ_COLUMN
+      + " and a." + AU_SEQ_COLUMN + " = am." + AU_SEQ_COLUMN
+      + " and am." + CREATION_TIME_COLUMN + " = -1";
+
+  // Query to update the creation time of an Archival Unit.
+  private static final String UPDATE_AU_CREATION_TIME_QUERY = "update "
+      + AU_MD_TABLE
+      + " set " + CREATION_TIME_COLUMN + " = ?"
+      + " where " + AU_MD_SEQ_COLUMN + " = ?";
+  
+  // SQL statement that obtains for a given AU the identifiers of metadata items
+  // that have no known fetch time in the database.
+  private static final String GET_AU_MD_ITEMS_QUERY = "select "
+      + "m." + MD_ITEM_SEQ_COLUMN
+      + " from " + MD_ITEM_TABLE + " m"
+      + " where m." + AU_MD_SEQ_COLUMN + " = ?"
+      + " and m." + FETCH_TIME_COLUMN + " = -1";
+
+  // Query to find the featured URLs of a metadata item.
+  private static final String FIND_MD_ITEM_FEATURED_URL_QUERY = "select "
+      + FEATURE_COLUMN + "," + URL_COLUMN
+      + " from " + URL_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
+
+  // Query to update the fetch time of a metadata item.
+  private static final String UPDATE_MD_ITEM_FETCH_TIME_QUERY = "update "
+      + MD_ITEM_TABLE
+      + " set " + FETCH_TIME_COLUMN + " = ?"
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
@@ -1861,7 +2051,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 8;
+  private int targetDatabaseVersion = 10;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2143,8 +2333,8 @@ public class DbManager extends BaseLockssDaemonManager
       long retryDelay) throws DbException {
     final String DEBUG_HEADER = "getConnectionBeforeReady(): ";
     if (log.isDebug2()) {
-      log.debug2("maxRetryCount = " + maxRetryCount);
-      log.debug2("retryDelay = " + retryDelay);
+      log.debug2(DEBUG_HEADER + "maxRetryCount = " + maxRetryCount);
+      log.debug2(DEBUG_HEADER + "retryDelay = " + retryDelay);
     }
 
     boolean success = false;
@@ -2340,6 +2530,10 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom6To7(conn);
 	} else if (from == 7) {
 	  updateDatabaseFrom7To8(conn);
+	} else if (from == 8) {
+	  updateDatabaseFrom8To9(conn);
+	} else if (from == 9) {
+	  updateDatabaseFrom9To10(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2351,8 +2545,13 @@ public class DbManager extends BaseLockssDaemonManager
 	if (success) {
 	  // Yes: Check whether the updated database is at least at version 2.
 	  if (from > 0) {
-	    // Yes: Record the current database version in the database.
-	    recordDbVersion(conn, from + 1);
+	    // Yes: Check whether the last update does not involve an
+	    // asynchronous process that will update the database version in the
+	    // database when it finishes. 
+	    if (from != 9) {
+	      // Yes: Record the current database version in the database.
+	      recordDbVersion(conn, from + 1);
+	    }
 	  }
 
 	  // Commit this partial update.
@@ -2646,22 +2845,47 @@ public class DbManager extends BaseLockssDaemonManager
       throw new DbException("Null connection.");
     }
 
+    executeDdlQuery(conn, localizeCreateQuery(tableCreateSql));
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "Table '" + tableName + "' created.");
+
+    logTableSchemaBeforeReady(conn, tableName);
+  }
+
+  /**
+   * Executes a DDL query.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param ddlQuery
+   *          A String with the DDL query to be executed.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void executeDdlQuery(Connection conn, String ddlQuery)
+      throws DbException {
+    final String DEBUG_HEADER = "executeDdlQuery(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "ddlQuery = " + ddlQuery);
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
     PreparedStatement statement = null;
 
-    // Create the table.
     try {
-      statement = prepareStatementBeforeReady(conn,
-	  localizeCreateQuery(tableCreateSql));
+      statement = prepareStatementBeforeReady(conn, ddlQuery);
+
       int count = executeUpdateBeforeReady(statement);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
     } finally {
       DbManager.safeCloseStatement(statement);
     }
 
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "Table '" + tableName + "' created.");
-
-    logTableSchemaBeforeReady(conn, tableName);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
@@ -2978,8 +3202,15 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static void commitOrRollback(Connection conn, Logger logger)
       throws DbException {
+    final String DEBUG_HEADER = "commitOrRollback(): ";
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
     try {
       conn.commit();
+      if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "Committed.");
     } catch (SQLException sqle) {
       logger.error("Exception caught committing the connection", sqle);
       DbManager.safeRollbackAndClose(conn);
@@ -2999,8 +3230,15 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static void rollback(Connection conn, Logger logger)
       throws DbException {
+    final String DEBUG_HEADER = "rollback(): ";
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
     try {
       conn.rollback();
+      if (logger.isDebug3()) logger.debug3(DEBUG_HEADER + "Rolled back.");
     } catch (SQLException sqle) {
       logger.error("Exception caught rolling back the connection", sqle);
       DbManager.safeRollbackAndClose(conn);
@@ -4085,6 +4323,21 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
+   * Provides the query used to drop a column.
+   * 
+   * @param tableName
+   *          A String with the name of the table to which the column to be
+   *          dropped belongs.
+   * @param columnName
+   *          A String with the name of the column to be dropped.
+   * @return a String with the query used to drop the index.
+   */
+  private static String dropColumnQuery(String tableName, String columnName) {
+    return "alter table " + tableName
+	+ " drop column " + columnName + " restrict";
+  }
+
+  /**
    * Provides the query used to drop a function.
    * 
    * @param functionName
@@ -4340,8 +4593,8 @@ public class DbManager extends BaseLockssDaemonManager
       int maxRetryCount, long retryDelay) throws DbException {
     final String DEBUG_HEADER = "executeQueryBeforeReady(): ";
     if (log.isDebug2()) {
-      log.debug2("maxRetryCount = " + maxRetryCount);
-      log.debug2("retryDelay = " + retryDelay);
+      log.debug2(DEBUG_HEADER + "maxRetryCount = " + maxRetryCount);
+      log.debug2(DEBUG_HEADER + "retryDelay = " + retryDelay);
     }
 
     boolean success = false;
@@ -4468,8 +4721,8 @@ public class DbManager extends BaseLockssDaemonManager
       int maxRetryCount, long retryDelay) throws DbException {
     final String DEBUG_HEADER = "executeUpdateBeforeReady(): ";
     if (log.isDebug2()) {
-      log.debug2("maxRetryCount = " + maxRetryCount);
-      log.debug2("retryDelay = " + retryDelay);
+      log.debug2(DEBUG_HEADER + "maxRetryCount = " + maxRetryCount);
+      log.debug2(DEBUG_HEADER + "retryDelay = " + retryDelay);
     }
 
     boolean success = false;
@@ -4507,9 +4760,10 @@ public class DbManager extends BaseLockssDaemonManager
 	    // Continue with the next retry.
 	  }
 	}
-      } catch (SQLException sqle) {
+      } catch (Exception e) {
 	// A non-transient exception is caught: Report the problem.
-	throw new DbException("Cannot execute a query", sqle);
+	log.error("Non-Transient exception caught", e);
+	throw new DbException("Cannot execute a query", e);
       }
     }
 
@@ -4600,8 +4854,9 @@ public class DbManager extends BaseLockssDaemonManager
       String sql, int maxRetryCount, long retryDelay) throws DbException {
     final String DEBUG_HEADER = "prepareStatementBeforeReady(): ";
     if (log.isDebug2()) {
-      log.debug2("maxRetryCount = " + maxRetryCount);
-      log.debug2("retryDelay = " + retryDelay);
+      log.debug2(DEBUG_HEADER + "sql = " + sql);
+      log.debug2(DEBUG_HEADER + "maxRetryCount = " + maxRetryCount);
+      log.debug2(DEBUG_HEADER + "retryDelay = " + retryDelay);
     }
 
     boolean success = false;
@@ -4639,9 +4894,10 @@ public class DbManager extends BaseLockssDaemonManager
 	    // Continue with the next retry.
 	  }
 	}
-      } catch (SQLException sqle) {
+      } catch (Exception e) {
 	// A non-transient exception is caught: Report the problem.
-	throw new DbException("Cannot prepare a statement", sqle);
+	log.error("Non-Transient exception caught", e);
+	throw new DbException("Cannot prepare a statement", e);
       }
     }
 
@@ -4751,9 +5007,9 @@ public class DbManager extends BaseLockssDaemonManager
       throws DbException {
     final String DEBUG_HEADER = "prepareStatementBeforeReady(): ";
     if (log.isDebug2()) {
-      log.debug2("returnGeneratedKeys = " + returnGeneratedKeys);
-      log.debug2("maxRetryCount = " + maxRetryCount);
-      log.debug2("retryDelay = " + retryDelay);
+      log.debug2(DEBUG_HEADER + "returnGeneratedKeys = " + returnGeneratedKeys);
+      log.debug2(DEBUG_HEADER + "maxRetryCount = " + maxRetryCount);
+      log.debug2(DEBUG_HEADER + "retryDelay = " + retryDelay);
     }
 
     boolean success = false;
@@ -4814,7 +5070,36 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Create the necessary indices.
-    createIndices(conn, VERSION_3_INDEX_CREATE_QUERIES);
+    executeDdlQueries(conn, VERSION_3_INDEX_CREATE_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Creates database table indices.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param queries
+   *          A String[] with the database queries needed to create the indices.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  protected void executeDdlQueries(Connection conn, String[] queries)
+      throws DbException {
+    final String DEBUG_HEADER = "executeDdlQueries(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "queries.length = '" + queries.length + "'.");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Loop through all the indices.
+    for (String query : queries) {
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Query = " + query);
+      executeDdlQuery(conn, query);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -4835,42 +5120,16 @@ public class DbManager extends BaseLockssDaemonManager
     createTablesIfMissing(conn, VERSION_4_TABLE_CREATE_QUERIES);
 
     // Create the necessary indices.
-    createIndices(conn, VERSION_4_INDEX_CREATE_QUERIES);
+    executeDdlQueries(conn, VERSION_4_INDEX_CREATE_QUERIES);
 
     // Migrate the version 3 platforms.
-    addPluginTablePlatformReferenceColumn(conn);
+    executeDdlQuery(conn, ADD_PLUGIN_PLATFORM_SEQ_COLUMN);
     populatePlatformTable(conn);
-    removeObsoletePluginTablePlatformColumn(conn);
+    executeDdlQuery(conn,
+	dropColumnQuery(PLUGIN_TABLE, OBSOLETE_PLATFORM_COLUMN));
 
     // Fix publication dates.
     setPublicationDatesToNull(conn);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Adds the platform reference column to the plugin table.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void addPluginTablePlatformReferenceColumn(Connection conn)
-      throws DbException {
-    final String DEBUG_HEADER = "addPluginTablePlatformReferenceColumn(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    PreparedStatement statement = null;
-
-    try {
-      statement =
-	  prepareStatementBeforeReady(conn, ADD_PLUGIN_PLATFORM_SEQ_COLUMN);
-
-      int count = executeUpdateBeforeReady(statement);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
-    } finally {
-      DbManager.safeCloseStatement(statement);
-    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -4904,7 +5163,7 @@ public class DbManager extends BaseLockssDaemonManager
       // Loop through all the distinct platforms in the plugin table.
       while (resultSet.next()) {
 	// Get the platform.
-  	platform = resultSet.getString(PLATFORM_COLUMN);
+  	platform = resultSet.getString(OBSOLETE_PLATFORM_COLUMN);
   	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "platform = " + platform);
 
         // Add the publishing platform to its own table.
@@ -5051,33 +5310,6 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   /**
-   * Removes the obsolete platform column from the plugin table.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  private void removeObsoletePluginTablePlatformColumn(Connection conn)
-      throws DbException {
-    final String DEBUG_HEADER = "removObsoletePluginTablePlatformColumn(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-    PreparedStatement statement = null;
-
-    try {
-      statement = prepareStatementBeforeReady(conn,
-	  REMOVE_OBSOLETE_PLUGIN_PLATFORM_COLUMN);
-
-      int count = executeUpdateBeforeReady(statement);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
-    } finally {
-      DbManager.safeCloseStatement(statement);
-    }
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
    * Nulls out the date column for publications, populated in earlier versions
    * by mistake.
    * 
@@ -5120,7 +5352,7 @@ public class DbManager extends BaseLockssDaemonManager
     createTablesIfMissing(conn, VERSION_5_TABLE_CREATE_QUERIES);
 
     // Create the necessary indices.
-    createIndices(conn, VERSION_5_INDEX_CREATE_QUERIES);
+    executeDdlQueries(conn, VERSION_5_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5144,7 +5376,7 @@ public class DbManager extends BaseLockssDaemonManager
     removeDuplicateIssns(conn);
 
     // Create the necessary indices.
-    createIndices(conn, VERSION_6_INDEX_CREATE_QUERIES);
+    executeDdlQueries(conn, VERSION_6_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5422,39 +5654,7 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Create the necessary indices.
-    createIndices(conn, VERSION_7_INDEX_CREATE_QUERIES);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Creates database table indices.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param queries
-   *          A String[] with the database queries needed to create the indices.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  protected void createIndices(Connection conn, String[] queries)
-      throws DbException {
-    final String DEBUG_HEADER = "createIndices(): ";
-    if (log.isDebug2())
-      log.debug2(DEBUG_HEADER + "queries.length = '" + queries.length + "'.");
-
-    // Loop through all the indices.
-    for (String query : queries) {
-      log.debug2(DEBUG_HEADER + "Query = " + query);
-      PreparedStatement statement = null;
-
-      try {
-	statement = prepareStatementBeforeReady(conn, query);
-	executeUpdateBeforeReady(statement);
-      } finally {
-	DbManager.safeCloseStatement(statement);
-      }
-    }
+    executeDdlQueries(conn, VERSION_7_INDEX_CREATE_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5623,16 +5823,7 @@ public class DbManager extends BaseLockssDaemonManager
 					  "--databaseName--", databaseName);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "sql = " + sql);
 
-    PreparedStatement createDb = null;
-
-    try {
-      createDb = prepareStatementBeforeReady(conn, sql);
-
-      int count = executeUpdateBeforeReady(createDb);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } finally {
-      DbManager.safeCloseStatement(createDb);
-    }
+    executeDdlQuery(conn, sql);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5738,16 +5929,7 @@ public class DbManager extends BaseLockssDaemonManager
 					  "--schemaName--", schemaName);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "sql = " + sql);
 
-    PreparedStatement createSchema = null;
-
-    try {
-      createSchema = prepareStatementBeforeReady(conn, sql);
-
-      int count = executeUpdateBeforeReady(createSchema);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-    } finally {
-      DbManager.safeCloseStatement(createSchema);
-    }
+    executeDdlQuery(conn, sql);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5765,31 +5947,516 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Add the subscription range index column.
-    addSubscriptionRangeIndexColumn(conn);
+    executeDdlQuery(conn, ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN_QUERY);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
   /**
-   * Adds the index column to the subscription range table.
+   * Updates the database from version 8 to version 9.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom8To9(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom8To9(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Create the necessary tables if they do not exist.
+    createTablesIfMissing(conn, VERSION_9_TABLE_CREATE_QUERIES);
+
+    // Add the new columns.
+    executeDdlQueries(conn, VERSION_9_COLUMN_ADD_QUERIES);
+
+    // Create the necessary indices.
+    executeDdlQueries(conn, VERSION_9_INDEX_CREATE_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 9 to version 10.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom9To10(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom9To10(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Populate in a separate thread the ArchivalUnit creation times and the
+    // book chapter/journal article fetch times.
+    DbVersion9To10Migrator migrator = new DbVersion9To10Migrator();
+    new Thread(migrator).start();
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Migrates the contents of the database from version 9 to version 10.
+   */
+  void migrateDatabaseFrom9To10() {
+    final String DEBUG_HEADER = "migrateDatabaseFrom9To10(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    Connection conn = null;
+
+    try {
+      // Get a connection to the database.
+      conn = getConnectionBeforeReady();
+
+      // Populate the indication of bulk content in the plugin table.
+      populatePluginIsBulkContentColumn(conn);
+
+      // Populate the archival unit and metadata item timestamps.
+      populateArchivalUnitTimestamps(conn);
+    } catch (DbException dbe) {
+      log.error("Cannot migrate the database from version 9 to 10", dbe);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates the indication of bulk content in the plugin table.
    * 
    * @param conn
    *          A Connection with the database connection to be used.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private void addSubscriptionRangeIndexColumn(Connection conn)
+  private void populatePluginIsBulkContentColumn(Connection conn)
       throws DbException {
-    final String DEBUG_HEADER = "addSubscriptionRangeIndexColumn(): ";
+    final String DEBUG_HEADER = "populatePluginIsBulkContentColumn(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+
+    try {
+      // Get all the plugin identifiers in the plugin table.
+      statement = prepareStatementBeforeReady(conn, GET_ALL_PLUGIN_IDS_QUERY);
+      resultSet = executeQueryBeforeReady(statement);
+
+      // Loop through all the plugin identifiers.
+      while (resultSet.next()) {
+	// Get the plugin identifier.
+	String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	// Get the plugin indication of bulk content.
+	boolean isBulkContent =
+	    getDaemon().getPluginManager().getPlugin(pluginId).isBulkContent();
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
+
+  	// Update all the plugins using this platform.
+  	updatePluginIsBulkContentColumn(conn, pluginId, isBulkContent);
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get the plugin identifier";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_ALL_PLUGIN_IDS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the the indication of bulk content for a plugin.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param pluginId
+   *          A String with the identifier of the plugin.
+   * @param isBulkContent
+   *          A boolean with the indication of bulk content for the plugin.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updatePluginIsBulkContentColumn(Connection conn, String pluginId,
+      boolean isBulkContent) throws DbException {
+    final String DEBUG_HEADER = "updatePluginIsBulkContentColumn(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
+      log.debug2(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
+    }
+
     PreparedStatement statement = null;
 
     try {
       statement = prepareStatementBeforeReady(conn,
-	  ADD_SUBSCRIPTION_RANGE_INDEX_COLUMN);
+	  UPDATE_PLUGIN_IS_BULK_CONTENT_QUERY);
+      statement.setBoolean(1, isBulkContent);
+      statement.setString(2, pluginId);
 
       int count = executeUpdateBeforeReady(statement);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      String message = "Cannot update plugin bulk content indication";
+      log.error(message, sqle);
+      log.error("pluginId = " + pluginId);
+      log.error("isBulkContent = '" + isBulkContent + "'.");
+      log.error("SQL = '" + UPDATE_PLUGIN_IS_BULK_CONTENT_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates the creation time in the Archival Unit metadata table and the
+   * fetch time in the metadata item table.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void populateArchivalUnitTimestamps(Connection conn)
+      throws DbException {
+    final String DEBUG_HEADER = "populateArchivalUnitTimestamps(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean success = false;
+    boolean done = false;
+
+    try {
+      // Keep going while there are Archival Units that need processing.
+      while (!done) {
+	// Get pairs of plugin identifier and AU key in the database for some
+	// Archival Units that need processing.
+	statement =
+	    prepareStatementBeforeReady(conn, GET_PLUGIN_IDS_AU_KEYS_QUERY);
+	statement.setMaxRows(5);
+	resultSet = executeQueryBeforeReady(statement);
+
+	// If no more pairs are found, the process is known to be finished.
+	done = true;
+
+	// Loop through all the pairs of plugin identifier and AU key found.
+	while (resultSet.next()) {
+	  // A pair is found, so the process is not known to be finished.
+	  done = false;
+
+	  // Get the AU_MD primary key.
+	  Long auMdSeq = resultSet.getLong(AU_MD_SEQ_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+
+	  // Get the plugin identifier.
+	  String pluginId = resultSet.getString(PLUGIN_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	  // Get the AU key.
+	  String auKey = resultSet.getString(AU_KEY_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	  // Get the AU identifier.
+	  String auId = PluginManager.generateAuId(pluginId, auKey);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auId = " + auId);
+
+	  // Get the AU.
+	  ArchivalUnit au = getDaemon().getPluginManager().getAuFromId(auId);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
+
+	  long creationTime = 0;
+
+	  // Check whether it is possible to obtain the Archival Unit creation
+	  // time.
+	  if (au != null && AuUtil.getAuState(au) != null) {
+	    // Yes: Get it.
+	    creationTime = AuUtil.getAuCreationTime(au);
+	  }
+
+	  // Update it in the database.
+	  updateAuCreationTime(conn, auMdSeq, creationTime);
+
+	  DbManager.commitOrRollback(conn, log);
+
+	  // Populate the fetch time of all the book chapters/journal articles
+	  // of this Archival Unit.
+	  populateAuMdItemFetchTimes(conn, au, auMdSeq);
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+      }
+
+      success = true;
+    } catch (SQLException sqle) {
+      String message = "Cannot get Archival Unit keys and plugin identifiers";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_PLUGIN_IDS_AU_KEYS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+
+      if (success) {
+	// Yes: Record the current database version in the database.
+	recordDbVersion(conn, 10);
+
+	// Commit this partial update.
+	DbManager.commitOrRollback(conn, log);
+      }
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the creation time of an Archival Unit in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param auMdSeq
+   *          A Long with the primary key of the Archival Unit in the archival
+   *          unit metadata table.
+   * @param auCreationTime
+   *          A long with the Archival Unit creation time.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateAuCreationTime(Connection conn, Long auMdSeq,
+      long auCreationTime) throws DbException {
+    final String DEBUG_HEADER = "updateAuCreationTime(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+      log.debug2(DEBUG_HEADER + "auCreationTime = " + auCreationTime);
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+
+    try {
+      statement =
+	  prepareStatementBeforeReady(conn, UPDATE_AU_CREATION_TIME_QUERY);
+      statement.setLong(1, auCreationTime);
+      statement.setLong(2, auMdSeq);
+
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      String message = "Cannot update AU creation time";
+      log.error(message, sqle);
+      log.error("auMdSeq = " + auMdSeq);
+      log.error("auCreationTime = '" + auCreationTime + "'.");
+      log.error("SQL = '" + UPDATE_AU_CREATION_TIME_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Populates in the database the fetch times of all the metadata items for an
+   * Archival Unit.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param au
+   *          An ArchivalUnit with the Archival Unit.
+   * @param auMdSeq
+   *          A Long with the primary key of the Archival Unit in the archival
+   *          unit metadata table.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void populateAuMdItemFetchTimes(Connection conn, ArchivalUnit au,
+      Long auMdSeq) throws DbException {
+    final String DEBUG_HEADER = "populateAuMdItemFetchTimes(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "au = " + au);
+      log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+    ResultSet resultSet = null;
+    boolean done = false;
+
+    try {
+      // Keep going while there are metadata items that need processing.
+      while (!done) {
+	// Get from the database the next group of metadata items for the
+	// Archival Unit that need processing.
+	statement = prepareStatementBeforeReady(conn, GET_AU_MD_ITEMS_QUERY);
+	statement.setMaxRows(3);
+	statement.setLong(1, auMdSeq);
+	resultSet = executeQueryBeforeReady(statement);
+
+	// If no more metadata items are found, the process is known to be
+	// finished.
+	done = true;
+
+	// Loop through all the metadata items found.
+	while (resultSet.next()) {
+	  // A metadata item is found, so the process is not known to be
+	  // finished.
+	  done = false;
+
+	  // Get the metadata item primary key.
+	  Long mdItemSeq = resultSet.getLong(MD_ITEM_SEQ_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+
+	  long fetchTime = 0;
+
+	  // Check whether the AU exists.
+	  if (au != null) {
+	    // Yes: Get the earliest fetch time of the metadata items URLs.
+	    fetchTime = AuUtil.getAuUrlsEarliestFetchTime(au,
+		getMdItemUrls(conn, mdItemSeq).values());
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+	  }
+
+	  // Update it in the database.
+	  updateMdItemFetchTime(conn, mdItemSeq, fetchTime);
+	}
+
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
+
+	if (!done) {
+	  DbManager.commitOrRollback(conn, log);
+	}
+      }
+    } catch (SQLException sqle) {
+      String message = "Cannot get Archival Unit metadata items URLs";
+      log.error(message, sqle);
+      log.error("SQL = '" + GET_AU_MD_ITEMS_QUERY + "'.");
+      throw new DbException(message, sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(statement);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides the URLs of a metadata item.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @return a Map<String, String> with the URL/feature pairs.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  public Map<String, String> getMdItemUrls(Connection conn, Long mdItemSeq)
+      throws DbException {
+    final String DEBUG_HEADER = "getMdItemUrls(): ";
+
+    Map<String, String> featuredUrlMap = new HashMap<String, String>();
+
+    PreparedStatement findMdItemFeaturedUrl =
+	prepareStatement(conn, FIND_MD_ITEM_FEATURED_URL_QUERY);
+
+    ResultSet resultSet = null;
+    String feature;
+    String url;
+
+    try {
+      // Get the existing URLs.
+      findMdItemFeaturedUrl.setLong(1, mdItemSeq);
+      resultSet = executeQuery(findMdItemFeaturedUrl);
+
+      // Loop through all the URLs already linked to the metadata item.
+      while (resultSet.next()) {
+	feature = resultSet.getString(FEATURE_COLUMN);
+	url = resultSet.getString(URL_COLUMN);
+	log.debug3(DEBUG_HEADER + "Found feature = " + feature + ", URL = "
+	    + url);
+
+	featuredUrlMap.put(feature, url);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot get the URLs of a metadata item", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findMdItemFeaturedUrl);
+    }
+
+    // Add the URLs that are new.
+    return featuredUrlMap;
+  }
+
+  /**
+   * Updates the fetch time of a metadata item in the database.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param mdItemSeq
+   *          A Long with the metadata item identifier.
+   * @param fetchTime
+   *          A long with the metadata item fetch time.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private void updateMdItemFetchTime(Connection conn, Long mdItemSeq,
+      long fetchTime) throws DbException {
+    final String DEBUG_HEADER = "updateMdItemFetchTime(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
+      log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
+    }
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    PreparedStatement statement = null;
+
+    try {
+      statement =
+	  prepareStatementBeforeReady(conn, UPDATE_MD_ITEM_FETCH_TIME_QUERY);
+      statement.setLong(1, fetchTime);
+      statement.setLong(2, mdItemSeq);
+
+      int count = executeUpdateBeforeReady(statement);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (SQLException sqle) {
+      String message = "Cannot update metadata item fetch time";
+      log.error(message, sqle);
+      log.error("mdItemSeq = " + mdItemSeq);
+      log.error("fetchTime = '" + fetchTime + "'.");
+      log.error("SQL = '" + UPDATE_MD_ITEM_FETCH_TIME_QUERY + "'.");
+      throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseStatement(statement);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.10 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.11 2013-10-16 23:10:43 fergaloy-sf Exp $
  */
 
 /*
@@ -339,14 +339,13 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
 
       // Add the plugin.
       Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "pluginId",
-	  platformSeq);
+	  platformSeq, false);
 
       // Add the AU.
-      Long auSeq =
-	  metadataManager.findOrCreateAu(conn, pluginSeq, "auKey");
+      Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "auKey");
 
       // Add the AU metadata.
-      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L);
 
       Long parentSeq =
 	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
@@ -361,7 +360,8 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       String publicationDate = (year-2) + "-01-01";
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, publicationDate, null);
+	  					 auMdSeq, publicationDate, null,
+	  					 1234L);
 
       metadataManager.addMdItemName(conn, mdItemSeq, "htmlArticle",
 				    PRIMARY_NAME_TYPE);
@@ -370,7 +370,8 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
                                    HTML_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, publicationDate, null);
+                                            auMdSeq, publicationDate, null,
+                                            1234L);
 
       metadataManager.addMdItemName(conn, mdItemSeq, "pdfArticle",
 				    PRIMARY_NAME_TYPE);

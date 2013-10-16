@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.21 2013-03-14 06:38:49 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.22 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -442,6 +442,31 @@ public class TestAuUtil extends LockssTestCase {
     assertGetCharsetOrDefault("utf-8",
 			      PropUtil.fromArgs(CT_PROP,
 						"text/html;charset=\"utf-8\""));
+  }
+
+  public void testGetAuCreationTime() throws IOException {
+    long now = TimeBase.nowMs() - 10000;
+    setUpDiskPaths();
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    getMockLockssDaemon().getNodeManager(mau).startService();
+
+    long creationTime = AuUtil.getAuCreationTime(mau);
+    assertTrue(creationTime > now);
+  }
+
+  public void testGetUrlFetchTime() throws IOException {
+    String url = "http://foo/";
+    MockArchivalUnit mau = new MockArchivalUnit();
+
+    long fetchTime = AuUtil.getUrlFetchTime(mau, url);
+    assertEquals(0L, fetchTime);
+
+    setUpDiskPaths();
+    LocalMockArchivalUnit mau2 = new LocalMockArchivalUnit(mbp);
+    getMockLockssDaemon().getNodeManager(mau2).startService();
+
+    fetchTime = AuUtil.getUrlFetchTime(mau2, url);
+    assertEquals(0L, fetchTime);
   }
 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsRequestRecorder.java,v 1.9 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: TestCounterReportsRequestRecorder.java,v 1.10 2013-10-16 23:10:43 fergaloy-sf Exp $
  */
 
 /*
@@ -152,13 +152,13 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 
       // Add the plugin.
       Long pluginSeq = metadataManager.findOrCreatePlugin(conn, "fullPluginId",
-	  platformSeq);
+	  platformSeq, false);
 
       // Add the AU.
       Long auSeq = metadataManager.findOrCreateAu(conn, pluginSeq, "fullAuKey");
 
       // Add the AU metadata.
-      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L);
+      Long auMdSeq = metadataManager.addAuMd(conn, auSeq, 1, 0L, 123L);
 
       Long parentSeq =
 	  metadataManager.findPublicationMetadataItem(conn, publicationSeq);
@@ -169,17 +169,18 @@ public class TestCounterReportsRequestRecorder extends LockssTestCase {
 	  metadataManager.findMetadataItemType(conn, MD_ITEM_TYPE_BOOK);
 
       Long mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                                 auMdSeq, "2009-01-01", null);
+                                                 auMdSeq, "2009-01-01", null,
+                                                 1234L);
 
-	  metadataManager.addMdItemName(conn, mdItemSeq, "TOC", PRIMARY_NAME_TYPE);
+      metadataManager.addMdItemName(conn, mdItemSeq, "TOC", PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, "", IGNORABLE_URL);
 
       mdItemSeq = metadataManager.addMdItem(conn, parentSeq, mdItemTypeSeq,
-                                            auMdSeq, "2009-01-01", null);
+                                            auMdSeq, "2009-01-01", null, 1234L);
 
-	  metadataManager.addMdItemName(conn, mdItemSeq, "The Full Book",
-					PRIMARY_NAME_TYPE);
+      metadataManager.addMdItemName(conn, mdItemSeq, "The Full Book",
+	  			    PRIMARY_NAME_TYPE);
 
       metadataManager.addMdItemUrl(conn, mdItemSeq, ROLE_FULL_TEXT_HTML,
                                    RECORDABLE_URL);

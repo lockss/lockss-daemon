@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.21 2013-08-20 16:30:38 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.22 2013-10-16 23:10:44 fergaloy-sf Exp $
  */
 
 /*
@@ -239,7 +239,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "(" + PLUGIN_SEQ_COLUMN
       + "," + PLUGIN_ID_COLUMN
       + "," + PLATFORM_SEQ_COLUMN
-      + ") values (default,?,?)";
+      + "," + IS_BULK_CONTENT_COLUMN
+      + ") values (default,?,?,?)";
 
   // Query to find an Archival Unit by its plugin and key.
   private static final String FIND_AU_QUERY = "select "
@@ -269,7 +270,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + AU_SEQ_COLUMN
       + "," + MD_VERSION_COLUMN
       + "," + EXTRACT_TIME_COLUMN
-      + ") values (default,?,?,?)";
+      + "," + CREATION_TIME_COLUMN
+      + ") values (default,?,?,?,?)";
 
   // Query to add a metadata item.
   private static final String INSERT_MD_ITEM_QUERY = "insert into "
@@ -280,7 +282,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + "," + AU_MD_SEQ_COLUMN
       + "," + DATE_COLUMN
       + "," + COVERAGE_COLUMN
-      + ") values (default,?,?,?,?,?)";
+      + "," + FETCH_TIME_COLUMN
+      + ") values (default,?,?,?,?,?,?)";
 
   // Query to add a publication.
   private static final String INSERT_PUBLICATION_QUERY = "insert into "
@@ -636,12 +639,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static final String UPDATE_MD_ITEM_PARENT_SEQ_QUERY = "update "
       + MD_ITEM_TABLE
       + " set " + PARENT_SEQ_COLUMN + " = ?"
-      + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
-
-  // Query to find the featured URLs of a metadata item.
-  private static final String FIND_MD_ITEM_FEATURED_URL_QUERY = "select "
-      + FEATURE_COLUMN + "," + URL_COLUMN
-      + " from " + URL_TABLE
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
   // Query to find the authors of a metadata item.
@@ -1802,24 +1799,32 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the plugin identifier.
    * @param platformSeq
    *          A Long with the publishing platform identifier.
+   * @param isBulkContent
+   *          A boolean with the indication of bulk content for the plugin.
    * @return a Long with the identifier of the plugin.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public Long findOrCreatePlugin(Connection conn, String pluginId,
-      Long platformSeq) throws DbException {
+      Long platformSeq, boolean isBulkContent) throws DbException {
     final String DEBUG_HEADER = "findOrCreatePlugin(): ";
-    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
+      log.debug2(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug2(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
+    }
+
     Long pluginSeq = findPlugin(conn, pluginId);
     log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
 
     // Check whether it is a new plugin.
     if (pluginSeq == null) {
       // Yes: Add to the database the new plugin.
-      pluginSeq = addPlugin(conn, pluginId, platformSeq);
+      pluginSeq = addPlugin(conn, pluginId, platformSeq, isBulkContent);
       log.debug3(DEBUG_HEADER + "new pluginSeq = " + pluginSeq);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
     return pluginSeq;
   }
 
@@ -1870,13 +1875,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the plugin identifier.
    * @param platformSeq
    *          A Long with the publishing platform identifier.
+   * @param isBulkContent
+   *          A boolean with the indication of bulk content for the plugin.
    * @return a Long with the identifier of the plugin just added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  private Long addPlugin(Connection conn, String pluginId,
-      Long platformSeq) throws DbException {
+  private Long addPlugin(Connection conn, String pluginId, Long platformSeq,
+      boolean isBulkContent) throws DbException {
     final String DEBUG_HEADER = "addPlugin(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "pluginId = " + pluginId);
+      log.debug2(DEBUG_HEADER + "platformSeq = " + platformSeq);
+      log.debug2(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
+    }
+
     Long pluginSeq = null;
     ResultSet resultSet = null;
 
@@ -1892,6 +1905,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       } else {
 	insertPlugin.setNull(2, BIGINT);
       }
+
+      insertPlugin.setBoolean(3, isBulkContent);
 
       dbManager.executeUpdate(insertPlugin);
       resultSet = insertPlugin.getGeneratedKeys();
@@ -1910,6 +1925,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       DbManager.safeCloseStatement(insertPlugin);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
     return pluginSeq;
   }
 
@@ -2077,14 +2093,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          An int with the metadata version.
    * @param extractTime
    *          A long with the extraction time of the metadata.
+   * @param creationTime
+   *          A long with the creation time of the archival unit.
    * @return a Long with the identifier of the Archival Unit metadata just
    *         added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
   public Long addAuMd(Connection conn, Long auSeq, int version,
-      long extractTime) throws DbException {
+      long extractTime, long creationTime) throws DbException {
     final String DEBUG_HEADER = "addAuMd(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "auSeq = " + auSeq);
+      log.debug2(DEBUG_HEADER + "version = " + version);
+      log.debug2(DEBUG_HEADER + "extractTime = " + extractTime);
+      log.debug2(DEBUG_HEADER + "creationTime = " + creationTime);
+    }
+
     ResultSet resultSet = null;
     Long auMdSeq = null;
 
@@ -2096,6 +2121,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       insertAuMd.setLong(1, auSeq);
       insertAuMd.setShort(2, (short) version);
       insertAuMd.setLong(3, extractTime);
+      insertAuMd.setLong(4, creationTime);
       dbManager.executeUpdate(insertAuMd);
       resultSet = insertAuMd.getGeneratedKeys();
 
@@ -2105,14 +2131,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       auMdSeq = resultSet.getLong(1);
-      log.debug3(DEBUG_HEADER + "Added auMdSeq = " + auMdSeq);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added auMdSeq = " + auMdSeq);
     } catch (SQLException sqle) {
-      throw new DbException("Cannot add AU metadata", sqle);
+      String message = "Cannot add AU metadata";
+      log.error(message, sqle);
+      log.error("auSeq = " + auSeq);
+      log.error("version = " + version);
+      log.error("extractTime = " + extractTime);
+      log.error("creationTime = " + creationTime);
+      log.error("sql = " + INSERT_AU_MD_QUERY);
+      throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(insertAuMd);
     }
 
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
     return auMdSeq;
   }
 
@@ -2791,7 +2826,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     Long mdItemSeq =
-	addMdItem(conn, parentSeq, mdItemTypeSeq, null, null, null);
+	addMdItem(conn, parentSeq, mdItemTypeSeq, null, null, null, -1);
     log.debug2(DEBUG_HEADER + "mdItemSeq = " + mdItemSeq);
 
     if (mdItemSeq == null) {
@@ -3687,13 +3722,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *          A String with the publication date of the metadata item.
    * @param coverage
    *          A String with the metadata item coverage.
+   * @param fetchTime
+   *          A long with the fetch time of metadata item.
    * @return a Long with the identifier of the metadata item just added.
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  public Long addMdItem(Connection conn, Long parentSeq,
-      Long mdItemTypeSeq, Long auMdSeq, String date,
-      String coverage) throws DbException {
+  public Long addMdItem(Connection conn, Long parentSeq, Long mdItemTypeSeq,
+      Long auMdSeq, String date, String coverage, long fetchTime)
+	  throws DbException {
     final String DEBUG_HEADER = "addMdItem(): ";
     if (log.isDebug2()) {
       log.debug2(DEBUG_HEADER + "parentSeq = " + parentSeq);
@@ -3701,6 +3738,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.debug2(DEBUG_HEADER + "auMdSeq = " + auMdSeq);
       log.debug2(DEBUG_HEADER + "date = " + date);
       log.debug2(DEBUG_HEADER + "coverage = " + coverage);
+      log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
     }
 
     PreparedStatement insertMdItem = dbManager.prepareStatement(conn,
@@ -3724,6 +3762,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
       insertMdItem.setString(4, date);
       insertMdItem.setString(5, coverage);
+      insertMdItem.setLong(6, fetchTime);
       dbManager.executeUpdate(insertMdItem);
       resultSet = insertMdItem.getGeneratedKeys();
 
@@ -3733,16 +3772,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       }
 
       mdItemSeq = resultSet.getLong(1);
-      log.debug3(DEBUG_HEADER + "Added mdItemSeq = " + mdItemSeq);
+      if (log.isDebug3())
+	log.debug3(DEBUG_HEADER + "Added mdItemSeq = " + mdItemSeq);
     } catch (SQLException sqle) {
-      log.error("Cannot insert metadata item", sqle);
+      String message = "Cannot insert metadata item";
+      log.error(message, sqle);
       log.error("SQL = '" + INSERT_MD_ITEM_QUERY + "'.");
       log.error("parentSeq = " + parentSeq + ".");
       log.error("mdItemTypeSeq = " + mdItemTypeSeq + ".");
       log.error("auMdSeq = " + auMdSeq + ".");
       log.error("date = '" + date + "'.");
       log.error("coverage = '" + coverage + "'.");
-      throw new DbException("Cannot insert metadata item", sqle);
+      log.error("fetchTime = " + fetchTime);
+      throw new DbException(message, sqle);
     } finally {
       DbManager.safeCloseResultSet(resultSet);
       DbManager.safeCloseStatement(insertMdItem);
@@ -5634,7 +5676,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // Initialize the collection of URLs to be added.
     Map<String, String> newUrls = new HashMap<String, String>(featuredUrlMap);
 
-    Map<String, String> oldUrls = getMdItemUrls(conn, mdItemSeq);
+    Map<String, String> oldUrls = dbManager.getMdItemUrls(conn, mdItemSeq);
     String url;
 
     // Loop through all the URLs already linked to the metadata item.
@@ -5654,55 +5696,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Add the URLs that are new.
     addMdItemUrls(conn, mdItemSeq, null, newUrls);
-  }
-
-  /**
-   * Provides the URLs of a metadata item.
-   * 
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @param mdItemSeq
-   *          A Long with the metadata item identifier.
-   * @return a Map<String, String> with the URL/feature pairs.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  Map<String, String> getMdItemUrls(Connection conn, Long mdItemSeq)
-	  throws DbException {
-    final String DEBUG_HEADER = "getMdItemUrls(): ";
-
-    Map<String, String> featuredUrlMap = new HashMap<String, String>();
-
-    PreparedStatement findMdItemFeaturedUrl =
-	dbManager.prepareStatement(conn, FIND_MD_ITEM_FEATURED_URL_QUERY);
-
-    ResultSet resultSet = null;
-    String feature;
-    String url;
-
-    try {
-      // Get the existing URLs.
-      findMdItemFeaturedUrl.setLong(1, mdItemSeq);
-      resultSet = dbManager.executeQuery(findMdItemFeaturedUrl);
-
-      // Loop through all the URLs already linked to the metadata item.
-      while (resultSet.next()) {
-	feature = resultSet.getString(FEATURE_COLUMN);
-	url = resultSet.getString(URL_COLUMN);
-	log.debug3(DEBUG_HEADER + "Found feature = " + feature + ", URL = "
-	    + url);
-
-	featuredUrlMap.put(feature, url);
-      }
-    } catch (SQLException sqle) {
-      throw new DbException("Cannot get the URLs of a metadata item", sqle);
-    } finally {
-      DbManager.safeCloseResultSet(resultSet);
-      DbManager.safeCloseStatement(findMdItemFeaturedUrl);
-    }
-
-    // Add the URLs that are new.
-    return featuredUrlMap;
   }
 
   /**
@@ -6137,7 +6130,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     log.debug3(DEBUG_HEADER + "sourceMdItemSeq = " + sourceMdItemSeq);
     log.debug3(DEBUG_HEADER + "targetMdItemSeq = " + targetMdItemSeq);
 
-    Map<String, String> sourceMdItemUrls = getMdItemUrls(conn, sourceMdItemSeq);
+    Map<String, String> sourceMdItemUrls =
+	dbManager.getMdItemUrls(conn, sourceMdItemSeq);
 
     addNewMdItemUrls(conn, targetMdItemSeq, sourceMdItemUrls);
 
