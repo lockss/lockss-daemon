@@ -33,7 +33,9 @@ do
   if ! grep $file $tpath/glnfilter > /dev/null
   then
     ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin ~ "OJS" or plugin ~ "ProjectMuse"' -i ../../tdb/prod/$file >> $tpath/glntest
-    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "OJS" or plugin !~ "ProjectMuse"' -i ../../tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
+# Add in AUs in manifest status in files that are in both gln & clockss, with a * to mark them
+#    ./tdbout -M -t publisher,plugin,publisher:info[tester],status,year -Q 'plugin !~ "OJS" or plugin !~ "ProjectMuse"' -i ../../tdb/prod/$file | sed 's/^/*/' >> $tpath/glntest
+
 #    ./tdbout -M -t auid,publisher,plugin,publisher:info[tester],status -i ../../tdb/prod/$file > $tpath/glnM
 #    cat $tpath/glnM | sed 's/\t.*$//' | sed -e 's/^[^&]*&//' | sort | uniq > $tpath/glnauids
 #    ./tdbout -M -t auid | sed -e 's/^[^&]*&//' -i ../../tdb/clockssingest/$file | sort | uniq > $tpath/clockssauids
