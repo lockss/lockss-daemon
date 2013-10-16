@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.40 2013-10-14 17:22:44 fergaloy-sf Exp $
+ * $Id: AuUtil.java,v 1.41 2013-10-16 23:17:06 fergaloy-sf Exp $
  */
 
 /*
@@ -613,18 +613,24 @@ public class AuUtil {
     final String DEBUG_HEADER = "getAuCreationTime(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
+    // Check whether the Archival Unit does not exist.
+    if (au == null) {
+      // Yes: Report the problem.
+      throw new NullPointerException("Archival Unit is null");
+    }
+
     long auCreationTime = 0;
 
-    // Check that the Archival Unit exists.
-    if (au != null) {
-      // Yes: Get the Archival Unit state.
-      AuState auState = AuUtil.getAuState(au);
+    // Get the Archival Unit state.
+    AuState auState = AuUtil.getAuState(au);
 
-      // Check that the Archival Unit state exists.
-      if (auState != null) {
-	// Yes: Get the Archival Unit creation time.
-	auCreationTime = auState.getAuCreationTime();
-      }
+    // Check that the Archival Unit state exists.
+    if (auState != null) {
+      // Yes: Get the Archival Unit creation time.
+      auCreationTime = auState.getAuCreationTime();
+    } else {
+      // No: Report the problem.
+      throw new IllegalArgumentException("Archival Unit state is null");
     }
 
     if (log.isDebug2())
@@ -645,6 +651,18 @@ public class AuUtil {
   public static long getAuUrlsEarliestFetchTime(ArchivalUnit au,
       Collection<String> urls) {
     final String DEBUG_HEADER = "getAuUrlsEarliestFetchTime(): ";
+
+    // Check whether the Archival Unit does not exist.
+    if (au == null) {
+      // Yes: Report the problem.
+      throw new NullPointerException("Archival Unit is null");
+    }
+
+    // Check whether the Archival Unit does not exist.
+    if (urls == null) {
+      // Yes: Report the problem.
+      throw new NullPointerException("No URLs");
+    }
 
     long fetchTime = 0L;
 
@@ -685,92 +703,96 @@ public class AuUtil {
       log.debug2(DEBUG_HEADER + "url = " + url);
     }
 
+    CachedUrl cachedUrl = null;
     long fetchTime = 0;
 
     // Get the cached URL.
-    CachedUrl cachedUrl = au.makeCachedUrl(url);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
-
-    // Get the first version of the cached URL.
     try {
+      cachedUrl = au.makeCachedUrl(url);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
+
+      // Get the first version of the cached URL.
       cachedUrl = cachedUrl.getCuVersion(1);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
-    } catch (Exception e) {
-      log.info("Exception caught ", e);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
-      return fetchTime;
-    }
 
-    // Get its properties.
-    CIProperties cuProperties = cachedUrl.getProperties();
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "cuProperties = " + cuProperties);
+      // Get its properties.
+      CIProperties cuProperties = cachedUrl.getProperties();
+      if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "cuProperties = " + cuProperties);
 
-    // Try to get the best fetch time.
-    String origFetchTimeAsString =
-	cuProperties.getProperty(CuResourceHandler.ORIG_HEADER_PREFIX
-	    + CachedUrl.PROPERTY_FETCH_TIME);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "origFetchTimeAsString = "
+      // Try to get the best fetch time.
+      String origFetchTimeAsString =
+	  cuProperties.getProperty(CuResourceHandler.ORIG_HEADER_PREFIX
+	      + CachedUrl.PROPERTY_FETCH_TIME);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "origFetchTimeAsString = "
 	  + origFetchTimeAsString);
 
-    // Check whether a fetch time was obtained.
-    if (origFetchTimeAsString != null) {
-      try {
-	// Yes: Try to parse it as a number.
-	fetchTime = Long.parseLong(origFetchTimeAsString);
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
-      } catch (NumberFormatException nfe) {
-	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "origFetchTimeAsString is not a number");
-      }
-    }
-
-    // Check whether a fetch time was not obtained.
-    if (fetchTime == 0) {
-      // Yes: Try to use the fetch time property.
-      String fetchTimeAsString =
-	  cuProperties.getProperty(CachedUrl.PROPERTY_FETCH_TIME);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "fetchTimeAsString = " + fetchTimeAsString);
-
       // Check whether a fetch time was obtained.
-      if (fetchTimeAsString != null) {
+      if (origFetchTimeAsString != null) {
 	try {
 	  // Yes: Try to parse it as a number.
-	  fetchTime = Long.parseLong(fetchTimeAsString);
+	  fetchTime = Long.parseLong(origFetchTimeAsString);
 	  if (log.isDebug3())
 	    log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
 	} catch (NumberFormatException nfe) {
 	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "fetchTimeAsString is not a number");
+	    log.debug3(DEBUG_HEADER + "origFetchTimeAsString is not a number");
 	}
       }
 
-      // Try to use the 'Date' property.
-      String dateAsString = cuProperties.getProperty("Date");
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "dateAsString = " + dateAsString);
+      // Check whether a fetch time was not obtained.
+      if (fetchTime == 0) {
+	// Yes: Try to use the fetch time property.
+	String fetchTimeAsString =
+	    cuProperties.getProperty(CachedUrl.PROPERTY_FETCH_TIME);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "fetchTimeAsString = " + fetchTimeAsString);
 
-      // Check whether a fetch time was obtained.
-      if (dateAsString != null) {
-	try {
-	  // Yes: Try to parse it as a number.
-	  long date = getCuPropertyDateParser().parse(dateAsString).getTime();
-	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
-
-	  // Use it if it's the only time we have or it's lower than the other
-	  // one.
-	  if (fetchTime == 0 || date < fetchTime) {
-	    fetchTime = date;
+	// Check whether a fetch time was obtained.
+	if (fetchTimeAsString != null) {
+	  try {
+	    // Yes: Try to parse it as a number.
+	    fetchTime = Long.parseLong(fetchTimeAsString);
 	    if (log.isDebug3())
 	      log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+	  } catch (NumberFormatException nfe) {
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "fetchTimeAsString is not a number");
 	  }
-	} catch (ParseException nfe) {
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "dateAsString is not a number");
+	}
+
+	// Try to use the 'Date' property.
+	String dateAsString = cuProperties.getProperty("Date");
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "dateAsString = " + dateAsString);
+
+	// Check whether a fetch time was obtained.
+	if (dateAsString != null) {
+	  try {
+	    // Yes: Try to parse it as a number.
+	    long date = parseStringDate(dateAsString).getTime();
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
+
+	    // Use it if it's the only time we have or it's lower than the other
+	    // one.
+	    if (fetchTime == 0 || date < fetchTime) {
+	      fetchTime = date;
+	      if (log.isDebug3())
+		log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+	    }
+	  } catch (ParseException nfe) {
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "dateAsString is not a number");
+	  }
 	}
       }
+    } catch (Exception e) {
+      log.info("Exception caught ", e);
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
+      return fetchTime;
+    } finally {
+      // Release the cached URL.
+      safeRelease(cachedUrl);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "fetchTime = " + fetchTime);
@@ -778,11 +800,18 @@ public class AuUtil {
   }
 
   /**
-   * Provides the CU property 'Date' formatted date parser in a thread-safe way.
+   * Parses a text date in a thread-safe way.
    * 
-   * @return a DateFormat with the formatted date parser.
+   * @param dateAsString
+   *          A String with the date to be parsed.
+   * @return a Date with the parsed date.
+   * @throws ParseException
+   *           if there are problems parsing the date.
    */
-  private static synchronized DateFormat getCuPropertyDateParser() {
-    return CU_PROPERTY_DATE_PARSER;
+  private static Date parseStringDate(String dateAsString)
+      throws ParseException {
+    synchronized (CU_PROPERTY_DATE_PARSER) {
+      return CU_PROPERTY_DATE_PARSER.parse(dateAsString);
+    }
   }
 }
