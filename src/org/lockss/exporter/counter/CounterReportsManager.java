@@ -1,5 +1,5 @@
 /*
- * $Id: CounterReportsManager.java,v 1.14 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: CounterReportsManager.java,v 1.15 2013-10-16 23:14:00 fergaloy-sf Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssDaemon;
@@ -424,9 +423,8 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     }
 
     // Specify the configured base directory for the reporting files.
-    reportDir =
-	new File(config.get(PARAM_REPORT_BASEDIR_PATH,
-			    getDefaultTempDbRootDirectory()));
+    reportDir = new File(config.get(PARAM_REPORT_BASEDIR_PATH,
+				    getDefaultTempRootDirectory()));
     log.debug2(DEBUG_HEADER + "reportDir = '" + reportDir.getAbsolutePath()
 	+ "'.");
 
@@ -455,32 +453,6 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
 
     log.debug2(DEBUG_HEADER + "Done.");
     return true;
-  }
-
-  /**
-   * Provides the default temporary root directory used to create the report
-   * files.
-   * 
-   * @return a String with the root directory
-   */
-  private String getDefaultTempDbRootDirectory() {
-    final String DEBUG_HEADER = "getDefaultTempDbRootDirectory(): ";
-    String defaultTempDbRootDir = null;
-    Configuration config = ConfigManager.getCurrentConfig();
-
-    @SuppressWarnings("unchecked")
-    List<String> dSpaceList =
-	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-
-    if (dSpaceList != null && !dSpaceList.isEmpty()) {
-      defaultTempDbRootDir = dSpaceList.get(0);
-    } else {
-      defaultTempDbRootDir = config.get(ConfigManager.PARAM_TMPDIR);
-    }
-
-    log.debug2(DEBUG_HEADER + "defaultTempDbRootDir = '" + defaultTempDbRootDir
-	+ "'.");
-    return defaultTempDbRootDir;
   }
 
   /**

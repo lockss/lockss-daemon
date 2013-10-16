@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.122 2013-09-18 05:37:25 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.123 2013-10-16 23:14:01 fergaloy-sf Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.db.DbManager;
+import org.lockss.exporter.FetchTimeExportManager;
 import org.lockss.exporter.counter.CounterReportsManager;
 import org.lockss.account.*;
 import org.lockss.hasher.*;
@@ -147,6 +148,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String DB_MANAGER = "DbManager";
   public static final String COUNTER_REPORTS_MANAGER = "CounterReportsManager";
   public static final String SUBSCRIPTION_MANAGER = "SubscriptionManager";
+  public static final String FETCH_TIME_EXPORT_MANAGER =
+      "FetchTimeExportManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -188,6 +191,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // Start the subscription manager.
     new ManagerDesc(SUBSCRIPTION_MANAGER,
 	"org.lockss.subscription.SubscriptionManager"),
+    // Start the COUNTER reports manager.
+    new ManagerDesc(FETCH_TIME_EXPORT_MANAGER,
+	"org.lockss.exporter.FetchTimeExportManager"),
     // NOTE: Any managers that are needed to decide whether a servlet is to be
     // enabled or not (through ServletDescr.isEnabled()) need to appear before
     // the AdminServletManager on the next line.
@@ -580,6 +586,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public SubscriptionManager getSubscriptionManager() {
     return (SubscriptionManager) getManager(SUBSCRIPTION_MANAGER);
+  }
+
+  /**
+   * Provides the fetch time export manager.
+   * 
+   * @return a FetchTimeExportManager with the fetch time export manager.
+   * @throws IllegalArgumentException
+   *           if the manager is not available.
+   */
+  public FetchTimeExportManager getFetchTimeExportManager() {
+    return (FetchTimeExportManager) getManager(FETCH_TIME_EXPORT_MANAGER);
   }
 
   /**

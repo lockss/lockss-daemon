@@ -1,10 +1,10 @@
 /*
- * $Id: BaseLockssManager.java,v 1.25 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: BaseLockssManager.java,v 1.26 2013-10-16 23:14:01 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.app;
 
+import java.util.List;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
@@ -169,5 +170,30 @@ public abstract class BaseLockssManager implements LockssManager {
 				     Configuration.Differences changedKeys) {
       mgr.setConfig(newConfig, prevConfig, changedKeys);
     }
+  }
+
+  /**
+   * Provides the default root directory for temporary files.
+   * 
+   * @return a String with the root directory for temporary files.
+   */
+  protected String getDefaultTempRootDirectory() {
+    final String DEBUG_HEADER = "getDefaultTempRootDirectory(): ";
+    String defaultTempRootDir = null;
+    Configuration config = ConfigManager.getCurrentConfig();
+
+    @SuppressWarnings("unchecked")
+    List<String> dSpaceList =
+	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+
+    if (dSpaceList != null && !dSpaceList.isEmpty()) {
+      defaultTempRootDir = dSpaceList.get(0);
+    } else {
+      defaultTempRootDir = config.get(ConfigManager.PARAM_TMPDIR);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "defaultTempDbRootDir = '"
+	+ defaultTempRootDir + "'.");
+    return defaultTempRootDir;
   }
 }
