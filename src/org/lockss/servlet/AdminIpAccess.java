@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.8 2008-06-09 05:42:03 tlipkis Exp $
+ * $Id: AdminIpAccess.java,v 1.9 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class AdminIpAccess extends IpAccessControl {
   }
 
   protected String getConfigFileComment() {
-    return "UI IP Access Control";
+    return "Admin UI Access Control";
   }
 
 }

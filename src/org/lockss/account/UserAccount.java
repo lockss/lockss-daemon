@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.14 2013-03-13 08:43:44 tlipkis Exp $
+ * $Id: UserAccount.java,v 1.15 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   protected transient Set roleSet = null;
   protected transient Credential credential = null;
   protected transient boolean isChanged = false;
+  protected transient StringBuilder eventsToReport;
 
   public UserAccount(String name) {
     this.userName = name;
@@ -143,8 +144,12 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   /** Set the email address */
   public void setEmail(String val) {
-    setChanged(!StringUtil.equalStrings(email, val));
-    email = val;
+    if (!StringUtil.equalStrings(email, val)) {
+      addAuditableEvent("Changed email from: " + none(email) +
+			" to: " + none(val)); 
+      setChanged(true);
+      email = val;
+    }
   }
 
   /** Return the email address */
@@ -220,9 +225,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   public void setRoles(String val, boolean isInteractive) {
     if (log.isDebug2()) log.debug2(userName + ".setRoles(" + val + ")");
     if (!StringUtil.equalStrings(roles, val)) {
-      if (isInteractive) {
-	auditableEvent("changed roles from " + none(roles) + " to " + none(val));
-      }
+      addAuditableEvent("Changed roles from: " + none(roles) +
+			" to: " + none(val));
       setChanged(true);
       roles = val;
       roleSet = null;
@@ -230,15 +234,19 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   }
 
   private String none(String s) {
-    return StringUtil.isNullString(s) ? "none" : s;
+    return StringUtil.isNullString(s) ? "(none)" : s;
   }
 
   /** Set the user's roles */
   public void setRoles(Set roleSet) {
     if (log.isDebug2()) log.debug2(userName + ".setRoles(" + roleSet + ")");
-    setChanged(!roleSet.equals(getRoleSet()));
-    this.roles = StringUtil.separatedString(roleSet, ",");
-    this.roleSet = roleSet;
+    if (!roleSet.equals(getRoleSet())) {
+      addAuditableEvent("Changed roles from: " + getRoleSet() +
+			" to: " + roleSet);
+      setChanged(true);
+      this.roles = StringUtil.separatedString(roleSet, ",");
+      this.roleSet = roleSet;
+    }
   }
 
   /** Return the user's roles as a string */
@@ -313,7 +321,8 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     setChanged(true);
     clearCaches();
     if (isChange) {
-      auditableEvent("changed password" + (isDisabled ? " and reenabled" : ""));
+      addAuditableEvent("Changed password" +
+			(isReenable ? " and reenabled" : ""));
     }
   }
 
@@ -364,6 +373,49 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 	log.error("loggedOut() but not active: " + this);
       }
     }
+  }
+
+  public synchronized void addAuditableEvent(String text) {
+    if (eventsToReport == null) {
+      eventsToReport = new StringBuilder();
+    }
+    eventsToReport.append(text);
+    eventsToReport.append("\n");
+  }
+
+  public void reportEventBy(UserAccount editor, String verbed) {
+    reportEventBy(editor, verbed, null);
+  }
+
+  public void reportEventBy(UserAccount editor, String verbed, String body) {
+    StringBuilder sb = new StringBuilder();
+    sb.append("was ");
+    sb.append(verbed);
+    sb.append(" by user ");
+    sb.append(editor.getName());
+    if (!StringUtil.isNullString(body)) {
+      sb.append(":\n\n");
+      sb.append(body);
+    }
+    auditableEvent(sb.toString());
+  }
+
+
+  public void reportEditEventBy(UserAccount editor) {
+    if (eventsToReport != null) {
+      reportEventBy(editor, "edited",
+		    "User: " + getName() + "\n" +
+		    eventsToReport.toString());
+      eventsToReport = null;
+    }
+  }
+
+  public void reportCreateEventBy(UserAccount editor) {
+      reportEventBy(editor, "created",
+		    "User: " + getName() + "\n" +
+		    "Email: " + none(getEmail()) + "\n" +
+		    "Roles: " + none(getRoles()) + "\n");
+    eventsToReport = null;
   }
 
   public void auditableEvent(String text) {
@@ -589,7 +641,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   public void disable(String reason) {
     setChanged(!isDisabled || !StringUtil.equalStrings(disableReason, reason));
     log.debug("Disabled account " + getName() + ": " + reason);
-    auditableEvent("account disabled because: " + reason);
+    if (!AccountManager.DELETED_REASON.equals(reason)) {
+      auditableEvent("account disabled because: " + reason);
+    }
     isDisabled = true;
     disableReason = reason;
   }

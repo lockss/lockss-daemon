@@ -1,5 +1,5 @@
 /*
- * $Id: EditAccountBase.java,v 1.5 2012-03-20 17:39:31 tlipkis Exp $
+ * $Id: EditAccountBase.java,v 1.6 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public abstract class EditAccountBase extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     configMgr = getLockssDaemon().getConfigManager();
-    acctMgr =  getLockssDaemon().getAccountManager();
+    acctMgr = getLockssDaemon().getAccountManager();
   }
 
   protected void lockssHandleRequest() throws IOException {

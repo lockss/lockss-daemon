@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.14 2012-08-21 08:34:11 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.15 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -308,7 +308,6 @@ public class AccountManager
     internalAddUser(acct);
     if (acct.isEditable()) {
       storeUser(acct);
-      acct.auditableEvent("account created");
     }
     return acct;
   }
@@ -385,6 +384,8 @@ public class AccountManager
     return deleteUser(acct);
   }
 
+  static String DELETED_REASON = "Deleted";
+
   /** Delete the user */
   public synchronized boolean deleteUser(UserAccount acct) {
     boolean res = true;
@@ -397,11 +398,9 @@ public class AccountManager
       res = !file.exists();
     }
     if (res) {
-      acct.disable("Deleted");		// paranoia, in case someone holds
+      acct.disable(DELETED_REASON);	// paranoia, in case someone holds
 					// onto object.
       accountMap.remove(acct.getName());
-    } else {
-      acct.auditableEvent("failed attempt to delete");
     }
     return res;
   }
@@ -601,6 +600,37 @@ public class AccountManager
       }
     }
     return true;
+  }
+
+  // Entry points for externally-initiated actions (by UI or other external
+  // agent) which should generate audit events.  The first arg is always
+  // the UserAccount of the user performing the action.
+
+  /** Add the user account, if doesn't conflict with an existing user and
+   * it has a password. */
+  public UserAccount userAddUser(UserAccount actor, UserAccount acct)
+      throws NotAddedException, NotStoredException {
+    UserAccount res = addUser(acct);
+    acct.reportCreateEventBy(actor);
+    return res;
+  }
+
+  /** Store the current state of the user account on disk */
+  public void userStoreUser(UserAccount actor, UserAccount acct)
+      throws NotStoredException {
+    storeUser(acct);
+    acct.reportEditEventBy(actor);
+  }
+
+  /** Delete the user */
+  public  boolean userDeleteUser(UserAccount actor, UserAccount acct) {
+    boolean res = deleteUser(acct);
+    if (res) {
+      acct.reportEventBy(actor, "deleted");
+    } else {
+      acct.reportEventBy(actor, "failed to delete");
+    }
+    return res;
   }
 
   public void auditableEvent(String msg) {

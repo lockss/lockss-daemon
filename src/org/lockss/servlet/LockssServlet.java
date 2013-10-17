@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.135 2013-05-27 05:39:06 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.136 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ import org.lockss.config.*;
 import org.lockss.account.*;
 import org.lockss.protocol.*;
 import org.lockss.jetty.*;
+import org.lockss.alert.*;
 import org.lockss.util.*;
 
 import org.xnap.commons.i18n.I18n;
@@ -129,6 +130,7 @@ public abstract class LockssServlet extends HttpServlet
   private LockssApp theApp = null;
   private ServletManager servletMgr;
   private AccountManager acctMgr;
+  protected AlertManager alertMgr;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -162,6 +164,7 @@ public abstract class LockssServlet extends HttpServlet
       (ServletManager)context.getAttribute(ServletManager.CONTEXT_ATTR_SERVLET_MGR);
     if (theApp instanceof LockssDaemon) {
       acctMgr = getLockssDaemon().getAccountManager();
+      alertMgr = getLockssDaemon().getAlertManager();
     }
   }
 

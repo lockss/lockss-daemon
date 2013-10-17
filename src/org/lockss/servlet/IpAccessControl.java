@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.45 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: IpAccessControl.java,v 1.46 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -209,6 +209,7 @@ public abstract class IpAccessControl extends LockssServlet {
     endPage(page);
   }
 
+
   protected void additionalFormLayout(Composite composite) {
     // nothing by default
   }
@@ -279,15 +280,15 @@ public abstract class IpAccessControl extends LockssServlet {
    * Save the include and exclude lists to the access control file
    */
   protected void saveChanges() throws IOException {
+    List<String> origIncl = getListFromParam(getIncludeParam());
+    List<String> origExcl = getListFromParam(getExcludeParam());
+
     Properties props = new Properties();
     addConfigProps(props);
     configMgr.writeCacheConfigFile(props,
 				   getConfigFileName(),
 				   getConfigFileComment());
-    UserAccount acct = getUserAccount();
-    if (acct != null) {
-      acct.auditableEvent("changed " + getConfigFileName() + " to: " + props);
-    }
+    raiseAlert(origIncl, origExcl, formIncl, formExcl);
   }
 
   protected void addConfigProps(Properties props) {
@@ -303,6 +304,35 @@ public abstract class IpAccessControl extends LockssServlet {
       CurrentConfig.getParam(ConfigManager.PARAM_PLATFORM_ACCESS_SUBNET);
     if (!StringUtil.isNullString(plat)) {
       props.put(prefix + SUFFIX_PLATFORM_ACCESS, plat);
+    }
+  }
+
+  protected String diffStr(List<String> lst) {
+    return StringUtil.terminatedSeparatedString(lst, "\n", "\n");
+  }
+
+  protected void raiseAlert(List<String> origIncl, List<String> origExcl,
+			    List<String> newIncl, List<String> newExcl) {
+    UserAccount acct = getUserAccount();
+    if (acct != null) {
+      StringBuilder sb = new StringBuilder();
+      sb.append("changed ");
+      sb.append(getConfigFileComment());
+      sb.append(":\n\n");
+
+      String di = DiffUtil.diff_configText(diffStr(origIncl), diffStr(newIncl));
+      String de = DiffUtil.diff_configText(diffStr(origExcl), diffStr(newExcl));
+
+      if (!StringUtil.isNullString(di)) {
+	sb.append("Include differences:\n\n");
+	sb.append(di);
+	sb.append("\n");
+      }
+      if (!StringUtil.isNullString(de)) {
+	sb.append("Exclude differences:\n\n");
+	sb.append(de);
+      }
+      acct.auditableEvent(sb.toString());
     }
   }
 

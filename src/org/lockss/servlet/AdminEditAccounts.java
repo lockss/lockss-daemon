@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.9 2012-07-02 16:26:04 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.10 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class AdminEditAccounts extends EditAccountBase {
       displayAdminSummary();
       return;
     }
-    if (acctMgr.deleteUser(acct)) {
+    if (acctMgr.userDeleteUser(getUserAccount(), acct)) {
       statusMsg = name + " deleted";
       displayAdminSummary();
       return;
@@ -175,7 +175,7 @@ public class AdminEditAccounts extends EditAccountBase {
     }
     if (action.equals(ACTION_ADMIN_ADD)) {
       try {
-	acctMgr.addUser(acct);
+	acctMgr.userAddUser(getUserAccount(), acct);
       } catch (AccountManager.UserExistsException e) {
 	errMsg = "Error: " + e.getMessage();
 	displayAdminSummary();
@@ -191,7 +191,7 @@ public class AdminEditAccounts extends EditAccountBase {
       }
     } else if (action.equals(ACTION_ADMIN_UPDATE)) {
       try {
-	acctMgr.storeUser(acct);
+	acctMgr.userStoreUser(getUserAccount(), acct);
       } catch (AccountManager.NotStoredException e) {
 	errMsg = "Update failed: " + e.getMessage();
 	displayAdminSummary();
@@ -302,6 +302,7 @@ public class AdminEditAccounts extends EditAccountBase {
     layoutErrorBlock(page);
 
     Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
+    frm.attribute("autocomplete", "OFF");
     Table tbl = new Table(0, "align=center cellspacing=4 border=1 cellpadding=2");
 //     tbl.newRow();
 //     tbl.newCell("align=center");
@@ -477,6 +478,7 @@ public class AdminEditAccounts extends EditAccountBase {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, sb.toString());
     Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
+    frm.attribute("autocomplete", "OFF");
     Table tbl = new Table(0, "align=center cellspacing=4 border=1 cellpadding=2");
     tbl.newRow();
     tbl.newCell();

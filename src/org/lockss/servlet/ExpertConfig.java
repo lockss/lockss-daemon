@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.8 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: ExpertConfig.java,v 1.9 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -107,11 +107,15 @@ public class ExpertConfig extends LockssServlet {
     }
   }
 
-  protected void readCurrent() throws IOException {
+  protected String readExpertConfigFile()
+      throws FileNotFoundException, IOException {
+    File efile = configMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_EXPERT);
+    return StringUtil.fromFile(efile);
+  }
+
+  protected void readCurrent() {
     try {
-      File efile =
-	configMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_EXPERT);
-      etext = StringUtil.fromFile(efile);
+      etext = readExpertConfigFile();
     } catch (FileNotFoundException e) {
       etext = null;
     } catch (IOException e) {
@@ -243,6 +247,13 @@ public class ExpertConfig extends LockssServlet {
 	}
 	return false;
       }
+      String origText;
+      try {
+	origText = readExpertConfigFile();
+      } catch (IOException e) {
+	log.error("Error reading expert config file", e);
+	origText = null;
+      }
       log.info("saving expert config");
       configMgr.writeCacheConfigFile(etext,
 				     ConfigManager.CONFIG_FILE_EXPERT,
@@ -250,10 +261,7 @@ public class ExpertConfig extends LockssServlet {
       statusMsg = "Update successful";
       displayConfig =
 	configMgr.readCacheConfigFile(ConfigManager.CONFIG_FILE_EXPERT);
-      if (acct != null) {
-	acct.auditableEvent("used Expert Config successfully: " + etext);
-      }
-
+      raiseAlert(acct, origText, etext, displayConfig);
       return true;
     } catch (IOException e) {
       errMsg = "Not saved: " + e.toString();
@@ -262,6 +270,32 @@ public class ExpertConfig extends LockssServlet {
       if (tmpfile != null) {
 	tmpfile.delete();
       }
+    }
+  }
+
+  protected void raiseAlert(UserAccount acct,
+			    String orig, String cur,
+			    Configuration newConfig) {
+    if (acct != null) {
+      StringBuilder sb = new StringBuilder();
+      sb.append("used Expert Config.\n\n");
+      if (!StringUtil.isNullString(orig)) {
+	sb.append("Differences:\n\n");
+	sb.append(DiffUtil.diff_configText(orig, cur));
+      } else {
+	sb.append("New text:\n\n");
+	sb.append(cur);
+      }
+      sb.append("\n\nCurrent Expert Config:\n\n");
+      List<String> keys = new ArrayList<String>(newConfig.keySet());
+      Collections.sort(keys);
+      for (String key : keys) {
+	sb.append(key);
+	sb.append(" = ");
+	sb.append(newConfig.get(key));
+	sb.append("\n");
+      }
+      acct.auditableEvent(sb.toString());
     }
   }
 }

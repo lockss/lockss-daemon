@@ -1,5 +1,5 @@
 /*
- * $Id: UserEditAccount.java,v 1.4 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: UserEditAccount.java,v 1.5 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class UserEditAccount extends EditAccountBase {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "Editing User " + name);
     Form frm = ServletUtil.newForm(srvURL(myServletDescr()));
+    frm.attribute("autocomplete", "OFF");
     Table tbl =
       new Table(0, "align=center cellspacing=4 border=1 cellpadding=2");
     tbl.newRow();
@@ -155,7 +156,8 @@ public class UserEditAccount extends EditAccountBase {
       acct.setEmail(email);
     }
       try {
-	acctMgr.storeUser(acct);
+	acctMgr.userStoreUser(acct, acct);
+	acct.reportEditEventBy(getUserAccount());
       } catch (AccountManager.NotStoredException e) {
 	errMsg = "Error: " + e.getMessage();
 	displayUserEdit();

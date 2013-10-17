@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.28 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.29 2013-10-17 07:48:18 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ProxyIpAccess extends IpAccessControl {
   }
 
   protected String getConfigFileComment() {
-    return "Proxy IP Access Control";
+    return "Content Access Control";
   }
 
   // XXX What was the purpose of this?
