@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.78 2013-05-30 14:01:35 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.79 2013-10-17 07:50:11 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ import static org.lockss.plugin.PluginManager.CuContentReq;
 import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
 import org.lockss.rewriter.*;
+import org.lockss.alert.*;
 import org.mortbay.util.*;
 
 /** ServeContent servlet displays cached content with links
@@ -112,6 +113,11 @@ public class ServeContent extends LockssServlet {
    * <tt>info</tt>.  To disable set to <tt>none</tt>. */
   static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
   static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
+  /** If true all content accesses raise an alert. */
+  static final String PARAM_ACCESS_ALERTS_ENABLED =
+    PREFIX + "accessAlertsEnabled";
+  static final boolean DEFAULT_ACCESS_ALERTS_ENABLED = false;
 
   /** Determines action taken when a requested file is not cached locally,
    * and it's not available from the publisher.  "Not available" means any
@@ -209,6 +215,8 @@ public class ServeContent extends LockssServlet {
   private static int maxBufferedRewrite = DEFAULT_MAX_BUFFERED_REWRITE;
   private static boolean neverProxy = DEFAULT_NEVER_PROXY;
   private static int paramAccessLogLevel = -1;
+  private static boolean paramAccessAlertsEnabled =
+    DEFAULT_ACCESS_ALERTS_ENABLED;
   private static boolean processForms = DEFAULT_PROCESS_FORMS;
 
 
@@ -258,6 +266,9 @@ public class ServeContent extends LockssServlet {
         log.error("Couldn't set access log level", e);
         paramAccessLogLevel = -1;
       }
+      paramAccessAlertsEnabled =
+	config.getBoolean(PARAM_ACCESS_ALERTS_ENABLED,
+			  DEFAULT_ACCESS_ALERTS_ENABLED);
       missingFileAction =
           (MissingFileAction)config.getEnum(MissingFileAction.class,
               PARAM_MISSING_FILE_ACTION,
@@ -352,6 +363,10 @@ public class ServeContent extends LockssServlet {
 
   void logAccess(String url, String msg) {
     log.log(paramAccessLogLevel, "Content access: " + url + " : " + msg);
+    if (paramAccessAlertsEnabled) {
+      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS),
+			  "Content access: " + url + " : " + msg);
+    }
   }
 
   String present(boolean isInCache, String msg) {

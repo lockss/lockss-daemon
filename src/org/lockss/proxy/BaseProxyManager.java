@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.18 2013-08-15 08:18:21 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.19 2013-10-17 07:50:11 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
+import org.lockss.alert.AlertManager;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
@@ -56,6 +57,7 @@ public abstract class BaseProxyManager extends JettyManager {
   public static final String DEFAULT_403_MSG =
     "Access to content in this LOCKSS box is not allowed from your IP address (%IP%)";
 
+  protected AlertManager alertMgr;
   protected int port;
   protected boolean start = false;
   protected String includeIps;
@@ -76,6 +78,7 @@ public abstract class BaseProxyManager extends JettyManager {
     if (start) {
       startProxy();
     }
+    alertMgr = getDaemon().getAlertManager();
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.55 2013-08-15 08:18:58 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.56 2013-10-17 07:50:11 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.alert.*;
 import org.lockss.jetty.*;
 import org.lockss.servlet.*;
 
@@ -76,6 +77,11 @@ public class ProxyManager extends BaseProxyManager {
    * To disable set to <tt>none</tt>. */
   static final String PARAM_ACCESS_LOG_LEVEL = PREFIX + "accessLogLevel";
   static final String DEFAULT_ACCESS_LOG_LEVEL = "info";
+
+  /** If true all content accesses raise an alert. */
+  static final String PARAM_ACCESS_ALERTS_ENABLED =
+    PREFIX + "accessAlertsEnabled";
+  static final boolean DEFAULT_ACCESS_ALERTS_ENABLED = false;
 
   /** Log the start of proxy requests if true. */
   static final String PARAM_LOG_REQUEST_START = PREFIX + "logRequestStart";
@@ -233,6 +239,7 @@ public class ProxyManager extends BaseProxyManager {
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickConnPool = null;
   private int paramAccessLogLevel = -1;
+  private boolean paramAccessAlertsEnabled = DEFAULT_ACCESS_ALERTS_ENABLED;
   private boolean paramMinimallyEncodeUrls = DEFAULT_MINIMALLY_ENCODE_URLS;
   private boolean paramLogReqStart = DEFAULT_LOG_REQUEST_START;
   private boolean paramExcludeLockssUserAgentFromCounter =
@@ -257,6 +264,9 @@ public class ProxyManager extends BaseProxyManager {
 	log.error("Couldn't set access log level", e);
 	paramAccessLogLevel = -1;
       }	  
+      paramAccessAlertsEnabled =
+	config.getBoolean(PARAM_ACCESS_ALERTS_ENABLED,
+			  DEFAULT_ACCESS_ALERTS_ENABLED);
       paramLogReqStart = config.getBoolean(PARAM_LOG_REQUEST_START,
 					   DEFAULT_LOG_REQUEST_START);
 
@@ -606,6 +616,10 @@ public class ProxyManager extends BaseProxyManager {
   public void logAccess(String url, String msg) {
     if (paramAccessLogLevel >= 0) {
       log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
+    }
+    if (paramAccessAlertsEnabled) {
+      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS),
+			  "Proxy access: " + url + " : " + msg);
     }
   }
 }
