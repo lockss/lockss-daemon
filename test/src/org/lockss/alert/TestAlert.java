@@ -1,10 +1,10 @@
 /*
- * $Id: TestAlert.java,v 1.6 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: TestAlert.java,v 1.7 2013-10-17 07:48:35 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -210,6 +210,23 @@ public class TestAlert extends LockssTestCase {
     a1.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
     a1.setAttribute(Alert.ATTR_SEVERITY, 7);
     log.debug(a1.toString());
+  }
+
+  public void testEquals() {
+    // Prevent timestamps from causing alerts not to be equal
+    TimeBase.setSimulated(1000);
+    MockArchivalUnit mau1 = new MockArchivalUnit("au_foo");
+    MockArchivalUnit mau2 = new MockArchivalUnit("au_bar");
+
+    Alert a1 = Alert.auAlert(Alert.REPAIR_COMPLETE, mau1);
+    Alert a2 = Alert.auAlert(Alert.REPAIR_COMPLETE, mau1);
+    Alert a3 = Alert.auAlert(Alert.REPAIR_COMPLETE, mau2);
+
+    assertEquals(a1, a2);
+    assertNotEquals(a1, a3);
+
+    a2.setAttribute(Alert.ATTR_TEXT, "foo");
+    assertNotEquals(a1, a2);
   }
 
   public void testGetMailBody() {

@@ -1,10 +1,10 @@
 /*
- * $Id: Alert.java,v 1.17 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: Alert.java,v 1.18 2013-10-17 07:48:35 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -106,6 +106,10 @@ public class Alert {
     cAlert("CrawlFailed").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
+  public static final Alert CRAWL_FINISHED =
+    cAlert("CrawlFinished").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
+
   public static final Alert CRAWL_EXCLUDED_URL =
     cAlert("CrawlExcludedURL").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
@@ -154,6 +158,10 @@ public class Alert {
     cAlert("InconclusivePoll").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
+  public static final Alert POLL_FINISHED =
+    cAlert("PollFinished").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
+
   public static final Alert CACHE_DOWN =
     new Alert("BoxDown").
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR);
@@ -194,8 +202,13 @@ public class Alert {
 
   public static final Alert AUDITABLE_EVENT =
     new Alert("AuditableEvent").
-    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
+  public static final Alert CONTENT_ACCESS =
+    new Alert("ContentAccess").
+    setAttribute(ATTR_SEVERITY, SEVERITY_INFO).
+    setAttribute(ATTR_IS_TIME_CRITICAL, false);
 
   private Map attributes;
 //   private Throwable throwable;
@@ -388,6 +401,18 @@ public class Alert {
     return "[Alert: " + attributes + "]";
   }
 
+  public boolean equals(Object obj) {
+    if (obj instanceof Alert ) {
+      Alert other = (Alert)obj;
+      return getAttributes().equals(other.getAttributes());
+    }
+    return false;
+  }
+
+  public int hashCode() {
+    return getAttributes().hashCode();
+  }
+
   /** Return the name of the alert severity */
   public String getSeverityString() {
     try {
@@ -404,7 +429,7 @@ public class Alert {
   }
 
   public String getMailSubject() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("LOCKSS box ");
     sb.append(getSeverityString());
     sb.append(": ");
@@ -413,7 +438,7 @@ public class Alert {
   }
 
   public String getMailBody() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("LOCKSS box '");
     sb.append(getAttribute(ATTR_CACHE));
     sb.append("' raised an alert at ");
@@ -430,7 +455,7 @@ public class Alert {
     return sb.toString();
   }
 
-  private void appendVal(StringBuffer sb, String heading, Object val) {
+  private void appendVal(StringBuilder sb, String heading, Object val) {
     if (val == null) {
       return;
     }
