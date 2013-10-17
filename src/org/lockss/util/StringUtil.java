@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.115 2013-07-16 13:53:39 easyonthemayo Exp $
+ * $Id: StringUtil.java,v 1.116 2013-10-17 07:51:54 tlipkis Exp $
  */
 
 /*
@@ -1479,10 +1479,21 @@ public class StringUtil {
     return buf.toString();
   }
 
+  private static Pattern nonUnixEol =
+    RegexpUtil.uncheckedCompile("\\r\\n?",
+				Perl5Compiler.MULTILINE_MASK);
+
+
+  /** Normalize newlines to Unix eol */
+  public static String normalizeEols(String str) {
+    Substitution subst = new Perl5Substitution("\n");
+    return Util.substitute(RegexpUtil.getMatcher(), nonUnixEol, subst, str,
+			   Util.SUBSTITUTE_ALL);
+  }
+
   private static Pattern nlEol =
     RegexpUtil.uncheckedCompile("([\n\r][\n\t ]*)",
 				Perl5Compiler.MULTILINE_MASK);
-
 
   /** Trim EOLs and leading whitespace from a block of text */
   public static String trimNewlinesAndLeadingWhitespace(String str) {

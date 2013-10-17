@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.97 2013-07-16 13:53:39 easyonthemayo Exp $
+ * $Id: TestStringUtil.java,v 1.98 2013-10-17 07:51:54 tlipkis Exp $
  */
 
 /*
@@ -719,6 +719,30 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("foo", StringUtil.trimBlankLines("\nfoo\n"));
     assertEquals("foo", StringUtil.trimBlankLines("\n\nfoo\n\n"));
     assertEquals("foo\nbar", StringUtil.trimBlankLines("\n\nfoo\nbar\n\n"));
+  }
+
+  public void testNormalizeEols() {
+    assertSame("foo", StringUtil.normalizeEols("foo"));
+
+    assertEquals("\nfoo", StringUtil.normalizeEols("\nfoo"));
+    assertEquals("\nfoo", StringUtil.normalizeEols("\rfoo"));
+    assertEquals("\nfoo", StringUtil.normalizeEols("\r\nfoo"));
+    assertEquals("\nf oo", StringUtil.normalizeEols("\nf oo"));
+
+    assertEquals("f\noo", StringUtil.normalizeEols("f\noo"));
+    assertEquals("f\noo", StringUtil.normalizeEols("f\roo"));
+    assertEquals("f\noo", StringUtil.normalizeEols("f\r\noo"));
+    assertEquals("f\n oo", StringUtil.normalizeEols("f\n oo"));
+
+    assertEquals("foo\n", StringUtil.normalizeEols("foo\n"));
+    assertEquals("foo\n", StringUtil.normalizeEols("foo\r"));
+    assertEquals("foo\n", StringUtil.normalizeEols("foo\r\n"));
+    assertEquals("foo \n ", StringUtil.normalizeEols("foo \r "));
+
+    assertEquals("\nf\noo\n", StringUtil.normalizeEols("\nf\noo\r"));
+    assertEquals("\nf\noo\n", StringUtil.normalizeEols("\nf\roo\r\n"));
+    assertEquals("\nf\noo\n", StringUtil.normalizeEols("\r\nf\r\noo\r\n"));
+    assertEquals("\nf\n oo\n", StringUtil.normalizeEols("\nf\n oo\r"));
   }
 
   public void testTrimLeadingWhitespace() {
