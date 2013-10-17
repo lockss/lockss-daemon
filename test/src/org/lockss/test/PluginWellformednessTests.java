@@ -1,5 +1,5 @@
 /*
-n * $Id: PluginWellformednessTests.java,v 1.4 2013-03-27 21:17:05 tlipkis Exp $
+n * $Id: PluginWellformednessTests.java,v 1.5 2013-10-17 07:52:46 tlipkis Exp $
  */
 
 /*
@@ -190,6 +190,16 @@ public final class PluginWellformednessTests extends LockssTestCase {
     cspec.getExploderPattern();
     cspec.getCookiePolicy();
     cspec.getExploderHelper();
+
+    AuUtil.getConfigUserMessage(au);
+    AuUtil.getProtocolVersion(au);
+    AuUtil.getPollVersion(au);
+    AuUtil.isDeleteExtraFiles(au, false);
+    AuUtil.isDeleteExtraFiles(au, true);
+
+    AuUtil.isRepairFromPublisherWhenTooClose(au, true);
+    AuUtil.isRepairFromPublisherWhenTooClose(au, false);
+
   }
 
   public static void main(String[] argv) {
