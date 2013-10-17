@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.173 2013-09-18 05:38:04 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.174 2013-10-17 07:49:50 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.DefinablePlugin;
@@ -54,7 +55,9 @@ import org.lockss.repository.RepositoryNode;
 import org.lockss.scheduler.*;
 import org.lockss.scheduler.Schedule.*;
 import org.lockss.state.*;
+import org.lockss.alert.*;
 import org.lockss.util.*;
+import org.lockss.servlet.DisplayConverter;
 
 /**
  * <p>The caller of a V3 Poll.  This class is responsible for inviting
@@ -113,7 +116,7 @@ public class V3Poller extends BasePoll {
   };
 
   public enum PollVariant {
-    PoR("Proof of Repairability"),
+    PoR("Proof of Retrievability"),
       PoP("Proof of Possession"),
       Local("Local");
 
@@ -1110,6 +1113,9 @@ public class V3Poller extends BasePoll {
     pollManager.countPollEndEvent(status);
     AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
     auState.pollFinished(status, getPollVariant());
+
+    raisePollEndAlert();
+
     if (task != null && !task.isExpired()) {
       log.debug2("Cancelling task");
       task.cancel();
@@ -1165,6 +1171,34 @@ public class V3Poller extends BasePoll {
 
   public void abortPoll() {
     stopPoll(POLLER_STATUS_ABORTED);
+  }
+
+  protected void raisePollEndAlert() {
+    // Raise Poll finished alert
+    StringBuilder sb = new StringBuilder();
+    sb.append("Poll finished: ");
+    sb.append(getStatusString());
+    sb.append("\n\n");
+
+    sb.append(StringUtil.numberOfUnits(getTalliedUrls().size(), "URL"));
+    sb.append(" tallied");
+    if (getStatus() == POLLER_STATUS_COMPLETE) {
+      sb.append(", ");
+      DisplayConverter dispConverter = new DisplayConverter();
+      String agmnt =
+	dispConverter.convertDisplayString(getPercentAgreement(),
+					   ColumnDescriptor.TYPE_AGREEMENT);
+      sb.append(agmnt);
+      sb.append(" agreement");
+    }
+    if (lhr != null) {
+      sb.append(", ");
+      sb.append(StringUtil.numberOfUnits(lhr.getNewlySuspectVersions(),
+					 "new suspect file"));
+    }
+    sb.append(".");
+    pollManager.raiseAlert(Alert.auAlert(Alert.POLL_FINISHED, getAu()),
+			   sb.toString());
   }
 
   /**
