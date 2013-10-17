@@ -135,7 +135,7 @@
     au < exists ; 2011 ; Annals of Cardiac Anaesthesia Volume 14 ; 2011 ; 14 >
     au < exists ; 2012 ; Annals of Cardiac Anaesthesia Volume 15 ; 2012 ; 15 >
     au < exists ; 2013 ; Annals of Cardiac Anaesthesia Volume 16 ; 2013 ; 16 >
-    au < expected ; 2014 ; Annals of Cardiac Anesthesia Volume 17 ; 2014 ; 17 >
+    au < expected ; 2014 ; Annals of Cardiac Anaesthesia Volume 17 ; 2014 ; 17 >
 
 
   }
@@ -569,7 +569,8 @@
     au < exists ; 2010 ; IETE Journal of Education Volume 51 ; 2010 ; 51 >
     au < exists ; 2011 ; IETE Journal of Education Volume 52 ; 2011 ; 52 >
     au < exists ; 2012 ; IETE Journal of Education Volume 53 ; 2012 ; 53 >
-    au < expected ; 2013 ; IETE Journal of Education Volume 54 ; 2013 ; 54 >
+    au < exists ; 2013 ; IETE Journal of Education Volume 54 ; 2013 ; 54 >
+    au < expected ; 2014 ; IETE Journal of Education Volume 55 ; 2014 ; 55 >
 
   }
 
@@ -2398,7 +2399,7 @@
     au < exists ; 2011 ; Journal of Emergencies, Trauma, and Shock Volume 4 ; 2011 ; 4 >
     au < exists ; 2012 ; Journal of Emergencies, Trauma, and Shock Volume 5 ; 2012 ; 5 >
     au < exists ; 2013 ; Journal of Emergencies, Trauma, and Shock Volume 6 ; 2013 ; 6 >
-    au < expected ; 2014 ; Journal of Emergencies, Traume, and Shock Volume 7 ; 2014 ; 7 >
+    au < expected ; 2014 ; Journal of Emergencies, Trauma, and Shock Volume 7 ; 2014 ; 7 >
 
   }
 
@@ -3154,6 +3155,7 @@
 
     au < exists ; 2009 ; Journal of the International Clinical Dental Research Organization Volume 1 ; 2009 ; 1 >
     au < exists ; 2010 ; Journal of the International Clinical Dental Research Organization Volume 2 ; 2010 ; 2 >
+    au < exists ; 2011 ; Journal of the International Clinical Dental Research Organization Volume 3 ; 2011 ; 3 >
 
   }
     
@@ -3394,6 +3396,8 @@
     param[base_url] = http://www.nigerianjsurg.com/
     param[journal_issn] = 1117-6806
 
+    au < exists ; 2009 ; Nigerian Journal of Surgery Volume 15 ; 2009 ; 15 >
+    au < exists ; 2010 ; Nigerian Journal of Surgery Volume 16 ; 2010 ; 16 >
     au < exists ; 2011 ; Nigerian Journal of Surgery Volume 17 ; 2011 ; 17 >
     au < exists ; 2012 ; Nigerian Journal of Surgery Volume 18 ; 2012 ; 18 >
     au < expected ; 2013 ; Nigerian Journal of Surgery Volume 19 ; 2013 ; 19 >
@@ -3416,8 +3420,8 @@
     au < exists ; 2010 ; Nigerian Medical Journal Volume 51 ; 2010 ; 51 >
     au < exists ; 2011 ; Nigerian Medical Journal Volume 52 ; 2011 ; 52 >
     au < exists ; 2012 ; Nigerian Medical Journal Volume 53 ; 2012 ; 53 >
-    au < expected ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 >
-    au < expected ; 2014 ; Nigerian Medical Journal Voluem 55 ; 2014 ; 55 >
+    au < exists ; 2013 ; Nigerian Medical Journal Volume 54 ; 2013 ; 54 >
+    au < expected ; 2014 ; Nigerian Medical Journal Volume 55 ; 2014 ; 55 >
 
   }
 
@@ -3639,8 +3643,11 @@
 
     param[base_url] = http://www.rljae.org/
     param[journal_issn] = 2013-8393
+    comment[0] = no issue in 2012
 
     au < exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 >
+    au < exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 >
+    au < expected ; 2014 ; Ramon Llull Journal of Applied Ethics Volume 3 ; 2014 ; 3 >
 
   }  
         

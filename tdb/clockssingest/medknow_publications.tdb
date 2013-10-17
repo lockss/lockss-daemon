@@ -22,7 +22,6 @@
 
     param[base_url] = http://www.ajobe.org/
     param[journal_issn] = 1817-7417
-    comment[0] = no issue in 2013 on 10/7/2013
 
     au < exists ; exists ; 2005 ; African Journal of Business Ethics Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2007 ; African Journal of Business Ethics Volume 2 ; 2007 ; 2 >
@@ -30,7 +29,8 @@
     au < exists ; exists ; 2009 ; African Journal of Business Ethics Volume 4 ; 2009 ; 4 >
     au < exists ; exists ; 2011 ; African Journal of Business Ethics Volume 5 ; 2011 ; 5 >
     au < exists ; exists ; 2012 ; African Journal of Business Ethics Volume 6 ; 2012 ; 6 >
-    au < expected ; exists ; 2014 ; African Journal of Business Ethics Volume 7 ; 2014 ; 7 >
+    au < expected ; exists ; 2013 ; African Journal of Business Ethics Volume 7 ; 2013 ; 7 >
+    au < expected ; exists ; 2014 ; African Journal of Business Ethics Volume 8 ; 2014 ; 8 >
 
   }
       
@@ -199,12 +199,12 @@
 
     param[base_url] = http://www.anmjournal.com/
     param[journal_issn] = 0331-3131
-    comment[0] = no issue in 2013 on 10/7/2013
 
     au < exists ; exists ; 2010 ; Annals of Nigerian Medicine Volume 4 ; 2010 ; 4 >
     au < exists ; exists ; 2011 ; Annals of Nigerian Medicine Volume 5 ; 2011 ; 5 >
     au < exists ; exists ; 2012 ; Annals of Nigerian Medicine Volume 6 ; 2012 ; 6 >
-    au < expected ; exists ; 2014 ; Annals of Nigerian Medicine Volume 7 ; 2014 ; 7 >
+    au < expected ; exists ; 2013 ; Annals of Nigerian Medicine Volume 7 ; 2013 ; 7 >
+    au < expected ; exists ; 2014 ; Annals of Nigerian Medicine Volume 8 ; 2014 ; 8 >
 
   }
   
@@ -2038,7 +2038,8 @@
     param[journal_issn] = 2249-4855
 
     au < exists ; exists ; 2012 ; Journal of Academy of Medical Sciences Volume 2 ; 2012 ; 2 >
-    au < expected ; exists ; 2014 ; Journal of Academy of Medical Sciences Volume 3 ; 2014 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Academy of Medical Sciences Volume 3 ; 2013 ; 3 >
+    au < expected ; exists ; 2014 ; Journal of Academy of Medical Sciences Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -2183,7 +2184,8 @@
     au < exists ; exists ; 2010 ; Journal of Cardiovascular Disease Research Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Journal of Cardiovascular Disease Research Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Journal of Cardiovascular Disease Research Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2014 ; Journal of Cardiovascular Disease Research Volume 4 ; 2014 ; 4 >
+    au < expected ; exists ; 2013 ; Journal of Cardiovascular Disease Research Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Journal of Cardiovascular Disease Research Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -2651,7 +2653,8 @@
 
     au < exists ; exists ; 2011 ; Journal of Interdisciplinary Dentistry Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2012 ; Journal of Interdisciplinary Dentistry Volume 2 ; 2012 ; 2 >
-    au < expected ; exists ; 2014 ; Journal of Interdisciplinary Dentistry Volume 3 ; 2014 ; 3 >
+    au < expected ; exists ; 2013 ; Journal of Interdisciplinary Dentistry Volume 3 ; 2013 ; 3 >
+    au < expected ; exists ; 2014 ; Journal of Interdisciplinary Dentistry Volume 4 ; 2014 ; 4 >
 
   }
 
@@ -3176,7 +3179,8 @@
     au < exists ; exists ; 2010 ; Journal of Young Pharmacists Volume 2 ; 2010 ; 2 >
     au < exists ; exists ; 2011 ; Journal of Young Pharmacists Volume 3 ; 2011 ; 3 >
     au < exists ; exists ; 2012 ; Journal of Young Pharmacists Volume 4 ; 2012 ; 4 >
-    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 5 ; 2014 ; 5 >
+    au < expected ; exists ; 2013 ; Journal of Young Pharmacists Volume 5 ; 2013 ; 5 >
+    au < expected ; exists ; 2014 ; Journal of Young Pharmacists Volume 6 ; 2014 ; 6 >
 
   }
     
@@ -3255,7 +3259,8 @@
     au < exists ; exists ; 2010 ; Medical Law Cases - For Doctors Volume 3 ; 2010 ; 3 >
     au < exists ; exists ; 2011 ; Medical Law Cases - For Doctors Volume 4 ; 2011 ; 4 >
     au < exists ; exists ; 2012 ; Medical Law Cases - For Doctors Volume 5 ; 2012 ; 5 >
-    au < expected ; exists ; 2014 ; Medical Law Cases - For Doctors Volume 6 ; 2014 ; 6 >
+    au < expected ; exists ; 2013 ; Medical Law Cases - For Doctors Volume 6 ; 2013 ; 6 >
+    au < expected ; exists ; 2014 ; Medical Law Cases - For Doctors Volume 7 ; 2014 ; 7 >
 
   }
 
@@ -3509,7 +3514,8 @@
     au < exists ; exists ; 2010 ; Pharmaceutical Methods Volume 1 ; 2010 ; 1 >
     au < exists ; exists ; 2011 ; Pharmaceutical Methods Volume 2 ; 2011 ; 2 >
     au < exists ; exists ; 2012 ; Pharmaceutical Methods Volume 3 ; 2012 ; 3 >
-    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 4 ; 2014 ; 4 >
+    au < expected ; exists ; 2013 ; Pharmaceutical Methods Volume 4 ; 2013 ; 4 >
+    au < expected ; exists ; 2014 ; Pharmaceutical Methods Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -3644,7 +3650,7 @@
 
     param[base_url] = http://www.rljae.org/
     param[journal_issn] = 2013-8393
-    comment[0] = no volume 2
+    comment[0] = no issue in 2012
 
     au < exists ; exists ; 2011 ; Ramon Llull Journal of Applied Ethics Volume 1 ; 2011 ; 1 >
     au < exists ; exists ; 2013 ; Ramon Llull Journal of Applied Ethics Volume 2 ; 2013 ; 2 >
