@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.15 2013-08-13 06:19:43 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.16 2013-10-17 07:49:01 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.util.*;
 
+import org.apache.commons.lang.mutable.MutableInt;
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
@@ -726,12 +727,27 @@ public class CrawlerStatus {
     }
   }
 
+  // Ad hoc error severity counters.
+
+  protected Map<Severity,MutableInt> errorSeverityCounts =
+    new HashMap<Severity,MutableInt>();
+
+  private void incrSeverity(Severity sev) {
+    MutableInt n = errorSeverityCounts.get(sev);
+    if (n == null) {
+      n = new MutableInt();
+      errorSeverityCounts.put(sev, n);
+    }
+    n.increment();
+  }
+
   public synchronized void signalErrorForUrl(String url, UrlErrorInfo ei) {
     errors.addToMap(url, ei);
+    incrSeverity(ei.getSeverity());
   }
 
   public synchronized void signalErrorForUrl(String url, CacheException ex) {
-    errors.addToMap(url, errInfo(ex));
+    signalErrorForUrl(url, errInfo(ex));
   }
 
   public synchronized void signalErrorForUrl(String url, String urlMsg) {
@@ -787,6 +803,15 @@ public class CrawlerStatus {
    */
   public synchronized Map<String,UrlErrorInfo> getUrlsErrorMap() {
     return errors.getMap();
+  }
+
+  /**
+   * @return number of URLs that got errors of specified severity
+   * @param sev the severity of errors to count
+   */
+  public synchronized int getNumUrlsWithErrorsOfSeverity(Severity sev) {
+    MutableInt n = errorSeverityCounts.get(sev);
+    return n == null ? 0 : n.intValue();
   }
 
   // MIME types

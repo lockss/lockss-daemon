@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.81 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.82 2013-10-17 07:49:01 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
+import org.lockss.alert.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.extractor.*;
 
@@ -592,6 +593,8 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testGetStatusCrawlDone() {
+    // Prevent timestamps from causing alerts not to be equal
+    TimeBase.setSimulated(1000);
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";
     String url3 = "http://www.example.com/link3.html";
@@ -622,6 +625,10 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(1045, crawlStatus.getContentBytesFetched());
     assertEquals(SetUtil.set("Publisher"),
 		 SetUtil.theSet(crawlStatus.getSources()));
+    Alert al = Alert.auAlert(Alert.CRAWL_FINISHED, mau);
+    al.setAttribute(Alert.ATTR_TEXT,
+		    "Crawl finished successfully: 5 files fetched, 0 warnings");
+    assertEquals(ListUtil.list(al), crawler.alerts);
   }
 
   public void testGetStatusCrawlDoneExcluded() {
@@ -790,6 +797,10 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(Crawler.STATUS_FETCH_ERROR,
 		 crawlStatus.getCrawlStatus());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+    Alert al = Alert.auAlert(Alert.CRAWL_FAILED, mau);
+    al.setAttribute(Alert.ATTR_TEXT,
+		    "Crawl finished with error: Fetch error: 2 files fetched, 0 warnings, 1 error");
+    assertEquals(ListUtil.list(al), crawler.alerts);
   }
 
   public void testGetStatusErrorStartUrl() {
@@ -1331,6 +1342,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   private class MyNewContentCrawler extends NewContentCrawler {
     List fetchedUrls = new ArrayList();
+    List<Alert> alerts = new ArrayList<Alert>();
     
     protected MyNewContentCrawler(ArchivalUnit au, CrawlSpec spec,
 				  AuState aus) {
@@ -1367,6 +1379,15 @@ public class TestNewContentCrawler extends LockssTestCase {
     protected CrawlUrlData newCrawlUrlData(String url, int depth) {
       return new MyCrawlUrlData(url, depth);
     }
+
+    @Override
+    protected void raiseAlert(Alert alert, String text) {
+      if (text != null) {
+	alert.setAttribute(Alert.ATTR_TEXT, text);
+      }
+      alerts.add(alert);
+    }
+
   }
 
   static class MyCrawlUrlData extends CrawlUrlData {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.11 2013-08-08 05:55:58 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.12 2013-10-17 07:49:01 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.CrawlerStatus.*;
 import static org.lockss.crawler.CrawlerStatus.CRAWL_STATUS_POOL;
 import static org.lockss.crawler.CrawlerStatus.ReferrerType;
+import static org.lockss.crawler.CrawlerStatus.Severity;
 
 /**
  * Test class for CrawlerStatus.
@@ -595,21 +596,31 @@ public class TestCrawlerStatus extends LockssTestCase {
     assertEquals(MapUtil.map(url1, uei("err 1", Severity.Warning)),
 		 cs.getUrlsErrorMap());
     assertEquals(1, cs.getNumUrlsWithErrors());
+    assertEquals(1, cs.getNumUrlsWithErrorsOfSeverity(Severity.Warning));
+    assertEquals(0, cs.getNumUrlsWithErrorsOfSeverity(Severity.Error));
     uc = cs.getErrorCtr();
     assertEquals(cs.getUrlsErrorMap(), uc.getMap());
     assertEquals(1, uc.getCount());
 
     cs.signalErrorForUrl(url2, "err 2", Crawler.STATUS_FETCH_ERROR);
     assertEquals(Crawler.STATUS_FETCH_ERROR, cs.getCrawlStatus());
+
+    cs.signalErrorForUrl(url3, "err 42", Crawler.STATUS_FETCH_ERROR);
+
+    assertEquals(3, cs.getNumUrlsWithErrors());
+    assertEquals(1, cs.getNumUrlsWithErrorsOfSeverity(Severity.Warning));
+    assertEquals(2, cs.getNumUrlsWithErrorsOfSeverity(Severity.Error));
+
     cs.signalErrorForUrl(url1, new CacheException.PermissionException("err 3"));
 
     assertEquals(MapUtil.map(url1, uei("err 3", Severity.Fatal),
-			     url2, uei("err 2", Severity.Error)),
+			     url2, uei("err 2", Severity.Error),
+			     url3, uei("err 42", Severity.Error)),
 		 cs.getUrlsErrorMap());
-    assertEquals(2, cs.getNumUrlsWithErrors());
+
     uc = cs.getErrorCtr();
     assertEquals(cs.getUrlsErrorMap(), uc.getMap());
-    assertEquals(2, uc.getCount());
+    assertEquals(3, uc.getCount());
   }
 
   public void testErrorsNo() {
@@ -625,15 +636,20 @@ public class TestCrawlerStatus extends LockssTestCase {
 
     assertEmpty(uc.getMap());
     assertEquals(1, cs.getNumUrlsWithErrors());
+    assertEquals(1, cs.getNumUrlsWithErrorsOfSeverity(Severity.Warning));
+    assertEquals(0, cs.getNumUrlsWithErrorsOfSeverity(Severity.Error));
     uc = cs.getErrorCtr();
     assertEquals(cs.getUrlsWithErrors(), uc.getMap());
     assertEquals(1, uc.getCount());
 
     cs.signalErrorForUrl(url2, "err 2");
     cs.signalErrorForUrl(url1, "err 3");
+    cs.signalErrorForUrl(url3, "err 3", Crawler.STATUS_FETCH_ERROR);
 
     assertEmpty(cs.getUrlsWithErrors());
-    assertEquals(3, cs.getNumUrlsWithErrors());
+    assertEquals(4, cs.getNumUrlsWithErrors());
+    assertEquals(3, cs.getNumUrlsWithErrorsOfSeverity(Severity.Warning));
+    assertEquals(1, cs.getNumUrlsWithErrorsOfSeverity(Severity.Error));
   }
 
   public void testReferrersNo() {

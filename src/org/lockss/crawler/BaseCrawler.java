@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.50 2012-11-08 06:21:40 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.51 2013-10-17 07:49:01 tlipkis Exp $
  */
 
 /*
@@ -385,26 +385,50 @@ public abstract class BaseCrawler
       if (!res && !crawlStatus.isCrawlError()) {
 	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
-      if (crawlStatus.isCrawlError()) {
-	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
-			    getTypeString() + " Crawl failed: " +
-			    crawlStatus.getCrawlErrorMsg());
-      }
       if (isWholeAU()) {
+
+	// Raise end of crawl alert
+	Alert alert;
+	StringBuilder sb = new StringBuilder();
+	sb.append("Crawl finished ");
+	if (res) {
+	  alert = Alert.CRAWL_FINISHED;
+	  sb.append("successfully: ");
+	} else {
+	  alert = Alert.CRAWL_FAILED;
+	  sb.append("with error: ");
+	  sb.append(crawlStatus.getCrawlErrorMsg());
+	  sb.append(": ");
+	}
+	sb.append(StringUtil.numberOfUnits(crawlStatus.getNumFetched(),
+					   "file"));
+	sb.append(" fetched, ");
+	int warn =
+	  crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Warning);
+	sb.append(StringUtil.numberOfUnits(warn, "warning"));
+	if (!res) {
+	  sb.append(", ");
+	  int err =
+	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Error) +
+	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Fatal);
+	  sb.append(StringUtil.numberOfUnits(err, "error"));
+	}
+	raiseAlert(Alert.auAlert(alert, au), sb.toString());
+
 	NodeManager nodeManager = getDaemon().getNodeManager(au);
 	if (res) {
 	  nodeManager.newContentCrawlFinished(Crawler.STATUS_SUCCESSFUL, null);
 	  } else {
-	    nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
+	  nodeManager.newContentCrawlFinished(crawlStatus.getCrawlStatus(),
 					      crawlStatus.getCrawlErrorMsg());
-	}	  
+	}
       }
       return res;
     } catch (RuntimeException e) {
       logger.error("doCrawl0()", e);
-      alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
-			  "Crawl of " + au.getName() +
-			  " threw " + e.getMessage());
+      raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
+		 "Crawl of " + au.getName() +
+		 " threw " + e.getMessage());
       setThrownStatus(e);
       throw e;
     } catch (OutOfMemoryError e) {
@@ -422,6 +446,10 @@ public abstract class BaseCrawler
 	}
       }
     }
+  }
+
+  protected void raiseAlert(Alert alert, String text) {
+    alertMgr.raiseAlert(alert, text);
   }
 
   void setThrownStatus(Throwable t) {
@@ -595,7 +623,7 @@ public abstract class BaseCrawler
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     sb.append("[BaseCrawler: ");
     sb.append(au.toString());
     sb.append("]");
