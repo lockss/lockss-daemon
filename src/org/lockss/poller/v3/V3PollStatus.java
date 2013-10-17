@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.49 2013-08-08 05:57:55 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.50 2013-10-17 07:49:30 tlipkis Exp $
  */
 
 /*
@@ -282,7 +282,7 @@ public class V3PollStatus {
         row.put("hashErrors", "--");
       }
       row.put("completedRepairs", new Integer(poller.getCompletedRepairs().size()));
-      Object agmt = (poller.getStatus() == V3Poller.PEER_STATUS_COMPLETE)
+      Object agmt = (poller.getStatus() == V3Poller.POLLER_STATUS_COMPLETE)
 	? poller.getPercentAgreement()
 	: new StatusTable.DisplayedValue(StatusTable.NO_VALUE, "--");
       row.put("agreement", agmt);
