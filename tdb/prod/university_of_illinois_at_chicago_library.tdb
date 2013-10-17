@@ -49,7 +49,7 @@
   
     title <
       name = First Monday ;
-      issn = 1396-0466 ;
+      eissn = 1396-0466 ;
       issnl = 1396-0458
     >
     
@@ -97,7 +97,7 @@
   {
     title <
       name = Online Journal of Public Health Informatics ;
-      issn = 1947-2579
+      eissn = 1947-2579
     >
 
     param[base_url] = http://www.uic.edu/htbin/cgiwrap/bin/ojs/
