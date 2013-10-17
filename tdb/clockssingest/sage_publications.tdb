@@ -4291,6 +4291,8 @@
     >
 
     param[base_url] = http://cde.sagepub.com/
+    
+    comment[continued_by] = Name/ISSN changed after 2011 to 2165-1434 Career Development and Transition for Exceptional Individuals
 
     {
 
@@ -4340,9 +4342,6 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
       au < zapped ; down ; 2010 ; Career Development for Exceptional Individuals Volume 33 ; 33 ; >
       au < released ; crawling ; 2011 ; Career Development for Exceptional Individuals Volume 34 ; 34 ; >
-      au < exists ; exists ; 2012 ; Career Development for Exceptional Individuals Volume 35 ; 35 ; >
-      au < exists ; exists ; 2013 ; Career Development for Exceptional Individuals Volume 36 ; 36 ; >
-      au < expected ; exists ; 2014 ; Career Development for Exceptional Individuals Volume 37 ; 37 ; >
 
     }
 
