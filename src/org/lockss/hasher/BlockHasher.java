@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.31 2013-08-19 20:24:49 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.32 2013-10-17 07:49:14 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class BlockHasher extends GenericHasher {
   // private LocalHashHandler localHashHandler = null;
   private AuSuspectUrlVersions asuv = null;
 
-  LocalHashResult lhr = new LocalHashResult();
+  LocalHashResult lhr = null;
 
   private boolean isTrace = log.isDebug3();
    
@@ -175,6 +175,7 @@ public class BlockHasher extends GenericHasher {
 					DEFAULT_ENABLE_LOCAL_HASH);
     if (enableLocalHash) {
 //       localHashHandler = new DefaultLocalHashHandler();
+      lhr = new LocalHashResult();
       localHashDigestMap = new HashMap<String,MessageDigest>();
       localHashAlgorithm =
 	config.get(PARAM_LOCAL_HASH_ALGORITHM, DEFAULT_LOCAL_HASH_ALGORITHM);
