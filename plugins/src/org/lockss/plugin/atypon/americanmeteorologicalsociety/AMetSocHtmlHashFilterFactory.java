@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:13 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.5 2013-10-18 21:02:36 alexandraohlson Exp $
  */
 
 /*
@@ -67,8 +67,6 @@ public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactor
       InputStream in,
       String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains the library specific "find it" button
-        HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // May be empty, may contain "free" glif if appropriate
         HtmlNodeFilters.tagWithAttribute("div",  "class", "accessLegend"),
         // Contains "current issue" link which will change over time

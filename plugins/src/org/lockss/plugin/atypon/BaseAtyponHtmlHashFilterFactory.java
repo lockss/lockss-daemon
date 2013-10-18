@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:12 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.5 2013-10-18 21:02:36 alexandraohlson Exp $
  */
 
 /*
@@ -69,6 +69,8 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     new TagNameFilter("script"),
     //filter out comments
     HtmlNodeFilters.commentWithRegex(".*"),
+    // crossref to site library
+    HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
     // stylesheets
     HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
     // these are only on issue toc pages
