@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.15 2013-08-09 20:05:15 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.16 2013-10-18 00:00:55 etenbrink Exp $
  */
 
 /*
@@ -86,8 +86,12 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String withCol4SquareAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-square\">"
-      + "<li><a href=\"/cgi/adclick/?ad=35597&amp;adclick=true&amp;url=http%3A%2F%2Fwww.facebook.com%2FPlantphysiology\">"
-      + "<img class=\"adborder0\" title=\"PlantPhysFacebook\" width=\"160\" height=\"150\" src=\"http://www.plantphysiol.org/adsystem/graphics/5602385865303331/plantphysiol/squarepp.jpg?ad=35597&amp;adview=true\" alt=\"PlantPhysFacebook\" /></a></li>"
+      + "<li><a href=\"/cgi/adclick/?ad=35597&amp;adclick=true&amp;"
+      + "url=http%3A%2F%2Fwww.facebook.com%2FPlantphysiology\">"
+      + "<img class=\"adborder0\" title=\"PlantPhysFacebook\" width=\"160\" "
+      + "height=\"150\" src=\"http://www.plantphysiol.org/adsystem/graphics/"
+      + "5602385865303331/plantphysiol/squarepp.jpg?ad=35597&amp;adview=true\" "
+      + "alt=\"PlantPhysFacebook\" /></a></li>"
       + "</ul>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
@@ -99,13 +103,24 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "<div class=\"block-1\">"
       + "<ul class=\"col4-tower\">"
       + "<li><a href=\"/cgi/adclick/?ad=35598&amp;adclick=true&amp;url=http%3A%2F%2Fwww.plantphysiol.org%2F\">"
-      + "<img class=\"adborder10\" title=\"10pdfPromo\" width=\"160\" height=\"600\" src=\"http://www.plantphysiol.org/adsystem/graphics/06456092319841111/plantphysiol/vertauthors.jpg?ad=35598&amp;adview=true alt=\"10pdfPromo\" /></a></li>"
+      + "<img class=\"adborder10\" title=\"10pdfPromo\" width=\"160\" height=\"600\" " +
+      "src=\"http://www.plantphysiol.org/adsystem/graphics/06456092319841111/plantphysiol/" +
+      "vertauthors.jpg?ad=35598&amp;adview=true alt=\"10pdfPromo\" /></a></li>"
       + "</ul>"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
 
   private static final String withoutCol4TowerAds = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
       + "<div class=\"block-2 sb-div\"></div>" + "</div>\"";
+
+  private static final String withSageAnchors = "<div id=\"test\">" +
+      "<a href=\"/cgi/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
+      "<a href=\"/openurl?query=rft.jtitle%3DPlast+Reconstr\">" +
+      "<a href=\"/external-ref?access_num=19469&displayid=767\">Order article</a>" +
+      "</div>\"";
+
+  private static final String withoutSageAnchors = "<div id=\"test\">" +
+      "</div>\"";
 
   private static final String withCopyright = "<div id=\"footer\">"
       + "<div class=\"block-1\">"
@@ -138,7 +153,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       + "</div>"
       + "<div class=\"cb-section\">"
       + "<ol>"
-      + "<div class=\"current-issue\"><a href=\"/content/current\" rel=\"current-issue\"><img src=\"/local/img/sample_cover.gif\" width=\"67\" height=\"89\" alt=\"Current Issue\" /></a></div>"
+      + "<div class=\"current-issue\"><a href=\"/content/current\" "
+      + "rel=\"current-issue\"><img src=\"/local/img/sample_cover.gif\" "
+      + "width=\"67\" height=\"89\" alt=\"Current Issue\" /></a></div>"
       + "</ol>"
       + "</div>"
       + "<div class=\"cb-section sidebar-etoc-link\">"
@@ -188,6 +205,21 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<span>View Current Issue (Volume 174 Issue 12 December 15, 2011)" +
           "</span>>/a></li>";
 
+  private static final String withNavArticle =
+      "<div id=\"col-2\">" +
+          "<div class=\"article-nav\">\nfoo</div>" + 
+          "<div class=\"article-nav sidebar-nav\">\n" + 
+          "<a class=\"previous\" title=\"Previous article\" " +
+          "href=\"/content/1/6/2.short\">« Previous</a>\n" + 
+          "<span class=\"article-nav-sep\"> | </span>\n" + 
+          "<a class=\"next\" title=\"Next article\" " +
+          "href=\"/content/1/6/8.short\">Next Article »</a>\n" + 
+          "<span class=\"toc-link\">\n" + 
+          "</div></div>";
+  
+  private static final String withoutNavArticle =
+      "<div id=\"col-2\"></div>";
+  
   private static final String withRelatedURLs =
       "<div><span id=\"related-urls\"" +
           "/span></div>";
@@ -227,15 +259,19 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   
   private static final String hiddenInputHtml = 
       "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
-          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" width=\"60\" class=\"field\" />" +
-          " <input type=\"hidden\" name=\"submit\" value=\"yes\" /><input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
+          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" " +
+          "maxlength=\"80\" width=\"60\" class=\"field\" />" +
+          " <input type=\"hidden\" name=\"submit\" value=\"yes\" /><input type=\"image\"" +
+          " value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
           "src=\"/publisher/img/go.gif\" />" +
-          "<input type=\"hidden\" name=\"qs\" value=\"yes\" /><p>                        " +                        
+          "<input type=\"hidden\" name=\"qs\" value=\"yes\" /><p>                        " +
           "<input type=\"hidden\" name=\"domain\" value=\"highwire\" /></p>" +
-          "<input type=\"hidden\" name=\"group-code\" value=\"gsw\" /><input type=\"hidden\" name=\"resourcetype\" value=\"HWCIT\" /></form>";
+          "<input type=\"hidden\" name=\"group-code\" value=\"gsw\" /><input type=\"hidden\"" +
+          " name=\"resourcetype\" value=\"HWCIT\" /></form>";
   private static final String hiddenInputFiltered =
       "<form action=\"http://www.example.org/search\" class=\"searchbox\" method=\"get\">" +
-          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" width=\"60\" class=\"field\" />" +
+          "<input value=\"\" type=\"text\" name=\"fulltext\" id=\"header-qs-input\" maxlength=\"80\" " +
+          "width=\"60\" class=\"field\" />" +
           " <input type=\"image\" value=\"GO\" alt=\"Link: Go\" id=\"header-qs-search-go\"" +
           "src=\"/publisher/img/go.gif\" />" +
           "<p> " +                        
@@ -245,10 +281,16 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String accessCheckHtml =
       "     <div class=\"cb-section cb-views\">" +
           "<ol>" +
-          "<li class=\"abstract-view-link primary\"><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 abstract\"></span></li>" +
-          "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 figsonly\"></span></li>" +
-          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\" rel=\"view-full-text\">Full Text</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 full\"></span></li>" +
-          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1.full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 reprint\"></span></li>" +
+          "<li class=\"abstract-view-link primary\"><span class=\"viewspecificaccesscheck" +
+          " gsclaymin;47/1/1 abstract\"></span></li>" +
+          "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only" +
+          "</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 figsonly\"></span></li>" +
+          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\"" +
+          " rel=\"view-full-text\">Full Text</a><span class=\"viewspecificaccesscheck " +
+          "gsclaymin;47/1/1 full\"></span></li>" +
+          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1.full.pdf+html\" " +
+          "rel=\"view-full-text.pdf\">" +
+          "Full Text (PDF)</a><span class=\"viewspecificaccesscheck gsclaymin;47/1/1 reprint\"></span></li>" +
           "</ol>" +
           "</div>";
  
@@ -257,8 +299,10 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
           "<ol>" +
           "<li class=\"abstract-view-link primary\"></li>" +
           "<li><a href=\"/content/47/1/1.figures-only\" rel=\"view-figures-only\">Figures Only</a></li>" +
-          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\" rel=\"view-full-text\">Full Text</a></li>" +
-          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1.full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a></li>" +
+          "<li class=\"notice full-text-view-link primary\"><a href=\"/content/47/1/1.full\"" +
+          " rel=\"view-full-text\">Full Text</a></li>" +
+          "<li class=\"notice full-text-pdf-view-link primary\"><a href=\"/content/47/1/1." +
+          "full.pdf+html\" rel=\"view-full-text.pdf\">Full Text (PDF)</a></li>" +
           "</ol>" +
           "</div>";
 
@@ -301,10 +345,13 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String tocBannerAdHtml =
       "   <div id=\"content-block\">" +
       "<ul class=\"toc-banner-ads\">" +
-      " <li><a href=\"/cgi/adclick/?ad=35482&amp;adclick=true&amp;url=http%3A%2F%2Fwww.aspetjournals.org%2Fsite%2Fmisc%2Fmobile_announce.xhtml\"><img class=\"adborder1\" title=\"ASPET Journals Now Available for Mobile Devices\"" +
+      " <li><a href=\"/cgi/adclick/?ad=35482&amp;adclick=true&amp;url=http%3A%2F%2F" +
+      "www.aspetjournals.org%2Fsite%2Fmisc%2Fmobile_announce.xhtml\"><img class=\"adborder1\"" +
+      " title=\"ASPET Journals Now Available for Mobile Devices\"" +
       "    width=\"195\"" +
       "    height=\"195\"" +
-      "    src=\"http://pharmrev.aspetjournals.org/adsystem/graphics/932368436242021/pharmrev/Mobile%20Versions%20195x195%20Banner%20Ad.gif?ad=35482&amp;adview=true\"" +
+      "    src=\"http://pharmrev.aspetjournals.org/adsystem/graphics/932368436242021/" +
+      "pharmrev/Mobile%20Versions%20195x195%20Banner%20Ad.gif?ad=35482&amp;adview=true\"" +
       "    alt=\"ASPET Journals Now Available for Mobile Devices\" /></a></li>" +
       "</ul> " +
       " <div id=\"toc-header\">   " +
@@ -317,7 +364,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String viewingDate =
       "<ul class=\"button-list header-buttons\">" +
       " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
-      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\"><span>Current Volume</span></a></li>" +
+      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\">" +
+      "<span>Current Volume</span></a></li>" +
       "</ul>" +
       " <div class=\"site-date\">April 22, 2013</div>" +
       " </div>";
@@ -325,7 +373,8 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String viewingDateFiltered =
       "<ul class=\"button-list header-buttons\">" +
       " <li id=\"na_home\" class=\"first\"><a href=\"/\" title=\"Home\"><span>Home</span></a></li>" +
-      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\"><span>Current Volume</span></a></li>" +
+      " <li id=\"na_currentvol\"><a href=\"/content/current/\" title=\"Current Volume\">" +
+      "<span>Current Volume</span></a></li>" +
       "</ul>" +
       " " +
       " </div>";
@@ -333,6 +382,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
+    assertFilterToSame(withSageAnchors, withoutSageAnchors);
     assertFilterToSame(withCopyright, withoutCopyright);
     assertFilterToSame(withCurrentIssue, withoutCurrentIssue);
     assertFilterToSame(withSporadicDivs, withoutSporadicDivs);
@@ -341,6 +391,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withRelatedURLs, withoutRelatedURLs);
     assertFilterToSame(withHwGenPage, withoutHwGenPage);
     assertFilterToSame(withNavCurrentIssue, withoutNavCurrentIssue);
+    assertFilterToSame(withNavArticle, withoutNavArticle);
     assertFilterToSame(withCol4SquareAds, withoutCol4SquareAds);
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
     assertFilterToSame(viewingDate, viewingDateFiltered);
