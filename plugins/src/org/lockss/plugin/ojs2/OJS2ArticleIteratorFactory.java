@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2ArticleIteratorFactory.java,v 1.9 2013-10-14 19:55:33 etenbrink Exp $
+ * $Id: OJS2ArticleIteratorFactory.java,v 1.10 2013-10-18 17:34:17 etenbrink Exp $
  */
 
 /*
@@ -118,6 +118,7 @@ public class OJS2ArticleIteratorFactory
 
     protected Pattern SHOW_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)/showToc$", Pattern.CASE_INSENSITIVE);
     protected Pattern PLAIN_TOC_PATTERN = Pattern.compile("/issue/view/([^/]+)$", Pattern.CASE_INSENSITIVE);
+    protected Pattern JLA_PDF_LABEL_PATTERN = Pattern.compile("^[0-9]+[.] \\[pdf\\]$");
     
     protected MetadataTarget target;
     protected Set<String> alreadyEmitted;
@@ -195,6 +196,7 @@ public class OJS2ArticleIteratorFactory
       NodeList links = new NodeList();
       node.collectInto(links, HtmlNodeFilters.tagWithAttribute("a", "href"));
       SimpleNodeIterator iter = links.elements();
+      boolean jla = false;
       
       while (iter.hasMoreNodes()) {
         LinkTag link = (LinkTag)iter.nextNode();
@@ -223,6 +225,10 @@ public class OJS2ArticleIteratorFactory
             if (label == null || label.length() == 0) {
               label = link.getText().trim().toLowerCase();
             }
+            if (JLA_PDF_LABEL_PATTERN.matcher(label).find()) {
+              label = "pdf";
+              jla = true;
+            }
             if (!map.containsKey(label)) {
               log.debug3(label + " -> " + linkUrl);
               map.put(label, linkCu);
@@ -240,7 +246,7 @@ public class OJS2ArticleIteratorFactory
       guessFullTextPdf(af, map);
       doGuess(af, map, "epub", Role.FULL_TEXT_EPUB, "Full-text EPUB");
       doGuess(af, map, "xml", Role.SOURCE_XML, "Source XML");
-      setRoleArticleMetadata(af);
+      setRoleArticleMetadata(af, jla);
       chooseFullTextCu(af);
 
       // Emit
@@ -248,7 +254,7 @@ public class OJS2ArticleIteratorFactory
       if (cu != null) {
         log.debug3("getfulltextcu url: " + cu.getUrl());
         
-          if (!alreadyEmitted.contains(cu.getUrl())) {
+        if (!alreadyEmitted.contains(cu.getUrl())) {
           alreadyEmitted.add(cu.getUrl());
           emitArticleFiles(af);
         }
@@ -262,20 +268,29 @@ public class OJS2ArticleIteratorFactory
     }
     
     // Set role_article_metadata. Check if frame src url exists
-    private void setRoleArticleMetadata(ArticleFiles af) {
+    private void setRoleArticleMetadata(ArticleFiles af, boolean jla) {
       CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ABSTRACT);
       if ((cu == null) || !(cu.hasContent())) {
         cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML);
       }
       if (cu != null && cu.hasContent()) {
         String url = cu.getUrl();
-        String frameSrcUrl = url.replaceFirst("/view/", "/viewArticle/");
+        String frameSrcUrl = StringUtil.replaceFirst(url, "/view/", "/viewArticle/");
         log.debug3("setRoleArticleMetadata() : url: " + url);
         log.debug3("setRoleArticleMetadata() frameSrcUrl: " + frameSrcUrl);
         CachedUrl frameSrcCu = au.makeCachedUrl(frameSrcUrl);
         if ((frameSrcCu != null) && frameSrcCu.hasContent()) {
           af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, frameSrcCu);
           frameSrcCu.release();
+        } else if (jla) {
+          String jlaUrl = url.substring(0, url.lastIndexOf("/"));
+          CachedUrl jlaCu = au.makeCachedUrl(jlaUrl);
+          if ((jlaCu != null) && jlaCu.hasContent()) {
+            af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, jlaCu);
+            jlaCu.release();
+          } else {
+            af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
+          }
         } else {
           af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
         }
