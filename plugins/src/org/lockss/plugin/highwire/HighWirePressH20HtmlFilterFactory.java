@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.46 2013-08-09 20:06:50 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.47 2013-10-18 00:07:20 etenbrink Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.lockss.util.ReaderInputStream;
 
 public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
 
-  Logger log = Logger.getLogger("HighWirePressH20HtmlHashFilterFactory");
+  Logger log = Logger.getLogger(HighWirePressH20HtmlFilterFactory.class);
   
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -79,6 +79,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-global-nav"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(article|sidebar)-nav"),
         // May contain institution-specific data e.g. OUP
         HtmlNodeFilters.tagWithAttribute("div", "id", "secondary_footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
@@ -96,6 +97,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-soc"),
         // e.g. SWCS TOC pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "cit-form-select"),
+        // and <div id="cit-extra">
+        HtmlNodeFilters.tagWithAttribute("div", "class", "cit-extra"),
         // For JBC pages
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad-top"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad-top2"),
@@ -164,9 +167,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         
         // The following four filters are needed on jultrasoundmed.org:
         // Empty and sporadic <div id="fragment-reference-display">
-        // and <div id="cit-extra">
         HtmlNodeFilters.tagWithAttribute("div", "id", "fragment-reference-display"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "cit-extra"),
         // "Earn FREE CME Credit" link (wrapped in a list item)
         HtmlNodeFilters.tagWithText("li", "class=\"dslink-earn-free-cme-credit\""),
         // Variable list of links to PubMed, Google Scholar, other sites
