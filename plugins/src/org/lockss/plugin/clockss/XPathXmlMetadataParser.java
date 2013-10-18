@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.1 2013-10-15 23:28:06 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.2 2013-10-18 21:28:34 alexandraohlson Exp $
  */
 
 /*
@@ -50,8 +50,8 @@ import javax.xml.xpath.XPathFactory;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
-import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
@@ -303,7 +303,9 @@ public class XPathXmlMetadataParser  {
     return null;
   }
 
-  InputSource bReader = new InputSource(cu.openForReading());
+  InputStream iStream = cu.getUnfilteredInputStream();
+  InputSource bReader = new InputSource(iStream);
+  bReader.setEncoding(cu.getEncoding());
   Document doc;
   try {
     doc = builder.parse(bReader);
@@ -315,7 +317,7 @@ public class XPathXmlMetadataParser  {
     log.warning(e.getMessage());
     return null;
   } finally {
-    IOUtil.safeClose(bReader.getCharacterStream());
+    AuUtil.safeRelease(cu);
   }
   /* The entire document tree is now loaded*/
   }
