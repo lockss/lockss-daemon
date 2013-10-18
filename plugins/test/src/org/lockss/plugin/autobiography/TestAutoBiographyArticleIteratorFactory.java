@@ -1,5 +1,5 @@
 /*
- * $Id: TestAutoBiographyArticleIteratorFactory.java,v 1.2 2013-10-07 16:18:50 etenbrink Exp $
+ * $Id: TestAutoBiographyArticleIteratorFactory.java,v 1.3 2013-10-18 21:25:22 etenbrink Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class TestAutoBiographyArticleIteratorFactory extends ArticleIteratorTest
   
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-        PluginTestUtil.createAndStartAu(PLUGIN_NAME, sageAuConfig());
+        PluginTestUtil.createAndStartAu(PLUGIN_NAME, abAuConfig());
   }
   
   Configuration simAuConfig(String rootPath) {
@@ -76,7 +76,6 @@ public class TestAutoBiographyArticleIteratorFactory extends ArticleIteratorTest
     conf.put("base_url", "http://www.example.com/");
     conf.put("journal_id", "jrnl");
     conf.put("volume_name", "12");
-    conf.put("year", "2000");
     conf.put("depth", "1");
     conf.put("branch", "4");
     conf.put("numFiles", "7");
@@ -89,12 +88,11 @@ public class TestAutoBiographyArticleIteratorFactory extends ArticleIteratorTest
     return conf;
   }
   
-  Configuration sageAuConfig() {
+  Configuration abAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", "http://www.example.com/");
     conf.put("journal_id", "jrnl");
     conf.put("volume_name", "12");
-    conf.put("year", "2000");
     return conf;
   }
   

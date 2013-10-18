@@ -1,5 +1,5 @@
 /*
- * $Id: TestAutoBiographyPlugin.java,v 1.1 2013-10-04 00:19:41 etenbrink Exp $
+ * $Id: TestAutoBiographyPlugin.java,v 1.2 2013-10-18 21:25:22 etenbrink Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.util.ListUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -117,11 +118,10 @@ public class TestAutoBiographyPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "aub");
     props.setProperty(VOLUME_NAME_KEY, "3");
-    props.setProperty(YEAR_KEY, "2000");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("CLOCKSS Auto/Biography Plugin, Base URL http://www.example.com/, " +
-        "Volume 3, Year 2000", au.getName());
+        "Volume 3", au.getName());
   }
 
   public void testGetPluginId() {
@@ -130,16 +130,11 @@ public class TestAutoBiographyPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    // this assert fails due to the fact that the year param
-    // in the LocalAuConfigDescrs is a string[20]
-    /*
     assertEquals(ListUtil.list(
         ConfigParamDescr.BASE_URL,
         ConfigParamDescr.JOURNAL_ID,
-        ConfigParamDescr.VOLUME_NAME,
-        ConfigParamDescr.YEAR),
+        ConfigParamDescr.VOLUME_NAME),
         plugin.getLocalAuConfigDescrs());
-    */
   }
 
   // XXX add back !
