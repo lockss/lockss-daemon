@@ -1,5 +1,5 @@
 /*
- * $Id: AutoBiographyMetadataExtractorFactory.java,v 1.1 2013-10-04 00:11:48 etenbrink Exp $
+ * $Id: AutoBiographyMetadataExtractorFactory.java,v 1.2 2013-10-18 21:27:14 etenbrink Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 public class AutoBiographyMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("AutoBiographyMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(AutoBiographyMetadataExtractorFactory.class);
   
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
