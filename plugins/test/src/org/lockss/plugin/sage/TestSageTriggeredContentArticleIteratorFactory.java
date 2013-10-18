@@ -27,16 +27,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.sage;
 
-import java.io.File;
 import java.util.regex.Pattern;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.config.CurrentConfig;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
-import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -73,7 +70,6 @@ public class TestSageTriggeredContentArticleIteratorFactory extends ArticleItera
 	    conf.put("base_url2", "http://www.example2.com/");
 	    conf.put("volume_name", "12");
 	    conf.put("journal_dir", "jrnl");
-	    conf.put("year", "2000");
 	    conf.put("depth", "1");
 	    conf.put("branch", "4");
 	    conf.put("numFiles", "7");
@@ -92,7 +88,6 @@ public class TestSageTriggeredContentArticleIteratorFactory extends ArticleItera
     conf.put("base_url2", "http://www.example2.com/");
     conf.put("volume_name", "12");
     conf.put("journal_dir", "jrnl");
-    conf.put("year", "2000");
     return conf;
   }
 

@@ -28,13 +28,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.sage;
 
-import java.io.*;
 import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
@@ -80,7 +78,6 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
     conf.put("base_url2", "http://www.example2.com/");
     conf.put("journal_dir", "jrnl");
     conf.put("volume_name", "15");
-    conf.put("year", "2000");
     conf.put("branch", "3");
     conf.put("numFiles", "7");
     conf.put("fileTypes", "" + (
@@ -98,7 +95,6 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
     conf.put("base_url2", "http://www.example2.com/");
     conf.put("volume_name", "12");
     conf.put("journal_dir", "jrnl");
-    conf.put("year", "2000");
     return conf;
   }
   
@@ -159,7 +155,7 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -195,7 +191,7 @@ public class TestSageTriggeredContentMetadataExtractorFactory extends LockssTest
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);

@@ -27,7 +27,7 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(_v[0-9]+)?$", base_url, base_url2</string>
-      <string>1,"%s%s_%d_%s", base_url, journal_dir, year, volume_name</string>
+      <string>1,"%s%s_[0-9]{4}_%s", base_url, journal_dir, volume_name</string>
       <string>2,"^(%s|%s)page", base_url, base_url2</string>
     </list>
   </entry>
@@ -38,7 +38,6 @@
   <entry>
     <string>au_manifest</string>
       <list>
-        <string>"%s%s_%d_%s_1/index.htm", base_url, journal_dir, year, volume_name</string>
         <string>"%s", base_url2</string>
       </list>
   </entry>
@@ -107,15 +106,6 @@
         <displayName>Volume Descriptor (Year or Number)</displayName>
         <type>1</type>
         <size>20</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Four digit year (e.g., 2004)</description>
-        <type>4</type>
-        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
