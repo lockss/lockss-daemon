@@ -1,5 +1,5 @@
 /*
- * $Id: OJS2HtmlLinkExtractor.java,v 1.3 2013-04-22 22:27:41 pgust Exp $
+ * $Id: OJS2HtmlLinkExtractor.java,v 1.4 2013-10-18 17:35:10 etenbrink Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.ojs2;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.oro.text.regex.*;
 import org.lockss.extractor.GoslingHtmlLinkExtractor;
@@ -43,9 +45,11 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
   protected static Logger log = Logger.getLogger(OJS2HtmlLinkExtractor.class);
 
-  protected static final Pattern OPEN_RT_WINDOW_PATTERN = 
+  protected static final org.apache.oro.text.regex.Pattern OPEN_RT_WINDOW_PATTERN = 
       RegexpUtil.uncheckedCompile("javascript:openRTWindow\\('([^']*)'\\);",
                                   Perl5Compiler.READ_ONLY_MASK);
+  protected static final java.util.regex.Pattern JLA_ARTICLE_PATTERN = Pattern.compile(
+      "(http://www[.]logicandanalysis[.]org/index.php/jla/article/view/[\\d]+)/[\\d]+$");
   
   @Override
   protected String extractLinkFromTag(
@@ -64,6 +68,11 @@ public class OJS2HtmlLinkExtractor extends GoslingHtmlLinkExtractor {
               String openRTWindowLink = 
                   interpretRTOpenWindowMatch(matcher.getMatch());
               return openRTWindowLink;
+            }
+            Matcher mat = JLA_ARTICLE_PATTERN.matcher(href);
+            if (mat.find()) {
+              String url = mat.group(1);
+              cb.foundLink(url);
             }
           }
         }
