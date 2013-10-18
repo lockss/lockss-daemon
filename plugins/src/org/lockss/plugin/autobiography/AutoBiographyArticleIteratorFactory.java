@@ -1,5 +1,5 @@
 /*
- * $Id: AutoBiographyArticleIteratorFactory.java,v 1.1 2013-10-03 23:54:25 etenbrink Exp $
+ * $Id: AutoBiographyArticleIteratorFactory.java,v 1.2 2013-10-18 21:27:51 etenbrink Exp $
  */
 
 /*
@@ -48,13 +48,13 @@ implements ArticleIteratorFactory,
 ArticleMetadataExtractorFactory {
   
   protected static Logger log = 
-      Logger.getLogger("AutoBiographyArticleIteratorFactory");
+      Logger.getLogger(AutoBiographyArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%s\",base_url";
   
   protected static final String PATTERN_TEMPLATE = 
-      "\"^%s%s_%s_%s_[\\d]+/(?!index[.]htm)[^/]*[.](?:htm|pdf)$\"," +
-      "base_url, journal_id, year, volume_name";
+      "\"^%s%s_[\\d]{4}_%s_[\\d]+/(?!index[.]htm)[^/]*[.](?:htm|pdf)$\"," +
+      "base_url, journal_id, volume_name";
   /*
     http://autobiography.stanford.clockss.org/aub_2004_12_3/10.1177_09675507040120030402.htm
     http://autobiography.stanford.clockss.org/aub_2004_12_3/10.1177_09675507040120030402.pdf
