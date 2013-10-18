@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.2 2013-08-23 20:20:42 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.3 2013-10-18 17:06:13 alexandraohlson Exp $
  */
 /*
 
@@ -111,6 +111,19 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           "</td><td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">391</td>" +
           "</tr></table>";
   
+  private static final String spanIdHtml =
+      "<div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
+      "<span class=\"title2\" id=\"d55461e329\">" +
+      "A. Fitting the Johnson Distribution to Point Data</span> " +
+      "<p>The Johnson distribution</p>";
+  
+  private static final String spanIdHtmlFiltered =
+      "<div id=\"sec2.1\" class=\"NLM_sec NLM_sec_level_2\">" +
+      "<span class=\"title2\" >" +
+      "A. Fitting the Johnson Distribution to Point Data</span> " +
+      "<p>The Johnson distribution</p>";
+      
+  
   public void testFiltering() throws Exception {
     InputStream inA;
 
@@ -126,6 +139,10 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(commentModified),
         ENC);
     assertEquals(commentModifiedFiltered,StringUtil.fromInputStream(inA));
+    
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(spanIdHtml),
+        ENC);
+    assertEquals(spanIdHtmlFiltered,StringUtil.fromInputStream(inA));
  
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.3 2013-08-27 20:21:31 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:12 alexandraohlson Exp $
  */
 
 /*
@@ -32,12 +32,20 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
+import org.htmlparser.tags.Span;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.aiaa.AIAAHtmlHashFilterFactory;
+import org.lockss.util.Logger;
 
 /**
  * BaseAtyponHtmlHashFilterFactory
@@ -49,6 +57,8 @@ import org.lockss.plugin.*;
  */
 
 public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
+  Logger log = Logger.getLogger(BaseAtyponHtmlHashFilterFactory.class);
+
   protected static NodeFilter[] baseAtyponFilters = new NodeFilter[] {
     // 7/22/2013 starting to use a more aggressive hashing policy-
     // these are on both issue and article pages
@@ -67,11 +77,33 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
   };
 
+  HtmlTransform xform = new HtmlTransform() {
+    //; The "id" attribute of <span> tags can have a gensym
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              if (tag instanceof Span && tag.getAttribute("id") != null) {
+                tag.removeAttribute("id");
+              }
+            }
+          });
+        } catch (ParserException pe) {
+          IOException ioe = new IOException();
+          ioe.initCause(pe);
+          throw ioe;
+        }
+        return nodeList;
+      }
+  };   
+
   /** Create an array of NodeFilters that combines the atyponBaseFilters with
    *  the given array
    *  @param nodes The array of NodeFilters to add
    */
-  private NodeFilter[] addTo(NodeFilter[] nodes) {
+  protected NodeFilter[] addTo(NodeFilter[] nodes) {
     NodeFilter[] result  = Arrays.copyOf(baseAtyponFilters, baseAtyponFilters.length + nodes.length);
     System.arraycopy(nodes, 0, result, baseAtyponFilters.length, nodes.length);
     return result;
@@ -86,7 +118,7 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       InputStream in, String encoding) {
 
     return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(baseAtyponFilters)), xform));
   }
   
   /** Create a FilteredInputStream that excludes the the atyponBaseFilters and
@@ -100,6 +132,6 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
       InputStream in, String encoding, NodeFilter[] moreNodes) {
     NodeFilter[] bothFilters = addTo(moreNodes);
     return new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(bothFilters)), xform));
   }
 }

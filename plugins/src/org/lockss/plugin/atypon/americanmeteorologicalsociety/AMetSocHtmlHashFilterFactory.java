@@ -1,5 +1,5 @@
 /*
- * $Id: AMetSocHtmlHashFilterFactory.java,v 1.3 2013-10-07 20:36:23 alexandraohlson Exp $
+ * $Id: AMetSocHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:13 alexandraohlson Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
 import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
@@ -57,36 +58,25 @@ import org.lockss.util.ReaderInputStream;
  * Don't extend BaseAtyponHtmlHashFilterFactory because we need to do more 
  * extensive filtering with spaces, etc.
  */
-public class AMetSocHtmlHashFilterFactory implements FilterFactory {
+public class AMetSocHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
-  Logger log = Logger.getLogger("AMetSocHtmlHashFilterFactoryy");
+  Logger log = Logger.getLogger(AMetSocHtmlHashFilterFactory.class);
 
+  @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
-      String encoding)
-          throws PluginException {
+      String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
-        // Variable identifiers - institution doing the crawl
-        new TagNameFilter("script"),
         // Contains the library specific "find it" button
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
         // May be empty, may contain "free" glif if appropriate
         HtmlNodeFilters.tagWithAttribute("div",  "class", "accessLegend"),
-        // Contains name and logo of institution, access, etc
-        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
-        // Contains copyright year
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // Contains "current issue" link which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalNavPanel"),
         // Contains "current issue" link which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalInfoPanel"),
         // Contains "current issue" link which will change over time
         HtmlNodeFilters.tagWithAttribute("div", "id", "sitetoolsPanel"),
-        // Remove the image with the free glif since it may be added later
-        HtmlNodeFilters.tagWithAttribute("image", "class", "accessIcon"),
-
-        // Contains the changeable list of citations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
 
         // Remove <hX> tags that have no content or only spaces as content
         // It would be nicer to do this as "all heading tags" but that doesn't seem available in the api
@@ -97,36 +87,12 @@ public class AMetSocHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithTextRegex("h5","^(\\s|(&nbsp;))*$"),
         HtmlNodeFilters.tagWithTextRegex("h6","^(\\s|(&nbsp;))*$"),
     };
-    HtmlTransform xform = new HtmlTransform() {
-      @Override
-      public NodeList transform(NodeList nodeList) throws IOException {
-        try {
-          nodeList.visitAllNodesWith(new NodeVisitor() {
-            @Override
-            public void visitTag(Tag tag) {
-              String tagName = tag.getTagName().toLowerCase();
-              // Need to remove <span class="titleX" id="xxxxx"> because id is variable
-              // cannot remove span tag pair because contents are content. Just remove the id value
-              if ( ("span".equals(tagName))  && (tag.getAttribute("id") != null) ){
-                tag.setAttribute("id", "0");
-              }
-            }
-          });
-        }
-        catch (Exception exc) {
-          log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-        }
-        return nodeList;
-      }
-    };   
 
+    // super will add in the base nodeset and also do span-id transform
+    InputStream superFiltered = super.createFilteredInputStream(au, in, encoding, filters);
 
     // Also need white space filter to condense multiple white spaces down to 1
-    InputStream filtered = new HtmlFilterInputStream(in,
-        encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
-
-    Reader reader = FilterUtil.getReader(filtered, encoding);
+    Reader reader = FilterUtil.getReader(superFiltered, encoding);
 
     // first subsitute plain white space for &nbsp;
     String[][] unifySpaces = new String[][] { 

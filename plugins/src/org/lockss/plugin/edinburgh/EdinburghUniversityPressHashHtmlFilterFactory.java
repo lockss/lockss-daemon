@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.6 2013-10-18 17:06:12 alexandraohlson Exp $
  */
 
 /*
@@ -59,8 +59,6 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         HtmlNodeFilters.tagWithAttributeRegex("li", "class", "^institutionBanner"),
         // left column
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
-        // Contains the changeable list of citations
-        HtmlNodeFilters.tagWithAttribute("div", "class", "citedBySection"),
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

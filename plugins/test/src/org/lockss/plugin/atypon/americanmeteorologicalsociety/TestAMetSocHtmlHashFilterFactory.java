@@ -1,5 +1,5 @@
 /*
- * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.3 2013-10-07 20:36:23 alexandraohlson Exp $
+ * $Id: TestAMetSocHtmlHashFilterFactory.java,v 1.4 2013-10-18 17:06:13 alexandraohlson Exp $
  */
 /*
 
@@ -264,7 +264,7 @@ public class TestAMetSocHtmlHashFilterFactory extends LockssTestCase {
           "<td align=\"right\" valign=\"top\" width=\"18\" class=\"nowrap\">1501</td>" +
           "<td align=\"right\" valign=\"top\" width=\"18\" class=\"tocCheck\">" +
           "<input type=\"checkbox\" name=\"doi\" value=\"10.1175/XXX1234\"/>" +
-          "<img src=\"/templates/jsp/_style2/_AP/images/access_free.gif\" alt=\"open access\" title=\"open access\" class=\"accessIcon\" /></td>" +
+          "</td>" +
           "<td valign=\"top\" width=\"85%\"><div class=\"art_title\">A Big Long Title Here" +
           "</div>" +
           "<span class=\"author\">Author P Writer</span>, <span class=\"author\">Samuel K. Writer</span><br />" +
