@@ -1,5 +1,5 @@
 /*
- * $Id: AutoBiographyArticleIteratorFactory.java,v 1.2 2013-10-18 21:27:51 etenbrink Exp $
+ * $Id: AutoBiographyArticleIteratorFactory.java,v 1.3 2013-10-21 17:29:36 etenbrink Exp $
  */
 
 /*
@@ -60,6 +60,9 @@ ArticleMetadataExtractorFactory {
     http://autobiography.stanford.clockss.org/aub_2004_12_3/10.1177_09675507040120030402.pdf
     http://autobiography.stanford.clockss.org/aub_2004_12_3/10.1177_09675507040120030402.xml
     http://autobiography.stanford.clockss.org/aub_2004_12_3/10.1177_09675507040120030402.txt
+    NOTE: 4 digit year can change within AU for vol 14
+    http://autobiography.stanford.clockss.org/aub_2006_14_3/10.1191_0967550706ab049XX.pdf
+    http://autobiography.stanford.clockss.org/aub_2007_14_4/10.1177_0967550706072242.pdf
    */
   
   @Override
