@@ -2786,7 +2786,7 @@
 
         pluginSuffix = ClockssHighWirePressH20Plugin
 
-        au < exists ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
+        au < manifest ; exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 ; >
         au < expected ; exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 ; >
 
       }
@@ -2899,7 +2899,7 @@
       au < zapped ; down ; 2010-2011 ; Assessment for Effective Intervention Volume 36 ; 36 ; >
       au < zapped ; down ; 2011-2012 ; Assessment for Effective Intervention Volume 37 ; 37 ; >
       au < released ; crawling ; 2012-2013 ; Assessment for Effective Intervention Volume 38 ; 38 ; >
-      au < expected ; exists ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2013-2014 ; Assessment for Effective Intervention Volume 39 ; 39 ; >
 
     }
 
@@ -8161,7 +8161,7 @@
         au < exists ; exists ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
         au < exists ; exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
         au < exists ; exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
-        au < exists ; exists ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
+        au < manifest ; exists ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
         au < expected ; exists ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
 
       }
