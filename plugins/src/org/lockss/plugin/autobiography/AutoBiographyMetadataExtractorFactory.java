@@ -1,5 +1,5 @@
 /*
- * $Id: AutoBiographyMetadataExtractorFactory.java,v 1.2 2013-10-18 21:27:14 etenbrink Exp $
+ * $Id: AutoBiographyMetadataExtractorFactory.java,v 1.3 2013-10-21 17:46:56 etenbrink Exp $
  */
 
 /*
@@ -48,11 +48,8 @@ import org.apache.commons.collections.map.*;
 import javax.xml.xpath.XPathExpressionException;
 
 /**
- * This file implements a FileMetadataExtractor for American Institute Of
- * Physics Source content.
- * 
- * Files used to write this class constructed from AIP FTP archive:
- * ~/2010/AIP_xml_9.tar.gz/AIP_xml_9.tar/./APPLAB/vol_96/iss_1/
+ * This file implements a FileMetadataExtractor for Auto/Biography with uses Sage XML
+ * metadata. 
  */
 
 public class AutoBiographyMetadataExtractorFactory
@@ -160,8 +157,7 @@ implements FileMetadataExtractorFactory {
     }
     
     /**
-     * Use XmlMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
+     * Use XmlMetadataExtractor to extract raw metadata, map to cooked fields.
      * 
      * @param target the MetadataTarget
      * @param cu the CachedUrl from which to read input
@@ -170,30 +166,17 @@ implements FileMetadataExtractorFactory {
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException, PluginException {
-      ArticleMetadata am = do_extract(target, cu, emitter);
-      emitter.emitMetadata(cu,  am);
-    }
-    
-    /**
-     * Use XmlMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
-     * 
-     * @param target the MetadataTarget
-     * @param in the Xml input stream to parse
-     * @param emitter the emitter to output the resulting ArticleMetadata
-     */
-    public ArticleMetadata do_extract(MetadataTarget target, CachedUrl cu, Emitter emit)
-        throws IOException, PluginException {
+      ArticleMetadata am = null;
       try {
-        ArticleMetadata am = 
-            new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
+        am = new XmlDomMetadataExtractor(nodeMap).extract(target, cu);
         am.cook(xpathMap);
-        return am;
+        emitter.emitMetadata(cu,  am);
       } catch (XPathExpressionException ex) {
         PluginException ex2 = new PluginException("Error parsing XPaths");
         ex2.initCause(ex);
         throw ex2;
       }
     }
+    
   }
 }
