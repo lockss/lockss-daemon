@@ -595,10 +595,10 @@
     au < ready ; 2006 ; Monthly Weather Review Volume 134 ; 134 >
     au < testing ; 2007 ; Monthly Weather Review Volume 135 ; 135 >
     au < testing ; 2008 ; Monthly Weather Review Volume 136 ; 136 >
-    au < testing ; 2009 ; Monthly Weather Review Volume 137 ; 137 >
+    au < ready ; 2009 ; Monthly Weather Review Volume 137 ; 137 >
     au < testing ; 2010 ; Monthly Weather Review Volume 138 ; 138 >
     au < ready ; 2011 ; Monthly Weather Review Volume 139 ; 139 >
-    au < testing ; 2012 ; Monthly Weather Review Volume 140 ; 140 >
+    au < ready ; 2012 ; Monthly Weather Review Volume 140 ; 140 >
     au < expected ; 2013 ; Monthly Weather Review Volume 141 ; 141 >
     au < expected ; 2014 ; Monthly Weather Review Volume 142 ; 142 >
     
@@ -615,7 +615,7 @@
     
     param[journal_id] = wcas
     
-    au < testing ; 2009 ; Weather, Climate, and Society Volume 1 ; 1 >
+    au < ready ; 2009 ; Weather, Climate, and Society Volume 1 ; 1 >
     au < testing ; 2010 ; Weather, Climate, and Society Volume 2 ; 2 >
     au < testing ; 2011 ; Weather, Climate, and Society Volume 3 ; 3 >
     au < testing ; 2012 ; Weather, Climate, and Society Volume 4 ; 4 >
