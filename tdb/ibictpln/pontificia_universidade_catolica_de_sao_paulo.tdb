@@ -531,7 +531,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = IGISP
 
-      au < testing ; 2012 ; 1 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 1 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2013 ; 2013 >
 
   }
@@ -550,11 +550,11 @@
       au < ready ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
       au < ready ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
       au < ready ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
-      au < testing ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
+      au < ready ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
+      au < ready ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
       au < testing ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
       au < testing ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
+      au < ready ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
       au < testing ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
       au < testing ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
       au < testing ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
