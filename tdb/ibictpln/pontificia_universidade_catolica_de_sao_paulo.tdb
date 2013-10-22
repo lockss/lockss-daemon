@@ -552,14 +552,14 @@
       au < ready ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
       au < ready ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
       au < ready ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
+      au < ready ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
       au < ready ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
+      au < ready ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
       au < testing ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 >
 
   }
@@ -575,8 +575,8 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = kairos
 
-      au < testing ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 >
+      au < ready ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 >
       au < testing ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 >
       au < testing ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 >
       au < testing ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 >
@@ -596,12 +596,12 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = kaliope
 
-      au < testing ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 >
+      au < ready ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 >
       au < testing ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 >
       au < testing ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 >
+      au < ready ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 >
       au < testing ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 >
       au < expected ; 2012 ; 8 ; Kalíope Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Kalíope Volume 2013 ; 2013 >
@@ -639,19 +639,19 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = metropole
 
-      au < testing ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
+      au < ready ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
       au < testing ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
+      au < ready ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
       au < testing ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
+      au < ready ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
       au < testing ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
+      au < ready ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
       au < testing ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
       au < testing ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
       au < testing ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
+      au < ready ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
       au < testing ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
       au < testing ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 >
 
@@ -668,8 +668,8 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = nexi
 
-      au < testing ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 >
 
   }
@@ -685,14 +685,14 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = nures
 
-      au < testing ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
+      au < ready ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
       au < testing ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 >
+      au < ready ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 >
 
   }
@@ -725,21 +725,21 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = pensamentorealidade
 
-      au < testing ; 1998 ; 1 ; Pensamento & Realidade Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 2 ; Pensamento & Realidade Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 3 ; Pensamento & Realidade Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 4 ; Pensamento & Realidade Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 5 ; Pensamento & Realidade Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 6 ; Pensamento & Realidade Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 7 ; Pensamento & Realidade Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 8 ; Pensamento & Realidade Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 9 ; Pensamento & Realidade Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 10 ; Pensamento & Realidade Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 11 ; Pensamento & Realidade Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 12 ; Pensamento & Realidade Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 13 ; Pensamento & Realidade Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 14 ; Pensamento & Realidade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 15 ; Pensamento & Realidade Volume 2012 ; 2012 >
+      au < ready ; 1998 ; 1 ; Pensamento & Realidade Volume 1998 ; 1998 >
+      au < ready ; 1999 ; 2 ; Pensamento & Realidade Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 3 ; Pensamento & Realidade Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 4 ; Pensamento & Realidade Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 5 ; Pensamento & Realidade Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 6 ; Pensamento & Realidade Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 7 ; Pensamento & Realidade Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 8 ; Pensamento & Realidade Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 9 ; Pensamento & Realidade Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 10 ; Pensamento & Realidade Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 11 ; Pensamento & Realidade Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 12 ; Pensamento & Realidade Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 13 ; Pensamento & Realidade Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 14 ; Pensamento & Realidade Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 15 ; Pensamento & Realidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 16 ; Pensamento & Realidade Volume 2013 ; 2013 >
 
   }
@@ -882,7 +882,7 @@
 
       au < exists ; 2008 ; 1 ; Revista Eletrônica da Faculdade de Direito Volume 2008 ; 2008 >
       au < exists ; 2009 ; 2 ; Revista Eletrônica da Faculdade de Direito Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 >
+      au < ready ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 >
       au < expected ; 2011 ; 4 ; Revista Eletrônica da Faculdade de Direito Volume 2011 ; 2011 >
       au < expected ; 2012 ; 5 ; Revista Eletrônica da Faculdade de Direito Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Revista Eletrônica da Faculdade de Direito Volume 2013 ; 2013 >
@@ -921,7 +921,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = rever
 
-      au < testing ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 >
       au < testing ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Rever: Revista de Estudos da Religião Volume 2013 ; 2013 >
 
@@ -938,10 +938,10 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = revlael
 
-      au < testing ; 2009 ; 1 ; Revista l@el em (dis-)curso Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Revista l@el em (dis-)curso Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 >
+      au < ready ; 2009 ; 1 ; Revista l@el em (dis-)curso Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 2 ; Revista l@el em (dis-)curso Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista l@el em (dis-)curso Volume 2013 ; 2013 >
 
   }
@@ -957,14 +957,14 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = revph
 
-      au < testing ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 >
-      au < testing ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 >
-      au < testing ; 1984 ; 3 ; Projeto História Volume 1984 ; 1984 >
-      au < testing ; 1985 ; 4 ; Projeto História Volume 1985 ; 1985 >
-      au < testing ; 1986 ; 5 ; Projeto História Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
-      au < testing ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
+      au < ready ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 >
+      au < ready ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 >
+      au < ready ; 1984 ; 3 ; Projeto História Volume 1984 ; 1984 >
+      au < ready ; 1985 ; 4 ; Projeto História Volume 1985 ; 1985 >
+      au < ready ; 1986 ; 5 ; Projeto História Volume 1986 ; 1986 >
+      au < ready ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
+      au < ready ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
+      au < ready ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
       au < testing ; 1994 ; 9 ; Projeto História Volume 1994 ; 1994 >
       au < testing ; 1995 ; 10 ; Projeto História Volume 1995 ; 1995 >
       au < testing ; 1996 ; 11 ; Projeto História Volume 1996 ; 1996 >
