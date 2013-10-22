@@ -368,12 +368,12 @@
       au < ready ; 2004 ; 6 ; Educação Matemática Pesquisa Volume 2004 ; 2004 >
       au < ready ; 2005 ; 7 ; Educação Matemática Pesquisa Volume 2005 ; 2005 >
       au < ready ; 2006 ; 8 ; Educação Matemática Pesquisa Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Educação Matemática Pesquisa Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Educação Matemática Pesquisa Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 11 ; Educação Matemática Pesquisa Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 12 ; Educação Matemática Pesquisa Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 13 ; Educação Matemática Pesquisa Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 14 ; Educação Matemática Pesquisa Volume 2012 ; 2012 >
+      au < ready ; 2007 ; 9 ; Educação Matemática Pesquisa Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 10 ; Educação Matemática Pesquisa Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 11 ; Educação Matemática Pesquisa Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 12 ; Educação Matemática Pesquisa Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 13 ; Educação Matemática Pesquisa Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 14 ; Educação Matemática Pesquisa Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Educação Matemática Pesquisa Volume 2013 ; 2013 >
 
   }
@@ -425,8 +425,8 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = e-verbo
 
-      au < testing ; 2011 ; 1 ; E-Verbo Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; E-Verbo Volume 2012 ; 2012 >
+      au < ready ; 2011 ; 1 ; E-Verbo Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 2 ; E-Verbo Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; E-Verbo Volume 2013 ; 2013 >
 
   }
@@ -443,8 +443,8 @@
       param[journal_id] = fronteiraz
 
       au < testing ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
+      au < ready ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
       au < testing ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 >
       au < testing ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; FronteiraZ Volume 2013 ; 2013 >
@@ -462,18 +462,18 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = galaxia
 
-      au < testing ; 2001 ; 1 ; Galáxia Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 2 ; Galáxia Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 3 ; Galáxia Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 4 ; Galáxia Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 5 ; Galáxia Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 >
+      au < ready ; 2001 ; 1 ; Galáxia Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 2 ; Galáxia Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 3 ; Galáxia Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 4 ; Galáxia Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 5 ; Galáxia Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 >
+      au < ready ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 >
       au < testing ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 >
       au < testing ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 >
       au < testing ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 >
 
   }
@@ -547,9 +547,9 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = intercambio
 
-      au < testing ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
+      au < ready ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
+      au < ready ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
       au < testing ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
       au < testing ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
       au < testing ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
