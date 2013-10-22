@@ -51,7 +51,8 @@
     au < manifest ; exists ; 2008-2009 ; Archaeology International Volume 12 ; 12 ; 2008 >
     au < crawling ; exists ; 2009-2011 ; Archaeology International Volume 13/14 ; 13/14 ; 2009 >
     au < crawling ; exists ; 2011-2012 ; Archaeology International Volume 15 ; 15 ; 2011 >
-    au < manifest ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2012 >
+    au < expected ; exists ; 2012-2013 ; Archaeology International Volume 16 ; 16 ; 2013 >
+    au < expected ; exists ; 2013-2014 ; Archaeology International Volume 17 ; 17 ; 2014 >
   
   }
   
@@ -66,6 +67,7 @@
     param[journal_id] = ah
 
     au < exists ; exists ; 2013 ; Architectural Histories Volume 1 ; 1 ; 2013 >
+    au < expected ; exists ; 2014 ; Architectural Histories Volume 2 ; 2 ; 2014 >
     
   }
   
@@ -112,9 +114,27 @@
     au < notReady ; exists ; 2011 ; The Bulletin of the History of Archaeology Volume 21 ; 21 ; 2011 >
     au < manifest ; exists ; 2012 ; The Bulletin of the History of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; The Bulletin of the History of Archaeology Volume 23 ; 23 ; 2013 >
+    au < expected ; exists ; 2014 ; The Bulletin of the History of Archaeology Volume 24 ; 24 ; 2014 >
     
   }
   
+  {
+  
+    title < 
+      name = The Comics Grid: Journal of Comics Scholarship ;
+      eissn = 2048-0792
+    >
+    
+    param[base_url] = http://www.comicsgrid.com/
+    param[journal_id] = cg
+
+    au < expected ; exists ; 2011 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
+    au < expected ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
+    au < exists ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2013 >
+    au < expected ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2014 >
+    
+  }
+
   {
   
     title < 
@@ -140,9 +160,29 @@
     au < released ; manifest ; 2011 ; The Journal of Conservation and Museum Studies Volume 9 ; 9 ; 2011 >
     au < released ; manifest ; 2012 ; The Journal of Conservation and Museum Studies Volume 10 ; 10 ; 2012 >
     au < crawling ; exists ; 2013 ; The Journal of Conservation and Museum Studies Volume 11 ; 11 ; 2013 >
+    au < expected ; exists ; 2014 ; The Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2013 >
     
   }
   
+  {
+  
+    title < 
+      name = Journal of European Psychology Students ;
+      eissn = 2222-6931
+    >
+    
+    param[base_url] = http://jeps.efpsa.org/
+    param[journal_id] = jeps
+    comment[0] = no issue in 2011
+
+    au < exists ; exists ; 2009 ; The Comics Grid: Journal of Comics Scholarship Volume 1 ; 1 ; 2011 >
+    au < exists ; exists ; 2010 ; The Comics Grid: Journal of Comics Scholarship Volume 2 ; 2 ; 2012 >
+    au < exists ; exists ; 2012 ; The Comics Grid: Journal of Comics Scholarship Volume 3 ; 3 ; 2012 >
+    au < exists ; exists ; 2013 ; The Comics Grid: Journal of Comics Scholarship Volume 4 ; 4 ; 2013 >
+    au < expected ; exists ; 2014 ; The Comics Grid: Journal of Comics Scholarship Volume 5 ; 5 ; 2014 >
+    
+  }
+
   {
   
     title < 
@@ -152,12 +192,40 @@
     
     param[base_url] = http://openarchaeologydata.metajnl.com/
     param[journal_id] = joad
-    plugin = needs.plugin
-    
-    comment[0] = Not OJS2. 
 
     au < exists ; exists ; 2012 ; The Journal of Open Archaeology Data Volume 1 ; 1 ; 2012 >
-    au < expected ; exists ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < exists ; exists ; 2013 ; The Journal of Open Archaeology Data Volume 2 ; 2 ; 2013 >
+    au < expected ; exists ; 2014 ; The Journal of Open Archaeology Data Volume 3 ; 3 ; 2014 >
+
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Open Public Health Data ;
+      eissn = 2053-2407 
+    >
+    
+    param[base_url] = http://openpublichealthdata.metajnl.com/
+    param[journal_id] = jophd
+    
+    au < exists ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
+
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Open Psychology Data ;
+      eissn = 2050-9863 
+    >
+    
+    param[base_url] = http://openpsychologydata.metajnl.com/
+    param[journal_id] = jopd
+    
+    au < exists ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -170,10 +238,10 @@
     
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
-    plugin = needs.plugin
-
-    comment[0] = forthcoming, no articles online yet. Doesn't seem to be OJS2.
     
+    au < exists ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
+
   }
   
   {
@@ -201,6 +269,7 @@
     au < released ; manifest ; 2011 ; Opticon1826 Volume 10-11 ; 10-11 ; 2011 >
     au < released ; manifest ; 2012 ; Opticon1826 Volume 12 ; 12 ; 2012 >
     au < crawling ; exists ; 2013 ; Opticon1826 Volume 13 ; 13 ; 2013 >
+    au < expected ; exists ; 2014 ; Opticon1826 Volume 14 ; 14 ; 2014 >
     
   }
   
@@ -251,6 +320,7 @@
     au < released ; manifest ; 2011 ; Papers from the Institute of Archaeology Volume 21 ; 21 ; 2011 >
     au < manifest ; exists ; 2012 ; Papers from the Institute of Archaeology Volume 22 ; 22 ; 2012 >
     au < crawling ; exists ; 2013 ; Papers from the Institute of Archaeology Volume 23 ; 23 ; 2013 >
+    au < expected ; exists ; 2014 ; Papers from the Institute of Archaeology Volume 24 ; 24 ; 2014 >
     
   }
   
@@ -276,9 +346,26 @@
     au < released ; manifest ; 2011 ; Present Pasts Volume 3 ; 3 ; 2011 >
     au < released ; manifest ; 2012 ; Present Pasts Volume 4 ; 4 ; 2012 >
     au < crawling ; exists ; 2013 ; Present Pasts Volume 5 ; 5 ; 2013 >
+    au < expected ; exists ; 2014 ; Present Pasts Volume 6 ; 6 ; 2014 >
     
   }
 
+  {
+  
+    title < 
+      name = Secularism and Nonreligion ;
+      eissn = 2053-6712 
+    >
+    
+    param[base_url] = http://www.secularismandnonreligion.org/
+    param[journal_id] = snr
+    
+    au < exists ; exists ; 2012 ; The Journal of Open Research Software Volume 1 ; 1 ; 2012 >
+    au < exists ; exists ; 2013 ; The Journal of Open Research Software Volume 2 ; 2 ; 2013 >
+    au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 3 ; 3 ; 2014 >
+
+  }
+  
   {
   
     title < 
@@ -291,6 +378,7 @@
 
     au < crawling ; exists ; 2012 ; Stability: International Journal of Security & Development Volume 1 ; 1 ; 2012 >
     au < crawling ; exists ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
+    au < expected ; exists ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 >
     
   }
 
