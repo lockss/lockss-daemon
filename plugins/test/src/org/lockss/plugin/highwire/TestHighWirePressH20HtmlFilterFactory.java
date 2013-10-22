@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.16 2013-10-18 00:00:55 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.17 2013-10-22 23:32:39 etenbrink Exp $
  */
 
 /*
@@ -378,6 +378,28 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "</ul>" +
       " " +
       " </div>";
+  
+  private static final String gswHeader =
+      "<div id=\"header\">\n" + 
+      "<div id=\"gsw-top-container\">\n" + 
+      "<div id=\"gsw-head\">\n" + 
+      "<div id=\"gsw-logo-and-buttons\">\n" + 
+      "<a href=\"http://www.geoscienceworld.org\" id=\"gsw-logo\"><span>GeoScienceWorld</span></a>\n" + 
+      "<div id=\"gsw-quick-search\">\n" + 
+      "<h3>Quick search</h3>            \n" + 
+      "</div>\n" + 
+      "</div>\n" + 
+      "<div class=\"inst-branding\"></div>\n" + 
+      "</div>\n" + 
+      "</div>\n" + 
+      "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" + 
+      "</div>";
+  
+  private static final String gswHeaderFiltered =
+      "<div id=\"header\">\n" +
+      "<div id=\"gsw-top-container\"> </div>\n" +
+      "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" +
+      "</div>";
 
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
@@ -395,6 +417,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withCol4SquareAds, withoutCol4SquareAds);
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
     assertFilterToSame(viewingDate, viewingDateFiltered);
+    assertFilterToSame(gswHeader, gswHeaderFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
@@ -405,14 +428,17 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToString(col3Html, col3Filtered);
   }
 
-  private void assertFilterToSame(String str1, String Str2) throws Exception {
+  private void assertFilterToSame(String str1, String str2) throws Exception {
 
     InputStream inA = fact.createFilteredInputStream(mau, new StringInputStream(str1),
         Constants.DEFAULT_ENCODING);
-    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(Str2),
+    InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(str2),
         Constants.DEFAULT_ENCODING);
-    assertEquals(StringUtil.fromInputStream(inA),
-        StringUtil.fromInputStream(inB));
+    String a = StringUtil.fromInputStream(inA);
+    String b = StringUtil.fromInputStream(inB);
+    assertEquals(a, b);
+//    assertEquals(StringUtil.fromInputStream(inA),
+//        StringUtil.fromInputStream(inB));
   }
 
 //Don't put the 2nd string through the filter - use it as a constant
