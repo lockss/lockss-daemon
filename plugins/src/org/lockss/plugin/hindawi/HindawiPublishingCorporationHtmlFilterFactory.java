@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.15 2013-10-22 20:51:20 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.16 2013-10-22 23:31:29 thib_gc Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.hindawi;
 
 import java.io.*;
+import java.util.*;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
@@ -73,7 +74,11 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
                                                             encoding,
                                                             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
 
-    HtmlTagFilter afterRemovingTags = new HtmlTagFilter(FilterUtil.getReader(afterHtmlParser, encoding), new TagPair("<", ">"));
+    List<TagPair> tagPairs = Arrays.asList(new TagPair("<br /><a href=\"http://dx.doi.org/", "</pre>"),
+                                           new TagPair("<br />doi:", "</pre>"),
+                                           new TagPair("<", ">"));
+    HtmlTagFilter afterRemovingTags = HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(afterHtmlParser, encoding),
+                                                                     tagPairs);
     WhiteSpaceFilter afterRemovingWhiteSpace = new WhiteSpaceFilter(afterRemovingTags);
     return new ReaderInputStream(afterRemovingWhiteSpace);
   }

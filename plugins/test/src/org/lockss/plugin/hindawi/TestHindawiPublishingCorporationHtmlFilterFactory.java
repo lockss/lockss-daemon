@@ -1,5 +1,5 @@
 /*
- * $Id: TestHindawiPublishingCorporationHtmlFilterFactory.java,v 1.10 2013-10-22 20:51:22 thib_gc Exp $
+ * $Id: TestHindawiPublishingCorporationHtmlFilterFactory.java,v 1.11 2013-10-22 23:31:30 thib_gc Exp $
  */
 
 /*
@@ -57,8 +57,8 @@ public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTes
   };
   
   private static final String[] PRE_TAGS = {
-    "<pre>Journal of Foo<br/>Volume 1 (2001), Issue 2, Pages 33-44</pre>",
-    "<pre>Journal of Foo<br />Volume 1 (2001), Issue 2, Pages 33-44</pre>",
+    "<pre>Journal of Foo<br />Volume 1 (2001), Issue 2, Pages 33-44<br /><a href=\"http://dx.doi.org/10.1155/2001/123456\">http://dx.doi.org/10.1155/2001/123456</a></pre>",
+    "<pre>Journal of Foo<br />Volume 1 (2001), Issue 2, Pages 33-44<br />doi:10.1155/2001/123456</pre>",
   };
   
   private static final String[] LICENSE_STATEMENTS = {
