@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.47 2013-10-18 00:07:20 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.48 2013-10-22 23:42:17 etenbrink Exp $
  */
 
 /*
@@ -155,6 +155,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
         
+        // geoscienceworld.org
+        HtmlNodeFilters.tagWithAttribute("div", "id", "gsw-head"),
         // rmg.geoscienceworld.org
         HtmlNodeFilters.tagWithAttribute("a", "class", "hwac-institutional-logo"),
         //claymin.geoscienceworld.org
