@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationPdfFilterFactory.java,v 1.1 2013-10-16 01:42:34 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationPdfFilterFactory.java,v 1.2 2013-10-22 20:51:20 thib_gc Exp $
  */
 
 /*
@@ -131,8 +131,11 @@ public class HindawiPublishingCorporationPdfFilterFactory extends ExtractingPdfF
     int lastPageIndex = pdfDocument.getNumberOfPages() - 1;
     worker.process(pdfDocument.getPage(lastPageIndex).getPageTokenStream());
     if (worker.result) {
-      logger.debug3("Removing the last page");
+      logger.debug2("Removing the last page");
       pdfDocument.removePage(lastPageIndex);
+    }
+    else {
+      logger.debug2("Not removing the last page");
     }
   }
   

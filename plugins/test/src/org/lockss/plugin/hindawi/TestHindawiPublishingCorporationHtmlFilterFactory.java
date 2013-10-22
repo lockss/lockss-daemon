@@ -1,6 +1,10 @@
 /*
+ * $Id: TestHindawiPublishingCorporationHtmlFilterFactory.java,v 1.10 2013-10-22 20:51:22 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,287 +34,109 @@ package org.lockss.plugin.hindawi;
 
 import java.io.*;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.util.*;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 public class TestHindawiPublishingCorporationHtmlFilterFactory extends LockssTestCase {
+  
   private HindawiPublishingCorporationHtmlFilterFactory fact;
-  private MockArchivalUnit mau;
-
+  
   public void setUp() throws Exception {
     super.setUp();
     fact = new HindawiPublishingCorporationHtmlFilterFactory();
   }
   
- /* throws PluginException {
-      NodeFilter[] filters = new NodeFilter[] {
-      // Filter out <script> tags that seem to be edited often
-	    new TagNameFilter("script"),
-      // Filter out <div id="left_column">...</div>
-      HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
-      // ASP cookies; once without '__', now with  
-      HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE"),
-      HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
-      // ASP cookies; once without '__', now with  
-      HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
-      HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-  };*/
-  //Example instances mostly from pages of strings of HTMl that should be filtered
-  //and the expected post filter HTML strings.
+  private static final String[] DOCTYPE_STATEMENTS = {
+    "<!DOCTYPE html>",
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD MathML 2.0//EN\" \"http://www.w3.org/Math/DTD/mathml2/mathml2.dtd\">",
+  };
   
-  private static final String scriptHtml =
-		 "<script type=\"text/javascript\"></script>";
-  private static final String scriptHtmlFiltered =
-  		 "";
+  private static final String[] HTML_TAGS = {
+    "<html xmlns=\"http://www.w3.org/1999/xhtml\">",
+    "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">",
+  };
   
-  private static final String stuffScriptHtml =
-		 "<body>" +
-		 "<script type=\"text/javascript\">!!!</script>" +
-		 "</body>";
-  private static final String stuffScriptHtmlFiltered =
-	  	 "<body>" +
-		 "</body>";
+  private static final String[] PRE_TAGS = {
+    "<pre>Journal of Foo<br/>Volume 1 (2001), Issue 2, Pages 33-44</pre>",
+    "<pre>Journal of Foo<br />Volume 1 (2001), Issue 2, Pages 33-44</pre>",
+  };
   
-  private static final String stuffScriptStuffHtml =
-		  "<header> \"Stuff\" </header>" +
-          "<img scr= \"http://images.jpg\"/>" +
-          "<script type=\"text/javascript\">!!!</script>" +
-          "<div class=\"logo\"></div>" +
-          "<a href=\"/\" id=\"ctl00_logourl\"></a>" +
-          "<script type=\"text/javascript\">!!!</script>" +
-          "<div id=\"blah\"></div>";	  
-  private static final String stuffScriptStuffHtmlFiltered =
-		  "<header>\"Stuff\" </header>" +
-		  "<img scr= \"http://images.jpg\"/>" +
-		  "<div class=\"logo\"></div>" +
-          "<a href=\"/\" id=\"ctl00_logourl\"></a>" +	  
-		  "<div id=\"blah\"></div>";
+  private static final String[] LICENSE_STATEMENTS = {
+    "<p>Copyright &copy; 2001 Author N. One et al. This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</p>",
+    "<p>Copyright &copy; 2001 Author N. One et al. This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. </p>",
+  };
   
-  private static final String leftColumnHtml =
-		"<div class=\"left_column\"><div id=\"left_column\" class=\"InnerRight\">\n" +
-  		"Foo bar</div></div>";
-  private static final String leftColumnHtmlFiltered =
-		  "<div class=\"left_column\"></div>";
+  private static final String[] XML_CONTENTS_TAGS = {
+    "<div class=\"xml-content\">",
+    "<div id=\"divXMLContent\" class=\"xml-content\">",
+    "<div id=\"ctl00_ContentPlaceHolder1_divXMLContent\" class=\"xml-content\">",
+  };
   
-  private static final String viewStateHtml =
-		"<input id=\"VIEWSTATE\">";
-  private static final String viewStateHtmlFiltered =
-		  "";
+  private static final String PAGE_TEMPLATE =
+      "@DOCTYPE_STATEMENT\n" +
+      "@HTML_TAG\n" +
+      "<head>\n" +
+      "  <meta charset=\"UTF-8\" />\n" +
+      "  <title>!!!title!!!</title>\n" +
+      "  <link href=\"/stylesheet1.css\" rel=\"stylesheet\" type=\"text/css\" />\n" +
+      "  <meta name=\"key1\" content=\"value1\"/>\n" + 
+      "  <script type=\"text/javascript\" src=\"/script1.js\" />\n" + 
+      "  <script type=\"text/javascript\">!!!javascript!!!</script>\n" + 
+      "</head>\n" +
+      "<body>\n" +
+      "  <div id=\"container\">\n" +
+      "    <div id=\"site_head\">!!!site_head!!!</div>\n" +
+      "    <div id=\"dvLinks\" class=\"hindawi_links\">!!!dvLinks!!!</div>\n" +
+      "    <div id=\"ctl00_dvLinks\" class=\"hindawi_links\">!!!ctl00_dvLinks!!!</div>\n" +
+      "    <div id=\"banner\">!!!banner!!!</div>\n" +
+      "    <div id=\"journal_navigation\">!!!journal_navigation!!!</div>\n" +
+      "    <div id=\"content\">\n" +
+      "      <div id=\"left_column\">!!!left_column!!!</div>\n" +
+      "      <div id=\"middle_content\">\n" + 
+      "        <div class=\"right_column_actions\">!!!right_column_actions!!!</div>" +
+      "        <div>\n" + 
+      "          @PRE_TAG\n" + 
+      "          <div class=\"article_type\">Research Article</div>\n" +
+      "          <h2>!!!h2!!!</h2>\n" +
+      "          <div class=\"author_gp\">!!!author_gp!!!</div>\n" +
+      "          <p>!!!_author_affiliations!!!</p>\n" +
+      "          <p>Received 1 January 2001; Accepted 15 January 2001</p>\n" +
+      "          <p>Academic Editor: John Q. Smith </p>\n" +
+      "          <div class=\"xml-content\">@LICENSE_STATEMENT</div>\n" +
+      "          @XML_CONTENT_TAG!!!_article_contents!!!</div>\n" +
+      "        </div>\n" +
+      "      </div>\n" +
+      "    </div>\n" +
+      "    <div class=\"footer_space\">!!!footer_space!!!</div>\n" +
+      "  </div>\n" +
+      "  <div id=\"footer\">!!!footer!!!</div>\n" +
+      "</body>\n" +
+      "</html>\n";
   
-  private static final String viewState2Html =
-		"<input id=\"__VIEWSTATE\" value=\"__VIEWSTATE\">";
-  private static final String viewState2HtmlFiltered =
-		  "";
-  
-  private static final String eventValidationHtml =
-		"<input id=\"EVENTVALIDATION\" value=\"EVENTVALIDATION\">";
-		  
-  private static final String eventValidationHtmlFiltered =
-		  "";
-  
-  private static final String eventValidation2Html =
-		"<input id=\"__EVENTVALIDATION\" value=\"__EVENTVALIDATION\">";
-			  
-  private static final String eventValidation2HtmlFiltered =
-		  "";
-  
-  private static final String cleaningUpHeaderStuffHtml = 
-      "<!DOCTYPE html PUBLIC \"-//W3C//DTD MathML 2.0//EN\" \"http://www.w3.org/Math/DTD/mathml2/mathml2.dtd\">" +
-          "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">" +
-          "<head id=\"ctl00_Header\">" +
-          "<title>Commentary: Personal computers&#x2013;valuable tools or expensive luxuries? </title>\">" +
-          "</head></html>";
+  private static final String RESULT = " Journal of FooVolume 1 (2001), Issue 2, Pages 33-44 Research Article !!!h2!!! !!!author_gp!!! !!!_author_affiliations!!! Received 1 January 2001; Accepted 15 January 2001 Academic Editor: John Q. Smith Copyright &copy; 2001 Author N. One et al. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited. @XML_CONTENT_TAG!!!_article_contents!!! ";
 
-  private static final String cleaningUpHeaderStuffHtmlFiltered = 
-          "</html>";
-  
-  private static final String svgContentHtml = 
-      "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
-          "Coherency caption goes here" +
-          "<svg style=\"vertical-align:-3.39066pt;width:30.025px;\" " +
-          "id=\"M47\" height=\"16.299999\" version=\"1.1\" viewBox=\"0 0 30.025 16.299999\" width=\"30.025\" " +     
-          "xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\">" +
-          "<g transform=\"matrix(.017,0,0,-.017,.062,12.013)\"><use xlink:href=\"#x1D463\"/></g>" +
-          "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
-          "" +
-          "<g transform=\"matrix(.017,0,0,-.017,13.313,12.013)\"><use xlink:href=\"#x2F\"/></g><g transform=\"matrix(.017,0,0,-.017,20.316,12.013)\">" +
-          "<use xlink:href=\"#x1D6tFC\"/></g></svg>"; 
-
-  private static final String svgContentFiltered =
-      "</a></div><div class=\"groupcaption\"><b>Figure 10: </b>" +
-          "Coherency caption goes here";     
-
-  private static final String styleWidthHtml=
-      "<td align=\"center\" colspan=\"2\"><span style=\"width: 17.7875px;\">" +
-          "<svg style=\"vertical\">" +
-          "<g transform=\"matrix(.012,0,0,-.012,8.225,16.088)\"><use xlink:href=\"#x1D460\"/></g>" +
-          "</svg>" +
-          "</span></td>" +
-          "<td align=\"center\" colspan=\"2\">Bias</td>";
-  private static final String styleWidthFiltered=
-      "<td align=\"center\" colspan=\"2\"></td>" +
-          "<td align=\"center\" colspan=\"2\">Bias</td>";
-  
-  private static final String whiteSpaceAndCitationsHtmlOne=
-      "<p>Received 26 July 2011; Revised 14 October 2011; Accepted 4 November 2011</p>                " +
-          "<p>Academic Editor: Lebron Cooper</p>     <div class=\"xml-content\"><p>Copyright &#xa9; 2012 Blah." +
-          " This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">" +
-          "  Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium," +
-          " provided the original work is properly cited. " +
-          "          </p></div>" +
-          "<div id=\"divXMLContent\" class=\"xml-content\">" +
-          "        <h4>" +                                                                                                                                                
-          "            Linked References</h4>" +
-          ""+
-          "    <ol>" +
-          "" +
-          "<div class=\"right_column_actions\">" +
-          "<div id=\"article_list\">" +
-          "    <ul>" +
-          "            <li>" +
-          "                        <div class=\"icon_holder\">" +
-          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon1.svg\" type=\"image/svg+xml\">" +
-          "                            </object>" +
-          "                        </div>" +
-          "                        <a href=\"/journals/arp/2012/309219/citations/\" class=\"linked_ref\">" +
-          "                            Citations to this Article</a></li>" +
-          "                        <li>" +
-          "                        <div class=\"icon_holder\">" +
-          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon5.svg\" type=\"image/svg+xml\">" +
-          "                            </object>" +
-          "                        </div>" +
-          "                        <a href=\"/journals/arp/2012/309219/cta/\" class=\"how_to_cite\">" +
-          "                            How to Cite this Article</a></li>" +
-          "               " +
-          "                    <li>" +
-          "                        <div class=\"icon_holder\">" +
-          "                            <object height=\"100%\" width=\"100%\" data=\"/images/actions_icon10.svg\" type=\"image/svg+xml\">" +
-          "                            </object>" +
-          "                        </div>" +
-          "                        <a href=\"/journals/arp/si/426135/\" class=\"complete_s_i\">Complete Special Issue</a>" +
-          "                    </li>" +
-          "</ul></div></div>END";
-
-  
-  private static final String whiteSpaceAndCitationsHtmlTwo=
-      "<p>Received 26 July 2011; Revised 14 October 2011; Accepted 4 November 2011</p>                " +
-          "<p>Academic Editor: Lebron Cooper</p>     <div class=\"xml-content\"><p>Copyright &#xa9; 2012 Blah." +
-          " This is an open access article distributed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/3.0/\">" +
-          "  Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium," +
-          " provided the original work is properly cited. " +
-          "          </p></div>" +
-          "<div id=\"divXMLContent\" class=\"xml-content\">" +
-          "            <h4>Linked References</h4>" +
-          "" +
-          "    <ol>" +
-          "END";
-
-  
-  public void testScriptFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(scriptHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(scriptHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testStuffScriptFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(stuffScriptHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(stuffScriptHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-
-
-  public void testStuffScriptStuffFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(stuffScriptStuffHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(stuffScriptStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-
-
-  public void testLeftColumnFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(leftColumnHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(leftColumnHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testViewStateFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(viewStateHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(viewStateHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testViewState2Filtering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau, 
-        new StringInputStream(viewState2Html),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(viewState2HtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testEventValidationFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau, 
-        new StringInputStream(eventValidationHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(eventValidationHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testeventValidation2Filtering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(eventValidation2Html),
-        Constants.DEFAULT_ENCODING);
-    assertEquals(eventValidation2HtmlFiltered, StringUtil.fromInputStream(actIn));
-
-  }
-  
-  public void testHeaderFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(cleaningUpHeaderStuffHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(cleaningUpHeaderStuffHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
-  
-  public void testSVGContent() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(svgContentHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(svgContentFiltered, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testAutoWidth() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(styleWidthHtml),
-        Constants.DEFAULT_ENCODING);
-
-    assertEquals(styleWidthFiltered, StringUtil.fromInputStream(actIn));
-  } 
-  
-  public void testWhiteSpaceIssues() throws Exception {
-    InputStream actInOne = fact.createFilteredInputStream(mau,
-        new StringInputStream(whiteSpaceAndCitationsHtmlOne),
-        Constants.DEFAULT_ENCODING);
-    InputStream actInTwo = fact.createFilteredInputStream(mau,
-        new StringInputStream(whiteSpaceAndCitationsHtmlTwo),
-        Constants.DEFAULT_ENCODING);
+  public void testFilterWithTemplate() throws Exception {
+    String input = PAGE_TEMPLATE;
+    for (String doctypeStatement : DOCTYPE_STATEMENTS) {
+      for (String htmlTag : HTML_TAGS) {
+        for (String preTag : PRE_TAGS) {
+          for (String licenseStatement : LICENSE_STATEMENTS) {
+            for (String xmlContentsTag : XML_CONTENTS_TAGS) {
+              input = PAGE_TEMPLATE.replaceAll("@DOCTYPE_STATEMENT", doctypeStatement)
+                                   .replaceAll("@HTML_TAG", htmlTag)
+                                   .replaceAll("@PRE_TAG", preTag)
+                                   .replaceAll("@LICENSE_STATEMENT", licenseStatement)
+                                   .replaceAll("@XML_CONTENTS_TAG", xmlContentsTag);
+              InputStream actIn = fact.createFilteredInputStream(null,
+                                                                 new StringInputStream(input),
+                                                                 Constants.DEFAULT_ENCODING);
+              assertEquals(RESULT, StringUtil.fromInputStream(actIn));
+            }
+          }
+        }
+      }
+    }
     
-    assertEquals(StringUtil.fromInputStream(actInOne), StringUtil.fromInputStream(actInTwo));
   }
 
 }

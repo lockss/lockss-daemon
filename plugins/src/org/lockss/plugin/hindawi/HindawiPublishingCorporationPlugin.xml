@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
      	<string>Poll</string>
-	       <string>8</string>
+	       <string>9</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -164,6 +164,10 @@
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationPdfFilterFactory</string>
   </entry>
   <entry>
+    <string>application/octet-stream_filter_factory</string>
+    <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationOctetStreamFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationUrlNormalizer</string>
   </entry>
@@ -174,5 +178,4 @@
       <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
     </list>
   </entry>
-
 </map>

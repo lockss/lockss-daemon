@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.14 2013-10-16 01:42:34 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.15 2013-10-22 20:51:20 thib_gc Exp $
  */
 
 /*
@@ -33,14 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.hindawi;
 
 import java.io.*;
-import java.util.*;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
-import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -64,51 +62,20 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
         HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_dvLinks"), // old name
         HtmlNodeFilters.tagWithAttribute("div", "id", "banner"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "journal_navigation"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "footer_space"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "right_column_actions"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "footer_space"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // widget that used to appear
         HtmlNodeFilters.tagWithAttribute("div", "id", "dropmenudiv"),
-        // There used to be ASP-style forms, with or without "__", now gone altogether
-        HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE"),
-        HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
-        HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
-        HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-        // <svg> may be embedded in a <span>
-        HtmlNodeFilters.tagWithAttributeRegex("span", "style", "^width"),
-        };
-    InputStream htmlFilter = new HtmlFilterInputStream(in,
-                                                       encoding,
-                                                       HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    };
+    InputStream afterHtmlParser = new HtmlFilterInputStream(in,
+                                                            encoding,
+                                                            HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
 
-    Reader reader = FilterUtil.getReader(htmlFilter, encoding);
-    // consolidate white space before doing tagfilter stuff     
-    Reader WSReader = new WhiteSpaceFilter(reader);
-    Reader filtReader = makeFilteredReader(WSReader);
-    return new ReaderInputStream(filtReader);
+    HtmlTagFilter afterRemovingTags = new HtmlTagFilter(FilterUtil.getReader(afterHtmlParser, encoding), new TagPair("<", ">"));
+    WhiteSpaceFilter afterRemovingWhiteSpace = new WhiteSpaceFilter(afterRemovingTags);
+    return new ReaderInputStream(afterRemovingWhiteSpace);
   }
   
-  // Noisy whitespace has already been removed
-  static Reader makeFilteredReader(Reader reader) {
-    List tagList = ListUtil.list(
-        // Remove DOCTYPE declaration which seems to vary but is not a node in the DOM
-        new TagPair("<!DOCTYPE", ">", false, false),
-        new TagPair("<html", ">", false, false),
-        new TagPair("<br /><a href=\"http://dx.doi.org/10.1155/", "</pre>", false, false),
-        new TagPair("<br />doi:10.1155/", "</pre>", false, false),
-        new TagPair("<svg", "</svg>", true, false)
-    );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    String[][] findAndReplace = new String[][] { 
-        // out of sync - some versions have extraneous single spaces, so remove between tags
-        {"> <", "><"},
-        // remove leading space after tags (extra spaces will already have been consolidated down to one 
-        {"> ", ">"},
-    };
-    Reader stringFilter = StringFilter.makeNestedFilter(tagFilter,
-        findAndReplace, false);
-    return stringFilter;
-   }
-
 }
