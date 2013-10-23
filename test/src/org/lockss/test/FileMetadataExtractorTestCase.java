@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.7 2012-03-05 00:47:46 pgust Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.8 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -231,8 +231,7 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   }
       
   protected String resourceContent(String resname) throws IOException {
-    URL url = getClass().getResource(resname);
-    assertNotNull(resname + " missing.", url);
+    URL url = getResource(resname);
     InputStream istr = UrlUtil.openInputStream(url.toString());
     return StringUtil.fromInputStream(istr);
   }  

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSitemapParser.java,v 1.1 2013-03-27 22:18:23 ldoan Exp $
+ * $Id: TestSitemapParser.java,v 1.2 2013-10-23 04:25:24 tlipkis Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public void setUp() throws Exception {
   
   // Read the test sitemap file test_sitemap.xmlfrom current directory
   private InputStream getTestInputStream(String fileName) throws IOException {
-    InputStream xmlIn = getClass().getResourceAsStream(fileName);
+    InputStream xmlIn = getResourceAsStream(fileName);
     String xmlSitemap = StringUtil.fromInputStream(xmlIn);
     return IOUtils.toInputStream(xmlSitemap);
   }

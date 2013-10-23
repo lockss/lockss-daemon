@@ -1,5 +1,5 @@
 /*
- * $Id: FuncWarcRoundtrip.java,v 1.5 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncWarcRoundtrip.java,v 1.6 2013-10-23 04:25:24 tlipkis Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     InputStream in = null;
     OutputStream os = null;
     try {
-        in = this.getClass().getResourceAsStream(warcName);
+        in = getResourceAsStream(warcName);
         File of = new File(exportDir.getAbsolutePath() + File.separator + warcName);
         os = new FileOutputStream(of);
         byte[] buffer = new byte[4096];
@@ -217,7 +217,7 @@ public class FuncWarcRoundtrip extends LockssTestCase {
     InputStream in = null;
     OutputStream os = null;
     try {
-        in = this.getClass().getResourceAsStream(warcName);
+        in = getResourceAsStream(warcName);
         File of = new File(exportDir.getAbsolutePath() + File.separator + warcName);
         os = new FileOutputStream(of);
         byte[] buffer = new byte[4096];

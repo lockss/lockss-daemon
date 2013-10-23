@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropertyTree.java,v 1.3 2006-04-05 22:56:02 tlipkis Exp $
+ * $Id: TestPropertyTree.java,v 1.4 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -53,8 +53,7 @@ public class TestPropertyTree extends LockssTestCase {
   public void testPT() throws Exception {
     PropertyTree props = new PropertyTree();
 
-    URL url = getClass().getResource(TEST_FILE);
-    assertNotNull(TEST_FILE + " missing.", url);
+    URL url = getResource(TEST_FILE);
     InputStream istr = UrlUtil.openInputStream(url.toString());
 
     props.load(istr);

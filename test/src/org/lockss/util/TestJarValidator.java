@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.16 2008-03-31 22:34:42 edwardsb1 Exp $
+ * $Id: TestJarValidator.java,v 1.17 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -82,14 +82,13 @@ public class TestJarValidator extends LockssTestCase {
   private String dirNonExisting = "/aftae/gthua/hjtno/gueao/";
   private String fileExisting = "org/lockss/util/FileExisting";
 
-  private String pubKeystoreName = "org/lockss/test/public.keystore";
+  private String pubKeystoreName = "/org/lockss/test/public.keystore";
   private KeyStore m_pubKeystore;
 
   private KeyStore getKeystoreResource(String name, String pass)
       throws Exception {
     KeyStore ks = KeyStore.getInstance("JKS", "SUN");
-    ks.load(ClassLoader.getSystemClassLoader().
-	    getResourceAsStream(name), pass.toCharArray());
+    ks.load(getResourceAsStream(name), pass.toCharArray());
     return ks;
   }
 

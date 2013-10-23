@@ -1,5 +1,5 @@
 /*
- * $Id: TestArchiveMembers.java,v 1.9 2012-11-06 17:17:27 fergaloy-sf Exp $
+ * $Id: TestArchiveMembers.java,v 1.10 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public class TestArchiveMembers extends LockssTestCase {
   }
 
   List<String> readLinesFromResource(String resource) throws IOException {
-    InputStream urlsIn = this.getClass().getResourceAsStream(resource);
+    InputStream urlsIn = getResourceAsStream(resource);
     BufferedReader rdr = new BufferedReader(StringUtil.getLineReader(urlsIn));
     List<String> res = new ArrayList<String>();
     for (String line = rdr.readLine(); line != null; line = rdr.readLine()) {

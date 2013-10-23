@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaHtmlLinkRewriterFactory.java,v 1.1 2012-12-30 15:39:28 pgust Exp $
+ * $Id: TestIngentaHtmlLinkRewriterFactory.java,v 1.2 2013-10-23 04:25:25 tlipkis Exp $
  */
 
 /*
@@ -72,15 +72,15 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   static final String input_1 =
-    "org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_input_1.html";
+    "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_input_1.html";
   static final String output_1 = 
-    "org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_1.html";
+    "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_1.html";
   static final String output_2 = 
-      "org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_2.html";
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_2.html";
   static final String output_3 = 
-      "org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_3.html";
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_3.html";
   static final String output_4 = 
-      "org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_4.html";
+      "/org/lockss/plugin/ingenta/IngentaHtmlLinkRewriter_output_4.html";
   
   static final String baseInUrl =
       "http://www.ingentaconnect.com/content/manup/vcb/2004/00000005/00000001/art00001";
@@ -105,7 +105,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
     InputStream expected = null;
 
     try {
-      input = getClass().getClassLoader().getResourceAsStream(inRes);
+      input = getResourceAsStream(inRes);
       ServletUtil.LinkTransform xfm = new ServletUtil.LinkTransform() {
         @Override
         public String rewrite(String url) {
@@ -117,7 +117,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         mau, input, "UTF-8", 
         baseInUrl, 
         xfm);
-      expected = getClass().getClassLoader().getResourceAsStream(outRes);
+      expected = getResourceAsStream(outRes);
       String s_expected = StringUtil.fromInputStream(expected);
       String s_filtered = StringUtil.fromInputStream(filtered); 
       assertEquals(s_expected, s_filtered);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDocumentBuilderFactoryImpl.java,v 1.3 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestLockssDocumentBuilderFactoryImpl.java,v 1.4 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -82,8 +82,7 @@ public class TestLockssDocumentBuilderFactoryImpl extends LockssTestCase {
 
   // ensure proper services definition file is found on classpath
   public void testServiceFile() {
-    URL res = this.getClass().getResource(SERVICE_FILE);
-    assertNotNull("Didn't file resource: " + SERVICE_FILE, res);
+    URL res = getResource(SERVICE_FILE);
     assertMatchesRE("/lockss.jar", res.toString());
   }
 

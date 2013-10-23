@@ -1,5 +1,5 @@
 /*
- * $Id: TestAccountManager.java,v 1.7 2012-03-15 08:19:01 tlipkis Exp $
+ * $Id: TestAccountManager.java,v 1.8 2013-10-23 04:25:24 tlipkis Exp $
  */
 
 /*
@@ -310,7 +310,7 @@ public class TestAccountManager extends LockssTestCase {
 
   public void testUpdateV0Acct() throws Exception {
     File acctfile = new File(acctMgr.getAcctDir(), "v0acct");
-    InputStream is = this.getClass().getResourceAsStream("v0acct.xml");
+    InputStream is = getResourceAsStream("v0acct.xml");
     String orig = StringUtil.fromInputStream(is);
     FileTestUtil.writeFile(acctfile, orig);
     UserAccount acct = acctMgr.loadUser(acctfile);

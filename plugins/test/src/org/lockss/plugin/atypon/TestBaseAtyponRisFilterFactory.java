@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponRisFilterFactory.java,v 1.4 2013-08-30 20:07:39 alexandraohlson Exp $
+ * $Id: TestBaseAtyponRisFilterFactory.java,v 1.5 2013-10-23 04:25:25 tlipkis Exp $
  */
 /*
 
@@ -129,8 +129,6 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
       // BIB FILE - should be unchanged 
       file_input = getResourceAsStream(realFileBib);
       file_expected_input = getResourceAsStream(realFileBib); //identical
-      assertTrue(file_input != null);
-      assertTrue(file_expected_input != null);
       filteredInput = fact.createFilteredInputStream(mau, file_input, Constants.DEFAULT_ENCODING);
       string_expected = StringUtil.fromInputStream(file_expected_input); // unchanged from original
       string_filtered = StringUtil.fromInputStream(filteredInput); 
@@ -141,8 +139,6 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
       // MEDLARS FILE - should be unchanged 
       file_input = getResourceAsStream(realFileMedlars);
       file_expected_input = getResourceAsStream(realFileMedlars); //identical
-      assertTrue(file_input != null);
-      assertTrue(file_expected_input != null);
       filteredInput = fact.createFilteredInputStream(mau, file_input, Constants.DEFAULT_ENCODING);
       string_expected = StringUtil.fromInputStream(file_expected_input); //unchanged from original
       string_filtered = StringUtil.fromInputStream(filteredInput); 

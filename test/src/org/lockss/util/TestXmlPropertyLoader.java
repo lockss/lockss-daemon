@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.29 2011-05-11 06:35:26 pgust Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.30 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -74,8 +74,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    */
   private void parseXmlProperties() throws Exception {
     String file = "configtest.xml";
-    URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    URL url = getResource(file);
     InputStream istr = UrlUtil.openInputStream(url.toString());
 
     PropertyTree props = new PropertyTree();

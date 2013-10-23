@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.107 2013-04-09 18:03:26 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.108 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -1440,8 +1440,7 @@ public class TestPluginManager extends LockssTestCase {
   
   private File copyKeystoreFileToKnownLocation(String source) throws Exception {
     File keystoreFile = new File(tempDirPath, "copied.keystore");
-    InputStream in = ClassLoader.getSystemClassLoader().
-                     getResourceAsStream(source);
+    InputStream in = getResourceAsStream(source);
     StreamUtil.copy(in, new FileOutputStream(keystoreFile)); 
     return keystoreFile;
   }
@@ -1450,7 +1449,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr.startService();
     minimalConfig();
     File keystoreFile =
-      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+      copyKeystoreFileToKnownLocation("/org/lockss/test/public.keystore");
     KeyStore ks = mgr.initKeystore(keystoreFile.getAbsolutePath(),
                                    "f00bar");
     assertNotNull(ks);
@@ -1461,7 +1460,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr.startService();
     minimalConfig();
     File keystoreFile =
-      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+      copyKeystoreFileToKnownLocation("/org/lockss/test/public.keystore");
     KeyStore ks = mgr.initKeystore(keystoreFile.getAbsolutePath(),
                                    "f00barrrr"); // bad password
     assertNull(ks);
@@ -1488,7 +1487,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr.startService();
     minimalConfig();
     File keystoreFile =
-      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+      copyKeystoreFileToKnownLocation("/org/lockss/test/public.keystore");
     String keystoreUrl = keystoreFile.toURI().toURL().toExternalForm();
     KeyStore ks = mgr.initKeystore(keystoreUrl, "f00bar");
     assertNotNull(ks);
@@ -1499,7 +1498,7 @@ public class TestPluginManager extends LockssTestCase {
     mgr.startService();
     minimalConfig();
     File keystoreFile =
-      copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
+      copyKeystoreFileToKnownLocation("/org/lockss/test/public.keystore");
     String keystoreUrl = keystoreFile.toURI().toURL().toExternalForm();
     KeyStore ks = mgr.initKeystore(keystoreUrl, "f00barrrrr");
     assertNull(ks);

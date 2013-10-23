@@ -1,4 +1,4 @@
-/* $Id: TestMedknowSitemapLinkExtractorFactory.java,v 1.1 2013-06-04 22:40:34 ldoan Exp $
+/* $Id: TestMedknowSitemapLinkExtractorFactory.java,v 1.2 2013-10-23 04:25:25 tlipkis Exp $
  
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -132,7 +132,7 @@ public class TestMedknowSitemapLinkExtractorFactory
   // Read the test sitemap file test_sitemap.xmlfrom current directory
   // Prepare input stream for extractUrls()
   private InputStream getTestInputStream(String url) throws IOException {
-    InputStream xmlIn = getClass().getResourceAsStream(INPUT_SITEMAP_FILE_NAME);
+    InputStream xmlIn = getResourceAsStream(INPUT_SITEMAP_FILE_NAME);
     String xmlSitemap = StringUtil.fromInputStream(xmlIn);
     return IOUtils.toInputStream(xmlSitemap);
   }

@@ -1,4 +1,4 @@
-/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.3 2013-06-20 01:12:14 ldoan Exp $
+/* $Id: TestOJS2ArticleIteratorFactory.java,v 1.4 2013-10-23 04:25:24 tlipkis Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -256,7 +256,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   // Read the test TOC file test_toc_junit.html from current directory
   // Prepare input stream for UrlCacher storeContent() method
   private InputStream getTestTocInputStream() throws IOException {
-    InputStream htmlIn = getClass().getResourceAsStream("test_toc_junit.html");
+    InputStream htmlIn = getResourceAsStream("test_toc_junit.html");
     String absHtml = StringUtil.fromInputStream(htmlIn);
     return IOUtils.toInputStream(absHtml);
   }

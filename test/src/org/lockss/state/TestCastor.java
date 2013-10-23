@@ -1,5 +1,5 @@
 /*
- * $Id: TestCastor.java,v 1.1 2004-12-17 01:28:49 troberts Exp $
+ * $Id: TestCastor.java,v 1.2 2013-10-23 04:25:23 tlipkis Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class TestCastor extends LockssTestCase {
    * @return Mapping the loaded Mapping
    */
   Mapping loadMappingFile(String fileName) throws Exception {
-    URL mappingLoc = getClass().getResource(fileName);
+    URL mappingLoc = getResource(fileName);
 
     Mapping mapping = new Mapping();
     mapping.loadMapping(mappingLoc);

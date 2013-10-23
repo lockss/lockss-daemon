@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.10 2012-08-08 18:02:03 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.11 2013-10-23 04:25:24 tlipkis Exp $
  */
 
 /*
@@ -328,8 +328,8 @@ public class TestLockssKeyStore extends LockssTestCase {
   }
 
   public void testFromUrl() throws Exception {
-    String res = "org/lockss/test/public.keystore";
-    URL url = getClass().getClassLoader().getResource(res);
+    String res = "/org/lockss/test/public.keystore";
+    URL url = getResource(res);
     LockssKeyStore lk = createFromUrl("lkone", url.toExternalForm(),
 				      "f00bar", null);
     lk.load();

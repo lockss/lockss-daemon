@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.16 2012-07-17 08:49:04 tlipkis Exp $
+ * $Id: TestXmlStatusTable.java,v 1.17 2013-10-23 04:25:24 tlipkis Exp $
  */
 
 /*
@@ -134,8 +134,7 @@ public class TestXmlStatusTable extends LockssTestCase {
     // serialize it and compare to the expected file, statustest1.xml
     StringWriter wrtr = new StringWriter();
     XmlDomBuilder.serialize(tableDoc, wrtr);
-    URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    URL url = getResource(file);
     Reader rdr = new InputStreamReader(UrlUtil.openInputStream(url.toString()),
 				       Constants.DEFAULT_ENCODING);
     String exp = StringUtil.fromReader(rdr);

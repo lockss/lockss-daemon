@@ -177,7 +177,7 @@ public class TestMaffeyArticleIteratorFactory extends ArticleIteratorTestCase {
   }
 	
   private InputStream getAbsAlteredInputStream(String url) throws IOException {
-    InputStream htmlIn = getClass().getResourceAsStream("LibertasAbstract.html");
+    InputStream htmlIn = getResourceAsStream("LibertasAbstract.html");
     String absHtml = StringUtil.fromInputStream(htmlIn);
     return IOUtils.toInputStream(absHtml.replace("<Hello World/>","<meta name=\"citation_pdf_url\" content=\"" + url +"\">"));
   }

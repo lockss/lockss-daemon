@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceMetadataExtractorFactory.java,v 1.1 2013-06-28 03:01:03 ldoan Exp $
+/* $Id: TestAIPJatsSourceMetadataExtractorFactory.java,v 1.2 2013-10-23 04:25:25 tlipkis Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -163,7 +163,7 @@ public class TestAIPJatsSourceMetadataExtractorFactory
   private String getInputFile(String filename) {
     String jatsStr;
     try {
-      InputStream jatsIn = getClass().getResourceAsStream(filename);
+      InputStream jatsIn = getResourceAsStream(filename);
       jatsStr = StringUtil.fromInputStream(jatsIn);
     }
     catch (IOException e) {

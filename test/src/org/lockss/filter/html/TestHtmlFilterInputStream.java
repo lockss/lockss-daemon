@@ -286,8 +286,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
 				  "1000");
     String file = "charset-change3.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {
@@ -311,8 +310,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
 				  "0");
     String file = "charset-change3.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {
@@ -334,8 +332,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   
   public void testChangeCharsetBadCharLargeRange() throws Exception {
     String file = "charset-change3.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {
@@ -357,8 +354,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   
   public void testChangeCharsetBadCharLateChange() throws Exception {
     String file = "charset-change3.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {
@@ -384,8 +380,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_ENCODING_MATCH_RANGE,
 				  "0");
     String file = "charset-change3.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {
@@ -410,8 +405,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
 
   void doParseCharset() throws Exception {
     String file = "rewind-test.txt";
-    java.net.URL url = getClass().getResource(file);
-    assertNotNull(file + " missing.", url);
+    java.net.URL url = getResource(file);
     InputStream in = null;
     InputStream expin = null;
     try {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.3 2012-09-26 20:59:28 alexandraohlson Exp $
+ * $Id: TestHighWireJavaScriptLinkRewriterFactory.java,v 1.4 2013-10-23 04:25:25 tlipkis Exp $
  */
 
 /*
@@ -52,14 +52,14 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
   }
 
   static final String input_1 = 
-    "org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_input_1.html";
+    "/org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_input_1.html";
   static final String output_1 = 
-    "org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_output_1.html";
+    "/org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_output_1.html";
 
   static final String input_2 = 
-    "org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_input_1.html";
+    "/org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_input_1.html";
   static final String output_2 = 
-    "org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_output_2.html";
+    "/org/lockss/plugin/highwire/HighWireJavaScriptLinkRewriter_output_2.html";
 
   public void testCase1() throws Exception {
     InputStream input = null;
@@ -67,10 +67,10 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
     InputStream expected = null;
 
     try {
-    input = getClass().getClassLoader().getResourceAsStream(input_1);
+    input = getResourceAsStream(input_1);
     filtered = fact.createLinkRewriter("text/html", mau, input, "UTF-8", 
         "http://jid.sagepub.com/cgi/framedreprint/13/1/5", null);
-    expected = getClass().getClassLoader().getResourceAsStream(output_1);
+    expected = getResourceAsStream(output_1);
     String s_expected = StringUtil.fromInputStream(expected);
     String s_filtered = StringUtil.fromInputStream(filtered); 
     assertEquals(s_expected, s_filtered);
@@ -87,10 +87,10 @@ public class TestHighWireJavaScriptLinkRewriterFactory extends LockssTestCase {
     InputStream expected = null;
 
     try {
-    input = getClass().getClassLoader().getResourceAsStream(input_2);
+    input = getResourceAsStream(input_2);
     filtered = fact.createLinkRewriter("text/html", mau, input, "UTF-8", 
         "http://jid.sagepub.com/xyzzy/plugh", null);
-    expected = getClass().getClassLoader().getResourceAsStream(output_2);
+    expected = getResourceAsStream(output_2);
     String s_expected = StringUtil.fromInputStream(expected);
     String s_filtered = StringUtil.fromInputStream(filtered); 
     assertEquals(s_expected, s_filtered);
