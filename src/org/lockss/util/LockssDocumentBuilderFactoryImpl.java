@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.5 2008-02-15 09:16:44 tlipkis Exp $
+ * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.6 2013-10-23 04:19:51 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
   }
 
   /** Forward to real factory, set error handler */
+  @Override
   public DocumentBuilder newDocumentBuilder()
       throws ParserConfigurationException {
     DocumentBuilder db = fact.newDocumentBuilder();
@@ -67,116 +68,86 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
     return db;
   }
 
+  @Override
   public void setAttribute(String name, Object value) {
     fact.setAttribute(name, value);
   }
 
+  @Override
   public Object getAttribute(String name) {
     return fact.getAttribute(name);
   }
 
+  @Override
   public void setNamespaceAware(boolean awareness) {
     fact.setNamespaceAware(awareness);
   }
 
+  @Override
   public void setValidating(boolean validating) {
     fact.setValidating(validating);
   }
 
+  @Override
   public void setIgnoringElementContentWhitespace(boolean whitespace) {
     fact.setIgnoringElementContentWhitespace(whitespace);
   }
 
+  @Override
   public void setExpandEntityReferences(boolean expandEntityRef) {
     fact.setExpandEntityReferences(expandEntityRef);
   }
 
+  @Override
   public void setIgnoringComments(boolean ignoreComments) {
     fact.setIgnoringComments(ignoreComments);
   }
 
+  @Override
   public void setCoalescing(boolean coalescing) {
     fact.setCoalescing(coalescing);
   }
 
+  @Override
   public boolean isNamespaceAware() {
     return fact.isNamespaceAware();
   }
 
+  @Override
   public boolean isValidating() {
     return fact.isValidating();
   }
 
+  @Override
   public boolean isIgnoringElementContentWhitespace() {
     return fact.isIgnoringElementContentWhitespace();
   }
 
+  @Override
   public boolean isExpandEntityReferences() {
     return fact.isExpandEntityReferences();
   }
 
+  @Override
   public boolean isIgnoringComments() {
     return fact.isIgnoringComments();
   }
 
+  @Override
   public boolean isCoalescing() {
     return fact.isCoalescing();
   }
 
-  // Abstract methods added to DocumentBuilderFactory interface in 1.5.
-  // They must be implemented and proxied, but direct calls won't compile
-  // in 1.4, so invoke them using reflection.  Java 1.5 remove this?
-
-  static Class[] argsGetFeature = {String.class};
-
+  @Override
   public boolean getFeature(String name) throws ParserConfigurationException {
-//     return fact.getFeature(name);
-    try {
-      Object res
-	= invoke("getFeatureccc", argsGetFeature, new Object[] {name});
-      return ((Boolean)res).booleanValue();
-    } catch (InvocationTargetException e) {
-      if (e.getCause() instanceof ParserConfigurationException) {
-	throw (ParserConfigurationException)e.getCause();
-      }
-      if (e.getCause() instanceof RuntimeException) {
-	throw (RuntimeException)e.getCause();
-      }
-      throw new RuntimeException(e);
-    }
+    return fact.getFeature(name);
   }
 
-  static Class[] argsSetFeature = {String.class, Boolean.TYPE};
-
+  @Override
   public void setFeature(String name, boolean value)
       throws ParserConfigurationException {
-//     fact.setFeature(name, value);
-    try {
-      invoke("setFeature", argsSetFeature,
-	     new Object[] {name, Boolean.valueOf(value)});
-    } catch (InvocationTargetException e) {
-      if (e.getCause() instanceof ParserConfigurationException) {
-	throw (ParserConfigurationException)e.getCause();
-      }
-      if (e.getCause() instanceof RuntimeException) {
-	throw (RuntimeException)e.getCause();
-      }
-      throw new RuntimeException(e);
-    }
+    fact.setFeature(name, value);
   }
-
-  Object invoke(String method, Class[] argtypes, Object[] args)
-      throws InvocationTargetException {
-    try {
-      Method m = fact.getClass().getMethod(method, argtypes);
-      return m.invoke(fact, args);
-    } catch (NoSuchMethodException e) {
-      throw new RuntimeException(e);
-    } catch (IllegalAccessException e) {
-      throw new RuntimeException(e);
-    }
-  }
-
 
   // This error handler uses a Logger to log error messages
   static class MyErrorHandler implements ErrorHandler {
