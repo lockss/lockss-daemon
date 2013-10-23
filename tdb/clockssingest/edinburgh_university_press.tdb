@@ -337,15 +337,16 @@
      >
     comment[0] = Published by Cambridge in 2012
     param[journal_id] = epi
+    comment[down] = content no longer available on eup website
 
-    au < released ; crawling ; 2004 ; Episteme Volume 1 ; 1 >
-    au < released ; crawling ; 2005 ; Episteme Volume 2 ; 2 >
-    au < released ; crawling ; 2006 ; Episteme Volume 3 ; 3 >
-    au < released ; crawling ; 2007 ; Episteme Volume 4 ; 4 >
-    au < released ; crawling ; 2008 ; Episteme Volume 5 ; 5 >
-    au < released ; crawling ; 2009 ; Episteme Volume 6 ; 6 >
-    au < released ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
-    au < released ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
+    au < down ; crawling ; 2004 ; Episteme Volume 1 ; 1 >
+    au < down ; crawling ; 2005 ; Episteme Volume 2 ; 2 >
+    au < down ; crawling ; 2006 ; Episteme Volume 3 ; 3 >
+    au < down ; crawling ; 2007 ; Episteme Volume 4 ; 4 >
+    au < down ; crawling ; 2008 ; Episteme Volume 5 ; 5 >
+    au < down ; crawling ; 2009 ; Episteme Volume 6 ; 6 >
+    au < down ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
+    au < down ; crawling ; 2011 ; Episteme Volume 8 ; 8 >
 
   }
 
