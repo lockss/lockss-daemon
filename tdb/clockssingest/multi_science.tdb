@@ -266,7 +266,7 @@
     param[journal_issn] = 1759-3107
 
     au < released ; crawling ; 2010 ; International Journal of Hypersonics Volume 1 ; 1 >
-    au < manifest ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
+    au < crawling ; exists ; 2011 ; International Journal of Hypersonics Volume 2 ; 2 >
 
   }
 
@@ -535,8 +535,8 @@
     au < manifest ; exists ; 2008 ; Noise Notes Volume 7 ; 7 >
     au < manifest ; exists ; 2009 ; Noise Notes Volume 8 ; 8 >
     au < manifest ; exists ; 2010 ; Noise Notes Volume 9 ; 9 >
-    au < manifest ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
-    au < manifest ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
+    au < crawling ; exists ; 2011 ; Noise Notes Volume 10 ; 10 >
+    au < crawling ; exists ; 2012 ; Noise Notes Volume 11 ; 11 >
     au < crawling ; exists ; 2013 ; Noise Notes Volume 12 ; 12 >
     au < expected ; exists ; 2014 ; Noise Notes Volume 13 ; 13 >
 
