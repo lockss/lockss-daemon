@@ -1,6 +1,6 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.5 2013-01-10 21:35:25 ldoan Exp $
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.6 2013-10-23 21:42:13 etenbrink Exp $
  */
 
 /*
@@ -34,11 +34,15 @@
 package org.lockss.plugin.ojs2;
 
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.*;
 
 /*
@@ -58,6 +62,25 @@ public class OJS2HtmlMetadataExtractorFactory implements
 
   public static class OJS2HtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
+
+    private static Pattern OJS_DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
+
+    /*
+     * The representation of a DOI has key "citation_doi"
+     */
+    protected static final MetadataField OJS_DOI =
+        new MetadataField("doi", Cardinality.Single) {
+      @Override
+      public String validate(ArticleMetadata am, String val)
+          throws MetadataException.ValidationException {
+
+        Matcher m = OJS_DOI_PAT.matcher(val);
+        if(!m.matches()){
+          throw new MetadataException.ValidationException("Illegal DOI: " + val);
+        }
+        return val;
+      }
+    };
 
     // Map OJS2-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
@@ -88,7 +111,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
       tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
       //tagMap.put("citation_firstpage", MetadataField.DC_FIELD_CITATION_SPAGE);
       //tagMap.put("citation_lastpage", MetadataField.DC_FIELD_CITATION_EPAGE);
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("citation_doi", OJS_DOI);
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
             
     } // static
