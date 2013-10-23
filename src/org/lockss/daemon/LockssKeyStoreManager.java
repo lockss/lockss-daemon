@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.9 2010-11-29 07:25:09 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.10 2013-10-23 04:19:06 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class LockssKeyStoreManager
     loadKeyStores();
   }
 
-  public synchronized void setConfig(Configuration config,
+  public void setConfig(Configuration config,
 				     Configuration prevConfig,
 				     Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
