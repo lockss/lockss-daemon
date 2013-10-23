@@ -46,7 +46,7 @@ import org.lockss.plugin.simulated.*;
  */
 public class TestOJS2MetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestOJS2MetadataExtractor");
+  static Logger log = Logger.getLogger(TestOJS2MetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private SimulatedArchivalUnit sau; // Simulated AU to generate content
@@ -124,6 +124,7 @@ public class TestOJS2MetadataExtractor extends LockssTestCase {
   String goodJournalTitle = "Doctor Friendly's Fake Journal of Laughs";
   String goodISSN = "2213-056X";
   String goodEISSN = "2213-056X";
+  String goodDoi = "10.11566/cmoshmcj.v12i1.20";
   String goodVolume = "22";
   String goodIssue = "1";
   String goodStartPage = "3";
@@ -149,6 +150,7 @@ public class TestOJS2MetadataExtractor extends LockssTestCase {
       "<meta content=\"" + goodVolume + "\" name=\"citation_volume\" />" +
       "<meta content=\"" + goodIssue + "\" name=\"citation_issue\" />" +
       "<meta content=\"" + goodStartPage + "\" name=\"citation_firstpage\" />" +
+      "<meta content=\"" + goodDoi + "\" name=\"citation_doi\" />" +
       "<meta content=\"" + goodURL + "\" name=\"citation_public_url\" />";
 		
   /*
