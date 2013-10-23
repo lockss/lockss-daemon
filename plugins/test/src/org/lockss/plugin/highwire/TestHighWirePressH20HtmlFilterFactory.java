@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.17 2013-10-22 23:32:39 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.18 2013-10-23 22:42:23 etenbrink Exp $
  */
 
 /*
@@ -400,6 +400,46 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<div id=\"gsw-top-container\"> </div>\n" +
       "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" +
       "</div>";
+  
+  private static final String relatedHtml =
+      "<div id=\"header\">\n" +
+      "<div class=\"relmgr-relation related\" id=\"rel-related-article\">\n" + 
+      "<h2>Related Articles</h2>\n" + 
+      "<ul class=\"related-list\">\n" + 
+      "<li class=\"cit\">cite\n" + 
+      "</li>\n" + 
+      "</ul>\n" + 
+      "</div>\n" + 
+      "</div>";
+  
+  private static final String relatedHtmlFiltered =
+      "<div id=\"header\">\n</div>";
+  
+  private static final String citedHtml =
+      "<div id=\"header\">\n" +
+      "<div id=\"cited-by\" xmlns=\"http://www.w3.org/1999/xhtml\">\n" + 
+      "<h2>Articles citing this article</h2>\n" + 
+      "<ul class=\"cited-by-list\">\n" + 
+      "<li class=\"cit\">Cite Initiation</li>\n" + 
+      "</ul>\n" + 
+      "</div>" +
+      "</div>";
+  
+  private static final String citedHtmlFiltered =
+      "<div id=\"header\">\n</div>";
+  
+  private static final String socialHtml =
+      "<div id=\"header\">\n" +
+      "<div class=\"social-bookmarking\">\n" + 
+      "<ul class=\"social-bookmark-links\">\n" + 
+      "</ul>\n" + 
+      "<p class=\"social-bookmarking-help\"><a href=\"/help.dtl\">What's this?</a></p>\n" + 
+      "</div>" +
+      "</div>";
+  
+  private static final String socialHtmlFiltered =
+      "<div id=\"header\">\n</div>";
+  
 
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
@@ -418,6 +458,9 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(withCol4TowerAds, withoutCol4TowerAds);
     assertFilterToSame(viewingDate, viewingDateFiltered);
     assertFilterToSame(gswHeader, gswHeaderFiltered);
+    assertFilterToSame(relatedHtml, relatedHtmlFiltered);
+    assertFilterToSame(citedHtml, citedHtmlFiltered);
+    assertFilterToSame(socialHtml, socialHtmlFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
