@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.112 2013-06-26 04:47:59 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.113 2013-10-23 04:20:37 tlipkis Exp $
  */
 
 /*
@@ -258,14 +258,35 @@ public class LockssTestCase extends TestCase {
     System.setProperty(LockssRunnable.PARAM_THREAD_WDOG_EXIT_IMM, "true");
   }
 
-  /** Convenience method for test classes */
+  /** Convenience method for test classes to obtain a URL on a test file.
+   * @param name name of file in same directory as <tt>this</tt> (the code
+   * making this call), or a modified package name (dots replaced by
+   * slashes), interpreted as absolute if starts with shash, else relative
+   * to the package containing <tt>this</tt>.  If the resource is not
+   * found, an assertion failure will occur.
+   * @return The URL of the resource.  Null is never returned.
+   */
   protected URL getResource(String name) {
-    return getClass().getResource(name);
+    URL res = getClass().getResource(name);
+    String err = "Resource not found: " + name;
+    assertNotNull(err, res);
+    return res;
   }
 
-  /** Convenience method for test classes */
+  /** Convenience method for test classes to obtain an InputStream on a
+   * test file.
+   * @param name name of file in same directory as <tt>this</tt> (the code
+   * making this call), or a modified package name (dots replaced by
+   * slashes), interpreted as absolute if starts with shash, else relative
+   * to the package containing <tt>this</tt>.  If the resource is not
+   * found, an assertion failure will occur.
+   * @return An InputStream open on the resource.  Null is never returned.
+   */
   protected InputStream getResourceAsStream(String name) {
-    return getClass().getResourceAsStream(name);
+    InputStream res = getClass().getResourceAsStream(name);
+    String err = "Resource not found: " + name;
+    assertNotNull(err, res);
+    return res;
   }
 
   /** Overridden so we can can get ahold of the result object, in order to
