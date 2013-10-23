@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.48 2013-10-22 23:42:17 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.49 2013-10-23 22:48:41 etenbrink Exp $
  */
 
 /*
@@ -136,6 +136,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "col-3adverTower"),        
         // Filter for <div class="social-bookmarking"> 
         HtmlNodeFilters.tagWithAttribute("div", "class", "social-bookmarking"), 
+        // Related articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "rel-related-article"),
         // Normalize the probabilistic substitution of .short for .abstract
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "\\.(abstract|short)(\\?|$)"),   
         // Ahead-of-print markers eventually disappear (e.g. JBC)
