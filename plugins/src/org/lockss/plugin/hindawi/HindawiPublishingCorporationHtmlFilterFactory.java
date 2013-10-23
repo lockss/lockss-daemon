@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.16 2013-10-22 23:31:29 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.17 2013-10-23 01:13:03 thib_gc Exp $
  */
 
 /*
@@ -69,13 +69,21 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // widget that used to appear
         HtmlNodeFilters.tagWithAttribute("div", "id", "dropmenudiv"),
+        // In reference pages, links to Scopus, PubMed, etc. were added
+        HtmlNodeFilters.tagWithAttribute("span", "class", "reflinks"),
     };
     InputStream afterHtmlParser = new HtmlFilterInputStream(in,
                                                             encoding,
                                                             HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-
-    List<TagPair> tagPairs = Arrays.asList(new TagPair("<br /><a href=\"http://dx.doi.org/", "</pre>"),
+    List<TagPair> tagPairs = Arrays.asList(// DOCTYPE varies and may include entity embedded definitions
+                                           new TagPair("[><!ENTITY", ">"), // Extra '>' added spuriously by HtmlParser
+                                           new TagPair("<!DOCTYPE", ">"),
+                                           // SVG markup style changed over time
+                                           new TagPair("<svg", "</svg>"),
+                                           // DOI became a link
+                                           new TagPair("<br /><a href=\"http://dx.doi.org/", "</pre>"),
                                            new TagPair("<br />doi:", "</pre>"),
+                                           // Aggressive filtering
                                            new TagPair("<", ">"));
     HtmlTagFilter afterRemovingTags = HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(afterHtmlParser, encoding),
                                                                      tagPairs);
