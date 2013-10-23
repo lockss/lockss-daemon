@@ -224,8 +224,8 @@
     param[base_url] = http://openpsychologydata.metajnl.com/
     param[journal_id] = jopd
     
-    au < exists ; exists ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
-    au < expected ; exists ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
+    au < exists ; exists ; 2013 ; Journal of Open Psychology Data Volume 1 ; 1 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Open Psychology Data Volume 2 ; 2 ; 2014 >
 
   }
   
@@ -360,9 +360,9 @@
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
     
-    au < exists ; exists ; 2012 ; The Journal of Open Research Software Volume 1 ; 1 ; 2012 >
-    au < exists ; exists ; 2013 ; The Journal of Open Research Software Volume 2 ; 2 ; 2013 >
-    au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 3 ; 3 ; 2014 >
+    au < exists ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
+    au < exists ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
+    au < expected ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 
   }
   
