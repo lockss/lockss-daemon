@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.116 2013-10-17 07:51:54 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.117 2013-10-23 04:20:05 tlipkis Exp $
  */
 
 /*
@@ -1205,6 +1205,20 @@ public class StringUtil {
    */
   public static boolean isNullString(String s) {
     return s == null || s.length() == 0;
+  }
+
+  /**
+   * Test whether a string contains only 7-bit ascii characters
+   * @param s the string
+   * @return true if all chars in s are ascii
+   */
+  public static boolean isAscii(String s) {
+    for (int ix = 0; ix < s.length(); ix++) {
+      if (s.charAt(ix) > 0x7F) {
+	return false;
+      }
+    }
+    return true;
   }
 
   /**

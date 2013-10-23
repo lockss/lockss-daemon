@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.98 2013-10-17 07:51:54 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.99 2013-10-23 04:20:05 tlipkis Exp $
  */
 
 /*
@@ -649,6 +649,18 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue(StringUtil.isNullString(""));
     assertTrue(StringUtil.isNullString(new String()));
     assertFalse(StringUtil.isNullString(" "));
+  }
+
+  public void testIsAscii() {
+    try {
+      StringUtil.isAscii(null);
+      fail("isAscii(null) should throw");
+    } catch (NullPointerException e) {
+    }
+    assertTrue(StringUtil.isAscii(""));
+    assertTrue(StringUtil.isAscii("abczABCZ0129"));
+    assertTrue(StringUtil.isAscii(" &*()!@#$%-_\\|'\";:/?.>,<]}[{~`+="));
+    assertFalse(StringUtil.isAscii("entrée"));
   }
 
   void assertCopy(String exp, String orig, int from, int to, int len) {
