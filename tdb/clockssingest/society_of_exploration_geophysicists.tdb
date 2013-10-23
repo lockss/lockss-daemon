@@ -87,6 +87,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Geophysics Volume 76 ; 76 >
     au < doNotProcess ; doNotProcess ; 2012 ; Geophysics Volume 77 ; 77 >
     au < doNotProcess ; doNotProcess ; 2013 ; Geophysics Volume 78 ; 78 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Geophysics Volume 79 ; 79 >
     
   }
 
@@ -132,6 +133,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; The Leading Edge Volume 30 ; 30 >
     au < doNotProcess ; doNotProcess ; 2012 ; The Leading Edge Volume 31 ; 31 >
     au < doNotProcess ; doNotProcess ; 2013 ; The Leading Edge Volume 32 ; 32 >
+    au < doNotProcess ; doNotProcess ; 2014 ; The Leading Edge Volume 33 ; 33 >
 
   }
 
@@ -146,6 +148,7 @@
     param[journal_id] = inteio
 
     au < doNotProcess ; doNotProcess ; 2013 ; Interpretation Volume 1 ; 1 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Interpretation Volume 2 ; 2 >
 
    
   }
@@ -178,6 +181,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Environmental and Engineering Geophysics Volume 16 ; 16 >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Environmental and Engineering Geophysics Volume 17 ; 17 >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 >
    
   }
 
