@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.47 2013-01-06 02:56:02 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.48 2013-10-23 04:20:17 tlipkis Exp $
  */
 
 /*
@@ -622,9 +622,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public boolean doesPluginExist(String pname) {
     try {
-      log.critical("pname: " + pname);
-      URL u = this.getClass().getClassLoader().getResource(pluginFilename(pname));
-      log.critical("u: " + u);
+      URL u = getClass().getClassLoader().getResource(pluginFilename(pname));
       return u != null;
     } catch (Exception ex) {
       log.debug2("No XML plugin: " + pname, ex);
