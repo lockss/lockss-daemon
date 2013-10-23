@@ -1,6 +1,6 @@
 /*
 
- * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.6 2013-10-23 21:42:13 etenbrink Exp $
+ * $Id: OJS2HtmlMetadataExtractorFactory.java,v 1.7 2013-10-23 22:49:20 etenbrink Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class OJS2HtmlMetadataExtractorFactory implements
 
     private static Pattern OJS_DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
 
+    // TODO: Remove if this is updated in MetadataUtil
     /*
      * The representation of a DOI has key "citation_doi"
      */
