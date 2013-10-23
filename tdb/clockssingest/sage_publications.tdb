@@ -26151,19 +26151,19 @@
         au < exists ; exists ; 1997 ; Medico-Legal Journal Volume 65 ; 65 ; >
         au < exists ; exists ; 1998 ; Medico-Legal Journal Volume 66 ; 66 ; >
         au < exists ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
-        au < exists ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
-        au < exists ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
-        au < exists ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
-        au < exists ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
-        au < exists ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
-        au < exists ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
-        au < exists ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
-        au < exists ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
-        au < exists ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
-        au < exists ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
-        au < exists ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
-        au < exists ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
-        au < exists ; exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
+        au < manifest ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
+        au < manifest ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
+        au < manifest ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
+        au < manifest ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
+        au < manifest ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
+        au < manifest ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
+        au < manifest ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
+        au < manifest ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
+        au < crawling ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
+        au < crawling ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
+        au < crawling ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
+        au < crawling ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
+        au < released ; crawling ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
         au < exists ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
         au < expected ; exists ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; >
     
@@ -40291,40 +40291,6 @@
         au < exists ; exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 ; >
         au < crawling ; exists ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 ; >
         au < expected ; exists ; 2014 ; Medicine, Science and the Law Volume 54 ; 54 ; >
-  
-      }
-  
-    }
-  
-    {
-    
-      title <
-        name = Medico-Legal Journal ;
-        issn = 0025-8172 ;
-        eissn = 2042-1834
-      >
-  
-      {
-      
-        pluginSuffix = ClockssHighWirePressH20Plugin
-        param[base_url] = http://mlj.sagepub.com/
-  
-        au < exists ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 ; >
-        au < manifest ; exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 ; >
-        au < manifest ; exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 ; >
-        au < manifest ; exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 ; >
-        au < manifest ; exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 ; >
-        au < manifest ; exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 ; >
-        au < manifest ; exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 ; >
-        au < manifest ; exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 ; >
-        au < manifest ; exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 ; >
-        au < crawling ; exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 ; >
-        au < crawling ; exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 ; >
-        au < crawling ; exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 ; >
-        au < crawling ; exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 ; >
-        au < released ; crawling ; 2012 ; Medico-Legal Journal Volume 80 ; 80 ; >
-        au < exists ; exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 ; >
-        au < expected ; exists ; 2014 ; Medico-Legal Journal Volume 82 ; 82 ; >
   
       }
   
