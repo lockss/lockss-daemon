@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.66 2013-08-08 06:00:07 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.67 2013-10-23 04:19:34 tlipkis Exp $
  */
 
 /*
@@ -103,6 +103,167 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     File file1 = File.createTempFile("xxx", ".tmp", dir1);
     assertTrue(file1.exists());
     assertNull(null, file1.listFiles());
+  }
+
+  // Ensure that our maximum filename component calculation agrees with
+  // reality.
+
+  File root;
+  int maxDirname;
+  int preflen;
+  int sufflen;
+  String pref;
+  String suff;
+
+  public void testUnicodeAssumptions() throws Exception {
+    assertEquals("1234", trimTo("1234", 4));
+    assertEquals("1234", trimTo("12345", 4));
+    assertEquals("1234", trimTo("123454444444", 4));
+
+    root = getTempDir();
+    assertTrue(canMkdir(root, "xyz" + "\u00e9"));
+    maxDirname = findMaxDirname(root);
+    log.info("Max dirname on " + root + ": " + maxDirname);
+    if (maxDirname < 30) {
+      log.critical("Skipping test because filesystem is inadequate for LOCKSS");
+      return;
+    }
+    preflen = (maxDirname - 10) / 2;
+    sufflen = maxDirname - preflen;
+    pref = mkstr(preflen);
+    suff = mkstr(sufflen);
+
+    String t1 = pref + suff;
+    String t2 = pref + "e" + suff;
+    assertTrue(byteLength(t1) == t1.length());
+    assertTrue(canMkdir(root, t1));
+    assertFalse(canMkdir(root, t2));
+
+    String uniStrs[] = {
+
+      "\u00e9",			// Latin–1 Supplement
+      "\u0113",			// Latin Extended-A
+      "\u01a2",			// Latin Extended-B
+      "\u025a",			// IPA Extensions
+      "\u0393",			// Greek
+      "\u0409",			// Cyrillic
+      "\u05d2",			// Hebrew
+      "\u062c",			// Arabic
+      "\u0ab2",			// Gujarati
+      "\u0E28",			// Thai
+      "\u0EC0",			// Lao
+      "\u0F44",			// Tibetan
+      "\u305D",			// Hiragana
+      "\u30AE",			// Katakana
+      "\u2EA8",			// CJK Radicals Supplement
+      "\u3028",			// CJK Symbols and Punctuation
+      "\u4E05",			// CJK Unified Ideographs
+      "\uAC07",			// Hangul Syllables
+    };
+
+    // One unicode char
+    for (String s : uniStrs) {
+      testUni(s);
+    }
+
+    // Two unicode chars
+    for (String s1 : uniStrs) {
+      for (String s2 : uniStrs) {
+	testUni(s1 + s2);
+      }
+    }
+  }
+
+  void testUni(String unistr) {
+    String str = pref + unistr + suff;
+
+    int failat = -1;
+    int probelen = str.length();
+    while (probelen >= 1) {
+      String probe = trimTo(str, probelen);
+
+      int blen = byteLength(probe);
+      boolean should = blen <= maxDirname;
+      boolean does = canMkdir(root, probe);
+      log.debug2("probelen: " + probe.length() +
+		 ", byte: " + byteLength(probe) + ": " + does);
+      if (should) {
+	if (does) {
+	  return;
+	}
+	fail("foo");
+      } 
+      probelen--;
+    }
+  }
+
+
+  static String trimTo(String s, int len) {
+    return s.substring(0, len);
+  }
+
+  int byteLength(String s) {
+    return RepositoryNodeImpl.byteLength(s);
+  }
+
+  int findMaxDirname(File root) {
+    for (int len = 1; len < 1000; len++) {
+      if (!canMkdir(root, len)) {
+	return len - 1;
+      }
+    }
+    return -1;
+  }
+
+  boolean canMkdir(File root, int len) {
+    return canMkdir(root, mkstr(len));
+  }
+
+  boolean canMkdir(String root, String name) {
+    return canMkdir(new File(root), name);
+  }
+
+  boolean canMkdir(File root, String name) {
+    File f = new File(root, name);
+    boolean res = f.mkdirs();
+    if (!res) {
+      if (f.exists()) {
+	throw new RuntimeException("mkdirs = false but dir exists: " + f);
+      }
+      log.debug2("canMkdir("+f+"): false");
+      return false;
+    }
+    if (f.exists()) {
+      if (!f.delete()) {
+	throw new RuntimeException("Couldn't delete newly created dir: " + f);
+      }
+      if (f.exists()) {
+	throw new RuntimeException("Deleted newly created dir still exists: " + f);
+      }
+      log.debug2("canMkdir("+f+"): true");
+      return true;
+    }
+    throw new RuntimeException("mkdirs() == true but exists() == false: " + f);
+  }
+
+  public void testMkstr() {
+    for (int ix = 0; ix < 1000; ix++) {
+      assertEquals(ix, mkstr(ix).length());
+    }
+  }
+
+  String mkstr(int len) {
+    String al = "abcdefghijklmnopqrstuvwxyz0123456789";
+    StringBuilder sb = new StringBuilder(len);
+    for (int ix = 1; ix <= len / al.length(); ix++) {
+      sb.append(al);
+    }
+    sb.append(al.substring(0, len % al.length()));
+    if (sb.length() != len) {
+      throw new RuntimeException("mkstr(" + len + ") made string w/ len: "
+				 + sb.length());
+    }
+    return sb.toString();
   }
 
   public void testGetNodeUrl() {
@@ -2047,6 +2208,16 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 		 RepositoryNodeImpl.encodeUrl("www.example.com\\val\\val\\"));
   }
 
+  public void testEncodeUrlUnicode() {
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MAX_COMPONENT_LENGTH,
+				  "30");
+
+    assertEquals("www.example.com/val/12345678901234567890123456789\\/0123",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/123456789012345678901234567890123"));
+    assertEquals("www.example.com/val/123\u00E7567890123456789012345678\\/90123",
+		 RepositoryNodeImpl.encodeUrl("www.example.com/val/123\u00E756789012345678901234567890123"));
+  }
+
   public void testEncodeUrlCompatibility() {
     ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_ENABLE_LONG_COMPONENTS_COMPATIBILITY,
 				  "true");
@@ -2100,7 +2271,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
   
   public void testLongDecodeUrl() {
-    StringBuffer longUrl = new StringBuffer();
+    StringBuilder longUrl = new StringBuilder();
     longUrl.append("www.example.com/");
     for(int i=0; i<218; i++)  {
       longUrl.append(i + ",");
@@ -2187,7 +2358,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     }
 
     File getDatedVersionedPropsFile(int version, long date) {
-      StringBuffer buffer = new StringBuffer();
+      StringBuilder buffer = new StringBuilder();
       buffer.append(version);
       buffer.append(PROPS_EXTENSION);
       buffer.append("-");

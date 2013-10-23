@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.91 2013-08-15 08:18:58 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.92 2013-10-23 04:19:34 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.repository;
 
 import java.io.*;
+import java.nio.charset.*; 
 import java.net.MalformedURLException;
 import java.util.*;
 import java.util.Queue;
@@ -2057,31 +2058,54 @@ public class RepositoryNodeImpl implements RepositoryNode {
     StringBuffer result = new StringBuffer();
     StringTokenizer strtok = new StringTokenizer(url, "/", true);
     while(strtok.hasMoreTokens()) {
-      result.append(encodeUrlByRecursing(strtok.nextToken()));
+      result.append(encodeLongComponents(strtok.nextToken()));
     }
     return result.toString();
   }
   
-  private static String encodeUrlByRecursing(String string) {
-    return encodeUrlByRecursing("", string);
+  private static String encodeLongComponents(String string) {
+    int maxComponentLen = RepositoryManager.getMaxComponentLength();
+    if(maxComponentLen < 3) {
+      throw new IllegalStateException("maxComponentLength must be >= 3");
+    }
+    if (string.length() <= maxComponentLen && StringUtil.isAscii(string)) {
+      // Short enough & no unicode, no further check necessary.
+      return string;
+    }
+    StringBuilder sb = new StringBuilder(string.length() + 10);
+    encodeLongComponents(sb, string, maxComponentLen);
+    return sb.toString();
   }
   
-  private static String encodeUrlByRecursing(String current, String string) {
-    int separationLength =
-      RepositoryManager.getMaxComponentLength();
-
-    if(separationLength < 3) {
-      throw new IllegalStateException("fsLength must be >= 3");
-    }
-    if(string.equals("..")) {
-      return current + "\\..";
-    }
-    if(string.length() <= separationLength) {
-      return current + string;
+  // Break into pieces whose encoded byte length fits within maxComponentLen
+  private static void encodeLongComponents(StringBuilder sb,
+					   String current,
+					   int maxComponentLen) {
+    if (current.equals("..")) {
+      sb.append("\\..");
+    } else if (byteLength(current) <= maxComponentLen) {
+      sb.append(current);
     } else {
-      String chunk = string.substring(0, separationLength-1) + "\\/";
-      return encodeUrlByRecursing(current + chunk, string.substring(separationLength-1));
+      for (int charlen = maxComponentLen-1; charlen > 1; charlen--) {
+	String candidate = current.substring(0, charlen);
+	if (byteLength(candidate) <= maxComponentLen - 1) {
+	  sb.append(candidate);
+	  sb.append("\\/");
+	  encodeLongComponents(sb,
+			       current.substring(charlen),
+			       maxComponentLen);
+	  return;
+	}
+      }
+      throw new IllegalStateException("Single char unicode string too long for filesystem");
     }
+  }
+
+  private static final Charset FS_PATH_CHARSET =
+    Charset.forName(Constants.ENCODING_UTF_8);
+
+  static int byteLength(String s) {
+    return s.getBytes(FS_PATH_CHARSET).length;
   }
 
   /**
