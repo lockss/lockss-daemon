@@ -34,6 +34,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.ojs2.OJS2HtmlMetadataExtractorFactory.OJS2HtmlMetadataExtractor;
 import org.lockss.plugin.simulated.*;
 
 /*
@@ -197,6 +198,7 @@ public class TestOJS2MetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodIssue, md.get(MetadataField.DC_FIELD_CITATION_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodDoi, md.get(OJS2HtmlMetadataExtractor.OJS_DOI));
     assertEquals(goodURL, md.get(MetadataField.FIELD_ACCESS_URL));
         
   } // testExtractFromGoodContent
