@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.1 2013-10-16 23:14:00 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.1.2.1 2013-10-24 20:28:01 fergaloy-sf Exp $
  */
 
 /*
@@ -288,34 +288,19 @@ public class FetchTimeExporter {
     boolean newDataWritten = false;
 
     try {
-      // Get the identifier of the last metadata item for which the fetch time
-      // has been exported.
-      long lastMdItemSeq = getLastExportedMdItemSeq(conn);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "lastMdItemSeq = " + lastMdItemSeq);
+      // Get the database version.
+      int dbVersion = dbManager.getDatabaseVersion(conn);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "dbVersion = " + dbVersion);
 
-      // Export the data for metadata items newer than the last metadata item
-      // for which the fetch time has been exported and get the new value for
-      // the identifier of the last metadata item for which the fetch time
-      // has been exported.
-      long newLastMdItemSeq =
-	  exportNewData(conn, lastMdItemSeq, exportFile, writer);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "newLastMdItemSeq = " + newLastMdItemSeq);
-
-      // Get the indication of whether any new data has been written out.
-      newDataWritten = newLastMdItemSeq > lastMdItemSeq;
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
-
-      // Check whether any new data has been written out.
-      if (newDataWritten) {
-	// Yes: Update in the database the identifier of the last metadata item
-	// for which the fetch time has been exported.
-	int count = updateLastExportedMdItemSeq(conn, newLastMdItemSeq);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-
-	DbManager.commitOrRollback(conn, log);
+      // Check whether the database version is appropriate.
+      if (dbVersion >= 10) {
+	// Yes: Perform the export.
+	newDataWritten = processExport(conn, exportFile, writer);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
+      } else {
+	log.info("Database version is " + dbVersion
+	    + " (< 10). Export skipped.");
       }
     } catch (DbException dbe) {
       log.error("Cannot export fetch times", dbe);
@@ -412,6 +397,63 @@ public class FetchTimeExporter {
   private String getReportFileName() {
     return String.format("%s-%s-%s.%s", "fetch_time", serverName,
 			 dateFormat.format(TimeBase.nowDate()), "tsv");
+  }
+
+  /**
+   * Exports the fetch time data.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param exportFile
+   *          A File where to export the data.
+   * @param writer
+   *          A PrintWriter used to write the export file.
+   * @return <code>true</code> if any new data has been written out,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean processExport(Connection conn, File exportFile,
+      PrintWriter writer) throws DbException {
+    final String DEBUG_HEADER = "processExport(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // An indication of whether any new data has been written out.
+    boolean newDataWritten = false;
+
+    // Get the identifier of the last metadata item for which the fetch time has
+    // been exported.
+    long lastMdItemSeq = getLastExportedMdItemSeq(conn);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "lastMdItemSeq = " + lastMdItemSeq);
+
+    // Export the data for metadata items newer than the last metadata item for
+    // which the fetch time has been exported and get the new value for the
+    // identifier of the last metadata item for which the fetch time has been
+    // exported.
+    long newLastMdItemSeq =
+	exportNewData(conn, lastMdItemSeq, exportFile, writer);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "newLastMdItemSeq = " + newLastMdItemSeq);
+
+    // Get the indication of whether any new data has been written out.
+    newDataWritten = newLastMdItemSeq > lastMdItemSeq;
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
+
+    // Check whether any new data has been written out.
+    if (newDataWritten) {
+      // Yes: Update in the database the identifier of the last metadata item
+      // for which the fetch time has been exported.
+      int count = updateLastExportedMdItemSeq(conn, newLastMdItemSeq);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
+
+      DbManager.commitOrRollback(conn, log);
+    }
+
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "newDataWritten = " + newDataWritten);
+    return newDataWritten;
   }
 
   /**
