@@ -1,0 +1,226 @@
+{
+
+  publisher <
+    name = American Society of Microbiology ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+
+  >
+    plugin = needs.plugin
+    param[base_url] = http://www.asmscience.org/content/books/
+    implicit < status ; status2 ; year ; pisbn ; eisbn ; param[eisbn] ; name ; author >
+
+   {
+
+      title <
+        name = Books ;
+        type = bookSeries
+      >
+
+     {
+
+      au < exists ; exists ; 1993 ; 9781555810535 ; 9781555818388 ; 9781555818388 ; Bacillus subtilis and Other Gram-Positive Bacteria ; Sonenshein, Hoch, Losick > 
+      au < exists ; exists ; 1994 ; 9781555810825 ; 9781555818340 ; 9781555818340 ; Molecular Genetics of Bacterial Pathogenesis ; Miller, Kaper, Portnoy, Isberg > 
+      au < exists ; exists ; 1994 ; 9781555810726 ; 9781555818357 ; 9781555818357 ; Tuberculosis: Pathogenesis, Protection, and Control ; Bloom > 
+      au < exists ; exists ; 1994 ; 9781555810672 ; 9781555818364 ; 9781555818364 ; Vibrio cholerae and Cholera ; Wachsmuth, Blake, Olsvik > 
+      au < exists ; exists ; 1995 ; 9781555810986 ; 9781555818302 ; 9781555818302 ; DNA Provirus, The ; Cooper, Temin, Sugden > 
+      au < exists ; exists ; 1995 ; 9781555810894 ; 9781555818319 ; 9781555818319 ; Two-Component-Signal Transduction ; Hoch, Silhavy > 
+      au < exists ; exists ; 1995 ; 9781555810924 ; 9781555818326 ; 9781555818326 ; Human Enterovirus Infections ; Rotbart > 
+      au < exists ; exists ; 1995 ; 9781555810733 ; 9781555818333 ; 9781555818333 ; tRNA: Structure, Biosynthesis, and Function ; Soll, RajBhandary > 
+      au < exists ; exists ; 1998 ; 9781555811440 ; 9781555818265 ; 9781555818265 ; Pasteur and Modern Science ; Dubos > 
+      au < exists ; exists ; 1998 ; 9781555811419 ; 9781555816957 ; 9781555816957 ; Emerging Infections 2 ; Scheld, Craig, Hughes, Satcher > 
+      au < exists ; exists ; 1998 ; 9781555811075 ; 9781555818241 ; 9781555818241 ; Cryptococcus neoformans ; Casadevall, Perfect > 
+      au < exists ; exists ; 1998 ; 9781555811303 ; 9781555818289 ; 9781555818289 ; Human Tumor Viruses ; McCance > 
+      au < exists ; exists ; 1998 ; 9781555811334 ; 9781555818296 ; 9781555818296 ; Modification and Editing of RNA ; Grosjean, Benne > 
+      au < exists ; exists ; 1998 ; 9781555811211 ; 9781555816940 ; 9781555816940 ; Emerging Infections 1 ; Scheld, Armstrong, Hughes > 
+      au < exists ; exists ; 1999 ; 9781555811686 ; 9781555818418 ; 9781555818418 ; Emerging Infections 3 ; Scheld, Craig, Hughes  > 
+      au < exists ; exists ; 1999 ; 9781555811617 ; 9781555818173 ; 9781555818173 ; Pathogenicity Islands and Other Mobile Virulence Elements ; Kaper, Hacker > 
+      au < exists ; exists ; 1999 ; 9781555811518 ; 9781555818180 ; 9781555818180 ; Organization of Prokarytic Genome ; Charlebois > 
+      au < exists ; exists ; 1999 ; 9781555811341 ; 9781555818197 ; 9781555818197 ; Pocket Guide to Clinical Immunology ; Folds, Normansell > 
+      au < exists ; exists ; 1999 ; 9781555811556 ; 9781555818203 ; 9781555818203 ; Chlamydia ; Stephens > 
+      au < exists ; exists ; 1999 ; 9781555811327 ; 9781555818210 ; 9781555818210 ; Sexually Transmitted Diseases and Adverse Outcomes of Pregnancy ; Hitchcock, MacKay, Wasserheit > 
+      au < exists ; exists ; 1999 ; 9781555811471 ; 9781555818227 ; 9781555818227 ; Microsporidia and Microsporidiosis ; Ed: Wittner, Cont. Ed: Weiss > 
+      au < exists ; exists ; 1999 ; 9781555811389 ; 9781555818234 ; 9781555818234 ; Guide to Specimen Management in Clinical Microbiology Second Edition ; Miller > 
+      au < exists ; exists ; 1999 ; 9781555811433 ; 9781555818272 ; 9781555818272 ; Robert Koch: A Life in Medicine and Bacteriology ; Brock > 
+      au < exists ; exists ; 2000 ; 9781555811976 ; 9781555816971 ; 9781555816971 ; Emerging Infections 4 ; Scheld, Craig, Hughes > 
+      au < exists ; exists ; 2000 ; 9781555812010 ; 9781555818050 ; 9781555818050 ; Emerging Diseases of Animals ; Brown, Bolin > 
+      au < exists ; exists ; 2000 ; 9781555811778 ; 9781555818067 ; 9781555818067 ; Infections Associated with Indwelling Medical Devices Third Edition ; Waldvogel, Bisno > 
+      au < exists ; exists ; 2000 ; 9781555811945 ; 9781555818074 ; 9781555818074 ; Molecular Mimicry, Microbes, and Autoimmunity ; Cunningham, Fujinami > 
+      au < exists ; exists ; 2000 ; 9781555811938 ; 9781555818081 ; 9781555818081 ; Chronology of Microbiology in Historical Context, A ; Beck > 
+      au < exists ; exists ; 2000 ; 9781555811952 ; 9781555818098 ; 9781555818098 ; Environmental Microbe-Metal Interactions ; Lovley > 
+      au < exists ; exists ; 2000 ; 9781555811594 ; 9781555818104 ; 9781555818104 ; Persistent Bacterial Infections ; Nataro, Blaser, Cunningham-Rundles > 
+      au < exists ; exists ; 2000 ; 9781555811747 ; 9781555818111 ; 9781555818111 ; Virulence Mechanisms of Bacterial Pathogens Third Edition ; Brogden > 
+      au < exists ; exists ; 2000 ; 9781555811907 ; 9781555818128 ; 9781555818128 ; Many Faces, Many Microbes ; Atlas > 
+      au < exists ; exists ; 2000 ; 9781555811785 ; 9781555818135 ; 9781555818135 ; Biotechnology Explorations ; Scheppler, Cassin, Gambier > 
+      au < exists ; exists ; 2000 ; 9781555811846 ; 9781555818142 ; 9781555818142 ; Ribosome, The ; Garrett, Douthwate, Matheson, Moore, Noller > 
+      au < exists ; exists ; 2000 ; 9781555811631 ; 9781555818159 ; 9781555818159 ; Intimate Strangers  ; Needham, Hoagland, McPherson, Dodson > 
+      au < exists ; exists ; 2000 ; 9781555811587 ; 9781555818166 ; 9781555818166 ; Prokaryotic Development  ; Brun, Shimkets > 
+      au < exists ; exists ; 2001 ; 9781555812164 ; 9781555816988 ; 9781555816988 ; Emerging Infections 5 ; Scheld, Craig, Hughes > 
+      au < exists ; exists ; 2001 ; 9781555812133 ; 9781555818005 ; 9781555818005 ; Helicobacter pylori ; Mobley, Mendz, Hazell > 
+      au < exists ; exists ; 2001 ; 9781555812027 ; 9781555818012 ; 9781555818012 ; Immunology, Immunopathology, and Immunity, Sixth Edition ; Sell > 
+      au < exists ; exists ; 2001 ; 9781555812225 ; 9781555818029 ; 9781555818029 ; Recombinant DNA Controversy, The: A Memoir ; Fredrickson > 
+      au < exists ; exists ; 2001 ; 9781555811792 ; 9781555818036 ; 9781555818036 ; Biocatalysis and Biodegradation ; Wackett, Hershberger > 
+      au < exists ; exists ; 2001 ; 9781555811679 ; 9781555818043 ; 9781555818043 ; Xenotransplantation ; Platt > 
+      au < exists ; exists ; 2002 ; 9781555812355 ; 9781555817909 ; 9781555817909 ; Borna Disease Virus and its Role in Neurobehavioral Diseases ; Carbone > 
+      au < exists ; exists ; 2002 ; 9781555812102 ; 9781555817916 ; 9781555817916 ; Molecular Biology of Picornavirus ; Semler, Wimmer > 
+      au < exists ; exists ; 2002 ; 9781555812348 ; 9781555817923 ; 9781555817923 ; Enterococci, The ; Gilmore, Clewell, Courvalin, Dunny, Murray, Rice > 
+      au < exists ; exists ; 2002 ; 9781555812270 ; 9781555817930 ; 9781555817930 ; Other End of the Microscope, The ; Koneman > 
+      au < exists ; exists ; 2002 ; 9781555812447 ; 9781555817947 ; 9781555817947 ; Polymicrobial Diseases ; Brogden, Guthmiller > 
+      au < exists ; exists ; 2002 ; 9781555812096 ; 9781555817954 ; 9781555817954 ; Mobile DNA II ; Craig, Craigie, Gellert, Lambowitz > 
+      au < exists ; exists ; 2002 ; 9781555811891 ; 9781555817961 ; 9781555817961 ; Manual of Commercial Methods in Clinical Microbiology ; Truant > 
+      au < exists ; exists ; 2002 ; 9781555812140 ; 9781555817978 ; 9781555817978 ; Immunology of Infectious Diseases ; Kaufmann > 
+      au < exists ; exists ; 2002 ; 9781555812300 ; 9781555817985 ; 9781555817985 ; Legionella ; Marre > 
+      au < exists ; exists ; 2002 ; 9781555812058 ; 9781555817992 ; 9781555817992 ; Bacillus subtilis and Its Closest Relatives ; Sonenshein, Losick, Hoch > 
+      au < exists ; exists ; 2003 ; 9781555812812 ; 9781555817763 ; 9781555817763 ; Origins of Molecular Biology: A Tribute to Jacques Monod ; Ullmann > 
+      au < exists ; exists ; 2003 ; 9781555812362 ; 9781555817787 ; 9781555817787 ; Zoonoses: Infectious Diseases Transmissible from Animals to Humans 3/e ; Krauss, Weber, Appel, Enders, Isenberg, Schiefer, Slenczka, Graevenitz, Zahner > 
+      au < exists ; exists ; 2003 ; 9781555812584 ; 9781555817794 ; 9781555817794 ; Bacteria versus Antibacterial Agents ; Mascaretti > 
+      au < exists ; exists ; 2003 ; 9781555812638 ; 9781555817800 ; 9781555817800 ; Bacterial Adhesion to Animal Cells and Tissues ; Ofek, Hasty, Doyle > 
+      au < exists ; exists ; 2003 ; 9781555812317 ; 9781555817817 ; 9781555817817 ; Quinolone Antimicrobial Agents, Third Edition ; Hooper, Rubinstein > 
+      au < exists ; exists ; 2003 ; 9781555812669 ; 9781555817824 ; 9781555817824 ; Natural Pathogens of Laboratory Animals: Their Effects on Research ; Baker > 
+      au < exists ; exists ; 2003 ; 9781555812409 ; 9781555817831 ; 9781555817831 ; Viral Encephalitis in Humans ; Booss, Esiri > 
+      au < exists ; exists ; 2003 ; 9781555812614 ; 9781555817848 ; 9781555817848 ; Microbial Pathogenesis and the Intestinal Epithelial Cell ; Hecht > 
+      au < exists ; exists ; 2003 ; 9781555812645 ; 9781555817855 ; 9781555817855 ; Microbes: An Invisible Universe ; Gest > 
+      au < exists ; exists ; 2003 ; 9781555812256 ; 9781555817862 ; 9781555817862 ; Global Disease Eradication ; Needham, Canning > 
+      au < exists ; exists ; 2003 ; 9781555812607 ; 9781555817879 ; 9781555817879 ; Granulomatous Infection and Inflammations ; Boros > 
+      au < exists ; exists ; 2003 ; 9781555812546 ; 9781555817886 ; 9781555817886 ; Antibiotics: Actions, Origins, Resistance ; Walsh > 
+      au < exists ; exists ; 2003 ; 9781555812454 ; 9781555817893 ; 9781555817893 ; Bacterial Protein Toxins ; Burns, Barbieri, Iglewski, Rappuoli > 
+      au < exists ; exists ; 2003 ; 9781555812072 ; 9781555816353 ; 9781555816353 ; Cases in Medical Microbiology and Infectious Diseases, Third Edition ; Gilligan, Smiley, Shapiro > 
+      au < exists ; exists ; 2004 ; 9781555812928 ; 9781555816544 ; 9781555816544 ; Iron Transport in Bacteria ; Crosa, Mey, Payne > 
+      au < exists ; exists ; 2004 ; 9781555812966 ; 9781555817664 ; 9781555817664 ; Cases in Human Parasitology ; Heelan > 
+      au < exists ; exists ; 2004 ; 9781555812911 ; 9781555817671 ; 9781555817671 ; Innate Immune Response to Infection ; Kaufmann, Medzhitov, Gordon > 
+      au < exists ; exists ; 2004 ; 9781555812973 ; 9781555816537 ; 9781555816537 ; Pneumococcus, The ; Tuomanen > 
+      au < exists ; exists ; 2004 ; 9781555812683 ; 9781555817688 ; 9781555817688 ; Molecular Epidemiology of Infectious Diseases: Principles and Practices  ; Riley > 
+      au < exists ; exists ; 2004 ; 9781555812799 ; 9781555817695 ; 9781555817695 ; Clinical Laboratory Management ; Garcia > 
+      au < exists ; exists ; 2004 ; 9781555812942 ; 9781555817718 ; 9781555817718 ; Microbial Biofilms ; Ghannoum, O'Toole > 
+      au < exists ; exists ; 2004 ; 9781555812881 ; 9781555817725 ; 9781555817725 ; Pocket Guide to Clinical Microbiology, Third Edition ; Murray, Shea > 
+      au < exists ; exists ; 2004 ; 9781555812461 ; 9781555816148 ; 9781555816148 ; Immunology, Infection, and Immunity ; Pier, Lyczak, Wetzler > 
+      au < exists ; exists ; 2004 ; 9781555812652 ; 9781555817732 ; 9781555817732 ; Plasmid Biology ; Funnell, Phillips > 
+      au < exists ; exists ; 2004 ; 9781555812713 ; 9781555817749 ; 9781555817749 ; Microbial Evolution: Gene Establishment, Survival, and Exchange ; Miller, Day > 
+      au < exists ; exists ; 2004 ; 9781555812805 ; 9781555817756 ; 9781555817756 ; Clinician's Dictionary of Pathogenic Microorganisms, A ; Jorgensen, Pfaller > 
+      au < exists ; exists ; 2004 ; 9781555812423 ; 9781555816995 ; 9781555816995 ; Emerging Infections 6 ; Scheld, Murray, Hughes > 
+      au < exists ; exists ; 2004 ; 9781555812676 ; 9781555817770 ; 9781555817770 ; Microbial Diversity and Bioprospecting ; Bull > 
+      au < exists ; exists ; 2005 ; 9781555813079 ; 9781555816506 ; 9781555816506 ; Phages: Their Role in Pathogen and Biotechnology ; Waldor, Friedman, Adhya > 
+      au < exists ; exists ; 2005 ; 9781555813307 ; 9781555817558 ; 9781555817558 ; Molecular Approaches to Malaria ; Sherman > 
+      au < exists ; exists ; 2005 ; 9781555812379 ; 9781555815929 ; 9781555815929 ; Antimicrobial Agents: Antibacterials and Antifungals ; Bryskier > 
+      au < exists ; exists ; 2005 ; 9781555813291 ; 9781555817572 ; 9781555817572 ; Frontiers in Antimicrobial Resistance: A Tribute to Stuart B. Levy ; White, Alekshun, McDermott > 
+      au < exists ; exists ; 2005 ; 9781555813406 ; 9781555817565 ; 9781555817565 ; Rene Dubos, Friend of the Good Earth: Microbiologist, Medical Scientist, Environmentalist ; Moberg > 
+      au < exists ; exists ; 2005 ; 9781555813048 ; 9781555816094 ; 9781555816094 ; Biology and Biotechnology: Science, Applications, and Issues ; Kreuzer > 
+      au < exists ; exists ; 2005 ; 9781555813284 ; 9781555816452 ; 9781555816452 ; Bacterial Ion Channels and Their Eukaryotic Homologs ; Kubalski, Martinac > 
+      au < exists ; exists ; 2005 ; 9781555813277 ; 9781555817589 ; 9781555817589 ; Petroleum Microbiology ; Ollivier, Magot > 
+      au < exists ; exists ; 2005 ; 9781555812393 ; 9781555817596 ; 9781555817596 ; Bioremediation ; Atlas, Philip > 
+      au < exists ; exists ; 2005 ; 9781555813017 ; 9781555818395 ; 9781555818395 ; Structural Biology of Bacterial Pathogensis ; Waksman, Caparon, Hultgren > 
+      au < exists ; exists ; 2005 ; 9781555812386 ; 9781555816490 ; 9781555816490 ; Tick-Borne Diseases of Humans ; Goodman, Dennis, Sonenshine > 
+      au < exists ; exists ; 2005 ; 9781555812980 ; 9781555817602 ; 9781555817602 ; Revenge of the Microbes ; Salyers, Whitt > 
+      au < exists ; exists ; 2005 ; 9781555813239 ; 9781555817619 ; 9781555817619 ; Colonization of Mucosal Surfaces ; Nataro, Cohen, Mobley, Weiser > 
+      au < exists ; exists ; 2005 ; 9781555813093 ; 9781555817626 ; 9781555817626 ; Viruses and the Evolution of Life ; Villarreal > 
+      au < exists ; exists ; 2005 ; 9781555813024 ; 9781555817633 ; 9781555817633 ; Cellular Microbiology Second Edition ; Cossart, Boquet, Normark, Rappuoli > 
+      au < exists ; exists ; 2005 ; 9781555812324 ; 9781555817640 ; 9781555817640 ; Bacterial Chromosome, The ; Higgins > 
+      au < exists ; exists ; 2005 ; 9781555812959 ; 9781555817657 ; 9781555817657 ; Tuberculosis and the Tubercle Bacillus ; Cole, Eisenach, McMurray, Jacobs Jr. > 
+      au < exists ; exists ; 2006 ; 9781555813734 ; 9781555815684 ; 9781555815684 ; Pathogenesis of Human Pulmonary Tuberculosis: Insights from the Rabbit Model ; Dannenberg > 
+      au < exists ; exists ; 2006 ; 9781555813758 ; 9781555815721 ; 9781555815721 ; Food Allergy ; Maleki, Burks, Helm > 
+      au < exists ; exists ; 2006 ; 9781555813765 ; 9781555817510 ; 9781555817510 ; Exposure: A Guide to Sources of Infection ; Sturchler > 
+      au < exists ; exists ; 2006 ; 9781555813390 ; 9781555815899 ; 9781555815899 ; Biological Safety, Fourth Edition : Principles and Practices  ; Fleming > 
+      au < exists ; exists ; 2006 ; 9781555813659 ; 9781555815714 ; 9781555815714 ; Biology of Vibrios, The ; Thompson, Austin, Swings > 
+      au < exists ; exists ; 2006 ; 9781555813666 ; 9781555816322 ; 9781555816322 ; Outbreak: Cases in the Real-World Microbiology  ; Anderson > 
+      au < exists ; exists ; 2006 ; 9781555813680 ; 9781555815776 ; 9781555815776 ; Molecular Principles of Fungal Pathogenesis ; Heitman, Filler, Edwards, Mitchell > 
+      au < exists ; exists ; 2006 ; 9781555813000 ; 9781555815622 ; 9781555815622 ; Evolution of Microbial Pathogens ; Seifert, DiRita > 
+      au < exists ; exists ; 2006 ; 9781555813642 ; 9781555815905 ; 9781555815905 ; Manual of Molecular and Clinical Lab Immunology Seventh Edition ; Detrick, Hamilton, Folds > 
+      au < exists ; exists ; 2006 ; 9781555813437 ; 9781555816513 ; 9781555816513 ; Gram-Positive Pathogens, Second Edition ; Fischetti, Novick, Ferretti, Portnoy, Rood > 
+      au < exists ; exists ; 2006 ; 9781555813567 ; 9781555816483 ; 9781555816483 ; Power of Plagues, The ; Sherman > 
+      au < exists ; exists ; 2006 ; 9781555813574 ; 9781555817527 ; 9781555817527 ; Microbiology of Fresh Produce ; Matthews, Series Ed: Doyle > 
+      au < exists ; exists ; 2006 ; 9781555813062 ; 9781555817534 ; 9781555817534 ; Antimicrobial Resistance in Bacteria of Animal Origin ; Aarestrup > 
+      au < exists ; exists ; 2006 ; 9781555813420 ; 9781555817541 ; 9781555817541 ; Enterobacteria Second Edition, The ; Janda, Abbott > 
+      au < exists ; exists ; 2006 ; 9781555813451 ; 9781555816520 ; 9781555816520 ; Biomedical Scientist as Expert Witness, The ; Ellner > 
+      au < exists ; exists ; 2006 ; 9781555813192 ; 9781555816704 ; 9781555816704 ; DNA Repair and Mutagensis, Second Edition ; Friedberg, Walker, Siede, Wood, Schultz, Ellenberger > 
+      au < exists ; exists ; 2007 ; 9781555814663 ; 9781555816346 ; 9781555816346 ; Twelve Diseases that Changed Our World ; Sherman > 
+      au < exists ; exists ; 2007 ; 9781555814212 ; 9781555815837 ; 9781555815837 ; Sex in Fungi: Molecular Determination and Evolutionary Implications ; Heitman, Kronstad, Taylor, and Casselton > 
+      au < exists ; exists ; 2007 ; 9781555812232 ; 9781555817497 ; 9781555817497 ; Methods for General and Molecular Microbiology, Third Edition ; Reddy, Breznak, Schmidt, Snyder, Beveridge, Marzluf > 
+      au < exists ; exists ; 2007 ; 9781555814694 ; 9781555815851 ; 9781555815851 ; Virulence Mechanisms of Bacterial Pathogens, Fourth Edition ; Brogden > 
+      au < exists ; exists ; 2007 ; 9781555814243 ; 9781555815844 ; 9781555815844 ; Superantigens: Molecular Basis for Their Role in Human Diseases ; Kotb, Fraser > 
+      au < exists ; exists ; 2007 ; 9781555814021 ; 9781555817503 ; 9781555817503 ; Microbiology Bench Companion, The ; Miller > 
+      au < exists ; exists ; 2007 ; 9781555814519 ; 9781555815530 ; 9781555815530 ; Bacterial Pathogenomics ; Pallen,Nelson, Preston > 
+      au < exists ; exists ; 2007 ; 9781555813796 ; 9781555815882 ; 9781555815882 ; Manual of Environmental Microbiology, Third Edition ; Hurst > 
+      au < exists ; exists ; 2007 ; 9781555814229 ; 9781555815813 ; 9781555815813 ; Physiology and Biochemistry of Extremophiles ; Gerday, Glansdorff > 
+      au < exists ; exists ; 2007 ; 9781555813031 ; 9781555815615 ; 9781555815615 ; Enzyme-Mediated Resistance to Antibiotics ; Bonomo, Tolmasky > 
+      au < exists ; exists ; 2007 ; 9781555813932 ; 9781555815653 ; 9781555815653 ; HIV and Pathogenesis of AIDS Third Edition ; Levy > 
+      au < exists ; exists ; 2007 ; 9781555813918 ; 9781555815516 ; 9781555815516 ; Archaea: Molecular and Cellular Biology ; Cavicchioli > 
+      au < exists ; exists ; 2007 ; 9781555813925 ; 9781555816445 ; 9781555816445 ; Antisepsis, Disinfection, and Sterilization ; McDonnell > 
+      au < exists ; exists ; 2007 ; 9781555814076 ; 9781555815912 ; 9781555815912 ; Food Microbiology, Third Edition ; Doyle > 
+      au < exists ; exists ; 2007 ; 9781555814175 ; 9781555816186 ; 9781555816186 ; Food Safety : Old Habits, New Perspectives ; Entis > 
+      au < exists ; exists ; 2007 ; 9781555813901 ; 9781555815660 ; 9781555815660 ; Legionella: State of the Art 30 Years after Its Recognition ; Cianciotto, Kwaik, Edelstein, Fields, Geary, Harrison, Joseph, Ratcliff, Stout, Swanson > 
+      au < exists ; exists ; 2007 ; 9781555813741 ; 9781555815769 ; 9781555815769 ; Microbial Source Tracking ; Santo Domingo, Sadowsky > 
+      au < exists ; exists ; 2007 ; 9781555813802 ; 9781555816018 ; 9781555816018 ; Diagnostic Medical Parasitology, Fifth Edition ; Garcia > 
+      au < exists ; exists ; 2007 ; 9781555813987 ; 9781555815806 ; 9781555815806 ; Periplasm, The ; Ehrmann > 
+      au < exists ; exists ; 2007 ; 9781555813772 ; 9781555815585 ; 9781555815585 ; Emerging Infections 7 ; Scheld, Hooper, Hughes > 
+      au < exists ; exists ; 2008 ; 9781555814441 ; 9781555815592 ; 9781555815592 ; Emerging Infections 8 ; Scheld, Hammer, Hughes > 
+      au < exists ; exists ; 2008 ; 9781555814038 ; 9781555815462 ; 9781555815462 ; Therapeutic Microbiology: Probiotics and Related Strategies ; Versalovic > 
+      au < exists ; exists ; 2008 ; 9781555814137 ; 9781555815745 ; 9781555815745 ; Imported Foods: Microbial Issues and Challenges ; Doyle > 
+      au < exists ; exists ; 2008 ; 9781555816711 ; 9781555816339 ; 9781555816339 ; Forgotten People, Forgotten Diseases: The Neglected Tropical Diseases and their Impact on Global Health and Development ; Hotez > 
+      au < exists ; exists ; 2008 ; 9781555814373 ; 9781555815554 ; 9781555815554 ; Campylobacter, Third Edition ; Nachamkin, Szymanski, Blaser > 
+      au < exists ; exists ; 2008 ; 9781555814786 ; 9781555815547 ; 9781555815547 ; Bioenergy ; Wall, Harwood, Demain > 
+      au < exists ; exists ; 2008 ; 9781555814069 ; 9781555815509 ; 9781555815509 ; Accessing Uncultivated Microorganisms: From the Environment to Organisms and Genomes and Back ; Zengler, Karsten > 
+      au < exists ; exists ; 2008 ; 9781555814236 ; 9781555815646 ; 9781555815646 ; High-Pressure Microbiology ; Michiels, Bartlett, Aertsen > 
+      au < exists ; exists ; 2008 ; 9781555814649 ; 9781555815738 ; 9781555815738 ; Food-Borne Viruses: Progress and Challenges ; Doyle, Koopmans, Cliver, Bosch > 
+      au < exists ; exists ; 2008 ; 9781555814045 ; 9781555815578 ; 9781555815578 ; Chemical Communication Among Bacteria ; Winans, Bassler > 
+      au < exists ; exists ; 2008 ; 9781555814083 ; 9781555815820 ; 9781555815820 ; Pneumococcal Vaccines: The Impact of Conjugate Vaccine ; Siber, Klugman, Makela > 
+      au < exists ; exists ; 2008 ; 9781555814687 ; 9781555815783 ; 9781555815783 ; Mycobacterial Cell Envelope, The ; Daffe, Reyrat > 
+      au < exists ; exists ; 2008 ; 9781555814502 ; 9781555817473 ; 9781555817473 ; Sampling for Biological Agents in the Environment ; Emanuel, Roos, Niyogi > 
+      au < exists ; exists ; 2008 ; 9781555814557 ; 9781555815790 ; 9781555815790 ; Nidoviruses ; Perlman, Gallagher, Snijder > 
+      au < exists ; exists ; 2008 ; 9781555814601 ; 9781555815608 ; 9781555815608 ; Enterobacter sakazakii  ; Farber, Forsythe > 
+      au < exists ; exists ; 2008 ; 9781555814205 ; 9781555815677 ; 9781555815677 ; Myxobacteria: Multicellularity and Differentiation ; Whitworth > 
+      au < exists ; exists ; 2008 ; 9781555814144 ; 9781555815639 ; 9781555815639 ; Evolutionary Biology of Bacterial and Fungal Pathogens ; Baquero, Nombela, Cassell, Gutierrez-Fuentes > 
+      au < exists ; exists ; 2008 ; 9781555814618 ; 9781555815752 ; 9781555815752 ; Microbial Risk Analysis of Foods ; Doyle, Schaffner > 
+      au < exists ; exists ; 2008 ; 9781555814717 ; 9781555816100 ; 9781555816100 ; Molecular Biology and Biotechnology, Third Edition: A Guide for Teachers ; Kreuzer > 
+      au < exists ; exists ; 2008 ; 9781555814724 ; 9781555817480 ; 9781555817480 ; Molecular Biology and Biotechnology, Third Edition: A Guide for Students ; Kreuzer > 
+      au < exists ; exists ; 2009 ; 9781555814014 ; 9781555816650 ; 9781555816650 ; Phagocyte-Pathogen Interactions: Macrophages and the Host Response to Infection ; Russell > 
+      au < exists ; exists ; 2009 ; 9781555814847 ; 9781555815950 ; 9781555815950 ; Infections of Leisure, Fourth Edition ; Schlossberg > 
+      au < exists ; exists ; 2009 ; 9781555814304 ; 9781555815486 ; 9781555815486 ; Sequelae and Long-Term Consequences of Infectious Diseases ; Fratamico > 
+      au < exists ; exists ; 2009 ; 9781555814397 ; 9781555815493 ; 9781555815493 ; Antiviral Research: Strategies in Antiviral Drug Discovery ; LaFemina > 
+      au < exists ; exists ; 2009 ; 9781555814625 ; 9781555815974 ; 9781555815974 ; Clinical Virology Manual, Fourth Edition ; Specter > 
+      au < exists ; exists ; 2009 ; 9781555814052 ; 9781555815479 ; 9781555815479 ; Food-Borne Microbes: Shaping the Host Ecosystem ; Jaykus > 
+      au < exists ; exists ; 2009 ; 9781555815158 ; 9781555817428 ; 9781555817428 ; Elusive Malaria Vaccine, The: Miracle or Mirage? ; Sherman > 
+      au < exists ; exists ; 2009 ; 9781555814540 ; 9781555815967 ; 9781555815967 ; Practical Guide to Diagnostic Parasitology, Second Edition ; Garcia > 
+      au < exists ; exists ; 2009 ; 9781555815004 ; 9781555817442 ; 9781555817442 ; Animalcules: The Activities, Impacts, and Investigators of Microbes ; Dixon > 
+      au < exists ; exists ; 2009 ; 9781555814250 ; 9781555815981 ; 9781555815981 ; Clinical Virology Third Edition ; Richman > 
+      au < exists ; exists ; 2009 ; 9781555814380 ; 9781555815523 ; 9781555815523 ; Aspergillus fumigatus and Aspergillosis ; Latgé > 
+      au < exists ; exists ; 2009 ; 9781555813697 ; 9781555815691 ; 9781555815691 ; Spectrum of Neuro-AIDS Disorders, The: Pathophysiology, Diagnosis, and Treatment ; Goodkin > 
+      au < exists ; exists ; 2009 ; 9781555813970 ; 9781555815455 ; 9781555815455 ; Diagnostic Microbiology of the Immunocompromised Host ; Hayden > 
+      au < exists ; exists ; 2009 ; 9781555814366 ; 9781555815561 ; 9781555815561 ; Cellular Signaling and Innate Immune Responses to RNA Virus Infections ; Brasier > 
+      au < exists ; exists ; 2010 ; 9781555816032 ; 9781555816537 ; 9781555816537 ; Picornaviruses, The  ; Ehrenfeld > 
+      au < exists ; exists ; 2010 ; 9781555815257 ; 9781555816803 ; 9781555816803 ; Emerging Infections 9 ; Scheld > 
+      au < exists ; exists ; 2010 ; 9781555815028 ; 9781555816629 ; 9781555816629 ; Bacteriophages in the Control of Food- and Waterborne Pathogens ; Sabour > 
+      au < exists ; exists ; 2010 ; 9781555815271 ; 9781555817435 ; 9781555817435 ; Clinical Microbiology Procedures Handbook ; Garcia > 
+      au < exists ; exists ; 2010 ; 9781555815127 ; 9781555816827 ; 9781555816827 ; Manual of Industrial Microbiology and Biotechnology, Third Edition ; Baltz > 
+      au < exists ; exists ; 2010 ; 9781555814731 ; 9781555816636 ; 9781555816636 ; Cellular and Molecular Biology of Filamentous Fungi ; Borkovich > 
+      au < exists ; exists ; 2010 ; 9781555814991 ; 9781555816667 ; 9781555816667 ; Second Messenger Cyclic Di-GMP, The  ; Wolfe > 
+      au < exists ; exists ; 2010 ; 9781555814595 ; 9781555815936 ; 9781555815936 ; Pathogens and Toxins in Food: Challenges and Interventions ; Juneja > 
+      au < exists ; exists ; 2011 ; 9781555815295 ; 9781555817220 ; 9781555817220 ; Germ Theory: Medical Pioneers in Infectious Diseases ; Gaynes > 
+      au < exists ; exists ; 2011 ; 9781555815363 ; 9781555817190 ; 9781555817190 ; Microbial Metal and Metalloid Metabolism: Advances and Applications ; Stolz > 
+      au < exists ; exists ; 2011 ; 9781555815035 ; 9781555817107 ; 9781555817107 ; Oral Microbial Communities: Genomic Inquiry and Interspecies Communication ; Kolenbrander > 
+      au < exists ; exists ; 2011 ; 9781555815134 ; 9781555817138 ; 9781555817138 ; Tuberculosis and Nontuberculous Mycobacterial Infections, Sixth Edition ; Schlossberg > 
+      au < exists ; exists ; 2011 ;  ; 9781555816728 ; 9781555816728 ; Manual of Clinical Microbiology, Tenth Edition, Digital Edition ; Versalovic > 
+      au < exists ; exists ; 2011 ;  ; 9781555816797 ; 9781555816797 ; Manual of Clinical Microbiology, Tenth Edition: Image Library ; Versalovic > 
+      au < exists ; exists ; 2011 ; 9781555815165 ; 9781555817152 ; 9781555817152 ; Yeast Research: A Historical Overview ; Barnett > 
+      au < exists ; exists ; 2011 ; 9781555815356 ; 9781555817114 ; 9781555817114 ; Population Genetics of Bacteria: A Tribute to Thomas S. Whittam ; Walk > 
+      au < exists ; exists ; 2011 ; 9781555815424 ; 9781555817121 ; 9781555817121 ; Rapid Detection, Characterization, and Enumeration of Foodborne Pathogens ; Hoorfar > 
+      au < exists ; exists ; 2011 ; 9781555814816 ; 9781555817145 ; 9781555817145 ; Nitrification ; Ward > 
+      au < exists ; exists ; 2011 ; 9781555814571 ; 9781555816902 ; 9781555816902 ; Genomes of Foodborne and Waterborne Pathogens ; Fratamico > 
+      au < exists ; exists ; 2011 ; 9781555815370 ; 9781555816896 ; 9781555816896 ; Stable Isotope Probing and Related Technologies ; Murrell > 
+      au < exists ; exists ; 2011 ; 9781555815141 ; 9781555816872 ; 9781555816872 ; Immune Response to Infection, The  ; Kaufmann > 
+      au < exists ; exists ; 2011 ; 9781555816087 ; 9781555816865 ; 9781555816865 ; Fecal Bacteria, The  ; Sadowsky > 
+      au < exists ; exists ; 2011 ; 9781555816216 ; 9781555816841 ; 9781555816841 ; Bacterial Stress Responses, Second Edition ; Storz > 
+      au < exists ; exists ; 2011 ; 9781555815431 ; 9781555816889 ; 9781555816889 ; Magic Bullets To Conquer Malaria: From Quinine to Qinghaosu ; Sherman > 
+      au < exists ; exists ; 2011 ; 9781555815011 ; 9781555816858 ; 9781555816858 ; Cryptococcus: From Human Pathogen to Model Yeast ; Heitman > 
+      au < exists ; exists ; 2011 ; 9781555815387 ; 9781555816810 ; 9781555816810 ; Lure of Bacterial Genetics, The : A Tribute to John Roth ; Maloy > 
+      au < exists ; exists ; 2011 ; 9781555814977 ; 9781555816834 ; 9781555816834 ; Molecular Microbiology, Second Edition: Diagnostic Principles and Practice ; Persing > 
+      au < exists ; exists ; 2012 ; 9781555815400 ; 9781555818470 ; 9781555818470 ; Microbes and Evolution: The World That Darwin Never Saw ; Maloy and Kolter > 
+      au < exists ; exists ; 2012 ; 9781555816742 ; 9781555817329 ; 9781555817329 ; Intracellular Pathogens I: Chlamydiales ; Tan, Bavoil > 
+      au < exists ; exists ; 2012 ; 9781555816773 ; 9781555817336 ; 9781555817336 ; Intracellular Pathogens II: Rickettsiales ; Palmer, Azad > 
+      au < exists ; exists ; 2012 ; 9781555816049 ; 9781555817183 ; 9781555817183 ; Polar Microbiology: Life in a Deep Freeze ; Miller > 
+      au < exists ; exists ; 2012 ; 9781555817084 ; 9781555817213 ; 9781555817213 ; Genome Plasticity and Infectious Diseases ; Hacker > 
+      au < exists ; exists ; 2012 ; 9781555815394 ; 9781555817176 ; 9781555817176 ; Candida and Candidiasis, Second Edition ; Calderone > 
+
+      }
+      
+   }
+}
