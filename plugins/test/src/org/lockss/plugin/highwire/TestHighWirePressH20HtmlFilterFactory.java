@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.18 2013-10-23 22:42:23 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.19 2013-10-24 22:59:53 etenbrink Exp $
  */
 
 /*
@@ -440,7 +440,40 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String socialHtmlFiltered =
       "<div id=\"header\">\n</div>";
   
-
+  private static final String adfootHtml =
+      "<body>\n" +
+      "<div class=\"ad_unhidden\" id=\"oas_top\">\n" + 
+      "Stuff\n" + 
+      "</div>\n" + 
+      "\n" + 
+      "<div class=\"ad_hidden\" id=\"oas_bottom\">\n" + 
+      "Stuff\n" + 
+      "</div>\n" + 
+      "\n" + 
+      "<widget-container>\n" + 
+      "<div id=\"disclaimer\">\n" + 
+      "<p>Disclaimer: </p>\n" + 
+      "</div>\n" + 
+      "</widget-container>\n" + 
+      "\n" + 
+      "<div id=\"secondary_footer\">\n" + 
+      "<div id=\"issn\">Online ISSN XXXX-2092 - Print ISSN XXXX-5129</div>\n" + 
+      "</div>\n" + 
+      "\n" + 
+      "<div id=\"primary_footer\">\n" + 
+      "<div id=\"site_logo\">\n" + 
+      "</div>\n" + 
+      "<div id=\"third_nav\">\n" + 
+      "</div>\n" + 
+      "</div>\n" + 
+      "\n" + 
+      "</body>";
+  
+  private static final String adfootHtmlFiltered =
+      "<body>\n" +
+      "<widget-container> </widget-container>\n" +
+      "</body>";
+  
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -461,6 +494,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(relatedHtml, relatedHtmlFiltered);
     assertFilterToSame(citedHtml, citedHtmlFiltered);
     assertFilterToSame(socialHtml, socialHtmlFiltered);
+    assertFilterToSame(adfootHtml, adfootHtmlFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
