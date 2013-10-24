@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.49 2013-10-23 22:48:41 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.50 2013-10-24 23:05:49 etenbrink Exp $
  */
 
 /*
@@ -83,6 +83,12 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // May contain institution-specific data e.g. OUP
         HtmlNodeFilters.tagWithAttribute("div", "id", "secondary_footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
+        // More footer & ad tags (but not filter "footer"
+        HtmlNodeFilters.tagWithAttribute("div", "id", "primary_footer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "foot"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad_hidden"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad_unhidden"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "disclaimer"),
         // e.g. PNAS
         HtmlNodeFilters.tagWithAttribute("div", "class", "science-jobs"),
         // e.g. PNAS
@@ -157,7 +163,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "status"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "AdSkyscraper"),
         
-        // geoscienceworld.org
+        // geoscienceworld.org (rather than filter "header"
         HtmlNodeFilters.tagWithAttribute("div", "id", "gsw-head"),
         // rmg.geoscienceworld.org
         HtmlNodeFilters.tagWithAttribute("a", "class", "hwac-institutional-logo"),
