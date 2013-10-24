@@ -645,8 +645,6 @@
       >
       param[base_url] = http://jvi.asm.org/
       
-      comment[notReady] = V86 500 Internal Server Error (non-fatal) http://jvi.asm.org/content/86/23/12879/F1.large.jpg
-  
       au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of Virology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of Virology Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of Virology Volume 3 ; 3 >
