@@ -360,8 +360,8 @@
     param[base_url] = http://www.secularismandnonreligion.org/
     param[journal_id] = snr
     
-    au < exists ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
-    au < exists ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
+    au < manifest ; exists ; 2012 ; Secularism and Nonreligion Volume 1 ; 1 ; 2012 >
+    au < manifest ; exists ; 2013 ; Secularism and Nonreligion Volume 2 ; 2 ; 2013 >
     au < expected ; exists ; 2014 ; Secularism and Nonreligion Volume 3 ; 3 ; 2014 >
 
   }
