@@ -626,9 +626,9 @@
       param[journal_id] = leituraflutuante
       comment[notReady] = Language XML issues
 
-      au < testing ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 >
+      au < ready ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Leitura Flutuante Volume 2013 ; 2013 >
 
@@ -648,15 +648,15 @@
       comment[notReady] = PDF issues. Also some XML language problems
 
       au < ready ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
+      au < ready ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
       au < ready ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
       au < notReady ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 >
       au < ready ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 >
       au < ready ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
+      au < ready ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
       au < testing ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
       au < ready ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 >
       au < ready ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
@@ -695,7 +695,7 @@
 
       au < ready ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
       au < ready ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
+      au < ready ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
       au < ready ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
       au < ready ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
       au < ready ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
