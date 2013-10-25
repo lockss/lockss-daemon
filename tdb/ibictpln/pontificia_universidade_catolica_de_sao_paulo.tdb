@@ -360,11 +360,12 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = emp
+      comment[notReady] = no substance
 
-      au < testing ; 1999 ; 1 ; Educação Matemática Pesquisa Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 2 ; Educação Matemática Pesquisa Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 3 ; Educação Matemática Pesquisa Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 4 ; Educação Matemática Pesquisa Volume 2002 ; 2002 >
+      au < notReady ; 1999 ; 1 ; Educação Matemática Pesquisa Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 2 ; Educação Matemática Pesquisa Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 3 ; Educação Matemática Pesquisa Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 4 ; Educação Matemática Pesquisa Volume 2002 ; 2002 >
       au < ready ; 2003 ; 5 ; Educação Matemática Pesquisa Volume 2003 ; 2003 >
       au < ready ; 2004 ; 6 ; Educação Matemática Pesquisa Volume 2004 ; 2004 >
       au < ready ; 2005 ; 7 ; Educação Matemática Pesquisa Volume 2005 ; 2005 >
