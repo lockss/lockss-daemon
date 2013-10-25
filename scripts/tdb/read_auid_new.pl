@@ -248,12 +248,7 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif ($plugin eq "ClockssTaylorAndFrancisPlugin") || 
-          ($plugin eq "ClockssNRCResearchPressPlugin") ||
-          ($plugin eq "ClockssASCEPlugin") ||
-          ($plugin eq "ClockssSiamPlugin") ||
-          ($plugin eq "ClockssAmmonsScientificPlugin") ||
-          ($plugin eq "ClockssFutureSciencePlugin") {
+  } elsif ($plugin eq "ClockssTaylorAndFrancisPlugin") || ($plugin eq "ClockssNRCResearchPressPlugin") || ($plugin eq "ClockssASCEPlugin") || ($plugin eq "ClockssSiamPlugin") || ($plugin eq "ClockssAmmonsScientificPlugin") || ($plugin eq "ClockssFutureSciencePlugin") {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
