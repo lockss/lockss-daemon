@@ -222,7 +222,9 @@ while (my $line = <>) {
     }
         sleep(5);
         
-  } elsif ($plugin eq "TaylorAndFrancisPlugin") {
+  } elsif ($plugin eq "TaylorAndFrancisPlugin") ||
+          ($plugin eq "SiamPlugin") ||
+          ($plugin eq "FutureSciencePlugin") {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
@@ -248,33 +250,12 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif ($plugin eq "ClockssTaylorAndFrancisPlugin") {
-        $url = sprintf("%sclockss/%s/%s/index.html", 
-            $param{base_url}, $param{journal_id}, $param{volume_name});
-        $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/$param{journal_id}\/$param{volume_name}/))) {
-    if ($man_contents =~ m/<title>(.*) CLOCKSS Manifest Page<\/title>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        $vol_title =~ s/2013/Volume $param{volume_name}/g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-          $vol_title = "\"" . $vol_title . "\"";
-        }
-    } 
-    $result = "Manifest";
-      } else {
-    $result = "--"
-      }
-  } else {
-      $result = "--"
-  }
-        sleep(5);
-        
-  } elsif ($plugin eq "ClockssNRCResearchPressPlugin") {
+  } elsif ($plugin eq "ClockssTaylorAndFrancisPlugin") || 
+          ($plugin eq "ClockssNRCResearchPressPlugin") ||
+          ($plugin eq "ClockssASCEPlugin") ||
+          ($plugin eq "ClockssSiamPlugin") ||
+          ($plugin eq "ClockssAmmonsScientificPlugin") ||
+          ($plugin eq "ClockssFutureSciencePlugin") {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
