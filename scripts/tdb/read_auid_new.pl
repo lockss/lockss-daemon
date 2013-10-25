@@ -342,7 +342,7 @@ while (my $line = <>) {
     my $resp = $ua->request($req);
     if ($resp->is_success) {
       my $man_contents = $resp->content;
-      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~/href=\"abstract.cgi?id>/) {
+      if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/href="abstract\.cgi\?id>/) {
         if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
