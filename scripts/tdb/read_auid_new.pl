@@ -169,7 +169,7 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif ($plugin eq "OJS2Plugin") {
+  } elsif ($plugin eq "OJS2Plugin" || $plugin eq "CoActionPublishingPlugin") {
         $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
         $man_url = uri_unescape($url);
@@ -194,7 +194,7 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif ($plugin eq "ClockssOJS2Plugin") {
+  } elsif ($plugin eq "ClockssOJS2Plugin" || $plugin eq "ClockssCoActionPublishingPlugin") {
         #Url with permission statement
         $url_m = sprintf("%sindex.php/%s/about/editorialPolicies", 
             $param{base_url}, $param{journal_id});
@@ -222,7 +222,9 @@ while (my $line = <>) {
     }
         sleep(5);
         
-  } elsif (($plugin eq "TaylorAndFrancisPlugin") || ($plugin eq "SiamPlugin") || ($plugin eq "FutureSciencePlugin")) {
+  } elsif (($plugin eq "TaylorAndFrancisPlugin") || 
+           ($plugin eq "SiamPlugin") || 
+           ($plugin eq "FutureSciencePlugin")) {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
@@ -248,7 +250,12 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") || ($plugin eq "ClockssNRCResearchPressPlugin") || ($plugin eq "ClockssASCEPlugin") || ($plugin eq "ClockssSiamPlugin") || ($plugin eq "ClockssAmmonsScientificPlugin") || ($plugin eq "ClockssFutureSciencePlugin")) {
+  } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") || 
+           ($plugin eq "ClockssNRCResearchPressPlugin") || 
+           ($plugin eq "ClockssASCEPlugin") || 
+           ($plugin eq "ClockssSiamPlugin") || 
+           ($plugin eq "ClockssAmmonsScientificPlugin") || 
+           ($plugin eq "ClockssFutureSciencePlugin")) {
         $url = sprintf("%sclockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
@@ -311,6 +318,32 @@ while (my $line = <>) {
       my $man_contents = $resp->content;
       if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
         if ($man_contents =~ m/<title>(.*)CLOCKSS Manifest Page<\/title>/si) {
+          $vol_title = $1;
+          $vol_title =~ s/\s*\n\s*/ /g;
+          if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+            $vol_title = "\"" . $vol_title . "\"";
+          }
+        } 
+        $result = "Manifest";
+      } else {
+        $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+    sleep(5);
+        
+  } elsif ($plugin eq "ClockssPionPlugin") {
+    $url = sprintf("%scontents.cgi?journal=%s&amp;volume=%s", 
+      $param{base_url}, $param{short_journal_code}, $param{volume_name});
+    $man_url = uri_unescape($url);
+    #printf("\nUrl: %s\n", $man_url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    if ($resp->is_success) {
+      my $man_contents = $resp->content;
+      if (defined($man_contents) && (($man_contents =~ m/$clockss_tag/))) {
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
           $vol_title = $1;
           $vol_title =~ s/\s*\n\s*/ /g;
           if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
