@@ -222,9 +222,7 @@ while (my $line = <>) {
     }
         sleep(5);
         
-  } elsif ($plugin eq "TaylorAndFrancisPlugin") ||
-          ($plugin eq "SiamPlugin") ||
-          ($plugin eq "FutureSciencePlugin") {
+  } elsif ($plugin eq "TaylorAndFrancisPlugin") || ($plugin eq "SiamPlugin") || ($plugin eq "FutureSciencePlugin") {
         $url = sprintf("%slockss/%s/%s/index.html", 
             $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
