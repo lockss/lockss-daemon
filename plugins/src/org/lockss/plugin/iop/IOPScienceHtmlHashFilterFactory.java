@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.6 2013-07-25 22:07:47 alexandraohlson Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.7 2013-10-28 21:17:41 etenbrink Exp $
  */
 
 /*
@@ -33,18 +33,17 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.iop;
 
 import java.io.InputStream;
+import java.io.Reader;
 
-import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.Div;
-import org.htmlparser.util.SimpleNodeIterator;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.ListUtil;
 import org.lockss.util.ReaderInputStream;
 
 
@@ -56,6 +55,8 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Contains the search box, which changes over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header-content"),
         // Contains variable links to other content ("users also read", "related review articles", etc.)
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "alsoRead"),
         // The right column is an accordion that contains toc anchor links, related articles, related review articles, etc
@@ -81,7 +82,14 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
     InputStream filtered = new HtmlFilterInputStream(in,
                                                      encoding,
                                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filtered, encoding)));
+    
+    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(
+            new TagPair("<header>", "</header>"),
+            new TagPair("<footer>", "</footer>")
+            ));
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
 }
