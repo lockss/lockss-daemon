@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.2 2013-07-25 22:07:48 alexandraohlson Exp $
+ * $Id: TestIOPScienceHtmlHashFilterFactory.java,v 1.3 2013-10-28 21:07:50 etenbrink Exp $
  */
 
 package org.lockss.plugin.iop;
@@ -103,6 +103,19 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
           "<br clear=\"all\"/>";
   private static final String rightColHtmlFiltered =
           "<br clear=\"all\"/>";
+  
+  // test removal of header & footer tags by the hash filter
+  private static final String hrtagsHtmlHash =
+      "<header>\n" +
+      "<div id=\"header-content\">\n" + 
+      "<a title=\"IOP science\"></a>\n" + 
+      "</div>head \n" +
+      "</header>\n" +
+      "<body>stuff</body>\n" +
+      "<footer> foot \n" +
+      "</footer>";
+  private static final String hrtagsHtmlHashFiltered =
+      " <body>stuff</body> ";
 
 
   public void testFiltering() throws Exception {
@@ -133,7 +146,11 @@ public class TestIOPScienceHtmlHashFilterFactory extends LockssTestCase {
     inA = fact.createFilteredInputStream(mau, new StringInputStream(mathJaxHtml),
         ENC);
     assertEquals(mathJaxHtmlFiltered,StringUtil.fromInputStream(inA));
-        
+    
+    // header & footer test
+    inA = fact.createFilteredInputStream(mau, new StringInputStream(hrtagsHtmlHash),
+        ENC);
+    assertEquals(hrtagsHtmlHashFiltered, StringUtil.fromInputStream(inA));
     
   }
 }
