@@ -16,10 +16,11 @@
     >
 
     param[journal_dir] = levinas_studies
-    attr[journal_id] =
-    comment[new] = coming to Muse in 2013
+    attr[journal_id] = lev
 
-    au < expected ; 2013 ; Levinas Studies Volume 1 ; 1 >
+    au < expected ; 2011 ; Levinas Studies Volume 6 ; 6 >
+    au < expected ; 2012 ; Levinas Studies Volume 7 ; 7 >
+    au < expected ; 2013 ; Levinas Studies Volume 8 ; 8 >
 
   }
   
@@ -30,10 +31,9 @@
     >
 
     param[journal_dir] = milton_studies
-    attr[journal_id] =
-    comment[new] = coming to Muse in 2013
+    attr[journal_id] = mlt
 
-    au < expected ; 2013 ; Milton Studies Volume 1 ; 1 >
+    au < expected ; 2013 ; Milton Studies Volume 53 ; 53 >
 
   }
 
