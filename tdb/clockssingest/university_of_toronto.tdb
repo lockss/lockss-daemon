@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = University of Toronto 
+    name = University of Toronto ;
+    info[contract] = 2013 ;
+    info[tester] = 5
   >
   
   {
