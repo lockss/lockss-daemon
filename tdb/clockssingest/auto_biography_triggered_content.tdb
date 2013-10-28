@@ -1,6 +1,8 @@
 {
   publisher <
-    name = Auto/Biography CLOCKSS Triggered Content
+    name = Auto/Biography CLOCKSS Triggered Content ;
+    info[contract] = 2008 ;
+    info[tester] = 0
   >
 
   plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
