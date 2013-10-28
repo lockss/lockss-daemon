@@ -943,7 +943,7 @@
     au < manifest ; exists ; 2006 ; The American Journal of Jurisprudence Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; The American Journal of Jurisprudence Volume 52 ; 52 ; >
     au < manifest ; exists ; 2008 ; The American Journal of Jurisprudence Volume 53 ; 53 ; >
-    au < testing ; exists ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 ; >
+    au < released ; manifest ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 ; >
     au < crawling ; exists ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; >
     au < released ; manifest ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
     au < doesNotExist ; doesNotExist ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
@@ -7758,7 +7758,7 @@
     au < manifest ; exists ; 2006 ; ILAR Journal Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; ILAR Journal Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; ILAR Journal Volume 49 ; 49 ; >
-    au < testing ; exists ; 2009 ; ILAR Journal Volume 50 ; 50 ; >
+    au < released ; manifest ; 2009 ; ILAR Journal Volume 50 ; 50 ; >
     au < crawling ; exists ; 2010 ; ILAR Journal Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; ILAR Journal Volume 52 ; 52 ; >
     au < released ; manifest ; 2012 ; ILAR Journal Volume 53 ; 53 ; >
@@ -11326,7 +11326,7 @@
     au < released ; crawling ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
-    au < testing ; exists ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
+    au < released ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
     au < released ; manifest ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
@@ -14394,8 +14394,8 @@
     au < testing ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 396 ; 396 ; >
     au < testing ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 397 ; 397 ; >
     au < testing ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 398 ; 398 ; >
-    au < testing ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
-    au < testing ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
+    au < released ; manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
+    au < released ; manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401 ; 401 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; >
@@ -14414,7 +14414,7 @@
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 416 ; 416 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 417 ; 417 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 418 ; 418 ; >
-    au < testing ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
+    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
     au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
     au < testing ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; >
     au < testing ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; >
@@ -14799,7 +14799,7 @@
     au < released ; crawling ; 2009 ; The Musical Quarterly Volume 92 ; 92 ; >
     au < released ; crawling ; 2010 ; The Musical Quarterly Volume 93 ; 93 ; >
     au < released ; crawling ; 2011 ; The Musical Quarterly Volume 94 ; 94 ; >
-    au < testing ; exists ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
+    au < released ; manifest ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Musical Quarterly Volume 96 ; 96 ; >
     au < expected ; exists ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
 
@@ -15941,7 +15941,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
-    au < testing ; exists ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
+    au < released ; manifest ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 ; >
     au < expected ; exists ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
 
