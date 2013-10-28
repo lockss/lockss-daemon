@@ -226,7 +226,7 @@
       issn = 1726-4170 ;
       eissn = 1726-4189
     >
-      attr[journal_id] =  BG  
+      attr[journal_id] = BG 
       param[base_url] = http://www.biogeosciences.net/
       param[home_url] = http://www.biogeosciences.net/
 
@@ -289,6 +289,35 @@
     
   {
     title <
+      name = Earth Surface Dynamics ;
+      issn = 2196-6311 ;
+      eissn = 2196-632X
+    >
+      attr[journal_id] = ESurf
+      param[base_url] = http://www.earth-surf-dynam.net
+      param[home_url] = http://www.earth-surface-dynamics.net/
+
+      au < exists ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
+    
+   }
+    
+  {
+    title <
+      name = Earth Surface Dynamics Discussions;
+      eissn = 2196-6338
+    >
+      attr[journal_id] = ESurfD
+      param[base_url] = http://www.earth-surf-dynam-discuss.net/
+      param[home_url] = http://www.earth-surf-dynam-discuss.net/
+
+      au < exists ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
+    
+   }
+    
+  {
+    title <
       name = Earth System Dynamics ;
       issn = 2190-4979 ;
       eissn = 2190-4987
@@ -311,7 +340,7 @@
       issn = 1866-3508 ;
       eissn = 1866-3516
     >
-      attr[journal_id] =  ESSD  
+      attr[journal_id] = ESSD 
       param[base_url] = http://www.earth-syst-sci-data.net/
       param[home_url] = http://www.earth-system-science-data.net/
 
@@ -353,6 +382,19 @@
 
       au < manifest ; exists ; 2008 ; 2008 ; Field Actions Science Reports Volume 1 ; 1 >
       au < manifest ; exists ; 2009 ; 2009 ; Field Actions Science Reports Volume 2 ; 2 >
+    
+   }
+    
+  {
+    title <
+      name = Fossil Record ;
+      issn = 1860-1014
+    >
+      attr[journal_id] = FR
+      param[base_url] = http://www.fossil-record.net/
+      param[home_url] = http://www.fossil-record.net/
+
+      au < expected ; exists ; 2014 ; 2014 ; Fossil Record Reports Volume 1 ; 1 >
     
    }
     
@@ -470,6 +512,21 @@
       au < released ; crawling ; 2012 ; 2012 ; Geoscientific Model Development Volume 5 ; 5 >
       au < crawling ; exists ; 2013 ; 2013 ; Geoscientific Model Development Volume 6 ; 6 >
       au < expected ; exists ; 2014 ; 2014 ; Geoscientific Model Development Volume 7 ; 7 >
+    
+   }
+    
+  {
+    title <
+      name = Geothermal Energy Science ;
+      issn = 2195-4771 ;
+      eissn = 2195-478X 
+    >
+      attr[journal_id] = GtES
+      param[base_url] = http://www.geoth-energ-sci.net/
+      param[home_url] = http://www.geothermal-energy-science.net/
+
+      au < exists ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
     
    }
     
@@ -637,6 +694,35 @@
       au < released ; crawling ; 2012 ; 2012 ; Ocean Science Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; 2013 ; Ocean Science Volume 9 ; 9 >
       au < expected ; exists ; 2014 ; 2014 ; Ocean Science Volume 10 ; 10 >
+    
+   }
+    
+  {
+    title <
+      name = Pattern Recognition in Physics ;
+      issn = 2195-9242 ;
+      eissn = 2195-9250
+    >
+      attr[journal_id] = PRP
+      param[base_url] = http://www.pattern-recogn-phys.net/
+      param[home_url] = http://www.pattern-recognition-in-physics.net/
+
+      au < exists ; exists ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 >
+      au < expected ; exists ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 >
+    
+   }
+    
+  {
+    title <
+      name = Scientific Drilling ;
+      issn = 1816-8957 ;
+      eissn = 1816-3459
+    >
+      attr[journal_id] = SD
+      param[base_url] = http://www.scientific-drilling.net/
+      param[home_url] = http://www.scientific-drilling.net/
+
+      au < expected ; exists ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 1 ; 1 >
     
    }
     
