@@ -832,12 +832,13 @@
       comment[publisher] = Pontifícia Universidade Católica de São Paulo
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = reb
+      comment[notReady] = Fetch error
 
-      au < testing ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 >
+      au < notReady ; 2008 ; 1 ; REB: Revista Eletrônica de Biologia Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 2 ; REB: Revista Eletrônica de Biologia Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 3 ; REB: Revista Eletrônica de Biologia Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 4 ; REB: Revista Eletrônica de Biologia Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 5 ; REB: Revista Eletrônica de Biologia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; REB: Revista Eletrônica de Biologia Volume 2013 ; 2013 >
 
   }
