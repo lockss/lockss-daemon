@@ -11,6 +11,13 @@
     plugin = org.lockss.plugin.pensoft.PensoftPlugin
     param[base_url] = http://www.pensoft.net/
 
+   {
+     title <
+      name = Biodiversity Data Journal ;
+      eissn = 1314-2828 
+     >
+
+   }
 
     {
      title <
