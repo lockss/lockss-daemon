@@ -1742,7 +1742,9 @@
         comment[platform] = Springer
   
         au < exists ; 2012 ; Applied Petrochemical Research Volume 1 ; 1 >
-        au < expected ; 2013 ; Applied Petrochemical Research Volume 2 ; 2 >
+        au < exists ; 2012 ; Applied Petrochemical Research Volume 2 ; 2 >
+        au < exists ; 2013 ; Applied Petrochemical Research Volume 3 ; 3 >
+        au < expected ; 2014 ; Applied Petrochemical Research Volume 4 ; 4 >
   
     }
   
@@ -1873,7 +1875,7 @@
           eissn = 2190-7579
         >
   
-        param[base_url] = http://www.springer.com/materials/special+types/journal/13404/
+        param[base_url] = http://www.springer.com/13404/
         param[journal_issn] = 2190-7579
         comment[platform] = Springer
   
@@ -1919,7 +1921,8 @@
         au < exists ; 2010 ; Gold Bulletin Volume 43 ; 43 >
         au < exists ; 2011 ; Gold Bulletin Volume 44 ; 44 >
         au < exists ; 2012 ; Gold Bulletin Volume 45 ; 45 >
-        au < expected ; 2013 ; Gold Bulletin Volume 46 ; 46 >
+        au < exists ; 2013 ; Gold Bulletin Volume 46 ; 46 >
+        au < expected ; 2014 ; Gold Bulletin Volume 47 ; 47 >
   
     }
   
@@ -1949,14 +1952,14 @@
           eissn = 2234-1315
         >
   
-        param[base_url] = http://www.springer.com/engineering/civil+engineering/journal/40069/
+        param[base_url] = http://www.springer.com/40069/
         param[journal_issn] = 2234-1315
         comment[platform] = Springer
+        comment[0] = content prior to 2012, not with Springer
   
-        au < exists ; 2010 ; International Journal of Concrete Structures and Materials Volume 1 ; 1 >
-        au < exists ; 2011 ; International Journal of Concrete Structures and Materials Volume 2 ; 2 >
-        au < exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 3 ; 3 >
-        au < expected ; 2013 ; International Journal of Concrete Structures and Materials Volume 4 ; 4 >
+        au < exists ; 2012 ; International Journal of Concrete Structures and Materials Volume 6 ; 6 >
+        au < exists ; 2013 ; International Journal of Concrete Structures and Materials Volume 7 ; 7 >
+        au < expected ; 2014 ; International Journal of Concrete Structures and Materials Volume 8 ; 8 >
   
     }
   
@@ -2106,7 +2109,17 @@
         param[journal_issn] = 1615-6609
         comment[platform] = Springer
   
-        au < exists ; 2001 ; Poiesis & Praxis Volume 1 ; 1 >
+        au < exists ; 2001-2003 ; Poiesis & Praxis Volume 1 ; 1 >
+        au < exists ; 2003-2004 ; Poiesis & Praxis Volume 2 ; 2 >
+        au < exists ; 2004-2005 ; Poiesis & Praxis Volume 3 ; 3 >
+        au < exists ; 2006 ; Poiesis & Praxis Volume 4 ; 4 >
+        au < exists ; 2008 ; Poiesis & Praxis Volume 5 ; 5 >
+        au < exists ; 2009 ; Poiesis & Praxis Volume 6 ; 6 >
+        au < exists ; 2010-2011 ; Poiesis & Praxis Volume 7 ; 7 >
+        au < exists ; 2011-2012 ; Poiesis & Praxis Volume 8 ; 8 >
+        au < exists ; 2012 ; Poiesis & Praxis Volume 9 ; 9 >
+        au < expected ; 2013 ; Poiesis & Praxis Volume 10 ; 10 >
+        au < expected ; 2014 ; Poiesis & Praxis Volume 11 ; 11 >
   
     }
   
