@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubscriptionManager.java,v 1.6 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id: TestSubscriptionManager.java,v 1.6.2.1 2013-10-29 16:20:44 fergaloy-sf Exp $
  */
 
 /*
@@ -616,6 +616,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     // Create the archival unit.
     TdbAu tdbAu = createTdbAu(properties);
+    assertFalse(tdbAu.isDown());
 
     // Create the publication corresponding to the archival unit.
     SerialPublication publication = new SerialPublication();
@@ -698,6 +699,7 @@ public class TestSubscriptionManager extends LockssTestCase {
 
     // Create the archival unit.
     tdbAu = createTdbAu(properties);
+    assertFalse(tdbAu.isDown());
 
     // Create the publication corresponding to the archival unit.
     publication = new SerialPublication();
@@ -781,6 +783,43 @@ public class TestSubscriptionManager extends LockssTestCase {
     assertNull(configureAu(conn, tdbAu, subscription, "1954(3)-1999", null));
     assertNull(configureAu(conn, tdbAu, subscription, "1900-1954(5)", null));
     assertNull(configureAu(conn, tdbAu, subscription, "-1954(5)", null));
+  }
+
+  /**
+   * Check the behavior of configureAus() for an AU marked as being down.
+   */
+  public final void testConfigureDownAus() throws Exception {
+    // Specify the relevant properties of the archival unit.
+    Properties properties = new Properties();
+    properties.setProperty("title", "MyTitle");
+    properties.setProperty("journalTitle", "MyJournalTitle");
+    properties.setProperty("plugin",
+	"org.lockss.plugin.simulated.SimulatedPlugin");
+    properties.setProperty("attributes.publisher", "MyPublisher");
+    properties.setProperty("attributes.year", "1954");
+    properties.setProperty("param.1.key", "root");
+    properties.setProperty("param.1.value", tempDirPath + "/0");
+    properties.setProperty("param.2.key", "base_url");
+    properties.setProperty("param.2.value", "http://www.title3.org/");
+    properties.setProperty("param.3.key", "pub_down");
+    properties.setProperty("param.3.value", "true");
+
+    // Create the archival unit.
+    TdbAu tdbAu = createTdbAu(properties);
+    assertTrue(tdbAu.isDown());
+
+    // Create the publication corresponding to the archival unit.
+    SerialPublication publication = new SerialPublication();
+    publication.setPublicationName(tdbAu.getName());
+    publication.setTdbTitle(tdbAu.getTdbTitle());
+
+    // Create the skeleton subscription to the publication.
+    Subscription subscription = new Subscription();
+    subscription.setPublication(publication);
+
+    Connection conn = dbManager.getConnection();
+
+    assertNull(configureAu(conn, tdbAu, subscription, "-", null));
   }
 
   private BatchAuStatus configureAu(Connection conn, TdbAu tdbAu,

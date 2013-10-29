@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.10 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.10.2.1 2013-10-29 16:20:44 fergaloy-sf Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.remote.RemoteApi;
@@ -2860,8 +2861,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       ArchivalUnit au = pluginManager.getAuFromId(auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "au = " + au);
 
-      // Check whether the archival unit is not active
-      if (au == null || !pluginManager.isActiveAu(au)) {
+      // Check whether the archival unit is not active and it is not marked as
+      // being down.
+      if (au == null
+	  || (!pluginManager.isActiveAu(au) && !AuUtil.isPubDown(au))) {
 	// Yes: Add the the archival unit to the configuration of those to be
 	// configured.
 	config = addAuConfiguration(tdbAu, auId, config);
