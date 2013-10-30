@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.1 2013-08-13 21:39:25 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.2 2013-10-30 16:12:21 alexandraohlson Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.IOException;
 
+import org.apache.commons.lang.StringUtils;
 import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 
@@ -133,23 +134,23 @@ public class TaylorAndFrancisRisMetadataExtractorFactory
       String AU_journal_title = (tf_tau == null) ? null : tf_tau.getJournalTitle();
 
       // If we couldn't extract journal title or volume from metadata, we can't verify this is in the correct AU
-      definitelyInAU = !(jTitle.isEmpty() && vName.isEmpty());
+      definitelyInAU = !(StringUtils.isEmpty(jTitle) && StringUtils.isEmpty(vName));
 
       // If we're still good and if we got a journal title, compare it to the AU journal title
       // see if the jTitle is equal to or a substring of the AU title as the AU title may contain the subtitle
-      if (definitelyInAU && !(jTitle.isEmpty())) {
+      if (definitelyInAU && !(StringUtils.isEmpty(jTitle))) {
         definitelyInAU =  ( (AU_journal_title != null) && (AU_journal_title.toUpperCase().indexOf(jTitle.toUpperCase()) != -1));
       }
       // If we're still good and if we got a volume name, compare it to the AU volume name
-      if (definitelyInAU && !(vName.isEmpty())) {
+      if (definitelyInAU && !(StringUtils.isEmpty(vName))) {
         definitelyInAU =  ( (AU_volume != null) && (AU_volume.equals(vName)));
       }
       if (definitelyInAU) {
         // Well we might as well pick up and fill in this since we're already peeking in the AU
         String AU_issn = (tf_tau == null) ? null : tf_tau.getIssn();
         String AU_eissn = (tf_tau == null) ? null : tf_tau.getEissn();
-        if ( (AU_issn != null) && !AU_issn.isEmpty()) am.put(MetadataField.FIELD_ISSN, AU_issn);
-        if ( (AU_eissn != null) && !AU_eissn.isEmpty()) am.put(MetadataField.FIELD_EISSN, AU_eissn);
+        if ( !(StringUtils.isEmpty(AU_issn))) am.put(MetadataField.FIELD_ISSN, AU_issn);
+        if ( !(StringUtils.isEmpty(AU_eissn))) am.put(MetadataField.FIELD_EISSN, AU_eissn);
         emitter.emitMetadata(cu, am);
       } 
     }
