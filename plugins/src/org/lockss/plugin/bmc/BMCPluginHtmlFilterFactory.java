@@ -1,10 +1,10 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.3 2013-09-26 22:40:46 aishizaki Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.4 2013-10-30 21:20:15 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,18 +33,14 @@
 package org.lockss.plugin.bmc;
 
 import java.io.*;
-import java.util.List;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
-import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
-import org.lockss.filter.html.HtmlFilterInputStream;
-import org.lockss.filter.html.HtmlNodeFilterTransform;
-import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
+import org.lockss.util.ReaderInputStream;
 
 public class BMCPluginHtmlFilterFactory implements FilterFactory {
 
@@ -102,7 +98,10 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         // Institution-dependent link resolvers  v2 - added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\?.*"),
         // Institution-dependent link resolvers   v1
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp.*"), };
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp.*"),
+        // Springer branding below the footer
+        HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+    };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     // added whitespace filter

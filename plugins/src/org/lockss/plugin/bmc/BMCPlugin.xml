@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.46 2013-10-09 23:04:46 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.47 2013-10-30 21:20:15 thib_gc Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
     </map>
   </entry>

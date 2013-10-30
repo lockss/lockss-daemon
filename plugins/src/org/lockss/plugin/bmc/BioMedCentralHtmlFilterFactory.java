@@ -1,10 +1,10 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.9 2013-07-19 21:05:05 aishizaki Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.10 2013-10-30 21:20:15 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,22 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bmc;
 
-import java.io.InputStream;
-import java.io.Reader;
+import java.io.*;
 
-import org.htmlparser.Node;
-import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
-import org.htmlparser.tags.CompositeTag;
-import org.htmlparser.tags.DefinitionListBullet;
-import org.htmlparser.tags.Div;
-import org.htmlparser.tags.HeadTag;
-import org.htmlparser.tags.HeadingTag;
+import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.ReaderInputStream;
@@ -100,6 +91,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/access"),
         // A highly accessed link/glyph that may get added
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
+        // Springer branding below the footer
+        HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
         // but the id is associated with the <h2>, not with the sibling <div>
         new NodeFilter() {
@@ -111,12 +104,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
             }
             if (prevNode != null && prevNode instanceof HeadingTag) {
               CompositeTag prevTag = (CompositeTag)prevNode;
-              if ( ("accesses".equals(prevTag.getAttribute("id"))) || 
-                  ("citations".equals(prevTag.getAttribute("id"))) ){
-                return true;
-              } else {
-                return false;
-              }
+              String id = prevTag.getAttribute("id");
+              return "accesses".equals(id) || "citations".equals(id);
             }
             return false;
           }
