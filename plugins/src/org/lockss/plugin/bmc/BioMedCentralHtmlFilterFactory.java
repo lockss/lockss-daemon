@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.10 2013-10-30 21:20:15 thib_gc Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.11 2013-10-30 22:21:56 thib_gc Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("iframe"),
         // Contains ads
         new TagNameFilter("object"),
+        // CSS and RSS links varied over time
+        new TagNameFilter("link"),
         // Contains one-time names inside the page
         HtmlNodeFilters.tagWithAttribute("a", "name"),
         // Links to one-time names inside the page
@@ -93,6 +95,8 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*/about/mostviewed"),
         // Springer branding below the footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+        // The text of this link changed from "About this article" to "Article metrics"
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
         // Journal of Cheminformatics -  an "accesses" and/or "citations" block
         // but the id is associated with the <h2>, not with the sibling <div>
         new NodeFilter() {

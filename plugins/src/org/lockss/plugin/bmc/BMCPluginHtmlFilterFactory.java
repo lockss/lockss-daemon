@@ -1,5 +1,5 @@
 /*
- * $Id: BMCPluginHtmlFilterFactory.java,v 1.4 2013-10-30 21:20:15 thib_gc Exp $
+ * $Id: BMCPluginHtmlFilterFactory.java,v 1.5 2013-10-30 22:21:56 thib_gc Exp $
  */
 
 /*
@@ -55,10 +55,10 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("iframe"),
         // Contains ads
         new TagNameFilter("object"),
+        // CSS and RSS links varied over time
+        new TagNameFilter("link"),
         //filter out comments
         HtmlNodeFilters.commentWithRegex(".*"),
-        // stylesheets
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
         // upper area above the article - Extreme Hash filtering!
         HtmlNodeFilters.tagWithAttribute("div", "id", "branding"),
         // left-hand area next to the article - Extreme Hash filtering!
@@ -101,6 +101,8 @@ public class BMCPluginHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp.*"),
         // Springer branding below the footer
         HtmlNodeFilters.tagWithAttribute("div", "class", "springer"),
+        // The text of this link changed from "About this article" to "Article metrics"
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/about$"),
     };
     InputStream filtered =  new HtmlFilterInputStream(in, encoding, 
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
