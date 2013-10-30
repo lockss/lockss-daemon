@@ -59,7 +59,8 @@ END {
   s[8] = "down"
   s[9] = "superseded"
   s[10] = "zapped"
-  sn = 11
+  s[11] = "doNotProcess"
+  sn = 12
   
   sc[0] = "expe"
   sc[1] = "exis"
@@ -72,7 +73,8 @@ END {
   sc[8] = "down"
   sc[9] = "supe"
   sc[10] = "zapp"
-  scn = 11
+  sc[11] = "doNP"
+  scn = 12
 
   #print out header
   printf "Publisher\tPlugin\tContr\tBack\tYear\tT\tTotal"
