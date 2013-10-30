@@ -213,4 +213,9 @@ public class AssociationForComputingMachineryCachedUrl implements org.lockss.plu
     // TODO Auto-generated method stub
     return null;
   }
+
+  @Override
+  public boolean isArchiveMember() {
+    return false;
+  }
 }
