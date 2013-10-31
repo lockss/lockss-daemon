@@ -1,5 +1,5 @@
 /*
- * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.14 2013-09-23 15:20:50 aishizaki Exp $
+ * $Id: AssociationForComputingMachineryXmlMetadataExtractorFactory.java,v 1.14.2.1 2013-10-31 05:16:12 aishizaki Exp $
  */
 
 /*
@@ -345,7 +345,7 @@ implements FileMetadataExtractorFactory {
       log.debug3("extract metadata from cu: "+cu);
       ArchivalUnit au = cu.getArchivalUnit();
 
-      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(au.makeCachedUrl(getMetadataFile(cu)));      //CachedUrl metadataCu = au.makeCachedUrl(getMetadataFile(cu));
+      CachedUrl metadataCu = new AssociationForComputingMachineryCachedUrl(au, getMetadataFile(cu));
          
       if (metadataCu == null || !metadataCu.hasContent()) {
         log.debug3("The metadata file does not exist in the au: "+metadataCu.getUrl());
@@ -371,7 +371,7 @@ implements FileMetadataExtractorFactory {
       try {
         ArticleMetadata am;
 
-        log.debug("do_extract("+metadataCu.getUrl()+")");
+        log.debug3("do_extract("+metadataCu.getUrl()+")");
         // Only process metadata file once - reset the currMetadataUrl when
         // processing the next metadata file ; works since ACM has multiple
         // metadata files per "process-batch"        
