@@ -3320,7 +3320,7 @@
     au < zapped ; down ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Cardiology Volume 8 ; 2011 ; 8 >
-    au < testing ; exists ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
+    au < released ; manifest ; 2012 ; Nature Reviews Cardiology Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Nature Reviews Cardiology Volume 10 ; 2013 ; 10 >
     au < expected ; exists ; 2014 ; Nature Reviews Cardiology Volume 11 ; 2014 ; 11 >
 
@@ -3372,7 +3372,7 @@
     au < zapped ; down ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
     au < released ; crawling ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
     au < released ; crawling ; 2011 ; Nature Reviews Drug Discovery Volume 10 ; 2011 ; 10 >
-    au < testing ; exists ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
+    au < released ; manifest ; 2012 ; Nature Reviews Drug Discovery Volume 11 ; 2012 ; 11 >
     au < crawling ; exists ; 2013 ; Nature Reviews Drug Discovery Volume 12 ; 2013 ; 12 >
     au < expected ; exists ; 2014 ; Nature Reviews Drug Discovery Volume 13 ; 2014 ; 13 >
 
@@ -3388,7 +3388,6 @@
     >
 
     param[journal_id] = nrendo
-    comment[notReady] = fetch error on ingest3 RT 4106
 
     au < manifest ; exists ; 2005 ; Nature Reviews Endocrinology Volume 1 ; 2005 ; 1 >
     au < manifest ; exists ; 2006 ; Nature Reviews Endocrinology Volume 2 ; 2006 ; 2 >
@@ -3397,7 +3396,7 @@
     au < zapped ; down ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
     au < released ; crawling ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
     au < crawling ; exists ; 2011 ; Nature Reviews Endocrinology Volume 7 ; 2011 ; 7 >
-    au < testing ; exists ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
+    au < released ; manifest ; 2012 ; Nature Reviews Endocrinology Volume 8 ; 2012 ; 8 >
     au < crawling ; exists ; 2013 ; Nature Reviews Endocrinology Volume 9 ; 2013 ; 9 >
     au < expected ; exists ; 2014 ; Nature Reviews Endocrinology Volume 10 ; 2014 ; 10 >
 
@@ -3422,7 +3421,7 @@
     au < zapped ; down ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
     au < released ; crawling ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
     au < released ; crawling ; 2011 ; Nature Reviews Gastroenterology and Hepatology Volume 8 ; 2011 ; 8 >
-    au < testing ; exists ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
+    au < released ; manifest ; 2012 ; Nature Reviews Gastroenterology and Hepatology Volume 9 ; 2012 ; 9 >
     au < crawling ; exists ; 2013 ; Nature Reviews Gastroenterology and Hepatology Volume 10 ; 2013 ; 10 >
     au < expected ; exists ; 2014 ; Nature Reviews Gastroenterology and Hepatology Volume 11 ; 2014 ; 11 >
 
@@ -3737,7 +3736,7 @@
     au < released ; crawling ; 2009 ; Neuropsychopharmacology Volume 34 ; 2009 ; 34 >
     au < released ; crawling ; 2010 ; Neuropsychopharmacology Volume 35 ; 2010 ; 35 >
     au < crawling ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
-    au < testing ; exists ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
+    au < released ; manifest ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 >
     au < expected ; exists ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 >
 
