@@ -8,6 +8,8 @@
   param[base_url] = http://muse.jhu.edu/
   implicit < status ; year ; isbn ; eisbn ; name ; param[eisbn] >
   
+  comment[9781587294488] = hash errors for pdfs like http://muse.jhu.edu/books/9781587294488/9781587294488-1.pdf
+  
   {
 
       title <
@@ -916,7 +918,7 @@
       au < released ; 2003 ; 9780472089062 ; 9780472024414 ; Lewd and Notorious: Female Transgression in the Eighteenth Century ; 9780472024414 >
       au < released ; 2003 ; 9780801887505 ; 9781421402758 ; Manufacturing Revolution: The Intellectual Origins of Early American Industry ; 9781421402758 >
       au < released ; 2003 ; 9781578066131 ; 9781604730517 ; Mass Media and the Shaping of American Feminism, 1963-1975 ; 9781604730517 >
-      au < testing ; 2003 ; 9780877458647 ; 9781587294488 ; Millennial Ecuador: Critical Essays on Cultural Transformations and Social Dynamics ; 9781587294488 >
+      au < notReady ; 2003 ; 9780877458647 ; 9781587294488 ; Millennial Ecuador: Critical Essays on Cultural Transformations and Social Dynamics ; 9781587294488 >
       au < released ; 2003 ; 9780871545305 ; 9781610443487 ; Muslims in the United States: The State of Research ; 9781610443487 >
       au < released ; 2003 ;  ; 9780803203327 ; Myth and History in the Creation of Yellowstone National Park ; 9780803203327 >
       au < released ; 2003 ; 9780937058688 ; 9781935978374 ; Naked Before God: Uncovering the Body in Anglo-Saxon England ; 9781935978374 >
