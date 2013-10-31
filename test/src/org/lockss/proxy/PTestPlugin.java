@@ -1,10 +1,10 @@
 /*
- * $Id: PTestPlugin.java,v 1.34 2013-07-24 19:00:41 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.35 2013-10-31 03:07:27 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -164,6 +164,11 @@ public class PTestPlugin {
 
     public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       return null;
+    }
+
+    @Override
+    public boolean isArchiveMember() {
+      return false;
     }
   }
 

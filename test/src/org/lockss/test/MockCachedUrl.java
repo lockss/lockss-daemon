@@ -1,10 +1,10 @@
 /*
- * $Id: MockCachedUrl.java,v 1.52 2013-07-24 19:00:53 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.53 2013-10-31 03:07:26 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,7 +51,7 @@ import org.lockss.extractor.*;
  */
 
 public class MockCachedUrl implements CachedUrl {
-  Logger log = Logger.getLogger("MockCachedUrl");
+  Logger log = Logger.getLogger(MockCachedUrl.class);
   private ArrayList versions;
   private ArchivalUnit au;
   private String url;
@@ -346,6 +346,11 @@ public class MockCachedUrl implements CachedUrl {
 
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
     return null;
+  }
+
+  @Override
+  public boolean isArchiveMember() {
+    return false;
   }
 
   public String toString() {

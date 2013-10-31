@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.121 2013-10-11 22:43:23 fergaloy-sf Exp $
+ * $Id: NullPlugin.java,v 1.122 2013-10-31 03:07:26 fergaloy-sf Exp $
  */
 
 /*
@@ -264,6 +264,11 @@ public class NullPlugin {
 
     public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams) {
       return null;
+    }
+
+    @Override
+    public boolean isArchiveMember() {
+      return false;
     }
   }
 

@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.35 2013-07-24 19:01:58 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.36 2013-10-31 03:07:26 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,7 +48,7 @@ import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
 
 public class CrawlRuleTester extends Thread {
-  protected static Logger log = Logger.getLogger("CrawlRuleTester");
+  protected static Logger log = Logger.getLogger(CrawlRuleTester.class);
 
   /** Proxy host */
   public static final String PARAM_PROXY_HOST =
@@ -611,5 +611,9 @@ public class CrawlRuleTester extends Thread {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    @Override
+    public boolean isArchiveMember() {
+      return false;
+    }
   }
 }

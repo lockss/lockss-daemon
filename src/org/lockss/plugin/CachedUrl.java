@@ -1,10 +1,10 @@
 /*
- * $Id: CachedUrl.java,v 1.34 2013-08-15 08:18:59 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.35 2013-10-31 03:07:26 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -283,5 +283,13 @@ public interface CachedUrl extends CachedUrlSetNode {
    * @param ams describes the archive member.
    */
   public CachedUrl getArchiveMemberCu(ArchiveMemberSpec ams);
+
+  /**
+   * Provides an indication of whether this CachedUrl is a member of an archive.
+   * 
+   * @return <code>true</code> if this CachedUrl is a member of an archive,
+   *         <code>false</code> otherwise.
+   */
+  boolean isArchiveMember();
 
 }

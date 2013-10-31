@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.51 2013-07-24 19:01:59 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.52 2013-10-31 03:07:27 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,7 +56,7 @@ import org.lockss.extractor.*;
 public class BaseCachedUrl implements CachedUrl {
   protected ArchivalUnit au;
   protected String url;
-  protected static Logger logger = Logger.getLogger("CachedUrl");
+  protected static Logger logger = Logger.getLogger(CachedUrl.class);
 
   private LockssRepository repository;
   private RepositoryNode leaf = null;
@@ -368,7 +368,8 @@ public class BaseCachedUrl implements CachedUrl {
     return memb;
   }
 
-  boolean isArchiveMember() {
+  @Override
+  public boolean isArchiveMember() {
     return false;
   }
 
@@ -594,7 +595,7 @@ public class BaseCachedUrl implements CachedUrl {
     }
 
     @Override
-    boolean isArchiveMember() {
+    public boolean isArchiveMember() {
       return true;
     }
 
