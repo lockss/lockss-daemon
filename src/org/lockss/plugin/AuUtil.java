@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.41 2013-10-16 23:17:06 fergaloy-sf Exp $
+ * $Id: AuUtil.java,v 1.42 2013-10-31 03:50:02 fergaloy-sf Exp $
  */
 
 /*
@@ -706,14 +706,18 @@ public class AuUtil {
     CachedUrl cachedUrl = null;
     long fetchTime = 0;
 
-    // Get the cached URL.
     try {
+      // Get the cached URL.
       cachedUrl = au.makeCachedUrl(url);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
 
-      // Get the first version of the cached URL.
-      cachedUrl = cachedUrl.getCuVersion(1);
-      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
+      // Check whether it is not a member of an archive.
+      if (!cachedUrl.isArchiveMember()) {
+	// Yes: Get the first version of the cached URL.
+	cachedUrl = cachedUrl.getCuVersion(1);
+	if (log.isDebug3())
+	  log.debug3(DEBUG_HEADER + "cachedUrl = " + cachedUrl);
+      }
 
       // Get its properties.
       CIProperties cuProperties = cachedUrl.getProperties();
