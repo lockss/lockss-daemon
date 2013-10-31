@@ -29,6 +29,7 @@
       eissn = 2048-7754
     >
     comment[continues] = 0953-0460
+    
     param[journal_issn] = 2048-7754
     implicit < status ; status2 ; year ; name ; param[volume_name]>
     
@@ -48,9 +49,10 @@
     >
 
     comment[continued_by] = 2048-7754
+    
     param[journal_issn] = 0953-0460
     implicit < status ; status2 ; year ; name ; param[volume_name] >
-
+    
     au < released ; crawling ; 1988 ; Serials: The Journal for the Serials Community Volume 1 ; 1 >
     au < released ; crawling ; 1989 ; Serials: The Journal for the Serials Community Volume 2 ; 2 >
     au < released ; crawling ; 1990 ; Serials: The Journal for the Serials Community Volume 3 ; 3 >
