@@ -4,8 +4,10 @@
     name = Business Systems Laboratory 
   >
   
-  
-  
+  plugin = org.lockss.plugin.businesssystemslaboratory.BusinessSystemsLaboratoryPlugin
+  param[base_url] = http://www.business-systems-review.org/
+  implicit < status ; name ; param[volume_name] ; param[year]>
+    
   {
   
     title <
@@ -13,6 +15,8 @@
       eissn = 2280-3866
     >
 
+    au < manifest ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < manifest ; Business Systems Review Volume 2 ; 2 ; 2013 >
  
   }
 }
