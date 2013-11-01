@@ -546,6 +546,9 @@
       eissn = 1752-2366 ;
       issnl = 0822-7942
     >
+    
+    comment[moving] = moving to White Horse in 2014
+    
     param[journal_id] = nomp
     param[journal_issn] = 0822-7942
         
@@ -566,7 +569,7 @@
     au < crawling ; exists ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
     au < crawling ; exists ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
     au < crawling ; exists ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
-    au < expected ; exists ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
+    au < doNotProcess ; exists ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
     
   }
 
