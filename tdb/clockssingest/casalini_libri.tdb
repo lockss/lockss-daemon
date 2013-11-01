@@ -1,0 +1,18 @@
+{
+
+  publisher <
+    name = Casalini Libri ;
+    info[contract] = 2011
+  >
+  
+  
+  {
+  
+    title <
+      name = Casalini Libri Source Content
+    >
+
+    plugin = needs.plugin
+  }
+
+}
