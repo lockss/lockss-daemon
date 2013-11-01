@@ -436,7 +436,7 @@
       issnl = 0065-9401
     >
     
-    comment[0] = looks like a book series, different url structure
+    param[journal_id] = amsm
     
     au < exists ; 2001 ; Meteorological Monographs Volume 28 ; 28 >
     au < exists ; 2003 ; Meteorological Monographs Volume 29 ; 29 >
