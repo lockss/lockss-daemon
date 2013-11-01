@@ -83,4 +83,38 @@
   
   }
 
+  {
+  
+    title <
+      name = Nomadic Peoples ;
+      issn = 0822-7942 ;
+      eissn = 1752-2366 ;
+      issnl = 0822-7942
+    >
+    param[journal_id] = nomp
+    param[journal_issn] = 0822-7942
+    
+    comment[moving] = At start of 2014, moving from Berghan.
+        
+    au < doNotProcess ; 1997 ; Nomadic Peoples Volume 1 ; 1 >
+    au < doNotProcess ; 1998 ; Nomadic Peoples Volume 2 ; 2 >
+    au < doNotProcess ; 1999 ; Nomadic Peoples Volume 3 ; 3 >
+    au < doNotProcess ; 2000 ; Nomadic Peoples Volume 4 ; 4 >
+    au < doNotProcess ; 2001 ; Nomadic Peoples Volume 5 ; 5 >
+    au < doNotProcess ; 2002 ; Nomadic Peoples Volume 6 ; 6 >
+    au < doNotProcess ; 2003 ; Nomadic Peoples Volume 7 ; 7 >
+    au < doNotProcess ; 2004 ; Nomadic Peoples Volume 8 ; 8 >
+    au < doNotProcess ; 2005 ; Nomadic Peoples Volume 9 ; 9 >
+    au < doNotProcess ; 2006 ; Nomadic Peoples Volume 10 ; 10 >
+    au < doNotProcess ; 2007 ; Nomadic Peoples Volume 11 ; 11>
+    au < doNotProcess ; 2008 ; Nomadic Peoples Volume 12 ; 12 >
+    au < doNotProcess ; 2009 ; Nomadic Peoples Volume 13 ; 13 >
+    au < doNotProcess ; 2010 ; Nomadic Peoples Volume 14 ; 14 >
+    au < doNotProcess ; 2011 ; Nomadic Peoples Volume 15 ; 15 >
+    au < doNotProcess ; 2012 ; Nomadic Peoples Volume 16 ; 16 >
+    au < doNotProcess ; 2013 ; Nomadic Peoples Volume 17 ; 17 >
+    au < expected ; 2014 ; Nomadic Peoples Volume 18 ; 18 >
+    
+  }
+
 }
