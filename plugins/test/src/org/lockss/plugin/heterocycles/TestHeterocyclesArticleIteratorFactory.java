@@ -1,5 +1,5 @@
 /* 
- * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.1 2013-10-15 23:26:31 ldoan Exp $
+ * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.2 2013-11-01 17:50:49 ldoan Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class TestHeterocyclesArticleIteratorFactory
   
   protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return
-        PluginTestUtil.createAndStartAu(PLUGIN_NAME,  peerjAuConfig());
+        PluginTestUtil.createAndStartAu(PLUGIN_NAME,  heterocyclesAuConfig());
   }
   
   private Configuration simAuConfig(String rootPath) {
@@ -120,7 +120,7 @@ public class TestHeterocyclesArticleIteratorFactory
     return conf;
   }
 
-  private Configuration peerjAuConfig() {
+  private Configuration heterocyclesAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("volume_name", VOLUME_NAME);
