@@ -54,6 +54,8 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+        <value>org.lockss.plugin.businesssystemslaboratory.ClockssBusinessSystemsLaboratoryPlugin</value>
+        <value>org.lockss.plugin.businesssystemslaboratory.BusinessSystemsLaboratoryPlugin</value>
         <value>org.lockss.plugin.peerj.ClockssHeterocyclesPlugin</value>
         <value>org.lockss.plugin.peerj.ClockssPeerJPlugin</value>
         <value>org.lockss.plugin.peerj.PeerJPlugin</value>
