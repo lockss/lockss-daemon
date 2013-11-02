@@ -450,6 +450,25 @@
   }
   
   {
+
+      title <
+        name = BMJ Open Diabetes Research & Care ;
+        eissn = 2052-4897
+    >
+
+    {
+
+      plugin = needs.plugin
+      param[base_url] = http://diabetesrc.bmj.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
+
+    }
+
+  }
+
+  {
     title <
       name = BMJ Open Respiratory Research
     >
