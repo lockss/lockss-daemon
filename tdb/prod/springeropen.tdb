@@ -800,6 +800,22 @@
     {
   
         title <
+          name = Intensive Care Medicine Experimental ;
+          issn = 2197-425X 
+        >
+  
+        param[base_url] = http://www.icm-experimental.com/
+        param[journal_issn] = 2197-425X 
+        comment[platform] = BMC
+  
+        au < exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
+        au < expected ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
+  
+    }
+  
+    {
+  
+        title <
           name = International Aquatic Research ;
           issn = 2008-6970 
         >
@@ -1297,6 +1313,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Software Engineering Research and Development Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Software Engineering Research and Development Volume 2 ; 2 >
   
     }
   
