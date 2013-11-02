@@ -687,6 +687,40 @@
 
   {
 
+      title <
+        name = Transactions of the Edinburgh Geological Society 
+    >
+
+    {
+
+      param[base_url] = http://trned.lyellcollection.org/
+
+      au < exists ; exists ; 1868-1871 ; Transactions of the Edinburgh Geological Society Volume 1 ; 1 >
+      au < exists ; exists ; 1872-1876 ; Transactions of the Edinburgh Geological Society Volume 2 ; 2 >
+      au < exists ; exists ; 1877-1880 ; Transactions of the Edinburgh Geological Society Volume 3 ; 3 >
+      au < exists ; exists ; 1881-1884 ; Transactions of the Edinburgh Geological Society Volume 4 ; 4 >
+      au < exists ; exists ; 1885-1889 ; Transactions of the Edinburgh Geological Society Volume 5 ; 5 >
+      au < exists ; exists ; 1890-1893 ; Transactions of the Edinburgh Geological Society Volume 6 ; 6 >
+      au < exists ; exists ; 1894-1900 ; Transactions of the Edinburgh Geological Society Volume 7 ; 7 >
+      au < exists ; exists ; 1901-1906 ; Transactions of the Edinburgh Geological Society Volume 8 ; 8 >
+      au < exists ; exists ; 1907-1911 ; Transactions of the Edinburgh Geological Society Volume 9 ; 9 >
+      au < exists ; exists ; 1912-1919 ; Transactions of the Edinburgh Geological Society Volume 10 ; 10 >
+      au < exists ; exists ; 1920-1927 ; Transactions of the Edinburgh Geological Society Volume 11 ; 11 >
+      au < exists ; exists ; 1928-1933 ; Transactions of the Edinburgh Geological Society Volume 12 ; 12 >
+      au < exists ; exists ; 1934-1944 ; Transactions of the Edinburgh Geological Society Volume 13 ; 13 >
+      au < exists ; exists ; 1945-1952 ; Transactions of the Edinburgh Geological Society Volume 14 ; 14 >
+      au < exists ; exists ; 1952-1953 ; Transactions of the Edinburgh Geological Society Volume 15 ; 15 >
+      au < exists ; exists ; 1954-1956 ; Transactions of the Edinburgh Geological Society Volume 16 ; 16 >
+      au < exists ; exists ; 1957-1959 ; Transactions of the Edinburgh Geological Society Volume 17 ; 17 >
+      au < exists ; exists ; 1960-1961 ; Transactions of the Edinburgh Geological Society Volume 18 ; 18 >
+      au < exists ; exists ; 1962-1963 ; Transactions of the Edinburgh Geological Society Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+
     title <
       name = Transactions of the Geological Society of London ;
       eissn = 2042-5295 
