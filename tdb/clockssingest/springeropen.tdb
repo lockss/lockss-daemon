@@ -850,7 +850,7 @@
         param[journal_issn] = 2197-425X 
         comment[platform] = BMC
   
-        au < exists ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
+        au < manifest ; exists ; 2013 ; Intensive Care Medicine Experimental Volume 1 ; 1 >
         au < expected ; exists ; 2014 ; Intensive Care Medicine Experimental Volume 2 ; 2 >
   
     }
