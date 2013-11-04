@@ -6,7 +6,7 @@
   {
     title <
       name = The Electronic Journal of Combinatorics ;
-      issn = 1077-8926
+      eissn = 1077-8926
     >
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
       implicit < status ; year ; name ; volume ; param[year] >
