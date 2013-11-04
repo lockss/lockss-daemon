@@ -44,15 +44,18 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/JOU=[\\d]+/VOL=[\\d]+\\.[\\d]+/ISU=[^/]+/ART=[^/]+/BodyRef/PDF/[^/]+\\.pdf$\",base_url,year";
-  
+  protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s%d/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url,year";
+ 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
     return new SpringerArticleIterator(au, new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
+                                       .setVisitArchiveMembers(true)
                                        .setRootTemplate(ROOT_TEMPLATE)
-                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                                       .setExcludeSubTreePatternTemplate(NESTED_ARCHIVE_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
   protected static class SpringerArticleIterator extends SubTreeArticleIterator {
@@ -62,7 +65,6 @@ public class SpringerSourceArticleIteratorFactory implements ArticleIteratorFact
     protected SpringerArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
-      spec.setVisitArchiveMembers(true);
     }
     
     @Override
