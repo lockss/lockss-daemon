@@ -18,32 +18,32 @@
       param[base_url] = http://www.rbep.inep.gov.br/
       param[journal_id] = emaberto
 
-      au < manifest ; 1981 ; 1 ; Em Aberto Volume 1981 ; 1981 >
-      au < manifest ; 1982 ; 1 ; Em Aberto Volume 1982 ; 1982 >
-      au < manifest ; 1983 ; 2 ; Em Aberto Volume 1983 ; 1983 >
-      au < manifest ; 1984 ; 3 ; Em Aberto Volume 1984 ; 1984 >
-      au < manifest ; 1985 ; 4 ; Em Aberto Volume 1985 ; 1985 >
-      au < manifest ; 1986 ; 5 ; Em Aberto Volume 1986 ; 1986 >
-      au < manifest ; 1987 ; 6 ; Em Aberto Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; 7 ; Em Aberto Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; 8 ; Em Aberto Volume 1989 ; 1989 >
-      au < manifest ; 1990 ; 9 ; Em Aberto Volume 1990 ; 1990 >
-      au < manifest ; 1991 ; 10 ; Em Aberto Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; 11-12 ; Em Aberto Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; 12-13 ; Em Aberto Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 14 ; Em Aberto Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 15 ; Em Aberto Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 16 ; Em Aberto Volume 1996 ; 1996 >
-      au < manifest ; 2000 ; 17 ; Em Aberto Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 18 ; Em Aberto Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 19 ; Em Aberto Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 20 ; Em Aberto Volume 2003 ; 2003 >
-      au < manifest ; 2007 ; 21 ; Em Aberto Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 21 ; Em Aberto Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 21-22 ; Em Aberto Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 23 ; Em Aberto Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 24 ; Em Aberto Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 25 ; Em Aberto Volume 2012 ; 2012 >
+      au < testing ; 1981 ; 1 ; Em Aberto Volume 1981 ; 1981 >
+      au < testing ; 1982 ; 1 ; Em Aberto Volume 1982 ; 1982 >
+      au < testing ; 1983 ; 2 ; Em Aberto Volume 1983 ; 1983 >
+      au < testing ; 1984 ; 3 ; Em Aberto Volume 1984 ; 1984 >
+      au < testing ; 1985 ; 4 ; Em Aberto Volume 1985 ; 1985 >
+      au < testing ; 1986 ; 5 ; Em Aberto Volume 1986 ; 1986 >
+      au < testing ; 1987 ; 6 ; Em Aberto Volume 1987 ; 1987 >
+      au < testing ; 1988 ; 7 ; Em Aberto Volume 1988 ; 1988 >
+      au < testing ; 1989 ; 8 ; Em Aberto Volume 1989 ; 1989 >
+      au < testing ; 1990 ; 9 ; Em Aberto Volume 1990 ; 1990 >
+      au < testing ; 1991 ; 10 ; Em Aberto Volume 1991 ; 1991 >
+      au < testing ; 1992 ; 11-12 ; Em Aberto Volume 1992 ; 1992 >
+      au < testing ; 1993 ; 12-13 ; Em Aberto Volume 1993 ; 1993 >
+      au < testing ; 1994 ; 14 ; Em Aberto Volume 1994 ; 1994 >
+      au < testing ; 1995 ; 15 ; Em Aberto Volume 1995 ; 1995 >
+      au < testing ; 1996 ; 16 ; Em Aberto Volume 1996 ; 1996 >
+      au < testing ; 2000 ; 17 ; Em Aberto Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 18 ; Em Aberto Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 19 ; Em Aberto Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 20 ; Em Aberto Volume 2003 ; 2003 >
+      au < testing ; 2007 ; 21 ; Em Aberto Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 21 ; Em Aberto Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 21-22 ; Em Aberto Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 23 ; Em Aberto Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 24 ; Em Aberto Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 25 ; Em Aberto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 26 ; Em Aberto Volume 2013 ; 2013 >
 
   }
