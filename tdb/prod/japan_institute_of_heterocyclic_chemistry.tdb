@@ -7,7 +7,7 @@
 
     plugin = needs.plugin
     param[base_url] = http://www.heterocycles.jp/ 
-    implicit < status ; year ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume_name] >
     
   {
   
