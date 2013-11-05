@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.26 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.26.92.1 2013-11-05 23:52:43 tlipkis Exp $
  */
 
 /*
@@ -381,9 +381,10 @@ public class HashSvcSchedImpl
 		  new ColumnDescriptor("timeused", "Used",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL,
 				       FOOT_OVER),
-
 		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
-				       ColumnDescriptor.TYPE_INT)
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("rate", "Bytes/ms",
+				       ColumnDescriptor.TYPE_STRING)
 		  );
 
 
@@ -446,7 +447,8 @@ public class HashSvcSchedImpl
       row.put("type", task.typeString());
       row.put("deadline", task.getLatestFinish());
       row.put("estimate", new Long(task.getOrigEst()));
-      Object used = new Long(task.getTimeUsed());
+      long timeUsed = task.getTimeUsed();
+      Object used = new Long(timeUsed);
       if (task.hasOverrun()) {
 	StatusTable.DisplayedValue val = new StatusTable.DisplayedValue(used);
 	val.setColor("red");
@@ -454,6 +456,10 @@ public class HashSvcSchedImpl
       }
       row.put("timeused", used);
       row.put("bytesHashed", new Long(task.bytesHashed));
+      if (timeUsed > 0 && task.bytesHashed > 0) {
+	row.put("rate", hashRate(BigInteger.valueOf(task.bytesHashed),
+				 timeUsed));
+      }
       return row;
     }
 
