@@ -10,6 +10,7 @@
   plugin = org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin  
   implicit < status ; year ; name ; param[volume_name] >
   param[base_url] = http://journals.ametsoc.org/
+  comment[pause_status] = I'm creating a dummy status of "pause" because the AUs have tested 99% aside from a known issue which is being actively worked on. To keep testing moving forward, if nothing else is wrong, I will set the status to "pause" and move on. -CT
   
   {
 
