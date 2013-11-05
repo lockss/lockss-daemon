@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -21,11 +21,15 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>100</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
     <long>28800000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
   </entry>
   <entry>
     <string>plugin_notes</string>
