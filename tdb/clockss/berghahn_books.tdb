@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Berghahn Books ;
+    name = Berghahn ;
     info[contract] = 2012
   >
   
@@ -9,9 +9,12 @@
   {
   
     title <
-      name = Berghahn Books Source Content
+      name = Berghahn
     >
-
+    
+    plugin = needs.plugin
+ 
+    
     
   }
 

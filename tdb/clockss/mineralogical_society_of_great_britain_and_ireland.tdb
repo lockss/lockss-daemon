@@ -18,7 +18,7 @@
       issnl = 0009-8558
     >
     
-    param[base_url] =  	http://claymin.geoscienceworld.org/ 
+    param[base_url] = http://claymin.geoscienceworld.org/
 
     {
 
@@ -64,7 +64,8 @@
       au < crawling ; exists ; 2010 ; Clay Minerals Volume 45 ; 45 >
       au < released ; crawling ; 2011 ; Clay Minerals Volume 46 ; 46 >
       au < released ; crawling ; 2012 ; Clay Minerals Volume 47 ; 47 >
-      au < expected ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 >
+      au < manifest ; exists ; 2013 ; Clay Minerals Volume 48 ; 48 >
+      au < expected ; exists ; 2014 ; Clay Minerals Volume 49 ; 49 >
     }
    
   }
@@ -106,7 +107,8 @@
       au < manifest ; exists ; 2010 ; Mineralogical Magazine Volume 74 ; 74 >
       au < released ; crawling ; 2011 ; Mineralogical Magazine Volume 75 ; 75 >
       au < released ; crawling ; 2012 ; Mineralogical Magazine Volume 76 ; 76 >
-      au < expected ; exists ; 2013 ; Mineralogical Magazine Volume 77 ; 77 >
+      au < manifest ; exists ; 2013 ; Mineralogical Magazine Volume 77 ; 77 >
+      au < expected ; exists ; 2014 ; Mineralogical Magazine Volume 78 ; 78 >
     }
     
   }

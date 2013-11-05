@@ -8,7 +8,6 @@
 	comment[platform] = Silverchair
 	
     plugin = needs.plugin
-    param[base_url] = http://spiedigitallibrary.org/journals/
     implicit < status1 ; status ; year ; name ; param[volume_name] >
  
     {
@@ -18,7 +17,8 @@
       eissn = 1931-3195
     >
 
-
+    param[base_url] = http://remotesensing.spiedigitallibrary.org/
+    
     }
     
     {
@@ -30,7 +30,8 @@
       eissn = 1560-2281
     >
 
-
+    param[base_url] = http://biomedicaloptics.spiedigitallibrary.org/
+    
     }
     
     {
@@ -41,6 +42,7 @@
       eissn = 1560-229X
      >
 
+    param[base_url] = http://electronicimaging.spiedigitallibrary.org/
 
     }
     
@@ -52,6 +54,7 @@
       eissn = 1932-5134
     >
 
+    param[base_url] = http://nanolithography.spiedigitallibrary.org/
 
     }
     
@@ -62,6 +65,7 @@
       eissn = 1934-2608
     >
 
+    param[base_url] = http://nanophotonics.spiedigitallibrary.org/
 
     } 
     
@@ -72,6 +76,7 @@
       eissn = 1947-7988
     >
 
+    param[base_url] = http://photonicsforenergy.spiedigitallibrary.org/
 
     }
     
@@ -83,6 +88,7 @@
       eissn = 1560-2303
     >
 
+    param[base_url] = http://opticalengineering.spiedigitallibrary.org/
 
     }
     
@@ -90,9 +96,10 @@
   
     title < 
       name = SPIE Letters ;
-      eissn =  1948-7541 
+      eissn = 1948-7541 
     >
 
+    param[base_url] = 
 
     }
 
@@ -100,9 +107,10 @@
   
     title < 
       name = SPIE Reviews ;
-      eissn =  1946-3251 
+      eissn = 1946-3251 
     >
 
+    param[base_url] = http://reviews.spiedigitallibrary.org/
 
     }
 

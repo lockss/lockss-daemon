@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = SAGE Publications ;
+    info[contract] = 2008 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
+  param[base_url] = http://autobiography.stanford.clockss.org/
+
+  {
+
+    title <
+      name = Auto/Biography ;
+      issn = 0967-5507 ;
+      eissn = 1479-9715 ;
+      issnl = 0967-5507
+    >
+
+    param[journal_id] = aub
+      
+    au < released ; crawling ; 2004 ; Auto/Biography Volume 12 ; 12 >
+    au < released ; crawling ; 2005 ; Auto/Biography Volume 13 ; 13 >
+    au < released ; crawling ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
+
+  }
+
+}

@@ -63,7 +63,6 @@
       >
 
       comment[continues] = [1436-3542]
-      comment[nR] = needs hash filter see RU 4861
          
       au < manifest ; exists ; 1998 ; Rocky Mountain Geology Volume 33 ; 33 >
       au < manifest ; exists ; 1999 ; Rocky Mountain Geology Volume 34 ; 34 >
@@ -79,8 +78,9 @@
       au < manifest ; exists ; 2009 ; Rocky Mountain Geology Volume 44 ; 44 >
       au < manifest ; exists ; 2010 ; Rocky Mountain Geology Volume 45 ; 45 >
       au < manifest ; exists ; 2011 ; Rocky Mountain Geology Volume 46 ; 46 >
-      au < notReady ; exists ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
+      au < testing ; exists ; 2012 ; Rocky Mountain Geology Volume 47 ; 47 >
       au < crawling ; exists ; 2013 ; Rocky Mountain Geology Volume 48 ; 48 >
+      au < expected ; exists ; 2014 ; Rocky Mountain Geology Volume 49 ; 49 >
       
     }
   

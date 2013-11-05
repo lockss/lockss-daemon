@@ -6,7 +6,7 @@
     info[tester] = 0
   >
 
-    param[base_url] = http://www.insectbiodiversity.org
+    param[base_url] = http://www.insectbiodiversity.org/
     implicit < status1 ; status ; year ; param[year] ; name >
     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
     

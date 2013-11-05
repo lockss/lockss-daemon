@@ -24,6 +24,7 @@
     au < exists ; exists ; 2011 ; ASN NEURO Volume 3 ; 003 >
     au < exists ; exists ; 2012 ; ASN NEURO Volume 4 ; 004 >
     au < exists ; exists ; 2013 ; ASN NEURO Volume 5 ; 005 >
+    au < expected ; exists ; 2014 ; ASN NEURO Volume 6 ; 006 >
     
     }
     
@@ -493,8 +494,16 @@
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 452 ; 452 >
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 453 ; 453 >
     au < crawling ; exists ; 2013 ; Biochemical Journal Volume 454 ; 454 >
-    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 >
-    au < expected ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 >
+    au < crawling ; exists ; 2013 ; Biochemical Journal Volume 455 ; 455 >
+    au < manifest ; exists ; 2013 ; Biochemical Journal Volume 456 ; 456 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 457 ; 457 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 458 ; 458 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 459 ; 459 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 460 ; 460 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 461 ; 461 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 462 ; 462 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 463 ; 463 >
+    au < expected ; exists ; 2014 ; Biochemical Journal Volume 464 ; 464 >
 
   }
   
@@ -551,6 +560,7 @@
     au < manifest ; exists ; 2011 ; Biochemical Society Transactions Volume 39 ; 039 >
     au < crawling ; exists ; 2012 ; Biochemical Society Transactions Volume 40 ; 040 >
     au < crawling ; exists ; 2013 ; Biochemical Society Transactions Volume 41 ; 041 >
+    au < expected ; exists ; 2014 ; Biochemical Society Transactions Volume 42 ; 042 >
     
   }
   
@@ -672,6 +682,7 @@
     au < manifest ; exists ; 2011 ; Bioscience Reports Volume 31 ; 031 >
     au < crawling ; exists ; 2012 ; Bioscience Reports Volume 32 ; 032 >
     au < crawling ; exists ; 2013 ; Bioscience Reports Volume 33 ; 033 >
+    au < expected ; exists ; 2014 ; Bioscience Reports Volume 34 ; 034 >
 
   }
 
@@ -823,6 +834,8 @@
     au < crawling ; exists ; 2012 ; Clinical Science Volume 123 ; 123 >
     au < crawling ; exists ; 2013 ; Clinical Science Volume 124 ; 124 >
     au < crawling ; exists ; 2013 ; Clinical Science Volume 125 ; 125 >
+    au < manifest ; exists ; 2014 ; Clinical Science Volume 126 ; 126 >
+    au < expected ; exists ; 2014 ; Clinical Science Volume 127 ; 127 >
         
   }
   
@@ -838,18 +851,18 @@
     param[base_url] = http://essays.biochemistry.org/
     param[journal_id] = bsessays
 
-    au < manifest ; exists ; 1998 ; Essays in Biochemistry Volume 33 ; 033 >  
-    au < manifest ; exists ; 1999 ; Essays in Biochemistry Volume 34 ; 034 >  
-    au < manifest ; exists ; 2000 ; Essays in Biochemistry Volume 35 ; 035 > 
-    au < manifest ; exists ; 2000 ; Essays in Biochemistry Volume 36 ; 036 >  
-    au < manifest ; exists ; 2001 ; Essays in Biochemistry Volume 37 ; 037 >  
-    au < manifest ; exists ; 2002 ; Essays in Biochemistry Volume 38 ; 038 >  
-    au < manifest ; exists ; 2003 ; Essays in Biochemistry Volume 39 ; 039 >  
-    au < manifest ; exists ; 2004 ; Essays in Biochemistry Volume 40 ; 040 >  
-    au < manifest ; exists ; 2005 ; Essays in Biochemistry Volume 41 ; 041 >  
-    au < manifest ; exists ; 2006 ; Essays in Biochemistry Volume 42 ; 042 >  
-    au < manifest ; exists ; 2007 ; Essays in Biochemistry Volume 43 ; 043 >  
-    au < manifest ; exists ; 2008 ; Essays in Biochemistry Volume 44 ; 044 >  
+    au < manifest ; exists ; 1998 ; Essays in Biochemistry Volume 33 ; 033 >
+    au < manifest ; exists ; 1999 ; Essays in Biochemistry Volume 34 ; 034 >
+    au < manifest ; exists ; 2000 ; Essays in Biochemistry Volume 35 ; 035 >
+    au < manifest ; exists ; 2000 ; Essays in Biochemistry Volume 36 ; 036 >
+    au < manifest ; exists ; 2001 ; Essays in Biochemistry Volume 37 ; 037 >
+    au < manifest ; exists ; 2002 ; Essays in Biochemistry Volume 38 ; 038 >
+    au < manifest ; exists ; 2003 ; Essays in Biochemistry Volume 39 ; 039 >
+    au < manifest ; exists ; 2004 ; Essays in Biochemistry Volume 40 ; 040 >
+    au < manifest ; exists ; 2005 ; Essays in Biochemistry Volume 41 ; 041 >
+    au < manifest ; exists ; 2006 ; Essays in Biochemistry Volume 42 ; 042 >
+    au < manifest ; exists ; 2007 ; Essays in Biochemistry Volume 43 ; 043 >
+    au < manifest ; exists ; 2008 ; Essays in Biochemistry Volume 44 ; 044 >
     au < manifest ; exists ; 2008 ; Essays in Biochemistry Volume 45 ; 045 >
     au < manifest ; exists ; 2009 ; Essays in Biochemistry Volume 46 ; 046 >
     au < manifest ; exists ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
@@ -860,7 +873,9 @@
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 52 ; 052 >
     au < crawling ; exists ; 2012 ; Essays in Biochemistry Volume 53 ; 053 >
     au < crawling ; exists ; 2013 ; Essays in Biochemistry Volume 54 ; 054 >
-    au < manifest ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
+    au < crawling ; exists ; 2013 ; Essays in Biochemistry Volume 55 ; 055 >
+    au < expected ; exists ; 2014 ; Essays in Biochemistry Volume 56 ; 056 >
+    au < expected ; exists ; 2014 ; Essays in Biochemistry Volume 57 ; 057 >
 
   }
   

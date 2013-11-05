@@ -63,6 +63,7 @@
       au < manifest ; exists ; 2011 ; American Mineralogist Volume 96 ; 96 >
       au < manifest ; exists ; 2012 ; American Mineralogist Volume 97 ; 97 >
       au < crawling ; exists ; 2013 ; American Mineralogist Volume 98 ; 98 >
+      au < expected ; exists ; 2014 ; American Mineralogist Volume 99 ; 99 >
 
     }
 
@@ -88,6 +89,7 @@
     au < manifest ; exists ; 2011 ; Elements Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Elements Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Elements Volume 9 ; 9 >
+    au < expected ; exists ; 2014 ; Elements Volume 10 ; 10 >
       
   }
   
@@ -151,7 +153,7 @@
     >
       
     param[base_url] = http://rimg.geoscienceworld.org/
-    comment[continues] = [0275-0279]
+    comment[continues] = 0275-0279
 
     au < manifest ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 39 ; 39 >
     au < manifest ; exists ; 2000 ; Reviews in Mineralogy and Geochemistry Volume 40 ; 40 >
@@ -190,7 +192,9 @@
     au < manifest ; exists ; 2011 ; Reviews in Mineralogy and Geochemistry Volume 73 ; 73 >
     au < manifest ; exists ; 2012 ; Reviews in Mineralogy and Geochemistry Volume 74 ; 74 >
     au < crawling ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 75 ; 75 >
-    au < manifest ; exists ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 76 ; 76 >
+    au < crawling ; exists ; 2013 ; Reviews in Mineralogy and Geochemistry Volume 76 ; 76 >
+    au < expected ; exists ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 77 ; 77 >
+    au < expected ; exists ; 2014 ; Reviews in Mineralogy and Geochemistry Volume 78 ; 78 >
       
   }
   

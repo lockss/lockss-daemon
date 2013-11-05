@@ -6,8 +6,10 @@
     info[tester] = 0
   >
   
-  
-  
+  plugin = org.lockss.plugin.businesssystemslaboratory.ClockssBusinessSystemsLaboratoryPlugin
+  param[base_url] = http://www.business-systems-review.org/
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; param[year]>
+    
   {
   
     title <
@@ -15,6 +17,10 @@
       eissn = 2280-3866
     >
 
+    comment[doNotProcess] = plugin not ready
+
+    au < doNotProcess ; exists ; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < doNotProcess ; exists ; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
  
   }
 }
