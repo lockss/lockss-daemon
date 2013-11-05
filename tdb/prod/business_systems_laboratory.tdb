@@ -15,8 +15,10 @@
       eissn = 2280-3866
     >
 
-    au < manifest ; Business Systems Review Volume 1 ; 1 ; 2012 >
-    au < manifest ; Business Systems Review Volume 2 ; 2 ; 2013 >
+    comment[doNotProcess] = plugin not ready
+    
+    au < doNotProcess ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < doNotProcess ; Business Systems Review Volume 2 ; 2 ; 2013 >
  
   }
 }
