@@ -1,7 +1,9 @@
 {
 
   publisher <
-    name = Business Systems Laboratory 
+    name = Business Systems Laboratory ;
+    info[contract] = 2013 ;
+    info[tester] = 0
   >
   
   plugin = org.lockss.plugin.businesssystemslaboratory.ClockssBusinessSystemsLaboratoryPlugin
