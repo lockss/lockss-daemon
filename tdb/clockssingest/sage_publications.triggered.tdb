@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = Auto/Biography CLOCKSS Triggered Content ;
+    name = SAGE Publications ;
     info[contract] = 2008 ;
     info[tester] = 0
   >
@@ -10,6 +11,7 @@
   param[base_url] = http://autobiography.stanford.clockss.org/
 
   {
+
     title <
       name = Auto/Biography ;
       issn = 0967-5507 ;
@@ -22,6 +24,7 @@
     au < crawling ; exists ; 2004 ; Auto/Biography Volume 12 ; 12 >
     au < crawling ; exists ; 2005 ; Auto/Biography Volume 13 ; 13 >
     au < crawling ; exists ; 2006-2007 ; Auto/Biography Volume 14 ; 14 >
+
   }
 
 }
