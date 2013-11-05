@@ -44,9 +44,11 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
   
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   
-  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+  protected static final String PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
 
-  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/[^/]+/[\\d]+[^/]+/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+//  protected static final String INCLUDE_SUBTREE_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/[\\d]+/[\\d]+/main.pdf$\",base_url,year";
+  protected static final String NESTED_ARCHIVE_PATTERN_TEMPLATE = "\"%s%d/[^/]+/[\\d]+\\.tar!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$\",base_url,year";
+
   
   // example file names:
   //http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/2012/OXM30010/dataset.toc
@@ -59,8 +61,10 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
       throws PluginException {
     return new ElsevierFTPArticleIterator(au, new SubTreeArticleIterator.Spec()
                                        .setTarget(target)
+                                       .setVisitArchiveMembers(true)
                                        .setRootTemplate(ROOT_TEMPLATE)
-                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
+                                       .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                                       .setExcludeSubTreePatternTemplate(NESTED_ARCHIVE_PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 //                                       .setIncludeSubTreePatternTemplate(INCLUDE_SUBTREE_TEMPLATE, Pattern.CASE_INSENSITIVE));
   }
   
@@ -71,7 +75,6 @@ public class ElsevierFTPArticleIteratorFactory implements ArticleIteratorFactory
     protected ElsevierFTPArticleIterator(ArchivalUnit au,
                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
-      spec.setVisitArchiveMembers(true);
     }
     
     // Duplicate of definition in ArticleFiles for use here until 1.59 is ready (PJG).
