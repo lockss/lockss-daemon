@@ -390,17 +390,16 @@
     {
       param[base_url] = http://redbookarchive.aappublications.org/
     
-      au < HighWirePressPlugin ; manifest ; 2000 ; Red Book Online Volume 2000 ; 2000 >
-      au < HighWirePressPlugin ; manifest ; 2003 ; Red Book Online Volume 2003 ; 2003 >
-      au < HighWirePressPlugin ; manifest ; 2006 ; Red Book Online Volume 2006 ; 2006 >
+      au < HighWirePressPlugin ; testing ; 2000 ; Red Book Online Volume 2000 ; 2000 >
+      au < HighWirePressPlugin ; testing ; 2003 ; Red Book Online Volume 2003 ; 2003 >
+      au < HighWirePressPlugin ; testing ; 2006 ; Red Book Online Volume 2006 ; 2006 >
       au < HighWirePressPlugin ; manifest ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     }
 
     {
       param[base_url] = http://aapredbook.aappublications.org/
       
-      au < HighWirePressH20Plugin ; manifest ; 2012 ; Red Book Online Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; expected ; 2015 ; Red Book Online Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; ready ; 2012 ; Red Book Online Volume 1 ; 1 >
     
     }
 
