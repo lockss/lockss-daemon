@@ -11676,6 +11676,24 @@
   {
 
     title <
+      name = Journal of the Law and the Biosciences ;
+      eissn = 2053-9711
+    >
+
+    {
+
+    param[base_url] = http://jlb.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 ; >
+
+    }
+    
+  }
+
+  {
+
+    title <
       name = Journal of the London Mathematical Society ;
       issn = 0024-6107 ;
       eissn = 1469-7750 ;
