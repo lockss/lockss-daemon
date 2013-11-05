@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.52 2013-10-31 03:07:27 fergaloy-sf Exp $
+ * $Id: BaseCachedUrl.java,v 1.53 2013-11-05 19:40:39 fergaloy-sf Exp $
  */
 
 /*
@@ -269,6 +269,22 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public void release() {
+    // Unmount the corresponding TrueZip file, if necessary, to prevent the
+    // the underlying filesystem file to remain open for the rest of the life of
+    // the daemon.
+    TFile tf = null;
+    try {
+      CachedUrl cu = au.makeCachedUrl(url);
+      if (cu.hasContent()) {
+	tf = getDaemon().getTrueZipManager().getTFileCache().getCachedTFile(cu);
+	if (tf != null) {
+	  TVFS.sync(tf, FsSyncOptions.UMOUNT);
+	}
+      }
+    } catch (Exception e) {
+      logger.warning("release(): Error unmounting tf = " + tf, e);
+    }
+
     if (rnc != null) {
       rnc.release();
       rnc = null;
