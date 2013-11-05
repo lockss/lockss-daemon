@@ -104,33 +104,34 @@ public class TestElsevierFTPArticleIteratorFactory extends ArticleIteratorTestCa
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000//000000/main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000//main.pdf");
     assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.wrong.com/2012/XXX00000/0000000/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2013/XXX00000/0000000/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/X00000/0000000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/X00000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/000X0000/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000X/000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000/X000000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000/000X000/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000/000000X/main.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000/000000/wrong.pdf");
-    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000/0000000/000000/main.wrong");
-    assertMatchesRE(pat, "http://www.example.com/2012/QQQ01230/0012300/00444400/0023232/main.pdf");
-    assertMatchesRE(pat, "http://www.example.com/2012/XQ00/000/1231231/4564564/main.pdf");
-    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000333/0000111/000222/main.pdf");
-    assertMatchesRE(pat, "http://www.example.com/2012/XXX27620/0038294/00350003/11000423/main.pdf");
+    assertNotMatchesRE(pat, "http://www.wrong.com/2012/XXX00000/0000000.tar!/0000000/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2013/XXX00000/0000000.tar!/0000000/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/X00000.tar!/0000000/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/X00000/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/000X0000/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000X/000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/X000000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000X000/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000X/main.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000/wrong.pdf");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000/main.wrong");
+    assertNotMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000000.tar!/0000000/000000.tar");
+    assertMatchesRE(pat, "http://www.example.com/2012/QQQ01230/0012300.tar!/00444400/0023232/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XQ00/000.tar!/1231231/4564564/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX00000/0000333.tar!/0000111/000222/main.pdf");
+    assertMatchesRE(pat, "http://www.example.com/2012/XXX27620/0038294.tar!/00350003/11000423/main.pdf");
    }
 
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
     String pat1 = "branch(\\d+)/(\\d+file\\.html)";
-    String rep1 = "/XX00/00/00/00/main.xml";
+    String rep1 = "/XX00/00.tar!/00/00/main.xml";
     PluginTestUtil.copyAu(sau, au, ".*[^.][^p][^d][^f]$", pat1, rep1);
     String pat2 = "branch(\\d+)/(\\d+file\\.pdf)";
-    String rep2 = "/XX00/00/00/00/main.pdf";
+    String rep2 = "/XX00/00.tar!/00/00/main.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
   
-    String url = "http://www.example.com/2012/XX00/00/00/00/main.xml";
+    String url = "http://www.example.com/2012/XX00/00.tar!/00/00/main.xml";
     CachedUrl cu = au.makeCachedUrl(url);
     assertNotNull(cu);
     SubTreeArticleIterator artIter = createSubTreeIter();
