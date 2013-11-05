@@ -129,7 +129,7 @@ yes | Yes | YES )
         ;;
     * )
         echo "Clearing ${LOCKSS_TMPDIR}" >> ${LOG_FILE}
-        (cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE} # XXX delete tree from unzip
+        (cd ${LOCKSS_TMPDIR} && rm -rf *) >> ${LOG_FILE} # XXX delete tree from unzip
         ;;
     esac
     ;;
