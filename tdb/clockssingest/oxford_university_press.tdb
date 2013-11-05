@@ -14692,6 +14692,46 @@
   {
 
     title <
+      name = Journal of Music Therapy ;
+      issn = 0022-2917 ;
+      eissn = 2053-7395 ;
+      issnl = 0022-2917
+    >
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://jmt.oxfordjournals.org/
+
+    au < expected ; exists ; 2014 ; Journal of Music Therapy Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Music Therapy Perspectives ;
+      issn = 0734-6875 ;
+      eissn = 2053-7395 ;
+      issnl = 0734-6875
+    >
+
+    {
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://mtp.oxfordjournals.org/
+
+    au < expected ; exists ; 2014 ; Music Therapy Perspectives Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Music Theory Spectrum ;
       issn = 0195-6167 ;
       eissn = 1533-8339 ;
