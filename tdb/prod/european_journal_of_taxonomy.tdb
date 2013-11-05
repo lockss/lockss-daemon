@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = European Journal of Taxonomy
+  >
+
+  {
+    title <
+      name = European Journal of Taxonomy ;
+      eissn = 2118-9773
+    >
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
+      
+      param[base_url] = http://www.europeanjournaloftaxonomy.eu/
+      param[journal_id] = ejt
+
+      au < exists ; 2011 ; European Journal of Taxonomy Volume 1-4 ; 1-4 ; 2011 >
+      au < exists ; 2012 ; European Journal of Taxonomy Volume 5-34 ; 5-34 ; 2012 >
+      au < exists ; 2013 ; European Journal of Taxonomy Volume 35-61 ; 35-61 ; 2013 >
+      au < expected ; 2014 ; European Journal of Taxonomy Volume 1 ; 1 ; 2014 >
+
+  }
+
+}
+
