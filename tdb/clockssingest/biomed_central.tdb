@@ -6076,6 +6076,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.smarttjournal.com/
       param[journal_issn] = 1758-2555
+      
+      comment[moved] = Moved to http://www.biomedcentral.com/bmcsportsscimedrehabil/
 
       au < notReady ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 [to delete] ; 1 >
       au < notReady ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 [to delete] ; 2 >
