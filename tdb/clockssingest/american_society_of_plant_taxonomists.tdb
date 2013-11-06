@@ -13,7 +13,7 @@
       eissn = 1548-2324 ;
       issnl = 0363-6445
     >
-{
+    {
     plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
     param[base_url] = http://www.ingentaconnect.com/
     param[api_url] = http://api.ingentaconnect.com/
