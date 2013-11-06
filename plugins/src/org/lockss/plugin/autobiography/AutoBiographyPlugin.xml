@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -28,7 +28,7 @@
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -54,6 +54,12 @@
     <list>
       <string>4,"^%s", base_url</string>
       <string>1,"%s%s_[0-9]{4}_%s", base_url, journal_id, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%s_[0-9]{4}_%s.+[.]pdf$", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
