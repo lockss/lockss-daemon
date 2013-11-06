@@ -6,7 +6,7 @@
   
   plugin = org.lockss.plugin.businesssystemslaboratory.BusinessSystemsLaboratoryPlugin
   param[base_url] = http://www.business-systems-review.org/
-  implicit < status ; name ; param[volume_name] ; param[year]>
+  implicit < status ; year ; name ; param[volume_name] ; param[year]>
     
   {
   
@@ -17,8 +17,8 @@
 
     comment[doNotProcess] = plugin not ready
     
-    au < doNotProcess ; Business Systems Review Volume 1 ; 1 ; 2012 >
-    au < doNotProcess ; Business Systems Review Volume 2 ; 2 ; 2013 >
+    au < doNotProcess; 2012 ; Business Systems Review Volume 1 ; 1 ; 2012 >
+    au < doNotProcess; 2013 ; Business Systems Review Volume 2 ; 2 ; 2013 >
  
   }
 }
