@@ -1,5 +1,5 @@
 /*
- * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.1 2013-11-01 18:06:41 ldoan Exp $
+ * $Id: TestBusinessSystemsLaboratoryArchivalUnit.java,v 1.2 2013-11-07 00:51:25 ldoan Exp $
  */
 
 /*
@@ -129,21 +129,17 @@ public class TestBusinessSystemsLaboratoryArchivalUnit extends LockssTestCase {
                              new RangeCachedUrlSetSpec(baseUrl.toString()));
     // Test for pages that should get crawled
     // permission page / start url 
-    // http://www.business-systems-review.org/bsr_archive.htm
+    // <bslbase>/bsr_archive.htm
     shouldCacheTest(ROOT_URL + "bsr_archive.htm", true, bslAu, cus);  
     // toc page for an issue - 
-    // http://www.business-systems-review.org/BSR.2.1.January-June.2013.htm
+    // <bslbase>/BSR.2.1.January-June.2013.htm
     shouldCacheTest(ROOT_URL + "BSR." + VOLUME_NAME + ".1.January-June."
                     + YEAR + ".htm", true, bslAu, cus);
     // article files
-    // http://www.business-systems-review.org/
-    //          Bardy.&.Massaro.(2013).Sustainability.Value.Index.2.1.htm
-    // http://www.business-systems-review.org/
-    //          BSR.Vol.2-Iss.1-Massaro.et.al.Organising.Innovation.pdf
-    // http://www.business-systems-review.org/
-    //          BSR-Vol.2-Iss.1-2013-complete-issue.pdf
-    // http://www.business-systems-review.org/
-    //          BSR.Vol.2-Iss.2-Symposium.Valencia.2013.Complete.Issue.pdf
+    // <bslbase>/Bardy.&.Massaro.(2013).Sustainability.Value.Index.2.1.htm
+    // <bslbase>/BSR.Vol.2-Iss.1-Massaro.et.al.Organising.Innovation.pdf
+    // <bslbase>/BSR-Vol.2-Iss.1-2013-complete-issue.pdf
+    // <bslbase>/BSR.Vol.2-Iss.2-Symposium.Valencia.2013.Complete.Issue.pdf
     shouldCacheTest(ROOT_URL + "Bardy.&.Massaro.(2013).Sustainability."
                     + "Value.Index.2.1.htm", true, bslAu, cus);
     shouldCacheTest(ROOT_URL + "BSR.Vol.2-Iss.1-Massaro.et.al.Organising."
