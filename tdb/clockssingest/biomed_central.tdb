@@ -357,11 +357,11 @@
       comment[0] = This journal stopped publishing after Vol 12, in 2012. The journal merged with another and the journal_code changed.
       attr[journal_code] = bmcclinpharmacol
 
-      au < down ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 [to delete] ; 8 >
-      au < down ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 [to delete] ; 9 >
-      au < down ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 [to delete] ; 10 >
-      au < down ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < down ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 [to delete] ; 12 >
+      au < boost ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 [to delete] ; 8 >
+      au < boost ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 [to delete] ; 9 >
+      au < boost ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 [to delete] ; 10 >
+      au < boost ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < boost ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 [to delete] ; 12 >
       
     }
 
@@ -2792,8 +2792,8 @@ comment[bmr] = journal archive available, but no new volumes
       comment[url] = This base_url is incorrect. base_url is http://www.chiromt.com
       param[base_url] = http://chiromt.com/
       
-      au < down ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 [to delete] ; 19 >
-      au < down ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 [to delete] ; 20 >
+      au < boost ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 [to delete] ; 19 >
+      au < boost ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 [to delete] ; 20 >
       }
       {
       param[base_url] = http://www.chiromt.com/
@@ -2821,8 +2821,8 @@ comment[bmr] = journal archive available, but no new volumes
       comment[0] = This journal does not have a stable base_url and will not get substance.
       comment[1] = Volume home page, and issue home page url do not have www, all others do.
 
-      au < notReady ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
-      au < notReady ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
+      au < boost ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
+      au < boost ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
       au < down ; down ; 2010 ; Chiropractic & Osteopathy Volume 18 [to delete] ; 18 >
       }
       {
@@ -6064,25 +6064,6 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2012 ; Source Code for Biology and Medicine Volume 7 ; 7 >
       au < manifest ; exists ; 2013 ; Source Code for Biology and Medicine Volume 8 ; 8 >
       au < expected ; exists ; 2014 ; Source Code for Biology and Medicine Volume 9 ; 9 >
-
-    }
-
-    {
-      title <
-        name = Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology ;
-        issn = 1758-2555 ;
-        issnl = 1758-2555
-      >
-
-      param[base_url] = http://www.smarttjournal.com/
-      param[journal_issn] = 1758-2555
-      
-      comment[moved] = Moved to http://www.biomedcentral.com/bmcsportsscimedrehabil/
-
-      au < notReady ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 [to delete] ; 1 >
-      au < notReady ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 [to delete] ; 2 >
-      au < notReady ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 [to delete] ; 3 >
-      au < notReady ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 [to delete] ; 4 >
 
     }
 
