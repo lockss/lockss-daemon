@@ -357,11 +357,11 @@
       comment[0] = This journal stopped publishing after Vol 12, in 2012. The journal merged with another and the journal_code changed.
       attr[journal_code] = bmcclinpharmacol
 
-      au < boost ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 [to delete] ; 8 >
-      au < boost ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 [to delete] ; 9 >
-      au < boost ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 [to delete] ; 10 >
-      au < boost ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < boost ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 [to delete] ; 12 >
+      au < superseded ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 [to delete] ; 8 >
+      au < superseded ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 [to delete] ; 9 >
+      au < superseded ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 [to delete] ; 10 >
+      au < down ; crawling ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
+      au < superseded ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 [to delete] ; 12 >
       
     }
 
@@ -2792,8 +2792,8 @@ comment[bmr] = journal archive available, but no new volumes
       comment[url] = This base_url is incorrect. base_url is http://www.chiromt.com
       param[base_url] = http://chiromt.com/
       
-      au < boost ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 [to delete] ; 19 >
-      au < boost ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 [to delete] ; 20 >
+      au < superseded ; exists ; 2011 ; Chiropractic & Manual Therapies Volume 19 [to delete] ; 19 >
+      au < superseded ; exists ; 2012 ; Chiropractic & Manual Therapies Volume 20 [to delete] ; 20 >
       }
       {
       param[base_url] = http://www.chiromt.com/
@@ -2821,9 +2821,9 @@ comment[bmr] = journal archive available, but no new volumes
       comment[0] = This journal does not have a stable base_url and will not get substance.
       comment[1] = Volume home page, and issue home page url do not have www, all others do.
 
-      au < boost ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
-      au < boost ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
-      au < down ; down ; 2010 ; Chiropractic & Osteopathy Volume 18 [to delete] ; 18 >
+      au < superseded ; exists ; 2008 ; Chiropractic & Osteopathy Volume 16 [to delete] ; 16 >
+      au < superseded ; exists ; 2009 ; Chiropractic & Osteopathy Volume 17 [to delete] ; 17 >
+      au < superseded ; down ; 2010 ; Chiropractic & Osteopathy Volume 18 [to delete] ; 18 >
       }
       {
       param[base_url] = http://www.chiromt.com/
