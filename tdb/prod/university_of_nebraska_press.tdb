@@ -502,6 +502,22 @@
   {
   
     title <
+      name = Theoretical & Applied Ethics ;
+      eissn = 2156-7174 ;
+      issnl = 2156-7174
+    >
+
+    param[journal_dir] = theoretical_and_applied_ethics
+    attr[journal_id] = tha
+
+    au < exists ; 2013 ; Theoretical & Applied Ethics Volume 2 ; 2 >
+    au < expected ; 2014 ; Theoretical & Applied Ethics Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
       name = Women and Music: A Journal of Gender and Culture ;
       issn = 1553-0612 ;
       eissn = 1090-7505 ;
