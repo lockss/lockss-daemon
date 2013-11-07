@@ -303,7 +303,7 @@
       param[journal_id] = BB
       comment[issn] = missing
 
-      au < exists ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 >
 
   }
 }
