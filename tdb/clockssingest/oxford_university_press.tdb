@@ -5495,7 +5495,7 @@
     param[base_url] = http://eurjhf.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 [to delete] ; 10 ; >
+    au < superseded ; exists ; 2008 ; European Journal of Heart Failure Volume 10 [to delete] ; 10 ; >
     au < zapped ; down ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
     }
