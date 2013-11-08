@@ -36,6 +36,23 @@
     {
     
       title <
+        name = Bulletin of the John Rylands Library ;
+        issn = 0301-102X ;
+        eissn = 2052-8051 ;
+        issnl = 1749-6020
+      >
+      
+     param[journal_issn] = 2052-8051
+     
+     au < exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
+     au < expected ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
+    
+    }
+    
+    
+    {
+    
+      title <
         name = Critical Studies in Television: Scholarly Studies in Small Screen Fictions ;
         issn = 1749-6020 ;
         eissn = 1749-6039 ;
