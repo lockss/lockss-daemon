@@ -64,40 +64,22 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
       "org.lockss.plugin.wiley.ClockssWileySourcePlugin";
   
   // 1803test - cover image pdf, abstract xml (no <body> tag)
-  private final String EXPECTED_1803test_PDF_URL = 
-      "http://www.example.com/2011/A/XXXX27.14.zip!/1803test_ftp.pdf";
   private final String EXPECTED_1803test_XML_URL = 
       "http://www.example.com/2011/A/XXXX27.14.zip!/1803test_hdp.wml.xml";
-  private final String EXPECTED_1803test_ABSTRACT_URL = 
-                                            EXPECTED_1803test_XML_URL;
   
-  private final String EXPECTED_1810test_PDF_URL = 
-      "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp.pdf";
   private final String EXPECTED_1810test_XML_URL = 
       "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp.wml.xml";
   
-  private final String EXPECTED_J_0000_0000_2013_00000_xtest_PDF_URL = 
-      "http://www.example.com/2011" +
-      "/A/XXXX27.14.zip!/j.0000-0000.2013.00000.xtest.pdf";
   private final String EXPECTED_J_0000_0000_2013_00000_xtest_XML_URL = 
       "http://www.example.com/2011" +
       "/A/XXXX27.14.zip!/j.0000-0000.2013.00000.xtest.wml.xml";
   
-  List expected1803testUrls = ListUtil.list(null,
-                                            EXPECTED_1803test_PDF_URL,
-                                            EXPECTED_1803test_ABSTRACT_URL,
-                                            EXPECTED_1803test_XML_URL);
+  List expected1803testUrls = ListUtil.list(EXPECTED_1803test_XML_URL);
 
-  List expected1810testUrls = ListUtil.list(EXPECTED_1810test_PDF_URL,
-                                            null,
-                                            null,
-                                            EXPECTED_1810test_XML_URL);
+  List expected1810testUrls = ListUtil.list(EXPECTED_1810test_XML_URL);
 
   List expectedj_0000_0000_2013_00000_xtestUrls = 
-                ListUtil.list(EXPECTED_J_0000_0000_2013_00000_xtest_PDF_URL,
-                              null,
-                              null,
-                              EXPECTED_J_0000_0000_2013_00000_xtest_XML_URL);
+                ListUtil.list(EXPECTED_J_0000_0000_2013_00000_xtest_XML_URL);
 
   List[] expectecUrls = { expected1803testUrls,
                           expected1810testUrls,
@@ -129,9 +111,9 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
     // "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.pdf$\",base_url,year";
        
     assertNotMatchesRE(pat,
-        "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp.pdfbad");
+        "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp..wml.xmlbad");
     assertMatchesRE(pat,
-        "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp.pdf");
+        "http://www.example.com/2011/A/XXXX27.14.zip!/1810test_ftp..wml.xml");
   }
   
   public void testCreateArticleFiles() throws Exception {
@@ -148,10 +130,6 @@ public class TestWileyArticleIteratorFactory extends ArticleIteratorTestCase {
                           createSubTreeIter(); artIter.hasNext(); ) {
       ArticleFiles af = artIter.next();
       List actualUrls = ListUtil.list(
-                            //af.getFullTextUrl(),
-                            af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
-                            af.getRoleUrl("Cover image"),
-                            af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                             af.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA));
       // the order of expected articles: 1803test, 1810test, 
       // and j_0000_0000_2013_00000_xtest
