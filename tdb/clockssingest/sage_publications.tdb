@@ -39935,6 +39935,27 @@
     {
     
       title <
+        name = International Journal of Green Nanotechnology ;
+        issn = 1943-0892 ;
+        eissn = 1943-0906 ;
+        issnl = 1943-0892
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://nan.sagepub.com/
+  
+        au < exists ; exists ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
+        au < expected ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
         name = International Journal of STD & AIDS ;
         issn = 0956-4624 ;
         eissn = 1758-1052 ;
