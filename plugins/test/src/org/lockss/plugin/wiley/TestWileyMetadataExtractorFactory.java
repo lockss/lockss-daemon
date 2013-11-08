@@ -109,7 +109,6 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
   }
   String goodDescription = "Summary";
   String goodRights = "Rights";
-  String goodCoverage = "abstract";
 
   String goodContent =
       "<component>" +
@@ -163,6 +162,9 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
               "<numbering type=\"pageFirst\">" + goodPageFirst + "</numbering>" +
               "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
             "</numberingGroup>" +
+            "<linkGroup>" +
+              "<link href=\"" + realPdfUrlBaseA + "\" type=\"toTypesetVersion\"/>" +
+            "</linkGroup>" +
             "<doi>" + goodDoi + "</doi>" +
           "</publicationMeta>" +
 
@@ -233,6 +235,9 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
                                                                "</numbering>" +
               "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
             "</numberingGroup>" +
+            "<linkGroup>" +
+              "<link href=\"" + realCoverImagePdfUrlBaseA + "\" type=\"toTypesetVersion\"/>" +
+            "</linkGroup>" +
             "<doi>" + goodDoi + "</doi>" +
           "</publicationMeta>" +
 
@@ -240,7 +245,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
       "</component>";
 
   // content missing journal title, journal id, volume and issue
-  String missingMetadataContent =
+  String missingMetadataContentA =
       "<component>" +
         "<header>" +
           "<contentMeta>" +
@@ -287,6 +292,71 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
                                                                "</numbering>" +
               "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
             "</numberingGroup>" +
+            "<linkGroup>" +
+              "<link href=\"" + realPdfUrlBaseA + "\" type=\"toTypesetVersion\"/>" +
+            "</linkGroup>" +
+            "<doi>" + goodDoi + "</doi>" +
+          "</publicationMeta>" +
+
+        "</header>" +
+        "<body>" +
+          "<section xml:id=\"sec1-1\">" +
+            "<title type=\"main\">1. Introduction</title>" +
+          "</section>" +
+        "</body>" +
+      "</component>";
+
+  // content missing journal title, journal id, volume and issue
+  String missingMetadataContent2 =
+      "<component>" +
+        "<header>" +
+          "<contentMeta>" +
+            "<titleGroup>" +
+              "<title>" +
+                goodTitle +
+              "</title>" +
+            "</titleGroup>" +
+            "<keywordGroup>" +
+              "<keyword>" + goodKeywords.get(0) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(1) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(2) + "</keyword>" +
+              "<keyword>" + goodKeywords.get(3) + "</keyword>" +
+            "</keywordGroup>" +
+            "<creators>" +
+              "<creator creatorRole=\"author\">" +
+                "<personName>" +
+                  "<givenNames>Deer</givenNames>" +
+                  "<familyName>Doe</familyName>" +
+                "</personName>" +
+              "</creator>" +
+            "</creators>" +
+          "</contentMeta>" +
+       
+          "<publicationMeta level=\"product\">" +
+            "<publisherInfo>" +
+              "<publisherName>" + goodPublisher + "</publisherName>" +
+            "</publisherInfo>" +
+            "<titleGroup>" +
+              "<title></title>" +
+            "</titleGroup>" +
+            "<issn type=\"print\">" + goodPrintIssn + "</issn>" +
+            "<issn type=\"electronic\">" + goodEissn + "</issn>" +
+          "</publicationMeta>" +
+            
+          "<publicationMeta level=\"part\">" +
+            "<coverDate startDate=\"" + goodDate + 
+                                                  "\">April 2011</coverDate>" +
+          "</publicationMeta>" +
+            
+          "<publicationMeta level=\"unit\">" +
+            "<numberingGroup>" +
+              "<numbering type=\"pageFirst\">" + goodPageFirst + 
+                                                               "</numbering>" +
+              "<numbering type=\"pageLast\">" + goodPageLast + "</numbering>" +
+            "</numberingGroup>" +
+            "<linkGroup>" +
+              "<link href=\"" + realPdfUrlBase2 + "\" type=\"toTypesetVersion\"/>" +
+            "</linkGroup>" +
             "<doi>" + goodDoi + "</doi>" +
           "</publicationMeta>" +
 
@@ -330,8 +400,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     // hard-wire publisher name because Wiley has different imprints,
     // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    // full-text content (with <body> tag)
-    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+    assertEquals(pdfUrl, md.get(MetadataField.FIELD_ACCESS_URL));
   }
   
   // missing journal title, journal id, volume, and issue metadata
@@ -340,7 +409,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     String pdfUrl = realUrlBaseA + realPdfUrlBaseA;
     String xmlUrl = realUrlBaseA + realXmlUrlBaseA;
     hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, missingMetadataContent);
+    hau.addUrl(xmlUrl, missingMetadataContentA);
     CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
@@ -368,8 +437,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     // hard-wire publisher name because Wiley has different imprints,
     // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    // full-text content (with <body> tag)
-    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+    assertEquals(pdfUrl, md.get(MetadataField.FIELD_ACCESS_URL));
   }
 
   // missing journal title, journal id, volume, and issue metadata
@@ -378,7 +446,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     String pdfUrl = realUrlBase2 + realPdfUrlBase2;
     String xmlUrl = realUrlBase2 + realXmlUrlBase2;
     hau.addUrl(pdfUrl);
-    hau.addUrl(xmlUrl, missingMetadataContent);
+    hau.addUrl(xmlUrl, missingMetadataContent2);
     CachedUrl xmlCu = hau.makeCachedUrl(xmlUrl);
     FileMetadataExtractor me =
       new WileyMetadataExtractorFactory.WileyMetadataExtractor();
@@ -405,7 +473,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     assertNull(md.get(MetadataField.FIELD_VOLUME));
     assertNull(md.get(MetadataField.FIELD_ISSUE));
     // full-text content (with <body> tag)
-    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+    assertEquals(pdfUrl, md.get(MetadataField.FIELD_ACCESS_URL));
   }
   
   // empty content
@@ -444,7 +512,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     // hard-wire publisher name because Wiley has different imprints,
     // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+    assertNull(md.get(MetadataField.FIELD_ACCESS_URL));
   }
 
   // bad content -- not XML
@@ -485,7 +553,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     // hard-wire publisher name because Wiley has different imprints,
     // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(null, md.get(MetadataField.FIELD_COVERAGE));
+    assertNull(md.get(MetadataField.FIELD_ACCESS_URL));
   }
   
   // test xml with <header> but no <body> tags - likely an abstract
@@ -521,7 +589,7 @@ public class TestWileyMetadataExtractorFactory extends LockssTestCase {
     // hard-wire publisher name because Wiley has different imprints,
     // to be consistent for board report
     assertEquals(hardwiredPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodCoverage, md.get(MetadataField.FIELD_COVERAGE));    
+    assertEquals(pdfUrl, md.get(MetadataField.FIELD_ACCESS_URL));
  }
   
 }
