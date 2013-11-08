@@ -1,5 +1,5 @@
 /*
- * $Id: WileyArticleIteratorFactory.java,v 1.6 2013-09-17 18:15:15 thib_gc Exp $
+ * $Id: WileyArticleIteratorFactory.java,v 1.7 2013-11-08 19:21:12 pgust Exp $
  */
 
 /*
@@ -45,29 +45,29 @@ import org.lockss.util.Logger;
 
 /*
  * Iterates article files.  Archived source content zip files include files
- * with mime-type pdf and xml. Content has inconstitent file name formats.
- * 
- * Full-text:
- * <base_url>/<year>/[A-Z0-9]/xxxxx.zip!/filename.[pdf|xml]
- *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.pdf
- *      <base_url>/<year>/A/ADMA23.16!/1810_ftp.wml.xml
- * 
- * Cover image: <base_url><year>/A/1803_ftp.pdf
- * Abstract:    <base_url>/<year>/A/1803_hdp.wml.xml
- *      
- * Article metadata in all xmls.
+ * with mime-type pdf and xml. The xml file contains the metadata and refers
+ * to the name of the PDF file.
+ * <p>
+ * There's no way to consistently get the name
+ * of the PDF file from the name of the XML file, so it's necessary to
+ * iterate on the XML files and capture the name of the PDF files in the 
+ * metadata extractor. Example XML file names include:
+ * <pre>
+ * 1/117966453266.3.zip!/ j.1365-2796.2009.02095.x.wml.xml
+ * A/ADMA23.12.zip!/1427_ftp.wml.xml
+ * A/ADMA23.12.zip!/1419_hdp.wml.xml 
+ * C/CEAT34.10.zip!/1728_hrp.wml.xml
+ * </pre>
  */
 public class WileyArticleIteratorFactory 
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
-
-  public static final String ROLE_COVER_IMAGE = "Cover image";
 
   protected static Logger log = 
                           Logger.getLogger(WileyArticleIteratorFactory.class);
   
   // no need to set ROOT_TEMPLATE since all content is under <base_url>/<year>
   protected static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.pdf$\",base_url,year";
+      "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.wml\\.xml$\",base_url,year";
      
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -85,11 +85,9 @@ public class WileyArticleIteratorFactory
   
   protected static class WileyArticleIterator extends SubTreeArticleIterator {
 	 
-    protected final static Pattern PDF_PATTERN = 
-      Pattern.compile("(/[^/]+\\.zip!/.*)(\\.pdf)$", Pattern.CASE_INSENSITIVE);
+    protected final static Pattern XML_PATTERN = 
+      Pattern.compile("/[^/]+\\.zip!/.*\\.wml\\.xml$",Pattern.CASE_INSENSITIVE);
     
-    protected final static Pattern FTP_PDF_PATTERN = 
-      Pattern.compile("(.*)_ftp\\.pdf$", Pattern.CASE_INSENSITIVE);
     
     protected WileyArticleIterator(ArchivalUnit au,
                                    SubTreeArticleIterator.Spec spec) {
@@ -99,61 +97,19 @@ public class WileyArticleIteratorFactory
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      Matcher matPdf = PDF_PATTERN.matcher(url);
-      if (matPdf.find()) {
-        return processFullText(cu, matPdf);
+      Matcher matXml = XML_PATTERN.matcher(url);
+      if (matXml.find()) {
+        ArticleFiles af = new ArticleFiles();
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
+        // set access URL to PDF file in metadata extractor
+        // set fullTextCu here to make list of XML files visible
+        // to non-metadata iterator clients.
+        af.setFullTextCu(cu);
+        return af;
       }
-      log.warning("Url does not match PDF_PATTERN: " + url);
+      log.warning("Url does not match XML_PATTERN: " + url);
       return null;
     }
-    
-    // if found pdfs with file name containing "*_ftp.pdf",
-    // then make cached url for its corresponding abstract "*_hdp.wml.xml"
-    private CachedUrl getHdpXmlCu(Matcher matFtpPdf) {
-       String hdpXml = matFtpPdf.replaceFirst("$1_hdp.wml.xml");
-       CachedUrl hdpXmlCu = au.makeCachedUrl(hdpXml);
-       return (hdpXmlCu);
-    }
-    
-    private void setRoleFullText(ArticleFiles af, CachedUrl cu) {
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-      af.setFullTextCu(cu);
-    }
-
-    // pdfs are a mix of full-text (most) and cover image and/or abstract
-    // images. Abstract xml is recognized by its file name containing '_hdp'
-    // coupling with its *_ftp.pdf file.
-    protected ArticleFiles processFullText(CachedUrl cu, Matcher matPdf) {
-      ArticleFiles af = new ArticleFiles();
-      Matcher matFtpPdf = FTP_PDF_PATTERN.matcher(cu.getUrl());
-      if (!matFtpPdf.find()) {
-        setRoleFullText(af, cu);
-      } else {
-        CachedUrl hdpXmlCu = getHdpXmlCu(matFtpPdf);
-        // if hdp xml exists, then the pdf is a cover image
-        // and the hdp xml is an abstract and contains not <body> tag
-        if (hdpXmlCu.hasContent()) {
-          af.setRoleCu(ROLE_COVER_IMAGE, cu); // cover image pdf
-          af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, hdpXmlCu);
-          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, hdpXmlCu);
-        } else {
-          setRoleFullText(af, cu);
-        }
-      } 
-      if (!spec.getTarget().isArticle()) {
-        guessAdditionalFiles(af, matPdf);
-      }
-      return af;
-    }
-    
-    // metadata found in all xmls (full-text and abstract)
-    protected void guessAdditionalFiles(ArticleFiles af, Matcher matPdf) {
-      CachedUrl xmlCu = au.makeCachedUrl(matPdf.replaceFirst("$1.wml.xml"));
-      if (xmlCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, xmlCu);
-      }
-    }
-    
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(
