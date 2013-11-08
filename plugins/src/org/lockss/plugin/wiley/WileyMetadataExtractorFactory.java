@@ -1,5 +1,5 @@
 /*
- * $Id: WileyMetadataExtractorFactory.java,v 1.11 2013-09-17 18:15:15 thib_gc Exp $
+ * $Id: WileyMetadataExtractorFactory.java,v 1.12 2013-11-08 19:18:34 pgust Exp $
  */
 
 /*
@@ -115,14 +115,18 @@ import org.w3c.dom.NodeList;
         "/numberingGroup/numbering[@type='pageLast']"; 
     static private final String XPATH_DOI = 
         "/component/header/publicationMeta[@level='unit']/doi";
+    static private final String XPATH_PDF_FILE_NAME =
+        "/component/header/publicationMeta/linkGroup/link[@type='toTypesetVersion']/@href";
     static private final String XPATH_KEYWORDS = 
         "/component/header/contentMeta/keywordGroup/keyword"; 
     static private final String XPATH_AUTHOR = 
         "/component/header/contentMeta/creators" +
         "/creator[@creatorRole='author']/personName"; 
-    static private final String XPATH_BODY_SECTION_TITLE = 
-        "/component/body/section/title"; 
-                  
+    // for future use: contains values like "Cover Picture", 
+    // "Research Article", and "Editorial"
+    static private final String XPATH_ARTICLE_CATEGORY =
+        "/component/header/publicationMeta/titleGroup/title[@type=articleCategory]";                  
+    
     // NodeValue for creating value of subfields from author tag
     static private final XPathValue AUTHOR_VALUE = new NodeValue() {
       @Override
@@ -178,9 +182,8 @@ import org.w3c.dom.NodeList;
       nodeMap.put(XPATH_DOI, XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put(XPATH_KEYWORDS, XmlDomMetadataExtractor.TEXT_VALUE);
       nodeMap.put(XPATH_AUTHOR, AUTHOR_VALUE);
-      // if no <body> found, then the xml is an abstract
-      nodeMap.put(XPATH_BODY_SECTION_TITLE, 
-                  XmlDomMetadataExtractor.TEXT_VALUE);
+      // name of PDF file relative to path of XML file
+      nodeMap.put(XPATH_PDF_FILE_NAME, XmlDomMetadataExtractor.TEXT_VALUE);
     }
 
     // Map of raw xpath key to cooked MetadataField
@@ -226,14 +229,6 @@ import org.w3c.dom.NodeList;
             am = new ArticleMetadata();
           }
           
-          // assign abstract for xml with no <body> tag
-          // also check with the file name with "_hdp" to avoid 
-          // corrupted xml such as 1829_ftp.wml.xml from 2011
-          if (am.getRaw(XPATH_BODY_SECTION_TITLE) == null
-              && xmlUrl.contains("_hdp")) {
-            am.put(MetadataField.FIELD_COVERAGE, "abstract");
-          }
-            
           // hardwire publisher for board report (look at imprints later)
           am.put(MetadataField.FIELD_PUBLISHER, "John Wiley & Sons, Inc.");
           
@@ -245,7 +240,22 @@ import org.w3c.dom.NodeList;
             am.putIfBetter(MetadataField.FIELD_VOLUME, mat.group(2));
             am.putIfBetter(MetadataField.FIELD_ISSUE, mat.group(3));
           }
-                      
+               
+          String pdfFileName = am.getRaw(XPATH_PDF_FILE_NAME);
+          if (pdfFileName != null) {
+            // Use PDF file as the access URL, and only emit if PDF file exists
+            String pdfUrl = 
+                xmlUrl.substring(0,xmlUrl.lastIndexOf('/')+1) + pdfFileName;
+            CachedUrl pdfCu = xmlCu.getArchivalUnit().makeCachedUrl(xmlUrl);
+            if (pdfCu.hasContent()) {
+              am.putIfBetter(MetadataField.FIELD_ACCESS_URL, pdfUrl);
+            } else {
+              log.siteError("Missing PDF file: " + pdfUrl);
+            }
+            AuUtil.safeRelease(pdfCu);
+          } else {
+            log.siteError("Unspecified PDF file for XML file: " + xmlUrl); 
+          }
           emitter.emitMetadata(xmlCu, am);
             
         } else {
