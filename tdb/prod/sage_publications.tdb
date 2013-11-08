@@ -28941,7 +28941,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mla.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2013 ; Millennial Asia Volume 4 ; 4 >
+        au < manifest ; 2013 ; Millennial Asia Volume 4 ; 4 >
 
       }
 
@@ -29731,7 +29731,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; National Institute Economic Review Volume 223 ; 223 >
         au < manifest ; 2013 ; National Institute Economic Review Volume 224 ; 224 >
         au < manifest ; 2013 ; National Institute Economic Review Volume 225 ; 225 >
-        au < expected ; 2013 ; National Institute Economic Review Volume 226 ; 226 >
+        au < manifest ; 2013 ; National Institute Economic Review Volume 226 ; 226 >
 
       }
 
