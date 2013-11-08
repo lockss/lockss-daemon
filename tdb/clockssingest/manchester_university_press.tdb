@@ -34,6 +34,53 @@
   
   
     {
+    
+      title <
+        name = Bulletin of the John Rylands Library ;
+        issn = 0301-102X ;
+        eissn = 2052-8051 ;
+        issnl = 1749-6020
+      >
+      
+     param[journal_issn] = 2052-8051
+     
+     au < exists ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
+     au < exists ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
+     au < exists ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
+     au < exists ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
+     au < exists ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
+     au < expected ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
+    
+    }
+    
+    
+    {
+    
+      title <
+        name = Cahiers Élisabéthains ;
+        issn = 0184-7678 ;
+        issnl = 0184-7678
+      >
+      
+     param[journal_issn] = 0184-7678
+     
+     au < exists ; exists ; 2009 ; Cahiers Élisabéthains Volume 75 ; 75 >
+     au < exists ; exists ; 2009 ; Cahiers Élisabéthains Volume 76 ; 76 >
+     au < exists ; exists ; 2010 ; Cahiers Élisabéthains Volume 77 ; 77 >
+     au < exists ; exists ; 2010 ; Cahiers Élisabéthains Volume 78 ; 78 >
+     au < exists ; exists ; 2011 ; Cahiers Élisabéthains Volume 79 ; 79 >
+     au < exists ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 >
+     au < exists ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 >
+     au < exists ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
+     au < exists ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
+     au < exists ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
+     au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
+     au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
+    
+    }
+    
+    
+    {
 
     title <
       name = Critical Studies in Television: Scholarly Studies in Small Screen Fictions ;
@@ -349,6 +396,9 @@
      au < manifest ; exists ; 2008 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 12 ; 12 >
      au < manifest ; exists ; 2009 ; Redescriptions: Political Thought, Conceptual History and Feminist Theory Volume 13 ; 13 >
      au < manifest ; exists ; 2010 ; Rediscriptions: Political Thought, Conceptual History and Feminist Theory Volume 14 ; 14 >
+     au < expected ; exists ; 2011 ; Rediscriptions: Political Thought, Conceptual History and Feminist Theory Volume 15 ; 15 >
+     au < expected ; exists ; 2012-2013 ; Rediscriptions: Political Thought, Conceptual History and Feminist Theory Volume 16 ; 16 >
+     au < expected ; exists ; 2014 ; Rediscriptions: Political Thought, Conceptual History and Feminist Theory Volume 17 ; 17 >
 
     }
 
