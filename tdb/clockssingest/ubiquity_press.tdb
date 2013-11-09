@@ -239,7 +239,7 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    au < exists ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < manifest ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
