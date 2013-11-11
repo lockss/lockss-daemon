@@ -13870,6 +13870,22 @@
   {
 
     title <
+      name = Medical Mycology ;
+      issn = 1369-3786 ;
+      eissn = 1460-2709 ;
+      issnl = 1369-3786
+    >
+
+    param[base_url] = http://mmy.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2014 ; Medical Mycology Volume 52 ; 52 ; >
+
+  }
+
+  {
+
+    title <
       name = MELUS: Multi-Ethnic Literature of the U.S. ;
       issn = 0163-755X ;
       eissn = 1946-3170 ;
