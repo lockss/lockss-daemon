@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXMessage SYSTEM "http://www.editeur.org/onix/2.1/reference/onix-international.dtd">
+
+<ONIXMessage>
+ <Header>
+  <FromCompany>BiblioVault</FromCompany>
+  <FromPerson>BiblioVault Staff</FromPerson>
+  <FromEmail>bv-help@uchicago.edu</FromEmail>
+  <SentDate>20131022</SentDate>
+  <DefaultLanguageOfText>eng</DefaultLanguageOfText>
+ </Header>
+<Product>
+<RecordReference>org.bibliovault.1</RecordReference>
+<NotificationType>03</NotificationType>
+<ProductIdentifier>
+<ProductIDType>03</ProductIDType>
+<IDValue>9780804738555</IDValue>
+</ProductIdentifier>
+<ProductIdentifier>
+<ProductIDType>15</ProductIDType>
+<IDValue>9780804738555</IDValue>
+</ProductIdentifier>
+<ProductForm>BB</ProductForm>
+<Title>
+<TitleType>01</TitleType>
+<TitleText>On Demand</TitleText>
+<Subtitle>A Subtitle to go with On Demand</Subtitle>
+</Title>
+<Contributor>
+<SequenceNumber>1</SequenceNumber>
+<ContributorRole>A01</ContributorRole>
+<PersonName>David Writer</PersonName>
+<PersonNameInverted>Writer, David</PersonNameInverted>
+<NamesBeforeKey>David</NamesBeforeKey>
+<KeyNames>Writer</KeyNames>
+</Contributor>
+  <Imprint>
+   <ImprintName>Stanford University Press</ImprintName>
+  </Imprint>
+  <Publisher>
+   <PublisherName>Stanford University Press</PublisherName>
+   <Website>
+    <WebsiteLink>http://www.sup.org</WebsiteLink>
+   </Website>
+  </Publisher>
+  <PublishingStatus>04</PublishingStatus>
+  <PublicationDate>20091203</PublicationDate>
+  </Product>
+   <Product>
+  <RecordReference>org.bibliovault.2</RecordReference>
+  <NotificationType>03</NotificationType>
+  <ProductIdentifier>
+   <ProductIDType>03</ProductIDType>
+   <IDValue>9780804741666</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+   <ProductIDType>15</ProductIDType>
+   <IDValue>9780804741666</IDValue>
+  </ProductIdentifier>
+  <ProductForm>BB</ProductForm>
+  <Series>
+   <TitleOfSeries>Stanford Studies in  History</TitleOfSeries>
+  </Series>
+  <Title>
+   <TitleType>01</TitleType>
+   <TitleText>The People, 1881 to 1941</TitleText>
+   <TitlePrefix>The</TitlePrefix>
+   <TitleWithoutPrefix>People, 1881 to 1941</TitleWithoutPrefix>
+  </Title>
+  <WorkIdentifier>
+   <WorkIDType>01</WorkIDType>
+   <IDTypeName>BiblioVault BookId</IDTypeName>
+   <IDValue>37583</IDValue>
+  </WorkIdentifier>
+  <Contributor>
+   <SequenceNumber>1</SequenceNumber>
+   <ContributorRole>A01</ContributorRole>
+   <PersonName>Good Author</PersonName>
+   <PersonNameInverted>Author, Good</PersonNameInverted>
+   <NamesBeforeKey>Good</NamesBeforeKey>
+   <KeyNames>Author</KeyNames>
+  </Contributor>
+  <Contributor>
+   <SequenceNumber>2</SequenceNumber>
+   <ContributorRole>B01</ContributorRole>
+   <PersonName>Mark Editor</PersonName>
+   <PersonNameInverted>Editor, Mark</PersonNameInverted>
+   <NamesBeforeKey>Mark</NamesBeforeKey>
+   <KeyNames>Editor</KeyNames>
+  </Contributor>
+  <Contributor>
+   <SequenceNumber>3</SequenceNumber>
+   <ContributorRole>B01</ContributorRole>
+   <PersonName>Another Editor</PersonName>
+   <PersonNameInverted>Editor, Another</PersonNameInverted>
+   <NamesBeforeKey>Another</NamesBeforeKey>
+   <KeyNames>Editor</KeyNames>
+  </Contributor>
+  <Contributor>
+   <SequenceNumber>4</SequenceNumber>
+   <ContributorRole>B06</ContributorRole>
+   <PersonName>Lingua Translator</PersonName>
+   <PersonNameInverted>Translator, Lingua</PersonNameInverted>
+   <NamesBeforeKey>Lingua</NamesBeforeKey>
+   <KeyNames>Translator</KeyNames>
+  </Contributor>
+  <NoEdition />
+  <Language>
+   <LanguageRole>01</LanguageRole>
+   <LanguageCode>eng</LanguageCode>
+  </Language>
+  <NumberOfPages>792</NumberOfPages>
+  <BASICMainSubject>HIS000000</BASICMainSubject>
+  <Subject>
+   <SubjectSchemeIdentifier>01</SubjectSchemeIdentifier>
+   <SubjectCode>305.892/404789</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>03</SubjectSchemeIdentifier>
+   <SubjectCode>DS135</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+   <SubjectCode>HIS022000</SubjectCode>
+  </Subject>
+  <AudienceCode>06</AudienceCode>
+  <Imprint>
+   <ImprintName>Stanford University Press</ImprintName>
+  </Imprint>
+  <Publisher>
+   <PublisherName>Stanford University Press</PublisherName>
+   <Website>
+    <WebsiteLink>http://www.sup.org</WebsiteLink>
+   </Website>
+  </Publisher>
+  <PublishingStatus>04</PublishingStatus>
+  <PublicationDate>20130109</PublicationDate>
+  <CopyrightYear>2013</CopyrightYear>
+  <SalesRights>
+   <SalesRightsType>01</SalesRightsType>
+   <RightsTerritory>WORLD</RightsTerritory>
+  </SalesRights>
+  <Measure>
+   <MeasureTypeCode>02</MeasureTypeCode>
+   <Measurement>6.00</Measurement>
+   <MeasureUnitCode>in</MeasureUnitCode>
+  </Measure>
+  <Measure>
+   <MeasureTypeCode>01</MeasureTypeCode>
+   <Measurement>9.00</Measurement>
+   <MeasureUnitCode>in</MeasureUnitCode>
+  </Measure>
+ </Product>
+ <Product>
+  <RecordReference>org.bibliovault.9780804741777</RecordReference>
+  <NotificationType>03</NotificationType>
+  <ProductIdentifier>
+   <ProductIDType>03</ProductIDType>
+   <IDValue>9780804741777</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+   <ProductIDType>15</ProductIDType>
+   <IDValue>9780804741777</IDValue>
+  </ProductIdentifier>
+  <ProductForm>BB</ProductForm>
+  <Series>
+   <TitleOfSeries>Stanford Studies in History</TitleOfSeries>
+  </Series>
+  <Title>
+   <TitleType>01</TitleType>
+   <TitleText>The People, 1506 to 1880</TitleText>
+   <TitlePrefix>The</TitlePrefix>
+   <TitleWithoutPrefix>People, 1506 to 1880</TitleWithoutPrefix>
+  </Title>
+  <Contributor>
+   <SequenceNumber>1</SequenceNumber>
+   <ContributorRole>A01</ContributorRole>
+   <PersonName>Good Author</PersonName>
+   <PersonNameInverted>Author, good</PersonNameInverted>
+   <NamesBeforeKey>Good</NamesBeforeKey>
+   <KeyNames>Author</KeyNames>
+  </Contributor>
+  <Contributor>
+   <SequenceNumber>2</SequenceNumber>
+   <ContributorRole>B01</ContributorRole>
+   <PersonName>Mark Editor</PersonName>
+   <PersonNameInverted>Editor, Mark</PersonNameInverted>
+   <NamesBeforeKey>Mark</NamesBeforeKey>
+   <KeyNames>Editor</KeyNames>
+  </Contributor>
+  <Contributor>
+   <SequenceNumber>3</SequenceNumber>
+   <ContributorRole>B01</ContributorRole>
+   <PersonName>Another Editor</PersonName>
+   <PersonNameInverted>Editor, Another</PersonNameInverted>
+   <NamesBeforeKey>Another</NamesBeforeKey>
+   <KeyNames>Editor</KeyNames>
+  </Contributor>
+  <ContributorStatement>Good Author, Edited by Mark Editor and Another Editor</ContributorStatement>
+  <NoEdition />
+  <Language>
+   <LanguageRole>01</LanguageRole>
+   <LanguageCode>eng</LanguageCode>
+  </Language>
+  <NumberOfPages>656</NumberOfPages>
+  <BASICMainSubject>HIS000000</BASICMainSubject>
+  <Subject>
+   <SubjectSchemeIdentifier>01</SubjectSchemeIdentifier>
+   <SubjectCode>947.8/9</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>03</SubjectSchemeIdentifier>
+   <SubjectCode>DS135</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+   <SubjectCode>HIS022000</SubjectCode>
+  </Subject>
+  <AudienceCode>06</AudienceCode>
+  <Imprint>
+   <ImprintName>Stanford University Press</ImprintName>
+  </Imprint>
+  <Publisher>
+   <PublisherName>Stanford University Press</PublisherName>
+   <Website>
+    <WebsiteLink>http://www.sup.org</WebsiteLink>
+   </Website>
+  </Publisher>
+  <PublishingStatus>04</PublishingStatus>
+  <PublicationDate>20071120</PublicationDate>
+  <CopyrightYear>2008</CopyrightYear>
+  <SalesRights>
+   <SalesRightsType>01</SalesRightsType>
+   <RightsTerritory>WORLD</RightsTerritory>
+  </SalesRights>
+  <Measure>
+   <MeasureTypeCode>02</MeasureTypeCode>
+   <Measurement>6.00</Measurement>
+   <MeasureUnitCode>in</MeasureUnitCode>
+  </Measure>
+  <Measure>
+   <MeasureTypeCode>01</MeasureTypeCode>
+   <Measurement>9.00</Measurement>
+   <MeasureUnitCode>in</MeasureUnitCode>
+  </Measure>
+ </Product>
+ <Product>
+  <RecordReference>org.bibliovault.9780804744888</RecordReference>
+  <NotificationType>03</NotificationType>
+  <ProductIdentifier>
+   <ProductIDType>03</ProductIDType>
+   <IDValue>9780804744888</IDValue>
+  </ProductIdentifier>
+  <ProductIdentifier>
+   <ProductIDType>15</ProductIDType>
+   <IDValue>9780804744888</IDValue>
+  </ProductIdentifier>
+  <ProductForm>BB</ProductForm>
+  <Series>
+   <TitleOfSeries>People: Profiles</TitleOfSeries>
+  </Series>
+  <Title>
+   <TitleType>01</TitleType>
+   <TitleText>Philip Whosit</TitleText>
+   <Subtitle>Ideals in his World</Subtitle>
+  </Title>
+  <WorkIdentifier>
+   <WorkIDType>01</WorkIDType>
+   <IDTypeName>BiblioVault BookId</IDTypeName>
+   <IDValue>36341</IDValue>
+  </WorkIdentifier>
+  <Contributor>
+   <SequenceNumber>1</SequenceNumber>
+   <ContributorRole>A01</ContributorRole>
+   <PersonName>Martin van Writer</PersonName>
+   <PersonNameInverted>van Writer, Martin</PersonNameInverted>
+   <NamesBeforeKey>Martin</NamesBeforeKey>
+   <KeyNames>Writer</KeyNames>
+  </Contributor>
+  <NoEdition />
+  <Language>
+   <LanguageRole>01</LanguageRole>
+   <LanguageCode>eng</LanguageCode>
+  </Language>
+  <NumberOfPages>347</NumberOfPages>
+  <BASICMainSubject>LAW000000</BASICMainSubject>
+  <Subject>
+   <SubjectSchemeIdentifier>01</SubjectSchemeIdentifier>
+   <SubjectCode>306.2/501</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>03</SubjectSchemeIdentifier>
+   <SubjectCode>K370</SubjectCode>
+  </Subject>
+  <Subject>
+   <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+   <SubjectCode>LAW052000</SubjectCode>
+  </Subject>
+  <AudienceCode>06</AudienceCode>
+  <OtherText>
+   <TextTypeCode>01</TextTypeCode>
+   <TextFormat>02</TextFormat>
+   <Text>&lt;DIV&gt;contributions.&lt;BR&gt;&lt;BR&gt;Reading.&lt;/DIV&gt;</Text>
+  </OtherText>
+  <MediaFile>
+   <MediaFileTypeCode>04</MediaFileTypeCode>
+   <MediaFileFormatCode>03</MediaFileFormatCode>
+   <MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+   <MediaFileLink>http://www.bibliovault.org/thumbs/978-0-8047-4475-1-frontcover.jpg</MediaFileLink>
+   <MediaFileDate>20120430</MediaFileDate>
+  </MediaFile>
+  <MediaFile>
+   <MediaFileTypeCode>07</MediaFileTypeCode>
+   <MediaFileFormatCode>03</MediaFileFormatCode>
+   <MediaFileLinkTypeCode>01</MediaFileLinkTypeCode>
+   <MediaFileLink>http://www.bibliovault.org/thumbs/978-0-8047-4475-1-thumb.jpg</MediaFileLink>
+   <MediaFileDate>20120430</MediaFileDate>
+  </MediaFile>
+  <Imprint>
+   <ImprintName>Stanford Law Books</ImprintName>
+  </Imprint>
+  <Publisher>
+   <PublisherName>Stanford University Press</PublisherName>
+   <Website>
+    <WebsiteLink>http://www.sup.org</WebsiteLink>
+   </Website>
+  </Publisher>
+  <PublishingStatus>04</PublishingStatus>
+  <PublicationDate>20120523</PublicationDate>
+  <CopyrightYear>2012</CopyrightYear>
+  <SalesRights>
+   <SalesRightsType>01</SalesRightsType>
+   <RightsTerritory>WORLD</RightsTerritory>
+  </SalesRights>
+  <SupplyDetail>
+   <SupplierName>Stanford University Press</SupplierName>
+   <ProductAvailability>20</ProductAvailability>
+   <ExpectedShipDate>20120523</ExpectedShipDate>
+   <OnSaleDate>20120523</OnSaleDate>
+   <Price>
+    <PriceTypeCode>01</PriceTypeCode>
+    <PriceQualifier>05</PriceQualifier>
+    <DiscountCoded>
+     <DiscountCodeType>02</DiscountCodeType>
+     <DiscountCode>SUP Short Cloth</DiscountCode>
+    </DiscountCoded>
+    <PriceAmount>65.00</PriceAmount>
+    <CurrencyCode>USD</CurrencyCode>
+   </Price>
+  </SupplyDetail>
+ </Product>
+</ONIXMessage>

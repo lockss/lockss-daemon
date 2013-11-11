@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.2 2013-10-18 21:28:34 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.3 2013-11-11 20:57:19 alexandraohlson Exp $
  */
 
 /*
@@ -60,16 +60,41 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-
+/**
+ * This class extracts values from the XML specified by a CachedUrl
+ * as the raw values of a ArticleMetadata object or objects. It supports multiple
+ * article records in one file and returns a list of ArticleMetadata objects.
+ *  This class uses the DocumentBuilderFactor to construct a 
+ *  DocumentBuilder to parse the input 
+ * stream into a Document. Validation and name spaces are disabled and 
+ * DTD files are not consulted.
+ * <p>
+ * The metadata to extract is specified by XPath expressions. By default, 
+ * the expression evaluates to a node-set whose values are the text content 
+ * of the specified nodes. Optional NodeValue objects can be provided with 
+ * the XPath expressions to specify the return types of the xpressions and 
+ * how to format the resulting values as strings.
+ * <p>
+ * Global xPath expressions are evaluated across the entire tree and put in to
+ * every returned ArticleMetadata object.
+ * Article xPath expressions are evaluated from a defined article level node
+ * down and put in to individual ArticleMetadata objects in the list.
+ * See the following reference on XPath syntax: 
+ * http://www.w3schools.com/xpath/xpath_syntax.asp
+ * @author alexohlson
+ *
+ */
 public class XPathXmlMetadataParser  {
   static Logger log = Logger.getLogger(XPathXmlMetadataParser.class);
 
 
-  /*
-   *  Create a class to hold the information we need for every XPath, that is:
+  /**
+   * A class to hold the information we need to use an XPath<br>
    *     xKey - the string that defines the path of the XPath
    *     xExpr - the compiled XPath expression
    *     xVal - the evaluator to get a string return value
+   * @author alexohlson
+   *
    */
   protected class XPathInfo {
     String xKey;
@@ -94,23 +119,26 @@ public class XPathXmlMetadataParser  {
     articlePath = null;
   }
 
-  /*
-   * Create an XPath based metadata parser that will extract the textContent of
+
+  /**
+   *  Create an XPath based XML parser that will extract the textContent of
    * the nodes specified by the XPath expressions by applying the 
    * corresponding NodeValue evaluators.
-   * The globalMap defines paths for data that should be applied across all
-   * The articleMap defines paths for data that applies to only one article
-   * The articleNodeDef defines a path to the top of an individual article node
-   * 
-   * Cases:
+   * <p>
+   * Cases:<br/>
    *     If there is no globalMap, it is assumed that each ArticleMetadata will 
-   *       be filled only by the articleMap
+   *       be filled only by the articleMap<br/>
    *     If there is no articleMap, only one ArticleMetadata is filled and 
-   *       returned, using the globalMap
+   *       returned, using the globalMap<br/>
    *     If the articleNodeDef is not set, it is assumed to be the top of the 
-   *       document
+   *       document<br/>
    *     If the articleNodeDef is set, the articleMap paths should be relative 
    *       to that (not from the top of the document)
+   *
+   * @param globalMap xPaths for data that should be applied across entire XML
+   * @param articleNode defines a path to the top of an individual article node
+   * @param articleMap path relative to articleNode to apply to each article
+   * @throws XPathExpressionException
    */
   public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
       String articleNode, 
@@ -141,7 +169,7 @@ public class XPathXmlMetadataParser  {
     }
 
   }
-
+  
   /* a convenience to ensure we don't dereference null - used by 
    * constructor for this class
    */
@@ -149,9 +177,13 @@ public class XPathXmlMetadataParser  {
     return ( (xpathMap != null) ? xpathMap.size() : 0);
   }
 
-  /*
-   * Pull metadata from source specified by the input stream.
-   * 
+  /**
+   * Extract metadata from the XML source specified by the input stream using
+   * the constructor-set xPath definitions.
+   * @param target 
+   * @param cu the CachedUrl for the XML source file
+   * @return list of ArticleMetadata objects; one per record in the XML
+   * @throws IOException
    */
   public List<ArticleMetadata> extractMetadata(MetadataTarget target, CachedUrl cu)
       throws IOException {
@@ -208,6 +240,9 @@ public class XPathXmlMetadataParser  {
     return amList;
   }
 
+  /*
+   *  from a given node, using a set of xPath expressions
+   */
   private ArticleMetadata extractDataFromNode(Object startNode, 
       XPathInfo[] xPathList) throws XPathExpressionException {
 
@@ -284,8 +319,10 @@ public class XPathXmlMetadataParser  {
     }
   }
   
-  /* 
-   * Take in the CU and return the correctly parsed XML as a Document "tree"
+  /**
+   *  Given a CU for an XML file, load and return the XML as a Document "tree". 
+   * @param cu to the XML file
+   * @return Document for the loaded XML file
    */
   protected Document CreateDocumentTree(CachedUrl cu) {
     
@@ -322,15 +359,17 @@ public class XPathXmlMetadataParser  {
   /* The entire document tree is now loaded*/
   }
   
-  /*
-   * a wrapper to allow for future override
+  /**
+   * A wrapper around ArticleMetadata creation to allow for override
+   * @return newly created ArticleMetadata object
    */
   protected ArticleMetadata makeNewArticleMetadata() {
     return new ArticleMetadata();
   }
 
-  /*
-   * a wrapper to allow for future override
+  /**
+   * A wrapper around ArticleMetadata list creation to allow for override
+   * @return newly created list of ArticleMetadata objects 
    */
   protected List<ArticleMetadata> makeNewAMList() {
     return new ArrayList<ArticleMetadata>();

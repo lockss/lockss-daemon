@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnixBooksSourceXmlMetadataExtractor.java,v 1.1 2013-10-15 23:28:06 alexandraohlson Exp $
+ * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.1 2013-11-11 20:57:18 alexandraohlson Exp $
  */
 /*
 
@@ -41,12 +41,12 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.OnixBooksSourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.onixbooks.Onix3BooksSourceXmlMetadataExtractorFactory;
 
 
-public class TestOnixBooksSourceXmlMetadataExtractor extends LockssTestCase {
+public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestOnixBooksSourceMetadataExtractor");
+  static Logger log = Logger.getLogger("TestOnix3BooksSourceMetadataExtractor");
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
@@ -114,14 +114,15 @@ public class TestOnixBooksSourceXmlMetadataExtractor extends LockssTestCase {
      mcu.setContentSize(noArticleXML.length());
      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-   FileMetadataExtractor me = new OnixBooksSourceXmlMetadataExtractorFactory.OnixBooksSourceXmlMetadataExtractor();
+   FileMetadataExtractor me = new Onix3BooksSourceXmlMetadataExtractorFactory.Onix3BooksSourceXmlMetadataExtractor();
      FileMetadataListExtractor mle =
          new FileMetadataListExtractor(me);
      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
      assertEmpty(mdlist);
  }
 
-  private static final String realXMLFile = "OnixBooksSourceTest.xml";
+ 
+ private static final String realXMLFile = "Onix3BooksSourceTest.xml";
 
   public void testFromOnixBooksXMLFile() throws Exception {
     InputStream file_input = null;
@@ -137,7 +138,6 @@ public class TestOnixBooksSourceXmlMetadataExtractor extends LockssTestCase {
       // Now add all the pdf files in our AU since we check for them before emitting
       mau.addUrl(pdfUrl1, true, true, xmlHeader);
       mau.addUrl(pdfUrl2, true, true, xmlHeader);
-      mau.addUrl(epubUrl2, true, true, xmlHeader);
       mau.addUrl(pdfUrl3, true, true, xmlHeader);
       mau.addUrl(epubUrl5, true, true, xmlHeader);
       
@@ -145,7 +145,7 @@ public class TestOnixBooksSourceXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-    FileMetadataExtractor me = new OnixBooksSourceXmlMetadataExtractorFactory.OnixBooksSourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new Onix3BooksSourceXmlMetadataExtractorFactory.Onix3BooksSourceXmlMetadataExtractor();
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
