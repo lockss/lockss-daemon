@@ -3751,6 +3751,8 @@
       au < zapped ; down ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 ; >
       au < released ; crawling ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 ; >
+      au < expected ; exists ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
+      au < expected ; exists ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; >
 
     }
 
@@ -7713,7 +7715,6 @@
 
     {
 
-      comment[notReady] = low poll. See RU4121
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1953 ; Diogenes Volume 1 ; 1 ; >
@@ -7775,6 +7776,8 @@
       au < released ; crawling ; 2010 ; Diogenes Volume 57 ; 57 ; >
       au < zapped ; down ; 2011 ; Diogenes Volume 58 ; 58 ; >
       au < crawling ; exists ; 2012 ; Diogenes Volume 59 ; 59 ; >
+      au < expected ; exists ; 2013 ; Diogenes Volume 60 ; 60 ; >
+      au < expected ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
 
     }
 
@@ -15796,8 +15799,7 @@
         au < zapped ; down ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; crawling ; 2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < crawling ; exists ; 2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
-        au < exists ; exists ; 2013 ; Journal of Advanced Academics Volume 25 ; 25 ; >
-        au < expected ; exists ; 2014 ; Journal of Advanced Academics Volume 26 ; 26 ; >
+        au < expected ; exists ; 2014 ; Journal of Advanced Academics Volume 25 ; 25 ; >
 
       }
 

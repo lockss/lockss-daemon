@@ -2948,8 +2948,6 @@
         au < doNotProcess ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
         au < released ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
         au < released ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 >
-        au < expected ; 2012 ; Asia Pacific Journal of Human Resources Volume 50 ; 50 >
-        au < expected ; 2013 ; Asia Pacific Journal of Human Resources Volume 51 ; 51 >
         
       }
 
@@ -4208,6 +4206,7 @@
         au < released ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 >
         au < released ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 >
         au < expected ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 >
+        au < expected ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 >
 
       }
 
@@ -8044,6 +8043,7 @@
         au < released ; 2011 ; Cultural Studies <=\> Critical Methodologies Volume 11 ; 11 >
         au < released ; 2012 ; Cultural Studies <=\> Critical Methodologies Volume 12 ; 12 >
         au < manifest ; 2013 ; Cultural Studies <=\> Critical Methodologies Volume 13 ; 13 >
+        au < expected ; 2014 ; Cultural Studies <=\> Critical Methodologies Volume 14 ; 14 >
 
       }
 
@@ -8572,6 +8572,8 @@
         au < released ; 2011 ; Diogenes Volume 58 ; 58 >
         au < manifest ; 2012 ; Diogenes Volume 59 ; 59 >
         au < expected ; 2013 ; Diogenes Volume 60 ; 60 >
+        au < expected ; 2014 ; Diogenes Volume 61 ; 61 >
+
       }
 
     }
@@ -8978,7 +8980,31 @@
         param[base_url] = http://elr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < expected ; 2013 ; The Economic and Labour Relations Review Volume 1 ; 1 >
+        au < exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 >
+        au < exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 >
+        au < exists ; 1992 ; The Economic and Labour Relations Review Volume 3 ; 3 >
+        au < exists ; 1993 ; The Economic and Labour Relations Review Volume 4 ; 4 >
+        au < exists ; 1994 ; The Economic and Labour Relations Review Volume 5 ; 5 >
+        au < exists ; 1995 ; The Economic and Labour Relations Review Volume 6 ; 6 >
+        au < exists ; 1996 ; The Economic and Labour Relations Review Volume 7 ; 7 >
+        au < exists ; 1997 ; The Economic and Labour Relations Review Volume 8 ; 8 >
+        au < exists ; 1998 ; The Economic and Labour Relations Review Volume 9 ; 9 >
+        au < exists ; 1999 ; The Economic and Labour Relations Review Volume 10 ; 10 >
+        au < exists ; 2000 ; The Economic and Labour Relations Review Volume 11 ; 11 >
+        au < exists ; 2001 ; The Economic and Labour Relations Review Volume 12 ; 12 >
+        au < exists ; 2002 ; The Economic and Labour Relations Review Volume 13 ; 13 >
+        au < exists ; 2003 ; The Economic and Labour Relations Review Volume 14 ; 14 >
+        au < exists ; 2004 ; The Economic and Labour Relations Review Volume 15 ; 15 >
+        au < exists ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 >
+        au < exists ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 >
+        au < exists ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 >
+        au < exists ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
+        au < exists ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
+        au < exists ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
+        au < exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
+        au < exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
+        au < exists ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
+        au < expected ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
 
       }
 
@@ -17528,7 +17554,7 @@
         au < released ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 >
         au < released ; 2012 ; Journal of Advanced Academics Volume 23 ; 23 >
         au < manifest ; 2013 ; Journal of Advanced Academics Volume 24 ; 24 >
-        au < expected ; 2013-2014 ; Journal of Advanced Academics Volume 25 ; 25 >
+        au < expected ; 2014 ; Journal of Advanced Academics Volume 25 ; 25 >
 
       }
 
@@ -21819,11 +21845,11 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < manifest ; 2006-2007 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 4 ; 4 >
         au < released ; 2007-2008 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 5 ; 5 >
         au < released ; 2008-2009 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 6 ; 6 >
-        au < released ; 2009-2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 >
-        au < released ; 2010-2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 >
-        au < released ; 2011-2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 >
-        au < ready ; 2012-2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 >
-        au < expected ; 2013-2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 >
+        au < released ; 2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 >
+        au < released ; 2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 >
+        au < released ; 2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 >
+        au < ready ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 >
+        au < expected ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 >
 
       }
 
@@ -28449,7 +28475,53 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mac.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < expected ; 2013 ; Measurement and Control Volume 1 ; 1 >
+        au < exists ; 1968 ; Measurement and Control Volume 1 ; 1 >
+        au < exists ; 1969 ; Measurement and Control Volume 2 ; 2 >
+        au < exists ; 1970 ; Measurement and Control Volume 3 ; 3 >
+        au < exists ; 1971 ; Measurement and Control Volume 4 ; 4 >
+        au < exists ; 1972 ; Measurement and Control Volume 5 ; 5 >
+        au < exists ; 1973 ; Measurement and Control Volume 6 ; 6 >
+        au < exists ; 1974 ; Measurement and Control Volume 7 ; 7 >
+        au < exists ; 1975 ; Measurement and Control Volume 8 ; 8 >
+        au < exists ; 1976 ; Measurement and Control Volume 9 ; 9 >
+        au < exists ; 1977 ; Measurement and Control Volume 10 ; 10 >
+        au < exists ; 1978 ; Measurement and Control Volume 11 ; 11 >
+        au < exists ; 1979 ; Measurement and Control Volume 12 ; 12 >
+        au < exists ; 1980 ; Measurement and Control Volume 13 ; 13 >
+        au < exists ; 1981 ; Measurement and Control Volume 14 ; 14 >
+        au < exists ; 1982 ; Measurement and Control Volume 15 ; 15 >
+        au < exists ; 1983 ; Measurement and Control Volume 16 ; 16 >
+        au < exists ; 1984 ; Measurement and Control Volume 17 ; 17 >
+        au < exists ; 1985 ; Measurement and Control Volume 18 ; 18 >
+        au < exists ; 1986 ; Measurement and Control Volume 19 ; 19 >
+        au < exists ; 1987 ; Measurement and Control Volume 20 ; 20 >
+        au < exists ; 1988 ; Measurement and Control Volume 21 ; 21 >
+        au < exists ; 1989 ; Measurement and Control Volume 22 ; 22 >
+        au < exists ; 1990 ; Measurement and Control Volume 23 ; 23 >
+        au < exists ; 1991 ; Measurement and Control Volume 24 ; 24 >
+        au < exists ; 1992 ; Measurement and Control Volume 25 ; 25 >
+        au < exists ; 1993 ; Measurement and Control Volume 26 ; 26 >
+        au < exists ; 1994 ; Measurement and Control Volume 27 ; 27 >
+        au < exists ; 1995 ; Measurement and Control Volume 28 ; 28 >
+        au < exists ; 1996 ; Measurement and Control Volume 29 ; 29 >
+        au < exists ; 1997 ; Measurement and Control Volume 30 ; 30 >
+        au < exists ; 1998 ; Measurement and Control Volume 31 ; 31 >
+        au < exists ; 1999 ; Measurement and Control Volume 32 ; 32 >
+        au < exists ; 2000 ; Measurement and Control Volume 33 ; 33 >
+        au < exists ; 2001 ; Measurement and Control Volume 34 ; 34 >
+        au < exists ; 2002 ; Measurement and Control Volume 35 ; 35 >
+        au < exists ; 2003 ; Measurement and Control Volume 36 ; 36 >
+        au < exists ; 2004 ; Measurement and Control Volume 37 ; 37 >
+        au < exists ; 2005 ; Measurement and Control Volume 38 ; 38 >
+        au < exists ; 2006 ; Measurement and Control Volume 39 ; 39 >
+        au < exists ; 2007 ; Measurement and Control Volume 40 ; 40 >
+        au < exists ; 2008 ; Measurement and Control Volume 41 ; 41 >
+        au < exists ; 2009 ; Measurement and Control Volume 42 ; 42 >
+        au < exists ; 2010 ; Measurement and Control Volume 43 ; 43 >
+        au < exists ; 2011 ; Measurement and Control Volume 44 ; 44 >
+        au < exists ; 2012 ; Measurement and Control Volume 45 ; 45 >
+        au < exists ; 2013 ; Measurement and Control Volume 46 ; 46 >
+        au < expected ; 2014 ; Measurement and Control Volume 47 ; 47 >
 
       }
 
@@ -28787,21 +28859,113 @@ comment[mpj] = now published by Brill
       param[base_url] = http://mlj.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1999 ; Medico-Legal Journal Volume 1 ; 1 >
-      au < exists ; 2000 ; Medico-Legal Journal Volume 2 ; 2 >
-      au < exists ; 2001 ; Medico-Legal Journal Volume 3 ; 3 >
-      au < exists ; 2002 ; Medico-Legal Journal Volume 4 ; 4 >
-      au < exists ; 2003 ; Medico-Legal Journal Volume 5 ; 5 >
-      au < exists ; 2004 ; Medico-Legal Journal Volume 6 ; 6 >
-      au < exists ; 2005 ; Medico-Legal Journal Volume 7 ; 7 >
-      au < exists ; 2006 ; Medico-Legal Journal Volume 8 ; 8 >
-      au < exists ; 2007 ; Medico-Legal Journal Volume 9 ; 9 >
-      au < exists ; 2008 ; Medico-Legal Journal Volume 10 ; 10 >
-      au < exists ; 2009 ; Medico-Legal Journal Volume 11 ; 11 >
-      au < exists ; 2010 ; Medico-Legal Journal Volume 12 ; 12 >
-      au < exists ; 2011 ; Medico-Legal Journal Volume 13 ; 13 >
-      au < exists ; 2012 ; Medico-Legal Journal Volume 14 ; 14 >
-      au < expected ; 2013 ; Medico-Legal Journal Volume 15 ; 15 >
+        au < exists ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 >
+        au < exists ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 >
+        au < exists ; 1905 ; Medico-Legal Journal Volume MLST-3 ; MLST-3 >
+        au < exists ; 1906 ; Medico-Legal Journal Volume MLST-4 ; MLST-4 >
+        au < exists ; 1907 ; Medico-Legal Journal Volume MLST-5 ; MLST-5 >
+        au < exists ; 1908 ; Medico-Legal Journal Volume MLST-6 ; MLST-6 >
+        au < exists ; 1909-1910 ; Medico-Legal Journal Volume MLST-7 ; MLST-7 >
+        au < exists ; 1910-1911 ; Medico-Legal Journal Volume MLST-8 ; MLST-8 >
+        au < exists ; 1911-1912 ; Medico-Legal Journal Volume MLST-9 ; MLST-9 >
+        au < exists ; 1912-1913 ; Medico-Legal Journal Volume MLST-10 ; MLST-10 >
+        au < exists ; 1913-1914 ; Medico-Legal Journal Volume MLST-11 ; MLST-11 >
+        au < exists ; 1914 ; Medico-Legal Journal Volume MLST-12 ; MLST-12 >
+        au < exists ; 1915-1918 ; Medico-Legal Journal Volume MLST-13 ; MLST-13 >
+        au < exists ; 1919-1920 ; Medico-Legal Journal Volume MLST-14 ; MLST-14 >
+        au < exists ; 1920-1921 ; Medico-Legal Journal Volume MLST-15 ; MLST-15 >
+        au < exists ; 1921-1922 ; Medico-Legal Journal Volume MLST-16 ; MLST-16 >
+        au < exists ; 1922-1923 ; Medico-Legal Journal Volume MLST-17 ; MLST-17 >
+        au < exists ; 1923-1924 ; Medico-Legal Journal Volume MLST-18 ; MLST-18 >
+        au < exists ; 1924-1925 ; Medico-Legal Journal Volume MLST-19 ; MLST-19 >
+        au < exists ; 1925-1926 ; Medico-Legal Journal Volume MLST-20 ; MLST-20 >
+        au < exists ; 1926 ; Medico-Legal Journal Volume MLST-21 ; MLST-21 >
+        au < exists ; 1927-1928 ; Medico-Legal Journal Volume MLST-22 ; MLST-22 >
+        au < exists ; 1928-1929 ; Medico-Legal Journal Volume MLST-23 ; MLST-23 >
+        au < exists ; 1930-1931 ; Medico-Legal Journal Volume MLST-25 ; MLST-25 >
+        au < exists ; 1931-1932 ; Medico-Legal Journal Volume MLST-26 ; MLST-26 >
+        au < exists ; 1933 ; Medico-Legal Journal Volume 1 ; 1 >
+        au < exists ; 1934 ; Medico-Legal Journal Volume 2 ; 2 >
+        au < exists ; 1935 ; Medico-Legal Journal Volume 3 ; 3 >
+        au < exists ; 1936 ; Medico-Legal Journal Volume 4 ; 4 >
+        au < exists ; 1937 ; Medico-Legal Journal Volume 5 ; 5 >
+        au < exists ; 1938 ; Medico-Legal Journal Volume 6 ; 6 >
+        au < exists ; 1939 ; Medico-Legal Journal Volume 7 ; 7 >
+        au < exists ; 1940 ; Medico-Legal Journal Volume 8 ; 8 >
+        au < exists ; 1941 ; Medico-Legal Journal Volume 9 ; 9 >
+        au < exists ; 1942 ; Medico-Legal Journal Volume 10 ; 10 >
+        au < exists ; 1943 ; Medico-Legal Journal Volume 11 ; 11 >
+        au < exists ; 1944 ; Medico-Legal Journal Volume 12 ; 12 >
+        au < exists ; 1945 ; Medico-Legal Journal Volume 13 ; 13 >
+        au < exists ; 1946 ; Medico-Legal Journal Volume 14 ; 14 >
+        au < exists ; 1947 ; Medico-Legal Journal Volume 15 ; 15 >
+        au < exists ; 1948 ; Medico-Legal Journal Volume 16 ; 16 >
+        au < exists ; 1949 ; Medico-Legal Journal Volume 17 ; 17 >
+        au < exists ; 1950 ; Medico-Legal Journal Volume 18 ; 18 >
+        au < exists ; 1951 ; Medico-Legal Journal Volume 19 ; 19 >
+        au < exists ; 1952 ; Medico-Legal Journal Volume 20 ; 20 >
+        au < exists ; 1953 ; Medico-Legal Journal Volume 21 ; 21 >
+        au < exists ; 1954 ; Medico-Legal Journal Volume 22 ; 22 >
+        au < exists ; 1955 ; Medico-Legal Journal Volume 23 ; 23 >
+        au < exists ; 1956 ; Medico-Legal Journal Volume 24 ; 24 >
+        au < exists ; 1957 ; Medico-Legal Journal Volume 25 ; 25 >
+        au < exists ; 1958 ; Medico-Legal Journal Volume 26 ; 26 >
+        au < exists ; 1959 ; Medico-Legal Journal Volume 27 ; 27 >
+        au < exists ; 1960 ; Medico-Legal Journal Volume 28 ; 28 >
+        au < exists ; 1961 ; Medico-Legal Journal Volume 29 ; 29 >
+        au < exists ; 1962 ; Medico-Legal Journal Volume 30 ; 30 >
+        au < exists ; 1963 ; Medico-Legal Journal Volume 31 ; 31 >
+        au < exists ; 1964 ; Medico-Legal Journal Volume 32 ; 32 >
+        au < exists ; 1965 ; Medico-Legal Journal Volume 33 ; 33 >
+        au < exists ; 1966 ; Medico-Legal Journal Volume 34 ; 34 >
+        au < exists ; 1967 ; Medico-Legal Journal Volume 35 ; 35 >
+        au < exists ; 1968 ; Medico-Legal Journal Volume 36 ; 36 >
+        au < exists ; 1969 ; Medico-Legal Journal Volume 37 ; 37 >
+        au < exists ; 1970 ; Medico-Legal Journal Volume 38 ; 38 >
+        au < exists ; 1971 ; Medico-Legal Journal Volume 39 ; 39 >
+        au < exists ; 1972 ; Medico-Legal Journal Volume 40 ; 40 >
+        au < exists ; 1973 ; Medico-Legal Journal Volume 41 ; 41 >
+        au < exists ; 1974 ; Medico-Legal Journal Volume 42 ; 42 >
+        au < exists ; 1975 ; Medico-Legal Journal Volume 43 ; 43 >
+        au < exists ; 1976 ; Medico-Legal Journal Volume 44 ; 44 >
+        au < exists ; 1977 ; Medico-Legal Journal Volume 45 ; 45 >
+        au < exists ; 1978 ; Medico-Legal Journal Volume 46 ; 46 >
+        au < exists ; 1979 ; Medico-Legal Journal Volume 47 ; 47 >
+        au < exists ; 1980 ; Medico-Legal Journal Volume 48 ; 48 >
+        au < exists ; 1981 ; Medico-Legal Journal Volume 49 ; 49 >
+        au < exists ; 1982 ; Medico-Legal Journal Volume 50 ; 50 >
+        au < exists ; 1983 ; Medico-Legal Journal Volume 51 ; 51 >
+        au < exists ; 1984 ; Medico-Legal Journal Volume 52 ; 52 >
+        au < exists ; 1985 ; Medico-Legal Journal Volume 53 ; 53 >
+        au < exists ; 1986 ; Medico-Legal Journal Volume 54 ; 54 >
+        au < exists ; 1987 ; Medico-Legal Journal Volume 55 ; 55 >
+        au < exists ; 1988 ; Medico-Legal Journal Volume 56 ; 56 >
+        au < exists ; 1989 ; Medico-Legal Journal Volume 57 ; 57 >
+        au < exists ; 1990 ; Medico-Legal Journal Volume 58 ; 58 >
+        au < exists ; 1991 ; Medico-Legal Journal Volume 59 ; 59 >
+        au < exists ; 1992 ; Medico-Legal Journal Volume 60 ; 60 >
+        au < exists ; 1993 ; Medico-Legal Journal Volume 61 ; 61 >
+        au < exists ; 1994 ; Medico-Legal Journal Volume 62 ; 62 >
+        au < exists ; 1995 ; Medico-Legal Journal Volume 63 ; 63 >
+        au < exists ; 1996 ; Medico-Legal Journal Volume 64 ; 64 >
+        au < exists ; 1997 ; Medico-Legal Journal Volume 65 ; 65 >
+        au < exists ; 1998 ; Medico-Legal Journal Volume 66 ; 66 >
+        au < exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+        au < exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
+        au < exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
+        au < expected ; 2014 ; Medico-Legal Journal Volume 82 ; 82 >
     
     }
     
@@ -41505,12 +41669,12 @@ comment[mpj] = now published by Brill
         eissn = 1913-701X 
       >
 
-    comment[upcoming] = online 2013
     pluginSuffix = HighWirePressH20Plugin
     param[base_url] = http://cph.sagepub.com/
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2013 ; Canadian Pharmacists Journal  Volume 1 ; 1 >
+    au < exists ; 2013 ; Canadian Pharmacists Journal Volume 1 ; 1 >
+    au < expected ; 2014 ; Canadian Pharmacists Journal Volume 2 ; 2 >
 
     }
 
