@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.12 2012-08-08 07:15:46 tlipkis Exp $
+ * $Id: FuncArcExploder.java,v 1.13 2013-11-11 20:02:15 tlipkis Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public class FuncArcExploder extends LockssTestCase {
     long error = expected - actual;
     log.debug("Expected " + expected + " actual " + actual);
     long absError = (error < 0 ? -error : error);
-    assertTrue("size mismatch " + expected + " vs. " + actual, absError < 60);
+    assertTrue("size mismatch " + expected + " vs. " + actual, absError < 100);
 
     List sbc = ((MySimulatedArchivalUnit)sau).sbc;
     Bag b = new HashBag(sbc);
