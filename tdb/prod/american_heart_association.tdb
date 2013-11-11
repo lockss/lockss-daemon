@@ -93,8 +93,6 @@
       param[base_url] = http://circ.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[notReady] = fetch error see RT 5306
-      
       au < manifest ; 1950 ; Circulation Volume 1 ; 1 >
       au < manifest ; 1950 ; Circulation Volume 2 ; 2 >
       au < manifest ; 1951 ; Circulation Volume 3 ; 3 >
@@ -378,9 +376,9 @@
       param[base_url] = http://circep.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2008 ; Circulation: Arrhythmia and Electrophysiology Volume 1 ; 1 >
-      au < manifest ; 2009 ; Circulation: Arrhythmia and Electrophysiology Volume 2 ; 2 >
-      au < manifest ; 2010 ; Circulation: Arrhythmia and Electrophysiology Volume 3 ; 3 >
+      au < testing ; 2008 ; Circulation: Arrhythmia and Electrophysiology Volume 1 ; 1 >
+      au < testing ; 2009 ; Circulation: Arrhythmia and Electrophysiology Volume 2 ; 2 >
+      au < testing ; 2010 ; Circulation: Arrhythmia and Electrophysiology Volume 3 ; 3 >
       au < released ; 2011 ; Circulation: Arrhythmia and Electrophysiology Volume 4 ; 4 >
       au < released ; 2012 ; Circulation: Arrhythmia and Electrophysiology Volume 5 ; 5 >
       au < manifest ; 2013 ; Circulation: Arrhythmia and Electrophysiology Volume 6 ; 6 >
@@ -404,9 +402,9 @@
       param[base_url] = http://circgenetics.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2008 ; Circulation: Cardiovascular Genetics Volume 1 ; 1 >
-      au < manifest ; 2009 ; Circulation: Cardiovascular Genetics Volume 2 ; 2 >
-      au < manifest ; 2010 ; Circulation: Cardiovascular Genetics Volume 3 ; 3 >
+      au < testing ; 2008 ; Circulation: Cardiovascular Genetics Volume 1 ; 1 >
+      au < testing ; 2009 ; Circulation: Cardiovascular Genetics Volume 2 ; 2 >
+      au < testing ; 2010 ; Circulation: Cardiovascular Genetics Volume 3 ; 3 >
       au < released ; 2011 ; Circulation: Cardiovascular Genetics Volume 4 ; 4 >
       au < released ; 2012 ; Circulation: Cardiovascular Genetics Volume 5 ; 5 >
       au < manifest ; 2013 ; Circulation: Cardiovascular Genetics Volume 6 ; 6 >
