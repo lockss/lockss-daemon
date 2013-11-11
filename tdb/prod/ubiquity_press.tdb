@@ -142,7 +142,19 @@
     au < expected ; 2014 ; The Journal of Conservation and Museum Studies Volume 12 ; 12 ; 2014 >
     
   }
+
+  {
   
+    title < 
+      name = Journal of Cosmology ;
+      eissn = unknown
+    >
+    
+    param[base_url] = unknown
+    param[journal_id] = unknown
+
+  }
+
   {
   
     title < 
@@ -349,6 +361,23 @@
     au < manifest ; 2013 ; Stability: International Journal of Security & Development Volume 2 ; 2 ; 2013 >
     au < expected ; 2014 ; Stability: International Journal of Security & Development Volume 3 ; 3 ; 2014 >
     
+  }
+
+  {
+  
+    title < 
+      name = Utrecht Journal of International and European Law ;
+      eissn = 2053-5341
+    >
+    
+    param[base_url] = http://www.utrechtjournal.org/
+    param[journal_id] = ujiel
+
+    au < exists ; 2010 ; Utrecht Journal of International and European Law Volume 26 ; 26 ; 2010 >
+    au < exists ; 2011 ; Utrecht Journal of International and European Law Volume 27 ; 27 ; 2011 >
+    au < exists ; 2012 ; Utrecht Journal of International and European Law Volume 28 ; 28 ; 2012 >
+    au < exists ; 2013 ; Utrecht Journal of International and European Law Volume 29 ; 29 ; 2013 >
+
   }
 
 }
