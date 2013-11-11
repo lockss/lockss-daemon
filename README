@@ -33,7 +33,8 @@ Other Prerequisites:
   Ant's lib directory (<ant-install-dir>/ant/lib).
 
 - For some of the tools the JAVA_HOME env var must be set to the directory
-  in which the JDK is installed.
+  in which the JDK is installed.  (I.e., it's expected that tools.jar can
+  be found in ${JAVA_HOME}/lib)
   
 
 To Build
@@ -41,5 +42,5 @@ To Build
 
 ant test-all		Builds the system and runs all unit tests
 ant test-one -Dclass=org.lockss.foo.TestBar
-			Builds the system and runs the tests for one class
+			Builds the system and runs one JUnit test class.
 ant -projecthelp	Lists other build options
