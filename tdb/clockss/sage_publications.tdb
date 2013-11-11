@@ -3751,6 +3751,8 @@
       au < zapped ; down ; 2010 ; Bulletin of Science, Technology & Society Volume 30 ; 30 ; >
       au < released ; crawling ; 2011 ; Bulletin of Science, Technology & Society Volume 31 ; 31 ; >
       au < released ; crawling ; 2012 ; Bulletin of Science, Technology & Society Volume 32 ; 32 ; >
+      au < expected ; exists ; 2013 ; Bulletin of Science, Technology & Society Volume 33 ; 33 ; >
+      au < expected ; exists ; 2014 ; Bulletin of Science, Technology & Society Volume 34 ; 34 ; >
 
     }
 
@@ -7713,7 +7715,6 @@
 
     {
 
-      comment[notReady] = low poll. See RU4121
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < manifest ; exists ; 1953 ; Diogenes Volume 1 ; 1 ; >
@@ -7775,6 +7776,8 @@
       au < released ; crawling ; 2010 ; Diogenes Volume 57 ; 57 ; >
       au < zapped ; down ; 2011 ; Diogenes Volume 58 ; 58 ; >
       au < crawling ; exists ; 2012 ; Diogenes Volume 59 ; 59 ; >
+      au < expected ; exists ; 2013 ; Diogenes Volume 60 ; 60 ; >
+      au < expected ; exists ; 2014 ; Diogenes Volume 61 ; 61 ; >
 
     }
 
@@ -15796,8 +15799,7 @@
         au < zapped ; down ; 2010-2011 ; Journal of Advanced Academics Volume 22 ; 22 ; >
         au < released ; crawling ; 2012 ; Journal of Advanced Academics Volume 23 ; 23 ; >
         au < crawling ; exists ; 2013 ; Journal of Advanced Academics Volume 24 ; 24 ; >
-        au < exists ; exists ; 2013 ; Journal of Advanced Academics Volume 25 ; 25 ; >
-        au < expected ; exists ; 2014 ; Journal of Advanced Academics Volume 26 ; 26 ; >
+        au < expected ; exists ; 2014 ; Journal of Advanced Academics Volume 25 ; 25 ; >
 
       }
 
@@ -26311,7 +26313,7 @@
         au < exists ; exists ; 2010 ; Millennial Asia Volume 1 ; 1 ; >
         au < exists ; exists ; 2011 ; Millennial Asia Volume 2 ; 2 ; >
         au < exists ; exists ; 2012 ; Millennial Asia Volume 3 ; 3 ; >
-        au < exists ; exists ; 2013 ; Millennial Asia Volume 4 ; 4 ; >
+        au < manifest ; exists ; 2013 ; Millennial Asia Volume 4 ; 4 ; >
         au < expected ; exists ; 2014 ; Millennial Asia Volume 5 ; 5 ; >
 
       }
@@ -27127,7 +27129,7 @@
       au < crawling ; exists ; 2013 ; National Institute Economic Review Volume 223 ; 223 ; >
       au < crawling ; exists ; 2013 ; National Institute Economic Review Volume 224 ; 224 ; >
       au < crawling ; exists ; 2013 ; National Institute Economic Review Volume 225 ; 225 ; >
-      au < expected ; exists ; 2013 ; National Institute Economic Review Volume 226 ; 226 ; >
+      au < manifest ; exists ; 2013 ; National Institute Economic Review Volume 226 ; 226 ; >
       au < expected ; exists ; 2014 ; National Institute Economic Review Volume 227 ; 227 ; >
       au < expected ; exists ; 2014 ; National Institute Economic Review Volume 228 ; 228 ; >
       au < expected ; exists ; 2014 ; National Institute Economic Review Volume 229 ; 229 ; >
@@ -39927,6 +39929,27 @@
         au < released ; crawling ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 ; >
         au < exists ; exists ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 ; >
         au < expected ; exists ; 2014 ; International Journal of Care Pathways Volume 18 ; 18 ; >
+  
+      }
+  
+    }
+  
+    {
+    
+      title <
+        name = International Journal of Green Nanotechnology ;
+        issn = 1943-0892 ;
+        eissn = 1943-0906 ;
+        issnl = 1943-0892
+      >
+  
+      {
+  
+        pluginSuffix = ClockssHighWirePressH20Plugin
+        param[base_url] = http://nan.sagepub.com/
+  
+        au < exists ; exists ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 ; >
+        au < expected ; exists ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 ; >
   
       }
   

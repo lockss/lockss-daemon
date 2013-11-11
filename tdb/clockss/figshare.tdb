@@ -5,7 +5,10 @@
     info[contract] = 2012 ;
     info[tester] = 0
   >
-  plugin = needs.plugin
+      plugin = org.lockss.plugin.figshare.ClockssFigsharePlugin
+      param[base_url] = http://www.figshare.com/
+      param[api_url] = http://api.figshare.com/
+      param[files_url] = http://files.figshare.com/
   
   {
   
@@ -13,17 +16,16 @@
       name = Figshare
     >
 
-    implicit < status1 ; status ; year ; name ; param[volume_name] >
+    implicit < status1 ; status ; year ; name ; param[year] >
 
-    au < doNotProcess ; exists ; 2006 ; Figshare Volume 1 ; 2006 >
-    au < doNotProcess ; exists ; 2007 ; Figshare Volume 2 ; 2007 >
-    au < doNotProcess ; exists ; 2008 ; Figshare Volume 3 ; 2008 >
-    au < doNotProcess ; exists ; 2009 ; Figshare Volume 4 ; 2009 >
-    au < doNotProcess ; exists ; 2010 ; Figshare Volume 5 ; 2010 >
-    au < doNotProcess ; exists ; 2011 ; Figshare Volume 6 ; 2011 >
-    au < doNotProcess ; exists ; 2012 ; Figshare Volume 7 ; 2012 >
-    au < doNotProcess ; exists ; 2013 ; Figshare Volume 8 ; 2013 >
-    au < doNotProcess ; exists ; 2014 ; Figshare Volume 9 ; 2014 >
+    au < manifest ; exists ; 2006 ; Figshare Volume 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; Figshare Volume 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; Figshare Volume 3 ; 2008 >
+    au < manifest ; exists ; 2009 ; Figshare Volume 4 ; 2009 >
+    au < manifest ; exists ; 2010 ; Figshare Volume 5 ; 2010 >
+    au < manifest ; exists ; 2011 ; Figshare Volume 6 ; 2011 >
+    au < manifest ; exists ; 2012 ; Figshare Volume 7 ; 2012 >
+    au < manifest ; exists ; 2013 ; Figshare Volume 8 ; 2013 >
 
   }
 

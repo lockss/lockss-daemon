@@ -174,15 +174,15 @@
       au < manifest ; exists ; 1998 ; 1998 ; InULA Notes: Indiana University Librarians Association Volume 14 ; 14 >
       au < manifest ; exists ; 1999 ; 1999 ; InULA Notes: Indiana University Librarians Association Volume 15 ; 15 >
       au < manifest ; exists ; 2000 ; 2000 ; InULA Notes: Indiana University Librarians Association Volume 16 ; 16 >
-      au < manfiest ; exists ; 2003 ; 2003 ; InULA Notes: Indiana University Librarians Association Volume 17 ; 17 >
-      au < manfiest ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 >
-      au < manfiest ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 >
-      au < manfiest ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 >
-      au < manfiest ; exists ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 >
-      au < manfiest ; exists ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 >
-      au < manfiest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 >
-      au < manfiest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 >
-      au < manfiest ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
+      au < manifest ; exists ; 2003 ; 2003 ; InULA Notes: Indiana University Librarians Association Volume 17 ; 17 >
+      au < manifest ; exists ; 2005 ; 2005 ; InULA Notes: Indiana University Librarians Association Volume 18 ; 18 >
+      au < manifest ; exists ; 2006 ; 2006 ; InULA Notes: Indiana University Librarians Association Volume 19 (2006) ; 19 >
+      au < manifest ; exists ; 2007 ; 2007 ; InULA Notes: Indiana University Librarians Association Volume 19-20 (2007) ; 19-20 >
+      au < manifest ; exists ; 2008 ; 2008 ; InULA Notes: Indiana University Librarians Association Volume 20-21 (2008) ; 20-21 >
+      au < manifest ; exists ; 2009 ; 2009 ; InULA Notes: Indiana University Librarians Association Volume 21 (2009) ; 21 >
+      au < manifest ; exists ; 2010 ; 2010 ; InULA Notes: Indiana University Librarians Association Volume 22 ; 22 >
+      au < manifest ; exists ; 2011 ; 2011 ; InULA Notes: Indiana University Librarians Association Volume 23 ; 23 >
+      au < manifest ; exists ; 2012 ; 2012 ; InULA Notes: Indiana University Librarians Association Volume 24 ; 24 >
 
   }
 
@@ -303,7 +303,7 @@
       param[journal_id] = BB
       comment[issn] = missing
 
-      au < exists ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 >
+      au < manifest ; exists ; 2009 ; 2009 ; The World is Our Home Volume 1 ; 1 >
 
   }
 }
