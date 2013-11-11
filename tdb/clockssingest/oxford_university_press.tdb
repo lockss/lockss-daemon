@@ -943,9 +943,9 @@
     au < manifest ; exists ; 2006 ; The American Journal of Jurisprudence Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; The American Journal of Jurisprudence Volume 52 ; 52 ; >
     au < manifest ; exists ; 2008 ; The American Journal of Jurisprudence Volume 53 ; 53 ; >
-    au < released ; manifest ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 ; >
+    au < released ; crawling ; 2009 ; The American Journal of Jurisprudence Volume 54 ; 54 ; >
     au < crawling ; exists ; 2010 ; The American Journal of Jurisprudence Volume 55 ; 55 ; >
-    au < released ; manifest ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
+    au < released ; crawling ; 2011 ; The American Journal of Jurisprudence Volume 56 ; 56 ; >
     au < doesNotExist ; doesNotExist ; 2012 ; The American Journal of Jurisprudence Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; The American Journal of Jurisprudence Volume 58 ; 58 ; >
     au < expected ; exists ; 2014 ; The American Journal of Jurisprudence Volume 59 ; 59 ; >
@@ -1758,10 +1758,10 @@
     au < manifest ; exists ; 2006 ; Astronomy & Geophysics Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; Astronomy & Geophysics Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; Astronomy & Geophysics Volume 49 ; 49 ; >
-    au < released ; manifest ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
+    au < released ; crawling ; 2009 ; Astronomy & Geophysics Volume 50 ; 50 ; >
     au < crawling ; exists ; 2010 ; Astronomy & Geophysics Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; Astronomy & Geophysics Volume 52 ; 52 ; >
-    au < released ; manifest ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
+    au < released ; crawling ; 2012 ; Astronomy & Geophysics Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Astronomy & Geophysics Volume 54 ; 54 ; >
     au < expected ; exists ; 2014 ; Astronomy & Geophysics Volume 55 ; 55 ; >
 
@@ -1872,7 +1872,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Bioinformatics Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; Bioinformatics Volume 27 ; 27 ; >
-    au < released ; manifest ; 2012 ; Bioinformatics Volume 28 ; 28 ; >
+    au < released ; crawling ; 2012 ; Bioinformatics Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Bioinformatics Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; Bioinformatics Volume 30 ; 30 ; >
 
@@ -4001,7 +4001,7 @@
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 52 ; 52 ; >
     au < released ; crawling ; 2011 ; Clinical Infectious Diseases Volume 53 ; 53 ; >
     au < released ; crawling ; 2012 ; Clinical Infectious Diseases Volume 54 ; 54 ; >
-    au < released ; manifest ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
+    au < released ; crawling ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
     au < expected ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
@@ -4269,7 +4269,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; >
     au < released ; crawling ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
     au < released ; crawling ; 2011 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 11 ; 11 ; >
-    au < released ; manifest ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 ; >
+    au < released ; crawling ; 2012 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 13 ; 13 ; >
     au < expected ; exists ; 2014 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 14 ; 14 ; >
 
@@ -4442,7 +4442,7 @@
     au < manifest ; exists ; 2006 ; Diplomatic History Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Diplomatic History Volume 31 ; 31 ; >
     au < manifest ; exists ; 2008 ; Diplomatic History Volume 32 ; 32 ; >
-    au < released ; manifest ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
+    au < released ; crawling ; 2009 ; Diplomatic History Volume 33 ; 33 ; >
     au < crawling ; exists ; 2010 ; Diplomatic History Volume 34 ; 34 ; >
     au < crawling ; exists ; 2011 ; Diplomatic History Volume 35 ; 35 ; >
     au < notReady ; exists ; 2012 ; Diplomatic History Volume 36 ; 36 ; >
@@ -5307,7 +5307,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
     au < released ; crawling ; 2011 ; European Heart Journal Volume 32 ; 32 ; >
-    au < released ; manifest ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
+    au < released ; crawling ; 2012 ; European Heart Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; European Heart Journal Volume 34 ; 34 ; >
     au < expected ; exists ; 2014 ; European Heart Journal Volume 35 ; 35 ; >
 
@@ -6659,14 +6659,14 @@
     au < crawling ; exists ; 2010 ; Geophysical Journal International Volume 181 ; 181 ; >
     au < crawling ; exists ; 2010 ; Geophysical Journal International Volume 182 ; 182 ; >
     au < crawling ; exists ; 2010 ; Geophysical Journal International Volume 183 ; 183 ; >
-    au < released ; manifest ; 2011 ; Geophysical Journal International Volume 184 ; 184 ; >
-    au < released ; manifest ; 2011 ; Geophysical Journal International Volume 185 ; 185 ; >
-    au < released ; manifest ; 2011 ; Geophysical Journal International Volume 186 ; 186 ; >
-    au < released ; manifest ; 2011 ; Geophysical Journal International Volume 187 ; 187 ; >
-    au < released ; manifest ; 2012 ; Geophysical Journal International Volume 188 ; 188 ; >
-    au < released ; manifest ; 2012 ; Geophysical Journal International Volume 189 ; 189 ; >
-    au < released ; manifest ; 2012 ; Geophysical Journal International Volume 190 ; 190 ; >
-    au < released ; manifest ; 2012 ; Geophysical Journal International Volume 191 ; 191 ; >
+    au < released ; crawling ; 2011 ; Geophysical Journal International Volume 184 ; 184 ; >
+    au < released ; crawling ; 2011 ; Geophysical Journal International Volume 185 ; 185 ; >
+    au < released ; crawling ; 2011 ; Geophysical Journal International Volume 186 ; 186 ; >
+    au < released ; crawling ; 2011 ; Geophysical Journal International Volume 187 ; 187 ; >
+    au < released ; crawling ; 2012 ; Geophysical Journal International Volume 188 ; 188 ; >
+    au < released ; crawling ; 2012 ; Geophysical Journal International Volume 189 ; 189 ; >
+    au < released ; crawling ; 2012 ; Geophysical Journal International Volume 190 ; 190 ; >
+    au < released ; crawling ; 2012 ; Geophysical Journal International Volume 191 ; 191 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 192 ; 192 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
@@ -7331,7 +7331,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
-    au < released ; manifest ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
+    au < released ; crawling ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
     au < expected ; exists ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ; >
 
@@ -7758,10 +7758,10 @@
     au < manifest ; exists ; 2006 ; ILAR Journal Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; ILAR Journal Volume 48 ; 48 ; >
     au < manifest ; exists ; 2008 ; ILAR Journal Volume 49 ; 49 ; >
-    au < released ; manifest ; 2009 ; ILAR Journal Volume 50 ; 50 ; >
+    au < released ; crawling ; 2009 ; ILAR Journal Volume 50 ; 50 ; >
     au < crawling ; exists ; 2010 ; ILAR Journal Volume 51 ; 51 ; >
     au < crawling ; exists ; 2011 ; ILAR Journal Volume 52 ; 52 ; >
-    au < released ; manifest ; 2012 ; ILAR Journal Volume 53 ; 53 ; >
+    au < released ; crawling ; 2012 ; ILAR Journal Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; ILAR Journal Volume 54 ; 54 ; >
     au < expected ; exists ; 2014 ; ILAR Journal Volume 55 ; 55 ; >
 
@@ -8170,7 +8170,7 @@
     au < zapped ; down ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; Industrial Law Journal Volume 40 ; 40 ; >
-    au < released ; manifest ; 2012 ; Industrial Law Journal Volume 41 ; 41 ; >
+    au < released ; crawling ; 2012 ; Industrial Law Journal Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Industrial Law Journal Volume 42 ; 42 ; >
     au < expected ; exists ; 2014 ; Industrial Law Journal Volume 43 ; 43 ; >
 
@@ -8189,7 +8189,7 @@
 
     {
     
-    au < released ; manifest ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 ; >
+    au < released ; crawling ; 2012 ; Information and Inference: A Journal of the IMA Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Information and Inference: A Journal of the IMA Volume 2 ; 2 ; >
     au < expected ; exists ; 2014 ; Information and Inference: A Journal of the IMA Volume 3 ; 3 ; >
     
@@ -8379,7 +8379,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < released ; crawling ; 2011 ; International Data Privacy Law Volume 1 ; 1 ; >
-    au < released ; manifest ; 2012 ; International Data Privacy Law Volume 2 ; 2 ; >
+    au < released ; crawling ; 2012 ; International Data Privacy Law Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; International Data Privacy Law Volume 3 ; 3 ; >
     au < expected ; exists ; 2014 ; International Data Privacy Law Volume 4 ; 4 ; >
 
@@ -8397,10 +8397,10 @@
     param[base_url] = http://inthealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < released ; manifest ; 2009 ; International Health Volume 1 ; 1 ; >
+    au < released ; crawling ; 2009 ; International Health Volume 1 ; 1 ; >
     au < crawling ; exists ; 2010 ; International Health Volume 2 ; 2 ; >
     au < crawling ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
-    au < released ; manifest ; 2012 ; International Health Volume 4 ; 4 ; >
+    au < released ; crawling ; 2012 ; International Health Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Health Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
 
@@ -8584,7 +8584,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; >
     au < released ; crawling ; 2010 ; International Journal of Epidemiology Volume 39 ; 39 ; >
     au < released ; crawling ; 2011 ; International Journal of Epidemiology Volume 40 ; 40 ; >
-    au < released ; manifest ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
+    au < released ; crawling ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ; >
     au < expected ; exists ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; >
 
@@ -8897,7 +8897,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 ; >
     au < released ; crawling ; 2011 ; International Journal for Quality in Health Care Volume 23 ; 23 ; >
-    au < released ; manifest ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 ; >
+    au < released ; crawling ; 2012 ; International Journal for Quality in Health Care Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; International Journal for Quality in Health Care Volume 25 ; 25 ; >
     au < expected ; exists ; 2014 ; International Journal for Quality in Health Care Volume 26 ; 26 ; >
 
@@ -9268,8 +9268,8 @@
     au < released ; crawling ; 2010 ; Jerusalem Review of Legal Studies Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Jerusalem Review of Legal Studies Volume 3 ; 3 ; >
     au < released ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
-    au < released ; manifest ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
+    au < released ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 7 ; 7 ; >
     au < expected ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
 
@@ -9303,7 +9303,7 @@
     au < doesNotExist ; doesNotExist ; 2009 ; JNCI Monographs Volume 2009 ; 2009 ; >
     au < released ; crawling ; 2010 ; JNCI Monographs Volume 2010 ; 2010 ; >
     au < released ; crawling ; 2011 ; JNCI Monographs Volume 2011 ; 2011 ; >
-    au < released ; manifest ; 2012 ; JNCI Monographs Volume 2012 ; 2012 ; >
+    au < released ; crawling ; 2012 ; JNCI Monographs Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; JNCI Monographs Volume 2013 ; 2013 ; >
     au < expected ; exists ; 2014 ; JNCI Monographs Volume 2014 ; 2014 ; >
 
@@ -9353,7 +9353,7 @@
     au < released ; crawling ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
     au < released ; crawling ; 2010 ; Journal of African Economies Volume 19 ; 19 ; >
     au < released ; crawling ; 2011 ; Journal of African Economies Volume 20 ; 20 ; >
-    au < released ; manifest ; 2012 ; Journal of African Economies Volume 21 ; 21 ; >
+    au < released ; crawling ; 2012 ; Journal of African Economies Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Journal of African Economies Volume 22 ; 22 ; >
     au < expected ; exists ; 2014 ; Journal of African Economies Volume 23 ; 23 ; >
 
@@ -9466,7 +9466,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
     au < released ; crawling ; 2010 ; Journal of the American Academy of Religion Volume 78 ; 78 ; >
     au < released ; crawling ; 2011 ; Journal of the American Academy of Religion Volume 79 ; 79 ; >
-    au < released ; manifest ; 2012 ; Journal of the American Academy of Religion Volume 80 ; 80 ; >
+    au < released ; crawling ; 2012 ; Journal of the American Academy of Religion Volume 80 ; 80 ; >
     au < crawling ; exists ; 2013 ; Journal of the American Academy of Religion Volume 81 ; 81 ; >
     au < expected ; exists ; 2014 ; Journal of the American Academy of Religion Volume 82 ; 82 ; >
 
@@ -9586,7 +9586,7 @@
     au < released ; crawling ; 2009 ; Journal of American History Volume 96 ; 96 ; >
     au < released ; crawling ; 2010 ; Journal of American History Volume 97 ; 97 ; >
     au < released ; crawling ; 2011 ; Journal of American History Volume 98 ; 98 ; >
-    au < released ; manifest ; 2012 ; Journal of American History Volume 99 ; 99 ; >
+    au < released ; crawling ; 2012 ; Journal of American History Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Journal of American History Volume 100 ; 100 ; >
     au < expected ; exists ; 2014 ; Journal of American History Volume 101 ; 101 ; >
 
@@ -10685,7 +10685,7 @@
     au < released ; crawling ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
     au < released ; crawling ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
     au < released ; crawling ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
-    au < released ; manifest ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
+    au < released ; crawling ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 ; >
     au < expected ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68A ; 68A ; >
     au < expected ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
@@ -10878,7 +10878,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
     au < zapped ; down ; 2010 ; Journal of Heredity Volume 101 ; 101 ; >
     au < zapped ; down ; 2011 ; Journal of Heredity Volume 102 ; 102 ; >
-    au < released ; manifest ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
+    au < released ; crawling ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
     au < crawling ; exists ; 2013 ; Journal of Heredity Volume 104 ; 104 ; >
     au < expected ; exists ; 2014 ; Journal of Heredity Volume 105 ; 105 ; >
 
@@ -10913,7 +10913,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; The Journal of Hindu Studies Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; The Journal of Hindu Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Journal of Hindu Studies Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; The Journal of Hindu Studies Volume 7 ; 7 ; >
 
@@ -10968,7 +10968,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
     au < released ; crawling ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
     au < released ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
-    au < released ; manifest ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
+    au < released ; crawling ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Collections Volume 25 ; 25 ; >
     au < expected ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
 
@@ -11066,7 +11066,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
     au < released ; crawling ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 ; >
     au < released ; crawling ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
-    au < released ; manifest ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
+    au < released ; crawling ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
     au < expected ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
 
@@ -11100,7 +11100,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
     au < released ; crawling ; 2010 ; Journal of Human Rights Practice Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Journal of Human Rights Practice Volume 3 ; 3 ; >
-    au < released ; manifest ; 2012 ; Journal of Human Rights Practice Volume 4 ; 4 ; >
+    au < released ; crawling ; 2012 ; Journal of Human Rights Practice Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Human Rights Practice Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; Journal of Human Rights Practice Volume 6 ; 6 ; >
 
@@ -11326,8 +11326,8 @@
     au < released ; crawling ; 2010 ; Journal of Infectious Diseases Volume 202 ; 202 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 203 ; 203 ; >
     au < released ; crawling ; 2011 ; Journal of Infectious Diseases Volume 204 ; 204 ; >
-    au < released ; manifest ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
-    au < released ; manifest ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
+    au < released ; crawling ; 2012 ; Journal of Infectious Diseases Volume 205 ; 205 ; >
+    au < released ; crawling ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
     au < expected ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
@@ -11367,7 +11367,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
     au < released ; crawling ; 2010 ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 ; >
     au < released ; crawling ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 ; >
-    au < released ; manifest ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
+    au < released ; crawling ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 ; >
     au < expected ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
 
@@ -11408,7 +11408,7 @@
     au < released ; crawling ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
     au < released ; crawling ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 ; >
     au < released ; crawling ; 2011 ; Journal of International Criminal Justice Volume 9 ; 9 ; >
-    au < released ; manifest ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 ; >
+    au < released ; crawling ; 2012 ; Journal of International Criminal Justice Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of International Criminal Justice Volume 11 ; 11 ; >
     au < expected ; exists ; 2014 ; Journal of International Criminal Justice Volume 12 ; 12 ; >
 
@@ -11430,7 +11430,7 @@
 
     au < released ; crawling ; 2010 ; Journal of International Dispute Settlement Volume 1 ; 1 ; >
     au < released ; crawling ; 2011 ; Journal of International Dispute Settlement Volume 2 ; 2 ; >
-    au < released ; manifest ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 ; >
+    au < released ; crawling ; 2012 ; Journal of International Dispute Settlement Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of International Dispute Settlement Volume 4 ; 4 ; >
     au < expected ; exists ; 2014 ; Journal of International Dispute Settlement Volume 5 ; 5 ; >
 
@@ -11474,7 +11474,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
     au < released ; crawling ; 2010 ; Journal of International Economic Law Volume 13 ; 13 ; >
     au < released ; crawling ; 2011 ; Journal of International Economic Law Volume 14 ; 14 ; >
-    au < released ; manifest ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
+    au < released ; crawling ; 2012 ; Journal of International Economic Law Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Journal of International Economic Law Volume 16 ; 16 ; >
     au < expected ; exists ; 2014 ; Journal of International Economic Law Volume 17 ; 17 ; >
 
@@ -11528,7 +11528,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Journal of Islamic Studies Volume 22 ; 22 ; >
-    au < released ; manifest ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
+    au < released ; crawling ; 2012 ; Journal of Islamic Studies Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Journal of Islamic Studies Volume 24 ; 24 ; >
     au < expected ; exists ; 2014 ; Journal of Islamic Studies Volume 25 ; 25 ; >
 
@@ -11587,7 +11587,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; Journal of Law, Economics, and Organization Volume 27 ; 27 ; >
-    au < released ; manifest ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
+    au < released ; crawling ; 2012 ; Journal of Law, Economics, and Organization Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Journal of Law, Economics, and Organization Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; Journal of Law, Economics, and Organization Volume 30 ; 30 ; >
 
@@ -11612,7 +11612,7 @@
     au < released ; crawling ; 2009 ; Journal of Legal Analysis Volume 1 ; 1 ; >
     au < zapped ; down ; 2010 ; Journal of Legal Analysis Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Journal of Legal Analysis Volume 3 ; 3 ; >
-    au < released ; manifest ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
+    au < released ; crawling ; 2012 ; Journal of Legal Analysis Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Legal Analysis Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; Journal of Legal Analysis Volume 6 ; 6 ; >
 
@@ -11665,7 +11665,7 @@
     au < released ; crawling ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
     au < released ; crawling ; 2011 ; Journal of Logic and Computation Volume 21 ; 21 ; >
-    au < released ; manifest ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
+    au < released ; crawling ; 2012 ; Journal of Logic and Computation Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Logic and Computation Volume 23 ; 23 ; >
     au < expected ; exists ; 2014 ; Journal of Logic and Computation Volume 24 ; 24 ; >
 
@@ -11846,8 +11846,8 @@
     au < released ; crawling ; 2010 ; Journal of the London Mathematical Society Volume 82 ; 82 ; >
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 83 ; 83 ; >
     au < released ; crawling ; 2011 ; Journal of the London Mathematical Society Volume 84 ; 84 ; >
-    au < released ; manifest ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
-    au < released ; manifest ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
+    au < released ; crawling ; 2012 ; Journal of the London Mathematical Society Volume 85 ; 85 ; >
+    au < released ; crawling ; 2012 ; Journal of the London Mathematical Society Volume 86 ; 86 ; >
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 87 ; 87 ; >
     au < crawling ; exists ; 2013 ; Journal of the London Mathematical Society Volume 88 ; 88 ; >
     au < expected ; exists ; 2014 ; Journal of the London Mathematical Society Volume 89 ; 89 ; >
@@ -11917,7 +11917,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of Medicine and Philosophy Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; The Journal of Medicine and Philosophy Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; The Journal of Medicine and Philosophy Volume 36 ; 36 ; >
-    au < released ; manifest ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 ; >
+    au < released ; crawling ; 2012 ; The Journal of Medicine and Philosophy Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; The Journal of Medicine and Philosophy Volume 38 ; 38 ; >
     au < expected ; exists ; 2014 ; The Journal of Medicine and Philosophy Volume 39 ; 39 ; >
 
@@ -11951,7 +11951,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
     au < released ; crawling ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
     au < released ; crawling ; 2011 ; Journal of Molecular Cell Biology Volume 3 ; 3 ; >
-    au < released ; manifest ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 ; >
+    au < released ; crawling ; 2012 ; Journal of Molecular Cell Biology Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; Journal of Molecular Cell Biology Volume 5 ; 5 ; >
     au < expected ; exists ; 2014 ; Journal of Molecular Cell Biology Volume 6 ; 6 ; >
 
@@ -12060,7 +12060,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
     au < released ; crawling ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
     au < released ; crawling ; 2011 ; Journal of Molluscan Studies Volume 77 ; 77 ; >
-    au < released ; manifest ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 ; >
+    au < released ; crawling ; 2012 ; Journal of Molluscan Studies Volume 78 ; 78 ; >
     au < crawling ; exists ; 2013 ; Journal of Molluscan Studies Volume 79 ; 79 ; >
     au < expected ; exists ; 2014 ; Journal of Molluscan Studies Volume 80 ; 80 ; >
 
@@ -12326,7 +12326,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
     au < released ; crawling ; 2010 ; Journal of Pediatric Psychology Volume 35 ; 35 ; >
     au < released ; crawling ; 2011 ; Journal of Pediatric Psychology Volume 36 ; 36 ; >
-    au < released ; manifest ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 ; >
+    au < released ; crawling ; 2012 ; Journal of Pediatric Psychology Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Journal of Pediatric Psychology Volume 38 ; 38 ; >
     au < expected ; exists ; 2014 ; Journal of Pediatric Psychology Volume 39 ; 39 ; >
 
@@ -12475,7 +12475,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Journal of Plankton Research Volume 33 ; 33 ; >
-    au < released ; manifest ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
+    au < released ; crawling ; 2012 ; Journal of Plankton Research Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Plankton Research Volume 35 ; 35 ; >
     au < expected ; exists ; 2014 ; Journal of Plankton Research Volume 36 ; 36 ; >
 
@@ -12501,7 +12501,7 @@
     au < released ; crawling ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Journal of Plant Ecology Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; Journal of Plant Ecology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Plant Ecology Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; Journal of Plant Ecology Volume 7 ; 7 ; >
 
@@ -12554,7 +12554,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 ; >
     au < released ; crawling ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
-    au < released ; manifest ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
+    au < released ; crawling ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
     au < expected ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
 
@@ -12618,7 +12618,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
     au < released ; crawling ; 2010 ; Journal of Public Health Volume 32 ; 32 ; >
     au < released ; crawling ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
-    au < released ; manifest ; 2012 ; Journal of Public Health Volume 34 ; 34 ; >
+    au < released ; crawling ; 2012 ; Journal of Public Health Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Health Volume 35 ; 35 ; >
     au < expected ; exists ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
 
@@ -12638,7 +12638,7 @@
     param[base_url] = http://jrr.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < released ; manifest ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
+    au < released ; crawling ; 2012 ; Journal of Radiation Research Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Radiation Research Volume 54 ; 54 ; >
     au < expected ; exists ; 2014 ; Journal of Radiation Research Volume 55 ; 55 ; >
 
@@ -12692,7 +12692,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
     au < released ; crawling ; 2010 ; Journal of Refugee Studies Volume 23 ; 23 ; >
     au < released ; crawling ; 2011 ; Journal of Refugee Studies Volume 24 ; 24 ; >
-    au < released ; manifest ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
+    au < released ; crawling ; 2012 ; Journal of Refugee Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; Journal of Refugee Studies Volume 26 ; 26 ; >
     au < expected ; exists ; 2014 ; Journal of Refugee Studies Volume 27 ; 27 ; >
 
@@ -12752,7 +12752,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Journal of Semantics Volume 27 ; 27 ; >
     au < released ; crawling ; 2011 ; Journal of Semantics Volume 28 ; 28 ; >
-    au < released ; manifest ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
+    au < released ; crawling ; 2012 ; Journal of Semantics Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Journal of Semantics Volume 30 ; 30 ; >
     au < expected ; exists ; 2014 ; Journal of Semantics Volume 31 ; 31 ; >
 
@@ -12840,7 +12840,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; Journal of Semitic Studies Volume 56 ; 56 ; >
-    au < released ; manifest ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
+    au < released ; crawling ; 2012 ; Journal of Semitic Studies Volume 57 ; 57 ; >
     au < crawling ; exists ; 2013 ; Journal of Semitic Studies Volume 58 ; 58 ; >
     au < expected ; exists ; 2014 ; Journal of Semitic Studies Volume 59 ; 59 ; >
 
@@ -13108,7 +13108,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Journal of Topology Volume 3 ; 3 ; >
     au < zapped ; down ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
 
@@ -13197,7 +13197,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
     au < released ; crawling ; 2010 ; Journal of Tropical Pediatrics Volume 56 ; 56 ; >
     au < released ; crawling ; 2011 ; Journal of Tropical Pediatrics Volume 57 ; 57 ; >
-    au < released ; manifest ; 2012 ; Journal of Tropical Pediatrics Volume 58 ; 58 ; >
+    au < released ; crawling ; 2012 ; Journal of Tropical Pediatrics Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; Journal of Tropical Pediatrics Volume 59 ; 59 ; >
     au < expected ; exists ; 2014 ; Journal of Tropical Pediatrics Volume 60 ; 60 ; >
 
@@ -13233,7 +13233,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; The Journal of World Energy Law & Business Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; The Journal of World Energy Law & Business Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; The Journal of World Energy Law & Business Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Journal of World Energy Law & Business Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; The Journal of World Energy Law & Business Volume 7 ; 7 ; >
 
@@ -13275,7 +13275,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
     au < released ; crawling ; 2010 ; Law, Probability and Risk Volume 9 ; 9 ; >
     au < zapped ; down ; 2011 ; Law, Probability and Risk Volume 10 ; 10 ; >
-    au < released ; manifest ; 2012 ; Law, Probability and Risk Volume 11 ; 11 ; >
+    au < released ; crawling ; 2012 ; Law, Probability and Risk Volume 11 ; 11 ; >
     au < crawling ; exists ; 2013 ; Law, Probability and Risk Volume 12 ; 12 ; >
     au < expected ; exists ; 2014 ; Law, Probability and Risk Volume 13 ; 13 ; >
 
@@ -13363,7 +13363,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
     au < released ; crawling ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
     au < released ; crawling ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
-    au < released ; manifest ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
+    au < released ; crawling ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
     au < manifest ; exists ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 ; >
     au < expected ; exists ; 2014 ; The Leo Baeck Institute Yearbook Volume 59 ; 59 ; >
 
@@ -13537,7 +13537,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; The Library Volume 10 ; 10 ; >
     au < released ; crawling ; 2010 ; The Library Volume 11 ; 11 ; >
     au < released ; crawling ; 2011 ; The Library Volume 12 ; 12 ; >
-    au < released ; manifest ; 2012 ; The Library Volume 13 ; 13 ; >
+    au < released ; crawling ; 2012 ; The Library Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; The Library Volume 14 ; 14 ; >
     au < expected ; exists ; 2014 ; The Library Volume 15 ; 15 ; >
 
@@ -13595,7 +13595,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
     au < released ; crawling ; 2010 ; Literary and Linguistic Computing Volume 25 ; 25 ; >
     au < released ; crawling ; 2011 ; Literary and Linguistic Computing Volume 26 ; 26 ; >
-    au < released ; manifest ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
+    au < released ; crawling ; 2012 ; Literary and Linguistic Computing Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Literary and Linguistic Computing Volume 28 ; 28 ; >
     au < expected ; exists ; 2014 ; Literary and Linguistic Computing Volume 29 ; 29 ; >
 
@@ -13640,7 +13640,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
     au < released ; crawling ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
     au < released ; crawling ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
-    au < released ; manifest ; 2012 ; Literary Imagination Volume 14 ; 14 ; >
+    au < released ; crawling ; 2012 ; Literary Imagination Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Literary Imagination Volume 15 ; 15 ; >
     au < expected ; exists ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
 
@@ -13697,7 +13697,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
     au < released ; crawling ; 2010 ; Literature and Theology Volume 24 ; 24 ; >
     au < released ; crawling ; 2011 ; Literature and Theology Volume 25 ; 25 ; >
-    au < released ; manifest ; 2012 ; Literature and Theology Volume 26 ; 26 ; >
+    au < released ; crawling ; 2012 ; Literature and Theology Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; Literature and Theology Volume 27 ; 27 ; >
     au < expected ; exists ; 2014 ; Literature and Theology Volume 28 ; 28 ; >
 
@@ -13748,7 +13748,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
     au < zapped ; down ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
-    au < released ; manifest ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
+    au < released ; crawling ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Logic Journal of the IGPL Volume 21 ; 21 ; >
     au < expected ; exists ; 2014 ; Logic Journal of the IGPL Volume 22 ; 22 ; >
 
@@ -13808,7 +13808,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Mathematical Medicine and Biology Volume 26 ; 26 ; >
     au < released ; crawling ; 2010 ; Mathematical Medicine and Biology Volume 27 ; 27 ; >
     au < released ; crawling ; 2011 ; Mathematical Medicine and Biology Volume 28 ; 28 ; >
-    au < released ; manifest ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 ; >
+    au < released ; crawling ; 2012 ; Mathematical Medicine and Biology Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013 ; Mathematical Medicine and Biology Volume 30 ; 30 ; >
     au < expected ; exists ; 2014 ; Mathematical Medicine and Biology Volume 31 ; 31 ; >
 
@@ -13859,7 +13859,7 @@
     au < released ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Medical Law Review Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; Medical Law Review Volume 19 ; 19 ; >
-    au < released ; manifest ; 2012 ; Medical Law Review Volume 20 ; 20 ; >
+    au < released ; crawling ; 2012 ; Medical Law Review Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Medical Law Review Volume 21 ; 21 ; >
     au < expected ; exists ; 2014 ; Medical Law Review Volume 22 ; 22 ; >
 
@@ -13931,7 +13931,7 @@
     au < crawling ; exists ; 2009 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 ; >
     au < crawling ; exists ; 2010 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 35 ; 35 ; >
     au < crawling ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
-    au < released ; manifest ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
+    au < released ; crawling ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
     au < expected ; exists ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
 
@@ -14088,7 +14088,7 @@
     au < released ; crawling ; 2009 ; Mind Volume 118 ; 118 ; >
     au < released ; crawling ; 2010 ; Mind Volume 119 ; 119 ; >
     au < released ; crawling ; 2011 ; Mind Volume 120 ; 120 ; >
-    au < released ; manifest ; 2012 ; Mind Volume 121 ; 121 ; >
+    au < released ; crawling ; 2012 ; Mind Volume 121 ; 121 ; >
     au < crawling ; exists ; 2013 ; Mind Volume 122 ; 122 ; >
     au < expected ; exists ; 2014 ; Mind Volume 123 ; 123 ; >
 
@@ -14138,7 +14138,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
     au < released ; crawling ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
-    au < released ; manifest ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
+    au < released ; crawling ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
     au < expected ; exists ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
 
@@ -14201,7 +14201,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Modern Judaism Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Modern Judaism Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Modern Judaism Volume 31 ; 31 ; >
-    au < released ; manifest ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
+    au < released ; crawling ; 2012 ; Modern Judaism Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Modern Judaism Volume 33 ; 33 ; >
     au < expected ; exists ; 2014 ; Modern Judaism Volume 34 ; 34 ; >
 
@@ -14287,7 +14287,7 @@
     au < released ; crawling ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Molecular Plant Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; Molecular Plant Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Molecular Plant Volume 6 ; 6 ; >
     au < expected ; exists ; 2014 ; Molecular Plant Volume 7 ; 7 ; >
 
@@ -14428,8 +14428,8 @@
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 396 ; 396 ; >
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 397 ; 397 ; >
     au < crawling ; exists ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 398 ; 398 ; >
-    au < released ; manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
-    au < released ; manifest ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
+    au < released ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 399 ; 399 ; >
+    au < released ; crawling ; 2009 ; Monthly Notices of the Royal Astronomical Society Volume 400 ; 400 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 401 ; 401 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 402 ; 402 ; >
     au < crawling ; exists ; 2010 ; Monthly Notices of the Royal Astronomical Society Volume 403 ; 403 ; >
@@ -14448,8 +14448,8 @@
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 416 ; 416 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 417 ; 417 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society Volume 418 ; 418 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 419 ; 419 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 420 ; 420 ; >
     au < crawling ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 421 ; 421 ; >
     au < crawling ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 422 ; 422 ; >
     au < crawling ; exists ; 2012 ; Monthly Notices of the Royal Astronomical Society Volume 423 ; 423 ; >
@@ -14551,15 +14551,15 @@
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 416 ; 416 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 417 ; 417 ; >
     au < crawling ; exists ; 2011 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 418 ; 418 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 419 ; 419 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 420 ; 420 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 421 ; 421 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 422 ; 422 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 423 ; 423 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 424 ; 424 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 425 ; 425 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 426 ; 426 ; >
-    au < released ; manifest ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 427 ; 427 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 419 ; 419 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 420 ; 420 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 421 ; 421 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 422 ; 422 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 423 ; 423 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 424 ; 424 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 425 ; 425 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 426 ; 426 ; >
+    au < released ; crawling ; 2012 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 427 ; 427 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 428 ; 428 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 429 ; 429 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 430 ; 430 ; >
@@ -14873,7 +14873,7 @@
     au < released ; crawling ; 2009 ; The Musical Quarterly Volume 92 ; 92 ; >
     au < released ; crawling ; 2010 ; The Musical Quarterly Volume 93 ; 93 ; >
     au < released ; crawling ; 2011 ; The Musical Quarterly Volume 94 ; 94 ; >
-    au < released ; manifest ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
+    au < released ; crawling ; 2012 ; The Musical Quarterly Volume 95 ; 95 ; >
     au < crawling ; exists ; 2013 ; The Musical Quarterly Volume 96 ; 96 ; >
     au < expected ; exists ; 2014 ; The Musical Quarterly Volume 97 ; 97 ; >
 
@@ -15691,7 +15691,7 @@
     au < released ; crawling ; 2009 ; The Opera Quarterly Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
-    au < released ; manifest ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
+    au < released ; crawling ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
     au < expected ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
 
@@ -15930,7 +15930,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
     au < released ; crawling ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
     au < released ; crawling ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
-    au < released ; manifest ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
+    au < released ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
     au < expected ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
 
@@ -15952,7 +15952,7 @@
 
     {
     
-    au < released ; manifest ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
+    au < released ; crawling ; 2012 ; Oxford Journal of Law and Religion Volume 1 ; 1 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Law and Religion Volume 2 ; 2 ; >
     au < expected ; exists ; 2014 ; Oxford Journal of Law and Religion Volume 3 ; 3 ; >
     
@@ -16015,7 +16015,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
     au < released ; crawling ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
     au < released ; crawling ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 ; >
-    au < released ; manifest ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
+    au < released ; crawling ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 ; >
     au < expected ; exists ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 ; >
 
@@ -16074,7 +16074,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
     au < released ; crawling ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
     au < released ; crawling ; 2011 ; Oxford Review of Economic Policy Volume 27 ; 27 ; >
-    au < released ; manifest ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
+    au < released ; crawling ; 2012 ; Oxford Review of Economic Policy Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Oxford Review of Economic Policy Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; Oxford Review of Economic Policy Volume 30 ; 30 ; >
 
@@ -16170,7 +16170,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
     au < released ; crawling ; 2010 ; Parliamentary Affairs Volume 63 ; 63 ; >
     au < released ; crawling ; 2011 ; Parliamentary Affairs Volume 64 ; 64 ; >
-    au < released ; manifest ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
+    au < released ; crawling ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
     au < expected ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
 
@@ -16419,10 +16419,10 @@
     au < released ; crawling ; 2011 ; Past & Present Volume 211 ; 211 ; >
     au < released; crawling ; 2011 ; Past & Present Volume 212 ; 212 ; >
     au < released; crawling ; 2011 ; Past & Present Volume 213 ; 213 ; >
-    au < released ; manifest ; 2012 ; Past & Present Volume 214 ; 214 ; >
-    au < released ; manifest ; 2012 ; Past & Present Volume 215 ; 215 ; >
-    au < released ; manifest ; 2012 ; Past & Present Volume 216 ; 216 ; >
-    au < released ; manifest ; 2012 ; Past & Present Volume 217 ; 217 ; >
+    au < released ; crawling ; 2012 ; Past & Present Volume 214 ; 214 ; >
+    au < released ; crawling ; 2012 ; Past & Present Volume 215 ; 215 ; >
+    au < released ; crawling ; 2012 ; Past & Present Volume 216 ; 216 ; >
+    au < released ; crawling ; 2012 ; Past & Present Volume 217 ; 217 ; >
     au < crawling ; exists ; 2013 ; Past & Present Volume 218 ; 218 ; >
     au < crawling ; exists ; 2013 ; Past & Present Volume 219 ; 219 ; >
     au < crawling ; exists ; 2013 ; Past & Present Volume 220 ; 220 ; >
@@ -16502,7 +16502,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
     au < released ; crawling ; 2010 ; Philosophia Mathematica Volume 18 ; 18 ; >
     au < released ; crawling ; 2011 ; Philosophia Mathematica Volume 19 ; 19 ; >
-    au < released ; manifest ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
+    au < released ; crawling ; 2012 ; Philosophia Mathematica Volume 20 ; 20 ; >
     au < crawling ; exists ; 2013 ; Philosophia Mathematica Volume 21 ; 21 ; >
     au < expected ; exists ; 2014 ; Philosophia Mathematica Volume 22 ; 22 ; >
 
@@ -16623,7 +16623,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Policing: A Journal of Policy and Practice Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Policing: A Journal of Policy and Practice Volume 5 ; 5 ; >
-    au < released ; manifest ; 2012 ; Policing: A Journal of Policy and Practice Volume 6 ; 6 ; >
+    au < released ; crawling ; 2012 ; Policing: A Journal of Policy and Practice Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Policing: A Journal of Policy and Practice Volume 7 ; 7 ; >
     au < expected ; exists ; 2014 ; Policing: A Journal of Policy and Practice Volume 8 ; 8 ; >
 
@@ -16901,8 +16901,8 @@
     au < released ; crawling ; 2010 ; Proceedings of the London Mathematical Society Volume 101 ; 101 ; >
     au < zapped ; down ; 2011 ; Proceedings of the London Mathematical Society Volume 102 ; 102 ; >
     au < released ; crawling ; 2011 ; Proceedings of the London Mathematical Society Volume 103 ; 103 ; >
-    au < released ; manifest ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
-    au < released ; manifest ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
+    au < released ; crawling ; 2012 ; Proceedings of the London Mathematical Society Volume 104 ; 104 ; >
+    au < released ; crawling ; 2012 ; Proceedings of the London Mathematical Society Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; Proceedings of the London Mathematical Society Volume 106 ; 106 ; >
     au < crawling ; exists ; 2013 ; Proceedings of the London Mathematical Society Volume 107 ; 107 ; >
     au < expected ; exists ; 2014 ; Proceedings of the London Mathematical Society Volume 108 ; 108 ; >
@@ -17053,8 +17053,8 @@
     au < crawling ; exists ; 2010 ; Progress of Theoretical Physics (PTP) Volume 124 ; 124 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 125 ; 125 ; >
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
-    au < released ; manifest ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
-    au < released ; manifest ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
+    au < released ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
+    au < released ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
 
     }
 
@@ -17166,7 +17166,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
     au < released ; crawling ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
     au < released ; crawling ; 2011 ; Public Health Ethics Volume 4 ; 4 ; >
-    au < released ; manifest ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
+    au < released ; crawling ; 2012 ; Public Health Ethics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Public Health Ethics Volume 6 ; 6 ; >
     au < crawling ; exists ; 2014 ; Public Health Ethics Volume 7 ; 7 ; >
 
@@ -17378,7 +17378,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
     au < released ; crawling ; 2010 ; Publius: The Journal of Federalism Volume 40 ; 40 ; >
     au < released ; crawling ; 2011 ; Publius: The Journal of Federalism Volume 41 ; 41 ; >
-    au < released ; manifest ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 ; >
+    au < released ; crawling ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
     au < expected ; exists ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
 
@@ -17936,8 +17936,8 @@
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 148 ; 148 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 149 ; 149 ; >
     au < crawling ; exists ; 2012 ; Radiation Protection Dosimetry Volume 150 ; 150 ; >
-    au < released ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
-    au < released ; manifest ; 2012 ; Radiation Protection Dosimetry Volume 152 ; 152 ; >
+    au < released ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 151 ; 151 ; >
+    au < released ; crawling ; 2012 ; Radiation Protection Dosimetry Volume 152 ; 152 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 153 ; 153 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 154 ; 154 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 155 ; 155 ; >
@@ -18074,7 +18074,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; >
     au < released ; crawling ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 ; >
     au < released ; crawling ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 ; >
-    au < released ; manifest ; 2012 ; Reports of Patent, Design and Trade Mark Cases Volume 129 ; 129 ; >
+    au < released ; crawling ; 2012 ; Reports of Patent, Design and Trade Mark Cases Volume 129 ; 129 ; >
     au < crawling ; exists ; 2013 ; Reports of Patent, Design and Trade Mark Cases Volume 130 ; 130 ; >
     au < expected ; exists ; 2014 ; Reports of Patent, Design and Trade Mark Cases Volume 131 ; 131 ; >
 
@@ -18133,7 +18133,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < zapped ; down ; 2011 ; The Review of Asset Pricing Studies Volume 1 ; 1 ; >
-    au < released ; manifest ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
+    au < released ; crawling ; 2012 ; The Review of Asset Pricing Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2013 ; The Review of Asset Pricing Studies Volume 3 ; 3 ; >
     au < expected ; exists ; 2014 ; The Review of Asset Pricing Studies Volume 4 ; 4 ; >
 
@@ -18393,7 +18393,7 @@
     au < zapped ; down ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
     au < released ; crawling ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
     au < released ; crawling ; 2011 ; Review of Environmental Economics and Policy Volume 5 ; 5 ; >
-    au < released ; manifest ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
+    au < released ; crawling ; 2012 ; Review of Environmental Economics and Policy Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Review of Environmental Economics and Policy Volume 7 ; 7 ; >
     au < expected ; exists ; 2014 ; Review of Environmental Economics and Policy Volume 8 ; 8 ; >
 
@@ -18440,7 +18440,7 @@
     au < zapped ; down ; 2009 ; Review of Finance Volume 13 ; 13 ; >
     au < released ; crawling ; 2010 ; Review of Finance Volume 14 ; 14 ; >
     au < released ; crawling ; 2011 ; Review of Finance Volume 15 ; 15 ; >
-    au < released ; manifest ; 2012 ; Review of Finance Volume 16 ; 16 ; >
+    au < released ; crawling ; 2012 ; Review of Finance Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Review of Finance Volume 17 ; 17 ; >
     au < expected ; exists ; 2014 ; Review of Finance Volume 18 ; 18 ; >
 
@@ -18712,7 +18712,7 @@
     au < released ; crawling ; 2009 ; Science and Public Policy Volume 36 ; 36 ; >
     au < released ; crawling ; 2010 ; Science and Public Policy Volume 37 ; 37 ; >
     au < zapped ; down ; 2011 ; Science and Public Policy Volume 38 ; 38 ; >
-    au < released ; manifest ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
+    au < released ; crawling ; 2012 ; Science and Public Policy Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; Science and Public Policy Volume 40 ; 40 ; >
     au < expected ; exists ; 2014 ; Science and Public Policy Volume 41 ; 41 ; >
 
@@ -18933,7 +18933,7 @@
     au < released ; crawling ; 2009 ; Social Forces Volume 88 ; 88 ; >
     au < released ; crawling ; 2010 ; Social Forces Volume 89 ; 89 ; >
     au < released ; crawling ; 2011 ; Social Forces Volume 90 ; 90 ; >
-    au < released ; manifest ; 2012 ; Social Forces Volume 91 ; 91 ; >
+    au < released ; crawling ; 2012 ; Social Forces Volume 91 ; 91 ; >
     au < crawling ; exists ; 2013 ; Social Forces Volume 92 ; 92 ; >
     au < expected ; exists ; 2014 ; Social Forces Volume 93 ; 93 ; >
 
@@ -19235,7 +19235,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
     au < released ; crawling ; 2010 ; Socio-Economic Review Volume 8 ; 8 ; >
     au < released ; crawling ; 2011 ; Socio-Economic Review Volume 9 ; 9 ; >
-    au < released ; manifest ; 2012 ; Socio-Economic Review Volume 10 ; 10 ; >
+    au < released ; crawling ; 2012 ; Socio-Economic Review Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Socio-Economic Review Volume 11 ; 11 ; >
     au < expected ; exists ; 2014 ; Socio-Economic Review Volume 12 ; 12 ; >
 
@@ -19314,7 +19314,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
     au < released ; crawling ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
     au < released ; crawling ; 2011 ; Sociology of Religion Volume 72 ; 72 ; >
-    au < released ; manifest ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
+    au < released ; crawling ; 2012 ; Sociology of Religion Volume 73 ; 73 ; >
     au < crawling ; exists ; 2013 ; Sociology of Religion Volume 74 ; 74 ; >
     au < expected ; exists ; 2014 ; Sociology of Religion Volume 75 ; 75 ; >
 
@@ -19378,7 +19378,7 @@
     au < zapped ; down ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
     au < released ; crawling ; 2010 ; Statute Law Review Volume 31 ; 31 ; >
     au < released ; crawling ; 2011 ; Statute Law Review Volume 32 ; 32 ; >
-    au < released ; manifest ; 2012 ; Statute Law Review Volume 33 ; 33 ; >
+    au < released ; crawling ; 2012 ; Statute Law Review Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Statute Law Review Volume 34 ; 34 ; >
     au < expected ; exists ; 2014 ; Statute Law Review Volume 35 ; 35 ; >
 
@@ -19470,7 +19470,7 @@
     au < doNotProcess ; doNotProcess ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
     au < released ; crawling ; 2010 ; Systematic Biology Volume 59 ; 59 ; >
     au < released ; crawling ; 2011 ; Systematic Biology Volume 60 ; 60 ; >
-    au < released ; manifest ; 2012 ; Systematic Biology Volume 61 ; 61 ; >
+    au < released ; crawling ; 2012 ; Systematic Biology Volume 61 ; 61 ; >
     au < crawling ; exists ; 2013 ; Systematic Biology Volume 62 ; 62 ; >
     au < expected ; exists ; 2014 ; Systematic Biology Volume 63 ; 63 ; >
 
@@ -19946,7 +19946,7 @@
     au < released ; crawling ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
     au < zapped ; down ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
     au < released ; crawling ; 2011 ; Trusts & Trustees Volume 17 ; 17 ; >
-    au < released ; manifest ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
+    au < released ; crawling ; 2012 ; Trusts & Trustees Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Trusts & Trustees Volume 19 ; 19 ; >
     au < expected ; exists ; 2014 ; Trusts & Trustees Volume 20 ; 20 ; >
 
@@ -20000,7 +20000,7 @@
     au < zapped ; down ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
     au < released ; crawling ; 2011 ; Twentieth Century British History Volume 22 ; 22 ; >
-    au < released ; manifest ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
+    au < released ; crawling ; 2012 ; Twentieth Century British History Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Twentieth Century British History Volume 24 ; 24 ; >
     au < expected ; exists ; 2014 ; Twentieth Century British History Volume 25 ; 25 ; >
 
@@ -20201,10 +20201,10 @@
     au < manifest ; exists ; 2006 ; Yearbook of European Law Volume 25 ; 25 ; >
     au < manifest ; exists ; 2007 ; Yearbook of European Law Volume 26 ; 26 ; >
     au < manifest ; exists ; 2008 ; Yearbook of European Law Volume 27 ; 27 ; >
-    au < released ; manifest ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
+    au < released ; crawling ; 2009 ; Yearbook of European Law Volume 28 ; 28 ; >
     au < released ; crawling ; 2010 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < released ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
-    au < released ; manifest ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
+    au < released ; crawling ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
     au < manifest ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
     au < expected ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
 
@@ -20243,7 +20243,7 @@
     au < zapped ; down ; 2009 ; Yearbook of International Environmental Law Volume 19 ; 19 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < released ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
-    au < released ; manifest ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
+    au < released ; crawling ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
 
   }
 
@@ -20919,10 +20919,10 @@
       au < manifest ; exists ; 2006 ; The Quarterly Journal of Economics Volume 121 ; 121 ; >
       au < manifest ; exists ; 2007 ; The Quarterly Journal of Economics Volume 122 ; 122 ; >
       au < manifest ; exists ; 2008 ; The Quarterly Journal of Economics Volume 123 ; 123 ; >
-      au < released ; manifest ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
-      au < released ; manifest ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
-      au < released ; manifest ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
-      au < released ; manifest ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
+      au < released ; crawling ; 2009 ; The Quarterly Journal of Economics Volume 124 ; 124 ; >
+      au < released ; crawling ; 2010 ; The Quarterly Journal of Economics Volume 125 ; 125 ; >
+      au < released ; crawling ; 2011 ; The Quarterly Journal of Economics Volume 126 ; 126 ; >
+      au < released ; crawling ; 2012 ; The Quarterly Journal of Economics Volume 127 ; 127 ; >
       au < crawling ; exists ; 2013 ; The Quarterly Journal of Economics Volume 128 ; 128 ; >
       au < expected ; exists ; 2014 ; The Quarterly Journal of Economics Volume 129 ; 129 ; >
 
