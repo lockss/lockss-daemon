@@ -1,5 +1,5 @@
 /*
- * $Id: TestDryadPlugin.java,v 1.1 2013-09-04 20:22:42 etenbrink Exp $
+ * $Id: TestDryadPlugin.java,v 1.2 2013-11-12 23:00:59 etenbrink Exp $
  */
 
 /*
@@ -40,7 +40,9 @@ import org.lockss.util.ListUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-//XXX import org.lockss.extractor.*;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.*;
@@ -48,20 +50,20 @@ import org.lockss.plugin.wrapper.*;
 public class TestDryadPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-
+  
   private DefinablePlugin plugin;
-
+  
   public TestDryadPlugin(String msg) {
     super(msg);
   }
-
+  
   public void setUp() throws Exception {
     super.setUp();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.dryad.ClockssDryadPlugin");
   }
-
+  
   public void testGetAuNullConfig()
       throws ArchivalUnit.ConfigurationException {
     try {
@@ -70,6 +72,7 @@ public class TestDryadPlugin extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
     }
   }
+  
   public void testCreateAu() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
@@ -82,19 +85,19 @@ public class TestDryadPlugin extends LockssTestCase {
     }
     au.getName();
   }
-
+  
   private DefinableArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {
     Configuration config = ConfigurationUtil.fromProps(props);
     return (DefinableArchivalUnit)plugin.configureAu(config, null);
   }
-
+  
   public void testGetAuHandlesBadUrl()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(VOLUME_NAME_KEY, "2");
-
+    
     try {
       DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
@@ -103,34 +106,29 @@ public class TestDryadPlugin extends LockssTestCase {
       assertNotNull(auie.getCause());
     }
   }
-
+  
   public void testGetAuConstructsProperAu()
       throws ArchivalUnit.ConfigurationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOLUME_NAME_KEY, "3");
-
+    
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Dryad Plugin (CLOCKSS), Base URL http://www.example.com/, URL List 3", 
         au.getName());
   }
-
+  
   public void testGetPluginId() {
     assertEquals("org.lockss.plugin.dryad.ClockssDryadPlugin",
         plugin.getPluginId());
   }
-
+  
   public void testGetAuConfigProperties() {
-    // this assert fails due to the fact that the year param
-    // in the LocalAuConfigDescrs is a string[20]
-    
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.VOLUME_NAME),
                  plugin.getLocalAuConfigDescrs());
   }
-
-  // XXX add back !
-/*
+  
   public void testGetArticleMetadataExtractor() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
@@ -148,7 +146,7 @@ public class TestDryadPlugin extends LockssTestCase {
         FileMetadataExtractor
         );
   }
-  */
+  
   public void testGetHashFilterFactory() {
     assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
     assertNull(plugin.getHashFilterFactory("application/pdf"));
@@ -156,10 +154,10 @@ public class TestDryadPlugin extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(plugin.getHashFilterFactory("text/html"))
         instanceof org.lockss.plugin.dryad.DryadHtmlFilterFactory);
   }
-/*  
+  
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
         instanceof org.lockss.plugin.dryad.DryadArticleIteratorFactory);
   }
-*/
+  
 }

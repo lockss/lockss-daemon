@@ -1,5 +1,5 @@
 /*
- * $Id: TestDryadArticleIteratorFactory.java,v 1.1 2013-09-04 20:22:42 etenbrink Exp $
+ * $Id: TestDryadArticleIteratorFactory.java,v 1.2 2013-11-12 23:00:59 etenbrink Exp $
  */
 
 /*
@@ -138,10 +138,10 @@ public class TestDryadArticleIteratorFactory extends ArticleIteratorTestCase {
      *  <base_url>resource/doi:<doi>
      */
 
-    String pat1 = "(\\d+)file\\.html";
+    String pat1 = "([0-9]+)file[.]html";
     // turn xxfile.xhtml into abstracts
     String repAbs = "/resource/doi:10.5061/dryad.$1";
-    PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, repAbs);
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat1, repAbs);
 
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
     int count = 0;
