@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>86</string>
+    <string>87</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -93,6 +93,7 @@
     <list>
       <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
+      <string>2,"^%s.*/search[.]dtl", base_url</string>
       <string>1,"^%scontent/vol%s/", base_url, volume_name</string>
       <string>1,"^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", base_url, volume_name</string>
       <string>1,"^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", base_url, volume_name</string>
