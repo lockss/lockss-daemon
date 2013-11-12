@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.21 2013-11-12 00:24:02 thib_gc Exp $
+# $Id: tdbq.py,v 1.22 2013-11-12 00:32:16 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -75,7 +75,8 @@ class TdbqConstants:
     OPTION_NOT_READY_SHORT = 'N'
     OPTION_NOT_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.NOT_READY,)
     
-    PRODUCTION_STATUSES = [AU.Status.RELEASED,
+    PRODUCTION_STATUSES = [AU.Status.FINISHED,
+                           AU.Status.RELEASED,
                            AU.Status.DOWN,
                            AU.Status.SUPERSEDED]
     OPTION_PRODUCTION = 'production'
