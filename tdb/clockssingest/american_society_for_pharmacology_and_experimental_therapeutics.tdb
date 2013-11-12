@@ -48,16 +48,16 @@
     au < finished ; crawling ; 1998 ; Drug Metabolism and Disposition Volume 26 ; 26 >
     au < finished ; crawling ; 1999 ; Drug Metabolism and Disposition Volume 27 ; 27 >
     au < finished ; crawling ; 2000 ; Drug Metabolism and Disposition Volume 28 ; 28 >
-    au < zapped ; down ; 2001 ; Drug Metabolism and Disposition Volume 29 ; 29 >
+    au < zapped ; finished ; 2001 ; Drug Metabolism and Disposition Volume 29 ; 29 >
     au < finished ; crawling ; 2002 ; Drug Metabolism and Disposition Volume 30 ; 30 >
     au < finished ; crawling ; 2003 ; Drug Metabolism and Disposition Volume 31 ; 31 >
     au < finished ; crawling ; 2004 ; Drug Metabolism and Disposition Volume 32 ; 32 >
-    au < zapped ; down ; 2005 ; Drug Metabolism and Disposition Volume 33 ; 33 >
+    au < zapped ; finished ; 2005 ; Drug Metabolism and Disposition Volume 33 ; 33 >
     au < finished ; crawling ; 2006 ; Drug Metabolism and Disposition Volume 34 ; 34 >
-    au < zapped ; down ; 2007 ; Drug Metabolism and Disposition Volume 35 ; 35 >
+    au < zapped ; finished ; 2007 ; Drug Metabolism and Disposition Volume 35 ; 35 >
     au < finished ; crawling ; 2008 ; Drug Metabolism and Disposition Volume 36 ; 36 >
     au < finished ; crawling ; 2009 ; Drug Metabolism and Disposition Volume 37 ; 37 >
-    au < zapped ; down ; 2010 ; Drug Metabolism and Disposition Volume 38 ; 38 >
+    au < zapped ; finished ; 2010 ; Drug Metabolism and Disposition Volume 38 ; 38 >
     au < finished ; crawling ; 2011 ; Drug Metabolism and Disposition Volume 39 ; 39 >
     au < finished ; crawling ; 2012 ; Drug Metabolism and Disposition Volume 40 ; 40 >
     au < crawling ; exists ; 2013 ; Drug Metabolism and Disposition Volume 41 ; 41 >
@@ -441,17 +441,17 @@
 
     param[base_url] = http://molinterv.aspetjournals.org/
 
-    au < zapped ; down ; 2001 ; Molecular Interventions Volume 1 ; 1 >
-    au < zapped ; down ; 2002 ; Molecular Interventions Volume 2 ; 2 >
-    au < zapped ; down ; 2003 ; Molecular Interventions Volume 3 ; 3 >
-    au < zapped ; down ; 2004 ; Molecular Interventions Volume 4 ; 4 >
-    au < zapped ; down ; 2005 ; Molecular Interventions Volume 5 ; 5 >
-    au < zapped ; down ; 2006 ; Molecular Interventions Volume 6 ; 6 >
-    au < zapped ; down ; 2007 ; Molecular Interventions Volume 7 ; 7 >
-    au < zapped ; down ; 2008 ; Molecular Interventions Volume 8 ; 8 >
-    au < zapped ; down ; 2009 ; Molecular Interventions Volume 9 ; 9 >
-    au < zapped ; down ; 2010 ; Molecular Interventions Volume 10 ; 10 >
-    au < zapped ; down ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+    au < zapped ; finished ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < zapped ; finished ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < zapped ; finished ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < zapped ; finished ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < zapped ; finished ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < zapped ; finished ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < zapped ; finished ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < zapped ; finished ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < zapped ; finished ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < zapped ; finished ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < zapped ; finished ; 2011 ; Molecular Interventions Volume 11 ; 11 >
 
   }
 
