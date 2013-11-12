@@ -902,7 +902,7 @@
     au < manifest ; exists ; 2008 ; Corrosion Engineering, Science and Technology Volume 43 ; 43 > 
     au < manifest ; exists ; 2009 ; Corrosion Engineering, Science and Technology Volume 44 ; 44 > 
     au < released ; crawling ; 2010 ; Corrosion Engineering, Science and Technology Volume 45 ; 45 > 
-    au < notReady ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
+    au < ingNotReady ; exists ; 2011 ; Corrosion Engineering, Science and Technology Volume 46 ; 46 > 
     au < released ; crawling ; 2012 ; Corrosion Engineering, Science and Technology Volume 47 ; 47 > 
     au < doNotProcess ; exists ; 2013 ; Corrosion Engineering, Science and Technology Volume 48 ; 48 > 
 
@@ -1395,9 +1395,9 @@
     comment[1] = ceased publication in 2011
     comment[notReady] = requesting manifest pages RT 1962
     
-    au < notReady ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
-    au < notReady ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
-    au < notReady ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
+    au < ingNotReady ; exists ; 2007 ; The Hardy Review Volume 9 ; 9 > 
+    au < ingNotReady ; exists ; 2008 ; The Hardy Review Volume 10 ; 10 > 
+    au < ingNotReady ; exists ; 2009 ; The Hardy Review Volume 11 ; 11 > 
     au < released ; crawling ; 2010 ; The Hardy Review Volume 12 ; 12 > 
     au < released ; crawling ; 2011 ; The Hardy Review Volume 13 ; 13 >  
 
@@ -2663,7 +2663,7 @@
     
     comment[notReady] = low agreement
 
-    au < notReady ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
+    au < ingNotReady ; exists ; 2011 ; Journal of Spinal Cord Medicine Volume 34 ; 34 > 
     au < released ; crawling ; 2012 ; Journal of Spinal Cord Medicine Volume 35 ; 35 > 
     au < doNotProcess ; exists ; 2013 ; Journal of Spinal Cord Medicine Volume 36 ; 36 > 
 
@@ -2932,7 +2932,7 @@
     au < manifest ; exists ; 2008 ; Levant Volume 40 ; 40 > 
     au < manifest ; exists ; 2009 ; Levant Volume 41 ; 41 > 
     au < released ; crawling ; 2010 ; Levant Volume 42 ; 42 > 
-    au < notReady ; exists ; 2011 ; Levant Volume 43 ; 43 > 
+    au < ingNotReady ; exists ; 2011 ; Levant Volume 43 ; 43 > 
     au < released ; crawling ; 2012 ; Levant Volume 44 ; 44 > 
     au < doNotProcess ; exists ; 2013 ; Levant Volume 45 ; 45 > 
 

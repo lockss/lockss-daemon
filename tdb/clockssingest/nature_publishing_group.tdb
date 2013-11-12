@@ -590,7 +590,7 @@
     param[journal_id] = ctg
     comment[notReady] = no substance
 
-    au < notReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
+    au < ingNotReady ; exists ; 2010 ; Clinical and Translational Gastroenterology Volume 1 ; 2010 ; 1 >
     au < released ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
     au < released ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
@@ -1038,8 +1038,8 @@
     au < exists ; exists ; 2007 ; Genetics in Medicine Volume 9 ; 2007 ; 9 >
     au < exists ; exists ; 2008 ; Genetics in Medicine Volume 10 ; 2008 ; 10 >
     au < exists ; exists ; 2009 ; Genetics in Medicine Volume 11 ; 2009 ; 11 >
-    au < notReady ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
-    au < notReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
+    au < ingNotReady ; exists ; 2010 ; Genetics in Medicine Volume 12 ; 2010 ; 12 >
+    au < ingNotReady ; exists ; 2011 ; Genetics in Medicine Volume 13 ; 2011 ; 13 >
     au < released ; crawling ; 2012 ; Genetics in Medicine Volume 14 ; 2012 ; 14 >
     au < exists ; exists ; 2013 ; Genetics in Medicine Volume 15 ; 2013 ; 15 >
     au < expected ; exists ; 2014 ; Genetics in Medicine Volume 16 ; 2014 ; 16 >
@@ -1403,9 +1403,9 @@
     param[journal_id] = ijosup
     comment[notReady] = no substance (404 error) as of 6/10/13
 
-    au < notReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
+    au < ingNotReady ; exists ; 2011 ; International Journal of Obesity Volume 1 ; 2011 ; 1 >
     au < released ; crawling ; 2012 ; International Journal of Obesity Volume 2 ; 2012 ; 2 >
-    au < notReady ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
+    au < ingNotReady ; exists ; 2013 ; International Journal of Obesity Volume 3 ; 2013 ; 3 >
     au < expected ; exists ; 2014 ; International Journal of Obesity Volume 4 ; 2014 ; 4 >
 
   }
@@ -2831,7 +2831,7 @@
     au < zapped ; down ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
     au < released ; crawling ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
     au < released ; crawling ; 2011 ; Nature Cell Biology Volume 13 ; 2011 ; 13 >
-    au < notReady ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
+    au < ingNotReady ; exists ; 2012 ; Nature Cell Biology Volume 14 ; 2012 ; 14 >
     au < crawling ; exists ; 2013 ; Nature Cell Biology Volume 15 ; 2013 ; 15 >
     au < expected ; exists ; 2014 ; Nature Cell Biology Volume 16 ; 2014 ; 16 >
 
@@ -3755,7 +3755,7 @@
     au < crawling ; exists ; 2009 ; NPG Asia Materials Volume 1 ; 2009 ; 1 >
     au < crawling ; exists ; 2010 ; NPG Asia Materials Volume 2 ; 2010 ; 2 >
     au < crawling ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
-    au < notReady ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
+    au < ingNotReady ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
     au < expected ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 >
 
@@ -3832,9 +3832,9 @@
     au < manifest ; exists ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < notReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < ingNotReady ; exists ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
     au < released ; crawling ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
-    au < notReady ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
+    au < ingNotReady ; exists ; 2012 ; Oncogene Volume 31 ; 2012 ; 31 >
     au < crawling ; exists ; 2013 ; Oncogene Volume 32 ; 2013 ; 32 >
     au < expected ; exists ; 2014 ; Oncogene Volume 33 ; 2014 ; 33 >
 
