@@ -2272,14 +2272,14 @@
     pluginSuffix = ClockssHighWirePlugin
     comment[ceased] = ceased publication in 2008
 
-    au < finished ; crawling ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ;  >
-    au < finished ; crawling ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ;  >
-    au < finished ; crawling ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ;  >
-    au < finished ; crawling ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ;  >
-    au < finished ; crawling ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ;  >
-    au < finished ; crawling ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ;  >
-    au < finished ; crawling ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ;  >
-    au < finished ; crawling ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ;  >
+    au < finished ; crawling ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; >
+    au < finished ; crawling ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; >
+    au < finished ; crawling ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; >
 
     }
 
@@ -2605,10 +2605,10 @@
     au < finished ; crawling ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
     au < finished ; crawling ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
     au < finished ; crawling ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
-    au < finished ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
-    au < finished ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 ; >
-    au < finished ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 ; >
-    au < finished ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 ; >
+    au < finished ; crawling ; 2011 ; British Journal of Anaesthesia Volume 106 ; 106 ; >
+    au < finished ; crawling ; 2011 ; British Journal of Anaesthesia Volume 107 ; 107 ; >
+    au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 108 ; 108 ; >
+    au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
     au < expected ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
@@ -5800,7 +5800,7 @@
 
     title <
       name = European Review of Economic History ;
-      issn = 1361-4916  ;
+      issn = 1361-4916 ;
       eissn = 1474-0044 ;
       issnl = 1361-4916
     >
@@ -6902,7 +6902,7 @@
   {
 
     title <
-      name = Health & Social Work  ;
+      name = Health & Social Work ;
       issn = 0360-7283 ;
       eissn = 1545-6854 ;
       issnl = 0360-7283
@@ -9598,7 +9598,7 @@
 
     title <
       name = Journal of Analytical Toxicology ;
-      issn = 0146-4760  ;
+      issn = 0146-4760 ;
       eissn = 1945-2403 ;
       issnl = 0146-4760
     >
@@ -9938,7 +9938,7 @@
 
     title <
       name = Journal of Chromatographic Science ;
-      issn = 0021-9665  ;
+      issn = 0021-9665 ;
       eissn = 1945-239X ;
       issnl = 0021-9665
     >
