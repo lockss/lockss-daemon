@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.20 2013-05-15 23:34:36 thib_gc Exp $
+# $Id: tdbq.py,v 1.21 2013-11-12 00:24:02 thib_gc Exp $
 
 __copyright__ = '''\
 
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '''0.4.2'''
+__version__ = '''0.4.3'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -54,6 +54,18 @@ class TdbqConstants:
     OPTION_EXPECTED = 'expected'
     OPTION_EXPECTED_SHORT = 'X'
     OPTION_EXPECTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXPECTED,)
+    
+    OPTION_FINISHED = 'finished'
+    OPTION_FINISHED_SHORT = 'F'
+    OPTION_FINISHED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.FINISHED,)
+    
+    OPTION_FROZEN = 'frozen'
+    OPTION_FROZEN_SHORT = 'Z'
+    OPTION_FROZEN_HELP = 'keep AUs whose status is "%s"' % (AU.Status.FROZEN,)
+    
+    OPTION_ING_NOT_READY = 'ingNotReady'
+    OPTION_ING_NOT_READY_SHORT = 'I'
+    OPTION_ING_NOT_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.ING_NOT_READY,)
     
     OPTION_MANIFEST = 'manifest'
     OPTION_MANIFEST_SHORT = 'M'
@@ -102,10 +114,12 @@ class TdbqConstants:
     
     UNRELEASED_STATUSES = [AU.Status.MANIFEST,
                            AU.Status.WANTED,
-                           AU.Status.CRAWLING,
                            AU.Status.TESTING,
                            AU.Status.NOT_READY,
                            AU.Status.READY,
+                           AU.Status.CRAWLING,
+                           AU.Status.FROZEN,
+                           AU.Status.ING_NOT_READY,
                            AU.Status.RELEASING]
     OPTION_UNRELEASED = 'unreleased'
     OPTION_UNRELEASED_SHORT = 'U'
@@ -116,7 +130,7 @@ class TdbqConstants:
     OPTION_WANTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.WANTED,)
     
     OPTION_ZAPPED = 'zapped'
-    OPTION_ZAPPED_SHORT = 'Z'
+    OPTION_ZAPPED_SHORT = 'B'
     OPTION_ZAPPED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.ZAPPED,)
     
     OPTION_STATUSES = 'statuses'
@@ -127,10 +141,13 @@ class TdbqConstants:
     OPTION_ALL_HELP = 'keep all testable AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in ALL_TESTABLE_STATUSES]))
         
     STATUS_SWITCHES = [OPTION_ALL_SHORT,
+                       OPTION_ZAPPED_SHORT,
                        OPTION_CRAWLING_SHORT,
                        OPTION_DOWN_SHORT,
                        OPTION_EXISTS_SHORT,
+                       OPTION_FINISHED_SHORT,
                        OPTION_RELEASING_SHORT,
+                       OPTION_ING_NOT_READY_SHORT,
                        OPTION_MANIFEST_SHORT,
                        OPTION_NOT_READY_SHORT,
                        OPTION_PRODUCTION_SHORT,
@@ -141,7 +158,7 @@ class TdbqConstants:
                        OPTION_WANTED_SHORT,
                        OPTION_EXPECTED_SHORT,
                        OPTION_READY_SHORT,
-                       OPTION_ZAPPED_SHORT]
+                       OPTION_FROZEN_SHORT]
 
 class TdbqLiteral:
     '''Literals encountered in TDB query strings.'''
@@ -567,11 +584,14 @@ def __option_parser__(parser=None):
                                (TdbqConstants.OPTION_EXPECTED_SHORT, TdbqConstants.OPTION_EXPECTED, TdbqConstants.OPTION_EXPECTED_HELP, AU.Status.EXPECTED),
                                (TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
                                (TdbqConstants.OPTION_WANTED_SHORT, TdbqConstants.OPTION_WANTED, TdbqConstants.OPTION_WANTED_HELP, AU.Status.WANTED),
-                               (TdbqConstants.OPTION_CRAWLING_SHORT, TdbqConstants.OPTION_CRAWLING, TdbqConstants.OPTION_CRAWLING_HELP, AU.Status.CRAWLING),
                                (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
                                (TdbqConstants.OPTION_NOT_READY_SHORT, TdbqConstants.OPTION_NOT_READY, TdbqConstants.OPTION_NOT_READY_HELP, AU.Status.NOT_READY),
                                (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY),
+                               (TdbqConstants.OPTION_CRAWLING_SHORT, TdbqConstants.OPTION_CRAWLING, TdbqConstants.OPTION_CRAWLING_HELP, AU.Status.CRAWLING),
+                               (TdbqConstants.OPTION_FROZEN_SHORT, TdbqConstants.OPTION_FROZEN, TdbqConstants.OPTION_FROZEN_HELP, AU.Status.FROZEN),
+                               (TdbqConstants.OPTION_ING_NOT_READY_SHORT, TdbqConstants.OPTION_ING_NOT_READY, TdbqConstants.OPTION_ING_NOT_READY_HELP, AU.Status.ING_NOT_READY),
                                (TdbqConstants.OPTION_RELEASING_SHORT, TdbqConstants.OPTION_RELEASING, TdbqConstants.OPTION_RELEASING_HELP, AU.Status.RELEASING),
+                               (TdbqConstants.OPTION_FINISHED_SHORT, TdbqConstants.OPTION_FINISHED, TdbqConstants.OPTION_FINISHED_HELP, AU.Status.FINISHED),
                                (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
                                (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
                                (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),

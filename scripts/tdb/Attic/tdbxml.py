@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.37 2013-06-17 19:07:14 thib_gc Exp $
+# $Id: tdbxml.py,v 1.38 2013-11-12 00:24:02 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -29,7 +29,7 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.9'
+__version__ = '0.4.10'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -203,7 +203,12 @@ def __process_au(au, options):
     au_proxy = au.proxy()
     if au_proxy is not None:
         austr.append(__do_param(au, 98, 'crawl_proxy', au_proxy))
-    if not options.no_pub_down and au.status() in [AU.Status.DOWN, AU.Status.SUPERSEDED, AU.Status.ZAPPED]:
+    if not options.no_pub_down and au.status() in [AU.Status.FROZEN,
+                                                   AU.Status.ING_NOT_READY,
+                                                   AU.Status.FINISHED,
+                                                   AU.Status.DOWN,
+                                                   AU.Status.SUPERSEDED,
+                                                   AU.Status.ZAPPED]:
         austr.append(__do_param(au, 99, 'pub_down', 'true'))
     for attr, attrval in au.attrs().iteritems():
         austr.append(__do_attr(au, attr, attrval))
