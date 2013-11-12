@@ -14630,7 +14630,7 @@
 
       pluginSuffix = ClockssHighWirePressH20Plugin
 
-      au < manifest ; exists; 2007 ; International Political Science Abstracts Volume 57 ; 57 ; >
+      au < manifest ; exists ; 2007 ; International Political Science Abstracts Volume 57 ; 57 ; >
       au < doNotProcess ; doNotProcess ; 2008 ; International Political Science Abstracts Volume 58 ; 58 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; International Political Science Abstracts Volume 59 ; 59 ; >
       au < finished ; crawling ; 2010 ; International Political Science Abstracts Volume 60 ; 60 ; >
@@ -18328,7 +18328,7 @@
   {
     
      title <
-      name = Journal of Drug Issues;
+      name = Journal of Drug Issues ;
       issn = 0022-0426 ;
       eissn = 1945-1369
       
@@ -18511,8 +18511,8 @@
   
     title <
       name = Journal of Early Intervention ;
-      issn = 1053-8151;
-      eissn = 2154-3992;
+      issn = 1053-8151 ;
+      eissn = 2154-3992 ;
       issnl = 1053-8151
     >
 
@@ -34416,9 +34416,9 @@
       au < doNotProcess ; doNotProcess ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; >
       au < zapped ; finished ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 ; >
       au < finished ; crawling ; 2011 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 34 ; 34 ; >
-      au < finished ; crawling ; 2012 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 35; 35 ; >
-      au < crawling ; exists ; 2013 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 36; 36 ; >
-      au < expected ; exists ; 2014 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 37; 37 ; >
+      au < finished ; crawling ; 2012 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2013 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 36 ; 36 ; >
+      au < expected ; exists ; 2014 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 37 ; 37 ; >
 
     }
 
