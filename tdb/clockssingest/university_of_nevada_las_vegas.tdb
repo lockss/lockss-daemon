@@ -10,14 +10,14 @@
   
     title < 
       name = Journal of Praxis in Multicultural Education ;
-      issn = 1931-0242;
+      issn = 1931-0242 ;
       eissn = 2161-2978
     >
     
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
     param[base_url] = http://digitalscholarship.unlv.edu/
     param[journal_abbr] = jpme
-    implicit < status ; status2; year ; name ; param[volume] >
+    implicit < status ; status2 ; year ; name ; param[volume] >
 
     au < manifest ; exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 >
     au < manifest ; exists ; 2007 ; Journal of Praxis in Multicultural Education volume 2 ; 2 >
