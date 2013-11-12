@@ -31042,7 +31042,6 @@ comment[mpj] = now published by Brill
         au < released ; 2010 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 22 ; 22 >
         au < released ; 2011 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 23 ; 23 >
         au < released ; 2012 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 24 ; 24 >
-        au < expected ; 2013 ; Perspectives in Vascular Surgery and Endovascular Therapy Volume 25 ; 25 >
 
       }
 
@@ -34657,8 +34656,8 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Reviews of Human Factors and Ergonomics Volume 5 ; 5 >
         au < released ; 2010 ; Reviews of Human Factors and Ergonomics Volume 6 ; 6 >
         au < released ; 2011 ; Reviews of Human Factors and Ergonomics Volume 7 ; 7 >
-        au < manifest ; 2012 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 >
-        au < expected ; 2013 ; Reviews of Human Factors and Ergonomics Volume 9 ; 9 >
+        au < manifest ; 2013 ; Reviews of Human Factors and Ergonomics Volume 8 ; 8 >
+        au < expected ; 2014 ; Reviews of Human Factors and Ergonomics Volume 9 ; 9 >
 
       }
 
@@ -37117,34 +37116,38 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://tpa.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        comment[0] = no issue in 1981, 2008-2011
   
-        au < manifest ; 1977 ; Teaching Public Administration Volume 1 ; 1 >
-        au < manifest ; 1978 ; Teaching Public Administration Volume 2 ; 2 >
-        au < manifest ; 1979 ; Teaching Public Administration Volume 3 ; 3 >
-        au < manifest ; 1980 ; Teaching Public Administration Volume 4 ; 4 >
-        au < manifest ; 1981 ; Teaching Public Administration Volume 5 ; 5 >
-        au < manifest ; 1982 ; Teaching Public Administration Volume 6 ; 6 >
-        au < manifest ; 1983 ; Teaching Public Administration Volume 7 ; 7 >
-        au < manifest ; 1984 ; Teaching Public Administration Volume 8 ; 8 >
-        au < manifest ; 1985 ; Teaching Public Administration Volume 9 ; 9 >
-        au < manifest ; 1986 ; Teaching Public Administration Volume 10 ; 10 >
-        au < manifest ; 1987 ; Teaching Public Administration Volume 11 ; 11 >
-        au < manifest ; 1988 ; Teaching Public Administration Volume 12 ; 12 >
-        au < manifest ; 1989 ; Teaching Public Administration Volume 13 ; 13 >
-        au < manifest ; 1990 ; Teaching Public Administration Volume 14 ; 14 >
-        au < manifest ; 1991 ; Teaching Public Administration Volume 15 ; 15 >
-        au < manifest ; 1992 ; Teaching Public Administration Volume 16 ; 16 >
-        au < manifest ; 1993 ; Teaching Public Administration Volume 17 ; 17 >
-        au < manifest ; 1994 ; Teaching Public Administration Volume 18 ; 18 >
-        au < manifest ; 1995 ; Teaching Public Administration Volume 19 ; 19 >
-        au < manifest ; 1996 ; Teaching Public Administration Volume 20 ; 20 >
-        au < manifest ; 1997 ; Teaching Public Administration Volume 21 ; 21 >
-        au < manifest ; 1998 ; Teaching Public Administration Volume 22 ; 22 >
-        au < manifest ; 1999 ; Teaching Public Administration Volume 23 ; 23 >
-        au < manifest ; 2000 ; Teaching Public Administration Volume 24 ; 24 >
-        au < manifest ; 2001 ; Teaching Public Administration Volume 25 ; 25 >
-        au < manifest ; 2002 ; Teaching Public Administration Volume 26 ; 26 >
-        au < manifest ; 2003 ; Teaching Public Administration Volume 27 ; 27 >
+        au < manifest ; 1977-1980 ; Teaching Public Administration Volume 1 ; 1 >
+        au < manifest ; 1982 ; Teaching Public Administration Volume 2 ; 2 >
+        au < manifest ; 1983 ; Teaching Public Administration Volume 3 ; 3 >
+        au < manifest ; 1984 ; Teaching Public Administration Volume 4 ; 4 >
+        au < manifest ; 1985 ; Teaching Public Administration Volume 5 ; 5 >
+        au < manifest ; 1986 ; Teaching Public Administration Volume 6 ; 6 >
+        au < manifest ; 1987 ; Teaching Public Administration Volume 7 ; 7 >
+        au < manifest ; 1988 ; Teaching Public Administration Volume 8 ; 8 >
+        au < manifest ; 1989 ; Teaching Public Administration Volume 9 ; 9 >
+        au < manifest ; 1990 ; Teaching Public Administration Volume 10 ; 10 >
+        au < manifest ; 1991 ; Teaching Public Administration Volume 11 ; 11 >
+        au < manifest ; 1992 ; Teaching Public Administration Volume 12 ; 12 >
+        au < manifest ; 1993 ; Teaching Public Administration Volume 13 ; 13 >
+        au < manifest ; 1994 ; Teaching Public Administration Volume 14 ; 14 >
+        au < manifest ; 1995 ; Teaching Public Administration Volume 15 ; 15 >
+        au < manifest ; 1996 ; Teaching Public Administration Volume 16 ; 16 >
+        au < manifest ; 1997 ; Teaching Public Administration Volume 17 ; 17 >
+        au < manifest ; 1998 ; Teaching Public Administration Volume 18 ; 18 >
+        au < manifest ; 1999 ; Teaching Public Administration Volume 19 ; 19 >
+        au < manifest ; 2000 ; Teaching Public Administration Volume 20 ; 20 >
+        au < manifest ; 2001 ; Teaching Public Administration Volume 21 ; 21 >
+        au < manifest ; 2002 ; Teaching Public Administration Volume 22 ; 22 >
+        au < manifest ; 2003 ; Teaching Public Administration Volume 23 ; 23 >
+        au < manifest ; 2004 ; Teaching Public Administration Volume 24 ; 24 >
+        au < manifest ; 2005 ; Teaching Public Administration Volume 25 ; 25 >
+        au < manifest ; 2006 ; Teaching Public Administration Volume 26 ; 26 >
+        au < manifest ; 2007 ; Teaching Public Administration Volume 27 ; 27 >
+        au < exists ; 2012 ; Teaching Public Administration Volume 30 ; 30 >
+        au < exists ; 2013 ; Teaching Public Administration Volume 31 ; 31 >
+        au < expected ; 2014 ; Teaching Public Administration Volume 32 ; 32 >
   
       }
   
@@ -38446,6 +38449,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Tourism and Hospitality Research Volume 11 ; 11 >
         au < released ; 2012 ; Tourism and Hospitality Research Volume 12 ; 12 >
         au < expected ; 2013 ; Tourism and Hospitality Research Volume 13 ; 13 >
+        au < expected ; 2014 ; Tourism and Hospitality Research Volume 14 ; 14 >
 
       }
 
@@ -43043,7 +43047,7 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
         au < HighWirePressH20Plugin ; exists ; 2013 ; International Journal of Green Nanotechnology Volume 1 ; 1 >
-        au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; expected ; 2014 ; International Journal of Green Nanotechnology Volume 2 ; 2 >
   
       }
   
