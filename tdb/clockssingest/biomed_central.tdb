@@ -709,7 +709,7 @@
       au < crawling ; exists ; 2009 ; BMC Genomics Volume 10 ; 10 >
       au < crawling ; exists ; 2010 ; BMC Genomics Volume 11 ; 11 >
       au < finished ; crawling ; 2011 ; BMC Genomics Volume 12 ; 12 >
-      au < crawling ; exists ; 2012 ; BMC Genomics Volume 13; 13 >
+      au < crawling ; exists ; 2012 ; BMC Genomics Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Genomics Volume 14 ; 14 >
       au < expected ; exists ; 2014 ; BMC Genomics Volume 15 ; 15 >
 
@@ -4741,7 +4741,7 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
-        name = Journal of Molecular Psychiatry;
+        name = Journal of Molecular Psychiatry ;
         issn = 2049-9256 ;
         issnl = 2049-9256
       >
