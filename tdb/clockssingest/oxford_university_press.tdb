@@ -1373,12 +1373,12 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1958 ; The Annals of Occupational Hygiene Volume 1 ; 1 ;>
-    au < manifest ; exists ; 1960 ; The Annals of Occupational Hygiene Volume 2 ; 2 ;>
-    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 3 ; 3 ;>
-    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 4 ; 4 ;>
-    au < manifest ; exists ; 1962 ; The Annals of Occupational Hygiene Volume 5 ; 5 ;>
-    au < manifest ; exists ; 1963 ; The Annals of Occupational Hygiene Volume 6 ; 6 ;>
+    au < manifest ; exists ; 1958 ; The Annals of Occupational Hygiene Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1960 ; The Annals of Occupational Hygiene Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1962 ; The Annals of Occupational Hygiene Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1963 ; The Annals of Occupational Hygiene Volume 6 ; 6 ; >
     au < manifest ; exists ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 ; >
     au < manifest ; exists ; 1965 ; The Annals of Occupational Hygiene Volume 8 ; 8 ; >
     au < manifest ; exists ; 1966 ; The Annals of Occupational Hygiene Volume 9 ; 9 ; >
@@ -3851,8 +3851,8 @@
     param[base_url] = http://cjip.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2006-2007 ;The Chinese Journal of International Politics Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
