@@ -1,10 +1,10 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.11 2013-09-10 19:13:20 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.12 2013-11-13 21:01:25 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,11 +77,11 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
           "        <div class=\"gutter\"><div class=\"summationSection\"><ul class=\"references\">" +
           "<li id=\"CIT0001\"><strong>1." +
           "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-          "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159Ð175.   " +
+          "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159ï¿½175.   " +
           "<a href=\"/servlet/linkout?suffix=CIT0001&amp;dbid=20&amp;doi=10.1080%2FXXXX&amp;key=10.1080%2FXXXX\" target=\"_blank\">[Taylor &amp;Francis Online]</a>, " +
           "</li><li id=\"CIT0002\"><strong>2." +
           "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-          "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81Ð109.   " +
+          "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81ï¿½109.   " +
           "<a href=\"/servlet/linkout?suffix=CIT0002&amp;dbid=16&amp;doi=10.1080%2FJJJJ&amp;key=10.1017%2FJJJJ\" target=\"_blank\">[CrossRef]</a>" +
           "</li>" +
           "</ul></div></div> </div>" +
@@ -109,11 +109,11 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
             "        <div class=\"gutter\"><div class=\"summationSection\"><ul class=\"references\">" +
             "<li id=\"CIT0001\"><strong>1." +
             "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-            "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159Ð175.   " +
+            "<span class=\"NLM_year\">1998</span>. TITLE, 7(4): 159ï¿½175.   " +
             "<a href=\"/servlet/linkout?suffix=CIT0001&amp;dbid=20&amp;doi=10.1080%2FXXXX&amp;key=10.1080%2FXXXX\" target=\"_blank\">[Taylor &amp;Francis Online]</a>, " +
             "</li><li id=\"CIT0002\"><strong>2." +
             "</strong> <a href=\"/action/doSearch?action=blah\">Borg, Simon</a>. " +
-            "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81Ð109.   " +
+            "<span class=\"NLM_year\">2003</span>. Another Title, 36: 81ï¿½109.   " +
             "<a href=\"/servlet/linkout?suffix=CIT0002&amp;dbid=16&amp;doi=10.1080%2FJJJJ&amp;key=10.1017%2FJJJJ\" target=\"_blank\">[CrossRef]</a>" +
             "</li>" +
             "</ul></div></div> </div>" +
@@ -651,6 +651,24 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals("<strong>Version of record first published:</strong>",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream("<strong>Version of record first published:</strong>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testTitle() throws Exception {
+      assertEquals("<head></head>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<head><title>" + rand() + "</title></head>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testImgClassCover() throws Exception {
+      assertEquals("<p></p>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\"/></p>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("<p></p>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<p><img src=\"" + rand() + "\" alt=\"" + rand() + "\" class=\"cover\" /></p>"),
                                                                              Constants.DEFAULT_ENCODING)));
     }
     

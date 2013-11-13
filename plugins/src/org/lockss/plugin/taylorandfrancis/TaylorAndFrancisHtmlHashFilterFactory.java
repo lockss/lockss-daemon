@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.12 2013-09-10 19:13:20 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.13 2013-11-13 21:01:25 thib_gc Exp $
  */
 
 /*
@@ -73,6 +73,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Can change over time
         new TagNameFilter("style"),
+        // Went from Taylor &amp; Francis to Taylor & Francis
+        new TagNameFilter("title"),
+        // Went from <..."/> to <..." />
+        HtmlNodeFilters.tagWithAttribute("img", "class", "cover"),
         // Header contains institution-dependent markup, can contain
         // temporary site warnings (e.g. "Librarians' administration
         // tools are temporarily unavailable. We are working to
