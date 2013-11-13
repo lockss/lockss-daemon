@@ -829,6 +829,22 @@
 
   {
     title <
+      name = Frontline Gastroenterology ;
+      eissn = 2041-4145
+      >
+
+    param[base_url] = http://fg.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Frontline Gastroenterology Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Frontline Gastroenterology Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Frontline Gastroenterology Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Frontline Gastroenterology Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
       name = BMJ Case Reports ;
       eissn = 1757-790X
       >
