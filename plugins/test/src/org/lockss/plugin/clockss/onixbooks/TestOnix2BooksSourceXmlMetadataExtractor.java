@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix2BooksSourceXmlMetadataExtractor.java,v 1.1 2013-11-11 20:57:19 alexandraohlson Exp $
+ * $Id: TestOnix2BooksSourceXmlMetadataExtractor.java,v 1.2 2013-11-13 18:47:37 alexandraohlson Exp $
  */
 /*
 
@@ -51,7 +51,7 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.onixbooks.ClockssOnixBooksSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.onixbooks.ClockssOnix2BooksZipSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String ZIP_BASE = BASE_URL + "SUP.zip!/testdir/"; 
 

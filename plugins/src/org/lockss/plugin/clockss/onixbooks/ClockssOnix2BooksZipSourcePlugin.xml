@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.onixbooks.ClockssOnixBooksSourcePlugin</string>
+    <string>org.lockss.plugin.clockss.onixbooks.ClockssOnix2BooksZipSourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -25,32 +25,36 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Onix Books Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"Onix2 Books Zip Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Onix Books Source Plugin (CLOCKSS)</string>
+    <string>Onix2 Books Zip Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%d/.+\.(pdf|epub)$", base_url, year</string>
+      <string>"^%s%d/.+\.zip$", base_url, year</string>
     </list>
   </entry>
   <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.onixbooks.OnixBooksSourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.OnixBooksZipSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.onixbooks.OnixBooksSourceArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.onixbooks.OnixBooksZipSourceArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksSourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.Onix2BooksSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -59,7 +63,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.onixbooks.Onix3BooksSourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.Onix2BooksSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>    

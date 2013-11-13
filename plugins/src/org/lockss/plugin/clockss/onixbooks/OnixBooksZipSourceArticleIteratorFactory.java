@@ -1,5 +1,5 @@
 /*
- * $Id: OnixZipBooksSourceArticleIteratorFactory.java,v 1.1 2013-11-11 20:57:18 alexandraohlson Exp $
+ * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.1 2013-11-13 18:47:37 alexandraohlson Exp $
  */
 
 /*
@@ -43,9 +43,9 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class OnixZipBooksSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(OnixZipBooksSourceArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(OnixBooksZipSourceArticleIteratorFactory.class);
 
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //Zip file is a flat directory that has both content and xml file in it
