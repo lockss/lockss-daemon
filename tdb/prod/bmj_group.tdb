@@ -470,18 +470,6 @@
 
   {
     title <
-      name = BMJ Open Respiratory Research
-    >
-
-    param[base_url] = http://bmjopenrespres.bmj.com/
-
-    au < HighWirePressH20Plugin ; manifest ; 2013 ; BMJ Open Respiratory Research Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Respiratory Research Volume 2 ; 2 >
-
-  }
-  
-  {
-    title <
       name = BMJ Open Diabetes Research & Care
     >
 
@@ -489,6 +477,18 @@
 
     au < HighWirePressH20Plugin ; expected ; 2013 ; BMJ Open Diabetes Research & Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Diabetes Research & Care Volume 2 ; 2 >
+
+  }
+  
+  {
+    title <
+      name = BMJ Open Respiratory Research
+    >
+
+    param[base_url] = http://bmjopenrespres.bmj.com/
+
+    au < HighWirePressH20Plugin ; manifest ; 2013 ; BMJ Open Respiratory Research Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Open Respiratory Research Volume 2 ; 2 >
 
   }
   
@@ -1147,6 +1147,39 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; expected ; 2014 ; Injury Prevention Volume 20 ; 20 >
       
     }
+
+  }
+
+  {
+    title <
+      name = JAMIA ;
+      eissn = 1527-974X ;
+      issnl = 1527-974X
+    >
+
+    param[base_url] = http://jamia.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 1994 ; JAMIA Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 1995 ; JAMIA Volume 2 ; 2 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; JAMIA Volume 3 ; 3 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; JAMIA Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; JAMIA Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; JAMIA Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; JAMIA Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; JAMIA Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; JAMIA Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; JAMIA Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; JAMIA Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; JAMIA Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; JAMIA Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; JAMIA Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; JAMIA Volume 15 ; 15 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; JAMIA Volume 16 ; 16 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; JAMIA Volume 17 ; 17 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; JAMIA Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; JAMIA Volume 19 ; 19 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; JAMIA Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; JAMIA Volume 21 ; 21 >
 
   }
 
