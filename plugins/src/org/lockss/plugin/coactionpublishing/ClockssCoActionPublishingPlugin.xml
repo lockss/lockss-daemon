@@ -28,4 +28,8 @@
     <string>au_name</string>
     <string>"Co-Action Publishing Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed</string>
+  </entry>
 </map>

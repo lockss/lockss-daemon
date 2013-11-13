@@ -9,6 +9,8 @@
   comment[notReady] = RU 4449
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
+  
+  comment[permissionStatement] = This publisher has a Creative Commons license on the start pages, unlike other CLOCKSS OJS publishers, so no separate CLOCKSS permission sentence is needed
 
   {
 
