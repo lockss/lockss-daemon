@@ -89,7 +89,7 @@ public class TestBusinessSystemsLaboratoryMetadataExtractorFactory
   
   String goodIssue = "2";
   
-  public void testExtractFromTdb() throws Exception {
+  public void testExtract() throws Exception {
     
     String pdfUrl = "http://www.example.com/BSR.Vol.2-Iss.2-author.title.pdf";
     
