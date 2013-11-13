@@ -28855,9 +28855,33 @@ comment[mpj] = now published by Brill
        eissn =  2042-1834
      >
      
+      {
+      
+        pluginPrefix = org.lockss.plugin.highwire.
+        param[base_url] = http://mlj.rsmjournals.com/
+        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  
+        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
+        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
+  
+      }
+  
+      {
       pluginSuffix = HighWirePressH20Plugin      
       param[base_url] = http://mlj.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
+      comment[0] = no issue MLST-24
 
         au < exists ; 1903 ; Medico-Legal Journal Volume MLST-1 ; MLST-1 >
         au < exists ; 1904 ; Medico-Legal Journal Volume MLST-2 ; MLST-2 >
@@ -28951,22 +28975,24 @@ comment[mpj] = now published by Brill
         au < exists ; 1997 ; Medico-Legal Journal Volume 65 ; 65 >
         au < exists ; 1998 ; Medico-Legal Journal Volume 66 ; 66 >
         au < exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-        au < exists ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-        au < exists ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-        au < exists ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-        au < exists ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-        au < exists ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-        au < exists ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-        au < exists ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-        au < exists ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-        au < exists ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-        au < exists ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-        au < exists ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < exists ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
-        au < exists ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
-        au < exists ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
+        au < manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
+        au < manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
+        au < manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
+        au < manifest ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
+        au < manifest ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
+        au < manifest ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
+        au < manifest ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
+        au < manifest ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
+        au < manifest ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
+        au < manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
+        au < manifest ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
+        au < manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
+        au < ready ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
+        au < manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
         au < expected ; 2014 ; Medico-Legal Journal Volume 82 ; 82 >
     
+      }
+  
     }
     
     {
@@ -43665,62 +43691,6 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
         au < exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 >
         au < manifest ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 >
-  
-      }
-  
-    }
-  
-    {
-    
-      title <
-        name = Medico-Legal Journal ;
-        issn = 0025-8172 ;
-        eissn = 2042-1834
-      >
-  
-      {
-      
-        pluginPrefix = org.lockss.plugin.highwire.
-        param[base_url] = http://mlj.rsmjournals.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
-        au < HighWirePressPlugin ; doesNotExist ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-        au < HighWirePressPlugin ; doesNotExist ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-        au < HighWirePressPlugin ; doesNotExist ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-        au < HighWirePressPlugin ; doesNotExist ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-        au < HighWirePressPlugin ; doesNotExist ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-        au < HighWirePressPlugin ; doesNotExist ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-        au < HighWirePressPlugin ; doesNotExist ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-        au < HighWirePressPlugin ; doesNotExist ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-        au < HighWirePressPlugin ; doesNotExist ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-        au < HighWirePressPlugin ; doesNotExist ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-        au < HighWirePressPlugin ; doesNotExist ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-        au < HighWirePressPlugin ; doesNotExist ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; down ; 2011 ; Medico-Legal Journal Volume 79 [superseded] ; 79 >
-  
-      }
-  
-      {
-  
-        pluginPrefix = org.lockss.plugin.highwire.
-        param[base_url] = http://mlj.sagepub.com/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-  
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Medico-Legal Journal Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; manifest ; 2000 ; Medico-Legal Journal Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; manifest ; 2001 ; Medico-Legal Journal Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; manifest ; 2002 ; Medico-Legal Journal Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; manifest ; 2003 ; Medico-Legal Journal Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; manifest ; 2004 ; Medico-Legal Journal Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; manifest ; 2005 ; Medico-Legal Journal Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; manifest ; 2006 ; Medico-Legal Journal Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; manifest ; 2007 ; Medico-Legal Journal Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; manifest ; 2008 ; Medico-Legal Journal Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; manifest ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
-        au < HighWirePressH20Plugin ; ready ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
-        au < HighWirePressH20Plugin ; manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
   
       }
   
