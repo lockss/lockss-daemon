@@ -336,7 +336,7 @@
     au < manifest ; exists ; 2009 ; Cell Communication Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Cell Communication Insights Volume 3 ; 2010 >
     au < finished ; crawling ; 2012 ; Cell Communication Insights Volume 4 ; 2012 >
-    au < manifest ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Cell Communication Insights Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Cell Communication Insights Volume 6 ; 2014 >
 
   }
@@ -458,7 +458,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Dermatology Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Insights: Dermatology Volume 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Insights: Dermatology Volume 5 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Insights: Dermatology Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Dermatology Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Insights: Dermatology Volume 7 ; 2014 >
 
   }
@@ -498,7 +498,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 5 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Insights: Endocrinology and Diabetes Volume 7 ; 2014 >
 
   }
@@ -518,7 +518,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Gastroenterology Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Insights: Gastroenterology Volume 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Insights: Gastroenterology Volume 5 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Gastroenterology Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Insights: Gastroenterology Volume 7 ; 2014 >
     
     
@@ -579,7 +579,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Pathology Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Insights: Pathology Volume 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Insights: Pathology Volume 5 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Pathology Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Insights: Pathology Volume 7 ; 2014 >
 
   }
@@ -698,7 +698,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Urology Volume 4 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Insights: Urology Volume 5 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Insights: Urology Volume 6 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Urology Volume 7 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Insights: Urology Volume 8 ; 2014 >
 
   }
@@ -807,7 +807,7 @@
     au < manifest ; exists ; 2010 ; Clinical Medicine Reviews in Vascular Health Volume 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Clinical Medicine Reviews in Vascular Health Volume 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Clinical Medicine Reviews in Vascular Health Volume 4 ; 2012 >
-    au < manifest ; exists ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Clinical Medicine Reviews in Vascular Health Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Clinical Medicine Reviews in Vascular Health Volume 6 ; 2014 >
 
   }
@@ -910,7 +910,7 @@
     au < manifest ; exists ; 2008 ; Gene Expression to Genetical Genomics Volume 1 ; 2008 >
     au < manifest ; exists ; 2009 ; Gene Expression to Genetical Genomics Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Gene Expression to Genetical Genomics Volume 3 ; 2010 >
-    au < manifest ; exists ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Gene Expression to Genetical Genomics Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Gene Expression to Genetical Genomics Volume 7 ; 2014 >
 
   }
@@ -951,7 +951,7 @@
     au < manifest ; exists ; 2009 ; Genetics & Epigenetics Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Genetics & Epigenetics Volume 3 ; 2010 >
     au < manifest ; exists ; 2012 ; Genetics & Epigenetics Volume 4 ; 2012 >
-    au < manifest ; exists ; 2013 ; Genetics & Epigenetics Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Genetics & Epigenetics Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Genetics & Epigenetics Volume 6 ; 2014 >
 
   }
@@ -1029,7 +1029,7 @@
     au < manifest ; exists ; 2010 ; Healthy Aging & Clinical Care in the Elderly Volume 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Healthy Aging & Clinical Care in the Elderly Volume 3 ; 2011 >
     au < finished ; crawling ; 2012 ; Healthy Aging & Clinical Care in the Elderly Volume 4 ; 2012 >
-    au < manifest ; exists ; 2013 ; Healthy Aging & Clinical Care in the Elderly Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Healthy Aging & Clinical Care in the Elderly Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Healthy Aging & Clinical Care in the Elderly Volume 6 ; 2014 >
 
   }
@@ -1048,7 +1048,7 @@
     au < manifest ; exists ; 2009 ; Human Parasitic Diseases Volume 1 ; 2009 >
     au < manifest ; exists ; 2010 ; Human Parasitic Diseases Volume 2 ; 2010 >
     au < finished ; crawling ; 2011 ; Human Parasitic Diseases Volume 3 ; 2011 >
-    au < manifest ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Human Parasitic Diseases Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Human Parasitic Diseases Volume 6 ; 2014 >
 
 
@@ -1416,7 +1416,7 @@
     au < manifest ; exists ; 2010 ; Open Journal of Cardiovascular Surgery Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Open Journal of Cardiovascular Surgery Volume 4 ; 2011 >
     au < finished ; crawling ; 2012 ; Open Journal of Cardiovascular Surgery Volume 5 ; 2012 >
-    au < manifest ; exists ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Open Journal of Cardiovascular Surgery Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Open Journal of Cardiovascular Surgery Volume 7 ; 2014 >
 
   }
@@ -1589,7 +1589,7 @@
     au < manifest ; exists ; 2009 ; Reproductive Biology Insights Volume 2 ; 2009 >
     au < manifest ; exists ; 2010 ; Reproductive Biology Insights Volume 3 ; 2010 >
     au < finished ; crawling ; 2011 ; Reproductive Biology Insights Volume 4 ; 2011 >
-    au < manifest ; exists ; 2013 ; Reproductive Biology Insights Volume 6 ; 2013 >
+    au < crawling ; exists ; 2013 ; Reproductive Biology Insights Volume 6 ; 2013 >
     au < expected ; exists ; 2014 ; Reproductive Biology Insights Volume 7 ; 2014 >
     
   }
@@ -1608,7 +1608,7 @@
     au < manifest ; exists ; 2008 ; Retrovirology: Research and Treatment Volume 1-2 ; 2008 >
     au < manifest ; exists ; 2010 ; Retrovirology: Research and Treatment Volume 3 ; 2010 >
     au < finished ; crawling ; 2012 ; Retrovirology: Research and Treatment Volume 4 ; 2012 >
-    au < manifest ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 2013 >
+    au < crawling ; exists ; 2013 ; Retrovirology: Research and Treatment Volume 5 ; 2013 >
     au < expected ; exists ; 2014 ; Retrovirology: Research and Treatment Volume 6 ; 2014 >
     
   }
