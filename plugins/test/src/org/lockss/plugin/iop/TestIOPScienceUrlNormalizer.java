@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceUrlNormalizer.java,v 1.1 2013-10-10 00:10:06 etenbrink Exp $
+ * $Id: TestIOPScienceUrlNormalizer.java,v 1.2 2013-11-13 02:00:08 thib_gc Exp $
  */
 
 /*
@@ -34,35 +34,35 @@ package org.lockss.plugin.iop;
 
 import org.lockss.plugin.iop.IOPScienceUrlNormalizer;
 import org.lockss.test.LockssTestCase;
-import org.lockss.test.MockArchivalUnit;
 
 public class TestIOPScienceUrlNormalizer extends LockssTestCase {
   
   private IOPScienceUrlNormalizer norm;
-  private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
     norm = new IOPScienceUrlNormalizer();
-    mau = new MockArchivalUnit();
   }
 
   public void testIOPScienceNormalizer() throws Exception {
     
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem&relno=1", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem&relno=1", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref&relno=1", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref&relno=1", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?rel=",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?rel=som",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=som", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=som", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123", mau));
+        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123", null));
+    
+    assertEquals("http://iopscience.iop.org/1742-6596/325/1",
+        norm.normalizeUrl("http://iopscience.iop.org/1742-6596/325/1;jsessionid=00608266206E53E70416BA4D3C38E0AB.c2", null));
   }
   
 }

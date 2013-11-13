@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceUrlNormalizer.java,v 1.1 2013-10-10 00:06:43 etenbrink Exp $
+ * $Id: IOPScienceUrlNormalizer.java,v 1.2 2013-11-13 02:00:08 thib_gc Exp $
  */
 
 /*
@@ -32,40 +32,32 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iop;
 
-import org.apache.commons.lang.StringUtils;
+import java.util.regex.*;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
-import org.lockss.util.*;
 
 /**
  * <p>This URL normalizer is only for org.lockss.plugin.iop.(Clockss)IOPSciencePlugin</p>
  */
 public class IOPScienceUrlNormalizer implements UrlNormalizer {
 
-  private static final String host = "http://iopscience.iop.org/";
-  
-  protected static final String[] endings = new String[] {
-    "?rel=ref",
-    "?rel=sem",
-  };
-  
-  protected static Logger log = 
-      Logger.getLogger(IOPScienceUrlNormalizer.class);
+  private static final Pattern PATTERN =
+      Pattern.compile("((\\?rel=(ref|sem)|;jsessionid=).*)$",
+                      Pattern.CASE_INSENSITIVE);
   
   @Override
   public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
     if (url == null) {
       return null;
     }
-    if (StringUtil.startsWithIgnoreCase(url, host)) {
-      if (url.indexOf("?") > 0) {
-        // Normalize ending
-        for (String ending : endings) {
-          url = StringUtils.substringBefore(url, ending);
-        }
-      }
+    Matcher mat = PATTERN.matcher(url);
+    if (mat.find()) {
+      return url.substring(0, mat.start());
     }
-    return url;
+    else {
+      return url;
+    }
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceArticleIteratorFactory.java,v 1.6 2013-10-10 00:09:20 etenbrink Exp $
+ * $Id: IOPScienceArticleIteratorFactory.java,v 1.7 2013-11-13 02:00:08 thib_gc Exp $
  */
 
 /*
@@ -54,41 +54,41 @@ public class IOPScienceArticleIteratorFactory
       "\"^%s%s/%s/[^/]+/[^/]+(?:/(?:fulltext|pdf/[^/]+[.]pdf))?$\"," +
       " base_url, journal_issn, volume_name";
   
+  // various aspects of an article
+  // http://iopscience.iop.org/1478-3975/8/1/015001
+  // http://iopscience.iop.org/1478-3975/8/1/015001/refs
+  // http://iopscience.iop.org/1478-3975/8/1/015001/cites
+  // http://iopscience.iop.org/1478-3975/8/1/015001/fulltext
+  // http://iopscience.iop.org/1478-3975/8/1/015001/pdf/1478-3975_8_1_015001.pdf
+  
+  protected static final Pattern ABSTRACT_PATTERN =
+      Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)$",
+                      Pattern.CASE_INSENSITIVE);
+                                               
+  protected static final Pattern HTML_PATTERN =
+      Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/fulltext$",
+                      Pattern.CASE_INSENSITIVE);
+                                               
+  protected static final Pattern PDF_PATTERN =
+      Pattern.compile("/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/pdf/\\1_\\2_\\3_\\4[.]pdf$",
+                      Pattern.CASE_INSENSITIVE);
+                                               
+  // Identify groups in the pattern "/(<jissn>)/(<volnum>)/(<issnum>)/(<articlenum>).*
+  // The format of the ISSN is an eight digit number, 
+  // divided by a hyphen into two four-digit numbers.
+  // The last digit, which may be 0–9 or an X, is a check digit. 
+  // how to change from one form (aspect) of article to another
+  protected static final String ABSTRACT_REPLACEMENT = "/$1/$2/$3/$4";
+  protected static final String HTML_REPLACEMENT = "/$1/$2/$3/$4/fulltext";
+  protected static final String PDF_REPLACEMENT = "/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf";
+  protected static final String REFS_REPLACEMENT = "/$1/$2/$3/$4/refs";
+  protected static final String SUPPL_REPLACEMENT = "/$1/$2/$3/$4/media";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target)
           throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
-    // various aspects of an article
-    // http://iopscience.iop.org/1478-3975/8/1/015001
-    // http://iopscience.iop.org/1478-3975/8/1/015001/refs
-    // http://iopscience.iop.org/1478-3975/8/1/015001/cites
-    // http://iopscience.iop.org/1478-3975/8/1/015001/fulltext
-    // http://iopscience.iop.org/1478-3975/8/1/015001/pdf/1478-3975_8_1_015001.pdf
-    
-    // Identify groups in the pattern "/(<jissn>)/(<volnum>)/(<issnum>)/(<articlenum>).*
-    // The format of the ISSN is an eight digit number, 
-    // divided by a hyphen into two four-digit numbers.
-    // The last digit, which may be 0–9 or an X, is a check digit. 
-    final Pattern ABSTRACT_PATTERN = Pattern.compile(
-        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)$",
-        Pattern.CASE_INSENSITIVE);
-    
-    final Pattern HTML_PATTERN = Pattern.compile(
-        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/fulltext$",
-        Pattern.CASE_INSENSITIVE);
-    
-    final Pattern PDF_PATTERN = Pattern.compile(
-        "/([0-9]{4}-[0-9]{3}[0-9X])/([^/]+)/([^/]+)/([^/]+)/pdf/\\1_\\2_\\3_\\4[.]pdf$",
-        Pattern.CASE_INSENSITIVE);
-    
-    // how to change from one form (aspect) of article to another
-    final String ABSTRACT_REPLACEMENT = "/$1/$2/$3/$4";
-    final String HTML_REPLACEMENT = "/$1/$2/$3/$4/fulltext";
-    final String PDF_REPLACEMENT = "/$1/$2/$3/$4/pdf/$1_$2_$3_$4.pdf";
-    final String REFS_REPLACEMENT = "/$1/$2/$3/$4/refs";
-    final String SUPPL_REPLACEMENT = "/$1/$2/$3/$4/media";
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
