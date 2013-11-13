@@ -241,6 +241,7 @@
 		<value>org.lockss.plugin.maffey.MaffeyPlugin</value>
 		<value>org.lockss.plugin.sjdm.JudgmentAndDecisionMakingPlugin</value>
 		<value>org.lockss.plugin.metapress.MetaPressPlugin</value>
+		<value>org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin</value>
       </list>
     </property>
 
