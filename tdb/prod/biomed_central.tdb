@@ -2780,7 +2780,7 @@
       au < released ; 2010 ; Chinese Medicine Volume 5 ; 5 >
       au < released ; 2011 ; Chinese Medicine Volume 6 ; 6 >
       au < released ; 2012 ; Chinese Medicine Volume 7 ; 7 >
-      au < manifest ; 2013 ; Chinese Medicine Volume 8 ; 8 >
+      au < testing ; 2013 ; Chinese Medicine Volume 8 ; 8 >
       au < expected ; 2014 ; Chinese Medicine Volume 9 ; 9 >
 
     }
@@ -2809,7 +2809,7 @@
 
       au < ready ; 2011 ; Chiropractic & Manual Therapies Volume 19 ; 19 >
       au < ready ; 2012 ; Chiropractic & Manual Therapies Volume 20 ; 20 >
-      au < manifest ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
+      au < testing ; 2013 ; Chiropractic & Manual Therapies Volume 21 ; 21 >
       au < expected ; 2014 ; Chiropractic & Manual Therapies Volume 22 ; 22 >
       }
     }
@@ -2863,7 +2863,7 @@
       param[journal_issn] = 2046-2530
 
       au < ready ; 2012 ; Cilia Volume 1 ; 1 >
-      au < manifest ; 2013 ; Cilia Volume 2 ; 2 >
+      au < testing ; 2013 ; Cilia Volume 2 ; 2 >
       au < expected ; 2014 ; Cilia Volume 3 ; 3 >
 
     }
@@ -2888,7 +2888,7 @@
       au < released ; 2010 ; Clinical and Molecular Allergy Volume 8 ; 8 >
       au < released ; 2011 ; Clinical and Molecular Allergy Volume 9 ; 9 >
       au < released ; 2012 ; Clinical and Molecular Allergy Volume 10 ; 10 >
-      au < manifest ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
+      au < testing ; 2013 ; Clinical and Molecular Allergy Volume 11 ; 11 >
       au < expected ; 2014 ; Clinical and Molecular Allergy Volume 12 ; 12 >
       
     }
@@ -3089,7 +3089,7 @@
       au < released ; 2009 ; Critical Care Volume 13 ; 13 >
       au < released ; 2010 ; Critical Care Volume 14 ; 14 >
       au < released ; 2011 ; Critical Care Volume 15 ; 15 >
-      au < testing ; 2012 ; Critical Care Volume 16 ; 16 >
+      au < manifest ; 2012 ; Critical Care Volume 16 ; 16 >
       au < expected ; 2013 ; Critical Care Volume 17 ; 17 >
       au < expected ; 2014 ; Critical Care Volume 18 ; 18 >
 
@@ -3603,7 +3603,7 @@
       au < released ; 2009 ; Genome Biology Volume 10 ; 10 >
       au < released ; 2010 ; Genome Biology Volume 11 ; 11 >
       au < released ; 2011 ; Genome Biology Volume 12 ; 12 >
-      au < testing ; 2012 ; Genome Biology Volume 13 ; 13 >
+      au < manifest ; 2012 ; Genome Biology Volume 13 ; 13 >
       au < exists ; 2013 ; Genome Biology Volume 14 ; 14 >
       au < expected ; 2014 ; Genome Biology Volume 15 ; 15 >
       
@@ -3656,7 +3656,7 @@
       param[base_url] = http://www.gigasciencejournal.com/
       param[journal_issn] = 2047-217X
 
-      au < testing ; 2012 ; GigaScience Volume 1 ; 1 >
+      au < manifest ; 2012 ; GigaScience Volume 1 ; 1 >
       au < manifest ; 2013 ; GigaScience Volume 2 ; 2 >
       au < expected ; 2014 ; GigaScience Volume 3 ; 3 >
 
@@ -3695,11 +3695,11 @@
       param[base_url] = http://www.gutpathogens.com/
       param[journal_issn] = 1757-4749
 
-      au < testing ; 2009 ; Gut Pathogens Volume 1 ; 1 >
-      au < testing ; 2010 ; Gut Pathogens Volume 2 ; 2 >
-      au < testing ; 2011 ; Gut Pathogens Volume 3 ; 3 >
+      au < manifest ; 2009 ; Gut Pathogens Volume 1 ; 1 >
+      au < manifest ; 2010 ; Gut Pathogens Volume 2 ; 2 >
+      au < manifest ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < ready ; 2012 ; Gut Pathogens Volume 4 ; 4 >
-      au < testing ; 2013 ; Gut Pathogens Volume 5 ; 5 >
+      au < manifest ; 2013 ; Gut Pathogens Volume 5 ; 5 >
       au < expected ; 2014 ; Gut Pathogens Volume 6 ; 6 >
 
     }
@@ -3745,7 +3745,7 @@
       au < released ; 2009 ; Head & Face Medicine Volume 5 ; 5 >
       au < released ; 2010 ; Head & Face Medicine Volume 6 ; 6 >
       au < released ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
-      au < testing ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
+      au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < manifest ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
       au < expected ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
 
