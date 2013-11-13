@@ -187,5 +187,30 @@
 
   }
 
+  {
+    title <
+      name = Veterinary Record Open 
+    >
+
+    param[base_url] = http://vetrecordopen.bmj.com/
+
+    au < expected ; 2014 ; Veterinary Record Open Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = Veterinary Record Case Reports ;
+      eissn = 2052-6121
+      
+    >
+
+    param[base_url] = http://vetrecordcasereports.bmj.com/
+
+    au < exists ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 >
+    au < expected ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 >
+
+  }
+
 }
 
