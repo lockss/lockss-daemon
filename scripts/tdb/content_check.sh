@@ -10,8 +10,7 @@ echo "---------------------"
 echo "*Status typos gln: "
 cat ../../tdb/prod/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 echo "*Status variations clockssingest: "
-#cat ../../tdb/clockssingest/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist | grep -vx crawling | grep -vx zapped
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -c status,status2 | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "released,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "zapped,down" | grep -vw "doesNotExist,doesNotExist"
+cat ../../tdb/clockssingest/*.tdb | ./tdbout -c status,status2 | sort | uniq -c | sort -n | grep -vw "manifest,exists" | grep -vw "crawling,exists" | grep -vw "finished,crawling" | grep -vw "exists,exists" | grep -vw "down,crawling" | grep -vw "doNotProcess,doNotProcess" | grep -vw "expected,exists" | grep -vw "testing,exists" | grep -vw "notReady,exists" | grep -vw "ingNotReady,exists" | grep -vw "zapped,finished" | grep -vw "doesNotExist,doesNotExist"
 echo "*Status typos ibictpln: "
 cat ../../tdb/ibictpln/*.tdb | ./tdbout -t status | grep -vx manifest | grep -vx released | grep -vx expected | grep -vx exists | grep -vx testing | grep -vx wanted | grep -vx ready | grep -vx down | grep -vx superseded | grep -vx doNotProcess | grep -vx notReady | grep -vx doesNotExist
 #
