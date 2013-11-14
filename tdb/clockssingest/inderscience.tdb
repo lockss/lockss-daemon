@@ -898,7 +898,7 @@
       au < finished ; crawling ; 2008-2010 ; International Journal of Behavioural Accounting and Finance Volume 1 ; 1 >
       au < finished ; crawling ; 2011 ; International Journal of Behavioural Accounting and Finance Volume 2 ; 2 >
       au < zapped ; finished ; 2012 ; International Journal of Behavioural Accounting and Finance Volume 3 ; 3 >
-      au < manifest ; exists ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
+      au < crawling ; exists ; 2013 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 >
       au < expected ; exists ; 2014 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 >
 
     }
@@ -2154,7 +2154,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Decision Sciences, Risk and Management Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Decision Sciences, Risk and Management Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Decision Sciences, Risk and Management Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Decision Sciences, Risk and Management Volume 5 ; 5 >
       au < expected ; exists ; 2014 ; International Journal of Decision Sciences, Risk and Management Volume 6 ; 6 >
 
     }
@@ -3357,7 +3357,7 @@
       au < crawling ; exists ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 >
       au < finished ; crawling ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 >
       au < zapped ; finished ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 >
-      au < manifest ; exists ; 2013 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
+      au < crawling ; exists ; 2013 ; International Journal of Global Environmental Issues Volume 13 ; 13 >
       au < expected ; exists ; 2014 ; International Journal of Global Environmental Issues Volume 14 ; 14 >
 
     }
@@ -4046,7 +4046,7 @@
       param[journal_issn] = 1755-1528
       
       au < zapped ; finished ; 2009-2012 ; International Journal of Innovation in Education Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; International Journal of Innovation in Education Volume 2 ; 2 >
+      au < crawling ; exists ; 2013 ; International Journal of Innovation in Education Volume 2 ; 2 >
       au < expected ; exists ; 2014 ; International Journal of Innovation in Education Volume 3 ; 3 >
 
     }
@@ -4183,7 +4183,7 @@
       param[journal_issn] = 1745-3240
       
       au < manifest ; exists ; 2007-2012 ; International Journal of Intelligent Enterprise Volume 1 ; 1 >
-      au < manifest ; exists ; 2013 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
+      au < crawling ; exists ; 2013 ; International Journal of Intelligent Enterprise Volume 2 ; 2 >
       au < expected ; exists ; 2014 ; International Journal of Intelligent Enterprise Volume 3 ; 3 >
 
     }
@@ -7060,7 +7060,7 @@
       au < finished ; crawling ; 2010 ; International Journal of Strategic Change Management Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Strategic Change Management Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Strategic Change Management Volume 4 ; 4 >
-      au < manifest ; exists ; 2013 ; International Journal of Strategic Change Management Volume 5 ; 5 >
+      au < crawling ; exists ; 2013 ; International Journal of Strategic Change Management Volume 5 ; 5 >
       au < expected ; exists ; 2014 ; International Journal of Strategic Change Management Volume 6 ; 6 >
 
     }
@@ -7819,7 +7819,7 @@
       au < finished ; crawling ; 2010 ; International Journal of Value Chain Management Volume 4 ; 4 >
       au < zapped ; finished ; 2011 ; International Journal of Value Chain Management Volume 5 ; 5 >
       au < finished ; crawling ; 2012 ; International Journal of Value Chain Management Volume 6 ; 6 >
-      au < manifest ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
+      au < crawling ; exists ; 2013 ; International Journal of Value Chain Management Volume 7 ; 7 >
       au < expected ; exists ; 2014 ; International Journal of Value Chain Management Volume 8 ; 8 >
 
     }
