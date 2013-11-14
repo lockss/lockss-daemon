@@ -10,6 +10,7 @@ my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve 
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
 my $cc_license_tag = "rel..license";
+my $cc_license_url = "href=.http://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0)/?.";
 my $cc_by_tag = "href..http://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
 my $igi_tag = "/gateway/issue/";
@@ -194,7 +195,7 @@ while (my $line = <>) {
   }
         sleep(5);
         
-  } elsif ($plugin eq "ClockssOJS2Plugin" || $plugin eq "ClockssCoActionPublishingPlugin") {
+  } elsif ($plugin eq "ClockssOJS2Plugin") {
         #Url with permission statement
         $url_m = sprintf("%sindex.php/%s/about/editorialPolicies", 
             $param{base_url}, $param{journal_id});
@@ -209,10 +210,31 @@ while (my $line = <>) {
         my $resp_s = $ua->request($req_s);
         #For reporting at the end
         $man_url = $start_url ;
-    if (($resp_m->is_success) && ($resp_m->is_success)) {
+    if (($resp_s->is_success) && ($resp_m->is_success)) {
       my $man_contents = $resp_m->content;
       my $start_contents = $resp_s->content;
       if (defined($man_contents) && defined($start_contents) && (($man_contents =~ m/$clockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
+         $result = "Manifest"
+      } else {
+         $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+        sleep(5);
+        
+  } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
+        #Url with list of urls for issues
+        $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
+            $param{base_url}, $param{journal_id}, $param{year});
+        $start_url = uri_unescape($url_s);
+        my $req_s = HTTP::Request->new(GET, $start_url);
+        my $resp_s = $ua->request($req_s);
+        #For reporting at the end
+        $man_url = $start_url ;
+    if ($resp_s->is_success) {
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) & (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
          $result = "Manifest"
       } else {
          $result = "--"
