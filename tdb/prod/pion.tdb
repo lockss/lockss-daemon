@@ -322,7 +322,7 @@
     	issn = 2041-6695 
     >
     
-    plugin = org.lockss.plugin.pion.ClockssPionIPerceptionPlugin
+    plugin = org.lockss.plugin.pion.PionIPerceptionPlugin
     
     param[base_url] = http://i-perception.perceptionweb.com/
     param[base_url2] = http://www.perceptionweb.com/
