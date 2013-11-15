@@ -194,7 +194,7 @@
 
     param[base_url] = http://vetrecordopen.bmj.com/
 
-    au < expected ; 2014 ; Veterinary Record Open Volume 1 ; 1 >
+    au < manifest ; 2014 ; Veterinary Record Open Volume 1 ; 1 >
 
   }
 
@@ -207,7 +207,7 @@
 
     param[base_url] = http://vetrecordcasereports.bmj.com/
 
-    au < exists ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 >
+    au < manifest ; 2013 ; Veterinary Record Case Reports Volume 1 ; 1 >
     au < expected ; 2014 ; Veterinary Record Case Reports Volume 2 ; 2 >
 
   }
