@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.24 2013-08-09 17:48:30 wkwilson Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.25 2013-11-18 22:46:06 thib_gc Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,22 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.Tag;
+import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
+import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.FilterUtil;
-import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.*;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 public class IngentaJournalHtmlFilterFactory implements FilterFactory {
 	Logger log = Logger.getLogger("IngentaJournalHtmlFilterFactory");
@@ -62,7 +57,8 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "rightnavbar"), 
         // Filter out <div id="footerarea">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "footerarea"),
-        // Filter out <div class="article-pager">...</div>
+        // Filter out pagers, that get new issues or articles appended
+        HtmlNodeFilters.tagWithAttribute("p", "id", "pager"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "article-pager"),
         // Filter out <div id="purchaseexpand"...>...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "purchaseexpand"),
@@ -120,8 +116,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "onclick", "[\\?&]exitTargetId="),
         // Filter out <input name="exitTargetId">
         HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId"),
-        // Icon on article reference page
+        // Access icon that appears over time -- and its mis-spelling
         HtmlNodeFilters.tagWithAttribute("span", "class", "access-icon"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "acess-icon"),
         // javascript for embedded figure has checksum & expires that changes
         //NOTE - at the moment this does not go beyond nested <p></p> pairs to the closing </a>
         //when possible in the daemon, must subclass and do this for <a> tag
