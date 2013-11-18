@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.2 2013-10-24 21:08:45 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.3 2013-11-18 21:39:19 fergaloy-sf Exp $
  */
 
 /*
@@ -162,16 +162,19 @@ public class FetchTimeExporter {
       + ", mi2." + FETCH_TIME_COLUMN
       + ", a." + AU_KEY_COLUMN
       + ", u." + URL_COLUMN
+      + ", d." + DOI_COLUMN
       + " from " + PUBLISHER_TABLE + " pr"
       + "," + PLUGIN_TABLE + " pl"
       + "," + PUBLICATION_TABLE + " pn"
       + "," + MD_ITEM_NAME_TABLE + " min1"
-      + "," + MD_ITEM_TABLE + " mi2"
       + "," + MD_ITEM_NAME_TABLE + " min2"
       + "," + MD_ITEM_TYPE_TABLE + " mit"
       + "," + AU_MD_TABLE + " am"
       + "," + AU_TABLE + " a"
       + "," + URL_TABLE + " u"
+      + "," + MD_ITEM_TABLE + " mi2"
+      + " left outer join " + DOI_TABLE + " d"
+      + " on mi2." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
       + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi2." + PARENT_SEQ_COLUMN
@@ -213,6 +216,9 @@ public class FetchTimeExporter {
   // The key used to store in the database the identifier of the last metadata
   // item for which the data has been exported.
   private String lastMdItemSeqLabel = null;
+
+  // The version of the export file format.
+  private int exportVersion = 1;
 
   /**
    * Constructor.
@@ -643,10 +649,15 @@ public class FetchTimeExporter {
 	    if (log.isDebug3())
 	      log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
 
+	    String doi = results.getString(DOI_COLUMN);
+	    if (log.isDebug3())
+	      log.debug3(DEBUG_HEADER + "doi = " + doi);
+
 	    // Create the line to be written to the output file.
 	    StringBuilder sb = new StringBuilder();
 
-	    sb.append(serverName).append(SEPARATOR)
+	    sb.append(exportVersion).append(SEPARATOR)
+	    .append(serverName).append(SEPARATOR)
 	    .append(publisherName).append(SEPARATOR)
 	    .append(pluginId).append(SEPARATOR)
 	    .append(auKey).append(SEPARATOR)
@@ -656,7 +667,8 @@ public class FetchTimeExporter {
 	    .append(itemTitle).append(SEPARATOR)
 	    .append(date).append(SEPARATOR)
 	    .append(fetchTime).append(SEPARATOR)
-	    .append(accessUrl);
+	    .append(accessUrl).append(SEPARATOR)
+	    .append(doi);
 
 	    // Write the line to the export output file.
 	    writer.println(sb.toString());
