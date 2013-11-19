@@ -177,10 +177,10 @@
     param[journal_id] = jeps
     comment[0] = no issue in 2011
 
-    au < exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
-    au < exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
-    au < exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
-    au < exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
+    au < manifest ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
+    au < manifest ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
+    au < manifest ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
+    au < manifest ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < expected ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
