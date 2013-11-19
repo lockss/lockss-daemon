@@ -1,0 +1,148 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Digital Commons Repository Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection</key>
+        <displayName>Collection</displayName>
+        <description>Name of the collection in the URL structure</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_type</key>
+        <displayName>Collection Type</displayName>
+        <description>Name of the collection type in the URL structure</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Digital Commons Repository Plugin, Base URL %s, Collection %s, Collection Type %s, Year %d", base_url, collection, collection_type, year</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>99</int>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:BePress</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%s%s/lockss-%s-%s.html", base_url, collection, collection_type, collection</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <!-- http://repository.cmu.edu/statistics -->
+      <string>1,"^%s%s$", base_url, collection</string>
+      <!-- http://repository.cmu.edu/statistics/122/ -->
+      <string>1,"^%s%s/", base_url, collection</string>
+      <!-- http://repository.cmu.edu/cgi/viewcontent.cgi?article=1108&context=statistics -->
+      <string>1,"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scgi/viewcontent\.cgi\?.*context=%s", base_url, collection</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlCrawlFilterFactory</string>
+  </entry>
+    <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+  <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
