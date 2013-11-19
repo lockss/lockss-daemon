@@ -1,14 +1,18 @@
 package org.lockss.extractor;
 
+import org.jsoup.Jsoup;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.test.StringInputStream;
-import org.lockss.util.Constants;
-import org.lockss.util.ListUtil;
-import org.lockss.util.SetUtil;
-import org.lockss.util.TypedEntryMap;
+import org.lockss.util.*;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
+import java.util.Set;
 
 public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
   public static final String startUrl = "http://www.example.com/index.html";
@@ -16,6 +20,11 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
   private MockArchivalUnit m_mau;
   private JsoupHtmlLinkExtractor m_extractor;
   private MyLinkExtractorCallback m_callback;
+  private static final String HTTP = "http";
+  private static final String HEADER = "header";
+  private static final String CONTENT = "content";
+  private static final String END_OF_INPUT = "\\Z";
+  private static final String NEWLINE = System.getProperty("line.separator");
 
   public void setUp() throws Exception {
     super.setUp();
@@ -29,6 +38,22 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
   }
 
   public void testRegisterTagExtractor() throws Exception {
+
+  }
+
+  public void testCharsetChange() throws Exception {
+    String test = "http://www.pensoft.net/journals/neobiota/issue/11/";
+    URL url = new URL(test);
+    MyLinkExtractorCallback callback = new MyLinkExtractorCallback();
+
+    m_extractor.extractUrls(m_mau, url.openStream(), ENC, test, callback);
+    Set<String> urls = callback.getFoundUrls();
+    for(String a_url : urls)
+    {
+      if(a_url.contains("article")) {
+        UrlUtil.openInputStream(a_url);
+       }
+    }
 
   }
 
@@ -815,6 +840,41 @@ public class TestJsoupHtmlLinkExtractor extends LockssTestCase {
     java.util.Set<String> expected = new java.util.HashSet<String>();
     java.util.Collections.addAll(expected, url1, url2, url3, url4, url5);
     assertEquals(expected, m_callback.getFoundUrls());
+  }
+
+  private String getPageHeader(URL fURL) throws IOException{
+    StringBuilder result = new StringBuilder();
+
+    URLConnection connection = null;
+
+    connection = fURL.openConnection();
+
+    //not all headers come in key-value pairs - sometimes the key is
+    //null or an empty String
+    int headerIdx = 0;
+    String headerKey = null;
+    String headerValue = null;
+    while ( (headerValue = connection.getHeaderField(headerIdx)) != null ) {
+      headerKey = connection.getHeaderFieldKey(headerIdx);
+      if (headerKey != null && headerKey.length()>0) {
+        result.append(headerKey);
+        result.append(" : ");
+      }
+      result.append(headerValue);
+      result.append(NEWLINE);
+      headerIdx++;
+    }
+    return result.toString();
+  }
+
+  private String getPageContent(URL fURL) throws IOException {
+    String result = null;
+    URLConnection connection = null;
+    connection =  fURL.openConnection();
+    Scanner scanner = new Scanner(connection.getInputStream());
+    scanner.useDelimiter(END_OF_INPUT);
+    result = scanner.next();
+    return result;
   }
 
   private void checkBadTags(String[] badTags, String closeTag)

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.62 2013-05-08 09:10:53 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.63 2013-11-19 01:20:01 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -37,13 +37,13 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.PluginBehaviorException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.urlconn.*;
+import org.springframework.web.util.UriUtils;
 
 /** Utilities for URLs and URLConnections
  */
@@ -71,18 +71,18 @@ public class UrlUtil {
    * <li>PATH_TRAVERSAL_ACTION_THROW (3) throw
    * MalformedURLException</ol> */
   public static final String PARAM_PATH_TRAVERSAL_ACTION =
-    PREFIX + "pathTraversalAction";
+      PREFIX + "pathTraversalAction";
   public static final int DEFAULT_PATH_TRAVERSAL_ACTION =
-    PATH_TRAVERSAL_ACTION_REMOVE;
+      PATH_TRAVERSAL_ACTION_REMOVE;
 
   /** If true, hex chars in URL encodings are normalized to upper case */
   public static final String PARAM_NORMALIZE_URL_ENCODING_CASE =
-    PREFIX + "normalizeUrlEncodingCase";
+      PREFIX + "normalizeUrlEncodingCase";
   public static final boolean DEFAULT_NORMALIZE_URL_ENCODING_CASE = true;
 
   /** If true, trailing ? is removed from URLs */
   public static final String PARAM_NORMALIZE_EMPTY_QUERY =
-    PREFIX + "normalizeEmptyQuery";
+      PREFIX + "normalizeEmptyQuery";
   public static final boolean DEFAULT_NORMALIZE_EMPTY_QUERY = true;
 
   /** If true, use Apache Commons HttpClient, if false use native Java
@@ -96,7 +96,7 @@ public class UrlUtil {
    * with the embedded URL (e.g.,
    * <code>http://www.pubsite.com/images/blip.ico</code>). */
   public static final String PARAM_NORMALIZE_AKAMAI_URL =
-    PREFIX + "normalizeAkamaiUrl";
+      PREFIX + "normalizeAkamaiUrl";
   public static final boolean DEFAULT_NORMALIZE_AKAMAI_URL = false;
 
   /** If true, plugin-supplied URL normalizers are allowed to change the
@@ -104,39 +104,39 @@ public class UrlUtil {
    * which the AU has permission to collect content.
    */
   public static final String PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM =
-    PREFIX + "allowSiteNormalizeChangeStem";
+      PREFIX + "allowSiteNormalizeChangeStem";
   public static final boolean DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM = true;
 
   private static boolean useHttpClient = DEFAULT_USE_HTTPCLIENT;
   private static int pathTraversalAction = DEFAULT_PATH_TRAVERSAL_ACTION;
   private static boolean normalizeUrlEncodingCase =
-    DEFAULT_NORMALIZE_URL_ENCODING_CASE;
+      DEFAULT_NORMALIZE_URL_ENCODING_CASE;
   private static boolean normalizeEmptyQuery = DEFAULT_NORMALIZE_EMPTY_QUERY;
   private static boolean normalizeAkamaiUrl = DEFAULT_NORMALIZE_AKAMAI_URL;
   private static boolean allowSiteNormalizeChangeStem =
-    DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM;
+      DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM;
 
 
   /** Called by org.lockss.config.MiscConfig
    */
   public static void setConfig(Configuration config,
-			       Configuration oldConfig,
-			       Configuration.Differences diffs) {
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
     if (diffs.contains(PREFIX)) {
       useHttpClient = config.getBoolean(PARAM_USE_HTTPCLIENT,
-					DEFAULT_USE_HTTPCLIENT);
+          DEFAULT_USE_HTTPCLIENT);
       pathTraversalAction = config.getInt(PARAM_PATH_TRAVERSAL_ACTION,
-					  DEFAULT_PATH_TRAVERSAL_ACTION);
+          DEFAULT_PATH_TRAVERSAL_ACTION);
       normalizeUrlEncodingCase =
-	config.getBoolean(PARAM_NORMALIZE_URL_ENCODING_CASE,
-			  DEFAULT_NORMALIZE_URL_ENCODING_CASE);
+          config.getBoolean(PARAM_NORMALIZE_URL_ENCODING_CASE,
+              DEFAULT_NORMALIZE_URL_ENCODING_CASE);
       normalizeEmptyQuery = config.getBoolean(PARAM_NORMALIZE_EMPTY_QUERY,
-					      DEFAULT_NORMALIZE_EMPTY_QUERY);
+          DEFAULT_NORMALIZE_EMPTY_QUERY);
       normalizeAkamaiUrl = config.getBoolean(PARAM_NORMALIZE_AKAMAI_URL,
-					     DEFAULT_NORMALIZE_AKAMAI_URL);
+          DEFAULT_NORMALIZE_AKAMAI_URL);
       allowSiteNormalizeChangeStem =
-	config.getBoolean(PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM,
-			  DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM);
+          config.getBoolean(PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM,
+              DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM);
     }
   }
 
@@ -147,8 +147,8 @@ public class UrlUtil {
   }
 
   static Pattern AKAMAI_PATH_PAT =
-    RegexpUtil.uncheckedCompile("/(?:[^/]+/){4}([^/]+)(/.*)?$",
-				Perl5Compiler.READ_ONLY_MASK);
+      RegexpUtil.uncheckedCompile("/(?:[^/]+/){4}([^/]+)(/.*)?$",
+          Perl5Compiler.READ_ONLY_MASK);
 
   /** Normalize URL to a canonical form: lowercase scheme and hostname,
    * normalize path.  Removes any reference part.  XXX need to add
@@ -194,14 +194,14 @@ public class UrlUtil {
     }
 
     if (normalizeAkamaiUrl &&
-	StringUtil.endsWithIgnoreCase(host, ".akamai.net")) {
+        StringUtil.endsWithIgnoreCase(host, ".akamai.net")) {
       Perl5Matcher matcher = RegexpUtil.getMatcher();
       if (matcher.contains(path, AKAMAI_PATH_PAT)) {
-	MatchResult matchResult = matcher.getMatch();
-	host = matchResult.group(1);
-	path = matchResult.group(2);
-	changed = true;
-	log.debug2("Akamai rewrite newhost, newpath: " + host + ", " + path);
+        MatchResult matchResult = matcher.getMatch();
+        host = matchResult.group(1);
+        path = matchResult.group(2);
+        changed = true;
+        log.debug2("Akamai rewrite newhost, newpath: " + host + ", " + path);
       }
     }
 
@@ -209,8 +209,8 @@ public class UrlUtil {
     if (host != null) {
       String newHost = host.toLowerCase(); // lowercase host
       if (!host.equals(newHost)) {
-	host = newHost;
-	changed = true;
+        host = newHost;
+        changed = true;
       }
     }
 
@@ -227,19 +227,19 @@ public class UrlUtil {
     } else {
       String normPath = normalizePath(path, pathTraversalAction);
       if (!normPath.equals(path)) {
-	if (log.isDebug3()) log.debug3("Normalized "+path+" to "+normPath);
-	path = normPath;
-	changed = true;
+        if (log.isDebug3()) log.debug3("Normalized "+path+" to "+normPath);
+        path = normPath;
+        changed = true;
       }
     }
 
     if (!StringUtil.isNullString(query)) {
       String normQuery = normalizeUrlEncodingCase(query);
       if (!normQuery.equals(query)) {
-	if (log.isDebug3())
-	  log.debug3("Normalized query "+query+" to "+normQuery);
-	query = normQuery;
-	changed = true;
+        if (log.isDebug3())
+          log.debug3("Normalized query "+query+" to "+normQuery);
+        query = normQuery;
+        changed = true;
       }
     } else if (normalizeEmptyQuery && "".equals(query)) {
       query = null;
@@ -252,9 +252,9 @@ public class UrlUtil {
 //   }
     if (changed) {
       urlString =
-	new URL(protocol, host, port,
-		(StringUtil.isNullString(query) ? path : (path + "?" + query))
-		).toString();
+          new URL(protocol, host, port,
+              (StringUtil.isNullString(query) ? path : (path + "?" + query))
+          ).toString();
       log.debug3("Changed, so returning "+urlString);
     }
     return urlString;
@@ -281,61 +281,61 @@ public class UrlUtil {
       site = url;
     } else {
       try {
-	site = au.siteNormalizeUrl(url);
+        site = au.siteNormalizeUrl(url);
       } catch (RuntimeException w) {
-	throw new MalformedURLException(url);
+        throw new MalformedURLException(url);
       }
       if (site != url) {
-	String normSite = normalizeUrl(site);
-	if (normSite.equals(url)) {
-	  // ensure return arg if equivalent
-	  return normSite;
-	} else {
-	  // check whether stem was changed
-	  URL origUrl = new URL(url);
-	  URL siteUrl = new URL(normSite);
-	  if (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
-	      origUrl.getHost().equals(siteUrl.getHost()) &&
-	      isEquivalentPort(origUrl.getProtocol(),
-			       origUrl.getPort(), siteUrl.getPort())) {
-	    return normSite;
-	  } else if (allowSiteNormalizeChangeStem) {
-	    // Illegal normalization if either the original stem or the new
-	    // one aren't known stems for this AU.
-	    // (This constraint is required by the stam -> candidate-AUs
-	    // mapping in PluginManager.  If the pre-normalized stem isn't
-	    // in the map, the AU won't be found.
+        String normSite = normalizeUrl(site);
+        if (normSite.equals(url)) {
+          // ensure return arg if equivalent
+          return normSite;
+        } else {
+          // check whether stem was changed
+          URL origUrl = new URL(url);
+          URL siteUrl = new URL(normSite);
+          if (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
+              origUrl.getHost().equals(siteUrl.getHost()) &&
+              isEquivalentPort(origUrl.getProtocol(),
+                  origUrl.getPort(), siteUrl.getPort())) {
+            return normSite;
+          } else if (allowSiteNormalizeChangeStem) {
+            // Illegal normalization if either the original stem or the new
+            // one aren't known stems for this AU.
+            // (This constraint is required by the stam -> candidate-AUs
+            // mapping in PluginManager.  If the pre-normalized stem isn't
+            // in the map, the AU won't be found.
 
-	    checkFrom: {
-	      String origStem = UrlUtil.getUrlPrefix(url);
-	      for (String stem : au.getUrlStems()) {
-		if (origStem.equalsIgnoreCase(stem)) {
-		  break checkFrom;
-		}
-	      }
-	      throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-						") changed stem from " +
-						"one not known for AU: " +
-						url);
-	    }
-	    checkTo: {
-	      String siteStem = UrlUtil.getUrlPrefix(normSite);
-	      for (String stem : au.getUrlStems()) {
-		if (siteStem.equalsIgnoreCase(stem)) {
-		  break checkTo;
-		}
-	      }
-	      throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-						") changed stem to " +
-						"one not known for AU: " +
-						site);
-	    }
-	  } else {
-	    throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-					      ") changed stem to " +
-					      site);
-	  }
-	}
+            checkFrom: {
+              String origStem = UrlUtil.getUrlPrefix(url);
+              for (String stem : au.getUrlStems()) {
+                if (origStem.equalsIgnoreCase(stem)) {
+                  break checkFrom;
+                }
+              }
+              throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+                                                ") changed stem from " +
+                                                "one not known for AU: " +
+                                                url);
+            }
+            checkTo: {
+              String siteStem = UrlUtil.getUrlPrefix(normSite);
+              for (String stem : au.getUrlStems()) {
+                if (siteStem.equalsIgnoreCase(stem)) {
+                  break checkTo;
+                }
+              }
+              throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+                                                ") changed stem to " +
+                                                "one not known for AU: " +
+                                                site);
+            }
+          } else {
+            throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+                                              ") changed stem to " +
+                                              site);
+          }
+        }
       }
     }
     return normalizeUrl(site);
@@ -388,10 +388,10 @@ public class UrlUtil {
 
     // quickly determine whether anything needs to be done
     if (! (path.endsWith("/.") || path.endsWith("/..") ||
-	   path.equals("..") || path.equals(".") ||
-	   path.startsWith("../") || path.startsWith("./") ||
-	   path.indexOf("/./") >= 0 || path.indexOf("/../") >= 0 ||
-	   path.indexOf("//") >= 0)) {
+           path.equals("..") || path.equals(".") ||
+           path.startsWith("../") || path.startsWith("./") ||
+           path.indexOf("/./") >= 0 || path.indexOf("/../") >= 0 ||
+           path.indexOf("//") >= 0)) {
       return path;
     }
 
@@ -403,25 +403,25 @@ public class UrlUtil {
       String comp = st.nextToken();
       prevdotdot = false;
       if (comp.equals(".")) {
-	continue;
+        continue;
       }
       if (comp.equals("..")) {
-	if (names.size() > 0) {
-	  names.remove(names.size() - 1);
-	  prevdotdot = true;
-	} else {
-	  switch (pathTraversalAction) {
-	  case PATH_TRAVERSAL_ACTION_THROW:
-	    throw new MalformedURLException("Illegal dir traversal: " + path);
-	  case PATH_TRAVERSAL_ACTION_ALLOW:
-	    dotdotcnt++;
-	    break;
-	  case PATH_TRAVERSAL_ACTION_REMOVE:
-	    break;
-	  }
-	}
+        if (names.size() > 0) {
+          names.remove(names.size() - 1);
+          prevdotdot = true;
+        } else {
+          switch (pathTraversalAction) {
+            case PATH_TRAVERSAL_ACTION_THROW:
+              throw new MalformedURLException("Illegal dir traversal: " + path);
+            case PATH_TRAVERSAL_ACTION_ALLOW:
+              dotdotcnt++;
+              break;
+            case PATH_TRAVERSAL_ACTION_REMOVE:
+              break;
+          }
+        }
       } else {
-	names.add(comp);
+        names.add(comp);
       }
     }
 
@@ -431,14 +431,14 @@ public class UrlUtil {
     }
     for (int ix = dotdotcnt; ix > 0; ix--) {
       if (ix > 1 || !names.isEmpty()) {
-	sb.append("../");
+        sb.append("../");
       } else {
-	sb.append("..");
+        sb.append("..");
       }
     }
     StringUtil.separatedString(names, "/", sb);
     if ((path.endsWith("/") || (prevdotdot && !names.isEmpty())) &&
-	!(sb.length() == 1 && path.startsWith("/"))) {
+        !(sb.length() == 1 && path.startsWith("/"))) {
       sb.append("/");
     }
     return sb.toString();
@@ -447,7 +447,7 @@ public class UrlUtil {
   public static String normalizeUrlEncodingCase(String str) {
     if (!normalizeUrlEncodingCase) {
       return str;
-    }      
+    }
     int pos = str.indexOf('%');
     if (pos < 0) {
       return str;
@@ -456,14 +456,14 @@ public class UrlUtil {
     int len = str.length();
     do {
       if (len < pos + 3) {
-	break;
+        break;
       }
       char ch;
       if (Character.isLowerCase(ch = sb.charAt(pos + 1))) {
-	sb.setCharAt(pos + 1, Character.toUpperCase(ch));
+        sb.setCharAt(pos + 1, Character.toUpperCase(ch));
       }
       if (Character.isLowerCase(ch = sb.charAt(pos + 2))) {
-	sb.setCharAt(pos + 2, Character.toUpperCase(ch));
+        sb.setCharAt(pos + 2, Character.toUpperCase(ch));
       }
     } while ((pos = str.indexOf('%', pos + 3)) >= 0);
     return sb.toString();
@@ -479,17 +479,17 @@ public class UrlUtil {
    */
   public static boolean equalUrls(URL u1, URL u2) {
     return
-      u1.getPort() == u2.getPort() &&
-      StringUtil.equalStringsIgnoreCase(u1.getProtocol(), u2.getProtocol()) &&
-      StringUtil.equalStringsIgnoreCase(u1.getHost(), u2.getHost()) &&
-      StringUtil.equalStrings(u1.getFile(), u2.getFile()) &&
-      StringUtil.equalStrings(u1.getRef(), u2.getRef());
+        u1.getPort() == u2.getPort() &&
+        StringUtil.equalStringsIgnoreCase(u1.getProtocol(), u2.getProtocol()) &&
+        StringUtil.equalStringsIgnoreCase(u1.getHost(), u2.getHost()) &&
+        StringUtil.equalStrings(u1.getFile(), u2.getFile()) &&
+        StringUtil.equalStrings(u1.getRef(), u2.getRef());
   }
 
   private static Pattern URL_PAT =
-    RegexpUtil.uncheckedCompile("^[a-zA-Z]+:/",
-				(Perl5Compiler.READ_ONLY_MASK
-				 + Perl5Compiler.CASE_INSENSITIVE_MASK));
+      RegexpUtil.uncheckedCompile("^[a-zA-Z]+:/",
+          (Perl5Compiler.READ_ONLY_MASK
+           + Perl5Compiler.CASE_INSENSITIVE_MASK));
 
   /** Return true if the string is a url.  Very basic, just checks that the
    * string starts with &quot;scheme:/&quot;.  (So returns false for,
@@ -503,7 +503,7 @@ public class UrlUtil {
   // XXX does this need to trim blanks?
   public static boolean isHttpUrl(String url) {
     return StringUtil.startsWithIgnoreCase(url, "http:") ||
-      StringUtil.startsWithIgnoreCase(url, "https:");
+           StringUtil.startsWithIgnoreCase(url, "https:");
   }
 
   /** Return true if a file: url */
@@ -536,7 +536,7 @@ public class UrlUtil {
   }
 
   /**
-   * @param urlStr string representation of a url
+   * @param url string representation of a url
    * @return Prefix of url including protocol and host (and port).  Ends
    * with "/", because it's not completely well-formed without it.
    * @throws MalformedURLException if urlStr is not a well formed URL
@@ -628,6 +628,36 @@ public class UrlUtil {
     return url;
   }
 
+  /**
+   * encode a url using the java URLEncoder
+   * @param uri the url to encode
+   * @param enc the encoding to use
+   * @return  the encoded url string
+   */
+  public static String encodeUri(String uri, String enc)  {
+    try {
+      return UriUtils.encodeUri(uri, enc);
+    } catch (UnsupportedEncodingException e) {
+      // The system should always have the platform default
+      throw new RuntimeException("Encoding (" + enc + ") unsupported", e);
+    }
+  }
+
+  /**
+   * decode a url using the java URLDecoder
+   * @param url the url to encode
+   * @param enc the encoding to use
+   * @return  the unencoded string
+   */
+  public static String decodeUri(String url, String enc) {
+    try {
+      return UriUtils.decode(url, enc);
+    } catch (UnsupportedEncodingException e) {
+      // The system should always have the platform default
+      throw new RuntimeException("Encoding (" + enc + ") unsupported", e);
+    }
+  }
+
   /** URLencode a string */
   public static String encodeUrl(String url) {
     try {
@@ -635,8 +665,8 @@ public class UrlUtil {
     } catch (UnsupportedEncodingException e) {
       // The system should always have the platform default
       throw new RuntimeException("Default encoding (" +
-				 Constants.DEFAULT_ENCODING + ") unsupported",
-				 e);
+                                 Constants.DEFAULT_ENCODING + ") unsupported",
+          e);
     }
   }
 
@@ -647,8 +677,8 @@ public class UrlUtil {
     } catch (UnsupportedEncodingException e) {
       // The system should always have the platform default
       throw new RuntimeException("Default encoding (" +
-				 Constants.DEFAULT_ENCODING + ") unsupported",
-				 e);
+                                 Constants.DEFAULT_ENCODING + ") unsupported",
+          e);
     }
   }
 
@@ -670,7 +700,7 @@ public class UrlUtil {
    * @return The URL formed by combining the two URLs
    */
   public static String resolveUri(String baseUrl, String possiblyRelativeUrl,
-				  boolean minimallyEncode)
+                                  boolean minimallyEncode)
       throws MalformedURLException {
     return resolveUri(new URL(baseUrl), possiblyRelativeUrl, minimallyEncode);
   }
@@ -681,10 +711,10 @@ public class UrlUtil {
   }
 
   public static String resolveUri(URL baseUrl, String possiblyRelativeUrl,
-				  boolean minimallyEncode)
+                                  boolean minimallyEncode)
       throws MalformedURLException {
     possiblyRelativeUrl =
-      trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
+        trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
     String encodedChild = possiblyRelativeUrl;
     if (minimallyEncode) {
       encodedChild = minimallyEncodeUrl(encodedChild);
@@ -692,7 +722,7 @@ public class UrlUtil {
     URL url;
     if (encodedChild.startsWith("?")) {
       url = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
-		    baseUrl.getPort(), baseUrl.getPath() + encodedChild);
+          baseUrl.getPort(), baseUrl.getPath() + encodedChild);
     } else {
       url = new URL(baseUrl, encodedChild);
     }
@@ -712,7 +742,7 @@ public class UrlUtil {
       throws MalformedURLException {
     baseUrl = trimNewlinesAndLeadingWhitespace(baseUrl);
     possiblyRelativeUrl =
-      trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
+        trimNewlinesAndLeadingWhitespace(possiblyRelativeUrl);
     String encodedBase = minimallyEncodeUrl(baseUrl);
     String encodedChild = minimallyEncodeUrl(possiblyRelativeUrl);
     try {
@@ -726,12 +756,12 @@ public class UrlUtil {
   }
 
   private static MalformedURLException
-    newMalformedURLException(Throwable cause) {
+  newMalformedURLException(Throwable cause) {
 
     MalformedURLException ex = new MalformedURLException();
     ex.initCause(cause);
     return ex;
-  }    
+  }
 
   public static String resolveUri0(URL baseUrl, String possiblyRelativeUrl)
       throws MalformedURLException {
@@ -750,7 +780,7 @@ public class UrlUtil {
   // to the URI code for other cases.
 
   private static java.net.URI resolveUri0(java.net.URI base,
-					  java.net.URI child)
+                                          java.net.URI child)
       throws MalformedURLException {
 
     // check if child is opaque first so that NPE is thrown 
@@ -770,29 +800,29 @@ public class UrlUtil {
       // result.  (java.net.URI resolves ("http://foo.bar", "x.y") to
       // http://foo.barx.y)
       if (StringUtil.isNullString(base.getPath())) {
-	path = "/";
-	base = new java.net.URI(scheme, authority, path, query, fragment);
+        path = "/";
+        base = new java.net.URI(scheme, authority, path, query, fragment);
       }
 
       // Absolute child
       if (child.getScheme() != null)
-	return child;
+        return child;
 
       if (child.getAuthority() != null) {
-	// not relative, defer to URI
-	return base.resolve(child);
+        // not relative, defer to URI
+        return base.resolve(child);
       }
 
       // Fragment only, return base with this fragment
       if (child.getPath().equals("") && (child.getFragment() != null)
-	  && (child.getQuery() == null)) {
-	if ((base.getFragment() != null)
-	    && child.getFragment().equals(base.getFragment())) {
-	  return base;
-	}
-	java.net.URI ru =
-	  new java.net.URI(scheme, authority, path, query, fragment);
-	return ru;
+          && (child.getQuery() == null)) {
+        if ((base.getFragment() != null)
+            && child.getFragment().equals(base.getFragment())) {
+          return base;
+        }
+        java.net.URI ru =
+            new java.net.URI(scheme, authority, path, query, fragment);
+        return ru;
       }
 
       query = child.getQuery();
@@ -800,18 +830,18 @@ public class UrlUtil {
       authority = base.getAuthority();
 
       if (StringUtil.isNullString(child.getPath())) {
-	// don't truncate base path if child has no path
-	path = base.getPath();
+        // don't truncate base path if child has no path
+        path = base.getPath();
       } else if (child.getPath().charAt(0) == '/') {
-	// Absolute child path
-	path = child.getPath();
+        // Absolute child path
+        path = child.getPath();
       } else {
-	// normal relative path, defer to URI
-	return base.resolve(child);
+        // normal relative path, defer to URI
+        return base.resolve(child);
       }
       // create URI from relativized components
       java.net.URI ru =
-	new java.net.URI(scheme, authority, path, query, fragment);
+          new java.net.URI(scheme, authority, path, query, fragment);
       return ru;
     } catch (URISyntaxException e) {
       throw newMalformedURLException(e);
@@ -820,10 +850,10 @@ public class UrlUtil {
 
 
   public static String[] supportedJSFunctions =
-  {
-    "newWindow",
-    "popup"
-  };
+      {
+          "newWindow",
+          "popup"
+      };
 
   /**
    * Takes a javascript url of the following formats:
@@ -844,11 +874,11 @@ public class UrlUtil {
 
     for (int ix=0; ix<supportedJSFunctions.length && funcEnd==-1; ix++) {
       if (jsUrl.regionMatches(true, protocolEnd,
-			      supportedJSFunctions[ix], 0,
-			      supportedJSFunctions[ix].length())) {
-	funcEnd = protocolEnd + supportedJSFunctions[ix].length();
-	log.debug3("matched supported JS function "+supportedJSFunctions[ix]);
-	break;
+          supportedJSFunctions[ix], 0,
+          supportedJSFunctions[ix].length())) {
+        funcEnd = protocolEnd + supportedJSFunctions[ix].length();
+        log.debug3("matched supported JS function "+supportedJSFunctions[ix]);
+        break;
       }
     }
 
@@ -907,9 +937,9 @@ public class UrlUtil {
   public static boolean isAbsoluteUrl(String url) {
     if (url != null) {
       try {
-	org.apache.commons.httpclient.URI resultURI =
-	  new org.apache.commons.httpclient.URI(url, true);
-	return resultURI.isAbsoluteURI();
+        org.apache.commons.httpclient.URI resultURI =
+            new org.apache.commons.httpclient.URI(url, true);
+        return resultURI.isAbsoluteURI();
       } catch (URIException e) {
       }
     }
@@ -939,16 +969,16 @@ public class UrlUtil {
       String fromPath = ufrom.getPath();
       int len = fromPath.length();
       return (
-	      toPath.length() == (len + 1) &&
-	      toPath.charAt(len) == '/' &&
-	      toPath.startsWith(fromPath) &&
-	      ufrom.getHost().equalsIgnoreCase(uto.getHost()) &&
-	      ufrom.getProtocol().equalsIgnoreCase(uto.getProtocol()) &&
-	      ufrom.getPort() == uto.getPort() &&
-	      StringUtil.equalStringsIgnoreCase(ufrom.getQuery(),
-						uto.getQuery())
+          toPath.length() == (len + 1) &&
+          toPath.charAt(len) == '/' &&
+          toPath.startsWith(fromPath) &&
+          ufrom.getHost().equalsIgnoreCase(uto.getHost()) &&
+          ufrom.getProtocol().equalsIgnoreCase(uto.getProtocol()) &&
+          ufrom.getPort() == uto.getPort() &&
+          StringUtil.equalStringsIgnoreCase(ufrom.getQuery(),
+              uto.getQuery())
 
-	      );
+      );
     } catch (MalformedURLException e) {
       return false;
     }
@@ -963,18 +993,18 @@ public class UrlUtil {
   public static String stripQuery(String url) throws MalformedURLException {
     if (url != null) {
       try {
-	org.apache.commons.httpclient.URI uri =
-	  new org.apache.commons.httpclient.URI(url, true);
-	if (uri.isAbsoluteURI()) {
-	  StringBuffer sb = new StringBuffer();
-	  sb.append(uri.getScheme());
-	  sb.append("://");
-	  sb.append(uri.getHost());
-	  sb.append(uri.getPath());
-	  return sb.toString();
-	}
+        org.apache.commons.httpclient.URI uri =
+            new org.apache.commons.httpclient.URI(url, true);
+        if (uri.isAbsoluteURI()) {
+          StringBuffer sb = new StringBuffer();
+          sb.append(uri.getScheme());
+          sb.append("://");
+          sb.append(uri.getHost());
+          sb.append(uri.getPath());
+          return sb.toString();
+        }
       } catch (URIException e) {
-	throw newMalformedURLException(e);
+        throw newMalformedURLException(e);
       }
     }
     return null;
@@ -984,7 +1014,7 @@ public class UrlUtil {
    * <p>Removes the protocol and its <code>://</code> component
    * from a URL stem.</p>
    * <p>Assumption: url stems always start with a protocol.</p>
-   * @param stem A URL stem.
+   * @param url A URL stem.
    * @return A new URL stem with the protocol removed.
    */
   public static String stripProtocol(String url) {
@@ -1042,7 +1072,7 @@ public class UrlUtil {
       String headerFieldKey = conn.getHeaderFieldKey(ix);
       done = (headerField == null && headerFieldKey == null);
       if (!done) {
-	returnList.add(headerFieldKey+";"+headerField);
+        returnList.add(headerFieldKey+";"+headerField);
       }
     }
     return returnList;
@@ -1056,6 +1086,18 @@ public class UrlUtil {
   public static InputStream openHttpClientInputStream(String urlString)
       throws IOException {
     log.debug2("openInputStream(\"" + urlString + "\")");
+    LockssUrlConnection conn = openConnection(urlString);
+    conn.setUserAgent("lockss");
+    conn.execute();
+    int statusCode = conn.getResponseCode();
+    if(statusCode == 200) {
+      return conn.getResponseInputStream();
+    }
+    else {
+      throw new IOException("Server returned HTTP response code: " +
+                            statusCode + " for URL: " + urlString);
+    }
+    /*
     HttpClient client = new HttpClient();
     HttpMethod method = new GetMethod(urlString);
 
@@ -1069,8 +1111,9 @@ public class UrlUtil {
       return ins;
     } else {
       throw new IOException("Server returned HTTP response code: " +
-			    statusCode + " for URL: " + urlString);
+                            statusCode + " for URL: " + urlString);
     }
+    */
   }
 
   /** Return input stream for url.  If url is http or https, uses Jakarta
@@ -1088,6 +1131,7 @@ public class UrlUtil {
       URLConnection uc = url.openConnection();
       return uc.getInputStream();
     }
+
   }
 
   /** Create and Return a LockssUrlConnection appropriate for the url
@@ -1111,10 +1155,10 @@ public class UrlUtil {
    * @throws IOException
    */
   public static LockssUrlConnection
-    openConnection(String urlString, LockssUrlConnectionPool connectionPool)
+  openConnection(String urlString, LockssUrlConnectionPool connectionPool)
       throws IOException {
     return openConnection(LockssUrlConnection.METHOD_GET, urlString,
-			  connectionPool);
+        connectionPool);
   }
 
   /** Create and Return a LockssUrlConnection appropriate for the url
@@ -1126,22 +1170,22 @@ public class UrlUtil {
    * @throws IOException
    */
   public static LockssUrlConnection
-    openConnection(int methodCode, String urlString,
-		   LockssUrlConnectionPool connectionPool)
+  openConnection(int methodCode, String urlString,
+                 LockssUrlConnectionPool connectionPool)
       throws IOException {
     LockssUrlConnection luc;
     if (isHttpUrl(urlString)) {
       if (useHttpClient) {
-	HttpClient client = null;
-	if (connectionPool != null) {
-	  client = connectionPool.getHttpClient();
-	} else {
-	  client = new HttpClient();
-	}
-	luc = new HttpClientUrlConnection(methodCode, urlString, client,
-					  connectionPool);
+        HttpClient client = null;
+        if (connectionPool != null) {
+          client = connectionPool.getHttpClient();
+        } else {
+          client = new HttpClient();
+        }
+        luc = new HttpClientUrlConnection(methodCode, urlString, client,
+            connectionPool);
       } else {
-	luc = new JavaHttpUrlConnection(urlString);
+        luc = new JavaHttpUrlConnection(urlString);
       }
     } else {
       luc = new JavaUrlConnection(urlString);

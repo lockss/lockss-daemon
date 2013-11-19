@@ -397,7 +397,7 @@ public class HtmlFormExtractor {
       }
     }
     return sb.toString();
-  }
+    }
 
   public interface FieldIterator extends Iterator<String> {
     /**
@@ -447,7 +447,8 @@ public class HtmlFormExtractor {
       open_ct++;
       if(m_openForm != null) {
         // if we have an open form - we can't open a new one.
-        theLogger.siteWarning("form can not be processed: nested form");
+        if(theLogger.isDebug())
+          theLogger.debug("form can not be processed: nested form");
         return;
       }
       m_openForm = el.attr("id");
@@ -518,7 +519,8 @@ public class HtmlFormExtractor {
           form.addElement(el);
         }
         else {
-          theLogger.siteWarning("unable to find form for tag " + name);
+          if(theLogger.isDebug())
+           theLogger.debug("unable to find form for tag " + name);
         }
       }
     }
@@ -1407,14 +1409,15 @@ public class HtmlFormExtractor {
       incrField = field;
       incrValue = incr;
       formatter = new SimpleDateFormat(format);
-      System.out.println("start:"+formatter.format(start.getTime())+
+      if(theLogger.isDebug2())   {
+        theLogger.debug2("start:"+formatter.format(start.getTime())+
                          "end:"+formatter.format(end.getTime()));
-
-      System.out.println("nextDate:" + formatter.format(nextDate.getTime()));
+        theLogger.debug2("nextDate:" + formatter.format(nextDate.getTime()));
+      }
     }
 
     public CalendarFieldGenerator(String name, Date start, Date end,
-                                  int field, int incr,String format) {
+                                  int field, int incr, String format) {
       m_name = name;
       startDate = Calendar.getInstance();
       startDate.setTime(start);
@@ -1431,13 +1434,17 @@ public class HtmlFormExtractor {
     }
 
     public String next() {
-      System.out.println("next() in: " +
+      if(theLogger.isDebug3())   {
+        theLogger.debug3("next() in: " +
                          formatter.format(nextDate.getTime()));
+      }
       lastValue = HtmlFormExtractor.makeEncodedString(m_name,
           formatter.format(nextDate.getTime()));
       nextDate.add(incrField, incrValue);
-      System.out.println("next() out: " +
+      if(theLogger.isDebug3())   {
+        theLogger.debug3("next() out: " +
                          formatter.format(nextDate.getTime()));
+      }
       return lastValue;
     }
 

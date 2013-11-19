@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.21 2010-12-20 23:44:59 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.22 2013-11-19 01:20:04 clairegriffin Exp $
  */
 
 /*
@@ -102,6 +102,16 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       newConn("http://foo.bar/a<");
       fail("Failed to throw MalformedURLException");
     } catch (java.net.MalformedURLException e) {}
+  }
+
+  public void testNonAsciiUrl () throws Exception {
+    try {
+      newConn("http://www.pensoft.net/journals/neobiota/article/1803/" +
+              "plant-pathogens-as-biocontrol-agents-of-cirsium-arvense-–-an-overestimated-approach");
+
+    } catch (java.net.MalformedURLException e) {
+      fail("Threw MalformedURLException");
+    }
   }
 
   public void testReqProps() {

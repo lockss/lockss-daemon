@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.35 2012-09-25 23:01:42 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.36 2013-11-19 01:20:03 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
-import java.net.URL;
 import java.util.Properties;
 
 import org.apache.commons.httpclient.*;
@@ -142,18 +141,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   private HttpMethod createMethod(int methodCode, String urlString)
       throws IOException {
+    String u_str = urlString;
     try {
+      if(!StringUtil.isAscii(urlString)) {
+        if(log.isDebug2()) log.debug2("in:" + u_str);
+        u_str = UrlUtil.encodeUri(urlString, Constants.ENCODING_UTF_8);
+        if(log.isDebug2()) log.debug2("out:" + u_str);
+      }
       switch (methodCode) {
       case LockssUrlConnection.METHOD_GET:
-	return newLockssGetMethodImpl(urlString);
+      	return newLockssGetMethodImpl(u_str);
       case LockssUrlConnection.METHOD_PROXY:
-	return new LockssProxyGetMethodImpl(urlString);
+	      return new LockssProxyGetMethodImpl(u_str);
       }
       throw new RuntimeException("Unknown url method: " + methodCode);
     } catch (IllegalArgumentException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal URLs
       // Canonicalize that to Java's MalformedURLException
-      throw newMalformedURLException(urlString, e);
+      throw newMalformedURLException(u_str, e);
     } catch (IllegalStateException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal protocols
       // Canonicalize that to Java's MalformedURLException
@@ -162,7 +167,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   }
 
   java.net.MalformedURLException newMalformedURLException(String msg,
- 							  Throwable cause) {
+        Throwable cause) {
     java.net.MalformedURLException e = new java.net.MalformedURLException(msg);
     e.initCause(cause);
     return e;
