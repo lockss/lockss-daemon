@@ -31,12 +31,12 @@ BEGIN {
       r[pn] = $3
       if (r[pn] == "") {
         if ((substr(p[pn],1,2) <= "American R")) {
-          r[pn] = "5"
-        } else if ((substr(p[pn],1,2) >= "American S") && (substr(p[pn],1,2) <= "Bz")) {
           r[pn] = "4"
-        } else if ((substr(p[pn],1,2) >= "CA") && (substr(p[pn],1,2) <= "Pz")) {
-          r[pn] = "5"
-        } else if (substr(p[pn],1,1) >= "Q") {
+        } else if ((substr(p[pn],1,2) >= "American S") && (substr(p[pn],1,2) <= "Hz")) {
+          r[pn] = "4"
+#        } else if ((substr(p[pn],1,2) >= "CA") && (substr(p[pn],1,2) <= "Pz")) {
+#          r[pn] = "5"
+        } else if (substr(p[pn],1,1) >= "IA") {
           r[pn] = "8"
         }
       }
