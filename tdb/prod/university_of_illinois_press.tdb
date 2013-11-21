@@ -107,26 +107,6 @@
 
     {
       title <
-        name = Dance Research Journal ;
-        issn = 0149-7677 ;
-        eissn = 1940-509X ;
-        issnl = 0149-7677
-      >
-
-      param[journal_dir] = dance_research_journal
-      attr[journal_id] = drj
-
-      au < released ; 2008 ; Dance Research Journal Volume 40 ; 40 >
-      au < released ; 2009 ; Dance Research Journal Volume 41 ; 41 >
-      au < released ; 2010 ; Dance Research Journal Volume 42 ; 42 >
-      au < released ; 2011 ; Dance Research Journal Volume 43 ; 43 >
-      au < released ; 2012 ; Dance Research Journal Volume 44 ; 44 >
-      au < manifest ; 2013 ; Dance Research Journal Volume 45 ; 45 >
-
-    }
-
-    {
-      title <
         name = Feminist Teacher ;
         issn = 0882-4843 ;
         eissn = 1934-6034 ;
