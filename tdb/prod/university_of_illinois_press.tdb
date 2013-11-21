@@ -315,7 +315,7 @@
   {
   
     plugin = needs.plugin
-    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
+    comment[platform] = hosted by the University of Illinois.
     param[base_url] = http://paq.press.illinois.edu/
     implicit < status ; year ; name ; param[volume_name] >
 
@@ -327,13 +327,27 @@
         issnl = 0003-0481 
       >
 
-      param[journal_code] = 
-
       au < exists ; 2009 ; American Philosophical Quarterly Volume 46 ; 46 >
       au < exists ; 2010 ; American Philosophical Quarterly Volume 47 ; 47 >
       au < exists ; 2011 ; American Philosophical Quarterly Volume 48 ; 48 >
       au < exists ; 2012 ; American Philosophical Quarterly Volume 49 ; 49 >
       au < exists ; 2013 ; American Philosophical Quarterly Volume 50 ; 50 >
+
+    }
+
+    {
+      title <
+        name = Public Affairs Quarterly ;
+        issn = 0887-0373 ;
+        eissn = 2152-0542 ;
+        issnl = 0887-0373 
+      >
+
+      au < exists ; 2009 ; Public Affairs Quarterly Volume 23 ; 23 >
+      au < exists ; 2010 ; Public Affairs Quarterly Volume 24 ; 24 >
+      au < exists ; 2011 ; Public Affairs Quarterly Volume 25 ; 25 >
+      au < exists ; 2012 ; Public Affairs Quarterly Volume 26 ; 26 >
+      au < exists ; 2013 ; Public Affairs Quarterly Volume 27 ; 27 >
 
     }
 
