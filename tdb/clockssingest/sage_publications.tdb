@@ -2307,7 +2307,7 @@
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 648 ; 648 ; >
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 649 ; 649 ; >
       au < crawling ; exists ; 2013 ; The Annals of the American Academy of Political and Social Science Volume 650 ; 650 ; >
-      au < expected ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 651 ; 651 ; >
+      au < manifest ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 651 ; 651 ; >
       au < expected ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 652 ; 652 ; >
       au < expected ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 653 ; 653 ; >
       au < expected ; exists ; 2014 ; The Annals of the American Academy of Political and Social Science Volume 654 ; 654 ; >
@@ -2347,7 +2347,7 @@
       au < exists ; exists ; 2010 ; Annals of Pharmacotherapy Volume 44 ; 44 ; >
       au < exists ; exists ; 2011 ; Annals of Pharmacotherapy Volume 45 ; 45 ; >
       au < exists ; exists ; 2012 ; Annals of Pharmacotherapy Volume 46 ; 46 ; >
-      au < exists ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
+      au < manifest ; exists ; 2013 ; Annals of Pharmacotherapy Volume 47 ; 47 ; >
       au < expected ; exists ; 2014 ; Annals of Pharmacotherapy Volume 48 ; 48 ; >
 
     }
@@ -14259,7 +14259,7 @@
       au < finished ; crawling ; 2011 ; International Journal of Offender Therapy and Comparative Criminology Volume 55 ; 55 ; >
       au < finished ; crawling ; 2012 ; International Journal of Offender Therapy and Comparative Criminology Volume 56 ; 56 ; >
       au < crawling ; exists ; 2013 ; International Journal of Offender Therapy and Comparative Criminology Volume 57 ; 57 ; >
-      au < expected ; exists ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; >
+      au < manifest ; exists ; 2014 ; International Journal of Offender Therapy and Comparative Criminology Volume 58 ; 58 ; >
 
     }
 
@@ -31492,7 +31492,7 @@
       au < zapped ; finished ; 2011 ; Research on Aging Volume 33 ; 33 ; >
       au < finished ; crawling ; 2012 ; Research on Aging Volume 34 ; 34 ; >
       au < crawling ; exists ; 2013 ; Research on Aging Volume 35 ; 35 ; >
-      au < expected ; exists ; 2014 ; Research on Aging Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2014 ; Research on Aging Volume 36 ; 36 ; >
 
     }
 
@@ -34240,7 +34240,7 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://mic.sagepub.com/
 
-        au < exists ; exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
+        au < manifest ; exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 ; >
         au < expected ; exists ; 2014 ; Studies in Microeconomics Volume 2 ; 2 ; >
 
       }
