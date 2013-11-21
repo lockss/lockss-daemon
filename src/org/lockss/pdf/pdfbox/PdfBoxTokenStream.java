@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxTokenStream.java,v 1.4 2013-06-26 22:33:28 thib_gc Exp $
+ * $Id: PdfBoxTokenStream.java,v 1.5 2013-11-21 00:30:10 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.pdf.pdfbox;
 import java.io.IOException;
 import java.util.*;
 
+import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.lockss.pdf.*;
@@ -141,7 +142,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
         if (!fontName.isName() || !(fontSize.isFloat() || fontSize.isInteger())) {
           continue; // Malformed; ignore
         }
-        currentFont = (PDFont)pdfBoxPage.pdPage.findResources().getFonts().get(fontName.getName());
+        currentFont = (PDFont)getStreamResources().getFonts().get(fontName.getName());
         if (currentFont == null) {
           throw new PdfException(String.format("Font '%s' not found", fontName.getName()));              
         }
@@ -164,7 +165,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
               str = currentFont.encode(bytes, j, codeLength);
             }
           } catch (IOException ioe) {
-            throw new PdfException(String.format("Error decoding string at index %d", i));
+            throw new PdfException(String.format("Error decoding string at index %d", i), ioe);
           }
           if (str != null) {
             sb.append(str);
@@ -179,7 +180,7 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
         } catch (PdfException pdfe) {
           throw new PdfException(String.format("Error processing list at index %d", i), pdfe);
         }
-        tokens.set(i,  factory.makeArray(array));
+        tokens.set(i, factory.makeArray(array));
       }
     }
     
@@ -187,18 +188,32 @@ public abstract class PdfBoxTokenStream implements PdfTokenStream {
   
   /**
    * <p>
-   * Retrieves the {@link PDStream} instance underpinning this PDF
-   * token stream.
+   * Retrieves the {@link PDStream} instance underpinning this PDF token stream.
    * </p>
+   * 
    * @return The {@link PDStream} instance this instance represents.
+   * @since 1.56
    */
   protected abstract PDStream getPdStream();
 
   /**
    * <p>
+   * Retrieves a {@link PDResources} instance suitable for the context of this
+   * token stream.
+   * </p>
+   * 
+   * @return The {@link PDResources} instance for this token stream.
+   * @since 1.64
+   */
+  protected abstract PDResources getStreamResources();
+  
+  /**
+   * <p>
    * Convenience method to create a new {@link PDStream} instance.
    * </p>
+   * 
    * @return A new {@link PDStream} instance based on this document.
+   * @since 1.56
    */
   protected PDStream makeNewPdStream() {
     return new PDStream(pdfBoxPage.pdfBoxDocument.pdDocument);

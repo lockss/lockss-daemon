@@ -1,5 +1,5 @@
 /*
- * $Id: PdfBoxXObjectTokenStream.java,v 1.2 2012-07-19 04:01:53 thib_gc Exp $
+ * $Id: PdfBoxXObjectTokenStream.java,v 1.3 2013-11-21 00:30:10 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.apache.pdfbox.pdfwriter.ContentStreamWriter;
+import org.apache.pdfbox.pdmodel.PDResources;
 import org.apache.pdfbox.pdmodel.common.PDStream;
 import org.apache.pdfbox.pdmodel.graphics.xobject.PDXObjectForm;
 import org.lockss.pdf.*;
@@ -95,4 +96,9 @@ public class PdfBoxXObjectTokenStream extends PdfBoxTokenStream {
     return pdXObjectForm.getPDStream();
   }
 
+  @Override
+  protected PDResources getStreamResources() {
+    return pdXObjectForm.getResources();
+  }
+  
 }
