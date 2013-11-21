@@ -314,7 +314,7 @@
   
   {
   
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.jscm.JSCMPlugin
     comment[platform] = hosted by the University of Illinois.
     param[base_url] = http://paq.press.illinois.edu/
     implicit < status ; year ; name ; param[volume_name] >
@@ -327,6 +327,8 @@
         issnl = 0003-0481 
       >
 
+      param[base_url] = http://apq.press.illinois.edu/
+      
       au < exists ; 2009 ; American Philosophical Quarterly Volume 46 ; 46 >
       au < exists ; 2010 ; American Philosophical Quarterly Volume 47 ; 47 >
       au < exists ; 2011 ; American Philosophical Quarterly Volume 48 ; 48 >
@@ -343,6 +345,8 @@
         issnl = 0887-0373 
       >
 
+      param[base_url] = http://paq.press.illinois.edu/
+      
       au < exists ; 2009 ; Public Affairs Quarterly Volume 23 ; 23 >
       au < exists ; 2010 ; Public Affairs Quarterly Volume 24 ; 24 >
       au < exists ; 2011 ; Public Affairs Quarterly Volume 25 ; 25 >
@@ -359,6 +363,8 @@
         issnl = 0740-0675 
       >
 
+      param[base_url] = http://hpq.press.illinois.edu/
+      
       au < exists ; 2009 ; History of Philosophy Quarterly Volume 26 ; 26 >
       au < exists ; 2010 ; History of Philosophy Quarterly Volume 27 ; 27 >
       au < exists ; 2011 ; History of Philosophy Quarterly Volume 28 ; 28 >
@@ -375,6 +381,8 @@
       >
       comment[AUs] = Also V1-19
       
+      param[base_url] = http://jashm.press.illinois.edu/
+      
       au < exists ; 2013 ; Journal for the Anthropological Study of Human Movement Volume 20 ; 20 >
 
     }
@@ -386,6 +394,10 @@
         issnl = 1931-8642 
       >
 
+      comment[AUs] = Volumes 1-10
+
+      param[base_url] = http://worldhistoryconnected.press.illinois.edu/
+      
       au < exists ; 2013 ; World History Connected Volume 10 ; 10 >
 
     }
