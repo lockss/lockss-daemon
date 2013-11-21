@@ -3,7 +3,9 @@
   publisher <
     name = University of Illinois Press
   >
-
+  
+  {
+  
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     implicit < status ; year ; name ; param[volume] >
     param[base_url] = http://muse.jhu.edu/
@@ -307,5 +309,34 @@
       au < manifest ; 2013 ; Women, Gender, and Families of Color Volume 1 ; 1 >
 
     }
+    
+  }
+  
+  {
+  
+    plugin = needs.plugin
+    comment[platform] = org.lockss.plugin.jstor.JSTORPlugin
+    param[base_url] = http://paq.press.illinois.edu/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    {
+      title <
+        name = American Philosophical Quarterly ;
+        issn = 0003-0481 ;
+        eissn = 2152-1123 ;
+        issnl = 0003-0481 
+      >
+
+      param[journal_code] = 
+
+      au < exists ; 2009 ; American Philosophical Quarterly Volume 46 ; 46 >
+      au < exists ; 2010 ; American Philosophical Quarterly Volume 47 ; 47 >
+      au < exists ; 2011 ; American Philosophical Quarterly Volume 48 ; 48 >
+      au < exists ; 2012 ; American Philosophical Quarterly Volume 49 ; 49 >
+      au < exists ; 2013 ; American Philosophical Quarterly Volume 50 ; 50 >
+
+    }
+
+  }
   
 }
