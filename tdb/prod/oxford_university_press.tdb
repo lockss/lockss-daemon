@@ -21195,6 +21195,22 @@
       au < manifest ; 2013 ; Interacting with Computers Volume 25 ; 25 >
 
     }
+    
+  }
+
+  {
+
+    title <
+      name = National Science Review ;
+      issn = 2095-5138 ;
+      eissn = 2053-714X
+    >
+
+    param[base_url] = http://nsr.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2013 ; National Science Review Volume 1 ; 1 >
 
   }
 
