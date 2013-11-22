@@ -24789,7 +24789,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2005 ; Journal of Psychoeducational Assessment Volume 23 ; 23 >
         au < doNotProcess ; 2006 ; Journal of Psychoeducational Assessment Volume 24 ; 24 >
         au < doNotProcess ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
-        au < exists ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
+        au < manifest ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
         au < doNotProcess ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
         au < ready ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
         au < released ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 >
@@ -35289,18 +35289,18 @@ comment[mpj] = now published by Brill
         comment[base_url] = Use sex.sagepub.com.  Both sex.sagepub.com and sexualities.sagepub.com will work.
         comment[sexualities] = manifest pages reference sex base_url after V12.
 
-        au < exists ; 1998 ; Sexualities Volume 1 ; 1 >
-        au < exists ; 1999 ; Sexualities Volume 2 ; 2 >
-        au < exists ; 2000 ; Sexualities Volume 3 ; 3 >
-        au < exists ; 2001 ; Sexualities Volume 4 ; 4 >
+        au < manifest ; 1998 ; Sexualities Volume 1 ; 1 >
+        au < manifest ; 1999 ; Sexualities Volume 2 ; 2 >
+        au < manifest ; 2000 ; Sexualities Volume 3 ; 3 >
+        au < manifest ; 2001 ; Sexualities Volume 4 ; 4 >
         au < manifest ; 2002 ; Sexualities Volume 5 ; 5 >
         au < manifest ; 2003 ; Sexualities Volume 6 ; 6 >
         au < manifest ; 2004 ; Sexualities Volume 7 ; 7 >
         au < manifest ; 2005 ; Sexualities Volume 8 ; 8 >
         au < manifest ; 2006 ; Sexualities Volume 9 ; 9 >
         au < manifest ; 2007 ; Sexualities Volume 10 ; 10 >
-        au < exists ; 2008 ; Sexualities Volume 11 ; 11 >
-        au < exists ; 2009 ; Sexualities Volume 12 ; 12 >
+        au < manifest ; 2008 ; Sexualities Volume 11 ; 11 >
+        au < manifest ; 2009 ; Sexualities Volume 12 ; 12 >
         au < released ; 2010 ; Sexualities Volume 13 ; 13 >
         au < released ; 2011 ; Sexualities Volume 14 ; 14 >
         au < released ; 2012 ; Sexualities Volume 15 ; 15 >
@@ -36931,7 +36931,7 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mic.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 2013 ; Studies in Microeconomics Volume 1 ; 1 >
+        au < manifest ; 2013 ; Studies in Microeconomics Volume 1 ; 1 >
 
       }
 
