@@ -4,17 +4,23 @@
     name = Marine Resource Foundation, Inc.
   >
 
-  plugin =  
-  implicit < status ; year ; name ; param[volume_name] >
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
   param[base_url] = http://www.bioone.org/
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
     title <
       name = Marine Resource Economics ;
-      issn = 
+      issn = 0738-1360
     >
     
-     comment[0] = coming 2013
+      param[journal_id] = mare
+  
+      au < exists ; 2009 ; Marine Resource Economics Volume 24 ; 24 >
+      au < exists ; 2010 ; Marine Resource Economics Volume 25 ; 25 >
+      au < exists ; 2011 ; Marine Resource Economics Volume 26 ; 26 >
+      au < exists ; 2012 ; Marine Resource Economics Volume 27 ; 27 >
+      au < exists ; 2013 ; Marine Resource Economics Volume 28 ; 28 >
  
   }
   
