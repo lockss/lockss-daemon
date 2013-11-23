@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.1 2013-11-12 22:06:51 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.2 2013-11-23 01:45:22 etenbrink Exp $
  */
 /*
 
@@ -59,9 +59,10 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Hash filter
         new TagNameFilter("script"),
-        // Header items
-        HtmlNodeFilters.tagWithAttribute("div", "id", "institutionName"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "[^\"]+HeaderBar"),
+        // Remove header/footer items
+// XXX  remove 2 comments below when new HtmlFilterInputStream changes go into effect
+//        new TagNameFilter("header"),
+//        new TagNameFilter("footer"),
         // Contains ads
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar[^\"]*"),
         // Contains navigation items
@@ -77,8 +78,10 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
         ListUtil.list(
+// XXX remove this and next 3 lines when new HtmlFilterInputStream changes go into effect
             new TagPair("<header id=\"pageHeader\">", "</header>"),
             new TagPair("<footer>", "</footer>"),
+// XXX 
             new TagPair("<!--[", "]-->"),
             new TagPair("<!-- ", " -->")
             ));
