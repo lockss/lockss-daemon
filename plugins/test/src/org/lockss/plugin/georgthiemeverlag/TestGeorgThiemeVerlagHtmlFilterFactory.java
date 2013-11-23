@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.1 2013-11-12 22:08:03 etenbrink Exp $
+/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
  */
 
 /*
@@ -59,10 +59,48 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
 
   private static final String withStuff = 
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+"<body>" +
+    "<header id=\"pageHeader\">\n" + 
+    "<div id=\"topHeaderBar\">\n" + 
+    "<ul role=\"navigation\" id=\"metaNavigation\">\n" + 
+    "<li class=\"langSwitch2German\">\n" + 
+    "<a href=\"/ejournals/html/10.1055/s-0032-1331310?locale=de&amp;LgSwitch=1\">DE</a>\n" + 
+    "</li>\n" + 
+    "<li class=\"langSwitch2English\">\n" + 
+    "<span>EN</span>\n" + 
+    "</li>\n" + 
+    "<li>\n" + 
+    "<a href=\"/ejournals/home.html\">Home</a>\n" + 
+    "</li>\n" + 
+    "<li class=\"hasChildren\">\n" + 
+    "<span>Journals</span>\n" + 
+    "<ul class=\"linkList dropMenu\">\n" + 
+    "<li>\n" + 
+    "<a href=\"/ejournals/subjects\">Subject Collection</a>\n" + 
+    "</li>\n" + 
+    "<li>\n" + 
+    "<a href=\"/ejournals/journals\">Alphabetical List</a>\n" + 
+    "</li>\n" + 
+    "</ul>\n" + 
+    "<div id=\"institutionName\">CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.</div>\n" + 
+    "</header>" +
+    "nonstuff" +
+    "<footer>\n" + 
+    "<div id=\"pageEnd\">\n" + 
+    "<a href=\"#top\">Top of Page</a>\n" + 
+    "</div>\n" + 
+    "<div class=\"clearfix\">\n" + 
+    "<div style=\"margin-left:40px\" id=\"footerCenter\">&copy; 2012 Georg Thieme Verlag KG | <a href=\"/ejournals/impressum\">Impressum</a> | <a href=\"/ejournals/datenschutz\">Privacy</a>\n" + 
+    "</div>\n" + 
+    "<div id=\"footerRight\"></div>\n" + 
+    "</div>\n" + 
+    "</footer>" +
 "</body></html>";
 
   private static final String withoutStuff = 
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+"<body>" +
+  "nonstuff" +
 "</body></html>";
 
 

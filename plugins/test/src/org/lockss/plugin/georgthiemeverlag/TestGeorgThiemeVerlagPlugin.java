@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.1 2013-11-12 22:08:02 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
  */
 
 /*
@@ -136,7 +136,11 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
                                    setDefaultOnly(false).
                                    setDefinitional(false),
                                ConfigParamDescr.JOURNAL_ID,
-                               ConfigParamDescr.YEAR),
+                               new ConfigParamDescr().setKey(YEAR_KEY).
+                                   setType(ConfigParamDescr.TYPE_STRING).
+                                   setSize(20).
+                                   setDefaultOnly(false).
+                                   setDefinitional(true)),
                  plugin.getLocalAuConfigDescrs());
   }
 

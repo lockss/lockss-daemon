@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.1 2013-11-12 22:08:02 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     
     Stack<String[]> expStack = new Stack<String[]>();
     String [] af1 = {
-        BASE_URL + "ejournals/html/10.1055/s-1",
+        BASE_URL + "ejournals/pdf/10.1055/s-1.pdf",
         BASE_URL + "ejournals/html/10.1055/s-1",
         BASE_URL + "ejournals/pdf/10.1055/s-1.pdf",
         BASE_URL + "ejournals/abstract/10.1055/s-1"};
@@ -223,7 +223,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         BASE_URL + "ejournals/abstract/10.1055/s-2"};
     
     String [] af3 = {
-        BASE_URL + "ejournals/html/10.1055/s-3",
+        BASE_URL + "ejournals/pdf/10.1055/s-3.pdf",
         BASE_URL + "ejournals/html/10.1055/s-3",
         BASE_URL + "ejournals/pdf/10.1055/s-3.pdf",
         BASE_URL + "ejournals/html/10.1055/s-3"};
