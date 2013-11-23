@@ -41,6 +41,8 @@
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted see RU3802 RT5035
 comment[bj1] = no permission from publisher
 
+    comment[notReady] = V420 http://www.biochemj.org/bj/420/0179/bj4200179t01.htm
+
     au < exists ; 1906 ; Biochemical Journal Volume 1 ; 001 >
     au < released ; 1907 ; Biochemical Journal Volume 2 ; 002 >
     au < released ; 1908 ; Biochemical Journal Volume 3 ; 003 >
@@ -460,7 +462,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Biochemical Journal Volume 417 ; 417 >
     au < released ; 2009 ; Biochemical Journal Volume 418 ; 418 >
     au < released ; 2009 ; Biochemical Journal Volume 419 ; 419 >
-    au < testing ; 2009 ; Biochemical Journal Volume 420 ; 420 >
+    au < notReady ; 2009 ; Biochemical Journal Volume 420 ; 420 >
     au < released ; 2009 ; Biochemical Journal Volume 421 ; 421 >
     au < testing ; 2009 ; Biochemical Journal Volume 422 ; 422 >
     au < released ; 2009 ; Biochemical Journal Volume 423 ; 423 >
