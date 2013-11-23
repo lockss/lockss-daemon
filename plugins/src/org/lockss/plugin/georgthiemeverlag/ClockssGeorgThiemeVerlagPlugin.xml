@@ -25,19 +25,6 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Georg Thieme Verlag Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Georg Thieme Verlag Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %s", base_url, journal_id, year</string>
   </entry>
-  <!-- entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_permission_checker_factory</string>
-        <org.lockss.util.Default />
-      </entry>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
-  </entry -->
 </map>
