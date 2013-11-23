@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.1 2013-11-12 22:06:51 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.2 2013-11-23 01:39:09 etenbrink Exp $
  */
 
 /*
@@ -106,8 +106,8 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
     builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML, 
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     return builder.getSubTreeArticleIterator();
   }
