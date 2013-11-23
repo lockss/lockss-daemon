@@ -96,7 +96,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>year</key>
         <displayName>Year</displayName>
-        <description>Year (e.g., 2004)</description>
+        <description>Year string (e.g., 2004)</description>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
