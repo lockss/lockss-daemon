@@ -332,34 +332,9 @@ the source html for basic information. Is that the case?
 ** It's not required, though nice to have, that the publisher provides 
    metadata, for Clockss harvest content (dark archives). Metadata is needed 
    only when the content is triggered. Until then, no need to write
-   metadata extractor.
-* suggestion for metadata request from the publisher. 1-15 are what I usually
-encounter:
-1.  publisher
-2.  proprietary_identifier/identifier/journal identifier
-3.  journal_title
-4.  article_title
-5.  author/creator/contributor
-6.  date/issued (format preferred 2010/5/12)
-7.  doi
-8.  issn
-9.  eissn
-10. end_page
-11. start_page
-12. keywords
-13. volume
-14. issue
-15. description
-16. issnl
-17. issnm
-18. isbn
-19. eisbn
-20. language
-21. format
-22. relation
-23. relation_ispartof
-24. rights
-25. source
-26. subject
-27. type
-
+   metadata extractor. However, it's nice to have the metadata extractor at
+   least gets the default metadata from the tdb file.
+*** Updated: Get default metadata from tdb files through 
+             BaseArticleMetadataExtractor, and extract issue number for 
+             the full text pdf url:
+              http://www.heterocycles.jp/clockss/downloads/PDF/23208/83/1
