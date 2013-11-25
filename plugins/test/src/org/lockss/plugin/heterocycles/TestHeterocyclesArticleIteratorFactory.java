@@ -1,5 +1,5 @@
 /* 
- * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.2 2013-11-01 17:50:49 ldoan Exp $
+ * $Id: TestHeterocyclesArticleIteratorFactory.java,v 1.3 2013-11-25 22:47:04 ldoan Exp $
  */
 
 /*
@@ -80,12 +80,11 @@ public class TestHeterocyclesArticleIteratorFactory
   private static final int EXP_PDF_COUNT = 8; // after deleteBlock
   private static final int EXP_PDF_WITH_LINKS_COUNT = 8;
   private static final int EXP_PDF_SI_COUNT = 8;
-  // EXP_HTML_COUNT/EXP_ABS_COUNT/EXP_ARTICLE_METADATA_COUNT is 4 because,
-  // after deleteBlock, there are 8 full text cu articles to iterate,
+  // EXP_HTML_COUNT/EXP_ABS_COUNT is 4 because, after deleteBlock, 
+  // there are 8 full text cu articles to iterate,
   // including 4 deteled full text htmls
   private static final int EXP_HTML_COUNT = 4; 
   private static final int EXP_ABS_COUNT = 4; 
-  private static final int EXP_ARTICLE_METADATA_COUNT = 4;
   private static final int EXP_HIDDEN_ABS_COUNT = 8;
 
   public void setUp() throws Exception {
@@ -215,7 +214,6 @@ public class TestHeterocyclesArticleIteratorFactory
     int countPdfsiOnly = 0;
     int countHtmlOnly = 0;
     int countAbsOnly = 0;
-    int countArticleMetadataOnly = 0;
     int countHiddenAbsOnly = 0;
 
     // after deleting, there are 8 full text pdfs left,
@@ -246,7 +244,6 @@ public class TestHeterocyclesArticleIteratorFactory
       if (!StringUtil.isNullString(url) && url.contains("fulltext")) {
         ++countHtmlOnly;
         ++countAbsOnly;
-        ++countArticleMetadataOnly;
       }
       url = af.getRoleUrl(
           HeterocyclesArticleIteratorFactory.ROLE_HIDDEN_ABSTRACT);
@@ -262,7 +259,6 @@ public class TestHeterocyclesArticleIteratorFactory
     assertEquals(EXP_PDF_SI_COUNT, countPdfsiOnly);
     assertEquals(EXP_HTML_COUNT, countHtmlOnly);
     assertEquals(EXP_ABS_COUNT, countAbsOnly);
-    assertEquals(EXP_ARTICLE_METADATA_COUNT, countArticleMetadataOnly);
     assertEquals(EXP_HIDDEN_ABS_COUNT, countHiddenAbsOnly);
    }
  
