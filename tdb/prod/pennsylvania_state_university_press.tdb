@@ -526,9 +526,9 @@
       implicit < status ; year ; name ; param[volume] >
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = the_mark_twain_annual
-      attr[journal_id] = 
+      attr[journal_id] = mta
       
-      au < expected ; 2013 ; The Mark Twain Annual Volume 1 ; 1 >
+      au < expected ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
 
     }
     
