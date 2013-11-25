@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.2 2013-11-13 18:47:37 alexandraohlson Exp $
+ * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.3 2013-11-25 18:46:08 alexandraohlson Exp $
  */
 /*
 
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.onixbooks.Onix3BooksSourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 
 
 public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
@@ -82,6 +82,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("year", "2012");
+    conf.put("plugin_source_xml_metadata_extractor_helper", "org.lockss.plugin.clockss.onixbooks.Onix3LongXmlMetadataExtractorHelper");
     return conf;
   }
   
@@ -114,7 +115,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
      mcu.setContentSize(noArticleXML.length());
      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-   FileMetadataExtractor me = new Onix3BooksSourceXmlMetadataExtractorFactory.Onix3BooksSourceXmlMetadataExtractor();
+   FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
      FileMetadataListExtractor mle =
          new FileMetadataListExtractor(me);
      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
@@ -145,7 +146,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-    FileMetadataExtractor me = new Onix3BooksSourceXmlMetadataExtractorFactory.Onix3BooksSourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
