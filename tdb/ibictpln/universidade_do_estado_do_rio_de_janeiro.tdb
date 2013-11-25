@@ -300,7 +300,7 @@
       comment[publisher] = Universidade do Estado do Rio de Janeiro
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = logos
-      comment[notReady] = 2008: no permission; 2010: fetch error
+      comment[notReady] = 2008- no permission, 2010- fetch error
 
       au < notReady ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 >
       au < ready ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 >
