@@ -1,5 +1,5 @@
 /*
- * $Id: HeterocyclesArticleIteratorFactory.java,v 1.1 2013-10-15 23:23:41 ldoan Exp $
+ * $Id: HeterocyclesArticleIteratorFactory.java,v 1.2 2013-11-25 22:43:27 ldoan Exp $
  */
 
 /*
@@ -96,8 +96,8 @@ implements ArticleIteratorFactory,
         PDF_PATTERN, PDF_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_PDF);   
 
     // full text html - aspect that will trigger an ArticleFiles
-    builder.addAspect(FULL_TEXT_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
+    builder.addAspect(FULL_TEXT_REPLACEMENT, 
+        ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_ABSTRACT);
 
     builder.addAspect(HIDDEN_ABSTRACT_REPLACEMENT, ROLE_HIDDEN_ABSTRACT);
         
@@ -117,7 +117,7 @@ implements ArticleIteratorFactory,
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
     throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new BaseArticleMetadataExtractor(null);
   }
 
 }
