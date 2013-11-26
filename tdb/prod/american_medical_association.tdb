@@ -16,7 +16,8 @@
       >
 
       {
-  
+        
+        right = openaccess
         plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
         comment[access] = open access triggered CLOCKSS content
         attr[title_url] = http://www.clockss.org/clockss/Archives_of_Family_Medicine
@@ -50,6 +51,7 @@
       
       {
 
+        rights = open access
         plugin = org.lockss.plugin.highwire.HighWireTriggeredPlugin
         comment[access] = open access triggered CLOCKSS content
         attr[title_url] = http://clockss.org/clockss/JAMA_Francais
