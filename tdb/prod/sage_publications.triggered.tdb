@@ -18,6 +18,8 @@
     param[journal_id] = aub
     
    implicit < status ; year ; name ; param[volume_name] >
+   
+   comment[doNotProcess] = Do not release these.
     
     au < doNotProcess ; 2004 ; Auto/Biography Studies Volume 12 ; 12 >
     au < doNotProcess ; 2005 ; Auto/Biography Studies Volume 13 ; 13 >
