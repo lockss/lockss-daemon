@@ -781,6 +781,8 @@ comment[bj1] = no permission from publisher
 
     param[base_url] = http://www.clinsci.org/
     param[journal_id] = cs
+    
+    comment[notReady_V118] = 500 http://www.clinsci.org/cs/118/cs1180411.htm  
 
     au < released ; 1979 ; Clinical Science Volume 56 ; 056 >
     au < released ; 1979 ; Clinical Science Volume 57 ; 057 >
@@ -844,7 +846,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2008 ; Clinical Science Volume 115 ; 115 >
     au < released ; 2009 ; Clinical Science Volume 116 ; 116 >
     au < testing ; 2009 ; Clinical Science Volume 117 ; 117 >
-    au < testing ; 2010 ; Clinical Science Volume 118 ; 118 >
+    au < notReady ; 2010 ; Clinical Science Volume 118 ; 118 >
     au < released ; 2010 ; Clinical Science Volume 119 ; 119 >
     au < released ; 2011 ; Clinical Science Volume 120 ; 120 >
     au < released ; 2011 ; Clinical Science Volume 121 ; 121 >
