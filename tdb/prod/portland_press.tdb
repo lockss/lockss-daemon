@@ -43,7 +43,13 @@ comment[bj1] = no permission from publisher
 
     comment[notReady] = do not debug before 1985 eq V385
     comment[notReady_V420] = http://www.biochemj.org/bj/420/0179/bj4200179t01.htm
-    comment[notReady_V408] = 
+    comment[notReady_V408_1] = http://www.biochemj.org/bj/408/0297/bj4080297t01.htm
+    comment[notReady_V408_2] = http://www.biochemj.org/bj/408/0297/bj4080297t03.htm
+    comment[notReady_V408_3] = http://www.biochemj.org/bj/408/0297/bj4080297t04.htm
+    comment[notReady_V408_4] = http://www.biochemj.org/bj/408/0297/bj4080297t06.htm
+    comment[notReady_V408_5] = http://www.biochemj.org/bj/408/0297/bj4080297t07.htm
+    comment[notReady_V408_6] = http://www.biochemj.org/bj/408/0019/bj4080019t01.htm
+    comment[notReady_V408_7] = http://www.biochemj.org/bj/408/0087/bj4080087t01.htm
     comment[notReady_V409] = http://www.biochemj.org/bj/409/0077/bj4090077add.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani1.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani2.htm, http://www.biochemj.org/bj/409/0117/bj4090117t02.htm  
     comment[notReady_V410] = http://www.biochemj.org/bj/410/0071/bj4100071t02.htm, http://www.biochemj.org/bj/410/0187/bj4100187t01.htm
 
@@ -454,7 +460,7 @@ comment[bj1] = no permission from publisher
     au < testing ; 2007 ; Biochemical Journal Volume 405 ; 405 >
     au < testing ; 2007 ; Biochemical Journal Volume 406 ; 406 >
     au < released ; 2007 ; Biochemical Journal Volume 407 ; 407 >
-    au < testing ; 2007 ; Biochemical Journal Volume 408 ; 408 >
+    au < notReady ; 2007 ; Biochemical Journal Volume 408 ; 408 >
     au < notReady ; 2008 ; Biochemical Journal Volume 409 ; 409 >
     au < notReady ; 2008 ; Biochemical Journal Volume 410 ; 410 >
     au < released ; 2008 ; Biochemical Journal Volume 411 ; 411 >
