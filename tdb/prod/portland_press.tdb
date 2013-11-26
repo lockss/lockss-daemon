@@ -41,7 +41,10 @@
 comment[bj_allnotReady_aus] = 500 errors, unless otherwise noted see RU3802 RT5035
 comment[bj1] = no permission from publisher
 
-    comment[notReady] = V420 http://www.biochemj.org/bj/420/0179/bj4200179t01.htm
+    comment[notReady_V420] = http://www.biochemj.org/bj/420/0179/bj4200179t01.htm
+    comment[notReady_V408] = 
+    comment[notReady_V409] = http://www.biochemj.org/bj/409/0077/bj4090077add.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani1.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani2.htm, http://www.biochemj.org/bj/409/0117/bj4090117t02.htm  
+    comment[notReady_V410] = 
 
     au < exists ; 1906 ; Biochemical Journal Volume 1 ; 001 >
     au < released ; 1907 ; Biochemical Journal Volume 2 ; 002 >
@@ -464,7 +467,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2009 ; Biochemical Journal Volume 419 ; 419 >
     au < notReady ; 2009 ; Biochemical Journal Volume 420 ; 420 >
     au < released ; 2009 ; Biochemical Journal Volume 421 ; 421 >
-    au < testing ; 2009 ; Biochemical Journal Volume 422 ; 422 >
+    au < ready ; 2009 ; Biochemical Journal Volume 422 ; 422 >
     au < released ; 2009 ; Biochemical Journal Volume 423 ; 423 >
     au < released ; 2009 ; Biochemical Journal Volume 424 ; 424 >
     au < released ; 2010 ; Biochemical Journal Volume 425 ; 425 >
@@ -481,10 +484,10 @@ comment[bj1] = no permission from publisher
     au < released ; 2011 ; Biochemical Journal Volume 436 ; 436 >
     au < released ; 2011 ; Biochemical Journal Volume 437 ; 437 >
     au < released ; 2011 ; Biochemical Journal Volume 438 ; 438 >
-    au < testing ; 2011 ; Biochemical Journal Volume 439 ; 439 >
+    au < ready ; 2011 ; Biochemical Journal Volume 439 ; 439 >
     au < released ; 2011 ; Biochemical Journal Volume 440 ; 440 >
     au < released ; 2012 ; Biochemical Journal Volume 441 ; 441 >
-    au < testing ; 2012 ; Biochemical Journal Volume 442 ; 442 >
+    au < ready ; 2012 ; Biochemical Journal Volume 442 ; 442 >
     au < released ; 2012 ; Biochemical Journal Volume 443 ; 443 >
     au < released ; 2012 ; Biochemical Journal Volume 444 ; 444 >
     au < manifest ; 2012 ; Biochemical Journal Volume 445 ; 445 >
