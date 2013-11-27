@@ -1,7 +1,10 @@
+/*
+ * $Id: IgiGlobalHtmlFilterFactory.java,v 1.6 2013-11-27 20:41:18 thib_gc Exp $
+ */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,7 +24,7 @@ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, tMassachusettsMedicalSocietyHtmlFilterFactoryhe name of Stanford University shall not
+Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
@@ -34,27 +37,12 @@ import java.io.*;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
-import org.htmlparser.util.NodeList;
-import org.htmlparser.util.ParserException;
-import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
-import org.lockss.util.ReaderInputStream;
 
 public class IgiGlobalHtmlFilterFactory implements FilterFactory {
 
-	Logger log = Logger.getLogger("IgiGlobalHtmlFilterFactoryy");
-	
-  public static class FilteringException extends PluginException {
-    public FilteringException() { super(); }
-    public FilteringException(String msg, Throwable cause) { super(msg, cause); }
-    public FilteringException(String msg) { super(msg); }
-    public FilteringException(Throwable cause) { super(cause); }
-  }
-  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -70,15 +58,14 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Contains dynamic css URLs
         new TagNameFilter("link"),
-        // Contains testimonials, sponsors, and news
-        HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
-        // Contains institution name
-        HtmlNodeFilters.tagWithAttribute("span", "class", "InstitutionName"),
+        // Changed from "IGI Global - Foo" to "Foo | IGI Global"
+        new TagNameFilter("title"),
+
         HtmlNodeFilters.tagWithAttributeRegex("span", "id", "CenterContent.*Header"),
         //hidden inputs with changing keys
         HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
-        //Pre-made citations of the article that include an access date
+        // Pre-made citations of the article that include an access date
         HtmlNodeFilters.tagWithAttribute("div", "id", "citation"),
         // Trial access icon this conceivably will go away or depend on the subscription type of the library.
         // The surrounding div is hard to identify, but likely to be removed along with the image so we find 
@@ -96,9 +83,6 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         
         // Stylesheets sometimes contain version numbers
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-        // Institution-specific stuff
-        HtmlNodeFilters.tagWithAttribute("div", "class", "Institution"),
-        HtmlNodeFilters.tagWithAttribute("img", "src", "/Images/institution-icon.png"),
         // Login page
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/gateway/login"),
         // Article titles
@@ -109,20 +93,27 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // Search box
         HtmlNodeFilters.tagWithAttribute("span", "class", "search-contents"),
         
-        //IGI Global books identifies library with access in header
+        // IGI Global books identifies library with access in header
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_lblHeader"),
-        //In IGI books, the footer contains sponsor image and no clear marker, but also no needed content
-        HtmlNodeFilters.tagWithAttribute("div",  "class", "Footer"),
         
         // <h3> replaced <h4> or vice versa at one point
         new TagNameFilter("h3"),
-        new TagNameFilter("h4")    
+        new TagNameFilter("h4"),
+        
+        /*
+         * Broad area filtering
+         */
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
         
     };
     
 	return new HtmlFilterInputStream(in,
-              						 encoding,
-              						 new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
+	                                 encoding,
+	                                 new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
   }
   
 }

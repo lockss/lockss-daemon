@@ -1,6 +1,10 @@
 /*
+ * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.6 2013-11-27 20:41:19 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,8 +37,8 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
+  
   private IgiGlobalHtmlFilterFactory fact;
-  private MockArchivalUnit mau;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -57,12 +61,6 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   			"\n" +
   		"</td>";
   
-  private static final String institutionHeaderHtml =
-		  "<span class=\"InstitutionName\" id=\"ctl00_lblInstitution\">LOCKSS</span>" +
-		  "Hello World" +
-		  "<span id=\"ctl00_cphCenterContent_ctl00_lblHeader\">LOCKSS's IGI Global Research Collection</span>";
-  private static final String institutionHeaderHtmlFiltered = "Hello World";
-
   private static final String inputKeysHtml =
 		  "<div>\n" +
 			  "<input id=\"__EVENTVALIDATION\" type=\"hidden\" value=\"/wEWAwKM69DODwKpwbbBAgLz9t3hB0AqeZdR3lGFnROBTmBAbtw5sqoS\" name=\"__EVENTVALIDATION\">\n" +
@@ -206,7 +204,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 	
 
   public void testSibebarFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(sidebarHtml),
         Constants.DEFAULT_ENCODING);
 
@@ -214,7 +212,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   }
 
   public void testInputKeysFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(inputKeysHtml),
         Constants.DEFAULT_ENCODING);
 
@@ -222,7 +220,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   }
 
   public void testCitationHeaderFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau, 
+    InputStream actIn = fact.createFilteredInputStream(null, 
         new StringInputStream(citationHtml),
         Constants.DEFAULT_ENCODING);
 
@@ -230,7 +228,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   }
 
   public void testTrialImageFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau, 
+    InputStream actIn = fact.createFilteredInputStream(null, 
         new StringInputStream(trialImageHtml),
         Constants.DEFAULT_ENCODING);
 
@@ -238,42 +236,36 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   }
 
   public void testGoodHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(goodHtml),
         Constants.DEFAULT_ENCODING);
     assertEquals(goodHtml, StringUtil.fromInputStream(actIn));
   }
 
   public void testJavascriptHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
         new StringInputStream(javascriptHtml),
         Constants.DEFAULT_ENCODING);
 
     assertEquals(javascriptHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
-  public void testInstitutionHeaderHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(institutionHeaderHtml),
-        Constants.DEFAULT_ENCODING);
 
-    assertEquals(institutionHeaderHtmlFiltered, StringUtil.fromInputStream(actIn));
-  }
   public void testDynamicCssHtmlFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
         					       new StringInputStream(dynamicCssHtml),
         					       Constants.DEFAULT_ENCODING);
 
     assertEquals(dynamicCssHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   public void testIdentityHeader() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
                                                        new StringInputStream(identityHeaderHtml),
                                                        Constants.DEFAULT_ENCODING);
 
     assertEquals(identityHeaderHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   public void testFooter() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
+    InputStream actIn = fact.createFilteredInputStream(null,
                                                        new StringInputStream(footerWithSponsor),
                                                        Constants.DEFAULT_ENCODING);
 
