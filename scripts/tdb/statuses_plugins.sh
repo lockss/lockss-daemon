@@ -53,8 +53,8 @@ grep -rL --include "*.xml" "<string>plugin_parent_version</string>" * | sed 's/\
 grep -r -A 1 --include "*.xml" "<string>plugin_version</string>" * | grep "\- " | sed 's/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo08.txt
 grep -rL --include "*.xml" "<string>plugin_version</string>" * | sed 's/\(.*\).xml/\1,!/' >> $tpath/foo08.txt
 
-#To get the plugins on and not on the content machines
-sh ../../scripts/tdb/statuses_plugins_content.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo09.txt
+#To get the plugins on and not on the content machines 9-16 (gln testing)
+sh ../../scripts/tdb/statuses_plugins_content_9-16.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo09.txt
 cat $tpath/foo09.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo09.txt
 
@@ -68,6 +68,11 @@ sh ../../scripts/tdb/statuses_plugins_delta.sh | grep -i plugin | sed 's/\t/,/' 
 cat $tpath/foo11.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
 diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo11.txt
 
+#To get the plugins on and not on the content machines 1-4 (clockss testing)
+sh ../../scripts/tdb/statuses_plugins_content_1-4.sh | grep -i plugin | sed 's/\t/,/' > $tpath/foo12.txt
+cat $tpath/foo12.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/bar.txt
+diff $tpath/bar.txt $tpath/AllPlugins.txt | grep ">" | sed 's/..//' | sed 's/\(.*\)/\1,!/' >> $tpath/foo12.txt
+
 cat $tpath/foo00.txt | sort -t, -k 1,1 > $tpath/blatz00.txt #numbers of AUs
 cat $tpath/foo01.txt | sort -t, -k 1,1 > $tpath/blatz01.txt #plugin status
 cat $tpath/foo02.txt | sort -t, -k 1,1 > $tpath/blatz02.txt #substance checkers
@@ -77,11 +82,12 @@ cat $tpath/foo05.txt | sort -t, -k 1,1 > $tpath/blatz05.txt #url resolver
 cat $tpath/foo06.txt | sort -t, -k 1,1 > $tpath/blatz06.txt #Parent plugin
 cat $tpath/foo07.txt | sort -t, -k 1,1 > $tpath/blatz07.txt #Parent verions
 cat $tpath/foo08.txt | sort -t, -k 1,1 > $tpath/blatz08.txt #Plugin version
-cat $tpath/foo09.txt | sort -t, -k 1,1 > $tpath/blatz09.txt #Plugins on content machines
+cat $tpath/foo09.txt | sort -t, -k 1,1 > $tpath/blatz09.txt #Plugins on content machines 9-16
 cat $tpath/foo10.txt | sort -t, -k 1,1 > $tpath/blatz10.txt #Plugins on ingest machines
 cat $tpath/foo11.txt | sort -t, -k 1,1 > $tpath/blatz11.txt #Plugins on delta machines
+cat $tpath/foo12.txt | sort -t, -k 1,1 > $tpath/blatz12.txt #Plugins on content machines 1-4
 
-echo "Plugin,V,C,I,D,Parent,PV,AUs,Substance,Art.It.,MetadataEx,OpenURL,Status"
-join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz03.txt | join -t, -e EMPTY - $tpath/blatz04.txt | join -t, -e EMPTY - $tpath/blatz05.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 8 -nr 
+echo "Plugin,CVS,C9-16,C1-4,D1-13,I1-4,Parent,PV,AUs,Substance,Art.It.,MetadataEx,OpenURL,Status"
+join -t, -e EMPTY $tpath/blatz08.txt $tpath/blatz09.txt | join -t, -e EMPTY - $tpath/blatz12.txt | join -t, -e EMPTY - $tpath/blatz11.txt | join -t, -e EMPTY - $tpath/blatz10.txt | join -t, -e EMPTY - $tpath/blatz06.txt | join -t, -e EMPTY - $tpath/blatz07.txt | join -t, -e EMPTY - $tpath/blatz00.txt | join -t, -e EMPTY - $tpath/blatz02.txt | join -t, -e EMPTY - $tpath/blatz03.txt | join -t, -e EMPTY - $tpath/blatz04.txt | join -t, -e EMPTY - $tpath/blatz05.txt | join -t, -e EMPTY - $tpath/blatz01.txt | sort -t, -k 8 -nr 
 
 exit 0
