@@ -13,14 +13,14 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Poll</string>
-        <string>8</string>
+        <string>9</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -119,6 +119,14 @@ export.mpx line is for citation information; mode is ris, txt, etc.
     <string>org.lockss.plugin.metapress.MetaPressUrlNormalizer</string>
   </entry>
   <entry>
+    <string>text/plain_filter_factory</string>
+    <string>org.lockss.plugin.metapress.MetapressTextAndRisFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.metapress.MetapressTextAndRisFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.metapress.MetaPressHtmlHashFilterFactory</string>
   </entry>
@@ -149,5 +157,4 @@ export.mpx line is for citation information; mode is ris, txt, etc.
    </entry>
  </map>
  </entry>
-  
 </map>
