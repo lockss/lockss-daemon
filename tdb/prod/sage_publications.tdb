@@ -3606,7 +3606,7 @@
         au < manifest ; 2009 ; The Bible Translator Volume 60 ; 60 >
         au < manifest ; 2010 ; The Bible Translator Volume 61 ; 61 >
         au < manifest ; 2011 ; The Bible Translator Volume 62 ; 62 >
-        au < releasing ; 2012 ; The Bible Translator Volume 63 ; 63 >
+        au < released ; 2012 ; The Bible Translator Volume 63 ; 63 >
         au < manifest ; 2013 ; The Bible Translator Volume 64 ; 64 >
 
       }
@@ -10279,9 +10279,9 @@
         au < manifest ; 2002 ; European Journal of Cardiovascular Nursing Volume 1 ; 1 >
         au < manifest ; 2003 ; European Journal of Cardiovascular Nursing Volume 2 ; 2 >
         au < manifest ; 2004 ; European Journal of Cardiovascular Nursing Volume 3 ; 3 >
-        au < releasing ; 2005 ; European Journal of Cardiovascular Nursing Volume 4 ; 4 >
-        au < releasing ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 >
-        au < releasing ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 >
+        au < released ; 2005 ; European Journal of Cardiovascular Nursing Volume 4 ; 4 >
+        au < released ; 2006 ; European Journal of Cardiovascular Nursing Volume 5 ; 5 >
+        au < released ; 2007 ; European Journal of Cardiovascular Nursing Volume 6 ; 6 >
         au < released ; 2008 ; European Journal of Cardiovascular Nursing Volume 7 ; 7 >
         au < released ; 2009 ; European Journal of Cardiovascular Nursing Volume 8 ; 8 >
         au < released ; 2010 ; European Journal of Cardiovascular Nursing Volume 9 ; 9 >
@@ -10321,9 +10321,9 @@
         au < manifest ; 2002 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 9 ; 9 >
         au < manifest ; 2003 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 10 ; 10 >
         au < manifest ; 2004 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 11 ; 11 >
-        au < releasing ; 2005 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 12 ; 12 >
-        au < releasing ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 13 ; 13 >
-        au < releasing ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 14 ; 14 >
+        au < released ; 2005 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 12 ; 12 >
+        au < released ; 2006 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 13 ; 13 >
+        au < released ; 2007 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 14 ; 14 >
         au < released ; 2008 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 15 ; 15 >
         au < released ; 2009 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 16 ; 16 >
         au < released ; 2010 ; European Journal of Cardiovascular Prevention & Rehabilitation Volume 17 ; 17 >
@@ -14455,7 +14455,7 @@
         param[base_url] = http://ksm.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < releasing ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
+        au < released ; 2012 ; IIM Kozhikode Society & Management Review Volume 1 ; 1 >
         au < manifest ; 2013 ; IIM Kozhikode Society & Management Review Volume 2 ; 2 >
 
       }
@@ -21835,7 +21835,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2010 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 7 ; 7 >
         au < released ; 2011 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 8 ; 8 >
         au < released ; 2012 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 9 ; 9 >
-        au < releasing ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 >
+        au < released ; 2013 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 10 ; 10 >
         au < expected ; 2014 ; Journal of Generic Medicines: The Business Journal for the Generic Medicines Sector Volume 11 ; 11 >
 
       }
@@ -24778,7 +24778,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2007 ; Journal of Psychoeducational Assessment Volume 25 ; 25 >
         au < manifest ; 2008 ; Journal of Psychoeducational Assessment Volume 26 ; 26 >
         au < doNotProcess ; 2009 ; Journal of Psychoeducational Assessment Volume 27 ; 27 >
-        au < releasing ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
+        au < released ; 2010 ; Journal of Psychoeducational Assessment Volume 28 ; 28 >
         au < released ; 2011 ; Journal of Psychoeducational Assessment Volume 29 ; 29 >
         au < released ; 2012 ; Journal of Psychoeducational Assessment Volume 30 ; 30 >
         au < manifest ; 2013 ; Journal of Psychoeducational Assessment Volume 31 ; 31 >
@@ -28974,7 +28974,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2009 ; Medico-Legal Journal Volume 77 ; 77 >
         au < manifest ; 2010 ; Medico-Legal Journal Volume 78 ; 78 >
         au < manifest ; 2011 ; Medico-Legal Journal Volume 79 ; 79 >
-        au < releasing ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
+        au < released ; 2012 ; Medico-Legal Journal Volume 80 ; 80 >
         au < manifest ; 2013 ; Medico-Legal Journal Volume 81 ; 81 >
         au < expected ; 2014 ; Medico-Legal Journal Volume 82 ; 82 >
     
@@ -30065,7 +30065,7 @@ comment[mpj] = now published by Brill
 
         au < manifest ; 2010 ; New Labor Forum Volume 19 ; 19 >
         au < manifest ; 2011 ; New Labor Forum Volume 20 ; 20 >
-        au < releasing ; 2012 ; New Labor Forum Volume 21 ; 21 >
+        au < released ; 2012 ; New Labor Forum Volume 21 ; 21 >
         au < manifest ; 2013 ; New Labor Forum Volume 22 ; 22 >
 
     }
@@ -36878,7 +36878,7 @@ comment[mpj] = now published by Brill
         au < released ; 2009 ; Studies in History Volume 25 ; 25 >
         au < released ; 2010 ; Studies in History Volume 26 ; 26 >
         au < released ; 2011 ; Studies in History Volume 27 ; 27 >
-        au < releasing ; 2012 ; Studies in History Volume 28 ; 28 >
+        au < released ; 2012 ; Studies in History Volume 28 ; 28 >
         au < manifest ; 2013 ; Studies in History Volume 29 ; 29 >
 
       }
@@ -41454,7 +41454,7 @@ comment[mpj] = now published by Brill
       au < manifest ; 2009 ; Australian Journal of Education Volume 53 ; 53 >
       au < manifest ; 2010 ; Australian Journal of Education Volume 54 ; 54 >
       au < manifest ; 2011 ; Australian Journal of Education Volume 55 ; 55 >
-      au < releasing ; 2012 ; Australian Journal of Education Volume 56 ; 56 >
+      au < released ; 2012 ; Australian Journal of Education Volume 56 ; 56 >
       au < manifest ; 2013 ; Australian Journal of Education Volume 57 ; 57 >
 
     }
@@ -41588,7 +41588,7 @@ comment[mpj] = now published by Brill
     au < manifest ; 2009 ; Australian Journal of Career Development Volume 18 ; 18 >
     au < manifest ; 2010 ; Australian Journal of Career Development Volume 19 ; 19 >
     au < manifest ; 2011 ; Australian Journal of Career Development Volume 20 ; 20 >
-    au < releasing ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 >
+    au < released ; 2012 ; Australian Journal of Career Development Volume 21 ; 21 >
     au < manifest ; 2013 ; Australian Journal of Career Development Volume 22 ; 22 >
 
     }
@@ -43038,7 +43038,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Care Pathways Volume 13 ; 13 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; International Journal of Care Pathways Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; International Journal of Care Pathways Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; releasing ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of Care Pathways Volume 16 ; 16 >
         au < HighWirePressH20Plugin ; expected ; 2013 ; International Journal of Care Pathways Volume 17 ; 17 >
   
       }
@@ -43122,7 +43122,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; doNotProcess ; 2009 ; International Journal of STD & AIDS Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2010 ; International Journal of STD & AIDS Volume 21 ; 21 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2011 ; International Journal of STD & AIDS Volume 22 ; 22 >
-        au < HighWirePressH20Plugin ; releasing ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; released ; 2012 ; International Journal of STD & AIDS Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; International Journal of STD & AIDS Volume 24 ; 24 >
   
       }
@@ -43174,7 +43174,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Health Services Research & Policy Volume 14 ; 14 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Health Services Research & Policy Volume 15 ; 15 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Health Services Research & Policy Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; releasing ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Health Services Research & Policy Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Health Services Research & Policy Volume 18 ; 18 >
   
       }
@@ -43217,7 +43217,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medical Biography Volume 17 ; 17 >
         au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medical Biography Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; releasing ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
   
       }
