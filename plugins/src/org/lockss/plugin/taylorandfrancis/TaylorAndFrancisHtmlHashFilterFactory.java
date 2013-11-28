@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.13 2013-11-13 21:01:25 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.14 2013-11-28 00:10:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,10 +46,9 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-
 public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
 
-  Logger log = Logger.getLogger("TaylorAndFrancisHtmlHashFilterFactory");
+  private static final Logger log = Logger.getLogger(TaylorAndFrancisHtmlHashFilterFactory.class);
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
@@ -75,25 +74,32 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("style"),
         // Went from Taylor &amp; Francis to Taylor & Francis
         new TagNameFilter("title"),
-        // Went from <..."/> to <..." />
-        HtmlNodeFilters.tagWithAttribute("img", "class", "cover"),
-        // Header contains institution-dependent markup, can contain
-        // temporary site warnings (e.g. "Librarians' administration
-        // tools are temporarily unavailable. We are working to
-        // restore these as soon as possible and apologize for any
-        // inconvenience caused."), etc.
+        /*
+         * Broad area filtering
+         */
+        // Header
         HtmlNodeFilters.tagWithAttribute("div", "id", "hd"),
-        // Footer contains copyright year and other potentially variable items
+        // EU cookie notification
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "cookieBanner"),
+        // Top area
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^primarySubjects"),
+        // Breadcrumb
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "breadcrumb"),
+        // Left column
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit1"),
+        // Right column
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit3"),
+        // Bottom area (alternatives)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^secondarySubjects"), 
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^secondarySubjects"),
+        // Footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "ft"),
         
+        // Went from <..."/> to <..." />
+        HtmlNodeFilters.tagWithAttribute("img", "class", "cover"),
         // Maximal filtering. Take out non-content sections proactively
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "cookieBanner"),//cookie warning
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^primarySubjects"),//top search area - can have addt'l words
-        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^secondarySubjects"), //bottom affiliations 
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^secondarySubjects"), //bottom affiliations - found it this way (also?) 
+        //top search area - can have addt'l words
         HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc 
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit1"), //left column
-        HtmlNodeFilters.tagWithAttribute("div",  "id", "unit3"), //right column 
         
         // Google translate related stuff - RU 4642 (not on all browsers)
         HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"),
@@ -115,6 +121,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "href", "http://www.tandfonline.com"),
         // Spuriously versioned CSS URLs
         HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
+        // Later addition of <link rel="meta" ...> tags
+        HtmlNodeFilters.tagWithAttribute("link", "rel", "meta"),
         // These two are sometimes found in a temporary overlay
         // (also requires whitespace normalization to work)
         HtmlNodeFilters.tagWithAttribute("div", "id", "overlay"),
@@ -160,6 +168,15 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                         tag.setAttribute("href", "#tandf_content");
                         return;
                       }
+                      // Inline links used to have class="ref" and target="url",
+                      // now only target="_blank"
+                      if (tag.getAttribute("target") != null) {
+                        tag.removeAttribute("target");
+                      }
+                      if (tag.getAttribute("class") != null && "ref".equals(tag.getAttribute("class"))) {
+                        tag.removeAttribute("class");
+                      }
+                      return;
                     }
                   } break;
                   case 'd': {
@@ -179,6 +196,33 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                       }
                     }
                   } break;
+                  case 'i': {
+                    /*
+                     * <img>
+                     */
+                    // Images used to have an ID
+                    if ("img".equals(tagName)) {
+                      if (tag.getAttribute("id") != null) {
+                        tag.removeAttribute("id");
+                      }
+                      // Prevent the latter from causing spurious <.../> vs. <... />
+                      String src = tag.getAttribute("alt");
+                      tag.removeAttribute("alt");
+                      tag.setAttribute("alt", src);
+                      return;
+                    }
+                  } break;
+                  case 'm': {
+                    /*
+                     * <meta>
+                     */
+                    if ("meta".equals(tagName)) {
+                      // Some dc.Creator tags evolved to have extraneous whitespace
+                      if (tag.getAttribute("name") != null && "dc.Creator".equals(tag.getAttribute("name")) && tag.getAttribute("content") != null) {
+                        tag.setAttribute("content", tag.getAttribute("content").trim());
+                      }
+                    }
+                  } break;
                   case 's': {
                     /*
                      * <span>
@@ -188,6 +232,22 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                         tag.removeAttribute("id");
                         return;
                       }
+                    }
+                  } break;
+                  case 't': {
+                    /*
+                     * <table>
+                     */
+                    if ("table".equals(tagName)) {
+                      // From <table class="listgroup " border="0" width="95%">
+                      // to <table xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="listgroup " border="0" width="95%">
+                      if (tag.getAttribute("xmlns:mml") != null) {
+                        tag.removeAttribute("xmlns:mml");
+                      }
+                      if (tag.getAttribute("xmlns:xsi") != null) {
+                        tag.removeAttribute("xmlns:xsi");
+                      }
+                      return;
                     }
                   } break;
                 }
