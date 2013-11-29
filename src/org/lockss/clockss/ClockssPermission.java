@@ -1,10 +1,10 @@
 /*
- * $Id: ClockssPermission.java,v 1.2 2010-09-02 18:15:19 tlipkis Exp $
+ * $Id: ClockssPermission.java,v 1.3 2013-11-29 11:03:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,7 +49,7 @@ public class ClockssPermission {
       new StringPermissionChecker(CLOCKSS_PERMISSION_STRING,
                                   new StringPermissionChecker.StringFilterRule());
     permissionList.add(spc);
-    permissionList.add(new CreativeCommonsPermissionChecker());
+    permissionList.add(new CreativeCommonsRdfPermissionChecker());
     permissionList.add(new CreativeCommonsV3PermissionChecker());
   }
 

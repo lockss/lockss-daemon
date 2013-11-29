@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.29 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.30 2013-11-29 11:03:59 thib_gc Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     // Now we can construct a valid CC permission checker.
     m_permissionCheckers =
 //       ListUtil.list(new CreativeCommonsPermissionChecker(m_registryUrl));
-      ListUtil.list(new CreativeCommonsPermissionChecker());
+      ListUtil.list(new CreativeCommonsRdfPermissionChecker());
 
     Configuration config = CurrentConfig.getCurrentConfig();
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL,

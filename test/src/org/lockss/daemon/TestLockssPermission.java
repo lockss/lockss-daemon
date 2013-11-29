@@ -1,10 +1,10 @@
 /*
- * $Id: TestLockssPermission.java,v 1.7 2008-01-27 06:43:57 tlipkis Exp $
+ * $Id: TestLockssPermission.java,v 1.8 2013-11-29 11:03:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -126,8 +126,8 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
 	       checkers.get(1) instanceof StringPermissionChecker);
     assertTrue("Third checker wasn't a StringPermission Checker",
 	       checkers.get(2) instanceof StringPermissionChecker);
-    assertTrue("Fourth checker wasn't a CreativeCommonsPermissionChecker",
-	       checkers.get(3) instanceof CreativeCommonsPermissionChecker);
+    assertTrue("Fourth checker wasn't a CreativeCommonsRdfPermissionChecker",
+	       checkers.get(3) instanceof CreativeCommonsRdfPermissionChecker);
     assertTrue("Fifth checker wasn't a CreativeCommonsV3PermissionChecker",
 	       checkers.get(4) instanceof CreativeCommonsV3PermissionChecker);
   }

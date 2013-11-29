@@ -1,10 +1,10 @@
 /*
- * $Id: LockssPermission.java,v 1.7 2008-01-27 06:43:57 tlipkis Exp $
+ * $Id: LockssPermission.java,v 1.8 2013-11-29 11:03:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,7 +70,7 @@ public class LockssPermission {
     spc.doSetAccessType(AuState.AccessType.Subscription);
     lst.add(spc);
 
-    lst.add(new CreativeCommonsPermissionChecker());
+    lst.add(new CreativeCommonsRdfPermissionChecker());
     lst.add(new CreativeCommonsV3PermissionChecker());
     lst.trimToSize();
     permissionList = Collections.unmodifiableList(lst);

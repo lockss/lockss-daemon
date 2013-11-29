@@ -1,10 +1,10 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.8 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: TestCreativeCommonsRdfPermissionChecker.java,v 1.1 2013-11-29 11:03:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,12 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import org.lockss.util.*;
 import org.lockss.state.*;
-import org.lockss.test.*;
+
 import java.io.StringReader;
 
-public class TestCreativeCommonsPermissionChecker
+public class TestCreativeCommonsRdfPermissionChecker
   extends LockssPermissionCheckerTestCase {
 
   public void setUp() throws Exception {
@@ -210,8 +209,8 @@ public class TestCreativeCommonsPermissionChecker
   // the rdf:about attribute is left empty, this is ignored.
   private String pageURI = "http://www.lockss.org/registry/";
 
-  private CreativeCommonsPermissionChecker cc =
-    new CreativeCommonsPermissionChecker();
+  private CreativeCommonsRdfPermissionChecker cc =
+    new CreativeCommonsRdfPermissionChecker();
   private StringReader reader;
 
   public void testNullReader() {

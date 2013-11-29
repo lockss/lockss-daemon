@@ -1,10 +1,10 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.11 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: CreativeCommonsRdfPermissionChecker.java,v 1.1 2013-11-29 11:03:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,7 +56,7 @@ import org.lockss.state.*;
  * Currently does not support checking any other license restrictions
  * or permissions.
  */
-public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
+public class CreativeCommonsRdfPermissionChecker extends BasePermissionChecker {
 
   private static String RDF_START = "<rdf:RDF";
   private static String RDF_END = "</rdf:RDF>";
@@ -107,7 +107,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
    * not be considered valid.
    */
 
-  public CreativeCommonsPermissionChecker() {
+  public CreativeCommonsRdfPermissionChecker() {
   }
 
   /**
