@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.246 2013-08-13 06:19:55 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.247 2013-11-29 19:19:32 tlipkis Exp $
  */
 
 /*
@@ -318,8 +318,10 @@ public class PluginManager
   private boolean paramDisableURLConnectionCache =
     DEFAULT_DISABLE_URL_CONNECTION_CACHE;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
-  private IntStepFunction auSearchCacheSizeFunc;
-  private IntStepFunction auSearch404CacheSizeFunc;
+  private IntStepFunction auSearchCacheSizeFunc = 
+    new IntStepFunction(DEFAULT_AU_SEARCH_CACHE_SIZE);
+  private IntStepFunction auSearch404CacheSizeFunc =
+    new IntStepFunction(DEFAULT_AU_SEARCH_404_CACHE_SIZE);
   private int paramMinDiskSearchesFor404Cache =
     DEFAULT_AU_SEARCH_MIN_DISK_SEARCHES_FOR_404_CACHE;
   private boolean paramPreventConcurrentSearches =
