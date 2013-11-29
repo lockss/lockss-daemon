@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.30 2013-11-29 11:03:59 thib_gc Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.31 2013-11-29 19:18:59 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
 
   private String m_registryUrl = null;
   private int m_refetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
-  private List m_permissionCheckers = null;
   private boolean recomputeRegName = true;
   private boolean enablePolls = DEFAULT_ENABLE_REGISTRY_POLLS;
   private String regName = null;
@@ -114,10 +113,6 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
       throws ConfigurationException {
     super.loadAuConfigDescrs(auConfig);
     this.m_registryUrl = auConfig.get(ConfigParamDescr.BASE_URL.getKey());
-    // Now we can construct a valid CC permission checker.
-    m_permissionCheckers =
-//       ListUtil.list(new CreativeCommonsPermissionChecker(m_registryUrl));
-      ListUtil.list(new CreativeCommonsRdfPermissionChecker());
 
     Configuration config = CurrentConfig.getCurrentConfig();
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL,
