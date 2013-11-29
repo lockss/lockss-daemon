@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsRdfPermissionChecker.java,v 1.1 2013-11-29 11:03:59 thib_gc Exp $
+ * $Id: CreativeCommonsRdfPermissionChecker.java,v 1.2 2013-11-29 11:08:09 thib_gc Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class CreativeCommonsRdfPermissionChecker extends BasePermissionChecker {
     new ResourceImpl(CC_NAMESPACE + "Distribution");
 
   private static final Logger log =
-    Logger.getLogger("CreativeCommonsPermissionChecker");
+    Logger.getLogger(CreativeCommonsRdfPermissionChecker.class);
 
   // The URI of the resource being checked for permission
   private String m_licenseURI;
