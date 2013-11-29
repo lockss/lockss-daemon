@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssPermission.java,v 1.8 2013-11-29 11:03:58 thib_gc Exp $
+ * $Id: TestLockssPermission.java,v 1.9 2013-11-29 11:17:59 thib_gc Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestLockssPermission extends LockssPermissionCheckerTestCase {
     assertTrue("Fourth checker wasn't a CreativeCommonsRdfPermissionChecker",
 	       checkers.get(3) instanceof CreativeCommonsRdfPermissionChecker);
     assertTrue("Fifth checker wasn't a CreativeCommonsV3PermissionChecker",
-	       checkers.get(4) instanceof CreativeCommonsV3PermissionChecker);
+	       checkers.get(4) instanceof CreativeCommonsPermissionChecker);
   }
 
   public void testGetCheckersNotModifiable() {

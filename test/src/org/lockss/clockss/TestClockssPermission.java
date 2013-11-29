@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssPermission.java,v 1.4 2013-11-29 11:03:59 thib_gc Exp $
+ * $Id: TestClockssPermission.java,v 1.5 2013-11-29 11:17:59 thib_gc Exp $
  */
 
 /*
@@ -85,8 +85,8 @@ public class TestClockssPermission extends LockssPermissionCheckerTestCase {
 	       checkers.get(0) instanceof StringPermissionChecker);
     assertTrue("Second checker wasn't a CreativeCommonsRdfPermissionChecker",
 	       checkers.get(1) instanceof CreativeCommonsRdfPermissionChecker);
-    assertTrue("Third checker wasn't a CreativeCommonsV3PermissionChecker",
-	       checkers.get(2) instanceof CreativeCommonsV3PermissionChecker);
+    assertTrue("Third checker wasn't a CreativeCommonsPermissionChecker",
+	       checkers.get(2) instanceof CreativeCommonsPermissionChecker);
   }
 
 }

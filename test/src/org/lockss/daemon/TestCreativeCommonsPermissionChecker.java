@@ -1,10 +1,10 @@
 /*
- * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.3 2011-12-18 23:13:32 tlipkis Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.10 2013-11-29 11:17:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,19 +31,15 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
-import org.lockss.test.*;
 import java.io.*;
-import org.lockss.plugin.*;
 import org.lockss.state.*;
-import org.lockss.util.*;
-import org.lockss.filter.*;
 
 /**
  * <p>Title: TestCreativeCommonsV3PermissionChecker</p>
  * <p>@author Claire Griffin</p>
  * <p>@version 1.0</p>
  */
-public class TestCreativeCommonsV3PermissionChecker
+public class TestCreativeCommonsPermissionChecker
   extends LockssPermissionCheckerTestCase {
 
   String template = "<html>/n<head>/n<title>FOO</title>\n</head>" +
@@ -57,7 +53,7 @@ public class TestCreativeCommonsV3PermissionChecker
     "by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd",
     "BY", "BY-SA", "BY-nc", "by-ND", "by-NC-sa", "by-NC-ND",
   };
-  private String[] VALID_VERSIONS = {"1.0", "2.0", "2.5", "3.0"};
+  private String[] VALID_VERSIONS = {"1.0", "2.0", "2.5", "3.0", "4.0"};
   private String TEST_URL = "http://www.example.com/";
 
   public void setUp() throws Exception {
@@ -76,8 +72,8 @@ public class TestCreativeCommonsV3PermissionChecker
 
   private void assertPerm(String tag) {
     String text = htext(tag);
-    CreativeCommonsV3PermissionChecker checker =
-      new CreativeCommonsV3PermissionChecker();
+    CreativeCommonsPermissionChecker checker =
+      new CreativeCommonsPermissionChecker();
     assertTrue(tag + " expected permission, wasn't",
 	       checker.checkPermission(pHelper,
 				       new StringReader(text), TEST_URL));
@@ -86,8 +82,8 @@ public class TestCreativeCommonsV3PermissionChecker
 
   private void assertNoPerm(String tag) {
     String text = htext(tag);
-    CreativeCommonsV3PermissionChecker checker =
-      new CreativeCommonsV3PermissionChecker();
+    CreativeCommonsPermissionChecker checker =
+      new CreativeCommonsPermissionChecker();
     assertFalse(tag + " expected no permission, but was",
 	       checker.checkPermission(pHelper,
 				       new StringReader(text), TEST_URL));
@@ -119,12 +115,12 @@ public class TestCreativeCommonsV3PermissionChecker
     assertPerm("<a\r\nhref=\"" + lu("by", "3.0") + "\"\r\nrel=\"license\"\r\n/>");
   }
 
-  public void testInValidPermissions() {
+  public void testInvalidPermissions() {
     assertPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<img href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a nohref=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("not", "3.0") + "\" rel=\"license\" />");
-    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "5.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" norel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"uncle\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" />");

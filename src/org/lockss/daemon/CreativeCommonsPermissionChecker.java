@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsV3PermissionChecker.java,v 1.3 2011-12-18 23:13:32 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.13 2013-11-29 11:17:59 thib_gc Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.regex.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
-import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
 /**
@@ -48,14 +47,14 @@ import org.lockss.extractor.*;
  * the URL of a valid CC license page, and the REL attribute with the value
  * LICENSE.
  */
-public class CreativeCommonsV3PermissionChecker extends BasePermissionChecker {
+public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
   private static Logger logger =
-    Logger.getLogger("CreativeCommonsV3PermissionChecker");
+    Logger.getLogger(CreativeCommonsPermissionChecker.class);
 
   String licenseUrl;
 
-  public CreativeCommonsV3PermissionChecker() {
+  public CreativeCommonsPermissionChecker() {
   }
 
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
@@ -106,7 +105,7 @@ public class CreativeCommonsV3PermissionChecker extends BasePermissionChecker {
       SetUtil.set("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
 
     private static final Set<String> VALIDLICENSEVERSIONS =
-      SetUtil.set("1.0", "2.0", "2.5", "3.0");
+      SetUtil.set("1.0", "2.0", "2.5", "3.0", "4.0");
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 					LinkExtractor.Callback cb) {

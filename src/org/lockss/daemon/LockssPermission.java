@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPermission.java,v 1.8 2013-11-29 11:03:59 thib_gc Exp $
+ * $Id: LockssPermission.java,v 1.9 2013-11-29 11:17:59 thib_gc Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class LockssPermission {
     lst.add(spc);
 
     lst.add(new CreativeCommonsRdfPermissionChecker());
-    lst.add(new CreativeCommonsV3PermissionChecker());
+    lst.add(new CreativeCommonsPermissionChecker());
     lst.trimToSize();
     permissionList = Collections.unmodifiableList(lst);
   }
