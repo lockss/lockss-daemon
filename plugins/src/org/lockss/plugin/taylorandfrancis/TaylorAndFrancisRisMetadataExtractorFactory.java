@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.2 2013-10-30 16:12:21 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisRisMetadataExtractorFactory.java,v 1.3 2013-12-02 22:11:41 alexandraohlson Exp $
  */
 
 /*
@@ -34,15 +34,13 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.IOException;
 
-import org.apache.commons.lang.StringUtils;
-import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 
 import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
-import org.lockss.util.TypedEntryMap;
+import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory;
 
 /*
  * TY  - JOUR
@@ -109,50 +107,15 @@ public class TaylorAndFrancisRisMetadataExtractorFactory
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
       }
-
-      /* BIG IMPORTANT COMMENT */
-      /* Taylor & Francis has opaque URLs and in the event of accidental overcrawling, an article could end
-       * up getting collected that isn't actually in this AU. 
-       * Verify the metadata against the journal title and volume of the AU to make sure that we don't emit metadata
-       * for any articles that shouldn't be in this AU.  It's a final last-ditch protective check.
-       * If I can't get any valid metadata then don't emit because we can't verify it is in the AU
+      
+      /* Before emitting, try to verify the article is part of this AU
+       * to avoid emitting for overcrawled articles
+       * The method lives in the html version of the extractor factory
        */
-      String jTitle = am.get(MetadataField.FIELD_JOURNAL_TITLE);
-      String vName = am.get(MetadataField.FIELD_VOLUME);
-      Boolean definitelyInAU = true;
-
       ArchivalUnit TandF_au = cu.getArchivalUnit();
-      // Get the AU's volume name from the AU properties. This must be set
-
-      //this extra step to get the AU_volume is temporary for debugging
-      TypedEntryMap tfProps = TandF_au.getProperties();
-      String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
-      //String AU_volume = TandF_au.getProperties().getString(ConfigParamDescr.VOLUME_NAME.getKey());
-
-      // Get the AU's journal_title from the tdbconfig portion of the AU
-      TdbAu tf_tau = TandF_au.getTdbAu();
-      String AU_journal_title = (tf_tau == null) ? null : tf_tau.getJournalTitle();
-
-      // If we couldn't extract journal title or volume from metadata, we can't verify this is in the correct AU
-      definitelyInAU = !(StringUtils.isEmpty(jTitle) && StringUtils.isEmpty(vName));
-
-      // If we're still good and if we got a journal title, compare it to the AU journal title
-      // see if the jTitle is equal to or a substring of the AU title as the AU title may contain the subtitle
-      if (definitelyInAU && !(StringUtils.isEmpty(jTitle))) {
-        definitelyInAU =  ( (AU_journal_title != null) && (AU_journal_title.toUpperCase().indexOf(jTitle.toUpperCase()) != -1));
-      }
-      // If we're still good and if we got a volume name, compare it to the AU volume name
-      if (definitelyInAU && !(StringUtils.isEmpty(vName))) {
-        definitelyInAU =  ( (AU_volume != null) && (AU_volume.equals(vName)));
-      }
-      if (definitelyInAU) {
-        // Well we might as well pick up and fill in this since we're already peeking in the AU
-        String AU_issn = (tf_tau == null) ? null : tf_tau.getIssn();
-        String AU_eissn = (tf_tau == null) ? null : tf_tau.getEissn();
-        if ( !(StringUtils.isEmpty(AU_issn))) am.put(MetadataField.FIELD_ISSN, AU_issn);
-        if ( !(StringUtils.isEmpty(AU_eissn))) am.put(MetadataField.FIELD_EISSN, AU_eissn);
+      if (TaylorAndFrancisHtmlMetadataExtractorFactory.checkMetadataAgainstTdb(TandF_au, am)) {
         emitter.emitMetadata(cu, am);
-      } 
+      }
     }
   }
 }

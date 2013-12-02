@@ -38,6 +38,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisHtmlMetadataExtractorFactory.TaylorAndFrancisHtmlMetadataExtractor;
 
 /*
  * 
@@ -246,18 +247,18 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
       + "\u201c" + goodJournalTitle + "\u201d" + "\"></meta>"      
       + "</head>";
   
-  // Because the journal_title in the metadata doesn't match the journal title in the TDB for this AU, it will not emit.
+  // Even though it has encoded quotation marks, the titles will match because
+  // the title is a subset of the other
   public void testEncodedContent() throws Exception {
     String goodTitle = "\u201c" + goodJournalTitle + "\u201d";
     List<ArticleMetadata> mdlist;
     
     mdlist = setupContentForAU(tfau3, goodUrl3, encodedContent);
-    assertEmpty(mdlist);
-/*    ArticleMetadata md = mdlist.get(0);
+    ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     
     assertEquals(goodTitle, md.get(MetadataField.DC_FIELD_TITLE));
-    assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));*/
+    assertEquals("555", md.get(MetadataField.FIELD_START_PAGE));
   }
 
   // Maps to TFAU1
@@ -319,6 +320,8 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEmpty(mdlist);
   }
   
+  
+
   /* THIS SECTION TESTS THE RIS EXTRACTION */
   /*
    * TY  - JOUR
@@ -460,6 +463,19 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
 
     assertEmpty(mdlist);
 
+  }
+  
+  public void testTitleNormalization() throws Exception {
+ 
+    
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One Two Three"), "one two three");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One & Three"), "one and three");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("One and Three"), "one and three");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The One Two Three"), "one two three");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("Theatre is Great"), "theatre is great");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Theatre is Great"), "theatre is great");
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Title of the Book & Other Mysteries"),
+        TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("the title of the book and other mysteries"));
   }
 
 
