@@ -17,14 +17,14 @@
       param[base_url] = http://www.periodicos.proped.pro.br/
       param[journal_id] = childhood
 
-      au < releasing ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
-      au < releasing ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
-      au < releasing ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
+      au < released ; 2005 ; 1 ; Childhood & Philosophy Volume 1 ; 2005 >
+      au < released ; 2006 ; 2 ; Childhood & Philosophy Volume 2 ; 2006 >
+      au < released ; 2007 ; 3 ; Childhood & Philosophy Volume 3 ; 2007 >
       au < testing ; 2008 ; 4 ; Childhood & Philosophy Volume 4 ; 2008 >
-      au < releasing ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
-      au < releasing ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
-      au < releasing ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
-      au < releasing ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
+      au < released ; 2009 ; 5 ; Childhood & Philosophy Volume 5 ; 2009 >
+      au < released ; 2010 ; 6 ; Childhood & Philosophy Volume 6 ; 2010 >
+      au < released ; 2011 ; 7 ; Childhood & Philosophy Volume 7 ; 2011 >
+      au < released ; 2012 ; 8 ; Childhood & Philosophy Volume 8 ; 2012 >
       au < expected ; 2013 ; 9 ; Childhood & Philosophy Volume 9 ; 2013 >
 
   }
@@ -40,19 +40,19 @@
       param[base_url] = http://www.periodicos.proped.pro.br/
       param[journal_id] = revistateias
 
-      au < releasing ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
-      au < releasing ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
-      au < releasing ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
-      au < releasing ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
-      au < releasing ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
-      au < releasing ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
-      au < releasing ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
-      au < releasing ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
-      au < releasing ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
-      au < releasing ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
-      au < releasing ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
-      au < releasing ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
-      au < releasing ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
+      au < released ; 2000 ; 1 ; Revista Teias Volume 1 ; 2000 >
+      au < released ; 2001 ; 2 ; Revista Teias Volume 2 ; 2001 >
+      au < released ; 2002 ; 3 ; Revista Teias Volume 3 ; 2002 >
+      au < released ; 2003 ; 4 ; Revista Teias Volume 4 ; 2003 >
+      au < released ; 2004 ; 5 ; Revista Teias Volume 5 ; 2004 >
+      au < released ; 2005 ; 6 ; Revista Teias Volume 6 ; 2005 >
+      au < released ; 2006 ; 7 ; Revista Teias Volume 7 ; 2006 >
+      au < released ; 2007 ; 8 ; Revista Teias Volume 8 ; 2007 >
+      au < released ; 2008 ; 9 ; Revista Teias Volume 9 ; 2008 >
+      au < released ; 2009 ; 10 ; Revista Teias Volume 10 ; 2009 >
+      au < released ; 2010 ; 11 ; Revista Teias Volume 11 ; 2010 >
+      au < released ; 2011 ; 12 ; Revista Teias Volume 12 ; 2011 >
+      au < released ; 2012 ; 13 ; Revista Teias Volume 13 ; 2012 >
       au < expected ; 2013 ; 14 ; Revista Teias Volume 14 ; 2013 >
 
   }
@@ -95,12 +95,12 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = ceres
 
-      au < releasing ; 2006 ; 1 ; CERES: Nutrição & Saúde Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 2 ; CERES: Nutrição & Saúde Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 3 ; CERES: Nutrição & Saúde Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 4 ; CERES: Nutrição & Saúde Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 5 ; CERES: Nutrição & Saúde Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 6 ; CERES: Nutrição & Saúde Volume 2011 ; 2011 >
+      au < released ; 2006 ; 1 ; CERES: Nutrição & Saúde Volume 2006 ; 2006 >
+      au < released ; 2007 ; 2 ; CERES: Nutrição & Saúde Volume 2007 ; 2007 >
+      au < released ; 2008 ; 3 ; CERES: Nutrição & Saúde Volume 2008 ; 2008 >
+      au < released ; 2009 ; 4 ; CERES: Nutrição & Saúde Volume 2009 ; 2009 >
+      au < released ; 2010 ; 5 ; CERES: Nutrição & Saúde Volume 2010 ; 2010 >
+      au < released ; 2011 ; 6 ; CERES: Nutrição & Saúde Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; CERES: Nutrição & Saúde Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; CERES: Nutrição & Saúde Volume 2013 ; 2013 >
 
@@ -117,10 +117,10 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = contemporanea
 
-      au < releasing ; 2009 ; 1 ; Revista Contemporânea Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Revista Contemporânea Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Revista Contemporânea Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 4 ; Revista Contemporânea Volume 2012 ; 2012 >
+      au < released ; 2009 ; 1 ; Revista Contemporânea Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Revista Contemporânea Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Revista Contemporânea Volume 2011 ; 2011 >
+      au < released ; 2012 ; 4 ; Revista Contemporânea Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Contemporânea Volume 2013 ; 2013 >
 
   }
@@ -136,7 +136,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = demetra
 
-      au < releasing ; 2012 ; 1 ; DEMETRA: Alimentação, Nutrição & Saúde Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; DEMETRA: Alimentação, Nutrição & Saúde Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; DEMETRA: Alimentação, Nutrição & Saúde Volume 2013 ; 2013 >
 
   }
@@ -152,7 +152,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = Ekstasis
 
-      au < releasing ; 2012 ; 1 ; Ekstasis: Revista de Hermenêutica e Fenomenologia Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Ekstasis: Revista de Hermenêutica e Fenomenologia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Ekstasis: Revista de Hermenêutica e Fenomenologia Volume 2013 ; 2013 >
 
   }
@@ -168,7 +168,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = enfermagemuerj
 
-      au < releasing ; 2012 ; 1 ; Revista Enfermagem UERJ Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Revista Enfermagem UERJ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista Enfermagem UERJ Volume 2013 ; 2013 >
 
   }
@@ -184,17 +184,17 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = espacoecultura
 
-      au < releasing ; 1995 ; 1 ; Espaço e Cultura Volume 1995 ; 1995 >
-      au < releasing ; 1996 ; 2 ; Espaço e Cultura Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 3 ; Espaço e Cultura Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 4 ; Espaço e Cultura Volume 1998 ; 1998 >
-      au < releasing ; 2005 ; 5 ; Espaço e Cultura Volume 2005 ; 2005 >
-      au < releasing ; 2007 ; 6 ; Espaço e Cultura Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 7 ; Espaço e Cultura Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 8 ; Espaço e Cultura Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 9 ; Espaço e Cultura Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 10 ; Espaço e Cultura Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 11 ; Espaço e Cultura Volume 2012 ; 2012 >
+      au < released ; 1995 ; 1 ; Espaço e Cultura Volume 1995 ; 1995 >
+      au < released ; 1996 ; 2 ; Espaço e Cultura Volume 1996 ; 1996 >
+      au < released ; 1997 ; 3 ; Espaço e Cultura Volume 1997 ; 1997 >
+      au < released ; 1998 ; 4 ; Espaço e Cultura Volume 1998 ; 1998 >
+      au < released ; 2005 ; 5 ; Espaço e Cultura Volume 2005 ; 2005 >
+      au < released ; 2007 ; 6 ; Espaço e Cultura Volume 2007 ; 2007 >
+      au < released ; 2008 ; 7 ; Espaço e Cultura Volume 2008 ; 2008 >
+      au < released ; 2009 ; 8 ; Espaço e Cultura Volume 2009 ; 2009 >
+      au < released ; 2010 ; 9 ; Espaço e Cultura Volume 2010 ; 2010 >
+      au < released ; 2011 ; 10 ; Espaço e Cultura Volume 2011 ; 2011 >
+      au < released ; 2012 ; 11 ; Espaço e Cultura Volume 2012 ; 2012 >
       au < expected ; 2013 ; 12 ; Espaço e Cultura Volume 2013 ; 2013 >
 
   }
@@ -220,12 +220,12 @@
       au < notReady ; 2002 ; 6 ; Geo UERJ Volume 2002 ; 2002 >
       au < notReady ; 2003 ; 7 ; Geo UERJ Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 8 ; Geo UERJ Volume 2004 ; 2004 >
-      au < releasing ; 2007 ; 9 ; Geo UERJ Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 10 ; Geo UERJ Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 11 ; Geo UERJ Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 12 ; Geo UERJ Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 13 ; Geo UERJ Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 14 ; Geo UERJ Volume 2012 ; 2012 >
+      au < released ; 2007 ; 9 ; Geo UERJ Volume 2007 ; 2007 >
+      au < released ; 2008 ; 10 ; Geo UERJ Volume 2008 ; 2008 >
+      au < released ; 2009 ; 11 ; Geo UERJ Volume 2009 ; 2009 >
+      au < released ; 2010 ; 12 ; Geo UERJ Volume 2010 ; 2010 >
+      au < released ; 2011 ; 13 ; Geo UERJ Volume 2011 ; 2011 >
+      au < released ; 2012 ; 14 ; Geo UERJ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Geo UERJ Volume 2013 ; 2013 >
 
   }
@@ -241,12 +241,12 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = interagir
 
-      au < releasing ; 2006 ; 1 ; Interagir: Pensando a Extensão Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 2 ; Interagir: Pensando a Extensão Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 3 ; Interagir: Pensando a Extensão Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 4 ; Interagir: Pensando a Extensão Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 5 ; Interagir: Pensando a Extensão Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 6 ; Interagir: Pensando a Extensão Volume 2011 ; 2011 >
+      au < released ; 2006 ; 1 ; Interagir: Pensando a Extensão Volume 2006 ; 2006 >
+      au < released ; 2007 ; 2 ; Interagir: Pensando a Extensão Volume 2007 ; 2007 >
+      au < released ; 2008 ; 3 ; Interagir: Pensando a Extensão Volume 2008 ; 2008 >
+      au < released ; 2009 ; 4 ; Interagir: Pensando a Extensão Volume 2009 ; 2009 >
+      au < released ; 2010 ; 5 ; Interagir: Pensando a Extensão Volume 2010 ; 2010 >
+      au < released ; 2011 ; 6 ; Interagir: Pensando a Extensão Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; Interagir: Pensando a Extensão Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Interagir: Pensando a Extensão Volume 2013 ; 2013 >
 
@@ -281,10 +281,10 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = intratextos
 
-      au < releasing ; 2009 ; 1 ; Revista Intratextos Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Revista Intratextos Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Revista Intratextos Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 4 ; Revista Intratextos Volume 2012 ; 2012 >
+      au < released ; 2009 ; 1 ; Revista Intratextos Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Revista Intratextos Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Revista Intratextos Volume 2011 ; 2011 >
+      au < released ; 2012 ; 4 ; Revista Intratextos Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Intratextos Volume 2013 ; 2013 >
 
   }
@@ -303,10 +303,10 @@
       comment[notReady] = 2008- no permission, 2010- fetch error
 
       au < notReady ; 2008 ; 1 ; Logos: Comunicação e Universidade Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 >
+      au < released ; 2009 ; 2 ; Logos: Comunicação e Universidade Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 3 ; Logos: Comunicação e Universidade Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 4 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 5 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 >
+      au < released ; 2011 ; 4 ; Logos: Comunicação e Universidade Volume 2011 ; 2011 >
+      au < released ; 2012 ; 5 ; Logos: Comunicação e Universidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Logos: Comunicação e Universidade Volume 2013 ; 2013 >
 
   }
@@ -340,7 +340,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = neiba
 
-      au < releasing ; 2012 ; 1 ; Revista NEIBA: Cadernos Argentina-Brasil Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Revista NEIBA: Cadernos Argentina-Brasil Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista NEIBA: Cadernos Argentina-Brasil Volume 2013 ; 2013 >
 
   }
@@ -356,7 +356,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = niesbf
 
-      au < releasing ; 2012 ; 1 ; História, Natureza e Espaço Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; História, Natureza e Espaço Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; História, Natureza e Espaço Volume 2013 ; 2013 >
 
   }
@@ -372,7 +372,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = pensaresemrevista
 
-      au < releasing ; 2012 ; 1 ; Pensares em Revista Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Pensares em Revista Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Pensares em Revista Volume 2013 ; 2013 >
 
   }
@@ -388,9 +388,9 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = periferia
 
-      au < releasing ; 2009 ; 1 ; Periferia Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Periferia Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Periferia Volume 2011 ; 2011 >
+      au < released ; 2009 ; 1 ; Periferia Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Periferia Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Periferia Volume 2011 ; 2011 >
       au < expected ; 2012 ; 4 ; Periferia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Periferia Volume 2013 ; 2013 >
 
@@ -429,7 +429,7 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = psi-sabersocial
 
-      au < releasing ; 2012 ; 1 ; Psicologia  e Saber Social Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Psicologia  e Saber Social Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Psicologia  e Saber Social Volume 2013 ; 2013 >
 
   }
@@ -445,13 +445,13 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = rbdp
 
-      au < releasing ; 2006 ; 1 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2006 ; 2006 >
+      au < released ; 2006 ; 1 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2006 ; 2006 >
       au < exists ; 2007 ; 2 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2007 ; 2007 >
       au < exists ; 2008 ; 3 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2008 ; 2008 >
       au < exists ; 2009 ; 4 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2009 ; 2009 >
       au < exists ; 2010 ; 5 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2010 ; 2010 >
       au < exists ; 2011 ; 6 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 7 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2012 ; 2012 >
+      au < released ; 2012 ; 7 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Revista Brasileira de Direito do Petróleo, Gás e Energia Volume 2013 ; 2013 >
 
   }
@@ -467,20 +467,20 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = rcmccuerj
 
-      au < releasing ; 1996 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1999 ; 1999 >
-      au < releasing ; 2003 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2012 ; 2012 >
+      au < released ; 1996 ; 1 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1996 ; 1996 >
+      au < released ; 1997 ; 2 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1997 ; 1997 >
+      au < released ; 1998 ; 3 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1998 ; 1998 >
+      au < released ; 1999 ; 4 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 1999 ; 1999 >
+      au < released ; 2003 ; 5 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2003 ; 2003 >
+      au < released ; 2004 ; 6 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2004 ; 2004 >
+      au < released ; 2005 ; 7 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2005 ; 2005 >
+      au < released ; 2006 ; 8 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2006 ; 2006 >
+      au < released ; 2007 ; 9 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2007 ; 2007 >
+      au < released ; 2008 ; 10 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2008 ; 2008 >
+      au < released ; 2009 ; 11 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2009 ; 2009 >
+      au < released ; 2010 ; 12 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2010 ; 2010 >
+      au < released ; 2011 ; 13 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2011 ; 2011 >
+      au < released ; 2012 ; 14 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Revista de Contabilidade do Mestrado de Ciências Contábeis da UERJ Volume 2013 ; 2013 >
 
   }
@@ -496,9 +496,9 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = revistaceaju
 
-      au < releasing ; 2010 ; 1 ; Revista Direito e Práxis Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista Direito e Práxis Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista Direito e Práxis Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Revista Direito e Práxis Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista Direito e Práxis Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista Direito e Práxis Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista Direito e Práxis Volume 2013 ; 2013 >
 
   }
@@ -515,12 +515,12 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = revistaempauta
 
-      au < releasing ; 2007 ; 1 ; Revista em Pauta Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 2 ; Revista em Pauta Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 3 ; Revista em Pauta Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 4 ; Revista em Pauta Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 5 ; Revista em Pauta Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 6 ; Revista em Pauta Volume 2012 ; 2012 >
+      au < released ; 2007 ; 1 ; Revista em Pauta Volume 2007 ; 2007 >
+      au < released ; 2008 ; 2 ; Revista em Pauta Volume 2008 ; 2008 >
+      au < released ; 2009 ; 3 ; Revista em Pauta Volume 2009 ; 2009 >
+      au < released ; 2010 ; 4 ; Revista em Pauta Volume 2010 ; 2010 >
+      au < released ; 2011 ; 5 ; Revista em Pauta Volume 2011 ; 2011 >
+      au < released ; 2012 ; 6 ; Revista em Pauta Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Revista em Pauta Volume 2013 ; 2013 >
 
   }
@@ -536,9 +536,9 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = revistaitalianouerj
 
-      au < releasing ; 2010 ; 1 ; Revista Italiano UERJ Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista Italiano UERJ Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista Italiano UERJ Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Revista Italiano UERJ Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista Italiano UERJ Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista Italiano UERJ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista Italiano UERJ Volume 2013 ; 2013 >
 
   }
@@ -554,9 +554,9 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = rfduerj
 
-      au < releasing ; 2010 ; 1 ; Revista da Faculdade de Direito da UERJ Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista da Faculdade de Direito da UERJ Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista da Faculdade de Direito da UERJ Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Revista da Faculdade de Direito da UERJ Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista da Faculdade de Direito da UERJ Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista da Faculdade de Direito da UERJ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista da Faculdade de Direito da UERJ Volume 2013 ; 2013 >
 
   }
@@ -587,8 +587,8 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = ric
 
-      au < releasing ; 2011 ; 1 ; Revista Internacional de Ciências Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2 ; Revista Internacional de Ciências Volume 2012 ; 2012 >
+      au < released ; 2011 ; 1 ; Revista Internacional de Ciências Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2 ; Revista Internacional de Ciências Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Internacional de Ciências Volume 2013 ; 2013 >
 
   }
@@ -604,10 +604,10 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = SexualidadSaludySociedad
 
-      au < releasing ; 2009 ; 1 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 4 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2012 ; 2012 >
+      au < released ; 2009 ; 1 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2011 ; 2011 >
+      au < released ; 2012 ; 4 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Sexualidad, Salude y Sociedad: Revista Latinoamericana Volume 2013 ; 2013 >
 
   }
@@ -651,14 +651,14 @@
       param[base_url] = http://www.e-publicacoes.uerj.br/
       param[journal_id] = tamoios
 
-      au < releasing ; 2005 ; 1 ; Revista Tamoios Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 2 ; Revista Tamoios Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 3 ; Revista Tamoios Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 4 ; Revista Tamoios Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 5 ; Revista Tamoios Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 6 ; Revista Tamoios Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 7 ; Revista Tamoios Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 8 ; Revista Tamoios Volume 2012 ; 2012 >
+      au < released ; 2005 ; 1 ; Revista Tamoios Volume 2005 ; 2005 >
+      au < released ; 2006 ; 2 ; Revista Tamoios Volume 2006 ; 2006 >
+      au < released ; 2007 ; 3 ; Revista Tamoios Volume 2007 ; 2007 >
+      au < released ; 2008 ; 4 ; Revista Tamoios Volume 2008 ; 2008 >
+      au < released ; 2009 ; 5 ; Revista Tamoios Volume 2009 ; 2009 >
+      au < released ; 2010 ; 6 ; Revista Tamoios Volume 2010 ; 2010 >
+      au < released ; 2011 ; 7 ; Revista Tamoios Volume 2011 ; 2011 >
+      au < released ; 2012 ; 8 ; Revista Tamoios Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Revista Tamoios Volume 2013 ; 2013 >
 
   }

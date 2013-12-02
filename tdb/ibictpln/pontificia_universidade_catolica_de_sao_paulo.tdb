@@ -52,12 +52,12 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = aurora
 
-      au < releasing ; 2007 ; 1 ; Aurora: Revista de Arte, Mídia e Política Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 2 ; Aurora: Revista de Arte, Mídia e Política Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 3 ; Aurora: Revista de Arte, Mídia e Política Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 4 ; Aurora: Revista de Arte, Mídia e Política Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 5 ; Aurora: Revista de Arte, Mídia e Política Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 6 ; Aurora: Revista de Arte, Mídia e Política Volume 2012 ; 2012 >
+      au < released ; 2007 ; 1 ; Aurora: Revista de Arte, Mídia e Política Volume 2007 ; 2007 >
+      au < released ; 2008 ; 2 ; Aurora: Revista de Arte, Mídia e Política Volume 2008 ; 2008 >
+      au < released ; 2009 ; 3 ; Aurora: Revista de Arte, Mídia e Política Volume 2009 ; 2009 >
+      au < released ; 2010 ; 4 ; Aurora: Revista de Arte, Mídia e Política Volume 2010 ; 2010 >
+      au < released ; 2011 ; 5 ; Aurora: Revista de Arte, Mídia e Política Volume 2011 ; 2011 >
+      au < released ; 2012 ; 6 ; Aurora: Revista de Arte, Mídia e Política Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Aurora: Revista de Arte, Mídia e Política Volume 2013 ; 2013 >
 
   }
@@ -75,7 +75,7 @@
       comment[notReady] = XML language issues
 
       au < notReady ; 2009 ; 1 ; Bakhitiniana Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Bakhitiniana Volume 2010 ; 2010 >
+      au < released ; 2010 ; 2 ; Bakhitiniana Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 3 ; Bakhitiniana Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 4 ; Bakhitiniana Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Bakhitiniana Volume 2013 ; 2013 >
@@ -156,15 +156,15 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = cognitio
 
-      au < releasing ; 2004 ; 1 ; Cognitio-Estudos Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 2 ; Cognitio-Estudos Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 3 ; Cognitio-Estudos Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 4 ; Cognitio-Estudos Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 5 ; Cognitio-Estudos Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 6 ; Cognitio-Estudos Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 7 ; Cognitio-Estudos Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 8 ; Cognitio-Estudos Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 9 ; Cognitio-Estudos Volume 2012 ; 2012 >
+      au < released ; 2004 ; 1 ; Cognitio-Estudos Volume 2004 ; 2004 >
+      au < released ; 2005 ; 2 ; Cognitio-Estudos Volume 2005 ; 2005 >
+      au < released ; 2006 ; 3 ; Cognitio-Estudos Volume 2006 ; 2006 >
+      au < released ; 2007 ; 4 ; Cognitio-Estudos Volume 2007 ; 2007 >
+      au < released ; 2008 ; 5 ; Cognitio-Estudos Volume 2008 ; 2008 >
+      au < released ; 2009 ; 6 ; Cognitio-Estudos Volume 2009 ; 2009 >
+      au < released ; 2010 ; 7 ; Cognitio-Estudos Volume 2010 ; 2010 >
+      au < released ; 2011 ; 8 ; Cognitio-Estudos Volume 2011 ; 2011 >
+      au < released ; 2012 ; 9 ; Cognitio-Estudos Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Cognitio-Estudos Volume 2013 ; 2013 >
 
   }
@@ -209,11 +209,11 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = cordis
 
-      au < releasing ; 2008 ; 1 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 2 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 3 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 4 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 5 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2012 ; 2012 >
+      au < released ; 2008 ; 1 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2008 ; 2008 >
+      au < released ; 2009 ; 2 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2009 ; 2009 >
+      au < released ; 2010 ; 3 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2010 ; 2010 >
+      au < released ; 2011 ; 4 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2011 ; 2011 >
+      au < released ; 2012 ; 5 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Cordis: Revista Eletrônica de História Social da Cidade Volume 2013 ; 2013 >
 
   }
@@ -285,7 +285,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = delta
 
-      au < releasing ; 2011 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 >
+      au < released ; 2011 ; 1 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2011 ; 2011 >
       au < expected ; 2012 ; 2 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; DELTA: Documentação e Estudos em Linguística Teórica e Aplicada Volume 2013 ; 2013 >
 
@@ -366,16 +366,16 @@
       au < notReady ; 2000 ; 2 ; Educação Matemática Pesquisa Volume 2000 ; 2000 >
       au < notReady ; 2001 ; 3 ; Educação Matemática Pesquisa Volume 2001 ; 2001 >
       au < notReady ; 2002 ; 4 ; Educação Matemática Pesquisa Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 5 ; Educação Matemática Pesquisa Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 6 ; Educação Matemática Pesquisa Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 7 ; Educação Matemática Pesquisa Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 8 ; Educação Matemática Pesquisa Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 9 ; Educação Matemática Pesquisa Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 10 ; Educação Matemática Pesquisa Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 11 ; Educação Matemática Pesquisa Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 12 ; Educação Matemática Pesquisa Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 13 ; Educação Matemática Pesquisa Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 14 ; Educação Matemática Pesquisa Volume 2012 ; 2012 >
+      au < released ; 2003 ; 5 ; Educação Matemática Pesquisa Volume 2003 ; 2003 >
+      au < released ; 2004 ; 6 ; Educação Matemática Pesquisa Volume 2004 ; 2004 >
+      au < released ; 2005 ; 7 ; Educação Matemática Pesquisa Volume 2005 ; 2005 >
+      au < released ; 2006 ; 8 ; Educação Matemática Pesquisa Volume 2006 ; 2006 >
+      au < released ; 2007 ; 9 ; Educação Matemática Pesquisa Volume 2007 ; 2007 >
+      au < released ; 2008 ; 10 ; Educação Matemática Pesquisa Volume 2008 ; 2008 >
+      au < released ; 2009 ; 11 ; Educação Matemática Pesquisa Volume 2009 ; 2009 >
+      au < released ; 2010 ; 12 ; Educação Matemática Pesquisa Volume 2010 ; 2010 >
+      au < released ; 2011 ; 13 ; Educação Matemática Pesquisa Volume 2011 ; 2011 >
+      au < released ; 2012 ; 14 ; Educação Matemática Pesquisa Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Educação Matemática Pesquisa Volume 2013 ; 2013 >
 
   }
@@ -427,8 +427,8 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = e-verbo
 
-      au < releasing ; 2011 ; 1 ; E-Verbo Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2 ; E-Verbo Volume 2012 ; 2012 >
+      au < released ; 2011 ; 1 ; E-Verbo Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2 ; E-Verbo Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; E-Verbo Volume 2013 ; 2013 >
 
   }
@@ -446,8 +446,8 @@
       comment[notReady] = Language xml issues.
 
       au < testing ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
+      au < released ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
+      au < released ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 5 ; FronteiraZ Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; FronteiraZ Volume 2013 ; 2013 >
@@ -466,18 +466,18 @@
       param[journal_id] = galaxia
       comment[notReady] = XML language issues
 
-      au < releasing ; 2001 ; 1 ; Galáxia Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 2 ; Galáxia Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 3 ; Galáxia Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 4 ; Galáxia Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 5 ; Galáxia Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 >
+      au < released ; 2001 ; 1 ; Galáxia Volume 2001 ; 2001 >
+      au < released ; 2002 ; 2 ; Galáxia Volume 2002 ; 2002 >
+      au < released ; 2003 ; 3 ; Galáxia Volume 2003 ; 2003 >
+      au < released ; 2004 ; 4 ; Galáxia Volume 2004 ; 2004 >
+      au < released ; 2005 ; 5 ; Galáxia Volume 2005 ; 2005 >
+      au < released ; 2006 ; 6 ; Galáxia Volume 2006 ; 2006 >
+      au < released ; 2007 ; 7 ; Galáxia Volume 2007 ; 2007 >
+      au < released ; 2008 ; 8 ; Galáxia Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 9 ; Galáxia Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 10 ; Galáxia Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 11 ; Galáxia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 >
+      au < released ; 2012 ; 12 ; Galáxia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Galáxia Volume 2013 ; 2013 >
 
   }
@@ -535,7 +535,7 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = IGISP
 
-      au < releasing ; 2012 ; 1 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2012 ; 2012 >
+      au < released ; 2012 ; 1 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Revista do Instituto GeoGebra Internacional de São Paulo Volume 2013 ; 2013 >
 
   }
@@ -552,19 +552,19 @@
       param[journal_id] = intercambio
       comment[notReady] = XML language issues
 
-      au < releasing ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
-      au < releasing ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
+      au < released ; 1996 ; 1 ; Intercâmbio Volume 1996 ; 1996 >
+      au < released ; 1997 ; 2 ; Intercâmbio Volume 1997 ; 1997 >
+      au < released ; 1998 ; 3 ; Intercâmbio Volume 1998 ; 1998 >
+      au < released ; 1999 ; 4 ; Intercâmbio Volume 1999 ; 1999 >
+      au < released ; 2004 ; 5 ; Intercâmbio Volume 2004 ; 2004 >
+      au < released ; 2005 ; 6 ; Intercâmbio Volume 2005 ; 2005 >
+      au < released ; 2006 ; 7 ; Intercâmbio Volume 2006 ; 2006 >
+      au < released ; 2007 ; 8 ; Intercâmbio Volume 2007 ; 2007 >
+      au < released ; 2008 ; 9 ; Intercâmbio Volume 2008 ; 2008 >
+      au < released ; 2009 ; 10 ; Intercâmbio Volume 2009 ; 2009 >
+      au < released ; 2010 ; 11 ; Intercâmbio Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 12 ; Intercâmbio Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 >
+      au < released ; 2012 ; 13 ; Intercâmbio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Intercâmbio Volume 2013 ; 2013 >
 
   }
@@ -581,8 +581,8 @@
       param[journal_id] = kairos
       comment[notReady] = Some PDF issues, mostly DC language xml problems
 
-      au < releasing ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 >
+      au < released ; 2007 ; 1 ; Kairós Volume 2007 ; 2007 >
+      au < released ; 2008 ; 2 ; Kairós Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 3 ; Kairós Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 4 ; Kairós Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 5 ; Kairós Volume 2011 ; 2011 >
@@ -603,13 +603,13 @@
       param[journal_id] = kaliope
       comment[notReady] = PDF issues
 
-      au < releasing ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 >
+      au < released ; 2005 ; 1 ; Kalíope Volume 2005 ; 2005 >
+      au < released ; 2006 ; 2 ; Kalíope Volume 2006 ; 2006 >
+      au < released ; 2007 ; 3 ; Kalíope Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 4 ; Kalíope Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 5 ; Kalíope Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 >
+      au < released ; 2010 ; 6 ; Kalíope Volume 2010 ; 2010 >
+      au < released ; 2011 ; 7 ; Kalíope Volume 2011 ; 2011 >
       au < expected ; 2012 ; 8 ; Kalíope Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Kalíope Volume 2013 ; 2013 >
 
@@ -627,9 +627,9 @@
       param[journal_id] = leituraflutuante
       comment[notReady] = Language XML issues
 
-      au < releasing ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 >
+      au < released ; 2009 ; 1 ; Leitura Flutuante Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Leitura Flutuante Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Leitura Flutuante Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 4 ; Leitura Flutuante Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Leitura Flutuante Volume 2013 ; 2013 >
 
@@ -648,19 +648,19 @@
       param[journal_id] = metropole
       comment[notReady] = PDF issues. Also some XML language problems
 
-      au < releasing ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
+      au < released ; 1999 ; 1 ; Cadernos Metrópole Volume 1999 ; 1999 >
+      au < released ; 2000 ; 2 ; Cadernos Metrópole Volume 2000 ; 2000 >
+      au < released ; 2001 ; 3 ; Cadernos Metrópole Volume 2001 ; 2001 >
       au < notReady ; 2002 ; 4 ; Cadernos Metrópole Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
+      au < released ; 2003 ; 5 ; Cadernos Metrópole Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
+      au < released ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
+      au < released ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
       au < testing ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
+      au < released ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
+      au < released ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
+      au < released ; 2011 ; 13 ; Cadernos Metrópole Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 14 ; Cadernos Metrópole Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Cadernos Metrópole Volume 2013 ; 2013 >
 
@@ -677,8 +677,8 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = nexi
 
-      au < releasing ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 >
+      au < released ; 2011 ; 1 ; Revista Nexi Volume 2011 ; 2011 >
+      au < released ; 2012 ; 2 ; Revista Nexi Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Revista Nexi Volume 2013 ; 2013 >
 
   }
@@ -694,14 +694,14 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = nures
 
-      au < releasing ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 >
+      au < released ; 2005 ; 1 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2005 ; 2005 >
+      au < released ; 2006 ; 2 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2006 ; 2006 >
+      au < released ; 2007 ; 3 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2007 ; 2007 >
+      au < released ; 2008 ; 4 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2008 ; 2008 >
+      au < released ; 2009 ; 5 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2009 ; 2009 >
+      au < released ; 2010 ; 6 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2010 ; 2010 >
+      au < released ; 2011 ; 7 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2011 ; 2011 >
+      au < released ; 2012 ; 8 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; NURES: Revista do Núcleo de Estudos de Religião e Sociedade Volume 2013 ; 2013 >
 
   }
@@ -734,21 +734,21 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = pensamentorealidade
 
-      au < releasing ; 1998 ; 1 ; Pensamento & Realidade Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 2 ; Pensamento & Realidade Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 3 ; Pensamento & Realidade Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 4 ; Pensamento & Realidade Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 5 ; Pensamento & Realidade Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 6 ; Pensamento & Realidade Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 7 ; Pensamento & Realidade Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 8 ; Pensamento & Realidade Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 9 ; Pensamento & Realidade Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 10 ; Pensamento & Realidade Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 11 ; Pensamento & Realidade Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 12 ; Pensamento & Realidade Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 13 ; Pensamento & Realidade Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 14 ; Pensamento & Realidade Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 15 ; Pensamento & Realidade Volume 2012 ; 2012 >
+      au < released ; 1998 ; 1 ; Pensamento & Realidade Volume 1998 ; 1998 >
+      au < released ; 1999 ; 2 ; Pensamento & Realidade Volume 1999 ; 1999 >
+      au < released ; 2000 ; 3 ; Pensamento & Realidade Volume 2000 ; 2000 >
+      au < released ; 2001 ; 4 ; Pensamento & Realidade Volume 2001 ; 2001 >
+      au < released ; 2002 ; 5 ; Pensamento & Realidade Volume 2002 ; 2002 >
+      au < released ; 2003 ; 6 ; Pensamento & Realidade Volume 2003 ; 2003 >
+      au < released ; 2004 ; 7 ; Pensamento & Realidade Volume 2004 ; 2004 >
+      au < released ; 2005 ; 8 ; Pensamento & Realidade Volume 2005 ; 2005 >
+      au < released ; 2006 ; 9 ; Pensamento & Realidade Volume 2006 ; 2006 >
+      au < released ; 2007 ; 10 ; Pensamento & Realidade Volume 2007 ; 2007 >
+      au < released ; 2008 ; 11 ; Pensamento & Realidade Volume 2008 ; 2008 >
+      au < released ; 2009 ; 12 ; Pensamento & Realidade Volume 2009 ; 2009 >
+      au < released ; 2010 ; 13 ; Pensamento & Realidade Volume 2010 ; 2010 >
+      au < released ; 2011 ; 14 ; Pensamento & Realidade Volume 2011 ; 2011 >
+      au < released ; 2012 ; 15 ; Pensamento & Realidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 16 ; Pensamento & Realidade Volume 2013 ; 2013 >
 
   }
@@ -892,7 +892,7 @@
 
       au < exists ; 2008 ; 1 ; Revista Eletrônica da Faculdade de Direito Volume 2008 ; 2008 >
       au < exists ; 2009 ; 2 ; Revista Eletrônica da Faculdade de Direito Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 >
+      au < released ; 2010 ; 3 ; Revista Eletrônica da Faculdade de Direito Volume 2010 ; 2010 >
       au < expected ; 2011 ; 4 ; Revista Eletrônica da Faculdade de Direito Volume 2011 ; 2011 >
       au < expected ; 2012 ; 5 ; Revista Eletrônica da Faculdade de Direito Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Revista Eletrônica da Faculdade de Direito Volume 2013 ; 2013 >
@@ -932,7 +932,7 @@
       param[journal_id] = rever
       comment[notReady] = XML language issues
 
-      au < releasing ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 >
+      au < released ; 2011 ; 1 ; Rever: Revista de Estudos da Religião Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 2 ; Rever: Revista de Estudos da Religião Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Rever: Revista de Estudos da Religião Volume 2013 ; 2013 >
 
@@ -949,10 +949,10 @@
       param[base_url] = http://revistas.pucsp.br/
       param[journal_id] = revlael
 
-      au < releasing ; 2009 ; 1 ; Revista l@el em (dis-)curso Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 2 ; Revista l@el em (dis-)curso Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 >
+      au < released ; 2009 ; 1 ; Revista l@el em (dis-)curso Volume 2009 ; 2009 >
+      au < released ; 2010 ; 2 ; Revista l@el em (dis-)curso Volume 2010 ; 2010 >
+      au < released ; 2011 ; 3 ; Revista l@el em (dis-)curso Volume 2011 ; 2011 >
+      au < released ; 2012 ; 4 ; Revista l@el em (dis-)curso Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista l@el em (dis-)curso Volume 2013 ; 2013 >
 
   }
@@ -969,33 +969,33 @@
       param[journal_id] = revph
       comment[notReady] = language XML issues
 
-      au < releasing ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 >
-      au < releasing ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 >
-      au < releasing ; 1984 ; 3 ; Projeto História Volume 1984 ; 1984 >
-      au < releasing ; 1985 ; 4 ; Projeto História Volume 1985 ; 1985 >
-      au < releasing ; 1986 ; 5 ; Projeto História Volume 1986 ; 1986 >
-      au < releasing ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
-      au < releasing ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
-      au < releasing ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
+      au < released ; 1981 ; 1 ; Projeto História Volume 1981 ; 1981 >
+      au < released ; 1982 ; 2 ; Projeto História Volume 1982 ; 1982 >
+      au < released ; 1984 ; 3 ; Projeto História Volume 1984 ; 1984 >
+      au < released ; 1985 ; 4 ; Projeto História Volume 1985 ; 1985 >
+      au < released ; 1986 ; 5 ; Projeto História Volume 1986 ; 1986 >
+      au < released ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
+      au < released ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
+      au < released ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
       au < testing ; 1994 ; 9 ; Projeto História Volume 1994 ; 1994 >
-      au < releasing ; 1995 ; 10 ; Projeto História Volume 1995 ; 1995 >
-      au < releasing ; 1996 ; 11 ; Projeto História Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 12 ; Projeto História Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 13 ; Projeto História Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 14 ; Projeto História Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 15 ; Projeto História Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 16 ; Projeto História Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 17 ; Projeto História Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 18 ; Projeto História Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 19 ; Projeto História Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 20 ; Projeto História Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 21 ; Projeto História Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 22 ; Projeto História Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 23 ; Projeto História Volume 2008 ; 2008 >
+      au < released ; 1995 ; 10 ; Projeto História Volume 1995 ; 1995 >
+      au < released ; 1996 ; 11 ; Projeto História Volume 1996 ; 1996 >
+      au < released ; 1997 ; 12 ; Projeto História Volume 1997 ; 1997 >
+      au < released ; 1998 ; 13 ; Projeto História Volume 1998 ; 1998 >
+      au < released ; 1999 ; 14 ; Projeto História Volume 1999 ; 1999 >
+      au < released ; 2000 ; 15 ; Projeto História Volume 2000 ; 2000 >
+      au < released ; 2001 ; 16 ; Projeto História Volume 2001 ; 2001 >
+      au < released ; 2002 ; 17 ; Projeto História Volume 2002 ; 2002 >
+      au < released ; 2003 ; 18 ; Projeto História Volume 2003 ; 2003 >
+      au < released ; 2004 ; 19 ; Projeto História Volume 2004 ; 2004 >
+      au < released ; 2005 ; 20 ; Projeto História Volume 2005 ; 2005 >
+      au < released ; 2006 ; 21 ; Projeto História Volume 2006 ; 2006 >
+      au < released ; 2007 ; 22 ; Projeto História Volume 2007 ; 2007 >
+      au < released ; 2008 ; 23 ; Projeto História Volume 2008 ; 2008 >
       au < notReady ; 2009 ; 24 ; Projeto História Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 25 ; Projeto História Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 26 ; Projeto História Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 >
+      au < released ; 2012 ; 27 ; Projeto História Volume 2012 ; 2012 >
       au < expected ; 2013 ; 28 ; Projeto História Volume 2013 ; 2013 >
 
   }
@@ -1061,20 +1061,20 @@
       param[journal_id] = rpe
       comment[notReady] = XML language issues
 
-      au < releasing ; 1998 ; 1 ; Pesquisa & Debate Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 2 ; Pesquisa & Debate Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 3 ; Pesquisa & Debate Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 4 ; Pesquisa & Debate Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 5 ; Pesquisa & Debate Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 6 ; Pesquisa & Debate Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 7 ; Pesquisa & Debate Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 8 ; Pesquisa & Debate Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 9 ; Pesquisa & Debate Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 10 ; Pesquisa & Debate Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 11 ; Pesquisa & Debate Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 12 ; Pesquisa & Debate Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 13 ; Pesquisa & Debate Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 >
+      au < released ; 1998 ; 1 ; Pesquisa & Debate Volume 1998 ; 1998 >
+      au < released ; 1999 ; 2 ; Pesquisa & Debate Volume 1999 ; 1999 >
+      au < released ; 2000 ; 3 ; Pesquisa & Debate Volume 2000 ; 2000 >
+      au < released ; 2001 ; 4 ; Pesquisa & Debate Volume 2001 ; 2001 >
+      au < released ; 2002 ; 5 ; Pesquisa & Debate Volume 2002 ; 2002 >
+      au < released ; 2003 ; 6 ; Pesquisa & Debate Volume 2003 ; 2003 >
+      au < released ; 2004 ; 7 ; Pesquisa & Debate Volume 2004 ; 2004 >
+      au < released ; 2005 ; 8 ; Pesquisa & Debate Volume 2005 ; 2005 >
+      au < released ; 2006 ; 9 ; Pesquisa & Debate Volume 2006 ; 2006 >
+      au < released ; 2007 ; 10 ; Pesquisa & Debate Volume 2007 ; 2007 >
+      au < released ; 2008 ; 11 ; Pesquisa & Debate Volume 2008 ; 2008 >
+      au < released ; 2009 ; 12 ; Pesquisa & Debate Volume 2009 ; 2009 >
+      au < released ; 2010 ; 13 ; Pesquisa & Debate Volume 2010 ; 2010 >
+      au < released ; 2011 ; 14 ; Pesquisa & Debate Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 15 ; Pesquisa & Debate Volume 2012 ; 2012 >
       au < expected ; 2013 ; 16 ; Pesquisa & Debate Volume 2013 ; 2013 >
 
@@ -1111,7 +1111,7 @@
       comment[notReady] = PDF issues
 
       au < notReady ; 2011 ; 1 ; Tessituras & Criação Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 2 ; Tessituras & Criação Volume 2012 ; 2012 >
+      au < released ; 2012 ; 2 ; Tessituras & Criação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Tessituras & Criação Volume 2013 ; 2013 >
 
   }
