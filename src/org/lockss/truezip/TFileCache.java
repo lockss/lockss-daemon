@@ -1,10 +1,10 @@
 /*
- * $Id: TFileCache.java,v 1.4 2013-05-14 04:10:12 tlipkis Exp $
+ * $Id: TFileCache.java,v 1.5 2013-12-02 17:41:21 fergaloy-sf Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -280,7 +280,9 @@ public class TFileCache {
       List<Entry> lst = new ArrayList<Entry>(cmap.values());
       Collections.sort(lst);
       for (Entry ent : lst) {
-	if (ent.isValid()) {
+	// Check whether this entry is flushable.
+	if (ent.isValid()
+	    && (!ent.flushAfterUnmountOnly || ent.freeingInstant >= 0)) {
 	  if (log.isDebug2()) {
 	    log.debug2("flushing " + sizeToString(ent.size) + " in " + ent.url
 		       + ", " + ent.ctf.getName());
@@ -305,9 +307,9 @@ public class TFileCache {
     synchronized (cmap) {
       ent.invalidate();
       try {
-	TFile.umount(ent.ctf);
-      } catch (FsSyncException e) {
-	log.warning("Error unmounting " + ent.ctf, e);
+	unmount(ent.ctf);
+      } catch (Throwable t) {
+	log.warning("Error unmounting " + ent.ctf, t);
       }
       try {
 	deleteFile(ent);
@@ -325,9 +327,9 @@ public class TFileCache {
   public void clear() {
     synchronized (cmap) {
       try {
-	TFile.umount();
-      } catch (FsSyncException e) {
-	log.warning("Couldn't umount TFile", e);
+	unmountAll();
+      } catch (Throwable t) {
+	log.warning("Error unmounting TFile", t);
       }
       for (Entry ent : cmap.values()) {
 	if (ent.ctf != null) {
@@ -340,6 +342,73 @@ public class TFileCache {
       }
       cmap.clear();
     }
+  }
+
+  /**
+   * Marks an entry as flushable only if its Tfile is unmounted.
+   * 
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache.
+   */
+  public void setFlushAfterUnmountOnly(CachedUrl cu) {
+    Entry ent = getEnt(getKey(cu));
+    if (ent != null) {
+      ent.flushAfterUnmountOnly = true;
+    } else {
+      log.warning("Cannot find entry to set flushAfterUnmountOnly for cu = "
+	  + cu);
+    }
+  }
+
+  /**
+   * Marks a TFile as flushable.
+   * 
+   * @param tf
+   *          A TFile to be freed.
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache, or
+   *          <code>null</code> if the TFile is not in the cache.
+   */
+  public void freeTFile(TFile tf, CachedUrl cu) {
+    // Nothing more to do if the TFile is not in the cache.
+    if (cu == null) return;
+
+    // Find the cache entry.
+    Entry ent = getEnt(getKey(cu));
+    if (ent == null) {
+      log.warning("Cannot find entry to mark as unmounted for cu = " + cu);
+      return;
+    }
+
+    // This TFile should have been marked to be flushed only after unmounting.
+    if (!ent.flushAfterUnmountOnly) {
+      log.warning("Entry for unmounted TFile = " + tf
+	  + " was not marked flushAfterUnmountOnly - Fixed");
+      ent.flushAfterUnmountOnly = true;
+    }
+
+    // Record the timestamp when this TFile was freed.
+    ent.freeingInstant = TimeBase.nowMs();
+  }
+
+  /**
+   * Unmounts a TFile.
+   * 
+   * @param tf
+   *          A TFile to be unmounted.
+   * @throws FsSyncException
+   */
+  private void unmount(TFile tf) throws FsSyncException {
+    TVFS.umount(tf);
+  }
+
+  /**
+   * Unmounts all TFiles.
+   * 
+   * @throws FsSyncException
+   */
+  private void unmountAll() throws FsSyncException {
+    TVFS.umount();
   }
 
   // logging accessors
@@ -363,6 +432,8 @@ public class TFileCache {
     String url;
     String key;
     CIProperties arcCuProps;
+    boolean flushAfterUnmountOnly = false;
+    long freeingInstant = -1L;
 
     Entry(long size, String key, String url) {
       this.size = size;
@@ -399,7 +470,38 @@ public class TFileCache {
     }
 
     public int compareTo(Entry o) {
-      return (ctr < o.ctr) ? -1 : (ctr == o.ctr) ? 0 : 1;
+      // Check whether this entry needs to be unmounted to be flushed.
+      if (flushAfterUnmountOnly) {
+	// Yes: Check whether the other entry does not need to be unmounted to
+	// be flushed.
+	if (!o.flushAfterUnmountOnly) {
+	  // Yes: If this entry is freed already, it goes first, otherwise,
+	  // last.
+	  return (freeingInstant >= 0) ? -1 : 1;
+	}
+
+	// If only one is already freed, it goes first.
+	if (freeingInstant >= 0 && o.freeingInstant < 0) {
+	  return -1;
+	} else if (freeingInstant < 0 && o.freeingInstant >= 0) {
+	  return 1;
+	}
+
+	// Both are already freed or none is: Sort by freeing order.
+	return (freeingInstant < o.freeingInstant) ? -1
+	    : (freeingInstant == o.freeingInstant) ? 0 : 1;
+      } else {
+	// No: Check whether the other entry needs to be freed to be flushed.
+	if (o.flushAfterUnmountOnly) {
+	  // Yes: If the other entry is freed already, it goes first, otherwise,
+	  // last.
+	  return (o.freeingInstant >= 0) ? 1 : -1;
+	}
+
+	// None of the entries need to be unmounted to be flushed: Sort by
+	// creation order.
+	return (ctr < o.ctr) ? -1 : (ctr == o.ctr) ? 0 : 1;
+      }
     }
 
     public String toString() {
