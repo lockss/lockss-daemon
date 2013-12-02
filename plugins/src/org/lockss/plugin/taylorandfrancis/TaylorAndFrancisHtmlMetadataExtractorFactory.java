@@ -92,8 +92,7 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
       log.debug3("normalized title from metadata is : " + normFoundTitle);
       // If the titles are a subset of each other or are equal after normalizatin
       isInAu = ( 
-          ( (normAuTitle.equals(normFoundTitle)) || 
-              (StringUtils.contains(normAuTitle,normFoundTitle)) || 
+          ( (StringUtils.contains(normAuTitle,normFoundTitle)) || 
               (StringUtils.contains(normFoundTitle,normAuTitle))) ); 
     }
 
