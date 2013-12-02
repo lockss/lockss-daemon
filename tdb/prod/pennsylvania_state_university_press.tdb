@@ -528,7 +528,7 @@
       param[journal_dir] = the_mark_twain_annual
       attr[journal_id] = mta
       
-      au < expected ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
+      au < manifest ; 2013 ; The Mark Twain Annual Volume 11 ; 11 >
 
     }
     
