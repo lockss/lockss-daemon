@@ -33,8 +33,8 @@
       param[base_url] = http://www.publionline.iar.unicamp.br/
       param[journal_id] = pit500
 
-      au < ready ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 >
-      au < ready ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 >
+      au < releasing ; 2011 ; 1 ; Pitágoras 500 Volume 2011 ; 2011 >
+      au < releasing ; 2012 ; 2 ; Pitágoras 500 Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Pitágoras 500 Volume 2013 ; 2013 >
 
   }
