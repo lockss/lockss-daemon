@@ -2041,7 +2041,7 @@
   {
   
     title <
-      name = Law and Literature ;
+      name = Law & Literature ;
       issn = 1535-685X ;
       eissn = 1541-2601 ;
       issnl = 1535-685X
@@ -2054,16 +2054,16 @@
       param[journal_id] = lal
       implicit < status ; year ; name ; param[volume_name] >
       
-      au < down ; 2001 ; Law and Literature Volume 13 ; 13 >
-      au < down ; 2002 ; Law and Literature Volume 14 ; 14 >
-      au < down ; 2003 ; Law and Literature Volume 15 ; 15 >
-      au < down ; 2004 ; Law and Literature Volume 16 ; 16 >
-      au < down ; 2005 ; Law and Literature Volume 17 ; 17 >
-      au < down ; 2006 ; Law and Literature Volume 18 ; 18 >
-      au < down ; 2007 ; Law and Literature Volume 19 ; 19 >
-      au < down ; 2008 ; Law and Literature Volume 20 ; 20 >
-      au < down ; 2009 ; Law and Literature Volume 21 ; 21 >
-      au < down ; 2010 ; Law and Literature Volume 22 ; 22 >
+      au < down ; 2001 ; Law & Literature Volume 13 ; 13 >
+      au < down ; 2002 ; Law & Literature Volume 14 ; 14 >
+      au < down ; 2003 ; Law & Literature Volume 15 ; 15 >
+      au < down ; 2004 ; Law & Literature Volume 16 ; 16 >
+      au < down ; 2005 ; Law & Literature Volume 17 ; 17 >
+      au < down ; 2006 ; Law & Literature Volume 18 ; 18 >
+      au < down ; 2007 ; Law & Literature Volume 19 ; 19 >
+      au < down ; 2008 ; Law & Literature Volume 20 ; 20 >
+      au < down ; 2009 ; Law & Literature Volume 21 ; 21 >
+      au < down ; 2010 ; Law & Literature Volume 22 ; 22 >
 
     }
 
