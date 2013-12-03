@@ -48,14 +48,14 @@
 
     au < manifest ; exists ; 1998 ; American Journal of Gastroenterology Volume 93 ; 1998 ; 93 >
     au < manifest ; exists ; 1999 ; American Journal of Gastroenterology Volume 94 ; 1999 ; 94 >
-    au < exists ; exists ; 2000 ; American Journal of Gastroenterology Volume 95 ; 2000 ; 95 >
-    au < exists ; exists ; 2001 ; American Journal of Gastroenterology Volume 96 ; 2001 ; 96 >
-    au < exists ; exists ; 2002 ; American Journal of Gastroenterology Volume 97 ; 2002 ; 97 >
+    au < manifest ; exists ; 2000 ; American Journal of Gastroenterology Volume 95 ; 2000 ; 95 >
+    au < manifest ; exists ; 2001 ; American Journal of Gastroenterology Volume 96 ; 2001 ; 96 >
+    au < manifest ; exists ; 2002 ; American Journal of Gastroenterology Volume 97 ; 2002 ; 97 >
     au < manifest ; exists ; 2003 ; American Journal of Gastroenterology Volume 98 ; 2003 ; 98 >
-    au < exists ; exists ; 2004 ; American Journal of Gastroenterology Volume 99 ; 2004 ; 99 >
-    au < exists ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
-    au < exists ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
-    au < exists ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
+    au < manifest ; exists ; 2004 ; American Journal of Gastroenterology Volume 99 ; 2004 ; 99 >
+    au < manifest ; exists ; 2005 ; American Journal of Gastroenterology Volume 100 ; 2005 ; 100 >
+    au < manifest ; exists ; 2006 ; American Journal of Gastroenterology Volume 101 ; 2006 ; 101 >
+    au < manifest ; exists ; 2007 ; American Journal of Gastroenterology Volume 102 ; 2007 ; 102 >
     au < finished ; crawling ; 2008 ; American Journal of Gastroenterology Volume 103 ; 2008 ; 103 >
     au < finished ; crawling ; 2009 ; American Journal of Gastroenterology Volume 104 ; 2009 ; 104 >
     au < finished ; crawling ; 2010 ; American Journal of Gastroenterology Volume 105 ; 2010 ; 105 >
@@ -562,7 +562,7 @@
 
     title <
       name = Cellular & Molecular Immunology ;
-      issn = 1672-7681;
+      issn = 1672-7681 ;
       eissn = 2042-0226
 
     >
@@ -2842,7 +2842,7 @@
     title <
       name = Nature Chemical Biology ;
       issn = 1552-4450 ;
-      eissn = 1552-4469;
+      eissn = 1552-4469 ;
       issnl = 1552-4450
     >
 
@@ -3738,7 +3738,7 @@
     au < crawling ; exists ; 2011 ; Neuropsychopharmacology Volume 36 ; 2011 ; 36 >
     au < finished ; crawling ; 2012 ; Neuropsychopharmacology Volume 37 ; 2012 ; 37 >
     au < crawling ; exists ; 2013 ; Neuropsychopharmacology Volume 38 ; 2013 ; 38 >
-    au < expected ; exists ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 >
+    au < manifest ; exists ; 2014 ; Neuropsychopharmacology Volume 39 ; 2014 ; 39 >
 
   }
   
@@ -3757,7 +3757,7 @@
     au < crawling ; exists ; 2011 ; NPG Asia Materials Volume 3 ; 2011 ; 3 >
     au < ingNotReady ; exists ; 2012 ; NPG Asia Materials Volume 4 ; 2012 ; 4 >
     au < crawling ; exists ; 2013 ; NPG Asia Materials Volume 5 ; 2013 ; 5 >
-    au < expected ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 >
+    au < manifest ; exists ; 2014 ; NPG Asia Materials Volume 6 ; 2014 ; 6 >
 
   }
 
@@ -3864,15 +3864,15 @@
 
     param[journal_id] = pr
     
-    au < manifest ; exists ; 1967 ; Pediatric Research Volume 1 ; 1967; 1 >
-    au < manifest ; exists ; 1968 ; Pediatric Research Volume 2 ; 1968; 2 >
-    au < manifest ; exists ; 1969 ; Pediatric Research Volume 3 ; 1969; 3 >
-    au < manifest ; exists ; 1970 ; Pediatric Research Volume 4 ; 1970; 4 >
-    au < manifest ; exists ; 1971 ; Pediatric Research Volume 5 ; 1971; 5 >
-    au < manifest ; exists ; 1972 ; Pediatric Research Volume 6 ; 1972; 6 >
-    au < manifest ; exists ; 1973 ; Pediatric Research Volume 7 ; 1973; 7 >
-    au < manifest ; exists ; 1974 ; Pediatric Research Volume 8 ; 1974; 8 >
-    au < manifest ; exists ; 1975 ; Pediatric Research Volume 9 ; 1975; 9 >
+    au < manifest ; exists ; 1967 ; Pediatric Research Volume 1 ; 1967 ; 1 >
+    au < manifest ; exists ; 1968 ; Pediatric Research Volume 2 ; 1968 ; 2 >
+    au < manifest ; exists ; 1969 ; Pediatric Research Volume 3 ; 1969 ; 3 >
+    au < manifest ; exists ; 1970 ; Pediatric Research Volume 4 ; 1970 ; 4 >
+    au < manifest ; exists ; 1971 ; Pediatric Research Volume 5 ; 1971 ; 5 >
+    au < manifest ; exists ; 1972 ; Pediatric Research Volume 6 ; 1972 ; 6 >
+    au < manifest ; exists ; 1973 ; Pediatric Research Volume 7 ; 1973 ; 7 >
+    au < manifest ; exists ; 1974 ; Pediatric Research Volume 8 ; 1974 ; 8 >
+    au < manifest ; exists ; 1975 ; Pediatric Research Volume 9 ; 1975 ; 9 >
     au < manifest ; exists ; 1976 ; Pediatric Research Volume 10 ; 1976 ; 10 >
     au < manifest ; exists ; 1977 ; Pediatric Research Volume 11 ; 1977 ; 11 >
     au < manifest ; exists ; 1978 ; Pediatric Research Volume 12 ; 1978 ; 12 >
@@ -4197,7 +4197,7 @@
     au < finished ; crawling ; 2012 ; Vital Volume 9 (2012) ; 2012 ; 9 >
     au < finished ; crawling ; 2012 ; Vital Volume 10 (2012) ; 2012 ; 10 >
     au < crawling ; exists ; 2013 ; Vital Volume 10 (2013) ; 2013 ; 10 >
-    au < expected ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
+    au < manifest ; exists ; 2013 ; Vital Volume 11 (2013) ; 2013 ; 11 >
     au < expected ; exists ; 2014 ; Vital Volume 11 (2014) ; 2014 ; 11 >
     au < expected ; exists ; 2014 ; Vital Volume 12 (2014) ; 2014 ; 12 >
 

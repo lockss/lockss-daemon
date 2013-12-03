@@ -198,10 +198,10 @@
     param[journal_id] = jeps
     comment[0] = no issue in 2011
 
-    au < exists ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
-    au < exists ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
-    au < exists ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
-    au < exists ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
+    au < manifest ; exists ; 2009 ; Journal of European Psychology Students Volume 1 ; 1 ; 2009 >
+    au < manifest ; exists ; 2010 ; Journal of European Psychology Students Volume 2 ; 2 ; 2010 >
+    au < manifest ; exists ; 2012 ; Journal of European Psychology Students Volume 3 ; 3 ; 2012 >
+    au < manifest ; exists ; 2013 ; Journal of European Psychology Students Volume 4 ; 4 ; 2013 >
     au < expected ; exists ; 2014 ; Journal of European Psychology Students Volume 5 ; 5 ; 2014 >
     
   }
@@ -262,7 +262,7 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    au < manifest ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    au < crawling ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }

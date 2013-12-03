@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = Berghahn ;
+    name = Berghahn Books ;
     info[contract] = 2012
   >
   
@@ -9,12 +9,17 @@
   {
   
     title <
-      name = Berghahn
+      name = Berghahn Books Source Content
     >
     
-    plugin = needs.plugin
- 
+    plugin = org.lockss.plugin.clockss.onixbooks.ClockssOnix3BooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/berghahn-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
     
+    au < expected ; exists ; 2012 ; Berghahn Books Source Content 2012 ; 2012 >
+    au < testing ; exists ; 2013 ; Berghahn Books Source Content 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Berghahn Books Source Content 2014 ; 2014 >
     
   }
 

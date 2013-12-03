@@ -44,11 +44,11 @@
       
      param[journal_issn] = 2052-8051
      
-     au < exists ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
-     au < exists ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
-     au < exists ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
-     au < exists ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
-     au < exists ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
+     au < manifest ; exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
+     au < manifest ; exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
+     au < manifest ; exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
+     au < manifest ; exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
+     au < manifest ; exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
      au < expected ; exists ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
     
     }
@@ -72,7 +72,7 @@
      au < manifest ; exists ; 2011 ; Cahiers Élisabéthains Volume 80 ; 80 >
      au < manifest ; exists ; 2012 ; Cahiers Élisabéthains Volume 81 ; 81 >
      au < manifest ; exists ; 2012 ; Cahiers Élisabéthains Volume 82 ; 82 >
-     au < manifest ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
+     au < crawling ; exists ; 2013 ; Cahiers Élisabéthains Volume 83 ; 83 >
      au < exists ; exists ; 2013 ; Cahiers Élisabéthains Volume 84 ; 84 >
      au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 85 ; 85 >
      au < expected ; exists ; 2014 ; Cahiers Élisabéthains Volume 86 ; 86 >
@@ -366,7 +366,7 @@
      au < manifest ; exists ; 2010 ; Nineteenth Century Theatre and Film Volume 37 ; 37 >
      au < finished ; crawling ; 2011 ; Nineteenth Century Theatre and Film Volume 38 ; 38 >
      au < finished ; crawling ; 2012 ; Nineteenth Century Theatre and Film Volume 39 ; 39 >
-     au < manifest ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
+     au < crawling ; exists ; 2013 ; Nineteenth Century Theatre and Film Volume 40 ; 40 >
      au < expected ; exists ; 2014 ; Nineteenth Century Theatre and Film Volume 41 ; 41 >
     
     }

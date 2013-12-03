@@ -3,12 +3,12 @@
   publisher <
     name = Librello ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7
   >
 
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
       implicit < status1 ; status ; year ; name ; param[year] >
-      param[base_url] = http://www.librelloph.com/
+      param[base_url] = http://www.librelloph.com/ojs/
 
   {
     title <
@@ -18,7 +18,7 @@
       param[journal_id] = challengesinsustainability
       comment[issn] = missing
     
-      au < exists ; exists ; 2013 ; Challenges in Sustainability Volume 1 ; 2013 >
+      au < notReady ; exists ; 2013 ; Challenges in Sustainability Volume 1 ; 2013 >
       au < expected ; exists ; 2014 ; Challenges in Sustainability Volume 2 ; 2014 >
     
   }
@@ -31,7 +31,7 @@
 
       param[journal_id] = journalofhumansecurity
 
-      au < exists ; exists ; 2013 ; Journal of Human Security Volume 9 ; 2013 >
+      au < notReady ; exists ; 2013 ; Journal of Human Security Volume 9 ; 2013 >
       au < expected ; exists ; 2014 ; Journal of Human Security Volume 10 ; 2014 >
 
   }
@@ -44,7 +44,7 @@
       param[journal_id] = mediaandcommunication
       comment[issn] = missing
 
-      au < exists ; exists ; 2013 ; Media and Communication Volume 1 ; 2013 >
+      au < notReady ; exists ; 2013 ; Media and Communication Volume 1 ; 2013 >
       au < expected ; exists ; 2014 ; Media and Communication Volume 2 ; 2014 >
 
   }
@@ -57,7 +57,7 @@
       param[journal_id] = politicsandgovernance
       comment[issn] = missing
 
-      au < exists ; exists ; 2013 ; Politics and Governance Volume 1 ; 2013 >
+      au < notReady ; exists ; 2013 ; Politics and Governance Volume 1 ; 2013 >
       au < expected ; exists ; 2014 ; Politics and Governance Volume 2 ; 2014 >
 
   }
@@ -70,7 +70,7 @@
       param[journal_id] = socialinclusion
       comment[issn] = missing
 
-      au < exists ; exists ; 2013 ; Social Inclusion Volume 1 ; 2013 >
+      au < notReady ; exists ; 2013 ; Social Inclusion Volume 1 ; 2013 >
       au < expected ; exists ; 2014 ; Social Inclusion Volume 2 ; 2014 >
 
   }

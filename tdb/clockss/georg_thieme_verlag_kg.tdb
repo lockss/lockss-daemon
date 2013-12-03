@@ -4283,9 +4283,9 @@
     param[journal_id] = 10.1055/s-00000164
     comment[years] = 2010-current
 
-   au < exists ; exists; 2010 ; 2010 ; team-konkret 2010  >
-   au < exists ; exists; 2011 ; 2011 ; team-konkret 2011  >
-   au < exists ; exists; 2012 ; 2012 ; team-konkret 2012  >
+   au < exists ; exists ; 2010 ; 2010 ; team-konkret 2010  >
+   au < exists ; exists ; 2011 ; 2011 ; team-konkret 2011  >
+   au < exists ; exists ; 2012 ; 2012 ; team-konkret 2012  >
    au < expected ; exists ; 2013 ; 2013 ; team-konkret Volume 2013 >
    au < expected ; exists ; 2014 ; 2014 ; team-konkret Volume 2014 >
 

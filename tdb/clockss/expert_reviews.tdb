@@ -29,7 +29,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Anti-infective Therapy Volume 8 ; 8 >
     au < manifest ; exists ; 2011 ; Expert Review of Anti-infective Therapy Volume 9 ; 9 >
     au < manifest ; exists ; 2012 ; Expert Review of Anti-infective Therapy Volume 10 ; 10 >
-    au < manifest ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 ; 11 >
+    au < crawling ; exists ; 2013 ; Expert Review of Anti-infective Therapy Volume 11 ; 11 >
     au < expected ; exists ; 2014 ; Expert Review of Anti-infective Therapy Volume 12 ; 12 >
     
   }
@@ -55,7 +55,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Anticancer Therapy Volume 10 ; 10 >
     au < manifest ; exists ; 2011 ; Expert Review of Anticancer Therapy Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; Expert Review of Anticancer Therapy Volume 12 ; 12 >
-    au < manifest ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 ; 13 >
+    au < crawling ; exists ; 2013 ; Expert Review of Anticancer Therapy Volume 13 ; 13 >
     au < expected ; exists ; 2014 ; Expert Review of Anticancer Therapy Volume 14 ; 14 >
    
   }
@@ -79,7 +79,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Cardiovascular Therapy Volume 8 ; 8 >
     au < manifest ; exists ; 2011 ; Expert Review of Cardiovascular Therapy Volume 9 ; 9 >
     au < manifest ; exists ; 2012 ; Expert Review of Cardiovascular Therapy Volume 10 ; 10 >
-    au < manifest ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 ; 11 >
+    au < crawling ; exists ; 2013 ; Expert Review of Cardiovascular Therapy Volume 11 ; 11 >
     au < expected ; exists ; 2014 ; Expert Review of Cardiovascular Therapy Volume 12 ; 12 >
   
   }
@@ -102,7 +102,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Clinical Immunology Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Expert Review of Clinical Immunology Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Expert Review of Clinical Immunology Volume 8 ; 8 >
-    au < manifest ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 ; 9 >
+    au < crawling ; exists ; 2013 ; Expert Review of Clinical Immunology Volume 9 ; 9 >
     au < expected ; exists ; 2014 ; Expert Review of Clinical Immunology Volume 10 ; 10 >
     
   }
@@ -121,7 +121,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Clinical Pharmacology Volume 3 ; 3 >
     au < manifest ; exists ; 2011 ; Expert Review of Clinical Pharmacology Volume 4 ; 4 >
     au < manifest ; exists ; 2012 ; Expert Review of Clinical Pharmacology Volume 5 ; 5 >
-    au < manifest ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 ; 6 >
+    au < crawling ; exists ; 2013 ; Expert Review of Clinical Pharmacology Volume 6 ; 6 >
     au < expected ; exists ; 2014 ; Expert Review of Clinical Pharmacology Volume 7 ; 7 >
     
   }
@@ -142,7 +142,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Dermatology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Expert Review of Dermatology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Expert Review of Dermatology Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; Expert Review of Dermatology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Expert Review of Dermatology Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Expert Review of Dermatology Volume 9 ; 9 >
     
   }
@@ -164,7 +164,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Endocrinology & Metabolism Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Expert Review of Endocrinology & Metabolism Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Expert Review of Endocrinology & Metabolism Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Expert Review of Endocrinology & Metabolism Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Expert Review of Endocrinology & Metabolism Volume 9 ; 9 >
     
   }
@@ -184,7 +184,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Gastroenterology & Hepatology Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Expert Review of Gastroenterology & Hepatology Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Expert Review of Gastroenterology & Hepatology Volume 6 ; 6 >
-    au < manifest ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; Expert Review of Gastroenterology & Hepatology Volume 7 ; 7 >
     au < expected ; exists ; 2014 ; Expert Review of Gastroenterology & Hepatology Volume 8 ; 8 >
     
   }
@@ -203,7 +203,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Hematology Volume 3 ; 3 >
     au < manifest ; exists ; 2011 ; Expert Review of Hematology Volume 4 ; 4 >
     au < manifest ; exists ; 2012 ; Expert Review of Hematology Volume 5 ; 5 >
-    au < manifest ; exists ; 2013 ; Expert Review of Hematology Volume 6 ; 6 >
+    au < crawling ; exists ; 2013 ; Expert Review of Hematology Volume 6 ; 6 >
     au < expected ; exists ; 2014 ; Expert Review of Hematology Volume 7 ; 7 >
     
   }
@@ -226,7 +226,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Medical Devices Volume 7 ; 7 >
     au < manifest ; exists ; 2011 ; Expert Review of Medical Devices Volume 8 ; 8 >
     au < manifest ; exists ; 2012 ; Expert Review of Medical Devices Volume 9 ; 9 >
-    au < manifest ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 ; 10 >
+    au < crawling ; exists ; 2013 ; Expert Review of Medical Devices Volume 10 ; 10 >
     au < expected ; exists ; 2014 ; Expert Review of Medical Devices Volume 11 ; 11 >
     
   }
@@ -252,7 +252,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Molecular Diagnostics Volume 10 ; 10 >
     au < manifest ; exists ; 2011 ; Expert Review of Molecular Diagnostics Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; Expert Review of Molecular Diagnostics Volume 12 ; 12 >
-    au < manifest ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 ; 13 >
+    au < crawling ; exists ; 2013 ; Expert Review of Molecular Diagnostics Volume 13 ; 13 >
     au < expected ; exists ; 2014 ; Expert Review of Molecular Diagnostics Volume 14 ; 14 >
    
   }
@@ -278,7 +278,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Neurotherapeutics Volume 10 ; 10 >
     au < manifest ; exists ; 2011 ; Expert Review of Neurotherapeutics Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; Expert Review of Neurotherapeutics Volume 12 ; 12 >
-    au < manifest ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 ; 13 >
+    au < crawling ; exists ; 2013 ; Expert Review of Neurotherapeutics Volume 13 ; 13 >
     au < expected ; exists ; 2014 ; Expert Review of Neurotherapeutics Volume 14 ; 14 >
    
   }
@@ -299,7 +299,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Obstetrics & Gynecology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Expert Review of Obstetrics & Gynecology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Expert Review of Obstetrics & Gynecology Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Expert Review of Obstetrics & Gynecology Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Expert Review of Obstetrics & Gynecology Volume 9 ; 9 >
     
   }
@@ -320,7 +320,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Ophthalmology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Expert Review of Ophthalmology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Expert Review of Ophthalmology Volume 7 ; 7 >
-    au < manifest ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 ; 8 >
+    au < crawling ; exists ; 2013 ; Expert Review of Ophthalmology Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Expert Review of Ophthalmology Volume 9 ; 9 >
     
   }
@@ -346,7 +346,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 10 ; 10 >
     au < manifest ; exists ; 2011 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 11 ; 11 >
     au < manifest ; exists ; 2012 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 12 ; 12 >
-    au < manifest ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 ; 13 >
+    au < crawling ; exists ; 2013 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 13 ; 13 >
     au < expected ; exists ; 2014 ; Expert Review of Pharmacoeconomics & Outcomes Research Volume 14 ; 14 >
   
   }
@@ -369,7 +369,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Proteomics Volume 7 ; 7 >
     au < manifest ; exists ; 2011 ; Expert Review of Proteomics Volume 8 ; 8 >
     au < manifest ; exists ; 2012 ; Expert Review of Proteomics Volume 9 ; 9 >
-    au < manifest ; exists ; 2013 ; Expert Review of Proteomics Volume 10 ; 10 >
+    au < crawling ; exists ; 2013 ; Expert Review of Proteomics Volume 10 ; 10 >
     au < expected ; exists ; 2014 ; Expert Review of Proteomics Volume 11 ; 11 >
      
   }
@@ -389,7 +389,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Respiratory Medicine Volume 4 ; 4 >
     au < manifest ; exists ; 2011 ; Expert Review of Respiratory Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Expert Review of Respiratory Medicine Volume 6 ; 6 >
-    au < manifest ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 ; 7 >
+    au < crawling ; exists ; 2013 ; Expert Review of Respiratory Medicine Volume 7 ; 7 >
     au < expected ; exists ; 2014 ; Expert Review of Respiratory Medicine Volume 8 ; 8 >
     
   }
@@ -414,7 +414,7 @@
     au < manifest ; exists ; 2010 ; Expert Review of Vaccines Volume 9 ; 9 >
     au < manifest ; exists ; 2011 ; Expert Review of Vaccines Volume 10 ; 10 >
     au < manifest ; exists ; 2012 ; Expert Review of Vaccines Volume 11 ; 11 >
-    au < manifest ; exists ; 2013 ; Expert Review of Vaccines Volume 12 ; 12 >
+    au < crawling ; exists ; 2013 ; Expert Review of Vaccines Volume 12 ; 12 >
     au < expected ; exists ; 2014 ; Expert Review of Vaccines Volume 13 ; 13 >
    
   }

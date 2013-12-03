@@ -6,6 +6,7 @@
     info[tester] = 0
   >
 
+  rights = openaccess 
   plugin = org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin
   implicit < status1 ; status ; year ; name ; param[volume_name] >
   param[base_url] = http://autobiography.stanford.clockss.org/

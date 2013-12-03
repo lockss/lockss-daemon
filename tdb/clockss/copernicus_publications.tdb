@@ -297,21 +297,21 @@
       param[base_url] = http://www.earth-surf-dynam.net/
       param[home_url] = http://www.earth-surface-dynamics.net/
 
-      au < manifest ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Volume 2 ; 2 >
     
    }
     
   {
     title <
-      name = Earth Surface Dynamics Discussions;
+      name = Earth Surface Dynamics Discussions ;
       eissn = 2196-6338
     >
       attr[journal_id] = ESurfD
       param[base_url] = http://www.earth-surf-dynam-discuss.net/
       param[home_url] = http://www.earth-surf-dynam-discuss.net/
 
-      au < manifest ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; 2013 ; Earth Surface Dynamics Discussions Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; 2014 ; Earth Surface Dynamics Discussions Volume 2 ; 2 >
     
    }
@@ -525,7 +525,7 @@
       param[base_url] = http://www.geoth-energ-sci.net/
       param[home_url] = http://www.geothermal-energy-science.net/
 
-      au < manifest ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; 2013 ; Geothermal Energy Science Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; 2014 ; Geothermal Energy Science Volume 2 ; 2 >
     
    }
@@ -707,7 +707,7 @@
       param[base_url] = http://www.pattern-recogn-phys.net/
       param[home_url] = http://www.pattern-recognition-in-physics.net/
 
-      au < manifest ; exists ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 >
+      au < crawling ; exists ; 2013 ; 2013 ; Pattern Recognition in Physics Volume 1 ; 1 >
       au < expected ; exists ; 2014 ; 2014 ; Pattern Recognition in Physics Volume 2 ; 2 >
     
    }

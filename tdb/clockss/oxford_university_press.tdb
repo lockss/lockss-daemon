@@ -881,7 +881,7 @@
   {
 
     title <
-      name = The American Journal of Jurisprudence;
+      name = The American Journal of Jurisprudence ;
       issn = 0065-8995 ;
       eissn = 2049-6494 ;
       issnl = 0065-8995
@@ -1373,12 +1373,12 @@
     param[base_url] = http://annhyg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 1958 ; The Annals of Occupational Hygiene Volume 1 ; 1 ;>
-    au < manifest ; exists ; 1960 ; The Annals of Occupational Hygiene Volume 2 ; 2 ;>
-    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 3 ; 3 ;>
-    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 4 ; 4 ;>
-    au < manifest ; exists ; 1962 ; The Annals of Occupational Hygiene Volume 5 ; 5 ;>
-    au < manifest ; exists ; 1963 ; The Annals of Occupational Hygiene Volume 6 ; 6 ;>
+    au < manifest ; exists ; 1958 ; The Annals of Occupational Hygiene Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1960 ; The Annals of Occupational Hygiene Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1961 ; The Annals of Occupational Hygiene Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1962 ; The Annals of Occupational Hygiene Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1963 ; The Annals of Occupational Hygiene Volume 6 ; 6 ; >
     au < manifest ; exists ; 1964 ; The Annals of Occupational Hygiene Volume 7 ; 7 ; >
     au < manifest ; exists ; 1965 ; The Annals of Occupational Hygiene Volume 8 ; 8 ; >
     au < manifest ; exists ; 1966 ; The Annals of Occupational Hygiene Volume 9 ; 9 ; >
@@ -2272,14 +2272,14 @@
     pluginSuffix = ClockssHighWirePlugin
     comment[ceased] = ceased publication in 2008
 
-    au < finished ; crawling ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ;  >
-    au < finished ; crawling ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ;  >
-    au < finished ; crawling ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ;  >
-    au < finished ; crawling ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ;  >
-    au < finished ; crawling ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ;  >
-    au < finished ; crawling ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ;  >
-    au < finished ; crawling ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ;  >
-    au < finished ; crawling ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ;  >
+    au < finished ; crawling ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 ; >
+    au < finished ; crawling ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 ; >
+    au < finished ; crawling ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 ; >
+    au < finished ; crawling ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 ; >
+    au < finished ; crawling ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 ; >
+    au < finished ; crawling ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 ; >
+    au < finished ; crawling ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 ; >
+    au < finished ; crawling ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 ; >
 
     }
 
@@ -2605,10 +2605,10 @@
     au < finished ; crawling ; 2009 ; British Journal of Anaesthesia Volume 103 ; 103 ; >
     au < finished ; crawling ; 2010 ; British Journal of Anaesthesia Volume 104 ; 104 ; >
     au < finished ; crawling ; 2010 ; British Journal of Anaesthesia Volume 105 ; 105 ; >
-    au < finished ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 106 ; 106 ; >
-    au < finished ; crawling ; 2011 ;  British Journal of Anaesthesia Volume 107 ; 107 ; >
-    au < finished ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 108 ; 108 ; >
-    au < finished ; crawling ; 2012 ;  British Journal of Anaesthesia Volume 109 ; 109 ; >
+    au < finished ; crawling ; 2011 ; British Journal of Anaesthesia Volume 106 ; 106 ; >
+    au < finished ; crawling ; 2011 ; British Journal of Anaesthesia Volume 107 ; 107 ; >
+    au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 108 ; 108 ; >
+    au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
     au < expected ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
@@ -2695,7 +2695,7 @@
     au < finished ; crawling ; 2011 ; The British Journal of Criminology: An International Review of Crime and Society Volume 51 ; 51 ; >
     au < finished ; crawling ; 2012 ; The British Journal of Criminology: An International Review of Crime and Society Volume 52 ; 52 ; >
     au < crawling ; exists ; 2013 ; The British Journal of Criminology: An International Review of Crime and Society Volume 53 ; 53 ; >
-    au < expected ; exists ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2014 ; The British Journal of Criminology: An International Review of Crime and Society Volume 54 ; 54 ; >
 
     }
 
@@ -2999,11 +2999,11 @@
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 106 ; 106 ; >
     au < crawling ; exists ; 2013 ; British Medical Bulletin Volume 107 ; 107 ; >
-    au < expected ; exists ; 2013 ; British Medical Bulletin Volume 108 ; 108 ; >
-    au < expected ; exists ; 2014; British Medical Bulletin Volume 109 ; 109 ; >
-    au < expected ; exists ; 2014; British Medical Bulletin Volume 110 ; 110 ; >
-    au < expected ; exists ; 2014; British Medical Bulletin Volume 111 ; 111 ; >
-    au < expected ; exists ; 2014; British Medical Bulletin Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2013 ; British Medical Bulletin Volume 108 ; 108 ; >
+    au < expected ; exists ; 2014 ; British Medical Bulletin Volume 109 ; 109 ; >
+    au < expected ; exists ; 2014 ; British Medical Bulletin Volume 110 ; 110 ; >
+    au < expected ; exists ; 2014 ; British Medical Bulletin Volume 111 ; 111 ; >
+    au < expected ; exists ; 2014 ; British Medical Bulletin Volume 112 ; 112 ; >
 
     }
 
@@ -3851,8 +3851,8 @@
     param[base_url] = http://cjip.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2006-2007 ;The Chinese Journal of International Politics Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2008-2009 ;The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
@@ -5538,12 +5538,12 @@
     param[base_url] = http://eurjhfsupp.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < manifest ; exists ; 2002 ; European Journal of Heart Failure Supplements Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2003 ; European Journal of Heart Failure Supplements Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2004 ; European Journal of Heart Failure Supplements Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2005 ; European Journal of Heart Failure Supplements Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2002 ; European Journal of Heart Failure Supplements Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2003 ; European Journal of Heart Failure Supplements Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2004 ; European Journal of Heart Failure Supplements Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2005 ; European Journal of Heart Failure Supplements Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2006 ; European Journal of Heart Failure Supplements Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2007 ; European Journal of Heart Failure Supplements Volume 6 ; 6 ; >
     au < manifest ; exists ; 2008 ; European Journal of Heart Failure Supplements Volume 7 ; 7 ; >
     au < finished ; crawling ; 2009 ; European Journal of Heart Failure Supplements Volume 8 ; 8 ; >
     au < finished ; crawling ; 2010 ; European Journal of Heart Failure Supplements Volume 9 ; 9 ; >
@@ -5800,7 +5800,7 @@
 
     title <
       name = European Review of Economic History ;
-      issn = 1361-4916  ;
+      issn = 1361-4916 ;
       eissn = 1474-0044 ;
       issnl = 1361-4916
     >
@@ -6902,7 +6902,7 @@
   {
 
     title <
-      name = Health & Social Work  ;
+      name = Health & Social Work ;
       issn = 0360-7283 ;
       eissn = 1545-6854 ;
       issnl = 0360-7283
@@ -9392,8 +9392,8 @@
     au < manifest ; exists ; 1936 ; Journal of the American Academy of Religion Volume 4 ; 4 ; >
     au < manifest ; exists ; 1937 ; Journal of the American Academy of Religion Volume V ; V ; >
     au < manifest ; exists ; 1938 ; Journal of the American Academy of Religion Volume VI ; VI ; >
-    au < manifest ; exists ; 1939 ; Journal of the American Academy of Religion Volume VII; VII ; >
-    au < manifest ; exists ; 1940 ; Journal of the American Academy of Religion Volume VIII; VIII ; >
+    au < manifest ; exists ; 1939 ; Journal of the American Academy of Religion Volume VII ; VII ; >
+    au < manifest ; exists ; 1940 ; Journal of the American Academy of Religion Volume VIII ; VIII ; >
     au < manifest ; exists ; 1941 ; Journal of the American Academy of Religion Volume IX ; IX ; >
     au < manifest ; exists ; 1942 ; Journal of the American Academy of Religion Volume X ; X ; >
     au < manifest ; exists ; 1943 ; Journal of the American Academy of Religion Volume XI ; XI ; >
@@ -9598,7 +9598,7 @@
 
     title <
       name = Journal of Analytical Toxicology ;
-      issn = 0146-4760  ;
+      issn = 0146-4760 ;
       eissn = 1945-2403 ;
       issnl = 0146-4760
     >
@@ -9938,7 +9938,7 @@
 
     title <
       name = Journal of Chromatographic Science ;
-      issn = 0021-9665  ;
+      issn = 0021-9665 ;
       eissn = 1945-239X ;
       issnl = 0021-9665
     >
@@ -12908,7 +12908,7 @@
     au < zapped ; finished ; 2010-2011 ; Journal of Social History Volume 44 ; 44 ; >
     au < finished ; crawling ; 2011-2012 ; Journal of Social History Volume 45 ; 45 ; >
     au < ingNotReady ; exists ; 2012-2013 ; Journal of Social History Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2013-2014 ; Journal of Social History Volume 47 ; 47 ; >
     au < expected ; exists ; 2014-2015 ; Journal of Social History Volume 48 ; 48 ; >
 
     }
@@ -13364,7 +13364,7 @@
     au < finished ; crawling ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
     au < finished ; crawling ; 2012 ; The Leo Baeck Institute Yearbook Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2013 ; The Leo Baeck Institute Yearbook Volume 58 ; 58 ; >
     au < expected ; exists ; 2014 ; The Leo Baeck Institute Yearbook Volume 59 ; 59 ; >
 
     }
@@ -14465,7 +14465,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 433 ; 433 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 434 ; 434 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 435 ; 435 ; >
-    au < manifest ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 436 ; 436 ; >
+    au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 436 ; 436 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 437 ; 437 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 438 ; 438 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 439 ; 439 ; >
@@ -14568,7 +14568,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 433 ; 433 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 434 ; 434 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 435 ; 435 ; >
-    au < manifest ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 436 ; 436 ; >
+    au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 436 ; 436 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437 ; 437 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 438 ; 438 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 439 ; 439 ; >
@@ -15011,7 +15011,7 @@
     au < crawling ; exists ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
     au < finished ; crawling ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
     au < finished ; crawling ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
-    au < released ; manifest ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2011 ; Nephrology Dialysis Transplantation Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Nephrology Dialysis Transplantation Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Nephrology Dialysis Transplantation Volume 28 ; 28 ; >
     au < expected ; exists ; 2014 ; Nephrology Dialysis Transplantation Volume 29 ; 29 ; >
@@ -15692,7 +15692,7 @@
     au < finished ; crawling ; 2010 ; The Opera Quarterly Volume 26 ; 26 ; >
     au < finished ; crawling ; 2011 ; The Opera Quarterly Volume 27 ; 27 ; >
     au < finished ; crawling ; 2012 ; The Opera Quarterly Volume 28 ; 28 ; >
-    au < expected ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2013 ; The Opera Quarterly Volume 29 ; 29 ; >
     au < expected ; exists ; 2014 ; The Opera Quarterly Volume 30 ; 30 ; >
 
     }
@@ -19708,7 +19708,7 @@
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 133 ; 133 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
-    au < expected ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
+    au < manifest ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; >
@@ -20205,7 +20205,7 @@
     au < finished ; crawling ; 2010 ; Yearbook of European Law Volume 29 ; 29 ; >
     au < finished ; crawling ; 2011 ; Yearbook of European Law Volume 30 ; 30 ; >
     au < finished ; crawling ; 2012 ; Yearbook of European Law Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2013 ; Yearbook of European Law Volume 32 ; 32 ; >
     au < expected ; exists ; 2014 ; Yearbook of European Law Volume 33 ; 33 ; >
 
   }
@@ -21006,6 +21006,20 @@
     au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
     au < expected ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
+    
+  }
+  {
+
+    title <
+      name = National Science Review ;
+      issn = 2095-5138 ;
+      eissn = 2053-714X
+    >
+
+    param[base_url] = http://nsr.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2013 ; National Science Review Volume 1 ; 1 ; >
     
   }
 

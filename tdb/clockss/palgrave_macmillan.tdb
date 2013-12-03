@@ -409,16 +409,16 @@
       param[journal_id] = bm
 
       au < manifest ; exists ; 2000 ; Journal of Brand Management Volume 8 (2000) ; 2000 ; 8 >
-      au < exists ; exists ; 2001 ; Journal of Brand Management Volume 8 (2001) ; 2001 ; 8 >
-      au < exists ; exists ; 2001 ; Journal of Brand Management Volume 9 (2001) ; 2001 ; 9 >
-      au < exists ; exists ; 2002 ; Journal of Brand Management Volume 9 (2002) ; 2002 ; 9 >
-      au < exists ; exists ; 2002 ; Journal of Brand Management Volume 10 (2002) ; 2002 ; 10 >
-      au < exists ; exists ; 2003 ; Journal of Brand Management Volume 10 (2003) ; 2003 ; 10 >
-      au < exists ; exists ; 2003 ; Journal of Brand Management Volume 11 (2003) ; 2003 ; 11 >
-      au < exists ; exists ; 2004 ; Journal of Brand Management Volume 11 (2004) ; 2004 ; 11 >
-      au < exists ; exists ; 2004 ; Journal of Brand Management Volume 12 (2004) ; 2004 ; 12 >
-      au < exists ; exists ; 2005 ; Journal of Brand Management Volume 12 (2005) ; 2005 ; 12 >
-      au < exists ; exists ; 2005 ; Journal of Brand Management Volume 13 (2005) ; 2005 ; 13 >
+      au < manifest ; exists ; 2001 ; Journal of Brand Management Volume 8 (2001) ; 2001 ; 8 >
+      au < manifest ; exists ; 2001 ; Journal of Brand Management Volume 9 (2001) ; 2001 ; 9 >
+      au < manifest ; exists ; 2002 ; Journal of Brand Management Volume 9 (2002) ; 2002 ; 9 >
+      au < manifest ; exists ; 2002 ; Journal of Brand Management Volume 10 (2002) ; 2002 ; 10 >
+      au < manifest ; exists ; 2003 ; Journal of Brand Management Volume 10 (2003) ; 2003 ; 10 >
+      au < manifest ; exists ; 2003 ; Journal of Brand Management Volume 11 (2003) ; 2003 ; 11 >
+      au < manifest ; exists ; 2004 ; Journal of Brand Management Volume 11 (2004) ; 2004 ; 11 >
+      au < manifest ; exists ; 2004 ; Journal of Brand Management Volume 12 (2004) ; 2004 ; 12 >
+      au < manifest ; exists ; 2005 ; Journal of Brand Management Volume 12 (2005) ; 2005 ; 12 >
+      au < manifest ; exists ; 2005 ; Journal of Brand Management Volume 13 (2005) ; 2005 ; 13 >
       au < exists ; exists ; 2006 ; Journal of Brand Management Volume 13 (2006) ; 2006 ; 13 >
       au < exists ; exists ; 2006 ; Journal of Brand Management Volume 14 (2006) ; 2006 ; 14 >
       au < exists ; exists ; 2007 ; Journal of Brand Management Volume 14 (2007) ; 2007 ; 14 >
@@ -587,8 +587,8 @@
       au < exists ; exists ; 2011 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2011) ; 2011 ; 13 >
       au < crawling ; exists ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 13 (2012) ; 2012 ; 13 >
       au < crawling ; exists ; 2012 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2012) ; 2012 ; 14 >
-      au < manifest ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
-      au < manifest ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
+      au < crawling ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 14 (2013) ; 2013 ; 14 >
+      au < crawling ; exists ; 2013 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2013) ; 2013 ; 15 >
       au < expected ; exists ; 2014 ; Journal of Direct, Data and Digital Marketing Practice Volume 15 (2014) ; 2014 ; 15 >
 
     }
@@ -935,7 +935,7 @@
       au < manifest ; exists ; 2010 ; postmedieval Volume 1 ; 2010 ; 1 >
       au < exists ; exists ; 2011 ; postmedieval Volume 2 ; 2011 ; 2 >
       au < manifest ; exists ; 2012 ; postmedieval Volume 3 ; 2012 ; 3 >
-      au < manifest ; exists ; 2013 ; postmedieval Volume 4 ; 2013 ; 4 >
+      au < crawling ; exists ; 2013 ; postmedieval Volume 4 ; 2013 ; 4 >
       au < expected ; exists ; 2014 ; postmedieval Volume 5 ; 2014 ; 5 >
 
     }
