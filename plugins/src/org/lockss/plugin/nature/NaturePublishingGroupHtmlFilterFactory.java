@@ -1,10 +1,10 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.16 2013-06-20 16:19:11 alexandraohlson Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.17 2013-12-03 00:33:45 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,21 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.nature;
 
-import java.io.InputStream;
-import java.io.Reader;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
+import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.*;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.*;
 
 /**
  * <p>Normalizes HTML pages from Nature Publishing Group journals.</p>
@@ -54,76 +51,132 @@ import org.lockss.util.ReaderInputStream;
  */
 public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
 
+  private static final Logger log = Logger.getLogger(NaturePublishingGroupHtmlFilterFactory.class);
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Advertising
-        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard"),
-        // Advertising
-        HtmlNodeFilters.tagWithAttribute("div", "class", "ad-vert"),
-        // Advertising
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ad-rh "),
-        // Advertising
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ad "),
-        // Contains the institution name
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-nav"),
-        // User-submitted comments
-        HtmlNodeFilters.tagWithAttribute("div", "id", "comments "),
-        // User-submitted comments
-        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^comments "),
-        // User-submitted comments
-        HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
-        // Liable to change (navigational elements, links to other journals, etc.)
-        HtmlNodeFilters.tagWithAttribute("div", "id", "journalnav"),
-        // Advertising, jobs ticker, news ticker, etc.
-        HtmlNodeFilters.tagWithAttribute("div", "id", "extranav"),
-        // Contains the current year
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-copyright"),
-        // Suggested similar pages
-        HtmlNodeFilters.tagWithAttribute("div", "id", "more-like-this"),
-        // Suggested other articles
-        HtmlNodeFilters.tagWithAttribute("div", "id", "related-links"),
-        // Suggested other articles
-        HtmlNodeFilters.tagWithAttribute("div", "id", "news-carousel"),
-        // Older table layout: contains the institution name
-        HtmlNodeFilters.tagWithAttribute("div", "class", "logon"),
-        // Older table layout: jobs ticket
-        HtmlNodeFilters.tagWithAttribute("div", "id", "natjob"),
-        // Older table layout: Nature Open Innovation Challenge ticker
-        HtmlNodeFilters.tagWithAttribute("div", "id", "natpav"),
-        // Variable scripts 
+        /*
+         * Broad area filtering
+         */
+        // Document header
+        new TagNameFilter("head"),
+        // Scripting
         new TagNameFilter("script"),
-        // Variable scripts 
         new TagNameFilter("noscript"),
+        // Header
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "constrain-header"),
+        // Right column (advertising, jobs ticker, news ticker...)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "extranav"),
+        // Footer
+        HtmlNodeFilters.tagWithAttribute("div", "id", "constrain-footer"),
+        
+        /*
+         * Now covered by broad area filtering
+         */
+        // Formerly on its own for the document header
+        HtmlNodeFilters.tagWithAttribute("meta", "name", "WT.site_id"), // (old)
+        // Formerly on its own for the header
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"), // (old name)
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login-nav"), // (old)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "logon"), // (old)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumbs"), // Breadcrumbs
+        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"), // Breadcrumbs (old name)
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "drop-menu"), // Drop-down menu
+        // Formerly on its own for the right column
+        HtmlNodeFilters.tagWithAttribute("div", "id", "quick-nav"), // Journal navigation
+        HtmlNodeFilters.tagWithAttribute("div", "id", "journalnav"), // Journal navigation (old name)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "nature-jobs-events-box"), // Jobs and events ticker
+        HtmlNodeFilters.tagWithAttribute("div", "id", "natjob"), // Jobs ticker (old name)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-top-content"), // Related and most read articles
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related-links"), // Related articles (old name)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "open-innovation-box"), // Open Innovation Pavilion        
+        HtmlNodeFilters.tagWithAttribute("div", "id", "natpav"), // Open Innovation Challenge ticker (old name)        
+        HtmlNodeFilters.tagWithAttribute("div", "id", "more-like-this"), // (old)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news-carousel"), // (old)
+        // Formerly on its own for the footer
+        HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-copyright"), // (old)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer-links"), // (old)
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "footer-links"), // (old)
+        // Advertising (various)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "ad-vert"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ad-rh "),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^ad "),
+        
+        /*
+         * Main article section
+         */
+        HtmlNodeFilters.tagWithAttribute("div", "id", "comments "),
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^comments "), // (old)
+        HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
+        
+        /*
+         * Other
+         */
+        // HTML comments (FIXME 1.64)
+        new NodeFilter() {
+          public boolean accept(org.htmlparser.Node node) {
+            return (node instanceof Remark);
+          };
+        },
+        // Slightly changed search form components
+        new TagNameFilter("input"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/search/executeSearch"),
         // ?
         HtmlNodeFilters.tagWithAttribute("div", "class", "baseline-wrapper"),
-        // Variability unknown; institution-dependent or time-dependent
-        HtmlNodeFilters.tagWithAttribute("meta", "name", "WT.site_id"),
-        // breadcrumb horiz menu at top varies when current issue becomes archived version
-        HtmlNodeFilters.tagWithAttribute("div", "id", "breadcrumb"),
-        // just remove the header section of the html file... addition of links to stylesheets
-        // addition of new meta tags, etc. 
-        new TagNameFilter("head"),
-        // adding words to footer boilerplate and we don't need it
-        HtmlNodeFilters.tagWithAttribute("div", "class", "footer"),
-        // global message shows up on pages - in this case it was a request to fill out a survey
-        //<div class=\"global-message minimised d20110601global no-image\">
+        // global message on pages - e.g. request to fill out a survey
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^global-message"),
-        
-        
     };
-    InputStream filtered =  new HtmlFilterInputStream(in, 
-        encoding, 
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     
-    Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(   
-            new TagPair("<!--", "-->")
-            ));   
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                String tagName = tag.getTagName().toLowerCase();
+                switch (tagName.charAt(0)) {
+                  case 'b': {
+                    // <body>
+                    if ("body".equals(tagName)) {
+                      // 'class' attribute from 'small-screen' to 'www-nature-com correspondence' (etc.)
+                      tag.removeAttribute("class");
+                    }
+                  } break;
+                  case 'd': {
+                    // <div>
+                    if ("div".equals(tagName) && tag.getAttribute("class") != null) {
+                      // Some 'class' attributes with unexpanded '${sectionClass}' (etc.)
+                      tag.removeAttribute("class");
+                    }
+                  } break;
+                }
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
+    };
+    
+    InputStream filtered =  new HtmlFilterInputStream(in, 
+                                                      encoding,
+                                                      new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                                                                xform));
+    
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filtered, encoding)));
   }
 
 }
