@@ -1,10 +1,10 @@
 /*
- * $Id: ContentParser.java,v 1.7 2006-12-09 07:09:01 tlipkis Exp $
+ * $Id: ContentParser.java,v 1.8 2013-12-03 00:47:58 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,18 +37,27 @@ import java.io.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit;
 
+/**
+ * @deprecated
+ */
+@Deprecated
 public interface ContentParser {
+
   /**
    * Parse reader for urls and call cb.foundUrl on each found one
    * @param au TODO
+   * @deprecated
    */
+  @Deprecated
   public void parseForUrls(Reader reader, String srcUrl,
 			   ArchivalUnit au, ContentParser.FoundUrlCallback cb)
       throws IOException, PluginException;
 
   /**
    * Callback for a ContentParser to call each time it finds a url
+   * @deprecated
    */
+  @Deprecated
   public static interface FoundUrlCallback {
     public void foundUrl(String url);
   }

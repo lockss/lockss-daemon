@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.97 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.98 2013-12-03 00:47:58 thib_gc Exp $
  */
 
 /*
@@ -123,7 +123,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
    * child, parent-overrides, parent) wins.  */
   public static final String SUFFIX_OVERRIDE = "_override";
 
-  public static final String SUFFIX_PARSER = "_parser";
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
     "_link_extractor_factory";
   public static final String SUFFIX_FILTER_RULE = "_filter";
