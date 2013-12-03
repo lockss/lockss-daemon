@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.10 2011-09-14 05:03:07 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.11 2013-12-03 21:28:34 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,9 +40,6 @@ import org.htmlparser.util.*;
 
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.plugin.*;
-import org.lockss.daemon.*;
-import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil;
 
 public class TestHtmlNodeFilters extends LockssTestCase {
@@ -178,6 +175,20 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     NodeList nl = parse("foo<p class=\"cls\"/>bar");
     nl = nl.extractAllNodesThatMatch(filt);
     assertEquals(0, nl.size());
+  }
+
+  public void testComment() throws Exception {
+    NodeFilter filt = HtmlNodeFilters.comment();
+    NodeList nl = parse("foo<b>bar baz qux <!-- comment1 -->");
+    nl = parse("foo<b>bar<!-- comment -->baz qux<!-- \n multi \n line \n comment \n -->fred garply");
+    nl = nl.extractAllNodesThatMatch(filt);
+    assertEquals("Should have two elements: " + nl, 2, nl.size());
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof org.htmlparser.nodes.RemarkNode);
+    assertEquals(" comment ", node.getText());
+    node = nl.elementAt(1);
+    assertTrue(node instanceof org.htmlparser.nodes.RemarkNode);
+    assertEquals(" \n multi \n line \n comment \n ", node.getText());
   }
 
   public void testCommentWithString() throws Exception {
