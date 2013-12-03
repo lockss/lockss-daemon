@@ -1,0 +1,50 @@
+diff -Naur ../../oaiharvester2-0.1.12/harvester2-0.1.12/src/ORG/oclc/oai/harvester2/verb/HarvesterVerb.java src/ORG/oclc/oai/harvester2/verb/HarvesterVerb.java
+--- ../../oaiharvester2-0.1.12/harvester2-0.1.12/src/ORG/oclc/oai/harvester2/verb/HarvesterVerb.java	2008-05-20 13:00:26.000000000 -0700
++++ src/ORG/oclc/oai/harvester2/verb/HarvesterVerb.java	2013-08-05 16:08:25.033069699 -0700
+@@ -73,20 +73,24 @@
+     private Document doc = null;
+     private String schemaLocation = null;
+     private String requestURL = null;
+-    private static HashMap builderMap = new HashMap();
++//    private static HashMap builderMap = new HashMap();
+     private static Element namespaceElement = null;
+     private static DocumentBuilderFactory factory = null;
+     private static TransformerFactory xformFactory = TransformerFactory.newInstance();
+     
+     static {
++      setup();
++    }
++    
++    private static synchronized void setup() {
+     	try {
+ 	        /* Load DOM Document */
+ 	        factory = DocumentBuilderFactory
+ 	        .newInstance();
+ 	        factory.setNamespaceAware(true);
+-	        Thread t = Thread.currentThread();
++//	        Thread t = Thread.currentThread();
+ 	        DocumentBuilder builder = factory.newDocumentBuilder();
+-	        builderMap.put(t, builder);
++//	        builderMap.put(t, builder);
+ 	        
+ 	        DOMImplementation impl = builder.getDOMImplementation();
+ 	        Document namespaceHolder = impl.createDocument(
+@@ -251,12 +255,12 @@
+         
+         InputSource data = new InputSource(in);
+         
+-        Thread t = Thread.currentThread();
+-        DocumentBuilder builder = (DocumentBuilder) builderMap.get(t);
+-        if (builder == null) {
+-            builder = factory.newDocumentBuilder();
+-            builderMap.put(t, builder);
+-        }
++//        Thread t = Thread.currentThread();
++        DocumentBuilder builder = factory.newDocumentBuilder();
++//        if (builder == null) {
++//            builder = factory.newDocumentBuilder();
++//            builderMap.put(t, builder);
++//        }
+         doc = builder.parse(data);
+         
+         StringTokenizer tokenizer = new StringTokenizer(
