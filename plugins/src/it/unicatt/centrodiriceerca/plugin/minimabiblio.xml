@@ -1,0 +1,62 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Second Base URL</displayName>
+        <description>Use if AU spans two hosts</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;CRELEB - Minima bibliographica&quot;</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sCRELEB-MinimaBibl/index.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>CRELEBMinimaBiblio</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>Manifest Page: http://www4.unicatt.it/LOCKSS/CRELEB-MinimaBibl/index.html
+Crawling da http://centridiricerca.unicatt.it/creleb_173.html</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>it.unicatt.centrodiriceerca.plugin.minimabiblio</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sCRELEB-MinimaBibl/index.html&quot;, base_url</string>
+      <string>1,&quot;$&quot;</string>
+    </list>
+  </entry>
+</map>

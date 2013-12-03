@@ -1,0 +1,73 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url2</key>
+        <displayName>Second Base URL</displayName>
+        <description>Use if AU spans two hosts</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;MULINO - Sociologica&quot;</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s%s/ManifestPage.html&quot;, base_url, journal_issn</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>MULINO - Sociologica</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>MULINO - Sociologica
+Check manifest page http://www.mulino.it/rivisteweb/lockss/1971-8853/ManifestPage.html
+Crawler dalla URL http://www.mulino.it/enabu/rivisteweb/issues?journal=1971-8853</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>it.mulino.plugin.sociologica</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^%sissues\?journal=%s&quot;, base_url2, journal_issn</string>
+      <string>1,&quot;%s%s/ManifestPage.html&quot;, base_url, journal_issn</string>
+      <string>2,&quot;%sjournals*&quot;, base_url2</string>
+      <string>1,&quot;s*$&quot;, base_url2</string>
+    </list>
+  </entry>
+</map>

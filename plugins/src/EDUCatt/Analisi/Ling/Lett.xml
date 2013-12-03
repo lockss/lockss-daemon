@@ -1,0 +1,59 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;EDUCatt - Analisi linguistica e letteraria&quot;</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sindex.asp&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>EDUCatt - Analisi linguistica e letteraria</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>EDUCatt - Analisi linguistica e letteraria.
+Check manifest page http://www.educatt.it/libri/all/index.asp
+Crawler dalla URL http://www.educatt.it/libri/all/ALL_Fascicoli.asp
+ e dalla URL  http://www.educatt.it/libri/all/ALLPDF/</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>EDUCatt.Analisi.Ling.Lett</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sindex\.asp&quot;, base_url</string>
+      <string>1,&quot;^http://static\.unicatt\.it/files/css/.*&quot;</string>
+      <string>1,&quot;^http://www\.educatt\.it/libri/all/.*&quot;</string>
+      <string>1,&quot;%sALL_.*\.asp&quot;, base_url</string>
+      <string>1,&quot;%sALLPDF/[0-9]+.*\.pdf&quot;, base_url</string>
+      <string>1,&quot;%s$&quot;, base_url</string>
+    </list>
+  </entry>
+</map>
