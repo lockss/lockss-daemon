@@ -3,7 +3,7 @@
   publisher <
     name = Figshare ;
     info[contract] = 2012 ;
-    info[tester] = 0
+    info[tester] = 8
   >
       plugin = org.lockss.plugin.figshare.ClockssFigsharePlugin
       param[base_url] = http://www.figshare.com/
