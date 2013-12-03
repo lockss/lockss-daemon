@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.21 2012-12-29 04:04:25 pgust Exp $
+ * $Id: HtmlNodeFilters.java,v 1.22 2013-12-03 21:02:03 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +50,8 @@ import org.lockss.servlet.ServletUtil;
  * {@link org.htmlparser.filters}
  */
 public class HtmlNodeFilters {
-  static Logger log = Logger.getLogger("HtmlNodeFilters");
+
+  private static Logger log = Logger.getLogger(HtmlNodeFilters.class);
 
   /** No instances */
   private HtmlNodeFilters() {
@@ -170,6 +171,23 @@ public class HtmlNodeFilters {
 			 new CompositeRegexFilter(regex, ignoreCase));
   }
 
+  /**
+   * <p>
+   * A node filter that matches any HTML comment.
+   * </p>
+   * 
+   * @return A node filter that matches HTML comment nodes.
+   * @since 1.64
+   */
+  public static NodeFilter comment() {
+    return new NodeFilter() {
+      @Override
+      public boolean accept(Node node) {
+        return (node instanceof Remark);
+      }
+    };
+  }
+  
   /**
    * Creates a NodeFilter that accepts comment nodes containing the
    * specified string.  The match is case sensitive.
