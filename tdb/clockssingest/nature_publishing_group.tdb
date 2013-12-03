@@ -108,9 +108,9 @@
     au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 20 ; 0 ; 20 >
     au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 21 ; 0 ; 21 >
     au < doesNotExist ; doesNotExist ; 0 ; American Journal of Hypertension Volume 22 ; 0 ; 22 >
-    au < down ; crawling ; 2010 ; American Journal of Hypertension Volume 23 ; 2010 ; 23 >
-    au < down ; crawling ; 2011 ; American Journal of Hypertension Volume 24 ; 2011 ; 24 >
-    au < down ; crawling ; 2012 ; American Journal of Hypertension Volume 25 ; 2012 ; 25 >
+    au < superseded ; crawling ; 2010 ; American Journal of Hypertension Volume 23 [superseded] ; 2010 ; 23 >
+    au < superseded ; crawling ; 2011 ; American Journal of Hypertension Volume 24 [superseded] ; 2011 ; 24 >
+    au < superseded ; crawling ; 2012 ; American Journal of Hypertension Volume 25 [superseded] ; 2012 ; 25 >
 
   }
 
