@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.17 2013-12-03 00:33:45 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.18 2013-12-03 21:05:15 thib_gc Exp $
  */
 
 /*
@@ -110,6 +110,15 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         /*
          * Main article section
          */
+        // Toolbar
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^top-links"),
+        // Casing of each section's navigation links changed
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^section-nav"),
+        // Internal structure of boxed figures changed
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "^bx[0-9]+"),
+        // Tweaks in each reference's links
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "has-ref-links"),
+        // User-submitted comments
         HtmlNodeFilters.tagWithAttribute("div", "id", "comments "),
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "^comments "), // (old)
         HtmlNodeFilters.tagWithText("p", "There are currently no comments."),
@@ -123,6 +132,8 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
             return (node instanceof Remark);
           };
         },
+        // Modernized markup of images, significant changes
+        new TagNameFilter("img"),
         // Slightly changed search form components
         new TagNameFilter("input"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/search/executeSearch"),
