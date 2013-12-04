@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.12 2013-11-13 21:01:25 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.13 2013-12-04 01:02:20 thib_gc Exp $
  */
 
 /*
@@ -397,14 +397,6 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals(brandingHtmlHashFiltered, StringUtil.fromInputStream(actIn));
     }
 
-    public void testRssHtmlHashFiltering() throws Exception {
-      InputStream actIn = 
-          fact.createFilteredInputStream(mau,
-                                         new StringInputStream(rssHtmlHash),
-                                         Constants.DEFAULT_ENCODING);
-      assertEquals(rssHtmlHashFiltered, StringUtil.fromInputStream(actIn));
-    }
-
     public void testRssLinkHtmlHashFiltering() throws Exception {
       InputStream actIn =
           fact.createFilteredInputStream(mau,
@@ -461,17 +453,6 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
       assertEquals("",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
                                                                              new StringInputStream("<a href=\"http://www.tandfonline.com\">" + rand() + "</a>"),
-                                                                             Constants.DEFAULT_ENCODING)));
-    }
-    
-    public void testLinkToStyleSheets() throws Exception {
-      assertEquals("",
-                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-                                                                             new StringInputStream("<link rel=\"stylesheet\" type=\"text/css\" media=\"screen, projection\" href=\"/cssJawr/1107879557/style.css\" />"),
-                                                                             Constants.DEFAULT_ENCODING)));
-      assertEquals("",
-                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-                                                                             new StringInputStream("<link href=\"/templates/jsp/css/grids-min.css\" rel=\"stylesheet\" type=\"text/css\" />"),
                                                                              Constants.DEFAULT_ENCODING)));
     }
     
@@ -654,13 +635,6 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                                                              Constants.DEFAULT_ENCODING)));
     }
     
-    public void testTitle() throws Exception {
-      assertEquals("<head></head>",
-                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-                                                                             new StringInputStream("<head><title>" + rand() + "</title></head>"),
-                                                                             Constants.DEFAULT_ENCODING)));
-    }
-    
     public void testImgClassCover() throws Exception {
       assertEquals("<p></p>",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
@@ -689,6 +663,20 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
           StringUtil.fromInputStream(fact.createFilteredInputStream(null, 
                   new StringInputStream(secondaryHtml),
                   Constants.DEFAULT_ENCODING)));
+    }
+    
+    public void testHead() throws Exception {
+      assertEquals("<html></html>",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<html>"
+                                                                                 + "<head>"
+                                                                                 + "<title>" + rand() + "</title>"
+                                                                                 + "<link type=\"application/rss+xml\" rel=\"hello\" href=\"world\"/>"
+                                                                                 + "<link rel=\"stylesheet\" type=\"text/css\" media=\"screen, projection\" href=\"/cssJawr/1107879557/style.css\" />"
+                                                                                 + "</head>"
+                                                                                 + "</html>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      
     }
   
   }
@@ -725,7 +713,7 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
     assertEquals(moduleHtmlFiltered, StringUtil.fromInputStream(actIn));
   }
   
-  public static String rand() {
+  protected static String rand() {
     return RandomStringUtils.randomAlphabetic(30);
   }
   

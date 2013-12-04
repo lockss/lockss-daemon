@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.14 2013-11-28 00:10:58 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.15 2013-12-04 01:02:20 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.taylorandfrancis;
 
 import java.io.*;
 
+import org.apache.commons.compress.utils.IOUtils;
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.util.*;
@@ -72,11 +73,11 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         new TagNameFilter("script"),
         // Can change over time
         new TagNameFilter("style"),
-        // Went from Taylor &amp; Francis to Taylor & Francis
-        new TagNameFilter("title"),
         /*
          * Broad area filtering
          */
+        // Document header
+        new TagNameFilter("head"),
         // Header
         HtmlNodeFilters.tagWithAttribute("div", "id", "hd"),
         // EU cookie notification
@@ -94,6 +95,13 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "^secondarySubjects"),
         // Footer
         HtmlNodeFilters.tagWithAttribute("div", "id", "ft"),
+        // Comments (FIXME 1.64)
+        new NodeFilter() {
+          @Override
+          public boolean accept(Node node) {
+            return (node instanceof Remark);
+          }
+        },
         
         // Went from <..."/> to <..." />
         HtmlNodeFilters.tagWithAttribute("img", "class", "cover"),
@@ -101,15 +109,13 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         //top search area - can have addt'l words
         HtmlNodeFilters.tagWithAttribute("div", "class", "social clear"), // facebook/twitter etc 
         
-        // Google translate related stuff - RU 4642 (not on all browsers)
+        // Google translate related stuff
         HtmlNodeFilters.tagWithAttribute("div", "id", "google_translate_element"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "goog-gt-tt"),
         
         // what follows here may no longer be all needed due to the maximal filtering - but leave it in
         // Contains site-specific SFX markup
         HtmlNodeFilters.tagWithAttribute("a", "class", "sfxLink"),
-        // Contains a cookie or session ID
-        HtmlNodeFilters.tagWithAttribute("link", "type", "application/rss+xml"),
         // Contains a cookie or session ID
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "&feed=rss"),
         // Contains a variant phrase "Full access" or "Free access"
@@ -119,10 +125,6 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // These two equivalent links are found (this is not a regex)
         HtmlNodeFilters.tagWithAttribute("a", "href", "/"),
         HtmlNodeFilters.tagWithAttribute("a", "href", "http://www.tandfonline.com"),
-        // Spuriously versioned CSS URLs
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-        // Later addition of <link rel="meta" ...> tags
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "meta"),
         // These two are sometimes found in a temporary overlay
         // (also requires whitespace normalization to work)
         HtmlNodeFilters.tagWithAttribute("div", "id", "overlay"),
@@ -164,7 +166,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                      */
                     if ("a".equals(tagName)) {
                       // The anchor ID 'content' was renamed 'tandf_content'
-                      if (tag.getAttribute("href") != null && "#content".equals(tag.getAttribute("href"))) {
+                      if ("#content".equals(tag.getAttribute("href"))) {
                         tag.setAttribute("href", "#tandf_content");
                         return;
                       }
@@ -173,7 +175,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                       if (tag.getAttribute("target") != null) {
                         tag.removeAttribute("target");
                       }
-                      if (tag.getAttribute("class") != null && "ref".equals(tag.getAttribute("class"))) {
+                      if ("ref".equals(tag.getAttribute("class"))) {
                         tag.removeAttribute("class");
                       }
                       return;
@@ -190,7 +192,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                       }
                       // For a while, there were two <div> tags with 'id' set to 'content'
                       // Now clarified to 'journal_content' and 'tandf_content'
-                      else if (tag.getAttribute("id") != null && ("journal_content".equals(tag.getAttribute("id")) || "tandf_content".equals(tag.getAttribute("id")))) {
+                      else if ("journal_content".equals(tag.getAttribute("id")) || "tandf_content".equals(tag.getAttribute("id"))) {
                         tag.setAttribute("id", "content");
                         return;
                       }
@@ -206,21 +208,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                         tag.removeAttribute("id");
                       }
                       // Prevent the latter from causing spurious <.../> vs. <... />
-                      String src = tag.getAttribute("alt");
+                      String alt = tag.getAttribute("alt");
                       tag.removeAttribute("alt");
-                      tag.setAttribute("alt", src);
+                      tag.setAttribute("alt", alt);
                       return;
-                    }
-                  } break;
-                  case 'm': {
-                    /*
-                     * <meta>
-                     */
-                    if ("meta".equals(tagName)) {
-                      // Some dc.Creator tags evolved to have extraneous whitespace
-                      if (tag.getAttribute("name") != null && "dc.Creator".equals(tag.getAttribute("name")) && tag.getAttribute("content") != null) {
-                        tag.setAttribute("content", tag.getAttribute("content").trim());
-                      }
                     }
                   } break;
                   case 's': {
@@ -230,8 +221,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                     if ("span".equals(tagName)) {
                       if (tag.getAttribute("id") != null) {
                         tag.removeAttribute("id");
-                        return;
                       }
+                      return;
                     }
                   } break;
                   case 't': {
@@ -246,6 +237,21 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                       }
                       if (tag.getAttribute("xmlns:xsi") != null) {
                         tag.removeAttribute("xmlns:xsi");
+                      }
+                      return;
+                    }
+                    /*
+                     * <td>
+                     */
+                    if ("td".equals(tagName)) {
+                      // From <td valign="top">
+                      // to <td valign="top" class="lilabel">
+                      if ("top".equals(tag.getAttribute("valign"))) {
+                        if ("lilabel".equals(tag.getAttribute("class"))) {
+                          tag.removeAttribute("class");
+                        }
+                        tag.removeAttribute("valign");
+                        tag.setAttribute("valign", "top");
                       }
                       return;
                     }
@@ -277,9 +283,7 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
                                                       ListUtil.list(
         // Two alternate forms of citation links (no easy to characterize in the DOM)
         new TagPair("<strong>Citations:", "</strong>"),
-        new TagPair("<strong><a href=\"/doi/citedby/", "</strong>"),
-        // some comments contain an opaque hash or timestamp
-        new TagPair("<!--", "-->")
+        new TagPair("<strong><a href=\"/doi/citedby/", "</strong>")
     ));
     Reader stringFilter = tagFilter;
     // Wording change
@@ -293,4 +297,12 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 
+  public static void main(String[] args) throws Exception {
+    String file = "/tmp/HashCUSk3c";
+    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null,
+                                                                                       new FileInputStream(file),
+                                                                                       null),
+                 new FileOutputStream(file + ".out"));
+  }
+  
 }
