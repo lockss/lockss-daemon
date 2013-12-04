@@ -1,11 +1,16 @@
-<!--
-    Deprecated
-    See it.unicatt.plugin.mulino.sociologica
--->
 <map>
   <entry>
     <string>plugin_config_props</string>
     <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <type>9</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
         <key>base_url</key>
         <displayName>Base URL</displayName>
@@ -25,11 +30,11 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>base_url2</key>
-        <displayName>Second Base URL</displayName>
-        <description>Use if AU spans two hosts</description>
-        <type>3</type>
-        <size>40</size>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -37,11 +42,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;MULINO - Sociologica&quot;</string>
+    <string>&quot;MULINO - Sociologica - Anno: %d&quot;, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s%s/ManifestPage.html&quot;, base_url, journal_issn</string>
+    <string>&quot;%s/lockss/%s/ManifestPage.html&quot;, base_url, journal_issn</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -58,20 +63,24 @@
   <entry>
     <string>plugin_notes</string>
     <string>MULINO - Sociologica
-Check manifest page http://www.mulino.it/rivisteweb/lockss/1971-8853/ManifestPage.html
-Crawler dalla URL http://www.mulino.it/enabu/rivisteweb/issues?journal=1971-8853</string>
+ISSN: 1971-8853
+BASE_URL http://www.rivisteweb.it
+MANIFESTPAGE http://www.rivisteweb.it/lockss/1971-8853/ManifestPage.html
+
+</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>it.mulino.plugin.sociologica</string>
+    <string>it.unicatt.plugin.mulino.sociologica</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^%sissues\?journal=%s&quot;, base_url2, journal_issn</string>
-      <string>1,&quot;%s%s/ManifestPage.html&quot;, base_url, journal_issn</string>
-      <string>2,&quot;%sjournals*&quot;, base_url2</string>
-      <string>1,&quot;s*$&quot;, base_url2</string>
+      <string>1,&quot;%s/lockss/%s/ManifestPage\.html&quot;, base_url, journal_issn</string>
+      <string>1,&quot;%s/nav/issue/%s&quot;, base_url, issue_set</string>
+      <string>1,&quot;%s/nav/issn/%s&quot;, base_url, journal_issn</string>
+      <string>1,&quot;^%s/download/article/10\.2383/&quot;, base_url</string>
+      <string>2,&quot;^%s&quot;, base_url</string>
     </list>
   </entry>
 </map>
