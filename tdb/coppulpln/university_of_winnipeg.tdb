@@ -57,9 +57,9 @@
     param[journal_id] = cjprt
     implicit < status ; year ; name ; volume ; param[year] >
 
-    au < ready ; 2009 ; Canadian Journal of Practice-based Research in Theatre Volume 1 ; 1 ; 2009 >
-    au < ready ; 2010 ; Canadian Journal of Practice-based Research in Theatre Volume 2 ; 2 ; 2010 >
-    au < ready ; 2011 ; Canadian Journal of Practice-based Research in Theatre Volume 3 ; 3 ; 2011 >
+    au < releasing ; 2009 ; Canadian Journal of Practice-based Research in Theatre Volume 1 ; 1 ; 2009 >
+    au < releasing ; 2010 ; Canadian Journal of Practice-based Research in Theatre Volume 2 ; 2 ; 2010 >
+    au < releasing ; 2011 ; Canadian Journal of Practice-based Research in Theatre Volume 3 ; 3 ; 2011 >
     au < expected ; 2012 ; Canadian Journal of Practice-based Research in Theatre Volume 4 ; 4 ; 2012 >
 
   }
