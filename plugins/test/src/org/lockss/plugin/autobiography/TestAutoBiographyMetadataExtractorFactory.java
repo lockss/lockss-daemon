@@ -1,4 +1,8 @@
 /*
+ * $Id: TestAutoBiographyMetadataExtractorFactory.java,v 1.2 2013-12-04 23:03:40 thib_gc Exp $ 
+ */
+
+/*
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -42,7 +46,8 @@ import org.lockss.plugin.simulated.*;
  * http://www.springerlink.com/content/978-3-642-14308-3 
  */
 public class TestAutoBiographyMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestAutoBiographyMetadataExtractorFactory");
+  
+  private static Logger log = Logger.getLogger(TestAutoBiographyMetadataExtractorFactory.class);
 
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
   private ArchivalUnit hau;
