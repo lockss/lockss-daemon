@@ -1,5 +1,8 @@
 /*
+ * $Id: TestIngentaArticleIteratorFactory.java,v 1.3 2013-12-05 21:43:39 etenbrink Exp $
+ */
 
+/*
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -28,15 +31,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.ingenta;
 
-import java.io.*;
-import java.util.*;
 import java.util.regex.Pattern;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
-import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ingenta.TestIngentaHtmlMetadataExtractorFactory.MySimulatedContentGenerator;
 import org.lockss.plugin.simulated.*;
@@ -47,7 +46,7 @@ import org.lockss.plugin.simulated.*;
  * .ingentaconnect.com/content/maney/bjdd/2011/00000057/00000113/art00004
  */
 public class TestIngentaArticleIteratorFactory extends ArticleIteratorTestCase {
-  static Logger log = Logger.getLogger("TestIngentaArticleIteratorFactory");
+  static Logger log = Logger.getLogger(TestIngentaArticleIteratorFactory.class);
 
   // Simulated AU to generate content
   private SimulatedArchivalUnit sau;
