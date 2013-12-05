@@ -1,4 +1,8 @@
 /*
+ * $Id: TestIngentaHtmlMetadataExtractorFactory.java,v 1.6 2013-12-05 21:55:03 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -42,7 +46,7 @@ import org.lockss.plugin.simulated.*;
  * http://www.ingentaconnect.com/content/maney/bjdd/2011/00000057/00000113/art00004
  */
 public class TestIngentaHtmlMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestIngentaHtmlMetadataExtractor");
+  static Logger log = Logger.getLogger(TestIngentaHtmlMetadataExtractorFactory.class);
   
   //Simulated AU to generate content
   private SimulatedArchivalUnit sau; 

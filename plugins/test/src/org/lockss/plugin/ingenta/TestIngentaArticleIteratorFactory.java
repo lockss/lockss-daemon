@@ -1,8 +1,9 @@
 /*
- * $Id: TestIngentaArticleIteratorFactory.java,v 1.3 2013-12-05 21:43:39 etenbrink Exp $
+ * $Id: TestIngentaArticleIteratorFactory.java,v 1.4 2013-12-05 21:55:03 etenbrink Exp $
  */
 
 /*
+
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
