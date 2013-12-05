@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix2BooksSourceXmlMetadataExtractor.java,v 1.3 2013-11-25 18:46:08 alexandraohlson Exp $
+ * $Id: TestOnix2BooksSourceXmlMetadataExtractor.java,v 1.4 2013-12-05 19:53:42 alexandraohlson Exp $
  */
 /*
 
@@ -42,6 +42,8 @@ import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.definable.DefinableArchivalUnit;
+import org.lockss.plugin.definable.DefinablePlugin;
 
 
 public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
@@ -69,6 +71,13 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());
+    
+    /* must set up plugin to get helper name */
+    DefinablePlugin ap = new DefinablePlugin();
+    ap.initPlugin(getMockLockssDaemon(),
+        PLUGIN_NAME);
+    mau.setPlugin(ap);
+
   }
 
   public void tearDown() throws Exception {
@@ -84,7 +93,6 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("year", "2012");
-    conf.put("plugin_source_xml_metadata_extractor_helper", "org.lockss.plugin.clockss.onixbooks.Onix2LongXmlMetadataExtractorHelper");
     return conf;
   }
   

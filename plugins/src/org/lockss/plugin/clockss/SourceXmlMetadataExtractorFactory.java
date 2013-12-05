@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.1 2013-11-25 18:46:09 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.2 2013-12-05 19:53:43 alexandraohlson Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import java.util.Map.Entry;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
 
@@ -361,12 +362,14 @@ implements FileMetadataExtractorFactory {
      */
     private boolean setUpSchema(CachedUrl cu) {
       ArchivalUnit au = cu.getArchivalUnit();
-      Configuration config = au.getConfiguration();
-      
-      if (config == null) return false;
-      String helperName = config.get(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY);
-      if (helperName == null) return false;
 
+      TypedEntryMap auDefMap = AuUtil.getPluginDefinition(au);
+      String helperName = null;
+      if(auDefMap.containsKey(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY)){
+        helperName = auDefMap.getString(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY);
+      } else
+        return false;
+      
       Class helperClass;
       try {
         helperClass = Class.forName(helperName);
