@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.12 2013-12-05 21:31:00 etenbrink Exp $
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.13 2013-12-05 21:43:00 etenbrink Exp $
  */
 
 /*
@@ -189,7 +189,27 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
       assertEquals(AdvertisingBannerHtmlFiltered,StringUtil.fromInputStream(inA));
     
   }
-
+  
+  //test div class heading-macfix with explicit tests
+  private static final String HeadingMacfixHtml =
+          "<p>The chickens were decidedly cold.</p>" +
+            "<div class=\"heading-macfix\"> " +
+            "<span class=\"rust\"> 2" +
+            "</span> references have been identified for this article, " +
+            "of which <span class=\"rust\">2</span> have matches and can be" +
+            "accessed below </div>";
+          
+  private static final String HeadingMacfixHtmlFiltered =
+          "<p>The chickens were decidedly cold.</p>" ;
+  
+  public void testHeadingMacfix() throws Exception {
+      InputStream inA = fact.createFilteredInputStream(mau,
+          new StringInputStream(HeadingMacfixHtml),
+          Constants.DEFAULT_ENCODING);
+      
+      assertEquals(HeadingMacfixHtmlFiltered,StringUtil.fromInputStream(inA));
+  }
+  
     //test some straight html strings with explicit tests
     private static final String expireChecksumHtml =
         "<p>The chickens were decidedly cold.</p>" +
