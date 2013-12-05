@@ -1,5 +1,5 @@
 /*
- * $Id: ListAuFileTypes.java,v 1.1.2.2 2013-12-05 07:34:59 tlipkis Exp $
+ * $Id: ListAuFileTypes.java,v 1.1.2.3 2013-12-05 09:35:15 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class ListAuFileTypes extends LockssServlet {
   protected ArchivalUnit au;
   protected FitsReportFormat format = FitsReportFormat.DEFAULT;
 
-  static final String PREFIX = Configuration.PREFIX + "listFileTypes.";
+  static final String PREFIX = Configuration.PREFIX + "listAuFileTypes.";
 
   // ----------------------- LOCKSS PARAMS AND DEFAULTS -----------------------
   /** Enable in UI.  Daemon restart required when set to true,
