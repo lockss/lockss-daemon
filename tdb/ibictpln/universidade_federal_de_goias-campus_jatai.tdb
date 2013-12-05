@@ -63,10 +63,11 @@
       comment[publisher] = Universidade Federal de Goiás-Campus Jataí
       param[base_url] = http://revistas.jatai.ufg.br/
       param[journal_id] = matematica
+      comment[notReady] = no permission
 
-      au < testing ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
-      au < testing ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
-      au < testing ; 2013 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2013 >
+      au < notReady ; 2009 ; 1 ; Revista Eletrônica de Matemática Volume 1 ; 2009 >
+      au < notReady ; 2010 ; 2 ; Revista Eletrônica de Matemática Volume 2 ; 2010 >
+      au < notReady ; 2013 ; 3 ; Revista Eletrônica de Matemática Volume 3 ; 2013 >
 
   }
 
