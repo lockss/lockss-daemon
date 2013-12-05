@@ -31,7 +31,6 @@ package org.lockss.plugin.ingenta;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.test.*;
 
 /**
@@ -126,13 +125,15 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     // common filtered html results
     String filteredHtml =
         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"> "
-            + "<html lang=\"en\"> <head> <body> "
+            + "<html lang=\"en\"> <body> "
             + "</body> </html> ";
     
     // html for block tags
     String blockHtml =
       "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n"
-          + "<html lang=\"en\">\n<head>\n<body>\n"
+          + "<html lang=\"en\">\n<head>\n"
+          + "<meta name=\"DC.identifier\" content=\"id/art0001\"/>\n" 
+          + "</head> <body>\n"
           + "<%s %s=\"%s\">\n"
           + "chicken chicken chicken...\n"
           + "</%s>\n"
@@ -149,7 +150,8 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     // html for single tags
     String tagHtml =
         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n"
-            + "<html lang=\"en\">\n<head>\n<body>\n"
+            + "<html lang=\"en\">\n<head>\n<meta name=\"DC.identifier\" content=\"id/art0001\"/>\n"
+            + "</head>\n<body>\n"
             + "<%s %s=\"%s\">\n"
             + "</body>\n</html>\n\n\n";
 
@@ -172,18 +174,6 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
 	          "</div>";
 	        
   private static final String AdvertisingBannerHtmlFiltered =
-	        "<p>The chickens were decidedly cold.</p>" ;
-
-  //test span rust with explicit tests
-  private static final String HeadingMacfixHtml =
-	        "<p>The chickens were decidedly cold.</p>" +
-	          "<div class=\"heading-macfix\"> " +
-	          "<span class=\"rust\"> 2" +
-	          "</span> references have been identified for this article, " +
-	          "of which <span class=\"rust\">2</span> have matches and can be" +
-	          "accessed below </div>";
-	        
-  private static final String HeadingMacfixHtmlFiltered =
 	        "<p>The chickens were decidedly cold.</p>" ;
 
   public void testFilterAdvertising() throws Exception {
