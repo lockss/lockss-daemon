@@ -1,6 +1,8 @@
 #!/bin/sh
 
 TITLE_DBS=""
+PLN=clockssingest
+HEAP_ARG=-Xmx512m
 
 while true ; do
   case "$1" in
@@ -24,26 +26,32 @@ while true ; do
     "-titlepat" )
       TITLE_DBS="${TITLE_DBS} $2"
       shift; shift; continue;;
+    "-pln" )
+      PLN="$2"
+      shift; shift; continue;;
     "-p" )
       EXTRA_PROP_URLS="${EXTRA_PROP_URLS} $2"
       shift; shift; continue;;
-    "-1.4" )
-      if [ -z "$JAVA_14_HOME" ] ; then
-	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+    "-heap" )
+      HEAP_ARG="$2"
+      shift; shift; continue;;
+    "-1.6" )
+      if [ -z "$JAVA_16_HOME" ] ; then
+	echo "-1.6 option requires JAVA_16_HOME to point to 1.6 install dir"
 	exit 1;
       fi
-      JAVA_HOME="${JAVA_14_HOME}"
+      JAVA_HOME="${JAVA_16_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
-    "-1.5" )
-      if [ -z "$JAVA_15_HOME" ] ; then
-	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
+    "-1.7" )
+      if [ -z "$JAVA_17_HOME" ] ; then
+	echo "-1.7 option requires JAVA_17_HOME to point to 1.7 install dir"
 	exit 1;
       fi
-      JAVA_HOME="${JAVA_15_HOME}"
+      JAVA_HOME="${JAVA_17_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
@@ -60,10 +68,11 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-TDB_DIR=../tdbxml/clockssingest
+TDB_DIR=../tdbxml/${PLN}
 if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
-  TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
+  TITLE_DBS="`find ${TDB_DIR} -maxdepth 1 -name \*.xml | sort`"
 fi
+
 
 PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
 # NB leading space meaningful here
@@ -83,13 +92,12 @@ export CLASSPATH
 
 echo running at `date`
 #echo CLASSPATH=$CLASSPATH
-# for large caches, need to pass "-ms4m -mx64m" to java
-#java org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+
 if [ -z "$jdb" ]; then
- java -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
+ java ${HEAP_ARG} $args org.lockss.app.LockssDaemon ${PROP_ARGS} >>test.out 2>&1 &
  echo $! >dpid
  wait `cat dpid`
  echo stopped with status $? at `date`
 else
- jdb -mx512m $args org.lockss.app.LockssDaemon ${PROP_ARGS}
+ jdb ${HEAP_ARG} $args org.lockss.app.LockssDaemon ${PROP_ARGS}
 fi
