@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.25 2013-11-18 22:46:06 thib_gc Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.26 2013-12-05 21:24:30 etenbrink Exp $
  */ 
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
@@ -45,12 +46,14 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class IngentaJournalHtmlFilterFactory implements FilterFactory {
-	Logger log = Logger.getLogger("IngentaJournalHtmlFilterFactory");
+	Logger log = Logger.getLogger(IngentaJournalHtmlFilterFactory.class);
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // the meta tags (name="DC.subject") in head are not always in same order
+        new TagNameFilter("head"),
         // Filter out <div id="header">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // Filter out <div id="rightnavbar">...</div>
@@ -161,5 +164,4 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
   }
 
 }
-
 
