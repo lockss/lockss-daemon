@@ -1,5 +1,5 @@
 /*
- * $Id: ListAuFileTypes.java,v 1.1.2.1 2013-07-17 10:12:47 easyonthemayo Exp $
+ * $Id: ListAuFileTypes.java,v 1.1.2.2 2013-12-05 07:34:59 tlipkis Exp $
  */
 
 /*
@@ -190,8 +190,7 @@ public class ListAuFileTypes extends LockssServlet {
       printWriter.println(s);
       printWriter.flush();
     } catch (Exception e) {
-      log.debug("Problem printing to report: "+e);
-      e.printStackTrace();
+      log.debug("Problem printing to report", e);
     }
   }
 
@@ -226,11 +225,9 @@ public class ListAuFileTypes extends LockssServlet {
         // Print the output
         printToReport(format.formatRecord(new FitsRecord(cachedUrl, fitsOut)));
       } catch (FitsException e) {
-        log.warning("FITS analysis error: "+e);
-        e.printStackTrace();
+        log.warning("FITS analysis error", e);
       } catch (IOException e) {
-        log.warning("Stream could not be written to file: "+e);
-        e.printStackTrace();
+        log.warning("Stream could not be written to file", e);
       }
     }
     printToReport(format.reportFooter());
