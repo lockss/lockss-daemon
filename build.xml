@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.346.2.1 2013-07-17 10:12:38 easyonthemayo Exp $
+ $Id: build.xml,v 1.346.2.2 2013-12-05 07:32:04 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -514,6 +514,7 @@ Args:
     <pathelement path="${heritrix-fastutil.jar}" />
     <pathelement path="${heritrix-guava.jar}" />
     <pathelement path="${commons.beanutils.jar}" />
+    <pathelement path="${commons.cli.jar}" />
     <!-- Jars for I18N -->
     <pathelement path="${gettext.commons.jar}" />
 	<!-- Needed by web services -->
@@ -597,7 +598,6 @@ Args:
     <pathelement path="${lockss.test.jar}" />
     <path refid="compile.classpath" />
     <pathelement path="${jdk.tools.jar}" />
-    <pathelement path="${commons.cli.jar}" />
     <pathelement path="${javacsv.jar}" />
   </path>
 
@@ -1476,8 +1476,16 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <!-- copy jars on run.classpath to jardir -->
     <pathtofileset dir="" pathrefid="prod.run.classpath"
       name="rpm.jars.set" ignorenonrelative="true" />
-    <copy todir="${rpm.jardir}" flatten="true" >
+    <copy todir="${rpm.jardir}" >
      <fileset refid="rpm.jars.set" />
+     <mapper type="glob" from="lib/*" to="*"/>
+    </copy>
+    <!-- copy fits config from lib/fits/{xml,tools} to jardir -->
+    <copy todir="${rpm.jardir}/fits" >
+     <fileset dir="${lib}/fits">
+       <include name="xml/**/*"/>
+       <include name="tools/**/*"/>
+     </fileset>
     </copy>
     <delete file="${rpm.root}/etc/init.d/lockss.solaris" quiet="true" />
     <delete file="${rpm.root}/etc/lockss/upgrade-solaris" quiet="true" />
