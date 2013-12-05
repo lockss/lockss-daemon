@@ -243,6 +243,16 @@
 		<value>org.lockss.plugin.sjdm.JudgmentAndDecisionMakingPlugin</value>
 		<value>org.lockss.plugin.metapress.MetaPressPlugin</value>
 		<value>org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin</value>
+		<value>org.lockss.plugin.metapress.ClockssMetaPressPlugin</value>
+		<value>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin</value>
+		<value>org.lockss.plugin.mathematicalsciencespublishers.ClockssMathematicalSciencesPublishersPlugin</value>
+		<value>org.lockss.plugin.dryad.ClockssDryadPlugin</value>
+		<value>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin</value>
+		<value>org.lockss.plugin.atypon.aiaa.AIAAPlugin</value>
+		<value>org.lockss.plugin.igiglobal.IgiGlobalPlugin</value>
+		<value>org.lockss.plugin.autobiography.ClockssAutoBiographyPlugin</value>
+		<value>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPlugin</value>
+		<value>org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin</value>
       </list>
     </property>
 
