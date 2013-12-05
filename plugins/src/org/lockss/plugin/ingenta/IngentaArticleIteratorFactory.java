@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaArticleIteratorFactory.java,v 1.4 2013-04-01 00:42:54 tlipkis Exp $
+ * $Id: IngentaArticleIteratorFactory.java,v 1.5 2013-12-05 21:35:49 etenbrink Exp $
  */
 
 /*
@@ -42,14 +42,14 @@ import org.lockss.util.Logger;
 
 public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
     ArticleMetadataExtractorFactory {
-
+  
   protected static Logger log = Logger
-      .getLogger("IngentaArticleIteratorFactory");
-
+      .getLogger(IngentaArticleIteratorFactory.class);
+  
   protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", api_url, publisher_id, journal_id";
-
+  
   protected static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/art[0-9]{5}\\?crawler=true$\", api_url, publisher_id, journal_id, volume_name";
-
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
       MetadataTarget target) throws PluginException {
@@ -57,17 +57,17 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
         .setTarget(target).setRootTemplate(ROOT_TEMPLATE)
         .setPatternTemplate(PATTERN_TEMPLATE), target);
   }
-
+  
   protected static class IngentaArticleIterator extends SubTreeArticleIterator {
-
+    
     protected static Pattern PLAIN_PATTERN = Pattern
         .compile(
             "^(.*)content/([^/]+/[^/]+/[0-9]{4}/[^/]+/[^/]+/[^/]+)\\?crawler=true$",
             Pattern.CASE_INSENSITIVE);
-
+    
     protected String baseUrl;
     protected MetadataTarget target;
-
+    
     public IngentaArticleIterator(ArchivalUnit au,
         SubTreeArticleIterator.Spec spec, MetadataTarget target) {
       super(au, spec);
@@ -75,22 +75,22 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
           ConfigParamDescr.BASE_URL.getKey());
       this.target = target;
     }
-
+    
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
       log.debug3("Entry point: " + url);
-
+      
       Matcher mat = PLAIN_PATTERN.matcher(url);
       if (mat.find()) {
-       return processPlainFullTextCu(cu, mat);
+        return processPlainFullTextCu(cu, mat);
       }
-
+      
       log.warning("Mismatch between article iterator factory and article iterator: "
           + url);
       return null;
     }
-
+    
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
       CachedUrl plainCu = au.makeCachedUrl(htmlMat
           .replaceFirst("$1content/$2?crawler=true"));
@@ -99,7 +99,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
         AuUtil.safeRelease(plainCu);
         return null; // Defer to plain URL
       }
-
+      
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       guessFullTextPdf(af, htmlMat);
@@ -109,7 +109,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       }
       return af;
     }
-
+    
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
       CachedUrl plainCu = au.makeCachedUrl(pdfMat
           .replaceFirst("$1content/$2?crawler=true"));
@@ -118,7 +118,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
         AuUtil.safeRelease(plainCu);
         return null; // Defer to plain URL
       }
-
+      
       CachedUrl plainMetaCu = au.makeCachedUrl(pdfMat
           .replaceFirst("$1content/$2"));
       if (plainMetaCu != null && plainMetaCu.hasContent()) {
@@ -126,14 +126,14 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
         AuUtil.safeRelease(plainMetaCu);
         return null; // Defer to plain URL
       }
-
+      
       CachedUrl htmlCu = au.makeCachedUrl(pdfMat
           .replaceFirst("$1content/$2?crawler=true&mimetype=text/html"));
       if (htmlCu != null && htmlCu.hasContent()) {
         AuUtil.safeRelease(htmlCu);
         return null; // Defer to HTML URL
       }
-
+      
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
       if (spec.getTarget() != MetadataTarget.Article) {
