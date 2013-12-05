@@ -1,4 +1,8 @@
 /*
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.12 2013-12-05 21:31:00 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
