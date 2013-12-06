@@ -67,6 +67,8 @@ public class TestAIPJatsSourceArticleIteratorFactory
   extends ArticleIteratorTestCase {
   
   private SimulatedArchivalUnit sau; // simulated au to generate content
+//  private static final String PLUGIN_NAME =
+//    "org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin";
 	
   private static final String PLUGIN_NAME =
       "org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin";
@@ -127,7 +129,7 @@ public class TestAIPJatsSourceArticleIteratorFactory
     assertNotMatchesRE(pat,
         "http://www.example.com/2013/test_76_clockss_aip_2013-06-07_084326.zip"
         + "!/JAP/v111/i11/112601_1/Page_Renditions/online.pdfbad");
-    assertMatchesRE(pat,
+    assertNotMatchesRE(pat,
         "http://www.example.com/2013/test_76_clockss_aip_2013-06-07_084326.zip"
         + "!/JAP/v111/i11/112601_1/Page_Renditions/online.pdf");
     assertMatchesRE(pat, 
@@ -153,13 +155,13 @@ public class TestAIPJatsSourceArticleIteratorFactory
     String pat1 = "branch(\\d+)/(\\d+file)\\.xml";
     String rep1 = "/$1/Markup/$2.xml";
     PluginTestUtil.copyAu(sau, au, ".*\\.xml$", pat1, rep1);
-
+/*
     String pat2 = "branch(\\d+)/(\\d+file\\.pdf)";
     String rep2 = "/$1/Page_Renditions/online.pdf";
     PluginTestUtil.copyAu(sau, au, ".*\\.pdf$", pat2, rep2);
-
+*/
     int expXmlCount = 6;
-    int expPdfCount = 3;
+    int expPdfCount = 0;
     int xmlCount = 0;
     int pdfCount = 0;
 
@@ -195,8 +197,6 @@ public class TestAIPJatsSourceArticleIteratorFactory
     
     assertEquals(xmlCu, af.getFullTextCu());
     assertEquals(xmlCu, af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA));
-    assertEquals("http://www.example.com/1/Page_Renditions/online.pdf",
-        af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF));
   }
 
 }
