@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.2 2013-12-05 19:53:43 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.3 2013-12-06 17:56:23 aishizaki Exp $
  */
 
 /*
@@ -181,9 +181,9 @@ implements FileMetadataExtractorFactory {
     /* A key for the key value to combine when consolidating multiple records */
     String consolidationKey;
     /* A pattern to build up a filename for each AM record to check for existence*/
-    String filenamePrefix; // optional path or prefix to filename
-    ArrayList<String> filenameSuffixList; // could be possible type (epub, pdf)
-    String filenameKey; // a AM record item key if value part of filename
+    protected String filenamePrefix; // optional path or prefix to filename
+    protected ArrayList<String> filenameSuffixList; // could be possible type (epub, pdf)
+    protected String filenameKey; // a AM record item key if value part of filename
 
 
     /**
