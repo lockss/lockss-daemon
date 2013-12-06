@@ -35,7 +35,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>  
@@ -47,14 +47,14 @@
     <string>au_name</string>
     <string>"American Institute of Physics JATS Source Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
   </entry>
-    <entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/2013/test_76_clockss_aip_2013-06-07_084326.zip -->
-      <string>"^%s%d/.+\.zip$", base_url, year</string>
+      <string>"^%s%d/.+\.zip", base_url, year</string>
     </list>
   </entry>
-    <entry>
+  <entry>
     <string>plugin_archive_file_types</string>
     <string>standard</string>
   </entry>
@@ -67,11 +67,24 @@
     <string>org.lockss.plugin.americaninstituteofphysics.AIPJatsSourceArticleIteratorFactory</string>
   </entry>
   <entry>
+    <string>plugin_source_xml_metadata_extractor_helper</string>
+    <string>org.lockss.plugin.americaninstituteofphysics.AIPJatsSourceXmlMetadataExtractorHelper</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.americaninstituteofphysics.AIPJatsSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
       	<string>*</string>
-        <string>org.lockss.plugin.americaninstituteofphysics.AIPJatsSourceMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.americaninstituteofphysics.AIPJatsSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

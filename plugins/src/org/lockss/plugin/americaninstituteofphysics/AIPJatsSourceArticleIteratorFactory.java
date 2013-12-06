@@ -63,11 +63,13 @@ public class AIPJatsSourceArticleIteratorFactory
 
   private static Logger log = 
       Logger.getLogger(AIPJatsSourceArticleIteratorFactory.class);
-  
+ 
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-  private static final String PATTERN_TEMPLATE = 
+/*  private static final String PATTERN_TEMPLATE = 
       "\"%s%d/[^/]+\\.zip!/[A-Z]+/v[0-9]+/i[0-9]+/[^/]+/"
           + "(Page_Renditions|Markup)/[^/]+\\.(pdf|xml)$\", base_url, year";
+*/
+  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -97,7 +99,7 @@ public class AIPJatsSourceArticleIteratorFactory
     @Override
     protected ArticleFiles createArticleFiles(CachedUrl cu) {
       String url = cu.getUrl();
-      log.info("artile url: " + url);
+      log.debug3("article url: " + url);
       Matcher mat;
             
       mat = XML_PATTERN.matcher(url);
@@ -117,13 +119,15 @@ public class AIPJatsSourceArticleIteratorFactory
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
       
       log.debug3("target: " + spec.getTarget().getPurpose());
+      /*
       if(spec.getTarget() != MetadataTarget.Article()) {
 	guessPdf(af, mat);
       }
+      */
       
       return af;
     }
-    
+    /*
     private void guessPdf(ArticleFiles af, Matcher mat) {
       CachedUrl pdfCu = au.makeCachedUrl(
           mat.replaceFirst("/$1/Page_Renditions/online.pdf"));
@@ -132,6 +136,7 @@ public class AIPJatsSourceArticleIteratorFactory
         af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
       }
     }
+    */
     
   }
   
