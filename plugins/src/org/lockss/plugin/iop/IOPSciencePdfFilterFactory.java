@@ -1,5 +1,5 @@
 /*
- * $Id: IOPSciencePdfFilterFactory.java,v 1.1 2013-11-28 02:04:21 thib_gc Exp $
+ * $Id: IOPSciencePdfFilterFactory.java,v 1.2 2013-12-06 22:44:15 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.iop;
 
-import java.io.*;
-
-import org.apache.commons.compress.utils.IOUtils;
 import org.lockss.filter.pdf.*;
 import org.lockss.pdf.*;
 import org.lockss.plugin.*;
@@ -42,9 +39,10 @@ import org.lockss.plugin.*;
 /**
  * <p>
  * A synthetic front page was added to PDF files. Because the server-side
- * stamping process shuffles the object graph compared to the original file,
- * we have no choice but to use an extracting filter.
+ * stamping process shuffles the object graph compared to the original file, we
+ * have no choice but to use an extracting filter.
  * </p>
+ * 
  * @author Thib Guicherd-Callin
  */
 public class IOPSciencePdfFilterFactory extends ExtractingPdfFilterFactory {
@@ -78,11 +76,4 @@ public class IOPSciencePdfFilterFactory extends ExtractingPdfFilterFactory {
     }
   }
   
-  public static void main(String[] args) throws Exception {
-    IOUtils.copy(new IOPSciencePdfFilterFactory().createFilteredInputStream(null,
-                                                                            new FileInputStream("/tmp/HashCUSg4a"),
-                                                                            null),
-                 new FileOutputStream("/tmp/HashCUSg4a.out"));
-  }
-
 }
