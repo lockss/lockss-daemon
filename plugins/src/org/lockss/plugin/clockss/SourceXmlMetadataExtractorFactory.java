@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.3 2013-12-06 17:56:23 aishizaki Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.4 2013-12-06 19:32:15 alexandraohlson Exp $
  */
 
 /*
@@ -151,39 +151,19 @@ implements FileMetadataExtractorFactory {
   }
 
 
-/**
- * The generic class to handle metadata extraction for source content
- * that uses XML with a set schema for metadata.
- * The class gets its schema definition from an implemenation of a
- * SourceXmlMetadataExtractorHelper 
- * which must be provided and is defined in a plugin using the key
- * plugin_source_xml_metadata_extractor_helper
- * 
- * @author alexohlson
- *
- */
+  /**
+   * The generic class to handle metadata extraction for source content
+   * that uses XML with a set schema for metadata.
+   * The class gets its schema definition from an implemenation of a
+   * SourceXmlMetadataExtractorHelper 
+   * which must be provided and is defined in a plugin using the key
+   * plugin_source_xml_metadata_extractor_helper
+   * 
+   * @author alexohlson
+   *
+   */
   public static class SourceXmlMetadataExtractor 
   implements FileMetadataExtractor {
-
-    /*
-     * These values will get filled in in "extract" by calling on the 
-     * appropriate helper class.
-     * They are XML schema specific 
-     */
-    /* The 3 items needed to use XPathXmlMetadataParser */
-    Map<String,XPathValue> globalMetaMap;
-    Map<String,XPathValue> articleMetaMap;
-    String articleNode;
-    /* How to translate raw metadata to cooked value */
-    MultiValueMap cookMap;
-    /* A key to identify multiple records referring to same item, eg ISBN13 */
-    String uniqueIDKey;
-    /* A key for the key value to combine when consolidating multiple records */
-    String consolidationKey;
-    /* A pattern to build up a filename for each AM record to check for existence*/
-    protected String filenamePrefix; // optional path or prefix to filename
-    protected ArrayList<String> filenameSuffixList; // could be possible type (epub, pdf)
-    protected String filenameKey; // a AM record item key if value part of filename
 
 
     /**
@@ -203,21 +183,27 @@ implements FileMetadataExtractorFactory {
         Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<String,ArticleMetadata>();
 
         //log.setLevel("debug3");
-
+        SourceXmlMetadataExtractorHelper schemaHelper;
         // 1. figure out which XmlMetadataExtractorHelper class to use to get
         // the schema specific information
-        if (!setUpSchema(cu)) {
+        if ((schemaHelper = setUpSchema(cu)) == null) {
           log.debug3("Unable to set up XML schema. Cannot extract from XML");
           return;
-        }
+        }     
 
         // 2. Gather all the metadata in to a list of AM records
         List<ArticleMetadata> amList = 
-            new XPathXmlMetadataParser(globalMetaMap, articleNode, articleMetaMap).extractMetadata(target, cu);
+            new XPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), schemaHelper.getArticleNode(), schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
+
 
         // 3. Consolidate identical records based on uniqueIDKey
+        // and consolidate values of consolidationKey
+        String uniqueIDKey = schemaHelper.getUniqueIDKey(); 
+        if (uniqueIDKey == null) uniqueIDKey = ""; //cannot be null
+        String consolidationKey = schemaHelper.getConsolidationKey(); //can be null
+
         for ( ArticleMetadata oneAM : amList) {
-          updateRecordMap(uniqueRecordMap, oneAM);
+          updateRecordMap(uniqueIDKey, consolidationKey, uniqueRecordMap, oneAM);
         }
         if ( (uniqueRecordMap == null) || (uniqueRecordMap.isEmpty()) ) {
           log.debug3("After consolidation, no resulting records");
@@ -227,19 +213,13 @@ implements FileMetadataExtractorFactory {
         // 4. Cook & Emit all the records in the unique AM list after optional
         // check for file existence
         Iterator<Entry<String, ArticleMetadata>> it = uniqueRecordMap.entrySet().iterator();
-        Boolean doPreEmitCheck = ((filenamePrefix != null) || (filenameSuffixList != null) || (filenameKey != null));
+
         while (it.hasNext()) {
           ArticleMetadata nextAM = (ArticleMetadata)(it.next().getValue());
           // pre-emit check could be overridden by a child with different layout/naming
-          if (doPreEmitCheck) {
-            // check for each files existence before cook/emit
-            if (preEmitCheck(cu,nextAM)) {
-              nextAM.cook(cookMap);
-              emitter.emitMetadata(cu,nextAM);
-            }
-          } else {
-            // no check required - just cook/emit each record
-            nextAM.cook(cookMap);
+          // check for each files existence before cook/emit
+          if (preEmitCheck(schemaHelper, cu,nextAM)) {
+            nextAM.cook(schemaHelper.getCookMap());
             emitter.emitMetadata(cu,nextAM);
           }
         }
@@ -263,8 +243,11 @@ implements FileMetadataExtractorFactory {
      * @param uniqueRecordMap
      * @param nextAM
      */
-    protected void updateRecordMap(Map<String, ArticleMetadata> uniqueRecordMap,
+    protected void updateRecordMap(String uniqueIDKey, String consolidationKey,
+        Map<String, ArticleMetadata> uniqueRecordMap,
         ArticleMetadata nextAM) {
+
+
       //String formDetailKey = "DescriptiveDetail/ProductFormDetail";
       String nextID = nextAM.getRaw(uniqueIDKey); //will not be null
 
@@ -299,13 +282,14 @@ implements FileMetadataExtractorFactory {
      * @param thisAM
      * @return
      */
-    protected boolean preEmitCheck(CachedUrl cu, ArticleMetadata thisAM) {
+    protected boolean preEmitCheck(SourceXmlMetadataExtractorHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       ArchivalUnit B_au = cu.getArchivalUnit();
       CachedUrl fileCu;
 
 
-      log.debug3("in OnixBooks preEmitCheckcheck");
+      log.debug3("in SourceXmlMetadataExtractor preEmitCheck");
       /* create a filename (relative to the current directory) from the 
        * optional items: 
        * filenamePrefix + thisAM.getRaw(filenameKey) + filenameSuffix
@@ -323,6 +307,13 @@ implements FileMetadataExtractorFactory {
        *        suffix is {"_Bar.pdf", "_Bar.epub"}   
        *     
        */
+      String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
+      ArrayList<String> filenameSuffixList = schemaHelper.getFilenameSuffixList(); //can be null
+      String filenameKey = schemaHelper.getFilenameKey(); //can be null
+
+      // no pre-emit check required if values are all null, just return
+      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return false;
+
       String filename = 
           (filenamePrefix != null ? filenamePrefix : "") + 
           (filenameKey != null ? thisAM.getRaw(filenameKey) : "");
@@ -353,14 +344,14 @@ implements FileMetadataExtractorFactory {
         return false; //No files found that match this record
       }
     }
-     
+
     /* 
      * Use the helper class defined in the plugin to set up the necessary
      * information for extraction. If this doesn't happen sucessfully, no
      * metadata is emitted. 
      * Validate the return values where necessary.
      */
-    private boolean setUpSchema(CachedUrl cu) {
+    private SourceXmlMetadataExtractorHelper setUpSchema(CachedUrl cu) {
       ArchivalUnit au = cu.getArchivalUnit();
 
       TypedEntryMap auDefMap = AuUtil.getPluginDefinition(au);
@@ -368,15 +359,15 @@ implements FileMetadataExtractorFactory {
       if(auDefMap.containsKey(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY)){
         helperName = auDefMap.getString(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY);
       } else
-        return false;
-      
+        return null;
+
       Class helperClass;
       try {
         helperClass = Class.forName(helperName);
       } catch (ClassNotFoundException e) {
         log.error("Couldn't load xml definition helper " + helperName +
             ": " + e.toString());
-        return false;
+        return null;
       }
       SourceXmlMetadataExtractorHelper helper;
       try {
@@ -384,24 +375,10 @@ implements FileMetadataExtractorFactory {
       } catch (Exception e) {
         log.error("Couldn't instantiate xml definition helper " + helperName +
             ": " + e.toString());
-        return false;
+        return null;
       }
-      /* 
-       * Pick up all the schema specific information needed
-       * to extract, consolidate any duplicate records and do a file
-       * existence check
-       */
-      globalMetaMap = helper.getGlobalMetaMap(); //can be null
-      articleMetaMap = helper.getArticleMetaMap(); //can be null
-      articleNode = helper.getArticleNode(); //can be null
-      cookMap = helper.getCookMap(); //
-      uniqueIDKey = helper.getUniqueIDKey(); 
-      if (uniqueIDKey == null) uniqueIDKey = ""; //cannot be null
-      consolidationKey = helper.getConsolidationKey(); //can be null
-      filenamePrefix = helper.getFilenamePrefix(); //can be null
-      filenameSuffixList = helper.getFilenameSuffixList(); //can be null
-      filenameKey = helper.getFilenameKey(); //can be null
-      return true;
+
+      return helper;
     }
   }
 }

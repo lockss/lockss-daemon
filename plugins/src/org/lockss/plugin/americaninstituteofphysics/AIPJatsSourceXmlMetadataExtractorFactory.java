@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.1 2013-12-06 17:42:32 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.2 2013-12-06 19:32:15 alexandraohlson Exp $
  */
 
 /*
@@ -32,6 +32,8 @@
 
 package org.lockss.plugin.americaninstituteofphysics;
 
+import java.util.ArrayList;
+
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
@@ -41,6 +43,7 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
 
 
 public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
@@ -60,7 +63,8 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
   public static class AIPJatsSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
-    protected boolean preEmitCheck(CachedUrl cu, ArticleMetadata thisAM) {
+    protected boolean preEmitCheck(SourceXmlMetadataExtractorHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       String aipBase = null;
       ArchivalUnit B_au = cu.getArchivalUnit();
@@ -68,6 +72,13 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
 
       log.debug3("in AIPJats preEmitCheckcheck");
+      String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
+      ArrayList<String> filenameSuffixList = schemaHelper.getFilenameSuffixList(); //can be null
+      String filenameKey = schemaHelper.getFilenameKey(); //can be null
+
+      // no pre-emit check required if values are all null, just return
+      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return false;
+      
       /* AIPJats file structure has the xml at .../Markup/***.xml
        * and the pdf is always named .../Page_Renditions/online.pdf
        * so this pre-emit check has to check to make sure the pdf exists 
