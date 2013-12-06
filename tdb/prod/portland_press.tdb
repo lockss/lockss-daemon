@@ -60,6 +60,7 @@ comment[bj1] = no permission from publisher
     comment[notReady_V408_7] = http://www.biochemj.org/bj/408/0087/bj4080087t01.htm
     comment[notReady_V409] = http://www.biochemj.org/bj/409/0077/bj4090077add.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani1.htm, http://www.biochemj.org/bj/409/0001/bj4090001ani2.htm, http://www.biochemj.org/bj/409/0117/bj4090117t02.htm  
     comment[notReady_V410] = http://www.biochemj.org/bj/410/0071/bj4100071t02.htm, http://www.biochemj.org/bj/410/0187/bj4100187t01.htm
+    comment[notReady_V388] = 500 http://www.biochemj.org/bj/388/0123/bj3880123S02.htm?resolution=HIGH  
 
     au < exists ; 1906 ; Biochemical Journal Volume 1 ; 001 >
     au < released ; 1907 ; Biochemical Journal Volume 2 ; 002 >
@@ -448,7 +449,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2005 ; Biochemical Journal Volume 385 ; 385 >
     au < released ; 2005 ; Biochemical Journal Volume 386 ; 386 >
     au < released ; 2005 ; Biochemical Journal Volume 387 ; 387 >
-    au < testing ; 2005 ; Biochemical Journal Volume 388 ; 388 >
+    au < notReady ; 2005 ; Biochemical Journal Volume 388 ; 388 >
     au < released ; 2005 ; Biochemical Journal Volume 389 ; 389 >
     au < released ; 2005 ; Biochemical Journal Volume 390 ; 390 >
     au < released ; 2005 ; Biochemical Journal Volume 391 ; 391 >
