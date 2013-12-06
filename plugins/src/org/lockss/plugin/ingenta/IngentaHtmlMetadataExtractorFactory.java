@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.5 2013-05-10 00:11:40 alexandraohlson Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.6 2013-12-06 19:05:01 etenbrink Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.plugin.*;
 
 public class IngentaHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("IngentaHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(IngentaHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
@@ -55,13 +55,15 @@ public class IngentaHtmlMetadataExtractorFactory implements
   public static class IngentaHtmlMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
     
+    private static Pattern doiPattern = Pattern.compile("info:doi/(.*)");
+    private static Pattern issnPattern = Pattern.compile("urn:ISSN:(.*)");
     private static MultiMap tagMap = new MultiValueMap();
     static {
-   
+      
       // not used at the moment
       String splitMetaPattern = "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)"; 
-
-      //   <meta name="DC.creator" content="Karni, Nirit"/>
+      
+      //  <meta name="DC.creator" content="Karni, Nirit"/>
       //  <meta name="DC.creator" content="Reiter, Shunit"/>
       //  <meta name="DC.creator" content="Bryen, Diane Nelson"/>  
       tagMap.put("DC.creator", MetadataField.FIELD_AUTHOR);
@@ -76,46 +78,52 @@ public class IngentaHtmlMetadataExtractorFactory implements
       //  <meta name="DC.identifier" scheme="URI"
       //content="info:doi/10.1179/096979511798967106"/>
       tagMap.put("DC.identifier", new MetadataField(
-          MetadataField.FIELD_DOI, MetadataField.extract("info:doi/(.*)",1)));
+          MetadataField.FIELD_DOI, MetadataField.extract(doiPattern,1)));
       // <meta name="DCTERMS.isPartOf" scheme="URI" content="urn:ISSN:0969-7950"/>
-     tagMap.put("DCTERMS.isPartOf", new MetadataField(
-          MetadataField.FIELD_ISSN, MetadataField.extract("urn:ISSN:(.*)",1)));
-     // <meta name="DC.publisher" content="Manchester University Press">
-     tagMap.put("DC.publisher", MetadataField.FIELD_PUBLISHER);
-     
-     /* 
-      * Currently the extract using pattern will put an actual "null" in to the 
-      * value list for they stated key if the pattern doesn't match. 
-      * This will mean that the value cannot be later overwritten.  
-      * So for now, do this manually after cooking... 
-      */
-     /*
-     // <meta name="DC.bibliographicCitation" content="Visual Culture in Britain">
-     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-          ING_FIELD_JOURNAL_TITLE,
-          MetadataField.extract(splitMetaPattern,1)));
-      //<meta name="DCTERMS.bibliographicCitation" 
-      // content="The British Journal of Development
-      //   Disabilities, 57, 113, 123-132(10)"/>
-     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-         MetadataField.FIELD_VOLUME, 
-         MetadataField.extract(splitMetaPattern,2)));
-     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-         MetadataField.FIELD_ISSUE,
-         MetadataField.extract(splitMetaPattern,3)));
-     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-         MetadataField.FIELD_START_PAGE, 
-         MetadataField.extract(splitMetaPattern,4)));
-     tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
-         MetadataField.FIELD_END_PAGE, 
-         MetadataField.extract(splitMetaPattern,5))); */
-     tagMap.put("crawler.fulltextlink", MetadataField.FIELD_ACCESS_URL);
+      tagMap.put("DCTERMS.isPartOf", new MetadataField(
+          MetadataField.FIELD_ISSN, MetadataField.extract(issnPattern,1)));
+      // <meta name="DC.publisher" content="Manchester University Press">
+      tagMap.put("DC.publisher", MetadataField.FIELD_PUBLISHER);
+      
+      /* 
+       * Currently the extract using pattern will put an actual "null" in to the 
+       * value list for they stated key if the pattern doesn't match. 
+       * This will mean that the value cannot be later overwritten.  
+       * So for now, do this manually after cooking... 
+       */
+      /*
+      // <meta name="DC.bibliographicCitation" content="Visual Culture in Britain">
+      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+           ING_FIELD_JOURNAL_TITLE,
+           MetadataField.extract(splitMetaPattern,1)));
+       //<meta name="DCTERMS.bibliographicCitation" 
+       // content="The British Journal of Development
+       //   Disabilities, 57, 113, 123-132(10)"/>
+      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+          MetadataField.FIELD_VOLUME, 
+          MetadataField.extract(splitMetaPattern,2)));
+      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+          MetadataField.FIELD_ISSUE,
+          MetadataField.extract(splitMetaPattern,3)));
+      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+          MetadataField.FIELD_START_PAGE, 
+          MetadataField.extract(splitMetaPattern,4)));
+      tagMap.put("DCTERMS.bibliographicCitation", new MetadataField(
+          MetadataField.FIELD_END_PAGE, 
+          MetadataField.extract(splitMetaPattern,5))); */
+      tagMap.put("crawler.fulltextlink", MetadataField.FIELD_ACCESS_URL);
     }
-
+    
+    private static final Pattern fullPattern = Pattern.compile(
+        "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)", Pattern.CASE_INSENSITIVE);
+    // go for the first 3 item - check for numbers because of possible , in title
+    private static final Pattern noPagePattern = Pattern.compile(
+        "(.*)[,](.*)[,](.*)[,]", Pattern.CASE_INSENSITIVE);
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
-     
+      
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       
@@ -128,8 +136,6 @@ public class IngentaHtmlMetadataExtractorFactory implements
       if (raw_biblio != null && !(raw_biblio.isEmpty())) {
         Boolean hadAMatch = true;
         // <meta name=\"DCTERMS.bibliographicCitation\"
-        Pattern fullPattern = Pattern.compile("(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)", Pattern.CASE_INSENSITIVE);
-        Pattern noPagePattern = Pattern.compile("(.*)[,](.*)[,](.*)[,]", Pattern.CASE_INSENSITIVE); // go for the first 3 item - check for numbers because of possible , in title
         Matcher m = fullPattern.matcher(raw_biblio);
         // eg. content="The British Journal of Development Disabilities, 57, 113, 123-132(10)"/>
         if (!(m.find())) { 
@@ -153,9 +159,9 @@ public class IngentaHtmlMetadataExtractorFactory implements
           // we can't really guess - the title might have commas, just put the whole thing in....
           am.put(MetadataField.FIELD_JOURNAL_TITLE, raw_biblio);
         }
-      }     
+      }
       return am;
     }
   }
 }
- 
+
