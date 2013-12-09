@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.18 2013-08-30 17:43:18 alexandraohlson Exp $
+ * $Id: MetadataField.java,v 1.19 2013-12-09 18:35:59 pgust Exp $
  */
 
 /*
@@ -174,6 +174,31 @@ public class MetadataField {
   public static final MetadataField FIELD_PUBLISHER = new MetadataField(
       KEY_PUBLISHER, Cardinality.Single,publishervalid);
 
+  /** Publication is a stand-alone book. */
+  public static final String PUBLICATON_TYPE_BOOK = "book";
+  /** Publication is part of a book series. */
+  public static final String PUBLICATION_TYPE_BOOKSERIES = "bookSeries";
+  /** Publication is a journal. */
+  public static final String PUBLICATION_TYPE_JOURNAL = "journal";
+  
+  public static final String KEY_PUBLICATION_TYPE = "pubtype";
+  // You cannot put in an empty string or a null value for publication type
+  private static Validator pubtypevalid = new Validator() {
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize so that it is never set to null or to empty string
+      if( StringUtil.isNullString(val)) {
+        throw new MetadataException.ValidationException(
+            "Illegal publication type: empty string"); 
+      }
+      return val;
+    }
+  };
+
+  /** Publication type, e.g. "book", "bookSeries", "journal" */
+  public static final MetadataField FIELD_PUBLICATION_TYPE = new MetadataField(
+      KEY_PUBLICATION_TYPE, Cardinality.Single,pubtypevalid);
+
   public static final String KEY_VOLUME = "volume";
   public static final MetadataField FIELD_VOLUME = new MetadataField(
       KEY_VOLUME, Cardinality.Single);
@@ -201,21 +226,49 @@ public class MetadataField {
   public static final MetadataField FIELD_ARTICLE_TITLE = new MetadataField(
       KEY_ARTICLE_TITLE, Cardinality.Single);
 
-  public static final String KEY_JOURNAL_TITLE = "journal.title";
-  // You cannot put in an empty string or a null value for journal title
-  private static Validator jtitlevalid = new Validator() {
+  public static final String KEY_PUBLICATION_TITLE = "publication.title";
+  /** @deprecated use {@link KEY_PUBLICATION_TILE} instead */
+  @Deprecated
+  public static final String KEY_JOURNAL_TITLE = KEY_PUBLICATION_TITLE;
+
+  // You cannot put in an empty string or a null value for publication title
+  private static Validator pubtitlevalid = new Validator() {
     public String validate(ArticleMetadata am,MetadataField field,String val)
         throws MetadataException.ValidationException {
-      // normalize journal title so that it is never set to null or to empty string
+      // normalize publication title so that it is never set to null or to empty string
       if( (val == null) || val.isEmpty()) {
-        throw new MetadataException.ValidationException("Illegal title: empty string"); 
+        throw new MetadataException.ValidationException(
+            "Illegal publication title: empty string"); 
       }
       return val;
     }
   };
-  public static final MetadataField FIELD_JOURNAL_TITLE = new MetadataField(
-      KEY_JOURNAL_TITLE, Cardinality.Single, jtitlevalid);
+  public static final MetadataField FIELD_PUBLICATION_TITLE = new MetadataField(
+      KEY_PUBLICATION_TITLE, Cardinality.Single, pubtitlevalid);
+  /** @deprecated use {@link FIELD_PUBLICATION_TILE} instead */
+  @Deprecated
+  public static final MetadataField FIELD_JOURNAL_TITLE = FIELD_PUBLICATION_TITLE;
 
+
+  public static final String KEY_SERIES_TITLE = "series.title";
+
+  // You cannot put in an empty string or a null value for publication title
+  private static Validator seriestitlevalid = new Validator() {
+    public String validate(ArticleMetadata am,MetadataField field,String val)
+        throws MetadataException.ValidationException {
+      // normalize publication title so that it is never set to null or to empty string
+      if( (val == null) || val.isEmpty()) {
+        throw new MetadataException.ValidationException(
+            "Illegal series title: empty string"); 
+      }
+      return val;
+    }
+  };
+  /** Series title (e.g. a bookSeries)  for a publication series (e.g. books) */
+  public static final MetadataField FIELD_SERIES_TITLE = new MetadataField(
+      KEY_SERIES_TITLE, Cardinality.Single, seriestitlevalid);
+
+  
   /* Author is currently a delimited list of one or more authors. */
   
   public static final String KEY_AUTHOR = "author";
