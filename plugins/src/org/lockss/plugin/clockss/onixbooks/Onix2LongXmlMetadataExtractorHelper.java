@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.1 2013-11-25 18:46:08 alexandraohlson Exp $
+ * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.2 2013-12-09 17:49:08 alexandraohlson Exp $
  */
 
 /*
@@ -307,7 +307,7 @@ implements SourceXmlMetadataExtractorHelper {
     // normal journal article schema
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-    cookMap.put(ONIX_product_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE); // book title = journal title
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
