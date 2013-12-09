@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.10 2013-04-02 20:32:29 pgust Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.11 2013-12-09 20:41:41 pgust Exp $
  */
 
 /*
@@ -77,13 +77,14 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     mau1 = makeAu(tdbAu1);
 
     tdbmap1 =
-      MapUtil.map("eissn", "0740-2783",
-		  "issn", "0740-2783",
-		  "isbn", "976-1-58562-317-7",
-		  "volume", "vol1",
-		  "journal.title", "Air and Space Volume 1",
-		  "publisher", "Publisher[10.0135/12345678]",
-		  "access.url", "fullurl");
+      MapUtil.map(MetadataField.KEY_ISSN, "0740-2783",
+		  MetadataField.KEY_EISSN, "0740-2783",
+		  MetadataField.KEY_ISBN, "976-1-58562-317-7",
+		  MetadataField.KEY_VOLUME, "vol1",
+		  MetadataField.KEY_PUBLICATION_TITLE, "Air and Space Volume 1",
+                  MetadataField.KEY_SERIES_TITLE, "Air and Space",
+		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
+		  MetadataField.KEY_ACCESS_URL, "fullurl");
 
 
     // Tdb with values for all metadata fields
@@ -107,16 +108,17 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     mau2 = makeAu(tdbAu2);
 
     tdbmap2 =
-      MapUtil.map("eissn", "0740-2783",
-		  "issn", "0740-2783",
-		  "isbn", "976-1-58562-317-7",
-		  "eisbn", "976-1-58563-317-7",
-		  "issue", "40",
-		  "volume", "vol2",
-		  "journal.title", "Air and Space Volume 2",
-		  "date", "1943",
-		  "publisher", "Publisher[10.0135/12345678]",
-		  "access.url", "fullurl");
+      MapUtil.map(MetadataField.KEY_EISSN, "0740-2783",
+		  MetadataField.KEY_ISSN, "0740-2783",
+		  MetadataField.KEY_ISBN, "976-1-58562-317-7",
+		  MetadataField.KEY_EISBN, "976-1-58563-317-7",
+		  MetadataField.KEY_ISSUE, "40",
+		  MetadataField.KEY_VOLUME, "vol2",
+		  MetadataField.KEY_PUBLICATION_TITLE, "Air and Space Volume 2",
+                  MetadataField.KEY_SERIES_TITLE, "Air and Space",
+		  MetadataField.KEY_DATE, "1943",
+		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
+		  MetadataField.KEY_ACCESS_URL, "fullurl");
   }
 
   public void testAccessors() {
