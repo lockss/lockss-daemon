@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItem.java,v 1.6 2013-04-02 11:01:14 easyonthemayo Exp $
+ * $Id: BibliographicItem.java,v 1.7 2013-12-09 20:52:55 pgust Exp $
  */
 
 /*
@@ -127,10 +127,8 @@ public interface BibliographicItem {
    * Return publication type this AU. Values include "journal" for a journal,
    * "book" if each AU is an individual book that is not part of a series, and
    * "bookSeries" if each AU is an individual book that is part of a series.
-   * For a "bookSeries" the journalTitle() is returns the name of the series.
-   * For a "book" the journalTitle() is simply descriptive of the collection
-   * of books (e.g. "Springer Books") and can be ignored for bibliographic
-   * purposes.
+   * For a "bookSeries" the seriesTitle() is returns the name of the series.
+   * For a "book" or "journal" the seriesTitle() is undefined.
    * 
    * @return publication type this title or "journal" if not specified
    */
@@ -146,10 +144,17 @@ public interface BibliographicItem {
   public String getCoverageDepth();
   
   /**
-   * Returns the title of the journal of which the bibliographic item is a part.
-   * @return the title of the bibliographic item's journal
+   * Returns title of the publication of which the bibliographic item is a part.
+   * @return the title of the bibliographic item's publication
    */
-  public String getJournalTitle();
+  public String getPublicationTitle();
+
+  /**
+   * Returns title of the publication series of which the bibliographic item 
+   * is a part.
+   * @return the title of the bibliographic item's publication series
+   */
+  public String getSeriesTitle();
 
   /**
    * Returns the name of the publisher who publishes the journal of which the
