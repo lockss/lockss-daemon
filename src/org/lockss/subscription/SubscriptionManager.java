@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.11 2013-11-20 17:23:46 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.12 2013-12-09 21:21:21 pgust Exp $
  */
 
 /*
@@ -1417,8 +1417,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
    * Provides the periods covered by the currently configured archival units of
    * a title, indexed by platform.
    * 
-   * @param title
-   *          A TdbTitle with the title.
+   * @param titleAus
+   *          A list of TdbAus with the title
    * @param configuredAus
    *          A List<TdbAu> with the archival units already configured in the
    *          system.
