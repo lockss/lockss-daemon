@@ -99,8 +99,26 @@ public class TestRisMetadataExtractor
   
   public void testGoodRis() throws Exception {
 	  ArticleMetadata am = extractFrom(createRisString());
-	  String exp = "[md: [author: [Rothstein, Mark A., Wendell, Wilson K.]] [startpage: [2667]] [issn: [0028-4793]] [issue: [26]] [endpage: [2668]] [journal.title: [New England Journal of Medicine]] [volume: [352]] [article.title: [Article Tile]] [date: [2005/06/30]] [doi: [10.1056/NEJMp058021]] [publisher: [Massachusetts Medical Society]]";
-	  assertEquals(exp, am.toString());
+	  assertEquals("[Rothstein, Mark A., Wendell, Wilson K.]",
+	               am.getList(MetadataField.FIELD_AUTHOR)+"");
+	  assertEquals("[2667]", 
+	               am.getList(MetadataField.FIELD_START_PAGE).toString());
+          assertEquals("[2668]", 
+                       am.getList(MetadataField.FIELD_END_PAGE).toString());
+	  assertEquals("[0028-4793]", 
+	               am.getList(MetadataField.FIELD_ISSN).toString());
+          assertEquals("[352]", 
+                       am.getList(MetadataField.FIELD_VOLUME).toString());
+	  assertEquals("[26]", 
+	               am.getList(MetadataField.FIELD_ISSUE).toString());
+	  assertEquals("[Article Tile]", 
+	               am.getList(MetadataField.FIELD_ARTICLE_TITLE).toString());
+	  assertEquals("[2005/06/30]", 
+	               am.getList(MetadataField.FIELD_DATE).toString());
+	  assertEquals("[New England Journal of Medicine]",
+	               am.getList(MetadataField.FIELD_PUBLICATION_TITLE).toString());
+	  assertEquals("[Massachusetts Medical Society]",
+	               am.getList(MetadataField.FIELD_PUBLISHER).toString());
   }
   
   private class MyFileMetadataExtractorFactory
