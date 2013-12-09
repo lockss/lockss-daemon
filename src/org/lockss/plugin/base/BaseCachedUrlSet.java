@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.34 2013-12-02 17:41:21 fergaloy-sf Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.35 2013-12-09 22:59:46 fergaloy-sf Exp $
  */
 
 /*
@@ -608,8 +608,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	      continue;
 	    }
 	  } else {
-	    // Remove the TFile from the stack and mark it as flushable if it is
-	    // in the cache.
+	    // Remove the TFile from the stack and from the cache if it is
+	    // there.
 	    freeTFile(arcIterStack.removeFirst());
 
 	    continue;
@@ -707,7 +707,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
 
     /**
-     * Marks a TFile as flushable.
+     * Unmounts a TFile and removes it from the cache.
      * 
      * @param tfIterator
      *          A TFileIterator with the TFile to be freed.
@@ -725,13 +725,28 @@ public class BaseCachedUrlSet implements CachedUrlSet {
      */
     @Override
     protected void finalize() throws Throwable {
-      // Try to free all the TFiles in the stack.
+      // Try to mark as flushable all the TFiles in the stack.
       try {
 	while (!arcIterStack.isEmpty()) {
-	  freeTFile(arcIterStack.removeFirst());
+	  markArchiveAsFlushable(arcIterStack.removeFirst());
 	}
       } finally {
         super.finalize();
+      }
+    }
+
+    /**
+     * Marks a TFile as flushable.
+     * 
+     * @param tfIterator
+     *          A TFileIterator with the TFile to be marked as flushable.
+     */
+    private void markArchiveAsFlushable(TFileIterator tfIterator) {
+      try {
+	trueZipManager.markArchiveAsFlushable(tfIterator.tFile,
+	    tfIterator.tFileCacheCu);
+      } catch (Throwable t) {
+	logger.warning("Error freeing TFile: " + tfIterator.tFile, t);
       }
     }
 

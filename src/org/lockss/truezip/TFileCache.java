@@ -1,5 +1,5 @@
 /*
- * $Id: TFileCache.java,v 1.5 2013-12-02 17:41:21 fergaloy-sf Exp $
+ * $Id: TFileCache.java,v 1.6 2013-12-09 22:59:47 fergaloy-sf Exp $
  */
 
 /*
@@ -361,7 +361,7 @@ public class TFileCache {
   }
 
   /**
-   * Marks a TFile as flushable.
+   * Unmounts a TFile and removes it from the cache.
    * 
    * @param tf
    *          A TFile to be freed.
@@ -370,6 +370,45 @@ public class TFileCache {
    *          <code>null</code> if the TFile is not in the cache.
    */
   public void freeTFile(TFile tf, CachedUrl cu) {
+    // Nothing more to do if the TFile is not in the cache.
+    if (cu == null) return;
+
+    // Find the cache entry.
+    Entry ent = getEnt(getKey(cu));
+    if (ent == null) {
+      log.warning("Cannot find entry to free for cu = " + cu);
+      return;
+    }
+
+    // This TFile should have been marked to be flushed only after unmounting.
+    if (!ent.flushAfterUnmountOnly) {
+      log.warning("Entry for unmounted TFile = " + tf
+	  + " was not marked flushAfterUnmountOnly - Fixed");
+      ent.flushAfterUnmountOnly = true;
+    }
+
+    synchronized (cmap) {
+      // Record the timestamp when this TFile was freed.
+      ent.freeingInstant = TimeBase.nowMs();
+
+      // Flush the entry.
+      flushEntry(ent);
+
+      // Update cache size.
+      curSize -= ent.size;
+    }
+  }
+
+  /**
+   * Marks a TFile as flushable.
+   * 
+   * @param tf
+   *          A TFile to be marked as flushable.
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache, or
+   *          <code>null</code> if the TFile is not in the cache.
+   */
+  public void markArchiveAsFlushable(TFile tf, CachedUrl cu) {
     // Nothing more to do if the TFile is not in the cache.
     if (cu == null) return;
 
@@ -387,7 +426,7 @@ public class TFileCache {
       ent.flushAfterUnmountOnly = true;
     }
 
-    // Record the timestamp when this TFile was freed.
+    // Record the timestamp when this TFile was marked.
     ent.freeingInstant = TimeBase.nowMs();
   }
 
