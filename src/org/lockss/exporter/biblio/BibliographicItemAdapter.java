@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.9 2013-04-02 11:01:14 easyonthemayo Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.10 2013-12-09 20:53:48 pgust Exp $
  */
 
 /*
@@ -64,7 +64,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   protected String printIssn = null;
   protected String eIssn = null;
   protected String issnL = null;
-  protected String journalTitle = null;
+  protected String publicationTitle = null;
+  protected String seriesTitle = null;
   protected String proprietaryId = null;
   protected String publisherName = null;
   protected String name = null;
@@ -157,8 +158,13 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   }
 
   @Override
-  public String getJournalTitle() {
-    return journalTitle;
+  public String getPublicationTitle() {
+    return publicationTitle;
+  }
+
+  @Override
+  public String getSeriesTitle() {
+    return seriesTitle;
   }
 
   @Override
@@ -248,8 +254,8 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     return this;
   }
 
-  public BibliographicItemAdapter setJournalTitle(String journalTitle) {
-    this.journalTitle = journalTitle;
+  public BibliographicItemAdapter setPublicationTitle(String journalTitle) {
+    this.publicationTitle = journalTitle;
     return this;
   }
 
@@ -368,7 +374,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
       return false;
     if (issue != null ? !issue.equals(that.issue) : that.issue != null)
       return false;
-    if (journalTitle != null ? !journalTitle.equals(that.journalTitle) : that.journalTitle != null)
+    if (publicationTitle != null ? !publicationTitle.equals(that.publicationTitle) : that.publicationTitle != null)
       return false;
     if (name != null ? !name.equals(that.name) : that.name != null)
       return false;
@@ -399,7 +405,7 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     result = 31 * result + (printIssn != null ? printIssn.hashCode() : 0);
     result = 31 * result + (eIssn != null ? eIssn.hashCode() : 0);
     result = 31 * result + (issnL != null ? issnL.hashCode() : 0);
-    result = 31 * result + (journalTitle != null ? journalTitle.hashCode() : 0);
+    result = 31 * result + (publicationTitle != null ? publicationTitle.hashCode() : 0);
     result = 31 * result + (publisherName != null ? publisherName.hashCode() : 0);
     result = 31 * result + (name != null ? name.hashCode() : 0);
     result = 31 * result + (volume != null ? volume.hashCode() : 0);

@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.7 2013-04-01 18:13:56 pgust Exp $
+ * $Id: BibliographicItemImpl.java,v 1.8 2013-12-09 20:53:48 pgust Exp $
  */
 
 /*
@@ -61,13 +61,13 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * @param issue
    */
   public BibliographicItemImpl(String printIsbn, String printIssn,
-                               String journalTitle, String proprietaryId,
+                               String publicationTitle, String proprietaryId,
                                String publisherName, String name,
                                String volume, String year, String issue,
                                String publicationType, String coverageDepth) {
     setPrintIsbn(printIsbn);
     setPrintIssn(printIssn);
-    setJournalTitle(journalTitle);
+    setPublicationTitle(publicationTitle);
     setProprietaryId(proprietaryId);
     setPublisherName(publisherName);
     setName(name);
@@ -84,7 +84,7 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * supplied.
    * @param printIsbn
    * @param printIssn
-   * @param journalTitle
+   * @param publicationTitle
    * @param proprietaryId
    * @param name
    * @param startVolume
@@ -95,7 +95,8 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * @param endIssue
    */
   public BibliographicItemImpl(String printIsbn, String printIssn,
-                               String journalTitle, String propietaryId,
+                               String publicationTitle,
+                               String propietaryId,
                                String publisherName, String name,
                                String startVolume, String endVolume,
                                String startYear, String endYear,
@@ -103,7 +104,7 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
                                String publicationType, String coverageDepth) {
     setPrintIsbn(printIsbn);
     setPrintIssn(printIssn);
-    setJournalTitle(journalTitle);
+    setPublicationTitle(publicationTitle);
     setProprietaryId(proprietaryId);
     setPublisherName(publisherName);
     setName(name);
@@ -130,7 +131,7 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
     setEissn(other.getEissn());
     setIssnL(other.getIssnL());
     setProprietaryId(other.getProprietaryId());
-    setJournalTitle(other.getJournalTitle());
+    setPublicationTitle(other.getPublicationTitle());
     setPublisherName(other.getPublisherName());
     setName(other.getName());
     setVolume(other.getVolume());

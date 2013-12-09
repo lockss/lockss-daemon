@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicUtil.java,v 1.10 2013-09-18 11:36:14 easyonthemayo Exp $
+ * $Id: BibliographicUtil.java,v 1.11 2013-12-09 20:53:48 pgust Exp $
  */
 
 /*
@@ -163,7 +163,8 @@ public class BibliographicUtil {
     return
         StringUtil.equalStrings(item1.getPrintIssn(), item2.getPrintIssn()) &&
             StringUtil.equalStrings(item1.getYear(), item2.getYear()) &&
-            StringUtil.equalStrings(item1.getJournalTitle(), item2.getJournalTitle()) &&
+            StringUtil.equalStrings(item1.getPublicationTitle(), 
+                                    item2.getPublicationTitle()) &&
             StringUtil.equalStrings(item1.getName(), item2.getName()) &&
             StringUtil.equalStrings(
                 BibliographicUtil.normaliseIdentifier(item1.getVolume()),
@@ -193,7 +194,8 @@ public class BibliographicUtil {
         && StringUtil.equalStrings(au1.getEissn(), au2.getEissn())
         && StringUtil.equalStrings(au1.getEisbn(), au2.getEisbn())
         && StringUtil.equalStrings(au1.getIssnL(), au2.getIssnL())
-        && StringUtil.equalStrings(au1.getJournalTitle(), au2.getJournalTitle())
+        && StringUtil.equalStrings(au1.getPublicationTitle(), 
+                                   au2.getPublicationTitle())
         && StringUtil.equalStrings(au1.getPublisherName(), au2.getPublisherName())
         ;
   }
@@ -896,7 +898,7 @@ public class BibliographicUtil {
     /** Produces a friendly String representation of the range. */
     public String toString() {
       return String.format("TitleRange %s %s",
-          first.getJournalTitle(), yearRange);
+          first.getSeriesTitle(), yearRange);
     }
   }
 
