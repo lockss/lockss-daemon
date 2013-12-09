@@ -687,4 +687,77 @@
 </PublishingDetail>
 <ProductSupply/>
 </Product>
+<!-- ANOTHER test for additional title layout -->
+<Product>                                                                                                                             
+<RecordReference>9998887776665</RecordReference>                                                                                      
+<NotificationType>03</NotificationType>                                                                                               
+<ProductIdentifier>                                                                                                                   
+<ProductIDType>15</ProductIDType>                                                                                                     
+<IDValue>9998887776665</IDValue>                                                                                                      
+</ProductIdentifier>                                                                                                                  
+<ProductIdentifier>                                                                                                                   
+<ProductIDType>13</ProductIDType>                                                                                                     
+<IDValue>D999.AA BBB 2009</IDValue>                                                                                                   
+</ProductIdentifier>                                                                                                                  
+<DescriptiveDetail>                                                                                                                   
+<ProductComposition>00</ProductComposition>                                                                                           
+<ProductForm>EA</ProductForm>                                                                                                         
+<ProductFormDetail>E107</ProductFormDetail>                                                                                           
+<ProductFormDescription>Web PDF</ProductFormDescription>                                                                              
+<PrimaryContentType>10</PrimaryContentType>                                                                                                                                                                                                              
+<Collection>                                                                                                                          
+<CollectionType>10</CollectionType>                                                                                                   
+<TitleDetail>                                                                                                                         
+<TitleType>01</TitleType>                                                                                                             
+<TitleElement>                                                                                                                        
+<TitleElementLevel>02</TitleElementLevel>                                                                                             
+<PartNumber>13</PartNumber>                                                                                                           
+<TitleText>War and Badness</TitleText>                                                                                               
+</TitleElement>                                                                                                                       
+</TitleDetail>                                                                                                                        
+</Collection>                                                                                                                         
+<TitleDetail>                                                                                                                         
+<TitleType>01</TitleType>                                                                                                             
+<TitleElement>                                                                                                                        
+<TitleElementLevel>01</TitleElementLevel>                                                                                             
+<TitlePrefix>The</TitlePrefix>                                                                                                        
+<TitleWithoutPrefix>Big Journey</TitleWithoutPrefix>                                                                                
+<Subtitle>Captivity and the Holocaust</Subtitle>                                                              
+</TitleElement>                                                                                                                       
+<TitleElement>                                                                                                                        
+<TitleElementLevel>02</TitleElementLevel>                                                                                             
+<TitleText>War and Badness</TitleText>                                                                                               
+</TitleElement>                                                                                                                       
+</TitleDetail>                                                                                                                        
+<Contributor>                                                                                                                         
+<ContributorRole>A01</ContributorRole>                                                                                                
+<PersonName>Simone Scholar</PersonName>                                                                                             
+<PersonNameInverted>Scholar, Simone</PersonNameInverted>                                                                            
+</Contributor>
+</DescriptiveDetail>  
+<PublishingDetail>                                                                                                                    
+<Imprint>                                                                                                                             
+<ImprintName>Berghahn Books</ImprintName>                                                                                             
+</Imprint>                                                                                                                            
+<Publisher>                                                                                                                           
+<PublishingRole>01</PublishingRole>                                                                                                   
+<PublisherName>Berghahn Books</PublisherName>                                                                                         
+</Publisher>                                                                                                                          
+<CountryOfPublication>US</CountryOfPublication>                                                                                      
+<PublishingStatus>02</PublishingStatus>                                                                                               
+<PublishingDate>                                                                                                                      
+<PublishingDateRole>01</PublishingDateRole>                                                                                           
+<Date dateformat="00">20090715</Date>                                                                                                 
+</PublishingDate>                                                                                                                     
+<CopyrightStatement>                                                                                                                  
+<CopyrightYear>2009</CopyrightYear>                                                                                                   
+</CopyrightStatement>                                                                                                                 
+<SalesRights>                                                                                                                         
+<SalesRightsType>01</SalesRightsType>                                                                                                 
+<Territory>                                                                                                                           
+<RegionsIncluded>WORLD</RegionsIncluded>                                                                                              
+</Territory>                                                                                                                          
+</SalesRights>                                                                                                                        
+</PublishingDetail>              
+</Product>                          
 </ONIXMessage>

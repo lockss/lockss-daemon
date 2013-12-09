@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.2 2013-12-09 17:49:08 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.3 2013-12-09 22:09:04 alexandraohlson Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.clockss.onixbooks;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
@@ -156,64 +157,62 @@ implements SourceXmlMetadataExtractorHelper {
 
   /* 
    * TITLE INFORMATION
-   * NODE=<TitleDetail>
-   *   <TitleElement>
+   * You only get here if the TitleElementLevel=01
+   *  <TitleElement>
    *     TitleElementLevel=01 <--this is the one we want
    *     TitleText
    *     Subtitle
-   *   </TitleElement>
-   *   <TitleElement>
-   *     possible additional elements with different levels
+   *   or sometimes:
+   *     TitlePrefix
+   *     TitleWithoutPrefix
    *   </TitleElement>
    */
   static private final NodeValue ONIX_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
 
-      log.debug3("getValue of ONIX title");
-      NodeList elementNodes = node.getChildNodes();
-      if (elementNodes == null) return null;
+      log.debug3("getValue of ONIX level 01 title");
+      NodeList elementChildren = node.getChildNodes();
+      if (elementChildren == null) return null;
 
-      String tLevel = null;
       String tTitle = null;
       String tSubtitle = null;
-      // look at each child of the TitleDetail for TitleElements
-      for (int m = 0; m < elementNodes.getLength(); m++) {
-        Node titleChild = elementNodes.item(m);
-        if ( "TitleElement".equals(titleChild.getNodeName())) {
-          NodeList elementChildren = titleChild.getChildNodes();
-          if (elementChildren != null) {
-            for (int j = 0; j < elementChildren.getLength(); j++) {
-              Node checkNode = elementChildren.item(j);
-              if ("TitleElementLevel".equals(checkNode.getNodeName())) {
-                tLevel = checkNode.getTextContent();
-                if (!"01".equals(tLevel)) {
-                  break;
-                }
-              } else if ("TitleText".equals(checkNode.getNodeName())) {
-                tTitle = checkNode.getTextContent();
-              } else if ("Subtitle".equals(checkNode.getNodeName())) {
-                tSubtitle = checkNode.getTextContent();
-              }
-            }
-            // found it; stop looking
-            if ("01".equals(tLevel)) break;
-          }
+      String tPrefix = null;
+      String tNoPrefix = null; 
+      // look at each child of the TitleElement for information
+      for (int j = 0; j < elementChildren.getLength(); j++) {
+        Node checkNode = elementChildren.item(j);
+        if ("TitleText".equals(checkNode.getNodeName())) {
+          tTitle = checkNode.getTextContent();
+        } else if ("Subtitle".equals(checkNode.getNodeName())) {
+          tSubtitle = checkNode.getTextContent();
+        } else if ("TitlePrefix".equals(checkNode.getNodeName())) {
+          tPrefix = checkNode.getTextContent();
+        } else if ("TitleWithoutPrefix".equals(checkNode.getNodeName())) {
+          tNoPrefix = checkNode.getTextContent();
         }
       }
-      if("01".equals(tLevel)) {
-        StringBuilder valbuilder = new StringBuilder();
+
+      StringBuilder valbuilder = new StringBuilder();
+      if (tTitle != null) {
         valbuilder.append(tTitle);
         if (tSubtitle != null) {
           valbuilder.append(": " + tSubtitle);
         }
-        log.debug3("title found: " + valbuilder.toString());
-        return valbuilder.toString();
+      } else if (tNoPrefix != null) {
+        if (tPrefix != null) { 
+          valbuilder.append(tPrefix + " ");
+        }
+        valbuilder.append(tNoPrefix);
+        if (tSubtitle != null) {
+          valbuilder.append(": " + tSubtitle);
+        }
       } else {
-        // only here if we didn't find a title level of 1
-        log.debug3("no level1 title available");
+        log.debug3("no title found at level1");
         return null;
       }
+      log.debug3("title found: " + valbuilder.toString());
+      return valbuilder.toString();
     }
   };
 
@@ -290,15 +289,16 @@ implements SourceXmlMetadataExtractorHelper {
       "DescriptiveDetail";  
   private static String ONIX_product_form =
       ONIX_product_descrip + "/ProductFormDetail";
+ /* only pick up level01 title element */
   private static String ONIX_product_title =
-      ONIX_product_descrip + "/TitleDetail";
+      ONIX_product_descrip + "/TitleDetail/TitleElement[TitleElementLevel = '01']";
   private static String ONIX_product_contrib =
       ONIX_product_descrip + "/Contributor";
   private static String ONIX_product_comp =
       ONIX_product_descrip + "/ProductComposition";
   /* components under DescriptiveDetail if this is part of series */
   private static String ONIX_product_seriestitle =
-      ONIX_product_descrip + "/Collection/TitleDetail";
+      ONIX_product_descrip + "/Collection/TitleDetail/TitleElement[TitleElementLevel = '01']";
   private static String ONIX_product_seriesISSN =
       ONIX_product_descrip + "/Collection/CollectionIdentifier[CollectionIDType = '02']";
   /* components under PublishingDetail */
@@ -353,7 +353,7 @@ implements SourceXmlMetadataExtractorHelper {
     // normal journal article schema
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-    cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE); // book title is journal title equivalent
+    cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);

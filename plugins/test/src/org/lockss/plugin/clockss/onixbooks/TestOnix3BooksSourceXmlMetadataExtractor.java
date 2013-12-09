@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.4 2013-12-05 19:53:42 alexandraohlson Exp $
+ * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.5 2013-12-09 22:09:04 alexandraohlson Exp $
  */
 /*
 
@@ -147,6 +147,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       mau.addUrl(pdfUrl2, true, true, xmlHeader);
       mau.addUrl(pdfUrl3, true, true, xmlHeader);
       mau.addUrl(epubUrl5, true, true, xmlHeader);
+      mau.addUrl(pdfUrl6, true, true, xmlHeader);
       
       mcu.setContent(string_input);
       mcu.setContentSize(string_input.length());
@@ -157,8 +158,8 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
       assertNotEmpty(mdlist);
-      // 1,2,3,5 (4 has no associated content file)
-      assertEquals(4, mdlist.size());
+      // 1,2,3,5,6 (4 has no associated content file)
+      assertEquals(5, mdlist.size());
 
       // check each returned md against expected values
       Iterator<ArticleMetadata> mdIt = mdlist.iterator();
@@ -177,7 +178,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
   private static final int DOI_INDEX = 1;
   private static final int AUTHOR_INDEX = 2;
   private static final int PUBLISHER_INDEX = 3;
-  private static final int ARTICLE_TITLE = 4;
+  private static final int JOURNAL_TITLE = 4;
   private static final int ARTICLE_DATE = 5;
   
   private static final String pdfUrl1 = "http://www.source.com/9781606501260.pdf";
@@ -186,7 +187,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "10.5643/9781606501260",
       "[Author, David W.]",
       "Momentum Press",
-      "Book Title One",
+      "Book Title One: A Test for JUnit",
       "2009-10-26");
 
   private static final String pdfUrl2 = "http://www.source.com/9780857458510.pdf";
@@ -196,7 +197,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       null,// no doi
       "[Author-Name, Sally von, Editor, Fernanda]",
       "Berghahn Books",
-      "A Second Book Title",
+      "A Second Book Title: Perspectives",
       "2011-06-15");
 
   private static final String pdfUrl3 = "http://www.source.com/9781847699110.pdf";
@@ -205,7 +206,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       null,
       "[BWriter, Mary]",
       "Channel View Publications",
-      "English Title of Book",
+      "English Title of Book: From A to Z",
       "2013-02-05");
   
   private static final String noContentisbn = "1111111111111"; //shouldn't have emitted
@@ -218,6 +219,15 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "Testing Publications",
       "Book With EPUB Content",
       "2012-01-01");  
+  
+  private static final String pdfUrl6 = "http://www.source.com/9998887776665.pdf";
+  private static final ArrayList md6 = (ArrayList) ListUtil.list(
+      "9998887776665",
+      null,
+      "[Scholar, Simone]",
+      "Berghahn Books",
+      "The Big Journey: Captivity and the Holocaust",
+      "2009-07-15");  
 
   static private final Map<String, List> expectedMD =
       new HashMap<String,List>();
@@ -226,6 +236,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
     expectedMD.put("9780857458510", md2);
     expectedMD.put("9781847699110", md3);
     expectedMD.put("2222222222222", md5);
+    expectedMD.put("9998887776665", md6);
   }
   
 
@@ -241,6 +252,8 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
     assertEquals(AM.get(MetadataField.FIELD_DOI), expected.get(DOI_INDEX));
     assertEquals(AM.getList(MetadataField.FIELD_AUTHOR).toString(), expected.get(AUTHOR_INDEX));
     assertEquals(AM.get(MetadataField.FIELD_PUBLISHER), expected.get(PUBLISHER_INDEX));
+    assertEquals(AM.get(MetadataField.FIELD_JOURNAL_TITLE), expected.get(JOURNAL_TITLE));
+    assertEquals(AM.get(MetadataField.FIELD_DATE), expected.get(ARTICLE_DATE));
     
   }
 }
