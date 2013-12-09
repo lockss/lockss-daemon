@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.27 2013-09-05 18:49:47 fergaloy-sf Exp $
+ * $Id: TdbAu.java,v 1.28 2013-12-09 20:15:17 pgust Exp $
  */
 
 /*
@@ -551,12 +551,35 @@ public class TdbAu implements BibliographicItem, Comparable<TdbAu> {
   }
 
   /**
+   * Returns the series title. For book series, the series title
+   * is the TdbTitle name; otherwise it is null.
+   *
+   * @return the name of this series, or <tt>null</tt>
+   */
+  public String getSeriesTitle() {
+    String pubType = getPublicationType();
+    return pubType.equalsIgnoreCase("bookSeries") ? title.getName() : null;
+  }
+
+  /**
+   * Returns the publication title. For books and book series, the
+   * publication title is the TdbAu name, otherwise, it is the TdbTitle name.
+   * 
+   * @return the name of this publication, or <tt>null</tt>
+   * @deprecated use {@link getPublicationTitle()} instead
+   */
+  @Deprecated 
+  public String getJournalTitle() {
+    return getPublicationTitle();
+  }
+  
+  /**
    * Returns the publication title. For books and book series, the
    * publication title is the TdbAu name, otherwise, it is the TdbTitle name.
    *
    * @return the name of this publication, or <tt>null</tt>
    */
-  public String getJournalTitle() {
+  public String getPublicationTitle() {
     String pubType = getPublicationType();
     if (   pubType.equalsIgnoreCase("book") 
         || pubType.equalsIgnoreCase("bookSeries")) {
