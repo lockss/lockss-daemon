@@ -419,9 +419,9 @@
       param[base_url] = http://rphr.endojournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
-      au < manifest ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
-      au < manifest ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
+      au < testing ; 2001 ; Recent Progress in Hormone Research Volume 56 ; 56 >
+      au < testing ; 2002 ; Recent Progress in Hormone Research Volume 57 ; 57 >
+      au < testing ; 2003 ; Recent Progress in Hormone Research Volume 58 ; 58 >
       au < released ; 2004 ; Recent Progress in Hormone Research Volume 59 ; 59 >
 
     }
