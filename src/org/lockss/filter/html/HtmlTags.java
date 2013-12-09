@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.6 2010-02-04 06:53:00 tlipkis Exp $
+ * $Id: HtmlTags.java,v 1.7 2013-12-09 23:53:15 etenbrink Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
-import java.util.*;
 import org.htmlparser.tags.*;
 
 /**
@@ -41,6 +40,72 @@ import org.htmlparser.tags.*;
  */
 public class HtmlTags {
 
+  /**
+   * A header tag.  Can be registered with registerTag() to cause header
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @since 1.64
+   */
+  public static class Header extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"header"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A footer tag.  Can be registered with registerTag() to cause footer
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @since 1.64
+   */
+  public static class Footer extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"footer"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * A section tag.  Can be registered with registerTag() to cause section
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @since 1.64
+   */
+  public static class Section extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"section"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
   /**
    * An IFRAME tag.  Registered with PrototypicalNodeFactory to cause iframe
    * to be a CompositeTag.  See code samples in org.htmlparser.tags.
