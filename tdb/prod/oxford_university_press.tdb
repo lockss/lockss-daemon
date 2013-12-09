@@ -21583,7 +21583,7 @@
       issnl = 0006-3568
     > 
 
-    param[base_url] = http://bioscience.oxfordjournals.org
+    param[base_url] = http://bioscience.oxfordjournals.org/
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
     comment[continues] = 0096-7645
