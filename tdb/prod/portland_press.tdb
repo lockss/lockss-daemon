@@ -618,8 +618,14 @@ comment[bj1] = no permission from publisher
     param[base_url] = http://www.biochemsoctrans.org/
     param[journal_id] = bst
 
-	comment[notReady] = 500 internal errors
-	
+    comment[notReady] = 500 internal errors
+    comment[notReady_V35_1] = 500 http://www.biochemsoctrans.org/bst/035/0454/bst0350454.htm
+    comment[notReady_V35_2] = 500 http://www.biochemsoctrans.org/bst/035/0331/bst0350331.htm
+    comment[notReady_V35_3] = 500 http://www.biochemsoctrans.org/bst/035/1649/bst0351649.htm
+    comment[notReady_V35_4] = 500 http://www.biochemsoctrans.org/bst/035/0165/bst0350165.htm
+    comment[notReady_V35_5] = 500 http://www.biochemsoctrans.org/bst/035/0166/bst0350166.htm
+    comment[notReady_V35_6] = 500 http://www.biochemsoctrans.org/bst/035/0331/bst0350331F02.htm?resolution=HIGH
+
     au < manifest ; 1973 ; Biochemical Society Transactions Volume 1 ; 001 >
     au < manifest ; 1974 ; Biochemical Society Transactions Volume 2 ; 002 >
     au < manifest ; 1975 ; Biochemical Society Transactions Volume 3 ; 003 >
@@ -654,7 +660,7 @@ comment[bj1] = no permission from publisher
     au < released ; 2004 ; Biochemical Society Transactions Volume 32 ; 032 >
     au < released ; 2005 ; Biochemical Society Transactions Volume 33 ; 033 >
     au < released ; 2006 ; Biochemical Society Transactions Volume 34 ; 034 >
-    au < testing ; 2007 ; Biochemical Society Transactions Volume 35 ; 035 >
+    au < notReady ; 2007 ; Biochemical Society Transactions Volume 35 ; 035 >
     au < released ; 2008 ; Biochemical Society Transactions Volume 36 ; 036 >
     au < released ; 2009 ; Biochemical Society Transactions Volume 37 ; 037 >
     au < released ; 2010 ; Biochemical Society Transactions Volume 38 ; 038 >
@@ -895,18 +901,18 @@ comment[bj1] = no permission from publisher
     param[base_url] = http://essays.biochemistry.org/
     param[journal_id] = bsessays
 
-    au < released ; 1998 ; Essays in Biochemistry Volume 33 ; 033 >  
-    au < released ; 1999 ; Essays in Biochemistry Volume 34 ; 034 >  
-    au < released ; 2000 ; Essays in Biochemistry Volume 35 ; 035 > 
-    au < released ; 2000 ; Essays in Biochemistry Volume 36 ; 036 >  
-    au < released ; 2001 ; Essays in Biochemistry Volume 37 ; 037 >  
-    au < released ; 2002 ; Essays in Biochemistry Volume 38 ; 038 >  
-    au < released ; 2003 ; Essays in Biochemistry Volume 39 ; 039 >  
-    au < released ; 2004 ; Essays in Biochemistry Volume 40 ; 040 >  
-    au < released ; 2005 ; Essays in Biochemistry Volume 41 ; 041 >  
-    au < released ; 2006 ; Essays in Biochemistry Volume 42 ; 042 >  
-    au < released ; 2007 ; Essays in Biochemistry Volume 43 ; 043 >  
-    au < released ; 2008 ; Essays in Biochemistry Volume 44 ; 044 >  
+    au < released ; 1998 ; Essays in Biochemistry Volume 33 ; 033 >
+    au < released ; 1999 ; Essays in Biochemistry Volume 34 ; 034 >
+    au < released ; 2000 ; Essays in Biochemistry Volume 35 ; 035 >
+    au < released ; 2000 ; Essays in Biochemistry Volume 36 ; 036 >
+    au < released ; 2001 ; Essays in Biochemistry Volume 37 ; 037 >
+    au < released ; 2002 ; Essays in Biochemistry Volume 38 ; 038 >
+    au < released ; 2003 ; Essays in Biochemistry Volume 39 ; 039 >
+    au < released ; 2004 ; Essays in Biochemistry Volume 40 ; 040 >
+    au < released ; 2005 ; Essays in Biochemistry Volume 41 ; 041 >
+    au < released ; 2006 ; Essays in Biochemistry Volume 42 ; 042 >
+    au < released ; 2007 ; Essays in Biochemistry Volume 43 ; 043 >
+    au < released ; 2008 ; Essays in Biochemistry Volume 44 ; 044 >
     au < released ; 2008 ; Essays in Biochemistry Volume 45 ; 045 >
     au < released ; 2009 ; Essays in Biochemistry Volume 46 ; 046 >
     au < released ; 2010 ; Essays in Biochemistry Volume 47 ; 047 >
