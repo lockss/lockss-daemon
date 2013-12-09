@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.79 2013-10-17 07:50:11 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.80 2013-12-09 21:39:25 pgust Exp $
  */
 
 /*
@@ -1464,7 +1464,7 @@ public class ServeContent extends LockssServlet {
           block.add("<h2>Found requested title</h2>");
         } else {
           block.add("<h2>");
-          block.add(bibliographicItem.getJournalTitle());
+          block.add(bibliographicItem.getPublicationTitle());
           block.add("</h2>");
 
           addPublisher(table, bibliographicItem);
@@ -1785,7 +1785,7 @@ public class ServeContent extends LockssServlet {
 
     } else {
       // get TdbAus by publisher and title
-      String title = bibliographicItem.getJournalTitle();
+      String title = bibliographicItem.getPublicationTitle();
       String publisher = bibliographicItem.getPublisherName();
       TdbPublisher tdbpublisher = tdb.getTdbPublisher(publisher);
       if (tdbpublisher != null) {
