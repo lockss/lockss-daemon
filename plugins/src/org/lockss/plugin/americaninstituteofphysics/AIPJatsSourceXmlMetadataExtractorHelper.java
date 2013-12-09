@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.1 2013-12-06 17:42:31 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.2 2013-12-09 18:11:51 aishizaki Exp $
  */
 
 /*
@@ -244,8 +244,7 @@ implements SourceXmlMetadataExtractorHelper {
   private static String AIPJATS_contrib = AIPJATS_AMETA + "/contrib-group";
   private static String AIPJATS_author = AIPJATS_contrib;
   
-  /* access_url  - not really used, so I am using it to be the filename_key */
-  private static String AIPJATS_filenamekey = "filenamekey";
+  /* access_url  not set here */
   //private static String AIPJATS_PDF_NAME = "online";
   
   /*
@@ -304,7 +303,7 @@ implements SourceXmlMetadataExtractorHelper {
    */
   @Override
   public Map<String, XPathValue> getGlobalMetaMap() {
-    return AIPJATS_globalMap;
+    return null;
   }
 
   /**
@@ -332,13 +331,11 @@ implements SourceXmlMetadataExtractorHelper {
   }
 
   /**
-   * Return the path for isbn13 so multiple records for the same item
-   * can be combined
    */
   
   @Override
   public String getUniqueIDKey() {
-    return AIPJATS_doi;
+    return null;
   }
 
   /**
@@ -352,7 +349,8 @@ implements SourceXmlMetadataExtractorHelper {
   }
 
   /**
-   * No filename prefix needed - return null
+   * Since we only have the one fixed name, use filenamePrefix to return
+   * the whole name, "online.pdf"
    */
   @Override
   public String getFilenamePrefix() {
@@ -369,7 +367,7 @@ implements SourceXmlMetadataExtractorHelper {
   }
 
   /**
-   * The only text file is online.pdf
+   * using filenamePrefix (see above)
    */
   
   @Override

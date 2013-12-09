@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.2 2013-12-06 19:32:15 alexandraohlson Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.3 2013-12-09 18:11:51 aishizaki Exp $
  */
 
 /*
@@ -73,11 +73,12 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
       log.debug3("in AIPJats preEmitCheckcheck");
       String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
-      ArrayList<String> filenameSuffixList = schemaHelper.getFilenameSuffixList(); //can be null
-      String filenameKey = schemaHelper.getFilenameKey(); //can be null
 
       // no pre-emit check required if values are all null, just return
-      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return false;
+      // we know AIPJats will send a filenamePrefix and (filenameSuffixList, filenameKey) will be null
+      if (filenamePrefix == null){
+        return false;
+      }
       
       /* AIPJats file structure has the xml at .../Markup/***.xml
        * and the pdf is always named .../Page_Renditions/online.pdf
@@ -87,25 +88,22 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
         int i = cuBase.lastIndexOf(XMLDIR);
         aipBase = cuBase.substring(0, i);
       }
-      String filename = 
-        (filenamePrefix != null ? filenamePrefix : "") + 
-        (filenameKey != null ? thisAM.getRaw(filenameKey) : "");
+      if (aipBase == null) {
+        log.debug3(cuBase + ": non standard location for XML");
+        return false;
+      }
+      String filename = filenamePrefix;
 
       //Check in order for at least existing file from among the suffixes
-      if (filenameSuffixList == null) {
-        // just check for the one version using the other items
-        fileCu = B_au.makeCachedUrl(aipBase + PDFDIR + filename);
-        if(fileCu != null && (fileCu.hasContent())) {
-          // Set a cooked value for an access file. Otherwise it would get set to xml file
-          thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-          return true;
-        } else {
-          log.debug3(filename + " does not exist in this AU");
-          return false; //No file found to match this record
-        }
+      // just check for the one version using the other items
+      fileCu = B_au.makeCachedUrl(aipBase + PDFDIR + filename);
+      if(fileCu != null && (fileCu.hasContent())) {
+        // Set a cooked value for an access file. Otherwise it would get set to xml file
+        thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+        return true;
       } else {
         log.debug3(filename + " does not exist in this AU");
-        return false; //No files found that match this record
+        return false; //No file found to match this record
       }
     }
   }

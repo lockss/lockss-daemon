@@ -28,6 +28,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americaninstituteofphysics;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -39,105 +40,49 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-/*
- * Full-text and metadata XML:
- *      "<base_url>/<year>/<zip_file_name>.zip!/
- *              <journal_id>/<volume_num>/<issue_num>/
- *              <article_num>/Markup/<xml_file_name>.xml"
-
- *      "http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/
- *              2013/test_76_clockss_aip_2013-06-07_084326.zip!/
- *              JAP/v111/i11/112601_1/Markup/VOR_10.1063_1.4726155.xml"
- * 
- * Full-text PDF:
- *      "<base_url>/<year>/<zip_file_name>.zip!/
- *              <journal_id>/<volume_num>/<issue_num>/
- *              <article_num>/Page_Renditions/online.pdf"
- *
- *      "http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/
- *              2013/test_76_clockss_aip_2013-06-07_084326.zip!/
- *              JAP/v111/i11/112601_1/Page_Renditions/online.pdf"
- */
 public class AIPJatsSourceArticleIteratorFactory
   implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  private static Logger log = 
+  protected static Logger log = 
       Logger.getLogger(AIPJatsSourceArticleIteratorFactory.class);
- 
-  private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-/*  private static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[^/]+\\.zip!/[A-Z]+/v[0-9]+/i[0-9]+/[^/]+/"
-          + "(Page_Renditions|Markup)/[^/]+\\.(pdf|xml)$\", base_url, year";
-*/
+
+  // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
+  //could handle any number of subdirectories under the year so long as end in .xml
+  protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";   // 
   protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
   
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    return new AIPJatsSourceArticleIterator(au, 
-                                            new SubTreeArticleIterator.Spec()
-                                           .setTarget(target)
-                                           .setRootTemplate(ROOT_TEMPLATE)
-                                           .setPatternTemplate(PATTERN_TEMPLATE, 
-                                               Pattern.CASE_INSENSITIVE));
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+    
+    final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+    final String XML_REPLACEMENT = "/$1.xml";
+
+    // no need to limit to ROOT_TEMPLATE
+    SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
+    theSpec.setRootTemplate(ROOT_TEMPLATE);
+    theSpec.setTarget(target);
+    theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    /* this is necessary to be able to see what's inside the zip file */
+    theSpec.setVisitArchiveMembers(true);
+    builder.setSpec(theSpec);
+    //builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+    // NOTE - full_text_cu is set automatically to the url used for the articlefiles
+    // ultimately the metadata extractor needs to set the entire facet map 
+
+    // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+    builder.addAspect(XML_PATTERN,
+        XML_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+
+    return builder.getSubTreeArticleIterator();
   }
   
-  private static class AIPJatsSourceArticleIterator
-    extends SubTreeArticleIterator {
-	 
-    private static Pattern XML_PATTERN =
-        Pattern.compile("/([^/]+)/Markup/[^/]+\\.xml$", 
-                        Pattern.CASE_INSENSITIVE);
-    
-    private AIPJatsSourceArticleIterator(ArchivalUnit au,
-                                  SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-      spec.setVisitArchiveMembers(true);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      log.debug3("article url: " + url);
-      Matcher mat;
-            
-      mat = XML_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processFullTextXml(cu, mat);
-      }
-      
-      log.warning("Mismatch between article iterator factory "
-                  + "and article iterator: " + url);
-      return null;
-    }
-
-    private ArticleFiles processFullTextXml(CachedUrl cu, Matcher mat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setFullTextCu(cu);
-      af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_XML, cu);
-      af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-      
-      log.debug3("target: " + spec.getTarget().getPurpose());
-      /*
-      if(spec.getTarget() != MetadataTarget.Article()) {
-	guessPdf(af, mat);
-      }
-      */
-      
-      return af;
-    }
-    /*
-    private void guessPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(
-          mat.replaceFirst("/$1/Page_Renditions/online.pdf"));
-      
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-    }
-    */
-    
+  // Enclose the method that creates the builder to allow a child to do additional processing
+  // for example Taylor&Francis
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+   return new SubTreeArticleIteratorBuilder(au);
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(
