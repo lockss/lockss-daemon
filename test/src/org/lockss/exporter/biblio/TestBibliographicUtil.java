@@ -1,5 +1,5 @@
 /*
- * $Id: TestBibliographicUtil.java,v 1.9 2013-09-18 11:36:14 easyonthemayo Exp $
+ * $Id: TestBibliographicUtil.java,v 1.10 2013-12-09 21:16:32 pgust Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     // Set up some AUs for the equivalence tests
     // Basic cloneable AU
     afrTod = new BibliographicItemImpl()
-        .setJournalTitle("Africa Today")
+        .setPublicationTitle("Africa Today")
         .setName("Africa Today")
         .setYear("1999").setVolume("46")
             // Note we have to set these default ISSN/EISSN for compatibility with Tdb created below
@@ -110,7 +110,7 @@ public class TestBibliographicUtil extends LockssTestCase {
     afrTodDiffVol  = new BibliographicItemImpl(afrTod).setVolume("47");
     afrTodDiffYear = new BibliographicItemImpl(afrTod).setYear("2000");
     afrTodDiffName = new BibliographicItemImpl(afrTod).setName("Africa Yesterday");
-    afrTodDiffJournalTitle = new BibliographicItemImpl(afrTod).setJournalTitle("Africa Yesterday");
+    afrTodDiffJournalTitle = new BibliographicItemImpl(afrTod).setPublicationTitle("Africa Yesterday");
     afrTodDiffIssn = new BibliographicItemImpl(afrTod).setPrintIssn(TdbTestUtil.DEFAULT_ISSN_4);
     afrTodDiffPublisher = new BibliographicItemImpl(afrTod).setPublisherName(TdbTestUtil.DEFAULT_PUBLISHER);
 
