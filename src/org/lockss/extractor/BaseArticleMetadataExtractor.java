@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.17 2013-01-07 02:22:52 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.18 2013-12-09 18:40:24 pgust Exp $
  */
 
 /*
@@ -116,8 +116,12 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
         am.putIfBetter(MetadataField.FIELD_DATE, tdbau.getStartYear());
         am.putIfBetter(MetadataField.FIELD_VOLUME, tdbau.getStartVolume());
         am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
-        am.putIfBetter(MetadataField.FIELD_JOURNAL_TITLE,tdbau.getJournalTitle());
+        am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE,
+                       tdbau.getPublicationTitle());
         am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
+        am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, 
+                       tdbau.getPublicationType());
+        am.putIfBetter(MetadataField.FIELD_SERIES_TITLE,tdbau.getSeriesTitle());
       }
     }
     if (log.isDebug3()) log.debug3("adding("+af.getFullTextCu());
