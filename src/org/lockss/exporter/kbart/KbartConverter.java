@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.47 2013-05-03 12:50:29 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.48 2013-12-09 20:56:16 pgust Exp $
  */
 
 /*
@@ -783,7 +783,7 @@ public class KbartConverter {
     
     // Add publisher and title 
     baseKbt.setField(PUBLISHER_NAME, au.getPublisherName());
-    baseKbt.setField(PUBLICATION_TITLE, au.getJournalTitle());
+    baseKbt.setField(PUBLICATION_TITLE, au.getPublicationTitle());
 
     // Now add information that can be retrieved from the AUs.
     // Add ISBN/EISBN (for books) or ISSN/EISSN (for periodicals)
@@ -884,7 +884,7 @@ public class KbartConverter {
     String titleIdCheck = getTitleId(au);
     String issnCheck = au.getPrintIssn();
     String eissnCheck = au.getEissn();
-    String titleCheck = au.getJournalTitle();
+    String titleCheck = au.getPublicationTitle();
     // TODO Validate the ISSNs as well as null-checking?
     if (titleCheck!=null && !titleCheck.equals(kbt.getField(PUBLICATION_TITLE))) {
       log.info(String.format("Name change within title %s => %s", 
@@ -1076,7 +1076,7 @@ public class KbartConverter {
 
     // Log which ordering is used by each title after the analysis
     log.debug2(String.format("%s will use %s ordering\n",
-        aus.get(0).getJournalTitle(), preferVolume ? "VOLUME" : "YEAR"));
+        aus.get(0).getPublicationTitle(), preferVolume ? "VOLUME" : "YEAR"));
 
     return new TitleRangeInfo(preferVolume ? rangesByVol : rangesByYear, hasFullVols, hasFullYears);
   }
@@ -1116,7 +1116,7 @@ public class KbartConverter {
       log.debug(String.format(
           "%s lacks a complete and consistent set of %ss; no coverage gap " +
               "calculations possible with this field.",
-          aus.get(0).getJournalTitle(), sortField
+          aus.get(0).getPublicationTitle(), sortField
       ));
       return ranges;
     }
@@ -1207,7 +1207,7 @@ public class KbartConverter {
     // Compare the *first* year in the AU at each end of the range
     if (!verifyYearRangeConsistency(range)) {
       log.warning(String.format("TitleRange problem for %s. Years: %s - %s", 
-          range.first.getJournalTitle(),
+          range.first.getPublicationTitle(),
           range.first.getStartYear(),
           range.last.getStartYear()
       ));
@@ -1215,7 +1215,7 @@ public class KbartConverter {
     // Compare the volumes
     if (!verifyVolumeRangeConsistency(range)) {
       log.warning(String.format("TitleRange problem for %s. Volumes: %s - %s",
-          range.first.getJournalTitle(),
+          range.first.getPublicationTitle(),
           range.first.getStartVolume(),
           range.last.getEndVolume()
       ));
