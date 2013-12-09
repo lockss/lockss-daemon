@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicKbartTitle.java,v 1.4 2013-05-03 12:50:29 easyonthemayo Exp $
+ * $Id: BibliographicKbartTitle.java,v 1.5 2013-12-09 20:58:52 pgust Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class BibliographicKbartTitle extends BibliographicItemAdapter {
   }
 
   @Override
-  public String getJournalTitle() {
+  public String getPublicationTitle() {
     return kbt.getField(KbartTitle.Field.PUBLICATION_TITLE);
   }
 
@@ -118,8 +118,8 @@ public class BibliographicKbartTitle extends BibliographicItemAdapter {
   }
 
   @Override
-  public BibliographicItemAdapter setJournalTitle(String journalTitle) {
-    kbt.setField(KbartTitle.Field.PUBLICATION_TITLE, journalTitle);
+  public BibliographicItemAdapter setPublicationTitle(String publicationTitle) {
+    kbt.setField(KbartTitle.Field.PUBLICATION_TITLE, publicationTitle);
     return this;
   }
 

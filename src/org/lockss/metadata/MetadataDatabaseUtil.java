@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.16 2013-06-19 22:56:49 fergaloy-sf Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.17 2013-12-09 21:01:38 pgust Exp $
  */
 
 /*
@@ -78,7 +78,8 @@ final public class MetadataDatabaseUtil {
    */
   static class BibliographicDatabaseItem implements BibliographicItem {
     final String publisher;
-    final String title;
+    final String publicationTitle;
+    final String seriesTitle;
     final String proprietaryId;
     final String printisbn;
     final String eisbn;
@@ -101,7 +102,7 @@ final public class MetadataDatabaseUtil {
      */
     public BibliographicDatabaseItem(ResultSet resultSet) throws SQLException {
       publisher = resultSet.getString(1);
-      title = resultSet.getString(2);
+      publicationTitle = resultSet.getString(2);
       printissn = MetadataUtil.formatIssn(resultSet.getString(3));
       eissn = MetadataUtil.formatIssn(resultSet.getString(4));
       printisbn = MetadataUtil.formatIssn(resultSet.getString(5));
@@ -111,6 +112,7 @@ final public class MetadataDatabaseUtil {
       startyear = resultSet.getString(8);
       endyear = resultSet.getString(8);
       proprietaryId = resultSet.getString(9);
+      seriesTitle = null; // temporary value
       
       // todo: get from DB first
       if (   !StringUtil.isNullString(eissn) 
@@ -183,8 +185,13 @@ final public class MetadataDatabaseUtil {
     }
 
     @Override
-    public String getJournalTitle() {
-      return title;
+    public String getPublicationTitle() {
+      return publicationTitle;
+    }
+
+    @Override
+    public String getSeriesTitle() {
+      return seriesTitle;
     }
 
     @Override
