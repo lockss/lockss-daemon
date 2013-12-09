@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.47 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: OpenUrlResolver.java,v 1.48 2013-12-09 21:12:06 pgust Exp $
  */
 
 /*
@@ -1338,7 +1338,7 @@ public class OpenUrlResolver {
   /**
    * Return article URL from a TdbTitle, date, volume, and issue. 
    * 
-   * @param title the TdbTitle
+   * @param tdbAus a collection of TdbAus that match an ISSNs
    * @param date the publication date
    * @param volume the volume
    * @param issue the issue
