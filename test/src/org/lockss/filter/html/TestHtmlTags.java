@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlTags.java,v 1.3 2010-02-04 06:53:00 tlipkis Exp $
+ * $Id: TestHtmlTags.java,v 1.4 2013-12-09 23:57:42 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,18 +33,63 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
-import java.util.*;
 import org.lockss.util.*;
-import org.lockss.filter.html.*;
 import org.lockss.test.*;
 import org.htmlparser.*;
 import org.htmlparser.util.*;
 import org.htmlparser.tags.*;
-import org.htmlparser.filters.*;
 
 public class TestHtmlTags extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestHtmlTags");
-
+  static Logger log = Logger.getLogger(TestHtmlTags.class);
+  
+  // Ensure <header>...</header> gets parsed as an HtmlTags.Header
+  // composite tag, not as the default sequence of TagNodes
+  public void testHeaderTag() throws IOException {
+    String in = "<header class=\"special\"><i>iii</i></header>";
+    MockHtmlTransform xform =
+        new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+        new HtmlFilterInputStream(new StringInputStream(in), xform)
+        .registerTag(new HtmlTags.Header());
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Header);
+    assertEquals(1, nl.size());
+  }
+  
+  // Ensure <footer>...</footer> gets parsed as an HtmlTags.Footer
+  // composite tag, not as the default sequence of TagNodes
+  public void testFooterTag() throws IOException {
+    String in = "<footer class=\"special\"><i>iii</i></footer>";
+    MockHtmlTransform xform =
+        new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+        new HtmlFilterInputStream(new StringInputStream(in), xform)
+        .registerTag(new HtmlTags.Footer());
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Footer);
+    assertEquals(1, nl.size());
+  }
+  
+  // Ensure <section>...</section> gets parsed as an HtmlTags.Section
+  // composite tag, not as the default sequence of TagNodes
+  public void testSectionTag() throws IOException {
+    String in = "<section class=\"special\"><i>iii</i></section>";
+    MockHtmlTransform xform =
+        new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+        new HtmlFilterInputStream(new StringInputStream(in), xform)
+        .registerTag(new HtmlTags.Section());
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Section);
+    assertEquals(1, nl.size());
+  }
+  
   // Ensure <iframe>...</iframe> gets parsed as an HtmlTags.Iframe
   // composite tag, not as the default sequence of TagNodes
   public void testIframeTag() throws IOException {
