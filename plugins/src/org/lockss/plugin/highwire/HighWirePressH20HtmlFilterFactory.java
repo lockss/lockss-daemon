@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.50 2013-10-24 23:05:49 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.51 2013-12-10 01:24:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -188,6 +188,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("li", "id", "nav_current_issue"),
         // For lofe.dukejournals.org - shows the current viewing date
         HtmlNodeFilters.tagWithAttribute("div", "class", "site-date"),
+        // Beginning and end markers were added, e.g. Royal Society Interface
+        HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-start"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "highwire-journal-article-marker-end"),
         // There is an "Impact factor" but it is only ctext in an H3 tag
         // and the parent <div> is generic. Use a combination of the grandparent <div> plus the ctext
         // It's not ideal, but there is no better solution. Seen in occmed.oxfordjournals.org
