@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.11 2013-12-09 20:41:41 pgust Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.12 2013-12-10 23:42:44 alexandraohlson Exp $
  */
 
 /*
@@ -84,7 +84,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 		  MetadataField.KEY_PUBLICATION_TITLE, "Air and Space Volume 1",
                   MetadataField.KEY_SERIES_TITLE, "Air and Space",
 		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
-		  MetadataField.KEY_ACCESS_URL, "fullurl");
+		  MetadataField.KEY_ACCESS_URL, "fullurl",
+		  MetadataField.KEY_PUBLICATION_TYPE, "bookSeries");
 
 
     // Tdb with values for all metadata fields
@@ -118,7 +119,8 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
                   MetadataField.KEY_SERIES_TITLE, "Air and Space",
 		  MetadataField.KEY_DATE, "1943",
 		  MetadataField.KEY_PUBLISHER, "Publisher[10.0135/12345678]",
-		  MetadataField.KEY_ACCESS_URL, "fullurl");
+		  MetadataField.KEY_ACCESS_URL, "fullurl",
+		  MetadataField.KEY_PUBLICATION_TYPE, "bookSeries");
   }
 
   public void testAccessors() {

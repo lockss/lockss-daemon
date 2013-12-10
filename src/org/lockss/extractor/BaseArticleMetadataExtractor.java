@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.18 2013-12-09 18:40:24 pgust Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.19 2013-12-10 23:42:44 alexandraohlson Exp $
  */
 
 /*
@@ -100,15 +100,17 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
   protected void addTdbDefaults(ArticleFiles af,
 				CachedUrl cu, ArticleMetadata am) {
     if (log.isDebug3()) log.debug3("addTdbDefaults("+af+", "+cu+", "+am+")");
-    if (!cu.getArchivalUnit().isBulkContent()) {
-      // Fill in missing values rom TDB if TDB entries reflect bibliographic
-      // information for the content. This is not the case for bulk data
-      TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
-      if (log.isDebug3()) log.debug3("tc; "+tc);
-      TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
-      if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
-      if (tdbau != null) {
-        if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
+    TitleConfig tc = cu.getArchivalUnit().getTitleConfig();
+    if (log.isDebug3()) log.debug3("tc; "+tc);
+    TdbAu tdbau = (tc == null) ? null : tc.getTdbAu();
+    if (log.isDebug3()) log.debug3("tdbau; "+tdbau);
+    if (tdbau != null) {
+      if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
+      // Even bulk data should pick up publisher from the TDB file
+      am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
+      if (!cu.getArchivalUnit().isBulkContent()) {
+        // Fill in missing values rom TDB if TDB entries reflect bibliographic
+        // information for the content. These values don't make sense for bulk data
         am.putIfBetter(MetadataField.FIELD_ISBN, tdbau.getPrintIsbn());
         am.putIfBetter(MetadataField.FIELD_EISBN, tdbau.getEisbn());
         am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getPrintIssn());
@@ -118,8 +120,7 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
         am.putIfBetter(MetadataField.FIELD_ISSUE, tdbau.getStartIssue());
         am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE,
                        tdbau.getPublicationTitle());
-        am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
-        am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, 
+        am.putIfBetter(MetadataField.FIELD_PUBLICATION_TYPE, 
                        tdbau.getPublicationType());
         am.putIfBetter(MetadataField.FIELD_SERIES_TITLE,tdbau.getSeriesTitle());
       }
