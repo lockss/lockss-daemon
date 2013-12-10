@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -39,6 +39,10 @@
   <entry>
     <string>au_start_url</string>
     <string>"%sejournals/issues/%s/%s", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.64.0</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
