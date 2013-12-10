@@ -1,5 +1,5 @@
 /*
- * $Id: TFileCache.java,v 1.6 2013-12-09 22:59:47 fergaloy-sf Exp $
+ * $Id: TFileCache.java,v 1.7 2013-12-10 02:24:10 fergaloy-sf Exp $
  */
 
 /*
@@ -370,6 +370,13 @@ public class TFileCache {
    *          <code>null</code> if the TFile is not in the cache.
    */
   public void freeTFile(TFile tf, CachedUrl cu) {
+    // Unmount the archive.
+    try {
+	unmount(tf);
+    } catch (Throwable t) {
+	log.warning("Error unmounting " + tf, t);
+    }
+
     // Nothing more to do if the TFile is not in the cache.
     if (cu == null) return;
 
@@ -391,8 +398,16 @@ public class TFileCache {
       // Record the timestamp when this TFile was freed.
       ent.freeingInstant = TimeBase.nowMs();
 
-      // Flush the entry.
-      flushEntry(ent);
+      // Remove the file from the cache.
+      ent.invalidate();
+
+      try {
+	deleteFile(ent);
+      } catch (Exception e) {
+	log.warning("Error deleting " + ent.ctf, e);
+      }
+
+      cmap.remove(ent.key);
 
       // Update cache size.
       curSize -= ent.size;
