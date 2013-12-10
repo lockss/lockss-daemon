@@ -117,7 +117,7 @@
     >
     
     {
-      comment[0] = requested manifests see RT 5324
+
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://hosppeds.aappublications.org/
       implicit < status ; year ; name ; param[volume_name] >
@@ -394,7 +394,7 @@
       au < HighWirePressPlugin ; ready ; 2000 ; Red Book Online Volume 2000 ; 2000 >
       au < HighWirePressPlugin ; ready ; 2003 ; Red Book Online Volume 2003 ; 2003 >
       au < HighWirePressPlugin ; testing ; 2006 ; Red Book Online Volume 2006 ; 2006 >
-      au < HighWirePressPlugin ; testing ; 2009 ; Red Book Online Volume 2009 ; 2009 >
+      au < HighWirePressPlugin ; ready ; 2009 ; Red Book Online Volume 2009 ; 2009 >
     }
 
     {
