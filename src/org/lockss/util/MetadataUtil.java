@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.19 2013-03-29 11:55:58 easyonthemayo Exp $
+ * $Id: MetadataUtil.java,v 1.20 2013-12-10 00:09:02 etenbrink Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import static org.lockss.extractor.MetadataField.*;
 
 public class MetadataUtil {
 
-  static Logger log = Logger.getLogger("MetadataUtil");
+  static Logger log = Logger.getLogger(MetadataUtil.class);
 
   public static String getTargetMimeType(MetadataTarget target,
 					 ArchivalUnit au) {
@@ -61,8 +61,8 @@ public class MetadataUtil {
   private static Pattern ISSN_PAT =
     Pattern.compile("\\d{4}-\\d{3}[\\d{1}|x{1}|X{1}]");
   
+  // pattern to check whether it has at least one letter.
   private static Pattern AUTHOR_PAT =
-   // pattern to check whether it has atleast one letter.   
     Pattern.compile(".*\\p{L}.*");
 
   /**
@@ -409,7 +409,7 @@ public class MetadataUtil {
     return formatIsbn(validateIsbn(isbn));
   }
 
-  private static Pattern DOI_PAT = Pattern.compile("10\\.\\d{4}/.*");
+  private static Pattern DOI_PAT = Pattern.compile("10[.][0-9a-z]{4,6}/.*");
 
   /**
    * Check that DOI number is a valid DOI string. 
