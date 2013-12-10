@@ -80,6 +80,7 @@
       issnl = 1025-448X
     >
 
+    type = bookSeries
     param[base_url] = http://erm.ersjournals.com/
     
     au < exists ; 2003 ; European Respiratory Monographs Volume 25 ; 25 >
