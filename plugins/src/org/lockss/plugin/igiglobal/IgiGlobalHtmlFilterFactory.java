@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlFilterFactory.java,v 1.6 2013-11-27 20:41:18 thib_gc Exp $
+ * $Id: IgiGlobalHtmlFilterFactory.java,v 1.7 2013-12-10 22:55:02 thib_gc Exp $
  */
 
 /*
@@ -52,6 +52,20 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         /*
+         * Broad area filtering
+         */
+        // Header
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
+        // Left column
+        HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarLeft"), // (old)
+        // Right column
+        HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
+        // Footer
+        HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
+        
+        /*
          * Hash filter
          */
         // Contains ad-specific cookies
@@ -60,6 +74,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("link"),
         // Changed from "IGI Global - Foo" to "Foo | IGI Global"
         new TagNameFilter("title"),
+        // Various <br> tags added or removed over time
+        new TagNameFilter("br"),
 
         HtmlNodeFilters.tagWithAttributeRegex("span", "id", "CenterContent.*Header"),
         //hidden inputs with changing keys
@@ -81,10 +97,8 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
             }
         },
         
-        // Stylesheets sometimes contain version numbers
-        HtmlNodeFilters.tagWithAttribute("link", "rel", "stylesheet"),
-        // Login page
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/gateway/login"),
+        // 'login' sometimes clickable, sometimes with base URL
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/gateway/login/?$"),
         // Article titles
         HtmlNodeFilters.tagWithAttribute("div", "class", "Title1 BorderBottom"),
         HtmlNodeFilters.tagWithAttributeRegex("h2", "style", "border-bottom"),
@@ -92,6 +106,12 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_favorite"),
         // Search box
         HtmlNodeFilters.tagWithAttribute("span", "class", "search-contents"),
+        // Styling and markup of full text icons changed over time
+        HtmlNodeFilters.tagWithAttributeRegex("a", "id", "_ucViewFullText_lnkView(Pdf|Xml)$"),
+        // Structure of PDF landing pages changed over time
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_cphCenterContent_pnlContentNav"),
+        HtmlNodeFilters.tagWithAttribute("a", "id", "ctl00_cphCenterContent_lnkDownloadPdf"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ctl00_cphCenterContent_pnlContentNavBottom"),
         
         // IGI Global books identifies library with access in header
         HtmlNodeFilters.tagWithAttribute("span", "id", "ctl00_ctl00_cphMain_cphCenter_lblHeader"),
@@ -99,15 +119,6 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         // <h3> replaced <h4> or vice versa at one point
         new TagNameFilter("h3"),
         new TagNameFilter("h4"),
-        
-        /*
-         * Broad area filtering
-         */
-        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderTop"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "HeaderBottom"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "SidebarLeft"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "SidebarRight"),
-        HtmlNodeFilters.tagWithAttribute("div", "class", "Footer"),
         
     };
     

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.6 2013-11-27 20:41:19 thib_gc Exp $
+ * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.7 2013-12-10 22:55:02 thib_gc Exp $
  */
 
 /*
@@ -101,11 +101,11 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 		  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span>\n";
 
   private static final String trialImageHtml =
-		  "<br>" +
+		  "<p>foo</p>" +
 		  "<div class=\"FloatRight\">\n" +
 		  		"<img style=\"background-color: #fff;\" alt=\"Trial Access\" src=\"/Images/trialaccess.png\">\n" +
 		  "</div>";
-  private static final String trialImageHtmlFiltered = "<br>";
+  private static final String trialImageHtmlFiltered = "<p>foo</p>";
 
   private static final String SearchBoxHtml =
 		  "<br>" +
@@ -165,8 +165,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
           "<span class=\"BlankButtonIcon\" style=\"background: url('/jQuery/css/redmond/images/ui-icons_6da8d5_256x240.png') no-repeat 0px -64px;\" />" +
           "</td>" +
           "<td valign=\"middle\"><a id=\"ctl00_ctl00_cphMain_cphCenter_lnkBackTop\" class=\"GrayButtonLinks\" href=\"/gateway/database/0\">View All Books</a>" +
-          "</td></tr></table>" +
-          "<br /><br />";
+          "</td></tr></table>";
   
   public static final String identityHeaderHtmlFiltered =
       "<td valign=\"top\" class=\"FullHeight CenterContentSpace\">" +
@@ -176,8 +175,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
           "<span class=\"BlankButtonIcon\" style=\"background: url('/jQuery/css/redmond/images/ui-icons_6da8d5_256x240.png') no-repeat 0px -64px;\" />" +
           "</td>" +
           "<td valign=\"middle\"><a id=\"ctl00_ctl00_cphMain_cphCenter_lnkBackTop\" class=\"GrayButtonLinks\" href=\"/gateway/database/0\">View All Books</a>" +
-          "</td></tr></table>" +
-          "<br /><br />";
+          "</td></tr></table>";
   
   
   public static final String footerWithSponsor = 
