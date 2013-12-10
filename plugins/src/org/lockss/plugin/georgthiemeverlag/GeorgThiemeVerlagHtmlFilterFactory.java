@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.2 2013-11-23 01:45:22 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.3 2013-12-10 00:14:29 etenbrink Exp $
  */
 /*
 
@@ -37,12 +37,9 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -60,9 +57,10 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         // Hash filter
         new TagNameFilter("script"),
         // Remove header/footer items
-// XXX  remove 2 comments below when new HtmlFilterInputStream changes go into effect
-//        new TagNameFilter("header"),
-//        new TagNameFilter("footer"),
+        new TagNameFilter("header"),
+        new TagNameFilter("footer"),
+        // remove ALL comments
+        HtmlNodeFilters.comment(),
         // Contains ads
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar[^\"]*"),
         // Contains navigation items
@@ -73,19 +71,13 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("span", "class", "articleCategories")
     };
     
-    InputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
+    .registerTag(new HtmlTags.Header())
+    .registerTag(new HtmlTags.Footer());
+    
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(
-// XXX remove this and next 3 lines when new HtmlFilterInputStream changes go into effect
-            new TagPair("<header id=\"pageHeader\">", "</header>"),
-            new TagPair("<footer>", "</footer>"),
-// XXX 
-            new TagPair("<!--[", "]-->"),
-            new TagPair("<!-- ", " -->")
-            ));
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }
