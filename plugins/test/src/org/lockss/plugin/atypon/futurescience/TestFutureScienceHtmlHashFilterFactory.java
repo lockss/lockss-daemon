@@ -1,5 +1,5 @@
 /*
- * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.5 2013-08-06 22:45:13 alexandraohlson Exp $
+ * $Id: TestFutureScienceHtmlHashFilterFactory.java,v 1.6 2013-12-11 20:16:49 alexandraohlson Exp $
  */
 
 /* Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University, all rights reserved.
@@ -92,7 +92,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</table>";
 
   private static final String freeHtmlFiltered =
-      "    <!--totalCount15--><!--modified:1375798955000-->" +
+      "    " +
           "<h2 class=\"tocHeading\">" +
           "<span class=\"subj-group\">Special Focus Issue</span>" +
           "</h2>" +
@@ -125,7 +125,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</div>";
   private static final String footerHtmlFiltered =
       "<hr size=\"1\" />" +
-          "<!-- contact info -->";
+          "";
 
   private static final String quickLinksHtml =
       "<table border=\"0\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\"><tr>" +
@@ -173,7 +173,7 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "  </td>";
   private static final String sideMenuHtmlFiltered =
       "      <td valign=\"top\" width=\"165\">  " +
-          "  <!-- end left side menu -->" +
+          "  " +
           "  </td>";
 
   private static final String alsoReadHtml =
@@ -274,15 +274,15 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
           "</div><!-- /fulltext content -->" +
           "<div class=\"article_link\">"; 
   private static final String citedBySectionFiltered =
-      "</div><!-- /abstract content --><!-- fulltext content -->" +
-          "<!-- /fulltext content -->" +
+      "</div>" +
+          "" +
           "<div class=\"article_link\">"; 
 
   // expert-reviews uses slightly different text for bottom information
   // for the filter to work there needs to be a parent of the node to remove (as in real life examples)
   private static final String expReviewsBottom =
       "<body>" +
-          "!--end main menu-->" +
+          "<!--end main menu-->" +
           "<table>foo goes here </table>" +
           "<br />" +
           "<div class=\"bottomSiteMapLink\">" +
@@ -318,14 +318,34 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
 
   private static final String expReviewsBottomFiltered =
       "<body>" +
-          "!--end main menu-->" +
+          "" +
           "<table>foo goes here </table>" +
           "<br />" +
           "<hr size=\"1\" />" +
-          "<!-- contact info -->" +
+          "" +
           "<span class=\"fontSize1\"></span>" + 
           "</body>";
-
+  
+  private static final String spanCommentHtml =
+      "<div class=\"ack\"> " +
+      "<span class=\"title\" id=\"d119043e299\">Put the Title Here.</span>" +
+      "  <p>    <!--totalCount11--><!--modified:1386095090000-->" +
+      "<h2 class=\"tocHeading\"></h2></p>" +
+      "<table><tr><td>ONE</td>" +
+      "<td>TWO" +
+      "<!-- placeholder id=null, description=TOC Marketing Message 2 --></td>" +
+      "</tr></table>" +
+      "</div>";
+  
+  private static final String spanCommentFiltered =
+      "<div class=\"ack\"> " +
+      "<span class=\"title\" >Put the Title Here.</span>" +
+      "  <p>    " +
+      "<h2 class=\"tocHeading\"></h2></p>" +
+      "<table><tr><td>ONE</td>" +
+      "</tr></table>" +
+      "</div>";
+  
   public void test_topBannerHtml() throws Exception {
     InputStream actIn = filt.createFilteredInputStream(mau,
         new StringInputStream(topBannerHtml),
@@ -414,6 +434,14 @@ public class TestFutureScienceHtmlHashFilterFactory extends LockssTestCase{
         new StringInputStream(freeHtml),
         Constants.DEFAULT_ENCODING);
     assertEquals(freeHtmlFiltered, StringUtil.fromInputStream(actIn));
+
+  }
+  
+  public void test_spanCommentHtml() throws Exception {
+    InputStream actIn = filt.createFilteredInputStream(mau,
+        new StringInputStream(spanCommentHtml),
+        Constants.DEFAULT_ENCODING);
+    assertEquals(spanCommentFiltered, StringUtil.fromInputStream(actIn));
 
   }
 

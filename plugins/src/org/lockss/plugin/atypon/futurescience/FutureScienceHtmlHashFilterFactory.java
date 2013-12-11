@@ -1,5 +1,5 @@
 /*
- * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.6 2013-08-07 22:57:23 alexandraohlson Exp $
+ * $Id: FutureScienceHtmlHashFilterFactory.java,v 1.7 2013-12-11 20:16:49 alexandraohlson Exp $
  */
 
 /*
@@ -32,26 +32,39 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.atypon.futurescience;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Remark;
+import org.htmlparser.Tag;
 import org.htmlparser.Text;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.tags.Div;
+import org.htmlparser.tags.Span;
 import org.htmlparser.tags.TableColumn;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.HtmlTagFilter;
+import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.HtmlTransform;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
+import org.lockss.util.ListUtil;
+import org.lockss.util.ReaderInputStream;
 
 /* Don't extend BaseAtyponHtmlHashFilterFactory because 1) FutureScienceGroup is somewhat different
  * AND because we need to keep the comments for some context specific filtering and then
- * we can remove them at the end 
+ * we can remove them at the end
  */
 public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
 
@@ -134,10 +147,37 @@ public class FutureScienceHtmlHashFilterFactory implements FilterFactory {
         }
 
     };
-    return new HtmlFilterInputStream(in,
-        encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-
+    HtmlTransform xform = new HtmlTransform() {
+      //; The "id" attribute of <span> tags can have a gensym
+        @Override
+        public NodeList transform(NodeList nodeList) throws IOException {
+          try {
+            nodeList.visitAllNodesWith(new NodeVisitor() {
+              @Override
+              public void visitTag(Tag tag) {
+                if (tag instanceof Span && tag.getAttribute("id") != null) {
+                  tag.removeAttribute("id");
+                }
+              }
+            });
+          } catch (ParserException pe) {
+            IOException ioe = new IOException();
+            ioe.initCause(pe);
+            throw ioe;
+          }
+          return nodeList;
+        }
+    };   
+    
+    HtmlTransform xf1 = HtmlNodeFilterTransform.exclude(new OrFilter(filters));
+    InputStream is1 = new HtmlFilterInputStream(in,
+        encoding,new HtmlCompoundTransform(xf1, xform));
+    
+    Reader read1 = FilterUtil.getReader(is1, encoding);
+    // remove comments now that we're done filtering 
+    Reader read2 = HtmlTagFilter.makeNestedFilter(read1,
+          ListUtil.list(new HtmlTagFilter.TagPair("<!--", "-->",true)));
+    return new ReaderInputStream(read2);
   }
 }
 
