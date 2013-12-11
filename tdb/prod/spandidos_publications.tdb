@@ -22,6 +22,7 @@
     au < exists ; 2012 ; Oncology Letters Volume 4 ; 4 >
     au < exists ; 2013 ; Oncology Letters Volume 5 ; 5 >
     au < exists ; 2013 ; Oncology Letters Volume 6 ; 6 >
+    au < expected ; 2014 ; Oncology Letters Volume 7 ; 7 >
 
   }
 
@@ -59,6 +60,7 @@
     param[journal_id] = mco
 
     au < exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 >
+    au < expected ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 >
 
   }
 
@@ -98,6 +100,7 @@
     param[journal_id] = br
 
     au < exists ; 2013 ; Biomedical Reports Volume 1 ; 1 >
+    au < expected ; 2014 ; Biomedical Reports Volume 2 ; 2 >
 
   }
 
@@ -111,6 +114,7 @@
     param[journal_id] = or
 
     au < exists ; 2013 ; Oncology Reports Volume 1 ; 1 >
+    au < expected ; 2014 ; Oncology Reports Volume 2 ; 2 >
 
   }
 
