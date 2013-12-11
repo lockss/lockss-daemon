@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.3 2013-12-11 21:40:49 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.4 2013-12-11 22:00:16 aishizaki Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ implements SourceXmlMetadataExtractorHelper {
         }
         else if("inline-formula".equals(nodeName)){
               title = infoNode.getTextContent();
-              titleVal.append("...");
+              titleVal.append(" ... ");
             }
       }
       if (titleVal.length() != 0)  {
@@ -283,7 +283,7 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(AIPJATS_doi, MetadataField.FIELD_DOI);
     cookMap.put(AIPJATS_vol, MetadataField.FIELD_VOLUME);
     cookMap.put(AIPJATS_issue, MetadataField.FIELD_ISSUE);
-    cookMap.put(AIPJATS_journal_title, MetadataField.FIELD_JOURNAL_TITLE);
+    cookMap.put(AIPJATS_journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(AIPJATS_article_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(AIPJATS_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
