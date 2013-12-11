@@ -163,19 +163,16 @@ public class TestAIPJatsSourceArticleIteratorFactory
   }
   
   // There's only one pdf file per simcontent branch because it has 
-  // a constant name online.pdf. Each branch has 2 xml files and 1 pdf.
+  // a constant name online.pdf. Each branch has 1 xml files and 1 pdf.
   //  	http://www.example.com/1/Markup/001file.xml
-  //  	http://www.example.com/1/Markup/002file.xml
   //  	http://www.example.com/1/Page_Renditions/online.pdf
   //  	http://www.example.com/2/Markup/001file.xml
-  //  	http://www.example.com/2/Markup/002file.xml
   //  	http://www.example.com/2/Page_Renditions/online.pdf
   //  	http://www.example.com/3/Markup/001file.xml
-  //  	http://www.example.com/3/Markup/002file.xml
   //  	http://www.example.com/3/Page_Renditions/online.pdf
-  // expCount = 9; // 1 depth, 3 branches, 2 files
+  // expCount = 6; // 1 depth, 3 branches, 2 files
 
-  /*
+  
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
 
@@ -185,65 +182,36 @@ public class TestAIPJatsSourceArticleIteratorFactory
 
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
-    
-    int count = 0;
-    int fullXmlCount = 0;
-    int fullPdfCount = 0;
-    
-    while (artIter.hasNext()){
-      ArticleFiles af = artIter.next();
-      log.debug3(af.toString());
-      CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
-      CachedUrl fullCu = af.getFullTextCu();
-      if ( cu != null) {
-         String url = cu.getUrl();
-         String contentType = cu.getContentType();
-         log.info("count " + count + " url " + url + " " + contentType);
-         count++;
-      }
-      if ( fullCu != null) {
-        String url = fullCu.getUrl();
-        String contentType = fullCu.getContentType();
-        // if full html is available, it will be this, otherwise pdf
-        if (contentType.equals("application/pdf")) {
-          fullPdfCount++;
-          log.info("pdf count " + fullPdfCount + " url " + url + " " + contentType);
-        } else {
-          fullXmlCount++;
-          log.info("xml count " + fullXmlCount + " url " + url + " " + contentType);
+
+    int expXmlCount = 6;
+    int expPdfCount = 0;
+    int xmlCount = 0;
+    int pdfCount = 0;
+    for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; 
+        it.hasNext() ; ) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
+      if (cusn instanceof CachedUrl) {
+        CachedUrl cu = (CachedUrl)cusn;
+        String url = cu.getUrl();
+        log.debug3("url: " + url);
+        if (url.contains("/Markup/")) {
+          if (url.endsWith("1/Markup/001file.xml")) {
+            //verifyArticleFile(cu);
+            log.debug3(url);
+          }
+          xmlCount++;
+        } else if (url.contains("Page_Renditions")) {
+          pdfCount++;
         }
      }
-
     }
-
-    //int expXmlCount = 6;
-   // int expPdfCount = 0;
-    //int xmlCount = 0;
-    //int pdfCount = 0;
-    //for (Iterator it = au.getAuCachedUrlSet().contentHashIterator() ; 
-    //    it.hasNext() ; ) {
-    //  CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
-    //  if (cusn instanceof CachedUrl) {
-     //   CachedUrl cu = (CachedUrl)cusn;
-    //    String url = cu.getUrl();
-    //    log.info("url: " + url);
-    //    if (url.contains("/Markup/")) {
-     //     if (url.endsWith("1/Markup/001file.xml")) {
-     //       verifyArticleFile(cu);
-     //     }
-     //     xmlCount++;
-    //    } else if (url.contains("Page_Renditions")) {
-    //      pdfCount++;
-    //    }
-    //  }
-    //}
-    log.info("Article count is " + count);
-    log.info("xml count is " + fullXmlCount);
-    log.info("pdf count is " + fullPdfCount);
+    //log.info("Article count is " + count);
+    log.debug3("xml count is " + xmlCount);
+    log.debug3("pdf count is " + pdfCount);
 
     //assertEquals(expXmlCount, xmlCount);
     //assertEquals(expPdfCount, pdfCount);
   }
- */
+ 
  
 }

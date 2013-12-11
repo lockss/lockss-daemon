@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.1 2013-12-06 17:50:25 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.2 2013-12-11 21:40:48 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -57,7 +57,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
 
   private static final String PLUGIN_NAME =
       "org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin";
-  //"org.lockss.plugin.aipjats.ClockssAIPJatsSourcePlugin";
 
   private static final String YEAR = "2013";
 
@@ -76,14 +75,15 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
   private static final String GOOD_ISSN = "0021-8979";
   private static final String GOOD_EISSN = "1089-7550";
   private static final String GOOD_ISSUE = "11";
-  private static final String GOOD_ARTICLE_TITLE = "Preface to Special Topic: Selected Papers from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011";
+  private static final String GOOD_ARTICLE_TITLE = "Preface to Special Topic: Selected Papers ... from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011";
   private static final String GOOD_JOURNAL_ID = "JAPIAU";
   private static final String GOOD_VOLUME = "111";
   private static final String HARDWIRED_PUBLISHER = 
       "American Institute of Physics";
-
-
-  private static String goodAuthors = "Chelast, Firsthua; Liast, Haozfirst; Sainlast, Naufirst L.";
+  private static ArrayList goodAuthors = (ArrayList) ListUtil.list(
+      "Chelast, Firsthua",
+      "Liast, Haozfirst",
+      "Sainlast, Naufirst L.");
    
  
   private static final String BASIC_CONTENT =
@@ -121,7 +121,10 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "</article-categories>" +
     "<title-group>" +
     "<article-title>" +
-    "Preface to Special Topic: Selected Papers from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011" +
+    "Preface to Special Topic: Selected Papers" +
+    "<inline-formula><mml:math display=\"inline\" overflow=\"scroll\"><mml:mrow><mml:mi>G</mml:mi><mml:mi>a</mml:mi></mml:mrow></mml:math></inline-formula>" + 
+    /* testing for inline formulas in article titles - replacing formulae with " ... " */
+    "from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011" +
     "</article-title>" +
     "</title-group>" +
     "<contrib-group>" +
@@ -444,7 +447,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-      assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR).toString());
+      assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {
       //IOUtil.safeClose(file_input);

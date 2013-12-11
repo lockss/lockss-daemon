@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.2 2013-12-09 18:11:51 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.3 2013-12-11 21:40:49 aishizaki Exp $
  */
 
 /*
@@ -53,14 +53,15 @@ public class AIPJatsSourceXmlMetadataExtractorHelper
 implements SourceXmlMetadataExtractorHelper {
   static Logger log = Logger.getLogger(AIPJatsSourceXmlMetadataExtractorHelper.class);
 
-  private static final String AUTHOR_SEPARATOR = ";";
+  private static final String NAME_SEPARATOR = ", ";
+
   /* 
    *  AIPJats specific node evaluators to extract the information we want
    */
   /*
    * AUTHOR information
    * NODE=<Contrib-group>  
-   *  contrib/
+   *  contrib/@contrib-type=author
    *  name/
    *  surname/
    *  given-names/
@@ -78,43 +79,27 @@ implements SourceXmlMetadataExtractorHelper {
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         String nodeName = infoNode.getNodeName();
-        if("#text".equals(nodeName)) {
-          continue;
-        }
-        if ("contrib".equals(nodeName)) {
-          NodeList cNodes = infoNode.getChildNodes();
-          for (int n = 0; n < cNodes.getLength(); n++) {
-            Node iNode = cNodes.item(n);
-            String nName = iNode.getNodeName();
-            if("#text".equals(nName)) {
-              continue;
+        if ("name".equals(nodeName)) {
+          NodeList nNodes = infoNode.getChildNodes();
+          for (int x = 0; x < nNodes.getLength(); x++){
+            Node nameNode = nNodes.item(x);
+            String namePart = nameNode.getNodeName();
+            if("surname".equals(namePart)){
+              name = nameNode.getTextContent();
+              names.append(name);
+            } else if ("given-names".equals(namePart)){
+              name = nameNode.getTextContent();
+              names.append(NAME_SEPARATOR + name);
+              log.debug3("contributor found: "+names.toString());
+              return names.toString();
             }
-            if ("name".equals(nName)) {
-              NodeList nNodes = iNode.getChildNodes();
-              for (int x = 0; x < nNodes.getLength(); x++){
-                Node nameNode = nNodes.item(x);
-                String namePart = nameNode.getNodeName();
-                if("surname".equals(namePart)){
-                  if (m > 0) {
-                    names.append(AUTHOR_SEPARATOR + " ");
-                  }
-                  name = nameNode.getTextContent();
-                  names.append(name);
-                } else if ("given-names".equals(namePart)){
-                  name = nameNode.getTextContent();
-                  names.append(", " + name);
-                }
-              }
-            } 
           }
         }
       }
       if (names.length() == 0) {
         log.debug3("no valid contributor found");
-        return null;
-      } else {
-        return names.toString();
       }
+      return null;
     }
   };
 
@@ -172,24 +157,34 @@ implements SourceXmlMetadataExtractorHelper {
         return null;
       }
       log.debug3("getValue of AIPJATS ARTICLE TITLE");
-      String titleVal = null;
+      String title = null;
       String nodeName = null;
-      NodeList childNodes = node.getChildNodes();
+      StringBuilder titleVal = new StringBuilder();
+      NodeList childNodes = node.getChildNodes(); 
+
       for (int m = 0; m < childNodes.getLength(); m++) {
-        Node infoNode = childNodes.item(m); 
+        Node infoNode = childNodes.item(m);
         nodeName = infoNode.getNodeName();
-        titleVal = infoNode.getTextContent();
-        break;
+
+        if("#text".equals(nodeName)) {
+          title = infoNode.getTextContent();
+          titleVal.append(title);
+        }
+        else if("inline-formula".equals(nodeName)){
+              title = infoNode.getTextContent();
+              titleVal.append("...");
+            }
       }
-      if (titleVal != null)  {
-        return titleVal;
+      if (titleVal.length() != 0)  {
+        log.debug3("article title: " + titleVal.toString());
+        return titleVal.toString();
       } else {
         log.debug3("no value in this article title");
         return null;
       }
     }
   };
-  
+/*  
   static private final NodeValue AIPJATS_PDF_NAME = new NodeValue() {
     @Override
     public String getValue(Node node) {
@@ -201,7 +196,7 @@ implements SourceXmlMetadataExtractorHelper {
       return "online";
 
     }
-  };
+  };*/
 
   /* 
    *  AIPJats specific XPATH key definitions that we care about
@@ -240,12 +235,12 @@ implements SourceXmlMetadataExtractorHelper {
   /* published date */
   private static String AIPJATS_pubdate = AIPJATS_AMETA + "/pub-date";
 
-  /* author */
-  private static String AIPJATS_contrib = AIPJATS_AMETA + "/contrib-group";
-  private static String AIPJATS_author = AIPJATS_contrib;
+  /* xpath contrib == author */
+  //private static String AIPJATS_contrib = AIPJATS_AMETA + "/contrib-group";
+  private static String AIPJATS_author = AIPJATS_AMETA + "/contrib-group/contrib[@contrib-type = 'author']";
+  //private static String AIPJATS_author = AIPJATS_contrib;
   
   /* access_url  not set here */
-  //private static String AIPJATS_PDF_NAME = "online";
   
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -263,7 +258,7 @@ implements SourceXmlMetadataExtractorHelper {
     AIPJATS_articleMap.put(AIPJATS_article_title, AIPJATS_ARTICLE_TITLE_VALUE); 
     AIPJATS_articleMap.put(AIPJATS_issue, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_vol, XmlDomMetadataExtractor.TEXT_VALUE);
-    AIPJATS_articleMap.put(AIPJATS_contrib, AIPJATS_AUTHOR_VALUE);
+    AIPJATS_articleMap.put(AIPJATS_author, AIPJATS_AUTHOR_VALUE);
     //AIPJATS_articleMap.put(AIPJATS_keywords, XmlDomMetadataExtractor.TEXT_VALUE);
     //AIPJATS_articleMap.put(AIPJATS_abstract, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_journal_id, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -290,7 +285,7 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(AIPJATS_issue, MetadataField.FIELD_ISSUE);
     cookMap.put(AIPJATS_journal_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(AIPJATS_article_title, MetadataField.FIELD_ARTICLE_TITLE);
-    cookMap.put(AIPJATS_contrib, MetadataField.FIELD_AUTHOR);
+    cookMap.put(AIPJATS_author, MetadataField.FIELD_AUTHOR);
     cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(AIPJATS_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(AIPJATS_journal_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
