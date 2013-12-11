@@ -20,6 +20,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
+        au < expected ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 2 ; 2 >
   
     }
   
@@ -39,6 +40,7 @@
         au < manifest ; 2011 ; Advances in Difference Equations Volume 2011 ; 2011 >
         au < manifest ; 2012 ; Advances in Difference Equations Volume 2012 ; 2012 >
         au < manifest ; 2013 ; Advances in Difference Equations Volume 2013 ; 2013 >
+        au < expected ; 2014 ; Advances in Difference Equations Volume 2014 ; 2014 >
   
     }
   
@@ -54,6 +56,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Agricultural and Food Economics Volume 1 ; 1 >
+        au < expected ; 2014 ; Agricultural and Food Economics Volume 2 ; 2 >
   
     }
   
@@ -71,6 +74,7 @@
         au < manifest ; 2011 ; AMB Express Volume 1 ; 1 >
         au < manifest ; 2012 ; AMB Express Volume 2 ; 2 >
         au < manifest ; 2013 ; AMB Express Volume 3 ; 3 >
+        au < expected ; 2014 ; AMB Express Volume 4 ; 4 >
   
     }
   
@@ -88,6 +92,7 @@
         au < manifest ; 2011 ; Annals of Intensive Care Volume 1 ; 1 >
         au < manifest ; 2012 ; Annals of Intensive Care Volume 2 ; 2 >
         au < manifest ; 2013 ; Annals of Intensive Care Volume 3 ; 3 >
+        au < expected ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
   
     }
   
@@ -103,6 +108,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
+        au < expected ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
   
     }
   
@@ -118,6 +124,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Biointerphases Volume 8 ; 8 >
+        au < expected ; 2014 ; Biointerphases Volume 9 ; 9 >
   
     }
   
@@ -133,6 +140,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Botanical Studies Volume 54 ; 54 >
+        au < expected ; 2014 ; Botanical Studies Volume 55 ; 55 >
   
     }
   
@@ -158,6 +166,7 @@
         au < manifest; 2011 ; Boundary Value Problems Volume 2011 ; 2011 >
         au < manifest; 2012 ; Boundary Value Problems Volume 2012 ; 2012 >
         au < manifest ; 2013 ; Boundary Value Problems Volume 2013 ; 2013 >
+        au < expected ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 >
   
     }
   
@@ -173,6 +182,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; City, Territory and Architecture Volume 1 ; 1 >
+        au < expected ; 2014 ; City, Territory and Architecture Volume 2 ; 2 >
   
     }
   
@@ -189,6 +199,7 @@
   
         au < manifest ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
         au < manifest ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
+        au < expected ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
   
     }
   
@@ -205,6 +216,7 @@
   
         au < manifest ; 2012 ; Communications in Mobile Computing Volume 1 ; 1 >
         au < manifest ; 2013 ; Communications in Mobile Computing Volume 2 ; 2 >
+        au < expected ; 2014 ; Communications in Mobile Computing Volume 3 ; 3 >
   
     }
   
@@ -220,6 +232,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Complex Adaptive Systems Modeling Volume 1 ; 1 >
+        au < expected ; 2014 ; Complex Adaptive Systems Modeling Volume 2 ; 2 >
   
     }
   
@@ -235,6 +248,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < expected ; 2014 ; Computational Cognitive Science Volume 2 ; 2 >
   
     }
   
@@ -251,6 +265,7 @@
   
         au < manifest ; 2012 ; Crime Science Volume 1 ; 1 >
         au < manifest ; 2013 ; Crime Science Volume 2 ; 2 >
+        au < expected ; 2014 ; Crime Science Volume 3 ; 3 >
   
     }
   
@@ -266,6 +281,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Crisis Communications Volume 1 ; 1 >
+        au < expected ; 2014 ; Crisis Communications Volume 2 ; 2 >
   
     }
   
@@ -283,6 +299,7 @@
   
         au < manifest ; 2012 ; Critical Ultrasound Journal Volume 4 ; 4 >
         au < manifest ; 2013 ; Critical Ultrasound Journal Volume 5 ; 5 >
+        au < expected ; 2014 ; Critical Ultrasound Journal Volume 6 ; 6 >
   
     }
   
@@ -298,6 +315,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Decision Analytics Volume 1 ; 1 >
+        au < expected ; 2014 ; Decision Analytics Volume 2 ; 2 >
   
     }
   
@@ -313,6 +331,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Earth Perspectives Volume 1 ; 1 >
+        au < expected ; 2014 ; Earth Perspectives Volume 2 ; 2 >
   
     }
   
@@ -329,6 +348,7 @@
   
         au < manifest ; 2012 ; Ecological Processes Volume 1 ; 1 >
         au < manifest ; 2013 ; Ecological Processes Volume 2 ; 2 >
+        au < expected ; 2014 ; Ecological Processes Volume 3 ; 3 >
   
     }
   
@@ -346,6 +366,7 @@
         au < manifest ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < manifest ; 2012 ; EJNMMI Research Volume 2 ; 2 >
         au < manifest ; 2013 ; EJNMMI Research Volume 3 ; 3 >
+        au < expected ; 2014 ; EJNMMI Research Volume 4 ; 4 >
   
     }
   
@@ -361,6 +382,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
+        au < expected ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
   
     }
   
@@ -378,6 +400,7 @@
         au < manifest ; 2011 ; Energy, Sustainability and Society Volume 1 ; 1 >
         au < manifest ; 2012 ; Energy, Sustainability and Society Volume 2 ; 2 >
         au < manifest ; 2013 ; Energy, Sustainability and Society Volume 3 ; 3 >
+        au < expected ; 2014 ; Energy, Sustainability and Society Volume 4 ; 4 >
   
     }
   
@@ -395,6 +418,7 @@
         au < manifest ; 2011 ; Environmental Sciences Europe Volume 23 ; 23 >
         au < manifest ; 2012 ; Environmental Sciences Europe Volume 24 ; 24 >
         au < manifest ; 2013 ; Environmental Sciences Europe Volume 25 ; 25 >
+        au < expected ; 2014 ; Environmental Sciences Europe Volume 27 ; 27 >
   
     }
   
@@ -411,6 +435,7 @@
   
         au < manifest ; 2012 ; Environmental Systems Research Volume 1 ; 1 >
         au < manifest ; 2013 ; Environmental Systems Research Volume 2 ; 2 >
+        au < expected ; 2014 ; Environmental Systems Research Volume 3 ; 3 >
   
     }
   
@@ -427,6 +452,7 @@
   
         au < manifest ; 2012 ; EPJ Data Science Volume 1 ; 1 >
         au < manifest ; 2013 ; EPJ Data Science Volume 2 ; 2 >
+        au < expected ; 2014 ; EPJ Data Science Volume 3 ; 3 >
   
     }
   
@@ -442,6 +468,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
+        au < expected ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
   
     }
   
@@ -457,6 +484,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; EPJ Quantum Technology Volume 1 ; 1 >
+        au < expected ; 2014 ; EPJ Quantum Technology Volume 2 ; 2 >
   
     }
   
@@ -472,6 +500,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
+        au < expected ; 2014 ; EPJ Techniques and Instrumentation Volume 2 ; 2 >
   
     }
   
@@ -491,6 +520,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Advances in Signal Processing Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Advances in Signal Processing Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Advances in Signal Processing Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Advances in Signal Processing Volume 2014 ; 2014 >
   
     }
   
@@ -513,6 +543,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2014 ; 2014 >
   
     }
   
@@ -536,6 +567,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2014 ; 2014 >
   
     }
   
@@ -559,6 +591,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Embedded Systems Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Embedded Systems Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Embedded Systems Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Embedded Systems Volume 2014 ; 2014 >
   
     }
   
@@ -581,6 +614,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Image and Video Processing Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Image and Video Processing Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Image and Video Processing Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Image and Video Processing Volume 2014 ; 2014 >
   
     }
   
@@ -603,6 +637,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Information Security Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Information Security Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Information Security Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Information Security Volume 2014 ; 2014 >
   
     }
   
@@ -622,6 +657,7 @@
         au < manifest ; 2011 ; EURASIP Journal on Wireless Communications and Networking Volume 2011 ; 2011 >
         au < manifest ; 2012 ; EURASIP Journal on Wireless Communications and Networking Volume 2012 ; 2012 >
         au < manifest ; 2013 ; EURASIP Journal on Wireless Communications and Networking Volume 2013 ; 2013 >
+        au < expected ; 2014 ; EURASIP Journal on Wireless Communications and Networking Volume 2014 ; 2014 >
   
     }
   
@@ -639,6 +675,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Evolution: Education and Outreach Volume 6 ; 6 >
+        au < expected ; 2014 ; Evolution: Education and Outreach Volume 7 ; 7 >
   
     }
   
@@ -655,6 +692,7 @@
   
         au < manifest ; 2012 ; Fire Science Reviews Volume 1 ; 1 >
         au < manifest ; 2013 ; Fire Science Reviews Volume 2 ; 2 >
+        au < expected ; 2014 ; Fire Science Reviews Volume 3 ; 3 >
   
     }
   
@@ -681,6 +719,7 @@
         au < manifest ; 2011 ; Fixed Point Theory and Applications Volume 2011 ; 2011 >
         au < manifest ; 2012 ; Fixed Point Theory and Applications Volume 2012 ; 2012 >
         au < manifest ; 2013 ; Fixed Point Theory and Applications Volume 2013 ; 2013 >
+        au < expected ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 >
   
     }
   
@@ -696,6 +735,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Geothermal Energy Volume 1 ; 1 >
+        au < expected ; 2014 ; Geothermal Energy Volume 2 ; 2 >
   
     }
   
@@ -729,6 +769,7 @@
         au < manifest ; 2011 ; Health Economics Review Volume 1 ; 1 >
         au < manifest ; 2012 ; Health Economics Review Volume 2 ; 2 >
         au < manifest ; 2013 ; Health Economics Review Volume 3 ; 3 >
+        au < expected ; 2014 ; Health Economics Review Volume 4 ; 4 >
   
     }
   
@@ -747,6 +788,7 @@
   
         au < manifest ; 2012 ; HUGO Journal Volume 6 ; 6 >
         au < manifest ; 2013 ; HUGO Journal Volume 7 ; 7 >
+        au < expected ; 2014 ; HUGO Journal Volume 8 ; 8 >
   
     }
   
@@ -764,6 +806,7 @@
         au < manifest ; 2011 ; Human-centric Computing and Information Sciences Volume 1 ; 1 >
         au < manifest ; 2012 ; Human-centric Computing and Information Sciences Volume 2 ; 2 >
         au < manifest ; 2013 ; Human-centric Computing and Information Sciences Volume 3 ; 3 >
+        au < expected ; 2014 ; Human-centric Computing and Information Sciences Volume 4 ; 4 >
   
     }
   
@@ -779,6 +822,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; In Silico Pharmacology Volume 1 ; 1 >
+        au < expected ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
   
     }
   
@@ -795,6 +839,7 @@
   
         au < manifest ; 2012 ; Integrating Materials and Manufacturing Innovation Volume 1 ; 1 >
         au < manifest ; 2013 ; Integrating Materials and Manufacturing Innovation Volume 2 ; 2 >
+        au < expected ; 2014 ; Integrating Materials and Manufacturing Innovation Volume 3 ; 3 >
   
     }
   
@@ -827,6 +872,7 @@
   
         au < manifest ; 2012 ; International Aquatic Research Volume 4 ; 4 >
         au < manifest ; 2013 ; International Aquatic Research Volume 5 ; 5 >
+        au < expected ; 2014 ; International Aquatic Research Volume 6 ; 6 >
   
     }
   
@@ -843,6 +889,7 @@
   
         au < exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 2012 ; 2012 >
         au < expected ; 2013 ; International Journal of Advanced Structural Engineering Volume 2013 ; 2013 >
+        ay < expected ; 2014 ; International Journal of Advanced Structural Engineering Volume 2014 ; 2014 >
   
     }
   
@@ -858,6 +905,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; International Journal of Bipolar Disorders Volume 1 ; 1 >
+        au < expected ; 2014 ; International Journal of Bipolar Disorders Volume 2 ; 2 >
   
     }
   
@@ -876,6 +924,7 @@
         au < manifest ; 2011 ; International Journal of Emergency Medicine Volume 4 ; 4 >
         au < manifest ; 2012 ; International Journal of Emergency Medicine Volume 5 ; 5 >
         au < manifest ; 2013 ; International Journal of Emergency Medicine Volume 6 ; 6 >
+        au < expected ; 2014 ; International Journal of Emergency Medicine Volume 7 ; 7 >
   
     }
   
@@ -892,6 +941,7 @@
   
         au < manifest ; 2012 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
         au < expected ; 2013 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
+        au < expected ; 2014 ; International Journal of Energy and Environmental Engineering Volume 6 ; 6 >
   
     }
   
@@ -908,6 +958,7 @@
   
         au < manifest ; 2012 ; International Journal of Industrial Chemistry Volume 3 ; 3 >
         au < manifest ; 2013 ; International Journal of Industrial Chemistry Volume 4 ; 4 >
+        au < expected ; 2014 ; International Journal of Industrial Chemistry Volume 5 ; 5 >
   
     }
   
@@ -924,6 +975,7 @@
   
         au < manifest ; 2012 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 1 ; 1 >
         au < manifest ; 2013 ; International Journal Of Recycling of Organic Waste in Agriculture Volume 2 ; 2 >
+        au < expected ; 2014 ; International Journal of Recycling of Organic Waste in Agriculture Volume 3 ; 3 >
   
     }
   
@@ -940,6 +992,7 @@
   
         au < manifest ; 2012 ; International Nano Letters Volume 2 ; 2 >
         au < manifest ; 2013 ; International Nano Letters Volume 3 ; 3 >
+        au < expected ; 2014 ; International Nano Letters Volume 4 ; 4 >
   
     }
   
@@ -956,6 +1009,7 @@
   
         au < manifest ; 2012 ; IZA Journal of European Labor Studies Volume 1 ; 1 >
         au < manifest ; 2013 ; IZA Journal of European Labor Studies Volume 2 ; 2 >
+        au < expected ; 2014 ; IZA Journal of European Labor Studies Volume 3 ; 3 >
   
     }
   
@@ -972,6 +1026,7 @@
   
         au < manifest ; 2012 ; IZA Journal of Labor & Development Volume 1 ; 1 >
         au < manifest ; 2013 ; IZA Journal of Labor & Development Volume 2 ; 2 >
+        au < expected ; 2014 ; IZA Journal of Labor & Development Volume 3 ; 3 >
   
     }
   
@@ -988,6 +1043,7 @@
   
         au < manifest ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 >
         au < manifest ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 >
+        au < expected ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
   
     }
   
@@ -1004,6 +1060,7 @@
   
         au < manifest ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 >
         au < manifest ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 >
+        au < expected ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
   
     }
   
@@ -1020,6 +1077,7 @@
   
         au < manifest ; 2012 ; IZA Journal of Migration Volume 1 ; 1 >
         au < manifest ; 2013 ; IZA Journal of Migration Volume 2 ; 2 >
+        au < expected ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
   
     }
   
@@ -1035,6 +1093,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Journal of Analytical Science and Technology Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Analytical Science and Technology Volume 2 ; 2 >
   
     }
   
@@ -1051,6 +1110,7 @@
   
         au < manifest ; 2012 ; Journal of Applied Volcanology Volume 1 ; 1 >
         au < manifest ; 2013 ; Journal of Applied Volcanology Volume 2 ; 2 >
+        au < expected ; 2014 ; Journal of Applied Volcanology Volume 3 ; 3 >
   
     }
   
@@ -1066,6 +1126,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Journal Of Big Data Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal Of Big Data Volume 2 ; 2 >
   
     }
   
@@ -1082,6 +1143,7 @@
   
         au < manifest ; 2012 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 1 ; 1 >
         au < manifest ; 2013 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 2 ; 2 >
+        au < expected ; 2014 ; Journal of Cloud Computing: Advances, Systems and Applications Volume 3 ; 3 >
   
     }
   
@@ -1097,6 +1159,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Journal of Computational Surgery Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Computational Surgery Volume 2 ; 2 >
   
     }
   
@@ -1113,6 +1176,7 @@
   
         au < manifest ; 2012 ; Journal of Economic Structures Volume 1 ; 1 >
         au < manifest ; 2013 ; Journal of Economic Structures Volume 2 ; 2 >
+        au < expected ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
   
     }
   
@@ -1129,6 +1193,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; The Journal of Headache and Pain Volume 14 ; 14 >
+        au < expected ; 2014 ; The Journal of Headache and Pain Volume 15 ; 15 >
   
     }
   
@@ -1145,6 +1210,7 @@
   
         au < manifest ; 2012 ; Journal of Industrial Engineering International Volume 8 ; 8 >
         au < manifest ; 2013 ; Journal of Industrial Engineering International Volume 9 ; 9 >
+        au < expected ; 2014 ; Journal of Industrial Engineering International Volume 10 ; 10 >
   
     }
   
@@ -1170,6 +1236,7 @@
         au < manifest ; 2011 ; Journal of Inequalities and Applications Volume 2011 ; 2011 >
         au < manifest ; 2012 ; Journal of Inequalities and Applications Volume 2012 ; 2012 >
         au < manifest ; 2013 ; Journal of Inequalities and Applications Volume 2013 ; 2013 >
+        au < expected ; 2014 ; Journal of Inequalities and Applications Volume 2014 ; 2014 >
   
     }
   
@@ -1186,6 +1253,7 @@
   
         au < manifest ; 2012 ; Journal of Innovation and Entrepreneurship Volume 1 ; 1 >
         au < manifest ; 2013 ; Journal of Innovation and Entrepreneurship Volume 2 ; 2 >
+        au < expected ; 2014 ; Journal of Innovation and Entrepreneurship Volume 3 ; 3 >
   
     }
   
@@ -1201,6 +1269,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Interaction Science Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Interaction Science Volume 2 ; 2 >
   
     }
   
@@ -1218,6 +1287,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 >
+        au < expected ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
   
     }
   
@@ -1235,6 +1305,7 @@
         au < manifest ; 2011 ; Journal of Mathematical Neuroscience Volume 1 ; 1 >
         au < manifest ; 2012 ; Journal of Mathematical Neuroscience Volume 2 ; 2 >
         au < manifest ; 2013 ; Journal of Mathematical Neuroscience Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Mathematical Neuroscience Volume 4 ; 4 >
   
     }
   
@@ -1252,6 +1323,7 @@
         au < manifest ; 2011 ; Journal of Mathematics in Industry Volume 1 ; 1 >
         au < manifest ; 2012 ; Journal of Mathematics in Industry Volume 2 ; 2 >
         au < manifest ; 2013 ; Journal of Mathematics in Industry Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Mathematics in Industry Volume 4 ; 4 >
   
     }
   
@@ -1267,6 +1339,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Nanostructure in Chemistry Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Nanostructure in Chemistry Volume 4 ; 4 >
   
     }
   
@@ -1282,6 +1355,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
   
     }
   
@@ -1299,6 +1373,7 @@
         au < manifest ; 2011 ; Journal of Remanufacturing Volume 1 ; 1 >
         au < manifest ; 2012 ; Journal of Remanufacturing Volume 2 ; 2 >
         au < manifest ; 2013 ; Journal of Remanufacturing Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Remanufacturing Volume 4 ; 4 >
   
     }
   
@@ -1330,6 +1405,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Statistical Distributions and Applications Volume 2 ; 2 >
   
     }
   
@@ -1346,6 +1422,7 @@
   
         au < manifest ; 2012 ; Journal of Theoretical and Applied Physics Volume 6 ; 6 >
         au < manifest ; 2013 ; Journal of Theoretical and Applied Physics Volume 7 ; 7 >
+        au < expected ; 2014 ; Journal of Theoretical and Applied Physics Volume 8 ; 8 >
   
     }
   
@@ -1361,6 +1438,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Journal of Uncertainty Analysis and Applications Volume 1 ; 1 >
+        au < expected ; 2014 ; Journal of Uncertainty Analysis and Applications Volume 2 ; 2 >
   
     }
   
@@ -1378,6 +1456,7 @@
         au < manifest ; 2011 ; Language Testing in Asia Volume 1 ; 1 >
         au < manifest ; 2012 ; Language Testing in Asia Volume 2 ; 2 >
         au < manifest ; 2013 ; Language Testing in Asia Volume 3 ; 3 >
+        au < expected ; 2014 ; Language Testing in Asia Volume 4 ; 4 >
   
     }
   
@@ -1393,6 +1472,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Life Sciences, Society and Policy Volume 9 ; 9 >
+        au < expected ; 2014 ; Life Sciences, Society and Policy Volume 10 ; 10 >
   
     }
   
@@ -1409,6 +1489,7 @@
   
         au < manifest ; 2012 ; Maritime Studies Volume 11 ; 11 >
         au < manifest ; 2013 ; Maritime Studies Volume 12 ; 12 >
+        au < expected ; 2014 ; Maritime Studies Volume 13 ; 13 >
   
     }
   
@@ -1425,6 +1506,7 @@
   
         au < manifest ; 2012 ; Mathematical Sciences Volume 6 ; 6 >
         au < manifest ; 2013 ; Mathematical Sciences Volume 7 ; 7 >
+        au < expected ; 2014 ; Mathematical Sciences Volume 8 ; 8 >
   
     }
   
@@ -1440,6 +1522,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Micro and Nano Systems Letters Volume 1 ; 1 >
+        au < expected ; 2014 ; Micro and Nano Systems Letters Volume 2 ; 2 >
   
     }
   
@@ -1457,6 +1540,7 @@
         au < manifest ; 2011 ; Multilingual Education Volume 1 ; 1 >
         au < manifest ; 2012 ; Multilingual Education Volume 2 ; 2 >
         au < manifest ; 2013 ; Multilingual Education Volume 3 ; 3 >
+        au < expected ; 2014 ; Multilingual Education Volume 4 ; 4 >
   
     }
   
@@ -1480,6 +1564,7 @@
         au < manifest ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 >
         au < manifest ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
         au < manifest ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
+        au < expected ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
   
     }
   
@@ -1495,6 +1580,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; New Zealand Journal of Forestry Science Volume 43 ; 43 >
+        au < expected ; 2014 ; New Zealand Journal of Forestry Science Volume 44 ; 44 >
   
     }
   
@@ -1511,6 +1597,7 @@
   
         au < manifest ; 2012 ; Optical Nanoscopy Volume 1 ; 1 >
         au < manifest ; 2013 ; Optical Nanoscopy Volume 2 ; 2 >
+        au < expected ; 2014 ; Optical Nanoscopy Volume 3 ; 3 >
   
     }
   
@@ -1528,6 +1615,7 @@
         au < manifest ; 2011 ; Organic and Medicinal Chemistry Letters Volume 1 ; 1 >
         au < manifest ; 2012 ; Organic and Medicinal Chemistry Letters Volume 2 ; 2 >
         au < manifest ; 2013 ; Organic and Medicinal Chemistry Letters Volume 3 ; 3 >
+        au < expected ; 2014 ; Organic and Medicinal Chemistry Letters Volume 4 ; 4 >
   
     }
   
@@ -1545,6 +1633,7 @@
         au < manifest ; 2011 ; Pastoralism Volume 1 ; 1 >
         au < manifest ; 2012 ; Pastoralism Volume 2 ; 2 >
         au < manifest ; 2013 ; Pastoralism Volume 3 ; 3 >
+        au < expected ; 2014 ; Pastoralism Volume 4 ; 4 >
   
     }
   
@@ -1561,6 +1650,7 @@
   
         au < manifest ; 2012 ; Planetary Science Volume 1 ; 1 >
         au < manifest ; 2013 ; Planetary Science Volume 2 ; 2 >
+        au < expected ; 2014 ; Planetary Science Volume 3 ; 3 >
   
     }
   
@@ -1577,6 +1667,7 @@
   
         au < manifest ; 2012 ; Progress in Biomaterials Volume 1 ; 1 >
         au < manifest ; 2013 ; Progress in Biomaterials Volume 2 ; 2 >
+        au < expected ; 2014 ; Progress in Biomaterials Volume 3 ; 3 >
   
     }
   
@@ -1592,6 +1683,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Progress in Orthodontics Volume 1 ; 1 >
+        au < expected ; 2014 ; Progress in Orthodontics Volume 2 ; 2 >
   
     }
   
@@ -1609,6 +1701,7 @@
         au < manifest ; 2011 ; Psychology of Well-Being: Theory, Research and Practice Volume 1 ; 1 >
         au < manifest ; 2012 ; Psychology of Well-Being: Theory, Research and Practice Volume 2 ; 2 >
         au < manifest ; 2013 ; Psychology of Well-Being: Theory, Research and Practice Volume 3 ; 3 >
+        au < expected ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
   
     }
   
@@ -1627,6 +1720,7 @@
   
         au < manifest ; 2012 ; Rice Volume 5 ; 5 >
         au < manifest ; 2013 ; Rice Volume 6 ; 6 >
+        au < expected ; 2014 ; Rice Volume 7 ; 7 >
   
     }
   
@@ -1642,6 +1736,7 @@
         comment[platform] = BMC
   
         au < expected ; 2013 ; Scalable Computing Volume 1 ; 1 >
+        au < expected ; 2014 ; Scalable Computing Volume 2 ; 2 >
   
     }
   
@@ -1658,6 +1753,7 @@
   
         au < manifest ; 2012 ; Security Informatics Volume 1 ; 1 >
         au < manifest ; 2013 ; Security Informatics Volume 2 ; 2 >
+        au < expected ; 2014 ; Security Informatics Volume 3 ; 3 >
   
     }
   
@@ -1674,6 +1770,7 @@
   
         au < manifest ; 2012 ; SpringerPlus Volume 1 ; 1 >
         au < manifest ; 2013 ; SpringerPlus Volume 2 ; 2 >
+        au < expected ; 2014 ; SpringerPlus Volume 3 ; 3 >
   
     }
   
@@ -1689,6 +1786,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Translational Respiratory Medicine Volume 1 ; 1 >
+        au < expected ; 2014 ; Translational Respiratory Medicine Volume 2 ; 2 >
   
     }
   
@@ -1704,6 +1802,7 @@
         comment[platform] = BMC
   
         au < manifest ; 2013 ; Visualization in Engineering Volume 1 ; 1 >
+        au < expected ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
   
     }
   
@@ -1726,6 +1825,7 @@
         au < exists ; 2011 ; 3 Biotech Volume 1 ; 1 >
         au < exists ; 2012 ; 3 Biotech Volume 2 ; 2 >
         au < expected ; 2013 ; 3 Biotech Volume 3 ; 3 >
+        au < expected ; 2014 ; 3 Biotech Volume 4 ; 4 >
   
     }
   
@@ -1744,6 +1844,7 @@
         au < exists ; 2011 ; Applied Nanoscience Volume 1 ; 1 >
         au < exists ; 2012 ; Applied Nanoscience Volume 2 ; 2 >
         au < expected ; 2013 ; Applied Nanoscience Volume 3 ; 3 >
+        au < expected ; 2014 ; Applied Nanoscience Volume 4 ; 4 >
   
     }
   
@@ -1781,6 +1882,7 @@
         au < exists ; 2011 ; Applied Water Science Volume 1 ; 1 >
         au < exists ; 2012 ; Applied Water Science Volume 2 ; 2 >
         au < expected ; 2013 ; Applied Water Science Volume 3 ; 3 >
+        au < expected ; 2014 ; Applied Water Science Volume 4 ; 4 >
   
     }
   
@@ -1798,6 +1900,7 @@
   
         au < exists ; 2012 ; Arabian Journal of Mathematics Volume 1 ; 1 >
         au < expected ; 2013 ; Arabian Journal of Mathematics Volume 2 ; 2 >
+        au < expected ; 2014 ; Arabian Journal of Mathematics volume 3 ; 3 >
   
     }
   
@@ -1815,6 +1918,7 @@
         au < exists ; 2011 ; Bulletin of Mathematical Sciences Volume 1 ; 1 >
         au < exists ; 2012 ; Bulletin of Mathematical Sciences Volume 2 ; 2 >
         au < expected ; 2013 ; Bulletin of Mathematical Sciences Volume 3 ; 3 >
+        au < expected ; 2014 ; Bulletin of Mathematical Sciences Volume 4 ; 4 >
   
     }
   
@@ -1847,6 +1951,7 @@
         au < exists ; 2011 ; Chinese Science Bulletin Volume 56 ; 56 >
         au < exists ; 2012 ; Chinese Science Bulletin Volume 57 ; 57 >
         au < expected ; 2013 ; Chinese Science Bulletin Volume 58 ; 58 >
+        au < expected ; 2014 ; Chinese Science Bulletin Volume 59 ; 59 >
   
     }
   
@@ -1862,6 +1967,7 @@
         comment[platform] = Springer
   
         au < expected ; 2013 ; European Journal of Futures Research Volume 1 ; 1 >
+        au < expected ; 2014 ; European Journal of Futures Research Volume 2 ; 2 >
   
     }
   
@@ -1882,6 +1988,7 @@
         au < exists ; 2011 ; European Transport Research Review Volume 3 ; 3 >
         au < exists ; 2012 ; European Transport Research Review Volume 4 ; 4 >
         au < expected ; 2013 ; European Transport Research Review Volume 5 ; 5 >
+        au < expected ; 2014 ; European Transport Research Review Volume 6 ; 6 >
   
     }
   
@@ -1959,6 +2066,7 @@
         au < exists ; 2011 ; Insights into Imaging Volume 2 ; 2 >
         au < exists ; 2012 ; Insights into Imaging Volume 3 ; 3 >
         au < expected ; 2013 ; Insights into Imaging Volume 4 ; 4 >
+        au < expected ; 2014 ; Insights into Imaging Volume 5 ; 5 >
   
     }
   
@@ -1997,6 +2105,7 @@
         au < exists ; 2011 ; International Journal of Disaster Risk Science Volume 2 ; 2 >
         au < exists ; 2012 ; International Journal of Disaster Risk Science Volume 3 ; 3 >
         au < expected ; 2013 ; International Journal of Disaster Risk Science Volume 4 ; 4 >
+        au < expected ; 2014 ; International Journal of Disaster Risk Science Volume 5 ; 5 >
   
     }
   
@@ -2013,6 +2122,7 @@
   
         au < exists ; 2012 ; Journal of Advanced Ceramics Volume 1 ; 1 >
         au < expected ; 2013 ; Journal of Advanced Ceramics Volume 2 ; 2 >
+        au < expected ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 >
   
     }
   
@@ -2042,6 +2152,7 @@
         au < exists ; 2011 ; Journal of Orthopaedics and Traumatology Volume 12 ; 12 >
         au < exists ; 2012 ; Journal of Orthopaedics and Traumatology Volume 13 ; 13 >
         au < expected ; 2013 ; Journal of Orthopaedics and Traumatology Volume 14 ; 14 >
+        au < expected ; 2014 ; Journal of Orthopaedics and Traumatology Volume 15 ; 15 >
   
     }
   
@@ -2060,6 +2171,7 @@
         au < exists ; 2011 ; Journal of Petroleum Exploration and Production Technologies Volume 1 ; 1 >
         au < exists ; 2012 ; Journal of Petroleum Exploration and Production Technologies Volume 2 ; 2 >
         au < expected ; 2013 ; Journal of Petroleum Exploration and Production Technologies Volume 3 ; 3 >
+        au < expected ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 >
   
     }
   
@@ -2077,6 +2189,7 @@
   
         au < exists ; 2012 ; Materials for Renewable and Sustainable Energy Volume 1 ; 1 >
         au < expected ; 2013 ; Materials for Renewable and Sustainable Energy Volume 2 ; 2 >
+        au < expected ; 2014 ; Materials for Renewable and Sustainable Energy Volume 3 ; 3 >
   
     }
   
@@ -2094,6 +2207,7 @@
         au < exists ; 2011 ; Natural Products and Bioprospecting Volume 1 ; 1 >
         au < exists ; 2012 ; Natural Products and Bioprospecting Volume 2 ; 2 >
         au < expected ; 2013 ; Natural Products and Bioprospecting Volume 3 ; 3 >
+        au < expected ; 2014 ; Natural Products and Bioprospecting Volume 4 ; 4 >
   
     }
   
@@ -2112,6 +2226,7 @@
         au < exists ; 2011 ; Photonic Sensors Volume 1 ; 1 >
         au < exists ; 2012 ; Photonic Sensors Volume 2 ; 2 >
         au < expected ; 2013 ; Photonic Sensors Volume 3 ; 3 >
+        au < expected ; 2014 ; Photonic Sensors Volume 4 ; 4 >
   
     }
   
@@ -2170,6 +2285,7 @@
         au < exists ; 2011 ; SCIENCE CHINA Life Sciences Volume 54 ; 54 >
         au < exists ; 2012 ; SCIENCE CHINA Life Sciences Volume 55 ; 55 >
         au < expected ; 2013 ; SCIENCE CHINA Life Sciences Volume 56 ; 56 >
+        au < expected ; 2014 ; SCIENCE CHINA Life Sciences Volume 57 ; 57 >
   
     }
   
@@ -2189,6 +2305,7 @@
         au < exists ; 2011 ; SERIEs: Journal of the Spanish Economic Association Volume 2 ; 2 >
         au < exists ; 2012 ; SERIEs: Journal of the Spanish Economic Association Volume 3 ; 3 >
         au < expected ; 2013 ; SERIEs: Journal of the Spanish Economic Association Volume 4 ; 4 >
+        au < expected ; 2014 ; SERIEs: Journal of the Spanish Economic Association Volume 5 ; 5 >
   
     }
   
@@ -2212,6 +2329,7 @@
         au < exists ; 2011 ; Strategies in Trauma and Limb Reconstruction Volume 6 ; 6 >
         au < exists ; 2012 ; Strategies in Trauma and Limb Reconstruction Volume 7 ; 7 >
         au < expected ; 2013 ; Strategies in Trauma and Limb Reconstruction Volume 8 ; 8 >
+        au < expected ; 2014 ; Strategies in Trauma and Limb Reconstruction Volume 9 ; 9 >
   
     }
   }
