@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.3 2013-12-11 22:00:16 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.4 2013-12-11 23:30:52 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -444,10 +444,10 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
       assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
       assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-      log.info(GOOD_ARTICLE_TITLE);
-      log.info(md.get(MetadataField.FIELD_ARTICLE_TITLE));
       assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+      //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
+      assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+      //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
@@ -508,7 +508,9 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
           assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
           assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
           assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-      assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+          //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
+       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+      //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
       assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
       
@@ -549,8 +551,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(GOOD_JOURNAL_ID,
         md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-    assertEquals(GEN_JOURNAL_TITLE_WITH_ISSN,
-        md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
   }
@@ -582,8 +582,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
     assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(GEN_JOURNAL_TITLE_WITH_EISSN,
-        md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
   }
@@ -613,8 +611,8 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
     assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(GEN_JOURNAL_TITLE_WITH_JOURNAL_ID,
-        md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    //assertEquals(GEN_JOURNAL_TITLE_WITH_JOURNAL_ID,
+    //    md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
     assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
   }
