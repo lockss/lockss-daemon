@@ -17812,14 +17812,14 @@
     param[base_url] = http://rpd.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 128 [superseded] ; 128 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 130 [superseded] ; 130 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 131 [superseded] ; 131 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 132 [superseded] ; 132 ; >
+    au < superseded ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 133 [superseded] ; 133 ; >
+    au < superseded ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 134 [superseded] ; 134 ; >
+    au < zapped ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < zapped ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -17955,13 +17955,13 @@
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 125 ; 125 ; >
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 126 ; 126 ; >
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+    au < exists ; exists ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
+    au < exists ; exists ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 ; >
+    au < exists ; exists ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
+    au < exists ; exists ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
+    au < exists ; exists ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
+    au < exists ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+    au < exists ; exists ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
     au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
     au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
