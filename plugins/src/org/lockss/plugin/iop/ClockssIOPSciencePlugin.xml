@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -20,7 +20,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>12</string>
+        <string>13</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -98,7 +98,7 @@
       <string>1,"^https?://%s/.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s.*;jsessionid=.*$", base_url, journal_issn, volume_name</string>
-      <string>2,"^%s%s/%s/[^/]+/[^/]+/refs/[^/]+/", base_url, journal_issn, volume_name</string>
+      <string>2,"^%s%s/%s/[^/]+/[^/]+/(article\?|refs/[^/]+/)", base_url, journal_issn, volume_name</string>
       <string>2,"^%s%s/%s/[^/]+/[^/]+/(cites|related|metrics)$", base_url, journal_issn, volume_name</string>
       <string>1,"^%s%s/%s/", base_url, journal_issn, volume_name</string>
       <string>1,"^%s%s/%s$", base_url, journal_issn, volume_name</string>

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIOPScienceUrlNormalizer.java,v 1.2 2013-11-13 02:00:08 thib_gc Exp $
+ * $Id: TestIOPScienceUrlNormalizer.java,v 1.3 2013-12-11 01:40:53 thib_gc Exp $
  */
 
 /*
@@ -47,22 +47,16 @@ public class TestIOPScienceUrlNormalizer extends LockssTestCase {
   public void testIOPScienceNormalizer() throws Exception {
     
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem&relno=1", null));
+                 norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=xyz&relno=1", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref&relno=1", null));
+                 norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=xyz", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=sem", null));
-    assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=ref", null));
-    assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?rel=",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=", null));
-    assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?rel=som",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=som", null));
+                 norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?rel=", null));
     assertEquals("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123",
-        norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123", null));
+                 norm.normalizeUrl("http://iopscience.iop.org/1758-5090/1/4/045005?classid=123", null));
     
     assertEquals("http://iopscience.iop.org/1742-6596/325/1",
-        norm.normalizeUrl("http://iopscience.iop.org/1742-6596/325/1;jsessionid=00608266206E53E70416BA4D3C38E0AB.c2", null));
+                 norm.normalizeUrl("http://iopscience.iop.org/1742-6596/325/1;jsessionid=00608266206E53E70416BA4D3C38E0AB.c2", null));
   }
   
 }

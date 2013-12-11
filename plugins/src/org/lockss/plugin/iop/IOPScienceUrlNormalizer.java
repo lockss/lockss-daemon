@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceUrlNormalizer.java,v 1.2 2013-11-13 02:00:08 thib_gc Exp $
+ * $Id: IOPScienceUrlNormalizer.java,v 1.3 2013-12-11 01:40:53 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 public class IOPScienceUrlNormalizer implements UrlNormalizer {
 
   private static final Pattern PATTERN =
-      Pattern.compile("((\\?rel=(ref|sem)|;jsessionid=).*)$",
+      Pattern.compile("((\\?rel|;jsessionid)=.*)$",
                       Pattern.CASE_INSENSITIVE);
   
   @Override

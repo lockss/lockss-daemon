@@ -1,5 +1,5 @@
 /*
- * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.8 2013-12-05 00:40:59 thib_gc Exp $
+ * $Id: IOPScienceHtmlHashFilterFactory.java,v 1.9 2013-12-11 01:40:53 thib_gc Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin.iop;
 
 import java.io.*;
 
-import org.apache.commons.compress.utils.IOUtils;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
@@ -61,7 +60,7 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
         // Scripts
         new TagNameFilter("script"),
         // Document header
-        HtmlNodeFilters.tagWithAttribute("link", "type", "text/css"),
+        new TagNameFilter("head"),
         // Header
         HtmlNodeFilters.tagWithAttribute("div", "id", "cookieBanner"),
         /* <header> -- see string filter below FIXME HTML5 */
@@ -106,12 +105,4 @@ public class IOPScienceHtmlHashFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/HashCUSA3a";
-    IOUtils.copy(new IOPScienceHtmlHashFilterFactory().createFilteredInputStream(null,
-                                                                                 new FileInputStream(file),
-                                                                                 null),
-                 new FileOutputStream(file + ".out"));
-  }
-  
 }
