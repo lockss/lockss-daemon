@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.3 2013-11-18 21:39:19 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.4 2013-12-11 17:45:50 fergaloy-sf Exp $
  */
 
 /*
@@ -121,16 +121,33 @@ public class FetchTimeExporter {
   public static final String DEFAULT_FETCH_TIME_EXPORT_LAST_ITEM_LABEL =
       "export_fetch_time_md_item_seq";
 
-  // TODO: DERBYLOCK - This is needed to lock the tables for multiple shorter
-  // periods of time instead of a single longer period. Once this problem is
-  // solved, the parameter can be increased or the code that depends on it can
-  // be refactored out.
-  //
-  // The maximum number of metadata items to process in one transaction.
-  public static final int MAX_NUMBER_OF_TRANSACTION_EXPORTED_ITEMS = 100;
+  /**
+   * The maximum number of metadata items to process in one database read.
+   * <p />
+   * Defaults to <code>100</code>. Changes require daemon restart.
+   */
+  public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_READ = PREFIX
+      + "fetchTimeExportMaxNumberOfExportedItemsRead";
 
-  // The maximum number of metadata items to write to one file.
-  public static final int MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE = 100000;
+  /**
+   * Default value of the maximum number of metadata items to process in one
+   * database read.
+   */
+  public static final int DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ = 100;
+
+  /**
+   * The maximum number of metadata items to write to one file.
+   * <p />
+   * Defaults to <code>100000</code>. Changes require daemon restart.
+   */
+  public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE =
+      PREFIX + "fetchTimeExportMaxNumberOfExportedItemsPerFile";
+
+  /**
+   * Default value of the maximum number of metadata items to write to one file.
+   */
+  public static final int DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE =
+      100000;
 
   private static final Logger log = Logger.getLogger(FetchTimeExporter.class);
 
@@ -216,6 +233,14 @@ public class FetchTimeExporter {
   // The key used to store in the database the identifier of the last metadata
   // item for which the data has been exported.
   private String lastMdItemSeqLabel = null;
+
+  // The maximum number of metadata items to process in one database read.
+  private int maxNumberOfExportedItemsRead =
+      DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ;
+
+  // The maximum number of metadata items to write to one file.
+  private int maxNumberOfExportedItemsPerFile =
+      DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE;
 
   // The version of the export file format.
   private int exportVersion = 1;
@@ -389,6 +414,22 @@ public class FetchTimeExporter {
 	    DEFAULT_FETCH_TIME_EXPORT_LAST_ITEM_LABEL);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastMdItemSeqLabel = '"
 	+ lastMdItemSeqLabel + "'.");
+
+    // Get the maximum number of metadata items to process in one database read.
+    maxNumberOfExportedItemsRead =
+	config.getInt(PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_READ,
+	    DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "maxNumberOfExportedItemsRead = "
+	  + maxNumberOfExportedItemsRead + ".");
+
+    // Get the maximum number of metadata items to write to one file.
+    maxNumberOfExportedItemsPerFile =
+	config.getInt(PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE,
+	    DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "maxNumberOfExportedItemsPerFile = "
+	  + maxNumberOfExportedItemsPerFile + ".");
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return true;
@@ -599,7 +640,7 @@ public class FetchTimeExporter {
       try {
 	// Prepare the statement used to get the data to be exported.
 	getExportData = dbManager.prepareStatement(conn, sql);
-	getExportData.setMaxRows(MAX_NUMBER_OF_TRANSACTION_EXPORTED_ITEMS);
+	getExportData.setMaxRows(maxNumberOfExportedItemsRead);
 	getExportData.setLong(1, lastMdItemSeq);
 
 	// Get the data to be exported.
@@ -705,8 +746,8 @@ public class FetchTimeExporter {
 
 	// Determine whether this task has exported all the metadata item fetch
 	// times that needed to export.
-	done = count < MAX_NUMBER_OF_TRANSACTION_EXPORTED_ITEMS
-	    || totalCount >= MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE;
+	done = count < maxNumberOfExportedItemsRead
+	    || totalCount >= maxNumberOfExportedItemsPerFile;
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
       } catch (SQLException sqle) {
 	log.error(message, sqle);
