@@ -3058,6 +3058,7 @@
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < expected ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
+    au < expected ; exists ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
 
   }
 
@@ -4005,6 +4006,7 @@
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
     au < expected ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
+    au < expected ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
 
     }
 
@@ -8474,6 +8476,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
 
@@ -12238,6 +12241,7 @@
     au < finished ; crawling ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
     au < expected ; exists ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
+    au < expected ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 ; >
 
     }
 
@@ -14577,6 +14581,7 @@
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 442 ; 442 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 443 ; 443 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 ; >
+    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 445 ; 445 ; >
 
   }
 
@@ -17089,6 +17094,8 @@
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
+    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 129 ; 129 ; >
+    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 130 ; 130 ; >
 
     }
 
@@ -17309,6 +17316,7 @@
     au < finished ; crawling ; 2011 ; Public Opinion Quarterly Volume 75 ; 75 ; >
     au < crawling ; exists ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; >
     au < crawling ; exists ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
+    au < expected ; exists ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
 
     }
 
@@ -21055,6 +21063,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2013 ; National Science Review Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; National Science Review Volume 2 ; 2 ; >
     
   }
 
