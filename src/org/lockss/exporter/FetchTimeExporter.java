@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.4 2013-12-11 17:45:50 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.5 2013-12-12 21:57:12 fergaloy-sf Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class FetchTimeExporter {
    * Name of this server for the purpose of assigning to it the fetch time
    * export output.
    * <p />
-   * Defaults to the networking host name. Changes require daemon restart.
+   * Defaults to the networking host name.
    */
   public static final String PARAM_SERVER_NAME =
       PREFIX + "fetchTimeExportServerName";
@@ -93,7 +93,7 @@ public class FetchTimeExporter {
   /**
    * Name of the directory used to store the fetch time export output files.
    * <p />
-   * Defaults to <code>fetchTime</code>. Changes require daemon restart.
+   * Defaults to <code>fetchTime</code>.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_OUTPUTDIR = PREFIX
       + "fetchTimeExportDirectoryName";
@@ -108,8 +108,7 @@ public class FetchTimeExporter {
    * Name of the key used to store in the database the identifier of the last
    * metadata item for which the data has been exported.
    * <p />
-   * Defaults to <code>export_fetch_time_md_item_seq</code>. Changes require
-   * daemon restart.
+   * Defaults to <code>export_fetch_time_md_item_seq</code>.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_LAST_ITEM_LABEL =
       PREFIX + "fetchTimeExportLastMdItemSeqLabel";
@@ -124,7 +123,7 @@ public class FetchTimeExporter {
   /**
    * The maximum number of metadata items to process in one database read.
    * <p />
-   * Defaults to <code>100</code>. Changes require daemon restart.
+   * Defaults to <code>100</code>.
    */
   public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_READ = PREFIX
       + "fetchTimeExportMaxNumberOfExportedItemsRead";
@@ -138,7 +137,7 @@ public class FetchTimeExporter {
   /**
    * The maximum number of metadata items to write to one file.
    * <p />
-   * Defaults to <code>100000</code>. Changes require daemon restart.
+   * Defaults to <code>100000</code>.
    */
   public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE =
       PREFIX + "fetchTimeExportMaxNumberOfExportedItemsPerFile";
@@ -365,6 +364,13 @@ public class FetchTimeExporter {
     final String DEBUG_HEADER = "configure(): ";
     // Get the current configuration.
     Configuration config = ConfigManager.getCurrentConfig();
+
+    // Do nothing more if the fetch time export subsystem is disabled.
+    if (!exportManager.isReady()) {
+      if (log.isDebug2())
+	log.debug2(DEBUG_HEADER + "Export of fetch times is disabled.");
+      return false;
+    }
 
     // Get the name of the server for the purpose of assigning to it the fetch
     // time export output.

@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExportManager.java,v 1.1 2013-10-16 23:14:00 fergaloy-sf Exp $
+ * $Id: FetchTimeExportManager.java,v 1.2 2013-12-12 21:57:12 fergaloy-sf Exp $
  */
 
 /*
@@ -39,13 +39,14 @@ package org.lockss.exporter;
 
 import java.io.File;
 import org.lockss.app.BaseLockssDaemonManager;
+import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.util.Logger;
 
-public class FetchTimeExportManager extends BaseLockssDaemonManager {
+public class FetchTimeExportManager extends BaseLockssDaemonManager implements
+    ConfigurableManager {
   /**
    * Prefix for the export configuration entries.
    */
@@ -55,7 +56,7 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
    * Indication of whether the fetch time export subsystem should be enabled.
    * <p />
    * Defaults to false. If the fetch time export subsystem is not enabled, no
-   * data is collected or exported. Changes require daemon restart.
+   * data is collected or exported.
    */
   public static final String PARAM_FETCH_TIME_EXPORT_ENABLED =
       PREFIX + "fetchTimeExportEnabled";
@@ -71,8 +72,7 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
   /**
    * Base directory for export files.
    * <p />
-   * Defaults to <code><i>daemon_tmpdir</i>/export</code>. Changes require
-   * daemon restart.
+   * Defaults to <code><i>daemon_tmpdir</i>/export</code>.
    */
   public static final String PARAM_EXPORT_BASEDIR_PATH = PREFIX
       + "baseDirectoryPath";
@@ -99,6 +99,10 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
   // The base directory for the export files.
   private File exportDir = null;
 
+  // An indication of whether the recurring task of exporting fetch data has
+  // been scheduled.
+  private boolean isExporterTaskScheduled = false;
+
   /**
    * Starts the FetchTimeExportManager service.
    */
@@ -106,19 +110,48 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
   public void startService() {
     final String DEBUG_HEADER = "startService(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    super.startService();
+    resetConfig();
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ready = " + ready);
+  }
 
-    // Do nothing more if the configuration failed.
-    if (!configure()) {
+  /**
+   * Handler of configuration changes.
+   * 
+   * @param newConfig
+   *          A Configuration with the new configuration.
+   * @param prevConfig
+   *          A Configuration with the previous configuration.
+   * @param changedKeys
+   *          A Configuration.Differences with the keys of the configuration
+   *          elements that have changed.
+   */
+  public void setConfig(Configuration newConfig, Configuration prevConfig,
+      Configuration.Differences changedKeys) {
+    final String DEBUG_HEADER = "setConfig(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Do nothing on daemon startup before the service is started.
+    if (!getDaemon().isDaemonInited()) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ready = " + ready);
       return;
     }
 
-    // Schedule the recurring task of exporting fetch data.
-    Cron cron = (Cron) LockssDaemon.getManager(LockssDaemon.CRON);
-    cron.addTask(new FetchTimeExporter(getDaemon()).getCronTask());
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "FetchTimeExporter task added to cron.");
+    // Check whether the fetch time export subsystem should be enabled.
+    if (configure(newConfig)) {
+      // Yes: Check whether the recurring task of exporting fetch data needs to
+      // be scheduled.
+      if (!isExporterTaskScheduled) {
+	// Yes: Schedule the recurring task of exporting fetch data.
+	scheduleTask();
+      }
 
-    ready = true;
+      ready = true;
+    } else {
+      // No.
+      ready = false;
+    }
+
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "ready = " + ready);
   }
 
@@ -128,11 +161,8 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
    * @return <code>true</code> if the configuration is enabled and successful,
    *         <code>false</code> otherwise.
    */
-  private boolean configure() {
+  private boolean configure(Configuration config) {
     final String DEBUG_HEADER = "configure(): ";
-    // Get the current configuration.
-    Configuration config = ConfigManager.getCurrentConfig();
-
     // Check whether the fetch time export subsystem should be disabled.
     if (!config.getBoolean(PARAM_FETCH_TIME_EXPORT_ENABLED,
 	DEFAULT_FETCH_TIME_EXPORT_ENABLED)) {
@@ -150,6 +180,23 @@ public class FetchTimeExportManager extends BaseLockssDaemonManager {
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return true;
+  }
+
+  /**
+   * Schedules the recurring task of exporting fetch data.
+   */
+  private void scheduleTask() {
+    final String DEBUG_HEADER = "scheduleTask(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    Cron cron = (Cron) LockssDaemon.getManager(LockssDaemon.CRON);
+    cron.addTask(new FetchTimeExporter(getDaemon()).getCronTask());
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "FetchTimeExporter task added to cron.");
+
+    isExporterTaskScheduled = true;
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "isExporterTaskScheduled = "
+	+ isExporterTaskScheduled);
   }
 
   /**
