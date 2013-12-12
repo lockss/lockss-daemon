@@ -48,7 +48,7 @@
     au < manifest ; exists ; 2011 ; Biomarkers in Medicine Volume 5 ; 5 >
     au < manifest ; exists ; 2012 ; Biomarkers in Medicine Volume 6 ; 6 >
     au < crawling ; exists ; 2013 ; Biomarkers in Medicine Volume 7 ; 7 >
-    au < expected ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
+    au < manifest ; exists ; 2014 ; Biomarkers in Medicine Volume 8 ; 8 >
    
   }
 
@@ -63,7 +63,7 @@
 
     au < manifest ; exists ; 2012 ; Breast Cancer Management Volume 1 ; 1 >
     au < crawling ; exists ; 2013 ; Breast Cancer Management Volume 2 ; 2 >
-    au < expected ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
+    au < manifest ; exists ; 2014 ; Breast Cancer Management Volume 3 ; 3 >
   
   }
 
@@ -182,7 +182,7 @@
     au < manifest ; exists ; 2011 ; Diabetes Management Volume 1 ; 1 >
     au < manifest ; exists ; 2012 ; Diabetes Management Volume 2 ; 2 >
     au < crawling ; exists ; 2013 ; Diabetes Management Volume 3 ; 3 >
-    au < expected ; exists ; 2014 ; Diabetes Management Volume 4 ; 4 >
+    au < manifest ; exists ; 2014 ; Diabetes Management Volume 4 ; 4 >
   
   }
 
@@ -289,7 +289,7 @@
     au < manifest ; exists ; 2011 ; Future Oncology Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Future Oncology Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Future Oncology Volume 9 ; 9 >
-    au < expected ; exists ; 2014 ; Future Oncology Volume 10 ; 10 >
+    au < manifest ; exists ; 2014 ; Future Oncology Volume 10 ; 10 >
     
   }
 
@@ -663,7 +663,7 @@
     au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
     au < crawling ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
-    au < expected ; exists ; 2014 ; Women's Health Volume 10 ; 10 >
+    au < manifest ; exists ; 2014 ; Women's Health Volume 10 ; 10 >
     
   }
 
