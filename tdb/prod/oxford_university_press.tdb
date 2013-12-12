@@ -2644,6 +2644,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 >
     au < HighWirePressH20Plugin ; manifest ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 >
 
     }
 
@@ -6634,6 +6635,7 @@
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 >
       
   }
       
@@ -8519,6 +8521,7 @@
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 19 ; 19 >
 
   }
 
@@ -11037,7 +11040,8 @@
     au < HighWirePressH20Plugin ; released ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 >
     au < HighWirePressH20Plugin ; expected ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68A ; 68A >
-    au < HighWirePressH20Plugin ; manifest ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A >
 
     }
 
@@ -17865,8 +17869,11 @@
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = 
+    param[base_url] = http://pasj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    comment[0] = will publish its first issue with OUP in February 2014
+
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 >
 
   }
 
@@ -18493,6 +18500,7 @@
     au < HighWirePressH20Plugin ; expected ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; Radiation Protection Dosimetry Volume 162 ; 162 >
 
     }
 
@@ -20967,6 +20975,7 @@
     {
 
       au < manifest ; 2013 ; Journal of Antitrust Enforcement Volume 1 ; 1 >
+      au < expected ; 2014 ; Journal of Antitrust Enforcement Volume 2 ; 2 >
 
     }
 
@@ -21314,7 +21323,6 @@
     au < exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 195 ; 195 >
     au < exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 196 ; 196 >
     au < exists ; 2012 ; Progress of Theoretical Physics Supplement Volume 197 ; 197 >
-    au < expected ; 2013 ; Progress of Theoretical Physics Supplement Volume 198 ; 198 >
 
     }
 

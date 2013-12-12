@@ -6439,10 +6439,10 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    comment[notReady] = This AU does not yet have a manifest. 05/2013
+    comment[status] = This AU does not yet have a manifest. 12/2013
       
-    au < ingNotReady ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
-    au < ingNotReady ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
+    au < exists ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
      
   }
       
