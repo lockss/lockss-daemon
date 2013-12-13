@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.117 2013-10-23 04:20:05 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.118 2013-12-13 07:01:14 fergaloy-sf Exp $
  */
 
 /*
@@ -1950,5 +1950,23 @@ public class StringUtil {
     } catch (UnsupportedEncodingException uea) {
       throw new RuntimeException(uea);
     }
+  }
+
+  private static java.util.regex.Pattern BLANK_NLS_AND_TABS_PATTERN =
+    java.util.regex.Pattern.compile("[\n|\t]+");
+
+  /**
+   * Blanks out newlines and tabs in a text string.
+   * 
+   * @param text
+   *          A String with the text string to be processed.
+   * @return a String with newlines and tabs replaced by spaces.
+   */
+  public static String blankOutNlsAndTabs(String text) {
+    if (text != null) {
+      return BLANK_NLS_AND_TABS_PATTERN.matcher(text).replaceAll(" ");
+    }
+
+    return "";
   }
 }

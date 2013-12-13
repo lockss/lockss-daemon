@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.99 2013-10-23 04:20:05 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.100 2013-12-13 07:01:14 fergaloy-sf Exp $
  */
 
 /*
@@ -1339,5 +1339,52 @@ public class TestStringUtil extends LockssTestCase {
     public int read(char[] cbuf, int off, int len) throws IOException {
       return super.read(cbuf, off, (len < 2 ? len : 2));
     }
+  }
+
+  public void testBlankOutNLsAndTabs() {
+    assertEquals("", StringUtil.blankOutNlsAndTabs(null));
+    assertEquals("", StringUtil.blankOutNlsAndTabs(""));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs(" "));
+    assertEquals("abc", StringUtil.blankOutNlsAndTabs("abc"));
+    assertEquals(" abc ", StringUtil.blankOutNlsAndTabs(" abc "));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\n"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\t"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\n\n"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\n\t"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\t\n"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\t\t"));
+    assertEquals(" ", StringUtil.blankOutNlsAndTabs("\t\n\t\n\n\t\n\t"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\na"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\ta"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\n\na"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\n\ta"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\t\na"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\t\ta"));
+    assertEquals(" a", StringUtil.blankOutNlsAndTabs("\t\n\t\n\n\t\n\ta"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\n"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\t"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\n\n"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\n\t"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\t\n"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\t\t"));
+    assertEquals("a ", StringUtil.blankOutNlsAndTabs("a\t\n\t\n\n\t\n\t"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\na\t"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\ta\n"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\n\na\t\t"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\n\ta\t\n"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\t\na\n\t"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\t\ta\n\n"));
+    assertEquals(" a ", StringUtil.blankOutNlsAndTabs("\t\n\t\na\n\t\n\t"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\na"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\ta"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\n\na"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\n\ta"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\t\na"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\t\ta"));
+    assertEquals("a a", StringUtil.blankOutNlsAndTabs("a\t\n\t\n\n\t\n\ta"));
+    assertEquals(" a bcd e", StringUtil.blankOutNlsAndTabs("\na\tbcd\t\ne"));
+    assertEquals("ab c de ", StringUtil.blankOutNlsAndTabs("ab\t\tc\n\nde\n"));
+    assertEquals("a b\r cd\r ",
+	StringUtil.blankOutNlsAndTabs("a\n\tb\r\ncd\r\n"));
   }
 }
