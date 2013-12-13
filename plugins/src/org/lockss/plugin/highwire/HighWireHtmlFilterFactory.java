@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.11 2013-08-07 21:18:26 etenbrink Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.12 2013-12-13 04:20:02 etenbrink Exp $
  */
 
 /*
@@ -58,6 +58,8 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
 					       String encoding) {
 
     NodeFilter[] filters = new NodeFilter[] {
+        // filter head for Red Book
+        new TagNameFilter("head"),
         // Contains variable ad-generating code
         new TagNameFilter("script"),
         // Contains variable ad-generating code
@@ -104,6 +106,9 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("img", "alt", "[<>]"),
         //CMAJ (c)year tag
         HtmlNodeFilters.tagWithAttribute("div", "class", "slugline-copyright"),
+        // filter ads & institution for Red Book
+        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ad"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         
     };
 
