@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireHtmlFilterFactory.java,v 1.4 2013-08-03 00:05:00 etenbrink Exp $
+ * $Id: TestHighWireHtmlFilterFactory.java,v 1.5 2013-12-13 04:20:22 etenbrink Exp $
  */
 
 /*
@@ -130,6 +130,10 @@ public class TestHighWireHtmlFilterFactory extends LockssTestCase {
       "<img alt = \"[<>]\"></img>xxyyzz",
       //CMAJ (c)year tag
       "<div class = \"slugline-copyright\"></div>xxyyzz",
+      // Red Book tag tests
+      "<head>head stuff</head>xxyyzz",
+      "<div class=\"leaderboard-ad\">leaderboard-ad stuff</div>xxyyzz",
+      "<div id=\"header\">header stuff</div>xxyyzz",
 
   };
   
