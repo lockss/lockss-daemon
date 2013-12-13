@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.5 2013-12-12 21:57:12 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.6 2013-12-13 07:02:38 fergaloy-sf Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ import org.lockss.util.FileUtil;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.NumberUtil;
+import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
 
 public class FetchTimeExporter {
@@ -705,17 +706,19 @@ public class FetchTimeExporter {
 
 	    sb.append(exportVersion).append(SEPARATOR)
 	    .append(serverName).append(SEPARATOR)
-	    .append(publisherName).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(publisherName))
+	    .append(SEPARATOR)
 	    .append(pluginId).append(SEPARATOR)
 	    .append(auKey).append(SEPARATOR)
 	    .append(isBulkContent).append(SEPARATOR)
-	    .append(publicationName).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(publicationName))
+	    .append(SEPARATOR)
 	    .append(typeName).append(SEPARATOR)
-	    .append(itemTitle).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(itemTitle)).append(SEPARATOR)
 	    .append(date).append(SEPARATOR)
 	    .append(fetchTime).append(SEPARATOR)
 	    .append(accessUrl).append(SEPARATOR)
-	    .append(doi);
+	    .append(StringUtil.blankOutNlsAndTabs(doi));
 
 	    // Write the line to the export output file.
 	    writer.println(sb.toString());
