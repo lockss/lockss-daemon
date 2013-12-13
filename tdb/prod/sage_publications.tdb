@@ -2939,6 +2939,8 @@
         pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://apj.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
+        
+        Comment[moved] = to Whiley but content through 2011 remains here.
 
         au < manifest ; 1966 ; Asia Pacific Journal of Human Resources Volume 1 ; 1 >
         au < manifest ; 1967 ; Asia Pacific Journal of Human Resources Volume 2 ; 2 >
@@ -2989,7 +2991,6 @@
         au < doNotProcess ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
         au < released ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 >
         au < released ; 2011 ; Asia Pacific Journal of Human Resources Volume 49 ; 49 >
-        au < expected ; 2012 ; Asia Pacific Journal of Human Resources Volume 50 ; 50 >
         
       }
 
@@ -3380,7 +3381,7 @@
         au < released ; 2011 ; Australian & New Zealand Journal of Criminology Volume 44 ; 44 >
         au < released ; 2012 ; Australian & New Zealand Journal of Criminology Volume 45 ; 45 >
         au < manifest ; 2013 ; Australian & New Zealand Journal of Criminology Volume 46 ; 46 >
-        au < expected ; 2014 ; Australian & New Zealand Journal of Ciminiology Volume 47 ; 47 >
+        au < expected ; 2014 ; Australian & New Zealand Journal of Criminology Volume 47 ; 47 >
 
       }
       
@@ -21760,8 +21761,14 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       au < exists ; 2004 ; Journal of Experiential Education Volume 27 ; 27 >
       au < exists ; 2005-2006 ; Journal of Experiential Education Volume 28 ; 28 >
       au < exists ; 2006-2007 ; Journal of Experiential Education Volume 29 ; 29 >
+      au < exists ; 2007-2008 ; Journal of Experiential Education Volume 30 ; 30 >
+      au < exists ; 2008-2009 ; Journal of Experiential Education Volume 31 ; 31 >
+      au < exists ; 2009-2010 ; Journal of Experiential Education Volume 32 ; 32 >
+      au < exists ; 2010-2011 ; Journal of Experiential Education Volume 33 ; 33 >
+      au < exists ; 2011 ; Journal of Experiential Education Volume 34 ; 34 >
+      au < exists ; 2012 ; Journal of Experiential Education Volume 35 ; 35 >
       au < manifest ; 2013 ; Journal of Experiential Education Volume 36 ; 36 >
-      au < expected ; 2014 ; Journal of Experiential Education Volume 34 ; 34 >
+      au < expected ; 2014 ; Journal of Experiential Education Volume 37 ; 37 >
       
     }
 
@@ -24735,7 +24742,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of Pharmacy Practice Volume 24 ; 24 >
         au < released ; 2012 ; Journal of Pharmacy Practice Volume 25 ; 25 >
         au < manifest ; 2013 ; Journal of Pharmacy Practice Volume 26 ; 26 >
-        au < expected ; 2014 ; Jorunal of Pharmacy Practice Volume 27 ; 27 >
+        au < expected ; 2014 ; Journal of Pharmacy Practice Volume 27 ; 27 >
 
       }
 
@@ -28495,7 +28502,7 @@ comment[mpj] = now published by Brill
         au <  released ; 2011 ; Management and Labour Studies Volume 36 ; 36 >
         au <  released ; 2012 ; Management and Labour Studies Volume 37 ; 37 >
         au < manifest ; 2013 ; Management and Labour Studies Volume 38 ; 38 >
-        au < expected ; 2014 ; Management and Laboru Studies Volume 39 ; 39 >
+        au < expected ; 2014 ; Management and Labour Studies Volume 39 ; 39 >
 
       }
 
@@ -32428,7 +32435,7 @@ comment[mpj] = now published by Brill
         implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 2013 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 2 ; 2 >
-        au < expected ; 2014 ; Proceedings of the International Symposium of Human Facotrs and Ergonomics in Healthcare Volume 3 ; 3 >
+        au < expected ; 2014 ; Proceedings of the International Symposium of Human Factors and Ergonomics in Healthcare Volume 3 ; 3 >
 
     }
 
@@ -32528,7 +32535,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part B: Journal of Engineering Manufacture Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part B: Journal of Engineering Manufacture Volume 228 ; 228 >
 
       }
 
@@ -32579,7 +32586,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part C: Journal of Mechanical Engineering Science Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 228 ; 228 >
 
       }
 
@@ -32629,7 +32636,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part D: Journal of Automobile Engineering Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering Volume 228 ; 228 >
 
       }
 
@@ -32764,7 +32771,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part G: Journal of Aerospace Engineering Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering Volume 228 ; 228 >
 
       }
 
@@ -32852,7 +32859,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part I: Journal of Systems and Control Engineering Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part I: Journal of Systems and Control Engineering Volume 228 ; 228 >
 
       }
 
@@ -32893,7 +32900,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part J: Journal of Engineering Tribology Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology Volume 228 ; 228 >
 
       }
 
@@ -32928,7 +32935,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part K: Journal of Multi-body Dynamics Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 228 ; 228 >
 
       }
 
@@ -32963,7 +32970,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mecahnical Engineers, Part L: Journal of Materials Design and Applications Volume 228 ; 228 >
+        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials Design and Applications Volume 228 ; 228 >
 
       }
 
@@ -44399,7 +44406,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2011 ; Medicine, Science and the Law Volume 51 ; 51 >
         au < exists ; 2012 ; Medicine, Science and the Law Volume 52 ; 52 >
         au < manifest ; 2013 ; Medicine, Science and the Law Volume 53 ; 53 >
-        au < expected ; 2014 ; Medicine, Science and the Law Voluem 54 ; 54 >
+        au < expected ; 2014 ; Medicine, Science and the Law Volume 54 ; 54 >
   
       }
   
