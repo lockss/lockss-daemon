@@ -15,12 +15,11 @@
 
     plugin = org.lockss.plugin.ojs.OJSPlugin
     param[base_url] = http://www.i-journals.org/ssy/
-    comment[plugin] = checked that ojsplugin still used in Feb 6, 2013
+    
+    comment[moving] = no further processing.
         
-    au < released ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
-    au < released ; 2012 ; Stochastic Systems Volume 2 ; 2 ; 2012 >
-    au < expected ; 2013 ; Stochastic Systems Volume 3 ; 3 ; 2013 >
-    au < expected ; 2014 ; Stochastic Systems Volume 4 ; 4 ; 2014 >
+    au < down ; 2011 ; Stochastic Systems Volume 1 ; 1 ; 2011 >
+    au < down ; 2012 ; Stochastic Systems Volume 2 ; 2 ; 2012 >
 
   }
 
