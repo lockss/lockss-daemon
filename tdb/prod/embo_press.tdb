@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = EMBO Press
+  >
+
+  plugin = needs.plugin
+  comment[platform] = HighWire Drupal
+  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = The EMBO Journal
+    >
+
+  }
+
+  {
+  
+    title <
+      name = EMBO Reports
+    >
+
+  }
+
+  {
+  
+    title <
+      name = Molecular Systems Biology
+    >
+
+  }
+
+  {
+  
+    title <
+      name = EMBO Molecular Medicine
+    >
+
+  }
+
+}
+
