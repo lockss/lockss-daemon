@@ -1476,7 +1476,7 @@
     au < HighWirePressH20Plugin ; released ; 2010 ; Annals of Oncology Volume 21 ; 21 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Annals of Oncology Volume 22 ; 22 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Annals of Oncology Volume 23 ; 23 >
-    au < HighWirePressH20Plugin ; notReady ; 2013 ; Annals of Oncology Volume 24 ; 24 >
+    au < HighWirePressH20Plugin ; wanted ; 2013 ; Annals of Oncology Volume 24 ; 24 >
     au < HighWirePressH20Plugin ; expected ; 2014 ; Annals of Oncology Volume 25 ; 25 >
 
     }
@@ -5685,6 +5685,8 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://eurjhfsupp.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+    
+    comment[notReady] = Reported to HW
 
     au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; European Journal of Heart Failure Supplements Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; doNotProcess ; 2003 ; European Journal of Heart Failure Supplements Volume 2 ; 2 >
