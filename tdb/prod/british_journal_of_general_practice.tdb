@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = British Journal of General Practice
+  >
+
+  plugin = needs.plugin
+  comment[platform] = HW Drupal
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name = British Journal of General Practice ;
+      issn = 0960-1643 ;
+      eissn = 1478-5242 ;
+      issnl = 0960-1643
+    >
+
+    param[base_url] = http://bjgp.org/
+
+    au < doNotProcess ; 2005 ; British Journal of General Practice Volume 55 ; 55 >
+    au < doNotProcess ; 2006 ; British Journal of General Practice Volume 56 ; 56 >
+    au < doNotProcess ; 2007 ; British Journal of General Practice Volume 57 ; 57 >
+    au < doNotProcess ; 2008 ; British Journal of General Practice Volume 58 ; 58 >
+    au < doNotProcess ; 2009 ; British Journal of General Practice Volume 59 ; 59 >
+    au < doNotProcess ; 2010 ; British Journal of General Practice Volume 60 ; 60 >
+    au < doNotProcess ; 2011 ; British Journal of General Practice Volume 61 ; 61 >
+    au < doNotProcess ; 2012 ; British Journal of General Practice Volume 62 ; 62 >
+    au < doNotProcess ; 2013 ; British Journal of General Practice Volume 63 ; 63 >
+
+  }
+
+}
