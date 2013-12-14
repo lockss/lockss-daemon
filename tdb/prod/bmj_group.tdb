@@ -845,6 +845,20 @@
 
   {
     title <
+      name = OpenHeart ;
+      eissn = 2044-6055
+      >
+    
+    rights = openaccess
+    param[base_url] = http://openheart.bmj.com/
+
+    au < HighWirePressH20Plugin ; exists ; 2013 ; OpenHeart Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; expected ; 2014 ; OpenHeart Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
       name = Heart Asia ;
       eissn = 1759-1104
       >
