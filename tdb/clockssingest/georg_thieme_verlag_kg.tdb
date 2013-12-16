@@ -9,7 +9,7 @@
   comment[error] = because of the url with https, production machines are not able to crawl till daemon fix.
 
   param[base_url] = https://www.thieme-connect.de/
-  plugin = org.lockss.plugin.georgthiemeverlag/GeorgThiemeVerlagPlugin
+  plugin = org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin
   implicit < status ; status2 ; year ; param[year] ; name >
   param[doi_prefix] = 10.1055
 
