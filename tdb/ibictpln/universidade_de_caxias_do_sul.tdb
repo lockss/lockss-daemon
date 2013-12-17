@@ -1,0 +1,178 @@
+{
+  publisher <
+    name = Universidade de Caxias do Sul
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Antares: Letras e Humanidades ;
+        issn = 1984-4921
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = antares
+
+      au < exists ; 2009 ; 1 ; Antares: Letras e Humanidades Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Antares: Letras e Humanidades Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Antares: Letras e Humanidades Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Antares: Letras e Humanidades Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Antares: Letras e Humanidades Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; Antares: Letras e Humanidades Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Anuário de Pesquisa do Programa de Pós-Graduação em Turismo ;
+        eissn = 2178-9061
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = dossierosadosventos
+
+      au < exists ; 2008 ; 1 ; Anuário de Pesquisa do Programa de Pós-Graduação em Turismo Volume 2008 ; 2008 >
+
+  }
+
+  {
+
+      title <
+        name = Conexão: Comunicação e Cultura
+ ;
+        eissn = 2178-2687
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = conexao
+
+      au < exists ; 2002 ; 1 ; Conexão: Comunicação e Cultura Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Conexão: Comunicação e Cultura Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Conexão: Comunicação e Cultura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Conexão: Comunicação e Cultura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Conexão: Comunicação e Cultura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Conexão: Comunicação e Cultura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Conexão: Comunicação e Cultura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Conexão: Comunicação e Cultura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Conexão: Comunicação e Cultura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Conexão: Comunicação e Cultura Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 11 ; Conexão: Comunicação e Cultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Conexão: Comunicação e Cultura Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 13 ; Conexão: Comunicação e Cultura Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Conjectura: filosofia e educação ;
+        issn = 0103-1457 ;
+        eissn = 2178-4612
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = conjectura
+
+      au < exists ; 2009 ; 1 ; Conjectura: filosofia e educação Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Conjectura: filosofia e educação Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Conjectura: filosofia e educação Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Conjectura: filosofia e educação Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Conjectura: filosofia e educação Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; Conjectura: filosofia e educação Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Do Corpo: ciências e artes ;
+        issn = 2238-1546
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = docorpo
+
+      au < exists ; 2011 ; 1 ; Do Corpo: ciências e artes Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Do Corpo: ciências e artes Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Do Corpo: ciências e artes Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Do Corpo: ciências e artes Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Direito Ambiental e Sociedade  ;
+        issn = 2316-8218 ;
+        eissn =  2237-0021
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = direitoambiental
+
+      au < exists ; 2011 ; 1 ; Revista Direito Ambiental e Sociedade  Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 2 ; Revista Direito Ambiental e Sociedade  Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista Direito Ambiental e Sociedade  Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 4 ; Revista Direito Ambiental e Sociedade  Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Métis: história & cultura ;
+        issn = 1677-0706 ;
+        eissn = 2236-2762
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = metis
+
+      au < exists ; 2002 ; 1 ; Revista Métis: história & cultura Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 2 ; Revista Métis: história & cultura Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 3 ; Revista Métis: história & cultura Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 4 ; Revista Métis: história & cultura Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 5 ; Revista Métis: história & cultura Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 6 ; Revista Métis: história & cultura Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 7 ; Revista Métis: história & cultura Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 8 ; Revista Métis: história & cultura Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 9 ; Revista Métis: história & cultura Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 10 ; Revista Métis: história & cultura Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 11 ; Revista Métis: história & cultura Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 12 ; Revista Métis: história & cultura Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 13 ; Revista Métis: história & cultura Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Rosa dos Ventos ;
+        eissn = 2178-9061
+      >
+
+      comment[publisher] = Universidade de Caxias do Sul
+      param[base_url] = http://www.ucs.br/etc/revistas/
+      param[journal_id] = rosadosventos
+
+      au < exists ; 2009 ; 1 ; Rosa dos Ventos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; Rosa dos Ventos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; Rosa dos Ventos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; Rosa dos Ventos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; Rosa dos Ventos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; Rosa dos Ventos Volume 2014 ; 2014 >
+
+  }
+
+}
