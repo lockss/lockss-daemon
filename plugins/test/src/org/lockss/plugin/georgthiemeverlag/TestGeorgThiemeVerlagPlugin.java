@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.3 2013-12-17 05:05:26 etenbrink Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000002");
     props.setProperty(YEAR_KEY, "2010");
+    props.setProperty(DOI_PREFIX_KEY, "10.1055");
     DefinableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
@@ -101,6 +102,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(JOURNAL_ID_KEY, "10.foo/s-00000002");
     props.setProperty(YEAR_KEY, "2010");
+    props.setProperty(DOI_PREFIX_KEY, "10.1055");
     
     try {
       DefinableArchivalUnit au = makeAuFromProps(props);
@@ -117,6 +119,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000002");
     props.setProperty(YEAR_KEY, "2010");
+    props.setProperty(DOI_PREFIX_KEY, "10.1055");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Georg Thieme Verlag Plugin (CLOCKSS), Base URL http://www.example." +
@@ -134,7 +137,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
                                    setType(ConfigParamDescr.TYPE_STRING).
                                    setSize(40).
                                    setDefaultOnly(false).
-                                   setDefinitional(false),
+                                   setDefinitional(true),
                                ConfigParamDescr.JOURNAL_ID,
                                new ConfigParamDescr().setKey(YEAR_KEY).
                                    setType(ConfigParamDescr.TYPE_STRING).
