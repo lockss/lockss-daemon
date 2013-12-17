@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.80 2013-12-09 21:39:25 pgust Exp $
+ * $Id: ServeContent.java,v 1.81 2013-12-17 22:24:52 pgust Exp $
  */
 
 /*
@@ -1625,7 +1625,10 @@ public class ServeContent extends LockssServlet {
         if (bibliographicItem != null) {
           candidateAus = getCandidateAus(bibliographicItem);
         } else if (url != null) {
-          candidateAus = pluginMgr.getCandidateAus(url);
+          try {
+            candidateAus = pluginMgr.getCandidateAus(url);
+          } catch (MalformedURLException ex) {
+          }
         }
 
         if (candidateAus != null && !candidateAus.isEmpty()) {
@@ -1833,8 +1836,11 @@ public class ServeContent extends LockssServlet {
         redirectToUrl();
         break;
       case HostAuIndex:
-        Collection<ArchivalUnit> candidateAus =
-            pluginMgr.getCandidateAus(missingUrl);
+        Collection<ArchivalUnit> candidateAus = Collections.emptyList();
+        try {
+            candidateAus = pluginMgr.getCandidateAus(missingUrl);
+        } catch (MalformedURLException ex) {
+        }
         if (candidateAus != null && !candidateAus.isEmpty()) {
           displayIndexPage(candidateAus,
               HttpResponse.__404_Not_Found,
