@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.19 2013-12-09 18:35:59 pgust Exp $
+ * $Id: MetadataField.java,v 1.20 2013-12-17 17:57:46 fergaloy-sf Exp $
  */
 
 /*
@@ -536,6 +536,10 @@ public class MetadataField {
   public static final MetadataField FIELD_PROPRIETARY_IDENTIFIER =
       new MetadataField(KEY_PROPRIETARY_IDENTIFIER, Cardinality.Single);
 
+  public static final String KEY_FETCH_TIME = "fetch.time";
+  public static final MetadataField FIELD_FETCH_TIME =
+      new MetadataField(KEY_FETCH_TIME, Cardinality.Single);
+
   /**
    * An account of the resource. May include but is not limited to: an abstract,
    * a table of contents, a graphical representation, or a free-text account of
@@ -556,6 +560,7 @@ public class MetadataField {
     FIELD_DATE,
     FIELD_END_PAGE,
     FIELD_FEATURED_URL_MAP,
+    FIELD_FETCH_TIME,
     FIELD_ITEM_NUMBER,
     FIELD_JOURNAL_TITLE,
     FIELD_KEYWORDS,

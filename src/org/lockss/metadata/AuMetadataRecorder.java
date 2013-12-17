@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.14 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.15 2013-12-17 17:57:46 fergaloy-sf Exp $
  */
 
 /*
@@ -878,8 +878,15 @@ public class AuMetadataRecorder {
     }
 
     // Get the earliest fetch time of the metadata items URLs.
-    long fetchTime =
-	AuUtil.getAuUrlsEarliestFetchTime(au, featuredUrlMap.values());
+    long fetchTime = -1;
+
+    try {
+      fetchTime = Long.valueOf(mdinfo.fetchTime).longValue();
+    } catch (NumberFormatException nfe) {
+      if (log.isDebug())
+	log.debug("Unparsable fetch time '" + mdinfo.fetchTime + "'");
+    }
+
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
 
     // Get the access URL received in the metadata.

@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataBuffer.java,v 1.2 2013-03-26 22:15:07 fergaloy-sf Exp $
+ * $Id: ArticleMetadataBuffer.java,v 1.3 2013-12-17 17:57:46 fergaloy-sf Exp $
  */
 
 /*
@@ -105,6 +105,7 @@ class ArticleMetadataBuffer {
     String coverage;
     String itemNumber;
     String proprietaryIdentifier;
+    String fetchTime;
 
     /**
      * Extract the information from the ArticleMetadata
@@ -160,6 +161,7 @@ class ArticleMetadataBuffer {
       itemNumber = md.get(MetadataField.FIELD_ITEM_NUMBER);
       proprietaryIdentifier =
 	  md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
+      fetchTime = md.get(MetadataField.FIELD_FETCH_TIME);
     }
     
     /**

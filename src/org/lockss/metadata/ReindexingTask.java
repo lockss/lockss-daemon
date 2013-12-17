@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.12 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.13 2013-12-17 17:57:46 fergaloy-sf Exp $
  */
 
 /*
@@ -423,6 +423,12 @@ public class ReindexingTask extends StepTask {
       }
 
       md.putRaw(MetadataField.FIELD_FEATURED_URL_MAP.getKey(), roles);
+
+      // Get the earliest fetch time of the metadata items URLs.
+      long fetchTime = AuUtil.getAuUrlsEarliestFetchTime(au, roles.values());
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
+
+      md.put(MetadataField.FIELD_FETCH_TIME, String.valueOf(fetchTime));
 
       try {
         validateDataAgainstTdb(new ArticleMetadataInfo(md), au);
