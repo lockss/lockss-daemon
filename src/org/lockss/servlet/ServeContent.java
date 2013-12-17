@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.81 2013-12-17 22:24:52 pgust Exp $
+ * $Id: ServeContent.java,v 1.82 2013-12-17 23:16:58 pgust Exp $
  */
 
 /*
@@ -618,7 +618,7 @@ public class ServeContent extends LockssServlet {
         handleMissingUrlRequest(url, PubState.Unknown);
       }
     } catch (IOException e) {
-      log.warning("Handling " + url + " throws ", e);
+      log.warning("Handling URL: " + url + " throws ", e);
       throw e;
     } finally {
       AuUtil.safeRelease(cu);
@@ -668,6 +668,7 @@ public class ServeContent extends LockssServlet {
     try {
       ref = new URL(url).getRef();
     } catch (MalformedURLException ex) {
+      log.warning("Handling URL: " + url + " throws ", ex);
     }
 
     if (ref == null) {
@@ -728,6 +729,7 @@ public class ServeContent extends LockssServlet {
         try {
           ref = new URL(url).getRef();
         } catch (MalformedURLException ex) {
+          log.warning("Handling URL: " + url + " throws ", ex);
         }
 
         if (ref != null) {
@@ -743,7 +745,8 @@ public class ServeContent extends LockssServlet {
       handleMissingOpenUrlRequest(info, PubState.Unknown);
 
     } catch (IOException e) {
-      log.warning("Handling " + ((url == null) ? "url" : url) + " throws ", e);
+      log.warning("Handling URL: " 
+                  + ((url == null) ? "url" : url) + " throws ", e);
       throw e;
     } finally {
       AuUtil.safeRelease(cu);
@@ -926,6 +929,8 @@ public class ServeContent extends LockssServlet {
         }
       } catch (org.apache.commons.httpclient.util.DateParseException e) {
         // ignore error, serve file
+        log.warning("Handling ifModifiedSince: " + ifModifiedSince
+                    + "or cuLastModified: " + cuLastModified + " throws ", e);
       }
     }
 
@@ -1231,6 +1236,9 @@ public class ServeContent extends LockssServlet {
         ifModified = HeaderUtil.later(ifModified, cuLast);
       } catch (DateParseException e) {
         // preserve user's header if parse failure
+        // ignore error, serve file
+        log.warning("Handling ifModifiedSince: " + ifModified
+                    + "or cuLastModified: " + cuLast + " throws ", e);
       }
     }
 
@@ -1628,6 +1636,8 @@ public class ServeContent extends LockssServlet {
           try {
             candidateAus = pluginMgr.getCandidateAus(url);
           } catch (MalformedURLException ex) {
+            // ignore error, serve file
+            log.warning("Handling URL: " + url + " throws ", ex);
           }
         }
 
@@ -1840,6 +1850,8 @@ public class ServeContent extends LockssServlet {
         try {
             candidateAus = pluginMgr.getCandidateAus(missingUrl);
         } catch (MalformedURLException ex) {
+          // ignore error, serve file
+          log.warning("Handling URL: " + url + " throws ", ex);
         }
         if (candidateAus != null && !candidateAus.isEmpty()) {
           displayIndexPage(candidateAus,
