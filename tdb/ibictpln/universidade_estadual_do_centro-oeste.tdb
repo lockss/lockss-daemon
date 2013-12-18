@@ -1,0 +1,172 @@
+{
+  publisher <
+    name = Universidade Estadual do Centro-Oeste
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Ambiência ;
+        issn = 1808-0251 ;
+        eissn = 2175-9405
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = ambiencia
+
+      au < exists ; 2005 ; 1 ; Ambiência Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Ambiência Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Ambiência Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Ambiência Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Ambiência Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Ambiência Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Ambiência Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Ambiência Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Ambiência Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; Ambiência Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Analecta ;
+        issn = 1518-6520
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = analecta
+
+      au < exists ; 2006 ; 1 ; Analecta Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 2 ; Analecta Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 3 ; Analecta Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 4 ; Analecta Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 5 ; Analecta Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 6 ; Analecta Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 7 ; Analecta Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 8 ; Analecta Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 9 ; Analecta Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias ;
+        issn = 1983-6325 ;
+        eissn = 1984-7548
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = repaa
+
+      au < exists ; 2008 ; 1 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Revista Brasileira de Tecnologia Aplicada nas Ciências Agrárias Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Ciências Exatas e Naturais-RECEN ;
+        issn = 1518-0352 ;
+        eissn = 2175-5620
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = RECEN
+
+      au < exists ; 1999 ; 1 ; Revista Ciências Exatas e Naturais-RECEN Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Revista Ciências Exatas e Naturais-RECEN Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Revista Ciências Exatas e Naturais-RECEN Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Revista Ciências Exatas e Naturais-RECEN Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Revista Ciências Exatas e Naturais-RECEN Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Revista Ciências Exatas e Naturais-RECEN Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Revista Ciências Exatas e Naturais-RECEN Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Revista Ciências Exatas e Naturais-RECEN Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Revista Ciências Exatas e Naturais-RECEN Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Revista Ciências Exatas e Naturais-RECEN Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Revista Ciências Exatas e Naturais-RECEN Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Revista Ciências Exatas e Naturais-RECEN Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Revista Ciências Exatas e Naturais-RECEN Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Revista Ciências Exatas e Naturais-RECEN Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Revista Ciências Exatas e Naturais-RECEN Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 16 ; Revista Ciências Exatas e Naturais-RECEN Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Guairacá ;
+        eissn = 2179-9180 
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = guaiaraca
+
+      au < exists ; 2008 ; 1 ; Revista Guairacá Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Revista Guairacá Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Revista Guairacá Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Revista Guairacá Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 5 ; Revista Guairacá Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Revista Guairacá Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Revista Guairacá Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Interfaces ;
+        issn = 2179-0027
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = revista_interfaces
+
+      au < exists ; 2010 ; 1 ; Revista Interfaces Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista Interfaces Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista Interfaces Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista Interfaces Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Revista Interfaces Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista Salus: Setor de Ciências da Saúde ;
+        issn = 1980-2404
+      >
+
+      comment[publisher] = Universidade Estadual do Centro-Oeste
+      param[base_url] = http://revistas.unicentro.br/
+      param[journal_id] = salus
+
+      au < exists ; 2007 ; 1 ; Revista Salus: Setor de Ciências da Saúde Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 2 ; Revista Salus: Setor de Ciências da Saúde Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 3 ; Revista Salus: Setor de Ciências da Saúde Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 4 ; Revista Salus: Setor de Ciências da Saúde Volume 2010 ; 2010 >
+      au < expected ; 2011 ; 5 ; Revista Salus: Setor de Ciências da Saúde Volume 2011 ; 2011 >
+      au < expected ; 2012 ; 6 ; Revista Salus: Setor de Ciências da Saúde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 7 ; Revista Salus: Setor de Ciências da Saúde Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 8 ; Revista Salus: Setor de Ciências da Saúde Volume 2014 ; 2014 >
+
+  }
+
+}
