@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.3 2013-12-18 20:40:29 alexandraohlson Exp $
+ * $Id: Onix2ShortXmlMetadataExtractorHelper.java,v 1.1 2013-12-18 20:40:29 alexandraohlson Exp $
  */
 
 /*
@@ -36,44 +36,50 @@ import org.lockss.util.*;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
- *  Onix 2 Long form
  *  with the filenames based on isbn13 plus .pdf or .epub
  *  There can be multiple records for the same item, one for each format
+ *  This is a base class. A plugin uses a subclass which defines the
+ *  string used by the schema (short or long form)
  *  @author alexohlson
  */
-public final class Onix2LongXmlMetadataExtractorHelper
+public class Onix2ShortXmlMetadataExtractorHelper
 extends Onix2BaseXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix2LongXmlMetadataExtractorHelper.class);
+  static Logger log = Logger.getLogger(Onix2ShortXmlMetadataExtractorHelper.class);
 
-  public Onix2LongXmlMetadataExtractorHelper() {
+  /* 
+   *  ONIX 2.1 short form specific definitions of instance variables in 
+   *  base version of extractor helper 
+   */
+  
+  public Onix2ShortXmlMetadataExtractorHelper() {
     // define the instance variables needed for the super class which contains
     // the layout of the schema (and is shared between long and short
     // versions.
-    IDValue_string = "IDValue";
-    ContributorRole_string = "ContributorRole";
-    NamesBeforeKey_string = "NamesBeforeKey";
-    KeyNames_string = "KeyNames";
-    PersonName_string = "PersonName";
-    PersonNameInverted_string = "PersonNameInverted";
-    TitleType_string = "TitleType";
+    IDValue_string = "b244";
+    ContributorRole_string = "b035";
+    NamesBeforeKey_string = "b039";
+    KeyNames_string = "b040";
+    PersonName_string = "b036";
+    PersonNameInverted_string = "b037";
+    TitleType_string = "b202";
     TitleLevel_val = "01";
-    TitleText_string = "TitleText";
-    Subtitle_string = "Subtitle";
-    ProductForm_string = "ProductForm";
-    ProductIdentifier_string = "ProductIdentifier";
-    ProductIDType_string = "ProductIDType";
-    Contributor_string = "Contributor";
-    Publisher_string = "Publisher";
-    PublisherName_string = "PublisherName";
-    PublicationDate_string = "PublicationDate";
-    Series_string = "Series";
-    SeriesIdentifier_string = "SeriesIdentifier";
-    SeriesIDType_string = "SeriesIDType";
-    TitleOfSeries_string = "TitleOfSeries";
-    Title_string = "Title";
+    TitleText_string = "b203";
+    Subtitle_string = "b029";
+    ProductForm_string = "b012";
+    ProductIdentifier_string = "productidentifier";
+    ProductIDType_string = "b221";
+    Contributor_string = "contributor";
+    Publisher_string = "publisher";
+    PublisherName_string = "b081";
+    PublicationDate_string = "b003";
+    Series_string = "series";
+    SeriesIdentifier_string = "seriesidentifier";
+    SeriesIDType_string = "b273";
+    TitleOfSeries_string = "b018";
+    Title_string = "title";
     ONIXMessage_string = "ONIXMessage";
-    Product_string = "Product"; 
-    RecordReference_string = "RecordReference";
+    Product_string = "product"; 
+    RecordReference_string = "a001";
     
     /* now tell the parent class to define variables that use these strings */
     defineSchemaPaths();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.5 2013-12-09 22:09:04 alexandraohlson Exp $
+ * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.6 2013-12-18 20:40:29 alexandraohlson Exp $
  */
 /*
 
@@ -128,7 +128,77 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
      assertEmpty(mdlist);
  }
 
+ // An XML snippet to test a specific issue as needed.
+ private static final String XMLsnippet = 
+     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+         "<ONIXMessage release=\"3.0\">" +
+         "<Header>" +
+         "<Sender>" +
+         "<SenderName>Test Content Group</SenderName>" +
+         "<ContactName>CoreSource</ContactName>" +
+         "<EmailAddress>partnersupport@test.com</EmailAddress>" +
+         "</Sender>" +
+         "<Addressee>" +
+         "<AddresseeName>CLOCKSS</AddresseeName>" +
+         "</Addressee>" +
+         "<SentDateTime>20130701T080307Z</SentDateTime>" +
+         "</Header>" +
+         "<Product>" + 
+         " <RecordReference>7780857450449</RecordReference>" +
+         "<ProductIdentifier>  " +
+         "<ProductIDType>15</ProductIDType> " + 
+         "<IDValue>7780857450449</IDValue>  " +
+         "</ProductIdentifier>  " +
+         "<DescriptiveDetail> " +
+         "<NoCollection/> " +
+         "<TitleDetail>   " +
+         "<TitleType>01</TitleType> " +
+         "<TitleElement>  " +
+         "<TitleElementLevel>01</TitleElementLevel> " +
+         "<TitlePrefix>The</TitlePrefix>  " +
+         "<TitleWithoutPrefix>1911/12 Book Title</TitleWithoutPrefix>  " +
+         "</TitleElement> " +
+         "</TitleDetail>" +
+         "</DescriptiveDetail>" +
+         "<PublishingDetail>" +
+         "<Imprint> <ImprintName>Berghahn Books</ImprintName></Imprint>" +
+         "<PublishingDate><PublishingDateRole>01</PublishingDateRole>" +
+         "<Date dateformat=\"00\">20110415</Date></PublishingDate>" +
+         "</PublishingDetail>" +
+         "</Product>" +
+         "</ONIXMessage>";
  
+ public void testFromXMLSnippet() throws Exception {
+   
+
+     CIProperties xmlHeader = new CIProperties();    
+     String xml_url = "http://www.source.com/TestXML.xml";
+     xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+     MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+     mau.addUrl("http://www.source.com/7780857450449.pdf", true, true, xmlHeader);
+     
+     mcu.setContent(XMLsnippet);
+     mcu.setContentSize(XMLsnippet.length());
+     mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+   FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+     FileMetadataListExtractor mle =
+         new FileMetadataListExtractor(me);
+     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+
+     // There should be one record from the snippet
+     assertNotEmpty(mdlist);
+     assertEquals(1, mdlist.size());
+
+     // Pick up the one record
+     Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+     ArticleMetadata mdRecord = null;
+     mdRecord = (ArticleMetadata) mdIt.next();
+     
+     //Check snippet item you want to verify
+     assertEquals(mdRecord.get(MetadataField.FIELD_JOURNAL_TITLE), "The 1911/12 Book Title");
+ }
+
  private static final String realXMLFile = "Onix3BooksSourceTest.xml";
 
   public void testFromOnixBooksXMLFile() throws Exception {

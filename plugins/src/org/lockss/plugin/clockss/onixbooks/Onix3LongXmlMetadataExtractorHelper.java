@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.3 2013-12-09 22:09:04 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.4 2013-12-18 20:40:29 alexandraohlson Exp $
  */
 
 /*
@@ -291,7 +291,7 @@ implements SourceXmlMetadataExtractorHelper {
       ONIX_product_descrip + "/ProductFormDetail";
  /* only pick up level01 title element */
   private static String ONIX_product_title =
-      ONIX_product_descrip + "/TitleDetail/TitleElement[TitleElementLevel = '01']";
+      ONIX_product_descrip + "/TitleDetail[TitleType = '01']/TitleElement[TitleElementLevel = '01']";
   private static String ONIX_product_contrib =
       ONIX_product_descrip + "/Contributor";
   private static String ONIX_product_comp =
@@ -308,6 +308,8 @@ implements SourceXmlMetadataExtractorHelper {
       ONIX_product_pub + "/Publisher/PublisherName";
   private static String ONIX_pub_date =
       ONIX_product_pub + "/PublishingDate";
+  private static String ONIX_copy_date =
+      ONIX_product_pub + "/CopyrightStatement/CopyrightYear";
   /* components under MarketPublishingDetail */
   private static String ONIX_product_mktdetail =
       "ProductSupply/MarketPublishingDetail"; 
@@ -334,6 +336,7 @@ implements SourceXmlMetadataExtractorHelper {
     ONIX_articleMap.put(ONIX_pub_name, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_pub_date, ONIX_DATE_VALUE);
     ONIX_articleMap.put(ONIX_mkt_date, ONIX_DATE_VALUE);
+    ONIX_articleMap.put(ONIX_copy_date, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_product_seriestitle, ONIX_TITLE_VALUE);
     ONIX_articleMap.put(ONIX_product_seriesISSN, ONIX_ID_VALUE);
 
@@ -357,6 +360,11 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
+    // want ta way to prioritize these when cooking - tbd
+    //cookMap.put(ONIX_mkt_date, MetadataField.FIELD_DATE);
+    //cookMap.put(ONIX_copy_date, MetadataField.FIELD_DATE);
+
+    //TODO: If book is part of sereis, currently no way to store title,issn
     //TODO: If book is part of sereis, currently no way to store title,issn
     //cookMap.put(ONIX_product_seriestitle, MetadataField.FIELD_SERIES_TITLE);
     //cookMap.put(ONIX_product_seriesISSN, MetadataField.FIELD_SERIES_ISSN);
