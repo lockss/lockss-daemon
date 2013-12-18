@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
+/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.3 2013-12-18 17:55:50 etenbrink Exp $
  */
 
 /*
@@ -58,7 +58,14 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
   }
 
   private static final String withStuff = 
-"<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+    "<head><META http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n" + 
+    "<meta node=\"phvmthieme02\">\n" + 
+    "<meta charset=\"utf-8\">\n" + 
+    "<title>Thieme E-Journals - Full Text</title>\n" + 
+    "<script src=\"/js/libs/modernizr-2.0.6.min.js\"></script><script src=\"/js/libs/jquery-1.6.2.min.js\">" +
+    "</script>\n" + 
+    "</head>" +
 "<body>" +
     "<header id=\"pageHeader\">\n" + 
     "<div id=\"topHeaderBar\">\n" + 
@@ -98,7 +105,7 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
 "</body></html>";
 
   private static final String withoutStuff = 
-"<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+"<?xml version=\"1.0\" encoding=\"UTF-8\"?> " +
 "<body>" +
   "nonstuff" +
 "</body></html>";
