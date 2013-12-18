@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.4 2013-12-16 19:28:28 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.5 2013-12-18 17:59:31 etenbrink Exp $
  */
 /*
 
@@ -57,8 +57,8 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-        // Hash filter
-        new TagNameFilter("script"),
+        // Contains scripts and tags that change values
+        new TagNameFilter("head"),
         // Remove header/footer items
 // XXX  remove 4 comments below (and this line) when new HtmlFilterInputStream changes go into effect with required_daemon_version 1.64.0
 //        new TagNameFilter("header"),
