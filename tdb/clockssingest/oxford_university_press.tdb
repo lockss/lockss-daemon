@@ -14999,6 +14999,16 @@
 
     }
 
+    {
+
+    param[base_url] = http://ndtplus.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < superseded ; down ; 2010 ; NDT Plus Volume 3 [superseded] ; 3 ; >
+    au < superseded ; down ; 2011 ; NDT Plus Volume 4 [superseded] ; 4 ; >
+
+    }
+
   }
 
   {
