@@ -1,5 +1,5 @@
 /*
- * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.3 2013-10-18 17:06:13 alexandraohlson Exp $
+ * $Id: TestAIAAHtmlHashFilterFactory.java,v 1.4 2013-12-18 16:58:24 alexandraohlson Exp $
  */
 /*
 
@@ -64,7 +64,7 @@ public class TestAIAAHtmlHashFilterFactory extends LockssTestCase {
           " </div></div></div><!-- /fulltext content --></div>";
 
   private static final String citedByFiltered = 
-      " <div id=\"articleContent\"> <p class=\"fulltext\"></p> " +
+      " <div id=\"articleContent\"> <p class=\"fulltext\"></p>" +
           " <h1 class=\"arttitle\"> Optimal, Environmentally Friendly Departure Procedures for Civil Aircraft</h1>" +
           " <div class=\"artAuthors\"> <span class=\"NLM_string-name\">R. Torres</span> <span class=\"NLM_x\">; </span> </div>" +
           "</div>";

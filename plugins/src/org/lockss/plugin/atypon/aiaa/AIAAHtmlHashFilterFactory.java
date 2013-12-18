@@ -1,5 +1,5 @@
 /*
- * $Id: AIAAHtmlHashFilterFactory.java,v 1.3 2013-08-27 20:21:31 alexandraohlson Exp $
+ * $Id: AIAAHtmlHashFilterFactory.java,v 1.4 2013-12-18 16:58:23 alexandraohlson Exp $
  */
 
 /*
@@ -33,10 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.atypon.aiaa;
 
 import java.io.InputStream;
+import java.io.Reader;
+
 import org.htmlparser.NodeFilter;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.atypon.BaseAtyponHtmlHashFilterFactory;
+import org.lockss.util.ReaderInputStream;
 
 public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
 
@@ -55,7 +60,11 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
     // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 
     // combine the two arrays of NodeFilters.
-    return super.createFilteredInputStream(au, in, encoding, afilters);
+    InputStream superFiltered = super.createFilteredInputStream(au, in, encoding, afilters);
+
+    // Also need white space filter to condense multiple white spaces down to 1
+    Reader reader = FilterUtil.getReader(superFiltered, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(reader));
 
   }
 
