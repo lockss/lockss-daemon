@@ -1,34 +1,34 @@
 /*
- * $Id: MetadataField.java,v 1.20 2013-12-17 17:57:46 fergaloy-sf Exp $
+ * $Id: MetadataField.java,v 1.21 2013-12-18 20:32:50 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.extractor;
 
@@ -45,7 +45,7 @@ import java.util.regex.Pattern;
  * cardinality and validator, if any.
  */
 public class MetadataField {
-  static Logger log = Logger.getLogger("MetadataField");
+  static Logger log = Logger.getLogger(MetadataField.class);
   
   /**
    * A language of the resource. Recommended best practice is to use a
@@ -245,7 +245,7 @@ public class MetadataField {
   };
   public static final MetadataField FIELD_PUBLICATION_TITLE = new MetadataField(
       KEY_PUBLICATION_TITLE, Cardinality.Single, pubtitlevalid);
-  /** @deprecated use {@link FIELD_PUBLICATION_TILE} instead */
+  /** @deprecated use {@link #FIELD_PUBLICATION_TITLE} instead */
   @Deprecated
   public static final MetadataField FIELD_JOURNAL_TITLE = FIELD_PUBLICATION_TITLE;
 
