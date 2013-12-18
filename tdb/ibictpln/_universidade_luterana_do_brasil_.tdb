@@ -1,0 +1,79 @@
+{
+  publisher <
+    name = Universidade Luterana do Brasil
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] >
+
+  {
+
+      title <
+        name = Acta Scientiae ;
+        issn = 1517-4492 ;
+        eissn = 2178-7727
+      >
+
+      comment[publisher] = Universidade Luterana do Brasil
+      param[base_url] = http://www.periodicos.ulbra.br/
+      param[journal_id] = acta
+
+      au < exists ; 1999 ; 1 ; Acta Scientiae Volume 1999 ; 1999 >
+      au < exists ; 2000 ; 2 ; Acta Scientiae Volume 2000 ; 2000 >
+      au < exists ; 2001 ; 3 ; Acta Scientiae Volume 2001 ; 2001 >
+      au < exists ; 2002 ; 4 ; Acta Scientiae Volume 2002 ; 2002 >
+      au < exists ; 2003 ; 5 ; Acta Scientiae Volume 2003 ; 2003 >
+      au < exists ; 2004 ; 6 ; Acta Scientiae Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 7 ; Acta Scientiae Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 8 ; Acta Scientiae Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 9 ; Acta Scientiae Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 10 ; Acta Scientiae Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 11 ; Acta Scientiae Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 12 ; Acta Scientiae Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 13 ; Acta Scientiae Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 14 ; Acta Scientiae Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 15 ; Acta Scientiae Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 16 ; Acta Scientiae Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = Revista de Iniciação Científica da ULBRA ;
+        eissn = 2317-4323
+      >
+
+      comment[publisher] = Universidade Luterana do Brasil
+      param[base_url] = http://www.periodicos.ulbra.br/
+      param[journal_id] = ic
+
+      au < exists ; 2010 ; 1 ; Revista de Iniciação Científica da ULBRA Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; Revista de Iniciação Científica da ULBRA Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; Revista de Iniciação Científica da ULBRA Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; Revista de Iniciação Científica da ULBRA Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; Revista de Iniciação Científica da ULBRA Volume 2014 ; 2014 >
+
+  }
+
+  {
+
+      title <
+        name = STOMATOS ;
+        issn = 2236-8396
+      >
+
+      comment[publisher] = Universidade Luterana do Brasil
+      param[base_url] = http://www.periodicos.ulbra.br/
+      param[journal_id] = stomatos
+
+      au < exists ; 2009 ; 1 ; STOMATOS Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; STOMATOS Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; STOMATOS Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; STOMATOS Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; STOMATOS Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; STOMATOS Volume 2014 ; 2014 >
+
+  }
+
+}
