@@ -5911,6 +5911,15 @@
 
     }
 
+    {
+
+    param[base_url] = http://ecam.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < down ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 [to delete] ; 7 ; >
+
+    }
+
   }
 
   {
