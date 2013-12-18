@@ -9,7 +9,7 @@
   {
 
       title <
-        name = BASE-Revista de Administração e Contabilidade da Unisinos ;
+        name = BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos ;
         issn = 1984-8196
       >
 
@@ -17,24 +17,24 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = base
 
-      au < exists ; 2004 ; 1 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; BASE-Revista de Administração e Contabilidade da Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; BASE-Revista de AdministraÃ§Ã£o e Contabilidade da Unisinos Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = Calidoscópio ;
+        name = CalidoscÃ³pio ;
         issn = 2177-6202
       >
 
@@ -42,24 +42,24 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = calidoscopio
 
-      au < exists ; 2004 ; 1 ; Calidoscópio Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Calidoscópio Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Calidoscópio Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Calidoscópio Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Calidoscópio Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Calidoscópio Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Calidoscópio Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Calidoscópio Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Calidoscópio Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Calidoscópio Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Calidoscópio Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; CalidoscÃ³pio Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; CalidoscÃ³pio Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; CalidoscÃ³pio Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; CalidoscÃ³pio Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; CalidoscÃ³pio Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; CalidoscÃ³pio Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; CalidoscÃ³pio Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; CalidoscÃ³pio Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; CalidoscÃ³pio Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; CalidoscÃ³pio Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; CalidoscÃ³pio Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = Ciências Sociais Unisinos ;
+        name = CiÃªncias Sociais Unisinos ;
         issn = 2177-6229
       >
 
@@ -67,23 +67,23 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = ciencias_sociais
 
-      au < exists ; 2005 ; 1 ; Ciências Sociais Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Ciências Sociais Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Ciências Sociais Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Ciências Sociais Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Ciências Sociais Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Ciências Sociais Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Ciências Sociais Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Ciências Sociais Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Ciências Sociais Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Ciências Sociais Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; CiÃªncias Sociais Unisinos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; CiÃªncias Sociais Unisinos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; CiÃªncias Sociais Unisinos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; CiÃªncias Sociais Unisinos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; CiÃªncias Sociais Unisinos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; CiÃªncias Sociais Unisinos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; CiÃªncias Sociais Unisinos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; CiÃªncias Sociais Unisinos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; CiÃªncias Sociais Unisinos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; CiÃªncias Sociais Unisinos Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = Contextos Clínicos ;
+        name = Contextos ClÃ­nicos ;
         issn = 1983-3482
       >
 
@@ -91,20 +91,20 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = contextosclinicos
 
-      au < exists ; 2008 ; 1 ; Contextos Clínicos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 2 ; Contextos Clínicos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 3 ; Contextos Clínicos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 4 ; Contextos Clínicos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 5 ; Contextos Clínicos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 6 ; Contextos Clínicos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 7 ; Contextos Clínicos Volume 2014 ; 2014 >
+      au < exists ; 2008 ; 1 ; Contextos ClÃ­nicos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 2 ; Contextos ClÃ­nicos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 3 ; Contextos ClÃ­nicos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 4 ; Contextos ClÃ­nicos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 5 ; Contextos ClÃ­nicos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 6 ; Contextos ClÃ­nicos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 7 ; Contextos ClÃ­nicos Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = Controvérsia ;
+        name = ControvÃ©rsia ;
         issn = 1808-5253
       >
 
@@ -112,18 +112,18 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = controversia
 
-      au < exists ; 2010 ; 1 ; Controvérsia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 2 ; Controvérsia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 3 ; Controvérsia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 4 ; Controvérsia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 5 ; Controvérsia Volume 2014 ; 2014 >
+      au < exists ; 2010 ; 1 ; ControvÃ©rsia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 2 ; ControvÃ©rsia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 3 ; ControvÃ©rsia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 4 ; ControvÃ©rsia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 5 ; ControvÃ©rsia Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = Educação Unisinos ;
+        name = EducaÃ§Ã£o Unisinos ;
         issn = 2177-6210
       >
 
@@ -131,17 +131,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = educacao
 
-      au < exists ; 2004 ; 1 ; Educação Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Educação Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Educação Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Educação Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Educação Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Educação Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Educação Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Educação Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Educação Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Educação Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Educação Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; EducaÃ§Ã£o Unisinos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; EducaÃ§Ã£o Unisinos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; EducaÃ§Ã£o Unisinos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; EducaÃ§Ã£o Unisinos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; EducaÃ§Ã£o Unisinos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; EducaÃ§Ã£o Unisinos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; EducaÃ§Ã£o Unisinos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; EducaÃ§Ã£o Unisinos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; EducaÃ§Ã£o Unisinos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; EducaÃ§Ã£o Unisinos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; EducaÃ§Ã£o Unisinos Volume 2014 ; 2014 >
 
   }
 
@@ -169,7 +169,7 @@
   {
 
       title <
-        name = Estudos Tecnológicos em Engenharia ;
+        name = Estudos TecnolÃ³gicos em Engenharia ;
         issn = 1808-7310
       >
 
@@ -177,16 +177,16 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = estudos_tecnologicos
 
-      au < exists ; 2005 ; 1 ; Estudos Tecnológicos em Engenharia Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Estudos Tecnológicos em Engenharia Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Estudos Tecnológicos em Engenharia Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Estudos Tecnológicos em Engenharia Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Estudos Tecnológicos em Engenharia Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Estudos Tecnológicos em Engenharia Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Estudos Tecnológicos em Engenharia Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Estudos Tecnológicos em Engenharia Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Estudos Tecnológicos em Engenharia Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Estudos Tecnológicos em Engenharia Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Estudos TecnolÃ³gicos em Engenharia Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Estudos TecnolÃ³gicos em Engenharia Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Estudos TecnolÃ³gicos em Engenharia Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Estudos TecnolÃ³gicos em Engenharia Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Estudos TecnolÃ³gicos em Engenharia Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Estudos TecnolÃ³gicos em Engenharia Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Estudos TecnolÃ³gicos em Engenharia Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Estudos TecnolÃ³gicos em Engenharia Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Estudos TecnolÃ³gicos em Engenharia Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; Estudos TecnolÃ³gicos em Engenharia Volume 2014 ; 2014 >
 
   }
 
@@ -218,7 +218,7 @@
   {
 
       title <
-        name = Fronteiras-estudos midiáticos ;
+        name = Fronteiras-estudos midiÃ¡ticos ;
         issn = 1984-8226
       >
 
@@ -226,17 +226,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = fronteiras
 
-      au < exists ; 2004 ; 1 ; Fronteiras-estudos midiáticos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; Fronteiras-estudos midiáticos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; Fronteiras-estudos midiáticos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; Fronteiras-estudos midiáticos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; Fronteiras-estudos midiáticos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; Fronteiras-estudos midiáticos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; Fronteiras-estudos midiáticos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; Fronteiras-estudos midiáticos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; Fronteiras-estudos midiáticos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; Fronteiras-estudos midiáticos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; Fronteiras-estudos midiáticos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; Fronteiras-estudos midiÃ¡ticos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; Fronteiras-estudos midiÃ¡ticos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; Fronteiras-estudos midiÃ¡ticos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; Fronteiras-estudos midiÃ¡ticos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; Fronteiras-estudos midiÃ¡ticos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; Fronteiras-estudos midiÃ¡ticos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; Fronteiras-estudos midiÃ¡ticos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; Fronteiras-estudos midiÃ¡ticos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; Fronteiras-estudos midiÃ¡ticos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; Fronteiras-estudos midiÃ¡ticos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; Fronteiras-estudos midiÃ¡ticos Volume 2014 ; 2014 >
 
   }
 
@@ -267,7 +267,7 @@
   {
 
       title <
-        name = História Unisinos ;
+        name = HistÃ³ria Unisinos ;
         issn = 2236-1782
       >
 
@@ -275,17 +275,17 @@
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = historia
 
-      au < exists ; 2004 ; 1 ; História Unisinos Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 2 ; História Unisinos Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 3 ; História Unisinos Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 4 ; História Unisinos Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 5 ; História Unisinos Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 6 ; História Unisinos Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 7 ; História Unisinos Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 8 ; História Unisinos Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 9 ; História Unisinos Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 10 ; História Unisinos Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 11 ; História Unisinos Volume 2014 ; 2014 >
+      au < exists ; 2004 ; 1 ; HistÃ³ria Unisinos Volume 2004 ; 2004 >
+      au < exists ; 2005 ; 2 ; HistÃ³ria Unisinos Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 3 ; HistÃ³ria Unisinos Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 4 ; HistÃ³ria Unisinos Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 5 ; HistÃ³ria Unisinos Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 6 ; HistÃ³ria Unisinos Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 7 ; HistÃ³ria Unisinos Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 8 ; HistÃ³ria Unisinos Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 9 ; HistÃ³ria Unisinos Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 10 ; HistÃ³ria Unisinos Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 11 ; HistÃ³ria Unisinos Volume 2014 ; 2014 >
 
   }
 
@@ -311,7 +311,7 @@
 
       title <
         name = Neotropical Biology and Conservation ;
-        issn = 2236-3777 
+        issn = 2236-3777Â 
       >
 
       comment[publisher] = Universidade do Vale do Rio dos Sinos
@@ -333,44 +333,44 @@
   {
 
       title <
-        name = Perspectiva Econômica ;
-        issn = 1808-575X 
+        name = Perspectiva EconÃ´mica ;
+        issn = 1808-575XÂ 
       >
 
       comment[publisher] = Universidade do Vale do Rio dos Sinos
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = perspectiva_economica
 
-      au < exists ; 2005 ; 1 ; Perspectiva Econômica Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Perspectiva Econômica Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Perspectiva Econômica Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Perspectiva Econômica Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Perspectiva Econômica Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Perspectiva Econômica Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Perspectiva Econômica Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Perspectiva Econômica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Perspectiva Econômica Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Perspectiva Econômica Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Perspectiva EconÃ´mica Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Perspectiva EconÃ´mica Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Perspectiva EconÃ´mica Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Perspectiva EconÃ´mica Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Perspectiva EconÃ´mica Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Perspectiva EconÃ´mica Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Perspectiva EconÃ´mica Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Perspectiva EconÃ´mica Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Perspectiva EconÃ´mica Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; Perspectiva EconÃ´mica Volume 2014 ; 2014 >
 
   }
 
   {
 
       title <
-        name = RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito ;
-        issn = 2175-2168 
+        name = RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito ;
+        issn = 2175-2168Â 
       >
 
       comment[publisher] = Universidade do Vale do Rio dos Sinos
       param[base_url] = http://revistas.unisinos.br/
       param[journal_id] = RECHTD
 
-      au < exists ; 2009 ; 1 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 2 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 3 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 4 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 5 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 6 ; RECHTD-Revista de Estudos Constitucionais, Hermenêutica e Teoria do Direito Volume 2014 ; 2014 >
+      au < exists ; 2009 ; 1 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 2 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 3 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 4 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 5 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 6 ; RECHTD-Revista de Estudos Constitucionais, HermenÃªutica e Teoria do Direito Volume 2014 ; 2014 >
 
   }
 
