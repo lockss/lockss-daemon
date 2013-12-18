@@ -13,22 +13,22 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -58,7 +58,8 @@
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
       <string>4,"^%s.*/%s/.*", base_url, doi_prefix</string>
-      <string>2,"^%s(?:rss/thieme|ejournals/(journal|issues|sample|recommend|topten|linkout)).*", base_url</string>
+      <string>2,"^%s.*/%s/www[.].*", base_url, doi_prefix</string>
+      <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout)).*", base_url</string>
       <string>1,"^%sejournals/([^/]+|issue|abstract|html)/[.0-9]+/[.a-z0-9-]+$", base_url</string>
       <string>1,"^%sejournals/pdf/%s/[a-z0-9-]+[.]pdf$", base_url, doi_prefix</string>
     </list>
