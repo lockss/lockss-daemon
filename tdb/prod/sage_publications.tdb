@@ -23443,11 +23443,13 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
       >
 
       {
-
+        pluginSuffix = HighWirePressH20Plugin
         param[base_url] = http://www.jie.org.uk/
-        implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+        implicit < status ; year ; name ; param[volume_name] >
         
-        comment[pending] = still expecting Feb 2012 expected date. http://highwire.stanford.edu/lists/future.dtl?journalcode=spjie
+        au < exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 >
+        au < expected ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 >
+        au < expected ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 >
         
       }
       
