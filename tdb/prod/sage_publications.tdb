@@ -3136,10 +3136,11 @@
       {
 
         pluginSuffix = HighWirePressH20Plugin
-        comment[1] = needs base_url
-        comment[2] = implicit . status . year . name . param[volume_name] .
+        param[base_url] = http://ame.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
 
-        comment[3] = au . expected . 2012 . Asia Pacific Media Educator Volume 22 . 22 .
+        au < exists ; 2012 ; Asia Pacific Media Educator Volume 22 ; 22 >
+        au < exists ; 2013 ; Asia Pacific Media Educator Volume 23 ; 23 >
 
       }
 
