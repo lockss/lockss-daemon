@@ -15268,7 +15268,6 @@
     {
 
       pluginSuffix = ClockssHighWirePressH20Plugin
-      comment[isq48] = not online as of Oct 2011
 
       au < manifest ; exists ; 1959 ; International Studies Volume 1 ; 1 ; >
       au < manifest ; exists ; 1960 ; International Studies Volume 2 ; 2 ; >
@@ -15317,7 +15316,8 @@
       au < doNotProcess ; doNotProcess ; 2008 ; International Studies Volume 45 ; 45 ; >
       au < zapped ; finished ; 2009 ; International Studies Volume 46 ; 46 ; >
       au < finished ; crawling ; 2010 ; International Studies Volume 47 ; 47 ; >
-      au < doesNotExist ; doesNotExist ; 0 ; International Studies Volume 48 ; 48 ; >
+      au < exists ; exists ; 2011 ; International Studies Volume 48 ; 48 ; >
+      au < exists ; exists ; 2012 ; International Studies Volume 49 ; 49 ; >
 
     }
 
