@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.6 2013-12-19 22:02:27 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.7 2013-12-19 23:50:15 alexandraohlson Exp $
  */
 
 /*
@@ -309,7 +309,7 @@ implements SourceXmlMetadataExtractorHelper {
    */
   
   @Override
-  public String getUniqueIDKey() {
+  public String getDeDuplicationXPathKey() {
     return null;
   }
 
@@ -319,7 +319,7 @@ implements SourceXmlMetadataExtractorHelper {
    */
   
   @Override
-  public String getConsolidationKey() {
+  public String getConsolidationXPathKey() {
     return null;
   }
 
@@ -345,7 +345,7 @@ implements SourceXmlMetadataExtractorHelper {
    */
   
   @Override
-  public String getFilenameKey() {
+  public String getFilenameXPathKey() {
     throw new UnsupportedOperationException("getFilenameKey() never called");
   }
 

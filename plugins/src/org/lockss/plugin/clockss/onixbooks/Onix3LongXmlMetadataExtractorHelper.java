@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.4 2013-12-18 20:40:29 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.5 2013-12-19 23:50:15 alexandraohlson Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.clockss.onixbooks;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.MetadataField.Validator;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
@@ -412,7 +411,7 @@ implements SourceXmlMetadataExtractorHelper {
    * can be combined
    */
   @Override
-  public String getUniqueIDKey() {
+  public String getDeDuplicationXPathKey() {
     return ONIX_idtype_isbn13;
   }
 
@@ -421,7 +420,7 @@ implements SourceXmlMetadataExtractorHelper {
    * item are combined, the product forms are combined together
    */
   @Override
-  public String getConsolidationKey() {
+  public String getConsolidationXPathKey() {
     return ONIX_product_descrip + "/ProductFormDetail";
   }
 
@@ -448,7 +447,7 @@ implements SourceXmlMetadataExtractorHelper {
    * The filenames are based on the isbn13 value 
    */
   @Override
-  public String getFilenameKey() {
+  public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
   }
 }    

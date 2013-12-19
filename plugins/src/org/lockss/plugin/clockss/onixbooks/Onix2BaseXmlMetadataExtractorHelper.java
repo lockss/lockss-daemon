@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.1 2013-12-18 20:40:28 alexandraohlson Exp $
+ * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.2 2013-12-19 23:50:15 alexandraohlson Exp $
  */
 
 /*
@@ -421,7 +421,7 @@ implements SourceXmlMetadataExtractorHelper {
    * can be combined
    */
   @Override
-  public String getUniqueIDKey() {
+  public String getDeDuplicationXPathKey() {
     return ONIX_idtype_isbn13;
   }
 
@@ -430,7 +430,7 @@ implements SourceXmlMetadataExtractorHelper {
    * item are combined, the product forms are combined together
    */
   @Override
-  public String getConsolidationKey() {
+  public String getConsolidationXPathKey() {
     return "ProductForm";
   }
 
@@ -457,7 +457,7 @@ implements SourceXmlMetadataExtractorHelper {
    * The filenames are based on the isbn13 value 
    */
   @Override
-  public String getFilenameKey() {
+  public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
   }
 
