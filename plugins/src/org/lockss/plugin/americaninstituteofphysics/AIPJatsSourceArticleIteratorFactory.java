@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,7 +28,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.americaninstituteofphysics;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -46,8 +45,6 @@ public class AIPJatsSourceArticleIteratorFactory
   protected static Logger log = 
       Logger.getLogger(AIPJatsSourceArticleIteratorFactory.class);
 
-  // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
-  //could handle any number of subdirectories under the year so long as end in .xml
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";   // 
   protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
   
@@ -66,7 +63,6 @@ public class AIPJatsSourceArticleIteratorFactory
     /* this is necessary to be able to see what's inside the zip file */
     theSpec.setVisitArchiveMembers(true);
     builder.setSpec(theSpec);
-    //builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
     // ultimately the metadata extractor needs to set the entire facet map 

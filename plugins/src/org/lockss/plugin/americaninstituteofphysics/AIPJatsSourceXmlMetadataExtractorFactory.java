@@ -1,10 +1,10 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.3 2013-12-09 18:11:51 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.4 2013-12-19 22:02:27 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,7 +56,6 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
-    //log.setLevel("debug3");
     return new AIPJatsSourceXmlMetadataExtractor();
   }
 
@@ -72,13 +71,11 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
 
       log.debug3("in AIPJats preEmitCheckcheck");
-      String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
+      // hardcoded to be online.pdf
+      String filename = "online.pdf"; 
 
-      // no pre-emit check required if values are all null, just return
-      // we know AIPJats will send a filenamePrefix and (filenameSuffixList, filenameKey) will be null
-      if (filenamePrefix == null){
-        return false;
-      }
+      // no pre-emit check required if values are all null
+      // we know for AIPJats (filenameSuffixList, filenameKey) will be null
       
       /* AIPJats file structure has the xml at .../Markup/***.xml
        * and the pdf is always named .../Page_Renditions/online.pdf
@@ -92,7 +89,6 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
         log.debug3(cuBase + ": non standard location for XML");
         return false;
       }
-      String filename = filenamePrefix;
 
       //Check in order for at least existing file from among the suffixes
       // just check for the one version using the other items

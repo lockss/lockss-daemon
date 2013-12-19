@@ -1,10 +1,10 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.5 2013-12-11 23:30:52 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.6 2013-12-19 22:02:27 aishizaki Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,6 +75,8 @@ implements SourceXmlMetadataExtractorHelper {
       log.debug3("getValue of AIPJATS contributor");
       String name = null;
       NodeList childNodes = node.getChildNodes(); 
+      String sname = null;
+      String gname = null;
       StringBuilder names = new StringBuilder();
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
@@ -85,18 +87,18 @@ implements SourceXmlMetadataExtractorHelper {
             Node nameNode = nNodes.item(x);
             String namePart = nameNode.getNodeName();
             if("surname".equals(namePart)){
-              name = nameNode.getTextContent();
-              names.append(name);
+              sname = nameNode.getTextContent();
             } else if ("given-names".equals(namePart)){
-              name = nameNode.getTextContent();
-              names.append(NAME_SEPARATOR + name);
-              log.debug3("contributor found: "+names.toString());
-              return names.toString();
+              gname = nameNode.getTextContent();
             }
           }
         }
       }
-      if (names.length() == 0) {
+      if (!sname.equals(null) || !gname.equals(null)) {
+        names.append(sname + NAME_SEPARATOR + gname);
+        log.debug3("contributor found: "+names.toString());
+        return names.toString();
+      } else {
         log.debug3("no valid contributor found");
       }
       return null;
@@ -184,19 +186,6 @@ implements SourceXmlMetadataExtractorHelper {
       }
     }
   };
-/*  
-  static private final NodeValue AIPJATS_PDF_NAME = new NodeValue() {
-    @Override
-    public String getValue(Node node) {
-      if (node == null) {
-        return null;
-      }
-      log.debug3("getValue of AIPJATS PDF name");
-
-      return "online";
-
-    }
-  };*/
 
   /* 
    *  AIPJats specific XPATH key definitions that we care about
@@ -214,8 +203,7 @@ implements SourceXmlMetadataExtractorHelper {
 
   /* components under Publisher */
   private static String AIPJATS_publisher = AIPJATS_JMETA + "/publisher";  
-  private static String AIPJATS_publisher_name =
-    AIPJATS_publisher + "/publisher-name";
+  private static String AIPJATS_publisher_name = AIPJATS_publisher + "/publisher-name";
 
   private static String AIPJATS_AMETA = "article-meta";
   /* article title */
@@ -226,19 +214,11 @@ implements SourceXmlMetadataExtractorHelper {
   /* vol, issue */
   private static String AIPJATS_issue = AIPJATS_AMETA + "/issue";
   private static String AIPJATS_vol = AIPJATS_AMETA + "/volume";
-  /* copyright */
-  private static String AIPJATS_copyright = AIPJATS_AMETA + "/permissions/copyright-year";
-  /* keywords */
-  private static String AIPJATS_keywords = AIPJATS_AMETA + "/kwd-group/kwd";
-  /* abstract */
-  private static String AIPJATS_abstract = AIPJATS_AMETA + "/abstract/p";
-  /* published date */
+   /* published date */
   private static String AIPJATS_pubdate = AIPJATS_AMETA + "/pub-date";
 
   /* xpath contrib == author */
-  //private static String AIPJATS_contrib = AIPJATS_AMETA + "/contrib-group";
   private static String AIPJATS_author = AIPJATS_AMETA + "/contrib-group/contrib[@contrib-type = 'author']";
-  //private static String AIPJATS_author = AIPJATS_contrib;
   
   /* access_url  not set here */
   
@@ -259,8 +239,6 @@ implements SourceXmlMetadataExtractorHelper {
     AIPJATS_articleMap.put(AIPJATS_issue, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_vol, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_author, AIPJATS_AUTHOR_VALUE);
-    //AIPJATS_articleMap.put(AIPJATS_keywords, XmlDomMetadataExtractor.TEXT_VALUE);
-    //AIPJATS_articleMap.put(AIPJATS_abstract, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_journal_id, XmlDomMetadataExtractor.TEXT_VALUE);
     AIPJATS_articleMap.put(AIPJATS_pubdate, AIPJATS_DATE_VALUE);
 
@@ -346,13 +324,12 @@ implements SourceXmlMetadataExtractorHelper {
   }
 
   /**
-   * Since we only have the one fixed name, use filenamePrefix to return
-   * the whole name, "online.pdf"
+   * Since we only have the one fixed name, "online.pdf" hardcoded in 
+   * AIPJatsSourceXmlMetadataExtractorFactory:preEmitCheck()
    */
   @Override
   public String getFilenamePrefix() {
-    //since we have only the one suffix, return the whole name here
-    return "online.pdf";
+    throw new UnsupportedOperationException("getFilenamePrefix() never called");
   }
 
   /**
@@ -360,7 +337,7 @@ implements SourceXmlMetadataExtractorHelper {
    */
   @Override
   public ArrayList<String> getFilenameSuffixList() {
-    return null;
+    throw new UnsupportedOperationException("getFilenameSuffixList() never called");
   }
 
   /**
@@ -369,7 +346,7 @@ implements SourceXmlMetadataExtractorHelper {
   
   @Override
   public String getFilenameKey() {
-    return null;
+    throw new UnsupportedOperationException("getFilenameKey() never called");
   }
 
 }    
