@@ -1,10 +1,10 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.5 2013-12-19 23:50:15 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.6 2013-12-20 19:32:08 thib_gc Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -388,11 +388,12 @@ implements FileMetadataExtractorFactory {
       // must check for key first or getString would throw exception
       if(auDefMap.containsKey(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY)){
         helperName = auDefMap.getString(PLUGIN_SOURCE_XML_HELPER_CLASS_KEY);
-      } else
+      } else {
         return null;
+      }
 
-      SourceXmlMetadataExtractorHelper helper;
-      if ( (helper = (SourceXmlMetadataExtractorHelper) schemaHelperMap.get(helperName)) != null) {
+      SourceXmlMetadataExtractorHelper helper = (SourceXmlMetadataExtractorHelper)schemaHelperMap.get(helperName);
+      if (helper != null) {
         return helper;
       }
 
@@ -402,9 +403,9 @@ implements FileMetadataExtractorFactory {
                 SourceXmlMetadataExtractorHelper.class);
         schemaHelperMap.put(helperName, helper);
         return helper;
-      } catch (Exception e ){
+      } catch (PluginException.InvalidDefinition ide) {
         log.error("Couldn't load xml definition helper " + helperName +
-            ": ",e);
+            ": ", ide);
         return null;
       }
     }
