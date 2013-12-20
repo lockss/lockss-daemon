@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupTagExtractor.java,v 1.2 2013-12-18 20:42:04 thib_gc Exp $
+ * $Id: JsoupTagExtractor.java,v 1.3 2013-12-20 05:03:34 etenbrink Exp $
  */
 
 /*
@@ -61,19 +61,21 @@ public class JsoupTagExtractor extends SimpleFileMetadataExtractor {
 
   /**
    * default constructor which will process meta selectors only
-   * kept for backwards compatiblity
+   * kept for backwards compatibility
    */
   public JsoupTagExtractor(String mimeType ) {
     m_mimeType = mimeType;
 
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      m_parser = Parser.htmlParser();
-    }
-    else if("text/xml".equalsIgnoreCase(mimeType) ||
-       "application/xml".equalsIgnoreCase(mimeType))
+    if ("text/xml".equalsIgnoreCase(mimeType) ||
+        "application/xml".equalsIgnoreCase(mimeType))
     {
       m_parser = Parser.xmlParser();
-      m_isHtml =false;
+      m_isHtml = false;
+    }
+    else // XXX why not use the html parser
+    {
+      m_parser = Parser.htmlParser();
+      m_isHtml = true;
     }
   }
 
