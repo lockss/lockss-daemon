@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlFilterFactory.java,v 1.1 2013-08-23 02:19:28 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlFilterFactory.java,v 1.2 2013-12-20 05:29:57 etenbrink Exp $
  */ 
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 public class MathematicalSciencesPublishersHtmlFilterFactory implements FilterFactory {
-  Logger log = Logger.getLogger("MathematicalSciencesPublishersHtmlFilterFactory");
+  Logger log = Logger.getLogger(MathematicalSciencesPublishersHtmlFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -58,13 +58,9 @@ public class MathematicalSciencesPublishersHtmlFilterFactory implements FilterFa
         HtmlNodeFilters.tagWithAttribute("table", "id", "masthead-area"),
         // filter out table id="footer-area"
         HtmlNodeFilters.tagWithAttribute("table", "id", "footer-area"),
-        // which encloses the following...
-        // filter out table with inner text "Recent Issues"
-        HtmlNodeFilters.lowestLevelMatchFilter(
-            HtmlNodeFilters.tagWithText("table", "Recent Issues", false)),
-        // filter out table with inner text "The Journal"
-        HtmlNodeFilters.lowestLevelMatchFilter(
-            HtmlNodeFilters.tagWithText("table", "The Journal", false)),
+        // filter out td id="activity-area"
+        // which encloses "Recent Issues & "The Journal" sections
+        HtmlNodeFilters.tagWithAttribute("td", "id", "activity-area"),
     };
     
     // Do the initial html filtering
@@ -74,6 +70,6 @@ public class MathematicalSciencesPublishersHtmlFilterFactory implements FilterFa
     return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(
         filteredStream, encoding)));
   }
-
+  
 }
 
