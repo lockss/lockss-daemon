@@ -1,5 +1,5 @@
 /*
- * $Id: JsoupTagExtractorFactory.java,v 1.3 2013-12-20 04:58:31 etenbrink Exp $
+ * $Id: JsoupTagExtractorFactory.java,v 1.4 2013-12-20 23:23:55 clairegriffin Exp $
  */
 
 /*
@@ -52,7 +52,8 @@ public class JsoupTagExtractorFactory implements FileMetadataExtractorFactory {
 
     if ("text/html".equalsIgnoreCase(mimeType) ||
         "text/xml".equalsIgnoreCase(mimeType) ||
-        "application/xml".equalsIgnoreCase(mimeType)) {
+        "application/xml".equalsIgnoreCase(mimeType) ||
+        "application/xhtml+xml".equalsIgnoreCase(mimeType)) {
       return new JsoupTagExtractor(mimeType);
     }
     return null;
