@@ -41,37 +41,5 @@
 
   }
   
-  {
-  
-    title <
-      name = Philosophy;
-      issn = 2132-4371
-    >  
-    
-    plugin = needs.plugin
-    
-  }
-  
-  {
-  
-    title <
-      name = Philosophica ;
-      issn = 0872-4784
-    >  
-
-    plugin = needs.plugin
-    
-  }
-  
-  {
-  
-    title <
-      name = Phainomenon ;
-      issn = 0874-9493
-    >  
-    
-    plugin = needs.plugin
-    
-  }
-
+ 
 }
