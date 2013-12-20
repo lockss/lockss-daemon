@@ -2091,6 +2091,7 @@
     param[journal_id] = msb
     
     comment[moving] = EMBO is moving to OUP in 2014
+    comment[no_substance] = urls on manifest page are non-standard. 
 
     au < exists ; exists ; 2005 ; Molecular Systems Biology Volume 1 ; 2005 ; 1 >
     au < exists ; exists ; 2006 ; Molecular Systems Biology Volume 2 ; 2006 ; 2 >
@@ -2100,7 +2101,7 @@
     au < exists ; exists ; 2010 ; Molecular Systems Biology Volume 6 ; 2010 ; 6 >
     au < exists ; exists ; 2011 ; Molecular Systems Biology Volume 7 ; 2011 ; 7 >
     au < exists ; exists ; 2012 ; Molecular Systems Biology Volume 8 ; 2012 ; 8 >
-    au < crawling ; exists ; 2013 ; Molecular Systems Biology Volume 9 ; 2013 ; 9 >
+    au < down ; exists ; 2013 ; Molecular Systems Biology Volume 9 [to delete] ; 2013 ; 9 >
 
   }
 
