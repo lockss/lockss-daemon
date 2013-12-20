@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.2 2013-10-07 15:53:59 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.3 2013-12-20 05:37:26 etenbrink Exp $
  */
 
 /*
@@ -69,7 +69,8 @@ import org.lockss.repository.LockssRepository;
  * <meta name="citation_author" content="Menon, Suresh"/>
  */
 
-public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory 
+    extends JsoupTagExtractorFactory {
   static Logger log = Logger.getLogger(
       MathematicalSciencesPublishersHtmlMetadataExtractorFactory.class);
 
@@ -77,16 +78,22 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
       throws PluginException {
-    return new MathematicalSciencesPublishersHtmlMetadataExtractor();
+    return new MathematicalSciencesPublishersHtmlMetadataExtractor(contentType);
   }
 
   public static class MathematicalSciencesPublishersHtmlMetadataExtractor
-    extends SimpleHtmlMetaTagMetadataExtractor {
+    extends JsoupTagExtractor {
 
+    public MathematicalSciencesPublishersHtmlMetadataExtractor(String contentType) {
+      // TODO  XXX  replace text/html with contentType parameter
+      // XXX the JsoupTagExtractor only allows "text/html" || "text/xml" || "application/xml"
+      // contentType of application/xhtml+xml was causing NPE
+      super("text/html");
+    }
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
@@ -105,13 +112,19 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
       tagMap.put("scraped_publication_date", MetadataField.FIELD_DATE);
     }
     
-    private Pattern whiteSpacePat = Pattern.compile("\\s+");
+    private static Pattern whiteSpacePat = Pattern.compile("\\s+");
+    private static Pattern patternDoi = Pattern.compile(
+        "[ >]DOI:.*?(?:<a href= \"http:.*?\">)?(10.2140/[^ <]*?)[ <]", 
+        Pattern.CASE_INSENSITIVE);
+    private static Pattern patternTitleAuth = Pattern.compile(
+        "<div class=\"title\">(.*?)</div>", 
+        Pattern.CASE_INSENSITIVE);
+
     
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-        throws IOException {
-      ArticleMetadata am = supeRextract(target, cu); // XXX replace with following line
-// XXX     ArticleMetadata am = super.extract(target, cu);
+        throws IOException, PluginException {
+      ArticleMetadata am = super.extract(target, cu);
       
       // attempt to get doi. etc from xhtml file
       if ((am.getRaw("citation_doi") == null) || 
@@ -143,9 +156,6 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
           // regexes to extract DOI, etc. from articles
           if (am.getRaw("citation_doi") == null) {
             // find DOI with optional anchor tag
-            Pattern patternDoi = Pattern.compile(
-                "[ >]DOI:.*?(?:<a href= \"http:.*?\">)?(10.2140/[^ <]*?)[ <]", 
-                Pattern.CASE_INSENSITIVE);
             matcher = patternDoi.matcher(colContent);
             if (matcher.find()) {
               putValue(am, "scraped_doi", matcher.group(1).trim());
@@ -156,9 +166,6 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
           }
           if (am.getRaw("citation_title") == null) {
             // find article title 
-            Pattern patternTitleAuth = Pattern.compile(
-                "<div class=\"title\">(.*?)</div>", 
-                Pattern.CASE_INSENSITIVE);
             matcher = patternTitleAuth.matcher("");
             matcher.reset(colContent);
             if (matcher.find()) {
@@ -187,112 +194,13 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory implemen
         return new BufferedReader(new InputStreamReader(
             cu.getUnfilteredInputStream(), Constants.ENCODING_UTF_8));
       } catch (IOException e) {
-        // XXX Wrong Exception.  Should this method be declared to throw
-        // UnsupportedEncodingException?
         log.error("Creating InputStreamReader for '" + cu.getUrl() + "'", e);
         throw new LockssRepository.RepositoryStateException(
             "Couldn't create InputStreamReader:" + e.toString());
       }
     }
-
-    // XXX replaces super.extract; remove when SimpleHtmlMetaTagMetadataExtractor updated
-    private ArticleMetadata supeRextract(MetadataTarget target, CachedUrl cu)
-        throws IOException {
-      if (cu == null) {
-        throw new IllegalArgumentException("extract() called with null CachedUrl");
-      }
-      ArticleMetadata ret = new ArticleMetadata();
-      BufferedReader bReader =
-        new BufferedReader(openForReading(cu));
-      for (String line = bReader.readLine();
-     line != null;
-     line = bReader.readLine()) {
-        int i = StringUtil.indexOfIgnoreCase(line, "<meta ");
-        while (i >= 0) {
-          // recognize end of tag character preceded by optional '/', 
-          // preceded by a double-quote that is separated by zero or more 
-          // whitespace characters
-          int j = i+1;
-          while (true) {
-            j = StringUtil.indexOfIgnoreCase(line, ">", j);
-            if (j < 0) break;
-            String s = line.substring(i,j);
-            if (s.endsWith("/")) {
-              s = s.substring(0,s.length()-1);
-            }
-            if (s.trim().endsWith("\"")) {
-              break;
-            }
-            j++;
-          }
-          if (j < 0) {
-            // join next line with tag end
-            String nextLine = bReader.readLine();
-            if (nextLine == null) {
-              break;
-            }
-            if (line.endsWith("=") && nextLine.startsWith(" ")) {
-              // here we trim leading spaces from nextLine
-              Matcher m = whiteSpacePat.matcher(nextLine);
-              nextLine = m.replaceFirst("");
-            }
-            line += nextLine;
-            continue;
-          }
-          String meta = line.substring(i, j+1);
-          if (log.isDebug3()) log.debug3("meta: " + meta);
-          addTag(meta, ret);
-          i = StringUtil.indexOfIgnoreCase(line, "<meta ", j+1);
-        }
-      }
-      IOUtil.safeClose(bReader);
-      return ret;
-    }
-    // XXX replaces super.addTag; remove when SimpleHtmlMetaTagMetadataExtractor updated
-    private void addTag(String line, ArticleMetadata ret) {
-      String nameFlag = "name=\"";
-      int nameBegin = StringUtil.indexOfIgnoreCase(line, nameFlag);
-      if (nameBegin <= 0) {
-        if (log.isDebug3()) log.debug3(line + " : no " + nameFlag);
-        return;
-      }
-      nameBegin += nameFlag.length();
-      int nameEnd = line.indexOf('"', nameBegin + 1);
-      if (nameEnd <= nameBegin) {
-        log.debug2(line + " : " + nameFlag + " unterminated");
-        return;
-      }
-      String name = line.substring(nameBegin, nameEnd);
-      String contentFlag = "content=\"";
-      int contentBegin = StringUtil.indexOfIgnoreCase(line, contentFlag);
-      if (contentBegin <= 0) {
-        if (log.isDebug3()) log.debug3(line + " : no " + contentFlag);
-        return;
-      }
-      if (nameBegin <= contentBegin && nameEnd >= contentBegin) {
-        log.debug2(line + " : " + contentFlag + " overlaps " + nameFlag);
-        return;
-      }
-      contentBegin += contentFlag.length();
-      int contentEnd = line.indexOf('"', contentBegin + 1);
-      if (log.isDebug3()) {
-        log.debug3(line + " name [" + nameBegin + "," + nameEnd + "] cont [" +
-       contentBegin + "," + contentEnd + "]");
-      }
-      if (contentEnd <= contentBegin) {
-        log.debug2(line + " : " + contentFlag + " unterminated");
-        return;
-      }
-      if (contentBegin <= (nameBegin - nameFlag.length()) && 
-          contentEnd >= (nameBegin - nameFlag.length())) {
-        log.debug2(line + " : " + nameFlag + " overlaps " + contentFlag);
-        return;
-      }
-        
-      String content = line.substring(contentBegin, contentEnd);
-      putValue(ret, name, content);
-    }
-    // XXX replaces protected super.putValue; remove when SimpleHtmlMetaTagMetadataExtractor updated
+    
+    // taken from SimpleHtmlMetaTagMetadataExtractor.putValue, Jsoup has no putValue method
     protected void putValue(ArticleMetadata ret, String name, String content) {
       // filter raw HTML tags embedded within content -- publishers get sloppy
       content = HtmlUtil.stripHtmlTags(content);
