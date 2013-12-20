@@ -163,7 +163,7 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     FileMetadataExtractor me = 
         new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
-            MathematicalSciencesPublishersHtmlMetadataExtractor();
+            MathematicalSciencesPublishersHtmlMetadataExtractor("text/html");
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -172,7 +172,7 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertEquals(goodDoi, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
     assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
@@ -196,7 +196,7 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     cu.setContentSize(badContent.length());
     FileMetadataExtractor me = 
         new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
-            MathematicalSciencesPublishersHtmlMetadataExtractor();
+            MathematicalSciencesPublishersHtmlMetadataExtractor("application/xhtml+xml");
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -210,7 +210,7 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     assertNull(md.get(MetadataField.FIELD_AUTHOR));
     assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(md.get(MetadataField.FIELD_DATE));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertNull(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
 
     assertEquals(1, md.rawSize());
   }
@@ -242,10 +242,10 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     cu.setContent(missingMetaContent);
     cu.setContentSize(missingMetaContent.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
     FileMetadataExtractor me = 
         new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
-            MathematicalSciencesPublishersHtmlMetadataExtractor();
+            MathematicalSciencesPublishersHtmlMetadataExtractor("text/xml");
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
     List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
