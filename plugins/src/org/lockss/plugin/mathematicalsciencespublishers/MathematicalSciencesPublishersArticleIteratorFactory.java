@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.2 2013-10-07 15:56:02 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.3 2013-12-20 05:27:28 etenbrink Exp $
  */
 
 /*
@@ -47,16 +47,35 @@ import org.lockss.util.Logger;
 public class MathematicalSciencesPublishersArticleIteratorFactory
 implements ArticleIteratorFactory,
            ArticleMetadataExtractorFactory {
-
+  
   protected static Logger log = 
-      Logger.getLogger("MathematicalSciencesPublishersArticleIteratorFactory");
-
+      Logger.getLogger(MathematicalSciencesPublishersArticleIteratorFactory.class);
+  
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE =
       "\"%s%s/%s/\", base_url, journal_id, year"; 
-
+  
   protected static final String PATTERN_TEMPLATE =
       "\"^%s%s/%s/[0-9-]+/p.+[.]xhtml\", base_url, journal_id, year";
+  
+  // various aspects of an article
+  // http://msp.org/involve/2013/6-1/p01.xhtml
+  // http://msp.org/camcos/2012/7-2/*p01-s.pdf
+  // http://msp.org/camcos/2012/7-2/camcos-v7-n2-p01-p.pdf
+  // http://www.msp.warwick.ac.uk/gt/2006/10/gt-2006-10-025p.pdf
+  // http://msp.org/ant/2011/5-2/pC1.xhtml
+  // http://msp.org/ant/2011/5-2/ant-v5-n2-pC1-s.pdf
+  
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "([^/]+)/([0-9]+)/([0-9]+)(-?)([0-9]*)/p([c0-9]+).xhtml$",
+      Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  protected static final String ABSTRACT_REPLACEMENT = "$1/$2/$3$4$5/p$6.xhtml";
+  protected static final String SPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-v$3$4n$5-p$6-s.pdf";
+  protected static final String PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-v$3$4n$5-p$6-p.pdf";
+  protected static final String ALT_SPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6s.pdf";
+  protected static final String ALT_PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6p.pdf";
   
   // MSP publisher, article content may look like this but you do not know
   // how many of the aspects will exist for a particular journal
@@ -73,28 +92,9 @@ implements ArticleIteratorFactory,
       throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    // various aspects of an article
-    // http://msp.org/involve/2013/6-1/p01.xhtml
-    // http://msp.org/camcos/2012/7-2/*p01-s.pdf
-    // http://msp.org/camcos/2012/7-2/camcos-v7-n2-p01-p.pdf
-    // http://www.msp.warwick.ac.uk/gt/2006/10/gt-2006-10-025p.pdf
-    // http://msp.org/ant/2011/5-2/pC1.xhtml
-    // http://msp.org/ant/2011/5-2/ant-v5-n2-pC1-s.pdf
-
-    final Pattern ABSTRACT_PATTERN = Pattern.compile(
-        "([^/]+)/([0-9]+)/([0-9]+)(-?)([0-9]*)/p([c0-9]+).xhtml$",
-        Pattern.CASE_INSENSITIVE);
-
-    // how to change from one form (aspect) of article to another
-    final String ABSTRACT_REPLACEMENT = "$1/$2/$3$4$5/p$6.xhtml";
-    final String SPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-v$3$4n$5-p$6-s.pdf";
-    final String PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-v$3$4n$5-p$6-p.pdf";
-    final String ALT_SPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6s.pdf";
-    final String ALT_PPDF_REPLACEMENT = "$1/$2/$3$4$5/$1-$2-$3-$6p.pdf";
-    
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-
+    
     // set up Abstract to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means an abstract could be considered a 
     // FULL_TEXT_CU until this is deprecated
@@ -103,13 +103,13 @@ implements ArticleIteratorFactory,
     builder.addAspect(
         ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
-
+    
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         Arrays.asList(SPDF_REPLACEMENT, PPDF_REPLACEMENT, 
             ALT_SPDF_REPLACEMENT, ALT_PPDF_REPLACEMENT),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
-
+    
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
     // In this case, there are two jobs, one for counting articles (abstract is 
@@ -117,7 +117,7 @@ implements ArticleIteratorFactory,
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_PDF, 
         ArticleFiles.ROLE_ABSTRACT);
-
+    
     return builder.getSubTreeArticleIterator();
   }
   
@@ -126,5 +126,5 @@ implements ArticleIteratorFactory,
     throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
-
+  
 }
