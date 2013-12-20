@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.38 2013-11-12 00:24:02 thib_gc Exp $
+# $Id: tdbxml.py,v 1.39 2013-12-20 23:41:38 thib_gc Exp $
 
 __copyright__ = '''\
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -29,8 +29,9 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 '''
 
-__version__ = '0.4.10'
+__version__ = '0.4.11'
 
+from datetime import datetime
 from optparse import OptionGroup, OptionParser
 import re
 import sys
@@ -43,6 +44,10 @@ class TdbxmlConstants:
     OPTION_NO_PUB_DOWN = 'no-pub-down'
     OPTION_NO_PUB_DOWN_SHORT = 'd'
     OPTION_NO_PUB_DOWN_HELP = 'do not include pub_down markers'
+
+    OPTION_NO_TIMESTAMP = 'no-timestamp'
+    OPTION_NO_TIMESTAMP_SHORT = 't'
+    OPTION_NO_TIMESTAMP_HELP = 'do not include a timestamp'
 
     OPTION_OUTPUT_FILE = 'output'
     OPTION_OUTPUT_FILE_SHORT = 'o'
@@ -141,6 +146,10 @@ def __preamble(tdb, options):
 <!ATTLIST list append CDATA #IMPLIED>
 ]>
 '''
+    if options.no_timestamp: return
+    print '''\
+<!-- %s -->
+''' % (datetime.now())
 
 def __introduction(tdb, options):
     if options.style == TdbxmlConstants.OPTION_STYLE_ENTRIES: return
@@ -204,7 +213,7 @@ def __process_au(au, options):
     if au_proxy is not None:
         austr.append(__do_param(au, 98, 'crawl_proxy', au_proxy))
     if not options.no_pub_down and au.status() in [AU.Status.FROZEN,
-                                                   AU.Status.ING_NOT_READY,
+                                                   #AU.Status.ING_NOT_READY,
                                                    AU.Status.FINISHED,
                                                    AU.Status.DOWN,
                                                    AU.Status.SUPERSEDED,
@@ -289,6 +298,10 @@ def __option_parser__(parser=None):
                             '--' + TdbxmlConstants.OPTION_NO_PUB_DOWN,
                             action='store_true',
                             help=TdbxmlConstants.OPTION_NO_PUB_DOWN_HELP)
+    tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_NO_TIMESTAMP_SHORT,
+                            '--' + TdbxmlConstants.OPTION_NO_TIMESTAMP,
+                            action='store_false',
+                            help=TdbxmlConstants.OPTION_NO_TIMESTAMP_HELP)
     tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_INPUT_FILE_SHORT,
                             '--' + TdbxmlConstants.OPTION_INPUT_FILE,
                             action='store',
