@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.3 2013-12-20 05:37:26 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.4 2013-12-21 02:13:59 etenbrink Exp $
  */
 
 /*
@@ -166,8 +166,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
           }
           if (am.getRaw("citation_title") == null) {
             // find article title 
-            matcher = patternTitleAuth.matcher("");
-            matcher.reset(colContent);
+            matcher = patternTitleAuth.matcher(colContent);
             if (matcher.find()) {
               putValue(am, "scraped_title", matcher.group(1).trim());
             }
@@ -191,8 +190,8 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     // XXX probably in BaseCachedUrl
     private Reader openForReading(CachedUrl cu) {
       try {
-        return new BufferedReader(new InputStreamReader(
-            cu.getUnfilteredInputStream(), Constants.ENCODING_UTF_8));
+        return new InputStreamReader(
+            cu.getUnfilteredInputStream(), Constants.ENCODING_UTF_8);
       } catch (IOException e) {
         log.error("Creating InputStreamReader for '" + cu.getUrl() + "'", e);
         throw new LockssRepository.RepositoryStateException(
