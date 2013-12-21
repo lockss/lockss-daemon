@@ -1,4 +1,8 @@
 /*
+ * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.3 2013-12-21 02:04:29 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,12 +32,16 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.mathematicalsciencespublishers;
 
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.*;
 
+import org.apache.commons.io.IOUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
+import org.lockss.filter.FilterUtil;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
@@ -42,7 +50,8 @@ import org.lockss.plugin.simulated.*;
  * http://msp.org/camcos/2012/7-2/p04.xhtml
  */
 public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestMspHtmlMetadataExtractor");
+  static Logger log = Logger.getLogger(
+      TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.class);
   
   //Simulated AU to generate content
   private SimulatedArchivalUnit sau; 
@@ -196,7 +205,7 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     cu.setContentSize(badContent.length());
     FileMetadataExtractor me = 
         new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
-            MathematicalSciencesPublishersHtmlMetadataExtractor("application/xhtml+xml");
+            MathematicalSciencesPublishersHtmlMetadataExtractor("text/html");
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -254,7 +263,41 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNotNull(md.get(MetadataField.FIELD_DOI));
   }
+  
+  // test contentType application/ 
+  public void testMspXmlMetaContent() throws Exception {
+    
+    InputStream input = null;
+    String xmlContent = "";
+    try {
+      input = getResourceAsStream("/org/lockss/plugin/mathematicalsciencespublishers/p01.xhtml");
+      xmlContent = IOUtils.toString(input);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
+    String goodTitle = "The Chevalley–Shephard–Todd theorem for finite linearly reductive group schemes";
+    
+    String url = "http://www.example.com/ant/2012/6-1/p01.xhtml";
+    MockCachedUrl cu = new MockCachedUrl(url, hau);
+    
+    cu.setContent(xmlContent);
+    cu.setContentSize(xmlContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xhtml+xml");
+    FileMetadataExtractor me = 
+        new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
+            MathematicalSciencesPublishersHtmlMetadataExtractor("application/xhtml+xml");
+    FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertNotNull(md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+  }
+  
+
+  
   /**
    * Inner class that where a number of Archival Units can be created
    * 
