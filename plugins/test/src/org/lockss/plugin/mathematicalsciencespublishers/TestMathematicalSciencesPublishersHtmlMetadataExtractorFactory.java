@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.3 2013-12-21 02:04:29 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.4 2013-12-21 02:05:02 etenbrink Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.mathematicalsciencespublishers;
 
 import java.io.InputStream;
-import java.io.Reader;
 import java.util.*;
 
 import org.apache.commons.io.IOUtils;
@@ -41,7 +40,6 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
-import org.lockss.filter.FilterUtil;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
