@@ -1027,7 +1027,8 @@
     >
 
     param[journal_id] = gim
-    comment[notReady] = no links on 2011 manifest page and 500 error for 2010 manifest page
+    comment[notReady0] = no urls on 2011 manifest page 
+    comment[notReady1] = 500 error for 2010 bad relative url. http://www.nature.com/gim/journal/v12/n9/full/www.coriell.org/index.php/content/view/92/167/
 
     au < exists ; exists ; 1998 ; Genetics in Medicine Volume 1 (1998) ; 1998 ; 1 >
     au < exists ; exists ; 1999 ; Genetics in Medicine Volume 1 (1999) ; 1999 ; 1 >
