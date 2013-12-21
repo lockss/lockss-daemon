@@ -3821,6 +3821,10 @@
 
     param[journal_id] = onc
     comment[notReady] = low agreement see RU 4761
+    comment[extras] = volume 1 and 2 created in error.
+
+    au < down ; exists ; 2012 ; Oncogenesis Volume 1 [to delete] ; 2012 ; 1 >
+    au < down ; exists ; 2013 ; Oncogenesis Volume 2 [to delete] ; 2013 ; 2 >
 
     au < manifest ; exists ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
     au < manifest ; exists ; 1997 ; Oncogene Volume 15 ; 1997 ; 15 >
@@ -3851,11 +3855,11 @@
       name = Oncogenesis ;
       issn = 2157-9024
     >
-    param[journal_id] = onc
+    param[journal_id] = oncsis
     
-    au < crawling ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
-    au < crawling ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
-    au < manifest ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
+    au < exists ; exists ; 2012 ; Oncogenesis Volume 1 ; 2012 ; 1 >
+    au < exists ; exists ; 2013 ; Oncogenesis Volume 2 ; 2013 ; 2 >
+    au < exists ; exists ; 2014 ; Oncogenesis Volume 3 ; 2014 ; 3 >
 
   }
 
