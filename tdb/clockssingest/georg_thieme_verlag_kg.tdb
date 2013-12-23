@@ -225,7 +225,7 @@
     au < exists ; exists ; 2009 ; 2009 ; Aktuelle Rheumatologie Volume 36 ; 36 >
     au < exists ; exists ; 2010 ; 2010 ; Aktuelle Rheumatologie Volume 37 ; 37 >
     au < exists ; exists ; 2011 ; 2011 ; Aktuelle Rheumatologie Volume 38 ; 38 >
-    au < exists ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 39 ; 39 >
+    au < exists ; exists ; 2012 ; 2012 ; Aktuelle Rheumatologie Volume 36 ; 36 >
     au < expected ; exists ; 2013 ; 2013 ; Aktuelle Rheumatologie Volume 40 ; 40 >
     au < expected ; exists ; 2014 ; 2014 ; Aktuelle Rheumatologie Volume 41 ; 41 >
 
@@ -972,20 +972,18 @@
     param[journal_id] = 10.1055/s-00000120
     comment[years] = 2003-current
 
-   au < exists ; exists ; 1952 ; 1952 ; Deutsche Zeitschrift für Osteopathie Volume 1952 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Deutsche Zeitschrift für Osteopathie Volume 1988 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Deutsche Zeitschrift für Osteopathie Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Deutsche Zeitschrift für Osteopathie Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Osteopathie Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Osteopathie Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 0 >
+   au < exists ; exists ; 2003 ; 2003 ; Deutsche Zeitschrift für Osteopathie Volume 2003 ; 1 >
+   au < exists ; exists ; 2004 ; 2004 ; Deutsche Zeitschrift für Osteopathie Volume 2004 ; 2 >
+   au < exists ; exists ; 2005 ; 2005 ; Deutsche Zeitschrift für Osteopathie Volume 2005 ; 3 >
+   au < exists ; exists ; 2006 ; 2006 ; Deutsche Zeitschrift für Osteopathie Volume 2006 ; 4 >
+   au < exists ; exists ; 2007 ; 2007 ; Deutsche Zeitschrift für Osteopathie Volume 2007 ; 5 >
+   au < exists ; exists ; 2008 ; 2008 ; Deutsche Zeitschrift für Osteopathie Volume 2008 ; 6 >
+   au < exists ; exists ; 2009 ; 2009 ; Deutsche Zeitschrift für Osteopathie Volume 2009 ; 7 >
+   au < exists ; exists ; 2010 ; 2010 ; Deutsche Zeitschrift für Osteopathie Volume 2010 ; 8 >
+   au < exists ; exists ; 2011 ; 2011 ; Deutsche Zeitschrift für Osteopathie Volume 2011 ; 9 >
+   au < exists ; exists ; 2012 ; 2012 ; Deutsche Zeitschrift für Osteopathie Volume 2012 ; 10 >
+   au < expected ; exists ; 2013 ; 2013 ; Deutsche Zeitschrift für Osteopathie Volume 2013 ; 11 >
+   au < expected ; exists ; 2014 ; 2014 ; Deutsche Zeitschrift für Osteopathie Volume 2014 ; 12 >
 
   }
 
@@ -1000,15 +998,15 @@
     param[journal_id] = 10.1055/s-00000136
     comment[years] = 2006-current
 
-   au < exists ; exists ; 2006 ; 2006 ; Endo-Praxis Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 0 >
+   au < exists ; exists ; 2006 ; 2006 ; Endo-Praxis Volume 2006 ; 22 >
+   au < exists ; exists ; 2007 ; 2007 ; Endo-Praxis Volume 2007 ; 23 >
+   au < exists ; exists ; 2008 ; 2008 ; Endo-Praxis Volume 2008 ; 24 >
+   au < exists ; exists ; 2009 ; 2009 ; Endo-Praxis Volume 2009 ; 25 >
+   au < exists ; exists ; 2010 ; 2010 ; Endo-Praxis Volume 2010 ; 26 >
+   au < exists ; exists ; 2011 ; 2011 ; Endo-Praxis Volume 2011 ; 27 >
+   au < exists ; exists ; 2012 ; 2012 ; Endo-Praxis Volume 2012 ; 28 >
+   au < expected ; exists ; 2013 ; 2013 ; Endo-Praxis Volume 2013 ; 29 >
+   au < expected ; exists ; 2014 ; 2014 ; Endo-Praxis Volume 2014 ; 30 >
 
   }
 
@@ -1025,52 +1023,52 @@
     comment[years] = 1969-current
 
 
-   au < exists ; exists ; 1969 ; 1969 ; Endoscopy Volume 1969 ; 0 >
-   au < exists ; exists ; 1970 ; 1970 ; Endoscopy Volume 1970 ; 0 >
-   au < exists ; exists ; 1971 ; 1971 ; Endoscopy Volume 1971 ; 0 >
-   au < exists ; exists ; 1972 ; 1972 ; Endoscopy Volume 1972 ; 0 >
-   au < exists ; exists ; 1973 ; 1973 ; Endoscopy Volume 1973 ; 0 >
-   au < exists ; exists ; 1974 ; 1974 ; Endoscopy Volume 1974 ; 0 >
-   au < exists ; exists ; 1975 ; 1975 ; Endoscopy Volume 1975 ; 0 >
-   au < exists ; exists ; 1976 ; 1976 ; Endoscopy Volume 1976 ; 0 >
-   au < exists ; exists ; 1977 ; 1977 ; Endoscopy Volume 1977 ; 0 >
-   au < exists ; exists ; 1978 ; 1978 ; Endoscopy Volume 1978 ; 0 >
-   au < exists ; exists ; 1979 ; 1979 ; Endoscopy Volume 1979 ; 0 >
-   au < exists ; exists ; 1980 ; 1980 ; Endoscopy Volume 1980 ; 0 >
-   au < exists ; exists ; 1981 ; 1981 ; Endoscopy Volume 1981 ; 0 >
-   au < exists ; exists ; 1982 ; 1982 ; Endoscopy Volume 1982 ; 0 >
-   au < exists ; exists ; 1983 ; 1983 ; Endoscopy Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Endoscopy Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Endoscopy Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Endoscopy Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Endoscopy Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Endoscopy Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Endoscopy Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Endoscopy Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Endoscopy Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Endoscopy Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Endoscopy Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Endoscopy Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Endoscopy Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Endoscopy Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Endoscopy Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Endoscopy Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Endoscopy Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Endoscopy Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Endoscopy Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Endoscopy Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Endoscopy Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Endoscopy Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Endoscopy Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Endoscopy Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Endoscopy Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Endoscopy Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Endoscopy Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Endoscopy Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Endoscopy Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 0 >
+   au < exists ; exists ; 1969 ; 1969 ; Endoscopy Volume 1969 ; 1 >
+   au < exists ; exists ; 1970 ; 1970 ; Endoscopy Volume 1970 ; 2 >
+   au < exists ; exists ; 1971 ; 1971 ; Endoscopy Volume 1971 ; 3 >
+   au < exists ; exists ; 1972 ; 1972 ; Endoscopy Volume 1972 ; 4 >
+   au < exists ; exists ; 1973 ; 1973 ; Endoscopy Volume 1973 ; 5 >
+   au < exists ; exists ; 1974 ; 1974 ; Endoscopy Volume 1974 ; 6 >
+   au < exists ; exists ; 1975 ; 1975 ; Endoscopy Volume 1975 ; 7 >
+   au < exists ; exists ; 1976 ; 1976 ; Endoscopy Volume 1976 ; 8 >
+   au < exists ; exists ; 1977 ; 1977 ; Endoscopy Volume 1977 ; 9 >
+   au < exists ; exists ; 1978 ; 1978 ; Endoscopy Volume 1978 ; 10 >
+   au < exists ; exists ; 1979 ; 1979 ; Endoscopy Volume 1979 ; 11 >
+   au < exists ; exists ; 1980 ; 1980 ; Endoscopy Volume 1980 ; 12 >
+   au < exists ; exists ; 1981 ; 1981 ; Endoscopy Volume 1981 ; 13 >
+   au < exists ; exists ; 1982 ; 1982 ; Endoscopy Volume 1982 ; 14 >
+   au < exists ; exists ; 1983 ; 1983 ; Endoscopy Volume 1983 ; 15 >
+   au < exists ; exists ; 1984 ; 1984 ; Endoscopy Volume 1984 ; 16 >
+   au < exists ; exists ; 1985 ; 1985 ; Endoscopy Volume 1985 ; 17 >
+   au < exists ; exists ; 1986 ; 1986 ; Endoscopy Volume 1986 ; 18 >
+   au < exists ; exists ; 1987 ; 1987 ; Endoscopy Volume 1987 ; 19 >
+   au < exists ; exists ; 1988 ; 1988 ; Endoscopy Volume 1988 ; 20 >
+   au < exists ; exists ; 1989 ; 1989 ; Endoscopy Volume 1989 ; 21 >
+   au < exists ; exists ; 1990 ; 1990 ; Endoscopy Volume 1990 ; 22 >
+   au < exists ; exists ; 1991 ; 1991 ; Endoscopy Volume 1991 ; 23 >
+   au < exists ; exists ; 1992 ; 1992 ; Endoscopy Volume 1992 ; 24 >
+   au < exists ; exists ; 1993 ; 1993 ; Endoscopy Volume 1993 ; 25 >
+   au < exists ; exists ; 1994 ; 1994 ; Endoscopy Volume 1994 ; 26 >
+   au < exists ; exists ; 1995 ; 1995 ; Endoscopy Volume 1995 ; 27 >
+   au < exists ; exists ; 1996 ; 1996 ; Endoscopy Volume 1996 ; 28 >
+   au < exists ; exists ; 1997 ; 1997 ; Endoscopy Volume 1997 ; 29 >
+   au < exists ; exists ; 1998 ; 1998 ; Endoscopy Volume 1998 ; 30 >
+   au < exists ; exists ; 1999 ; 1999 ; Endoscopy Volume 1999 ; 31 >
+   au < exists ; exists ; 2000 ; 2000 ; Endoscopy Volume 2000 ; 32 >
+   au < exists ; exists ; 2001 ; 2001 ; Endoscopy Volume 2001 ; 33 >
+   au < exists ; exists ; 2002 ; 2002 ; Endoscopy Volume 2002 ; 34 >
+   au < exists ; exists ; 2003 ; 2003 ; Endoscopy Volume 2003 ; 35 >
+   au < exists ; exists ; 2004 ; 2004 ; Endoscopy Volume 2004 ; 36 >
+   au < exists ; exists ; 2005 ; 2005 ; Endoscopy Volume 2005 ; 37 >
+   au < exists ; exists ; 2006 ; 2006 ; Endoscopy Volume 2006 ; 38 >
+   au < exists ; exists ; 2007 ; 2007 ; Endoscopy Volume 2007 ; 39 >
+   au < exists ; exists ; 2008 ; 2008 ; Endoscopy Volume 2008 ; 40 >
+   au < exists ; exists ; 2009 ; 2009 ; Endoscopy Volume 2009 ; 41 >
+   au < exists ; exists ; 2010 ; 2010 ; Endoscopy Volume 2010 ; 42 >
+   au < exists ; exists ; 2011 ; 2011 ; Endoscopy Volume 2011 ; 43 >
+   au < exists ; exists ; 2012 ; 2012 ; Endoscopy Volume 2012 ; 44 >
+   au < exists ; exists ; 2013 ; 2013 ; Endoscopy Volume 2013 ; 45 >
+   au < exists ; exists ; 2014 ; 2014 ; Endoscopy Volume 2014 ; 46 >
 
   }
 
@@ -1085,19 +1083,19 @@
     param[journal_id] = 10.1055/s-00000013
     comment[years] = 2002-current
 
-   au < exists ; exists ; 2002 ; 2002 ; Endoscopy heute Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Endoscopy heute Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 0 >
+   au < exists ; exists ; 2002 ; 2002 ; Endoscopy heute Volume 2002 ; 15 >
+   au < exists ; exists ; 2003 ; 2003 ; Endoscopy heute Volume 2003 ; 16 >
+   au < exists ; exists ; 2004 ; 2004 ; Endoscopy heute Volume 2004 ; 17 >
+   au < exists ; exists ; 2005 ; 2005 ; Endoscopy heute Volume 2005 ; 18 >
+   au < exists ; exists ; 2006 ; 2006 ; Endoscopy heute Volume 2006 ; 19 >
+   au < exists ; exists ; 2007 ; 2007 ; Endoscopy heute Volume 2007 ; 20 >
+   au < exists ; exists ; 2008 ; 2008 ; Endoscopy heute Volume 2008 ; 21 >
+   au < exists ; exists ; 2009 ; 2009 ; Endoscopy heute Volume 2009 ; 22 >
+   au < exists ; exists ; 2010 ; 2010 ; Endoscopy heute Volume 2010 ; 23 >
+   au < exists ; exists ; 2011 ; 2011 ; Endoscopy heute Volume 2011 ; 24 >
+   au < exists ; exists ; 2012 ; 2012 ; Endoscopy heute Volume 2012 ; 25 >
+   au < expected ; exists ; 2013 ; 2013 ; Endoscopy heute Volume 2013 ; 26 >
+   au < expected ; exists ; 2014 ; 2014 ; Endoscopy heute Volume 2014 ; 27 >
 
   }
 
@@ -1112,21 +1110,21 @@
     param[journal_id] = 10.1055/s-00000014
     comment[years] = 2000-current
 
-   au < exists ; exists ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Erfahrungsheilkunde Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Erfahrungsheilkunde Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Erfahrungsheilkunde Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Erfahrungsheilkunde Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Erfahrungsheilkunde Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 0 >
+   au < exists ; exists ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 2000 ; 49 >
+   au < exists ; exists ; 2001 ; 2001 ; Erfahrungsheilkunde Volume 2001 ; 50 >
+   au < exists ; exists ; 2002 ; 2002 ; Erfahrungsheilkunde Volume 2002 ; 51 >
+   au < exists ; exists ; 2003 ; 2003 ; Erfahrungsheilkunde Volume 2003 ; 52 >
+   au < exists ; exists ; 2004 ; 2004 ; Erfahrungsheilkunde Volume 2004 ; 53 >
+   au < exists ; exists ; 2005 ; 2005 ; Erfahrungsheilkunde Volume 2005 ; 54 >
+   au < exists ; exists ; 2006 ; 2006 ; Erfahrungsheilkunde Volume 2006 ; 55 >
+   au < exists ; exists ; 2007 ; 2007 ; Erfahrungsheilkunde Volume 2007 ; 56 >
+   au < exists ; exists ; 2008 ; 2008 ; Erfahrungsheilkunde Volume 2008 ; 57 >
+   au < exists ; exists ; 2009 ; 2009 ; Erfahrungsheilkunde Volume 2009 ; 58 >
+   au < exists ; exists ; 2010 ; 2010 ; Erfahrungsheilkunde Volume 2010 ; 59 >
+   au < exists ; exists ; 2011 ; 2011 ; Erfahrungsheilkunde Volume 2011 ; 60 >
+   au < exists ; exists ; 2012 ; 2012 ; Erfahrungsheilkunde Volume 2012 ; 61 >
+   au < expected ; exists ; 2013 ; 2013 ; Erfahrungsheilkunde Volume 2013 ; 62 >
+   au < expected ; exists ; 2014 ; 2014 ; Erfahrungsheilkunde Volume 2014 ; 63 >
 
   }
 
@@ -1141,13 +1139,13 @@
     param[journal_id] = 10.1055/s-00000163
     comment[years] = 2008-current
 
-   au < exists ; exists ; 2008 ; 2008 ; Ergopraxis Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Ergopraxis Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Ergopraxis Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 0 >
-   au < exists ; exists ; 2013 ; 2013 ; Ergopraxis Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 0 >
+   au < exists ; exists ; 2008 ; 2008 ; Ergopraxis Volume 2008 ; 1 >
+   au < exists ; exists ; 2009 ; 2009 ; Ergopraxis Volume 2009 ; 2 >
+   au < exists ; exists ; 2010 ; 2010 ; Ergopraxis Volume 2010 ; 3 >
+   au < exists ; exists ; 2011 ; 2011 ; Ergopraxis Volume 2011 ; 4 >
+   au < exists ; exists ; 2012 ; 2012 ; Ergopraxis Volume 2012 ; 5 >
+   au < exists ; exists ; 2013 ; 2013 ; Ergopraxis Volume 2013 ; 6 >
+   au < expected ; exists ; 2014 ; 2014 ; Ergopraxis Volume 2014 ; 7 >
 
   }
 
@@ -1162,21 +1160,21 @@
     param[journal_id] = 10.1055/s-00000093
     comment[years] = 2003-current
 
-   au < exists ; exists ; 2000 ; 2000 ; Ernährung & Medizin Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Ernährung & Medizin Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Ernährung & Medizin Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Ernährung & Medizin Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Ernährung & Medizin Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Ernährung & Medizin Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Ernährung & Medizin Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Ernährung & Medizin Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ; 0 >
+   au < exists ; exists ; 2000 ; 2000 ; Ernährung & Medizin Volume 2000 ; 15 >
+   au < exists ; exists ; 2001 ; 2001 ; Ernährung & Medizin Volume 2001 ; 16 >
+   au < exists ; exists ; 2002 ; 2002 ; Ernährung & Medizin Volume 2002 ; 17 >
+   au < exists ; exists ; 2003 ; 2003 ; Ernährung & Medizin Volume 2003 ; 18 >
+   au < exists ; exists ; 2004 ; 2004 ; Ernährung & Medizin Volume 2004 ; 19 >
+   au < exists ; exists ; 2005 ; 2005 ; Ernährung & Medizin Volume 2005 ; 20 >
+   au < exists ; exists ; 2006 ; 2006 ; Ernährung & Medizin Volume 2006 ; 21 >
+   au < exists ; exists ; 2007 ; 2007 ; Ernährung & Medizin Volume 2007 ; 22 >
+   au < exists ; exists ; 2008 ; 2008 ; Ernährung & Medizin Volume 2008 ; 23 >
+   au < exists ; exists ; 2009 ; 2009 ; Ernährung & Medizin Volume 2009 ; 24 >
+   au < exists ; exists ; 2010 ; 2010 ; Ernährung & Medizin Volume 2010 ; 25 >
+   au < exists ; exists ; 2011 ; 2011 ; Ernährung & Medizin Volume 2011 ; 26 >
+   au < exists ; exists ; 2012 ; 2012 ; Ernährung & Medizin Volume 2012 ; 27 >
+   au < expected ; exists ; 2013 ; 2013 ; Ernährung & Medizin Volume 2013 ;028 >
+   au < expected ; exists ; 2014 ; 2014 ; Ernährung & Medizin Volume 2014 ;029 >
 
   }
 
@@ -1191,42 +1189,32 @@
     >
     param[journal_id] = 10.1055/s-00000015
     comment[years] = 1991-current
+    comment[pre_1991] = Journals before 1991 redirect to Zeitschrift für Kinderchirurgie with a different volume and DOI
 
-   au < exists ; exists ; 1980 ; 1980 ; European Journal of Pediatric Surgery Volume 1980 ; 0 >
-   au < exists ; exists ; 1981 ; 1981 ; European Journal of Pediatric Surgery Volume 1981 ; 0 >
-   au < exists ; exists ; 1982 ; 1982 ; European Journal of Pediatric Surgery Volume 1982 ; 0 >
-   au < exists ; exists ; 1983 ; 1983 ; European Journal of Pediatric Surgery Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; European Journal of Pediatric Surgery Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; European Journal of Pediatric Surgery Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; European Journal of Pediatric Surgery Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; European Journal of Pediatric Surgery Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; European Journal of Pediatric Surgery Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; European Journal of Pediatric Surgery Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; European Journal of Pediatric Surgery Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; European Journal of Pediatric Surgery Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; European Journal of Pediatric Surgery Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; European Journal of Pediatric Surgery Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; European Journal of Pediatric Surgery Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; European Journal of Pediatric Surgery Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; European Journal of Pediatric Surgery Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; European Journal of Pediatric Surgery Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; European Journal of Pediatric Surgery Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; European Journal of Pediatric Surgery Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; European Journal of Pediatric Surgery Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; European Journal of Pediatric Surgery Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Volume 2014 ; 0 >
+   au < exists ; exists ; 1991 ; 1991 ; European Journal of Pediatric Surgery Volume 1991 ; 1 >
+   au < exists ; exists ; 1992 ; 1992 ; European Journal of Pediatric Surgery Volume 1992 ; 2 >
+   au < exists ; exists ; 1993 ; 1993 ; European Journal of Pediatric Surgery Volume 1993 ; 3 >
+   au < exists ; exists ; 1994 ; 1994 ; European Journal of Pediatric Surgery Volume 1994 ; 4 >
+   au < exists ; exists ; 1995 ; 1995 ; European Journal of Pediatric Surgery Volume 1995 ; 5 >
+   au < exists ; exists ; 1996 ; 1996 ; European Journal of Pediatric Surgery Volume 1996 ; 6 >
+   au < exists ; exists ; 1997 ; 1997 ; European Journal of Pediatric Surgery Volume 1997 ; 7 >
+   au < exists ; exists ; 1998 ; 1998 ; European Journal of Pediatric Surgery Volume 1998 ; 8 >
+   au < exists ; exists ; 1999 ; 1999 ; European Journal of Pediatric Surgery Volume 1999 ; 9 >
+   au < exists ; exists ; 2000 ; 2000 ; European Journal of Pediatric Surgery Volume 2000 ; 10 >
+   au < exists ; exists ; 2001 ; 2001 ; European Journal of Pediatric Surgery Volume 2001 ; 11 >
+   au < exists ; exists ; 2002 ; 2002 ; European Journal of Pediatric Surgery Volume 2002 ; 12 >
+   au < exists ; exists ; 2003 ; 2003 ; European Journal of Pediatric Surgery Volume 2003 ; 13 >
+   au < exists ; exists ; 2004 ; 2004 ; European Journal of Pediatric Surgery Volume 2004 ; 14 >
+   au < exists ; exists ; 2005 ; 2005 ; European Journal of Pediatric Surgery Volume 2005 ; 15 >
+   au < exists ; exists ; 2006 ; 2006 ; European Journal of Pediatric Surgery Volume 2006 ; 16 >
+   au < exists ; exists ; 2007 ; 2007 ; European Journal of Pediatric Surgery Volume 2007 ; 17 >
+   au < exists ; exists ; 2008 ; 2008 ; European Journal of Pediatric Surgery Volume 2008 ; 18 >
+   au < exists ; exists ; 2009 ; 2009 ; European Journal of Pediatric Surgery Volume 2009 ; 19 >
+   au < exists ; exists ; 2010 ; 2010 ; European Journal of Pediatric Surgery Volume 2010 ; 20 >
+   au < exists ; exists ; 2011 ; 2011 ; European Journal of Pediatric Surgery Volume 2011 ; 21 >
+   au < exists ; exists ; 2012 ; 2012 ; European Journal of Pediatric Surgery Volume 2012 ; 22 >
+   au < expected ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Volume 2013 ; 23 >
+   au < expected ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Volume 2014 ; 24 >
 
   }
 
@@ -1244,11 +1232,11 @@
     comment[0] = continuation of Evidence-Based Spine Surgery
 
 
-   au < exists ; exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 0 >
-   au < exists ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 0 >
+   au < exists ; exists ; 2010 ; 2010 ; Evidence-Based Spine-Care Journal Volume 2010 ; 1 >
+   au < exists ; exists ; 2011 ; 2011 ; Evidence-Based Spine-Care Journal Volume 2011 ; 2 >
+   au < exists ; exists ; 2012 ; 2012 ; Evidence-Based Spine-Care Journal Volume 2012 ; 3 >
+   au < exists ; exists ; 2013 ; 2013 ; Evidence-Based Spine-Care Journal Volume 2013 ; 4 >
+   au < expected ; exists ; 2014 ; 2014 ; Evidence-Based Spine-Care Journal Volume 2014 ; 5 >
 
   }
 
@@ -1263,38 +1251,38 @@
     param[journal_id] = 10.1055/s-00000017
     comment[years] = 1995-current
 
-   au < exists ; exists ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Experimental and Clinical Endocrinology & Diabetes Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Experimental and Clinical Endocrinology & Diabetes Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Experimental and Clinical Endocrinology & Diabetes Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 0 >
+   au < exists ; exists ; 1983 ; 1983 ; Experimental and Clinical Endocrinology & Diabetes Volume 1983 ; 93 >
+   au < exists ; exists ; 1984 ; 1984 ; Experimental and Clinical Endocrinology & Diabetes Volume 1984 ; 94 >
+   au < exists ; exists ; 1985 ; 1985 ; Experimental and Clinical Endocrinology & Diabetes Volume 1985 ; 95 >
+   au < exists ; exists ; 1986 ; 1986 ; Experimental and Clinical Endocrinology & Diabetes Volume 1986 ; 96 >
+   au < exists ; exists ; 1987 ; 1987 ; Experimental and Clinical Endocrinology & Diabetes Volume 1987 ; 97 >
+   au < exists ; exists ; 1988 ; 1988 ; Experimental and Clinical Endocrinology & Diabetes Volume 1988 ; 98 >
+   au < exists ; exists ; 1989 ; 1989 ; Experimental and Clinical Endocrinology & Diabetes Volume 1989 ; 99 >
+   au < exists ; exists ; 1990 ; 1990 ; Experimental and Clinical Endocrinology & Diabetes Volume 1990 ; 100 >
+   au < exists ; exists ; 1991 ; 1991 ; Experimental and Clinical Endocrinology & Diabetes Volume 1991 ; 101 >
+   au < exists ; exists ; 1992 ; 1992 ; Experimental and Clinical Endocrinology & Diabetes Volume 1992 ; 102 >
+   au < exists ; exists ; 1993 ; 1993 ; Experimental and Clinical Endocrinology & Diabetes Volume 1993 ; 103 >
+   au < exists ; exists ; 1994 ; 1994 ; Experimental and Clinical Endocrinology & Diabetes Volume 1994 ; 104 >
+   au < exists ; exists ; 1995 ; 1995 ; Experimental and Clinical Endocrinology & Diabetes Volume 1995 ; 105 >
+   au < exists ; exists ; 1996 ; 1996 ; Experimental and Clinical Endocrinology & Diabetes Volume 1996 ; 106 >
+   au < exists ; exists ; 1997 ; 1997 ; Experimental and Clinical Endocrinology & Diabetes Volume 1997 ; 105 >
+   au < exists ; exists ; 1998 ; 1998 ; Experimental and Clinical Endocrinology & Diabetes Volume 1998 ; 106 >
+   au < exists ; exists ; 1999 ; 1999 ; Experimental and Clinical Endocrinology & Diabetes Volume 1999 ; 107 >
+   au < exists ; exists ; 2000 ; 2000 ; Experimental and Clinical Endocrinology & Diabetes Volume 2000 ; 108 >
+   au < exists ; exists ; 2001 ; 2001 ; Experimental and Clinical Endocrinology & Diabetes Volume 2001 ; 109 >
+   au < exists ; exists ; 2002 ; 2002 ; Experimental and Clinical Endocrinology & Diabetes Volume 2002 ; 110 >
+   au < exists ; exists ; 2003 ; 2003 ; Experimental and Clinical Endocrinology & Diabetes Volume 2003 ; 111 >
+   au < exists ; exists ; 2004 ; 2004 ; Experimental and Clinical Endocrinology & Diabetes Volume 2004 ; 112 >
+   au < exists ; exists ; 2005 ; 2005 ; Experimental and Clinical Endocrinology & Diabetes Volume 2005 ; 113 >
+   au < exists ; exists ; 2006 ; 2006 ; Experimental and Clinical Endocrinology & Diabetes Volume 2006 ; 114 >
+   au < exists ; exists ; 2007 ; 2007 ; Experimental and Clinical Endocrinology & Diabetes Volume 2007 ; 115 >
+   au < exists ; exists ; 2008 ; 2008 ; Experimental and Clinical Endocrinology & Diabetes Volume 2008 ; 116 >
+   au < exists ; exists ; 2009 ; 2009 ; Experimental and Clinical Endocrinology & Diabetes Volume 2009 ; 117 >
+   au < exists ; exists ; 2010 ; 2010 ; Experimental and Clinical Endocrinology & Diabetes Volume 2010 ; 118 >
+   au < exists ; exists ; 2011 ; 2011 ; Experimental and Clinical Endocrinology & Diabetes Volume 2011 ; 119 >
+   au < exists ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
+   au < expected ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 121 >
+   au < expected ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 122 >
 
   }
 
@@ -1310,38 +1298,38 @@
     param[journal_id] = 10.1055/s-00000018
     comment[years] = 1983-current
 
-   au < exists ; exists ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Facial Plastic Surgery Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Facial Plastic Surgery Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Facial Plastic Surgery Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Facial Plastic Surgery Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Facial Plastic Surgery Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Facial Plastic Surgery Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Facial Plastic Surgery Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Facial Plastic Surgery Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Facial Plastic Surgery Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Facial Plastic Surgery Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Facial Plastic Surgery Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Facial Plastic Surgery Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Facial Plastic Surgery Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Facial Plastic Surgery Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Facial Plastic Surgery Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Facial Plastic Surgery Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Facial Plastic Surgery Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Facial Plastic Surgery Volume 2014 ; 0 >
+   au < exists ; exists ; 1983 ; 1983 ; Facial Plastic Surgery Volume 1983 ; 1 >
+   au < exists ; exists ; 1984 ; 1984 ; Facial Plastic Surgery Volume 1984 ; 1 >
+   au < exists ; exists ; 1985 ; 1985 ; Facial Plastic Surgery Volume 1985 ; 2 >
+   au < exists ; exists ; 1986 ; 1986 ; Facial Plastic Surgery Volume 1986 ; 2 >
+   au < exists ; exists ; 1987 ; 1987 ; Facial Plastic Surgery Volume 1987 ; 3 >
+   au < exists ; exists ; 1988 ; 1988 ; Facial Plastic Surgery Volume 1988 ; 4 >
+   au < exists ; exists ; 1989 ; 1989 ; Facial Plastic Surgery Volume 1989 ; 5 >
+   au < exists ; exists ; 1990 ; 1990 ; Facial Plastic Surgery Volume 1990 ; 6 >
+   au < exists ; exists ; 1991 ; 1991 ; Facial Plastic Surgery Volume 1991 ; 7 >
+   au < exists ; exists ; 1992 ; 1992 ; Facial Plastic Surgery Volume 1992 ; 8 >
+   au < exists ; exists ; 1993 ; 1993 ; Facial Plastic Surgery Volume 1993 ; 9 >
+   au < exists ; exists ; 1994 ; 1994 ; Facial Plastic Surgery Volume 1994 ; 10 >
+   au < exists ; exists ; 1995 ; 1995 ; Facial Plastic Surgery Volume 1995 ; 11 >
+   au < exists ; exists ; 1996 ; 1996 ; Facial Plastic Surgery Volume 1996 ; 12 >
+   au < exists ; exists ; 1997 ; 1997 ; Facial Plastic Surgery Volume 1997 ; 13 >
+   au < exists ; exists ; 1998 ; 1998 ; Facial Plastic Surgery Volume 1998 ; 14 >
+   au < exists ; exists ; 1999 ; 1999 ; Facial Plastic Surgery Volume 1999 ; 15 >
+   au < exists ; exists ; 2000 ; 2000 ; Facial Plastic Surgery Volume 2000 ; 16 >
+   au < exists ; exists ; 2001 ; 2001 ; Facial Plastic Surgery Volume 2001 ; 17 >
+   au < exists ; exists ; 2002 ; 2002 ; Facial Plastic Surgery Volume 2002 ; 18 >
+   au < exists ; exists ; 2003 ; 2003 ; Facial Plastic Surgery Volume 2003 ; 19 >
+   au < exists ; exists ; 2004 ; 2004 ; Facial Plastic Surgery Volume 2004 ; 20 >
+   au < exists ; exists ; 2005 ; 2005 ; Facial Plastic Surgery Volume 2005 ; 21 >
+   au < exists ; exists ; 2006 ; 2006 ; Facial Plastic Surgery Volume 2006 ; 22 >
+   au < exists ; exists ; 2007 ; 2007 ; Facial Plastic Surgery Volume 2007 ; 23 >
+   au < exists ; exists ; 2008 ; 2008 ; Facial Plastic Surgery Volume 2008 ; 24 >
+   au < exists ; exists ; 2009 ; 2009 ; Facial Plastic Surgery Volume 2009 ; 25 >
+   au < exists ; exists ; 2010 ; 2010 ; Facial Plastic Surgery Volume 2010 ; 26 >
+   au < exists ; exists ; 2011 ; 2011 ; Facial Plastic Surgery Volume 2011 ; 27 >
+   au < exists ; exists ; 2012 ; 2012 ; Facial Plastic Surgery Volume 2012 ; 28 >
+   au < expected ; exists ; 2013 ; 2013 ; Facial Plastic Surgery Volume 2013 ; 29 >
+   au < expected ; exists ; 2014 ; 2014 ; Facial Plastic Surgery Volume 2014 ; 28 >
 
   }
 
@@ -1356,14 +1344,14 @@
     param[journal_id] = 10.1055/s-00000148
     comment[years] = 2007-current
 
-   au < exists ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2014 ; 0 >
+   au < exists ; exists ; 2007 ; 2007 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2007 ; 14 >
+   au < exists ; exists ; 2008 ; 2008 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2008 ; 15 >
+   au < exists ; exists ; 2009 ; 2009 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2009 ; 16 >
+   au < exists ; exists ; 2010 ; 2010 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2010 ; 17 >
+   au < exists ; exists ; 2011 ; 2011 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2011 ; 18 >
+   au < exists ; exists ; 2012 ; 2012 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2012 ; 19 >
+   au < expected ; exists ; 2013 ; 2013 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2013 ; 20 >
+   au < expected ; exists ; 2014 ; 2014 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 2014 ; 21 >
 
 
   }
@@ -1379,41 +1367,41 @@
     param[journal_id] = 10.1055/s-00000019
     comment[years] = 1980-current
 
-   au < exists ; exists ; 1980 ; 1980 ; Fortschritte der Neurologie - Psychiatrie Volume 1980 ; 0 >
-   au < exists ; exists ; 1981 ; 1981 ; Fortschritte der Neurologie - Psychiatrie Volume 1981 ; 0 >
-   au < exists ; exists ; 1982 ; 1982 ; Fortschritte der Neurologie - Psychiatrie Volume 1982 ; 0 >
-   au < exists ; exists ; 1983 ; 1983 ; Fortschritte der Neurologie - Psychiatrie Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Fortschritte der Neurologie - Psychiatrie Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Fortschritte der Neurologie - Psychiatrie Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Fortschritte der Neurologie - Psychiatrie Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Fortschritte der Neurologie - Psychiatrie Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Fortschritte der Neurologie - Psychiatrie Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Fortschritte der Neurologie - Psychiatrie Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Fortschritte der Neurologie - Psychiatrie Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Fortschritte der Neurologie - Psychiatrie Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Fortschritte der Neurologie - Psychiatrie Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Fortschritte der Neurologie - Psychiatrie Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Fortschritte der Neurologie - Psychiatrie Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Fortschritte der Neurologie - Psychiatrie Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Fortschritte der Neurologie - Psychiatrie Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Fortschritte der Neurologie - Psychiatrie Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Fortschritte der Neurologie - Psychiatrie Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Fortschritte der Neurologie - Psychiatrie Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Fortschritte der Neurologie - Psychiatrie Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Fortschritte der Neurologie - Psychiatrie Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Fortschritte der Neurologie - Psychiatrie Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Fortschritte der Neurologie - Psychiatrie Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Fortschritte der Neurologie - Psychiatrie Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Fortschritte der Neurologie - Psychiatrie Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Fortschritte der Neurologie - Psychiatrie Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 0 >
+   au < exists ; exists ; 1980 ; 1980 ; Fortschritte der Neurologie - Psychiatrie Volume 1980 ; 48 >
+   au < exists ; exists ; 1981 ; 1981 ; Fortschritte der Neurologie - Psychiatrie Volume 1981 ; 49 >
+   au < exists ; exists ; 1982 ; 1982 ; Fortschritte der Neurologie - Psychiatrie Volume 1982 ; 50 >
+   au < exists ; exists ; 1983 ; 1983 ; Fortschritte der Neurologie - Psychiatrie Volume 1983 ; 51 >
+   au < exists ; exists ; 1984 ; 1984 ; Fortschritte der Neurologie - Psychiatrie Volume 1984 ; 52 >
+   au < exists ; exists ; 1985 ; 1985 ; Fortschritte der Neurologie - Psychiatrie Volume 1985 ; 53 >
+   au < exists ; exists ; 1986 ; 1986 ; Fortschritte der Neurologie - Psychiatrie Volume 1986 ; 54 >
+   au < exists ; exists ; 1987 ; 1987 ; Fortschritte der Neurologie - Psychiatrie Volume 1987 ; 55 >
+   au < exists ; exists ; 1988 ; 1988 ; Fortschritte der Neurologie - Psychiatrie Volume 1988 ; 56 >
+   au < exists ; exists ; 1989 ; 1989 ; Fortschritte der Neurologie - Psychiatrie Volume 1989 ; 57 >
+   au < exists ; exists ; 1990 ; 1990 ; Fortschritte der Neurologie - Psychiatrie Volume 1990 ; 58 >
+   au < exists ; exists ; 1991 ; 1991 ; Fortschritte der Neurologie - Psychiatrie Volume 1991 ; 59 >
+   au < exists ; exists ; 1992 ; 1992 ; Fortschritte der Neurologie - Psychiatrie Volume 1992 ; 60 >
+   au < exists ; exists ; 1993 ; 1993 ; Fortschritte der Neurologie - Psychiatrie Volume 1993 ; 61 >
+   au < exists ; exists ; 1994 ; 1994 ; Fortschritte der Neurologie - Psychiatrie Volume 1994 ; 62 >
+   au < exists ; exists ; 1995 ; 1995 ; Fortschritte der Neurologie - Psychiatrie Volume 1995 ; 63 >
+   au < exists ; exists ; 1996 ; 1996 ; Fortschritte der Neurologie - Psychiatrie Volume 1996 ; 64 >
+   au < exists ; exists ; 1997 ; 1997 ; Fortschritte der Neurologie - Psychiatrie Volume 1997 ; 65 >
+   au < exists ; exists ; 1998 ; 1998 ; Fortschritte der Neurologie - Psychiatrie Volume 1998 ; 66 >
+   au < exists ; exists ; 1999 ; 1999 ; Fortschritte der Neurologie - Psychiatrie Volume 1999 ; 67 >
+   au < exists ; exists ; 2000 ; 2000 ; Fortschritte der Neurologie - Psychiatrie Volume 2000 ; 68 >
+   au < exists ; exists ; 2001 ; 2001 ; Fortschritte der Neurologie - Psychiatrie Volume 2001 ; 69 >
+   au < exists ; exists ; 2002 ; 2002 ; Fortschritte der Neurologie - Psychiatrie Volume 2002 ; 70 >
+   au < exists ; exists ; 2003 ; 2003 ; Fortschritte der Neurologie - Psychiatrie Volume 2003 ; 71 >
+   au < exists ; exists ; 2004 ; 2004 ; Fortschritte der Neurologie - Psychiatrie Volume 2004 ; 72 >
+   au < exists ; exists ; 2005 ; 2005 ; Fortschritte der Neurologie - Psychiatrie Volume 2005 ; 73 >
+   au < exists ; exists ; 2006 ; 2006 ; Fortschritte der Neurologie - Psychiatrie Volume 2006 ; 74 >
+   au < exists ; exists ; 2007 ; 2007 ; Fortschritte der Neurologie - Psychiatrie Volume 2007 ; 75 >
+   au < exists ; exists ; 2008 ; 2008 ; Fortschritte der Neurologie - Psychiatrie Volume 2008 ; 76 >
+   au < exists ; exists ; 2009 ; 2009 ; Fortschritte der Neurologie - Psychiatrie Volume 2009 ; 77 >
+   au < exists ; exists ; 2010 ; 2010 ; Fortschritte der Neurologie - Psychiatrie Volume 2010 ; 78 >
+   au < exists ; exists ; 2011 ; 2011 ; Fortschritte der Neurologie - Psychiatrie Volume 2011 ; 79 >
+   au < exists ; exists ; 2012 ; 2012 ; Fortschritte der Neurologie - Psychiatrie Volume 2012 ; 80 >
+   au < expected ; exists ; 2013 ; 2013 ; Fortschritte der Neurologie - Psychiatrie Volume 2013 ; 81 >
+   au < expected ; exists ; 2014 ; 2014 ; Fortschritte der Neurologie - Psychiatrie Volume 2014 ; 82 >
 
   }
 
@@ -1428,14 +1416,14 @@
     param[journal_id] = 10.1055/s-00000142
     comment[years] = 2007-current
 
-   au < exists ; exists ; 2007 ; 2007 ; Frauenheilkunde up2date Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Frauenheilkunde up2date Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Frauenheilkunde up2date Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Frauenheilkunde up2date Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Frauenheilkunde up2date Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Frauenheilkunde up2date Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Frauenheilkunde up2date Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Frauenheilkunde up2date Volume 2014 ; 0 >
+   au < exists ; exists ; 2007 ; 2007 ; Frauenheilkunde up2date Volume 2007 ; 1 >
+   au < exists ; exists ; 2008 ; 2008 ; Frauenheilkunde up2date Volume 2008 ; 2 >
+   au < exists ; exists ; 2009 ; 2009 ; Frauenheilkunde up2date Volume 2009 ; 3 >
+   au < exists ; exists ; 2010 ; 2010 ; Frauenheilkunde up2date Volume 2010 ; 4 >
+   au < exists ; exists ; 2011 ; 2011 ; Frauenheilkunde up2date Volume 2011 ; 5 >
+   au < exists ; exists ; 2012 ; 2012 ; Frauenheilkunde up2date Volume 2012 ; 6 >
+   au < expected ; exists ; 2013 ; 2013 ; Frauenheilkunde up2date Volume 2013 ; 7 >
+   au < expected ; exists ; 2014 ; 2014 ; Frauenheilkunde up2date Volume 2014 ; 8 >
 
    }
 
@@ -1450,16 +1438,16 @@
     param[journal_id] = 10.1055/s-00000133
     comment[years] = 2005-current
 
-   au < exists ; exists ; 2005 ; 2005 ; Gastroenterologie up2dat Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Gastroenterologie up2dat Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 2014 ; 0 >
+   au < exists ; exists ; 2005 ; 2005 ; Gastroenterologie up2dat Volume 2005 ; 1 >
+   au < exists ; exists ; 2006 ; 2006 ; Gastroenterologie up2dat Volume 2006 ; 2 >
+   au < exists ; exists ; 2007 ; 2007 ; Gastroenterologie up2dat Volume 2007 ; 3 >
+   au < exists ; exists ; 2008 ; 2008 ; Gastroenterologie up2dat Volume 2008 ; 4 >
+   au < exists ; exists ; 2009 ; 2009 ; Gastroenterologie up2dat Volume 2009 ; 5 >
+   au < exists ; exists ; 2010 ; 2010 ; Gastroenterologie up2dat Volume 2010 ; 6 >
+   au < exists ; exists ; 2011 ; 2011 ; Gastroenterologie up2dat Volume 2011 ; 7 >
+   au < exists ; exists ; 2012 ; 2012 ; Gastroenterologie up2dat Volume 2012 ; 8 >
+   au < expected ; exists ; 2013 ; 2013 ; Gastroenterologie up2dat Volume 2013 ; 9 >
+   au < expected ; exists ; 2014 ; 2014 ; Gastroenterologie up2dat Volume 2014 ; 10 >
 
   }
 
@@ -1475,41 +1463,41 @@
     param[journal_id] = 10.1055/s-00000020
     comment[years] = 1980-current
 
-   au < exists ; exists ; 1980 ; 1980 ; Geburtshilfe und Frauenheilkunde Volume 1980 ; 0 >
-   au < exists ; exists ; 1981 ; 1981 ; Geburtshilfe und Frauenheilkunde Volume 1981 ; 0 >
-   au < exists ; exists ; 1982 ; 1982 ; Geburtshilfe und Frauenheilkunde Volume 1982 ; 0 >
-   au < exists ; exists ; 1983 ; 1983 ; Geburtshilfe und Frauenheilkunde Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Geburtshilfe und Frauenheilkunde Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Geburtshilfe und Frauenheilkunde Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Geburtshilfe und Frauenheilkunde Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Geburtshilfe und Frauenheilkunde Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Geburtshilfe und Frauenheilkunde Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Geburtshilfe und Frauenheilkunde Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Geburtshilfe und Frauenheilkunde Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Geburtshilfe und Frauenheilkunde Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Geburtshilfe und Frauenheilkunde Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Geburtshilfe und Frauenheilkunde Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Geburtshilfe und Frauenheilkunde Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Geburtshilfe und Frauenheilkunde Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Geburtshilfe und Frauenheilkunde Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Geburtshilfe und Frauenheilkunde Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Geburtshilfe und Frauenheilkunde Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Geburtshilfe und Frauenheilkunde Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Geburtshilfe und Frauenheilkunde Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Geburtshilfe und Frauenheilkunde Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Geburtshilfe und Frauenheilkunde Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Geburtshilfe und Frauenheilkunde Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Geburtshilfe und Frauenheilkunde Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Geburtshilfe und Frauenheilkunde Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Geburtshilfe und Frauenheilkunde Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Geburtshilfe und Frauenheilkunde Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Geburtshilfe und Frauenheilkunde Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Geburtshilfe und Frauenheilkunde Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Geburtshilfe und Frauenheilkunde Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Geburtshilfe und Frauenheilkunde Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Geburtshilfe und Frauenheilkunde Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 0 >
+   au < exists ; exists ; 1980 ; 1980 ; Geburtshilfe und Frauenheilkunde Volume 1980 ; 40 >
+   au < exists ; exists ; 1981 ; 1981 ; Geburtshilfe und Frauenheilkunde Volume 1981 ; 41 >
+   au < exists ; exists ; 1982 ; 1982 ; Geburtshilfe und Frauenheilkunde Volume 1982 ; 42 >
+   au < exists ; exists ; 1983 ; 1983 ; Geburtshilfe und Frauenheilkunde Volume 1983 ; 43 >
+   au < exists ; exists ; 1984 ; 1984 ; Geburtshilfe und Frauenheilkunde Volume 1984 ; 44 >
+   au < exists ; exists ; 1985 ; 1985 ; Geburtshilfe und Frauenheilkunde Volume 1985 ; 45 >
+   au < exists ; exists ; 1986 ; 1986 ; Geburtshilfe und Frauenheilkunde Volume 1986 ; 46 >
+   au < exists ; exists ; 1987 ; 1987 ; Geburtshilfe und Frauenheilkunde Volume 1987 ; 47 >
+   au < exists ; exists ; 1988 ; 1988 ; Geburtshilfe und Frauenheilkunde Volume 1988 ; 48 >
+   au < exists ; exists ; 1989 ; 1989 ; Geburtshilfe und Frauenheilkunde Volume 1989 ; 49 >
+   au < exists ; exists ; 1990 ; 1990 ; Geburtshilfe und Frauenheilkunde Volume 1990 ; 50 >
+   au < exists ; exists ; 1991 ; 1991 ; Geburtshilfe und Frauenheilkunde Volume 1991 ; 51 >
+   au < exists ; exists ; 1992 ; 1992 ; Geburtshilfe und Frauenheilkunde Volume 1992 ; 52 >
+   au < exists ; exists ; 1993 ; 1993 ; Geburtshilfe und Frauenheilkunde Volume 1993 ; 53 >
+   au < exists ; exists ; 1994 ; 1994 ; Geburtshilfe und Frauenheilkunde Volume 1994 ; 54 >
+   au < exists ; exists ; 1995 ; 1995 ; Geburtshilfe und Frauenheilkunde Volume 1995 ; 55 >
+   au < exists ; exists ; 1996 ; 1996 ; Geburtshilfe und Frauenheilkunde Volume 1996 ; 56 >
+   au < exists ; exists ; 1997 ; 1997 ; Geburtshilfe und Frauenheilkunde Volume 1997 ; 57 >
+   au < exists ; exists ; 1998 ; 1998 ; Geburtshilfe und Frauenheilkunde Volume 1998 ; 58 >
+   au < exists ; exists ; 1999 ; 1999 ; Geburtshilfe und Frauenheilkunde Volume 1999 ; 59 >
+   au < exists ; exists ; 2000 ; 2000 ; Geburtshilfe und Frauenheilkunde Volume 2000 ; 60 >
+   au < exists ; exists ; 2001 ; 2001 ; Geburtshilfe und Frauenheilkunde Volume 2001 ; 61 >
+   au < exists ; exists ; 2002 ; 2002 ; Geburtshilfe und Frauenheilkunde Volume 2002 ; 62 >
+   au < exists ; exists ; 2003 ; 2003 ; Geburtshilfe und Frauenheilkunde Volume 2003 ; 63 >
+   au < exists ; exists ; 2004 ; 2004 ; Geburtshilfe und Frauenheilkunde Volume 2004 ; 64 >
+   au < exists ; exists ; 2005 ; 2005 ; Geburtshilfe und Frauenheilkunde Volume 2005 ; 65 >
+   au < exists ; exists ; 2006 ; 2006 ; Geburtshilfe und Frauenheilkunde Volume 2006 ; 66 >
+   au < exists ; exists ; 2007 ; 2007 ; Geburtshilfe und Frauenheilkunde Volume 2007 ; 67 >
+   au < exists ; exists ; 2008 ; 2008 ; Geburtshilfe und Frauenheilkunde Volume 2008 ; 68 >
+   au < exists ; exists ; 2009 ; 2009 ; Geburtshilfe und Frauenheilkunde Volume 2009 ; 69 >
+   au < exists ; exists ; 2010 ; 2010 ; Geburtshilfe und Frauenheilkunde Volume 2010 ; 70 >
+   au < exists ; exists ; 2011 ; 2011 ; Geburtshilfe und Frauenheilkunde Volume 2011 ; 71 >
+   au < exists ; exists ; 2012 ; 2012 ; Geburtshilfe und Frauenheilkunde Volume 2012 ; 72 >
+   au < expected ; exists ; 2013 ; 2013 ; Geburtshilfe und Frauenheilkunde Volume 2013 ; 73 >
+   au < expected ; exists ; 2014 ; 2014 ; Geburtshilfe und Frauenheilkunde Volume 2014 ; 74 >
 
   }
 
@@ -1524,20 +1512,20 @@
     param[journal_id] = 10.1055/s-00000021
     comment[years] = 2001-current
 
-   au < exists ; exists ; 2001 ; 2001 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2014 ; 0 >
+   au < exists ; exists ; 2001 ; 2001 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2001 ; 6 >
+   au < exists ; exists ; 2002 ; 2002 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2002 ; 7 >
+   au < exists ; exists ; 2003 ; 2003 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2003 ; 8 >
+   au < exists ; exists ; 2004 ; 2004 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2004 ; 9 >
+   au < exists ; exists ; 2005 ; 2005 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2005 ; 10 >
+   au < exists ; exists ; 2006 ; 2006 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2006 ; 11 >
+   au < exists ; exists ; 2007 ; 2007 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2007 ; 12 >
+   au < exists ; exists ; 2008 ; 2008 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2008 ; 13 >
+   au < exists ; exists ; 2009 ; 2009 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2009 ; 14 >
+   au < exists ; exists ; 2010 ; 2010 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2010 ; 15 >
+   au < exists ; exists ; 2011 ; 2011 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2011 ; 16 >
+   au < exists ; exists ; 2012 ; 2012 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2012 ; 17 >
+   au < expected ; exists ; 2013 ; 2013 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2013 ; 18 >
+   au < expected ; exists ; 2014 ; 2014 ; Gesundheitsökonomie & Qualitätsmanagement Volume 2014 ; 19 >
 
   }
 
@@ -1552,21 +1540,21 @@
     param[journal_id] = 10.1055/s-00000022
     comment[years] = 2000-current
 
-   au < exists ; exists ; 2000 ; 2000 ; Gesundheitswesen Das Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Gesundheitswesen Das Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Gesundheitswesen Das Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Gesundheitswesen Das Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Gesundheitswesen Das Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Gesundheitswesen Das Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Gesundheitswesen Das Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Gesundheitswesen Das Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Gesundheitswesen Das Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Gesundheitswesen Das Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Gesundheitswesen Das Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Gesundheitswesen Das Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Gesundheitswesen Das Volume 2014 ; 0 >
+   au < exists ; exists ; 2000 ; 2000 ; Gesundheitswesen Das Volume 2000 ; 64 >
+   au < exists ; exists ; 2001 ; 2001 ; Gesundheitswesen Das Volume 2001 ; 65 >
+   au < exists ; exists ; 2002 ; 2002 ; Gesundheitswesen Das Volume 2002 ; 66 >
+   au < exists ; exists ; 2003 ; 2003 ; Gesundheitswesen Das Volume 2003 ; 67 >
+   au < exists ; exists ; 2004 ; 2004 ; Gesundheitswesen Das Volume 2004 ; 68 >
+   au < exists ; exists ; 2005 ; 2005 ; Gesundheitswesen Das Volume 2005 ; 69 >
+   au < exists ; exists ; 2006 ; 2006 ; Gesundheitswesen Das Volume 2006 ; 70 >
+   au < exists ; exists ; 2007 ; 2007 ; Gesundheitswesen Das Volume 2007 ; 71 >
+   au < exists ; exists ; 2008 ; 2008 ; Gesundheitswesen Das Volume 2008 ; 72 >
+   au < exists ; exists ; 2009 ; 2009 ; Gesundheitswesen Das Volume 2009 ; 73 >
+   au < exists ; exists ; 2010 ; 2010 ; Gesundheitswesen Das Volume 2010 ; 74 >
+   au < exists ; exists ; 2011 ; 2011 ; Gesundheitswesen Das Volume 2011 ; 75 >
+   au < exists ; exists ; 2012 ; 2012 ; Gesundheitswesen Das Volume 2012 ; 76 >
+   au < expected ; exists ; 2013 ; 2013 ; Gesundheitswesen Das Volume 2013 ; 75 >
+   au < expected ; exists ; 2014 ; 2014 ; Gesundheitswesen Das Volume 2014 ; 76 >
 
   }
 
@@ -1582,10 +1570,10 @@
     param[journal_id] = 10.1055/s-00000177
     comment[years] = 2011-current
 
-   au < exists ; exists ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 0 >
+   au < exists ; exists ; 2011 ; 2011 ; Global Spine Journal Volume 2011 ; 1 >
+   au < exists ; exists ; 2012 ; 2012 ; Global Spine Journal Volume 2012 ; 2 >
+   au < expected ; exists ; 2013 ; 2013 ; Global Spine Journal Volume 2013 ; 3 >
+   au < expected ; exists ; 2014 ; 2014 ; Global Spine Journal Volume 2014 ; 4 >
 
   }
 
@@ -1600,22 +1588,22 @@
     param[journal_id] = 10.1055/s-00000023
     comment[years] = 1999-current
 
-   au < exists ; exists ; 1999 ; 1999 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2014 ; 0 >
+   au < exists ; exists ; 1999 ; 1999 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 1999 ; 31 >
+   au < exists ; exists ; 2000 ; 2000 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2000 ; 32 >
+   au < exists ; exists ; 2001 ; 2001 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2001 ; 33 >
+   au < exists ; exists ; 2002 ; 2002 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2002 ; 34 >
+   au < exists ; exists ; 2003 ; 2003 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2003 ; 35 >
+   au < exists ; exists ; 2004 ; 2004 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2004 ; 36 >
+   au < exists ; exists ; 2005 ; 2005 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2005 ; 37 >
+   au < exists ; exists ; 2006 ; 2006 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2006 ; 38 >
+   au < exists ; exists ; 2007 ; 2007 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2007 ; 39 >
+   au < exists ; exists ; 2008 ; 2008 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2008 ; 40 >
+   au < exists ; exists ; 2009 ; 2009 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2009 ; 41 >
+   au < exists ; exists ; 2010 ; 2010 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2010 ; 42 >
+   au < exists ; exists ; 2011 ; 2011 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2011 ; 43 >
+   au < exists ; exists ; 2012 ; 2012 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2012 ; 44 >
+   au < expected ; exists ; 2013 ; 2013 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2013 ; 45 >
+   au < expected ; exists ; 2014 ; 2014 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 2014 ; 46 >
 
   }
 
@@ -1630,17 +1618,17 @@
     param[journal_id] = 10.1055/s-00000024
     comment[years] = 2004-current
 
-   au < exists ; exists ; 2004 ; 2004 ; Hebamme Die Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Hebamme Die Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Hebamme Die Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Hebamme Die Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Hebamme Die Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Hebamme Die Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Hebamme Die Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Hebamme Die Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Hebamme Die Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Hebamme Die Volume 2014 ; 0 >
+   au < exists ; exists ; 2004 ; 2004 ; Hebamme Die Volume 2004 ; 17 >
+   au < exists ; exists ; 2005 ; 2005 ; Hebamme Die Volume 2005 ; 18 >
+   au < exists ; exists ; 2006 ; 2006 ; Hebamme Die Volume 2006 ; 19 >
+   au < exists ; exists ; 2007 ; 2007 ; Hebamme Die Volume 2007 ; 20 >
+   au < exists ; exists ; 2008 ; 2008 ; Hebamme Die Volume 2008 ; 21 >
+   au < exists ; exists ; 2009 ; 2009 ; Hebamme Die Volume 2009 ; 22 >
+   au < exists ; exists ; 2010 ; 2010 ; Hebamme Die Volume 2010 ; 23 >
+   au < exists ; exists ; 2011 ; 2011 ; Hebamme Die Volume 2011 ; 24 >
+   au < exists ; exists ; 2012 ; 2012 ; Hebamme Die Volume 2012 ; 25 >
+   au < expected ; exists ; 2013 ; 2013 ; Hebamme Die Volume 2013 ; 26 >
+   au < expected ; exists ; 2014 ; 2014 ; Hebamme Die Volume 2014 ; 27 >
 
   }
 
@@ -1655,7 +1643,7 @@
     param[journal_id] = 10.1055/s-00000130
     comment[years] = 2005 inclusive
 
-   au < exists ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 0 >
+   au < exists ; exists ; 2005 ; 2005 ; HNO-Informationen Volume 2005 ; 84 >
 
   }
 
@@ -1670,16 +1658,16 @@
     param[journal_id] = 10.1055/s-00000127
     comment[years] = 2005-current
 
-   au < exists ; exists ; 2005 ; 2005 ; Homoeopathic Links Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Homoeopathic Links Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Homoeopathic Links Volume 2014 ; 0 >
+   au < exists ; exists ; 2005 ; 2005 ; Homoeopathic Links Volume 2005 ; 18 >
+   au < exists ; exists ; 2006 ; 2006 ; Homoeopathic Links Volume 2006 ; 19 >
+   au < exists ; exists ; 2007 ; 2007 ; Homoeopathic Links Volume 2007 ; 20 >
+   au < exists ; exists ; 2008 ; 2008 ; Homoeopathic Links Volume 2008 ; 21 >
+   au < exists ; exists ; 2009 ; 2009 ; Homoeopathic Links Volume 2009 ; 22 >
+   au < exists ; exists ; 2010 ; 2010 ; Homoeopathic Links Volume 2010 ; 23 >
+   au < exists ; exists ; 2011 ; 2011 ; Homoeopathic Links Volume 2011 ; 24 >
+   au < exists ; exists ; 2012 ; 2012 ; Homoeopathic Links Volume 2012 ; 25 >
+   au < expected ; exists ; 2013 ; 2013 ; Homoeopathic Links Volume 2013 ; 26 >
+   au < expected ; exists ; 2014 ; 2014 ; Homoeopathic Links Volume 2014 ; 27 >
 
   }
 
@@ -1695,52 +1683,52 @@
     param[journal_id] = 10.1055/s-00000025
     comment[years] = 1969
 
-   au < exists ; exists ; 1969 ; 1969 ; Hormone and Metabolic Research Volume 1969 ; 0 >
-   au < exists ; exists ; 1970 ; 1970 ; Hormone and Metabolic Research Volume 1970 ; 0 >
-   au < exists ; exists ; 1971 ; 1971 ; Hormone and Metabolic Research Volume 1971 ; 0 >
-   au < exists ; exists ; 1972 ; 1972 ; Hormone and Metabolic Research Volume 1972 ; 0 >
-   au < exists ; exists ; 1973 ; 1973 ; Hormone and Metabolic Research Volume 1973 ; 0 >
-   au < exists ; exists ; 1974 ; 1974 ; Hormone and Metabolic Research Volume 1974 ; 0 >
-   au < exists ; exists ; 1975 ; 1975 ; Hormone and Metabolic Research Volume 1975 ; 0 >
-   au < exists ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 1976 ; 0 >
-   au < exists ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 1977 ; 0 >
-   au < exists ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 1978 ; 0 >
-   au < exists ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 1979 ; 0 >
-   au < exists ; exists ; 1980 ; 1980 ; Hormone and Metabolic Research Volume 1980 ; 0 >
-   au < exists ; exists ; 1981 ; 1981 ; Hormone and Metabolic Research Volume 1981 ; 0 >
-   au < exists ; exists ; 1982 ; 1982 ; Hormone and Metabolic Research Volume 1982 ; 0 >
-   au < exists ; exists ; 1983 ; 1983 ; Hormone and Metabolic Research Volume 1983 ; 0 >
-   au < exists ; exists ; 1984 ; 1984 ; Hormone and Metabolic Research Volume 1984 ; 0 >
-   au < exists ; exists ; 1985 ; 1985 ; Hormone and Metabolic Research Volume 1985 ; 0 >
-   au < exists ; exists ; 1986 ; 1986 ; Hormone and Metabolic Research Volume 1986 ; 0 >
-   au < exists ; exists ; 1987 ; 1987 ; Hormone and Metabolic Research Volume 1987 ; 0 >
-   au < exists ; exists ; 1988 ; 1988 ; Hormone and Metabolic Research Volume 1988 ; 0 >
-   au < exists ; exists ; 1989 ; 1989 ; Hormone and Metabolic Research Volume 1989 ; 0 >
-   au < exists ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 1990 ; 0 >
-   au < exists ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 1991 ; 0 >
-   au < exists ; exists ; 1992 ; 1992 ; Hormone and Metabolic Research Volume 1992 ; 0 >
-   au < exists ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 1993 ; 0 >
-   au < exists ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 1994 ; 0 >
-   au < exists ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 1995 ; 0 >
-   au < exists ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 1996 ; 0 >
-   au < exists ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 1997 ; 0 >
-   au < exists ; exists ; 1998 ; 1998 ; Hormone and Metabolic Research Volume 1998 ; 0 >
-   au < exists ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 1999 ; 0 >
-   au < exists ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Hormone and Metabolic Research Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Hormone and Metabolic Research Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Hormone and Metabolic Research Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Hormone and Metabolic Research Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Hormone and Metabolic Research Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Hormone and Metabolic Research Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Hormone and Metabolic Research Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Hormone and Metabolic Research Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Hormone and Metabolic Research Volume 2014 ; 0 >
+   au < exists ; exists ; 1969 ; 1969 ; Hormone and Metabolic Research Volume 1969 ; 1 >
+   au < exists ; exists ; 1970 ; 1970 ; Hormone and Metabolic Research Volume 1970 ; 2 >
+   au < exists ; exists ; 1971 ; 1971 ; Hormone and Metabolic Research Volume 1971 ; 3 >
+   au < exists ; exists ; 1972 ; 1972 ; Hormone and Metabolic Research Volume 1972 ; 4 >
+   au < exists ; exists ; 1973 ; 1973 ; Hormone and Metabolic Research Volume 1973 ; 5 >
+   au < exists ; exists ; 1974 ; 1974 ; Hormone and Metabolic Research Volume 1974 ; 6 >
+   au < exists ; exists ; 1975 ; 1975 ; Hormone and Metabolic Research Volume 1975 ; 7 >
+   au < exists ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 1976 ; 8 >
+   au < exists ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 1977 ; 9 >
+   au < exists ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 1978 ; 10 >
+   au < exists ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 1979 ; 11 >
+   au < exists ; exists ; 1980 ; 1980 ; Hormone and Metabolic Research Volume 1980 ; 12 >
+   au < exists ; exists ; 1981 ; 1981 ; Hormone and Metabolic Research Volume 1981 ; 13 >
+   au < exists ; exists ; 1982 ; 1982 ; Hormone and Metabolic Research Volume 1982 ; 14 >
+   au < exists ; exists ; 1983 ; 1983 ; Hormone and Metabolic Research Volume 1983 ; 15 >
+   au < exists ; exists ; 1984 ; 1984 ; Hormone and Metabolic Research Volume 1984 ; 16 >
+   au < exists ; exists ; 1985 ; 1985 ; Hormone and Metabolic Research Volume 1985 ; 17 >
+   au < exists ; exists ; 1986 ; 1986 ; Hormone and Metabolic Research Volume 1986 ; 18 >
+   au < exists ; exists ; 1987 ; 1987 ; Hormone and Metabolic Research Volume 1987 ; 19 >
+   au < exists ; exists ; 1988 ; 1988 ; Hormone and Metabolic Research Volume 1988 ; 20 >
+   au < exists ; exists ; 1989 ; 1989 ; Hormone and Metabolic Research Volume 1989 ; 21 >
+   au < exists ; exists ; 1990 ; 1990 ; Hormone and Metabolic Research Volume 1990 ; 22 >
+   au < exists ; exists ; 1991 ; 1991 ; Hormone and Metabolic Research Volume 1991 ; 23 >
+   au < exists ; exists ; 1992 ; 1992 ; Hormone and Metabolic Research Volume 1992 ; 24 >
+   au < exists ; exists ; 1993 ; 1993 ; Hormone and Metabolic Research Volume 1993 ; 25 >
+   au < exists ; exists ; 1994 ; 1994 ; Hormone and Metabolic Research Volume 1994 ; 26 >
+   au < exists ; exists ; 1995 ; 1995 ; Hormone and Metabolic Research Volume 1995 ; 27 >
+   au < exists ; exists ; 1996 ; 1996 ; Hormone and Metabolic Research Volume 1996 ; 28 >
+   au < exists ; exists ; 1997 ; 1997 ; Hormone and Metabolic Research Volume 1997 ; 29 >
+   au < exists ; exists ; 1998 ; 1998 ; Hormone and Metabolic Research Volume 1998 ; 30 >
+   au < exists ; exists ; 1999 ; 1999 ; Hormone and Metabolic Research Volume 1999 ; 31 >
+   au < exists ; exists ; 2000 ; 2000 ; Hormone and Metabolic Research Volume 2000 ; 32 >
+   au < exists ; exists ; 2001 ; 2001 ; Hormone and Metabolic Research Volume 2001 ; 33 >
+   au < exists ; exists ; 2002 ; 2002 ; Hormone and Metabolic Research Volume 2002 ; 34 >
+   au < exists ; exists ; 2003 ; 2003 ; Hormone and Metabolic Research Volume 2003 ; 35 >
+   au < exists ; exists ; 2004 ; 2004 ; Hormone and Metabolic Research Volume 2004 ; 36 >
+   au < exists ; exists ; 2005 ; 2005 ; Hormone and Metabolic Research Volume 2005 ; 37 >
+   au < exists ; exists ; 2006 ; 2006 ; Hormone and Metabolic Research Volume 2006 ; 38 >
+   au < exists ; exists ; 2007 ; 2007 ; Hormone and Metabolic Research Volume 2007 ; 39 >
+   au < exists ; exists ; 2008 ; 2008 ; Hormone and Metabolic Research Volume 2008 ; 40 >
+   au < exists ; exists ; 2009 ; 2009 ; Hormone and Metabolic Research Volume 2009 ; 41 >
+   au < exists ; exists ; 2010 ; 2010 ; Hormone and Metabolic Research Volume 2010 ; 42 >
+   au < exists ; exists ; 2011 ; 2011 ; Hormone and Metabolic Research Volume 2011 ; 43 >
+   au < exists ; exists ; 2012 ; 2012 ; Hormone and Metabolic Research Volume 2012 ; 44 >
+   au < expected ; exists ; 2013 ; 2013 ; Hormone and Metabolic Research Volume 2013 ; 45 >
+   au < expected ; exists ; 2014 ; 2014 ; Hormone and Metabolic Research Volume 2014 ; 46 >
 
   }
 
@@ -1755,10 +1743,10 @@
     param[journal_id] = 10.1055/s-00000166
     comment[years] = 2011-current
 
-   au < exists ; exists ; 2011 ; 2011 ; Im OP Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Im OP Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Im OP Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Im OP Volume 2014 ; 0 >
+   au < exists ; exists ; 2011 ; 2011 ; Im OP Volume 2011 ; 1  >
+   au < exists ; exists ; 2012 ; 2012 ; Im OP Volume 2012 ; 2 >
+   au < expected ; exists ; 2013 ; 2013 ; Im OP Volume 2013 ; 3 >
+   au < expected ; exists ; 2014 ; 2014 ; Im OP Volume 2014 ; 4 >
 
   }
 
@@ -1773,21 +1761,21 @@
     param[journal_id] = 10.1055/s-00000026
     comment[years] =  2000-current
 
-   au < exists ; exists ; 2000 ; 2000 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2000 ; 0 >
-   au < exists ; exists ; 2001 ; 2001 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2001 ; 0 >
-   au < exists ; exists ; 2002 ; 2002 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2002 ; 0 >
-   au < exists ; exists ; 2003 ; 2003 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2003 ; 0 >
-   au < exists ; exists ; 2004 ; 2004 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2004 ; 0 >
-   au < exists ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2005 ; 0 >
-   au < exists ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2006 ; 0 >
-   au < exists ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2007 ; 0 >
-   au < exists ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2008 ; 0 >
-   au < exists ; exists ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2009 ; 0 >
-   au < exists ; exists ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2010 ; 0 >
-   au < exists ; exists ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2011 ; 0 >
-   au < exists ; exists ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 0 >
+   au < exists ; exists ; 2000 ; 2000 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2000 ; 32 >
+   au < exists ; exists ; 2001 ; 2001 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2001 ; 33 >
+   au < exists ; exists ; 2002 ; 2002 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2002 ; 34 >
+   au < exists ; exists ; 2003 ; 2003 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2003 ; 35 >
+   au < exists ; exists ; 2004 ; 2004 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2004 ; 36 >
+   au < exists ; exists ; 2005 ; 2005 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2005 ; 37 >
+   au < exists ; exists ; 2006 ; 2006 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2006 ; 38 >
+   au < exists ; exists ; 2007 ; 2007 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2007 ; 39 >
+   au < exists ; exists ; 2008 ; 2008 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2008 ; 40 >
+   au < exists ; exists ; 2009 ; 2009 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2009 ; 41 >
+   au < exists ; exists ; 2010 ; 2010 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2010 ; 42 >
+   au < exists ; exists ; 2011 ; 2011 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2011 ; 43 >
+   au < exists ; exists ; 2012 ; 2012 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2012 ; 44 >
+   au < expected ; exists ; 2013 ; 2013 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2013 ; 45 >
+   au < expected ; exists ; 2014 ; 2014 ; Informationen aus Orthodontie & Kieferorthopädie Volume 2014 ; 46 >
 
   }
 
@@ -1803,20 +1791,20 @@
     comment[years] = 2001-2012
 
 
-    au < exists ; exists ; 2001 ; 2001 ; intensiv Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; intensiv Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; intensiv Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; intensiv Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; intensiv Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; intensiv Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; intensiv Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; intensiv Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; intensiv Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; intensiv Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; intensiv Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; intensiv Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; intensiv Volume 2014 ; 0 >
+    au < exists ; exists ; 2001 ; 2001 ; intensiv Volume 2001 ; 9 >
+    au < exists ; exists ; 2002 ; 2002 ; intensiv Volume 2002 ; 10 >
+    au < exists ; exists ; 2003 ; 2003 ; intensiv Volume 2003 ; 11 >
+    au < exists ; exists ; 2004 ; 2004 ; intensiv Volume 2004 ; 12 >
+    au < exists ; exists ; 2005 ; 2005 ; intensiv Volume 2005 ; 13 >
+    au < exists ; exists ; 2006 ; 2006 ; intensiv Volume 2006 ; 14 >
+    au < exists ; exists ; 2007 ; 2007 ; intensiv Volume 2007 ; 15 >
+    au < exists ; exists ; 2008 ; 2008 ; intensiv Volume 2008 ; 16 >
+    au < exists ; exists ; 2009 ; 2009 ; intensiv Volume 2009 ; 17 >
+    au < exists ; exists ; 2010 ; 2010 ; intensiv Volume 2010 ; 18 >
+    au < exists ; exists ; 2011 ; 2011 ; intensiv Volume 2011 ; 19 >
+    au < exists ; exists ; 2012 ; 2012 ; intensiv Volume 2012 ; 20 >
+    au < expected ; exists ; 2013 ; 2013 ; intensiv Volume 2013 ; 21 >
+    au < expected ; exists ; 2014 ; 2014 ; intensiv Volume 2014 ; 22 >
 
   }
 
@@ -1831,16 +1819,16 @@
     param[journal_id] = 10.1055/s-00000126
     comment[years] = 2005-current
 
-    au < exists ; exists ; 2005 ; 2005 ; Intensivmedizin up2date Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Intensivmedizin up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Intensivmedizin up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Intensivmedizin up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Intensivmedizin up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Intensivmedizin up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Intensivmedizin up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Intensivmedizin up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Intensivmedizin up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2005 ; 2005 ; Intensivmedizin up2date Volume 2005 ; 1 >
+    au < exists ; exists ; 2006 ; 2006 ; Intensivmedizin up2date Volume 2006 ; 2 >
+    au < exists ; exists ; 2007 ; 2007 ; Intensivmedizin up2date Volume 2007 ; 3 >
+    au < exists ; exists ; 2008 ; 2008 ; Intensivmedizin up2date Volume 2008 ; 4 >
+    au < exists ; exists ; 2009 ; 2009 ; Intensivmedizin up2date Volume 2009 ; 5 >
+    au < exists ; exists ; 2010 ; 2010 ; Intensivmedizin up2date Volume 2010 ; 6 >
+    au < exists ; exists ; 2011 ; 2011 ; Intensivmedizin up2date Volume 2011 ; 7 >
+    au < exists ; exists ; 2012 ; 2012 ; Intensivmedizin up2date Volume 2012 ; 8 >
+    au < expected ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 9 >
+    au < expected ; exists ; 2014 ; 2014 ; Intensivmedizin up2date Volume 2014 ; 10 >
 
   }
 
@@ -1856,29 +1844,29 @@
     param[journal_id] = 10.1055/s-00000167
     comment[years] = 1992-current
 
-    au < exists ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; International Journal of Angiology Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; International Journal of Angiology Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; International Journal of Angiology Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; International Journal of Angiology Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; International Journal of Angiology Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; International Journal of Angiology Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; International Journal of Angiology Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; International Journal of Angiology Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; International Journal of Angiology Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; International Journal of Angiology Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; International Journal of Angiology Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 0 >
+    au < exists ; exists ; 1992 ; 1992 ; International Journal of Angiology Volume 1992 ; 1 >
+    au < exists ; exists ; 1993 ; 1993 ; International Journal of Angiology Volume 1993 ; 2 >
+    au < exists ; exists ; 1994 ; 1994 ; International Journal of Angiology Volume 1994 ; 3 >
+    au < exists ; exists ; 1995 ; 1995 ; International Journal of Angiology Volume 1995 ; 4 >
+    au < exists ; exists ; 1996 ; 1996 ; International Journal of Angiology Volume 1996 ; 5 >
+    au < exists ; exists ; 1997 ; 1997 ; International Journal of Angiology Volume 1997 ; 6 >
+    au < exists ; exists ; 1998 ; 1998 ; International Journal of Angiology Volume 1998 ; 7 >
+    au < exists ; exists ; 1999 ; 1999 ; International Journal of Angiology Volume 1999 ; 8 >
+    au < exists ; exists ; 2000 ; 2000 ; International Journal of Angiology Volume 2000 ; 9 >
+    au < exists ; exists ; 2001 ; 2001 ; International Journal of Angiology Volume 2001 ; 10 >
+    au < exists ; exists ; 2002 ; 2002 ; International Journal of Angiology Volume 2002 ; 11 >
+    au < exists ; exists ; 2003 ; 2003 ; International Journal of Angiology Volume 2003 ; 12 >
+    au < exists ; exists ; 2004 ; 2004 ; International Journal of Angiology Volume 2004 ; 13 >
+    au < exists ; exists ; 2005 ; 2005 ; International Journal of Angiology Volume 2005 ; 14 >
+    au < exists ; exists ; 2006 ; 2006 ; International Journal of Angiology Volume 2006 ; 15 >
+    au < exists ; exists ; 2007 ; 2007 ; International Journal of Angiology Volume 2007 ; 16 >
+    au < exists ; exists ; 2008 ; 2008 ; International Journal of Angiology Volume 2008 ; 17 >
+    au < exists ; exists ; 2009 ; 2009 ; International Journal of Angiology Volume 2009 ; 18 >
+    au < exists ; exists ; 2010 ; 2010 ; International Journal of Angiology Volume 2010 ; 19 >
+    au < exists ; exists ; 2011 ; 2011 ; International Journal of Angiology Volume 2011 ; 20 >
+    au < exists ; exists ; 2012 ; 2012 ; International Journal of Angiology Volume 2012 ; 21 >
+    au < expected ; exists ; 2013 ; 2013 ; International Journal of Angiology Volume 2013 ; 22 >
+    au < expected ; exists ; 2014 ; 2014 ; International Journal of Angiology Volume 2014 ; 23 >
 
   }
 
@@ -1894,41 +1882,41 @@
     param[journal_id] = 10.1055/s-00000028
     comment[years] = 1980-current
 
-    au < exists ; exists ; 1980 ; 1980 ; International Journal of Sports Medicine Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; International Journal of Sports Medicine Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; International Journal of Sports Medicine Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; International Journal of Sports Medicine Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; International Journal of Sports Medicine Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; International Journal of Sports Medicine Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; International Journal of Sports Medicine Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; International Journal of Sports Medicine Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; International Journal of Sports Medicine Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; International Journal of Sports Medicine Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; International Journal of Sports Medicine Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; International Journal of Sports Medicine Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; International Journal of Sports Medicine Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; International Journal of Sports Medicine Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; International Journal of Sports Medicine Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; International Journal of Sports Medicine Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; International Journal of Sports Medicine Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; International Journal of Sports Medicine Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; International Journal of Sports Medicine Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; International Journal of Sports Medicine Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; International Journal of Sports Medicine Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; International Journal of Sports Medicine Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; International Journal of Sports Medicine Volume 1980 ; 1 >
+    au < exists ; exists ; 1981 ; 1981 ; International Journal of Sports Medicine Volume 1981 ; 2 >
+    au < exists ; exists ; 1982 ; 1982 ; International Journal of Sports Medicine Volume 1982 ; 3 >
+    au < exists ; exists ; 1983 ; 1983 ; International Journal of Sports Medicine Volume 1983 ; 4 >
+    au < exists ; exists ; 1984 ; 1984 ; International Journal of Sports Medicine Volume 1984 ; 5 >
+    au < exists ; exists ; 1985 ; 1985 ; International Journal of Sports Medicine Volume 1985 ; 6 >
+    au < exists ; exists ; 1986 ; 1986 ; International Journal of Sports Medicine Volume 1986 ; 7 >
+    au < exists ; exists ; 1987 ; 1987 ; International Journal of Sports Medicine Volume 1987 ; 8 >
+    au < exists ; exists ; 1988 ; 1988 ; International Journal of Sports Medicine Volume 1988 ; 9 >
+    au < exists ; exists ; 1989 ; 1989 ; International Journal of Sports Medicine Volume 1989 ; 10 >
+    au < exists ; exists ; 1990 ; 1990 ; International Journal of Sports Medicine Volume 1990 ; 11 >
+    au < exists ; exists ; 1991 ; 1991 ; International Journal of Sports Medicine Volume 1991 ; 12 >
+    au < exists ; exists ; 1992 ; 1992 ; International Journal of Sports Medicine Volume 1992 ; 13 >
+    au < exists ; exists ; 1993 ; 1993 ; International Journal of Sports Medicine Volume 1993 ; 14 >
+    au < exists ; exists ; 1994 ; 1994 ; International Journal of Sports Medicine Volume 1994 ; 15 >
+    au < exists ; exists ; 1995 ; 1995 ; International Journal of Sports Medicine Volume 1995 ; 16 >
+    au < exists ; exists ; 1996 ; 1996 ; International Journal of Sports Medicine Volume 1996 ; 17 >
+    au < exists ; exists ; 1997 ; 1997 ; International Journal of Sports Medicine Volume 1997 ; 18 >
+    au < exists ; exists ; 1998 ; 1998 ; International Journal of Sports Medicine Volume 1998 ; 19 >
+    au < exists ; exists ; 1999 ; 1999 ; International Journal of Sports Medicine Volume 1999 ; 20 >
+    au < exists ; exists ; 2000 ; 2000 ; International Journal of Sports Medicine Volume 2000 ; 21 >
+    au < exists ; exists ; 2001 ; 2001 ; International Journal of Sports Medicine Volume 2001 ; 22 >
+    au < exists ; exists ; 2002 ; 2002 ; International Journal of Sports Medicine Volume 2002 ; 23 >
+    au < exists ; exists ; 2003 ; 2003 ; International Journal of Sports Medicine Volume 2003 ; 24 >
+    au < exists ; exists ; 2004 ; 2004 ; International Journal of Sports Medicine Volume 2004 ; 25 >
+    au < exists ; exists ; 2005 ; 2005 ; International Journal of Sports Medicine Volume 2005 ; 26 >
+    au < exists ; exists ; 2006 ; 2006 ; International Journal of Sports Medicine Volume 2006 ; 27 >
+    au < exists ; exists ; 2007 ; 2007 ; International Journal of Sports Medicine Volume 2007 ; 28 >
+    au < exists ; exists ; 2008 ; 2008 ; International Journal of Sports Medicine Volume 2008 ; 29 >
+    au < exists ; exists ; 2009 ; 2009 ; International Journal of Sports Medicine Volume 2009 ; 30 >
+    au < exists ; exists ; 2010 ; 2010 ; International Journal of Sports Medicine Volume 2010 ; 31 >
+    au < exists ; exists ; 2011 ; 2011 ; International Journal of Sports Medicine Volume 2011 ; 32 >
+    au < exists ; exists ; 2012 ; 2012 ; International Journal of Sports Medicine Volume 2012 ; 33 >
+    au < expected ; exists ; 2013 ; 2013 ; International Journal of Sports Medicine Volume 2013 ; 34 >
+    au < expected ; exists ; 2014 ; 2014 ; International Journal of Sports Medicine Volume 2014 ; 35 >
 
   }
 
@@ -1944,17 +1932,17 @@
     param[journal_id] = 10.1055/s-00000161
     comment[years] = 2004-current
 
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Knee Surgery Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of Knee Surgery Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 0 >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Knee Surgery Volume 2004 ; 17 >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Knee Surgery Volume 2005 ; 18 >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Knee Surgery Volume 2006 ; 19 >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Knee Surgery Volume 2007 ; 20 >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Knee Surgery Volume 2008 ; 21 >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Knee Surgery Volume 2009 ; 22 >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Knee Surgery Volume 2010 ; 23 >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Knee Surgery Volume 2011 ; 24 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
 
   }
 
@@ -1972,15 +1960,15 @@
     comment[0] = combines two earlier titles - Central European Surgery and Zentralblatt fur Neurochirurgie
     comment[1] = Minimally Invasive Neurosurgery was merged with this journal
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2012 ; 73 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2013 ; 74 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part A : Central European Neurosurgery Volume 2014 ; 75 >
 
   }
 
   {
     title <
-      name = Journal of Neurological Surgery Part : Skull Base ;
+      name = Journal of Neurological Surgery Part B : Skull Base ;
       issn = 2193-6331 ;
       eissn = 2193-634X ;
       doi = 10.500/s.00000181
@@ -1990,9 +1978,9 @@
     comment[years] = 2012-current
     comment[0] = under the umbrella title Journal of Neurological Surgery which combines several old titles
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part : Skull Base Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part : Skull Base Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part : Skull Base Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Part B : Skull Base Volume 2012 ; 73 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Part B : Skull Base Volume 2013 ; 74 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Part B : Skull Base Volume 2014 ; 75 >
 
   }
 
@@ -2008,9 +1996,9 @@
     param[journal_id] = 10.500/s.00000182
     comment[years] = 2012-current
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Neurological Surgery Reports Volume 2012 ; 73 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Neurological Surgery Reports Volume 2013 ; 74 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Neurological Surgery Reports Volume 2014 ; 75 >
 
   }
 
@@ -2026,37 +2014,37 @@
     param[journal_id] = 10.1055/s-00000029
     comment[years] = 1984-current
 
-    au < exists ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Journal of Reconstructive Microsurgery Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Journal of Reconstructive Microsurgery Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Journal of Reconstructive Microsurgery Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Journal of Reconstructive Microsurgery Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Journal of Reconstructive Microsurgery Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Journal of Reconstructive Microsurgery Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Journal of Reconstructive Microsurgery Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Journal of Reconstructive Microsurgery Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Journal of Reconstructive Microsurgery Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Journal of Reconstructive Microsurgery Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Journal of Reconstructive Microsurgery Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Journal of Reconstructive Microsurgery Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Reconstructive Microsurgery Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Reconstructive Microsurgery Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 0 >
+    au < exists ; exists ; 1984 ; 1984 ; Journal of Reconstructive Microsurgery Volume 1984 ; 1 >
+    au < exists ; exists ; 1985 ; 1985 ; Journal of Reconstructive Microsurgery Volume 1985 ; 1 >
+    au < exists ; exists ; 1986 ; 1986 ; Journal of Reconstructive Microsurgery Volume 1986 ; 2 >
+    au < exists ; exists ; 1987 ; 1987 ; Journal of Reconstructive Microsurgery Volume 1987 ; 3 >
+    au < exists ; exists ; 1988 ; 1988 ; Journal of Reconstructive Microsurgery Volume 1988 ; 4 >
+    au < exists ; exists ; 1989 ; 1989 ; Journal of Reconstructive Microsurgery Volume 1989 ; 5 >
+    au < exists ; exists ; 1990 ; 1990 ; Journal of Reconstructive Microsurgery Volume 1990 ; 6 >
+    au < exists ; exists ; 1991 ; 1991 ; Journal of Reconstructive Microsurgery Volume 1991 ; 7 >
+    au < exists ; exists ; 1992 ; 1992 ; Journal of Reconstructive Microsurgery Volume 1992 ; 8 >
+    au < exists ; exists ; 1993 ; 1993 ; Journal of Reconstructive Microsurgery Volume 1993 ; 9 >
+    au < exists ; exists ; 1994 ; 1994 ; Journal of Reconstructive Microsurgery Volume 1994 ; 10 >
+    au < exists ; exists ; 1995 ; 1995 ; Journal of Reconstructive Microsurgery Volume 1995 ; 11 >
+    au < exists ; exists ; 1996 ; 1996 ; Journal of Reconstructive Microsurgery Volume 1996 ; 12 >
+    au < exists ; exists ; 1997 ; 1997 ; Journal of Reconstructive Microsurgery Volume 1997 ; 13 >
+    au < exists ; exists ; 1998 ; 1998 ; Journal of Reconstructive Microsurgery Volume 1998 ; 14 >
+    au < exists ; exists ; 1999 ; 1999 ; Journal of Reconstructive Microsurgery Volume 1999 ; 15 >
+    au < exists ; exists ; 2000 ; 2000 ; Journal of Reconstructive Microsurgery Volume 2000 ; 16 >
+    au < exists ; exists ; 2001 ; 2001 ; Journal of Reconstructive Microsurgery Volume 2001 ; 17 >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of Reconstructive Microsurgery Volume 2002 ; 18 >
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Reconstructive Microsurgery Volume 2003 ; 19 >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Reconstructive Microsurgery Volume 2004 ; 20 >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 2005 ; 21 >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 2006 ; 22 >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 2007 ; 23 >
+    au < exists ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 2008 ; 24 >
+    au < exists ; exists ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 2009 ; 25 >
+    au < exists ; exists ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 2010 ; 26 >
+    au < exists ; exists ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 2011 ; 27 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Reconstructive Microsurgery Volume 2012 ; 28 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Reconstructive Microsurgery Volume 2013 ; 29 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Reconstructive Microsurgery Volume 2014 ; 30 >
 
   }
 
@@ -2071,6 +2059,7 @@
     >
     param[journal_id] = 10.500/s.0032.1312044
     comment[years] = 2012-current
+    comment[journal_id] = doi doesn't work
 
     au < exists ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 0 >
     au < expected ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 0 >
@@ -2089,6 +2078,7 @@
     >
     param[journal_id] = 10.1055/s-002-23435
     comment[years] = 2012-current
+    omment[journal_id] = doi doesn't work
 
     au < exists ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 0 >
     au < expected ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 0 >
@@ -2108,16 +2098,16 @@
     param[journal_id] = 10.1055/s-00000129
     comment[years] = 2005-current
 
-    au < exists ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Kardiologie up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Kardiologie up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Kardiologie up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2005 ; 2005 ; Kardiologie up2date Volume 2005 ; 1 >
+    au < exists ; exists ; 2006 ; 2006 ; Kardiologie up2date Volume 2006 ; 2 >
+    au < exists ; exists ; 2007 ; 2007 ; Kardiologie up2date Volume 2007 ; 3 >
+    au < exists ; exists ; 2008 ; 2008 ; Kardiologie up2date Volume 2008 ; 4 >
+    au < exists ; exists ; 2009 ; 2009 ; Kardiologie up2date Volume 2009 ; 5 >
+    au < exists ; exists ; 2010 ; 2010 ; Kardiologie up2date Volume 2010 ; 6 >
+    au < exists ; exists ; 2011 ; 2011 ; Kardiologie up2date Volume 2011 ; 7 >
+    au < exists ; exists ; 2012 ; 2012 ; Kardiologie up2date Volume 2012 ; 8 >
+    au < expected ; exists ; 2013 ; 2013 ; Kardiologie up2date Volume 2013 ; 9 >
+    au < expected ; exists ; 2014 ; 2014 ; Kardiologie up2date Volume 2014 ; 10 >
 
   }
 
@@ -2132,14 +2122,14 @@
     param[journal_id] = 10.1055/s-00000143
     comment[years] = 2007-current
 
-    au < exists ; exists ; 2007 ; 2007 ; kleintier konkret Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; kleintier konkret Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; kleintier konkret Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 0 >
+    au < exists ; exists ; 2007 ; 2007 ; kleintier konkret Volume 2007 ; 10 >
+    au < exists ; exists ; 2008 ; 2008 ; kleintier konkret Volume 2008 ; 11 >
+    au < exists ; exists ; 2009 ; 2009 ; kleintier konkret Volume 2009 ; 12 >
+    au < exists ; exists ; 2010 ; 2010 ; kleintier konkret Volume 2010 ; 13 >
+    au < exists ; exists ; 2011 ; 2011 ; kleintier konkret Volume 2011 ; 14 >
+    au < exists ; exists ; 2012 ; 2012 ; kleintier konkret Volume 2012 ; 15 >
+    au < expected ; exists ; 2013 ; 2013 ; kleintier konkret Volume 2013 ; 16 >
+    au < expected ; exists ; 2014 ; 2014 ; kleintier konkret Volume 2014 ; 17 >
 
   }
 
@@ -2154,18 +2144,18 @@
     param[journal_id] = 10.1055/s-00000030
     comment[years] = 2003-current
 
-    au < exists ; exists ; 2003 ; 2003 ; Klinikarzt Der Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Klinikarzt Der Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Klinikarzt Der Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Klinikarzt Der Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Klinikarzt Der Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Klinikarzt Der Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 0 >
+    au < exists ; exists ; 2003 ; 2003 ; Klinikarzt Der Volume 2003 ; 32 >
+    au < exists ; exists ; 2004 ; 2004 ; Klinikarzt Der Volume 2004 ; 33 >
+    au < exists ; exists ; 2005 ; 2005 ; Klinikarzt Der Volume 2005 ; 34 >
+    au < exists ; exists ; 2006 ; 2006 ; Klinikarzt Der Volume 2006 ; 35 >
+    au < exists ; exists ; 2007 ; 2007 ; Klinikarzt Der Volume 2007 ; 36 >
+    au < exists ; exists ; 2008 ; 2008 ; Klinikarzt Der Volume 2008 ; 37 >
+    au < exists ; exists ; 2009 ; 2009 ; Klinikarzt Der Volume 2009 ; 38 >
+    au < exists ; exists ; 2010 ; 2010 ; Klinikarzt Der Volume 2010 ; 39 >
+    au < exists ; exists ; 2011 ; 2011 ; Klinikarzt Der Volume 2011 ; 40 >
+    au < exists ; exists ; 2012 ; 2012 ; Klinikarzt Der Volume 2012 ; 41 >
+    au < expected ; exists ; 2013 ; 2013 ; Klinikarzt Der Volume 2013 ; 42 >
+    au < expected ; exists ; 2014 ; 2014 ; Klinikarzt Der Volume 2014 ; 43 >
 
   }
 
@@ -2178,43 +2168,43 @@
 
     >
     param[journal_id] = 10.1055/s-00000031
-    comment[years] = 1980-current
+    comment[years] = 1980-curren196t
 
-    au < exists ; exists ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Klinische Monatsblätter für Augenheilkunde Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Klinische Monatsblätter für Augenheilkunde Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Klinische Monatsblätter für Augenheilkunde Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Klinische Monatsblätter für Augenheilkunde Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Klinische Monatsblätter für Augenheilkunde Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Klinische Monatsblätter für Augenheilkunde Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Klinische Monatsblätter für Augenheilkunde Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Klinische Monatsblätter für Augenheilkunde Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Klinische Monatsblätter für Augenheilkunde Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Klinische Monatsblätter für Augenheilkunde Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Klinische Monatsblätter für Augenheilkunde Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Klinische Monatsblätter für Augenheilkunde Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Klinische Monatsblätter für Augenheilkunde Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; Klinische Monatsblätter für Augenheilkunde Volume 1980 ; 197 >
+    au < exists ; exists ; 1981 ; 1981 ; Klinische Monatsblätter für Augenheilkunde Volume 1981 ; 198 >
+    au < exists ; exists ; 1982 ; 1982 ; Klinische Monatsblätter für Augenheilkunde Volume 1982 ; 199 >
+    au < exists ; exists ; 1983 ; 1983 ; Klinische Monatsblätter für Augenheilkunde Volume 1983 ; 200 >
+    au < exists ; exists ; 1984 ; 1984 ; Klinische Monatsblätter für Augenheilkunde Volume 1984 ; 201 >
+    au < exists ; exists ; 1985 ; 1985 ; Klinische Monatsblätter für Augenheilkunde Volume 1985 ; 202 >
+    au < exists ; exists ; 1986 ; 1986 ; Klinische Monatsblätter für Augenheilkunde Volume 1986 ; 203 >
+    au < exists ; exists ; 1987 ; 1987 ; Klinische Monatsblätter für Augenheilkunde Volume 1987 ; 204 >
+    au < exists ; exists ; 1988 ; 1988 ; Klinische Monatsblätter für Augenheilkunde Volume 1988 ; 205 >
+    au < exists ; exists ; 1989 ; 1989 ; Klinische Monatsblätter für Augenheilkunde Volume 1989 ; 206 >
+    au < exists ; exists ; 1990 ; 1990 ; Klinische Monatsblätter für Augenheilkunde Volume 1990 ; 207 >
+    au < exists ; exists ; 1991 ; 1991 ; Klinische Monatsblätter für Augenheilkunde Volume 1991 ; 208 >
+    au < exists ; exists ; 1992 ; 1992 ; Klinische Monatsblätter für Augenheilkunde Volume 1992 ; 209 >
+    au < exists ; exists ; 1993 ; 1993 ; Klinische Monatsblätter für Augenheilkunde Volume 1993 ; 210 >
+    au < exists ; exists ; 1994 ; 1994 ; Klinische Monatsblätter für Augenheilkunde Volume 1994 ; 211 >
+    au < exists ; exists ; 1995 ; 1995 ; Klinische Monatsblätter für Augenheilkunde Volume 1995 ; 212 >
+    au < exists ; exists ; 1996 ; 1996 ; Klinische Monatsblätter für Augenheilkunde Volume 1996 ; 213 >
+    au < exists ; exists ; 1997 ; 1997 ; Klinische Monatsblätter für Augenheilkunde Volume 1997 ; 214 >
+    au < exists ; exists ; 1998 ; 1998 ; Klinische Monatsblätter für Augenheilkunde Volume 1998 ; 215 >
+    au < exists ; exists ; 1999 ; 1999 ; Klinische Monatsblätter für Augenheilkunde Volume 1999 ; 216 >
+    au < exists ; exists ; 2000 ; 2000 ; Klinische Monatsblätter für Augenheilkunde Volume 2000 ; 217 >
+    au < exists ; exists ; 2001 ; 2001 ; Klinische Monatsblätter für Augenheilkunde Volume 2001 ; 218 >
+    au < exists ; exists ; 2002 ; 2002 ; Klinische Monatsblätter für Augenheilkunde Volume 2002 ; 219 >
+    au < exists ; exists ; 2003 ; 2003 ; Klinische Monatsblätter für Augenheilkunde Volume 2003 ; 220 >
+    au < exists ; exists ; 2004 ; 2004 ; Klinische Monatsblätter für Augenheilkunde Volume 2004 ; 221 >
+    au < exists ; exists ; 2005 ; 2005 ; Klinische Monatsblätter für Augenheilkunde Volume 2005 ; 222 >
+    au < exists ; exists ; 2006 ; 2006 ; Klinische Monatsblätter für Augenheilkunde Volume 2006 ; 223 >
+    au < exists ; exists ; 2007 ; 2007 ; Klinische Monatsblätter für Augenheilkunde Volume 2007 ; 224 >
+    au < exists ; exists ; 2008 ; 2008 ; Klinische Monatsblätter für Augenheilkunde Volume 2008 ; 225 >
+    au < exists ; exists ; 2009 ; 2009 ; Klinische Monatsblätter für Augenheilkunde Volume 2009 ; 226 >
+    au < exists ; exists ; 2010 ; 2010 ; Klinische Monatsblätter für Augenheilkunde Volume 2010 ; 227 >
+    au < exists ; exists ; 2011 ; 2011 ; Klinische Monatsblätter für Augenheilkunde Volume 2011 ; 228 >
+    au < exists ; exists ; 2012 ; 2012 ; Klinische Monatsblätter für Augenheilkunde Volume 2012 ; 229 >
+    au < expected ; exists ; 2013 ; 2013 ; Klinische Monatsblätter für Augenheilkunde Volume 2013 ; 230 >
+    au < expected ; exists ; 2014 ; 2014 ; Klinische Monatsblätter für Augenheilkunde Volume 2014 ; 231 >
 
   }
 
@@ -2231,41 +2221,41 @@
     comment[0] = this journal shares its eissn with EEG, EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete
     comment[1] = EEG, EMG published from 1980-1997 under the same eissn
 
-    au < exists ; exists ; 1980 ; 1980 ; Klinische Neurophysiologie Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; Klinische Neurophysiologie Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; Klinische Neurophysiologie Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; Klinische Neurophysiologie Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; Klinische Neurophysiologie Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Klinische Neurophysiologie Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Klinische Neurophysiologie Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Klinische Neurophysiologie Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Klinische Neurophysiologie Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Klinische Neurophysiologie Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Klinische Neurophysiologie Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Klinische Neurophysiologie Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Klinische Neurophysiologie Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Klinische Neurophysiologie Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Klinische Neurophysiologie Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Klinische Neurophysiologie Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Klinische Neurophysiologie Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Klinische Neurophysiologie Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Klinische Neurophysiologie Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Klinische Neurophysiologie Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Klinische Neurophysiologie Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Klinische Neurophysiologie Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Klinische Neurophysiologie Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Klinische Neurophysiologie Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Klinische Neurophysiologie Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Klinische Neurophysiologie Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Klinische Neurophysiologie Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Klinische Neurophysiologie Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; Klinische Neurophysiologie Volume 1980 ; 11 >
+    au < exists ; exists ; 1981 ; 1981 ; Klinische Neurophysiologie Volume 1981 ; 12 >
+    au < exists ; exists ; 1982 ; 1982 ; Klinische Neurophysiologie Volume 1982 ; 13 >
+    au < exists ; exists ; 1983 ; 1983 ; Klinische Neurophysiologie Volume 1983 ; 14 >
+    au < exists ; exists ; 1984 ; 1984 ; Klinische Neurophysiologie Volume 1984 ; 15 >
+    au < exists ; exists ; 1985 ; 1985 ; Klinische Neurophysiologie Volume 1985 ; 16 >
+    au < exists ; exists ; 1986 ; 1986 ; Klinische Neurophysiologie Volume 1986 ; 17 >
+    au < exists ; exists ; 1987 ; 1987 ; Klinische Neurophysiologie Volume 1987 ; 18 >
+    au < exists ; exists ; 1988 ; 1988 ; Klinische Neurophysiologie Volume 1988 ; 19 >
+    au < exists ; exists ; 1989 ; 1989 ; Klinische Neurophysiologie Volume 1989 ; 20 >
+    au < exists ; exists ; 1990 ; 1990 ; Klinische Neurophysiologie Volume 1990 ; 21 >
+    au < exists ; exists ; 1991 ; 1991 ; Klinische Neurophysiologie Volume 1991 ; 22 >
+    au < exists ; exists ; 1992 ; 1992 ; Klinische Neurophysiologie Volume 1992 ; 23 >
+    au < exists ; exists ; 1993 ; 1993 ; Klinische Neurophysiologie Volume 1993 ; 24 >
+    au < exists ; exists ; 1994 ; 1994 ; Klinische Neurophysiologie Volume 1994 ; 25 >
+    au < exists ; exists ; 1995 ; 1995 ; Klinische Neurophysiologie Volume 1995 ; 26 >
+    au < exists ; exists ; 1996 ; 1996 ; Klinische Neurophysiologie Volume 1996 ; 27 >
+    au < exists ; exists ; 1997 ; 1997 ; Klinische Neurophysiologie Volume 1997 ; 28 >
+    au < exists ; exists ; 1998 ; 1998 ; Klinische Neurophysiologie Volume 1998 ; 29 >
+    au < exists ; exists ; 1999 ; 1999 ; Klinische Neurophysiologie Volume 1999 ; 30 >
+    au < exists ; exists ; 2000 ; 2000 ; Klinische Neurophysiologie Volume 2000 ; 31 >
+    au < exists ; exists ; 2001 ; 2001 ; Klinische Neurophysiologie Volume 2001 ; 32 >
+    au < exists ; exists ; 2002 ; 2002 ; Klinische Neurophysiologie Volume 2002 ; 33 >
+    au < exists ; exists ; 2003 ; 2003 ; Klinische Neurophysiologie Volume 2003 ; 34 >
+    au < exists ; exists ; 2004 ; 2004 ; Klinische Neurophysiologie Volume 2004 ; 35 >
+    au < exists ; exists ; 2005 ; 2005 ; Klinische Neurophysiologie Volume 2005 ; 36 >
+    au < exists ; exists ; 2006 ; 2006 ; Klinische Neurophysiologie Volume 2006 ; 37 >
+    au < exists ; exists ; 2007 ; 2007 ; Klinische Neurophysiologie Volume 2007 ; 38 >
+    au < exists ; exists ; 2008 ; 2008 ; Klinische Neurophysiologie Volume 2008 ; 39 >
+    au < exists ; exists ; 2009 ; 2009 ; Klinische Neurophysiologie Volume 2009 ; 40 >
+    au < exists ; exists ; 2010 ; 2010 ; Klinische Neurophysiologie Volume 2010 ; 41 >
+    au < exists ; exists ; 2011 ; 2011 ; Klinische Neurophysiologie Volume 2011 ; 42 >
+    au < exists ; exists ; 2012 ; 2012 ; Klinische Neurophysiologie Volume 2012 ; 43 >
+    au < expected ; exists ; 2013 ; 2013 ; Klinische Neurophysiologie Volume 2013 ; 44 >
+    au < expected ; exists ; 2014 ; 2014 ; Klinische Neurophysiologie Volume 2014 ; 45 >
 
   }
 
@@ -2280,41 +2270,41 @@
     param[journal_id] = 10.1055/s-00000034
     comment[years] = 1980-current
 
-    au < exists ; exists ; 1980 ; 1980 ; Klinische Pädiatrie Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; Klinische Pädiatrie Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; Klinische Pädiatrie Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; Klinische Pädiatrie Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; Klinische Pädiatrie Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Klinische Pädiatrie Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Klinische Pädiatrie Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Klinische Pädiatrie Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Klinische Pädiatrie Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Klinische Pädiatrie Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Klinische Pädiatrie Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Klinische Pädiatrie Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Klinische Pädiatrie Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Klinische Pädiatrie Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Klinische Pädiatrie Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Klinische Pädiatrie Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Klinische Pädiatrie Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Klinische Pädiatrie Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Klinische Pädiatrie Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Klinische Pädiatrie Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Klinische Pädiatrie Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Klinische Pädiatrie Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Klinische Pädiatrie Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Klinische Pädiatrie Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Klinische Pädiatrie Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Klinische Pädiatrie Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Klinische Pädiatrie Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Klinische Pädiatrie Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Klinische Pädiatrie Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Klinische Pädiatrie Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Klinische Pädiatrie Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; Klinische Pädiatrie Volume 1980 ; 192 >
+    au < exists ; exists ; 1981 ; 1981 ; Klinische Pädiatrie Volume 1981 ; 193 >
+    au < exists ; exists ; 1982 ; 1982 ; Klinische Pädiatrie Volume 1982 ; 194 >
+    au < exists ; exists ; 1983 ; 1983 ; Klinische Pädiatrie Volume 1983 ; 195 >
+    au < exists ; exists ; 1984 ; 1984 ; Klinische Pädiatrie Volume 1984 ; 196 >
+    au < exists ; exists ; 1985 ; 1985 ; Klinische Pädiatrie Volume 1985 ; 197 >
+    au < exists ; exists ; 1986 ; 1986 ; Klinische Pädiatrie Volume 1986 ; 198 >
+    au < exists ; exists ; 1987 ; 1987 ; Klinische Pädiatrie Volume 1987 ; 199 >
+    au < exists ; exists ; 1988 ; 1988 ; Klinische Pädiatrie Volume 1988 ; 200 >
+    au < exists ; exists ; 1989 ; 1989 ; Klinische Pädiatrie Volume 1989 ; 201 >
+    au < exists ; exists ; 1990 ; 1990 ; Klinische Pädiatrie Volume 1990 ; 202 >
+    au < exists ; exists ; 1991 ; 1991 ; Klinische Pädiatrie Volume 1991 ; 203 >
+    au < exists ; exists ; 1992 ; 1992 ; Klinische Pädiatrie Volume 1992 ; 204 >
+    au < exists ; exists ; 1993 ; 1993 ; Klinische Pädiatrie Volume 1993 ; 205 >
+    au < exists ; exists ; 1994 ; 1994 ; Klinische Pädiatrie Volume 1994 ; 206 >
+    au < exists ; exists ; 1995 ; 1995 ; Klinische Pädiatrie Volume 1995 ; 207 >
+    au < exists ; exists ; 1996 ; 1996 ; Klinische Pädiatrie Volume 1996 ; 208 >
+    au < exists ; exists ; 1997 ; 1997 ; Klinische Pädiatrie Volume 1997 ; 209 >
+    au < exists ; exists ; 1998 ; 1998 ; Klinische Pädiatrie Volume 1998 ; 210 >
+    au < exists ; exists ; 1999 ; 1999 ; Klinische Pädiatrie Volume 1999 ; 211 >
+    au < exists ; exists ; 2000 ; 2000 ; Klinische Pädiatrie Volume 2000 ; 212 >
+    au < exists ; exists ; 2001 ; 2001 ; Klinische Pädiatrie Volume 2001 ; 213 >
+    au < exists ; exists ; 2002 ; 2002 ; Klinische Pädiatrie Volume 2002 ; 214 >
+    au < exists ; exists ; 2003 ; 2003 ; Klinische Pädiatrie Volume 2003 ; 215 >
+    au < exists ; exists ; 2004 ; 2004 ; Klinische Pädiatrie Volume 2004 ; 216 >
+    au < exists ; exists ; 2005 ; 2005 ; Klinische Pädiatrie Volume 2005 ; 217 >
+    au < exists ; exists ; 2006 ; 2006 ; Klinische Pädiatrie Volume 2006 ; 218 >
+    au < exists ; exists ; 2007 ; 2007 ; Klinische Pädiatrie Volume 2007 ; 219 >
+    au < exists ; exists ; 2008 ; 2008 ; Klinische Pädiatrie Volume 2008 ; 220 >
+    au < exists ; exists ; 2009 ; 2009 ; Klinische Pädiatrie Volume 2009 ; 221 >
+    au < exists ; exists ; 2010 ; 2010 ; Klinische Pädiatrie Volume 2010 ; 222 >
+    au < exists ; exists ; 2011 ; 2011 ; Klinische Pädiatrie Volume 2011 ; 223 >
+    au < exists ; exists ; 2012 ; 2012 ; Klinische Pädiatrie Volume 2012 ; 224 >
+    au < expected ; exists ; 2013 ; 2013 ; Klinische Pädiatrie Volume 2013 ; 225 >
+    au < expected ; exists ; 2014 ; 2014 ; Klinische Pädiatrie Volume 2014 ; 226 >
 
   }
 
@@ -2329,15 +2319,15 @@
     param[journal_id] = 10.1055/s-00000137
     comment[years] = 2006-current
 
-    au < exists ; exists ; 2006 ; 2006 ; Krankenhaushygiene up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Krankenhaushygiene up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Krankenhaushygiene up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Krankenhaushygiene up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Krankenhaushygiene up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Krankenhaushygiene up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Krankenhaushygiene up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Krankenhaushygiene up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Krankenhaushygiene up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2006 ; 2006 ; Krankenhaushygiene up2date Volume 2006 ; 1 >
+    au < exists ; exists ; 2007 ; 2007 ; Krankenhaushygiene up2date Volume 2007 ; 2 >
+    au < exists ; exists ; 2008 ; 2008 ; Krankenhaushygiene up2date Volume 2008 ; 3 >
+    au < exists ; exists ; 2009 ; 2009 ; Krankenhaushygiene up2date Volume 2009 ; 4 >
+    au < exists ; exists ; 2010 ; 2010 ; Krankenhaushygiene up2date Volume 2010 ; 5 >
+    au < exists ; exists ; 2011 ; 2011 ; Krankenhaushygiene up2date Volume 2011 ; 6 >
+    au < exists ; exists ; 2012 ; 2012 ; Krankenhaushygiene up2date Volume 2012 ; 7 >
+    au < expected ; exists ; 2013 ; 2013 ; Krankenhaushygiene up2date Volume 2013 ; 8 >
+    au < expected ; exists ; 2014 ; 2014 ; Krankenhaushygiene up2date Volume 2014 ; 9 >
 
   }
 
@@ -2352,13 +2342,13 @@
     param[journal_id] = 10.1055/s-00000035
     comment[years] = 2000-2006
 
-    au < exists ; exists ; 2000 ; 2000 ; Krankenhauspsychiatrie Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Krankenhauspsychiatrie Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Krankenhauspsychiatrie Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Krankenhauspsychiatrie Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 2006 ; 0 >
+    au < exists ; exists ; 2000 ; 2000 ; Krankenhauspsychiatrie Volume 2000 ; 11 >
+    au < exists ; exists ; 2001 ; 2001 ; Krankenhauspsychiatrie Volume 2001 ; 12 >
+    au < exists ; exists ; 2002 ; 2002 ; Krankenhauspsychiatrie Volume 2002 ; 13 >
+    au < exists ; exists ; 2003 ; 2003 ; Krankenhauspsychiatrie Volume 2003 ; 14 >
+    au < exists ; exists ; 2004 ; 2004 ; Krankenhauspsychiatrie Volume 2004 ; 15 >
+    au < exists ; exists ; 2005 ; 2005 ; Krankenhauspsychiatrie Volume 2005 ; 16 >
+    au < exists ; exists ; 2006 ; 2006 ; Krankenhauspsychiatrie Volume 2006 ; 17 >
     au < exists ; exists ; 2007 ; 2007 ; Krankenhauspsychiatrie Volume 2007 ; 0 >
     au < exists ; exists ; 2008 ; 2008 ; Krankenhauspsychiatrie Volume 2008 ; 0 >
     au < exists ; exists ; 2009 ; 2009 ; Krankenhauspsychiatrie Volume 2009 ; 0 >
@@ -2382,41 +2372,41 @@
     comment[years] = 1980-current
     comment[0] = this journal subsumed Laryngologie, Rhinologie, Otologie und ihre Grenzgebiete
 
-    au < exists ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Laryngo-Rhino-Otologie Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Laryngo-Rhino-Otologie Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Laryngo-Rhino-Otologie Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Laryngo-Rhino-Otologie Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Laryngo-Rhino-Otologie Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Laryngo-Rhino-Otologie Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Laryngo-Rhino-Otologie Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Laryngo-Rhino-Otologie Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Laryngo-Rhino-Otologie Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Laryngo-Rhino-Otologie Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Laryngo-Rhino-Otologie Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Laryngo-Rhino-Otologie Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Laryngo-Rhino-Otologie Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Laryngo-Rhino-Otologie Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; Laryngo-Rhino-Otologie Volume 1980 ; 58 >
+    au < exists ; exists ; 1981 ; 1981 ; Laryngo-Rhino-Otologie Volume 1981 ; 59 >
+    au < exists ; exists ; 1982 ; 1982 ; Laryngo-Rhino-Otologie Volume 1982 ; 60 >
+    au < exists ; exists ; 1983 ; 1983 ; Laryngo-Rhino-Otologie Volume 1983 ; 61 >
+    au < exists ; exists ; 1984 ; 1984 ; Laryngo-Rhino-Otologie Volume 1984 ; 62 >
+    au < exists ; exists ; 1985 ; 1985 ; Laryngo-Rhino-Otologie Volume 1985 ; 63 >
+    au < exists ; exists ; 1986 ; 1986 ; Laryngo-Rhino-Otologie Volume 1986 ; 64 >
+    au < exists ; exists ; 1987 ; 1987 ; Laryngo-Rhino-Otologie Volume 1987 ; 65 >
+    au < exists ; exists ; 1988 ; 1988 ; Laryngo-Rhino-Otologie Volume 1988 ; 66 >
+    au < exists ; exists ; 1989 ; 1989 ; Laryngo-Rhino-Otologie Volume 1989 ; 67 >
+    au < exists ; exists ; 1990 ; 1990 ; Laryngo-Rhino-Otologie Volume 1990 ; 68 >
+    au < exists ; exists ; 1991 ; 1991 ; Laryngo-Rhino-Otologie Volume 1991 ; 69 >
+    au < exists ; exists ; 1992 ; 1992 ; Laryngo-Rhino-Otologie Volume 1992 ; 70 >
+    au < exists ; exists ; 1993 ; 1993 ; Laryngo-Rhino-Otologie Volume 1993 ; 71 >
+    au < exists ; exists ; 1994 ; 1994 ; Laryngo-Rhino-Otologie Volume 1994 ; 73 >
+    au < exists ; exists ; 1995 ; 1995 ; Laryngo-Rhino-Otologie Volume 1995 ; 74 >
+    au < exists ; exists ; 1996 ; 1996 ; Laryngo-Rhino-Otologie Volume 1996 ; 75 >
+    au < exists ; exists ; 1997 ; 1997 ; Laryngo-Rhino-Otologie Volume 1997 ; 76 >
+    au < exists ; exists ; 1998 ; 1998 ; Laryngo-Rhino-Otologie Volume 1998 ; 77 >
+    au < exists ; exists ; 1999 ; 1999 ; Laryngo-Rhino-Otologie Volume 1999 ; 78 >
+    au < exists ; exists ; 2000 ; 2000 ; Laryngo-Rhino-Otologie Volume 2000 ; 79 >
+    au < exists ; exists ; 2001 ; 2001 ; Laryngo-Rhino-Otologie Volume 2001 ; 80 >
+    au < exists ; exists ; 2002 ; 2002 ; Laryngo-Rhino-Otologie Volume 2002 ; 81 >
+    au < exists ; exists ; 2003 ; 2003 ; Laryngo-Rhino-Otologie Volume 2003 ; 82 >
+    au < exists ; exists ; 2004 ; 2004 ; Laryngo-Rhino-Otologie Volume 2004 ; 83 >
+    au < exists ; exists ; 2005 ; 2005 ; Laryngo-Rhino-Otologie Volume 2005 ; 84 >
+    au < exists ; exists ; 2006 ; 2006 ; Laryngo-Rhino-Otologie Volume 2006 ; 85 >
+    au < exists ; exists ; 2007 ; 2007 ; Laryngo-Rhino-Otologie Volume 2007 ; 86 >
+    au < exists ; exists ; 2008 ; 2008 ; Laryngo-Rhino-Otologie Volume 2008 ; 87 >
+    au < exists ; exists ; 2009 ; 2009 ; Laryngo-Rhino-Otologie Volume 2009 ; 88 >
+    au < exists ; exists ; 2010 ; 2010 ; Laryngo-Rhino-Otologie Volume 2010 ; 89 >
+    au < exists ; exists ; 2011 ; 2011 ; Laryngo-Rhino-Otologie Volume 2011 ; 90 >
+    au < exists ; exists ; 2012 ; 2012 ; Laryngo-Rhino-Otologie Volume 2012 ; 91 >
+    au < expected ; exists ; 2013 ; 2013 ; Laryngo-Rhino-Otologie Volume 2013 ; 92 >
+    au < expected ; exists ; 2014 ; 2014 ; Laryngo-Rhino-Otologie Volume 2014 ; 93 >
 
   }
 
@@ -2431,10 +2421,10 @@
     param[journal_id] = 10.1055/s-00000168
     comment[years] = 2011-current
 
-    au < exists ; exists ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 0 >
+    au < exists ; exists ; 2011 ; 2011 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2011 ; 1 >
+    au < exists ; exists ; 2012 ; 2012 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2012 ; 2 >
+    au < expected ; exists ; 2013 ; 2013 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2013 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; Lege artis Das Magazin zur ärztlichen Weiterbildung Volume 2014 ; 4 >
 
   }
 
@@ -2449,17 +2439,17 @@
     param[journal_id] = 10.1055/s-00000038
     comment[years] = 2004-current
 
-    au < exists ; exists ; 2004 ; 2004 ; manuelletherapie Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; manuelletherapie Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; manuelletherapie Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; manuelletherapie Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; manuelletherapie Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; manuelletherapie Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; manuelletherapie Volume 2014 ; 0 >
+    au < exists ; exists ; 2004 ; 2004 ; manuelletherapie Volume 2004 ; 8 >
+    au < exists ; exists ; 2005 ; 2005 ; manuelletherapie Volume 2005 ; 9 >
+    au < exists ; exists ; 2006 ; 2006 ; manuelletherapie Volume 2006 ; 10 >
+    au < exists ; exists ; 2007 ; 2007 ; manuelletherapie Volume 2007 ; 11 >
+    au < exists ; exists ; 2008 ; 2008 ; manuelletherapie Volume 2008 ; 12 >
+    au < exists ; exists ; 2009 ; 2009 ; manuelletherapie Volume 2009 ; 13 >
+    au < exists ; exists ; 2010 ; 2010 ; manuelletherapie Volume 2010 ; 14 >
+    au < exists ; exists ; 2011 ; 2011 ; manuelletherapie Volume 2011 ; 15 >
+    au < exists ; exists ; 2012 ; 2012 ; manuelletherapie Volume 2012 ; 16 >
+    au < expected ; exists ; 2013 ; 2013 ; manuelletherapie Volume 2013 ;  17 >
+    au < expected ; exists ; 2014 ; 2014 ; manuelletherapie Volume 2014 ;  18 >
 
   }
 
@@ -2475,41 +2465,41 @@
     param[journal_id] = 10.1055/s-00000041
     comment[years] = 1980-current
 
-    au < exists ; exists ; 1980 ; 1980 ; Neuropediatrics Volume 1980 ; 0 >
-    au < exists ; exists ; 1981 ; 1981 ; Neuropediatrics Volume 1981 ; 0 >
-    au < exists ; exists ; 1982 ; 1982 ; Neuropediatrics Volume 1982 ; 0 >
-    au < exists ; exists ; 1983 ; 1983 ; Neuropediatrics Volume 1983 ; 0 >
-    au < exists ; exists ; 1984 ; 1984 ; Neuropediatrics Volume 1984 ; 0 >
-    au < exists ; exists ; 1985 ; 1985 ; Neuropediatrics Volume 1985 ; 0 >
-    au < exists ; exists ; 1986 ; 1986 ; Neuropediatrics Volume 1986 ; 0 >
-    au < exists ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Neuropediatrics Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Neuropediatrics Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Neuropediatrics Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Neuropediatrics Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Neuropediatrics Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Neuropediatrics Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Neuropediatrics Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Neuropediatrics Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Neuropediatrics Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Neuropediatrics Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Neuropediatrics Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Neuropediatrics Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Neuropediatrics Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Neuropediatrics Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Neuropediatrics Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Neuropediatrics Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 0 >
+    au < exists ; exists ; 1980 ; 1980 ; Neuropediatrics Volume 1980 ; 11 >
+    au < exists ; exists ; 1981 ; 1981 ; Neuropediatrics Volume 1981 ; 12 >
+    au < exists ; exists ; 1982 ; 1982 ; Neuropediatrics Volume 1982 ; 13 >
+    au < exists ; exists ; 1983 ; 1983 ; Neuropediatrics Volume 1983 ; 14 >
+    au < exists ; exists ; 1984 ; 1984 ; Neuropediatrics Volume 1984 ; 15 >
+    au < exists ; exists ; 1985 ; 1985 ; Neuropediatrics Volume 1985 ; 16 >
+    au < exists ; exists ; 1986 ; 1986 ; Neuropediatrics Volume 1986 ; 17 >
+    au < exists ; exists ; 1987 ; 1987 ; Neuropediatrics Volume 1987 ; 18 >
+    au < exists ; exists ; 1988 ; 1988 ; Neuropediatrics Volume 1988 ; 19 >
+    au < exists ; exists ; 1989 ; 1989 ; Neuropediatrics Volume 1989 ; 20 >
+    au < exists ; exists ; 1990 ; 1990 ; Neuropediatrics Volume 1990 ; 21 >
+    au < exists ; exists ; 1991 ; 1991 ; Neuropediatrics Volume 1991 ; 22 >
+    au < exists ; exists ; 1992 ; 1992 ; Neuropediatrics Volume 1992 ; 23 >
+    au < exists ; exists ; 1993 ; 1993 ; Neuropediatrics Volume 1993 ; 24 >
+    au < exists ; exists ; 1994 ; 1994 ; Neuropediatrics Volume 1994 ; 25 >
+    au < exists ; exists ; 1995 ; 1995 ; Neuropediatrics Volume 1995 ; 26 >
+    au < exists ; exists ; 1996 ; 1996 ; Neuropediatrics Volume 1996 ; 27 >
+    au < exists ; exists ; 1997 ; 1997 ; Neuropediatrics Volume 1997 ; 28 >
+    au < exists ; exists ; 1998 ; 1998 ; Neuropediatrics Volume 1998 ; 29 >
+    au < exists ; exists ; 1999 ; 1999 ; Neuropediatrics Volume 1999 ; 30 >
+    au < exists ; exists ; 2000 ; 2000 ; Neuropediatrics Volume 2000 ; 31 >
+    au < exists ; exists ; 2001 ; 2001 ; Neuropediatrics Volume 2001 ; 32 >
+    au < exists ; exists ; 2002 ; 2002 ; Neuropediatrics Volume 2002 ; 33 >
+    au < exists ; exists ; 2003 ; 2003 ; Neuropediatrics Volume 2003 ; 34 >
+    au < exists ; exists ; 2004 ; 2004 ; Neuropediatrics Volume 2004 ; 35 >
+    au < exists ; exists ; 2005 ; 2005 ; Neuropediatrics Volume 2005 ; 36 >
+    au < exists ; exists ; 2006 ; 2006 ; Neuropediatrics Volume 2006 ; 37 >
+    au < exists ; exists ; 2007 ; 2007 ; Neuropediatrics Volume 2007 ; 38 >
+    au < exists ; exists ; 2008 ; 2008 ; Neuropediatrics Volume 2008 ; 39 >
+    au < exists ; exists ; 2009 ; 2009 ; Neuropediatrics Volume 2009 ; 40 >
+    au < exists ; exists ; 2010 ; 2010 ; Neuropediatrics Volume 2010 ; 41 >
+    au < exists ; exists ; 2011 ; 2011 ; Neuropediatrics Volume 2011 ; 42 >
+    au < exists ; exists ; 2012 ; 2012 ; Neuropediatrics Volume 2012 ; 43 >
+    au < expected ; exists ; 2013 ; 2013 ; Neuropediatrics Volume 2013 ; 44 >
+    au < expected ; exists ; 2014 ; 2014 ; Neuropediatrics Volume 2014 ; 45 >
 
   }
 
@@ -2525,10 +2515,10 @@
     param[journal_id] = 10.1055/s-00000173
     comment[years] = 2011-current
 
-    au < exists ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 0 >
+    au < exists ; exists ; 2011 ; 2011 ; Neuroradiologie Scan Volume 2011 ; 1 >
+    au < exists ; exists ; 2012 ; 2012 ; Neuroradiologie Scan Volume 2012 ; 2 >
+    au < expected ; exists ; 2013 ; 2013 ; Neuroradiologie Scan Volume 2013 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; Neuroradiologie Scan Volume 2014 ; 4 >
 
   }
 
@@ -2543,12 +2533,12 @@
     param[journal_id] = 10.1055/s-00000160
     comment[years] = 2009-current
 
-    au < exists ; exists ; 2009 ; 2009 ; neuroreha Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; neuroreha Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; neuroreha Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 0 >
+    au < exists ; exists ; 2009 ; 2009 ; neuroreha Volume 2009 ; 1 >
+    au < exists ; exists ; 2010 ; 2010 ; neuroreha Volume 2010 ; 2 >
+    au < exists ; exists ; 2011 ; 2011 ; neuroreha Volume 2011 ; 3 >
+    au < exists ; exists ; 2012 ; 2012 ; neuroreha Volume 2012 ; 4 >
+    au < expected ; exists ; 2013 ; 2013 ; neuroreha Volume 2013 ; 5 >
+    au < expected ; exists ; 2014 ; 2014 ; neuroreha Volume 2014 ; 6 >
 
   }
 
@@ -2563,22 +2553,22 @@
     param[journal_id] = 10.1055/s-00000043
     comment[years] = 1999-current
 
-    au < exists ; exists ; 1999 ; 1999 ; Notarzt Der Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Notarzt Der Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Notarzt Der Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Notarzt Der Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Notarzt Der Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Notarzt Der Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Notarzt Der Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Notarzt Der Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Notarzt Der Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Notarzt Der Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Notarzt Der Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Notarzt Der Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Notarzt Der Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 0 >
+    au < exists ; exists ; 1999 ; 1999 ; Notarzt Der Volume 1999 ; 15 >
+    au < exists ; exists ; 2000 ; 2000 ; Notarzt Der Volume 2000 ; 16 >
+    au < exists ; exists ; 2001 ; 2001 ; Notarzt Der Volume 2001 ; 17 >
+    au < exists ; exists ; 2002 ; 2002 ; Notarzt Der Volume 2002 ; 18 >
+    au < exists ; exists ; 2003 ; 2003 ; Notarzt Der Volume 2003 ; 19 >
+    au < exists ; exists ; 2004 ; 2004 ; Notarzt Der Volume 2004 ; 20 >
+    au < exists ; exists ; 2005 ; 2005 ; Notarzt Der Volume 2005 ; 21 >
+    au < exists ; exists ; 2006 ; 2006 ; Notarzt Der Volume 2006 ; 22 >
+    au < exists ; exists ; 2007 ; 2007 ; Notarzt Der Volume 2007 ; 23 >
+    au < exists ; exists ; 2008 ; 2008 ; Notarzt Der Volume 2008 ; 24 >
+    au < exists ; exists ; 2009 ; 2009 ; Notarzt Der Volume 2009 ; 25 >
+    au < exists ; exists ; 2010 ; 2010 ; Notarzt Der Volume 2010 ; 26 >
+    au < exists ; exists ; 2011 ; 2011 ; Notarzt Der Volume 2011 ; 27 >
+    au < exists ; exists ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 28 >
+    au < expected ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 >
+    au < expected ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 >
 
   }
 
@@ -2593,15 +2583,15 @@
     param[journal_id] = 10.1055/s-00000139
     comment[years] = 2006-current
 
-    au < exists ; exists ; 2006 ; 2006 ; Notfallmedizin up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Notfallmedizin up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Notfallmedizin up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Notfallmedizin up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Notfallmedizin up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Notfallmedizin up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2006 ; 2006 ; Notfallmedizin up2date Volume 2006 ; 1 >
+    au < exists ; exists ; 2007 ; 2007 ; Notfallmedizin up2date Volume 2007 ; 2 >
+    au < exists ; exists ; 2008 ; 2008 ; Notfallmedizin up2date Volume 2008 ; 3 >
+    au < exists ; exists ; 2009 ; 2009 ; Notfallmedizin up2date Volume 2009 ; 4 >
+    au < exists ; exists ; 2010 ; 2010 ; Notfallmedizin up2date Volume 2010 ; 5 >
+    au < exists ; exists ; 2011 ; 2011 ; Notfallmedizin up2date Volume 2011 ; 6 >
+    au < exists ; exists ; 2012 ; 2012 ; Notfallmedizin up2date Volume 2012 ; 7 >
+    au < expected ; exists ; 2013 ; 2013 ; Notfallmedizin up2date Volume 2013 ; 8 >
+    au < expected ; exists ; 2014 ; 2014 ; Notfallmedizin up2date Volume 2014 ; 9 >
 
   }
 
@@ -2616,19 +2606,19 @@
     param[journal_id] = 10.1055/s-00000045
     comment[years] = 2002-current
 
-    au < exists ; exists ; 2002 ; 2002 ; Nuklearmediziner Der Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Nuklearmediziner Der Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Nuklearmediziner Der Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Nuklearmediziner Der Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Nuklearmediziner Der Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Nuklearmediziner Der Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Nuklearmediziner Der Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Nuklearmediziner Der Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Nuklearmediziner Der Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Nuklearmediziner Der Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Nuklearmediziner Der Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Nuklearmediziner Der Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Nuklearmediziner Der Volume 2014 ; 0 >
+    au < exists ; exists ; 2002 ; 2002 ; Nuklearmediziner Der Volume 2002 ; 25 >
+    au < exists ; exists ; 2003 ; 2003 ; Nuklearmediziner Der Volume 2003 ; 26 >
+    au < exists ; exists ; 2004 ; 2004 ; Nuklearmediziner Der Volume 2004 ; 27 >
+    au < exists ; exists ; 2005 ; 2005 ; Nuklearmediziner Der Volume 2005 ; 28 >
+    au < exists ; exists ; 2006 ; 2006 ; Nuklearmediziner Der Volume 2006 ; 29 >
+    au < exists ; exists ; 2007 ; 2007 ; Nuklearmediziner Der Volume 2007 ; 30 >
+    au < exists ; exists ; 2008 ; 2008 ; Nuklearmediziner Der Volume 2008 ; 31 >
+    au < exists ; exists ; 2009 ; 2009 ; Nuklearmediziner Der Volume 2009 ; 32 >
+    au < exists ; exists ; 2010 ; 2010 ; Nuklearmediziner Der Volume 2010 ; 33 >
+    au < exists ; exists ; 2011 ; 2011 ; Nuklearmediziner Der Volume 2011 ; 34 >
+    au < exists ; exists ; 2012 ; 2012 ; Nuklearmediziner Der Volume 2012 ; 35 >
+    au < expected ; exists ; 2013 ; 2013 ; Nuklearmediziner Der Volume 2013 ; 36 >
+    au < expected ; exists ; 2014 ; 2014 ; Nuklearmediziner Der Volume 2014 ; 37 >
 
   }
 
@@ -2643,21 +2633,21 @@
     param[journal_id] = 10.1055/s-00000046
     comment[years] = 2000-current
 
-    au < exists ; exists ; 2000 ; 2000 ; OP-Journal Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; OP-Journal Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; OP-Journal Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; OP-Journal Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; OP-Journal Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; OP-Journal Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; OP-Journal Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; OP-Journal Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; OP-Journal Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; OP-Journal Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 0 >
+    au < exists ; exists ; 2000 ; 2000 ; OP-Journal Volume 2000 ; 16 >
+    au < exists ; exists ; 2001 ; 2001 ; OP-Journal Volume 2001 ; 17 >
+    au < exists ; exists ; 2002 ; 2002 ; OP-Journal Volume 2002 ; 18 >
+    au < exists ; exists ; 2003 ; 2003 ; OP-Journal Volume 2003 ; 19 >
+    au < exists ; exists ; 2004 ; 2004 ; OP-Journal Volume 2004 ; 20 >
+    au < exists ; exists ; 2005 ; 2005 ; OP-Journal Volume 2005 ; 21 >
+    au < exists ; exists ; 2006 ; 2006 ; OP-Journal Volume 2006 ; 22 >
+    au < exists ; exists ; 2007 ; 2007 ; OP-Journal Volume 2007 ; 23 >
+    au < exists ; exists ; 2008 ; 2008 ; OP-Journal Volume 2008 ; 24 >
+    au < exists ; exists ; 2009 ; 2009 ; OP-Journal Volume 2009 ; 25 >
+    au < exists ; exists ; 2010 ; 2010 ; OP-Journal Volume 2010 ; 26 >
+    au < exists ; exists ; 2011 ; 2011 ; OP-Journal Volume 2011 ; 27 >
+    au < exists ; exists ; 2012 ; 2012 ; OP-Journal Volume 2012 ; 28 >
+    au < expected ; exists ; 2013 ; 2013 ; OP-Journal Volume 2013 ; 29 >
+    au < expected ; exists ; 2014 ; 2014 ; OP-Journal Volume 2014 ; 30 >
 
   }
 
@@ -2690,15 +2680,15 @@
     param[journal_id] = 10.1055/s-00000132
     comment[years] = 2006-current
 
-    au < exists ; exists ; 2006 ; 2006 ; Orthopädie und Unfallchirurgie up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Orthopädie und Unfallchirurgie up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Orthopädie und Unfallchirurgie up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2006 ; 2006 ; Orthopädie und Unfallchirurgie up2date Volume 2006 ; 01 >
+    au < exists ; exists ; 2007 ; 2007 ; Orthopädie und Unfallchirurgie up2date Volume 2007 ; 02 >
+    au < exists ; exists ; 2008 ; 2008 ; Orthopädie und Unfallchirurgie up2date Volume 2008 ; 03 >
+    au < exists ; exists ; 2009 ; 2009 ; Orthopädie und Unfallchirurgie up2date Volume 2009 ; 04 >
+    au < exists ; exists ; 2010 ; 2010 ; Orthopädie und Unfallchirurgie up2date Volume 2010 ; 05 >
+    au < exists ; exists ; 2011 ; 2011 ; Orthopädie und Unfallchirurgie up2date Volume 2011 ; 06 >
+    au < exists ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie up2date Volume 2012 ; 07 >
+    au < expected ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie up2date Volume 2013 ; 08 >
+    au < expected ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie up2date Volume 2014 ; 07 >
 
   }
 
@@ -2714,15 +2704,15 @@
     param[journal_id] = 10.1055/s-00000121
     comment[years] = 2003-current
 
-    au < exists ; exists ; 2003 ; 2003 ; Orthopedic Trauma Directions Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Orthopedic Trauma Directions Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Orthopedic Trauma Directions Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Orthopedic Trauma Directions Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 0 >
+    au < exists ; exists ; 2003 ; 2003 ; Orthopedic Trauma Directions Volume 2003 ; 01 >
+    au < exists ; exists ; 2004 ; 2004 ; Orthopedic Trauma Directions Volume 2004 ; 02 >
+    au < exists ; exists ; 2005 ; 2005 ; Orthopedic Trauma Directions Volume 2005 ; 03 >
+    au < exists ; exists ; 2006 ; 2006 ; Orthopedic Trauma Directions Volume 2006 ; 04 >
+    au < exists ; exists ; 2007 ; 2007 ; Orthopedic Trauma Directions Volume 2007 ; 05 >
+    au < exists ; exists ; 2008 ; 2008 ; Orthopedic Trauma Directions Volume 2008 ; 06 >
+    au < exists ; exists ; 2009 ; 2009 ; Orthopedic Trauma Directions Volume 2009 ; 07 >
+    au < exists ; exists ; 2010 ; 2010 ; Orthopedic Trauma Directions Volume 2010 ; 08 >
+    au < exists ; exists ; 2011 ; 2011 ; Orthopedic Trauma Directions Volume 2011 ; 09 >
     au < exists ; exists ; 2012 ; 2012 ; Orthopedic Trauma Directions Volume 2012 ; 0 >
     au < expected ; exists ; 2013 ; 2013 ; Orthopedic Trauma Directions Volume 2013 ; 0 >
     au < expected ; exists ; 2014 ; 2014 ; Orthopedic Trauma Directions Volume 2014 ; 0 >
@@ -2740,12 +2730,12 @@
     param[journal_id] = 10.1055/s-00000048
     comment[years] = 2002-2007
 
-    au < exists ; exists ; 2002 ; 2002 ; Osteosynthesis & Trauma Care Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Osteosynthesis & Trauma Care Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Osteosynthesis & Trauma Care Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Osteosynthesis & Trauma Care Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 2007 ; 0 >
+    au < exists ; exists ; 2002 ; 2002 ; Osteosynthesis & Trauma Care Volume 2002 ; 10 >
+    au < exists ; exists ; 2003 ; 2003 ; Osteosynthesis & Trauma Care Volume 2003 ; 11 >
+    au < exists ; exists ; 2004 ; 2004 ; Osteosynthesis & Trauma Care Volume 2004 ; 12 >
+    au < exists ; exists ; 2005 ; 2005 ; Osteosynthesis & Trauma Care Volume 2005 ; 13 >
+    au < exists ; exists ; 2006 ; 2006 ; Osteosynthesis & Trauma Care Volume 2006 ; 14 >
+    au < exists ; exists ; 2007 ; 2007 ; Osteosynthesis & Trauma Care Volume 2007 ; 15 >
     au < exists ; exists ; 2008 ; 2008 ; Osteosynthesis & Trauma Care Volume 2008 ; 0 >
     au < exists ; exists ; 2009 ; 2009 ; Osteosynthesis & Trauma Care Volume 2009 ; 0 >
     au < exists ; exists ; 2010 ; 2010 ; Osteosynthesis & Trauma Care Volume 2010 ; 0 >
@@ -2767,13 +2757,13 @@
     param[journal_id] = 10.1055/s-00000047
     comment[years] = 2001
 
-    au < exists ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 0 >
-    au < exists ; exists ; 2002 ; 2002 ; Osteosynthese International Volume 2002 ; 0 >
-    au < exists ; exists ; 2003 ; 2003 ; Osteosynthese International Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; Osteosynthese International Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; Osteosynthese International Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; Osteosynthese International Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Osteosynthese International Volume 2007 ; 0 >
+    au < exists ; exists ; 2001 ; 2001 ; Osteosynthese International Volume 2001 ; 9 >
+    au < exists ; exists ; 2002 ; 2002 ; Osteosynthese International Volume 2002 ; 10 >
+    au < exists ; exists ; 2003 ; 2003 ; Osteosynthese International Volume 2003 ; 11 >
+    au < exists ; exists ; 2004 ; 2004 ; Osteosynthese International Volume 2004 ; 12 >
+    au < exists ; exists ; 2005 ; 2005 ; Osteosynthese International Volume 2005 ; 13 >
+    au < exists ; exists ; 2006 ; 2006 ; Osteosynthese International Volume 2006 ; 14 >
+    au < exists ; exists ; 2007 ; 2007 ; Osteosynthese International Volume 2007 ; 15 >
     au < exists ; exists ; 2008 ; 2008 ; Osteosynthese International Volume 2008 ; 0 >
     au < exists ; exists ; 2009 ; 2009 ; Osteosynthese International Volume 2009 ; 0 >
     au < exists ; exists ; 2010 ; 2010 ; Osteosynthese International Volume 2010 ; 0 >
@@ -2795,15 +2785,15 @@
     param[journal_id] = 10.1055/s-00000140
     comment[years] = 2006-current
 
-    au < exists ; exists ; 2006 ; 2006 ; Pädiatrie up2date Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; Pädiatrie up2date Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; Pädiatrie up2date Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 0 >
+    au < exists ; exists ; 2006 ; 2006 ; Pädiatrie up2date Volume 2006 ; 1 >
+    au < exists ; exists ; 2007 ; 2007 ; Pädiatrie up2date Volume 2007 ; 2 >
+    au < exists ; exists ; 2008 ; 2008 ; Pädiatrie up2date Volume 2008 ; 3 >
+    au < exists ; exists ; 2009 ; 2009 ; Pädiatrie up2date Volume 2009 ; 4 >
+    au < exists ; exists ; 2010 ; 2010 ; Pädiatrie up2date Volume 2010 ; 5 >
+    au < exists ; exists ; 2011 ; 2011 ; Pädiatrie up2date Volume 2011 ; 6 >
+    au < exists ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
+    au < expected ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
+    au < expected ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
 
   }
 
@@ -2818,6 +2808,7 @@
     >
     param[journal_id] = 10.1055/s-00000051
     comment[years] = 1987-2001
+    comment[title] = doi does not match the AUs below
 
     au < exists ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1987 ; 0 >
     au < exists ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 1988 ; 0 >
@@ -2848,18 +2839,18 @@
     param[journal_id] = 10.1055/s-00000155
     comment[years] = 2003-current
 
-    au < exists ; exists ; 2003 ; 2003 ; pferde spiegel Volume 2003 ; 0 >
-    au < exists ; exists ; 2004 ; 2004 ; pferde spiegel Volume 2004 ; 0 >
-    au < exists ; exists ; 2005 ; 2005 ; pferde spiegel Volume 2005 ; 0 >
-    au < exists ; exists ; 2006 ; 2006 ; pferde spiegel Volume 2006 ; 0 >
-    au < exists ; exists ; 2007 ; 2007 ; pferde spiegel Volume 2007 ; 0 >
-    au < exists ; exists ; 2008 ; 2008 ; pferde spiegel Volume 2008 ; 0 >
-    au < exists ; exists ; 2009 ; 2009 ; pferde spiegel Volume 2009 ; 0 >
-    au < exists ; exists ; 2010 ; 2010 ; pferde spiegel Volume 2010 ; 0 >
-    au < exists ; exists ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 0 >
-    au < exists ; exists ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 0 >
+    au < exists ; exists ; 2003 ; 2003 ; pferde spiegel Volume 2003 ; 6 >
+    au < exists ; exists ; 2004 ; 2004 ; pferde spiegel Volume 2004 ; 7 >
+    au < exists ; exists ; 2005 ; 2005 ; pferde spiegel Volume 2005 ; 8 >
+    au < exists ; exists ; 2006 ; 2006 ; pferde spiegel Volume 2006 ; 9 >
+    au < exists ; exists ; 2007 ; 2007 ; pferde spiegel Volume 2007 ; 10 >
+    au < exists ; exists ; 2008 ; 2008 ; pferde spiegel Volume 2008 ; 11 >
+    au < exists ; exists ; 2009 ; 2009 ; pferde spiegel Volume 2009 ; 12 >
+    au < exists ; exists ; 2010 ; 2010 ; pferde spiegel Volume 2010 ; 13 >
+    au < exists ; exists ; 2011 ; 2011 ; pferde spiegel Volume 2011 ; 14 >
+    au < exists ; exists ; 2012 ; 2012 ; pferde spiegel Volume 2012 ; 15 >
+    au < expected ; exists ; 2013 ; 2013 ; pferde spiegel Volume 2013 ; 16 >
+    au < expected ; exists ; 2014 ; 2014 ; pferde spiegel Volume 2014 ; 17 >
 
   }
 
