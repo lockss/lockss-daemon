@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.4 2013-12-21 02:13:59 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.5 2013-12-23 20:38:50 etenbrink Exp $
  */
 
 /*
@@ -109,7 +109,6 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("scraped_doi", MetadataField.FIELD_DOI);
       tagMap.put("scraped_title", MetadataField.FIELD_ARTICLE_TITLE);
-      tagMap.put("scraped_publication_date", MetadataField.FIELD_DATE);
     }
     
     private static Pattern whiteSpacePat = Pattern.compile("\\s+");
@@ -130,6 +129,8 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
       if ((am.getRaw("citation_doi") == null) || 
           (am.getRaw("citation_title") == null)) {
         
+        // TODO investigate using Jsoup to extract the DOI and title
+        // rather than read the file
         String colContent="";
         // get the content
         BufferedReader bReader = new BufferedReader(openForReading(cu));
