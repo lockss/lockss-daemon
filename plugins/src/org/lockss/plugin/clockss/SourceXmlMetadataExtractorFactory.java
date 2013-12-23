@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.6 2013-12-20 19:32:08 thib_gc Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.7 2013-12-23 19:19:57 alexandraohlson Exp $
  */
 
 /*
@@ -209,7 +209,7 @@ implements FileMetadataExtractorFactory {
                 schemaHelper.getArticleNode(), 
                 schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
 
-        // 3. Consolidate identical records based on DeDuplicationXPath
+        // 3. Consolidate identical records based on DeDuplicationXPathKey
         // consolidating as specified by the consolidateRecords() method
         String deDupKey = schemaHelper.getDeDuplicationXPathKey(); 
         boolean deDuping = (!StringUtils.isEmpty(deDupKey));
@@ -257,19 +257,22 @@ implements FileMetadataExtractorFactory {
      *  information <br/>
      *  note - if two versions of the same item are in two different XML files
      *  they won't get consolidated. <br/>
-     *  If the deDuplicationXPath is null or empty, this method isn't called
+     *  If the deDuplicationXPath is null or empty, this method isn't called.
+     *  A child plugin might override this method to provide some other type of
+     *  deDuplication. They would still need to set a deDuplicationXPathKey
+     *  to trigger the call to the method..
      * @param schemaHelper for subroutines to access schema information
      * @param deDupRawKey - the raw metadata key on whose values to de dup
      * @param uniqueRecordMap - a String key, to ArticleMetadata map for storing
      * the dedup'd records
-     * @param thisAM - determine if this AM is unique or a duplicate 
+     * @param thisAM - determine if this AM is unique or a duplicate
      */
     protected void updateRecordMap(SourceXmlMetadataExtractorHelper schemaHelper,
         String deDupRawKey,
         Map<String, ArticleMetadata> uniqueRecordMap,
         ArticleMetadata thisAM) {
 
-      // The deDupXPath is neither null nor empty if we are in this method
+      // The deDuplicationXPathKey is neither null nor empty if we are in this method
       String deDupRawVal = thisAM.getRaw(deDupRawKey); 
 
       log.debug3("updateRecordMap deDupRawVal = " + deDupRawVal);
