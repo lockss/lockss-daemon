@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponArticleIteratorFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: BaseAtyponArticleIteratorFactory.java,v 1.6 2013-12-23 18:30:45 alexandraohlson Exp $
  */
 
 /*
@@ -66,6 +66,9 @@ implements ArticleIteratorFactory,
   //  <atyponbase>.org/doi/suppl/10.3366/drs.2011.0010 (page from which you can access supplementary info)
   //  <atyponbase>.org/doi/ref/10.3366/drs.2011.0010  (page with references on it)
   //
+  // note: at least one publisher has a doi suffix that includes a "/", eg:
+  // <base>/doi/pdfplus/10.1093/wsr/wsr0023
+  //
   //  There is the possibility of downloaded citation information which will get normalized to look something like this:
   //  <atyponbase>.org/action/downloadCitation?doi=<partone>%2F<parttwo>&format=ris&include=cit
   //
@@ -75,10 +78,11 @@ implements ArticleIteratorFactory,
     SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
     
     // various aspects of an article
-    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
-    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^/]+)$", Pattern.CASE_INSENSITIVE);
+    // DOI's can have "/"s in the suffix
+    final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
+    final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?^&]+)$", Pattern.CASE_INSENSITIVE);
 
     // how to change from one form (aspect) of article to another
     final String HTML_REPLACEMENT = "/doi/full/$1/$2";
@@ -91,6 +95,11 @@ implements ArticleIteratorFactory,
     final String SUPPL_REPLACEMENT = "/doi/suppl/$1/$2";
     // link extractor used forms to pick up this URL
     
+    /* TODO: Note that if the DOI suffix has a "/" this will not work because the 
+     * slashes that are part of the DOI will not get encoded so they don't
+     * match the CU.  Waiting for builder support for smarter replacement
+     * Taylor & Francis works around this because it has current need
+     */
     // After normalization, the citation information will live at this URL if it exists
     final String RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=cit";
 
@@ -99,7 +108,7 @@ implements ArticleIteratorFactory,
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    // The orer in which these aspects are added is important. They determine which will trigger
+    // The order in which these aspects are added is important. They determine which will trigger
     // the ArticleFiles and if you are only counting articles (not pulling metadata) then the 
     // lower aspects aren't looked for, once you get a match.
 

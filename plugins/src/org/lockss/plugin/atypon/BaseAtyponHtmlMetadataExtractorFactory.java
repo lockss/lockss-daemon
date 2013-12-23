@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.5 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: BaseAtyponHtmlMetadataExtractorFactory.java,v 1.6 2013-12-23 18:30:45 alexandraohlson Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class BaseAtyponHtmlMetadataExtractorFactory
         /*matches() is anchored so must create complete pattern or else use .finds() */
         /* URL is "<base>/doi/(abs|full)/<doi1st>/<doi2nd> */
         base_url = cu.getArchivalUnit().getConfiguration().get("base_url");
-        String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^/]+)$";
+        String patternString = "^" + base_url + "doi/[^/]+/([^/]+)/([^?^&]+)$";
         Pattern METADATA_PATTERN = Pattern.compile(patternString, Pattern.CASE_INSENSITIVE);
         String url = cu.getUrl();
         Matcher mat = METADATA_PATTERN.matcher(url);

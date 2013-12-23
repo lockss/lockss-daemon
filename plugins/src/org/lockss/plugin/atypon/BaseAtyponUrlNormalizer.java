@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponUrlNormalizer.java,v 1.4 2013-08-23 20:20:40 alexandraohlson Exp $
+ * $Id: BaseAtyponUrlNormalizer.java,v 1.5 2013-12-23 18:30:45 alexandraohlson Exp $
  */
 /*
  Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,7 @@ import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 
 /*
@@ -96,7 +97,8 @@ public class BaseAtyponUrlNormalizer implements UrlNormalizer {
        StringBuilder new_url = new StringBuilder(url.substring(0,qmark));
       // add on DOI arg - this must be here
       if (argMap.containsKey(DOI_ARG)) {
-        new_url.append("?" + DOI_ARG + "=" + argMap.get(DOI_ARG));
+        //DOI's themselves might have "/" and this must be uri encoded
+        new_url.append("?" + DOI_ARG + "=" + StringUtil.replaceString(argMap.get(DOI_ARG), "/", "%2F"));
       } 
       // add on format arg
       if (argMap.containsKey(FORMAT_ARG)) {

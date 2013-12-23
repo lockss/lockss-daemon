@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisArticleIteratorFactory.java,v 1.1 2013-08-15 19:25:27 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisArticleIteratorFactory.java,v 1.2 2013-12-23 18:30:45 alexandraohlson Exp $
  */
 
 /*
@@ -141,11 +141,12 @@ public class TestTaylorAndFrancisArticleIteratorFactory extends ArticleIteratorT
      */
 
     // turn xxfile.html in to both abstracts and fulls and bad URLs
+    // make DOI include a slash in suffix
     String pat1 = "branch(\\d+)/(\\d+)file\\.html";
-    String repAbs = "doi/abs/10.1137/b$1.art$2";
-    String repFull = "doi/full/10.1137/b$1.art$2";
-    String repBad1 = "doi/abs/10.1137/null?sequence=b$1.art$2%2Fproduction";
-    String repBad2 = "doi/full/10.1137/null?sequence=b$1.art$2%2Fproduction";
+    String repAbs = "doi/abs/10.1137/b$1/art$2";
+    String repFull = "doi/full/10.1137/b$1/art$2";
+    String repBad1 = "doi/abs/10.1137/null?sequence=b$1%2Fart$2%2Fproduction";
+    String repBad2 = "doi/full/10.1137/null?sequence=b$1%2Fart$2%2Fproduction";
 
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, repAbs);
     PluginTestUtil.copyAu(sau, au, ".*\\.html$", pat1, repFull);
@@ -161,7 +162,7 @@ public class TestTaylorAndFrancisArticleIteratorFactory extends ArticleIteratorT
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       count ++;
-      //log.info(af.toString());
+      log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
         ++countFullText;
