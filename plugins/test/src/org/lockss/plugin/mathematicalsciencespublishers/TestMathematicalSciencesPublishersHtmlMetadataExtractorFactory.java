@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.5 2013-12-21 04:29:43 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.6 2013-12-23 04:08:03 etenbrink Exp $
  */
 
 /*
@@ -262,28 +262,86 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     assertNotNull(md.get(MetadataField.FIELD_DOI));
   }
   
+  String psuedoContent = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n" + 
+  		"    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n" + 
+  		"\n" + 
+  		"<html xmlns=\"http://www.w3.org/1999/xhtml\">\n" + 
+  		"<head>\n" + 
+  		"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n" + 
+  		"  <meta name=\"citation_title\" content=\n" + 
+  		"  \"The Good Title\" />\n" + 
+  		"  <meta name=\"citation_journal_title\" content=\n" + 
+  		"  \"Algebra &amp; Number Theory\" />\n" + 
+  		"  <meta name=\"citation_volume\" content=\"0\" />\n" + 
+  		"  <meta name=\"citation_issue\" content=\"0\" />\n" + 
+  		"  <meta name=\"citation_firstpage\" content=\"0\" />\n" + 
+  		"  <meta name=\"citation_lastpage\" content=\"99\" />\n" + 
+  		"  <meta name=\"citation_publication_date\" content=\"2012-08-15\" />\n" + 
+  		"  <meta name=\"citation_pdf_url\" content=\n" + 
+  		"  \"/ant/2012/0/ant-v0-n0-p01-s.pdf\" />\n" + 
+  		"  <title>Algebra &amp; Number Theory Vol. 0, No. 0, 2012</title>\n" + 
+  		"</head>\n" + 
+  		"\n" + 
+  		"<body onload=\"javascript:void(0);\">\n" + 
+  		"  <table cellspacing=\"0\" cellpadding=\"0\" class=\"main\" id=\"main-area\">\n" + 
+  		"    <tr>\n" + 
+  		"      <td class=\"activity-column\" id=\"activity-area\">\n" + 
+  		"      </td>\n" + 
+  		"      <td class=\"content-column\" id=\"content-area\">\n" + 
+  		"        <table cellspacing=\"0\" cellpadding=\"0\">\n" + 
+  		"          <tr>\n" + 
+  		"            <td class=\"title-area\">\n" + 
+  		"              <a class=\"title\" href=\"/ant/2012/0/ant-v0-n0-p01-s.pdf\">The\n" + 
+  		"              Good Title</a>\n" + 
+  		"              <h3>An Author</h3>\n" + 
+  		"            </td>\n" + 
+  		"          </tr>\n" + 
+  		"          <tr>\n" + 
+  		"            <td>\n" + 
+  		"              <div class=\"page-numbers\">\n" + 
+  		"                Vol. 0 (2012), No. 0, 0–99\n" + 
+  		"              </div>\n" + 
+  		"            </td>\n" + 
+  		"          </tr>\n" + 
+  		"          <tr>\n" + 
+  		"            <td>\n" + 
+  		"              <div class=\"paper-doi\">\n" + 
+  		"                DOI: <a href=\n" + 
+  		"                \"http://dx.doi.org/10.2140/ant.2012.0.1\">10.2140/ant.2012.0.1</a>\n" + 
+  		"              </div>\n" + 
+  		"            </td>\n" + 
+  		"          </tr>\n" + 
+  		"        </table>\n" + 
+  		"        <table cellspacing=\"0\" cellpadding=\"0\" class=\"article\">\n" + 
+  		"          <tr>\n" + 
+  		"            <td class=\"article-area\">\n" + 
+  		"              <h5>Abstract</h5>\n" + 
+  		"            </td>\n" + 
+  		"          </tr>\n" + 
+  		"          <tr>\n" + 
+  		"            <td class=\"article-area\">\n" + 
+  		"            \n" + 
+  		"<p class=\"noindent\">some teXt we do not need\n" + 
+  		" </p>\n" + 
+  		"            </td>\n" + 
+  		"          </tr>\n" + 
+  		"        </table>\n" + 
+  		"      </td>\n" + 
+  		"    </tr>\n" + 
+  		"  </table>\n" + 
+  		"</body>\n" + 
+  		"</html>\n";
+  
   // test contentType application/ 
   public void testMspXmlMetaContent() throws Exception {
     
-    InputStream input = null;
-    if (true) {
-      return;
-    }
-    String xmlContent = "";
-    try {
-      input = getResourceAsStream("/org/lockss/plugin/mathematicalsciencespublishers/p01.xhtml");
-      xmlContent = IOUtils.toString(input);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-
-    String goodTitle = "The Chevalley–Shephard–Todd theorem for finite linearly reductive group schemes";
+    String goodTitle = "The Good Title";
     
     String url = "http://www.example.com/ant/2012/6-1/p01.xhtml";
     MockCachedUrl cu = new MockCachedUrl(url, hau);
     
-    cu.setContent(xmlContent);
-    cu.setContentSize(xmlContent.length());
+    cu.setContent(psuedoContent);
+    cu.setContentSize(psuedoContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xhtml+xml");
     FileMetadataExtractor me = 
         new MathematicalSciencesPublishersHtmlMetadataExtractorFactory.
@@ -297,7 +355,6 @@ public class TestMathematicalSciencesPublishersHtmlMetadataExtractorFactory exte
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
   }
   
-
   
   /**
    * Inner class that where a number of Archival Units can be created
