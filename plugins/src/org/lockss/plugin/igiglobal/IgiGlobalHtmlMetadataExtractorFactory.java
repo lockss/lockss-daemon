@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.3 2013-04-04 20:41:24 alexandraohlson Exp $
+ * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.4 2013-12-23 21:22:54 etenbrink Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ import org.lockss.plugin.*;
  */
 
 public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("IgiGlobalHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(IgiGlobalHtmlMetadataExtractorFactory.class);
 
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
 							   String contentType)
@@ -91,7 +91,7 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_authors",
               new MetadataField(MetadataField.FIELD_AUTHOR,
@@ -128,18 +128,16 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
       tagMap.put("dc.rights", MetadataField.DC_FIELD_RIGHTS);
       tagMap.put("dc.source", MetadataField.DC_FIELD_SOURCE);
     }
-
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-	throws IOException {
+        throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       // Since we know it and since Metadata requires it, set it manually if necessary
-      if (am.get(MetadataField.FIELD_PUBLISHER) == null) {
-        am.put(MetadataField.FIELD_PUBLISHER, "IGI Global");
-      }
+      am.putIfBetter(MetadataField.FIELD_PUBLISHER, "IGI Global");
       return am;
     }
   }
-
+  
 }
