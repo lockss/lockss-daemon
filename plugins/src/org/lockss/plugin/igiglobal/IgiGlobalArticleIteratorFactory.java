@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.11 2013-10-09 23:14:21 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.12 2013-12-23 21:20:21 etenbrink Exp $
  */
 
 /*
@@ -65,10 +65,15 @@ public class IgiGlobalArticleIteratorFactory
       "\"%sgateway/article/\", base_url"; // params from tdb file corresponding to AU
   protected static final String BOOK_ROOT_TEMPLATE =
       "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
-
+  
   protected static final String PATTERN_TEMPLATE =
       "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
-
+  
+  protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+      "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "<iframe[^>]* src=\"/(pdf[.]aspx?[^\"]+)\"", Pattern.CASE_INSENSITIVE);
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -83,9 +88,6 @@ public class IgiGlobalArticleIteratorFactory
 
   protected static class IgiGlobalArticleIterator extends SubTreeArticleIterator {
 
-    protected Pattern ABSTRACT_PATTERN = Pattern.compile(
-        "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
-    
     public IgiGlobalArticleIterator(ArchivalUnit au,
                                      SubTreeArticleIterator.Spec spec) {
       super(au, spec);
@@ -145,12 +147,10 @@ public class IgiGlobalArticleIteratorFactory
               pdfCu.getUnfilteredInputStream(), pdfCu.getEncoding())
               );
           Matcher matcher;
-          Pattern patternPdf = Pattern.compile(
-              "<iframe[^>]* src=\"/(pdf.aspx?[^\"]+)\"", Pattern.CASE_INSENSITIVE);
           
           // go through the cached URL content line by line
           for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
-            matcher = patternPdf.matcher(line);
+            matcher = PDF_PATTERN.matcher(line);
             if (matcher.find()) {
               String baseUrl = au.getConfiguration().get("base_url");
               String pdfUrl = matcher.group(1);
