@@ -1,5 +1,5 @@
 /*
- * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.7 2013-12-10 22:55:02 thib_gc Exp $
+ * $Id: TestIgiGlobalHtmlFilterFactory.java,v 1.8 2013-12-23 21:16:54 etenbrink Exp $
  */
 
 /*
@@ -54,12 +54,11 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   				"<img style=\"width: 100px; src=\"http://www.igi-global.com/Images/serulogo.gif\">" + 
   				"delivers excellent content efficiently  <br>- Cheryl LaGuardia,<br><br>Research Librarian, Harvard University<br><br>" +
   				"</div>\n" +
-  			"</div>\n" +
+  			"</div> \n" +
   		"</td>";
   private static final String sidebarHtmlFiltered =
-		"<td valign=\"top\" class=\"InnerRight\">\n" +
-  			"\n" +
-  		"</td>";
+		"<td valign=\"top\" class=\"InnerRight\"> " +
+		"</td>";
   
   private static final String inputKeysHtml =
 		  "<div>\n" +
@@ -71,13 +70,11 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 			  "<input id=\"__VIEWSTATE\" type=\"hidden\" value=\"/wEPDwUENTM4MQ9kFgJmD2QWAgIDEBYCHgZhY3Rpb24FQy9nYXRld2F5L2NvbnRlbnRvd25lZC9hcnRpY2xlLmFzcHg/dGl0bGVpZD01NTY1NiZhY2Nlc3N0eXBlPWluZm9zY2lkFgoCAw9kFgYCAQ8WAh4HVmlzaWJsZWgWAgIBDw8WAh4EVGV4dGVkZAICD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFci9tZW1iZXJzaGlwL2xvZ2luLmFzcHg/cmV0dXJudXJsPSUyZmdhdGV3YXklMmZjb250ZW50b3duZWQlMmZhcnRpY2xlLmFzcHglM2Z0aXRsZWlkJTNkNTU2NTYlMjZhY2Nlc3N0eXBlJTNkaW5mb3NjaWRkAgMPDxYCHwMFHi9tZW1iZXJzaGlwL2NyZWF0ZWFjY291bnQuYXNweGRkAgMPFgIfAWhkAgUPDxYCHwIFBkxPQ0tTU2RkAgkPZBYCZg9kFgQCAQ8PFgIfAgUQRS1EYXRhYm...8WAgU+Y3RsMDAkY3BoQ2VudGVyQ29udGVudCRjdGwwMCR1Y0NpdGVDb250ZW50JGxua1N1Ym1pdFRvUmVmV29ya3MFPWN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkdWNDaXRlQ29udGVudCRsbmtTdWJtaXRUb0Vhc3lCaWIFJGN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkbHN0SXN4bg88KwAKAgcUKwACZGQIAgJkBShjdGwwMCRjcGhTaWRlYmFyUmlnaHQkdG1fR2VuZXJpY0NvbnRlbnQxDxQrAAFkZAU2Y3RsMDAkdWNSZXNlYXJjaENvbGxlY3Rpb25zTmF2aWdhdGlvbiRsc3RQcm9kdWN0c093bmVkDzwrAAoBCGZkBTRjdGwwMCR1Y1Jlc2VhcmNoQ29sbGVjdGlvbnNOYXZpZ2F0aW9uJGxzdEJ1bmRsZVR5cGVzDzwrAAoBCGZkF8NmCQCZmjS6K/62J+kVNIwpJpA=\" name=\"__VIEWSTATE\">\n" +
 		  "</div>";
   private static final String inputKeysHtmlFiltered =
-		  "<div>\n" +
-			  "\n" +
-		  "</div>\n" +
-		  "<div>\n" +
-			  "<input id=\"__EVENTTARGET\" type=\"hidden\" value=\"\" name=\"__EVENTTARGET\">\n" +
-			  "<input id=\"__EVENTARGUMENT\" type=\"hidden\" value=\"\" name=\"__EVENTARGUMENT\">\n" +
-			  "\n" +
+		  "<div> " +
+		  "</div> " +
+		  "<div> " +
+			  "<input id=\"__EVENTTARGET\" type=\"hidden\" value=\"\" name=\"__EVENTTARGET\"> " +
+			  "<input id=\"__EVENTARGUMENT\" type=\"hidden\" value=\"\" name=\"__EVENTARGUMENT\"> " +
 		  "</div>";
 
   private static final String citationHtml =
@@ -98,7 +95,7 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 			  "</span>\n" +
 		  "</div>";
   private static final String citationHtmlFiltered =
-		  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span>\n";
+		  "<span id=\"citeContent\" class=\"useremail\" onclick=\"toggleOptions('citation', 'CiteContent');\"></span> ";
 
   private static final String trialImageHtml =
 		  "<p>foo</p>" +
@@ -125,10 +122,10 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
   private static final String SearchBoxHtmlFiltered = "<br>";
 
   private static final String goodHtml =
-	  "Hello\n" +
-	  "<div class=\"relatedcats\">\n" +
-		"READ MORE: <a href=\"/news/iraq\">Iraq</a>, <a href=\"/news/dick-cheney\">Dick Cheney</a>, <a href=\"/news/scooter-libby\">Scooter Libby</a>, <a href=\"/news/patrick-fitzgerald\">Patrick Fitzgerald</a>, <a href=\"/news/investigations\">Investigations</a>, <a href=\"/news/george-w-bush\">George W. Bush</a>                  </div>\n" +
-	  "Goodbye\n";
+	  "Hello " +
+	  "<div class=\"relatedcats\"> " +
+		"READ MORE: <a href=\"/news/iraq\">Iraq</a>, <a href=\"/news/dick-cheney\">Dick Cheney</a>, <a href=\"/news/scooter-libby\">Scooter Libby</a>, <a href=\"/news/patrick-fitzgerald\">Patrick Fitzgerald</a>, <a href=\"/news/investigations\">Investigations</a>, <a href=\"/news/george-w-bush\">George W. Bush</a> </div> " +
+	  "Goodbye ";
 
   private static final String javascriptHtml =
 		  "<div>\n" +
@@ -141,15 +138,15 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
 			  "<input id=\"_VIEWSTATE\" type=\"hidden\" value=\"/wEPDwUENTM4MQ9kFgJmD2QWAgIDEBYCHgZhY3Rpb24FQy9nYXRld2F5L2NvbnRlbnRvd25lZC9hcnRpY2xlLmFzcHg/dGl0bGVpZD01NTY1NiZhY2Nlc3N0eXBlPWluZm9zY2lkFgoCAw9kFgYCAQ8WAh4HVmlzaWJsZWgWAgIBDw8WAh4EVGV4dGVkZAICD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFci9tZW1iZXJzaGlwL2xvZ2luLmFzcHg/cmV0dXJudXJsPSUyZmdhdGV3YXklMmZjb250ZW50b3duZWQlMmZhcnRpY2xlLmFzcHglM2Z0aXRsZWlkJTNkNTU2NTYlMjZhY2Nlc3N0eXBlJTNkaW5mb3NjaWRkAgMPDxYCHwMFHi9tZW1iZXJzaGlwL2NyZWF0ZWFjY291bnQuYXNweGRkAgMPFgIfAWhkAgUPDxYCHwIFBkxPQ0tTU2RkAgkPZBYCZg9kFgQCAQ8PFgIfAgUQRS1EYXRhYm...8WAgU+Y3RsMDAkY3BoQ2VudGVyQ29udGVudCRjdGwwMCR1Y0NpdGVDb250ZW50JGxua1N1Ym1pdFRvUmVmV29ya3MFPWN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkdWNDaXRlQ29udGVudCRsbmtTdWJtaXRUb0Vhc3lCaWIFJGN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkbHN0SXN4bg88KwAKAgcUKwACZGQIAgJkBShjdGwwMCRjcGhTaWRlYmFyUmlnaHQkdG1fR2VuZXJpY0NvbnRlbnQxDxQrAAFkZAU2Y3RsMDAkdWNSZXNlYXJjaENvbGxlY3Rpb25zTmF2aWdhdGlvbiRsc3RQcm9kdWN0c093bmVkDzwrAAoBCGZkBTRjdGwwMCR1Y1Jlc2VhcmNoQ29sbGVjdGlvbnNOYXZpZ2F0aW9uJGxzdEJ1bmRsZVR5cGVzDzwrAAoBCGZkF8NmCQCZmjS6K/62J+kVNIwpJpA=\" name=\"__VIEWSTATE\">\n" +
 		  "</div>";
   private static final String javascriptHtmlFiltered =
-		  "<div>\n" +
-			  "<input id=\"__EVENTVALIDATIO\" type=\"hidden\" value=\"/wEWAwKM69DODwKpwbbBAgLz9t3hB0AqeZdR3lGFnROBTmBAbtw5sqoS\" name=\"__EVENTVALIDATION\">\n" +
-		  "</div>\n" +
-		  "\n" +
-		  "<div>\n" +
-			  "<input id=\"__EVENTTARGET\" type=\"hidden\" value=\"\" name=\"__EVENTTARGET\">\n" +
-			  "<input id=\"__EVENTARGUMENT\" type=\"hidden\" value=\"\" name=\"__EVENTARGUMENT\">\n" +
-			  "<input id=\"_VIEWSTATE\" type=\"hidden\" value=\"/wEPDwUENTM4MQ9kFgJmD2QWAgIDEBYCHgZhY3Rpb24FQy9nYXRld2F5L2NvbnRlbnRvd25lZC9hcnRpY2xlLmFzcHg/dGl0bGVpZD01NTY1NiZhY2Nlc3N0eXBlPWluZm9zY2lkFgoCAw9kFgYCAQ8WAh4HVmlzaWJsZWgWAgIBDw8WAh4EVGV4dGVkZAICD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFci9tZW1iZXJzaGlwL2xvZ2luLmFzcHg/cmV0dXJudXJsPSUyZmdhdGV3YXklMmZjb250ZW50b3duZWQlMmZhcnRpY2xlLmFzcHglM2Z0aXRsZWlkJTNkNTU2NTYlMjZhY2Nlc3N0eXBlJTNkaW5mb3NjaWRkAgMPDxYCHwMFHi9tZW1iZXJzaGlwL2NyZWF0ZWFjY291bnQuYXNweGRkAgMPFgIfAWhkAgUPDxYCHwIFBkxPQ0tTU2RkAgkPZBYCZg9kFgQCAQ8PFgIfAgUQRS1EYXRhYm...8WAgU+Y3RsMDAkY3BoQ2VudGVyQ29udGVudCRjdGwwMCR1Y0NpdGVDb250ZW50JGxua1N1Ym1pdFRvUmVmV29ya3MFPWN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkdWNDaXRlQ29udGVudCRsbmtTdWJtaXRUb0Vhc3lCaWIFJGN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkbHN0SXN4bg88KwAKAgcUKwACZGQIAgJkBShjdGwwMCRjcGhTaWRlYmFyUmlnaHQkdG1fR2VuZXJpY0NvbnRlbnQxDxQrAAFkZAU2Y3RsMDAkdWNSZXNlYXJjaENvbGxlY3Rpb25zTmF2aWdhdGlvbiRsc3RQcm9kdWN0c093bmVkDzwrAAoBCGZkBTRjdGwwMCR1Y1Jlc2VhcmNoQ29sbGVjdGlvbnNOYXZpZ2F0aW9uJGxzdEJ1bmRsZVR5cGVzDzwrAAoBCGZkF8NmCQCZmjS6K/62J+kVNIwpJpA=\" name=\"__VIEWSTATE\">\n" +
+		  "<div> " +
+			  "<input id=\"__EVENTVALIDATIO\" type=\"hidden\" value=\"/wEWAwKM69DODwKpwbbBAgLz9t3hB0AqeZdR3lGFnROBTmBAbtw5sqoS\" name=\"__EVENTVALIDATION\"> " +
+		  "</div> " +
+		  "<div> " +
+			  "<input id=\"__EVENTTARGET\" type=\"hidden\" value=\"\" name=\"__EVENTTARGET\"> " +
+			  "<input id=\"__EVENTARGUMENT\" type=\"hidden\" value=\"\" name=\"__EVENTARGUMENT\"> " +
+			  "<input id=\"_VIEWSTATE\" type=\"hidden\" value=\"/wEPDwUENTM4MQ9kFgJmD2QWAgIDEBYCHgZhY3Rpb24FQy9nYXRld2F5L2NvbnRlbnRvd25lZC9hcnRpY2xlLmFzcHg/dGl0bGVpZD01NTY1NiZhY2Nlc3N0eXBlPWluZm9zY2lkFgoCAw9kFgYCAQ8WAh4HVmlzaWJsZWgWAgIBDw8WAh4EVGV4dGVkZAICD2QWBAIBDw8WAh4LTmF2aWdhdGVVcmwFci9tZW1iZXJzaGlwL2xvZ2luLmFzcHg/cmV0dXJudXJsPSUyZmdhdGV3YXklMmZjb250ZW50b3duZWQlMmZhcnRpY2xlLmFzcHglM2Z0aXRsZWlkJTNkNTU2NTYlMjZhY2Nlc3N0eXBlJTNkaW5mb3NjaWRkAgMPDxYCHwMFHi9tZW1iZXJzaGlwL2NyZWF0ZWFjY291bnQuYXNweGRkAgMPFgIfAWhkAgUPDxYCHwIFBkxPQ0tTU2RkAgkPZBYCZg9kFgQCAQ8PFgIfAgUQRS1EYXRhYm...8WAgU+Y3RsMDAkY3BoQ2VudGVyQ29udGVudCRjdGwwMCR1Y0NpdGVDb250ZW50JGxua1N1Ym1pdFRvUmVmV29ya3MFPWN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkdWNDaXRlQ29udGVudCRsbmtTdWJtaXRUb0Vhc3lCaWIFJGN0bDAwJGNwaENlbnRlckNvbnRlbnQkY3RsMDAkbHN0SXN4bg88KwAKAgcUKwACZGQIAgJkBShjdGwwMCRjcGhTaWRlYmFyUmlnaHQkdG1fR2VuZXJpY0NvbnRlbnQxDxQrAAFkZAU2Y3RsMDAkdWNSZXNlYXJjaENvbGxlY3Rpb25zTmF2aWdhdGlvbiRsc3RQcm9kdWN0c093bmVkDzwrAAoBCGZkBTRjdGwwMCR1Y1Jlc2VhcmNoQ29sbGVjdGlvbnNOYXZpZ2F0aW9uJGxzdEJ1bmRsZVR5cGVzDzwrAAoBCGZkF8NmCQCZmjS6K/62J+kVNIwpJpA=\" name=\"__VIEWSTATE\"> " +
 		  "</div>";
+  
   public static final String dynamicCssHtml = 
     "<link rel=\"stylesheet\" href=\"css/grid2.css?1349472143\" type=\"text/css\" media=\"screen\" />";
   public static final String dynamicCssHtmlFiltered = "";
@@ -191,14 +188,10 @@ public class TestIgiGlobalHtmlFilterFactory extends LockssTestCase {
           "</div><div style=\"padding-bottom:3px;\"><a href=\"/policies/privacy/\" class=\"footerlink\">Privacy Policy</a>|" +
           "<a href=\"/policies/content-reuse/\" class=\"footerlink\">Content Reuse Policy</a>" +
           "</div><div style=\"display:inline-table;\">IGI Global - All Rights Reserved</div>" +
-          "</td></tr></table></div></div><div>";
+          "</td></tr></table></div></div>\n<div>";
 
   public static final String footerWithSponsorFiltered =
-      "</table></div></div>" +
-          "<div>";
-  
-  
-  
+      "</table></div></div> <div>";
 	
 
   public void testSibebarFiltering() throws Exception {
