@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlFilterFactory.java,v 1.7 2013-12-10 22:55:02 thib_gc Exp $
+ * $Id: IgiGlobalHtmlFilterFactory.java,v 1.8 2013-12-23 21:30:03 etenbrink Exp $
  */
 
 /*
@@ -38,17 +38,23 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
+import org.lockss.util.ReaderInputStream;
 
 public class IgiGlobalHtmlFilterFactory implements FilterFactory {
 
+  static Logger log = Logger.getLogger(IgiGlobalHtmlFilterFactory.class);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-	  
+    
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         /*
@@ -122,9 +128,12 @@ public class IgiGlobalHtmlFilterFactory implements FilterFactory {
         
     };
     
-	return new HtmlFilterInputStream(in,
-	                                 encoding,
-	                                 new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters))));
+    // Do the initial html filtering
+    InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    // Do WhiteSpaceFilter
+    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(
+        filteredStream, encoding)));
   }
   
 }
