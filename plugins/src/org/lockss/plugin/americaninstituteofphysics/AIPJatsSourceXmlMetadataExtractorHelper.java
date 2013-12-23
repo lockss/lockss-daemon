@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.7 2013-12-19 23:50:15 alexandraohlson Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.8 2013-12-23 22:21:30 aishizaki Exp $
  */
 
 /*
@@ -73,7 +73,6 @@ implements SourceXmlMetadataExtractorHelper {
         return null;
       }
       log.debug3("getValue of AIPJATS contributor");
-      String name = null;
       NodeList childNodes = node.getChildNodes(); 
       String sname = null;
       String gname = null;
@@ -81,6 +80,25 @@ implements SourceXmlMetadataExtractorHelper {
       for (int m = 0; m < childNodes.getLength(); m++) {
         Node infoNode = childNodes.item(m);
         String nodeName = infoNode.getNodeName();
+        /*
+         <name-alternatives> adds a level, if present
+         child nodes include <name> and <string-name>
+          /article/front/article-meta/contrib-group/contrib
+          /article/front/article-meta/contrib-group/contrib/@contrib-type=author
+          /article/front/article-meta/contrib-group/contrib/name-alternatives/name/@name-style=western
+          /article/front/article-meta/contrib-group/contrib/name-alternatives/name/surname=Jiang
+          /article/front/article-meta/contrib-group/contrib/name-alternatives/name/given-names=P.
+          /article/front/article-meta/contrib-group/contrib/name-alternatives/string-name/@name-style=eastern
+         */
+        if ("name-alternatives".equals(nodeName)){
+          NodeList nNodes = infoNode.getChildNodes();
+          for (int y = 0; y < childNodes.getLength(); y++) {
+            infoNode = nNodes.item(y);
+            nodeName = infoNode.getNodeName();
+            if ("name".equals(nodeName))
+              break;
+          }
+        }
         if ("name".equals(nodeName)) {
           NodeList nNodes = infoNode.getChildNodes();
           for (int x = 0; x < nNodes.getLength(); x++){
@@ -94,14 +112,22 @@ implements SourceXmlMetadataExtractorHelper {
           }
         }
       }
-      if (!sname.equals(null) || !gname.equals(null)) {
-        names.append(sname + NAME_SEPARATOR + gname);
-        log.debug3("contributor found: "+names.toString());
-        return names.toString();
-      } else {
+      if ((sname == null) && (gname == null)) {
         log.debug3("no valid contributor found");
+        return null;
       }
-      return null;
+      // now at least some of the name is available - return as much as possible
+      // if we try to names.append(null) it adds "null" - don't want that!
+      if (sname != null) {
+        names.append(sname);
+        if (gname != null) {
+          names.append (NAME_SEPARATOR + gname);
+        } // else only a surname
+        return names.toString();
+      } else {  // else only a givenname
+        names.append(gname);
+      }
+      return names.toString();
     }
   };
 

@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.4 2013-12-11 23:30:52 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.5 2013-12-23 22:21:30 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -82,8 +82,9 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       "American Institute of Physics";
   private static ArrayList goodAuthors = (ArrayList) ListUtil.list(
       "Chelast, Firsthua",
-      "Liast, Haozfirst",
-      "Sainlast, Naufirst L.");
+      "Liast, ",
+      "Sainlast, Naufirst L.",
+      "Sun, B. M.");
    
  
   private static final String BASIC_CONTENT =
@@ -138,7 +139,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "<contrib contrib-type=\"author\">" +
     "<name name-style=\"western\">" +
     "<surname>Liast</surname>" +
-    "<given-names>Haozfirst</given-names>" +
+    "<given-names></given-names>" +
     "</name>" +
     "<xref ref-type=\"aff\" rid=\"a2\">2</xref>" +
     "</contrib>" +
@@ -149,6 +150,14 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     "</name>" +
     "<xref ref-type=\"aff\" rid=\"a3\">3</xref>" +
     "</contrib>" +
+    "<contrib contrib-type=\"author\">"+
+    "<name-alternatives><name name-style=\"western\">"+
+    "<surname>Sun</surname>"+
+    "<given-names>B. M.</given-names></name>"+
+    /* if you add the following, complaints about invalid utf-8 characters follow
+    "<string-name name-style=\"eastern\" xml:lang=\"zh\">孙保民</string-name>" +
+     */
+    "</name-alternatives></contrib>"+
     "<aff id=\"a1\">" +
     "<label>1</label>" +
     "<institution>" +
@@ -449,6 +458,8 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
+log.info(goodAuthors.toString());
+      log.info(md.getList(MetadataField.FIELD_AUTHOR).toString());
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {
