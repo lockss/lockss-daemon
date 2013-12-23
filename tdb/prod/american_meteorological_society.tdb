@@ -277,9 +277,9 @@
     au < ready ; 2007 ; Journal of Hydrometeorology Volume 8 ; 8 >
     au < ready ; 2008 ; Journal of Hydrometeorology Volume 9 ; 9 >
     au < ready ; 2009 ; Journal of Hydrometeorology Volume 10 ; 10 >
-    au < manifest ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 >
-    au < manifest ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 >
-    au < manifest ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 >
+    au < ready ; 2010 ; Journal of Hydrometeorology Volume 11 ; 11 >
+    au < ready ; 2011 ; Journal of Hydrometeorology Volume 12 ; 12 >
+    au < ready ; 2012 ; Journal of Hydrometeorology Volume 13 ; 13 >
     au < manifest ; 2013 ; Journal of Hydrometeorology Volume 14 ; 14 >
     au < expected ; 2014 ; Journal of Hydrometeorology Volume 15 ; 15 >
 
@@ -352,7 +352,6 @@
       issnl = 0022-4928
     >
     
-    param[journal_id] = atsc
 
     au < manifest ; 1944 ; Journal of the Atmospheric Sciences Volume 1 ; 1 >  
     au < manifest ; 1945 ; Journal of the Atmospheric Sciences Volume 2 ; 2 >  
@@ -595,7 +594,7 @@
     au < ready ; 2005 ; Monthly Weather Review Volume 133 ; 133 >
     au < ready ; 2006 ; Monthly Weather Review Volume 134 ; 134 >
     au < ready ; 2007 ; Monthly Weather Review Volume 135 ; 135 >
-    au < testing ; 2008 ; Monthly Weather Review Volume 136 ; 136 >
+    au < ready ; 2008 ; Monthly Weather Review Volume 136 ; 136 >
     au < ready ; 2009 ; Monthly Weather Review Volume 137 ; 137 >
     au < ready ; 2010 ; Monthly Weather Review Volume 138 ; 138 >
     au < ready ; 2011 ; Monthly Weather Review Volume 139 ; 139 >
