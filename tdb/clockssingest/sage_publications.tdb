@@ -17199,7 +17199,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
-      au < down ; crawling ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
+      au < superseded ; down ; 2008 ; The Journal of Clinical Pharmacology Volume 48 [to delete] ; 48 ; >
 
     }
 
@@ -17256,7 +17256,7 @@
       au < down ; crawling ; 2005 ; The Journal of Clinical Pharmacology Volume 45 ; 45 ; >
       au < down ; crawling ; 2006 ; The Journal of Clinical Pharmacology Volume 46 ; 46 ; >
       au < down ; crawling ; 2007 ; The Journal of Clinical Pharmacology Volume 47 ; 47 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
+      au < doesNotExist ; doesNotExist ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
       au < zapped ; finished ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
       au < down ; crawling ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
       au < down ; crawling ; 2011 ; The Journal of Clinical Pharmacology Volume 51 ; 51 ; >
