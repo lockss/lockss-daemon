@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.11 2013-05-29 19:15:47 alexandraohlson Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.12 2013-12-26 20:40:41 etenbrink Exp $
  */ 
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 public class IngentaPdfFilterFactory implements FilterFactory {
-
+  
   /**
    * An enum for publisher IDs used by Ingenta. 
    */
@@ -66,7 +66,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     /** White Horse Press */
     WHP,
   }
-
+  
   private static final Logger logger = Logger.getLogger(IngentaPdfFilterFactory.class);
   
   private FilterFactory normFiltFact = new NormalizingPdfFilterFactory();
@@ -76,7 +76,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   private FilterFactory whpFiltFact = new WhiteHorsePressPdfFilterFactory();
   
   protected static class WhiteHorsePressPdfFilterFactory extends SimplePdfFilterFactory {
-                                      
+    
     protected static class WhiteHorsePressWorker extends PdfTokenStreamWorker {
       
       protected boolean result;
@@ -109,7 +109,6 @@ public class IngentaPdfFilterFactory implements FilterFactory {
         }
         
         switch (state) {
-          
           case 0: {
             if (isEndTextObject()) {
               endIndex = getIndex();
@@ -146,9 +145,8 @@ public class IngentaPdfFilterFactory implements FilterFactory {
           default: {
             throw new PdfException("Invalid state in WhiteHorsePressWorker: " + state);
           }
-      
         }
-      
+        
         if (logger.isDebug3()) {
           logger.debug3("WhiteHorsePressWorker: final: " + state);
           logger.debug3("WhiteHorsePressWorker: result: " + result);
@@ -158,8 +156,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       
     }
     
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       doNormalizeMetadata(pdfDocument);
       WhiteHorsePressWorker worker = new WhiteHorsePressWorker();
@@ -238,9 +235,9 @@ public class IngentaPdfFilterFactory implements FilterFactory {
           default: {
             throw new PdfException("Invalid state in ManeyPublishingWorker: " + state);
           }
-      
+          
         }
-      
+        
         if (logger.isDebug3()) {
           logger.debug3("ManeyPublishingWorker: final: " + state);
           logger.debug3("ManeyPublishingWorker: result: " + result);
@@ -250,8 +247,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       
     }
     
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       doNormalizeMetadata(pdfDocument);
       ManeyPublishingWorker worker = new ManeyPublishingWorker();
@@ -272,21 +268,21 @@ public class IngentaPdfFilterFactory implements FilterFactory {
    * simple transforms and some extracting.
    */
   private static class PacificAffairsPdfFilterFactory extends SimplePdfFilterFactory {
-
+    
     public static class DeliveredByWorkerTransform extends PdfTokenStreamWorker {
-
+      
       private boolean result;
-
+      
       private int state;
-
+      
       private int beginIndex;
-
+      
       private int endIndex;
-
+      
       public DeliveredByWorkerTransform() {
         super(Direction.BACKWARD);
       }
-
+      
       @Override
       public void setUp() throws PdfException {
         super.setUp();
@@ -304,16 +300,16 @@ public class IngentaPdfFilterFactory implements FilterFactory {
           logger.debug3("DeliveredByWorkerTransform: index: " + getIndex());
           logger.debug3("DeliveredByWorkerTransform: operator: " + getOpcode());
         }
-
+        
         switch (state) {
-
+        
         case 0: {
           if (isRestoreGraphicsState()) {
             endIndex = getIndex();
             ++state; 
           }
         } break;
-
+        
         case 1: {
           if (isShowTextMatches("\\s*Delivered by .* to: .*")) {
             ++state;
@@ -322,7 +318,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
             stop();
           }
         } break;
-
+        
         case 2: {
           if (isSaveGraphicsState()) {
             beginIndex = getIndex();
@@ -330,23 +326,22 @@ public class IngentaPdfFilterFactory implements FilterFactory {
             stop(); 
           }
         } break;
-
+        
         default: {
           throw new PdfException("Invalid state in DeliveredByWorkerTransform: " + state);
         }
-
+        
         }
-
+        
         if (logger.isDebug3()) {
           logger.debug3("DeliveredByWorkerTransform: final: " + state);
           logger.debug3("DeliveredByFromWorkerTransform: result: " + result);
         }
       }
-
+      
     }
-
-    public void transform(ArchivalUnit au,
-                                 PdfDocument pdfDocument)
+    
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       
       DeliveredByWorkerTransform worker = new DeliveredByWorkerTransform();
@@ -364,18 +359,16 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   }
   
   private class NormalizingExtractingPdfFilterFactory extends ExtractingPdfFilterFactory {
-	
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
+    
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       doNormalizeMetadata(pdfDocument);
     }
   }
   
   private class NormalizingPdfFilterFactory extends SimplePdfFilterFactory {
-	
-    public void transform(ArchivalUnit au,
-                          PdfDocument pdfDocument)
+    
+    public void transform(ArchivalUnit au, PdfDocument pdfDocument)
         throws PdfException {
       doNormalizeMetadata(pdfDocument);
     }
@@ -391,35 +384,35 @@ public class IngentaPdfFilterFactory implements FilterFactory {
   
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
-      					       InputStream in,
-      					       String encoding)
-      throws PluginException {
+      InputStream in, String encoding)
+          throws PluginException {
+    
     PublisherId publisherId = PublisherId.UNKNOWN;
     try {
       publisherId = PublisherId.valueOf(au.getProperties().getString("publisher_id").toUpperCase());
     } catch (IllegalArgumentException e) {
       if (logger.isDebug3()) {
-	logger.debug3(String.format("Unknown publisher ID: %s", publisherId), e);
+        logger.debug3(String.format("Unknown publisher ID: %s", publisherId), e);
       }
     }
     switch (publisherId) {
       case ARN: case LSE:
-	return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
-	
+        return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
+        
       case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
-	return normFiltFact.createFilteredInputStream(au, in, encoding);
-	
+        return normFiltFact.createFilteredInputStream(au, in, encoding);
+        
       case MANEY:
         return maneyFiltFact.createFilteredInputStream(au, in, encoding);
-	
+        
       case PAAF:
-	return paafFiltFact.createFilteredInputStream(au, in, encoding);
-     
+        return paafFiltFact.createFilteredInputStream(au, in, encoding);
+        
       case WHP:
         return whpFiltFact.createFilteredInputStream(au, in, encoding);
-     
+        
       default:
-	return in;
+        return in;
     }
   }
   
