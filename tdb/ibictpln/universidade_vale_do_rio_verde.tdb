@@ -9,7 +9,7 @@
   {
 
       title <
-        name = Revista de Iniciação Científica ;
+        name = Revista de Iniciação Científica da Universidade Vale do Rio Verde ;
         eissn = 2238-5266
       >
 
@@ -17,9 +17,9 @@
       param[base_url] = http://revistas.unincor.br/
       param[journal_id] = iniciacaocientifica
 
-      au < exists ; 2011 ; 1 ; Revista de Iniciação Científica Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 2 ; Revista de Iniciação Científica Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 3 ; Revista de Iniciação Científica Volume 2013 ; 2013 >
+      au < exists ; 2011 ; 1 ; Revista de Iniciação Científica da Universidade Vale do Rio Verde Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 2 ; Revista de Iniciação Científica da Universidade Vale do Rio Verde Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 3 ; Revista de Iniciação Científica da Universidade Vale do Rio Verde Volume 2013 ; 2013 >
 
   }
 
