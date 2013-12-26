@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.6 2013-12-06 19:05:01 etenbrink Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.7 2013-12-26 20:57:00 etenbrink Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
     static {
       
       // not used at the moment
-      String splitMetaPattern = "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)"; 
+      // String splitMetaPattern = "(.*)[,](.*)[,](.*)[,]([^-]+)[-]([^-()]+)"; 
       
       //  <meta name="DC.creator" content="Karni, Nirit"/>
       //  <meta name="DC.creator" content="Reiter, Shunit"/>
@@ -146,7 +146,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
         }
         if (hadAMatch) {
           // use what we did find with the matcher - we know we at least had 3 groups... 
-          if (!(m.group(1)).isEmpty()) { am.put(MetadataField.FIELD_JOURNAL_TITLE, m.group(1)); }
+          if (!(m.group(1)).isEmpty()) { am.put(MetadataField.FIELD_PUBLICATION_TITLE, m.group(1)); }
           if (!(m.group(2)).isEmpty()) { am.put(MetadataField.FIELD_VOLUME,  m.group(2));}
           if (!(m.group(3)).isEmpty()) { am.put(MetadataField.FIELD_ISSUE,  m.group(3));}
           if (m.groupCount() > 3) {
@@ -157,7 +157,7 @@ public class IngentaHtmlMetadataExtractorFactory implements
         } else {
           // eg  content="Visual Culture in Britain"/>
           // we can't really guess - the title might have commas, just put the whole thing in....
-          am.put(MetadataField.FIELD_JOURNAL_TITLE, raw_biblio);
+          am.put(MetadataField.FIELD_PUBLICATION_TITLE, raw_biblio);
         }
       }
       return am;
