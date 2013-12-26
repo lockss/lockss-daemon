@@ -1,5 +1,5 @@
 /*
- * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.13 2013-12-05 21:43:00 etenbrink Exp $
+ * $Id: TestIngentaJournalHtmlFilterFactory.java,v 1.14 2013-12-26 21:46:25 etenbrink Exp $
  */
 
 /*
@@ -289,4 +289,43 @@ public class TestIngentaJournalHtmlFilterFactory extends LockssTestCase {
     
   }
 
+    //test ScriptHtml with explicit test
+    private static final String ScriptHtml =
+            "<p>The chickens were decidedly cold.</p>" +
+              "<script type='text/javascript'>" +
+              "GA_googleFillSlot(\"TopLeaderboard\"); </script>" +
+              "<script type='text/javascript'>" +
+              "GA_googleFillSlot(\"Horizontal_banner\"); </script>" +
+              "<script type=\"text/javascript\" charset=\"utf-8\">" +
+              "   $(document).ready(function() {\n" + 
+              "      var shortdescription = $(\".originaldescription\").text().replace(/\\&/g, '&amp;').replace(/\\</g, '&lt;').replace(/\\>/g, '&gt;').replace(/\\t/g, '&nbsp;&nbsp;&nbsp;').replace(/\\n/g, '<br />');\n" + 
+              "      if (shortdescription.length > 350){\n" + 
+              "         shortdescription = \"<span class='shortdescription'>\" + shortdescription.substring(0,250) + \"... <a href='#'>more</a></span>\";\n" + 
+              "      }\n" + 
+              "      $(\".descriptionitem\").prepend(shortdescription);\n" + 
+              "         \n" + 
+              "      $(\".shortdescription a\").click(function() {\n" + 
+              "         $(\".shortdescription\").hide();\n" + 
+              "         $(\".originaldescription\").slideDown();\n" + 
+              "         return false;        \n" + 
+              "      });\n" + 
+              "   });                  \n" + 
+              "</script>" +
+              "<noscript>      \n" + 
+              "<img id=\"siqImg\" height=\"1\" width=\"1\" alt=\"\">\n" + 
+              "</noscript>";
+            
+    private static final String ScriptHtmlFiltered =
+            "<p>The chickens were decidedly cold.</p>" ;
+
+    public void testFilterScript() throws Exception {
+        InputStream inA;  
+       
+        inA = fact.createFilteredInputStream(mau, new StringInputStream(ScriptHtml),
+            Constants.DEFAULT_ENCODING);
+
+        assertEquals(ScriptHtmlFiltered,StringUtil.fromInputStream(inA));
+      
+    }
+    
 }
