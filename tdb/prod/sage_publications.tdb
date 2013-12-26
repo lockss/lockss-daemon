@@ -23445,7 +23445,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
 
       {
         pluginSuffix = HighWirePressH20Plugin
-        param[base_url] = http://www.jie.org.uk/
+        param[base_url] = http://jie.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
         au < exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 >
