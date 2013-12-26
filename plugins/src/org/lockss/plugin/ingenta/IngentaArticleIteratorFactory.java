@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaArticleIteratorFactory.java,v 1.5 2013-12-05 21:35:49 etenbrink Exp $
+ * $Id: IngentaArticleIteratorFactory.java,v 1.6 2013-12-26 20:52:51 etenbrink Exp $
  */
 
 /*
@@ -43,12 +43,14 @@ import org.lockss.util.Logger;
 public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
     ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger
-      .getLogger(IngentaArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(IngentaArticleIteratorFactory.class);
   
-  protected static final String ROOT_TEMPLATE = "\"%scontent/%s/%s\", api_url, publisher_id, journal_id";
+  protected static final String ROOT_TEMPLATE = 
+      "\"%scontent/%s/%s\", api_url, publisher_id, journal_id";
   
-  protected static final String PATTERN_TEMPLATE = "\"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/art[0-9]{5}\\?crawler=true$\", api_url, publisher_id, journal_id, volume_name";
+  protected static final String PATTERN_TEMPLATE = 
+      "\"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/art[0-9]{5}\\?crawler=true$\", " +
+      "api_url, publisher_id, journal_id, volume_name";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -103,7 +105,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       guessFullTextPdf(af, htmlMat);
-      if (spec.getTarget() != MetadataTarget.Article) {
+      if (spec.getTarget() != MetadataTarget.Article()) {
         guessAbstract(af, htmlMat);
         guessReferences(af, htmlMat);
       }
@@ -136,7 +138,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(pdfCu);
-      if (spec.getTarget() != MetadataTarget.Article) {
+      if (spec.getTarget() != MetadataTarget.Article()) {
         guessAbstract(af, pdfMat);
         guessReferences(af, pdfMat);
       }
@@ -149,7 +151,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(plainCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, plainCu);
-      if (target != MetadataTarget.Article) {
+      if (target != MetadataTarget.Article()) {
         guessFullTextHtml(af, plainMat);
       }
       else {
@@ -157,7 +159,7 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
             + plainCu.getContentType());
 	AuUtil.safeRelease(plainCu);
       }
-      if (spec.getTarget() != MetadataTarget.Article) {
+      if (spec.getTarget() != MetadataTarget.Article()) {
         guessAbstract(af, plainMat);
         guessReferences(af, plainMat);
       }
