@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkExtractor.java,v 1.2 2013-04-29 20:19:46 thib_gc Exp $
+ * $Id: IngentaHtmlLinkExtractor.java,v 1.3 2013-12-26 20:53:25 etenbrink Exp $
  */
 
 /*
@@ -44,7 +44,9 @@ public class IngentaHtmlLinkExtractor extends GoslingHtmlLinkExtractor {
 
   private static final Logger logger = Logger.getLogger(IngentaHtmlLinkExtractor.class);
   
-  protected static final Pattern popupPattern = Pattern.compile("^javascript:popupImage\\(([\"']|%22)(.*)\\1\\)$", Pattern.CASE_INSENSITIVE);
+  protected static final Pattern popupPattern = 
+      Pattern.compile("^javascript:popupImage\\(([\"']|%22)(.*)\\1\\)$", 
+          Pattern.CASE_INSENSITIVE);
   
   @Override
   protected String extractLinkFromTag(StringBuffer link,

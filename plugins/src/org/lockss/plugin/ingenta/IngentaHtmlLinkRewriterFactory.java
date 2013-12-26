@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.2 2013-03-14 06:26:28 tlipkis Exp $
+ * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.3 2013-12-26 20:55:29 etenbrink Exp $
  */
 
 /*
@@ -66,8 +66,7 @@ import org.lockss.util.Logger;
 public class IngentaHtmlLinkRewriterFactory 
   extends NodeFilterHtmlLinkRewriterFactory {
   
-  static final Logger logger =
-    Logger.getLogger("IngentaHtmlLinkRewriterFactory");
+  static final Logger logger = Logger.getLogger(IngentaHtmlLinkRewriterFactory.class);
 
   /** Pattern that matches the article PDF link */
   static Pattern infobikePat = null;
