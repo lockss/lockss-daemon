@@ -392,7 +392,7 @@
   {
 
       title <
-        name = Caderno de Administração ;
+        name = Caderno de Administração [issn 1516-1803] ;
         issn = 1516-1803
       >
 
@@ -400,16 +400,16 @@
       param[base_url] = http://periodicos.uem.br/ojs/
       param[journal_id] = CadAdm
 
-      au < exists ; 2005 ; 1 ; Caderno de Administração Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 2 ; Caderno de Administração Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 3 ; Caderno de Administração Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 4 ; Caderno de Administração Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 5 ; Caderno de Administração Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 6 ; Caderno de Administração Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 7 ; Caderno de Administração Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 8 ; Caderno de Administração Volume 2012 ; 2012 >
-      au < expected ; 2013 ; 9 ; Caderno de Administração Volume 2013 ; 2013 >
-      au < expected ; 2014 ; 10 ; Caderno de Administração Volume 2014 ; 2014 >
+      au < exists ; 2005 ; 1 ; Caderno de Administração [issn 1516-1803] Volume 2005 ; 2005 >
+      au < exists ; 2006 ; 2 ; Caderno de Administração [issn 1516-1803] Volume 2006 ; 2006 >
+      au < exists ; 2007 ; 3 ; Caderno de Administração [issn 1516-1803] Volume 2007 ; 2007 >
+      au < exists ; 2008 ; 4 ; Caderno de Administração [issn 1516-1803] Volume 2008 ; 2008 >
+      au < exists ; 2009 ; 5 ; Caderno de Administração [issn 1516-1803] Volume 2009 ; 2009 >
+      au < exists ; 2010 ; 6 ; Caderno de Administração [issn 1516-1803] Volume 2010 ; 2010 >
+      au < exists ; 2011 ; 7 ; Caderno de Administração [issn 1516-1803] Volume 2011 ; 2011 >
+      au < exists ; 2012 ; 8 ; Caderno de Administração [issn 1516-1803] Volume 2012 ; 2012 >
+      au < expected ; 2013 ; 9 ; Caderno de Administração [issn 1516-1803] Volume 2013 ; 2013 >
+      au < expected ; 2014 ; 10 ; Caderno de Administração [issn 1516-1803] Volume 2014 ; 2014 >
 
   }
 
