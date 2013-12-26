@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.26 2013-12-05 21:24:30 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.27 2013-12-26 21:39:04 etenbrink Exp $
  */ 
 
 /*
@@ -41,6 +41,7 @@ import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -54,6 +55,9 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // the meta tags (name="DC.subject") in head are not always in same order
         new TagNameFilter("head"),
+        // Filter out noscript for Nomadic People
+        // script tag filter did not work on some Nomadic People scripts, tag end found early
+        new TagNameFilter("noscript"),
         // Filter out <div id="header">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
         // Filter out <div id="rightnavbar">...</div>
@@ -126,6 +130,11 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         //NOTE - at the moment this does not go beyond nested <p></p> pairs to the closing </a>
         //when possible in the daemon, must subclass and do this for <a> tag
         HtmlNodeFilters.tagWithAttribute("a", "class", "table-popup"),
+        // journal-info & breadcrumbs at top of page, added for Nomadic People
+        HtmlNodeFilters.tagWithAttribute("div", "id", "journal-info"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
+        // added for Nomadic People
+        HtmlNodeFilters.tagWithAttribute("span", "class", "pubGAAccount"),
     };
     
     HtmlTransform xform = new HtmlTransform() {
@@ -156,11 +165,17 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
 	    }
 	  };
     
-    InputStream filteredStream =  new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+    InputStream filteredStream =  new HtmlFilterInputStream(in, encoding,
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
     
-    return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(filteredStream, encoding)));
+    Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
+        ListUtil.list(
+            new TagPair("<!--", "-->"),
+            new TagPair("<script", "</script>") // Added for Nomadic People
+            ));
+    
+    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
 
 }
