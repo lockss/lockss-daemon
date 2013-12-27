@@ -418,7 +418,7 @@
     param[journal_issn] = 2161-1610
     
     au < crawling ; exists ; 2012 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 1 ; 1 > 
-    au < expected ; exists ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 > 
+    au < manifest ; exists ; 2013 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 2 ; 2 > 
     au < expected ; exists ; 2014 ; International Journal of Biomedical and Clinical Engineering (IJBCE) Volume 3 ; 3 > 
     
   }
@@ -686,7 +686,7 @@
 
     au < finished ; crawling ; 2011 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 1 ; 1 > 
     au < finished ; crawling ; 2012 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 2 ; 2 > 
-    au < expected ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
+    au < manifest ; exists ; 2013 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 3 ; 3 > 
     au < expected ; exists ; 2014 ; International Journal of Cyber Warfare and Terrorism (IJCWT) Volume 4 ; 4 > 
 
   }
