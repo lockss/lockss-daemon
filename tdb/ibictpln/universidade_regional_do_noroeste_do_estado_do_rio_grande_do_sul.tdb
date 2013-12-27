@@ -18,16 +18,16 @@
       param[base_url] = https://www.revistas.unijui.edu.br/
       param[journal_id] = desenvolvimentoemquestao
 
-      au < exists ; 2003 ; 1 ; Desenvolvimento em Questão Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 2 ; Desenvolvimento em Questão Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 3 ; Desenvolvimento em Questão Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 4 ; Desenvolvimento em Questão Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 5 ; Desenvolvimento em Questão Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 6 ; Desenvolvimento em Questão Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 7 ; Desenvolvimento em Questão Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 8 ; Desenvolvimento em Questão Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 9 ; Desenvolvimento em Questão Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 10 ; Desenvolvimento em Questão Volume 2012 ; 2012 >
+      au < manifest ; 2003 ; 1 ; Desenvolvimento em Questão Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 2 ; Desenvolvimento em Questão Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 3 ; Desenvolvimento em Questão Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 4 ; Desenvolvimento em Questão Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 5 ; Desenvolvimento em Questão Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 6 ; Desenvolvimento em Questão Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 7 ; Desenvolvimento em Questão Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 8 ; Desenvolvimento em Questão Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 9 ; Desenvolvimento em Questão Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 10 ; Desenvolvimento em Questão Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Desenvolvimento em Questão Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; Desenvolvimento em Questão Volume 2014 ; 2014 >
 
@@ -92,28 +92,28 @@
       param[base_url] = https://www.revistas.unijui.edu.br/
       param[journal_id] = revistadireitoemdebate
 
-      au < exists ; 1991 ; 1 ; Revista Direito em Debate Volume 1991 ; 1991 >
-      au < exists ; 1992 ; 2 ; Revista Direito em Debate Volume 1992 ; 1992 >
-      au < exists ; 1993 ; 3 ; Revista Direito em Debate Volume 1993 ; 1993 >
-      au < exists ; 1994 ; 4 ; Revista Direito em Debate Volume 1994 ; 1994 >
-      au < exists ; 1995 ; 5 ; Revista Direito em Debate Volume 1995 ; 1995 >
-      au < exists ; 1996 ; 6 ; Revista Direito em Debate Volume 1996 ; 1996 >
-      au < exists ; 1997 ; 7 ; Revista Direito em Debate Volume 1997 ; 1997 >
-      au < exists ; 1998 ; 8 ; Revista Direito em Debate Volume 1998 ; 1998 >
-      au < exists ; 1999 ; 9 ; Revista Direito em Debate Volume 1999 ; 1999 >
-      au < exists ; 2000 ; 10 ; Revista Direito em Debate Volume 2000 ; 2000 >
-      au < exists ; 2001 ; 11 ; Revista Direito em Debate Volume 2001 ; 2001 >
-      au < exists ; 2002 ; 12 ; Revista Direito em Debate Volume 2002 ; 2002 >
-      au < exists ; 2003 ; 13 ; Revista Direito em Debate Volume 2003 ; 2003 >
-      au < exists ; 2004 ; 14 ; Revista Direito em Debate Volume 2004 ; 2004 >
-      au < exists ; 2005 ; 15 ; Revista Direito em Debate Volume 2005 ; 2005 >
-      au < exists ; 2006 ; 16 ; Revista Direito em Debate Volume 2006 ; 2006 >
-      au < exists ; 2007 ; 17 ; Revista Direito em Debate Volume 2007 ; 2007 >
-      au < exists ; 2008 ; 18 ; Revista Direito em Debate Volume 2008 ; 2008 >
-      au < exists ; 2009 ; 19 ; Revista Direito em Debate Volume 2009 ; 2009 >
-      au < exists ; 2010 ; 20 ; Revista Direito em Debate Volume 2010 ; 2010 >
-      au < exists ; 2011 ; 21 ; Revista Direito em Debate Volume 2011 ; 2011 >
-      au < exists ; 2012 ; 22 ; Revista Direito em Debate Volume 2012 ; 2012 >
+      au < manifest ; 1991 ; 1 ; Revista Direito em Debate Volume 1991 ; 1991 >
+      au < manifest ; 1992 ; 2 ; Revista Direito em Debate Volume 1992 ; 1992 >
+      au < manifest ; 1993 ; 3 ; Revista Direito em Debate Volume 1993 ; 1993 >
+      au < manifest ; 1994 ; 4 ; Revista Direito em Debate Volume 1994 ; 1994 >
+      au < manifest ; 1995 ; 5 ; Revista Direito em Debate Volume 1995 ; 1995 >
+      au < manifest ; 1996 ; 6 ; Revista Direito em Debate Volume 1996 ; 1996 >
+      au < manifest ; 1997 ; 7 ; Revista Direito em Debate Volume 1997 ; 1997 >
+      au < manifest ; 1998 ; 8 ; Revista Direito em Debate Volume 1998 ; 1998 >
+      au < manifest ; 1999 ; 9 ; Revista Direito em Debate Volume 1999 ; 1999 >
+      au < manifest ; 2000 ; 10 ; Revista Direito em Debate Volume 2000 ; 2000 >
+      au < manifest ; 2001 ; 11 ; Revista Direito em Debate Volume 2001 ; 2001 >
+      au < manifest ; 2002 ; 12 ; Revista Direito em Debate Volume 2002 ; 2002 >
+      au < manifest ; 2003 ; 13 ; Revista Direito em Debate Volume 2003 ; 2003 >
+      au < manifest ; 2004 ; 14 ; Revista Direito em Debate Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; 15 ; Revista Direito em Debate Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; 16 ; Revista Direito em Debate Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; 17 ; Revista Direito em Debate Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; 18 ; Revista Direito em Debate Volume 2008 ; 2008 >
+      au < manifest ; 2009 ; 19 ; Revista Direito em Debate Volume 2009 ; 2009 >
+      au < manifest ; 2010 ; 20 ; Revista Direito em Debate Volume 2010 ; 2010 >
+      au < manifest ; 2011 ; 21 ; Revista Direito em Debate Volume 2011 ; 2011 >
+      au < manifest ; 2012 ; 22 ; Revista Direito em Debate Volume 2012 ; 2012 >
       au < expected ; 2013 ; 23 ; Revista Direito em Debate Volume 2013 ; 2013 >
       au < expected ; 2014 ; 24 ; Revista Direito em Debate Volume 2014 ; 2014 >
 
