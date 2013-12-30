@@ -1,8 +1,8 @@
 /*
- * $Id: TrueZipManager.java,v 1.3 2013-05-23 09:52:05 tlipkis Exp $
+ * $Id: TrueZipManager.java,v 1.3.10.1 2013-12-30 03:55:02 tlipkis Exp $
  *
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,6 +35,7 @@ import java.util.*;
 import java.security.*;
 
 import de.schlichtherle.truezip.file.*;
+import de.schlichtherle.truezip.fs.FsSyncException;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -117,4 +118,42 @@ public class TrueZipManager extends BaseLockssManager
     return getTFileCache().getCachedTFile(cu);
   }
 
+  /**
+   * Marks an entry as flushable only after its Tfile is unmounted.
+   * 
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache.
+   */
+  public void setFlushAfterUnmountOnly(CachedUrl cu) {
+    getTFileCache().setFlushAfterUnmountOnly(cu);
+  }
+
+  /**
+   * Unmounts a TFile and removes it from the cache.
+   * 
+   * @param tf
+   *          A TFile to be freed.
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache, or
+   *          <code>null</code> if the TFile is not in the cache.
+   * @throws FsSyncException
+   */
+  public void freeTFile(TFile tf, CachedUrl cu) throws FsSyncException {
+    getTFileCache().freeTFile(tf, cu);
+  }
+
+  /**
+   * Marks a TFile as flushable.
+   * 
+   * @param tf
+   *          A TFile to be marked as flushable.
+   * @param cu
+   *          A CachedUrl with the CU used to locate the TFile in the cache, or
+   *          <code>null</code> if the TFile is not in the cache.
+   * @throws FsSyncException
+   */
+  public void markArchiveAsFlushable(TFile tf, CachedUrl cu)
+      throws FsSyncException {
+    getTFileCache().markArchiveAsFlushable(tf, cu);
+  }
 }

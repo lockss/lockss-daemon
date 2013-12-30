@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.33 2013-06-26 04:46:21 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.33.8.1 2013-12-30 03:55:03 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,6 +61,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   private LockssRepository repository;
   private NodeManager nodeManager;
   private HashService hashService;
+  private TrueZipManager trueZipManager;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
  // int contentNodeCount = 0;
@@ -83,6 +84,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     repository = theDaemon.getLockssRepository(owner);
     nodeManager = theDaemon.getNodeManager(owner);
     hashService = theDaemon.getHashService();
+    trueZipManager = theDaemon.getTrueZipManager();
   }
 
   /**
@@ -540,9 +542,9 @@ public class BaseCachedUrlSet implements CachedUrlSet {
    * and only those that have content.  */
   public class ArcMemIterator implements Iterator<CachedUrl> {
     private Iterator<CachedUrlSetNode> cusIter;
-    // Stack of directory iterators in the current archive
-    private LinkedList<Iterator<TFile>> arcIterStack =
-      new LinkedList<Iterator<TFile>>();
+    // Stack of archive members in the current archive.
+    private LinkedList<TFileIterator> arcIterStack =
+	new LinkedList<TFileIterator>();
 
     // if null, we have to look for nextElement
     private CachedUrl nextCu = null;
@@ -586,7 +588,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       }
       while (true) {
 	if (!arcIterStack.isEmpty()) {
-	  Iterator<TFile> arcIter = arcIterStack.getFirst();
+	  Iterator<TFile> arcIter = arcIterStack.getFirst().tFileIterator;
 	  if (arcIter.hasNext()) {
 	    TFile tf = arcIter.next();
 	    ArchiveMemberSpec ams = amsOf(curArcCu, tf);
@@ -597,16 +599,19 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	      nextCu = makeCu(curArcCu, tf, ams);
 	      break;
 	    } else if (tf.isDirectory()) {
-	      // push a new dir iterator onto the stack
-	      arcIterStack.addFirst(new ArrayIterator(sortedDir(tf)));
+	      // Push a new TFile and its iterator and CU onto the stack.
+	      arcIterStack.addFirst(new TFileIterator(tf, null));
 	      continue;
 	    } else {
 	      logger.warning("Archive element was neither file nor dir: "
-			     + tf + ", in " + curArcCu);
+		  	     + tf + ", in " + curArcCu);
 	      continue;
 	    }
 	  } else {
-	    arcIterStack.removeFirst();
+	    // Remove the TFile from the stack and from the cache if it is
+	    // there.
+	    freeTFile(arcIterStack.removeFirst());
+
 	    continue;
 	  }
 	}
@@ -624,7 +629,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	    if (arcExt != null) {
 	      TFile tf;
 	      try {
-		tf = getTFile(cu);
+		CachedUrl tFileCu = au.makeCachedUrl(cu.getUrl());
+		tf = trueZipManager.getCachedTFile(tFileCu);
 		if (!tf.isDirectory()) {
 		  logger.error("isDirectory(" + tf +
 			       ") = false, including in iterator");
@@ -634,8 +640,10 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 		if (logger.isDebug3()) {
 		  logger.debug3("Found archive: " + tf + " in " + cu);
 		}
-		TFile[] tfiles = sortedDir(tf);
-		arcIterStack.addFirst(new ArrayIterator(tfiles));
+		// Mark the TFile only as flushable if it is unmounted.
+		trueZipManager.setFlushAfterUnmountOnly(tFileCu);
+		// Push a new TFile and its iterator and CU onto the stack.
+		arcIterStack.addFirst(new TFileIterator(tf, tFileCu));
 		curArcCu = cu;
 		continue;
 	      } catch (IOException e) {
@@ -655,17 +663,6 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	}
       }
       return nextCu;
-    }
-
-    private TFile[] sortedDir(TFile tf) {
-      TFile[] tfiles = tf.listFiles();
-      Arrays.sort(tfiles);
-      return tfiles;
-    }
-
-    private TFile getTFile(CachedUrl cu) throws IOException {
-      TrueZipManager tzm = theDaemon.getTrueZipManager();
-      return tzm.getCachedTFile(au.makeCachedUrl(cu.getUrl()));
     }
 
     private ArchiveMemberSpec amsOf(CachedUrl cu, TFile tf) {
@@ -706,6 +703,83 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 	return bcu.getArchiveMemberCu(ams, tf);
       } else {
 	return res.getArchiveMemberCu(ams);
+      }
+    }
+
+    /**
+     * Unmounts a TFile and removes it from the cache.
+     * 
+     * @param tfIterator
+     *          A TFileIterator with the TFile to be freed.
+     */
+    private void freeTFile(TFileIterator tfIterator) {
+      try {
+	trueZipManager.freeTFile(tfIterator.tFile, tfIterator.tFileCacheCu);
+      } catch (Throwable t) {
+	logger.warning("Error freeing TFile: " + tfIterator.tFile, t);
+      }
+    }
+
+    /**
+     * Finalizer.
+     */
+    @Override
+    protected void finalize() throws Throwable {
+      // Try to mark as flushable all the TFiles in the stack.
+      try {
+	while (!arcIterStack.isEmpty()) {
+	  markArchiveAsFlushable(arcIterStack.removeFirst());
+	}
+      } finally {
+        super.finalize();
+      }
+    }
+
+    /**
+     * Marks a TFile as flushable.
+     * 
+     * @param tfIterator
+     *          A TFileIterator with the TFile to be marked as flushable.
+     */
+    private void markArchiveAsFlushable(TFileIterator tfIterator) {
+      try {
+	trueZipManager.markArchiveAsFlushable(tfIterator.tFile,
+	    tfIterator.tFileCacheCu);
+      } catch (Throwable t) {
+	logger.warning("Error freeing TFile: " + tfIterator.tFile, t);
+      }
+    }
+
+    /**
+     * Encapsulation of a TFile that is an archive, an iterator over its members
+     * and the cached URL used to locate its entry in the cache.
+     */
+    private class TFileIterator {
+      private final TFile tFile;
+      private final Iterator<TFile> tFileIterator;
+      private final CachedUrl tFileCacheCu;
+
+      /**
+       * Constructor
+       * @param tf A TFile with the archive.
+       * @param cu A CachedUrl used to locate the TFile entry in the cache.
+       */
+      public TFileIterator(TFile tf, CachedUrl cu) {
+	tFile = tf;
+	tFileIterator = (Iterator<TFile>)new ArrayIterator(sortedDir(tFile));
+	tFileCacheCu = cu;
+      }
+
+      /**
+       * Provides the top-level files in an archive, sorted.
+       * 
+       * @param tf A TFile with the archive.
+       * @return a TFile[] with the sorted files.
+       */
+      private TFile[] sortedDir(TFile tf) {
+        TFile[] tfiles = tf.listFiles();
+        Arrays.sort(tfiles);
+        return tfiles;
       }
     }
   }
