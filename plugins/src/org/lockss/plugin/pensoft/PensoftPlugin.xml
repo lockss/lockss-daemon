@@ -1,4 +1,4 @@
- <!--  $Id: PensoftPlugin.xml,v 1.10 2013-10-02 00:13:43 mellen22 Exp $-->
+ <!--  $Id: PensoftPlugin.xml,v 1.11 2013-12-30 02:29:33 ldoan Exp $-->
  <map>
   <entry>
     <string>plugin_status</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -35,8 +35,8 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <!-- need 1.59 for the embedded issue range in the issue_set -->
-    <string>1.59.0</string>
+    <!-- need 1.63.3 to work with CC license 4.0 -->
+    <string>1.63.3</string>
   </entry>
   <entry>
     <string>au_name</string>
