@@ -1327,6 +1327,24 @@
   {
 
     title <
+      name = Scottish Affairs ;
+      issn = 0966-0356 ;
+      eissn = 2053-888X ;
+      issnl = 0966-0356
+    >
+
+      plugin = org.lockss.plugin.edinburgh.EdinburghUniversityPressPlugin
+      param[base_url] = http://www.euppublishing.com/
+      param[journal_id] = scot
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2014 ; Scottish Affairs Volume 1 ; 1 >
+    
+  }
+
+  {
+
+    title <
       name = Scottish Archaeological Journal ;
       issn = 1471-5767 ;
       eissn = 1755-2028 ;
