@@ -94,7 +94,22 @@
         au < expected ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
   
     }
+
+    {
   
+        title <
+          name = Applied Adhesion Science ;
+          issn = 2196-4351 
+        >
+
+        param[base_url] = http://www.appliedadhesionscience.com/
+        param[journal_issn] = 2196-4351 
+        comment[platform] = BMC
+
+        au < exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
