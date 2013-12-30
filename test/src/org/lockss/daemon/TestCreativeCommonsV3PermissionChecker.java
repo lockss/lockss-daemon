@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.3 2011-12-18 23:13:32 tlipkis Exp $
+ * $Id: TestCreativeCommonsV3PermissionChecker.java,v 1.3.42.1 2013-12-30 03:54:43 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestCreativeCommonsV3PermissionChecker
     "by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd",
     "BY", "BY-SA", "BY-nc", "by-ND", "by-NC-sa", "by-NC-ND",
   };
-  private String[] VALID_VERSIONS = {"1.0", "2.0", "2.5", "3.0"};
+  private String[] VALID_VERSIONS = {"1.0", "2.0", "2.5", "3.0", "4.0"};
   private String TEST_URL = "http://www.example.com/";
 
   public void setUp() throws Exception {
@@ -124,7 +124,6 @@ public class TestCreativeCommonsV3PermissionChecker
     assertNoPerm("<img href=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a nohref=\"" + lu("by", "3.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("not", "3.0") + "\" rel=\"license\" />");
-    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" norel=\"license\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" rel=\"uncle\" />");
     assertNoPerm("<a href=\"" + lu("by", "3.0") + "\" />");

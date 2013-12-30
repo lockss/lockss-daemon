@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsV3PermissionChecker.java,v 1.3 2011-12-18 23:13:32 tlipkis Exp $
+ * $Id: CreativeCommonsV3PermissionChecker.java,v 1.3.42.1 2013-12-30 03:54:44 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class CreativeCommonsV3PermissionChecker extends BasePermissionChecker {
       SetUtil.set("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
 
     private static final Set<String> VALIDLICENSEVERSIONS =
-      SetUtil.set("1.0", "2.0", "2.5", "3.0");
+      SetUtil.set("1.0", "2.0", "2.5", "3.0", "4.0");
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 					LinkExtractor.Callback cb) {
