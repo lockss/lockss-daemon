@@ -16571,6 +16571,22 @@
   {
 
     title <
+      name = The Philosophical Quarterly ;
+      issn = 0031-8094 ;
+      eissn = 1467-9213 ;
+      issnl = 0031-8094
+    >
+
+    param[base_url] = http://pq.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < expected ; exists ; 2014 ; The Philosophical Quarterly Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+    title <
       name = Plant and Cell Physiology ;
       issn = 0032-0781 ;
       eissn = 1471-9053 ;
@@ -16739,6 +16755,8 @@
     }
 
   }
+
+
 
   {
 
