@@ -1,10 +1,10 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.11 2007-10-04 09:43:41 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.11.102.1 2013-12-30 02:36:57 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,242 +34,173 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
-import edu.stanford.db.rdf.model.i.StatementImpl;
-
-import org.w3c.rdf.implementation.model.*;
-import org.w3c.rdf.implementation.syntax.sirpac.*;
-import org.w3c.rdf.model.*;
-import org.w3c.rdf.syntax.*;
-import org.w3c.rdf.util.*;
-import org.xml.sax.*;
-
+import org.lockss.config.*;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.extractor.*;
 
 /**
- * An implementation of PermissionChecker that looks for an RDF
- * statement granting permission to distribute the licensed work.
- * Used by RegistryArchivalUnit to check for plugin redistribution
- * permission.
- *
- * Currently does not support checking any other license restrictions
- * or permissions.
+ * This Permission checker recognizes all versions of the newer form of a
+ * Creative Commons license, which consists of an A or LINK tag containing
+ * the URL of a valid CC license page, and the REL attribute with the value
+ * LICENSE.
  */
 public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
-  private static String RDF_START = "<rdf:RDF";
-  private static String RDF_END = "</rdf:RDF>";
+  private static Logger logger =
+    Logger.getLogger(CreativeCommonsPermissionChecker.class);
 
-  // Maximum size for the RDF buffer
-  private static int RDF_BUF_LEN = 65535;
-  
-  private static String CC_NAMESPACE = "http://web.resource.org/cc/";
+  static final String PREFIX =
+    Configuration.PREFIX + " CreativeCommonsPermissionChecker.";
 
-  // License resource
-  private static final Resource LICENSE =
-    new ResourceImpl(CC_NAMESPACE + "License");
+  /** List of Creative Commons license types that are accepted */
+  static final String PARAM_VALID_LICENSE_TYPES =
+    PREFIX + "validLicenseTypes";
+  static final List DEFAULT_VALID_LICENSE_TYPES =
+    ListUtil.list("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
 
-  // Permission-kind resources
-  private static final Resource PERMITS =
-    new ResourceImpl(CC_NAMESPACE + "permits");
-  private static final Resource REQUIRES =
-    new ResourceImpl(CC_NAMESPACE + "requires");
-  private static final Resource PROHIBITS =
-    new ResourceImpl(CC_NAMESPACE + "prohibits");
+  /** List of Creative Commons license versions that are accepted */
+  static final String PARAM_VALID_LICENSE_VERSIONS =
+    PREFIX + "validLicenseVersions";
+  static final List DEFAULT_VALID_LICENSE_VERSIONS =
+    ListUtil.list("1.0", "2.0", "2.5", "3.0", "4.0");
 
-  // Permission labels
-  private static final Resource DERIVATIVE_WORKS =
-    new ResourceImpl(CC_NAMESPACE + "DerivativeWorks");
-  private static final Resource REPRODUCTION =
-    new ResourceImpl(CC_NAMESPACE + "Reproduction");
-  private static final Resource DISTRIBUTION =
-    new ResourceImpl(CC_NAMESPACE + "Distribution");
+  private static Set<String> validLicenseTypes =
+    SetUtil.theSet(DEFAULT_VALID_LICENSE_TYPES);
 
-  private static final Logger log =
-    Logger.getLogger("CreativeCommonsPermissionChecker");
+  private static Set<String> validLicenseVersions =
+    SetUtil.theSet(DEFAULT_VALID_LICENSE_VERSIONS);
 
-  // The URI of the resource being checked for permission
-  private String m_licenseURI;
-
-  /**
-   * Construct a Creative Commons permission checker with a license
-   * location URI.  If the CC RDF being parsed does not have a URI set
-   * for the "Work" element's "about:rdf" attribute, this will just be
-   * ignored.  But if it does, this URL *must* match the attribute's
-   * value in order to be a valid license.
-   *
-   * <p>For example, if the license Work opening element reads
-   * &lt;Work rdf:about=""&gt;, then this URI will be ignored (but, for
-   * SAX parser reasons, must be valid).  If the license Work opening
-   * element reads &lt;Work rdf:about="http://some.url/foo/"&gt;, then
-   * the licenseURI must be "http://some.url/foo/", or the license will
-   * not be considered valid.
+  /** Called by org.lockss.config.MiscConfig
    */
+  public static void setConfig(Configuration config,
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      validLicenseTypes =
+	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_TYPES,
+				      DEFAULT_VALID_LICENSE_TYPES));
+      validLicenseVersions =
+	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_VERSIONS,
+				      DEFAULT_VALID_LICENSE_VERSIONS));
+    }
+  }
+
+  String licenseUrl;
 
   public CreativeCommonsPermissionChecker() {
   }
 
-  /**
-   * Check for "Distribution" permission granted by a Creative Commons
-   * License.
-   */
   public boolean checkPermission(Crawler.PermissionHelper pHelper,
-				 Reader reader, String permissionUrl) {
-    if (reader == null) {
-      throw new NullPointerException("Called with null reader");
+				 Reader inputReader, String permissionUrl) {
+    licenseUrl = null;
+    logger.debug3("Checking permission on "+permissionUrl);
+    if (permissionUrl == null) {
+      return false;
     }
-
-    String rdfString;
-
+    ArchivalUnit au = null;
+    if (pHelper != null) {
+      au = pHelper.getAu();
+      if (logger.isDebug3()) {
+	logger.debug3("pHelper: " + pHelper);
+	logger.debug3("AU: " + au);
+      }
+    }
+    CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
     try {
-      rdfString = extractRDF(reader);
+      // XXX ReaderInputStream needed until PermissionChecker changed to
+      // take InputStream instead of Reader
+      extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
+			    permissionUrl, new MyLinkExtractorCallback());
     } catch (IOException ex) {
-      log.warning("Extracting RDF caused an IOException", ex);
+      logger.error("Exception trying to parse permission url "+permissionUrl,
+		   ex);
       return false;
     }
-
-    // extractRDF will return null if no RDF is found
-    if (rdfString == null) {
-      log.warning("No Creative Commons RDF found to parse.");
-      return false;
+    if (licenseUrl != null) {
+      logger.debug3("Found licenseUrl "+licenseUrl);
+      setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
+      return true;
     }
-
-    Model model = new RDFFactoryImpl().createModel();
-
-    RDFParser parser = new SiRPAC();
-    // Default error handler prints to stderr.  This error handler
-    // will log any RDF parsing errors to the LOCKSS cache log
-    // instead.
-    parser.setErrorHandler(new LoggingErrorHandler());
-    try {
-      InputSource source = new InputSource(new StringReader(rdfString));
-      source.setSystemId(CC_NAMESPACE);
-      parser.parse(source, new ModelConsumer(model));
-    } catch (Exception ex) {
-      // Can throw SAXException or ModelException
-      log.warning("Exception while parsing RDF.", ex);
-      return false;
-    }
-
-    log.debug("Extracted RDF.");
-
-    try {
-      // Find any statement in the RDF model that has the object LICENSE.
-      Resource licenseType = null;
-      for (Enumeration e = model.elements(); e.hasMoreElements(); ) {
-        Statement triple = (StatementImpl)e.nextElement();
-        if (triple.object().equals(LICENSE)) {
-          licenseType = triple.subject();
-          break;
-        }
-      }
-      if (licenseType == null) {
-        log.warning("No license type found.  Invalid CC RDF.");
-        return false;
-      }
-      StatementImpl permitsDistribution =
-        new StatementImpl(licenseType, PERMITS, DISTRIBUTION);
-      StatementImpl requiresDistribution =
-        new StatementImpl(licenseType, REQUIRES, DISTRIBUTION);
-      boolean res = model.contains(permitsDistribution)
-	|| model.contains(requiresDistribution);
-      if (res) {
-	setAuAccessType(pHelper, AuState.AccessType.OpenAccess);
-      }
-      return res;
-    } catch (ModelException ex) {
-      log.warning("Couldn't parse RDF", ex);
-    }
-
-    // No permission granted if this point is reached.
     return false;
   }
 
-  /**
-   * Extract RDF from a reader.  This method will read from the input
-   * reader until it has found the closing RDF tag, or until the
-   * reader is exhausted.  It will not close the reader.
-   *
-   * Because it builds a String representation of the RDF, it will
-   * only read to a predetermined maximum length to avoid problems
-   * with unbounded input. Since it targets Creative Commons License
-   * RDF blocks, the size of the buffer is fairly small, 65535 chars.
-   * Anything larger than that is almost certainly not a properly
-   * formed CC licence.
-   */
-  private String extractRDF(Reader in) throws IOException {
-    boolean found_start = false;
-    boolean found_end = false;
+  private static class CustomHtmlLinkExtractor
+    extends GoslingHtmlLinkExtractor {
 
-    char[] buf = new char[RDF_BUF_LEN];
+    private static final String REL = "rel";
+    private static final String LICENSE = "license";
 
-    int in_pos = 0;
-    int buf_pos = 0;
+    private static Pattern CC_LICENSE_PAT =
+      Pattern.compile("http://creativecommons.org/licenses/([^/]+)/([^/]+).*",
+		      Pattern.CASE_INSENSITIVE);
 
-    int start_len = RDF_START.length();
-    int end_len = RDF_END.length();
+    protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
+					LinkExtractor.Callback cb) {
+      String returnStr = null;
 
-    int c;
-    while ((c = in.read()) != -1) {
-      if (buf_pos > RDF_BUF_LEN) {
-        // Too long to fit in buffer.
-        log.warning("RDF block too long to fit in buffer.");
-        return null;
+      switch (link.charAt(0)) {
+        case 'l': //<link href="blah" rel="license">
+        case 'L':
+        case 'a': //<a href="blah" rel="license">
+        case 'A':
+	  if (logger.isDebug3()) {
+	    logger.debug3("Looking for license in "+link);
+	  }
+	  if (beginsWithTag(link, LINKTAG) || beginsWithTag(link, ATAG)) {
+	    String relStr = getAttributeValue(REL, link);
+	    if (LICENSE.equalsIgnoreCase(relStr)) {
+	      // This tag has the rel="license" attribute
+	      String licenseURL = getAttributeValue(HREF, link);
+	      if (licenseURL == null) {
+	        break;
+	      }
+	      if (logger.isDebug2()) {
+		logger.debug2("CC license URL: "+licenseURL);
+	      }
+	      Matcher mat = CC_LICENSE_PAT.matcher(licenseURL);
+	      if (logger.isDebug2()) {
+		logger.debug2("Match: " + mat.matches() + ": " + licenseURL);
+	      }
+	      if (mat.matches()) {
+		String lic = mat.group(1).toLowerCase();
+		String ver = mat.group(2);
+		if (logger.isDebug2()) {
+		  logger.debug2("lic: " + lic + ", ver: " + ver);
+		}
+		// Any combination of license terms and version is
+		// currently acceptable.
+		if (validLicenseTypes.contains(lic)
+		    && validLicenseVersions.contains(ver)) {
+		  returnStr = licenseURL;
+		}
+	      }
+	    }
+	  }
+	  break;
+        default:
+	  return null;
       }
-
-      buf[buf_pos++] = (char)c;
-
-      if (!found_start) {
-        if (c != RDF_START.charAt(in_pos++)) {
-          in_pos = 0;
-          buf_pos = 0;
-          continue;
-        }
-
-        if (in_pos == start_len) {
-          log.debug3("Found start of RDF");
-          found_start = true;
-          in_pos = 0;
-          continue;
-        }
-      } else {
-        // Found the starting token, read until
-        // the ending token is found.
-        if (c != RDF_END.charAt(in_pos++)) {
-          in_pos = 0;
-        }
-        if (in_pos == end_len) {
-          log.debug3("Found end of RDF");
-          found_end = true;
-          break; // done with this stream.
-        }
+      if (logger.isDebug2()) {
+	logger.debug2("ret: " + returnStr);
       }
-    }
-
-    if (found_end) {
-      return new String(buf, 0, buf_pos);
-    } else {
-      log.debug3("Got to end of reader and didn't find the RDF end");
-      return null;
+      return returnStr;
     }
   }
 
-  /**
-   * Simple RDF error handler that logs output instead of dumping to
-   * stderr.
-   */
-  private static class LoggingErrorHandler implements ErrorHandler {
-    public void error(SAXParseException e) {
-      log.warning("RDF Parser: " + e);
+  private class MyLinkExtractorCallback implements LinkExtractor.Callback {
+    public MyLinkExtractorCallback() {
     }
 
-    public void fatalError(SAXParseException e) {
-      log.error("RDF Parser: " + e);
-    }
-
-    public void warning(SAXParseException e) {
-      log.warning("RDF Parser: " + e);
+    public void foundLink(String url) {
+      if (licenseUrl != null && !licenseUrl.equalsIgnoreCase(url)) {
+	logger.warning("Multiple license URLs found on manifest page.  " +
+		       "Old: "+licenseUrl+" New: "+url);
+      }
+      licenseUrl = url;
     }
   }
 }

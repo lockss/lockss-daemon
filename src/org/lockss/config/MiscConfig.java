@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.11 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.11.46.1 2013-12-30 02:36:57 tlipkis Exp $
  */
 
 /*
@@ -60,6 +60,7 @@ public class MiscConfig {
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);
 	  HtmlKbartExporter.setConfig(config, oldConfig, diffs);
 	  RegexpCssLinkRewriterFactory.setConfig(config, oldConfig, diffs);
+	  CreativeCommonsPermissionChecker.setConfig(config, oldConfig, diffs);
 	}
       };
   }
