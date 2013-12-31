@@ -160,16 +160,26 @@
     au < HighWirePressH20Plugin ; released ; 1995 ; Development Volume 121 ; 121 >
     au < HighWirePressH20Plugin ; released ; 1996 ; Development Volume 122 ; 122 >
     au < HighWirePressH20Plugin ; released ; 1996 ; Development Volume 123 ; 123 >
-    au < HighWireStrVolPlugin ; down ; 1997 ; Development Volume 124 ; 124 >
-    au < HighWireStrVolPlugin ; down ; 1998 ; Development Volume 125 ; 125 >
-    au < HighWireStrVolPlugin ; down ; 1999 ; Development Volume 126 ; 126 >
-    au < HighWireStrVolPlugin ; down ; 2000 ; Development Volume 127 ; 127 >
-    au < HighWireStrVolPlugin ; down ; 2001 ; Development Volume 128 ; 128 >
-    au < HighWireStrVolPlugin ; down ; 2002 ; Development Volume 129 ; 129 >
-    au < HighWireStrVolPlugin ; down ; 2003 ; Development Volume 130 ; 130 >
-    au < HighWireStrVolPlugin ; down ; 2004 ; Development Volume 131 ; 131 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Development Volume 132 ; 132 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Development Volume 133 ; 133 >
+    au < HighWireStrVolPlugin ; superseded ; 1997 ; Development Volume 124 [superseded] ; 124 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Development Volume 124 ; 124 >
+    au < HighWireStrVolPlugin ; superseded ; 1998 ; Development Volume 125 [superseded] ; 125 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Development Volume 125 ; 125 >
+    au < HighWireStrVolPlugin ; superseded ; 1999 ; Development Volume 126 [superseded]; 126 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Development Volume 126 ; 126 >
+    au < HighWireStrVolPlugin ; superseded ; 2000 ; Development Volume 127 [superseded] ; 127 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Development Volume 127 ; 127 >
+    au < HighWireStrVolPlugin ; superseded ; 2001 ; Development Volume 128 [superseded] ; 128 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Development Volume 128 ; 128 >
+    au < HighWireStrVolPlugin ; superseded ; 2002 ; Development Volume 129 [superseded] ; 129 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Development Volume 129 ; 129 >
+    au < HighWireStrVolPlugin ; superseded ; 2003 ; Development Volume 130 [superseded] ; 130 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Development Volume 130 ; 130 >
+    au < HighWireStrVolPlugin ; superseded ; 2004 ; Development Volume 131 [superseded] ; 131 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Development Volume 131 ; 131 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; Development Volume 132 [superseded] ; 132 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Development Volume 132 ; 132 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Development Volume 133 [superseded] ; 133 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Development Volume 133 ; 133 >
     au < HighWirePressH20Plugin ; released ; 2007 ; Development Volume 134 ; 134 >
     au < HighWirePressH20Plugin ; released ; 2008 ; Development Volume 135 ; 135 >
     au < HighWirePressH20Plugin ; released ; 2009 ; Development Volume 136 ; 136 >
@@ -325,21 +335,39 @@
     au < HighWirePressPlugin ; down ; 1993 ; Journal of Cell Science Volume 105 ; 105 >
     au < HighWirePressPlugin ; down ; 1993 ; Journal of Cell Science Volume 106 ; 106 >
     au < HighWirePressPlugin ; down ; 1994 ; Journal of Cell Science Volume 107 ; 107 >
-    au < HighWirePressPlugin ; down ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
-    au < HighWirePressPlugin ; down ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
-    au < HighWirePressPlugin ; down ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
-    au < HighWirePressPlugin ; down ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
-    au < HighWirePressPlugin ; down ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
-    au < HighWirePressPlugin ; down ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
-    au < HighWirePressPlugin ; down ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
-    au < HighWirePressPlugin ; down ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
-    au < HighWirePressPlugin ; down ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
-    au < HighWirePressPlugin ; down ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
-    au < HighWirePressPlugin ; down ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
+    
+    au < HighWirePressPlugin ; superseded ; 1995 ; Journal of Cell Science Volume 108 [superseded] ; 108 >
+    au < HighWirePressPlugin ; superseded ; 1996 ; Journal of Cell Science Volume 109 [superseded] ; 109 >
+    au < HighWirePressPlugin ; superseded ; 1997 ; Journal of Cell Science Volume 110 [superseded] ; 110 >
+    au < HighWirePressPlugin ; superseded ; 1998 ; Journal of Cell Science Volume 111 [superseded] ; 111 >
+    au < HighWirePressPlugin ; superseded ; 1999 ; Journal of Cell Science Volume 112 [superseded] ; 112 >
+    au < HighWirePressPlugin ; superseded ; 2000 ; Journal of Cell Science Volume 113 [superseded] ; 113 >
+    au < HighWirePressPlugin ; superseded ; 2001 ; Journal of Cell Science Volume 114 [superseded] ; 114 >
+    au < HighWirePressPlugin ; superseded ; 2002 ; Journal of Cell Science Volume 115 [superseded] ; 115 >
+    au < HighWirePressPlugin ; superseded ; 2003 ; Journal of Cell Science Volume 116 [superseded] ; 116 >
+    au < HighWirePressPlugin ; superseded ; 2004 ; Journal of Cell Science Volume 117 [superseded] ; 117 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; Journal of Cell Science Volume 118 [superseded] ; 118 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of Cell Science Volume 119 [superseded] ; 119 >
+    au < HighWirePressPlugin ; superseded ; 2007 ; Journal of Cell Science Volume 120 [superseded] ; 120 >
+    au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Cell Science Volume 121 [superseded] ; 121 >
+    au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Cell Science Volume 122 [superseded] ; 122 >
+    
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Cell Science Volume 108 ; 108 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Cell Science Volume 109 ; 109 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Cell Science Volume 110 ; 110 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Cell Science Volume 111 ; 111 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Cell Science Volume 112 ; 112 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Cell Science Volume 113 ; 113 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Cell Science Volume 114 ; 114 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Cell Science Volume 115 ; 115 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Cell Science Volume 116 ; 116 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Cell Science Volume 117 ; 117 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Cell Science Volume 118 ; 118 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Cell Science Volume 119 ; 119 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Cell Science Volume 120 ; 120 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Cell Science Volume 121 ; 121 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Cell Science Volume 122 ; 122 >
+    
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Cell Science Volume 123 ; 123 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Cell Science Volume 124 ; 124 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Cell Science Volume 125 ; 125 >
@@ -558,21 +586,39 @@
     au < HighWirePressPlugin ; down ; 1994 ; Journal of Experimental Biology Volume 195 ; 195 >
     au < HighWirePressPlugin ; down ; 1994 ; Journal of Experimental Biology Volume 196 ; 196 >
     au < HighWirePressPlugin ; down ; 1994 ; Journal of Experimental Biology Volume 197 ; 197 >
-    au < HighWirePressPlugin ; down ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
-    au < HighWirePressPlugin ; down ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
-    au < HighWirePressPlugin ; down ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
-    au < HighWirePressPlugin ; down ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
-    au < HighWirePressPlugin ; down ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
-    au < HighWirePressPlugin ; down ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
-    au < HighWirePressPlugin ; down ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
-    au < HighWirePressPlugin ; down ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
-    au < HighWirePressPlugin ; down ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
-    au < HighWirePressPlugin ; down ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
-    au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
-    au < HighWireStrVolPlugin ; down ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
-    au < HighWirePressPlugin ; down ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
-    au < HighWirePressPlugin ; down ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
-    au < HighWirePressPlugin ; down ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
+    
+    au < HighWirePressPlugin ; superseded ; 1995 ; Journal of Experimental Biology Volume 198 [superseded] ; 198 >
+    au < HighWirePressPlugin ; superseded ; 1996 ; Journal of Experimental Biology Volume 199 [superseded] ; 199 >
+    au < HighWirePressPlugin ; superseded ; 1997 ; Journal of Experimental Biology Volume 200 [superseded] ; 200 >
+    au < HighWirePressPlugin ; superseded ; 1998 ; Journal of Experimental Biology Volume 201 [superseded] ; 201 >
+    au < HighWirePressPlugin ; superseded ; 1999 ; Journal of Experimental Biology Volume 202 [superseded] ; 202 >
+    au < HighWirePressPlugin ; superseded ; 2000 ; Journal of Experimental Biology Volume 203 [superseded] ; 203 >
+    au < HighWirePressPlugin ; superseded ; 2001 ; Journal of Experimental Biology Volume 204 [superseded] ; 204 >
+    au < HighWirePressPlugin ; superseded ; 2002 ; Journal of Experimental Biology Volume 205 [superseded] ; 205 >
+    au < HighWirePressPlugin ; superseded ; 2003 ; Journal of Experimental Biology Volume 206 [superseded] ; 206 >
+    au < HighWirePressPlugin ; superseded ; 2004 ; Journal of Experimental Biology Volume 207 [superseded] ; 207 >
+    au < HighWireStrVolPlugin ; superseded ; 2005 ; Journal of Experimental Biology Volume 208 [superseded] ; 208 >
+    au < HighWireStrVolPlugin ; superseded ; 2006 ; Journal of Experimental Biology Volume 209 [superseded] ; 209 >
+    au < HighWirePressPlugin ; superseded ; 2007 ; Journal of Experimental Biology Volume 210 [superseded] ; 210 >
+    au < HighWirePressPlugin ; superseded ; 2008 ; Journal of Experimental Biology Volume 211 [superseded] ; 211 >
+    au < HighWirePressPlugin ; superseded ; 2009 ; Journal of Experimental Biology Volume 212 [superseded] ; 212 >
+    
+    au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Experimental Biology Volume 198 ; 198 >
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Experimental Biology Volume 199 ; 199 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Experimental Biology Volume 200 ; 200 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Experimental Biology Volume 201 ; 201 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Experimental Biology Volume 202 ; 202 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Experimental Biology Volume 203 ; 203 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Experimental Biology Volume 204 ; 204 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Experimental Biology Volume 205 ; 205 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Experimental Biology Volume 206 ; 206 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Experimental Biology Volume 207 ; 207 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Experimental Biology Volume 208 ; 208 >
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Experimental Biology Volume 209 ; 209 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Experimental Biology Volume 210 ; 210 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Experimental Biology Volume 211 ; 211 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Experimental Biology Volume 212 ; 212 >
+    
     au < HighWirePressH20Plugin ; released ; 2010 ; Journal of Experimental Biology Volume 213 ; 213 >
     au < HighWirePressH20Plugin ; released ; 2011 ; Journal of Experimental Biology Volume 214 ; 214 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Experimental Biology Volume 215 ; 215 >
