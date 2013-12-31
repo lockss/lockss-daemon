@@ -126,7 +126,6 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     // In other cases we're missing one of the pieces
     // This is to test edge cases in the ArticleIterator
     String[] urls = {
-        BASE_URL + "gateway/chapter/full-text-pdf/2222",
         BASE_URL + "gateway/chapter/full-text-pdf/55656",
         BASE_URL + "gateway/chapter/full-text-pdf/12345",
         BASE_URL + "gateway/chapter/full-text-html/54321",
@@ -177,19 +176,24 @@ public class TestIgiGlobalBooksArticleIteratorFactory extends ArticleIteratorTes
     Stack<String[]> expStack = new Stack<String[]>();
     // fulltextcu
     // FULL_TEXT_PDF
-    // ABSTRACT - must have abstract to even get picked up
-    String [] af1 = {BASE_URL + "gateway/chapter/11111",
+    // ABSTRACT 
+    String [] af1 = {null,
         null,
         BASE_URL + "gateway/chapter/11111"};
     
-    String [] af2 = {BASE_URL + "gateway/chapter/full-text-html/54321",
-        null,
-        BASE_URL + "gateway/chapter/54321"};
-    
-    String [] af3 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
+    String [] af2 = {BASE_URL + "gateway/chapter/full-text-pdf/55656",
         BASE_URL + "gateway/chapter/full-text-pdf/55656",
         BASE_URL + "gateway/chapter/55656"};
     
+    String [] af3 = {BASE_URL + "gateway/chapter/full-text-html/54321",
+        null,
+        BASE_URL + "gateway/chapter/54321"};
+    
+    String [] af4 = {BASE_URL + "gateway/chapter/full-text-pdf/12345",
+        BASE_URL + "gateway/chapter/full-text-pdf/12345", 
+        null};
+    
+    expStack.push(af4);
     expStack.push(af3);
     expStack.push(af2);
     expStack.push(af1);

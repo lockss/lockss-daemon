@@ -36,7 +36,6 @@ import java.util.regex.Pattern;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.plugin.simulated.SimulatedContentGenerator;
@@ -48,6 +47,7 @@ import org.lockss.util.*;
  * HTML Abstract: http://www.igi-global.com/gateway/contentowned/article.aspx?titleid=55656
  */
 public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase {
+  static Logger logger = Logger.getLogger(TestIgiGlobalArticleIteratorFactory.class);
   
   private SimulatedArchivalUnit sau;  // Simulated AU to generate content
   private final String ARTICLE_FAIL_MSG = "Article files not created properly";
@@ -126,7 +126,6 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
         BASE_URL + "pdf.aspx",
         BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         BASE_URL + "gateway/article/full-text-html/11111",
-        BASE_URL + "gateway/article/full-text-pdf/2222",
         BASE_URL + "gateway/article/full-text-html/55656",
         BASE_URL + "gateway/article/full-text-pdf/55656",
         BASE_URL + "gateway/article/full-text-pdf/12345",
@@ -195,21 +194,29 @@ public class TestIgiGlobalArticleIteratorFactory extends ArticleIteratorTestCase
     }
     
     Stack<String[]> expStack = new Stack<String[]>();
-    String [] af1 = {BASE_URL + "gateway/article/full-text-html/11111",
-        null,
-        null,
-        BASE_URL + "gateway/article/11111"};
-    
-    String [] af2 = {BASE_URL + "gateway/article/54321",
+    String [] af1 = {null,
         null,
         null,
         BASE_URL + "gateway/article/54321"};
     
+    String [] af2 = {BASE_URL + "gateway/article/full-text-html/11111",
+        null,
+        null,
+        BASE_URL + "gateway/article/11111"};
+    
     String [] af3 = {BASE_URL + "gateway/article/full-text-html/55656",
         BASE_URL + "gateway/article/full-text-pdf/55656",
-        BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
+        // FIXME after change to SubTreeArticleIteratorBuilder committed
+        null, // BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
         BASE_URL + "gateway/article/55656"};
     
+    String [] af4 = {BASE_URL + "gateway/article/full-text-pdf/12345",
+        BASE_URL + "gateway/article/full-text-pdf/12345",
+        // FIXME after change to SubTreeArticleIteratorBuilder committed
+        null, // BASE_URL + "pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dArticle+Title",
+        null};
+    
+    expStack.push(af4);
     expStack.push(af3);
     expStack.push(af2);
     expStack.push(af1);
