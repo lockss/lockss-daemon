@@ -129,7 +129,7 @@
     au < manifest ; exists ; 2011 ; Journal of Aerospace Engineering Volume 24 ; 24 >
     au < crawling ; exists ; 2012 ; Journal of Aerospace Engineering Volume 25 ; 25 >
     au < crawling ; exists ; 2013 ; Journal of Aerospace Engineering Volume 26 ; 26 >
-    au < expected ; exists ; 2014 ; Journal of Aerospace Engineering Volume 27 ; 27 >
+    au < manifest ; exists ; 2014 ; Journal of Aerospace Engineering Volume 27 ; 27 >
 
   }
 
@@ -166,7 +166,7 @@
       au < manifest ; exists ; 2011 ; Journal of Bridge Engineering Volume 16 ; 16 >
       au < crawling ; exists ; 2012 ; Journal of Bridge Engineering Volume 17 ; 17 >
       au < crawling ; exists ; 2013 ; Journal of Bridge Engineering Volume 18 ; 18 >
-      au < expected ; exists ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 >
+      au < manifest ; exists ; 2014 ; Journal of Bridge Engineering Volume 19 ; 19 >
     
   }
 
@@ -283,7 +283,7 @@
     au < manifest ; exists ; 2011 ; Journal of Construction Engineering & Management Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Construction Engineering & Management Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Construction Engineering & Management Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Construction Engineering & Management Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Construction Engineering & Management Volume 140 ; 140 >
 
   }
 
@@ -324,7 +324,7 @@
     au < manifest ; exists ; 2011 ; Journal of Computing in Civil Engineering Volume 25 ; 25 >
     au < crawling ; exists ; 2012 ; Journal of Computing in Civil Engineering Volume 26 ; 26 >
     au < crawling ; exists ; 2013 ; Journal of Computing in Civil Engineering Volume 27 ; 27 >
-    au < expected ; exists ; 2014 ; Journal of Computing in Civil Engineering Volume 28 ; 28 >
+    au < manifest ; exists ; 2014 ; Journal of Computing in Civil Engineering Volume 28 ; 28 >
 
   }
 
@@ -378,6 +378,8 @@
     >
 
     param[journal_id] = joeedu
+    
+    comment[notReady] = 2014 AU added Dec 2013, precipitously. 
 
     au < manifest ; exists ; 1983 ; Journal of Environmental Engineering Volume 109 ; 109 >
     au < manifest ; exists ; 1984 ; Journal of Environmental Engineering Volume 110 ; 110 >
@@ -392,25 +394,25 @@
     au < manifest ; exists ; 1993 ; Journal of Environmental Engineering Volume 119 ; 119 >
     au < manifest ; exists ; 1994 ; Journal of Environmental Engineering Volume 120 ; 120 >
     au < manifest ; exists ; 1995 ; Journal of Environmental Engineering Volume 121 ; 121 >
-    au < manifest ; exists ; 1996 ; Journal of Environmental Engineering Volume 123 ; 123 >
-    au < manifest ; exists ; 1997 ; Journal of Environmental Engineering Volume 124 ; 124 >
-    au < manifest ; exists ; 1998 ; Journal of Environmental Engineering Volume 125 ; 125 >
-    au < manifest ; exists ; 1999 ; Journal of Environmental Engineering Volume 126 ; 126 >
-    au < manifest ; exists ; 2000 ; Journal of Environmental Engineering Volume 127 ; 127 >
-    au < manifest ; exists ; 2001 ; Journal of Environmental Engineering Volume 128 ; 128 >
-    au < manifest ; exists ; 2002 ; Journal of Environmental Engineering Volume 129 ; 129 >
-    au < manifest ; exists ; 2003 ; Journal of Environmental Engineering Volume 130 ; 130 >
-    au < manifest ; exists ; 2004 ; Journal of Environmental Engineering Volume 131 ; 131 >
-    au < manifest ; exists ; 2005 ; Journal of Environmental Engineering Volume 132 ; 132 >
-    au < manifest ; exists ; 2006 ; Journal of Environmental Engineering Volume 133 ; 133 >
-    au < manifest ; exists ; 2007 ; Journal of Environmental Engineering Volume 134 ; 134 >
-    au < manifest ; exists ; 2008 ; Journal of Environmental Engineering Volume 135 ; 135 >
-    au < manifest ; exists ; 2009 ; Journal of Environmental Engineering Volume 136 ; 136 >
-    au < manifest ; exists ; 2010 ; Journal of Environmental Engineering Volume 137 ; 137 >
-    au < manifest ; exists ; 2011 ; Journal of Environmental Engineering Volume 138 ; 138 >
-    au < crawling ; exists ; 2012 ; Journal of Environmental Engineering Volume 139 ; 139 >
-    au < crawling ; exists ; 2013 ; Journal of Environmental Engineering Volume 140 ; 140 >
-    au < expected ; exists ; 2014 ; Journal of Environmental Engineering Volume 141 ; 141 >
+    au < manifest ; exists ; 1996 ; Journal of Environmental Engineering Volume 122 ; 122 >
+    au < manifest ; exists ; 1997 ; Journal of Environmental Engineering Volume 123 ; 123 >
+    au < manifest ; exists ; 1998 ; Journal of Environmental Engineering Volume 124 ; 124 >
+    au < manifest ; exists ; 1999 ; Journal of Environmental Engineering Volume 125 ; 125 >
+    au < manifest ; exists ; 2000 ; Journal of Environmental Engineering Volume 126 ; 126 >
+    au < manifest ; exists ; 2001 ; Journal of Environmental Engineering Volume 127 ; 127 >
+    au < manifest ; exists ; 2002 ; Journal of Environmental Engineering Volume 128 ; 128 >
+    au < manifest ; exists ; 2003 ; Journal of Environmental Engineering Volume 129 ; 129 >
+    au < manifest ; exists ; 2004 ; Journal of Environmental Engineering Volume 130 ; 130 >
+    au < manifest ; exists ; 2005 ; Journal of Environmental Engineering Volume 131 ; 131 >
+    au < manifest ; exists ; 2006 ; Journal of Environmental Engineering Volume 132 ; 132 >
+    au < manifest ; exists ; 2007 ; Journal of Environmental Engineering Volume 133 ; 133 >
+    au < manifest ; exists ; 2008 ; Journal of Environmental Engineering Volume 134 ; 134 >
+    au < manifest ; exists ; 2009 ; Journal of Environmental Engineering Volume 135 ; 135 >
+    au < manifest ; exists ; 2010 ; Journal of Environmental Engineering Volume 136 ; 136 >
+    au < manifest ; exists ; 2011 ; Journal of Environmental Engineering Volume 137 ; 137 >
+    au < manifest ; exists ; 2012 ; Journal of Environmental Engineering Volume 138 ; 138 >
+    au < crawling ; exists ; 2013 ; Journal of Environmental Engineering Volume 139 ; 139 >
+    au < ingNotReady ; exists ; 2014 ; Journal of Environmental Engineering Volume 140 ; 140 >
 
   }
 
@@ -455,7 +457,7 @@
     au < manifest ; exists ; 2011 ; Journal of Engineering Mechanics Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Engineering Mechanics Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Engineering Mechanics Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Engineering Mechanics Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Engineering Mechanics Volume 140 ; 140 >
 
   }
 
@@ -545,7 +547,7 @@
     au < manifest ; exists ; 2011 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Geotechnical & Geoenvironmental Engineering Volume 140 ; 140 >
 
   }
 
@@ -576,7 +578,7 @@
     au < manifest ; exists ; 2011 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 15 ; 15 >
     au < crawling ; exists ; 2012 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 16 ; 16 >
     au < crawling ; exists ; 2013 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 17 ; 17 >
-    au < expected ; exists ; 2014 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 18 ; 18 >
+    au < manifest ; exists ; 2014 ; Journal of Hazardous, Toxic & Radioactive Waste Volume 18 ; 18 >
 
   }
 
@@ -608,7 +610,7 @@
     au < manifest ; exists ; 2011 ; Journal of Hydrologic Engineering Volume 16 ; 16 >
     au < crawling ; exists ; 2012 ; Journal of Hydrologic Engineering Volume 17 ; 17 >
     au < crawling ; exists ; 2013 ; Journal of Hydrologic Engineering Volume 18 ; 18 >
-    au < expected ; exists ; 2014 ; Journal of Hydrologic Engineering Volume 19 ; 19 >
+    au < manifest ; exists ; 2014 ; Journal of Hydrologic Engineering Volume 19 ; 19 >
 
   }
 
@@ -653,7 +655,7 @@
     au < manifest ; exists ; 2011 ; Journal of Hydraulic Engineering Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Hydraulic Engineering Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Hydraulic Engineering Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Hydraulic Engineering Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Hydraulic Engineering Volume 140 ; 140 >
 
   }
 
@@ -698,7 +700,7 @@
     au < manifest ; exists ; 2011 ; Journal of Irrigation & Drainage Engineering Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Irrigation & Drainage Engineering Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Irrigation & Drainage Engineering Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Irrigation & Drainage Engineering Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Irrigation & Drainage Engineering Volume 140 ; 140 >
 
   }
 
@@ -793,7 +795,7 @@
     au < manifest ; exists ; 2011 ; Journal of Management in Engineering Volume 27 ; 27 >
     au < crawling ; exists ; 2012 ; Journal of Management in Engineering Volume 28 ; 28 >
     au < crawling ; exists ; 2013 ; Journal of Management in Engineering Volume 29 ; 29 >
-    au < expected ; exists ; 2014 ; Journal of Management in Engineering Volume 30 ; 30 >
+    au < manifest ; exists ; 2014 ; Journal of Management in Engineering Volume 30 ; 30 >
 
   }
 
@@ -832,7 +834,7 @@
     au < manifest ; exists ; 2011 ; Journal of Materials in Civil Engineering Volume 23 ; 23 >
     au < crawling ; exists ; 2012 ; Journal of Materials in Civil Engineering Volume 24 ; 24 >
     au < crawling ; exists ; 2013 ; Journal of Materials in Civil Engineering Volume 25 ; 25 >
-    au < expected ; exists ; 2014 ; Journal of Materials in Civil Engineering Volume 26 ; 26 >
+    au < manifest ; exists ; 2014 ; Journal of Materials in Civil Engineering Volume 26 ; 26 >
 
   }
 
@@ -894,7 +896,7 @@
     au < manifest ; exists ; 2011 ; Journal of Professional Issues in Engineering Education & Practice Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Professional Issues in Engineering Education & Practice Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Professional Issues in Engineering Education & Practice Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Professional Issues in Engineering Education & Practice Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Professional Issues in Engineering Education & Practice Volume 140 ; 140 >
 
   }
 
@@ -957,7 +959,7 @@
     au < manifest ; exists ; 2011 ; Journal of Structural Engineering Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Structural Engineering Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Structural Engineering Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Structural Engineering Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Structural Engineering Volume 140 ; 140 >
 
   }
 
@@ -1047,7 +1049,7 @@
     au < manifest ; exists ; 2011 ; Journal of Transportation Engineering Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Transportation Engineering Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Transportation Engineering Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Transportation Engineering Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Transportation Engineering Volume 140 ; 140 >
 
   }
 
@@ -1137,7 +1139,7 @@
     au < manifest ; exists ; 2011 ; Journal of Water Resources Planning and Management Volume 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Water Resources Planning and Management Volume 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Water Resources Planning and Management Volume 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Water Resources Planning and Management Volume 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Water Resources Planning and Management Volume 140 ; 140 >
 
   }
 
@@ -1182,7 +1184,7 @@
     au < manifest ; exists ; 2011 ; Journal of Waterway Port Coastal and Ocean Engineering 137 ; 137 >
     au < crawling ; exists ; 2012 ; Journal of Waterway Port Coastal and Ocean Engineering 138 ; 138 >
     au < crawling ; exists ; 2013 ; Journal of Waterway Port Coastal and Ocean Engineering 139 ; 139 >
-    au < expected ; exists ; 2014 ; Journal of Waterway Port Coastal and Ocean Engineering 140 ; 140 >
+    au < manifest ; exists ; 2014 ; Journal of Waterway Port Coastal and Ocean Engineering 140 ; 140 >
     
   }
 

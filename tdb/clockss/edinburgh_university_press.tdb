@@ -548,7 +548,7 @@
     au < finished ; crawling ; 2011 ; Journal of British Cinema and Television Volume 8 ; 8 >
     au < finished ; crawling ; 2012 ; Journal of British Cinema and Television Volume 9 ; 9 >
     au < crawling ; exists ; 2013 ; Journal of British Cinema and Television Volume 10 ; 10 >
-    au < expected ; exists ; 2014 ; Journal of British Cinema and Television Volume 11 ; 11 >
+    au < manifest ; exists ; 2014 ; Journal of British Cinema and Television Volume 11 ; 11 >
 
   }
 
@@ -932,7 +932,7 @@
     au < finished ; crawling ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
     au < finished ; crawling ; 2012 ; Psychoanalysis and History Volume 14 ; 14 >
     au < crawling ; exists ; 2013 ; Psychoanalysis and History Volume 15 ; 15 >
-    au < expected ; exists ; 2014 ; Psychoanalysis and History Volume 16 ; 16 >
+    au < manifest ; exists ; 2014 ; Psychoanalysis and History Volume 16 ; 16 >
 
   }
 
@@ -962,6 +962,21 @@
     au < crawling ; exists ; 2013 ; Romanticism Volume 19 ; 19 >
     au < expected ; exists ; 2014 ; Romanticism Volume 20 ; 20 >
 
+  }
+
+  {
+
+    title <
+      name = Scottish Affairs ;
+      issn = 0966-0356 ;
+      eissn = 2053-888X ;
+      issnl = 0966-0356
+    >
+
+      param[journal_id] = scot
+
+      au < expected ; exists ; 2014 ; Scottish Affairs Volume 1 ; 1 >
+    
   }
 
   {

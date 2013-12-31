@@ -43,7 +43,7 @@
     au < finished ; crawling ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
     au < finished ; crawling ; 2012 ; Acta Biochimica et Biophysica Sinica Volume 44 ; 44 ; >
     au < crawling ; exists ; 2013 ; Acta Biochimica et Biophysica Sinica Volume 45 ; 45 ; >
-    au < expected ; exists ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2014 ; Acta Biochimica et Biophysica Sinica Volume 46 ; 46 ; >
 
     }
 
@@ -284,7 +284,7 @@
     au < finished ; crawling ; 2011 ; Age and Ageing Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; Age and Ageing Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; Age and Ageing Volume 42 ; 42 ; >
-    au < expected ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2014 ; Age and Ageing Volume 43 ; 43 ; >
 
     }
 
@@ -362,7 +362,7 @@
     au < finished ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < finished ; crawling ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
     au < crawling ; exists ; 2013 ; Alcohol and Alcoholism Volume 48 ; 48 ; >
-    au < expected ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2014 ; Alcohol and Alcoholism Volume 49 ; 49 ; >
 
     }
 
@@ -827,7 +827,7 @@
     au < finished ; crawling ; 2012 ; American Journal of Epidemiology Volume 176 ; 176 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 177 ; 177 ; >
     au < crawling ; exists ; 2013 ; American Journal of Epidemiology Volume 178 ; 178 ; >
-    au < expected ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
+    au < manifest ; exists ; 2014 ; American Journal of Epidemiology Volume 179 ; 179 ; >
     au < expected ; exists ; 2014 ; American Journal of Epidemiology Volume 180 ; 180 ; >
 
     }
@@ -872,9 +872,9 @@
     au < crawling ; exists ; 2009 ; American Journal of Hypertension Volume 22 ; 22 ; >
     au < crawling ; exists ; 2010 ; American Journal of Hypertension Volume 23 ; 23 ; >
     au < crawling ; exists ; 2011 ; American Journal of Hypertension Volume 24 ; 24 ; >
-    au < ingNotReady ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
+    au < ready ; exists ; 2012 ; American Journal of Hypertension Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; American Journal of Hypertension Volume 26 ; 26 ; >
-    au < expected ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2014 ; American Journal of Hypertension Volume 27 ; 27 ; >
 
   }
 
@@ -1342,7 +1342,7 @@
     au < finished ; crawling ; 2012 ; Annals of Botany Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 111 ; 111 ; >
     au < crawling ; exists ; 2013 ; Annals of Botany Volume 112 ; 112 ; >
-    au < expected ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
+    au < manifest ; exists ; 2014 ; Annals of Botany Volume 113 ; 113 ; >
     au < expected ; exists ; 2014 ; Annals of Botany Volume 114 ; 114 ; >
 
     }
@@ -1486,7 +1486,7 @@
     au < finished ; crawling ; 2011 ; Annals of Oncology Volume 22 ; 22 ; >
     au < finished ; crawling ; 2012 ; Annals of Oncology Volume 23 ; 23 ; >
     au < ingNotReady ; exists ; 2013 ; Annals of Oncology Volume 24 ; 24 ; >
-    au < expected ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2014 ; Annals of Oncology Volume 25 ; 25 ; >
 
     }
 
@@ -1815,7 +1815,7 @@
     au < finished ; crawling ; 2011 ; Behavioral Ecology Volume 22 ; 22 ; >
     au < finished ; crawling ; 2012 ; Behavioral Ecology Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; Behavioral Ecology Volume 24 ; 24 ; >
-    au < expected ; exists ; 2014 ; Behavioral Ecology Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2014 ; Behavioral Ecology Volume 25 ; 25 ; >
 
     }
 
@@ -1874,7 +1874,7 @@
     au < finished ; crawling ; 2011 ; Bioinformatics Volume 27 ; 27 ; >
     au < finished ; crawling ; 2012 ; Bioinformatics Volume 28 ; 28 ; >
     au < crawling ; exists ; 2013 ; Bioinformatics Volume 29 ; 29 ; >
-    au < expected ; exists ; 2014 ; Bioinformatics Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2014 ; Bioinformatics Volume 30 ; 30 ; >
 
     }
 
@@ -2083,7 +2083,7 @@
     au < finished ; crawling ; 2011 ; Biostatistics Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; Biostatistics Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; Biostatistics Volume 14 ; 14 ; >
-    au < expected ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2014 ; Biostatistics Volume 15 ; 15 ; >
 
     }
 
@@ -2611,7 +2611,7 @@
     au < finished ; crawling ; 2012 ; British Journal of Anaesthesia Volume 109 ; 109 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 110 ; 110 ; >
     au < crawling ; exists ; 2013 ; British Journal of Anaesthesia Volume 111 ; 111 ; >
-    au < expected ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
+    au < manifest ; exists ; 2014 ; British Journal of Anaesthesia Volume 112 ; 112 ; >
     au < expected ; exists ; 2014 ; British Journal of Anaesthesia Volume 113 ; 113 ; >
 
     }
@@ -3058,6 +3058,7 @@
     au < finished ; crawling ; 2010 ; British Yearbook of International Law Volume 81 ; 81 ; >
     au < crawling ; exists ; 2011 ; British Yearbook of International Law Volume 82 ; 82 ; >
     au < expected ; exists ; 2012 ; British Yearbook of International Law Volume 83 ; 83 ; >
+    au < expected ; exists ; 2013 ; British Yearbook of International Law Volume 84 ; 84 ; >
 
   }
 
@@ -3407,7 +3408,7 @@
     au < finished ; crawling ; 2011 ; Carcinogenesis Volume 32 ; 32 ; >
     au < finished ; crawling ; 2012 ; Carcinogenesis Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; Carcinogenesis Volume 34 ; 34 ; >
-    au < expected ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2014 ; Carcinogenesis Volume 35 ; 35 ; >
 
     }
 
@@ -3544,7 +3545,7 @@
     au < crawling ; exists ; 2013 ; Cardiovascular Research Volume 98 ; 98 ; >
     au < crawling ; exists ; 2013 ; Cardiovascular Research Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Cardiovascular Research Volume 100 ; 100 ; >
-    au < expected ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2014 ; Cardiovascular Research Volume 101 ; 101 ; >
     au < expected ; exists ; 2014 ; Cardiovascular Research Volume 102 ; 102 ; >
     au < expected ; exists ; 2014 ; Cardiovascular Research Volume 103 ; 103 ; >
     au < expected ; exists ; 2014 ; Cardiovascular Research Volume 104 ; 104 ; >
@@ -3600,7 +3601,7 @@
     au < finished ; crawling ; 2011 ; Cerebral Cortex Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Cerebral Cortex Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Cerebral Cortex Volume 23 ; 23 ; >
-    au < expected ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2014 ; Cerebral Cortex Volume 24 ; 24 ; >
 
     }
 
@@ -3709,7 +3710,7 @@
     au < finished ; crawling ; 2011 ; Chemical Senses Volume 36 ; 36 ; >
     au < finished ; crawling ; 2012 ; Chemical Senses Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; Chemical Senses Volume 38 ; 38 ; >
-    au < expected ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2014 ; Chemical Senses Volume 39 ; 39 ; >
 
     }
 
@@ -4004,7 +4005,8 @@
     au < finished ; crawling ; 2012 ; Clinical Infectious Diseases Volume 55 ; 55 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 56 ; 56 ; >
     au < crawling ; exists ; 2013 ; Clinical Infectious Diseases Volume 57 ; 57 ; >
-    au < expected ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
+    au < manifest ; exists ; 2014 ; Clinical Infectious Diseases Volume 58 ; 58 ; >
+    au < expected ; exists ; 2014 ; Clinical Infectious Diseases Volume 59 ; 59 ; >
 
     }
 
@@ -4191,7 +4193,7 @@
     au < finished ; crawling ; 2011 ; The Computer Journal Volume 54 ; 54 ; >
     au < finished ; crawling ; 2012 ; The Computer Journal Volume 55 ; 55 ; >
     au < crawling ; exists ; 2013 ; The Computer Journal Volume 56 ; 56 ; >
-    au < expected ; exists ; 2014 ; The Computer Journal Volume 57 ; 57 ; >
+    au < manifest ; exists ; 2014 ; The Computer Journal Volume 57 ; 57 ; >
 
     }
 
@@ -4891,7 +4893,7 @@
     au < finished ; crawling ; 2011 ; ELT Journal Volume 65 ; 65 ; >
     au < finished ; crawling ; 2012 ; ELT Journal Volume 66 ; 66 ; >
     au < crawling ; exists ; 2013 ; ELT Journal Volume 67 ; 67 ; >
-    au < expected ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
+    au < manifest ; exists ; 2014 ; ELT Journal Volume 68 ; 68 ; >
 
     }
 
@@ -4971,7 +4973,7 @@
     au < finished ; crawling ; 2011 ; Environmental History Volume 16 ; 16 ; >
     au < finished ; crawling ; 2012 ; Environmental History Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Environmental History Volume 18 ; 18 ; >
-    au < expected ; exists ; 2014 ; Environmental History Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2014 ; Environmental History Volume 19 ; 19 ; >
 
   }
 
@@ -5067,7 +5069,7 @@
     au < finished ; crawling ; 2011 ; Epidemiologic Reviews Volume 33 ; 33 ; >
     au < finished ; crawling ; 2012 ; Epidemiologic Reviews Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Epidemiologic Reviews Volume 35 ; 35 ; >
-    au < expected ; exists ; 2014 ; Epidemiologic Reviews Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2014 ; Epidemiologic Reviews Volume 36 ; 36 ; >
 
     }
 
@@ -5244,7 +5246,7 @@
     au < finished ; crawling ; 2011 ; Europace Volume 13 ; 13 ; >
     au < ingNotReady ; exists ; 2012 ; Europace Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Europace Volume 15 ; 15 ; >
-    au < expected ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2014 ; Europace Volume 16 ; 16 ; >
 
     }
 
@@ -5404,7 +5406,7 @@
     au < finished ; crawling ; 2012 ; European Journal of Cardio-Thoracic Surgery Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 43 ; 43 ; >
     au < crawling ; exists ; 2013 ; European Journal of Cardio-Thoracic Surgery Volume 44 ; 44 ; >
-    au < expected ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 45 ; 45 ; >
     au < expected ; exists ; 2014 ; European Journal of Cardio-Thoracic Surgery Volume 46 ; 46 ; >
 
   }
@@ -5440,7 +5442,7 @@
     au < finished ; crawling ; 2011 ; European Journal of Echocardiography Volume 12 ; 12 ; >
     au < finished ; crawling ; 2012 ; European Heart Journal - Cardiovascular Imaging Volume 13 ; 13 ; >
     au < crawling ; exists ; 2013 ; European Heart Journal - Cardiovascular Imaging Volume 14 ; 14 ; >
-    au < expected ; exists ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2014 ; European Heart Journal - Cardiovascular Imaging Volume 15 ; 15 ; >
 
     }
 
@@ -5790,7 +5792,7 @@
     au < finished ; crawling ; 2011 ; European Review of Agricultural Economics Volume 38 ; 38 ; >
     au < finished ; crawling ; 2012 ; European Review of Agricultural Economics Volume 39 ; 39 ; >
     au < crawling ; exists ; 2013 ; European Review of Agricultural Economics Volume 40 ; 40 ; >
-    au < expected ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2014 ; European Review of Agricultural Economics Volume 41 ; 41 ; >
 
     }
 
@@ -5906,6 +5908,15 @@
 
     au < zapped ; finished ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
     au < zapped ; finished ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+
+    }
+
+    {
+
+    param[base_url] = http://ecam.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < down ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 [to delete] ; 7 ; >
 
     }
 
@@ -6437,10 +6448,10 @@
     param[base_url] = http://gastro.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
     
-    comment[notReady] = This AU does not yet have a manifest. 05/2013
+    comment[status] = This AU does not yet have a manifest. 12/2013
       
-    au < ingNotReady ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
-    au < ingNotReady ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
+    au < exists ; exists ; 2013 ; Gastroenterology Report Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; Gastroenterology Report Volume 2 ; 2 ; >
      
   }
       
@@ -6671,7 +6682,7 @@
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 193 ; 193 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 194 ; 194 ; >
     au < crawling ; exists ; 2013 ; Geophysical Journal International Volume 195 ; 195 ; >
-    au < expected ; exists ; 2014 ; Geophysical Journal International Volume 196 ; 196 ; >
+    au < manifest ; exists ; 2014 ; Geophysical Journal International Volume 196 ; 196 ; >
     au < expected ; exists ; 2014 ; Geophysical Journal International Volume 197 ; 197 ; >
     au < expected ; exists ; 2014 ; Geophysical Journal International Volume 198 ; 198 ; >
     au < expected ; exists ; 2014 ; Geophysical Journal International Volume 199 ; 199 ; >
@@ -6893,7 +6904,7 @@
     au < finished ; crawling ; 2011 ; Glycobiology Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Glycobiology Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Glycobiology Volume 23 ; 23 ; >
-    au < expected ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2014 ; Glycobiology Volume 24 ; 24 ; >
 
     }
 
@@ -7063,7 +7074,7 @@
     au < finished ; crawling ; 2011 ; Health Policy and Planning Volume 26 ; 26 ; >
     au < finished ; crawling ; 2012 ; Health Policy and Planning Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Health Policy and Planning Volume 28 ; 28 ; >
-    au < expected ; exists ; 2014 ; Health Policy and Planning Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2014 ; Health Policy and Planning Volume 29 ; 29 ; >
 
     }
 
@@ -7333,7 +7344,7 @@
     au < finished ; crawling ; 2011 ; Human Molecular Genetics Volume 20 ; 20 ; >
     au < finished ; crawling ; 2012 ; Human Molecular Genetics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2013 ; Human Molecular Genetics Volume 22 ; 22 ; >
-    au < expected ; exists ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2014 ; Human Molecular Genetics Volume 23 ; 23 ; >
 
     }
 
@@ -7413,7 +7424,7 @@
     pluginSuffix = ClockssHighWirePlugin
 
     au < zapped ; finished ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
-    au < down ; crawling ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < superseded ; down ; 2009 ; Human Reproduction Update Volume 15 [to delete] ; 15 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -7441,7 +7452,7 @@
     au < finished ; crawling ; 2011 ; Human Reproduction Update Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; Human Reproduction Update Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; Human Reproduction Update Volume 19 ; 19 ; >
-    au < expected ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2014 ; Human Reproduction Update Volume 20 ; 20 ; >
 
     }
 
@@ -7585,7 +7596,7 @@
     au < finished ; crawling ; 2011 ; ICES Journal of Marine Science Volume 68 ; 68 ; >
     au < finished ; crawling ; 2012 ; ICES Journal of Marine Science Volume 69 ; 69 ; >
     au < crawling ; exists ; 2013 ; ICES Journal of Marine Science Volume 70 ; 70 ; >
-    au < expected ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
+    au < manifest ; exists ; 2014 ; ICES Journal of Marine Science Volume 71 ; 71 ; >
 
     }
 
@@ -7925,7 +7936,7 @@
     au < finished ; crawling ; 2011 ; IMA Journal of Management Mathematics Volume 22 ; 22 ; >
     au < finished ; crawling ; 2012 ; IMA Journal of Management Mathematics Volume 23 ; 23 ; >
     au < crawling ; exists ; 2013 ; IMA Journal of Management Mathematics Volume 24 ; 24 ; >
-    au < expected ; exists ; 2014 ; IMA Journal of Management Mathematics Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2014 ; IMA Journal of Management Mathematics Volume 25 ; 25 ; >
 
     }
 
@@ -8226,7 +8237,7 @@
     au < finished ; crawling ; 2012 ; Interactive CardioVascular and Thoracic Surgery Volume 15 ; 15 ; >
     au < crawling ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 16 ; 16 ; >
     au < crawling ; exists ; 2013 ; Interactive CardioVascular and Thoracic Surgery Volume 17 ; 17 ; >
-    au < expected ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18 ; 18 ; >
     au < expected ; exists ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 19 ; 19 ; >
    
   }
@@ -8474,6 +8485,7 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < crawling ; exists ; 2010 ; International Immunology Meeting Abstracts Volume 22 ; 22 ; >
+      au < expected ; exists ; 2011 ; International Immunology Meeting Abstracts Volume 23 ; 23 ; >
 
     }
 
@@ -9043,7 +9055,7 @@
     au < finished ; crawling ; 2011 ; International Mathematics Research Notices Volume 2011 ; 2011 ; >
     au < finished ; crawling ; 2012 ; International Mathematics Research Notices Volume 2012 ; 2012 ; >
     au < crawling ; exists ; 2013 ; International Mathematics Research Notices Volume 2013 ; 2013 ; >
-    au < expected ; exists ; 2014 ; International Mathematics Research Notices Volume 2014 ; 2014 ; >
+    au < manifest ; exists ; 2014 ; International Mathematics Research Notices Volume 2014 ; 2014 ; >
 
     }
 
@@ -9271,7 +9283,7 @@
     au < finished ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 5 ; 5 ; >
     au < finished ; crawling ; 2012 ; Jerusalem Review of Legal Studies Volume 6 ; 6 ; >
     au < crawling ; exists ; 2013 ; Jerusalem Review of Legal Studies Volume 7 ; 7 ; >
-    au < expected ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2014 ; Jerusalem Review of Legal Studies Volume 8 ; 8 ; >
 
   }
 
@@ -9741,7 +9753,7 @@
     au < finished ; crawling ; 2011 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
     au < finished ; crawling ; 2012 ; Journal of Antimicrobial Chemotherapy Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of Antimicrobial Chemotherapy Volume 68 ; 68 ; >
-    au < expected ; exists ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2014 ; Journal of Antimicrobial Chemotherapy Volume 69 ; 69 ; >
 
     }
 
@@ -9997,7 +10009,7 @@
     au < finished ; crawling ; 2011 ; Journal of Chromatographic Science Volume 49 ; 49 ; >
     au < finished ; crawling ; 2012 ; Journal of Chromatographic Science Volume 50 ; 50 ; >
     au < crawling ; exists ; 2013 ; Journal of Chromatographic Science Volume 51 ; 51 ; >
-    au < expected ; exists ; 2014 ; Journal of Chromatographic Science Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2014 ; Journal of Chromatographic Science Volume 52 ; 52 ; >
 
   }
 
@@ -10235,7 +10247,7 @@
     au < finished ; crawling ; 2011 ; Journal of Deaf Studies and Deaf Education Volume 16 ; 16 ; >
     au < finished ; crawling ; 2012 ; Journal of Deaf Studies and Deaf Education Volume 17 ; 17 ; >
     au < crawling ; exists ; 2013 ; Journal of Deaf Studies and Deaf Education Volume 18 ; 18 ; >
-    au < expected ; exists ; 2014 ; Journal of Deaf Studies and Deaf Education Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2014 ; Journal of Deaf Studies and Deaf Education Volume 19 ; 19 ; >
 
     }
 
@@ -10334,7 +10346,7 @@
     au < finished ; crawling ; 2011 ; Journal of Economic Geography Volume 11 ; 11 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
-    au < expected ; exists ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
 
     }
 
@@ -10504,7 +10516,7 @@
     au < finished ; crawling ; 2011 ; Journal of European Competition Law & Practice Volume 2 ; 2 ; >
     au < finished ; crawling ; 2012 ; Journal of European Competition Law & Practice Volume 3 ; 3 ; >
     au < crawling ; exists ; 2013 ; Journal of European Competition Law & Practice Volume 4 ; 4 ; >
-    au < expected ; exists ; 2014 ; Journal of European Competition Law & Practice Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2014 ; Journal of European Competition Law & Practice Volume 5 ; 5 ; >
 
   }
 
@@ -10638,7 +10650,7 @@
     au < finished ; crawling ; 2011 ; Journal of Financial Econometrics Volume 9 ; 9 ; >
     au < finished ; crawling ; 2012 ; Journal of Financial Econometrics Volume 10 ; 10 ; >
     au < crawling ; exists ; 2013 ; Journal of Financial Econometrics Volume 11 ; 11 ; >
-    au < expected ; exists ; 2014 ; Journal of Financial Econometrics Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2014 ; Journal of Financial Econometrics Volume 12 ; 12 ; >
 
     }
 
@@ -10688,7 +10700,7 @@
     au < finished ; crawling ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68 ; 68 ; >
     au < expected ; exists ; 2013 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 68A ; 68A ; >
-    au < expected ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69 ; 69 ; >
     au < expected ; exists ; 2014 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 69A ; 69A ; >
 
     }
@@ -10880,7 +10892,7 @@
     au < zapped ; finished ; 2011 ; Journal of Heredity Volume 102 ; 102 ; >
     au < finished ; crawling ; 2012 ; Journal of Heredity Volume 103 ; 103 ; >
     au < crawling ; exists ; 2013 ; Journal of Heredity Volume 104 ; 104 ; >
-    au < expected ; exists ; 2014 ; Journal of Heredity Volume 105 ; 105 ; >
+    au < manifest ; exists ; 2014 ; Journal of Heredity Volume 105 ; 105 ; >
 
     }
 
@@ -11068,7 +11080,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Medicine and Allied Sciences Volume 66 ; 66 ; >
     au < finished ; crawling ; 2012 ; Journal of the History of Medicine and Allied Sciences Volume 67 ; 67 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Medicine and Allied Sciences Volume 68 ; 68 ; >
-    au < expected ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
+    au < manifest ; exists ; 2014 ; Journal of the History of Medicine and Allied Sciences Volume 69 ; 69 ; >
 
     }
 
@@ -11330,7 +11342,7 @@
     au < finished ; crawling ; 2012 ; Journal of Infectious Diseases Volume 206 ; 206 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 207 ; 207 ; >
     au < crawling ; exists ; 2013 ; Journal of Infectious Diseases Volume 208 ; 208 ; >
-    au < expected ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
+    au < manifest ; exists ; 2014 ; Journal of Infectious Diseases Volume 209 ; 209 ; >
     au < expected ; exists ; 2014 ; Journal of Infectious Diseases Volume 210 ; 210 ; >
 
     }
@@ -11369,7 +11381,7 @@
     au < finished ; crawling ; 2011 ; Journal of Intellectual Property Law & Practice Volume 6 ; 6 ; >
     au < finished ; crawling ; 2012 ; Journal of Intellectual Property Law & Practice Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Journal of Intellectual Property Law & Practice Volume 8 ; 8 ; >
-    au < expected ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2014 ; Journal of Intellectual Property Law & Practice Volume 9 ; 9 ; >
 
     }
 
@@ -12238,6 +12250,7 @@
     au < finished ; crawling ; 2011 ; Journal of the ICRU Volume 11 ; 11 ; >
     au < crawling ; exists ; 2012 ; Journal of the ICRU Volume 12 ; 12 ; >
     au < expected ; exists ; 2013 ; Journal of the ICRU Volume 13 ; 13 ; >
+    au < expected ; exists ; 2014 ; Journal of the ICRU Volume 14 ; 14 ; >
 
     }
 
@@ -12412,7 +12425,7 @@
     au < finished ; crawling ; 2011 ; Journal of Petrology Volume 52 ; 52 ; >
     au < crawling ; exists ; 2012 ; Journal of Petrology Volume 53 ; 53 ; >
     au < crawling ; exists ; 2013 ; Journal of Petrology Volume 54 ; 54 ; >
-    au < expected ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2014 ; Journal of Petrology Volume 55 ; 55 ; >
 
     }
 
@@ -12556,7 +12569,7 @@
     au < finished ; crawling ; 2011 ; Journal of Public Administration Research and Theory Volume 21 ; 21 ; >
     au < finished ; crawling ; 2012 ; Journal of Public Administration Research and Theory Volume 22 ; 22 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Administration Research and Theory Volume 23 ; 23 ; >
-    au < expected ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2014 ; Journal of Public Administration Research and Theory Volume 24 ; 24 ; >
 
     }
 
@@ -14140,7 +14153,7 @@
     au < finished ; crawling ; 2011 ; MHR: Basic science of reproductive medicine Volume 17 ; 17 ; >
     au < finished ; crawling ; 2012 ; MHR: Basic science of reproductive medicine Volume 18 ; 18 ; >
     au < crawling ; exists ; 2013 ; MHR: Basic science of reproductive medicine Volume 19 ; 19 ; >
-    au < expected ; exists ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2014 ; MHR: Basic science of reproductive medicine Volume 20 ; 20 ; >
 
     }
 
@@ -14466,7 +14479,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 434 ; 434 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 435 ; 435 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 436 ; 436 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 437 ; 437 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 437 ; 437 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 438 ; 438 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 439 ; 439 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 440 ; 440 ; >
@@ -14569,7 +14582,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 434 ; 434 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 435 ; 435 ; >
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 436 ; 436 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437 ; 437 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437 ; 437 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 438 ; 438 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 439 ; 439 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 440 ; 440 ; >
@@ -14577,6 +14590,7 @@
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 442 ; 442 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 443 ; 443 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 444 ; 444 ; >
+    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 445 ; 445 ; >
 
   }
 
@@ -14710,7 +14724,6 @@
     title <
       name = Journal of Music Therapy ;
       issn = 0022-2917 ;
-      eissn = 2053-7395 ;
       issnl = 0022-2917
     >
 
@@ -14759,7 +14772,42 @@
     param[base_url] = http://mts.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2014 ; Music Theory Spectrum Volume 1 ; 1 ; >
+    au < exists ; exists ; 1979 ; Music Theory Spectrum Volume 1 ; 1 ; >
+    au < exists ; exists ; 1980 ; Music Theory Spectrum Volume 2 ; 2 ; >
+    au < exists ; exists ; 1981 ; Music Theory Spectrum Volume 3 ; 3 ; >
+    au < exists ; exists ; 1982 ; Music Theory Spectrum Volume 4 ; 4 ; >
+    au < exists ; exists ; 1983 ; Music Theory Spectrum Volume 5 ; 5 ; >
+    au < exists ; exists ; 1984 ; Music Theory Spectrum Volume 6 ; 6 ; >
+    au < exists ; exists ; 1985 ; Music Theory Spectrum Volume 7 ; 7 ; >
+    au < exists ; exists ; 1986 ; Music Theory Spectrum Volume 8 ; 8 ; >
+    au < exists ; exists ; 1987 ; Music Theory Spectrum Volume 9 ; 9 ; >
+    au < exists ; exists ; 1988 ; Music Theory Spectrum Volume 10 ; 10 ; >
+    au < exists ; exists ; 1989 ; Music Theory Spectrum Volume 11 ; 11 ; >
+    au < exists ; exists ; 1990 ; Music Theory Spectrum Volume 12 ; 12 ; >
+    au < exists ; exists ; 1991 ; Music Theory Spectrum Volume 13 ; 13 ; >
+    au < exists ; exists ; 1992 ; Music Theory Spectrum Volume 14 ; 14 ; >
+    au < exists ; exists ; 1993 ; Music Theory Spectrum Volume 15 ; 15 ; >
+    au < exists ; exists ; 1994 ; Music Theory Spectrum Volume 16 ; 16 ; >
+    au < exists ; exists ; 1995 ; Music Theory Spectrum Volume 17 ; 17 ; >
+    au < exists ; exists ; 1996 ; Music Theory Spectrum Volume 18 ; 18 ; >
+    au < exists ; exists ; 1997 ; Music Theory Spectrum Volume 19 ; 19 ; >
+    au < exists ; exists ; 1998 ; Music Theory Spectrum Volume 20 ; 20 ; >
+    au < exists ; exists ; 1999 ; Music Theory Spectrum Volume 21 ; 21 ; >
+    au < exists ; exists ; 2000 ; Music Theory Spectrum Volume 22 ; 22 ; >
+    au < exists ; exists ; 2001 ; Music Theory Spectrum Volume 23 ; 23 ; >
+    au < exists ; exists ; 2002 ; Music Theory Spectrum Volume 24 ; 24 ; >
+    au < exists ; exists ; 2003 ; Music Theory Spectrum Volume 25 ; 25 ; >
+    au < exists ; exists ; 2004 ; Music Theory Spectrum Volume 26 ; 26 ; >
+    au < exists ; exists ; 2005 ; Music Theory Spectrum Volume 27 ; 27 ; >
+    au < exists ; exists ; 2006 ; Music Theory Spectrum Volume 28 ; 28 ; >
+    au < exists ; exists ; 2007 ; Music Theory Spectrum Volume 29 ; 29 ; >
+    au < exists ; exists ; 2008 ; Music Theory Spectrum Volume 30 ; 30 ; >
+    au < exists ; exists ; 2009 ; Music Theory Spectrum Volume 31 ; 31 ; >
+    au < exists ; exists ; 2010 ; Music Theory Spectrum Volume 32 ; 32 ; >
+    au < exists ; exists ; 2011 ; Music Theory Spectrum Volume 33 ; 33 ; >
+    au < exists ; exists ; 2012 ; Music Theory Spectrum Volume 34 ; 34 ; >
+    au < exists ; exists ; 2013 ; Music Theory Spectrum Volume 35 ; 35 ; >
+    au < exists ; exists ; 2014 ; Music Theory Spectrum Volume 36 ; 36 ; >
 
     }
 
@@ -14933,7 +14981,7 @@
     au < finished ; crawling ; 2011 ; Mutagenesis Volume 26 ; 26 ; >
     au < crawling ; exists ; 2012 ; Mutagenesis Volume 27 ; 27 ; >
     au < crawling ; exists ; 2013 ; Mutagenesis Volume 28 ; 28 ; >
-    au < expected ; exists ; 2014 ; Mutagenesis Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2014 ; Mutagenesis Volume 29 ; 29 ; >
 
     }
 
@@ -14957,6 +15005,16 @@
 
     au < zapped ; finished ; 2008 ; NDT Plus Volume 1 ; 1 ; >
     au < down ; crawling ; 2009 ; NDT Plus Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://ndtplus.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < superseded ; down ; 2010 ; NDT Plus Volume 3 [superseded] ; 3 ; >
+    au < superseded ; down ; 2011 ; NDT Plus Volume 4 [superseded] ; 4 ; >
 
     }
 
@@ -15048,7 +15106,7 @@
     au < finished ; crawling ; 2011 ; Neuro-Oncology Volume 13 ; 13 ; >
     au < finished ; crawling ; 2012 ; Neuro-Oncology Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Neuro-Oncology Volume 15 ; 15 ; >
-    au < expected ; exists ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2014 ; Neuro-Oncology Volume 16 ; 16 ; >
 
   }
 
@@ -15091,7 +15149,7 @@
     au < finished ; crawling ; 2011 ; Nicotine and Tobacco Research Volume 13 ; 13 ; >
     au < finished ; crawling ; 2012 ; Nicotine and Tobacco Research Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Nicotine and Tobacco Research Volume 15 ; 15 ; >
-    au < expected ; exists ; 2014 ; Nicotine and Tobacco Research Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2014 ; Nicotine and Tobacco Research Volume 16 ; 16 ; >
 
     }
 
@@ -15462,7 +15520,7 @@
     au < finished ; crawling ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
     au < finished ; crawling ; 2012 ; Nucleic Acids Research Volume 40 ; 40 ; >
     au < crawling ; exists ; 2013 ; Nucleic Acids Research Volume 41 ; 41 ; >
-    au < expected ; exists ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2014 ; Nucleic Acids Research Volume 42 ; 42 ; >
 
     }
 
@@ -15932,7 +15990,7 @@
     au < finished ; crawling ; 2011 ; Oxford Economic Papers Volume 63 ; 63 ; >
     au < finished ; crawling ; 2012 ; Oxford Economic Papers Volume 64 ; 64 ; >
     au < crawling ; exists ; 2013 ; Oxford Economic Papers Volume 65 ; 65 ; >
-    au < expected ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
+    au < manifest ; exists ; 2014 ; Oxford Economic Papers Volume 66 ; 66 ; >
 
     }
 
@@ -16172,7 +16230,7 @@
     au < finished ; crawling ; 2011 ; Parliamentary Affairs Volume 64 ; 64 ; >
     au < finished ; crawling ; 2012 ; Parliamentary Affairs Volume 65 ; 65 ; >
     au < crawling ; exists ; 2013 ; Parliamentary Affairs Volume 66 ; 66 ; >
-    au < expected ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
+    au < manifest ; exists ; 2014 ; Parliamentary Affairs Volume 67 ; 67 ; >
 
     }
 
@@ -16513,6 +16571,86 @@
   {
 
     title <
+      name = The Philosophical Quarterly ;
+      issn = 0031-8094 ;
+      eissn = 1467-9213 ;
+      issnl = 0031-8094
+    >
+
+    param[base_url] = http://pq.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 1950 ; The Philosophical Quarterly Volume 1 ; 1 ; >
+    au < exists ; exists ; 1951 ; The Philosophical Quarterly Volume 1 ; 1 ; >
+    au < exists ; exists ; 1952 ; The Philosophical Quarterly Volume 2 ; 2 ; >
+    au < exists ; exists ; 1953 ; The Philosophical Quarterly Volume 3 ; 3 ; >
+    au < exists ; exists ; 1954 ; The Philosophical Quarterly Volume 4 ; 4 ; >
+    au < exists ; exists ; 1955 ; The Philosophical Quarterly Volume 5 ; 5 ; >
+    au < exists ; exists ; 1956 ; The Philosophical Quarterly Volume 6 ; 6 ; >
+    au < exists ; exists ; 1957 ; The Philosophical Quarterly Volume 7 ; 7 ; >
+    au < exists ; exists ; 1958 ; The Philosophical Quarterly Volume 8 ; 8 ; >
+    au < exists ; exists ; 1959 ; The Philosophical Quarterly Volume 9 ; 9 ; >
+    au < exists ; exists ; 1960 ; The Philosophical Quarterly Volume 10 ; 10 ; >
+    au < exists ; exists ; 1961 ; The Philosophical Quarterly Volume 11 ; 11 ; >
+    au < exists ; exists ; 1962 ; The Philosophical Quarterly Volume 12 ; 12 ; >
+    au < exists ; exists ; 1963 ; The Philosophical Quarterly Volume 13 ; 13 ; >
+    au < exists ; exists ; 1964 ; The Philosophical Quarterly Volume 14 ; 14 ; >
+    au < exists ; exists ; 1965 ; The Philosophical Quarterly Volume 15 ; 15 ; >
+    au < exists ; exists ; 1966 ; The Philosophical Quarterly Volume 16 ; 16 ; >
+    au < exists ; exists ; 1967 ; The Philosophical Quarterly Volume 17 ; 17 ; >
+    au < exists ; exists ; 1968 ; The Philosophical Quarterly Volume 18 ; 18 ; >
+    au < exists ; exists ; 1969 ; The Philosophical Quarterly Volume 19 ; 19 ; >
+    au < exists ; exists ; 1970 ; The Philosophical Quarterly Volume 20 ; 20 ; >
+    au < exists ; exists ; 1971 ; The Philosophical Quarterly Volume 21 ; 21 ; >
+    au < exists ; exists ; 1972 ; The Philosophical Quarterly Volume 22 ; 22 ; >
+    au < exists ; exists ; 1973 ; The Philosophical Quarterly Volume 23 ; 23 ; >
+    au < exists ; exists ; 1974 ; The Philosophical Quarterly Volume 24 ; 24 ; >
+    au < exists ; exists ; 1975 ; The Philosophical Quarterly Volume 25 ; 25 ; >
+    au < exists ; exists ; 1976 ; The Philosophical Quarterly Volume 26 ; 26 ; >
+    au < exists ; exists ; 1977 ; The Philosophical Quarterly Volume 27 ; 27 ; >
+    au < exists ; exists ; 1978 ; The Philosophical Quarterly Volume 28 ; 28 ; >
+    au < exists ; exists ; 1979 ; The Philosophical Quarterly Volume 29 ; 29 ; >
+    au < exists ; exists ; 1980 ; The Philosophical Quarterly Volume 30 ; 30 ; >
+    au < exists ; exists ; 1981 ; The Philosophical Quarterly Volume 31 ; 31 ; >
+    au < exists ; exists ; 1982 ; The Philosophical Quarterly Volume 32 ; 32 ; >
+    au < exists ; exists ; 1983 ; The Philosophical Quarterly Volume 33 ; 33 ; >
+    au < exists ; exists ; 1984 ; The Philosophical Quarterly Volume 34 ; 34 ; >
+    au < exists ; exists ; 1985 ; The Philosophical Quarterly Volume 35 ; 35 ; >
+    au < exists ; exists ; 1986 ; The Philosophical Quarterly Volume 36 ; 36 ; >
+    au < exists ; exists ; 1987 ; The Philosophical Quarterly Volume 37 ; 37 ; >
+    au < exists ; exists ; 1988 ; The Philosophical Quarterly Volume 38 ; 38 ; >
+    au < exists ; exists ; 1989 ; The Philosophical Quarterly Volume 39 ; 39 ; >
+    au < exists ; exists ; 1990 ; The Philosophical Quarterly Volume 40 ; 40 ; >
+    au < exists ; exists ; 1991 ; The Philosophical Quarterly Volume 41 ; 41 ; >
+    au < exists ; exists ; 1992 ; The Philosophical Quarterly Volume 42 ; 42 ; >
+    au < exists ; exists ; 1993 ; The Philosophical Quarterly Volume 43 ; 43 ; >
+    au < exists ; exists ; 1994 ; The Philosophical Quarterly Volume 44 ; 44 ; >
+    au < exists ; exists ; 1995 ; The Philosophical Quarterly Volume 45 ; 45 ; >
+    au < exists ; exists ; 1996 ; The Philosophical Quarterly Volume 46 ; 46 ; >
+    au < exists ; exists ; 1997 ; The Philosophical Quarterly Volume 47 ; 47 ; >
+    au < exists ; exists ; 1998 ; The Philosophical Quarterly Volume 48 ; 48 ; >
+    au < exists ; exists ; 1999 ; The Philosophical Quarterly Volume 49 ; 49 ; >
+    au < exists ; exists ; 2000 ; The Philosophical Quarterly Volume 50 ; 50 ; >
+    au < exists ; exists ; 2001 ; The Philosophical Quarterly Volume 51 ; 51 ; >
+    au < exists ; exists ; 2002 ; The Philosophical Quarterly Volume 52 ; 52 ; >
+    au < exists ; exists ; 2003 ; The Philosophical Quarterly Volume 53 ; 53 ; >
+    au < exists ; exists ; 2004 ; The Philosophical Quarterly Volume 54 ; 54 ; >
+    au < exists ; exists ; 2005 ; The Philosophical Quarterly Volume 55 ; 55 ; >
+    au < exists ; exists ; 2006 ; The Philosophical Quarterly Volume 56 ; 56 ; >
+    au < exists ; exists ; 2007 ; The Philosophical Quarterly Volume 57 ; 57 ; >
+    au < exists ; exists ; 2008 ; The Philosophical Quarterly Volume 58 ; 58 ; >
+    au < exists ; exists ; 2009 ; The Philosophical Quarterly Volume 59 ; 59 ; >
+    au < exists ; exists ; 2010 ; The Philosophical Quarterly Volume 60 ; 60 ; >
+    au < exists ; exists ; 2011 ; The Philosophical Quarterly Volume 61 ; 61 ; >
+    au < exists ; exists ; 2012 ; The Philosophical Quarterly Volume 62 ; 62 ; >
+    au < exists ; exists ; 2013 ; The Philosophical Quarterly Volume 63 ; 63 ; >
+    au < expected ; exists ; 2014 ; The Philosophical Quarterly Volume 64 ; 64 ; >
+
+  }
+
+  {
+
+    title <
       name = Plant and Cell Physiology ;
       issn = 0032-0781 ;
       eissn = 1471-9053 ;
@@ -16681,6 +16819,8 @@
     }
 
   }
+
+
 
   {
 
@@ -17055,6 +17195,8 @@
     au < crawling ; exists ; 2011 ; Progress of Theoretical Physics (PTP) Volume 126 ; 126 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 127 ; 127 ; >
     au < finished ; crawling ; 2012 ; Progress of Theoretical Physics (PTP) Volume 128 ; 128 ; >
+    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 129 ; 129 ; >
+    au < expected ; exists ; 2013 ; Progress of Theoretical Physics (PTP) Volume 130 ; 130 ; >
 
     }
 
@@ -17275,6 +17417,7 @@
     au < finished ; crawling ; 2011 ; Public Opinion Quarterly Volume 75 ; 75 ; >
     au < crawling ; exists ; 2012 ; Public Opinion Quarterly Volume 76 ; 76 ; >
     au < crawling ; exists ; 2013 ; Public Opinion Quarterly Volume 77 ; 77 ; >
+    au < expected ; exists ; 2014 ; Public Opinion Quarterly Volume 78 ; 78 ; >
 
     }
 
@@ -17380,7 +17523,7 @@
     au < finished ; crawling ; 2011 ; Publius: The Journal of Federalism Volume 41 ; 41 ; >
     au < finished ; crawling ; 2012 ; Publius: The Journal of Federalism Volume 42 ; 42 ; >
     au < crawling ; exists ; 2013 ; Publius: The Journal of Federalism Volume 43 ; 43 ; >
-    au < expected ; exists ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2014 ; Publius: The Journal of Federalism Volume 44 ; 44 ; >
 
     }
 
@@ -17540,7 +17683,7 @@
     au < finished ; crawling ; 2011 ; QJM: An International Journal of Medicine Volume 104 ; 104 ; >
     au < crawling ; exists ; 2012 ; QJM: An International Journal of Medicine Volume 105 ; 105 ; >
     au < crawling ; exists ; 2013 ; QJM: An International Journal of Medicine Volume 106 ; 106 ; >
-    au < expected ; exists ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 ; >
+    au < manifest ; exists ; 2014 ; QJM: An International Journal of Medicine Volume 107 ; 107 ; >
 
     }
 
@@ -17770,14 +17913,14 @@
     param[base_url] = http://rpd.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-    au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 128 [superseded] ; 128 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 130 [superseded] ; 130 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 131 [superseded] ; 131 ; >
+    au < superseded ; superseded ; 2008 ; Radiation Protection Dosimetry Volume 132 [superseded] ; 132 ; >
+    au < superseded ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 133 [superseded] ; 133 ; >
+    au < superseded ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 134 [superseded] ; 134 ; >
+    au < zapped ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < zapped ; superseded ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
     }
 
@@ -17913,13 +18056,13 @@
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 125 ; 125 ; >
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 126 ; 126 ; >
     au < manifest ; exists ; 2007 ; Radiation Protection Dosimetry Volume 127 ; 127 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+    au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
+    au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 129 ; 129 ; >
+    au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
+    au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
+    au < manifest ; exists ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
+    au < manifest ; exists ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+    au < manifest ; exists ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
     au < zapped ; finished ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
     au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
     au < finished ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
@@ -17943,7 +18086,7 @@
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 155 ; 155 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 156 ; 156 ; >
     au < crawling ; exists ; 2013 ; Radiation Protection Dosimetry Volume 157 ; 157 ; >
-    au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 158 ; 158 ; >
+    au < manifest ; exists ; 2014 ; Radiation Protection Dosimetry Volume 158 ; 158 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 159 ; 159 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 160 ; 160 ; >
     au < expected ; exists ; 2014 ; Radiation Protection Dosimetry Volume 161 ; 161 ; >
@@ -18076,7 +18219,7 @@
     au < finished ; crawling ; 2011 ; Reports of Patent, Design and Trade Mark Cases Volume 128 ; 128 ; >
     au < finished ; crawling ; 2012 ; Reports of Patent, Design and Trade Mark Cases Volume 129 ; 129 ; >
     au < crawling ; exists ; 2013 ; Reports of Patent, Design and Trade Mark Cases Volume 130 ; 130 ; >
-    au < expected ; exists ; 2014 ; Reports of Patent, Design and Trade Mark Cases Volume 131 ; 131 ; >
+    au < manifest ; exists ; 2014 ; Reports of Patent, Design and Trade Mark Cases Volume 131 ; 131 ; >
 
     }
 
@@ -18498,7 +18641,7 @@
     au < finished ; crawling ; 2011 ; The Review of Financial Studies Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; The Review of Financial Studies Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; The Review of Financial Studies Volume 26 ; 26 ; >
-    au < expected ; exists ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2014 ; The Review of Financial Studies Volume 27 ; 27 ; >
 
     }
 
@@ -18587,7 +18730,7 @@
     au < finished ; crawling ; 2011 ; Rheumatology Volume 50 ; 50 ; >
     au < crawling ; exists ; 2012 ; Rheumatology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2013 ; Rheumatology Volume 52 ; 52 ; >
-    au < expected ; exists ; 2014 ; Rheumatology Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2014 ; Rheumatology Volume 53 ; 53 ; >
 
     }
 
@@ -18825,7 +18968,7 @@
     au < finished ; crawling ; 2011 ; Social Cognitive and Affective Neuroscience Volume 6 ; 6 ; >
     au < crawling ; exists ; 2012 ; Social Cognitive and Affective Neuroscience Volume 7 ; 7 ; >
     au < crawling ; exists ; 2013 ; Social Cognitive and Affective Neuroscience Volume 8 ; 8 ; >
-    au < expected ; exists ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2014 ; Social Cognitive and Affective Neuroscience Volume 9 ; 9 ; >
 
     }
 
@@ -19472,7 +19615,7 @@
     au < finished ; crawling ; 2011 ; Systematic Biology Volume 60 ; 60 ; >
     au < finished ; crawling ; 2012 ; Systematic Biology Volume 61 ; 61 ; >
     au < crawling ; exists ; 2013 ; Systematic Biology Volume 62 ; 62 ; >
-    au < expected ; exists ; 2014 ; Systematic Biology Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2014 ; Systematic Biology Volume 63 ; 63 ; >
 
     }
 
@@ -19709,7 +19852,7 @@
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 134 ; 134 ; >
     au < crawling ; exists ; 2013 ; Toxicological Sciences Volume 135 ; 135 ; >
     au < manifest ; exists ; 2013 ; Toxicological Sciences Volume 136 ; 136 ; >
-    au < expected ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
+    au < manifest ; exists ; 2014 ; Toxicological Sciences Volume 137 ; 137 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 138 ; 138 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 139 ; 139 ; >
     au < expected ; exists ; 2014 ; Toxicological Sciences Volume 140 ; 140 ; >
@@ -19839,7 +19982,7 @@
     au < crawling ; exists ; 2011 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 105 ; 105 ; >
     au < crawling ; exists ; 2012 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 106 ; 106 ; >
     au < crawling ; exists ; 2013 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 107 ; 107 ; >
-    au < expected ; exists ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; >
+    au < manifest ; exists ; 2014 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 108 ; 108 ; >
 
   }
 
@@ -20244,6 +20387,7 @@
     au < finished ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 20 ; 20 ; >
     au < finished ; crawling ; 2010 ; Yearbook of International Environmental Law Volume 21 ; 21 ; >
     au < finished ; crawling ; 2011 ; Yearbook of International Environmental Law Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2012 ; Yearbook of International Environmental Law Volume 23 ; 23 ; >
 
   }
 
@@ -21005,7 +21149,7 @@
     au < crawling ; exists ; 2011 ; Interacting with Computers Volume 23 ; 23 ; >
     au < crawling ; exists ; 2012 ; Interacting with Computers Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Interacting with Computers Volume 25 ; 25 ; >
-    au < expected ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2014 ; Interacting with Computers Volume 26 ; 26 ; >
     
   }
   {
@@ -21020,7 +21164,102 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < exists ; exists ; 2013 ; National Science Review Volume 1 ; 1 ; >
+    au < expected ; exists ; 2014 ; National Science Review Volume 2 ; 2 ; >
     
+  }
+
+  {
+
+    title <
+      name = AIBS Bulletin ;
+      issn = 0096-7645 
+    > 
+
+    param[base_url] = http://aibsbulletin.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    comment[continued_by] = 0006-3568
+
+    au < exists ; exists ; 1951 ; AIBS Bulletin Volume 1 ; 1 ; >
+    au < exists ; exists ; 1952 ; AIBS Bulletin Volume 2 ; 2 ; >
+    au < exists ; exists ; 1953 ; AIBS Bulletin Volume 3 ; 3 ; >
+    au < exists ; exists ; 1954 ; AIBS Bulletin Volume 4 ; 4 ; >
+    au < exists ; exists ; 1955 ; AIBS Bulletin Volume 5 ; 5 ; >
+    au < exists ; exists ; 1956 ; AIBS Bulletin Volume 6 ; 6 ; >
+    au < exists ; exists ; 1957 ; AIBS Bulletin Volume 7 ; 7 ; >
+    au < exists ; exists ; 1958 ; AIBS Bulletin Volume 8 ; 8 ; >
+    au < exists ; exists ; 1959 ; AIBS Bulletin Volume 9 ; 9 ; >
+    au < exists ; exists ; 1960 ; AIBS Bulletin Volume 10 ; 10 ; >
+    au < exists ; exists ; 1961 ; AIBS Bulletin Volume 11 ; 11 ; >
+    au < exists ; exists ; 1962 ; AIBS Bulletin Volume 12 ; 12 ; >
+    au < exists ; exists ; 1963 ; AIBS Bulletin Volume 13 ; 13 ; >
+
+  }
+
+  {
+
+    title <
+      name = BioScience ;
+      issn = 0006-3568 ;
+      eissn = 1525-3244 ;
+      issnl = 0006-3568
+    > 
+
+    param[base_url] = http://bioscience.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    comment[continues] = 0096-7645
+
+    au < exists ; exists ; 1964 ; BioScience Volume 14 ; 14 ; >
+    au < exists ; exists ; 1965 ; BioScience Volume 15 ; 15 ; >
+    au < exists ; exists ; 1966 ; BioScience Volume 16 ; 16 ; >
+    au < exists ; exists ; 1967 ; BioScience Volume 17 ; 17 ; >
+    au < exists ; exists ; 1968 ; BioScience Volume 18 ; 18 ; >
+    au < exists ; exists ; 1969 ; BioScience Volume 19 ; 19 ; >
+    au < exists ; exists ; 1970 ; BioScience Volume 20 ; 20 ; >
+    au < exists ; exists ; 1971 ; BioScience Volume 21 ; 21 ; >
+    au < exists ; exists ; 1972 ; BioScience Volume 22 ; 22 ; >
+    au < exists ; exists ; 1973 ; BioScience Volume 23 ; 23 ; >
+    au < exists ; exists ; 1974 ; BioScience Volume 24 ; 24 ; >
+    au < exists ; exists ; 1975 ; BioScience Volume 25 ; 25 ; >
+    au < exists ; exists ; 1976 ; BioScience Volume 26 ; 26 ; >
+    au < exists ; exists ; 1977 ; BioScience Volume 27 ; 27 ; >
+    au < exists ; exists ; 1978 ; BioScience Volume 28 ; 28 ; >
+    au < exists ; exists ; 1979 ; BioScience Volume 29 ; 29 ; >
+    au < exists ; exists ; 1980 ; BioScience Volume 30 ; 30 ; >
+    au < exists ; exists ; 1981 ; BioScience Volume 31 ; 31 ; >
+    au < exists ; exists ; 1982 ; BioScience Volume 32 ; 32 ; >
+    au < exists ; exists ; 1983 ; BioScience Volume 33 ; 33 ; >
+    au < exists ; exists ; 1984 ; BioScience Volume 34 ; 34 ; >
+    au < exists ; exists ; 1985 ; BioScience Volume 35 ; 35 ; >
+    au < exists ; exists ; 1986 ; BioScience Volume 36 ; 36 ; >
+    au < exists ; exists ; 1987 ; BioScience Volume 37 ; 37 ; >
+    au < exists ; exists ; 1988 ; BioScience Volume 38 ; 38 ; >
+    au < exists ; exists ; 1989 ; BioScience Volume 39 ; 39 ; >
+    au < exists ; exists ; 1990 ; BioScience Volume 40 ; 40 ; >
+    au < exists ; exists ; 1991 ; BioScience Volume 41 ; 41 ; >
+    au < exists ; exists ; 1992 ; BioScience Volume 42 ; 42 ; >
+    au < exists ; exists ; 1993 ; BioScience Volume 43 ; 43 ; >
+    au < exists ; exists ; 1994 ; BioScience Volume 44 ; 44 ; >
+    au < exists ; exists ; 1995 ; BioScience Volume 45 ; 45 ; >
+    au < exists ; exists ; 1996 ; BioScience Volume 46 ; 46 ; >
+    au < exists ; exists ; 1997 ; BioScience Volume 47 ; 47 ; >
+    au < exists ; exists ; 1998 ; BioScience Volume 48 ; 48 ; >
+    au < exists ; exists ; 1999 ; BioScience Volume 49 ; 49 ; >
+    au < exists ; exists ; 2000 ; BioScience Volume 50 ; 50 ; >
+    au < exists ; exists ; 2001 ; BioScience Volume 51 ; 51 ; >
+    au < exists ; exists ; 2002 ; BioScience Volume 52 ; 52 ; >
+    au < exists ; exists ; 2003 ; BioScience Volume 53 ; 53 ; >
+    au < exists ; exists ; 2004 ; BioScience Volume 54 ; 54 ; >
+    au < exists ; exists ; 2005 ; BioScience Volume 55 ; 55 ; >
+    au < exists ; exists ; 2006 ; BioScience Volume 56 ; 56 ; >
+    au < exists ; exists ; 2007 ; BioScience Volume 57 ; 57 ; >
+    au < exists ; exists ; 2008 ; BioScience Volume 58 ; 58 ; >
+    au < exists ; exists ; 2009 ; BioScience Volume 59 ; 59 ; >
+    au < exists ; exists ; 2010 ; BioScience Volume 60 ; 60 ; >
+    au < exists ; exists ; 2011 ; BioScience Volume 61 ; 61 ; >
+    au < exists ; exists ; 2012 ; BioScience Volume 62 ; 62 ; >
+    au < exists ; exists ; 2013 ; BioScience Volume 63 ; 63 ; >
+    au < exists ; exists ; 2014 ; BioScience Volume 64 ; 64 ; >
+
   }
 
 }

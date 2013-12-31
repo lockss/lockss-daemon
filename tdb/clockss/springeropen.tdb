@@ -23,7 +23,7 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
   
     }
   
@@ -98,7 +98,22 @@
         au < expected ; exists ; 2014 ; Annals of Intensive Care Volume 4 ; 4 >
   
     }
+
+    {
   
+        title <
+          name = Applied Adhesion Science ;
+          eissn = 2196-4351 
+        >
+
+        param[base_url] = http://www.appliedadhesionscience.com/
+        param[journal_issn] = 2196-4351 
+        comment[platform] = BMC
+
+        au < exists ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
@@ -184,7 +199,7 @@
         param[journal_issn] = 2195-2701 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; City, Territory and Architecture Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; City, Territory and Architecture Volume 1 ; 1 >
   
     }
   
@@ -249,7 +264,7 @@
         param[journal_issn] = 2195-3961 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Computational Cognitive Science Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Computational Cognitive Science Volume 1 ; 1 >
   
     }
   
@@ -281,7 +296,7 @@
         param[journal_issn] = 2194-9794 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Crisis Communications Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Crisis Communications Volume 1 ; 1 >
   
     }
   
@@ -314,7 +329,7 @@
         param[journal_issn] = 2193-8636 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Decision Analytics Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Decision Analytics Volume 1 ; 1 >
   
     }
   
@@ -329,7 +344,7 @@
         param[journal_issn] = 2194-6434 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Earth Perspectives Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
   
     }
   
@@ -481,7 +496,7 @@
         param[journal_issn] = 2196-0763 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; EPJ Quantum Technology Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
   
     }
   
@@ -496,7 +511,7 @@
         param[journal_issn] = 2195-7045 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; EPJ Techniques and Instrumentation Volume 1 ; 1 >
   
     }
   
@@ -885,6 +900,7 @@
   
         au < exists ; exists ; 2012 ; International Journal of Advanced Structural Engineering Volume 2012 ; 2012 >
         au < expected ; exists ; 2013 ; International Journal of Advanced Structural Engineering Volume 2013 ; 2013 >
+        au < expected ; exists ; 2014 ; International Journal of Advanced Structural Engineering Volume 2014 ; 2014 >
   
     }
   
@@ -934,8 +950,9 @@
         param[journal_issn] = 2251-6832 
         comment[platform] = BMC
   
-        au < manifest ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
-        au < expected ; exists ; 2013 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
+        au < manifest ; exists ; 2012 ; International Journal of Energy and Environmental Engineering Volume 3 ; 3 >
+        au < manifest ; exists ; 2013 ; International Journal of Energy and Environmental Engineering Volume 4 ; 4 >
+        au < expected ; exists ; 2014 ; International Journal of Energy and Environmental Engineering Volume 5 ; 5 >
   
     }
   
@@ -1086,7 +1103,7 @@
         param[journal_issn] = 2093-3371 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Journal of Analytical Science and Technology Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Journal of Analytical Science and Technology Volume 1 ; 1 >
   
     }
   
@@ -1118,7 +1135,7 @@
         param[journal_issn] = 2196-1115 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Journal Of Big Data Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Journal Of Big Data Volume 1 ; 1 >
   
     }
   
@@ -1150,7 +1167,7 @@
         param[journal_issn] = 2194-3990 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Journal of Computational Surgery Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Journal of Computational Surgery Volume 1 ; 1 >
   
     }
   
@@ -1395,7 +1412,7 @@
         param[journal_issn] = 2195-5832 
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Journal of Statistical Distributions and Applications Volume 1 ; 1 >
   
     }
   
@@ -1725,7 +1742,7 @@
         param[journal_issn] = 2194-6876
         comment[platform] = BMC
   
-        au < expected ; exists ; 2013 ; Scalable Computing Volume 1 ; 1 >
+        au < expected ; exists ; 2014 ; Scalable Computing Volume 1 ; 1 >
   
     }
   

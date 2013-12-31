@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Stanford University Press ;
+    info[contract] = 2013
+  >
+  
+  
+  {
+  
+    title <
+      name = Stanford University Press Source Content
+    >
+    
+    plugin = org.lockss.plugin.clockss.onixbooks.ClockssOnix2BooksZipSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/sup-released/
+    proxy = DIRECT
+    implicit < status1 ; status ; year ; name ; param[year] >
+    
+    au < testing ; exists ; 2013 ; Stanford University Press Source Content 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Stanford University Press Source Content 2014 ; 2014 >
+
+  }
+
+}

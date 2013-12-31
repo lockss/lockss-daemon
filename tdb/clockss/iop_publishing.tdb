@@ -78,7 +78,7 @@
     au < finished ; crawling ; 2011 ; Biofabrication Volume 3 ; 3 > 
     au < finished ; crawling ; 2012 ; Biofabrication Volume 4 ; 4 > 
     au < crawling ; exists ; 2013 ; Biofabrication Volume 5 ; 5 > 
-    au < expected ; exists ; 2014 ; Biofabrication Volume 6 ; 6 > 
+    au < manifest ; exists ; 2014 ; Biofabrication Volume 6 ; 6 > 
 
   }
 
@@ -102,7 +102,7 @@
     au < finished ; crawling ; 2011 ; Bioinspiration & Biomimetics Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Bioinspiration & Biomimetics Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Bioinspiration & Biomimetics Volume 8 ; 8 > 
-    au < expected ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
+    au < manifest ; exists ; 2014 ; Bioinspiration & Biomimetics Volume 9 ; 9 > 
 
   }
 
@@ -126,7 +126,7 @@
     au < finished ; crawling ; 2011 ; Biomedical Materials Volume 6 ; 6 > 
     au < finished ; crawling ; 2012 ; Biomedical Materials Volume 7 ; 7 > 
     au < crawling ; exists ; 2013 ; Biomedical Materials Volume 8 ; 8 > 
-    au < expected ; exists ; 2014 ; Biomedical Materials Volume 9 ; 9 > 
+    au < manifest ; exists ; 2014 ; Biomedical Materials Volume 9 ; 9 > 
 
   }
   
@@ -740,7 +740,7 @@
     au < finished ; crawling ; 2011 ; Inverse Problems Volume 27 ; 27 > 
     au < finished ; crawling ; 2012 ; Inverse Problems Volume 28 ; 28 > 
     au < crawling ; exists ; 2013 ; Inverse Problems Volume 29 ; 29 > 
-    au < expected ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
+    au < manifest ; exists ; 2014 ; Inverse Problems Volume 30 ; 30 > 
 
   }
 
@@ -835,10 +835,10 @@
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 44 ; 44 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 45 ; 45 >
     au < crawling ; exists ; 2013 ; IOP Conference Series: Materials Science and Engineering Volume 46 ; 46 >
-    au < expected ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
-    au < expected ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
-    au < expected ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
-    au < expected ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
+    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 47 ; 47 >
+    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 48 ; 48 > 
+    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 49 ; 49 > 
+    au < manifest ; exists ; 2014 ; IOP Conference Series: Materials Science and Engineering Volume 50 ; 50 > 
 
   }
 
@@ -1026,7 +1026,7 @@
     au < finished ; crawling ; 2011 ; Journal of Neural Engineering Volume 8 ; 8 > 
     au < finished ; crawling ; 2012 ; Journal of Neural Engineering Volume 9 ; 9 > 
     au < crawling ; exists ; 2013 ; Journal of Neural Engineering Volume 10 ; 10 > 
-    au < expected ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
+    au < manifest ; exists ; 2014 ; Journal of Neural Engineering Volume 11 ; 11 > 
 
   }
   
@@ -1256,7 +1256,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics A: Mathematical and Theoretical Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics A: Mathematical and Theoretical Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics A: Mathematical and Theoretical Volume 46 ; 46 > 
-    au < expected ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
+    au < manifest ; exists ; 2014 ; Journal of Physics A: Mathematical and Theoretical Volume 47 ; 47 > 
 
   }
   
@@ -1348,7 +1348,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 46 ; 46 > 
-    au < expected ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
+    au < manifest ; exists ; 2014 ; Journal of Physics B: Atomic, Molecular and Optical Physics Volume 47 ; 47 > 
 
   }
 
@@ -1443,7 +1443,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics D: Applied Physics Volume 44 ; 44 > 
     au < finished ; crawling ; 2012 ; Journal of Physics D: Applied Physics Volume 45 ; 45 > 
     au < crawling ; exists ; 2013 ; Journal of Physics D: Applied Physics Volume 46 ; 46 > 
-    au < expected ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
+    au < manifest ; exists ; 2014 ; Journal of Physics D: Applied Physics Volume 47 ; 47 > 
 
   }
 
@@ -1551,7 +1551,7 @@
     au < finished ; crawling ; 2011 ; Journal of Physics G: Nuclear and Particle Physics Volume 38 ; 38 > 
     au < ingNotReady ; exists ; 2012 ; Journal of Physics G: Nuclear and Particle Physics Volume 39 ; 39 > 
     au < crawling ; exists ; 2013 ; Journal of Physics G: Nuclear and Particle Physics Volume 40 ; 40 > 
-    au < expected ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
+    au < manifest ; exists ; 2014 ; Journal of Physics G: Nuclear and Particle Physics Volume 41 ; 41 > 
 
   }
 
@@ -2104,19 +2104,19 @@
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 464 ; 464 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 465 ; 465 >
     au < crawling ; exists ; 2013 ; Journal of Physics: Conference Series Volume 466 ; 466 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 467 ; 467 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 467 ; 467 >
     au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 468 ; 468 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 469 ; 469 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 470 ; 470 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 469 ; 469 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 470 ; 470 >
     au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 471 ; 471 >
     au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 472 ; 472 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 473 ; 473 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 473 ; 473 >
     au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 474 ; 474 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 475 ; 475 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 475 ; 475 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 476 ; 476 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 477 ; 477 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
-    au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 478 ; 478 >
+    au < manifest ; exists ; 2013 ; Journal of Physics: Conference Series Volume 479 ; 479 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 480 ; 480 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 481 ; 481 >
     au < expected ; exists ; 2013 ; Journal of Physics: Conference Series Volume 482 ; 482 >
@@ -2416,7 +2416,7 @@
     au < finished ; crawling ; 2011 ; Metrologia Volume 48 ; 48 > 
     au < finished ; crawling ; 2012 ; Metrologia Volume 49 ; 49 > 
     au < crawling ; exists ; 2013 ; Metrologia Volume 50 ; 50 > 
-    au < expected ; exists ; 2014 ; Metrologia Volume 51 ; 51 > 
+    au < manifest ; exists ; 2014 ; Metrologia Volume 51 ; 51 > 
 
   }
 
@@ -2494,7 +2494,7 @@
     au < finished ; crawling ; 2011 ; Nanotechnology Volume 22 ; 22 > 
     au < ingNotReady ; exists ; 2012 ; Nanotechnology Volume 23 ; 23 > 
     au < crawling ; exists ; 2013 ; Nanotechnology Volume 24 ; 24 > 
-    au < expected ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
+    au < manifest ; exists ; 2014 ; Nanotechnology Volume 25 ; 25 > 
     
   }
 
@@ -2565,7 +2565,7 @@
     au < finished ; crawling ; 2011 ; Nonlinearity Volume 24 ; 24 > 
     au < finished ; crawling ; 2012 ; Nonlinearity Volume 25 ; 25 > 
     au < crawling ; exists ; 2013 ; Nonlinearity Volume 26 ; 26 > 
-    au < expected ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
+    au < manifest ; exists ; 2014 ; Nonlinearity Volume 27 ; 27 > 
 
   }
 
@@ -2772,7 +2772,7 @@
     au < crawling ; exists ; 2012 ; Physica Scripta Volume 86 ; 86 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 87 ; 87 > 
     au < crawling ; exists ; 2013 ; Physica Scripta Volume 88 ; 88 > 
-    au < expected ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
+    au < manifest ; exists ; 2014 ; Physica Scripta Volume 89 ; 89 > 
     au < expected ; exists ; 2014 ; Physica Scripta Volume 90 ; 90 > 
 
   }
@@ -2865,7 +2865,7 @@
     au < finished ; crawling ; 2011 ; Physics Education Volume 46 ; 46 > 
     au < ingNotReady ; exists ; 2012 ; Physics Education Volume 47 ; 47 > 
     au < crawling ; exists ; 2013 ; Physics Education Volume 48 ; 48 > 
-    au < expected ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
+    au < manifest ; exists ; 2014 ; Physics Education Volume 49 ; 49 > 
 
   }
 
@@ -2940,7 +2940,7 @@
     au < finished ; crawling ; 2011 ; Physics in Medicine and Biology Volume 56 ; 56 > 
     au < ingNotReady ; exists ; 2012 ; Physics in Medicine and Biology Volume 57 ; 57 > 
     au < crawling ; exists ; 2013 ; Physics in Medicine and Biology Volume 58 ; 58 > 
-    au < expected ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
+    au < manifest ; exists ; 2014 ; Physics in Medicine and Biology Volume 59 ; 59 > 
 
   }
 
@@ -3007,7 +3007,7 @@
     au < finished ; crawling ; 2011 ; Physiological Measurement Volume 32 ; 32 >
     au < finished ; crawling ; 2012 ; Physiological Measurement Volume 33 ; 33 >
     au < crawling ; exists ; 2013 ; Physiological Measurement Volume 34 ; 34 >
-    au < expected ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
+    au < manifest ; exists ; 2014 ; Physiological Measurement Volume 35 ; 35 >
 
   }
 
@@ -3086,7 +3086,7 @@
     au < finished ; crawling ; 2011 ; Plasma Physics and Controlled Fusion Volume 53 ; 53 >
     au < ingNotReady ; exists ; 2012 ; Plasma Physics and Controlled Fusion Volume 54 ; 54 >
     au < crawling ; exists ; 2013 ; Plasma Physics and Controlled Fusion Volume 55 ; 55 >
-    au < expected ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
+    au < manifest ; exists ; 2014 ; Plasma Physics and Controlled Fusion Volume 56 ; 56 >
 
   }
 
@@ -3152,7 +3152,7 @@
     au < finished ; crawling ; 2011 ; Plasma Sources Science and Technology Volume 20 ; 20 > 
     au < finished ; crawling ; 2012 ; Plasma Sources Science and Technology Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Plasma Sources Science and Technology Volume 22 ; 22 > 
-    au < expected ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
+    au < manifest ; exists ; 2014 ; Plasma Sources Science and Technology Volume 23 ; 23 > 
 
   }
 
@@ -3474,7 +3474,7 @@
     au < finished ; crawling ; 2011 ; Reports on Progress in Physics Volume 74 ; 74  > 
     au < finished ; crawling ; 2012 ; Reports on Progress in Physics Volume 75 ; 75  > 
     au < crawling ; exists ; 2013 ; Reports on Progress in Physics Volume 76 ; 76  > 
-    au < expected ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
+    au < manifest ; exists ; 2014 ; Reports on Progress in Physics Volume 77 ; 77  > 
 
   }
 
@@ -3539,7 +3539,7 @@
     au < finished ; crawling ; 2011 ; Science and Technology of Advanced Materials Volume 12 ; 12 > 
     au < finished ; crawling ; 2012 ; Science and Technology of Advanced Materials Volume 13 ; 13 > 
     au < crawling ; exists ; 2013 ; Science and Technology of Advanced Materials Volume 14 ; 14 > 
-    au < expected ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
+    au < manifest ; exists ; 2014 ; Science and Technology of Advanced Materials Volume 15 ; 15 > 
 
   }
 
@@ -3584,7 +3584,7 @@
     au < finished ; crawling ; 2011 ; Semiconductor Science and Technology Volume 26 ; 26 > 
     au < ingNotReady ; exists ; 2012 ; Semiconductor Science and Technology Volume 27 ; 27 > 
     au < crawling ; exists ; 2013 ; Semiconductor Science and Technology Volume 28 ; 28 > 
-    au < expected ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
+    au < manifest ; exists ; 2014 ; Semiconductor Science and Technology Volume 29 ; 29 > 
 
   }
 
@@ -3623,7 +3623,7 @@
     au < finished ; crawling ; 2011 ; Smart Materials and Structures Volume 20 ; 20 > 
     au < ingNotReady ; exists ; 2012 ; Smart Materials and Structures Volume 21 ; 21 > 
     au < crawling ; exists ; 2013 ; Smart Materials and Structures Volume 22 ; 22 > 
-    au < expected ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
+    au < manifest ; exists ; 2014 ; Smart Materials and Structures Volume 23 ; 23 > 
 
   }
 

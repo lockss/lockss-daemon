@@ -3,11 +3,10 @@
   publisher <
     name = Chattagram Maa-O-Shishu Hospital Medical College ;
     info[contract] = 2013 ;
-    info[tester] = 7 ;
-    comment[platform] = OJS
+    info[tester] = 7
 
   >
-  
+{  
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   param[base_url] = http://www.cmoshmcj.org/
   implicit < status1 ; status ; year ; name ; volume ; param[year] >
@@ -27,5 +26,39 @@
     au < expected ; exists ; 2014 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 13 ; 13 ; 2014 >
    
   }
+}  
+{
+  plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
+  param[base_url] = http://essential.metapress.com/
+  implicit < status1 ; status ; year ; name ; param[volume_name] >
   
+  {
+
+    title < 
+      name = Chattagram Maa-O-Shishu Hospital Medical College Journal ;
+      issn = 2305-7890 ;
+      eissn = 2306-4919
+      
+    >
+    param[journal_issn] = 2305-7890
+
+    au < down ; exists ; 2013 ; Chattagram Maa-O-Shishu Hospital Medical College Journal Volume 12 [to delete] ; 12 >
+   
+  }
+  
+  {
+  
+    title < 
+      name = Bangladesh Journal of Endosurgery ;
+      issn = 2306-4560 ;
+      eissn = 2306-4390
+
+    >
+    param[journal_issn] = 2306-4560
+    
+    au < down ; exists ; 2013 ; Bangladesh Journal of Endosurgery Volume 1 [to delete] ; 1 >
+   
+  }
 }
+}
+
