@@ -29,7 +29,6 @@
 
 package org.lockss.plugin.igiglobal;
 
-import java.io.*;
 import java.util.*;
 
 import junit.framework.Test;
@@ -37,14 +36,8 @@ import junit.framework.Test;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.repository.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.simulated.*;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisArchivalUnit;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisArchivalUnit.TestCLOCKSSPlugin;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisArchivalUnit.TestGLNPlugin;
-import org.lockss.plugin.taylorandfrancis.TestTaylorAndFrancisArchivalUnit.TestOverrideCLOCKSSPlugin;
 
 // super class for this plugin - variants defined within it
 public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
@@ -130,7 +123,7 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
         expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER);
         expectedFieldMap.put(MetadataField.FIELD_ISSN, goodISSN);
         expectedFieldMap.put(MetadataField.FIELD_ARTICLE_TITLE, goodArticleTitle);
-        expectedFieldMap.put(MetadataField.FIELD_JOURNAL_TITLE, goodJournalTitle);
+        expectedFieldMap.put(MetadataField.FIELD_PUBLICATION_TITLE, goodJournalTitle);
         expectedFieldMap.put(MetadataField.FIELD_DATE, goodDate);
         expectedFieldMap.put(MetadataField.FIELD_AUTHOR, goodAuthors);
       };
@@ -356,15 +349,15 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
     FileMetadataExtractor me = new IgiGlobalHtmlMetadataExtractorFactory.IgiGlobalHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
 
     // Go through the expectedFieldMap if set up and compare against actual
     if (expectedFieldMap != null) {
-      for (Iterator it = expectedFieldMap.keySet().iterator(); it.hasNext(); ) {
-        MetadataField expected_key = (MetadataField)it.next();
+      for (Iterator<MetadataField> it = expectedFieldMap.keySet().iterator(); it.hasNext(); ) {
+        MetadataField expected_key = it.next();
 
         String expected_content = expectedFieldMap.get(expected_key); 
         assertNotNull(expected_content); // in goodContent, expeted_content is not NULL 
@@ -388,8 +381,8 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
 
     //Go through the expectedRawMap if it was set up and compare against actual
     if (expectedRawMap != null) {
-      for (Iterator it = expectedRawMap.keySet().iterator(); it.hasNext(); ) {
-        String expected_key = (String)it.next();
+      for (Iterator<String> it = expectedRawMap.keySet().iterator(); it.hasNext(); ) {
+        String expected_key = it.next();
         String expected_content = expectedRawMap.get(expected_key); 
         assertNotNull(expected_content); // in goodContent, expeted_content is not NULL 
 
@@ -421,15 +414,15 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
     FileMetadataExtractor me = new IgiGlobalHtmlMetadataExtractorFactory.IgiGlobalHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
         new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
 
     if (expectedFieldMap != null) {
       // Go through the expectedFieldMap if set up and compare against actual
-      for (Iterator it = expectedFieldMap.keySet().iterator(); it.hasNext(); ) {
-        MetadataField expected_key = (MetadataField)it.next();
+      for (Iterator<MetadataField> it = expectedFieldMap.keySet().iterator(); it.hasNext(); ) {
+        MetadataField expected_key = it.next();
         String expected_content = expectedFieldMap.get(expected_key); 
         // expected_content could be null
 
@@ -453,8 +446,8 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
     assertEquals(1, md.rawSize()); // modify this depending on whaty ou put in map
     if (expectedRawMap != null) {
       //Go through the expectedRawMap if it was set up and compare against actual
-      for (Iterator it = expectedRawMap.keySet().iterator(); it.hasNext(); ) {
-        String expected_key = (String)it.next();
+      for (Iterator<String> it = expectedRawMap.keySet().iterator(); it.hasNext(); ) {
+        String expected_key = it.next();
         String expected_content = expectedRawMap.get(expected_key); 
 
         log.debug("raw key: " + expected_key + " value: " + expected_content);
