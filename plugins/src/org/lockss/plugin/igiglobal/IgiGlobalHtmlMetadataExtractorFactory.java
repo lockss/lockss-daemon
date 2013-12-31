@@ -1,10 +1,10 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.4 2013-12-23 21:22:54 etenbrink Exp $
+ * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.5 2013-12-31 23:04:00 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -92,7 +92,8 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      // no longer use metadata for publisher, as the values have not been consistent
+      // tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_authors",
               new MetadataField(MetadataField.FIELD_AUTHOR,
                                 MetadataField.splitAt(";")));
@@ -118,7 +119,6 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
       tagMap.put("dc.title", MetadataField.FIELD_ARTICLE_TITLE);
 
       tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER);
-      tagMap.put("dc.publisher",  MetadataField.FIELD_PUBLISHER);
 
       tagMap.put("dc.description", MetadataField.DC_FIELD_DESCRIPTION);
       tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);
@@ -134,7 +134,7 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
         throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      // Since we know it and since Metadata requires it, set it manually if necessary
+      // Since we know it and since Metadata requires it, set it manually
       am.putIfBetter(MetadataField.FIELD_PUBLISHER, "IGI Global");
       return am;
     }
