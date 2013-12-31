@@ -16580,8 +16580,7 @@
     param[base_url] = http://pq.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1950 ; The Philosophical Quarterly Volume 1 ; 1 ; >
-    au < exists ; exists ; 1951 ; The Philosophical Quarterly Volume 1 ; 1 ; >
+    au < exists ; exists ; 1950-1951 ; The Philosophical Quarterly Volume 1 ; 1 ; >
     au < exists ; exists ; 1952 ; The Philosophical Quarterly Volume 2 ; 2 ; >
     au < exists ; exists ; 1953 ; The Philosophical Quarterly Volume 3 ; 3 ; >
     au < exists ; exists ; 1954 ; The Philosophical Quarterly Volume 4 ; 4 ; >
