@@ -6742,7 +6742,7 @@
         au < released ; 2011 ; Contemporary Sociology: A Journal of Reviews Volume 40 ; 40 >
         au < released ; 2012 ; Contemporary Sociology: A Journal of Reviews Volume 41 ; 41 >
         au < manifest ; 2013 ; Contemporary Sociology: A Journal of Reviews Volume 42 ; 42 >
-        au < expected ; 2014 ; Contemporary Sociology: A Journal of Reviews Volume 43 ; 43 >
+        au < manifest ; 2014 ; Contemporary Sociology: A Journal of Reviews Volume 43 ; 43 >
 
       }
 
@@ -8081,7 +8081,7 @@
         au < released ; 2011 ; Cultural Geographies Volume 18 ; 18 >
         au < released ; 2012 ; Cultural Geographies Volume 19 ; 19 >
         au < manifest ; 2013 ; Cultural Geographies Volume 20 ; 20 >
-        au < expected ; 2014 ; Cultural Geographies Volume 21 ; 21 >
+        au < manifest ; 2014 ; Cultural Geographies Volume 21 ; 21 >
 
       }
 
@@ -8942,7 +8942,7 @@
         comment[0] = Jan 2013 name changed from Drug Information Journal to Therapeutic Innovation & Regulatory Science
         
         au < manifest ; 2013 ; Therapeutic Innovation & Regulatory Science Volume 47 ; 47 >
-        au < expected ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 >
+        au < manifest ; 2014 ; Therapeutic Innovation & Regulatory Science Volume 48 ; 48 >
   
       }
   
@@ -9542,7 +9542,7 @@
         au < released ; 2011 ; Educational and Psychological Measurement Volume 71 ; 71 >
         au < released ; 2012 ; Educational and Psychological Measurement Volume 72 ; 72 >
         au < manifest ; 2013 ; Educational and Psychological Measurement Volume 73 ; 73 >
-        au < expected ; 2014 ; Educational and Psychological Measurement Volume 74 ; 74 >
+        au < manifest ; 2014 ; Educational and Psychological Measurement Volume 74 ; 74 >
 
       }
 
@@ -13139,7 +13139,7 @@
         au < released ; 2011 ; Group Processes & Intergroup Relations Volume 14 ; 14 >
         au < released ; 2012 ; Group Processes & Intergroup Relations Volume 15 ; 15 >
         au < manifest ; 2013 ; Group Processes & Intergroup Relations Volume 16 ; 16 >
-        au < expected ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 >
+        au < manifest ; 2014 ; Group Processes & Intergroup Relations Volume 17 ; 17 >
 
       }
 
@@ -13550,7 +13550,7 @@
         au < released ; 2011 ; Health Education Journal Volume 70 ; 70 >
         au < released ; 2012 ; Health Education Journal Volume 71 ; 71 >
         au < manifest ; 2013 ; Health Education Journal Volume 72 ; 72 >
-        au < expected ; 2014 ; Health Education Journal Volume 73 ; 73 >
+        au < manifest ; 2014 ; Health Education Journal Volume 73 ; 73 >
 
       }
 
@@ -17341,8 +17341,8 @@
         au < doNotProcess ; 2008 ; International Studies Volume 45 ; 45 >
         au < released ; 2009 ; International Studies Volume 46 ; 46 >
         au < released ; 2010 ; International Studies Volume 47 ; 47 >
-        au < exists ; 2011 ; International Studies Volume 48 ; 48 >
-        au < exists ; 2012 ; International Studies Volume 49 ; 49 >
+        au < manifest ; 2011 ; International Studies Volume 48 ; 48 >
+        au < manifest ; 2012 ; International Studies Volume 49 ; 49 >
 
       }
 
@@ -19190,7 +19190,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Career Assessment Volume 19 ; 19 >
         au < released ; 2012 ; Journal of Career Assessment Volume 20 ; 20 >
         au < manifest ; 2013 ; Journal of Career Assessment Volume 21 ; 21 >
-        au < expected ; 2014 ; Journal of Career Assessment Volume 22 ; 22 >
+        au < manifest ; 2014 ; Journal of Career Assessment Volume 22 ; 22 >
 
       }
 
@@ -23449,7 +23449,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         param[base_url] = http://jie.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
         
-        au < exists ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 >
+        au < manifest ; 2012 ; Journal of Interdisciplinary Economics Volume 24 ; 24 >
         au < expected ; 2013 ; Journal of Interdisciplinary Economics Volume 25 ; 25 >
         au < expected ; 2014 ; Journal of Interdisciplinary Economics Volume 26 ; 26 >
         
@@ -24344,7 +24344,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Mixed Methods Research Volume 5 ; 5 >
         au < released ; 2012 ; Journal of Mixed Methods Research Volume 6 ; 6 >
         au < manifest ; 2013 ; Journal of Mixed Methods Research Volume 7 ; 7 >
-        au < expected ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 >
+        au < manifest ; 2014 ; Journal of Mixed Methods Research Volume 8 ; 8 >
 
       }
 
@@ -26205,7 +26205,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of Strain Analysis for Engineering Design Volume 46 ; 46 >
         au < released ; 2012 ; Journal of Strain Analysis for Engineering Design Volume 47 ; 47 >
         au < manifest ; 2013 ; Journal of Strain Analysis for Engineering Design Volume 48 ; 48 >
-        au < expected ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 >
+        au < manifest ; 2014 ; Journal of Strain Analysis for Engineering Design Volume 49 ; 49 >
 
       }
 
@@ -27035,7 +27035,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of Theoretical Politics Volume 23 ; 23 >
         au < released ; 2012 ; Journal of Theoretical Politics Volume 24 ; 24 >
         au < manifest ; 2013 ; Journal of Theoretical Politics Volume 25 ; 25 >
-        au < expected ; 2014 ; Journal of Theoretical Politics Volume 26 ; 26 >
+        au < manifest ; 2014 ; Journal of Theoretical Politics Volume 26 ; 26 >
 
       }
 
@@ -30929,7 +30929,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Organization Volume 18 ; 18 >
         au < released ; 2012 ; Organization Volume 19 ; 19 >
         au < manifest ; 2013 ; Organization Volume 20 ; 20 >
-        au < expected ; 2014 ; Organization Volume 21 ; 21 >
+        au < manifest ; 2014 ; Organization Volume 21 ; 21 >
 
       }
 
@@ -32594,7 +32594,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 228 ; 228 >
+        au < manifest ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science Volume 228 ; 228 >
 
       }
 
@@ -32734,7 +32734,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 225 ; 225 >
         au < released ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 226 ; 226 >
         au < manifest ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 227 ; 227 >
-        au < expected ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 228 ; 228 >
+        au < manifest ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit Volume 228 ; 228 >
 
       }
 
@@ -34156,7 +34156,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Qualitative Social Work Volume 10 ; 10 >
         au < released ; 2012 ; Qualitative Social Work Volume 11 ; 11 >
         au < manifest ; 2013 ; Qualitative Social Work Volume 12 ; 12 >
-        au < expected ; 2014 ; Qualitative Social Work Volume 13 ; 13 >
+        au < manifest ; 2014 ; Qualitative Social Work Volume 13 ; 13 >
 
       }
 
@@ -34542,7 +34542,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Remedial and Special Education Volume 32 ; 32 >
         au < released ; 2012 ; Remedial and Special Education Volume 33 ; 33 >
         au < manifest ; 2013 ; Remedial and Special Education Volume 34 ; 34 >
-        au < expected ; 2014 ; Remedial and Special Education Volume 35 ; 35 >
+        au < manifest ; 2014 ; Remedial and Special Education Volume 35 ; 35 >
 
       }
 
@@ -37110,7 +37110,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Sports Health: A Multidisciplinary Approach Volume 3 ; 3 >
         au < released ; 2012 ; Sports Health: A Multidisciplinary Approach Volume 4 ; 4 >
         au < manifest ; 2013 ; Sports Health: A Multidisciplinary Approach Volume 5 ; 5 >
-        au < expected ; 2014 ; Sports Health: A Multidisciplinary Approach Volume 6 ; 6 >
+        au < manifest ; 2014 ; Sports Health: A Multidisciplinary Approach Volume 6 ; 6 >
 
       }
 
@@ -38453,7 +38453,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Theory, Culture & Society Volume 28 ; 28 >
         au < released ; 2012 ; Theory, Culture & Society Volume 29 ; 29 >
         au < manifest ; 2013 ; Theory, Culture & Society Volume 30 ; 30 >
-        au < expected ; 2014 ; Theory, Culture & Society Volume 31 ; 31 >
+        au < manifest ; 2014 ; Theory, Culture & Society Volume 31 ; 31 >
 
       }
 
@@ -41411,7 +41411,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Learning Disability Quarterly Volume 34 ; 34 >
         au < released ; 2012 ; Learning Disability Quarterly Volume 35 ; 35 >
         au < manifest ; 2013 ; Learning Disability Quarterly Volume 36 ; 36 >
-        au < expected ; 2014 ; Learning Disability Quarterly Volume 37 ; 37 >
+        au < manifest ; 2014 ; Learning Disability Quarterly Volume 37 ; 37 >
   
       }
   
@@ -42476,7 +42476,7 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; Foot & Ankle International Volume 34 ; 34 >
-    au < expected ; 2014 ; Foot & Ankle International Volume 35 ; 35 >
+    au < manifest ; 2014 ; Foot & Ankle International Volume 35 ; 35 >
 
     }
 
@@ -42627,7 +42627,7 @@ comment[mpj] = now published by Brill
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; Mobile Media & Communication Volume 1 ; 1 >
-    au < expected ; 2014 ; Mobile Media & Communication Volume 2 ; 2 >
+    au < manifest ; 2014 ; Mobile Media & Communication Volume 2 ; 2 >
 
     }
 
