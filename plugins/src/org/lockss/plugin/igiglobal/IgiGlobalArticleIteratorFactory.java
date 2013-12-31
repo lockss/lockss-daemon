@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.12 2013-12-23 21:20:21 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.13 2013-12-31 23:02:01 etenbrink Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ import org.lockss.util.Logger;
  * PDF Full Text: http://www.igi-global.com/article/full-text-pdf/56564
  * HTML Abstract: http://www.igi-global.com/article/56564
  * For books:
- * PDF Full Text: http://www.igi-global.com/chapter/20212
- * HTML Abstract: http://www.igi-global.com/chapter/full-text-pdf/20212
+ * PDF Full Text: http://www.igi-global.com/chapter/full-text-pdf/20212
+ * HTML Abstract: http://www.igi-global.com/chapter/20212
  */
 
 public class IgiGlobalArticleIteratorFactory
@@ -67,10 +67,19 @@ public class IgiGlobalArticleIteratorFactory
       "\"%sgateway/chapter/\", base_url"; // params from tdb file corresponding to AU
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sgateway/(article|chapter)/[0-9]+\", base_url";
+      "\"^%sgateway/(?:article|chapter)(?:/full-text-(?:html|pdf))?/[0-9]+\", base_url";
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
       "(article|chapter)/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final String ABSTRACT_REPLACEMENT = "$1/$2";
+  
+  protected static final Pattern FULLTEXT_HTML_PATTERN = Pattern.compile(
+      "(article|chapter)/full-text-html/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final String FULLTEXT_HTML_REPLACEMENT = "$1/full-text-html/$2";
+  
+  protected static final Pattern FULLTEXT_PDF_PATTERN = Pattern.compile(
+      "(article|chapter)/full-text-pdf/([0-9]+)$", Pattern.CASE_INSENSITIVE);
+  protected static final String FULLTEXT_PDF_REPLACEMENT = "$1/full-text-pdf/$2";
   
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "<iframe[^>]* src=\"/(pdf[.]aspx?[^\"]+)\"", Pattern.CASE_INSENSITIVE);
@@ -79,83 +88,94 @@ public class IgiGlobalArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
       throws PluginException {
-    return new IgiGlobalArticleIterator(au,
-        new SubTreeArticleIterator.Spec()
-            .setTarget(target)
-            .setRootTemplates(Arrays.asList(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE))
-            .setPatternTemplate(PATTERN_TEMPLATE));
+    
+    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+    
+    builder.setSpec(target,
+        Arrays.asList(JOURNAL_ROOT_TEMPLATE, BOOK_ROOT_TEMPLATE),
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+    
+    builder.addAspect(
+        FULLTEXT_HTML_PATTERN, FULLTEXT_HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    
+    // set up Abstract to be an aspect that will trigger an ArticleFiles
+    // NOTE - for the moment this also means an abstract could be considered a 
+    // FULL_TEXT_CU until this is deprecated
+    // though the ordered list for role full text will mean if any of the others 
+    // are there, they will become the FTCU
+    builder.addAspect(
+        ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    builder.addAspect(
+        FULLTEXT_PDF_PATTERN, FULLTEXT_PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job
+    // In this case, there are two jobs, one for counting articles (abstract is 
+    // good) and the other for metadata (fulltext is correct)
+    builder.setFullTextFromRoles(
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+    
+    return builder.getSubTreeArticleIterator();
   }
-
-  protected static class IgiGlobalArticleIterator extends SubTreeArticleIterator {
-
-    public IgiGlobalArticleIterator(ArchivalUnit au,
-                                     SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
-    
-    @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher mat;
-      mat = ABSTRACT_PATTERN.matcher(url);
-      if (mat.find()) {
-        return processAbstract(cu, mat);
-      }
-
-      log.warning("Mismatch between article iterator factory and article iterator: " + url);
-      return null;
-    }
-    
-
-    protected ArticleFiles processAbstract(CachedUrl absCu, Matcher absMat) {
-      ArticleFiles af = new ArticleFiles();
-      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      af.setFullTextCu(absCu);
+  
+  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+    return new SubTreeArticleIteratorBuilder(au) {
       
-      // minimize the work you do if you are just counting articles
-      if ((spec.getTarget() == null) || spec.getTarget().isAny()) {
-        guessPdf(af, absMat);
+      @Override
+      protected void maybeMakeSubTreeArticleIterator() {
+        if (au != null && spec != null && iterator == null) {
+          this.iterator = new BuildableSubTreeArticleIterator(au, spec) {
+            
+            @Override
+            protected ArticleFiles createArticleFiles(CachedUrl cu) {
+              ArticleFiles af = super.createArticleFiles(cu);
+              
+              if (af != null &&
+                  (cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)) != null &&
+                  spec.getTarget() != null && !spec.getTarget().isArticle()) {
+                
+                String url = cu.getUrl();
+                Matcher mat;
+                mat = FULLTEXT_PDF_PATTERN.matcher(url);
+                if (mat.find() && cu.hasContent()) {
+                  guessPdf(af, cu);
+                }
+                // guessPdf will have caused file to open
+                cu.release();
+              }
+              return af;
+            }
+          };
+        }
       }
-      guessFullText(af, absMat);
       
-      return af;
-    }
-    
-    protected void guessFullText(ArticleFiles af, Matcher mat) {
-      String htmlUrlBase = mat.replaceFirst("$1/full-text-html/$2");
-      CachedUrl htmlCu = au.makeCachedUrl(htmlUrlBase);
-      if (htmlCu != null && htmlCu.hasContent()) {
-        af.setFullTextCu(htmlCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      } 
-    }
-    
-    //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
-    // actually a pdf file. 
-    // we pick up the pdf which lives at: 
-    // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
-    //<iframe src="/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dE-Survey+Methodology">
-    protected void guessPdf(ArticleFiles af, Matcher mat) {
-      String pdfUrlBase = mat.replaceFirst("$1/full-text-pdf/$2");
-      CachedUrl pdfCu = au.makeCachedUrl(pdfUrlBase);
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setFullTextCu(pdfCu);
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfCu);
+      //NOTE -  the full-text-pdf is pdf in an html frameset so it's not
+      // actually a pdf file. We pick up the pdf which lives at: 
+      // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
+      //<iframe src="/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dE-Survey+Methodology">
+      protected void guessPdf(ArticleFiles af, CachedUrl cu) {
         BufferedReader bReader = null;
         try {
           bReader = new BufferedReader(new InputStreamReader(
-              pdfCu.getUnfilteredInputStream(), pdfCu.getEncoding())
+              cu.getUnfilteredInputStream(), cu.getEncoding())
               );
           Matcher matcher;
           
           // go through the cached URL content line by line
+          // if a match is found, look for valid url & content
+          // if found then set the role for ROLE_FULL_TEXT_PDF
           for (String line = bReader.readLine(); line != null; line = bReader.readLine()) {
             matcher = PDF_PATTERN.matcher(line);
             if (matcher.find()) {
               String baseUrl = au.getConfiguration().get("base_url");
               String pdfUrl = matcher.group(1);
               // use unescapeHtml to convert &amp; to &
-              pdfCu = au.makeCachedUrl(baseUrl + StringEscapeUtils.unescapeHtml(pdfUrl));
+              CachedUrl pdfCu = au.makeCachedUrl(baseUrl + StringEscapeUtils.unescapeHtml(pdfUrl));
               if (pdfCu == null || !pdfCu.hasContent()) {
                 pdfCu = au.makeCachedUrl(baseUrl + pdfUrl);
               }
@@ -173,13 +193,13 @@ public class IgiGlobalArticleIteratorFactory
           IOUtil.safeClose(bReader);
         }
       }
-    }
+    };
   }
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ABSTRACT);
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     // Ask Phil how to talk to our real metadata extractor here
   }
 
