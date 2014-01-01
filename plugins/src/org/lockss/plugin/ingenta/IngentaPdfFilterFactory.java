@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaPdfFilterFactory.java,v 1.12 2013-12-26 20:40:41 etenbrink Exp $
+ * $Id: IngentaPdfFilterFactory.java,v 1.13 2014-01-01 03:11:50 etenbrink Exp $
  */ 
 
 /*
@@ -53,6 +53,8 @@ public class IngentaPdfFilterFactory implements FilterFactory {
     ARN,
     /** Bergahn Journals */
     BERGHAHN,
+    /** International Glaciological Society */
+    IGSOC,
     /** London School of Economics */
     LSE,
     /** Maney Publishing */
@@ -396,7 +398,7 @@ public class IngentaPdfFilterFactory implements FilterFactory {
       }
     }
     switch (publisherId) {
-      case ARN: case LSE:
+      case ARN: case LSE: case IGSOC:
         return normExtractFiltFact.createFilteredInputStream(au, in, encoding);
         
       case BERGHAHN: case MANUP: case WAB: case UNKNOWN:
