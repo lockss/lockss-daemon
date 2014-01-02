@@ -110,7 +110,7 @@
         param[journal_issn] = 2196-4351 
         comment[platform] = BMC
 
-        au < exists ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
+        au < manifest ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
 
     }
 
@@ -379,7 +379,7 @@
         au < manifest ; exists ; 2011 ; EJNMMI Research Volume 1 ; 1 >
         au < manifest ; exists ; 2012 ; EJNMMI Research Volume 2 ; 2 >
         au < manifest ; exists ; 2013 ; EJNMMI Research Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; EJNMMI Research Volume 4 ; 4 >
   
     }
   
@@ -1571,7 +1571,7 @@
         au < manifest ; exists ; 2011 ; Nanoscale Research Letters Volume 6 ; 6 >
         au < manifest ; exists ; 2012 ; Nanoscale Research Letters Volume 7 ; 7 >
         au < manifest ; exists ; 2013 ; Nanoscale Research Letters Volume 8 ; 8 >
-        au < expected ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
+        au < manifest ; exists ; 2014 ; Nanoscale Research Letters Volume 9 ; 9 >
   
     }
   
