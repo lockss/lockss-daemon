@@ -1,10 +1,10 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.12 2014-01-02 18:49:56 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.13 2014-01-02 22:41:48 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -141,8 +141,6 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
     Calendar calendar = new GregorianCalendar();
     calendar.setTime(TimeBase.nowDate());
     int year = calendar.get(Calendar.YEAR);
-    int month = calendar.get(Calendar.MONTH) + 1;
-    int day = calendar.get(Calendar.DAY_OF_MONTH);
 
     // Run the tests for days in the next 10 years.
     for (int runYear = 0; runYear < 10; runYear++) {
@@ -167,15 +165,9 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
       cleanUpAggregatesAndJournals();
 
       // Point to the next year.
-      year++;
-
-      // Handle leap years.
-      if (month == 2 && day == 29 && year % 4 != 0) {
-	day = 28;
-      }
-
-      TimeBase.setSimulated(year + "/" + month + "/" + day + " 12:" + day + ":"
-	  + day);
+      calendar.add(Calendar.YEAR, 1);
+      year = calendar.get(Calendar.YEAR);
+      TimeBase.setSimulated(calendar.getTimeInMillis());
     }
   }
 
