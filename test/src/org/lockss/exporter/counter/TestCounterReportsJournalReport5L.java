@@ -1,5 +1,5 @@
 /*
- * $Id: TestCounterReportsJournalReport5L.java,v 1.11 2013-10-16 23:10:43 fergaloy-sf Exp $
+ * $Id: TestCounterReportsJournalReport5L.java,v 1.12 2014-01-02 18:49:56 fergaloy-sf Exp $
  */
 
 /*
@@ -174,8 +174,8 @@ public class TestCounterReportsJournalReport5L extends LockssTestCase {
 	day = 28;
       }
 
-      TimeBase.setSimulated(year + "/" + month + "/" + day + " " + month
-	  + ":" + day + ":" + day);
+      TimeBase.setSimulated(year + "/" + month + "/" + day + " 12:" + day + ":"
+	  + day);
     }
   }
 
