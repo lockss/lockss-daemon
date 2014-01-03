@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.3 2013-12-18 17:55:50 etenbrink Exp $
+/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.4 2014-01-03 17:57:33 etenbrink Exp $
  */
 
 /*
@@ -91,6 +91,7 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
     "</ul>\n" + 
     "<div id=\"institutionName\">CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.</div>\n" + 
     "</header>" +
+    "<a name=\"N65771\"></a>" +
     "nonstuff" +
     "<footer>\n" + 
     "<div id=\"pageEnd\">\n" + 
