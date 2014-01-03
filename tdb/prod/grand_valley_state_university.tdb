@@ -87,5 +87,32 @@
     au < expected ; 2014 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
 
   }
+  
+    {
+
+    title <
+      name = Online Readings in Psychology and Culture ;
+      issn = 2307-0919 
+    >
+
+    plugin = org.lockss.plugin.bepress.BePressPlugin
+    param[base_url] = http://scholarworks.gvsu.edu/
+    param[journal_abbr] = orpc
+    implicit < status ; year ; name ; param[volume] >
+
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 >
+    au < released ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 >
+
+  }
+    
 
 }
