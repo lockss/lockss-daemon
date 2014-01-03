@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.11 2012-08-21 08:36:15 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.12 2014-01-03 00:58:40 etenbrink Exp $
  */
 
 /*
@@ -39,10 +39,6 @@ import java.util.regex.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.state.*;
-import org.lockss.repository.*;
-import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.SubTreeArticleIterator.Spec;
 import org.lockss.extractor.*;
@@ -202,7 +198,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   void doTestCreateArticleFiles() {
     Spec s1 = new Spec().setPatternTemplate("\"00%dfile\\.html\",branch");
     Spec s2 = new Spec().setPattern("002file\\.html");
-    List l1 = getArticles(s1);
+    List<ArticleFiles> l1 = getArticles(s1);
     assertEquals(15, l1.size());
 
     assertEquals(getFullTextUrls(l1), getFullTextUrls(getArticles(s2)));
@@ -210,7 +206,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     Spec s3 = new Spec().setPattern("branch2/002file\\.html");
     String a = "http://example.org/wombat/";
     String b = "branch2/002file.html";
-    List exp = ListUtil.list(a+"branch1/branch1/"+b,
+    List<String> exp = ListUtil.list(a+"branch1/branch1/"+b,
 			     a+"branch1/"+b,
 			     a+"branch1/branch2/"+b,
 			     a+""+b,
@@ -222,7 +218,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     // Test overriding createArticleFiles() to return a non-default
     // ArticleFiles
-    List l2 = getArticles(new SubTreeArticleIterator(sau, s3) {
+    List<ArticleFiles> l2 = getArticles(new SubTreeArticleIterator(sau, s3) {
 	protected ArticleFiles createArticleFiles(CachedUrl cu) {
 	  ArticleFiles res = new ArticleFiles();
 	  res.setFullTextCu(cu);
@@ -267,7 +263,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   void doTestCustomVisitArticleCu() {
     String a = "http://example.org/wombat/";
     Spec s3 = new Spec().setPattern("branch2/002file\\.html");
-    List exp3 =
+    List<String> exp3 =
       ListUtil.list(a+"branch1/branch2/002file.html",
 		    a+"branch1/branch2/branch2/002file.html",
 		    a+"branch2/002file.html",
@@ -280,7 +276,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 		    a+"branch2/branch2/branch2/002file.html/v2",
 		    a+"branch2/branch2/branch2/002file.html/v3");
 
-    List l3 = getArticles(new SubTreeArticleIterator(sau, s3) {
+    List<ArticleFiles> l3 = getArticles(new SubTreeArticleIterator(sau, s3) {
 	protected void visitArticleCu(CachedUrl cu) {
 	  String url = cu.getUrl();
 	  ArchivalUnit au = cu.getArchivalUnit();
@@ -322,7 +318,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     Spec s1 = new Spec();
     MySubTreeArticleIterator iter1 = new MySubTreeArticleIterator(sau, s1);
     iter1.setRecordPredInvocations();
-    List art1 = getArticles(iter1);
+    List<ArticleFiles> art1 = getArticles(iter1);
     assertEquals(226, art1.size());
     assertEquals(226, iter1.getPredInvocations().size());
 
@@ -331,7 +327,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     Spec s2 = new Spec().setPatternTemplate("\"%sbranch2\",base_url");
     MySubTreeArticleIterator iter2 = new MySubTreeArticleIterator(sau, s2);
     iter2.setRecordPredInvocations();
-    List art2 = getArticles(iter2);
+    List<ArticleFiles> art2 = getArticles(iter2);
     assertEquals(105, art2.size());
     assertEquals(226, iter2.getPredInvocations().size());
 
@@ -340,7 +336,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     Spec s3 = new Spec().setIncludeSubTreePatternTemplate("\"%sbranch2\",base_url");
     MySubTreeArticleIterator iter3 = new MySubTreeArticleIterator(sau, s3);
     iter3.setRecordPredInvocations();
-    List art3 = getArticles(iter3);
+    List<ArticleFiles> art3 = getArticles(iter3);
     assertEquals(105, art3.size());
     assertEquals(105, iter3.getPredInvocations().size());
 
@@ -351,7 +347,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       .setIncludeSubTreePatternTemplate("\"%sbranch2\",base_url");
     MySubTreeArticleIterator iter4 = new MySubTreeArticleIterator(sau, s4);
     iter4.setRecordPredInvocations();
-    List art4 = getArticles(iter4);
+    List<ArticleFiles> art4 = getArticles(iter4);
     assertEquals(105, art4.size());
     assertEquals(105, iter4.getPredInvocations().size());
   }
@@ -362,7 +358,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     Spec s1 = new Spec().setRoot("http://example.org");
     MySubTreeArticleIterator iter1 = new MySubTreeArticleIterator(sau, s1);
     iter1.setRecordPredInvocations();
-    List art1 = getArticles(iter1);
+    List<ArticleFiles> art1 = getArticles(iter1);
     assertEquals(226, art1.size());
     assertEquals(226, iter1.getPredInvocations().size());
 
@@ -373,7 +369,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       .setPatternTemplate("\"%sbranch[13]\",base_url");
     MySubTreeArticleIterator iter2 = new MySubTreeArticleIterator(sau, s2);
     iter2.setRecordPredInvocations();
-    List art2 = getArticles(iter2);
+    List<ArticleFiles> art2 = getArticles(iter2);
     assertEquals(106, art2.size());
     assertEquals(226, iter2.getPredInvocations().size());
 
@@ -384,7 +380,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       .setExcludeSubTreePatternTemplate("\"%sbranch2\",base_url");
     MySubTreeArticleIterator iter3 = new MySubTreeArticleIterator(sau, s3);
     iter3.setRecordPredInvocations();
-    List art3 = getArticles(iter3);
+    List<ArticleFiles> art3 = getArticles(iter3);
     assertEquals(121, art3.size());
     assertEquals(121, iter3.getPredInvocations().size());
   }
@@ -458,7 +454,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       
   static class MySubTreeArticleIterator extends SubTreeArticleIterator {
     int exceptionCount;
-    List predList = null;
+    List<CachedUrl> predList = null;
 
     MySubTreeArticleIterator(ArchivalUnit au, Spec spec) {
       this(au, spec, 0);
@@ -484,15 +480,15 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       return false;
     }
 
-    Iterator getCusIterator() {
+    Iterator<?> getCusIterator() {
       return cusIter;
     }
 
     void setRecordPredInvocations() {
-      predList = new ArrayList();
+      predList = new ArrayList<CachedUrl>();
     }
 
-    List getPredInvocations() {
+    List<CachedUrl> getPredInvocations() {
       return predList;
     }
   }
