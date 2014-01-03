@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaArticleIteratorFactory.java,v 1.6 2013-12-26 20:52:51 etenbrink Exp $
+ * $Id: IngentaArticleIteratorFactory.java,v 1.7 2014-01-03 21:13:23 etenbrink Exp $
  */
 
 /*
@@ -52,6 +52,10 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
       "\"^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/art[0-9]{5}\\?crawler=true$\", " +
       "api_url, publisher_id, journal_id, volume_name";
   
+  protected static final Pattern PLAIN_PATTERN = Pattern.compile(
+      "^(.*)content/([^/]+/[^/]+/[0-9]{4}/[^/]+/[^/]+/[^/]+)[?]crawler=true$",
+      Pattern.CASE_INSENSITIVE);
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
       MetadataTarget target) throws PluginException {
@@ -61,11 +65,6 @@ public class IngentaArticleIteratorFactory implements ArticleIteratorFactory,
   }
   
   protected static class IngentaArticleIterator extends SubTreeArticleIterator {
-    
-    protected static Pattern PLAIN_PATTERN = Pattern
-        .compile(
-            "^(.*)content/([^/]+/[^/]+/[0-9]{4}/[^/]+/[^/]+/[^/]+)\\?crawler=true$",
-            Pattern.CASE_INSENSITIVE);
     
     protected String baseUrl;
     protected MetadataTarget target;
