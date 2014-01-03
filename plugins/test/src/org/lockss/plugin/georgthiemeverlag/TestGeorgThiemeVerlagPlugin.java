@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.3 2013-12-17 05:05:26 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.4 2014-01-03 17:15:10 etenbrink Exp $
  */
 
 /*
@@ -161,6 +161,10 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
         plugin.getArticleMetadataExtractor(null, au) instanceof ArticleMetadataExtractor);
     assertTrue(""+plugin.getFileMetadataExtractor(MetadataTarget.Any(), "text/html", au),
         plugin.getFileMetadataExtractor(MetadataTarget.Any(), "text/html", au) instanceof
+        FileMetadataExtractor
+        );
+    assertTrue(""+plugin.getFileMetadataExtractor(MetadataTarget.Any(), "application/pdf", au),
+        plugin.getFileMetadataExtractor(MetadataTarget.Any(), "application/pdf", au) instanceof
         FileMetadataExtractor
         );
   }
