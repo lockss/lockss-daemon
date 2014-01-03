@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.2 2013-11-23 01:39:09 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.3 2014-01-03 17:24:03 etenbrink Exp $
  */
 
 /*
@@ -54,30 +54,30 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"^%sejournals/(?:html|pdf)/%s/[^/?&.]+(?:[.]pdf)?$\"," +
       " base_url, doi_prefix";
   
+  // various aspects of an article
+  // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
+  // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
+  // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
+  
+  // Identify groups in the pattern "/(html|pdf)(<doi>)(.pdf)?
+  protected static final Pattern HTML_PATTERN = Pattern.compile(
+      "/html/([^/]+/[^/?&]+)$",
+      Pattern.CASE_INSENSITIVE);
+  
+  protected static final Pattern PDF_PATTERN = Pattern.compile(
+      "/pdf/([^/]+/[^/?&.]+)[.]pdf$",
+      Pattern.CASE_INSENSITIVE);
+  
+  // how to change from one form (aspect) of article to another
+  protected static final String HTML_REPLACEMENT = "/html/$1";
+  protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
+  protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1";
+  
   @Override
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target)
           throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-    
-    // various aspects of an article
-    // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
-    // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
-    // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
-    
-    // Identify groups in the pattern "/(html|pdf)(<doi>)(.pdf)?
-    final Pattern HTML_PATTERN = Pattern.compile(
-        "/html/([^/]+/[^/?&]+)$",
-        Pattern.CASE_INSENSITIVE);
-    
-    final Pattern PDF_PATTERN = Pattern.compile(
-        "/pdf/([^/]+/[^/?&.]+)[.]pdf$",
-        Pattern.CASE_INSENSITIVE);
-    
-    // how to change from one form (aspect) of article to another
-    final String HTML_REPLACEMENT = "/html/$1";
-    final String PDF_REPLACEMENT = "/pdf/$1.pdf";
-    final String ABSTRACT_REPLACEMENT = "/abstract/$1";
     
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
@@ -98,9 +98,14 @@ public class GeorgThiemeVerlagArticleIteratorFactory
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
     
-    // set up fulltext to be an aspect for metadata
+    // set up html fulltext to be an aspect for metadata
     builder.addAspect(
         HTML_REPLACEMENT,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
+    
+    // set up pdf fulltext to be an aspect for metadata
+    builder.addAspect(
+        PDF_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
     
     // The order in which we want to define full_text_cu.
