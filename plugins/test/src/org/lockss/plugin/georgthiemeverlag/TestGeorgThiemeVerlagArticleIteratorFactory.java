@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.2 2013-11-23 01:35:12 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.3 2014-01-03 17:11:39 etenbrink Exp $
  */
 
 /*
@@ -244,7 +244,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
         BASE_URL + "ejournals/pdf/10.1055/s-6.pdf",
         null,
         BASE_URL + "ejournals/pdf/10.1055/s-6.pdf",
-        null};
+        BASE_URL + "ejournals/pdf/10.1055/s-6.pdf"};
     
     String [] af7 = {
         null,
