@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.5 2013-12-18 17:59:31 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.6 2014-01-03 17:26:51 etenbrink Exp $
  */
 /*
 
@@ -72,7 +72,9 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         // Contains functional links, not content
         HtmlNodeFilters.tagWithAttribute("div", "class", "pageFunctions"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleFunctions"),
-        HtmlNodeFilters.tagWithAttribute("span", "class", "articleCategories")
+        HtmlNodeFilters.tagWithAttribute("span", "class", "articleCategories"),
+        // Contains non-functional anchor, not content
+        HtmlNodeFilters.tagWithAttribute("a", "name"),
     };
     
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
