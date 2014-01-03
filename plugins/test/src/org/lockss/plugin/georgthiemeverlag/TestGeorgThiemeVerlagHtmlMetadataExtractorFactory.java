@@ -62,7 +62,6 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
   private ArchivalUnit hau; 
   private MockLockssDaemon theDaemon;
 
-//  private static String BASE_URL = "http://datadryad.org/";
   private static String SIM_ROOT = BASE_URL;
 
   public void setUp() throws Exception {
@@ -191,9 +190,10 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
     assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodVol, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(journalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(journalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     
+    // the following value now extracted from tdb file
+    assertNull(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     // the following does not exist in test data
     assertNull(md.get(MetadataField.FIELD_END_PAGE));
   }
