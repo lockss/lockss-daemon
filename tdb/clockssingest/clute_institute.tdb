@@ -2,10 +2,11 @@
 
   publisher <
     name = Clute Institute ;
-    info[contract] = 2013 ;
-    info[tester] = 0
+    info[contract] = 2014 ;
+    info[tester] = 0 ;
+    comment[1] = do not process
     >
-    
+    comment[doNotProcess until further notice]
     plugin = needs.plugin
     
 
