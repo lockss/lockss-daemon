@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlMetadataExtractorFactory.java,v 1.1 2013-11-12 22:06:51 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlMetadataExtractorFactory.java,v 1.2 2014-01-03 17:28:22 etenbrink Exp $
  */
 
 /*
@@ -77,9 +77,9 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       //<meta name="citation_author" content="R. Mössner"/>
       tagMap.put("citation_author",MetadataField.FIELD_AUTHOR);
       //<meta name="citation_journal_title" content="Aktuelle Dermatologie" />
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
-      //<meta name="citation_publisher" content="..."/>
-      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+      //<meta name="citation_publisher" content="..."/> 
+      // FIELD_PUBLISHER value will be extracted from tdb file
       //<meta name="citation_language" content="de" />
       tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
     }
