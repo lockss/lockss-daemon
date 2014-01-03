@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.7 2013-12-26 20:57:00 etenbrink Exp $
+ * $Id: IngentaHtmlMetadataExtractorFactory.java,v 1.8 2014-01-03 21:14:18 etenbrink Exp $
  */
 
 /*
@@ -83,7 +83,8 @@ public class IngentaHtmlMetadataExtractorFactory implements
       tagMap.put("DCTERMS.isPartOf", new MetadataField(
           MetadataField.FIELD_ISSN, MetadataField.extract(issnPattern,1)));
       // <meta name="DC.publisher" content="Manchester University Press">
-      tagMap.put("DC.publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("DC.publisher", MetadataField.DC_FIELD_PUBLISHER);
+      // will extract FIELD_PUBLISHER from tdb
       
       /* 
        * Currently the extract using pattern will put an actual "null" in to the 
