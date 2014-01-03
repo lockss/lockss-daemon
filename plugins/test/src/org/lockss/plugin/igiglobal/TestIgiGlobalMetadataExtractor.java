@@ -120,7 +120,7 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
         expectedFieldMap.put(MetadataField.FIELD_ISSUE, goodIssue);
         expectedFieldMap.put(MetadataField.FIELD_START_PAGE, goodStartPage);
         expectedFieldMap.put(MetadataField.FIELD_END_PAGE, goodEndPage);
-        expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER);
+        // expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should be set from tdb 
         expectedFieldMap.put(MetadataField.FIELD_ISSN, goodISSN);
         expectedFieldMap.put(MetadataField.FIELD_ARTICLE_TITLE, goodArticleTitle);
         expectedFieldMap.put(MetadataField.FIELD_PUBLICATION_TITLE, goodJournalTitle);
@@ -157,7 +157,7 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
         expectedFieldMap.put(MetadataField.FIELD_VOLUME, null);
         expectedFieldMap.put(MetadataField.FIELD_ISSUE, null);
         expectedFieldMap.put(MetadataField.FIELD_START_PAGE, null);
-        expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should always be set, even if not in content
+        // expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should always be set from tdb
         expectedFieldMap.put(MetadataField.FIELD_ISSN, null);
       };
 
@@ -240,7 +240,7 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
           expectedFieldMap.put(MetadataField.DC_FIELD_RIGHTS, goodRights);
           
           // and some DC fields also map to standard fields
-          expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER);
+          // expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should always be set from tdb
           expectedFieldMap.put(MetadataField.FIELD_ARTICLE_TITLE, goodTitle);         
           expectedFieldMap.put(MetadataField.FIELD_AUTHOR, goodAuthors);
         };
@@ -276,7 +276,7 @@ public class TestIgiGlobalMetadataExtractor extends LockssTestCase {
           expectedFieldMap.put(MetadataField.FIELD_VOLUME, null);
           expectedFieldMap.put(MetadataField.FIELD_ISSUE, null);
           expectedFieldMap.put(MetadataField.FIELD_START_PAGE, null);
-          expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should always be set, even if not in content
+          // expectedFieldMap.put(MetadataField.FIELD_PUBLISHER, PUBLISHER); // This should always be set from tdb
           expectedFieldMap.put(MetadataField.FIELD_ISSN, null);
         };
         
