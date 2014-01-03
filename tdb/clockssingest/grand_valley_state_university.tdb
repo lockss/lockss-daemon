@@ -63,31 +63,38 @@
     param[journal_abbr] = jti
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 1-2 ; 1-2 >
-    au < manifest ; exists ; 2013 ; The Journal of Tourism Insights Volume 3-4 ; 3-4 >
-    au < expected ; exists ; 2014 ; The Journal of Tourism Insights Volume 5-6 ; 5-6 >
+    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; The Journal of Tourism Insights Volume 2 ; 2 >
+    au < manifest ; exists ; 2013 ; The Journal of Tourism Insights Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; The Journal of Tourism Insights Volume 4 ; 4 >
+    au < expected ; exists ; 2014 ; The Journal of Tourism Insights Volume 5 ; 5 >
+    au < expected ; exists ; 2014 ; The Journal of Tourism Insights Volume 6 ; 6 >
 
   }
   
-  {
-  
-    title < 
+     {
+
+    title <
       name = Online Readings in Psychology and Culture ;
       issn = 2307-0919 
     >
-    
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     param[base_url] = http://scholarworks.gvsu.edu/
     param[journal_abbr] = orpc
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < doNotProcess ; exists ; 2009 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
-    au < doNotProcess ; exists ; 2010 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
-    au < doNotProcess ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
-    au < doNotProcess ; exists ; 2012 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
-    au < doNotProcess ; exists ; 2013 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
-    au < manifest ; exists ; 2014 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 >
+    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 >
 
   }
-
 }
