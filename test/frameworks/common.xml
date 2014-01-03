@@ -65,7 +65,6 @@
         <value>org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin</value>
         <value>org.lockss.plugin.medknow.MedknowPlugin</value>
         <value>org.lockss.plugin.universityofcaliforniapress.UniversityOfCaliforniaPressPlugin</value>
-        <value>org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin</value>
         <value>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksPlugin</value>
         <value>in.ernet.iisc.plugin.JournalOfTheIndianInstituteOfSciencePlugin</value>
         <value>org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin</value>
@@ -86,7 +85,6 @@
         <value>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</value>
         <value>org.lockss.plugin.projmuse.ProjectMusePlugin</value>
         <value>org.lockss.plugin.blackbird.BlackbirdPlugin</value>
-        <value>org.lockss.plugin.blackwell.BlackwellPlugin</value>
         <value>org.lockss.plugin.absinthe.AbsinthePlugin</value>
         <value>org.lockss.plugin.clogic.CulturalLogicPlugin</value>
         <value>org.lockss.plugin.simulated.SimulatedPlugin</value>
@@ -148,24 +146,6 @@
         <value>edu.cornell.library.jbe.JBEPlugin</value>
         <value>edu.cornell.library.epr.EPRPlugin2001</value>
         <value>edu.cornell.library.epr.EPRPlugin2002On</value>
-        <value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin</value>
-        <value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
-        <value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
-        <value>org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin</value>
-        <value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
-        <value>org.lockss.plugin.etd.fsuplugin.FSUETDPlugin</value>
-        <value>org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin</value>
-        <value>org.lockss.plugin.etd.gatechplugin.GATechETDPlugin</value>
-        <value>org.lockss.plugin.etd.ukyplugin.UKYETDPlugin</value>
-        <value>edu.cornell.library.rmc.LolitaPlugin</value>
-        <value>edu.cornell.library.rmc.joyce.JoycePlugin</value>
         <value>us.ak.state.library.plugin.AlaskaStateDocsPlugin</value>
          <value>edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin</value>
         <value>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</value>
@@ -173,12 +153,6 @@
         <value>org.lockss.plugin.secrecynews.SecrecyNewsPlugin</value>
         <value>org.lockss.plugin.huffpoblog.HuffPoBlogPlugin</value>
         <value>org.lockss.plugin.blogger.BasicBloggerPlugin</value>
-        <value>de.huberlin.edoc.plugin.cmsjournal.CMSJournalPlugin</value>
-        <value>org.lockss.plugin.etd.humboldtplugin.HumboldtPlugin</value>
-        <value>org.lockss.plugin.etd.uctetdplugin.UCTETDPlugin</value>
-        <value>org.lockss.plugin.etd.pucrio.PUCRioPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin</value>
-        <value>gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin</value>
         <value>edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin</value>
         <value>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</value>
         <value>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</value>
@@ -194,10 +168,8 @@
         <value>org.lockss.plugin.invisibleculture.InvisibleCulturePlugin</value>
         <value>org.lockss.plugin.invisibleculture.InvisibleCultureReviewPlugin</value>
         <value>org.lockss.plugin.evergreenreview.EvergreenReviewPlugin</value>
-        <value>org.lockss.plugin.marsinformatics.MarsPlugin</value>
         <value>org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin</value>
         <value>org.lockss.plugin.secrecynews.SecrecyNewsSpecialCollectionsPlugin</value>
-        <value>org.lockss.plugin.usenix.UsenixPlugin</value>
         <value>org.lockss.plugin.emerald.EmeraldPlugin</value>
         <value>edu.auburn.contentdm.ContentDmPlugin</value>
         <value>edu.ua.adpn.contentdm.UAContentDmPlugin</value>
@@ -231,20 +203,16 @@
 	    <value>org.lockss.plugin.taylorandfrancis.TaylorAndFrancisPlugin</value>
 	    <value>org.lockss.plugin.pion.ClockssPionPlugin</value>
 	    <value>org.lockss.plugin.pion.ClockssPionIPerceptionPlugin</value>
-		<value>org.lockss.plugin.elsevier.ElsevierFTPPlugin</value>
-		<value>org.lockss.plugin.americaninstituteofphysics.AmericanInstituteOfPhysicsFTPPlugin</value>
 		<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
 		<value>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</value>
 		<value>org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin</value>
 		<value>org.lockss.plugin.bloomsburyqatar.ClockssBloomsburyQatarPlugin</value>
-		<value>org.lockss.plugin.ammonsscientific.ClockssAmmonsScientificPlugin</value>
 		<value>ca.usask.plugin.directory.UniversityOfSaskatchewanDirectoryPlugin</value>
 		<value>org.lockss.plugin.maffey.MaffeyPlugin</value>
 		<value>org.lockss.plugin.sjdm.JudgmentAndDecisionMakingPlugin</value>
 		<value>org.lockss.plugin.metapress.MetaPressPlugin</value>
 		<value>org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin</value>
 		<value>org.lockss.plugin.metapress.ClockssMetaPressPlugin</value>
-		<value>org.lockss.plugin.mathematicalsciencespublishers.MathematicalSciencesPublishersPlugin</value>
 		<value>org.lockss.plugin.mathematicalsciencespublishers.ClockssMathematicalSciencesPublishersPlugin</value>
 		<value>org.lockss.plugin.dryad.ClockssDryadPlugin</value>
 		<value>org.lockss.plugin.atypon.americanmeteorologicalsociety.AMetSocPlugin</value>
