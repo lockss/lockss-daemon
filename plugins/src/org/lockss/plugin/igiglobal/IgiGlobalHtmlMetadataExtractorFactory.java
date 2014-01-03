@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.5 2013-12-31 23:04:00 etenbrink Exp $
+ * $Id: IgiGlobalHtmlMetadataExtractorFactory.java,v 1.6 2014-01-03 21:05:54 etenbrink Exp $
  */
 
 /*
@@ -134,8 +134,6 @@ public class IgiGlobalHtmlMetadataExtractorFactory implements FileMetadataExtrac
         throws IOException {
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
-      // Since we know it and since Metadata requires it, set it manually
-      am.putIfBetter(MetadataField.FIELD_PUBLISHER, "IGI Global");
       return am;
     }
   }
