@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.2 2013-12-19 23:50:15 alexandraohlson Exp $
+ * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.3 2014-01-03 16:48:57 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@
 package org.lockss.plugin.clockss.onixbooks;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.util.*;
 import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
@@ -50,6 +51,8 @@ import org.w3c.dom.NodeList;
  *  This is a base class that holds the schema layout only. 
  *  A plugin uses a subclass which defines the
  *  string used by the schema (short or long form)
+ *  and which can also modify some of the schema choices (like which item
+ *  is used to represent the filename)
  *  @author alexohlson
  */
 abstract class Onix2BaseXmlMetadataExtractorHelper
@@ -57,6 +60,7 @@ implements SourceXmlMetadataExtractorHelper {
   static Logger log = Logger.getLogger(Onix2BaseXmlMetadataExtractorHelper.class);
 
   private static final String AUTHOR_SEPARATOR = ",";
+  private static final String TITLE_SEPARATOR = ":";
 
   /*
    * These are instance variables which will get set in the subclasses for 
@@ -72,6 +76,7 @@ implements SourceXmlMetadataExtractorHelper {
   protected String KeyNames_string;
   protected String PersonName_string;
   protected String PersonNameInverted_string;
+  protected String CorporateName_string;
   protected String TitleType_string;
   protected String TitleLevel_val;
   protected String TitleText_string;
@@ -195,6 +200,7 @@ implements SourceXmlMetadataExtractorHelper {
    *   KeyNames/
    *   PersonName/
    *   PersonNameInverted/
+   *   CorporateName/
    *   TitlesBeforeName/
    *   
    *   Use the PersonNameInverted if there. 
@@ -231,6 +237,8 @@ implements SourceXmlMetadataExtractorHelper {
           straightName = infoNode.getTextContent();
         } else if (PersonNameInverted_string.equals(nodeName)) {
           invertedName = infoNode.getTextContent();
+        } else if (CorporateName_string.equals(nodeName)) {
+          straightName = infoNode.getTextContent(); // organization, not person
         }
       }
       // We are not currently limiting based on role
@@ -245,7 +253,7 @@ implements SourceXmlMetadataExtractorHelper {
             valbuilder.append(AUTHOR_SEPARATOR + " " + auBeforeKey);
           } 
           return valbuilder.toString();
-        } else if (straightName != null) { //otherwise use PersonName
+        } else if (straightName != null) { //personName or corporateName
           return straightName;
         }
         log.debug3("No valid contributor in this contributor node.");
@@ -299,7 +307,10 @@ implements SourceXmlMetadataExtractorHelper {
         StringBuilder valbuilder = new StringBuilder();
         valbuilder.append(tTitle);
         if (tSubtitle != null) {
-          valbuilder.append(": " + tSubtitle);
+          if (!(StringUtils.endsWith(tTitle, TITLE_SEPARATOR))) {
+            valbuilder.append(TITLE_SEPARATOR);
+          }
+          valbuilder.append(" " + tSubtitle);
         }
         log.debug3("title found: " + valbuilder.toString());
         return valbuilder.toString();
@@ -363,12 +374,13 @@ implements SourceXmlMetadataExtractorHelper {
     */
    cookMap = new MultiValueMap();
     {
+     //do NOT cook publisher_name; get value from the TDB for consistency
      cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
      cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
      cookMap.put(ONIX_product_title, MetadataField.FIELD_PUBLICATION_TITLE); // book title = journal title
      cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
-     cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
      cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
+          
      //TODO: book part of series - currently nowhere to put series title information
      //only one of the forms of series title will exist
      //cookMap.put(ONIX_product_series_simple, MetadataField.SERIES_TITLE);

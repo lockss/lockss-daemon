@@ -1,10 +1,10 @@
 /*
- * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.4 2014-01-03 16:48:57 alexandraohlson Exp $
+ * $Id: Onix2NAPXmlMetadataExtractorHelper.java,v 1.1 2014-01-03 16:48:57 alexandraohlson Exp $
  */
 
 /*
 
- Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,20 +32,23 @@
 
 package org.lockss.plugin.clockss.onixbooks;
 
+import java.util.ArrayList;
+
 import org.lockss.util.*;
 
 /**
  *  A helper class that defines a schema for XML metadata extraction for
- *  Onix 2 Long form
- *  with the filenames based on isbn13 plus .pdf or .epub
- *  There can be multiple records for the same item, one for each format
+ *  NAP, which uses Onix 2 Long form
+ *  with the filenames based on "<RecordReference>.stamped.pdf"
+ *  and no deduplication necessary.
  *  @author alexohlson
  */
-public final class Onix2LongXmlMetadataExtractorHelper
+public final class Onix2NAPXmlMetadataExtractorHelper
 extends Onix2BaseXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix2LongXmlMetadataExtractorHelper.class);
-
-  public Onix2LongXmlMetadataExtractorHelper() {
+  static Logger log = Logger.getLogger(Onix2NAPXmlMetadataExtractorHelper.class);
+  
+  // NAP uses Onix2 Long form so set up the appropriate tags
+  public Onix2NAPXmlMetadataExtractorHelper() {
     // define the instance variables needed for the super class which contains
     // the layout of the schema (and is shared between long and short
     // versions.
@@ -79,4 +82,33 @@ extends Onix2BaseXmlMetadataExtractorHelper {
     /* now tell the parent class to define variables that use these strings */
     defineSchemaPaths();
   }
-}    
+  
+  /**
+   * No deDuplication necessary
+   * filenames based on RecordReference which is unique 
+   */
+  @Override
+  public String getDeDuplicationXPathKey() {
+    return null;
+  }
+
+  /**
+   * Filenames all end in ".stamped.pdf"
+   */
+  @Override
+  public ArrayList<String> getFilenameSuffixList() {
+    ArrayList<String> returnList = new ArrayList<String>();
+    returnList.add(".stamped.pdf");
+    return returnList;
+  }
+
+  /**
+   * The filenames are based on the isbn13 value 
+   */
+  @Override
+  public String getFilenameXPathKey() {
+    return RecordReference_string;
+  }
+  
+  }
+    

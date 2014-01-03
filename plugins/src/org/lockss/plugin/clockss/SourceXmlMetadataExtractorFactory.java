@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.7 2013-12-23 19:19:57 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.8 2014-01-03 16:48:58 alexandraohlson Exp $
  */
 
 /*
@@ -229,6 +229,7 @@ implements FileMetadataExtractorFactory {
             // pre-emit check could be overridden by a child with different layout/naming
             if (preEmitCheck(schemaHelper, cu,oneAM)) {
               oneAM.cook(schemaHelper.getCookMap());
+              postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
               emitter.emitMetadata(cu,oneAM);
             }
 
@@ -238,6 +239,7 @@ implements FileMetadataExtractorFactory {
           for ( ArticleMetadata oneAM : amList) {
             if (preEmitCheck(schemaHelper, cu, oneAM)) {
               oneAM.cook(schemaHelper.getCookMap());
+              postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
               emitter.emitMetadata(cu,oneAM);
             }
           }
@@ -366,6 +368,7 @@ implements FileMetadataExtractorFactory {
       }
       for (int i=0; i < filenameSuffixList.size(); i++) 
       { 
+        String fullfn = cuBase + filename + filenameSuffixList.get(i);
         fileCu = B_au.makeCachedUrl(cuBase + filename + filenameSuffixList.get(i));
         if(fileCu != null && (fileCu.hasContent())) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
@@ -375,6 +378,15 @@ implements FileMetadataExtractorFactory {
       }
       log.debug3(filename + " does not exist in this AU");
       return false; //No files found that match this record
+    }
+    
+    // a routine to allow a child to add in some post-cook processing for each
+    // AM record (eg. "putifbetter"
+    // Default is to do nothing
+    protected void postCookProcess(SourceXmlMetadataExtractorHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+
+      log.debug3("in SourceXmlMetadataExtractor postEmitProcess");
     }
 
     /* 

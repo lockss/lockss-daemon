@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix2BooksSourceXmlMetadataExtractor.java,v 1.4 2013-12-05 19:53:42 alexandraohlson Exp $
+ * $Id: TestOnix2XmlMetadataExtractor.java,v 1.1 2014-01-03 16:48:57 alexandraohlson Exp $
  */
 /*
 
@@ -42,13 +42,12 @@ import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 
-public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
+public class TestOnix2XmlMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestOnix2BooksSourceMetadataExtractor");
+  static Logger log = Logger.getLogger(TestOnix2XmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
@@ -178,16 +177,14 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
   private static final int ISBN_INDEX = 0;
   private static final int DOI_INDEX = 1;
   private static final int AUTHOR_INDEX = 2;
-  private static final int PUBLISHER_INDEX = 3;
-  private static final int ARTICLE_TITLE = 4;
-  private static final int ARTICLE_DATE = 5;
+  private static final int ARTICLE_TITLE = 3;
+  private static final int ARTICLE_DATE = 4;
   
   private static final String zipPdf1 = ZIP_BASE + "9780804738555.pdf";
   private static final ArrayList md1 = (ArrayList) ListUtil.list(
       "9780804738555",
       null, //no doi
       "[Writer, David]",
-      "Stanford University Press",
       "On Demand, A Subtitle to go with On Demand",
       "20091203");
 
@@ -196,7 +193,6 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "9780804741666",
       null,// no doi
       "[Author, Good, Editor, Mark, Editor, Another, Translator, Lingua]",
-      "Stanford University Press",
       "The People, 1881 to 1941",
       "20130109");
 
@@ -205,7 +201,6 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "9780804744888",
       null,
       "[van Writer, Martin]",
-      "Stanford University Press",
       "Philip Whosit, Ideals in his World",
       "20120523");
   
@@ -230,7 +225,6 @@ public class TestOnix2BooksSourceXmlMetadataExtractor extends LockssTestCase {
     assertNotNull(expected);
     assertEquals(AM.get(MetadataField.FIELD_DOI), expected.get(DOI_INDEX));
     assertEquals(AM.getList(MetadataField.FIELD_AUTHOR).toString(), expected.get(AUTHOR_INDEX));
-    assertEquals(AM.get(MetadataField.FIELD_PUBLISHER), expected.get(PUBLISHER_INDEX));
     
   }
 }

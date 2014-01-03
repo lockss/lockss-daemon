@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3BooksSourceXmlMetadataExtractor.java,v 1.6 2013-12-18 20:40:29 alexandraohlson Exp $
+ * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.1 2014-01-03 16:48:58 alexandraohlson Exp $
  */
 /*
 
@@ -45,9 +45,9 @@ import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 
-public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
+public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger("TestOnix3BooksSourceMetadataExtractor");
+  static Logger log = Logger.getLogger(TestOnix3LongXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
@@ -247,16 +247,14 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
   private static final int ISBN_INDEX = 0;
   private static final int DOI_INDEX = 1;
   private static final int AUTHOR_INDEX = 2;
-  private static final int PUBLISHER_INDEX = 3;
-  private static final int JOURNAL_TITLE = 4;
-  private static final int ARTICLE_DATE = 5;
+  private static final int JOURNAL_TITLE = 3;
+  private static final int ARTICLE_DATE = 4;
   
   private static final String pdfUrl1 = "http://www.source.com/9781606501260.pdf";
   private static final ArrayList md1 = (ArrayList) ListUtil.list(
       "9781606501260",
       "10.5643/9781606501260",
       "[Author, David W.]",
-      "Momentum Press",
       "Book Title One: A Test for JUnit",
       "2009-10-26");
 
@@ -266,7 +264,6 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "9780857458510",
       null,// no doi
       "[Author-Name, Sally von, Editor, Fernanda]",
-      "Berghahn Books",
       "A Second Book Title: Perspectives",
       "2011-06-15");
 
@@ -275,7 +272,6 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "9781847699110",
       null,
       "[BWriter, Mary]",
-      "Channel View Publications",
       "English Title of Book: From A to Z",
       "2013-02-05");
   
@@ -286,7 +282,6 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "2222222222222",
       null,
       "[Smith, Lurlene]",
-      "Testing Publications",
       "Book With EPUB Content",
       "2012-01-01");  
   
@@ -295,7 +290,6 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
       "9998887776665",
       null,
       "[Scholar, Simone]",
-      "Berghahn Books",
       "The Big Journey: Captivity and the Holocaust",
       "2009-07-15");  
 
@@ -321,8 +315,7 @@ public class TestOnix3BooksSourceXmlMetadataExtractor extends LockssTestCase {
     assertNotNull(expected);
     assertEquals(AM.get(MetadataField.FIELD_DOI), expected.get(DOI_INDEX));
     assertEquals(AM.getList(MetadataField.FIELD_AUTHOR).toString(), expected.get(AUTHOR_INDEX));
-    assertEquals(AM.get(MetadataField.FIELD_PUBLISHER), expected.get(PUBLISHER_INDEX));
-    assertEquals(AM.get(MetadataField.FIELD_JOURNAL_TITLE), expected.get(JOURNAL_TITLE));
+    assertEquals(AM.get(MetadataField.FIELD_PUBLICATION_TITLE), expected.get(JOURNAL_TITLE));
     assertEquals(AM.get(MetadataField.FIELD_DATE), expected.get(ARTICLE_DATE));
     
   }

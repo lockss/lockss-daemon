@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2ShortXmlMetadataExtractorHelper.java,v 1.1 2013-12-18 20:40:29 alexandraohlson Exp $
+ * $Id: Onix2ShortXmlMetadataExtractorHelper.java,v 1.2 2014-01-03 16:48:57 alexandraohlson Exp $
  */
 
 /*
@@ -38,8 +38,6 @@ import org.lockss.util.*;
  *  A helper class that defines a schema for XML metadata extraction for
  *  with the filenames based on isbn13 plus .pdf or .epub
  *  There can be multiple records for the same item, one for each format
- *  This is a base class. A plugin uses a subclass which defines the
- *  string used by the schema (short or long form)
  *  @author alexohlson
  */
 public class Onix2ShortXmlMetadataExtractorHelper
@@ -61,6 +59,7 @@ extends Onix2BaseXmlMetadataExtractorHelper {
     KeyNames_string = "b040";
     PersonName_string = "b036";
     PersonNameInverted_string = "b037";
+    CorporateName_string = "b047";
     TitleType_string = "b202";
     TitleLevel_val = "01";
     TitleText_string = "b203";

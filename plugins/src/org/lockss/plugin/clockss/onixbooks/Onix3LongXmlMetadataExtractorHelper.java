@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.5 2013-12-19 23:50:15 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.6 2014-01-03 16:48:57 alexandraohlson Exp $
  */
 
 /*
@@ -324,7 +324,7 @@ implements SourceXmlMetadataExtractorHelper {
   static private final Map<String,XPathValue> ONIX_articleMap = 
       new HashMap<String,XPathValue>();
   static {
-    ONIX_articleMap.put("/RecordReference", XmlDomMetadataExtractor.TEXT_VALUE);
+    ONIX_articleMap.put("RecordReference", XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
@@ -352,14 +352,13 @@ implements SourceXmlMetadataExtractorHelper {
    */
   private static final MultiValueMap cookMap = new MultiValueMap();
   static {
-    // normal journal article schema
+    // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-    cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE);
+    cookMap.put(ONIX_product_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
-    cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
-    // want ta way to prioritize these when cooking - tbd
+    // TODO - after priority setting is allowed in cooking
     //cookMap.put(ONIX_mkt_date, MetadataField.FIELD_DATE);
     //cookMap.put(ONIX_copy_date, MetadataField.FIELD_DATE);
 
