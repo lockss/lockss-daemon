@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIteratorBuilder.java,v 1.4 2013-08-15 00:44:34 thib_gc Exp $
+ * $Id: SubTreeArticleIteratorBuilder.java,v 1.5 2014-01-06 18:18:45 etenbrink Exp $
  */
 
 /*
@@ -440,15 +440,10 @@ public class SubTreeArticleIteratorBuilder {
      * {@link SubTreeArticleIterator#createArticleFiles(CachedUrl)} performing
      * the aspect-based logic of this buildable iterator.
      * </p>
-     * <p>
-     * This class guarantees that it always returns <code>null</code> and uses
-     * {@link SubTreeArticleIterator#emitArticleFiles(ArticleFiles)} to emit
-     * {@link ArticleFiles} instances instead.
-     * </p>
      * 
      * @param cu
      *          The cached URL currently under consideration.
-     * @return <code>null</code>
+     * 
      * @since 1.60
      */
     
@@ -538,9 +533,8 @@ public class SubTreeArticleIteratorBuilder {
               }
             }
           }
-          // Emit and return
-          emitArticleFiles(af);
-          return null;
+          // Callers should call emitArticleFiles(af);
+          return af;
         }
       }
       logger.warning(String.format("%s in %s did not match any expected patterns", url, au.getName()));
@@ -551,7 +545,7 @@ public class SubTreeArticleIteratorBuilder {
 
   /**
    * <p>
-   * A logger for use by this class a nested classes.
+   * A logger for use by this class and nested classes.
    * </p>
    * 
    * @since 1.60
