@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.10 2012-11-13 22:49:40 alexandraohlson Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.11 2014-01-06 22:09:39 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,28 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.*;
-import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.extractor.*;
-import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 
 public class TestHighWireArticleIteratorFactory extends ArticleIteratorTestCase {
-  static Logger log = Logger.getLogger("TestHighWirPressArticleIteratorFactory");
-
-  private static final int DEFAULT_FILESIZE = 3000;
+  static Logger log = Logger.getLogger(TestHighWireArticleIteratorFactory.class);
 
   private SimulatedArchivalUnit sau;	// Simulated AU to generate content
-  private ArchivalUnit hau;		// HighWire AU
-  private MockLockssDaemon theDaemon;
-  private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
     "org.lockss.plugin.highwire.HighWirePressPlugin";
@@ -65,36 +55,27 @@ public class TestHighWireArticleIteratorFactory extends ArticleIteratorTestCase 
     super.setUp();
     String tempDirPath = setUpDiskSpace();
     au = createAu();
-  //  http://inderscience.metapress.com/
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
   }
-
-  /*public void tearDown() throws Exception {
+  
+  public void tearDown() throws Exception {
     sau.deleteContentTree();
-    theDaemon.stopDaemon();
+    // theDaemon.stopDaemon();
     super.tearDown();
-  }*/
-
+  }
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", SIM_ROOT);
-    conf.put("depth", "2");
-    conf.put("branch", "2");
-    conf.put("numFiles", "4");
+    conf.put("depth", "0");
+    conf.put("branch", "0");
+    conf.put("numFiles", "2");
     conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF |
-				SimulatedContentGenerator.FILE_TYPE_HTML));
+        SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "7");
     return conf;
   }
-
-  Configuration highWireAuConfig() {
-    Configuration conf = ConfigManager.newConfiguration();
-    conf.put("base_url", BASE_URL);
-    conf.put("volume", "52");
-    return conf;
-  }
-
 
 protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
     return PluginTestUtil.createAndStartAu(PLUGIN_NAME, ConfigurationUtil
@@ -102,7 +83,6 @@ protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
             "volume_name", "52", "journal_issn", "1098-4275"));
   }
 
- 
 
   public void testRoots() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
@@ -111,7 +91,7 @@ protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
         ,"http://pediatrics.aappublications.org/cgi/reprint/52/"),
         getRootUrls(artIter));
   }
-
+  
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
@@ -129,17 +109,28 @@ protected ArchivalUnit createAu() throws ArchivalUnit.ConfigurationException {
         "http://www.example.com/content/j0123/j383.pdfwrong");
   }
   
-
   public void testCreateArticleFiles() throws Exception {
     PluginTestUtil.crawlSimAu(sau);
-    String url = "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
-    CachedUrl cu = au.makeCachedUrl(url);
+    
+    String pat0 = "001file[.]html";
+    String rep0 = "52/1/S1";
+    PluginTestUtil.copyAu(sau, au, ".*[.]html$", pat0, rep0);
+    String pat1 = "001file[.]pdf";
+    String rep1 = "52/1/S1.pdf";
+    PluginTestUtil.copyAu(sau, au, ".*[.]pdf$", pat1, rep1);
+    
+    String pdfurl = "http://pediatrics.aappublications.org/cgi/reprint/52/1/S1.pdf";
+    String url = "http://pediatrics.aappublications.org/cgi/reprint/52/1/S1";
+    
+    au.makeCachedUrl(url);
+    CachedUrl cu = au.makeCachedUrl(pdfurl);
     assertNotNull(cu);
     SubTreeArticleIterator artIter = createSubTreeIter();
     assertNotNull(artIter);
-    ArticleFiles af = createArticleFiles(artIter, cu);
+    ArticleFiles af = artIter.next();
+    assertNotNull(af);
     System.out.println("article files::" + af);
-    assertEquals(cu, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF));
-
+    assertEquals(url, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE).getUrl());
+    assertEquals(pdfurl, af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF).getUrl());
   }
 }
