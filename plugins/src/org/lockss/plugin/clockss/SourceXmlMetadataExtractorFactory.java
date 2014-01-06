@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.8 2014-01-03 16:48:58 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.9 2014-01-06 20:19:39 alexandraohlson Exp $
  */
 
 /*
@@ -332,8 +332,8 @@ implements FileMetadataExtractorFactory {
       String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
       ArrayList<String> filenameSuffixList = schemaHelper.getFilenameSuffixList(); //can be null
       String filenameKey = schemaHelper.getFilenameXPathKey(); //can be null
-      // no pre-emit check required if values are all null, just return
-      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return false;
+      // no pre-emit check required if values are all null, just return and emit
+      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return true;
 
       /* create a filename (relative to the current directory) from the 
        * optional items: 
