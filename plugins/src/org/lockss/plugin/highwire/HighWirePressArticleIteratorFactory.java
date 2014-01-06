@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.14 2014-01-06 19:22:57 etenbrink Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.15 2014-01-06 23:13:10 etenbrink Exp $
  */
 
 /*
@@ -100,21 +100,24 @@ public class HighWirePressArticleIteratorFactory
       throws PluginException {
     
     List<String> rootTemplates = new ArrayList<String>(2);
+    String patternTemplate = null;
     String pluginId = au.getPluginId();
     if ("org.lockss.plugin.highwire.HighWirePlugin".equals(pluginId)) {
       // H10a plugin uses integer volume
       rootTemplates.add(OLD_ROOT_TEMPLATE_HTML);
       rootTemplates.add(OLD_ROOT_TEMPLATE_PDF);
+      patternTemplate = OLD_PATTERN_TEMPLATE;
     }
     else {
       rootTemplates.add(ROOT_TEMPLATE_HTML);
       rootTemplates.add(ROOT_TEMPLATE_PDF);
+      patternTemplate = PATTERN_TEMPLATE;
     }
     
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     builder.setSpec(target,
-        rootTemplates, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+        rootTemplates, patternTemplate, Pattern.CASE_INSENSITIVE);
     
     // set up html or pdf to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
