@@ -7,7 +7,7 @@
 
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; year ; name ; param[volume_name] >
-  comment[doNotProcess] = Moving to a new platform on July 17, 2013
+  comment[doNotProcess] = Moving to a new HW Drupal platform on July 17, 2013
   {
 
 
@@ -72,6 +72,7 @@
       au < down ; 2011 ; Advances in Physiology Education Volume 35 ; 35 >
       au < down ; 2012 ; Advances in Physiology Education Volume 36 ; 36 >
       au < doNotProcess ; 2013 ; Advances in Physiology Education Volume 37 ; 37 >
+      au < doNotProcess ; 2014 ; Advances in Physiology Education Volume 38 ; 38 >
 
     }
 
@@ -408,6 +409,8 @@
     au < down ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 >
     au < doNotProcess ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 >
     au < doNotProcess ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 >
+    au < doNotProcess ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 >
+    au < doNotProcess ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 >
 
   }
 
@@ -513,6 +516,8 @@
       au < down ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 >
 
     }
 
@@ -620,6 +625,8 @@
       au < down ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 >
 
     }
 
@@ -727,6 +734,8 @@
       au < down ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 >
 
     }
 
@@ -809,6 +818,8 @@
       au < down ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 >
 
     }
 
@@ -916,6 +927,8 @@
       au < down ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 >
 
     }
 
@@ -1022,6 +1035,8 @@
       au < down ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 >
       au < doNotProcess ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 >
+      au < doNotProcess ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 >
 
     }
 
@@ -1170,6 +1185,8 @@
       au < down ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 >
       au < doNotProcess ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 >
       au < doNotProcess ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 >
+      au < doNotProcess ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 >
+      au < doNotProcess ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 >
 
     }
 
@@ -1313,6 +1330,8 @@
       au < down ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 >
       au < doNotProcess ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 >
       au < doNotProcess ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 >
+      au < doNotProcess ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 >
+      au < doNotProcess ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 >
 
     }
 
@@ -1397,6 +1416,7 @@
       au < down ; 2011 ; Physiological Genomics Volume 43 ; 43 >
       au < down ; 2012 ; Physiological Genomics Volume 44 ; 44 >
       au < doNotProcess ; 2013 ; Physiological Genomics Volume 45 ; 45 >
+      au < doNotProcess ; 2014 ; Physiological Genomics Volume 46 ; 46 >
 
     }
 
@@ -1521,6 +1541,7 @@
       au < down ; 2011 ; Physiological Reviews Volume 91 ; 91 >
       au < down ; 2012 ; Physiological Reviews Volume 92 ; 92 >
       au < doNotProcess ; 2013 ; Physiological Reviews Volume 93 ; 93 >
+      au < doNotProcess ; 2014 ; Physiological Reviews Volume 94 ; 94 >
 
     }
 
@@ -1581,6 +1602,7 @@
       au < down ; 2011 ; Physiology Volume 26 ; 26 >
       au < down ; 2012 ; Physiology Volume 27 ; 27 >
       au < doNotProcess ; 2013 ; Physiology Volume 28 ; 28 >
+      au < doNotProcess ; 2014 ; Physiology Volume 29 ; 29 >
 
     }
 
