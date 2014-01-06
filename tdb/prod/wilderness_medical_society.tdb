@@ -32,6 +32,8 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = weme
       
+      comment[stopped] = No longer contributing after 2009.
+      
       au < doNotProcess ; 2005 ; Wilderness & Environmental Medicine Volume 16 ; 16 >
       au < doNotProcess ; 2006 ; Wilderness & Environmental Medicine Volume 17 ; 17 >
       au < doNotProcess ; 2007 ; Wilderness & Environmental Medicine Volume 18 ; 18 >      
