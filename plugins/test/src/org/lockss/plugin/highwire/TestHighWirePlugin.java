@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.17 2012-01-04 21:39:23 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.18 2014-01-07 01:46:32 etenbrink Exp $
  */
 
 /*
@@ -162,9 +162,9 @@ public class TestHighWirePlugin extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(plugin.getHashFilterFactory("application/pdf"))
 	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
   }
-  public void testGetArticleIteratorFactory() { // XXX Uncomment when iterators and extractors are back
-//    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
-//	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
+  public void testGetArticleIteratorFactory() {
+    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
+        instanceof org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory);
   }
 
 }
