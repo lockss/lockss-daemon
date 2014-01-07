@@ -12589,6 +12589,7 @@
     param[base_url] = http://jpubhealth.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
+    au < down ; exists ; 2009 ; Journal of Public Health Volume 30 [to delete] ; 30 ; >
     au < zapped ; finished ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
     }
