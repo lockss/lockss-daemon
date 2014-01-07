@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.113 2013-10-23 04:20:37 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.114 2014-01-07 20:43:30 tlipkis Exp $
  */
 
 /*
@@ -1183,8 +1183,10 @@ public class LockssTestCase extends TestCase {
 	sb.append(" ");
       }
       sb.append(obj);
-      sb.append(" is not of class ");
-      sb.append(expClass);
+      sb.append(" (a ");
+      sb.append(obj.getClass().getName());
+      sb.append(") is not a ");
+      sb.append(expClass.getName());
       fail(sb.toString());
     }
   }
