@@ -267,17 +267,27 @@ if ($clockss) {
 
 # 1. Generate CSV files of TDB content
 # If the files exist and a new generate was not requested, no generation needed
-if (-e $committedTitles and -e $kbartProduction and -e $kbartUnreleased and !$generateCsvMetadata) {
+if (-e $committedTitles and -e $tdbCsvProduction and -e $tdbCsvUnreleased and !$generateCsvMetadata) {
     print STDERR "Reusing generated CSV metadata.\n";
 } else {
     # Print a message about missing files unless the generate was requested
     print STDERR "Previous CSV files not found.\n" unless ($generateCsvMetadata);
+
     # Generate new metadata from TDB
     &generateCsvMetadata();
+
+    # Delete KBART files created from old TDB metadata 
+    unlink ($kbartUnreleased);
+    unlink ($kbartProduction);
 }
 
 # 2. Convert TDB CSV files to KBART with ranges
-&convertCsvIntoKbart();
+# if the files exist, no conversion needed
+if (-e $kbartUnreleased and -e $kbartProduction) {
+  print STDERR "Reusing converted KBART files.\n"
+} else {
+  &convertCsvIntoKbart();
+}
 
 # 3. Read in the CSVs of identifying fields for (un)released titles
 my (%committedTuples, %kbartProductionTuples, %kbartUnreleasedTuples);
@@ -486,20 +496,20 @@ sub generateCsvMetadata {
     print STDERR " 1. Participating publishers and titles ($committedTitles)\n";
     # Don't forget the header row (though it is not used)
     run("echo '$cheader' > $committedTitles");
-    run("cat $tdbs | $tdbout -j $dumpErr | uniq >> $committedTitles");
+    run("cat $tdbs | $tdbout -j $dumpErr | sort -u >> $committedTitles");
 
     # (1) TDB metadata for AUs released into production
     #     (including those that have subsequently been marked as down)
     print STDERR " 2. Production AUs  ($tdbCsvProduction)\n";
     run("echo '$header' > $tdbCsvProduction");
-    run("cat $tdbs | $tdbout $productionQuery -c '$tdbFieldList' $dumpErr | uniq >> $tdbCsvProduction");
+    run("cat $tdbs | $tdbout $productionQuery -c '$tdbFieldList' $dumpErr | sort -u >> $tdbCsvProduction");
     # TDBOUT does not give error return value, so check the size of the output file
     die "tdbout failed: $?\n" unless &fileHasMoreThanAHeader($tdbCsvProduction);
 
     # (2) TDB metadata for AUs not released into production
     print STDERR " 3. Unreleased AUs  ($tdbCsvUnreleased)\n";
     run("echo '$header' > $tdbCsvUnreleased");
-    run("cat $tdbs | $tdbout $unreleasedQuery -c '$tdbFieldList' $dumpErr| uniq >> $tdbCsvUnreleased");
+    run("cat $tdbs | $tdbout $unreleasedQuery -c '$tdbFieldList' $dumpErr| sort -u >> $tdbCsvUnreleased");
     # TDBOUT does not give error return value, so check the size of the output file
     die "tdbout failed: $?\n" unless &fileHasMoreThanAHeader($tdbCsvUnreleased);
 } 
