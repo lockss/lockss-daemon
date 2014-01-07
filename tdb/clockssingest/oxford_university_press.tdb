@@ -23,7 +23,7 @@
     param[base_url] = http://abbs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < down ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 [to delete] ; 40 ; >
     au < down ; crawling ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
 
     }
@@ -37,7 +37,7 @@
     au < manifest ; exists ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < manifest ; exists ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
     au < manifest ; exists ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < exists ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < finished ; crawling ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
     au < finished ; crawling ; 2011 ; Acta Biochimica et Biophysica Sinica Volume 43 ; 43 ; >
@@ -305,7 +305,7 @@
     pluginSuffix = ClockssHighWirePlugin
 	
     au < zapped ; finished ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < ingNotReady ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < down ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 [to delete] ; 44 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -357,7 +357,7 @@
     au < manifest ; exists ; 2006 ; Alcohol and Alcoholism Volume 41 ; 41 ; >
     au < manifest ; exists ; 2007 ; Alcohol and Alcoholism Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+    au < exists ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
     au < finished ; crawling ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
     au < finished ; crawling ; 2011 ; Alcohol and Alcoholism Volume 46 ; 46 ; >
     au < finished ; crawling ; 2012 ; Alcohol and Alcoholism Volume 47 ; 47 ; >
@@ -1170,8 +1170,8 @@
 
     au < down ; crawling ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
     au < down ; crawling ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
-    au < ingNotReady ; exists ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
-    au < ingNotReady ; exists ; 2009 ; Annals of Botany Volume 104 ; 104 ; reingest3.clockss.org:8083 >
+    au < down ; exists ; 2009 ; Annals of Botany Volume 103 [to delete] ; 103 ; reingest3.clockss.org:8083 >
+    au < down ; exists ; 2009 ; Annals of Botany Volume 104 [to delete] ; 104 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -3853,7 +3853,7 @@
     param[base_url] = http://cjip.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < down ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 [to delete] ; 2 ; >
 
     }
 
@@ -3863,7 +3863,7 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 2006-2007 ; The Chinese Journal of International Politics Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
+    au < exists ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
     au < finished ; crawling ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
@@ -10544,7 +10544,7 @@
     param[base_url] = http://jxb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+    au < down ; exists ; 2008 ; Journal of Experimental Botany Volume 59 [to delete] ; 59 ; >
     au < down ; crawling ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
 
     }
@@ -10613,7 +10613,7 @@
     au < manifest ; exists ; 2005 ; Journal of Experimental Botany Volume 56 ; 56 ; >
     au < manifest ; exists ; 2006 ; Journal of Experimental Botany Volume 57 ; 57 ; >
     au < manifest ; exists ; 2007 ; Journal of Experimental Botany Volume 58 ; 58 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+    au < exists ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
     au < finished ; crawling ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 ; >
     au < finished ; crawling ; 2011 ; Journal of Experimental Botany Volume 62 ; 62 ; >
@@ -10680,7 +10680,7 @@
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences ; 64A ; >
+    au < down ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A [to delete] ; 64A ; >
 
     }
 
@@ -10703,7 +10703,7 @@
     au < manifest ; exists ; 2006 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 61 ; 61 ; >
     au < manifest ; exists ; 2007 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 62 ; 62 ; >
     au < manifest ; exists ; 2008 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 63 ; 63 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; >
+    au < exists ; exists ; 2009 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 64A ; 64A ; >
     au < finished ; crawling ; 2010 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 65A ; 65A ; >
     au < finished ; crawling ; 2011 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 66A ; 66A ; >
     au < finished ; crawling ; 2012 ; The Journals of Gerontology Series A: Biological Sciences and Medical Sciences Volume 67A ; 67A ; >
@@ -13321,7 +13321,7 @@
     param[base_url] = http://leobaeck.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < down ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 [to delete] ; 53 ; >
     au < zapped ; finished ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
 
     }
@@ -13383,7 +13383,7 @@
     au < manifest ; exists ; 2005 ; The Leo Baeck Institute Yearbook Volume 50 ; 50 ; >
     au < manifest ; exists ; 2006 ; The Leo Baeck Institute Yearbook Volume 51 ; 51 ; >
     au < manifest ; exists ; 2007 ; The Leo Baeck Institute Yearbook Volume 52 ; 52 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < exists ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
     au < finished ; crawling ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
     au < finished ; crawling ; 2011 ; The Leo Baeck Institute Yearbook Volume 56 ; 56 ; >
@@ -13743,8 +13743,8 @@
     param[base_url] = http://jigpal.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < ingNotReady ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
-    au < ingNotReady ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
+    au < down ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 [to delete] ; 16 ; >
+    au < down ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 [to delete] ; 17 ; >
 
     }
 
@@ -13768,8 +13768,8 @@
     au < manifest ; exists ; 2005 ; Logic Journal of the IGPL Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Logic Journal of the IGPL Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; Logic Journal of the IGPL Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
+    au < exists ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
+    au < exists ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
     au < finished ; crawling ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
     au < zapped ; finished ; 2011 ; Logic Journal of the IGPL Volume 19 ; 19 ; >
     au < finished ; crawling ; 2012 ; Logic Journal of the IGPL Volume 20 ; 20 ; >
