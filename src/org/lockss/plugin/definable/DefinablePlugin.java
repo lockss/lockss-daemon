@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.75 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.76 2014-01-07 20:42:54 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,9 @@ public class DefinablePlugin extends BasePlugin {
 
   public static final String KEY_PLUGIN_DELETE_EXTRA_FILES =
     "plugin_delete_extra_files";
+
+  public static final String KEY_PLUGIN_REWRITE_HTML_META_URLS =
+    "plugin_rewrite_html_meta_urls";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
