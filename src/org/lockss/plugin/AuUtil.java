@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.42 2013-10-31 03:50:02 fergaloy-sf Exp $
+ * $Id: AuUtil.java,v 1.43 2014-01-07 20:42:37 tlipkis Exp $
  */
 
 /*
@@ -321,6 +321,20 @@ public class AuUtil {
     return getIntValue(getAuParamOrTitleDefault(au, ConfigParamDescr.PROTOCOL_VERSION),
                        CurrentConfig.getIntParam(PARAM_POLL_PROTOCOL_VERSION,
                                                  DEFAULT_POLL_PROTOCOL_VERSION));
+  }
+
+  public static List<String> getPluginList(ArchivalUnit au, String key) {
+    Plugin plug = au.getPlugin();
+    if (plug instanceof DefinablePlugin) {
+      List<String> lst = ((DefinablePlugin)plug).getElementList(key);
+      if (lst != null) {
+	return Collections.unmodifiableList(lst);
+      } else {
+	return Collections.EMPTY_LIST;
+      }
+    } else {
+      return Collections.EMPTY_LIST;
+    }
   }
 
   /** Return true iff the AU's plugin's implementation version of the named

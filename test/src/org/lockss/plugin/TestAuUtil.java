@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.22 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: TestAuUtil.java,v 1.23 2014-01-07 20:42:37 tlipkis Exp $
  */
 
 /*
@@ -163,6 +163,27 @@ public class TestAuUtil extends LockssTestCase {
 
     plug = new MockPlugin();
     assertEquals(0, AuUtil.getPluginDefinition(plug).size());
+  }
+
+  public void testGetPluginList() throws IOException {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit(mbp);
+    assertEmpty(AuUtil.getPluginList(mau, "foolst"));
+//     Empty list isn't really modifiable but fails this test
+//     assertUnmodifiable(AuUtil.getPluginList(mau, "foolst"));
+
+    ExternalizableMap map = new ExternalizableMap();
+    map.setMapElement("lst1", "bar");
+    map.setMapElement("lst2", ListUtil.list("a", "bb", "ccc"));
+    DefinablePlugin dplug = new DefinablePlugin();
+    dplug.initPlugin(getMockLockssDaemon(), "FooPlugin", map, null);
+    DefinableArchivalUnit au = new LocalDefinableArchivalUnit(dplug, map);
+    assertEmpty(AuUtil.getPluginList(au, "lstnot"));
+//     assertUnmodifiable(AuUtil.getPluginList(au, "lstnot"));
+    assertEquals(ListUtil.list("bar"), AuUtil.getPluginList(au, "lst1"));
+    assertUnmodifiable(AuUtil.getPluginList(au, "lst1"));
+    assertEquals(ListUtil.list("a", "bb", "ccc"),
+		 AuUtil.getPluginList(au, "lst2"));
+    assertUnmodifiable(AuUtil.getPluginList(au, "lst2"));
   }
 
   public void testIsClosed() throws Exception {
