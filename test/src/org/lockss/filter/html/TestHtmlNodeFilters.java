@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.11 2013-12-03 21:28:34 thib_gc Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.12 2014-01-07 20:42:22 tlipkis Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertNotNull(node);
     assertTrue(""+node.getClass(),
 	       node instanceof org.htmlparser.tags.LinkTag);
-    assertEquals(origUrl, ((LinkTag)node).getLink());
+    assertEquals(origUrl, ((LinkTag)node).extractLink());
   }
 
   public void testLinkRegexYesXformsMatch() throws Exception {
@@ -324,19 +324,17 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 							 attrs);
     assertEquals("Should be empty: " + nl,
 		 0, nl.extractAllNodesThatMatch(filt).size());
-    // XXX this is wierd - the NodeList has been rewritten
-    // XXX but node.getLink() returns the old value.
-    log.debug3("testLinkRegexYesXformsMatch after " + nl.toHtml());
-    log.debug3("Node is " + nl.elementAt(1).toHtml());
-    log.debug3("Link is " + ((LinkTag)nl.elementAt(1)).getLink());
-    NodeList nl2 = parse(nl.toHtml());
-    Node node = nl2.elementAt(1);
-    log.debug3("Node is " + node.toHtml());
-    log.debug3("Link is " + ((LinkTag)node).getLink());
-    assertNotNull(node);
-    assertTrue(""+node.getClass(),
-	       node instanceof org.htmlparser.tags.LinkTag);
-    assertEquals(finalUrl, ((LinkTag)node).getLink());
+    // Don't use node.getLink() as it caches its result so doesn't reflect
+    // the xform
+    assertEquals(finalUrl, ((LinkTag)nl.elementAt(1)).extractLink());
+  }
+
+  static String[] arr(String... x) {
+    return x;
+  }
+
+  static boolean[] arr(boolean... x) {
+    return x;
   }
 
   public void testLinkRegexNoXformsMatch() throws Exception {
@@ -364,7 +362,45 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertNotNull(node);
     assertTrue(""+node.getClass(),
 	       node instanceof org.htmlparser.tags.LinkTag);
-    assertEquals(origUrl, ((LinkTag)node).getLink());
+    assertEquals(origUrl, ((LinkTag)node).extractLink());
+  }
+
+  private static final String metapage =
+    "<meta name=\"abc\" content=\"http://www.example.com/index.html\">\n" +
+    "<meta name=\"def\" content=\"http://www.example42.com/index.html\">\n" +
+    "<meta name=\"def\" content=\"http://www.example.com/index.html\">\n";
+
+  public void testMetaTagRegexYesXforms() throws Exception {
+    NodeFilter filt =
+      HtmlNodeFilters.metaTagRegexYesXforms(arr("http://www.example.com/"),
+					    arr(true),
+					    arr("http://www.example.com/"),
+					    arr("http://foo.lockss.org/"),
+					    ListUtil.list("aaa", "def"));
+
+    NodeList nl = parse(metapage);
+
+    assertEquals("Should be empty: " + nl,
+		 0, nl.extractAllNodesThatMatch(filt).size());
+    // meta name not in names, no replace
+    Node node = nl.elementAt(0);
+    assertClass(org.htmlparser.tags.MetaTag.class, node);
+    assertEquals("abc", ((MetaTag)node).getAttribute("name"));
+    assertEquals(origUrl, ((MetaTag)node).getAttribute("content"));
+
+    // orig URL doesn't match, no replace
+    node = nl.elementAt(2);
+    assertClass(org.htmlparser.tags.MetaTag.class, node);
+    assertEquals("def", ((MetaTag)node).getAttribute("name"));
+    assertEquals("http://www.example42.com/index.html",
+		 ((MetaTag)node).getAttribute("content"));
+
+    // name in names, URL matches, should get replaced
+    node = nl.elementAt(4);
+    assertClass(org.htmlparser.tags.MetaTag.class, node);
+    assertEquals("def", ((MetaTag)node).getAttribute("name"));
+    assertEquals("http://foo.lockss.org/index.html",
+		 ((MetaTag)node).getAttribute("content"));
   }
 
   public void testEmptyStyleDispatch() throws Exception {
@@ -577,19 +613,9 @@ public class TestHtmlNodeFilters extends LockssTestCase {
 							attrs);
     assertEquals("Should be empty: " + nl,
 		 0, nl.extractAllNodesThatMatch(filt).size());
-    // XXX this is wierd - the NodeList has been rewritten
-    // XXX but node.getLink() returns the old value.
-    log.debug3("testLinkRegexYesXformsMatch after " + nl.toHtml());
-    log.debug3("Node is " + nl.elementAt(1).toHtml());
-    log.debug3("Link is " + ((LinkTag)nl.elementAt(1)).getLink());
-    NodeList nl2 = parse(nl.toHtml());
-    Node node = nl2.elementAt(1);
-    log.debug3("Node is " + node.toHtml());
-    log.debug3("Link is " + ((LinkTag)node).getLink());
-    assertNotNull(node);
-    assertTrue(""+node.getClass(),
-	       node instanceof org.htmlparser.tags.LinkTag);
-    assertEquals(finalUrl, ((LinkTag)node).getLink());
+    // Don't use node.getLink() as it caches its result so doesn't reflect
+    // the xform
+    assertEquals(finalUrl, ((LinkTag)nl.elementAt(1)).extractLink());
   }
 
   NodeList parse(String in) throws Exception {

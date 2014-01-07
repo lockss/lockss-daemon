@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.22 2013-12-03 21:02:03 thib_gc Exp $
+ * $Id: HtmlNodeFilters.java,v 1.23 2014-01-07 20:42:22 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
+import java.util.*;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.htmlparser.*;
 import org.htmlparser.nodes.*;
 import org.htmlparser.tags.*;
@@ -261,6 +263,21 @@ public class HtmlNodeFilters {
       filters[i] = new LinkRegexXform(regex[i], ignoreCase[i],
 				      target[i], replace[i], attrs)
 	.setNegateFilter(true);
+    }
+    return new OrFilter(filters);
+  }
+
+  /** Create a NodeFilter that applies all of an array of MetaRegexYesXforms
+   */
+  public static NodeFilter metaTagRegexYesXforms(String[] regex,
+						 boolean[] ignoreCase,
+						 String[] target,
+						 String[] replace,
+						 List<String> names) {
+    NodeFilter[] filters = new NodeFilter[regex.length];
+    for (int i = 0; i < regex.length; i++) {
+      filters[i] = new MetaTagRegexXform(regex[i], ignoreCase[i],
+					 target[i], replace[i], names);
     }
     return new OrFilter(filters);
   }
@@ -555,7 +572,7 @@ public class HtmlNodeFilters {
     }
   }
 
-  /** A regex filter than performs a regex replacement on matching nodes. */
+  /** A regex filter that performs a regex replacement on matching nodes. */
   public interface RegexXform {
     void setReplace(String replace);
   }
@@ -588,6 +605,8 @@ public class HtmlNodeFilters {
    * links that match the regex.
    */
   public static class LinkRegexXform extends BaseRegexXform {
+    private String[] attrs;
+
     /**
      * Creates a LinkRegexXform that rejects everything but applies
      * a transform to nodes whose text
@@ -598,7 +617,6 @@ public class HtmlNodeFilters {
      * @param replace Text to replace it with
      * @param attrs Attributes to process
      */
-    private String[] attrs;
     public LinkRegexXform(String regex, boolean ignoreCase,
 			  String target, String replace, String[] attrs) {
       super(regex, ignoreCase, target, replace);
@@ -923,6 +941,64 @@ public class HtmlNodeFilters {
 			 " replace " + replace);
 	    }
 	    String newVal = targetPat.getMatcher(contentVal).replaceFirst(replace);
+	    if (!newVal.equals(contentVal)) {
+	      String encoded = urlEncode(newVal);
+	      ((MetaTag)node).setAttribute("content", encoded);
+	      if (log.isDebug3()) log.debug3("new " + encoded);
+	    }
+	  }
+	}
+      }
+      return false;
+    }
+  }
+
+  /**
+   * This class rejects everything but applies a transform to the content
+   * attr of meta tags whose name attr matches one of the supplied names.
+   */
+  public static class MetaTagRegexXform extends BaseRegexXform {
+    private List<String> names;
+
+    /**
+     * Creates a MetaTagRegexXform that rejects everything but applies a
+     * transform to the content attr of meta tags whose name attr matches
+     * one of the supplied names.
+     * @param regex The pattern to match.
+     * @param ignoreCase If true, match is case insensitive
+     * @param target Regex to replace
+     * @param replace Text to replace it with
+     * @param names List of <code>name</code> attributes for which to
+     * rewrite the <code>content</code> URL.
+     */
+    public MetaTagRegexXform(String regex, boolean ignoreCase,
+			     String target, String replace,
+			     List<String> names) {
+      super(regex, ignoreCase, target, replace);
+      this.names = names;
+    }
+
+    public boolean accept(Node node) {
+      if (node instanceof MetaTag) {
+	String nameVal = ((MetaTag)node).getAttribute("name");
+	if (names.contains(nameVal)) {
+	  String contentVal = ((MetaTag)node).getAttribute("content");
+	  if (log.isDebug3()) {
+	    log.debug3("MetaTagRegexXform: " + nameVal
+		       + " = " + contentVal +
+		       ( isFilterMatch(contentVal, pat)
+			 ? " metches " : " does not match ") +
+		       pat.getPattern());
+	  }
+	  if (contentVal != null && isFilterMatch(contentVal, pat)) {
+	    // Rewrite the content attribute
+	    if (log.isDebug3()) {
+	      log.debug3("Meta old " + contentVal +
+			 " target " + targetPat.getPattern() +
+			 " replace " + replace);
+	    }
+	    String newVal =
+	      targetPat.getMatcher(contentVal).replaceFirst(replace);
 	    if (!newVal.equals(contentVal)) {
 	      String encoded = urlEncode(newVal);
 	      ((MetaTag)node).setAttribute("content", encoded);
