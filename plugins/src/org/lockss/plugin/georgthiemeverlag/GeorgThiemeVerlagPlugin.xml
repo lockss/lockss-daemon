@@ -33,6 +33,10 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.64.0</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Georg Thieme Verlag Plugin, Base URL %s, Journal ID %s, Year %s", base_url, journal_id, year</string>
   </entry>
