@@ -2498,6 +2498,16 @@
     {
 
     param[base_url] = http://bja.oxfordjournals.org/
+    pluginSuffix = ClockssHighWirePlugin
+
+    au < down ; exists ; 2008 ; British Journal of Anaesthesia Volume 100 [to delete] ; 100 ; >
+    au < down ; exists ; 2008 ; British Journal of Anaesthesia Volume 101 [to delete] ; 101 ; >
+
+    }
+
+    {
+
+    param[base_url] = http://bja.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
     au < manifest ; exists ; 1923-1924 ; British Journal of Anaesthesia Volume 1 ; 1 ; >
