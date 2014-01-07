@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.25 2013-03-13 23:52:23 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.26 2014-01-07 20:43:10 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "content=\"1;url=../page6.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
     "content=\"1;url=CPROTO://www.content.org/page2.html\">\n" +
+    "<meta name=\"citation_url\" " +
+    "content=\"CPROTO://www.example.com/art01.pdf\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
@@ -249,6 +251,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<meta http-equiv=\"refresh\" content=\"1;url=LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fpage6.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
     "content=\"1;url=CPROTO://www.content.org/page2.html\">\n" +
+    "<meta name=\"citation_url\" " +
+    "content=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Fart01.pdf\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
@@ -496,7 +500,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static abstract class TestNodeFilterHtmlLinkRewriterFactoryItem
     extends TestNodeFilterHtmlLinkRewriterFactory {
     private MockArchivalUnit au;
-    private NodeFilterHtmlLinkRewriterFactory nfhlrf;
+    private MyNodeFilterHtmlLinkRewriterFactory nfhlrf;
     
     private ServletUtil.LinkTransform xform = null;
     private String testPort = "9524";
@@ -530,7 +534,8 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       List<String> l = new ArrayList<String>();
       l.add(urlStem);
       au.setUrlStems(l);
-      nfhlrf = new NodeFilterHtmlLinkRewriterFactory();
+      nfhlrf = new MyNodeFilterHtmlLinkRewriterFactory();
+      nfhlrf.setMetaNames(ListUtil.list("citation_url"));
     }
   
     public void testRewriting(String msg,
@@ -667,6 +672,20 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       return new SequenceInputStream(Collections.enumeration(lst));
     }
   }
+
+  static class MyNodeFilterHtmlLinkRewriterFactory
+    extends NodeFilterHtmlLinkRewriterFactory {
+    List<String> metaNames = Collections.EMPTY_LIST;
+
+    void setMetaNames(List<String> metaNames) {
+      this.metaNames = metaNames;
+    }
+
+    protected List<String> getMetaNamesToRewrite(ArchivalUnit au) {
+      return metaNames;
+    }
+  }
+
 
   static public class TestNodeFilterHtmlLinkRewriterFactoryItem1 
     extends TestNodeFilterHtmlLinkRewriterFactoryItem {

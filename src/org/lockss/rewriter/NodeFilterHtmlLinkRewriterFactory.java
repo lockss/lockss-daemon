@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.23 2013-03-14 06:38:19 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.24 2014-01-07 20:43:11 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.filter.html.*;
 import org.lockss.servlet.*;
 import org.htmlparser.*;
@@ -193,6 +194,32 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       HtmlNodeFilters.refreshRegexYesXforms(linkRegex5, ignCase5,
                                             rwRegex5, rwTarget5);
 
+    // Rewrite URLs in <meta name="name" content="url"> for all names
+    // specified by plugin
+    List<String> metaNames = getMetaNamesToRewrite(au);
+    NodeFilter metaTagXform = null;
+    if (metaNames != null && !metaNames.isEmpty()) {
+      String[] linkRegexMeta = new String[l];
+      boolean[] ignCaseMeta = new boolean[l];
+      String[] rwRegexMeta = new String[l];
+      String[] rwTargetMeta = new String[l];
+      // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+      i = 0;
+      for (String urlStem : urlStems) {
+	linkRegexMeta[i] = "^" + urlStem;
+	ignCaseMeta[i] = true;
+	rwRegexMeta[i] = urlStem;
+	rwTargetMeta[i] = targetStem + urlStem;
+	logger.debug3("if meta match " + linkRegexMeta[i] + " replace " +
+		      rwRegexMeta[i] + " by " + rwTargetMeta[i]);
+	i++;
+      }
+      metaTagXform =
+	HtmlNodeFilters.metaTagRegexYesXforms(linkRegexMeta, ignCaseMeta,
+					      rwRegexMeta, rwTargetMeta,
+					      metaNames);
+    }
+
     @SuppressWarnings("serial")
     RelRefreshRegexXform[] relRefreshXforms = {
       // transforms site relative HTML refresh URLs
@@ -227,17 +254,19 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     base.setXforms(relXforms);
 
     // Combine the pipes
-    NodeFilter[] filters = {
-      base,
-      relLinkXform,
-      absLinkXform,
-      styleXform,
-      scriptXform,
-      relRefreshXform,
-      absRefreshXform,
+    List<NodeFilter> filters =
+      ListUtil.list(base,
+		    relLinkXform,
+		    absLinkXform,
+		    styleXform,
+		    scriptXform,
+		    relRefreshXform,
+		    absRefreshXform);
+    if (metaTagXform != null) {
+      filters.add(metaTagXform);
     };
 
-    NodeFilter linkXform = new OrFilter(filters);
+    NodeFilter linkXform = new OrFilter(filters.toArray(new NodeFilter[0]));
     // Create a transform to apply them
     HtmlTransform htmlXform = HtmlNodeFilterTransform.exclude(linkXform);
 
@@ -257,6 +286,13 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
                                                    htmlXform);
     return result;
   }
+
+  // Overridden by unit test
+  protected List<String> getMetaNamesToRewrite(ArchivalUnit au) {
+    return
+      AuUtil.getPluginList(au,
+			   DefinablePlugin.KEY_PLUGIN_REWRITE_HTML_META_URLS);
+  }    
 
   public static class HtmlBaseProcessor extends TagNameFilter {
     private List<RelXform> xforms;
