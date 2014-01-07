@@ -1,5 +1,5 @@
 /*
- * $Id: IgiGlobalArticleIteratorFactory.java,v 1.13 2013-12-31 23:02:01 etenbrink Exp $
+ * $Id: IgiGlobalArticleIteratorFactory.java,v 1.14 2014-01-07 00:22:40 etenbrink Exp $
  */
 
 /*
@@ -133,20 +133,12 @@ public class IgiGlobalArticleIteratorFactory
             
             @Override
             protected ArticleFiles createArticleFiles(CachedUrl cu) {
+              // Since 1.64 createArticleFiles can return ArticleFiles
               ArticleFiles af = super.createArticleFiles(cu);
               
-              if (af != null &&
-                  (cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)) != null &&
+              if (af != null && 
                   spec.getTarget() != null && !spec.getTarget().isArticle()) {
-                
-                String url = cu.getUrl();
-                Matcher mat;
-                mat = FULLTEXT_PDF_PATTERN.matcher(url);
-                if (mat.find() && cu.hasContent()) {
-                  guessPdf(af, cu);
-                }
-                // guessPdf will have caused file to open
-                cu.release();
+                guessPdf(af);
               }
               return af;
             }
@@ -158,7 +150,17 @@ public class IgiGlobalArticleIteratorFactory
       // actually a pdf file. We pick up the pdf which lives at: 
       // http://www.igi-global.com/pdf.aspx?tid=20212&ptid=464&ctid=3&t=E-Survey+Methodology
       //<iframe src="/pdf.aspx?tid%3d20212%26ptid%3d464%26ctid%3d3%26t%3dE-Survey+Methodology">
-      protected void guessPdf(ArticleFiles af, CachedUrl cu) {
+      protected void guessPdf(ArticleFiles af) {
+        CachedUrl cu = af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
+        if (cu == null || !cu.hasContent()) {
+          return;
+        }
+        String pdfurl = cu.getUrl();
+        Matcher mat;
+        mat = FULLTEXT_PDF_PATTERN.matcher(pdfurl);
+        if (!mat.find()) {
+          return;
+        }
         BufferedReader bReader = null;
         try {
           bReader = new BufferedReader(new InputStreamReader(
@@ -176,9 +178,11 @@ public class IgiGlobalArticleIteratorFactory
               String pdfUrl = matcher.group(1);
               // use unescapeHtml to convert &amp; to &
               CachedUrl pdfCu = au.makeCachedUrl(baseUrl + StringEscapeUtils.unescapeHtml(pdfUrl));
+              // if makeCachedUrl using unescapeHtml did not work, try plain pdfUrl
               if (pdfCu == null || !pdfCu.hasContent()) {
                 pdfCu = au.makeCachedUrl(baseUrl + pdfUrl);
               }
+              
               if (pdfCu != null && pdfCu.hasContent()) {
                 af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
               }
@@ -191,6 +195,7 @@ public class IgiGlobalArticleIteratorFactory
         }
         finally {
           IOUtil.safeClose(bReader);
+          cu.release();
         }
       }
     };
