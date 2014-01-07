@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.6 2014-01-03 17:26:51 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.7 2014-01-07 00:36:08 etenbrink Exp $
  */
 /*
 
@@ -37,12 +37,9 @@ import org.htmlparser.*;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
-import org.lockss.filter.HtmlTagFilter;
-import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ListUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
@@ -59,12 +56,11 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         // Contains scripts and tags that change values
         new TagNameFilter("head"),
-        // Remove header/footer items
-// XXX  remove 4 comments below (and this line) when new HtmlFilterInputStream changes go into effect with required_daemon_version 1.64.0
-//        new TagNameFilter("header"),
-//        new TagNameFilter("footer"),
-//        // remove ALL comments
-//        HtmlNodeFilters.comment(),
+        // Remove header/footer items, requires_daemon_version 1.64.0
+        new TagNameFilter("header"),
+        new TagNameFilter("footer"),
+        // remove ALL comments
+        HtmlNodeFilters.comment(),
         // Contains ads
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar[^\"]*"),
         // Contains navigation items
@@ -77,26 +73,14 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "name"),
     };
     
+    // registerTag header/footer requires_daemon_version 1.64.0
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-// XXX replace previous statement with
-//    HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
-//        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
-//    .registerTag(new HtmlTags.Header())
-//    .registerTag(new HtmlTags.Footer());
+        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
+    .registerTag(new HtmlTags.Header())
+    .registerTag(new HtmlTags.Footer());
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
-// XXX remove tagFilter and next lines when new HtmlFilterInputStream changes go into effect with required_daemon_version 1.64.0
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(filteredReader,
-        ListUtil.list(
-            new TagPair("<header id=\"pageHeader\">", "</header>"),
-            new TagPair("<footer>", "</footer>"),
-            new TagPair("<!--[", "]-->"),
-            new TagPair("<!-- ", " -->")
-            ));
-// XXX replace with 
-//    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
-    return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
+    return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
   }
   
 }
