@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.15 2014-01-06 23:13:10 etenbrink Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.16 2014-01-08 20:23:46 etenbrink Exp $
  */
 
 /*
@@ -122,48 +122,47 @@ public class HighWirePressArticleIteratorFactory
     // set up html or pdf to be an aspect that will trigger an ArticleFiles
     // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
     // until this is deprecated
-    builder.addAspect(
-        HTML_PATTERN, Arrays.asList(HTML_REPLACEMENT1, HTML_REPLACEMENT2),
+    builder.addAspect(HTML_PATTERN, Arrays.asList(
+        HTML_REPLACEMENT1, HTML_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.addAspect(
-        PDF_PATTERN, Arrays.asList(PDF_REPLACEMENT1, PDF_REPLACEMENT2),
+    builder.addAspect(PDF_PATTERN, Arrays.asList(
+        PDF_REPLACEMENT1, PDF_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
-    // set up abstract/summary to be an aspect
-    builder.addAspect(
-        Arrays.asList(ABSTRACT_REPLACEMENT1, ABSTRACT_REPLACEMENT2, SUMMARY_REPLACEMENT),
-        ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
-    
     // set up pdf landing page to be an aspect
-    builder.addAspect(
-        PDF_LANDING_PATTERN, Arrays.asList(
+    builder.addAspect(PDF_LANDING_PATTERN, Arrays.asList(
         PDF_LANDING_REPLACEMENT1,
         PDF_LANDING_REPLACEMENT2,
         PDF_LANDING_REPLACEMENT3,
         PDF_LANDING_REPLACEMENT4,
         PDF_LANDING_REPLACEMENT5,
         PDF_LANDING_REPLACEMENT6),
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
     
-    // add aspect for html to have metadata role
-    builder.addAspect(
-        Arrays.asList(HTML_REPLACEMENT1, HTML_REPLACEMENT2),
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+    // set up abstract/summary to be an aspect
+    builder.addAspect(Arrays.asList(
+        ABSTRACT_REPLACEMENT1, ABSTRACT_REPLACEMENT2, SUMMARY_REPLACEMENT),
+        ArticleFiles.ROLE_ABSTRACT);
     
     // set up references to be an aspect
-    builder.addAspect(REFERENCES_REPLACEMENT,
+    builder.addAspect(
+        REFERENCES_REPLACEMENT,
         ArticleFiles.ROLE_REFERENCES);
+    
+    // add metadata role from abstract, html, or pdf landing page
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
+        ArticleFiles.ROLE_ABSTRACT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
+        ArticleFiles.ROLE_FULL_TEXT_HTML));
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_HTML, 
-        ArticleFiles.ROLE_FULL_TEXT_PDF, 
+    builder.setFullTextFromRoles(Arrays.asList(
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
-        ArticleFiles.ROLE_ABSTRACT);
+        ArticleFiles.ROLE_ABSTRACT));
     
     return builder.getSubTreeArticleIterator();
   }
