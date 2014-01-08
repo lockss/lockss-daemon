@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.6 2013-12-13 07:02:38 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.7 2014-01-08 20:37:47 fergaloy-sf Exp $
  */
 
 /*
@@ -38,6 +38,7 @@
 package org.lockss.exporter;
 
 import static org.lockss.db.DbManager.*;
+import static org.lockss.metadata.MetadataManager.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -180,6 +181,10 @@ public class FetchTimeExporter {
       + ", a." + AU_KEY_COLUMN
       + ", u." + URL_COLUMN
       + ", d." + DOI_COLUMN
+      + ", is1." + ISSN_COLUMN + " as " + P_ISSN_TYPE
+      + ", is2." + ISSN_COLUMN + " as " + E_ISSN_TYPE
+      + ", ib1." + ISBN_COLUMN + " as " + P_ISBN_TYPE
+      + ", ib2." + ISBN_COLUMN + " as " + E_ISBN_TYPE
       + " from " + PUBLISHER_TABLE + " pr"
       + "," + PLUGIN_TABLE + " pl"
       + "," + PUBLICATION_TABLE + " pn"
@@ -192,6 +197,18 @@ public class FetchTimeExporter {
       + "," + MD_ITEM_TABLE + " mi2"
       + " left outer join " + DOI_TABLE + " d"
       + " on mi2." + MD_ITEM_SEQ_COLUMN + " = d." + MD_ITEM_SEQ_COLUMN
+      + " left outer join " + ISSN_TABLE + " is1"
+      + " on mi2." + PARENT_SEQ_COLUMN + " = is1." + MD_ITEM_SEQ_COLUMN
+      + " and is1." + ISSN_TYPE_COLUMN + " = '" + P_ISSN_TYPE + "'"
+      + " left outer join " + ISSN_TABLE + " is2"
+      + " on mi2." + PARENT_SEQ_COLUMN + " = is2." + MD_ITEM_SEQ_COLUMN
+      + " and is2." + ISSN_TYPE_COLUMN + " = '" + E_ISSN_TYPE + "'"
+      + " left outer join " + ISBN_TABLE + " ib1"
+      + " on mi2." + PARENT_SEQ_COLUMN + " = ib1." + MD_ITEM_SEQ_COLUMN
+      + " and ib1." + ISBN_TYPE_COLUMN + " = '" + P_ISBN_TYPE + "'"
+      + " left outer join " + ISBN_TABLE + " ib2"
+      + " on mi2." + PARENT_SEQ_COLUMN + " = ib2." + MD_ITEM_SEQ_COLUMN
+      + " and ib2." + ISBN_TYPE_COLUMN + " = '" + E_ISBN_TYPE + "'"
       + " where pr." + PUBLISHER_SEQ_COLUMN + " = pn." + PUBLISHER_SEQ_COLUMN
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = min1." + MD_ITEM_SEQ_COLUMN
       + " and pn." + MD_ITEM_SEQ_COLUMN + " = mi2." + PARENT_SEQ_COLUMN
@@ -243,7 +260,7 @@ public class FetchTimeExporter {
       DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_PER_FILE;
 
   // The version of the export file format.
-  private int exportVersion = 1;
+  private int exportVersion = 2;
 
   /**
    * Constructor.
@@ -698,8 +715,19 @@ public class FetchTimeExporter {
 	      log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
 
 	    String doi = results.getString(DOI_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "doi = " + doi);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "doi = " + doi);
+
+	    String pIssn = results.getString(P_ISSN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	    String eIssn = results.getString(E_ISSN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	    String pIsbn = results.getString(P_ISBN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+
+	    String eIsbn = results.getString(E_ISBN_TYPE);
+	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
 
 	    // Create the line to be written to the output file.
 	    StringBuilder sb = new StringBuilder();
@@ -718,7 +746,11 @@ public class FetchTimeExporter {
 	    .append(date).append(SEPARATOR)
 	    .append(fetchTime).append(SEPARATOR)
 	    .append(accessUrl).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(doi));
+	    .append(StringUtil.blankOutNlsAndTabs(doi)).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(pIssn)).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(eIssn)).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(pIsbn)).append(SEPARATOR)
+	    .append(StringUtil.blankOutNlsAndTabs(eIsbn));
 
 	    // Write the line to the export output file.
 	    writer.println(sb.toString());
