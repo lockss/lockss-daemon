@@ -30,7 +30,7 @@
     >
     
     plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin
-    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aip-released/
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipjats-released/
     proxy = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
