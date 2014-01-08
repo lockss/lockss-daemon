@@ -84,17 +84,17 @@
     param[journal_abbr] = orpc
     implicit < status ; status2 ; year ; name ; param[volume] >
 
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 >
-    au < exists ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 1 ; 1 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 2 ; 2 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 3 ; 3 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 4 ; 4 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 5 ; 5 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 7 ; 7 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 8 ; 8 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 9 ; 9 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 10 ; 10 >
+    au < manifest ; exists ; 2011 ; Online Readings in Psychology and Culture Volume 11 ; 11 >
 
   }
 }
