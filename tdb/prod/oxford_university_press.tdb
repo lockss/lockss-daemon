@@ -21777,5 +21777,22 @@
 
   }
 
+  {
+
+    title <
+      name = Poultry Science ;
+      issn = 0032-5791 ;
+      eissn = 1525-3171 ;
+      issnl = 0032-5791
+    > 
+
+    param[base_url] = http://ps.oxfordjournals.org/
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2014 ; Poultry Science Volume 93 ; 93 >
+
+  }
+
 }
 
