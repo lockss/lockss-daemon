@@ -1,7 +1,11 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down - needs review. See RU4218</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>This plugin is deprecated; see edu.yale.library.lockss.plugin.intermarium.Intermarium2014Plugin</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,15 +17,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;InterMarium Plugin, Base URL %s, Volume %d, Year %d&quot;, base_url, volume, year</string>
+    <string>"Intermarium Plugin (Retired in 2014), Base URL %s, Volume %d, Year %d", base_url, volume, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>InterMarium Plugin</string>
+    <string>Intermarium Plugin (Retired in 2014)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -30,15 +34,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%sintermarium-vol%d\.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%svol%dno[^/]+/&quot;, base_url, volume</string>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%sintermarium-vol%d\.html", base_url, volume</string>
+      <string>1,"^%svol%dno[^/]+/", base_url, volume</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sintermarium-vol%d.html&quot;, base_url, volume</string>
+    <string>"%sintermarium-vol%d.html", base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
