@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.6 2014-01-03 16:48:57 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.7 2014-01-09 23:13:13 alexandraohlson Exp $
  */
 
 /*
@@ -355,7 +355,7 @@ implements SourceXmlMetadataExtractorHelper {
     // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-    cookMap.put(ONIX_product_title, MetadataField.FIELD_PUBLICATION_TITLE);
+    cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
     // TODO - after priority setting is allowed in cooking
