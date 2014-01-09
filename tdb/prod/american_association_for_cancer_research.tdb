@@ -85,7 +85,7 @@
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Cancer Immunology Research Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Cancer Immunology Reserach Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Cancer Immunology Research Volume 2 ; 2 >
 
     }
 
@@ -204,7 +204,7 @@
       au < HighWirePressH20Plugin ; released ; 2011 ; Cancer Research Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; released ; 2012 ; Cancer Research Volume 72 ; 72 >
       au < HighWirePressH20Plugin ; manifest ; 2013 ; Cancer Research Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; expected ; 2014 ; Cancer Research Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; manifest ; 2014 ; Cancer Research Volume 74 ; 74 >
 
     }
 
@@ -244,7 +244,7 @@
       au < released ; 2011 ; Clinical Cancer Research Volume 17 ; 17 >
       au < released ; 2012 ; Clinical Cancer Research Volume 18 ; 18 >
       au < manifest ; 2013 ; Clinical Cancer Research Volume 19 ; 19 >
-      au < expected ; 2014 ; Clinical Cancer Research Volume 20 ; 20 >
+      au < manifest ; 2014 ; Clinical Cancer Research Volume 20 ; 20 >
 
     }
 
