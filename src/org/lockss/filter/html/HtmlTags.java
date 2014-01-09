@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlTags.java,v 1.7 2013-12-09 23:53:15 etenbrink Exp $
+ * $Id: HtmlTags.java,v 1.8 2014-01-09 22:51:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -95,6 +95,28 @@ public class HtmlTags {
      * The set of names handled by this tag.
      */
     private static final String[] mIds = new String[] {"section"};
+    
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+    
+  }
+  
+  /**
+   * An aside tag.  Can be registered with registerTag() to cause section
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @since 1.64
+   */
+  public static class Aside extends CompositeTag {
+    
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"aside"};
     
     /**
      * Return the set of names handled by this tag.

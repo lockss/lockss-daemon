@@ -1,10 +1,10 @@
 /*
- * $Id: TestHtmlTags.java,v 1.4 2013-12-09 23:57:42 etenbrink Exp $
+ * $Id: TestHtmlTags.java,v 1.5 2014-01-09 22:51:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -87,6 +87,22 @@ public class TestHtmlTags extends LockssTestCase {
     NodeList nl = xform.getArg(0);
     Node node = nl.elementAt(0);
     assertTrue(node instanceof HtmlTags.Section);
+    assertEquals(1, nl.size());
+  }
+  
+  // Ensure <aside>...</aside> gets parsed as an HtmlTags.Aside
+  // composite tag, not as the default sequence of TagNodes
+  public void testAsideTag() throws IOException {
+    String in = "<aside class=\"special\"><i>iii</i></section>";
+    MockHtmlTransform xform =
+        new MockHtmlTransform(ListUtil.list(new NodeList()));
+    InputStream ins =
+        new HtmlFilterInputStream(new StringInputStream(in), xform)
+        .registerTag(new HtmlTags.Aside());
+    assertInputStreamMatchesString("", ins);
+    NodeList nl = xform.getArg(0);
+    Node node = nl.elementAt(0);
+    assertTrue(node instanceof HtmlTags.Aside);
     assertEquals(1, nl.size());
   }
   
