@@ -37,13 +37,14 @@
       eissn = 1759-7277
     >
     
+    comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = bfs
 
     au < manifest ; exists ; 2010 ; Biofuels Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; Biofuels Volume 2 ; 2 >
     au < crawling ; exists ; 2012 ; Biofuels Volume 3 ; 3 >
     au < testing ; exists ; 2013 ; Biofuels Volume 4 ; 4 >
-    au < manifest ; exists ; 2014 ; Biofuels Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Biofuels Volume 5 ; 5 >
    
   }
 
@@ -53,14 +54,15 @@
       name = Carbon Management ;
       issn = 1758-3004
     >
-    
+    comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = cmt
 
     au < manifest ; exists ; 2010 ; Carbon Management Volume 1 ; 1 >
     au < manifest ; exists ; 2011 ; Carbon Management Volume 2 ; 2 >
     au < testing ; exists ; 2012 ; Carbon Management Volume 3 ; 3 >
     au < crawling ; exists ; 2013 ; Carbon Management Volume 4 ; 4 >
-    au < expected ; exists ; 2014 ; Carbon Management Volume 5 ; 5 >
+    au < doNotProcess ; doNotProcess ; 2014 ; Carbon Management Volume 5 ; 5 >
+
   
   }
 
