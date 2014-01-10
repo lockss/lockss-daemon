@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = University of Wisconsin-Milwaukee Department of English
+  >
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+
+  param[journal_dir] = cream_city_review
+  attr[journal_id] = ccr
+
+    {
+
+    title <
+      name = Cream City Review ;
+      issn = 0884-3457 
+    >
+
+    au < exists ; 2012-2013 ; Cream City Review Volume 36 ; 36 >
+    au < exists ; 2013 ; Cream City Review Volume 37 ; 37 >
+    au < expected ; 2014 ; Cream City Review Volume 38 ; 38 >
+
+    }
+
+  }
+
+}
