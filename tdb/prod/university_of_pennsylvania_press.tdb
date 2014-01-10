@@ -21,6 +21,7 @@
     au < released ; 2011 ; Change Over Time Volume 1 ; 1 >
     au < released ; 2012 ; Change Over Time Volume 2 ; 2 >
     au < manifest ; 2013 ; Change Over Time Volume 3 ; 3 >
+    au < doNotProcess ; 2014 ; Change Over Time Volume 4 ; 4 >
 
   }
 
@@ -40,6 +41,7 @@
     au < released ; 2011 ; Dissent Volume 58 ; 58 >
     au < released ; 2012 ; Dissent Volume 59 ; 59 >
     au < manifest ; 2013 ; Dissent Volume 60 ; 60 >
+    au < doNotProcess ; 2014 ; Dissent Volume 61 ; 61 >
 
   }
 
@@ -65,6 +67,7 @@
     au < released ; 2011 ; Early American Studies: An Interdisciplinary Journal Volume 9 ; 9 >
     au < released ; 2012 ; Early American Studies: An Interdisciplinary Journal Volume 10 ; 10 >
     au < manifest ; 2013 ; Early American Studies: An Interdisciplinary Journal Volume 11 ; 11 >
+    au < doNotProcess ; 2014 ; Early American Studies: An Interdisciplinary Journal Volume 12 ; 12 >
 
   }
 
@@ -87,6 +90,7 @@
     au < released ; 2011 ; The Eighteenth Century Volume 52 ; 52 >
     au < released ; 2012 ; The Eighteenth Century Volume 53 ; 53 >
     au < manifest ; 2013 ; The Eighteenth Century Volume 54 ; 54 >
+    au < doNotProcess ; 2014 ; The Eighteenth Century Volume 55 ; 55 >
 
   }
 
@@ -110,6 +114,7 @@
     au < released ; 2011 ; Hispanic Review Volume 79 ; 79 >
     au < released ; 2012 ; Hispanic Review Volume 80 ; 80 >
     au < manifest ; 2013 ; Hispanic Review Volume 81 ; 81 >
+    au < doNotProcess ; 2014 ; Hispanic Review Volume 82 ; 82 >
 
   }
 
@@ -128,6 +133,7 @@
     au < released ; 2011 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 2 ; 2 >
     au < released ; 2012 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 3 ; 3 >
     au < manifest ; 2013 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 4 ; 4 >
+    au < doNotProcess ; 2014 ; Humanity: An International Journal of Human Rights, Humanitarianism, and Development Volume 5 ; 5 >
 
   }
 
@@ -144,6 +150,7 @@
     attr[journal_id] = jnc
 
     au < manifest ; 2013 ; J19: The Journal of Nineteenth-Century Americanists Volume 1 ; 1 >
+    au < doNotProcess ; 2014 ; J19: The Journal of Nineteenth-Century Americanists Volume 2 ; 2 >
 
   }
 
@@ -167,6 +174,7 @@
     au < released ; 2011 ; Jewish Quarterly Review Volume 101 ; 101 >
     au < released ; 2012 ; Jewish Quarterly Review Volume 102 ; 102 >
     au < manifest ; 2013 ; Jewish Quarterly Review Volume 103 ; 103 >
+    au < doNotProcess ; 2014 ; Jewish Quarterly Review Volume 104 ; 104 >
 
   }
 
@@ -191,6 +199,7 @@
     au < released ; 2011 ; Journal for Early Modern Cultural Studies Volume 11 ; 11 >
     au < released ; 2012 ; Journal for Early Modern Cultural Studies Volume 12 ; 12 >
     au < manifest ; 2013 ; Journal for Early Modern Cultural Studies Volume 13 ; 13 >
+    au < doNotProcess ; 2014 ; Journal for Early Modern Cultural Studies Volume 14 ; 14 >
 
   }
 
@@ -214,6 +223,7 @@
     au < released ; 2011 ; Journal of the Early Republic Volume 31 ; 31 >
     au < released ; 2012 ; Journal of the Early Republic Volume 32 ; 32 >
     au < manifest ; 2013 ; Journal of the Early Republic Volume 33 ; 33 >
+    au < doNotProcess ; 2014 ; Journal of the Early Republic Volume 34 ; 34 >
 
   }
 
@@ -246,6 +256,7 @@
     au < released ; 2011 ; Journal of the History of Ideas Volume 72 ; 72 >
     au < released ; 2012 ; Journal of the History of Ideas Volume 73 ; 73 >
     au < manifest ; 2013 ; Journal of the History of Ideas Volume 74 ; 74 >
+    au < doNotProcess ; 2014 ; Journal of the History of Ideas Volume 75 ; 75 >
 
   }
 
@@ -268,6 +279,7 @@
     au < released ; 2011 ; Magic, Ritual, and Witchcraft Volume 6 ; 6 >
     au < released ; 2012 ; Magic, Ritual, and Witchcraft Volume 7 ; 7 >
     au < manifest ; 2013 ; Magic, Ritual, and Witchcraft Volume 8 ; 8 >
+    au < doNotProcess ; 2014 ; Magic, Ritual, and Witchcraft Volume 9 ; 9 >
 
   }
 
@@ -287,6 +299,7 @@
     au < released ; 2011 ; Revista Hispánica Moderna Volume 64 ; 64 >
     au < released ; 2012 ; Revista Hispánica Moderna Volume 65 ; 65 >
     au < manifest ; 2013 ; Revista Hispánica Moderna Volume 66 ; 66 >
+    au < doNotProcess ; 2014 ; Revista Hispánica Moderna Volume 67 ; 67 >
 
   }
 
