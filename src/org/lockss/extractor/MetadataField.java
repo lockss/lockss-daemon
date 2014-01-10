@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.21 2013-12-18 20:32:50 thib_gc Exp $
+ * $Id: MetadataField.java,v 1.22 2014-01-10 21:11:55 tlipkis Exp $
  */
 
 /*
@@ -227,7 +227,7 @@ public class MetadataField {
       KEY_ARTICLE_TITLE, Cardinality.Single);
 
   public static final String KEY_PUBLICATION_TITLE = "publication.title";
-  /** @deprecated use {@link KEY_PUBLICATION_TILE} instead */
+  /** @deprecated use {@link #KEY_PUBLICATION_TITLE} instead */
   @Deprecated
   public static final String KEY_JOURNAL_TITLE = KEY_PUBLICATION_TITLE;
 
