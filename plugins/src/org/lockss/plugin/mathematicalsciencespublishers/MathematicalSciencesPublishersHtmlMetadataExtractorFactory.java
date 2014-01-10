@@ -1,5 +1,5 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.5 2013-12-23 20:38:50 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.6 2014-01-10 22:22:47 alexandraohlson Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
