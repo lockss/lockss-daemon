@@ -31,12 +31,12 @@
     au < down ; 2006 ; \;login: 2006 ; 31 ; 2006 ; >
     au < down ; 2007 ; \;login: 2007 ; 32 ; 2007 ; >
     au < down ; 2008 ; \;login: 2008 ; 33 ; 2008 ; >
-    au < doNotProcess ; 2009 ; \;login: 2009 ; 34 ; 2009 ; >
-    au < doNotProcess ; 2010 ; \;login: 2010 ; 35 ; 2010 ; >
-    au < doNotProcess ; 2011 ; \;login: 2011 ; 36 ; 2011 ; >
-    au < doNotProcess ; 2012 ; \;login: 2012 ; 37 ; 2012 ; >
-    au < doNotProcess ; 2013 ; \;login: 2012 ; 38 ; 2013 ; >
-    au < doNotProcess ; 2014 ; \;login: 2012 ; 39 ; 2014 ; >
+    au < notReady ; 2009 ; \;login: 2009 ; 34 ; 2009 ; >
+    au < notReady ; 2010 ; \;login: 2010 ; 35 ; 2010 ; >
+    au < notReady ; 2011 ; \;login: 2011 ; 36 ; 2011 ; >
+    au < notReady ; 2012 ; \;login: 2012 ; 37 ; 2012 ; >
+    au < notReady ; 2013 ; \;login: 2012 ; 38 ; 2013 ; >
+    au < notReady ; 2014 ; \;login: 2012 ; 39 ; 2014 ; >
 
   }
 
