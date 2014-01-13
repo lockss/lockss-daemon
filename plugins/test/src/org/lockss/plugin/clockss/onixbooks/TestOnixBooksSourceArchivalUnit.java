@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.2 2013-11-13 18:47:37 alexandraohlson Exp $
+ * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.3 2014-01-13 19:33:31 alexandraohlson Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestOnixBooksSourceArchivalUnit extends LockssTestCase {
   static Logger log = Logger.getLogger("TestOnixBooksSourceArchivalUnit");
   
   static final String PLUGIN_ID = "org.lockss.plugin.clockss.onixbooks.ClockssOnix3BooksSourcePlugin";
-  static final String PluginName = "Onix3 Books Source Plugin (CLOCKSS)";
+  static final String PluginName = "ONIX 3 Books Source Plugin (CLOCKSS)";
   
   public void setUp() throws Exception {
     super.setUp();
