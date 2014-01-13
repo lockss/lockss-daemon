@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.5 2013-12-23 22:21:30 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.6 2014-01-13 18:54:21 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -78,8 +78,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
   private static final String GOOD_ARTICLE_TITLE = "Preface to Special Topic: Selected Papers ... from the International Conference on the Study of STUFF at Extreme Conditions, SSEC 2011";
   private static final String GOOD_JOURNAL_ID = "JAPIAU";
   private static final String GOOD_VOLUME = "111";
-  private static final String HARDWIRED_PUBLISHER = 
-      "American Institute of Physics";
+//  private static final String HARDWIRED_PUBLISHER = "American Institute of Physics";
   private static ArrayList goodAuthors = (ArrayList) ListUtil.list(
       "Chelast, Firsthua",
       "Liast, ",
@@ -452,14 +451,12 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
       assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
       assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-      assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
+//      assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
       assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
       //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-log.info(goodAuthors.toString());
-      log.info(md.getList(MetadataField.FIELD_AUTHOR).toString());
       assertEquals(goodAuthors.toString(), md.getList(MetadataField.FIELD_AUTHOR).toString());
 
     } finally {

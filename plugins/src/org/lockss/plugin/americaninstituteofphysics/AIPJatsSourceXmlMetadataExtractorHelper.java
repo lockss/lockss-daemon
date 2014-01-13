@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.8 2013-12-23 22:21:30 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.9 2014-01-13 18:54:21 aishizaki Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(AIPJATS_journal_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(AIPJATS_article_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(AIPJATS_author, MetadataField.FIELD_AUTHOR);
-    cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
+    //cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(AIPJATS_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(AIPJATS_journal_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
 
