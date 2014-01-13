@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.2 2013-08-30 20:07:39 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.3 2014-01-13 21:59:59 alexandraohlson Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.input.BoundedInputStream;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -69,43 +70,55 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
      * here.  We are working on a different long-term solution by allowing us to verify
      * the URL against a regexp.
      */
+
+    BufferedReader bReader;
+    boolean isRisFile = false;
+
+    if (in.markSupported() != true) {
+      inBuf = new BufferedInputStream(in); //wrap the one that came in
+    } else {  
+      inBuf =  in; //use the one passed in
+    }
+    int BUF_LEN = 2000;
+    inBuf.mark(BUF_LEN); // not sure about the limit...just reading far enough to identify file type
+
     try {
-      BufferedReader bReader;
-      boolean isRisFile = false;
+      //Now create a BoundedInputReader to make sure that we don't overstep our reset mark
+      bReader = new BufferedReader(new InputStreamReader(new BoundedInputStream(inBuf, BUF_LEN), encoding));
       
-      if (in.markSupported() != true) {
-        inBuf = new BufferedInputStream(in); //wrap the one that came in
-      } else {
-        inBuf =  in; //use the one passed in
+      String aLine = bReader.readLine();
+      // The first tag in a RIS file must be "TY - "; be nice about WS
+      Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
+      // skip over empty lines
+      while (aLine !=  null && aLine.trim().length() == 0) {
+        aLine = bReader.readLine(); // get the next line
       }
-      inBuf.mark(1000); // not sure about the limit...just reading far enough to identify file type
-      int BUF_LEN = 1000;
-
-      // take only up to 1000 bytes in from the input stream
-      bReader = new BufferedReader(new InputStreamReader(inBuf, encoding));
-      char[] buffer = new char[BUF_LEN];
-      int charsIn = bReader.read(buffer, 0, BUF_LEN); // might be less than 1000
-      if (charsIn > 0) { //only if we managed to actually get something (not an empty file)
-        StringBuilder fileStart = new StringBuilder(charsIn);
-        fileStart.append(buffer, 0, charsIn); // only as many as we actually took in
-
-        Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE|Pattern.MULTILINE|Pattern.DOTALL);
-        Matcher mat = RIS_PATTERN.matcher(fileStart.toString());
+      // if we have enough data, see if it matches the RIS pattern
+      if (aLine != null && aLine.length() > 3 ) {
+        Matcher mat = RIS_PATTERN.matcher(aLine);
         if (mat.find()) {
-          isRisFile=true;
+          isRisFile = true;
         }
-      }
+      } 
+//      bReader.close(); DO NOT - this would also close underlying inBuf!
       inBuf.reset();
       if (isRisFile) {
         return new RisFilterInputStream(inBuf, encoding, "Y2");
       }
-      return inBuf;
-
+      return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
       log.debug2("Internal error (unsupported encoding)");
+      throw new PluginException("Unsupported encoding looking ahead in input stream");
     } catch (IOException e) {
       log.debug2("Internal error (IO exception");
+      throw new PluginException("IO exception looking ahead in input stream");
+    } finally {
+      try {
+        inBuf.reset();
+      } catch (IOException e) {
+        log.debug2("Could not reset inpu stream (IO exception");
+        e.printStackTrace();
+      }
     }
-    return inBuf; // necessary for the "catch"
   }
 }
