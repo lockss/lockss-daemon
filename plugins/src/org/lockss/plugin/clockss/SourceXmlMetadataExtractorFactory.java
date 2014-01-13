@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.9 2014-01-06 20:19:39 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.10 2014-01-13 19:17:08 alexandraohlson Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ implements FileMetadataExtractorFactory {
         // the schema specific information
         if ((schemaHelper = setUpSchema(cu)) == null) {
           log.debug("Unable to set up XML schema. Cannot extract from XML");
-          return;
+          throw new PluginException("XML schema not set up for " + cu.getUrl());
         }     
 
         // 2. Gather all the metadata in to a list of AM records
