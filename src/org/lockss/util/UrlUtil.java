@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.63 2013-11-19 01:20:01 clairegriffin Exp $
+ * $Id: UrlUtil.java,v 1.64 2014-01-14 04:34:04 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -611,6 +611,10 @@ public class UrlUtil {
 
   /** Performs the bare minimum URL encoding */
   public static String minimallyEncodeUrl(String url) {
+    int pos = url.indexOf(org.lockss.plugin.ArchiveMemberSpec.URL_SEPARATOR);
+    if (pos > 0) {
+      return minimallyEncodeUrl(url.substring(0, pos)) + url.substring(pos);
+    }      
     url = StringUtil.replaceString(url, " ", "%20");
     url = StringUtil.replaceString(url, "\"", "%22");
     url = StringUtil.replaceString(url, "|", "%7C");

@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.44 2013-03-16 22:04:21 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.45 2014-01-14 04:34:04 tlipkis Exp $
  */
 
 /*
@@ -635,6 +635,10 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("f%22oo%20", UrlUtil.minimallyEncodeUrl("f\"oo "));
     assertEquals("%20foo%7C", UrlUtil.minimallyEncodeUrl(" foo|"));
     assertEquals("%5Bfoo%5D", UrlUtil.minimallyEncodeUrl("[foo]"));
+
+    // ensure doesn't encode member name after !/
+    assertEquals("http://foo.bar/ba%20z.zip!/a b",
+		 UrlUtil.minimallyEncodeUrl("http://foo.bar/ba z.zip!/a b"));
   }
 
   public void testEncodeQueryArg() throws Exception {
