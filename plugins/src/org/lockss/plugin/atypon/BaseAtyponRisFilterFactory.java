@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.4 2014-01-14 22:59:11 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.5 2014-01-14 23:30:09 alexandraohlson Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ import org.lockss.util.Logger;
 public class BaseAtyponRisFilterFactory implements FilterFactory {
   private static Logger log = Logger.getLogger(BaseAtyponRisFilterFactory.class);
   
-  Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
+  private static Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
