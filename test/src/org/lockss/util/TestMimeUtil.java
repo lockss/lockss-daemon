@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeUtil.java,v 1.1 2012-02-16 10:39:46 tlipkis Exp $
+ * $Id: TestMimeUtil.java,v 1.2 2014-01-14 04:32:32 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class TestMimeUtil extends LockssTestCase {
 		 MimeUtil.getExtensionFromMimeType("application/x-tar"));
     assertEquals(".gtar",
 		 MimeUtil.getExtensionFromMimeType("application/x-gtar"));
+    assertEquals(".ps",
+		 MimeUtil.getExtensionFromMimeType("application/postscript"));
   }
 
   public void testGetExtensionFromContentType() {
@@ -71,6 +73,8 @@ public class TestMimeUtil extends LockssTestCase {
     assertEquals("image/gif", MimeUtil.getMimeTypeFromExtension(".gif"));
     assertEquals("image/jpeg", MimeUtil.getMimeTypeFromExtension(".jpeg"));
     assertEquals("image/jpeg", MimeUtil.getMimeTypeFromExtension(".JPG"));
+    assertEquals("image/tiff", MimeUtil.getMimeTypeFromExtension(".tiff"));
+    assertEquals("image/tiff", MimeUtil.getMimeTypeFromExtension(".tif"));
 
     assertEquals("application/zip", MimeUtil.getMimeTypeFromExtension(".zip"));
     assertEquals("application/x-tar",
@@ -79,5 +83,9 @@ public class TestMimeUtil extends LockssTestCase {
 		 MimeUtil.getMimeTypeFromExtension(".gtar"));
     assertEquals("application/x-gtar",
 		 MimeUtil.getMimeTypeFromExtension(".tgz"));
+    assertEquals("application/postscript",
+		 MimeUtil.getMimeTypeFromExtension(".ps"));
+    assertEquals("application/postscript",
+		 MimeUtil.getMimeTypeFromExtension(".eps"));
   }
 }

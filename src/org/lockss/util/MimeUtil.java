@@ -1,5 +1,5 @@
 /*
- * $Id: MimeUtil.java,v 1.2 2012-10-01 21:07:26 fergaloy-sf Exp $
+ * $Id: MimeUtil.java,v 1.3 2014-01-14 04:32:32 tlipkis Exp $
  */
 
 /*
@@ -68,11 +68,13 @@ public class MimeUtil {
 
     addMapping("image/gif", ".gif");
     addMapping("image/jpeg", ".jpeg", ".jpg");
-    addMapping("image/tiff", ".tiff");
+    addMapping("image/tiff", ".tiff", ".tif");
 
-    // XXX ".meta" for Springer - remove
+    // XXX ".meta" for Springer - make plugin-specifiable
     addMapping("application/xml", ".xml", ".meta");
     addMapping("application/pdf", ".pdf");
+    addMapping("application/postscript", ".ps", ".eps");
+
     addMapping("application/sgml", ".sgm", ".sml");
     addMapping("application/msword", ".doc");
 
