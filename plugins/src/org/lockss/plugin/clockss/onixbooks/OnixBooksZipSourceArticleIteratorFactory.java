@@ -1,10 +1,10 @@
 /*
- * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.1 2013-11-13 18:47:37 alexandraohlson Exp $
+ * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.2 2014-01-14 19:05:44 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,13 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.clockss.onixbooks;
 
 import java.util.Iterator;
-import java.util.regex.*;
+import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
-import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
@@ -51,6 +48,10 @@ public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIterator
   //Zip file is a flat directory that has both content and xml file in it
   private static final String PATTERN_TEMPLATE = 
       "\"%s%d/[^/]+\\.zip!/(.*)\\.xml$\",base_url,year";
+
+  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.xml";
+
   //
   // The source content structure looks like this:
   // <root_location>/<year>/<BigZipBall>.zip
@@ -64,13 +65,10 @@ public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIterator
   //
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
-    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-    final String XML_REPLACEMENT = "/$1.xml";
-
     // no need to limit to ROOT_TEMPLATE
-    SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
+    SubTreeArticleIterator.Spec theSpec = builder.newSpec();
     theSpec.setTarget(target);
     theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     /* this is necessary to be able to see what's inside the zip file */
@@ -82,17 +80,11 @@ public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIterator
 
     // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
     builder.addAspect(XML_PATTERN,
-        XML_REPLACEMENT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+                      XML_REPLACEMENT,
+                      ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
   }
-  
-  // Enclose the method that creates the builder to allow a child to do additional processing
-  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
-   return new SubTreeArticleIteratorBuilder(au);
-  }
-  
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
