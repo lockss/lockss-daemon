@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.4 2013-12-19 22:02:27 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.5 2014-01-14 21:22:21 aishizaki Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
   // these are the subdirs where the xml and pdf files live, respectively
   final static String XMLDIR = "Markup/";
   final static String PDFDIR = "Page_Renditions/";
+  final static String PDFFILE = "online.pdf";
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
@@ -70,9 +71,8 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
       CachedUrl fileCu;
 
 
-      log.debug3("in AIPJats preEmitCheckcheck");
+      log.debug3("in AIPJats preEmitCheck");
       // hardcoded to be online.pdf
-      String filename = "online.pdf"; 
 
       // no pre-emit check required if values are all null
       // we know for AIPJats (filenameSuffixList, filenameKey) will be null
@@ -92,13 +92,13 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
       //Check in order for at least existing file from among the suffixes
       // just check for the one version using the other items
-      fileCu = B_au.makeCachedUrl(aipBase + PDFDIR + filename);
+      fileCu = B_au.makeCachedUrl(aipBase + PDFDIR + PDFFILE);
       if(fileCu != null && (fileCu.hasContent())) {
         // Set a cooked value for an access file. Otherwise it would get set to xml file
         thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
         return true;
       } else {
-        log.debug3(filename + " does not exist in this AU");
+        log.debug3(aipBase+PDFDIR+PDFFILE + " does not exist in this AU");
         return false; //No file found to match this record
       }
     }

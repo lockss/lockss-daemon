@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.6 2014-01-13 18:54:21 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.7 2014-01-14 21:22:21 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -434,7 +434,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       // setting content (non-pdf) just so the check can find content
       pcu.setContent(string_input);
       pcu.setContentSize(string_input.length());
-      //pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
+      pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
       FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
       assertNotNull(me);
@@ -527,103 +527,4 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     }
   }
   */
-
- /* 
-  // xml file missing journal title
-  public void testExtractFromMissingJournalMetaContent1() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent1);
-    cu.setContentSize(missingJournalMetaInputContent1.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory
-                                   .AIPJatsSourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(GOOD_JOURNAL_ID,
-        md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-
-  // xml file missing journal title, journal id and issn
-  public void testExtractFromMissingJournalMetaContent2() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent2);
-    cu.setContentSize(missingJournalMetaInputContent2.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new AIPJatsSourceMetadataExtractorFactory
-                                   .AIPJatsSourceMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-
-  // xml file missing journal title, journal id, issn and eissn
-  public void testExtractFromMissingJournalMetaContent3() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent3);
-    cu.setContentSize(missingJournalMetaInputContent3.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    //assertEquals(GEN_JOURNAL_TITLE_WITH_JOURNAL_ID,
-    //    md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-  */
-  
 }
