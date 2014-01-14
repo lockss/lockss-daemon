@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.24 2013-03-16 22:03:17 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.25 2014-01-14 04:34:23 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,31 @@ public class TestRemoteApi extends LockssTestCase {
     AuProxy aup2a = rapi.findAuProxy(AUID1);
     assertNotNull(aup2a);
     assertSame(aup2a, aup2b);
+  }
+
+  public void testGetInactiveAus() throws Exception {
+    String id1 = "xxx1";
+    String id2 = "xxx2";
+    mpm.setStoredConfig(id1, ConfigManager.EMPTY_CONFIGURATION);
+    mpm.setStoredConfig(id2, ConfigManager.EMPTY_CONFIGURATION);
+    mpm.setInactiveAuIds(ListUtil.list(id1, id2));
+    assertEquals(ListUtil.list(rapi.findInactiveAuProxy(id1),
+			       rapi.findInactiveAuProxy(id2)),
+		 rapi.getInactiveAus());
+    assertEquals(2, rapi.countInactiveAus());
+
+
+    MockArchivalUnit mau1 = new MockArchivalUnit(id1);
+    AuProxy aup1 = rapi.findAuProxy(mau1);
+    assertFalse(aup1 instanceof InactiveAuProxy);
+  }
+
+  public void testGetAllAus() throws Exception {
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    mpm.setAllAus(ListUtil.list(mau1, mau2));
+    assertEquals(ListUtil.list(rapi.findAuProxy(mau1), rapi.findAuProxy(mau2)),
+		 rapi.getAllAus());
   }
 
   public void testMapAus() {
@@ -197,26 +222,6 @@ public class TestRemoteApi extends LockssTestCase {
     mpm.setCurrentConfig(id, config);
     AuProxy aup = rapi.findAuProxy(mau1);
     assertEquals(config, rapi.getCurrentAuConfiguration(aup));
-  }
-
-  public void testGetAllAus() throws Exception {
-    MockArchivalUnit mau1 = new MockArchivalUnit();
-    MockArchivalUnit mau2 = new MockArchivalUnit();
-    mpm.setAllAus(ListUtil.list(mau1, mau2));
-    assertEquals(ListUtil.list(rapi.findAuProxy(mau1), rapi.findAuProxy(mau2)),
-		 rapi.getAllAus());
-  }
-
-  public void testGetInactiveAus() throws Exception {
-    String id1 = "xxx1";
-    String id2 = "xxx2";
-    mpm.setStoredConfig(id1, ConfigManager.EMPTY_CONFIGURATION);
-    mpm.setStoredConfig(id2, ConfigManager.EMPTY_CONFIGURATION);
-    mpm.setInactiveAuIds(ListUtil.list(id1, id2));
-    assertEquals(ListUtil.list(rapi.findInactiveAuProxy(id1),
-			       rapi.findInactiveAuProxy(id2)),
-		 rapi.getInactiveAus());
-    assertEquals(2, rapi.countInactiveAus());
   }
 
   public void testGetRepositoryDF () throws Exception {
