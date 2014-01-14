@@ -541,10 +541,15 @@ EOF
                 ;;
             esac
             CONFIG_OK=Y
-            if ! mail -s "Config for ${2}@${LOCKSS_HOSTNAME}" ${LOCKSS_EMAIL} ${LOCKSS_TEAM} <${1} ; then
+	    FILT_CONFIG=`mktemp /tmp/filtconfig.XXXXX`
+	    egrep -sv 'PASSW(OR)?D.*=' <${1} >>${FILT_CONFIG}
+            if ! mail -s "Config for ${2}@${LOCKSS_HOSTNAME}" ${LOCKSS_EMAIL} ${LOCKSS_TEAM} <${FILT_CONFIG} ; then
                 echo "Sending mail failed. Please check mail configuration."
-                echo "Please also send ${1} to ${LOCKSS_TEAM}."
+		UNSENT_FILE=/tmp/unsent-lockss-config
+		cp ${FILT_CONFIG} ${UNSENT_FILE} 
+                echo "Please also send ${UNSENT_FILE} to ${LOCKSS_TEAM}."
             fi
+	    rm -f ${FILT_CONFIG}
         fi
     done
 }
