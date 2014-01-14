@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.24 2014-01-07 20:43:11 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.25 2014-01-14 04:30:10 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.*;
 import java.util.*;
 
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
@@ -57,6 +58,10 @@ import org.htmlparser.filters.*;
 public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
   static final Logger logger =
     Logger.getLogger("NodeFilterHtmlLinkRewriterFactory");
+
+  public static String PARAM_META_TAG_REWRITE_PREFIX =
+    Configuration.PREFIX + "htmlRewriter.metaTagRewritePrefix";
+  public static String DEFAULT_META_TAG_REWRITE_PREFIX = null;
 
   public NodeFilterHtmlLinkRewriterFactory() {
   }
@@ -204,12 +209,19 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
       String[] rwRegexMeta = new String[l];
       String[] rwTargetMeta = new String[l];
       // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+      String metaAbsPrefix =
+	CurrentConfig.getParam(PARAM_META_TAG_REWRITE_PREFIX,
+			       DEFAULT_META_TAG_REWRITE_PREFIX);
       i = 0;
       for (String urlStem : urlStems) {
 	linkRegexMeta[i] = "^" + urlStem;
 	ignCaseMeta[i] = true;
 	rwRegexMeta[i] = urlStem;
-	rwTargetMeta[i] = targetStem + urlStem;
+	if (metaAbsPrefix != null) {
+	  rwTargetMeta[i] = metaAbsPrefix + targetStem + urlStem;
+	} else {
+	  rwTargetMeta[i] = targetStem + urlStem;
+	}
 	logger.debug3("if meta match " + linkRegexMeta[i] + " replace " +
 		      rwRegexMeta[i] + " by " + rwTargetMeta[i]);
 	i++;

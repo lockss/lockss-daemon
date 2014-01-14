@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.26 2014-01-07 20:43:10 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.27 2014-01-14 04:30:10 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static String ISO = "ISO-8859-1";
   static String UTF8 = "UTF-8";
 
-  private static final String charset_orig =
+  static final String charset_orig =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -60,12 +60,11 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</head>\n" +
     "<body>\n" +
     "<br>\n" +
-    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
     "Euro sign: \u20AC \n" +
     "</body>\n" +
     "</HTML>\n";
 
-  private static final String charset_xformed_wrong =
+  static final String charset_xformed_wrong =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -75,7 +74,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</head>\n" +
     "<body>\n" +
     "<br>\n" +
-    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
 
     // If characters are re-encoded using ISO-8859, the Euro sign will be
     // unrepresentable and output as a question-mark.
@@ -84,7 +82,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</body>\n" +
     "</HTML>\n";
 
-  private static final String charset_xformed_right =
+  static final String charset_xformed_right =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -94,7 +92,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "</head>\n" +
     "<body>\n" +
     "<br>\n" +
-    "<a href=\"CPROTO://www.example.com/content/index.html\">abs link</a>\n" +
     "Euro sign: \u20AC \n" +
     "</body>\n" +
     "</HTML>\n";
@@ -103,7 +100,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   /** 
    * The original HTML page; CPROTO is the protocol for the content server.
    */
-  private static final String orig =
+  static final String orig =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -347,7 +344,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   /** 
    * The original CSS page; CPROTO is the protocol for the content server.
    */
-  private static final String origCss =
+  static final String origCss =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -468,7 +465,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   /** 
    * The original Javascript page.
    */
-  private static final String origScript =
+  static final String origScript =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -484,7 +481,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   /** 
    * The transformed JavaScript page.
    */
-  private static final String xformedScript =
+  static final String xformedScript =
     "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
     "<html>\n" +
     "<head>\n" +
@@ -515,15 +512,28 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     String urlSuffix;
     String url;
 
-    // local test input and output for lockss and content protocols
-    String orig;
-    String xformed;
-    String origCss;
-    String xformedCssFull;
-    String xformedCssMinimal;
-    String origScript;
-    String xformedScript;
-    
+  static final String meta_orig =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<meta name=\"citation_url\" " +
+    "content=\"CPROTO://www.example.com/foo.pdf\">\n" +
+    "</head></html>\n";
+
+  static final String meta_xformed_rel =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<meta name=\"citation_url\" " +
+    "content=\"LPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ffoo.pdf\">\n" +
+    "</head></html>\n";
+
+  static final String meta_xformed_abs =
+    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">\n" +
+    "<html><head>\n" +
+    "<meta name=\"citation_url\" " +
+    "content=\"http:triggered.clockss.orgLPROTO://lockss.box:9524/ServeContent?url=CPROTO%3A%2F%2Fwww.example.com%2Ffoo.pdf\">\n" +
+    "</head></html>\n";
+
+
     public void setUp() throws Exception {
       super.setUp();
       au = new MockArchivalUnit();
@@ -539,9 +549,13 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }
   
     public void testRewriting(String msg,
-			      String src, String srcCharset,
-			      String exp, boolean hostRel)
+			      String src0, String srcCharset,
+			      String exp0, boolean hostRel)
         throws Exception {
+
+      String src = src0.replace("CPROTO", cproto);
+      String exp = exp0.replace("CPROTO", cproto).replace("LPROTO", lproto);
+
       if (hostRel) {
         xform = new ServletUtil.LinkTransform() {
   	  public String rewrite(String url) {
@@ -622,6 +636,17 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
 		    charset_orig, UTF8, charset_xformed_right, false);
     }
   
+    public void testMetaRel() throws Exception {
+      testRewriting("Meta tag rel", meta_orig, ISO, meta_xformed_rel, false);
+    }
+  
+    public void testMetaAbsHack() throws Exception {
+      ConfigurationUtil.addFromArgs(NodeFilterHtmlLinkRewriterFactory.PARAM_META_TAG_REWRITE_PREFIX,
+  				  "http:triggered.clockss.org");
+
+      testRewriting("Meta tag abs", meta_orig, ISO, meta_xformed_abs, true);
+    }
+  
 
     void setupProtos(String cproto, String lproto) {
       this.cproto = cproto;
@@ -630,21 +655,6 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       urlStem = cproto + "://www.example.com/";
       urlSuffix = "content/index.html";
       url = urlStem + urlSuffix;
-
-      this.orig = TestNodeFilterHtmlLinkRewriterFactory.orig
-          .replace("CPROTO", cproto);
-      this.xformed = TestNodeFilterHtmlLinkRewriterFactory.xformed
-          .replace("CPROTO", cproto).replace("LPROTO", lproto);
-      this.origCss = TestNodeFilterHtmlLinkRewriterFactory.origCss
-          .replace("CPROTO", cproto);
-      this.xformedCssFull = TestNodeFilterHtmlLinkRewriterFactory.xformedCssFull
-        .replace("CPROTO", cproto).replace("LPROTO", lproto);
-      this.xformedCssMinimal = TestNodeFilterHtmlLinkRewriterFactory.xformedCssMinimal
-          .replace("CPROTO", cproto).replace("LPROTO", lproto);
-      this.origScript = TestNodeFilterHtmlLinkRewriterFactory.origScript
-          .replace("CPROTO", cproto);
-      this.xformedScript = TestNodeFilterHtmlLinkRewriterFactory.xformedScript
-          .replace("CPROTO", cproto).replace("LPROTO", lproto);
     }
   }
 
