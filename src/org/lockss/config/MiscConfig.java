@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.11 2011-09-05 02:58:42 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.12 2014-01-14 04:26:28 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.config;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
-import org.lockss.servlet.ServletUtil;
+import org.lockss.servlet.*;
 import org.lockss.exporter.Exporter;
 import org.lockss.exporter.kbart.HtmlKbartExporter;
 import org.lockss.rewriter.*;
@@ -54,12 +54,14 @@ public class MiscConfig {
 	  UrlUtil.setConfig(config, oldConfig, diffs);
 	  PluginUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
+	  ExpertConfig.setConfig(config, oldConfig, diffs);
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	  Exporter.setConfig(config, oldConfig, diffs);
 	  AuHealthMetric.setConfig(config, oldConfig, diffs);
 	  HtmlKbartExporter.setConfig(config, oldConfig, diffs);
 	  RegexpCssLinkRewriterFactory.setConfig(config, oldConfig, diffs);
+	  CreativeCommonsPermissionChecker.setConfig(config, oldConfig, diffs);
 	}
       };
   }
