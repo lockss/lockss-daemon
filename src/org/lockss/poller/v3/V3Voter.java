@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.95 2013-08-19 20:25:28 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.96 2014-01-14 04:29:19 tlipkis Exp $
  */
 
 /*
@@ -409,26 +409,25 @@ public class V3Voter extends BasePoll {
   private void postConstruct() {
     stateMachine = makeStateMachine(voterUserData);
 
-    AuState aus = AuUtil.getAuState(getAu());
-    switch (aus.getSubstanceState()) {
-    case No:
-    case Unknown:
-      subChecker = new SubstanceChecker(getAu());
-      if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_VOTE)) {
+    // Set up substance checker
+    subChecker = new SubstanceChecker(getAu());
+    if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_VOTE)) {
+      AuState aus = AuUtil.getAuState(getAu());
+      if (aus.getSubstanceState() == SubstanceChecker.State.Yes &&
+	  AuUtil.isCurrentFeatureVersion(getAu(), Plugin.Feature.Substance)) {
+	// Don't need to check for substance if already known to exist,
+	// unless substance pattern version has changed.
+	// This is not a valid assumption if polls are allowed to delete files.
+	subChecker = null;
+      } else {
 	log.debug2("Enabling substance checking");
 	SubstanceChecker.State state = voterUserData.getSubstanceCheckerState();
 	if (state != null) {
 	  subChecker.setHasSubstance(state);
 	}
-      } else {
-	subChecker = null;
       }
-      break;
-    case Yes:
-      // Don't need to check for substance if already known to exist.  Only
-      // valid assumption since polls don't delete files.
+    } else {
       subChecker = null;
-      break;
     }
   }
 
