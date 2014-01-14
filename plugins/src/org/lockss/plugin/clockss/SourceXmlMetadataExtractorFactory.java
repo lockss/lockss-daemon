@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.10 2014-01-13 19:17:08 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.11 2014-01-14 20:04:23 alexandraohlson Exp $
  */
 
 /*
@@ -209,6 +209,9 @@ implements FileMetadataExtractorFactory {
                 schemaHelper.getArticleNode(), 
                 schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
 
+        
+        Collection<ArticleMetadata> AMCollection = amList; //if deduping, this will change
+
         // 3. Consolidate identical records based on DeDuplicationXPathKey
         // consolidating as specified by the consolidateRecords() method
         String deDupKey = schemaHelper.getDeDuplicationXPathKey(); 
@@ -223,25 +226,15 @@ implements FileMetadataExtractorFactory {
             updateRecordMap(schemaHelper, deDupKey, uniqueRecordMap, oneAM);
           }
           log.debug3("After consolidation, " + uniqueRecordMap.size() + "records");
+          AMCollection = uniqueRecordMap.values();
+        }
 
-          // 4. check, cook, & emit every AM listed in the unique record map
-          for ( ArticleMetadata oneAM : uniqueRecordMap.values()) {
-            // pre-emit check could be overridden by a child with different layout/naming
-            if (preEmitCheck(schemaHelper, cu,oneAM)) {
-              oneAM.cook(schemaHelper.getCookMap());
-              postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
-              emitter.emitMetadata(cu,oneAM);
-            }
-
-          }
-        } else {
-          // 4. check, cook, and emit every item in full AM list
-          for ( ArticleMetadata oneAM : amList) {
-            if (preEmitCheck(schemaHelper, cu, oneAM)) {
-              oneAM.cook(schemaHelper.getCookMap());
-              postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
-              emitter.emitMetadata(cu,oneAM);
-            }
+        // 4. check, cook, and emit every item in resulting AM collection (list)
+        for ( ArticleMetadata oneAM : AMCollection) {
+          if (preEmitCheck(schemaHelper, cu, oneAM)) {
+            oneAM.cook(schemaHelper.getCookMap());
+            postCookProcess(schemaHelper, cu, oneAM); // hook for optional processing
+            emitter.emitMetadata(cu,oneAM);
           }
         }
 
