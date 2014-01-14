@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.19 2013-12-10 23:42:44 alexandraohlson Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.20 2014-01-14 08:55:26 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.extractor;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.config.TdbAu;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -49,6 +49,15 @@ import org.lockss.plugin.*;
 public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
 
   private static Logger log = Logger.getLogger("BaseArticleMetadataExtractor");
+
+  public static final String PREFIX = Configuration.PREFIX + "metadata.";
+
+  /** If true, MetadataField.FIELD_PUBLISHER will be set to the value in
+   * the tdb if present.  Any value stored by the MetadataExtractor will be
+   * used only if the tdb contains none for the AU */
+  public static final String PARAM_PREFER_TDB_PUBLISHER =
+    PREFIX + "preferTdbPublisher";
+  public static final boolean DEFAULT_PREFER_TDB_PUBLISHER = false;
 
   protected String cuRole = null;
   protected boolean isAddTdbDefaults = true;
@@ -107,7 +116,14 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
     if (tdbau != null) {
       if (log.isDebug3()) log.debug3("Adding data from " + tdbau + " to " + am);
       // Even bulk data should pick up publisher from the TDB file
-      am.putIfBetter(MetadataField.FIELD_PUBLISHER,tdbau.getPublisherName());
+      TdbPublisher tdbpub = tdbau.getTdbPublisher();
+      if (!tdbpub.isUnknownPublisher() &&
+	  CurrentConfig.getBooleanParam(PARAM_PREFER_TDB_PUBLISHER,
+					DEFAULT_PREFER_TDB_PUBLISHER)) {
+	am.replace(MetadataField.FIELD_PUBLISHER, tdbpub.getName());
+      } else {
+	am.putIfBetter(MetadataField.FIELD_PUBLISHER, tdbpub.getName());
+      }
       if (!cu.getArchivalUnit().isBulkContent()) {
         // Fill in missing values rom TDB if TDB entries reflect bibliographic
         // information for the content. These values don't make sense for bulk data

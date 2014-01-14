@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArticleMetadataExtractor.java,v 1.12 2013-12-10 23:42:44 alexandraohlson Exp $
+ * $Id: TestBaseArticleMetadataExtractor.java,v 1.13 2014-01-14 08:55:26 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
 
   private MockPlugin mplug;
 
-  MockArchivalUnit mau1, mau2, mau3, mau4;
+  MockArchivalUnit mau1, mau1nopub, mau2, mau3, mau4;
   TdbAu tdbAu1, tdbAu2, tdbAu3, tdbAu4;
   Map<String,String> tdbmap1, tdbmap2, tdbmap3, tdbmap4;
 
@@ -75,6 +75,11 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     tdbProps.setProperty("param.2.value", "vol1");
     tdbAu1 = tdb.addTdbAuFromProperties(tdbProps);
     mau1 = makeAu(tdbAu1);
+
+    tdbProps.remove("attributes.publisher");
+    tdbProps.setProperty("title", "Air and Space Volume 1a");
+    tdbProps.setProperty("param.2.value", "vol1a");
+    mau1nopub = makeAu(tdb.addTdbAuFromProperties(tdbProps));
 
     tdbmap1 =
       MapUtil.map(MetadataField.KEY_ISSN, "0740-2783",
@@ -204,6 +209,68 @@ public class TestBaseArticleMetadataExtractor extends LockssTestCase {
     Map<String,String> exp = new HashMap<String,String>(tdbmap1);
     // Add/replace explicit md values 
     exp.put("volume", "vol16");
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(exp, actual);
+  }
+
+  public void testPreferTdbPubTrue() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_PREFER_TDB_PUBLISHER,
+				  "true");
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       makeAf(mau1, map));
+    // Copy of md values corresponding to tdb
+    Map<String,String> exp = new HashMap<String,String>(tdbmap1);
+    // Add/replace explicit md values 
+    exp.put("volume", "vol16");
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(exp, actual);
+  }
+
+  public void testPreferTdbPubFalse() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_PREFER_TDB_PUBLISHER,
+				  "false");
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       makeAf(mau1, map));
+    // Copy of md values corresponding to tdb
+    Map<String,String> exp = new HashMap<String,String>(tdbmap1);
+    // Add/replace explicit md values 
+    exp.put("volume", "vol16");
+    exp.put("publisher", "extracted pub");
+    Map<String,String> actual = getMap(mdlist.get(0));
+    assertEquals(exp, actual);
+  }
+
+  // Unknown publisher doesn't get picked up from tdb even if
+  // preferTdbPublisher=true
+  public void testPreferTdbPubTrueNull() throws Exception {
+    ConfigurationUtil.addFromArgs(BaseArticleMetadataExtractor.PARAM_PREFER_TDB_PUBLISHER,
+				  "true");
+    BaseArticleMetadataExtractor me = new BaseArticleMetadataExtractor();
+    me.setAddTdbDefaults(true);
+    ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
+    Map map = MapUtil.map(MetadataField.FIELD_VOLUME, "vol16",
+			  MetadataField.FIELD_PUBLISHER, "extracted pub");
+
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(),
+					       makeAf(mau1nopub, map));
+    // Copy of md values corresponding to tdb
+    Map<String,String> exp = new HashMap<String,String>(tdbmap1);
+    // Add/replace explicit md values 
+    exp.put("publication.title", "Air and Space Volume 1a");
+    exp.put("volume", "vol16");
+    exp.put("publisher", "extracted pub");
     Map<String,String> actual = getMap(mdlist.get(0));
     assertEquals(exp, actual);
   }
