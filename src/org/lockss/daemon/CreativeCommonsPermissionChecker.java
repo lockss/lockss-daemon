@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.13 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.14 2014-01-14 04:28:00 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
@@ -51,6 +52,42 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 
   private static Logger logger =
     Logger.getLogger(CreativeCommonsPermissionChecker.class);
+
+  static final String PREFIX =
+    Configuration.PREFIX + "creativeCommonsPermission.";
+
+  /** List of Creative Commons license types that are accepted */
+  static final String PARAM_VALID_LICENSE_TYPES =
+    PREFIX + "validLicenseTypes";
+  static final List DEFAULT_VALID_LICENSE_TYPES =
+    ListUtil.list("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
+
+  /** List of Creative Commons license versions that are accepted */
+  static final String PARAM_VALID_LICENSE_VERSIONS =
+    PREFIX + "validLicenseVersions";
+  static final List DEFAULT_VALID_LICENSE_VERSIONS =
+    ListUtil.list("1.0", "2.0", "2.5", "3.0", "4.0");
+
+  private static Set<String> validLicenseTypes =
+    SetUtil.theSet(DEFAULT_VALID_LICENSE_TYPES);
+
+  private static Set<String> validLicenseVersions =
+    SetUtil.theSet(DEFAULT_VALID_LICENSE_VERSIONS);
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+                               Configuration oldConfig,
+                               Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      validLicenseTypes =
+	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_TYPES,
+				      DEFAULT_VALID_LICENSE_TYPES));
+      validLicenseVersions =
+	SetUtil.theSet(config.getList(PARAM_VALID_LICENSE_VERSIONS,
+				      DEFAULT_VALID_LICENSE_VERSIONS));
+    }
+  }
 
   String licenseUrl;
 
@@ -101,12 +138,6 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
       Pattern.compile("http://creativecommons.org/licenses/([^/]+)/([^/]+).*",
 		      Pattern.CASE_INSENSITIVE);
 
-    private static final Set<String> VALIDLICENSETYPES =
-      SetUtil.set("by", "by-sa", "by-nc", "by-nd", "by-nc-sa", "by-nc-nd");
-
-    private static final Set<String> VALIDLICENSEVERSIONS =
-      SetUtil.set("1.0", "2.0", "2.5", "3.0", "4.0");
-
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
 					LinkExtractor.Callback cb) {
       String returnStr = null;
@@ -142,8 +173,8 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 		}
 		// Any combination of license terms and version is
 		// currently acceptable.
-		if (VALIDLICENSETYPES.contains(lic)
-		    && VALIDLICENSEVERSIONS.contains(ver)) {
+		if (validLicenseTypes.contains(lic)
+		    && validLicenseVersions.contains(ver)) {
 		  returnStr = licenseURL;
 		}
 	      }

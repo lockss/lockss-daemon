@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.10 2013-11-29 11:17:59 thib_gc Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.11 2014-01-14 04:27:59 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+import java.util.*;
+import org.lockss.test.*;
+import org.lockss.util.*;
 import org.lockss.state.*;
 
 /**
@@ -90,16 +93,39 @@ public class TestCreativeCommonsPermissionChecker
   }
 
 
-  public void testValidPermissions() {
-    for (String lic : VALID_LICENSES) {
-      for (String ver : VALID_VERSIONS) {
+  public void testValidPermissions(String[] licenses,
+				   String[] versions) {
+    for (String lic : licenses) {
+      for (String ver : versions) {
 	assertPerm("<a href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
 	assertPerm("<link href=\"" + lu(lic, ver) + "\" rel=\"license\" />");
 	assertPerm("<a rel=\"license\" href=\"" + lu(lic, ver) + "\" />");
 	assertPerm("<link class=\"bar\" rel=\"license\" href=\"" +
 		   lu(lic, ver) + "\" />");
+
+	assertNoPerm("<a href=\"" + lu(lic + "fnord", ver) + "\" rel=\"license\" />");
+	assertNoPerm("<a href=\"" + lu(lic, ver + "gorp") + "\" rel=\"license\" />");
       }
     }
+  }
+
+  public void testValidPermissionsDefault() {
+    testValidPermissions(VALID_LICENSES, VALID_VERSIONS);
+  }
+
+  public void testValidPermissionsConfig() {
+    ConfigurationUtil.addFromArgs(CreativeCommonsPermissionChecker.PARAM_VALID_LICENSE_TYPES,
+				  "abc;ddd",
+				  CreativeCommonsPermissionChecker.PARAM_VALID_LICENSE_VERSIONS,
+				  "1.2;3.0");
+				  
+    testValidPermissions(new String[] {"abc", "ddd"},
+			 new String[] {"1.2", "3.0"});
+
+    // CreativeCommonsPermissionChecker stores config in static fields,
+    // must remove it (restore to default) to avoid impacting other tests.
+    ConfigurationUtil.setFromArgs(CreativeCommonsPermissionChecker.PREFIX + "a",
+				  "123");
   }
 
   public void testCase() {
