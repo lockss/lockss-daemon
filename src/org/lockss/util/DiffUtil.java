@@ -1,5 +1,5 @@
 /*
- * $Id: DiffUtil.java,v 1.1 2013-10-17 07:51:39 tlipkis Exp $
+ * $Id: DiffUtil.java,v 1.2 2014-01-14 04:32:17 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,6 @@ public class DiffUtil {
     String res =
       diff_u0(StringUtil.normalizeEols(str1),
 	      StringUtil.normalizeEols(str2));
-    log.critical("res: " + res);
     return (res.length() < 3) ? "(none)\n" : res;
   }
 
