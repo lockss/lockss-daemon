@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.24 2013-06-26 04:42:02 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.25 2014-01-14 04:30:42 tlipkis Exp $
  */
 
 /*
@@ -151,6 +151,7 @@ public class ListObjects extends LockssServlet {
   abstract class BaseList {
     
     PrintWriter wrtr;
+    int itemCnt = 0;
     
     boolean isError = false;
 
@@ -160,6 +161,14 @@ public class ListObjects extends LockssServlet {
     /** Subs must execute a body between begin() and end() */
     abstract void doBody() throws IOException;
 
+    /** Subs must supply the name of the thing they're enumerating */
+    abstract String unitName();
+
+    /** Override if unit name isn't pluralized by adding "s" */
+    String units(int n) {
+      return StringUtil.numberOfUnits(n, unitName());
+    }
+
     void begin() throws IOException {
       wrtr = resp.getWriter();
       resp.setContentType("text/plain");
@@ -168,6 +177,7 @@ public class ListObjects extends LockssServlet {
     }
 
     void finish() {;
+      wrtr.println("# " + units(itemCnt));
       wrtr.println(isError ? "# end (errors)" : "# end");
       wrtr.flush();
     }
@@ -209,6 +219,7 @@ public class ListObjects extends LockssServlet {
     void processCu(CachedUrl cu) {
       if (cu.hasContent()) {
 	processContentCu(cu);
+	itemCnt++;
       }
     }
     
@@ -219,13 +230,15 @@ public class ListObjects extends LockssServlet {
     
     void printHeader() {
       wrtr.println("# URLs in " + au.getName());
-      wrtr.println();
+    }
+    
+    String unitName() {
+      return "URL";
     }
 
     void processContentCu(CachedUrl cu) {
       wrtr.println(cu.getUrl());
     }
-    
   }
 
   /** List URLs in AU, including archive file members */
@@ -233,13 +246,17 @@ public class ListObjects extends LockssServlet {
     
     void printHeader() {
       wrtr.println("# URLs* in " + au.getName());
-      wrtr.println();
     }
 
     Iterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
     
+    String units(int n) {
+      return StringUtil.numberOfUnits(n,
+				      "URL (including archive members)",
+				      "URLs (including archive members)");
+    }
   }
 
   /** List URLs, content type and length. */
@@ -248,7 +265,10 @@ public class ListObjects extends LockssServlet {
     void printHeader() {
       wrtr.println("# Files in " + au.getName());
       wrtr.println("# URL\tContentType\tsize");
-      wrtr.println();
+    }
+    
+    String unitName() {
+      return "file";
     }
 
     void processContentCu(CachedUrl cu) {
@@ -260,7 +280,6 @@ public class ListObjects extends LockssServlet {
       }
       wrtr.println(url + "\t" + contentType + "\t" + bytes);
     }
-    
   }
 
   /** List URLs, content type and length, including archive file members. */
@@ -270,13 +289,17 @@ public class ListObjects extends LockssServlet {
     void printHeader() {
       wrtr.println("# Files* in " + au.getName());
       wrtr.println("# URL\tContentType\tsize");
-      wrtr.println();
     }
 
     Iterator getIterator() {
       return au.getAuCachedUrlSet().archiveMemberIterator();
     }
     
+    String units(int n) {
+      return StringUtil.numberOfUnits(n,
+				      "file (including archive members)",
+				      "files (including archive members)");
+    }
   }
 
   /** Base for lists based on ArticleIterator */
@@ -399,12 +422,17 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# DOIs in " + au.getName());
     }
 
+    String unitName() {
+      return "DOI";
+    }
+
     void processArticle(ArticleFiles af, List<ArticleMetadata> amlst) {
       if (amlst == null || amlst.isEmpty()) {
 	if (isIncludeUrl) {
 	  CachedUrl cu = af.getFullTextCu();
 	  if (cu != null) {
 	    wrtr.println(cu.getUrl());
+	    itemCnt++;
 	  } else {
 	    // shouldn't happen, but if it does it likely will many times.
 	    if (logMissing-- > 0) {
@@ -423,6 +451,7 @@ public class ListObjects extends LockssServlet {
 	      } else {
 		wrtr.println(doi);
 	      }
+	      itemCnt++;
 	    }
 	  }
 	}
@@ -450,10 +479,15 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# Articles in " + au.getName());
     }
 
+    String unitName() {
+      return "article";
+    }
+
     void processArticle(ArticleFiles af) {
       CachedUrl cu = af.getFullTextCu();
       if (cu != null) {
 	wrtr.println(cu.getUrl());
+	itemCnt++;
       } else {
 	// shouldn't happen, but if it does it likely will many times.
 	if (logMissing-- > 0) {
@@ -476,6 +510,10 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# All metadata in " + au.getName());
     }
 
+    String unitName() {
+      return "metadata record";
+    }
+
     void processArticle(ArticleFiles af, List<ArticleMetadata> amlst) {
 // 	  wrtr.println(af);
       wrtr.print(af.ppString(0));
@@ -484,6 +522,7 @@ public class ListObjects extends LockssServlet {
 	if (md != null) {
 // 	  wrtr.println(md);
 	  wrtr.print(md.ppString(0));
+	  itemCnt++;
 	}
       }      
       wrtr.println();
@@ -499,6 +538,7 @@ public class ListObjects extends LockssServlet {
       for (ArchivalUnit au : pluginMgr.getAllAus()) {
 	if (includeInternalAus || !pluginMgr.isInternalAu(au)) {
 	  processAu(au);
+	  itemCnt++;
 	}
       }
     }
@@ -515,6 +555,10 @@ public class ListObjects extends LockssServlet {
       wrtr.println("# AUs on " + getMachineName());
     }
 
+    String unitName() {
+      return "AU";
+    }
+
     void processAu(ArchivalUnit au) {
       wrtr.println(au.getName());
     }
@@ -526,6 +570,10 @@ public class ListObjects extends LockssServlet {
     
     void printHeader() {
       wrtr.println("# AUIDs on " + getMachineName());
+    }
+
+    String unitName() {
+      return "AU";
     }
 
     void processAu(ArchivalUnit au) {
