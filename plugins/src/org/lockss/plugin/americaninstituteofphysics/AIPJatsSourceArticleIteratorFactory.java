@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,17 +46,18 @@ public class AIPJatsSourceArticleIteratorFactory
       Logger.getLogger(AIPJatsSourceArticleIteratorFactory.class);
 
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url, ";   // 
-  protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
+  private static final String PATTERN_TEMPLATE = 
+      "\"%s%d/[^/]+\\.zip!/(.*)\\.xml$\",base_url,year";
+  
+  public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final String XML_REPLACEMENT = "/$1.xml";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
-    SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
-    final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
-    final String XML_REPLACEMENT = "/$1.xml";
-
     // no need to limit to ROOT_TEMPLATE
-    SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
+    SubTreeArticleIterator.Spec theSpec = builder.newSpec();
     theSpec.setRootTemplate(ROOT_TEMPLATE);
     theSpec.setTarget(target);
     theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
@@ -73,12 +74,6 @@ public class AIPJatsSourceArticleIteratorFactory
         ArticleFiles.ROLE_ARTICLE_METADATA);
 
     return builder.getSubTreeArticleIterator();
-  }
-  
-  // Enclose the method that creates the builder to allow a child to do additional processing
-  // for example Taylor&Francis
-  protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
-   return new SubTreeArticleIteratorBuilder(au);
   }
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(
