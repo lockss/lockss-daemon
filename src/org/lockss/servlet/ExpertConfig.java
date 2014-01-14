@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.9 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id: ExpertConfig.java,v 1.10 2014-01-14 04:30:30 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.servlet;
 import java.io.*;
 import java.util.*;
 import java.util.List;
+import java.util.regex.*;
 
 import javax.servlet.*;
 
@@ -50,12 +51,21 @@ import org.lockss.account.*;
  * org.lockss.config.expert.allow and org.lockss.config.expert.deny)
  */
 public class ExpertConfig extends LockssServlet {
+  static Logger log = Logger.getLogger("ExpertConfig");
 
   /** URL of parameter documentation page */
   public static final String PARAM_PARAM_DOC_URL =
     Configuration.PREFIX + "config.paramDocUrl";
   public static final String DEFAULT_PARAM_DOC_URL =
     "http://www.lockss.org/lockssdoc/gamma/daemon/paramdoc.html";
+
+  /** Initial dimensions in characters of ExpertConfig textarea:
+   * <code><i>width</i>,<i>height</i></code> or min:max range of
+   * dimensions:
+   * <code><i>min_width</i>,<i>min_height</i>:<i>max_width</i>,<i>max_height</i></code> */
+  public static final String PARAM_TEXT_DIMENSIONS =
+    Configuration.PREFIX + "config.textDimensions";
+  public static final String DEFAULT_TEXT_DIMENSIONS = "60,8:100,40";
 
   private static final String KEY_TEXT = "expert_text";
 
@@ -66,8 +76,6 @@ public class ExpertConfig extends LockssServlet {
     "Enter <a href=\"@PARAMDOCURL@\">parameters</a>, one per line, in the form<pre>\n" +
     "org.lockss.foo.bar = value</pre>";
 
-  static Logger log = Logger.getLogger("ExpertConfig");
-
   protected ConfigManager configMgr;
 
   // Values read from form
@@ -76,7 +84,6 @@ public class ExpertConfig extends LockssServlet {
   protected Configuration displayConfig;
 
   protected boolean isForm;
-
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -165,8 +172,7 @@ public class ExpertConfig extends LockssServlet {
 			       CurrentConfig.getParam(PARAM_PARAM_DOC_URL,
 						      DEFAULT_PARAM_DOC_URL));
     table.add(makeTextArea("Configuration Parameters" + addFootnote(ft),
-			   KEY_TEXT,
-			   etext));
+			   KEY_TEXT, etext));
     spaceRow(table);
     ServletUtil.layoutSubmitButton(this, table, ACTION_UPDATE, I18N_ACTION_UPDATE);
     form.add(table);
@@ -200,13 +206,18 @@ public class ExpertConfig extends LockssServlet {
     table.add("&nbsp;");
   }
 
-  private static final int TEXT_COLUMNS = 60;
-  private static final int TEXT_ROWS = 8;
-
   Composite makeTextArea(String title, String fieldName, String value) {
+
+    StringUtil.CharWidthHeight cwh = StringUtil.countWidthAndHeight(value);
+    int cols = maxWidth <= 0 ? minWidth : between(cwh.getWidth(),
+						  minWidth, maxWidth);
+    int rows = maxHeight <= 0 ? minHeight : between(cwh.getHeight(),
+						    minHeight, maxHeight);
+
     Table table = new Table(0, "align=\"center\" cellpadding=\"0\"");
     TextArea urlArea = new MyTextArea(fieldName);
-    urlArea.setSize(TEXT_COLUMNS, TEXT_ROWS);
+    urlArea.attribute("class", "resize");
+    urlArea.setSize(cols, rows);
     urlArea.add(value);
     setTabOrder(urlArea);
     table.newRow();
@@ -219,6 +230,12 @@ public class ExpertConfig extends LockssServlet {
     return table;
   }
 
+
+  int between(int n, int lo, int hi) {
+    if (n < lo) return lo;
+    if (n > hi) return hi;
+    return n;
+  }
 
   /**
    * Save the include and exclude lists to the access control file
@@ -296,6 +313,53 @@ public class ExpertConfig extends LockssServlet {
 	sb.append("\n");
       }
       acct.auditableEvent(sb.toString());
+    }
+  }
+
+
+  // Patterm to match text dimension spec.  ddd,ddd or ddd,ddd:ddd,ddd
+  static Pattern DIMENSION_SPEC_PAT =
+    Pattern.compile("(\\d+),(\\d+)(?::(\\d+),(\\d+))?");
+
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_TEXT_DIMENSIONS)) {
+      String whspec =
+	config.get(PARAM_TEXT_DIMENSIONS, DEFAULT_TEXT_DIMENSIONS);
+      try {
+	parseSpec(whspec);
+      } catch (NumberFormatException e) {
+	parseSpec(DEFAULT_TEXT_DIMENSIONS);
+      }
+      log.debug2("minWidth: " + minWidth + ", maxWidth: " + maxWidth +
+		 ", minHeight: " + minHeight + ", maxHeight: " + maxHeight);
+    }
+
+  }
+					       
+  private static int minWidth;
+  private static int maxWidth;
+  private static int minHeight;
+  private static int maxHeight;
+
+  static void parseSpec(String s) throws NumberFormatException {
+    Matcher m1 = DIMENSION_SPEC_PAT.matcher(s);
+    if (m1.matches()) {
+      minWidth = Integer.parseInt(m1.group(1));
+      minHeight = Integer.parseInt(m1.group(2));
+      if (m1.start(3) > 0) {
+	maxWidth = Integer.parseInt(m1.group(3));
+	maxHeight = Integer.parseInt(m1.group(4));
+      } else {
+	maxWidth = 0;
+	maxHeight = 0;
+      }
+    } else {
+      throw new NumberFormatException("Invalied dimension spec: '" + s + "'");
     }
   }
 }
