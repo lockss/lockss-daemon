@@ -1,10 +1,10 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.3 2014-01-13 21:59:59 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.4 2014-01-14 22:59:11 alexandraohlson Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,7 +42,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.input.BoundedInputStream;
@@ -56,7 +55,9 @@ import org.lockss.util.Logger;
  * Reads through RIS files line by line and removes the line with the start tag Y2
  */
 public class BaseAtyponRisFilterFactory implements FilterFactory {
-  private static Logger log = Logger.getLogger("BaseAtyponRisFilterFactory");
+  private static Logger log = Logger.getLogger(BaseAtyponRisFilterFactory.class);
+  
+  Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
       InputStream in,
@@ -72,7 +73,6 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
      */
 
     BufferedReader bReader;
-    boolean isRisFile = false;
 
     if (in.markSupported() != true) {
       inBuf = new BufferedInputStream(in); //wrap the one that came in
@@ -88,23 +88,19 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       
       String aLine = bReader.readLine();
       // The first tag in a RIS file must be "TY - "; be nice about WS
-      Pattern RIS_PATTERN = Pattern.compile("^\\s*TY\\s*-", Pattern.CASE_INSENSITIVE);
+      // The specification doesn't allow for comments or other preceding characters
+
       // skip over empty lines
       while (aLine !=  null && aLine.trim().length() == 0) {
         aLine = bReader.readLine(); // get the next line
       }
-      // if we have enough data, see if it matches the RIS pattern
-      if (aLine != null && aLine.length() > 3 ) {
-        Matcher mat = RIS_PATTERN.matcher(aLine);
-        if (mat.find()) {
-          isRisFile = true;
-        }
-      } 
-//      bReader.close(); DO NOT - this would also close underlying inBuf!
+      
+      // do NOT close bReader - it would also close underlying inBuf!
       inBuf.reset();
-      if (isRisFile) {
+      // if we have  data, see if it matches the RIS pattern
+      if (aLine != null && RIS_PATTERN.matcher(aLine).find()) {
         return new RisFilterInputStream(inBuf, encoding, "Y2");
-      }
+      } 
       return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
       log.debug2("Internal error (unsupported encoding)");
@@ -112,13 +108,6 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
     } catch (IOException e) {
       log.debug2("Internal error (IO exception");
       throw new PluginException("IO exception looking ahead in input stream");
-    } finally {
-      try {
-        inBuf.reset();
-      } catch (IOException e) {
-        log.debug2("Could not reset inpu stream (IO exception");
-        e.printStackTrace();
-      }
     }
   }
 }
