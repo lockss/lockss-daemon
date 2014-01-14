@@ -1,10 +1,10 @@
 /*
- * $Id: DbManager.java,v 1.27 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.28 2014-01-14 22:45:42 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,6 @@ import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.PluginManager;
@@ -179,6 +178,12 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static final String PARAM_RETRY_DELAY = PREFIX + "retryDelay";
   public static final long DEFAULT_RETRY_DELAY = 3 * Constants.SECOND;
+
+  /**
+   * SQL statement fetch size.
+   */
+  public static final String PARAM_FETCH_SIZE = PREFIX + "fetchSize";
+  public static final int DEFAULT_FETCH_SIZE = 5000;
 
   /**
    * The indicator to be inserted in the database at the end of truncated text
@@ -2061,6 +2066,9 @@ public class DbManager extends BaseLockssDaemonManager
   // transient SQL exceptions.
   private long retryDelay = DEFAULT_RETRY_DELAY;
 
+  // The SQL statement fetch size.
+  private int fetchSize = DEFAULT_FETCH_SIZE;
+
   // An indication of whether the database was booted.
   private boolean dbBooted = false;
 
@@ -2130,6 +2138,8 @@ public class DbManager extends BaseLockssDaemonManager
 
       dbManagerEnabled =
 	  config.getBoolean(PARAM_DBMANAGER_ENABLED, DEFAULT_DBMANAGER_ENABLED);
+
+      fetchSize = config.getInt(PARAM_FETCH_SIZE, DEFAULT_FETCH_SIZE);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
@@ -4868,6 +4878,7 @@ public class DbManager extends BaseLockssDaemonManager
       try {
 	// Prepare the statement.
 	statement = conn.prepareStatement(sql);
+	statement.setFetchSize(fetchSize);
 	success = true;
       } catch (SQLTransientException sqlte) {
 	// A SQLTransientException is caught: Count the next retry.
@@ -5021,6 +5032,7 @@ public class DbManager extends BaseLockssDaemonManager
       try {
 	// Prepare the statement.
 	statement = conn.prepareStatement(sql, returnGeneratedKeys);
+	statement.setFetchSize(fetchSize);
 	success = true;
       } catch (SQLTransientException sqlte) {
 	// A SQLTransientException is caught: Count the next retry.

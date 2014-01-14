@@ -1,5 +1,5 @@
 /*
- * $Id: TestDbManager.java,v 1.8 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: TestDbManager.java,v 1.9 2014-01-14 22:45:42 fergaloy-sf Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ package org.lockss.db;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.Properties;
 import org.lockss.config.ConfigManager;
 import org.lockss.repository.LockssRepositoryImpl;
@@ -302,6 +303,11 @@ public class TestDbManager extends LockssTestCase {
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
     assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+
+    PreparedStatement ps = dbManager.prepareStatement(conn,
+	"select count(*) from " + DbManager.OBSOLETE_METADATA_TABLE);
+
+    assertEquals(DbManager.DEFAULT_FETCH_SIZE, ps.getFetchSize());
   }
 
   /**
@@ -335,6 +341,7 @@ public class TestDbManager extends LockssTestCase {
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props
 	.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
+    props.setProperty(DbManager.PARAM_FETCH_SIZE, "12345");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     dbManager = new DbManager();
@@ -348,6 +355,11 @@ public class TestDbManager extends LockssTestCase {
     Connection conn = dbManager.getConnection();
     assertNotNull(conn);
     assertTrue(dbManager.tableExists(conn, DbManager.OBSOLETE_METADATA_TABLE));
+
+    PreparedStatement ps = dbManager.prepareStatement(conn,
+	"select count(*) from " + DbManager.OBSOLETE_METADATA_TABLE);
+
+    assertEquals(12345, ps.getFetchSize());
   }
 
   /**
