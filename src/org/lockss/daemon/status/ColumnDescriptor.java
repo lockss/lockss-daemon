@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.11 2012-01-31 07:19:31 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.12 2014-01-14 04:28:26 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,9 @@ public class ColumnDescriptor {
   }
 
   public int hashCode() {
-    throw new UnsupportedOperationException();
+    return title.hashCode() * 3
+      + columnName.hashCode() * 5
+      + type * 7;
   }
 
 }
