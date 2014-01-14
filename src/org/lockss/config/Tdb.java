@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
+ * $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -83,7 +83,7 @@ public class Tdb {
   /**
    * Prefix appended to generated unknown publisher
    */
-  private static final String UNKNOWN_PUBLISHER_PREFIX = "Publisher of ";
+  static final String UNKNOWN_PUBLISHER_PREFIX = "Publisher of ";
   
   /**
    * This exception is thrown by Tdb related classes in place of an
@@ -96,7 +96,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.23 2013-06-06 06:33:02 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.24 2014-01-14 08:56:10 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {

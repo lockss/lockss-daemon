@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.9 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: TestTdb.java,v 1.10 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.9 2013-03-06 08:06:22 tlipkis Exp $
+ * @version $Id: TestTdb.java,v 1.10 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -303,6 +303,8 @@ public class TestTdb extends LockssTestCase {
     p0.put("title", "Not me");
     p0.put("plugin", "org.lockss.NotThisClass");
     TdbAu tdbAu0 = tdb.addTdbAuFromProperties(p0);
+    assertEquals("Publisher of [Title of [Not me]]", tdbAu0.getPublisherName());
+    assertTrue(tdbAu0.getTdbPublisher().isUnknownPublisher());
 
     Map<String, TdbPublisher> pubsMap = tdb.getAllTdbPublishers();
     assertEquals(1, pubsMap.size());
@@ -333,6 +335,7 @@ public class TestTdb extends LockssTestCase {
     p1.put("attributes.publisher", "The Smithsonian Institution");
 
     TdbAu tdbAu1 = tdb.addTdbAuFromProperties(p1);
+    assertFalse(tdbAu1.getTdbPublisher().isUnknownPublisher());
 
     pubsMap = tdb.getAllTdbPublishers();
     assertEquals(2, pubsMap.size());

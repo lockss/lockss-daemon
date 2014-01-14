@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.20 2013-05-08 09:09:00 tlipkis Exp $
+ * $Id: TestTdbAu.java,v 1.21 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.20 2013-05-08 09:09:00 tlipkis Exp $
+ * @version $Id: TestTdbAu.java,v 1.21 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -76,7 +76,7 @@ public class TestTdbAu extends LockssTestCase {
   /**
    * Test creating TdbPublisher with null name.
    */
-  public void testNullTitleName() {
+  public void testNullPublisherName() {
     TdbPublisher publisher = null;
     try {
       publisher = new TdbPublisher(null);
@@ -519,6 +519,7 @@ public class TestTdbAu extends LockssTestCase {
     // ensure same as publisher for AU's title
     TdbPublisher getPublisher = au.getTdbPublisher();
     assertEquals(publisher, getPublisher);
+    assertEquals("Test Publisher", au.getPublisherName());
   }
 
   /**

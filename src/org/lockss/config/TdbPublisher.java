@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
+ * $Id: TdbPublisher.java,v 1.16 2014-01-14 08:56:10 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.15 2013-03-06 08:06:22 tlipkis Exp $
+ * @version $Id: TdbPublisher.java,v 1.16 2014-01-14 08:56:10 tlipkis Exp $
  */
 public class TdbPublisher {
   /**
@@ -81,6 +81,15 @@ public class TdbPublisher {
    */
   public String getName() {
     return name;
+  }
+  
+  /**
+   * Return true if this publisher was given a gensym name
+   * 
+   * @return  true if this publisher was given a gensym name
+   */
+  public boolean isUnknownPublisher() {
+    return name.startsWith(Tdb.UNKNOWN_PUBLISHER_PREFIX);
   }
   
   /**
