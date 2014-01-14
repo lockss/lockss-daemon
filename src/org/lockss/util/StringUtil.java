@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.118 2013-12-13 07:01:14 fergaloy-sf Exp $
+ * $Id: StringUtil.java,v 1.119 2014-01-14 04:32:49 tlipkis Exp $
  */
 
 /*
@@ -897,6 +897,58 @@ public class StringUtil {
       pos += len;
     }
     return count;
+  }
+
+  /** Retpresents an integer width,height pair */
+  public static class CharWidthHeight {
+    int width;
+    int height;
+    private CharWidthHeight(int w, int h) {
+      width = w;
+      height = h;
+    }
+    public int getWidth() {
+      return width;
+    }
+    public int getHeight() {
+      return height;
+    }
+  }
+
+  /** Calculates the number of lines and the width (in characters) of the
+   * longest line in a String.  Not particularly efficient, shouldn't be
+   * used on huge Strings */
+
+  public static CharWidthHeight countWidthAndHeight(String str) {
+    if (str == null || str.length() == 0) {
+      return new CharWidthHeight(0, 0);
+    }
+    int height = 1;
+    int width = 0;
+    int maxWidth = 0;
+    int len = str.length();
+    for (int pos = 0; pos < len; pos++) {
+      char c = str.charAt(pos);
+      if (c == '\r' || c == '\n') {
+	if (c == '\r' && pos+1 < len && str.charAt(pos+1) == '\n') {
+	  pos++;
+	}
+	// Don't increment height if string ends with a newline
+	if (pos+1 < len) {
+	  height++;
+	}
+	if (width > maxWidth) {
+	  maxWidth = width;
+	}
+	width = 0;
+      } else {
+	width++;
+      }
+    }
+    if (width > maxWidth) {
+      maxWidth = width;
+    }
+    return new CharWidthHeight(maxWidth, height);
   }
 
   /**

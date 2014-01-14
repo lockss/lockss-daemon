@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.100 2013-12-13 07:01:14 fergaloy-sf Exp $
+ * $Id: TestStringUtil.java,v 1.101 2014-01-14 04:32:49 tlipkis Exp $
  */
 
 /*
@@ -196,6 +196,25 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(2, StringUtil.countOccurences("test.test", "test"));
     assertEquals(2, StringUtil.countOccurences("testtest", "test"));
     assertEquals(2, StringUtil.countOccurences("xxxxxy", "xx"));
+  }
+
+  void assertWH(int w, int h, StringUtil.CharWidthHeight cwh) {
+    assertEquals("Wrong width", w, cwh.getWidth());
+    assertEquals("Wrong height", h, cwh.getHeight());
+  }
+
+  public void testCountWidthAndHeight() {
+    assertWH(0, 0, StringUtil.countWidthAndHeight(null));
+    assertWH(0, 0, StringUtil.countWidthAndHeight(""));
+    assertWH(3, 1, StringUtil.countWidthAndHeight("123"));
+    assertWH(3, 1, StringUtil.countWidthAndHeight("123\n"));
+    assertWH(3, 1, StringUtil.countWidthAndHeight("123\r"));
+    assertWH(3, 1, StringUtil.countWidthAndHeight("123\r\n"));
+    assertWH(3, 2, StringUtil.countWidthAndHeight("123\n\n"));
+    assertWH(3, 2, StringUtil.countWidthAndHeight("123\n "));
+    assertWH(5, 3, StringUtil.countWidthAndHeight("123\n11111\nxx"));
+    assertWH(5, 3, StringUtil.countWidthAndHeight("123\r11111\rxx"));
+    assertWH(5, 3, StringUtil.countWidthAndHeight("123\r\n11111\r\nxx"));
   }
 
   public void testGetTextBetween() {
