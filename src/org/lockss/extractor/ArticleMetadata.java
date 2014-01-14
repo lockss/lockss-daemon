@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.9 2012-12-07 07:27:05 fergaloy-sf Exp $
+ * $Id: ArticleMetadata.java,v 1.10 2014-01-14 08:55:50 tlipkis Exp $
  */
 
 /*
@@ -247,10 +247,20 @@ public class ArticleMetadata {
     return false;
   }
 
+  /** Store the value in the ArticleMetadata, replacing any previous value.
+   * @param field The MetadataField into which to store
+   * @param val the value to store
+   * @returns true
+   */
+  public boolean replace(MetadataField field, String value) {
+    putSingle(field, value, true);
+    return true;
+  }
+
   private MetadataException put0(MetadataField field, String value) {
     switch (field.getCardinality()) {
     case Single:
-      return putSingle(field, value);
+      return putSingle(field, value, false);
     case Multi:
       return putMulti(field, value);
     }
@@ -262,7 +272,8 @@ public class ArticleMetadata {
     return field.getKey().toLowerCase();
   }
 
-  private MetadataException putSingle(MetadataField field,final String value) {
+  private MetadataException putSingle(MetadataField field,final String value,
+				      boolean force) {
     String key = getKey(field);
     MetadataException valEx = null;
     String normVal = null;
@@ -287,7 +298,7 @@ public class ArticleMetadata {
       if (curval.isEmpty()) {
         cookedmap.put(key, normVal);
         return null;
-      } else if (isInvalid(curval.get(0))) {
+      } else if (force || isInvalid(curval.get(0))) {
         cookedmap.remove(key);
         cookedmap.put(key, normVal);
         return null;

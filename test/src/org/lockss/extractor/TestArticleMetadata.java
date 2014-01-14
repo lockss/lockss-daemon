@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadata.java,v 1.4 2012-08-15 03:34:36 tlipkis Exp $
+ * $Id: TestArticleMetadata.java,v 1.5 2014-01-14 08:55:50 tlipkis Exp $
  */
 
 /*
@@ -469,6 +469,16 @@ public class TestArticleMetadata extends LockssTestCase {
     assertTrue(am.putIfBetter(FIELD_SINGLE, "71"));
     assertEquals("71", am.get(FIELD_SINGLE));
   }  
+
+  public void testReplace() throws MetadataException {
+    MetadataField field = FIELD_SINGLE;
+    assertTrue(am.put(field, "valid1"));
+    assertEquals("valid1", am.get(field));
+    assertFalse(am.put(field, "valid2"));
+    assertEquals("valid1", am.get(field));
+    assertTrue(am.replace(field, "valid3"));
+    assertEquals("valid3", am.get(field));
+  }
 
   public void testSplit() throws MetadataException {
     MetadataField field = FIELD_SPLIT;
