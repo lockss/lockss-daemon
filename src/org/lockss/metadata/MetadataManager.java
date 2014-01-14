@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.22 2013-10-16 23:10:44 fergaloy-sf Exp $
+ * $Id: MetadataManager.java,v 1.23 2014-01-14 04:32:05 tlipkis Exp $
  */
 
 /*
@@ -2154,6 +2154,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Updates the timestamp of the last extraction of an Archival Unit metadata.
    * 
+   * @param au
+   *          The ArchivalUnit whose time to update.
    * @param conn
    *          A Connection with the database connection to be used.
    * @param auMdSeq
@@ -2161,13 +2163,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @throws DbException
    *           if any problem occurred accessing the database.
    */
-  void updateAuLastExtractionTime(Connection conn, Long auMdSeq)
+  void updateAuLastExtractionTime(ArchivalUnit au, Connection conn,
+				  Long auMdSeq)
       throws DbException {
+    long now = TimeBase.nowMs();
+    AuUtil.getAuState(au).setLastMetadataIndex(now);
+
     PreparedStatement updateAuLastExtractionTime =
 	dbManager.prepareStatement(conn, UPDATE_AU_MD_EXTRACT_TIME_QUERY);
 
     try {
-      updateAuLastExtractionTime.setLong(1, TimeBase.nowMs());
+      updateAuLastExtractionTime.setLong(1, now);
       updateAuLastExtractionTime.setLong(2, auMdSeq);
       dbManager.executeUpdate(updateAuLastExtractionTime);
     } catch (SQLException sqle) {

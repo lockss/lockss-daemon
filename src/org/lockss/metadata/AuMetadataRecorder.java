@@ -1,5 +1,5 @@
 /*
- * $Id: AuMetadataRecorder.java,v 1.15 2013-12-17 17:57:46 fergaloy-sf Exp $
+ * $Id: AuMetadataRecorder.java,v 1.16 2014-01-14 04:32:06 tlipkis Exp $
  */
 
 /*
@@ -244,7 +244,7 @@ public class AuMetadataRecorder {
 
     if (auMdSeq != null) {
       // Update the AU last extraction timestamp.
-      mdManager.updateAuLastExtractionTime(conn, auMdSeq);
+      mdManager.updateAuLastExtractionTime(au, conn, auMdSeq);
     } else {
       log.warning("auMdSeq is null for auid = '" + au.getAuId() + "'.");
     }

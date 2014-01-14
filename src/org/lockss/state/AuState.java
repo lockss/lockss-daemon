@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.51 2013-09-21 04:33:48 tlipkis Exp $
+ * $Id: AuState.java,v 1.52 2014-01-14 04:32:05 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,8 @@ public class AuState implements LockssSerializable {
   protected SubstanceChecker.State hasSubstance;
   protected String substanceVersion;
   protected String metadataVersion;
+  protected long lastMetadataIndex;     // last time metadata extraction
+					// completed
   protected long lastContentChange;     // last time a new URL version created
   protected long lastPoPPoll;		// last completed PoP poll time
   protected int lastPoPPollResult;	// result of last PoP poll
@@ -127,6 +129,7 @@ public class AuState implements LockssSerializable {
 	 SubstanceChecker.State.Unknown,
 	 null, // substanceVersion
 	 null, // metadataVersion
+	 -1, // lastMetadataIndex
 	 0, // lastContentChange
 	 -1, // lastPoPPoll
 	 -1, // lastPoPPollResult
@@ -154,6 +157,7 @@ public class AuState implements LockssSerializable {
 	 SubstanceChecker.State.Unknown,
 	 null,				// substanceFeatureVersion
 	 null,				// metadataFeatureVersion
+	 -1,				// lastMetadataIndex
 	 TimeBase.nowMs(),              // lastContentChange
 	 -1, -1, -1, -1,
 	 historyRepo);
@@ -173,6 +177,7 @@ public class AuState implements LockssSerializable {
 		 SubstanceChecker.State hasSubstance,
 		 String substanceVersion,
 		 String metadataVersion,
+		 long lastMetadataIndex,
 		 long lastContentChange,
 		 long lastPoPPoll,
 		 int lastPoPPollResult,
@@ -198,6 +203,7 @@ public class AuState implements LockssSerializable {
     this.hasSubstance = hasSubstance;
     this.substanceVersion = substanceVersion;
     this.metadataVersion = metadataVersion;
+    this.lastMetadataIndex = lastMetadataIndex;
     this.lastContentChange = lastContentChange;
     this.lastPoPPoll = lastPoPPoll;
     this.lastPoPPollResult = lastPoPPollResult;
@@ -272,6 +278,20 @@ public class AuState implements LockssSerializable {
       return CrawlerStatus.getDefaultMessage(lastCrawlResult);
     }
     return lastCrawlResultMsg;
+  }
+
+  /**
+   * @return last time metadata indexing was completed.
+   */
+  public long getLastMetadataIndex() {
+    return lastMetadataIndex;
+  }
+
+  /**
+   * @return last time metadata indexing was completed.
+   */
+  public void setLastMetadataIndex(long time) {
+    lastMetadataIndex = time;
   }
 
   /**
@@ -488,6 +508,7 @@ public class AuState implements LockssSerializable {
 		       v3Agreement, highestV3Agreement,
 		       hasSubstance,
 		       substanceVersion, metadataVersion,
+		       lastMetadataIndex,
 		       lastContentChange,
 		       lastPoPPoll, lastPoPPollResult,
 		       lastLocalHashScan,

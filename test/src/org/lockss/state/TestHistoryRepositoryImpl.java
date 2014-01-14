@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.84 2013-09-21 04:33:48 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.85 2014-01-14 04:32:04 tlipkis Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    AuState.AccessType.OpenAccess,
 				    2, 1.0, 1.0,
 				    SubstanceChecker.State.Yes,
-				    "SubstVer3", "MetadatVer7",
+				    "SubstVer3", "MetadatVer7", 111444,
 				    12345,
 				    111222, // lastPoPPoll
 				    7, // lastPoPPollResult
@@ -315,6 +315,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 		 origState.getFeatureVersion(Plugin.Feature.Substance));
     assertEquals("MetadatVer7",
 		 origState.getFeatureVersion(Plugin.Feature.Metadata));
+    assertEquals(111444, origState.getLastMetadataIndex());
 
     repository.storeAuState(origState);
 
@@ -349,6 +350,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 		 loadedState.getFeatureVersion(Plugin.Feature.Substance));
     assertEquals("MetadatVer7",
 		 loadedState.getFeatureVersion(Plugin.Feature.Metadata));
+    assertEquals(111444, loadedState.getLastMetadataIndex());
     assertEquals(12345, loadedState.getLastContentChange());
     assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
 
@@ -432,6 +434,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				  SubstanceChecker.State.Unknown,
 				  null, // substanceVersion
 				  null, // metadataVersion
+				  -1, // lastMetadataIndex
 				  0, // lastContentChange
 				  444, // lastPoPPoll
 				  8, // lastPoPPollResult
@@ -469,6 +472,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  SubstanceChecker.State.Unknown,
 			  null, // substanceVersion
 			  null, // metadataVersion
+			  -1, // lastMetadataIndex
 			  0, // lastContentChange
 			  -1, // lastPoPPoll
 			  -1, // lastPoPPollResult
@@ -515,6 +519,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 			  SubstanceChecker.State.Unknown,
 			  null, // substanceVersion
 			  null, // metadataVersion
+			  -1, // lastMetadataIndex
 			  0, // lastContentChange
 			  444, // lastPoPPoll
 			  8, // lastPoPPollResult

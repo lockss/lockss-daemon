@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuState.java,v 1.22 2013-09-18 05:39:13 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.23 2014-01-14 04:32:04 tlipkis Exp $
  */
 
 /*
@@ -411,6 +411,13 @@ public class TestAuState extends LockssTestCase {
     assertNull(aus.getFeatureVersion(Plugin.Feature.Poll));
   }
 
+  public void testLastMetadataIndex() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(-1, aus.getLastMetadataIndex());
+    aus.setLastMetadataIndex(123);
+    assertEquals(123, aus.getLastMetadataIndex());
+  }
+    
   public void testLastContentChange() {
     TimeBase.setSimulated(10);
     AuState aus = new AuState(mau, historyRepo);

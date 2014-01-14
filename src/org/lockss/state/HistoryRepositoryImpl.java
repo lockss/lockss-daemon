@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.96 2013-09-18 05:39:13 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.97 2014-01-14 04:32:05 tlipkis Exp $
  */
 
 /*
@@ -276,6 +276,7 @@ public class HistoryRepositoryImpl
 				auState.getSubstanceState(),
 				auState.getFeatureVersion(Plugin.Feature.Substance),
 				auState.getFeatureVersion(Plugin.Feature.Metadata),
+				auState.getLastMetadataIndex(),
 				auState.getLastContentChange(),
 				auState.getLastPoPPoll(),
 				auState.getLastPoPPollResult(),

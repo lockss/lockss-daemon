@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.17 2013-09-18 05:39:13 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.18 2014-01-14 04:32:05 tlipkis Exp $
  */
 
 /*
@@ -160,6 +160,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 			      SubstanceChecker.State.Unknown,
 			      null, // substanceVersion
 			      null, // metadataVersion
+			      -1, // lastMetadataIndex
 			      0, // lastContentChange
 			      -1, // lastPoPPoll
 			      -1, // lastPoPPollResult
