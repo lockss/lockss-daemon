@@ -9,13 +9,15 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; status2 ; year ; name ; param[volume_name] ; comment[proxy] >
   comment[doNotProcess] = Moving to a new platform on July 17, 2013
+  comment[platform] = Only these 7 are Drupal AFAIK: ajpheart, ajpendo, ajpcell, ajprenal, ajpregu, ajplung and ajpgi
 
   {
 
     title <
       name = Advances in Physiology Education ;
       issn = 1043-4046 ;
-      eissn = 1522-1229
+      eissn = 1522-1229 ;
+      info[hw_jcode] = ajpadvan
     >
 
     param[base_url] = http://advan.physiology.org/
@@ -100,9 +102,10 @@
       au < doNotProcess ; doNotProcess ; 2008 ; Advances in Physiology Education Volume 32 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2009 ; Advances in Physiology Education Volume 33 ; 33 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Advances in Physiology Education Volume 34 ; 34 ; >
-      au < down ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
-      au < down ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
+      au < finished ; crawling ; 2011 ; Advances in Physiology Education Volume 35 ; 35 ; >
+      au < finished ; crawling ; 2012 ; Advances in Physiology Education Volume 36 ; 36 ; >
+      au < exists ; exists ; 2013 ; Advances in Physiology Education Volume 37 ; 37 ; >
+      au < expected ; exists ; 2014 ; Advances in Physiology Education Volume 38 ; 38 ; >
 
     }
 
@@ -111,8 +114,9 @@
   {
 
     title <
-      name = American Journal of Physiology ;
-      issn = 0002-9513
+      name = American Journal of Physiology - Legacy Content ;
+      issn = 0002-9513 ;
+      info[hw_jcode] = ajplegacy
     >
 
     param[base_url] = http://ajplegacy.physiology.org/
@@ -601,10 +605,12 @@
     title <
       name = American Journal of Physiology - Cell Physiology ;
       issn = 0363-6143 ;
-      eissn = 1522-1563
+      eissn = 1522-1563 ;
+      info[hw_jcode] = ajpcell
     >
 
     param[base_url] = http://ajpcell.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -760,6 +766,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Cell Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Cell Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Cell Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Cell Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Cell Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -770,10 +778,12 @@
     title <
       name = American Journal of Physiology - Endocrinology and Metabolism ;
       issn = 0193-1849 ;
-      eissn = 1522-1555
+      eissn = 1522-1555 ;
+      info[hw_jcode] = ajpendo
     >
 
     param[base_url] = http://ajpendo.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -929,6 +939,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Endocrinology and Metabolism Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Endocrinology and Metabolism Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Endocrinology and Metabolism Volume 307 ; 307 ; >
 
     }
 
@@ -939,10 +951,12 @@
     title <
       name = American Journal of Physiology - Gastrointestinal and Liver Physiology ;
       issn = 0193-1857 ;
-      eissn = 1522-1547
+      eissn = 1522-1547 ;
+      info[hw_jcode] = ajpgi
     >
 
     param[base_url] = http://ajpgi.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -1098,6 +1112,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -1108,10 +1124,12 @@
     title <
       name = American Journal of Physiology - Heart and Circulatory Physiology ;
       issn = 0363-6135 ;
-      eissn = 1522-1539
+      eissn = 1522-1539 ;
+      info[hw_jcode] = ajpheart
     >
 
     param[base_url] = http://ajpheart.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -1267,6 +1285,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -1277,10 +1297,12 @@
     title <
       name = American Journal of Physiology - Lung Cellular and Molecular Physiology ;
       issn = 1040-0605 ;
-      eissn = 1522-1504
+      eissn = 1522-1504 ;
+      info[hw_jcode] = ajplung
     >
 
     param[base_url] = http://ajplung.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -1386,6 +1408,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -1396,10 +1420,12 @@
     title <
       name = American Journal of Physiology - Regulatory, Integrative and Comparative Physiology ;
       issn = 0363-6119 ;
-      eissn = 1522-1490
+      eissn = 1522-1490 ;
+      info[hw_jcode] = ajpregu
     >
 
     param[base_url] = http://ajpregu.physiology.org/
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -1555,6 +1581,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -1565,11 +1593,13 @@
     title <
       name = American Journal of Physiology - Renal Physiology ;
       issn = 1931-857X ;
-      eissn = 1522-1466
+      eissn = 1522-1466 ;
+      info[hw_jcode] = ajprenal
     >
 
     param[base_url] = http://ajprenal.physiology.org/
     comment[0] = other possible issn 0363-6127
+    comment[doNotProcess] = Moving to a new platform on July 17, 2013
 
     {
 
@@ -1725,6 +1755,8 @@
       au < down ; crawling ; 2012 ; American Journal of Physiology - Renal Physiology Volume 303 ; 303 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Renal Physiology Volume 304 ; 304 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; American Journal of Physiology - Renal Physiology Volume 305 ; 305 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Renal Physiology Volume 306 ; 306 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; American Journal of Physiology - Renal Physiology Volume 307 ; 307 ; >
 
     }
 
@@ -1735,7 +1767,8 @@
     title <
       name = Journal of Applied Physiology ;
       issn = 8750-7587 ;
-      eissn = 1522-1601
+      eissn = 1522-1601 ;
+      info[hw_jcode] = jap
     >
 
     param[base_url] = http://jap.physiology.org/
@@ -1974,8 +2007,10 @@
       au < down ; crawling ; 2011 ; Journal of Applied Physiology Volume 111 ; 111 ; >
       au < down ; crawling ; 2012 ; Journal of Applied Physiology Volume 112 ; 112 ; >
       au < down ; crawling ; 2012 ; Journal of Applied Physiology Volume 113 ; 113 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
+      au < exists ; exists ; 2013 ; Journal of Applied Physiology Volume 114 ; 114 ; >
+      au < exists ; exists ; 2013 ; Journal of Applied Physiology Volume 115 ; 115 ; >
+      au < expected ; exists ; 2014 ; Journal of Applied Physiology Volume 116 ; 116 ; >
+      au < expected ; exists ; 2014 ; Journal of Applied Physiology Volume 117 ; 117 ; >
 
     }
 
@@ -1986,7 +2021,8 @@
     title <
       name = Journal of Neurophysiology ;
       issn = 0022-3077 ;
-      eissn = 1522-1598
+      eissn = 1522-1598 ;
+      info[hw_jcode] = jn
     >
 
     param[base_url] = http://jn.physiology.org/
@@ -2215,8 +2251,10 @@
       au < down ; crawling ; 2011 ; Journal of Neurophysiology Volume 106 ; 106 ; >
       au < down ; crawling ; 2012 ; Journal of Neurophysiology Volume 107 ; 107 ; >
       au < down ; crawling ; 2012 ; Journal of Neurophysiology Volume 108 ; 108 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; >
+      au < exists ; exists ; 2013 ; Journal of Neurophysiology Volume 109 ; 109 ; >
+      au < exists ; exists ; 2013 ; Journal of Neurophysiology Volume 110 ; 110 ; >
+      au < expected ; exists ; 2014 ; Journal of Neurophysiology Volume 111 ; 111 ; >
+      au < expected ; exists ; 2014 ; Journal of Neurophysiology Volume 112 ; 112 ; >
 
     }
 
@@ -2227,7 +2265,8 @@
     title <
       name = Physiological Genomics ;
       issn = 1094-8341 ;
-      eissn = 1531-2267
+      eissn = 1531-2267 ;
+      info[hw_jcode] = physiolgenomics
     >
 
     param[base_url] = http://physiolgenomics.physiology.org/
@@ -2332,7 +2371,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiological Genomics Volume 42A ; 42A ; >
       au < down ; crawling ; 2011 ; Physiological Genomics Volume 43 ; 43 ; >
       au < down ; crawling ; 2012 ; Physiological Genomics Volume 44 ; 44 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
+      au < exists ; exists ; 2013 ; Physiological Genomics Volume 45 ; 45 ; >
+      au < expected ; exists ; 2014 ; Physiological Genomics Volume 46 ; 46 ; >
 
     }
 
@@ -2343,7 +2383,8 @@
     title <
       name = Physiological Reviews ;
       issn = 0031-9333 ;
-      eissn = 1522-1210
+      eissn = 1522-1210 ;
+      info[hw_jcode] = physrev
     >
 
     param[base_url] = http://physrev.physiology.org/
@@ -2542,7 +2583,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiological Reviews Volume 90 ; 90 ; >
       au < down ; crawling ; 2011 ; Physiological Reviews Volume 91 ; 91 ; >
       au < down ; crawling ; 2012 ; Physiological Reviews Volume 92 ; 92 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
+      au < exists ; exists ; 2013 ; Physiological Reviews Volume 93 ; 93 ; >
+      au < expected ; exists ; 2014 ; Physiological Reviews Volume 94 ; 94 ; >
 
     }
 
@@ -2553,7 +2595,8 @@
     title <
       name = Physiology ;
       issn = 1548-9213 ;
-      eissn = 1548-9221
+      eissn = 1548-9221 ;
+      info[hw_jcode] = nips
     >
 
     param[base_url] = http://physiologyonline.physiology.org/
@@ -2622,7 +2665,8 @@
       au < doNotProcess ; doNotProcess ; 2010 ; Physiology Volume 25 ; 25 ; >
       au < down ; crawling ; 2011 ; Physiology Volume 26 ; 26 ; >
       au < down ; crawling ; 2012 ; Physiology Volume 27 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Physiology Volume 28 ; 28 ; >
+      au < exists ; exists ; 2013 ; Physiology Volume 28 ; 28 ; >
+      au < expected ; exists ; 2014 ; Physiology Volume 29 ; 29 ; >
 
     }
 
