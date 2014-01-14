@@ -1,5 +1,5 @@
 /*
- * $Id: AccountManager.java,v 1.15 2013-10-17 07:48:18 tlipkis Exp $
+ * $Id: AccountManager.java,v 1.16 2014-01-14 04:26:18 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,9 @@ public class AccountManager
     "          <string>AuditableEvent</string>" +
     "        </value>" +
     "      </pattern>" +
-    "      <action class=\"org.lockss.alert.AlertActionSyslog\"/>" +
+    "      <action class=\"org.lockss.alert.AlertActionSyslog\">" +
+    "        <fixedLevel>-1</fixedLevel>" +
+    "      </action>" +
     "    </org.lockss.alert.AlertFilter>" +
     "  </filters>" +
     "</org.lockss.alert.AlertConfig>";

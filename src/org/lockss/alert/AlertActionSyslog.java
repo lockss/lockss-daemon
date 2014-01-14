@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionSyslog.java,v 1.3 2012-07-17 02:33:26 thib_gc Exp $
+ * $Id: AlertActionSyslog.java,v 1.4 2014-01-14 04:26:18 tlipkis Exp $
  */
 
 /*
@@ -70,14 +70,17 @@ public class AlertActionSyslog extends AbstractAlertAction {
   public static final String PARAM_FACILITY = PREFIX + "syslog.facility";
   static final int DEFAULT_FACILITY = 8;
 
+  boolean constRun;			// detects deserialization w/out init
   int fixedLevel = -1;
 
   // XXX need test/src/org/lockss/alert/TestAlertActionSyslog.java
 
   public AlertActionSyslog() {
+    constRun = true;
   }
 
   public AlertActionSyslog(int level) {
+    this();
     fixedLevel = level;
   }
 
@@ -99,15 +102,23 @@ public class AlertActionSyslog extends AbstractAlertAction {
     int level;
     int facility;
     Configuration config = CurrentConfig.getCurrentConfig();
-    log.debug("record: " + makeMessage(alert));
     if (!config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
+      if (log.isDebug3()) log.debug3("Record (disabled): " +
+				     makeMessage(alert));
       return;
     }
     hostname = config.get(PARAM_HOST, DEFAULT_HOST);
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
-    level = (fixedLevel < 0 ? config.getInt(PARAM_LEVEL, DEFAULT_LEVEL) :
-	     fixedLevel);
+    if (!constRun || fixedLevel < 0) {
+      level = config.getInt(PARAM_LEVEL, DEFAULT_LEVEL);
+    } else {
+      level = fixedLevel;
+    }
     facility = config.getInt(PARAM_FACILITY, DEFAULT_FACILITY);
+    if (log.isDebug2()) {
+      log.debug2("Record (" + facility + "." + level + "): " +
+		 makeMessage(alert));
+    }
     try {
       socket = new DatagramSocket();
     } catch(IOException ioe) {
@@ -115,11 +126,10 @@ public class AlertActionSyslog extends AbstractAlertAction {
       return;
     }
     // don't depend on name resolving the first time we try
-    for (int i = 0; i < 3; i++) {
+    int cnt = 3;
+    while (host == null && cnt-- > 0) {
       try {
-	if (hostname != null && host == null) {
-	  host = InetAddress.getByName(hostname);
-	}
+	host = InetAddress.getByName(hostname);
       } catch (UnknownHostException e) {
 	// no action
       }
@@ -128,19 +138,20 @@ public class AlertActionSyslog extends AbstractAlertAction {
       log.error("Can't resolve: " + hostname);
       return;
     }
-    int indicator = (facility + level);
+    int indicator = (facility << 3 + level);
     String msg = "<"+ indicator +">" + "LOCKSS: " + makeMessage(alert);
-    if (host != null) {
-      try {
-	DatagramPacket packet =
-	  new DatagramPacket(msg.getBytes(),
-			     msg.length(),
-			     host,
-			     port);
-	socket.send(packet);
-      } catch (IOException ioe) {
-	log.error("Can't send to " + hostname + ":" + port + " " + ioe);
-	ioe.printStackTrace();
+    try {
+      DatagramPacket packet =
+	new DatagramPacket(msg.getBytes(),
+			   msg.length(),
+			   host,
+			   port);
+      socket.send(packet);
+    } catch (IOException ioe) {
+      log.error("Can't send to " + hostname + ":" + port, ioe);
+    } finally {
+      if (socket != null) {
+	socket.close();
       }
     }
   }
