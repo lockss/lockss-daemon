@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.25 2012-06-17 23:06:00 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.26 2014-01-14 04:26:56 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
   private static final String AU_COL_NAME = "au";
   private static final String CRAWL_TYPE = "crawl_type";
+  private static final String PLUGIN = "plugin";
   private static final String START_TIME_COL_NAME = "start";
 //   private static final String END_TIME_COL_NAME = "end";
   private static final String DURATION_COL_NAME = "dur";
@@ -89,6 +90,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
 			   ColumnDescriptor.TYPE_STRING)
       .setComparator(CatalogueOrderComparator.SINGLETON),
+      new ColumnDescriptor(PLUGIN, "Plugin",
+			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
 			   ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
@@ -166,7 +169,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
     table.setRows(getRows(cms, key, includeInternalAus, ct));
     table.setDefaultSortRules(sortRules);
-    table.setColumnDescriptors(getColDescs(cms, ct));
+    table.setColumnDescriptors(getColDescs(cms, ct),
+			       "-" + PLUGIN);
     table.setSummaryInfo(getSummaryInfo(cms, ct));
   }
 
@@ -236,6 +240,7 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 	    new StatusTable.Reference(au.getName(),
 				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
 				      au.getAuId()));
+    row.put(PLUGIN, au.getPlugin().getPluginName());
     row.put(CRAWL_TYPE, "New Content");
     row.put(CRAWL_STATUS, "Pending");
     row.put(SORT_KEY1, SORT_BASE_WAITING);
@@ -245,15 +250,19 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
   }
 
   private Map makeRow(CrawlerStatus status, Counts ct, int rowNum) {
+    Map row = new HashMap();
     String key = status.getKey();
 
-    Map row = new HashMap();
     Object statusColRef = null;
     
     row.put(AU_COL_NAME,
 	    new StatusTable.Reference(status.getAuName(),
 				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
 				      status.getAuId()));
+    ArchivalUnit au = status.getAu();
+    if (au != null) {
+      row.put(PLUGIN, au.getPlugin().getPluginName());
+    }
     row.put(CRAWL_TYPE, status.getType());
     if (status.getStartTime() > 0) {
       row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
@@ -311,7 +320,6 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 // 	    (StringUtil.separatedString(status.getSources(), "\n")));
     if (statusColRef == null) {
       Object statusMsg = status.getCrawlStatusMsg();
-      ArchivalUnit au = status.getAu();
       if (au != null) {
 	if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
 	    AuUtil.getAuState(au).hasNoSubstance()) {

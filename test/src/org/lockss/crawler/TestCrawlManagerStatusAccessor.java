@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.15 2012-06-17 23:06:00 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.16 2014-01-14 04:26:56 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private CrawlManagerStatusAccessor cmStatusAcc;
 
   private static final String AU_COL_NAME = "au";
+  private static final String PLUGIN = "plugin";
   private static final String CRAWL_TYPE = "crawl_type";
   private static final String START_TIME_COL_NAME = "start";
   private static final String END_TIME_COL_NAME = "end";
@@ -109,6 +110,13 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 // 			   ColumnDescriptor.TYPE_STRING),
     });
 
+  private static List nonDefaultColDescs =
+    ListUtil.fromArray(new ColumnDescriptor[] {
+      new ColumnDescriptor(PLUGIN, "Plugin",
+			   ColumnDescriptor.TYPE_STRING),
+    });
+
+
   private MockLockssDaemon theDaemon;
 
 
@@ -147,6 +155,15 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     assertEquals(0, table.getSortedRows().size());
     assertEquals(expectedColDescs, table.getColumnDescriptors());
     assertEquals(new ArrayList(), table.getSortedRows());
+  }
+
+  public void testPopulateTableAllCols() {
+    StatusTable table = new StatusTable("test");
+    table.setProperty(StatusTable.PROP_COLUMNS, "*");
+    cmStatusAcc.populateTable(table);
+    assertEquals(0, table.getSortedRows().size());
+    assertSameElements(ListUtil.append(expectedColDescs, nonDefaultColDescs),
+		       table.getColumnDescriptors());
   }
 
   private MockArchivalUnit makeMockAuWithId(String auid) {
