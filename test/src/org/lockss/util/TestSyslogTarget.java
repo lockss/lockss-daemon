@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.8 2009-06-13 09:11:42 tlipkis Exp $
+ * $Id: TestSyslogTarget.java,v 1.9 2014-01-14 04:33:30 tlipkis Exp $
  */
 
 /*
@@ -40,10 +40,6 @@ import org.lockss.test.*;
 import org.lockss.daemon.*;
 
 public class TestSyslogTarget extends LockssTestCase {
-  private static final int syslogPort = 9999;
-  private static final String syslogHost = "127.0.0.1";
-  private static final String PARAM_HOST = SyslogTarget.PARAM_HOST;
-  private static final String PARAM_PORT = SyslogTarget.PARAM_PORT;
 
   public TestSyslogTarget(String msg){
     super(msg);
@@ -56,38 +52,35 @@ public class TestSyslogTarget extends LockssTestCase {
   }
 
   public void testSeverityToFacility(){
-    assertEquals(8+0,
+    assertEquals(0,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
-    assertEquals(8+2,
+    assertEquals(2,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
-    assertEquals(8+4,
+    assertEquals(4,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_WARNING));
-    assertEquals(8+5,
+    assertEquals(5,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_INFO));
-    assertEquals(8+6,
+    assertEquals(6,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
-    assertEquals(8+7,
+    assertEquals(7,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG2));
-    assertEquals(8+7,
+    assertEquals(7,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG3));
   }
 
   private void setConfig(String host, int port) throws Exception {
-    String conf1 =
-      PARAM_HOST + "=" + host + "\n" +
-      PARAM_PORT + "=" + port + "\n";
-    List list = ListUtil.list(FileTestUtil.urlOfString(conf1));
-    ConfigurationUtil.setCurrentConfigFromUrlList(list);
+    ConfigurationUtil.addFromArgs(SyslogTarget.PARAM_HOST, host,
+				  SyslogTarget.PARAM_PORT, ""+port);
   }
 
   public void testHandleMessageGetsMessageRight() throws Exception{
     int expectedPort = 1234;
     String expectedHost = "199.99.9.99";
-    setConfig(expectedHost, expectedPort);
+    ConfigurationUtil.addFromArgs(SyslogTarget.PARAM_HOST, expectedHost,
+				  SyslogTarget.PARAM_PORT, expectedPort+"",
+				  SyslogTarget.PARAM_FACILITY, 8+"");
 
-    String expectedDataStr =
-      "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
-      "LOCKSS: TestMessage";
+    String expectedDataStr = "<66>LOCKSS: TestMessage";
     byte[] expectedData = expectedDataStr.getBytes();
 
     SyslogTarget target = newSyslogTarget();
@@ -100,13 +93,14 @@ public class TestSyslogTarget extends LockssTestCase {
     assertEquals(expectedHost, packet.getAddress().getHostAddress());
 
     byte[] data = packet.getData();
-    assertEquals(expectedData.length, packet.getLength());
     assertEquals(new String(expectedData), new String(data));
+    assertEquals(expectedData.length, packet.getLength());
   }
 
   public void testActualDatagramComm() throws Exception {
     int port = 9091;
-    setConfig("127.0.0.1", port);
+    ConfigurationUtil.addFromArgs(SyslogTarget.PARAM_HOST, "127.0.0.1",
+				  SyslogTarget.PARAM_PORT, ""+port);
     DatagramSocketListener dsl = new DatagramSocketListener(port, 1);
     try{
       dsl.beginListening();
@@ -114,9 +108,7 @@ public class TestSyslogTarget extends LockssTestCase {
     catch (BindException e) {
       fail("Could not bind to port " + port + ": " + e);
     }
-    String expectedMsg =
-      "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
-      "LOCKSS: TestMessage";
+    String expectedMsg = "<146>LOCKSS: TestMessage";
 
     byte[] msgBytes = expectedMsg.getBytes();
 
@@ -129,9 +121,7 @@ public class TestSyslogTarget extends LockssTestCase {
     byte[] recData = recPacket.getData();
 
     assertEquals(msgBytes.length, recPacket.getLength());
-
-    for (int ix=0; ix<msgBytes.length; ix++){
-      assertEquals(msgBytes[ix], recData[ix]);
-    }
+    assertEquals(new String(expectedMsg),
+		 new String(recData).substring(0, expectedMsg.length()));
   }
 }

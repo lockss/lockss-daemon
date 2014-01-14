@@ -35,13 +35,18 @@ import org.lockss.config.*;
 public class SyslogTarget implements LogTarget{
 
   static final String PREFIX = Logger.PREFIX+"syslog.";
-  static final String PARAM_PORT = PREFIX + "port";
-  static final String PARAM_HOST = PREFIX + "host";
 
+  /** Syslog host */
+  static final String PARAM_HOST = PREFIX + "host";
   private static final String DEFAULT_HOST = "127.0.0.1";
+
+  /** Syslog UDP port */
+  static final String PARAM_PORT = PREFIX + "port";
   private static final int DEFAULT_PORT = 514;
 
-  static final int FACILITY = 8; //user level facility
+  /** Syslog facility */
+  public static final String PARAM_FACILITY = PREFIX + "facility";
+  static final int DEFAULT_FACILITY = 18;
 
   static final int SYSLOG_EMERG = 0;	// system is unusable
   static final int SYSLOG_ALERT = 1;	// action must be taken immediately
@@ -54,6 +59,7 @@ public class SyslogTarget implements LogTarget{
 
   private int port;
   private String hostname = null;
+  private int facility = DEFAULT_FACILITY;
   private InetAddress host = null;
   private DatagramSocket socket = null;
 
@@ -66,7 +72,7 @@ public class SyslogTarget implements LogTarget{
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences changedKeys) {
-	  setConfig(changedKeys);
+	  setConfig(newConfig, oldConfig, changedKeys);
 	}});
     try {
       socket = new DatagramSocket();
@@ -76,11 +82,16 @@ public class SyslogTarget implements LogTarget{
     }
   }
 
-  private void setConfig(Configuration.Differences changedKeys) {
-    port = CurrentConfig.getIntParam(PARAM_PORT, DEFAULT_PORT);
-    if (changedKeys.contains(PARAM_HOST)) {
-      hostname = CurrentConfig.getParam(PARAM_HOST, DEFAULT_HOST);
-      host = null;			// force new name lookup
+  private void setConfig(Configuration newConfig,
+			 Configuration oldConfig,
+			 Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PREFIX)) {
+      port = newConfig.getInt(PARAM_PORT, DEFAULT_PORT);
+      if (changedKeys.contains(PARAM_HOST)) {
+	hostname = newConfig.get(PARAM_HOST, DEFAULT_HOST);
+	host = null;			// force new name lookup
+      }
+      facility = newConfig.getInt(PARAM_FACILITY, DEFAULT_FACILITY);
     }
   }
 
@@ -104,7 +115,7 @@ public class SyslogTarget implements LogTarget{
 
   public void handleMessage(DatagramSocket socket, int level, String message) {
     int syslogSev = loggerSeverityToSyslogSeverity(level);
-    String msg = "<"+syslogSev+">"+"LOCKSS: "+message;
+    String msg = "<" + ((facility << 3) + syslogSev) + ">LOCKSS: " + message;
     InetAddress hst = getHost();
     if (hst != null) {
       try {
@@ -124,19 +135,19 @@ public class SyslogTarget implements LogTarget{
   protected static int loggerSeverityToSyslogSeverity(int severity){
     switch (severity){
     case Logger.LEVEL_CRITICAL:
-      return FACILITY + SYSLOG_EMERG;
+      return SYSLOG_EMERG;
     default:
     case Logger.LEVEL_ERROR:
-      return FACILITY + SYSLOG_CRIT;
+      return SYSLOG_CRIT;
     case Logger.LEVEL_WARNING:
-      return FACILITY + SYSLOG_WARNING;
+      return SYSLOG_WARNING;
     case Logger.LEVEL_INFO:
-      return FACILITY + SYSLOG_NOTICE;
+      return SYSLOG_NOTICE;
     case Logger.LEVEL_DEBUG:
-      return FACILITY + SYSLOG_INFO;
+      return SYSLOG_INFO;
     case Logger.LEVEL_DEBUG2:
     case Logger.LEVEL_DEBUG3:
-      return FACILITY + SYSLOG_DEBUG;
+      return SYSLOG_DEBUG;
     }
   }
 }
