@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.84 2013-06-19 23:06:57 fergaloy-sf Exp $
+ * $Id: ServletUtil.java,v 1.85 2014-01-14 04:31:06 tlipkis Exp $
  */
 
 /*
@@ -1722,6 +1722,7 @@ public class ServletUtil {
                    + "sup {font-weight: normal; vertical-align: super; }\n"
                    + "a.colhead, a.colhead:link, a.colhead:visited { text-decoration: none; font-weight: bold; color: blue; }\n"
                    + "td.colhead { font-weight: bold; background: #e0e0e0; }\n"
+                   + "div.resize { resize: both; overflow: auto; }\n"
                    + "--> </style>");
   }
 
