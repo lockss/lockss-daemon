@@ -133,7 +133,6 @@ public class HtmlParserLinkExtractor implements LinkExtractor {
       logger.warning("Unable to parse url: " + srcUrl, e);
     }
     catch (RuntimeException e) {
-      e.printStackTrace();
       logger.warning("Encountered a runtime exception, " +
                          "continuing link extraction with Gosling", e);
     }

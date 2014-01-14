@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.92 2013-10-23 04:19:34 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.93 2014-01-14 04:28:53 tlipkis Exp $
  */
 
 /*
@@ -473,9 +473,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
         location = url + location;
         subUrls.add(location);
       } catch (IOException e) {
-        e.printStackTrace();
+	logger.error("Normalizing (" + unnormMode + ") " + child, e);
       } catch(NullPointerException ex) {
-        ex.printStackTrace();
+	logger.error("Normalizing (" + unnormMode + ") " + child, ex);
       }
     }
     

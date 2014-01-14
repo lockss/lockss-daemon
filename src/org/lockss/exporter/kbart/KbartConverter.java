@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.48 2013-12-09 20:56:16 pgust Exp $
+ * $Id: KbartConverter.java,v 1.49 2014-01-14 04:28:54 tlipkis Exp $
  */
 
 /*
@@ -238,8 +238,7 @@ public class KbartConverter {
       try {
         list.addAll(results.get(i).get());
       } catch (Exception e) {
-        log.error("Title conversion problem; cancelling remaining tasks");
-        e.printStackTrace();
+        log.error("Title conversion problem; cancelling remaining tasks", e);
         // Cancel other tasks, even if running
         for (int j=i+1; j<results.size(); j++) results.get(j).cancel(true);
         // Rethrow
