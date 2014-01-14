@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.82 2013-12-17 23:16:58 pgust Exp $
+ * $Id: ServeContent.java,v 1.83 2014-01-14 04:29:46 tlipkis Exp $
  */
 
 /*
@@ -362,10 +362,13 @@ public class ServeContent extends LockssServlet {
   }
 
   void logAccess(String url, String msg) {
-    log.log(paramAccessLogLevel, "Content access: " + url + " : " + msg);
+    String logmsg = "Content access from " + req.getRemoteAddr() + ": " +
+      url + ": " + msg;
+    if (paramAccessLogLevel >= 0) {
+      log.log(paramAccessLogLevel, logmsg);
+    }
     if (paramAccessAlertsEnabled) {
-      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS),
-			  "Content access: " + url + " : " + msg);
+      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS), logmsg);
     }
   }
 

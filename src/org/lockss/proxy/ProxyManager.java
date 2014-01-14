@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.56 2013-10-17 07:50:11 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.57 2014-01-14 04:29:46 tlipkis Exp $
  */
 
 /*
@@ -608,18 +608,22 @@ public class ProxyManager extends BaseProxyManager {
 
 
 
-  public void logAccess(String url, String msg, long reqElapsedTime) {
-    logAccess(url, msg + " in " +
-	      StringUtil.timeIntervalToString(reqElapsedTime));
+  public void logAccess(String url, String msg, String remoteAddr,
+			long reqElapsedTime) {
+    if (reqElapsedTime >= 0) {
+      msg += " in " + StringUtil.timeIntervalToString(reqElapsedTime);
+    }
+    logAccess(url, msg, remoteAddr);
   }
 
-  public void logAccess(String url, String msg) {
+  public void logAccess(String url, String msg, String remoteAddr) {
+    String logmsg = "Proxy access from " + remoteAddr + ": " +
+      url + " : " + msg;
     if (paramAccessLogLevel >= 0) {
-      log.log(paramAccessLogLevel, "Proxy access: " + url + " : " + msg);
+      log.log(paramAccessLogLevel, logmsg);
     }
     if (paramAccessAlertsEnabled) {
-      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS),
-			  "Proxy access: " + url + " : " + msg);
+      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONTENT_ACCESS), logmsg);
     }
   }
 }
