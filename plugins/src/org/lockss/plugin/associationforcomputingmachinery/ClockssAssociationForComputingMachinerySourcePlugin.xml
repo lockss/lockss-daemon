@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.59.2</string>
+    <string>1.62.0</string>  <!-- version needed for builder -->
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -28,7 +28,7 @@
     <map>
       <entry>
         <string>Metadata</string>
-        <string>10</string>
+        <string>11</string>
       </entry>
     </map>
   </entry>
@@ -40,7 +40,7 @@
     <string>au_substance_url_pattern</string>
     <list>
       <!-- http://clockss-ingest.lockss.org/sourcefiles/acm-released/2012/7nov2012/NEW-JOUR-JDIQ-V4I1-2378016/NEW-JOUR-JDIQ-V4I1-2378016.xml -->
-      <string>"^%s%d/.+\.(pdf|html|xml|mov)$", base_url, year</string>
+      <string>"^%s%d/.+\.xml$", base_url, year</string>
     </list>
   </entry>
   <entry>
@@ -48,6 +48,47 @@
     <string>Association for Computing Machinery Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
+    <string>plugin_archive_file_types</string>
+    <string>standard</string>
+  </entry>
+  <!-- new fangled -->
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_source_xml_metadata_extractor_helper</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorHelper</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.associationforcomputingmachinery.ACMSourceXmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.clockss.ClockssSourceHtmlLinkExtractorFactory</string>
+  </entry>
+  
+    <!-- old fashioned...
+    <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.associationforcomputingmachinery.AssociationForComputingMachineryArticleIteratorFactory</string>
   </entry>
@@ -65,7 +106,7 @@
     </map>
   </entry>
   <entry>
-    <string>application/pdf_metadata_extractor_factory_map</string>
+    <string>application/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
@@ -73,4 +114,6 @@
       </entry>
     </map>
   </entry>
+    -->
+
  </map>    
