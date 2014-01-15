@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.3 2013-11-11 20:57:19 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.4 2014-01-15 15:23:51 aishizaki Exp $
  */
 
 /*
@@ -249,7 +249,6 @@ public class XPathXmlMetadataParser  {
     ArticleMetadata returnAM = makeNewArticleMetadata(); 
     NumberFormat format = NumberFormat.getInstance();
 
-
     for (int i = 0; i < xPathList.length; i++) { 
       QName definedType = xPathList[i].xVal.getType();
       Object itemResult = xPathList[i].xExpr.evaluate(startNode, XPathConstants.NODESET);
@@ -291,6 +290,7 @@ public class XPathXmlMetadataParser  {
         }
 
         if (!StringUtil.isNullString(value)) {
+          log.debug3("  returning ("+xPathList[i].xKey+", "+ value);
           returnAM.putRaw(xPathList[i].xKey, value);
         } 
       }
@@ -339,9 +339,11 @@ public class XPathXmlMetadataParser  {
     log.warning("Cannot parse XML file for Metadata -" + ex.getMessage());
     return null;
   }
-
-  InputStream iStream = cu.getUnfilteredInputStream();
-  InputSource bReader = new InputSource(iStream);
+/* replaced getUnfilteredInputStream() with openForReading() for now so ACM can
+   continue to use their BaseCacheUrl.openForReading() to perform filtering 
+ */
+  //InputStream iStream = cu.getUnfilteredInputStream();
+  InputSource bReader = new InputSource(cu.openForReading());
   bReader.setEncoding(cu.getEncoding());
   Document doc;
   try {
