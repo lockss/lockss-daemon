@@ -4,9 +4,9 @@
     name = Wildlife Information Liaison Development 
   >
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
   param[base_url] = http://www.threatenedtaxa.org/
-  implicit < status ; year ; name ; param[volume_name] >
+  implicit < status ; year ; param[year] ; name ; volume >
   comment[platform] = moving to OJS2
   
   {
@@ -17,8 +17,14 @@
       issnl = 0974-7907
     >
 
-    au < doNotProcess ; 2013 ; Journal of Threatened Taxa Volume 1 ; 1 >
-    au < doNotProcess ; 2014 ; Journal of Threatened Taxa Volume 2 ; 2 >
+    comment[dNP] = migrating to OJS platform Sept 2013
+
+    au < doNotProcess ; 2009 ; 2009 ; Journal of Threatened Taxa Volume 1 ; 1 >
+    au < doNotProcess ; 2010 ; 2010 ; Journal of Threatened Taxa Volume 2 ; 2 >
+    au < doNotProcess ; 2011 ; 2011 ; Journal of Threatened Taxa Volume 3 ; 3 >
+    au < doNotProcess ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 4 ; 4 >
+    au < doNotProcess ; 2013 ; 2013 ; Journal of Threatened Taxa Volume 5 ; 5 >
+    au < doNotProcess ; 2014 ; 2014 ; Journal of Threatened Taxa Volume 6 ; 6 >
 
   }
 
