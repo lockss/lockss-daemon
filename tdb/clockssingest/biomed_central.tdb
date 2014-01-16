@@ -117,7 +117,7 @@
       au < finished ; crawling ; 2011 ; BMC Biology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; BMC Biology Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; BMC Biology Volume 11 ; 11 >
-      au < expected ; exists ; 2014 ; BMC Biology Volume 12 ; 12 >
+      au < manifest ; exists ; 2014 ; BMC Biology Volume 12 ; 12 >
 
     }
 
@@ -200,7 +200,7 @@
       comment[journal_title] = journal name and journal code change in 2013, same issn used
 
       au < crawling ; exists ; 2013 ; BMC Hematology Volume 13 ; 13 >
-      au < expected ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; BMC Hematology Volume 14 ; 14 >
       
       }
 
@@ -546,7 +546,7 @@
       au < finished ; crawling ; 2011 ; BMC Emergency Medicine Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Emergency Medicine Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Emergency Medicine Volume 13 ; 13 >
-      au < expected ; exists ; 2014 ; BMC Emergency Medicine Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; BMC Emergency Medicine Volume 14 ; 14 >
 
     }
 
@@ -793,7 +793,7 @@
       au < finished ; crawling ; 2011 ; BMC Immunology Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Immunology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Immunology Volume 14 ; 14 >
-      au < expected ; exists ; 2014 ; BMC Immunology Volume 15 ; 15 >
+      au < manifest ; exists ; 2014 ; BMC Immunology Volume 15 ; 15 >
 
     }
 
@@ -1445,7 +1445,7 @@
 
       au < crawling ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 >
-      au < expected ; exists ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 >
+      au < manifest ; exists ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 >
 
     }
 
@@ -1667,7 +1667,7 @@
         param[journal_issn] = 2052-1847 
 
         au < crawling ; exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
-        au < expected ; exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
+        au < manifest ; exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
 
       }
     }
@@ -1929,7 +1929,7 @@
       au < finished ; crawling ; 2011 ; AIDS Research and Therapy Volume 8 ; 8 >
       au < finished ; crawling ; 2012 ; AIDS Research and Therapy Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; AIDS Research and Therapy Volume 10 ; 10 >
-      au < expected ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
+      au < manifest ; exists ; 2014 ; AIDS Research and Therapy Volume 11 ; 11 >
 
     }
 
@@ -1976,7 +1976,7 @@
       au < finished ; crawling ; 2011 ; Allergy, Asthma & Clinical Immunology Volume 7 ; 7 >
       au < finished ; crawling ; 2012 ; Allergy, Asthma & Clinical Immunology Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Allergy, Asthma & Clinical Immunology Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; Allergy, Asthma & Clinical Immunology Volume 10 ; 10 >
 
     }
 
@@ -2145,7 +2145,7 @@
       au < finished ; crawling ; 2011 ; Archives of Public Health Volume 69 ; 69 >
       au < finished ; crawling ; 2012 ; Archives of Public Health Volume 70 ; 70 >
       au < crawling ; exists ; 2013 ; Archives of Public Health Volume 71 ; 71 >
-      au < expected ; exists ; 2014 ; Archives of Public Health Volume 72 ; 72 >
+      au < manifest ; exists ; 2014 ; Archives of Public Health Volume 72 ; 72 >
 
     }
 
@@ -3693,7 +3693,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Harm Reduction Journal Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Harm Reduction Journal Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Harm Reduction Journal Volume 10 ; 10 >
-      au < expected ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
+      au < manifest ; exists ; 2014 ; Harm Reduction Journal Volume 11 ; 11 >
 
     }
 
@@ -3872,7 +3872,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Human Resources for Health Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Human Resources for Health Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Human Resources for Health Volume 11 ; 11 >
-      au < expected ; exists ; 2014 ; Human Resources for Health Volume 12 ; 12 >
+      au < manifest ; exists ; 2014 ; Human Resources for Health Volume 12 ; 12 >
 
     }
 
@@ -4021,7 +4021,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; International Breastfeeding Journal Volume 6 ; 6 >
       au < crawling ; exists ; 2012 ; International Breastfeeding Journal Volume 7 ; 7 >
       au < crawling ; exists ; 2013 ; International Breastfeeding Journal Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
+      au < manifest ; exists ; 2014 ; International Breastfeeding Journal Volume 9 ; 9 >
 
     }
 
@@ -4539,7 +4539,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Journal of Clinical Bioinformatics Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Journal of Clinical Bioinformatics Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Journal of Clinical Bioinformatics Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
+      au < manifest ; exists ; 2014 ; Journal of Clinical Bioinformatics Volume 4 ; 4 >
 
     }
 
@@ -4798,7 +4798,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Journal of Nanobiotechnology Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Nanobiotechnology Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Journal of Nanobiotechnology Volume 11 ; 11 >
-      au < expected ; exists ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
+      au < manifest ; exists ; 2014 ; Journal of Nanobiotechnology Volume 12 ; 12 >
 
     }
 
@@ -4949,7 +4949,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1916-0216
 
       au < crawling ; exists ; 2013 ; Journal of Otolaryngology - Head and Neck Surgery Volume 42 ; 42 >
-      au < expected ; exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
+      au < manifest ; exists ; 2014 ; Journal of Otolaryngology - Head and Neck Surgery Volume 43 ; 43 >
 
     }
 
@@ -5226,7 +5226,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2011 ; Microbial Informatics and Experimentation Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Microbial Informatics and Experimentation Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Microbial Informatics and Experimentation Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
+      au < manifest ; exists ; 2014 ; Microbial Informatics and Experimentation Volume 4 ; 4 >
 
     }
 
@@ -5418,7 +5418,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2051-3933
 
       au < crawling ; exists ; 2013 ; Movement Ecology Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Movement Ecology Volume 2 ; 2 >
 
     }
 
