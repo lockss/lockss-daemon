@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.9 2014-01-13 18:54:21 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.10 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -373,6 +373,11 @@ implements SourceXmlMetadataExtractorHelper {
   @Override
   public String getFilenameXPathKey() {
     throw new UnsupportedOperationException("getFilenameKey() never called");
+  }
+
+  @Override
+  public boolean getDoXmlFiltering() {
+    return false;
   }
 
 }    

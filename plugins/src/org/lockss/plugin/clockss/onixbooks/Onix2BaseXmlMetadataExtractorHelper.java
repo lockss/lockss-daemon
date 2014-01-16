@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.4 2014-01-09 23:13:12 alexandraohlson Exp $
+ * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.w3c.dom.NodeList;
  *  is used to represent the filename)
  *  @author alexohlson
  */
-abstract class Onix2BaseXmlMetadataExtractorHelper
+public abstract class Onix2BaseXmlMetadataExtractorHelper
 implements SourceXmlMetadataExtractorHelper {
   static Logger log = Logger.getLogger(Onix2BaseXmlMetadataExtractorHelper.class);
 
@@ -472,5 +472,11 @@ implements SourceXmlMetadataExtractorHelper {
   public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
   }
+  
+  @Override
+  public boolean getDoXmlFiltering() {
+    return false;
+  }
+
 
 }    

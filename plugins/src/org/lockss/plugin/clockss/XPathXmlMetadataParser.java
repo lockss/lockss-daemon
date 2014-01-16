@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.4 2014-01-15 15:23:51 aishizaki Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.w3c.dom.Document;
@@ -112,11 +113,13 @@ public class XPathXmlMetadataParser  {
   final protected XPathInfo[] gXPathList;
   final protected XPathInfo[] aXPathList;
   protected XPathExpression articlePath;
+  protected boolean doXmlFiltering;
 
   protected XPathXmlMetadataParser(int gSize, int aSize) {
     gXPathList = new XPathInfo[gSize];
     aXPathList = new XPathInfo[aSize];
     articlePath = null;
+    doXmlFiltering = false; // default behavior
   }
 
 
@@ -170,6 +173,30 @@ public class XPathXmlMetadataParser  {
 
   }
   
+  /*
+   * getter/setter for the switch to do xml filtering of input stream
+   */
+  
+  public boolean getDoXmlFiltering() {
+    return doXmlFiltering;
+  }
+
+  public void setDoXmlFiltering(boolean setVal) {
+    doXmlFiltering = setVal;
+  }
+
+  /*
+   *  A constructor that allows for the xml filtering of the input stream
+   */
+  public XPathXmlMetadataParser(Map<String, XPathValue> globalMap, 
+      String articleNode, 
+      Map<String, XPathValue> articleMap, boolean doFiltering)
+          throws XPathExpressionException {
+
+    this(globalMap, articleNode, articleMap);
+    doXmlFiltering = doFiltering;
+  }
+
   /* a convenience to ensure we don't dereference null - used by 
    * constructor for this class
    */
@@ -196,7 +223,7 @@ public class XPathXmlMetadataParser  {
     List<ArticleMetadata> amList = makeNewAMList();
     ArticleMetadata globalAM = null;
 
-    Document doc = CreateDocumentTree(cu);
+    Document doc = createDocumentTree(cu);
     if (doc == null) return amList; // return empty list
 
     try {
@@ -318,47 +345,56 @@ public class XPathXmlMetadataParser  {
       }
     }
   }
-  
+
   /**
    *  Given a CU for an XML file, load and return the XML as a Document "tree". 
    * @param cu to the XML file
    * @return Document for the loaded XML file
    */
-  protected Document CreateDocumentTree(CachedUrl cu) {
-    
-  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-  DocumentBuilder builder;
-  try {
-    dbf.setValidating(false);
-    dbf.setFeature("http://xml.org/sax/features/namespaces", false);
-    dbf.setFeature("http://xml.org/sax/features/validation", false);
-    dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
-    dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);          
-    builder = dbf.newDocumentBuilder();
-  } catch (ParserConfigurationException ex) {
-    log.warning("Cannot parse XML file for Metadata -" + ex.getMessage());
-    return null;
+  protected Document createDocumentTree(CachedUrl cu) {
+
+    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+    DocumentBuilder builder;
+    try {
+      dbf.setValidating(false);
+      dbf.setFeature("http://xml.org/sax/features/namespaces", false);
+      dbf.setFeature("http://xml.org/sax/features/validation", false);
+      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);          
+      builder = dbf.newDocumentBuilder();
+    } catch (ParserConfigurationException ex) {
+      log.warning("Cannot parse XML file for Metadata -" + ex.getMessage());
+      return null;
+    }
+
+    InputSource iSource = new InputSource(getInputStreamFromCU(cu));
+    iSource.setEncoding(cu.getEncoding());
+    Document doc;
+    try {
+      doc = builder.parse(iSource);
+      return doc;
+    } catch (SAXException ex) {
+      log.warning(ex.getMessage());
+      return null;
+    } catch (IOException e) {
+      log.warning(e.getMessage());
+      return null;
+    } finally {
+      AuUtil.safeRelease(cu);
+    }
+    /* The entire document tree is now loaded*/
   }
-/* replaced getUnfilteredInputStream() with openForReading() for now so ACM can
-   continue to use their BaseCacheUrl.openForReading() to perform filtering 
- */
-  //InputStream iStream = cu.getUnfilteredInputStream();
-  InputSource bReader = new InputSource(cu.openForReading());
-  bReader.setEncoding(cu.getEncoding());
-  Document doc;
-  try {
-    doc = builder.parse(bReader);
-    return doc;
-  } catch (SAXException ex) {
-    log.warning(ex.getMessage());
-    return null;
-  } catch (IOException e) {
-    log.warning(e.getMessage());
-    return null;
-  } finally {
-    AuUtil.safeRelease(cu);
-  }
-  /* The entire document tree is now loaded*/
+
+  protected InputStream getInputStreamFromCU(CachedUrl cu) {
+
+    if (doXmlFiltering) {
+      if (!(Constants.ENCODING_ISO_8859_1.equals(cu.getEncoding()))) {
+        log.error("Filtering XML that is not ISO_8859 which may or may not work");
+      }
+      return new XmlFilteringInputStream(cu.getUnfilteredInputStream());
+    } else { 
+      return cu.getUnfilteredInputStream();
+    }
   }
   
   /**
@@ -376,4 +412,5 @@ public class XPathXmlMetadataParser  {
   protected List<ArticleMetadata> makeNewAMList() {
     return new ArrayList<ArticleMetadata>();
   }
+
 }

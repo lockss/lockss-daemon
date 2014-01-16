@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.1 2014-01-15 17:35:22 aishizaki Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.2 2014-01-16 22:18:00 alexandraohlson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -40,6 +40,7 @@ import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 
@@ -591,6 +592,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
   //final static String TEST_XML_URL = "acmtest.xml";
   //final static String TEST_PDF_URL = "localhost:~audreyishizaki/acm-dev/2010/7sept2010/NEW-MAG-QUEUE-V8I8-1839572/p10-chessin.pdf";
 
+  
   public void testExtractFromEmptyContent() throws Exception {
     String xml_url = TEST_XML_URL;
     String pdf_url = TEST_PDF_URL;
@@ -604,8 +606,10 @@ public class TestACMSourceXmlMetadataExtractorHelper
     // doesn't matter what content the fake pdf_cu has
     MockCachedUrl pdf_cu = mau.addUrl(pdf_url, EMPTY_CONTENT);
     
-    FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
-                                  .ACMSourceXmlMetadataExtractor();
+    //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
+      //                            .ACMSourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
@@ -630,8 +634,10 @@ public class TestACMSourceXmlMetadataExtractorHelper
     pdf_cu.setContentSize(BAD_CONTENT.length());
 
     
-    FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
-                                  .ACMSourceXmlMetadataExtractor();
+    //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
+      //                            .ACMSourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
@@ -640,6 +646,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
     assertEmpty(mdlist);
   
   }
+  
 
   // original xml file from the publisher
   public void testExtractFromBasicPeriodicalContent() throws Exception {
@@ -657,13 +664,14 @@ public class TestACMSourceXmlMetadataExtractorHelper
 
       cu.setContent(string_input);
       cu.setContentSize(string_input.length());
-      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       // setting content (non-pdf) just so the check can find content
       //pcu.setContent(string_input);
       //pcu.setContentSize(string_input.length());
       //pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
       FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -712,7 +720,9 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //pcu.setContentSize(string_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
       FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -759,7 +769,8 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //pcu.setContentSize(string_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
+      FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
       FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
@@ -810,7 +821,9 @@ public class TestACMSourceXmlMetadataExtractorHelper
       pcu.setContentSize(pdf_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
+      //FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
+      FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
       FileMetadataListExtractor mle = new FileMetadataListExtractor(me);

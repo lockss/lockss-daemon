@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.7 2014-01-09 23:13:13 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.8 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -448,5 +448,11 @@ implements SourceXmlMetadataExtractorHelper {
   @Override
   public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
+  }
+
+  @Override
+  public boolean getDoXmlFiltering() {
+    // TODO Auto-generated method stub
+    return false;
   }
 }    

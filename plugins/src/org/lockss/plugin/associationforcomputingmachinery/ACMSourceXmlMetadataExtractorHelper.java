@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorHelper.java,v 1.1 2014-01-15 17:33:06 aishizaki Exp $
+ * $Id: ACMSourceXmlMetadataExtractorHelper.java,v 1.2 2014-01-16 22:18:00 alexandraohlson Exp $
  */
 
 /*
@@ -336,5 +336,16 @@ static {
   @Override
   public ArrayList<String> getFilenameSuffixList() {
     return null;
+  }
+
+  @Override
+  /*
+   * (non-Javadoc)
+   * ACM has ISO8859 XML files that contain illegal ws characters (<32 and not 9,10,13) as well as some 
+   * unprotected & that aren't in CDATA sections
+   * @see org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper#getDoXmlFiltering()
+   */
+  public boolean getDoXmlFiltering() {
+    return true;
   }
 }

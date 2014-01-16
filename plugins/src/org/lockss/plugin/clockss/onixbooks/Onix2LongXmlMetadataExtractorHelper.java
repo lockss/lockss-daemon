@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.4 2014-01-03 16:48:57 alexandraohlson Exp $
+ * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  *  There can be multiple records for the same item, one for each format
  *  @author alexohlson
  */
-public final class Onix2LongXmlMetadataExtractorHelper
+public class Onix2LongXmlMetadataExtractorHelper
 extends Onix2BaseXmlMetadataExtractorHelper {
   static Logger log = Logger.getLogger(Onix2LongXmlMetadataExtractorHelper.class);
 

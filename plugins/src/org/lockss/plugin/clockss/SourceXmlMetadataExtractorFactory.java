@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.11 2014-01-14 20:04:23 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.12 2014-01-16 22:17:59 alexandraohlson Exp $
  */
 
 /*
@@ -161,6 +161,15 @@ implements FileMetadataExtractorFactory {
      * @return
      */
     public String getFilenameXPathKey();
+    
+    /**
+     * Indicates whether the XML should be filtered as an InputStream to 
+     * remove XML illegal characters that might be there.  This will only work
+     * for single byte char encodings (such as ISO8859) so check before 
+     * setting.
+     * If you don't need it, best to set it to false.  
+     */
+    public boolean getDoXmlFiltering();
   }
 
 
@@ -207,7 +216,8 @@ implements FileMetadataExtractorFactory {
         List<ArticleMetadata> amList = 
             new XPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), 
                 schemaHelper.getArticleNode(), 
-                schemaHelper.getArticleMetaMap()).extractMetadata(target, cu);
+                schemaHelper.getArticleMetaMap(),
+                schemaHelper.getDoXmlFiltering()).extractMetadata(target, cu);
 
         
         Collection<ArticleMetadata> AMCollection = amList; //if deduping, this will change
