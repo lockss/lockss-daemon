@@ -1,4 +1,4 @@
-/* $Id: ClockssSourceHtmlLinkExtractorFactory.java,v 1.1 2014-01-15 17:27:15 aishizaki Exp $
+/* $Id: ClockssSourceHtmlLinkExtractorFactory.java,v 1.2 2014-01-17 17:03:40 aishizaki Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ implements LinkExtractorFactory {
      *
      * @param au       the archival unit
      * @param in       the input stream
-     * @param encoding using UTF-8 as a default 
+     * @param encoding 
      * @param srcUrl   The URL at which the content lives.  Used as the base for
      *                 resolving relative URLs (unless/until base set otherwise by content)
      * @param cb       the callback used to forward all found urls
@@ -104,7 +104,7 @@ implements LinkExtractorFactory {
       // needs to be extracted
       if (srcUrl.endsWith("/")) {
         log.debug3("extracting from "+srcUrl);
-        super.extractUrls(au, in, ENC, srcUrl, cb);
+        super.extractUrls(au, in, encoding, srcUrl, cb);
       } else {
       // if srcUrl doesn't end in '/', it's likely an html file that does not
       // need to be extracted
