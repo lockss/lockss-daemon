@@ -619,7 +619,7 @@
       issn = 1561-8633 ;
       eissn = 1684-9981
     >
-      attr[journal_id] =  NHESS  
+      attr[journal_id] = NHESS  
       param[base_url] = http://www.nat-hazards-earth-syst-sci.net/
       param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
 
@@ -639,8 +639,22 @@
       au < manifest ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Volume 14 ; 14 >
     
    }
+   
+   {
+    title <
+      name = Natural Hazards and Earth System Sciences Discussions ;
+      eissn = eISSN 2195-9269 
+    >
+      attr[journal_id] = NHESSD  
+      param[base_url] = http://www.nat-hazards-earth-syst-sci-discuss.net
+      param[home_url] = http://www.natural-hazards-and-earth-system-sciences.net/
+
+      au < manifest ; exists ; 2013 ; 2013 ; Natural Hazards and Earth System Sciences Discussions Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; 2014 ; Natural Hazards and Earth System Sciences Discussions Volume 2 ; 2 >
+ 
+   }
     
-  {
+   {
     title <
       name = Nonlinear Processes in Geophysics ;
       issn = 1023-5809 ;
@@ -672,6 +686,16 @@
       au < crawling ; exists ; 2013 ; 2013 ; Nonlinear Processes in Geophysics Volume 20 ; 20 >
       au < manifest ; exists ; 2014 ; 2014 ; Nonlinear Processes in Geophysics Volume 21 ; 21 >
     
+   }
+
+   {
+    title <
+      name = Nonlinear Processes in Geophysics Discussions 
+    >
+      attr[journal_id] = NPGD
+      comment[1] = to be published in 2014
+      param[home_url] = http://www.nonlinear-processes-in-geophysics.net/
+
    }
     
   {
