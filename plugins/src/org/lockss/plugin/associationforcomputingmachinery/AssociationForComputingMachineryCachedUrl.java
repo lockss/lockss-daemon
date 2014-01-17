@@ -23,12 +23,6 @@ public class AssociationForComputingMachineryCachedUrl extends org.lockss.plugin
     super(owner, url);
     this.cu = owner.makeCachedUrl(url);     
   }
-
-  @Override
-  public String getEncoding() {
-    log.debug3(this.cu + " encoding ?= " + this.cu.getEncoding());
-    return this.cu.getEncoding();
-  }
   
   @Override
   public boolean hasContent() {
@@ -44,9 +38,15 @@ public class AssociationForComputingMachineryCachedUrl extends org.lockss.plugin
   @Override
   public Reader openForReading() {
       try {
-        log.debug3("  openForReading("+ cu.getUrl() +")");    
-              //String[][] filterRules = {{"&#", "$%$amp;#"}, {"&", ""}, {"$%$amp;#", "&amp;#"}};
-              String[][] filterRules = {{"&#", "$%$amp;#"}, {"&", ""}, {"$%$amp;#", "&#"}};
+        log.debug3("  openForReading("+ cu.getUrl() +")");   
+              /* The filter changes '&#'XXX into something unique (w/out &), 
+               * then removes any remaining '&' chars, then changes the unique 
+               * to a slightly different '&amp;#' -- this gets parsed in
+               * AssociationForComputingMachineryXmlMetadataExtractorFactory:getValue()
+               * and changed in ACMblahblah.fixUnicodeIn()
+               */
+              String[][] filterRules = {{"&#", "$%$amp;#"}, {"&", ""}, {"$%$amp;#", "&amp;#"}};
+              //String[][] filterRules = {{"&#", "$%$amp;#"}, {"&", ""}, {"$%$amp;#", "&#"}};
               return StringFilter.makeNestedFilter(cu.openForReading(), filterRules, true);
       } catch (Exception e) {
         //logger.error("Creating InputStreamReader for '" + getUrl() + "'", e);
