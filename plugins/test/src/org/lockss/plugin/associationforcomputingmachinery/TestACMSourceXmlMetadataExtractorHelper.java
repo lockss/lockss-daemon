@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.2 2014-01-16 22:18:00 alexandraohlson Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.3 2014-01-17 00:29:40 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -572,26 +572,9 @@ public class TestACMSourceXmlMetadataExtractorHelper
     super.setUp();
     setUp();
   }
- /*
-    // get test input files from current directory
-  private String getInputFile(String filename) {
-    String acmStr;
-    try {
-      InputStream acmIn = getClass().getResourceAsStream(filename);
-      acmStr = StringUtil.fromInputStream(acmIn);
-    }
-    catch (IOException e) {
-       throw new RuntimeException(e);
-    }
-    return (acmStr);
-  }
-  */
   
   final static String TEST_XML_URL = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/7sept2010/NEW-MAG-QUEUE-V8I8-1839572/NEW-MAG-QUEUE-V8I8-1839572.xml";
   final static String TEST_PDF_URL = "http://clockss-ingest.lockss.org/sourcefiles/acm-dev/2010/7sept2010/NEW-MAG-QUEUE-V8I8-1839572/12-authorname.pdf";
-  //final static String TEST_XML_URL = "acmtest.xml";
-  //final static String TEST_PDF_URL = "localhost:~audreyishizaki/acm-dev/2010/7sept2010/NEW-MAG-QUEUE-V8I8-1839572/p10-chessin.pdf";
-
   
   public void testExtractFromEmptyContent() throws Exception {
     String xml_url = TEST_XML_URL;
@@ -606,8 +589,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
     // doesn't matter what content the fake pdf_cu has
     MockCachedUrl pdf_cu = mau.addUrl(pdf_url, EMPTY_CONTENT);
     
-    //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
-      //                            .ACMSourceXmlMetadataExtractor();
     FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
 
     assertNotNull(me);
@@ -633,9 +614,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
     pdf_cu.setContent(BAD_CONTENT);
     pdf_cu.setContentSize(BAD_CONTENT.length());
 
-    
-    //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory
-      //                            .ACMSourceXmlMetadataExtractor();
     FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
 
     assertNotNull(me);
@@ -657,7 +635,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
       // need to check for this file before emitting
-      //MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
       MockCachedUrl pcu = mau.addUrl(BASE_URL+pdfUrl, EMPTY_CONTENT);
       
       String string_input = BASIC_PERIODICAL_CONTENT;
@@ -665,12 +642,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
       cu.setContent(string_input);
       cu.setContentSize(string_input.length());
       cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      // setting content (non-pdf) just so the check can find content
-      //pcu.setContent(string_input);
-      //pcu.setContentSize(string_input.length());
-      //pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
       FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
@@ -707,7 +679,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
       // need to check for this file before emitting
-      //MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
       MockCachedUrl pcu = mau.addUrl(BASE_URL+pdfUrl, EMPTY_CONTENT);
       
       String string_input = BASIC_PROCEEDING_CONTENT;
@@ -715,12 +686,8 @@ public class TestACMSourceXmlMetadataExtractorHelper
       cu.setContent(string_input);
       cu.setContentSize(string_input.length());
       cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-      // setting content (non-pdf) just so the check can find content
-      //pcu.setContent(string_input);
-      //pcu.setContentSize(string_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
       FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
 
       assertNotNull(me);
@@ -756,7 +723,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
       // need to check for this file before emitting
-      //MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
       MockCachedUrl pcu = mau.addUrl(BASE_URL+pdfUrl, EMPTY_CONTENT);
       
       String string_input = AMPER_CONTENT;
@@ -765,11 +731,8 @@ public class TestACMSourceXmlMetadataExtractorHelper
       cu.setContentSize(string_input.length());
       cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
       // setting content (non-pdf) just so the check can find content
-      //pcu.setContent(string_input);
-      //pcu.setContentSize(string_input.length());
       pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
 
-      //FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory.ACMSourceXmlMetadataExtractor();
       FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
       assertNotNull(me);
       log.debug3("Extractor: " + me.toString());
@@ -786,168 +749,6 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //IOUtil.safeClose(file_input);
     }
   }
- /*
-  // Use when getting test content locally
-  private String basicInputContent = getInputFile("Markup/VOR_10.1063_1.4829703.xml");
 
-  // original xml file from the publisher
-  public void testExtractFromRealContent() throws Exception {
-    String xml_url = "Markup/VOR_10.1063_1.4829703.xml";
-    String pdf_url ="Page_Renditions/online.pdf";
-    CIProperties xmlHeader = new CIProperties();
-
-    InputStream file_input = null;
-    try {
-      //MockCachedUrl mcu = new MockCachedUrl(url, mau);
-      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-      //MockCachedUrl cu = new MockCachedUrl(xml_url, mau);
-      MockCachedUrl xcu = mau.addUrl(xml_url, true, true, xmlHeader);
-      // need to check for this file before emitting
-      MockCachedUrl pcu = mau.addUrl(pdf_url, true, true, xmlHeader);
-
-      file_input = getResourceAsStream(xml_url);
-      String xml_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-      //MockCachedUrl pcu = new MockCachedUrl(pdf_url, mau);
-      // really not going to be read other than to check .hasContent()
-      file_input = getResourceAsStream(xml_url);
-      String pdf_input = StringUtil.fromInputStream(file_input);
-      IOUtil.safeClose(file_input);
-      
-      xcu.setContent(xml_input);
-      xcu.setContentSize(xml_input.length());
-      xcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-      pcu.setContent(pdf_input);
-      pcu.setContentSize(pdf_input.length());
-      pcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
-
-      //FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory.AIPJatsSourceXmlMetadataExtractor();
-      FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
-
-      assertNotNull(me);
-      log.debug3("Extractor: " + me.toString());
-      FileMetadataListExtractor mle = new FileMetadataListExtractor(me);
-      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), xcu);
-      assertNotEmpty(mdlist);
-      ArticleMetadata md = mdlist.get(0);
-      assertNotNull(md);
-
-          assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-          assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
-          assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-          assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-          assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-          assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-          assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-          assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-          //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-       assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
-      //assertEquals(GOOD_JOURNAL_TITLE, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      assertEquals(GOOD_JOURNAL_ID, md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-      assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
-      
-    } finally {
-      IOUtil.safeClose(file_input);
-    }
-  }
-  */
-
- /* 
-  // xml file missing journal title
-  public void testExtractFromMissingJournalMetaContent1() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent1);
-    cu.setContentSize(missingJournalMetaInputContent1.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new AIPJatsSourceXmlMetadataExtractorFactory
-                                   .AIPJatsSourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_ISSN, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertEquals(GOOD_JOURNAL_ID,
-        md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-
-  // xml file missing journal title, journal id and issn
-  public void testExtractFromMissingJournalMetaContent2() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent2);
-    cu.setContentSize(missingJournalMetaInputContent2.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new AIPJatsSourceMetadataExtractorFactory
-                                   .AIPJatsSourceMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_EISSN, md.get(MetadataField.FIELD_EISSN));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-
-  // xml file missing journal title, journal id, issn and eissn
-  public void testExtractFromMissingJournalMetaContent3() throws Exception {
-    String url = TEST_URL;
-    MockCachedUrl cu = new MockCachedUrl(url, au);
-    cu.setContent(missingJournalMetaInputContent3);
-    cu.setContentSize(missingJournalMetaInputContent3.length());
-    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
-
-    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    FileMetadataListExtractor mle =
-      new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
-    assertNotEmpty(mdlist);
-    ArticleMetadata md = mdlist.get(0);
-    assertNotNull(md);
-   
-    assertEquals(GOOD_DOI, md.get(MetadataField.FIELD_DOI));
-    assertEquals(GOOD_ISSUE, md.get(MetadataField.FIELD_ISSUE));
-    assertEquals(GOOD_VOLUME, md.get(MetadataField.FIELD_VOLUME));
-    assertEquals(GOOD_PUB_DATE, md.get(MetadataField.FIELD_DATE));
-    assertEquals(GOOD_COPYRIGHT_YEAR, md.get(MetadataField.DC_FIELD_RIGHTS));
-    assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
-    assertEquals(GOOD_ARTICLE_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
-    //assertEquals(GEN_JOURNAL_TITLE_WITH_JOURNAL_ID,
-    //    md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    assertSameElements(goodAuthors, md.getList(MetadataField.FIELD_AUTHOR));
-    assertSameElements(goodKeywords, md.getList(MetadataField.FIELD_KEYWORDS));
-  }
-  */
   
 }
