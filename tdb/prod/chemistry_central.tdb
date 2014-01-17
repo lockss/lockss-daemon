@@ -107,7 +107,7 @@
     au < ready ; 2011 ; Journal of Cheminformatics Volume 3 ; 3 >
     au < ready ; 2012 ; Journal of Cheminformatics Volume 4 ; 4 >
     au < manifest ; 2013 ; Journal of Cheminformatics Volume 5 ; 5 >
-    au < expected ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 >
+    au < manifest ; 2014 ; Journal of Cheminformatics Volume 6 ; 6 >
 
   }
   
@@ -142,7 +142,7 @@
     param[journal_issn] = 2043-7129
     
     au < manifest ; 2013 ; Sustainable Chemical Processes Volume 1 ; 1 >
-    au < expected ; 2014 ; Sustainable Chemical Processes Volume 2 ; 2 >
+    au < manifest ; 2014 ; Sustainable Chemical Processes Volume 2 ; 2 >
 
   }
   
