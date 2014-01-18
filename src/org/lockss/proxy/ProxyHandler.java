@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.83 2014-01-14 04:29:46 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.83.2.1 2014-01-18 20:34:02 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.83 2014-01-14 04:29:46 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.83.2.1 2014-01-18 20:34:02 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -51,6 +51,7 @@ import org.lockss.exporter.counter.CounterReportsRequestRecorder;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
 import org.lockss.jetty.*;
@@ -108,6 +109,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean auditIndex = false;
   private boolean audit503UntilAusStarted = DEFAULT_AUDIT_503_UNTIL_AUS_STARTED;
   private boolean handleFormPost = DEFAULT_PROCESS_FORMS;
+  private String connectHost;
+  private int connectPort = -1;
 
   private boolean isFailOver = false;
   private URI failOverTargetUri;
@@ -168,6 +171,14 @@ public class ProxyHandler extends AbstractHttpHandler {
   public void setHandleFormPost(boolean flg)
   {
     handleFormPost =flg;
+  }
+
+  /** Set the address to which CONNECT requests will connect, ignoring the
+   * address in the request.  */
+  public void setConnectAddr(String host, int port) {
+    connectHost = host;
+    connectPort = port;
+    log.debug2("setConnectAddr(" + host + ", " + port + ")");
   }
 
   /** Set a target to use as a base (protocol, host, port) for all incoming
@@ -305,7 +316,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     if (!proxyMgr.isMethodAllowed(request.getMethod())) {
       sendForbid(request,response,uri);
-      logAccess(request, "forbidden method");
+      logAccess(request, "forbidden method: " + request.getMethod());
       return;
     }
 
@@ -313,8 +324,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (HttpRequest.__CONNECT.equals(request.getMethod())) {
       response.setField(HttpFields.__Connection,"close"); // XXX Needed for IE????
       handleConnect(pathInContext,pathParams,request,response);
-      logAccess(request, "CONNECT forbidden");
       return;
+    }
+
+    // The URI in https proxy requests is generally host-relative.  Detect
+    // this and replace the URI in the request with the absolute URI.
+    if (uri.toString().startsWith("/")) {
+      String root = request.getRootURL().toString();
+      if (!StringUtil.isNullString(root)) {
+	String newUri = root.toLowerCase() + uri.toString();
+	log.debug("Relative URI: " + uri + " -> " + newUri);
+	uri.setURI(newUri);
+      }
     }
 
     if (log.isDebug3()) {
@@ -498,8 +519,10 @@ public class ProxyHandler extends AbstractHttpHandler {
       // Do we proxy this?
       URL url=isProxied(uri);
       if (url==null) {
-        if (isForbidden(uri))
+        if (isForbidden(uri)) {
           sendForbid(request,response,uri);
+	  logAccess(request, "forbidden method: " + request.getMethod());
+	}
         return;
       }
 
@@ -638,8 +661,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   void logAccess(HttpRequest request, String msg, long reqElapsedTime) {
-    proxyMgr.logAccess(request.getURI().toString(), request.getRemoteAddr(),
-		       msg, reqElapsedTime);
+    proxyMgr.logAccess(request.getMethod(), request.getURI().toString(), msg,
+		       request.getRemoteAddr(), reqElapsedTime);
   }
 
   /**
@@ -976,9 +999,51 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws HttpException, IOException {
     URI uri = request.getURI();
 
-    // Never needed in LOCKSS proxy, prevent use as relay
-    sendForbid(request,response,uri);
-    return;
+    if (connectHost == null || connectHost.length() == 0 ||
+	connectPort <= 0) {
+      // Not allowed
+      sendForbid(request,response,uri);
+      logAccess(request, "forbidden method: " + request.getMethod());
+      return;
+    }
+    try {
+      if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
+	sendForbid(request,response,uri);
+	logAccess(request, "forbidden scheme for CONNECT: " +
+		  HttpMessage.__SSL_SCHEME);
+      } else {
+	Socket socket = new Socket(connectHost, connectPort);
+
+	// XXX - need to setup semi-busy loop for IE.
+	int timeoutMs=30000;
+	if (_tunnelTimeoutMs > 0) {
+	  socket.setSoTimeout(_tunnelTimeoutMs);
+	  Object maybesocket = request.getHttpConnection().getConnection();
+	  try {
+	    Socket s = (Socket) maybesocket;
+	    timeoutMs=s.getSoTimeout();
+	    s.setSoTimeout(_tunnelTimeoutMs);
+	  } catch (Exception e) {
+	    log.warning("Couldn't set socket timeout", e);
+	  }
+	}
+
+	customizeConnection(pathInContext,pathParams,request,socket);
+	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
+								 timeoutMs));
+	logAccess(request, "200 redirected to " +
+		  connectHost + ":" + connectPort); 
+
+	response.setStatus(HttpResponse.__200_OK);
+	response.setContentLength(0);
+	request.setHandled(true);
+      }
+    } catch (Exception e) {
+      log.error("Error in CONNECT for " + uri, e);
+      response.sendError(HttpResponse.__500_Internal_Server_Error,
+			 e.getMessage());
+    }
+
 
 //     try {
 //       if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
