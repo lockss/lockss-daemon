@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.7 2013-05-30 14:01:35 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.8 2014-01-18 20:45:39 tlipkis Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ public class TestProxyManager extends LockssTestCase {
     assertTrue(mgr.isMethodAllowed("GET"));
     assertTrue(mgr.isMethodAllowed("POST"));
     assertTrue(mgr.isMethodAllowed("HEAD"));
-    assertFalse(mgr.isMethodAllowed("CONNECT"));
+    assertTrue(mgr.isMethodAllowed("CONNECT"));
 
     ConfigurationUtil.setFromArgs(ProxyManager.PARAM_DISALLOWED_METHODS,
 				  "CONNECT;POST");
