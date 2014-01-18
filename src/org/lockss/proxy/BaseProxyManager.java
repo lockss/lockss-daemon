@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.19 2013-10-17 07:50:11 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.20 2014-01-18 20:34:43 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.proxy;
 
 import java.net.*;
 import java.util.*;
+import javax.net.ssl.KeyManagerFactory;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -59,14 +60,20 @@ public abstract class BaseProxyManager extends JettyManager {
 
   protected AlertManager alertMgr;
   protected int port;
+  protected int sslPort = -1;
+  protected String sslKeystoreName;
   protected boolean start = false;
   protected String includeIps;
   protected String excludeIps;
   protected boolean logForbidden;
   protected IpAccessHandler accessHandler;
   protected ProxyHandler handler;
+  protected LockssKeyStoreManager keystoreMgr;
   private String _403Msg;
   protected List<String> bindAddrs;
+  protected List<String> sslBindAddrs;
+  protected String connectHost;
+  protected int connectPort;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -75,10 +82,11 @@ public abstract class BaseProxyManager extends JettyManager {
    */
   public void startService() {
     super.startService();
+    alertMgr = getDaemon().getAlertManager();
+    keystoreMgr = getDaemon().getKeystoreManager();
     if (start) {
       startProxy();
     }
-    alertMgr = getDaemon().getAlertManager();
   }
 
   /**
@@ -100,6 +108,18 @@ public abstract class BaseProxyManager extends JettyManager {
     _403Msg = config.get(PARAM_403_MSG, DEFAULT_403_MSG);
   }
 
+  protected void setConnectAddr(String hostPort) {
+    try {
+      HostPortParser hpp = new HostPortParser(hostPort);
+      connectHost = hpp.getHost();
+      connectPort = hpp.getPort();
+    } catch (HostPortParser.InvalidSpec e) {
+      log.warning("Unparseable connect addr: " + hostPort, e);
+      connectHost = null;
+      connectPort = -1;
+    }
+  }
+
   void setIpFilter() {
     if (accessHandler != null) {
       try {
@@ -116,6 +136,16 @@ public abstract class BaseProxyManager extends JettyManager {
   }
 
   protected void addListeners(HttpServer server) {
+    KeyManagerFactory kmf = null;
+    if (sslPort > 0) {
+      kmf = keystoreMgr.getKeyManagerFactory(sslKeystoreName);
+      if (kmf == null) {
+	log.error("Keystore " + sslKeystoreName +
+		  " not found, not starting " +
+		  getServerName() + " SSL server");
+      }
+    }
+
     if (bindAddrs.isEmpty()) {
       try {
 	addListener(server, null, port);
@@ -134,6 +164,26 @@ public abstract class BaseProxyManager extends JettyManager {
 	}
       }
     }
+    if (sslPort > 0) {
+      if (sslBindAddrs.isEmpty()) {
+	try {
+	  addSslListener(server, null, sslPort, kmf);
+	} catch (UnknownHostException e) {
+	  log.critical("UnknownHostException with null host, not starting "
+		       + getServerName() + " SSL server");
+	}
+      } else {
+	for (String host : sslBindAddrs) {
+	  try {
+	    addSslListener(server, host, sslPort, kmf);
+	  } catch (UnknownHostException e) {
+	    log.critical("Bind addr " + host +
+			 " not found, " + getServerName() +
+			 " not listening (SSL) on that address");
+	  }
+	}
+      }
+    }
   }
 
   protected void addListener(HttpServer server,
@@ -142,6 +192,19 @@ public abstract class BaseProxyManager extends JettyManager {
     HttpListener listener =
       new SocketListener(new org.mortbay.util.InetAddrPort(host,port));
     server.addListener(listener);
+  }
+
+  protected void addSslListener(HttpServer server,
+				String host, int port,
+				KeyManagerFactory kmf)
+      throws UnknownHostException {
+    if (kmf == null) {
+      throw new IllegalArgumentException("KeyManagerFactory must not be null");
+    }
+    LockssSslListener lsl =
+      new LockssSslListener(new org.mortbay.util.InetAddrPort(host, port));
+    lsl.setKeyManagerFactory(kmf);
+    server.addListener(lsl);
   }
 
   /** Start a Jetty handler for the proxy.  May be called redundantly, or

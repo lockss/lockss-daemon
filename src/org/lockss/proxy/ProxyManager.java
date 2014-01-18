@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.57 2014-01-14 04:29:46 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.58 2014-01-18 20:34:43 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,29 @@ public class ProxyManager extends BaseProxyManager {
    * port, given by the <tt>port</tt> parameter.  Changing this requires
    * daemon restart. */
   public static final String PARAM_BIND_ADDRS = PREFIX + "bindAddrs";
+
+  /** Proxy SSL listen port */
+  public static final String PARAM_SSL_PORT = PREFIX + "sslPort";
+  public static final int DEFAULT_SSL_PORT = -1;
+
+  /** List of IP addresses to which to bind the SSL listen socket.  If not
+   * set, server listens on all interfaces.  All listeners must be on the
+   * same port, given by the <tt>sslPort</tt> parameter.  Change requires
+   * proxy restart. */
+  public static final String PARAM_SSL_BIND_ADDRS = PREFIX + "sslBindAddrs";
+  public static final List DEFAULT_SSL_BIND_ADDRS = Collections.EMPTY_LIST;
+
+  /** Host:Port that CONNECT requests should connect to, in lieu of the one
+   * specified in the request.  Intended to be pointed to the Proxy's
+   * SSL listener. */
+  static final String PARAM_CONNECT_ADDR =
+    Configuration.PREFIX + "proxy.connectAddr";
+  static final String DEFAULT_CONNECT_ADDR = "127.0.0.1:0";
+
+  /** Name of managed keystore to use (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
+  public static final String PARAM_SSL_KEYSTORE_NAME =
+    PREFIX + "sslKeystoreName";
 
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
@@ -166,7 +189,7 @@ public class ProxyManager extends BaseProxyManager {
    * never allow */
   static final String PARAM_DISALLOWED_METHODS =
     PREFIX + "disallowedMethods";
-  static final String DEFAULT_DISALLOWED_METHODS = HttpRequest.__CONNECT;
+  static final List DEFAULT_DISALLOWED_METHODS = Collections.EMPTY_LIST;
 
   /** Maximum total outgoing connections to publisher sites, from Proxy or
    * ServeContent.  Should be larger than max total Proxy or ServeContent
@@ -234,7 +257,7 @@ public class ProxyManager extends BaseProxyManager {
   private long paramCloseIdleConnectionsIdleTime =
     DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME;
   private Set noManifestIndexResponses = new HashSet();
-  private Set disallowedMethods = new HashSet();
+  private Set disallowedMethods = Collections.EMPTY_SET;
   private TimerQueue.Request closeTimer;
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickConnPool = null;
@@ -254,6 +277,13 @@ public class ProxyManager extends BaseProxyManager {
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(PREFIX)) {
+      includeIps = config.get(PARAM_IP_INCLUDE, "");
+      excludeIps = config.get(PARAM_IP_EXCLUDE, "");
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
+				       DEFAULT_LOG_FORBIDDEN);
+      log.debug("Installing new ip filter: incl: " + includeIps +
+		", excl: " + excludeIps);
+      setIpFilter();
       // access log is called by other components (ServeContent) so
       // configure even if not starting proxy.  Should be moved elsewhere
       try {
@@ -286,90 +316,79 @@ public class ProxyManager extends BaseProxyManager {
       paramCopyStoredResponseHeaders =
 	config.getBoolean(PARAM_COPY_STORED_RESPONSE_HEADERS,
 			  DEFAULT_COPY_STORED_RESPONSE_HEADERS);
+      paramCloseIdleConnectionsInterval =
+	config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_INTERVAL,
+			       DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL);
+      paramCloseIdleConnectionsIdleTime =
+	config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME,
+			       DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME);
+      paramHostDownRetryTime =
+	config.getTimeInterval(PARAM_HOST_DOWN_RETRY,
+			       DEFAULT_HOST_DOWN_RETRY);
+      synchronized (hostsDown) {
+	hostsDown.setInterval(paramHostDownRetryTime);
+      }
+      paramHostDownAction = config.getInt(PARAM_HOST_DOWN_ACTION,
+					  DEFAULT_HOST_DOWN_ACTION);
+      paramCookiePolicy = config.get(PARAM_COOKIE_POLICY,
+				     DEFAULT_COOKIE_POLICY);
+
+      paramUrlCacheEnabled = config.getBoolean(PARAM_URL_CACHE_ENABLED,
+					       DEFAULT_URL_CACHE_ENABLED);
+      if (paramUrlCacheEnabled) {
+	paramUrlCacheDuration =
+	  config.getTimeInterval(PARAM_URL_CACHE_DURATION,
+				 DEFAULT_URL_CACHE_DURATION);
+	if (urlCache == null) {
+	  urlCache = new FixedTimedMap(paramUrlCacheDuration);
+	} else {
+	  synchronized (urlCache) {
+	    urlCache.setInterval(paramUrlCacheDuration);
+	  }
+	}
+      }
+      List<String> dis = config.getList(PARAM_DISALLOWED_METHODS,
+					DEFAULT_DISALLOWED_METHODS);
+      Set disSet = new HashSet();
+      for (String str : dis) {
+	disSet.add(str.toUpperCase());
+      }
+      disallowedMethods = disSet;
+
+      String noindex = config.get(PARAM_NO_MANIFEST_INDEX_RESPONSES,
+				  DEFAULT_NO_MANIFEST_INDEX_RESPONSES);
+      if (StringUtil.isNullString(noindex)) {
+	noManifestIndexResponses = new HashSet();
+      } else if ("all".equalsIgnoreCase(noindex)) {
+	noManifestIndexResponses = new UniversalSet();
+      } else {
+	Set noManIndSet = new HashSet();
+	List lst = StringUtil.breakAt(noindex,
+				      Constants.LIST_DELIM_CHAR,
+				      0, true);
+	for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	  String str = (String)iter.next();
+	  try {
+	    noManIndSet.add(new Integer(str));
+	  } catch (NumberFormatException e) {
+	    log.warning("Invalid response code in " +
+			PARAM_NO_MANIFEST_INDEX_RESPONSES +
+			": " + str + ", ignored");
+	  }
+	}
+	noManifestIndexResponses = noManIndSet;
+      }
+
+      sslPort = config.getInt(PARAM_SSL_PORT, DEFAULT_SSL_PORT);
+      bindAddrs = config.getList(PARAM_BIND_ADDRS, Collections.EMPTY_LIST);
+      sslBindAddrs = config.getList(PARAM_SSL_BIND_ADDRS,
+				    DEFAULT_SSL_BIND_ADDRS);
+
+      sslKeystoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
+      setConnectAddr(config.get(PARAM_CONNECT_ADDR,
+				DEFAULT_CONNECT_ADDR));
 
       if (start) {
-	bindAddrs = config.getList(PARAM_BIND_ADDRS, Collections.EMPTY_LIST);
-	paramCloseIdleConnectionsInterval =
-	  config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_INTERVAL,
-				 DEFAULT_CLOSE_IDLE_CONNECTION_INTERVAL);
-	paramCloseIdleConnectionsIdleTime =
-	  config.getTimeInterval(PARAM_CLOSE_IDLE_CONNECTION_IDLE_TIME,
-				 DEFAULT_CLOSE_IDLE_CONNECTION_IDLE_TIME);
-
-	includeIps = config.get(PARAM_IP_INCLUDE, "");
-	excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-	logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
-					 DEFAULT_LOG_FORBIDDEN);
-	log.debug("Installing new ip filter: incl: " + includeIps +
-		  ", excl: " + excludeIps);
-	setIpFilter();
-
-	paramHostDownRetryTime =
-	  config.getTimeInterval(PARAM_HOST_DOWN_RETRY,
-				 DEFAULT_HOST_DOWN_RETRY);
-	synchronized (hostsDown) {
-	  hostsDown.setInterval(paramHostDownRetryTime);
-	}
-	paramHostDownAction = config.getInt(PARAM_HOST_DOWN_ACTION,
-					    DEFAULT_HOST_DOWN_ACTION);
-	paramCookiePolicy = config.get(PARAM_COOKIE_POLICY,
-				       DEFAULT_COOKIE_POLICY);
-
-	paramUrlCacheEnabled = config.getBoolean(PARAM_URL_CACHE_ENABLED,
-						 DEFAULT_URL_CACHE_ENABLED);
-	if (paramUrlCacheEnabled) {
-	  paramUrlCacheDuration =
-	    config.getTimeInterval(PARAM_URL_CACHE_DURATION,
-				   DEFAULT_URL_CACHE_DURATION);
-	  if (urlCache == null) {
-	    urlCache = new FixedTimedMap(paramUrlCacheDuration);
-	  } else {
-	    synchronized (urlCache) {
-	      urlCache.setInterval(paramUrlCacheDuration);
-	    }
-	  }
-	}
-
-	String noindex = config.get(PARAM_NO_MANIFEST_INDEX_RESPONSES,
-				    DEFAULT_NO_MANIFEST_INDEX_RESPONSES);
-	if (StringUtil.isNullString(noindex)) {
-	  noManifestIndexResponses = new HashSet();
-	} else if ("all".equalsIgnoreCase(noindex)) {
-	  noManifestIndexResponses = new UniversalSet();
-	} else {
-	  Set newSet = new HashSet();
-	  List lst = StringUtil.breakAt(noindex,
-					Constants.LIST_DELIM_CHAR,
-					0, true);
-	  for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
-	    String str = (String)iter.next();
-	    try {
-	      newSet.add(new Integer(str));
-	    } catch (NumberFormatException e) {
-	      log.warning("Invalid response code in " +
-			  PARAM_NO_MANIFEST_INDEX_RESPONSES +
-			  ": " + str + ", ignored");
-	    }
-	  }
-	  noManifestIndexResponses = newSet;
-	}
-
-	String disallowed = config.get(PARAM_DISALLOWED_METHODS,
-				       DEFAULT_DISALLOWED_METHODS);
-	if (StringUtil.isNullString(noindex)) {
-	  disallowedMethods = new HashSet();
-	} else {
-	  Set newSet = new HashSet();
-	  List lst = StringUtil.breakAt(disallowed,
-					Constants.LIST_DELIM_CHAR,
-					0, true);
-	  for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
-	    String str = (String)iter.next();
-	    newSet.add(str.toUpperCase());
-	  }
-	  disallowedMethods = newSet;
-	}
-
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
@@ -439,8 +458,10 @@ public class ProxyManager extends BaseProxyManager {
   // content from cache.
   protected org.lockss.proxy.ProxyHandler makeProxyHandler() {
     setupConnectionPools();
-    return new org.lockss.proxy.ProxyHandler(getDaemon(),
-					     connPool, quickConnPool);
+    org.lockss.proxy.ProxyHandler handler =
+      new org.lockss.proxy.ProxyHandler(getDaemon(), connPool, quickConnPool);
+    handler.setConnectAddr(connectHost, connectPort);
+    return handler;
   }
 
   private void setupConnectionPools() {
@@ -608,17 +629,18 @@ public class ProxyManager extends BaseProxyManager {
 
 
 
-  public void logAccess(String url, String msg, String remoteAddr,
-			long reqElapsedTime) {
+  public void logAccess(String method, String url, String msg,
+			String remoteAddr, long reqElapsedTime) {
     if (reqElapsedTime >= 0) {
       msg += " in " + StringUtil.timeIntervalToString(reqElapsedTime);
     }
-    logAccess(url, msg, remoteAddr);
+    logAccess(method, url, msg, remoteAddr);
   }
 
-  public void logAccess(String url, String msg, String remoteAddr) {
+  public void logAccess(String method, String url, String msg,
+			String remoteAddr) {
     String logmsg = "Proxy access from " + remoteAddr + ": " +
-      url + " : " + msg;
+      method + " " + url + " : " + msg;
     if (paramAccessLogLevel >= 0) {
       log.log(paramAccessLogLevel, logmsg);
     }
