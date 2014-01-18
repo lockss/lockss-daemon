@@ -24717,6 +24717,22 @@
   }
 
   {
+
+    title <
+      name = Language and Linguistics ;
+      issn = 1606-822X ;
+      eissn = 2309-5067 ;
+      issnl = 1606-822X
+    >
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      param[base_url] = http://lin.sagepub.com/
+
+      au < expected ; exist ; 2014 ; Language and Linguistics Volume 15 ; 15 ; >
+
+  }
+
+  {
   
     title <
       name = Language and Literature ;

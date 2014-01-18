@@ -27889,6 +27889,27 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Language and Linguistics ;
+        issn = 1606-822X ;
+        eissn = 2309-5067 ;
+        issnl = 1606-822X
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://lin.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < expected ; 2014 ; Language and Linguistics Volume 15 ; 15 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Language and Literature ;
         issn = 0963-9470 ;
         eissn = 1461-7293 ;
