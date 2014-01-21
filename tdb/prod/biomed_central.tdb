@@ -63,7 +63,7 @@
       au < ready ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < ready ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
       au < manifest ; 2013 ; BMC Biochemistry Volume 14 ; 14 >
-      au < expected ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
+      au < manifest ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
 
     }
 
@@ -498,7 +498,7 @@
       au < ready ; 2011 ; BMC Ecology Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Ecology Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Ecology Volume 13 ; 13 >
-      au < expected ; 2014 ; BMC Ecology Volume 14 ; 14 >
+      au < manifest ; 2014 ; BMC Ecology Volume 14 ; 14 >
 
     }
 
@@ -1006,7 +1006,7 @@
       au < manifest ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
       au < manifest ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
       au < manifest ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
-      au < expected ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
+      au < manifest ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
 
     }
 
@@ -3012,7 +3012,7 @@
       au < released ; 2011 ; Conflict and Health Volume 5 ; 5 >
       au < released ; 2012 ; Conflict and Health Volume 6 ; 6 >
       au < manifest ; 2013 ; Conflict and Health Volume 7 ; 7 >
-      au < expected ; 2014 ; Conflict and Health Volume 8 ; 8 >
+      au < manifest ; 2014 ; Conflict and Health Volume 8 ; 8 >
 
     }
 
@@ -3451,7 +3451,7 @@
 
       au < ready ; 2012 ; Flavour Volume 1 ; 1 >
       au < manifest ; 2013 ; Flavour Volume 2 ; 2 >
-      au < expected ; 2014 ; Flavour Volume 3 ; 3 >
+      au < manifest ; 2014 ; Flavour Volume 3 ; 3 >
 
     }
 
@@ -3577,7 +3577,7 @@
       au < ready ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
       au < ready ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < manifest ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
-      au < expected ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
+      au < manifest ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
 
     }
 
@@ -3747,7 +3747,7 @@
       au < released ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
       au < manifest ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < manifest ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < expected ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < manifest ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
 
     }
 
@@ -4250,7 +4250,7 @@
       au < manifest ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
       au < manifest ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
       au < manifest ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
-      au < expected ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
+      au < manifest ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
 
     }
 
@@ -4876,7 +4876,7 @@
       au < released ; 2011 ; Journal of Negative Results in BioMedicine Volume 10 ; 10 >
       au < manifest ; 2012 ; Journal of Negative Results in BioMedicine Volume 11 ; 11 >
       au < manifest ; 2013 ; Journal of Negative Results in BioMedicine Volume 12 ; 12 >
-      au < expected ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
+      au < manifest ; 2014 ; Journal of Negative Results in BioMedicine Volume 13 ; 13 >
 
     }
 
@@ -4894,7 +4894,7 @@
 
       au < manifest ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < manifest ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
-      au < expected ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
+      au < manifest ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
 
     }
 
@@ -5075,7 +5075,7 @@
       au < released ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < manifest ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
       au < manifest ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
-      au < expected ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
+      au < manifest ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
 
     }
 
@@ -5293,7 +5293,7 @@
       param[journal_issn] = 2049-2618
 
       au < manifest ; 2013 ; Microbiome Volume 1 ; 1 >
-      au < expected ; 2014 ; Microbiome Volume 2 ; 2 >
+      au < manifest ; 2014 ; Microbiome Volume 2 ; 2 >
 
     }
 
@@ -6284,7 +6284,7 @@
       au < manifest ; 2011 ; Tobacco Induced Diseases Volume 9 ; 9 >
       au < manifest ; 2012 ; Tobacco Induced Diseases Volume 10 ; 10 >
       au < manifest ; 2013 ; Tobacco Induced Diseases Volume 11 ; 11 >
-      au < expected ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
+      au < manifest ; 2014 ; Tobacco Induced Diseases Volume 12 ; 12 >
 
     }
 
