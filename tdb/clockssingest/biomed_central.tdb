@@ -64,7 +64,7 @@
       au < finished ; crawling ; 2011 ; BMC Biochemistry Volume 12 ; 12 >
       au < crawling ; exists ; 2012 ; BMC Biochemistry Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Biochemistry Volume 14 ; 14 >
-      au < expected ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
+      au < manifest ; exists ; 2014 ; BMC Biochemistry Volume 15 ; 15 >
 
     }
 
@@ -465,7 +465,7 @@
       au < finished ; crawling ; 2011 ; BMC Developmental Biology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Developmental Biology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Developmental Biology Volume 13 ; 13 >
-      au < expected ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; BMC Developmental Biology Volume 14 ; 14 >
      
     }
 
@@ -519,7 +519,7 @@
       au < finished ; crawling ; 2011 ; BMC Ecology Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Ecology Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Ecology Volume 13 ; 13 >
-      au < expected ; exists ; 2014 ; BMC Ecology Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; BMC Ecology Volume 14 ; 14 >
 
     }
 
@@ -1054,7 +1054,7 @@
       au < crawling ; exists ; 2011 ; BMC Medical Physics Volume 11 ; 11 >
       au < crawling ; exists ; 2012 ; BMC Medical Physics Volume 12 ; 12 >
       au < crawling ; exists ; 2013 ; BMC Medical Physics Volume 13 ; 13 >
-      au < expected ; exists ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
+      au < manifest ; exists ; 2014 ; BMC Medical Physics Volume 14 ; 14 >
 
     }
 
@@ -1903,7 +1903,7 @@
 
       au < finished ; crawling ; 2012 ; Agriculture & Food Security Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Agriculture & Food Security Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; Agriculture & Food Security Volume 3 ; 3 >
 
     }
 
@@ -2125,7 +2125,7 @@
       au < superseded ; exists ; 2011 ; Aquatic Biosystems Volume 7 [superseded] ; 7 >
       au < finished ; crawling ; 2012 ; Aquatic Biosystems Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Aquatic Biosystems Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; Aquatic Biosystems Volume 10 ; 10 >
 
     }
 
@@ -2996,7 +2996,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Conflict and Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Conflict and Health Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Conflict and Health Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; Conflict and Health Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; Conflict and Health Volume 8 ; 8 >
 
     }
 
@@ -3421,7 +3421,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2012 ; Flavour Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Flavour Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; Flavour Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; Flavour Volume 3 ; 3 >
 
     }
 
@@ -3546,7 +3546,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Genetics Selection Evolution Volume 43 ; 43 >
       au < crawling ; exists ; 2012 ; Genetics Selection Evolution Volume 44 ; 44 >
       au < crawling ; exists ; 2013 ; Genetics Selection Evolution Volume 45 ; 45 >
-      au < expected ; exists ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
+      au < manifest ; exists ; 2014 ; Genetics Selection Evolution Volume 46 ; 46 >
 
     }
 
@@ -3716,7 +3716,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Head & Face Medicine Volume 7 ; 7 >
       au < crawling ; exists ; 2012 ; Head & Face Medicine Volume 8 ; 8 >
       au < crawling ; exists ; 2013 ; Head & Face Medicine Volume 9 ; 9 >
-      au < expected ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
+      au < manifest ; exists ; 2014 ; Head & Face Medicine Volume 10 ; 10 >
 
     }
 
@@ -4220,7 +4220,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Irish Veterinary Journal Volume 64 ; 64 >
       au < crawling ; exists ; 2012 ; Irish Veterinary Journal Volume 65 ; 65 >
       au < crawling ; exists ; 2013 ; Irish Veterinary Journal Volume 66 ; 66 >
-      au < expected ; exists ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
+      au < manifest ; exists ; 2014 ; Irish Veterinary Journal Volume 67 ; 67 >
 
     }
 
@@ -4842,7 +4842,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2012 ; Journal of Neurodevelopmental Disorders Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Journal of Neurodevelopmental Disorders Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; Journal of Neurodevelopmental Disorders Volume 6 ; 6 >
 
     }
 
@@ -5023,7 +5023,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Journal of the International Society of Sports Nutrition Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Journal of the International Society of Sports Nutrition Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Journal of the International Society of Sports Nutrition Volume 10 ; 10 >
-      au < expected ; exists ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
+      au < manifest ; exists ; 2014 ; Journal of the International Society of Sports Nutrition Volume 11 ; 11 >
 
     }
 
@@ -5140,7 +5140,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2012 ; Longevity & Healthspan Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Longevity & Healthspan Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; Longevity & Healthspan Volume 3 ; 3 >
 
     }
 
