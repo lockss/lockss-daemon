@@ -91,9 +91,9 @@
       param[base_url] = http://periodicos.franca.unesp.br/
       param[journal_id] = estudosjuridicosunesp
 
-      au < releasing ; 2010 ; 1 ; Revista de Estudos Jurídicos UNESP Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista de Estudos Jurídicos UNESP Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista de Estudos Jurídicos UNESP Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Revista de Estudos Jurídicos UNESP Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista de Estudos Jurídicos UNESP Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista de Estudos Jurídicos UNESP Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista de Estudos Jurídicos UNESP Volume 2013 ; 2013 >
 
   }
@@ -127,10 +127,10 @@
       param[journal_id] = SSR
       comment[notReady] = no permission
 
-      au < releasing ; 2007 ; 1 ; Serviço Social & Realidade Volume 2007 ; 2007 >
+      au < released ; 2007 ; 1 ; Serviço Social & Realidade Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 2 ; Serviço Social & Realidade Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 3 ; Serviço Social & Realidade Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 4 ; Serviço Social & Realidade Volume 2010 ; 2010 >
+      au < released ; 2009 ; 3 ; Serviço Social & Realidade Volume 2009 ; 2009 >
+      au < released ; 2010 ; 4 ; Serviço Social & Realidade Volume 2010 ; 2010 >
       au < expected ; 2011 ; 5 ; Serviço Social & Realidade Volume 2011 ; 2011 >
       au < expected ; 2012 ; 6 ; Serviço Social & Realidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Serviço Social & Realidade Volume 2013 ; 2013 >
@@ -209,16 +209,16 @@
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = casa
 
-      au < releasing ; 2003 ; 1 ; Cadernos de Semiótica Aplicada Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 2 ; Cadernos de Semiótica Aplicada Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 3 ; Cadernos de Semiótica Aplicada Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 4 ; Cadernos de Semiótica Aplicada Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 5 ; Cadernos de Semiótica Aplicada Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 6 ; Cadernos de Semiótica Aplicada Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 7 ; Cadernos de Semiótica Aplicada Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 8 ; Cadernos de Semiótica Aplicada Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 9 ; Cadernos de Semiótica Aplicada Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 10 ; Cadernos de Semiótica Aplicada Volume 2012 ; 2012 >
+      au < released ; 2003 ; 1 ; Cadernos de Semiótica Aplicada Volume 2003 ; 2003 >
+      au < released ; 2004 ; 2 ; Cadernos de Semiótica Aplicada Volume 2004 ; 2004 >
+      au < released ; 2005 ; 3 ; Cadernos de Semiótica Aplicada Volume 2005 ; 2005 >
+      au < released ; 2006 ; 4 ; Cadernos de Semiótica Aplicada Volume 2006 ; 2006 >
+      au < released ; 2007 ; 5 ; Cadernos de Semiótica Aplicada Volume 2007 ; 2007 >
+      au < released ; 2008 ; 6 ; Cadernos de Semiótica Aplicada Volume 2008 ; 2008 >
+      au < released ; 2009 ; 7 ; Cadernos de Semiótica Aplicada Volume 2009 ; 2009 >
+      au < released ; 2010 ; 8 ; Cadernos de Semiótica Aplicada Volume 2010 ; 2010 >
+      au < released ; 2011 ; 9 ; Cadernos de Semiótica Aplicada Volume 2011 ; 2011 >
+      au < released ; 2012 ; 10 ; Cadernos de Semiótica Aplicada Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Cadernos de Semiótica Aplicada Volume 2013 ; 2013 >
 
   }
@@ -234,23 +234,23 @@
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = estudos
 
-      au < releasing ; 1996 ; 1 ; Estudos de Sociologia Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 2 ; Estudos de Sociologia Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 3 ; Estudos de Sociologia Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 4 ; Estudos de Sociologia Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 5 ; Estudos de Sociologia Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 6 ; Estudos de Sociologia Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 7 ; Estudos de Sociologia Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 8 ; Estudos de Sociologia Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 9 ; Estudos de Sociologia Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 10 ; Estudos de Sociologia Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 11 ; Estudos de Sociologia Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 12 ; Estudos de Sociologia Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 13 ; Estudos de Sociologia Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 14 ; Estudos de Sociologia Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 15 ; Estudos de Sociologia Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 16 ; Estudos de Sociologia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 17 ; Estudos de Sociologia Volume 2012 ; 2012 >
+      au < released ; 1996 ; 1 ; Estudos de Sociologia Volume 1996 ; 1996 >
+      au < released ; 1997 ; 2 ; Estudos de Sociologia Volume 1997 ; 1997 >
+      au < released ; 1998 ; 3 ; Estudos de Sociologia Volume 1998 ; 1998 >
+      au < released ; 1999 ; 4 ; Estudos de Sociologia Volume 1999 ; 1999 >
+      au < released ; 2000 ; 5 ; Estudos de Sociologia Volume 2000 ; 2000 >
+      au < released ; 2001 ; 6 ; Estudos de Sociologia Volume 2001 ; 2001 >
+      au < released ; 2002 ; 7 ; Estudos de Sociologia Volume 2002 ; 2002 >
+      au < released ; 2003 ; 8 ; Estudos de Sociologia Volume 2003 ; 2003 >
+      au < released ; 2004 ; 9 ; Estudos de Sociologia Volume 2004 ; 2004 >
+      au < released ; 2005 ; 10 ; Estudos de Sociologia Volume 2005 ; 2005 >
+      au < released ; 2006 ; 11 ; Estudos de Sociologia Volume 2006 ; 2006 >
+      au < released ; 2007 ; 12 ; Estudos de Sociologia Volume 2007 ; 2007 >
+      au < released ; 2008 ; 13 ; Estudos de Sociologia Volume 2008 ; 2008 >
+      au < released ; 2009 ; 14 ; Estudos de Sociologia Volume 2009 ; 2009 >
+      au < released ; 2010 ; 15 ; Estudos de Sociologia Volume 2010 ; 2010 >
+      au < released ; 2011 ; 16 ; Estudos de Sociologia Volume 2011 ; 2011 >
+      au < released ; 2012 ; 17 ; Estudos de Sociologia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 18 ; Estudos de Sociologia Volume 2013 ; 2013 >
 
   }
@@ -468,11 +468,11 @@
       param[base_url] = http://seer.fclar.unesp.br/
       param[journal_id] = redd
 
-      au < releasing ; 2008 ; 1 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 2 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 3 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 4 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 5 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2012 ; 2012 >
+      au < released ; 2008 ; 1 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2008 ; 2008 >
+      au < released ; 2009 ; 2 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2009 ; 2009 >
+      au < released ; 2010 ; 3 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2010 ; 2010 >
+      au < released ; 2011 ; 4 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2011 ; 2011 >
+      au < released ; 2012 ; 5 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; REDD: Revista Espaço de Diálogo e Desconexão Volume 2013 ; 2013 >
 
   }
@@ -510,27 +510,27 @@
       param[journal_id] = alimentos
       comment[notReady] = low agreement
 
-      au < releasing ; 1989 ; 1 ; Alimentos e Nutrição Araraquara Volume 1989 ; 1989 >
-      au < releasing ; 1990 ; 2 ; Alimentos e Nutrição Araraquara Volume 1990 ; 1990 >
-      au < releasing ; 1991 ; 3 ; Alimentos e Nutrição Araraquara Volume 1991 ; 1991 >
-      au < releasing ; 1992 ; 4 ; Alimentos e Nutrição Araraquara Volume 1992 ; 1992 >
-      au < releasing ; 1993 ; 5 ; Alimentos e Nutrição Araraquara Volume 1993 ; 1993 >
-      au < releasing ; 1995 ; 6 ; Alimentos e Nutrição Araraquara Volume 1995 ; 1995 >
-      au < releasing ; 1996 ; 7 ; Alimentos e Nutrição Araraquara Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 8 ; Alimentos e Nutrição Araraquara Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 9 ; Alimentos e Nutrição Araraquara Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 10 ; Alimentos e Nutrição Araraquara Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 11 ; Alimentos e Nutrição Araraquara Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 12 ; Alimentos e Nutrição Araraquara Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 13 ; Alimentos e Nutrição Araraquara Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 14 ; Alimentos e Nutrição Araraquara Volume 2003 ; 2003 >
+      au < released ; 1989 ; 1 ; Alimentos e Nutrição Araraquara Volume 1989 ; 1989 >
+      au < released ; 1990 ; 2 ; Alimentos e Nutrição Araraquara Volume 1990 ; 1990 >
+      au < released ; 1991 ; 3 ; Alimentos e Nutrição Araraquara Volume 1991 ; 1991 >
+      au < released ; 1992 ; 4 ; Alimentos e Nutrição Araraquara Volume 1992 ; 1992 >
+      au < released ; 1993 ; 5 ; Alimentos e Nutrição Araraquara Volume 1993 ; 1993 >
+      au < released ; 1995 ; 6 ; Alimentos e Nutrição Araraquara Volume 1995 ; 1995 >
+      au < released ; 1996 ; 7 ; Alimentos e Nutrição Araraquara Volume 1996 ; 1996 >
+      au < released ; 1997 ; 8 ; Alimentos e Nutrição Araraquara Volume 1997 ; 1997 >
+      au < released ; 1998 ; 9 ; Alimentos e Nutrição Araraquara Volume 1998 ; 1998 >
+      au < released ; 1999 ; 10 ; Alimentos e Nutrição Araraquara Volume 1999 ; 1999 >
+      au < released ; 2000 ; 11 ; Alimentos e Nutrição Araraquara Volume 2000 ; 2000 >
+      au < released ; 2001 ; 12 ; Alimentos e Nutrição Araraquara Volume 2001 ; 2001 >
+      au < released ; 2002 ; 13 ; Alimentos e Nutrição Araraquara Volume 2002 ; 2002 >
+      au < released ; 2003 ; 14 ; Alimentos e Nutrição Araraquara Volume 2003 ; 2003 >
       au < notReady ; 2004 ; 15 ; Alimentos e Nutrição Araraquara Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 16 ; Alimentos e Nutrição Araraquara Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 17 ; Alimentos e Nutrição Araraquara Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 18 ; Alimentos e Nutrição Araraquara Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 19 ; Alimentos e Nutrição Araraquara Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 20 ; Alimentos e Nutrição Araraquara Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 21 ; Alimentos e Nutrição Araraquara Volume 2010 ; 2010 >
+      au < released ; 2005 ; 16 ; Alimentos e Nutrição Araraquara Volume 2005 ; 2005 >
+      au < released ; 2006 ; 17 ; Alimentos e Nutrição Araraquara Volume 2006 ; 2006 >
+      au < released ; 2007 ; 18 ; Alimentos e Nutrição Araraquara Volume 2007 ; 2007 >
+      au < released ; 2008 ; 19 ; Alimentos e Nutrição Araraquara Volume 2008 ; 2008 >
+      au < released ; 2009 ; 20 ; Alimentos e Nutrição Araraquara Volume 2009 ; 2009 >
+      au < released ; 2010 ; 21 ; Alimentos e Nutrição Araraquara Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 22 ; Alimentos e Nutrição Araraquara Volume 2011 ; 2011 >
       au < notReady ; 2012 ; 23 ; Alimentos e Nutrição Araraquara Volume 2012 ; 2012 >
       au < expected ; 2013 ; 24 ; Alimentos e Nutrição Araraquara Volume 2013 ; 2013 >
@@ -550,14 +550,14 @@
       param[journal_id] = Cien_Farm
       comment[notReady] = permission issues, agreement issues
 
-      au < releasing ; 2005 ; 1 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 2 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 3 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2007 ; 2007 >
+      au < released ; 2005 ; 1 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2005 ; 2005 >
+      au < released ; 2006 ; 2 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2006 ; 2006 >
+      au < released ; 2007 ; 3 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2007 ; 2007 >
       au < notReady ; 2008 ; 4 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 5 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 6 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2010 ; 2010 >
+      au < released ; 2009 ; 5 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2009 ; 2009 >
+      au < released ; 2010 ; 6 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 7 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 8 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2012 ; 2012 >
+      au < released ; 2012 ; 8 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Revista de Ciências Farmacêuticas Básica e Aplicada Volume 2013 ; 2013 >
 
   }
@@ -597,21 +597,21 @@
       au < notReady ; 1995 ; 20 ; Geografia  Volume 1995 ; 1995 >
       au < notReady ; 1996 ; 21 ; Geografia  Volume 1996 ; 1996 >
       au < notReady ; 1997 ; 22 ; Geografia  Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 23 ; Geografia  Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 24 ; Geografia  Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 25 ; Geografia  Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 26 ; Geografia  Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 27 ; Geografia  Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 28 ; Geografia  Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 29 ; Geografia  Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 30 ; Geografia  Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 31 ; Geografia  Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 32 ; Geografia  Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 33 ; Geografia  Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 34 ; Geografia  Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 35 ; Geografia  Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 36 ; Geografia  Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 37 ; Geografia  Volume 2012 ; 2012 >
+      au < released ; 1998 ; 23 ; Geografia  Volume 1998 ; 1998 >
+      au < released ; 1999 ; 24 ; Geografia  Volume 1999 ; 1999 >
+      au < released ; 2000 ; 25 ; Geografia  Volume 2000 ; 2000 >
+      au < released ; 2001 ; 26 ; Geografia  Volume 2001 ; 2001 >
+      au < released ; 2002 ; 27 ; Geografia  Volume 2002 ; 2002 >
+      au < released ; 2003 ; 28 ; Geografia  Volume 2003 ; 2003 >
+      au < released ; 2004 ; 29 ; Geografia  Volume 2004 ; 2004 >
+      au < released ; 2005 ; 30 ; Geografia  Volume 2005 ; 2005 >
+      au < released ; 2006 ; 31 ; Geografia  Volume 2006 ; 2006 >
+      au < released ; 2007 ; 32 ; Geografia  Volume 2007 ; 2007 >
+      au < released ; 2008 ; 33 ; Geografia  Volume 2008 ; 2008 >
+      au < released ; 2009 ; 34 ; Geografia  Volume 2009 ; 2009 >
+      au < released ; 2010 ; 35 ; Geografia  Volume 2010 ; 2010 >
+      au < released ; 2011 ; 36 ; Geografia  Volume 2011 ; 2011 >
+      au < released ; 2012 ; 37 ; Geografia  Volume 2012 ; 2012 >
       au < expected ; 2013 ; 38 ; Geografia  Volume 2013 ; 2013 >
 
   }
@@ -659,13 +659,13 @@
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = climatologia
 
-      au < releasing ; 2006 ; 1 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 2 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 3 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 4 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 5 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 6 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 7 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2012 ; 2012 >
+      au < released ; 2006 ; 1 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2006 ; 2006 >
+      au < released ; 2007 ; 2 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2007 ; 2007 >
+      au < released ; 2008 ; 3 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2008 ; 2008 >
+      au < released ; 2009 ; 4 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2009 ; 2009 >
+      au < released ; 2010 ; 5 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2010 ; 2010 >
+      au < released ; 2011 ; 6 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2011 ; 2011 >
+      au < released ; 2012 ; 7 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; CLIMEP: Climatologia e Estudos da Paisagem Volume 2013 ; 2013 >
 
   }
@@ -831,24 +831,24 @@
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = motriz
 
-      au < releasing ; 1995 ; 1 ; Motriz Volume 1995 ; 1995 >
-      au < releasing ; 1996 ; 2 ; Motriz Volume 1996 ; 1996 >
-      au < releasing ; 1997 ; 3 ; Motriz Volume 1997 ; 1997 >
-      au < releasing ; 1998 ; 4 ; Motriz Volume 1998 ; 1998 >
-      au < releasing ; 1999 ; 5 ; Motriz Volume 1999 ; 1999 >
-      au < releasing ; 2000 ; 6 ; Motriz Volume 2000 ; 2000 >
-      au < releasing ; 2001 ; 7 ; Motriz Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 8 ; Motriz Volume 2002 ; 2002 >
-      au < releasing ; 2003 ; 9 ; Motriz Volume 2003 ; 2003 >
-      au < releasing ; 2004 ; 10 ; Motriz Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 11 ; Motriz Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 12 ; Motriz Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 13 ; Motriz Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 14 ; Motriz Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 15 ; Motriz Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 16 ; Motriz Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 17 ; Motriz Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 18 ; Motriz Volume 2012 ; 2012 >
+      au < released ; 1995 ; 1 ; Motriz Volume 1995 ; 1995 >
+      au < released ; 1996 ; 2 ; Motriz Volume 1996 ; 1996 >
+      au < released ; 1997 ; 3 ; Motriz Volume 1997 ; 1997 >
+      au < released ; 1998 ; 4 ; Motriz Volume 1998 ; 1998 >
+      au < released ; 1999 ; 5 ; Motriz Volume 1999 ; 1999 >
+      au < released ; 2000 ; 6 ; Motriz Volume 2000 ; 2000 >
+      au < released ; 2001 ; 7 ; Motriz Volume 2001 ; 2001 >
+      au < released ; 2002 ; 8 ; Motriz Volume 2002 ; 2002 >
+      au < released ; 2003 ; 9 ; Motriz Volume 2003 ; 2003 >
+      au < released ; 2004 ; 10 ; Motriz Volume 2004 ; 2004 >
+      au < released ; 2005 ; 11 ; Motriz Volume 2005 ; 2005 >
+      au < released ; 2006 ; 12 ; Motriz Volume 2006 ; 2006 >
+      au < released ; 2007 ; 13 ; Motriz Volume 2007 ; 2007 >
+      au < released ; 2008 ; 14 ; Motriz Volume 2008 ; 2008 >
+      au < released ; 2009 ; 15 ; Motriz Volume 2009 ; 2009 >
+      au < released ; 2010 ; 16 ; Motriz Volume 2010 ; 2010 >
+      au < released ; 2011 ; 17 ; Motriz Volume 2011 ; 2011 >
+      au < released ; 2012 ; 18 ; Motriz Volume 2012 ; 2012 >
       au < expected ; 2013 ; 19 ; Motriz Volume 2013 ; 2013 >
 
   }
@@ -865,12 +865,12 @@
       param[base_url] = http://www.periodicos.rc.biblioteca.unesp.br/
       param[journal_id] = naturalia
 
-      au < releasing ; 2003 ; 1 ; Naturalia Volume 2003 ; 2003 >
-      au < releasing ; 2008 ; 2 ; Naturalia Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 3 ; Naturalia Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 4 ; Naturalia Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 5 ; Naturalia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 6 ; Naturalia Volume 2012 ; 2012 >
+      au < released ; 2003 ; 1 ; Naturalia Volume 2003 ; 2003 >
+      au < released ; 2008 ; 2 ; Naturalia Volume 2008 ; 2008 >
+      au < released ; 2009 ; 3 ; Naturalia Volume 2009 ; 2009 >
+      au < released ; 2010 ; 4 ; Naturalia Volume 2010 ; 2010 >
+      au < released ; 2011 ; 5 ; Naturalia Volume 2011 ; 2011 >
+      au < released ; 2012 ; 6 ; Naturalia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Naturalia Volume 2013 ; 2013 >
 
   }
@@ -1033,17 +1033,17 @@
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = educacaoemrevista
 
-      au < releasing ; 2001 ; 1 ; Educação em Revista Volume 2001 ; 2001 >
-      au < releasing ; 2002 ; 2 ; Educação em Revista Volume 2002 ; 2002 >
-      au < releasing ; 2004 ; 3 ; Educação em Revista Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 4 ; Educação em Revista Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 5 ; Educação em Revista Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 6 ; Educação em Revista Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 7 ; Educação em Revista Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 8 ; Educação em Revista Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 9 ; Educação em Revista Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 10 ; Educação em Revista Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 11 ; Educação em Revista Volume 2012 ; 2012 >
+      au < released ; 2001 ; 1 ; Educação em Revista Volume 2001 ; 2001 >
+      au < released ; 2002 ; 2 ; Educação em Revista Volume 2002 ; 2002 >
+      au < released ; 2004 ; 3 ; Educação em Revista Volume 2004 ; 2004 >
+      au < released ; 2005 ; 4 ; Educação em Revista Volume 2005 ; 2005 >
+      au < released ; 2006 ; 5 ; Educação em Revista Volume 2006 ; 2006 >
+      au < released ; 2007 ; 6 ; Educação em Revista Volume 2007 ; 2007 >
+      au < released ; 2008 ; 7 ; Educação em Revista Volume 2008 ; 2008 >
+      au < released ; 2009 ; 8 ; Educação em Revista Volume 2009 ; 2009 >
+      au < released ; 2010 ; 9 ; Educação em Revista Volume 2010 ; 2010 >
+      au < released ; 2011 ; 10 ; Educação em Revista Volume 2011 ; 2011 >
+      au < released ; 2012 ; 11 ; Educação em Revista Volume 2012 ; 2012 >
       au < expected ; 2013 ; 12 ; Educação em Revista Volume 2013 ; 2013 >
 
   }
@@ -1149,15 +1149,15 @@
       param[base_url] = http://www2.marilia.unesp.br/revistas/
       param[journal_id] = ric
 
-      au < releasing ; 2004 ; 1 ; Revista de Iniciação Científica da FFC Volume 2004 ; 2004 >
-      au < releasing ; 2005 ; 2 ; Revista de Iniciação Científica da FFC Volume 2005 ; 2005 >
-      au < releasing ; 2006 ; 3 ; Revista de Iniciação Científica da FFC Volume 2006 ; 2006 >
-      au < releasing ; 2007 ; 4 ; Revista de Iniciação Científica da FFC Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 5 ; Revista de Iniciação Científica da FFC Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 6 ; Revista de Iniciação Científica da FFC Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 7 ; Revista de Iniciação Científica da FFC Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 8 ; Revista de Iniciação Científica da FFC Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 9 ; Revista de Iniciação Científica da FFC Volume 2012 ; 2012 >
+      au < released ; 2004 ; 1 ; Revista de Iniciação Científica da FFC Volume 2004 ; 2004 >
+      au < released ; 2005 ; 2 ; Revista de Iniciação Científica da FFC Volume 2005 ; 2005 >
+      au < released ; 2006 ; 3 ; Revista de Iniciação Científica da FFC Volume 2006 ; 2006 >
+      au < released ; 2007 ; 4 ; Revista de Iniciação Científica da FFC Volume 2007 ; 2007 >
+      au < released ; 2008 ; 5 ; Revista de Iniciação Científica da FFC Volume 2008 ; 2008 >
+      au < released ; 2009 ; 6 ; Revista de Iniciação Científica da FFC Volume 2009 ; 2009 >
+      au < released ; 2010 ; 7 ; Revista de Iniciação Científica da FFC Volume 2010 ; 2010 >
+      au < released ; 2011 ; 8 ; Revista de Iniciação Científica da FFC Volume 2011 ; 2011 >
+      au < released ; 2012 ; 9 ; Revista de Iniciação Científica da FFC Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista de Iniciação Científica da FFC Volume 2013 ; 2013 >
 
   }

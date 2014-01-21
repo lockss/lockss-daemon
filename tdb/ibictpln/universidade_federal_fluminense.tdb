@@ -53,9 +53,9 @@
       param[base_url] = http://www.uff.br/periodicoshumanas/
       param[journal_id] = ensaios
 
-      au < releasing ; 2010 ; 1 ; Revista Ensaios Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Revista Ensaios Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Revista Ensaios Volume 2012 ; 2012 >
+      au < released ; 2010 ; 1 ; Revista Ensaios Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Revista Ensaios Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Revista Ensaios Volume 2012 ; 2012 >
       au < expected ; 2013 ; 4 ; Revista Ensaios Volume 2013 ; 2013 >
 
   }
@@ -72,7 +72,7 @@
       param[journal_id] = Fractal
       comment[notReady] = no substance
 
-      au < releasing ; 1989 ; 1 ; Fractal: Revista de Psicologia Volume 1989 ; 1989 >
+      au < released ; 1989 ; 1 ; Fractal: Revista de Psicologia Volume 1989 ; 1989 >
       au < notReady ; 1990 ; 2 ; Fractal: Revista de Psicologia Volume 1990 ; 1990 >
       au < notReady ; 1993 ; 5 ; Fractal: Revista de Psicologia Volume 1993 ; 1993 >
       au < notReady ; 1994 ; 6 ; Fractal: Revista de Psicologia Volume 1994 ; 1994 >
@@ -89,11 +89,11 @@
       au < notReady ; 2005 ; 17 ; Fractal: Revista de Psicologia Volume 2005 ; 2005 >
       au < notReady ; 2006 ; 18 ; Fractal: Revista de Psicologia Volume 2006 ; 2006 >
       au < notReady ; 2007 ; 19 ; Fractal: Revista de Psicologia Volume 2007 ; 2007 >
-      au < releasing ; 2008 ; 20 ; Fractal: Revista de Psicologia Volume 2008 ; 2008 >
-      au < releasing ; 2009 ; 21 ; Fractal: Revista de Psicologia Volume 2009 ; 2009 >
-      au < releasing ; 2010 ; 22 ; Fractal: Revista de Psicologia Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 23 ; Fractal: Revista de Psicologia Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 24 ; Fractal: Revista de Psicologia Volume 2012 ; 2012 >
+      au < released ; 2008 ; 20 ; Fractal: Revista de Psicologia Volume 2008 ; 2008 >
+      au < released ; 2009 ; 21 ; Fractal: Revista de Psicologia Volume 2009 ; 2009 >
+      au < released ; 2010 ; 22 ; Fractal: Revista de Psicologia Volume 2010 ; 2010 >
+      au < released ; 2011 ; 23 ; Fractal: Revista de Psicologia Volume 2011 ; 2011 >
+      au < released ; 2012 ; 24 ; Fractal: Revista de Psicologia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 25 ; Fractal: Revista de Psicologia Volume 2013 ; 2013 >
 
   }
