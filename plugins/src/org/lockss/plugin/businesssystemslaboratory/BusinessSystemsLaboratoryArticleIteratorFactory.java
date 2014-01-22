@@ -1,5 +1,5 @@
 /*
- * $Id: BusinessSystemsLaboratoryArticleIteratorFactory.java,v 1.1 2013-11-01 18:04:06 ldoan Exp $
+ * $Id: BusinessSystemsLaboratoryArticleIteratorFactory.java,v 1.2 2014-01-22 20:06:40 ldoan Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ implements ArticleIteratorFactory,
                                   + "[^/]+\\.pdf$\", base_url, volume_name";
 
   
-  private Pattern PDF_PATTERN = 
+  private static Pattern PDF_PATTERN = 
       Pattern.compile("/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
 
   private static String PDF_REPLACEMENT = "/$1.pdf";
