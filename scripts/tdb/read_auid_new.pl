@@ -10,7 +10,7 @@ my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve 
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
 my $clockss_tag = "CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit";
 my $cc_license_tag = "rel..license";
-my $cc_license_url = "href=.http://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0)/?.";
+my $cc_license_url = "href=.http://creativecommons\.org/licenses/(by|by-sa|by-nc|by-nd|by-nc-sa|by-nc-nd)/(1\.0|2\.0|2\.5|3\.0|4\.0)/?.";
 my $cc_by_tag = "href..http://creativecommons.org/licenses/by";
 my $bmc_tag = "<span>Archive</span>";
 my $igi_tag = "/gateway/issue/";
@@ -225,17 +225,41 @@ while (my $line = <>) {
         
   } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
         #Url with list of urls for issues
-        $url_s = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
+        $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
-        $start_url = uri_unescape($url_s);
+        $start_url = uri_unescape($url);
         my $req_s = HTTP::Request->new(GET, $start_url);
         my $resp_s = $ua->request($req_s);
         #For reporting at the end
         $man_url = $start_url ;
     if ($resp_s->is_success) {
       my $start_contents = $resp_s->content;
-      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) & (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
+      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && (($start_contents =~ m/\($param{year}\)/) || ($start_contents =~ m/: $param{year}/))) {
          if ($start_contents =~ m/meta name=.description. content=.(.*) is an international/si) {
+            $vol_title = $1;
+        }
+         $result = "Manifest"
+      } else {
+         $result = "--"
+      }
+    } else {
+      $result = "--"
+    }
+        sleep(5);
+        
+  } elsif ($plugin eq "PensoftPlugin") {
+        #Url with list of urls for issues
+        $url = sprintf("%sjournals/%s/archive?year=%d", 
+            $param{base_url}, $param{journal_name}, $param{year});
+        $start_url = uri_unescape($url);
+        my $req_s = HTTP::Request->new(GET, $start_url);
+        my $resp_s = $ua->request($req_s);
+        #For reporting at the end
+        $man_url = $start_url ;
+    if ($resp_s->is_success) {
+      my $start_contents = $resp_s->content;
+      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive?year=$param{year}/)) {
+         if ($start_contents =~ m/<title>(.*)<\/title>/si) {
             $vol_title = $1;
         }
          $result = "Manifest"
