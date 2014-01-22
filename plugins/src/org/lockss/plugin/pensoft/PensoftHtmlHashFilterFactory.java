@@ -1,4 +1,4 @@
-/* $Id: PensoftHtmlHashFilterFactory.java,v 1.4 2013-10-10 23:17:52 aishizaki Exp $ */
+/* $Id: PensoftHtmlHashFilterFactory.java,v 1.5 2014-01-22 18:27:10 aishizaki Exp $ */
 /*
 
 Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
@@ -75,9 +75,9 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
          HtmlNodeFilters.tag("noscript"),  
 
          // filters out tags with SESIDs which can change
-         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=.*", true),
+         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=\\d+.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("a", "onClick", ".*SESID=.*", true),
-         HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID.*", true),
+         HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID=.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("iframe", "src", ".*SESID=.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("tr", "onClick", ".*SESID=.*", true),
 
@@ -86,10 +86,6 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
          // filters out the tag with a changing Viewed By counter   
          HtmlNodeFilters.tagWithAttribute("td", "class", "green2"),        
          HtmlNodeFilters.tagWithAttribute("td", "class", "green"),
-
-         //
-         HtmlNodeFilters.tagWithAttribute("td", "class", "texttah11"),
-         HtmlNodeFilters.tagWithAttribute("table", "class", "texttah11"),
 
          // this will catch the "Current Issue" in the top center, which changes 
          // when the new issue changes, plus another center menu
