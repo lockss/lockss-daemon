@@ -258,7 +258,7 @@ while (my $line = <>) {
         $man_url = $start_url ;
     if ($resp_s->is_success) {
       my $start_contents = $resp_s->content;
-      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive\?year=$param{year}"<\/a>/)) {
+      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive\?year=$param{year}">$param{year}/)) {
          if ($start_contents =~ m/<title>(.*)<\/title>/si) {
             $vol_title = $1;
         }
@@ -288,6 +288,7 @@ while (my $line = <>) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
         $vol_title =~ s/2013/Volume $param{volume_name}/g;
+        $vol_title =~ s/2014/Volume $param{volume_name}/g;
         if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
           $vol_title = "\"" . $vol_title . "\"";
         }
@@ -320,6 +321,7 @@ while (my $line = <>) {
         $vol_title = $1;
         $vol_title =~ s/\s*\n\s*/ /g;
         $vol_title =~ s/2013/Volume $param{volume_name}/g;
+        $vol_title =~ s/2014/Volume $param{volume_name}/g;
         if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
           $vol_title = "\"" . $vol_title . "\"";
         }
