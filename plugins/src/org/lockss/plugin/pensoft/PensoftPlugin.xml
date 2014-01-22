@@ -1,4 +1,4 @@
- <!--  $Id: PensoftPlugin.xml,v 1.11 2013-12-30 02:29:33 ldoan Exp $-->
+ <!--  $Id: PensoftPlugin.xml,v 1.12 2014-01-22 18:25:04 aishizaki Exp $-->
  <map>
   <entry>
     <string>plugin_status</string>
@@ -14,7 +14,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -25,11 +25,11 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -70,7 +70,11 @@
       </entry>
     </map>
   </entry>
-<!-- example of pdfs: 
+<!-- 
+    this:           http://www.pensoft.net/journals/neobiota/issue/11/
+    redirecting to: http://www.pensoft.net/journals/neobiota/journals/neobiota/issue/11/
+    The above looks to have been fixed! 1/22/2014
+    example of pdfs: 
       http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
       http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf
     examples of abstract|article: 
@@ -83,7 +87,9 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
-      <string>1,"^%sjournals/%s/issue/", base_url, journal_name</string>
+      <!--http://www.pensoft.net/journals/neobiota/issue/11/ -->
+      <!-- <string>1,"^%sjournals/%s/journals/%s/issue/.*", base_url, journal_name, journal_name</string> -->
+      <string>1,"^%sjournals/%s/issue/.*", base_url, journal_name</string>
       <string>1,"^%sinc/journals/", base_url</string> 
       <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
       <string>1, "^%sJ_FILES/", base_url</string>
@@ -166,5 +172,8 @@
       </entry>
     </map>
   </entry>
-
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pensoft.PensoftUrlNormalizer</string>
+  </entry>
 </map>
