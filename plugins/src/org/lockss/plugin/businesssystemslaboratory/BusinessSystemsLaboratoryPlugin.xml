@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Business Systems Laboratory Plugin, Base URL %s, Volume %s, Year %s", base_url, volume_name, year</string>
+    <string>"Business Systems Laboratory Plugin, Base URL %s, Volume %s, Year %d", base_url, volume_name, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -52,18 +52,18 @@
       <!-- http://www.business-systems-review.org/BSR.2.1.January-June.2013.htm  cache volume name -->
       <string>1,"^%sBSR[.-]%s[.-][^/]+\.htm$", base_url, volume_name</string>
       <!-- http://www.business-systems-review.org/BSR.2.1.January-June.2013.htm cache year -->
-      <string>1,"^%sBSR[^/]+[.-]%s\.htm$", base_url, year</string>
+      <string>1,"^%sBSR[^/]+[.-]%d\.htm$", base_url, year</string>
       <!-- http://www.business-systems-review.org/Faruk.et.al..(2013).S.Q.Costs.Retail.Banking.2.1.htm -->
-      <string>1,"^%s[^/]+\(%s\)[^/]+\.htm$", base_url, year</string>
+      <string>1,"^%s[^/]+\(%d\)[^/]+\.htm$", base_url, year</string>
       <!-- http://www.business-systems-review.org/BSR.Vol.2-Iss.1-Faruk.et.al..S.Q.costs.Retail.Banking.pdf -->
       <!-- http://www.business-systems-review.org/BSR.Vol.1-n.1.Charles.Fran%C3%A7ois-Complexity.and.Systemic.models.PDF -->
       <string>1,"^%sBSR[.-]Vol[.-]%s[.-][^/]+\.pdf$", base_url, volume_name</string>
       <!-- complete issue http://www.business-systems-review.org/BSR-Vol.2-Iss.1-2013-complete-issue.pdf -->
       <!-- Complete Issue http://www.business-systems-review.org/BSR.Vol.2-Iss.2-Symposium.Valencia.2013.Complete.Issue.pdf -->
       <!-- http://www.business-systems-review.org/BSR-Vol.1-ISS.1-June-December.2012.Complete.pdf -->
-      <string>1,"^%sBSR[^/]+[.-]%s[.-]complete([.-]issue)?\.(pdf|PDF)$", base_url, year</string>
+      <string>1,"^%sBSR[^/]+[.-]%d[.-]complete([.-]issue)?\.(pdf|PDF)$", base_url, year</string>
       <!-- http://www.business-systems-review.org/BSR.2.2.Special.Issue.Symposium.Valencia.2013.htm  -->
-      <string>1,"^%sBSR[^/]+Special[.-]Issue[^/]+[.-]%s\.htm$", base_url, year</string>
+      <string>1,"^%sBSR[^/]+Special[.-]Issue[^/]+[.-]%d\.htm$", base_url, year</string>
     </list>
   </entry>
   <entry>
@@ -95,8 +95,9 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>year</key>
         <displayName>Year</displayName>
-        <type>1</type>
-        <size>20</size>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
