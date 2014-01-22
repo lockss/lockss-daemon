@@ -1,4 +1,4 @@
-/* $Id: PensoftHtmlHashFilterFactory.java,v 1.5 2014-01-22 18:27:10 aishizaki Exp $ */
+/* $Id: PensoftHtmlHashFilterFactory.java,v 1.6 2014-01-22 22:47:27 aishizaki Exp $ */
 /*
 
 Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
@@ -75,9 +75,9 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
          HtmlNodeFilters.tag("noscript"),  
 
          // filters out tags with SESIDs which can change
-         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=\\d+.*", true),
+         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("a", "onClick", ".*SESID=.*", true),
-         HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID=.*", true),
+         HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("iframe", "src", ".*SESID=.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("tr", "onClick", ".*SESID=.*", true),
 
