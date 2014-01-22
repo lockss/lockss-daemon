@@ -247,7 +247,7 @@ while (my $line = <>) {
     }
         sleep(5);
         
-  } elsif ($plugin eq "PensoftPlugin") {
+  } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
         #Url with list of urls for issues
         $url = sprintf("%sjournals/%s/archive?year=%d", 
             $param{base_url}, $param{journal_name}, $param{year});
