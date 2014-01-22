@@ -1,5 +1,5 @@
 /*
- * $Id: 
+ * $Id: PensoftHtmlMetadataExtractorFactory.java,v 1.3 2014-01-22 18:18:15 aishizaki Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.*;
 
 /*
  * Metadata on abstract page:
- * http://www.pensoft.net/journals/jhr/article/1548/abstract/review-of-the-asian-wood-boring-genus-euxiphydria-hymenoptera-symphyta-xiphydriidae-
+ * http://www.pensoft.net/journals/ZZZ/article/1548/abstract/Article-title-for-this-Example
 <meta name="Allow-search" content="yes">
 <meta name="Audience" content="all">
 <meta name="Rating" content="all">
@@ -54,36 +54,36 @@ import org.lockss.plugin.*;
 <meta name="robots" content="index, follow">
 <meta name="keywords" content="woodborers; Palearctic; Oriental; Hyperxiphia">
 <meta name="description" content="Five species of Euxiphydria are recognized, E. leucopoda Takeuchi, 1938, from Japan, E. potanini (Jakovlev, 1891) from Japan, Russia, Korea, and China, E. pseud">
-<meta name="title" content="Review of the Asian wood-boring genus Euxiphydria (Hymenoptera, Symphyta, Xiphydriidae)"/><meta name="citation_pdf_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3070"/><meta name="citation_xml_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3069"/><meta name="citation_fulltext_html_url" content="http://www.pensoft.net/journals/jhr/article/1548/review-of-the-asian-wood-boring-genus-euxiphydria-hymenoptera-symphyta-xiphydriidae-"/>
-<meta name="citation_abstract_html_url" content="http://www.pensoft.net/journals/jhr/article/1548/abstract/review-of-the-asian-wood-boring-genus-euxiphydria-hymenoptera-symphyta-xiphydriidae-"/>
-<meta name="dc.title" content="Review of the Asian wood-boring genus Euxiphydria (Hymenoptera, Symphyta, Xiphydriidae)" />
-<meta name="dc.creator" content="David Smith" />
-<meta name="dc.contributor" content="David Smith" />
-<meta name="dc.creator" content="Akihiko Shinohara" />
-<meta name="dc.contributor" content="Akihiko Shinohara" />
+<meta name="title" content="Review of Article title for this Example"/><meta name="citation_pdf_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3070"/><meta name="citation_xml_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3069"/><meta name="citation_fulltext_html_url" content="http://www.pensoft.net/journals/ZZZ/article/1548/Article-title-for-this-Example"/>
+<meta name="citation_abstract_html_url" content="http://www.pensoft.net/journals/ZZZ/article/1548/abstract/Article-title-for-this-Example"/>
+<meta name="dc.title" content="Review of Article title for this Example" />
+<meta name="dc.creator" content="Smith Davids" />
+<meta name="dc.contributor" content="Smith Davids" />
+<meta name="dc.creator" content="Abcde  Stuvwxy" />
+<meta name="dc.contributor" content="Abcde  Stuvwxy" />
 <meta name="dc.type" content="Research Article" />
-<meta name="dc.source" content="Journal of Hymenoptera Research 2011 23: 1" />
+<meta name="dc.source" content="Journal of ZZZ Research 2011 23: 1" />
 <meta name="dc.date" content="2011-10-21" />
-<meta name="dc.identifier" content="10.3897/jhr.23.1548" />
+<meta name="dc.identifier" content="10.3897/ZZZ.23.1548" />
 <meta name="dc.publisher" content="Pensoft Publishers" />
 <meta name="dc.rights" content="http://creativecommons.org/licenses/by/3.0/" />
 <meta name="dc.format" content="text/html" />
 <meta name="dc.language" content="en" />
 
-<meta name="prism.publicationName" content="Journal of Hymenoptera Research" />
+<meta name="prism.publicationName" content="Journal of ZZZ Research" />
 <meta name="prism.issn" content="1314-2607" />
 <meta name="prism.publicationDate" content="2011-10-21" /> 
 <meta name="prism.volume" content="23" />
 
-<meta name="prism.doi" content="10.3897/jhr.23.1548" />
+<meta name="prism.doi" content="10.3897/ZZZ.23.1548" />
 <meta name="prism.section" content="Research Article" />
 <meta name="prism.startingPage" content="1" />
 <meta name="prism.endingPage" content="22" />
-<meta name="prism.copyright" content="2011 David Smith, Akihiko Shinohara" />
+<meta name="prism.copyright" content="2011 Smith Davids, Abcde  Stuvwxy" />
 <meta name="prism.rightsAgent" content="Journal of Hymenoptera Research@pensoft.net" />
 
-<meta name="eprints.title" content="Review of the Asian wood-boring genus Euxiphydria (Hymenoptera, Symphyta, Xiphydriidae)" />
-<meta name="eprints.creators_name" content="Smith, David " /> <meta name="eprints.creators_name" content="Shinohara, Akihiko " /> 
+<meta name="eprints.title" content="Review Review of Article title for this Example" />
+<meta name="eprints.creators_name" content="Davids, Smith " /> <meta name="eprints.creators_name" content="Stuvwxy, Abcde " /> 
 <meta name="eprints.type" content="Research Article" />
 <meta name="eprints.datestamp" content="2011-10-21" />
 <meta name="eprints.ispublished" content="pub" />
@@ -95,13 +95,13 @@ import org.lockss.plugin.*;
 
 <meta name="citation_journal_title" content="Journal of Hymenoptera Research" />
 <meta name="citation_publisher" content="Pensoft Publishers" />
-<meta name="citation_author" content="David Smith" /> <meta name="citation_author" content="Akihiko Shinohara" /> 
-<meta name="citation_title" content="Review of the Asian wood-boring genus Euxiphydria (Hymenoptera, Symphyta, Xiphydriidae)" />
+<meta name="citation_author" content="Smith Davids" /> <meta name="citation_author" content="Abcde  Stuvwxy" /> 
+<meta name="citation_title" content="Review of Article title for this Example" />
 <meta name="citation_volume" content="23" />
 
 <meta name="citation_firstpage" content="1" />
 <meta name="citation_lastpage" content="22" />
-<meta name="citation_doi" content="10.3897/jhr.23.1548" />
+<meta name="citation_doi" content="10.3897/ZZZ.23.1548" />
 <meta name="citation_issn" content="1314-2607" />
 <meta name="citation_date" content="2011/10/21" />
 
@@ -141,12 +141,12 @@ public class PensoftHtmlMetadataExtractorFactory implements
       tagMap.put("dc.source", MetadataField.DC_FIELD_SOURCE); 
       tagMap.put("dc.date", MetadataField.DC_FIELD_DATE); 
       tagMap.put("dc.identifier", MetadataField.DC_FIELD_IDENTIFIER); 
-      tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER); 
+      //tagMap.put("dc.publisher", MetadataField.DC_FIELD_PUBLISHER); 
       tagMap.put("dc.rights", MetadataField.DC_FIELD_RIGHTS); 
       tagMap.put("dc.format", MetadataField.DC_FIELD_FORMAT); 
       tagMap.put("dc.language", MetadataField.DC_FIELD_LANGUAGE); 
     
-      tagMap.put("keywords", MetadataField.FIELD_KEYWORDS); 
+      //tagMap.put("keywords", MetadataField.FIELD_KEYWORDS); 
 
      }
 
