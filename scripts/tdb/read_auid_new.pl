@@ -258,8 +258,7 @@ while (my $line = <>) {
         $man_url = $start_url ;
     if ($resp_s->is_success) {
       my $start_contents = $resp_s->content;
-#      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive\?year=$param{year}/)) {
-      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive\?year=$param{year}/)) {
+      if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/$param{journal_name}\/archive\?year=$param{year}"<\/a>/)) {
          if ($start_contents =~ m/<title>(.*)<\/title>/si) {
             $vol_title = $1;
         }
