@@ -259,8 +259,8 @@ while (my $line = <>) {
     if ($resp_s->is_success) {
       my $start_contents = $resp_s->content;
       if (defined($start_contents) && (($start_contents =~ m/$cc_license_tag/) && ($start_contents =~ m/$cc_license_url/)) && ($start_contents =~ m/\($param{year}\)/)) {
-         if ($start_contents =~ m/<title>(.*)<\/title>/si) {
-            $vol_title = $1;
+         if ($start_contents =~ m/<title>(.*) - Pensoft<\/title>/si) {
+            $vol_title = $1 . "Volume " . $param{year};
         }
          $result = "Manifest"
       } else {
