@@ -1,6 +1,6 @@
 /*
 
- * $Id: BusinessSystemsLaboratoryMetadataExtractorFactory.java,v 1.1 2013-11-01 18:04:06 ldoan Exp $
+ * $Id: BusinessSystemsLaboratoryMetadataExtractorFactory.java,v 1.2 2014-01-22 22:05:55 ldoan Exp $
  */
 
 /*
@@ -72,9 +72,11 @@ public class BusinessSystemsLaboratoryMetadataExtractorFactory
   public static class BusinessSystemsLaboratoryMetadataExtractor 
     implements FileMetadataExtractor {
     
+    // http://www.business-systems-review.org/
+    //            BSR.Vol.2-Iss.1-Massaro.et.al.Organising.Innovation.pdf
     private Pattern ISSUE_PATTERN = 
-        Pattern.compile("/[^/]+[.-](Iss|n)[.-]([0-9]+)[^/]+");
-
+        Pattern.compile("/BSR[.-]Vol[.-][0-9]+[.-](Iss?|n)[.-]([0-9]+)[^/]+");
+    
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
       throws IOException {
