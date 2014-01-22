@@ -1,10 +1,10 @@
 /*
- * $Id: 
+ * $Id: PensoftArticleIteratorFactory.java,v 1.5 2014-01-22 18:15:47 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,17 +48,17 @@ public class PensoftArticleIteratorFactory
                ArticleMetadataExtractorFactory {
 
   protected static Logger log =
-    Logger.getLogger("PensoftArticleIteratorFactory");
+    Logger.getLogger(PensoftArticleIteratorFactory.class);
 
   //http://www.pensoft.net/
   protected static final String ROOT_TEMPLATE =
     "\"%s\", base_url";
   //[http://www.pensoft.net/journals/jhr/]article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
   protected static final String PATTERN_TEMPLATE =
-    "\"journals/%s/article/[\\d]+/abstract(/[^/]*)?$\", journal_name";
-  //http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2777
-  protected static final String PDF_TEMPLATE =
-    "(http://www.pensoft.net/inc/journals/download.php?)(fileTable=J_GALLEYS)(&)(fileId=[\\d]+)$";
+    "\"journals/%s/article/[\\d]+/abstract(/[^/]*)?$\", journal_name"; 
+  protected static final String abstractRegExp = "journals/[\\w]+/article/[\\d]+/abstract(/[^/]*)?$";
+  // from the metadata: http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2758
+  protected static final String metadataRegExp ="(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -78,10 +78,9 @@ public class PensoftArticleIteratorFactory
     //"http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf"
     //abstract: 
     //http://www.pensoft.net/journals/jhr/article/1142/abstract/tiphiidae-wasps-of-madagascar-hymenoptera-tiphiidae-
-    protected static Pattern ABSTRACT_PATTERN =
-      Pattern.compile("journals/[\\w]+/article/[\\d]+/abstract(/[^/]*)?$", Pattern.CASE_INSENSITIVE);
-    protected static Pattern pdfPattern = Pattern.compile(PDF_TEMPLATE, Pattern.CASE_INSENSITIVE);
-
+    
+    protected static Pattern abstractPattern = Pattern.compile(abstractRegExp, Pattern.CASE_INSENSITIVE);
+    protected static Pattern metadataPattern = Pattern.compile(metadataRegExp, Pattern.CASE_INSENSITIVE);
     private ArchivalUnit au;
     
     public PensoftArticleIterator(ArchivalUnit au,
@@ -105,7 +104,7 @@ public class PensoftArticleIteratorFactory
       Matcher mat;
       log.debug3("createArticleFiles: " + url);
 
-      mat = ABSTRACT_PATTERN.matcher(url);
+      mat = abstractPattern.matcher(url);
       if (mat.find()) {     
         return processWithMetadata(cu,mat);
       }
@@ -146,20 +145,25 @@ public class PensoftArticleIteratorFactory
           // Accept either?
           
           if (am.containsRawKey("citation_pdf_url")){
-            //Pattern p = Pattern.compile("(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$", Pattern.CASE_INSENSITIVE);
-            String rawPdf = am.getRaw("citation_pdf_url");
-            log.debug3("   contains citation_pdf_url: "+rawPdf);
-            Matcher mat; // = pdfPattern.matcher(rawPdf);
-            String newPdf; // = mat.replaceFirst("$1$4$3$2");
-            CachedUrl rawCu = au.makeCachedUrl(rawPdf);
+            String metaPdf = am.getRaw("citation_pdf_url");
+            log.debug3("   contains citation_pdf_url: "+metaPdf);
+            Matcher mat;
+            CachedUrl rawCu = au.makeCachedUrl(metaPdf);
             
+            // if the pdf_url from the metadata is in the au and has content, use it
+            // otherwise, convert it to the "crawl" form
             if (rawCu != null && rawCu.hasContent()) {
               pdfCu = rawCu;
             } else {
-              mat = pdfPattern.matcher(rawPdf);
-              newPdf = mat.replaceFirst("$1$4$3$2");
-              pdfCu = au.makeCachedUrl(newPdf);
-              AuUtil.safeRelease(rawCu);
+               mat = metadataPattern.matcher(metaPdf);
+              if (mat.matches()) {
+                String crawlPdf = mat.replaceFirst("$1$4$3$2");
+                log.debug3("crawlPDF = "+crawlPdf);
+                pdfCu = au.makeCachedUrl(crawlPdf);
+                AuUtil.safeRelease(rawCu);
+              } else {
+                log.warning("PDF content not found for: " + metaPdf);
+              }
             }
      
             if (pdfCu != null && pdfCu.hasContent()) {
@@ -170,8 +174,10 @@ public class PensoftArticleIteratorFactory
               }
               AuUtil.safeRelease(pdfCu);
             }
+          } else {
+            log.warning("NO citation_pdf_url for this cu: "+absCu);
           }
-          
+                  
           // get the fulltexthtml url as a list:string from the metadata
           if (am.containsRawKey("citation_fulltext_html_url")){
             htmlCu = au.makeCachedUrl(am.getRaw("citation_fulltext_html_url"));
