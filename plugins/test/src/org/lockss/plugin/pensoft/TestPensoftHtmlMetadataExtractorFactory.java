@@ -1,5 +1,5 @@
 /*
- * $Id: 
+ * $Id: TestPensoftHtmlMetadataExtractorFactory.java,v 1.4 2014-01-22 23:31:22 aishizaki Exp $
  */
 
 /*
@@ -46,65 +46,70 @@ import org.lockss.plugin.pensoft.PensoftHtmlMetadataExtractorFactory;
 import org.lockss.plugin.simulated.*;
 
 /*
-
-<meta name="citation_abstract_html_url" content="http://www.pensoft.net/journals/compcytogen/article/1143/abstract/male-meiosis-heterochromatin-characterization-and-chromosomal-location-of-rdna-in-microtomus-lunifer-berg-1900-hemiptera"/>
-<meta name="dc.title" content="Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)" />
-<meta name="dc.creator" content="Mar’a Poggio" />
-<meta name="dc.contributor" content="Mar’a Poggio" /><meta name="dc.creator" content="Mar’a Bressa" />
-<meta name="dc.contributor" content="Mar’a Bressa" /><meta name="dc.creator" content="Alba Papeschi" />
-<meta name="dc.contributor" content="Alba Papeschi" />
-<meta name="dc.type" content="Research Articles" />
-<meta name="dc.source" content="Comparative Cytogenetics 2011 5: 1" />
-<meta name="dc.date" content="2011-05-05" />
-<meta name="dc.identifier" content="10.3897/compcytogen.v5i1.1143" />
+ * Metadata on abstract page:
+ * http://www.pensoft.net/journals/ZZZ/article/1548/abstract/Article-title-for-this-Example
+<meta name="Allow-search" content="yes">
+<meta name="Audience" content="all">
+<meta name="Rating" content="all">
+<meta name="Voluntary content rating" content="all">
+<meta name="resource-type" content="document">
+<meta name="revisit-after" content="1 day">
+<meta name="distribution" content="global">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="woodborers; Palearctic; Oriental; Hyperxiphia">
+<meta name="description" content="Five species of Something are recognized, E. leucopoda Takeuchi, 1938, from Japan, E. potanini (Jakovlev, 1891) from Japan, Russia, Korea, and China, E. pseud">
+<meta name="title" content="Review of Article title for this Example"/><meta name="citation_pdf_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3070"/><meta name="citation_xml_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=3069"/><meta name="citation_fulltext_html_url" content="http://www.pensoft.net/journals/ZZZ/article/1548/Article-title-for-this-Example"/>
+<meta name="citation_abstract_html_url" content="http://www.pensoft.net/journals/ZZZ/article/1548/abstract/Article-title-for-this-Example"/>
+<meta name="dc.title" content="Review of Article title for this Example" />
+<meta name="dc.creator" content="Smith Davids" />
+<meta name="dc.contributor" content="Smith Davids" />
+<meta name="dc.creator" content="Abcde  Stuvwxy" />
+<meta name="dc.contributor" content="Abcde  Stuvwxy" />
+<meta name="dc.type" content="Research Article" />
+<meta name="dc.source" content="Journal of ZZZ Research 2011 23: 1" />
+<meta name="dc.date" content="2011-10-21" />
+<meta name="dc.identifier" content="10.3897/ZZZ.23.1548" />
 <meta name="dc.publisher" content="Pensoft Publishers" />
 <meta name="dc.rights" content="http://creativecommons.org/licenses/by/3.0/" />
 <meta name="dc.format" content="text/html" />
 <meta name="dc.language" content="en" />
 
-<meta name="prism.publicationName" content="Comparative Cytogenetics" />
-<meta name="prism.issn" content="1993-078X" />
-<meta name="prism.publicationDate" content="2011-05-05" /> 
-<meta name="prism.volume" content="5" />
-<meta name="prism.number" content="1" />
-<meta name="prism.doi" content="10.3897/compcytogen.v5i1.1143" />
-<meta name="prism.section" content="Research Articles" />
+<meta name="prism.publicationName" content="Journal of ZZZ Research" />
+<meta name="prism.issn" content="1314-2607" />
+<meta name="prism.publicationDate" content="2011-10-21" /> 
+<meta name="prism.volume" content="23" />
+
+<meta name="prism.doi" content="10.3897/ZZZ.23.1548" />
+<meta name="prism.section" content="Research Article" />
 <meta name="prism.startingPage" content="1" />
 <meta name="prism.endingPage" content="22" />
-<meta name="prism.copyright" content="2011 Mar’a Poggio, Mar’a Bressa, Alba Papeschi" />
-<meta name="prism.rightsAgent" content="Comparative Cytogenetics@pensoft.net" />
+<meta name="prism.copyright" content="2011 Smith Davids, Abcde  Stuvwxy" />
+<meta name="prism.rightsAgent" content="Journal of ZZZ Research@pensoft.net" />
 
-<meta name="eprints.title" content="Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)" />
-<meta name="eprints.creators_name" content="Poggio, Mar’a " /> <meta name="eprints.creators_name" content="Bressa, Mar’a " /> <meta name="eprints.creators_name" content="Papeschi, Alba " /> 
-<meta name="eprints.type" content="Research Articles" />
-<meta name="eprints.datestamp" content="2011-05-05" />
+<meta name="eprints.title" content="Review of Article title for this Example" />
+<meta name="eprints.creators_name" content="Davids, Smith " /> <meta name="eprints.creators_name" content="Stuvwxy, Abcde " /> 
+<meta name="eprints.type" content="Research Article" />
+<meta name="eprints.datestamp" content="2011-10-21" />
 <meta name="eprints.ispublished" content="pub" />
 <meta name="eprints.date" content="2011" />
 <meta name="eprints.date_type" content="published" />
 <meta name="eprints.publication" content="Pensoft Publishers" />
-<meta name="eprints.volume" content="5" />
+<meta name="eprints.volume" content="23" />
 <meta name="eprints.pagerange" content="1-22" />
 
-<meta name="citation_journal_title" content="Comparative Cytogenetics" />
+<meta name="citation_journal_title" content="Journal of ZZZ Research" />
 <meta name="citation_publisher" content="Pensoft Publishers" />
-<meta name="citation_author" content="Mar’a Poggio" /> 
-<meta name="citation_author" content="Julia Bressa" /> 
-<meta name="citation_author" content="Alba Papeschi" /> 
-<meta name="citation_title" content="Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)" />
-<meta name="citation_volume" content="5" />
-<meta name="citation_issue" content="1" />
+<meta name="citation_author" content="Smith Davids" /> <meta name="citation_author" content="Abcde  Stuvwxy" /> 
+<meta name="citation_title" content="Review of Article title for this Example" />
+<meta name="citation_volume" content="23" />
+
 <meta name="citation_firstpage" content="1" />
 <meta name="citation_lastpage" content="22" />
-<meta name="citation_doi" content="10.3897/compcytogen.v5i1.1143" />
-<meta name="citation_issn" content="1993-078X" />
-<meta name="citation_date" content="2011/05/05" />
-<meta name="citation_pdf_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2764"/>
-<meta name="citation_xml_url" content="http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2763"/>
-<meta name="citation_fulltext_html_url" content="http://www.pensoft.net/journals/mycokeys/article/2065/Hello-world-as-a-title"/>
-<meta name="citation_abstract_html_url" content="http://www.pensoft.net/journals/mycokeys/article/2065/abstract/Hello-world-as-a-title"/>
+<meta name="citation_doi" content="10.3897/ZZZ.23.1548" />
+<meta name="citation_issn" content="1314-2607" />
+<meta name="citation_date" content="2011/10/21" />
 
-
-*/
+ */
 
 public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
 
@@ -159,30 +164,30 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
   String goodArticleTitle = "Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)";
   String goodJournalTitle = "Analytical Comparative Cytogenetics";
   String goodKeywords = "meiosis, heterochromatin, rDNA";
-  String goodPDF = "http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=1234";
+  String goodMetaPDF = "http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=1234";
+  String goodCrawlPDF = "http://www.pensoft.net/inc/journals/download.php?fileId=1234&fileTable=J_GALLEYS";
   String goodXML = "http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=World";
   String goodHTML = "http://www.pensoft.net/journals/helloworld/article/2065/Hello-world-as-a-title";
   String goodABS = "http://www.pensoft.net/journals/helloworld/article/2065/abstract/Hello-world-as-a-title";
   
 
-  /*
- public void testRegExp() throws Exception {
-    Pattern pattern1 =
-      Pattern.compile("(http://www.pensoft.net/inc/journals/download.php\\?)(fileId=[\\d]+)(\\&)(fileTable=J_GALLEYS)$", Pattern.CASE_INSENSITIVE);
-    Pattern pattern2 =
-      Pattern.compile("(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$", Pattern.CASE_INSENSITIVE);
-    Matcher mat = pattern2.matcher(goodPDF);
-      if (mat.matches()) {
-        System.out.println("matches!");
-        System.out.println("  $1 = "+mat.group(1));            
-        System.out.println("  $2 = "+mat.group(2));            
-        System.out.println("  $3 = "+mat.group(3));            
-        System.out.println("  $4 = "+mat.group(4)); 
-        System.out.println("  NEW PDF = "+mat.replaceFirst("$1$4$3$2"));            
-      } else System.out.println("does not match");
+  final String crawlRegExp = "(http://www.pensoft.net/inc/journals/download.php\\?)(fileId=[\\d]+)(\\&)(fileTable=J_GALLEYS)$";
+  final String metadataRegExp = "(http://www.pensoft.net/inc/journals/download.php\\?)(fileTable=J_GALLEYS)(\\&)(fileId=[\\d]+)$";
 
+ public void testRegExp() throws Exception {
+    Pattern crawlPattern = Pattern.compile(crawlRegExp, Pattern.CASE_INSENSITIVE);
+    Pattern metadataPattern = Pattern.compile(metadataRegExp, Pattern.CASE_INSENSITIVE);
+    String crawlPdf = null;
+    Matcher mat = metadataPattern.matcher(goodMetaPDF);
+      if (mat.matches()) {
+        crawlPdf = mat.replaceFirst("$1$4$3$2");
+        mat = crawlPattern.matcher(crawlPdf);
+        assertTrue(mat.matches());
+      } 
+      assertEquals(crawlPdf, goodCrawlPDF);
+     
  }
- */
+
   
   // a chunk of metadata html source code from where the 
   // metadata should be extracted
@@ -200,7 +205,7 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
     + "<meta content=\"en\" name=\"citation_language\">\n"
     + "<meta content=\"" + goodKeywords + "\"name=\"keywords\">\n"
     + "<meta content=\"" + goodDate + "\" name=\"citation_date\">\n"    
-    + "<meta name=\"citation_pdf_url\" content=\"" + goodPDF + "\"/>"
+    + "<meta name=\"citation_pdf_url\" content=\"" + goodMetaPDF + "\"/>"
     + "<meta name=\"citation_xml_url\" content=\""+ goodXML + "\"/>"
     + "<meta name=\"citation_fulltext_html_url\" content=\"" + goodHTML + "\"/>"
     + "<meta name=\"citation_abstract_html_url\" content=\"" + goodABS + "\"/>"
@@ -240,8 +245,8 @@ public class TestPensoftHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     assertEquals(goodEndPage, md.get(MetadataField.FIELD_END_PAGE));
-    assertEquals("[" + goodKeywords + "]", md.getList(MetadataField.FIELD_KEYWORDS).toString());
-    assertEquals(goodPDF, md.getRaw("citation_pdf_url"));
+    //assertEquals("[" + goodKeywords + "]", md.getList(MetadataField.FIELD_KEYWORDS).toString());
+    assertEquals(goodMetaPDF, md.getRaw("citation_pdf_url"));
     assertEquals(goodXML, md.getRaw("citation_xml_url"));
     assertEquals(goodHTML, md.getRaw("citation_fulltext_html_url"));
     assertEquals(goodABS, md.getRaw("citation_abstract_html_url"));
