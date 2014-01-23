@@ -1,5 +1,5 @@
 /*
- * $Id: PensoftUrlNormalizer.java,v 1.1 2014-01-22 18:13:13 aishizaki Exp $
+ * $Id: PensoftUrlNormalizer.java,v 1.2 2014-01-23 19:48:56 aishizaki Exp $
  */
 
 /*
@@ -32,16 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.pensoft;
 
-//import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
-import org.lockss.plugin.pensoft.PensoftUrlNormalizer;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
-//import org.lockss.util.urlconn.LockssUrlConnection;
-//import org.lockss.util.urlconn.HttpClientUrlConnection.LockssProxyGetMethodImpl;
 
 public class PensoftUrlNormalizer implements UrlNormalizer {
   protected static Logger log = 
@@ -52,20 +47,20 @@ public class PensoftUrlNormalizer implements UrlNormalizer {
   public String normalizeUrl(String urlString, ArchivalUnit au)
       throws PluginException {
     String u_str = urlString;
-    /* if the urlString is not "writable" ascii (0x1F < x < 0x7f), then
-     * normalize the string (using the local isAscii which catches <= 0x1f)   
+    /* if the urlString is not "readable" ascii (0x1F < x < 0x7f), then
+     * normalize/encode the string 
      */
-    if(!isAscii(urlString)) {
+    if(!isReadableAscii(urlString)) {
         if(log.isDebug2()) log.debug2("in:" + u_str);
         u_str = UrlUtil.encodeUri(urlString, Constants.ENCODING_UTF_8);
         if(log.isDebug2()) log.debug2("out:" + u_str);
       }
       return u_str;
   }
-  /* defining isAscii() rather than using StringUtil.isAscii() to catch the weird
-   * control characters (31 and under) that are frequently in Pensoft article urls
+  /* defining isReadableAscii() rather than using StringUtil.isAscii() to catch
+   * weird control characters (<= 31) frequently found in Pensoft article urls
    */
-  private static boolean isAscii(String s) {
+  private static boolean isReadableAscii(String s) {
     for (int ix = 0; ix < s.length(); ix++) {
       if ((s.charAt(ix) > 0x7F) || (s.charAt(ix) < 0x20)) {
         return false;
