@@ -1,4 +1,4 @@
- <!--  $Id: PensoftPlugin.xml,v 1.12 2014-01-22 18:25:04 aishizaki Exp $-->
+ <!--  $Id: PensoftPlugin.xml,v 1.13 2014-01-23 19:53:10 aishizaki Exp $-->
  <map>
   <entry>
     <string>plugin_status</string>
@@ -82,6 +82,9 @@
       http://www.pensoft.net/journals/compcytogen/article/1730
     example of jpg: 
       http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg
+    example of citation:
+      http://www.pensoft.net/journals/subtbiol/article/2518/citation/world-karst-science-reviews
+      http://www.pensoft.net/inc/journals/ris.php?articleId=2518&type=ris&journalId=13
 -->  
   <entry>
     <string>au_crawlrules</string>
@@ -90,6 +93,11 @@
       <!--http://www.pensoft.net/journals/neobiota/issue/11/ -->
       <!-- <string>1,"^%sjournals/%s/journals/%s/issue/.*", base_url, journal_name, journal_name</string> -->
       <string>1,"^%sjournals/%s/issue/.*", base_url, journal_name</string>
+      <!-- the following remove extraneous citation (we keep the type=ris) -->
+      <string>2, "^%sinc/journals/ris.php?.*type=(bib|txt).*", base_url</string>
+      <!-- removing non-essential stuff from the right column -->
+      <string>2, "^%sjournal_home.*", base_url</string>
+      <string>2, "^%s[e_]?books_.*", base_url</string>
       <string>1,"^%sinc/journals/", base_url</string> 
       <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
       <string>1, "^%sJ_FILES/", base_url</string>

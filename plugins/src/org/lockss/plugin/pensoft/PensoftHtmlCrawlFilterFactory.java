@@ -54,8 +54,6 @@ public class PensoftHtmlCrawlFilterFactory implements FilterFactory {
       // Will exclude these tags from the stream:
       //   Left side of table - articles are in middle of table
       HtmlNodeFilters.tagWithAttribute("td", "class", "textver10"),
-      //   left/right columns alongside article are all width 186 - at least for now
-      HtmlNodeFilters.tagWithAttribute("table", "width", "186"),
       //   center link to "Current Issue"
       HtmlNodeFilters.tagWithText("a", "Current Issue", true),
 
