@@ -445,7 +445,7 @@
       param[journal_id] = fronteiraz
       comment[notReady] = Language xml issues.
 
-      au < testing ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 >
+      au < ready ; 2008 ; 1 ; FronteiraZ Volume 2008 ; 2008 >
       au < released ; 2009 ; 2 ; FronteiraZ Volume 2009 ; 2009 >
       au < released ; 2010 ; 3 ; FronteiraZ Volume 2010 ; 2010 >
       au < notReady ; 2011 ; 4 ; FronteiraZ Volume 2011 ; 2011 >
@@ -656,7 +656,7 @@
       au < notReady ; 2004 ; 6 ; Cadernos Metrópole Volume 2004 ; 2004 >
       au < released ; 2005 ; 7 ; Cadernos Metrópole Volume 2005 ; 2005 >
       au < released ; 2006 ; 8 ; Cadernos Metrópole Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
+      au < ready ; 2007 ; 9 ; Cadernos Metrópole Volume 2007 ; 2007 >
       au < released ; 2008 ; 10 ; Cadernos Metrópole Volume 2008 ; 2008 >
       au < released ; 2009 ; 11 ; Cadernos Metrópole Volume 2009 ; 2009 >
       au < notReady ; 2010 ; 12 ; Cadernos Metrópole Volume 2010 ; 2010 >
@@ -977,7 +977,7 @@
       au < released ; 1987 ; 6 ; Projeto História Volume 1987 ; 1987 >
       au < released ; 1992 ; 7 ; Projeto História Volume 1992 ; 1992 >
       au < released ; 1993 ; 8 ; Projeto História Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 9 ; Projeto História Volume 1994 ; 1994 >
+      au < ready ; 1994 ; 9 ; Projeto História Volume 1994 ; 1994 >
       au < released ; 1995 ; 10 ; Projeto História Volume 1995 ; 1995 >
       au < released ; 1996 ; 11 ; Projeto História Volume 1996 ; 1996 >
       au < released ; 1997 ; 12 ; Projeto História Volume 1997 ; 1997 >
