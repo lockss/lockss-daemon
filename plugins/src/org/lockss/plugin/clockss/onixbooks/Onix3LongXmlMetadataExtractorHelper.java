@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.8 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.9 2014-01-23 22:31:38 alexandraohlson Exp $
  */
 
 /*
@@ -358,12 +358,13 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
+    cookMap.put(ONIX_pub_name, MetadataField.FIELD_PUBLISHER);
     // TODO - after priority setting is allowed in cooking
     //cookMap.put(ONIX_mkt_date, MetadataField.FIELD_DATE);
     //cookMap.put(ONIX_copy_date, MetadataField.FIELD_DATE);
 
-    //TODO: If book is part of sereis, currently no way to store title,issn
-    //TODO: If book is part of sereis, currently no way to store title,issn
+    //TODO: If book is part of series, currently no way to store title,issn
+    //TODO: If book is part of series, currently no way to store title,issn
     //cookMap.put(ONIX_product_seriestitle, MetadataField.FIELD_SERIES_TITLE);
     //cookMap.put(ONIX_product_seriesISSN, MetadataField.FIELD_SERIES_ISSN);
     //TODO: Book, BookSeries...currently no key field to put the information in to      

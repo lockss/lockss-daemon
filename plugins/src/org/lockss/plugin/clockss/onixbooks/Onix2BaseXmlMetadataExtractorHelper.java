@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.6 2014-01-23 22:31:38 alexandraohlson Exp $
  */
 
 /*
@@ -380,6 +380,7 @@ implements SourceXmlMetadataExtractorHelper {
      cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE); // book title = journal title
      cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
      cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
+     cookMap.put(ONIX_pub_name,MetadataField.FIELD_PUBLISHER); // overridden by tdb
           
      //TODO: book part of series - currently nowhere to put series title information
      //only one of the forms of series title will exist

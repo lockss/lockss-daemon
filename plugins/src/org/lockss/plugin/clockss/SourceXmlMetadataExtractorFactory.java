@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.12 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.13 2014-01-23 22:31:38 alexandraohlson Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.XPathXmlMetadataParser;
+import org.xml.sax.SAXException;
 
 
 /**
@@ -250,8 +251,29 @@ implements FileMetadataExtractorFactory {
 
       } catch (XPathExpressionException e) {
         log.debug3("Xpath expression exception:",e);
+      } catch (SAXException ex) {
+        handleSAXException(cu, ex);
+      } catch (IOException ex) {
+        handleIOException(cu, ex);
       }
 
+
+    }
+
+    // Overrideable method for plugins that want to catch and handle
+    // a problem in the XML file
+    protected void handleIOException(CachedUrl cu, IOException ex) {
+      // Add an alert or more significant warning here
+      log.debug3("IO exception loading XML file", ex);
+      
+    }
+
+    // Overrideable method for plugins that want to catch and handle
+    // a SAX parser problem in the XML file
+    protected void handleSAXException(CachedUrl cu, SAXException ex) {
+      // Add an alert or more significant warning here
+      log.debug3("SAX exception loading XML file", ex);
+      
     }
 
     /**

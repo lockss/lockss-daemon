@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.6 2014-01-23 22:31:38 alexandraohlson Exp $
  */
 
 /*
@@ -172,11 +172,11 @@ public class XPathXmlMetadataParser  {
     }
 
   }
-  
+
   /*
    * getter/setter for the switch to do xml filtering of input stream
    */
-  
+
   public boolean getDoXmlFiltering() {
     return doXmlFiltering;
   }
@@ -211,9 +211,10 @@ public class XPathXmlMetadataParser  {
    * @param cu the CachedUrl for the XML source file
    * @return list of ArticleMetadata objects; one per record in the XML
    * @throws IOException
+   * @throws SAXException 
    */
   public List<ArticleMetadata> extractMetadata(MetadataTarget target, CachedUrl cu)
-      throws IOException {
+      throws IOException, SAXException {
     if (cu == null) {
       throw new IllegalArgumentException("Null CachedUrl");
     }
@@ -223,7 +224,11 @@ public class XPathXmlMetadataParser  {
     List<ArticleMetadata> amList = makeNewAMList();
     ArticleMetadata globalAM = null;
 
-    Document doc = createDocumentTree(cu);
+    Document doc = null;
+    // this could throw IO or SAX exception - handled  upstream
+    doc = createDocumentTree(cu);
+
+    // no exception thrown but the document wasn't succesfully created
     if (doc == null) return amList; // return empty list
 
     try {
@@ -310,7 +315,7 @@ public class XPathXmlMetadataParser  {
             }
           } catch (ParseException ex) {
             // ignore invalid number
-            log.debug3(ex.getMessage());
+            log.debug3("ignore invalid number", ex);
           }
         } else {
           log.debug("Unknown nodeValue type: " + definedType.toString());
@@ -351,7 +356,7 @@ public class XPathXmlMetadataParser  {
    * @param cu to the XML file
    * @return Document for the loaded XML file
    */
-  protected Document createDocumentTree(CachedUrl cu) {
+  protected Document createDocumentTree(CachedUrl cu) throws SAXException, IOException {
 
     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder;
@@ -363,7 +368,7 @@ public class XPathXmlMetadataParser  {
       dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);          
       builder = dbf.newDocumentBuilder();
     } catch (ParserConfigurationException ex) {
-      log.warning("Cannot parse XML file for Metadata -" + ex.getMessage());
+      log.warning("Cannot setup document build for XML file -", ex);
       return null;
     }
 
@@ -373,30 +378,23 @@ public class XPathXmlMetadataParser  {
     try {
       doc = builder.parse(iSource);
       return doc;
-    } catch (SAXException ex) {
-      log.warning(ex.getMessage());
-      return null;
-    } catch (IOException e) {
-      log.warning(e.getMessage());
-      return null;
     } finally {
       AuUtil.safeRelease(cu);
     }
-    /* The entire document tree is now loaded*/
   }
 
   protected InputStream getInputStreamFromCU(CachedUrl cu) {
 
     if (doXmlFiltering) {
-      if (!(Constants.ENCODING_ISO_8859_1.equals(cu.getEncoding()))) {
-        log.error("Filtering XML that is not ISO_8859 which may or may not work");
+      if (!(Constants.ENCODING_ISO_8859_1.equalsIgnoreCase(cu.getEncoding()))) {
+        log.error("Filtering XML that is not ISO-8859-1 which may or may not work");
       }
       return new XmlFilteringInputStream(cu.getUnfilteredInputStream());
     } else { 
       return cu.getUnfilteredInputStream();
     }
   }
-  
+
   /**
    * A wrapper around ArticleMetadata creation to allow for override
    * @return newly created ArticleMetadata object
