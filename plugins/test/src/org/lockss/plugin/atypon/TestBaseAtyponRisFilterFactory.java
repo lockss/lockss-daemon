@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseAtyponRisFilterFactory.java,v 1.5 2013-10-23 04:25:25 tlipkis Exp $
+ * $Id: TestBaseAtyponRisFilterFactory.java,v 1.6 2014-01-23 18:51:26 alexandraohlson Exp $
  */
 /*
 
@@ -59,6 +59,9 @@ public class TestBaseAtyponRisFilterFactory extends LockssTestCase {
     // one newline 
     actIn = fact.createFilteredInputStream(mau,  new StringInputStream("\n"), Constants.DEFAULT_ENCODING);
     assertEquals("\n", StringUtil.fromInputStream(actIn));
+    // empty line and then empty space and then nothing
+    actIn = fact.createFilteredInputStream(mau,  new StringInputStream("     \n  "), Constants.DEFAULT_ENCODING);
+    assertEquals("     \n  ", StringUtil.fromInputStream(actIn));
     
   }
   

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.5 2014-01-14 23:30:09 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.6 2014-01-23 18:51:26 alexandraohlson Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.regex.Pattern;
 
 import org.apache.commons.io.input.BoundedInputStream;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -90,8 +91,9 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       // The first tag in a RIS file must be "TY - "; be nice about WS
       // The specification doesn't allow for comments or other preceding characters
 
-      // skip over empty lines
-      while (aLine !=  null && aLine.trim().length() == 0) {
+      // isBlank() checks if whitespace, empty or null
+      // keep initial null check or you'd never exit loop if you hit the end of input!
+      while (aLine != null && StringUtils.isBlank(aLine)) {
         aLine = bReader.readLine(); // get the next line
       }
       
@@ -103,10 +105,10 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       } 
       return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
-      log.debug2("Internal error (unsupported encoding)");
+      log.debug2("Internal error (unsupported encoding)", e);
       throw new PluginException("Unsupported encoding looking ahead in input stream");
     } catch (IOException e) {
-      log.debug2("Internal error (IO exception");
+      log.debug2("Internal error (IO exception)", e);
       throw new PluginException("IO exception looking ahead in input stream");
     }
   }
