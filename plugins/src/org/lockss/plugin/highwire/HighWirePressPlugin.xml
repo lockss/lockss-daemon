@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>90</string>
+    <string>91</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,17 +24,17 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>3</string>
+        <string>4</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.52.0</string>
+    <string>1.60.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -91,7 +91,7 @@
         </map>
       </entry>
     </map>
-  </entry>    
+  </entry>
   <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
@@ -105,7 +105,7 @@
       <string>1,"^%scontent/vol%s/", base_url, volume_name</string>
       <string>1,"^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", base_url, volume_name</string>
       <string>1,"^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", base_url, volume_name</string>
-      <string>1,"^%scgi/(lookup)", base_url</string>
+      <string>1,"^%scgi/(?:lookup|spanish_pdf/)", base_url</string>
       <string>1,"^%s(this_week)/([^/]+;)?%s/", base_url, volume_name</string>
       <string>1,"^%scgi/(content/full|data)/[^/]+/DC[0-9]*", base_url</string>
       <string>1,"^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*", base_url</string>
