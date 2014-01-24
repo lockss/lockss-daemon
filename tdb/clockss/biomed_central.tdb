@@ -1568,7 +1568,7 @@
       attr[journal_code] = bmcpsychology
 
       au < crawling ; exists ; 2013 ; BMC Psychology Volume 1 ; 1 >
-      au < manifest ; exists ; 2014 ; BMC Psychology Volume 2 ; 2 >
+      au < expected ; exists ; 2014 ; BMC Psychology Volume 2 ; 2 >
 
     }
 
@@ -2340,7 +2340,7 @@ comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/s
       au < crawling ; exists ; 2011 ; Biology of Mood & Anxiety Disorders Volume 1 ; 1 >
       au < finished ; crawling ; 2012 ; Biology of Mood & Anxiety Disorders Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Biology of Mood & Anxiety Disorders Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Biology of Mood & Anxiety Disorders Volume 4 ; 4 >
 
     }
 
@@ -2753,7 +2753,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2011 ; Child and Adolescent Psychiatry and Mental Health Volume 5 ; 5 >
       au < crawling ; exists ; 2012 ; Child and Adolescent Psychiatry and Mental Health Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; Child and Adolescent Psychiatry and Mental Health Volume 7 ; 7 >
-      au < manifest ; exists ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
+      au < expected ; exists ; 2014 ; Child and Adolescent Psychiatry and Mental Health Volume 8 ; 8 >
 
     }
 
@@ -2851,7 +2851,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2012 ; Cilia Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Cilia Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; Cilia Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Cilia Volume 3 ; 3 >
 
     }
 
@@ -3669,7 +3669,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Gut Pathogens Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Gut Pathogens Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Gut Pathogens Volume 5 ; 5 >
-      au < manifest ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
+      au < expected ; exists ; 2014 ; Gut Pathogens Volume 6 ; 6 >
 
     }
 
@@ -4237,7 +4237,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < crawling ; exists ; 2012 ; Israel Journal of Health Policy Research Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Israel Journal of Health Policy Research Volume 2 ; 2 >
-      au < manifest ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Israel Journal of Health Policy Research Volume 3 ; 3 >
 
     }
 
@@ -4522,7 +4522,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Journal of Circadian Rhythms Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Journal of Circadian Rhythms Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Journal of Circadian Rhythms Volume 11 ; 11 >
-      au < manifest ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 >
+      au < expected ; exists ; 2014 ; Journal of Circadian Rhythms Volume 12 ; 12 >
       
     }
 
@@ -4983,7 +4983,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2052-3211
 
       au < crawling ; exists ; 2013 ; Journal of Pharmaceutical Policy and Practice Volume 6 ; 6 >
-      au < manifest ; exists ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
+      au < expected ; exists ; 2014 ; Journal of Pharmaceutical Policy and Practice Volume 7 ; 7 >
 
     }
 
@@ -5099,7 +5099,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1678-9199
 
       au < crawling ; exists ; 2013 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 19 ; 19 >
-      au < manifest ; exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
+      au < expected ; exists ; 2014 ; Journal of Venomous Animals and Toxins including Tropical Diseases Volume 20 ; 20 >
 
     }
 
@@ -5183,7 +5183,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2011 ; Medical Gas Research Volume 1 ; 1 >
       au < crawling ; exists ; 2012 ; Medical Gas Research Volume 2 ; 2 >
       au < crawling ; exists ; 2013 ; Medical Gas Research Volume 3 ; 3 >
-      au < manifest ; exists ; 2014 ; Medical Gas Research Volume 4 ; 4 >
+      au < expected ; exists ; 2014 ; Medical Gas Research Volume 4 ; 4 >
 
     }
 
