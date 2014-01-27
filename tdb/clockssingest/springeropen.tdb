@@ -395,7 +395,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Empirical Research in Vocational Education and Training Volume 5 ; 5 >
-        au < expected ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
+        au < manifest ; exists ; 2014 ; Empirical Research in Vocational Education and Training Volume 6 ; 6 >
   
     }
   
@@ -1363,7 +1363,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Ophthalmic Inflammation and Infection Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Journal of Ophthalmic Inflammation and Infection Volume 4 ; 4 >
   
     }
   
