@@ -1,5 +1,5 @@
 /*
- * $Id: BaseAtyponRisFilterFactory.java,v 1.6 2014-01-23 18:51:26 alexandraohlson Exp $
+ * $Id: BaseAtyponRisFilterFactory.java,v 1.7 2014-01-27 20:38:22 thib_gc Exp $
  */
 
 /*
@@ -106,10 +106,10 @@ public class BaseAtyponRisFilterFactory implements FilterFactory {
       return inBuf; // If not a RIS file, just return reset file
     } catch (UnsupportedEncodingException e) {
       log.debug2("Internal error (unsupported encoding)", e);
-      throw new PluginException("Unsupported encoding looking ahead in input stream");
+      throw new PluginException("Unsupported encoding looking ahead in input stream", e);
     } catch (IOException e) {
       log.debug2("Internal error (IO exception)", e);
-      throw new PluginException("IO exception looking ahead in input stream");
+      throw new PluginException("IO exception looking ahead in input stream", e);
     }
   }
 }
