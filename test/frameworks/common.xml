@@ -54,6 +54,7 @@
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
       <list>
+        <value>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationPlugin</value>
         <value>org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin</value>
         <value>org.lockss.plugin.atypon.canadianyoungscientist.ClockssCanadianYoungScientistPlugin</value>
         <value>org.lockss.plugin.businesssystemslaboratory.ClockssBusinessSystemsLaboratoryPlugin</value>
