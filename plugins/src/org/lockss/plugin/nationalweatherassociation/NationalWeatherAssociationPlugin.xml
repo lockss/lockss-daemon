@@ -1,0 +1,141 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>National Weather Association Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"National Weather Association Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <!-- http://www.nwas.org/jom -->
+        <string>au_title</string>
+        <string>"%s%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <!-- http://www.nwas.org/jom/include/publications2013.php -->
+        <string>au_volume</string>
+        <string>"%s%s/include/publications%d.php", base_url, journal_id, year</string>
+      </entry> 
+    </map>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!-- http://www.nwas.org/jom/include/publications2013.php -->
+    <string>"%s%s/include/publications%d.php", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>1
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <!-- http://www.nwas.org/jom/abstracts/2013/2013-JOM22/abstract.php -->
+      <string>1,"^%s%s/abstracts/%d/%d-[^/]+[0-9]+/abstract\.php$", base_url, journal_id, year, year</string>
+      <!-- http://www.nwas.org/jom/articles/2013/2013-JOM12/2013-JOM12.pdf -->
+      <string>1,"^%s%s/articles/%d/%d-[^/]+[0-9]+/%d-[^/]+[0-9]+\.pdf$", base_url, journal_id, year, year, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%s%s/articles/%d/%d-[^/]+[0-9]+/%d-[^/]+[0-9]+\.pdf$", base_url, journal_id, year, year, year</string>
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.nationalweatherassociation.NationalWeatherAssociationHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
