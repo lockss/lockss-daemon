@@ -2315,7 +2315,25 @@
         au < expected ; 2014 ; Poiesis & Praxis Volume 11 ; 11 >
   
     }
+
+    {
   
+        title <
+          name = Protein & Cell ;
+          issn = 1674-8018 
+        >
+  
+        param[base_url] = http://www.springer.com/13238/
+        param[journal_issn] = 1674-8018
+        comment[platform] = Springer
+
+        au < exists ; 2010 ; SCIENCE CHINA Life Sciences Volume 1 ; 1 >
+        au < exists ; 2011 ; SCIENCE CHINA Life Sciences Volume 2 ; 2 >
+        au < exists ; 2012 ; SCIENCE CHINA Life Sciences Volume 3 ; 3 >
+        au < exists ; 2013 ; SCIENCE CHINA Life Sciences Volume 4 ; 4 >
+
+    }
+
     {
   
         title <
