@@ -187,7 +187,22 @@
         au < manifest ; exists ; 2014 ; Boundary Value Problems Volume 2014 ; 2014 >
   
     }
+
+    {
   
+        title <
+          name = Brazilian Journal of Science and Technology ;
+          issn = 2196-288X 
+        >
+  
+        param[base_url] = http://www.bjst-journal.com
+        param[journal_issn] = 2196-288X 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
