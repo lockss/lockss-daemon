@@ -63,15 +63,11 @@
     <string>org.lockss.plugin.clockss.onixbooks.OnixBooksSourceArticleIteratorFactory</string>
   </entry>
   <entry>
-    <string>plugin_source_xml_metadata_extractor_helper</string>
-    <string>org.lockss.plugin.clockss.onixbooks.Onix3LongXmlMetadataExtractorHelper</string>
-  </entry>
-  <entry>
     <string>text/xml_metadata_extractor_factory_map</string>
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
@@ -80,7 +76,7 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>    

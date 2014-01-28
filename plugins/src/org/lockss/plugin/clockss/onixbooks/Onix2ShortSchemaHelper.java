@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2ShortXmlMetadataExtractorHelper.java,v 1.2 2014-01-03 16:48:57 alexandraohlson Exp $
+ * $Id: Onix2ShortSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -35,21 +35,21 @@ package org.lockss.plugin.clockss.onixbooks;
 import org.lockss.util.*;
 
 /**
- *  A helper class that defines a schema for XML metadata extraction for
- *  with the filenames based on isbn13 plus .pdf or .epub
- *  There can be multiple records for the same item, one for each format
- *  @author alexohlson
+ * Define the strings for Onix2 short form. They layout is defined by 
+ * the super class, Onix2BaseSchemaHelper
+ * @author alexohlson
+ *
  */
-public class Onix2ShortXmlMetadataExtractorHelper
-extends Onix2BaseXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix2ShortXmlMetadataExtractorHelper.class);
+public class Onix2ShortSchemaHelper
+extends Onix2BaseSchemaHelper {
+  static Logger log = Logger.getLogger(Onix2ShortSchemaHelper.class);
 
   /* 
    *  ONIX 2.1 short form specific definitions of instance variables in 
    *  base version of extractor helper 
    */
-  
-  public Onix2ShortXmlMetadataExtractorHelper() {
+
+  public Onix2ShortSchemaHelper() {
     // define the instance variables needed for the super class which contains
     // the layout of the schema (and is shared between long and short
     // versions.
@@ -79,7 +79,7 @@ extends Onix2BaseXmlMetadataExtractorHelper {
     ONIXMessage_string = "ONIXMessage";
     Product_string = "product"; 
     RecordReference_string = "a001";
-    
+
     /* now tell the parent class to define variables that use these strings */
     defineSchemaPaths();
   }

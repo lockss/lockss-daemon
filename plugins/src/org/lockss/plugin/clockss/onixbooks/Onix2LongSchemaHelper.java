@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongXmlMetadataExtractorHelper.java,v 1.5 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: Onix2LongSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -35,17 +35,16 @@ package org.lockss.plugin.clockss.onixbooks;
 import org.lockss.util.*;
 
 /**
- *  A helper class that defines a schema for XML metadata extraction for
- *  Onix 2 Long form
- *  with the filenames based on isbn13 plus .pdf or .epub
- *  There can be multiple records for the same item, one for each format
- *  @author alexohlson
+ * Define the strings for Onix2 long form. They layout is defined by 
+ * the super class, Onix2BaseSchemaHelper
+ * @author alexohlson
+ *
  */
-public class Onix2LongXmlMetadataExtractorHelper
-extends Onix2BaseXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix2LongXmlMetadataExtractorHelper.class);
+public class Onix2LongSchemaHelper
+extends Onix2BaseSchemaHelper {
+  static Logger log = Logger.getLogger(Onix2LongSchemaHelper.class);
 
-  public Onix2LongXmlMetadataExtractorHelper() {
+  public Onix2LongSchemaHelper() {
     // define the instance variables needed for the super class which contains
     // the layout of the schema (and is shared between long and short
     // versions.
@@ -75,7 +74,7 @@ extends Onix2BaseXmlMetadataExtractorHelper {
     ONIXMessage_string = "ONIXMessage";
     Product_string = "Product"; 
     RecordReference_string = "RecordReference";
-    
+
     /* now tell the parent class to define variables that use these strings */
     defineSchemaPaths();
   }

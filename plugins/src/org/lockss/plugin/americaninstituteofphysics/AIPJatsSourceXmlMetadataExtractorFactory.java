@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.5 2014-01-14 21:22:21 aishizaki Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.6 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -32,9 +32,6 @@
 
 package org.lockss.plugin.americaninstituteofphysics;
 
-import java.util.ArrayList;
-
-import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -43,11 +40,14 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
 
 public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory {
   static Logger log = Logger.getLogger(AIPJatsSourceXmlMetadataExtractorFactory.class);
+
+  private static SourceXmlSchemaHelper AIPJatsHelper = null;
+
 
   // these are the subdirs where the xml and pdf files live, respectively
   final static String XMLDIR = "Markup/";
@@ -63,7 +63,7 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
   public static class AIPJatsSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     @Override
-    protected boolean preEmitCheck(SourceXmlMetadataExtractorHelper schemaHelper, 
+    protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper, 
         CachedUrl cu, ArticleMetadata thisAM) {
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       String aipBase = null;
@@ -76,7 +76,7 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
 
       // no pre-emit check required if values are all null
       // we know for AIPJats (filenameSuffixList, filenameKey) will be null
-      
+
       /* AIPJats file structure has the xml at .../Markup/***.xml
        * and the pdf is always named .../Page_Renditions/online.pdf
        * so this pre-emit check has to check to make sure the pdf exists 
@@ -101,6 +101,16 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
         log.debug3(aipBase+PDFDIR+PDFFILE + " does not exist in this AU");
         return false; //No file found to match this record
       }
+    }
+
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema() {
+      // Once you have it, just keep returning the same one. It won't change.
+      if (AIPJatsHelper != null) {
+        return AIPJatsHelper;
+      }
+      AIPJatsHelper = new AIPJatsXmlSchemaHelper();
+      return AIPJatsHelper;
     }
   }
 }

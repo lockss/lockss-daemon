@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorHelper.java,v 1.10 2014-01-16 22:17:59 alexandraohlson Exp $
+ * $Id: AIPJatsXmlSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
 
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -49,9 +49,9 @@ import org.w3c.dom.NodeList;
  *  AIPJats source files
  *  
  */
-public class AIPJatsSourceXmlMetadataExtractorHelper
-implements SourceXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(AIPJatsSourceXmlMetadataExtractorHelper.class);
+public class AIPJatsXmlSchemaHelper
+implements SourceXmlSchemaHelper {
+  static Logger log = Logger.getLogger(AIPJatsXmlSchemaHelper.class);
 
   private static final String NAME_SEPARATOR = ", ";
 
@@ -199,9 +199,9 @@ implements SourceXmlMetadataExtractorHelper {
           titleVal.append(title);
         }
         else if("inline-formula".equals(nodeName)){
-              title = infoNode.getTextContent();
-              titleVal.append(" ... ");
-            }
+          title = infoNode.getTextContent();
+          titleVal.append(" ... ");
+        }
       }
       if (titleVal.length() != 0)  {
         log.debug3("article title: " + titleVal.toString());
@@ -240,21 +240,21 @@ implements SourceXmlMetadataExtractorHelper {
   /* vol, issue */
   private static String AIPJATS_issue = AIPJATS_AMETA + "/issue";
   private static String AIPJATS_vol = AIPJATS_AMETA + "/volume";
-   /* published date */
+  /* published date */
   private static String AIPJATS_pubdate = AIPJATS_AMETA + "/pub-date";
 
   /* xpath contrib == author */
   private static String AIPJATS_author = AIPJATS_AMETA + "/contrib-group/contrib[@contrib-type = 'author']";
-  
+
   /* access_url  not set here */
-  
+
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
    */
 
   /* 1.  MAP associating xpath & value type definition or evaluator */
   static private final Map<String,XPathValue>     
-    AIPJATS_articleMap = new HashMap<String,XPathValue>();
+  AIPJATS_articleMap = new HashMap<String,XPathValue>();
   static {
     AIPJATS_articleMap.put(AIPJATS_issntype_ppub, XmlDomMetadataExtractor.TEXT_VALUE); 
     AIPJATS_articleMap.put(AIPJATS_issntype_epub, XmlDomMetadataExtractor.TEXT_VALUE); 
@@ -296,7 +296,7 @@ implements SourceXmlMetadataExtractorHelper {
     cookMap.put(AIPJATS_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(AIPJATS_journal_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
 
-    }
+  }
 
   /**
    * ONIX2 does not contain needed global information outside of article records
@@ -333,7 +333,7 @@ implements SourceXmlMetadataExtractorHelper {
 
   /**
    */
-  
+
   @Override
   public String getDeDuplicationXPathKey() {
     return null;
@@ -343,7 +343,7 @@ implements SourceXmlMetadataExtractorHelper {
    * Return the path for product form so when multiple records for the same
    * item are combined, the product forms are combined together
    */
-  
+
   @Override
   public String getConsolidationXPathKey() {
     return null;
@@ -369,7 +369,7 @@ implements SourceXmlMetadataExtractorHelper {
   /**
    * using filenamePrefix (see above)
    */
-  
+
   @Override
   public String getFilenameXPathKey() {
     throw new UnsupportedOperationException("getFilenameKey() never called");
@@ -380,4 +380,4 @@ implements SourceXmlMetadataExtractorHelper {
     return false;
   }
 
-}    
+}  

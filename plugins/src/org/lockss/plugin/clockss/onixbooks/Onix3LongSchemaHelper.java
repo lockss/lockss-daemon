@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongXmlMetadataExtractorHelper.java,v 1.9 2014-01-23 22:31:38 alexandraohlson Exp $
+ * $Id: Onix3LongSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -33,6 +33,7 @@
 package org.lockss.plugin.clockss.onixbooks;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.*;
 import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
@@ -40,7 +41,6 @@ import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
 
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -52,9 +52,9 @@ import org.w3c.dom.NodeList;
  *  There can be multiple records for the same item, one for each format
  *  @author alexohlson
  */
-public class Onix3LongXmlMetadataExtractorHelper
-implements SourceXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix3LongXmlMetadataExtractorHelper.class);
+public class Onix3LongSchemaHelper
+implements SourceXmlSchemaHelper {
+  static Logger log = Logger.getLogger(Onix3LongSchemaHelper.class);
 
   private static final String AUTHOR_SEPARATOR = ",";
 
@@ -288,7 +288,7 @@ implements SourceXmlMetadataExtractorHelper {
       "DescriptiveDetail";  
   private static String ONIX_product_form =
       ONIX_product_descrip + "/ProductFormDetail";
- /* only pick up level01 title element */
+  /* only pick up level01 title element */
   private static String ONIX_product_title =
       ONIX_product_descrip + "/TitleDetail[TitleType = '01']/TitleElement[TitleElementLevel = '01']";
   private static String ONIX_product_contrib =
@@ -456,4 +456,4 @@ implements SourceXmlMetadataExtractorHelper {
     // TODO Auto-generated method stub
     return false;
   }
-}    
+}

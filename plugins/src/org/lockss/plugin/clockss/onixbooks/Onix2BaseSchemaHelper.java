@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseXmlMetadataExtractorHelper.java,v 1.6 2014-01-23 22:31:38 alexandraohlson Exp $
+ * $Id: Onix2BaseSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 
 /*
@@ -40,24 +40,22 @@ import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
+
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- *  A helper class that defines a schema for XML metadata extraction for
- *  with the filenames based on isbn13 plus .pdf or .epub
- *  There can be multiple records for the same item, one for each format
- *  This is a base class that holds the schema layout only. 
- *  A plugin uses a subclass which defines the
+ *  A helper class that defines a schema for XML metadata extraction for ONIX2
+ *  XML. This is an abstract class which defines the Xpath layout only
+ *  and a plugin must
+ *  use a subclass which defines the
  *  string used by the schema (short or long form)
- *  and which can also modify some of the schema choices (like which item
- *  is used to represent the filename)
  *  @author alexohlson
  */
-public abstract class Onix2BaseXmlMetadataExtractorHelper
-implements SourceXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(Onix2BaseXmlMetadataExtractorHelper.class);
+public abstract class Onix2BaseSchemaHelper
+implements SourceXmlSchemaHelper {
+  static Logger log = Logger.getLogger(Onix2BaseSchemaHelper.class);
 
   private static final String AUTHOR_SEPARATOR = ",";
   private static final String TITLE_SEPARATOR = ":";
@@ -96,7 +94,7 @@ implements SourceXmlMetadataExtractorHelper {
   protected String ONIXMessage_string;
   protected String Product_string; 
   protected String RecordReference_string;
-  
+
   /*
    * These instance variables get set by defineSchemaPaths() after the child
    * constructor sets the instance variables from which they're built
@@ -115,7 +113,7 @@ implements SourceXmlMetadataExtractorHelper {
   private  String ONIX_product_series_title_simple; // could come this way 
   private  String ONIX_product_series_title_full; // or could come this way
   private  String ONIX_product_series_issn;
-  
+
   private Map<String,XPathValue> ONIX_articleMap;
   private  String ONIX_articleNode;
   private  Map<String,XPathValue> ONIX_globalMap;
@@ -128,7 +126,7 @@ implements SourceXmlMetadataExtractorHelper {
    *   IDValue/
    * xPath that gets here has already figured out which type of ID it is
    */
-    private final NodeValue ONIX_ID_VALUE = new NodeValue() {
+  private final NodeValue ONIX_ID_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       if (node == null) {
@@ -162,7 +160,7 @@ implements SourceXmlMetadataExtractorHelper {
    *   IDValue/
    *   IDName/ (we don't care about this one)
    */
-   private final NodeValue ONIX_SERIESID_VALUE = new NodeValue() {
+  private final NodeValue ONIX_SERIESID_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       if (node == null) {
@@ -209,9 +207,9 @@ implements SourceXmlMetadataExtractorHelper {
    *   this will pick up any contributor regardless of role
    *   but in the order given by the publisher
    */
-  
-  
-   private final NodeValue ONIX_CONTRIBUTOR_VALUE = new NodeValue() {
+
+
+  private final NodeValue ONIX_CONTRIBUTOR_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
       if (node == null) {
@@ -275,7 +273,7 @@ implements SourceXmlMetadataExtractorHelper {
    * 
    */
 
-   private final NodeValue ONIX_TITLE_VALUE = new NodeValue() {
+  private final NodeValue ONIX_TITLE_VALUE = new NodeValue() {
     @Override
     public String getValue(Node node) {
 
@@ -343,55 +341,55 @@ implements SourceXmlMetadataExtractorHelper {
         Series_string + "/" + Title_string; // or could come this way
     ONIX_product_series_issn = 
         Series_string + "/" + SeriesIdentifier_string + "[" + 
-    SeriesIDType_string + "='02']";
-    
+            SeriesIDType_string + "='02']";
+
     /* 1.  MAP associating xpath & value type definition or evaluator */
     ONIX_articleMap = 
-       new HashMap<String,XPathValue>();
+        new HashMap<String,XPathValue>();
     {
-     ONIX_articleMap.put(RecordReference_string, XmlDomMetadataExtractor.TEXT_VALUE);
-     ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
-     ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
-     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
-     ONIX_articleMap.put(ONIX_product_title, ONIX_TITLE_VALUE);
-     ONIX_articleMap.put(ONIX_product_series_title_simple, XmlDomMetadataExtractor.TEXT_VALUE);
-     ONIX_articleMap.put(ONIX_product_series_title_full, ONIX_TITLE_VALUE);
-     ONIX_articleMap.put(ONIX_product_series_issn, ONIX_SERIESID_VALUE);
-     ONIX_articleMap.put(ONIX_product_contrib, ONIX_CONTRIBUTOR_VALUE);
-     ONIX_articleMap.put(ONIX_pub_name, XmlDomMetadataExtractor.TEXT_VALUE);
-     ONIX_articleMap.put(ONIX_pub_date, XmlDomMetadataExtractor.TEXT_VALUE);
-   }
-    
+      ONIX_articleMap.put(RecordReference_string, XmlDomMetadataExtractor.TEXT_VALUE);
+      ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
+      ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
+      ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
+      ONIX_articleMap.put(ONIX_product_title, ONIX_TITLE_VALUE);
+      ONIX_articleMap.put(ONIX_product_series_title_simple, XmlDomMetadataExtractor.TEXT_VALUE);
+      ONIX_articleMap.put(ONIX_product_series_title_full, ONIX_TITLE_VALUE);
+      ONIX_articleMap.put(ONIX_product_series_issn, ONIX_SERIESID_VALUE);
+      ONIX_articleMap.put(ONIX_product_contrib, ONIX_CONTRIBUTOR_VALUE);
+      ONIX_articleMap.put(ONIX_pub_name, XmlDomMetadataExtractor.TEXT_VALUE);
+      ONIX_articleMap.put(ONIX_pub_date, XmlDomMetadataExtractor.TEXT_VALUE);
+    }
+
     /* 2. Each item (book) has its own subNode */
     ONIX_articleNode = "/" + ONIXMessage_string +
-       "/" + Product_string; 
+        "/" + Product_string; 
 
-   /* 3. in ONIX, there is no global information we care about, it is repeated per article */ 
+    /* 3. in ONIX, there is no global information we care about, it is repeated per article */ 
     ONIX_globalMap = null;
 
-   /*
-    * The emitter will need a map to know how to cook ONIX raw values
-    */
-   cookMap = new MultiValueMap();
+    /*
+     * The emitter will need a map to know how to cook ONIX raw values
+     */
+    cookMap = new MultiValueMap();
     {
-     //do NOT cook publisher_name; get value from the TDB for consistency
-     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
-     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
-     cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE); // book title = journal title
-     cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
-     cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
-     cookMap.put(ONIX_pub_name,MetadataField.FIELD_PUBLISHER); // overridden by tdb
-          
-     //TODO: book part of series - currently nowhere to put series title information
-     //only one of the forms of series title will exist
-     //cookMap.put(ONIX_product_series_simple, MetadataField.SERIES_TITLE);
-     //cookMap.put(ONIX_product_series_full, MetadataField.SERIES_TITLE);
-     //cookMap.put(ONIX_product_series_id, MetadataField.FIELD_ISSN);
-     //TODO: Book, BookSeries...currently no key field to put the information in to      
-     //TODO: currently no way to store multiple formats in MetadataField (FIELD_FORMAT is a single);
-   }
+      //do NOT cook publisher_name; get value from the TDB for consistency
+      cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
+      cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
+      cookMap.put(ONIX_product_title, MetadataField.FIELD_JOURNAL_TITLE); // book title = journal title
+      cookMap.put(ONIX_product_contrib, MetadataField.FIELD_AUTHOR);
+      cookMap.put(ONIX_pub_date, MetadataField.FIELD_DATE);
+      cookMap.put(ONIX_pub_name,MetadataField.FIELD_PUBLISHER); // overridden by tdb
 
-    
+      //TODO: book part of series - currently nowhere to put series title information
+      //only one of the forms of series title will exist
+      //cookMap.put(ONIX_product_series_simple, MetadataField.SERIES_TITLE);
+      //cookMap.put(ONIX_product_series_full, MetadataField.SERIES_TITLE);
+      //cookMap.put(ONIX_product_series_id, MetadataField.FIELD_ISSN);
+      //TODO: Book, BookSeries...currently no key field to put the information in to      
+      //TODO: currently no way to store multiple formats in MetadataField (FIELD_FORMAT is a single);
+    }
+
+
 
   }
 
@@ -473,7 +471,7 @@ implements SourceXmlMetadataExtractorHelper {
   public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
   }
-  
+
   @Override
   public boolean getDoXmlFiltering() {
     return false;

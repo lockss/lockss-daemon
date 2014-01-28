@@ -1,4 +1,4 @@
-/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.7 2014-01-14 21:22:21 aishizaki Exp $
+/* $Id: TestAIPJatsSourceXmlMetadataExtractorHelper.java,v 1.8 2014-01-28 21:49:45 alexandraohlson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -325,10 +325,6 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
     theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());
     
-    /* must set up plugin to get helper name */
-    DefinablePlugin ap = new DefinablePlugin();
-    ap.initPlugin(getMockLockssDaemon(), PLUGIN_NAME);
-    mau.setPlugin(ap);
   }
   public void tearDown() throws Exception {
     theDaemon.stopDaemon();

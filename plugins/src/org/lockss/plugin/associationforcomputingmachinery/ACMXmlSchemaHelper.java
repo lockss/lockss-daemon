@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorHelper.java,v 1.2 2014-01-16 22:18:00 alexandraohlson Exp $
+ * $Id: ACMXmlSchemaHelper.java,v 1.1 2014-01-28 21:49:45 alexandraohlson Exp $
  */
 
 /*
@@ -34,13 +34,14 @@ package org.lockss.plugin.associationforcomputingmachinery;
 
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
+import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 import java.util.*;
 
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractorHelper;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -49,9 +50,9 @@ import org.w3c.dom.NodeList;
  *  ACM source files
  *  
  */
-public class ACMSourceXmlMetadataExtractorHelper
-implements SourceXmlMetadataExtractorHelper {
-  static Logger log = Logger.getLogger(ACMSourceXmlMetadataExtractorHelper.class);
+public class ACMXmlSchemaHelper
+implements SourceXmlSchemaHelper {
+  static Logger log = Logger.getLogger(ACMXmlSchemaHelper.class);
   static StringBuilder urlName = new StringBuilder();
 
   private static final String NAME_SEPARATOR = ", ";
@@ -103,7 +104,7 @@ implements SourceXmlMetadataExtractorHelper {
           } else
             continue;
         } else 
-            continue;
+          continue;
       }
       if (isAuthor) {
         if (!lname.isEmpty()) {
@@ -129,7 +130,7 @@ implements SourceXmlMetadataExtractorHelper {
       return names.toString();
     }
   };
- 
+
   /*
    * get the last name of the first (primary) author
    *  to be able to create the url name
@@ -154,17 +155,17 @@ implements SourceXmlMetadataExtractorHelper {
   private static final String ACM_journal_id = "//journal_code";
   // using ACM_journal_name for both proceeding and periodical name
   private static final String ACM_journal_name = "//journal_name | //proc_desc";
- 
+
   /* vol, issue */
   private static final String ACM_issue = ".//issue";
   private static final String ACM_vol = ".//volume";
   // proceedings only:
   private static final String ACM_isbn = "//isbn";
- 
+
   // common to both proceedings and periodicals
   /* components under Publisher */
   private static final String ACM_publisher_name = "./publisher-name";
- 
+
   /* article title, id, doi, pubdate*/
   private static final String ACM_article_title =  "./title";
   private static final String ACM_article_id = "./article_id";
@@ -181,14 +182,14 @@ implements SourceXmlMetadataExtractorHelper {
 
   private static final String ACM_startpage =  "./article_rec/page_from";
   private static final String ACM_endpage = "./article_rec/page_to";
-  
+
   /*
    *  The following 3 variables are needed to use the XPathXmlMetadataParser
    */
 
   /* 1.  MAP associating xpath & value type definition or evaluator */
   static private final Map<String,XPathValue>     
-    ACM_articleMap = new HashMap<String,XPathValue>();
+  ACM_articleMap = new HashMap<String,XPathValue>();
   static {
     // article specific stuff
     ACM_articleMap.put(ACM_doi, XmlDomMetadataExtractor.TEXT_VALUE);    
@@ -209,29 +210,29 @@ implements SourceXmlMetadataExtractorHelper {
    * but it works since each xml file is either proceeding OR periodical
    */
   static private final String ACM_topNode = "/periodical//article_rec | /proceeding//article_rec";
- 
+
   /* 3. in ACM, there some global information we gather */ 
   static private final Map<String,XPathValue>     
-    ACM_globalMap = new HashMap<String,XPathValue>();
-static {
-  // periodical only
-  ACM_globalMap.put(ACM_issn, XmlDomMetadataExtractor.TEXT_VALUE); 
-  ACM_globalMap.put(ACM_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
-  ACM_globalMap.put(ACM_journal_id, XmlDomMetadataExtractor.TEXT_VALUE); 
-  ACM_globalMap.put(ACM_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
-  ACM_globalMap.put(ACM_vol, XmlDomMetadataExtractor.TEXT_VALUE); 
+  ACM_globalMap = new HashMap<String,XPathValue>();
+  static {
+    // periodical only
+    ACM_globalMap.put(ACM_issn, XmlDomMetadataExtractor.TEXT_VALUE); 
+    ACM_globalMap.put(ACM_eissn, XmlDomMetadataExtractor.TEXT_VALUE);
+    ACM_globalMap.put(ACM_journal_id, XmlDomMetadataExtractor.TEXT_VALUE); 
+    ACM_globalMap.put(ACM_issue, XmlDomMetadataExtractor.TEXT_VALUE); 
+    ACM_globalMap.put(ACM_vol, XmlDomMetadataExtractor.TEXT_VALUE); 
 
-  // proceedings only
-  ACM_globalMap.put(ACM_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
-  //ACM_globalMap.put(ACM_proceeding_id, XmlDomMetadataExtractor.TEXT_VALUE);
+    // proceedings only
+    ACM_globalMap.put(ACM_isbn, XmlDomMetadataExtractor.TEXT_VALUE);
+    //ACM_globalMap.put(ACM_proceeding_id, XmlDomMetadataExtractor.TEXT_VALUE);
 
-  // periodical + proceedings
-  // proceeding_id = either journal_name or proceeding description
-  ACM_globalMap.put(ACM_journal_name, XmlDomMetadataExtractor.TEXT_VALUE);
-  ACM_globalMap.put(ACM_publisher_name, XmlDomMetadataExtractor.TEXT_VALUE); 
-  ACM_globalMap.put(ACM_fmatter, XmlDomMetadataExtractor.TEXT_VALUE);
-  ACM_globalMap.put(ACM_bmatter, XmlDomMetadataExtractor.TEXT_VALUE);
-}
+    // periodical + proceedings
+    // proceeding_id = either journal_name or proceeding description
+    ACM_globalMap.put(ACM_journal_name, XmlDomMetadataExtractor.TEXT_VALUE);
+    ACM_globalMap.put(ACM_publisher_name, XmlDomMetadataExtractor.TEXT_VALUE); 
+    ACM_globalMap.put(ACM_fmatter, XmlDomMetadataExtractor.TEXT_VALUE);
+    ACM_globalMap.put(ACM_bmatter, XmlDomMetadataExtractor.TEXT_VALUE);
+  }
 
   /*
    * The emitter will need a map to know how to cook ONIX raw values
@@ -243,10 +244,10 @@ static {
     cookMap.put(ACM_eissn, MetadataField.FIELD_EISSN);
     cookMap.put(ACM_vol, MetadataField.FIELD_VOLUME);
     cookMap.put(ACM_issue, MetadataField.FIELD_ISSUE);
-    
+
     // proceedings specific schema
     cookMap.put(ACM_isbn, MetadataField.FIELD_ISBN);
-    
+
     // both
     cookMap.put(ACM_doi, MetadataField.FIELD_DOI);    
 
@@ -262,7 +263,7 @@ static {
     cookMap.put(ACM_art_pubdate, MetadataField.FIELD_DATE);
     // these "urls" are relative filenames - must fill in later
     cookMap.put(ACM_article_url, MetadataField.FIELD_ACCESS_URL);
-    }
+  }
 
   /**
    * ACM does have some global info (journal || issue)
@@ -318,7 +319,7 @@ static {
    */
   @Override
   public String getFilenameXPathKey() {
-    
+
     return ACM_article_url;
   }
 

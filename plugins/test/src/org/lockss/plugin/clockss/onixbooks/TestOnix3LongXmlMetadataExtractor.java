@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.1 2014-01-03 16:48:58 alexandraohlson Exp $
+ * $Id: TestOnix3LongXmlMetadataExtractor.java,v 1.2 2014-01-28 21:49:44 alexandraohlson Exp $
  */
 /*
 
@@ -41,8 +41,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.definable.DefinablePlugin;
+import org.lockss.plugin.clockss.onixbooks.Onix3LongSourceXmlMetadataExtractorFactory;
 
 
 public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
@@ -70,10 +69,12 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
     mau.setConfiguration(auConfig());
 
     /* must set up plugin to get helper name */
+    /*
     DefinablePlugin ap = new DefinablePlugin();
     ap.initPlugin(getMockLockssDaemon(),
         PLUGIN_NAME);
     mau.setPlugin(ap);
+    */
   }
 
   public void tearDown() throws Exception {
@@ -121,7 +122,7 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
      mcu.setContentSize(noArticleXML.length());
      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-   FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+   FileMetadataExtractor me = new Onix3LongSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
      FileMetadataListExtractor mle =
          new FileMetadataListExtractor(me);
      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
@@ -181,7 +182,7 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
      mcu.setContentSize(XMLsnippet.length());
      mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-   FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+   FileMetadataExtractor me = new Onix3LongSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
      FileMetadataListExtractor mle =
          new FileMetadataListExtractor(me);
      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
@@ -223,7 +224,7 @@ public class TestOnix3LongXmlMetadataExtractor extends LockssTestCase {
       mcu.setContentSize(string_input.length());
       mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
-    FileMetadataExtractor me = new SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor();
+    FileMetadataExtractor me = new  Onix3LongSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
       FileMetadataListExtractor mle =
           new FileMetadataListExtractor(me);
       List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
