@@ -376,6 +376,29 @@
   {
   
     title < 
+      name = Psychologica Belgica ;
+      eissn = 2054-670X 
+    >
+    
+    param[base_url] = http://www.psychologicabelgica.com/
+    param[journal_id] = pb
+
+    au < exists ; exists ; 2005 ; Psychologica Belgica Volume 45 ; 45 ; 2005 >
+    au < exists ; exists ; 2006 ; Psychologica Belgica Volume 46 ; 46 ; 2006 >
+    au < exists ; exists ; 2007 ; Psychologica Belgica Volume 47 ; 47 ; 2007 >
+    au < exists ; exists ; 2008 ; Psychologica Belgica Volume 48 ; 48 ; 2008 >
+    au < exists ; exists ; 2009 ; Psychologica Belgica Volume 49 ; 49 ; 2009 >
+    au < exists ; exists ; 2010 ; Psychologica Belgica Volume 50 ; 50 ; 2010 >
+    au < exists ; exists ; 2011 ; Psychologica Belgica Volume 51 ; 51 ; 2011 >
+    au < exists ; exists ; 2012 ; Psychologica Belgica Volume 52 ; 52 ; 2012 >
+    au < exists ; exists ; 2013 ; Psychologica Belgica Volume 53 ; 53 ; 2013 >
+    au < exists ; exists ; 2014 ; Psychologica Belgica Volume 54 ; 54 ; 2014 >
+
+  }
+
+  {
+  
+    title < 
       name = Secularism and Nonreligion ;
       eissn = 2053-6712 
     >
