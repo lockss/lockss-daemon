@@ -2149,7 +2149,29 @@
         au < expected ; exists ; 2014 ; Journal of Advanced Ceramics Volume 3 ; 3 >
   
     }
+
+    {
   
+        title <
+          name = Journal of Children's Orthopaedics ;
+          issn = 1863-2521 ;
+          eissn = 1863-2548
+        >
+  
+        param[base_url] = http://www.springer.com/11832
+        param[journal_issn] = 1863-2521
+        comment[platform] = Springer
+
+        au < exists ; exists ; 2007 ; Journal of Children's Orthopaedics Volume 1 ; 1 >
+        au < exists ; exists ; 2008 ; Journal of Children's Orthopaedics Volume 2 ; 2 >
+        au < exists ; exists ; 2009 ; Journal of Children's Orthopaedics Volume 3 ; 3 >
+        au < exists ; exists ; 2010 ; Journal of Children's Orthopaedics Volume 4 ; 4 >
+        au < exists ; exists ; 2011 ; Journal of Children's Orthopaedics Volume 5 ; 5 >
+        au < exists ; exists ; 2012 ; Journal of Children's Orthopaedics Volume 6 ; 6 >
+        au < exists ; exists ; 2013 ; Journal of Children's Orthopaedics Volume 7 ; 7 >
+
+    }
+
     {
   
         title <
