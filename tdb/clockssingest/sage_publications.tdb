@@ -32687,6 +32687,29 @@
 
   }
 
+    {
+
+      title <
+        name = Shoulder & Elbow ;
+        issn = 1758-5732 ;
+        eissn = 1758-5740 
+      >
+
+      {
+
+      param[base_url] = http://sel.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2009 ; Shoulder & Elbow Volume 1 ; 1 ; >
+      au < exists ; exists ; 2010 ; Shoulder & Elbow Volume 2 ; 2 ; >
+      au < exists ; exists ; 2011 ; Shoulder & Elbow Volume 3 ; 3 ; >
+      au < exists ; exists ; 2012 ; Shoulder & Elbow Volume 4 ; 4 ; >
+      au < exists ; exists ; 2013 ; Shoulder & Elbow Volume 5 ; 5 ; >
+      au < exists ; exists ; 2014 ; Shoulder & Elbow Volume 6 ; 6 ; >
+
+      }
+    }
+
   {
   
     title <
