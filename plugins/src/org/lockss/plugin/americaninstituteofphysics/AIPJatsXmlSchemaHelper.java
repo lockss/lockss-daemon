@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsXmlSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: AIPJatsXmlSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -350,34 +350,12 @@ implements SourceXmlSchemaHelper {
   }
 
   /**
-   * Since we only have the one fixed name, "online.pdf" hardcoded in 
-   * AIPJatsSourceXmlMetadataExtractorFactory:preEmitCheck()
-   */
-  @Override
-  public String getFilenamePrefix() {
-    throw new UnsupportedOperationException("getFilenamePrefix() never called");
-  }
-
-  /**
-   * AIPJats only has pdf filetype 
-   */
-  @Override
-  public ArrayList<String> getFilenameSuffixList() {
-    throw new UnsupportedOperationException("getFilenameSuffixList() never called");
-  }
-
-  /**
    * using filenamePrefix (see above)
    */
 
   @Override
   public String getFilenameXPathKey() {
     throw new UnsupportedOperationException("getFilenameKey() never called");
-  }
-
-  @Override
-  public boolean getDoXmlFiltering() {
-    return false;
   }
 
 }  

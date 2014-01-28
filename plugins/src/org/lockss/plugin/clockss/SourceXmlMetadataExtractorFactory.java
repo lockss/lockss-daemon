@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.14 2014-01-28 22:06:39 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.15 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import java.io.IOException;
 import java.util.*;
+
 import javax.xml.xpath.XPathExpressionException;
 
 import org.lockss.plugin.ArchivalUnit;
@@ -99,27 +100,19 @@ implements FileMetadataExtractorFactory {
             new XPathXmlMetadataParser(schemaHelper.getGlobalMetaMap(), 
                 schemaHelper.getArticleNode(), 
                 schemaHelper.getArticleMetaMap(),
-                schemaHelper.getDoXmlFiltering()).extractMetadata(target, cu);
+                getDoXmlFiltering()).extractMetadata(target, cu);
 
 
-        Collection<ArticleMetadata> AMCollection = amList; //if deduping, this will change
-
+ 
+        //3. Optional consolidation of duplicate records within one XML file
+        // a child plugin can leave the default (no deduplication) or 
+        // AMCollection pointing to just a subset of the full
+        // AM list
         // 3. Consolidate identical records based on DeDuplicationXPathKey
         // consolidating as specified by the consolidateRecords() method
-        String deDupKey = schemaHelper.getDeDuplicationXPathKey(); 
-        boolean deDuping = (!StringUtils.isEmpty(deDupKey));
-        if (deDuping) {
-          Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<String,ArticleMetadata>();
-
-          // Look at each item in AM list and put those with unique values
-          // associated with the deDupKey in a map of unique records.
-          // For duplicates, use the consolidateRecords() method to combine
-          for ( ArticleMetadata oneAM : amList) {
-            updateRecordMap(schemaHelper, deDupKey, uniqueRecordMap, oneAM);
-          }
-          log.debug3("After consolidation, " + uniqueRecordMap.size() + "records");
-          AMCollection = uniqueRecordMap.values();
-        }
+        
+        Collection<ArticleMetadata> AMCollection = getConsolidatedAMList(schemaHelper,
+            amList);
 
         // 4. check, cook, and emit every item in resulting AM collection (list)
         for ( ArticleMetadata oneAM : AMCollection) {
@@ -157,62 +150,7 @@ implements FileMetadataExtractorFactory {
 
     }
 
-    /**
-     *  XML might have multiple <Product/> records for the same item, because
-     *  each format might get its own record (eg epub, pdf, etc.)
-     *  This method consolidates AM records for items that have the same 
-     *  deDuplicationXPath (schema defined), combining their consolidationXPathKey 
-     *  information <br/>
-     *  note - if two versions of the same item are in two different XML files
-     *  they won't get consolidated. <br/>
-     *  If the deDuplicationXPath is null or empty, this method isn't called.
-     *  A child plugin might override this method to provide some other type of
-     *  deDuplication. They would still need to set a deDuplicationXPathKey
-     *  to trigger the call to the method..
-     * @param schemaHelper for subroutines to access schema information
-     * @param deDupRawKey - the raw metadata key on whose values to de dup
-     * @param uniqueRecordMap - a String key, to ArticleMetadata map for storing
-     * the dedup'd records
-     * @param thisAM - determine if this AM is unique or a duplicate
-     */
-    protected void updateRecordMap(SourceXmlSchemaHelper schemaHelper,
-        String deDupRawKey,
-        Map<String, ArticleMetadata> uniqueRecordMap,
-        ArticleMetadata thisAM) {
-
-      // The deDuplicationXPathKey is neither null nor empty if we are in this method
-      String deDupRawVal = thisAM.getRaw(deDupRawKey); 
-
-      log.debug3("updateRecordMap deDupRawVal = " + deDupRawVal);
-
-      ArticleMetadata prevDupRecord = uniqueRecordMap.get(deDupRawVal);
-      if (prevDupRecord == null) {
-        log.debug3("no record already existed with that raw val");
-        uniqueRecordMap.put(deDupRawVal,  thisAM);
-      } else {
-        // A child can override this for different consolidation needs
-        consolidateRecords(schemaHelper, prevDupRecord, thisAM);
-      } 
-    }
-
-    /**
-     * Two ArticleMetadata records are "combined" in to one by
-     * appending the rawValue associated with the consolidationXPathKey 
-     * of the second AM record to the rawValue of the first AM record.
-     * If the consolidateionKey is null, the routine returns immediately.
-     * This method could be overridden for a child plugin that needs to 
-     * consolidate records in a different way.
-     */
-    protected void consolidateRecords(SourceXmlSchemaHelper schemaHelper,
-        ArticleMetadata intoAM, ArticleMetadata fromAM) {
-
-      String consolidationXPathKey = schemaHelper.getConsolidationXPathKey();
-      if (StringUtils.isEmpty(consolidationXPathKey)) return;
-      log.debug3("combining two AM records");
-      // ArticleMetadata.putRaw appends if a value(s) exists
-      intoAM.putRaw(consolidationXPathKey, fromAM.getRaw(consolidationXPathKey));
-    }
-
+ 
     /**
      * Verify that a content file exists described in the xml record actually
      * exists based on the XML path location.This also works even if content is 
@@ -234,55 +172,25 @@ implements FileMetadataExtractorFactory {
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in SourceXmlMetadataExtractor preEmitCheck");
+      
+      ArrayList<String> filesToCheck;
 
-      String filenamePrefix = schemaHelper.getFilenamePrefix(); //can be null
-      ArrayList<String> filenameSuffixList = schemaHelper.getFilenameSuffixList(); //can be null
-      String filenameKey = schemaHelper.getFilenameXPathKey(); //can be null
-      // no pre-emit check required if values are all null, just return and emit
-      if (((filenamePrefix == null) && (filenameSuffixList == null) && (filenameKey == null))) return true;
-
-      /* create a filename (relative to the current directory) from the 
-       * optional items: 
-       * filenamePrefix + thisAM.getRaw(filenameKey) + filenameSuffix
-       * Any or all of them could be null. 
-       * We don't get in to this routine if all three are null
-       * examples:
-       *     filename is just isbn13.pdf in the same directory
-       *        prefix = null; key is raw key for ISBN13, suffix[0] is ".pdf"
-       *     filename is online.pdf in a "content" subdirectory
-       *        prefix = "/content/online"
-       *        key = null
-       *        suffix[0] is ".pdf"
-       *     filename is Foo_isbn13_Bar{.pdf,.epub} in the same directory
-       *        prefix is "Foo_"
-       *        key is raw key for ISBN13
-       *        suffix is {"_Bar.pdf", "_Bar.epub"}   
-       *     
-       */
-      String filename = 
-          (filenamePrefix != null ? filenamePrefix : "") + 
-          (filenameKey != null ? thisAM.getRaw(filenameKey) : "");
-
-      // Check for files by going through list of suffixes, stop at first success
-      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      // If no files get returned in the list, nothing to check
+      if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+        return true;
+      }
       ArchivalUnit B_au = cu.getArchivalUnit();
       CachedUrl fileCu;
-      if (filenameSuffixList == null) {
-        //for simplicity, create an empty suffix 
-        filenameSuffixList = new ArrayList<String>(); 
-        filenameSuffixList.add("");
-      }
-      for (int i=0; i < filenameSuffixList.size(); i++) 
+      for (int i=0; i < filesToCheck.size(); i++) 
       { 
-        String fullfn = cuBase + filename + filenameSuffixList.get(i);
-        fileCu = B_au.makeCachedUrl(cuBase + filename + filenameSuffixList.get(i));
+        fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
         if(fileCu != null && (fileCu.hasContent())) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
           thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
           return true;
         }
       }
-      log.debug3(filename + " does not exist in this AU");
+      log.debug3("No file exists associated with this record");
       return false; //No files found that match this record
     }
 
@@ -293,6 +201,49 @@ implements FileMetadataExtractorFactory {
         CachedUrl cu, ArticleMetadata thisAM) {
 
       log.debug3("in SourceXmlMetadataExtractor postEmitProcess");
+    }
+    
+    /**
+     * A routine used by preEmitCheck to know which files to check for
+     * existence. 
+     * It returns a list of strings, each string is a
+     * complete url for a file that could be used to check for whether a cu
+     * with that name exists and has content.
+     * If the returned list is null, preEmitCheck returns TRUE
+     * If any of the files in the list is found and exists, preEmitCheck 
+     * returns TRUE. It stops after finding one.
+     * If the list is not null and no file exists, preEmitCheck returns FALSE
+     * The first existing file from the list gets set as the access URL.
+     * The child plugin could override preEmitCheck for different results.
+     * The base version of this returns the value of the schema helper's value at
+     * getFilenameXPathKey in the same directory as the XML file.
+     * @param cu
+     * @param oneAM
+     * @return
+     */
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+        CachedUrl cu,
+        ArticleMetadata oneAM) {
+      
+      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      ArrayList<String> returnList = new ArrayList<String>();
+      returnList.add(cuBase + filenameValue);
+      return returnList;
+    }
+    
+    /* default for a plugin is to NOT special filter the XML when loading */
+    public boolean getDoXmlFiltering() {
+      return false;
+    }
+
+    /*
+     * Default behavior is not to consolidate
+     * A child plugin can choose to override this
+     */
+    protected Collection<ArticleMetadata> getConsolidatedAMList(SourceXmlSchemaHelper helper,
+        List<ArticleMetadata> allAMs) {
+      return allAMs;
     }
 
     /* 

@@ -1,5 +1,5 @@
 /*
- * $Id: Onix3LongSourceXmlMetadataExtractorFactory.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: Onix3LongSourceXmlMetadataExtractorFactory.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -32,10 +32,19 @@
 
 package org.lockss.plugin.clockss.onixbooks;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.io.FilenameUtils;
+import org.apache.cxf.common.util.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -63,5 +72,60 @@ public class Onix3LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
       Onix3Helper = new Onix3LongSchemaHelper();
       return Onix3Helper;
     }
+
+
+    /* In this case, build up the filename from just the isbn13 value of the AM 
+     * with suffix either .pdf or .epub
+     */
+    @Override
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+
+      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      ArrayList<String> returnList = new ArrayList<String>();
+      returnList.add(cuBase + filenameValue + ".pdf");
+      returnList.add(cuBase + filenameValue + ".epub");
+      return returnList;
+    }
+
+    /*
+     * For this plugin, if the schema sets the deDupKey use that to determine
+     * if two records should be combined.
+     * When combining one or more records, if the consolidationXPathKey is set,
+     * append the raw values of that key in the one combined record.
+     */
+    @Override
+    protected Collection<ArticleMetadata> getConsolidatedAMList(SourceXmlSchemaHelper helper,
+        List<ArticleMetadata> allAMs) {
+
+
+      String deDupKey = helper.getDeDuplicationXPathKey(); 
+      boolean deDuping = (!StringUtils.isEmpty(deDupKey));
+      if (deDuping) {
+        Map<String,ArticleMetadata> uniqueRecordMap = new HashMap<String,ArticleMetadata>();
+        String consolidationXPathKey = helper.getConsolidationXPathKey();
+
+        // Look at each item in AM list and put those with unique values
+        // associated with the deDupKey in a map of unique records.
+        // For duplicates, use the consolidateRecords() method to combine
+        for ( ArticleMetadata oneAM : allAMs) {
+          String deDupRawVal = oneAM.getRaw(deDupKey); 
+          ArticleMetadata prevDupRecord = uniqueRecordMap.get(deDupRawVal);
+          if (prevDupRecord == null) {
+            log.debug3("no record already existed with that raw val");
+            uniqueRecordMap.put(deDupRawVal,  oneAM);
+          } else if (!StringUtils.isEmpty(consolidationXPathKey)){
+            log.debug3("combining two AM records");
+            // ArticleMetadata.putRaw appends if a value(s) exists
+            prevDupRecord.putRaw(consolidationXPathKey,  oneAM.getRaw(consolidationXPathKey));
+          } 
+        }
+        log.debug3("After consolidation, " + uniqueRecordMap.size() + "records");
+        return uniqueRecordMap.values();
+      }
+      return allAMs;
+    }
+
   }
 }

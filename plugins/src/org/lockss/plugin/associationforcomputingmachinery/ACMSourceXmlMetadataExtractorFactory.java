@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.3 2014-01-28 21:49:45 alexandraohlson Exp $
+ * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.4 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -62,6 +62,11 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       }
       ACMHelper = new ACMXmlSchemaHelper();
       return ACMHelper;
+    }
+
+    @Override
+    public boolean getDoXmlFiltering() {
+      return true;
     }
   }
 }

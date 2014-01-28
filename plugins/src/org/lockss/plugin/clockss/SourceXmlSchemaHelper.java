@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlSchemaHelper.java,v 1.1 2014-01-28 22:06:38 alexandraohlson Exp $
+ * $Id: SourceXmlSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -101,26 +101,6 @@ public interface SourceXmlSchemaHelper {
    */
   public String getConsolidationXPathKey();
 
-  /**
-   * Used only in preEmitCheck() which may be overridden by a child
-   * Return the filename prefix to be used when building up a filename to determine
-   * if a file exists before emitting its metadata. It can also contain
-   * path information (relative to current directory for XML file) if needed. 
-   * It can be null if not needed.
-   * @return
-   */
-  public String getFilenamePrefix();
-
-  /**
-   * Used only in preEmitCheck() which may be overridden by a child
-   * Return a list of suffixes for the filenames to be looked for when 
-   * checking for existence before emitting. It could be just the filetype
-   * (eg. [.pdf][.epub]) or it could include additional text if needed
-   * The preEmitCheck will check the suffixes in order until it finds one.
-   * It can be null. 
-   * @return
-   */
-  public ArrayList<String> getFilenameSuffixList();
 
   /**
    * Used only in preEmitCheck() which may be overridden by a child
@@ -132,12 +112,4 @@ public interface SourceXmlSchemaHelper {
    */
   public String getFilenameXPathKey();
 
-  /**
-   * Indicates whether the XML should be filtered as an InputStream to 
-   * remove XML illegal characters that might be there.  This will only work
-   * for single byte char encodings (such as ISO8859) so check before 
-   * setting.
-   * If you don't need it, best to set it to false.  
-   */
-  public boolean getDoXmlFiltering();
 }

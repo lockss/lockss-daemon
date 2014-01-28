@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongSourceXmlMetadataExtractorFactory.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: Onix2LongSourceXmlMetadataExtractorFactory.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -32,10 +32,14 @@
 
 package org.lockss.plugin.clockss.onixbooks;
 
+import java.util.ArrayList;
+
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -62,6 +66,22 @@ public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
       }
       Onix2Helper = new Onix2LongSchemaHelper();
       return Onix2Helper;
+    }
+
+
+    /* In this case, build up the filename from just the isbn13 value of the AM 
+     * with suffix either .pdf or .epub
+     */
+    @Override
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
+        ArticleMetadata oneAM) {
+
+      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      ArrayList<String> returnList = new ArrayList<String>();
+      returnList.add(cuBase + filenameValue + ".pdf");
+      returnList.add(cuBase + filenameValue + ".epub");
+      return returnList;
     }
   }
 }

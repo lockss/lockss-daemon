@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2BaseSchemaHelper.java,v 1.1 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: Onix2BaseSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
  */
 
 /*
@@ -446,35 +446,11 @@ implements SourceXmlSchemaHelper {
   }
 
   /**
-   * No filename prefix needed - return null
-   */
-  @Override
-  public String getFilenamePrefix() {
-    return null;
-  }
-
-  /**
-   * Look for both pdf and epub filetype to decide if we should emit
-   */
-  @Override
-  public ArrayList<String> getFilenameSuffixList() {
-    ArrayList<String> returnList = new ArrayList<String>();
-    returnList.add(".pdf");
-    returnList.add(".epub");
-    return returnList;
-  }
-
-  /**
    * The filenames are based on the isbn13 value 
    */
   @Override
   public String getFilenameXPathKey() {
     return ONIX_idtype_isbn13;
-  }
-
-  @Override
-  public boolean getDoXmlFiltering() {
-    return false;
   }
 
 
