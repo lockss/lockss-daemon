@@ -1482,7 +1482,7 @@
         au < manifest ; exists ; 2014 ; Life Sciences, Society and Policy Volume 10 ; 10 >
   
     }
-  
+
     {
   
         title <
@@ -2183,7 +2183,28 @@
         au < expected ; exists ; 2014 ; Journal of Petroleum Exploration and Production Technologies Volume 4 ; 4 >
   
     }
+
+    {
   
+        title <
+          name = Logistics Research ;
+          issn = 1865-0368 
+        >
+  
+        param[base_url] = http://www.springer.com/12159/
+        param[journal_issn] = 1865-0368
+        comment[platform] = Springer
+
+        au < exists ; exists ; 2009 ; Logistics Research Volume 1 ; 1 >
+        au < exists ; exists ; 2010 ; Logistics Research Volume 2 ; 2 >
+        au < exists ; exists ; 2011 ; Logistics Research Volume 3 ; 3 >
+        au < exists ; exists ; 2012 ; Logistics Research Volume 4 ; 4 >
+        au < exists ; exists ; 2012 ; Logistics Research Volume 5 ; 5 >
+        au < exists ; exists ; 2013 ; Logistics Research Volume 6 ; 6 >
+        au < exists ; exists ; 2014 ; Logistics Research Volume 7 ; 7 >
+
+    }
+
     {
   
         title <
