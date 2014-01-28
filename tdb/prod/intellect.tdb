@@ -1111,6 +1111,8 @@
       >
       param[journal_id] = jvap
       param[journal_issn] = 1470-2029
+      
+      comment[publisher] = Journal also available through T&F.
 
       au < released ; 2001-2002 ; Journal of Visual Art Practice Volume 1 ; 1 >
       au < released ; 2002-2003 ; Journal of Visual Art Practice Volume 2 ; 2 >
@@ -1123,8 +1125,7 @@
       au < released ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
       au < released ; 2011-2012 ; Journal of Visual Art Practice Volume 10 ; 10 >
       au < released ; 2012 ; Journal of Visual Art Practice Volume 11 ; 11 >
-      au < manifest ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
-      au < expected ; 2014 ; Journal of Visual Art Practice Volume 13 ; 13 >
+      au < exists ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
 
     }
             
