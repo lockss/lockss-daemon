@@ -2098,12 +2098,19 @@
       >
 
       param[base_url] = http://www.aricjournal.com/
+      
+      {
       param[journal_issn] = 2047-2994
 
       au < finished ; crawling ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; Antimicrobial Resistance and Infection Control Volume 2 ; 2 >
       au < manifest ; exists ; 2014 ; Antimicrobial Resistance and Infection Control Volume 3 ; 3 >
-
+      
+      }
+      {
+      param[journal_issn] = 2048-7010
+      au < down ; exists ; 2012 ; Antimicrobial Resistance and Infection Control Volume 1 [to delete] ; 1 >
+      }
     }
 
     {
