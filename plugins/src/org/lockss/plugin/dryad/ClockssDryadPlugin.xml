@@ -33,6 +33,10 @@
     </map>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.63.0</string>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Dryad Plugin (CLOCKSS), Base URL %s, URL List %s", base_url, volume_name</string>
   </entry>
