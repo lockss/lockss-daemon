@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.85 2014-01-14 04:31:06 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.85.2.1 2014-01-29 05:11:56 tlipkis Exp $
  */
 
 /*
@@ -241,7 +241,8 @@ public class ServletUtil {
   private static final String ENABLEPORT_CELL_ATTRIBUTES =
     ALIGN_CENTER;
 
-  private static final String ENABLEPORT_TABLE_ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
+  private static final String ENABLEPORT_TABLE_ATTRIBUTES =
+    "align=\"center\" cellpadding=\"4\"";
 
   private static final int ENABLEPORT_TABLE_BORDER = 0;
 
@@ -718,14 +719,41 @@ public class ServletUtil {
                                          String portFieldName,
                                          String defaultPort,
                                          List usablePorts) {
+    layoutEnablePortRow(servlet,
+			table,
+			enableFieldName,
+			defaultEnable,
+			enableDescription,
+			enableFootnote,
+			filterFootnote,
+			portFieldName,
+			null,
+			defaultPort,
+			null,
+			usablePorts);
+  }
+
+  private static final String SSL_FOOT =
+    "SSL port used internally on loopback interface.  -1 to disable";
+
+  public static void layoutEnablePortRow(LockssServlet servlet,
+                                         Table table,
+                                         String enableFieldName,
+                                         boolean defaultEnable,
+                                         String enableDescription,
+                                         String enableFootnote,
+                                         String filterFootnote,
+                                         String portFieldName,
+                                         String sslPortFieldName,
+                                         String defaultPort,
+                                         String defaultSslPort,
+                                         List usablePorts) {
+
     // Start row
     table.newRow();
 
-    // Start line
-    table.newCell(ENABLEPORT_CELL_ATTRIBUTES);
-
     Input portElem = new Input(Input.Text, portFieldName, defaultPort);
-
+    Input sslPortElem = null;
     // "enable" element
     Input enaElem = new Input(Input.Checkbox, enableFieldName, "1");
     if (defaultEnable) {
@@ -734,9 +762,22 @@ public class ServletUtil {
       portElem.attribute("disabled", "true");
     }
     String portFieldId = "id_" + portFieldName;
+    String sslPortFieldId = null;
+    if (sslPortFieldName != null) {
+      sslPortElem = new Input(Input.Text, sslPortFieldName, defaultSslPort);
+      if (!defaultEnable) {
+	sslPortElem.attribute("disabled", "true");
+      }
+      sslPortFieldId = "id_" + sslPortFieldName;
+      sslPortElem.setSize(6);
+      sslPortElem.attribute("id", sslPortFieldId);
+    }    
     enaElem.attribute("onchange",
-		      "selectEnable(this,'" + portFieldId + "')");
+		      "selectEnable(this,'" +
+		      portFieldId + "','" + sslPortFieldId + "')");
     servlet.setTabOrder(enaElem);
+
+    table.newCell("align=\"right\" valign=\"bottom\"");
     table.add(enaElem);
     table.add("Enable " + enableDescription);
     table.add(servlet.addFootnote(enableFootnote));
@@ -747,6 +788,14 @@ public class ServletUtil {
     portElem.attribute("id", portFieldId);
     servlet.setTabOrder(portElem);
     table.add(portElem);
+    if (sslPortElem != null) {
+      table.newCell("align=\"left\" valign=\"bottom\"");
+      table.add("SSL port&nbsp;");
+      table.add(servlet.addFootnote(SSL_FOOT));
+      table.add("&nbsp;");
+      servlet.setTabOrder(sslPortElem);
+      table.add(sslPortElem);
+    }
 
     // List of usable ports
     if (usablePorts != null) {
