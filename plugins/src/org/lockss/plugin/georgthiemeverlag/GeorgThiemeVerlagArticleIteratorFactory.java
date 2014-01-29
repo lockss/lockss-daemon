@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.3 2014-01-03 17:24:03 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.4 2014-01-29 23:32:25 etenbrink Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.georgthiemeverlag;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.*;
 
@@ -72,6 +73,7 @@ public class GeorgThiemeVerlagArticleIteratorFactory
   protected static final String HTML_REPLACEMENT = "/html/$1";
   protected static final String PDF_REPLACEMENT = "/pdf/$1.pdf";
   protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1";
+  protected static final String RIS_REPLACEMENT = "/ris/$1/BIB";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(
@@ -95,18 +97,17 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     
     builder.addAspect(
         ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
+    
+    builder.addAspect(
+        RIS_REPLACEMENT,
+        ArticleFiles.ROLE_CITATION_RIS);
+    
+    // add metadata role from abstract, html, or pdf (NOTE: pdf metadata gets DOI from filename)
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // set up html fulltext to be an aspect for metadata
-    builder.addAspect(
-        HTML_REPLACEMENT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // set up pdf fulltext to be an aspect for metadata
-    builder.addAspect(
-        PDF_REPLACEMENT,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_FULL_TEXT_PDF));
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
