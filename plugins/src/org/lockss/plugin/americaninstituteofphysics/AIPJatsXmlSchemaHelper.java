@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsXmlSchemaHelper.java,v 1.3 2014-01-29 17:16:06 aishizaki Exp $
+ * $Id: AIPJatsXmlSchemaHelper.java,v 1.4 2014-01-29 17:19:39 alexandraohlson Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.w3c.dom.NodeList;
  *  AIPJats source files
  *  
  */
-lic class AIPJatsXmlSchemaHelper
+public class AIPJatsXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(AIPJatsXmlSchemaHelper.class);
 
