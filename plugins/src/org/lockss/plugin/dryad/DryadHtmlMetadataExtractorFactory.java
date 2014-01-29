@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.2 2013-09-13 20:14:29 etenbrink Exp $
+ * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.3 2014-01-29 22:55:01 etenbrink Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.plugin.*;
  */
 
 public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("DryadHtmlMetadataExtractorFactory");
+  static Logger log = Logger.getLogger(DryadHtmlMetadataExtractorFactory.class);
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,

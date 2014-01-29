@@ -1,5 +1,5 @@
 /*
- * $Id: DryadArticleIteratorFactory.java,v 1.1 2013-09-04 20:21:20 etenbrink Exp $
+ * $Id: DryadArticleIteratorFactory.java,v 1.2 2014-01-29 22:55:02 etenbrink Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ implements ArticleIteratorFactory,
            ArticleMetadataExtractorFactory {
 
   protected static Logger log = 
-      Logger.getLogger("DryadArticleIteratorFactory");
+      Logger.getLogger(DryadArticleIteratorFactory.class);
 
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url"; 

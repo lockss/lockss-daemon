@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlFilterFactory.java,v 1.2 2013-09-06 00:02:44 etenbrink Exp $
+ * $Id: DryadHtmlFilterFactory.java,v 1.3 2014-01-29 22:55:02 etenbrink Exp $
  */ 
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 public class DryadHtmlFilterFactory implements FilterFactory {
-  Logger log = Logger.getLogger("DryadHtmlFilterFactory");
+  Logger log = Logger.getLogger(DryadHtmlFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
