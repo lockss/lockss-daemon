@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsXmlSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: AIPJatsXmlSchemaHelper.java,v 1.3 2014-01-29 17:16:06 aishizaki Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.w3c.dom.NodeList;
  *  AIPJats source files
  *  
  */
-public class AIPJatsXmlSchemaHelper
+lic class AIPJatsXmlSchemaHelper
 implements SourceXmlSchemaHelper {
   static Logger log = Logger.getLogger(AIPJatsXmlSchemaHelper.class);
 
@@ -292,7 +292,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(AIPJATS_journal_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(AIPJATS_article_title, MetadataField.FIELD_ARTICLE_TITLE);
     cookMap.put(AIPJATS_author, MetadataField.FIELD_AUTHOR);
-    //cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(AIPJATS_publisher_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(AIPJATS_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(AIPJATS_journal_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
 

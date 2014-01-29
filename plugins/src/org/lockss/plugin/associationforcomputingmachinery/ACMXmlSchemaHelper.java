@@ -1,5 +1,5 @@
 /*
- * $Id: ACMXmlSchemaHelper.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: ACMXmlSchemaHelper.java,v 1.3 2014-01-29 17:16:06 aishizaki Exp $
  */
 
 /*
@@ -259,7 +259,7 @@ implements SourceXmlSchemaHelper {
     cookMap.put(ACM_article_id, MetadataField.FIELD_PROPRIETARY_IDENTIFIER);
     cookMap.put(ACM_author, MetadataField.FIELD_AUTHOR);
     // taking out publisher name - will be added from TDB
-    //cookMap.put(ACM_publisher_name, MetadataField.FIELD_PUBLISHER);
+    cookMap.put(ACM_publisher_name, MetadataField.FIELD_PUBLISHER);
     cookMap.put(ACM_art_pubdate, MetadataField.FIELD_DATE);
     // these "urls" are relative filenames - must fill in later
     cookMap.put(ACM_article_url, MetadataField.FIELD_ACCESS_URL);
