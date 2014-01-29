@@ -18,11 +18,11 @@
     proxy = DIRECT
     implicit < status ; status2 ; year ; name ; param[year] >
     
-    au < doNotProcess ; crawling ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
-    au < doNotProcess ; crawling ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
-    au < doNotProcess ; crawling ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
-    au < doNotProcess ; crawling ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
-    au < expected ; exists ; 2014 ; Association for Computing Machinery Source Content 2014 ; 2014 >
+    au < testing ; crawling ; 2010 ; Association for Computing Machinery Source Content 2010 ; 2010 >
+    au < testing ; crawling ; 2011 ; Association for Computing Machinery Source Content 2011 ; 2011 >
+    au < testing ; crawling ; 2012 ; Association for Computing Machinery Source Content 2012 ; 2012 >
+    au < testing ; crawling ; 2013 ; Association for Computing Machinery Source Content 2013 ; 2013 >
+    au < testing ; exists ; 2014 ; Association for Computing Machinery Source Content 2014 ; 2014 >
 
   }
 
