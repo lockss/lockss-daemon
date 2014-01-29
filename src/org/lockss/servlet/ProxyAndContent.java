@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.30 2012-07-19 11:54:42 easyonthemayo Exp $
+ * $Id: ProxyAndContent.java,v 1.31 2014-01-29 05:21:20 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class ProxyAndContent extends LockssServlet {
 
   private static final String SUFFIX_KEY_ENABLE = "_ena";
   private static final String SUFFIX_KEY_PORT = "_port";
+  private static final String SUFFIX_KEY_SSL_PORT = "_sslPort";
   private static final String SUFFIX_KEY_HOST = "_host";
 
   private static final String ACTION_MAIN = "Main";
@@ -105,7 +106,7 @@ public class ProxyAndContent extends LockssServlet {
     "Manage this box's content servers and proxies.";
 
   private static final String CONTENT_SERVER_EXPLANATION_FOOT =
-    "To replace the server on an active port, first disable the active server, then enable the new server.";
+    "Port changes take effect only when enabling a server.  To change a port, fir disable, then enable with new port.  To replace the server on an active port, first disable the active server, then enable the new server.";
 
   private static final String PROXY_CLIENT_EXPLANATION =
     "Configure the LOCKSS crawler to access the net through a proxy server.";
@@ -126,6 +127,7 @@ public class ProxyAndContent extends LockssServlet {
 		      "content_proxy",
 		      ProxyManager.PARAM_START,
 		      ProxyManager.PARAM_PORT,
+		      ProxyManager.PARAM_SSL_PORT,
 		      ProxyManager.DEFAULT_START);
 
   ServerInfo auditProxyInfo =
@@ -134,6 +136,7 @@ public class ProxyAndContent extends LockssServlet {
 		      "audit_proxy",
 		      AuditProxyManager.PARAM_START,
 		      AuditProxyManager.PARAM_PORT,
+		      AuditProxyManager.PARAM_SSL_PORT,
 		      AuditProxyManager.DEFAULT_START);
 
   ServerInfo icpServerInfo =
@@ -157,6 +160,7 @@ public class ProxyAndContent extends LockssServlet {
     String formKeyPrefix;
     String enableParam;
     String portParam;
+    String sslPortParam;
     String hostParam;
     boolean enableParamDefault;
 
@@ -164,7 +168,9 @@ public class ProxyAndContent extends LockssServlet {
     boolean enable;
     boolean formEnable;
     int port;
+    int sslPort;
     String formPort;
+    String formSslPort;
     String host;
     String formHost;
 
@@ -173,8 +179,10 @@ public class ProxyAndContent extends LockssServlet {
 	       String formKeyPrefix,
 	       String enableParam,
 	       String portParam,
+	       String sslPortParam,
 	       boolean enableParamDefault) {
-      this(name, resourceName, formKeyPrefix, enableParam, portParam,
+      this(name, resourceName, formKeyPrefix, enableParam,
+	   portParam, sslPortParam,
 	   null, enableParamDefault);
     }
 
@@ -183,6 +191,7 @@ public class ProxyAndContent extends LockssServlet {
 	       String formKeyPrefix,
 	       String enableParam,
 	       String portParam,
+	       String sslPortParam,
 	       String hostParam,
 	       boolean enableParamDefault) {
       this.name = name;
@@ -190,6 +199,7 @@ public class ProxyAndContent extends LockssServlet {
       this.formKeyPrefix = formKeyPrefix;
       this.enableParam = enableParam;
       this.portParam = portParam;
+      this.sslPortParam = sslPortParam;
       this.hostParam = hostParam;
       this.enableParamDefault = enableParamDefault;
     }
@@ -198,13 +208,21 @@ public class ProxyAndContent extends LockssServlet {
     String getResourceName() { return resourceName; }
     String getEnableKey() { return formKeyPrefix + SUFFIX_KEY_ENABLE; }
     String getPortKey() { return formKeyPrefix + SUFFIX_KEY_PORT; }
+    String getSslPortKey() {
+      return isSsl() ? formKeyPrefix + SUFFIX_KEY_SSL_PORT: null;
+    }
     String getHostKey() { return formKeyPrefix + SUFFIX_KEY_HOST; }
     String getEnableParam() { return enableParam; }
     String getPortParam() { return portParam; }
+    String getSslPortParam() { return sslPortParam; }
     String getHostParam() { return hostParam; }
     boolean getEnableParamDefault() { return enableParamDefault; }
 
     String getDefaultHost() { return null; }
+
+    boolean isSsl() {
+      return sslPortParam != null;
+    }
 
     boolean getDefaultEnable() {
       if (isForm) {
@@ -233,10 +251,35 @@ public class ProxyAndContent extends LockssServlet {
       return port;
     }
 
+    String getDefaultSslPort() {
+      if (getSslPortParam() == null) {
+	return null;
+      }
+      String sslPort = null;
+      if (isForm) {
+	sslPort = formSslPort;
+      }
+      if (StringUtil.isNullString(sslPort)) {
+	sslPort = CurrentConfig.getParam(getSslPortParam());
+      }
+//       if (!StringUtil.isNullString(sslPort)) {
+// 	try {
+// 	  int sslPortNumber = Integer.parseInt(sslPort);
+// 	  if (sslPortNumber <= 0) {
+// 	    sslPort = "";
+// 	  }
+// 	} catch (NumberFormatException nfeIgnore) {}
+//       }
+      return sslPort;
+    }
+
     void readForm(HttpServletRequest req) {
       formEnable =
 	!StringUtil.isNullString(req.getParameter(getEnableKey()));
       formPort = req.getParameter(getPortKey());
+      if (isSsl()) {
+	formSslPort = req.getParameter(getSslPortKey());
+      }
     }
 
     void processForm(ArrayList errList) {
@@ -254,14 +297,38 @@ public class ProxyAndContent extends LockssServlet {
 	errList.add("Illegal " + getName() + " port number: " + formPort
           + ", must be >=1024 and not in use");
       }
+      sslPort = -1;
+      if (!StringUtil.isNullString(formSslPort)) {
+	try {
+	  sslPort = Integer.parseInt(formSslPort);
+	} catch (NumberFormatException nfe) {
+	  if (formEnable) {
+	    // bad number is an error only if enabling
+	    errList.add(getName() +
+			" SSL port must be a number: " + formSslPort);
+	  }
+	}
+	if (formEnable && !isLegalPort(sslPort) && !isDuplicatePort(sslPort)) {
+	  errList.add("Illegal " + getName() +
+		      " SSL port number: " + formSslPort
+		      + ", must be >=1024 and not in use");
+	}
+      }
     }
 
     void updateConfig(Configuration config) {
       config.put(getEnableParam(), Boolean.toString(enable));
-      String p = (enable ? Integer.toString(port)
-		  : CurrentConfig.getParam(getPortParam()));
-      if (StringUtils.isNotEmpty(p)) {
-	config.put(getPortParam(), p);
+      putPortIfNotNull(config, port, getPortParam());
+      putPortIfNotNull(config, sslPort, getSslPortParam());
+    }
+
+    void putPortIfNotNull(Configuration config, int port, String param) {
+      if (param != null) {
+	String p = (enable ? Integer.toString(port)
+		    : CurrentConfig.getParam(param));
+	if (StringUtils.isNotEmpty(p)) {
+	  config.put(param, p);
+	}
       }
     }
 
@@ -277,7 +344,18 @@ public class ProxyAndContent extends LockssServlet {
 		  String enableParam,
 		  String portParam,
 		  boolean enableParamDefault) {
-      super(name, resourceName, formKeyPrefix, enableParam, portParam,
+      super(name, resourceName, formKeyPrefix, enableParam, portParam, null,
+	    enableParamDefault);
+    }
+    TcpServerInfo(String name,
+		  String resourceName,
+		  String formKeyPrefix,
+		  String enableParam,
+		  String portParam,
+		  String sslPortParam,
+		  boolean enableParamDefault) {
+      super(name, resourceName, formKeyPrefix, enableParam,
+	    portParam, sslPortParam,
 	    enableParamDefault);
     }
     List getUsablePorts() {
@@ -298,7 +376,7 @@ public class ProxyAndContent extends LockssServlet {
 		  String enableParam,
 		  String portParam,
 		  boolean enableParamDefault) {
-      super(name, resourceName, formKeyPrefix, enableParam, portParam,
+      super(name, resourceName, formKeyPrefix, enableParam, portParam, null,
 	    enableParamDefault);
     }
     List getUsablePorts() {
@@ -397,7 +475,9 @@ public class ProxyAndContent extends LockssServlet {
                                     enableFootnote,
                                     FILTER_FOOT,
 				    si.getPortKey(),
+				    si.getSslPortKey(),
 				    si.getDefaultPort(),
+				    si.getDefaultSslPort(),
 				    si.getUsablePorts());
   }
 
@@ -626,9 +706,7 @@ public class ProxyAndContent extends LockssServlet {
   }
 
   private void processUpdateContentServer_SaveChanges() throws IOException {
-    Configuration config;
-
-    config = ConfigManager.newConfiguration();
+    Configuration config = ConfigManager.newConfiguration();
 
     for (ServerInfo si : serverInfos) {
       si.updateConfig(config);
