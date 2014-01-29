@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.23 2014-01-14 04:32:05 tlipkis Exp $
+ * $Id: MetadataManager.java,v 1.23.2.1 2014-01-29 22:27:22 pgust Exp $
  */
 
 /*
@@ -550,6 +550,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " and a." + PLUGIN_SEQ_COLUMN + " = " + " p." + PLUGIN_SEQ_COLUMN
       + " and p." + PLUGIN_ID_COLUMN + " = ?"
       + " and a." + AU_KEY_COLUMN + " = ?";
+
+  // Query to find the full reindexing flag of an Archival Unit.
+  private static final String FIND_AU_FULL_REINDEXING_BY_AU_QUERY = "select "
+      + FULLY_REINDEX_COLUMN
+      + " from " + PENDING_AU_TABLE
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
+  
+  // Query to update the full reindexing of an Archival Unit.
+  private static final String UPDATE_AU_FULL_REINDEXING_QUERY = "update "
+      + PENDING_AU_TABLE
+      + " set " + FULLY_REINDEX_COLUMN + " = ?"
+      + " where " + PLUGIN_ID_COLUMN + " = ?"
+      + " and " + AU_KEY_COLUMN + " = ?";
 
   // Query to find a platform by its name.
   private static final String FIND_PLATFORM_QUERY = "select "
@@ -3995,7 +4009,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /**
    * Adds an AU to the list of AUs to be reindexed.
-   * Does incremental reindexing if possible.
+   * Does incremental reindexing if possible, unless full reindexing
+   * is required because the plugin metadata version has changed.
    * 
    * @param au
    *          An ArchivalUnit with the AU to be reindexed.
@@ -4011,8 +4026,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public boolean enableAndAddAuToReindex(ArchivalUnit au, Connection conn,
       PreparedStatement insertPendingAuBatchStatement, boolean inBatch) {
+    boolean fullReindex = isAuMetadataForObsoletePlugin(au);
     return enableAndAddAuToReindex(au, conn, insertPendingAuBatchStatement,
-	inBatch, false);
+	inBatch, fullReindex);
   }
   
   /**
@@ -4062,20 +4078,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
               insertPendingAuBatchStatement, inBatch);
         }
 
-        // force a full reindex by removing the AU metadata from the database
+        // force a full reindex for AU
         if (fullReindex) {
-          removeAu(conn, au.getAuId());
+          updateAuFullReindexing(conn, au, true);
         }
         
         startReindexing(conn);
-        DbManager.commitOrRollback(conn, log);
 
-        // once transaction has committed, resync AU count with database
-        if (fullReindex) {
-          metadataArticleCount = getArticleCount(conn);
-        }
-        
+        DbManager.commitOrRollback(conn, log);
         return true;
+        
       } catch (DbException dbe) {
         log.error("Cannot add au to pending AUs: " + au.getName(), dbe);
         return false;
@@ -4491,7 +4503,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     return pVersion > auVersion;
   }
-
+  
   /**
    * Provides the version of the metadata of an AU stored in the database.
    * 
@@ -4519,6 +4531,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     return version;
   }
+
 
   /**
    * Provides the version of the metadata of an AU stored in the database.
@@ -4565,6 +4578,91 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     return version;
+  }
+  
+  /**
+   * Determine whether AU stored in the database requires full reindexing.
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param au
+   *          An ArchivalUnit with the AU involved.
+   * @return an boolean indicating whether the AU stored in the database
+   *         requires full reindexing.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  boolean needAuFullReindexing(Connection conn, ArchivalUnit au)
+      throws DbException {
+    final String DEBUG_HEADER = "needAuFullReindexing(): ";
+
+    String auId = au.getAuId();
+    String pluginId = PluginManager.pluginIdFromAuId(auId);
+    log.debug2(DEBUG_HEADER + "pluginId() = " + pluginId);
+
+    String auKey = PluginManager.auKeyFromAuId(auId);
+    log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+
+    boolean fullReindexing = false;
+    PreparedStatement selectFullReindexing = null;
+    ResultSet resultSet = null;
+  
+    try {
+      selectFullReindexing =
+          dbManager.prepareStatement(conn, FIND_AU_FULL_REINDEXING_BY_AU_QUERY);
+      selectFullReindexing.setString(1, pluginId);
+      selectFullReindexing.setString(2, auKey);
+      resultSet = dbManager.executeQuery(selectFullReindexing);
+  
+      if (resultSet.next()) {
+        fullReindexing = resultSet.getBoolean(FULLY_REINDEX_COLUMN);
+        log.debug2(DEBUG_HEADER + "full reindexing = " + fullReindexing);
+      }
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot get AU fully reindexing flag", sqle);
+    } finally {
+        DbManager.safeCloseResultSet(resultSet);
+        DbManager.safeCloseStatement(selectFullReindexing);
+    }
+  
+    return fullReindexing;
+  }
+
+  /**
+   * Sets whether AU stored in the database requires full reindexing.
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param au
+   *          An ArchivalUnit with the AU involved.
+   * @param fullReindexing the new value of full_reindexing for the AU
+   *         in the database
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  void updateAuFullReindexing(Connection conn,
+                              ArchivalUnit au, boolean fullReindexing)
+    throws DbException {
+    final String DEBUG_HEADER = "getAuMetadataVersion(): ";
+    PreparedStatement updateFullReindexing = null;
+  
+    String auId = au.getAuId();
+    String pluginId = PluginManager.pluginIdFromAuId(auId);
+    log.debug2(DEBUG_HEADER + "pluginId() = " + pluginId);
+
+    String auKey = PluginManager.auKeyFromAuId(auId);
+    log.debug2(DEBUG_HEADER + "auKey = " + auKey);
+
+    try {
+      updateFullReindexing =
+        dbManager.prepareStatement(conn, UPDATE_AU_FULL_REINDEXING_QUERY);
+      updateFullReindexing.setBoolean(1, fullReindexing);
+      updateFullReindexing.setString(2, pluginId);
+      updateFullReindexing.setString(3, auKey);
+      dbManager.executeUpdate(updateFullReindexing);
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot set AU fully reindex flag", sqle);
+    } finally {
+        DbManager.safeCloseStatement(updateFullReindexing);
+    }
   }
 
   /**
