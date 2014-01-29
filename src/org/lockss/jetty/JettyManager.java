@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.31 2013-08-15 08:18:21 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.32 2014-01-29 05:22:06 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public abstract class JettyManager
   protected String serverName;
   protected HttpServer runningServer;
   protected int ownedPort = -1;
+  protected int ownedSslPort = -1;
 
   public JettyManager() {
   }
@@ -134,18 +135,33 @@ public abstract class JettyManager
   long[] delayTime = {10 * Constants.SECOND, 60 * Constants.SECOND, 0};
 
   protected boolean startServer(HttpServer server, int port) {
-    return startServer(server, port, getServerName());
+    return startServer(server, port, 0);
   }
 
-  protected boolean startServer(HttpServer server, int port,
+  protected boolean startServer(HttpServer server, int port, int sslPort) {
+    return startServer(server, port, sslPort, getServerName());
+  }
+
+  protected boolean startServer(HttpServer server, int port, int sslPort,
 				String serverName) {
     try {
-      if (resourceMgr != null &&
-	  !resourceMgr.reserveTcpPort(port, serverName)) {
-	log.warning(serverName + " not started; port " + port + " is in use");
-	return false;
+      if (resourceMgr != null) {
+	if (!resourceMgr.reserveTcpPort(port, serverName)) {
+	  log.warning(serverName + " not started; port " + port + " is in use");
+	  return false;
+	}
+	ownedPort = port;
+	if (sslPort > 0) {
+	  if (!resourceMgr.reserveTcpPort(sslPort, serverName)) {
+	    // Release regular port if failed
+	    resourceMgr.releaseTcpPort(port, serverName);
+	    log.warning(serverName + " not started; SSL port " + port +
+			" is in use");
+	    return false;
+	  }
+	}
+	ownedSslPort = sslPort;
       }
-      ownedPort = port;
       setListenerParams(server);
       for (int ix = 0; ix < delayTime.length; ix++) {
 	try {
@@ -207,6 +223,10 @@ public abstract class JettyManager
     if (resourceMgr != null) {
       resourceMgr.releaseTcpPort(ownedPort, serverName);
       ownedPort = -1;
+      if (ownedSslPort > 0) {
+	resourceMgr.releaseTcpPort(ownedSslPort, serverName);
+	ownedSslPort = -1;
+      }
     }
   }
 
