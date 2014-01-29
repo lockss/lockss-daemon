@@ -3,11 +3,10 @@
   publisher <
     name = New Prairie Press ;
     info[contract] = 2012 ;
+    comment[0] = Under the asupices of Kansas State University on Digital Commons ;
     info[tester] = 8
   >
   
-  comment[moving] = publisher moving from OJS to BePress
-
   plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
   implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
