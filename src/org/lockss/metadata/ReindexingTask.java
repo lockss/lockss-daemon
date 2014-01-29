@@ -1,5 +1,5 @@
 /*
- * $Id: ReindexingTask.java,v 1.13 2013-12-17 17:57:46 fergaloy-sf Exp $
+ * $Id: ReindexingTask.java,v 1.14 2014-01-29 22:30:38 pgust Exp $
  */
 
 /*
@@ -77,6 +77,9 @@ public class ReindexingTask extends StepTask {
 
   // An indication of whether the AU being indexed is new to the index.
   private volatile boolean isNewAu = true;
+  
+  // An indication of whether the AU being indexed needs a full reindex
+  private volatile boolean needFullReindex = false;
 
   // The status of the task: successful if true.
   private volatile ReindexingStatus status = ReindexingStatus.Running;
@@ -293,11 +296,21 @@ public class ReindexingTask extends StepTask {
   /**
    * Returns an indication of whether the AU has not yet been indexed.
    * 
-   * @return <code>true</code> if the AU ihas not yet been indexed,
+   * @return <code>true</code> if the AU has not yet been indexed,
    * <code>false</code> otherwise.
    */
   boolean isNewAu() {
     return isNewAu;
+  }
+
+  /**
+   * Returns an indication of whether the AU needs a full reindex.
+   * 
+   * @return <code>true</code> if the AU needs a full reindex,
+   * <code>false</code> otherwise.
+   */
+  boolean needsFullReindex() {
+    return needFullReindex;
   }
 
   /**
@@ -672,10 +685,12 @@ public class ReindexingTask extends StepTask {
             + ", startClockTime: " + startClockTime / 1.0e3);
       }
 
-      long lastExtractionTime = NEVER_EXTRACTED_EXTRACTION_TIME;
+      // Indicate that only new metadata after the last extraction is to be
+      // included.
+      MetadataTarget target = MetadataTarget.OpenURL();
+
       Connection conn = null;
       String message = null;
-      boolean needsIncrementalExtraction = false;
 
       try {
         // Get a connection to the database.
@@ -691,42 +706,22 @@ public class ReindexingTask extends StepTask {
         // Determine whether this is a new, never indexed, AU;
         isNewAu = auSeq == null;
         log.debug2(DEBUG_HEADER + "isNewAu = " + isNewAu);
-
+        
         // Check whether this same AU has been indexed before.
         if (!isNewAu) {
-          // Yes: Determine whether an incremental extraction is needed.
-          message = "Cannot determine whther the metadata for AU = " + auSeq
-              + " was extracted with an obsolete plugin";
-
-          needsIncrementalExtraction =
-              !mdManager.isAuMetadataForObsoletePlugin(conn, au);
-          log.debug2(DEBUG_HEADER + "needsIncrementalExtraction = "
-              + needsIncrementalExtraction);
-
-          // Check whether an incremental extraction is needed.
-          if (needsIncrementalExtraction) {
-            // Yes: Get the last extraction time for the AU.
-            message =
-                "Cannot find the last extraction time for AU = " + auSeq
-                    + " in the database";
-
-            lastExtractionTime = mdManager.getAuExtractionTime(conn, auSeq);
-            log.debug2(DEBUG_HEADER + "lastExtractionTime = "
-                + lastExtractionTime);
+          // Only allow incremental extraction if not doing full reindex
+          needFullReindex = mdManager.needAuFullReindexing(conn, au);
+          log.debug2(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
+          if (!needFullReindex) {
+            long lastExtractTime = mdManager.getAuExtractionTime(conn, auSeq);
+            log.debug2(DEBUG_HEADER + "lastExtractTime = " + lastExtractTime);
+            target.setIncludeFilesChangedAfter(lastExtractTime);
           }
         }
       } catch (DbException dbe) {
         log.error(message + ": " + dbe);
       } finally {
         DbManager.safeRollbackAndClose(conn);
-      }
-      // Indicate that only new metadata after the last extraction is to be
-      // included.
-      MetadataTarget target = MetadataTarget.OpenURL();
-
-      // Check whether an incremental extraction is needed.
-      if (needsIncrementalExtraction) {
-        target.setIncludeFilesChangedAfter(lastExtractionTime);
       }
 
       // The article iterator won't be null because only AUs with article
@@ -789,7 +784,7 @@ public class ReindexingTask extends StepTask {
 
             // Check whether the plugin version used to obtain the metadata
             // stored in the database is older than the current plugin version.
-            if (mdManager.isAuMetadataForObsoletePlugin(conn, au)) {
+            if (needFullReindex) { 
               // Yes: Remove old AU metadata before adding new.
               removedArticleCount = mdManager.removeAuMetadataItems(conn, auId);
               log.debug3(DEBUG_HEADER + "removedArticleCount = "
@@ -807,6 +802,11 @@ public class ReindexingTask extends StepTask {
                   .recordMetadata(conn, mditr);
               
               pokeWDog();
+            }
+
+            // turn off full reindexing flag once full reindexing is complete
+            if (needFullReindex) {
+              mdManager.updateAuFullReindexing(conn, au, false);
             }
 
             // Remove the AU just re-indexed from the list of AUs pending to be
@@ -873,6 +873,12 @@ public class ReindexingTask extends StepTask {
 
               // Add the re-schedulable AU to the end of the pending list.
               mdManager.addToPendingAusIfNotThere(conn, Collections.singleton(au));
+            }
+
+            // require full reindexing for reschedule task 
+            // if this task required full reindexing
+            if (needFullReindex) {
+              mdManager.updateAuFullReindexing(conn, au, true);
             }
 
             // Complete the database transaction.
