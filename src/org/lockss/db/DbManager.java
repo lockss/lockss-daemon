@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.28 2014-01-14 22:45:42 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.28.2.1 2014-01-29 22:23:15 pgust Exp $
  */
 
 /*
@@ -533,6 +533,9 @@ public class DbManager extends BaseLockssDaemonManager
   /** Archival Unit creation time column. */
   public static final String CREATION_TIME_COLUMN = "creation_time";
 
+  /** Archival Unit metadata needs full reindexing column */
+  public static final String FULLY_REINDEX_COLUMN = "fully_reindex";
+  
   /** Metadata item fetch time column. */
   public static final String FETCH_TIME_COLUMN = "fetch_time";
 
@@ -1971,6 +1974,13 @@ public class DbManager extends BaseLockssDaemonManager
     + "(" + PUBLICATION_YEAR_COLUMN + ")"
   };
 
+  // The SQL code used to add the necessary version 11 database table columns.
+  private static final String[] VERSION_11_COLUMN_ADD_QUERIES = new String[] {
+    "alter table " + PENDING_AU_TABLE
+    + " add column " + FULLY_REINDEX_COLUMN
+    +   " boolean not null default false"
+  };
+
   // SQL statement that obtains all existing plugin identifiers in the database.
   private static final String GET_ALL_PLUGIN_IDS_QUERY = "select distinct "
       + PLUGIN_ID_COLUMN
@@ -2056,7 +2066,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 10;
+  private int targetDatabaseVersion = 11;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2544,6 +2554,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom8To9(conn);
 	} else if (from == 9) {
 	  updateDatabaseFrom9To10(conn);
+	} else if (from == 10) {
+	  updateDatabaseFrom10To11(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -3051,22 +3063,30 @@ public class DbManager extends BaseLockssDaemonManager
       throws DbException {
     final String DEBUG_HEADER = "recordDbVersion(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "version = " + version);
+    int count = 0;
 
-    // Try to update the version.
-    int count = updateDbVersion(conn, version);
-    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "updatedCount = " + count);
+    // Check whether the version to be recorded is greater than the one already
+    // in the database.
+    if (getDatabaseVersionBeforeReady(conn) < version) {
+      // Yes: Try to update the version.
+      count = updateDbVersion(conn, version);
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER + "updatedCount = " + count);
 
-    // Check whether the update was successful.
-    if (count > 0) {
-      // Yes: Done.
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "updatedCount = " + count);
-      return count;
+      // Check whether the update was not successful.
+      if (count <= 0) {
+	// Yes: Add the version.
+	count = addDbVersion(conn, version);
+
+	if (log.isDebug2()) log.debug2(DEBUG_HEADER + "addedCount = " + count);
+	return count;
+      }
+    } else {
+      // No: Done.
+      if (log.isDebug3()) log.debug3(DEBUG_HEADER
+	  + getDatabaseVersionBeforeReady(conn) + " >= " + version);
     }
 
-    // No: Add the version.
-    count = addDbVersion(conn, version);
-
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "addedCount = " + count);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "updatedCount = " + count);
     return count;
   }
 
@@ -6472,6 +6492,28 @@ public class DbManager extends BaseLockssDaemonManager
     } finally {
       DbManager.safeCloseStatement(statement);
     }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 10 to version 11.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom10To11(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom10To11(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Add the new columns.
+    executeDdlQueries(conn, VERSION_11_COLUMN_ADD_QUERIES);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
