@@ -362,7 +362,22 @@
         au < expected ; exists ; 2014 ; Earth Perspectives Volume 1 ; 1 >
   
     }
+
+    {
   
+        title <
+          name = Earth, Planets and Space ;
+          eissn = 1880-5981 
+        >
+  
+        param[base_url] = http://www.earth-planets-space.com/
+        param[journal_issn] = 1880-5981 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Earth, Planets and Space Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
