@@ -191,7 +191,7 @@
           issn = 2196-288X 
         >
   
-        param[base_url] = http://www.bjst-journal.com
+        param[base_url] = http://www.bjst-journal.com/
         param[journal_issn] = 2196-288X 
         comment[platform] = BMC
 
@@ -2166,7 +2166,7 @@
           eissn = 1863-2548
         >
   
-        param[base_url] = http://www.springer.com/11832
+        param[base_url] = http://www.springer.com/11832/
         param[journal_issn] = 1863-2521
         comment[platform] = Springer
 
