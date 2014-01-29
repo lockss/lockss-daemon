@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataStarter.java,v 1.6 2013-06-19 23:02:27 fergaloy-sf Exp $
+ * $Id: MetadataStarter.java,v 1.6.10.1 2014-01-29 22:33:08 pgust Exp $
  */
 
 /*
@@ -223,9 +223,10 @@ public class MetadataStarter extends LockssRunnable {
 
   	    // A new version of the plugin has been loaded. Refresh the metadata
   	    // only if the feature version of the metadata extractor increased.
+  	    // This requires a full reindex.
   	    if (mdManager.isAuMetadataForObsoletePlugin(au)) {
   	      mdManager.enableAndAddAuToReindex(au, conn,
-  		  insertPendingAuBatchStatement, event.isInBatch());
+  		  insertPendingAuBatchStatement, event.isInBatch(), true);
   	    }
 
   	    break;
