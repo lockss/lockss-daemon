@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.7 2014-01-07 00:36:08 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.8 2014-01-29 23:35:57 etenbrink Exp $
  */
 /*
 
@@ -35,6 +35,9 @@ import java.io.*;
 
 import org.htmlparser.*;
 import org.htmlparser.filters.*;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.WhiteSpaceFilter;
@@ -55,7 +58,9 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
         // Contains scripts and tags that change values
+        // XXX may want to 'normalize' the head tag contents (extract meta tags in a fixed order
         new TagNameFilter("head"),
+        new TagNameFilter("script"),
         // Remove header/footer items, requires_daemon_version 1.64.0
         new TagNameFilter("header"),
         new TagNameFilter("footer"),
@@ -70,12 +75,45 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "articleFunctions"),
         HtmlNodeFilters.tagWithAttribute("span", "class", "articleCategories"),
         // Contains non-functional anchor, not content
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "articleTocList"),
         HtmlNodeFilters.tagWithAttribute("a", "name"),
+    };
+    
+    
+    // HTML transform to remove generated href attribute like <a href="#N66454">
+    HtmlTransform xform = new HtmlTransform() {
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                if ("a".equalsIgnoreCase(tag.getTagName())) {
+                  String href = tag.getAttribute("href");
+                  if ((href != null) && (href.charAt(0) == '#')) {
+                    tag.setAttribute("href", "#");
+                  }
+                }
+                super.visitTag(tag);
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
     };
     
     // registerTag header/footer requires_daemon_version 1.64.0
     HtmlFilterInputStream filtered = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(
+            new OrFilter(filters)),xform))
     .registerTag(new HtmlTags.Header())
     .registerTag(new HtmlTags.Footer());
     
