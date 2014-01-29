@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.83.2.1 2014-01-18 20:34:02 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.83.2.2 2014-01-29 05:11:39 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.83.2.1 2014-01-18 20:34:02 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.83.2.2 2014-01-29 05:11:39 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -111,6 +111,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   private boolean handleFormPost = DEFAULT_PROCESS_FORMS;
   private String connectHost;
   private int connectPort = -1;
+  private int sslListenPort = -1;
+  private String errorTemplate;
 
   private boolean isFailOver = false;
   private URI failOverTargetUri;
@@ -179,6 +181,16 @@ public class ProxyHandler extends AbstractHttpHandler {
     connectHost = host;
     connectPort = port;
     log.debug2("setConnectAddr(" + host + ", " + port + ")");
+  }
+
+  /** Set the SSL port on which this proxy is listening.  */
+  public void setSslListenPort(int port) {
+    sslListenPort = port;
+  }
+
+  /** Set the error template.  */
+  public void setErrorTemplate(String template) {
+    errorTemplate = template;
   }
 
   /** Set a target to use as a base (protocol, host, port) for all incoming
@@ -328,13 +340,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
 
     // The URI in https proxy requests is generally host-relative.  Detect
-    // this and replace the URI in the request with the absolute URI.
-    if (uri.toString().startsWith("/")) {
-      String root = request.getRootURL().toString();
-      if (!StringUtil.isNullString(root)) {
-	String newUri = root.toLowerCase() + uri.toString();
-	log.debug("Relative URI: " + uri + " -> " + newUri);
-	uri.setURI(newUri);
+    // this and replace the URI in the request with the absolute URI.  Do
+    // this only for SSL connections, else accessing directly with browser
+    // can cause a loop.
+    HttpConnection conn = request.getHttpConnection();
+    if (sslListenPort > 0 && sslListenPort == conn.getServerPort()) {
+      if (uri.toString().startsWith("/")) {
+	String root = request.getRootURL().toString();
+	if (!StringUtil.isNullString(root)) {
+	  String newUri = root.toLowerCase() + uri.toString();
+	  log.debug("Relative URI: " + uri + " -> " + newUri);
+	  uri.setURI(newUri);
+	}
       }
     }
 
@@ -1283,42 +1300,44 @@ public class ProxyHandler extends AbstractHttpHandler {
       respMsg = "Unknown";
     }
     String errMsg = code + " " + respMsg;
-
-
+    URI uri = request.getURI();
+    String urlString = uri.toString();
+		  
     response.setContentType(HttpFields.__TextHtml);
     ByteArrayISO8859Writer writer = new ByteArrayISO8859Writer(2048);
 
-    URI uri = request.getURI();
-    String urlString = uri.toString();
+    String template = getErrorTemplate();
+    SimpleWriterTemplateExpander t =
+      new SimpleWriterTemplateExpander(template, writer);
+    Map<String,String> tokVal =
+      MapUtil.map("ErrorMessage", code + " " + respMsg,
+		  "Url", HtmlUtil.htmlEncode(uri.toString()),
+		  "Message", msg,
+		  "LockssUrl", Constants.LOCKSS_HOME_URL,
+		  "DaemonVersion", ConfigManager.getDaemonVersion().displayString(),
+		  "Hostname", PlatformUtil.getLocalHostname());
+    String token;
+    while ((token = t.nextToken()) != null) {
+      String val = tokVal.get(token);
+      if (val != null) {
+	writer.write(val);
+      } else if (token.equals("AuIndex")) {
+	writeErrorAuIndex(writer, urlString, candidateAus);
+      } else {
+	log.warning("Unknown token '" + token + "' in error template");
+      }
+    }
 
-
-    writer.write("<html>\n<head>\n<title>Error ");
-    writer.write(errMsg);
-    writer.write("</title>\n");
-
-    writer.write("<body>\n");
-
-    writer.write("<h2>Error (");
-    writer.write(errMsg);
-    writer.write(")</h2>");
-
-    writer.write("<font size=+1>");
-    writer.write("Unable to proxy request for URL: <b>");
-    writer.write(HtmlUtil.htmlEncode(uri.toString()));
-    writer.write("</b><br>");
-
-    writer.write(msg);
-    writer.write("</font>");
-    writer.write("<br>");
-
-    writeErrorAuIndex(writer, urlString, candidateAus);
-    writeFooter(writer);
     writer.flush();
     response.setContentLength(writer.size());
     writer.writeTo(response.getOutputStream());
     writer.destroy();
 
     request.setHandled(true);
+  }
+
+  String getErrorTemplate() {
+    return errorTemplate != null ? errorTemplate : "Missing error template";
   }
 
   void writeErrorAuIndex(Writer writer, String urlString,

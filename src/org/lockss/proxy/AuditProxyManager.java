@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.12.4.1 2014-01-18 20:34:02 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.12.4.2 2014-01-29 05:11:39 tlipkis Exp $
  */
 
 /*
@@ -72,13 +72,13 @@ public class AuditProxyManager extends BaseProxyManager {
    * same port, given by the <tt>sslPort</tt> parameter.  Change requires
    * proxy restart. */
   public static final String PARAM_SSL_BIND_ADDRS = PREFIX + "sslBindAddrs";
-  public static final List DEFAULT_SSL_BIND_ADDRS = Collections.EMPTY_LIST;
+  public static final List DEFAULT_SSL_BIND_ADDRS = ListUtil.list("127.0.0.1");
 
-  /** Host:Port that CONNECT requests should connect to, in lieu of the one
+  /** Host that CONNECT requests should connect to, in lieu of the one
    * specified in the request.  Intended to be pointed to the AuditProxy's
    * SSL listener. */
   static final String PARAM_CONNECT_ADDR = PREFIX + "connectAddr";
-  static final String DEFAULT_CONNECT_ADDR = "127.0.0.1:0";
+  static final String DEFAULT_CONNECT_ADDR = "127.0.0.1";
 
   /** Name of managed keystore to use (see
    * org.lockss.keyMgr.keystore.<i>id</i>.name) */
@@ -113,8 +113,8 @@ public class AuditProxyManager extends BaseProxyManager {
 				    DEFAULT_SSL_BIND_ADDRS);
 
       sslKeystoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
-      setConnectAddr(config.get(PARAM_CONNECT_ADDR,
-				DEFAULT_CONNECT_ADDR));
+      setConnectAddr(config.get(PARAM_CONNECT_ADDR, DEFAULT_CONNECT_ADDR),
+		     sslPort);
 
       if (start) {
 	if (getDaemon().isDaemonRunning()) {
@@ -133,7 +133,11 @@ public class AuditProxyManager extends BaseProxyManager {
       new org.lockss.proxy.ProxyHandler(getDaemon());
     handler.setAuditProxy(true);
     handler.setAuditIndex(auditIndex);
+    handler.setErrorTemplate(errorTemplate);
     handler.setConnectAddr(connectHost, connectPort);
+    if (sslPort > 0) {
+      handler.setSslListenPort(sslPort);
+    }
     return handler;
   }
 }

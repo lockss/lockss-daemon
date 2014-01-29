@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.19.4.1 2014-01-18 20:34:02 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.19.4.2 2014-01-29 05:11:39 tlipkis Exp $
  */
 
 /*
@@ -32,12 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
 import javax.net.ssl.KeyManagerFactory;
 
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -58,6 +60,11 @@ public abstract class BaseProxyManager extends JettyManager {
   public static final String DEFAULT_403_MSG =
     "Access to content in this LOCKSS box is not allowed from your IP address (%IP%)";
 
+  /** Filename of template for proxy's 404 error page */
+  public static final String PARAM_ERROR_TEMPLATE =
+    Configuration.PREFIX + "proxy.errorTemplate";
+  static final String DEFAULT_ERROR_TEMPLATE = "errorpagetemplate.html";
+
   protected AlertManager alertMgr;
   protected int port;
   protected int sslPort = -1;
@@ -74,6 +81,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected List<String> sslBindAddrs;
   protected String connectHost;
   protected int connectPort;
+  protected String errorTemplate;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -106,18 +114,15 @@ public abstract class BaseProxyManager extends JettyManager {
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     _403Msg = config.get(PARAM_403_MSG, DEFAULT_403_MSG);
+    if (changedKeys.contains(PARAM_ERROR_TEMPLATE)) {
+      setErrorTemplate(config.get(PARAM_ERROR_TEMPLATE,
+				  DEFAULT_ERROR_TEMPLATE));
+    }
   }
 
-  protected void setConnectAddr(String hostPort) {
-    try {
-      HostPortParser hpp = new HostPortParser(hostPort);
-      connectHost = hpp.getHost();
-      connectPort = hpp.getPort();
-    } catch (HostPortParser.InvalidSpec e) {
-      log.warning("Unparseable connect addr: " + hostPort, e);
-      connectHost = null;
-      connectPort = -1;
-    }
+  protected void setConnectAddr(String host, int port) {
+    connectHost = host;
+    connectPort = port;
   }
 
   void setIpFilter() {
@@ -133,6 +138,45 @@ public abstract class BaseProxyManager extends JettyManager {
       accessHandler.setAllowLocal(true);
       accessHandler.set403Msg(_403Msg);
     }
+  }
+
+  void setErrorTemplate(String fileOrResource) {
+    String tmpl = null;
+    try {
+      tmpl = readErrorTemplate(fileOrResource);
+    } catch (IOException e) {
+      log.warning("Error reading error template", e);
+    }
+    if (tmpl == null && !fileOrResource.equals(DEFAULT_ERROR_TEMPLATE)) {
+      try {
+	tmpl = readErrorTemplate(DEFAULT_ERROR_TEMPLATE);
+      } catch (IOException e) {
+	log.warning("Error reading error template", e);
+      }
+    }
+    if (tmpl == null) {
+      tmpl = "Missing error template";
+    }
+    errorTemplate = tmpl;
+    if (handler != null) {
+      handler.setErrorTemplate(tmpl);
+    }
+  }
+
+  String readErrorTemplate(String fileOrResource) throws IOException {
+    File file = new File(fileOrResource);
+    if (file.exists()) {
+      return StringUtil.fromInputStream(new FileInputStream(file));
+    }
+    InputStream is = getClass().getResourceAsStream(DEFAULT_ERROR_TEMPLATE);
+    if (is != null) {
+      try {
+	return StringUtil.fromInputStream(is);
+      } finally {
+	IOUtil.safeClose(is);
+      }
+    }
+    return null;
   }
 
   protected void addListeners(HttpServer server) {
@@ -253,7 +297,7 @@ public abstract class BaseProxyManager extends JettyManager {
       context.addHandler(new org.mortbay.http.handler.DumpHandler());
 
       // Start the http server
-      startServer(server, port);
+      startServer(server, port, sslPort);
     } catch (Exception e) {
       log.error("Couldn't start proxy", e);
     }

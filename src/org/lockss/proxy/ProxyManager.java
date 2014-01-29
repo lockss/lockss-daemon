@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.57.2.1 2014-01-18 20:34:02 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.57.2.2 2014-01-29 05:11:39 tlipkis Exp $
  */
 
 /*
@@ -72,14 +72,14 @@ public class ProxyManager extends BaseProxyManager {
    * same port, given by the <tt>sslPort</tt> parameter.  Change requires
    * proxy restart. */
   public static final String PARAM_SSL_BIND_ADDRS = PREFIX + "sslBindAddrs";
-  public static final List DEFAULT_SSL_BIND_ADDRS = Collections.EMPTY_LIST;
+  public static final List DEFAULT_SSL_BIND_ADDRS = ListUtil.list("127.0.0.1");
 
-  /** Host:Port that CONNECT requests should connect to, in lieu of the one
+  /** Host that CONNECT requests should connect to, in lieu of the one
    * specified in the request.  Intended to be pointed to the Proxy's
    * SSL listener. */
   static final String PARAM_CONNECT_ADDR =
     Configuration.PREFIX + "proxy.connectAddr";
-  static final String DEFAULT_CONNECT_ADDR = "127.0.0.1:0";
+  static final String DEFAULT_CONNECT_ADDR = "127.0.0.1";
 
   /** Name of managed keystore to use (see
    * org.lockss.keyMgr.keystore.<i>id</i>.name) */
@@ -385,8 +385,8 @@ public class ProxyManager extends BaseProxyManager {
 				    DEFAULT_SSL_BIND_ADDRS);
 
       sslKeystoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
-      setConnectAddr(config.get(PARAM_CONNECT_ADDR,
-				DEFAULT_CONNECT_ADDR));
+      setConnectAddr(config.get(PARAM_CONNECT_ADDR, DEFAULT_CONNECT_ADDR),
+		     sslPort);
 
       if (start) {
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
@@ -460,7 +460,11 @@ public class ProxyManager extends BaseProxyManager {
     setupConnectionPools();
     org.lockss.proxy.ProxyHandler handler =
       new org.lockss.proxy.ProxyHandler(getDaemon(), connPool, quickConnPool);
+    handler.setErrorTemplate(errorTemplate);
     handler.setConnectAddr(connectHost, connectPort);
+    if (sslPort > 0) {
+      handler.setSslListenPort(sslPort);
+    }
     return handler;
   }
 
