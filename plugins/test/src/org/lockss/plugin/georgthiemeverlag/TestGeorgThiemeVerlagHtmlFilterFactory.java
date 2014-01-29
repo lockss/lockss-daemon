@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.4 2014-01-03 17:57:33 etenbrink Exp $
+/    * $Id: TestGeorgThiemeVerlagHtmlFilterFactory.java,v 1.5 2014-01-29 23:36:52 etenbrink Exp $
  */
 
 /*
@@ -92,28 +92,41 @@ public class TestGeorgThiemeVerlagHtmlFilterFactory extends LockssTestCase {
     "<div id=\"institutionName\">CLOCKSS system has permission to ingest, preserve, and serve this Archival Unit.</div>\n" + 
     "</header>" +
     "<a name=\"N65771\"></a>" +
-    "nonstuff" +
+    "nonstuff\n" +
     "<footer>\n" + 
     "<div id=\"pageEnd\">\n" + 
     "<a href=\"#top\">Top of Page</a>\n" + 
     "</div>\n" + 
     "<div class=\"clearfix\">\n" + 
-    "<div style=\"margin-left:40px\" id=\"footerCenter\">&copy; 2012 Georg Thieme Verlag KG | <a href=\"/ejournals/impressum\">Impressum</a> | <a href=\"/ejournals/datenschutz\">Privacy</a>\n" + 
+    "<div style=\"margin-left:40px\" id=\"footerCenter\">&copy; 2012 Georg Thieme Verlag KG | " +
+    "<a href=\"/ejournals/impressum\">Impressum</a> | <a href=\"/ejournals/datenschutz\">Privacy</a>\n" + 
     "</div>\n" + 
     "<div id=\"footerRight\"></div>\n" + 
-    "</div>\n" + 
+    "</div>\n" +
     "</footer>" +
+    "<script type=\"text/javascript\"> $(function () { initTabBar({ open: 0}); }); </script>\n" + 
 "</body></html>";
 
   private static final String withoutStuff = 
 "<?xml version=\"1.0\" encoding=\"UTF-8\"?> " +
 "<body>" +
-  "nonstuff" +
+  "nonstuff " +
 "</body></html>";
+  
+  private static final String withAnchorHref = 
+"<ul class=\"articleTocList\">" +
+"<li>\n" + 
+"<a href=\"#N65623\">Zusammenfassung</a>\n" + 
+"</li>\n" + 
+"</ul>\n" +
+"<a href=\"#N65623\">Zusammenfassung</a>\n";
 
-
+  private static final String withoutAnchorHref = 
+"\n<a href=\"#\">Zusammenfassung</a>\n";
+  
   public void testFiltering() throws Exception {
     assertFilterTo(withoutStuff, withStuff);
+    assertFilterTo(withoutAnchorHref, withAnchorHref);
   }
 
   private void assertFilterTo(String expected, String str) throws Exception {
