@@ -174,5 +174,9 @@ diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springe
 diff $tpath/AllTitlesC.txt $tpath/TitlesWAUsC.txt | grep "< " | grep -v "Springer Science+Business Media" | grep -v "American Institute of Aeronautics and Astronautics" | grep -v "Annual Reviews," | grep -v "Medknow Publications" | head -n20
 echo "---------------------"
 echo "---------------------"
+echo "Missing Slashes"
+grep "param\[base_url\]" */*.tdb | grep "http.*://" | grep -v "/\s*$" | grep -v "^clockss\/"
+echo "---------------------"
+echo "---------------------"
 
 
