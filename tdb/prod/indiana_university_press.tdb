@@ -524,14 +524,14 @@
       param[journal_id] = gls
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < down ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
-      au < down ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
-      au < down ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
-      au < down ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-      au < down ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-      au < down ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-      au < down ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
-      au < down ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
+      au < superseded ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 [superseded] ; 10 >
+      au < superseded ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 [superseded] ; 11 >
+      au < superseded ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 [superseded] ; 12 >
+      au < superseded ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 [superseded] ; 13 >
+      au < superseded ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 [superseded] ; 14 >
+      au < superseded ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 [superseded] ; 15 >
+      au < superseded ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 [superseded] ; 16 >
+      au < superseded ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 [superseded] ; 17 >
 
     }
 
