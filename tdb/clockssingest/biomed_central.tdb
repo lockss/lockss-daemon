@@ -2615,7 +2615,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < finished ; crawling ; 2011 ; Cardiovascular Ultrasound Volume 9 ; 9 >
       au < crawling ; exists ; 2012 ; Cardiovascular Ultrasound Volume 10 ; 10 >
       au < crawling ; exists ; 2013 ; Cardiovascular Ultrasound Volume 11 ; 11 >
-      au < expected ; exists ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
+      au < manifest ; exists ; 2014 ; Cardiovascular Ultrasound Volume 12 ; 12 >
 
     }
 
@@ -2727,6 +2727,7 @@ comment[bmr] = journal archive available, but no new volumes
       >
       
       param[journal_issn] = 1743-8454
+      comment[continued_by] = 2045-8118
       param[base_url] = http://www.fluidsbarrierscns.com/
 
       au < manifest ; exists ; 2004 ; Cerebrospinal Fluid Research Volume 1 ; 1 >
@@ -3446,7 +3447,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Fluids and Barriers of the CNS Volume 8 ; 8 >
       au < crawling ; exists ; 2012 ; Fluids and Barriers of the CNS Volume 9 ; 9 >
       au < crawling ; exists ; 2013 ; Fluids and Barriers of the CNS Volume 10 ; 10 >
-      au < expected ; exists ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
+      au < manifest ; exists ; 2014 ; Fluids and Barriers of the CNS Volume 11 ; 11 >
 
     }
 
@@ -3599,7 +3600,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Genome Integrity Volume 2 ; 2 >
       au < crawling ; exists ; 2012 ; Genome Integrity Volume 3 ; 3 >
       au < crawling ; exists ; 2013 ; Genome Integrity Volume 4 ; 4 >
-      au < expected ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
+      au < manifest ; exists ; 2014 ; Genome Integrity Volume 5 ; 5 >
       
     }
 
@@ -4279,7 +4280,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 2051-1426
 
       au < crawling ; exists ; 2013 ; Journal for ImmunoTherapy of Cancer Volume 1 ; 1 >
-      au < expected ; exists ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
+      au < manifest ; exists ; 2014 ; Journal for ImmunoTherapy of Cancer Volume 2 ; 2 >
 
     }
 
@@ -6319,7 +6320,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < crawling ; exists ; 2011 ; Vascular Cell Volume 3 ; 3 >
       au < crawling ; exists ; 2012 ; Vascular Cell Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; Vascular Cell Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; Vascular Cell Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; Vascular Cell Volume 6 ; 6 >
 
     }
 
