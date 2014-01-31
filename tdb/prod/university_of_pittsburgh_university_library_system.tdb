@@ -368,6 +368,19 @@
 
   {
     title <
+      name = Pennsylvania Libraries: Research and Practice ;
+      eissn = 2324-7878
+    >
+
+    param[base_url] = http://palrap.pitt.edu/ojs/
+    param[journal_id] = palrap
+
+    au < exists ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Pitt Political Review ;
       eissn = 2160-5807
     >
