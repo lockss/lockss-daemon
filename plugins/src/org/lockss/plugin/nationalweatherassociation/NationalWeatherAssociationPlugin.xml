@@ -101,6 +101,11 @@
     <string>"%s%s/include/publications%d.php", base_url, journal_id, year</string>
   </entry>
   <entry>
+    <string>au_permission_url</string>
+    <!-- http://www.nwas.org/jom/about.php -->
+    <string>"%s%s/about.php", base_url, journal_id</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>1
     <list>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
