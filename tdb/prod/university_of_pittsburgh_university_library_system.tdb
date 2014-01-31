@@ -151,6 +151,20 @@
 
   {
 
+    title <
+      name = Dentistry 3000 ;
+      eissn = 2167-8677
+    >
+
+    param[base_url] = http://dentistry3000.pitt.edu/ojs/
+    param[journal_id] = dentistry3000
+
+    au < exists ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
+
+  }
+
+  {
+
       title <
         name = Dialogic Pedagogy: An International Online Journal ;
         eissn = 2325-3290
