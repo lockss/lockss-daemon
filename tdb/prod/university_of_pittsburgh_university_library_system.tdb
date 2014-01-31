@@ -476,6 +476,34 @@
 
   {
     title <
+      name = Pittsburgh Tax Review ;
+      issn = 1932-1821 ;
+      eissn = 1932-1996
+    >
+
+    param[base_url] = http://taxreview.law.pitt.edu/ojs/
+    param[journal_id] = taxreview
+
+    au < exists ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
+    au < exists ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = Radical Teacher ;
+      eissn = 1941-0832
+    >
+
+    param[base_url] = http://radicalteacher.library.pitt.edu/ojs/
+    param[journal_id] = radicalteacher
+
+    au < exists ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
       name = Revista Iberoamericana ;
       issn = 0034-9631 ;
       eissn = 2154-4794
@@ -594,6 +622,20 @@
       au < released ; 2012 ; 2012 ; SHASHI: The Journal of Japanese Business and Company History Volume 1 ; 1 >
       au < manifest ; 2013 ; 2013 ; SHASHI: The Journal of Japanese Business and Company History Volume 2 ; 2 >
       au < expected ; 2014 ; 2014 ; SHASHI: The Journal of Japanese Business and Company History Volume 3 ; 3 >
+
+  }
+
+  {
+
+      title <
+        name = Timely Interventions ;
+        eissn = 2160-5777
+      >
+
+      param[base_url] = http://timelyinterventions.pitt.edu/ojs/
+      param[journal_id] = timely
+
+      au < exists ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
 
   }
 
