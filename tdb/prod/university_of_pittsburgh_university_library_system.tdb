@@ -89,6 +89,20 @@
   {
 
       title <
+        name = Catedral Tomada: Revista de crítica literaria latinoamericana ;
+        eissn = 2169-0847
+      >
+
+      param[base_url] = http://catedraltomada.pitt.edu/ojs/
+      param[journal_id] = catedraltomada
+
+      au < exists ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
+
+  }
+
+  {
+
+      title <
         name = Central Asian Journal of Global Health ;
         eissn = 2166-7403
       >
