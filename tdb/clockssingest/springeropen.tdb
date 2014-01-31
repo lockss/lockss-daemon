@@ -1842,7 +1842,23 @@
         au < expected ; exists ; 2014 ; Visualization in Engineering Volume 2 ; 2 >
   
     }
+
+    {
   
+        title <
+          name = Zoological Studies ;
+          issn = 1810-522X
+        >
+  
+        param[base_url] = ttp://www.zoologicalstudies.com/
+        param[journal_issn] = 1810-522X
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2013 ; Zoological Studies Volume 1 ; 1 >
+        au < exists ; exists ; 2014 ; Zoological Studies Volume 2 ; 2 >
+
+    }
+
   }
   
   {
