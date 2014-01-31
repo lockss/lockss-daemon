@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.20 2014-01-14 08:55:26 tlipkis Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.20.2.1 2014-01-31 01:04:13 pgust Exp $
  */
 
 /*
@@ -184,9 +184,17 @@ public class BaseArticleMetadataExtractor implements ArticleMetadataExtractor {
       } catch (IOException ex) {
 	log.warning("Error in FileMetadataExtractor", ex);
       }
-      // generate default metadata in case of null filemetadataextractor or
-      // IOException.
-
+    } else {
+      // use full-text CU if cuRole CU not available
+      cu = af.getFullTextCu();
+      if (log.isDebug3()) {
+        log.debug3("Missing CU for role " + cuRole 
+                      + ". Using fullTextCU " + af.getFullTextUrl());
+      }
+    }
+    if (cu != null) {
+      // emit at least basic metadata for the selected CU 
+      // if no article metadata is available
       ArticleMetadata am = new ArticleMetadata();
       myEmitter.emitMetadata(cu, am);
       AuUtil.safeRelease(cu);
