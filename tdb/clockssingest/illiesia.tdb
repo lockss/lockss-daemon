@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Illiesia ;
+    info[contract] = 2013 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.illiesia.ClockssIlliesiaPlugin
+  param[base_url] = http://www2.pms-lj.si/illiesia/
+  implicit < status ; status2 ; year ; name ; volume ; param[year] >   
+  
+  {
+  
+    title < 
+      name = Illesia International Journal of Stonefly Research ;
+      issn = 1855-5810 ;
+      eissn = 1854-0392
+    >
+   
+    au < manifest ; exists ; 2010 ; Illesia International Journal of Stonefly Research Volume six 2010 ; 6 ; 2010 >
+    au < manifest ; exists ; 2011 ; Illesia International Journal of Stonefly Research Volume seven 2011 ; 7 ; 2011 >
+    au < manifest ; exists ; 2012 ; Illesia International Journal of Stonefly Research Volume eight 2012 ; 8 ; 2012 >
+    au < manifest ; exists ; 2013 ; Illesia International Journal of Stonefly Research Volume nine 2013 ; 9 ; 2013 >
+ 
+  }
+    
+}
