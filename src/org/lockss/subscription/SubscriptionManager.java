@@ -1,5 +1,5 @@
 /*
- * $Id: SubscriptionManager.java,v 1.12 2013-12-09 21:21:21 pgust Exp $
+ * $Id: SubscriptionManager.java,v 1.13 2014-02-01 02:03:26 fergaloy-sf Exp $
  */
 
 /*
@@ -1495,16 +1495,37 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  // Check whether this configured archival unit follows another
 	  // configured archival unit for the same platform.
 	  if (period != null) {
-	    // Yes: Extend the period to the end edge of the last publication
-	    // range of the archival unit.
-	    period = new BibliographicPeriod(period.getStartEdge(),
-		auRanges.get(auRangesLastIndex).getEndEdge());
+	    // Yes: Check whether the end edge of the last publication range of
+	    // the archival unit exists.
+	    if (auRanges.get(auRangesLastIndex).getEndEdge() != null) {
+	      // Yes: Extend the period to the end edge of the last publication
+	      // range of the archival unit.
+	      period = new BibliographicPeriod(period.getStartEdge(),
+		  auRanges.get(auRangesLastIndex).getEndEdge());
+	    } else {
+	      // No: report the problem.
+	      log.warning("Skipped invalid last range "
+		  + auRanges.get(auRangesLastIndex) + " for AU = " + au
+		  + ", pluginId = " + pluginId + ", platform = " + platform);
+	    }
 	  } else {
-	    // No: Initialize the subscription period with the start edge of
-	    // the first publication range of the archival unit and the end edge
-	    // of the last publication range of the archival unit.
-	    period = new BibliographicPeriod(auRanges.get(0).getStartEdge(),
-		auRanges.get(auRangesLastIndex).getEndEdge());
+	    // No: Check whether both the start edge of the first publication
+	    // range of the archival unit and the end edge of the last
+	    // publication range of the archival unit exist.
+	    if (auRanges.get(0).getStartEdge() != null
+		&& auRanges.get(auRangesLastIndex).getEndEdge() != null) {
+	      // Yes: Initialize the subscription period with the start edge of
+	      // the first publication range of the archival unit and the end
+	      // edge of the last publication range of the archival unit.
+	      period = new BibliographicPeriod(auRanges.get(0).getStartEdge(),
+		  auRanges.get(auRangesLastIndex).getEndEdge());
+	    } else {
+	      // No: report the problem.
+	      log.warning("Skipped invalid first range "
+		  + auRanges.get(0) + " and/or last range "
+		  + auRanges.get(auRangesLastIndex) + " for AU = " + au
+		  + ", pluginId = " + pluginId + ", platform = " + platform);
+	    }
 	  }
 
 	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "period = " + period);
