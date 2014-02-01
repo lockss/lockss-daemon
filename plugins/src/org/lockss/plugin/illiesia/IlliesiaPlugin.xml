@@ -1,0 +1,136 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>down</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.illiesia.IlliesiaPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Illiesia Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Illiesia Plugin, Base URL %s, Year %d", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_refetch_depth</string>
+    <int>1</int>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry> 
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%slockss.txt", base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%shtml/%d.html", base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <!-- http://www2.pms-lj.si/illiesia/html/2013.html -->
+      <string>1,"^%shtml/%d.html$", base_url, year</string>
+      <!-- http://www2.pms-lj.si/illiesia/papers/Illiesia08-01.pdf -->
+      <string>1,"^%spapers/Illiesia[0-9]+-[0-9]+\.pdf", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%spapers/Illiesia[0-9]+-[0-9]+\.pdf", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <!-- http://www2.pms-lj.si/illiesia/ -->
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <!-- http://www2.pms-lj.si/illiesia/html/2012.html -->
+        <string>au_volume</string>
+        <string>"%shtml/%d.html", base_url, volume</string>
+      </entry>
+      <entry>
+        <!-- http://www2.pms-lj.si/illiesia/papers/Illiesia09-12.pdf -->
+        <string>au_article</string>
+        <string>"%spapers/Illiesia%s-%s.pdf", base_url, volume, article</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.illiesia.IlliesiaArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.illiesia.IlliesiaArticleIteratorFactory</string>
+  </entry>
+  <entry>
+  <string>application/pdf_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.illiesia.IlliesiaMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>
