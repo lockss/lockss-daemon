@@ -93,11 +93,11 @@
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sclockss/manifest/vol/%s", base_url, volume_name</string>
+        <string>"%sclockss/manifest/vol/%s", base_url, volume</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>"%sclockss/libraries/journal/%s/%s";, base_url, volume_name, issue</string>
+        <string>"%sclockss/libraries/journal/%s/%s", base_url, volume, issue</string>
       </entry> 
     </map>
   </entry>
