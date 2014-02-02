@@ -95,7 +95,7 @@
 
     au < manifest ; exists ; 2009 ; Clinical Lipidology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Clinical Lipidology Volume 5 ; 5 >
-    au < testing ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
+    au < manifest ; exists ; 2011 ; Clinical Lipidology Volume 6 ; 6 >
     au < manifest ; exists ; 2012 ; Clinical Lipidology Volume 7 ; 7 >
     au < crawling ; exists ; 2013 ; Clinical Lipidology Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Clinical Lipidology Volume 9 ; 9 >
@@ -309,8 +309,8 @@
     au < manifest ; exists ; 2009 ; Future Virology Volume 4 ; 4 >
     au < manifest ; exists ; 2010 ; Future Virology Volume 5 ; 5 >
     au < manifest ; exists ; 2011 ; Future Virology Volume 6 ; 6 >
-    au < testing ; exists ; 2012 ; Future Virology Volume 7 ; 7 >
-    au < testing ; exists ; 2013 ; Future Virology Volume 8 ; 8 >
+    au < manifest ; exists ; 2012 ; Future Virology Volume 7 ; 7 >
+    au < ingNotReady ; exists ; 2013 ; Future Virology Volume 8 ; 8 >
     au < expected ; exists ; 2014 ; Future Virology Volume 9 ; 9 >
     
   }
@@ -378,7 +378,7 @@
     au < manifest ; exists ; 2010 ; Immunotherapy Volume 2 ; 2 >
     au < manifest ; exists ; 2011 ; Immunotherapy Volume 3 ; 3 >
     au < manifest ; exists ; 2012 ; Immunotherapy Volume 4 ; 4 >
-    au < testing ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 >
+    au < ingNotReady ; exists ; 2013 ; Immunotherapy Volume 5 ; 5 >
     au < manifest ; exists ; 2014 ; Immunotherapy Volume 6 ; 6 >
     
   }
@@ -662,7 +662,7 @@
     au < manifest ; exists ; 2010 ; Women's Health Volume 6 ; 6 >
     au < manifest ; exists ; 2011 ; Women's Health Volume 7 ; 7 >
     au < manifest ; exists ; 2012 ; Women's Health Volume 8 ; 8 >
-    au < testing ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
+    au < ingNotReady ; exists ; 2013 ; Women's Health Volume 9 ; 9 >
     au < manifest ; exists ; 2014 ; Women's Health Volume 10 ; 10 >
     
   }
