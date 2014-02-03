@@ -674,8 +674,8 @@
     comment[0] = skips years 2011 and 2012
     
     au < manifest ; exists ; 2008 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 1 ; 2008 >
-    au < manifest ; exists ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2009 >
-    au < manifest ; exists ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 2010 >
+    au < crawling ; exists ; 2009 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 2 ; 2009 >
+    au < crawling ; exists ; 2010 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 3 ; 2010 >
     au < crawling ; exists ; 2013 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 4 ; 2013 >
     au < manifest ; exists ; 2014 ; Clinical Medicine Insights: Trauma and Intensive Medicine Volume 5 ; 2014 >
     
