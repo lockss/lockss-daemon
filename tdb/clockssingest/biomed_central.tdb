@@ -1443,6 +1443,11 @@
       attr[journal_code] = bmcpharmacoltoxicol
       comment[0] = This journal and issn start at Volume 13 in 2012, other volumes use another issn
 
+      au < superseded ; exists ; 2007 ; BMC Pharmacology and Toxicology Volume 8 [to delete] ; 8 >
+      au < superseded ; exists ; 2008 ; BMC Pharmacology and Toxicology Volume 9 [to delete] ; 9 >
+      au < superseded ; exists ; 2009 ; BMC Pharmacology and Toxicology Volume 10 [to delete] ; 10 >
+      au < superseded ; exists ; 2010 ; BMC Pharmacology and Toxicology Volume 11 [to delete] ; 11 >
+      au < superseded ; exists ; 2011 ; BMC Pharmacology and Toxicology Volume 12 [to delete] ; 12 >
       au < crawling ; exists ; 2012 ; BMC Pharmacology and Toxicology Volume 13 ; 13 >
       au < crawling ; exists ; 2013 ; BMC Pharmacology and Toxicology Volume 14 ; 14 >
       au < manifest ; exists ; 2014 ; BMC Pharmacology and Toxicology Volume 15 ; 15 >
