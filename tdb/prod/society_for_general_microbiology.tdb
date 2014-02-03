@@ -485,7 +485,8 @@
     >
 
     {
-
+      
+      rights = openaccess
       pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmmcr.sgmjournals.org/
       implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
