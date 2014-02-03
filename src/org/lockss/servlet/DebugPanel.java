@@ -1,10 +1,10 @@
 /*
- * $Id: DebugPanel.java,v 1.38 2013-08-10 20:49:46 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.39 2014-02-03 21:25:49 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -387,7 +387,7 @@ public class DebugPanel extends LockssServlet {
     }
 
     if (force) {
-      errMsg = "Still annot reindex metadata for " + au.getName();
+      errMsg = "Still cannot reindex metadata for " + au.getName();
     } else {
       errMsg = "Cannot reindex metadata for " + au.getName();
     }
