@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataDatabaseUtil.java,v 1.17 2013-12-09 21:01:38 pgust Exp $
+ * $Id: MetadataDatabaseUtil.java,v 1.18 2014-02-04 17:00:24 pgust Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ final public class MetadataDatabaseUtil {
       publicationTitle = resultSet.getString(2);
       printissn = MetadataUtil.formatIssn(resultSet.getString(3));
       eissn = MetadataUtil.formatIssn(resultSet.getString(4));
-      printisbn = MetadataUtil.formatIssn(resultSet.getString(5));
+      printisbn = MetadataUtil.formatIsbn(resultSet.getString(5));
       eisbn = MetadataUtil.formatIssn(resultSet.getString(6));
       startvolume = resultSet.getString(7);
       endvolume = resultSet.getString(7);
