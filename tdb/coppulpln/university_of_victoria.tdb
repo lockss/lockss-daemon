@@ -17,8 +17,8 @@
     param[journal_id] = albatross
 
     au < released ; 2011 ; The Albatross Volume 1 ; 1 ; 2011 >
-    au < testing ; 2012 ; The Albatross Volume 2 ; 2 ; 2012 >
-    au < testing ; 2013 ; The Albatross Volume 3 ; 3 ; 2013 >
+    au < ready ; 2012 ; The Albatross Volume 2 ; 2 ; 2012 >
+    au < ready ; 2013 ; The Albatross Volume 3 ; 3 ; 2013 >
 
   }
   
@@ -50,8 +50,8 @@
     au < released ; 2009 ; Appeal: Review of Current Law and Law Reform Volume 14 ; 14 ; 2009 >
     au < released ; 2010 ; Appeal: Review of Current Law and Law Reform Volume 15 ; 15 ; 2010 >
     au < released ; 2011 ; Appeal: Review of Current Law and Law Reform Volume 16 ; 16 ; 2011 >
-    au < testing ; 2012 ; Appeal: Review of Current Law and Law Reform Volume 17 ; 17 ; 2012 >
-    au < testing ; 2013 ; Appeal: Review of Current Law and Law Reform Volume 18 ; 18 ; 2013 >
+    au < ready ; 2012 ; Appeal: Review of Current Law and Law Reform Volume 17 ; 17 ; 2012 >
+    au < ready ; 2013 ; Appeal: Review of Current Law and Law Reform Volume 18 ; 18 ; 2013 >
 
   }
   
@@ -65,8 +65,8 @@
 
     au < released ; 2010 ; The Arbutus Volume 1 ; 1 ; 2010 >
     au < released ; 2011 ; The Arbutus Volume 2 ; 2 ; 2011 >
-    au < testing ; 2012 ; The Arbutus Volume 3 ; 3 ; 2012 >
-    au < testing ; 2013 ; The Arbutus Volume 4 ; 4 ; 2013 >
+    au < ready ; 2012 ; The Arbutus Volume 3 ; 3 ; 2012 >
+    au < ready ; 2013 ; The Arbutus Volume 4 ; 4 ; 2013 >
 
   }
   
@@ -79,7 +79,7 @@
     
     param[journal_id] = articulate
 
-    au < testing ; 2012 ; ARTiculate Volume 1 ; 1 ; 2012 >
+    au < ready ; 2012 ; ARTiculate Volume 1 ; 1 ; 2012 >
 
   }
   
@@ -91,27 +91,29 @@
     >
     
     param[journal_id] = zooarchaeology
+    
+    comment[2011] = no substance, abstracts only
 
-    au < testing ; 1992 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1992 ; 1992 ; 1992 >
-    au < testing ; 1993 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1993 ; 1993 ; 1993 >
-    au < testing ; 1994 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1994 ; 1994 ; 1994 >
-    au < testing ; 1995 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1995 ; 1995 ; 1995 >
-    au < testing ; 1996 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1996 ; 1996 ; 1996 >
-    au < testing ; 1997 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1997 ; 1997 ; 1997 >
-    au < testing ; 1998 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1998 ; 1998 ; 1998 >
-    au < testing ; 1999 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1999 ; 1999 ; 1999 >
-    au < testing ; 2000 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2000 ; 2000 ; 2000 >
-    au < testing ; 2001 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2001 ; 2001 ; 2001 >
-    au < testing ; 2002 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2002 ; 2002 ; 2002 >
-    au < testing ; 2003 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2003 ; 2003 ; 2003 >
+    au < ready ; 1992 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1992 ; 1992 ; 1992 >
+    au < ready ; 1993 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1993 ; 1993 ; 1993 >
+    au < ready ; 1994 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1994 ; 1994 ; 1994 >
+    au < ready ; 1995 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1995 ; 1995 ; 1995 >
+    au < ready ; 1996 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1996 ; 1996 ; 1996 >
+    au < ready ; 1997 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1997 ; 1997 ; 1997 >
+    au < ready ; 1998 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1998 ; 1998 ; 1998 >
+    au < ready ; 1999 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 1999 ; 1999 ; 1999 >
+    au < ready ; 2000 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2000 ; 2000 ; 2000 >
+    au < ready ; 2001 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2001 ; 2001 ; 2001 >
+    au < ready ; 2002 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2002 ; 2002 ; 2002 >
+    au < ready ; 2003 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2003 ; 2003 ; 2003 >
     au < doesNotExist ; 2004 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2004 ; 2004 ; 2004 >
-    au < testing ; 2005 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2005 ; 2005 ; 2005 >
+    au < ready ; 2005 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2005 ; 2005 ; 2005 >
     au < doesNotExist ; 2006 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2006 ; 2006 ; 2006 >
     au < doesNotExist ; 2007 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2007 ; 2007 ; 2007 >
-    au < testing ; 2008 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2008 ; 2008 ; 2008 >
-    au < testing ; 2009 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2009 ; 2009 ; 2009 >
+    au < ready ; 2008 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2008 ; 2008 ; 2008 >
+    au < ready ; 2009 ; Canadian Zooarchaeology / Zooarchéologie canadienne Volume 2009 ; 2009 ; 2009 >
     au < doesNotExist ; 2010 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2010 ; 2010 ; 2010 >
-    au < testing ; 2011 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2011 ; 2011 ; 2011 >
+    au < notReady ; 2011 ; Canadian Zooarchaeology / Zooarchéologie canadienne 2011 ; 2011 ; 2011 >
 
   }
   
@@ -125,8 +127,10 @@
     
     param[journal_id] = concretegarden
 
-    au < testing ; 2012 ; Concrete Garden 2012 ; 2012 ; 2012 >
-    au < testing ; 2013 ; Concrete Garden 2013 ; 2013 ; 2013 >
+    comment[2012_2013] = no substance, content on external website or tables of contents only
+
+    au < notReady ; 2012 ; Concrete Garden 2012 ; 2012 ; 2012 >
+    au < notReady ; 2013 ; Concrete Garden 2013 ; 2013 ; 2013 >
 
   }
   
@@ -140,9 +144,11 @@
     
     param[journal_id] = corvette
 
-    au < testing ; 2008-2009 ; The Clearihue Review Volume 2 (2008-2009) [tables of contents only] ; 2 ; 2008 >
-    au < testing ; 2011-2012 ; The Clearihue Review Volume 3 (2011-2012) ; 3 ; 2011 >
-    au < testing ; 2013 ; The Corvette Volume 1-2 (2013) ; 1-2 ; 2013 >
+    comment[2008] = no substance, tables of contents only
+
+    au < notReady ; 2008-2009 ; The Clearihue Review Volume 2 (2008-2009) ; 2 ; 2008 >
+    au < ready ; 2011-2012 ; The Clearihue Review Volume 3 (2011-2012) ; 3 ; 2011 >
+    au < ready ; 2013 ; The Corvette Volume 1-2 (2013) ; 1-2 ; 2013 >
 
   }
   
@@ -172,8 +178,10 @@
     
     param[journal_id] = divergent-convergent
 
-    au < testing ; 2012 ; Divergent/Convergent 2012 ; 2012 ; 2012 >
-    au < testing ; 2013 ; Divergent/Convergent 2013 ; 2013 ; 2013 >
+    comment[2012] = no substance, tables of contents only
+
+    au < notReady ; 2012 ; Divergent/Convergent 2012 ; 2012 ; 2012 >
+    au < ready ; 2013 ; Divergent/Convergent 2013 ; 2013 ; 2013 >
 
   }
   
@@ -186,11 +194,11 @@
     
     param[journal_id] = ghr
 
-    au < testing ; 0 ; The Graduate History Review: Previous Conference Programs ; 0 ; 0 >
+    au < ready ; 0 ; The Graduate History Review: Previous Conference Programs ; 0 ; 0 >
     au < released ; 2009 ; Preteritus: A Graduate History Journal Volume 1 ; 1 ; 2009 >
     au < released ; 2010 ; Preteritus: A Graduate History Journal Volume 2 ; 2 ; 2010 >
     au < released ; 2011 ; The Graduate History Review Volume 3 ; 3 ; 2011 >
-    au < testing ; 2012 ; The Graduate History Review Volume 4 ; 4 ; 2012 >
+    au < ready ; 2012 ; The Graduate History Review Volume 4 ; 4 ; 2012 >
 
   }
   
@@ -230,7 +238,7 @@
     au < released ; 2010 ; International Journal of Child, Youth and Family Studies Volume 1 (2010) ; 1 ; 2010 >
     au < released ; 2011 ; International Journal of Child, Youth and Family Studies Volume 2 ; 2 ; 2011 >
     au < released ; 2012 ; International Journal of Child, Youth and Family Studies Volume 3 ; 3 ; 2012 >
-    au < testing ; 2013 ; International Journal of Child, Youth and Family Studies Volume 4 ; 4 ; 2013 >
+    au < ready ; 2013 ; International Journal of Child, Youth and Family Studies Volume 4 ; 4 ; 2013 >
 
   }
   
@@ -244,14 +252,14 @@
     
     param[journal_id] = ijih
 
-    au < testing ; 2004 ; International Journal of Indigenous Health Volume 1 ; 1 ; 2004 >
-    au < testing ; 2005 ; International Journal of Indigenous Health Volume 2 ; 2 ; 2005 >
-    au < testing ; 2006 ; International Journal of Indigenous Health Volume 3 ; 3 ; 2007 >
-    au < testing ; 2008 ; International Journal of Indigenous Health Volume 4 (2008) ; 4 ; 2008 >
-    au < testing ; 2009 ; International Journal of Indigenous Health Volume 4-5 (2009) ; 4-5 ; 2009 >
-    au < testing ; 2010 ; International Journal of Indigenous Health Volume 6 ; 6 ; 2010 >
-    au < testing ; 2011 ; International Journal of Indigenous Health Volume 7 ; 7 ; 2011 >
-    au < testing ; 2012 ; International Journal of Indigenous Health Volume 8-9 ; 8-9 ; 2012 >
+    au < ready ; 2004 ; International Journal of Indigenous Health Volume 1 ; 1 ; 2004 >
+    au < ready ; 2005 ; International Journal of Indigenous Health Volume 2 ; 2 ; 2005 >
+    au < ready ; 2006 ; International Journal of Indigenous Health Volume 3 ; 3 ; 2007 >
+    au < ready ; 2008 ; International Journal of Indigenous Health Volume 4 (2008) ; 4 ; 2008 >
+    au < ready ; 2009 ; International Journal of Indigenous Health Volume 4-5 (2009) ; 4-5 ; 2009 >
+    au < ready ; 2010 ; International Journal of Indigenous Health Volume 6 ; 6 ; 2010 >
+    au < ready ; 2011 ; International Journal of Indigenous Health Volume 7 ; 7 ; 2011 >
+    au < ready ; 2012 ; International Journal of Indigenous Health Volume 8-9 ; 8-9 ; 2012 >
 
   }
   
@@ -263,7 +271,7 @@
     
     param[journal_id] = ijssr
 
-    au < testing ; 2012 ; International Journal of Social Studies Review Volume 1 ; 1 ; 2012 >
+    au < ready ; 2012 ; International Journal of Social Studies Review Volume 1 ; 1 ; 2012 >
 
   }
   
@@ -275,8 +283,10 @@
     
     param[journal_id] = islandwriter
 
-    au < testing ; 2012 ; Island Writer Volume 10 ; 2012 ; 2012 >
-    au < testing ; 2013 ; Island Writer Volume 11 ; 2013 ; 2013 >
+    comment[2012_2013] = no substance, abstracts only?
+
+    au < notReady ; 2012 ; Island Writer Volume 10 ; 2012 ; 2012 >
+    au < notReady ; 2013 ; Island Writer Volume 11 ; 2013 ; 2013 >
 
   }
   
@@ -290,33 +300,33 @@
     
     param[journal_id] = borderlands
 
-    au < testing ; 1986 ; Journal of Borderlands Studies Volume 1 ; 1 ; 1986 >
-    au < testing ; 1987 ; Journal of Borderlands Studies Volume 2 ; 2 ; 1987 >
-    au < testing ; 1988 ; Journal of Borderlands Studies Volume 3 ; 3 ; 1988 >
-    au < testing ; 1989 ; Journal of Borderlands Studies Volume 4 ; 4 ; 1989 >
-    au < testing ; 1990 ; Journal of Borderlands Studies Volume 5 ; 5 ; 1990 >
-    au < testing ; 1991 ; Journal of Borderlands Studies Volume 6 ; 6 ; 1991 >
-    au < testing ; 1992 ; Journal of Borderlands Studies Volume 7 ; 7 ; 1992 >
-    au < testing ; 1993 ; Journal of Borderlands Studies Volume 8 ; 8 ; 1993 >
-    au < testing ; 1994 ; Journal of Borderlands Studies Volume 9 ; 9 ; 1994 >
-    au < testing ; 1995 ; Journal of Borderlands Studies Volume 10 ; 10 ; 1995 >
-    au < testing ; 1996 ; Journal of Borderlands Studies Volume 11 ; 11 ; 1996 >
-    au < testing ; 1997 ; Journal of Borderlands Studies Volume 12 ; 12 ; 1997 >
-    au < testing ; 1998 ; Journal of Borderlands Studies Volume 13 ; 13 ; 1998 >
-    au < testing ; 1999 ; Journal of Borderlands Studies Volume 14 ; 14 ; 1999 >
-    au < testing ; 2000 ; Journal of Borderlands Studies Volume 15 ; 15 ; 2000 >
-    au < testing ; 2001 ; Journal of Borderlands Studies Volume 16 ; 16 ; 2001 >
-    au < testing ; 2002 ; Journal of Borderlands Studies Volume 17 ; 17 ; 2002 >
-    au < testing ; 2003 ; Journal of Borderlands Studies Volume 18 ; 18 ; 2003 >
-    au < testing ; 2004 ; Journal of Borderlands Studies Volume 19 ; 19 ; 2004 >
-    au < testing ; 2005 ; Journal of Borderlands Studies Volume 20 ; 20 ; 2005 >
-    au < testing ; 2006 ; Journal of Borderlands Studies Volume 21 ; 21 ; 2006 >
-    au < testing ; 2007 ; Journal of Borderlands Studies Volume 22 ; 22 ; 2007 >
-    au < testing ; 2008 ; Journal of Borderlands Studies Volume 23 ; 23 ; 2008 >
-    au < testing ; 2009 ; Journal of Borderlands Studies Volume 24 ; 24 ; 2009 >
-    au < testing ; 2010 ; Journal of Borderlands Studies Volume 25 ; 25 ; 2010 >
-    au < testing ; 2011 ; Journal of Borderlands Studies Volume 26 ; 26 ; 2011 >
-    au < testing ; 2012 ; Journal of Borderlands Studies Volume 27 ; 27 ; 2012 >
+    au < ready ; 1986 ; Journal of Borderlands Studies Volume 1 ; 1 ; 1986 >
+    au < ready ; 1987 ; Journal of Borderlands Studies Volume 2 ; 2 ; 1987 >
+    au < ready ; 1988 ; Journal of Borderlands Studies Volume 3 ; 3 ; 1988 >
+    au < ready ; 1989 ; Journal of Borderlands Studies Volume 4 ; 4 ; 1989 >
+    au < ready ; 1990 ; Journal of Borderlands Studies Volume 5 ; 5 ; 1990 >
+    au < ready ; 1991 ; Journal of Borderlands Studies Volume 6 ; 6 ; 1991 >
+    au < ready ; 1992 ; Journal of Borderlands Studies Volume 7 ; 7 ; 1992 >
+    au < ready ; 1993 ; Journal of Borderlands Studies Volume 8 ; 8 ; 1993 >
+    au < ready ; 1994 ; Journal of Borderlands Studies Volume 9 ; 9 ; 1994 >
+    au < ready ; 1995 ; Journal of Borderlands Studies Volume 10 ; 10 ; 1995 >
+    au < ready ; 1996 ; Journal of Borderlands Studies Volume 11 ; 11 ; 1996 >
+    au < ready ; 1997 ; Journal of Borderlands Studies Volume 12 ; 12 ; 1997 >
+    au < ready ; 1998 ; Journal of Borderlands Studies Volume 13 ; 13 ; 1998 >
+    au < ready ; 1999 ; Journal of Borderlands Studies Volume 14 ; 14 ; 1999 >
+    au < ready ; 2000 ; Journal of Borderlands Studies Volume 15 ; 15 ; 2000 >
+    au < ready ; 2001 ; Journal of Borderlands Studies Volume 16 ; 16 ; 2001 >
+    au < ready ; 2002 ; Journal of Borderlands Studies Volume 17 ; 17 ; 2002 >
+    au < ready ; 2003 ; Journal of Borderlands Studies Volume 18 ; 18 ; 2003 >
+    au < ready ; 2004 ; Journal of Borderlands Studies Volume 19 ; 19 ; 2004 >
+    au < ready ; 2005 ; Journal of Borderlands Studies Volume 20 ; 20 ; 2005 >
+    au < ready ; 2006 ; Journal of Borderlands Studies Volume 21 ; 21 ; 2006 >
+    au < ready ; 2007 ; Journal of Borderlands Studies Volume 22 ; 22 ; 2007 >
+    au < ready ; 2008 ; Journal of Borderlands Studies Volume 23 ; 23 ; 2008 >
+    au < ready ; 2009 ; Journal of Borderlands Studies Volume 24 ; 24 ; 2009 >
+    au < ready ; 2010 ; Journal of Borderlands Studies Volume 25 ; 25 ; 2010 >
+    au < ready ; 2011 ; Journal of Borderlands Studies Volume 26 ; 26 ; 2011 >
+    au < ready ; 2012 ; Journal of Borderlands Studies Volume 27 ; 27 ; 2012 >
 
   }
   
@@ -337,7 +347,7 @@
     au < released ; 2009 ; Musicological Explorations Volume 10 ; 10 ; 2009 >
     au < released ; 2010 ; Musicological Explorations Volume 11 ; 11 ; 2010 >
     au < released ; 2011 ; Musicological Explorations Volume 12 ; 12 ; 2011 >
-    au < testing ; 2012 ; Musicological Explorations Volume 13 ; 13 ; 2012 >
+    au < ready ; 2012 ; Musicological Explorations Volume 13 ; 13 ; 2012 >
 
   }
   
@@ -363,14 +373,17 @@
     
     param[journal_id] = onpolitics
 
+    comment[2005__2010] = suspicion of no substance, abstracts links to text on external website?
+    comment[2011_2012] = no substance, abstracts link to text on external department website
+
     au < released ; 2005 ; On Politics 2005 ; 0 ; 2005 >
     au < released ; 2006 ; On Politics 2006 ; 0 ; 2006 >
     au < released ; 2007 ; On Politics 2007 ; 0 ; 2007 >
     au < doesNotExist ; 2008 ; On Politics 2008 ; 0 ; 2008 >
     au < released ; 2009 ; On Politics Volume 3 ; 3 ; 2009 >
     au < released ; 2010 ; On Politics Volume 4 ; 4 ; 2010 >
-    au < testing ; 2011 ; On Politics Volume 5 ; 5 ; 2011 >
-    au < testing ; 2012 ; On Politics Volume 6 ; 6 ; 2012 >
+    au < notReady ; 2011 ; On Politics Volume 5 ; 5 ; 2011 >
+    au < notReady ; 2012 ; On Politics Volume 6 ; 6 ; 2012 >
 
   }
   
@@ -384,7 +397,7 @@
     param[journal_id] = peninsula
 
     au < released ; 2011 ; Peninsula: A Journal of Relational Politics Volume 1 ; 1 ; 2011 >
-    au < testing ; 2012 ; Peninsula: A Journal of Relational Politics Volume 2 ; 2 ; 2012 >
+    au < ready ; 2012 ; Peninsula: A Journal of Relational Politics Volume 2 ; 2 ; 2012 >
 
   }
   
@@ -398,39 +411,39 @@
     
     param[journal_id] = pir
 
-    au < testing ; 1981 ; Philosophy in Review Volume 1 ; 1 ; 1981 >
-    au < testing ; 1982 ; Philosophy in Review Volume 2 ; 2 ; 1982 >
-    au < testing ; 1983 ; Philosophy in Review Volume 3 ; 3 ; 1983 >
-    au < testing ; 1984 ; Philosophy in Review Volume 4 ; 4 ; 1984 >
-    au < testing ; 1985 ; Philosophy in Review Volume 5 ; 5 ; 1985 >
-    au < testing ; 1986 ; Philosophy in Review Volume 6 ; 6 ; 1986 >
-    au < testing ; 1987 ; Philosophy in Review Volume 7 ; 7 ; 1987 >
-    au < testing ; 1988 ; Philosophy in Review Volume 8 ; 8 ; 1988 >
-    au < testing ; 1989 ; Philosophy in Review Volume 9 ; 9 ; 1989 >
-    au < testing ; 1990 ; Philosophy in Review Volume 10 ; 10 ; 1990 >
-    au < testing ; 1991 ; Philosophy in Review Volume 11 ; 11 ; 1991 >
-    au < testing ; 1992 ; Philosophy in Review Volume 12 ; 12 ; 1992 >
-    au < testing ; 1993 ; Philosophy in Review Volume 13 ; 13 ; 1993 >
-    au < testing ; 1994 ; Philosophy in Review Volume 14 ; 14 ; 1994 >
-    au < testing ; 1995 ; Philosophy in Review Volume 15 ; 15 ; 1995 >
-    au < testing ; 1996 ; Philosophy in Review Volume 16 ; 16 ; 1996 >
-    au < testing ; 1997 ; Philosophy in Review Volume 17 ; 17 ; 1997 >
-    au < testing ; 1998 ; Philosophy in Review Volume 18 ; 18 ; 1998 >
-    au < testing ; 1999 ; Philosophy in Review Volume 19 ; 19 ; 1999 >
-    au < testing ; 2000 ; Philosophy in Review Volume 20 ; 20 ; 2000 >
-    au < testing ; 2001 ; Philosophy in Review Volume 21 ; 21 ; 2001 >
-    au < testing ; 2002 ; Philosophy in Review Volume 22 ; 22 ; 2002 >
-    au < testing ; 2003 ; Philosophy in Review Volume 23 ; 23 ; 2003 >
-    au < testing ; 2004 ; Philosophy in Review Volume 24 ; 24 ; 2004 >
-    au < testing ; 2005 ; Philosophy in Review Volume 25 ; 25 ; 2005 >
-    au < testing ; 2006 ; Philosophy in Review Volume 26 ; 26 ; 2006 >
+    au < ready ; 1981 ; Philosophy in Review Volume 1 ; 1 ; 1981 >
+    au < ready ; 1982 ; Philosophy in Review Volume 2 ; 2 ; 1982 >
+    au < ready ; 1983 ; Philosophy in Review Volume 3 ; 3 ; 1983 >
+    au < ready ; 1984 ; Philosophy in Review Volume 4 ; 4 ; 1984 >
+    au < ready ; 1985 ; Philosophy in Review Volume 5 ; 5 ; 1985 >
+    au < ready ; 1986 ; Philosophy in Review Volume 6 ; 6 ; 1986 >
+    au < ready ; 1987 ; Philosophy in Review Volume 7 ; 7 ; 1987 >
+    au < ready ; 1988 ; Philosophy in Review Volume 8 ; 8 ; 1988 >
+    au < ready ; 1989 ; Philosophy in Review Volume 9 ; 9 ; 1989 >
+    au < ready ; 1990 ; Philosophy in Review Volume 10 ; 10 ; 1990 >
+    au < ready ; 1991 ; Philosophy in Review Volume 11 ; 11 ; 1991 >
+    au < ready ; 1992 ; Philosophy in Review Volume 12 ; 12 ; 1992 >
+    au < ready ; 1993 ; Philosophy in Review Volume 13 ; 13 ; 1993 >
+    au < ready ; 1994 ; Philosophy in Review Volume 14 ; 14 ; 1994 >
+    au < ready ; 1995 ; Philosophy in Review Volume 15 ; 15 ; 1995 >
+    au < ready ; 1996 ; Philosophy in Review Volume 16 ; 16 ; 1996 >
+    au < ready ; 1997 ; Philosophy in Review Volume 17 ; 17 ; 1997 >
+    au < ready ; 1998 ; Philosophy in Review Volume 18 ; 18 ; 1998 >
+    au < ready ; 1999 ; Philosophy in Review Volume 19 ; 19 ; 1999 >
+    au < ready ; 2000 ; Philosophy in Review Volume 20 ; 20 ; 2000 >
+    au < ready ; 2001 ; Philosophy in Review Volume 21 ; 21 ; 2001 >
+    au < ready ; 2002 ; Philosophy in Review Volume 22 ; 22 ; 2002 >
+    au < ready ; 2003 ; Philosophy in Review Volume 23 ; 23 ; 2003 >
+    au < ready ; 2004 ; Philosophy in Review Volume 24 ; 24 ; 2004 >
+    au < ready ; 2005 ; Philosophy in Review Volume 25 ; 25 ; 2005 >
+    au < ready ; 2006 ; Philosophy in Review Volume 26 ; 26 ; 2006 >
     au < released ; 2007 ; Philosophy in Review Volume 27 ; 27 ; 2007 >
     au < released ; 2008 ; Philosophy in Review Volume 28 ; 28 ; 2008 >
     au < released ; 2009 ; Philosophy in Review Volume 29 ; 29 ; 2009 >
     au < released ; 2010 ; Philosophy in Review Volume 30 ; 30 ; 2010 >
     au < released ; 2011 ; Philosophy in Review Volume 31 ; 31 ; 2011 >
     au < released ; 2012 ; Philosophy in Review Volume 32 ; 32 ; 2012 >
-    au < testing ; 2013 ; Philosophy in Review Volume 33 ; 33 ; 2013 >
+    au < ready ; 2013 ; Philosophy in Review Volume 33 ; 33 ; 2013 >
 
   }
   
@@ -450,7 +463,7 @@
     au < released ; 2009 ; PlatForum Volume 10 ; 10 ; 2009 >
     au < released ; 2010 ; PlatForum Volume 11 ; 11 ; 2010 >
     au < released ; 2011 ; PlatForum Volume 12 ; 12 ; 2011 >
-    au < testing ; 2012 ; PlatForum Volume 13 ; 13 ; 2012 >
+    au < ready ; 2012 ; PlatForum Volume 13 ; 13 ; 2012 >
 
   }
   
@@ -477,11 +490,11 @@
     
     param[journal_id] = racar
 
-    au < testing ; 2008 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 33 ; 33 ; 2008 >
-    au < testing ; 2009 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 34 ; 34 ; 2009 >
-    au < testing ; 2010 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 35 ; 35 ; 2010 >
-    au < testing ; 2011 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 36 ; 36 ; 2011 >
-    au < testing ; 2012 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 37 ; 37 ; 2012 >
+    au < ready ; 2008 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 33 ; 33 ; 2008 >
+    au < ready ; 2009 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 34 ; 34 ; 2009 >
+    au < ready ; 2010 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 35 ; 35 ; 2010 >
+    au < ready ; 2011 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 36 ; 36 ; 2011 >
+    au < ready ; 2012 ; RACAR: Revue d'art canadienne / Canadian Art Review Volume 37 ; 37 ; 2012 >
 
   }
   
@@ -494,7 +507,7 @@
     
     param[journal_id] = satir
 
-    au < testing ; 2013 ; Satir Journal of Counselling and Family Therapy Volume 1 ; 1 ; 2013 >
+    au < ready ; 2013 ; Satir Journal of Counselling and Family Therapy Volume 1 ; 1 ; 2013 >
 
   }
   
@@ -506,21 +519,23 @@
     >
     
     param[journal_id] = sophia
+    
+    comment[1998_1999_2000] = no substance, abstract page links to text on external department website
 
-    au < testing ; 1998 ; Sophia: Undergraduate Journal of Philosophy Volume 1 ; 1 ; 1998 >
-    au < testing ; 1999 ; Sophia: Undergraduate Journal of Philosophy Volume 2 ; 2 ; 1999 >
-    au < testing ; 2000 ; Sophia: Undergraduate Journal of Philosophy Volume 3 ; 3 ; 2000 >
-    au < testing ; 2001 ; Sophia: Undergraduate Journal of Philosophy Volume 4 ; 4 ; 2001 >
-    au < testing ; 2002 ; Sophia: Undergraduate Journal of Philosophy Volume 5 ; 5 ; 2002 >
-    au < testing ; 2003 ; Sophia: Undergraduate Journal of Philosophy Volume 6 ; 6 ; 2003 >
+    au < notReady ; 1998 ; Sophia: Undergraduate Journal of Philosophy Volume 1 ; 1 ; 1998 >
+    au < notReady ; 1999 ; Sophia: Undergraduate Journal of Philosophy Volume 2 ; 2 ; 1999 >
+    au < notReady ; 2000 ; Sophia: Undergraduate Journal of Philosophy Volume 3 ; 3 ; 2000 >
+    au < ready ; 2001 ; Sophia: Undergraduate Journal of Philosophy Volume 4 ; 4 ; 2001 >
+    au < ready ; 2002 ; Sophia: Undergraduate Journal of Philosophy Volume 5 ; 5 ; 2002 >
+    au < ready ; 2003 ; Sophia: Undergraduate Journal of Philosophy Volume 6 ; 6 ; 2003 >
     au < doesNotExist ; 2004 ; Sophia: Undergraduate Journal of Philosophy Volume 7 ; 7 ; 2004 >
     au < doesNotExist ; 2005 ; Sophia: Undergraduate Journal of Philosophy Volume 8 ; 8 ; 2005 >
-    au < testing ; 2006 ; Sophia: Undergraduate Journal of Philosophy Volume 9 ; 9 ; 2006 >
+    au < ready ; 2006 ; Sophia: Undergraduate Journal of Philosophy Volume 9 ; 9 ; 2006 >
     au < doesNotExist ; 2007 ; Sophia: Undergraduate Journal of Philosophy Volume 10 ; 10 ; 2007 >
-    au < testing ; 2008 ; Sophia: Undergraduate Journal of Philosophy Volume 11 ; 11 ; 2008 >
+    au < ready ; 2008 ; Sophia: Undergraduate Journal of Philosophy Volume 11 ; 11 ; 2008 >
     au < doesNotExist ; 2009 ; Sophia: Undergraduate Journal of Philosophy Volume 12 ; 12 ; 2009 >
     au < doesNotExist ; 2010 ; Sophia: Undergraduate Journal of Philosophy Volume 13 ; 13 ; 2010 >
-    au < testing ; 2011 ; Sophia: Undergraduate Journal of Philosophy Volume 14 ; 14 ; 2011 >
+    au < ready ; 2011 ; Sophia: Undergraduate Journal of Philosophy Volume 14 ; 14 ; 2011 >
   }
   
   {
@@ -551,8 +566,8 @@
     au < released ; 2009 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 19 ; 19 ; 2009 >
     au < released ; 2010 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 20 ; 20 ; 2010 >
     au < released ; 2011 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 21 (2011) ; 21 ; 2011 >
-    au < testing ; 2012 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 21-22 (2012) ; 21-22 ; 2012 >
-    au < testing ; 2013 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 23 ; 23 ; 2013 >
+    au < ready ; 2012 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 21-22 (2012) ; 21-22 ; 2012 >
+    au < ready ; 2013 ; Working Papers of the Linguistics Circle of the University of Victoria Volume 23 ; 23 ; 2013 >
 
   }
   
