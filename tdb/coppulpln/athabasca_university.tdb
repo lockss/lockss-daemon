@@ -102,6 +102,7 @@
     au < released ; 2010 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 24 ; 24 ; 2010 >
     au < released ; 2011 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 25 ; 25 ; 2011 >
     au < released ; 2012 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 26 ; 26 ; 2012 >
+    au < manifest ; 2013 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 27 ; 27 ; 2013 >
           
   }
     
@@ -131,7 +132,9 @@
   {
     
     title <
-      name = The Trumpeter
+      name = The Trumpeter ;
+      issn = 0832-6193 ;
+      eissn = 1705-9429
     >
   
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -169,6 +172,7 @@
     au < released ; 2010 ; The Trumpeter Volume 26 ; 26 ; 2010 >
     au < released ; 2011 ; The Trumpeter Volume 27 ; 27 ; 2011 >
     au < released ; 2012 ; The Trumpeter Volume 28 ; 28 ; 2012 >
+    au < manifest ; 2013 ; The Trumpeter Volume 29 ; 29 ; 2013 >
       
   }
     
