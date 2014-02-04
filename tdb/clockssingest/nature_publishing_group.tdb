@@ -597,7 +597,7 @@
     au < finished ; crawling ; 2011 ; Clinical and Translational Gastroenterology Volume 2 ; 2011 ; 2 >
     au < finished ; crawling ; 2012 ; Clinical and Translational Gastroenterology Volume 3 ; 2012 ; 3 >
     au < crawling ; exists ; 2013 ; Clinical and Translational Gastroenterology Volume 4 ; 2013 ; 4 >
-    au < expected ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 >
+    au < manifest ; exists ; 2014 ; Clinical and Translational Gastroenterology Volume 5 ; 2014 ; 5 >
 
   }
 
@@ -1487,7 +1487,7 @@
     au < finished ; crawling ; 2011 ; The Journal of Antibiotics Volume 64 ; 2011 ; 64 >
     au < finished ; crawling ; 2012 ; The Journal of Antibiotics Volume 65 ; 2012 ; 65 >
     au < crawling ; exists ; 2013 ; The Journal of Antibiotics Volume 66 ; 2013 ; 66 >
-    au < expected ; exists ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 >
+    au < manifest ; exists ; 2014 ; The Journal of Antibiotics Volume 67 ; 2014 ; 67 >
 
   }
 
@@ -1617,7 +1617,7 @@
     au < finished ; crawling ; 2011 ; Journal of Human Genetics Volume 56 ; 2011 ; 56 >
     au < finished ; crawling ; 2012 ; Journal of Human Genetics Volume 57 ; 2012 ; 57 >
     au < crawling ; exists ; 2013 ; Journal of Human Genetics Volume 58 ; 2013 ; 58 >
-    au < expected ; exists ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 >
+    au < manifest ; exists ; 2014 ; Journal of Human Genetics Volume 59 ; 2014 ; 59 >
 
   }
 
@@ -2129,7 +2129,7 @@
 
     au < finished ; crawling ; 2012 ; Molecular Therapy - Nucleic Acids Volume 1 ; 2012 ; 1 >
     au < exists ; exists ; 2013 ; Molecular Therapy - Nucleic Acids Volume 2 ; 2013 ; 2 >
-    au < expected ; exists ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 >
+    au < manifest ; exists ; 2014 ; Molecular Therapy - Nucleic Acids Volume 3 ; 2014 ; 3 >
 
   }
 
@@ -3923,7 +3923,7 @@
     au < crawling ; exists ; 2012 ; Pediatric Research Volume 72 ; 2012 ; 72 >
     au < crawling ; exists ; 2013 ; Pediatric Research Volume 73 ; 2013 ; 73 >
     au < crawling ; exists ; 2013 ; Pediatric Research Volume 74 ; 2013 ; 74 >
-    au < expected ; exists ; 2014 ; Pediatric Research Volume 75 ; 2014 ; 75 >
+    au < manifest ; exists ; 2014 ; Pediatric Research Volume 75 ; 2014 ; 75 >
     au < expected ; exists ; 2014 ; Pediatric Research Volume 76 ; 2014 ; 76 >
 
   }
