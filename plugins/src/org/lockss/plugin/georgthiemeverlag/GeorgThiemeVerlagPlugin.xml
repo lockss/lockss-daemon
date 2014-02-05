@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -64,8 +64,8 @@
       <string>4,"^%s.*/%s/.*", base_url, doi_prefix</string>
       <string>2,"^%s.*/%s/www[.].*", base_url, doi_prefix</string>
       <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout)).*", base_url</string>
-      <string>1,"^%sejournals/([^/]+|issue|abstract|html)/[.0-9]+/[.a-z0-9-]+$", base_url</string>
-      <string>1,"^%sejournals/pdf/%s/[a-z0-9-]+[.]pdf$", base_url, doi_prefix</string>
+      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/%s/[.a-z0-9-]+(?:/BIB)?$", base_url, doi_prefix</string>
+      <string>1,"^%smedia/.*/supmat/.*$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -119,6 +119,10 @@
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
