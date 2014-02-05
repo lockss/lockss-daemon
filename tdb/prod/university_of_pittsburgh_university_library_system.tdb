@@ -96,7 +96,7 @@
       param[base_url] = http://catedraltomada.pitt.edu/ojs/
       param[journal_id] = catedraltomada
 
-      au < exists ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
+      au < manifest ; 2013 ; 2013 ; Catedral Tomada: Revista de crítica literaria latinoamericana Volume 1 ; 1 >
 
   }
 
@@ -159,7 +159,7 @@
     param[base_url] = http://dentistry3000.pitt.edu/ojs/
     param[journal_id] = dentistry3000
 
-    au < exists ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2013 ; Dentistry 3000 Volume 1 ; 1 >
 
   }
 
@@ -238,8 +238,10 @@
     param[base_url] = http://forbes5.pitt.edu/ojs/
     param[journal_id] = forbes5
 
-    au < exists ; 2012 ; 2012 ; Forbes and Fifth Volume 1-2 ; 1-2 >
-    au < exists ; 2013 ; 2013 ; Forbes and Fifth Volume 3-4 ; 3-4 >
+    au < manifest ; 2012 ; 2012 ; Forbes and Fifth Volume 1 ; 1 >
+    au < manifest ; 2012 ; 2012 ; Forbes and Fifth Volume 2 ; 2 >
+    au < manifest ; 2013 ; 2013 ; Forbes and Fifth Volume 3 ; 3 >
+    au < manifest ; 2013 ; 2013 ; Forbes and Fifth Volume 4 ; 4 >
 
   }
 
@@ -374,7 +376,7 @@
     param[base_url] = http://lesli-journal.org/ojs/
     param[journal_id] = lesli
 
-    au < exists ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2013 ; Linguistic Evidence in Security, Law and Intelligence Volume 1 ; 1 >
 
   }
 
@@ -403,7 +405,7 @@
     param[base_url] = http://palrap.pitt.edu/ojs/
     param[journal_id] = palrap
 
-    au < exists ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2013 ; Pennsylvania Libraries: Research and Practice Volume 1 ; 1 >
 
   }
 
@@ -498,8 +500,8 @@
     param[base_url] = http://taxreview.law.pitt.edu/ojs/
     param[journal_id] = taxreview
 
-    au < exists ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
-    au < exists ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
+    au < manifest ; 2012 ; 2012 ; Pittsburgh Tax Review Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2013 ; Pittsburgh Tax Review Volume 2 ; 2 >
 
   }
 
@@ -512,7 +514,7 @@
     param[base_url] = http://radicalteacher.library.pitt.edu/ojs/
     param[journal_id] = radicalteacher
 
-    au < exists ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
+    au < manifest ; 2013 ; 2013 ; Radical Teacher Volume 1 ; 1 >
 
   }
 
@@ -649,7 +651,7 @@
       param[base_url] = http://timelyinterventions.pitt.edu/ojs/
       param[journal_id] = timely
 
-      au < exists ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
+      au < manifest ; 2013 ; 2013 ; Timely Interventions Volume 1 ; 1 >
 
   }
 
