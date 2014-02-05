@@ -11,7 +11,19 @@
   rights = openaccess
   param[base_url] = http://www.qscience.com/
   implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
   
+    title <
+      name = Advances in Applied Biomedicine ;
+      eissn = 2305-1604 ;
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = aabio
+
+  }
+
   {
   
     title <
@@ -92,6 +104,100 @@
       au < expected ; exists ; 2014 ; Contemporary Islamic Studies Volume 2014 ; 2014 >
 
     }
+  }
+
+  {
+  
+    title <
+      name = DIFI Family Research and Proceedings ;
+      eissn = 2309-3927
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = difi
+
+    au < manifest ; exists ; 2013 ; DIFI Family Research and Proceedings Volume 2013 ; 2013 >
+    au < manifest ; exists ; 2014 ; DIFI Family Research and Proceedings Volume 2014 ; 2014 >
+
+  }
+
+  {
+  
+    title <
+      name = Innovations in Global Medical and Health Education ;
+      eissn = 2308-2526
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = igmhe
+
+    au < exists ; exists ; 2011 ; Innovations in Global Medical and Health Education Volume 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Innovations in Global Medical and Health Education Volume 2012 ; 2012 >
+    au < manifest ; exists ; 2013 ; Innovations in Global Medical and Health Education Volume 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Innovations in Global Medical and Health Education Volume 2014 ; 2014 >
+
+  }
+
+  {
+  
+    title <
+      name = International Review of Law ;
+      eissn = 2223-859X
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = irl
+
+    au < exists ; exists ; 2012 ; International Review of Law Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Review of Law Volume 2013 ; 2013 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Emergency Medicine, Trauma and Acute Care ;
+      eissn = 1999-7086
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = jemtac
+
+    au < exists ; exists ; 2012 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2014 ; 2014 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Local and Global Health Perspectives ;
+      eissn = 2225-9228
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = jlghp
+
+    au < exists ; exists ; 2013 ; Journal of Local and Global Health Perspectives Volume 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Local and Global Health Perspectives Volume 2014 ; 2014 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Local and Global Health Science ;
+      eissn = 2223-0441
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = jlghs
+
+    au < exists ; exists ; 2012 ; Journal of Local and Global Health Science Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Local and Global Health Science Volume 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Journal of Local and Global Health Science Volume 2014 ; 2014 >
+
   }
 
   {
@@ -182,6 +288,19 @@
 
   {
     title <
+      name = Qatar Medical Journal ;
+      eissn = 2227-0426
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = qmj
+
+    au < exists ; exists ; 2013 ; Qatar Medical Journal Volume 2013 ; 2013 >
+
+  }
+
+  {
+    title <
       name = QScience Connect ;
       eissn = 2223-506X
     >
@@ -204,7 +323,39 @@
       
     }
   }
+
+  {
   
+    title <
+      name = QScience Proceedings ;
+      eissn = 2226-9649
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = qproc
+
+    au < exists ; exists ; 2012 ; QScience Proceedings Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; QScience Proceedings Volume 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; QScience Proceedings Volume 2014 ; 2014 >
+
+  }
+
+  {
+  
+    title <
+      name = Religions: A Scholarly Journal ;
+      eissn = 2218-7480
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = rels
+
+    au < exists ; exists ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Religions: A Scholarly Journal Volume 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 >
+
+  }
+
   {
 
     title <
@@ -229,6 +380,18 @@
       au < expected ; exists ; 2014 ; Sustainable Technologies, Systems and Policies Volume 2014 ; 2014 >
       
     }
+  }
+
+  {
+  
+    title <
+      name = Tasmeem ;
+      eissn = 2221-9048
+    >
+
+    plugin = org.lockss.plugin.atypon.bloomsburyqatar.ClockssBloomsburyQatarPlugin
+    param[journal_id] = tasmeem
+
   }
 
 }
