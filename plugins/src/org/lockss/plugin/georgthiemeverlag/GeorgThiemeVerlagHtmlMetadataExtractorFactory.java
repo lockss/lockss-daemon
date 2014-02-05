@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlMetadataExtractorFactory.java,v 1.2 2014-01-03 17:28:22 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlMetadataExtractorFactory.java,v 1.3 2014-02-05 22:26:03 etenbrink Exp $
  */
 
 /*
@@ -55,8 +55,8 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
     return new GeorgThiemeVerlagHtmlMetadataExtractor();
   }
   
-  public static class GeorgThiemeVerlagHtmlMetadataExtractor
-    extends SimpleHtmlMetaTagMetadataExtractor {
+  public static class GeorgThiemeVerlagHtmlMetadataExtractor 
+    implements FileMetadataExtractor {
    
     private static MultiMap tagMap = new MultiValueMap();
     static {
@@ -79,18 +79,21 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
       //<meta name="citation_journal_title" content="Aktuelle Dermatologie" />
       tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       //<meta name="citation_publisher" content="..."/> 
-      // FIELD_PUBLISHER value will be extracted from tdb file
+      // FIELD_PUBLISHER value will be replaced below (PD-440)
+      tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       //<meta name="citation_language" content="de" />
       tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
     }
     
-    @Override
-    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
-      ArticleMetadata am = super.extract(target, cu);
+      ArticleMetadata am = new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
-      return am;
+      // PD-440 hardcode publisher value
+      am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
+      emitter.emitMetadata(cu, am);
     }
+    
   }
   
 }
