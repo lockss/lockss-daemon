@@ -1,10 +1,10 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.4 2014-01-29 23:32:25 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.5 2014-02-05 22:21:57 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -75,7 +75,6 @@ public class GeorgThiemeVerlagArticleIteratorFactory
   protected static final String ABSTRACT_REPLACEMENT = "/abstract/$1";
   protected static final String RIS_REPLACEMENT = "/ris/$1/BIB";
   
-  @Override
   public Iterator<ArticleFiles> createArticleIterator(
       ArchivalUnit au, MetadataTarget target)
           throws PluginException {
@@ -118,7 +117,6 @@ public class GeorgThiemeVerlagArticleIteratorFactory
     return builder.getSubTreeArticleIterator();
   }
   
-  @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
