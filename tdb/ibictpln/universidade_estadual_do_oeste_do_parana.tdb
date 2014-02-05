@@ -34,7 +34,7 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = alamedas
 
-      au < manifest ; 2006 ; 1 ; Alamedas Volume 2006 ; 2006 >
+      au < testing ; 2006 ; 1 ; Alamedas Volume 2006 ; 2006 >
       au < exists ; 2007 ; 2 ; Alamedas Volume 2007 ; 2007 >
       au < exists ; 2008 ; 3 ; Alamedas Volume 2008 ; 2008 >
       au < exists ; 2009 ; 4 ; Alamedas Volume 2009 ; 2009 >
@@ -58,16 +58,16 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = cadernoedfisica
 
-      au < manifest ; 1999 ; 1 ; Caderno de Educação Física e Esporte Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 2 ; Caderno de Educação Física e Esporte Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 3 ; Caderno de Educação Física e Esporte Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 4 ; Caderno de Educação Física e Esporte Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 5 ; Caderno de Educação Física e Esporte Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 6 ; Caderno de Educação Física e Esporte Volume 2004 ; 2004 >
-      au < manifest ; 2008 ; 10 ; Caderno de Educação Física e Esporte Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 11 ; Caderno de Educação Física e Esporte Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 12 ; Caderno de Educação Física e Esporte Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 13 ; Caderno de Educação Física e Esporte Volume 2011 ; 2011 >
+      au < testing ; 1999 ; 1 ; Caderno de Educação Física e Esporte Volume 1999 ; 1999 >
+      au < testing ; 2000 ; 2 ; Caderno de Educação Física e Esporte Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 3 ; Caderno de Educação Física e Esporte Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 4 ; Caderno de Educação Física e Esporte Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 5 ; Caderno de Educação Física e Esporte Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 6 ; Caderno de Educação Física e Esporte Volume 2004 ; 2004 >
+      au < testing ; 2008 ; 10 ; Caderno de Educação Física e Esporte Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 11 ; Caderno de Educação Física e Esporte Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 12 ; Caderno de Educação Física e Esporte Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 13 ; Caderno de Educação Física e Esporte Volume 2011 ; 2011 >
       au < expected ; 2012 ; 14 ; Caderno de Educação Física e Esporte Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Caderno de Educação Física e Esporte Volume 2013 ; 2013 >
       au < expected ; 2014 ; 16 ; Caderno de Educação Física e Esporte Volume 2014 ; 2014 >
@@ -86,13 +86,13 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = csaemrevista
 
-      au < manifest ; 2006 ; 1 ; Ciências Sociais Aplicadas em Revista Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 2 ; Ciências Sociais Aplicadas em Revista Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 3 ; Ciências Sociais Aplicadas em Revista Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 4 ; Ciências Sociais Aplicadas em Revista Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 5 ; Ciências Sociais Aplicadas em Revista Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 6 ; Ciências Sociais Aplicadas em Revista Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 7 ; Ciências Sociais Aplicadas em Revista Volume 2012 ; 2012 >
+      au < testing ; 2006 ; 1 ; Ciências Sociais Aplicadas em Revista Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 2 ; Ciências Sociais Aplicadas em Revista Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 3 ; Ciências Sociais Aplicadas em Revista Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 4 ; Ciências Sociais Aplicadas em Revista Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 5 ; Ciências Sociais Aplicadas em Revista Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 6 ; Ciências Sociais Aplicadas em Revista Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 7 ; Ciências Sociais Aplicadas em Revista Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Ciências Sociais Aplicadas em Revista Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Ciências Sociais Aplicadas em Revista Volume 2014 ; 2014 >
 
@@ -110,13 +110,13 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = ccsaemperspectiva
 
-      au < manifest ; 2006 ; 1 ; Ciências Sociais em Perspectiva Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 2 ; Ciências Sociais em Perspectiva Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 3 ; Ciências Sociais em Perspectiva Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 4 ; Ciências Sociais em Perspectiva Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 5 ; Ciências Sociais em Perspectiva Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 6 ; Ciências Sociais em Perspectiva Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 7 ; Ciências Sociais em Perspectiva Volume 2012 ; 2012 >
+      au < testing ; 2006 ; 1 ; Ciências Sociais em Perspectiva Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 2 ; Ciências Sociais em Perspectiva Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 3 ; Ciências Sociais em Perspectiva Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 4 ; Ciências Sociais em Perspectiva Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 5 ; Ciências Sociais em Perspectiva Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 6 ; Ciências Sociais em Perspectiva Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 7 ; Ciências Sociais em Perspectiva Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Ciências Sociais em Perspectiva Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Ciências Sociais em Perspectiva Volume 2014 ; 2014 >
 
@@ -134,12 +134,12 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = educereeteducare
 
-      au < manifest ; 2006 ; 1 ; Educere et Educare Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 2 ; Educere et Educare Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 3 ; Educere et Educare Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 4 ; Educere et Educare Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 5 ; Educere et Educare Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 6 ; Educere et Educare Volume 2011 ; 2011 >
+      au < testing ; 2006 ; 1 ; Educere et Educare Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 2 ; Educere et Educare Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 3 ; Educere et Educare Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 4 ; Educere et Educare Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 5 ; Educere et Educare Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 6 ; Educere et Educare Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; Educere et Educare Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Educere et Educare Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Educere et Educare Volume 2014 ; 2014 >
@@ -158,15 +158,15 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = espacoplural
 
-      au < manifest ; 2003 ; 1 ; Espaço Plural Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 2 ; Espaço Plural Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 3 ; Espaço Plural Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 4 ; Espaço Plural Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 5 ; Espaço Plural Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 6 ; Espaço Plural Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 7 ; Espaço Plural Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 8 ; Espaço Plural Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 9 ; Espaço Plural Volume 2011 ; 2011 >
+      au < testing ; 2003 ; 1 ; Espaço Plural Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 2 ; Espaço Plural Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 3 ; Espaço Plural Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 4 ; Espaço Plural Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 5 ; Espaço Plural Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 6 ; Espaço Plural Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 7 ; Espaço Plural Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 8 ; Espaço Plural Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 9 ; Espaço Plural Volume 2011 ; 2011 >
       au < expected ; 2012 ; 10 ; Espaço Plural Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Espaço Plural Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; Espaço Plural Volume 2014 ; 2014 >
@@ -184,10 +184,10 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = geoemquestao
 
-      au < manifest ; 2009 ; 1 ; Geografia em Questão Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Geografia em Questão Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Geografia em Questão Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 4 ; Geografia em Questão Volume 2012 ; 2012 >
+      au < testing ; 2009 ; 1 ; Geografia em Questão Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 2 ; Geografia em Questão Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 3 ; Geografia em Questão Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 4 ; Geografia em Questão Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Geografia em Questão Volume 2013 ; 2013 >
       au < expected ; 2014 ; 6 ; Geografia em Questão Volume 2014 ; 2014 >
 
@@ -205,16 +205,16 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = ideacao
 
-      au < manifest ; 2003 ; 1 ; Ideação Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 2 ; Ideação Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 3 ; Ideação Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 4 ; Ideação Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 5 ; Ideação Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 6 ; Ideação Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 7 ; Ideação Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 8 ; Ideação Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 9 ; Ideação Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 10 ; Ideação Volume 2012 ; 2012 >
+      au < testing ; 2003 ; 1 ; Ideação Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 2 ; Ideação Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 3 ; Ideação Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 4 ; Ideação Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 5 ; Ideação Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 6 ; Ideação Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 7 ; Ideação Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 8 ; Ideação Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 9 ; Ideação Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 10 ; Ideação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Ideação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; Ideação Volume 2014 ; 2014 >
 
@@ -232,16 +232,16 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = gepec
 
-      au < manifest ; 2003 ; 1 ; Informe GEPEC Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 2 ; Informe GEPEC Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 3 ; Informe GEPEC Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 4 ; Informe GEPEC Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 5 ; Informe GEPEC Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 9 ; Informe GEPEC Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 >
+      au < testing ; 2003 ; 1 ; Informe GEPEC Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 2 ; Informe GEPEC Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 3 ; Informe GEPEC Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 4 ; Informe GEPEC Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 5 ; Informe GEPEC Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 6 ; Informe GEPEC Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 7 ; Informe GEPEC Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 8 ; Informe GEPEC Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 9 ; Informe GEPEC Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 10 ; Informe GEPEC Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; Informe GEPEC Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; Informe GEPEC Volume 2014 ; 2014 >
 
@@ -259,14 +259,14 @@
       param[base_url] = http://e-revista.unioeste.br/
       param[journal_id] = linguaseletras
 
-      au < manifest ; 2005 ; 1 ; Línguas & Letras Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 2 ; Línguas & Letras Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 3 ; Línguas & Letras Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 4 ; Línguas & Letras Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 5 ; Línguas & Letras Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 6 ; Línguas & Letras Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 7 ; Línguas & Letras Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 8 ; Línguas & Letras Volume 2012 ; 2012 >
+      au < testing ; 2005 ; 1 ; Línguas & Letras Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 2 ; Línguas & Letras Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 3 ; Línguas & Letras Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 4 ; Línguas & Letras Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 5 ; Línguas & Letras Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 6 ; Línguas & Letras Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 7 ; Línguas & Letras Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 8 ; Línguas & Letras Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Línguas & Letras Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; Línguas & Letras Volume 2014 ; 2014 >
 
