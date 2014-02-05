@@ -447,8 +447,8 @@ public class HtmlFormExtractor {
       open_ct++;
       if(m_openForm != null) {
         // if we have an open form - we can't open a new one.
-        if(theLogger.isDebug())
-          theLogger.debug("form can not be processed: nested form");
+        if(theLogger.isDebug3())
+          theLogger.debug3("form can not be processed: nested form");
         return;
       }
       m_openForm = el.attr("id");
@@ -472,8 +472,8 @@ public class HtmlFormExtractor {
       Element el = (Element) node;
       if(m_openForm == null) {
         // we found a end tag with no matching begin
-        if(theLogger.isDebug())
-          theLogger.debug("HtmlFormExtractor found unmatched form tag.");
+        if(theLogger.isDebug3())
+          theLogger.debug3("HtmlFormExtractor found unmatched form tag.");
         return;
       }
       open_ct--;
@@ -519,8 +519,8 @@ public class HtmlFormExtractor {
           form.addElement(el);
         }
         else {
-          if(theLogger.isDebug())
-           theLogger.debug("unable to find form for tag " + name);
+          if(theLogger.isDebug3())
+           theLogger.debug3("unable to find form for tag " + name);
         }
       }
     }
@@ -1409,10 +1409,10 @@ public class HtmlFormExtractor {
       incrField = field;
       incrValue = incr;
       formatter = new SimpleDateFormat(format);
-      if(theLogger.isDebug2())   {
-        theLogger.debug2("start:"+formatter.format(start.getTime())+
+      if(theLogger.isDebug3())   {
+        theLogger.debug3("start:"+formatter.format(start.getTime())+
                          "end:"+formatter.format(end.getTime()));
-        theLogger.debug2("nextDate:" + formatter.format(nextDate.getTime()));
+        theLogger.debug3("nextDate:" + formatter.format(nextDate.getTime()));
       }
     }
 
