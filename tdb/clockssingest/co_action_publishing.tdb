@@ -135,18 +135,30 @@
       eissn = 2000-8066 ;
       issnl = 2000-8066
     >
+    
+    {
+      param[base_url] = http://www.eurojnlofpsychotraumatol.net/
+      param[journal_id] = ejpt
+      comment[0] = includes supplements
+      comment[1] = notReady due to fetch errors see RU 4449
 
-    param[base_url] = http://www.eurojnlofpsychotraumatol.net/
-    param[journal_id] = ejpt
-    comment[0] = includes supplements
-    comment[1] = notReady due to fetch errors see RU 4449
+      au < superseded ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 [to delete] ; 1 ; 2010 >
+      au < superseded ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 [to delete] ; 2 ; 2011 >
+      au < finished ; crawling ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < superseded ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 [to delete] ; 4 ; 2013 >
+    }
+    {
+      param[base_url] = http://www.ejpt.net/
+      param[journal_id] = ejpt
+      comment[0] = includes supplements
+      comment[1] = V1 and V2 may have fetch errors. see RU 4449
 
-    au < ingNotReady ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
-    au < ingNotReady ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
-    au < finished ; crawling ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
-    au < crawling ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
-    au < manifest ; exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
-
+      au < exists ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+      au < exists ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
+      au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
+      au < exists ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
+      au < exists ; exists ; 2014 ; European Journal of Psychotraumatology [including Supplements] Volume 5 ; 5 ; 2014 >
+    }
   }
 
   {
