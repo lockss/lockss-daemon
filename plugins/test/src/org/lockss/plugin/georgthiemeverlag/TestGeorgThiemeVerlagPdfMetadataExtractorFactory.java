@@ -115,7 +115,7 @@ public class TestGeorgThiemeVerlagPdfMetadataExtractorFactory extends LockssTest
   String goodDoi = "10.1055/s-0029-1215009";
   String goodVol = "6";
   String journalTitle = "Aktuelle Dermatologie";
-  String goodPublisher = "Georg Thieme Verlag";
+  String goodPublisher = "Georg Thieme Verlag KG";
 
   String goodContent = " Arbitrary content\n";
 
@@ -141,9 +141,9 @@ public class TestGeorgThiemeVerlagPdfMetadataExtractorFactory extends LockssTest
     assertNull(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertNull(goodVol, md.get(MetadataField.FIELD_VOLUME));
     assertNull(journalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    // the following value now hardcoded
+    assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     
-    // the following value now extracted from tdb file
-    assertNull(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     // the following does not exist in test data
     assertNull(md.get(MetadataField.FIELD_END_PAGE));
   }
