@@ -262,7 +262,9 @@
     param[base_url] = http://openresearchsoftware.metajnl.com/
     param[journal_id] = jors
     
-    au < crawling ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
+    comment[notReady] = This journal does not have an editorial policies page: http://openresearchsoftware.metajnl.com/index.php/jors/about/editorialPolicies
+    
+    au < ingNotReady ; exists ; 2013 ; The Journal of Open Research Software Volume 1 ; 1 ; 2013 >
     au < expected ; exists ; 2014 ; The Journal of Open Research Software Volume 2 ; 2 ; 2014 >
 
   }
@@ -310,7 +312,7 @@
        param[base_url] = http://www.pia-journal.co.uk/
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < superseded ; superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
+        au < boost ; superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
     }
     {
        param[base_url] = http://pia-journal.co.uk/
@@ -319,6 +321,11 @@
         au < superseded ; superseded ; 2009 ; Papers from the Institute of Archaeology Volume 19 [to delete] ; 19 ; 2009 >
         au < superseded ; superseded ; 2010 ; Papers from the Institute of Archaeology Volume 20 [to delete] ; 20 ; 2010 >
         au < superseded ; superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
+    }
+    {
+       param[base_url] = http://pia-journal.co.uk/
+       comment[zapped] = Bad base_url
+        au < superseded ; exists ; 2011 ; Papers from the Institute of Archaeology Volume 21 [to delete] ; 21 ; 2011 >
     }
     au < manifest ; exists ; 1990 ; Papers from the Institute of Archaeology Volume 1 ; 1 ; 1990 >
     au < manifest ; exists ; 1991 ; Papers from the Institute of Archaeology Volume 2 ; 2 ; 1991 >
