@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfMetadataExtractorFactory.java,v 1.1 2014-01-03 17:18:52 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagPdfMetadataExtractorFactory.java,v 1.2 2014-02-05 22:28:26 etenbrink Exp $
  */
 
 /*
@@ -87,6 +87,8 @@ public class GeorgThiemeVerlagPdfMetadataExtractorFactory implements FileMetadat
         am.putRaw("citation_doi", doi);
         am.cook(tagMap);
       }
+      // PD-440
+      am.replace(MetadataField.FIELD_PUBLISHER, "Georg Thieme Verlag KG");
       return am;
     }
   }
