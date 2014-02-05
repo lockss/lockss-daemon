@@ -403,9 +403,11 @@
       name = Geographica Helvetica ;
       issn = 0016-7312
     >
-      attr[journal_id] = GH   
+      attr[journal_id] = GH
       param[base_url] = http://www.geogr-helv.net/
       param[home_url] = http://www.geographica-helvetica.net/
+      
+      comment[notReady] = This journal is open access one year after publication. eg 2013 volume is available jan 1 2015.
 
       au < manifest ; exists ; 1946 ; 1946 ; Geographica Helvetica Volume 1 ; 1 >
       au < manifest ; exists ; 1947 ; 1947 ; Geographica Helvetica Volume 2 ; 2 >
@@ -474,7 +476,7 @@
       au < manifest ; exists ; 2010 ; 2010 ; Geographica Helvetica Volume 65 ; 65 >
       au < manifest ; exists ; 2011 ; 2011 ; Geographica Helvetica Volume 66 ; 66 >
       au < crawling ; exists ; 2012 ; 2012 ; Geographica Helvetica Volume 67 ; 67 >
-      au < crawling ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
+      au < ingNotReady ; exists ; 2013 ; 2013 ; Geographica Helvetica Volume 68 ; 68 >
       au < expected ; exists ; 2014 ; 2014 ; Geographica Helvetica Volume 69 ; 69 >
     
    }
