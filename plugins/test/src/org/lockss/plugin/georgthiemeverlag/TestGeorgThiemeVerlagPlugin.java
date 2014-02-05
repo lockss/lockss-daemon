@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.4 2014-01-03 17:15:10 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.5 2014-02-05 19:10:34 etenbrink Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   
   public void testGetHashFilterFactory() {
     assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
-    assertNull(plugin.getHashFilterFactory("application/pdf"));
+    assertNotNull(plugin.getHashFilterFactory("application/pdf"));
     assertNotNull(plugin.getHashFilterFactory("text/html"));
     assertTrue(WrapperUtil.unwrap(plugin.getHashFilterFactory("text/html"))
         instanceof org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlFilterFactory);
