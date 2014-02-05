@@ -42,8 +42,6 @@
       <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
       <string>2,"^%s%d/.*\.md5sum$", base_url, year</string>
       <string>2,"^%s%d/.*\.xml\.doi$", base_url, year</string>
-      <!-- following rule for ACM, removes extraneous "backup" metadata -->
-      <string>2,"^%s%d/nsa_backfiles.*", base_url, year</string>
       <string>1,"^%s%d/", base_url, year</string>
     </list>
   </entry>
