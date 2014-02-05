@@ -1,9 +1,9 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.8 2014-01-29 23:35:57 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.9 2014-02-05 22:31:03 etenbrink Exp $
  */
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
