@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.1 2014-02-05 19:08:28 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.2 2014-02-05 22:27:24 etenbrink Exp $
  */
 
 /*
@@ -94,7 +94,8 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
     super(factory);
   }
 
-  private static final Logger logger = Logger.getLogger(GeorgThiemeVerlagPdfFilterFactory.class);
+  private static final Logger logger = 
+      Logger.getLogger(GeorgThiemeVerlagPdfFilterFactory.class);
   
   @Override
   public void transform(ArchivalUnit au,
@@ -125,7 +126,6 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
       }
     }
     
-    logger.critical("ProvidedByWorkerTransform: hashCode: " + pdfDocument.hashCode());
   }
 
   public static class ProvidedByWorkerTransform extends PdfTokenStreamWorker
@@ -157,7 +157,7 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
     @Override
     public void operatorCallback()
         throws PdfException {
-      if (true) {
+      if (logger.isDebug3()) {
         logger.debug3("ProvidedByWorkerTransform: initial: " + state);
         logger.debug3("ProvidedByWorkerTransform: index: " + getIndex());
         logger.debug3("ProvidedByWorkerTransform: operator: " + getOpcode());
@@ -177,10 +177,6 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
           }
           else if (isBeginTextObject()) {
             stop();
-          }
-          else if (isShowText()) {
-            String aa = getTokens().get(getIndex()-1).getString();
-            logger.debug3(aa);
           }
         } break;
         
