@@ -1,5 +1,5 @@
 /*
- * $Id: WileySourceXmlMetadataExtractorFactory.java,v 1.1 2014-02-06 21:06:52 alexandraohlson Exp $
+ * $Id: WileySourceXmlMetadataExtractorFactory.java,v 1.2 2014-02-06 21:10:08 alexandraohlson Exp $
  */
 
 /*
@@ -75,7 +75,6 @@ extends SourceXmlMetadataExtractorFactory {
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
-    log.setLevel("debug3");
     return new WileySourceXmlMetadataExtractor();
   }
 
