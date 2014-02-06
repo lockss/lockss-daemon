@@ -194,19 +194,10 @@
       implicit < status ; status2 ; year ; name ; volume ; param[year] >
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = jrmh
+      
+      comment[moved] = Moved to American Psychological Association
 
-      au < manifest ; exists ; 1996 ; Journal of Rural Mental Health Volume 23 ; 23 ; 1996 >
-      au < manifest ; exists ; 1998-1999 ; Journal of Rural Mental Health Volume 24 ; 24 ; 1998 >
-      au < manifest ; exists ; 2002 ; Journal of Rural Mental Health Volume 27 ; 27 ; 2002 >
-      au < manifest ; exists ; 2003 ; Journal of Rural Mental Health Volume 28 ; 28 ; 2003 >
-      au < manifest ; exists ; 2004 ; Journal of Rural Mental Health Volume 29 ; 29 ; 2004 >
-      au < manifest ; exists ; 2005 ; Journal of Rural Mental Health Volume 30 ; 30 ; 2005 >
-      au < manifest ; exists ; 2006 ; Journal of Rural Mental Health Volume 31 ; 31 ; 2006 >
-      au < manifest ; exists ; 2010 ; Journal of Rural Mental Health Volume 34 ; 34 ; 2010 >
-      au < manifest ; exists ; 2011 ; Journal of Rural Mental Health Volume 35 ; 35 ; 2011 >
       au < finished ; crawling ; 2012 ; Journal of Rural Mental Health Volume 36 ; 36 ; 2012 >
-      au < expected ; exists ; 2013 ; Journal of Rural Mental Health Volume 37 ; 37 ; 2013 >
-      au < expected ; exists ; 2014 ; Journal of Rural Mental Health Volume 38 ; 38 ; 2014 >
 
     }
   }
@@ -226,10 +217,20 @@
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = CULS
 
-      au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 ; 2011 >
       au < finished ; crawling ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 ; 2012 >
-      au < exists ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 ; 2013 >
-      au < expected ; exists ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 ; 2014 >
+
+    }
+    {
+    
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      implicit < status ; status2 ; year ; name ; param[volume] >
+      param[base_url] = http://newprairiepress.org/
+      param[journal_abbr] = culsproceedings
+
+      au < exists ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 >
+      au < exists ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 >
+      au < expected ; exists ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 >
 
     }
   }
@@ -242,8 +243,6 @@
       issnl = 1936-0487
     >
 
-    comment[issues] = This journal may need another param for individual issues within each volume
-
     {
     
       plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
@@ -251,15 +250,25 @@
       param[base_url] = http://ojrrp.org/journals/
       param[journal_id] = ojrrp
 
-      au < manifest ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 ; 2006 >
-      au < manifest ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 ; 2007 >
-      au < manifest ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 ; 2008 >
-      au < manifest ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 ; 2009 >
-      au < manifest ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 ; 2010 >
-      au < manifest ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 ; 2011 >
       au < finished ; crawling ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 ; 2012 >
-      au < exists ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 ; 2013 >
-      au < expected ; exists ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 ; 2014 >
+
+    }
+    {
+    
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      implicit < status ; status2 ; year ; name ; param[volume] >
+      param[base_url] = http://newprairiepress.org/
+      param[journal_abbr] = ojrrp
+
+      au < exists ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 >
+      au < exists ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 >
+      au < exists ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 >
+      au < exists ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 >
+      au < exists ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 >
+      au < exists ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 >
+      au < doNotProcess ; doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 >
+      au < exists ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 >
+      au < expected ; exists ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 >
 
     }
   }
