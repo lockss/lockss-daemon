@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.5 2014-02-05 22:21:57 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagArticleIteratorFactory.java,v 1.6 2014-02-06 01:14:26 etenbrink Exp $
  */
 
 /*
@@ -52,8 +52,8 @@ public class GeorgThiemeVerlagArticleIteratorFactory
       "\"%s\", base_url";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sejournals/(?:html|pdf)/%s/[^/?&.]+(?:[.]pdf)?$\"," +
-      " base_url, doi_prefix";
+      "\"^%sejournals/(?:html|pdf)/10[.][0-9a-z]{4,6}/[^/?&.]+(?:[.]pdf)?$\"," +
+      " base_url";
   
   // various aspects of an article
   // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
