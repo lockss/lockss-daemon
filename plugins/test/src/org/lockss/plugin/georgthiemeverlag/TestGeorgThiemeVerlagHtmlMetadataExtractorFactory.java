@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,7 @@ import org.lockss.plugin.simulated.*;
 
 /**
  * One of the articles used to get the html source for this plugin is:
- * http://datadryad.org/resource/doi:10.5061/dryad.ck1rq
+ * https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
  */
 public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTestCase {
   static Logger log = Logger.getLogger(TestGeorgThiemeVerlagHtmlMetadataExtractorFactory.class);
@@ -50,13 +50,11 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
       "org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String DOI_PREFIX_KEY = "doi_prefix";
-
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  
   private static final String BASE_URL = "http://www.example.com/";
   private final String JOURNAL_ID = "10.1055/s-00000002";
-  private final String YEAR = "2010";
-  private final String DOI_PREFIX = "10.1055";
+  private final String VOLUME_NAME = "2010";
   
   //GeorgThiemeVerlag AU
   private ArchivalUnit hau; 
@@ -73,25 +71,24 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
+    
     sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
         simAuConfig(tempDirPath));
     hau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, georgthiemeverlagAuConfig());
   }
-
+  
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
-
+  
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", SIM_ROOT);
     conf.put(JOURNAL_ID_KEY, JOURNAL_ID);
-    conf.put(YEAR_KEY, YEAR);
-    conf.put(DOI_PREFIX_KEY, DOI_PREFIX);
+    conf.put(VOLUME_NAME_KEY, VOLUME_NAME);
     conf.put("depth", "1");
     conf.put("branch", "1");
     conf.put("numFiles", "7");
@@ -105,8 +102,7 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
 
     conf.put(BASE_URL_KEY, BASE_URL);
     conf.put(JOURNAL_ID_KEY, JOURNAL_ID);
-    conf.put(YEAR_KEY, YEAR);
-    conf.put(DOI_PREFIX_KEY, DOI_PREFIX);
+    conf.put(VOLUME_NAME_KEY, VOLUME_NAME);
     return conf;
   }
 
@@ -191,7 +187,7 @@ public class TestGeorgThiemeVerlagHtmlMetadataExtractorFactory extends LockssTes
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodVol, md.get(MetadataField.FIELD_VOLUME));
     assertEquals(journalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-    // the following value now hardcoded
+    // the following value now hard-coded
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     
     // the following does not exist in test data

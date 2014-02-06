@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.4 2014-01-29 23:36:52 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.5 2014-02-06 01:11:21 etenbrink Exp $
  */
 
 /*
@@ -53,21 +53,18 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
       "org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin";
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String DOI_PREFIX_KEY = "doi_prefix";
-
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  
   private static final String BASE_URL = "https://www.thieme-connect.de/";
   private final String JOURNAL_ID = "10.1055/s-00000002";
-  private final String YEAR = "2010";
-  private final String DOI_PREFIX = "10.1055";
+  private final String VOLUME_NAME = "2010";
   
-//      <string>"%sejournals/issues/%s/%d", base_url, journal_id, year</string>
-  private final String AU_URL = BASE_URL + "ejournals/issues/" + JOURNAL_ID + "/" + YEAR;
+//      <string>"%sejournals/issues/%s/%s", base_url, journal_id, volume_name</string>
+  private final String AU_URL = BASE_URL + "ejournals/issues/" + JOURNAL_ID + "/" + VOLUME_NAME;
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
       BASE_URL_KEY, BASE_URL,
       JOURNAL_ID_KEY, JOURNAL_ID,
-      YEAR_KEY, YEAR,
-      DOI_PREFIX_KEY, DOI_PREFIX);
+      VOLUME_NAME_KEY, VOLUME_NAME);
   private static final int DEFAULT_FILESIZE = 3000;
   
   @Override
@@ -95,8 +92,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     conf.put("root", rootPath);
     conf.put(BASE_URL_KEY, BASE_URL);
     conf.put(JOURNAL_ID_KEY, JOURNAL_ID);
-    conf.put(YEAR_KEY, YEAR);
-    conf.put(DOI_PREFIX_KEY, DOI_PREFIX);
+    conf.put(VOLUME_NAME_KEY, VOLUME_NAME);
     conf.put("depth", "1");
     conf.put("branch", "1");
     conf.put("numFiles", "3");

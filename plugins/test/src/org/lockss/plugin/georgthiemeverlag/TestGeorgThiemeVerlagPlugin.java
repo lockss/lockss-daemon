@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.5 2014-02-05 19:10:34 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.6 2014-02-06 01:11:21 etenbrink Exp $
  */
 
 /*
@@ -50,8 +50,7 @@ import org.lockss.plugin.wrapper.*;
 public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
-  static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  static final String DOI_PREFIX_KEY = "doi_prefix";
+  static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   
   private DefinablePlugin plugin;
   
@@ -79,8 +78,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000002");
-    props.setProperty(YEAR_KEY, "2010");
-    props.setProperty(DOI_PREFIX_KEY, "10.1055");
+    props.setProperty(VOLUME_NAME_KEY, "2010");
     DefinableArchivalUnit au = null;
     try {
       au = makeAuFromProps(props);
@@ -101,8 +99,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "blah");
     props.setProperty(JOURNAL_ID_KEY, "10.foo/s-00000002");
-    props.setProperty(YEAR_KEY, "2010");
-    props.setProperty(DOI_PREFIX_KEY, "10.1055");
+    props.setProperty(VOLUME_NAME_KEY, "2010");
     
     try {
       DefinableArchivalUnit au = makeAuFromProps(props);
@@ -118,12 +115,11 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000002");
-    props.setProperty(YEAR_KEY, "2010");
-    props.setProperty(DOI_PREFIX_KEY, "10.1055");
+    props.setProperty(VOLUME_NAME_KEY, "2010");
     
     DefinableArchivalUnit au = makeAuFromProps(props);
     assertEquals("Georg Thieme Verlag Plugin (CLOCKSS), Base URL http://www.example." +
-                 "com/, Journal ID 10.1055/s-00000002, Year 2010", au.getName());
+                 "com/, Journal ID 10.1055/s-00000002, Volume 2010", au.getName());
   }
   
   public void testGetPluginId() {
@@ -133,17 +129,8 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-                               new ConfigParamDescr().setKey(DOI_PREFIX_KEY).
-                                   setType(ConfigParamDescr.TYPE_STRING).
-                                   setSize(40).
-                                   setDefaultOnly(false).
-                                   setDefinitional(true),
                                ConfigParamDescr.JOURNAL_ID,
-                               new ConfigParamDescr().setKey(YEAR_KEY).
-                                   setType(ConfigParamDescr.TYPE_STRING).
-                                   setSize(20).
-                                   setDefaultOnly(false).
-                                   setDefinitional(true)),
+                               ConfigParamDescr.VOLUME_NAME),
                  plugin.getLocalAuConfigDescrs());
   }
 
