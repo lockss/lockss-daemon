@@ -1,5 +1,5 @@
 /*
- * $Id: WileyArticleIteratorFactory.java,v 1.7 2013-11-08 19:21:12 pgust Exp $
+ * $Id: WileyArticleIteratorFactory.java,v 1.8 2014-02-06 21:06:52 alexandraohlson Exp $
  */
 
 /*
@@ -66,55 +66,46 @@ public class WileyArticleIteratorFactory
                           Logger.getLogger(WileyArticleIteratorFactory.class);
   
   // no need to set ROOT_TEMPLATE since all content is under <base_url>/<year>
+  // files end in *.wml.xml  - probably "wiley metadata language XML"
+  // This pattern will only pick up XML files that live
+  //  in a zip files that is 2 levels below year
   protected static final String PATTERN_TEMPLATE = 
       "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.wml\\.xml$\",base_url,year";
-     
-  @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
-    
-    return new WileyArticleIterator(au, 
-                                    new SubTreeArticleIterator.Spec()
-                                        .setTarget(target)
-                                        .setVisitArchiveMembers(true)
-                                        .setPatternTemplate(PATTERN_TEMPLATE, 
-                                                      Pattern.CASE_INSENSITIVE)
-                                    );
-  }
-  
-  protected static class WileyArticleIterator extends SubTreeArticleIterator {
-	 
-    protected final static Pattern XML_PATTERN = 
-      Pattern.compile("/[^/]+\\.zip!/.*\\.wml\\.xml$",Pattern.CASE_INSENSITIVE);
-    
-    
-    protected WileyArticleIterator(ArchivalUnit au,
-                                   SubTreeArticleIterator.Spec spec) {
-      super(au, spec);
-    }
     
     @Override
-    protected ArticleFiles createArticleFiles(CachedUrl cu) {
-      String url = cu.getUrl();
-      Matcher matXml = XML_PATTERN.matcher(url);
-      if (matXml.find()) {
-        ArticleFiles af = new ArticleFiles();
-        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, cu);
-        // set access URL to PDF file in metadata extractor
-        // set fullTextCu here to make list of XML files visible
-        // to non-metadata iterator clients.
-        af.setFullTextCu(cu);
-        return af;
-      }
-      log.warning("Url does not match XML_PATTERN: " + url);
-      return null;
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+      SubTreeArticleIteratorBuilder builder = localBuilderCreator(au);
+      
+      // Don't need to rematch for all the stuff at the beginning 
+      final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
+      final String XML_REPLACEMENT = "/$1.xml";
+
+      // no need to limit to ROOT_TEMPLATE
+      SubTreeArticleIterator.Spec theSpec = new SubTreeArticleIterator.Spec();
+      theSpec.setTarget(target);
+      theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+      theSpec.setVisitArchiveMembers(true);
+      builder.setSpec(theSpec);
+      
+      // NOTE - full_text_cu is set automatically to the url used for the articlefiles
+      // ultimately the metadata extractor needs to set the entire facet map 
+
+      // set up XML to be an aspect that will trigger an ArticleFiles to feed the metadata extractor
+      builder.addAspect(XML_PATTERN,
+          XML_REPLACEMENT,
+          ArticleFiles.ROLE_ARTICLE_METADATA);
+
+      return builder.getSubTreeArticleIterator();
     }
-  }
-  
-  public ArticleMetadataExtractor createArticleMetadataExtractor(
-                                                         MetadataTarget target)
-        throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
-  }
+    
+    // Enclose the method that creates the builder to allow a child to do additional processing
+    protected SubTreeArticleIteratorBuilder localBuilderCreator(ArchivalUnit au) { 
+     return new SubTreeArticleIteratorBuilder(au);
+    }
+
+    @Override
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+      return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    }
 }

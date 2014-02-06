@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.15 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.16 2014-02-06 21:06:52 alexandraohlson Exp $
  */
 
 /*
@@ -126,9 +126,9 @@ implements FileMetadataExtractorFactory {
       } catch (XPathExpressionException e) {
         log.debug3("Xpath expression exception:",e);
       } catch (SAXException ex) {
-        handleSAXException(cu, ex);
+        handleSAXException(cu, emitter, ex);
       } catch (IOException ex) {
-        handleIOException(cu, ex);
+        handleIOException(cu, emitter, ex);
       }
 
 
@@ -136,17 +136,16 @@ implements FileMetadataExtractorFactory {
 
     // Overrideable method for plugins that want to catch and handle
     // a problem in the XML file
-    protected void handleIOException(CachedUrl cu, IOException ex) {
+    protected void handleIOException(CachedUrl cu, Emitter emitter, IOException ex) {
       // Add an alert or more significant warning here
-      log.debug3("IO exception loading XML file", ex);
-
+      log.siteWarning("IO exception loading XML file", ex);
     }
 
     // Overrideable method for plugins that want to catch and handle
     // a SAX parser problem in the XML file
-    protected void handleSAXException(CachedUrl cu, SAXException ex) {
+    protected void handleSAXException(CachedUrl cu, Emitter emitter, SAXException ex) {
       // Add an alert or more significant warning here
-      log.debug3("SAX exception loading XML file", ex);
+      log.siteWarning("SAX exception loading XML file", ex);
 
     }
 
@@ -225,9 +224,21 @@ implements FileMetadataExtractorFactory {
         CachedUrl cu,
         ArticleMetadata oneAM) {
       
+      // get the key for a piece of metadata used in building the filename
+      String fn_key = helper.getFilenameXPathKey();  
+      // the schema doesn't define a filename so don't do a default preEmitCheck
+      if (fn_key == null) {
+        return null; // no preEmitCheck 
+      }
       String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      // we expected a value, but didn't get one...we need to return something
+      // for preEmitCheck to fail
+      if (filenameValue == null) {
+        filenameValue = "NOFILEINMETADATA"; // we expected a value, but got none
+      }
       String cuBase = FilenameUtils.getFullPath(cu.getUrl());
       ArrayList<String> returnList = new ArrayList<String>();
+      // default version is just the filename associated with the key, in this directory
       returnList.add(cuBase + filenameValue);
       return returnList;
     }
