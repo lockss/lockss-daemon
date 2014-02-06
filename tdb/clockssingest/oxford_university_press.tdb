@@ -14754,7 +14754,12 @@
     pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://mtp.oxfordjournals.org/
 
-    au < expected ; exists ; 2014 ; Music Therapy Perspectives Volume 1 ; 1 ; >
+    au < exists ; exists ; 2009 ; Music Therapy Perspectives Volume 27 ; 27 ; >
+    au < exists ; exists ; 2010 ; Music Therapy Perspectives Volume 28 ; 28 ; >
+    au < exists ; exists ; 2011 ; Music Therapy Perspectives Volume 29 ; 29 ; >
+    au < exists ; exists ; 2012 ; Music Therapy Perspectives Volume 30 ; 30 ; >
+    au < exists ; exists ; 2013 ; Music Therapy Perspectives Volume 31 ; 31 ; >
+    au < expected ; exists ; 2014 ; Music Therapy Perspectives Volume 32 ; 32 ; >
 
     }
 
