@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.2 2014-02-05 22:27:24 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagPdfFilterFactory.java,v 1.3 2014-02-06 01:13:27 etenbrink Exp $
  */
 
 /*
@@ -211,15 +211,13 @@ public class GeorgThiemeVerlagPdfFilterFactory extends SimplePdfFilterFactory {
 }
 
 class GTVPdfBoxDocument extends PdfBoxDocument {
-  private PDDocument gpdDocument;
   
   protected GTVPdfBoxDocument(PDDocument pdDocument) {
     super(pdDocument);
-    gpdDocument = pdDocument;
   }
 
   public PDDocument getPdDocument() {
-    return gpdDocument;
+    return pdDocument;
   }
   
 }
