@@ -5,8 +5,6 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
-  implicit < status ; year ; name ; volume ; param[year] >
 
   {
 
@@ -16,6 +14,8 @@
       issnl = 1944-3676
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://thebalticyearbook.org/journals/
       param[journal_id] = baltic
 
@@ -40,6 +40,8 @@
       issnl = 2159-5933
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = gdr
 
@@ -79,6 +81,8 @@
       issnl = 2161-4148
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = IJSSW
 
@@ -95,6 +99,8 @@
       issnl = 2159-0303
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://jhaponline.org/journals/
       param[journal_id] = jhap
 
@@ -113,6 +119,8 @@
       issnl = 1944-9771
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://jftonline.org/journals/
       param[journal_id] = jft
 
@@ -132,6 +140,8 @@
       issnl = 2163-8969
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = jrmh
 
@@ -158,6 +168,8 @@
       issnl = 2160-942X
     >
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://newprairiepress.org/journals/
       param[journal_id] = CULS
 
@@ -178,6 +190,8 @@
 
     comment[issues] = This journal may need another param for individual issues within each volume
     {
+      plugin = org.lockss.plugin.ojs2.OJS2Plugin
+      implicit < status ; year ; name ; volume ; param[year] >
       param[base_url] = http://ojrrp.org/journals/
       param[journal_id] = ojrrp
 
