@@ -38,11 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Georg Thieme Verlag Plugin, Base URL %s, Journal ID %s, Year %s", base_url, journal_id, year</string>
+    <string>"Georg Thieme Verlag Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%sejournals/issues/%s/%s", base_url, journal_id, year</string>
+    <string>"%sejournals/issues/%s/%s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -53,7 +53,7 @@
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sejournals/issues/%s/%d", base_url, journal_id, year</string>
+        <string>"%sejournals/issues/%s/%s", base_url, journal_id, volume_name</string>
       </entry>
     </map>
   </entry>
@@ -61,11 +61,11 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
-      <string>4,"^%s.*/%s/.*", base_url, doi_prefix</string>
-      <string>2,"^%s.*/%s/www[.].*", base_url, doi_prefix</string>
-      <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout)).*", base_url</string>
-      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/%s/[.a-z0-9-]+(?:/BIB)?$", base_url, doi_prefix</string>
-      <string>1,"^%smedia/.*/supmat/.*$", base_url</string>
+      <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
+      <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
+      <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
+      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:/BIB)?$", base_url</string>
+      <string>1,"^%smedia/.*/supmat/", base_url</string>
     </list>
   </entry>
   <entry>
@@ -81,15 +81,6 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>doi_prefix</key>
-        <displayName>DOI Prefix</displayName>
-        <description>DOI prefix for journal (often used as part of urls)</description>
-        <type>1</type>
-        <size>40</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
         <key>journal_id</key>
         <displayName>Journal Identifier</displayName>
         <description>Identifier for journal (often used as part of file names)</description>
@@ -99,9 +90,8 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>year</key>
-        <displayName>Year</displayName>
-        <description>Year string (e.g., 2004)</description>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
@@ -112,8 +102,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sejournals/html/%s/[a-z0-9-]+$", base_url, doi_prefix</string>
-      <string>"^%sejournals/pdf/%s/[a-z0-9-]+[.]pdf$", base_url, doi_prefix</string>
+      <string>"^%sejournals/html/10[.][0-9a-z]{4,6}/[a-z0-9-]+$", base_url</string>
+      <string>"^%sejournals/pdf/10[.][0-9a-z]{4,6}/[a-z0-9-]+[.]pdf$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -152,7 +142,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>3000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
