@@ -23,7 +23,7 @@
         param[journal_issn] = 2213-7467 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Advanced Modeling and Simulation in Engineering Sciences Volume 1 ; 1 >
   
     }
   
@@ -111,7 +111,7 @@
         comment[platform] = BioMedCentralPlugin
 
         au < manifest ; exists ; 2013 ; Applied Adhesion Science Volume 1 ; 1 >
-        au < exists ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; Applied Adhesion Science Volume 2 ; 2 >
 
     }
 
@@ -127,7 +127,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Asian Journal of Gambling Issues and Public Health Volume 3 ; 3 >
-        au < expected ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
+        au < manifest ; exists ; 2014 ; Asian Journal of Gambling Issues and Public Health Volume 4 ; 4 >
   
     }
   
@@ -200,7 +200,7 @@
         param[journal_issn] = 2196-288X 
         comment[platform] = BioMedCentralPlugin
 
-        au < exists ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; Brazilian Journal of Science and Technology Volume 1 ; 1 >
 
     }
 
@@ -232,7 +232,7 @@
   
         au < manifest ; exists ; 2012 ; Clinical and Translational Medicine Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Clinical and Translational Medicine Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; Clinical and Translational Medicine Volume 3 ; 3 >
   
     }
   
@@ -512,7 +512,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; EPJ Nonlinear Biomedical Physics Volume 1 ; 1 >
-        au < expected ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
+        au < manifest ; exists ; 2014 ; EPJ Nonlinear Biomedical Physics Volume 2 ; 2 >
   
     }
   
@@ -527,7 +527,7 @@
         param[journal_issn] = 2196-0763 
         comment[platform] = BioMedCentralPlugin
   
-        au < expected ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
+        au < manifest ; exists ; 2014 ; EPJ Quantum Technology Volume 1 ; 1 >
   
     }
   
@@ -1102,7 +1102,7 @@
   
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Policy Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; IZA Journal of Labor Policy Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; IZA Journal of Labor Policy Volume 3 ; 3 >
   
     }
   
@@ -1119,7 +1119,7 @@
   
         au < manifest ; exists ; 2012 ; IZA Journal of Migration Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; IZA Journal of Migration Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; IZA Journal of Migration Volume 3 ; 3 >
   
     }
   
