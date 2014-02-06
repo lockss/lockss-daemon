@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -41,7 +41,6 @@
       <string>4,"^%s", base_url</string>
       <string>2,"^%s%d/.*;O=[AD]$", base_url, year</string>
       <string>2,"^%s%d/.*\.md5sum$", base_url, year</string>
-      <string>2,"^%s%d/.*\.xml\.doi$", base_url, year</string>
       <string>1,"^%s%d/", base_url, year</string>
     </list>
   </entry>
