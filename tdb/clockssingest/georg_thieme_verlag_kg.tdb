@@ -10,8 +10,7 @@
 
   param[base_url] = https://www.thieme-connect.de/
   plugin = org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin
-  implicit < status ; status2 ; year ; param[year] ; name ; volume >
-  param[doi_prefix] = 10.1055
+  implicit < status ; status2 ; year ; param[volume_name] ; name ; volume >
 
 
   {
