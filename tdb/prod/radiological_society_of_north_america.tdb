@@ -66,6 +66,20 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; RadioGraphics Volume 33 ; 33 >
 
     }
+    
+    {
+    
+      plugin = needs.plugin
+      comment[platform] = Atypon
+      param[base_url] = http://pubs.rsna.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      param[journal_id] = radiographics
+
+      au < exists ; 2013 ; RadioGraphics Volume 33 ; 33 >
+      au < exists ; 2014 ; RadioGraphics Volume 34 ; 34 >
+
+    }
 
   }
 
@@ -360,6 +374,22 @@
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Radiology Volume 268 ; 268 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2013 ; Radiology Volume 269 ; 269 >
         
+    }
+
+    {
+    
+      plugin = needs.plugin
+      comment[platform] = Atypon
+      param[base_url] = http://pubs.rsna.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+      param[journal_id] = radiology
+
+      au < exists ; 2013 ; Radiology Volume 266 ; 266 >
+      au < exists ; 2013 ; Radiology Volume 267 ; 267 >
+      au < exists ; 2013 ; Radiology Volume 268 ; 268 >
+      au < exists ; 2013 ; Radiology Volume 269 ; 269 >
+
     }
 
   }
