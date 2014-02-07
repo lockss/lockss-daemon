@@ -128,14 +128,14 @@ echo " "
 echo "---------------------"
 echo "---------------------"
 echo "GLN. ISSN issues"
-cat ../../tdb/prod/*.tdb | ./tdbout -t publisher,title,issn,eissn | sort -u > $tpath/issn
+cat ../../tdb/prod/*.tdb | ./tdbout -t publisher,title,issn,eissn | sed 's/ & / and /' | sort -u > $tpath/issn
 ./scrub_table.pl $tpath/issn
 #
 # Find issn problems in clockss title database
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. ISSN issues"
-cat ../../tdb/clockssingest/*.tdb | ./tdbout -t publisher,title,issn,eissn | sort -u > $tpath/issn
+cat ../../tdb/clockssingest/*.tdb | ./tdbout -t publisher,title,issn,eissn | sed 's/ & / and /' | sort -u > $tpath/issn
 ./scrub_table.pl $tpath/issn
 #
 # Find issn problems in ibictpln title database
