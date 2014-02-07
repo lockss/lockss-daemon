@@ -312,7 +312,7 @@
        param[base_url] = http://www.pia-journal.co.uk/
        plugin = org.lockss.plugin.ubiquitypress.ClockssUbiquityPressPlugin
        comment[zapped] = Released this AU under plugin that is obsolete: replaced by ClockssOJS2Plugin
-        au < boost ; superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
+        au < superseded ; superseded ; 2011 ; Papers from the Institute of Archaeology Volume 21 www [to delete] ; 21 ; 2011 >
     }
     {
        param[base_url] = http://pia-journal.co.uk/
