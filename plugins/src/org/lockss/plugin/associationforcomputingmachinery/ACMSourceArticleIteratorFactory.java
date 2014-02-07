@@ -1,5 +1,5 @@
 /* 
- * $Id: ACMSourceArticleIteratorFactory.java,v 1.1 2014-01-15 17:33:05 aishizaki Exp $
+ * $Id: ACMSourceArticleIteratorFactory.java,v 1.2 2014-02-07 15:32:41 aishizaki Exp $
  */
 /*
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -46,8 +46,10 @@ public class ACMSourceArticleIteratorFactory
   protected static Logger log = 
     Logger.getLogger(ACMSourceArticleIteratorFactory.class);
   
-  /* acm-dev/2012/6dec2011/NEW-PROC-IMMPD11-2072561
-   *   NEW-PROC-IMMPD11-2072561.xml
+  /* include:
+   * acm-released/2012/6dec2011/NEW-PROC-IMMPD11-2072561/NEW-PROC-IMMPD11-2072561.xml
+   * exclude:
+   * acm-released/2012/nsa_backfiles[_old]/PROC-ICCAD02-774572/PROC-ICCAD02-774572.xml
    */
   protected static final String ROOT_TEMPLATE = "\"%s%d\",base_url,year";
   protected static final String PATTERN_TEMPLATE = 
