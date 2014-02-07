@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.10 2013-04-01 00:30:13 pgust Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.11 2014-02-07 19:02:46 pgust Exp $
  */
 
 /*
@@ -76,6 +76,9 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
+      tagMap.put("citation_mjid", new MetadataField(
+          MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
+          MetadataField.extract("^([^;]+);", 1)));
     }
 
     @Override
