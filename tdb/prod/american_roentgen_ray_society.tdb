@@ -137,6 +137,8 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       param[journal_id] = ajr
+      
+      comment[needs_plugin] = see PD-488
 
       au < exists ; 2013 ; American Journal of Roentgenology Volume 200 ; 200 >
       au < exists ; 2013 ; American Journal of Roentgenology Volume 201 ; 201 >
