@@ -1,0 +1,445 @@
+{
+
+  publisher <
+    name = Society for Industrial and Applied Mathematics ;
+    info[contract] = 2011 ;
+    info[tester] = 7
+  >
+
+    plugin = org.lockss.plugin.atypon.siam.ClockssSiamPlugin
+    param[base_url] = http://epubs.siam.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Multiscale Modeling and Simulation ;
+      issn = 1540-3459;
+      eissn = 1540-3467
+    >
+
+    param[journal_id] = mmsubt
+
+    au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 1 ; 1 >
+    au < manifest ; exists ; 2003 ; Multiscale Modeling and Simulation Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Multiscale Modeling and Simulation Volume 3 ; 3 >
+    au < manifest ; exists ; 2005 ; Multiscale Modeling and Simulation Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Multiscale Modeling and Simulation Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Multiscale Modeling and Simulation Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Multiscale Modeling and Simulation Volume 7 ; 7 >
+    au < manifest ; exists ; 2009 ; Multiscale Modeling and Simulation Volume 8 ; 8 >
+    au < crawling ; exists ; 2011 ; Multiscale Modeling and Simulation Volume 9 ; 9 >
+    au < finished ; crawling ; 2012 ; Multiscale Modeling and Simulation Volume 10 ; 10 >
+    au < crawling ; exists ; 2013 ; Multiscale Modeling and Simulation Volume 11 ; 11 >
+    au < manifest ; exists ; 2014 ; Multiscale Modeling and Simulation Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Applied Dynamical Systems ;
+      eissn = 1536-0040
+    >
+
+    param[journal_id] = sjaday
+
+    au < manifest ; exists ; 2003 ; Journal on Applied Dynamical Systems Volume 2 ; 2 >
+    au < manifest ; exists ; 2004 ; Journal on Applied Dynamical Systems Volume 3 ; 3 >
+    au < manifest ; exists ; 2005 ; Journal on Applied Dynamical Systems Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Journal on Applied Dynamical Systems Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Journal on Applied Dynamical Systems Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Journal on Applied Dynamical Systems Volume 7 ; 7 >
+    au < manifest ; exists ; 2009 ; Journal on Applied Dynamical Systems Volume 8 ; 8 >
+    au < manifest ; exists ; 2010 ; Journal on Applied Dynamical Systems Volume 9 ; 9 >
+    au < crawling ; exists ; 2011 ; Journal on Applied Dynamical Systems Volume 10 ; 10 >
+    au < finished ; crawling ; 2012 ; Journal on Applied Dynamical Systems Volume 11 ; 11 >
+    au < crawling ; exists ; 2013 ; Journal on Applied Dynamical Systems Volume 12 ; 12 >
+    au < manifest ; exists ; 2014 ; Journal on Applied Dynamical Systems Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Applied Mathematics ;
+      issn = 0036-1399 ;
+      eissn = 1095-712X
+    >
+
+    param[journal_id] = smjmap
+
+    au < exists ; exists ; 1953 ; Journal on Applied Mathematics Volume 1 ; 1 > 
+    au < exists ; exists ; 1954 ; Journal on Applied Mathematics Volume 2 ; 2 > 
+    au < exists ; exists ; 1955 ; Journal on Applied Mathematics Volume 3 ; 3 > 
+    au < exists ; exists ; 1956 ; Journal on Applied Mathematics Volume 4 ; 4 > 
+    au < exists ; exists ; 1957 ; Journal on Applied Mathematics Volume 5 ; 5 > 
+    au < exists ; exists ; 1958 ; Journal on Applied Mathematics Volume 6 ; 6 > 
+    au < exists ; exists ; 1959 ; Journal on Applied Mathematics Volume 7 ; 7 > 
+    au < exists ; exists ; 1960 ; Journal on Applied Mathematics Volume 8 ; 8 > 
+    au < exists ; exists ; 1961 ; Journal on Applied Mathematics Volume 9 ; 9 > 
+    au < exists ; exists ; 1962 ; Journal on Applied Mathematics Volume 10 ; 10 > 
+    au < exists ; exists ; 1963 ; Journal on Applied Mathematics Volume 11 ; 11 > 
+    au < exists ; exists ; 1964 ; Journal on Applied Mathematics Volume 12 ; 12 > 
+    au < exists ; exists ; 1965 ; Journal on Applied Mathematics Volume 13 ; 13 > 
+    au < manifest ; exists ; 1966 ; Journal on Applied Mathematics Volume 14 ; 14 > 
+    au < manifest ; exists ; 1967 ; Journal on Applied Mathematics Volume 15 ; 15 > 
+    au < manifest ; exists ; 1968 ; Journal on Applied Mathematics Volume 16 ; 16 > 
+    au < manifest ; exists ; 1969 ; Journal on Applied Mathematics Volume 17 ; 17 > 
+    au < manifest ; exists ; 1970 ; Journal on Applied Mathematics Volume 18 ; 18 > 
+    au < manifest ; exists ; 1970 ; Journal on Applied Mathematics Volume 19 ; 19 > 
+    au < manifest ; exists ; 1971 ; Journal on Applied Mathematics Volume 20 ; 20 > 
+    au < manifest ; exists ; 1971 ; Journal on Applied Mathematics Volume 21 ; 21 > 
+    au < manifest ; exists ; 1972 ; Journal on Applied Mathematics Volume 22 ; 22 > 
+    au < manifest ; exists ; 1972 ; Journal on Applied Mathematics Volume 23 ; 23 > 
+    au < manifest ; exists ; 1973 ; Journal on Applied Mathematics Volume 24 ; 24 > 
+    au < manifest ; exists ; 1973 ; Journal on Applied Mathematics Volume 25 ; 25 > 
+    au < manifest ; exists ; 1974 ; Journal on Applied Mathematics Volume 26 ; 26 > 
+    au < manifest ; exists ; 1974 ; Journal on Applied Mathematics Volume 27 ; 27 > 
+    au < manifest ; exists ; 1975 ; Journal on Applied Mathematics Volume 28 ; 28 > 
+    au < manifest ; exists ; 1975 ; Journal on Applied Mathematics Volume 29 ; 29 > 
+    au < manifest ; exists ; 1976 ; Journal on Applied Mathematics Volume 30 ; 30 > 
+    au < manifest ; exists ; 1976 ; Journal on Applied Mathematics Volume 31 ; 31 > 
+    au < manifest ; exists ; 1977 ; Journal on Applied Mathematics Volume 32 ; 32 > 
+    au < manifest ; exists ; 1977 ; Journal on Applied Mathematics Volume 33 ; 33 > 
+    au < manifest ; exists ; 1978 ; Journal on Applied Mathematics Volume 34 ; 34 > 
+    au < manifest ; exists ; 1978 ; Journal on Applied Mathematics Volume 35 ; 35 > 
+    au < manifest ; exists ; 1979 ; Journal on Applied Mathematics Volume 36 ; 36 > 
+    au < manifest ; exists ; 1979 ; Journal on Applied Mathematics Volume 37 ; 37 > 
+    au < manifest ; exists ; 1980 ; Journal on Applied Mathematics Volume 38 ; 38 > 
+    au < manifest ; exists ; 1980 ; Journal on Applied Mathematics Volume 39 ; 39 > 
+    au < manifest ; exists ; 1981 ; Journal on Applied Mathematics Volume 40 ; 40 > 
+    au < manifest ; exists ; 1980-1981 ; Journal on Applied Mathematics Volume 41 ; 41 > 
+    au < manifest ; exists ; 1982 ; Journal on Applied Mathematics Volume 42 ; 42 > 
+    au < manifest ; exists ; 1983 ; Journal on Applied Mathematics Volume 43 ; 43 > 
+    au < manifest ; exists ; 1984 ; Journal on Applied Mathematics Volume 44 ; 44 > 
+    au < manifest ; exists ; 1985 ; Journal on Applied Mathematics Volume 45 ; 45 > 
+    au < manifest ; exists ; 1986 ; Journal on Applied Mathematics Volume 46 ; 46 > 
+    au < manifest ; exists ; 1987 ; Journal on Applied Mathematics Volume 47 ; 47 > 
+    au < manifest ; exists ; 1988 ; Journal on Applied Mathematics Volume 48 ; 48 > 
+    au < manifest ; exists ; 1989 ; Journal on Applied Mathematics Volume 49 ; 49 > 
+    au < manifest ; exists ; 1990 ; Journal on Applied Mathematics Volume 50 ; 50 > 
+    au < manifest ; exists ; 1991 ; Journal on Applied Mathematics Volume 51 ; 51 > 
+    au < manifest ; exists ; 1992 ; Journal on Applied Mathematics Volume 52 ; 52 > 
+    au < manifest ; exists ; 1993 ; Journal on Applied Mathematics Volume 53 ; 53 > 
+    au < manifest ; exists ; 1994 ; Journal on Applied Mathematics Volume 54 ; 54 > 
+    au < manifest ; exists ; 1995 ; Journal on Applied Mathematics Volume 55 ; 55 > 
+    au < manifest ; exists ; 1996 ; Journal on Applied Mathematics Volume 56 ; 56 > 
+    au < manifest ; exists ; 1997 ; Journal on Applied Mathematics Volume 57 ; 57 > 
+    au < manifest ; exists ; 1998 ; Journal on Applied Mathematics Volume 58 ; 58 > 
+    au < manifest ; exists ; 1998-1999 ; Journal on Applied Mathematics Volume 59 ; 59 > 
+    au < manifest ; exists ; 1999-2000 ; Journal on Applied Mathematics Volume 60 ; 60 > 
+    au < manifest ; exists ; 2000-2001 ; Journal on Applied Mathematics Volume 61 ; 61 > 
+    au < manifest ; exists ; 2001-2002 ; Journal on Applied Mathematics Volume 62 ; 62 > 
+    au < manifest ; exists ; 2002-2003 ; Journal on Applied Mathematics Volume 63 ; 63 > 
+    au < manifest ; exists ; 2003-2004 ; Journal on Applied Mathematics Volume 64 ; 64 >
+    au < manifest ; exists ; 2004-2005 ; Journal on Applied Mathematics Volume 65 ; 65 >
+    au < manifest ; exists ; 2005-2006 ; Journal on Applied Mathematics Volume 66 ; 66 >
+    au < manifest ; exists ; 2006-2007 ; Journal on Applied Mathematics Volume 67 ; 67 >
+    au < manifest ; exists ; 2007-2008 ; Journal on Applied Mathematics Volume 68 ; 68 >
+    au < manifest ; exists ; 2008-2009 ; Journal on Applied Mathematics Volume 69 ; 69 >
+    au < manifest ; exists ; 2009-2010 ; Journal on Applied Mathematics Volume 70 ; 70 >
+    au < manifest ; exists ; 2011 ; Journal on Applied Mathematics Volume 71 ; 71 >
+    au < finished ; crawling ; 2012 ; Journal on Applied Mathematics Volume 72 ; 72 >
+    au < crawling ; exists ; 2013 ; Journal on Applied Mathematics Volume 73 ; 73 >
+    au < manifest ; exists ; 2014 ; Journal on Applied Mathematics Volume 74 ; 74 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Computing ;
+      issn = 0097-5397 ;
+      eissn = 1095-7111
+    >
+
+    param[journal_id] = smjcat
+
+    au < manifest ; exists ; 2003 ; Journal on Computing Volume 33 ; 33 >
+    au < manifest ; exists ; 2004 ; Journal on Computing Volume 34 ; 34 >
+    au < manifest ; exists ; 2005 ; Journal on Computing Volume 35 ; 35 >
+    au < manifest ; exists ; 2006 ; Journal on Computing Volume 36 ; 36 >
+    au < manifest ; exists ; 2007 ; Journal on Computing Volume 37 ; 37 >
+    au < manifest ; exists ; 2008 ; Journal on Computing Volume 38 ; 38 >
+    au < manifest ; exists ; 2009 ; Journal on Computing Volume 39 ; 39 >
+    au < finished ; crawling ; 2011 ; Journal on Computing Volume 40 ; 40 >
+    au < finished ; crawling ; 2012 ; Journal on Computing Volume 41 ; 41 >
+    au < crawling ; exists ; 2013 ; Journal on Computing Volume 42 ; 42 >
+    au < manifest ; exists ; 2014 ; Journal on Computing Volume 43 ; 43 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Control and Optimization ;
+      issn = 0363-0129 ;
+      eissn = 1095-7138
+    >
+
+    param[journal_id] = sjcodc
+
+    au < manifest ; exists ; 2003 ; Journal on Control and Optimization Volume 42 ; 42 >
+    au < manifest ; exists ; 2004 ; Journal on Control and Optimization Volume 43 ; 43 >
+    au < manifest ; exists ; 2005 ; Journal on Control and Optimization Volume 44 ; 44 >
+    au < manifest ; exists ; 2006 ; Journal on Control and Optimization Volume 45 ; 45 >
+    au < manifest ; exists ; 2007 ; Journal on Control and Optimization Volume 46 ; 46 >
+    au < manifest ; exists ; 2008 ; Journal on Control and Optimization Volume 47 ; 47 >
+    au < manifest ; exists ; 2009 ; Journal on Control and Optimization Volume 48 ; 48 >
+    au < crawling ; exists ; 2011 ; Journal on Control and Optimization Volume 49 ; 49 >
+    au < crawling ; exists ; 2012 ; Journal on Control and Optimization Volume 50 ; 50 >
+    au < crawling ; exists ; 2013 ; Journal on Control and Optimization Volume 51 ; 51 >
+    au < manifest ; exists ; 2014 ; Journal on Control and Optimization Volume 52 ; 52 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Discrete Mathematics ;
+      issn = 0895-4801 ;
+      eissn = 1095-7146
+    >
+
+    param[journal_id] = sjdmec
+
+    au < manifest ; exists ; 2003 ; Journal on Discrete Mathematics Volume 16 ; 16 >
+    au < manifest ; exists ; 2003 ; Journal on Discrete Mathematics Volume 17 ; 17 >
+    au < manifest ; exists ; 2004 ; Journal on Discrete Mathematics Volume 18 ; 18 >
+    au < manifest ; exists ; 2005 ; Journal on Discrete Mathematics Volume 19 ; 19 >
+    au < manifest ; exists ; 2006 ; Journal on Discrete Mathematics Volume 20 ; 20 >
+    au < manifest ; exists ; 2007 ; Journal on Discrete Mathematics Volume 21 ; 21 >
+    au < manifest ; exists ; 2008 ; Journal on Discrete Mathematics Volume 22 ; 22 >
+    au < manifest ; exists ; 2008 ; Journal on Discrete Mathematics Volume 23 ; 23 >
+    au < manifest ; exists ; 2010 ; Journal on Discrete Mathematics Volume 24 ; 24 >
+    au < finished ; crawling ; 2011 ; Journal on Discrete Mathematics Volume 25 ; 25 >
+    au < crawling ; exists ; 2012 ; Journal on Discrete Mathematics Volume 26 ; 26 >
+    au < crawling ; exists ; 2013 ; Journal on Discrete Mathematics Volume 27 ; 27 >
+    au < manifest ; exists ; 2014 ; Journal on Discrete Mathematics Volume 28 ; 28 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Financial Mathematics ;
+      eissn = 1945-497X
+    >
+
+    param[journal_id] = sjfmbj
+
+    au < manifest ; exists ; 2010 ; Journal on Financial Mathematics Volume 1 ; 1 >
+    au < finished ; crawling ; 2011 ; Journal on Financial Mathematics Volume 2 ; 2 >
+    au < finished ; crawling ; 2012 ; Journal on Financial Mathematics Volume 3 ; 3 >
+    au < crawling ; exists ; 2013 ; Journal on Financial Mathematics Volume 4 ; 4 >
+    au < manifest ; exists ; 2014 ; Journal on Financial Mathematics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Imaging Sciences ;
+      eissn = 1936-4954
+    >
+
+    param[journal_id] = sjisbi
+
+    au < manifest ; exists ; 2008 ; Journal on Imaging Sciences Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; Journal on Imaging Sciences Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; Journal on Imaging Sciences Volume 3 ; 3 >
+    au < finished ; crawling ; 2011 ; Journal on Imaging Sciences Volume 4 ; 4 >
+    au < finished ; crawling ; 2012 ; Journal on Imaging Sciences Volume 5 ; 5 >
+    au < crawling ; exists ; 2013 ; Journal on Imaging Sciences Volume 6 ; 6 >
+    au < manifest ; exists ; 2014 ; Journal on Imaging Sciences Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Mathematical Analysis ;
+      issn =  0036-1410 ;
+      eissn = 1095-7154
+    >
+
+    param[journal_id] = sjmaah
+
+    au < manifest ; exists ; 2003 ; Journal on Mathematical Analysis Volume 35 ; 35 >
+    au < manifest ; exists ; 2004 ; Journal on Mathematical Analysis Volume 36 ; 36 >
+    au < manifest ; exists ; 2005 ; Journal on Mathematical Analysis Volume 37 ; 37 >
+    au < manifest ; exists ; 2006 ; Journal on Mathematical Analysis Volume 38 ; 38 >
+    au < manifest ; exists ; 2007 ; Journal on Mathematical Analysis Volume 39 ; 39 >
+    au < manifest ; exists ; 2008 ; Journal on Mathematical Analysis Volume 40 ; 40 >
+    au < manifest ; exists ; 2009 ; Journal on Mathematical Analysis Volume 41 ; 41 >
+    au < manifest ; exists ; 2010 ; Journal on Mathematical Analysis Volume 42 ; 42 >
+    au < crawling ; exists ; 2011 ; Journal on Mathematical Analysis Volume 43 ; 43 >
+    au < crawling ; exists ; 2012 ; Journal on Mathematical Analysis Volume 44 ; 44 >
+    au < crawling ; exists ; 2013 ; Journal on Mathematical Analysis Volume 45 ; 45 >
+    au < manifest ; exists ; 2014 ; Journal on Mathematical Analysis Volume 46 ; 46 >
+
+  }
+
+   {
+
+    title <
+      name = Journal on Matrix Analysis and Application ;
+      issn =  0895-4798 ;
+      eissn = 1095-7162
+    >
+
+    param[journal_id] = sjmael
+
+    au < manifest ; exists ; 2003 ; Journal on Matrix Analysis and Application Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; Journal on Matrix Analysis and Application Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; Journal on Matrix Analysis and Application Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 28 ; 28 >
+    au < manifest ; exists ; 2006 ; Journal on Matrix Analysis and Application Volume 29 ; 29 >
+    au < manifest ; exists ; 2008 ; Journal on Matrix Analysis and Application Volume 30 ; 30 >
+    au < manifest ; exists ; 2009 ; Journal on Matrix Analysis and Application Volume 31 ; 31 >
+    au < crawling ; exists ; 2011 ; Journal on Matrix Analysis and Application Volume 32 ; 32 >
+    au < crawling ; exists ; 2012 ; Journal on Matrix Analysis and Application Volume 33 ; 33 >
+    au < crawling ; exists ; 2013 ; Journal on Matrix Analysis and Application Volume 34 ; 34 >
+    au < manifest ; exists ; 2014 ; Journal on Matrix Analysis and Application Volume 35 ; 35 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Numerical Analysis ;
+      issn =  0036-1429 ;
+      eissn = 1095-7170
+    >
+
+    param[journal_id] = sjnaam
+
+    au < manifest ; exists ; 2003 ; Journal on Numerical Analysis Volume 41 ; 41 >
+    au < manifest ; exists ; 2004 ; Journal on Numerical Analysis Volume 42 ; 42 >
+    au < manifest ; exists ; 2005 ; Journal on Numerical Analysis Volume 43 ; 43 >
+    au < manifest ; exists ; 2006 ; Journal on Numerical Analysis Volume 44 ; 44 >
+    au < manifest ; exists ; 2007 ; Journal on Numerical Analysis Volume 45 ; 45 >
+    au < manifest ; exists ; 2008 ; Journal on Numerical Analysis Volume 46 ; 46 >
+    au < manifest ; exists ; 2008 ; Journal on Numerical Analysis Volume 47 ; 47 >
+    au < manifest ; exists ; 2010 ; Journal on Numerical Analysis Volume 48 ; 48 >
+    au < crawling ; exists ; 2011 ; Journal on Numerical Analysis Volume 49 ; 49 >
+    au < crawling ; exists ; 2012 ; Journal on Numerical Analysis Volume 50 ; 50 >
+    au < crawling ; exists ; 2013 ; Journal on Numerical Analysis Volume 51 ; 51 >
+    au < manifest ; exists ; 2014 ; Journal on Numerical Analysis Volume 52 ; 52 >
+
+  }
+
+   {
+
+    title <
+      name = Journal on Optimization ;
+      issn =  1052-6234 ;
+      eissn = 1095-7189
+    >
+
+    param[journal_id] = sjope8
+
+    au < manifest ; exists ; 2003 ; Journal on Optimization Volume 14 ; 14 >
+    au < manifest ; exists ; 2004 ; Journal on Optimization Volume 15 ; 15 >
+    au < manifest ; exists ; 2005 ; Journal on Optimization Volume 16 ; 16 >
+    au < manifest ; exists ; 2006 ; Journal on Optimization Volume 17 ; 17 >
+    au < manifest ; exists ; 2007 ; Journal on Optimization Volume 18 ; 18 >
+    au < manifest ; exists ; 2008 ; Journal on Optimization Volume 19 ; 19 >
+    au < manifest ; exists ; 2009 ; Journal on Optimization Volume 20 ; 20 >
+    au < crawling ; exists ; 2011 ; Journal on Optimization Volume 21 ; 21 >
+    au < crawling ; exists ; 2012 ; Journal on Optimization Volume 22 ; 22 >
+    au < crawling ; exists ; 2013 ; Journal on Optimization Volume 23 ; 23 >
+    au < manifest ; exists ; 2014 ; Journal on Optimization Volume 24 ; 24 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Scientific Computing ;
+      issn =  1064-8275 ;
+      eissn = 1095-7197
+    >
+
+    param[journal_id] = sjoce3
+
+    au < manifest ; exists ; 2003 ; Journal on Scientific Computing Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; Journal on Scientific Computing Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; Journal on Scientific Computing Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; Journal on Scientific Computing Volume 28 ; 28 >
+    au < manifest ; exists ; 2007 ; Journal on Scientific Computing Volume 29 ; 29 >
+    au < manifest ; exists ; 2007 ; Journal on Scientific Computing Volume 30 ; 30 >
+    au < manifest ; exists ; 2008 ; Journal on Scientific Computing Volume 31 ; 31 >
+    au < manifest ; exists ; 2010 ; Journal on Scientific Computing Volume 32 ; 32 >
+    au < crawling ; exists ; 2011 ; Journal on Scientific Computing Volume 33 ; 33 >
+    au < crawling ; exists ; 2012 ; Journal on Scientific Computing Volume 34 ; 34 >
+    au < crawling ; exists ; 2013 ; Journal on Scientific Computing Volume 35 ; 35 >
+    au < manifest ; exists ; 2014 ; Journal on Scientific Computing Volume 36 ; 36 >
+
+  }
+
+  {
+
+    title <
+      name = Journal on Uncertainty Quantification 
+        >
+
+    param[journal_id] = sjuqa3
+
+    au < crawling ; exists ; 2013 ; Journal on Uncertainty Quantification Volume 1 ; 1 >
+    au < manifest ; exists ; 2014 ; Journal on Uncertainty Quantification Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = SIAM Review ;
+      issn =  0036-1445 ;
+      eissn = 1095-7200
+    >
+
+    param[journal_id] = siread
+
+    au < manifest ; exists ; 2003 ; SIAM Review Volume 45 ; 45 >
+    au < manifest ; exists ; 2004 ; SIAM Review Volume 46 ; 46 >
+    au < manifest ; exists ; 2005 ; SIAM Review Volume 47 ; 47 >
+    au < manifest ; exists ; 2006 ; SIAM Review Volume 48 ; 48 >
+    au < manifest ; exists ; 2007 ; SIAM Review Volume 49 ; 49 >
+    au < manifest ; exists ; 2008 ; SIAM Review Volume 50 ; 50 >
+    au < manifest ; exists ; 2009 ; SIAM Review Volume 51 ; 51 >
+    au < manifest ; exists ; 2010 ; SIAM Review Volume 52 ; 52 >
+    au < crawling ; exists ; 2011 ; SIAM Review Volume 53 ; 53 >
+    au < crawling ; exists ; 2012 ; SIAM Review Volume 54 ; 54 >
+    au < crawling ; exists ; 2013 ; SIAM Review Volume 55 ; 55 >
+    au < expected ; exists ; 2014 ; SIAM Review Volume 56 ; 56 >
+
+  }
+
+  {
+
+    title <
+      name = Theory of Probability and its Applications ;
+      issn =  0040-585X ;
+      eissn = 1095-7219
+    >
+
+    param[journal_id] = tprbau
+
+    au < manifest ; exists ; 2003 ; Theory of Probability and its Applications Volume 47 ; 47 >
+    au < manifest ; exists ; 2004 ; Theory of Probability and its Applications Volume 48 ; 48 >
+    au < manifest ; exists ; 2005 ; Theory of Probability and its Applications Volume 49 ; 49 >
+    au < manifest ; exists ; 2006 ; Theory of Probability and its Applications Volume 50 ; 50 >
+    au < manifest ; exists ; 2007 ; Theory of Probability and its Applications Volume 51 ; 51 >
+    au < manifest ; exists ; 2008 ; Theory of Probability and its Applications Volume 52 ; 52 >
+    au < manifest ; exists ; 2009 ; Theory of Probability and its Applications Volume 53 ; 53 >
+    au < manifest ; exists ; 2010 ; Theory of Probability and its Applications Volume 54 ; 54 >
+    au < finished ; crawling ; 2011 ; Theory of Probability and its Applications Volume 55 ; 55 >
+    au < finished ; crawling ; 2012 ; Theory of Probability and its Applications Volume 56 ; 56 >
+    au < crawling ; exists ; 2013 ; Theory of Probability and its Applications Volume 57 ; 57 >
+    au < expected ; exists ; 2014 ; Theory of Probability and its Applications Volume 58 ; 58 >
+
+  }
+
+}
