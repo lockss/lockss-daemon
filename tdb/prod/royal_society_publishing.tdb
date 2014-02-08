@@ -155,13 +155,14 @@
   {
   
     title <
-      name = Notes and Records of the Royal Society ;
+      name = Notes and Records the Royal Society Journal of the History of Science;
       issn = 0035-9149 ;
       eissn = 1743-0178 ;
       issnl = 0035-9149
     >
 
     param[base_url] = http://rsnr.royalsocietypublishing.org/
+    comment[name] = title changed in 2014
 
     au < released ; 1938 ; Notes and Records of the Royal Society Volume 1 ; 1 >
     au < released ; 1939 ; Notes and Records of the Royal Society Volume 2 ; 2 >
@@ -230,7 +231,7 @@
     au < released ; 2011 ; Notes and Records of the Royal Society Volume 65 ; 65 >
     au < released ; 2012 ; Notes and Records of the Royal Society Volume 66 ; 66 >
     au < manifest ; 2013 ; Notes and Records of the Royal Society Volume 67 ; 67 >
-    au < expected ; 2014 ; Notes and Records of the Royal Society Volume 68 ; 68 >
+    au < manifest ; 2014 ; Notes and Records the Royal Society Journal of the History of Science Volume 68 ; 68 >
 
   }
 
