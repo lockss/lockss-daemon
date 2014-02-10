@@ -39511,6 +39511,13 @@
         pluginSuffix = ClockssHighWirePressH20Plugin
         param[base_url] = http://acr.sagepub.com/
   
+        au < exists ; exists ; 1990 ; Acta Radiologica Volume 31 ; 31 ; >
+        au < exists ; exists ; 1991 ; Acta Radiologica Volume 32 ; 32 ; >
+        au < exists ; exists ; 1992 ; Acta Radiologica Volume 33 ; 33 ; >
+        au < exists ; exists ; 1993 ; Acta Radiologica Volume 34 ; 34 ; >
+        au < exists ; exists ; 1994 ; Acta Radiologica Volume 35 ; 35 ; >
+        au < exists ; exists ; 1995 ; Acta Radiologica Volume 36 ; 36 ; >
+        au < exists ; exists ; 1996 ; Acta Radiologica Volume 37 ; 37 ; >
         au < manifest ; exists ; 1997 ; Acta Radiologica Volume 38 ; 38 ; >
         au < manifest ; exists ; 1998 ; Acta Radiologica Volume 39 ; 39 ; >
         au < manifest ; exists ; 1999 ; Acta Radiologica Volume 40 ; 40 ; >
