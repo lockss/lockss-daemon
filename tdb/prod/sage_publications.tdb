@@ -44980,7 +44980,7 @@ comment[mpj] = now published by Brill
       {
       
         plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-        param[base_url] = http://intl-ult.sagepub.com/
+        param[base_url] = http://ult.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
         au < doNotProcess ; 2004 ; Ultrasound Volume 12 ; 12 >
@@ -44992,7 +44992,7 @@ comment[mpj] = now published by Brill
         au < doNotProcess ; 2010 ; Ultrasound Volume 18 ; 18 >
         au < doNotProcess ; 2011 ; Ultrasound Volume 19 ; 19 >
         au < exists ; 2012 ; Ultrasound Volume 20 ; 20 >
-        au < manifest ; 2013 ; Ultrasound Volume 21 ; 21 >
+        au < exists ; 2013 ; Ultrasound Volume 21 ; 21 >
         au < expected ; 2014 ; Ultrasound Volume 22 ; 22 >
   
       }
