@@ -2905,7 +2905,7 @@
         au < released ; 2011 ; Arts and Humanities in Higher Education Volume 10 ; 10 >
         au < released ; 2012 ; Arts and Humanities in Higher Education Volume 11 ; 11 >
         au < manifest ; 2013 ; Arts and Humanities in Higher Education Volume 12 ; 12 >
-        au < expected ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 >
+        au < manifest ; 2014 ; Arts and Humanities in Higher Education Volume 13 ; 13 >
 
       }
 
@@ -4806,7 +4806,7 @@
         au < released ; 2011 ; Capital & Class Volume 35 ; 35 >
         au < released ; 2012 ; Capital & Class Volume 36 ; 36 >
         au < manifest ; 2013 ; Capital & Class Volume 37 ; 37 >
-        au < expected ; 2014 ; Capital & Class Volume 38 ; 38 >
+        au < manifest ; 2014 ; Capital & Class Volume 38 ; 38 >
 
       }
 
@@ -8277,7 +8277,7 @@
         au < released ; 2011 ; Current Directions in Psychological Science Volume 20 ; 20 >
         au < released ; 2012 ; Current Directions in Psychological Science Volume 21 ; 21 >
         au < manifest ; 2013 ; Current Directions in Psychological Science Volume 22 ; 22 >
-        au < expected ; 2014 ; Current Directions in Psychological Science Volume 23 ; 23 >
+        au < manifest ; 2014 ; Current Directions in Psychological Science Volume 23 ; 23 >
 
       }
 
@@ -8856,7 +8856,7 @@
         au < released ; 2011 ; Discourse Studies Volume 13 ; 13 >
         au < released ; 2012 ; Discourse Studies Volume 14 ; 14 >
         au < manifest ; 2013 ; Discourse Studies Volume 15 ; 15 >
-        au < expected ; 2014 ; Discourse Studies Volume 16 ; 16 >
+        au < manifest ; 2014 ; Discourse Studies Volume 16 ; 16 >
 
       }
 
@@ -9121,29 +9121,29 @@
         param[base_url] = http://elr.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 >
-        au < exists ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 >
-        au < exists ; 1992 ; The Economic and Labour Relations Review Volume 3 ; 3 >
-        au < exists ; 1993 ; The Economic and Labour Relations Review Volume 4 ; 4 >
-        au < exists ; 1994 ; The Economic and Labour Relations Review Volume 5 ; 5 >
-        au < exists ; 1995 ; The Economic and Labour Relations Review Volume 6 ; 6 >
-        au < exists ; 1996 ; The Economic and Labour Relations Review Volume 7 ; 7 >
-        au < exists ; 1997 ; The Economic and Labour Relations Review Volume 8 ; 8 >
-        au < exists ; 1998 ; The Economic and Labour Relations Review Volume 9 ; 9 >
-        au < exists ; 1999 ; The Economic and Labour Relations Review Volume 10 ; 10 >
-        au < exists ; 2000 ; The Economic and Labour Relations Review Volume 11 ; 11 >
-        au < exists ; 2001 ; The Economic and Labour Relations Review Volume 12 ; 12 >
-        au < exists ; 2002 ; The Economic and Labour Relations Review Volume 13 ; 13 >
-        au < exists ; 2003 ; The Economic and Labour Relations Review Volume 14 ; 14 >
-        au < exists ; 2004 ; The Economic and Labour Relations Review Volume 15 ; 15 >
-        au < exists ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 >
-        au < exists ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 >
-        au < exists ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 >
-        au < exists ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
-        au < exists ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
-        au < exists ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
-        au < exists ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
-        au < exists ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
+        au < manifest ; 1990 ; The Economic and Labour Relations Review Volume 1 ; 1 >
+        au < manifest ; 1991 ; The Economic and Labour Relations Review Volume 2 ; 2 >
+        au < manifest ; 1992 ; The Economic and Labour Relations Review Volume 3 ; 3 >
+        au < manifest ; 1993 ; The Economic and Labour Relations Review Volume 4 ; 4 >
+        au < manifest ; 1994 ; The Economic and Labour Relations Review Volume 5 ; 5 >
+        au < manifest ; 1995 ; The Economic and Labour Relations Review Volume 6 ; 6 >
+        au < manifest ; 1996 ; The Economic and Labour Relations Review Volume 7 ; 7 >
+        au < manifest ; 1997 ; The Economic and Labour Relations Review Volume 8 ; 8 >
+        au < manifest ; 1998 ; The Economic and Labour Relations Review Volume 9 ; 9 >
+        au < manifest ; 1999 ; The Economic and Labour Relations Review Volume 10 ; 10 >
+        au < manifest ; 2000 ; The Economic and Labour Relations Review Volume 11 ; 11 >
+        au < manifest ; 2001 ; The Economic and Labour Relations Review Volume 12 ; 12 >
+        au < manifest ; 2002 ; The Economic and Labour Relations Review Volume 13 ; 13 >
+        au < manifest ; 2003 ; The Economic and Labour Relations Review Volume 14 ; 14 >
+        au < manifest ; 2004 ; The Economic and Labour Relations Review Volume 15 ; 15 >
+        au < manifest ; 2005 ; The Economic and Labour Relations Review Volume 16 ; 16 >
+        au < manifest ; 2006 ; The Economic and Labour Relations Review Volume 17 ; 17 >
+        au < manifest ; 2007 ; The Economic and Labour Relations Review Volume 18 ; 18 >
+        au < manifest ; 2008 ; The Economic and Labour Relations Review Volume 19 ; 19 >
+        au < manifest ; 2009 ; The Economic and Labour Relations Review Volume 20 ; 20 >
+        au < manifest ; 2010 ; The Economic and Labour Relations Review Volume 21 ; 21 >
+        au < manifest ; 2011 ; The Economic and Labour Relations Review Volume 22 ; 22 >
+        au < manifest ; 2012 ; The Economic and Labour Relations Review Volume 23 ; 23 >
         au < manifest ; 2013 ; The Economic and Labour Relations Review Volume 24 ; 24 >
         au < expected ; 2014 ; The Economic and Labour Relations Review Volume 25 ; 25 >
 
@@ -10971,7 +10971,7 @@
         au < released ; 2011 ; European Journal of Women's Studies Volume 18 ; 18 >
         au < released ; 2012 ; European Journal of Women's Studies Volume 19 ; 19 >
         au < manifest ; 2013 ; European Journal of Women's Studies Volume 20 ; 20 >
-        au < expected ; 2014 ; European Journal of Women's Studies Volume 21 ; 21 >
+        au < manifest ; 2014 ; European Journal of Women's Studies Volume 21 ; 21 >
 
       }
 
@@ -11284,7 +11284,7 @@
         au < released ; 2011 ; Evaluation & the Health Professions Volume 34 ; 34 >
         au < released ; 2012 ; Evaluation & the Health Professions Volume 35 ; 35 >
         au < manifest ; 2013 ; Evaluation & the Health Professions Volume 36 ; 36 >
-        au < expected ; 2014 ; Evaluation & the Health Professions Volume 37 ; 37 >
+        au < manifest ; 2014 ; Evaluation & the Health Professions Volume 37 ; 37 >
 
       }
 
@@ -11633,7 +11633,7 @@
         au < released ; 2011 ; Family Business Review Volume 24 ; 24 >
         au < released ; 2012 ; Family Business Review Volume 25 ; 25 >
         au < manifest ; 2013 ; Family Business Review Volume 26 ; 26 >
-        au < expected ; 2014 ; Family Business Review Volume 27 ; 27 >
+        au < manifest ; 2014 ; Family Business Review Volume 27 ; 27 >
 
       }
 
@@ -12103,7 +12103,7 @@
         au < released ; 2011 ; Focus on Autism and Other Developmental Disabilities Volume 26 ; 26 >
         au < released ; 2012 ; Focus on Autism and Other Developmental Disabilities Volume 27 ; 27 >
         au < manifest ; 2013 ; Focus on Autism and Other Developmental Disabilities Volume 28 ; 28 >
-        au < expected ; 2014 ; Focus on Autism and Other Developmental Disabilities Volume 29 ; 29 >
+        au < manifest ; 2014 ; Focus on Autism and Other Developmental Disabilities Volume 29 ; 29 >
 
       }
 
@@ -12264,7 +12264,7 @@
         au < released ; 2011 ; French Cultural Studies Volume 22 ; 22 >
         au < released ; 2012 ; French Cultural Studies Volume 23 ; 23 >
         au < manifest ; 2013 ; French Cultural Studies Volume 24 ; 24 >
-        au < expected ; 2014 ; French Cultural Studies Volume 25 ; 25 >
+        au < manifest ; 2014 ; French Cultural Studies Volume 25 ; 25 >
 
       }
 
@@ -12430,7 +12430,7 @@
         au < released ; 2011 ; Gender, Technology and Development Volume 15 ; 15 >
         au < released ; 2012 ; Gender, Technology and Development Volume 16 ; 16 >
         au < manifest ; 2013 ; Gender, Technology and Development Volume 17 ; 17 >
-        au < expected ; 2014 ; Gender, Technology and Development Volume 18 ; 18 >
+        au < manifest ; 2014 ; Gender, Technology and Development Volume 18 ; 18 >
 
       }
 
@@ -15281,7 +15281,7 @@
         au < released ; 2011 ; Information Visualization Volume 10 ; 10 >
         au < released ; 2012 ; Information Visualization Volume 11 ; 11 >
         au < manifest ; 2013 ; Information Visualization Volume 12 ; 12 >
-        au < expected ; 2014 ; Information Visualization Volume 13 ; 13 >
+        au < manifest ; 2014 ; Information Visualization Volume 13 ; 13 >
 
       }
 
@@ -18396,7 +18396,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Biological Rhythms Volume 26 ; 26 >
         au < released ; 2012 ; Journal of Biological Rhythms Volume 27 ; 27 >
         au < manifest ; 2013 ; Journal of Biological Rhythms Volume 28 ; 28 >
-        au < expected ; 2014 ; Journal of Biological Rhythms Volume 29 ; 29 >
+        au < manifest ; 2014 ; Journal of Biological Rhythms Volume 29 ; 29 >
 
       }
 
@@ -20967,7 +20967,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Early Childhood Research Volume 9 ; 9 >
         au < released ; 2012 ; Journal of Early Childhood Research Volume 10 ; 10 >
         au < manifest ; 2013 ; Journal of Early Childhood Research Volume 11 ; 11 >
-        au < expected ; 2014 ; Journal of Early Childhood Research Volume 12 ; 12 >
+        au < manifest ; 2014 ; Journal of Early Childhood Research Volume 12 ; 12 >
 
       }
 
@@ -21380,7 +21380,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Emotional and Behavioral Disorders Volume 19 ; 19 >
         au < released ; 2012 ; Journal of Emotional and Behavioral Disorders Volume 20 ; 20 >
         au < manifest ; 2013 ; Journal of Emotional and Behavioral Disorders Volume 21 ; 21 >
-        au < expected ; 2014 ; Journal of Emotional and Behavioral Disorders Volume 22 ; 22 >
+        au < manifest ; 2014 ; Journal of Emotional and Behavioral Disorders Volume 22 ; 22 >
 
       }
 
@@ -21467,7 +21467,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of English Linguistics Volume 39 ; 39 >
         au < released ; 2012 ; Journal of English Linguistics Volume 40 ; 40 >
         au < manifest ; 2013 ; Journal of English Linguistics Volume 41 ; 41 >
-        au < expected ; 2014 ; Journal of English Linguistics Volume 42 ; 42 >
+        au < manifest ; 2014 ; Journal of English Linguistics Volume 42 ; 42 >
 
       }
 
@@ -23089,7 +23089,7 @@ comment[ast] = no longer available with Sage. Moved to Cambridge University Pres
         au < released ; 2011 ; Journal of Industrial Relations Volume 53 ; 53 >
         au < released ; 2012 ; Journal of Industrial Relations Volume 54 ; 54 >
         au < manifest ; 2013 ; Journal of Industrial Relations Volume 55 ; 55 >
-        au < expected ; 2014 ; Journal of Industrial Relations Volume 56 ; 56 >
+        au < manifest ; 2014 ; Journal of Industrial Relations Volume 56 ; 56 >
 
       }
 
@@ -24707,7 +24707,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of Pediatric Oncology Nursing Volume 28 ; 28 >
         au < released ; 2012 ; Journal of Pediatric Oncology Nursing Volume 29 ; 29 >
         au < manifest ; 2013 ; Journal of Pediatric Oncology Nursing Volume 30 ; 30 >
-        au < expected ; 2014 ; Journal of Pediatric Oncology Nursing Volume 31 ; 31 >
+        au < manifest ; 2014 ; Journal of Pediatric Oncology Nursing Volume 31 ; 31 >
 
       }
 
@@ -24789,18 +24789,18 @@ comment[mpj] = now published by Brill
       pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2001 ; Journal of Pharmacy Technology Volume 17 ; 17 >
-      au < exists ; 2002 ; Journal of Pharmacy Technology Volume 18 ; 18 >
-      au < exists ; 2003 ; Journal of Pharmacy Technology Volume 19 ; 19 >
-      au < exists ; 2004 ; Journal of Pharmacy Technology Volume 20 ; 20 >
-      au < exists ; 2005 ; Journal of Pharmacy Technology Volume 21 ; 21 >
-      au < exists ; 2006 ; Journal of Pharmacy Technology Volume 22 ; 22 >
-      au < exists ; 2007 ; Journal of Pharmacy Technology Volume 23 ; 23 >
-      au < exists ; 2008 ; Journal of Pharmacy Technology Volume 24 ; 24 >
-      au < exists ; 2009 ; Journal of Pharmacy Technology Volume 25 ; 25 >
-      au < exists ; 2010 ; Journal of Pharmacy Technology Volume 26 ; 26 >
-      au < exists ; 2011 ; Journal of Pharmacy Technology Volume 27 ; 27 >
-      au < exists ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 >
+      au < manifest ; 2001 ; Journal of Pharmacy Technology Volume 17 ; 17 >
+      au < manifest ; 2002 ; Journal of Pharmacy Technology Volume 18 ; 18 >
+      au < manifest ; 2003 ; Journal of Pharmacy Technology Volume 19 ; 19 >
+      au < manifest ; 2004 ; Journal of Pharmacy Technology Volume 20 ; 20 >
+      au < manifest ; 2005 ; Journal of Pharmacy Technology Volume 21 ; 21 >
+      au < manifest ; 2006 ; Journal of Pharmacy Technology Volume 22 ; 22 >
+      au < manifest ; 2007 ; Journal of Pharmacy Technology Volume 23 ; 23 >
+      au < manifest ; 2008 ; Journal of Pharmacy Technology Volume 24 ; 24 >
+      au < manifest ; 2009 ; Journal of Pharmacy Technology Volume 25 ; 25 >
+      au < manifest ; 2010 ; Journal of Pharmacy Technology Volume 26 ; 26 >
+      au < manifest ; 2011 ; Journal of Pharmacy Technology Volume 27 ; 27 >
+      au < manifest ; 2012 ; Journal of Pharmacy Technology Volume 28 ; 28 >
       au < manifest ; 2013 ; Journal of Pharmacy Technology Volume 29 ; 29 >
       au < manifest ; 2014 ; Journal of Pharmacy Technology Volume 30 ; 30 >
 
@@ -26537,7 +26537,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Journal of the American Psychiatric Nurses Association Volume 17 ; 17 >
         au < released ; 2012 ; Journal of the American Psychiatric Nurses Association Volume 18 ; 18 >
         au < manifest ; 2013 ; Journal of the American Psychiatric Nurses Association Volume 19 ; 19 >
-        au < expected ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 >
+        au < manifest ; 2014 ; Journal of the American Psychiatric Nurses Association Volume 20 ; 20 >
 
       }
 
@@ -28954,51 +28954,51 @@ comment[mpj] = now published by Brill
         param[base_url] = http://mac.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
 
-        au < exists ; 1968 ; Measurement and Control Volume 1 ; 1 >
-        au < exists ; 1969 ; Measurement and Control Volume 2 ; 2 >
-        au < exists ; 1970 ; Measurement and Control Volume 3 ; 3 >
-        au < exists ; 1971 ; Measurement and Control Volume 4 ; 4 >
-        au < exists ; 1972 ; Measurement and Control Volume 5 ; 5 >
-        au < exists ; 1973 ; Measurement and Control Volume 6 ; 6 >
-        au < exists ; 1974 ; Measurement and Control Volume 7 ; 7 >
-        au < exists ; 1975 ; Measurement and Control Volume 8 ; 8 >
-        au < exists ; 1976 ; Measurement and Control Volume 9 ; 9 >
-        au < exists ; 1977 ; Measurement and Control Volume 10 ; 10 >
-        au < exists ; 1978 ; Measurement and Control Volume 11 ; 11 >
-        au < exists ; 1979 ; Measurement and Control Volume 12 ; 12 >
-        au < exists ; 1980 ; Measurement and Control Volume 13 ; 13 >
-        au < exists ; 1981 ; Measurement and Control Volume 14 ; 14 >
-        au < exists ; 1982 ; Measurement and Control Volume 15 ; 15 >
-        au < exists ; 1983 ; Measurement and Control Volume 16 ; 16 >
-        au < exists ; 1984 ; Measurement and Control Volume 17 ; 17 >
-        au < exists ; 1985 ; Measurement and Control Volume 18 ; 18 >
-        au < exists ; 1986 ; Measurement and Control Volume 19 ; 19 >
-        au < exists ; 1987 ; Measurement and Control Volume 20 ; 20 >
-        au < exists ; 1988 ; Measurement and Control Volume 21 ; 21 >
-        au < exists ; 1989 ; Measurement and Control Volume 22 ; 22 >
-        au < exists ; 1990 ; Measurement and Control Volume 23 ; 23 >
-        au < exists ; 1991 ; Measurement and Control Volume 24 ; 24 >
-        au < exists ; 1992 ; Measurement and Control Volume 25 ; 25 >
-        au < exists ; 1993 ; Measurement and Control Volume 26 ; 26 >
-        au < exists ; 1994 ; Measurement and Control Volume 27 ; 27 >
-        au < exists ; 1995 ; Measurement and Control Volume 28 ; 28 >
-        au < exists ; 1996 ; Measurement and Control Volume 29 ; 29 >
-        au < exists ; 1997 ; Measurement and Control Volume 30 ; 30 >
-        au < exists ; 1998 ; Measurement and Control Volume 31 ; 31 >
-        au < exists ; 1999 ; Measurement and Control Volume 32 ; 32 >
-        au < exists ; 2000 ; Measurement and Control Volume 33 ; 33 >
-        au < exists ; 2001 ; Measurement and Control Volume 34 ; 34 >
-        au < exists ; 2002 ; Measurement and Control Volume 35 ; 35 >
-        au < exists ; 2003 ; Measurement and Control Volume 36 ; 36 >
-        au < exists ; 2004 ; Measurement and Control Volume 37 ; 37 >
-        au < exists ; 2005 ; Measurement and Control Volume 38 ; 38 >
-        au < exists ; 2006 ; Measurement and Control Volume 39 ; 39 >
-        au < exists ; 2007 ; Measurement and Control Volume 40 ; 40 >
-        au < exists ; 2008 ; Measurement and Control Volume 41 ; 41 >
-        au < exists ; 2009 ; Measurement and Control Volume 42 ; 42 >
-        au < exists ; 2010 ; Measurement and Control Volume 43 ; 43 >
-        au < exists ; 2011 ; Measurement and Control Volume 44 ; 44 >
-        au < exists ; 2012 ; Measurement and Control Volume 45 ; 45 >
+        au < manifest ; 1968 ; Measurement and Control Volume 1 ; 1 >
+        au < manifest ; 1969 ; Measurement and Control Volume 2 ; 2 >
+        au < manifest ; 1970 ; Measurement and Control Volume 3 ; 3 >
+        au < manifest ; 1971 ; Measurement and Control Volume 4 ; 4 >
+        au < manifest ; 1972 ; Measurement and Control Volume 5 ; 5 >
+        au < manifest ; 1973 ; Measurement and Control Volume 6 ; 6 >
+        au < manifest ; 1974 ; Measurement and Control Volume 7 ; 7 >
+        au < manifest ; 1975 ; Measurement and Control Volume 8 ; 8 >
+        au < manifest ; 1976 ; Measurement and Control Volume 9 ; 9 >
+        au < manifest ; 1977 ; Measurement and Control Volume 10 ; 10 >
+        au < manifest ; 1978 ; Measurement and Control Volume 11 ; 11 >
+        au < manifest ; 1979 ; Measurement and Control Volume 12 ; 12 >
+        au < manifest ; 1980 ; Measurement and Control Volume 13 ; 13 >
+        au < manifest ; 1981 ; Measurement and Control Volume 14 ; 14 >
+        au < manifest ; 1982 ; Measurement and Control Volume 15 ; 15 >
+        au < manifest ; 1983 ; Measurement and Control Volume 16 ; 16 >
+        au < manifest ; 1984 ; Measurement and Control Volume 17 ; 17 >
+        au < manifest ; 1985 ; Measurement and Control Volume 18 ; 18 >
+        au < manifest ; 1986 ; Measurement and Control Volume 19 ; 19 >
+        au < manifest ; 1987 ; Measurement and Control Volume 20 ; 20 >
+        au < manifest ; 1988 ; Measurement and Control Volume 21 ; 21 >
+        au < manifest ; 1989 ; Measurement and Control Volume 22 ; 22 >
+        au < manifest ; 1990 ; Measurement and Control Volume 23 ; 23 >
+        au < doesNotExist ; 1991 ; Measurement and Control Volume 24 ; 24 >
+        au < doesNotExist ; 1992 ; Measurement and Control Volume 25 ; 25 >
+        au < manifest ; 1993 ; Measurement and Control Volume 26 ; 26 >
+        au < manifest ; 1994 ; Measurement and Control Volume 27 ; 27 >
+        au < manifest ; 1995 ; Measurement and Control Volume 28 ; 28 >
+        au < manifest ; 1996 ; Measurement and Control Volume 29 ; 29 >
+        au < manifest ; 1997 ; Measurement and Control Volume 30 ; 30 >
+        au < manifest ; 1998 ; Measurement and Control Volume 31 ; 31 >
+        au < manifest ; 1999 ; Measurement and Control Volume 32 ; 32 >
+        au < manifest ; 2000 ; Measurement and Control Volume 33 ; 33 >
+        au < manifest ; 2001 ; Measurement and Control Volume 34 ; 34 >
+        au < manifest ; 2002 ; Measurement and Control Volume 35 ; 35 >
+        au < manifest ; 2003 ; Measurement and Control Volume 36 ; 36 >
+        au < manifest ; 2004 ; Measurement and Control Volume 37 ; 37 >
+        au < manifest ; 2005 ; Measurement and Control Volume 38 ; 38 >
+        au < manifest ; 2006 ; Measurement and Control Volume 39 ; 39 >
+        au < manifest ; 2007 ; Measurement and Control Volume 40 ; 40 >
+        au < manifest ; 2008 ; Measurement and Control Volume 41 ; 41 >
+        au < manifest ; 2009 ; Measurement and Control Volume 42 ; 42 >
+        au < manifest ; 2010 ; Measurement and Control Volume 43 ; 43 >
+        au < manifest ; 2011 ; Measurement and Control Volume 44 ; 44 >
+        au < manifest ; 2012 ; Measurement and Control Volume 45 ; 45 >
         au < manifest ; 2013 ; Measurement and Control Volume 46 ; 46 >
         au < manifest ; 2014 ; Measurement and Control Volume 47 ; 47 >
 
@@ -31990,7 +31990,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Political Research Quarterly Volume 64 ; 64 >
         au < released ; 2012 ; Political Research Quarterly Volume 65 ; 65 >
         au < manifest ; 2013 ; Political Research Quarterly Volume 66 ; 66 >
-        au < expected ; 2014 ; Political Research Quarterly Volume 67 ; 67 >
+        au < manifest ; 2014 ; Political Research Quarterly Volume 67 ; 67 >
 
       }
 
@@ -33254,7 +33254,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Progress in Human Geography Volume 35 ; 35 >
         au < released ; 2012 ; Progress in Human Geography Volume 36 ; 36 >
         au < manifest ; 2013 ; Progress in Human Geography Volume 37 ; 37 >
-        au < expected ; 2014 ; Progress in Human Geography Volume 38 ; 38 >
+        au < manifest ; 2014 ; Progress in Human Geography Volume 38 ; 38 >
 
       }
 
@@ -33649,7 +33649,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Psychology of Women Quarterly Volume 35 ; 35 >
         au < released ; 2012 ; Psychology of Women Quarterly Volume 36 ; 36 >
         au < manifest ; 2013 ; Psychology of Women Quarterly Volume 37 ; 37 >
-        au < expected ; 2014 ; Psychology of Women Quarterly Volume 38 ; 38 >
+        au < manifest ; 2014 ; Psychology of Women Quarterly Volume 38 ; 38 >
 
       }
 
@@ -33740,17 +33740,46 @@ comment[mpj] = now published by Brill
       param[base_url] = http://ppm.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 2002 ; Public Personnel Management Volume 31 ; 31 >
-      au < exists ; 2003 ; Public Personnel Management Volume 32 ; 32 >
-      au < exists ; 2004 ; Public Personnel Management Volume 33 ; 33 >
-      au < exists ; 2005 ; Public Personnel Management Volume 34 ; 34 >
-      au < exists ; 2006 ; Public Personnel Management Volume 35 ; 35 >
-      au < exists ; 2007 ; Public Personnel Management Volume 36 ; 36 >
-      au < exists ; 2008 ; Public Personnel Management Volume 37 ; 37 >
-      au < exists ; 2009 ; Public Personnel Management Volume 38 ; 38 >
-      au < exists ; 2010 ; Public Personnel Management Volume 39 ; 39 >
-      au < exists ; 2011 ; Public Personnel Management Volume 40 ; 40 >
-      au < exists ; 2012 ; Public Personnel Management Volume 41 ; 41 >
+      au < exists ; 1973 ; Public Personnel Management Volume 2 ; 2 >
+      au < doesNotExist ; 1974 ; Public Personnel Management Volume 3 ; 3 >
+      au < doesNotExist ; 1975 ; Public Personnel Management Volume 4 ; 4 >
+      au < doesNotExist ; 1976 ; Public Personnel Management Volume 5 ; 5 >
+      au < doesNotExist ; 1977 ; Public Personnel Management Volume 6 ; 6 >
+      au < doesNotExist ; 1978 ; Public Personnel Management Volume 7 ; 7 >
+      au < doesNotExist ; 1979 ; Public Personnel Management Volume 8 ; 8 >
+      au < doesNotExist ; 1980 ; Public Personnel Management Volume 9 ; 9 >
+      au < doesNotExist ; 1981 ; Public Personnel Management Volume 10 ; 10 >
+      au < exists ; 1982 ; Public Personnel Management Volume 11 ; 11 >
+      au < exists ; 1983 ; Public Personnel Management Volume 12 ; 12 >
+      au < exists ; 1984 ; Public Personnel Management Volume 13 ; 13 >
+      au < exists ; 1985 ; Public Personnel Management Volume 14 ; 14 >
+      au < exists ; 1986 ; Public Personnel Management Volume 15 ; 15 >
+      au < exists ; 1987 ; Public Personnel Management Volume 16 ; 16 >
+      au < exists ; 1988 ; Public Personnel Management Volume 17 ; 17 >
+      au < exists ; 1989 ; Public Personnel Management Volume 18 ; 18 >
+      au < exists ; 1990 ; Public Personnel Management Volume 19 ; 19 >
+      au < exists ; 1991 ; Public Personnel Management Volume 20 ; 20 >
+      au < exists ; 1992 ; Public Personnel Management Volume 21 ; 21 >
+      au < exists ; 1993 ; Public Personnel Management Volume 22 ; 22 >
+      au < exists ; 1994 ; Public Personnel Management Volume 23 ; 23 >
+      au < exists ; 1995 ; Public Personnel Management Volume 24 ; 24 >
+      au < exists ; 1996 ; Public Personnel Management Volume 25 ; 25 >
+      au < exists ; 1997 ; Public Personnel Management Volume 26 ; 26 >
+      au < exists ; 1998 ; Public Personnel Management Volume 27 ; 27 >
+      au < exists ; 1999 ; Public Personnel Management Volume 28 ; 28 >
+      au < exists ; 2000 ; Public Personnel Management Volume 29 ; 29 >
+      au < exists ; 2001 ; Public Personnel Management Volume 30 ; 30 >
+      au < manifest ; 2002 ; Public Personnel Management Volume 31 ; 31 >
+      au < manifest ; 2003 ; Public Personnel Management Volume 32 ; 32 >
+      au < manifest ; 2004 ; Public Personnel Management Volume 33 ; 33 >
+      au < manifest ; 2005 ; Public Personnel Management Volume 34 ; 34 >
+      au < manifest ; 2006 ; Public Personnel Management Volume 35 ; 35 >
+      au < manifest ; 2007 ; Public Personnel Management Volume 36 ; 36 >
+      au < manifest ; 2008 ; Public Personnel Management Volume 37 ; 37 >
+      au < manifest ; 2009 ; Public Personnel Management Volume 38 ; 38 >
+      au < manifest ; 2010 ; Public Personnel Management Volume 39 ; 39 >
+      au < manifest ; 2011 ; Public Personnel Management Volume 40 ; 40 >
+      au < manifest ; 2012 ; Public Personnel Management Volume 41 ; 41 >
       au < manifest ; 2013 ; Public Personnel Management Volume 42 ; 42 >
       au < expected ; 2014 ; Public Personnel Management Volume 43 ; 43 >
 
@@ -35005,7 +35034,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Review of Educational Research Volume 81 ; 81 >
         au < released ; 2012 ; Review of Educational Research Volume 82 ; 82 >
         au < manifest ; 2013 ; Review of Educational Research Volume 83 ; 83 >
-        au < expected ; 2014 ; Review of Educational Research Volume 84 ; 84 >
+        au < manifest ; 2014 ; Review of Educational Research Volume 84 ; 84 >
 
       }
 
@@ -35565,7 +35594,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Science Technology & Society Volume 16 ; 16 >
         au < released ; 2012 ; Science Technology & Society Volume 17 ; 17 >
         au < manifest ; 2013 ; Science Technology & Society Volume 18 ; 18 >
-        au < expected ; 2014 ; Science Technology & Society Volume 19 ; 19 >
+        au < manifest ; 2014 ; Science Technology & Society Volume 19 ; 19 >
 
       }
 
@@ -35910,7 +35939,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Sexualities Volume 14 ; 14 >
         au < released ; 2012 ; Sexualities Volume 15 ; 15 >
         au < manifest ; 2013 ; Sexualities Volume 16 ; 16 >
-        au < expected ; 2014 ; Sexualities Volume 17 ; 17 >
+        au < manifest ; 2014 ; Sexualities Volume 17 ; 17 >
 
       }
 
@@ -36843,7 +36872,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Sociology Volume 45 ; 45 >
         au < released ; 2012 ; Sociology Volume 46 ; 46 >
         au < manifest ; 2013 ; Sociology Volume 47 ; 47 >
-        au < expected ; 2014 ; Sociology Volume 48 ; 48 >
+        au < manifest ; 2014 ; Sociology Volume 48 ; 48 >
 
       }
 
@@ -36890,40 +36919,40 @@ comment[mpj] = now published by Brill
       param[base_url] = http://sap.sagepub.com/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < exists ; 1979 ; South African Journal of Psychology Volume 9 ; 9 >
-      au < exists ; 1980 ; South African Journal of Psychology Volume 10 ; 10 >
-      au < exists ; 1981 ; South African Journal of Psychology Volume 11 ; 11 >
-      au < exists ; 1982 ; South African Journal of Psychology Volume 12 ; 12 >
-      au < exists ; 1983 ; South African Journal of Psychology Volume 13 ; 13 >
-      au < exists ; 1984 ; South African Journal of Psychology Volume 14 ; 14 >
-      au < exists ; 1985 ; South African Journal of Psychology Volume 15 ; 15 >
-      au < exists ; 1986 ; South African Journal of Psychology Volume 16 ; 16 >
-      au < exists ; 1987 ; South African Journal of Psychology Volume 17 ; 17 >
-      au < exists ; 1988 ; South African Journal of Psychology Volume 18 ; 18 >
-      au < exists ; 1989 ; South African Journal of Psychology Volume 19 ; 19 >
-      au < exists ; 1990 ; South African Journal of Psychology Volume 20 ; 20 >
-      au < exists ; 1991 ; South African Journal of Psychology Volume 21 ; 21 >
-      au < exists ; 1992 ; South African Journal of Psychology Volume 22 ; 22 >
-      au < exists ; 1993 ; South African Journal of Psychology Volume 23 ; 23 >
-      au < exists ; 1994 ; South African Journal of Psychology Volume 24 ; 24 >
-      au < exists ; 1995 ; South African Journal of Psychology Volume 25 ; 25 >
-      au < exists ; 1996 ; South African Journal of Psychology Volume 26 ; 26 >
-      au < exists ; 1997 ; South African Journal of Psychology Volume 27 ; 27 >
-      au < exists ; 1998 ; South African Journal of Psychology Volume 28 ; 28 >
-      au < exists ; 1999 ; South African Journal of Psychology Volume 29 ; 29 >
-      au < exists ; 2000 ; South African Journal of Psychology Volume 30 ; 30 >
-      au < exists ; 2001 ; South African Journal of Psychology Volume 31 ; 31 >
-      au < exists ; 2002 ; South African Journal of Psychology Volume 32 ; 32 >
-      au < exists ; 2003 ; South African Journal of Psychology Volume 33 ; 33 >
-      au < exists ; 2004 ; South African Journal of Psychology Volume 34 ; 34 >
-      au < exists ; 2005 ; South African Journal of Psychology Volume 35 ; 35 >
-      au < exists ; 2006 ; South African Journal of Psychology Volume 36 ; 36 >
-      au < exists ; 2007 ; South African Journal of Psychology Volume 37 ; 37 >
-      au < exists ; 2008 ; South African Journal of Psychology Volume 38 ; 38 >
-      au < exists ; 2009 ; South African Journal of Psychology Volume 39 ; 39 >
-      au < exists ; 2010 ; South African Journal of Psychology Volume 40 ; 40 >
-      au < exists ; 2011 ; South African Journal of Psychology Volume 41 ; 41 >
-      au < exists ; 2012 ; South African Journal of Psychology Volume 42 ; 42 >
+      au < manifest ; 1979 ; South African Journal of Psychology Volume 9 ; 9 >
+      au < manifest ; 1980 ; South African Journal of Psychology Volume 10 ; 10 >
+      au < manifest ; 1981 ; South African Journal of Psychology Volume 11 ; 11 >
+      au < manifest ; 1982 ; South African Journal of Psychology Volume 12 ; 12 >
+      au < manifest ; 1983 ; South African Journal of Psychology Volume 13 ; 13 >
+      au < manifest ; 1984 ; South African Journal of Psychology Volume 14 ; 14 >
+      au < manifest ; 1985 ; South African Journal of Psychology Volume 15 ; 15 >
+      au < manifest ; 1986 ; South African Journal of Psychology Volume 16 ; 16 >
+      au < manifest ; 1987 ; South African Journal of Psychology Volume 17 ; 17 >
+      au < manifest ; 1988 ; South African Journal of Psychology Volume 18 ; 18 >
+      au < manifest ; 1989 ; South African Journal of Psychology Volume 19 ; 19 >
+      au < manifest ; 1990 ; South African Journal of Psychology Volume 20 ; 20 >
+      au < manifest ; 1991 ; South African Journal of Psychology Volume 21 ; 21 >
+      au < manifest ; 1992 ; South African Journal of Psychology Volume 22 ; 22 >
+      au < manifest ; 1993 ; South African Journal of Psychology Volume 23 ; 23 >
+      au < manifest ; 1994 ; South African Journal of Psychology Volume 24 ; 24 >
+      au < manifest ; 1995 ; South African Journal of Psychology Volume 25 ; 25 >
+      au < manifest ; 1996 ; South African Journal of Psychology Volume 26 ; 26 >
+      au < manifest ; 1997 ; South African Journal of Psychology Volume 27 ; 27 >
+      au < manifest ; 1998 ; South African Journal of Psychology Volume 28 ; 28 >
+      au < manifest ; 1999 ; South African Journal of Psychology Volume 29 ; 29 >
+      au < manifest ; 2000 ; South African Journal of Psychology Volume 30 ; 30 >
+      au < manifest ; 2001 ; South African Journal of Psychology Volume 31 ; 31 >
+      au < manifest ; 2002 ; South African Journal of Psychology Volume 32 ; 32 >
+      au < manifest ; 2003 ; South African Journal of Psychology Volume 33 ; 33 >
+      au < manifest ; 2004 ; South African Journal of Psychology Volume 34 ; 34 >
+      au < manifest ; 2005 ; South African Journal of Psychology Volume 35 ; 35 >
+      au < manifest ; 2006 ; South African Journal of Psychology Volume 36 ; 36 >
+      au < manifest ; 2007 ; South African Journal of Psychology Volume 37 ; 37 >
+      au < manifest ; 2008 ; South African Journal of Psychology Volume 38 ; 38 >
+      au < manifest ; 2009 ; South African Journal of Psychology Volume 39 ; 39 >
+      au < manifest ; 2010 ; South African Journal of Psychology Volume 40 ; 40 >
+      au < manifest ; 2011 ; South African Journal of Psychology Volume 41 ; 41 >
+      au < manifest ; 2012 ; South African Journal of Psychology Volume 42 ; 42 >
       au < manifest ; 2013 ; South African Journal of Psychology Volume 43 ; 43 >
       au < expected ; 2014 ; South African Journal of Psychology Volume 44 ; 44 >
 
@@ -38356,7 +38385,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Theoretical Criminology Volume 15 ; 15 >
         au < released ; 2012 ; Theoretical Criminology Volume 16 ; 16 >
         au < manifest ; 2013 ; Theoretical Criminology Volume 17 ; 17 >
-        au < expected ; 2014 ; Theoretical Criminology Volume 18 ; 18 >
+        au < manifest ; 2014 ; Theoretical Criminology Volume 18 ; 18 >
 
       }
 
@@ -39027,7 +39056,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 2013 ; Thesis Eleven Volume 117 ; 117 >
         au < manifest ; 2013 ; Thesis Eleven Volume 118 ; 118 >
         au < manifest ; 2013 ; Thesis Eleven Volume 119 ; 119 >
-        au < expected ; 2014 ; Thesis Eleven Volume 120 ; 120 >
+        au < manifest ; 2014 ; Thesis Eleven Volume 120 ; 120 >
         au < expected ; 2014 ; Thesis Eleven Volume 121 ; 121 >
         au < expected ; 2014 ; Thesis Eleven Volume 122 ; 122 >
         au < expected ; 2014 ; Thesis Eleven Volume 123 ; 123 >
@@ -39531,7 +39560,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Transfer: European Review of Labour and Research Volume 17 ; 17 >
         au < released ; 2012 ; Transfer: European Review of Labour and Research Volume 18 ; 18 >
         au < manifest ; 2013 ; Transfer: European Review of Labour and Research Volume 19 ; 19 >
-        au < expected ; 2014 ; Transfer: European Review of Labour and Research Volume 20 ; 20 >
+        au < manifest ; 2014 ; Transfer: European Review of Labour and Research Volume 20 ; 20 >
 
       }
 
@@ -40770,7 +40799,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Work, Employment & Society Volume 25 ; 25 >
         au < released ; 2012 ; Work, Employment & Society Volume 26 ; 26 >
         au < manifest ; 2013 ; Work, Employment & Society Volume 27 ; 27 >
-        au < expected ; 2014 ; Work, Employment & Society Volume 28 ; 28 >
+        au < manifest ; 2014 ; Work, Employment & Society Volume 28 ; 28 >
 
       }
 
@@ -41058,7 +41087,7 @@ comment[mpj] = now published by Brill
         au < released ; 2011 ; Youth & Society Volume 43 ; 43 >
         au < released ; 2012 ; Youth & Society Volume 44 ; 44 >
         au < manifest ; 2013 ; Youth & Society Volume 45 ; 45 >
-        au < expected ; 2014 ; Youth & Society Volume 46 ; 46 >
+        au < manifest ; 2014 ; Youth & Society Volume 46 ; 46 >
 
       }
 
@@ -41265,70 +41294,70 @@ comment[mpj] = now published by Brill
         pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1947 ; Interpretation: A Journal of Bible and Theology Volume 1 ; 1 >
-        au < exists ; 1948 ; Interpretation: A Journal of Bible and Theology Volume 2 ; 2 >
-        au < exists ; 1949 ; Interpretation: A Journal of Bible and Theology Volume 3 ; 3 >
-        au < exists ; 1950 ; Interpretation: A Journal of Bible and Theology Volume 4 ; 4 >
-        au < exists ; 1951 ; Interpretation: A Journal of Bible and Theology Volume 5 ; 5 >
-        au < exists ; 1952 ; Interpretation: A Journal of Bible and Theology Volume 6 ; 6 >
-        au < exists ; 1953 ; Interpretation: A Journal of Bible and Theology Volume 7 ; 7 >
-        au < exists ; 1954 ; Interpretation: A Journal of Bible and Theology Volume 8 ; 8 >
-        au < exists ; 1955 ; Interpretation: A Journal of Bible and Theology Volume 9 ; 9 >
-        au < exists ; 1956 ; Interpretation: A Journal of Bible and Theology Volume 10 ; 10 >
-        au < exists ; 1957 ; Interpretation: A Journal of Bible and Theology Volume 11 ; 11 >
-        au < exists ; 1958 ; Interpretation: A Journal of Bible and Theology Volume 12 ; 12 >
-        au < exists ; 1959 ; Interpretation: A Journal of Bible and Theology Volume 13 ; 13 >
-        au < exists ; 1960 ; Interpretation: A Journal of Bible and Theology Volume 14 ; 14 >
-        au < exists ; 1961 ; Interpretation: A Journal of Bible and Theology Volume 15 ; 15 >
-        au < exists ; 1962 ; Interpretation: A Journal of Bible and Theology Volume 16 ; 16 >
-        au < exists ; 1963 ; Interpretation: A Journal of Bible and Theology Volume 17 ; 17 >
-        au < exists ; 1964 ; Interpretation: A Journal of Bible and Theology Volume 18 ; 18 >
-        au < exists ; 1965 ; Interpretation: A Journal of Bible and Theology Volume 19 ; 19 >
-        au < exists ; 1966 ; Interpretation: A Journal of Bible and Theology Volume 20 ; 20 >
-        au < exists ; 1967 ; Interpretation: A Journal of Bible and Theology Volume 21 ; 21 >
-        au < exists ; 1968 ; Interpretation: A Journal of Bible and Theology Volume 22 ; 22 >
-        au < exists ; 1969 ; Interpretation: A Journal of Bible and Theology Volume 23 ; 23 >
-        au < exists ; 1970 ; Interpretation: A Journal of Bible and Theology Volume 24 ; 24 >
-        au < exists ; 1971 ; Interpretation: A Journal of Bible and Theology Volume 25 ; 25 >
-        au < exists ; 1972 ; Interpretation: A Journal of Bible and Theology Volume 26 ; 26 >
-        au < exists ; 1973 ; Interpretation: A Journal of Bible and Theology Volume 27 ; 27 >
-        au < exists ; 1974 ; Interpretation: A Journal of Bible and Theology Volume 28 ; 28 >
-        au < exists ; 1975 ; Interpretation: A Journal of Bible and Theology Volume 29 ; 29 >
-        au < exists ; 1976 ; Interpretation: A Journal of Bible and Theology Volume 30 ; 30 >
-        au < exists ; 1977 ; Interpretation: A Journal of Bible and Theology Volume 31 ; 31 >
-        au < exists ; 1978 ; Interpretation: A Journal of Bible and Theology Volume 32 ; 32 >
-        au < exists ; 1979 ; Interpretation: A Journal of Bible and Theology Volume 33 ; 33 >
-        au < exists ; 1980 ; Interpretation: A Journal of Bible and Theology Volume 34 ; 34 >
-        au < exists ; 1981 ; Interpretation: A Journal of Bible and Theology Volume 35 ; 35 >
-        au < exists ; 1982 ; Interpretation: A Journal of Bible and Theology Volume 36 ; 36 >
-        au < exists ; 1983 ; Interpretation: A Journal of Bible and Theology Volume 37 ; 37 >
-        au < exists ; 1984 ; Interpretation: A Journal of Bible and Theology Volume 38 ; 38 >
-        au < exists ; 1985 ; Interpretation: A Journal of Bible and Theology Volume 39 ; 39 >
-        au < exists ; 1986 ; Interpretation: A Journal of Bible and Theology Volume 40 ; 40 >
-        au < exists ; 1987 ; Interpretation: A Journal of Bible and Theology Volume 41 ; 41 >
-        au < exists ; 1988 ; Interpretation: A Journal of Bible and Theology Volume 42 ; 42 >
-        au < exists ; 1989 ; Interpretation: A Journal of Bible and Theology Volume 43 ; 43 >
-        au < exists ; 1990 ; Interpretation: A Journal of Bible and Theology Volume 44 ; 44 >
-        au < exists ; 1991 ; Interpretation: A Journal of Bible and Theology Volume 45 ; 45 >
-        au < exists ; 1992 ; Interpretation: A Journal of Bible and Theology Volume 46 ; 46 >
-        au < exists ; 1993 ; Interpretation: A Journal of Bible and Theology Volume 47 ; 47 >
-        au < exists ; 1994 ; Interpretation: A Journal of Bible and Theology Volume 48 ; 48 >
-        au < exists ; 1995 ; Interpretation: A Journal of Bible and Theology Volume 49 ; 49 >
-        au < exists ; 1996 ; Interpretation: A Journal of Bible and Theology Volume 50 ; 50 >
-        au < exists ; 1997 ; Interpretation: A Journal of Bible and Theology Volume 51 ; 51 >
-        au < exists ; 1998 ; Interpretation: A Journal of Bible and Theology Volume 52 ; 52 >
-        au < exists ; 1999 ; Interpretation: A Journal of Bible and Theology Volume 53 ; 53 >
-        au < exists ; 2000 ; Interpretation: A Journal of Bible and Theology Volume 54 ; 54 >
-        au < exists ; 2001 ; Interpretation: A Journal of Bible and Theology Volume 55 ; 55 >
-        au < exists ; 2002 ; Interpretation: A Journal of Bible and Theology Volume 56 ; 56 >
-        au < exists ; 2003 ; Interpretation: A Journal of Bible and Theology Volume 57 ; 57 >
-        au < exists ; 2004 ; Interpretation: A Journal of Bible and Theology Volume 58 ; 58 >
-        au < exists ; 2005 ; Interpretation: A Journal of Bible and Theology Volume 59 ; 59 >
-        au < exists ; 2006 ; Interpretation: A Journal of Bible and Theology Volume 60 ; 60 >
-        au < exists ; 2007 ; Interpretation: A Journal of Bible and Theology Volume 61 ; 61 >
-        au < exists ; 2008 ; Interpretation: A Journal of Bible and Theology Volume 62 ; 62 >
-        au < exists ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 >
-        au < exists ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 >
+        au < manifest ; 1947 ; Interpretation: A Journal of Bible and Theology Volume 1 ; 1 >
+        au < manifest ; 1948 ; Interpretation: A Journal of Bible and Theology Volume 2 ; 2 >
+        au < manifest ; 1949 ; Interpretation: A Journal of Bible and Theology Volume 3 ; 3 >
+        au < manifest ; 1950 ; Interpretation: A Journal of Bible and Theology Volume 4 ; 4 >
+        au < manifest ; 1951 ; Interpretation: A Journal of Bible and Theology Volume 5 ; 5 >
+        au < manifest ; 1952 ; Interpretation: A Journal of Bible and Theology Volume 6 ; 6 >
+        au < manifest ; 1953 ; Interpretation: A Journal of Bible and Theology Volume 7 ; 7 >
+        au < manifest ; 1954 ; Interpretation: A Journal of Bible and Theology Volume 8 ; 8 >
+        au < manifest ; 1955 ; Interpretation: A Journal of Bible and Theology Volume 9 ; 9 >
+        au < manifest ; 1956 ; Interpretation: A Journal of Bible and Theology Volume 10 ; 10 >
+        au < manifest ; 1957 ; Interpretation: A Journal of Bible and Theology Volume 11 ; 11 >
+        au < manifest ; 1958 ; Interpretation: A Journal of Bible and Theology Volume 12 ; 12 >
+        au < manifest ; 1959 ; Interpretation: A Journal of Bible and Theology Volume 13 ; 13 >
+        au < manifest ; 1960 ; Interpretation: A Journal of Bible and Theology Volume 14 ; 14 >
+        au < manifest ; 1961 ; Interpretation: A Journal of Bible and Theology Volume 15 ; 15 >
+        au < manifest ; 1962 ; Interpretation: A Journal of Bible and Theology Volume 16 ; 16 >
+        au < manifest ; 1963 ; Interpretation: A Journal of Bible and Theology Volume 17 ; 17 >
+        au < manifest ; 1964 ; Interpretation: A Journal of Bible and Theology Volume 18 ; 18 >
+        au < manifest ; 1965 ; Interpretation: A Journal of Bible and Theology Volume 19 ; 19 >
+        au < manifest ; 1966 ; Interpretation: A Journal of Bible and Theology Volume 20 ; 20 >
+        au < manifest ; 1967 ; Interpretation: A Journal of Bible and Theology Volume 21 ; 21 >
+        au < manifest ; 1968 ; Interpretation: A Journal of Bible and Theology Volume 22 ; 22 >
+        au < manifest ; 1969 ; Interpretation: A Journal of Bible and Theology Volume 23 ; 23 >
+        au < manifest ; 1970 ; Interpretation: A Journal of Bible and Theology Volume 24 ; 24 >
+        au < manifest ; 1971 ; Interpretation: A Journal of Bible and Theology Volume 25 ; 25 >
+        au < manifest ; 1972 ; Interpretation: A Journal of Bible and Theology Volume 26 ; 26 >
+        au < manifest ; 1973 ; Interpretation: A Journal of Bible and Theology Volume 27 ; 27 >
+        au < manifest ; 1974 ; Interpretation: A Journal of Bible and Theology Volume 28 ; 28 >
+        au < manifest ; 1975 ; Interpretation: A Journal of Bible and Theology Volume 29 ; 29 >
+        au < manifest ; 1976 ; Interpretation: A Journal of Bible and Theology Volume 30 ; 30 >
+        au < manifest ; 1977 ; Interpretation: A Journal of Bible and Theology Volume 31 ; 31 >
+        au < manifest ; 1978 ; Interpretation: A Journal of Bible and Theology Volume 32 ; 32 >
+        au < manifest ; 1979 ; Interpretation: A Journal of Bible and Theology Volume 33 ; 33 >
+        au < manifest ; 1980 ; Interpretation: A Journal of Bible and Theology Volume 34 ; 34 >
+        au < manifest ; 1981 ; Interpretation: A Journal of Bible and Theology Volume 35 ; 35 >
+        au < manifest ; 1982 ; Interpretation: A Journal of Bible and Theology Volume 36 ; 36 >
+        au < manifest ; 1983 ; Interpretation: A Journal of Bible and Theology Volume 37 ; 37 >
+        au < manifest ; 1984 ; Interpretation: A Journal of Bible and Theology Volume 38 ; 38 >
+        au < manifest ; 1985 ; Interpretation: A Journal of Bible and Theology Volume 39 ; 39 >
+        au < manifest ; 1986 ; Interpretation: A Journal of Bible and Theology Volume 40 ; 40 >
+        au < manifest ; 1987 ; Interpretation: A Journal of Bible and Theology Volume 41 ; 41 >
+        au < manifest ; 1988 ; Interpretation: A Journal of Bible and Theology Volume 42 ; 42 >
+        au < manifest ; 1989 ; Interpretation: A Journal of Bible and Theology Volume 43 ; 43 >
+        au < manifest ; 1990 ; Interpretation: A Journal of Bible and Theology Volume 44 ; 44 >
+        au < manifest ; 1991 ; Interpretation: A Journal of Bible and Theology Volume 45 ; 45 >
+        au < manifest ; 1992 ; Interpretation: A Journal of Bible and Theology Volume 46 ; 46 >
+        au < manifest ; 1993 ; Interpretation: A Journal of Bible and Theology Volume 47 ; 47 >
+        au < manifest ; 1994 ; Interpretation: A Journal of Bible and Theology Volume 48 ; 48 >
+        au < manifest ; 1995 ; Interpretation: A Journal of Bible and Theology Volume 49 ; 49 >
+        au < manifest ; 1996 ; Interpretation: A Journal of Bible and Theology Volume 50 ; 50 >
+        au < manifest ; 1997 ; Interpretation: A Journal of Bible and Theology Volume 51 ; 51 >
+        au < manifest ; 1998 ; Interpretation: A Journal of Bible and Theology Volume 52 ; 52 >
+        au < manifest ; 1999 ; Interpretation: A Journal of Bible and Theology Volume 53 ; 53 >
+        au < manifest ; 2000 ; Interpretation: A Journal of Bible and Theology Volume 54 ; 54 >
+        au < manifest ; 2001 ; Interpretation: A Journal of Bible and Theology Volume 55 ; 55 >
+        au < manifest ; 2002 ; Interpretation: A Journal of Bible and Theology Volume 56 ; 56 >
+        au < manifest ; 2003 ; Interpretation: A Journal of Bible and Theology Volume 57 ; 57 >
+        au < manifest ; 2004 ; Interpretation: A Journal of Bible and Theology Volume 58 ; 58 >
+        au < manifest ; 2005 ; Interpretation: A Journal of Bible and Theology Volume 59 ; 59 >
+        au < manifest ; 2006 ; Interpretation: A Journal of Bible and Theology Volume 60 ; 60 >
+        au < manifest ; 2007 ; Interpretation: A Journal of Bible and Theology Volume 61 ; 61 >
+        au < manifest ; 2008 ; Interpretation: A Journal of Bible and Theology Volume 62 ; 62 >
+        au < manifest ; 2009 ; Interpretation: A Journal of Bible and Theology Volume 63 ; 63 >
+        au < manifest ; 2010 ; Interpretation: A Journal of Bible and Theology Volume 64 ; 64 >
         au < manifest ; 2011 ; Interpretation: A Journal of Bible and Theology Volume 65 ; 65 >
         au < released ; 2012 ; Interpretation: A Journal of Bible and Theology Volume 66 ; 66 >
         au < manifest ; 2013 ; Interpretation: A Journal of Bible and Theology Volume 67 ; 67 >
@@ -43771,73 +43800,73 @@ comment[mpj] = now published by Brill
         param[base_url] = http://ijx.sagepub.com/
         implicit < status ; year ; name ; param[volume_name] >
   
-        au < exists ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 >
-        au < exists ; 1947 ; International Journal: Canada's Journal of Global Policy Analysis Volume 2 ; 2 >
-        au < exists ; 1948 ; International Journal: Canada's Journal of Global Policy Analysis Volume 3 ; 3 >
-        au < exists ; 1949 ; International Journal: Canada's Journal of Global Policy Analysis Volume 4 ; 4 >
-        au < exists ; 1950 ; International Journal: Canada's Journal of Global Policy Analysis Volume 5 ; 5 >
-        au < exists ; 1951 ; International Journal: Canada's Journal of Global Policy Analysis Volume 6 ; 6 >
-        au < exists ; 1952 ; International Journal: Canada's Journal of Global Policy Analysis Volume 7 ; 7 >
-        au < exists ; 1953 ; International Journal: Canada's Journal of Global Policy Analysis Volume 8 ; 8 >
-        au < exists ; 1954 ; International Journal: Canada's Journal of Global Policy Analysis Volume 9 ; 9 >
-        au < exists ; 1955 ; International Journal: Canada's Journal of Global Policy Analysis Volume 10 ; 10 >
-        au < exists ; 1956 ; International Journal: Canada's Journal of Global Policy Analysis Volume 11 ; 11 >
-        au < exists ; 1957 ; International Journal: Canada's Journal of Global Policy Analysis Volume 12 ; 12 >
-        au < exists ; 1958 ; International Journal: Canada's Journal of Global Policy Analysis Volume 13 ; 13 >
-        au < exists ; 1959 ; International Journal: Canada's Journal of Global Policy Analysis Volume 14 ; 14 >
-        au < exists ; 1960 ; International Journal: Canada's Journal of Global Policy Analysis Volume 15 ; 15 >
-        au < exists ; 1961 ; International Journal: Canada's Journal of Global Policy Analysis Volume 16 ; 16 >
-        au < exists ; 1962 ; International Journal: Canada's Journal of Global Policy Analysis Volume 17 ; 17 >
-        au < exists ; 1963 ; International Journal: Canada's Journal of Global Policy Analysis Volume 18 ; 18 >
-        au < exists ; 1964 ; International Journal: Canada's Journal of Global Policy Analysis Volume 19 ; 19 >
-        au < exists ; 1965 ; International Journal: Canada's Journal of Global Policy Analysis Volume 20 ; 20 >
-        au < exists ; 1966 ; International Journal: Canada's Journal of Global Policy Analysis Volume 21 ; 21 >
-        au < exists ; 1967 ; International Journal: Canada's Journal of Global Policy Analysis Volume 22 ; 22 >
-        au < exists ; 1968 ; International Journal: Canada's Journal of Global Policy Analysis Volume 23 ; 23 >
-        au < exists ; 1969 ; International Journal: Canada's Journal of Global Policy Analysis Volume 24 ; 24 >
-        au < exists ; 1970 ; International Journal: Canada's Journal of Global Policy Analysis Volume 25 ; 25 >
-        au < exists ; 1971 ; International Journal: Canada's Journal of Global Policy Analysis Volume 26 ; 26 >
-        au < exists ; 1972 ; International Journal: Canada's Journal of Global Policy Analysis Volume 27 ; 27 >
-        au < exists ; 1973 ; International Journal: Canada's Journal of Global Policy Analysis Volume 28 ; 28 >
-        au < exists ; 1974 ; International Journal: Canada's Journal of Global Policy Analysis Volume 29 ; 29 >
-        au < exists ; 1975 ; International Journal: Canada's Journal of Global Policy Analysis Volume 30 ; 30 >
-        au < exists ; 1976 ; International Journal: Canada's Journal of Global Policy Analysis Volume 31 ; 31 >
-        au < exists ; 1977 ; International Journal: Canada's Journal of Global Policy Analysis Volume 32 ; 32 >
-        au < exists ; 1978 ; International Journal: Canada's Journal of Global Policy Analysis Volume 33 ; 33 >
-        au < exists ; 1979 ; International Journal: Canada's Journal of Global Policy Analysis Volume 34 ; 34 >
-        au < exists ; 1980 ; International Journal: Canada's Journal of Global Policy Analysis Volume 35 ; 35 >
-        au < exists ; 1981 ; International Journal: Canada's Journal of Global Policy Analysis Volume 36 ; 36 >
-        au < exists ; 1982 ; International Journal: Canada's Journal of Global Policy Analysis Volume 37 ; 37 >
-        au < exists ; 1983 ; International Journal: Canada's Journal of Global Policy Analysis Volume 38 ; 38 >
-        au < exists ; 1984 ; International Journal: Canada's Journal of Global Policy Analysis Volume 39 ; 39 >
-        au < exists ; 1985 ; International Journal: Canada's Journal of Global Policy Analysis Volume 40 ; 40 >
-        au < exists ; 1986 ; International Journal: Canada's Journal of Global Policy Analysis Volume 41 ; 41 >
-        au < exists ; 1987 ; International Journal: Canada's Journal of Global Policy Analysis Volume 42 ; 42 >
-        au < exists ; 1988 ; International Journal: Canada's Journal of Global Policy Analysis Volume 43 ; 43 >
-        au < exists ; 1989 ; International Journal: Canada's Journal of Global Policy Analysis Volume 44 ; 44 >
-        au < exists ; 1990 ; International Journal: Canada's Journal of Global Policy Analysis Volume 45 ; 45 >
-        au < exists ; 1991 ; International Journal: Canada's Journal of Global Policy Analysis Volume 46 ; 46 >
-        au < exists ; 1992 ; International Journal: Canada's Journal of Global Policy Analysis Volume 47 ; 47 >
-        au < exists ; 1993 ; International Journal: Canada's Journal of Global Policy Analysis Volume 48 ; 48 >
-        au < exists ; 1994 ; International Journal: Canada's Journal of Global Policy Analysis Volume 49 ; 49 >
-        au < exists ; 1995 ; International Journal: Canada's Journal of Global Policy Analysis Volume 50 ; 50 >
-        au < exists ; 1996 ; International Journal: Canada's Journal of Global Policy Analysis Volume 51 ; 51 >
-        au < exists ; 1997 ; International Journal: Canada's Journal of Global Policy Analysis Volume 52 ; 52 >
-        au < exists ; 1998 ; International Journal: Canada's Journal of Global Policy Analysis Volume 53 ; 53 >
-        au < exists ; 1999 ; International Journal: Canada's Journal of Global Policy Analysis Volume 54 ; 54 >
-        au < exists ; 2000 ; International Journal: Canada's Journal of Global Policy Analysis Volume 55 ; 55 >
-        au < exists ; 2001 ; International Journal: Canada's Journal of Global Policy Analysis Volume 56 ; 56 >
-        au < exists ; 2002 ; International Journal: Canada's Journal of Global Policy Analysis Volume 57 ; 57 >
-        au < exists ; 2003 ; International Journal: Canada's Journal of Global Policy Analysis Volume 58 ; 58 >
-        au < exists ; 2004 ; International Journal: Canada's Journal of Global Policy Analysis Volume 59 ; 59 >
-        au < exists ; 2005 ; International Journal: Canada's Journal of Global Policy Analysis Volume 60 ; 60 >
-        au < exists ; 2006 ; International Journal: Canada's Journal of Global Policy Analysis Volume 61 ; 61 >
-        au < exists ; 2007 ; International Journal: Canada's Journal of Global Policy Analysis Volume 62 ; 62 >
-        au < exists ; 2008 ; International Journal: Canada's Journal of Global Policy Analysis Volume 63 ; 63 >
-        au < exists ; 2009 ; International Journal: Canada's Journal of Global Policy Analysis Volume 64 ; 64 >
-        au < exists ; 2010 ; International Journal: Canada's Journal of Global Policy Analysis Volume 65 ; 65 >
-        au < exists ; 2011 ; International Journal: Canada's Journal of Global Policy Analysis Volume 66 ; 66 >
-        au < exists ; 2012 ; International Journal: Canada's Journal of Global Policy Analysis Volume 67 ; 67 >
+        au < manifest ; 1946 ; International Journal: Canada's Journal of Global Policy Analysis Volume 1 ; 1 >
+        au < manifest ; 1947 ; International Journal: Canada's Journal of Global Policy Analysis Volume 2 ; 2 >
+        au < manifest ; 1948 ; International Journal: Canada's Journal of Global Policy Analysis Volume 3 ; 3 >
+        au < manifest ; 1949 ; International Journal: Canada's Journal of Global Policy Analysis Volume 4 ; 4 >
+        au < manifest ; 1950 ; International Journal: Canada's Journal of Global Policy Analysis Volume 5 ; 5 >
+        au < manifest ; 1951 ; International Journal: Canada's Journal of Global Policy Analysis Volume 6 ; 6 >
+        au < manifest ; 1952 ; International Journal: Canada's Journal of Global Policy Analysis Volume 7 ; 7 >
+        au < manifest ; 1953 ; International Journal: Canada's Journal of Global Policy Analysis Volume 8 ; 8 >
+        au < manifest ; 1954 ; International Journal: Canada's Journal of Global Policy Analysis Volume 9 ; 9 >
+        au < manifest ; 1955 ; International Journal: Canada's Journal of Global Policy Analysis Volume 10 ; 10 >
+        au < manifest ; 1956 ; International Journal: Canada's Journal of Global Policy Analysis Volume 11 ; 11 >
+        au < manifest ; 1957 ; International Journal: Canada's Journal of Global Policy Analysis Volume 12 ; 12 >
+        au < manifest ; 1958 ; International Journal: Canada's Journal of Global Policy Analysis Volume 13 ; 13 >
+        au < manifest ; 1959 ; International Journal: Canada's Journal of Global Policy Analysis Volume 14 ; 14 >
+        au < manifest ; 1960 ; International Journal: Canada's Journal of Global Policy Analysis Volume 15 ; 15 >
+        au < manifest ; 1961 ; International Journal: Canada's Journal of Global Policy Analysis Volume 16 ; 16 >
+        au < manifest ; 1962 ; International Journal: Canada's Journal of Global Policy Analysis Volume 17 ; 17 >
+        au < manifest ; 1963 ; International Journal: Canada's Journal of Global Policy Analysis Volume 18 ; 18 >
+        au < manifest ; 1964 ; International Journal: Canada's Journal of Global Policy Analysis Volume 19 ; 19 >
+        au < manifest ; 1965 ; International Journal: Canada's Journal of Global Policy Analysis Volume 20 ; 20 >
+        au < manifest ; 1966 ; International Journal: Canada's Journal of Global Policy Analysis Volume 21 ; 21 >
+        au < manifest ; 1967 ; International Journal: Canada's Journal of Global Policy Analysis Volume 22 ; 22 >
+        au < manifest ; 1968 ; International Journal: Canada's Journal of Global Policy Analysis Volume 23 ; 23 >
+        au < manifest ; 1969 ; International Journal: Canada's Journal of Global Policy Analysis Volume 24 ; 24 >
+        au < manifest ; 1970 ; International Journal: Canada's Journal of Global Policy Analysis Volume 25 ; 25 >
+        au < manifest ; 1971 ; International Journal: Canada's Journal of Global Policy Analysis Volume 26 ; 26 >
+        au < manifest ; 1972 ; International Journal: Canada's Journal of Global Policy Analysis Volume 27 ; 27 >
+        au < manifest ; 1973 ; International Journal: Canada's Journal of Global Policy Analysis Volume 28 ; 28 >
+        au < manifest ; 1974 ; International Journal: Canada's Journal of Global Policy Analysis Volume 29 ; 29 >
+        au < manifest ; 1975 ; International Journal: Canada's Journal of Global Policy Analysis Volume 30 ; 30 >
+        au < manifest ; 1976 ; International Journal: Canada's Journal of Global Policy Analysis Volume 31 ; 31 >
+        au < manifest ; 1977 ; International Journal: Canada's Journal of Global Policy Analysis Volume 32 ; 32 >
+        au < manifest ; 1978 ; International Journal: Canada's Journal of Global Policy Analysis Volume 33 ; 33 >
+        au < manifest ; 1979 ; International Journal: Canada's Journal of Global Policy Analysis Volume 34 ; 34 >
+        au < manifest ; 1980 ; International Journal: Canada's Journal of Global Policy Analysis Volume 35 ; 35 >
+        au < manifest ; 1981 ; International Journal: Canada's Journal of Global Policy Analysis Volume 36 ; 36 >
+        au < manifest ; 1982 ; International Journal: Canada's Journal of Global Policy Analysis Volume 37 ; 37 >
+        au < manifest ; 1983 ; International Journal: Canada's Journal of Global Policy Analysis Volume 38 ; 38 >
+        au < manifest ; 1984 ; International Journal: Canada's Journal of Global Policy Analysis Volume 39 ; 39 >
+        au < manifest ; 1985 ; International Journal: Canada's Journal of Global Policy Analysis Volume 40 ; 40 >
+        au < manifest ; 1986 ; International Journal: Canada's Journal of Global Policy Analysis Volume 41 ; 41 >
+        au < manifest ; 1987 ; International Journal: Canada's Journal of Global Policy Analysis Volume 42 ; 42 >
+        au < manifest ; 1988 ; International Journal: Canada's Journal of Global Policy Analysis Volume 43 ; 43 >
+        au < manifest ; 1989 ; International Journal: Canada's Journal of Global Policy Analysis Volume 44 ; 44 >
+        au < manifest ; 1990 ; International Journal: Canada's Journal of Global Policy Analysis Volume 45 ; 45 >
+        au < manifest ; 1991 ; International Journal: Canada's Journal of Global Policy Analysis Volume 46 ; 46 >
+        au < manifest ; 1992 ; International Journal: Canada's Journal of Global Policy Analysis Volume 47 ; 47 >
+        au < manifest ; 1993 ; International Journal: Canada's Journal of Global Policy Analysis Volume 48 ; 48 >
+        au < manifest ; 1994 ; International Journal: Canada's Journal of Global Policy Analysis Volume 49 ; 49 >
+        au < manifest ; 1995 ; International Journal: Canada's Journal of Global Policy Analysis Volume 50 ; 50 >
+        au < manifest ; 1996 ; International Journal: Canada's Journal of Global Policy Analysis Volume 51 ; 51 >
+        au < manifest ; 1997 ; International Journal: Canada's Journal of Global Policy Analysis Volume 52 ; 52 >
+        au < manifest ; 1998 ; International Journal: Canada's Journal of Global Policy Analysis Volume 53 ; 53 >
+        au < manifest ; 1999 ; International Journal: Canada's Journal of Global Policy Analysis Volume 54 ; 54 >
+        au < manifest ; 2000 ; International Journal: Canada's Journal of Global Policy Analysis Volume 55 ; 55 >
+        au < manifest ; 2001 ; International Journal: Canada's Journal of Global Policy Analysis Volume 56 ; 56 >
+        au < manifest ; 2002 ; International Journal: Canada's Journal of Global Policy Analysis Volume 57 ; 57 >
+        au < manifest ; 2003 ; International Journal: Canada's Journal of Global Policy Analysis Volume 58 ; 58 >
+        au < manifest ; 2004 ; International Journal: Canada's Journal of Global Policy Analysis Volume 59 ; 59 >
+        au < manifest ; 2005 ; International Journal: Canada's Journal of Global Policy Analysis Volume 60 ; 60 >
+        au < manifest ; 2006 ; International Journal: Canada's Journal of Global Policy Analysis Volume 61 ; 61 >
+        au < manifest ; 2007 ; International Journal: Canada's Journal of Global Policy Analysis Volume 62 ; 62 >
+        au < manifest ; 2008 ; International Journal: Canada's Journal of Global Policy Analysis Volume 63 ; 63 >
+        au < manifest ; 2009 ; International Journal: Canada's Journal of Global Policy Analysis Volume 64 ; 64 >
+        au < manifest ; 2010 ; International Journal: Canada's Journal of Global Policy Analysis Volume 65 ; 65 >
+        au < manifest ; 2011 ; International Journal: Canada's Journal of Global Policy Analysis Volume 66 ; 66 >
+        au < manifest ; 2012 ; International Journal: Canada's Journal of Global Policy Analysis Volume 67 ; 67 >
         au < manifest ; 2013 ; International Journal: Canada's Journal of Global Policy Analysis Volume 68 ; 68 >
         au < expected ; 2014 ; International Journal: Canada's Journal of Global Policy Analysis Volume 69 ; 69 >
   
@@ -44067,7 +44096,7 @@ comment[mpj] = now published by Brill
         au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Medical Biography Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; released ; 2012 ; Journal of Medical Biography Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Biography Volume 21 ; 21 >
-        au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Medical Biography Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Medical Biography Volume 22 ; 22 >
   
       }
   
@@ -44110,20 +44139,24 @@ comment[mpj] = now published by Brill
 
         param[base_url] = http://msc.sagepub.com/
   
-        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of Medical Screening Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Medical Screening Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Medical Screening Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Medical Screening Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Medical Screening Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Medical Screening Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Medical Screening Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Medical Screening Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Medical Screening Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Medical Screening Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Medical Screening Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Medical Screening Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Medical Screening Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Medical Screening Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Medical Screening Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Medical Screening Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Medical Screening Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Medical Screening Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Medical Screening Volume 19 ; 19 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Medical Screening Volume 20 ; 20 >
         au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Medical Screening Volume 21 ; 21 >
@@ -44172,25 +44205,26 @@ comment[mpj] = now published by Brill
         param[base_url] = http://jtt.sagepub.com/
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   
-        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
-        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of Telemedicine and Telecare Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of Telemedicine and Telecare Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of Telemedicine and Telecare Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of Telemedicine and Telecare Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of Telemedicine and Telecare Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of Telemedicine and Telecare Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of Telemedicine and Telecare Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of Telemedicine and Telecare Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of Telemedicine and Telecare Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of Telemedicine and Telecare Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of Telemedicine and Telecare Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of Telemedicine and Telecare Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of Telemedicine and Telecare Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of Telemedicine and Telecare Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of Telemedicine and Telecare Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of Telemedicine and Telecare Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of Telemedicine and Telecare Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of Telemedicine and Telecare Volume 18 ; 18 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of Telemedicine and Telecare Volume 19 ; 19 >
-        au < HighWirePressH20Plugin ; expected ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of Telemedicine and Telecare Volume 20 ; 20 >
   
       }
   
@@ -44266,54 +44300,201 @@ comment[mpj] = now published by Brill
   
         param[base_url] = http://jrs.sagepub.com/
   
-        au < HighWirePressH20Plugin ; exists ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
-        au < HighWirePressH20Plugin ; exists ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
-        au < HighWirePressH20Plugin ; exists ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
-        au < HighWirePressH20Plugin ; exists ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
-        au < HighWirePressH20Plugin ; exists ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
-        au < HighWirePressH20Plugin ; exists ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
-        au < HighWirePressH20Plugin ; exists ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
-        au < HighWirePressH20Plugin ; exists ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
-        au < HighWirePressH20Plugin ; exists ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
-        au < HighWirePressH20Plugin ; exists ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
-        au < HighWirePressH20Plugin ; exists ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
-        au < HighWirePressH20Plugin ; exists ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
-        au < HighWirePressH20Plugin ; exists ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
-        au < HighWirePressH20Plugin ; exists ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
-        au < HighWirePressH20Plugin ; exists ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
-        au < HighWirePressH20Plugin ; exists ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
-        au < HighWirePressH20Plugin ; exists ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
-        au < HighWirePressH20Plugin ; exists ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
-        au < HighWirePressH20Plugin ; exists ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
-        au < HighWirePressH20Plugin ; exists ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
-        au < HighWirePressH20Plugin ; exists ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
-        au < HighWirePressH20Plugin ; exists ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
-        au < HighWirePressH20Plugin ; exists ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
-        au < HighWirePressH20Plugin ; exists ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
-        au < HighWirePressH20Plugin ; exists ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
-        au < HighWirePressH20Plugin ; exists ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
-        au < HighWirePressH20Plugin ; exists ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
-        au < HighWirePressH20Plugin ; exists ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
-        au < HighWirePressH20Plugin ; exists ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
-        au < HighWirePressH20Plugin ; exists ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
-        au < HighWirePressH20Plugin ; exists ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
-        au < HighWirePressH20Plugin ; exists ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
-        au < HighWirePressH20Plugin ; exists ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
-        au < HighWirePressH20Plugin ; exists ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
-        au < HighWirePressH20Plugin ; exists ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
-        au < HighWirePressH20Plugin ; exists ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
-        au < HighWirePressH20Plugin ; exists ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
-        au < HighWirePressH20Plugin ; exists ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
-        au < HighWirePressH20Plugin ; exists ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
-        au < HighWirePressH20Plugin ; exists ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
-        au < HighWirePressH20Plugin ; exists ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
-        au < HighWirePressH20Plugin ; exists ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
-        au < HighWirePressH20Plugin ; exists ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
-        au < HighWirePressH20Plugin ; exists ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
-        au < HighWirePressH20Plugin ; exists ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
-        au < HighWirePressH20Plugin ; exists ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
-        au < HighWirePressH20Plugin ; exists ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
-        au < HighWirePressH20Plugin ; exists ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
+        au < HighWirePressH20Plugin ; exists ; 1809 ; Journal of the Royal Society of Medicine Volume MCT-1 ; MCT-1 >
+        au < HighWirePressH20Plugin ; exists ; 1811 ; Journal of the Royal Society of Medicine Volume MCT-2 ; MCT-2 >
+        au < HighWirePressH20Plugin ; exists ; 1812 ; Journal of the Royal Society of Medicine Volume MCT-3 ; MCT-3 >
+        au < HighWirePressH20Plugin ; exists ; 1813 ; Journal of the Royal Society of Medicine Volume MCT-4 ; MCT-4 >
+        au < HighWirePressH20Plugin ; exists ; 1814 ; Journal of the Royal Society of Medicine Volume MCT-5 ; MCT-5 >
+        au < HighWirePressH20Plugin ; exists ; 1815 ; Journal of the Royal Society of Medicine Volume MCT-6 ; MCT-6 >
+        au < HighWirePressH20Plugin ; exists ; 1816 ; Journal of the Royal Society of Medicine Volume MCT-7 ; MCT-7 >
+        au < HighWirePressH20Plugin ; exists ; 1817 ; Journal of the Royal Society of Medicine Volume MCT-8 ; MCT-8 >
+        au < HighWirePressH20Plugin ; exists ; 1818 ; Journal of the Royal Society of Medicine Volume MCT-9 ; MCT-9 >
+        au < HighWirePressH20Plugin ; exists ; 1819 ; Journal of the Royal Society of Medicine Volume MCT-10 ; MCT-10 >
+        au < HighWirePressH20Plugin ; exists ; 1821 ; Journal of the Royal Society of Medicine Volume MCT-11 ; MCT-11 >
+        au < HighWirePressH20Plugin ; exists ; 1823 ; Journal of the Royal Society of Medicine Volume MCT-12 ; MCT-12 >
+        au < HighWirePressH20Plugin ; exists ; 1827 ; Journal of the Royal Society of Medicine Volume MCT-13 ; MCT-13 >
+        au < HighWirePressH20Plugin ; exists ; 1828 ; Journal of the Royal Society of Medicine Volume MCT-14 ; MCT-14 >
+        au < HighWirePressH20Plugin ; exists ; 1829 ; Journal of the Royal Society of Medicine Volume MCT-15 ; MCT-15 >
+        au < HighWirePressH20Plugin ; exists ; 1831 ; Journal of the Royal Society of Medicine Volume MCT-16 ; MCT-16 >
+        au < HighWirePressH20Plugin ; exists ; 1832 ; Journal of the Royal Society of Medicine Volume MCT-17 ; MCT-17 >
+        au < HighWirePressH20Plugin ; exists ; 1833 ; Journal of the Royal Society of Medicine Volume MCT-18 ; MCT-18 >
+        au < HighWirePressH20Plugin ; exists ; 1835 ; Journal of the Royal Society of Medicine Volume MCT-19 ; MCT-19 >
+        au < HighWirePressH20Plugin ; exists ; 1837 ; Journal of the Royal Society of Medicine Volume MCT-20 ; MCT-20 >
+        au < HighWirePressH20Plugin ; exists ; 1838 ; Journal of the Royal Society of Medicine Volume MCT-21 ; MCT-21 >
+        au < HighWirePressH20Plugin ; exists ; 1839 ; Journal of the Royal Society of Medicine Volume MCT-22 ; MCT-22 >
+        au < HighWirePressH20Plugin ; exists ; 1840 ; Journal of the Royal Society of Medicine Volume MCT-23 ; MCT-23 >
+        au < HighWirePressH20Plugin ; exists ; 1841 ; Journal of the Royal Society of Medicine Volume MCT-24 ; MCT-24 >
+        au < HighWirePressH20Plugin ; exists ; 1842 ; Journal of the Royal Society of Medicine Volume MCT-25 ; MCT-25 >
+        au < HighWirePressH20Plugin ; exists ; 1843 ; Journal of the Royal Society of Medicine Volume MCT-26 ; MCT-26 >
+        au < HighWirePressH20Plugin ; exists ; 1844 ; Journal of the Royal Society of Medicine Volume MCT-27 ; MCT-27 >
+        au < HighWirePressH20Plugin ; exists ; 1845 ; Journal of the Royal Society of Medicine Volume MCT-28 ; MCT-28 >
+        au < HighWirePressH20Plugin ; exists ; 1846 ; Journal of the Royal Society of Medicine Volume MCT-29 ; MCT-29 >
+        au < HighWirePressH20Plugin ; exists ; 1847 ; Journal of the Royal Society of Medicine Volume MCT-30 ; MCT-30 >
+        au < HighWirePressH20Plugin ; exists ; 1848 ; Journal of the Royal Society of Medicine Volume MCT-31 ; MCT-31 >
+        au < HighWirePressH20Plugin ; exists ; 1849 ; Journal of the Royal Society of Medicine Volume MCT-32 ; MCT-32 >
+        au < HighWirePressH20Plugin ; exists ; 1850 ; Journal of the Royal Society of Medicine Volume MCT-33 ; MCT-33 >
+        au < HighWirePressH20Plugin ; exists ; 1851 ; Journal of the Royal Society of Medicine Volume MCT-34 ; MCT-34 >
+        au < HighWirePressH20Plugin ; exists ; 1852 ; Journal of the Royal Society of Medicine Volume MCT-35 ; MCT-35 >
+        au < HighWirePressH20Plugin ; exists ; 1853 ; Journal of the Royal Society of Medicine Volume MCT-36 ; MCT-36 >
+        au < HighWirePressH20Plugin ; exists ; 1854 ; Journal of the Royal Society of Medicine Volume MCT-37 ; MCT-37 >
+        au < HighWirePressH20Plugin ; exists ; 1855 ; Journal of the Royal Society of Medicine Volume MCT-38 ; MCT-38 >
+        au < HighWirePressH20Plugin ; exists ; 1856 ; Journal of the Royal Society of Medicine Volume MCT-39 ; MCT-39 >
+        au < HighWirePressH20Plugin ; exists ; 1857 ; Journal of the Royal Society of Medicine Volume MCT-40 ; MCT-40 >
+        au < HighWirePressH20Plugin ; exists ; 1858 ; Journal of the Royal Society of Medicine Volume MCT-41 ; MCT-41 >
+        au < HighWirePressH20Plugin ; exists ; 1859 ; Journal of the Royal Society of Medicine Volume MCT-42 ; MCT-42 >
+        au < HighWirePressH20Plugin ; exists ; 1860 ; Journal of the Royal Society of Medicine Volume MCT-43 ; MCT-43 >
+        au < HighWirePressH20Plugin ; exists ; 1861 ; Journal of the Royal Society of Medicine Volume MCT-44 ; MCT-44 >
+        au < HighWirePressH20Plugin ; exists ; 1862 ; Journal of the Royal Society of Medicine Volume MCT-45 ; MCT-45 >
+        au < HighWirePressH20Plugin ; exists ; 1863 ; Journal of the Royal Society of Medicine Volume MCT-46 ; MCT-46 >
+        au < HighWirePressH20Plugin ; exists ; 1864 ; Journal of the Royal Society of Medicine Volume MCT-47 ; MCT-47 >
+        au < HighWirePressH20Plugin ; exists ; 1865 ; Journal of the Royal Society of Medicine Volume MCT-48 ; MCT-48 >
+        au < HighWirePressH20Plugin ; exists ; 1866 ; Journal of the Royal Society of Medicine Volume MCT-49 ; MCT-49 >
+        au < HighWirePressH20Plugin ; exists ; 1867 ; Journal of the Royal Society of Medicine Volume MCT-50 ; MCT-50 >
+        au < HighWirePressH20Plugin ; exists ; 1868 ; Journal of the Royal Society of Medicine Volume MCT-51 ; MCT-51 >
+        au < HighWirePressH20Plugin ; exists ; 1869 ; Journal of the Royal Society of Medicine Volume MCT-52 ; MCT-52 >
+        au < HighWirePressH20Plugin ; exists ; 1870 ; Journal of the Royal Society of Medicine Volume MCT-53 ; MCT-53 >
+        au < HighWirePressH20Plugin ; exists ; 1871 ; Journal of the Royal Society of Medicine Volume MCT-54 ; MCT-54 >
+        au < HighWirePressH20Plugin ; exists ; 1872 ; Journal of the Royal Society of Medicine Volume MCT-55 ; MCT-55 >
+        au < HighWirePressH20Plugin ; exists ; 1873 ; Journal of the Royal Society of Medicine Volume MCT-56 ; MCT-56 >
+        au < HighWirePressH20Plugin ; exists ; 1874 ; Journal of the Royal Society of Medicine Volume MCT-57 ; MCT-57 >
+        au < HighWirePressH20Plugin ; exists ; 1875 ; Journal of the Royal Society of Medicine Volume MCT-58 ; MCT-58 >
+        au < HighWirePressH20Plugin ; exists ; 1876 ; Journal of the Royal Society of Medicine Volume MCT-59 ; MCT-59 >
+        au < HighWirePressH20Plugin ; exists ; 1877 ; Journal of the Royal Society of Medicine Volume MCT-60 ; MCT-60 >
+        au < HighWirePressH20Plugin ; exists ; 1878 ; Journal of the Royal Society of Medicine Volume MCT-61 ; MCT-61 >
+        au < HighWirePressH20Plugin ; exists ; 1879 ; Journal of the Royal Society of Medicine Volume MCT-62 ; MCT-62 >
+        au < HighWirePressH20Plugin ; exists ; 1880 ; Journal of the Royal Society of Medicine Volume MCT-63 ; MCT-63 >
+        au < HighWirePressH20Plugin ; exists ; 1881 ; Journal of the Royal Society of Medicine Volume MCT-64 ; MCT-64 >
+        au < HighWirePressH20Plugin ; exists ; 1882 ; Journal of the Royal Society of Medicine Volume MCT-65 ; MCT-65 >
+        au < HighWirePressH20Plugin ; exists ; 1883 ; Journal of the Royal Society of Medicine Volume MCT-66 ; MCT-66 >
+        au < HighWirePressH20Plugin ; exists ; 1884 ; Journal of the Royal Society of Medicine Volume MCT-67 ; MCT-67 >
+        au < HighWirePressH20Plugin ; exists ; 1885 ; Journal of the Royal Society of Medicine Volume MCT-68 ; MCT-68 >
+        au < HighWirePressH20Plugin ; exists ; 1886 ; Journal of the Royal Society of Medicine Volume MCT-69 ; MCT-69 >
+        au < HighWirePressH20Plugin ; exists ; 1887 ; Journal of the Royal Society of Medicine Volume MCT-70 ; MCT-70 >
+        au < HighWirePressH20Plugin ; exists ; 1888 ; Journal of the Royal Society of Medicine Volume MCT-71 ; MCT-71 >
+        au < HighWirePressH20Plugin ; exists ; 1889 ; Journal of the Royal Society of Medicine Volume MCT-72 ; MCT-72 >
+        au < HighWirePressH20Plugin ; exists ; 1890 ; Journal of the Royal Society of Medicine Volume MCT-73 ; MCT-73 >
+        au < HighWirePressH20Plugin ; exists ; 1891 ; Journal of the Royal Society of Medicine Volume MCT-74 ; MCT-74 >
+        au < HighWirePressH20Plugin ; exists ; 1892 ; Journal of the Royal Society of Medicine Volume MCT-75 ; MCT-75 >
+        au < HighWirePressH20Plugin ; exists ; 1893 ; Journal of the Royal Society of Medicine Volume MCT-76 ; MCT-76 >
+        au < HighWirePressH20Plugin ; exists ; 1894 ; Journal of the Royal Society of Medicine Volume MCT-77 ; MCT-77 >
+        au < HighWirePressH20Plugin ; exists ; 1895 ; Journal of the Royal Society of Medicine Volume MCT-78 ; MCT-78 >
+        au < HighWirePressH20Plugin ; exists ; 1896 ; Journal of the Royal Society of Medicine Volume MCT-79 ; MCT-79 >
+        au < HighWirePressH20Plugin ; exists ; 1897 ; Journal of the Royal Society of Medicine Volume MCT-80 ; MCT-80 >
+        au < HighWirePressH20Plugin ; exists ; 1898 ; Journal of the Royal Society of Medicine Volume MCT-81 ; MCT-81 >
+        au < HighWirePressH20Plugin ; exists ; 1899 ; Journal of the Royal Society of Medicine Volume MCT-82 ; MCT-82 >
+        au < HighWirePressH20Plugin ; exists ; 1900 ; Journal of the Royal Society of Medicine Volume MCT-83 ; MCT-83 >
+        au < HighWirePressH20Plugin ; exists ; 1901 ; Journal of the Royal Society of Medicine Volume MCT-84 ; MCT-84 >
+        au < HighWirePressH20Plugin ; exists ; 1902 ; Journal of the Royal Society of Medicine Volume MCT-85 ; MCT-85 >
+        au < HighWirePressH20Plugin ; exists ; 1903 ; Journal of the Royal Society of Medicine Volume MCT-86 ; MCT-86 >
+        au < HighWirePressH20Plugin ; exists ; 1904 ; Journal of the Royal Society of Medicine Volume MCT-87 ; MCT-87 >
+        au < HighWirePressH20Plugin ; exists ; 1905 ; Journal of the Royal Society of Medicine Volume MCT-88 ; MCT-88 >
+        au < HighWirePressH20Plugin ; exists ; 1906 ; Journal of the Royal Society of Medicine Volume MCT-89 ; MCT-89 >
+        au < HighWirePressH20Plugin ; exists ; 1907 ; Journal of the Royal Society of Medicine Volume MCT-90 ; MCT-90 >
+        au < HighWirePressH20Plugin ; exists ; 1908 ; Journal of the Royal Society of Medicine Volume 1 ; 1 >
+        au < HighWirePressH20Plugin ; exists ; 1909 ; Journal of the Royal Society of Medicine Volume 2 ; 2 >
+        au < HighWirePressH20Plugin ; exists ; 1910 ; Journal of the Royal Society of Medicine Volume 3 ; 3 >
+        au < HighWirePressH20Plugin ; exists ; 1911 ; Journal of the Royal Society of Medicine Volume 4 ; 4 >
+        au < HighWirePressH20Plugin ; exists ; 1912 ; Journal of the Royal Society of Medicine Volume 5 ; 5 >
+        au < HighWirePressH20Plugin ; exists ; 1913 ; Journal of the Royal Society of Medicine Volume 6 ; 6 >
+        au < HighWirePressH20Plugin ; exists ; 1914 ; Journal of the Royal Society of Medicine Volume 7 ; 7 >
+        au < HighWirePressH20Plugin ; exists ; 1915 ; Journal of the Royal Society of Medicine Volume 8 ; 8 >
+        au < HighWirePressH20Plugin ; exists ; 1916 ; Journal of the Royal Society of Medicine Volume 9 ; 9 >
+        au < HighWirePressH20Plugin ; exists ; 1917 ; Journal of the Royal Society of Medicine Volume 10 ; 10 >
+        au < HighWirePressH20Plugin ; exists ; 1918 ; Journal of the Royal Society of Medicine Volume 11 ; 11 >
+        au < HighWirePressH20Plugin ; exists ; 1919 ; Journal of the Royal Society of Medicine Volume 12 ; 12 >
+        au < HighWirePressH20Plugin ; exists ; 1920 ; Journal of the Royal Society of Medicine Volume 13 ; 13 >
+        au < HighWirePressH20Plugin ; exists ; 1921 ; Journal of the Royal Society of Medicine Volume 14 ; 14 >
+        au < HighWirePressH20Plugin ; exists ; 1922 ; Journal of the Royal Society of Medicine Volume 15 ; 15 >
+        au < HighWirePressH20Plugin ; exists ; 1923 ; Journal of the Royal Society of Medicine Volume 16 ; 16 >
+        au < HighWirePressH20Plugin ; exists ; 1924 ; Journal of the Royal Society of Medicine Volume 17 ; 17 >
+        au < HighWirePressH20Plugin ; exists ; 1925 ; Journal of the Royal Society of Medicine Volume 18 ; 18 >
+        au < HighWirePressH20Plugin ; exists ; 1926 ; Journal of the Royal Society of Medicine Volume 19 ; 19 >
+        au < HighWirePressH20Plugin ; exists ; 1927 ; Journal of the Royal Society of Medicine Volume 20 ; 20 >
+        au < HighWirePressH20Plugin ; exists ; 1928 ; Journal of the Royal Society of Medicine Volume 21 ; 21 >
+        au < HighWirePressH20Plugin ; exists ; 1929 ; Journal of the Royal Society of Medicine Volume 22 ; 22 >
+        au < HighWirePressH20Plugin ; exists ; 1930 ; Journal of the Royal Society of Medicine Volume 23 ; 23 >
+        au < HighWirePressH20Plugin ; exists ; 1931 ; Journal of the Royal Society of Medicine Volume 24 ; 24 >
+        au < HighWirePressH20Plugin ; exists ; 1932 ; Journal of the Royal Society of Medicine Volume 25 ; 25 >
+        au < HighWirePressH20Plugin ; exists ; 1933 ; Journal of the Royal Society of Medicine Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; exists ; 1934 ; Journal of the Royal Society of Medicine Volume 27 ; 27 >
+        au < HighWirePressH20Plugin ; exists ; 1935 ; Journal of the Royal Society of Medicine Volume 28 ; 28 >
+        au < HighWirePressH20Plugin ; exists ; 1936 ; Journal of the Royal Society of Medicine Volume 29 ; 29 >
+        au < HighWirePressH20Plugin ; exists ; 1937 ; Journal of the Royal Society of Medicine Volume 30 ; 30 >
+        au < HighWirePressH20Plugin ; exists ; 1938 ; Journal of the Royal Society of Medicine Volume 31 ; 31 >
+        au < HighWirePressH20Plugin ; exists ; 1939 ; Journal of the Royal Society of Medicine Volume 32 ; 32 >
+        au < HighWirePressH20Plugin ; exists ; 1940 ; Journal of the Royal Society of Medicine Volume 33 ; 33 >
+        au < HighWirePressH20Plugin ; exists ; 1941 ; Journal of the Royal Society of Medicine Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1942 ; Journal of the Royal Society of Medicine Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1943 ; Journal of the Royal Society of Medicine Volume 36 ; 36 >
+        au < HighWirePressH20Plugin ; exists ; 1944 ; Journal of the Royal Society of Medicine Volume 37 ; 37 >
+        au < HighWirePressH20Plugin ; exists ; 1945 ; Journal of the Royal Society of Medicine Volume 38 ; 38 >
+        au < HighWirePressH20Plugin ; exists ; 1946 ; Journal of the Royal Society of Medicine Volume 39 ; 39 >
+        au < HighWirePressH20Plugin ; exists ; 1947 ; Journal of the Royal Society of Medicine Volume 40 ; 40 >
+        au < HighWirePressH20Plugin ; exists ; 1948 ; Journal of the Royal Society of Medicine Volume 41 ; 41 >
+        au < HighWirePressH20Plugin ; exists ; 1949 ; Journal of the Royal Society of Medicine Volume 42 ; 42 >
+        au < HighWirePressH20Plugin ; exists ; 1950 ; Journal of the Royal Society of Medicine Volume 43 ; 43 >
+        au < HighWirePressH20Plugin ; exists ; 1951 ; Journal of the Royal Society of Medicine Volume 44 ; 44 >
+        au < HighWirePressH20Plugin ; exists ; 1952 ; Journal of the Royal Society of Medicine Volume 45 ; 45 >
+        au < HighWirePressH20Plugin ; exists ; 1953 ; Journal of the Royal Society of Medicine Volume 46 ; 46 >
+        au < HighWirePressH20Plugin ; exists ; 1954 ; Journal of the Royal Society of Medicine Volume 47 ; 47 >
+        au < HighWirePressH20Plugin ; exists ; 1955 ; Journal of the Royal Society of Medicine Volume 48 ; 48 >
+        au < HighWirePressH20Plugin ; exists ; 1956 ; Journal of the Royal Society of Medicine Volume 49 ; 49 >
+        au < HighWirePressH20Plugin ; exists ; 1957 ; Journal of the Royal Society of Medicine Volume 50 ; 50 >
+        au < HighWirePressH20Plugin ; exists ; 1958 ; Journal of the Royal Society of Medicine Volume 51 ; 51 >
+        au < HighWirePressH20Plugin ; exists ; 1959 ; Journal of the Royal Society of Medicine Volume 52 ; 52 >
+        au < HighWirePressH20Plugin ; exists ; 1960 ; Journal of the Royal Society of Medicine Volume 53 ; 53 >
+        au < HighWirePressH20Plugin ; exists ; 1961 ; Journal of the Royal Society of Medicine Volume 54 ; 54 >
+        au < HighWirePressH20Plugin ; exists ; 1962 ; Journal of the Royal Society of Medicine Volume 55 ; 55 >
+        au < HighWirePressH20Plugin ; exists ; 1963 ; Journal of the Royal Society of Medicine Volume 56 ; 56 >
+        au < HighWirePressH20Plugin ; exists ; 1964 ; Journal of the Royal Society of Medicine Volume 57 ; 57 >
+        au < HighWirePressH20Plugin ; manifest ; 1965 ; Journal of the Royal Society of Medicine Volume 58 ; 58 >
+        au < HighWirePressH20Plugin ; manifest ; 1966 ; Journal of the Royal Society of Medicine Volume 59 ; 59 >
+        au < HighWirePressH20Plugin ; manifest ; 1967 ; Journal of the Royal Society of Medicine Volume 60 ; 60 >
+        au < HighWirePressH20Plugin ; manifest ; 1968 ; Journal of the Royal Society of Medicine Volume 61 ; 61 >
+        au < HighWirePressH20Plugin ; manifest ; 1969 ; Journal of the Royal Society of Medicine Volume 62 ; 62 >
+        au < HighWirePressH20Plugin ; manifest ; 1970 ; Journal of the Royal Society of Medicine Volume 63 ; 63 >
+        au < HighWirePressH20Plugin ; manifest ; 1971 ; Journal of the Royal Society of Medicine Volume 64 ; 64 >
+        au < HighWirePressH20Plugin ; manifest ; 1972 ; Journal of the Royal Society of Medicine Volume 65 ; 65 >
+        au < HighWirePressH20Plugin ; manifest ; 1973 ; Journal of the Royal Society of Medicine Volume 66 ; 66 >
+        au < HighWirePressH20Plugin ; manifest ; 1974 ; Journal of the Royal Society of Medicine Volume 67 ; 67 >
+        au < HighWirePressH20Plugin ; manifest ; 1975 ; Journal of the Royal Society of Medicine Volume 68 ; 68 >
+        au < HighWirePressH20Plugin ; manifest ; 1976 ; Journal of the Royal Society of Medicine Volume 69 ; 69 >
+        au < HighWirePressH20Plugin ; manifest ; 1977 ; Journal of the Royal Society of Medicine Volume 70 ; 70 >
+        au < HighWirePressH20Plugin ; manifest ; 1978 ; Journal of the Royal Society of Medicine Volume 71 ; 71 >
+        au < HighWirePressH20Plugin ; manifest ; 1979 ; Journal of the Royal Society of Medicine Volume 72 ; 72 >
+        au < HighWirePressH20Plugin ; manifest ; 1980 ; Journal of the Royal Society of Medicine Volume 73 ; 73 >
+        au < HighWirePressH20Plugin ; manifest ; 1981 ; Journal of the Royal Society of Medicine Volume 74 ; 74 >
+        au < HighWirePressH20Plugin ; manifest ; 1982 ; Journal of the Royal Society of Medicine Volume 75 ; 75 >
+        au < HighWirePressH20Plugin ; manifest ; 1983 ; Journal of the Royal Society of Medicine Volume 76 ; 76 >
+        au < HighWirePressH20Plugin ; manifest ; 1984 ; Journal of the Royal Society of Medicine Volume 77 ; 77 >
+        au < HighWirePressH20Plugin ; manifest ; 1985 ; Journal of the Royal Society of Medicine Volume 78 ; 78 >
+        au < HighWirePressH20Plugin ; manifest ; 1986 ; Journal of the Royal Society of Medicine Volume 79 ; 79 >
+        au < HighWirePressH20Plugin ; manifest ; 1987 ; Journal of the Royal Society of Medicine Volume 80 ; 80 >
+        au < HighWirePressH20Plugin ; manifest ; 1988 ; Journal of the Royal Society of Medicine Volume 81 ; 81 >
+        au < HighWirePressH20Plugin ; manifest ; 1989 ; Journal of the Royal Society of Medicine Volume 82 ; 82 >
+        au < HighWirePressH20Plugin ; manifest ; 1990 ; Journal of the Royal Society of Medicine Volume 83 ; 83 >
+        au < HighWirePressH20Plugin ; manifest ; 1991 ; Journal of the Royal Society of Medicine Volume 84 ; 84 >
+        au < HighWirePressH20Plugin ; manifest ; 1992 ; Journal of the Royal Society of Medicine Volume 85 ; 85 >
+        au < HighWirePressH20Plugin ; manifest ; 1993 ; Journal of the Royal Society of Medicine Volume 86 ; 86 >
+        au < HighWirePressH20Plugin ; manifest ; 1994 ; Journal of the Royal Society of Medicine Volume 87 ; 87 >
+        au < HighWirePressH20Plugin ; manifest ; 1995 ; Journal of the Royal Society of Medicine Volume 88 ; 88 >
+        au < HighWirePressH20Plugin ; manifest ; 1996 ; Journal of the Royal Society of Medicine Volume 89 ; 89 >
+        au < HighWirePressH20Plugin ; manifest ; 1997 ; Journal of the Royal Society of Medicine Volume 90 ; 90 >
+        au < HighWirePressH20Plugin ; manifest ; 1998 ; Journal of the Royal Society of Medicine Volume 91 ; 91 >
+        au < HighWirePressH20Plugin ; manifest ; 1999 ; Journal of the Royal Society of Medicine Volume 92 ; 92 >
+        au < HighWirePressH20Plugin ; manifest ; 2000 ; Journal of the Royal Society of Medicine Volume 93 ; 93 >
+        au < HighWirePressH20Plugin ; manifest ; 2001 ; Journal of the Royal Society of Medicine Volume 94 ; 94 >
+        au < HighWirePressH20Plugin ; manifest ; 2002 ; Journal of the Royal Society of Medicine Volume 95 ; 95 >
+        au < HighWirePressH20Plugin ; manifest ; 2003 ; Journal of the Royal Society of Medicine Volume 96 ; 96 >
+        au < HighWirePressH20Plugin ; manifest ; 2004 ; Journal of the Royal Society of Medicine Volume 97 ; 97 >
+        au < HighWirePressH20Plugin ; manifest ; 2005 ; Journal of the Royal Society of Medicine Volume 98 ; 98 >
+        au < HighWirePressH20Plugin ; manifest ; 2006 ; Journal of the Royal Society of Medicine Volume 99 ; 99 >
+        au < HighWirePressH20Plugin ; manifest ; 2007 ; Journal of the Royal Society of Medicine Volume 100 ; 100 >
+        au < HighWirePressH20Plugin ; manifest ; 2008 ; Journal of the Royal Society of Medicine Volume 101 ; 101 >
+        au < HighWirePressH20Plugin ; manifest ; 2009 ; Journal of the Royal Society of Medicine Volume 102 ; 102 >
+        au < HighWirePressH20Plugin ; manifest ; 2010 ; Journal of the Royal Society of Medicine Volume 103 ; 103 >
+        au < HighWirePressH20Plugin ; manifest ; 2011 ; Journal of the Royal Society of Medicine Volume 104 ; 104 >
+        au < HighWirePressH20Plugin ; manifest ; 2012 ; Journal of the Royal Society of Medicine Volume 105 ; 105 >
         au < HighWirePressH20Plugin ; manifest ; 2013 ; Journal of the Royal Society of Medicine Volume 106 ; 106 >
         au < HighWirePressH20Plugin ; manifest ; 2014 ; Journal of the Royal Society of Medicine Volume 107 ; 107 >
   
