@@ -1,4 +1,4 @@
-/* $Id: TestNationalWeatherAssociationHtmlHashFilterFactory.java,v 1.1 2014-01-28 17:56:46 ldoan Exp $ */
+/* $Id: TestNationalWeatherAssociationHtmlHashFilterFactory.java,v 1.2 2014-02-11 23:02:51 ldoan Exp $ */
 
 /*
 
@@ -125,59 +125,6 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
   private static final String withoutBanner = 
       "<div class=\"block\"></div>";
 
-  private static final String withHome =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/index.php\">Home</a>"
-        + "</div>";
-  private static final String withoutHome = 
-      "<div class=\"block\"></div>";
-
-  private static final String withPublications =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/publications.php\">"
-          + "publications</a>"
-        + "</div>";
-  private static final String withoutPublications = 
-      "<div class=\"block\"></div>";
-
-  private static final String withCallForPapers =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/call_for_papers.php\">"
-          + "call for papers</a>"
-        + "</div>";
-  private static final String withoutCallForPapers = 
-      "<div class=\"block\"></div>";
-
-  private static final String withAuthorInfo =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/author_information.php\">"
-          + "author info</a>"
-        + "</div>";
-  private static final String withoutAuthorInfo = 
-      "<div class=\"block\"></div>";
-
-  private static final String withReviewers =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/reviewer_information.php\">"
-          + "reviewers</a>"
-        + "</div>";
-  private static final String withoutReviewers = 
-      "<div class=\"block\"></div>";
-
-  private static final String withSearch =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/search.php\">search</a>"
-        + "</div>";
-  private static final String withoutSearch = 
-      "<div class=\"block\"></div>";
-
-  private static final String withAbout =
-      "<div class=\"block\">"
-        + "<a href=\"http://www.xxx.org/xjid/about.php\">about</a>"
-        + "</div>";
-  private static final String withoutAbout = 
-      "<div class=\"block\"></div>";
-
   private static final String withLastUpdated =
       "<div class=\"block\">"
         + "<p>"
@@ -234,48 +181,6 @@ public class TestNationalWeatherAssociationHtmlHashFilterFactory
     InputStream actIn = fact.createFilteredInputStream(mau,
         new StringInputStream(withBanner), Constants.DEFAULT_ENCODING);
     assertEquals(withoutBanner, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testHomeFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withHome), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutHome, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testPublicationsFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withPublications), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutPublications, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testCallForPapersFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withCallForPapers), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutCallForPapers, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testAuthorInfoFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withAuthorInfo), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutAuthorInfo, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testReviewsFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withReviewers), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutReviewers, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testSearchFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withSearch), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutSearch, StringUtil.fromInputStream(actIn));
-  }
-
-  public void testAboutFiltering() throws Exception {
-    InputStream actIn = fact.createFilteredInputStream(mau,
-        new StringInputStream(withAbout), Constants.DEFAULT_ENCODING);
-    assertEquals(withoutAbout, StringUtil.fromInputStream(actIn));
   }
 
   public void testLastUpdatedFiltering() throws Exception {
