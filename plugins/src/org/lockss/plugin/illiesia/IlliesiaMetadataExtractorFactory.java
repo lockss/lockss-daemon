@@ -1,6 +1,5 @@
 /*
-
- * $Id: IlliesiaMetadataExtractorFactory.java,v 1.1 2014-02-01 19:06:44 ldoan Exp $
+ * $Id: IlliesiaMetadataExtractorFactory.java,v 1.2 2014-02-11 22:38:43 ldoan Exp $
  */
 
 /*
@@ -56,15 +55,18 @@ import org.lockss.util.Logger;
  * 
  * A sample metadata from daemon:
  * ArticleFiles
- *  Full text CU: <illiesiabase>/papers/Illiesia08-01.pdf
- *  FullTextPdfFile: <illiesiabase>/papers/Illiesia08-01.pdf
+ *   Full text CU:  http://www2.pms-lj.si/illiesia/papers/Illiesia09-01.pdf
+ *   FullTextPdfFile:  http://www2.pms-lj.si/illiesia/papers/Illiesia09-01.pdf
  * Metadata
- *  access.url: <illiesiabase>/papers/Illiesia08-01.pdf
- *  date: 2012
- *  eissn: 1854-0392
- *  issn: 1855-5810
- *  journal.title: Illesia International Journal of Stonefly Research
- *  publisher: Illiesia
+ *   access.url: http://www2.pms-lj.si/illiesia/papers/Illiesia09-01.pdf
+ *   date: 2013
+ *   eissn: 1854-0392
+ *   issn: 1855-5810
+ *   item_number: 01
+ *   publication.title: Illesia International Journal of Stonefly Research
+ *   publisher: Illiesia
+ *   pubtype: journal
+ *   volume: 9
  * Raw Metadata (empty)
  */
 public class IlliesiaMetadataExtractorFactory 
