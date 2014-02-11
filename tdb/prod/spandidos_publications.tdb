@@ -47,6 +47,16 @@
     au < exists ; 1996 ; International Journal of Oncology Volume 9 ; 9 >
     au < exists ; 1997 ; International Journal of Oncology Volume 10 ; 10 >
     au < exists ; 1997 ; International Journal of Oncology Volume 11 ; 11 >
+    au < exists ; 1998 ; International Journal of Oncology Volume 12 ; 12 >
+    au < exists ; 1998 ; International Journal of Oncology Volume 13 ; 13 >
+    au < exists ; 1999 ; International Journal of Oncology Volume 14 ; 14 >
+    au < exists ; 1999 ; International Journal of Oncology Volume 15 ; 15 >
+    au < exists ; 2000 ; International Journal of Oncology Volume 16 ; 16 >
+    au < exists ; 2000 ; International Journal of Oncology Volume 17 ; 17 >
+    au < exists ; 2001 ; International Journal of Oncology Volume 18 ; 18 >
+    au < exists ; 2001 ; International Journal of Oncology Volume 19 ; 19 >
+    au < exists ; 2002 ; International Journal of Oncology Volume 20 ; 20 >
+    au < exists ; 2002 ; International Journal of Oncology Volume 21 ; 21 >
 
   }
 
@@ -60,7 +70,7 @@
     param[journal_id] = mco
 
     au < exists ; 2013 ; Molecular and Clinical Oncology Volume 1 ; 1 >
-    au < expected ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 >
+    au < exists ; 2014 ; Molecular and Clinical Oncology Volume 2 ; 2 >
 
   }
 
@@ -74,6 +84,13 @@
     param[journal_id] = etm
 
     au < exists ; 2010 ; Experimental and Therapeutic Medicine Volume 1 ; 1 >
+    au < exists ; 2011 ; Experimental and Therapeutic Medicine Volume 2 ; 2 >
+    au < exists ; 2012 ; Experimental and Therapeutic Medicine Volume 3 ; 3 >
+    au < exists ; 2012 ; Experimental and Therapeutic Medicine Volume 4 ; 4 >
+    au < exists ; 2013 ; Experimental and Therapeutic Medicine Volume 5 ; 5 >
+    au < exists ; 2013 ; Experimental and Therapeutic Medicine Volume 6 ; 6 >
+    au < exists ; 2014 ; Experimental and Therapeutic Medicine Volume 7 ; 7 >
+    au < expected ; 2014 ; Experimental and Therapeutic Medicine Volume 8 ; 8 >
 
   }
 
@@ -87,6 +104,15 @@
     param[journal_id] = ijmm
 
     au < exists ; 1998 ; International Journal of Molecular Medicine Volume 1 ; 1 >
+    au < exists ; 1998 ; International Journal of Molecular Medicine Volume 2 ; 2 >
+    au < exists ; 1999 ; International Journal of Molecular Medicine Volume 3 ; 3 >
+    au < exists ; 1999 ; International Journal of Molecular Medicine Volume 4 ; 4 >
+    au < exists ; 2000 ; International Journal of Molecular Medicine Volume 5 ; 5 >
+    au < exists ; 2000 ; International Journal of Molecular Medicine Volume 6 ; 6 >
+    au < exists ; 2001 ; International Journal of Molecular Medicine Volume 7 ; 7 >
+    au < exists ; 2001 ; International Journal of Molecular Medicine Volume 8 ; 8 >
+    au < exists ; 2002 ; International Journal of Molecular Medicine Volume 9 ; 9 >
+    au < exists ; 2002 ; International Journal of Molecular Medicine Volume 10 ; 10 >
 
   }
 
@@ -113,8 +139,38 @@
     
     param[journal_id] = or
 
-    au < exists ; 2013 ; Oncology Reports Volume 1 ; 1 >
-    au < expected ; 2014 ; Oncology Reports Volume 2 ; 2 >
+    au < exists ; 1994 ; Oncology Reports Volume 1 ; 1 >
+    au < exists ; 1995 ; Oncology Reports Volume 2 ; 2 >
+    au < exists ; 1996 ; Oncology Reports Volume 3 ; 3 >
+    au < exists ; 1997 ; Oncology Reports Volume 4 ; 4 >
+    au < exists ; 1998 ; Oncology Reports Volume 5 ; 5 >
+    au < exists ; 1999 ; Oncology Reports Volume 6 ; 6 >
+    au < exists ; 2000 ; Oncology Reports Volume 7 ; 7 >
+    au < exists ; 2001 ; Oncology Reports Volume 8 ; 8 >
+    au < exists ; 2002 ; Oncology Reports Volume 9 ; 9 >
+    au < exists ; 2003 ; Oncology Reports Volume 10 ; 10 >
+    au < exists ; 2004 ; Oncology Reports Volume 11 ; 11 >
+    au < exists ; 2004 ; Oncology Reports Volume 12 ; 12 >
+    au < exists ; 2005 ; Oncology Reports Volume 13 ; 13 >
+    au < exists ; 2005 ; Oncology Reports Volume 14 ; 14 >
+    au < exists ; 2006 ; Oncology Reports Volume 15 ; 15 >
+    au < exists ; 2006 ; Oncology Reports Volume 16 ; 16 >
+    au < exists ; 2007 ; Oncology Reports Volume 17 ; 17 >
+    au < exists ; 2007 ; Oncology Reports Volume 18 ; 18 >
+    au < exists ; 2008 ; Oncology Reports Volume 19 ; 19 >
+    au < exists ; 2008 ; Oncology Reports Volume 20 ; 20 >
+    au < exists ; 2009 ; Oncology Reports Volume 21 ; 21 >
+    au < exists ; 2009 ; Oncology Reports Volume 22 ; 22 >
+    au < exists ; 2010 ; Oncology Reports Volume 23 ; 23 >
+    au < exists ; 2010 ; Oncology Reports Volume 24 ; 24 >
+    au < exists ; 2011 ; Oncology Reports Volume 25 ; 25 >
+    au < exists ; 2011 ; Oncology Reports Volume 26 ; 26 >
+    au < exists ; 2012 ; Oncology Reports Volume 27 ; 27 >
+    au < exists ; 2012 ; Oncology Reports Volume 28 ; 28 >
+    au < exists ; 2013 ; Oncology Reports Volume 29 ; 29 >
+    au < exists ; 2013 ; Oncology Reports Volume 30 ; 30 >
+    au < exists ; 2014 ; Oncology Reports Volume 31 ; 31 >
+    au < expected ; 2014 ; Oncology Reports Volume 32 ; 32 >
 
   }
 
@@ -128,6 +184,15 @@
     param[journal_id] = mmr
 
     au < exists ; 2008 ; Molecular Medicine Reports Volume 1 ; 1 >
+    au < exists ; 2009 ; Molecular Medicine Reports Volume 2 ; 2 >
+    au < exists ; 2010 ; Molecular Medicine Reports Volume 3 ; 3 >
+    au < exists ; 2011 ; Molecular Medicine Reports Volume 4 ; 4 >
+    au < exists ; 2012 ; Molecular Medicine Reports Volume 5 ; 5 >
+    au < exists ; 2012 ; Molecular Medicine Reports Volume 6 ; 6 >
+    au < exists ; 2013 ; Molecular Medicine Reports Volume 7 ; 7 >
+    au < exists ; 2013 ; Molecular Medicine Reports Volume 8 ; 8 >
+    au < exists ; 2014 ; Molecular Medicine Reports Volume 9 ; 9 >
+    au < expected ; 2014 ; Molecular Medicine Reports Volume 10 ; 10 >
 
   }
 
