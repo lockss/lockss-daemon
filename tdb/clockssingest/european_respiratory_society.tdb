@@ -6,9 +6,6 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
-
   {
 
     title <
@@ -18,6 +15,8 @@
       issnl = 0903-1936
     >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[base_url] = http://erj.ersjournals.com/
 
     {
@@ -84,6 +83,8 @@
       issnl = 1025-448X
     >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[base_url] = http://erm.ersjournals.com/
     
     au < exists ; exists ; 2003 ; European Respiratory Monographs Volume 25 ; 25 >
@@ -140,6 +141,8 @@
       issnl = 0905-9180
     >
 
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[base_url] = http://err.ersjournals.com/
   
     au < manifest ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 >
