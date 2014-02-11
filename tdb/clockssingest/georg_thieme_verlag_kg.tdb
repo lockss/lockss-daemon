@@ -136,6 +136,23 @@
 
   {
     title <
+      name = Aktuelle Kardiologie ;
+      issn = 2193-5203 ;
+      eissn = 2193-5211 ;
+      doi = 10.1055/s-00022861
+
+     >
+    param[journal_id] = 10.1055/s-00022861
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Aktuelle Ernährungsmedizin Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Aktuelle Ernährungsmedizin Volume 2 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; Aktuelle Ernährungsmedizin Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
       name = Aktuelle Neurologie ;
       issn = 0302-4350 ;
       eissn = 1438-9428 ;
@@ -458,8 +475,8 @@
 
     >
     param[journal_id] = 10.1055/s-00000175
-    comment[years] = 1999-current
-    comment[0] = includes Arzneimittelforschung Drug Research
+    comment[years] = 1999-2013
+    comment[0] = includes Arzneimittelforschung Drug Research. Published as Drug Research after 2013.
 
     au < exists ; exists ; 1999 ; 1999 ; Arzneimittelforschung Volume 1999 ; 50 >
     au < exists ; exists ; 2001 ; 2001 ; Arzneimittelforschung Volume 2001 ; 51 >
@@ -474,8 +491,24 @@
     au < exists ; exists ; 2010 ; 2010 ; Arzneimittelforschung Volume 2010 ; 60 >
     au < exists ; exists ; 2011 ; 2011 ; Arzneimittelforschung Volume 2011 ; 61 >
     au < exists ; exists ; 2012 ; 2012 ; Arzneimittelforschung Volume 2012 ; 62 >
-    au < expected ; exists ; 2013 ; 2013 ; Arzneimittelforschung Volume 2013 ; 63 >
-    au < expected ; exists ; 2014 ; 2014 ; Arzneimittelforschung Volume 2014 ; 64 >
+    au < exists ; exists ; 2013 ; 2013 ; Arzneimittelforschung Volume 2013 ; 63 >
+
+   }
+
+   {
+    title <
+      name = Drug Research ;
+      issn = 2194-9379 ;
+      eissn = 2194-9387 ;
+      doi = 10.1055/s-00023610
+
+    >
+    param[journal_id] = 10.1055/s-00023610
+    comment[years] = 2014-current
+    comment[0] = published as Arzneimittelforschung before 2014.
+
+    au < exists ; exists ; 2013 ; 2013 ; Arzneimittelforschung Volume 2013 ; 63 >
+    au < exists ; exists ; 2014 ; 2014 ; Arzneimittelforschung Volume 2014 ; 64 >
 
    }
 
