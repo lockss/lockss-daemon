@@ -25728,7 +25728,7 @@
         au < manifest ; exists ; 1970 ; Measurement and Control Volume 3 ; 3 >
         au < manifest ; exists ; 1971 ; Measurement and Control Volume 4 ; 4 >
         au < manifest ; exists ; 1972 ; Measurement and Control Volume 5 ; 5 >
-        au < exists ; exists ; 1973 ; Measurement and Control Volume 6 ; 6 >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 6 ; 6 >
         au < manifest ; exists ; 1974 ; Measurement and Control Volume 7 ; 7 >
         au < manifest ; exists ; 1975 ; Measurement and Control Volume 8 ; 8 >
         au < manifest ; exists ; 1976 ; Measurement and Control Volume 9 ; 9 >
@@ -25746,8 +25746,8 @@
         au < manifest ; exists ; 1988 ; Measurement and Control Volume 21 ; 21 >
         au < manifest ; exists ; 1989 ; Measurement and Control Volume 22 ; 22 >
         au < manifest ; exists ; 1990 ; Measurement and Control Volume 23 ; 23 >
-        au < exists ; exists ; 1991 ; Measurement and Control Volume 24 ; 24 >
-        au < exists ; exists ; 1992 ; Measurement and Control Volume 25 ; 25 >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 24 ; 24 >
+        au < doesNotExist ; doesNotExist ; 0 ; Measurement and Control Volume 25 ; 25 >
         au < manifest ; exists ; 1993 ; Measurement and Control Volume 26 ; 26 >
         au < manifest ; exists ; 1994 ; Measurement and Control Volume 27 ; 27 >
         au < manifest ; exists ; 1995 ; Measurement and Control Volume 28 ; 28 >
