@@ -43043,6 +43043,9 @@ comment[mpj] = now published by Brill
         implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
         param[base_url] = http://jtt.sagepub.com/
         
+        au < HighWirePressH20Plugin ; exists ; 1997 ; Annals of Clinical Biochemistry Volume 34 ; 34 >
+        au < HighWirePressH20Plugin ; exists ; 1998 ; Annals of Clinical Biochemistry Volume 35 ; 35 >
+        au < HighWirePressH20Plugin ; exists ; 1999 ; Annals of Clinical Biochemistry Volume 36 ; 36 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2000 ; Annals of Clinical Biochemistry Volume 37 ; 37 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2001 ; Annals of Clinical Biochemistry Volume 38 ; 38 >
         au < HighWirePressH20Plugin ; doNotProcess ; 2002 ; Annals of Clinical Biochemistry Volume 39 ; 39 >
