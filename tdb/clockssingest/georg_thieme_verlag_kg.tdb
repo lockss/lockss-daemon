@@ -2053,16 +2053,15 @@
       name = Journal of Wrist Surgery ;
       issn = 2163-3916 ;
       eissn = 2163-3924 ;
-      doi = 10.500/s.0032.1312044
+      doi = 10.500/s-00000183
 
     >
-    param[journal_id] = 10.500/s.0032.1312044
+    param[journal_id] = 10.500/s-00000183
     comment[years] = 2012-current
-    comment[journal_id] = doi doesn't work
 
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; Journal of Wrist Surgery Volume 2012 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Wrist Surgery Volume 2013 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal of Wrist Surgery Volume 2014 ; 3 >
 
   }
 
@@ -2072,16 +2071,15 @@
       name = JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege ;
       issn = 1439-2569 ;
       eissn = 1439-9164 ;
-      doi = 10.1055/s-002-23435
+      doi = 10.1055/s-00023425
 
     >
-    param[journal_id] = 10.1055/s-002-23435
+    param[journal_id] = 10.1055/s-00023425
     comment[years] = 2012-current
-    omment[journal_id] = doi doesn't work
 
-    au < exists ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2012 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2013 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; JuKiP Ihr Fachmagazin für Gesundheits und Kinderkrankenpflege Volume 2014 ; 3 >
 
 
   }
@@ -2655,16 +2653,16 @@
       name = Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten ;
       issn = 2193-5254 ;
       eissn = 2193-5262 ;
-      doi = 10.1055/s-00000046179
+      doi = 10.1055/s-00000179
 
     >
-    param[journal_id] = 10.1055/s-00000046179
+    param[journal_id] = 10.1055/s-00000179
     comment[years] = 2012-current
     comment[0] = coming online soon as of July 2012
 
-    au < expected ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 0 >
-    au < expected ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 0 >
-    au < expected ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 0 >
+    au < exists ; exists ; 2012 ; 2012 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2012 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2013 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; Orthopädie und Unfallchirurgie - Mitteilungen und Nachrichten Volume 2014 ; 3 >
 
   }
 
@@ -2793,37 +2791,6 @@
     au < exists ; exists ; 2012 ; 2012 ; Pädiatrie up2date Volume 2012 ; 7 >
     au < expected ; exists ; 2013 ; 2013 ; Pädiatrie up2date Volume 2013 ; 8 >
     au < expected ; exists ; 2014 ; 2014 ; Pädiatrie up2date Volume 2014 ; 9 >
-
-  }
-
-  {
-
-    title <
-      name = Perspectives in Plastic Surgery ;
-      issn = 0892-3957 ;
-      eissn = 1521-575X ;
-      doi = 10.1055/s-00000051
-
-    >
-    param[journal_id] = 10.1055/s-00000051
-    comment[years] = 1987-2001
-    comment[title] = doi does not match the AUs below
-
-    au < exists ; exists ; 1987 ; 1987 ; Perspectives in Plastic Surgery Volume 1987 ; 0 >
-    au < exists ; exists ; 1988 ; 1988 ; Perspectives in Plastic Surgery Volume 1988 ; 0 >
-    au < exists ; exists ; 1989 ; 1989 ; Perspectives in Plastic Surgery Volume 1989 ; 0 >
-    au < exists ; exists ; 1990 ; 1990 ; Perspectives in Plastic Surgery Volume 1990 ; 0 >
-    au < exists ; exists ; 1991 ; 1991 ; Perspectives in Plastic Surgery Volume 1991 ; 0 >
-    au < exists ; exists ; 1992 ; 1992 ; Perspectives in Plastic Surgery Volume 1992 ; 0 >
-    au < exists ; exists ; 1993 ; 1993 ; Perspectives in Plastic Surgery Volume 1993 ; 0 >
-    au < exists ; exists ; 1994 ; 1994 ; Perspectives in Plastic Surgery Volume 1994 ; 0 >
-    au < exists ; exists ; 1995 ; 1995 ; Perspectives in Plastic Surgery Volume 1995 ; 0 >
-    au < exists ; exists ; 1996 ; 1996 ; Perspectives in Plastic Surgery Volume 1996 ; 0 >
-    au < exists ; exists ; 1997 ; 1997 ; Perspectives in Plastic Surgery Volume 1997 ; 0 >
-    au < exists ; exists ; 1998 ; 1998 ; Perspectives in Plastic Surgery Volume 1998 ; 0 >
-    au < exists ; exists ; 1999 ; 1999 ; Perspectives in Plastic Surgery Volume 1999 ; 0 >
-    au < exists ; exists ; 2000 ; 2000 ; Perspectives in Plastic Surgery Volume 2000 ; 0 >
-    au < exists ; exists ; 2001 ; 2001 ; Perspectives in Plastic Surgery Volume 2001 ; 0 >
 
   }
 
@@ -3380,16 +3347,15 @@
       name = retten! ;
       issn = 2193-2387 ;
       eissn = 2193-2395 ;
-      doi = 10.1055/s-002-23220
+      doi = 10.1055/s-00000178
 
     >
-    param[journal_id] = 10.1055/s-002-23220
+    param[journal_id] = 10.1055/s-00000178
     comment[years] = 2012-current
-    comment[doi] = doi doesn't work
 
-   au < exists ; exists ; 2012 ; 2012 ; retten! Volume 2012 ; 0 >
-   au < expected ; exists ; 2013 ; 2013 ; retten! Volume 2013 ; 0 >
-   au < expected ; exists ; 2014 ; 2014 ; retten! Volume 2014 ; 0 >
+   au < exists ; exists ; 2012 ; 2012 ; retten! Volume 2012 ; 1 >
+   au < exists ; exists ; 2013 ; 2013 ; retten! Volume 2013 ; 2 >
+   au < expected ; exists ; 2014 ; 2014 ; retten! Volume 2014 ; 3 >
 
   }
 
