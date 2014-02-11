@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.165 2013-07-18 19:29:07 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.166 2014-02-11 18:28:09 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,7 @@ import org.lockss.util.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
-  static Logger logger = Logger.getLogger("BaseArchivalUnit");
+  static Logger logger = Logger.getLogger(BaseArchivalUnit.class);
 
   public static final long
     DEFAULT_FETCH_DELAY = 6 * Constants.SECOND;
@@ -278,6 +278,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         crawlSpec.setCrawlWindow(window);
       }
     } catch (LockssRegexpException e) {
+      logger.error("setBaseAuParams CrawlSpec", e);
       throw new ConfigurationException("Illegal RE", e);
     }
     paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
