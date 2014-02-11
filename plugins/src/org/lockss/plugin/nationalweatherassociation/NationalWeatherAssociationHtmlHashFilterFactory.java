@@ -1,4 +1,6 @@
-/* $Id: NationalWeatherAssociationHtmlHashFilterFactory.java,v 1.1 2014-01-28 17:53:36 ldoan Exp $ */
+/*
+ * $Id: NationalWeatherAssociationHtmlHashFilterFactory.java,v 1.2 2014-02-11 21:54:06 thib_gc Exp $
+ */
 
 /*
 
@@ -55,7 +57,8 @@ public class NationalWeatherAssociationHtmlHashFilterFactory
       Logger.getLogger(NationalWeatherAssociationHtmlHashFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au, 
-                                          InputStream in, String encoding) {
+                                               InputStream in,
+                                               String encoding) {
 
     NodeFilter[] filters = new NodeFilter[] {
         new TagNameFilter("script"),
@@ -73,27 +76,6 @@ public class NationalWeatherAssociationHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
         // banner
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "banner\\.png"),
-        // home
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/index\\.php"),
-        // publications
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/publications\\.php"),
-        // call for papers
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/call_for_papers\\.php"),
-        // authors
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/author_information\\.php"),
-        // reviewers
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/reviewer_information\\.php"),
-        // search
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/search\\.php"),
-        // about
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", 
-            "^http://www\\..*\\.org/.*/about\\.php"),
         // last updated date
         HtmlNodeFilters.tagWithTextRegex("p", ".*Last updated.*", true), 
     };
