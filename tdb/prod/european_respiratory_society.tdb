@@ -5,9 +5,6 @@
     info[tester] = 8
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-  implicit < status ; year ; name ; param[volume_name] >
-
   {
 
     title <
@@ -17,6 +14,8 @@
       issnl = 0903-1936
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://erj.ersjournals.com/
     
     {
@@ -81,6 +80,8 @@
     >
 
     type = bookSeries
+    plugin = org.lockss.plugin.highwire.HighWireDrupalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://erm.ersjournals.com/
     
     comment[manifest] = manifest page has permission statement for clockss.
@@ -140,6 +141,8 @@
       issnl = 0905-9180
     >
 
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://err.ersjournals.com/
       
     au < released ; 2005 ; European Respiratory Review Volume 14 ; 14 >
