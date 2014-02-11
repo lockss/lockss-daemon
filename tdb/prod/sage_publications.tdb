@@ -3083,6 +3083,22 @@
     {
 
       title <
+        name = Asian Journal of Legal Education ;
+        issn = 2321-0058 ;
+        issnl = 2321-0058
+      >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ale.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < manifest ; 2014 ; Asian Journal of Legal Education Volume 1 ; 1 >
+
+    }
+    
+    {
+
+      title <
         name = Asian Journal of Management Cases ;
         issn = 0972-8201 ;
         eissn = 0973-0621 ;
