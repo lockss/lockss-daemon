@@ -28975,7 +28975,7 @@ comment[mpj] = now published by Brill
         au < manifest ; 1970 ; Measurement and Control Volume 3 ; 3 >
         au < manifest ; 1971 ; Measurement and Control Volume 4 ; 4 >
         au < manifest ; 1972 ; Measurement and Control Volume 5 ; 5 >
-        au < manifest ; 1973 ; Measurement and Control Volume 6 ; 6 >
+        au < doesNotExist ; 0 ; Measurement and Control Volume 6 ; 6 >
         au < manifest ; 1974 ; Measurement and Control Volume 7 ; 7 >
         au < manifest ; 1975 ; Measurement and Control Volume 8 ; 8 >
         au < manifest ; 1976 ; Measurement and Control Volume 9 ; 9 >
@@ -28993,8 +28993,8 @@ comment[mpj] = now published by Brill
         au < manifest ; 1988 ; Measurement and Control Volume 21 ; 21 >
         au < manifest ; 1989 ; Measurement and Control Volume 22 ; 22 >
         au < manifest ; 1990 ; Measurement and Control Volume 23 ; 23 >
-        au < doesNotExist ; 1991 ; Measurement and Control Volume 24 ; 24 >
-        au < doesNotExist ; 1992 ; Measurement and Control Volume 25 ; 25 >
+        au < doesNotExist ; 0 ; Measurement and Control Volume 24 ; 24 >
+        au < doesNotExist ; 0 ; Measurement and Control Volume 25 ; 25 >
         au < manifest ; 1993 ; Measurement and Control Volume 26 ; 26 >
         au < manifest ; 1994 ; Measurement and Control Volume 27 ; 27 >
         au < manifest ; 1995 ; Measurement and Control Volume 28 ; 28 >
@@ -33757,14 +33757,14 @@ comment[mpj] = now published by Brill
       implicit < status ; year ; name ; param[volume_name] >
 
       au < exists ; 1973 ; Public Personnel Management Volume 2 ; 2 >
-      au < doesNotExist ; 1974 ; Public Personnel Management Volume 3 ; 3 >
-      au < doesNotExist ; 1975 ; Public Personnel Management Volume 4 ; 4 >
-      au < doesNotExist ; 1976 ; Public Personnel Management Volume 5 ; 5 >
-      au < doesNotExist ; 1977 ; Public Personnel Management Volume 6 ; 6 >
-      au < doesNotExist ; 1978 ; Public Personnel Management Volume 7 ; 7 >
-      au < doesNotExist ; 1979 ; Public Personnel Management Volume 8 ; 8 >
-      au < doesNotExist ; 1980 ; Public Personnel Management Volume 9 ; 9 >
-      au < doesNotExist ; 1981 ; Public Personnel Management Volume 10 ; 10 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 4 ; 4 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 5 ; 5 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 6 ; 6 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 7 ; 7 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 8 ; 8 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 9 ; 9 >
+      au < doesNotExist ; 0 ; Public Personnel Management Volume 10 ; 10 >
       au < exists ; 1982 ; Public Personnel Management Volume 11 ; 11 >
       au < exists ; 1983 ; Public Personnel Management Volume 12 ; 12 >
       au < exists ; 1984 ; Public Personnel Management Volume 13 ; 13 >

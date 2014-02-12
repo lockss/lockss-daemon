@@ -30586,6 +30586,24 @@
       pluginSuffix = ClockssHighWirePressH20Plugin
       param[base_url] = http://ppm.sagepub.com/
 
+      au < exists ; exists ; 1973 ; Public Personnel Management Volume 2 ; 2 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 3 ; 3 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 4 ; 4 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 5 ; 5 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 6 ; 6 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 7 ; 7 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 8 ; 8 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 9 ; 9 ; >
+      au < doesNotExist ; doesNotExist ; 0 ; Public Personnel Management Volume 10 ; 10 ; >
+      au < exists ; exists ; 1982 ; Public Personnel Management Volume 11 ; 11 ; >
+      au < exists ; exists ; 1983 ; Public Personnel Management Volume 12 ; 12 ; >
+      au < exists ; exists ; 1984 ; Public Personnel Management Volume 13 ; 13 ; >
+      au < exists ; exists ; 1985 ; Public Personnel Management Volume 14 ; 14 ; >
+      au < exists ; exists ; 1986 ; Public Personnel Management Volume 15 ; 15 ; >
+      au < exists ; exists ; 1987 ; Public Personnel Management Volume 16 ; 16 ; >
+      au < exists ; exists ; 1988 ; Public Personnel Management Volume 17 ; 17 ; >
+      au < exists ; exists ; 1989 ; Public Personnel Management Volume 18 ; 18 ; >
+      au < exists ; exists ; 1990 ; Public Personnel Management Volume 19 ; 19 ; >
       au < exists ; exists ; 1991 ; Public Personnel Management Volume 20 ; 20 ; >
       au < exists ; exists ; 1992 ; Public Personnel Management Volume 21 ; 21 ; >
       au < exists ; exists ; 1993 ; Public Personnel Management Volume 22 ; 22 ; >
