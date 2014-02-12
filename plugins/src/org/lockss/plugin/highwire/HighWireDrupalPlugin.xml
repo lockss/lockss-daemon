@@ -1,0 +1,195 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Plugin (Drupal/jcore)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.64.0</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire Plugin (Drupal/jcore), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/%s/%s.toc", base_url, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf+html;*</string>
+            <string>"%scontent/%s/%s/%s.full.pdf+html", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>pdf</string>
+            <string>"%scontent/%s/%s/%s.full.pdf", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%scontent/%s/%s/%s", base_url, volume_name, issue, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- all images, resources, css, js, etc. -->
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
+      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
+      <!-- Do not crawl unless from base url -->
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%scontent/(?:by|early)/", base_url</string>
+      <string>1,"^%s(?:content(?:/[^/]+)?/%s|highwire/(?:filestream|markup))/", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlwindow</string>
+    <string>org.lockss.plugin.highwire.HighWirePressCrawlWindow</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.highwire.HighWireDrupalHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent/%s/[^/]+/.*(?:[.](?:full(?:-text)?(?:[.]pdf([+]html)?)?))$", base_url, volume_name</string>
+    </list>
+  </entry>
+  <!-- entry>
+    XXX there are no similar login page attributes in response headers as there are in H20
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWireH20LoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20PermissionCheckerFactory</string>
+  </entry -->
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:HighWire</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>1250</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>au_crawlwindow</string>
+        <org.lockss.util.Default />
+      </entry>
+    </map>
+  </entry>
+</map>

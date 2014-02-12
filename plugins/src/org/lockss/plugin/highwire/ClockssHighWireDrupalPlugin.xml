@@ -1,0 +1,69 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Plugin (Drupal/jcore CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire Plugin (Drupal/jcore for CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>500</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/1000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_permission_checker_factory</string>
+        <org.lockss.util.Default />
+      </entry>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>au_mime_rate_limiter_map</string>
+        <map>
+          <entry>
+            <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+            <string>1/100</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+</map>
