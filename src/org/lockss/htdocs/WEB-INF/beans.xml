@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: beans.xml,v 1.3 2013-03-22 17:32:46 fergaloy-sf Exp $
+ $Id: beans.xml,v 1.4 2014-02-12 19:41:00 fergaloy-sf Exp $
  Web services endpoint definitions.
 ========================================================================
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,10 +42,18 @@ in this Software without prior written authorization from Stanford University.
 
   <jaxws:endpoint id="daemonStatusService" 
     implementor="org.lockss.ws.status.DaemonStatusServiceImpl" 
-    address="/DaemonStatusService" />
+    address="/DaemonStatusService">
+  	<jaxws:outFaultInterceptors>
+  	  <bean class="org.lockss.ws.cxf.LockssFaultOutInterceptor" />
+  	</jaxws:outFaultInterceptors>
+  </jaxws:endpoint>
 
   <jaxws:endpoint id="counterReportsService" 
     implementor="org.lockss.ws.reports.CounterReportsServiceImpl" 
-    address="/CounterReportsService" />
+    address="/CounterReportsService">
+  	<jaxws:outFaultInterceptors>
+  	  <bean class="org.lockss.ws.cxf.LockssFaultOutInterceptor" />
+  	</jaxws:outFaultInterceptors>
+  </jaxws:endpoint>
 
 </beans>
