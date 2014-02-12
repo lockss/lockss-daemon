@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.2 2014-02-07 21:51:51 tlipkis Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.3 2014-02-12 19:43:11 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -143,6 +143,13 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
       LockssDaemon theDaemon = LockssDaemon.getLockssDaemon();
       PluginManager pluginMgr = theDaemon.getPluginManager();
       ArchivalUnit au = pluginMgr.getAuFromId(auId);
+      if (au == null) {
+	throw new LockssWebServicesFault(
+	    "No Archival Unit with provided identifier",
+	    new LockssWebServicesFaultInfo("Archival Unit identifier = "
+		+ auId));
+      }
+
       AuStatus result = new AuStatus();
 
       result.setVolume(au.getName());
