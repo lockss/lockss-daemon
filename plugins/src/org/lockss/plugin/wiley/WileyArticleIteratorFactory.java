@@ -1,5 +1,5 @@
 /*
- * $Id: WileyArticleIteratorFactory.java,v 1.8 2014-02-06 21:06:52 alexandraohlson Exp $
+ * $Id: WileyArticleIteratorFactory.java,v 1.9 2014-02-13 23:46:07 alexandraohlson Exp $
  */
 
 /*
@@ -66,11 +66,11 @@ public class WileyArticleIteratorFactory
                           Logger.getLogger(WileyArticleIteratorFactory.class);
   
   // no need to set ROOT_TEMPLATE since all content is under <base_url>/<year>
-  // files end in *.wml.xml  - probably "wiley metadata language XML"
+  // you cannot assume files end in *.wml.xml - some end in wml2.xml and some just .xml 
   // This pattern will only pick up XML files that live
   //  in a zip files that is 2 levels below year
   protected static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.wml\\.xml$\",base_url,year";
+      "\"%s%d/[A-Z0-9]/[^/]+\\.zip!/.*\\.xml$\",base_url,year";
     
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
