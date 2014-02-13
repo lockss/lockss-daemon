@@ -108,6 +108,23 @@
 
   {
     title <
+      name = Aktuelle Kardiologie ;
+      issn = 2193-5203 ;
+      eissn = 2193-5211 ;
+      doi = 10.1055/s-00022861
+
+     >
+    param[journal_id] = 10.1055/s-00022861
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Aktuelle Kardiologie Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Aktuelle Kardiologie Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; Aktuelle Kardiologie Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
       name = Aktuelle Ernährungsmedizin ;
       issn = 0341-0501 ;
       eissn = 1438-9916 ;
@@ -1018,6 +1035,22 @@
 
   {
     title <
+      name = Drug Research ;
+      issn = 2194-9379 ;
+      eissn = 2194-9387 ;
+      doi = 10.1055/s-00023610
+
+    >
+    param[journal_id] = 10.1055/s-00023610
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2013 ; 2013 ; Drug Research Volume 1 ; 1 >
+    au < exists ; exists ; 2014 ; 2014 ; Drug Research Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
       name = Endo-Praxis ;
       issn = 0177-4077 ;
       eissn = 1611-6429 ;
@@ -1103,6 +1136,21 @@
 
   {
     title <
+      name = Endoscopy international open ;
+      eissn = 2196-9736 ;
+      doi = 10.1055/s-00025476
+
+    >
+    param[journal_id] = 10.1055/s-00025476
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 >
+    au < expected ; expected ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
       name = Endoskopie heute ;
       issn = 0933-811X ;
       eissn = 1439-2577 ;
@@ -1180,6 +1228,25 @@
 
   {
     title <
+      name = Ergoscience ;
+      issn = 1861-6348 ;
+      eissn = 1861-6356 ;
+      doi = 10.1055/s-00000138
+
+    >
+    param[journal_id] = 10.1055/s-00000138
+    comment[years] = 2006-2010
+
+    au < exists ; exists ; 2006 ; 2006 ; Ergoscience Volume 1 ; 1 >
+    au < exists ; exists ; 2007 ; 2007 ; Ergoscience Volume 2 ; 2 >
+    au < exists ; exists ; 2008 ; 2008 ; Ergoscience Volume 3 ; 3 >
+    au < exists ; exists ; 2009 ; 2009 ; Ergoscience Volume 4 ; 4 >
+    au < exists ; exists ; 2010 ; 2010 ; Ergoscience Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
       name = Ernährung & Medizin ;
       issn = 1439-1635 ;
       eissn = 1438-9002 ;
@@ -1250,6 +1317,39 @@
   {
 
     title <
+      name = European Journal of Pediatric Surgery Reports ;
+      issn = 2194-7619 ;
+      eissn = 2194-7627 ;
+      doi = 10.1055/s-00024358
+
+    >
+    param[journal_id] = 10.1055/s-00024358
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
+    au < expected ; expected ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Evidence-Based Spine Surgery ;
+      issn = 1867-2302 ;
+      eissn = 1867-2310 ;
+      doi = 10.1055/s-00000152
+
+    >
+    param[journal_id] = 10.1055/s-00000152
+    comment[years] = 2010-current
+
+    au < exists ; exists ; 2009 ; 2009 ; Evidence-Based Spine Surgery Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
       name = Evidence-Based Spine-Care Journal ;
       issn = 1663-7976 ;
       eissn = 1869-4136 ;
@@ -1312,6 +1412,21 @@
    au < exists ; exists ; 2012 ; 2012 ; Experimental and Clinical Endocrinology & Diabetes Volume 2012 ; 120 >
    au < expected ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Volume 2013 ; 121 >
    au < expected ; exists ; 2014 ; 2014 ; Experimental and Clinical Endocrinology & Diabetes Volume 2014 ; 122 >
+
+  }
+
+  {
+
+    title <
+      name = Experimental and Clinical Endocrinology & Diabetes Reports ;
+      eissn = 2196-7407 ;
+      doi = 10.1055/s-00025479 
+
+    >
+    param[journal_id] = 10.1055/s-00025479
+    comment[years] = 2013
+
+    au < expected ; expected ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
 
   }
 
@@ -1638,6 +1753,23 @@
 
   {
     title <
+      name = Handchirurgie Scan ;
+      issn = 2194-8976 ;
+      eissn = 2194-8984 ;
+      doi = 10.1055/s-00023621
+
+    >
+    param[journal_id] = 10.1055/s-00023621
+    comment[years] = 2004-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Handchirurgie Scan Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Handchirurgie Scan Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
       name = Hebamme Die ;
       issn = 0932-8122 ;
       eissn = 1439-4197 ;
@@ -1810,6 +1942,22 @@
 
   {
     title <
+      name = Innere Medizin up2date ;
+      issn = 2196-0836 ;
+	  eissn = 2196-0844 ;
+	  doi = 10.1055/s-00024665
+	
+    >
+    param[journal_id] = 10.1055/s-00024665
+    comment[years] = 2013-present
+
+   au < exists ; exists ; 2013 ; 2013 ; Innere Medizin up2date Volume 1 ; 1 >
+   au < expected ; expected ; 2014 ; 2014 ; Innere Medizin up2date Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
       name = intensiv ;
       issn = 0942-6035 ;
 	  eissn = 1439-3840 ;
@@ -1858,6 +2006,24 @@
     au < exists ; exists ; 2012 ; 2012 ; Intensivmedizin up2date Volume 2012 ; 8 >
     au < expected ; exists ; 2013 ; 2013 ; Intensivmedizin up2date Volume 2013 ; 9 >
     au < expected ; exists ; 2014 ; 2014 ; Intensivmedizin up2date Volume 2014 ; 10 >
+
+  }
+
+   {
+
+    title <
+      name = International Archives of Otorhinolaryngology ;
+      issn = 1061-1711 ;
+      eissn = 1615-5939 ;
+      doi = 10.1055/s-00000167
+
+    >
+    param[journal_id] = 10.1055/s-00000167
+    comment[years] = 1997-current
+
+   au < exists ; exists ; 2012 ; 2012 ; International Archives of Otorhinolaryngology Volume 16 ; 16 >
+   au < exists ; exists ; 2013 ; 2013 ; International Archives of Otorhinolaryngology Volume 17 ; 17 >
+   au < exists ; exists ; 2014 ; 2014 ; International Archives of Otorhinolaryngology Volume 18 ; 18 >
 
   }
 
@@ -1952,6 +2118,59 @@
   {
 
     title <
+      name = Interventionelle Radiologie Scan ;
+      issn = 2196-2510 ;
+      eissn = 2196-2529 ;
+      doi = 10.1055/s-00024754
+
+    >
+    param[journal_id] = 10.1055/s-00024754
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
+    au < expected ; expected ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volue 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Journal Club AINS ;
+      issn = 2194-9719 ;
+      eissn = 2194-9727 ;
+      doi = 10.1055/s-00023617
+
+    >
+    param[journal_id] = 10.1055/s-00023617
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Journal Club Schmerzmedizin ;
+      issn = 2194-9735 ;
+      eissn = 2194-9743 ;
+      doi = 10.1055/s-00023618
+
+    >
+    param[journal_id] = 10.1055/s-00023618
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Knee Surgery ;
       issn = 1538-8506 ;
       eissn = 1938-2480 ;
@@ -1972,6 +2191,22 @@
     au < exists ; exists ; 2012 ; 2012 ; Journal of Knee Surgery Volume 2012 ; 25 >
     au < expected ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Volume 2013 ; 26 >
     au < expected ; exists ; 2014 ; 2014 ; Journal of Knee Surgery Volume 2014 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Knee Surgery Reports ;
+      issn = 2326-2729 ;
+      eissn = 2326-2737 ;
+      doi = 10.1055/s-00025473
+
+    >
+    param[journal_id] = 10.1055/s-00025473
+    comment[years] = 2013-current
+
+    au < expected ; expected ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
   }
 
@@ -2483,6 +2718,122 @@
   {
 
     title <
+      name = Metabolism and Nutrition in Oncology ;
+      eissn = 2194-735X ;
+      doi = 10.1055/s-00024359
+
+    >
+    param[journal_id] = 10.1055/s-00024359
+    comment[years] = 2013-current
+
+    au < expected ; expected ; 2013 ; 2013 ; Metabolism and Nutrition in Oncology Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = min - Minimally Invasive Neurosurgery ;
+      issn = 0946-7211 ;
+      eissn = 1439-2291 ;
+      doi = 10.1055/s-00000039
+
+    >
+    param[journal_id] = 10.1055/s-00000039
+    comment[years] = 1980-current
+
+    au < exists ; exists ; 1958-1959 ; 1958-1959 ; min - Minimally Invasive Neurosurgery Volume 1 ; 1 >
+    au < exists ; exists ; 1959 ; 1959 ; min - Minimally Invasive Neurosurgery Volume 2 ; 2 >
+    au < exists ; exists ; 1960 ; 1960 ; min - Minimally Invasive Neurosurgery Volume 3 ; 3 >
+    au < exists ; exists ; 1961 ; 1961 ; min - Minimally Invasive Neurosurgery Volume 4 ; 4 >
+    au < exists ; exists ; 1962 ; 1962 ; min - Minimally Invasive Neurosurgery Volume 5 ; 5 >
+    au < exists ; exists ; 1963 ; 1963 ; min - Minimally Invasive Neurosurgery Volume 6 ; 6 >
+    au < exists ; exists ; 1964 ; 1964 ; min - Minimally Invasive Neurosurgery Volume 7 ; 7 >
+    au < exists ; exists ; 1965 ; 1965 ; min - Minimally Invasive Neurosurgery Volume 8 ; 8 >
+    au < exists ; exists ; 1966 ; 1966 ; min - Minimally Invasive Neurosurgery Volume 9 ; 9 >
+    au < exists ; exists ; 1967 ; 1967 ; min - Minimally Invasive Neurosurgery Volume 10 ; 10 >
+    au < exists ; exists ; 1968 ; 1968 ; min - Minimally Invasive Neurosurgery Volume 11 ; 11 >
+    au < exists ; exists ; 1969 ; 1969 ; min - Minimally Invasive Neurosurgery Volume 12 ; 12 >
+    au < exists ; exists ; 1970 ; 1970 ; min - Minimally Invasive Neurosurgery Volume 13 ; 13 >
+    au < exists ; exists ; 1971 ; 1971 ; min - Minimally Invasive Neurosurgery Volume 14 ; 14 >
+    au < exists ; exists ; 1972 ; 1972 ; min - Minimally Invasive Neurosurgery Volume 15 ; 15 >
+    au < exists ; exists ; 1973 ; 1973 ; min - Minimally Invasive Neurosurgery Volume 16 ; 16 >
+    au < exists ; exists ; 1974 ; 1974 ; min - Minimally Invasive Neurosurgery Volume 17 ; 17 >
+    au < exists ; exists ; 1975 ; 1975 ; min - Minimally Invasive Neurosurgery Volume 18 ; 18 >
+    au < exists ; exists ; 1976 ; 1976 ; min - Minimally Invasive Neurosurgery Volume 19 ; 19 >
+    au < exists ; exists ; 1977 ; 1977 ; min - Minimally Invasive Neurosurgery Volume 20 ; 20 >
+    au < exists ; exists ; 1978 ; 1978 ; min - Minimally Invasive Neurosurgery Volume 21 ; 21 >
+    au < exists ; exists ; 1979 ; 1979 ; min - Minimally Invasive Neurosurgery Volume 22 ; 22 >
+    au < exists ; exists ; 1980 ; 1980 ; min - Minimally Invasive Neurosurgery Volume 23 ; 23 >
+    au < exists ; exists ; 1981 ; 1981 ; min - Minimally Invasive Neurosurgery Volume 24 ; 24 >
+    au < exists ; exists ; 1982 ; 1982 ; min - Minimally Invasive Neurosurgery Volume 25 ; 25 >
+    au < exists ; exists ; 1983 ; 1983 ; min - Minimally Invasive Neurosurgery Volume 26 ; 26 >
+    au < exists ; exists ; 1984 ; 1984 ; min - Minimally Invasive Neurosurgery Volume 27 ; 27 >
+    au < exists ; exists ; 1985 ; 1985 ; min - Minimally Invasive Neurosurgery Volume 28 ; 28 >
+    au < exists ; exists ; 1986 ; 1986 ; min - Minimally Invasive Neurosurgery Volume 29 ; 29 >
+    au < exists ; exists ; 1987 ; 1987 ; min - Minimally Invasive Neurosurgery Volume 30 ; 30 >
+    au < exists ; exists ; 1988 ; 1988 ; min - Minimally Invasive Neurosurgery Volume 31 ; 31 >
+    au < exists ; exists ; 1989 ; 1989 ; min - Minimally Invasive Neurosurgery Volume 32 ; 32 >
+    au < exists ; exists ; 1990 ; 1990 ; min - Minimally Invasive Neurosurgery Volume 33 ; 33 >
+    au < exists ; exists ; 1991 ; 1991 ; min - Minimally Invasive Neurosurgery Volume 34 ; 34 >
+    au < exists ; exists ; 1992 ; 1992 ; min - Minimally Invasive Neurosurgery Volume 35 ; 35 >
+    au < exists ; exists ; 1993 ; 1993 ; min - Minimally Invasive Neurosurgery Volume 36 ; 36 >
+    au < exists ; exists ; 1994 ; 1994 ; min - Minimally Invasive Neurosurgery Volume 37 ; 37 >
+    au < exists ; exists ; 1995 ; 1995 ; min - Minimally Invasive Neurosurgery Volume 38 ; 38 >
+    au < exists ; exists ; 1996 ; 1996 ; min - Minimally Invasive Neurosurgery Volume 39 ; 39 >
+    au < exists ; exists ; 1997 ; 1997 ; min - Minimally Invasive Neurosurgery Volume 40 ; 40 >
+    au < exists ; exists ; 1998 ; 1998 ; min - Minimally Invasive Neurosurgery Volume 41 ; 41 >
+    au < exists ; exists ; 1999 ; 1999 ; min - Minimally Invasive Neurosurgery Volume 42 ; 42 >
+    au < exists ; exists ; 2000 ; 2000 ; min - Minimally Invasive Neurosurgery Volume 43 ; 43 >
+    au < exists ; exists ; 2001 ; 2001 ; min - Minimally Invasive Neurosurgery Volume 44 ; 44 >
+    au < exists ; exists ; 2002 ; 2002 ; min - Minimally Invasive Neurosurgery Volume 45 ; 45 >
+    au < exists ; exists ; 2003 ; 2003 ; min - Minimally Invasive Neurosurgery Volume 46 ; 46 >
+    au < exists ; exists ; 2004 ; 2004 ; min - Minimally Invasive Neurosurgery Volume 47 ; 47 >
+    au < exists ; exists ; 2005 ; 2005 ; min - Minimally Invasive Neurosurgery Volume 48 ; 48 >
+    au < exists ; exists ; 2006 ; 2006 ; min - Minimally Invasive Neurosurgery Volume 49 ; 49 >
+    au < exists ; exists ; 2007 ; 2007 ; min - Minimally Invasive Neurosurgery Volume 50 ; 50 >
+    au < exists ; exists ; 2008 ; 2008 ; min - Minimally Invasive Neurosurgery Volume 51 ; 51 >
+    au < exists ; exists ; 2009 ; 2009 ; min - Minimally Invasive Neurosurgery Volume 52 ; 52 >
+    au < exists ; exists ; 2010 ; 2010 ; min - Minimally Invasive Neurosurgery Volume 53 ; 53 >
+    au < exists ; exists ; 2011 ; 2011 ; min - Minimally Invasive Neurosurgery Volume 54 ; 54 >
+
+  }
+
+  {
+
+    title <
+      name = Neonatologie Scan ;
+      issn = 2194-5462 ;
+      eissn = 2194-5470 ;
+      doi = 10.1055/s-00023625
+
+    >
+    param[journal_id] = 10.1055/s-00023625
+    comment[years] = 2013-current
+
+    au < expected ; expected ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Neurochirurgie Scan ;
+      issn = 2195-9919 ;
+      eissn = 2195-9927 ;
+      doi = 10.1055/s-00024713
+
+    >
+    param[journal_id] = 10.1055/s-00024713
+    comment[years] = 2013-current
+
+    au < expected ; expected ; 2013 ; 2013 ; Neurochirurgie Scan Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Neuropediatrics ;
       issn = 0174-304X ;
       eissn = 1439-1899 ;
@@ -2596,6 +2947,57 @@
     au < exists ; exists ; 2012 ; 2012 ; Notarzt Der Volume 2012 ; 28 >
     au < expected ; exists ; 2013 ; 2013 ; Notarzt Der Volume 2013 ; 29 >
     au < expected ; exists ; 2014 ; 2014 ; Notarzt Der Volume 2014 ; 30 >
+
+  }
+
+  {
+    title <
+      name = Notfall & Hausarztmedizin ;
+      issn = 1865-0791 ;
+      eissn = 1865-0805 ;
+      doi = 10.1055/s-00000123
+
+    >
+    param[journal_id] = 10.1055/s-00000123
+    comment[years] = 2013-current
+
+    au < exists ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin Volume 30 ; 30 >
+    au < exists ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin Volume 31 ; 31 >
+    au < exists ; exists ; 2006 ; 2006 ; Notfall & Hausarztmedizin Volume 32 ; 32 >
+    au < exists ; exists ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 >
+    au < exists ; exists ; 2008 ; 2008 ; Notfall & Hausarztmedizin Volume 34 ; 34 >
+    au < exists ; exists ; 2009 ; 2009 ; Notfall & Hausarztmedizin Volume 35 ; 35 >
+
+  }
+
+  {
+    title <
+      name = Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) ;
+      issn = 1612-8591 ;
+      eissn = 1612-8613 ;
+      doi = 10.1055/s-00000124
+
+    >
+    param[journal_id] = 10.1055/s-00000124
+    comment[years] = 2004-2005
+
+    au < exists ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 30 ; 30 >
+    au < exists ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin (Fokus auf Notfallmedizin) Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Notfall Medizin ;
+      issn = 1617-0482 ;
+      eissn = 1439-250X ;
+      doi = 10.1055/s-00000044
+
+    >
+    param[journal_id] = 10.1055/s-00000044
+    comment[years] = 2003
+
+    au < exists ; exists ; 2003 ; 2003 ; Notfall Medizin Volume 29 ; 29 >
 
   }
 
@@ -3178,6 +3580,23 @@
 
   {
     title <
+      name = PSYCH up2date ;
+      issn = 2194-8895 ;
+      eissn = 2194-8909 ;
+      doi = 10.1055/s-00023601
+
+    >
+    param[journal_id] = 10.1055/s-00023601
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; PSYCH up2date Volume 6 ; 6 >
+    au < exists ; exists ; 2013 ; 2013 ; PSYCH up2date Volume 7 ; 7 >
+    au < exists ; exists ; 2014 ; 2014 ; PSYCH up2date Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
       name = Psych Pflege Heute ;
       issn = 0949-1619 ;
       eissn = 1439-0213 ;
@@ -3278,6 +3697,22 @@
    au < exists ; exists ; 2012 ; 2012 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2012 ; 38 >
    au < expected ; exists ; 2013 ; 2013 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2013 ; 39 >
    au < expected ; exists ; 2014 ; 2014 ; Psychoneuro - Psychiatrie - Neurologie - Psychotherapie Volume 2014 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Psychotraumatologie ;
+      eissn = 1439-8931 ;
+      doi = 10.1055/s-00000113
+
+    >
+    param[journal_id] = 10.1055/s-00000113
+    comment[years] = 2000-2002
+
+    au < exists ; exists ; 2000 ; 2000 ; Psychotraumatologie Volume 1 ; 1 >
+    au < exists ; exists ; 2001 ; 2001 ; Psychotraumatologie Volume 2 ; 2 >
+    au < exists ; exists ; 2002 ; 2002 ; Psychotraumatologie Volume 3 ; 3 >
 
   }
 
@@ -4044,6 +4479,22 @@
   {
 
     title <
+      name = Sportphysio ;
+      issn = 2196-5951 ;
+      eissn = 2196-596X ;
+      doi = 10.1055/s-00025710
+
+    >
+    param[journal_id] = 10.1055/s-00025710
+    comment[years] = 1987-current
+
+    au < exists ; exists ; 2013 ; 2013 ; Sportphysio Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Sportverletzung - Sportschaden ;
       issn = 0932-0555 ;
       eissn = 1439-1236 ;
@@ -4352,6 +4803,25 @@
   {
 
     title <
+      name = The Thoracic and Cardiovascular Surgeon Reports ;
+      issn = 2194-7635 ;
+      eissn = 2194-7643 ;
+      doi = 10.1055/s-00024355
+
+
+    >
+    param[journal_id] = 10.1055/s-00024355
+    comment[years] = 2012-present
+
+    au < exists ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
       name = Tierarzthelfer/in konkret ;
       issn = 1614-8754 ;
       eissn = 1865-3987 ;
@@ -4543,6 +5013,24 @@
     au < exists ; exists ; 2012 ; 2012 ; Viszeralchirurgie Volume 2012 ; 47 >
     au < expected ; exists ; 2013 ; 2013 ; Viszeralchirurgie Volume 2013 ; 48 >
     au < expected ; exists ; 2014 ; 2014 ; Viszeralchirurgie Volume 2014 ; 49 >
+
+  }
+
+  {
+
+    title <
+      name = XX Die Zeitschrift für Frauen in der Medizin ;
+      issn = 2193-584X ;
+      eissn = 2193-5858 ;
+      doi = 10.1055/s-00000184
+
+    >
+    param[journal_id] = 10.1055/s-00000184
+    comment[years] = 2012-current
+
+    au < exists ; exists ; 2012 ; 2012 ; XX Die Zeitschrift für Frauen in der Medizin Volume 1 ; 1 >
+    au < exists ; exists ; 2013 ; 2013 ; XX Die Zeitschrift für Frauen in der Medizin Volume 2 ; 2 >
+    au < expected ; expected ; 2014 ; 2014 ; XX Die Zeitschrift für Frauen in der Medizin Volume 3 ; 3 >
 
   }
 
