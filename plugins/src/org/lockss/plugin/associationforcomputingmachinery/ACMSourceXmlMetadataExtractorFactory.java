@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.4 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.5 2014-02-14 20:01:08 alexandraohlson Exp $
  */
 
 /*
@@ -32,10 +32,14 @@
 
 package org.lockss.plugin.associationforcomputingmachinery;
 
+import java.util.ArrayList;
+
+import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 
@@ -63,6 +67,37 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       ACMHelper = new ACMXmlSchemaHelper();
       return ACMHelper;
     }
+    
+    @Override
+    protected ArrayList<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, 
+        CachedUrl cu,
+        ArticleMetadata oneAM) {
+      
+      // get the key for a piece of metadata used in building the filename
+      String fn_key = helper.getFilenameXPathKey();  
+      // the schema doesn't define a filename so don't do a default preEmitCheck
+      if (fn_key == null) {
+        return null; // no preEmitCheck 
+      }
+      String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+      log.debug3("PreEmit filename is " + filenameValue);
+      // we expected a value, but didn't get one...we need to return something
+      // for preEmitCheck to fail
+      if (filenameValue == null) {
+        filenameValue = "NOFILEINMETADATA"; // we expected a value, but got none
+      }
+      if (filenameValue.endsWith(".html")) {
+        filenameValue = filenameValue.replace("\\", "/");
+        log.debug3("html filename is now " + filenameValue);
+      }
+      
+      String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+      ArrayList<String> returnList = new ArrayList<String>();
+      // default version is just the filename associated with the key, in this directory
+      returnList.add(cuBase + filenameValue);
+      return returnList;
+    }
+    
 
     @Override
     public boolean getDoXmlFiltering() {

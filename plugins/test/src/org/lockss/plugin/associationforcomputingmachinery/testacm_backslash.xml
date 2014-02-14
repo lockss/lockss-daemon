@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<periodical ver="4.0" ts="12/22/2008">
+<journal_rec>
+	<journal_id>0000</journal_id>
+	<journal_code>XXXX</journal_code>
+	<journal_name>X Journal</journal_name>
+	<journal_abbr>X Journn</journal_abbr>
+	<issn></issn>
+	<eissn>1535-XXXX</eissn>
+	<language></language>
+	<periodical_type>magazine</periodical_type>
+	<publisher>
+		<publisher_id>PUB27</publisher_id>
+		<publisher_code>ACMNY</publisher_code>
+		<publisher_name>ACM</publisher_name>
+		<publisher_address>2 Penn Plaza, Suite 701</publisher_address>
+		<publisher_city>New York</publisher_city>
+		<publisher_state>NY</publisher_state>
+		<publisher_country>USA</publisher_country>
+		<publisher_zip_code>10121-0701</publisher_zip_code>
+		<publisher_contact>John Smith</publisher_contact>
+		<publisher_phone>555 111-2222</publisher_phone>
+		<publisher_isbn_prefix></publisher_isbn_prefix>
+		<publisher_url>www.acm.org/publications</publisher_url>
+	</publisher>
+</journal_rec>
+<issue_rec>
+	<issue_id>2020000</issue_id>
+	<volume>2011</volume>
+	<issue>9</issue>
+	<issue_date>September 2011</issue_date>
+	<publication_date>09/01/2011</publication_date>
+	<special_issue_title><![CDATA[]]></special_issue_title>
+</issue_rec>
+<article_rec>
+	<article_id>2021111</article_id>
+	<sort_key>10</sort_key>
+	<display_label>a</display_label>
+	<display_no>1</display_no>
+	<article_publication_date></article_publication_date>
+	<seq_no>1</seq_no>
+	<title><![CDATA[An Interview with Somebody]]></title>
+	<subtitle></subtitle>
+	<page_from></page_from>
+	<page_to></page_to>
+	<doi_number>10.1145/2020000.2021111</doi_number>
+	<url></url>
+	<foreign_title></foreign_title>
+	<foreign_subtitle></foreign_subtitle>
+	<language></language>
+	<abstract>
+		<par><![CDATA[Somebody presented Top 10 Things. In this interview with this Magazine, Somebody talked.]]></par>
+	</abstract>
+	<categories>
+		<primary_category>
+			<cat_node/>
+			<descriptor/>
+			<type/>
+		</primary_category>
+	</categories>
+	<authors>
+		<au>
+			<person_id>P277xxxx</person_id>
+			<seq_no>1</seq_no>
+			<first_name><![CDATA[Jane]]></first_name>
+			<middle_name><![CDATA[]]></middle_name>
+			<last_name><![CDATA[SMith]]></last_name>
+			<suffix><![CDATA[]]></suffix>
+			<affiliation><![CDATA[]]></affiliation>
+			<role><![CDATA[Author]]></role>
+		</au>
+	</authors>
+	<fulltext>
+		<file>
+			<seq_no>1</seq_no>
+			<fname>2021111\110000_i_smith.html</fname>
+		</file>
+	</fulltext>
+		<ccc>
+		  <copyright_holder>
+		      <copyright_holder_name>ACM</copyright_holder_name>
+		      <copyright_holder_year>ACM</copyright_holder_year>
+		  </copyright_holder>
+		</ccc>
+</article_rec>
+</periodical>

@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.5 2014-02-14 17:45:32 aishizaki Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.6 2014-02-14 20:01:08 alexandraohlson Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -41,6 +41,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
+import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.definable.DefinableArchivalUnit;
 import org.lockss.plugin.definable.DefinablePlugin;
 
@@ -788,6 +789,44 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //IOUtil.safeClose(file_input);
     }
   }
+  String realXMLFile = "testacm_backslash.xml";
+  public void testFromRealXMLFile() throws Exception {
+    CIProperties xmlHeader = new CIProperties();
+    InputStream file_input = null;
+    try {
+      file_input = getResourceAsStream(realXMLFile);
+      String string_input = StringUtil.fromInputStream(file_input);
+      IOUtil.safeClose(file_input);
 
+      String xml_url = BASE_URL + "basic.xml";
+      String htmlUrl = BASE_URL + "2021111/110000_i_smith.html";
+      xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+      MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
+      // need to check for this file before emitting
+      mau.addUrl(BASE_URL + "2021111/110000_i_smith.html", true, true, xmlHeader); //doesn't matter what content-type
+      
+      cu.setContent(string_input);
+      cu.setContentSize(string_input.length());
+      cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/xml");
+      // setting content (non-pdf) just so the check can find content
+
+      FileMetadataExtractor me = new ACMSourceXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+
+      FileMetadataListExtractor mle =
+          new FileMetadataListExtractor(me);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), cu);
+      assertNotEmpty(mdlist);
+
+      // check each returned md against expected values
+      Iterator<ArticleMetadata> mdIt = mdlist.iterator();
+      ArticleMetadata mdRecord = null;
+      while (mdIt.hasNext()) {
+        mdRecord = (ArticleMetadata) mdIt.next();
+      }
+    }finally {
+      IOUtil.safeClose(file_input);
+    }
+
+  }
   
 }
