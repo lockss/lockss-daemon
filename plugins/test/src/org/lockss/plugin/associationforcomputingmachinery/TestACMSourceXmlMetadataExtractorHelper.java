@@ -1,4 +1,4 @@
-/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.4 2014-01-28 21:49:45 alexandraohlson Exp $
+/* $Id: TestACMSourceXmlMetadataExtractorHelper.java,v 1.5 2014-02-14 17:45:32 aishizaki Exp $
 
 Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -74,6 +74,8 @@ public class TestACMSourceXmlMetadataExtractorHelper
   private static final String BASIC_CONTENT_FILE_NAME = "test_jats1.xml";
   final static String ARTICLE_BASE = BASE_URL + "8aug2010/TEST-TEST00/";
   final static String pdfUrl = "12-authorname.pdf";
+  final static String htmlUrlinMetadata = "2065056\111110_f_lastname.html";
+  final static String htmlUrl = "2065056/111110_f_lastname.html";
   final static String badpdfUrl = "8aug2010/TEST-BADTEST00/DummyMetadataTest.pdf";
   final static String GOOD_JOURNAL_NAME = "Journal Name";
   final static String GOOD_JOURNAL_ID = "J123";
@@ -228,6 +230,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
     "</copyright_holder>"+
     "</ccc>"+
     "</article_rec>"+
+    
     "</section>"+
     "</periodical>";
   
@@ -359,6 +362,44 @@ public class TestACMSourceXmlMetadataExtractorHelper
     "</copyright_holder>"+
     "</ccc>"+
     "</article_rec>"+
+    "<article_rec>" +
+    "<article_id>2065056</article_id>" +
+    "<sort_key>20</sort_key>" +
+    "<display_label>a</display_label>" +
+    "<display_no>2</display_no>" +
+    "<article_publication_date>11-01-2011</article_publication_date>" +
+    "<seq_no>2</seq_no>" +
+    "<title><![CDATA[Testing Html File]]></title>" +
+    "<subtitle></subtitle>" +
+    "<page_from></page_from>" +
+    "<page_to></page_to>" +
+    "<doi_number>10.1145/2060096.2065056</doi_number>" +
+    "<url></url>" +
+    "<foreign_title></foreign_title>" +
+    "<foreign_subtitle></foreign_subtitle>" +
+    "<language></language>" +
+    "<abstract>" +
+    "<par><![CDATA[hello world]]></par>" +
+    "</abstract>" +
+    "<authors>" +
+    "<au>" +
+    "<person_id>P2887646</person_id>" +
+    "<seq_no>1</seq_no>" +
+    "<first_name><![CDATA[FirstName]]></first_name>" +
+    "<middle_name><![CDATA[]]></middle_name>" +
+    "<last_name><![CDATA[LastName]]></last_name>" +
+    "<suffix><![CDATA[]]></suffix>" +
+    "<affiliation><![CDATA[University]]></affiliation>" +
+    "<role><![CDATA[Author]]></role>" +
+    "</au>" +
+    "</authors>" +
+    "<fulltext>" +
+    "<file>" +
+    "<seq_no>1</seq_no>" +
+    "<fname>" + htmlUrlinMetadata+ "</fname>" +
+    "</file>" +
+    "</fulltext>" +
+    "</article_rec>" +
   //  "</section>"+
     "</proceeding>";
   
@@ -629,7 +670,7 @@ public class TestACMSourceXmlMetadataExtractorHelper
       String pdf_url = BASE_URL + pdfUrl;
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
-      // need to check for this file before emitting
+      // need to check for this file before emitting, but contents don't matter
       MockCachedUrl pcu = mau.addUrl(BASE_URL+pdfUrl, EMPTY_CONTENT);
       
       String string_input = BASIC_PERIODICAL_CONTENT;
@@ -671,11 +712,14 @@ public class TestACMSourceXmlMetadataExtractorHelper
     try {
       String xml_url = BASE_URL + "basic.xml";
       String pdf_url = BASE_URL + "12-authorname.pdf";
+      String html_url = BASE_URL + htmlUrl;
+
       xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
       MockCachedUrl cu = mau.addUrl(xml_url, true, true, xmlHeader);
       // need to check for this file before emitting
       MockCachedUrl pcu = mau.addUrl(BASE_URL+pdfUrl, EMPTY_CONTENT);
-      
+      MockCachedUrl hcu = mau.addUrl(BASE_URL+htmlUrl, EMPTY_CONTENT);
+
       String string_input = BASIC_PROCEEDING_CONTENT;
 
       cu.setContent(string_input);
