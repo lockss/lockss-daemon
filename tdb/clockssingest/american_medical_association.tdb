@@ -364,8 +364,8 @@
         au < zapped ; finished ; 1917 ; Archives of Internal Medicine Volume XX ; XX ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1918 ; Archives of Internal Medicine Volume XXI ; XXI ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1918 ; Archives of Internal Medicine Volume XXII ; XXII ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1919 ; Archives of Internal Medicine Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                    
-        au < down ; crawling ; 1919 ; Archives of Internal Medicine Volume 24 ; 24 ; reingest4.clockss.org:8082 >                                                                    
+        au < superseded ; down ; 1919 ; Archives of Internal Medicine Volume 23 [never crawled] ; 23 ; reingest4.clockss.org:8082 >                                                                    
+        au < superseded ; down ; 1919 ; Archives of Internal Medicine Volume 24 [never crawled] ; 24 ; reingest4.clockss.org:8082 >                                                                    
         au < zapped ; finished ; 1920 ; Archives of Internal Medicine Volume 25 ; 25 ; reingest1.clockss.org:8082 >                                                                    
         au < zapped ; finished ; 1920 ; Archives of Internal Medicine Volume 26 ; 26 ; reingest1.clockss.org:8082 >                                                                    
         au < zapped ; finished ; 1921 ; Archives of Internal Medicine Volume 27 ; 27 ; reingest2.clockss.org:8085 >                                                                    
@@ -1046,45 +1046,45 @@
         au < superseded ; down ; 1915 ; American Journal of Diseases of Children Volume X [never crawled] ; X ; reingest4.clockss.org:8082 >
         au < superseded ; down ; 1916 ; American Journal of Diseases of Children Volume XI [never crawled] ; XI ; reingest1.clockss.org:8082 >
         au < superseded ; down ; 1916 ; American Journal of Diseases of Children Volume XII [never crawled] ; XII ; reingest1.clockss.org:8082 >    
-        au < down ; crawling ; 1917 ; American Journal of Diseases of Children Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                         
+        au < superseded ; down ; 1917 ; American Journal of Diseases of Children Volume 13 [never crawled] ; 13 ; reingest2.clockss.org:8085 >                                                         
         au < superseded ; down ; 1917 ; American Journal of Diseases of Children Volume 14 [never crawled] ; 14 ; reingest2.clockss.org:8085 >                                                         
         au < superseded ; down ; 1918 ; American Journal of Diseases of Children Volume 15 [never crawled] ; 15 ; reingest3.clockss.org:8083 >                                                         
         au < superseded ; down ; 1918 ; American Journal of Diseases of Children Volume 16 [never crawled] ; 16 ; reingest3.clockss.org:8083 >                                                         
         au < superseded ; down ; 1919 ; American Journal of Diseases of Children Volume 17 [never crawled] ; 17 ; reingest4.clockss.org:8082 >                                                         
         au < superseded ; down ; 1919 ; American Journal of Diseases of Children Volume 18 [never crawled] ; 18 ; reingest4.clockss.org:8082 >                                                         
         au < zapped ; finished ; 1920 ; American Journal of Diseases of Children Volume 19 ; 19 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1920 ; American Journal of Diseases of Children Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 22 ; 22 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 23 ; 23 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 24 ; 24 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 25 ; 25 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 26 ; 26 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 27 ; 27 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 28 ; 28 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 29 ; 29 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 30 ; 30 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 31 ; 31 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 32 ; 32 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 33 ; 33 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 34 ; 34 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 35 ; 35 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 36 ; 36 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 37 ; 37 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 38 ; 38 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 39 ; 39 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 40 ; 40 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 41 ; 41 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 42 ; 42 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 43 ; 43 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 44 ; 44 ; reingest1.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 45 ; 45 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 46 ; 46 ; reingest2.clockss.org:8085 >                                                         
-        au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 47 ; 47 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 48 ; 48 ; reingest3.clockss.org:8083 >                                                         
-        au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 49 ; 49 ; reingest4.clockss.org:8082 >                                                         
-        au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 50 ; 50 ; reingest4.clockss.org:8082 >                                                         
-        au < down ; crawling ; 1936 ; American Journal of Diseases of Children Volume 51 ; 51 ; reingest1.clockss.org:8082 >                                                         
+        au < zapped ; finished ; 1920 ; American Journal of Diseases of Children Volume 20 ; 20 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 21 ; 21 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1921 ; American Journal of Diseases of Children Volume 22 ; 22 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 23 ; 23 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1922 ; American Journal of Diseases of Children Volume 24 ; 24 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 25 ; 25 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1923 ; American Journal of Diseases of Children Volume 26 ; 26 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 27 ; 27 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1924 ; American Journal of Diseases of Children Volume 28 ; 28 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 29 ; 29 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1925 ; American Journal of Diseases of Children Volume 30 ; 30 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 31 ; 31 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1926 ; American Journal of Diseases of Children Volume 32 ; 32 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 33 ; 33 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1927 ; American Journal of Diseases of Children Volume 34 ; 34 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 35 ; 35 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1928 ; American Journal of Diseases of Children Volume 36 ; 36 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 37 ; 37 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1929 ; American Journal of Diseases of Children Volume 38 ; 38 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 39 ; 39 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1930 ; American Journal of Diseases of Children Volume 40 ; 40 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 41 ; 41 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1931 ; American Journal of Diseases of Children Volume 42 ; 42 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 43 ; 43 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1932 ; American Journal of Diseases of Children Volume 44 ; 44 ; reingest1.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 45 ; 45 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1933 ; American Journal of Diseases of Children Volume 46 ; 46 ; reingest2.clockss.org:8085 >                                           
+        au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 47 ; 47 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1934 ; American Journal of Diseases of Children Volume 48 ; 48 ; reingest3.clockss.org:8083 >                                           
+        au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 49 ; 49 ; reingest4.clockss.org:8082 >                                           
+        au < zapped ; finished ; 1935 ; American Journal of Diseases of Children Volume 50 ; 50 ; reingest4.clockss.org:8082 >                                           
+        au < down ; crawling ; 1936 ; American Journal of Diseases of Children Volume 51 ; 51 ; reingest1.clockss.org:8082 >                                           
         au < zapped ; finished ; 1936 ; American Journal of Diseases of Children Volume 52 ; 52 ; reingest1.clockss.org:8082 >                                                         
         au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 53 ; 53 ; reingest2.clockss.org:8085 >                                                         
         au < zapped ; finished ; 1937 ; American Journal of Diseases of Children Volume 54 ; 54 ; reingest2.clockss.org:8085 >                                                         
@@ -1186,7 +1186,7 @@
         au < zapped ; finished ; 1996 ; Archives of Pediatrics & Adolescent Medicine Volume 150 ; 150 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1997 ; Archives of Pediatrics & Adolescent Medicine Volume 151 ; 151 ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1998 ; Archives of Pediatrics & Adolescent Medicine Volume 152 ; 152 ; reingest3.clockss.org:8083 >
-        au < down ; crawling ; 1999 ; Archives of Pediatrics & Adolescent Medicine Volume 153 ; 153 ; reingest4.clockss.org:8082 >
+        au < zapped ; down ; 1999 ; Archives of Pediatrics & Adolescent Medicine Volume 153 [never crawled] ; 153 ; reingest4.clockss.org:8082 >
         au < zapped ; finished ; 2000 ; Archives of Pediatrics & Adolescent Medicine Volume 154 ; 154 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 2001 ; Archives of Pediatrics & Adolescent Medicine Volume 155 ; 155 ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 2002 ; Archives of Pediatrics & Adolescent Medicine Volume 156 ; 156 ; reingest3.clockss.org:8083 >
@@ -1331,7 +1331,7 @@
         au < zapped ; finished ; 1974 ; AMA Archives of Surgery Volume 108 ; 108 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1974 ; AMA Archives of Surgery Volume 109 ; 109 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1975 ; Archives of Surgery Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-        au < down ; crawling ; 1976 ; Archives of Surgery Volume 111 ; 111 ; reingest1.clockss.org:8082 >
+        au < zapped ; down ; 1976 ; Archives of Surgery Volume 111 [never crawled] ; 111 ; reingest1.clockss.org:8082 >
         au < zapped ; finished ; 1977 ; Archives of Surgery Volume 112 ; 112 ; reingest2.clockss.org:8085 >
         au < zapped ; finished ; 1978 ; Archives of Surgery Volume 113 ; 113 ; reingest3.clockss.org:8083 >
         au < zapped ; finished ; 1979 ; Archives of Surgery Volume 114 ; 114 ; reingest4.clockss.org:8082 >
