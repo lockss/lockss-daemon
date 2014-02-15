@@ -370,6 +370,7 @@
       attr[journal_code] = bmcpharmacoltoxicol
       comment[0] = This journal stopped publishing after Vol 12 in 2012. 
       comment[1] = This journal merged with another and is available through this journal_code and issn.
+      comment[2] = cannot crawl unless AUs with an identical auid are deleted above.
 
       au < manifest ; exists ; 2001 ; BMC Clinical Pharmacology Volume 1 ; 1 >
       au < manifest ; exists ; 2002 ; BMC Clinical Pharmacology Volume 2 ; 2 >
@@ -378,11 +379,11 @@
       au < manifest ; exists ; 2005 ; BMC Clinical Pharmacology Volume 5 ; 5 >
       au < manifest ; exists ; 2006 ; BMC Clinical Pharmacology Volume 6 ; 6 >
       au < manifest ; exists ; 2007 ; BMC Clinical Pharmacology Volume 7 ; 7 >
-      au < manifest ; exists ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < crawling ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
-      au < crawling ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < doNotProcess ; doNotProcess ; 2008 ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < doNotProcess ; exists ; 2009 ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < doNotProcess ; exists ; 2010 ; BMC Clinical Pharmacology Volume 10 ; 10 >
       au < doNotProcess ; doNotProcess ; 2011 ; BMC Clinical Pharmacology Volume 11 ; 11 >
-      au < crawling ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
+      au < doNotProcess ; exists ; 2012 ; BMC Clinical Pharmacology Volume 12 ; 12 >
       
     }
 
