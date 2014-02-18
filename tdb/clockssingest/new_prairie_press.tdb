@@ -229,10 +229,10 @@
       param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = culsproceedings
 
-      au < exists ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 >
+      au < manifest ; exists ; 2011 ; Kansas Library Association College and University Libraries Section Proceedings Volume 1 ; 1 >
       au < doNotProcess ; doNotProcess ; 2012 ; Kansas Library Association College and University Libraries Section Proceedings Volume 2 ; 2 >
-      au < exists ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 >
+      au < manifest ; exists ; 2013 ; Kansas Library Association College and University Libraries Section Proceedings Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; Kansas Library Association College and University Libraries Section Proceedings Volume 4 ; 4 >
 
     }
   }
@@ -262,15 +262,15 @@
       param[base_url] = http://newprairiepress.org/
       param[journal_abbr] = ojrrp
 
-      au < exists ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 >
-      au < exists ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 >
-      au < exists ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 >
-      au < exists ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 >
-      au < exists ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 >
-      au < exists ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 >
+      au < manifest ; exists ; 2006 ; Online Journal of Rural Research & Policy Volume 1 ; 1 >
+      au < manifest ; exists ; 2007 ; Online Journal of Rural Research & Policy Volume 2 ; 2 >
+      au < manifest ; exists ; 2008 ; Online Journal of Rural Research & Policy Volume 3 ; 3 >
+      au < manifest ; exists ; 2009 ; Online Journal of Rural Research & Policy Volume 4 ; 4 >
+      au < manifest ; exists ; 2010 ; Online Journal of Rural Research & Policy Volume 5 ; 5 >
+      au < manifest ; exists ; 2011 ; Online Journal of Rural Research & Policy Volume 6 ; 6 >
       au < doNotProcess ; doNotProcess ; 2012 ; Online Journal of Rural Research & Policy Volume 7 ; 7 >
-      au < exists ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 >
-      au < expected ; exists ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 >
+      au < manifest ; exists ; 2013 ; Online Journal of Rural Research & Policy Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; Online Journal of Rural Research & Policy Volume 9 ; 9 >
 
     }
   }
