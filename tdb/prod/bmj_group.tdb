@@ -520,7 +520,7 @@
     au < HighWirePressH20Plugin ; notReady ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; notReady ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; BMJ Supportive & Palliative Care Volume 4 ; 4 >
 
   }
 
@@ -1844,7 +1844,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < released ; 2011 ; Journal of the Royal Army Medical Corps Volume 157 ; 157 >
       au < released ; 2012 ; Journal of the Royal Army Medical Corps Volume 158 ; 158 >
       au < manifest ; 2013 ; Journal of the Royal Army Medical Corps Volume 159 ; 159 >
-      au < expected ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
+      au < manifest ; 2014 ; Journal of the Royal Army Medical Corps Volume 160 ; 160 >
 
     }
     
