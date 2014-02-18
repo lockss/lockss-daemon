@@ -18050,8 +18050,15 @@
     pluginPrefix = org.lockss.plugin.highwire.
     param[base_url] = http://pasj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-    comment[0] = will publish its first issue with OUP in February 2014
 
+    au < HighWirePressH20Plugin ; exists ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; exists ; 2009 ; Publications of the Astronomical Society of Japan Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; exists ; 2010 ; Publications of the Astronomical Society of Japan Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; exists ; 2011 ; Publications of the Astronomical Society of Japan Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; exists ; 2012 ; Publications of the Astronomical Society of Japan Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; exists ; 2013 ; Publications of the Astronomical Society of Japan Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; exists ; 2014 ; Publications of the Astronomical Society of Japan Volume 66 ; 66 >
 
   }
