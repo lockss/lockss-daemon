@@ -1112,7 +1112,7 @@
     comment[years] = 2013-current
 
     au < exists ; exists ; 2013 ; 2013 ; Endoscopy international open Volume 1 ; 1 >
-    au < expected ; expected ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; Endoscopy international open Volume 2 ; 2 >
 
   }
 
@@ -1294,7 +1294,7 @@
     comment[years] = 2013-current
 
     au < exists ; exists ; 2013 ; 2013 ; European Journal of Pediatric Surgery Reports Volume 1 ; 1 >
-    au < expected ; expected ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; European Journal of Pediatric Surgery Reports Volume 2 ; 2 >
 
   }
 
@@ -1393,7 +1393,7 @@
     param[journal_id] = 10.1055/s-00025479
     comment[years] = 2013
 
-    au < expected ; expected ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Experimental and Clinical Endocrinology & Diabetes Reports Volume 1 ; 1 >
 
   }
 
@@ -1731,7 +1731,7 @@
 
     au < exists ; exists ; 2012 ; 2012 ; Handchirurgie Scan Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; Handchirurgie Scan Volume 2 ; 2 >
-    au < expected ; expected ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; Handchirurgie Scan Volume 3 ; 3 >
 
   }
 
@@ -1919,7 +1919,7 @@
     comment[years] = 2013-present
 
    au < exists ; exists ; 2013 ; 2013 ; Innere Medizin up2date Volume 1 ; 1 >
-   au < expected ; expected ; 2014 ; 2014 ; Innere Medizin up2date Volume 2 ; 2 >
+   au < expected ; exists ; 2014 ; 2014 ; Innere Medizin up2date Volume 2 ; 2 >
 
   }
 
@@ -2094,7 +2094,7 @@
     comment[years] = 2013-current
 
     au < exists ; exists ; 2013 ; 2013 ; Interventionelle Radiologie Scan Volume 1 ; 1 >
-    au < expected ; expected ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volue 2 ; 2 >
+    au < expected ; exists ; 2014 ; 2014 ; Interventionelle Radiologie Scan Volue 2 ; 2 >
 
   }
 
@@ -2112,7 +2112,7 @@
 
     au < exists ; exists ; 2012 ; 2012 ; Journal Club AINS Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; Journal Club AINS Volume 2 ; 2 >
-    au < expected ; expected ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal Club AINS Volume 3 ; 3 >
 
   }
 
@@ -2130,7 +2130,7 @@
 
     au < exists ; exists ; 2012 ; 2012 ; Journal Club Schmerzmedizin Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; Journal Club Schmerzmedizin Volume 2 ; 2 >
-    au < expected ; expected ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; Journal Club Schmerzmedizin Volume 3 ; 3 >
 
   }
 
@@ -2172,7 +2172,7 @@
     param[journal_id] = 10.1055/s-00025473
     comment[years] = 2013-current
 
-    au < expected ; expected ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Journal of Knee Surgery Reports Volume 1 ; 1 >
 
   }
 
@@ -2692,7 +2692,7 @@
     param[journal_id] = 10.1055/s-00024359
     comment[years] = 2013-current
 
-    au < expected ; expected ; 2013 ; 2013 ; Metabolism and Nutrition in Oncology Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Metabolism and Nutrition in Oncology Volume 1 ; 1 >
 
   }
 
@@ -2777,7 +2777,7 @@
     param[journal_id] = 10.1055/s-00023625
     comment[years] = 2013-current
 
-    au < expected ; expected ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Neonatologie Scan Volume 1 ; 1 >
 
   }
 
@@ -2793,7 +2793,7 @@
     param[journal_id] = 10.1055/s-00024713
     comment[years] = 2013-current
 
-    au < expected ; expected ; 2013 ; 2013 ; Neurochirurgie Scan Volume 1 ; 1 >
+    au < expected ; exists ; 2013 ; 2013 ; Neurochirurgie Scan Volume 1 ; 1 >
 
   }
 
@@ -4781,7 +4781,7 @@
 
     au < exists ; exists ; 2012 ; 2012 ; The Thoracic and Cardiovascular Surgeon Reports Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; The Thoracic and Cardiovascular Surgeon Reports Volume 2 ; 2 >
-    au < expected ; expected ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; The Thoracic and Cardiovascular Surgeon Reports Volume 3 ; 3 >
 
   }
 
@@ -4996,7 +4996,7 @@
 
     au < exists ; exists ; 2012 ; 2012 ; XX Die Zeitschrift für Frauen in der Medizin Volume 1 ; 1 >
     au < exists ; exists ; 2013 ; 2013 ; XX Die Zeitschrift für Frauen in der Medizin Volume 2 ; 2 >
-    au < expected ; expected ; 2014 ; 2014 ; XX Die Zeitschrift für Frauen in der Medizin Volume 3 ; 3 >
+    au < expected ; exists ; 2014 ; 2014 ; XX Die Zeitschrift für Frauen in der Medizin Volume 3 ; 3 >
 
   }
 
