@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.1 2014-02-12 03:57:24 etenbrink Exp $
+ * $Id: HighWireDrupalArticleIteratorFactory.java,v 1.2 2014-02-19 22:50:30 etenbrink Exp $
  */
 
 /*
@@ -54,25 +54,18 @@ public class HighWireDrupalArticleIteratorFactory
   protected static final String PATTERN_TEMPLATE =
     "\"^%scontent/%s/(?:[^/]+/)?(?:[^./?&]+)$\", " +
     "base_url, volume_name";
-  //"\"^%scontent/%s/(?:[^/]+/)?(?:[^./]+)(?:[.]full(?:[.]pdf)?)?$\", " +
   // various aspects of an article
   // http://ajpcell.physiology.org/content/302/1/C1
   // http://ajpcell.physiology.org/content/302/1/C1.article-info
   // http://ajpcell.physiology.org/content/302/1/C1.figures-only
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf+html
   // http://ajpcell.physiology.org/content/302/1/C1.full.pdf
-  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html
-  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf
+  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf+html (normalize)
+  // http://ajpcell.physiology.org/content/302/1/C1.full-text.pdf (normalize)
   
   // http://bjo.bmj.com/content/96/1/1.extract
   // http://bjo.bmj.com/content/96/1/1.short
   // http://bjo.bmj.com/content/96/1/1.citation (usually no links)
-  
-//  protected static final Pattern HTML_PATTERN = Pattern.compile(
-//      "/([^/]+)[.]full$", Pattern.CASE_INSENSITIVE);
-//  
-//  protected static final Pattern PDF_PATTERN = Pattern.compile(
-//      "/([^/]+)[.]full(?:-text)?[.]pdf$", Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern LANDING_PATTERN = Pattern.compile(
       "/([^./?&]+)$", Pattern.CASE_INSENSITIVE);
@@ -83,7 +76,6 @@ public class HighWireDrupalArticleIteratorFactory
   protected static final String PDF_REPLACEMENT = "/$1.full.pdf";
   protected static final String PDF_REPLACEMENT2 = "/$1.full-text.pdf";
   protected static final String PDF_LANDING_REPLACEMENT = "/$1.full.pdf+html";
-  protected static final String PDF_LANDING_REPLACEMENT2 = "/$1.full-text.pdf+html";
   protected static final String ABSTRACT_REPLACEMENT = "/$1.abstract";
   protected static final String EXTRACT_REPLACEMENT = "/$1.extract";
   protected static final String FIGURES_REPLACEMENT = "/$1.figures-only";
@@ -108,8 +100,8 @@ public class HighWireDrupalArticleIteratorFactory
         HTML_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
-    builder.addAspect(
-        PDF_REPLACEMENT,
+    builder.addAspect(Arrays.asList(
+        PDF_REPLACEMENT,PDF_REPLACEMENT2),
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
     // set up pdf landing page to be an aspect
@@ -130,9 +122,7 @@ public class HighWireDrupalArticleIteratorFactory
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
         ArticleFiles.ROLE_ABSTRACT,
         ArticleFiles.ROLE_FULL_TEXT_HTML_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FIGURES_TABLES));
+        ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE));
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
