@@ -297,7 +297,7 @@
   
         au < manifest ; exists ; 2012 ; Crime Science Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; Crime Science Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; Crime Science Volume 3 ; 3 >
   
     }
   
@@ -1085,7 +1085,7 @@
   
         au < manifest ; exists ; 2012 ; IZA Journal of Labor Economics Volume 1 ; 1 >
         au < manifest ; exists ; 2013 ; IZA Journal of Labor Economics Volume 2 ; 2 >
-        au < expected ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
+        au < manifest ; exists ; 2014 ; IZA Journal of Labor Economics Volume 3 ; 3 >
   
     }
   
@@ -1326,7 +1326,7 @@
         comment[platform] = BioMedCentralPlugin
   
         au < manifest ; exists ; 2013 ; Journal of Internet Services and Applications Volume 4 ; 4 >
-        au < expected ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
+        au < manifest ; exists ; 2014 ; Journal of Internet Services and Applications Volume 5 ; 5 >
   
     }
   
