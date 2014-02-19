@@ -45,10 +45,10 @@ public class HighWireDrupalHtmlMetadataExtractorFactory implements FileMetadataE
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, 
       String contentType)
       throws PluginException {
-    return new HighWirePressH20HtmlMetadataExtractor();
+    return new HighWireDrupalHtmlMetadataExtractor();
   }
   
-  public static class HighWirePressH20HtmlMetadataExtractor 
+  public static class HighWireDrupalHtmlMetadataExtractor 
     implements FileMetadataExtractor {
     
     // Map HighWire HTML meta tag names to cooked metadata fields
