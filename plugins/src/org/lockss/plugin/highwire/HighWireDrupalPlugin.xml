@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>HighWire Plugin (Drupal/jcore)</string>
+    <string>HighWire Drupal Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -60,7 +60,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"HighWire Plugin (Drupal/jcore), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"HighWire Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
@@ -100,12 +100,13 @@
     <string>au_crawlrules</string>
     <list>
       <!-- all images, resources, css, js, etc. -->
+      <string>2,"^%scontent/(?!([^/]+/)?%s)[^?]*[.](?:gif)", base_url, volume_name</string>
       <string>1,"^https?://%s/[^?]*[.](?:bmp|gif|ico|jpe?g|png|tif?f|(css|js)(?:[?].*)?)$", base_url_host</string>
       <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
       <!-- Do not crawl unless from base url -->
       <string>4,"^%s", base_url</string>
-      <string>2,"^%scontent/(?:by|early)/", base_url</string>
-      <string>1,"^%s(?:content(?:/[^/]+)?/%s|highwire/(?:filestream|markup))/", base_url, volume_name</string>
+      <string>2,"^%s(?:[^?]+(?:most-(?:cited|read)|featured_article|featured-podcasts|(?:back-matter|ed-board)[.]pdf)|content/(?:by/|early/|[^{]+[{]))", base_url</string>
+      <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup))/", base_url, volume_name</string>
     </list>
   </entry>
   <entry>
@@ -144,28 +145,23 @@
     </map>
   </entry>
   <entry>
-    <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory</string>
-  </entry>
-  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.highwire.HighWireDrupalUrlNormalizer</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%scontent/%s/[^/]+/.*(?:[.](?:full(?:-text)?(?:[.]pdf([+]html)?)?))$", base_url, volume_name</string>
+      <string>"^%scontent/%s/[^/]+/.*(?:[.](?:full(?:[.]pdf([+]html)?)?))$", base_url, volume_name</string>
     </list>
   </entry>
-  <!-- entry>
-    XXX there are no similar login page attributes in response headers as there are in H20
+  <entry>
     <string>au_login_page_checker</string>
-    <string>org.lockss.plugin.highwire.HighWireH20LoginPageChecker</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker</string>
   </entry>
   <entry>
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20PermissionCheckerFactory</string>
-  </entry -->
+  </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:HighWire</string>
