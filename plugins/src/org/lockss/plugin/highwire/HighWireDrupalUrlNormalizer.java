@@ -1,4 +1,4 @@
-/* $Id: HighWireDrupalUrlNormalizer.java,v 1.1 2014-02-12 03:57:24 etenbrink Exp $
+/* $Id: HighWireDrupalUrlNormalizer.java,v 1.2 2014-02-19 22:52:57 etenbrink Exp $
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,21 +28,27 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
-//import org.lockss.util.StringUtil;
+import org.lockss.util.StringUtil;
 
 public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
   
   protected static Logger log = Logger.getLogger(HighWireDrupalUrlNormalizer.class);
   protected static final String LARGE_JPG = ".large.jpg?";
   protected static final String JS_SUFFIX = ".js?";
-  // XXX protected static final String TOC_SUFFIX = ".toc";
-//  protected static final String PDFTL_SUFFIX = ".full-text.pdf+html";
-//  protected static final String PDFL_SUFFIX = ".full.pdf+html";
-//  protected static final String PDFT_SUFFIX = ".full-text.pdf";
-//  protected static final String PDF_SUFFIX = ".full.pdf";
+  
+  protected static final String FT_PDF_HTML_VARIANT_SUFFIX = ".full-text.pdf%2Bhtml";
+  protected static final String FULL_PDF_HTML_SUFFIX = ".full.pdf+html";
+  protected static final String PDF = ".pdf";
+  protected static final String FT_PDF = ".full-text.pdf";
+  protected static final String FULL_PDF_SUFFIX = ".full.pdf";
+  protected static final Pattern DUP_PDF_PATTERN = Pattern.compile(
+      "^(https?://)([^.]+)([.][^.]+[.][^.]+/content/)\\2/(.*[.]pdf)$");
   
   public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
@@ -51,17 +57,25 @@ public class HighWireDrupalUrlNormalizer implements UrlNormalizer {
     // http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true
     // to http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg
     
-//    // remove .toc from url 
+    // http://ajpheart.physiology.org/content/304/2/H253.full.pdf
+    // http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf
     
     if (url.contains(LARGE_JPG) || url.contains(JS_SUFFIX)) {
       url = url.replaceFirst("[?].+$", "");
-// XXX 
-//    } else if (url.endsWith(TOC_SUFFIX)) {
-//      url = StringUtil.removeTrailing(url, TOC_SUFFIX);
-//    } else if (url.endsWith(PDFTL_SUFFIX)) {
-//      url = StringUtil.replaceLast(url, PDFTL_SUFFIX, PDFL_SUFFIX);
-//    } else if (url.endsWith(PDFT_SUFFIX)) {
-//      url = StringUtil.replaceLast(url, PDF_SUFFIX, PDFT_SUFFIX);
+    } else if (url.contains(PDF)) {
+      if (url.endsWith(FT_PDF_HTML_VARIANT_SUFFIX)) {
+        url = StringUtil.replaceLast(url, FT_PDF_HTML_VARIANT_SUFFIX, FULL_PDF_HTML_SUFFIX);
+      } else if (url.contains(FT_PDF)) {
+        url = StringUtil.replaceLast(url, FT_PDF, FULL_PDF_SUFFIX);
+      }
+      if (url.endsWith(FULL_PDF_SUFFIX)) {
+        Matcher m = DUP_PDF_PATTERN.matcher(url);
+        if (m.find()) {
+          log.warning(url);
+          url = m.replaceFirst("$1$2$3$4");
+          log.warning(url);
+        }
+      }
     }
     
     return(url);
