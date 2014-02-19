@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.1 2014-02-12 03:57:24 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.2 2014-02-19 22:46:16 etenbrink Exp $
  */
 
 /*
@@ -80,7 +80,10 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("noscript"),
     };
     
-    // HTML transform to remove uniqueness from div "data-unqiue-id" attribute 
+    // HTML transform to remove uniqueness from div "data-unqiue-id" attribute
+    // http://ajpcell.physiology.org/highwire/markup/44550/expansion?width=1000
+    //   &height=500&iframe=true&postprocessors=highwire_figures%2Chighwire_math
+    
     HtmlTransform xform = new HtmlTransform() {
       @Override
       public NodeList transform(NodeList nodeList) throws IOException {
@@ -113,8 +116,9 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
     };
     
     InputStream filtered =  new HtmlFilterInputStream(in, encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(
-            new OrFilter(filters)),xform))
+        new HtmlCompoundTransform(
+            HtmlNodeFilterTransform.exclude(
+                new OrFilter(filters)),xform))
     .registerTag(new HtmlTags.Header())
     .registerTag(new HtmlTags.Footer());
     
