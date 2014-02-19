@@ -63,7 +63,7 @@
     param[base_url] = http://adaptation.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePlugin
 
-    au < zapped ; down ; 2008 ; Adaptation Volume 1 [to delete] ; 1 ; >
+    au < superseded ; down ; 2008 ; Adaptation Volume 1 [to delete] ; 1 ; >
     au < zapped ; finished ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
 
     }
