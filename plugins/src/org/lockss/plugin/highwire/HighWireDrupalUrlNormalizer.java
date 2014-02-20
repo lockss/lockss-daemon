@@ -1,4 +1,8 @@
-/* $Id: HighWireDrupalUrlNormalizer.java,v 1.3 2014-02-20 19:41:35 etenbrink Exp $
+/*
+ * $Id: HighWireDrupalUrlNormalizer.java,v 1.4 2014-02-20 20:56:45 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

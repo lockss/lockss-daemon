@@ -1,4 +1,8 @@
 /*
+ * $Id: HighWireDrupalHtmlMetadataExtractorFactory.java,v 1.3 2014-02-20 20:55:56 etenbrink Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -74,7 +78,7 @@ public class HighWireDrupalHtmlMetadataExtractorFactory implements FileMetadataE
           MetadataField.FIELD_PROPRIETARY_IDENTIFIER, 
           MetadataField.extract("^([^;]+);", 1)));
     }
-
+    
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException {
