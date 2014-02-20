@@ -44129,7 +44129,49 @@ comment[mpj] = now published by Brill
       }
   
     }
+
+    {
+    
+      title <
+        name = International Journal of Maritime History ;
+        issn = 0843-8714 ;
+        eissn = 2052-7756 ;
+        issnl = 0843-8714
+      >
   
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ijh.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 1989 ; International Journal of Maritime History Volume 1 ; 1 >
+        au < exists ; 1990 ; International Journal of Maritime History Volume 2 ; 2 >
+        au < exists ; 1991 ; International Journal of Maritime History Volume 3 ; 3 >
+        au < exists ; 1992 ; International Journal of Maritime History Volume 4 ; 4 >
+        au < exists ; 1993 ; International Journal of Maritime History Volume 5 ; 5 >
+        au < exists ; 1994 ; International Journal of Maritime History Volume 6 ; 6 >
+        au < exists ; 1995 ; International Journal of Maritime History Volume 7 ; 7 >
+        au < exists ; 1996 ; International Journal of Maritime History Volume 8 ; 8 >
+        au < exists ; 1997 ; International Journal of Maritime History Volume 9 ; 9 >
+        au < exists ; 1998 ; International Journal of Maritime History Volume 10 ; 10 >
+        au < exists ; 1999 ; International Journal of Maritime History Volume 11 ; 11 >
+        au < exists ; 2000 ; International Journal of Maritime History Volume 12 ; 12 >
+        au < exists ; 2001 ; International Journal of Maritime History Volume 13 ; 13 >
+        au < exists ; 2002 ; International Journal of Maritime History Volume 14 ; 14 >
+        au < exists ; 2003 ; International Journal of Maritime History Volume 15 ; 15 >
+        au < exists ; 2004 ; International Journal of Maritime History Volume 16 ; 16 >
+        au < exists ; 2005 ; International Journal of Maritime History Volume 17 ; 17 >
+        au < exists ; 2006 ; International Journal of Maritime History Volume 18 ; 18 >
+        au < exists ; 2007 ; International Journal of Maritime History Volume 19 ; 19 >
+        au < exists ; 2008 ; International Journal of Maritime History Volume 20 ; 20 >
+        au < exists ; 2009 ; International Journal of Maritime History Volume 21 ; 21 >
+        au < exists ; 2010 ; International Journal of Maritime History Volume 22 ; 22 >
+        au < exists ; 2011 ; International Journal of Maritime History Volume 23 ; 23 >
+        au < exists ; 2012 ; International Journal of Maritime History Volume 24 ; 24 >
+        au < exists ; 2013 ; International Journal of Maritime History Volume 25 ; 25 >
+        au < exists ; 2014 ; International Journal of Maritime History Volume 26 ; 26 >
+
+  }
+
     {
     
       title <
