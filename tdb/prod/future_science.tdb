@@ -122,7 +122,7 @@
     param[journal_id] = ppa
 
     au < manifest ; 2012 ; Pharmaceutical Patent Analyst Volume 1 ; 1 >
-    au < testing ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
+    au < ready ; 2013 ; Pharmaceutical Patent Analyst Volume 2 ; 2 >
     au < manifest ; 2014 ; Pharmaceutical Patent Analyst Volume 3 ; 3 >
     
   }
@@ -140,7 +140,7 @@
     au < manifest ; 2010 ; Therapeutic Delivery Volume 1 ; 1 >
     au < manifest ; 2011 ; Therapeutic Delivery Volume 2 ; 2 >
     au < manifest ; 2012 ; Therapeutic Delivery Volume 3 ; 3 >
-    au < testing ; 2013 ; Therapeutic Delivery Volume 4 ; 4 >
+    au < ready ; 2013 ; Therapeutic Delivery Volume 4 ; 4 >
     au < manifest ; 2014 ; Therapeutic Delivery Volume 5 ; 5 >
     
   }
