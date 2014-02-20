@@ -1815,6 +1815,7 @@
     au < released ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
     au < released ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
     au < manifest ; 2013 ; Shakespeare Bulletin Volume 31 ; 31 >
+    au < expected ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
 
   }
 
@@ -1842,6 +1843,7 @@
     au < released ; 2011 ; Shakespeare Quarterly Volume 62 ; 62 >
     au < released ; 2012 ; Shakespeare Quarterly Volume 63 ; 63 >
     au < manifest ; 2013 ; Shakespeare Quarterly Volume 64 ; 64 >
+    au < expected ; 2014 ; Shakespeare Quarterly Volume 65 ; 65 >
     
 
   }
@@ -1856,6 +1858,7 @@
 
     param[journal_dir] = sirena_poesia_arte_y_critica
     attr[journal_id] = sir
+    comment[0] = no issue after 2010
 
     au < released ; 2005 ; Sirena: poesia, arte y critica 2005 ; 2005 >
     au < released  ;2006 ; Sirena: poesia, arte y critica 2006 ; 2006 >
@@ -1888,6 +1891,7 @@
     au < released ; 2011 ; South Central Review Volume 28 ; 28 >
     au < released ; 2012 ; South Central Review Volume 29 ; 29 >
     au < manifest ; 2013 ; South Central Review Volume 30 ; 30 >
+    au < expected ; 2014 ; South Central Review Volume 31 ; 31 >
     
   }
 
@@ -1915,6 +1919,7 @@
     au < released ; 2011 ; Spiritus: A Journal of Christian Spirituality Volume 11 ; 11 >
     au < released ; 2012 ; Spiritus: A Journal of Christian Spirituality Volume 12 ; 12 >
     au < manifest ; 2013 ; Spiritus: A Journal of Christian Spirituality Volume 13 ; 13 >
+    au < expected ; 2014 ; Spiritus: A Journal of Christian Spirituality Volume 14 ; 14 >
 
   }
 
@@ -1932,6 +1937,7 @@
     au < released ; 2011 ; Studies in American Fiction Volume 38 ; 38 >
     au < released ; 2012 ; Studies in American Fiction Volume 39 ; 39 >
     au < manifest ; 2013 ; Studies in American Fiction Volume 40 ; 40 >
+    au < expected ; 2014 ; Studies in American Fiction Volume 41 ; 41 >
      
      
   }
@@ -1954,6 +1960,7 @@
     au < released ; 2011 ; Studies in Eighteenth Century Culture Volume 40 ; 40 >
     au < released ; 2012 ; Studies in Eighteenth Century Culture Volume 41 ; 41 >
     au < manifest ; 2013 ; Studies in Eighteenth Century Culture Volume 42 ; 42 >
+    au < expected ; 2014 ; Studies in Eighteenth Century Culture Volume 43 ; 43 >
 
   }
   
@@ -1984,6 +1991,7 @@
     au < released ; 2011 ; Technology and Culture Volume 52 ; 52 >
     au < released ; 2012 ; Technology and Culture Volume 53 ; 53 >
     au < manifest ; 2013 ; Technology and Culture Volume 54 ; 54 >
+    au < expected ; 2014 ; Technology and Culture Volume 55 ; 55 >
 
   }
 
@@ -2020,6 +2028,7 @@
     au < released ; 2011 ; The Emily Dickinson Journal Volume 20 ; 20 >
     au < released ; 2012 ; The Emily Dickinson Journal Volume 21 ; 21 >
     au < manifest ; 2013 ; The Emily Dickinson Journal Volume 22 ; 22 >
+    au < expected ; 2014 ; The Emily Dickinson Journal Volume 23 ; 23 >
 
   }
 
@@ -2053,6 +2062,7 @@
     au < released ; 2011 ; The Henry James Review Volume 32 ; 32 >
     au < released ; 2012 ; The Henry James Review Volume 33 ; 33 >
     au < manifest ; 2013 ; The Henry James Review Volume 34 ; 34 >
+    au < expected ; 2014 ; The Henry James Review Volume 35 ; 35 >
 
   }
 
@@ -2086,6 +2096,7 @@
     au < released ; 2011 ; The Lion and the Unicorn Volume 35 ; 35 >
     au < released ; 2012 ; The Lion and the Unicorn Volume 36 ; 36 >
     au < manifest ; 2013 ; The Lion and the Unicorn Volume 37 ; 37 >
+    au < expected ; 2014 ; The Lion and the Unicorn Volume 38 ; 38 >
 
   }
 
@@ -2131,6 +2142,7 @@
 
     param[journal_dir] = yale_journal_of_criticism
     attr[journal_id] = yale
+    comment[0] = no issue after 2005
 
     au < released ; 1996 ; The Yale Journal of Criticism Volume 9 ; 9 >
     au < released ; 1997 ; The Yale Journal of Criticism Volume 10 ; 10 >
@@ -2174,6 +2186,7 @@
     au < released ; 2011 ; Theatre Journal Volume 63 ; 63 >
     au < released ; 2012 ; Theatre Journal Volume 64 ; 64 >
     au < manifest ; 2013 ; Theatre Journal Volume 65 ; 65 >
+    au < expected ; 2014 ; Theatre Journal Volume 66 ; 66 >
 
   }
 
@@ -2206,6 +2219,7 @@
     au < released ; 2011 ; Theatre Topics Volume 21 ; 21 >
     au < released ; 2012 ; Theatre Topics Volume 22 ; 22 >
     au < manifest ; 2013 ; Theatre Topics Volume 23 ; 23 >
+    au < expected ; 2014 ; Theatre Topics Volume 24 ; 24 >
 
   }
 
@@ -2235,6 +2249,7 @@
     au < released ; 2011 ; Theory & Event Volume 14 ; 14 >
     au < released ; 2012 ; Theory & Event Volume 15 ; 15 >
     au < manifest ; 2013 ; Theory & Event Volume 16 ; 16 >
+    au < expected ; 2014 ; Theory & Event Volume 17 ; 17 >
 
   }
 
@@ -2263,6 +2278,7 @@
     au < released ; 2011 ; Transactions of the American Philological Association Volume 141 ; 141 >
     au < released ; 2012 ; Transactions of the American Philological Association Volume 142 ; 142 >
     au < manifest ; 2013 ; Transactions of the American Philological Association Volume 143 ; 143 >
+    au < expected ; 2014 ; Transactions of the American Philological Association Volume 144 ; 144 >
 
   }
   
@@ -2286,6 +2302,7 @@
     au < released ; 2011 ; Victorian Periodicals Review Volume 44 ; 44 >
     au < released ; 2012 ; Victorian Periodicals Review Volume 45 ; 45 >
     au < manifest ; 2013 ; Victorian Periodicals Review Volume 46 ; 46 >
+    au < expected ; 2014 ; Victorian Periodicals Review Volume 47 ; 47 >
 
   }
   
@@ -2303,6 +2320,7 @@
     au < released ; 2011 ; Wallace Stevens Journal Volume 35 ; 35 >
     au < released ; 2012 ; Wallace Stevens Journal Volume 36 ; 36 >
     au < manifest ; 2013 ; Wallace Stevens Journal Volume 37 ; 37 >
+    au < expected ; 2014 ; Wallace Stevens Journal Volume 38 ; 38 >
 
   }  
   
@@ -2316,6 +2334,7 @@
 
     param[journal_dir] = wide_angle
     attr[journal_id] = wan
+    comment[0] = no issue after 1999
 
     au < released ; 1996 ; Wide Angle Volume 18 ; 18 >
     au < released ; 1997 ; Wide Angle Volume 19 ; 19 >
