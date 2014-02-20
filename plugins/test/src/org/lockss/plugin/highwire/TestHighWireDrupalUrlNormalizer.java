@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.1 2014-02-19 22:37:23 etenbrink Exp $
+ * $Id: TestHighWireDrupalUrlNormalizer.java,v 1.2 2014-02-20 19:43:32 etenbrink Exp $
  */
 
 /*
@@ -37,15 +37,18 @@ import org.lockss.test.LockssTestCase;
 /*
  * UrlNormalizer removes  suffixes
  * http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600
- * http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true
+ * & http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true
  * to http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg
  * 
- * http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf
+ * http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full-text.pdf
+ * to http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf
+ * 
  * http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf
- * http://ajpheart.physiology.org/content/304/2/H253.full.pdf
+ * to http://ajpheart.physiology.org/content/304/2/H253.full.pdf
  * 
  * http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf+html
- * http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html
+ * & http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml
+ * to http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html
  */
 
 public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
@@ -56,12 +59,16 @@ public class TestHighWireDrupalUrlNormalizer extends LockssTestCase {
         normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?width=800&height=600", null));
     assertEquals("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg",
         normalizer.normalizeUrl("http://ajpcell.physiology.org/content/ajpcell/303/1/C1/F1.large.jpg?download=true", null));
-    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf",
-        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf", null));
+    assertEquals("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full.pdf",
+        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/ajpheart/304/2/H253.full-text.pdf", null));
     assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf",
         normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf", null));
     assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
         normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf+html", null));
+    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
+        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full.pdf%2Bhtml", null));
+    assertEquals("http://ajpheart.physiology.org/content/304/2/H253.full.pdf+html",
+        normalizer.normalizeUrl("http://ajpheart.physiology.org/content/304/2/H253.full-text.pdf%2Bhtml", null));
   }
   
 }
