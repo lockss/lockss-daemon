@@ -617,7 +617,7 @@
   {
   
     title <
-      name = Religion and Society ;
+      name = Religion and Society: Advances in Research ;
       issn = 2150-9298 ;
       eissn = 2150-9301 ;
       issnl = 2150-9298
@@ -626,11 +626,11 @@
     param[journal_id] = arrs
     param[journal_issn] = 2150-9298
 
-    au < manifest ; exists ; 2010 ; Religion and Society Volume 1 ; 1 >
-    au < crawling ; exists ; 2011 ; Religion and Society Volume 2 ; 2 >
-    au < crawling ; exists ; 2012 ; Religion and Society Volume 3 ; 3 >
-    au < manifest ; exists ; 2013 ; Religion and Society Volume 4 ; 4 >
-    au < expected ; exists ; 2014 ; Religion and Society Volume 5 ; 5 >
+    au < manifest ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 >
+    au < crawling ; exists ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 >
+    au < crawling ; exists ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 >
+    au < manifest ; exists ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 >
+    au < expected ; exists ; 2014 ; Religion and Society: Advances in Research Volume 5 ; 5 >
    
   }
 
