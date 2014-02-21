@@ -32,7 +32,7 @@
     au < released ; 2011 ; The Catholic Historical Review Volume 97 ; 97 >
     au < released ; 2012 ; The Catholic Historical Review Volume 98 ; 98 >
     au < ready ; 2013 ; The Catholic Historical Review Volume 99 ; 99 >
-    au < expected ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
+    au < manifest ; 2014 ; The Catholic Historical Review Volume 100 ; 100 >
 
   }
 
@@ -66,8 +66,8 @@
     param[journal_dir] = the_jurist
     attr[journal_id] = jur
     
-    au < exists ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 ; 72 >
-    au < exists ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 ; 73 >
+    au < manifest ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 ; 72 >
+    au < manifest ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 ; 73 >
     au < expected ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
 
   }
