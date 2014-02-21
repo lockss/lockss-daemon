@@ -12,7 +12,8 @@
 
   {
     title <
-      name = Practical Pre-School Books
+      name = Practical Pre-School Books ;
+      type = bookSeries
     >
     
     param[base_url] = http://www.practicalpreschoolbooks.com/
@@ -107,7 +108,8 @@
 
   {
     title <
-      name = Hopscotch
+      name = Hopscotch ;
+      type = bookSeries
     >
     
     param[base_url] = http://www.hopscotchbooks.com/

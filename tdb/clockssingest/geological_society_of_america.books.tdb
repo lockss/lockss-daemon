@@ -7,7 +7,6 @@
   >
     
     plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
-    type = bookSeries
     
   {
     title <
@@ -241,6 +240,7 @@
 
     title <
       name = Geological Society of America Special Papers ;
+      type = bookSeries ;
       issn = 0072-1077
     >
     
@@ -772,7 +772,8 @@
   {
   
     title <
-      name = GSA Field Guides
+      name = GSA Field Guides ;
+      type = bookSeries
 
     >
     param[base_url] = http://fieldguides.gsapubs.org/
@@ -825,6 +826,7 @@
   {
     title < 
       name = Reviews in Engineering Geology ;
+      type = bookSeries ;
       issn = 0080-2018
     
     >

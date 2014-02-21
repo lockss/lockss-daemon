@@ -8,14 +8,15 @@
 
     plugin = needs.plugin
     param[base_url] = http://books.bradypus.net/
-    type = bookSeries
+
 
   {
     implicit < status ; status2 ; year ; isbn ; param[book_isbn] ; doi ; book_id ; name ; author >
   
     {
         title <
-        name = Books
+        name = Books ;
+        type = bookSeries
         >
     
     au < exists ; exists ; 2007 ; 9788878490246 ; 9788878490246 ;  ; groma1 ; Groma 1 ; Enrico Giorgi, Erika Vecchietti, Julian Bogdani (eds.) > 
