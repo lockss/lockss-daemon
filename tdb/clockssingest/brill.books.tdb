@@ -12,7 +12,8 @@
   {
 
       title <
-        name = Brill Books 
+        name = Brill Books ;
+        type = bookSeries
       >
 
       au < exists ; exists ; (Un)masking the Realities of Power ; 9789004191839 ;  ; 2010 >
