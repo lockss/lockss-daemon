@@ -35,6 +35,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_id] = esaa
+      comment[notReady] = login needed for book reviews
       
       au < doNotProcess ; 2000 ; Annals of the Entomological Society of America Volume 93 ; 93 >
       au < doNotProcess ; 2001 ; Annals of the Entomological Society of America Volume 94 ; 94 >
@@ -49,7 +50,7 @@
       au < released ; 2010 ; Annals of the Entomological Society of America Volume 103 ; 103 >
       au < released ; 2011 ; Annals of the Entomological Society of America Volume 104 ; 104 >
       au < released ; 2012 ; Annals of the Entomological Society of America Volume 105 ; 105 >
-      au < testing ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
+      au < notReady ; 2013 ; Annals of the Entomological Society of America Volume 106 ; 106 >
       au < manifest ; 2014 ; Annals of the Entomological Society of America Volume 107 ; 107 >
             
     }
