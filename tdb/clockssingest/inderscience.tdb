@@ -178,7 +178,7 @@
       au < zapped ; finished ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 >
       au < zapped ; finished ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 >
       au < crawling ; exists ; 2013 ; European Journal of Industrial Engineering Volume 7 ; 7 >
-      au < expected ; exists ; 2014 ; European Journal of Industrial Engineering Volume 8 ; 8 >
+      au < manifest ; exists ; 2014 ; European Journal of Industrial Engineering Volume 8 ; 8 >
 
     }
 
@@ -1778,7 +1778,7 @@
       au < finished ; crawling ; 2009-2010 ; International Journal of Computational Vision and Robotics Volume 1 ; 1 >
       au < zapped ; finished ; 2011 ; International Journal of Computational Vision and Robotics Volume 2 ; 2 >
       au < zapped ; finished ; 2012-2013 ; International Journal of Computational Vision and Robotics Volume 3 ; 3 >
-      au < expected ; exists ; 2014 ; International Journal of Computational Vision and Robotics Volume 4 ; 4 >
+      au < manifest ; exists ; 2014 ; International Journal of Computational Vision and Robotics Volume 4 ; 4 >
 
     }
 
@@ -2757,7 +2757,7 @@
       au < zapped ; finished ; 2011 ; International Journal of Entrepreneurial Venturing Volume 3 ; 3 >
       au < finished ; crawling ; 2012 ; International Journal of Entrepreneurial Venturing Volume 4 ; 4 >
       au < crawling ; exists ; 2013 ; International Journal of Entrepreneurial Venturing Volume 5 ; 5 >
-      au < expected ; exists ; 2014 ; International Journal of Entrepreneurial Venturing Volume 6 ; 6 >
+      au < manifest ; exists ; 2014 ; International Journal of Entrepreneurial Venturing Volume 6 ; 6 >
 
     }
 
@@ -5469,7 +5469,7 @@
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 18 ; 18 >
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 19 ; 19 >
       au < crawling ; exists ; 2013 ; International Journal of Modelling, Identification and Control Volume 20 ; 20 >
-      au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 21 ; 21 >
+      au < manifest ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 21 ; 21 >
       au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 22 ; 22 >
       au < expected ; exists ; 2014 ; International Journal of Modelling, Identification and Control Volume 23 ; 23 >
 
@@ -5907,7 +5907,7 @@
       param[journal_issn] = 1754-8896
       comment[0] = title is not yet published on 9/26/2013
       
-      au < expected ; exists ; 2014 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
+      au < manifest ; exists ; 2014 ; International Journal of Petroleum Engineering Volume 1 ; 1 >
 
     }
 
@@ -6049,7 +6049,7 @@
       
       au < zapped ; finished ; 2011-2012 ; International Journal of Powertrain Volume 1 ; 1 >
       au < crawling ; exists ; 2013 ; International Journal of Powertrain Volume 2 ; 2 >
-      au < expected ; exists ; 2014 ; International Journal of Powertrain Volume 3 ; 3 >
+      au < manifest ; exists ; 2014 ; International Journal of Powertrain Volume 3 ; 3 >
 
     }
 
