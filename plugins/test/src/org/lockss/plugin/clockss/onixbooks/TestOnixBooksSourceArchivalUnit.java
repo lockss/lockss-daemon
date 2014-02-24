@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.3 2014-01-13 19:33:31 alexandraohlson Exp $
+ * $Id: TestOnixBooksSourceArchivalUnit.java,v 1.4 2014-02-24 19:21:57 alexandraohlson Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class TestOnixBooksSourceArchivalUnit extends LockssTestCase {
     
     // Now a couple that shouldn't get crawled
     // md5sum file
-    shouldCacheTest(ROOT_URL+"2012/xxxx/blah.pdf.md5sum", false, sourceAU, cus);
+    shouldCacheTest(ROOT_URL+"2012/xxxx/blah.pdf.md5sum", true, sourceAU, cus);
     //wrong year
     shouldCacheTest(ROOT_URL+"2013/xxxx/blah.pdf", false, sourceAU, cus);
     // too deep
