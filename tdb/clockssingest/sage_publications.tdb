@@ -195,7 +195,7 @@
       au < finished ; crawling ; 2011 ; Action Research Volume 9 ; 9 ; >
       au < zapped ; finished ; 2012 ; Action Research Volume 10 ; 10 ; >
       au < crawling ; exists ; 2013 ; Action Research Volume 11 ; 11 ; >
-      au < expected ; exists ; 2014 ; Action Research Volume 12 ; 12 ; >
+      au < manifest ; exists ; 2014 ; Action Research Volume 12 ; 12 ; >
 
     }
 
@@ -239,7 +239,7 @@
       au < zapped ; finished ; 2011 ; Active Learning in Higher Education Volume 12 ; 12 ; >
       au < zapped ; finished ; 2012 ; Active Learning in Higher Education Volume 13 ; 13 ; >
       au < crawling ; exists ; 2013 ; Active Learning in Higher Education Volume 14 ; 14 ; >
-      au < expected ; exists ; 2014 ; Active Learning in Higher Education Volume 15 ; 15 ; >
+      au < manifest ; exists ; 2014 ; Active Learning in Higher Education Volume 15 ; 15 ; >
 
     }
 
@@ -995,7 +995,7 @@
       au < finished ; crawling ; 2011 ; American Journal of Alzheimer's Disease and Other Dementias Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; American Journal of Alzheimer's Disease and Other Dementias Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; American Journal of Alzheimer's Disease and Other Dementias Volume 28 ; 28 ; >
-      au < expected ; exists ; 2014 ; American Journal of Alzheimer's Disease and Other Dementias Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2014 ; American Journal of Alzheimer's Disease and Other Dementias Volume 29 ; 29 ; >
 
     }
 
@@ -3460,7 +3460,7 @@
       au < finished ; crawling ; 2011 ; Body & Society Volume 17 ; 17 ; >
       au < zapped ; finished ; 2012 ; Body & Society Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Body & Society Volume 19 ; 19 ; >
-      au < expected ; exists ; 2014 ; Body & Society Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2014 ; Body & Society Volume 20 ; 20 ; >
 
     }
 
@@ -4276,7 +4276,7 @@
       au < finished ; crawling ; 2011 ; Capital & Class Volume 35 ; 35 ; >
       au < finished ; crawling ; 2012 ; Capital & Class Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Capital & Class Volume 37 ; 37 ; >
-      au < expected ; exists ; 2014 ; Capital & Class Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2014 ; Capital & Class Volume 38 ; 38 ; >
 
     }
 
@@ -6079,7 +6079,7 @@
       au < finished ; crawling ; 2011 ; Contexts Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Contexts Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Contexts Volume 12 ; 12 ; >
-      au < expected ; exists ; 2014 ; Contexts Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; Contexts Volume 13 ; 13 ; >
 
     }
 
@@ -9165,7 +9165,7 @@
 
       au < finished ; crawling ; 2012 ; European Heart Journal: Acute Cardiovascular Care Volume 1 ; 1 ; >
       au < crawling ; exists ; 2013 ; European Heart Journal: Acute Cardiovascular Care Volume 2 ; 2 ; >
-      au < expected ; exists ; 2014 ; European Heart Journal: Acute Cardiovascular Care Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2014 ; European Heart Journal: Acute Cardiovascular Care Volume 3 ; 3 ; >
 
   }
 
@@ -11854,7 +11854,7 @@
       au < finished ; crawling ; 2011 ; Health Informatics Journal Volume 17 ; 17 ; >
       au < finished ; crawling ; 2012 ; Health Informatics Journal Volume 18 ; 18 ; >
       au < crawling ; exists ; 2013 ; Health Informatics Journal Volume 19 ; 19 ; >
-      au < expected ; exists ; 2014 ; Health Informatics Journal Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2014 ; Health Informatics Journal Volume 20 ; 20 ; >
 
     }
 
@@ -12663,7 +12663,7 @@
       au < finished ; crawling ; 2011 ; Human Resource Development Review Volume 10 ; 10 ; >
       au < finished ; crawling ; 2012 ; Human Resource Development Review Volume 11 ; 11 ; >
       au < crawling ; exists ; 2013 ; Human Resource Development Review Volume 12 ; 12 ; >
-      au < expected ; exists ; 2014 ; Human Resource Development Review Volume 13 ; 13 ; >
+      au < manifest ; exists ; 2014 ; Human Resource Development Review Volume 13 ; 13 ; >
 
     }
 
@@ -14608,7 +14608,7 @@
       au < finished ; crawling ; 2011 ; International Journal of Toxicology Volume 30 ; 30 ; >
       au < finished ; crawling ; 2012 ; International Journal of Toxicology Volume 31 ; 31 ; >
       au < crawling ; exists ; 2013 ; International Journal of Toxicology Volume 32 ; 32 ; >
-      au < expected ; exists ; 2014 ; International Journal of Toxicology Volume 33 ; 33 ; >
+      au < manifest ; exists ; 2014 ; International Journal of Toxicology Volume 33 ; 33 ; >
 
     }
 
@@ -19044,7 +19044,7 @@
       au < finished ; crawling ; 2011 ; The Journal of Environment & Development Volume 20 ; 20 ; >
       au < finished ; crawling ; 2012 ; The Journal of Environment & Development Volume 21 ; 21 ; >
       au < crawling ; exists ; 2013 ; The Journal of Environment & Development Volume 22 ; 22 ; >
-      au < expected ; exists ; 2014 ; The Journal of Environment & Development Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2014 ; The Journal of Environment & Development Volume 23 ; 23 ; >
 
     }
 
@@ -20859,7 +20859,7 @@
         param[base_url] = http://lrs.sagepub.com/
   
         au < crawling ; exists ; 2013 ; Journal of Land and Rural Studies Volume 1 ; 1 ; >
-        au < expected ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
+        au < manifest ; exists ; 2014 ; Journal of Land and Rural Studies Volume 2 ; 2 ; >
   
       }
   
@@ -24643,7 +24643,7 @@
       au < zapped ; finished ; 2011 ; Journalism & Mass Communication Quarterly Volume 88 ; 88 ; >
       au < finished ; crawling ; 2012 ; Journalism & Mass Communication Quarterly Volume 89 ; 89 ; >
       au < crawling ; exists ; 2013 ; Journalism & Mass Communication Quarterly Volume 90 ; 90 ; >
-      au < expected ; exists ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; >
+      au < manifest ; exists ; 2014 ; Journalism & Mass Communication Quarterly Volume 91 ; 91 ; >
 
   }
 
@@ -25263,7 +25263,7 @@
       au < finished ; crawling ; 2011 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 26 ; 26 ; >
       au < finished ; crawling ; 2012 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 27 ; 27 ; >
       au < crawling ; exists ; 2013 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 28 ; 28 ; >
-      au < expected ; exists ; 2014 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 29 ; 29 ; >
+      au < manifest ; exists ; 2014 ; Local Economy: The Journal of the Local Economy Policy Unit Volume 29 ; 29 ; >
 
     }
 
@@ -26750,7 +26750,7 @@
       au < finished ; crawling ; 2011 ; Musicae Scientiae Volume 15 ; 15 ; >
       au < finished ; crawling ; 2012 ; Musicae Scientiae Volume 16 ; 16 ; >
       au < crawling ; exists ; 2013 ; Musicae Scientiae Volume 17 ; 17 ; >
-      au < expected ; exists ; 2014 ; Musicae Scientiae Volume 18 ; 18 ; >
+      au < manifest ; exists ; 2014 ; Musicae Scientiae Volume 18 ; 18 ; >
 
     }
 
@@ -29858,7 +29858,7 @@
       au < zapped ; finished ; 2011 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 225 ; 225 ; >
       au < finished ; crawling ; 2012 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 226 ; 226 ; >
       au < crawling ; exists ; 2013 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 227 ; 227 ; >
-      au < expected ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 228 ; 228 ; >
+      au < manifest ; exists ; 2014 ; Proceedings of the Institution of Mechanical Engineers, Part K: Journal of Multi-body Dynamics Volume 228 ; 228 ; >
 
     }
 
@@ -30186,7 +30186,7 @@
       au < finished ; crawling ; 2011 ; Progress in Physical Geography Volume 35 ; 35 ; >
       au < finished ; crawling ; 2012 ; Progress in Physical Geography Volume 36 ; 36 ; >
       au < crawling ; exists ; 2013 ; Progress in Physical Geography Volume 37 ; 37 ; >
-      au < expected ; exists ; 2014 ; Progress in Physical Geography Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2014 ; Progress in Physical Geography Volume 38 ; 38 ; >
 
     }
 
@@ -30628,7 +30628,7 @@
       au < manifest ; exists ; 2011 ; Public Personnel Management Volume 40 ; 40 ; >
       au < manifest ; exists ; 2012 ; Public Personnel Management Volume 41 ; 41 ; >
       au < crawling ; exists ; 2013 ; Public Personnel Management Volume 42 ; 42 ; >
-      au < expected ; exists ; 2014 ; Public Personnel Management Volume 43 ; 43 ; >
+      au < manifest ; exists ; 2014 ; Public Personnel Management Volume 43 ; 43 ; >
 
   }
     
@@ -37156,7 +37156,7 @@
       au < zapped ; finished ; 2011 ; Vascular Medicine Volume 16 ; 16 ; >
       au < finished ; crawling ; 2012 ; Vascular Medicine Volume 17 ; 17 ; >
       au < crawling ; exists ; 2013 ; Vascular Medicine Volume 18 ; 18 ; >
-      au < expected ; exists ; 2014 ; Vascular Medicine Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2014 ; Vascular Medicine Volume 19 ; 19 ; >
 
     }
 
@@ -40186,7 +40186,7 @@
         au < exists ; exists ; 2011 ; Hand Therapy Volume 16 ; 16 ; >
         au < exists ; exists ; 2012 ; Hand Therapy Volume 17 ; 17 ; >
         au < crawling ; exists ; 2013 ; Hand Therapy Volume 18 ; 18 ; >
-        au < expected ; exists ; 2014 ; Hand Therapy Volume 19 ; 19 ; >
+        au < manifest ; exists ; 2014 ; Hand Therapy Volume 19 ; 19 ; >
     }
   
     {
