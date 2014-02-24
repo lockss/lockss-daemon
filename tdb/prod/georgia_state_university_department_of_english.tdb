@@ -23,7 +23,7 @@
     au < released ; 2010 ; Eudora Welty Review Volume 2 ; 2 >
     au < released ; 2011 ; Eudora Welty Review Volume 3 ; 3 >
     au < released ; 2012 ; Eudora Welty Review Volume 4 ; 4 >
-    au < manifest ; 2013 ; Eudora Welty Review Volume 5 ; 5 >
+    au < testing ; 2013 ; Eudora Welty Review Volume 5 ; 5 >
     au < expected ; 2014 ; Eudora Welty Review Volume 6 ; 6 >
 
   }
@@ -40,6 +40,7 @@
     attr[journal_id] = sli
     
     au < released ; 2011 ; Studies in the Literary Imagination Volume 44 ; 44 >
+    au < exists ; 2012 ; Studies in the Literary Imagination Volume 45 ; 45 >
 
   }
 
