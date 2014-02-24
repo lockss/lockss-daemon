@@ -1,5 +1,5 @@
 /*
- * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.2 2014-01-14 19:05:44 thib_gc Exp $
+ * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.3 2014-02-24 19:01:04 alexandraohlson Exp $
  */
 
 /*
@@ -47,7 +47,9 @@ public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIterator
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
   //Zip file is a flat directory that has both content and xml file in it
   private static final String PATTERN_TEMPLATE = 
-      "\"%s%d/[^/]+\\.zip!/(.*)\\.xml$\",base_url,year";
+      // match any xml file within the zip UNLESS it exists below a "__MACOSX/" directory
+      // these directories are artifacts of the zip getting created on a MAC
+      "\"%s%d/[^/]+\\.zip!/(?!.*__MACOSX/).*\\.xml$\", base_url, year";
 
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
