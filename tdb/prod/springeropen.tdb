@@ -341,7 +341,7 @@
         param[journal_issn] = 2193-8636 
         comment[platform] = BMC
   
-        au < expected ; 2014 ; Decision Analytics Volume 1 ; 1 >
+        au < manifest ; 2014 ; Decision Analytics Volume 1 ; 1 >
   
     }
   
@@ -1211,7 +1211,7 @@
   
         au < manifest ; 2012 ; Journal of Economic Structures Volume 1 ; 1 >
         au < manifest ; 2013 ; Journal of Economic Structures Volume 2 ; 2 >
-        au < expected ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
+        au < manifest ; 2014 ; Journal of Economic Structures Volume 3 ; 3 >
   
     }
   
