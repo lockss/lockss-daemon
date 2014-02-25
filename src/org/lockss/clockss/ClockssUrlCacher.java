@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssUrlCacher.java,v 1.10 2012-01-18 03:40:42 tlipkis Exp $
+ * $Id: ClockssUrlCacher.java,v 1.11 2014-02-25 07:50:38 tlipkis Exp $
  */
 
 /*
@@ -131,7 +131,9 @@ public class ClockssUrlCacher implements UrlCacher {
       AuState aus = AuUtil.getAuState(au);
       aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NOT_MAINTAINED);
       ClockssParams mgr = AuUtil.getDaemon(au).getClockssParams();
-      uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+      if (mgr.getClockssSubscriptionAddr() != null) {
+	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+      }
       return uc.cache();
     }
     int res;
@@ -165,7 +167,9 @@ public class ClockssUrlCacher implements UrlCacher {
       AuState aus = AuUtil.getAuState(au);
       aus.setClockssSubscriptionStatus(AuState.CLOCKSS_SUB_NOT_MAINTAINED);
       ClockssParams mgr = AuUtil.getDaemon(au).getClockssParams();
-      uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+      if (mgr.getClockssSubscriptionAddr() != null) {
+	uc.setLocalAddress(mgr.getClockssSubscriptionAddr());
+      }
       return uc.getUncachedInputStream();
     }
     InputStream res = null;
@@ -196,7 +200,7 @@ public class ClockssUrlCacher implements UrlCacher {
   public void reset() {
     uc.reset();
     if (probe != null) {
-    probe.reset();
+      probe.reset();
     }
   }
 

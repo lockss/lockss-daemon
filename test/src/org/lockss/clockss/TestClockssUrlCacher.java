@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssUrlCacher.java,v 1.4 2007-04-30 04:52:45 tlipkis Exp $
+ * $Id: TestClockssUrlCacher.java,v 1.5 2014-02-25 07:50:38 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,9 @@ import java.io.*;
 import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
+import org.lockss.config.*;
 import org.lockss.state.*;
+import org.lockss.crawler.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -125,6 +127,31 @@ public class TestClockssUrlCacher extends LockssTestCase {
     assertEquals(events, muc.events);
     assertEquals(AuState.CLOCKSS_SUB_NOT_MAINTAINED,
 		 aus.getClockssSubscriptionStatus());
+
+  }
+
+  // ensure uc.setLocalAddress() works
+  public void testDetectDisabledSetLocal() throws Exception {
+    Configuration config = ConfigManager.newConfiguration();
+    config.copyFrom(ConfigManager.getCurrentConfig());
+    config.remove(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR);
+    config.put(ClockssParams.PARAM_ENABLE_CLOCKSS_SUBSCRIPTION_DETECTION, "false");
+    ConfigurationUtil.installConfig(config);
+
+    muc = new MyUrlCacher(URL, mau);
+    cuc = new ClockssUrlCacher(muc);
+
+    assertEquals(AuState.CLOCKSS_SUB_UNKNOWN,
+		 aus.getClockssSubscriptionStatus());
+    muc.setResults(ListUtil.list(expin, expin2));
+    cuc.setLocalAddress(IPAddr.getByName("4.5.8.3"));
+    assertSame(expin, cuc.getUncachedInputStream());
+    assertEquals(ListUtil.list("setLocalAddress: " + "4.5.8.3",
+			       EVENT_INPUTSTREAM),
+		 muc.events);
+    assertEquals(AuState.CLOCKSS_SUB_NOT_MAINTAINED,
+		 aus.getClockssSubscriptionStatus());
+
   }
 
   public void testSubUnknownInst1() throws Exception {
@@ -604,7 +631,8 @@ public class TestClockssUrlCacher extends LockssTestCase {
     }
 
     public void setLocalAddress(IPAddr addr) {
-      events.add("setLocalAddress: " + addr.getHostAddress());
+      events.add("setLocalAddress: " +
+		 (addr == null ? "(null)" : addr.getHostAddress()));
     }
   }
 }
