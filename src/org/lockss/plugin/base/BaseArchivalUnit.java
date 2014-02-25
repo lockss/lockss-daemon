@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.166 2014-02-11 18:28:09 etenbrink Exp $
+ * $Id: BaseArchivalUnit.java,v 1.167 2014-02-25 08:06:41 tlipkis Exp $
  */
 
 /*
@@ -278,8 +278,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         crawlSpec.setCrawlWindow(window);
       }
     } catch (LockssRegexpException e) {
-      logger.error("setBaseAuParams CrawlSpec", e);
-      throw new ConfigurationException("Illegal RE", e);
+      throw new ConfigurationException("Illegal regexp in crawl rules: " +
+				       e.getMessage(), e);
     }
     paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
 
