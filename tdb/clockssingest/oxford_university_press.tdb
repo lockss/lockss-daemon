@@ -17522,8 +17522,17 @@
 
     param[base_url] = http://pasj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
-    comment[0] = will publish its first issue with OUP in February 2014
 
+    au < exists ; exists ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 ; >
+    au < exists ; exists ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 ; >
+    au < exists ; exists ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 ; >
+    au < exists ; exists ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 ; >
+    au < exists ; exists ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 ; >
+    au < exists ; exists ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 ; >
+    au < exists ; exists ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 ; >
+    au < exists ; exists ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 ; >
+    au < exists ; exists ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 ; >
+    au < exists ; exists ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 ; >
     au < manifest ; exists ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
