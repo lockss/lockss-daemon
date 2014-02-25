@@ -24,9 +24,9 @@
     param[base_url] = http://www.innovationandentrepreneurship.net/
     param[journal_id] = aie
 
-    au < finished ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-    au < finished ; crawling ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-    au < finished ; crawling ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+    au < ingNotReady ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+    au < ingNotReady ; crawling ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+    au < ingNotReady ; crawling ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
     au < expected ; exists ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
     au < expected ; exists ; 2014 ; Annals of Innovation & Entrepreneurship Volume 5 ; 5 ; 2014 >
   }
