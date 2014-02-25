@@ -16,15 +16,31 @@
       eissn = 2000-7396 ;
       issnl = 2000-7396 
     >
-
+    
+    {
+    
     param[base_url] = http://www.innovationandentrepreneurship.net/
     param[journal_id] = aie
     
-    au < released ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-    au < released ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-    au < released ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
-    au < expected ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
-    au < expected ; 2014 ; Annals of Innovation & Entrepreneurship Volume 5 ; 5 ; 2014 >
+    au < superseded ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 [superseded] ; 1 ; 2010 >
+    au < superseded ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 [superseded] ; 2 ; 2011 >
+    au < superseded ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 [superseded] ; 3 ; 2012 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://journals.co-action.net/
+      param[journal_id] = aie
+    
+      au < exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+      au < exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+      au < expected ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
+      au < expected ; 2014 ; Annals of Innovation & Entrepreneurship Volume 5 ; 5 ; 2014 >
+    
+    }
+    
   }
   
    {
