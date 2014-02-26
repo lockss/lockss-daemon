@@ -15,7 +15,7 @@ cat ../../tdb/*/*.tdb | ../../scripts/tdb/tdbout -t plugin | sort -u | sed 's/\.
 diff $tpath/ab.txt $tpath/ac.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo00.txt
 #plugins that have AUs
 #shopt -s extglob
-find ../../tdb -name clockssingest -prune -o -name \*.tdb -print | xargs cat | ../../scripts/tdb/tdbout -t plugin | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo00.txt
+find ../../tdb -name \*.tdb -print | xargs cat | ../../scripts/tdb/tdbout -t plugin | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo00.txt
 #shopt -u extglob
 
 #To get the plugins with and without status:
