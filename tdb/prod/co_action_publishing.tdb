@@ -312,7 +312,24 @@
     au < manifest ; 2013 ; Journal of Community Hospital Internal Medicine Perspectives Volume 3 ; 3 ; 2013 >
     au < manifest ; 2014 ; Journal of Community Hospital Internal Medicine Perspectives Volume 4 ; 4 ; 2014 >
   }
-  
+
+  {
+
+    title <
+      name = Journal of European Continuing Medical Education ;
+      eissn = 2161-4083 ;
+      issnl = 2161-4083
+    >
+
+    param[base_url] = http://www.jecme.eu/
+    param[journal_id] = jecme
+
+    au < exists ; 2012 ; Journal of European Continuing Medical Education Volume 1 ; 1 ; 2012 >
+    au < exists ; 2013 ; Journal of European Continuing Medical Education Volume 2 ; 2 ; 2013 >
+    au < exists ; 2014 ; Journal of European Continuing Medical Education Volume 3 ; 3 ; 2014 >
+
+  }
+
   {
 
     title <
