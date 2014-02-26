@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.85 2014-01-29 05:21:56 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.86 2014-02-26 08:09:06 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.85 2014-01-29 05:21:56 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.86 2014-02-26 08:09:06 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -804,6 +804,21 @@ public class ProxyHandler extends AbstractHttpHandler {
 
         if (HttpFields.__ContentType.equalsIgnoreCase(hdr)) hasContent=true;
 
+	// Set local address if requested and allowed
+        if (Constants.X_LOCKSS_LOCAL_ADDRESS.equalsIgnoreCase(hdr)) {
+	  String localAddrStr = request.getField(hdr);
+	  if (!StringUtil.isNullString(localAddrStr) &&
+	      isAllowedLocalAddress(localAddrStr)) {
+	    try {
+	      IPAddr localAddr = IPAddr.getByName(localAddrStr);
+	      log.debug2("Setting local addr to " + localAddr);
+	      conn.setLocalAddress(localAddr);
+	    } catch (UnknownHostException e) {
+	      log.siteWarning("Illegal source address: " + localAddrStr, e);
+	    }
+	  }
+	}
+
         if (isInCache) {
           if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
             ifModified = request.getField(hdr);
@@ -945,6 +960,18 @@ public class ProxyHandler extends AbstractHttpHandler {
     } finally {
       safeReleaseConn(conn);
     }
+  }
+
+  boolean isAllowedLocalAddress(String addr) {
+    java.util.List<String> allowed = proxyMgr.getAllowedLocalAddress();
+    if (allowed == null || allowed.size() < 1) {
+      return false;
+    }
+    String one = allowed.get(0);
+    if ("*".equals(one) || "any".equalsIgnoreCase(one)) {
+      return true;
+    }
+    return allowed.contains(addr);
   }
 
   void forwardResponse(HttpRequest request, HttpResponse response,

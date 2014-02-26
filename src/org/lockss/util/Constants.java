@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.29 2013-06-04 22:42:44 ldoan Exp $
+ * $Id: Constants.java,v 1.30 2014-02-26 08:09:06 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,10 @@ public interface Constants {
   /** Value of {@value #X_LOCKSS_SOURCE} header that requests content only
    * from the cache */
   public static String X_LOCKSS_SOURCE_CACHE = "cache";
+
+  /** The local address to which to the proxy should bind the socket for
+   * outgoing requests */
+  public static String X_LOCKSS_LOCAL_ADDRESS = "X-Lockss-Local-Addr";
 
   /** The real identity of a repairer sending a request to localhost, for
    * testing */

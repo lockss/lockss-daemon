@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.59 2014-01-29 05:21:56 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.60 2014-02-26 08:09:06 tlipkis Exp $
  */
 
 /*
@@ -133,6 +133,16 @@ public class ProxyManager extends BaseProxyManager {
   public static final String PARAM_INCLUDE_LOCKSS_AUDIT_PROPS =
     PREFIX + "includeLockssAuditProperties";
   public static final boolean DEFAULT_INCLUDE_LOCKSS_AUDIT_PROPS = false;
+
+  /** Determines whether the proxy interprets a {@value
+   * org.lockss.util.Constants#X_LOCKSS_LOCAL_ADDRESS} request header.
+   * <ul><li>If unset or null, the header is ignored if present,</li>
+   * <li>If <tt>*</tt> or <tt>ANY</tt>, any local address is allowed,</li>
+   * <li>else should be a list of allowed local addresses</li></ul>
+   */
+  public static final String PARAM_ALLOW_BIND_LOCAL_ADDRESSES =
+    PREFIX + "allowBindLocalAddresses";
+  public static final List<String> DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES = null;
 
   /** If true, successive accesses to recently accessed content on the
    * cache does not trigger a request to the publisher */
@@ -271,6 +281,8 @@ public class ProxyManager extends BaseProxyManager {
     DEFAULT_INCLUDE_LOCKSS_AUDIT_PROPS;
   private boolean paramCopyStoredResponseHeaders =
     DEFAULT_COPY_STORED_RESPONSE_HEADERS;
+  private List<String> paramAllowBindLocalAddresses =
+    DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES;
 
 
   public void setConfig(Configuration config, Configuration prevConfig,
@@ -313,6 +325,9 @@ public class ProxyManager extends BaseProxyManager {
       paramIncludeLockssAuditProperties =
 	config.getBoolean(PARAM_INCLUDE_LOCKSS_AUDIT_PROPS,
 			  DEFAULT_INCLUDE_LOCKSS_AUDIT_PROPS);
+      paramAllowBindLocalAddresses =
+	config.getList(PARAM_ALLOW_BIND_LOCAL_ADDRESSES,
+		       DEFAULT_ALLOW_BIND_LOCAL_ADDRESSES);
       paramCopyStoredResponseHeaders =
 	config.getBoolean(PARAM_COPY_STORED_RESPONSE_HEADERS,
 			  DEFAULT_COPY_STORED_RESPONSE_HEADERS);
@@ -554,6 +569,10 @@ public class ProxyManager extends BaseProxyManager {
 
   public boolean isCopyStoredResponseHeaders() {
     return paramCopyStoredResponseHeaders;
+  }
+
+  public List<String> getAllowedLocalAddress() {
+    return paramAllowBindLocalAddresses;
   }
 
   /** Check whether the host is known to have been down recently */
