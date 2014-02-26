@@ -5,6 +5,8 @@ use Getopt::Long;
 use LWP::UserAgent;
 use HTTP::Request;
 use HTTP::Cookies;
+use HTML::Entities;
+use encoding 'utf8';
 
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
@@ -273,6 +275,7 @@ while (my $line = <>) {
         
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
+        #printf("%s\n",decode_entities($tmp));
         $url = sprintf("%sejournals/issues/%s/%s", 
         $param{base_url}, $param{journal_id}, $param{volume_name});
         $man_url = uri_unescape($url);
@@ -282,7 +285,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-                    $vol_title = uri_unescape($1)
+                    $vol_title = uri_escape($1)
                 }
                 $result = "Manifest"
             } else {
@@ -971,10 +974,10 @@ while (my $line = <>) {
                 
   } 
   if ($result eq "Plugin Unknown") {
-    printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,decode_entities($vol_title),$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
-    printf("*MANIFEST* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
+    printf("*MANIFEST* %s, %s, %s, %s\n",$result,decode_entities($vol_title),$auid,$man_url);
     $total_manifests = $total_manifests + 1;
   } else {
     printf("*NO MANIFEST*(%s) %s, %s \n",$result, $auid,$man_url);
