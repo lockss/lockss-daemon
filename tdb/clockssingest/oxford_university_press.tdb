@@ -9642,6 +9642,48 @@
   {
 
     title <
+      name = Journal of Applied Poultry Research ;
+      issn = 1056-6171 ;
+      eissn = 1537-0437 ;
+      issnl = 1056-6171
+    >
+
+    {
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://japr.oxfordjournals.org
+
+    au < exists ; exists ; 1992 ; Journal of Applied Poultry Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 1993 ; Journal of Applied Poultry Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 1994 ; Journal of Applied Poultry Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 1995 ; Journal of Applied Poultry Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 1996 ; Journal of Applied Poultry Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 1997 ; Journal of Applied Poultry Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 1998 ; Journal of Applied Poultry Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 1999 ; Journal of Applied Poultry Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 2000 ; Journal of Applied Poultry Research Volume 9 ; 9 ; >
+    au < exists ; exists ; 2001 ; Journal of Applied Poultry Research Volume 10 ; 10 ; >
+    au < exists ; exists ; 2002 ; Journal of Applied Poultry Research Volume 11 ; 11 ; >
+    au < exists ; exists ; 2003 ; Journal of Applied Poultry Research Volume 12 ; 12 ; >
+    au < exists ; exists ; 2004 ; Journal of Applied Poultry Research Volume 13 ; 13 ; >
+    au < exists ; exists ; 2005 ; Journal of Applied Poultry Research Volume 14 ; 14 ; >
+    au < exists ; exists ; 2006 ; Journal of Applied Poultry Research Volume 15 ; 15 ; >
+    au < exists ; exists ; 2007 ; Journal of Applied Poultry Research Volume 16 ; 16 ; >
+    au < exists ; exists ; 2008 ; Journal of Applied Poultry Research Volume 17 ; 17 ; >
+    au < exists ; exists ; 2009 ; Journal of Applied Poultry Research Volume 18 ; 18 ; >
+    au < exists ; exists ; 2010 ; Journal of Applied Poultry Research Volume 19 ; 19 ; >
+    au < exists ; exists ; 2011 ; Journal of Applied Poultry Research Volume 20 ; 20 ; >
+    au < exists ; exists ; 2012 ; Journal of Applied Poultry Research Volume 21 ; 21 ; >
+    au < exists ; exists ; 2013 ; Journal of Applied Poultry Research Volume 22 ; 22 ; >
+    au < exists ; exists ; 2014 ; Journal of Applied Poultry Research Volume 23 ; 23 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Journal of Antimicrobial Chemotherapy ;
       issn = 0305-7453 ;
       eissn = 1460-2091 ;
