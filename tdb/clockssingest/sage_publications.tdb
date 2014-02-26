@@ -33315,6 +33315,26 @@
   {
 
     title <
+      name = Social Currents ;
+      issn = 2329-4965 ;
+      eissn = 2329-4973 
+    >
+
+    param[base_url] = http://scu.sagepub.com/
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2014 ; Social Currents Volume 1 ; 1 ; >
+
+    }
+
+  }
+
+  {
+
+    title <
       name = Social Psychological and Personality Science ;
       issn = 1948-5506 ;
       eissn = 1948-5514 

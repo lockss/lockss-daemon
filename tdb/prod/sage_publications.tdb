@@ -36567,6 +36567,26 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = Social Currents ;
+        issn = 2329-4965 ;
+        eissn = 2329-4973 
+      >
+
+      {
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://scu.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+        au < exists ; 2014 ; Social Currents Volume 1 ; 1 >
+
+      }
+
+    }
+
+    {
+
+      title <
         name = Social Psychological and Personality Science ;
         issn = 1948-5506 ;
         eissn = 1948-5514 
