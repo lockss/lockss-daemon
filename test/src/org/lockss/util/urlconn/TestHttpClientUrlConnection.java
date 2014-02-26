@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.22 2013-11-19 01:20:04 clairegriffin Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.23 2014-02-26 08:09:26 tlipkis Exp $
  */
 
 /*
@@ -312,6 +312,20 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals("phost", hc.getProxyHost());
     assertEquals(9009, hc.getProxyPort());
     assertEquals(null, hc.getLocalAddress());
+
+    conn = newConn(urlString + "foo");
+    client.setRes(202);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(202, conn.getResponseCode());
+    hdr = method.getRequestHeader("connection");
+    assertEquals("keep-alive", hdr.getValue());
+    hdr = method.getRequestHeader("accept");
+    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    hc = client.getHostConfiguration();
+    assertEquals(null, hc.getProxyHost());
+    assertEquals(-1, hc.getProxyPort());
+    assertEquals(null, hc.getLocalAddress());
   }
 
   public void testResponse() throws Exception {
@@ -354,6 +368,18 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
     HostConfiguration hc = client.getHostConfiguration();
     assertEquals(InetAddress.getByName(local), hc.getLocalAddress());
+
+    conn = newConn(urlString + "foo");
+    client.setRes(202);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(202, conn.getResponseCode());
+    hdr = method.getRequestHeader("connection");
+    assertEquals("keep-alive", hdr.getValue());
+    hdr = method.getRequestHeader("accept");
+    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
+    hc = client.getHostConfiguration();
+    assertEquals(null, hc.getLocalAddress());
   }
 
   public void testNoHttpResponseException() throws Exception {

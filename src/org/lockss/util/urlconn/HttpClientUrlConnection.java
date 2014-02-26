@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.36 2013-11-19 01:20:03 clairegriffin Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.37 2014-02-26 08:09:26 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -199,9 +199,13 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     HostConfiguration hostConfig = client.getHostConfiguration();
     if (proxyHost != null) {
       hostConfig.setProxy(proxyHost, proxyPort);
+    } else {
+      hostConfig.setProxyHost(null);
     }
     if (localAddress != null) {
       hostConfig.setLocalAddress(localAddress.getInetAddr());
+    } else {
+      hostConfig.setLocalAddress(null);
     }
     if (sockFact != null) {
       SecureProtocolSocketFactory hcSockFact =
