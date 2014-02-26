@@ -974,14 +974,19 @@ while (my $line = <>) {
                 
   } 
   if ($result eq "Plugin Unknown") {
-    printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,decode_entities($vol_title),$auid,$man_url);
+    printf("*PLUGIN UNKNOWN* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
     $total_missing_plugin = $total_missing_plugin + 1;
   } elsif ($result eq "Manifest") {
-    printf("*MANIFEST* %s, %s, %s, %s\n",$result,decode_entities($vol_title),$auid,$man_url);
+    printf("*MANIFEST* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
     $total_manifests = $total_manifests + 1;
+    printf("%s\n",$vol_title);
+    printf("%s\n",decode_entities($vol_title));
   } else {
     printf("*NO MANIFEST*(%s) %s, %s \n",$result, $auid,$man_url);
     $total_missing = $total_missing + 1;
+    $tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
+    printf("%s\n",$tmp);
+    printf("%s\n",decode_entities($tmp));
   }
 }
 printf("*Total manifests found: %d\n", $total_manifests);
