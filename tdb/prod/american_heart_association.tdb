@@ -480,7 +480,7 @@
       param[base_url] = http://circoutcomes.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
+      au < ready ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
       au < testing ; 2009 ; Circulation: Cardiovascular Quality and Outcomes Volume 2 ; 2 >
       au < testing ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
       au < released ; 2011 ; Circulation: Cardiovascular Quality and Outcomes Volume 4 ; 4 >
@@ -506,7 +506,7 @@
       param[base_url] = http://circheartfailure.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
+      au < ready ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
       au < testing ; 2009 ; Circulation: Heart Failure Volume 2 ; 2 >
       au < testing ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
       au < testing ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
