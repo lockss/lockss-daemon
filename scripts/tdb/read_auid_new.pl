@@ -980,17 +980,17 @@ while (my $line = <>) {
   } elsif ($result eq "Manifest") {
     printf("*MANIFEST* %s, %s, %s, %s\n",$result,$vol_title,$auid,$man_url);
     $total_manifests = $total_manifests + 1;
-    printf("%s\n",$vol_title);
-    printf("%s\n",decode_entities($vol_title));
-    my $new_title = encode("utf8", $vol_title);
-    printf("%s\n",$new_title);
-    printf("%s\n",decode_entities($new_title));
+    #printf("%s\n",$vol_title);
+    #printf("%s\n",decode_entities($vol_title));
+    #my $new_title = encode("utf8", $vol_title);
+    #printf("%s\n",$new_title);
+    #printf("%s\n",decode_entities($new_title));
   } else {
     printf("*NO MANIFEST*(%s) %s, %s \n",$result, $auid,$man_url);
     $total_missing = $total_missing + 1;
-    $tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
-    printf("%s\n",$tmp);
-    printf("%s\n",decode_entities($tmp));
+    #$tmp = "AINS - An&auml;sthesiologie &middot; Intensivmedizin &middot; Notfallmedizin &middot; Schmerztherapie";
+    #printf("%s\n",$tmp);
+    #printf("%s\n",decode_entities($tmp));
   }
 }
 printf("*Total manifests found: %d\n", $total_manifests);
