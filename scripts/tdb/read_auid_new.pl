@@ -7,6 +7,7 @@ use HTTP::Request;
 use HTTP::Cookies;
 use HTML::Entities;
 use encoding 'utf8';
+use Encode qw(decode encode);
 
 my $lockss_tag  = "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 my $oa_tag      = "LOCKSS system has permission to collect, preserve, and serve this open access Archival Unit";
