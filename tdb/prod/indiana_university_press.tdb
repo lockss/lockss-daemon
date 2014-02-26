@@ -808,7 +808,7 @@
       au < released ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
       au < released ; 2011 ; Journal of Feminist Studies in Religion Volume 27 ; 27 >
       au < released ; 2012 ; Journal of Feminist Studies in Religion Volume 28 ; 28 >
-      au < testing ; 2013 ; Journal of Feminist Studies in Religion Volume 29 ; 29 >
+      au < ready ; 2013 ; Journal of Feminist Studies in Religion Volume 29 ; 29 >
 
     }
 
@@ -1355,7 +1355,7 @@
       attr[journal_id] = iss
       implicit < status ; year ; name ; param[volume] >
       
-      au < testing ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 ; 1 >
+      au < ready ; 2013 ; Teaching and Learning Inquiry: The ISSOTL Journal Volume 1 ; 1 >
 
     }
     
