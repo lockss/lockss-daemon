@@ -981,6 +981,9 @@ while (my $line = <>) {
     $total_manifests = $total_manifests + 1;
     printf("%s\n",$vol_title);
     printf("%s\n",decode_entities($vol_title));
+    my $new_title = encode("utf8", $vol_title);
+    printf("%s\n",$new_title);
+    printf("%s\n",decode_entities($new_title));
   } else {
     printf("*NO MANIFEST*(%s) %s, %s \n",$result, $auid,$man_url);
     $total_missing = $total_missing + 1;
