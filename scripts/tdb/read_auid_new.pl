@@ -280,9 +280,9 @@ while (my $line = <>) {
         my $resp = $ua->request($req);
         if ($resp->is_success) {
             my $man_contents = $resp->content;
-            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
+            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-                    $vol_title = $1 #. "Volume " . $param{year};
+                    $vol_title = uri_unescape($1)
                 }
                 $result = "Manifest"
             } else {
