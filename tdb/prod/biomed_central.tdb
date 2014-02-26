@@ -1282,6 +1282,20 @@
 
     {
       title <
+        name = BMC Obesity ;
+        eissn = 2052-9538 ;
+        issnl = 2052-9538
+      >
+
+      param[journal_issn] = 2052-9538
+      attr[journal_code] = bmcobes
+
+      au < exists ; 2014 ; BMC Obesity Volume 1 ; 1 >
+
+    }
+
+    {
+      title <
         name = BMC Ophthalmology ;
         eissn = 1471-2415 ;
         issnl = 1471-2415
