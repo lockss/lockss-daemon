@@ -285,7 +285,7 @@ while (my $line = <>) {
             my $man_contents = $resp->content;
             if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/Year $param{volume_name}/)) {
                 if ($man_contents =~ m/<h1>(.*)<\/h1>/si) {
-                    $vol_title = uri_escape($1)
+                    $vol_title = $1
                 }
                 $result = "Manifest"
             } else {
