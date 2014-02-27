@@ -2004,7 +2004,7 @@
     au < finished ; crawling ; 2011 ; Biometrika Volume 98 ; 98 ; >
     au < finished ; crawling ; 2012 ; Biometrika Volume 99 ; 99 ; >
     au < crawling ; exists ; 2013 ; Biometrika Volume 100 ; 100 ; >
-    au < expected ; exists ; 2014 ; Biometrika Volume 101 ; 101 ; >
+    au < manifest ; exists ; 2014 ; Biometrika Volume 101 ; 101 ; >
 
     }
 
@@ -3622,7 +3622,7 @@
     au < finished ; crawling ; 2011 ; CESifo Economic Studies Volume 57 ; 57 ; >
     au < finished ; crawling ; 2012 ; CESifo Economic Studies Volume 58 ; 58 ; >
     au < crawling ; exists ; 2013 ; CESifo Economic Studies Volume 59 ; 59 ; >
-    au < expected ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2014 ; CESifo Economic Studies Volume 60 ; 60 ; >
 
     }
 
@@ -3742,7 +3742,7 @@
     au < finished ; crawling ; 2011 ; Children & Schools Volume 33 ; 33 ; >
     au < finished ; crawling ; 2012 ; Children & Schools Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Children & Schools Volume 35 ; 35 ; >
-    au < expected ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2014 ; Children & Schools Volume 36 ; 36 ; >
 
   }
 
@@ -3838,7 +3838,7 @@
     au < finished ; crawling ; 2011 ; The Chinese Journal of International Politics Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; The Chinese Journal of International Politics Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; The Chinese Journal of International Politics Volume 6 ; 6 ; >
-    au < expected ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2014 ; The Chinese Journal of International Politics Volume 7 ; 7 ; >
 
     }
 
@@ -4628,7 +4628,7 @@
     au < finished ; crawling ; 2011 ; English: Journal of the English Association Volume 60 ; 60 ; >
     au < finished ; crawling ; 2012 ; English: Journal of the English Association Volume 61 ; 61 ; >
     au < crawling ; exists ; 2013 ; English: Journal of the English Association Volume 62 ; 62 ; >
-    au < expected ; exists ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ; >
+    au < manifest ; exists ; 2014 ; English: Journal of the English Association Volume 63 ; 63 ; >
 
   }
 
@@ -9165,7 +9165,7 @@
     au < finished ; crawling ; 2011 ; ITNOW Volume 53 ; 53 ; >
     au < finished ; crawling ; 2012 ; ITNOW Volume 54 ; 54 ; >
     au < crawling ; exists ; 2013 ; ITNOW Volume 55 ; 55 ; >
-    au < expected ; exists ; 2014 ; ITNOW Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2014 ; ITNOW Volume 56 ; 56 ; >
 
     }
 
@@ -11719,7 +11719,7 @@
     param[base_url] = http://jlb.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < expected ; exists ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2014 ; Journal of the Law and the Biosciences Volume 1 ; 1 ; >
 
     }
     
@@ -12656,7 +12656,7 @@
     au < finished ; crawling ; 2011 ; Journal of Public Health Volume 33 ; 33 ; >
     au < finished ; crawling ; 2012 ; Journal of Public Health Volume 34 ; 34 ; >
     au < crawling ; exists ; 2013 ; Journal of Public Health Volume 35 ; 35 ; >
-    au < expected ; exists ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2014 ; Journal of Public Health Volume 36 ; 36 ; >
 
     }
 
@@ -13146,7 +13146,7 @@
     au < zapped ; finished ; 2011 ; Journal of Topology Volume 4 ; 4 ; >
     au < finished ; crawling ; 2012 ; Journal of Topology Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Journal of Topology Volume 6 ; 6 ; >
-    au < expected ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2014 ; Journal of Topology Volume 7 ; 7 ; >
 
     }
 
@@ -13678,7 +13678,7 @@
     au < finished ; crawling ; 2011 ; Literary Imagination Volume 13 ; 13 ; >
     au < finished ; crawling ; 2012 ; Literary Imagination Volume 14 ; 14 ; >
     au < crawling ; exists ; 2013 ; Literary Imagination Volume 15 ; 15 ; >
-    au < expected ; exists ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2014 ; Literary Imagination Volume 16 ; 16 ; >
 
     }
 
@@ -14051,7 +14051,7 @@
     au < crawling ; exists ; 2011 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 36 ; 36 ; >
     au < finished ; crawling ; 2012 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 37 ; 37 ; >
     au < crawling ; exists ; 2013 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 38 ; 38 ; >
-    au < expected ; exists ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2014 ; MELUS: Multi-Ethnic Literature of the U.S. Volume 39 ; 39 ; >
 
   }
 
@@ -17565,16 +17565,16 @@
     param[base_url] = http://pasj.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
 
-    au < exists ; exists ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 ; >
-    au < exists ; exists ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 ; >
-    au < exists ; exists ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 ; >
-    au < exists ; exists ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 ; >
-    au < exists ; exists ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 ; >
-    au < exists ; exists ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 ; >
-    au < exists ; exists ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 ; >
-    au < exists ; exists ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 ; >
-    au < exists ; exists ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 ; >
-    au < exists ; exists ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 ; >
+    au < manifest ; exists ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 ; >
     au < manifest ; exists ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 ; >
     au < manifest ; exists ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 ; >
