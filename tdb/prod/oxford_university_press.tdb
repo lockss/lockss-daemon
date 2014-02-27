@@ -9975,7 +9975,7 @@
     {
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://japr.oxfordjournals.org
+    param[base_url] = http://japr.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
     au < exists ; 1992 ; Journal of Applied Poultry Research Volume 1 ; 1 >

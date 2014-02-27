@@ -9651,7 +9651,7 @@
     {
 
     pluginSuffix = HighWirePressH20Plugin
-    param[base_url] = http://japr.oxfordjournals.org
+    param[base_url] = http://japr.oxfordjournals.org/
 
     au < exists ; exists ; 1992 ; Journal of Applied Poultry Research Volume 1 ; 1 ; >
     au < exists ; exists ; 1993 ; Journal of Applied Poultry Research Volume 2 ; 2 ; >
