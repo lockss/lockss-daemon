@@ -1,5 +1,5 @@
 /*
- * $Id: FigshareHtmlMetadataExtractorFactory.java,v 1.1 2013-11-06 00:37:32 aishizaki Exp $
+ * $Id: FigshareHtmlMetadataExtractorFactory.java,v 1.2 2014-02-27 22:09:59 aishizaki Exp $
  */
 
 /*
@@ -78,64 +78,73 @@ public class FigshareHtmlMetadataExtractorFactory
     implements FileMetadataExtractor {
     
     //supplementing Metadatafield.FIELD_DOI with locally defined
-    //PLOS_DOI, which is the same as Metadatafield.FIELD_DOI, but has
-    //a splitter ("; ") defined.  The addition of the splitter causes
-    //ArticleMetadata.putMulti() to be called
+    //PLOS_DOI, which is similar to Metadatafield.FIELD_DOI, but can
+    // have multiple values
+    // Also, we supply a validator to normalise the "http://dx.doi.org/"
+    // prefixed to the rest of the figshare/PLOS doi
     //http://dx.doi.org/10.1371/journal.pgen.1003809.t003  multi PLOS doi
     //http://dx.doi.org/10.1371/journal.pone.0029374.s001  single PLOS doi
     //http://dx.doi.org/10.6084/m9.figshare.809559  figshare doi (valid doi)^doi:http://dx\.doi\.org/10\.[\w]+/[^/]+$
-    private static Pattern PLOS_DOI_PAT = Pattern.compile("(^doi:http://dx\\.doi\\.org/)(10\\.[\\d]{4,}/[^/]+$)", Pattern.CASE_INSENSITIVE);
+    //private static Pattern PLOS_DOI_PAT = Pattern.compile("(^doi:http://dx\\.doi\\.org/)(10\\.[\\d]{4,}/[^/]+$)", Pattern.CASE_INSENSITIVE);
+    // (^doi:)((http://dx\.doi\.org/)?10\.[\d]{4,}/[^/]+$)
+    private static Pattern FIG_DOI_PAT = Pattern.compile("(^doi:)?((http://dx\\.doi\\.org/)?10\\.[\\d]{4,}/[^/]+$)", Pattern.CASE_INSENSITIVE);
+    private static Pattern PLOS_DOI_PAT = Pattern.compile("(^http://dx\\.doi\\.org/)(10\\.[\\d]{4,}/[^/]+$)", Pattern.CASE_INSENSITIVE);
+    private static final String DOI_REPL = "$2";
     private static boolean isPlosDoi(String doi) {
       if (doi == null) {
         return false;
       }
-      Matcher m = PLOS_DOI_PAT.matcher(doi);
+      Matcher m = FIG_DOI_PAT.matcher(doi);
       if(!m.matches()){
         return false;
       }
       return true;
     }
+    private static String normalisePlosDoi(String doi) {
+      String nVal = null;
+      // this will strip "doi:" if it's there
+      Matcher figM = FIG_DOI_PAT.matcher(doi);
+      if (figM.matches()) {
+        nVal = figM.replaceFirst(DOI_REPL);
+      } else {
+        nVal = doi;
+      }
+      // this will strip the "http://dx.doi.org/", if there
+      Matcher plosM = PLOS_DOI_PAT.matcher(nVal);
+      if (plosM.matches()) {
+        nVal = plosM.replaceFirst(DOI_REPL);
+        return nVal;
+      }
+      return nVal;
+    }
     private static  Validator doiValid = new Validator() {
       public String validate(ArticleMetadata am,MetadataField field,String val)
       throws MetadataException.ValidationException {
-        String doi;
-        // normalize doi entries especially with no names .
-        // For example : <meta name="citation_authors" content=", "/>
-        
-        if(!MetadataUtil.isDoi(val) /*&& !isPlosDoi(val)*/){
-          throw new MetadataException.ValidationException("Illegal DOI: " 
+        if (MetadataUtil.isDoi(val)){
+          return val;
+        } else if (isPlosDoi(val)) {
+          String newVal = normalisePlosDoi(val);
+          // check our normalised doi - is it valid?
+          if (MetadataUtil.isDoi(newVal))
+            return newVal;
+        }
+        throw new MetadataException.ValidationException("Illegal DOI: " 
               + val);
         }
-        /*
-        if (!MetadataUtil.isDoi(val)) {
-          if (val == null) {
-            throw new MetadataException.ValidationException("Illegal DOI: " 
-                + val);          }
-          Matcher m = PLOS_DOI_PAT.matcher(val);
-          if(!m.matches()){
-            throw new MetadataException.ValidationException("Illegal DOI: " 
-                + val);  
-          } else {
-            doi = m.replaceFirst("$2");
-            return doi;
-          }
-        }
-        */
-        return val;
-      }
     };
-    
-    public static final MetadataField FIGSHARE_PLOS_DOI = new MetadataField(
-        MetadataField.KEY_DOI, Cardinality.Multi, doiValid, MetadataField.splitAt("; "));
-//    public static final MetadataField FIGSHARE_PLOS_DOI = new MetadataField(
-//          MetadataField.KEY_DOI, Cardinality.Single, doiValid);
    
+    public static final String PLOS_DOI_KEY = "PLOS_doi";
+    public static final MetadataField FIGSHARE_DOI = new MetadataField(
+        MetadataField.KEY_DOI, Cardinality.Single, doiValid);
+    public static final MetadataField FIGSHARE_PLOS_DOI = new MetadataField(
+        PLOS_DOI_KEY, Cardinality.Multi, doiValid, MetadataField.splitAt("; "));   
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_author",new MetadataField(MetadataField.FIELD_AUTHOR));
-      tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      //tagMap.put("citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("citation_doi", FIGSHARE_DOI);
       tagMap.put("PLOS_citation_doi", FIGSHARE_PLOS_DOI);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
     }

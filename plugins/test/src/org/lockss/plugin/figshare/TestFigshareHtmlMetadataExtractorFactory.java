@@ -1,5 +1,5 @@
 /*
- * $Id: TestFigshareHtmlMetadataExtractorFactory.java,v 1.1 2013-11-06 00:38:53 aishizaki Exp $
+ * $Id: TestFigshareHtmlMetadataExtractorFactory.java,v 1.2 2014-02-27 22:09:59 aishizaki Exp $
  */
 
 /*
@@ -98,18 +98,25 @@ public class TestFigshareHtmlMetadataExtractorFactory extends LockssTestCase {
   // the metadata that should be extracted
   //String goodMultiDOI = "doi:http://dx.doi.org/10.1371/journal.pntd.0000938.g001";
   //String goodDOI = "doi:http://dx.doi.org/10.1371/journal.pntd.0000938.g001";
-  String goodMultiDOI = "10.1371/journal.pntd.0000938.g001";
   String goodDOI = "10.1371/journal.pntd.0000938.g002";
-  String goodPLOSDOI1 = "10.1371/journal.pone.0029374.s001";
-  String goodPLOSDOI2 = "10.1371/journal.pone.0029374.s002";
-  String goodPLOSDOI3 = "10.1371/journal.pone.0029374.s003";
-
-
+  String goodOtherDOI = "doi:10.6084/m9.figshare.944591";
+  // will be normalized without the "doi:"
+  String normalizedOtherDOI = "10.6084/m9.figshare.944591";
+  String anotherDOIType = "doi:http://dx.doi.org/10.6084/m9.figshare.105663";
+  String anotherNormalizedOtherDOI = "10.6084/m9.figshare.944591";
+  
+  String goodPLOSDOI1 = "doi:http://dx.doi.org/10.1371/journal.pone.0029374.s001";
+  String goodPLOSDOI2 = "doi:http://dx.doi.org/10.1371/journal.pone.0029374.s002";
+  String goodPLOSDOI3 = "doi:http://dx.doi.org/10.1371/journal.pone.0029374.s003";
+  String goodNormPLOSDOI1 = "10.1371/journal.pone.0029374.s001";
+  String goodNormPLOSDOI2 = "10.1371/journal.pone.0029374.s002";
+  String goodNormPLOSDOI3 = "10.1371/journal.pone.0029374.s003";
+  
   String goodDate = "02:16, Jan 04, 2011";
   String goodAuthorA = "Mar’a Betson";
   String goodAuthorB = "Julia Arinaitwe";
   String goodAuthorC = "Stothard, Alba";
-  String goodArticleTitle = "Male meiosis, heterochromatin characterization and chromosomal location of rDNA in Microtomus lunifer (Berg, 1900) (Hemiptera: Reduviidae: Hammacerinae)";
+  String goodArticleTitle = "meiosis, ketosis and symbiosis";
 
   
   // a chunk of metadata html source code from where the 
@@ -124,21 +131,25 @@ public class TestFigshareHtmlMetadataExtractorFactory extends LockssTestCase {
     + "<meta name=\"citation_publication_date\" content=\"" + goodDate+"\">\n"    
     + "<meta name=\"citation_doi\" content=\"" + goodDOI + "\"/>"
     ;
-  String moreGoodContent =
+  String goodMultiContent =
     "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />\n"
     + "<meta name=\"citation_author\" content=\""+goodAuthorA+"\">\n"
     + "<meta name=\"citation_author\" content=\""+goodAuthorB+"\">\n"
     + "<meta name=\"citation_author\" content=\""+goodAuthorC+"\">\n"
     + "<meta name=\"citation_title\" content=\""+ goodArticleTitle + "\">\n"
+    + "<meta name=\"citation_doi\" content=\"" + goodOtherDOI + "\"/>"
     + "<meta name=\"citation_publication_date\" content=\"" + goodDate+"\">\n" 
     + "<meta name=\"PLOS_citation_doi\" content=\""+goodPLOSDOI1+"\" />\n"
     + "<meta name=\"PLOS_citation_doi\" content=\""+goodPLOSDOI2+"\" />\n"    
-    + "<meta name=\"PLOS_citation_doi\" content=\""+goodPLOSDOI3+"\" />"
-//    + "<meta name=\"PLOS_citation_doi\" content=\"doi:http://dx.doi.org/10.1371/journal.pone.0029374.s001\" />\n"
-//    + "<meta name=\"PLOS_citation_doi\" content=\"doi:http://dx.doi.org/10.1371/journal.pone.0029374.s002\" />\n"    
-//    + "<meta name=\"PLOS_citation_doi\" content=\"doi:http://dx.doi.org/10.1371/journal.pone.0029374.s003\" /"
-   ;       
-
+    + "<meta name=\"PLOS_citation_doi\" content=\""+goodPLOSDOI3+"\" />\n"
+    ;       
+  String moreMetadata = 
+    "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />" +
+    "<meta name=\"citation_title\" content=\""+goodArticleTitle+"\">" +
+    "<meta name=\"citation_author\" content=\""+goodAuthorA+"\">" +
+    "<meta name=\"citation_doi\" content=\"doi:http://dx.doi.org/10.6084/m9.figshare.105663\" />" +
+    "<meta name=\"citation_publication_date\" content=\""+goodDate+"\">" ;
+ 
   /**
    * Method that creates a simulated Cached URL from the source code provided by 
    * the goodContent String. It then asserts that the metadata extracted, by using
@@ -164,11 +175,11 @@ public class TestFigshareHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     log.info("testExtractFromGoodContent -");
   }
-  public void testExtractFromMoreGoodContent() throws Exception {
-    String url = "http://www.example.com/vol1/issue2/art3/";
+  public void testExtractFromMultiContentContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art4/";
     MockCachedUrl cu = new MockCachedUrl(url, mau);
-    cu.setContent(moreGoodContent);
-    cu.setContentSize(moreGoodContent.length());
+    cu.setContent(goodMultiContent);
+    cu.setContentSize(goodMultiContent.length());
     cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     FileMetadataExtractor me = new FigshareHtmlMetadataExtractorFactory.FigshareHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
@@ -180,13 +191,11 @@ public class TestFigshareHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(Arrays.asList(goodAuthorA, goodAuthorB, goodAuthorC), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
-    assertEquals(Arrays.asList(goodPLOSDOI1,goodPLOSDOI2,goodPLOSDOI3), md.getList(FigshareHtmlMetadataExtractor.FIGSHARE_PLOS_DOI));
-    String doi = md.get(FigshareHtmlMetadataExtractor.FIGSHARE_PLOS_DOI);
-    log.info(doi);
+    assertEquals(Arrays.asList(goodNormPLOSDOI1,goodNormPLOSDOI2,goodNormPLOSDOI3), md.getList(FigshareHtmlMetadataExtractor.FIGSHARE_PLOS_DOI));
+    assertEquals(normalizedOtherDOI, md.get(MetadataField.FIELD_DOI));
     log.info("testExtractFromMoreGoodContent -");
-
-  
-  }
+  } 
+ 
   // a chunk of html source code from where the PensoftHtmlMetadataExtractorFactory should NOT be able to extract metadata
   String badContent = "<HTML><HEAD><TITLE>"
     + goodArticleTitle
