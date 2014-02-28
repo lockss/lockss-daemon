@@ -275,8 +275,8 @@
       au < released ; 2009 ; Creative Industries Journal Volume 2 ; 2 >
       au < released ; 2010-2011 ; Creative Industries Journal Volume 3 ; 3 >
       au < released ; 2011-2012 ; Creative Industries Journal Volume 4 ; 4 >
-      au < testing ; 2012 ; Creative Industries Journal Volume 5 ; 5 >
-      au < testing ; 2013 ; Creative Industries Journal Volume 6 ; 6 >
+      au < ready ; 2012 ; Creative Industries Journal Volume 5 ; 5 >
+      au < ready ; 2013 ; Creative Industries Journal Volume 6 ; 6 >
       au < expected ; 2014 ; Creative Industries Journal Volume 7 ; 7 >
 
     }
@@ -294,7 +294,7 @@
       au < released ; 2010 ; Critical Studies in Fashion & Beauty Volume 1 ; 1 >
       au < released ; 2011 ; Critical Studies in Fashion & Beauty Volume 2 ; 2 >
       au < released ; 2012 ; Critical Studies in Fashion & Beauty Volume 3 ; 3 >
-      au < testing ; 2013 ; Critical Studies in Fashion & Beauty Volume 4 ; 4 >
+      au < ready ; 2013 ; Critical Studies in Fashion & Beauty Volume 4 ; 4 >
       au < expected ; 2014 ; Critical Studies in Fashion & Beauty Volume 6 ; 6 >
 
     }
@@ -312,7 +312,7 @@
       au < released ; 2010 ; Crossings: Journal of Migration & Culture Volume 1 ; 1 >
       au < released ; 2011 ; Crossings: Journal of Migration & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Crossings: Journal of Migration & Culture Volume 3 ; 3 >
-      au < testing ; 2013 ; Crossings: Journal of Migration & Culture Volume 4 ; 4 >
+      au < ready ; 2013 ; Crossings: Journal of Migration & Culture Volume 4 ; 4 >
       au < expected ; 2014 ; Crozzings: Journal of Migration & Culture Volume 5 ; 5 >
 
     }
@@ -347,7 +347,7 @@
       au < released ; 2009-2010 ; Empedocles: European Journal for the Philosophy of Communication Volume 1 ; 1 >
       au < released ; 2011 ; Empedocles: European Journal for the Philosophy of Communication Volume 2 ; 2 >
       au < released ; 2011-2012 ; Empedocles: European Journal for the Philosophy of Communication Volume 3 ; 3 >
-      au < testing ; 2013 ; Empedocles: European Journal for the Philosophy of Communication Volume 4 ; 4 >
+      au < ready ; 2013 ; Empedocles: European Journal for the Philosophy of Communication Volume 4 ; 4 >
       au < expected ; 2014 ; Empedocles: European journal for the Philosophy of Communication Volume 5 ; 5 >
 
     }
@@ -374,7 +374,7 @@
       au < released ; 2010-2011 ; European Journal of American Culture Volume 29 ; 29 >
       au < released ; 2011-2012 ; European Journal of American Culture Volume 30 ; 30 >
       au < released ; 2012 ; European Journal of American Culture Volume 31 ; 31 >
-      au < testing ; 2013 ; European Journal of American Culture Volume 32 ; 32 >
+      au < ready ; 2013 ; European Journal of American Culture Volume 32 ; 32 >
       au < expected ; 2014 ; European Journal of American Culture Volume 33 ; 33 >
 
     }
@@ -395,7 +395,7 @@
       au < released ; 2010 ; Explorations in Media Ecology Volume 9 ; 9 >
       au < released ; 2011 ; Explorations in Media Ecology Volume 10 ; 10 >
       au < released ; 2012 ; Explorations in Media Ecology Volume 11 ; 11 >
-      au < testing ; 2013 ; Explorations in Media Ecology Volume 12 ; 12 >
+      au < ready ; 2013 ; Explorations in Media Ecology Volume 12 ; 12 >
       au < expected ; 2014 ; Explorations in Media Ecology Volume 13 ; 13 >
 
     }
@@ -420,7 +420,7 @@
       au < released ; 2010 ; Film International Volume 8 ; 8 >
       au < released ; 2011 ; Film International Volume 9 ; 9 >
       au < released ; 2012 ; Film International Volume 10 ; 10 >
-      au < testing ; 2013 ; Film International Volume 11 ; 11 >
+      au < ready ; 2013 ; Film International Volume 11 ; 11 >
       au < expected ; 2014 ; Film International Volume 12 ; 12 >
 
     }
@@ -438,7 +438,7 @@
       au < released ; 2010-2011 ; Film Matters Volume 1 ; 1 >
       au < released ; 2011 ; Film Matters Volume 2 ; 2 >
       au < released ; 2012 ; Film Matters Volume 3 ; 3 >
-      au < testing ; 2013 ; Film Matters Volume 4 ; 4 >
+      au < ready ; 2013 ; Film Matters Volume 4 ; 4 >
       au < expected ; 2014 ; Film Matters Volume 5 ; 5 >
 
     }
@@ -454,7 +454,7 @@
       param[journal_issn] = 2044-2823
       
       au < released ; 2011-2012 ; Film, Fashion & Consumption Volume 1 ; 1 >
-      au < testing ; 2013 ; Film, Fashion & Consumption Volume 2 ; 2 >
+      au < ready ; 2013 ; Film, Fashion & Consumption Volume 2 ; 2 >
       au < expected ; 2014 ; Film, Fasnion & Consumption Volume 3 ; 3 >
       
     }
@@ -471,7 +471,7 @@
       au < released ; 2010 ; Horror Studies Volume 1 ; 1 >
       au < released ; 2011 ; Horror Studies Volume 2 ; 2 >
       au < released ; 2012 ; Horror Studies Volume 3 ; 3 >
-      au < manifest ; 2013 ; Horror Studies Volume 4 ; 4 >
+      au < testing ; 2013 ; Horror Studies Volume 4 ; 4 >
       au < expected ; 2014 ; Horror Studies Volume 5 ; 5 >
  
     }
@@ -486,8 +486,8 @@
       param[journal_issn] = 2042-7913
 
       au < released ; 2011-2012 ; Hospitality & Society Volume 1 ; 1 >
-      au < manifest ; 2012 ; Hospitality & Society Volume 2 ; 2 >
-      au < manifest ; 2013 ; Hospitality & Society Volume 3 ; 3 >
+      au < testing ; 2012 ; Hospitality & Society Volume 2 ; 2 >
+      au < testing ; 2013 ; Hospitality & Society Volume 3 ; 3 >
       au < expected ; 2014 ; Hospitality & Society Volume 4 ; 4 >
 
     }
@@ -504,7 +504,7 @@
       au < released ; 2009-2011 ; Interactions: Studies in Communication & Culture Volume 1 ; 1 >
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 2 ; 2 >
       au < released ; 2012 ; Interactions: Studies in Communication & Culture Volume 3 ; 3 >
-      au < manifest ; 2013 ; Interactions: Studies in Communication & Culture Volume 4 ; 4 >
+      au < testing ; 2013 ; Interactions: Studies in Communication & Culture Volume 4 ; 4 >
       au < expected ; 2014 ; Interactions: Studies in Communication & Culture Volume 5 ; 5 >
  
     }
@@ -523,7 +523,7 @@
       au < released ; 2010 ; International Journal of Community Music Volume 3 ; 3 >
       au < released ; 2011 ; International Journal of Community Music Volume 4 ; 4 >
       au < released ; 2012 ; International Journal of Community Music Volume 5 ; 5 >
-      au < manifest ; 2013 ; International Journal of Community Music Volume 6 ; 6 >
+      au < testing ; 2013 ; International Journal of Community Music Volume 6 ; 6 >
       au < expected ; 2014 ; International Journal of Community Music Volume 7 ; 7 >
 
     }
@@ -543,7 +543,7 @@
       au < released ; 2010 ; International Journal of Contemporary Iraqi Studies Volume 4 ; 4 >
       au < released ; 2011 ; International Journal of Contemporary Iraqi Studies Volume 5 ; 5 >
       au < released ; 2012 ; International Journal of Contemporary Iraqi Studies Volume 6 ; 6 >
-      au < manifest ; 2013 ; International Journal of Contemporary Iraqi Studies Volume 7 ; 7 >
+      au < testing ; 2013 ; International Journal of Contemporary Iraqi Studies Volume 7 ; 7 >
       au < expected ; 2014 ; International Journal of Contemporary Iraqi Studies Volume 8 ; 8 >
 
     }
@@ -560,7 +560,7 @@
       au < released ; 2010 ; International Journal of Digital Television Volume 1 ; 1 >
       au < released ; 2011 ; International Journal of Digital Television Volume 2 ; 2 >
       au < released ; 2012 ; International Journal of Digital Television Volume 3 ; 3 >
-      au < manifest ; 2013 ; International Journal of Digital Television Volume 4 ; 4 >
+      au < testing ; 2013 ; International Journal of Digital Television Volume 4 ; 4 >
       au < expected ; 2014 ; International Journal of Digital Television Volume 5 ; 5 >
  
     }
@@ -582,7 +582,7 @@
       au < released ; 2010 ; International Journal of Education through Art Volume 6 ; 6 >
       au < released ; 2011 ; International Journal of Education through Art Volume 7 ; 7 >
       au < released ; 2012 ; International Journal of Education through Art Volume 8 ; 8 >
-      au < manifest ; 2013 ; International Journal of Education through Art Volume 9 ; 9 >
+      au < testing ; 2013 ; International Journal of Education through Art Volume 9 ; 9 >
       au < manifest ; 2014 ; International Journal of Education through Art Volume 10 ; 10 >
 
     }
@@ -608,7 +608,7 @@
       au < released ; 2010-2011 ; International Journal of Francophone Studies Volume 13 ; 13 >
       au < released ; 2011 ; International Journal of Francophone Studies Volume 14 ; 14 >
       au < released ; 2012-2013 ; International Journal of Francophone Studies Volume 15 ; 15 >
-      au < manifest ; 2013 ; International Journal of Francophone Studies Volume 16 ; 16 >
+      au < testing ; 2013 ; International Journal of Francophone Studies Volume 16 ; 16 >
       au < expected ; 2014 ; International Journal of Francophone Studies Volume 17 ; 17 >
 
     }
@@ -634,7 +634,7 @@
       au < released ; 2010 ; International Journal of Iberian Studies Volume 23 ; 23 >
       au < released ; 2011-2012 ; International Journal of Iberian Studies Volume 24 ; 24 >
       au < released ; 2012 ; International Journal of Iberian Studies Volume 25 ; 25 >
-      au < manifest ; 2013 ; International Journal of Iberian Studies Volume 26 ; 26 >
+      au < testing ; 2013 ; International Journal of Iberian Studies Volume 26 ; 26 >
       au < expected ; 2014 ; International Journal of Iberian Studies Volume 27 ; 27 >
 
     }
