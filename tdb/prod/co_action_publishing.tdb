@@ -33,9 +33,9 @@
       param[base_url] = http://journals.co-action.net/
       param[journal_id] = aie
     
-      au < exists ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
-      au < exists ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
-      au < exists ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
+      au < manifest ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 1 ; 2010 >
+      au < manifest ; 2011 ; Annals of Innovation & Entrepreneurship Volume 2 ; 2 ; 2011 >
+      au < manifest ; 2012 ; Annals of Innovation & Entrepreneurship Volume 3 ; 3 ; 2012 >
       au < expected ; 2013 ; Annals of Innovation & Entrepreneurship Volume 4 ; 4 ; 2013 >
       au < expected ; 2014 ; Annals of Innovation & Entrepreneurship Volume 5 ; 5 ; 2014 >
     
