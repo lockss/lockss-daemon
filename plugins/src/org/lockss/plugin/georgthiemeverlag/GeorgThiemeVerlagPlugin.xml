@@ -64,7 +64,7 @@
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
       <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
-      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:/BIB)?$", base_url</string>
+      <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:[.]pdf|/BIB|[?]issue=.+)?$", base_url</string>
       <string>1,"^%smedia/.*/supmat/", base_url</string>
     </list>
   </entry>
