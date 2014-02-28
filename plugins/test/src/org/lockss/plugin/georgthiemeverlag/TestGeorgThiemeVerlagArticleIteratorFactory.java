@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.5 2014-02-06 01:11:21 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagArticleIteratorFactory.java,v 1.6 2014-02-28 20:10:54 etenbrink Exp $
  */
 
 /*
@@ -114,7 +114,9 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
   // various aspects of an article
   // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
   // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
+  // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342
   // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
+  // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342
   // https://www.thieme-connect.de/ejournals/ris/10.1055/s-0031-1296349/BIB
 
   public void testUrls() throws Exception {
@@ -124,6 +126,7 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     // we match to "%sejournals/(html|pdf)/%s/<doi_uid>", base_url, doi_prefix
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947");
     assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf");
+    assertMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342");
     
     // but not to ...
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947");
@@ -132,6 +135,8 @@ public class TestGeorgThiemeVerlagArticleIteratorFactory extends ArticleIterator
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947.foogood");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/html/10.1055/s-0029-1214947");
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/ris/10.1055/s-0029-1214947");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342");
+    assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342&foo");
     
     // wrong base url
     assertNotMatchesRE(PATTERN_FAIL_MSG, pat, "http://ametsoc.org/bitstream/handle/foobar");
