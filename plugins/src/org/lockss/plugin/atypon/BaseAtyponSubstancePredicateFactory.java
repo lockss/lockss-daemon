@@ -1,5 +1,5 @@
 /**
- * $Id: BaseAtyponSubstancePredicateFactory.java,v 1.2 2014-02-28 23:07:14 alexandraohlson Exp $
+ * $Id: BaseAtyponSubstancePredicateFactory.java,v 1.3 2014-02-28 23:19:54 alexandraohlson Exp $
  */
 /*
 
@@ -72,19 +72,22 @@ SubstancePredicateFactory {
 
     // Abstract will never be substance, but we want to check for redirection
     // use different implementation of PATTERN to meet needs of UrlPredicate
-    final static String ANY_ARTICLE_STRING = "/doi/(abs|full|pdf|pdfplus)/[.0-9]+/[^?^&]+$";
-    final static org.apache.oro.text.regex.Pattern ANY_ARTICLE_PATTERN = 
-        RegexpUtil.uncheckedCompile(ANY_ARTICLE_STRING);
+    final static String ABSTRACT_STRING = "/doi/abs/[.0-9]+/[^?^&]+$";
+    final static org.apache.oro.text.regex.Pattern ABSTRACT_PATTERN = 
+        RegexpUtil.uncheckedCompile(ABSTRACT_STRING);
 
 
     public BaseAtyponSubstancePredicate (ArchivalUnit au) {
       this.au = au;
-      // No longer pull the patterns from the plugin. Set them here.
-      //List<org.apache.oro.text.regex.Pattern> yesPatterns = au.makeSubstanceUrlPatterns();
+      try {
+      List<org.apache.oro.text.regex.Pattern> yesPatterns = au.makeSubstanceUrlPatterns();
       // allow abstract in to the "yes" patterns so we can look for redirection.
       // We will disallow it as substance after the check.
-      List<org.apache.oro.text.regex.Pattern> yesPatterns = ListUtil.list(ANY_ARTICLE_PATTERN);
-      up = new SubstanceChecker.UrlPredicate(au, yesPatterns, null);
+      yesPatterns.add(ABSTRACT_PATTERN);
+      up = new SubstanceChecker.UrlPredicate(au, yesPatterns, au.makeNonSubstanceUrlPatterns());
+      } catch (ArchivalUnit.ConfigurationException e) {
+        log.error("Error in substance or non-substance pattern for Atypon Plugin", e);
+      }
     }
 
     /* (non-Javadoc)
