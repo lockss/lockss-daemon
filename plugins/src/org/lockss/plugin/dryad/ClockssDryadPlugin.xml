@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -41,7 +41,7 @@
     <string>"Dryad Plugin (CLOCKSS), Base URL %s, URL List %s", base_url, volume_name</string>
   </entry>
   <entry>
-    <string>au_start_url</string>http://datadryad.org/htmlmap\?map=1
+    <string>au_start_url</string>
     <string>"%shtmlmap?map=%s", base_url, volume_name</string>
   </entry>
   <entry>
@@ -58,7 +58,7 @@
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%sresource/doi:.*$", base_url</string>
+      <string>1,"^%sresource/doi:", base_url</string>
       <string>1,"^%sbitstream/handle/", base_url</string>
     </list>
   </entry>
