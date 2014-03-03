@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HttpResponseHandler.java,v 1.4 2010-03-27 02:40:37 thib_gc Exp $
+ * $Id: HighWirePressH20HttpResponseHandler.java,v 1.5 2014-03-03 21:41:04 etenbrink Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.urlconn.*;
 
 public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
   
-  protected static Logger logger = Logger.getLogger("HighWirePressH20HttpResponseHandler");
+  protected static Logger logger = Logger.getLogger(HighWirePressH20HttpResponseHandler.class);
 
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
