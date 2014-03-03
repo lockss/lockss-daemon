@@ -3,10 +3,8 @@
   publisher <
     name = Georg Thieme Verlag KG ;
     info[contract] = 2010 ;
-    info[tester] = 0
+    info[tester] = 5
   >
-
-  comment[error] = because of the url with https, production machines are not able to crawl till daemon fix.
 
   param[base_url] = https://www.thieme-connect.de/
   plugin = org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin
