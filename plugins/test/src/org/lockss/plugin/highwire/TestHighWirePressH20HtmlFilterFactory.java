@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.19 2013-10-24 22:59:53 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.20 2014-03-03 21:56:23 etenbrink Exp $
  */
 
 /*
@@ -474,6 +474,48 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<widget-container> </widget-container>\n" +
       "</body>";
   
+  private static final String europaceHtml =
+      "<body>\n" +
+      "<div id=\"secondary_nav\"> <strong title=\"Oxford Journals\" id=\"page_logo\">" +
+      "<a href=\"http://www.oxfordjournals.org/\"><span>Oxford Journals</span></a></strong> " +
+      "<ul> <li title=\"My Account\" id=\"nav_my_account\">" +
+      "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=http://www.ox...\">" +
+      "<span>My Account</span></a></li> </ul> " +
+      "</div>" +
+      "<div id=\"primary_nav\"> " +
+      "<ul> <li title=\"About This Journal\" id=\"nav_about_this_journal\"> " +
+      "<a href=\"http://www.oxfordjournals.org/europace/about.html\"> " +
+      "<span>About This Journal</span> </a> </li> </ul> " +
+      "</div>" +
+      "<div id=\"cb-art-cat\" class=\"cb-section collapsible\">\n" + 
+      "<h4 class=\"cb-section-header\">\n" + 
+      "<span>Classifications</span>\n" + 
+      "</h4>\n" +
+      "</div>" +
+      "<div id=\"related\"> <h2>Related articles</h2> <ul class=\"related-list\">" +
+      " <div class=\"cit-metadata\"><span class=\"cit-first-element cit-section\">Editorial" +
+      "<span class=\"cit-sep cit-sep-after-article-section\">:</span> </span>" +
+      "</div> </ul> </div>" + 
+      "<div class=\"cb-section collapsible\" id=\"cb-art-stats\">\n" + 
+      "<h4 class=\"cb-section-header\"><span>Article Usage Stats</span></h4>\n" + 
+      "<ol><li class=\"usage-stats-link icon-link\"></li></ol>\n" + 
+      "</div>" + 
+      "<ul id=\"site-breadcrumbs\">\n" + 
+      "<li class=\"first\">\n" + 
+      "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=\">Oxford Journals</a>\n</li> " +
+      "</ul> " +
+      "" +
+      "<ul class=\"kwd-group\"> <li class=\"kwd\"><span>Lead extraction</span></li> </ul>" +
+      "" +
+      "<ul class=\"copyright-statement\"> <li id=\"copyright-statement-1\"" +
+      " class=\"fn\">For permissions please email: </li> </ul>" +
+      "<span class=\"ccv cc-version-by-nc/2.0\"></span>\n" + 
+      "</body>";
+  
+  private static final String europaceHtmlFiltered =
+      "<body>\n" +
+      "</body>";
+  
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -495,6 +537,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(citedHtml, citedHtmlFiltered);
     assertFilterToSame(socialHtml, socialHtmlFiltered);
     assertFilterToSame(adfootHtml, adfootHtmlFiltered);
+    assertFilterToSame(europaceHtml, europaceHtmlFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
@@ -511,11 +554,11 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
         Constants.DEFAULT_ENCODING);
     InputStream inB = fact.createFilteredInputStream(mau, new StringInputStream(str2),
         Constants.DEFAULT_ENCODING);
-    String a = StringUtil.fromInputStream(inA);
-    String b = StringUtil.fromInputStream(inB);
-    assertEquals(a, b);
-//    assertEquals(StringUtil.fromInputStream(inA),
-//        StringUtil.fromInputStream(inB));
+    String actual = StringUtil.fromInputStream(inA);
+    String expected = StringUtil.fromInputStream(inB);
+    assertEquals(expected, actual);
+//    assertEquals(StringUtil.fromInputStream(inB),
+//        StringUtil.fromInputStream(inA));
   }
 
 //Don't put the 2nd string through the filter - use it as a constant
