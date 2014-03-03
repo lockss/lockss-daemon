@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.51 2013-12-10 01:24:42 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.52 2014-03-03 21:48:53 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -101,6 +101,15 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // e.g. BMJ (optional 'sid' query arg in URLs)
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-rel"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-soc"),
+        // e.g.  Europace tags
+        HtmlNodeFilters.tagWithAttribute("div", "id", "primary_nav"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "secondary_nav"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-cat"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
+        HtmlNodeFilters.tagWithAttribute("ul", "id", "site-breadcrumbs"),
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "kwd-group"),
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
+        HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^ccv "),
         // e.g. SWCS TOC pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "cit-form-select"),
         // and <div id="cit-extra">
@@ -119,6 +128,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "social_network"),
         // For biologists.org
         HtmlNodeFilters.tagWithAttribute("div", "id", "authstring"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-stats"),
         //For BMJ
         HtmlNodeFilters.tagWithAttribute("div", "id", "access"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "feeds-widget1"),
