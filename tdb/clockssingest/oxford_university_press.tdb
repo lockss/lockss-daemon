@@ -8393,7 +8393,7 @@
     au < crawling ; exists ; 2011 ; International Health Volume 3 ; 3 ; >
     au < finished ; crawling ; 2012 ; International Health Volume 4 ; 4 ; >
     au < crawling ; exists ; 2013 ; International Health Volume 5 ; 5 ; >
-    au < expected ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2014 ; International Health Volume 6 ; 6 ; >
 
   }
 
@@ -8578,7 +8578,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Epidemiology Volume 40 ; 40 ; >
     au < finished ; crawling ; 2012 ; International Journal of Epidemiology Volume 41 ; 41 ; >
     au < crawling ; exists ; 2013 ; International Journal of Epidemiology Volume 42 ; 42 ; >
-    au < expected ; exists ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2014 ; International Journal of Epidemiology Volume 43 ; 43 ; >
 
     }
 
@@ -8687,7 +8687,7 @@
     au < finished ; crawling ; 2011 ; International Journal of Law, Policy and the Family Volume 25 ; 25 ; >
     au < finished ; crawling ; 2012 ; International Journal of Law, Policy and the Family Volume 26 ; 26 ; >
     au < crawling ; exists ; 2013 ; International Journal of Law, Policy and the Family Volume 27 ; 27 ; >
-    au < expected ; exists ; 2014 ; International Journal of Law, Policy and the Family Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2014 ; International Journal of Law, Policy and the Family Volume 28 ; 28 ; >
 
     }
 
@@ -9642,7 +9642,7 @@
   {
 
     title <
-      name = Journal of Applied Poultry Research ;
+      name = The Journal of Applied Poultry Research ;
       issn = 1056-6171 ;
       eissn = 1537-0437 ;
       issnl = 1056-6171
@@ -9650,32 +9650,32 @@
 
     {
 
-    pluginSuffix = HighWirePressH20Plugin
+    pluginSuffix = ClockssHighWirePressH20Plugin
     param[base_url] = http://japr.oxfordjournals.org/
 
-    au < exists ; exists ; 1992 ; Journal of Applied Poultry Research Volume 1 ; 1 ; >
-    au < exists ; exists ; 1993 ; Journal of Applied Poultry Research Volume 2 ; 2 ; >
-    au < exists ; exists ; 1994 ; Journal of Applied Poultry Research Volume 3 ; 3 ; >
-    au < exists ; exists ; 1995 ; Journal of Applied Poultry Research Volume 4 ; 4 ; >
-    au < exists ; exists ; 1996 ; Journal of Applied Poultry Research Volume 5 ; 5 ; >
-    au < exists ; exists ; 1997 ; Journal of Applied Poultry Research Volume 6 ; 6 ; >
-    au < exists ; exists ; 1998 ; Journal of Applied Poultry Research Volume 7 ; 7 ; >
-    au < exists ; exists ; 1999 ; Journal of Applied Poultry Research Volume 8 ; 8 ; >
-    au < exists ; exists ; 2000 ; Journal of Applied Poultry Research Volume 9 ; 9 ; >
-    au < exists ; exists ; 2001 ; Journal of Applied Poultry Research Volume 10 ; 10 ; >
-    au < exists ; exists ; 2002 ; Journal of Applied Poultry Research Volume 11 ; 11 ; >
-    au < exists ; exists ; 2003 ; Journal of Applied Poultry Research Volume 12 ; 12 ; >
-    au < exists ; exists ; 2004 ; Journal of Applied Poultry Research Volume 13 ; 13 ; >
-    au < exists ; exists ; 2005 ; Journal of Applied Poultry Research Volume 14 ; 14 ; >
-    au < exists ; exists ; 2006 ; Journal of Applied Poultry Research Volume 15 ; 15 ; >
-    au < exists ; exists ; 2007 ; Journal of Applied Poultry Research Volume 16 ; 16 ; >
-    au < exists ; exists ; 2008 ; Journal of Applied Poultry Research Volume 17 ; 17 ; >
-    au < exists ; exists ; 2009 ; Journal of Applied Poultry Research Volume 18 ; 18 ; >
-    au < exists ; exists ; 2010 ; Journal of Applied Poultry Research Volume 19 ; 19 ; >
-    au < exists ; exists ; 2011 ; Journal of Applied Poultry Research Volume 20 ; 20 ; >
-    au < exists ; exists ; 2012 ; Journal of Applied Poultry Research Volume 21 ; 21 ; >
-    au < exists ; exists ; 2013 ; Journal of Applied Poultry Research Volume 22 ; 22 ; >
-    au < exists ; exists ; 2014 ; Journal of Applied Poultry Research Volume 23 ; 23 ; >
+    au < exists ; exists ; 1992 ; The Journal of Applied Poultry Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 1993 ; The Journal of Applied Poultry Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 1994 ; The Journal of Applied Poultry Research Volume 3 ; 3 ; >
+    au < exists ; exists ; 1995 ; The Journal of Applied Poultry Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 1996 ; The Journal of Applied Poultry Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 1997 ; The Journal of Applied Poultry Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 1998 ; The Journal of Applied Poultry Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 1999 ; The Journal of Applied Poultry Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 2000 ; The Journal of Applied Poultry Research Volume 9 ; 9 ; >
+    au < exists ; exists ; 2001 ; The Journal of Applied Poultry Research Volume 10 ; 10 ; >
+    au < exists ; exists ; 2002 ; The Journal of Applied Poultry Research Volume 11 ; 11 ; >
+    au < exists ; exists ; 2003 ; The Journal of Applied Poultry Research Volume 12 ; 12 ; >
+    au < exists ; exists ; 2004 ; The Journal of Applied Poultry Research Volume 13 ; 13 ; >
+    au < exists ; exists ; 2005 ; The Journal of Applied Poultry Research Volume 14 ; 14 ; >
+    au < exists ; exists ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 ; >
+    au < exists ; exists ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 ; >
+    au < exists ; exists ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
+    au < exists ; exists ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
+    au < exists ; exists ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
+    au < exists ; exists ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
+    au < exists ; exists ; 2012 ; The Journal of Applied Poultry Research Volume 21 ; 21 ; >
+    au < exists ; exists ; 2013 ; The Journal of Applied Poultry Research Volume 22 ; 22 ; >
+    au < exists ; exists ; 2014 ; The Journal of Applied Poultry Research Volume 23 ; 23 ; >
 
     }
 
@@ -11004,7 +11004,7 @@
     au < finished ; crawling ; 2011 ; Journal of the History of Collections Volume 23 ; 23 ; >
     au < finished ; crawling ; 2012 ; Journal of the History of Collections Volume 24 ; 24 ; >
     au < crawling ; exists ; 2013 ; Journal of the History of Collections Volume 25 ; 25 ; >
-    au < expected ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2014 ; Journal of the History of Collections Volume 26 ; 26 ; >
 
     }
 
@@ -14586,7 +14586,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society Volume 436 ; 436 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 437 ; 437 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 438 ; 438 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 439 ; 439 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 439 ; 439 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 440 ; 440 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 441 ; 441 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society Volume 442 ; 442 ; >
@@ -14689,7 +14689,7 @@
     au < crawling ; exists ; 2013 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 436 ; 436 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 437 ; 437 ; >
     au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 438 ; 438 ; >
-    au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 439 ; 439 ; >
+    au < manifest ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 439 ; 439 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 440 ; 440 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 441 ; 441 ; >
     au < expected ; exists ; 2014 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 442 ; 442 ; >
@@ -15563,7 +15563,7 @@
     au < finished ; crawling ; 2011 ; Notes and Queries Volume 58 ; 58 ; >
     au < finished ; crawling ; 2012 ; Notes and Queries Volume 59 ; 59 ; >
     au < crawling ; exists ; 2013 ; Notes and Queries Volume 60 ; 60 ; >
-    au < expected ; exists ; 2014 ; Notes and Queries Volume 61 ; 61 ; >
+    au < manifest ; exists ; 2014 ; Notes and Queries Volume 61 ; 61 ; >
 
     }
 
@@ -19808,7 +19808,7 @@
     au < finished ; crawling ; 2011 ; Teaching Mathematics and its Applications Volume 30 ; 30 ; >
     au < finished ; crawling ; 2012 ; Teaching Mathematics and its Applications Volume 31 ; 31 ; >
     au < crawling ; exists ; 2013 ; Teaching Mathematics and its Applications Volume 32 ; 32 ; >
-    au < expected ; exists ; 2014 ; Teaching Mathematics and its Applications Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2014 ; Teaching Mathematics and its Applications Volume 33 ; 33 ; >
 
     }
 
