@@ -18034,6 +18034,16 @@
     param[base_url] = http://pasj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
+    au < HighWirePressH20Plugin ; exists ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; exists ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; exists ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; exists ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; exists ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; exists ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; exists ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; exists ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; exists ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; exists ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 >
