@@ -973,39 +973,40 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = desterro
+      comment[notReady] = no permission
 
-      au < testing ; 1979 ; 1 ; Revista Ilha do Desterro Volume 1979 ; 1979 >
-      au < testing ; 1980 ; 2 ; Revista Ilha do Desterro Volume 1980 ; 1980 >
-      au < testing ; 1981 ; 3 ; Revista Ilha do Desterro Volume 1981 ; 1981 >
-      au < testing ; 1982 ; 4 ; Revista Ilha do Desterro Volume 1982 ; 1982 >
-      au < testing ; 1983 ; 5 ; Revista Ilha do Desterro Volume 1983 ; 1983 >
-      au < testing ; 1984 ; 6 ; Revista Ilha do Desterro Volume 1984 ; 1984 >
-      au < testing ; 1985 ; 7 ; Revista Ilha do Desterro Volume 1985 ; 1985 >
-      au < testing ; 1986 ; 8 ; Revista Ilha do Desterro Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 9 ; Revista Ilha do Desterro Volume 1987 ; 1987 >
-      au < testing ; 1988 ; 10 ; Revista Ilha do Desterro Volume 1988 ; 1988 >
-      au < testing ; 1989 ; 11 ; Revista Ilha do Desterro Volume 1989 ; 1989 >
-      au < testing ; 1990 ; 12 ; Revista Ilha do Desterro Volume 1990 ; 1990 >
-      au < testing ; 1991 ; 13 ; Revista Ilha do Desterro Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 14 ; Revista Ilha do Desterro Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 15 ; Revista Ilha do Desterro Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 16 ; Revista Ilha do Desterro Volume 1994 ; 1994 >
-      au < testing ; 1997 ; 19 ; Revista Ilha do Desterro Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 20 ; Revista Ilha do Desterro Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 21 ; Revista Ilha do Desterro Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 22 ; Revista Ilha do Desterro Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 23 ; Revista Ilha do Desterro Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 24 ; Revista Ilha do Desterro Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 25 ; Revista Ilha do Desterro Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 26 ; Revista Ilha do Desterro Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 27 ; Revista Ilha do Desterro Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 28 ; Revista Ilha do Desterro Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 29 ; Revista Ilha do Desterro Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 30 ; Revista Ilha do Desterro Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 31 ; Revista Ilha do Desterro Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 32 ; Revista Ilha do Desterro Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 33 ; Revista Ilha do Desterro Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 34 ; Revista Ilha do Desterro Volume 2012 ; 2012 >
+      au < notReady ; 1979 ; 1 ; Revista Ilha do Desterro Volume 1979 ; 1979 >
+      au < notReady ; 1980 ; 2 ; Revista Ilha do Desterro Volume 1980 ; 1980 >
+      au < notReady ; 1981 ; 3 ; Revista Ilha do Desterro Volume 1981 ; 1981 >
+      au < notReady ; 1982 ; 4 ; Revista Ilha do Desterro Volume 1982 ; 1982 >
+      au < notReady ; 1983 ; 5 ; Revista Ilha do Desterro Volume 1983 ; 1983 >
+      au < notReady ; 1984 ; 6 ; Revista Ilha do Desterro Volume 1984 ; 1984 >
+      au < notReady ; 1985 ; 7 ; Revista Ilha do Desterro Volume 1985 ; 1985 >
+      au < notReady ; 1986 ; 8 ; Revista Ilha do Desterro Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 9 ; Revista Ilha do Desterro Volume 1987 ; 1987 >
+      au < notReady ; 1988 ; 10 ; Revista Ilha do Desterro Volume 1988 ; 1988 >
+      au < notReady ; 1989 ; 11 ; Revista Ilha do Desterro Volume 1989 ; 1989 >
+      au < notReady ; 1990 ; 12 ; Revista Ilha do Desterro Volume 1990 ; 1990 >
+      au < notReady ; 1991 ; 13 ; Revista Ilha do Desterro Volume 1991 ; 1991 >
+      au < notReady ; 1992 ; 14 ; Revista Ilha do Desterro Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 15 ; Revista Ilha do Desterro Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 16 ; Revista Ilha do Desterro Volume 1994 ; 1994 >
+      au < notReady ; 1997 ; 19 ; Revista Ilha do Desterro Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 20 ; Revista Ilha do Desterro Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 21 ; Revista Ilha do Desterro Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 22 ; Revista Ilha do Desterro Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 23 ; Revista Ilha do Desterro Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 24 ; Revista Ilha do Desterro Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 25 ; Revista Ilha do Desterro Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 26 ; Revista Ilha do Desterro Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 27 ; Revista Ilha do Desterro Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 28 ; Revista Ilha do Desterro Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 29 ; Revista Ilha do Desterro Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 30 ; Revista Ilha do Desterro Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 31 ; Revista Ilha do Desterro Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 32 ; Revista Ilha do Desterro Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 33 ; Revista Ilha do Desterro Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 34 ; Revista Ilha do Desterro Volume 2012 ; 2012 >
       au < expected ; 2013 ; 35 ; Revista Ilha do Desterro Volume 2013 ; 2013 >
       au < expected ; 2014 ; 36 ; Revista Ilha do Desterro Volume 2014 ; 2014 >
 
@@ -1021,16 +1022,17 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = interthesis
+      comment[notReady] = no permission
 
-      au < testing ; 2004 ; 1 ; Revista Internacional Interdisciplinar INTERthesis Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 2 ; Revista Internacional Interdisciplinar INTERthesis Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 3 ; Revista Internacional Interdisciplinar INTERthesis Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 4 ; Revista Internacional Interdisciplinar INTERthesis Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista Internacional Interdisciplinar INTERthesis Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista Internacional Interdisciplinar INTERthesis Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista Internacional Interdisciplinar INTERthesis Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista Internacional Interdisciplinar INTERthesis Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista Internacional Interdisciplinar INTERthesis Volume 2012 ; 2012 >
+      au < notReady ; 2004 ; 1 ; Revista Internacional Interdisciplinar INTERthesis Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 2 ; Revista Internacional Interdisciplinar INTERthesis Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 3 ; Revista Internacional Interdisciplinar INTERthesis Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 4 ; Revista Internacional Interdisciplinar INTERthesis Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 5 ; Revista Internacional Interdisciplinar INTERthesis Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 6 ; Revista Internacional Interdisciplinar INTERthesis Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 7 ; Revista Internacional Interdisciplinar INTERthesis Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 8 ; Revista Internacional Interdisciplinar INTERthesis Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 9 ; Revista Internacional Interdisciplinar INTERthesis Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista Internacional Interdisciplinar INTERthesis Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista Internacional Interdisciplinar INTERthesis Volume 2014 ; 2014 >
 
@@ -1046,22 +1048,23 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = katalysis
+      comment[notReady] = no permission
 
-      au < testing ; 1997 ; 1 ; Revista Katálysis Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 2 ; Revista Katálysis Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 3 ; Revista Katálysis Volume 1999 ; 1999 >
-      au < testing ; 2001 ; 5 ; Revista Katálysis Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 6 ; Revista Katálysis Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 7 ; Revista Katálysis Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 8 ; Revista Katálysis Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 9 ; Revista Katálysis Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 10 ; Revista Katálysis Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 11 ; Revista Katálysis Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 12 ; Revista Katálysis Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 13 ; Revista Katálysis Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 14 ; Revista Katálysis Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 15 ; Revista Katálysis Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 16 ; Revista Katálysis Volume 2012 ; 2012 >
+      au < notReady ; 1997 ; 1 ; Revista Katálysis Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 2 ; Revista Katálysis Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 3 ; Revista Katálysis Volume 1999 ; 1999 >
+      au < notReady ; 2001 ; 5 ; Revista Katálysis Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 6 ; Revista Katálysis Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 7 ; Revista Katálysis Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 8 ; Revista Katálysis Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 9 ; Revista Katálysis Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 10 ; Revista Katálysis Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 11 ; Revista Katálysis Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 12 ; Revista Katálysis Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 13 ; Revista Katálysis Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 14 ; Revista Katálysis Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 15 ; Revista Katálysis Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 16 ; Revista Katálysis Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Revista Katálysis Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Revista Katálysis Volume 2014 ; 2014 >
 
@@ -1078,11 +1081,12 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = mundosdotrabalho
+      comment[notReady] = no permission
 
-      au < testing ; 2009 ; 1 ; Revista Mundos do Trabalho Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 2 ; Revista Mundos do Trabalho Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 3 ; Revista Mundos do Trabalho Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 4 ; Revista Mundos do Trabalho Volume 2012 ; 2012 >
+      au < notReady ; 2009 ; 1 ; Revista Mundos do Trabalho Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 2 ; Revista Mundos do Trabalho Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 3 ; Revista Mundos do Trabalho Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 4 ; Revista Mundos do Trabalho Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Revista Mundos do Trabalho Volume 2013 ; 2013 >
       au < expected ; 2014 ; 6 ; Revista Mundos do Trabalho Volume 2014 ; 2014 >
 
@@ -1098,15 +1102,16 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = pontodevista
+      comment[notReady] = no permission
 
-      au < testing ; 1999 ; 1 ; Revista Ponto de Vista Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 2 ; Revista Ponto de Vista Volume 2000 ; 2000 >
-      au < testing ; 2002 ; 4 ; Revista Ponto de Vista Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 5 ; Revista Ponto de Vista Volume 2003 ; 2003 >
-      au < testing ; 2005 ; 7 ; Revista Ponto de Vista Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 8 ; Revista Ponto de Vista Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Revista Ponto de Vista Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Revista Ponto de Vista Volume 2008 ; 2008 >
+      au < notReady ; 1999 ; 1 ; Revista Ponto de Vista Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 2 ; Revista Ponto de Vista Volume 2000 ; 2000 >
+      au < notReady ; 2002 ; 4 ; Revista Ponto de Vista Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 5 ; Revista Ponto de Vista Volume 2003 ; 2003 >
+      au < notReady ; 2005 ; 7 ; Revista Ponto de Vista Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 8 ; Revista Ponto de Vista Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 9 ; Revista Ponto de Vista Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 10 ; Revista Ponto de Vista Volume 2008 ; 2008 >
 
   }
 
@@ -1120,18 +1125,19 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = rpot
+      comment[notReady] = no permission
 
-      au < testing ; 2001 ; 1 ; Revista Psicologia: Organizações e Trabalho Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 2 ; Revista Psicologia: Organizações e Trabalho Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 3 ; Revista Psicologia: Organizações e Trabalho Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 4 ; Revista Psicologia: Organizações e Trabalho Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 5 ; Revista Psicologia: Organizações e Trabalho Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 6 ; Revista Psicologia: Organizações e Trabalho Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 7 ; Revista Psicologia: Organizações e Trabalho Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 8 ; Revista Psicologia: Organizações e Trabalho Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 9 ; Revista Psicologia: Organizações e Trabalho Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 10 ; Revista Psicologia: Organizações e Trabalho Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 11 ; Revista Psicologia: Organizações e Trabalho Volume 2011 ; 2011 >
+      au < notReady ; 2001 ; 1 ; Revista Psicologia: Organizações e Trabalho Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 2 ; Revista Psicologia: Organizações e Trabalho Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 3 ; Revista Psicologia: Organizações e Trabalho Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 4 ; Revista Psicologia: Organizações e Trabalho Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 5 ; Revista Psicologia: Organizações e Trabalho Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 6 ; Revista Psicologia: Organizações e Trabalho Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 7 ; Revista Psicologia: Organizações e Trabalho Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 8 ; Revista Psicologia: Organizações e Trabalho Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 9 ; Revista Psicologia: Organizações e Trabalho Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 10 ; Revista Psicologia: Organizações e Trabalho Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 11 ; Revista Psicologia: Organizações e Trabalho Volume 2011 ; 2011 >
       au < expected ; 2012 ; 12 ; Revista Psicologia: Organizações e Trabalho Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Revista Psicologia: Organizações e Trabalho Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; Revista Psicologia: Organizações e Trabalho Volume 2014 ; 2014 >
@@ -1148,21 +1154,22 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = zeroseis
+      comment[notReady] = no permission
 
-      au < testing ; 1999 ; 1 ; Revista Zero-a-seis Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 2 ; Revista Zero-a-seis Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 3 ; Revista Zero-a-seis Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 4 ; Revista Zero-a-seis Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 5 ; Revista Zero-a-seis Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 6 ; Revista Zero-a-seis Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 7 ; Revista Zero-a-seis Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 8 ; Revista Zero-a-seis Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Revista Zero-a-seis Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Revista Zero-a-seis Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 11 ; Revista Zero-a-seis Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 12 ; Revista Zero-a-seis Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 13 ; Revista Zero-a-seis Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 14 ; Revista Zero-a-seis Volume 2012 ; 2012 >
+      au < notReady ; 1999 ; 1 ; Revista Zero-a-seis Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 2 ; Revista Zero-a-seis Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 3 ; Revista Zero-a-seis Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 4 ; Revista Zero-a-seis Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 5 ; Revista Zero-a-seis Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 6 ; Revista Zero-a-seis Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 7 ; Revista Zero-a-seis Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 8 ; Revista Zero-a-seis Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 9 ; Revista Zero-a-seis Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 10 ; Revista Zero-a-seis Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 11 ; Revista Zero-a-seis Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 12 ; Revista Zero-a-seis Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 13 ; Revista Zero-a-seis Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 14 ; Revista Zero-a-seis Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Revista Zero-a-seis Volume 2013 ; 2013 >
       au < expected ; 2014 ; 16 ; Revista Zero-a-seis Volume 2014 ; 2014 >
 
@@ -1178,15 +1185,16 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = textodigital
+      comment[notReady] = no permission
 
-      au < testing ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 >
-      au < testing ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 4 ; Revista Texto Digital Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista Texto Digital Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista Texto Digital Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 >
+      au < notReady ; 2004 ; 1 ; Revista Texto Digital Volume 2004 ; 2004 >
+      au < notReady ; 2006 ; 3 ; Revista Texto Digital Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 4 ; Revista Texto Digital Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 5 ; Revista Texto Digital Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 6 ; Revista Texto Digital Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 7 ; Revista Texto Digital Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 8 ; Revista Texto Digital Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 9 ; Revista Texto Digital Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista Texto Digital Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista Texto Digital Volume 2014 ; 2014 >
 
@@ -1224,40 +1232,41 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = sequencia
+      comment[notReady] = no permission
 
-      au < testing ; 1980 ; 1 ; Seqüência: Estudos Jurídicos e Políticos Volume 1980 ; 1980 >
-      au < testing ; 1981 ; 2 ; Seqüência: Estudos Jurídicos e Políticos Volume 1981 ; 1981 >
-      au < testing ; 1982 ; 3 ; Seqüência: Estudos Jurídicos e Políticos Volume 1982 ; 1982 >
-      au < testing ; 1983 ; 4 ; Seqüência: Estudos Jurídicos e Políticos Volume 1983 ; 1983 >
-      au < testing ; 1984 ; 5 ; Seqüência: Estudos Jurídicos e Políticos Volume 1984 ; 1984 >
-      au < testing ; 1985 ; 6 ; Seqüência: Estudos Jurídicos e Políticos Volume 1985 ; 1985 >
-      au < testing ; 1986 ; 7 ; Seqüência: Estudos Jurídicos e Políticos Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 8 ; Seqüência: Estudos Jurídicos e Políticos Volume 1987 ; 1987 >
-      au < testing ; 1988 ; 9 ; Seqüência: Estudos Jurídicos e Políticos Volume 1988 ; 1988 >
-      au < testing ; 1989 ; 10 ; Seqüência: Estudos Jurídicos e Políticos Volume 1989 ; 1989 >
-      au < testing ; 1990 ; 11 ; Seqüência: Estudos Jurídicos e Políticos Volume 1990 ; 1990 >
-      au < testing ; 1991 ; 12 ; Seqüência: Estudos Jurídicos e Políticos Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 13 ; Seqüência: Estudos Jurídicos e Políticos Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 14 ; Seqüência: Estudos Jurídicos e Políticos Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 15 ; Seqüência: Estudos Jurídicos e Políticos Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 16 ; Seqüência: Estudos Jurídicos e Políticos Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 17 ; Seqüência: Estudos Jurídicos e Políticos Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 18 ; Seqüência: Estudos Jurídicos e Políticos Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 19 ; Seqüência: Estudos Jurídicos e Políticos Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 20 ; Seqüência: Estudos Jurídicos e Políticos Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 21 ; Seqüência: Estudos Jurídicos e Políticos Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 22 ; Seqüência: Estudos Jurídicos e Políticos Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 23 ; Seqüência: Estudos Jurídicos e Políticos Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 24 ; Seqüência: Estudos Jurídicos e Políticos Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 25 ; Seqüência: Estudos Jurídicos e Políticos Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 26 ; Seqüência: Estudos Jurídicos e Políticos Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 27 ; Seqüência: Estudos Jurídicos e Políticos Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 28 ; Seqüência: Estudos Jurídicos e Políticos Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 29 ; Seqüência: Estudos Jurídicos e Políticos Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 30 ; Seqüência: Estudos Jurídicos e Políticos Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 31 ; Seqüência: Estudos Jurídicos e Políticos Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 >
+      au < notReady ; 1980 ; 1 ; Seqüência: Estudos Jurídicos e Políticos Volume 1980 ; 1980 >
+      au < notReady ; 1981 ; 2 ; Seqüência: Estudos Jurídicos e Políticos Volume 1981 ; 1981 >
+      au < notReady ; 1982 ; 3 ; Seqüência: Estudos Jurídicos e Políticos Volume 1982 ; 1982 >
+      au < notReady ; 1983 ; 4 ; Seqüência: Estudos Jurídicos e Políticos Volume 1983 ; 1983 >
+      au < notReady ; 1984 ; 5 ; Seqüência: Estudos Jurídicos e Políticos Volume 1984 ; 1984 >
+      au < notReady ; 1985 ; 6 ; Seqüência: Estudos Jurídicos e Políticos Volume 1985 ; 1985 >
+      au < notReady ; 1986 ; 7 ; Seqüência: Estudos Jurídicos e Políticos Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 8 ; Seqüência: Estudos Jurídicos e Políticos Volume 1987 ; 1987 >
+      au < notReady ; 1988 ; 9 ; Seqüência: Estudos Jurídicos e Políticos Volume 1988 ; 1988 >
+      au < notReady ; 1989 ; 10 ; Seqüência: Estudos Jurídicos e Políticos Volume 1989 ; 1989 >
+      au < notReady ; 1990 ; 11 ; Seqüência: Estudos Jurídicos e Políticos Volume 1990 ; 1990 >
+      au < notReady ; 1991 ; 12 ; Seqüência: Estudos Jurídicos e Políticos Volume 1991 ; 1991 >
+      au < notReady ; 1992 ; 13 ; Seqüência: Estudos Jurídicos e Políticos Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 14 ; Seqüência: Estudos Jurídicos e Políticos Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 15 ; Seqüência: Estudos Jurídicos e Políticos Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 16 ; Seqüência: Estudos Jurídicos e Políticos Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 17 ; Seqüência: Estudos Jurídicos e Políticos Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 18 ; Seqüência: Estudos Jurídicos e Políticos Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 19 ; Seqüência: Estudos Jurídicos e Políticos Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 20 ; Seqüência: Estudos Jurídicos e Políticos Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 21 ; Seqüência: Estudos Jurídicos e Políticos Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 22 ; Seqüência: Estudos Jurídicos e Políticos Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 23 ; Seqüência: Estudos Jurídicos e Políticos Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 24 ; Seqüência: Estudos Jurídicos e Políticos Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 25 ; Seqüência: Estudos Jurídicos e Políticos Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 26 ; Seqüência: Estudos Jurídicos e Políticos Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 27 ; Seqüência: Estudos Jurídicos e Políticos Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 28 ; Seqüência: Estudos Jurídicos e Políticos Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 29 ; Seqüência: Estudos Jurídicos e Políticos Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 30 ; Seqüência: Estudos Jurídicos e Políticos Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 31 ; Seqüência: Estudos Jurídicos e Políticos Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 32 ; Seqüência: Estudos Jurídicos e Políticos Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 33 ; Seqüência: Estudos Jurídicos e Políticos Volume 2012 ; 2012 >
       au < expected ; 2013 ; 34 ; Seqüência: Estudos Jurídicos e Políticos Volume 2013 ; 2013 >
       au < expected ; 2014 ; 35 ; Seqüência: Estudos Jurídicos e Políticos Volume 2014 ; 2014 >
 
