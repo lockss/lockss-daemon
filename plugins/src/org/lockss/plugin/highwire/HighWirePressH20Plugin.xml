@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>88</string>
+    <string>89</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>18</string>
+        <string>19</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.53.0</string>
+    <string>1.63.0</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -107,24 +107,26 @@
     specific inclusions
 
     specific exclusions 
-      RU4166: exclude oxford supplement author-index pages, e.g.: http://humrep.oxfordjournals.org/content/26/suppl_1.author-index
+      RU4166: exclude oxford supplement author-index pages, e.g.: 
+            http://humrep.oxfordjournals.org/content/26/suppl_1.author-index
+            http://europace.oxfordjournals.org/content/7/Supplement_1.author-index
       RU4399: exclude with-ds & rss args until normalizer written, eg. 
             http://jcb.rupress.org/cgi/content/short/195/5/704?rss=1&amp;ssource=mfr and 
             http://jcb.rupress.org content/195/1/113.full.pdf+html?with-ds=yes
      -->
     <list>
-      <string>2,"^%s.*\.cover\.gif$", base_url</string>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>2,"^%s.*[.]cover[.]gif$", base_url</string>
+      <string>1,"^https?://%s/[^?]*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
       <string>4,"^%s", base_url</string>
       <string>2,"^%s.*\?tab=(metrics|related|responses)", base_url</string>
       <string>2,"^%s(content|lookup/volpage)/%s/.*(cited-by|patientinform-links|related-urls)=yes", base_url, volume_name</string>
       <string>2,"^%scontent/%s/.*/href/?$", base_url, volume_name</string>
       <string>2,"^%slookup/volpage/%s(/[^/]+)?$", base_url, volume_name</string>
-      <string>2,"^%scontent/%s/suppl_[0-9]*\.author-index$", base_url, volume_name</string>
+      <string>2,"^%scontent/%s/[Ss]uppl(ement)?_[0-9]*[.]author-index$", base_url, volume_name</string>
       <string>2,"^%s(cgi/content/short|content)/%s/[^/]+/[^/]+[?&amp;](with-ds=|rss=)", base_url, volume_name</string>
       <!-- Do not crawl any most-read links -->
       <string>2,"^%s.*/most-read", base_url</string>
-      <string>1,"^%s(content|lookup/volpage)/%s(/|\.)", base_url, volume_name</string>
+      <string>1,"^%s(content|lookup/volpage)/%s(/|[.])", base_url, volume_name</string>
       <string>1,"^%s(cgi/content/[^/]+/%s|content/vol%s)/", base_url, volume_name, volume_name</string>
       <string>1,"^%s[^?]*DC(Supplemental|[0-9])", base_url</string>
       <string>2,"^%shighwire/filestream/powerpoint/", base_url</string>
