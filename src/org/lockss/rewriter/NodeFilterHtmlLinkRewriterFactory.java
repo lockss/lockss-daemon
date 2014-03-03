@@ -1,5 +1,5 @@
 /*
- * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.25 2014-01-14 04:30:10 tlipkis Exp $
+ * $Id: NodeFilterHtmlLinkRewriterFactory.java,v 1.26 2014-03-03 22:37:27 pgust Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class NodeFilterHtmlLinkRewriterFactory implements LinkRewriterFactory {
     "src",
     "action",
     "background",
+    "onclick",
     // "archive",  // applet
     // "codebase", // applet, object
     // "cite",     // blockquote, del, ins
