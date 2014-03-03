@@ -167,9 +167,8 @@
       param[base_url] = http://www.ejpt.net/
       param[journal_id] = ejpt
       comment[0] = includes supplements
-      comment[1] = V1 and V2 may have fetch errors. see RU 4449
 
-      au < manifest ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
+      au < ready ; exists ; 2010 ; European Journal of Psychotraumatology [including Supplements] Volume 1 ; 1 ; 2010 >
       au < manifest ; exists ; 2011 ; European Journal of Psychotraumatology [including Supplements] Volume 2 ; 2 ; 2011 >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Psychotraumatology [including Supplements] Volume 3 ; 3 ; 2012 >
       au < manifest ; exists ; 2013 ; European Journal of Psychotraumatology [including Supplements] Volume 4 ; 4 ; 2013 >
