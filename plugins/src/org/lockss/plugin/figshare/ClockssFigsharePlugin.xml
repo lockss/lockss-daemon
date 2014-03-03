@@ -104,11 +104,12 @@
      -->
     <string>au_crawlrules</string>
     <list>
-    <!-- temporarily limit # of articles to crawl for local testing...    -->
-    <!-- <string>1,"^%sv1/articles/825(\d){3}\?format=html$", api_url</string> --><!-- manifest pages -->
-      <string>1,"^%sv1/articles/(\d)+\?format=html$", api_url</string> <!-- manifest pages -->
+      <!-- manifest pages -->
+      <string>1,"^%sv1/articles/(\d)+\?format=html$", api_url</string>  
+      <!-- temporarily limit # of articles to crawl for local testing...    -->
+      <!-- <string>1,"^%sv1/articles/825(\d){3}\?format=html$", api_url</string> -->
+      <string>1, "%s", files_url</string>
       <string>1, "^%smedia/*", base_url</string>
-      <string>1, "%s[^/]+/[^/]+", files_url</string>
       <string>4,"^(%s|%s|%s)", base_url,api_url,files_url</string>
     </list>
   </entry>
