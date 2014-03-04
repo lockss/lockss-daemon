@@ -565,7 +565,7 @@
       plugin = org.lockss.plugin.jstor.JSTORPlugin
       comment[needs_plugin] = years 1989-2012 on JSTOR/PSU Press. full run, vols 1-12
       comment[continues] = 0742-5503
-      comment[overlap] = years 2005-2010 on Manchester Univ. Press/Ingenta
+      comment[overlap] = years 2005-2010 on Manchester Univ. Press
     }
     {
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
