@@ -555,14 +555,15 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = revemat
+      comment[notReady] = no permission
 
-      au < testing ; 2006 ; 1 ; Revemat: revista eletrônica de educação matemática Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 2 ; Revemat: revista eletrônica de educação matemática Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 3 ; Revemat: revista eletrônica de educação matemática Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 4 ; Revemat: revista eletrônica de educação matemática Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 5 ; Revemat: revista eletrônica de educação matemática Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 6 ; Revemat: revista eletrônica de educação matemática Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 7 ; Revemat: revista eletrônica de educação matemática Volume 2012 ; 2012 >
+      au < notReady ; 2006 ; 1 ; Revemat: revista eletrônica de educação matemática Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 2 ; Revemat: revista eletrônica de educação matemática Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 3 ; Revemat: revista eletrônica de educação matemática Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 4 ; Revemat: revista eletrônica de educação matemática Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 5 ; Revemat: revista eletrônica de educação matemática Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 6 ; Revemat: revista eletrônica de educação matemática Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 7 ; Revemat: revista eletrônica de educação matemática Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Revemat: revista eletrônica de educação matemática Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Revemat: revista eletrônica de educação matemática Volume 2014 ; 2014 >
 
@@ -1283,21 +1284,22 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = economia
+      comment[notReady] = no permission
 
-      au < testing ; 1986 ; 1 ; Textos de Economia Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 2 ; Textos de Economia Volume 1987 ; 1987 >
-      au < testing ; 1989 ; 4 ; Textos de Economia Volume 1989 ; 1989 >
-      au < testing ; 1993 ; 8 ; Textos de Economia Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 9 ; Textos de Economia Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 10 ; Textos de Economia Volume 1995 ; 1995 >
-      au < testing ; 2002 ; 17 ; Textos de Economia Volume 2002 ; 2002 >
-      au < testing ; 2006 ; 21 ; Textos de Economia Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 22 ; Textos de Economia Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 23 ; Textos de Economia Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 24 ; Textos de Economia Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 25 ; Textos de Economia Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 26 ; Textos de Economia Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 27 ; Textos de Economia Volume 2012 ; 2012 >
+      au < notReady ; 1986 ; 1 ; Textos de Economia Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 2 ; Textos de Economia Volume 1987 ; 1987 >
+      au < notReady ; 1989 ; 4 ; Textos de Economia Volume 1989 ; 1989 >
+      au < notReady ; 1993 ; 8 ; Textos de Economia Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 9 ; Textos de Economia Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 10 ; Textos de Economia Volume 1995 ; 1995 >
+      au < notReady ; 2002 ; 17 ; Textos de Economia Volume 2002 ; 2002 >
+      au < notReady ; 2006 ; 21 ; Textos de Economia Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 22 ; Textos de Economia Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 23 ; Textos de Economia Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 24 ; Textos de Economia Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 25 ; Textos de Economia Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 26 ; Textos de Economia Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 27 ; Textos de Economia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 28 ; Textos de Economia Volume 2013 ; 2013 >
       au < expected ; 2014 ; 29 ; Textos de Economia Volume 2014 ; 2014 >
 
@@ -1313,26 +1315,27 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = travessia
+      comment[notReady] = no permission
 
-      au < testing ; 1980 ; 1 ; Travessia Volume 1980 ; 1980 >
-      au < testing ; 1981 ; 2 ; Travessia Volume 1981 ; 1981 >
-      au < testing ; 1982 ; 3 ; Travessia Volume 1982 ; 1982 >
-      au < testing ; 1983 ; 4 ; Travessia Volume 1983 ; 1983 >
-      au < testing ; 1984 ; 5 ; Travessia Volume 1984 ; 1984 >
-      au < testing ; 1985 ; 6 ; Travessia Volume 1985 ; 1985 >
-      au < testing ; 1986 ; 7 ; Travessia Volume 1986 ; 1986 >
-      au < testing ; 1987 ; 8 ; Travessia Volume 1987 ; 1987 >
-      au < testing ; 1989 ; 10 ; Travessia Volume 1989 ; 1989 >
-      au < testing ; 1990 ; 11 ; Travessia Volume 1990 ; 1990 >
-      au < testing ; 1991 ; 12 ; Travessia Volume 1991 ; 1991 >
-      au < testing ; 1992 ; 13 ; Travessia Volume 1992 ; 1992 >
-      au < testing ; 1993 ; 14 ; Travessia Volume 1993 ; 1993 >
-      au < testing ; 1994 ; 15 ; Travessia Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 16 ; Travessia Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 17 ; Travessia Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 18 ; Travessia Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 19 ; Travessia Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 20 ; Travessia Volume 1999 ; 1999 >
+      au < notReady ; 1980 ; 1 ; Travessia Volume 1980 ; 1980 >
+      au < notReady ; 1981 ; 2 ; Travessia Volume 1981 ; 1981 >
+      au < notReady ; 1982 ; 3 ; Travessia Volume 1982 ; 1982 >
+      au < notReady ; 1983 ; 4 ; Travessia Volume 1983 ; 1983 >
+      au < notReady ; 1984 ; 5 ; Travessia Volume 1984 ; 1984 >
+      au < notReady ; 1985 ; 6 ; Travessia Volume 1985 ; 1985 >
+      au < notReady ; 1986 ; 7 ; Travessia Volume 1986 ; 1986 >
+      au < notReady ; 1987 ; 8 ; Travessia Volume 1987 ; 1987 >
+      au < notReady ; 1989 ; 10 ; Travessia Volume 1989 ; 1989 >
+      au < notReady ; 1990 ; 11 ; Travessia Volume 1990 ; 1990 >
+      au < notReady ; 1991 ; 12 ; Travessia Volume 1991 ; 1991 >
+      au < notReady ; 1992 ; 13 ; Travessia Volume 1992 ; 1992 >
+      au < notReady ; 1993 ; 14 ; Travessia Volume 1993 ; 1993 >
+      au < notReady ; 1994 ; 15 ; Travessia Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 16 ; Travessia Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 17 ; Travessia Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 18 ; Travessia Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 19 ; Travessia Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 20 ; Travessia Volume 1999 ; 1999 >
 
   }
 
@@ -1346,20 +1349,21 @@
       comment[publisher] = Universidade Federal de Santa Catarina-UFSC
       param[base_url] = https://periodicos.ufsc.br/
       param[journal_id] = workingpapers
+      comment[notReady] = no permission
 
-      au < testing ; 1997 ; 1 ; Working Papers em Lingüística Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 2 ; Working Papers em Lingüística Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 3 ; Working Papers em Lingüística Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 4 ; Working Papers em Lingüística Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 5 ; Working Papers em Lingüística Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 6 ; Working Papers em Lingüística Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 7 ; Working Papers em Lingüística Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 8 ; Working Papers em Lingüística Volume 2004 ; 2004 >
-      au < testing ; 2008 ; 12 ; Working Papers em Lingüística Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 13 ; Working Papers em Lingüística Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 14 ; Working Papers em Lingüística Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 15 ; Working Papers em Lingüística Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 16 ; Working Papers em Lingüística Volume 2012 ; 2012 >
+      au < notReady ; 1997 ; 1 ; Working Papers em Lingüística Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 2 ; Working Papers em Lingüística Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 3 ; Working Papers em Lingüística Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 4 ; Working Papers em Lingüística Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 5 ; Working Papers em Lingüística Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 6 ; Working Papers em Lingüística Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 7 ; Working Papers em Lingüística Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 8 ; Working Papers em Lingüística Volume 2004 ; 2004 >
+      au < notReady ; 2008 ; 12 ; Working Papers em Lingüística Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 13 ; Working Papers em Lingüística Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 14 ; Working Papers em Lingüística Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 15 ; Working Papers em Lingüística Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 16 ; Working Papers em Lingüística Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Working Papers em Lingüística Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Working Papers em Lingüística Volume 2014 ; 2014 >
 
