@@ -1015,7 +1015,7 @@
       au < released ; 2010-2011 ; Journal of Music, Technology & Education Volume 3 ; 3 >
       au < released ; 2011-2012 ; Journal of Music, Technology & Education Volume 4 ; 4 >
       au < released ; 2012-2013 ; Journal of Music, Technology & Education Volume 5 ; 5 >
-      au < testing ; 2013 ; Journal of Music, Technology & Education Volume 6 ; 6 >
+      au < ready ; 2013 ; Journal of Music, Technology & Education Volume 6 ; 6 >
       au < expected ; 2014 ; Journal of Music, Technology & Education Volume 7 ; 7 >
 
     }
@@ -1029,7 +1029,7 @@
       param[journal_id] = nzps
       param[journal_issn] = 2050-4039 
 
-      au < testing ; 2013 ; Journal of New Zealand & Pacific Studies Volume 1 ; 1 >
+      au < ready ; 2013 ; Journal of New Zealand & Pacific Studies Volume 1 ; 1 >
       au < expected ; 2014 ; Journal of New Zealand & Pacific Studies Volume 2 ; 2 >
 
     }
@@ -1064,7 +1064,7 @@
       param[journal_id] = jptv
       param[journal_issn] = 2046-9861
 
-      au < testing ; 2013 ; Journal of Popular Television Volume 1 ; 1 >
+      au < ready ; 2013 ; Journal of Popular Television Volume 1 ; 1 >
       au < expected ; 2014 ; Journal of Popular Television Volume 2 ; 2 >
 
     }
@@ -1080,7 +1080,7 @@
 
       au < released ; 2010-2011 ; Journal of Scandinavian Cinema Volume 1 ; 1 >
       au < released ; 2012 ; Journal of Scandinavian Cinema Volume 2 ; 2 >
-      au < testing ; 2013 ; Journal of Scandinavian Cinema Volume 3 ; 3 >
+      au < ready ; 2013 ; Journal of Scandinavian Cinema Volume 3 ; 3 >
       au < expected ; 2014 ; Journal of Scandanavian Cinema Volume 4 ; 4 >
 
     }
@@ -1125,7 +1125,7 @@
       au < released ; 2010 ; Journal of Visual Art Practice Volume 9 ; 9 >
       au < released ; 2011-2012 ; Journal of Visual Art Practice Volume 10 ; 10 >
       au < released ; 2012 ; Journal of Visual Art Practice Volume 11 ; 11 >
-      au < testing ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
+      au < ready ; 2013 ; Journal of Visual Art Practice Volume 12 ; 12 >
 
     }
             
@@ -1162,7 +1162,7 @@
       au < released ; 2010 ; Journal of Writing in Creative Practice Volume 3 ; 3 >
       au < released ; 2011-2012 ; Journal of Writing in Creative Practice Volume 4 ; 4 >
       au < released ; 2012 ; Journal of Writing in Creative Practice Volume 5 ; 5 >
-      au < testing ; 2013 ; Journal of Writing in Creative Practice Volume 6 ; 6 >
+      au < ready ; 2013 ; Journal of Writing in Creative Practice Volume 6 ; 6 >
       au < expected ; 2014 ; Journal of Writing in Creative Practice Volume 7 ; 7 >
 
     }
@@ -1200,7 +1200,7 @@
       param[journal_issn] = 2045-6298
 
       au < released ; 2012 ; Moving Image Review & Art Journal MIRAJ Volume 1 ; 1 >
-      au < testing ; 2013 ; Moving Image Review & Art Journal MIRAJ Volume 2 ; 2 >
+      au < ready ; 2013 ; Moving Image Review & Art Journal MIRAJ Volume 2 ; 2 >
       au < expected ; 2014 ; Moving Image Review & Art Journal MIRAJ Volume 3 ; 3 >
       
     }
