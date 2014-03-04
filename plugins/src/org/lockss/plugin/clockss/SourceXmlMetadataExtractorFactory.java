@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.16 2014-02-06 21:06:52 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.17 2014-03-04 21:32:58 alexandraohlson Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ implements FileMetadataExtractorFactory {
         SourceXmlSchemaHelper schemaHelper;
         // 1. figure out which XmlMetadataExtractorHelper class to use to get
         // the schema specific information
-        if ((schemaHelper = setUpSchema()) == null) {
+        if ((schemaHelper = setUpSchema(cu)) == null) {
           log.debug("Unable to set up XML schema. Cannot extract from XML");
           throw new PluginException("XML schema not set up for " + cu.getUrl());
         }     
@@ -183,6 +183,7 @@ implements FileMetadataExtractorFactory {
       for (int i=0; i < filesToCheck.size(); i++) 
       { 
         fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+        log.debug3("Check for existence of " + filesToCheck.get(i));
         if(fileCu != null && (fileCu.hasContent())) {
           // Set a cooked value for an access file. Otherwise it would get set to xml file
           thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
@@ -262,5 +263,14 @@ implements FileMetadataExtractorFactory {
      * but it MUST implement a definition for a specific schema
      */
     protected abstract SourceXmlSchemaHelper setUpSchema();
+
+    // The default just calls the setUpSchema()
+    // But this allows and optional alternative a plugin could override
+    // for when it needs to choose schema type AFTER looking at the CU
+    // See TaylorAndFrancisSourceXmlMetadataExtractor
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+      return setUpSchema();
+    }
+
   }
 }

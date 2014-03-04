@@ -1,5 +1,5 @@
 /*
- * $Id: OnixBooksSourceArticleIteratorFactory.java,v 1.2 2014-01-14 19:05:44 thib_gc Exp $
+ * $Id: SourceXmlArticleIteratorFactory.java,v 1.1 2014-03-04 21:32:58 alexandraohlson Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
@@ -40,9 +40,15 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class OnixBooksSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+//
+// A generic article iterator for CLOCKSS source plugins that want to iterate on 
+// files that end in .xml at some level below the root directory. 
+// The metadata extraction will be customized by publisher plugin but will use
+// the xml files provided by this article iterator
+//
+public class SourceXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(OnixBooksSourceArticleIteratorFactory.class);
+  protected static Logger log = Logger.getLogger(SourceXmlArticleIteratorFactory.class);
 
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
@@ -52,15 +58,10 @@ public class OnixBooksSourceArticleIteratorFactory implements ArticleIteratorFac
   protected static final String PATTERN_TEMPLATE = "\"^%s%d/(.*)\\.xml$\",base_url,year";
   //
   // The source content structure looks like this:
-  // <root_location>/<year>/<IMPRINT_NAME>/<STUFF>
+  // <root_location>/<year>/<possible subdirectories>/<STUFF>
   //     where STUFF is a series of files:  <name>.pdf, <name>.epub &
-  //         <name>.jpg - the cover for the book in <name>.pdf
-  //    as well as a some number of <othername(s)>.xml which are the ONIX for books
-  //    XML files which contain the metadata for the content. There is no external 
-  //    correlation between the name of the XML file and the name of the pdf files it contains
-  //    We cannot make any assumptions about how many XML files there are nor how many 
-  //    individual "articles" are represented in each XML file.
-  //    BUT the name of the format=15 productIdentifier is the isbn13 which is the <name> for both pdf and epub 
+  //    as well as a some number of <othername(s)>.xml which provide the metadata
+  //    for all the content.
   //
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,

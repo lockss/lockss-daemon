@@ -1,5 +1,5 @@
 /*
- * $Id: TestOnix2XmlMetadataExtractor.java,v 1.2 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: TestSUPressOnix2XmlMetadataExtractor.java,v 1.1 2014-03-04 21:32:57 alexandraohlson Exp $
  */
 /*
 
@@ -31,7 +31,7 @@
 
  */
 
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss.stanforduniversitypress;
 
 import java.io.InputStream;
 import java.util.*;
@@ -41,17 +41,18 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 
-public class TestOnix2XmlMetadataExtractor extends LockssTestCase {
+public class TestSUPressOnix2XmlMetadataExtractor extends LockssTestCase {
 
-  static Logger log = Logger.getLogger(TestOnix2XmlMetadataExtractor.class);
+  static Logger log = Logger.getLogger(TestSUPressOnix2XmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.onixbooks.ClockssOnix2BooksZipSourcePlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.clockss.stanforduniversitypress.ClockssSUPressOnix2BooksZipSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String ZIP_BASE = BASE_URL + "SUP.zip!/testdir/"; 
 

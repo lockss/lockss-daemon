@@ -1,5 +1,5 @@
 /*
- * $Id: OnixBooksZipSourceArticleIteratorFactory.java,v 1.3 2014-02-24 19:01:04 alexandraohlson Exp $
+ * $Id: SourceZipXmlArticleIteratorFactory.java,v 1.1 2014-03-04 21:32:58 alexandraohlson Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
  */
 
-package org.lockss.plugin.clockss.onixbooks;
+package org.lockss.plugin.clockss;
 
 import java.util.Iterator;
 import java.util.regex.Pattern;
@@ -40,42 +40,35 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+//
+// A generic article iterator for CLOCKSS source plugins that are zipped and
+// want to iterate on files within the zipped file that end in .xml at some 
+// level below the root directory. 
+// The metadata extraction will be customized by publisher plugin but will use
+// the xml files provided by this article iterator
+//
+public class SourceZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-  protected static Logger log = Logger.getLogger(OnixBooksZipSourceArticleIteratorFactory.class);
-
+  protected static Logger log = Logger.getLogger(SourceZipXmlArticleIteratorFactory.class);
+  
   // ROOT_TEMPLATE doesn't need to be defined as sub-tree is entire tree under base/year
-  //Zip file is a flat directory that has both content and xml file in it
   private static final String PATTERN_TEMPLATE = 
-      // match any xml file within the zip UNLESS it exists below a "__MACOSX/" directory
-      // these directories are artifacts of the zip getting created on a MAC
-      "\"%s%d/[^/]+\\.zip!/(?!.*__MACOSX/).*\\.xml$\", base_url, year";
+      "\"%s%d/.*\\.zip!/.*\\.xml$\", base_url, year";
 
   public static final Pattern XML_PATTERN = Pattern.compile("/(.*)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final String XML_REPLACEMENT = "/$1.xml";
-
-  //
-  // The source content structure looks like this:
-  // <root_location>/<year>/<BigZipBall>.zip
-  //     where theunderlying structure is one big directory containing
-  //         Stanford to CLOCKSS/<name>.pdf - the book in pdf format
-  //         Stanford to CLOCKSS/<name>.jpg - the cover for the book in <name>.pdf
-  //  as well as one other <blah>.xml file which are ONOIX for books
-  //  metadata for the accompanying files 
-  //      //    correlation between the name of the XML file and the name of the pdf files it contains
-  //    BUT the name of the format=15 productIdentifier is the isbn13 which is the <name> for both pdf
-  //
+  
   @Override
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+                                                      MetadataTarget target)
+      throws PluginException {
     SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
     
     // no need to limit to ROOT_TEMPLATE
-    SubTreeArticleIterator.Spec theSpec = builder.newSpec();
-    theSpec.setTarget(target);
-    theSpec.setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-    /* this is necessary to be able to see what's inside the zip file */
-    theSpec.setVisitArchiveMembers(true);
-    builder.setSpec(theSpec);
+    builder.setSpec(builder.newSpec()
+                    .setTarget(target)
+                    .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE)
+                    .setVisitArchiveMembers(true)); // to be able to see what is in zip
     
     // NOTE - full_text_cu is set automatically to the url used for the articlefiles
     // ultimately the metadata extractor needs to set the entire facet map 
@@ -90,7 +83,7 @@ public class OnixBooksZipSourceArticleIteratorFactory implements ArticleIterator
   
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-    throws PluginException {
+      throws PluginException {
     return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }
