@@ -1,0 +1,22 @@
+{
+
+  publisher <
+    name = eLife Sciences Publications ;
+    info[contract] = 2014 ;
+    info[tester] = 0
+  >
+
+  
+  {
+    title <
+      name = eLife ;
+      issn = 2050-084X  
+    >
+
+    comment[platform] = HighWire Drupal
+    param[base_url] = http://elifesciences.org/
+
+  }
+
+}
+}
