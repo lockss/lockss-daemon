@@ -35,8 +35,23 @@
 
     }
   
-  }  
-  
+    {
+      title <
+        name = Philosophy & Public Affairs ;
+        issn = 0048-3915 ;
+        eissn = 1088-4963 ;
+        issnl = 0048-3915
+      >
+
+      param[journal_dir] = philosophy_and_public_affairs
+      attr[journal_id] = pap
+
+      au < released ; 2001 ; Philosophy & Public Affairs Volume 30 ; 30 >
+      au < released ; 2003 ; Philosophy & Public Affairs Volume 31 ; 31 >
+
+    }
+ }
+ 
   {
   
     title <
@@ -68,8 +83,5 @@
       au < exists ; 2009 ; Princeton Report on Knowledge Volume 3 ; 3 >
       
     }
-
-
   }
-
 }
