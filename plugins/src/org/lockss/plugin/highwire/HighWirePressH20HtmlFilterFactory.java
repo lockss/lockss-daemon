@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.52 2014-03-03 21:48:53 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.53 2014-03-04 20:02:22 etenbrink Exp $
  */
 
 /*
@@ -66,6 +66,10 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         new TagNameFilter("head"),
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "header"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "col-2"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "col-3"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "header-ac-elements"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "banner-ads"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "banner-ads"),
@@ -74,7 +78,6 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul", "class", "col4-tower"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads-ft"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "col-3"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-global-nav"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
