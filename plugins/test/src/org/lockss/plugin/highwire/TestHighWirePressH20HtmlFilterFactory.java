@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.20 2014-03-03 21:56:23 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.21 2014-03-04 20:03:34 etenbrink Exp $
  */
 
 /*
@@ -516,6 +516,32 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<body>\n" +
       "</body>";
   
+  private static final String col2Html =
+      "<body>\n" +
+      "<div id=\"header\">\n" + 
+      "  <h1 title=\"EP Europace\" id=\"page_title\"><a href=\"/\"><span>EP Europace</span></a></h1>\n" + 
+      "</div>\n" + 
+      "<div id=\"footer\">\n" + 
+      "  <h4>Site Map</h4>\n" + 
+      "</div>\n" + 
+      "<div id=\"col-2\" style=\"height: 6326px;\">\n" + 
+      "  <div class=\"article-nav sidebar-nav\">\n" + 
+      "    <span class=\"toc-link\">\n" + 
+      "      <a title=\"Table of Contents\" href=\"/content/14/1.toc\">Table of Contents</a>\n" + 
+      "    </span>\n" + 
+      "  </div>\n" + 
+      "  <div id=\"article-dyn-nav\" class=\"content-box\">\n" + 
+      "    <div class=\"cb-contents\">\n" + 
+      "      <h3 class=\"cb-contents-header\"><span>Navigate This Article</span></h3>\n" + 
+      "    </div>\n" + 
+      "  </div>\n" + 
+      "</div>" +
+      "</body>";
+  
+  private static final String col2HtmlFiltered =
+      "<body>\n" +
+      "</body>";
+  
   public void testFiltering() throws Exception {
     assertFilterToSame(inst1, inst2);
     assertFilterToSame(withAds, withoutAds);
@@ -538,6 +564,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
     assertFilterToSame(socialHtml, socialHtmlFiltered);
     assertFilterToSame(adfootHtml, adfootHtmlFiltered);
     assertFilterToSame(europaceHtml, europaceHtmlFiltered);
+    assertFilterToSame(col2Html, col2HtmlFiltered);
     
     assertFilterToString(textIndexFactor, textIndexFactorFiltered);
     assertFilterToString(hiddenInputHtml, hiddenInputFiltered);
