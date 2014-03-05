@@ -55,21 +55,21 @@
       param[base_url] = http://www.periodicos.ufpa.br/
       param[journal_id] = ncn
 
-      au < manifest ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
-      au < manifest ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
-      au < manifest ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
-      au < manifest ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
-      au < manifest ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
-      au < manifest ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
-      au < manifest ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
-      au < manifest ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
-      au < manifest ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
-      au < manifest ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
-      au < manifest ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
-      au < manifest ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
-      au < manifest ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
-      au < manifest ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
-      au < manifest ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
+      au < testing ; 1998 ; 1 ; Novos Cadernos NAEA Volume 1 ; 1998 >
+      au < testing ; 1999 ; 2 ; Novos Cadernos NAEA Volume 2 ; 1999 >
+      au < testing ; 2000 ; 3 ; Novos Cadernos NAEA Volume 3 ; 2000 >
+      au < testing ; 2001 ; 4 ; Novos Cadernos NAEA Volume 4 ; 2001 >
+      au < testing ; 2002 ; 5 ; Novos Cadernos NAEA Volume 5 ; 2002 >
+      au < testing ; 2003 ; 6 ; Novos Cadernos NAEA Volume 6 ; 2003 >
+      au < testing ; 2004 ; 7 ; Novos Cadernos NAEA Volume 7 ; 2004 >
+      au < testing ; 2005 ; 8 ; Novos Cadernos NAEA Volume 8 ; 2005 >
+      au < testing ; 2006 ; 9 ; Novos Cadernos NAEA Volume 9 ; 2006 >
+      au < testing ; 2007 ; 10 ; Novos Cadernos NAEA Volume 10 ; 2007 >
+      au < testing ; 2008 ; 11 ; Novos Cadernos NAEA Volume 11 ; 2008 >
+      au < testing ; 2009 ; 12 ; Novos Cadernos NAEA Volume 12 ; 2009 >
+      au < testing ; 2010 ; 13 ; Novos Cadernos NAEA Volume 13 ; 2010 >
+      au < testing ; 2011 ; 14 ; Novos Cadernos NAEA Volume 14 ; 2011 >
+      au < testing ; 2012 ; 15 ; Novos Cadernos NAEA Volume 15 ; 2012 >
       au < expected ; 2013 ; 16 ; Novos Cadernos NAEA Volume 16 ; 2013 >
 
   }

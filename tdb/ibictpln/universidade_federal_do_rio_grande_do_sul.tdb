@@ -17,8 +17,8 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ActaScientiaeVeterinariae
 
-      au < manifest ; 1973 ; 1 ; Acta Scientiae Veterinariae Volume 1973 ; 1973 >
-      au < manifest ; 1982 ; 10 ; Acta Scientiae Veterinariae Volume 1982 ; 1982 >
+      au < testing ; 1973 ; 1 ; Acta Scientiae Veterinariae Volume 1973 ; 1973 >
+      au < testing ; 1982 ; 10 ; Acta Scientiae Veterinariae Volume 1982 ; 1982 >
 
   }
 
@@ -33,11 +33,11 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = aedos
 
-      au < manifest ; 2008 ; 1 ; AEDOS Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 2 ; AEDOS Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 3 ; AEDOS Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 4 ; AEDOS Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 5 ; AEDOS Volume 2012 ; 2012 >
+      au < testing ; 2008 ; 1 ; AEDOS Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 2 ; AEDOS Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 3 ; AEDOS Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 4 ; AEDOS Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 5 ; AEDOS Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; AEDOS Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; AEDOS Volume 2014 ; 2014 >
 
@@ -55,18 +55,18 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ambienteconstruido
 
-      au < manifest ; 1997 ; 1 ; Ambiente Construído Volume 1997 ; 1997 >
-      au < manifest ; 2002 ; 6 ; Ambiente Construído Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 7 ; Ambiente Construído Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 8 ; Ambiente Construído Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 9 ; Ambiente Construído Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 10 ; Ambiente Construído Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 11 ; Ambiente Construído Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 12 ; Ambiente Construído Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 13 ; Ambiente Construído Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 14 ; Ambiente Construído Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 15 ; Ambiente Construído Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 16 ; Ambiente Construído Volume 2012 ; 2012 >
+      au < testing ; 1997 ; 1 ; Ambiente Construído Volume 1997 ; 1997 >
+      au < testing ; 2002 ; 6 ; Ambiente Construído Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 7 ; Ambiente Construído Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 8 ; Ambiente Construído Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 9 ; Ambiente Construído Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 10 ; Ambiente Construído Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 11 ; Ambiente Construído Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 12 ; Ambiente Construído Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 13 ; Ambiente Construído Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 14 ; Ambiente Construído Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 15 ; Ambiente Construído Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 16 ; Ambiente Construído Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Ambiente Construído Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Ambiente Construído Volume 2014 ; 2014 >
 
@@ -84,36 +84,36 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = AnaliseEconomica
 
-      au < manifest ; 1983 ; 1 ; Análise Econômica Volume 1983 ; 1983 >
-      au < manifest ; 1984 ; 2 ; Análise Econômica Volume 1984 ; 1984 >
-      au < manifest ; 1985 ; 3 ; Análise Econômica Volume 1985 ; 1985 >
-      au < manifest ; 1986 ; 4 ; Análise Econômica Volume 1986 ; 1986 >
-      au < manifest ; 1987 ; 5 ; Análise Econômica Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; 6 ; Análise Econômica Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; 7 ; Análise Econômica Volume 1989 ; 1989 >
-      au < manifest ; 1990 ; 8 ; Análise Econômica Volume 1990 ; 1990 >
-      au < manifest ; 1991 ; 9 ; Análise Econômica Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; 10 ; Análise Econômica Volume 1992 ; 1992 >
-      au < manifest ; 1993 ; 11 ; Análise Econômica Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 12 ; Análise Econômica Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 13 ; Análise Econômica Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 14 ; Análise Econômica Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 15 ; Análise Econômica Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 16 ; Análise Econômica Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 17 ; Análise Econômica Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 18 ; Análise Econômica Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 19 ; Análise Econômica Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 20 ; Análise Econômica Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 21 ; Análise Econômica Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 22 ; Análise Econômica Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 23 ; Análise Econômica Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 24 ; Análise Econômica Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 25 ; Análise Econômica Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 26 ; Análise Econômica Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 27 ; Análise Econômica Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 28 ; Análise Econômica Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 29 ; Análise Econômica Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 30 ; Análise Econômica Volume 2012 ; 2012 >
+      au < testing ; 1983 ; 1 ; Análise Econômica Volume 1983 ; 1983 >
+      au < testing ; 1984 ; 2 ; Análise Econômica Volume 1984 ; 1984 >
+      au < testing ; 1985 ; 3 ; Análise Econômica Volume 1985 ; 1985 >
+      au < testing ; 1986 ; 4 ; Análise Econômica Volume 1986 ; 1986 >
+      au < testing ; 1987 ; 5 ; Análise Econômica Volume 1987 ; 1987 >
+      au < testing ; 1988 ; 6 ; Análise Econômica Volume 1988 ; 1988 >
+      au < testing ; 1989 ; 7 ; Análise Econômica Volume 1989 ; 1989 >
+      au < testing ; 1990 ; 8 ; Análise Econômica Volume 1990 ; 1990 >
+      au < testing ; 1991 ; 9 ; Análise Econômica Volume 1991 ; 1991 >
+      au < testing ; 1992 ; 10 ; Análise Econômica Volume 1992 ; 1992 >
+      au < testing ; 1993 ; 11 ; Análise Econômica Volume 1993 ; 1993 >
+      au < testing ; 1994 ; 12 ; Análise Econômica Volume 1994 ; 1994 >
+      au < testing ; 1995 ; 13 ; Análise Econômica Volume 1995 ; 1995 >
+      au < testing ; 1996 ; 14 ; Análise Econômica Volume 1996 ; 1996 >
+      au < testing ; 1997 ; 15 ; Análise Econômica Volume 1997 ; 1997 >
+      au < testing ; 1998 ; 16 ; Análise Econômica Volume 1998 ; 1998 >
+      au < testing ; 1999 ; 17 ; Análise Econômica Volume 1999 ; 1999 >
+      au < testing ; 2000 ; 18 ; Análise Econômica Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 19 ; Análise Econômica Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 20 ; Análise Econômica Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 21 ; Análise Econômica Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 22 ; Análise Econômica Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 23 ; Análise Econômica Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 24 ; Análise Econômica Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 25 ; Análise Econômica Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 26 ; Análise Econômica Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 27 ; Análise Econômica Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 28 ; Análise Econômica Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 29 ; Análise Econômica Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 30 ; Análise Econômica Volume 2012 ; 2012 >
       au < expected ; 2013 ; 31 ; Análise Econômica Volume 2013 ; 2013 >
       au < expected ; 2014 ; 32 ; Análise Econômica Volume 2014 ; 2014 >
 
@@ -131,26 +131,26 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = anos90
 
-      au < manifest ; 1993 ; 1 ; Anos Noventa Volume 1993 ; 1993 >
-      au < manifest ; 1994 ; 2 ; Anos Noventa Volume 1994 ; 1994 >
-      au < manifest ; 1995 ; 3 ; Anos Noventa Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 4 ; Anos Noventa Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 5 ; Anos Noventa Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 6 ; Anos Noventa Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 7 ; Anos Noventa Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 8 ; Anos Noventa Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 9 ; Anos Noventa Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 10 ; Anos Noventa Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 11 ; Anos Noventa Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 12 ; Anos Noventa Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 13 ; Anos Noventa Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 14 ; Anos Noventa Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 15 ; Anos Noventa Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 16 ; Anos Noventa Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 17 ; Anos Noventa Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 18 ; Anos Noventa Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 19 ; Anos Noventa Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 20 ; Anos Noventa Volume 2012 ; 2012 >
+      au < testing ; 1993 ; 1 ; Anos Noventa Volume 1993 ; 1993 >
+      au < testing ; 1994 ; 2 ; Anos Noventa Volume 1994 ; 1994 >
+      au < testing ; 1995 ; 3 ; Anos Noventa Volume 1995 ; 1995 >
+      au < testing ; 1996 ; 4 ; Anos Noventa Volume 1996 ; 1996 >
+      au < testing ; 1997 ; 5 ; Anos Noventa Volume 1997 ; 1997 >
+      au < testing ; 1998 ; 6 ; Anos Noventa Volume 1998 ; 1998 >
+      au < testing ; 1999 ; 7 ; Anos Noventa Volume 1999 ; 1999 >
+      au < testing ; 2000 ; 8 ; Anos Noventa Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 9 ; Anos Noventa Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 10 ; Anos Noventa Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 11 ; Anos Noventa Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 12 ; Anos Noventa Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 13 ; Anos Noventa Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 14 ; Anos Noventa Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 15 ; Anos Noventa Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 16 ; Anos Noventa Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 17 ; Anos Noventa Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 18 ; Anos Noventa Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 19 ; Anos Noventa Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 20 ; Anos Noventa Volume 2012 ; 2012 >
       au < expected ; 2013 ; 21 ; Anos Noventa Volume 2013 ; 2013 >
       au < expected ; 2014 ; 22 ; Anos Noventa Volume 2014 ; 2014 >
 
@@ -167,7 +167,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = austral
 
-      au < manifest ; 2012 ; 1 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2012 ; 2012 >
+      au < testing ; 2012 ; 1 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2013 ; 2013 >
       au < expected ; 2014 ; 3 ; Austral: Revista Brasileira de Estratégia e Relações Internacionais Volume 2014 ; 2014 >
 
@@ -184,37 +184,37 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = bgg
 
-      au < manifest ; 1974 ; 1 ; Boletim Gaúcho de Geografia Volume 1974 ; 1974 >
-      au < manifest ; 1975 ; 2 ; Boletim Gaúcho de Geografia Volume 1975 ; 1975 >
-      au < manifest ; 1976 ; 3 ; Boletim Gaúcho de Geografia Volume 1976 ; 1976 >
-      au < manifest ; 1977 ; 4 ; Boletim Gaúcho de Geografia Volume 1977 ; 1977 >
-      au < manifest ; 1979 ; 6 ; Boletim Gaúcho de Geografia Volume 1979 ; 1979 >
-      au < manifest ; 1980 ; 7 ; Boletim Gaúcho de Geografia Volume 1980 ; 1980 >
-      au < manifest ; 1981 ; 8 ; Boletim Gaúcho de Geografia Volume 1981 ; 1981 >
-      au < manifest ; 1983 ; 10 ; Boletim Gaúcho de Geografia Volume 1983 ; 1983 >
-      au < manifest ; 1984 ; 11 ; Boletim Gaúcho de Geografia Volume 1984 ; 1984 >
-      au < manifest ; 1985 ; 12 ; Boletim Gaúcho de Geografia Volume 1985 ; 1985 >
-      au < manifest ; 1986 ; 13 ; Boletim Gaúcho de Geografia Volume 1986 ; 1986 >
-      au < manifest ; 1987 ; 14 ; Boletim Gaúcho de Geografia Volume 1987 ; 1987 >
-      au < manifest ; 1988 ; 15 ; Boletim Gaúcho de Geografia Volume 1988 ; 1988 >
-      au < manifest ; 1989 ; 16 ; Boletim Gaúcho de Geografia Volume 1989 ; 1989 >
-      au < manifest ; 1991 ; 18 ; Boletim Gaúcho de Geografia Volume 1991 ; 1991 >
-      au < manifest ; 1992 ; 19 ; Boletim Gaúcho de Geografia Volume 1992 ; 1992 >
-      au < manifest ; 1995 ; 22 ; Boletim Gaúcho de Geografia Volume 1995 ; 1995 >
-      au < manifest ; 1996 ; 23 ; Boletim Gaúcho de Geografia Volume 1996 ; 1996 >
-      au < manifest ; 1997 ; 24 ; Boletim Gaúcho de Geografia Volume 1997 ; 1997 >
-      au < manifest ; 1998 ; 25 ; Boletim Gaúcho de Geografia Volume 1998 ; 1998 >
-      au < manifest ; 1999 ; 26 ; Boletim Gaúcho de Geografia Volume 1999 ; 1999 >
-      au < manifest ; 2000 ; 27 ; Boletim Gaúcho de Geografia Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 28 ; Boletim Gaúcho de Geografia Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 29 ; Boletim Gaúcho de Geografia Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 30 ; Boletim Gaúcho de Geografia Volume 2003 ; 2003 >
-      au < manifest ; 2006 ; 33 ; Boletim Gaúcho de Geografia Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 34 ; Boletim Gaúcho de Geografia Volume 2007 ; 2007 >
-      au < manifest ; 2009 ; 36 ; Boletim Gaúcho de Geografia Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 37 ; Boletim Gaúcho de Geografia Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 38 ; Boletim Gaúcho de Geografia Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 39 ; Boletim Gaúcho de Geografia Volume 2012 ; 2012 >
+      au < testing ; 1974 ; 1 ; Boletim Gaúcho de Geografia Volume 1974 ; 1974 >
+      au < testing ; 1975 ; 2 ; Boletim Gaúcho de Geografia Volume 1975 ; 1975 >
+      au < testing ; 1976 ; 3 ; Boletim Gaúcho de Geografia Volume 1976 ; 1976 >
+      au < testing ; 1977 ; 4 ; Boletim Gaúcho de Geografia Volume 1977 ; 1977 >
+      au < testing ; 1979 ; 6 ; Boletim Gaúcho de Geografia Volume 1979 ; 1979 >
+      au < testing ; 1980 ; 7 ; Boletim Gaúcho de Geografia Volume 1980 ; 1980 >
+      au < testing ; 1981 ; 8 ; Boletim Gaúcho de Geografia Volume 1981 ; 1981 >
+      au < testing ; 1983 ; 10 ; Boletim Gaúcho de Geografia Volume 1983 ; 1983 >
+      au < testing ; 1984 ; 11 ; Boletim Gaúcho de Geografia Volume 1984 ; 1984 >
+      au < testing ; 1985 ; 12 ; Boletim Gaúcho de Geografia Volume 1985 ; 1985 >
+      au < testing ; 1986 ; 13 ; Boletim Gaúcho de Geografia Volume 1986 ; 1986 >
+      au < testing ; 1987 ; 14 ; Boletim Gaúcho de Geografia Volume 1987 ; 1987 >
+      au < testing ; 1988 ; 15 ; Boletim Gaúcho de Geografia Volume 1988 ; 1988 >
+      au < testing ; 1989 ; 16 ; Boletim Gaúcho de Geografia Volume 1989 ; 1989 >
+      au < testing ; 1991 ; 18 ; Boletim Gaúcho de Geografia Volume 1991 ; 1991 >
+      au < testing ; 1992 ; 19 ; Boletim Gaúcho de Geografia Volume 1992 ; 1992 >
+      au < testing ; 1995 ; 22 ; Boletim Gaúcho de Geografia Volume 1995 ; 1995 >
+      au < testing ; 1996 ; 23 ; Boletim Gaúcho de Geografia Volume 1996 ; 1996 >
+      au < testing ; 1997 ; 24 ; Boletim Gaúcho de Geografia Volume 1997 ; 1997 >
+      au < testing ; 1998 ; 25 ; Boletim Gaúcho de Geografia Volume 1998 ; 1998 >
+      au < testing ; 1999 ; 26 ; Boletim Gaúcho de Geografia Volume 1999 ; 1999 >
+      au < testing ; 2000 ; 27 ; Boletim Gaúcho de Geografia Volume 2000 ; 2000 >
+      au < testing ; 2001 ; 28 ; Boletim Gaúcho de Geografia Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 29 ; Boletim Gaúcho de Geografia Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 30 ; Boletim Gaúcho de Geografia Volume 2003 ; 2003 >
+      au < testing ; 2006 ; 33 ; Boletim Gaúcho de Geografia Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 34 ; Boletim Gaúcho de Geografia Volume 2007 ; 2007 >
+      au < testing ; 2009 ; 36 ; Boletim Gaúcho de Geografia Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 37 ; Boletim Gaúcho de Geografia Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 38 ; Boletim Gaúcho de Geografia Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 39 ; Boletim Gaúcho de Geografia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 40 ; Boletim Gaúcho de Geografia Volume 2013 ; 2013 >
       au < expected ; 2014 ; 41 ; Boletim Gaúcho de Geografia Volume 2014 ; 2014 >
 
