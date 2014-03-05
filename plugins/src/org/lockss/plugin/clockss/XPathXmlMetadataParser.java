@@ -1,5 +1,5 @@
 /*
- * $Id: XPathXmlMetadataParser.java,v 1.6 2014-01-23 22:31:38 alexandraohlson Exp $
+ * $Id: XPathXmlMetadataParser.java,v 1.7 2014-03-05 19:38:47 alexandraohlson Exp $
  */
 
 /*
@@ -263,6 +263,11 @@ public class XPathXmlMetadataParser  {
             }
           }
         }
+      } else {
+        /* No article map, but if there was a global map, use that */
+        if (globalAM != null) {
+          amList.add(globalAM);
+        }
       }
 
     } catch (XPathExpressionException e) {
@@ -365,7 +370,10 @@ public class XPathXmlMetadataParser  {
       dbf.setFeature("http://xml.org/sax/features/namespaces", false);
       dbf.setFeature("http://xml.org/sax/features/validation", false);
       dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
-      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);          
+      dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false); 
+      // The following feature keeps some XML files (see T&Fsource) from causing DB.parse
+      // null pointer exception
+      dbf.setFeature("http://apache.org/xml/features/dom/defer-node-expansion", false);
       builder = dbf.newDocumentBuilder();
     } catch (ParserConfigurationException ex) {
       log.warning("Cannot setup document build for XML file -", ex);
