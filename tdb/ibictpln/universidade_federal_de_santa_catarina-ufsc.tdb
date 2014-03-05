@@ -808,24 +808,24 @@
       param[journal_id] = esbocos
       comment[notReady] = no permission
 
-      au < testing ; 1994 ; 1 ; Revista Esboços Volume 1994 ; 1994 >
-      au < testing ; 1995 ; 2 ; Revista Esboços Volume 1995 ; 1995 >
-      au < testing ; 1996 ; 3 ; Revista Esboços Volume 1996 ; 1996 >
-      au < testing ; 1997 ; 4 ; Revista Esboços Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 5 ; Revista Esboços Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 6 ; Revista Esboços Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 7 ; Revista Esboços Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 8 ; Revista Esboços Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 9 ; Revista Esboços Volume 2002 ; 2002 >
-      au < testing ; 2004 ; 11 ; Revista Esboços Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 12 ; Revista Esboços Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 13 ; Revista Esboços Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 14 ; Revista Esboços Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 15 ; Revista Esboços Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 16 ; Revista Esboços Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 17 ; Revista Esboços Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 18 ; Revista Esboços Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 19 ; Revista Esboços Volume 2012 ; 2012 >
+      au < notReady ; 1994 ; 1 ; Revista Esboços Volume 1994 ; 1994 >
+      au < notReady ; 1995 ; 2 ; Revista Esboços Volume 1995 ; 1995 >
+      au < notReady ; 1996 ; 3 ; Revista Esboços Volume 1996 ; 1996 >
+      au < notReady ; 1997 ; 4 ; Revista Esboços Volume 1997 ; 1997 >
+      au < notReady ; 1998 ; 5 ; Revista Esboços Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 6 ; Revista Esboços Volume 1999 ; 1999 >
+      au < notReady ; 2000 ; 7 ; Revista Esboços Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 8 ; Revista Esboços Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 9 ; Revista Esboços Volume 2002 ; 2002 >
+      au < notReady ; 2004 ; 11 ; Revista Esboços Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 12 ; Revista Esboços Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 13 ; Revista Esboços Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 14 ; Revista Esboços Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 15 ; Revista Esboços Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 16 ; Revista Esboços Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 17 ; Revista Esboços Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 18 ; Revista Esboços Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 19 ; Revista Esboços Volume 2012 ; 2012 >
       au < expected ; 2013 ; 20 ; Revista Esboços Volume 2013 ; 2013 >
       au < expected ; 2014 ; 21 ; Revista Esboços Volume 2014 ; 2014 >
 
@@ -843,15 +843,15 @@
       param[journal_id] = extensio
       comment[notReady] = no permission
 
-      au < testing ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 3 ; Revista Extensio Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 4 ; Revista Extensio Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 5 ; Revista Extensio Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 6 ; Revista Extensio Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 7 ; Revista Extensio Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 8 ; Revista Extensio Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 9 ; Revista Extensio Volume 2012 ; 2012 >
+      au < notReady ; 2004 ; 1 ; Revista Extensio Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 2 ; Revista Extensio Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 3 ; Revista Extensio Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 4 ; Revista Extensio Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 5 ; Revista Extensio Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 6 ; Revista Extensio Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 7 ; Revista Extensio Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 8 ; Revista Extensio Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 9 ; Revista Extensio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 10 ; Revista Extensio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 11 ; Revista Extensio Volume 2014 ; 2014 >
 
