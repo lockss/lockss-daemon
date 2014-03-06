@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.53 2014-03-04 20:02:22 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.54 2014-03-06 20:12:18 etenbrink Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-cat"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "related"),
         HtmlNodeFilters.tagWithAttribute("ul", "id", "site-breadcrumbs"),
-        HtmlNodeFilters.tagWithAttribute("ul", "class", "kwd-group"),
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "kwd-group"),
         HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
         HtmlNodeFilters.tagWithAttributeRegex("span", "class", "^ccv "),
         // e.g. SWCS TOC pages
