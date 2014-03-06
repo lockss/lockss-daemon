@@ -8,7 +8,9 @@
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   comment[doNotProcess] = Moving to a new HW Drupal platform on 7/17/2013.
-  comment[titles] = Moving to drupal only: ajpheart, ajpend, ajpcell, ajprenal, ajpregu, ajplung and ajpgi
+  comment[titles0] = Moved to drupal: ajpheart, ajpendo, ajpcell, ajprenal, ajpregu, ajplung and ajpgi
+  comment[titles1] = Moved to drupal also: jn, physrev
+  
   {
 
 
