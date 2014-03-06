@@ -650,7 +650,7 @@
       param[journal_issn] = 2045-5895
 
       au < released ; 2012 ; International Journal of Islamic Architecture Volume 1 ; 1 >
-      au < manifest ; 2013 ; International Journal of Islamic Architecture Volume 2 ; 2 >
+      au < testing ; 2013 ; International Journal of Islamic Architecture Volume 2 ; 2 >
       au < manifest ; 2014 ; International Journal of Islamic Architecture Volume 3 ; 3 >
     }
     
@@ -1098,7 +1098,7 @@
       au < released ; 2011 ; Journal of Screenwriting Volume 2 ; 2 >
       au < released ; 2011-2012 ; Journal of Screenwriting Volume 3 ; 3 >
       au < released ; 2012-2013 ; Journal of Screenwriting Volume 4 ; 4 >
-      au < testing ; 2013 ; Journal of Screenwriting Volume 5 ; 5 >
+      au < ready ; 2013 ; Journal of Screenwriting Volume 5 ; 5 >
       au < expected ; 2014 ; Journal of Screenwriting Volume 6 ; 6 >
 
     }
@@ -1245,7 +1245,7 @@
       au < released ; 2010 ; Northern Lights: Film and Media Studies Yearbook Volume 8 ; 8 >
       au < released ; 2011 ; Northern Lights: Film and Media Studies Yearbook Volume 9 ; 9 >
       au < released ; 2012 ; Northern Lights: Film and Media Studies Yearbook Volume 10 ; 10 >
-      au < testing ; 2013 ; Northern Lights: Film and Media Studies Yearbook Volume 11 ; 11 >
+      au < ready ; 2013 ; Northern Lights: Film and Media Studies Yearbook Volume 11 ; 11 >
       au < expected ; 2014 ; Northern Lights: Film and Media Studies Yearbook Volume 12 ; 12 >
 
     }
@@ -1262,7 +1262,7 @@
     
       au < released ; 2010-2011 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 1 ; 1 >
       au < released ; 2012 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 2 ; 2 >
-      au < testing ; 2013 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 3 ; 3 >
+      au < ready ; 2013 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 3 ; 3 >
       au < expected ; 2014 ; Performing Ethos: An International Journal of Ethics in Theatre and Performance Volume 4 ; 4 >
     }
 
@@ -1276,7 +1276,7 @@
       param[journal_issn] = 2043-1015
     
       au < released ; 2012-2013 ; Performing Islam Volume 1 ; 1 >
-      au < testing ; 2013 ; Performing Islam Volume 2 ; 2 >
+      au < ready ; 2013 ; Performing Islam Volume 2 ; 2 >
       au < expected ; 2014 ; Performing Islam Volume 3 ; 3 >
 
     }
@@ -1294,7 +1294,7 @@
       au < released ; 2010 ; Philosophy of Photography Volume 1 ; 1 >
       au < released ; 2011-2012 ; Philosophy of Photography Volume 2 ; 2 >
       au < released ; 2012 ; Philosophy of Photography Volume 3 ; 3 >
-      au < testing ; 2013 ; Philosophy of Photography Volume 4 ; 4 >
+      au < ready ; 2013 ; Philosophy of Photography Volume 4 ; 4 >
       au < expected ; 2014 ; Philosophy of Photography Volume 5 ; 5 >
 
     }
@@ -1320,7 +1320,7 @@
       au < released ; 2010 ; Portuguese Journal of Social Science Volume 9 ; 9 >
       au < released ; 2011 ; Portuguese Journal of Social Science Volume 10 ; 10 >
       au < released ; 2012 ; Portuguese Journal of Social Science Volume 11 ; 11 >
-      au < testing ; 2013 ; Portuguese Journal of Social Science Volume 12 ; 12 >
+      au < ready ; 2013 ; Portuguese Journal of Social Science Volume 12 ; 12 >
       au < expected ; 2014 ; Portuguese Journal of Social Science Volume 13 ; 13 >
 
     }
@@ -1352,7 +1352,7 @@
       param[journal_issn] = 0845-4450
 
       au < released ; 2012 ; PUBLIC: Art, Culture, Ideas Volume 23 ; 23 >
-      au < testing ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
+      au < ready ; 2013 ; PUBLIC: Art, Culture, Ideas Volume 24 ; 24 >
       au < expected ; 2014 ; PUBLIC: Art, Culture, Ideas Volume 25 ; 25 >
       
     }
@@ -1367,7 +1367,7 @@
       param[journal_issn] = 2044-1983
     
       au < released ; 2011-2012 ; Punk & Post Punk Volume 1 ; 1 >
-      au < testing ; 2013 ; Punk & Post Punk Volume 2 ; 2 >
+      au < ready ; 2013 ; Punk & Post Punk Volume 2 ; 2 >
       au < expected ; 2014 ; Punk & Post Punk Volume 3 ; 3 >
 
     }
@@ -1392,7 +1392,7 @@
       au < released ; 2010-2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 8 ; 8 >
       au < released ; 2011 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 9 ; 9 >
       au < released ; 2012 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 10 ; 10 >
-      au < testing ; 2013 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 11 ; 11 >
+      au < ready ; 2013 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 11 ; 11 >
       au < expected ; 2014 ; The Radio Journal: International Studies in Broadcast & Audio Media Volume 12 ; 12 >
 
     }
@@ -1422,8 +1422,8 @@
       param[journal_issn] = 2043-0701
     
       au < released ; 2011-2012 ; Short Fiction in Theory & Practice Volume 1 ; 1 >
-      au < testing ; 2012 ; Short Fiction in Theory & Practice Volume 2 ; 2 >
-      au < testing ; 2013 ; Short Fiction in Theory & Practice Volume 3 ; 3 >
+      au < ready ; 2012 ; Short Fiction in Theory & Practice Volume 2 ; 2 >
+      au < ready ; 2013 ; Short Fiction in Theory & Practice Volume 3 ; 3 >
       au < expected ; 2014 ; Short Fiction in Theory & Practice Volume 4 ; 4 >
 
     }
@@ -1440,7 +1440,7 @@
       au < released ; 2010-2011 ; Short Film Studies Volume 1 ; 1 >
       au < released ; 2012 ; Short Film Studies Volume 2 ; 2 >
       au < released ; 2012-2013 ; Short Film Studies Volume 3 ; 3 >
-      au < testing ; 2013 ; Short Film Studies Volume 4 ; 4 >
+      au < ready ; 2013 ; Short Film Studies Volume 4 ; 4 >
       au < expected ; 2014 ; Short Film Studies Volume 5 ; 5 >
 
     }
@@ -1459,7 +1459,7 @@
       au < released ; 2009 ; The Soundtrack Volume 2 ; 2 >
       au < released ; 2010 ; The Soundtrack Volume 3 ; 3 >
       au < released ; 2011 ; The Soundtrack Volume 4 ; 4 >
-      au < manifest ; 2013 ; The Soundtrack Volume 5 ; 5 >
+      au < testing ; 2013 ; The Soundtrack Volume 5 ; 5 >
       au < expected ; 2014 ; The Soundtrack Volume 6 ; 6 >
 
     }
@@ -1479,7 +1479,7 @@
       au < released ; 2010 ; Studies in Australasian Cinema Volume 4 ; 4 >
       au < released ; 2011 ; Studies in Australasian Cinema Volume 5 ; 5 >
       au < released ; 2012 ; Studies in Australasian Cinema Volume 6 ; 6 >
-      au < manifest ; 2013 ; Studies in Australasian Cinema Volume 7 ; 7 >
+      au < testing ; 2013 ; Studies in Australasian Cinema Volume 7 ; 7 >
       au < expected ; 2014 ; Studies in Australasian Cinema Volume 8 ; 8 >
 
     }
@@ -1496,7 +1496,7 @@
       au < released ; 2010 ; Studies in Comics Volume 1 ; 1 >
       au < released ; 2011-2012 ; Studies in Comics Volume 2 ; 2 >
       au < released ; 2012 ; Studies in Comics Volume 3 ; 3 >
-      au < manifest ; 2013 ; Studies in Comics Volume 4 ; 4 >
+      au < testing ; 2013 ; Studies in Comics Volume 4 ; 4 >
       au < expected ; 2014 ; Studies in Comics Volume 5 ; 5 >
 
     }
@@ -1527,7 +1527,7 @@
       au < released ; 2010 ; Studies in Documentary Film Volume 4 ; 4 >
       au < released ; 2011 ; Studies in Documentary Film Volume 5 ; 5 >
       au < released ; 2012 ; Studies in Documentary Film Volume 6 ; 6 >
-      au < manifest ; 2013 ; Studies in Documentary Film Volume 7 ; 7 >
+      au < testing ; 2013 ; Studies in Documentary Film Volume 7 ; 7 >
       au < expected ; 2014 ; Studies in Documentary Film Volume 8 ; 8 >
 
     }
@@ -1545,7 +1545,7 @@
       au < released ; 2010 ; Studies in Eastern European Cinema Volume 1 ; 1 >
       au < released ; 2011 ; Studies in Eastern European Cinema Volume 2 ; 2 >
       au < released ; 2012 ; Studies in Eastern European Cinema Volume 3 ; 3 >
-      au < manifest ; 2013 ; Studies in Eastern European Cinema Volume 4 ; 4 >
+      au < testing ; 2013 ; Studies in Eastern European Cinema Volume 4 ; 4 >
       au < expected ; 2014 ; Studies in Eastern European Cinema Volume 5 ; 5 >
 
     }
@@ -1569,7 +1569,7 @@
       au < released ; 2010 ; Studies in European Cinema Volume 7 ; 7 >
       au < released ; 2011-2012 ; Studies in European Cinema Volume 8 ; 8 >
       au < released ; 2012 ; Studies in European Cinema Volume 9 ; 9 >
-      au < manifest ; 2013 ; Studies in European Cinema Volume 10 ; 10 >
+      au < testing ; 2013 ; Studies in European Cinema Volume 10 ; 10 >
       au < expected ; 2014 ; Studies in European Cinema Volume 11 ; 11 >
 
     }
@@ -1596,7 +1596,7 @@
       au < released ; 2010 ; Studies in French Cinema Volume 10 ; 10 >
       au < released ; 2011 ; Studies in French Cinema Volume 11 ; 11 >
       au < released ; 2012 ; Studies in French Cinema Volume 12 ; 12 >
-      au < manifest ; 2013 ; Studies in French Cinema Volume 13 ; 13 >
+      au < testing ; 2013 ; Studies in French Cinema Volume 13 ; 13 >
       au < expected ; 2014 ; Studies in French Cinema Volume 14 ; 14 >
 
     }
@@ -1641,7 +1641,7 @@
       au < released ; 2010 ; Studies in Musical Theatre Volume 4 ; 4 >
       au < released ; 2011-2012 ; Studies in Musical Theatre Volume 5 ; 5 >
       au < released ; 2012 ; Studies in Musical Theatre Volume 6 ; 6 >
-      au < manifest ; 2013 ; Studies in Musical Theatre Volume 7 ; 7 >
+      au < testing ; 2013 ; Studies in Musical Theatre Volume 7 ; 7 >
       au < expected ; 2014 ; Studies in Musical Theatre Volume 8 ; 8 >
 
     }
@@ -1662,7 +1662,7 @@
       au < released ; 2010 ; Studies in Russian and Soviet Cinema Volume 4 ; 4 >
       au < released ; 2011-2012 ; Studies in Russian and Soviet Cinema Volume 5 ; 5 >
       au < released ; 2012 ; Studies in Russian and Soviet Cinema Volume 6 ; 6 >
-      au < manifest ; 2013 ; Studies in Russian and Soviet Cinema Volume 7 ; 7 >
+      au < testing ; 2013 ; Studies in Russian and Soviet Cinema Volume 7 ; 7 >
       au < expected ; 2014 ; Studies in Russian and Soviet Cinema Volume 8 ; 8 >
 
     }
