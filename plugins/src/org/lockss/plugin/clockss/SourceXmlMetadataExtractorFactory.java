@@ -1,5 +1,5 @@
 /*
- * $Id: SourceXmlMetadataExtractorFactory.java,v 1.17 2014-03-04 21:32:58 alexandraohlson Exp $
+ * $Id: SourceXmlMetadataExtractorFactory.java,v 1.18 2014-03-06 17:19:34 alexandraohlson Exp $
  */
 
 /*
@@ -261,13 +261,19 @@ implements FileMetadataExtractorFactory {
     /* 
      * A particular XML extractor might inherit the rest of the base methods
      * but it MUST implement a definition for a specific schema
+     * This version with no arguments is deprecated in favor of the version that
+     * takes the CachedUrl which can allow for plugins that need to choose
+     * a specific schema based on url
+     * TODO - change all definitions of this version to that with the argument
+     * and remove this abstract method.
      */
     protected abstract SourceXmlSchemaHelper setUpSchema();
 
-    // The default just calls the setUpSchema()
-    // But this allows and optional alternative a plugin could override
-    // for when it needs to choose schema type AFTER looking at the CU
-    // See TaylorAndFrancisSourceXmlMetadataExtractor
+    // The version of setUpSchema() with no arguments is deprecated in favor 
+    // of this version. Having the CU can allow a plugin to choose a schema
+    // based on information in the URL.
+    // They can simply disregard the cu if there is only one schema 
+    // See TaylorAndFrancisSourceXmlMetadataExtractor as an example
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       return setUpSchema();
     }

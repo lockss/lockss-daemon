@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisSourceXmlMetadataExtractorFactory.java,v 1.1 2014-03-05 19:38:47 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisSourceXmlMetadataExtractorFactory.java,v 1.2 2014-03-06 17:19:33 alexandraohlson Exp $
  */
 
 /*
@@ -69,29 +69,27 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
   public class TaylorAndFrancisSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
     // This must be implemented because it is abstract in the parent
-    // but we don't actually use it. There is an alternate with a "cu" 
+    // but we don't actually use it. This method is deprecated and will get 
+    // removed later. There is an alternate with a "cu"  
     // argument which we also override so that we can base the schema on 
     // URL of the XML.
     // This publisher was inconsistent in choice of XML schema within the AU
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
-      // Once you have it, just keep returning the same one. It won't change.
-      if (TandFHelper != null) {
-        return TandFHelper;
-      }
-      TandFHelper = new TaylorAndFrancisSourceXmlSchemaHelper();
-      return TandFHelper;
+      return null; //will cause a plugin exception to get thrown
     }
     
     
-    // If the URL matches that for "UACP volume16" we know they used an 
-    // entirely different XML schema ("tfdoc") and we must provide a different
-    // helper. Otherwise use the default ("article/unarticle").
+    //In the bulk source we were given, for 2013/UACP and 2013/WJPT, the V16 of
+    // UACP had xml files in a schema different from all the others! So this
+    // setupSchema call matches the pattern of the URL and if it is UACP, V16
+    // we return the necessary "tfdoc" schema, otherwise the "article/unarticle"
+    // schema.
     @Override
     protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it created, just keep returning the same one. It won't change.
 
-      // First - are we processing volume 16? - if so, use other schema
+      // First - are we processing volume 16 of UACP? - if so, use tfdoc schema
       Matcher V16Mat = URL16_PATTERN.matcher(cu.getUrl()); 
       if (V16Mat.find()) {
         if (TandF16Helper != null) {
@@ -132,7 +130,7 @@ public class TaylorAndFrancisSourceXmlMetadataExtractorFactory extends SourceXml
       return returnList;
     }
     
-    private static final String PUBLISHER_NAME = "Taylor & Francis Group";
+    private static final String PUBLISHER_NAME = "Taylor & Francis";
     private static final String WJPT_TITLE = "Journal of Pharmacy Teaching";
     private static final String UACP_TITLE = "Annals of Clinical Psychiatry";
     // One of the XML schema's doesn't set publisher. Do so here

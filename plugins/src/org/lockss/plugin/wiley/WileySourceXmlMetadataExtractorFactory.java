@@ -1,5 +1,5 @@
 /*
- * $Id: WileySourceXmlMetadataExtractorFactory.java,v 1.2 2014-02-06 21:10:08 alexandraohlson Exp $
+ * $Id: WileySourceXmlMetadataExtractorFactory.java,v 1.3 2014-03-06 17:19:33 alexandraohlson Exp $
  */
 
 /*
@@ -101,9 +101,16 @@ extends SourceXmlMetadataExtractorFactory {
       }
     }
 
+    // This version shouldn't get called. Ultimately it will get removed
+    // in favor of the version that takes a CachedUrl argument
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
-      // Once you have it, just keep returning the same one. It won't change.
+      return null; // cause a plugin exception to get thrown
+    }
+
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+    // Once you have it, just keep returning the same one. It won't change.
       if (WileyHelper != null) {
         return WileyHelper;
       }

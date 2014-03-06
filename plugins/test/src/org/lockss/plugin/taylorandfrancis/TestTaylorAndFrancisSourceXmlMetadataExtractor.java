@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisSourceXmlMetadataExtractor.java,v 1.1 2014-03-05 19:38:47 alexandraohlson Exp $
+ * $Id: TestTaylorAndFrancisSourceXmlMetadataExtractor.java,v 1.2 2014-03-06 17:19:33 alexandraohlson Exp $
  */
 
 /*
@@ -32,23 +32,12 @@
 
 package org.lockss.plugin.taylorandfrancis;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginTestUtil;
-import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
-import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor;
-import org.lockss.plugin.clockss.onixbooks.Onix2LongSourceXmlMetadataExtractorFactory;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisSourceTFDocXmlSchemaHelper;
-import org.lockss.plugin.taylorandfrancis.TaylorAndFrancisSourceXmlSchemaHelper;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
@@ -58,8 +47,6 @@ import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.FileMetadataListExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.extractor.XmlDomMetadataExtractor;
-import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 
 
 /*
@@ -76,15 +63,12 @@ extends LockssTestCase {
   static Logger log = Logger.getLogger(TestTaylorAndFrancisSourceXmlMetadataExtractor.class);
 
   private MockLockssDaemon theDaemon;
-  private ArchivalUnit cau;
   private MockArchivalUnit mau;
 
   private static String PLUGIN_NAME = "org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisSourcePlugin";
   private static String BASE_URL = "http://www.source.org/";
   private static String YEAR = "2013";
-  private static final Pattern schemaAPATTERN = Pattern.compile("/UACP_i_016_[0-9sup]+_tandf\\.zip");
-
-
+  
   public void setUp() throws Exception {
     super.setUp();
     setUpDiskSpace(); // you need this to have startService work properly...
@@ -99,7 +83,7 @@ extends LockssTestCase {
     theDaemon.getCrawlManager();
     mau.setConfiguration(auConfig());
 
-    cau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, auConfig());
+    PluginTestUtil.createAndStartAu(PLUGIN_NAME, auConfig());
   }
 
   public void tearDown() throws Exception {
@@ -118,7 +102,7 @@ extends LockssTestCase {
     return conf;
   }
   
-  private static String goodPublisher = "Taylor & Francis Group";
+  private static String goodPublisher = "Taylor & Francis";
 
   private static String article_articleID = "9973";
   private static String article_journal = "Annals of Clinical Psychiatry";

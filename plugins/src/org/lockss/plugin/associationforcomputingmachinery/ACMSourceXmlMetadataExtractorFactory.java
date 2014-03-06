@@ -1,5 +1,5 @@
 /*
- * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.5 2014-02-14 20:01:08 alexandraohlson Exp $
+ * $Id: ACMSourceXmlMetadataExtractorFactory.java,v 1.6 2014-03-06 17:19:34 alexandraohlson Exp $
  */
 
 /*
@@ -58,9 +58,16 @@ public class ACMSourceXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
 
   public class ACMSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
+    // this version shouldn't get called. It will ultimately get removed
+    // in favor of the version that takes a CachedUrl
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
-      // Once you have it, just keep returning the same one. It won't change.
+      return null; // cause a plugin exception to get thrown
+    }
+
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
+    // Once you have it, just keep returning the same one. It won't change.
       if (ACMHelper != null) {
         return ACMHelper;
       }

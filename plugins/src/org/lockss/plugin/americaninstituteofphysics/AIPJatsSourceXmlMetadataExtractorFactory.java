@@ -1,5 +1,5 @@
 /*
- * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.6 2014-01-28 21:49:44 alexandraohlson Exp $
+ * $Id: AIPJatsSourceXmlMetadataExtractorFactory.java,v 1.7 2014-03-06 17:19:33 alexandraohlson Exp $
  */
 
 /*
@@ -103,8 +103,18 @@ public class AIPJatsSourceXmlMetadataExtractorFactory extends SourceXmlMetadataE
       }
     }
 
+
+    // this version is abstract and must be implemented but should not
+    // get called and should be 
+    // deprecated and removed in favor of the one that takes a CachedUrl
+    // argument
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
+      return null; // this will cause a plugin exception to get thrown
+    }
+
+    @Override
+    protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (AIPJatsHelper != null) {
         return AIPJatsHelper;

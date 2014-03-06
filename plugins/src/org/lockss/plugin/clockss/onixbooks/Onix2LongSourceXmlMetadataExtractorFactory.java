@@ -1,5 +1,5 @@
 /*
- * $Id: Onix2LongSourceXmlMetadataExtractorFactory.java,v 1.2 2014-01-28 23:52:56 alexandraohlson Exp $
+ * $Id: Onix2LongSourceXmlMetadataExtractorFactory.java,v 1.3 2014-03-06 17:19:33 alexandraohlson Exp $
  */
 
 /*
@@ -58,8 +58,19 @@ public class Onix2LongSourceXmlMetadataExtractorFactory extends SourceXmlMetadat
 
   public class Onix3LongSourceXmlMetadataExtractor extends SourceXmlMetadataExtractor {
 
+    
+    // This form of the method (with no arguments) is abstract and must
+    // be implemented, but should not be called. It is deprecated and should
+    // ultimately go away. Use instead the version with the CachedUrl argument
+    //
     @Override
     protected SourceXmlSchemaHelper setUpSchema() {
+        return null; // this will cause a plugin exception to get thrown
+    }
+
+    
+    @Override
+      protected SourceXmlSchemaHelper setUpSchema(CachedUrl cu) {
       // Once you have it, just keep returning the same one. It won't change.
       if (Onix2Helper != null) {
         return Onix2Helper;
