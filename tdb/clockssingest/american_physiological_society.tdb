@@ -24,7 +24,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; down ; crawling ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; reingest2.clockss.org:8085 >
@@ -65,8 +64,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 ; >
@@ -123,7 +120,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
@@ -361,8 +357,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 ; >
@@ -614,7 +608,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -689,8 +682,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 ; >
@@ -787,7 +778,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -862,8 +852,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 ; >
@@ -960,7 +948,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -1035,8 +1022,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 ; >
@@ -1133,7 +1118,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -1208,8 +1192,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 ; >
@@ -1306,7 +1288,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
@@ -1356,8 +1337,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 ; >
@@ -1429,7 +1408,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -1504,8 +1482,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 ; >
@@ -1603,7 +1579,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
@@ -1678,8 +1653,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 233 ; 233 ; >
@@ -1775,7 +1748,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
@@ -1891,8 +1863,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 ; >
@@ -2029,7 +1999,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1938 ; Journal of Neurophysiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
@@ -2140,8 +2109,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1938 ; Journal of Neurophysiology Volume 1 ; 1 ;  >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1939 ; Journal of Neurophysiology Volume 2 ; 2 ;  >
@@ -2273,7 +2240,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1999 ; Physiological Genomics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
@@ -2323,8 +2289,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1999 ; Physiological Genomics Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 2000 ; Physiological Genomics Volume 2 ; 2 ; >
@@ -2391,7 +2355,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1921 ; Physiological Reviews Volume 1 ; 1 ; reingest2.clockss.org:8085 >
@@ -2488,8 +2451,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1921 ; Physiological Reviews Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1922 ; Physiological Reviews Volume 2 ; 2 ; >
@@ -2603,7 +2564,6 @@
 
     {
 
-      pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < ClockssHighWirePlugin ; zapped ; finished ; 1986 ; Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
@@ -2635,8 +2595,6 @@
     }
 
     {
-
-      pluginSuffix = ClockssHighWirePressH20Plugin
 
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1986 ; Physiology Volume 1 ; 1 ; >
       au < ClockssHighWirePressH20Plugin ; doNotProcess ; doNotProcess ; 1987 ; Physiology Volume 2 ; 2 ; >
