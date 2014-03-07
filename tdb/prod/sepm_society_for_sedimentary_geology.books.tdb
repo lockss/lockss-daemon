@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = SEPM Society for Sedimentary Geology
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; year ; isbn ; name ; param[volume_name] >
+
+  {
+    title <
+      name = SEPM Special Publications ;
+      issn = 1060-071X ;
+      type = booksSeries
+    >
+
+    {
+
+      param[base_url] = http://sp.sepmonline.org/
+
+      au < exists ; 2012 ; 978-1-56576-312-8 ; Sedimentary Geology of Mars Volume 102 ; 102 >
+    }
+
+  }
+  
+}
