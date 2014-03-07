@@ -1,10 +1,10 @@
 /*
- * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.3 2013-12-20 05:27:28 etenbrink Exp $
+ * $Id: MathematicalSciencesPublishersArticleIteratorFactory.java,v 1.4 2014-03-07 00:02:50 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -53,21 +53,21 @@ implements ArticleIteratorFactory,
   
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE =
-      "\"%s%s/%s/\", base_url, journal_id, year"; 
+      "\"%s%s/%d/\", base_url, journal_id, year"; 
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%s%s/%s/[0-9-]+/p.+[.]xhtml\", base_url, journal_id, year";
+      "\"^%s%s/%d/[0-9-]+/p.+[.]xhtml\", base_url, journal_id, year";
   
   // various aspects of an article
   // http://msp.org/involve/2013/6-1/p01.xhtml
-  // http://msp.org/camcos/2012/7-2/*p01-s.pdf
+  // http://msp.org/camcos/2012/7-2/p01-s.pdf
   // http://msp.org/camcos/2012/7-2/camcos-v7-n2-p01-p.pdf
   // http://www.msp.warwick.ac.uk/gt/2006/10/gt-2006-10-025p.pdf
   // http://msp.org/ant/2011/5-2/pC1.xhtml
   // http://msp.org/ant/2011/5-2/ant-v5-n2-pC1-s.pdf
   
   protected static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-      "([^/]+)/([0-9]+)/([0-9]+)(-?)([0-9]*)/p([c0-9]+).xhtml$",
+      "([^/]+)/([0-9]+)/([0-9]+)(-?)([0-9]*)/p([c0-9]+)[.]xhtml$",
       Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
