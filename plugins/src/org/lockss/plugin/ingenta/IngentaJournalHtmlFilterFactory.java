@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.27 2013-12-26 21:39:04 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.28 2014-03-07 21:04:33 etenbrink Exp $
  */ 
 
 /*
@@ -35,8 +35,12 @@ package org.lockss.plugin.ingenta;
 import java.io.*;
 
 import org.htmlparser.*;
+import org.htmlparser.filters.AndFilter;
+import org.htmlparser.filters.HasAttributeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.*;
 import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
@@ -135,6 +139,48 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "breadcrumb"),
         // added for Nomadic People
         HtmlNodeFilters.tagWithAttribute("span", "class", "pubGAAccount"),
+        // Filter out <p class="heading-macfix"> ... free trial
+        new AndFilter(new TagNameFilter("p"),
+            new HasAttributeFilter("class", "heading-macfix")) {
+          @Override
+          public boolean accept(Node node) {
+            if (super.accept(node)) {
+              int i = ((CompositeTag)node).getChildCount();
+              if (i <= 2) {
+                boolean ret = true;
+                for (Node child : ((CompositeTag)node).getChildrenAsNodeArray()) {
+                  if (!(child instanceof LinkTag)) {
+                    return false;
+                  }
+                  String text = ((LinkTag)child).getLinkText();
+                  String name = ((LinkTag)child).getAttribute("name");
+                  if (!(name == null || "trial".equals(name.toLowerCase())) && 
+                      !text.toLowerCase().contains("free trial")) {
+                    return false;
+                  }
+                }
+                return ret;
+              }
+            }
+            return false;
+          }
+        },
+        // It's not ideal, but ... now removing all br tags, as one is part of the free trial
+        HtmlNodeFilters.tag("br"),
+        // <a href="#trial" title="trial available">
+        // Free trial available!</a> 
+        // <br/>
+        new AndFilter(new TagNameFilter("a"),
+            new HasAttributeFilter("title", "trial available")) {
+          @Override
+          public boolean accept(Node node) {
+            if (super.accept(node)) {
+              String allText = ((CompositeTag)node).toPlainTextString();
+              return allText.toLowerCase().contains("free trial");
+            }
+            return false;
+          }
+        },
     };
     
     HtmlTransform xform = new HtmlTransform() {
