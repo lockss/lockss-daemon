@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -38,11 +38,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Mathematical Sciences Publishers Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %s", base_url, journal_id, year</string>
+    <string>"Mathematical Sciences Publishers Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s/%s/manifest", base_url, journal_id, year</string>
+    <string>"%s%s/%d/manifest", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_feature_urls</string>
@@ -56,8 +56,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
-      <string>1,"^%s%s/%s", base_url, journal_id, year</string>
+      <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^%s%s/%d/", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
@@ -84,9 +84,9 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>year</key>
         <displayName>Year</displayName>
-        <description>Year string (e.g., 2004)</description>
-        <type>1</type>
-        <size>20</size>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
@@ -95,7 +95,7 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/%s/[^.]+\.(pdf|x?html?)$", base_url, journal_id, year</string>
+      <string>"^%s%s/%d/[^.]+[.](pdf|x?html?)$", base_url, journal_id, year</string>
     </list>
   </entry>
   <entry>
