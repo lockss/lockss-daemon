@@ -1,5 +1,5 @@
 /*
- * $Id: TestMediaWikiArchivalUnit.java,v 1.1 2014-03-05 20:10:48 wkwilson Exp $
+ * $Id: TestMediaWikiArchivalUnit.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
  */
 
 /*
@@ -63,9 +63,11 @@ import org.lockss.util.*;
 public class TestMediaWikiArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
-  static final String START_DIR_KEY = "start_directory";
+  static final String START_PATH_KEY = "start_path";
+  static final String PERMISSION_PATH_KEY = "permission_path";
   static final String ROOT_URL = "http://some.url.org/";
-  static final String DEFAULT_START = "face/Page_Thing";
+  static final String DEFAULT_START = "face/Special:all";
+  static final String DEFAULT_PERMISSION = "face/Page_Thing";
   
   static Logger log = Logger.getLogger("TestNatureArchivalUnit");
   
@@ -83,11 +85,12 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
     super.tearDown();
   }
 
-  private DefinableArchivalUnit makeAu(URL url, String start_directory)
+  private DefinableArchivalUnit makeAu(URL url, String start_path, String permission_path)
       throws Exception {
 
     Properties props = new Properties();
-    props.setProperty(START_DIR_KEY, start_directory);
+    props.setProperty(START_PATH_KEY, start_path);
+    props.setProperty(PERMISSION_PATH_KEY, permission_path);
     if (url != null) {
       props.setProperty(BASE_URL_KEY, url.toString());
     }
@@ -102,7 +105,7 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
 
   public void testConstructNullUrl() throws Exception {
     try {
-      makeAu(null, DEFAULT_START);
+      makeAu(null, DEFAULT_START, DEFAULT_PERMISSION);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
@@ -115,14 +118,16 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
   // This test was implemented late in the game. So add to these tests as you update plugin
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
-    ArchivalUnit NAu = makeAu(base, DEFAULT_START);
+    ArchivalUnit NAu = makeAu(base, DEFAULT_START, DEFAULT_PERMISSION);
     theDaemon.getLockssRepository(NAu);
     theDaemon.getNodeManager(NAu);
     BaseCachedUrlSet cus = new BaseCachedUrlSet(NAu,
         new RangeCachedUrlSetSpec(base.toString()));
     // Test for pages that should get crawled
-    // Manifest page
-    shouldCacheTest(ROOT_URL+DEFAULT_START, true, NAu, cus);    
+    // Start page
+    shouldCacheTest(ROOT_URL+DEFAULT_START, true, NAu, cus);   
+    //permission page
+    shouldCacheTest(ROOT_URL+DEFAULT_PERMISSION, true, NAu, cus);
     // Conent pages
     shouldCacheTest(ROOT_URL+"index.php/3.2.1.3_Professional_development_program", true, NAu, cus);        
     shouldCacheTest(ROOT_URL+"index.php/Main_Page", true, NAu, cus);   
@@ -150,14 +155,14 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL(ROOT_URL);
     String expected = ROOT_URL+DEFAULT_START;
-    DefinableArchivalUnit NAu = makeAu(url, DEFAULT_START);
+    DefinableArchivalUnit NAu = makeAu(url, DEFAULT_START, DEFAULT_PERMISSION);
     
     assertEquals(ListUtil.list(expected), NAu.getNewContentCrawlUrls());
   }
   
   public void testShouldNotCachePageFromOtherSite() throws Exception {
     URL base = new URL(ROOT_URL);
-    ArchivalUnit NAu = makeAu(base, DEFAULT_START);
+    ArchivalUnit NAu = makeAu(base, DEFAULT_START, DEFAULT_PERMISSION);
     theDaemon.getLockssRepository(NAu);
     theDaemon.getNodeManager(NAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
@@ -170,9 +175,9 @@ public class TestMediaWikiArchivalUnit extends LockssTestCase {
 
   public void testgetName() throws Exception {
     DefinableArchivalUnit au =
-      makeAu(new URL(ROOT_URL), DEFAULT_START);
+      makeAu(new URL(ROOT_URL), DEFAULT_START, DEFAULT_PERMISSION);
     
-    assertEquals(PluginName + ", Base URL " + ROOT_URL +", Start Directory " + DEFAULT_START, au.getName());
+    assertEquals(PluginName + ", Base URL " + ROOT_URL +", Start Path " + DEFAULT_START + ", Permission Path " + DEFAULT_PERMISSION , au.getName());
   }
 
 }

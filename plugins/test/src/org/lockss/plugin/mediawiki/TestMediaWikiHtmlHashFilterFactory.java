@@ -1,5 +1,5 @@
 /*
- * $Id: TestMediaWikiHtmlHashFilterFactory.java,v 1.1 2014-03-05 20:10:48 wkwilson Exp $
+ * $Id: TestMediaWikiHtmlHashFilterFactory.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
  */
 
 /*
@@ -52,15 +52,14 @@ public class TestMediaWikiHtmlHashFilterFactory extends LockssTestCase {
 			+ " 		<li id=\"footer-info-lastmod\"> This page was last modified on 9 December 2013, at 08:53.</li>"
 			+ "	</ul>" + "	<div style=\"clear:both\"></div>" + "</div>"
 			+ "<!-- /footer -->";
-	private static final String footerInfoFiltered = "<!-- footer -->"
-			+ "<!-- /footer -->";
+	private static final String footerInfoFiltered = "";
 
 	private static final String navHtml = "<!-- header -->"
 			+ "<div id=\"mw-navigation\">" + "	<h2>Navigation menu</h2>"
 			+ "	<div id=\"mw-head\">" + "	<!-- 0 -->"
 			+ "	<div id=\"p-personal\" role=\"navigation\" class=\"\">"
 			+ "		<h3>Personal tools</h3>" + "	</div>" + "	<!-- /0 -->";
-	private static final String navFiltered = "<!-- header -->";
+	private static final String navFiltered = "";
 
 	public void testFiltering() throws Exception {
 		InputStream inA;

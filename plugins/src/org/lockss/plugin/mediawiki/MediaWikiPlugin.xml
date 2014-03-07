@@ -9,16 +9,17 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"MediaWiki Plugin, Base URL %s, Start Directory %s", base_url, start_directory</string>
+    <string>"MediaWiki Plugin, Base URL %s, Start Path %s, Permission Path %s", base_url, start_path, permission_path</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,"^%sload.php", base_url</string>
+      <string>1,"^%s(%s|%s)$", base_url, permission_path, start_path</string>
+      <string>2,"^%s(load.php)", base_url</string>
       <string>2,"^%s.*?.*(oldid=|action=)", base_url</string>
       <string>2,"^%s.*(/|=)(Special:)", base_url</string>
       <string>1,"^%s.*", base_url</string>
@@ -26,7 +27,11 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s", base_url, start_directory</string>
+    <string>"%s%s", base_url, start_path</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%s%s", base_url, permission_path</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -41,9 +46,18 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>start_directory</key>
-        <displayName>Start Directory</displayName>
-        <description>The directory off of the base url which has a permission statement and we should begin crawling from</description>
+        <key>start_path</key>
+        <displayName>Start Path</displayName>
+        <description>The directory off of the base url which we should begin crawling from</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>permission_path</key>
+        <displayName>Permission Path</displayName>
+        <description>The directory off of the base url which has a permission statement</description>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>

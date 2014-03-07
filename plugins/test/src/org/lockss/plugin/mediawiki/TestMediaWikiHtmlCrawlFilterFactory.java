@@ -1,5 +1,5 @@
 /*
- * $Id: TestMediaWikiHtmlCrawlFilterFactory.java,v 1.1 2014-03-05 20:10:48 wkwilson Exp $
+ * $Id: TestMediaWikiHtmlCrawlFilterFactory.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
  */
 
 /*
@@ -38,11 +38,11 @@ import org.lockss.test.*;
 
 public class TestMediaWikiHtmlCrawlFilterFactory extends LockssTestCase {
 	private static final String ENC = Constants.DEFAULT_ENCODING;
-	private MediaWikiHtmlHashFilterFactory fact;
+	private MediaWikiHtmlCrawlFilterFactory fact;
 
 	public void setUp() throws Exception {
 		super.setUp();
-		fact = new MediaWikiHtmlHashFilterFactory();
+		fact = new MediaWikiHtmlCrawlFilterFactory();
 	}
  
 	private static final String footerInfoHtml =

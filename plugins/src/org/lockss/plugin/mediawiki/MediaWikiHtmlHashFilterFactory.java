@@ -1,5 +1,5 @@
 /*
- * $Id: MediaWikiHtmlHashFilterFactory.java,v 1.1 2014-03-05 20:10:48 wkwilson Exp $
+ * $Id: MediaWikiHtmlHashFilterFactory.java,v 1.2 2014-03-07 20:05:43 wkwilson Exp $
  */
 
 /*
@@ -53,7 +53,9 @@ public class MediaWikiHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
 	    NodeFilter[] filters = new NodeFilter[] {
-	            // Reverse citations
+	        	//timestamps in comments
+	        	HtmlNodeFilters.comment(),
+	            // Recent changes & dates
 	            HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
 	            HtmlNodeFilters.tagWithAttribute("div", "id", "mw-navigation"),
 	        };
