@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.21 2014-03-04 20:03:34 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.22 2014-03-07 19:08:24 etenbrink Exp $
  */
 
 /*
@@ -505,7 +505,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
       "<a href=\"http://services.oxfordjournals.org/cgi/tslogin?url=\">Oxford Journals</a>\n</li> " +
       "</ul> " +
       "" +
-      "<ul class=\"kwd-group\"> <li class=\"kwd\"><span>Lead extraction</span></li> </ul>" +
+      "<ul class=\"kwd-group \"> <li class=\"kwd\"><span>Lead extraction</span></li> </ul>" +
       "" +
       "<ul class=\"copyright-statement\"> <li id=\"copyright-statement-1\"" +
       " class=\"fn\">For permissions please email: </li> </ul>" +
