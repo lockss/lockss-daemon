@@ -42,7 +42,7 @@ import org.lockss.plugin.simulated.*;
  * http://datadryad.org/resource/doi:10.5061/dryad.ck1rq
  */
 public class TestDryadHtmlMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestDryadHtmlMetadataExtractor");
+  static Logger log = Logger.getLogger(TestDryadHtmlMetadataExtractorFactory.class);
   
   //Simulated AU to generate content
   private SimulatedArchivalUnit sau; 
@@ -170,7 +170,7 @@ public class TestDryadHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodArticle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     // the following all come from tdb
     assertNull(md.get(MetadataField.FIELD_PUBLISHER));
-    assertNull(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertNull(md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     assertNull(md.get(MetadataField.FIELD_VOLUME));
   }
 
