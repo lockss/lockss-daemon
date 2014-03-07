@@ -1,10 +1,10 @@
 /*
-/    * $Id: TestDryadHtmlFilterFactory.java,v 1.2 2013-09-06 00:03:29 etenbrink Exp $
+/    * $Id: TestDryadHtmlFilterFactory.java,v 1.3 2014-03-07 21:54:28 etenbrink Exp $
  */
 
 /*
 
- Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -419,6 +419,8 @@ public class TestDryadHtmlFilterFactory extends LockssTestCase {
 "</div>" +
 "</div>" +
 "</div>" +
+"<span title=\"ctx_ver=Z39.88-2004&amp;rft.type=Dataset&amp;rft.status=scanned" +
+"&amp;rft.dryad=410&amp;rft.dryad=114\" class=\"Z3988\">&nbsp;</span>" +
 "</body></html>";
 
   private static final String withoutStuff = 
