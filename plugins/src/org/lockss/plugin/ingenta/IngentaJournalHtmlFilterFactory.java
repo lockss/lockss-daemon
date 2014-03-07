@@ -1,10 +1,10 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.28 2014-03-07 21:04:33 etenbrink Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.29 2014-03-07 21:11:48 etenbrink Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -104,7 +104,7 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out <div id="top-ad">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "top-ad"),
         // Filter out <div id="ident">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "ident"),         
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ident"),
         // Filter out <div id="ad">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad"),
         // Filter out <div id="vertical-ad">...</div>
@@ -112,15 +112,15 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
         // Filter out <div class="right-col-download">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "class", "right-col-download"),
         // Filter out <div id="cart-navbar">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "cart-navbar"),   
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cart-navbar"),
         // Filter out <div class="heading-macfix article-access-options">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "class", "heading-macfix"), 
         // Filter out <div id="baynote-recommendations">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "baynote-recommendations"),
         // Filter out <div id="bookmarks-container">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "bookmarks-container"),   
+        HtmlNodeFilters.tagWithAttribute("div", "id", "bookmarks-container"),
         // Filter out <div id="llb">...</div>
-        HtmlNodeFilters.tagWithAttribute("div", "id", "llb"),   
+        HtmlNodeFilters.tagWithAttribute("div", "id", "llb"),
         // Filter out <a href="...">...</a> where the href value includes "exitTargetId" as a parameter
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[\\?&]exitTargetId="),
         // Filter out <a onclick="...">...</a> where the onclick javascript argument includes "exitTargetId" as a parameter
@@ -184,32 +184,34 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     };
     
     HtmlTransform xform = new HtmlTransform() {
-	    @Override
-	    public NodeList transform(NodeList nodeList) throws IOException {
-	      try {
-	        nodeList.visitAllNodesWith(new NodeVisitor() {
-	          @Override
-	          public void visitTag(Tag tag) {
-	            try {
-	              if ("li".equalsIgnoreCase(tag.getTagName()) && tag.getAttribute("class") != null && tag.getAttribute("class").trim().startsWith("rowShade")) {
-	                tag.setAttribute("class", "");
-	              }
-	              else {
-	                super.visitTag(tag);
-	              }
-	            }
-	            catch (Exception exc) {
-	              log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
-	            }
-	          }
-	        });
-	      }
-	      catch (ParserException pe) {
-	        log.debug2("Internal error (parser)", pe); // Bail
-	      }
-	      return nodeList;
-	    }
-	  };
+      @Override
+      public NodeList transform(NodeList nodeList) throws IOException {
+        try {
+          nodeList.visitAllNodesWith(new NodeVisitor() {
+            @Override
+            public void visitTag(Tag tag) {
+              try {
+                if ("li".equalsIgnoreCase(tag.getTagName()) &&
+                    tag.getAttribute("class") != null &&
+                    tag.getAttribute("class").trim().startsWith("rowShade")) {
+                  tag.setAttribute("class", "");
+                }
+                else {
+                  super.visitTag(tag);
+                }
+              }
+              catch (Exception exc) {
+                log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
+              }
+            }
+          });
+        }
+        catch (ParserException pe) {
+          log.debug2("Internal error (parser)", pe); // Bail
+        }
+        return nodeList;
+      }
+    };
     
     InputStream filteredStream =  new HtmlFilterInputStream(in, encoding,
         new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
@@ -223,6 +225,6 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
     
     return new ReaderInputStream(new WhiteSpaceFilter(tagFilter));
   }
-
+  
 }
 
