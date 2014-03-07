@@ -3722,7 +3722,7 @@
     implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2013 ; The Chinese Journal of Comparative Law Volume 1 ; 1 >
-    au < expected ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 >
+    au < manifest ; 2014 ; The Chinese Journal of Comparative Law Volume 2 ; 2 >
 
   }
 
@@ -7838,7 +7838,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; ICSID Review: Foreign Investment Law Journal Volume 26 ; 26 >
     au < HighWirePressH20Plugin ; released ; 2012 ; ICSID Review: Foreign Investment Law Journal Volume 27 ; 27 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; ICSID Review: Foreign Investment Law Journal Volume 28 ; 28 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; ICSID Review: Foreign Investment Law Journal Volume 29 ; 29 >
 
   }
 
@@ -13640,7 +13640,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Law, Probability and Risk Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Law, Probability and Risk Volume 11 ; 11 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Law, Probability and Risk Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Law, Probability and Risk Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Law, Probability and Risk Volume 13 ; 13 >
 
     }
 
@@ -16652,7 +16652,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Oxford Journal of Legal Studies Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; ready ; 2012 ; Oxford Journal of Legal Studies Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Oxford Journal of Legal Studies Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Oxford Journal of Legal Studies Volume 34 ; 34 >
 
 
     }
@@ -18034,16 +18034,16 @@
     param[base_url] = http://pasj.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressH20Plugin ; exists ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 >
-    au < HighWirePressH20Plugin ; exists ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 >
-    au < HighWirePressH20Plugin ; exists ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 >
-    au < HighWirePressH20Plugin ; exists ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 >
-    au < HighWirePressH20Plugin ; exists ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 >
-    au < HighWirePressH20Plugin ; exists ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 >
-    au < HighWirePressH20Plugin ; exists ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 >
-    au < HighWirePressH20Plugin ; exists ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; exists ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; exists ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; manifest ; 1996 ; Publications of the Astronomical Society of Japan Volume 48 ; 48 >
+    au < HighWirePressH20Plugin ; manifest ; 1997 ; Publications of the Astronomical Society of Japan Volume 49 ; 49 >
+    au < HighWirePressH20Plugin ; manifest ; 1998 ; Publications of the Astronomical Society of Japan Volume 50 ; 50 >
+    au < HighWirePressH20Plugin ; manifest ; 1999 ; Publications of the Astronomical Society of Japan Volume 51 ; 51 >
+    au < HighWirePressH20Plugin ; manifest ; 2000 ; Publications of the Astronomical Society of Japan Volume 52 ; 52 >
+    au < HighWirePressH20Plugin ; manifest ; 2001 ; Publications of the Astronomical Society of Japan Volume 53 ; 53 >
+    au < HighWirePressH20Plugin ; manifest ; 2002 ; Publications of the Astronomical Society of Japan Volume 54 ; 54 >
+    au < HighWirePressH20Plugin ; manifest ; 2003 ; Publications of the Astronomical Society of Japan Volume 55 ; 55 >
+    au < HighWirePressH20Plugin ; manifest ; 2004 ; Publications of the Astronomical Society of Japan Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; manifest ; 2005 ; Publications of the Astronomical Society of Japan Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; manifest ; 2006 ; Publications of the Astronomical Society of Japan Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; exists ; 2007 ; Publications of the Astronomical Society of Japan Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; manifest ; 2008 ; Publications of the Astronomical Society of Japan Volume 60 ; 60 >
@@ -19162,7 +19162,7 @@
     au < HighWirePressH20Plugin ; released ; 2011 ; Review of Finance Volume 15 ; 15 >
     au < HighWirePressH20Plugin ; released ; 2012 ; Review of Finance Volume 16 ; 16 >
     au < HighWirePressH20Plugin ; manifest ; 2013 ; Review of Finance Volume 17 ; 17 >
-    au < HighWirePressH20Plugin ; expected ; 2014 ; Review of Finance Volume 18 ; 18 >
+    au < HighWirePressH20Plugin ; manifest ; 2014 ; Review of Finance Volume 18 ; 18 >
 
     }
 
