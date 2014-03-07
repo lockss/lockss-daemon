@@ -22,7 +22,7 @@
       <string>2,"^%s(load.php)", base_url</string>
       <string>2,"^%s.*?.*(oldid=|action=)", base_url</string>
       <string>2,"^%s.*(/|=)(Special:)", base_url</string>
-      <string>1,"^%s.*", base_url</string>
+      <string>1,"^%s", base_url</string>
     </list>
   </entry>
   <entry>
