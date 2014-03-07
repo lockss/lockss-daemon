@@ -1,10 +1,10 @@
 /*
- * $Id: DryadHtmlFilterFactory.java,v 1.3 2014-01-29 22:55:02 etenbrink Exp $
+ * $Id: DryadHtmlFilterFactory.java,v 1.4 2014-03-07 00:48:44 etenbrink Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,12 +46,12 @@ import org.lockss.util.ReaderInputStream;
 
 public class DryadHtmlFilterFactory implements FilterFactory {
   Logger log = Logger.getLogger(DryadHtmlFilterFactory.class);
-
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-
+    
     NodeFilter[] filters = new NodeFilter[] {
         // filter out script
         new TagNameFilter("script"),
@@ -63,6 +63,8 @@ public class DryadHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "ds-footer-wrapper"),
         // div id="sharemediv"
         HtmlNodeFilters.tagWithAttribute("div", "id", "sharemediv"),
+        // <span class="Z3988" title="ctx_ver=...rft.dryad=
+        HtmlNodeFilters.tagWithAttributeRegex("span", "title", "rft[.]dryad="),
         // filter out tr with inner text "Pageviews"
         HtmlNodeFilters.lowestLevelMatchFilter(
             HtmlNodeFilters.tagWithTextRegex("tr", 
@@ -84,6 +86,6 @@ public class DryadHtmlFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(
         filteredStream, encoding)));
   }
-
+  
 }
 
