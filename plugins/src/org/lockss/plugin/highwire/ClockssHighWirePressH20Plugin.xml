@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>90</string>
+    <string>91</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>90</string>
+    <string>91</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -74,11 +74,11 @@
     <string>triggered_override</string>
     <map>
       <entry>
-	<string>plugin_rewrite_html_meta_urls</string>
-	<list>
-	  <string>citation_abstract_html_url</string>
-	  <string>citation_abstract_url</string>
-	  <string>citation_fulltext_html_url</string>
+        <string>plugin_rewrite_html_meta_urls</string>
+        <list>
+          <string>citation_abstract_html_url</string>
+          <string>citation_abstract_url</string>
+          <string>citation_fulltext_html_url</string>
 	  <string>citation_pdf_url</string>
 	  <string>citation_public_url</string>
 	</list>
