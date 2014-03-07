@@ -1,5 +1,5 @@
 /*
- * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.2 2013-10-04 01:44:45 etenbrink Exp $
+ * $Id: TestMathematicalSciencesPublishersPlugin.java,v 1.3 2014-03-07 00:09:13 etenbrink Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 
 import org.lockss.test.*;
+import org.lockss.util.ListUtil;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -126,13 +127,10 @@ public class TestMathematicalSciencesPublishersPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigProperties() {
-    // this assert fails due to the fact that the year param
-    // in the LocalAuConfigDescrs is a string[20]
-    
-//    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
-//                               ConfigParamDescr.JOURNAL_ID,
-//                               ConfigParamDescr.YEAR),
-//                 plugin.getLocalAuConfigDescrs());
+    assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
+                               ConfigParamDescr.JOURNAL_ID,
+                               ConfigParamDescr.YEAR),
+                 plugin.getLocalAuConfigDescrs());
   }
 
   public void testGetArticleMetadataExtractor() {
