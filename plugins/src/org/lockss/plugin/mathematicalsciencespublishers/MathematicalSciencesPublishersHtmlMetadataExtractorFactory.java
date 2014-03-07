@@ -1,10 +1,10 @@
 /*
- * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.6 2014-01-10 22:22:47 alexandraohlson Exp $
+ * $Id: MathematicalSciencesPublishersHtmlMetadataExtractorFactory.java,v 1.7 2014-03-07 00:03:46 etenbrink Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -93,7 +93,7 @@ public class MathematicalSciencesPublishersHtmlMetadataExtractorFactory
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
