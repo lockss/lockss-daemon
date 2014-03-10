@@ -142,7 +142,8 @@ public class DisplayContentStatus extends LockssServlet {
                   log.error("Publisher: " + publisher);
                   log.error("Publisher string: " + publisherString);
                   if (publisher.equals(publisherString)) {
-                    TreeMap<String, TreeSet<ArchivalUnit>> titleMap = (TreeMap<String, TreeSet<ArchivalUnit>>)pairs.getValue();
+                    TreeMap<String, TreeSet<ArchivalUnit>> titleMap =
+                            (TreeMap<String, TreeSet<ArchivalUnit>>)pairs.getValue();
                     Iterator titleIterator = titleMap.entrySet().iterator();
                       while (titleIterator.hasNext()) {
                           Map.Entry titlePairs = (Map.Entry)titleIterator.next();

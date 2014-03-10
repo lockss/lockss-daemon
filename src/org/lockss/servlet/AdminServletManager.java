@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.39 2013-08-09 14:31:06 rwincewicz Exp $
+ * $Id: AdminServletManager.java,v 1.40 2014-03-10 11:28:57 rwincewicz Exp $
  */
 
 /*
@@ -348,6 +348,16 @@ public class AdminServletManager extends BaseServletManager {
           ViewContent.class,
           "View Content",
           ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_ADD_CONTENT =
+          new ServletDescr("AddContent",
+          AddContent.class,
+          "Add Content",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
+  public static final ServletDescr SERVLET_ADD_CONTENT_TAB =
+          new ServletDescr("AddContentTab",
+          AddContentTab.class,
+          "Add Content Tab",
+          ServletDescr.NEED_ROLE_CONTENT_ACCESS);
   // XXXUI New servlet
   public static final ServletDescr SERVLET_SERVE_CONTENT =
           new ServletDescr("ServeContent",
@@ -546,6 +556,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_PROXY_INFO,
     SERVLET_DAEMON_STATUS,
     SERVLET_DISPLAY_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
     SERVLET_SERVE_CONTENT,
     SERVLET_EXPORT_CONTENT,
     SERVLET_LIST_OBJECTS,
@@ -586,6 +598,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DISPLAY_CONTENT_STATUS,
     SERVLET_DISPLAY_CONTENT_TAB,
     SERVLET_DISPLAY_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
     SERVLET_SERVE_CONTENT,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
@@ -630,6 +644,8 @@ public class AdminServletManager extends BaseServletManager {
     SERVLET_DISPLAY_CONTENT_TAB,
     SERVLET_DISPLAY_CONTENT,
     SERVLET_SERVE_CONTENT,
+    SERVLET_ADD_CONTENT,
+    SERVLET_ADD_CONTENT_TAB,
     SERVLET_TIME_GATE,
     SERVLET_TIME_MAP,
     SERVLET_EXPORT_CONTENT,

@@ -328,3 +328,7 @@ img.messageDivClose {
     cursor: pointer;
     height: 10px;
 }
+
+.dot {
+    height: 8px;
+}

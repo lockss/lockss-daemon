@@ -41,6 +41,7 @@ import org.lockss.daemon.status.StatusTable;
 import org.lockss.plugin.*;
 import org.lockss.remote.RemoteApi;
 import org.lockss.state.AuState;
+import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 import org.mortbay.html.*;
 
@@ -107,6 +108,8 @@ public class DisplayContentTab extends LockssServlet {
     private static final String COLLAPSE_ICON = "images/expanded.gif";
     private static final String PLUS_ICON = "images/control_add.png";
     private static final String DELETE_ICON = "images/decline.png";
+    private static final String GREEN_DOT_ICON = "images/green-dot.png";
+    private static final String RED_DOT_ICON = "images/red-dot.png";
 
     protected void resetLocals() {
         super.resetLocals();
@@ -233,13 +236,15 @@ public class DisplayContentTab extends LockssServlet {
         return getAusByPublisherName('A', 'Z', "none", "");
     }
 
-    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPublisherName(Character start, Character end, String filterType, String filterKey) {
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>
+    getAusByPublisherName(Character start, Character end, String filterType, String filterKey) {
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> aus = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> allAus;
                 if ("none".equals(filterType)) {
                     allAus = DisplayContentTable.orderAusByPublisherAndTitle(TdbUtil.getConfiguredAus(), filterKey);
                 } else {
-                    allAus = DisplayContentTable.orderAusByPublisherAndTitle(filterAus(TdbUtil.getConfiguredAus(), filterType), filterKey);
+                    allAus = DisplayContentTable.orderAusByPublisherAndTitle(filterAus(TdbUtil.getConfiguredAus(),
+                            filterType), filterKey);
                 }
         for (int i = start; i < end; i++) {
             for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> stringTreeSetEntry : allAus.entrySet()) {
@@ -258,13 +263,15 @@ public class DisplayContentTab extends LockssServlet {
         return getAusByPluginName('A', 'Z', "none", "");
     }
 
-    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> getAusByPluginName(Character start, Character end, String filterType, String filterKey) {
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>
+    getAusByPluginName(Character start, Character end, String filterType, String filterKey) {
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> aus = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> allAus;
         if ("none".equals(filterType)) {
           allAus = DisplayContentTable.orderAusByPluginAndTitle(TdbUtil.getConfiguredAus(), filterKey);
         } else {
-          allAus = DisplayContentTable.orderAusByPluginAndTitle(filterAus(TdbUtil.getConfiguredAus(), filterType), filterKey);
+          allAus = DisplayContentTable.orderAusByPluginAndTitle(filterAus(TdbUtil.getConfiguredAus(),
+                  filterType), filterKey);
         }
         for (int i = start; i < end; i++) {
         for (Map.Entry<String, TreeMap<String, TreeSet<ArchivalUnit>>> stringTreeSetEntry : allAus.entrySet()) {
@@ -355,7 +362,7 @@ public class DisplayContentTab extends LockssServlet {
      *
      */
     private void createTabContent(Table divTable, String sortName,
-                                         TreeMap<String, TreeSet<ArchivalUnit>> auSet) throws UnsupportedEncodingException {
+                                    TreeMap<String, TreeSet<ArchivalUnit>> auSet) throws UnsupportedEncodingException {
         if (auSet != null) {
             String cleanNameString = cleanName(sortName);
             createTitleRow(divTable, sortName, auSet.size());
@@ -390,12 +397,14 @@ public class DisplayContentTab extends LockssServlet {
         if (auCount != 1) {
             titleCountString.append("s");
         }
-        headingLink.add(HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + " (" + auCount + " " + titleCountString.toString() + ")");
+        headingLink.add(HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + " (" + auCount + " " +
+                titleCountString.toString() + ")");
         Block boldHeadingLink = new Block(Block.Bold);
         boldHeadingLink.add(headingLink);
         Block pubDiv = new Block(Block.Div);
         Link removePubLink = new Link("DisplayContentStatus?deletePublisher=" + urlEncode(sortName));
-        removePubLink.attribute("onClick=\"return confirm('Confirm deletion of AUs associated with the publisher " + HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + "');\"");
+        removePubLink.attribute("onClick=\"return confirm('Confirm deletion of AUs associated with the publisher " +
+                HtmlUtil.encode(sortName, HtmlUtil.ENCODE_TEXT) + "');\"");
         Image deleteIcon = new Image(DELETE_ICON);
         deleteIcon.attribute("class", "publisher-delete");
         deleteIcon.attribute("alt", "Delete publisher");
@@ -511,8 +520,8 @@ public class DisplayContentTab extends LockssServlet {
             divTable.addCell(checkboxDiv, "class='checkboxDiv'");
             divTable.addCell(auDiv, "class='au-title-cell'");
             divTable.addCell(tdbAu.getYear());
-            divTable.addCell(checkCollected(au));
-            divTable.addCell(showTimeElapsed(auState.getLastCrawlTime(), timeKey));
+            divTable.addCell(checkHasContent(auState.getSubstanceState()));
+            divTable.addCell(getCrawlImage(auState.getLastCrawlResult(), auState.getLastCrawlResultMsg()) + " " + showTimeElapsed(auState.getLastCrawlTime(), timeKey));
             divTable.addCell(showTimeElapsed(auState.getLastPollStart(), timeKey));
           } else {
             log.debug("TdbAu not found for Au " + au.getName());
@@ -531,7 +540,7 @@ public class DisplayContentTab extends LockssServlet {
             divTable.addCell(au.getName());
             divTable.addCell("unknown");
             divTable.addCell("unknown");
-            divTable.addCell(checkCollected(au));
+            divTable.addCell(checkCollected(au, auState.getLastCrawlTime()));
           }
           Block serveContentDiv = new Block(Block.Div);
           serveContentDiv.attribute("class", "au-serve-content-div");
@@ -671,40 +680,31 @@ public class DisplayContentTab extends LockssServlet {
      * @param au Archival unit
      * @return URL of relevant image
      */
-    public static Image checkCollected(ArchivalUnit au) {
+    public static Image checkCollected(ArchivalUnit au, long lastCrawlTime) {
         Image collectedImage;
         AuState state = AuUtil.getAuState(au);
         int crawlResult = state.getLastCrawlResult();
-        boolean substance = state.hasCrawled();
+        String lastCrawlString = showTimeElapsed(lastCrawlTime, "");
         if (crawlResult == Crawler.STATUS_SUCCESSFUL) {
             collectedImage = new Image(OK_ICON);
-            collectedImage.attribute("title", "AU has been collected");
-            collectedImage.attribute("alt", "AU has been collected");
-        } else if (crawlResult == -1 || crawlResult == Crawler.STATUS_QUEUED) {
-            collectedImage = new Image(WARN_ICON);
-            collectedImage.attribute("title", "AU has not been collected yet");
-            collectedImage.attribute("alt", "AU has not been collected yet");
-        } else if (crawlResult == Crawler.STATUS_ACTIVE) {
-            collectedImage = new Image(CLOCK_ICON);
-            collectedImage.attribute("title", "AU is currently being collected");
-            collectedImage.attribute("alt", "AU is currently being collected");
-        } else if (crawlResult == Crawler.STATUS_ERROR || crawlResult == Crawler.STATUS_FETCH_ERROR ||
-                crawlResult == Crawler.STATUS_RUNNING_AT_CRASH) {
-            collectedImage = new Image(CANCEL_ICON);
-            collectedImage.attribute("title", "An error occurred when collecting AU");
-            collectedImage.attribute("alt", "An error occurred when collecting AU");
-        } else if (crawlResult == Crawler.STATUS_NO_PUB_PERMISSION) {
-            if (substance) {
-              collectedImage = new Image(WARN_ICON);
-            } else {
-              collectedImage = new Image(CANCEL_ICON);
-            }
-            collectedImage.attribute("title", "Permission error");
-            collectedImage.attribute("alt", "Permission error");
         } else {
-            collectedImage = new Image(QUESTION_ICON);
-            collectedImage.attribute("title", "Unknown - " + crawlResult);
-            collectedImage.attribute("alt", "Unknown - " + crawlResult);
+            collectedImage = new Image(CANCEL_ICON);
+        }
+        collectedImage.attribute("title", "Last successful crawl: " + lastCrawlString);
+        collectedImage.attribute("alt", "Last successful crawl: " + lastCrawlString);
+        return collectedImage;
+    }
+
+    public static Image checkHasContent(SubstanceChecker.State substanceState) {
+        Image collectedImage;
+        if (substanceState == SubstanceChecker.State.No || substanceState == SubstanceChecker.State.Unknown) {
+            collectedImage = new Image(CANCEL_ICON);
+            collectedImage.attribute("alt", "AU has no substance");
+            collectedImage.attribute("title", "AU has no substance");
+        } else {
+            collectedImage = new Image(OK_ICON);
+            collectedImage.attribute("alt", "AU has substance");
+            collectedImage.attribute("title", "AU has substance");
         }
         return collectedImage;
     }
@@ -717,7 +717,8 @@ public class DisplayContentTab extends LockssServlet {
      */
     public static String cleanName(String name) {
         return java.text.Normalizer.normalize(HtmlUtil.encode(name.replace(" ", "_").replace("&", "").replace("(", "")
-                .replace(")", "").replace(",", "").replace("+", "_").replace(".", "_"), HtmlUtil.ENCODE_TEXT), Normalizer.Form.NFC);
+                .replace(")", "").replace(",", "").replace("+", "_").replace(".", "_"), HtmlUtil.ENCODE_TEXT),
+                Normalizer.Form.NFC);
     }
 
     public static String cleanAuName(String auName) {
@@ -973,6 +974,19 @@ public class DisplayContentTab extends LockssServlet {
     // make me a link in nav table unless I'm displaying table of all tables
     protected boolean linkMeInNav() {
         return !isAllTablesTable();
+    }
+
+    private static String getCrawlImage(int crawlResult, String crawlMessage) {
+        String image;
+        if ("Unknown code -1".equals(crawlMessage)) {
+            crawlMessage = "Never crawled";
+        }
+        if (crawlResult == 3) {
+            image = "<img class='dot' title='" + HtmlUtil.encode(crawlMessage, HtmlUtil.ENCODE_TEXT) + "' src='" + GREEN_DOT_ICON + "'/>";
+        } else {
+            image = "<img class='dot' title='" + HtmlUtil.encode(crawlMessage, HtmlUtil.ENCODE_TEXT) + "' src='" + RED_DOT_ICON + "'/>";
+        }
+        return image;
     }
 
     /**

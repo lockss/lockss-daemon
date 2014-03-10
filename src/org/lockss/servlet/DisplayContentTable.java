@@ -144,7 +144,8 @@ public class DisplayContentTable {
     return ausMap;
   }
 
-    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> orderAusByPluginAndTitle(Collection<ArchivalUnit> allAus, String filter) {
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>
+    orderAusByPluginAndTitle(Collection<ArchivalUnit> allAus, String filter) {
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> ausMap = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
         for (ArchivalUnit au : allAus) {
             String plugin = au.getPlugin().getPluginName();
@@ -208,7 +209,8 @@ public class DisplayContentTable {
     return ausMap;
   }
 
-    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> orderAusByPublisherAndTitle(Collection<ArchivalUnit> allAus, String filter) {
+    public static TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>
+    orderAusByPublisherAndTitle(Collection<ArchivalUnit> allAus, String filter) {
         TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>> ausMap = new TreeMap<String, TreeMap<String, TreeSet<ArchivalUnit>>>();
         for (ArchivalUnit au : allAus) {
             String publisher = AuUtil.getTitleAttribute(au, "publisher");
@@ -321,9 +323,11 @@ public class DisplayContentTable {
       for (String view : viewList) {
           Link filterLink;
           if ("accurate".equals(timeKey)) {
-            filterLink = new Link("DisplayContentStatus?type=" + view.replaceAll(" ", "").toLowerCase() + filterByGroup() + "&amp;timeKey=accurate");
+            filterLink = new Link("DisplayContentStatus?type=" + view.replaceAll(" ", "").toLowerCase()
+                    + filterByGroup() + "&amp;timeKey=accurate");
           } else {
-            filterLink = new Link("DisplayContentStatus?type=" + view.replaceAll(" ", "").toLowerCase() + filterByGroup());
+            filterLink = new Link("DisplayContentStatus?type=" + view.replaceAll(" ", "").toLowerCase()
+                    + filterByGroup());
           }
           filterLink.attribute("class", "filters");
           filterLink.add(view);
@@ -350,21 +354,22 @@ public class DisplayContentTable {
       Input filterSubmit = new Input("submit", "submit");
       filterForm.add(filterSubmit);
       filterDiv.add(filterForm);
-      Block timeDiv = new Block(Block.Div);
-      String accuracy = "accurate";
-      String timeLabel = "Accurate";
-      if ("accurate".equals(timeKey)) {
-          accuracy = "";
-          timeLabel = "Friendly";
-      }
-      Link timeLink = new Link("DisplayContentStatus?timeKey=" + accuracy);
-      timeLink.attribute("class", "filters");
-      timeLink.add(timeLabel);
-      timeDiv.add("Time: ");
-      timeDiv.add(timeLink);
-    page.add(typeDiv);
+      // Not sure how to best display this at the moment
+//      Block timeDiv = new Block(Block.Div);
+//      String accuracy = "accurate";
+//      String timeLabel = "Accurate";
+//      if ("accurate".equals(timeKey)) {
+//          accuracy = "";
+//          timeLabel = "Friendly";
+//      }
+//      Link timeLink = new Link("DisplayContentStatus?timeKey=" + accuracy);
+//      timeLink.attribute("class", "filters");
+//      timeLink.add(timeLabel);
+//      timeDiv.add("Time: ");
+//      timeDiv.add(timeLink);
+      page.add(typeDiv);
       page.add(filterDiv);
-      page.add(timeDiv);
+//      page.add(timeDiv);
       page.add(new Break(Break.Line));
   }
 
@@ -419,7 +424,8 @@ public class DisplayContentTable {
       Character startLetter = (Character) letterPairs.getKey();
       Character endLetter = (Character) letterPairs.getValue();
         Link tabLink = new Link("DisplayContentTab?start=" + startLetter + "&amp;end=" + endLetter + "&amp;group="
-                + grouping + "&amp;type=" + type + "&amp;filter=" + filterKey + "&amp;timeKey=" + timeKey, startLetter + " - " + endLetter);
+                + grouping + "&amp;type=" + type + "&amp;filter=" + filterKey +
+                "&amp;timeKey=" + timeKey, startLetter + " - " + endLetter);
         Composite tabListItem = tabList.newItem();
         tabListItem.add(tabLink);
         Block loadingDiv = new Block(Block.Div, "id='ui-tabs-" + tabCount++ + "'");
