@@ -1,5 +1,5 @@
 /*
- * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.3 2010-04-29 08:29:42 thib_gc Exp $
+ * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.4 2014-03-10 18:40:17 etenbrink Exp $
  */
 
 /*
@@ -43,11 +43,12 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 
 public class PsychiatryOnlineHtmlFilterFactory implements FilterFactory {
-
-  private static Logger logger = Logger.getLogger("PsychiatryOnlineHtmlFilterFactory");
   
-  private static final String FILTERED_CHARSET_STRING = "<META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-16\">";
-
+  private static Logger logger = Logger.getLogger(PsychiatryOnlineHtmlFilterFactory.class);
+  
+  private static final String FILTERED_CHARSET_STRING =
+      "<META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-16\">";
+  
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
@@ -63,7 +64,7 @@ public class PsychiatryOnlineHtmlFilterFactory implements FilterFactory {
       // Leave in unchanged but log a message
       logger.warning("Unknown InputStreamReader encoding: " + encoding, uee);
     }
-
+    
     // Then filter out HTML constructs
     
     NodeFilter[] filters = new NodeFilter[] {
@@ -75,9 +76,8 @@ public class PsychiatryOnlineHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "type", "hidden"),
     };
     
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    return new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(
+        new OrFilter(filters)));
   }
-
+  
 }
