@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.5 2013-08-13 21:39:25 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisHtmlCrawlFilterFactory.java,v 1.6 2014-03-11 19:38:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
 import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
@@ -46,6 +47,8 @@ import org.lockss.plugin.*;
 
 public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
 
+  protected static final Pattern corrections = Pattern.compile("Original Article|Corrigendum|Correction", Pattern.CASE_INSENSITIVE);
+  
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
@@ -70,9 +73,10 @@ public class TaylorAndFrancisHtmlCrawlFilterFactory implements FilterFactory {
           @Override public boolean accept(Node node) {
             if (!(node instanceof LinkTag)) return false;
             String allText = ((CompositeTag)node).toPlainTextString();
-            //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
-            return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") 
-                || allText.matches("(?is).*Correction.*"));
+            return corrections.matcher(allText).find();
+//            //using regex - the "i" is for case insensitivity; the "s" is for accepting newlines
+//            return (allText.matches("(?is).*Original Article.*") || allText.matches("(?is).*Corrigendum.*") 
+//                || allText.matches("(?is).*Correction.*"));
           }
         },
     };

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.13 2013-12-04 01:02:20 thib_gc Exp $
+ * $Id: TestTaylorAndFrancisHtmlFilterFactory.java,v 1.14 2014-03-11 19:38:39 thib_gc Exp $
  */
 
 /*
@@ -100,6 +100,29 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
    * Variant to test with Crawl Filter
    */
   public static class TestCrawl extends TestTaylorAndFrancisHtmlFilterFactory {
+    
+    public void testCorrections() throws Exception {
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/doi/abs/10.1234/" + rand() + "\">Correction</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/doi/abs/10.1234/" + rand() + "\">  \n\n  Correction  \n\n  </a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/doi/abs/10.1234/" + rand() + "\"><nobr>Correction</nobr></a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/doi/abs/10.1234/" + rand() + "\">Corrigendum</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+      assertEquals("",
+                   StringUtil.fromInputStream(fact.createFilteredInputStream(null,
+                                                                             new StringInputStream("<a href=\"/doi/abs/10.1234/" + rand() + "\">Original Article</a>"),
+                                                                             Constants.DEFAULT_ENCODING)));
+    }
     
     // This is crawled out but not hashed out - list of references for an article could lead to other T&F content outside this AU
     private static final String referencesHtml =
@@ -467,14 +490,14 @@ public class TestTaylorAndFrancisHtmlFilterFactory extends LockssTestCase {
                                                                              Constants.DEFAULT_ENCODING)));
     }
     
-    public void testCitationsWithStrongTag() throws Exception {
+    public void testCitations() throws Exception {
       assertEquals("",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-                                                                             new StringInputStream("<strong>Citations:" + rand() + "\n\n\n</strong>"),
+                                                                             new StringInputStream("<li><strong>Citations:" + rand() + "\n\n\n</strong></li>"),
                                                                              Constants.DEFAULT_ENCODING)));
       assertEquals("",
                    StringUtil.fromInputStream(fact.createFilteredInputStream(null,
-                                                                             new StringInputStream("<strong><a href=\"/doi/citedby/10.1080/13607863.2010.551339\">Citations:" + rand() + "\n\n\n</strong>"),
+                                                                             new StringInputStream("<li><strong><a href=\"/doi/citedby/10.1080/13607863.2010.551339\">Citations:" + rand() + "\n\n\n</strong></li>"),
                                                                              Constants.DEFAULT_ENCODING)));
     }
     

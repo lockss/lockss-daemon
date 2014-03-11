@@ -1,10 +1,10 @@
 /*
- * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.15 2013-12-04 01:02:20 thib_gc Exp $
+ * $Id: TaylorAndFrancisHtmlHashFilterFactory.java,v 1.16 2014-03-11 19:38:39 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +66,9 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "relatedArticles"),
         //Ad module
         HtmlNodeFilters.tagWithAttribute("div", "class", "ad module"),
+        // Links to other articles
+        HtmlNodeFilters.tagWithAttribute("div",  "id", "referencesPanel"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
         /*
          * Proper to the hash filter
          */
@@ -135,9 +138,8 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
         // Two alternative versions of the same empty section
         HtmlNodeFilters.tagWithAttribute("a", "id", "fpi"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "fpi"),
-        // These two sections are newer placeholders
+        // Newer placeholder
         HtmlNodeFilters.tagWithAttribute("li", "id", "citationsTab"),
-        HtmlNodeFilters.tagWithAttribute("div", "id", "citationsPanel"),
         // Some <h4> tags had/have a 'class' attribute
         new TagNameFilter("h4"),
         // Contains an article view count
@@ -282,8 +284,10 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader,
                                                       ListUtil.list(
         // Two alternate forms of citation links (no easy to characterize in the DOM)
-        new TagPair("<strong>Citations:", "</strong>"),
-        new TagPair("<strong><a href=\"/doi/citedby/", "</strong>")
+        new TagPair("<li><strong>Citations:", "</li>"),
+        new TagPair("<li><strong><a href=\"/doi/citedby/", "</li>"),
+        // Added to some articles later
+        new TagPair("<li><strong>Citation information:", "</li>")
     ));
     Reader stringFilter = tagFilter;
     // Wording change
@@ -297,12 +301,4 @@ public class TaylorAndFrancisHtmlHashFilterFactory implements FilterFactory {
     return new ReaderInputStream(new WhiteSpaceFilter(stringFilter));
   }
 
-  public static void main(String[] args) throws Exception {
-    String file = "/tmp/HashCUSk3c";
-    IOUtils.copy(new TaylorAndFrancisHtmlHashFilterFactory().createFilteredInputStream(null,
-                                                                                       new FileInputStream(file),
-                                                                                       null),
-                 new FileOutputStream(file + ".out"));
-  }
-  
 }
