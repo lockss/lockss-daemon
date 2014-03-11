@@ -98,6 +98,56 @@ while (my $line = <>) {
         }
         sleep(5);
 
+  } elsif ($plugin eq "HighWireDrupalPlugin") {
+        $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
+            $param{base_url}, $param{volume_name});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents) && ($man_contents =~ m/$lockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
+                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
+                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                        $vol_title = "\"" . $vol_title . "\"";
+                    }
+                } 
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(5);
+
+  } elsif ($plugin eq "ClockssHighWireDrupalPlugin") {
+        $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
+            $param{base_url}, $param{volume_name});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//))) {
+                if ($man_contents =~ m/<title>\s*(.*)\s+C?LOCKSS\s+Manifest\s+Page.*<\/title>/si) {
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
+                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                        $vol_title = "\"" . $vol_title . "\"";
+                    }
+                } 
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
+        }
+        sleep(5);
+
   } elsif ($plugin eq "ProjectMusePlugin") {
         $url = sprintf("%sjournals/%s/v%03d/", 
             $param{base_url}, $param{journal_dir}, $param{volume});
@@ -177,25 +227,25 @@ while (my $line = <>) {
         $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
             $param{base_url}, $param{journal_id}, $param{year});
         $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    if ($resp->is_success) {
-      my $man_contents = $resp->content;
-      if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
-    if ($man_contents =~ m/<title>(.*)<\/title>/si) {
-        $vol_title = $1;
-        $vol_title =~ s/\s*\n\s*/ /g;
-        if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
-      $vol_title = "\"" . $vol_title . "\"";
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) {
+            my $man_contents = $resp->content;
+            if (defined($man_contents) && (($man_contents =~ m/$lockss_tag/) || ($man_contents =~ m/$oa_tag/)) && (($man_contents =~ m/\($param{year}\)/) || ($man_contents =~ m/: $param{year}/))) {
+                if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+                    $vol_title = $1;
+                    $vol_title =~ s/\s*\n\s*/ /g;
+                    if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
+                        $vol_title = "\"" . $vol_title . "\"";
+                    }
+                } 
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--"
         }
-    } 
-    $result = "Manifest"
-      } else {
-    $result = "--"
-      }
-  } else {
-      $result = "--"
-  }
         sleep(5);
         
   } elsif ($plugin eq "ClockssOJS2Plugin") {
