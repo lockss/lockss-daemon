@@ -4,7 +4,7 @@
     info[contract] = 2013 ;
     info[tester] = 0
   >
-  
+  {
     plugin = org.lockss.plugin.metapress.ClockssMetaPressPlugin
     param[base_url] = http://wageningenacademic.metapress.com/
     implicit < status ; status2 ; year ; name ; param[volume_name] >
@@ -71,5 +71,17 @@
       
 
     }
+
+  }
+
+  {
+
+  title <
+    name = Wageningen Academic Publishers Books
+  >
+
+    plugin = needs.plugin
+
+  }
 
 }
