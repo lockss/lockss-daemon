@@ -411,7 +411,7 @@
   {
 
     title <
-      name = Textile ;
+      name = Textile: The Journal of Cloth and Culture Volume 12 ;
       issn = 1475-9756 ;
       eissn = 1751-8350 ;
       issnl = 1475-9756
@@ -420,18 +420,18 @@
     param[journal_id] = tjcc
     param[journal_issn] = 1475-9756
 
-    au < doNotProcess ; 2003 ; Textile Volume 1 ; 1 >
-    au < doNotProcess ; 2004 ; Textile Volume 2 ; 2 >
-    au < doNotProcess ; 2005 ; Textile Volume 3 ; 3 >
-    au < doNotProcess ; 2006 ; Textile Volume 4 ; 4 >
-    au < doNotProcess ; 2007 ; Textile Volume 5 ; 5 >
-    au < doNotProcess ; 2008 ; Textile Volume 6 ; 6 >
-    au < doNotProcess ; 2009 ; Textile Volume 7 ; 7 >
-    au < doNotProcess ; 2010 ; Textile Volume 8 ; 8 >
-    au < doNotProcess ; 2011 ; Textile Volume 9 ; 9 >
-    au < doNotProcess ; 2012 ; Textile Volume 10 ; 10 >
-    au < manifest ; 2013 ; Textile Volume 11 ; 11 >
-    au < expected ; 2014 ; Textile Volume 12 ; 12 >
+    au < doNotProcess ; 2003 ; Textile: The Journal of Cloth and Culture Volume 1 ; 1 >
+    au < doNotProcess ; 2004 ; Textile: The Journal of Cloth and Culture Volume 2 ; 2 >
+    au < doNotProcess ; 2005 ; Textile: The Journal of Cloth and Culture Volume 3 ; 3 >
+    au < doNotProcess ; 2006 ; Textile: The Journal of Cloth and Culture Volume 4 ; 4 >
+    au < doNotProcess ; 2007 ; Textile: The Journal of Cloth and Culture Volume 5 ; 5 >
+    au < doNotProcess ; 2008 ; Textile: The Journal of Cloth and Culture Volume 6 ; 6 >
+    au < doNotProcess ; 2009 ; Textile: The Journal of Cloth and Culture Volume 7 ; 7 >
+    au < doNotProcess ; 2010 ; Textile: The Journal of Cloth and Culture Volume 8 ; 8 >
+    au < doNotProcess ; 2011 ; Textile: The Journal of Cloth and Culture Volume 9 ; 9 >
+    au < doNotProcess ; 2012 ; Textile: The Journal of Cloth and Culture Volume 10 ; 10 >
+    au < manifest ; 2013 ; Textile: The Journal of Cloth and Culture Volume 11 ; 11 >
+    au < manifest ; 2014 ; Textile: The Journal of Cloth and Culture Volume 12 ; 12 >
 
   }
 
