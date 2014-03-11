@@ -476,6 +476,16 @@ public class TestTaylorAndFrancisMetadataExtractor extends LockssTestCase {
     assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Theatre is Great"), "theatre is great");
     assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("The Title of the Book & Other Mysteries"),
         TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle("the title of the book and other mysteries"));
+    
+    String titleWithoutControlChars = "A long hyphenated-title with a \"wonderful\" inset quotation";
+    String titleWithControlChars = "A long hyphenated\u2013title with a \u201cwonderful\u201d inset quotation";
+    assertNotEquals(titleWithoutControlChars, titleWithControlChars);
+    // normalize both
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithControlChars),
+        TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithoutControlChars));
+    // normalize only the first, lower case the one without control chars
+    assertEquals(TaylorAndFrancisHtmlMetadataExtractorFactory.normalizeTitle(titleWithControlChars),
+        titleWithoutControlChars.toLowerCase());
   }
 
 

@@ -29,7 +29,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.taylorandfrancis;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -106,11 +108,27 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     return isInAu;
   }
 
-  /* To maximize the chance of finding matching titles
-   * make all lower case,
+  /* Because we compare a title from metadata with the title in the AU 
+  * (as set in the tdb file) to make sure the item belongs in this AU,
+  * we need to minimize potential for mismatch by normalizing the titles
+  */
+  static private final Map<String, String> normalizeMap =
+      new HashMap<String,String>();
+  static {
+    normalizeMap.put("&", "and");
+    normalizeMap.put("\u2013", "-"); //en-dash to hyphen
+    normalizeMap.put("\u2014", "-"); //em-dash to hyphen
+    normalizeMap.put("\u201c", "\""); //ldquo to basic quote
+    normalizeMap.put("\u201d", "\""); //rdquo to basic quote
+  }  
+  /* To maximize the chance of finding matching titles normalize out stylistic
+   * differences as much as possible, eg
+   * make lower case,
    * remove leading and trailing spaces 
-   * change & to "and"
-   * and remove any leading "the"
+   * remove a leading "the " in the title
+   * map control variations on standard chars (en-dash --> hyphen)
+   * and & to "and" 
+   * 
    */
   public static String normalizeTitle(String inTitle) {
     String outTitle;
@@ -119,20 +137,21 @@ public class TaylorAndFrancisHtmlMetadataExtractorFactory implements FileMetadat
     outTitle = inTitle.toLowerCase();
     outTitle = outTitle.trim();
 
-    int amp = outTitle.indexOf("&");
-    int start = (outTitle.startsWith("the ")) ? 4 : 0;
-
-    /* this only catches FIRST & */
-    StringBuilder out_sb = new StringBuilder();
-    if (amp > 0) {
-      out_sb.append(outTitle.substring(start, amp));
-      out_sb.append("and");
-      start = amp+1;
+    //Remove a leading "the " in the title
+    if (outTitle.startsWith("the "))  {
+      outTitle = outTitle.substring(4);// get over the "the " 
     }
-    out_sb.append(outTitle.substring(start,outTitle.length()));
-    return out_sb.toString();
+    
+    // Using the normalization map, substitute characters
+    for (Map.Entry<String, String> norm_entry : normalizeMap.entrySet())
+    {
+        log.debug3("normalizing title by replacing " + norm_entry.getKey() + " with " + norm_entry.getKey());
+        // StringUtils.replace is MUCH faster than String.replace
+        outTitle = StringUtils.replace(outTitle, norm_entry.getKey(), norm_entry.getValue());
+    }
+    return outTitle;
   }
-
+  
 
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
