@@ -97,16 +97,24 @@
       implicit < status ; year ; name ; param[volume_name] >
       
       param[journal_issn] = 1478-3398 
-      comment[0] = vols. 73-78 currently not available online
      
+      au < exists ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 >
+      au < exists ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 >
+      au < exists ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 >
+      au < exists ; 1988 ; Bulletin of Hispanic Studies Volume 65 ; 65 >
+      au < exists ; 1989 ; Bulletin of Hispanic Studies Volume 66 ; 66 >
+      au < exists ; 1990 ; Bulletin of Hispanic Studies Volume 67 ; 67 >
+      au < exists ; 1991 ; Bulletin of Hispanic Studies Volume 68 ; 68 >
+      au < exists ; 1992 ; Bulletin of Hispanic Studies Volume 69 ; 69 >
+      au < exists ; 1993 ; Bulletin of Hispanic Studies Volume 70 ; 70 >
       au < released ; 1994 ; Bulletin of Hispanic Studies Volume 71 ; 71 >
       au < released ; 1995 ; Bulletin of Hispanic Studies Volume 72 ; 72 >
-      au < doesNotExist ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
-      au < doesNotExist ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
-      au < doesNotExist ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
-      au < doesNotExist ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
-      au < doesNotExist ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
-      au < doesNotExist ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
+      au < manifest ; 1996 ; Bulletin of Hispanic Studies Volume 73 ; 73 >
+      au < manifest ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 >
+      au < manifest ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
+      au < manifest ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
+      au < manifest ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
+      au < manifest ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
       au < released ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
       au < released ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
       au < released ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
