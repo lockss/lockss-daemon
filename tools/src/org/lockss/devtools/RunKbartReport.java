@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.7 2013-12-09 22:20:54 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.8 2014-03-12 16:07:52 pgust Exp $
  */
 
 /*
@@ -444,10 +444,16 @@ public class RunKbartReport {
       public BibliographicItem getBibliographicItem(final String[] values) {
         return new BibliographicItemImpl() {
           public String toString() {
+            String pubIdentifier = getIsbn();
+            if (StringUtil.isNullString(pubIdentifier)) {
+              pubIdentifier = getIssn();
+            }
             return String.format("BibliographicItem %s %s", 
-                                 getPrintIssn(), getPublicationTitle());
+                                 pubIdentifier, getPublicationTitle());
           }
         }
+            .setPrintIsbn(getValue(Field.PRINT_IDENTIFIER, values))
+            .setEisbn(getValue(Field.ONLINE_IDENTIFIER, values))
             .setPrintIssn(getValue(Field.PRINT_IDENTIFIER, values))
             .setEissn(getValue(Field.ONLINE_IDENTIFIER, values))
             .setIssnL(getValue(ISSNL_STR, values))
