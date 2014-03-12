@@ -1655,20 +1655,22 @@
         issnl = 2052-1847
       >
 
+        comment[notReady] = links on the issue's toc have the base_url without the www. See volume toc http://www.biomedcentral.com/2052-1847/5
+
       comment[journal_code] = bmcsportsscimedrehabil
       {
         param[journal_issn] = 1758-2555
 
         au < manifest ; exists ; 2009 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 1 ; 1 >
-        au < crawling ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
-        au < crawling ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
-        au < crawling ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
+        au < ingNotReady ; exists ; 2010 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 2 ; 2 >
+        au < ingNotReady ; exists ; 2011 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 3 ; 3 >
+        au < ingNotReady ; exists ; 2012 ; Sports Medicine, Arthroscopy, Rehabilitation, Therapy & Technology Volume 4 ; 4 >
       }
       
       {
         param[journal_issn] = 2052-1847 
-
-        au < crawling ; exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
+        
+        au < ingNotReady ; exists ; 2013 ; BMC Sports Science, Medicine and Rehabilitation Volume 5 ; 5 >
         au < manifest ; exists ; 2014 ; BMC Sports Science, Medicine and Rehabilitation Volume 6 ; 6 >
 
       }
