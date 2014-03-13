@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestDryadHtmlFilterFactory.java,v 1.3 2014-03-07 21:54:28 etenbrink Exp $
+/    * $Id: TestDryadHtmlFilterFactory.java,v 1.4 2014-03-13 23:04:35 etenbrink Exp $
  */
 
 /*
@@ -421,6 +421,9 @@ public class TestDryadHtmlFilterFactory extends LockssTestCase {
 "</div>" +
 "<span title=\"ctx_ver=Z39.88-2004&amp;rft.type=Dataset&amp;rft.status=scanned" +
 "&amp;rft.dryad=410&amp;rft.dryad=114\" class=\"Z3988\">&nbsp;</span>" +
+"<div id=\"ds-system-wide-alert\">\n" + 
+"<p>Submissions will be temporarily disabled for regular maintenance.</p>\n" + 
+"</div>" +
 "</body></html>";
 
   private static final String withoutStuff = 
