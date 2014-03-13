@@ -9071,6 +9071,7 @@
 
     param[base_url] = http://imrs.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    comment[publication] = Volume 2007 was published in the year 2008
 
     au < manifest ; exists ; 2005 ; International Mathematics Research Surveys Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; International Mathematics Research Surveys Volume 2006 ; 2006 ; >
