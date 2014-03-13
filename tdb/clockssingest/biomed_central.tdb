@@ -151,7 +151,7 @@
         comment[volume2] = Volume 2 uses both, but doesn't pick up the two articles with the 2046-1682 issn.
         comment[volume3] = Volume 3 uses issn 1757-5036.
 
-        au < manifest ; exists ; 2008 ; BMC Biophysics Volume 1 ; 1 >
+        au < superseded ; exists ; 2008 ; BMC Biophysics Volume 1 [superseded] ; 1 >
         au < ingNotReady ; exists ; 2009 ; BMC Biophysics Volume 2 ; 2 >
         au < superseded ; exists ; 2010 ; BMC Biophysics Volume 3 [superseded] ; 3 >
         au < crawling ; exists ; 2011 ; BMC Biophysics Volume 4 ; 4 >
