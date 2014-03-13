@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = University of Alberta Press Books ;
+    info[contract] = 2014 ;
+    info[tester] = S
+  >
+  
+  
+  {
+  
+    title <
+      name = University of Alberta Press Books Source Content
+    >
+    
+    plugin = needs.plugin
+    
+  }
+
+}
