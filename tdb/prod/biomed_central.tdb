@@ -126,17 +126,31 @@
         eissn = 2046-1682 ;
         issnl = 2046-1682
       >
+      
+      {
+      
+        param[journal_issn] = 1757-5036
+        comment[journal_code] = bmcbiophys
+        
+        comment[volume2] = malformed. May 2009 uses issn 2046-1682. April uses both issns.
 
-      param[journal_issn] = 2046-1682
-      attr[journal_code] = bmcbiophys
+        au < exists ; 2008 ; PMC Biophysics Volume 1 ; 1 >
+        au < doNotProcess ; 2009 ; PMC Biophysics Volume 2 ; 2 >
+        au < exists ; 2010 ; PMC Biophysics Volume 3 ; 3 >
+      
+      }
 
-      au < manifest ; 2008 ; BMC Biophysics Volume 1 ; 1 >
-      au < manifest ; 2009 ; BMC Biophysics Volume 2 ; 2 >
-      au < manifest ; 2010 ; BMC Biophysics Volume 3 ; 3 >
-      au < ready ; 2011 ; BMC Biophysics Volume 4 ; 4 >
-      au < ready ; 2012 ; BMC Biophysics Volume 5 ; 5 >
-      au < manifest ; 2013 ; BMC Biophysics Volume 6 ; 6 >
-      au < manifest ; 2014 ; BMC Biophysics Volume 7 ; 7 >
+      {
+      
+        param[journal_issn] = 2046-1682
+        attr[journal_code] = bmcbiophys
+
+        au < ready ; 2011 ; BMC Biophysics Volume 4 ; 4 >
+        au < ready ; 2012 ; BMC Biophysics Volume 5 ; 5 >
+        au < manifest ; 2013 ; BMC Biophysics Volume 6 ; 6 >
+        au < manifest ; 2014 ; BMC Biophysics Volume 7 ; 7 >
+      
+      }
 
     }
 
