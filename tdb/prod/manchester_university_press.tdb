@@ -37,18 +37,18 @@
     
       title <
         name = Bulletin of the John Rylands Library ;
-        issn = 0301-102X ;
-        eissn = 2052-8051 ;
-        issnl = 1749-6020
+        issn = 2054-9318 ;
+        eissn = 2054-9326 ;
+        issnl = 2054-9318
       >
       
-     param[journal_issn] = 2052-8051
+     param[journal_issn] = 2054-9326
      
-     au < manifest ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
-     au < manifest ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
-     au < manifest ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
-     au < manifest ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
-     au < manifest ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
+     au < exists ; 2003 ; Bulletin of the John Rylands Library Volume 85 ; 85 >
+     au < exists ; 2004 ; Bulletin of the John Rylands Library Volume 86 ; 86 >
+     au < exists ; 2005 ; Bulletin of the John Rylands Library Volume 87 ; 87 >
+     au < exists ; 2006 ; Bulletin of the John Rylands Library Volume 88 ; 88 >
+     au < exists ; 2012-2013 ; Bulletin of the John Rylands Library Volume 89 ; 89 >
      au < expected ; 2014 ; Bulletin of the John Rylands Library Volume 90 ; 90 >
     
     }
