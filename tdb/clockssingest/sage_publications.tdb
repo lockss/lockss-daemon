@@ -37379,6 +37379,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
+      au < superseded ; exists ; 2008 ; War in History Volume 15 [superseded] ; 15 ; >
       au < down ; crawling ; 2009 ; War in History Volume 16 ; 16 ; >
 
     }
