@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -104,10 +104,12 @@
      -->
     <string>au_crawlrules</string>
     <list>
+      <!-- exclude the following file (appears to be a test) with a ungettable link -->
+      <string>2, "^%sv1/articles/90815\?format=html$", api_url</string>
       <!-- manifest pages -->
-      <string>1,"^%sv1/articles/(\d)+\?format=html$", api_url</string>  
+      <string>1,"^%sv1/articles/(\d)+\?format=html$", api_url</string>
       <!-- temporarily limit # of articles to crawl for local testing...    -->
-      <!-- <string>1,"^%sv1/articles/825(\d){3}\?format=html$", api_url</string> -->
+      <!-- <string>1,"^%sv1/articles/908(\d){2}\?format=html$", api_url</string> -->
       <string>1, "%s", files_url</string>
       <string>1, "^%smedia/*", base_url</string>
       <string>4,"^(%s|%s|%s)", base_url,api_url,files_url</string>
