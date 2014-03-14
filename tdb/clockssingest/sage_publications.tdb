@@ -37428,6 +37428,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
+      au < superseded ; exists ; 2008 ; Waste Management & Research Volume 26 [superseded] ; 26 ; >
       au < down ; crawling ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
 
     }
