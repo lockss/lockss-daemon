@@ -123,18 +123,17 @@
       eissn = 1745-7262 ;
       issnl = 1008-682X
     >
+    
+    comment[moved] = journal moved to http://www.ajandrology.com/, Medknow
 
     param[journal_id] = aja
 
-    au < manifest ; exists ; 2005 ; Asian Journal of Andrology Volume 7 ; 2005 ; 7 >
-    au < manifest ; exists ; 2006 ; Asian Journal of Andrology Volume 8 ; 2006 ; 8 >
-    au < manifest ; exists ; 2007 ; Asian Journal of Andrology Volume 9 ; 2007 ; 9 >
     au < zapped ; finished ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < finished ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
     au < finished ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
     au < finished ; crawling ; 2011 ; Asian Journal of Andrology Volume 13 ; 2011 ; 13 >
     au < finished ; crawling ; 2012 ; Asian Journal of Andrology Volume 14 ; 2012 ; 14 >
-    au < crawling ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
+    au < frozen ; exists ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
     au < expected ; exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
 
   }
