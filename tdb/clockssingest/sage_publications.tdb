@@ -37490,6 +37490,7 @@
       pluginSuffix = ClockssHighWirePlugin
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
 
+      au < superseded ; exists ; 2008 ; Western Journal of Nursing Research Volume 30 [superseded] ; 30 ; >
       au < down ; crawling ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
 
     }
