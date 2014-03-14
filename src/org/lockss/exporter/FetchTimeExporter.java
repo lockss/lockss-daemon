@@ -1,5 +1,5 @@
 /*
- * $Id: FetchTimeExporter.java,v 1.7 2014-01-08 20:37:47 fergaloy-sf Exp $
+ * $Id: FetchTimeExporter.java,v 1.8 2014-03-14 21:31:19 fergaloy-sf Exp $
  */
 
 /*
@@ -123,20 +123,6 @@ public class FetchTimeExporter {
       "export_fetch_time_md_item_seq";
 
   /**
-   * The maximum number of metadata items to process in one database read.
-   * <p />
-   * Defaults to <code>100</code>.
-   */
-  public static final String PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_READ = PREFIX
-      + "fetchTimeExportMaxNumberOfExportedItemsRead";
-
-  /**
-   * Default value of the maximum number of metadata items to process in one
-   * database read.
-   */
-  public static final int DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ = 100;
-
-  /**
    * The maximum number of metadata items to write to one file.
    * <p />
    * Defaults to <code>100000</code>.
@@ -250,10 +236,6 @@ public class FetchTimeExporter {
   // The key used to store in the database the identifier of the last metadata
   // item for which the data has been exported.
   private String lastMdItemSeqLabel = null;
-
-  // The maximum number of metadata items to process in one database read.
-  private int maxNumberOfExportedItemsRead =
-      DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ;
 
   // The maximum number of metadata items to write to one file.
   private int maxNumberOfExportedItemsPerFile =
@@ -438,14 +420,6 @@ public class FetchTimeExporter {
 	    DEFAULT_FETCH_TIME_EXPORT_LAST_ITEM_LABEL);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "lastMdItemSeqLabel = '"
 	+ lastMdItemSeqLabel + "'.");
-
-    // Get the maximum number of metadata items to process in one database read.
-    maxNumberOfExportedItemsRead =
-	config.getInt(PARAM_MAX_NUMBER_OF_EXPORTED_ITEMS_READ,
-	    DEFAULT_MAX_NUMBER_OF_EXPORTED_ITEMS_READ);
-    if (log.isDebug3())
-      log.debug3(DEBUG_HEADER + "maxNumberOfExportedItemsRead = "
-	  + maxNumberOfExportedItemsRead + ".");
 
     // Get the maximum number of metadata items to write to one file.
     maxNumberOfExportedItemsPerFile =
@@ -651,158 +625,134 @@ public class FetchTimeExporter {
     String sql = GET_EXPORT_FETCH_TIME_QUERY;
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "SQL = '" + sql + "'.");
 
-    int totalCount = 0;
-    boolean done = false;
+    PreparedStatement getExportData = null;
+    ResultSet results = null;
 
-    // Loop while there are still more metadata item fetch times to be exported
-    // by this task.
-    while (!done) {
-      PreparedStatement getExportData = null;
-      ResultSet results = null;
-      int count = 0;
+    try {
+      // Prepare the statement used to get the data to be exported.
+      getExportData = dbManager.prepareStatement(conn, sql);
+      getExportData.setMaxRows(maxNumberOfExportedItemsPerFile);
+      getExportData.setLong(1, lastMdItemSeq);
 
-      try {
-	// Prepare the statement used to get the data to be exported.
-	getExportData = dbManager.prepareStatement(conn, sql);
-	getExportData.setMaxRows(maxNumberOfExportedItemsRead);
-	getExportData.setLong(1, lastMdItemSeq);
+      // Get the data to be exported.
+      results = dbManager.executeQuery(getExportData);
 
-	// Get the data to be exported.
-	results = dbManager.executeQuery(getExportData);
-
-	// Loop through all the data to be exported.
-	while (results.next()) {
-	  // Extract the fetch time.
-	  Long fetchTime = results.getLong(FETCH_TIME_COLUMN);
-	  if (log.isDebug3())
-	    log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
-
-	  // Check whether it has been initialized.
-	  if (fetchTime >= 0) {
-	    // Yes: Extract the other individual pieces of data to be exported.
-	    String publisherName = results.getString(PUBLISHER_NAME_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
-
-	    String pluginId = results.getString(PLUGIN_ID_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-
-	    boolean isBulkContent = results.getBoolean(IS_BULK_CONTENT_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
-
-	    String publicationName = results.getString("PUBLICATION_NAME");
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
-
-	    String typeName = results.getString(TYPE_NAME_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "typeName = " + typeName);
-
-	    String itemTitle = results.getString("ITEM_TITLE");
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "itemTitle = " + itemTitle);
-
-	    String date = results.getString(DATE_COLUMN);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
-
-	    String auKey = results.getString(AU_KEY_COLUMN);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
-
-	    String accessUrl = results.getString(URL_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
-
-	    String doi = results.getString(DOI_COLUMN);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "doi = " + doi);
-
-	    String pIssn = results.getString(P_ISSN_TYPE);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
-
-	    String eIssn = results.getString(E_ISSN_TYPE);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
-
-	    String pIsbn = results.getString(P_ISBN_TYPE);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
-
-	    String eIsbn = results.getString(E_ISBN_TYPE);
-	    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
-
-	    // Create the line to be written to the output file.
-	    StringBuilder sb = new StringBuilder();
-
-	    sb.append(exportVersion).append(SEPARATOR)
-	    .append(serverName).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(publisherName))
-	    .append(SEPARATOR)
-	    .append(pluginId).append(SEPARATOR)
-	    .append(auKey).append(SEPARATOR)
-	    .append(isBulkContent).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(publicationName))
-	    .append(SEPARATOR)
-	    .append(typeName).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(itemTitle)).append(SEPARATOR)
-	    .append(date).append(SEPARATOR)
-	    .append(fetchTime).append(SEPARATOR)
-	    .append(accessUrl).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(doi)).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(pIssn)).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(eIssn)).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(pIsbn)).append(SEPARATOR)
-	    .append(StringUtil.blankOutNlsAndTabs(eIsbn));
-
-	    // Write the line to the export output file.
-	    writer.println(sb.toString());
-
-	    // Check whether there were errors writing the line.
-	    if (writer.checkError()) {
-	      // Yes: Report the error.
-	      writer.close();
-	      message = "Encountered unrecoverable error writing " +
-		  "export output file '" + exportFile + "'";
-	      log.error(message);
-	      throw new DbException(message);
-	    }
-
-	    writer.flush();
-
-	    // Get the new value of the identifier of the last metadata item for
-	    // which the fetch time has been exported.
-	    lastMdItemSeq = results.getLong(MD_ITEM_SEQ_COLUMN);
-	    if (log.isDebug3())
-	      log.debug3(DEBUG_HEADER + "lastMdItemSeq = " + lastMdItemSeq);
-
-	    // Count this exported metadata item fetch time.
-	    count++;
-	  }
-	}
-
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
-
-	// Increment the total count of exported metadata item fetch times.
-	totalCount += count;
+      // Loop through all the data to be exported.
+      while (results.next()) {
+	// Extract the fetch time.
+	Long fetchTime = results.getLong(FETCH_TIME_COLUMN);
 	if (log.isDebug3())
-	  log.debug3(DEBUG_HEADER + "totalCount = " + totalCount);
+	  log.debug3(DEBUG_HEADER + "fetchTime = " + fetchTime);
 
-	// Determine whether this task has exported all the metadata item fetch
-	// times that needed to export.
-	done = count < maxNumberOfExportedItemsRead
-	    || totalCount >= maxNumberOfExportedItemsPerFile;
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "done = " + done);
-      } catch (SQLException sqle) {
-	log.error(message, sqle);
-	log.error("SQL = '" + sql + "'.");
-	throw new DbException(message, sqle);
-      } catch (DbException dbe) {
-	log.error(message, dbe);
-	log.error("SQL = '" + sql + "'.");
-	throw dbe;
-      } finally {
-	DbManager.rollback(conn, log);
-	DbManager.safeCloseResultSet(results);
-	DbManager.safeCloseStatement(getExportData);
+	// Check whether it has been initialized.
+	if (fetchTime >= 0) {
+	  // Yes: Extract the other individual pieces of data to be exported.
+	  String publisherName = results.getString(PUBLISHER_NAME_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publisherName = " + publisherName);
+
+	  String pluginId = results.getString(PLUGIN_ID_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
+
+	  boolean isBulkContent = results.getBoolean(IS_BULK_CONTENT_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "isBulkContent = " + isBulkContent);
+
+	  String publicationName = results.getString("PUBLICATION_NAME");
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "publicationName = " + publicationName);
+
+	  String typeName = results.getString(TYPE_NAME_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "typeName = " + typeName);
+
+	  String itemTitle = results.getString("ITEM_TITLE");
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "itemTitle = " + itemTitle);
+
+	  String date = results.getString(DATE_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "date = " + date);
+
+	  String auKey = results.getString(AU_KEY_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
+
+	  String accessUrl = results.getString(URL_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "accessUrl = " + accessUrl);
+
+	  String doi = results.getString(DOI_COLUMN);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "doi = " + doi);
+
+	  String pIssn = results.getString(P_ISSN_TYPE);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIssn = " + pIssn);
+
+	  String eIssn = results.getString(E_ISSN_TYPE);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIssn = " + eIssn);
+
+	  String pIsbn = results.getString(P_ISBN_TYPE);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pIsbn = " + pIsbn);
+
+	  String eIsbn = results.getString(E_ISBN_TYPE);
+	  if (log.isDebug3()) log.debug3(DEBUG_HEADER + "eIsbn = " + eIsbn);
+
+	  // Create the line to be written to the output file.
+	  StringBuilder sb = new StringBuilder();
+
+	  sb.append(exportVersion).append(SEPARATOR)
+	  .append(serverName).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(publisherName))
+	  .append(SEPARATOR)
+	  .append(pluginId).append(SEPARATOR)
+	  .append(auKey).append(SEPARATOR)
+	  .append(isBulkContent).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(publicationName))
+	  .append(SEPARATOR)
+	  .append(typeName).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(itemTitle)).append(SEPARATOR)
+	  .append(date).append(SEPARATOR)
+	  .append(fetchTime).append(SEPARATOR)
+	  .append(accessUrl).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(doi)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(pIssn)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(eIssn)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(pIsbn)).append(SEPARATOR)
+	  .append(StringUtil.blankOutNlsAndTabs(eIsbn));
+
+	  // Write the line to the export output file.
+	  writer.println(sb.toString());
+
+	  // Check whether there were errors writing the line.
+	  if (writer.checkError()) {
+	    // Yes: Report the error.
+	    writer.close();
+	    message = "Encountered unrecoverable error writing " +
+		"export output file '" + exportFile + "'";
+	    log.error(message);
+	    throw new DbException(message);
+	  }
+
+	  writer.flush();
+
+	  // Get the new value of the identifier of the last metadata item for
+	  // which the fetch time has been exported.
+	  lastMdItemSeq = results.getLong(MD_ITEM_SEQ_COLUMN);
+	  if (log.isDebug3())
+	    log.debug3(DEBUG_HEADER + "lastMdItemSeq = " + lastMdItemSeq);
+	}
       }
+    } catch (SQLException sqle) {
+      log.error(message, sqle);
+      log.error("SQL = '" + sql + "'.");
+      throw new DbException(message, sqle);
+    } catch (DbException dbe) {
+      log.error(message, dbe);
+      log.error("SQL = '" + sql + "'.");
+      throw dbe;
+    } finally {
+      DbManager.rollback(conn, log);
+      DbManager.safeCloseResultSet(results);
+      DbManager.safeCloseStatement(getExportData);
     }
 
     if (log.isDebug2())
