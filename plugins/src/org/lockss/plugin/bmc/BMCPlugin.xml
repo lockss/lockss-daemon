@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.48 2014-03-17 19:01:10 aishizaki Exp $
+<!--  $Id: BMCPlugin.xml,v 1.49 2014-03-17 19:18:49 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -181,8 +181,10 @@
       </entry>
     </map>
   </entry>
+  <!--
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.bmc.BMCPluginUrlNormalizer</string>
-  </entry>
+  </entry
+  -->
 </map>
