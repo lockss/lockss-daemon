@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.1 2014-02-12 03:57:24 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlCrawlFilterFactory.java,v 1.2 2014-03-17 21:51:43 etenbrink Exp $
  */
 
 /*
@@ -48,9 +48,10 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Do not crawl header, footer, pager, reference section, right-sidebar for links 
+        // Do not crawl header or footer for links 
         new TagNameFilter("header"),
         new TagNameFilter("footer"),
+        // Do not crawl reference section, right-sidebar, or prev/next pager for links 
         HtmlNodeFilters.tagWithAttribute("div", "class", "section ref-list"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
@@ -58,7 +59,7 @@ public class HighWireDrupalHtmlCrawlFilterFactory implements FilterFactory {
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
     .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer());
+    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
     return filtered;
   }
 

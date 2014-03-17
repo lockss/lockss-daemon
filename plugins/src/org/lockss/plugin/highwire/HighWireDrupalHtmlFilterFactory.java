@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.2 2014-02-19 22:46:16 etenbrink Exp $
+ * $Id: HighWireDrupalHtmlFilterFactory.java,v 1.3 2014-03-17 21:51:43 etenbrink Exp $
  */
 
 /*
@@ -71,10 +71,10 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("ul", "class", "copyright-statement"),
         // messages can appear arbitrarily
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "messages"),
-        // extras, prev/next pager and right sidebar may change
+        // citation reference extras, right sidebar, prev/next pager can change
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cit-extra"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-right-wrapper"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-node-pager"),
         // most scripts are in head, however, if any are in the body they are filtered
         new TagNameFilter("script"),
         new TagNameFilter("noscript"),
@@ -120,7 +120,7 @@ public class HighWireDrupalHtmlFilterFactory implements FilterFactory {
             HtmlNodeFilterTransform.exclude(
                 new OrFilter(filters)),xform))
     .registerTag(new HtmlTags.Header())
-    .registerTag(new HtmlTags.Footer());
+    .registerTag(new HtmlTags.Footer()); // XXX registerTag can be removed after 1.65
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
