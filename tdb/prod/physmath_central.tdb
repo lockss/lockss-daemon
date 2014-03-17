@@ -18,8 +18,10 @@
     >
 
     param[journal_issn] = 1757-5036
-    nondefparam[journal_code] = bmcbiophys
+    attr[journal_code] = bmcbiophys
     
+    comment[volume2] = malformed. May 2009 uses issn 2046-1682. April uses both issns.
+
     au < down ; 2008 ; PMC Biophysics Volume 1 ; 1 >
     au < down ; 2009 ; PMC Biophysics Volume 2 ; 2 >
     au < down ; 2010 ; PMC Biophysics Volume 3 ; 3 >
@@ -35,7 +37,7 @@
     >
 
     param[journal_issn] = 1754-0410
-    nondefparam[journal_code] = pmcphysa
+    attr[journal_code] = pmcphysa
 
     au < down ; 2007 ; PMC Physics A Volume 1 ; 1 >
     au < down ; 2008 ; PMC Physics A Volume 2 ; 2 >
@@ -53,7 +55,7 @@
     >
   
     param[journal_issn] = 1754-0429
-    nondefparam[journal_code] = pmcphysb
+    attr[journal_code] = pmcphysb
 
     au < down ; 2008 ; PMC Physics B Volume 1 ; 1 >
     au < down ; 2009 ; PMC Physics B Volume 2 ; 2 >
