@@ -35452,13 +35452,27 @@ comment[mpj] = now published by Brill
       >
       
         param[base_url] = http://sgo.sagepub.com/
-        pluginSuffix = HighWirePressH20Plugin
         implicit < status ; year ; name ; param[volume_name] >
+        
+        {
+        
+          pluginSuffix = HighWirePressH20Plugin
 
-        au < released ; 2011 ; Sage Open Volume 1 ; 1 >
-        au < released ; 2012 ; Sage Open Volume 2 ; 2 >
-        au < manifest ; 2013 ; Sage Open Volume 3 ; 3 >
-        au < expected ; 2014 ; Sage Open Volume 4 ; 4 >
+          au < down ; 2011 ; Sage Open Volume 1 ; 1 >
+          au < down ; 2012 ; Sage Open Volume 2 ; 2 >
+          
+        }
+
+        {
+        
+          pluginSuffix = HighWireDrupalPlugin
+
+          au < doNotProcess ; 2011 ; Sage Open Volume 1 ; 1 >
+          au < doNotProcess ; 2012 ; Sage Open Volume 2 ; 2 >
+          au < exists ; 2013 ; Sage Open Volume 3 ; 3 >
+          au < expected ; 2014 ; Sage Open Volume 4 ; 4 >
+          
+        }
 
     }
 
