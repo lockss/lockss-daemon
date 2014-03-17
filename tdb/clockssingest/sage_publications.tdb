@@ -32225,14 +32225,26 @@
       >
       
         param[base_url] = http://sgo.sagepub.com/
+        comment[moved] = changed platforms to Drupal?
         
         {
         
           pluginSuffix = ClockssHighWirePressH20Plugin
 
-          au < finished ; crawling ; 2011 ; Sage Open Volume 1 ; 1 ; >
-          au < finished ; crawling ; 2012 ; Sage Open Volume 2 ; 2 ; >
-          au < crawling ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
+          au < down ; crawling ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < down ; crawling ; 2012 ; Sage Open Volume 2 ; 2 ; >
+          au < down ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
+          au < expected ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
+        
+        }
+
+        {
+        
+          pluginSuffix = ClockssHighWireDrupalPlugin
+
+          au < exists ; exists ; 2011 ; Sage Open Volume 1 ; 1 ; >
+          au < exists ; exists ; 2012 ; Sage Open Volume 2 ; 2 ; >
+          au < exists ; exists ; 2013 ; Sage Open Volume 3 ; 3 ; >
           au < expected ; exists ; 2014 ; Sage Open Volume 4 ; 4 ; >
         
         }
