@@ -1,10 +1,10 @@
 /*
- * $Id: BMCPluginArticleIteratorFactory.java,v 1.3 2013-05-21 22:56:15 aishizaki Exp $
+ * $Id: BMCPluginArticleIteratorFactory.java,v 1.4 2014-03-17 19:01:10 aishizaki Exp $
  */ 
 
 /*
 
-Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

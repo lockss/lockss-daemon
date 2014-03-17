@@ -1,4 +1,4 @@
-<!--  $Id: BMCPlugin.xml,v 1.47 2013-10-30 21:20:15 thib_gc Exp $
+<!--  $Id: BMCPlugin.xml,v 1.48 2014-03-17 19:01:10 aishizaki Exp $
    -->
 <map>
   <entry>
@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -30,7 +30,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>9</string>
+        <string>10</string>
       </entry>
     </map>
   </entry>
@@ -76,6 +76,9 @@
       <string>4,"^%s.{0,150}", base_url</string>
       <string>2,"^%s.*/(about|email|citation|comments|postcomment)$", base_url</string>
       <string>2,"^%s%s/%s/.*\?fmt_view=(classic|mobile)$", base_url, journal_issn, volume_name</string>
+      <!-- exclude (because is causing a 503 error):
+        http://www.biomedcentral.com/1471-2253/13/50/email?from=standard -->
+      <string>2,"^%s%s/%s/.*email\?from=standard$", base_url, journal_issn, volume_name</string>
       <!-- http://www.biomedcentral.com/bmcoralhealth/content/2/August/2002 
         only rule that uses the attr[journal_id] rather than the journal_issn
       -->   
@@ -92,9 +95,9 @@
       http://www.biomedcentral.com/1472-6890/11/9       (fulltext)
       http://www.biomedcentral.com/content/pdf/1472-6890-11-9.pdf
       -->
-      <string>1, "^%s/content/pdf/%s-%s[\d-]*", base_url, journal_issn, volume_name</string>      
-      <string>1, "^%s/%s/%s/[\d]+", base_url, journal_issn, volume_name</string>      
-      <string>1, "^%s/%s/%s/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
+      <string>1, "^%scontent/(epub|pdf)/%s-%s[\w-]*", base_url, journal_issn, volume_name</string>      
+      <string>1, "^%s%s/%s/[\d]+", base_url, journal_issn, volume_name</string>      
+      <string>1, "^%s%s/%s/[\d]+/abstract", base_url, journal_issn, volume_name</string>    
     </list>
   </entry>
   <entry>
@@ -177,5 +180,9 @@
         <string>org.lockss.plugin.bmc.BMCPluginHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bmc.BMCPluginUrlNormalizer</string>
   </entry>
 </map>
