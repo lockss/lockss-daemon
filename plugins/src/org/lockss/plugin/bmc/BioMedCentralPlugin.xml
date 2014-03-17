@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -32,7 +32,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>7</string>
+        <string>8</string>
       </entry>
     </map>
   </entry>
@@ -78,9 +78,11 @@
       <string>2,"^%scontent/%s/.*/(about|citations-pubmedcentral|comments|email|postcomment)$", base_url, volume_name</string> <!-- excluding a login-type page -->
       <string>2,"^%scontent/%s/.*\?fmt_view=(classic|mobile)$", base_url, volume_name</string>-->
       <string>2,"^%s%s/%s/[^/]+/(about|comments|email|postcomment)", base_url, journal_issn, volume_name</string>
+      <string>2,"^%scontent/%s/.*email\?from=standard$", base_url, volume_name</string>-->      
       <string>1,"^%scontent/(%s|notes)/", base_url, volume_name</string>
       <string>1,"^%s(articles/browse\.asp|content)\?(date=&amp;volume=%s)[^0-9]", base_url, volume_name</string>
-      <string>1,"^%scontent/pdf/", base_url</string>
+      <!-- http://www.biomedcentral.com/content/epub/1471-2253-13-50.epub -->
+      <string>1,"^%scontent/(pdf|epub)/", base_url</string>
       <string>1,"^%slockss/", base_url</string>
       <string>1,"^%scontent/%s/[^/]+/[^/]+(/(abstract/?|additional/?|citation|comments|ref|figure/.*|suppl/.*|table/.*|/))?$", base_url, volume_name</string>
       <string>1,"^%scontent/(download/(figures|supplementary|xml)|files/pdf|pdf|xml|supplementary|html)/", base_url</string>
@@ -100,7 +102,7 @@
   <entry>
     <string>au_start_url</string>
     <string>"%scontent/%s", base_url, volume_name</string>
-  </entry>
+   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <!-- examples:
