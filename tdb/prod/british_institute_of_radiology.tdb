@@ -333,7 +333,7 @@
       implicit < status ; year ; name ; param[volume_name] >
       param[base_url] = http://www.birpublications.org/
       
-      param[journal_id] = imaging
+      param[journal_id] = img
     
       au < doNotProcess ; 1999 ; Imaging Volume 11 ; 11 >
       au < doNotProcess ; 2000 ; Imaging Volume 12 ; 12 >
