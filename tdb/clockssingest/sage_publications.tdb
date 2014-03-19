@@ -39947,6 +39947,20 @@
     {
     
       title <
+        name = Exceptional Children ;
+        issn = 0014-4029
+      >
+  
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://ecx.sagepub.com/
+  
+        au < exists ; exists ; 2014 ; Exceptional Children Volume 80 ; 80 ; >
+        
+    }
+
+    {
+    
+      title <
         name = Experimental Biology and Medicine ;
         issn = 1535-3702 ;
         eissn = 1535-3699
