@@ -1,0 +1,137 @@
+{
+
+  publisher <
+    name = Athabasca University Press ;
+    info[contract] = 2014 ;
+    info[tester] = 0
+  >
+
+  implicit < status ; status2 ; year ; name ; volume ; param[year] >
+
+  {
+  
+    title < 
+      name = Canadian Folk Music / Musique folklorique canadienne ;
+      issn = 0829-5344 ;
+      eissn = 1925-3265 
+    >
+
+    {
+      plugin = needs.plugin
+      param[base_url] = http://www.canfolkmusic.ca/
+      param[journal_id] = cfmb
+
+
+    }
+    
+  }
+
+  {
+  
+    title < 
+      name = International Review of Research in Open and Distance Learning (IRRODL) ;
+      eissn = 1492-3831 
+    >
+
+    {
+    
+      plugin = needs.plugin
+      param[base_url] = http://www.irrodl.org/
+      param[journal_id] = irrodl
+
+
+    }
+    
+  }
+
+  {
+  
+    title < 
+      name = The Journal of Distance Education / Revue de l'Éducation à Distance ;
+      issn = 0830-0445 ;
+      eissn = 1916-6818 
+    >
+
+    {
+      plugin = needs.plugin
+      param[base_url] = http://www.jofde.ca/
+      param[journal_id] = jde
+
+
+    }
+    
+  }
+
+  {
+  
+    title < 
+      name = Journal of Research Practice ;
+      eissn = 1712-851X 
+    >
+
+    {
+      plugin = needs.plugin
+      param[base_url] = http://jrp.icaap.org/
+      param[journal_id] = jrp
+
+
+    }
+    
+  }
+
+  {
+ 
+    title < 
+      name = Labour / Le Travail ;
+      issn = 0700-3862 ;
+      eissnl = 1911-4842
+    >
+
+    {
+    
+      plugin = needs.plugin
+      param[base_url] = http://www.lltjournal.ca/
+      param[journal_id] = llt
+
+
+    }
+    
+  }
+  
+  {
+  
+    title < 
+      name = Oral History Forum d'histoire orale ;
+      issn = 1482-5872 ;
+      eissn = 1923-0567 
+    >
+
+    {
+      plugin = needs.plugin
+      param[base_url] = http://www.oralhistoryforum.ca/
+      param[journal_id] = ohf
+
+
+    }
+    
+  }
+
+  {
+  
+    title < 
+      name = The Trumpeter ;
+      issn = 0832-6193 ;
+      eissn = 1705-9429 
+    >
+
+    {
+      plugin = needs.plugin
+      param[base_url] = http://trumpeter.athabascau.ca/
+      param[journal_id] = trumpet
+
+
+    }
+    
+  }
+
+}
