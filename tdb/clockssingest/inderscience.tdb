@@ -6431,11 +6431,13 @@
 
       param[journal_issn] = 1755-0564
       
+      comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html 
+      
       au < manifest ; exists ; 2009 ; International Journal of Reasoning-based Intelligent Systems Volume 1 ; 1 >
       au < crawling ; exists ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 >
       au < zapped ; finished ; 2011 ; International Journal of Reasoning-based Intelligent Systems Volume 3 ; 3 >
       au < zapped ; finished ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 >
-      au < crawling ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
+      au < down ; exists ; 2013 ; International Journal of Reasoning-based Intelligent Systems Volume 5 ; 5 >
       au < expected ; exists ; 2014 ; International Journal of Reasoning-based Intelligent Systems Volume 6 ; 6 >
 
     }
