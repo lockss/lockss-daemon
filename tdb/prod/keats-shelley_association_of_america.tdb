@@ -11,13 +11,14 @@
     title <
       name = Keats-Shelley Journal ;
       issn = 0453-4387 ;
+      eissn = 2328-112X ;
       issnl = 0453-4387
     >
 
     param[journal_dir] = keats-shelley_journal
-    attr[journal_id] = 
+    attr[journal_id] = ksj
 
-    au < expected ; 2013 ; Keats-Shelley Journal Volume 1 ; 1 >
+    au < expected ; 2013 ; Keats-Shelley Journal Volume 62 ; 62 >
 
   }
 

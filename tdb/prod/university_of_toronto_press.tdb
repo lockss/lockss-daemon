@@ -379,6 +379,22 @@
   {
   
     title <
+      name = International Journal of Canadian Studies ;
+      issn = 1180-3991 ;
+      eissn = 1923-5291 ;
+      issnl = 1180-3991
+    >
+
+    param[journal_dir] = international_journal_of_canadian_studies
+    attr[journal_id] = ijc
+
+    au < exists ; 2013 ; International Journal of Canadian Studies Volume 47 ; 47 >
+
+  }
+
+  {
+  
+    title <
       name = Journal of Canadian Studies / Revue d'études canadiennes ;
       issn = 0021-9495 ;
       eissn = 1911-0251 ;
