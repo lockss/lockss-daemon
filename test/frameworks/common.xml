@@ -86,6 +86,8 @@
         <value>org.lockss.plugin.highwire.ClockssHighWirePlugin</value>
         <value>org.lockss.plugin.highwire.HighWirePressH20Plugin</value>
         <value>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</value>
+        <value>org.lockss.plugin.highwire.HighWireDrupalPlugin</value>
+        <value>org.lockss.plugin.highwire.ClockssHighWireDrupalPlugin</value>
         <value>org.lockss.plugin.projmuse.ProjectMusePlugin</value>
         <value>org.lockss.plugin.blackbird.BlackbirdPlugin</value>
         <value>org.lockss.plugin.absinthe.AbsinthePlugin</value>
