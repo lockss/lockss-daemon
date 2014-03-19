@@ -10355,6 +10355,8 @@
 
     param[base_url] = http://joeg.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[vol59] = added in error.
 
     au < manifest ; exists ; 2001 ; Journal of Economic Geography Volume 1 ; 1 ; >
     au < manifest ; exists ; 2002 ; Journal of Economic Geography Volume 2 ; 2 ; >
@@ -10370,6 +10372,8 @@
     au < finished ; crawling ; 2012 ; Journal of Economic Geography Volume 12 ; 12 ; >
     au < crawling ; exists ; 2013 ; Journal of Economic Geography Volume 13 ; 13 ; >
     au < manifest ; exists ; 2014 ; Journal of Economic Geography Volume 14 ; 14 ; >
+    
+    au < down ; exists ; 0 ; Journal of Economic Geography Volume 59 [to delete] ; 59 ; reingest2.clockss.org:8085 >
 
     }
 
