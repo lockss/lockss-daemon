@@ -50,7 +50,7 @@
     param[journal_name] = compcytogen
 
     au < released ; 2009 ; 2009 ; Comparative Cytogenetics Issue 3 ; 3 >
-    au < testing ; 2010 ; 2010 ; Comparative Cytogenetics Issue 4 ; 4 >
+    au < released ; 2010 ; 2010 ; Comparative Cytogenetics Issue 4 ; 4 >
     au < released ; 2011 ; 2011 ; Comparative Cytogenetics Issue 5 ; 5 >
     au < released ; 2012 ; 2012 ; Comparative Cytogenetics Issue 6 ; 6 >
     au < manifest ; 2013 ; 2013 ; Comparative Cytogenetics Issue 7 ; 7 >
@@ -70,7 +70,7 @@
     param[journal_name] = ijm
 
     au < released ; 2011 ; 2011 ; International Journal of Myriapodology Issues 4-6 ; 4-6 >
-    au < testing ; 2012 ; 2012 ; International Journal of Myriapodology Issue 7 ; 7 >
+    au < released ; 2012 ; 2012 ; International Journal of Myriapodology Issue 7 ; 7 >
     au < expected ; 2013 ; 2013 ; International Journal of Myriapodology Issue 8 ; 8 >
     au < expected ; 2014 ; 2014 ; International Journal of Myriapodology Issue 9 ; 9 >
 
@@ -87,7 +87,7 @@
 
     param[journal_name] = jhr
 
-    au < testing ; 2011 ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; 20-23 >
+    au < released ; 2011 ; 2011 ; Journal of Hymenoptera Research Issues 20-23 ; 20-23 >
     au < released ; 2012 ; 2012 ; Journal of Hymenoptera Research Issues 24-29 ; 24-29 >
     au < manifest ; 2013 ; 2013 ; Journal of Hymenoptera Research Issues 30-34 ; 30-34 >
     au < manifest ; 2014 ; 2014 ; Journal of Hymenoptera Research Issues 35-40 ; 35-40 >
@@ -105,7 +105,7 @@
 
     param[journal_name] = mycokeys
 
-    au < testing ; 2011 ; 2011 ; MycoKeys Issue 1 ; 1 >
+    au < released ; 2011 ; 2011 ; MycoKeys Issue 1 ; 1 >
     au < released ; 2012 ; 2012 ; MycoKeys Issues 2-5 ; 2-5 >
     au < manifest ; 2013 ; 2013 ; MycoKeys Issues 6-7 ; 6-7 >
     au < expected ; 2014 ; 2014 ; MycoKeys Issues 8-9 ; 8-9 >
