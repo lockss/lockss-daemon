@@ -15131,9 +15131,12 @@
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
     pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    comment[vol25] = No content. Added to ingest1 and 2.
 
     au < superseded ; down ; 2010 ; NDT Plus Volume 3 [superseded] ; 3 ; >
     au < superseded ; down ; 2011 ; NDT Plus Volume 4 [superseded] ; 4 ; >
+    au < down ; exists ; 0 ; NDT Plus Volume 25 [to delete] ; 25 ; >
 
     }
 
