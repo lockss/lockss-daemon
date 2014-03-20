@@ -1,0 +1,40 @@
+{
+
+  publisher <
+    name = Society for Sedimentary Geology ;
+    info[contract] = 2014 ;
+    info[tester] = 0
+  >
+
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
+
+  {
+    title <
+      name = Journal of Sedimentary Research ;
+      issn = 1527-1404 ;
+      eissn = 1938-3681 ;
+      issnl = 1527-1404
+    >
+
+    param[base_url] = http://jsedres.geoscienceworld.org/
+
+    au < exists ; exists ; 2014 ; Journal of Sedimentary Research Volume 84 ; 84 >
+
+  }
+
+  {
+    title <
+      name = PALAIOS ;
+      issn = 0883-1351 ;
+      eissn = 1938-5323 ;
+      issnl = 0883-1351
+    >
+
+    param[base_url] = http://palaios.geoscienceworld.org/
+
+    au < expected ; exists ; 2014 ; PALAIOS Volume 29 ; 29 >
+
+  }
+
+}
