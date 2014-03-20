@@ -22,11 +22,11 @@
 
       param[journal_id] = entn
 
-      au < exists ; exists ; 2006 ; Entomological News Volume 117 ; 117 >
-      au < exists ; exists ; 2007 ; Entomological News Volume 118 ; 118 >
-      au < exists ; exists ; 2008 ; Entomological News Volume 119 ; 119 >
-      au < exists ; exists ; 2009 ; Entomological News Volume 120 ; 120 >
-      au < exists ; exists ; 2010 ; Entomological News Volume 121 ; 121 >
+      au < manifest ; exists ; 2006 ; Entomological News Volume 117 ; 117 >
+      au < manifest ; exists ; 2007 ; Entomological News Volume 118 ; 118 >
+      au < manifest ; exists ; 2008 ; Entomological News Volume 119 ; 119 >
+      au < manifest ; exists ; 2009 ; Entomological News Volume 120 ; 120 >
+      au < manifest ; exists ; 2010 ; Entomological News Volume 121 ; 121 >
 
     }
 
@@ -40,14 +40,14 @@
       
       param[journal_id] = taes
     
-      au < exists ; exists ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
-      au < exists ; exists ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
-      au < exists ; exists ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
-      au < exists ; exists ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
-      au < exists ; exists ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
-      au < exists ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
-      au < exists ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
-      au < exists ; exists ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
+      au < manifest ; exists ; 2006 ; Transactions of the American Entomological Society Volume 132 ; 132 >
+      au < manifest ; exists ; 2007 ; Transactions of the American Entomological Society Volume 133 ; 133 >
+      au < manifest ; exists ; 2008 ; Transactions of the American Entomological Society Volume 134 ; 134 >
+      au < manifest ; exists ; 2009 ; Transactions of the American Entomological Society Volume 135 ; 135 >
+      au < manifest ; exists ; 2010 ; Transactions of the American Entomological Society Volume 136 ; 136 >
+      au < manifest ; exists ; 2011 ; Transactions of the American Entomological Society Volume 137 ; 137 >
+      au < manifest ; exists ; 2012 ; Transactions of the American Entomological Society Volume 138 ; 138 >
+      au < manifest ; exists ; 2013 ; Transactions of the American Entomological Society Volume 139 ; 139 >
 
     }
 
