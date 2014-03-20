@@ -289,6 +289,24 @@
   }
 
   {
+
+    title <
+      name = Asian Journal of Andrology ;
+      issn = 1008-682X ;
+      eissn = 1745-7262 ;
+      issnl = 1008-682X
+    >
+    
+    comment[moved] = journal moved from http://www.nature.com/aja/ , Nature
+
+    param[base_url] = http://www.ajandrology.com/
+    param[journal_issn] = 1008-682X
+
+    au < exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
+
+  }
+
+  {
     title <
       name = Asian Journal of Neurosurgery ;
       issn = 1793-5482 ;
