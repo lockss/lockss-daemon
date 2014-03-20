@@ -1,10 +1,10 @@
 /*
- * $Id: Alert.java,v 1.18 2013-10-17 07:48:35 tlipkis Exp $
+ * $Id: Alert.java,v 1.18.4.1 2014-03-20 07:43:44 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -142,9 +142,11 @@ public class Alert {
     cAlert("DamageDetected").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
-  public static final Alert PERSISTENT_DAMAGE =
-    cAlert("PersistentDamage").
+  public static final Alert PERSISTENT_DISAGREEMENT =
+    cAlert("PersistentDisagreement").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+  // Synonym
+  public static final Alert PERSISTENT_DAMAGE = PERSISTENT_DISAGREEMENT;
 
   public static final Alert REPAIR_COMPLETE =
     cAlert("RepairComplete").
@@ -446,8 +448,9 @@ public class Alert {
     sb.append("\n\n");
     appendVal(sb, "Name: ", getName());
     appendVal(sb, "Severity: ", getSeverityString());
-    if (getBool(ATTR_IS_CONTENT)) {
+    if (getAttribute(ATTR_AU_NAME) != null) {
       appendVal(sb, "AU: ", getAttribute(ATTR_AU_NAME));
+      appendVal(sb, "AUID: ", getAttribute(ATTR_AUID));
     }
     if (hasAttribute(ATTR_TEXT)) {
       appendVal(sb, "Explanation: ", getAttribute(ATTR_TEXT));
