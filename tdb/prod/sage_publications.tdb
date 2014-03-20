@@ -13822,6 +13822,22 @@
 
     }
 
+   {
+  
+    title <
+      name = Higher Education for the Future ;
+      issn = 2347-6311 ;
+      eissn = 2348-5779
+    >
+
+        pluginSuffix = HighWirePressH20Plugin
+        param[base_url] = http://hef.sagepub.com/
+        implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2014 ; Higher Education for the Future Volume 1 ; 1 >
+      
+    }
+  
     {
 
       title <
