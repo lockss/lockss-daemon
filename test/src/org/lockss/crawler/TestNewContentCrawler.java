@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.82 2013-10-17 07:49:01 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.82.4.1 2014-03-20 07:44:05 tlipkis Exp $
  */
 
 /*
@@ -626,10 +626,15 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(SetUtil.set("Publisher"),
 		 SetUtil.theSet(crawlStatus.getSources()));
     Alert al = Alert.auAlert(Alert.CRAWL_FINISHED, mau);
-    al.setAttribute(Alert.ATTR_TEXT,
-		    "Crawl finished successfully: 5 files fetched, 0 warnings");
+    al.setAttribute(Alert.ATTR_TEXT, alertTxtOk);
     assertEquals(ListUtil.list(al), crawler.alerts);
   }
+
+  private String alertTxtOk =
+    "Crawl finished successfully: 5 files fetched, 0 warnings\n\n" +
+    "Refetch Depth: 1\n" +
+    "Max Depth: 1000\n" +
+    "Actual Depth: 2";
 
   public void testGetStatusCrawlDoneExcluded() {
     String url1 = "http://www.example.com/link1.html";
@@ -798,10 +803,15 @@ public class TestNewContentCrawler extends LockssTestCase {
 		 crawlStatus.getCrawlStatus());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
     Alert al = Alert.auAlert(Alert.CRAWL_FAILED, mau);
-    al.setAttribute(Alert.ATTR_TEXT,
-		    "Crawl finished with error: Fetch error: 2 files fetched, 0 warnings, 1 error");
+    al.setAttribute(Alert.ATTR_TEXT, alertTxtErr);
     assertEquals(ListUtil.list(al), crawler.alerts);
   }
+
+  private String alertTxtErr =
+    "Crawl finished with error: Fetch error: 2 files fetched, 0 warnings, 1 error\n\n" +
+    "Refetch Depth: 1\n" +
+    "Max Depth: 1000\n" +
+    "Actual Depth: 2";
 
   public void testGetStatusErrorStartUrl() {
     mau = newMyMockArchivalUnit();

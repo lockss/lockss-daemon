@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCrawler.java,v 1.51 2013-10-17 07:49:01 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.51.4.1 2014-03-20 07:44:06 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -413,6 +413,7 @@ public abstract class BaseCrawler
 	    crawlStatus.getNumUrlsWithErrorsOfSeverity(CrawlerStatus.Severity.Fatal);
 	  sb.append(StringUtil.numberOfUnits(err, "error"));
 	}
+	appendAlertInfo(sb);
 	raiseAlert(Alert.auAlert(alert, au), sb.toString());
 
 	NodeManager nodeManager = getDaemon().getNodeManager(au);
@@ -450,6 +451,10 @@ public abstract class BaseCrawler
 
   protected void raiseAlert(Alert alert, String text) {
     alertMgr.raiseAlert(alert, text);
+  }
+
+  // Override to add info to alert
+  protected void appendAlertInfo(StringBuilder sb) {
   }
 
   void setThrownStatus(Throwable t) {
