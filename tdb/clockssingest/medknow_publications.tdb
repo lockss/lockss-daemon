@@ -303,7 +303,7 @@
     param[journal_issn] = 1008-682X
 
     au < doesNotExist ; doesNotExist ; 2013 ; Asian Journal of Andrology Volume 15 ; 2013 ; 15 >
-    au < expected ; exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
+    au < exists ; exists ; 2014 ; Asian Journal of Andrology Volume 16 ; 2014 ; 16 >
 
   }
 
