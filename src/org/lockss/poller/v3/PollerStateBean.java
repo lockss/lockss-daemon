@@ -1,9 +1,9 @@
 /*
- * $Id: PollerStateBean.java,v 1.38 2013-08-08 05:57:41 tlipkis Exp $
+ * $Id: PollerStateBean.java,v 1.38.4.1 2014-03-20 07:45:12 tlipkis Exp $
  */
 
 /*
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,6 +44,7 @@ import org.lockss.poller.v3.V3Poller.PollVariant;
  * Persistant state object for the V3Poller.
  */
 public class PollerStateBean implements LockssSerializable {
+  private static final Logger log = Logger.getLogger("PollerStateBean");
 
   /* Unique poll identifier. */
   private String pollKey;
@@ -560,6 +561,9 @@ public class PollerStateBean implements LockssSerializable {
     /** Peer from which to request a repair. If null, this is a 
      * publisher repair. */
     protected final PeerIdentity repairFrom;
+    /** Result of tallying the obtained repair.  May be null if no repair
+     * was fetched (or if restored from saved state pre-1.65) */
+    protected BlockTally.Result tallyResult;
 
     /**
      * Create a publisher repair object.
@@ -592,6 +596,14 @@ public class PollerStateBean implements LockssSerializable {
     public boolean isPublisherRepair() {
       return (repairFrom == null);
     }
+
+    protected void setTallyResult(BlockTally.Result tallyResult) {
+      this.tallyResult = tallyResult;
+    }
+
+    public BlockTally.Result getTallyResult() {
+      return tallyResult;
+    }
   }
 
   /**
@@ -603,6 +615,8 @@ public class PollerStateBean implements LockssSerializable {
     private final Map<String, Repair> pendingRepairs;
     private final Map<String, Repair> activeRepairs;
     private final List<Repair> completedRepairs;
+    private int	unrepaired = 0;
+
     
     public RepairQueue(int maxRepairs) {
       this.maxRepairs = maxRepairs < 0 ? Integer.MAX_VALUE : maxRepairs;
@@ -684,7 +698,7 @@ public class PollerStateBean implements LockssSerializable {
      * 
      * @param urls The list of URLs to move to the active state.
      */
-    public void markActive(List<String> urls) {
+    public synchronized void markActive(List<String> urls) {
       for (String url: urls) {
         markActive(url);
       }
@@ -706,11 +720,32 @@ public class PollerStateBean implements LockssSerializable {
      * Mark a URL completed.
      * 
      * @param url The URL to move to the completed state.
+     * @param tallyResult The disposition of the repair.
      */
-    public synchronized void markComplete(String url) {
+    public synchronized void markComplete(String url,
+					  BlockTally.Result tallyResult) {
       Repair r = activeRepairs.remove(url);
       if (r != null) {
+	r.setTallyResult(tallyResult);
         completedRepairs.add(r);
+      }
+      switch (tallyResult) {
+      case WON:
+      case LOST_POLLER_ONLY_BLOCK:
+	break;
+      case LOST:
+      case TOO_CLOSE:
+	unrepaired++;
+	break;
+      case LOST_VOTER_ONLY_BLOCK:
+      case NOQUORUM:
+	log.warning("Shouldn't happen: " + tallyResult.printString +
+		    " after repair: " + url);
+	break;
+      default:
+	log.warning("Unexpected result from post-repair tally: " +
+		    tallyResult.printString + ": " +
+		    url);
       }
     }
     
@@ -725,6 +760,14 @@ public class PollerStateBean implements LockssSerializable {
     
     public synchronized List<PollerStateBean.Repair> getCompletedRepairs() {
       return completedRepairs;
+    }
+
+    public synchronized int getNumUnrepaired() {
+      return pendingRepairs.size() + activeRepairs.size() + unrepaired;
+    }
+
+    public synchronized int getNumFailedRepair() {
+      return pendingRepairs.size() + activeRepairs.size() + unrepaired;
     }
   }
 

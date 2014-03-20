@@ -1,10 +1,10 @@
 /*
- * $Id: PollManager.java,v 1.268 2013-07-10 18:49:09 tlipkis Exp $
+ * $Id: PollManager.java,v 1.268.10.1 2014-03-20 07:45:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -2986,6 +2986,14 @@ public class PollManager
 
   public int getPollEndEventCount(int status) {
     return pollEndEventCounters[status];
+  }
+
+  public int getNumActiveV3Votes() {
+    return entryManager.countCurrentV3Voters();
+  }
+
+  public int getNumActiveV3Polls() {
+    return entryManager.countCurrentV3Pollers();
   }
 
 }
