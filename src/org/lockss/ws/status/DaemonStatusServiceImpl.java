@@ -1,10 +1,10 @@
 /*
- * $Id: DaemonStatusServiceImpl.java,v 1.1 2013-03-22 04:47:32 fergaloy-sf Exp $
+ * $Id: DaemonStatusServiceImpl.java,v 1.1.16.1 2014-03-20 07:45:31 tlipkis Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -169,7 +169,10 @@ public class DaemonStatusServiceImpl implements DaemonStatusService {
       NodeManager nodeMgr = theDaemon.getNodeManager(au);
       AuState state = nodeMgr.getAuState();
 
-      result.setAccessType(state.getAccessType().toString());
+      AuState.AccessType atype = state.getAccessType();
+      if (atype != null) {
+	result.setAccessType(atype.toString());
+      }
       long contentSize = AuUtil.getAuContentSize(au, false);
       if (contentSize != -1) {
 	result.setContentSize(contentSize);
