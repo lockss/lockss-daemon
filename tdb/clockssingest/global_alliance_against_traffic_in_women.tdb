@@ -3,114 +3,27 @@
   publisher <
     name = Global Alliance Against Traffic in Women ;
     info[contract] = 2013 ;
-    info[tester] = 0
+    info[tester] = 7
   >
-	comment[platform] = custom
-	
-    plugin = needs.plugin
+  
+     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+     implicit < status ; status2 ; year ; name ; volume ; param[year] >
 
  
-    {
+  {
   
     title < 
       name = Anti-Trafficking Review ;
-      issn = 2286-7511
+      issn = 2286-7511 ;
+      eissn = 2287-0113	
     >
+      
+      param[base_url] = http://www.antitraffickingreview.org/
+      param[journal_id] = atr
+      
+      au < manifest ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
+      au < manifest ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
 
-
-    }
-    
-    {
-    
-  
-    title < 
-      name = Measuring the Success of Counter-Trafficking Interventions in the Criminal Justice Sector
-
-    >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = GRETAÕs First Years of Work: Review of the monitoring of implementation of the Council of Europe Convention on Action against Trafficking in Human Beings 
-
-     >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Accountable to Whom? Accountable for What? Understanding anti-child trafficking discourse and policy in southern Benin 
-
-    >
-
-
-    }
-    
-    {
-    
-    title < 
-      name = The Road to Effective Remedies: Pragmatic reasons for treating cases of Òsex traffickingÓ in the Australian sex industry as a form of Òlabour traffickingÓ
-
-    >
-
-
-    } 
-    
-    {
-  
-    title < 
-      name = Using Human Rights to Hold the US Accountable for its Anti-Sex Trafficking Agenda: The Universal Periodic Review and new directions for US policy 
-    >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = A Lie More Disastrous than the Truth: Asylum and the identification of trafficked women in the UK
-    >
-
-
-    }
-    
-    {
-  
-    title < 
-      name = Sex Trafficking, Law Enforcement and Perpetrator Accountability
-    >
-
-
-    }
-
-    {
-  
-    title < 
-      name = Accountability and the Use of Raids to Fight Trafficking
-    >
-
-
-    }
-    
-    {
-    
-    title <
-      name = We have the right not to be ÒrescuedÓ: When antitrafficking programmes undermine the health and wellbeing of sex workers 
-    >
-    
-    }
-    
-    {
-    
-    title <
-      name = Editorial
-    >
-    
     }
 
 }
