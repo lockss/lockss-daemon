@@ -4,9 +4,6 @@
     name = American Society for Pharmacology and Experimental Therapeutics
   >
 
-  pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
-
   {
   
     title <
