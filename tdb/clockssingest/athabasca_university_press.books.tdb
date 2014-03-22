@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = Athabasca University Press ;
+    info[contract] = 2014 ;
+    info[tester] = 0
+  >
+
+  plugin = needs.plugin
+  param[base_url] = http://www.aupress.ca/
+
+  {
+
+    implicit < status ; status2 ; year ; eisbn ; param[isbn] ; param[volume] ; name ; author >
+
+    {
+  
+    title < 
+      name = EBook ;
+      type = bookSeries 
+      
+      >
+
+    au < exists ; exists ; 2008 ; 9781897425091 ; 9781897425091 ; 120137 ; Imagining Head-Smashed-In: Aboriginal Buffalo Hunting on the Northern Plains ; Jack W. Brink > 
+      
+
+    }   
+
+      
+ }
+ 
+
+}
