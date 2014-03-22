@@ -37,8 +37,8 @@
     au < released ; 2009 ; American Imago Volume 66 ; 66 >
     au < released ; 2010 ; American Imago Volume 67 ; 67 >
     au < released ; 2011 ; American Imago Volume 68 ; 68 >
-    au < manifest ; 2012 ; American Imago Volume 69 ; 69 >
-    au < manifest ; 2013 ; American Imago Volume 70 ; 70 >
+    au < testing ; 2012 ; American Imago Volume 69 ; 69 >
+    au < testing ; 2013 ; American Imago Volume 70 ; 70 >
     au < manifest ; 2014 ; American Imago Volume 71 ; 71 >
     
   }
@@ -67,8 +67,8 @@
     au < released ; 2007 ; American Jewish History Volume 93 ; 93 >
     au < released ; 2008 ; American Jewish History Volume 94 ; 94 >
     au < released ; 2009 ; American Jewish History Volume 95 ; 95 >
-    au < manifest ; 2010 ; American Jewish History Volume 96 ; 96 >
-    au < manifest ; 2013 ; American Jewish History Volume 97 ; 97 >
+    au < testing ; 2010 ; American Jewish History Volume 96 ; 96 >
+    au < testing ; 2013 ; American Jewish History Volume 97 ; 97 >
     au < manifest ; 2014 ; American Jewish History Volume 98 ; 98 >
     
   }
@@ -101,7 +101,7 @@
     au < released ; 2010 ; American Journal of Mathematics Volume 132 ; 132 >
     au < released ; 2011 ; American Journal of Mathematics Volume 133 ; 133 >
     au < released ; 2012 ; American Journal of Mathematics Volume 134 ; 134 >
-    au < manifest ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
+    au < testing ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
     au < manifest ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
     
   }
@@ -134,7 +134,7 @@
     au < released ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
     au < released ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
     au < released ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
-    au < manifest ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
+    au < testing ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
     au < manifest ; 2014 ; American Journal of Philology Volume Volume 135 ; 135 >
     
   }
@@ -167,7 +167,7 @@
     au < released ; 2010 ; American Quarterly Volume 62 ; 62 >
     au < released ; 2011 ; American Quarterly Volume 63 ; 63 >
     au < released ; 2012 ; American Quarterly Volume 64 ; 64 >
-    au < manifest ; 2013 ; American Quarterly Volume 65 ; 65 >
+    au < testing ; 2013 ; American Quarterly Volume 65 ; 65 >
     au < manifest ; 2014 ; American Quarterly Volume 66 ; 66 >
 
   }
@@ -200,7 +200,7 @@
     au < released ; 2010 ; Arethusa Volume 43 ; 43 >
     au < released ; 2011 ; Arethusa Volume 44 ; 44 >
     au < released ; 2012 ; Arethusa Volume 45 ; 45 >
-    au < manifest ; 2013 ; Arethusa Volume 46 ; 46 >
+    au < testing ; 2013 ; Arethusa Volume 46 ; 46 >
     au < manifest ; 2014 ; Arethusa Volume 47 ; 47 >
     
   }
@@ -231,7 +231,7 @@
     au < released ; 2010 ; Book History Volume 13 ; 13 >
     au < released ; 2011 ; Book History Volume 14 ; 14 >
     au < released ; 2012 ; Book History Volume 15 ; 15 >
-    au < manifest ; 2013 ; Book History Volume 16 ; 16 >
+    au < testing ; 2013 ; Book History Volume 16 ; 16 >
     au < expected ; 2014 ; Book History Volume 17 ; 17 >
     
   }
@@ -253,7 +253,7 @@
     au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
     au < released ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
     au < released ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
-    au < manifest ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
+    au < testing ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
     au < manifest ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
 
   }
@@ -309,7 +309,7 @@
     au < released ; 2010 ; Bulletin of the History of Medicine Volume 84 ; 84 >
     au < released ; 2011 ; Bulletin of the History of Medicine Volume 85 ; 85 >
     au < released ; 2012 ; Bulletin of the History of Medicine Volume 86 ; 86 >
-    au < manifest ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
+    au < testing ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
     au < expected ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
     
   }
@@ -343,7 +343,7 @@
     au < released ; 2010 ; Callaloo Volume 33 ; 33 >
     au < released ; 2011 ; Callaloo Volume 34 ; 34 >
     au < released ; 2012 ; Callaloo Volume 35 ; 35 >
-    au < manifest ; 2013 ; Callaloo Volume 36 ; 36 >
+    au < testing ; 2013 ; Callaloo Volume 36 ; 36 >
     au < manifest ; 2014 ; Callaloo Volume 37 ; 37 >
     
   }
@@ -358,8 +358,8 @@
     param[journal_dir] = cea_critic
     attr[journal_id] = cea
 
-    au < manifest ; 2013 ; CEA Critic Volume 75 ; 75 >
-    au < manifest ; 2014 ; CEA Critic Volume 76 ; 76 >
+    au < testing ; 2013 ; CEA Critic Volume 75 ; 75 >
+    au < expected ; 2014 ; CEA Critic Volume 76 ; 76 >
 
   }
 
