@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.32 2013-08-14 23:27:15 barry409 Exp $
+ * $Id: BlockingPeerChannel.java,v 1.32.4.1 2014-03-22 04:07:43 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.net.*;
+import javax.net.ssl.SSLPeerUnverifiedException;
 
 import org.lockss.util.*;
 import org.lockss.util.Queue;
@@ -388,8 +389,6 @@ class BlockingPeerChannel implements PeerChannel {
   private void startConnectedChannel() throws IOException {
     assertState(ChannelState.STARTING, "startConnectedChannel");
     try {
-      ins = sock.getInputStream();
-      outs = sock.getOutputStream();
       if (scomm.isBufferedSend()) {
 	socket_outs = outs; // if abort, close socket stream, not buffered
 			    // stream (which will hang in flush() if
@@ -400,14 +399,9 @@ class BlockingPeerChannel implements PeerChannel {
 
       stateTrans(ChannelState.STARTING, ChannelState.OPEN);
 
-      // writer must be started first as reader refers to writer thread (to
-      // set name when peerid received)
-      startWriter();
+      // Reader starts writer (after SSL handshake, if any).
       startReader();
 
-    } catch (IOException e) {
-      log.error("Channel didn't start", e);
-      throw e;
     } catch (Exception e) {
       log.error("Channel didn't start", e);
       throw new IOException(e.toString());
@@ -580,6 +574,14 @@ class BlockingPeerChannel implements PeerChannel {
    */
   void handleInputStream(ChannelRunner runner) {
     try {
+      // Perform SSL handshake if this is an SSL connection.  Throw if peer
+      // not verified.
+      scomm.handShakeIfClientAuth(sock);
+
+      ins = sock.getInputStream();
+      outs = sock.getOutputStream();
+      startWriter();
+
       while (true) {
 	try {
 	  readMessages(runner);
@@ -613,6 +615,11 @@ class BlockingPeerChannel implements PeerChannel {
 	  throw e;
 	}
       }
+    } catch (SSLPeerUnverifiedException e) {
+      // Warning already issued by handShakeIfClientAuth()
+      log.debug2("Not verified: " +
+		 sock.getInetAddress() + ":" + sock.getPort());
+      abortChannel();
     } catch (SocketException e) {
       // Expected when closing
       if (isClosed()) {
@@ -648,6 +655,8 @@ class BlockingPeerChannel implements PeerChannel {
 	    // reader, writer can get set to null while in ChannelState.CLOSING
 	    ChannelRunner tmp;
 	    if ((tmp = reader) != null) tmp.setRunnerName();
+	    // Must ensure that writer thread has been created by the time
+	    // reader thread gets here
 	    if ((tmp = writer) != null) tmp.setRunnerName();
 	  }
 	}

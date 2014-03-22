@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.56 2011-11-08 20:22:26 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.56.46.1 2014-03-22 04:07:43 tlipkis Exp $
  */
 
 /*
@@ -1474,12 +1474,9 @@ public class BlockingStreamComm
     }
     // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
     setupOpenSocket(sock);
-    if (sock instanceof SSLSocket && paramSslClientAuth) {
-      // Ensure handshake is complete before doing anything else
-      handShake((SSLSocket)sock);
-    }
     log.debug2("Accepted connection from " +
 	       new IPAddr(sock.getInetAddress()));
+    // SSL handshake now performed by channel
     BlockingPeerChannel chan = getSocketFactory().newPeerChannel(this, sock);
     chan.startIncoming();
   }
@@ -1579,6 +1576,14 @@ public class BlockingStreamComm
 	log.error("Socket close threw " + ex2);
       }
       throw ex;
+    }
+  }
+
+  protected void handShakeIfClientAuth(Socket sock)
+      throws SSLPeerUnverifiedException {
+    if (sock instanceof SSLSocket && paramSslClientAuth) {
+      // Ensure handshake is complete before doing anything else
+      handShake((SSLSocket)sock);
     }
   }
 
