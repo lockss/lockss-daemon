@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.21 2014-01-29 05:21:56 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.22 2014-03-23 17:10:48 tlipkis Exp $
  */
 
 /*
@@ -182,11 +182,16 @@ public abstract class BaseProxyManager extends JettyManager {
   protected void addListeners(HttpServer server) {
     KeyManagerFactory kmf = null;
     if (sslPort > 0) {
-      kmf = keystoreMgr.getKeyManagerFactory(sslKeystoreName);
-      if (kmf == null) {
-	log.error("Keystore " + sslKeystoreName +
-		  " not found, not starting " +
-		  getServerName() + " SSL server");
+      if (sslKeystoreName == null) {
+	log.error("No keystore configured for service " + 
+		  getServerName() + ", not starting SSL server");
+      } else {
+	kmf = keystoreMgr.getKeyManagerFactory(sslKeystoreName);
+	if (kmf == null) {
+	  log.error("Keystore " + sslKeystoreName +
+		    " not found, not starting " +
+		    getServerName() + " SSL server");
+	}
       }
     }
 
