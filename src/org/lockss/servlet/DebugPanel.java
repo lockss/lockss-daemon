@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.39 2014-02-03 21:25:49 thib_gc Exp $
+ * $Id: DebugPanel.java,v 1.40 2014-03-23 17:11:02 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.servlet;
 
 import javax.servlet.*;
 import java.io.*;
+import java.util.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import org.mortbay.html.*;
@@ -94,6 +95,10 @@ public class DebugPanel extends LockssServlet {
   static final String ACTION_CRAWL_PLUGINS = "Crawl Plugins";
   static final String ACTION_RELOAD_CONFIG = "Reload Config";
   static final String ACTION_DISABLE_METADATA_INDEXING = "Disable Indexing";
+
+  /** Set of actions for which audit alerts shouldn't be generated */
+  static final Set noAuditActions = SetUtil.set(ACTION_FIND_URL);
+
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -156,11 +161,12 @@ public class DebugPanel extends LockssServlet {
       formDepth = getParameter(KEY_REFETCH_DEPTH);
 
       UserAccount acct = getUserAccount();
-      if (acct != null) {
+      if (acct != null && !noAuditActions.contains(action)) {
 	acct.auditableEvent("used debug panel action: " + action +
 			    " AU ID: " + formAuid);
       }
     }
+
     if (ACTION_MAIL_BACKUP.equals(action)) {
       doMailBackup();
     }
