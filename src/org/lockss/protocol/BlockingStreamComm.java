@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.56.46.1 2014-03-22 04:07:43 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.56.46.2 2014-03-23 17:05:24 tlipkis Exp $
  */
 
 /*
@@ -140,6 +140,14 @@ public class BlockingStreamComm
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 0;
+
+  /** Data timeout (SO_TIMEOUT) during SSL negotiation (if any).  Channel
+   * isn't fully set up yet and idle timeout isn't in effect.  Data timeout
+   * ({@value PARAM_DATA_TIMEOUT} may be zero, but SSL negotiation should
+   * always have a timeout.  */
+  public static final String PARAM_SSL_HANDSHAKE_TIMEOUT =
+    PREFIX + "timeout.sslHandshake";
+  public static final long DEFAULT_SSL_HANDSHAKE_TIMEOUT = 5 * Constants.MINUTE;
 
   /** Enable SO_KEEPALIVE if true */
   public static final String PARAM_SOCKET_KEEPALIVE =
@@ -291,6 +299,7 @@ public class BlockingStreamComm
   private long paramPoolKeepaliveTime = DEFAULT_CHANNEL_THREAD_POOL_KEEPALIVE;
   private long paramConnectTimeout = DEFAULT_CONNECT_TIMEOUT;
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
+  private long paramSslHandshakeTimeout = DEFAULT_SSL_HANDSHAKE_TIMEOUT;
   private boolean paramSoKeepAlive = DEFAULT_SOCKET_KEEPALIVE;
   private boolean paramIsTcpNoDelay = DEFAULT_TCP_NODELAY;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
@@ -961,6 +970,9 @@ public class BlockingStreamComm
 						     DEFAULT_CONNECT_TIMEOUT);
 	paramSoTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
 						DEFAULT_DATA_TIMEOUT);
+	paramSslHandshakeTimeout =
+	  config.getTimeInterval(PARAM_SSL_HANDSHAKE_TIMEOUT,
+				 DEFAULT_SSL_HANDSHAKE_TIMEOUT);
 	paramSoKeepAlive = config.getBoolean(PARAM_SOCKET_KEEPALIVE,
 					     DEFAULT_SOCKET_KEEPALIVE);
 	paramSendWakeupTime = config.getTimeInterval(PARAM_SEND_WAKEUP_TIME,
@@ -1563,9 +1575,23 @@ public class BlockingStreamComm
     }
   }
 
-  protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
-    SSLSession session = s.getSession();
+  // Make it easy to compare timeout values, where 0 = infinite.
+  long absTimeout(long timeout) {
+    return timeout == 0 ? Long.MAX_VALUE : timeout;
+  }
+
+  protected void handshake(SSLSocket s) throws SSLPeerUnverifiedException {
+    long oldTimeout = -2;
     try {
+      oldTimeout = s.getSoTimeout();
+      if (absTimeout(paramSslHandshakeTimeout) < absTimeout(oldTimeout)) {
+	s.setSoTimeout((int)paramSslHandshakeTimeout);
+      }
+    } catch (SocketException e) {
+      log.warning("Couldn't save/set socket timeout before handshake", e);
+    }
+    try {
+      SSLSession session = s.getSession();
       java.security.cert.Certificate[] certs = session.getPeerCertificates();
       log.debug(session.getPeerHost() + " via " + session.getProtocol() + " verified");
     } catch (SSLPeerUnverifiedException ex) {
@@ -1576,14 +1602,23 @@ public class BlockingStreamComm
 	log.error("Socket close threw " + ex2);
       }
       throw ex;
+    } finally {
+      if (!s.isClosed() &&
+	  absTimeout(paramSslHandshakeTimeout) < absTimeout(oldTimeout)) {
+	try {
+	  s.setSoTimeout((int)oldTimeout);
+	} catch (SocketException e) {
+	  log.warning("Couldn't restore socket timeout after handshake", e);
+	}
+      }
     }
   }
 
-  protected void handShakeIfClientAuth(Socket sock)
+  protected void handshakeIfClientAuth(Socket sock)
       throws SSLPeerUnverifiedException {
     if (sock instanceof SSLSocket && paramSslClientAuth) {
       // Ensure handshake is complete before doing anything else
-      handShake((SSLSocket)sock);
+      handshake((SSLSocket)sock);
     }
   }
 
@@ -1968,7 +2003,7 @@ public class BlockingStreamComm
       // Setup socket (SO_TIMEOUT, etc.) before SSL handshake
       setupOpenSocket(s);
       if (paramSslClientAuth) {
-	handShake(s);
+	handshake(s);
       }
       return s;
     }

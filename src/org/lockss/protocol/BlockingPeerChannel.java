@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.32.4.1 2014-03-22 04:07:43 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.32.4.2 2014-03-23 17:05:24 tlipkis Exp $
  */
 
 /*
@@ -576,7 +576,7 @@ class BlockingPeerChannel implements PeerChannel {
     try {
       // Perform SSL handshake if this is an SSL connection.  Throw if peer
       // not verified.
-      scomm.handShakeIfClientAuth(sock);
+      scomm.handshakeIfClientAuth(sock);
 
       ins = sock.getInputStream();
       outs = sock.getOutputStream();
@@ -616,7 +616,7 @@ class BlockingPeerChannel implements PeerChannel {
 	}
       }
     } catch (SSLPeerUnverifiedException e) {
-      // Warning already issued by handShakeIfClientAuth()
+      // Warning already issued by handshakeIfClientAuth()
       log.debug2("Not verified: " +
 		 sock.getInetAddress() + ":" + sock.getPort());
       abortChannel();

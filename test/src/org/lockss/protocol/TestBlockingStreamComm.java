@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.38 2012-07-02 16:27:28 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.38.36.1 2014-03-23 17:05:24 tlipkis Exp $
  */
 
 /*
@@ -1736,7 +1736,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     SocketFactory sockFact;
     PeerIdentity localId;
     SimpleQueue assocEvents;
-    SimpleQueue handShakeEvents;
+    SimpleQueue handshakeEvents;
     SimpleBinarySemaphore acceptSem;
     BlockingStreamComm.SocketFactory superSockFact;
     int uniqueId;
@@ -1826,18 +1826,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
 
     @Override
-    protected void handShake(SSLSocket s) throws SSLPeerUnverifiedException {
+    protected void handshake(SSLSocket s) throws SSLPeerUnverifiedException {
       try {
-	super.handShake(s);
-	if (handShakeEvents != null) handShakeEvents.put(s);
+	super.handshake(s);
+	if (handshakeEvents != null) handshakeEvents.put(s);
       } catch (SSLPeerUnverifiedException e) {
-	if (handShakeEvents != null) handShakeEvents.put(e);
+	if (handshakeEvents != null) handshakeEvents.put(e);
 	throw e;
       }
     }
 
     void setHandShakeQueue(SimpleQueue q) {
-      handShakeEvents = q;
+      handshakeEvents = q;
     }
     void setAssocQueue(SimpleQueue q) {
       assocEvents = q;

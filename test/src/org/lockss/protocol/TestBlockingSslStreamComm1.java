@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.16 2012-08-08 18:02:03 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.16.34.1 2014-03-23 17:05:24 tlipkis Exp $
  */
 
 /*
@@ -129,13 +129,14 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     return KeyStoreUtil.createKeyStore(p);
   }
 
-  // Ensure SO_TIMEOUT is set before SSL handshake
-  public void testReadTimeoutDuringHandshake() throws IOException {
+  // Ensure SO_TIMEOUT is set before accept()
+  public void testReadTimeoutDuringAccept() throws IOException {
     TimeBase.setSimulated(1000);
     PeerMessage msgIn;
-    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "10h");
-    cprops.setProperty(BlockingStreamComm.PARAM_DATA_TIMEOUT, "100");
-    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    ConfigurationUtil.addFromArgs(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME,
+				  "10h",
+				  BlockingStreamComm.PARAM_DATA_TIMEOUT,
+				  "100");
     setupComm1();
     setupComm2();
     comm1.setAssocQueue(assocQ);
