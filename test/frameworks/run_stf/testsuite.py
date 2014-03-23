@@ -184,6 +184,7 @@ class V3TestCases( LockssTestCases ):
         self.AU = lockss_daemon.Simulated_AU( **self.simulated_AU_parameters )
         log.info( "Creating simulated AU's" )
         for client in self.clients:
+            self.pre_create_client( client )
             client.createAu( self.AU )
         for client in self.clients:
             client.waitAu( self.AU )
@@ -191,6 +192,9 @@ class V3TestCases( LockssTestCases ):
         for client in self.clients:
             self.assert_( client.waitForSuccessfulCrawl( self.AU ), "AU's did not complete initial crawl" )
         log.info( "AU's completed initial crawl" )
+
+    def pre_create_client( self, client ):
+        pass
 
     def _content_matches( self, node ):
         return filecmp.cmp( *( client.getAuNode( self.AU, node.url ).filename() for client in ( self.victim, self.nonVictim ) ) )
@@ -381,6 +385,47 @@ class SimpleDamageV3TestCase( V3TestCases ):
         return nodes
 
 
+class UnsuccessfulRepairV3TestCase( V3TestCases ):
+    """Test a repair that doesn't match consensus"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        
+    def setUp( self ):
+        V3TestCases.setUp( self )
+        self.framework.appendLocalConfig( { 'org.lockss.simulatedAu.badCachedFileLoc': '1,1',
+                                            'org.lockss.simulatedAu.badCachedFileLoc': '1' }, self.victim )
+
+    def pre_create_client( self, client ):
+        if client == self.victim:
+            self.framework.appendLocalConfig( { 'org.lockss.simulatedAu.badCachedFileLoc': '',
+                                                'org.lockss.simulatedAu.badCachedFileNum': '3' }, self.victim )
+        self.victim.reloadConfiguration()
+
+    def _damage_AU( self ):
+        return []
+
+    def _check_v3_result( self, nodes ):
+        log.info( 'Waiting for poll to complete...' )
+        self._await_complete( nodes )
+        self._verify_poll_results()
+        log.info( 'AU repair not verified, as expected' )
+
+    def _await_complete( self, nodes ):
+        log.info( 'Waiting for V3 poll to complete...' )
+        self.assert_( self.victim.waitForCompletedV3Poll( self.AU ), 'Timed out while waiting for poll to complete' )
+        log.info( 'Poll successfully completed' )
+
+    def _verify_poll_results( self ):
+        self.assertEqual( self.victim.getPollResults( self.AU ),
+                          (u'Complete', u'95.23% Agreement') )
+        poll = self.victim.findCompletedAuV3Poll( self.AU )
+        summary = self.victim.getPollSummary( poll )
+        self.assertEqual( int( summary[ 'Agreeing URLs' ][ 'value' ] ), 20 )
+        self.assertEqual( int( summary[ 'Disagreeing URLs' ][ 'value' ] ), 1 )
+        self.assertEqual( int( summary[ 'Completed Repairs' ][ 'value' ] ), 1 )
+
+
 class TooCloseV3Tests( V3TestCases ):
     """Abstract class"""
 
@@ -407,7 +452,7 @@ class TooCloseV3Tests( V3TestCases ):
         return nodes
 
     def _check_v3_result( self, nodes ):
-        log.info( 'Waiting for V3 repair...' )
+        log.info( 'Waiting for poll to complete...' )
         self._await_complete( nodes )
         self._verify_poll_results()
         log.info( 'AU successfully repaired' )

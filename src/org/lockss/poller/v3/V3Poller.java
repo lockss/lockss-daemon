@@ -1,10 +1,10 @@
 /*
- * $Id: V3Poller.java,v 1.174 2013-10-17 07:49:50 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.175 2014-03-23 17:10:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -449,6 +449,13 @@ public class V3Poller extends BasePoll {
   
   /** Length of poller and voter challenges */
   public static final int HASH_NONCE_LENGTH = 20;
+
+  /**
+   * Maximum number of unrepaired URLs to report in PersistentDisagreement
+   * alert
+   */
+  public static final String PARAM_MAX_ALERT_URLS = PREFIX + "maxAlertUrls";
+  public static final int DEFAULT_MAX_ALERT_URLS = 50;
 
   /**
    * Accessors for the hashes within a {@link HashBlock.Version}.
@@ -1173,6 +1180,10 @@ public class V3Poller extends BasePoll {
     stopPoll(POLLER_STATUS_ABORTED);
   }
 
+  private String numOf(int n, String s) {
+    return StringUtil.numberOfUnits(n, s);
+  }
+
   protected void raisePollEndAlert() {
     // Raise Poll finished alert
     StringBuilder sb = new StringBuilder();
@@ -1180,7 +1191,7 @@ public class V3Poller extends BasePoll {
     sb.append(getStatusString());
     sb.append("\n\n");
 
-    sb.append(StringUtil.numberOfUnits(getTalliedUrls().size(), "URL"));
+    sb.append(numOf(getTalliedUrls().size(), "URL"));
     sb.append(" tallied");
     if (getStatus() == POLLER_STATUS_COMPLETE) {
       sb.append(", ");
@@ -1190,14 +1201,94 @@ public class V3Poller extends BasePoll {
 					   ColumnDescriptor.TYPE_AGREEMENT);
       sb.append(agmnt);
       sb.append(" agreement");
+      if (lhr != null) {
+	sb.append(", ");
+	sb.append(numOf(lhr.getNewlySuspectVersions(), "new suspect file"));
+      }
+      PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+      // If any repairs were queued, include repair stats
+      if (repairQueue.size() > 0) {
+	sb.append("\n");
+	sb.append(numOf(repairQueue.getCompletedRepairs().size(), "repair"));
+	sb.append(" received, ");
+	sb.append(repairQueue.getActiveRepairs().size());
+	sb.append(" not received.");
+	if (repairQueue.getNumFailedRepair() > 0) {
+	  sb.append("\n\n");
+	  sb.append(numOf(repairQueue.getNumFailedRepair(), "repair"));
+	  sb.append(" didn't resolve disagreement");
+	  raisePersistentDisagreementAlert();
+	}
+      }
     }
+    pollManager.raiseAlert(Alert.auAlert(Alert.POLL_FINISHED, getAu()),
+			   sb.toString());
+  }
+
+  protected void raisePersistentDisagreementAlert() {
+    // Raise PersistentDisagreement alert
+    PollerStateBean.RepairQueue repairQueue = pollerState.getRepairQueue();
+    if (repairQueue.size() <= 0) {
+      log.warning("raisePersistentDisagreementAlert() called when no repairs");
+      return;
+    }
+    if (repairQueue.getNumFailedRepair() <= 0) {
+      log.warning("raisePersistentDisagreementAlert() called when no failed repairs");
+      return;
+    }
+    StringBuilder sb = new StringBuilder();
+    sb.append("Poll did not achieve consensus on all files");
+    sb.append("\n\n");
+
+    sb.append(numOf(getTalliedUrls().size(), "URL"));
+    sb.append(" tallied");
+    sb.append(", ");
+    DisplayConverter dispConverter = new DisplayConverter();
+    String agmnt =
+      dispConverter.convertDisplayString(getPercentAgreement(),
+					 ColumnDescriptor.TYPE_AGREEMENT);
+    sb.append(agmnt);
+    sb.append(" agreement");
     if (lhr != null) {
       sb.append(", ");
-      sb.append(StringUtil.numberOfUnits(lhr.getNewlySuspectVersions(),
-					 "new suspect file"));
+      sb.append(numOf(lhr.getNewlySuspectVersions(), "new suspect file"));
     }
-    sb.append(".");
-    pollManager.raiseAlert(Alert.auAlert(Alert.POLL_FINISHED, getAu()),
+
+    sb.append("\n");
+    sb.append(numOf(repairQueue.getCompletedRepairs().size(), "repair"));
+    sb.append(" received, ");
+    sb.append(repairQueue.getActiveRepairs().size());
+    sb.append(" not received.");
+
+    sb.append("\n\n");
+    sb.append(numOf(repairQueue.getNumFailedRepair(), "repair"));
+    sb.append(" didn't resolve disagreement:");
+
+    if (true) {
+      List<PollerStateBean.Repair> completed =
+	repairQueue.getCompletedRepairs();
+      int nUrls = CurrentConfig.getIntParam(PARAM_MAX_ALERT_URLS,
+					    DEFAULT_MAX_ALERT_URLS);
+      for (PollerStateBean.Repair repair : completed) {
+	if (nUrls <= 0) {
+	  break;
+	}
+	if (repair.getTallyResult() != null) {
+	  switch(repair.getTallyResult()) {
+	  case LOST:
+	  case TOO_CLOSE:
+	    sb.append("\n");
+	    sb.append(repair.getUrl());
+	    nUrls--;
+	    break;
+	  default:
+	  }
+	}
+      }
+    }
+
+    pollManager.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DISAGREEMENT,
+					 getAu()),
 			   sb.toString());
   }
 
@@ -1778,7 +1869,7 @@ public class V3Poller extends BasePoll {
 	}
 	break;
       case LOST_POLLER_ONLY_BLOCK:
-	deleteBlock(url);
+	deleteBlock(url, tallyResult);
 	break;
       case LOST_VOTER_ONLY_BLOCK:
 	if (useVersionCounts) {
@@ -2123,7 +2214,7 @@ public class V3Poller extends BasePoll {
    * Delete (deactivate) the block in our repository.
    * @param url The block to be deleted.
    */
-  private void deleteBlock(String url) {
+  private void deleteBlock(String url, BlockTally.Result tallyResult) {
     try {
       // Delete or don't according to plugin wishes.  If plugin doesn't
       // specify follow global setting for AUs for which it's appropriate
@@ -2140,7 +2231,7 @@ public class V3Poller extends BasePoll {
         log.info("Asked to mark file " + url + " deleted in poll " +
                  pollerState.getPollKey() + ".  Not actually deleting.");
       }
-      pollerState.getRepairQueue().markComplete(url);
+      pollerState.getRepairQueue().markComplete(url, tallyResult);
     } catch (IOException ex) {
       log.warning("Unable to delete node " + url + " in poll " + getKey(), ex);
     }
@@ -2272,7 +2363,7 @@ public class V3Poller extends BasePoll {
 	  BlockTally.Result result = updateTallyStatus(tally, url);
 	  log.debug3("After-vote hash tally for repaired block " + url
 		     + ": " + result.printString);
-	  pollerState.getRepairQueue().markComplete(url);
+	  pollerState.getRepairQueue().markComplete(url, result);
  	} finally {
  	  urlTallier.release();
  	}

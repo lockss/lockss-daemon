@@ -1,10 +1,10 @@
 /*
-* $Id: V3PollStatus.java,v 1.50 2013-10-17 07:49:30 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.51 2014-03-23 17:10:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -237,12 +237,16 @@ public class V3PollStatus {
     }
 
     void addEndStatus(StringBuilder sb, int status) {
+      addEndStatus(sb, status, null);
+    }
+
+    void addEndStatus(StringBuilder sb, int status, String msg) {
       int cnt = pollManager.getPollEndEventCount(status);
       if (cnt != 0) {
 	sb.append(", ");
 	sb.append(cnt);
 	sb.append(" ");
-	sb.append(V3Poller.POLLER_STATUS_STRINGS[status]);
+	sb.append(msg != null ? msg : V3Poller.POLLER_STATUS_STRINGS[status]);
       }
     }
 
@@ -472,45 +476,13 @@ public class V3PollStatus {
 					 V3PollFactory.DEFAULT_ENABLE_V3_POLLER)) { 
 	return "Polling Disabled";
       }
-      int nActive = 0;
-      int nNoQuorum = 0;
-      int nComplete = 0;
-      int nTooBusy = 0;
-      for (V3Poller poller :
-	     (Collection<V3Poller>)pollManager.getV3Pollers()) {
-	switch (poller.getStatus()) {
-	case POLLER_STATUS_STARTING:
-	case POLLER_STATUS_RESUMING:
-	case POLLER_STATUS_INVITING_PEERS:
-	case POLLER_STATUS_HASHING:
-	case POLLER_STATUS_TALLYING:
-	case POLLER_STATUS_WAITING_REPAIRS:
-	  nActive++;
-	  break;
-	case POLLER_STATUS_COMPLETE:
-	  nComplete++;
-	  break;
-	case POLLER_STATUS_NO_QUORUM:
-	  nNoQuorum++;
-	  break;
-	case POLLER_STATUS_ERROR:
-	case POLLER_STATUS_EXPIRED:
-	case POLLER_STATUS_ABORTED:
-	  break;
-	case POLLER_STATUS_NO_TIME:
-	  nTooBusy++;
-	  break;
-	}
-      }
-      List lst = new ArrayList();
-
-      lst.add(StringUtil.numberOfUnits(nActive,
-				       "active poll", "active polls"));
-      if (nComplete > 0) lst.add(nComplete + " complete");
-      if (nNoQuorum > 0) lst.add(nNoQuorum + " no quorum");
-      if (nTooBusy > 0) lst.add(nTooBusy + " too busy");
-      String summ = StringUtil.separatedString(lst, ", ");
-      return new StatusTable.Reference(summ, POLLER_STATUS_TABLE_NAME);
+      StringBuilder sb = new StringBuilder();
+      sb.append(StringUtil.numberOfUnits(pollManager.getNumActiveV3Polls(),
+					 "active poll", "active polls"));
+      addEndStatus(sb, V3Poller.POLLER_STATUS_COMPLETE);
+      addEndStatus(sb, V3Poller.POLLER_STATUS_NO_QUORUM);
+      addEndStatus(sb, V3Poller.POLLER_STATUS_NO_TIME, "too busy");
+      return new StatusTable.Reference(sb.toString(), POLLER_STATUS_TABLE_NAME);
     }
   }
 

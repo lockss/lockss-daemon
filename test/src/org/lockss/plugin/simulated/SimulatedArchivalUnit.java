@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.76 2012-10-25 18:16:55 aishizaki Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.77 2014-03-23 17:10:11 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.net.*;
 import java.util.*;
 import java.io.File;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -59,6 +59,23 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   static final Logger log = Logger.getLogger("SAU");
 
   private static final String SIMULATED_URL_BASE = "http://www.example.com/";
+
+  private static final String PREFIX = Configuration.PREFIX + "simulatedAu.";
+
+  /**
+   * The directory location of a file that should have abnormal content.
+   * Should be a string filepath.  Equivalent to {@link
+   * SimulatedPlugin#PD_BAD_CACHED_FILE_LOC}
+   */
+  public static final String PARAM_BAD_FILE_LOC =
+    PREFIX + "badCachedFileLoc";
+
+  /**
+   * File number of file that should have abnormal content.Equivalent to
+   * {@link SimulatedPlugin#PD_BAD_CACHED_FILE_NUM}
+   */
+  public static final String PARAM_BAD_FILE_NUM =
+    PREFIX + "badCachedFileNum";
 
   /**
    * This is the url which the Crawler should start at.
@@ -347,6 +364,12 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
           config.containsKey(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM)) {
         gen.setAbnormalFile(config.get(SimulatedPlugin.AU_PARAM_BAD_FILE_LOC),
                             config.getInt(SimulatedPlugin.AU_PARAM_BAD_FILE_NUM));
+      }
+      Configuration globalConfig = ConfigManager.getCurrentConfig();
+      if (globalConfig.containsKey(PARAM_BAD_FILE_LOC) &&
+          globalConfig.containsKey(PARAM_BAD_FILE_NUM)) {
+        gen.setAbnormalFile(globalConfig.get(PARAM_BAD_FILE_LOC),
+                            globalConfig.getInt(PARAM_BAD_FILE_NUM));
       }
       if (config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_LOC) &&
           config.containsKey(SimulatedPlugin.AU_PARAM_BAD_CACHED_FILE_NUM)) {
