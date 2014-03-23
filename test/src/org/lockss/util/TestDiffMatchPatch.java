@@ -1,5 +1,5 @@
 /*
- * $Id: TestDiffMatchPatch.java,v 1.1 2013-10-17 07:51:38 tlipkis Exp $
+ * $Id: TestDiffMatchPatch.java,v 1.2 2014-03-23 17:11:13 tlipkis Exp $
  */
 
 /*
@@ -545,7 +545,7 @@ public class TestDiffMatchPatch extends LockssTestCase {
     // Test that we didn't take forever (be forgiving).
     // Theoretically this test could fail very occasionally if the
     // OS task swaps or locks up for a second at the wrong moment.
-    assertTrue("diff_main: Timeout max.", dmp.Diff_Timeout * 1000 * 2 > endTime - startTime);
+    assertTrue("diff_main: Timeout max.", dmp.Diff_Timeout * 1000 * 10 > endTime - startTime);
     dmp.Diff_Timeout = 0;
 
     // Test the linemode speedup.
