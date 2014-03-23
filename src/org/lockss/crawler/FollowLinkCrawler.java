@@ -1,10 +1,10 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.96 2013-08-10 20:47:28 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.97 2014-03-23 17:10:33 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2012 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -260,7 +260,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
 
     // Enable no-substance-collected detection if so configured and
-    // supported by plugin
+    // supported by plugin.
     subChecker = new SubstanceChecker(au);
     if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_CRAWL)) {
       logger.debug2("Checking AU for substance during crawl");
@@ -460,6 +460,13 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected Set newSet() {
     return new HashSet();
   }
+
+  @Override
+  protected void appendAlertInfo(StringBuilder sb) {
+    sb.append(String.format("\n\nRefetch Depth: %d\nMax Depth: %d\nActual Depth: %d",
+			    getRefetchDepth(), maxDepth, crawlStatus.getDepth()));
+  }				
+// 	ab.append(String.format("\n\nFetched: %d\nWarnings" %d|nError
 
   /** Separate method for easy overridability in unit tests, where
    * necessary environment may not be set up */
