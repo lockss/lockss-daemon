@@ -37,8 +37,8 @@
     au < released ; 2009 ; American Imago Volume 66 ; 66 >
     au < released ; 2010 ; American Imago Volume 67 ; 67 >
     au < released ; 2011 ; American Imago Volume 68 ; 68 >
-    au < testing ; 2012 ; American Imago Volume 69 ; 69 >
-    au < testing ; 2013 ; American Imago Volume 70 ; 70 >
+    au < ready ; 2012 ; American Imago Volume 69 ; 69 >
+    au < ready ; 2013 ; American Imago Volume 70 ; 70 >
     au < manifest ; 2014 ; American Imago Volume 71 ; 71 >
     
   }
@@ -67,8 +67,8 @@
     au < released ; 2007 ; American Jewish History Volume 93 ; 93 >
     au < released ; 2008 ; American Jewish History Volume 94 ; 94 >
     au < released ; 2009 ; American Jewish History Volume 95 ; 95 >
-    au < testing ; 2010 ; American Jewish History Volume 96 ; 96 >
-    au < testing ; 2013 ; American Jewish History Volume 97 ; 97 >
+    au < ready ; 2010 ; American Jewish History Volume 96 ; 96 >
+    au < ready ; 2013 ; American Jewish History Volume 97 ; 97 >
     au < manifest ; 2014 ; American Jewish History Volume 98 ; 98 >
     
   }
@@ -101,7 +101,7 @@
     au < released ; 2010 ; American Journal of Mathematics Volume 132 ; 132 >
     au < released ; 2011 ; American Journal of Mathematics Volume 133 ; 133 >
     au < released ; 2012 ; American Journal of Mathematics Volume 134 ; 134 >
-    au < testing ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
+    au < ready ; 2013 ; American Journal of Mathematics Volume 135 ; 135 >
     au < manifest ; 2014 ; American Journal of Mathematics Volume 136 ; 136 >
     
   }
@@ -134,7 +134,7 @@
     au < released ; 2010 ; American Journal of Philology Volume Volume 131 ; 131 >
     au < released ; 2011 ; American Journal of Philology Volume Volume 132 ; 132 >
     au < released ; 2012 ; American Journal of Philology Volume Volume 133 ; 133 >
-    au < testing ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
+    au < ready ; 2013 ; American Journal of Philology Volume Volume 134 ; 134 >
     au < manifest ; 2014 ; American Journal of Philology Volume Volume 135 ; 135 >
     
   }
@@ -167,7 +167,7 @@
     au < released ; 2010 ; American Quarterly Volume 62 ; 62 >
     au < released ; 2011 ; American Quarterly Volume 63 ; 63 >
     au < released ; 2012 ; American Quarterly Volume 64 ; 64 >
-    au < testing ; 2013 ; American Quarterly Volume 65 ; 65 >
+    au < ready ; 2013 ; American Quarterly Volume 65 ; 65 >
     au < manifest ; 2014 ; American Quarterly Volume 66 ; 66 >
 
   }
@@ -200,7 +200,7 @@
     au < released ; 2010 ; Arethusa Volume 43 ; 43 >
     au < released ; 2011 ; Arethusa Volume 44 ; 44 >
     au < released ; 2012 ; Arethusa Volume 45 ; 45 >
-    au < testing ; 2013 ; Arethusa Volume 46 ; 46 >
+    au < ready ; 2013 ; Arethusa Volume 46 ; 46 >
     au < manifest ; 2014 ; Arethusa Volume 47 ; 47 >
     
   }
@@ -231,7 +231,7 @@
     au < released ; 2010 ; Book History Volume 13 ; 13 >
     au < released ; 2011 ; Book History Volume 14 ; 14 >
     au < released ; 2012 ; Book History Volume 15 ; 15 >
-    au < testing ; 2013 ; Book History Volume 16 ; 16 >
+    au < ready ; 2013 ; Book History Volume 16 ; 16 >
     au < expected ; 2014 ; Book History Volume 17 ; 17 >
     
   }
@@ -253,7 +253,7 @@
     au < released ; 2010 ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
     au < released ; 2011 ; Bookbird: A Journal of International Children's Literature Volume 49 ; 49 >
     au < released ; 2012 ; Bookbird: A Journal of International Children's Literature Volume 50 ; 50 >
-    au < testing ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
+    au < ready ; 2013 ; Bookbird: A Journal of International Children's Literature Volume 51 ; 51 >
     au < manifest ; 2014 ; Bookbird: A Journal of International Children's Literature Volume 52 ; 52 >
 
   }
@@ -309,7 +309,7 @@
     au < released ; 2010 ; Bulletin of the History of Medicine Volume 84 ; 84 >
     au < released ; 2011 ; Bulletin of the History of Medicine Volume 85 ; 85 >
     au < released ; 2012 ; Bulletin of the History of Medicine Volume 86 ; 86 >
-    au < testing ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
+    au < ready ; 2013 ; Bulletin of the History of Medicine Volume 87 ; 87 >
     au < expected ; 2014 ; Bulletin of the History of Medicine Volume 88 ; 88 >
     
   }
@@ -343,7 +343,7 @@
     au < released ; 2010 ; Callaloo Volume 33 ; 33 >
     au < released ; 2011 ; Callaloo Volume 34 ; 34 >
     au < released ; 2012 ; Callaloo Volume 35 ; 35 >
-    au < testing ; 2013 ; Callaloo Volume 36 ; 36 >
+    au < ready ; 2013 ; Callaloo Volume 36 ; 36 >
     au < manifest ; 2014 ; Callaloo Volume 37 ; 37 >
     
   }
@@ -358,7 +358,7 @@
     param[journal_dir] = cea_critic
     attr[journal_id] = cea
 
-    au < testing ; 2013 ; CEA Critic Volume 75 ; 75 >
+    au < ready ; 2013 ; CEA Critic Volume 75 ; 75 >
     au < expected ; 2014 ; CEA Critic Volume 76 ; 76 >
 
   }
@@ -414,7 +414,7 @@
     au < released ; 2010 ; Children's Literature Volume 38 ; 38 >
     au < released ; 2011 ; Children's Literature Volume 39 ; 39 >
     au < released ; 2012 ; Children's Literature Volume 40 ; 40 >
-    au < manifest ; 2013 ; Children's Literature Volume 41 ; 41 >
+    au < testing ; 2013 ; Children's Literature Volume 41 ; 41 >
     au < expected ; 2014 ; Children's Literature Volume 42 ; 42 >
     
   }
@@ -438,7 +438,7 @@
     au < released ; 2010 ; Children's Literature Association Quarterly Volume 35 ; 35 >
     au < released ; 2011 ; Children's Literature Association Quarterly Volume 36 ; 36 >
     au < released ; 2012 ; Children's Literature Association Quarterly Volume 37 ; 37 >
-    au < manifest ; 2013 ; Children's Literature Association Quarterly Volume 38 ; 38 >
+    au < testing ; 2013 ; Children's Literature Association Quarterly Volume 38 ; 38 >
     au < manifest ; 2014 ; Children's Literature Association Quarterly Volume 39 ; 39 >
 
   }
@@ -495,8 +495,8 @@
     au < released ; 2009 ; Configurations Volume 17 ; 17 >
     au < released ; 2010 ; Configurations Volume 18 ; 18 >
     au < released ; 2011 ; Configurations Volume 19 ; 19 >
-    au < manifest ; 2012 ; Configurations Volume 20 ; 20 >
-    au < manifest ; 2013 ; Configurations Volume 21 ; 21 >
+    au < testing ; 2012 ; Configurations Volume 20 ; 20 >
+    au < testing ; 2013 ; Configurations Volume 21 ; 21 >
     au < expected ; 2014 ; Configurations Volume 22 ; 22 >
     
   }
@@ -527,7 +527,7 @@
     au < released ; 2008 ; diacritics Volume 38 ; 38 >
     au < released ; 2009 ; diacritics Volume 39 ; 39 >
     au < released ; 2012 ; diacritics Volume 40 ; 40 >
-    au < manifest ; 2013 ; diacritics Volume 41 ; 41 >
+    au < testing ; 2013 ; diacritics Volume 41 ; 41 >
     au < expected ; 2014 ; diacritics Volume 42 ; 42 >
     
   }
@@ -544,7 +544,7 @@
     attr[journal_id] = dph
 
     au < released ; 2012 ; Digital Philology: A Journal of Medieval Cultures Volume 1 ; 1 >
-    au < manifest ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 ; 2 >
+    au < testing ; 2013 ; Digital Philology: A Journal of Medieval Cultures Volume 2 ; 2 >
     au < expected ; 2014 ; Digital Philology: A Journal of Medieval Cultures Volume 3 ; 3 >
     
   }
@@ -613,7 +613,7 @@
     au < released ; 2010 ; ELH Volume 77 ; 77 >
     au < released ; 2011 ; ELH Volume 78 ; 78 >
     au < released ; 2012 ; ELH Volume 79 ; 79 >
-    au < manifest ; 2013 ; ELH Volume 80 ; 80 >
+    au < testing ; 2013 ; ELH Volume 80 ; 80 >
     au < manifest ; 2014 ; ELH Volume 81 ; 81 >
 
   }
@@ -635,7 +635,7 @@
     au < released ; 2010 ; Feminist Formations Volume 22 ; 22 >
     au < released ; 2011 ; Feminist Formations Volume 23 ; 23 >
     au < released ; 2012 ; Feminist Formations Volume 24 ; 24 >
-    au < manifest ; 2013 ; Feminist Formations Volume 25 ; 25 >
+    au < testing ; 2013 ; Feminist Formations Volume 25 ; 25 >
     au < expected ; 2014 ; Feminist Formations Volume 26 ; 26 >
 
   }
@@ -654,7 +654,7 @@
     
     
     au < released ; 2012 ; German Studies Review Volume 35 ; 35 >
-    au < manifest ; 2013 ; German Studies Review Volume 36 ; 36 >
+    au < testing ; 2013 ; German Studies Review Volume 36 ; 36 >
     au < manifest ; 2014 ; German Studies Review Volume 37 ; 37 >
 
   }
@@ -674,7 +674,7 @@
     au < released ; 2010 ; Hispania Volume 93 ; 93 >
     au < released ; 2011 ; Hispania Volume 94 ; 94 >
     au < released ; 2012 ; Hispania Volume 95 ; 95 >
-    au < manifest ; 2013 ; Hispania Volume 96 ; 96 >
+    au < testing ; 2013 ; Hispania Volume 96 ; 96 >
     au < manifest ; 2014 ; Hispania Volume 97 ; 97 >
 
   }
@@ -695,7 +695,7 @@
     au < released ; 2010 ; Historically Speaking Volume 11 ; 11 >
     au < released ; 2011 ; Historically Speaking Volume 12 ; 12 >
     au < released ; 2012 ; Historically Speaking Volume 13 ; 13 >
-    au < manifest ; 2013 ; Historically Speaking Volume 14 ; 14 >
+    au < testing ; 2013 ; Historically Speaking Volume 14 ; 14 >
     au < expected ; 2014 ; Historically Speaking Volume 15 ; 15 >
 
   }
@@ -717,7 +717,7 @@
     au < released ; 2010 ; The Hopkins Review Volume 3 ; 3 >
     au < released ; 2011 ; The Hopkins Review Volume 4 ; 4 >
     au < released ; 2012 ; The Hopkins Review Volume 5 ; 5 >
-    au < manifest ; 2013 ; The Hopkins Review Volume 6 ; 6 >
+    au < testing ; 2013 ; The Hopkins Review Volume 6 ; 6 >
     au < manifest ; 2014 ; The Hopkins Review Volume 7 ; 7 >
 
   }
@@ -751,7 +751,7 @@
     au < released ; 2010 ; Human Rights Quarterly Volume 32 ; 32 >
     au < released ; 2011 ; Human Rights Quarterly Volume 33 ; 33 >
     au < released ; 2012 ; Human Rights Quarterly Volume 34 ; 34 >
-    au < manifest ; 2013 ; Human Rights Quarterly Volume 35 ; 35 >
+    au < testing ; 2013 ; Human Rights Quarterly Volume 35 ; 35 >
     au < manifest ; 2014 ; Human Rights Quarterly Volume 36 ; 36 >
 
   }
@@ -782,7 +782,7 @@
     au < released ; 2010 ; Journal of Asian American Studies Volume 13 ; 13 >
     au < released ; 2011 ; Journal of Asian American Studies Volume 14 ; 14 >
     au < released ; 2012 ; Journal of Asian American Studies Volume 15 ; 15 >
-    au < manifest ; 2013 ; Journal of Asian American Studies Volume 16 ; 16 >
+    au < testing ; 2013 ; Journal of Asian American Studies Volume 16 ; 16 >
     au < manifest ; 2014 ; Journal of Asian American Studies Volume 17 ; 17 >
 
   }
@@ -808,7 +808,7 @@
     au < released ; 2010 ; Journal of College Student Development Volume 51 ; 51 >
     au < released ; 2011 ; Journal of College Student Development Volume 52 ; 52 >
     au < released ; 2012 ; Journal of College Student Development Volume 53 ; 53 >
-    au < manifest ; 2013 ; Journal of College Student Development Volume 54 ; 54 >
+    au < testing ; 2013 ; Journal of College Student Development Volume 54 ; 54 >
     au < manifest ; 2014 ; Journal of College Student Development Volume 55 ; 55 >
 
   }
@@ -835,7 +835,7 @@
     au < released ; 2010 ; Journal of Colonialism and Colonial History Volume 11 ; 11 >
     au < released ; 2011 ; Journal of Colonialism and Colonial History Volume 12 ; 12 >
     au < released ; 2012 ; Journal of Colonialism and Colonial History Volume 13 ; 13 >
-    au < manifest ; 2013 ; Journal of Colonialism and Colonial History Volume 14 ; 14 >
+    au < testing ; 2013 ; Journal of Colonialism and Colonial History Volume 14 ; 14 >
     au < expected ; 2014 ; Journal of Colonialism and Colonial History Volume 15 ; 15 >
 
   }
@@ -869,7 +869,7 @@
     au < released ; 2010 ; Journal of Democracy Volume 21 ; 21 >
     au < released ; 2011 ; Journal of Democracy Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Democracy Volume 23 ; 23 >
-    au < manifest ; 2013 ; Journal of Democracy Volume 24 ; 24 >
+    au < testing ; 2013 ; Journal of Democracy Volume 24 ; 24 >
     au < manifest ; 2014 ; Journal of Democracy Volume 25 ; 25 >
     
   }
@@ -902,7 +902,7 @@
     au < released ; 2010 ; Journal of Early Christian Studies Volume 18 ; 18 >
     au < released ; 2011 ; Journal of Early Christian Studies Volume 19 ; 19 >
     au < released ; 2012 ; Journal of Early Christian Studies Volume 20 ; 20 >
-    au < manifest ; 2013 ; Journal of Early Christian Studies Volume 21 ; 21 >
+    au < testing ; 2013 ; Journal of Early Christian Studies Volume 21 ; 21 >
     au < manifest ; 2014 ; Journal of Early Christian Studies Volume 22 ; 22 >
 
   }
@@ -927,7 +927,7 @@
     au < released ; 2010 ; Journal of Health Care for the Poor and Underserved Volume 21 ; 21 >
     au < released ; 2011 ; Journal of Health Care for the Poor and Underserved Volume 22 ; 22 >
     au < released ; 2012 ; Journal of Health Care for the Poor and Underserved Volume 23 ; 23 >
-    au < manifest ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24 ; 24 >
+    au < testing ; 2013 ; Journal of Health Care for the Poor and Underserved Volume 24 ; 24 >
     au < manifest ; 2014 ; Journal of Health Care for the Poor and Underserved Volume 25 ; 25 >
 
   }
@@ -949,7 +949,7 @@
     au < released ; 2010 ; Journal of Late Antiquity Volume 3 ; 3 >
     au < released ; 2011 ; Journal of Late Antiquity Volume 4 ; 4 >
     au < released ; 2012 ; Journal of Late Antiquity Volume 5 ; 5 >
-    au < manifest ; 2013 ; Journal of Late Antiquity Volume 6 ; 6 >
+    au < testing ; 2013 ; Journal of Late Antiquity Volume 6 ; 6 >
     au < expected ; 2014 ; Journal of Late Antiquity Volume 7 ; 7 >
 
   }
