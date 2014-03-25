@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.6 2014-02-06 01:11:21 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagPlugin.java,v 1.7 2014-03-25 21:39:58 etenbrink Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit.*;
+import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.*;
 
@@ -51,6 +52,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+  private MockLockssDaemon theDaemon;
   
   private DefinablePlugin plugin;
   
@@ -60,6 +62,8 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   
   public void setUp() throws Exception {
     super.setUp();
+    setUpDiskSpace();
+    theDaemon = getMockLockssDaemon();
     plugin = new DefinablePlugin();
     plugin.initPlugin(getMockLockssDaemon(),
                       "org.lockss.plugin.georgthiemeverlag.ClockssGeorgThiemeVerlagPlugin");
@@ -133,7 +137,7 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
                                ConfigParamDescr.VOLUME_NAME),
                  plugin.getLocalAuConfigDescrs());
   }
-
+  
   public void testGetArticleMetadataExtractor() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
@@ -167,6 +171,69 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
   public void testGetArticleIteratorFactory() {
     assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
         instanceof org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagArticleIteratorFactory);
+  }
+  
+  // Test the crawl rules for GeorgThiemeVerlagPlugin
+  public void testShouldCacheProperPages() throws Exception {
+    String ROOT_URL = "http://www.example.com/";
+    URL baseUrl = new URL(ROOT_URL);
+    String JOURNAL_ID = "10.1055/s-00000001";
+    Properties props = new Properties();
+    props.setProperty(BASE_URL_KEY, "http://www.example.com/");
+    props.setProperty(JOURNAL_ID_KEY, "10.1055/s-00000001");
+    props.setProperty(VOLUME_NAME_KEY, "2013");
+    DefinableArchivalUnit au = null;
+    try {
+      Configuration config = ConfigurationUtil.fromProps(props);
+      DefinablePlugin tstDefinablePlugin = new DefinablePlugin();
+      tstDefinablePlugin.initPlugin(getMockLockssDaemon(), plugin.getPluginId());
+      au = (DefinableArchivalUnit)tstDefinablePlugin.createAu(config);
+    }
+    catch (ConfigurationException ex) {
+    }
+    theDaemon.getLockssRepository(au);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(au, 
+        new RangeCachedUrlSetSpec(baseUrl.toString()));
+    // Test for pages that should get crawled
+    // permission page/start url
+    shouldCacheTest(ROOT_URL + "ejournals/issues/" + JOURNAL_ID + "/2013", true, au);  
+    // toc page for an issue
+    shouldCacheTest(ROOT_URL + "ejournals/issue/" + "10.1055/s-003-26177", true, au);  
+    // article files
+    // https://www.thieme-connect.de/ejournals/issues/10.1055/s-00000001/2013
+    // https://www.thieme-connect.de/ejournals/issue/10.1055/s-003-26177
+    // https://www.thieme-connect.de/ejournals/abstract/10.1055/s-0029-1214947
+    // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947
+    // https://www.thieme-connect.de/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342
+    // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf
+    // https://www.thieme-connect.de/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342
+    // https://www.thieme-connect.de/ejournals/ris/10.1055/s-0031-1296349/BIB
+    shouldCacheTest(ROOT_URL + "ejournals/abstract/10.1055/s-0029-1214947", true, au);
+    shouldCacheTest(ROOT_URL + "ejournals/html/10.1055/s-0029-1214947", true, au);
+    shouldCacheTest(ROOT_URL +
+        "ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342", true, au);
+    shouldCacheTest(ROOT_URL + "ejournals/pdf/10.1055/s-0029-1214947.pdf", true, au);
+    shouldCacheTest(ROOT_URL +
+        "ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342", true, au);
+    shouldCacheTest(ROOT_URL + "ejournals/ris/10.1055/s-0031-1296349/BIB", true, au);
+    // css files
+    shouldCacheTest(ROOT_URL + "css/img/themes/bg-pageHeader.jpg", true, au);
+    shouldCacheTest(ROOT_URL + "css/style.css", true, au);
+    // supplement materials
+    shouldCacheTest(ROOT_URL +
+        "media/ains/20131112/supmat/ains_11_2013_18_sup_10-1055-s-0033-1361983.pdf",
+        true, au);
+    
+    // should not get crawled - missing doi prefix
+    shouldCacheTest(ROOT_URL + "ejournals/html/s-0029-1214947", false, au);  
+    // should not get crawled - LOCKSS
+    shouldCacheTest("http://lockss.stanford.edu", false, au);
+  }
+  
+  private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
+    log.info ("shouldCacheTest url: " + url);
+    UrlCacher uc = au.makeUrlCacher(url);
+    assertEquals(shouldCache, uc.shouldBeCached());
   }
   
 }
