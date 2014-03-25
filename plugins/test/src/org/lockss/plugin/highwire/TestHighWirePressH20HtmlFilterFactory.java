@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.22 2014-03-07 19:08:24 etenbrink Exp $
+/    * $Id: TestHighWirePressH20HtmlFilterFactory.java,v 1.23 2014-03-25 00:41:41 thib_gc Exp $
  */
 
 /*
@@ -359,7 +359,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String tocBannerAdFiltered =
       " <div id=\"content-block\">" +
       " <div id=\"toc-header\">" +
-      " <h1>Table of Contents</h1><cite>";
+      " <h1 itemprop=\"itemprop\">Table of Contents</h1><cite>";
   
   private static final String viewingDate =
       "<ul class=\"button-list header-buttons\">" +
@@ -398,7 +398,7 @@ public class TestHighWirePressH20HtmlFilterFactory extends LockssTestCase {
   private static final String gswHeaderFiltered =
       "<div id=\"header\">\n" +
       "<div id=\"gsw-top-container\"> </div>\n" +
-      "<h1><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" +
+      "<h1 itemprop=\"itemprop\"><a id=\"logo\" href=\"/\"><span>Rocky Geology</span></a></h1>\n" +
       "</div>";
   
   private static final String relatedHtml =

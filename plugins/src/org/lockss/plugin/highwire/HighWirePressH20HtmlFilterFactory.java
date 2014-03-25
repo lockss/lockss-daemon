@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.54 2014-03-06 20:12:18 etenbrink Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.55 2014-03-25 00:41:41 thib_gc Exp $
  */
 
 /*
@@ -232,22 +232,40 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
           nodeList.visitAllNodesWith(new NodeVisitor() {
             @Override
             public void visitTag(Tag tag) {
+              String tagName = tag.getTagName().toLowerCase();
               try {
-                if ("div".equalsIgnoreCase(tag.getTagName()) && 
-                    tag.getAttribute("id") != null && 
-                    tag.getAttribute("id").trim().startsWith("pageid-content")) {
-                    
+                if (  "div".equals(tagName)
+                    && tag.getAttribute("id") != null
+                    && tag.getAttribute("id").trim().startsWith("pageid-content")) {
                   if (tag.getAttribute("itemscope") != null) {
                     tag.setAttribute("itemscope", "itemscope");
-                  } else tag.setAttribute("itemscope", "\"itemscope\"");
-                    
+                  }
+                  else {
+                    tag.setAttribute("itemscope", "\"itemscope\"");
+                  }
                   if (tag.getAttribute("itemtype") != null) {
                     tag.setAttribute("itemtype", "http://schema.org/ScholarlyArticle");
-                  } else tag.setAttribute("itemtype", "\"http://schema.org/ScholarlyArticle\"");
+                  }
+                  else {
+                    tag.setAttribute("itemtype", "\"http://schema.org/ScholarlyArticle\"");
+                  }
+                  // don't return: need to go to next 'div' clause
                 }
-                else {
-                  super.visitTag(tag);
+                if (   "h1".equals(tagName)
+                    || (   "div".equals(tagName)
+                        && tag.getAttribute("class") != null
+                        && (   tag.getAttribute("class").trim().endsWith("abstract")
+                            || tag.getAttribute("class").trim().endsWith("abstract-view")))) {
+                  if (tag.getAttribute("itemprop") != null) {
+                    tag.setAttribute("itemprop", "itemprop");
+                  }
+                  else {
+                    tag.setAttribute("itemprop", "\"itemprop\"");
+                  }
+                  return; // done
                 }
+                // Otherwise
+                super.visitTag(tag);
               }
               catch (Exception exc) {
                 log.debug2("Internal error (visitor)", exc); // Ignore this tag and move on
@@ -264,7 +282,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
  
     InputStream filtered =  new HtmlFilterInputStream(in,
         encoding,
-        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),xform));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xform));
     
     Reader filteredReader = FilterUtil.getReader(filtered, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(filteredReader));
