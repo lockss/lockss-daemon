@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Poll</string>
-        <string>6</string>
+        <string>7</string>
       </entry>
       <entry>
         <string>Substance</string>
@@ -61,11 +61,11 @@
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s.*[.](bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url</string>
+      <string>1,"^%smedia/.*/supmat/", base_url</string>
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
       <string>2,"^%s(?:rss/thieme|ejournals/(?:journal|issues|sample|recommend|topten|linkout))", base_url</string>
       <string>1,"^%sejournals/(?:issue|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[.a-z0-9-]+(?:[.]pdf|/BIB|[?]issue=.+)?$", base_url</string>
-      <string>1,"^%smedia/.*/supmat/", base_url</string>
     </list>
   </entry>
   <entry>
@@ -139,6 +139,10 @@
         <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagPdfMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
