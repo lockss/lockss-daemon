@@ -17,8 +17,6 @@
       param[base_url] = http://jsedres.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      comment[jsedres] = missing manifest pages
-
       au < released ; 1931 ; Journal of Sedimentary Research Volume 1 ; 1 >
       au < released ; 1932 ; Journal of Sedimentary Research Volume 2 ; 2 >
       au < released ; 1933 ; Journal of Sedimentary Research Volume 3 ; 3 >
@@ -120,8 +118,6 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://palaios.sepmonline.org/
       implicit < status ; year ; name ; param[volume_name] >
-
-      comment[palaios] = missing manifest pages
 
       au < manifest ; 1986 ; PALAIOS Volume 1 ; 1 >
       au < manifest ; 1987 ; PALAIOS Volume 2 ; 2 >
