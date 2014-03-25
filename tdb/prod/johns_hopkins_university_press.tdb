@@ -359,7 +359,7 @@
     attr[journal_id] = cea
 
     au < ready ; 2013 ; CEA Critic Volume 75 ; 75 >
-    au < expected ; 2014 ; CEA Critic Volume 76 ; 76 >
+    au < manifest ; 2014 ; CEA Critic Volume 76 ; 76 >
 
   }
 
@@ -1815,7 +1815,7 @@
     au < released ; 2011 ; Shakespeare Bulletin Volume 29 ; 29 >
     au < released ; 2012 ; Shakespeare Bulletin Volume 30 ; 30 >
     au < manifest ; 2013 ; Shakespeare Bulletin Volume 31 ; 31 >
-    au < expected ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
+    au < manifest ; 2014 ; Shakespeare Bulletin Volume 32 ; 32 >
 
   }
 
