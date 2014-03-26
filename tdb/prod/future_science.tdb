@@ -39,10 +39,10 @@
     comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = bfs
 
-    au < manifest ; 2010 ; Biofuels Volume 1 ; 1 >
-    au < manifest ; 2011 ; Biofuels Volume 2 ; 2 >
-    au < manifest ; 2012 ; Biofuels Volume 3 ; 3 >
-    au < manifest ; 2013 ; Biofuels Volume 4 ; 4 >
+    au < down ; 2010 ; Biofuels Volume 1 ; 1 >
+    au < down ; 2011 ; Biofuels Volume 2 ; 2 >
+    au < down ; 2012 ; Biofuels Volume 3 ; 3 >
+    au < down ; 2013 ; Biofuels Volume 4 ; 4 >
    
   }
 
@@ -56,10 +56,10 @@
     comment[1] = Publisher no longer providing title after 2013
     param[journal_id] = cmt
 
-    au < manifest ; 2010 ; Carbon Management Volume 1 ; 1 >
-    au < manifest ; 2011 ; Carbon Management Volume 2 ; 2 >
-    au < manifest ; 2012 ; Carbon Management Volume 3 ; 3 >
-    au < manifest ; 2013 ; Carbon Management Volume 4 ; 4 >
+    au < down ; 2010 ; Carbon Management Volume 1 ; 1 >
+    au < down ; 2011 ; Carbon Management Volume 2 ; 2 >
+    au < down ; 2012 ; Carbon Management Volume 3 ; 3 >
+    au < down ; 2013 ; Carbon Management Volume 4 ; 4 >
   
   }
 
