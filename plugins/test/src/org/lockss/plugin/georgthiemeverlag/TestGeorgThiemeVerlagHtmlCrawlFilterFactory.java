@@ -1,5 +1,5 @@
 /*
- * $Id: TestGeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.1 2014-03-25 21:40:40 etenbrink Exp $
+ * $Id: TestGeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.2 2014-03-26 17:12:03 etenbrink Exp $
  */
 
 /*
@@ -266,6 +266,9 @@ public class TestGeorgThiemeVerlagHtmlCrawlFilterFactory extends LockssTestCase 
       "</div>\n" + 
       "</div>\n" + 
       "</div>" +
+      "" +
+      "<a class=\"anchorc\" href=\"/ejournals/abstract/10.1055/s-2007-965356\">" +
+      "DOI 10.1055/s-2007-965356</a>" + 
       "</div>";
   
   private static final String withoutOffAULinks = "<div id=\"page\">\n" +
