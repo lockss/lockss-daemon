@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.3 2014-01-29 22:55:01 etenbrink Exp $
+ * $Id: DryadHtmlMetadataExtractorFactory.java,v 1.4 2014-03-26 17:17:44 etenbrink Exp $
  */
 
 /*
@@ -51,17 +51,17 @@ import org.lockss.plugin.*;
 
 public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger(DryadHtmlMetadataExtractorFactory.class);
-
+  
   @Override
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
         String contentType)
       throws PluginException {
     return new DryadHtmlMetadataExtractor();
   }
-
+  
   public static class DryadHtmlMetadataExtractor
     extends SimpleHtmlMetaTagMetadataExtractor {
-
+    
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
@@ -69,7 +69,7 @@ public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorF
       tagMap.put("dc.title", MetadataField.DC_FIELD_TITLE);
       tagMap.put("dc.contributor", MetadataField.FIELD_AUTHOR);
       tagMap.put("dc.creator", MetadataField.DC_FIELD_CREATOR);
-
+      
       //content="doi:<doi>"/>
       tagMap.put("dc.identifier", new MetadataField(
           MetadataField.FIELD_DOI, MetadataField.extract("doi:(.*)",1)));
@@ -83,12 +83,12 @@ public class DryadHtmlMetadataExtractorFactory implements FileMetadataExtractorF
       tagMap.put("dc.type", MetadataField.DC_FIELD_TYPE);
       tagMap.put("dcterms.haspart", MetadataField.DC_FIELD_RELATION);
     }
-
+    
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
         throws IOException {
       ArticleMetadata am = super.extract(target, cu);
-
+      
       am.cook(tagMap);
       
       return am;
