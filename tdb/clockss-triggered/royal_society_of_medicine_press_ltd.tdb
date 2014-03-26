@@ -1,0 +1,71 @@
+{
+
+  publisher <
+    name = Royal Society of Medicine Press Ltd
+  >
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      implicit < status ; year ; name ; param[volume_name] >
+
+    {
+    
+      title <
+        name = He@lth Information on the Internet ;
+        issn = 1460-4140 ;
+        eissn = 1758-1036
+      >
+  
+       param[base_url] = http://hii.rsmjournals.com/
+       comment[platform] = HighWire H20
+       comment[0] = this title ceased publication in December 2008
+      
+        au < down ; 2001 ; He@lth Information on the Internet Volume 21 ; 21 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 22 ; 22 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 23 ; 23 >
+        au < down ; 2001 ; He@lth Information on the Internet Volume 24 ; 24 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 25 ; 25 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 26 ; 26 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 27 ; 27 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 28 ; 28 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 29 ; 29 >
+        au < down ; 2002 ; He@lth Information on the Internet Volume 30 ; 30 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 31 ; 31 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 32 ; 32 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 33 ; 33 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 34 ; 34 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 35 ; 35 >
+        au < down ; 2003 ; He@lth Information on the Internet Volume 36 ; 36 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 37 ; 37 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 38 ; 38 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 39 ; 39 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 40 ; 40 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 41 ; 41 >
+        au < down ; 2004 ; He@lth Information on the Internet Volume 42 ; 42 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 43 ; 43 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 44 ; 44 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 45 ; 45 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 46 ; 46 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 47 ; 47 >
+        au < down ; 2005 ; He@lth Information on the Internet Volume 48 ; 48 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 49 ; 49 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 50 ; 50 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 51 ; 51 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 52 ; 52 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 53 ; 53 >
+        au < down ; 2006 ; He@lth Information on the Internet Volume 54 ; 54 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 55 ; 55 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 56 ; 56 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 57 ; 57 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 58 ; 58 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 59 ; 59 >
+        au < down ; 2007 ; He@lth Information on the Internet Volume 60 ; 60 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 61 ; 61 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 62 ; 62 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 63 ; 63 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 64 ; 64 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 65 ; 65 >
+        au < down ; 2008 ; He@lth Information on the Internet Volume 66 ; 66 >
+  
+    }
+    
+}

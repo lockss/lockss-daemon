@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = American Society for Pharmacology and Experimental Therapeutics
+  >
+  
+  {
+  
+    title <
+      name = Molecular Interventions ;
+      issn = 1534-0384 ;
+      eissn = 1543-2548 ;
+      issnl = 1534-0384
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://molinterv.aspetjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < down ; 2001 ; Molecular Interventions Volume 1 ; 1 >
+    au < down ; 2002 ; Molecular Interventions Volume 2 ; 2 >
+    au < down ; 2003 ; Molecular Interventions Volume 3 ; 3 >
+    au < down ; 2004 ; Molecular Interventions Volume 4 ; 4 >
+    au < down ; 2005 ; Molecular Interventions Volume 5 ; 5 >
+    au < down ; 2006 ; Molecular Interventions Volume 6 ; 6 >
+    au < down ; 2007 ; Molecular Interventions Volume 7 ; 7 >
+    au < down ; 2008 ; Molecular Interventions Volume 8 ; 8 >
+    au < down ; 2009 ; Molecular Interventions Volume 9 ; 9 >
+    au < down ; 2010 ; Molecular Interventions Volume 10 ; 10 >
+    au < down ; 2011 ; Molecular Interventions Volume 11 ; 11 >
+
+  }
+
+}

@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Oxford University Press
+  >
+
+  {
+
+    title <
+      name = Brief Treatment and Crisis Intervention ;
+      issn = 1474-3310 ;
+      eissn = 1474-3329 ;
+      issnl = 1474-3310
+    >
+
+    comment[dcor] = This triggered title is being reingested
+
+    comment[ceased] = ceased publication in 2008
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    param[base_url] = http://btci.stanford.clockss.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < down ; 2001 ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
+    au < down ; 2002 ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
+    au < down ; 2003 ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
+    au < down ; 2004 ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
+    au < down ; 2005 ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+    au < down ; 2006 ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
+    au < down ; 2007 ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
+    au < down ; 2008 ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+
+  }
+
+}
