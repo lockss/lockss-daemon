@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.1 2014-03-25 21:41:11 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.2 2014-03-26 17:13:17 etenbrink Exp $
  */
 
 /*
@@ -65,6 +65,8 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar"),
         // ul class="literaturliste"
         HtmlNodeFilters.tagWithAttribute("ul", "class", "literaturliste"),
+        // a class="anchorc" correction anchor?
+        HtmlNodeFilters.tagWithAttribute("a", "class", "anchorc"),
     };
     InputStream filtered = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)))
