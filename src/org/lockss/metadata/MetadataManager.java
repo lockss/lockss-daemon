@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataManager.java,v 1.24 2014-01-29 22:27:26 pgust Exp $
+ * $Id: MetadataManager.java,v 1.25 2014-03-26 19:13:36 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -484,6 +484,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " from " + PENDING_AU_TABLE
       + " where " + PRIORITY_COLUMN + " >= 0))";
 
+  // Query to add an enabled pending AU at the bottom of the current priority
+  // list using MySQL.
+  private static final String INSERT_ENABLED_PENDING_AU_MYSQL_QUERY = "insert "
+      + "into " + PENDING_AU_TABLE
+      + "(" + PLUGIN_ID_COLUMN
+      + "," + AU_KEY_COLUMN
+      + "," + PRIORITY_COLUMN
+      + ") values (?,?,"
+      + "(select next_priority from "
+      + "(select coalesce(max(" + PRIORITY_COLUMN + "), 0) + 1 as next_priority"
+      + " from " + PENDING_AU_TABLE
+      + " where " + PRIORITY_COLUMN + " >= 0) as temp_pau_table))";
+
   // Query to add a disabled pending AU.
   private static final String INSERT_DISABLED_PENDING_AU_QUERY = "insert into "
       + PENDING_AU_TABLE
@@ -678,6 +691,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       + " from " + AUTHOR_TABLE
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?))";
 
+  // Query to add a metadata item author using MySQL.
+  private static final String INSERT_AUTHOR_MYSQL_QUERY = "insert into "
+      + AUTHOR_TABLE
+      + "(" + MD_ITEM_SEQ_COLUMN
+      + "," + AUTHOR_NAME_COLUMN
+      + "," + AUTHOR_IDX_COLUMN
+      + ") values (?,?,"
+      + "(select next_idx from "
+      + "(select coalesce(max(" + AUTHOR_IDX_COLUMN + "), 0) + 1 as next_idx"
+      + " from " + AUTHOR_TABLE
+      + " where " + MD_ITEM_SEQ_COLUMN + " = ?) as temp_author_table))";
+  
   // Query to add a metadata item keyword.
   private static final String INSERT_KEYWORD_QUERY = "insert into "
       + KEYWORD_TABLE
@@ -4247,7 +4272,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   void addToPendingAusIfNotThere(Connection conn, Collection<ArchivalUnit> aus,
       PreparedStatement insertPendingAuBatchStatement, boolean inBatch)
       throws DbException {
-    final String DEBUG_HEADER = "addToPendingAus(): ";
+    final String DEBUG_HEADER = "addToPendingAusIfNotThere(): ";
     PreparedStatement selectPendingAu =
 	dbManager.prepareStatement(conn, FIND_PENDING_AU_QUERY);
 
@@ -4941,6 +4966,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public PreparedStatement getInsertPendingAuBatchStatement(Connection conn)
       throws DbException {
+    if (dbManager.isTypeMysql()) {
+      return dbManager.prepareStatement(conn,
+	  INSERT_ENABLED_PENDING_AU_MYSQL_QUERY);
+    }
+
     return dbManager.prepareStatement(conn, INSERT_ENABLED_PENDING_AU_QUERY);
   }
 
@@ -5994,8 +6024,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       return;
     }
 
-    PreparedStatement insertMdItemAuthor =
-	dbManager.prepareStatement(conn, INSERT_AUTHOR_QUERY);
+    PreparedStatement insertMdItemAuthor = getInsertMdItemAuthorStatement(conn);
 
     try {
       for (String author : authors) {
@@ -6014,6 +6043,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } finally {
       DbManager.safeCloseStatement(insertMdItemAuthor);
     }
+  }
+
+  /**
+   * Provides the prepared statement used to insert a metadata item author.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a PreparedStatement with the prepared statement used to insert a
+   *         metadata item author.
+   */
+  private PreparedStatement getInsertMdItemAuthorStatement(Connection conn)
+      throws DbException {
+    if (dbManager.isTypeMysql()) {
+      return dbManager.prepareStatement(conn, INSERT_AUTHOR_MYSQL_QUERY);
+    }
+
+    return dbManager.prepareStatement(conn, INSERT_AUTHOR_QUERY);
   }
 
   /**

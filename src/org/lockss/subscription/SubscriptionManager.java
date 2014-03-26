@@ -1,10 +1,10 @@
 /*
- * $Id: SubscriptionManager.java,v 1.13 2014-02-01 02:03:26 fergaloy-sf Exp $
+ * $Id: SubscriptionManager.java,v 1.14 2014-03-26 19:13:36 fergaloy-sf Exp $
  */
 
 /*
 
- Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -149,7 +149,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 
   // Query to find the subscription ranges of a publication.
   private static final String FIND_SUBSCRIPTION_RANGES_QUERY = "select "
-      + RANGE_COLUMN
+      + SUBSCRIPTION_RANGE_COLUMN
       + "," + RANGE_IDX_COLUMN
       + " from " + SUBSCRIPTION_RANGE_TABLE
       + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
@@ -160,7 +160,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
   private static final String INSERT_SUBSCRIPTION_RANGE_QUERY = "insert into "
       + SUBSCRIPTION_RANGE_TABLE
       + "(" + SUBSCRIPTION_SEQ_COLUMN
-      + "," + RANGE_COLUMN
+      + "," + SUBSCRIPTION_RANGE_COLUMN
       + "," + SUBSCRIBED_COLUMN
       + "," + RANGE_IDX_COLUMN
       + ") values (?,?,?,"
@@ -168,6 +168,20 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " from " + SUBSCRIPTION_RANGE_TABLE
       + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
       + " and " + SUBSCRIBED_COLUMN + " = ?))";
+
+  // Query to add a subscription range using MySQL.
+  private static final String INSERT_SUBSCRIPTION_RANGE_MYSQL_QUERY = "insert "
+      + "into " + SUBSCRIPTION_RANGE_TABLE
+      + "(" + SUBSCRIPTION_SEQ_COLUMN
+      + "," + SUBSCRIPTION_RANGE_COLUMN
+      + "," + SUBSCRIBED_COLUMN
+      + "," + RANGE_IDX_COLUMN
+      + ") values (?,?,?,"
+      + "(select next_idx from "
+      + "(select coalesce(max(" + RANGE_IDX_COLUMN + "), 0) + 1 as next_idx"
+      + " from " + SUBSCRIPTION_RANGE_TABLE
+      + " where " + SUBSCRIPTION_SEQ_COLUMN + " = ?"
+      + " and " + SUBSCRIBED_COLUMN + " = ?) as temp_sub_range_table))";
 
   // Query to delete all of the ranges of one type of a subscription.
   private static final String DELETE_ALL_SUBSCRIPTION_RANGES_TYPE_QUERY =
@@ -209,7 +223,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + ",n." + NAME_COLUMN
       + ",pr." + PUBLISHER_NAME_COLUMN
       + ",pl." + PLATFORM_NAME_COLUMN
-      + ",sr." + RANGE_COLUMN
+      + ",sr." + SUBSCRIPTION_RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
       + ",sr." + RANGE_IDX_COLUMN
       + " from " + SUBSCRIPTION_TABLE + " s"
@@ -227,7 +241,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       + " order by pr." + PUBLISHER_NAME_COLUMN
       + ",n." + NAME_COLUMN
       + ",pl." + PLATFORM_NAME_COLUMN
-      + ",sr." + RANGE_COLUMN
+      + ",sr." + SUBSCRIPTION_RANGE_COLUMN
       + ",sr." + SUBSCRIBED_COLUMN
       + ",sr." + RANGE_IDX_COLUMN;
 
@@ -1096,14 +1110,16 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auId = " + auId);
     PreparedStatement insertUnconfiguredAu = null;
+    String pluginId = null;
+    String auKey = null;
 
     try {
       insertUnconfiguredAu =
 	  dbManager.prepareStatement(conn, INSERT_UNCONFIGURED_AU_QUERY);
 
-      String pluginId = PluginManager.pluginIdFromAuId(auId);
+      pluginId = PluginManager.pluginIdFromAuId(auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginId = " + pluginId);
-      String auKey = PluginManager.auKeyFromAuId(auId);
+      auKey = PluginManager.auKeyFromAuId(auId);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "auKey = " + auKey);
 
       insertUnconfiguredAu.setString(1, pluginId);
@@ -1116,6 +1132,13 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       log.error("auId = " + auId);
       throw new DbException("Cannot insert archival unit in unconfigured table",
 	  sqle);
+    } catch (DbException dbe) {
+      log.error("Cannot insert archival unit in unconfigured table", dbe);
+      log.error("SQL = '" + INSERT_UNCONFIGURED_AU_QUERY + "'.");
+      log.error("auId = " + auId);
+      log.error("pluginId = " + pluginId);
+      log.error("auKey = " + auKey);
+      throw dbe;
     } finally {
       DbManager.safeCloseStatement(insertUnconfiguredAu);
     }
@@ -1255,7 +1278,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       resultSet = dbManager.executeQuery(getSubscriptionRanges);
 
       while (resultSet.next()) {
-	range = resultSet.getString(RANGE_COLUMN);
+	range = resultSet.getString(SUBSCRIPTION_RANGE_COLUMN);
 	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + range);
 
 	ranges.add(new BibliographicPeriod(range));
@@ -1714,8 +1737,9 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       return count;
     }
 
+    String sql = getInsertSubscriptionRangeSql();
     PreparedStatement insertSubscriptionRange =
-	dbManager.prepareStatement(conn, INSERT_SUBSCRIPTION_RANGE_QUERY);
+	dbManager.prepareStatement(conn, sql);
 
     try {
       insertSubscriptionRange.setLong(1, subscriptionSeq);
@@ -1728,7 +1752,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count);
     } catch (SQLException sqle) {
       log.error("Cannot insert subscription range", sqle);
-      log.error("SQL = '" + INSERT_SUBSCRIPTION_RANGE_QUERY + "'.");
+      log.error("SQL = '" + sql + "'.");
       log.error("subscriptionSeq = " + subscriptionSeq);
       log.error("range = " + range);
       log.error("subscribed = " + subscribed);
@@ -1885,7 +1909,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
       // Get all the subscriptions and ranges from the database.
       resultSet = dbManager.executeQuery(getAllSubscriptionRanges);
 
-      // Loop  through all the results.
+      // Loop through all the results.
       while (resultSet.next()) {
 	subscriptionSeq = resultSet.getLong(SUBSCRIPTION_SEQ_COLUMN);
 	if (log.isDebug3())
@@ -1903,8 +1927,8 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	if (log.isDebug3())
 	  log.debug3(DEBUG_HEADER + "platformName = " + platformName);
 
-	ranges = resultSet.getString(RANGE_COLUMN);
-	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "range = " + ranges);
+	ranges = resultSet.getString(SUBSCRIPTION_RANGE_COLUMN);
+	if (log.isDebug3()) log.debug3(DEBUG_HEADER + "ranges = " + ranges);
 
 	subscribed = resultSet.getBoolean(SUBSCRIBED_COLUMN);
 	if (log.isDebug3())
@@ -3389,4 +3413,20 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  .compareTo(new Long(o2.getValue().getAvail())));
     }
   };
+
+  /**
+   * Provides the SQL statement used to insert a subscription range.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @return a String with the SQL statement used to insert a subscription
+   *         range.
+   */
+  private String getInsertSubscriptionRangeSql() {
+    if (dbManager.isTypeMysql()) {
+      return INSERT_SUBSCRIPTION_RANGE_MYSQL_QUERY;
+    }
+
+    return INSERT_SUBSCRIPTION_RANGE_QUERY;
+  }
 }

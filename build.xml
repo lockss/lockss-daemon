@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.352 2014-01-29 05:22:24 tlipkis Exp $
+ $Id: build.xml,v 1.353 2014-03-26 19:13:36 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2013-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -216,6 +216,8 @@ Args:
   <property name="derbynet.jar"   value="${lib}/derbynet.jar"/>
   <property name="postgresql-jdbc.jar"
                                   value="${lib}/postgresql-jdbc4-9.1.jar" />
+  <property name="mysql-connector-java.jar"
+				  value="${lib}/mysql-connector-java-5.1.29-bin.jar" />
   <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
   <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -428,6 +430,7 @@ Args:
     <pathelement path="${derbyclient.jar}" />
     <pathelement path="${derbynet.jar}" />
 	<pathelement path="${postgresql-jdbc.jar}" />
+    <pathelement path="${mysql-connector-java.jar}" />
     <pathelement path="${mailapi.jar}" />
     <pathelement path="${activation.jar}" />
     <pathelement path="${castor.jar}" />

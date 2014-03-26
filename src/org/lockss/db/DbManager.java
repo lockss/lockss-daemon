@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.29 2014-01-29 22:23:18 pgust Exp $
+ * $Id: DbManager.java,v 1.30 2014-03-26 19:13:36 fergaloy-sf Exp $
  */
 
 /*
@@ -140,6 +140,8 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String DEFAULT_DATASOURCE_PORTNUMBER = "1527";
 
   public static final String DEFAULT_DATASOURCE_PORTNUMBER_PG = "5432";
+
+  public static final String DEFAULT_DATASOURCE_PORTNUMBER_MYSQL = "3306";
 
   /**
    * Name of the server. Changes require daemon restart.
@@ -518,8 +520,8 @@ public class DbManager extends BaseLockssDaemonManager
   /** Subscription identifier column. */
   public static final String SUBSCRIPTION_SEQ_COLUMN = "subscription_seq";
 
-  /** Subscription range column. */
-  public static final String RANGE_COLUMN = "range";
+  /** Obsolete subscription range column. */
+  public static final String OBSOLETE_RANGE_COLUMN = "range";
 
   /** Subscription range type column. */
   public static final String SUBSCRIBED_COLUMN = "subscribed";
@@ -547,6 +549,9 @@ public class DbManager extends BaseLockssDaemonManager
 
   /** Last run last value column. */
   public static final String LAST_VALUE_COLUMN = "last_value";
+
+  /** Subscription range column. */
+  public static final String SUBSCRIPTION_RANGE_COLUMN = "subscription_range";
 
   //
   // Maximum lengths of variable text length database columns.
@@ -684,6 +689,11 @@ public class DbManager extends BaseLockssDaemonManager
   // automatically generated from a sequence.
   protected static final String BIGINT_SERIAL_PK_PG = "bigserial primary key";
 
+  // MySQL definition of a big integer primary key column with a value
+  // automatically generated from a sequence.
+  protected static final String BIGINT_SERIAL_PK_MYSQL =
+      "bigint auto_increment primary key";
+
   // Query to create the table for recording bibliobraphic metadata for an
   // article.
   private static final String OBSOLETE_CREATE_METADATA_TABLE_QUERY = "create "
@@ -778,6 +788,23 @@ public class DbManager extends BaseLockssDaemonManager
       + REQUEST_DAY_COLUMN + " smallint NOT NULL,"
       + IN_AGGREGATION_COLUMN + " boolean)";
 
+  // Query to create the MySQL table for recording requests used for COUNTER
+  // reports.
+  private static final String OBSOLETE_CREATE_REQUESTS_TABLE_MYSQL_QUERY =
+      "create " + "table " + OBSOLETE_REQUESTS_TABLE + " ("
+      + LOCKSS_ID_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_LOCKSS_ID_REQUESTS (" + LOCKSS_ID_COLUMN + ") "
+      + "REFERENCES " + OBSOLETE_TITLES_TABLE + "(" + LOCKSS_ID_COLUMN + "),"
+      + PUBLICATION_YEAR_COLUMN + " smallint,"
+      + IS_SECTION_COLUMN + " boolean,"
+      + IS_HTML_COLUMN + " boolean,"
+      + IS_PDF_COLUMN + " boolean,"
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + REQUEST_DAY_COLUMN + " smallint NOT NULL,"
+      + IN_AGGREGATION_COLUMN + " boolean)";
+
   // Query to create the table for recording type aggregates (PDF vs. HTML, Full
   // vs. Section, etc.) used for COUNTER reports.
   private static final String OBSOLETE_CREATE_TYPE_AGGREGATES_TABLE_QUERY
@@ -794,6 +821,22 @@ public class DbManager extends BaseLockssDaemonManager
       + FULL_BOOK_REQUESTS_COLUMN + " integer,"
       + SECTION_BOOK_REQUESTS_COLUMN + " integer)";
 
+  // Query to create the MySQL table for recording type aggregates (PDF vs.
+  // HTML, Full vs. Section, etc.) used for COUNTER reports.
+  private static final String OBSOLETE_CREATE_TYPE_AGGREGATES_TABLE_MYSQL_QUERY
+  = "create table " + OBSOLETE_TYPE_AGGREGATES_TABLE + " ("
+      + LOCKSS_ID_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_LOCKSS_ID_TYPE_AGGREGATES (" + LOCKSS_ID_COLUMN + ") "
+      + "REFERENCES " + OBSOLETE_TITLES_TABLE + "(" + LOCKSS_ID_COLUMN + "),"
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + TOTAL_JOURNAL_REQUESTS_COLUMN + " integer,"
+      + HTML_JOURNAL_REQUESTS_COLUMN + " integer,"
+      + PDF_JOURNAL_REQUESTS_COLUMN + " integer,"
+      + FULL_BOOK_REQUESTS_COLUMN + " integer,"
+      + SECTION_BOOK_REQUESTS_COLUMN + " integer)";
+
   // Query to create the table for recording publication year aggregates used
   // for COUNTER reports.
   private static final String OBSOLETE_CREATE_PUBYEAR_AGGREGATES_TABLE_QUERY
@@ -801,6 +844,20 @@ public class DbManager extends BaseLockssDaemonManager
       + LOCKSS_ID_COLUMN + " bigint NOT NULL CONSTRAINT "
       + "FK_LOCKSS_ID_PUBYEAR_AGGREGATES REFERENCES "
       + OBSOLETE_TITLES_TABLE + ","
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + PUBLICATION_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_COUNT_COLUMN + " integer NOT NULL)";
+
+  // Query to create the MySQL table for recording publication year aggregates
+  // used for COUNTER reports.
+  private static final String OBSOLETE_CREATE_PUBYEAR_AGGREGATES_TABLE_MYSQL_QUERY
+  = "create table " + OBSOLETE_PUBYEAR_AGGREGATES_TABLE + " ("
+      + LOCKSS_ID_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_LOCKSS_ID_PUBYEAR_AGGREGATES (" + LOCKSS_ID_COLUMN
+      + ") " + "REFERENCES " + OBSOLETE_TITLES_TABLE + "(" + LOCKSS_ID_COLUMN
+      + "),"
       + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
       + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
       + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
@@ -1002,6 +1059,20 @@ public class DbManager extends BaseLockssDaemonManager
       + FULL_REQUESTS_COLUMN + " integer,"
       + SECTION_REQUESTS_COLUMN + " integer)";
 
+  // Query to create the MySQL table for recording book type aggregates (Full
+  // vs. Section) used for COUNTER reports.
+  protected static final String BOOK_TYPE_AGGREGATES_TABLE_CREATE_MYSQL_QUERY =
+      "create table " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE + " ("
+      + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLICATION_SEQ_BOOK_TYPE_AGGREGATES ("
+      + PUBLICATION_SEQ_COLUMN + ") "
+      + "REFERENCES " + PUBLICATION_TABLE + "(" + PUBLICATION_SEQ_COLUMN + "),"
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + FULL_REQUESTS_COLUMN + " integer,"
+      + SECTION_REQUESTS_COLUMN + " integer)";
+
   // Query to create the table for recording journal type aggregates (PDF vs.
   // HTML) used for COUNTER reports.
   protected static final String JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY =
@@ -1016,6 +1087,21 @@ public class DbManager extends BaseLockssDaemonManager
       + HTML_REQUESTS_COLUMN + " integer,"
       + PDF_REQUESTS_COLUMN + " integer)";
 
+  // Query to create the MySQL table for recording journal type aggregates (PDF
+  // vs. HTML) used for COUNTER reports.
+  protected static final String JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_MYSQL_QUERY
+  = "create table " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE + " ("
+      + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLICATION_SEQ_JOURNAL_TYPE_AGGREGATES ("
+      + PUBLICATION_SEQ_COLUMN + ") "
+      + "REFERENCES " + PUBLICATION_TABLE + "(" + PUBLICATION_SEQ_COLUMN + "),"
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + TOTAL_REQUESTS_COLUMN + " integer,"
+      + HTML_REQUESTS_COLUMN + " integer,"
+      + PDF_REQUESTS_COLUMN + " integer)";
+
   // Query to create the table for recording journal publication year aggregates
   // used for COUNTER reports.
   protected static final String JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_QUERY =
@@ -1023,6 +1109,20 @@ public class DbManager extends BaseLockssDaemonManager
       + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_PUBLICATION_SEQ_JOURNAL_PUBYEAR_AGGREGATE"
       + " REFERENCES " + PUBLICATION_TABLE + ","
+      + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
+      + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
+      + PUBLICATION_YEAR_COLUMN + " smallint NOT NULL,"
+      + REQUESTS_COLUMN + " integer NOT NULL)";
+
+  // Query to create the MySQL table for recording journal publication year
+  // aggregates used for COUNTER reports.
+  protected static final String JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_MYSQL_QUERY
+  = "create table " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE + " ("
+      + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLICATION_SEQ_JOURNAL_PUBYEAR_AGGREGATE ("
+      + PUBLICATION_SEQ_COLUMN + ") "
+      + "REFERENCES " + PUBLICATION_TABLE + "(" + PUBLICATION_SEQ_COLUMN + "),"
       + IS_PUBLISHER_INVOLVED_COLUMN + " boolean NOT NULL,"
       + REQUEST_YEAR_COLUMN + " smallint NOT NULL,"
       + REQUEST_MONTH_COLUMN + " smallint NOT NULL,"
@@ -1049,6 +1149,21 @@ public class DbManager extends BaseLockssDaemonManager
       + " REFERENCES " + PLATFORM_TABLE + " on delete cascade"
       + ")";
 
+  // Query to create the table for subscriptions.
+  protected static final String CREATE_SUBSCRIPTION_TABLE_MYSQL_QUERY =
+      "create table "
+      + SUBSCRIPTION_TABLE + " ("
+      + SUBSCRIPTION_SEQ_COLUMN + " --BigintSerialPk--,"
+      + PUBLICATION_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_PUBLICATION_SEQ_SUBSCRIPTION (" + PUBLICATION_SEQ_COLUMN
+      + ") REFERENCES " + PUBLICATION_TABLE + "(" + PUBLICATION_SEQ_COLUMN
+      + ") on delete cascade,"
+      + PLATFORM_SEQ_COLUMN + " bigint not null,"
+      + "FOREIGN KEY FK_PLATFORM_SEQ_SUBSCRIPTION (" + PLATFORM_SEQ_COLUMN
+      + ") REFERENCES " + PLATFORM_TABLE + "(" + PLATFORM_SEQ_COLUMN
+      + ") on delete cascade"
+      + ")";
+
   // Query to create the table for subscription ranges.
   protected static final String CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY =
       "create table "
@@ -1056,7 +1171,21 @@ public class DbManager extends BaseLockssDaemonManager
       + SUBSCRIPTION_SEQ_COLUMN + " bigint NOT NULL"
       + " CONSTRAINT FK_SUBSCRIPTION_SEQ_COLUMN_SUBSCRIPTION_RANGE"
       + " REFERENCES " + SUBSCRIPTION_TABLE + " on delete cascade,"
-      + RANGE_COLUMN + " varchar(" + MAX_RANGE_COLUMN + ") not null,"
+      + OBSOLETE_RANGE_COLUMN + " varchar(" + MAX_RANGE_COLUMN + ") not null,"
+      + SUBSCRIBED_COLUMN + " boolean not null"
+      + ")";
+
+  // Query to create the table for subscription ranges for MySQL.
+  protected static final String CREATE_SUBSCRIPTION_RANGE_TABLE_MYSQL_QUERY =
+      "create table "
+      + SUBSCRIPTION_RANGE_TABLE + " ("
+      + SUBSCRIPTION_SEQ_COLUMN + " bigint NOT NULL,"
+      + "FOREIGN KEY FK_SUBSCRIPTION_SEQ_COLUMN_SUBSCRIPTION_RANGE ("
+      + SUBSCRIPTION_SEQ_COLUMN
+      + ") REFERENCES " + SUBSCRIPTION_TABLE + "(" + SUBSCRIPTION_SEQ_COLUMN
+      + ") on delete cascade,"
+      + SUBSCRIPTION_RANGE_COLUMN + " varchar(" + MAX_RANGE_COLUMN
+      + ") not null,"
       + SUBSCRIBED_COLUMN + " boolean not null"
       + ")";
 
@@ -1105,6 +1234,29 @@ public class DbManager extends BaseLockssDaemonManager
 	      OBSOLETE_CREATE_TYPE_AGGREGATES_TABLE_QUERY);
 	}
       };
+
+  // The SQL code used to create the necessary version 1 database tables.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_1_TABLE_CREATE_MYSQL_QUERIES
+  	= new LinkedHashMap<String, String>() {
+    	{
+    	  put(OBSOLETE_METADATA_TABLE, OBSOLETE_CREATE_METADATA_TABLE_QUERY);
+    	  put(OBSOLETE_TITLE_TABLE, OBSOLETE_CREATE_TITLE_TABLE_QUERY);
+    	  put(OBSOLETE_PENDINGAUS_TABLE,
+    	      OBSOLETE_CREATE_PENDINGAUS_TABLE_QUERY);
+    	  put(OBSOLETE_FEATURE_TABLE, OBSOLETE_CREATE_FEATURE_TABLE_QUERY);
+    	  put(DOI_TABLE, OBSOLETE_CREATE_DOI_TABLE_QUERY);
+    	  put(ISBN_TABLE, OBSOLETE_CREATE_ISBN_TABLE_QUERY);
+    	  put(ISSN_TABLE, OBSOLETE_CREATE_ISSN_TABLE_QUERY);
+    	  put(OBSOLETE_TITLES_TABLE, OBSOLETE_CREATE_TITLES_TABLE_QUERY);
+    	  put(OBSOLETE_REQUESTS_TABLE,
+    	      OBSOLETE_CREATE_REQUESTS_TABLE_MYSQL_QUERY);
+    	  put(OBSOLETE_PUBYEAR_AGGREGATES_TABLE,
+    	      OBSOLETE_CREATE_PUBYEAR_AGGREGATES_TABLE_MYSQL_QUERY);
+    	  put(OBSOLETE_TYPE_AGGREGATES_TABLE,
+    	      OBSOLETE_CREATE_TYPE_AGGREGATES_TABLE_MYSQL_QUERY);
+    	}
+          };
 
   // The SQL code used to remove the obsolete version 1 database tables.
   @SuppressWarnings("serial")
@@ -1160,6 +1312,40 @@ public class DbManager extends BaseLockssDaemonManager
     	  put(COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE,
     	      JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_QUERY);
     	}
+          };
+
+          // The SQL code used to create the necessary version2 database tables.
+          @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_2_TABLE_CREATE_MYSQL_QUERIES
+  = new LinkedHashMap<String, String>() {
+        {
+          put(PLUGIN_TABLE, CREATE_PLUGIN_TABLE_QUERY);
+          put(AU_TABLE, CREATE_AU_TABLE_QUERY);
+          put(AU_MD_TABLE, CREATE_AU_MD_TABLE_QUERY);
+          put(MD_ITEM_TYPE_TABLE, CREATE_MD_ITEM_TYPE_TABLE_QUERY);
+          put(MD_ITEM_TABLE, CREATE_MD_ITEM_TABLE_QUERY);
+          put(MD_ITEM_NAME_TABLE, CREATE_MD_ITEM_NAME_TABLE_QUERY);
+          put(MD_KEY_TABLE, CREATE_MD_KEY_TABLE_QUERY);
+          put(MD_TABLE, CREATE_MD_TABLE_QUERY);
+          put(BIB_ITEM_TABLE, CREATE_BIB_ITEM_TABLE_QUERY);
+          put(URL_TABLE, CREATE_URL_TABLE_QUERY);
+          put(AUTHOR_TABLE, CREATE_AUTHOR_TABLE_QUERY);
+          put(KEYWORD_TABLE, CREATE_KEYWORD_TABLE_QUERY);
+          put(DOI_TABLE, CREATE_DOI_TABLE_QUERY);
+          put(ISSN_TABLE, CREATE_ISSN_TABLE_QUERY);
+          put(ISBN_TABLE, CREATE_ISBN_TABLE_QUERY);
+          put(PUBLISHER_TABLE, CREATE_PUBLISHER_TABLE_QUERY);
+          put(PUBLICATION_TABLE, CREATE_PUBLICATION_TABLE_QUERY);
+          put(PENDING_AU_TABLE, CREATE_PENDING_AU_TABLE_QUERY);
+          put(VERSION_TABLE, CREATE_VERSION_TABLE_QUERY);
+          put(COUNTER_REQUEST_TABLE, REQUEST_TABLE_CREATE_QUERY);
+          put(COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE,
+              JOURNAL_PUBYEAR_AGGREGATE_TABLE_CREATE_MYSQL_QUERY);
+          put(COUNTER_BOOK_TYPE_AGGREGATES_TABLE,
+              BOOK_TYPE_AGGREGATES_TABLE_CREATE_MYSQL_QUERY);
+          put(COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE,
+              JOURNAL_TYPE_AGGREGATES_TABLE_CREATE_MYSQL_QUERY);
+        }
           };
 
   // SQL statements that create the necessary version 1 functions.
@@ -1662,6 +1848,55 @@ public class DbManager extends BaseLockssDaemonManager
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
     };
 
+  // SQL statements that create the necessary MySQL version 3 indices.
+  protected static final String[] VERSION_3_INDEX_CREATE_MYSQL_QUERIES =
+    new String[] {
+    // TODO: Make the index unique when MySQL is fixed.
+    "create index idx1_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "(255))",
+
+    "create index idx1_" + AU_TABLE + " on " + AU_TABLE
+    + "(" + AU_KEY_COLUMN + "(255))",
+
+    "create index idx1_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + DATE_COLUMN + ")",
+
+    "create index idx1_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + NAME_COLUMN + "(255))",
+
+    // TODO: Make the index unique when MySQL is fixed.
+    "create index idx1_" + PUBLISHER_TABLE + " on " + PUBLISHER_TABLE
+    + "(" + PUBLISHER_NAME_COLUMN + "(255))",
+
+    "create index idx1_" + ISSN_TABLE + " on " + ISSN_TABLE
+    + "(" + ISSN_COLUMN + ")",
+
+    "create index idx1_" + ISBN_TABLE + " on " + ISBN_TABLE
+    + "(" + ISBN_COLUMN + ")",
+
+    "create index idx1_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + FEATURE_COLUMN + ")",
+
+    "create index idx2_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + URL_COLUMN + ")",
+
+    "create index idx1_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + VOLUME_COLUMN + ")",
+
+    "create index idx2_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + ISSUE_COLUMN + ")",
+
+    "create index idx3_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + START_PAGE_COLUMN + ")",
+
+    "create index idx1_" + AUTHOR_TABLE + " on " + AUTHOR_TABLE
+    + "(" + AUTHOR_NAME_COLUMN + ")",
+
+    // TODO: Make the index unique when MySQL is fixed.
+    "create index idx1_" + PENDING_AU_TABLE + " on " + PENDING_AU_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "(255)," + AU_KEY_COLUMN + "(255))"
+    };
+
   // The SQL code used to create the necessary version 4 database tables.
   @SuppressWarnings("serial")
   private static final Map<String, String> VERSION_4_TABLE_CREATE_QUERIES =
@@ -1669,6 +1904,18 @@ public class DbManager extends BaseLockssDaemonManager
       put(PLATFORM_TABLE, CREATE_PLATFORM_TABLE_QUERY);
       put(SUBSCRIPTION_TABLE, CREATE_SUBSCRIPTION_TABLE_QUERY);
       put(SUBSCRIPTION_RANGE_TABLE, CREATE_SUBSCRIPTION_RANGE_TABLE_QUERY);
+      put(UNCONFIGURED_AU_TABLE, CREATE_UNCONFIGURED_AU_TABLE_QUERY);
+    }};
+
+  // The SQL code used to create the necessary version 4 database tables for
+  // MySQL.
+  @SuppressWarnings("serial")
+  private static final Map<String, String> VERSION_4_TABLE_CREATE_MYSQL_QUERIES
+    = new LinkedHashMap<String, String>() {{
+      put(PLATFORM_TABLE, CREATE_PLATFORM_TABLE_QUERY);
+      put(SUBSCRIPTION_TABLE, CREATE_SUBSCRIPTION_TABLE_MYSQL_QUERY);
+      put(SUBSCRIPTION_RANGE_TABLE,
+	  CREATE_SUBSCRIPTION_RANGE_TABLE_MYSQL_QUERY);
       put(UNCONFIGURED_AU_TABLE, CREATE_UNCONFIGURED_AU_TABLE_QUERY);
     }};
 
@@ -1680,7 +1927,20 @@ public class DbManager extends BaseLockssDaemonManager
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")",
     "create unique index idx1_" + SUBSCRIPTION_RANGE_TABLE
     + " on " + SUBSCRIPTION_RANGE_TABLE
-    + "(" + SUBSCRIPTION_SEQ_COLUMN + "," + RANGE_COLUMN + ")"
+    + "(" + SUBSCRIPTION_SEQ_COLUMN + "," + OBSOLETE_RANGE_COLUMN + ")"
+    };
+
+  // SQL statements that create the necessary version 4 indices for MySQL.
+  protected static final String[] VERSION_4_INDEX_CREATE_MYSQL_QUERIES =
+    new String[] {
+    // TODO: Make the index unique when MySQL is fixed.
+    "create index idx1_" + UNCONFIGURED_AU_TABLE
+    + " on " + UNCONFIGURED_AU_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "(255)," + AU_KEY_COLUMN + "(255))",
+    // TODO: Make the index unique when MySQL is fixed.
+    "create index idx1_" + SUBSCRIPTION_RANGE_TABLE
+    + " on " + SUBSCRIPTION_RANGE_TABLE
+    + "(" + SUBSCRIPTION_SEQ_COLUMN + "," + SUBSCRIPTION_RANGE_COLUMN + ")"
     };
 
   // SQL statement that adds the platform reference column to the plugin table.
@@ -2031,6 +2291,24 @@ public class DbManager extends BaseLockssDaemonManager
       + " set " + FETCH_TIME_COLUMN + " = ?"
       + " where " + MD_ITEM_SEQ_COLUMN + " = ?";
 
+  // Query to rename the range column in Derby.
+  private static final String VERSION_12_RENAME_RANGE_COLUMN_DERBY_QUERY =
+      "rename column " + SUBSCRIPTION_RANGE_TABLE + "." + OBSOLETE_RANGE_COLUMN
+      + " to " + SUBSCRIPTION_RANGE_COLUMN;
+
+  // Query to rename the range column in PostgreSQL.
+  private static final String VERSION_12_RENAME_RANGE_COLUMN_PG_QUERY =
+      "alter table " + SUBSCRIPTION_RANGE_TABLE
+      + " rename " + OBSOLETE_RANGE_COLUMN + " to " + SUBSCRIPTION_RANGE_COLUMN;
+
+  // SQL statement that finds a database in MySQL.
+  private static final String FIND_DATABASE_QUERY_MYSQL = "select schema_name"
+      + " from schemata where schema_name = ?";
+  
+  // SQL statement that creates a database in MySQL.
+  private static final String CREATE_DATABASE_QUERY_MYSQL = "create database "
+      + "--databaseName-- character set utf8 collate utf8_general_ci";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -2066,7 +2344,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 11;
+  private int targetDatabaseVersion = 12;
 
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
@@ -2193,6 +2471,11 @@ public class DbManager extends BaseLockssDaemonManager
     if (isTypePostgresql()) {
       // Yes: Initialize the database, if necessary.
       initializePostgresqlDbIfNeeded(dataSourceConfig);
+
+      // No: Check whether the MySQL database is being used.
+    } else if (isTypeMysql()) {
+      // Yes: Initialize the database, if necessary.
+      initializeMysqlDbIfNeeded(dataSourceConfig);
     }
 
     // Initialize the datasource properties.
@@ -2443,6 +2726,9 @@ public class DbManager extends BaseLockssDaemonManager
       } else if (isTypePostgresql()) {
 	resultSet = conn.getMetaData().getTables(null, dataSourceUser,
 	    tableName.toLowerCase(), TABLE_TYPES);
+      } else if (isTypeMysql()) {
+	resultSet = conn.getMetaData().getTables(null, dataSourceUser,
+	    tableName, TABLE_TYPES);
       }
 
       // Determine whether the table exists.
@@ -2556,6 +2842,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  updateDatabaseFrom9To10(conn);
 	} else if (from == 10) {
 	  updateDatabaseFrom10To11(conn);
+	} else if (from == 11) {
+	  updateDatabaseFrom11To12(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");
@@ -2604,7 +2892,11 @@ public class DbManager extends BaseLockssDaemonManager
     removeVersion1ObsoleteTablesIfPresent(conn);
 
     // Create the necessary tables if they do not exist.
-    createTablesIfMissing(conn, VERSION_2_TABLE_CREATE_QUERIES);
+    if (isTypeDerby() || isTypePostgresql()) {
+      createTablesIfMissing(conn, VERSION_2_TABLE_CREATE_QUERIES);
+    } else if (isTypeMysql()) {
+      createTablesIfMissing(conn, VERSION_2_TABLE_CREATE_MYSQL_QUERIES);
+    }
 
     // Initialize necessary data in new tables.
     addMetadataItemType(conn, MD_ITEM_TYPE_BOOK_SERIES);
@@ -3401,6 +3693,9 @@ public class DbManager extends BaseLockssDaemonManager
       } else if (isTypePostgresql()) {
 	resultSet = conn.getMetaData().getColumns(null, dataSourceUser,
 	    tableName.toLowerCase(), null);
+      } else if (isTypeMysql()) {
+	resultSet = conn.getMetaData().getColumns(null, dataSourceUser,
+	    tableName, null);
       }
       
       log.debug("Table Name : " + tableName);
@@ -3627,6 +3922,9 @@ public class DbManager extends BaseLockssDaemonManager
       dsConfig.put("portNumber",
 	  currentConfig.get(PARAM_DATASOURCE_PORTNUMBER,
 	      		    DEFAULT_DATASOURCE_PORTNUMBER_PG));
+    } else if (isTypeMysql()) {
+      dsConfig.put("port", currentConfig.get(PARAM_DATASOURCE_PORTNUMBER,
+	  DEFAULT_DATASOURCE_PORTNUMBER_MYSQL));
     }
 
     // Save the server name, if not configured.
@@ -3661,8 +3959,8 @@ public class DbManager extends BaseLockssDaemonManager
 	dsConfig.put("databaseName",
 	    FileUtil.getCanonicalOrAbsolutePath(datasourceDir));
 
-	// No: Check whether the PostgreSQL database is being used.
-      } else if (isTypePostgresql()) {
+	// No: Check whether the PostgreSQL or MySQL databases are being used.
+      } else if (isTypePostgresql() || isTypeMysql()) {
 	// Yes: Use the user name as the database name.
 	dsConfig.put("databaseName", dataSourceUser);
       }
@@ -3682,7 +3980,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @return <code>true</code> if the Derby database is being used,
    *         <code>false</code> otherwise.
    */
-  private boolean isTypeDerby() {
+  public boolean isTypeDerby() {
     final String DEBUG_HEADER = "isTypeDerby(): ";
 
     boolean result = "org.apache.derby.jdbc.EmbeddedDataSource"
@@ -3702,7 +4000,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @return <code>true</code> if the PostgreSQL database is being used,
    *         <code>false</code> otherwise.
    */
-  private boolean isTypePostgresql() {
+  public boolean isTypePostgresql() {
     final String DEBUG_HEADER = "isTypePostgresql(): ";
 
     boolean result = "org.postgresql.ds.PGSimpleDataSource"
@@ -3905,9 +4203,9 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "name = '" + name + "'.");
 
     // Handle the names of properties that are always applicable.
-    if ("serverName".equals(name) || "portNumber".equals(name)
+    if ("serverName".equals(name)
 	|| "dataSourceName".equals(name) || "databaseName".equals(name)
-	|| "user".equals(name) || "password".equals(name)
+	|| "user".equals(name)
 	|| "description".equals(name)) {
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true.");
       return true;
@@ -3916,14 +4214,22 @@ public class DbManager extends BaseLockssDaemonManager
     // Handle the names of properties applicable to the Derby database being
     // used.
     if (isTypeDerby()
-	&& ("createDatabase".equals(name) || "shutdownDatabase".equals(name))) {
+	&& ("createDatabase".equals(name) || "shutdownDatabase".equals(name)
+	    || "portNumber".equals(name) || "password".equals(name))) {
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true.");
       return true;
-      // Handle the names of properties applicable to the Derby database being
-      // used.
+
+      // Handle the names of properties applicable to the PostgreSQL database
+      // being used.
     } else if (isTypePostgresql()
-	&& ("initialConnections".equals(name)
-	    || "maxConnections".equals(name))) {
+	&& ("initialConnections".equals(name) || "maxConnections".equals(name)
+	    || "portNumber".equals(name) || "password".equals(name))) {
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true.");
+      return true;
+
+      // Handle the names of properties applicable to the MySQL database being
+      // used.
+    } else if (isTypeMysql() && "port".equals(name)) {
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true.");
       return true;
     }
@@ -4483,7 +4789,11 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Create the necessary tables if they do not exist.
-    createTablesIfMissing(conn, VERSION_1_TABLE_CREATE_QUERIES);
+    if (isTypeDerby() || isTypePostgresql()) {
+      createTablesIfMissing(conn, VERSION_1_TABLE_CREATE_QUERIES);
+    } else if (isTypeMysql()) {
+      createTablesIfMissing(conn, VERSION_1_TABLE_CREATE_MYSQL_QUERIES);
+    }
 
     // Create new functions.
     if (isTypeDerby()) {
@@ -5102,7 +5412,11 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
     // Create the necessary indices.
-    executeDdlQueries(conn, VERSION_3_INDEX_CREATE_QUERIES);
+    if (isTypeDerby() || isTypePostgresql()) {
+      executeDdlQueries(conn, VERSION_3_INDEX_CREATE_QUERIES);
+    } else if (isTypeMysql()) {
+      executeDdlQueries(conn, VERSION_3_INDEX_CREATE_MYSQL_QUERIES);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
@@ -5148,11 +5462,23 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "updateDatabaseFrom3To4(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
 
-    // Create the necessary tables if they do not exist.
-    createTablesIfMissing(conn, VERSION_4_TABLE_CREATE_QUERIES);
+    // Check whether the MySQL database is being used.
+    if (isTypeMysql()) {
+      // Yes: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_4_TABLE_CREATE_MYSQL_QUERIES);
+    } else {
+    // No: Create the necessary tables if they do not exist.
+      createTablesIfMissing(conn, VERSION_4_TABLE_CREATE_QUERIES);
+    }
 
     // Create the necessary indices.
-    executeDdlQueries(conn, VERSION_4_INDEX_CREATE_QUERIES);
+    if (isTypeMysql()) {
+      // Yes: Create the necessary indices if they do not exist.
+      executeDdlQueries(conn, VERSION_4_INDEX_CREATE_MYSQL_QUERIES);
+    } else {
+    // No: Create the necessary indices if they do not exist.
+      executeDdlQueries(conn, VERSION_4_INDEX_CREATE_QUERIES);
+    }
 
     // Migrate the version 3 platforms.
     executeDdlQuery(conn, ADD_PLUGIN_PLATFORM_SEQ_COLUMN);
@@ -5751,6 +6077,9 @@ public class DbManager extends BaseLockssDaemonManager
     } else if (isTypePostgresql()) {
       result = StringUtil.replaceString(query, "--BigintSerialPk--",
 	  				BIGINT_SERIAL_PK_PG);
+    } else if (isTypeMysql()) {
+      result = StringUtil.replaceString(query, "--BigintSerialPk--",
+	  				BIGINT_SERIAL_PK_MYSQL);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
@@ -6514,6 +6843,197 @@ public class DbManager extends BaseLockssDaemonManager
 
     // Add the new columns.
     executeDdlQueries(conn, VERSION_11_COLUMN_ADD_QUERIES);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 11 to version 12.
+   * 
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws DbException
+   *           if any problem occurred updating the database.
+   */
+  private void updateDatabaseFrom11To12(Connection conn) throws DbException {
+    final String DEBUG_HEADER = "updateDatabaseFrom11To12(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new DbException("Null connection");
+    }
+
+    // Check whether the Derby database is being used.
+    if (isTypeDerby()) {
+      // Yes.
+      executeDdlQuery(conn, VERSION_12_RENAME_RANGE_COLUMN_DERBY_QUERY);
+      // No: Check whether the PostgreSQL database is being used.
+    } else if (isTypePostgresql()) {
+      executeDdlQuery(conn, VERSION_12_RENAME_RANGE_COLUMN_PG_QUERY);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides an indication of whether the MySQL database is being used.
+   * 
+   * @return <code>true</code> if the MySQL database is being used,
+   *         <code>false</code> otherwise.
+   */
+  public boolean isTypeMysql() {
+    final String DEBUG_HEADER = "isTypeMysql(): ";
+
+    boolean result = "com.mysql.jdbc.jdbc2.optional.MysqlDataSource"
+	.equals(dataSourceClassName);
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Initializes a MySQl database, if it does not exist already.
+   * 
+   * @param dsConfig
+   *          A Configuration with the datasource configuration.
+   * @throws DbException
+   *           if the database discovery or initialization processes failed.
+   */
+  private void initializeMysqlDbIfNeeded(Configuration dsConfig)
+      throws DbException {
+    final String DEBUG_HEADER = "initializeMysqlDbIfNeeded(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Create a datasource.
+    DataSource ds = createDataSource(dsConfig.get("className"));
+
+    // Initialize the datasource properties.
+    initializeDataSourceProperties(dsConfig, ds);
+
+    // Get the configured database name.
+    String databaseName = dsConfig.get("databaseName");
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "databaseName = " + databaseName);
+
+    // Replace the database name with the standard connectable mysql.
+    try {
+      BeanUtils.setProperty(ds, "databaseName", "information_schema");
+    } catch (Throwable t) {
+      throw new DbException("Could not initialize the datasource", t);
+    }
+
+    // Connect to the template database.
+    Connection conn = getConnectionBeforeReady(ds);
+
+    try {
+      // Create the database if it does not exist.
+      createMySqlDbIfMissing(conn, databaseName);
+    } finally {
+      DbManager.safeCloseConnection(conn);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Creates a MySQL database if it does not exist. To be used during
+   * initialization.
+   * 
+   * @param conn
+   *          A connection with the database connection to be used.
+   * @param databaseName
+   *          A String with the name of the database to create, if missing.
+   * @return <code>true</code> if the database did not exist and it was created,
+   *         <code>false</code> otherwise.
+   * @throws DbException
+   *           if the database creation process failed.
+   */
+  protected boolean createMySqlDbIfMissing(Connection conn, String databaseName)
+      throws DbException {
+    final String DEBUG_HEADER = "createMySqlDbIfMissing(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "databaseName = " + databaseName);
+
+    if (conn == null) {
+      throw new DbException("Null connection.");
+    }
+
+    // Check whether the database does not exist.
+    if (!mysqlDbExists(conn, databaseName)) {
+      // Yes: Create it.
+      createMysqlDb(conn, databaseName);
+
+      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = true.");
+      return true;
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = false.");
+    return false;
+  }
+
+  /**
+   * Determines whether a named MySQL database exists.
+   * 
+   * @param conn
+   *          A connection with the database connection to be used.
+   * @param databaseName
+   *          A String with the name of the database.
+   * @return <code>true</code> if the database exists, <code>false</code>
+   *         otherwise.
+   * @throws DbException
+   *           if any problem occurred accessing the database.
+   */
+  private boolean mysqlDbExists(Connection conn, String databaseName)
+      throws DbException {
+    final String DEBUG_HEADER = "mysqlDbExists(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "databaseName = " + databaseName);
+
+    boolean result = false;
+    PreparedStatement findDb = null;
+    ResultSet resultSet = null;
+
+    try {
+      findDb = prepareStatementBeforeReady(conn, FIND_DATABASE_QUERY_MYSQL);
+      findDb.setString(1, databaseName);
+
+      resultSet = executeQueryBeforeReady(findDb);
+      result = resultSet.next();
+    } catch (SQLException sqle) {
+      log.error("Cannot find database", sqle);
+      log.error("databaseName = '" + databaseName + "'.");
+      log.error("SQL = '" + FIND_DATABASE_QUERY_MYSQL + "'.");
+      throw new DbException("Cannot find database", sqle);
+    } finally {
+      DbManager.safeCloseResultSet(resultSet);
+      DbManager.safeCloseStatement(findDb);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
+  /**
+   * Creates a MySQL database. To be used during initialization.
+   * 
+   * @param conn
+   *          A connection with the database connection to be used.
+   * @param databaseName
+   *          A String with the name of the database to create.
+   * @throws DbException
+   *           if the database creation process failed.
+   */
+  private void createMysqlDb(Connection conn, String databaseName)
+      throws DbException {
+    final String DEBUG_HEADER = "createMysqlDb(): ";
+    if (log.isDebug2())
+      log.debug2(DEBUG_HEADER + "databaseName = " + databaseName);
+
+    String sql = StringUtil.replaceString(CREATE_DATABASE_QUERY_MYSQL,
+	  "--databaseName--", databaseName);
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + "sql = " + sql);
+
+    executeDdlQuery(conn, sql);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
