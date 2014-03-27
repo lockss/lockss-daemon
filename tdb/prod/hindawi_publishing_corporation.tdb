@@ -261,6 +261,62 @@
 
   {
     title <
+      name = Advances in Biology ;
+      issn = 2356-6582 ;
+      eissn = 2314-7563 ;
+      issnl = 2356-6582
+    >
+
+    param[journal_id] = ab
+
+    au < expected ; 2014 ; Advances in Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Biomaterials ;
+      issn = 2356-6590 ;
+      eissn = 2314-7873 ;
+      issnl = 2356-6590
+    >
+
+    param[journal_id] = abm
+
+    au < expected ; 2014 ; Advances in Biomaterials Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Botany ;
+      issn = 2356-6604 ;
+      eissn = 2314-7857 ;
+      issnl = 2356-6604
+    >
+
+    param[journal_id] = abot
+
+    au < expected ; 2014 ; Advances in Botany Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Chemistry ;
+      issn = 2356-6612 ;
+      eissn = 2314-7571 ;
+      issnl = 2356-6612
+    >
+
+    param[journal_id] = ac
+
+    au < expected ; 2014 ; Advances in Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Civil Engineering ;
       issn = 1687-8086 ;
       eissn = 1687-8094 ;
@@ -281,6 +337,44 @@
 
   {
     title <
+      name = Advances in Communications ;
+      eissn = 2314-7598
+    >
+
+    param[journal_id] = acom
+
+    au < expected ; 2014 ; Advances in Communications Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Computational Chemistry ;
+      eissn = 2314-8330
+    >
+
+    param[journal_id] = acchem
+
+    au < expected ; 2014 ; Advances in Computational Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Computer Engineering ;
+      issn = 2356-6620 ;
+      eissn = 2314-7601 ;
+      issnl = 2356-6620 
+    >
+
+    param[journal_id] = aceng
+
+    au < expected ; 2014 ; Advances in Computer Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Condensed Matter Physics ;
       issn = 1687-8108 ;
       eissn = 1687-8124 ;
@@ -296,6 +390,20 @@
     au < ready ; 2012 ; Advances in Condensed Matter Physics Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Condensed Matter Physics Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Condensed Matter Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Critical Care ;
+      issn = 2356-6639 ;
+      eissn = 2314-7717 ;
+      issnl = 2356-6639 
+    >
+
+    param[journal_id] = acc
+
+    au < expected ; 2014 ; Advances in Critical Care Volume 2014 ; 2014 ; 2014 >
 
   }
 
