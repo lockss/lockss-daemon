@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.32 2014-03-27 19:12:13 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.33 2014-03-27 19:33:20 fergaloy-sf Exp $
  */
 
 /*
@@ -3295,6 +3295,9 @@ public class DbManager extends BaseLockssDaemonManager
 
       int count = executeUpdateBeforeReady(statement);
       if (log.isDebug3()) log.debug3(DEBUG_HEADER + "count = " + count + ".");
+    } catch (DbException dbe) {
+      log.error("DDL Query = '" + ddlQuery + "'.");
+      throw dbe;
     } finally {
       DbManager.safeCloseStatement(statement);
     }
