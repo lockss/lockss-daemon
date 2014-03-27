@@ -8,6 +8,7 @@
 
     plugin = org.lockss.plugin.dryad.ClockssDryadPlugin
     param[base_url] = http://datadryad.org/
+    comment[base_url] = urls on manifest pages use above base url, not www.datadryad.org
     implicit < status ; status2 ; param[volume_name] ; name >
     
     comment[manifest] = while new plugin is developed.
