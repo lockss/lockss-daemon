@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.31 2014-03-27 18:48:56 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.32 2014-03-27 19:12:13 fergaloy-sf Exp $
  */
 
 /*
@@ -1995,7 +1995,15 @@ public class DbManager extends BaseLockssDaemonManager
     + " on " + AU_PROBLEM_TABLE
     + "(" + PLUGIN_ID_COLUMN + "," + AU_KEY_COLUMN + ")"
   };
-  
+
+  // SQL statements that create the necessary version 5 indices for MySQL.
+  protected static final String[] VERSION_5_INDEX_CREATE_MYSQL_QUERIES =
+    new String[] {
+    "create index idx1_" + AU_PROBLEM_TABLE
+    + " on " + AU_PROBLEM_TABLE
+    + "(" + PLUGIN_ID_COLUMN + "(255)," + AU_KEY_COLUMN + "(255))"
+  };
+
   // SQL statement that obtains all the rows from the ISBN table.
   private static final String FIND_ISBNS = "select "
       + MD_ITEM_SEQ_COLUMN
@@ -5802,7 +5810,11 @@ public class DbManager extends BaseLockssDaemonManager
     createTablesIfMissing(conn, VERSION_5_TABLE_CREATE_QUERIES);
 
     // Create the necessary indices.
-    executeDdlQueries(conn, VERSION_5_INDEX_CREATE_QUERIES);
+    if (isTypeDerby() || isTypePostgresql()) {
+      executeDdlQueries(conn, VERSION_5_INDEX_CREATE_QUERIES);
+    } else if (isTypeMysql()) {
+      executeDdlQueries(conn, VERSION_5_INDEX_CREATE_MYSQL_QUERIES);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
