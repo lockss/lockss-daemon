@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.33 2014-03-27 19:33:20 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.34 2014-03-27 19:47:08 fergaloy-sf Exp $
  */
 
 /*
@@ -2272,7 +2272,7 @@ public class DbManager extends BaseLockssDaemonManager
     "create index idx1_" + DOI_TABLE + " on " + DOI_TABLE
     + "(" + MD_ITEM_SEQ_COLUMN + ")",
     "create index idx2_" + DOI_TABLE + " on " + DOI_TABLE
-    + "(" + DOI_COLUMN + ")",
+    + "(" + DOI_COLUMN + "(255))",
     "create index idx4_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
     + "(" + MD_ITEM_SEQ_COLUMN + ")",
     "create index idx2_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
