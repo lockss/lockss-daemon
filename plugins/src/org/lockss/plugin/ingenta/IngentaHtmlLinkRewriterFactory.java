@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.3 2013-12-26 20:55:29 etenbrink Exp $
+ * $Id: IngentaHtmlLinkRewriterFactory.java,v 1.4 2014-03-27 22:40:55 etenbrink Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class IngentaHtmlLinkRewriterFactory
   }
   
   /**
-   * This link rewriter does special processing for artlcle PDF and HTML 
+   * This link rewriter does special processing for article PDF and HTML 
    * links before handing off to the base NodeFilterHtmlLinkRewriterFactory.
    * 
    * @param mimeType the MIME type for the URL
