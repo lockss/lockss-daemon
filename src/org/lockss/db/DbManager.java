@@ -1,5 +1,5 @@
 /*
- * $Id: DbManager.java,v 1.30 2014-03-26 19:13:36 fergaloy-sf Exp $
+ * $Id: DbManager.java,v 1.31 2014-03-27 18:48:56 fergaloy-sf Exp $
  */
 
 /*
@@ -1878,7 +1878,7 @@ public class DbManager extends BaseLockssDaemonManager
     + "(" + FEATURE_COLUMN + ")",
 
     "create index idx2_" + URL_TABLE + " on " + URL_TABLE
-    + "(" + URL_COLUMN + ")",
+    + "(" + URL_COLUMN + "(255))",
 
     "create index idx1_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
     + "(" + VOLUME_COLUMN + ")",
@@ -2179,6 +2179,98 @@ public class DbManager extends BaseLockssDaemonManager
     + "(" + PLATFORM_SEQ_COLUMN + ")",
     "create index idx1_" + COUNTER_REQUEST_TABLE
     + " on " + COUNTER_REQUEST_TABLE + "(" + URL_COLUMN + ")",
+    "create index idx2_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + IN_AGGREGATION_COLUMN + ")",
+    "create index idx1_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + FULL_REQUESTS_COLUMN + ")",
+    "create index idx6_" + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_BOOK_TYPE_AGGREGATES_TABLE
+    + "(" + SECTION_REQUESTS_COLUMN + ")",
+    "create index idx1_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + " on " + COUNTER_JOURNAL_TYPE_AGGREGATES_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx1_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + PUBLICATION_SEQ_COLUMN + ")",
+    "create index idx2_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
+    "create index idx3_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + REQUEST_YEAR_COLUMN + ")",
+    "create index idx4_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + REQUEST_MONTH_COLUMN + ")",
+    "create index idx5_" + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + " on " + COUNTER_JOURNAL_PUBYEAR_AGGREGATE_TABLE
+    + "(" + PUBLICATION_YEAR_COLUMN + ")"
+  };
+
+  // SQL statements that create the necessary version 9 indices for MySQL.
+  protected static final String[] VERSION_9_INDEX_CREATE_MYSQL_QUERIES =
+    new String[] {
+    "create index idx2_" + AU_TABLE + " on " + AU_TABLE
+    + "(" + PLUGIN_SEQ_COLUMN + ")",
+    "create index idx2_" + AU_MD_TABLE + " on " + AU_MD_TABLE
+    + "(" + AU_SEQ_COLUMN + ")",
+    "create index idx3_" + AU_MD_TABLE + " on " + AU_MD_TABLE
+    + "(" + CREATION_TIME_COLUMN + ")",
+    "create index idx4_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + MD_ITEM_TYPE_SEQ_COLUMN + ")",
+    "create index idx5_" + MD_ITEM_TABLE + " on " + MD_ITEM_TABLE
+    + "(" + FETCH_TIME_COLUMN + ")",
+    "create index idx3_" + URL_TABLE + " on " + URL_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + PUBLICATION_TABLE + " on " + PUBLICATION_TABLE
+    + "(" + PUBLISHER_SEQ_COLUMN + ")",
+    "create index idx2_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx3_" + MD_ITEM_NAME_TABLE + " on " + MD_ITEM_NAME_TABLE
+    + "(" + NAME_TYPE_COLUMN + ")",
+    "create index idx2_" + PENDING_AU_TABLE + " on " + PENDING_AU_TABLE
+    + "(" + PRIORITY_COLUMN + ")",
+    "create index idx2_" + AUTHOR_TABLE + " on " + AUTHOR_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx1_" + KEYWORD_TABLE + " on " + KEYWORD_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx1_" + DOI_TABLE + " on " + DOI_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + DOI_TABLE + " on " + DOI_TABLE
+    + "(" + DOI_COLUMN + ")",
+    "create index idx4_" + BIB_ITEM_TABLE + " on " + BIB_ITEM_TABLE
+    + "(" + MD_ITEM_SEQ_COLUMN + ")",
+    "create index idx2_" + PLUGIN_TABLE + " on " + PLUGIN_TABLE
+    + "(" + PLATFORM_SEQ_COLUMN + ")",
+    "create index idx1_" + COUNTER_REQUEST_TABLE
+    + " on " + COUNTER_REQUEST_TABLE + "(" + URL_COLUMN + "(255))",
     "create index idx2_" + COUNTER_REQUEST_TABLE
     + " on " + COUNTER_REQUEST_TABLE + "(" + IS_PUBLISHER_INVOLVED_COLUMN + ")",
     "create index idx3_" + COUNTER_REQUEST_TABLE
@@ -6336,7 +6428,11 @@ public class DbManager extends BaseLockssDaemonManager
     executeDdlQueries(conn, VERSION_9_COLUMN_ADD_QUERIES);
 
     // Create the necessary indices.
-    executeDdlQueries(conn, VERSION_9_INDEX_CREATE_QUERIES);
+    if (isTypeMysql()) {
+      executeDdlQueries(conn, VERSION_9_INDEX_CREATE_MYSQL_QUERIES);
+    } else {
+      executeDdlQueries(conn, VERSION_9_INDEX_CREATE_QUERIES);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
