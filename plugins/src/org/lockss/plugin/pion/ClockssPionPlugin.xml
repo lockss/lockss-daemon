@@ -149,7 +149,6 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
   </entry>
-<!--  the RIS files mime type, oddly, is text/plain -->   
   <entry>
     <string>application/ris_metadata_extractor_factory_map</string>
     <map>
