@@ -71,7 +71,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
 
   } elsif ($plugin eq "ClockssHighWirePressH20Plugin" || $plugin eq "ClockssHighWirePlugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.dtl",
@@ -96,7 +96,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(5);
+        sleep(4);
 
   } elsif ($plugin eq "HighWireDrupalPlugin") {
         $url = sprintf("%slockss-manifest/vol_%s_manifest.html",
@@ -121,7 +121,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(5);
+        sleep(4);
 
   } elsif ($plugin eq "ClockssHighWireDrupalPlugin") {
         $url = sprintf("%sclockss-manifest/vol_%s_manifest.html",
@@ -146,7 +146,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(5);
+        sleep(4);
 
   } elsif ($plugin eq "ProjectMusePlugin") {
         $url = sprintf("%sjournals/%s/v%03d/", 
@@ -171,7 +171,7 @@ while (my $line = <>) {
   } else {
       $result = "--"
   }
-        sleep(5);
+        sleep(4);
 
   } elsif ($plugin eq "BePressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html", 
@@ -196,7 +196,7 @@ while (my $line = <>) {
   } else {
       $result = "--"
   }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "ClockssBerkeleyElectronicPressPlugin") {
         $url = sprintf("%s%s/lockss-volume%d.html", 
@@ -221,7 +221,7 @@ while (my $line = <>) {
   } else {
       $result = "--"
   }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "OJS2Plugin" || $plugin eq "CoActionPublishingPlugin") {
         $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d", 
@@ -246,7 +246,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "ClockssOJS2Plugin") {
         #Url with permission statement
@@ -274,7 +274,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "ClockssCoActionPublishingPlugin") {
         #Url with list of urls for issues
@@ -298,7 +298,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "PensoftPlugin" || $plugin eq "ClockssPensoftPlugin") {
         #Url with list of urls for issues
@@ -322,7 +322,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "ClockssGeorgThiemeVerlagPlugin") {
         #Url with list of urls for issues
@@ -345,7 +345,7 @@ while (my $line = <>) {
         } else {
             $result = "--"
         }
-        sleep(5);
+        sleep(4);
 
   } elsif (($plugin eq "TaylorAndFrancisPlugin") || 
            ($plugin eq "SiamPlugin") || 
@@ -376,7 +376,7 @@ while (my $line = <>) {
   } else {
       $result = "--"
   }
-        sleep(5);
+        sleep(4);
         
   } elsif (($plugin eq "ClockssTaylorAndFrancisPlugin") || 
            ($plugin eq "ClockssNRCResearchPressPlugin") || 
@@ -409,7 +409,7 @@ while (my $line = <>) {
   } else {
       $result = "--"
   }
-        sleep(5);
+        sleep(4);
         
   } elsif ($plugin eq "EdinburghUniversityPressPlugin") {
     $url = sprintf("%slockss/%s/%s/index.html", 
@@ -435,7 +435,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssEdinburghUniversityPressPlugin") {
     $url = sprintf("%sclockss/%s/%s/index.html", 
@@ -461,7 +461,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssPionPlugin") {
     $url = sprintf("%scontents.cgi?journal=%s&amp;volume=%s", 
@@ -487,7 +487,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "MaffeyPlugin") {
     $url = sprintf("%slockss.php?t=lockss&pa=issue&j_id=%s&year=%d", 
@@ -513,7 +513,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssMaffeyPlugin") {
     $url = sprintf("%slockss.php?t=clockss&pa=issue&j_id=%s&year=%d", 
@@ -539,7 +539,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "BioOneAtyponPlugin") {
     $url = sprintf("%slockss/%s/%s/index.html", 
@@ -564,7 +564,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssBioOneAtyponPlugin") {
     $url = sprintf("%sclockss/%s/%s/index.html", 
@@ -589,7 +589,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "PortlandPressPlugin") {
     $url = sprintf("%s%s/%s/lockss.htm", 
@@ -607,7 +607,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssPortlandPressPlugin") {
     $url = sprintf("%s%s/%s/lockss.htm", 
@@ -625,7 +625,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssNaturePublishingGroupPlugin") {
     $url = sprintf("%s%s/clockss/%s_clockss_%d.html", 
@@ -650,7 +650,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "IngentaJournalPlugin") {
     $url = sprintf("%scontent/%s?format=lockss&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -674,7 +674,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "ClockssIngentaJournalPlugin") {
     $url = sprintf("%scontent/%s?format=clockss&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -698,7 +698,7 @@ while (my $line = <>) {
     } else {
       $result = "--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "MetaPressPlugin") {
     $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -722,7 +722,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "ClockssMetaPressPlugin") {
     $url = sprintf("%sopenurl.asp?genre=volume&eissn=%s&volume=%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -746,7 +746,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "BloomsburyQatarPlugin") {
     $url = sprintf("%slockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -770,7 +770,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "ClockssBloomsburyQatarPlugin") {
     $url = sprintf("%sclockss/%s/%s/index.html", 
       $param{base_url}, $param{journal_id}, $param{volume_name});
@@ -794,7 +794,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
   } elsif ($plugin eq "ClockssIOPSciencePlugin") {
     $url = sprintf("%s%s/%s", 
       $param{base_url}, $param{journal_issn}, $param{volume_name});
@@ -818,7 +818,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
 
   } elsif ($plugin eq "IgiGlobalPlugin") {
     $url = sprintf("%slockss/journal-issues.aspx?issn=%s&volume=%s", 
@@ -843,7 +843,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
         
   } elsif ($plugin eq "ClockssIgiGlobalPlugin") {
     $url = sprintf("%slockss/journal-issues.aspx?issn=%s&volume=%s", 
@@ -868,7 +868,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } elsif ($plugin eq "ClockssRoyalSocietyOfChemistryPlugin") {
     $url = sprintf("%spublishing/journals/lockss/?journalcode=%s&volume=%s&year=%d", 
@@ -893,7 +893,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } elsif ($plugin eq "ClockssCopernicusPublicationsPlugin") {
     $url = sprintf("%s%s/index.html", 
@@ -918,7 +918,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } elsif ($plugin eq "CopernicusPublicationsPlugin") {
     $url = sprintf("%s%s/index.html", 
@@ -943,7 +943,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
     
   } elsif (($plugin eq "BMCPlugin") || ($plugin eq "ClockssBMCPlugin")) {
     $url = sprintf("%s%s/%s", 
@@ -970,7 +970,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } elsif (($plugin eq "BioMedCentralPlugin") || ($plugin eq "ClockssBioMedCentralPlugin")) {
     $url = sprintf("%scontent/%s", 
@@ -996,7 +996,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } elsif ($plugin eq "EmeraldPlugin") {
     $url = sprintf("%scrawlers/lockss.htm?issn=%s&volume=%s", 
@@ -1021,7 +1021,7 @@ while (my $line = <>) {
     } else {
       $result = "--REQ_FAIL--"
     }
-    sleep(5);
+    sleep(4);
                 
   } 
   if ($result eq "Plugin Unknown") {
