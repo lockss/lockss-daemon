@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -135,13 +135,29 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.pion.PionHashHtmlFilterFactory</string>
   </entry>
+<!-- no longer needed - pg
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.pion.PionCrawlHtmlFilterFactory</string>
   </entry>
+-->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pion.PionArticleIteratorFactory</string>
+  </entry>
+<!--  the RIS files mime type, oddly, is text/plain -->   
+  <entry>
+    <string>application/ris_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.pion.PionRisMetadataExtractorFactory</string>
+       </entry>
+    </map>
   </entry>
   <entry>
     <string>clockss_override</string>
