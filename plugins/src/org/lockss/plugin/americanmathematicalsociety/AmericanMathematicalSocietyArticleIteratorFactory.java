@@ -1,5 +1,5 @@
 /*
- * $Id: AmericanMathematicalSocietyArticleIteratorFactory.java,v 1.1 2014-03-27 22:19:08 etenbrink Exp $
+ * $Id: AmericanMathematicalSocietyArticleIteratorFactory.java,v 1.2 2014-03-28 19:15:59 etenbrink Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ implements ArticleIteratorFactory,
       "\"%sjournals/%s/\", base_url, journal_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sjournals/%s/%d-[0-9-]{2,9}/(S[^/?&.]+)(?:/\\1[.]pdf)?$\", base_url, journal_id, year";
+      "\"^%sjournals/%s/%d-[0-9-]{2,9}/([^/?&.]+)(?:/\\1[.]pdf)?$\", base_url, journal_id, year";
   
   /*
     various files
@@ -63,7 +63,7 @@ implements ArticleIteratorFactory,
     http://www.ams.org/journals/jams/2013-26-01 text/html 17703
   http://www.ams.org/jams/2013-26-01/S0894-0347-2012-00742-5  text/html 73965 (going to ignore)
   http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5 text/html 73965
-http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2012-00742-5.pdf application/pdf 672490
+http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2012-00742-5.pdf
    */
   
   // Identify groups in the pattern
@@ -87,24 +87,19 @@ http://www.ams.org/journals/jams/2013-26-01/S0894-0347-2012-00742-5/S0894-0347-2
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    // set up html to be an aspect that will trigger an ArticleFiles
-    builder.addAspect(
-        HTML_PATTERN, HTML_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_ARTICLE_METADATA);
+    // The order in which we want to define full_text_cu.
+    // First one that exists will get the job PDF then html
     
     // set up PDF to be an aspect that will trigger an ArticleFiles
     builder.addAspect(
         PDF_PATTERN, PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
     
-    // The order in which we want to define full_text_cu.
-    // First one that exists will get the job
-    // In this case, there are two jobs, one for counting articles (abstract is 
-    // good) and the other for metadata (PDF is correct)
-    builder.setFullTextFromRoles(
-        ArticleFiles.ROLE_FULL_TEXT_PDF, 
-        ArticleFiles.ROLE_FULL_TEXT_HTML);
+    // set up html to be an aspect that will trigger an ArticleFiles
+    builder.addAspect(
+        HTML_PATTERN, HTML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_HTML,
+        ArticleFiles.ROLE_ARTICLE_METADATA);
     
     return builder.getSubTreeArticleIterator();
   }
