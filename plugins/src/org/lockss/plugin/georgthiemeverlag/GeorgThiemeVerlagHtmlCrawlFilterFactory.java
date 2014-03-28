@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.2 2014-03-26 17:13:17 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlCrawlFilterFactory.java,v 1.3 2014-03-28 18:41:41 etenbrink Exp $
  */
 
 /*
@@ -48,24 +48,23 @@ public class GeorgThiemeVerlagHtmlCrawlFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Aggressive filtering of non-content tags
         // Do not crawl header or footer for links
         new TagNameFilter("header"),
         new TagNameFilter("footer"),
-        // div id="navPanel"
+        // Contains navigation items that can link off AU
         HtmlNodeFilters.tagWithAttribute("div", "id", "navPanel"),
-        // ul id="overviewNavigation" from issue toc
         HtmlNodeFilters.tagWithAttribute("ul", "id", "overviewNavigation"),
-        // div class="pageFunctions"
+        // Contains links to non-relevant pages 
         HtmlNodeFilters.tagWithAttribute("div", "class", "pageFunctions"),
-        // div class="relatedArticles"
+        // Can contain links to original articles from Errata as well as other links
         HtmlNodeFilters.tagWithAttribute("div", "class", "relatedArticles"),
-        // div class="toggleMenu articleToggleMenu"  from article page
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "articleToggleMenu"),
-        // div id="adSidebarBottom"  div id="adSidebar"
+        // No need to crawl ad links
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar"),
-        // ul class="literaturliste"
+        // No need to crawl reference list 
         HtmlNodeFilters.tagWithAttribute("ul", "class", "literaturliste"),
-        // a class="anchorc" correction anchor?
+        // Appears that correction anchors have class="anchorc" XXX
         HtmlNodeFilters.tagWithAttribute("a", "class", "anchorc"),
     };
     InputStream filtered = new HtmlFilterInputStream(in, encoding,

@@ -1,5 +1,5 @@
 /*
- * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.9 2014-02-05 22:31:03 etenbrink Exp $
+ * $Id: GeorgThiemeVerlagHtmlFilterFactory.java,v 1.10 2014-03-28 18:41:41 etenbrink Exp $
  */
 /*
 
@@ -57,7 +57,8 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     // First filter with HtmlParser
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains scripts and tags that change values
+        // Aggressive filtering of non-content tags
+        // Contains scripts and tags that change values, do not contain content
         // XXX may want to 'normalize' the head tag contents (extract meta tags in a fixed order
         new TagNameFilter("head"),
         new TagNameFilter("script"),
@@ -66,9 +67,9 @@ public class GeorgThiemeVerlagHtmlFilterFactory implements FilterFactory {
         new TagNameFilter("footer"),
         // remove ALL comments
         HtmlNodeFilters.comment(),
-        // Contains ads
+        // Contains ads that change
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "adSidebar[^\"]*"),
-        // Contains navigation items
+        // Contains navigation items that are not content
         HtmlNodeFilters.tagWithAttribute("div", "id", "navPanel"),
         // Contains functional links, not content
         HtmlNodeFilters.tagWithAttribute("div", "class", "pageFunctions"),
