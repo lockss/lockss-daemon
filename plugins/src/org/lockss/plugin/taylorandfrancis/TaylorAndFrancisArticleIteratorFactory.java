@@ -1,5 +1,5 @@
 /*
- * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.8 2013-12-23 19:45:35 alexandraohlson Exp $
+ * $Id: TaylorAndFrancisArticleIteratorFactory.java,v 1.9 2014-03-28 18:36:19 alexandraohlson Exp $
  */
 
 /*
@@ -32,6 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.taylorandfrancis;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.CachedUrl;
@@ -44,6 +47,7 @@ public class TaylorAndFrancisArticleIteratorFactory
 extends BaseAtyponArticleIteratorFactory {
 
   protected static Logger log = Logger.getLogger("TaylorAndFrancisArticleIteratorFactory");
+  private static final Pattern URL_UACP_HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?^&]+)_HTML/");
 
   // Override creation of builder to allow override of underlying createArticleFiles
   // to solve a T&F bug that was generating bogus URLS that looked like article files...
@@ -58,6 +62,18 @@ extends BaseAtyponArticleIteratorFactory {
             protected ArticleFiles createArticleFiles(CachedUrl cu) {
               // modify the returned Builder's createArticleFiles to ignore specific URLs
               if (cu.getUrl().contains("/null?")) { // 
+                return null; // ignore these URLs
+              }
+              /* 
+               * This one is to avoid iterating over all the contents of the 
+               * subdirectories created for full text HTML for the TRIGGERED
+               * website created for UACP and WJPT journals ONLY
+               * This website didn't exactly match the usual T&F patterns
+               * and doing it here avoids modifying the full Atypon PATTERN
+               * to exclude directories that match "doi/full/<prefix>/<suffix>_HTML/"
+               */
+              Matcher UrlMat = URL_UACP_HTML_PATTERN.matcher(cu.getUrl());
+              if (UrlMat.find()) {
                 return null; // ignore these URLs
               }
               return super.createArticleFiles(cu); // normal processing
