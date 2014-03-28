@@ -1,5 +1,5 @@
 /*
- * $Id: PionRisMetadataExtractorFactory.java,v 1.1 2014-03-28 16:50:52 pgust Exp $
+ * $Id: PionRisMetadataExtractorFactory.java,v 1.2 2014-03-28 21:13:43 pgust Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class PionRisMetadataExtractorFactory
           if (!md.hasValidValue(MetadataField.FIELD_DOI)) {
             // fill in DOI from accessURL
             // http://www.envplan.com/abstract.cgi?id=a42117
-            // -> doi=10.1068.a42117
+            // -> doi=10.1068/a42117
             String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
             if (accessUrl != null) {
               int i = accessUrl.indexOf("id=");
