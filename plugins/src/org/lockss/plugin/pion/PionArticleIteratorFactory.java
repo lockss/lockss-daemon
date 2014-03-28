@@ -1,5 +1,5 @@
 /*
- * $Id: PionArticleIteratorFactory.java,v 1.4 2013-03-19 23:27:38 alexandraohlson Exp $
+ * $Id: PionArticleIteratorFactory.java,v 1.5 2014-03-28 18:45:34 pgust Exp $
  */
 
 /*
@@ -36,11 +36,15 @@ import java.util.Iterator;
 import java.util.regex.*;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.ArticleMetadataExtractorFactory;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
-public class PionArticleIteratorFactory implements ArticleIteratorFactory {
+public class PionArticleIteratorFactory 
+  implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
   protected static Logger log = Logger.getLogger("PionArticleIteratorFactory");
 
@@ -110,6 +114,7 @@ public class PionArticleIteratorFactory implements ArticleIteratorFactory {
     protected void guessRisCitation(ArticleFiles af, Matcher mat) {
       CachedUrl risCu = au.makeCachedUrl(mat.replaceFirst("/ris.cgi?id=$3"));
       if (risCu != null && risCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, risCu);
         af.setRoleCu(ArticleFiles.ROLE_CITATION + "_" + "Ris", risCu);
       }
     }
@@ -122,5 +127,12 @@ public class PionArticleIteratorFactory implements ArticleIteratorFactory {
     }
     
   }
+
+  @Override
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+  }
+
 
 }
