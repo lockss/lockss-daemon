@@ -1,5 +1,5 @@
 /*
- * $Id: DryadHtmlFilterFactory.java,v 1.5 2014-03-13 23:06:01 etenbrink Exp $
+ * $Id: DryadHtmlFilterFactory.java,v 1.6 2014-03-29 01:20:41 etenbrink Exp $
  */ 
 
 /*
@@ -68,13 +68,10 @@ public class DryadHtmlFilterFactory implements FilterFactory {
         // <span class="Z3988" title="ctx_ver=...rft.dryad=
         HtmlNodeFilters.tagWithAttributeRegex("span", "title", "rft[.]dryad="),
         // filter out tr with inner text "Pageviews"
-        HtmlNodeFilters.lowestLevelMatchFilter(
-            HtmlNodeFilters.tagWithTextRegex("tr", 
-                "(?s)<th>Pageviews</th>[\\s]*<td>[0-9]+</td>", false)),
         // filter out tr with inner text "Downloaded 999 times"
         HtmlNodeFilters.lowestLevelMatchFilter(
             HtmlNodeFilters.tagWithTextRegex("tr", 
-                "(?s)<th>Downloaded</th>[\\s]*<td>[0-9]+ times</td>", false)),
+                "(?s)<th>(?:Pageviews|Downloaded)</th>[\\s]*<td>[0-9]+(?: times?)?</td>", false)),
         // filter out tr with inner text "Downloaded 999 times"
         HtmlNodeFilters.lowestLevelMatchFilter(
             HtmlNodeFilters.tagWithTextRegex("tr", 
