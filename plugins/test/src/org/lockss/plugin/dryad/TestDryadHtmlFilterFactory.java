@@ -1,5 +1,5 @@
 /*
-/    * $Id: TestDryadHtmlFilterFactory.java,v 1.4 2014-03-13 23:04:35 etenbrink Exp $
+/    * $Id: TestDryadHtmlFilterFactory.java,v 1.5 2014-03-29 01:19:06 etenbrink Exp $
  */
 
 /*
@@ -225,6 +225,10 @@ public class TestDryadHtmlFilterFactory extends LockssTestCase {
 "<tr>" +
 "<th>Downloaded</th>" +
 "<td>36 times</td>" +
+"</tr>" +
+"<tr>" +
+"<th>Downloaded</th>" +
+"<td>1 time</td>" +
 "</tr>" +
 "</tr>" +
 "<tr>" +
