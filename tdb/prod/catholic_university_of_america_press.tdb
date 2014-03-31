@@ -66,8 +66,8 @@
     param[journal_dir] = the_jurist
     attr[journal_id] = jur
     
-    au < manifest ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 ; 72 >
-    au < manifest ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 ; 73 >
+    au < testing ; 2012 ; The Jurist: Studies in Church Law and Ministry Volume 72 ; 72 >
+    au < testing ; 2013 ; The Jurist: Studies in Church Law and Ministry Volume 73 ; 73 >
     au < expected ; 2014 ; The Jurist: Studies in Church Law and Ministry Volume 74 ; 74 >
 
   }
