@@ -1001,11 +1001,11 @@
     attr[journal_id] = hcy
     comment[journal_dir] = directory changed
     
-    au < down ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
-    au < down ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
-    au < down ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
-    au < down ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 ; 4 >
-    au < down ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 ; 5 >
+    au < superseded ; 2008 ; The Journal of the History of Childhood and Youth Volume 1 [superseded] ; 1 >
+    au < superseded ; 2009 ; The Journal of the History of Childhood and Youth Volume 2 [superseded] ; 2 >
+    au < superseded ; 2010 ; The Journal of the History of Childhood and Youth Volume 3 [superseded] ; 3 >
+    au < superseded ; 2011 ; The Journal of the History of Childhood and Youth Volume 4 [superseded] ; 4 >
+    au < superseded ; 2012 ; The Journal of the History of Childhood and Youth Volume 5 [superseded] ; 5 >
     }
 
     {
