@@ -6,10 +6,6 @@
     info[tester] = A
   >
 
-  plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin
-  param[base_url] = http://tandfonline.stanford.clockss.org/
-  implicit < status ; status2 ; year ; name ; param[volume_name] >
-
   {
 
     title <
@@ -19,6 +15,9 @@
 
     >
 
+    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin
+    param[base_url] = http://tandfonline.stanford.clockss.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = uacp
 
     au < finished ; manifest ; 2004 ; Annals of Clinical Psychiatry Volume 16 ; 16 >
@@ -39,6 +38,9 @@
 
     >
 
+    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisPlugin
+    param[base_url] = http://tandfonline.stanford.clockss.org/
+    implicit < status ; status2 ; year ; name ; param[volume_name] >
     param[journal_id] = wjpt
 
     au < finished ; manifest ; 1990-1991 ; Journal of Pharmacy Teaching Volume 1 ; 1 >
