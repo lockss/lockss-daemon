@@ -461,6 +461,110 @@
 
   {
     title <
+      name = Advances in Ecology ;
+      issn = 2356-6647 ;
+      issnl = 2356-6647 
+    >
+
+    param[journal_id] = ae
+
+    au < expected ; 2014 ; Advances in Ecology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Electrical Engineering ;
+      issn = 2356-6655 ;
+      issnl = 2356-6655 
+    >
+
+    param[journal_id] = aee
+
+    au < expected ; 2014 ; Advances in Electrical Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Electronics ;
+      issn = 2356-6663 ;
+      issnl = 2356-6663 
+    >
+
+    param[journal_id] = aelc
+
+    au < expected ; 2014 ; Advances in Electronics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Emergency Medicine;
+      issn = 2356-6671 ;
+      issnl = 2356-6671 
+    >
+
+    param[journal_id] = aem
+
+    au < exists ; 2014 ; Advances in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Endocrinology ;
+      issn = 2356-668X ;
+      issnl = 2356-668X 
+    >
+
+    param[journal_id] = aen
+
+    au < expected ; 2014 ; Advances in Endocrinology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Environmental Chemistry ;
+      issn = 2356-6698 ;
+      issnl = 2356-6698 
+    >
+
+    param[journal_id] = aec
+
+    au < expected ; 2014 ; Advances in Environmental Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Epidemiology ;
+      issn = 2356-6701 ;
+      issnl = 2356-6701 
+    >
+
+    param[journal_id] = aep
+
+    au < expected ; 2014 ; Advances in Epidemiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Evolutionary Biology ;
+      issn = 2356-671X ;
+      issnl = 2356-671X 
+    >
+
+    param[journal_id] = aeb
+
+    au < expected ; 2014 ; Advances in Evolutionary Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Fuzzy Systems ;
       issn = 1687-7101 ;
       eissn = 1687-711X ;
@@ -481,6 +585,32 @@
 
   {
     title <
+      name = Advances in Geology ;
+      issn = 2356-6728 ;
+      issnl = 2356-6728 
+    >
+
+    param[journal_id] = ageo
+
+    au < expected ; 2014 ; Advances in Geology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Geriatrics ;
+      issn = 2356-6736 ;
+      issnl = 2356-6736 
+    >
+
+    param[journal_id] = ager
+
+    au < expected ; 2014 ; Advances in Geriatrics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Hematology ;
       issn = 1687-9104 ;
       eissn = 1687-9112 ;
@@ -495,6 +625,19 @@
     au < ready ; 2012 ; Advances in Hematology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Hematology Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Hematology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Hepatology ;
+      issn = 2356-6744 ;
+      issnl = 2356-6744 
+    >
+
+    param[journal_id] = ahe
+
+    au < expected ; 2014 ; Advances in Hepatology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -601,6 +744,19 @@
 
   {
     title <
+      name = Advances in Medicine ;
+      issn = 2356-6752 ;
+      issnl = 2356-6752 
+    >
+
+    param[journal_id] = amed
+
+    au < exists ; 2014 ; Advances in Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Meteorology ;
       issn = 1687-9309 ;
       eissn = 1687-9317 ;
@@ -616,6 +772,18 @@
     au < manifest ; 2013 ; Advances in Meteorology Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Meteorology Volume 2014 ; 2014 ; 2014 >
 
+  }
+
+  {
+    title <
+      name = Advances in Molecular Biology ;
+      issn = 2356-6760 ;
+      issnl = 2356-6760 
+    >
+
+    param[journal_id] = amb
+
+    au < expected ; 2014 ; Advances in Molecular Biology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -637,6 +805,32 @@
     au < ready ; 2012 ; Advances in Multimedia Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Multimedia Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Multimedia Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Nephrology ;
+      issn = 2356-6779 ;
+      issnl = 2356-6779 
+    >
+
+    param[journal_id] = an
+
+    au < exists ; 2014 ; Advances in Nephrology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Neuroscience ;
+      issn = 2356-6787 ;
+      issnl = 2356-6787 
+    >
+
+    param[journal_id] = aneu
+
+    au < exists ; 2014 ; Advances in Neuroscience Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -672,6 +866,32 @@
     au < ready ; 2012 ; Advances in Numerical Analysis Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Numerical Analysis Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Numerical Analysis Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Nursing ;
+      issn = 2356-6795 ;
+      issnl = 2356-6795 
+    >
+
+    param[journal_id] = anurs
+
+    au < exists ; 2014 ; Advances in Nursing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Oceanography ;
+      issn = 2356-6809 ;
+      issnl = 2356-6809 
+    >
+
+    param[journal_id] = aocean
+
+    au < expected ; 2014 ; Advances in Oceanography Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -716,6 +936,19 @@
 
   {
     title <
+      name = Advances in Optics ;
+      issn = 2356-6817 ;
+      issnl = 2356-6817 
+    >
+
+    param[journal_id] = ao
+
+    au < expected ; 2014 ; Advances in Optics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in OptoElectronics ;
       issn = 1687-563X ;
       eissn = 1687-5648 ;
@@ -737,9 +970,23 @@
  
   {
     title <
+      name = Advances in Orthopedic Surgery ;
+      issn = 2356-6825 ;
+      issnl = 2356-6825 
+    >
+
+    param[journal_id] = aos
+
+    au < exists ; 2014 ; Advances in Orthopedic Surgery Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Orthopedics ;
-      issn = 2090-3472 ;
-      issnl = 2090-3472
+      issn = 2090-3464 ;
+      eissn = 2090-3472 ;
+      issnl = 2090-3464
     >
 
     param[journal_id] = aop
@@ -751,6 +998,19 @@
     
   }
  
+  {
+    title <
+      name = Advances in Otolaryngology ;
+      issn = 2356-6833 ;
+      issnl = 2356-6833 
+    >
+
+    param[journal_id] = aoto
+
+    au < expected ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
   {
     title <
       name = Advances in Pharmacological Sciences ;
@@ -804,7 +1064,7 @@
     comment[supersedes] = see journal code 'ijpme'
     param[journal_id] = ape    
     
-    au < released ; 2008 ; Advances in Power Electronics Volume 2008 (2008) ; 2008 ; 2008 >
+    au < released ; 2008 ; International Journal of Power Management Electronics Volume 2008 (2008) ; 2008 ; 2008 >
     au < doesNotExist ; 2009 ; Advances in Power Electronics Volume 2009 (2009) ; 2009 ; 2009 >
     au < released ; 2010 ; Advances in Power Electronics Volume 2010 (2010) ; 2010 ; 2010 >
     au < released ; 2011 ; Advances in Power Electronics Volume 2011 (2011) ; 2011 ; 2011 >
@@ -833,6 +1093,58 @@
  
   {
     title <
+      name = Advances in Psychiatry ;
+      issn = 2356-685X ;
+      issnl = 2356-685X 
+    >
+
+    param[journal_id] = apsy
+
+    au < exists ; 2014 ; Advances in Psychiatry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Public Health ;
+      issn = 2356-6868 ;
+      issnl = 2356-6868 
+    >
+
+    param[journal_id] = aph
+
+    au < expected ; 2014 ; Advances in Public Health Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Radiology ;
+      issn = 2356-6876 ;
+      issnl = 2356-6876 
+    >
+
+    param[journal_id] = ara
+
+    au < expected ; 2014 ; Advances in Radiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Regenerative Medicine ;
+      issn = 2356-6884 ;
+      issnl = 2356-6884 
+    >
+
+    param[journal_id] = arm
+
+    au < expected ; 2014 ; Advances in Regenerative Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Software Engineering ;
       issn = 1687-8655 ;
       eissn = 1687-8663 ;
@@ -847,6 +1159,32 @@
     au < ready ; 2012 ; Advances in Software Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Advances in Software Engineering Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Advances in Software Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Statistics ;
+      issn = 2356-6892 ;
+      issnl = 2356-6892 
+    >
+
+    param[journal_id] = as
+
+    au < expected ; 2014 ; Advances in Statistics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Advances in Toxicology ;
+      issn = 2356-6906 ;
+      issnl = 2356-6906 
+    >
+
+    param[journal_id] = atox
+
+    au < expected ; 2014 ; Advances in Toxicology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -891,6 +1229,19 @@
 
   {
     title <
+      name = Advances in Vascular Medicine ;
+      issn = 2356-6914 ;
+      issnl = 2356-6914 
+    >
+
+    param[journal_id] = avm
+
+    au < expected ; 2014 ; Advances in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Virology ;
       issn = 1687-8639 ;
       eissn = 1687-8647 ;
@@ -910,6 +1261,19 @@
   
   {
     title <
+      name = Advances in Zoology ;
+      issn = 2356-6922 ;
+      issnl = 2356-6922 
+    >
+
+    param[journal_id] = az
+
+    au < expected ; 2014 ; Advances in Zoology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = AIDS Research and Treatment ;
       issn = 2090-1240 ;
       eissn = 2090-1259 ;
@@ -926,6 +1290,20 @@
       
   }
   
+  {
+    title <
+      name = Algebra ;
+      issn = 2314-4106 ;
+      issnl = 2314-4106 
+    >
+
+    param[journal_id] = algebra
+
+    au < exists ; 2013 ; Algebra Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Algebra Volume 2014 ; 2014 ; 2014 >
+
+  }
+
   {
     title <
       name = Anatomy Research International ;
