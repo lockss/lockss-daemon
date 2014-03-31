@@ -79,8 +79,8 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = cadernoscespuc
 
-      au < manifest ; 2009 ; 1 ; Cadernos CESPUC de Pesquisa Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Cadernos CESPUC de Pesquisa Volume 2010 ; 2010 >
+      au < testing ; 2009 ; 1 ; Cadernos CESPUC de Pesquisa Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 2 ; Cadernos CESPUC de Pesquisa Volume 2010 ; 2010 >
       au < expected ; 2011 ; 3 ; Cadernos CESPUC de Pesquisa Volume 2011 ; 2011 >
       au < expected ; 2012 ; 4 ; Cadernos CESPUC de Pesquisa Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Cadernos CESPUC de Pesquisa Volume 2013 ; 2013 >
@@ -142,8 +142,8 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = contraponto
 
-      au < manifest ; 2011 ; 1 ; ContraPonto Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 2 ; ContraPonto Volume 2012 ; 2012 >
+      au < testing ; 2011 ; 1 ; ContraPonto Volume 2011 ; 2011 >
+      au < testing ; 2012 ; 2 ; ContraPonto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; ContraPonto Volume 2013 ; 2013 >
 
   }
@@ -269,16 +269,16 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = fronteira
 
-      au < manifest ; 2001 ; 1 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2001 ; 2001 >
-      au < manifest ; 2002 ; 2 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2002 ; 2002 >
-      au < manifest ; 2003 ; 3 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2003 ; 2003 >
-      au < manifest ; 2004 ; 4 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 5 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2005 ; 2005 >
-      au < manifest ; 2006 ; 6 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 7 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2007 ; 2007 >
-      au < manifest ; 2008 ; 8 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 9 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 10 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2010 ; 2010 >
+      au < testing ; 2001 ; 1 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2001 ; 2001 >
+      au < testing ; 2002 ; 2 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2002 ; 2002 >
+      au < testing ; 2003 ; 3 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2003 ; 2003 >
+      au < testing ; 2004 ; 4 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2004 ; 2004 >
+      au < testing ; 2005 ; 5 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2005 ; 2005 >
+      au < testing ; 2006 ; 6 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2006 ; 2006 >
+      au < testing ; 2007 ; 7 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2007 ; 2007 >
+      au < testing ; 2008 ; 8 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2008 ; 2008 >
+      au < testing ; 2009 ; 9 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 10 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2010 ; 2010 >
       au < expected ; 2011 ; 11 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2011 ; 2011 >
       au < expected ; 2012 ; 12 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Fronteira: Revista de Iniciação Científica em Relações Internacionais Volume 2013 ; 2013 >
@@ -361,9 +361,9 @@
       param[base_url] = http://periodicos.pucminas.br/
       param[journal_id] = pedagogiacao
 
-      au < manifest ; 2009 ; 1 ; Pedagogia em Ação Volume 2009 ; 2009 >
-      au < manifest ; 2010 ; 2 ; Pedagogia em Ação Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 3 ; Pedagogia em Ação Volume 2011 ; 2011 >
+      au < testing ; 2009 ; 1 ; Pedagogia em Ação Volume 2009 ; 2009 >
+      au < testing ; 2010 ; 2 ; Pedagogia em Ação Volume 2010 ; 2010 >
+      au < testing ; 2011 ; 3 ; Pedagogia em Ação Volume 2011 ; 2011 >
       au < expected ; 2012 ; 4 ; Pedagogia em Ação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 5 ; Pedagogia em Ação Volume 2013 ; 2013 >
 
