@@ -443,6 +443,7 @@
     title <
       name = Advances in Ecology ;
       issn = 2356-6647 ;
+      eissn = 2314-761X ;
       issnl = 2356-6647 
     >
 
@@ -456,6 +457,7 @@
     title <
       name = Advances in Electrical Engineering ;
       issn = 2356-6655 ;
+      eissn = 2314-7636 ;
       issnl = 2356-6655 
     >
 
@@ -469,6 +471,7 @@
     title <
       name = Advances in Electronics ;
       issn = 2356-6663 ;
+      eissn = 2314-7881 ;
       issnl = 2356-6663 
     >
 
@@ -482,6 +485,7 @@
     title <
       name = Advances in Emergency Medicine;
       issn = 2356-6671 ;
+      eissn = 2314-7644 ;
       issnl = 2356-6671 
     >
 
@@ -495,6 +499,7 @@
     title <
       name = Advances in Endocrinology ;
       issn = 2356-668X ;
+      eissn = 2314-7903 ;
       issnl = 2356-668X 
     >
 
@@ -508,6 +513,7 @@
     title <
       name = Advances in Environmental Chemistry ;
       issn = 2356-6698 ;
+      eissn = 2314-7652 ;
       issnl = 2356-6698 
     >
 
@@ -521,6 +527,7 @@
     title <
       name = Advances in Epidemiology ;
       issn = 2356-6701 ;
+      eissn = 2314-7628 ;
       issnl = 2356-6701 
     >
 
@@ -534,6 +541,7 @@
     title <
       name = Advances in Evolutionary Biology ;
       issn = 2356-671X ;
+      eissn = 2314-7660 ;
       issnl = 2356-671X 
     >
 
@@ -567,6 +575,7 @@
     title <
       name = Advances in Geology ;
       issn = 2356-6728 ;
+      eissn = 2314-7695 ;
       issnl = 2356-6728 
     >
 
@@ -580,6 +589,7 @@
     title <
       name = Advances in Geriatrics ;
       issn = 2356-6736 ;
+      eissn = 2314-7679 ;
       issnl = 2356-6736 
     >
 
@@ -612,6 +622,7 @@
     title <
       name = Advances in Hepatology ;
       issn = 2356-6744 ;
+      eissn = 2314-7709 ;
       issnl = 2356-6744 
     >
 
@@ -725,6 +736,7 @@
     title <
       name = Advances in Medicine ;
       issn = 2356-6752 ;
+      eissn = 2314-758X ;
       issnl = 2356-6752 
     >
 
@@ -758,6 +770,7 @@
     title <
       name = Advances in Molecular Biology ;
       issn = 2356-6760 ;
+      eissn = 2314-7911 ;
       issnl = 2356-6760 
     >
 
@@ -792,6 +805,7 @@
     title <
       name = Advances in Nephrology ;
       issn = 2356-6779 ;
+      eissn = 2314-792X ;
       issnl = 2356-6779 
     >
 
@@ -805,6 +819,7 @@
     title <
       name = Advances in Neuroscience ;
       issn = 2356-6787 ;
+      eissn = 2314-789X ;
       issnl = 2356-6787 
     >
 
@@ -837,6 +852,7 @@
     title <
       name = Advances in Nursing ;
       issn = 2356-6795 ;
+      eissn = 2314-7725 ;
       issnl = 2356-6795 
     >
 
@@ -850,6 +866,7 @@
     title <
       name = Advances in Oceanography ;
       issn = 2356-6809 ;
+      eissn = 2314-7733 ;
       issnl = 2356-6809 
     >
 
@@ -902,6 +919,7 @@
     title <
       name = Advances in Optics ;
       issn = 2356-6817 ;
+      eissn = 2314-7741 ;
       issnl = 2356-6817 
     >
 
@@ -936,6 +954,7 @@
     title <
       name = Advances in Orthopedic Surgery ;
       issn = 2356-6825 ;
+      eissn = 2314-8233 ;
       issnl = 2356-6825 
     >
 
@@ -966,6 +985,7 @@
     title <
       name = Advances in Otolaryngology ;
       issn = 2356-6833 ;
+      eissn = 2314-7938 ;
       issnl = 2356-6833 
     >
 
@@ -979,12 +999,13 @@
     title <
       name = Advances in Pharmaceutics ;
       issn = 2356-6841 ;
+      eissn = 2314-775X ;
       issnl = 2356-6841 
     >
 
     param[journal_id] = ap
 
-    au < expected ; exists ; 2014 ; Advances in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+    au < expected ; exists ; 2014 ; Advances in Pharmaceutics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -1053,7 +1074,8 @@
   {
     title <
       name = Advances in Preventive Medicine ;
-      issn = 2090-3499 ;
+      issn = 2090-3480 ;
+      eissn = 2090-3499 ;
       issnl = 2090-3499
     >
     
@@ -1070,6 +1092,7 @@
     title <
       name = Advances in Psychiatry ;
       issn = 2356-685X ;
+      eissn = 2314-7768 ;
       issnl = 2356-685X 
     >
 
@@ -1083,6 +1106,7 @@
     title <
       name = Advances in Public Health ;
       issn = 2356-6868 ;
+      eissn = 2314-7784 ;
       issnl = 2356-6868 
     >
 
@@ -1096,6 +1120,7 @@
     title <
       name = Advances in Radiology ;
       issn = 2356-6876 ;
+      eissn = 2314-7792 ;
       issnl = 2356-6876 
     >
 
@@ -1109,6 +1134,7 @@
     title <
       name = Advances in Regenerative Medicine ;
       issn = 2356-6884 ;
+      eissn = 2314-7806 ;
       issnl = 2356-6884 
     >
 
@@ -1141,6 +1167,7 @@
     title <
       name = Advances in Statistics ;
       issn = 2356-6892 ;
+      eissn = 2314-8314 ;
       issnl = 2356-6892 
     >
 
@@ -1154,6 +1181,7 @@
     title <
       name = Advances in Toxicology ;
       issn = 2356-6906 ;
+      eissn = 2314-7822 ;
       issnl = 2356-6906 
     >
 
@@ -1206,6 +1234,7 @@
     title <
       name = Advances in Vascular Medicine ;
       issn = 2356-6914 ;
+      eissn = 2314-7830 ;
       issnl = 2356-6914 
     >
 
@@ -1238,6 +1267,7 @@
     title <
       name = Advances in Zoology ;
       issn = 2356-6922 ;
+      eissn = 2314-7865 ;
       issnl = 2356-6922 
     >
 
@@ -1269,6 +1299,7 @@
     title <
       name = Algebra ;
       issn = 2314-4106 ;
+      eissn = 2314-4114 ;
       issnl = 2314-4106 
     >
 
@@ -1437,7 +1468,8 @@
   {
     title <
       name = Autoimmune Diseases ;
-      issn = 2090-0430 ;
+      issn = 2090-0422 ;
+      eissn = 2090-0430 ;
       issnl = 2090-0430
     >
 
@@ -1448,6 +1480,946 @@
     au < exists ; exists ; 2012 ; Autoimmune Diseases Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; Autoimmune Diseases Volume 2013 ; 2013 ; 2013 >
     au < expected ; exists ; 2014 ; Autoimmune Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Behavioural Neurology ;
+      issn = 0953-4180 ;
+      eissn = 1875-8584 ;
+      issnl = 0953-4180
+    >
+
+    param[journal_id] = bn
+
+    au < exists ; exists ; 1988 ; Behavioural Neurology Volume 1 (1988) ; 1988 ; 1 >
+    au < exists ; exists ; 1989 ; Behavioural Neurology Volume 2 (1989) ; 1989 ; 2 >
+    au < exists ; exists ; 1990 ; Behavioural Neurology Volume 3 (1990) ; 1990 ; 3 >
+    au < exists ; exists ; 1991 ; Behavioural Neurology Volume 4 (1991) ; 1991 ; 4 >
+    au < exists ; exists ; 1992 ; Behavioural Neurology Volume 5 (1992) ; 1992 ; 5 >
+    au < exists ; exists ; 1993 ; Behavioural Neurology Volume 6 (1993) ; 1993 ; 6 >
+    au < exists ; exists ; 1994 ; Behavioural Neurology Volume 7 (1994) ; 1994 ; 7 >
+    au < exists ; exists ; 1995 ; Behavioural Neurology Volume 8 (1995) ; 1995 ; 8 >
+    au < exists ; exists ; 1996 ; Behavioural Neurology Volume 9 (1996) ; 1996 ; 9 >
+    au < exists ; exists ; 1997 ; Behavioural Neurology Volume 10 (1997) ; 1997 ; 10 >
+    au < exists ; exists ; 1998 ; Behavioural Neurology Volume 11 (1998) ; 1998 ; 11 >
+    au < exists ; exists ; 1999 ; Behavioural Neurology Volume 11 (1999) ; 1999 ; 11 >
+    au < exists ; exists ; 2000 ; Behavioural Neurology Volume 12 (2000) ; 2000 ; 12 >
+    au < exists ; exists ; 2002 ; Behavioural Neurology Volume 13 (2002) ; 2002 ; 13 >
+    au < exists ; exists ; 2003 ; Behavioural Neurology Volume 14 (2003) ; 2003 ; 14 >
+    au < exists ; exists ; 2004 ; Behavioural Neurology Volume 15 (2004) ; 2004 ; 15 >
+    au < exists ; exists ; 2005 ; Behavioural Neurology Volume 16 (2005) ; 2005 ; 16 >
+    au < exists ; exists ; 2006 ; Behavioural Neurology Volume 17 (2006) ; 2006 ; 17 >
+    au < exists ; exists ; 2007 ; Behavioural Neurology Volume 18 (2007) ; 2007 ; 18 >
+    au < exists ; exists ; 2008 ; Behavioural Neurology Volume 19 (2008) ; 2008 ; 19 >
+    au < exists ; exists ; 2008 ; Behavioural Neurology Volume 20 (2008) ; 2008 ; 20 >
+    au < exists ; exists ; 2009 ; Behavioural Neurology Volume 21 (2009) ; 2009 ; 21 >
+    au < exists ; exists ; 2010 ; Behavioural Neurology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Behavioural Neurology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Behavioural Neurology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Behavioural Neurology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Behavioural Neurology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Biochemistry Research International ;
+      issn = 2090-2247 ;
+      eissn = 2090-2255 ;
+      issnl = 2090-2247
+    >
+
+    param[journal_id] = bcri
+
+    au < exists ; exists ; 2008 ; Biochemistry Research International Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Biochemistry Research International Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Biochemistry Research International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Biochemistry Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Biochemistry Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Biochemistry Research International Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Biochemistry Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Bioinorganic Chemistry and Applications ;
+      issn = 1565-3633 ;
+      eissn = 1687-479X ;
+      issnl = 1687-479X
+    >
+
+    param[journal_id] = bca
+
+    au < exists ; exists ; 2003 ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 ; 1 >
+    au < exists ; exists ; 2004 ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 ; 2 >
+    au < exists ; exists ; 2005 ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 ; 3 >
+    au < exists ; exists ; 2006 ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Bioinorganic Chemistry and Applications Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Bioinorganic Chemistry and Applications Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Bioinorganic Chemistry and Applications Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Bioinorganic Chemistry and Applications Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Bioinorganic Chemistry and Applications Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Bioinorganic Chemistry and Applications Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Biotechnology Research International ;
+      issn = 2090-3146 ;
+      issnl = 2090-3146
+    >
+
+    param[journal_id] = btri
+
+    au < exists ; exists ; 2011 ; Biotechnology Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Biotechnology Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Biotechnology Research International Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Biotechnology Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Bone Marrow Research ;
+      issn = 2090-2999 ;
+      eissn = 2090-3006 ;
+      issnl = 2090-2999
+    >
+
+    param[journal_id] = bmr
+
+    au < exists ; exists ; 2011 ; Bone Marrow Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Bone Marrow Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Bone Marrow Research Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Bone Marrow Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Cardiology Research and Practice ;
+      issn = 2090-8016 ;
+      eissn = 2090-0597 ;
+      issnl = 2090-0597
+    >
+
+    param[journal_id] = crp
+
+    au < exists ; exists ; 2009 ; Cardiology Research and Practice Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Cardiology Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Cardiology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Cardiology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Cardiology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Cardiology Research and Practice Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Cardiovascular Psychiatry and Neurology ;
+      issn = 2090-0163 ;
+      eissn = 2090-0171 ;
+      issnl = 2090-0163
+    >
+
+    param[journal_id] = cpn
+
+    au < exists ; exists ; 2009 ; Cardiovascular Psychiatry and Neurology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Cardiovascular Psychiatry and Neurology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Cardiovascular Psychiatry and Neurology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Cardiovascular Psychiatry and Neurology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Cardiovascular Psychiatry and Neurology Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Cardiovascular Phychiatry and Neurology Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Case Reports in Anesthesiology ;
+      issn = 2090-6382 ;
+      eissn = 2090-6390 ;
+      issnl = 2090-6382
+    >
+
+    param[journal_id] = cria
+
+    au < exists ; exists ; 2011 ; Case Reports in Anesthesiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Anesthesiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Anesthesiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Anesthesiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Cardiology ;
+      issn = 2090-6404 ;
+      eissn = 2090-6412 ;
+      issnl = 2090-6404
+    >
+
+    param[journal_id] = cric
+
+    au < exists ; exists ; 2011 ; Case Reports in Cardiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Cardiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Cardiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Cardiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Critical Care ;
+      issn = 2090-6420 ;
+      eissn = 2090-6439 ;
+      issnl = 2090-6420
+    >
+
+    param[journal_id] = cricc
+
+    au < exists ; exists ; 2011 ; Case Reports in Critical Care Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Critical Care Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Critical Care Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Critical Care Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Dentistry ;
+      issn = 2090-6447 ;
+      eissn = 2090-6455 ;
+      issnl = 2090-6447
+    >
+
+    param[journal_id] = crid
+
+    au < exists ; exists ; 2011 ; Case Reports in Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Dentistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Dentistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Dermatological Medicine ;
+      issn = 2090-6463 ;
+      eissn = 2090-6471 ;
+      issnl = 2090-6463
+    >
+
+    param[journal_id] = cridm
+
+    au < exists ; exists ; 2011 ; Case Reports in Dermatological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Dermatological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Dermatological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Dermatological Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Emergency Medicine ;
+      issn = 2090-648X ;
+      eissn = 2090-6498 ;
+      issnl = 2090-648X
+    >
+
+    param[journal_id] = criem
+
+    au < exists ; exists ; 2011 ; Case Reports in Emergency Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Emergency Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Emergency Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Emergency Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Endocrinology ;
+      issn = 2090-6501 ;
+      eissn = 2090-651X ;
+      issnl = 2090-6501
+    >
+
+    param[journal_id] = crie
+
+    au < exists ; exists ; 2011 ; Case Reports in Endocrinology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Endocrinology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Endocrinology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Endocrinology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Gastrointestinal Medicine ;
+      issn = 2090-6528 ;
+      eissn = 2090-6536 ;
+      issnl = 2090-6528
+    >
+
+    param[journal_id] = crigm
+
+    au < exists ; exists ; 2011 ; Case Reports in Gastrointestinal Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Gastrointestinal Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Gastrointestinal Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Gastrointestinal Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Genetics ;
+      issn = 2090-6544 ;
+      eissn = 2090-6552 ;
+      issnl = 2090-6544
+    >
+
+    param[journal_id] = crig
+
+    au < exists ; exists ; 2011 ; Case Reports in Genetics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Genetics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Genetics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Genetics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Hematology ;
+      issn = 2090-6560 ;
+      eissn = 2090-6579 ;
+      issnl = 2090-6560
+    >
+
+    param[journal_id] = crihem
+
+    au < exists ; exists ; 2011 ; Case Reports in Hematology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Hematology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Hematology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Hematology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Hepatology ;
+      issn = 2090-6587 ;
+      eissn = 2090-6595 ;
+      issnl = 2090-6587
+    >
+
+    param[journal_id] = crihep
+
+    au < exists ; exists ; 2011 ; Case Reports in Hepatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Hepatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Hepatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Hepatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Immunology ;
+      issn = 2090-6609 ;
+      eissn = 2090-6617 ;
+      issnl = 2090-6609
+    >
+
+    param[journal_id] = crii
+
+    au < exists ; exists ; 2011 ; Case Reports in Immunology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Immunology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Immunology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Immunology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Infectious Diseases ;
+      issn = 2090-6625 ;
+      eissn = 2090-6633 ;
+      issnl = 2090-6625
+    >
+
+    param[journal_id] = criid
+
+    au < exists ; exists ; 2011 ; Case Reports in Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Infectious Diseases Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Infectious Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Medicine ;
+      issn = 1687-9627 ;
+      eissn = 1687-9635 ;
+      issnl = 1687-9627
+    >
+
+    param[journal_id] = crim
+
+    au < exists ; exists ; 2009 ; Case Reports in Medicine Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Case Reports in Medicine Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Case Reports in Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Medicine Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+ {
+    title <
+      name = Case Reports in Nephrology ;
+      issn = 2090-6641 ;
+      eissn = 2090-665X ;
+      issnl = 2090-6641
+    >
+
+    param[journal_id] = crin
+
+    au < exists ; exists ; 2011 ; Case Reports in Nephrology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Nephrology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Nephrology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Nephrology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Neurological Medicine ;
+      issn = 2090-6668 ;
+      eissn = 2090-6676 ;
+      issnl = 2090-6668
+    >
+
+    param[journal_id] = crinm
+
+    au < exists ; exists ; 2011 ; Case Reports in Neurological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Neurological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Neurological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Neurological Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Obstetrics and Gynecology ;
+      issn = 2090-6684 ;
+      eissn = 2090-6692 ;
+      issnl = 2090-6684
+    >
+
+    param[journal_id] = criog
+
+    au < exists ; exists ; 2011 ; Case Reports in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Oncological Medicine ;
+      issn = 2090-6706 ;
+      eissn = 2090-6714 ;
+      issnl = 2090-6706
+    >
+
+    param[journal_id] = crionm
+
+    au < exists ; exists ; 2011 ; Case Reports in Oncological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Oncological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Oncological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Oncological Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Ophthalmological Medicine ;
+      issn = 2090-6722 ;
+      eissn = 2090-6730 ;
+      issnl = 2090-6722
+    >
+
+    param[journal_id] = criopm
+
+    au < exists ; exists ; 2011 ; Case Reports in Ophthalmological Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Ophthalmological Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Ophthalmological Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Ophthalmological Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+ 
+  {
+    title <
+      name = Case Reports in Orthopedics ;
+      issn = 2090-6749 ;
+      eissn = 2090-6757 ;
+      issnl = 2090-6749
+    >
+
+    param[journal_id] = crior
+
+    au < exists ; exists ; 2011 ; Case Reports in Orthopedics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Orthopedics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Orthopedics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Orthopedics Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Case Reports in Otolaryngology ;
+      issn = 2090-6765 ;
+      eissn = 2090-6773 ;
+      issnl = 2090-6765
+    >
+
+    param[journal_id] = criot
+
+    au < exists ; exists ; 2011 ; Case Reports in Otolaryngology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Otolaryngology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Otolaryngology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Otolaryngology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pathology ;
+      issn = 2090-6781 ;
+      eissn = 2090-679X ;
+      issnl = 2090-6781
+    >
+
+    param[journal_id] = cripa
+
+    au < exists ; exists ; 2011 ; Case Reports in Pathology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Pathology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Pathology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Pathology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pediatrics ;
+      issn = 2090-6803 ;
+      eissn = 2090-6811 ;
+      issnl = 2090-6803
+    >
+
+    param[journal_id] = cripe
+
+    au < exists ; exists ; 2011 ; Case Reports in Pediatrics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Pediatrics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Pediatrics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Pediatrics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Psychiatry ;
+      issn = 2090-682X ;
+      eissn = 2090-6838 ;
+      issnl = 2090-682X
+    >
+
+    param[journal_id] = crips
+
+    au < exists ; exists ; 2011 ; Case Reports in Psychiatry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Psychiatry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Psychiatry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Psychiatry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Pulmonology ;
+      issn = 2090-6846 ;
+      eissn = 2090-6854 ;
+      issnl = 2090-6846
+    >
+
+    param[journal_id] = cripu
+
+    au < exists ; exists ; 2011 ; Case Reports in Pulmonology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Pulmonology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Pulmonology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Pulmonology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Radiology ;
+      issn = 2090-6862 ;
+      eissn = 2090-6870 ;
+      issnl = 2090-6862
+    >
+
+    param[journal_id] = crira
+
+    au < exists ; exists ; 2011 ; Case Reports in Radiology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Radiology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Radiology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Radiology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Rheumatology ;
+      issn = 2090-6889 ;
+      eissn = 2090-6897 ;
+      issnl = 2090-6889
+    >
+
+    param[journal_id] = crirh
+
+    au < exists ; exists ; 2011 ; Case Reports in Rheumatology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Rheumatology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Rheumatology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Rheumatology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Surgery ;
+      issn = 2090-6900 ;
+      eissn = 2090-6919 ;
+      issnl = 2090-6900
+    >
+
+    param[journal_id] = cris
+
+    au < exists ; exists ; 2011 ; Case Reports in Surgery Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Surgery Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Surgery Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Surgery Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Transplantation ;
+      issn = 2090-6943 ;
+      eissn = 2090-6951 ;
+      issnl = 2090-6943
+    >
+
+    param[journal_id] = crit
+
+    au < exists ; exists ; 2011 ; Case Reports in Transplantation Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Transplantation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Transplantation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Transplantation Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Urology ;
+      issn = 2090-696X ;
+      eissn = 2090-6978 ;
+      issnl = 2090-696X
+    >
+
+    param[journal_id] = criu
+
+    au < exists ; exists ; 2011 ; Case Reports in Urology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Urology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Urology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Urology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Vascular Medicine ;
+      issn = 2090-6986 ;
+      eissn = 2090-6994 ;
+      issnl = 2090-6986
+    >
+
+    param[journal_id] = crivam
+
+    au < exists ; exists ; 2011 ; Case Reports in Vascular Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Vascular Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Vascular Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Vascular Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Case Reports in Veterinary Medicine ;
+      issn = 2090-7001 ;
+      eissn = 2090-701X ;
+      issnl = 2090-7001
+    >
+
+    param[journal_id] = crivem
+
+    au < exists ; exists ; 2011 ; Case Reports in Veterinary Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Case Reports in Veterinary Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Case Reports in Veterinary Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Case Reports in Veterinary Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Chemotherapy Research and Practice ;
+      issn = 2090-2107 ;
+      eissn = 2090-2115 ;
+      issnl = 2090-2107
+    >
+
+    param[journal_id] = cherp
+
+    au < exists ; exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+    title <
+      name = Child Development Research ;
+      issn = 2090-3987 ;
+      eissn = 2090-3995 ;
+      issnl = 2090-3987
+    >
+
+    param[journal_id] = cdr
+
+    au < exists ; exists ; 2011 ; Child Development Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Child Development Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Child Development Reserach Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; Child Development Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Chinese Journal of Biology ;
+      eissn = 2314-7474 ;
+      issnl = 2314-7474
+    >
+
+    param[journal_id] = cjb
+
+    au < exists ; exists ; 2014 ; Chinese Journal of Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Chinese Journal of Engineering ;
+      eissn = 2314-8063 ;
+      issnl = 2314-8063
+    >
+
+    param[journal_id] = cje
+
+    au < exists ; exists ; 2013 ; Chinese Journal of Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Chinese Journal of Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Chinese Journal of Mathematics ;
+      eissn = 2314-8071 ;
+      issnl = 2314-8071
+    >
+
+    param[journal_id] = cjm
+
+    au < exists ; exists ; 2013 ; Chinese Journal of Mathematics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Chinese Journal of Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Cholesterol ;
+      issn = 2090-1283 ;
+      eissn = 2090-1291 ;
+      issnl = 2090-1283
+    >
+
+    param[journal_id] = cholesterol
+
+    au < exists ; exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Chromatography Research International ;
+      issn = 2090-3502 ;
+      eissn = 2090-3510 ;
+      issnl = 2090-3510
+    >
+
+    param[journal_id] = cri
+
+    au < exists ; exists ; 2011 ; Chromatography Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Chromatography Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Chromatography Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Chromatography Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Computational and Mathematical Methods in Medicine ;
+      issn = 1748-670X ;
+      eissn = 1748-6718 ;
+      issnl = 1748-670X
+    >
+
+    param[journal_id] = cmmm
+
+    au < exists ; exists ; 1997 ; Computational and Mathematical Methods in Medicine Volume 1 (1997) ; 1997 ; 1 >
+    au < exists ; exists ; 1998 ; Computational and Mathematical Methods in Medicine Volume 1 (1998) ; 1998 ; 1 >
+    au < exists ; exists ; 1999 ; Computational and Mathematical Methods in Medicine Volume 1-2 (1999) ; 1999 ; 1-2 >
+    au < exists ; exists ; 2000 ; Computational and Mathematical Methods in Medicine Volume 2-3 (2000) ; 2000 ; 2-3 >
+    au < exists ; exists ; 2001 ; Computational and Mathematical Methods in Medicine Volume 3 (2001) ; 2001 ; 3 >
+    au < exists ; exists ; 2002 ; Computational and Mathematical Methods in Medicine Volume 4 (2002) ; 2002 ; 4 >
+    au < exists ; exists ; 2003 ; Computational and Mathematical Methods in Medicine Volume 5 (2003) ; 2003 ; 5 >
+    au < exists ; exists ; 2005 ; Computational and Mathematical Methods in Medicine Volume 6 (2005) ; 2005 ; 6 >
+    au < exists ; exists ; 2006 ; Computational and Mathematical Methods in Medicine Volume 7 (2006) ; 2006 ; 7 >
+    au < exists ; exists ; 2007 ; Computational and Mathematical Methods in Medicine Volume 8 (2007) ; 2007 ; 8 >
+    au < exists ; exists ; 2008 ; Computational and Mathematical Methods in Medicine Volume 9 (2008) ; 2008 ; 9 >
+    au < exists ; exists ; 2009 ; Computational and Mathematical Methods in Medicine Volume 10 (2009) ; 2009 ; 10 >
+    au < exists ; exists ; 2010 ; Computational and Mathematical Methods in Medicine Volume 11 (2010) ; 2010 ; 11 >
+    au < exists ; exists ; 2011 ; Computational and Mathematical Methods in Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Computational and Mathematical Methods in Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Computational and Mathematical Methods in Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Computational and Mathematical Methods in Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = Computational Biology Journal ;
+      issn = 2314-4165 ;
+      eissn = 2314-4173 ;
+      issnl = 2314-4165
+    >
+
+    param[journal_id] = cbj
+
+    au < exists ; exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Computational Intelligence and Neuroscience ;
+      issn = 1687-5265 ;
+      eissn = 1687-5273 ;
+      issnl = 1687-5265
+    >
+
+    param[journal_id] = cin
+
+    au < exists ; exists ; 2007 ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Computational Intelligence and Neuroscience Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Computational Intelligence and Neuroscience Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Computational Intelligence and Neuroscience Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Computational Intelligence and Neuroscience Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Computational Intelligence and Neuroscience Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Computational Intelligence and Neuroscience Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Genomics ;
+      issn = 2314-436X ;
+      eissn = 2314-4378 ;
+      issnl = 2314-436X
+    >
+
+    param[journal_id] = ijg
+
+    au < exists ; exists ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 ; 1 >
+    au < exists ; exists ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 ; 2 >
+    au < exists ; exists ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 ; 3 >
+    au < exists ; exists ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 ; 4 >
+    au < exists ; exists ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 ; 5 >
+    au < exists ; exists ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 ; 6 >
+    au < exists ; exists ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Immunology Research ;
+      issn = 2314-8861 ;
+      eissn = 2314-7156 ;
+      issnl = 2314-8861
+    >
+
+    param[journal_id] = jir
+
+    au < exists ; exists ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 ; 1 >
+    au < exists ; exists ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 ; 2 >
+    au < exists ; exists ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 ; 3 >
+    au < exists ; exists ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 ; 4 >
+    au < exists ; exists ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 ; 5 >
+    au < exists ; exists ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 ; 6 >
+    au < exists ; exists ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 ; 7 >
+    au < exists ; exists ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 ; 8 >
+    au < exists ; exists ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 ; 9 >
+    au < exists ; exists ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 ; 10 >
+    au < exists ; exists ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 ; 11 >
+    au < exists ; exists ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 ; 12 >
+    au < exists ; exists ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 ; 13 >
+    au < exists ; exists ; 2007 ; Clinical and Developmental Immunology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Clinical and Developmental Immunology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
 
   }
 

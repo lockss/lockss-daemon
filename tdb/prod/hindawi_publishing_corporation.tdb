@@ -2301,14 +2301,23 @@
       issnl = 2090-2107
     >
 
+    {
     param[journal_id] = chrp
 
-    au < released ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
-    au < ready ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < down ; 2010 ; Chemotherapy Research and Practice Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Chemotherapy Research and Practice Volume 2011 [superseded]; 2011 ; 2011 >
+    }
+
+    {
+    param[journal_id] = cherp
+
+    au < exists ; 2010 ; Chemotherapy Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Chemotherapy Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Chemotherapy Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Chemotherapy Research and Practice Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; Chemotherapy Research and Practice Volume 2014 ; 2014 ; 2014 >
-    
+    }
+
   }
   
   {
@@ -2336,14 +2345,23 @@
       issnl = 2090-1283
     >
 
+    {
     param[journal_id] = chol
 
-    au < released ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
-    au < ready ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
-    
+    au < down ; 2010 ; Cholesterol Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; Cholesterol Volume 2011 [superseded] ; 2011 ; 2011 >
+    }
+
+    {
+    param[journal_id] = cholesterol
+
+    au < exists ; 2010 ; Cholesterol Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Cholesterol Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Cholesterol Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Cholesterol Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Cholesterol Volume 2014 ; 2014 ; 2014 >
+    }
+
   }
 
   {
@@ -2370,29 +2388,27 @@
       issnl = 1740-2522
     >
 
+    comment[cdi] = the url "http://www.hindawi.com/journals/cdi/" redirects to "http://www.hindawi.com/journals/jir/"
     param[journal_id] = cdi
 
-    au < released ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 ; 1 >
-    au < released ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 ; 2 >
-    au < released ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 ; 3 >
-    au < released ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 ; 4 >
-    au < released ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 ; 5 >
-    au < released ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 ; 6 >
-    au < released ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 ; 7 >
-    au < released ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 ; 8 >
-    au < released ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 ; 9 >
-    au < released ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 ; 10 >
-    au < released ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 ; 11 >
-    au < released ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 ; 12 >
-    au < released ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 ; 13 >
-    au < released ; 2007 ; Clinical and Developmental Immunology Volume 2007 ; 2007 ; 2007 >
-    au < released ; 2008 ; Clinical and Developmental Immunology Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
-    au < ready ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Clinical and Developmental Immunology Volume 2014 ; 2014 ; 2014 >
+    au < superseded ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) [superseded] ; 1994 ; 1 >
+    au < superseded ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) [superseded] ; 1995 ; 2 >
+    au < superseded ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) [superseded] ; 1996 ; 3 >
+    au < superseded ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) [superseded] ; 1997 ; 4 >
+    au < superseded ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) [superseded] ; 1998 ; 5 >
+    au < superseded ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) [superseded] ; 1999 ; 6 >
+    au < superseded ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) [superseded] ; 2000 ; 7 >
+    au < superseded ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) [superseded] ; 2001 ; 8 >
+    au < superseded ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) [superseded] ; 2002 ; 9 >
+    au < superseded ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) [superseded] ; 2003 ; 10 >
+    au < superseded ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) [superseded] ; 2004 ; 11 >
+    au < superseded ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) [superseded] ; 2005 ; 12 >
+    au < superseded ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) [superseded] ; 2006 ; 13 >
+    au < superseded ; 2007 ; Clinical and Developmental Immunology Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < superseded ; 2008 ; Clinical and Developmental Immunology Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < superseded ; 2009 ; Clinical and Developmental Immunology Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < superseded ; 2010 ; Clinical and Developmental Immunology Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < superseded ; 2011 ; Clinical and Developmental Immunology Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -2404,23 +2420,20 @@
       issnl = 1531-6912
     >
 
+    comment[cfg] = the url "http://www.hindawi.com/journals/cfg/" redirects to "http://www.hindawi.com/journals/ijg/"
     param[journal_id] = cfg
-    comment[notReady] = Redirects to ijg (International Journal of Genomics)
 
-    au < released ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 ; 1 >
-    au < released ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 ; 2 >
-    au < released ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 ; 3 >
-    au < released ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 ; 4 >
-    au < released ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 ; 5 >
-    au < released ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 ; 6 >
-    au < released ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
-    au < released ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
-    au < released ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
-    au < notReady ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
-    au < expected ; 2013 ; Comparative and Functional Genomics Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Comparative and Functional Genomics Volume 2014 ; 2014 ; 2014 >
+    au < superseded ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) [superseded] ; 2001 ; 1 >
+    au < superseded ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) [superseded] ; 2002 ; 2 >
+    au < superseded ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) [superseded] ; 2003 ; 3 >
+    au < superseded ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) [superseded] ; 2004 ; 4 >
+    au < superseded ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) [superseded] ; 2005 ; 5 >
+    au < superseded ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) [superseded] ; 2006 ; 6 >
+    au < superseded ; 2007 ; Comparative and Functional Genomics Volume 2007 [superseded] ; 2007 ; 2007 >
+    au < superseded ; 2008 ; Comparative and Functional Genomics Volume 2008 [superseded] ; 2008 ; 2008 >
+    au < superseded ; 2009 ; Comparative and Functional Genomics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < superseded ; 2010 ; Comparative and Functional Genomics Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < superseded ; 2011 ; Comparative and Functional Genomics Volume 2011 [superseded] ; 2011 ; 2011 >
 
   }
 
@@ -2454,6 +2467,21 @@
 
   }
   
+  {
+    title <
+      name = Computational Biology Journal ;
+      issn = 2314-4165 ;
+      eissn = 2314-4173 ;
+      issnl = 2314-4165
+    >
+
+    param[journal_id] = cbj
+
+    au < exists ; 2013 ; Computational Biology Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Computational Biology Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
   {
     title <
       name = Computational Intelligence and Neuroscience ;
@@ -3602,6 +3630,34 @@
     au < released ; 2012 ; International Journal of Forestry Research Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Forestry Research Volume 2013 ; 2013 ; 2013 >
     au < expected ; 2014 ; International Journal of Forestry Research Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Genomics ;
+      issn = 2314-436X ;
+      eissn = 2314-4378 ;
+      issnl = 2314-436X
+    >
+
+    comment[supersedes] = see journal code 'cfg'
+    param[journal_id] = ijg
+
+    au < exists ; 2001 ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 ; 1 >
+    au < exists ; 2002 ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 ; 2 >
+    au < exists ; 2003 ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 ; 3 >
+    au < exists ; 2004 ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 ; 4 >
+    au < exists ; 2005 ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 ; 5 >
+    au < exists ; 2006 ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 ; 6 >
+    au < exists ; 2007 ; Comparative and Functional Genomics Volume 2007 ; 2007 ; 2007 >
+    au < exists ; 2008 ; Comparative and Functional Genomics Volume 2008 ; 2008 ; 2008 >
+    au < exists ; 2009 ; Comparative and Functional Genomics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Comparative and Functional Genomics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Comparative and Functional Genomics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -4980,6 +5036,40 @@
 
   }
 
+  {
+    title <
+      name = Journal of Immunology Research ;
+      issn = 2314-8861 ;
+      eissn = 2314-7156 ;
+      issnl = 2314-8861
+    >
+
+    comment[supersedes] = see journal code 'cdi'
+    param[journal_id] = jir
+
+    au < exists ; 1994 ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 ; 1 >
+    au < exists ; 1995 ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 ; 2 >
+    au < exists ; 1996 ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 ; 3 >
+    au < exists ; 1997 ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 ; 4 >
+    au < exists ; 1998 ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 ; 5 >
+    au < exists ; 1999 ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 ; 6 >
+    au < exists ; 2000 ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 ; 7 >
+    au < exists ; 2001 ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 ; 8 >
+    au < exists ; 2002 ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 ; 9 >
+    au < exists ; 2003 ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 ; 10 >
+    au < exists ; 2004 ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 ; 11 >
+    au < exists ; 2005 ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 ; 12 >
+    au < exists ; 2006 ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 ; 13 >
+    au < exists ; 2007 ; Clinical and Developmental Immunology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; 2008 ; Clinical and Developmental Immunology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; 2009 ; Clinical and Developmental Immunology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; Clinical and Developmental Immunology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; Clinical and Developmental Immunology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; Clinical and Developmental Immunology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Clinical and Developmental Immunology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Immunology Research Volume 2014 ; 2014 ; 2014 >
+
+  }
   {
     title <
       name = Journal of Inequalities and Applications ;
