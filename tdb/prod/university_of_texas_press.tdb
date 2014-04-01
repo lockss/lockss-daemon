@@ -89,6 +89,22 @@
   }
 
   {
+  
+    title <
+      name = Journal of Individual Psychology ;
+      issn = 1522-2527 ;
+      eissn = 2332-0583 ;
+      issnl = 1522-2527
+    >
+
+    param[journal_dir] = the_journal_of_individual_psychology
+    attr[journal_id] = jip
+
+    au < doNotProcess ; 2014 ; Journal of Individual Psychology Volume 70 ; 70 >
+
+  }
+
+  {
     title <
       name = Latin American Music Review ;
       issn = 0163-0350 ;
