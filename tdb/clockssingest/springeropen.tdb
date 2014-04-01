@@ -867,9 +867,24 @@
         au < expected ; exists ; 2014 ; In Silico Pharmacology Volume 2 ; 2 >
   
     }
-  
+
     {
   
+        title <
+          name = Injury Epidemiology ;
+          issn = 2197-1714 
+        >
+  
+        param[base_url] = http://www.injepijournal.com/
+        param[journal_issn] = 2197-1714 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Injury Epidemiology Volume 1 ; 1 >
+
+    }
+
+    {
+
         title <
           name = Integrating Materials and Manufacturing Innovation ;
           issn = 2193-9772 
