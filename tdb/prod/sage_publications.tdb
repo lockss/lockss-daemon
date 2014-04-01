@@ -13203,6 +13203,32 @@
 
     {
       title <
+        name = INQUIRY: The Journal of Health Care Organization, Provision, and Financing ;
+        issn = 0046-9580 
+      >
+
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://inq.sagepub.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < exists ; 2001 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 38 ; 38 >
+      au < exists ; 2002 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 39 ; 39 >
+      au < exists ; 2003 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 40 ; 40 >
+      au < exists ; 2004 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 41 ; 41 >
+      au < exists ; 2005 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 42 ; 42 >
+      au < exists ; 2006 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 43 ; 43 >
+      au < exists ; 2007 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 44 ; 44 >
+      au < exists ; 2008 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 45 ; 45 >
+      au < exists ; 2009 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 46 ; 46 >
+      au < exists ; 2010 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 47 ; 47 >
+      au < exists ; 2011 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 48 ; 48 >
+      au < exists ; 2012 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 49 ; 49 >
+      au < exists ; 2013 ; INQUIRY: The Journal of Health Care Organization, Provision, and Financing Volume 50 ; 50 >
+
+    }
+
+    {
+      title <
         name = International Journal of Bilingualism ;
         issn = 1367-0069 ;
         eissn = 1756-6878
