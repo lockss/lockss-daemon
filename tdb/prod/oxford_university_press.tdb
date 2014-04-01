@@ -12835,6 +12835,23 @@
   {
 
     title <
+      name = Journal of Professions and Organization ;
+      issn = 2051-8811 ;
+      eissn = 2051-8803 ;
+      issnl = 2051-8811
+    >
+
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://jpo.oxfordjournals.org/
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+
+    au < HighWirePressH20Plugin ; exists ; 2014 ; Journal of Professions and Organization Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Public Administration Research and Theory ;
       issn = 1053-1858 ;
       eissn = 1477-9803 ;
