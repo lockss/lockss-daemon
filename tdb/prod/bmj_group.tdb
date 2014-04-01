@@ -1850,6 +1850,29 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     
   }
   
+
+
+  {
+
+      title <
+        name = Lupus Science & Medicine ;
+        eissn = 2053-8790
+    >
+
+    {
+
+      pluginSuffix = HighWireDrupalPlugin
+      param[base_url] = http://lupus.bmj.com/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < expected ; 2014 ; Lupus Science & Medicine Volume 1 ; 1 >
+
+    }
+    
+  }
+  
+
+
   {
     title <
       name = Medical Humanities ;
