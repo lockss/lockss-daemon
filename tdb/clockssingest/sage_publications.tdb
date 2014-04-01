@@ -9688,6 +9688,25 @@
   {
   
     title <
+      name = European Journal of Probation ;
+      eissn = 2066-2203
+    >
+
+    param[base_url] = http://ejp.sagepub.com/
+    pluginSuffix = ClockssHighWirePressH20Plugin
+
+    au < exists ; exists ; 2009 ; European Journa of Probation Volume 1 ; 1 ; >
+    au < exists ; exists ; 2010 ; European Journa of Probation Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; European Journa of Probation Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; European Journa of Probation Volume 4 ; 4 ; >
+    au < exists ; exists ; 2013 ; European Journa of Probation Volume 5 ; 5 ; >
+    au < expected ; exists ; 2014 ; European Journa of Probation Volume 6 ; 6 ; >
+
+  }
+
+  {
+  
+    title <
       name = European Journal of Social Theory ;
       issn = 1368-4310 ;
       eissn = 1461-7137
