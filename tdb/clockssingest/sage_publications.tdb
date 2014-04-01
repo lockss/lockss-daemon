@@ -2355,6 +2355,23 @@
   }
 
   {
+
+    title <
+      name = The Anthropocine Review ;
+      issn = 2053-0196 ;
+      eissn = 2053-020X ;
+      issnl = 2053-0196
+    >
+
+
+    pluginSuffix = ClockssHighWirePressH20Plugin
+    param[base_url] = http://anr.sagepub.com/
+
+    au < exists ; exists ; 2014 ; The Anthropocine Review Volume 1 ; 1 ; >
+
+  }
+
+  {
   
     title <
       name = Anthropological Theory ;

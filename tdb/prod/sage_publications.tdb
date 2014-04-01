@@ -2658,6 +2658,24 @@
 
   }
 
+  {
+
+    title <
+      name = The Anthropocine Review ;
+      issn = 2053-0196 ;
+      eissn = 2053-020X ;
+      issnl = 2053-0196
+    >
+
+
+    pluginSuffix = HighWirePressH20Plugin
+    param[base_url] = http://anr.sagepub.com/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < exists ; 2014 ; The Anthropocine Review Volume 1 ; 1 >
+
+  }
+
     {
 
       title <
