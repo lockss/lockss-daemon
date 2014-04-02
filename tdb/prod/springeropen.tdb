@@ -1637,7 +1637,23 @@
         au < expected ; 2014 ; Multilingual Education Volume 4 ; 4 >
   
     }
+
+    {
   
+        title <
+          name = Nano Convergence ;
+          issn = 2196-5404 ;
+          issnl = 2196-5404
+        >
+  
+        param[base_url] = http://www.nanoscalereslett.com/
+        param[journal_issn] = 2196-5404
+        comment[platform] = BMC
+
+        au < exists ; 2014 ; Nano Convergence Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
