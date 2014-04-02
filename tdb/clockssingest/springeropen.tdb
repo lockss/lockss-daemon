@@ -779,7 +779,22 @@
         au < manifest ; exists ; 2014 ; Fixed Point Theory and Applications Volume 2014 ; 2014 >
   
     }
+
+    {
   
+        title <
+          name = Geoscience Letters ;
+          issn = 2196-4092 
+        >
+  
+        param[base_url] = http://www.geoscienceletters.com/
+        param[journal_issn] = 2196-4092 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Geoscience Letters Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
