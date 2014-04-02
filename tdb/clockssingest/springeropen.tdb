@@ -783,6 +783,21 @@
     {
   
         title <
+          name = Forest Ecosystems ;
+          issn = 2197-5620 
+        >
+  
+        param[base_url] = http://www.forestecosyst.com/
+        param[journal_issn] = 2197-5620 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Forest Ecosystems Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
           name = Geoscience Letters ;
           issn = 2196-4092 
         >
