@@ -2337,6 +2337,20 @@
 
     {
       title <
+        name = Biological Research ;
+        eissn = 0717-6287 ;
+        issnl = 0717-6287
+      >
+      
+      param[base_url] = http://www.biolres.com/
+      param[journal_issn] = 0717-6287
+
+      au < exists ; exists ; 2014 ; Biological Research Volume 47 ; 47 >
+
+    }
+
+    {
+      title <
         name = Biology Direct ;
         issn = 1745-6150 ;
         issnl = 1745-6150
