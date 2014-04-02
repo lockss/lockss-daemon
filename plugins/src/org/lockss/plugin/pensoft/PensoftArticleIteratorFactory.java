@@ -1,5 +1,5 @@
 /*
- * $Id: PensoftArticleIteratorFactory.java,v 1.5 2014-01-22 18:15:47 aishizaki Exp $
+ * $Id: PensoftArticleIteratorFactory.java,v 1.6 2014-04-02 21:35:28 aishizaki Exp $
  */
 
 /*
@@ -125,7 +125,8 @@ public class PensoftArticleIteratorFactory
       MetadataTarget at = new MetadataTarget(MetadataTarget.PURPOSE_ARTICLE);
       ArticleMetadata am;
       SimpleHtmlMetaTagMetadataExtractor ext = new SimpleHtmlMetaTagMetadataExtractor();
-      CachedUrl htmlCu = null, pdfCu = null;
+      CachedUrl htmlCu = null, pdfCu = null, xmlCu = null;
+      Matcher mat;
       log.debug3("processWithMetadata: " + absCu);
 
       if (absCu !=null && absCu.hasContent()){
@@ -147,7 +148,6 @@ public class PensoftArticleIteratorFactory
           if (am.containsRawKey("citation_pdf_url")){
             String metaPdf = am.getRaw("citation_pdf_url");
             log.debug3("   contains citation_pdf_url: "+metaPdf);
-            Matcher mat;
             CachedUrl rawCu = au.makeCachedUrl(metaPdf);
             
             // if the pdf_url from the metadata is in the au and has content, use it
@@ -190,6 +190,44 @@ public class PensoftArticleIteratorFactory
               AuUtil.safeRelease(htmlCu);
             }
           } 
+          // get the xml url as a list:string from the metadata
+          // as with the pdf url, keep entries in their raw state
+          // the xml entry from the metadata not quite the same as on the page
+          // will rearrange to match what we crawled...
+          // from the metadata: http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2758
+          // from the    crawl: http://www.pensoft.net/inc/journals/download.php?fileId=2758&fileTable=J_GALLEYS
+          // Accept either?
+
+          if (am.containsRawKey("citation_xml_url")){
+            String metaXml = am.getRaw("citation_xml_url");
+            log.debug3("   contains citation_xml_url: "+metaXml);
+            CachedUrl rawCu = au.makeCachedUrl(metaXml);
+
+            // if the xml_url from the metadata is in the au and has content, use it
+            // otherwise, convert it to the "crawl" form 
+            if (rawCu != null && rawCu.hasContent()) {
+              xmlCu = rawCu;
+            } else {
+              // can use the metadata pattern; xml is nearly identical
+              mat = metadataPattern.matcher(metaXml);
+              if (mat.matches()) {
+                String crawlXml = mat.replaceFirst("$1$4$3$2");
+                log.debug3("crawlXML = "+crawlXml);
+                xmlCu = au.makeCachedUrl(crawlXml);
+                AuUtil.safeRelease(rawCu);
+              } else {
+                log.warning("XML content not found for: " + metaXml);
+              }
+            }
+            
+            log.debug3("  setROLE_XML_URL: " + xmlCu);
+            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_XML, xmlCu);
+            if((af.getFullTextCu()) == null) {
+              af.setFullTextCu(xmlCu);
+            }
+            AuUtil.safeRelease(xmlCu);
+            
+          }
         } catch (IOException e) {
           // 
           e.printStackTrace();

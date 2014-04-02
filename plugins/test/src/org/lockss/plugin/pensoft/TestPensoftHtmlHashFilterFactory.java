@@ -1,5 +1,5 @@
 /*
- * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.4 2013-10-10 23:17:52 aishizaki Exp $
+ * $Id: TestPensoftHtmlHashFilterFactory.java,v 1.5 2014-04-02 21:35:46 aishizaki Exp $
  */
 
 /*
@@ -126,6 +126,9 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
   private static final String HtmlHashNFiltered = "Random Stuff<td class=\"more3\">Hello World </td>";
   private static final String HtmlHashO = "<td align=center><a href=\"journals/zookeys/issue/341/\" class=more3>Current Issue</a></td>"+
     "Hello World";
+  private static final String HtmlHashP = "<td align=\"left\" class=\"texttah11\" width=\"200px\"></td>"+
+        "<td align=\"left\" class=\"texttah11\">Pages:&nbsp;1-20&nbsp;| Viewed by:&nbsp;2128</td>";
+  private static final String HtmlHashPFiltered = "<td align=\"left\" class=\"texttah11\" width=\"200px\"></td>";
   
   public void testFilterA() throws Exception {
     InputStream inA;
@@ -218,6 +221,10 @@ public class TestPensoftHtmlHashFilterFactory extends LockssTestCase {
         new StringInputStream(HtmlHashN), ENC);    
     String filtStr = StringUtil.fromInputStream(in);
     assertEquals(HtmlHashNFiltered, filtStr);
+    in = fact.createFilteredInputStream(mau, 
+        new StringInputStream(HtmlHashP), ENC);    
+    filtStr = StringUtil.fromInputStream(in);
+    assertEquals(HtmlHashPFiltered, filtStr);
 
   }
 /*
