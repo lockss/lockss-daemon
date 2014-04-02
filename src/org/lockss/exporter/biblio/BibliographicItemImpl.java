@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemImpl.java,v 1.8 2013-12-09 20:53:48 pgust Exp $
+ * $Id: BibliographicItemImpl.java,v 1.9 2014-04-02 19:34:35 pgust Exp $
  */
 
 /*
@@ -125,26 +125,32 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
    * @param other another BibliographicItem
    */
   public BibliographicItemImpl(BibliographicItem other) {
-    setPrintIsbn(other.getPrintIsbn());
-    setEisbn(other.getEisbn());
-    setPrintIssn(other.getPrintIssn());
-    setEissn(other.getEissn());
-    setIssnL(other.getIssnL());
-    setProprietaryId(other.getProprietaryId());
-    setPublicationTitle(other.getPublicationTitle());
-    setPublisherName(other.getPublisherName());
-    setName(other.getName());
-    setVolume(other.getVolume());
-    setStartVolume(other.getStartVolume());
-    setEndVolume(other.getEndVolume());
-    setYear(other.getYear());
-    setStartYear(other.getStartYear());
-    setEndYear(other.getEndYear());
-    setIssue(other.getIssue());
-    setStartIssue(other.getStartIssue());
-    setEndIssue(other.getEndIssue());
-    setPublicationType(other.getPublicationType());
-    setCoverageDepth(other.getCoverageDepth());
+    if (other instanceof BibliographicItemImpl) {
+      // initialize by copying fields from another BibliographicItemImpl
+      copyFrom((BibliographicItemImpl)other);
+    } else {
+      // initialize by copying properties from another BibliographicItem 
+      setPrintIsbn(other.getPrintIsbn());
+      setEisbn(other.getEisbn());
+      setPrintIssn(other.getPrintIssn());
+      setEissn(other.getEissn());
+      setIssnL(other.getIssnL());
+      setProprietaryId(other.getProprietaryId());
+      setPublicationTitle(other.getPublicationTitle());
+      setPublisherName(other.getPublisherName());
+      setName(other.getName());
+      setVolume(other.getVolume());
+      setStartVolume(other.getStartVolume());
+      setEndVolume(other.getEndVolume());
+      setYear(other.getYear());
+      setStartYear(other.getStartYear());
+      setEndYear(other.getEndYear());
+      setIssue(other.getIssue());
+      setStartIssue(other.getStartIssue());
+      setEndIssue(other.getEndIssue());
+      setPublicationType(other.getPublicationType());
+      setCoverageDepth(other.getCoverageDepth());
+    }
   }
 
   /**
@@ -154,7 +160,5 @@ public class BibliographicItemImpl extends BibliographicItemAdapter {
   public BibliographicItemImpl clone() {
     return new BibliographicItemImpl(this);
   }
-
-
 
 }
