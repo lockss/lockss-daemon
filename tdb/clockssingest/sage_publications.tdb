@@ -2355,6 +2355,21 @@
   }
 
   {
+  
+    title <
+      name = Annals of Otology, Rhinology & Laryngology ;
+      issn = 0003-4894 ;
+      eissn = 1943-572X 
+    >
+
+      param[base_url] = http://aor.sagepub.com/
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < exists ; exists ; 2014 ; Annals of Otology, Rhinology & Laryngology Volume 123 ; 123 ; >
+
+  }
+
+  {
 
     title <
       name = The Anthropocine Review ;
