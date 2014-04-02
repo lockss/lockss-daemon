@@ -455,7 +455,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < testing ; 2008 ; Circulation: Cardiovascular Interventions Volume 1 ; 1 >
-      au < ready ; 2009 ; Circulation: Cardiovascular Interventions Volume 2 ; 2 >
+      au < releasing ; 2009 ; Circulation: Cardiovascular Interventions Volume 2 ; 2 >
       au < testing ; 2010 ; Circulation: Cardiovascular Interventions Volume 3 ; 3 >
       au < released ; 2011 ; Circulation: Cardiovascular Interventions Volume 4 ; 4 >
       au < released ; 2012 ; Circulation: Cardiovascular Interventions Volume 5 ; 5 >
@@ -480,9 +480,9 @@
       param[base_url] = http://circoutcomes.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
+      au < releasing ; 2008 ; Circulation: Cardiovascular Quality and Outcomes Volume 1 ; 1 >
       au < testing ; 2009 ; Circulation: Cardiovascular Quality and Outcomes Volume 2 ; 2 >
-      au < ready ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
+      au < releasing ; 2010 ; Circulation: Cardiovascular Quality and Outcomes Volume 3 ; 3 >
       au < released ; 2011 ; Circulation: Cardiovascular Quality and Outcomes Volume 4 ; 4 >
       au < released ; 2012 ; Circulation: Cardiovascular Quality and Outcomes Volume 5 ; 5 >
       au < testing ; 2013 ; Circulation: Cardiovascular Quality and Outcomes Volume 6 ; 6 >
@@ -506,12 +506,12 @@
       param[base_url] = http://circheartfailure.ahajournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < ready ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
+      au < releasing ; 2008 ; Circulation: Heart Failure Volume 1 ; 1 >
       au < testing ; 2009 ; Circulation: Heart Failure Volume 2 ; 2 >
-      au < ready ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
-      au < ready ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
+      au < releasing ; 2010 ; Circulation: Heart Failure Volume 3 ; 3 >
+      au < releasing ; 2011 ; Circulation: Heart Failure Volume 4 ; 4 >
       au < released ; 2012 ; Circulation: Heart Failure Volume 5 ; 5 >
-      au < ready ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
+      au < releasing ; 2013 ; Circulation: Heart Failure Volume 6 ; 6 >
       au < manifest ; 2014 ; Circulation: Heart Failure Volume 7 ; 7 >
 
     }
@@ -579,7 +579,7 @@
       au < testing ; 2005 ; Hypertension Volume 45 ; 45 >
       au < testing ; 2005 ; Hypertension Volume 46 ; 46 >
       au < testing ; 2006 ; Hypertension Volume 47 ; 47 >
-      au < ready ; 2006 ; Hypertension Volume 48 ; 48 >
+      au < releasing ; 2006 ; Hypertension Volume 48 ; 48 >
       au < testing ; 2007 ; Hypertension Volume 49 ; 49 >
       au < testing ; 2007 ; Hypertension Volume 50 ; 50 >
       au < testing ; 2008 ; Hypertension Volume 51 ; 51 >
