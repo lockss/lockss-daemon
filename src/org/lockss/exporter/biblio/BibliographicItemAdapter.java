@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicItemAdapter.java,v 1.10 2013-12-09 20:53:48 pgust Exp $
+ * $Id: BibliographicItemAdapter.java,v 1.11 2014-04-02 19:40:11 pgust Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.exporter.biblio;
 
 import org.lockss.util.MetadataUtil;
-import org.lockss.util.NumberUtil;
+import org.lockss.util.StringUtil;
 
 /**
  * A partial implementation of the <code>BibliographicItem</code> interface, to
@@ -85,14 +85,17 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   // Getters (implementing the interface)
   //////////////////////////////////////////////////////////////////////////////
 
+  @Override
   public String getPrintIsbn() {
     return printIsbn;
   }
 
+  @Override
   public String getEisbn() {
     return eIsbn;
   }
 
+  @Override
   public String getIsbn() {
     String isbn = getEisbn();
     if (!MetadataUtil.isIsbn(isbn)) {
@@ -128,7 +131,17 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
   
   @Override
   public String getPublicationType() {
-    return (publicationType == null) ? "journal" : publicationType;
+    String pubType = publicationType;
+    if (StringUtil.isNullString(pubType)) {
+      String isbn = getIsbn();
+      String issn = getIssn();
+      if (isbn != null) {
+        pubType = !StringUtil.isNullString(issn) ? "bookSeries" : "book";
+      } else {
+        pubType = "journal";
+      }
+    }
+    return pubType;
   }
   
   @Override
@@ -159,6 +172,12 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
 
   @Override
   public String getPublicationTitle() {
+    String pubType = getPublicationType();
+    if ("book".equals(pubType) || "bookSeries".equals(pubType)) {
+      // Use name for books or book series if specified,
+      String name = getName();
+      return !StringUtil.isNullString(name) ? name : publicationTitle;
+    }
     return publicationTitle;
   }
 
@@ -343,6 +362,37 @@ public abstract class BibliographicItemAdapter implements BibliographicItem {
     this.coverageDepth = coverageDepth;
     return this;
   }
+
+  /**
+   * Copy one instance to another.
+   * 
+   * @param from from instance
+   * @param to to instance
+   * @return to instance
+   */
+  protected void copyFrom(BibliographicItemAdapter from) {
+    setPrintIsbn(from.printIsbn);
+    setEisbn(from.eIsbn);
+    setPrintIssn(from.printIssn);
+    setEissn(from.eIssn);
+    setIssnL(from.issnL);
+    setProprietaryId(from.proprietaryId);
+    setPublicationTitle(from.publicationTitle);
+    setPublisherName(from.publisherName);
+    setName(from.name);
+    setVolume(from.volume);
+    setStartVolume(from.startVolume);
+    setEndVolume(from.endVolume);
+    setYear(from.year);
+    setStartYear(from.startYear);
+    setEndYear(from.endYear);
+    setIssue(from.issue);
+    setStartIssue(from.startIssue);
+    setEndIssue(from.endIssue);
+    setPublicationType(from.publicationType);
+    setCoverageDepth(from.coverageDepth);
+  }  
+
 
   //////////////////////////////////////////////////////////////////////////////
   // Automatically generated equals and hashCode methods.
