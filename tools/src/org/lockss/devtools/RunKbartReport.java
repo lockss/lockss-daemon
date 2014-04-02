@@ -1,5 +1,5 @@
 /*
- * $Id: RunKbartReport.java,v 1.8 2014-03-12 16:07:52 pgust Exp $
+ * $Id: RunKbartReport.java,v 1.9 2014-04-02 22:30:54 pgust Exp $
  */
 
 /*
@@ -93,12 +93,18 @@ public class RunKbartReport {
           "param[issue_no]", "param[issues]", "param[issue_no.]", 
           "param[issue_dir]"};
 
+  static public enum PubType {
+    book,
+    journal
+  };
+  
   /** An input stream providing the CSV input data. */
   private final InputStream inputStream;
   // Settings from the command line
   private final boolean hideEmptyColumns;
   private final boolean showTdbStatus;
   private KbartExportFilter.ColumnOrdering columnOrdering;
+  private final PubType publicationType;
 
   //private static final String DATA_FORMATS_CONFIG_FILE = "data-formats.xml";
   /*  data-formats.xml
@@ -121,16 +127,19 @@ public class RunKbartReport {
 
   /**
    * Construct an instance of this class with the supplied properties.
+   * @param publicationType
    * @param hideEmptyColumns
    * @param showTdbStatus
    * @param columnOrdering
    * @param inputStream
    * @param outputStream
    */
-  protected RunKbartReport(boolean hideEmptyColumns,
+  protected RunKbartReport(PubType publicationType,
+                           boolean hideEmptyColumns,
                            boolean showTdbStatus,
                            PredefinedColumnOrdering columnOrdering,
                            InputStream inputStream, OutputStream outputStream) {
+    this.publicationType = publicationType;
     this.hideEmptyColumns = hideEmptyColumns;
     this.showTdbStatus = showTdbStatus;
     this.inputStream = inputStream;
@@ -164,7 +173,7 @@ public class RunKbartReport {
     // KbartTitles which represent the coverage ranges available for the titles.
     try {
       titles = KbartConverter.convertTitleAus(
-          new KbartCsvTitleIterator(inputStream)
+          new KbartCsvTitleIterator(inputStream, publicationType)
       );
     } catch (Exception e) {
       die("Could not read CSV file. "+e.getMessage(), e);
@@ -208,9 +217,10 @@ public class RunKbartReport {
      * @throws IOException
      * @throws IllegalArgumentException
      */
-    protected KbartCsvTitleIterator(InputStream inputStream)
+    protected KbartCsvTitleIterator(
+        InputStream inputStream, PubType publicationType)
         throws IOException, IllegalArgumentException {
-      this.recordIterator = new KbartCsvIterator(inputStream);
+      this.recordIterator = new KbartCsvIterator(inputStream, publicationType);
       this.nextItem = recordIterator.next();
     }
 
@@ -263,17 +273,20 @@ public class RunKbartReport {
     private final CsvReader csvReader;
     private String[] nextLine;
     protected final BibliographicItemFieldMapping mapping;
+    protected final PubType publicationType;
 
     /**
      * Create an iterator on a CSV file, which returns a BibliographicItem for
      * each line.
      * @param inputStream
+     * @param publicationType
      * @throws IOException
      * @throws RuntimeException
      */
-    protected KbartCsvIterator(InputStream inputStream)
+    protected KbartCsvIterator(InputStream inputStream, PubType publicationType)
         throws IOException, RuntimeException {
 
+      this.publicationType = publicationType;
       this.csvReader = new CsvReader(inputStream,
           Charset.forName("utf-8"));
       // Read first line as header line
@@ -443,6 +456,7 @@ public class RunKbartReport {
        */
       public BibliographicItem getBibliographicItem(final String[] values) {
         return new BibliographicItemImpl() {
+          @Override
           public String toString() {
             String pubIdentifier = getIsbn();
             if (StringUtil.isNullString(pubIdentifier)) {
@@ -452,29 +466,28 @@ public class RunKbartReport {
                                  pubIdentifier, getPublicationTitle());
           }
         }
-            .setPrintIsbn(getValue(Field.PRINT_IDENTIFIER, values))
-            .setEisbn(getValue(Field.ONLINE_IDENTIFIER, values))
-            .setPrintIssn(getValue(Field.PRINT_IDENTIFIER, values))
-            .setEissn(getValue(Field.ONLINE_IDENTIFIER, values))
-            .setIssnL(getValue(ISSNL_STR, values))
-            .setPublicationTitle(getValue(Field.PUBLICATION_TITLE, values))
-            .setPublisherName(getValue(Field.PUBLISHER_NAME, values))
-            .setName(getValue(Field.PUBLICATION_TITLE, values))
-            .setStartVolume(getValue(Field.NUM_FIRST_VOL_ONLINE, values))
-            .setEndVolume(getValue(Field.NUM_LAST_VOL_ONLINE, values))
-            .setStartYear(getValue(Field.DATE_FIRST_ISSUE_ONLINE, values))
-            .setEndYear(getValue(Field.DATE_LAST_ISSUE_ONLINE, values))
-            .setStartIssue(getValue(Field.NUM_FIRST_ISSUE_ONLINE, values))
-            .setEndIssue(getValue(Field.NUM_LAST_ISSUE_ONLINE, values))
-            .setCoverageDepth(getValue(Field.COVERAGE_DEPTH, values))
-            // Set volume/year/issue strings last - if they are non-null, they
-            // will be used to set the start and end values too, overriding
-            // what might have been set earlier in set[Start|End]*
-            .setVolume(findValue(values, volFields))
-            .setYear(findValue(values, yrFields))
-            .setIssue(findValue(values, issFields))
-
-            ;
+        .setPrintIsbn(getValue(Field.PRINT_IDENTIFIER, values))
+        .setEisbn(getValue(Field.ONLINE_IDENTIFIER, values))
+        .setPrintIssn(getValue(Field.PRINT_IDENTIFIER, values))
+        .setEissn(getValue(Field.ONLINE_IDENTIFIER, values))
+        .setIssnL(getValue(ISSNL_STR, values))
+        .setPublicationTitle(getValue(Field.PUBLICATION_TITLE, values))
+        .setPublisherName(getValue(Field.PUBLISHER_NAME, values))
+        .setName(getValue("name", values))  // not standard KBART field
+        .setStartVolume(getValue(Field.NUM_FIRST_VOL_ONLINE, values))
+        .setEndVolume(getValue(Field.NUM_LAST_VOL_ONLINE, values))
+        .setStartYear(getValue(Field.DATE_FIRST_ISSUE_ONLINE, values))
+        .setEndYear(getValue(Field.DATE_LAST_ISSUE_ONLINE, values))
+        .setStartIssue(getValue(Field.NUM_FIRST_ISSUE_ONLINE, values))
+        .setEndIssue(getValue(Field.NUM_LAST_ISSUE_ONLINE, values))
+        .setCoverageDepth(getValue(Field.COVERAGE_DEPTH, values))
+        // Set volume/year/issue strings last - if they are non-null, they
+        // will be used to set the start and end values too, overriding
+        // what might have been set earlier in set[Start|End]*
+        .setVolume(findValue(values, volFields))
+        .setYear(findValue(values, yrFields))
+        .setIssue(findValue(values, issFields))
+        .setPublicationType(publicationType.toString());
       }
     }
   }
@@ -488,6 +501,8 @@ public class RunKbartReport {
   private static final String SOPT_DATA = "d";
   private static final String SOPT_FILE = "i";
   private static final String SOPT_SHOW_STATUS = "s";
+  private static final String FOR_JOURNALS = "J";
+  private static final String FOR_BOOKS = "B";
 
   private static final KbartExporter.OutputFormat defaultOutput =
       KbartExporter.OUTPUT_FORMAT_DEFAULT;
@@ -506,6 +521,20 @@ public class RunKbartReport {
    * Commons doesn't use the order of addition by default.
    */
   private static List<Option> optionList = new ArrayList<Option>();
+
+  /**
+   * Add the given OptionGroup to the options order list as well as the 
+   * options spec.
+   * @param g an OptionGroup
+   * @param setReq whether to set the option as a required one
+   */
+  private static void addOptionGroup(OptionGroup g, boolean setReq) {
+    g.setRequired(setReq);
+    for (Object opt : g.getOptions()) {
+      optionList.add((Option)opt);
+    }
+    options.addOptionGroup(g);
+  }
 
   /**
    * Add the given Option to the options order list as well as the options spec.
@@ -541,6 +570,17 @@ public class RunKbartReport {
 
   // Create all the options, add them to the spec and mark those that are required.
   static {
+    // options for generating MD file
+    OptionGroup reportTypeGroup = new OptionGroup()
+      .addOption(OptionBuilder
+        .withDescription("for books")
+        .withLongOpt("books")
+         .create(FOR_BOOKS))
+      .addOption(OptionBuilder
+        .withDescription("for journals")
+        .withLongOpt("journals")
+        .create(FOR_JOURNALS));
+    addOptionGroup(reportTypeGroup, true);
     // The input file option is required
     addOption(new Option(SOPT_FILE, "input-file", true, "Path to the input file"), true);
     // Help option
@@ -652,9 +692,15 @@ public class RunKbartReport {
       ordering = DEFAULT_COLUMN_ORDERING;
     }
 
+    
+    PubType pubType = null;
+    if (cl.hasOption("J")) pubType = PubType.journal;
+    if (cl.hasOption("B")) pubType = PubType.book;
+    
     // Create an instance
     try {
       new RunKbartReport(
+          pubType,
           cl.hasOption(SOPT_HIDE_EMPTY_COLS),
           cl.hasOption(SOPT_SHOW_STATUS),
           ordering,

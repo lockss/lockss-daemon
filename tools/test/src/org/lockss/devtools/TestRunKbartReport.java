@@ -1,5 +1,5 @@
 /*
- * $Id: TestRunKbartReport.java,v 1.8 2013-03-06 23:17:46 easyonthemayo Exp $
+ * $Id: TestRunKbartReport.java,v 1.9 2014-04-02 22:30:30 pgust Exp $
  */
 
 /*
@@ -117,7 +117,9 @@ public class TestRunKbartReport extends LockssTestCase {
       throws IOException {
     this.columnOrdering = co;
     // Set up the class
-    new RunKbartReport(hideEmptyColumns, showTdbStatus, columnOrdering,
+    new RunKbartReport(
+        RunKbartReport.PubType.journal,
+        hideEmptyColumns, showTdbStatus, columnOrdering,
         new StringInputStream(StringUtils.join(lines, "\n").toString()),
         new FileOutputStream(outputFile));
 
@@ -133,7 +135,8 @@ public class TestRunKbartReport extends LockssTestCase {
    */
   public void testKbartCsvIterator() throws Exception {
     KbartCsvIterator it = new KbartCsvIterator(
-        new StringInputStream(StringUtils.join(lines, "\n").toString())
+        new StringInputStream(StringUtils.join(lines, "\n").toString()),
+        RunKbartReport.PubType.journal
     );
     // Check the properties of each item in the iterator
     // Items in the iterator should be in the same order as the lines,
@@ -160,7 +163,8 @@ public class TestRunKbartReport extends LockssTestCase {
    */
   public void testKbartCsvTitleIterator() throws Exception {
     KbartCsvTitleIterator it = new KbartCsvTitleIterator(
-        new StringInputStream(StringUtils.join(lines, "\n").toString())
+        new StringInputStream(StringUtils.join(lines, "\n").toString()),
+        RunKbartReport.PubType.journal
     );
 
     int lineNum = 0;
@@ -206,7 +210,7 @@ public class TestRunKbartReport extends LockssTestCase {
     List<String> expectedProps = getExpectedProps(line);
     // The BibItem will return null for empty or invalid fields.
     assertEquals(expectedProps.get(0), item.getPublisherName());
-    assertEquals(expectedProps.get(1), item.getName());
+    assertEquals(expectedProps.get(1), item.getPublicationTitle());
     assertEquals(asIssn(expectedProps.get(2)), item.getPrintIssn());
     assertEquals(asIssn(expectedProps.get(3)), item.getEissn());
     assertEquals(expectedProps.get(4), item.getStartVolume());
