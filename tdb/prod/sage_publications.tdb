@@ -10903,15 +10903,15 @@
     >
 
     param[base_url] = http://ejp.sagepub.com/
-    pluginSuffix = CHighWirePressH20Plugin
+    pluginSuffix = HighWirePressH20Plugin
     implicit < status ; year ; name ; param[volume_name] >
 
-    au < exists ; 2009 ; European Journa of Probation Volume 1 ; 1 >
-    au < exists ; 2010 ; European Journa of Probation Volume 2 ; 2 >
-    au < exists ; 2011 ; European Journa of Probation Volume 3 ; 3 >
-    au < exists ; 2012 ; European Journa of Probation Volume 4 ; 4 >
-    au < exists ; 2013 ; European Journa of Probation Volume 5 ; 5 >
-    au < expected ; 2014 ; European Journa of Probation Volume 6 ; 6 >
+    au < exists ; 2009 ; European Journal of Probation Volume 1 ; 1 >
+    au < exists ; 2010 ; European Journal of Probation Volume 2 ; 2 >
+    au < exists ; 2011 ; European Journal of Probation Volume 3 ; 3 >
+    au < exists ; 2012 ; European Journal of Probation Volume 4 ; 4 >
+    au < exists ; 2013 ; European Journal of Probation Volume 5 ; 5 >
+    au < expected ; 2014 ; European Journal of Probation Volume 6 ; 6 >
 
   }
 
