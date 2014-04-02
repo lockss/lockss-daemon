@@ -1753,7 +1753,23 @@
         au < expected ; 2014 ; Psychology of Well-Being: Theory, Research and Practice Volume 4 ; 4 >
   
     }
+
+    {
   
+        title <
+          name = Revista Chilena de Historia Natural ;
+          eissn = 0717-6317 ;
+          issnl = 0717-6317
+        >
+  
+        param[base_url] = http://www.revchilhistnat.com/
+        param[journal_issn] = 0717-6317
+        comment[platform] = BMC
+
+        au < exists ; 2014 ; Revista Chilena de Historia Natural Volume 1 ; 1 >
+
+    }
+
     {
   
         title <
