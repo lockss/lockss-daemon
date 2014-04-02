@@ -207,6 +207,21 @@
     {
   
         title <
+          name = Chemical and Biological Technologies in Agriculture ;
+          issn = 2196-5641 
+        >
+  
+        param[base_url] = http://www.chembioagro.com/
+        param[journal_issn] = 2196-5641 
+        comment[platform] = BioMedCentralPlugin
+
+        au < exists ; exists ; 2014 ; Chemical and Biological Technologies in Agriculture Volume 1 ; 1 >
+
+    }
+
+    {
+  
+        title <
           name = City, Territory and Architecture ;
           issn = 2195-2701 
         >
