@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.7 2013-09-18 11:36:13 easyonthemayo Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.8 2014-04-03 12:22:27 pgust Exp $
  */
 
 /*
@@ -1236,8 +1236,9 @@ public final class BibliographicOrderScorer {
       } catch (NumberFormatException e) {
         // There's something funny about the field values, so issue a
         // warning and carry on without counting a negative break.
-        log.warning("Could not check if " + fieldToCheck +
-            " values constitute a negative break. " + e.getMessage());
+        log.warning("Could not check if " + fieldToCheck 
+            + " values constitute a negative break: \"" 
+            + lastVal + "\" : \"" + thisVal + "\"." + e.getMessage());
       }
     }
     return (float)total/(float)numPairs;
