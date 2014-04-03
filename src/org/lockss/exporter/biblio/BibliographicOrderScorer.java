@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.9 2014-04-03 12:43:01 pgust Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.10 2014-04-03 13:19:21 pgust Exp $
  */
 
 /*
@@ -1227,7 +1227,8 @@ public final class BibliographicOrderScorer {
       String lastVal = fieldToCheck.getValueForComparisonAsPrevious(lastAu);
       String thisVal = fieldToCheck.getValueForComparisonAsCurrent(thisAu);
       // If there is not a full set of field values, return a high value
-      if (lastVal==null || thisVal==null) return 1f;
+      if (   StringUtil.isNullString(lastVal) 
+          || StringUtil.isNullString(thisVal)) return 1f;
       // Record a negative break
       try {
         if (fieldToCheck.areDecreasing(lastVal, thisVal)) {
@@ -1273,7 +1274,8 @@ public final class BibliographicOrderScorer {
         String lastValVol = SORT_FIELD.VOLUME.getValueForComparisonAsPrevious(lastAu);
         String thisValVol = SORT_FIELD.VOLUME.getValueForComparisonAsCurrent(thisAu);
         // If there is not a full set of field values, return a high value
-        if (lastValVol==null || thisValVol==null) {
+        if (   StringUtil.isNullString(lastValVol) 
+            || StringUtil.isNullString(thisValVol)) {
           volScore = 1f;
           volDone = true;
         }
@@ -1296,7 +1298,8 @@ public final class BibliographicOrderScorer {
         String lastValYear = SORT_FIELD.YEAR.getValueForComparisonAsPrevious(lastAu);
         String thisValYear = SORT_FIELD.YEAR.getValueForComparisonAsCurrent(thisAu);
         // If there is not a full set of field values, return a high value
-        if (lastValYear==null || thisValYear==null) {
+        if (   StringUtil.isNullString(lastValYear) 
+            || StringUtil.isNullString(thisValYear)) {
           yearScore = 1f;
           yearDone = true;
         }
