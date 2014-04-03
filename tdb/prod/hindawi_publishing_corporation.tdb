@@ -3136,6 +3136,21 @@
 
   {
     title <
+      name = Game Theory ;
+      issn = 2356-6930 ;
+      eissn = 2314-6559 ;
+      issnl = 2356-6930
+    >
+
+    param[journal_id] = gt
+
+    au < exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Gastroenterology Research and Practice ;
       issn = 1687-6121 ;
       eissn = 1687-630X ;
@@ -3150,7 +3165,7 @@
     au < released ; 2011 ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3166,7 +3181,37 @@
     au < released ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Geography Journal ;
+      issn = 2314-4203 ;
+      eissn = 2314-4211 ;
+      issnl = 2314-4203
+    >
+
+    param[journal_id] = geography
+
+    au < exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Geometry ;
+      issn = 2314-422X ;
+      eissn = 2314-4238 ;
+      issnl = 2314-422X
+    >
+
+    param[journal_id] = geometry
+
+    au < exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3235,6 +3280,20 @@
 
   {
     title <
+      name = Indian Journal of Materials Science ;
+      eissn = 2314-7490 ;
+      issnl = 2314-7490
+    >
+
+    param[journal_id] = ijms
+
+    au < exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Infectious Diseases in Obstetrics and Gynecology ;
       issn = 1064-7449 ;
       eissn = 1098-0997 ;
@@ -3264,7 +3323,7 @@
     au < released ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3282,7 +3341,7 @@
     au < released ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
     
   }
 
@@ -3302,7 +3361,7 @@
     au < released ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3323,7 +3382,7 @@
     au < released ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3342,7 +3401,7 @@
     au < released ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
 
   }
   
@@ -3360,8 +3419,23 @@
     au < released ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
     
+  }
+
+  {
+    title <
+      name = International Journal of Analysis ;
+      issn = 2314-498X ;
+      eissn = 2314-4998 ;
+      issnl = 2314-498X
+    >
+
+    param[journal_id] = ijanal
+
+    au < exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
+
   }
 
   {
@@ -3379,7 +3453,7 @@
     au < released ; 2011 ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3400,7 +3474,67 @@
     au < released ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Antibiotics ;
+      issn = 2356-6949 ;
+      eissn = 2314-5773 ;
+      issnl = 2356-6949
+    >
+
+    param[journal_id] = ijan
+
+    au < exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Atmospheric Sciences ;
+      issn = 2314-4122 ;
+      eissn = 2314-4130 ;
+      issnl = 2314-4122
+    >
+
+    param[journal_id] = ijas
+
+    au < exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Bacteriology ;
+      issn = 2356-6957 ;
+      eissn = 2314-596X ;
+      issnl = 2356-6957
+    >
+
+    param[journal_id] = ijb
+
+    au < exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Biodiversity ;
+      issn = 2314-4149 ;
+      eissn = 2314-4157 ;
+      issnl = 2314-4149
+    >
+
+    param[journal_id] = ijbd
+
+    au < exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3419,7 +3553,7 @@
     au < released ; 2011 ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 >
     au < ready ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3441,7 +3575,7 @@
     au < released ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3457,7 +3591,7 @@
     au < released ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3476,7 +3610,7 @@
     au < released ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3495,7 +3629,7 @@
     au < released ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3515,7 +3649,37 @@
     au < released ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Chemical Physics ;
+      issn = 2356-6973 ;
+      eissn = 2314-6885 ;
+      issnl = 2356-6973
+    >
+
+    param[journal_id] = ijcp
+
+    au < exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
+    au < expected ; 2014 ; International Journal of Chemical Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Chronic Diseases ;
+      issn = 2356-6981 ;
+      eissn = 2314-5749 ;
+      issnl = 2356-6981
+    >
+
+    param[journal_id] = ijcd
+
+    au < exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3527,14 +3691,38 @@
       issnl = 1687-9163
     >
 
+    {
     param[journal_id] = ijct
 
-    au < released ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
-    au < released ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
-    au < released ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2009 ; International Journal of Combinatorics Volume 2009 [superseded] ; 2009 ; 2009 >
+    au < down ; 2010 ; International Journal of Combinatorics Volume 2010 [superseded] ; 2010 ; 2010 >
+    au < down ; 2011 ; International Journal of Combinatorics Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 2012 ; International Journal of Combinatorics Volume 2012 [superseded] ; 2012 ; 2012 >
+    }
+
+     {
+    param[journal_id] = ijcom
+
+    au < exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+    }
+  }
+
+  {
+    title <
+      name = International Journal of Computational Mathematics ;
+      issn = 2356-797X ;
+      eissn = 2314-856X ;
+      issnl = 2356-797X
+    >
+
+    param[journal_id] = ijcm
+
+    au < expected ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3554,7 +3742,7 @@
     au < released ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3572,7 +3760,7 @@
     au < released ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3591,7 +3779,7 @@
     au < released ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3603,7 +3791,7 @@
       issnl = 1687-9643
     >
 
-    comment[superseded] = see journal id 'denm'
+    comment[supersedes] = see journal id 'denm'
     param[journal_id] = ijde
 
     au < ready ; 2006 ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 ; 2006 >
@@ -3634,7 +3822,7 @@
     au < released ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
 
   }
 
@@ -3657,8 +3845,8 @@
     au < released ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 >
     au < manifest ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
-        
+    au < exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
+
   }
 
   {
@@ -3669,6 +3857,7 @@
       issnl = 1687-9708
     >
 
+    {
     comment[supersedes] = see journal id 'rleco'
     param[journal_id] = ijeco
 
@@ -3676,11 +3865,22 @@
     au < ready ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
     au < ready ; 2009 ; Research Letters in Ecology Volume 2009 ; 2009 ; 2009 >
     au < ready ; 2010 ; Research Letters in Ecology Volume 2010 ; 2010 ; 2010 >
-    au < released ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
-    au < released ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
-    au < manifest ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    au < down ; 2011 ; International Journal of Ecology Volume 2011 [superseded] ; 2011 ; 2011 >
+    au < down ; 2012 ; International Journal of Ecology Volume 2012 [superseded] ; 2012 ; 2012 >
+    }
     
+    {
+    param[journal_id] = ijeclo
+
+    au < exists ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    }
   }
 
   {
@@ -3695,7 +3895,7 @@
     au < released ; 2011 ; International Journal of Electrochemistry Volume 2011 ; 2011 ; 2011 >
     au < released ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
     au < manifest ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
-    au < expected ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
+    au < exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
     
   }
   

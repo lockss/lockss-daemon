@@ -2720,6 +2720,645 @@
 
   {
     title <
+      name = Game Theory ;
+      issn = 2356-6930 ;
+      eissn = 2314-6559 ;
+      issnl = 2356-6930
+    >
+
+    param[journal_id] = gt
+
+    au < exists ; exists ; 2013 ; Game Theory Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Game Theory Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Gastroenterology Research and Practice ;
+      issn = 1687-6121 ;
+      eissn = 1687-630X ;
+      issnl = 1687-6121
+    >
+
+    param[journal_id] = grp
+
+    au < exists ; exists ; 2008 ; Gastroenterology Research and Practice Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Gastroenterology Research and Practice Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Gastroenterology Research and Practice Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Gastroenterology Research and Practice Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Gastroenterology Research and Practice Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Gastroenterology Research and Practice Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Gastroenterology Research and Practice Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Genetics Research International ;
+      issn = 2090-3162 ;
+      issnl = 2090-3162
+    >
+
+    param[journal_id] = gri
+
+    au < exists ; exists ; 2011 ; Genetics Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Genetics Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Genetics Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Genetics Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Geography Journal ;
+      issn = 2314-4203 ;
+      eissn = 2314-4211 ;
+      issnl = 2314-4203
+    >
+
+    param[journal_id] = geography
+
+    au < exists ; exists ; 2013 ; Geography Journal Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Geography Journal Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Geometry ;
+      issn = 2314-422X ;
+      eissn = 2314-4238 ;
+      issnl = 2314-422X
+    >
+
+    param[journal_id] = geometry
+
+    au < exists ; exists ; 2013 ; Geometry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Geometry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Hepatitis Research and Treatment ;
+      issn = 2090-1364 ;
+      eissn = 2090-1372 ;
+      issnl = 2090-1364
+    >
+
+    param[journal_id] = heprt
+
+    au < exists ; exists ; 2010 ; Hepatitis Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Hepatitis Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Hepatitis Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Hepatitis Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Hepatitis Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = HPB Surgery ;
+      issn = 0894-8569 ;
+      eissn = 1607-8462 ;
+      issnl = 0894-8569
+    >
+
+    param[journal_id] = hpb
+
+    au < exists ; exists ; 1997 ; HPB Surgery Volume 1 (1997) ; 1997 ; 1 >
+    au < exists ; exists ; 1998 ; HPB Surgery Volume 2 (1998) ; 1998 ; 2 >
+    au < exists ; exists ; 1999 ; HPB Surgery Volume 3 (1999) ; 1999 ; 3 >
+    au < exists ; exists ; 2000 ; HPB Surgery Volume 4 (2000) ; 2000 ; 4 >
+    au < exists ; exists ; 2001 ; HPB Surgery Volume 5 (2001) ; 2001 ; 5 >
+    au < exists ; exists ; 2002 ; HPB Surgery Volume 6 (2002) ; 2002 ; 6 >
+    au < exists ; exists ; 2003 ; HPB Surgery Volume 7 (2003) ; 2003 ; 7 >
+    au < exists ; exists ; 2004 ; HPB Surgery Volume 8 (2004) ; 2004 ; 8 >
+    au < exists ; exists ; 2005 ; HPB Surgery Volume 9 (2005) ; 2005 ; 9 >
+    au < exists ; exists ; 2006 ; HPB Surgery Volume 10 (2006) ; 2006 ; 10 >
+    au < exists ; exists ; 2007 ; HPB Surgery Volume 11 (2007) ; 2007 ; 11 >
+    au < exists ; exists ; 2008 ; HPB Surgery Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; HPB Surgery Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; HPB Surgery Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; HPB Surgery Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; HPB Surgery Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; HPB Surgery Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; HPB Surgery Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Indian Journal of Materials Science ;
+      eissn = 2314-7490 ;
+      issnl = 2314-7490
+    >
+
+    param[journal_id] = ijms
+
+    au < exists ; exists ; 2013 ; Indian Journal of Materials Science Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Indian Journal of Materials Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Infectious Diseases in Obstetrics and Gynecology ;
+      issn = 1064-7449 ;
+      eissn = 1098-0997 ;
+      issnl = 1064-7449
+    >
+
+    param[journal_id] = idog
+
+    au < exists ; exists ; 1993 ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 ; 1 >
+    au < exists ; exists ; 1994 ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 ; 2 >
+    au < exists ; exists ; 1995 ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 ; 3 >
+    au < exists ; exists ; 1996 ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 ; 4 >
+    au < exists ; exists ; 1997 ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 ; 5 >
+    au < exists ; exists ; 1998 ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 ; 6 >
+    au < exists ; exists ; 1999 ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 ; 7 >
+    au < exists ; exists ; 2000 ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 ; 8 >
+    au < exists ; exists ; 2001 ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 ; 9 >
+    au < exists ; exists ; 2002 ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 ; 10 >
+    au < exists ; exists ; 2003 ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 ; 11 >
+    au < exists ; exists ; 2004 ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 ; 12 >
+    au < exists ; exists ; 2005 ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 ; 13 >
+    au < exists ; exists ; 2006 ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Infectious Diseases in Obstetrics and Gynecology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Infectious Diseases in Obstetrics and Gynecology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Infectious Diseases in Obstetrics and Gynecology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Infectious Diseases in Obstetrics and Gynecology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Infectious Diseases in Obstetrics and Gynecology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Infectious Diseases in Obstetrics and Gynecology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Influenza Research and Treatment ;
+      issn = 2090-1380 ;
+      eissn = 2090-1399 ;
+      issnl = 2090-1380
+    >
+
+    param[journal_id] = irt
+
+    au < exists ; exists ; 2010 ; Influenza Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Influenza Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Influenza Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Influenza Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Influenza Research and Treatment Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Interdisciplinary Perspectives on Infectious Diseases ;
+      issn = 1687-708X ;
+      eissn = 1687-7098 ;
+      issnl = 1687-708X
+    >
+
+    param[journal_id] = ipid
+
+    au < exists ; exists ; 2008 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Interdisciplinary Perspectives on Infectious Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Aerospace Engineering ;
+      issn = 1687-5966 ;
+      eissn = 1687-5974 ;
+      issnl = 1687-5966
+    >
+    
+    param[journal_id] = ijae
+
+    au < exists ; exists ; 2008 ; International Journal of Aerospace Engineering Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Aerospace Engineering Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Aerospace Engineering Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Aerospace Engineering Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Aerospace Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Aerospace Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Aerospace Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Agronomy ;
+      issn = 1687-8159 ;
+      eissn = 1687-8167 ;
+      issnl = 1687-8159
+    >
+
+    param[journal_id] = ija
+
+    au < exists ; exists ; 2009 ; International Journal of Agronomy Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Agronomy Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Agronomy Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Agronomy Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Agronomy Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Agronomy Volume 2014 ; 2014 ; 2014 >
+
+  }
+  
+  {
+    title <
+      name = International Journal of Alzheimer's Disease ;
+      issn = 2090-0252 ;
+      issnl = 2090-0252
+    >
+
+    param[journal_id] = ijad
+
+    au < exists ; exists ; 2009 ; International Journal of Alzheimer's Disease Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Alzheimer's Disease Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Alzheimer's Disease Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Alzheimer's Disease Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Alzheimer's Disease Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Alzheimer's Disease Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Analysis ;
+      issn = 2314-498X ;
+      eissn = 2314-4998 ;
+      issnl = 2314-498X
+    >
+
+    param[journal_id] = ijanal
+
+    au < exists ; exists ; 2013 ; International Journal of Analysis Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Analysis Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Analytical Chemistry ;
+      issn = 1687-8760 ;
+      eissn = 1687-8779 ;
+      issnl = 1687-8760
+    >
+
+    param[journal_id] = ijac
+
+    au < exists ; exists ; 2009 ; International Journal of Analytical Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Analytical Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Analytical Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Analytical Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Analytical Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Analytical Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Antennas and Propagation ;
+      issn = 1687-5869 ;
+      eissn = 1687-5877 ;
+      issnl = 1687-5869
+    >
+
+    param[journal_id] = ijap
+
+    au < exists ; exists ; 2007 ; International Journal of Antennas and Propagation Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Antennas and Propagation Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Antennas and Propagation Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Antennas and Propagation Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Antennas and Propagation Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Antennas and Propagation Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Antennas and Propagation Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Antennas and Propagation Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Antibiotics ;
+      issn = 2356-6949 ;
+      eissn = 2314-5773 ;
+      issnl = 2356-6949
+    >
+
+    param[journal_id] = ijan
+
+    au < exists ; exists ; 2013 ; International Journal of Antibiotics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Antibiotics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Atmospheric Sciences ;
+      issn = 2314-4122 ;
+      eissn = 2314-4130 ;
+      issnl = 2314-4122
+    >
+
+    param[journal_id] = ijas
+
+    au < exists ; exists ; 2013 ; International Journal of Atmospheric Sciences Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Atmospheric Sciences Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Bacteriology ;
+      issn = 2356-6957 ;
+      eissn = 2314-596X ;
+      issnl = 2356-6957
+    >
+
+    param[journal_id] = ijb
+
+    au < exists ; exists ; 2013 ; International Journal of Bacteriology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Bacteriology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Biodiversity ;
+      issn = 2314-4149 ;
+      eissn = 2314-4157 ;
+      issnl = 2314-4149
+    >
+
+    param[journal_id] = ijbd
+
+    au < exists ; exists ; 2013 ; International Journal of Biodiversity Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Biodiversity Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Biomaterials ;
+      issn = 1687-8787 ;
+      eissn = 1687-8795 ;
+      issnl = 1687-8787
+    >
+
+    param[journal_id] = ijbm
+
+    au < exists ; exists ; 2009 ; International Journal of Biomaterials Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Biomaterials Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Biomaterials Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Biomaterials Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Biomaterials Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Biomaterials Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Biomedical Imaging ;
+      issn = 1687-4188 ;
+      eissn = 1687-4196 ;
+      issnl = 1687-4188
+    >
+
+    param[journal_id] = ijbi
+
+    au < exists ; exists ; 2006 ; International Journal of Biomedical Imaging Volume 2006 ; 2006 ; 2006 >
+    au < exists ; exists ; 2007 ; International Journal of Biomedical Imaging Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; International Journal of Biomedical Imaging Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Biomedical Imaging Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Biomedical Imaging Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Biomedical Imaging Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Biomedical Imaging Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Biomedical Imaging Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Biomedical Imaging Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Brain Science ;
+      issn = 2356-6965 ;
+      eissn = 2314-7016 ;
+      issnl = 2356-6965
+    >
+
+    param[journal_id] = ijbs
+
+    au < exists ; exists ; 2014 ; International Journal of Brain Science Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Breast Cancer ;
+      issn = 2090-3170 ;
+      eissn = 2090-3189 ;
+      issnl = 2090-3189
+    >
+
+    param[journal_id] = ijbc
+
+    au < exists ; exists ; 2011 ; International Journal of Breast Cancer Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Breast Cancer Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Breast Cancer Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Breast Cancer Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Carbohydrate Chemistry ;
+      issn = 1687-9341 ;
+      eissn = 1687-935X ;
+      issnl = 1687-9341
+    >
+
+    param[journal_id] = ijcc
+
+    au < exists ; exists ; 2009 ; International Journal of Carbohydrate Chemistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Carbohydrate Chemistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Carbohydrate Chemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Carbohydrate Chemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Carbohydrate Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Carbohydrate Chemistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Cell Biology ;
+      issn = 1687-8876 ;
+      eissn = 1687-8884 ;
+      issnl = 1687-8876
+    >
+
+    param[journal_id] = ijcb
+
+    au < exists ; exists ; 2009 ; International Journal of Cell Biology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Cell Biology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Cell Biology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Cell Biology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Cell Biology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Cell Biology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Chemical Engineering ;
+      issn = 1687-806X ;
+      eissn = 1687-8078 ;
+      issnl = 1687-806X
+    >
+
+    param[journal_id] = ijce
+
+    au < exists ; exists ; 2008 ; International Journal of Chemical Engineering Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Chemical Engineering Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Chemical Engineering Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Chemical Engineering Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Chemical Engineering Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Chemical Engineering Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Chemical Engineering Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Chemical Physics ;
+      issn = 2356-6973 ;
+      eissn = 2314-6885 ;
+      issnl = 2356-6973
+    >
+
+    param[journal_id] = ijcp
+
+    au < exists ; exists ; 2013 ; International Journal of Chemical Physics Volume 2013 ; 2013 ; 2013 >
+    au < expected ; exists ; 2014 ; International Journal of Chemical Physics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Chronic Diseases ;
+      issn = 2356-6981 ;
+      eissn = 2314-5749 ;
+      issnl = 2356-6981
+    >
+
+    param[journal_id] = ijcd
+
+    au < exists ; exists ; 2013 ; International Journal of Chronic Diseases Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Chronic Diseases Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Combinatorics ;
+      issn = 1687-9163 ;
+      eissn = 1687-9171 ;
+      issnl = 1687-9163
+    >
+
+    param[journal_id] = ijcom
+
+    au < exists ; exists ; 2009 ; International Journal of Combinatorics Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Combinatorics Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Combinatorics Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Combinatorics Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Combinatorics Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Combinatorics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Computational Mathematics ;
+      issn = 2356-797X ;
+      eissn = 2314-856X ;
+      issnl = 2356-797X
+    >
+
+    param[journal_id] = ijcm
+
+    au < expected ; exists ; 2014 ; International Journal of Computational Mathematics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Computer Games Technology ;
+      issn = 1687-7047 ;
+      eissn = 1687-7055 ;
+      issnl = 1687-7047
+    >
+
+    param[journal_id] = ijcgt
+
+    au < exists ; exists ; 2008 ; International Journal of Computer Games Technology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Computer Games Technology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Computer Games Technology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Computer Games Technology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Computer Games Technology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Computer Games Technology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Computer Games Technology Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Corrosion ;
+      issn = 1687-9325 ;
+      eissn = 1687-9333 ;
+      issnl = 1687-9325
+    >
+
+    param[journal_id] = ijc
+
+    au < exists ; exists ; 2010 ; International Journal of Corrosion Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Corrosion Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Corrosion Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Corrosion Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Corrosion Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Dentistry ;
+      issn = 1687-8728 ;
+      eissn = 1687-8736 ;
+      issnl = 1687-8728
+    >
+
+    param[journal_id] = ijd
+
+    au < exists ; exists ; 2009 ; International Journal of Dentistry Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Dentistry Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Dentistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Dentistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Dentistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Dentistry Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = International Journal of Differential Equations ;
       issn = 1687-9643 ;
       eissn = 1687-9651 ;
@@ -2740,6 +3379,86 @@
 
   }
 
+  {
+    title <
+      name = International Journal of Digital Multimedia Broadcasting ;
+      issn = 1687-7578 ;
+      eissn = 1687-7586 ;
+      issnl = 1687-7578
+    >
+
+    param[journal_id] = ijdmb
+
+    au < exists ; exists ; 2008 ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Digital Multimedia Broadcasting Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Digital Multimedia Broadcasting Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Digital Multimedia Broadcasting Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Digital Multimedia Broadcasting Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Digital Multimedia Broadcasting Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Digital Multimedia Broadcasting Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Distributed Sensor Networks ;
+      issn = 1550-1329 ;
+      eissn = 1550-1477 ;
+      issnl = 1550-1329
+    >
+
+    param[journal_id] = ijdsn
+
+    au < exists ; exists ; 2005 ; International Journal of Distributed Sensor Networks Volume 1 (2005) ; 2005 ; 1 >
+    au < exists ; exists ; 2006 ; International Journal of Distributed Sensor Networks Volume 2 (2006) ; 2006 ; 2 >
+    au < exists ; exists ; 2007 ; International Journal of Distributed Sensor Networks Volume 3 (2007) ; 2007 ; 3 >
+    au < exists ; exists ; 2008 ; International Journal of Distributed Sensor Networks Volume 4 (2008) ; 2008 ; 4 >
+    au < exists ; exists ; 2009 ; International Journal of Distributed Sensor Networks Volume 5 (2009) ; 2009 ; 5 >
+    au < exists ; exists ; 2010 ; International Journal of Distributed Sensor Networks Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Distributed Sensor Networks Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Distributed Sensor Networks Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Distributed Sensor Networks Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Distributed Sensor Networks Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Ecology ;
+      issn = 1687-9708 ;
+      eissn = 1687-9716 ;
+      issnl = 1687-9708
+    >
+
+    param[journal_id] = ijecol
+
+    au < exists ; exists ; 2007 ; Research Letters in Ecology Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Research Letters in Ecology Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; International Journal of Ecology Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; International Journal of Ecology Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; International Journal of Ecology Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Ecology Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Ecology Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Ecology Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = International Journal of Electrochemistry ;
+      issn = 2090-3537 ;
+      issnl = 2090-3537
+    >
+
+    param[journal_id] = ijelc
+
+    au < exists ; exists ; 2011 ; International Journal of Electrochemistry Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; International Journal of Electrochemistry Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; International Journal of Electrochemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; International Journal of Electrochemistry Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
   {
     title <
       name = International Journal of Genomics ;
