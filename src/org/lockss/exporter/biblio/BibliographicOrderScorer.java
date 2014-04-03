@@ -1,5 +1,5 @@
 /*
- * $Id: BibliographicOrderScorer.java,v 1.10 2014-04-03 13:19:21 pgust Exp $
+ * $Id: BibliographicOrderScorer.java,v 1.11 2014-04-03 13:33:51 pgust Exp $
  */
 
 /*
@@ -1239,7 +1239,7 @@ public final class BibliographicOrderScorer {
         // warning and carry on without counting a negative break.
         log.warning("Could not check if " + fieldToCheck 
             + " values constitute a negative break: \"" 
-            + lastVal + "\" : \"" + thisVal + "\"." + e.getMessage());
+            + lastVal + "\" : \"" + thisVal + "\". " + e.getMessage());
       }
     }
     return (float)total/(float)numPairs;
@@ -1289,7 +1289,7 @@ public final class BibliographicOrderScorer {
           // warning and carry on without counting a negative break.
           log.warning("Could not check if " + SORT_FIELD.VOLUME
               + " values constitute a negative break: \"" 
-              + lastValVol + "\" : \"" + thisValVol + "\"." + e.getMessage());
+              + lastValVol + "\" : \"" + thisValVol + "\". " + e.getMessage());
         }
       }
       // ----------------------------------------------------------------------
@@ -1313,7 +1313,7 @@ public final class BibliographicOrderScorer {
           // warning and carry on without counting a negative break.
           log.warning("Could not check if " + SORT_FIELD.YEAR
               + " values constitute a negative break: \"" 
-              + lastValYear + "\" : \"" + thisValYear + "\"." + e.getMessage());
+              + lastValYear + "\" : \"" + thisValYear + "\". " + e.getMessage());
         }
       }
       // Break the loop if we have vals for both vol and year because
