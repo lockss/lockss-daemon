@@ -1146,6 +1146,19 @@
 
   {
     title <
+      name = Advances in Signal Processing ;
+      eissn = 2314-7814 ;
+      issnl = 2314-7814 
+    >
+
+    param[journal_id] = asp
+
+    au < expected ; exists ; 2014 ; Advances in Signal Processing Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = Advances in Software Engineering ;
       issn = 1687-8655 ;
       eissn = 1687-8663 ;
@@ -2573,6 +2586,140 @@
 
   {
     title <
+      name = Economics Research International ;
+      issn = 2090-2123 ;
+      eissn = 2090-2131 ;
+      issnl = 2090-2123
+    >
+
+    {
+    param[journal_id] = ecri
+
+    au < exists ; exists ; 2010 ; Economics Research International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Economics Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Economics Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Economics Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Economics Research International Volume 2014 ; 2014 ; 2014 >
+    }
+
+  }
+
+  {
+    title <
+      name = Education Research International ;
+      issn = 2090-4002 ;
+      eissn = 2090-4010 ;
+      issnl = 2090-4002
+    >
+
+    {
+    param[journal_id] = edu
+
+    au < exists ; exists ; 2011 ; Education Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Education Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Education Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Education Research International Volume 2014 ; 2014 ; 2014 >
+    }
+
+  }
+
+  {
+    title <
+      name = Emergency Medicine International ;
+      issn = 2090-2840 ;
+      eissn = 2090-2859 ;
+      issnl = 2090-2840
+    >
+
+    param[journal_id] = emi
+
+    au < exists ; exists ; 2010 ; Emergency Medicine International Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Emergency Medicine International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Emergency Medicine International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Emergency Medicine International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Emergency Medicine International Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Enzyme Research ;
+      issn = 2090-0406 ;
+      eissn = 2090-0414 ;
+      issnl = 2090-0414
+    >
+
+    param[journal_id] = er
+
+    au < exists ; exists ; 2010 ; Enzyme Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Enzyme Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Enzyme Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Enzyme Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Enzyme Research Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Epidemiology Research International ;
+      issn = 2090-2972 ;
+      eissn = 2090-2980 ;
+      issnl = 2090-2972
+    >
+
+    param[journal_id] = eri
+
+    au < exists ; exists ; 2011 ; Epidemiology Research International Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Epidemiology Research International Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Epidemiology Research International Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Epidemiology Research International Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Epilepsy Research and Treatment ;
+      issn = 2090-1348 ;
+      eissn = 2090-1356 ;
+      issnl = 2090-1348
+    >
+
+    param[journal_id] = ert
+
+    au < exists ; exists ; 2010 ; Epilepsy Research and Treatment Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Epilepsy Research and Treatment Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Epilepsy Research and Treatment Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Epilepsy Research and Treatment Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Epilepsy Research and Treatment Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Evidence-based Complementary and Alternative Medicine ;
+      issn = 1741-427X ;
+      eissn = 1741-4288 ;
+      issnl = 1741-427X
+    >
+
+    param[journal_id] = ecam
+
+    au < exists ; exists ; 2004 ; Evidence-based Complementary and Alternative Medicine Volume 1 (2004) ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; Evidence-based Complementary and Alternative Medicine Volume 2 (2005) ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; Evidence-based Complementary and Alternative Medicine Volume 3 (2006) ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; Evidence-based Complementary and Alternative Medicine Volume 4 (2007) ; 2007 ; 4 >
+    au < exists ; exists ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 (2008) ; 2008 ; 5 >
+    au < exists ; exists ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 (2009) ; 2009 ; 6 >
+    au < exists ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 (2010) ; 2010 ; 7 >
+    au < exists ; exists ; 2011 ; Evidence-based Complementary and Alternative Medicine Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Evidence-based Complementary and Alternative Medicine Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Evidence-based Complementary and Alternative Medicine Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Evidence-based Complementary and Alternative Medicine Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
       name = International Journal of Differential Equations ;
       issn = 1687-9643 ;
       eissn = 1687-9651 ;
@@ -2617,6 +2764,57 @@
     au < exists ; exists ; 2012 ; Comparative and Functional Genomics Volume 2012 ; 2012 ; 2012 >
     au < exists ; exists ; 2013 ; International Journal of Genomics Volume 2013 ; 2013 ; 2013 >
     au < exists ; exists ; 2014 ; International Journal of Genomics Volume 2014 ; 2014 ; 2014 >
+
+  }
+
+  {
+    title <
+      name = Journal of Chemistry ;
+      issn = 2090-9063 ;
+      eissn = 2090-9071 ;
+      issnl = 2090-9063
+     >
+
+    param[journal_id] = jchem
+
+    au < exists ; exists ; 2004 ; E-Journal of Chemistry Volume 1 (2004) ; 2004 ; 1 >
+    au < exists ; exists ; 2005 ; E-Journal of Chemistry Volume 2 (2005) ; 2005 ; 2 >
+    au < exists ; exists ; 2006 ; E-Journal of Chemistry Volume 3 (2006) ; 2006 ; 3 >
+    au < exists ; exists ; 2007 ; E-Journal of Chemistry Volume 4 (2007) ; 2007 ; 4 >
+    au < exists ; exists ; 2008 ; E-Journal of Chemistry Volume 5 (2008) ; 2008 ; 5 >
+    au < exists ; exists ; 2009 ; E-Journal of Chemistry Volume 6 (2009) ; 2009 ; 6 >
+    au < exists ; exists ; 2010 ; E-Journal of Chemistry Volume 7 (2010) ; 2010 ; 7 >
+    au < exists ; exists ; 2011 ; E-Journal of Chemistry Volume 8 (2011) ; 2011 ; 8 >
+    au < exists ; exists ; 2012 ; E-Journal of Chemistry Volume 9 (2012) ; 2012 ; 9 >
+    au < exists ; exists ; 2013 ; Journal of Chemistry Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Chemistry Volume 2014 ; 2014 ; 2014 >
+    
+  }
+
+  {
+    title <
+      name = Journal of Diabetes Research ;
+      issn = 2314-6745 ;
+      eissn = 2314-6753 ;
+      issnl = 2314-6745
+    >
+
+    param[journal_id] = jdr 
+    comment[0] = no issue in 2005, 2006
+
+    au < exists ; exists ; 2000 ; Experimental Diabetes Research Volume 1 (2000) ; 2000 ; 1 >
+    au < exists ; exists ; 2001 ; Experimental Diabetes Research Volume 2 (2001) ; 2001 ; 2 >
+    au < exists ; exists ; 2002 ; Experimental Diabetes Research Volume 3 (2002) ; 2002 ; 3 >
+    au < exists ; exists ; 2003 ; Experimental Diabetes Research Volume 4 (2003) ; 2003 ; 4 >
+    au < exists ; exists ; 2004 ; Experimental Diabetes Research Volume 5 (2004) ; 2004 ; 5 >
+    au < exists ; exists ; 2007 ; Experimental Diabetes Research Volume 2007 ; 2007 ; 2007 >
+    au < exists ; exists ; 2008 ; Experimental Diabetes Research Volume 2008 ; 2008 ; 2008 >
+    au < exists ; exists ; 2009 ; Experimental Diabetes Research Volume 2009 ; 2009 ; 2009 >
+    au < exists ; exists ; 2010 ; Experimental Diabetes Research Volume 2010 ; 2010 ; 2010 >
+    au < exists ; exists ; 2011 ; Experimental Diabetes Research Volume 2011 ; 2011 ; 2011 >
+    au < exists ; exists ; 2012 ; Experimental Diabetes Research Volume 2012 ; 2012 ; 2012 >
+    au < exists ; exists ; 2013 ; Journal of Diabetes Research Volume 2013 ; 2013 ; 2013 >
+    au < exists ; exists ; 2014 ; Journal of Diabetes Research Volume 2014 ; 2014 ; 2014 >
 
   }
 
