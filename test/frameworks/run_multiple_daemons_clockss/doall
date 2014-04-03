@@ -4,11 +4,19 @@
 PROJECT_DIR=`( cd ../../..; pwd )`
 export PROJECT_DIR
 
-if [ "$1" = "clean" ] ; then
+VERB="$1"
+shift
+
+if [ "$VERB" = "clean" ] ; then
   rm -rf lib
+	for i in 1 2 3 4 ; do
+		cd test$i
+		rm -rf root_?
+		cd ..
+	done
 fi
 
-if [ "$1" = "start" ] ; then
+if [ "$VERB" = "start" ] ; then
     mkdir -p lib
     cp "${PROJECT_DIR}/lib/lockss.jar" lib
     cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
@@ -17,14 +25,19 @@ fi
 
 for i in 1 2 3 4 ; do
     cd test$i
-    if [ "$1" = "start" ] ; then
+    if [ "$VERB" = "start" ] ; then
+        if [ -f jvm_args ] ; then
+	    ARGS=`cat jvm_args`
+	  else
+	    ARGS=""
+	fi
         if [ -f dpid ] ; then
 	    echo daemon already running in `pwd`
 	else
-            ( ../rundaemon ; rm -f dpid ) &
+            ( ../rundaemon $ARGS "$@"; rm -f dpid ) &
 	    echo started in `pwd`
 	fi
-    elif [ "$1" = "clean" ] ; then
+    elif [ "$VERB" = "clean" ] ; then
         if [ -f dpid ] ; then
 	    echo cannot clean while daemon is running in `pwd`
 	else
