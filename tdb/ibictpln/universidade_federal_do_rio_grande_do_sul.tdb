@@ -232,11 +232,12 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = CadernosdoAplicacao
+      comment[notReady] = can't fetch permission page
 
-      au < testing ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 >
+      au < ready ; 2008 ; 1 ; Cadernos do Aplicação Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 2 ; Cadernos do Aplicação Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 3 ; Cadernos do Aplicação Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 4 ; Cadernos do Aplicação Volume 2011 ; 2011 >
       au < expected ; 2012 ; 5 ; Cadernos do Aplicação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 6 ; Cadernos do Aplicação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 7 ; Cadernos do Aplicação Volume 2014 ; 2014 >
@@ -254,13 +255,14 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = cadernosdoil
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2007 ; 1 ; Cadernos do IL Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; Cadernos do IL Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 3 ; Cadernos do IL Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 4 ; Cadernos do IL Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 5 ; Cadernos do IL Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 6 ; Cadernos do IL Volume 2012 ; 2012 >
+      au < notReady ; 2007 ; 1 ; Cadernos do IL Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 2 ; Cadernos do IL Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 3 ; Cadernos do IL Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 4 ; Cadernos do IL Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 5 ; Cadernos do IL Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 6 ; Cadernos do IL Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Cadernos do IL Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Cadernos do IL Volume 2014 ; 2014 >
 
@@ -278,7 +280,7 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ppgdir
 
-      au < testing ; 2012 ; 1 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 1 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2012 ; 2012 >
       au < expected ; 2013 ; 2 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2013 ; 2013 >
       au < expected ; 2014 ; 3 ; Cadernos do Programa de Pós-Graduação em Direito Volume 2014 ; 2014 >
 
@@ -295,13 +297,14 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = cena
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2006 ; 1 ; Cena Volume 2006 ; 2006 >
-      au < testing ; 2008 ; 3 ; Cena Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 4 ; Cena Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 5 ; Cena Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 6 ; Cena Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 7 ; Cena Volume 2012 ; 2012 >
+      au < notReady ; 2006 ; 1 ; Cena Volume 2006 ; 2006 >
+      au < notReady ; 2008 ; 3 ; Cena Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 4 ; Cena Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 5 ; Cena Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 6 ; Cena Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 7 ; Cena Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Cena Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Cena Volume 2014 ; 2014 >
 
@@ -387,18 +390,18 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = ConTexto
 
-      au < testing ; 2001 ; 1 ; ConTexto Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 2 ; ConTexto Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 3 ; ConTexto Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 4 ; ConTexto Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 5 ; ConTexto Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 6 ; ConTexto Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 7 ; ConTexto Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 8 ; ConTexto Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 9 ; ConTexto Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 10 ; ConTexto Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 11 ; ConTexto Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 12 ; ConTexto Volume 2012 ; 2012 >
+      au < ready ; 2001 ; 1 ; ConTexto Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 2 ; ConTexto Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 3 ; ConTexto Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 4 ; ConTexto Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 5 ; ConTexto Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 6 ; ConTexto Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 7 ; ConTexto Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 8 ; ConTexto Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 9 ; ConTexto Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 10 ; ConTexto Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 11 ; ConTexto Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 12 ; ConTexto Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; ConTexto Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; ConTexto Volume 2014 ; 2014 >
 
@@ -415,12 +418,12 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = contingentia
 
-      au < testing ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 3 ; Contingentia Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 4 ; Contingentia Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 5 ; Contingentia Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 6 ; Contingentia Volume 2011 ; 2011 >
+      au < ready ; 2006 ; 1 ; Contingentia Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 2 ; Contingentia Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 3 ; Contingentia Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 4 ; Contingentia Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 5 ; Contingentia Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 6 ; Contingentia Volume 2011 ; 2011 >
       au < expected ; 2012 ; 7 ; Contingentia Volume 2012 ; 2012 >
       au < expected ; 2013 ; 8 ; Contingentia Volume 2013 ; 2013 >
       au < expected ; 2014 ; 9 ; Contingentia Volume 2014 ; 2014 >
@@ -438,13 +441,13 @@
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = riterm
 
-      au < testing ; 2005 ; 1 ; Debate Terminológico Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 2 ; Debate Terminológico Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 3 ; Debate Terminológico Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 4 ; Debate Terminológico Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 5 ; Debate Terminológico Volume 2009 ; 2009 >
-      au < testing ; 2011 ; 7 ; Debate Terminológico Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 8 ; Debate Terminológico Volume 2012 ; 2012 >
+      au < notReady ; 2005 ; 1 ; Debate Terminológico Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 2 ; Debate Terminológico Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 3 ; Debate Terminológico Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 4 ; Debate Terminológico Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 5 ; Debate Terminológico Volume 2009 ; 2009 >
+      au < notReady ; 2011 ; 7 ; Debate Terminológico Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 8 ; Debate Terminológico Volume 2012 ; 2012 >
       au < expected ; 2013 ; 9 ; Debate Terminológico Volume 2013 ; 2013 >
       au < expected ; 2014 ; 10 ; Debate Terminológico Volume 2014 ; 2014 >
 
@@ -461,19 +464,20 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = debatesdoner
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 1997 ; 1 ; Debates do NER Volume 1997 ; 1997 >
-      au < testing ; 2001 ; 5 ; Debates do NER Volume 2001 ; 2001 >
-      au < testing ; 2003 ; 7 ; Debates do NER Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 8 ; Debates do NER Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 9 ; Debates do NER Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 10 ; Debates do NER Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 11 ; Debates do NER Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 12 ; Debates do NER Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 13 ; Debates do NER Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 14 ; Debates do NER Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 15 ; Debates do NER Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 16 ; Debates do NER Volume 2012 ; 2012 >
+      au < notReady ; 1997 ; 1 ; Debates do NER Volume 1997 ; 1997 >
+      au < ready ; 2001 ; 5 ; Debates do NER Volume 2001 ; 2001 >
+      au < ready ; 2003 ; 7 ; Debates do NER Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 8 ; Debates do NER Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 9 ; Debates do NER Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 10 ; Debates do NER Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 11 ; Debates do NER Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 12 ; Debates do NER Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 13 ; Debates do NER Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 14 ; Debates do NER Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 15 ; Debates do NER Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 16 ; Debates do NER Volume 2012 ; 2012 >
       au < expected ; 2013 ; 17 ; Debates do NER Volume 2013 ; 2013 >
       au < expected ; 2014 ; 18 ; Debates do NER Volume 2014 ; 2014 >
 
@@ -490,19 +494,20 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = educacaoerealidade
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2001 ; 1 ; Educação & Realidade Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 2 ; Educação & Realidade Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 3 ; Educação & Realidade Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 4 ; Educação & Realidade Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 5 ; Educação & Realidade Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 6 ; Educação & Realidade Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 7 ; Educação & Realidade Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 8 ; Educação & Realidade Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 9 ; Educação & Realidade Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 10 ; Educação & Realidade Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 11 ; Educação & Realidade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 12 ; Educação & Realidade Volume 2012 ; 2012 >
+      au < ready ; 2001 ; 1 ; Educação & Realidade Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 2 ; Educação & Realidade Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 3 ; Educação & Realidade Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 4 ; Educação & Realidade Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 5 ; Educação & Realidade Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 6 ; Educação & Realidade Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 7 ; Educação & Realidade Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 8 ; Educação & Realidade Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 9 ; Educação & Realidade Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 10 ; Educação & Realidade Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 11 ; Educação & Realidade Volume 2011 ; 2011 >
+      au < ready ; 2012 ; 12 ; Educação & Realidade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 13 ; Educação & Realidade Volume 2013 ; 2013 >
       au < expected ; 2014 ; 14 ; Educação & Realidade Volume 2014 ; 2014 >
 
@@ -519,17 +524,18 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = EmPauta
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2000 ; 1 ; Em Pauta Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 2 ; Em Pauta Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 3 ; Em Pauta Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 4 ; Em Pauta Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 5 ; Em Pauta Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 6 ; Em Pauta Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 7 ; Em Pauta Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 8 ; Em Pauta Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 9 ; Em Pauta Volume 2008 ; 2008 >
-      au < testing ; 2012 ; 13 ; Em Pauta Volume 2012 ; 2012 >
+      au < notReady ; 2000 ; 1 ; Em Pauta Volume 2000 ; 2000 >
+      au < ready ; 2001 ; 2 ; Em Pauta Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 3 ; Em Pauta Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 4 ; Em Pauta Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 5 ; Em Pauta Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 6 ; Em Pauta Volume 2005 ; 2005 >
+      au < notReady ; 2006 ; 7 ; Em Pauta Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 8 ; Em Pauta Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 9 ; Em Pauta Volume 2008 ; 2008 >
+      au < ready ; 2012 ; 13 ; Em Pauta Volume 2012 ; 2012 >
       au < expected ; 2013 ; 14 ; Em Pauta Volume 2013 ; 2013 >
       au < expected ; 2014 ; 15 ; Em Pauta Volume 2014 ; 2014 >
 
@@ -545,17 +551,18 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = EmQuestao
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2003 ; 1 ; em questão Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 2 ; em questão Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 3 ; em questão Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 4 ; em questão Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 5 ; em questão Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 6 ; em questão Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 7 ; em questão Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 8 ; em questão Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 9 ; em questão Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 10 ; em questão Volume 2012 ; 2012 >
+      au < notReady ; 2003 ; 1 ; em questão Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 2 ; em questão Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 3 ; em questão Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 4 ; em questão Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 5 ; em questão Volume 2007 ; 2007 >
+      au < ready ; 2008 ; 6 ; em questão Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 7 ; em questão Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 8 ; em questão Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 9 ; em questão Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 10 ; em questão Volume 2012 ; 2012 >
       au < expected ; 2013 ; 11 ; em questão Volume 2013 ; 2013 >
       au < expected ; 2014 ; 12 ; em questão Volume 2014 ; 2014 >
 
@@ -571,13 +578,14 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = EspacoAmerindio
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2007 ; 1 ; Espaço Ameríndio Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 2 ; Espaço Ameríndio Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 3 ; Espaço Ameríndio Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 4 ; Espaço Ameríndio Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 5 ; Espaço Ameríndio Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 6 ; Espaço Ameríndio Volume 2012 ; 2012 >
+      au < ready ; 2007 ; 1 ; Espaço Ameríndio Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 2 ; Espaço Ameríndio Volume 2008 ; 2008 >
+      au < ready ; 2009 ; 3 ; Espaço Ameríndio Volume 2009 ; 2009 >
+      au < ready ; 2010 ; 4 ; Espaço Ameríndio Volume 2010 ; 2010 >
+      au < ready ; 2011 ; 5 ; Espaço Ameríndio Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 6 ; Espaço Ameríndio Volume 2012 ; 2012 >
       au < expected ; 2013 ; 7 ; Espaço Ameríndio Volume 2013 ; 2013 >
       au < expected ; 2014 ; 8 ; Espaço Ameríndio Volume 2014 ; 2014 >
 
@@ -593,9 +601,10 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = estatisticaesociedade
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2011 ; 1 ; Estatística e Sociedade Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 2 ; Estatística e Sociedade Volume 2012 ; 2012 >
+      au < notReady ; 2011 ; 1 ; Estatística e Sociedade Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 2 ; Estatística e Sociedade Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; Estatística e Sociedade Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; Estatística e Sociedade Volume 2014 ; 2014 >
 
@@ -612,20 +621,21 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = RevEnvelhecer
+      comment[notReady] = can't fetch permission page
 
-      au < testing ; 1999 ; 1 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 1999 ; 1999 >
-      au < testing ; 2001 ; 3 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 4 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 5 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 6 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2004 ; 2004 >
-      au < testing ; 2005 ; 7 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2005 ; 2005 >
-      au < testing ; 2006 ; 8 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2006 ; 2006 >
-      au < testing ; 2007 ; 9 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2007 ; 2007 >
-      au < testing ; 2008 ; 10 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2008 ; 2008 >
-      au < testing ; 2009 ; 11 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2009 ; 2009 >
-      au < testing ; 2010 ; 12 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2010 ; 2010 >
-      au < testing ; 2011 ; 13 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2011 ; 2011 >
-      au < testing ; 2012 ; 14 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2012 ; 2012 >
+      au < ready ; 1999 ; 1 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 1999 ; 1999 >
+      au < notReady ; 2001 ; 3 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2001 ; 2001 >
+      au < notReady ; 2002 ; 4 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2002 ; 2002 >
+      au < ready ; 2003 ; 5 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2003 ; 2003 >
+      au < ready ; 2004 ; 6 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2004 ; 2004 >
+      au < notReady ; 2005 ; 7 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2005 ; 2005 >
+      au < ready ; 2006 ; 8 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2006 ; 2006 >
+      au < notReady ; 2007 ; 9 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2007 ; 2007 >
+      au < notReady ; 2008 ; 10 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2008 ; 2008 >
+      au < notReady ; 2009 ; 11 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2009 ; 2009 >
+      au < notReady ; 2010 ; 12 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2010 ; 2010 >
+      au < notReady ; 2011 ; 13 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2011 ; 2011 >
+      au < notReady ; 2012 ; 14 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2012 ; 2012 >
       au < expected ; 2013 ; 15 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2013 ; 2013 >
       au < expected ; 2014 ; 16 ; Estudos Interdisciplinares sobre o Envelhecimento Volume 2014 ; 2014 >
 
@@ -641,8 +651,9 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = fineduca
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 2011 ; 2011 >
+      au < notReady ; 2011 ; 1 ; FINEDUCA-Revista de Financiamento da Educação Volume 2011 ; 2011 >
       au < expected ; 2012 ; 2 ; FINEDUCA-Revista de Financiamento da Educação Volume 2012 ; 2012 >
       au < expected ; 2013 ; 3 ; FINEDUCA-Revista de Financiamento da Educação Volume 2013 ; 2013 >
       au < expected ; 2014 ; 4 ; FINEDUCA-Revista de Financiamento da Educação Volume 2014 ; 2014 >
@@ -659,15 +670,16 @@
       comment[publisher] = Universidade Federal do Rio Grande do Sul
       param[base_url] = http://seer.ufrgs.br/
       param[journal_id] = asphe
+      comment[notReady] = can't fetch permission pages
 
-      au < testing ; 1997 ; 1 ; History of Education Journal Volume 1997 ; 1997 >
-      au < testing ; 1998 ; 2 ; History of Education Journal Volume 1998 ; 1998 >
-      au < testing ; 1999 ; 3 ; History of Education Journal Volume 1999 ; 1999 >
-      au < testing ; 2000 ; 4 ; History of Education Journal Volume 2000 ; 2000 >
-      au < testing ; 2001 ; 5 ; History of Education Journal Volume 2001 ; 2001 >
-      au < testing ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 >
-      au < testing ; 2003 ; 7 ; History of Education Journal Volume 2003 ; 2003 >
-      au < testing ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 >
+      au < ready ; 1997 ; 1 ; History of Education Journal Volume 1997 ; 1997 >
+      au < ready ; 1998 ; 2 ; History of Education Journal Volume 1998 ; 1998 >
+      au < notReady ; 1999 ; 3 ; History of Education Journal Volume 1999 ; 1999 >
+      au < ready ; 2000 ; 4 ; History of Education Journal Volume 2000 ; 2000 >
+      au < notReady ; 2001 ; 5 ; History of Education Journal Volume 2001 ; 2001 >
+      au < ready ; 2002 ; 6 ; History of Education Journal Volume 2002 ; 2002 >
+      au < notReady ; 2003 ; 7 ; History of Education Journal Volume 2003 ; 2003 >
+      au < notReady ; 2004 ; 8 ; History of Education Journal Volume 2004 ; 2004 >
 
   }
 
