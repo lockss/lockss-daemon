@@ -1,8 +1,5 @@
 #! /bin/sh
 
-echo doall args="$@"
-
-
 # PROJECT_DIR
 PROJECT_DIR=`( cd ../../..; pwd )`
 export PROJECT_DIR
