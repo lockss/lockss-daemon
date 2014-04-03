@@ -1,4 +1,4 @@
-/* $Id: PensoftHtmlHashFilterFactory.java,v 1.7 2014-04-02 21:35:46 aishizaki Exp $ */
+/* $Id: PensoftHtmlHashFilterFactory.java,v 1.8 2014-04-03 21:01:41 aishizaki Exp $ */
 /*
 
 Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
@@ -74,8 +74,9 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
          HtmlNodeFilters.tag("script"), 
          HtmlNodeFilters.tag("noscript"),  
 
-         // filters out tags with SESIDs which can change
-         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=.*", true),
+         // some the <a> tags with SESIDs should not be hashed out; these look like
+         // &SESID=& (are empty);  otherwise, filter out SESIDs that can change
+         HtmlNodeFilters.tagWithAttributeRegex("a", "href", ".*SESID=[^&]", true),
          HtmlNodeFilters.tagWithAttributeRegex("a", "onClick", ".*SESID=.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("input", "name", ".*SESID.*", true),
          HtmlNodeFilters.tagWithAttributeRegex("iframe", "src", ".*SESID=.*", true),
@@ -87,14 +88,15 @@ public class PensoftHtmlHashFilterFactory implements FilterFactory {
          HtmlNodeFilters.tagWithAttribute("td", "class", "green2"),        
          HtmlNodeFilters.tagWithAttribute("td", "class", "green"),
          // filters out the tag with a changing Viewed By counter on issue page
-         HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true),        // removes most content (TOC/abstract)!
+         HtmlNodeFilters.tagWithTextRegex("td", "^Pages", true),
 
          // this will catch the "Current Issue" in the top center, which changes 
          // when the new issue changes, plus another center menu
          HtmlNodeFilters.tagWithAttribute("td", "align", "center"),
-
-         //HtmlNodeFilters.tagWithTextRegex("td", "Current Issue", true),    // removes most content (TOC/abstract)!
-         //HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true),        // removes most content (TOC/abstract)!
+         
+         // while the following should work, removes most content (TOC/abstract)!
+         //HtmlNodeFilters.tagWithTextRegex("td", "Current Issue", true),    
+         //HtmlNodeFilters.tagWithTextRegex("td", "Viewed by", true), 
 
     };
 
