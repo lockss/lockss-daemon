@@ -56,10 +56,12 @@
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralPluginArticleIteratorFactory</string>
   </entry>
+  <!-- not ready for prime time...
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralPluginHtmlLinkExtractorFactory</string>
   </entry>
+  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bmc.BioMedCentralHtmlFilterFactory</string>
