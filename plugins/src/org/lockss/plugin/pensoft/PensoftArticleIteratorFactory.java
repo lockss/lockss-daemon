@@ -1,10 +1,10 @@
 /*
- * $Id: PensoftArticleIteratorFactory.java,v 1.6 2014-04-02 21:35:28 aishizaki Exp $
+ * $Id: PensoftArticleIteratorFactory.java,v 1.7 2014-04-04 17:49:12 aishizaki Exp $
  */
 
 /*
 
-Copyright (c) 2000-2013 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2014 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -221,12 +221,13 @@ public class PensoftArticleIteratorFactory
             }
             
             log.debug3("  setROLE_XML_URL: " + xmlCu);
-            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_XML, xmlCu);
-            if((af.getFullTextCu()) == null) {
-              af.setFullTextCu(xmlCu);
-            }
-            AuUtil.safeRelease(xmlCu);
-            
+            if (xmlCu != null) {
+              af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_XML, xmlCu);
+              if((af.getFullTextCu()) == null) {
+                af.setFullTextCu(xmlCu);
+              }
+              AuUtil.safeRelease(xmlCu);
+            }           
           }
         } catch (IOException e) {
           // 
