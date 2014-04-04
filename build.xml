@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.354 2014-03-31 23:49:00 thib_gc Exp $
+ $Id: build.xml,v 1.355 2014-04-04 20:56:14 fergaloy-sf Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -384,6 +384,8 @@ Args:
   <property name="velocity.jar" value="${lib}/velocity-1.7.jar" />
   <property name="wsdl4j.jar" value="${lib}/wsdl4j-1.6.2.jar" />
   <property name="xmlschema-core.jar" value="${lib}/xmlschema-core-2.0.3.jar" />
+  <property name="JoSQL.jar" value="${lib}/JoSQL-2.2.jar" />
+  <property name="gentlyWEB-utils.jar" value="${lib}/gentlyWEB-utils-1.1.jar" />
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -485,6 +487,8 @@ Args:
 	<pathelement path="${velocity.jar}" />
 	<pathelement path="${wsdl4j.jar}" />
 	<pathelement path="${xmlschema-core.jar}" />
+    <pathelement path="${JoSQL.jar}" />
+    <pathelement path="${gentlyWEB-utils.jar}" />
 	<!-- Needed for DB migration-->
 	<pathelement path="${getopt.jar}" />
   </path>
